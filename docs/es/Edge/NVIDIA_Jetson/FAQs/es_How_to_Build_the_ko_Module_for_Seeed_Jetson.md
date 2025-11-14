@@ -19,14 +19,10 @@ last_update:
 
 Este artículo usa **L4T 36.4.3**, que corresponde al BSP **JetPack 6.2**, como ejemplo para mostrar cómo compilar el módulo de controlador .ko para `pl2303` (un controlador relacionado con USB-a-serie) en **reComputer/reServer**.
 
-:::tip
-Este tutorial descarga el código fuente en el Jetson y compila los módulos de kernel `.ko`.
-:::
+Primero, descarga el código fuente del BSP desde el sitio web oficial de NVIDIA según tu versión de L4T.
 
 
-Primero, descarga el código fuente BSP del sitio web oficial de NVIDIA según tu versión L4T.
-
-Si no estás seguro sobre la relación entre las versiones L4T y las versiones JetPack, puedes consultar este enlace:
+Si no estás seguro sobre la relación entre las versiones de L4T y las versiones de JetPack, puedes consultar este enlace:
 https://developer.nvidia.com/embedded/jetpack-archive.
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/L4T-jetpack.png
 "/></div>
@@ -37,12 +33,12 @@ Busca la versión específica de **L4T (Linux for Tegra)** que quieres compilar,
 <!-- After clicking on the web, download and prepare the sample root file system, NVIDIA's official BSP and the toolchain used for cross-compilation, as shown below.
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/download-BSP-rootfs-toolchain.png"/></div> -->
 
-Descarga el código fuente BSP correspondiente del sitio web de NVIDIA:
+Descarga el código fuente del BSP correspondiente desde el sitio web de NVIDIA:
 <div align="center">
 <img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/download-src.png"/>
 </div>
 
-Coloca el archivo del código fuente BSP descargado en tu directorio de trabajo, luego ejecuta los siguientes comandos en la terminal para extraerlo completamente:
+Coloca el archivo del código fuente del BSP descargado en tu directorio de trabajo, luego ejecuta los siguientes comandos en la terminal para extraerlo completamente:
 ```python
 # First extract the main file
 tar -xjf public_sources.tbz2
@@ -146,7 +142,7 @@ Una vez cargado exitosamente, puedes ejecutar `modinfo <driver_name>` para verif
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

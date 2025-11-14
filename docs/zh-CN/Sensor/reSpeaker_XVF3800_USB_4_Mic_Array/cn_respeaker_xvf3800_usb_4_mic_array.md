@@ -99,8 +99,8 @@ reSpeaker XVF3800 暴露了 3 个输入引脚 (GPI) 和 5 个输出引脚 (GPO) 
 | X1D34        | 输入 (RO)     | 浮空                                                 |
 | X0D11        | 输出 (RW)     | 浮空                                                 |
 | X0D30        | 输出 (RW)     | 静音 LED + 麦克风静音控制（高电平 = 静音）            |
-| X0D31        | 输出 (RW)     | 功放使能（低电平 = 使能）                            |
-| X0D33        | 输出 (RW)     | WS2812 LED 电源控制（高电平 = 开启）                 |
+| X0D31        | 输出 (RW)     | 功放使能（低电平 = 使能）                             |
+| X0D33        | 输出 (RW)     | WS2812 LED 电源控制（高电平 = 开启）                  |
 | X0D39        | 输出 (RW)     | 浮空                                                 |
 
 ## 入门指南
@@ -116,7 +116,7 @@ reSpeaker XVF3800 暴露了 3 个输入引脚 (GPI) 和 5 个输出引脚 (GPO) 
 
 #### DOA（到达方向）
 
-您可以体验 LED 阵列跟随传入语音方向的效果。
+您可以体验 LED 阵列跟随来话语音方向的效果。
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -146,7 +146,7 @@ ReSpeaker 上的**静音按钮**用于临时**禁用麦克风阵列的语音捕�
 
 #### 复位按钮
 
-复位 (RST) 按钮为 XVF3800 提供硬件复位——按下时，它会重启芯片并从头开始重新初始化系统，就像完整的电源循环一样。
+复位 (RST) 按钮为 XVF3800 提供硬件复位——按下时，它会重启芯片并从头开始重新初始化系统，就像完全断电重启一样。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/reset.gif" alt="pir" width={600} height="auto"/></p>
 
@@ -201,7 +201,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-- 下载 `dfu-util-0.11-binaries.tar.xz` 并解压，例如 `D:\dfu-util-0.11-binaries\win64\`  
+- 下载 `dfu-util-0.11-binaries.tar.xz` 并解压，例如：`D:\dfu-util-0.11-binaries\win64\`  
   [下载链接](http://dfu-util.sourceforge.net/)
 
 - 将 `dfu-util.exe` 的路径添加到系统 `Path` 变量中：  
@@ -451,8 +451,8 @@ wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bas
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/raspberry-audiopy-1.PNG" alt="pir" width={600} height="auto"/></p>
 
 - 在音频设置窗口中：
-  - 选择正确的 Recording Device（例如 reSpeaker XVF3800）。
-  - 选择适当的 Playback Device（例如 reSpeaker XVF3800）。
+  - 选择正确的 Recording Device（例如，reSpeaker XVF3800）。
+  - 选择适当的 Playback Device（例如，reSpeaker XVF3800）。
   - 确保 Host 设置为 ALSA 以在 Raspberry Pi 上获得最佳兼容性。
 - 点击 OK 应用设置。
 
@@ -573,8 +573,8 @@ xvf_host.exe GPO_WRITE_VALUE 30 0  # Turn OFF mute LED
 
 **到达方向（DoA）**
 
-- DoA 告诉您说话者来自哪个方向。
-- ReSpeaker XVF3800 上的 **LED 环**使用灯光显示方向。
+- DoA 告诉您有人从哪个方向说话。
+- ReSpeaker XVF3800 上的 **LED 环** 使用灯光显示方向。
 - 您也可以使用 `xvf_host` 工具读取 DoA 值。
 
 检查 DoA 值的命令
@@ -758,8 +758,8 @@ chmod +x ./xvf_host
 
 **到达方向（DoA）**
 
-- DoA 告诉您说话者来自哪个方向。
-- ReSpeaker XVF3800 上的 **LED 环**使用灯光显示方向。
+- DoA 告诉您有人从哪个方向说话。
+- ReSpeaker XVF3800 上的 **LED 环** 使用灯光显示方向。
 - 您也可以使用 `xvf_host` 工具读取 DoA 值。
 
 检查 DoA 值的命令
@@ -856,92 +856,6 @@ Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
 </TabItem>
 </Tabs>
 
-## ReSpeaker XVF3800 的 Python 示例
-
-我们已经准备了 Python 示例来通过 USB 或 I2C 控制设备。
-
-:::note
-如果您想了解更多关于使用 Python 脚本通过 xvf_host 进行控制的信息，请阅读这篇[文章](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)。
-:::
-
-<Tabs>
-<TabItem value="windows" label="Windows">
-
-### 适用于 Windows
-
-```bash
-git clone https://github.com/KasunThushara/reSpeakerXVF.git
-cd reSpeakerXVF
-python test.py
-```
-
-确保已安装 Python 并且 ReSpeaker XVF3800 通过 USB 连接。
-
-</TabItem>
-
-<TabItem value="rpi" label="Raspberry Pi / Linux">
-
-### 适用于 Raspberry Pi
-
-```bash
-git clone https://github.com/KasunThushara/reSpeakerXVF_rpi.git
-cd reSpeakerXVF_rpi
-chmod +x xvf_host
-python3 test.py
-```
-
-确保 `xvf_host` 可执行并且您的板子通过 USB 或 I2C 连接。
-
-</TabItem>
-</Tabs>
-
-可以按如下方式探索 `test.py` 文件。这仅供您参考。
-
-``` bash
-import subprocess
-import sys
-import time
-
-# Path to your xvf_host binary
-XVF_HOST_PATH = "./xvf_host"  # Change this if xvf_host is in a different location
-
-def run_command(*args):
-    """Run a command using the xvf_host tool."""
-    command = ["sudo", XVF_HOST_PATH] + list(map(str, args))
-    try:
-        print(f"Running: {' '.join(command)}")
-        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, text=True)
-        print("Output:\n", result.stdout)
-    except subprocess.CalledProcessError as e:
-        print("Error:\n", e.stderr)
-        sys.exit(1)
-
-if __name__ == "__main__":
-    # Example: Get device version
-    run_command("VERSION")
-    time.sleep(0.005)
-
-    # Example: Set LED to breath mode with orange color
-    run_command("led_effect", 1)
-    time.sleep(0.005)
-    run_command("led_color", "0xff8800")
-    time.sleep(0.005)
-    run_command("led_speed", 1)
-    time.sleep(0.005)
-    run_command("led_brightness", 255)
-    time.sleep(0.005)
-
-    # Example: Save current configuration
-    #run_command("save_configuration", 1)
-
-    # Uncomment to clear config
-    run_command("clear_configuration", 1)
-    time.sleep(0.005)
-
-```
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={600} height="auto"/></p>
-
 ## 故障排除
 
 ### 扬声器输出的播放声音不够大？
@@ -959,19 +873,19 @@ if __name__ == "__main__":
 **步骤 2：选择 XVF3800 声卡**
 
 1. 按 **F6** 打开声卡选择菜单。
-2. 使用 **上/下箭头键** 高亮显示 **XVF3800** 声卡。
+2. 使用**上/下箭头键**高亮显示 **XVF3800** 声卡。
 3. 按 **Enter** 确认选择。
 
 **步骤 3：调整 PCM-1 音量**
 
-1. 使用 **左/右箭头键** 导航到 **PCM-1**。
-2. 使用 **上箭头键** 将音量级别增加到 **100%**。
+1. 使用**左/右箭头键**导航到 **PCM-1**。
+2. 使用**上箭头键**将音量级别增加到 **100%**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
 
 **步骤 4：保存 ALSA 设置**
 
-1. 按 **ESC** 退出 `alsamixer`。
+1. 按 **ESC** 键退出 `alsamixer`。
 2. 在拔掉 XVF3800 之前，运行以下命令保存您的设置：
 
 ```bash
@@ -980,13 +894,13 @@ if __name__ == "__main__":
 
 **步骤 5：附加选项（使用 PulseAudio）**
 
-如果在调整 ALSA 级别后仍然无法清楚地听到声音，请尝试安装 **PulseAudio Volume Control** 以进行更详细的音量调整：
+如果在调整 ALSA 音量后仍然无法清楚地听到声音，请尝试安装 **PulseAudio Volume Control** 以进行更详细的音量调整：
 
 ```bash
 sudo apt install pavucontrol -y
 ```
 
-然后您可以打开 **pavucontrol** 并在需要时将输出音量增加到 100% 以上。
+然后您可以打开 **pavucontrol**，如果需要，可以将输出音量提高到 100% 以上。
 
 ## 技术支持与产品讨论
 

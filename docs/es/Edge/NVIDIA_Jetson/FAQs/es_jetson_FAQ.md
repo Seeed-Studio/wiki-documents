@@ -39,7 +39,7 @@ Para más detalles, haz clic [aquí](/es/usb_timeout_during_flash)
 **R:** Por favor verifica la integridad del archivo (por ejemplo, proporcionamos las sumas de verificación SHA256), para algunas placas portadoras (especialmente la serie A60X), asegúrate de que el parche del controlador se haya copiado/aplicado exitosamente al directorio **Linux_for_tegra**. Hay archivos que requieren permisos **sudo**, y cuando copies directorios, asegúrate de que el parámetro **-r** esté incluido en tu comando.
 
 #### P8: Mi sistema se bloqueó/no puede arrancar/pantalla negra/perdió controladores periféricos después de ejecutar los comandos "sudo apt-get update && sudo apt-get upgrade".
-**R:** Estos problemas se pueden resumir como **"¿Por qué no puedo actualizar el sistema con apt upgrade en placas portadoras personalizadas?"** La respuesta corta es: **No** ejecutes el comando apt upgrade en placas portadoras **personalizadas/de terceros**. Además, evita ejecutar cualquier script que incluya comandos apt upgrade o usar herramientas de actualización GUI en Ubuntu. Los paquetes Debian del servidor no tienen en cuenta el diseño específico de nuestras placas personalizadas, y forzar la actualización puede causar incompatibilidades que pueden dañar tu dispositivo. Este proceso solo es compatible con el devkit oficial. Para resolver estos problemas, sigue nuestra guía para volver a flashear el JetPack.
+**R:** Estos problemas se pueden resumir como **"¿Por qué no puedo actualizar el sistema con apt upgrade en placas portadoras personalizadas?"** La respuesta corta es: **No** ejecutes el comando apt upgrade en placas portadoras **personalizadas/de terceros**. Además, evita ejecutar cualquier script que incluya comandos apt upgrade o usar herramientas de actualización GUI en Ubuntu. Los paquetes Debian del servidor no tienen en cuenta el diseño específico de nuestras placas personalizadas, y forzar la actualización puede causar incompatibilidades que pueden dañar tu dispositivo. Este proceso solo es compatible con el devkit oficial. Para resolver estos problemas, sigue nuestra guía para reflashear el JetPack.
 
 #### P9: ¿Cómo puedo actualizar paquetes de software si me dijiste que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?
 
@@ -59,7 +59,7 @@ Para más detalles, haz clic [aquí](/es/enable_spi_interface_on_jetsonnano)
 #### P13: ¿Por qué a veces después de completar el proceso de flasheo en Jetson, el sistema no logra arrancar desde el SSD?
 Este problema ocurre actualmente al flashear JetPack 5, y NVIDIA lo ha documentado oficialmente. Para la solución, haz clic [aquí.](/es/issue_of_jetpack5_failing_to_boot_from_certain_ssd)
 
-#### P14: ¿Cómo compilar el proyecto de código fuente para el BSP de Jetson de Seeed?
+#### P14: ¿Cómo construir el proyecto de código fuente para el BSP de Jetson de Seeed?
 Para más detalles, haz clic [aquí](/es/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
 
 #### P15: ¿Por qué no se puede ejecutar el comando `apt upgrade` en reComputer/reServer?
@@ -85,7 +85,7 @@ sudo apt install build-essential autoconf automake libtool pkg-config
 sudo apt install git libfuse-dev
 ```
 
-Luego clona y compila el controlador exFAT desde el código fuente:
+Luego clona y construye el controlador exFAT desde el código fuente:
 ```
 git clone https://github.com/relan/exfat
 cd exfat
@@ -108,10 +108,6 @@ Esto monta la unidad externa formateada con exFAT en `/media/seeed/tmp-exfat/` p
 #### P18：¿Cómo cifrar el disco de Jetson antes de flashear la imagen?
 
 Para más detalles, haz clic [aquí](/es/how_to_encrypt_the_disk_for_jetson)
-
-#### P18：¿Cómo establecer comunicación entre Jetson y dispositivos EtherCAT?
-
-Para más detalles, haz clic [aquí](/es/how_to_establish_the_ethercat_on_jetson)
 
 
 ## Soporte técnico

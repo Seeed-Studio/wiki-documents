@@ -41,7 +41,7 @@ El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo circular profesional de 4 mic
 
 - **Retroalimentación Visual** :LEDs RGB programables e indicadores de estado muestran estados del dispositivo y actividad de voz
 
-- **Calidad de audio igual o mejor** :comparada con el modelo anterior
+- **Calidad de audio igual o mejor** :comparado con el modelo anterior
 
 ## Descripción General del Hardware
 
@@ -167,7 +167,7 @@ Cada tipo de firmware en el ReSpeaker XVF3800 soporta diferentes métodos de act
 
 - El **firmware USB** solo soporta **USB DFU**, lo que significa que puedes actualizar el dispositivo usando una conexión USB. Sin embargo, **no soporta I2C DFU**.
 
-- El **firmware I2S** es lo opuesto—soporta **I2C DFU**, permitiendo actualizaciones de firmware a través de una interfaz I2C, pero **no soporta USB DFU**.
+- El **firmware I2S** es lo opuesto—soporta **I2C DFU**, permitiendo actualizaciones de firmware sobre una interfaz I2C, pero **no soporta USB DFU**.
 
 - El **firmware de Modo Seguro**, que se almacena en la partición Factory, es el más flexible. Soporta **tanto USB DFU como I2C DFU**.
 
@@ -575,9 +575,9 @@ xvf_host.exe GPO_WRITE_VALUE 30 0  # Turn OFF mute LED
 
 - DoA te dice desde qué dirección está hablando alguien.
 - El **anillo LED** en el ReSpeaker XVF3800 muestra la dirección usando luces.
-- También puedes leer los valores de DoA usando la herramienta `xvf_host`.
+- También puedes leer los valores DoA usando la herramienta `xvf_host`.
 
-Comando para verificar valores de DoA
+Comando para verificar valores DoA
 
 ```bash
 xvf_host.exe AEC_AZIMUTH_VALUES
@@ -595,13 +595,13 @@ AEC_AZIMUTH_VALUES 0.91378 (52.36 deg) 0.00000 (0.00 deg) 1.57080 (90.00 deg) 0.
 - **Haz de funcionamiento libre**: Dirección de escaneo continuo
 - **Haz seleccionado automáticamente**: Haz final elegido para el mejor audio (usado para indicación DoA)
 
-**Indicación de Voz**
+**Indicación de Habla**
 
-- La Energía de Voz muestra qué tan fuerte es la señal de voz — como un medidor de volumen de voz.
+- La Energía de Habla muestra qué tan fuerte es la señal de voz — como un medidor de volumen de habla.
 - Se usa para detectar si alguien está hablando y qué tan fuerte/cerca están.
 - El ruido, el eco y la distancia pueden afectar el valor de energía.
 
- Comando para verificar Energía de Voz:
+ Comando para verificar Energía de Habla:
 
 ```bash
 xvf_host.exe AEC_SPENERGY_VALUES
@@ -625,7 +625,7 @@ AEC_SPENERGY_VALUES 2080656 0 2083455 2080656
   - **Canal izquierdo**: Audio limpio y post-procesado
   - **Canal derecho**: Haz ASR o datos de eco/referencia
 
-Puedes **redirigir** estos canales para generar diferentes fuentes.
+Puedes **re-enrutar** estos canales para generar diferentes fuentes.
 
 Comandos de ejemplo
 
@@ -674,7 +674,7 @@ Para documentación más profunda y comandos avanzados, visita el repositorio of
 ### Para Raspberry Pi
 
 - Conecta XVF3800 vía USB o I2C
-- Haz que `xvf_host` sea ejecutable:
+- Haz `xvf_host` ejecutable:
 
 ```bash
 cd /path/to/xvf_host
@@ -760,9 +760,9 @@ En este ejemplo, el retorno 0 0 0 1 0 significa que el Pin X0D11 está en nivel 
 
 - DoA te dice desde qué dirección está hablando alguien.
 - El **anillo LED** en el ReSpeaker XVF3800 muestra la dirección usando luces.
-- También puedes leer los valores de DoA usando la herramienta `xvf_host`.
+- También puedes leer los valores DoA usando la herramienta `xvf_host`.
 
-Comando para verificar valores de DoA
+Comando para verificar valores DoA
 
 ```bash
 ./xvf_host AEC_AZIMUTH_VALUES
@@ -780,13 +780,13 @@ AEC_AZIMUTH_VALUES 0.91378 (52.36 deg) 0.00000 (0.00 deg) 1.57080 (90.00 deg) 0.
 - **Haz de funcionamiento libre**: Dirección de escaneo continuo
 - **Haz seleccionado automáticamente**: Haz final elegido para el mejor audio (usado para indicación DoA)
 
-**Indicación de Voz**
+**Indicación de Habla**
 
-- La Energía de Voz muestra qué tan fuerte es la señal de voz — como un medidor de volumen de voz.
+- La Energía de Habla muestra qué tan fuerte es la señal de voz — como un medidor de volumen de habla.
 - Se usa para detectar si alguien está hablando y qué tan fuerte/cerca están.
 - El ruido, el eco y la distancia pueden afectar el valor de energía.
 
-Comando para verificar Energía de Voz:
+Comando para verificar Energía de Habla:
 
 ```bash
 ./xvf_host AEC_SPENERGY_VALUES
@@ -811,7 +811,7 @@ AEC_SPENERGY_VALUES 2080656 0 2083455 2080656
   - **Canal izquierdo**: Audio limpio y post-procesado
   - **Canal derecho**: Haz ASR o datos de eco/referencia
 
-Puedes **redirigir** estos canales para generar diferentes fuentes.
+Puedes **re-enrutar** estos canales para generar diferentes fuentes.
 
 Comandos de ejemplo
 
@@ -856,99 +856,13 @@ Para documentación más profunda y comandos avanzados, visita el repositorio of
 </TabItem>
 </Tabs>
 
-## Ejemplos de Python para ReSpeaker XVF3800
-
-Hemos preparado ejemplos de Python para controlar el dispositivo vía USB o I2C.
-
-:::note
-Si te gustaría explorar más sobre el control vía xvf_host con scripts de Python, por favor lee este [artículo](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md).
-:::
-
-<Tabs>
-<TabItem value="windows" label="Windows">
-
-### Para Windows
-
-```bash
-git clone https://github.com/KasunThushara/reSpeakerXVF.git
-cd reSpeakerXVF
-python test.py
-```
-
-Asegúrate de que Python esté instalado y el ReSpeaker XVF3800 esté conectado vía USB.
-
-</TabItem>
-
-<TabItem value="rpi" label="Raspberry Pi / Linux">
-
-### Para Raspberry Pi
-
-```bash
-git clone https://github.com/KasunThushara/reSpeakerXVF_rpi.git
-cd reSpeakerXVF_rpi
-chmod +x xvf_host
-python3 test.py
-```
-
-Asegúrate de que `xvf_host` sea ejecutable y tu placa esté conectada vía USB o I2C.
-
-</TabItem>
-</Tabs>
-
-El archivo `test.py` se puede explorar de la siguiente manera. Esto es para tu referencia.
-
-``` bash
-import subprocess
-import sys
-import time
-
-# Path to your xvf_host binary
-XVF_HOST_PATH = "./xvf_host"  # Change this if xvf_host is in a different location
-
-def run_command(*args):
-    """Run a command using the xvf_host tool."""
-    command = ["sudo", XVF_HOST_PATH] + list(map(str, args))
-    try:
-        print(f"Running: {' '.join(command)}")
-        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, text=True)
-        print("Output:\n", result.stdout)
-    except subprocess.CalledProcessError as e:
-        print("Error:\n", e.stderr)
-        sys.exit(1)
-
-if __name__ == "__main__":
-    # Example: Get device version
-    run_command("VERSION")
-    time.sleep(0.005)
-
-    # Example: Set LED to breath mode with orange color
-    run_command("led_effect", 1)
-    time.sleep(0.005)
-    run_command("led_color", "0xff8800")
-    time.sleep(0.005)
-    run_command("led_speed", 1)
-    time.sleep(0.005)
-    run_command("led_brightness", 255)
-    time.sleep(0.005)
-
-    # Example: Save current configuration
-    #run_command("save_configuration", 1)
-
-    # Uncomment to clear config
-    run_command("clear_configuration", 1)
-    time.sleep(0.005)
-
-```
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={600} height="auto"/></p>
-
 ## Solución de Problemas
 
-### ¿El sonido de reproducción de la salida del altavoz no es suficiente?
+### ¿La reproducción de sonido desde la salida del altavoz no es suficiente?
 
 Si el volumen de salida del altavoz del **ReSpeaker XVF3800** es demasiado bajo en Linux, es posible que necesites ajustar los **niveles del mezclador ALSA** para la tarjeta de sonido XVF3800. Sigue los pasos a continuación para aumentar el volumen de salida.
 
-**Paso 1: Abrir el Mezclador ALSA**
+**Paso 1: Abrir Mezclador ALSA**
 
 1. Abre una terminal.
 2. Escribe el siguiente comando y presiona **Enter**:
@@ -969,7 +883,7 @@ Si el volumen de salida del altavoz del **ReSpeaker XVF3800** es demasiado bajo 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
 
-**Paso 4: Guardar Configuraciones ALSA**
+**Paso 4: Guardar Configuración de ALSA**
 
 1. Presiona **ESC** para salir de `alsamixer`.
 2. Antes de desconectar el XVF3800, ejecuta el siguiente comando para guardar tu configuración:
@@ -980,7 +894,7 @@ Si el volumen de salida del altavoz del **ReSpeaker XVF3800** es demasiado bajo 
 
 **Paso 5: Opción Adicional (Usando PulseAudio)**
 
-Si aún no puedes escuchar el sonido claramente después de ajustar los niveles ALSA, intenta instalar **PulseAudio Volume Control** para ajustes de volumen más detallados:
+Si aún no puedes escuchar el sonido claramente después de ajustar los niveles de ALSA, intenta instalar **PulseAudio Volume Control** para ajustes de volumen más detallados:
 
 ```bash
 sudo apt install pavucontrol -y
@@ -988,7 +902,7 @@ sudo apt install pavucontrol -y
 
 Luego puedes abrir **pavucontrol** y aumentar el volumen de salida más allá del 100% si es necesario.
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
