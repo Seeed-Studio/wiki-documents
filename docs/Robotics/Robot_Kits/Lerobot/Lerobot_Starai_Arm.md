@@ -1381,7 +1381,7 @@ pip install -e ".[pi]"
 ```bash
 lerobot-train \
   --policy.type=pi0 \
-  --dataset.repo_id=seeed/eval_test123 \ 
+  --dataset.repo_id=seeed/eval_test123 \
   --job_name=pi0_training \
   --output_dir=outputs/pi0_training \
   --policy.pretrained_path=lerobot/pi0_base \
@@ -1425,7 +1425,7 @@ pip install -e ".[pi]"
 **Train**
 ```bash
 lerobot-train \
-    --dataset.repo_id=seeed/eval_test123 \ 
+    --dataset.repo_id=seeed/eval_test123 \
     --policy.type=pi05 \
     --output_dir=outputs/pi05_training \
     --job_name=pi05_training \
