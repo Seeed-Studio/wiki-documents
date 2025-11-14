@@ -1845,6 +1845,7 @@ const sidebars = {
             id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_usb_4_mic_array',
           },
           items: [
+            
             {
               type: 'category',
               label: 'ReSpeaker XVF 3800 with XIAO Intro',
@@ -1874,6 +1875,8 @@ const sidebars = {
                 },
               ],
             },
+            ///
+            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_python_sdk',
           ],
         },
         {
