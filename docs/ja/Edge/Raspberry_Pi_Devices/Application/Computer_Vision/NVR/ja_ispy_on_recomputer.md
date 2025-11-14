@@ -1,12 +1,12 @@
 ---
-description: This wiki demonstrates how to deploy moonfire nvr on recomputer. 
-title: iSpy on reComputer
+description: このwikiでは、reComputer上でmoonfire nvrをデプロイする方法を説明します。
+title: reComputer上のiSpy
 keywords:
   - reComputer
   - iSpy
   - NVR
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_5.webp
-slug: /ispy_on_recomputer
+slug: /ja/ispy_on_recomputer
 last_update:
   date: 11/10/2025
   author: Jiahao
@@ -14,19 +14,19 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# iSpy on reComputer
+# reComputer上のiSpy
 
-## Introduction
+## はじめに
 
-[iSpy](https://www.ispyconnect.com/) is an open-source video surveillance application, designed to work with consumer webcams and IP cameras. It was originally launched in 2007 and has evolved into a full-featured monitoring solution.
+[iSpy](https://www.ispyconnect.com/)は、コンシューマー向けウェブカメラやIPカメラと連携するように設計されたオープンソースのビデオ監視アプリケーションです。2007年に最初にリリースされ、フル機能の監視ソリューションに進化しました。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_1.png" alt="pir" width="800" height="auto"/></p>
 
 
-## Prerequisites
+## 前提条件
 
-### Hardware Requirements
+### ハードウェア要件
 
 <table align="center">
  <tr>
@@ -42,36 +42,36 @@ no_comments: false # for Disqus
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
 </table>
 
-## Download iSpy
+## iSpyのダウンロード
 
-### Update system
+### システムの更新
 
-Please use the following command to run.
+以下のコマンドを使用して実行してください。
 
 ```bash
 sudo apt update
 sudo apt upgrade -y
 ```
 
-### Download docker and docker compose
+### dockerとdocker composeのダウンロード
 
-Please use the following command to install docker.
+以下のコマンドを使用してdockerをインストールしてください。
 
 ```bash
 wget https://get.docker.com -O get-docker.sh
@@ -81,12 +81,12 @@ sudo systemctl start docker
 sudo systemctl enable docker
 docker --version
 ```
-The result is shown as below:
+結果は以下のように表示されます：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_install.png" alt="pir" width="800" height="auto"/></p>
 
 
-Please use the following command to install docker compose.
+以下のコマンドを使用してdocker composeをインストールしてください。
 
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | jq -r .tag_name)/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -94,21 +94,21 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
-The result is shown as below:
+結果は以下のように表示されます：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_compose_version.png" alt="pir" width="800" height="auto"/></p>
 
 
-### Create `docker-compose.yaml` 
+### `docker-compose.yaml`の作成
 
 
-Please use the following command to create `docker-compose.yaml`.
+以下のコマンドを使用して`docker-compose.yaml`を作成してください。
 
 ```bash
 cd ~ && nano docker-compose.yaml
 ```
 
-Then input the following content into the `YAML` file.
+次に、以下の内容を`YAML`ファイルに入力してください。
 
 ```bash
 services:
@@ -131,34 +131,34 @@ services:
       - /appdata/AgentDVR/commands:/AgentDVR/Commands/
 ```
 
-Please use the following command to create necessary folder.
+以下のコマンドを使用して必要なフォルダを作成してください。
 
 ```bash
 sudo mkdir -p /appdata/AgentDVR/config /appdata/AgentDVR/media /appdata/AgentDVR/commands
 ```
 
-## Configure iSpy
+## iSpyの設定
 
-### Run docker compose
+### docker composeの実行
 
-Please use the following command to init database.
+以下のコマンドを使用してデータベースを初期化してください。
 
 ```bash
 sudo docker compose up -d
 ```
 
-The result is shown as below.
+結果は以下のように表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_docker.png" alt="pir" width="800" height="auto"/></p>
 
 
-### Configure
+### 設定
 
-Open the `localhost:8090` port:
+`localhost:8090`ポートを開いてください：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_windows.png" alt="pir" width="800" height="auto"/></p>
 
-Add a camera by following the steps below：
+以下の手順に従ってカメラを追加してください：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_1.png" alt="pir" width="800" height="auto"/></p>
 
@@ -172,16 +172,16 @@ Add a camera by following the steps below：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_5.png" alt="pir" width="800" height="auto"/></p>
 
-## Result
+## 結果
 
-Once we have configured everything, we can view the live feed from the current camera.
+すべての設定が完了すると、現在のカメラからのライブフィードを表示できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/result.gif" alt="pir" width="800" height="auto"/></p>
 
 
-## Tech Support & Product Discussion
+## 技術サポート & 製品ディスカッション
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

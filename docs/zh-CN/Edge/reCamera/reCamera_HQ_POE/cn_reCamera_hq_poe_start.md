@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /cn/recamera_hd_poe_getting_started
+slug: /cn/recamera_hq_poe_getting_started
 sidebar_position: 1
 last_update:
   date: 09/25/2025
@@ -104,7 +104,7 @@ last_update:
 - **端口 22**：用于远程 SSH 登录，已关闭。
 - **端口 53**：与 DNS 域名解析相关，对网页重定向至关重要。默认开启。
 - **端口 80**：作为 Node-RED 应用程序 HTTP 显示的网页仪表板界面。
-- **端口 554**：用于 RTSP 视频流。
+- **端口 554**：用于 RTSP 视频流传输。
 - **端口 9090**：用于网页终端访问，需要密码登录。
 - **端口 1880**：专用于 Node-RED 操作。
 
@@ -114,7 +114,7 @@ last_update:
 
 ## 恢复出厂设置
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/interface2.png" /></div>
 
 如果您想重置设备（例如忘记设备密码），您可以长按 **User** 按钮，然后将设备连接到电源。当设备的 `红灯` **常亮** 而不是闪烁时，松开 User 按钮。
 

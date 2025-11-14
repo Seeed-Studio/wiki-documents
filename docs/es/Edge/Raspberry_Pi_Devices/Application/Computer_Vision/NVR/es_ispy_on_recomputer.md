@@ -1,12 +1,12 @@
 ---
-description: This wiki demonstrates how to deploy moonfire nvr on recomputer. 
-title: iSpy on reComputer
+description: Este wiki demuestra cómo desplegar moonfire nvr en recomputer.
+title: iSpy en reComputer
 keywords:
   - reComputer
   - iSpy
   - NVR
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_5.webp
-slug: /ispy_on_recomputer
+slug: /es/ispy_on_recomputer
 last_update:
   date: 11/10/2025
   author: Jiahao
@@ -14,19 +14,19 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# iSpy on reComputer
+# iSpy en reComputer
 
-## Introduction
+## Introducción
 
-[iSpy](https://www.ispyconnect.com/) is an open-source video surveillance application, designed to work with consumer webcams and IP cameras. It was originally launched in 2007 and has evolved into a full-featured monitoring solution.
+[iSpy](https://www.ispyconnect.com/) es una aplicación de videovigilancia de código abierto, diseñada para funcionar con cámaras web de consumo y cámaras IP. Fue lanzada originalmente en 2007 y ha evolucionado hasta convertirse en una solución de monitoreo completa.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_1.png" alt="pir" width="800" height="auto"/></p>
 
 
-## Prerequisites
+## Prerrequisitos
 
-### Hardware Requirements
+### Requisitos de Hardware
 
 <table align="center">
  <tr>
@@ -42,36 +42,36 @@ no_comments: false # for Disqus
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
 </table>
 
-## Download iSpy
+## Descargar iSpy
 
-### Update system
+### Actualizar sistema
 
-Please use the following command to run.
+Por favor, usa el siguiente comando para ejecutar.
 
 ```bash
 sudo apt update
 sudo apt upgrade -y
 ```
 
-### Download docker and docker compose
+### Descargar docker y docker compose
 
-Please use the following command to install docker.
+Por favor, usa el siguiente comando para instalar docker.
 
 ```bash
 wget https://get.docker.com -O get-docker.sh
@@ -81,12 +81,12 @@ sudo systemctl start docker
 sudo systemctl enable docker
 docker --version
 ```
-The result is shown as below:
+El resultado se muestra a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_install.png" alt="pir" width="800" height="auto"/></p>
 
 
-Please use the following command to install docker compose.
+Por favor, usa el siguiente comando para instalar docker compose.
 
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | jq -r .tag_name)/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -94,21 +94,21 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
-The result is shown as below:
+El resultado se muestra a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_compose_version.png" alt="pir" width="800" height="auto"/></p>
 
 
-### Create `docker-compose.yaml` 
+### Crear `docker-compose.yaml`
 
 
-Please use the following command to create `docker-compose.yaml`.
+Por favor, usa el siguiente comando para crear `docker-compose.yaml`.
 
 ```bash
 cd ~ && nano docker-compose.yaml
 ```
 
-Then input the following content into the `YAML` file.
+Luego ingresa el siguiente contenido en el archivo `YAML`.
 
 ```bash
 services:
@@ -131,34 +131,34 @@ services:
       - /appdata/AgentDVR/commands:/AgentDVR/Commands/
 ```
 
-Please use the following command to create necessary folder.
+Por favor, usa el siguiente comando para crear la carpeta necesaria.
 
 ```bash
 sudo mkdir -p /appdata/AgentDVR/config /appdata/AgentDVR/media /appdata/AgentDVR/commands
 ```
 
-## Configure iSpy
+## Configurar iSpy
 
-### Run docker compose
+### Ejecutar docker compose
 
-Please use the following command to init database.
+Por favor, usa el siguiente comando para inicializar la base de datos.
 
 ```bash
 sudo docker compose up -d
 ```
 
-The result is shown as below.
+El resultado se muestra a continuación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_docker.png" alt="pir" width="800" height="auto"/></p>
 
 
-### Configure
+### Configurar
 
-Open the `localhost:8090` port:
+Abre el puerto `localhost:8090`:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_windows.png" alt="pir" width="800" height="auto"/></p>
 
-Add a camera by following the steps below：
+Agrega una cámara siguiendo los pasos a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_1.png" alt="pir" width="800" height="auto"/></p>
 
@@ -172,16 +172,16 @@ Add a camera by following the steps below：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_5.png" alt="pir" width="800" height="auto"/></p>
 
-## Result
+## Resultado
 
-Once we have configured everything, we can view the live feed from the current camera.
+Una vez que hayamos configurado todo, podemos ver la transmisión en vivo de la cámara actual.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/result.gif" alt="pir" width="800" height="auto"/></p>
 
 
-## Tech Support & Product Discussion
+## Soporte Técnico y Discusión de Productos
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

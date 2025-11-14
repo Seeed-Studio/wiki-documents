@@ -9,7 +9,7 @@ keywords:
   - HQ
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /es/recamera_hd_poe_hardware
+slug: /es/recamera_hq_poe_hardware
 sidebar_position: 2
 last_update:
   date: 09/25/2025
@@ -67,14 +67,14 @@ reCamera 2002 HQ PoE está equipada con un sensor CMOS avanzado para imágenes m
 
 Vista Superior             |  Vista Inferior
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
 ### [Placa de Sensor-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 Vista Superior             |  Vista Inferior
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top2.png" /></div> |<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom2.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_top2.png" /></div> |<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/GC2053_bottom2.png" /></div>
 
 #### ⚙️ características
 
@@ -125,9 +125,9 @@ Vista Superior             |  Vista Inferior
 
 ### [B3_POE](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Base_Board/B3_POE/readme.md)
 
-Superior             |  Inferior
+Arriba             |  Abajo
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top2.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom2.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top2.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_bottom2.png" /></div>
 
 #### ⚙️ Características:
 
@@ -136,7 +136,7 @@ Superior             |  Inferior
 - 1 x puerto Debug.
 - 3 x puerto IO.
 
- <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
 ## Interfaz de Hardware
 
@@ -189,23 +189,23 @@ El módulo POE está integrado en el hardware de la versión reCamera HQ POE. El
 
 Conecta la reCamera a un switch que soporte el protocolo **POE 802.3af**, y el dispositivo reCamera se iniciará.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/poe_connect_recamera.jpg" /></div>
 
 Puedes verificar la dirección IP del dispositivo en tu router para acceder a él, o conectar la reCamera vía USB y acceder al terminal para consultar la IP de red cableada.
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/router_search.png" /></div>
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/terminal_ipv4_search.png" /></div>
 
 ### <span id="jump5">IO</span>
 
 **Usando la interfaz GPIO sysfs para controlar I/O**
 
- <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
+ <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/IO_Lens_6.png" /></div>
 
 En Linux, la forma más común de leer y escribir GPIO es usando la interfaz GPIO sysfs. Esto se implementa manipulando archivos como `export`, `unexport`, `gpio{N}/direction`, y `gpio{N}/value` (reemplaza `{N}` con el número de pin real) bajo el directorio `/sys/class/gpio`, y se usa frecuentemente en scripts de shell.
 
-La placa base reCamera POE tiene 3 puertos IO disponibles. Cada puerto puede configurarse como entrada o salida. Los puertos IO están numerados como sigue:
+La placa base POE de reCamera tiene 3 puertos IO disponibles. Cada puerto puede configurarse como entrada o salida. Los puertos IO están numerados como sigue:
 
 | Puerto IO | Número GPIO |
 | ---- | ---- |
@@ -234,7 +234,7 @@ La placa base POE de reCamera tiene dos conjuntos de puertos serie, a saber /tty
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/image-1.png" /></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_top_uart.png" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_pinout.png" /></div>
 
 El puerto serie de debug de este dispositivo tiene una velocidad de baudios de 115200 y soporta conexión a sistemas de monitoreo remoto.
 
@@ -283,7 +283,7 @@ minicom -D /dev/ttyS3 -b 115200
 
 El botón usr de la reCamera puede ser personalizado por el usuario.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/image-10.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/POE_user_button.png" /></div>
 
 ```bash
 echo "510" > /sys/class/gpio/export
@@ -304,7 +304,7 @@ cat /sys/class/gpio/gpio510/value #When the key is pressed, 0 is printed
 | Cable de 6 Pines | x1 |
 
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

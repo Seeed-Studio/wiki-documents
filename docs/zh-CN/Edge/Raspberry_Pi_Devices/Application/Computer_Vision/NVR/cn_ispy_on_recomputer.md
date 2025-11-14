@@ -1,12 +1,12 @@
 ---
-description: This wiki demonstrates how to deploy moonfire nvr on recomputer. 
-title: iSpy on reComputer
+description: 本 wiki 演示如何在 recomputer 上部署 moonfire nvr。
+title: reComputer 上的 iSpy
 keywords:
   - reComputer
   - iSpy
   - NVR
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_5.webp
-slug: /ispy_on_recomputer
+slug: /cn/ispy_on_recomputer
 last_update:
   date: 11/10/2025
   author: Jiahao
@@ -14,19 +14,19 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# iSpy on reComputer
+# reComputer 上的 iSpy
 
-## Introduction
+## 简介
 
-[iSpy](https://www.ispyconnect.com/) is an open-source video surveillance application, designed to work with consumer webcams and IP cameras. It was originally launched in 2007 and has evolved into a full-featured monitoring solution.
+[iSpy](https://www.ispyconnect.com/) 是一个开源视频监控应用程序，专为消费级网络摄像头和 IP 摄像头而设计。它最初于 2007 年推出，现已发展成为一个功能齐全的监控解决方案。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_1.png" alt="pir" width="800" height="auto"/></p>
 
 
-## Prerequisites
+## 先决条件
 
-### Hardware Requirements
+### 硬件要求
 
 <table align="center">
  <tr>
@@ -42,36 +42,36 @@ no_comments: false # for Disqus
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
 </table>
 
-## Download iSpy
+## 下载 iSpy
 
-### Update system
+### 更新系统
 
-Please use the following command to run.
+请使用以下命令运行。
 
 ```bash
 sudo apt update
 sudo apt upgrade -y
 ```
 
-### Download docker and docker compose
+### 下载 docker 和 docker compose
 
-Please use the following command to install docker.
+请使用以下命令安装 docker。
 
 ```bash
 wget https://get.docker.com -O get-docker.sh
@@ -81,12 +81,12 @@ sudo systemctl start docker
 sudo systemctl enable docker
 docker --version
 ```
-The result is shown as below:
+结果如下所示：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_install.png" alt="pir" width="800" height="auto"/></p>
 
 
-Please use the following command to install docker compose.
+请使用以下命令安装 docker compose。
 
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | jq -r .tag_name)/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -94,21 +94,21 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
-The result is shown as below:
+结果如下所示：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_compose_version.png" alt="pir" width="800" height="auto"/></p>
 
 
-### Create `docker-compose.yaml` 
+### 创建 `docker-compose.yaml`
 
 
-Please use the following command to create `docker-compose.yaml`.
+请使用以下命令创建 `docker-compose.yaml`。
 
 ```bash
 cd ~ && nano docker-compose.yaml
 ```
 
-Then input the following content into the `YAML` file.
+然后将以下内容输入到 `YAML` 文件中。
 
 ```bash
 services:
@@ -131,34 +131,34 @@ services:
       - /appdata/AgentDVR/commands:/AgentDVR/Commands/
 ```
 
-Please use the following command to create necessary folder.
+请使用以下命令创建必要的文件夹。
 
 ```bash
 sudo mkdir -p /appdata/AgentDVR/config /appdata/AgentDVR/media /appdata/AgentDVR/commands
 ```
 
-## Configure iSpy
+## 配置 iSpy
 
-### Run docker compose
+### 运行 docker compose
 
-Please use the following command to init database.
+请使用以下命令初始化数据库。
 
 ```bash
 sudo docker compose up -d
 ```
 
-The result is shown as below.
+结果如下所示。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_docker.png" alt="pir" width="800" height="auto"/></p>
 
 
-### Configure
+### 配置
 
-Open the `localhost:8090` port:
+打开 `localhost:8090` 端口：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_windows.png" alt="pir" width="800" height="auto"/></p>
 
-Add a camera by following the steps below：
+按照以下步骤添加摄像头：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_1.png" alt="pir" width="800" height="auto"/></p>
 
@@ -172,16 +172,16 @@ Add a camera by following the steps below：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_5.png" alt="pir" width="800" height="auto"/></p>
 
-## Result
+## 结果
 
-Once we have configured everything, we can view the live feed from the current camera.
+一旦我们配置好所有内容，就可以查看当前摄像头的实时画面。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/result.gif" alt="pir" width="800" height="auto"/></p>
 
 
-## Tech Support & Product Discussion
+## 技术支持与产品讨论
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您对我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
