@@ -3795,6 +3795,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Use_IMX477_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
           ]
         }
       ],
@@ -8507,8 +8508,7 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal-DM-Frigate',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_zoneminder_on_recomputer',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_go2rtc_on_recomputer',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_moonfire_nvr_on_recomputer',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_ispy_on_recomputer'
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_moonfire_nvr_on_recomputer'
                   ]
                 },
                 {
@@ -13518,7 +13518,6 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_zoneminder_on_recomputer',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_go2rtc_on_recomputer',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_moonfire_nvr_on_recomputer',
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_ispy_on_recomputer'
                   ]
                 },
                 {
@@ -18527,8 +18526,7 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal-DM-Frigate',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_zoneminder_on_recomputer',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_go2rtc_on_recomputer',
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_moonfire_nvr_on_recomputer',
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_ispy_on_recomputer'
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_moonfire_nvr_on_recomputer'
                   ]
                 },
                 {
