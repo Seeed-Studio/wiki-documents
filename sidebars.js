@@ -1875,7 +1875,6 @@ const sidebars = {
                 },
               ],
             },
-            ///
             'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_python_sdk',
           ],
         },
@@ -6981,6 +6980,7 @@ const sidebars = {
                 },
               ],
             },
+            'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -11992,6 +11992,7 @@ const sidebars = {
                 },
               ],
             },
+            'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -17003,6 +17004,7 @@ const sidebars = {
                 },
               ],
             },
+            'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_python_sdk',
           ],
         },
         {
