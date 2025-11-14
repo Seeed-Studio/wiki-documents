@@ -5,7 +5,7 @@ keywords:
   - reCamera
   - Home Assistant
   - reComputer
-image: https://files.seeedstudio.com/wiki/reCamera/HA.png
+image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 slug: /getting_started_for_home_assistant_with_recamera
 sidebar_position: 6
 last_update:

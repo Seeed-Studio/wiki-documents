@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-11 15:29:07 (北京时间)
-// 多语言页面: 2042 个
+// 生成时间: 2025-11-14 10:24:30 (北京时间)
+// 多语言页面: 2043 个
 
 (function() {
   'use strict';
@@ -2562,6 +2562,12 @@
     "ja"
   ],
   "/recamera_develop_with_node-red": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
     "es",
