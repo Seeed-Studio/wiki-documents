@@ -4,17 +4,21 @@ title: XIAO ESP32-S3&Wio SX1262 Kit
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
 last_update:
-  date: 09/30/2024
-  author: Evelyn Chen
+  date: 11/11/2025
+  author: Michelle Huang
 ---
 
 
 [Meshtastic®](https://meshtastic.org/) is an open source, off-grid, decentralized, mesh network built to run on affordable, low-power devices. Seeed Studio provides a comprehensive range of ready-to-go Meshtastic devices for hobbyists and industrial users. XIAO ESP32S3 & Wio-SX1262 Kit is flexible solution for meshtastic developer and maker.
-
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+    </a>
+</div>
 ## Flash Firmware
 
 :::note
-Please flash the firmware onto your device if you purchased the XIAO ESP32S3 & Wio-SX1262 Kit before **October 24, 2024** by following this step-by-step tutorial.
+Please flash the firmware onto your device if you purchased the XIAO ESP32S3 & Wio-SX1262 Kit before **October 24, 2024** by following this step-by-step tutorial. Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
 :::
 
 **Step 1**: Firstly, open a browser and visit https://flasher.meshtastic.org/# requires Chrome or Edge browser.
@@ -42,7 +46,20 @@ For specific information, please refer to [the official website of Meshtastic](h
 
 Before using Meshtastic, the device needs to be connected first. There are two connection methods. The first one is to use an expansion board, and the corresponding information will be displayed on the display. Then, the configuration can be carried out on the corresponding platform according to the reflected information. The second one is to connect the XIAO and the Wio-SX1262 module, and use a serial port tool to obtain the node ID and password.
 
-### Method 1: Connected to Expansion board
+### Method 1: Connected to battery
+
+The XIAO ESP32S3 has a built-in power management chip that allows the XIAO ESP32S3 to be powered independently by using a battery or to charge the battery through the XIAO ESP32S3's USB port.
+
+If you want to connect the battery for XIAO, we recommend you to purchase qualified rechargeable `3.7V lithium` battery with `protection circuit`. When soldering the battery, please be careful to distinguish between the positive and negative terminals. The negative terminal of the power supply should be the side closest to the USB port, and the positive terminal of the power supply is the side away from the USB port.
+
+
+
+<div class="table-center">
+<iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/Xiao%20Esp32S3%20Battery%20Connection.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+
+### Method 2: Connected to Expansion board
 
 After flashing firmware and downloading Meshtastic app, Expansion board would be a good tool for connection and additional application such as adding grove sensors and modules easily.
 
@@ -66,7 +83,7 @@ After flashing firmware and downloading Meshtastic app, Expansion board would be
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/dzqx32lBJso" title="Configuring Wio-SX1262 with XIAO ESP32S3 kit as Meshtastic device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### Method 2: Serial port tool
+### Method 3: Serial port tool
 
 Select a serial port debugging tool you like. I will take Comtool on mac as an example below. Select the **serial** connection, choose **the corresponding port**, configure the baud rate as **115200**, and turn on **RTS and DTR**. Open the connection and you can see the connection data.
 Search for "**nodenum**" to find the corresponding node ID. Its default **password is 123456**.

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-04 10:38:25 (北京时间)
-// 多语言页面: 2036 个
+// 生成时间: 2025-11-14 17:21:07 (北京时间)
+// 多语言页面: 2045 个
 
 (function() {
   'use strict';
@@ -947,6 +947,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_robotics_j501_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/create_backup_and_restore_on_recomputer": [
     "cn",
     "en",
@@ -984,6 +990,12 @@
     "ja"
   ],
   "/how_to_encrypt_the_disk_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_establish_the_ethercat_on_jetson": [
     "cn",
     "en",
     "es",
@@ -1487,6 +1499,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_ai_r2140_balena": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/chirpstack_lora_gateway_r1x00": [
     "cn",
     "en",
@@ -1973,7 +1991,25 @@
     "es",
     "ja"
   ],
+  "/go2rtc_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/gun_detection_with_frigate_nvr_on_r2000": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ispy_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/moonfire_nvr_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -2507,13 +2543,19 @@
     "es",
     "ja"
   ],
-  "/recamera_hd_poe_hardware": [
+  "/recamera_hq_poe_hardware": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/recamera_hd_poe_getting_started": [
+  "/recamera_hq_poe_microscope_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hq_poe_getting_started": [
     "cn",
     "en",
     "es",
@@ -2526,6 +2568,12 @@
     "ja"
   ],
   "/recamera_develop_with_node-red": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
     "es",
@@ -8027,6 +8075,12 @@
     "ja"
   ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf3800_python_sdk": [
     "cn",
     "en",
     "es",

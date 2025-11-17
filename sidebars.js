@@ -1845,6 +1845,7 @@ const sidebars = {
             id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_usb_4_mic_array',
           },
           items: [
+            
             {
               type: 'category',
               label: 'ReSpeaker XVF 3800 with XIAO Intro',
@@ -1874,6 +1875,7 @@ const sidebars = {
                 },
               ],
             },
+            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -3402,7 +3404,11 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/frigate_nvr_with_raspberrypi_5',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal_frigate',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal-DM-Frigate',
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/zoneminder_on_recomputer'
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/zoneminder_on_recomputer',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/go2rtc_on_recomputer',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/moonfire_nvr_on_recomputer',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ispy_on_recomputer'
+
                   ]
                 },
                 {
@@ -3791,6 +3797,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Use_IMX477_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
           ]
         }
       ],
@@ -6973,6 +6980,7 @@ const sidebars = {
                 },
               ],
             },
+            'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -8502,6 +8510,9 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal_frigate',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_reterminal-DM-Frigate',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_zoneminder_on_recomputer',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_go2rtc_on_recomputer',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_moonfire_nvr_on_recomputer',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_ispy_on_recomputer'
                   ]
                 },
                 {
@@ -8890,6 +8901,7 @@ const sidebars = {
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Use_IMX477_Camera_with_A603',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+            'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_How_to_Establish_the_Ethercat_on_Jetson',
           ]
         }
       ],
@@ -11980,6 +11992,7 @@ const sidebars = {
                 },
               ],
             },
+            'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -13509,6 +13522,9 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal_frigate',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_reterminal-DM-Frigate',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_zoneminder_on_recomputer',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_go2rtc_on_recomputer',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_moonfire_nvr_on_recomputer',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_ispy_on_recomputer'
                   ]
                 },
                 {
@@ -13897,6 +13913,7 @@ const sidebars = {
             'es/Edge/NVIDIA_Jetson/FAQs/es_Use_IMX477_Camera_with_A603',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+            'es/Edge/NVIDIA_Jetson/FAQs/es_How_to_Establish_the_Ethercat_on_Jetson',
           ]
         }
       ],
@@ -16987,6 +17004,7 @@ const sidebars = {
                 },
               ],
             },
+            'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -18516,6 +18534,9 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal_frigate',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_reterminal-DM-Frigate',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_zoneminder_on_recomputer',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_go2rtc_on_recomputer',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_moonfire_nvr_on_recomputer',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_ispy_on_recomputer'
                   ]
                 },
                 {
@@ -18904,6 +18925,7 @@ const sidebars = {
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Use_IMX477_Camera_with_A603',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+            'ja/Edge/NVIDIA_Jetson/FAQs/ja_How_to_Establish_the_Ethercat_on_Jetson',
           ]
         }
       ],

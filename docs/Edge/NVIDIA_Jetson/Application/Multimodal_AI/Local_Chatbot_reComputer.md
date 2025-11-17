@@ -197,6 +197,8 @@ sudo bash riva_start.sh
 Once everything is ready, run the main application:
 
 ```bash
+git clone https://github.com/kouroshkarimi/local_chatbot_jetson.git
+cd local_chatbot_jetson
 python3 app.py --list-input-devices
 python3 app.py --list-output-devices
 python3 app.py --input-device <your_input_id> --output-device <your_output_id>

@@ -121,22 +121,37 @@ After completing the registration, click **“Tools”** in the menu bar to ente
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi62.png" style={{width:1000, height:'auto'}}/></div>
 
-
-On this page, you will find tutorial firmware for two ePaper display models: the **7.3” Full-Color Display (800×480)** and the **7.5” Monochrome Display (800×480)**.
-
 :::tip
-Currently, the XIAO ePaper Display Board(ESP32-S3) - EE04 only offers HMI firmware for the 7.5-inch and 7.3-inch models. Updates will be provided in the future.
+Currently, the XIAO ePaper Display Board(ESP32-S3) - EE04 following ePaper screens are supported:
+- [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+- [2.13-inch ePaper - Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [2.13-inch ePaper - Quadruple Color 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9-inch ePaper - Quadruple Color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+- [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [7.3-inch Spectra6 ePaper 800x480](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 :::
 
+On this page, you will find tutorial firmware for two ePaper display models: the **7.3” Full-Color Display (800×480)** 
+
+If you’d like to use an ePaper display of a different size, simply follow the same steps below.
 
 <Tabs>
 <TabItem value="7.3-Inch ePaper Display" label="7.3 Full Color Display 800*480 "default>
 
 ***Setp 1 .*** `Select` the 7.3 "Full Color Display 800*480
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi7.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi92.png" style={{width:1000, height:'auto'}}/></div>
 
 ***Setp 2 .*** Select the latest firmware `EE04_7_3_color_1.0.5`
+:::tip
+The SenseCraft HMI platform is regularly updated, and new firmware versions are released from time to time.
+
+Be sure to select and use the latest firmware version to ensure the best compatibility and performance.
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi5.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -171,15 +186,15 @@ The configuration is not yet complete. Please continue following the steps below
 
 </TabItem>
 
-<TabItem value="7.5-Inch ePaper Display" label="7.5 Monochrome Display 800*480 "default>
+<!-- <TabItem value="7.5-Inch ePaper Display" label="7.5 Monochrome Display 800*480 "default>
 
 ***Setp 1 .*** `Select` the 7.5 "Monochrome Display 800*480
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi8.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi91.png" style={{width:1000, height:'auto'}}/></div>
 
 ***Setp 2 .*** Select the latest firmware `EE04_7_5_mono_1.0.5`
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi15.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/HMI/hmi6.png" style={{width:1000, height:'auto'}}/></div>
 
 ***Setp 3 .*** Click **Flash** to upload the **7.5 "Monochrome Display 800*480** firmware to the XIAO ePaper Display Board (ESP32-S3) - EE04.
 
@@ -210,7 +225,7 @@ You will see two QR codes, each leading to a different page when scanned.
 The configuration is not yet complete. Please continue following the steps below to **Network Setup** finish the setup.
 
 
-</TabItem>
+</TabItem> -->
 
 </Tabs>
 

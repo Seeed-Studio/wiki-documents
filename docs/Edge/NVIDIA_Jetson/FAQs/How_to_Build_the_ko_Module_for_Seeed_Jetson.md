@@ -19,8 +19,12 @@ last_update:
 
 This article uses **L4T 36.4.3**, which corresponds to **JetPack 6.2** BSP, as an example to show how to compile the .ko driver module for `pl2303` (a USB-to-serial related driver) on **reComputer/reServer**.
 
-First, download the BSP source code from NVIDIA’s official website according to your L4T version.
+:::tip
+This tutorial downloads the source code on the Jetson and compiles the `.ko` kernel modules.
+:::
 
+
+First, download the BSP source code from NVIDIA’s official website according to your L4T version.
 
 If you're unsure about the relationship between L4T versions and JetPack versions, you can refer to this link:
 https://developer.nvidia.com/embedded/jetpack-archive.

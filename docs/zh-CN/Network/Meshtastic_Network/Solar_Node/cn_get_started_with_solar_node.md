@@ -1,6 +1,6 @@
 ---
 description: SenseCAP Solar Node for Meshtastic & LoRa 入门指南
-title: SenseCAP Solar Node 入门指南
+title:  SenseCAP Solar Node 入门指南
 keywords:
 - Meshtastic
 - Solar
@@ -18,6 +18,10 @@ last_update:
 在正式部署之前，请先测试和配置节点。
 
 ### 刷写固件
+
+:::caution note
+请`不要使用 NRF-OTA`来更新固件，这可能会导致设备完全损坏。
+:::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
@@ -43,7 +47,7 @@ P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用�
 
 
 
-- 步骤 1：拆下所有螺丝和盖子。
+- 步骤 1：拆下所有螺丝和外壳。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
@@ -103,7 +107,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置参数
 
-为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的区域位置进行设置。
+为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS 应用">
@@ -137,7 +141,7 @@ import TabItem from '@theme/TabItem';
 ## 安装
 
 :::danger note
-由于设备将在户外长期使用，请避免将面板水平安装。建议倾斜或对角安装以防止积水。此外，确保所有螺丝牢固拧紧，盖子正确安装。为了增强防水保护，您还可以考虑采用额外的密封措施。
+由于设备将在户外长期使用，请避免将面板水平安装。建议倾斜或对角安装以防止积水。此外，确保所有螺丝牢固拧紧，外壳正确安装。为了增强防水保护，您还可以考虑采用额外的密封措施。
 :::
 
 - **零件清单**

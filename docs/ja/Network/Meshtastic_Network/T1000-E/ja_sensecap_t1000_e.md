@@ -1,37 +1,41 @@
 ---
-description: Meshtastic用SenseCAP Card Tracker T1000-Eの使用開始
-title: T1000-E Trackerの使用開始
+description: Meshtastic 対応 SenseCAP Card Tracker T1000-E の使用開始
+title: T1000-E Tracker の使用開始
 keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/11/2025
+  author: Michelle Huang
 ---
 
 ## ビデオチュートリアル
 
-### パート1：開封とセットアップ
+### パート 1: 開封とセットアップ
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/9sCHpWPSPcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### パート2：ステータスインジケータ
+### パート 2: ステータスインジケータ
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/8p34S_9DDEQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### パート3：新しいファームウェアのフラッシュ
+### パート 3: 新しいファームウェアのフラッシュ
+
+:::caution note
+ファームウェアをフラッシュする前に、`T1000-E for Meshtastic` を購入したことを確認してください。Meshtastic をサポートしていない他のトラッカーモデルにファームウェアをフラッシュしないでください。ファームウェアの更新に `NRF-OTA` を使用しないでください。デバイスが完全に動作しなくなる可能性があります。
+:::
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### パート4：トラブルシューティング手順
+### パート 4: トラブルシューティング手順
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/iWahTuXwYnU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -39,14 +43,14 @@ last_update:
 
 ## 使用開始
 
-`Meshtastic`アプリをダウンロード：
+`Meshtastic` アプリをダウンロード：
 
-- [IOSアプリ](https://meshtastic.org/docs/category/apple-apps/)
-- [Androidアプリ](https://meshtastic.org/docs/category/android-app/)
+- [IOS App](https://meshtastic.org/docs/category/apple-apps/)
+- [Android App](https://meshtastic.org/docs/category/android-app/)
 
 ### デバイスの電源を入れる
 
-一度押してデバイスの電源を入れると、上昇音が鳴り、LEDライトが約1秒間点灯します。
+一度押してデバイスの電源を入れると、上昇メロディが鳴り、LED ライトが約 1 秒間点灯し続けます。
 
 :::tip
 ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
@@ -59,25 +63,25 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOSアプリ">
+<TabItem value="ios" label="IOS アプリ">
 
-- Bluetoothパネルでターゲットデバイスを選択します。
+- Bluetooth パネルでターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- コード（デフォルトコードは`123456`）を入力し、`OK`をクリックしてデバイスに接続します。
+- コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Androidアプリ">
+<TabItem value="android" label="Android アプリ">
 
-- `+`をクリックしてターゲットデバイスを選択します。
+- `+` をクリックしてターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- コード（デフォルトコードは`123456`）を入力し、`OK`をクリックしてデバイスに接続します。
+- コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -86,16 +90,16 @@ import TabItem from '@theme/TabItem';
 
 ### パラメータの設定
 
-メッシュ通信を開始するには、地域を設定する必要があります。この設定はデバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
+メッシュ通信を開始するには、地域を設定する必要があります。この設定は、デバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
 
 <Tabs>
-<TabItem value="ios" label="IOSアプリ">
+<TabItem value="ios" label="IOS アプリ">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Androidアプリ">
+<TabItem value="android" label="Android アプリ">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -109,61 +113,61 @@ import TabItem from '@theme/TabItem';
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868MHz|869.4 - 869.65|10|27|
 
-より包括的なリストについては、[国別LoRa地域](https://meshtastic.org/docs/configuration/region-by-country/)を参照してください。
+より包括的なリストについては、[国別 LoRa 地域](https://meshtastic.org/docs/configuration/region-by-country/)を参照してください。
 
 :::info
-**EU_868**は、1時間ごとのデューティサイクル制限10%を遵守する必要があり、これは1時間のローリングベースで毎分計算されます。制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1 時間のローリングベースで毎分計算される 10% の時間あたりデューティサイクル制限に従う必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスでLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
+デバイスに LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
 
 ### センサー設定
 
 |センサー|説明|
 |-|-|
 |温度|✅|
-|光|現在アプリではサポートされていません|
+|光|現在アプリでサポートされていません|
 |加速度計|継続予定|
 
 **温度センサー設定**
 
 <Tabs>
-<TabItem value="ios" label="IOSアプリ">
+<TabItem value="ios" label="IOS アプリ">
 
-`Settings` -> `Telemetry(Sensors)` -> センサーを有効にする に移動します。
+`Settings` -> `Telemetry(Sensors)` に移動し、センサーを有効にします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/temp-ios.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Androidアプリ">
+<TabItem value="android" label="Android アプリ">
 
-`Settings` -> `Telemetry(Sensors)` -> センサーを有効にする に移動します。
+`Settings` -> `Telemetry(Sensors)` に移動し、センサーを有効にします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/temp-an.png" alt="pir" width={500} height="auto" /></p>
 
 </TabItem>
 </Tabs>
 
-**ブザーとLED設定**
+**ブザーと LED 設定**
 
-||タイプ|出力PIN|
+||タイプ|出力ピン|
 |-|-|-|
-|ブザー|PWMブザー|25|
+|ブザー|PWM ブザー|25|
 |LED|-|24|
 
 <Tabs>
-<TabItem value="ios" label="IOSアプリ">
+<TabItem value="ios" label="IOS アプリ">
 
-`Settings` -> `External Notification` -> `GPIO`を有効にする -> `Output Pin GPIO`を設定する に移動します。
+`Settings` -> `External Notification` に移動し、`GPIO` を有効にして、`Output Pin GPIO` を設定します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-en.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Androidアプリ">
+<TabItem value="android" label="Android アプリ">
 
-`Settings` -> `External Notification` -> `GPIO`を有効にする -> `Output Pin GPIO`を設定する に移動します。
+`Settings` -> `External Notification` に移動し、`GPIO` を有効にして、`Output Pin GPIO` を設定します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-an.png" alt="pir" width={500} height="auto" /></p>
 
@@ -173,21 +177,21 @@ import TabItem from '@theme/TabItem';
 詳細については、[外部通知設定](https://meshtastic.org/docs/configuration/module/external-notification/)を確認してください。
 
 :::tip
-デバイス設定を更新した後、デバイスが再起動しますが、これには時間がかかる場合があります。
+デバイス設定を更新すると、デバイスが再起動します。これには時間がかかる場合があります。
 :::
 
 ## ファームウェアのフラッシュ
 
 ### ファームウェアバージョンの確認
 
-`Settings` -> `Firmware Updates`に移動し、現在のファームウェアバージョンを確認します。
+`Settings` -> `Firmware Updates` に移動し、現在のファームウェアバージョンを確認します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/check-version.png" alt="pir" width={400} height="auto" /></p>
 
 ### <div class="danger">⚠️以下のファームウェアをフラッシュしないでください</div>
 
 :::danger
-T1000-Eファームウェア以外のファームウェアをフラッシュしないでください。デバイスがフリーズする可能性があります。
+T1000-E ファームウェア以外の他のファームウェアをフラッシュしないでください。デバイスがフリーズする可能性があります。
 :::
 
 以下のファームウェアはデバイスを破損させます：
@@ -206,27 +210,29 @@ T1000-Eファームウェア以外のファームウェアをフラッシュし�
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Flash%20Firmware.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
-
-#### ステップ1：DFUモードに入る
+:::caution note
+ファームウェアをフラッシュする前に、`T1000-E for Meshtastic` を購入したことを確認してください。Meshtastic をサポートしていない他のトラッカーモデルにファームウェアをフラッシュしないでください。ファームウェアの更新に `NRF-OTA` を使用しないでください。デバイスが完全に動作しなくなる可能性があります。
+:::
+#### ステップ 1: DFU モードに入る
 
 <Tabs>
-<TabItem value="method1" label="方法1">
+<TabItem value="method1" label="方法 1">
 
-[Meshtastic Web Flasher](https://flasher.meshtastic.org/)にアクセスします。
+[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。
 
-デバイスをPCに接続し、デバイスを`Seeed Card Tracker T1000-E`に選択し、最新のファームウェアを選択して、`Flash`をクリックします。
+デバイスを PC に接続し、デバイスを `Seeed Card Tracker T1000-E` に選択し、最新のファームウェアを選択して、`Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-2.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter DFU Mode`をクリックすると、`T1000-E xxx`という名前のシリアルポートが表示されます。それをクリックして接続すると、緑色のLEDが点灯し、`T1000-E`という名前のドライバが表示されます。
+`Enter DFU Mode` をクリックすると、`T1000-E xxx` という名前のシリアルポートが表示されます。それをクリックして接続すると、緑色の LED が点灯し、`T1000-E` という名前のドライバが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-serial.png" alt="pir" width={800} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="method2" label="方法2">
+<TabItem value="method2" label="方法 2">
 
-USBケーブルをPCに接続し、デバイスボタンを押し続けながら、充電ケーブルを**素早く**2回接続します。緑色のLEDが点灯し、`T1000-E`という名前のドライバが表示されます。
+USB ケーブルを PC に接続し、デバイスボタンを押し続けながら、充電ケーブルを**素早く**2 回接続します。緑色の LED が点灯し、`T1000-E` という名前のドライバが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -235,55 +241,55 @@ USBケーブルをPCに接続し、デバイスボタンを押し続けながら
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={800} height="auto" /></p>
 
-#### ステップ2：フラッシュ消去
+#### ステップ 2: フラッシュ消去
 
 :::caution note
 ファームウェアをフラッシュする前に、まず消去ファームウェアをフラッシュしてください！
 :::
 
-`ゴミ箱`シンボルをクリックします。
+`ゴミ箱` シンボルをクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase1.png" alt="pir" width={800} height="auto" /></p>
 
-消去ファームウェアをダウンロードしてドライバにコピーします。
+消去ファームウェアをダウンロードし、ドライバにコピーします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase-uf2.png" alt="pir" width={800} height="auto" /></p>
 
-この処理には時間がかかる場合があります。ドライブが消えるまで待ち、その後シリアルモニターを開いて消去処理を完了します。
+このプロセスには時間がかかる場合があります。ドライブが消えるまで待ち、その後シリアルモニターを開いて消去プロセスを完了します。
 
-#### ステップ3：ファームウェアのフラッシュ
+#### ステップ 3: ファームウェアのフラッシュ
 
-最新のファームウェアを選択し、`UF2`ファイルをダウンロードします。
+最新のファームウェアを選択し、`UF2` ファイルをダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/down-uf2.png" alt="pir" width={800} height="auto" /></p>
 
-UF2ファイルをDFUドライブにコピーします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされます。
+UF2 ファイルを DFU ドライブにコピーします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされるはずです。
 
 ## FAQ
 
 - **デバイス名の確認方法**
 
- [Meshtastic Web Flasher](https://flasher.meshtastic.org/)にアクセスします。<br/>
+ [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。<br/>
 
- `Open Serial Monitor`をクリックし、デバイスをPCに接続し、シリアルログを確認します。キーワード`using nodenum`を探します。
+ `Open Serial Monitor` をクリックし、デバイスを PC に接続し、シリアルログを確認します。キーワード `using nodenum`。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
 
-- **デバイスの再起動方法は？**
+- **デバイスを再起動する方法は？**
 
- ボタンを押し続けながら、充電ケーブルを接続します。
+ ボタンを長押しして、充電ケーブルを接続します。
 
 ## トラブルシューティング
 
-### デバイスが全く電源が入らない
+### デバイスが起動しない
 
 - デバイスを1〜2時間充電する
 
 - 充電ケーブルを交換する
 
-### デバイスがブートループに陥る
+### デバイスが起動ループに陥る
 
 **説明：**
 
@@ -291,10 +297,10 @@ UF2ファイルをDFUドライブにコピーします。ファイルがダウ�
 
 **解決方法：**
 
-- ステップ1：手動でDFUモードに入る：デバイスボタンを押し続けながら、充電ケーブルを**素早く**2回接続すると、緑色のLEDが点灯します。
+- ステップ1：手動でDFUモードに入る：デバイスのボタンを長押しして、充電ケーブルを**素早く**2回接続すると、緑色のLEDが点灯します。
 
 :::note
-DFUモードに正常に入るには、この操作を素早く行う必要があります。何度か試す必要があるかもしれません。
+DFUモードに正常に入るには、この操作を素早く実行する必要があります。複数回試す必要があるかもしれません。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
@@ -303,13 +309,13 @@ DFUモードに正常に入るには、この操作を素早く行う必要が�
 
 - ステップ3：[ファームウェアフラッシュ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-3-flash-firmware)。
 
-### デバイスが故障
+### デバイスが故障した
 
 **説明：**
 
 デバイスが応答せず、LEDが点灯せず、アプリとペアリングできません。
 
-**1) デバイスがまだDFUモードに入れる場合、ブートローダーのフラッシュを試してください**。
+**1) デバイスがまだDFUモードに入れる場合、ブートローダーをフラッシュしてみてください**。
 
 #### ブートローダーのフラッシュ
 
@@ -373,7 +379,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-ユーティリティの自己完結型実行可能バイナリを生成するには（WindowsとMacOS）、以下のコマンドを実行します：
+ユーティリティの自己完結型実行可能バイナリを生成するには（WindowsとmacOS）、以下のコマンドを実行します：
 
 ```
 pip3 install pyinstaller
@@ -384,7 +390,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
 .exeファイルは`Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil`にあります（Windowsの場合は`.exe`付き）。
-便利なように、%PATH%内のディレクトリなど、他の場所にコピーまたは移動してください。
+便宜上、%PATH%内のディレクトリなど、他の場所にコピーまたは移動してください。
 
 </TabItem>
 </Tabs>
@@ -423,7 +429,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 - ボーレートを`1200`に設定する。
 
 - デバイスを接続する。
-   接続時にライトが短時間点滅します。ライトが点灯し続けるまでこれを繰り返してください。これはデバイスがDFUモードに戻ったことを意味します。その後、[ブートローダーフラッシュ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#flash-the-bootloader) -> [フラッシュ消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase) -> [ファームウェアフラッシュ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-3-flash-firmware)を行います。
+   接続時にライトが短時間点滅します。ライトが点灯し続けるまでこれを繰り返してください。これはデバイスがDFUモードに戻ったことを意味し、その後[ブートローダーフラッシュ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#flash-the-bootloader) -> [フラッシュ消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase) -> [ファームウェアフラッシュ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-3-flash-firmware)を実行します。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -435,7 +441,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 **4) 上記の手順がすべて機能しない場合は、技術サポートにお問い合わせください：support@sensecapmx.com**
 
-### ファームウェアフラッシュ失敗
+### ファームウェアフラッシュの失敗
 
 - **シリアルポートでデータが受信されない**
 
@@ -460,7 +466,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 ## リソース
 
 - [Meshtastic ドキュメント](https://meshtastic.org/docs/introduction/)
-- [SenseCAP T1000 トラッカー データシート](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
+- [SenseCAP T1000 トラッカーデータシート](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 
 
 ## 技術サポート & 製品ディスカッション
