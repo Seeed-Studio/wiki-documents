@@ -1,6 +1,6 @@
 ---
-description: SenseCAP Solar Node for Meshtastic & LoRa 入门指南
-title:  SenseCAP Solar Node 入门指南
+description: 开始使用 SenseCAP Solar Node for Meshtastic & LoRa
+title:  开始使用 SenseCAP Solar Node
 keywords:
 - Meshtastic
 - Solar
@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /cn/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/11/2025
+  author: Michelle Huang
 ---
 
 
@@ -20,7 +20,7 @@ last_update:
 ### 刷写固件
 
 :::caution note
-请`不要使用 NRF-OTA`来更新固件，这可能会导致设备完全损坏。
+请`不要使用 NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
 :::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
@@ -35,7 +35,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖拽到 DFU 驱动器中。文件下载完成后，固件应该会被刷写，设备会重启。
+将 UF2 文件拖拽到 DFU 驱动器中。文件下载完成后固件应该会被刷写，设备会重启。
 
 ### 安装电池和 GPS 模块（可选）
 
@@ -47,7 +47,7 @@ P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用�
 
 
 
-- 步骤 1：拆下所有螺丝和外壳。
+- 步骤 1：拆下所有螺丝和盖子。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
@@ -67,7 +67,11 @@ P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用�
 
 ### 设备开机
 
-设备首次使用时需要通过连接 USB 线缆来激活。
+设备首次使用需要通过连接 USB 线缆来激活。如果蓝色 Mesh 指示灯闪烁，说明设备已成功开机。如下方视频所示：
+
+<div class="table-center">
+<iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 :::tip
 如果按下按钮时设备没有响应，请先充电。请勿使用快充充电器。
@@ -105,9 +109,41 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
+
+### 通过网站连接
+
+如果您想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+
+  步骤 1：打开网站
+
+[点击这里](https://client.meshtastic.org/messages/broadcast/0) 前往网站。
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  步骤 2：添加新设备
+
+    点击 "+ New Connection"。
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    有两种连接方式。您可以选择您喜欢的方法。
+
+ 方法 1：通过蓝牙
+
+    选择蓝牙方法。在弹出窗口中选择设备 ID。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ 方法 2：通过串口
+
+    选择串口方法。打开设备管理器查看设备连接到哪个端口。在弹出窗口中选择该端口。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    您的设备将显示在列表中。点击连接。如果连接成功，您可以直接在网站上看到设备状态。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
+
 ### 配置参数
 
-为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
+为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的区域位置进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS 应用">
@@ -141,7 +177,7 @@ import TabItem from '@theme/TabItem';
 ## 安装
 
 :::danger note
-由于设备将在户外长期使用，请避免将面板水平安装。建议倾斜或对角安装以防止积水。此外，确保所有螺丝牢固拧紧，外壳正确安装。为了增强防水保护，您还可以考虑采用额外的密封措施。
+由于设备将在户外长期使用，请避免将面板水平安装。建议倾斜或对角安装以防止积水。此外，确保所有螺丝都牢固拧紧，盖子正确安装。为了增强防水保护，您还可以考虑采用额外的密封措施。
 :::
 
 - **零件清单**
@@ -192,7 +228,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### 完整安装指导
+### 完整安装指南
 
 - 您可以通过视频完成整个安装和初始化过程。
 
@@ -263,8 +299,8 @@ import TabItem from '@theme/TabItem';
 |描述|功耗|
 |---|---|
 |GPS_LED 工作电流|1.02 mA|
-|已供电但未激活|56.195 μA|
-|已供电且已激活|611 μA|
+|通电但未激活|56.195 μA|
+|通电并激活|611 μA|
 
 **示例：**
 
@@ -289,7 +325,7 @@ import TabItem from '@theme/TabItem';
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为了获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
+      为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
 
 ## 资源
 - [太阳能节点电池寿命计算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
