@@ -1,6 +1,6 @@
 ---
 description: SenseCAP Solar Node for Meshtastic & LoRa の使用開始
-title:  SenseCAP Solar Node の使用開始
+title: SenseCAP Solar Node の使用開始
 keywords:
 - Meshtastic
 - Solar
@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /ja/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/11/2025
+  author: Michelle Huang
 ---
 
 
@@ -23,9 +23,9 @@ last_update:
 ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
 :::
 
-[Meshtastic Web Flasher](https://flasher.meshtastic.org/)にアクセスしてください。
+[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスしてください。
 
-対象デバイスを `Seeed SenseCAP Solar Node` に選択し、最新のファームウェアを選択してから `Flash` をクリックします。
+ターゲットデバイスを `Seeed SenseCAP Solar Node` に選択し、最新のファームウェアを選択してから、`Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
@@ -35,29 +35,29 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2ファイルをDFUドライブにドラッグします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされるはずです。
+UF2 ファイルを DFU ドライブにドラッグします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされるはずです。
 
-### バッテリーとGPSモジュールの取り付け（オプション）
+### バッテリーと GPS モジュールの取り付け（オプション）
 
 :::tip
 バッテリーを取り付けまたは交換する必要がある場合は、`Button-top` 18650（3.6V）バッテリーを使用してください。
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
-P1-Proバージョンには内蔵バッテリーとGPSモジュールが搭載されています。P1バージョンの場合、必要に応じてユーザーがバッテリーとGPSモジュールを手動で取り付ける必要があります。
+P1-Pro バージョンには内蔵バッテリーと GPS モジュールが搭載されています。P1 バージョンの場合、必要に応じてユーザーがバッテリーと GPS モジュールを手動で取り付ける必要があります。
 :::
 
 
 
-- ステップ1：すべてのネジとカバーを取り外します。
+- ステップ 1：すべてのネジとカバーを取り外します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
-- ステップ2：バッテリーとGPSモジュールを取り付けます。
+- ステップ 2：バッテリーと GPS モジュールを取り付けます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/install-bat-gps.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps_install.png" alt="pir" width={800} height="auto" /></p>
 
-- ステップ3：シェルを組み立てます。
+- ステップ 3：シェルを組み立てます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
@@ -67,7 +67,11 @@ P1-Proバージョンには内蔵バッテリーとGPSモジュールが搭載�
 
 ### デバイスの電源投入
 
-初回使用時は、USBケーブルを接続してデバイスをアクティベートする必要があります。
+デバイスは初回使用時に USB ケーブルを接続してアクティベートする必要があります。青い Mesh ライトが点滅すれば、デバイスが正常に電源投入されたことを意味します。以下の動画のとおりです：
+
+<div class="table-center">
+<iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 :::tip
 ボタンを押してもデバイスが応答しない場合は、まず充電してください。急速充電器は使用しないでください。
@@ -82,7 +86,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="iOS アプリ">
 
-- Bluetoothパネルで対象デバイスを選択します。
+- Bluetooth パネルでターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
@@ -94,7 +98,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android アプリ">
 
-- `+` をクリックして対象デバイスを選択します。
+- `+` をクリックしてターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
@@ -104,6 +108,38 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 </Tabs>
+
+
+### ウェブサイト経由での接続
+
+ウェブサイトでテキストメッセージを送信し、他のノードと通信したい場合は、デバイスを [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) に接続できます。
+
+  ステップ 1：ウェブサイトを開く
+
+[こちらをクリック](https://client.meshtastic.org/messages/broadcast/0) してウェブサイトにアクセスしてください。
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  ステップ 2：新しいデバイスを追加
+
+    "+ New Connection" をクリックします。
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    接続方法は 2 つあります。お好みの方法を選択できます。
+
+ 方法 1：Bluetooth 経由
+
+    Bluetooth 方法を選択します。ポップアップウィンドウでデバイス ID を選択します。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ 方法 2：シリアル経由
+
+    シリアル方法を選択します。デバイスマネージャーを開いて、デバイスが接続されているポートを確認します。ポップアップウィンドウでそのポートを選択します。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    デバイスがリストに表示されます。クリックして接続します。接続が成功すると、ウェブサイト上でデバイスのステータスを直接確認できます。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 ### パラメータの設定
 
@@ -130,13 +166,13 @@ import TabItem from '@theme/TabItem';
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868MHz|869.4 - 869.65|10|27|
 
-より包括的なリストについては、[国別LoRa地域](https://meshtastic.org/docs/configuration/region-by-country/)を参照してください。
+より包括的なリストについては、[国別 LoRa 地域](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868** は、1時間ごとのデューティサイクル制限10%を遵守する必要があり、これは1時間のローリングベースで毎分計算されます。制限に達した場合、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1 時間ごとのデューティサイクル制限 10% を遵守する必要があり、これは 1 時間のローリングベースで毎分計算されます。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスでLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
+デバイスに LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
 
 ## 設置
 
@@ -150,59 +186,59 @@ import TabItem from '@theme/TabItem';
 
 ### ステップバイステップ設置ガイド
 
-- ステップ1：ワッシャーとネジを使用して、パーツ1をデバイスの底部に接続します。
+- ステップ 1：ワッシャーとネジを使用して、部品 1 をデバイスの底部に接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ2：ユニバーサルジョイント（パーツ2）とブラケット（パーツ3）をネジで接続します。
+- ステップ 2：ユニバーサルジョイント（部品 2）とブラケット（部品 3）をネジで接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ3：RFケーブル（パーツ4）とアンテナ（パーツ5）を接続します。
+- ステップ 3：RF ケーブル（部品 4）とアンテナ（部品 5）を接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ4：適切な位置にフープリングを取り付けます。
+- ステップ 4：適切な位置にフープリングを取り付けます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ5：ユニバーサルジョイントブラケットを接続します。
+- ステップ 5：ユニバーサルジョイントブラケットを接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ6：ネジを緩め、ユニバーサルジョイントを適切な位置に調整してから、ネジを締めます。
+- ステップ 6：ネジを緩め、ユニバーサルジョイントを適切な位置に調整してから、ネジを締めます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ7：アンテナをデバイスに接続します。
+- ステップ 7：アンテナをデバイスに接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### 完全な設置ガイド
+### 完全インストールガイダンス
 
-- ビデオを通じて、設置と初期化プロセス全体を完了できます。
+- ビデオを通じて、インストールと初期化プロセス全体を完了できます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### ソーラーノードへのセンサー追加（オプション）
+### ソーラーノードにセンサーを追加（オプション）
 
-- このビデオを通じてセンサーを取り付けることができます。
+- このビデオを通じてセンサーをインストールできます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -238,14 +274,14 @@ import TabItem from '@theme/TabItem';
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
-    <td>I2C キーボード</td>
+    <td>I2Cキーボード</td>
     <td>CardKB</td>
   </tr>
 </table>
 
 ### アンテナのアップグレード（オプション）
 
-- この動画を見て、アンテナをファイバーグラス製のものに交換することができます。
+- このビデオを見て、アンテナをファイバーグラス製のものに交換できます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -289,7 +325,7 @@ import TabItem from '@theme/TabItem';
 
 - **RSSI**はデバイスとその周辺環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
 
-      最良の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
+      最良の信号効果を得るために、干渉が最小限で開放的で障害物のない場所でデバイスを使用してください。
 
 ## リソース
 - [ソーラーノードバッテリー寿命計算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
