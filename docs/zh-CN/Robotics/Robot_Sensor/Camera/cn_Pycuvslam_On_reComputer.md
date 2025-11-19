@@ -22,10 +22,10 @@ last_update:
     src="https://media.githubusercontent.com/media/NVlabs/PyCuVSLAM/main/pycuvslam.gif" />
 </div>
 
-## 介绍
+## 简介
 
 <div style={{ textAlign: "justify" }}>
-[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) 是 NVIDIA GPU 加速视觉里程计和 SLAM 库 cuVSLAM 的 Python 包装器。它支持单目、立体、RGB-D、多相机和视觉惯性（IMU）模式，提供简单的 Python API，可以直接与相机流接口并输出实时相机姿态、地图点和闭环信息。底层的 CUDA 优化在 PC 和 Jetson 设备上都能实现高精度、低延迟的 SLAM 推理，使其适用于机器人导航、无人机定位和 3D 感知应用。本 wiki 将提供如何在 reComputer 上部署 pycuvslam 的说明。
+[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM) 是 NVIDIA GPU 加速视觉里程计和 SLAM 库 cuVSLAM 的 Python 包装器。它支持单目、立体、RGB-D、多相机和视觉惯性（IMU）模式，提供简单的 Python API，可以直接与相机流接口并输出实时相机姿态、地图点和回环检测信息。底层的 CUDA 优化在 PC 和 Jetson 设备上都能实现高精度、低延迟的 SLAM 推理，使其适用于机器人导航、无人机定位和 3D 感知应用。本 wiki 将提供如何在 reComputer 上部署 pycuvslam 的说明。
 </div>
 
 <div align="center">
@@ -148,7 +148,7 @@ ros2 run camera_calibration cameracalibrator \
 
 - `--size 8x6` 指的是内角点数量（8×6 = 48 个角点，对应 9×7 网格）
 - `--square 0.025` 指的是方格大小，单位为米（25mm）
-- 移动相机从不同角度捕获图像，直到 `CALIBRATE` 按钮亮起
+- 移动相机从不同角度拍摄图像，直到 `CALIBRATE` 按钮亮起
 
 :::
 
@@ -899,7 +899,7 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal4.png" />
 </div>
 
-对于 RGB-D 相机，您将获得相机参数：
+对于 RGB-D 相机，您将获得相机的参数：
 
 ```yaml
 [image]
@@ -1888,21 +1888,30 @@ def main() -> None:
                 trajectory.append(current_position)  # Add position to trajectory
 
                 # Store complete pose data
+                # cuVSLAM's odom_pose.rotation is in [x, y, z, w] order.
+                # Convert and store as [w, x, y, z] for consistent usage elsewhere.
+                raw_quat = odom_pose.rotation  # [x, y, z, w]
+                qx, qy, qz, qw = raw_quat
+                quat_wxyz = [qw, qx, qy, qz]
+
                 pose_data.append({
                     'frame_id': frame_id,                    # framesID
                     'timestamp': timestamp_ns,               # Timestamp
                     'position': current_position,            # Position [x, y, z]
-                    'rotation_quat': odom_pose.rotation,     # Rotation quaternion [w, x, y, z]
+                    'rotation_quat': quat_wxyz,              # Rotation quaternion [w, x, y, z]
                     'stationary': is_stationary if args.detect_stationary else False  # Stationary flag
                 })
 
                 # Extract position and rotation information
                 position = odom_pose.translation  # Position vector [x, y, z]
-                rotation_quat = odom_pose.rotation  # Quaternion [w, x, y, z]
+
+                # cuVSLAM returns quaternion in [x, y, z, w] order. Map to w,x,y,z for calculations.
+                rotation_quat = odom_pose.rotation  # Quaternion [x, y, z, w]
+                qx, qy, qz, qw = rotation_quat
 
                 # Convert quaternion to Euler angles（Roll, pitch, yaw）
                 import math
-                w, x, y, z = rotation_quat  # Quaternion components
+                w, x, y, z = qw, qx, qy, qz  # Quaternion components in w,x,y,z order
 
                 # Roll (rotation around X axis)
                 sinr_cosp = 2 * (w * x + y * z)
