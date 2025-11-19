@@ -1,6 +1,6 @@
 ---
 description: このwikiでは、reComputerにビデオ監視システムzoneminderをデプロイする方法を説明します。
-title: reComputerでZoneminderを使用する
+title: reComputer 上の Zoneminder
 keywords:
   - reComputer
   - NVR
@@ -15,7 +15,7 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# reComputerでZoneminderを使用する
+# reComputer で Zoneminder を使う
 
 ## はじめに
 

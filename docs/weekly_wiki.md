@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/27/2025
+  date: 11/17/2025
   author: Frank
 ---
 
@@ -17,43 +17,63 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 17th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [AI Gun Detection Solution for Real-Time Edge Alerts](https://wiki.seeedstudio.com/solutions/frigate-on-jetson-nodered-gun-alerts/)
+### [iSpy on reComputer](https://wiki.seeedstudio.com/ispy_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://www.seeed.cc/wp-content/uploads/2025/08/scene_3.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The Frigate + Node-RED Gun Detection Solution is an edge AI video analytics stack that detects firearms in live camera streams and orchestrates alerting, review, and integrations. Built for privacy-preserving, low‑latency deployments on **AI Boxes**, the NVIDIA **Jetson** series and **reComputer R2000**, it combines an optimized detection engine (Frigate) with a visual automation layer (Node‑RED) and optional LLM‑assisted review.
-
-</div>
-
-### [MCP Integration in SenseCAP Watcher](https://wiki.seeedstudio.com/mcp_endpoint/)
-
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The [**MCP Endpoint (Model Context Protocol Endpoint)**](https://wiki.seeedstudio.com/mcp_endpoint/) documentation introduces its functionality in **SenseCAP Watcher**, explaining its role in AI systems, configuration methods, and usage examples to help developers quickly integrate and manage custom MCP services. Additionally, we’ve updated [**Extending Grove with MCP**](https://wiki.seeedstudio.com/extending_grove_with_mcp/), which demonstrates how to connect Grove sensors to AI systems through MCP for more flexible data interaction and application development.
+This guide shows how to deploy the open-source video surveillance application iSpy on the reComputer R series edge computing devices from Seeed Studio. It covers hardware prerequisites, system updates, installing Docker and Docker Compose, creating the `docker-compose.yaml` configuration, and adding cameras to start live monitoring.
 
 </div>
 
-## Existing Wiki Updated
+### [Getting started for Home Assistant with reCamera](https://wiki.seeedstudio.com/getting_started_for_home_assistant_with_recamera/)
 
-### [reTerminal E Series ePaper Display Works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" alt="pir" width={800} height="auto" /></p>
 
-We have added an operation example on how to [flash via the SenseCraft HMI platform](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/#method-2-flash-via-sensecraft-hmi-platform).
+<div style={{ textAlign: "justify" }}>
+
+This guide walks you through setting up Home Assistant on a Seeed Studio reCamera system, including hardware prerequisites, installing Docker, deploying Home Assistant in a container, and configuring the camera integration and automation with the system’s data.
+
+</div>
+
+### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+**EtherCAT (Ethernet for Control Automation Technology)** is an open-source, high-performance real-time Industrial Ethernet fieldbus protocol based on **IEEE 802.3 Ethernet standards**. It operates on a **master-slave architecture** and is renowned for its exceptional speed, precision, and flexibility in industrial automation environments. This document uses the [**recomputer robotics J401**](https://www.seeedstudio.com/reComputer-Robotics-Carrier-board-p-6442.html) as the **EtherCAT master** and the [**MyActuator X4**](https://www.seeedstudio.com/Myactuator-X4-P12-5-10-Planetarty-Actuator-p-6470.html) as the **slave** to demonstrate how to establish communication between a Jetson and EtherCAT devices.
+
+</div>
+
+### [reSpeaker XVF3800 Control with Python](https://wiki.seeedstudio.com/respeaker_xvf3800_python_sdk/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+In this section, we are going to talk about how to control your ReSpeaker XVF-3800 using the Python SDK. It makes development more convenient for users who want to build their own applications.
+For instance, you can detect where the voice is coming from, perform voice activity detection (VAD), control LEDs, and much more.
+
+</div>
+
+<!-- ## Existing Wiki Updated
+
+### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
+
+We have added [instructions for using the User Buttons](https://wiki.seeedstudio.com/epaper_ee04/#user-buttons-on-xiao-epaper-display-boardesp32-s3---ee04) on the XIAO ePaper Display Board (ESP32-S3) - EE04. -->
 
 ## The Efforts of Contributor
 
-<!-- ### [Seeed Studio XIAO ESP32C6 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c6_nuttx/)
+<!-- ### [Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS](https://wiki.seeedstudio.com/local_chatbot_recomputer/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32C3-NuttX/nuttx.svg" style={{width:400, height:'auto'}}/></div>
-
-This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 board. NuttX is a lightweight, scalable real-time operating system known for its small footprint and broad hardware support. The guide walks through installing necessary tools, configuring the board, building the system, and flashing firmware. It includes examples for using NuttShell (NSH), USBNSH, and JUMBO applications, with a focus on practical tasks like GPIO and LED control. -->
+This project brings the dream of a **fully voice-interactive AI assistant** to life — running entirely **on local hardware**, without reliance on cloud services.  
+By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Large Language Models (LLMs)** using **Ollama**, the system enables natural, private, and real-time conversations between humans and machines. The entire setup runs inside Docker containers and can be deployed on **NVIDIA Jetson devices**, **edge computers**, or any Linux-based system with GPU acceleration. -->
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!
@@ -191,5 +211,8 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
 - [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
 - [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
+- [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
+- [weekly wiki on 2025.11.03rd](/Seeed_Elderly/weekly_wiki/wiki251103)
+- [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/wiki251110)
 
 </details>

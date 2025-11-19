@@ -1,6 +1,6 @@
 ---
 description: The reComputer Industrial R20xx is a Raspberry Pi CM5-powered IoT gateway & controller with AI capabilities. Featuring 2GB RAM, 8GB eMMC, dual Ethernet, USB, RS485, RS232, DI/DO, and wireless connectivity (4G, 5G,LoRa®, Wi-Fi/BLE), it’s perfect for industrial automation & edge computing.
-title: reComputer Industrial R20xx Getting Started
+title: Getting Started with reComputer Industrial R20xx
 keywords:
 - Edge Controller
 - Raspberry pi

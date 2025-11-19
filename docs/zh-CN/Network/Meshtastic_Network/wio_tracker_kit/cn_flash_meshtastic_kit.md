@@ -1,20 +1,20 @@
 ---
-description: Wio Tracker Meshtastic® Kit 固件烧录
-title: 烧录固件
+description: Wio Tracker Meshtastic® Kit 固件刷写
+title: 刷写固件
 keywords:
 - Meshtastic
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/flash_meshtastic_kit
 last_update:
-  date: 6/17/2024
-  author: Jessie
+  date: 11/11/2025
+  author: Michelle Huang
 ---
 
-本教程将指导用户将 [Wio Tracker 1110 开发板](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) 烧录为 Meshtastic 版本，适用于想要使用 Meshtastic 网络的用户。
+本教程将指导用户将 [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) 刷写为 Meshtastic 版本，适用于想要使用 Meshtastic 网络的用户。
 
 :::tip
-如果您想将开发板烧录回 LoRaWAN 版本，请查看此[教程](https://wiki.seeedstudio.com/cn/flash_to_wio_tracker/)。
+如果您想将开发板刷回 LoRaWAN 版本，请查看此[教程](https://wiki.seeedstudio.com/cn/flash_to_wio_tracker/)。请`不要使用 NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
 :::
 
 ### 准备工作
@@ -27,7 +27,7 @@ last_update:
 
 通过 USB 数据线将开发板连接到您的 PC。
 
-### 烧录引导程序
+### 刷写引导程序
 
 <Tabs>
 <TabItem value="uf2" label="UF2">
@@ -45,7 +45,7 @@ last_update:
 
 - [引导程序下载](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip)
 
-**步骤1：Adafruit-nrfutil 安装**
+**步骤 1：Adafruit-nrfutil 安装**
 
 **前提条件**
 
@@ -84,7 +84,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-如果在运行 `pip3 install` 时遇到权限错误，说明您的 `pip3` 版本较旧或设置为尝试安装到系统目录。在这种情况下使用 `--user` 标志：
+如果在运行 `pip3 install` 时遇到权限错误，您的 `pip3` 版本较旧或设置为尝试安装到系统目录。在这种情况下，请使用 `--user` 标志：
 
 ```
 pip3 install -r --user requirements.txt
@@ -98,7 +98,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-要生成工具的独立可执行二进制文件（Windows 和 MacOS），运行以下命令：
+要生成实用程序的独立可执行二进制文件（Windows 和 MacOS），请运行以下命令：
 
 ```
 pip3 install pyinstaller
@@ -114,7 +114,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 </TabItem>
 </Tabs>
 
-**步骤2：烧录引导程序**
+**步骤 2：刷写引导程序**
 
 双击开发板上的 `Reset` 按钮并运行以下命令：
 
@@ -177,9 +177,9 @@ adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.
 adafruit-nrfutil --verbose dfu serial --package firmware-wio-tracker-wm1110-2.3.14.681ae9d8.zip --port /dev/tty.SLAB_USBtoUART -b 115200
 ```
 
-烧录成功：
+刷写成功：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-flash-done.png" alt="pir" width={800} height="auto" /></p>
-  
+
 </TabItem>
 </Tabs>

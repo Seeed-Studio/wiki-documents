@@ -1,6 +1,6 @@
 ---
 description: Este wiki demuestra cómo implementar el sistema de videovigilancia zoneminder en recomputer.
-title: Usar Zoneminder en reComputer
+title: Zoneminder en reComputer
 keywords:
   - reComputer
   - NVR

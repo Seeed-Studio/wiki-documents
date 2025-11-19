@@ -245,27 +245,17 @@ First, you need to set up the physical devices in your facility.
 #### **1a. Deploy Beacons**
 
 :::info
-For complete technical details, refer to the **[BC01 Indoor Bluetooth Beacon documentation](/bluetooth_beacon_for_SenseCAP_Traker/)**.
+For full technical specifications, please refer to the **[BC01 Indoor Bluetooth Beacon documentation](/bluetooth_beacon_for_SenseCAP_Traker/)**.
 :::
 
-First, place your **BLE beacons** at key locations throughout your facility, such as at the main entrance, in the warehouse, and in offices.
-
+Begin by placing **BLE (Bluetooth Low Energy) beacons** at strategic locations within your facility—such as the **main entrance, warehouse, and office areas**.
 <div align="center">
 <img class='img-responsive' width="360" src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/10.5.png" alt="Indoor positioning 2d map"/>
 </div>
 
-Next, create a list(template) for yourself to record each beacon's **unique MAC Address** and its physical location. This record is **essential** for the software configuration step.
 
-**Example Record:**
-
-```csv
-MAC Address,Location,Beacon ID
-c30000564b31,"Main Entrance",01
-c30000564b32,"Warehouse Zone A",02
-c30000564b33,"Corner Office",03
-```
-
-The video below shows how you will use this list to add your beacons to the application's map later. Creating an accurate record now will make the software setup much easier.
+Refer to the video below for a step-by-step guide on adding your beacon information to the system.
+You can also check the [Tips section](#tips) for additional help.
 
 <div style={{ textAlign: 'center' }}>
 <video width="640" height="480" controls>
@@ -274,28 +264,27 @@ The video below shows how you will use this list to add your beacons to the appl
 </video>
 </div>
 
-**Pro Tip:** For easier management, you can use the **SenseCraft app** to give all your beacons a consistent **UUID**. This helps ensure the tracker only listens to your devices and ignores others. Check out [Feature 4: Filter by Beacon UUID](#feature-4-filter-by-beacon-uuid) for more details.
-
 <details>
 <summary>Quick view of the parameters of BC01 beacon</summary>
 
-| Parameters | Default Value |
-|------------|---------------|
-| UUID | FDA50693-A4E2-4FB1-AFCF-C6EB07647825 |
-| Major | 10001 |
-| Minor | 19641 |
-| Measured power | -59dBm |
-| Tx Power | -30 - +4dBm, default 0dBm |
-| Adv Interval | 100ms~10s, default 500ms |
-| Password | seeed123 (Letters and numbers) |
-| Device Name | BC01 (1-7 characters) |
-| Soft Reboot | seeed123 (same with the password) |
+| Parameters     | Default Value                        |
+| -------------- | ------------------------------------ |
+| UUID           | FDA50693-A4E2-4FB1-AFCF-C6EB07647825 |
+| Major          | 10001                                |
+| Minor          | 19641                                |
+| Measured power | -59dBm                               |
+| Tx Power       | -30 - +4dBm, default 0dBm            |
+| Adv Interval   | 100ms~10s, default 500ms             |
+| Password       | seeed123 (Letters and numbers)       |
+| Device Name    | BC01 (1-7 characters)                |
+| Soft Reboot    | seeed123 (same with the password)    |
 
 </details>
 
 #### 1b. Set Up the Gateway
 
-First, power on your **LoRaWAN gateway** and connect it to the internet. From here, the steps depend on which network server you're using.
+Power on your **LoRaWAN gateway** and connect it to the internet.  
+Next, follow the instructions below according to the **network server** you are using.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -303,22 +292,21 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="sensecap-portal" label="SenseCraft Data" default>
 
-If you're using the default [SenseCraft Data](https://sensecap.seeed.cc/portal/)(formerly SenseCAP Portal) platform, your gateway is already pre-configured.
+By default, the LoRaWAN gateway forwards data to the [**SenseCraft Data**](https://sensecap.seeed.cc/portal/) platform (formerly **SenseCAP Portal**).
 
-1. Follow the [official user manual](/quick_start_with_M2_MP) to make sure the gateway is online and connected to your account.
-2. Once that's done, you can **move on to Step 2**.
+1. Follow the [official user manual](/quick_start_with_M2_MP) to ensure your gateway is **online** and **linked to your account**.  
+2. Once the connection is verified, you can **proceed to next step(Step 2)**.
 
   </TabItem>
+
   <TabItem value="chirpstack" label="ChirpStack (Local LoRaWAN Server)">
 
-If you're using a self-hosted **ChirpStack** server, you'll need to re-point the gateway and prepare a decoder script.
+If you’re using a **self-hosted ChirpStack** server integrated with your gateway, you’ll need to **redirect the gateway data** and **prepare a decoder script**.
 
-1. **Configure the Gateway:** Follow this guide to [redirect your gateway's data to ChirpStack](/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/).
-2. **Download the Decoder:** ChirpStack needs a decoder to understand the data sent by your T1000 tracker. Download the script now so it's ready for a later step.
-
+1. **Configure the Gateway:** Follow this guide to [redirect your gateway’s uplink data to ChirpStack](/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/).  
+2. **Download the Decoder Script:** ChirpStack requires a decoder to interpret data from the T1000 tracker. Download the script below so it’s ready for the later configuration step.
     - [**Download T1000 Decoder Script**](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/TTN/SenseCAP_T1000_TTN_Decoder.js)
-
-    **Note:** You'll add this script inside the **ChirpStack application settings**, not on the gateway itself.
+    **Note:** This script should be added to your **ChirpStack Application Settings**, not on the gateway device itself.
 
 <div style={{ textAlign: 'center' }}>
 <video width="640" height="480" controls>
@@ -332,7 +320,8 @@ If you're using a self-hosted **ChirpStack** server, you'll need to re-point the
 
 ### Step 2: Install the Positioning Application
 
-Next, you will install the main application on your server using Docker. Or you can have a view of [the demo](https://indoorpositioning-demo.seeed.cc/) first.
+Install the SenseCraft Indoor Positioning application on your server using Docker.
+If you’d like to explore the interface first, you can check out the [live demo](https://indoorpositioning-demo.seeed.cc/).
 
 <div align="center">
 <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/app-preview.png" alt="Indoor positioning application preview"/>
@@ -342,18 +331,44 @@ Next, you will install the main application on your server using Docker. Or you 
 
 Open a terminal on your server and run the following command:
 
-```bash
-docker run -p 5173:5173 -p 8022:8022 --name indoor-positioning --restart unless-stopped -v /data/indoor-positioning/db/:/app/db/ -d seeedcloud/sensecraft-indoor-positioning
+
+<Tabs>
+  <TabItem value="global" label="Global" default>
+
+```shell
+docker run -p 5173:5173 -p 8022:8022 \
+--name indoor-positioning \
+--restart unless-stopped \
+-v $PWD/db:/app/db/ \
+-v $PWD/config:/app/server/config/json \
+-d seeedcloud/sensecraft-indoor-positioning
 ```
+
+  </TabItem>
+
+  <TabItem value="mirror" label="Mirror">
+  For China mainland users, you could use [chsrc](https://chsrc.run/) to change source for better boost up.
+  </TabItem>
+</Tabs>
+
+> 💡 Note: Use PowerShell instead of a CMD terminal if you are running the command on Windows.
 
 **What this command does:**
 
-- It downloads and starts the SenseCraft Indoor Positioning application.
+- Downloads and starts the SenseCraft Indoor Positioning application container.
 - `-p 5173:5173` makes the web dashboard accessible on port `5173`.
-- `-v /data/indoor-positioning/db/:/app/db/` tells the application to store its database and maps in the `/data/indoor-positioning/db/` folder on your machine.
+- Mounts the local directories:
+  - `/app/db/` → stores databases and maps.
+  - `/app/server/config/json` → stores configuration files.
 - `-d` runs the application in the background.
 
-After running the command, you can access the dashboard by opening a web browser and going to `http://<your_server_ip>:5173`.
+---
+
+Once the container starts successfully, open your web browser and navigate to:
+
+👉 `http://<your_server_ip>:5173`
+
+You should now see the SenseCraft Indoor Positioning dashboard running on your server.
 
 ### Step 3: Configure the Application
 
@@ -361,66 +376,105 @@ After running the command, you can access the dashboard by opening a web browser
 <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/app-configuration-management.png" alt="app-configuration-management"/>
 </div>
 
-Now, open the application dashboard in your browser to configure the system settings.
-
 #### 3a. Runtime Configuration (Connecting to LoRaWAN)
 
-This setting connects the application to your LoRaWAN Network Server to receive tracker data. A key feature is that **the application supports simultaneous connections to both the SenseCraft Data platform and a ChirpStack server.**
+Use this setting to connect the application to your LoRaWAN Network Server and receive tracker data.
+The application can connect to both **SenseCraft Data** and **Local ChirpStack server** at the same time.
 
 <div align="center">
 <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/app-server-runtime-configuration.png" alt="app-server-runtime-configuration"/>
 </div>
 
-In the dashboard, you can enable one or both of the following MQTT sources to connect to your network servers.
+Enable one or both MQTT sources in the dashboard:
 
-##### To Connect to SenseCraft Data
+##### Connect to SenseCraft Data
 
-1. Enable the **SenseCAP OpenStream MQTT** toggle.
-2. Enter your **Username** and **API Key**.
-      - You can generate these credentials by following the [Data OpenStream API Quickstart guide](/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_quickstart/).
+1. Turn on **SenseCAP OpenStream MQTT**.
+2. Enter your **Username** and **API Key** - Get these from the [Data OpenStream API Quickstart guide](/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_quickstart/).
 
-##### To Connect to ChirpStack
+##### Connect to ChirpStack
 
-1. Enable the **ChirpStack MQTT** toggle.
-2. Enter your ChirpStack **server address** and **Application ID**.
-      - The MQTT topic field will then update automatically. You can find the **Application ID** on the main page for your application within ChirpStack.
+1. Turn on **ChirpStack MQTT**.
+2. Enter the **server address** and **Application ID** - The MQTT topic will auto-fill. You can find the Application ID on your ChirpStack application page.
 
 <div align="center">
 <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/chirpstack-application-id.png" alt="chirpstack-application-id"/>
 </div>
 
----
-
-**Note:** The `{clientID}` field is used by the system and will be replaced with a random ID on startup. You don't need to change it.
-
-**Important:** After enabling or changing any of these settings, you must **restart the application** (the Docker container) for them to take effect.
+> **Note:** The `{clientID}` field is auto-generated; do not edit it.  
+> **Important:** After any changes, restart the Docker container for updates to take effect.
 
 ##### Other Settings
 
-The following settings can be changed at any time without restarting the application:
+These options can be changed anytime (no restart required):
 
-- **Authentication:** Update the username and password used to log in to the application's dashboard.
-- **Area Positioning:** Enable this option to estimate a tracker's location when there are too few beacon signals available for precise, multi-point positioning.
-- **Tracker Access Control:** Configure which devices are allowed to send data to the application. You can either allow data from any device or create a specific list of authorized trackers.
-- **Webhook:** Enable this to push location results to your own service using an HTTP POST request.
-
+- **Authentication** – Update dashboard login credentials.
+- **Area Positioning** – Estimate approximate tracker location when beacon signals are weak or sparse.
+- **Tracker Access Control** – Limit which devices can be positioned (open to all or by whitelist).
+- **Webhook** – Push location data to your service via HTTP POST.
 #### 3b. Map and Beacon Configuration
 
-In this step, you will use the application's dashboard to upload your floor plan and add the beacons you physically deployed earlier.
+Click `Create` to create your first map.
 
 <div align="center">
 <img class='img-responsive' width="480" src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/app-configuration-management.png" alt="Application Configuration Management"/>
 </div>
 
-1. Upload Your Map
-First, go to the configuration menu and upload an image of your floor plan. Standard image formats like PNG or JPG are recommended.
-2. Add Your Beacons
-Go to the "Beacons" section. Using the list you created in [Step 1a](#1a-deploy-beacons), add each beacon's information (like its MAC address). The easiest way to do this is to click directly on the beacon's location on the map you just uploaded.
-3. Adjust the Environmental Factor (Optional)
-This is an advanced setting that fine-tunes location accuracy. It helps the system convert signal strength (RSSI) into a more accurate distance by accounting for your specific environment.
-    - For open spaces, the default value of ~2.0 is usually sufficient.
-    - For complex indoor areas with many walls and obstacles, you may need to adjust the value between 1.8 and 4.0.
-    - **Recommendation:** It's best to leave this at the default setting to start. You can come back and adjust it later if you need to improve positioning accuracy.
+Upload your **map data** in this panel.
+Currently, the demo version only supports importing files in a **GeoJSON-like format** that contains **polyline entities**.
+Below is a sample JSON template for reference:
+
+```json
+{
+  "map": {
+    "width": 29.53000000000094,
+    "height": 22.212853765822828,
+    "entities": [
+      {
+        "type": "polyline",
+        "points": [
+          [12.894968342021272, 17.07477114091087],
+          [12.894968342021272, 17.114771140910868]
+        ],
+        "closed": false
+      },
+      {
+        "type": "polyline",
+        "points": [
+          [12.944968342021284, 17.114771140910868],
+          [12.894968342021272, 17.07477114091087]
+        ],
+        "closed": false
+      }
+    ]
+  },
+  "beacons": {}
+}
+```
+
+This JSON defines a **2D floor layout** using coordinate-based **polylines**, which represent map elements such as walls or boundaries.
+Other geometry types are not supported in the current demo version.
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/import-map-geo-json.png" alt="import-map-geo-json"/>
+</div>
+
+2. **Add Beacons**
+
+In the Beacons section, add each beacon’s MAC address, ID, and location.
+You can place them directly on the uploaded map using the list you created in [Step 1a](#1a-deploy-beacons).
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/maps-add-beacons.png" alt="maps-add-beacons"/>
+</div>
+
+3. **Adjust Environmental Factor (Optional)**
+
+Fine-tune location accuracy by adjusting how signal strength (**RSSI**) is converted into distance.
+
+- Default value (~2.0) works well for open areas.
+- For complex indoor environments, try values between **1.8 and 4.0**.
+- Start with the default setting and adjust later if needed.
 
 ### Step 4: Activate and Visualize Your Tracker
 
@@ -609,6 +663,81 @@ You can filter the displayed trackers on the map by their associated beacon UUID
 - **Docker Image**: [seeedcloud/sensecraft-indoor-positioning - Docker Hub](https://hub.docker.com/r/seeedcloud/sensecraft-indoor-positioning)
 - **Live Demo Site**: [IndoorPositioning](https://indoorpositioning-demo.seeed.cc/)
 
+## Tips
+
+Here are some useful tips to help you deploy and configure your beacons more efficiently:
+
+### 1. Record Beacon Information
+It is **strongly recommended** to record each beacon’s **unique MAC address** together with its **installation location**.  
+This will be **crucial** during the [software configuration step](#3b-map-and-beacon-configuration) and will help you **easily identify and select** the correct beacon during mapping or troubleshooting.
+
+| **MAC Address** | **Location**     | **Beacon ID** |
+| --------------- | ---------------- | ------------- |
+| c30000564b31    | Main Entrance    | 01            |
+| c30000564b32    | Warehouse Zone A | 02            |
+| c30000564b33    | Corner Office    | 03            |
+
+### 2. Use a Consistent UUID for All Beacons
+For easier management, you can use the **SenseCraft app** to assign a consistent **UUID** to all your beacons.  
+This ensures that your tracker only listens to **your own devices** and **ignores other nearby beacons**.  
+Check out [Feature 4: Filter by Beacon UUID](#feature-4-filter-by-beacon-uuid) for more details.
+
+### 3. Choose Stable Mounting Locations
+Install beacons in **fixed, open, and unobstructed** areas to ensure a stable Bluetooth signal.  
+Avoid placing them near **metal surfaces**, **electrical panels**, or **Wi-Fi routers** that may cause interference.
+
+### 4. Label and Secure Each Beacon
+Attach a **visible label** (e.g., Beacon-01, Beacon-02) matching the record table to avoid confusion during maintenance.  
+Ensure the device is **firmly mounted** to prevent accidental displacement.
+
+### 5. Verify Signal Range
+Before finalizing placement, test the **signal coverage** using a BLE scanner app or configuration tool to ensure **consistent detection** in your target zones.
+
+### 6. Quickly Add or Adjust Beacon Data
+
+If you’re using a *GeoJSON-like* configuration file, you can also edit the exported map file directly to quickly add or adjust beacon data, and then re-import it into the application.
+
+```json
+{
+  "map": {
+    "width": 29.53000000000094,
+    "height": 22.212853765822828,
+    "entities": [
+      {
+        "type": "polyline",
+        "points": [
+          [12.894968342021272, 17.07477114091087],
+          [12.894968342021272, 17.114771140910868]
+        ],
+        "closed": false
+      },
+      {
+        "type": "polyline",
+        "points": [
+          [12.944968342021284, 17.114771140910868],
+          [12.894968342021272, 17.07477114091087]
+        ],
+        "closed": false
+      }
+    ]
+  },
+  "beacons": {
+    "beacon-01": {
+      "uuid": "FDA50693-A4E2-4FB1-AFCF-C6EB07647825",
+      "major": 10001,
+      "minor": 19641,
+      "x": 26.38,
+      "y": 4.4,
+      "txPower": -59,
+      "displayName": "Corner",
+      "macAddress": "C3:00:00:58:4B:38",
+    }
+  }
+}
+```
+
+> Tip: Editing the JSON directly is useful when adding multiple beacons at once or fine-tuning their coordinates outside the dashboard.
+
 ## FAQ
 
 <details>
@@ -664,3 +793,11 @@ You can use the **SenseCraft app** to configure the BC01 beacon.
 6. Save the changes.
 
 </details>
+
+## CHANGELOG
+
+**2025-11-10:**
+
+- Reworked the beacon deployment and gateway setup guidance to clarify placement best practices, reference materials, and network-server specific instructions for SenseCraft Data and ChirpStack.
+- Expanded the runtime configuration plus map/beacon setup sections with clearer UI guidance, GeoJSON import samples, and optional tuning tips for environmental factors.
+- Added a dedicated Tips section covering beacon record keeping, UUID management, mounting, validation, and bulk editing so deployments are easier to scale and troubleshoot.

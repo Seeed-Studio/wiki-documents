@@ -16,7 +16,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /es/mcp_endpoint
 last_update:
-  date: 10/29/2025
+  date: 10/30/2025
   author: Twelve
 ---
 
@@ -56,7 +56,7 @@ MCP permite a los servidores exponer herramientas invocables a los modelos de le
 
 Agradecimientos especiales a [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) por sus contribuciones de código abierto que hicieron posible este proyecto.
 
-Puedes obtener el siguiente código desde [Código de Ejemplo MCP en Github](https://github.com/78/mcp-calculator)
+Puedes obtener el siguiente código desde [MCP Example Code Github](https://github.com/78/mcp-calculator)
 
 ### Ejemplo de código del servidor MCP
 
@@ -100,6 +100,7 @@ A continuación se presenta una explicación detallada de algunas partes clave d
 ### Inicio Rápido
 
 - Requisitos
+  - [MCP Example Code Github](https://github.com/78/mcp-calculator)
   - Python 3.7+
   - websockets>=11.0.3
   - python-dotenv>=1.0.0
@@ -107,13 +108,20 @@ A continuación se presenta una explicación detallada de algunas partes clave d
   - pydantic>=2.11.4
   - mcp-proxy>=0.8.2
 
-- Paso1. Instalar dependencias
+- Paso1. Clona el repositorio y navega a la carpeta del proyecto
+
+  ```bash
+  git clone https://github.com/78/mcp-calculator.git
+  cd mcp-calculator
+  ```
+
+- Paso2. Instala las dependencias
 
   ```bash
   pip install -r requirements.txt
   ```
 
-- Paso2. Configurar variables de entorno
+- Paso3. Configura las variables de entorno
   - Para Linux/macOS
     ```bash
     export MCP_ENDPOINT=<your_mcp_endpoint>
@@ -127,12 +135,12 @@ A continuación se presenta una explicación detallada de algunas partes clave d
     set MCP_ENDPOINT=<your_mcp_endpoint>
     ```
 
-- Paso3. Ejecutar el ejemplo de calculadora
+- Paso4. Ejecuta el ejemplo de calculadora
   ```bash
   python mcp_pipe.py calculator.py
   ```
 
-- O ejecutar todos los servidores configurados
+- O ejecuta todos los servidores configurados
   ```bash
   python mcp_pipe.py
   ```
@@ -189,11 +197,11 @@ También puede mencionar que se pueden usar funciones de las librerías math y r
 
 Estas dos librerías ya han sido importadas en el código de ejemplo.
 
-#### 3. Logging en lugar de imprimir
+#### 3. Logging en lugar de printing
 
 Dado que la entrada/salida estándar en este ejemplo de Servidor MCP se usa para transmisión de datos, no puedes usar print para mostrar información. 
 
-Usa logger para depuración y registro en su lugar.
+Usa logger para depuración y logging en su lugar.
 
 #### 4. Valores de retorno
 

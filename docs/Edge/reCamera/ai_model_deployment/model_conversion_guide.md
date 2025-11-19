@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reCamera
   - Model Conversion
-image: https://files.seeedstudio.com/wiki/reCamera/013.jpg
+image: https://files.seeedstudio.com/wiki/reCamera/013.webp
 slug: /model_conversion_guide
 last_update:
   date: 10/28/2025

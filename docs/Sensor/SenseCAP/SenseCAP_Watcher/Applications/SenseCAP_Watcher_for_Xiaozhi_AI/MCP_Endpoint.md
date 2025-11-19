@@ -16,7 +16,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /mcp_endpoint
 last_update:
-  date: 10/29/2025
+  date: 10/30/2025
   author: Twelve
 ---
 
@@ -100,6 +100,7 @@ Below is a detailed explanation of some key parts of the MCP server example:
 ### Quick Start
 
 - Requirements
+  - [MCP Example Code Github](https://github.com/78/mcp-calculator)
   - Python 3.7+
   - websockets>=11.0.3
   - python-dotenv>=1.0.0
@@ -107,13 +108,20 @@ Below is a detailed explanation of some key parts of the MCP server example:
   - pydantic>=2.11.4
   - mcp-proxy>=0.8.2
 
-- Step1. Install dependencies
+- Step1. Clone the repository and navigate to the project folder
+
+  ```bash
+  git clone https://github.com/78/mcp-calculator.git
+  cd mcp-calculator
+  ```
+
+- Step2. Install dependencies
 
   ```bash
   pip install -r requirements.txt
   ```
 
-- Step2. Set up environment variables
+- Step3. Set up environment variables
   - For Linux/macOS
     ```bash
     export MCP_ENDPOINT=<your_mcp_endpoint>
@@ -127,7 +135,7 @@ Below is a detailed explanation of some key parts of the MCP server example:
     set MCP_ENDPOINT=<your_mcp_endpoint>
     ```
 
-- Step3. Run the calculator example
+- Step4. Run the calculator example
   ```bash
   python mcp_pipe.py calculator.py
   ```
