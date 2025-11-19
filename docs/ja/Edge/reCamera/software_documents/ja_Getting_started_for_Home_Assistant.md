@@ -25,33 +25,45 @@ reCamera 1台（2002 シリーズ、HQ POE バージョン、またはパンチ�
 reComputer 1台（どのバージョンでも構いません。ここでは reComputer AI R2130-12 を例として使用します）  
 コンピューター 1台
 
+<table align="center">
+ <tr>
+  <th>reCamera 2002 シリーズ</th>
+  <th>reCamera Gimbal</th>
+  <th>reCamera HQ POE</th>
+  <th>reComputer AI R2000 シリーズ</th>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" style={{width:300, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" style={{width:300, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" style={{width:300, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:300, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong>
+   </a>
+  </div></td>
 
-<div class="table-center">
- <table class="table-nobg">
-    <tr class="table-trnobg">
-      <th class="table-trnobg">reCamera 2002 シリーズ</th>
-      <th class="table-trnobg">reCamera Gimbal</th>
-      <th class="table-trnobg">reCamera HQ POE</th>
-      <th class="table-trnobg">reComputer AI R2000 シリーズ</th>
-  </tr>
-    <tr class="table-trnobg"></tr>
-  <tr class="table-trnobg">
-   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" style={{width:300, height:'auto'}}/></div></td>
-      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" style={{width:300, height:'auto'}}/></div></td>
-        <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" style={{width:300, height:'auto'}}/></div></td>
-          <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:300, height:'auto'}}/></div></td>
-  </tr>
-    <tr class="table-trnobg"></tr>
-  <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-          </a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong></a></div></td>
-            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong></a></div></td>
-                <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong></a></div></td>
-        </tr>
-    </table>
-    </div>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong>
+   </a>
+  </div></td>
+
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong>
+   </a>
+  </div></td>
+
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong>
+   </a>
+  </div></td>
+ </tr>
+</table>
 
 ## Home Assistant のインストール（reComputer AI R2130-12 を例として）
 

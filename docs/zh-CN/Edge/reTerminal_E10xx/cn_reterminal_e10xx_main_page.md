@@ -23,7 +23,7 @@ reTerminal E 系列电子纸显示器代表了 Seeed Studio 专为低功耗信�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1001 Wiki</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"3"}>reTerminal E1001 Wiki</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>立即购买</font></span></strong>
