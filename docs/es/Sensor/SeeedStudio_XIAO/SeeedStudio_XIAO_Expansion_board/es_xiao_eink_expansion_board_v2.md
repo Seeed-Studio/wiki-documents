@@ -197,13 +197,13 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
 
 ## Usando la Biblioteca Seeed_Arduino_LCD
 
-**Paso 3.** Instala la Biblioteca Seeed GFX
+**Paso 3.** Instala la Biblioteca Seeed Arduino LCD
 
 :::tip
 Esta biblioteca tiene la misma función que la biblioteca TFT y no es compatible con esta biblioteca. Si has instalado la biblioteca TFT, por favor desinstálala primero.
 :::
 
-Descarga e instala la biblioteca Seeed GFX desde GitHub.
+Descarga e instala la biblioteca Seeed Arduino LCD desde GitHub.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank" rel="noopener noreferrer">

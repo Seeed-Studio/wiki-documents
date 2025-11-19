@@ -166,9 +166,9 @@ last_update:
 
 - 如果您想在后续教程中使用 **Seeed Studio XIAO ESP32S3**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started#software-preparation)** 完成添加。
 
-## 安装 Seeed GFX 库
+## 安装 Seeed Arduino LCD 库
 
-**步骤 3.** 安装 Seeed GFX 库
+**步骤 3.** 安装 Seeed Arduino LCD 库
 
 :::tip
 此库具有与 TFT 库相同的功能，但与其不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。

@@ -193,9 +193,9 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 - 後のルーチンで**Seeed Studio XIAO ESP32S3**を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started#software-preparation)**を参照して追加を完了してください。
 
-## Seeed GFX ライブラリのインストール
+## Seeed Arduino LCDライブラリのインストール
 
-**ステップ 3.** Seeed GFX ライブラリをインストールします
+**ステップ 3.** Seeed Arduino LCDライブラリをインストールします
 
 :::tip
 このライブラリはTFTライブラリと同じ機能を持ち、互換性がありません。TFTライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずアンインストールしてください。

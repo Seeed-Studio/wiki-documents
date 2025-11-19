@@ -60,7 +60,7 @@ Ve a **Archivo** -> **Preferencias** y añade la siguiente URL a **URLs Adiciona
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-### Paso 3. Instalar la Biblioteca Seeed GFX
+### Paso 3. Instalar la Biblioteca Seeed Arduino LCD
 
 :::tip
 Esta biblioteca tiene la misma función que la biblioteca TFT y no es compatible con ella. Si has instalado la biblioteca TFT u otras bibliotecas de pantalla similares, por favor desinstálala primero.

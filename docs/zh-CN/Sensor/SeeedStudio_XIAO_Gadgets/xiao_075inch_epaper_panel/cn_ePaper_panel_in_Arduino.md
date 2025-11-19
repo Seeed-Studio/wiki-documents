@@ -58,7 +58,7 @@ XIAO 7.5" 电子纸面板可以使用 Arduino IDE 进行编程，这使得熟悉
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-### 步骤 3. 安装 Seeed GFX 库
+### 步骤 3. 安装 Seeed Arduino LCD 库
 
 :::tip
 此库与 TFT 库具有相同功能，但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。

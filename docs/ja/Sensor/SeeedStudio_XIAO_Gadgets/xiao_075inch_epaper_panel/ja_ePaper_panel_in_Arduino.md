@@ -58,7 +58,7 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-### ステップ 3. Seeed GFX ライブラリのインストール
+### ステップ 3. Seeed Arduino LCD ライブラリのインストール
 
 :::tip
 このライブラリはTFTライブラリと同じ機能を持ちますが、互換性はありません。TFTライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
