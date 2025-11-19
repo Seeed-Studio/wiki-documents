@@ -199,7 +199,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ### 安装 Seeed Arduino GFX 库
 
-**步骤 3.** 安装 Seeed Arduino LCD 库
+**步骤 3.** 安装 Seeed GFX 库
 
 :::tip
 此库与 TFT 库具有相同功能，但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。

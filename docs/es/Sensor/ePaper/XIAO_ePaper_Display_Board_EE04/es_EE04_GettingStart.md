@@ -199,7 +199,7 @@ Al usar la Placa de Pantalla ePaper XIAO, asegúrate de configurar el puente seg
 
 ### Instalar la Librería Seeed Arduino GFX
 
-**Paso 3.** Instalar la Librería Seeed Arduino LCD
+**Paso 3.** Instalar la Librería Seeed GFX
 
 :::tip
 Esta librería tiene la misma función que la librería TFT y no es compatible con ella. Si has instalado la librería TFT u otras librerías de pantalla similares, por favor desinstálalas primero.
