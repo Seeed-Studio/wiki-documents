@@ -1888,21 +1888,30 @@ def main() -> None:
                 trajectory.append(current_position)  # Add position to trajectory
                 
                 # Store complete pose data
+                # cuVSLAM's odom_pose.rotation is in [x, y, z, w] order.
+                # Convert and store as [w, x, y, z] for consistent usage elsewhere.
+                raw_quat = odom_pose.rotation  # [x, y, z, w]
+                qx, qy, qz, qw = raw_quat
+                quat_wxyz = [qw, qx, qy, qz]
+
                 pose_data.append({
                     'frame_id': frame_id,                    # framesID
                     'timestamp': timestamp_ns,               # Timestamp
                     'position': current_position,            # Position [x, y, z]
-                    'rotation_quat': odom_pose.rotation,     # Rotation quaternion [w, x, y, z]
+                    'rotation_quat': quat_wxyz,              # Rotation quaternion [w, x, y, z]
                     'stationary': is_stationary if args.detect_stationary else False  # Stationary flag
                 })
                 
                 # Extract position and rotation information
                 position = odom_pose.translation  # Position vector [x, y, z]
-                rotation_quat = odom_pose.rotation  # Quaternion [w, x, y, z]
-                
+
+                # cuVSLAM returns quaternion in [x, y, z, w] order. Map to w,x,y,z for calculations.
+                rotation_quat = odom_pose.rotation  # Quaternion [x, y, z, w]
+                qx, qy, qz, qw = rotation_quat
+
                 # Convert quaternion to Euler angles（Roll, pitch, yaw）
                 import math
-                w, x, y, z = rotation_quat  # Quaternion components
+                w, x, y, z = qw, qx, qy, qz  # Quaternion components in w,x,y,z order
                 
                 # Roll (rotation around X axis)
                 sinr_cosp = 2 * (w * x + y * z)
