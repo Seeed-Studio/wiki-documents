@@ -4063,6 +4063,8 @@ const sidebars = {
         'Robotics/Robot_Actuator/Damiao_Series',
         'Robotics/Robot_Actuator/Feetech_Servo',
         'Robotics/Robot_Actuator/HighTorque',
+        'Robotics/Robot_Actuator/HighTorque_Control',
+        'Robotics/Robot_Actuator/RobStride_Control',
       ]
     },
     {
