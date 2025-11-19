@@ -199,7 +199,7 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 
 ### Install Seeed Arduino GFX Library
 
-**Step 3.** Install Seeed Arduino LCD Library
+**Step 3.** Install Seeed GFX Library
 
 :::tip
 This library has same function as TFT library and no compatible with it. If you have installed TFT library or other similary display libraries, please uninstall it first.
@@ -405,24 +405,29 @@ If you want to write some code by yourself to read battery voltage, it will be m
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04battery.jpg" style={{width:700, height:'auto'}}/></div>
 
 ```cpp
-#define VOLTAGE_PIN A0
+#define VOLTAGE_PIN A0 //GPIO1
+#define ADC_ENABLE_PIN A5 //GPIO6
 
 void setup() {
-  Serial.begin(115200);       
-  pinMode(VOLTAGE_PIN, INPUT); /
+  Serial.begin(115200);
+  delay(10);
+  
+  pinMode(VOLTAGE_PIN, INPUT);
+  pinMode(ADC_ENABLE_PIN, OUTPUT);
+  digitalWrite(ADC_ENABLE_PIN , HIGH);
 }
 
-void loop() {
-  int adcValue = analogRead(VOLTAGE_PIN);   
-  float voltage = (adcValue / 1023.0) * 3.3; 
 
+void loop() {
+  analogReadResolution(12); 
+  int adcValue = analogRead(VOLTAGE_PIN);
+  float voltage = (adcValue / 4096.0) *7.16;
   Serial.print("ADC Value: ");
   Serial.print(adcValue);
-  Serial.print("  Voltage: ");
+  Serial.print(" Voltage: ");
   Serial.print(voltage, 3);
   Serial.println(" V");
-
-  delay(10); 
+  delay(10);
 }
 ```
 
