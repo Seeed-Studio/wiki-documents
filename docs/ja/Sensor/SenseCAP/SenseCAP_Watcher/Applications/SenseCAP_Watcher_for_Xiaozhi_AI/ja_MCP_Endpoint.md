@@ -1,6 +1,6 @@
 ---
-description: mcp endpoint の使用ガイド
-title: MCP Endpoint
+description: mcp エンドポイントの使用ガイド
+title: MCP エンドポイント
 sidebar_position: 5
 keywords:
 - AI
@@ -16,25 +16,25 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /ja/mcp_endpoint
 last_update:
-  date: 10/29/2025
+  date: 10/30/2025
   author: Twelve
 ---
 
-# MCP Endpoint
+# MCP エンドポイント
 
 ## 概要
 
-このプロジェクトを可能にしたオープンソースの貢献に対して、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を表します。
+このプロジェクトを可能にしてくれた [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) のオープンソース貢献に特別な感謝を表します。
 
 **MCP（Model Context Protocol）** は、リモート制御、計算、メール操作、知識検索などを可能にすることで AI の機能を拡張する強力なフレームワークです。
 
 MCP により、サーバーは明確に定義されたプロトコルを通じて言語モデルに呼び出し可能なツールを公開できます。これらのツールにより、モデルはデータベースのクエリ、API の呼び出し、複雑な計算の実行など、外部システムとの相互作用が可能になります。各ツールは名前によって一意に識別され、その機能を定義するメタデータによって記述されます。
 
-**MCP Endpoint** は、ローカル MCP サービスと Xiaozhi AI モデル間のブリッジとして機能します。音声対応デバイスやその他の端末がこれらの外部機能をシームレスに活用するためのインターフェースを提供します。
+**MCP エンドポイント** は、ローカル MCP サービスと Xiaozhi AI モデル間の橋渡しとして機能します。音声対応デバイスやその他の端末がこれらの外部機能をシームレスに活用するためのインターフェースを提供します。
 
-## MCP Endpoint の取得
+## MCP エンドポイントの取得
 
-1. [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) にアクセスします
+1. [SenseCraft AI プラットフォーム](https://sensecraft.seeed.cc/ai/home) にアクセスします
 
 2. コントロールパネルにアクセスするには、ページ右上の Watcher Agent をクリックします。
 
@@ -54,7 +54,7 @@ MCP により、サーバーは明確に定義されたプロトコルを通じ�
 
 ## MCP の例
 
-このプロジェクトを可能にしたオープンソースの貢献に対して、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を表します。
+このプロジェクトを可能にしてくれた [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) のオープンソース貢献に特別な感謝を表します。
 
 以下のコードは [MCP Example Code Github](https://github.com/78/mcp-calculator) から取得できます
 
@@ -87,7 +87,7 @@ MCP により、サーバーは明確に定義されたプロトコルを通じ�
 
 ### コードの説明
 
-以下は、MCP サーバーの例の主要部分の詳細な説明です：
+以下は MCP サーバーの例の主要部分の詳細な説明です：
 
 - `@mcp.tool()` : 以下の関数を AI モデルによってリモートで呼び出し可能な MCP ツールとして登録します。
 
@@ -100,6 +100,7 @@ MCP により、サーバーは明確に定義されたプロトコルを通じ�
 ### クイックスタート
 
 - 要件
+  - [MCP Example Code Github](https://github.com/78/mcp-calculator)
   - Python 3.7+
   - websockets>=11.0.3
   - python-dotenv>=1.0.0
@@ -107,13 +108,20 @@ MCP により、サーバーは明確に定義されたプロトコルを通じ�
   - pydantic>=2.11.4
   - mcp-proxy>=0.8.2
 
-- ステップ1. 依存関係をインストール
+- ステップ1. リポジトリをクローンしてプロジェクトフォルダに移動します
+
+  ```bash
+  git clone https://github.com/78/mcp-calculator.git
+  cd mcp-calculator
+  ```
+
+- ステップ2. 依存関係をインストールします
 
   ```bash
   pip install -r requirements.txt
   ```
 
-- ステップ2. 環境変数を設定
+- ステップ3. 環境変数を設定します
   - Linux/macOS の場合
     ```bash
     export MCP_ENDPOINT=<your_mcp_endpoint>
@@ -127,18 +135,18 @@ MCP により、サーバーは明確に定義されたプロトコルを通じ�
     set MCP_ENDPOINT=<your_mcp_endpoint>
     ```
 
-- ステップ3. 計算機の例を実行
+- ステップ4. 計算機の例を実行します
   ```bash
   python mcp_pipe.py calculator.py
   ```
 
-- または設定されたすべてのサーバーを実行
+- または設定されたすべてのサーバーを実行します
   ```bash
   python mcp_pipe.py
   ```
 
   :::note
-  これには、サーバー設定を定義する mcp_config.json 設定ファイルが必要です。
+  これにはサーバー設定を定義する mcp_config.json 設定ファイルが必要です。
   :::
 
 ### 実行結果
@@ -156,14 +164,14 @@ Processing request of type CallToolRequest
 Calculating formula: math.comb(10, 3), result: 120
 ```
 
-### MCP Endpoint ステータス
+### MCP エンドポイントのステータス
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP1.png" style={{width:400, height:'auto'}}/></div>
 
 - 接続ステータス: MCP 接続が正常に動作しているかどうかを表示します。
 - 更新アイコン: MCP 接続ステータスを更新します。
 - 有効なサービス: Watcher が使用できるすべての MCP サービスをリストします。
-- エンドポイントアドレス: あなたの mcp_endpoint_address（公式技術サポートが必要でない限り、これを他の人と共有しないでください）
+- エンドポイントアドレス: あなたの mcp_endpoint_address（公式技術サポートが必要な場合を除き、誰とも共有しないでください）
 
 ### 会話ログ
 
@@ -175,9 +183,9 @@ Calculating formula: math.comb(10, 3), result: 120
 #### 1. MCP でのツールとパラメータの命名
 
 ツールとそのパラメータの名前は、大規模モデルがその目的を理解できるよう明確でなければなりません。
-可能な限り略語の使用を避け、ツールの機能といつ使用すべきかを説明するコメントを提供してください。
+可能な限り略語の使用を避け、ツールの機能と使用すべき場面を説明するコメントを提供してください。
 
-例えば、calculator という名前のツールはモデルにそれが計算機であることを知らせ、python_expression パラメータはモデルが Python 式を入力すべきであることを示します。
+例えば、calculator という名前のツールはモデルにそれが計算機であることを知らせ、python_expression パラメータはモデルが Python 式を入力すべきことを示します。
 
 bing_search ツールを作成する場合、パラメータ名は keywords にすべきです。
 
@@ -185,21 +193,21 @@ bing_search ツールを作成する場合、パラメータ名は keywords に�
 
 docstring（"""...""" を使用）は、モデルにツールをいつ使用するかを指導します。
 
-また、式で math や random ライブラリの関数を使用できることも言及できます。
+また、math や random ライブラリの関数を式で使用できることも言及できます。
 
-これら2つのライブラリは、例のコードで既にインポートされています。
+これら2つのライブラリは既にサンプルコードでインポートされています。
 
 #### 3. 印刷ではなくログ記録
 
-この MCP Server の例では標準入出力がデータ送信に使用されているため、print を使用して情報を出力することはできません。
+この MCP サーバーの例では標準入出力がデータ送信に使用されているため、print を使用して情報を出力することはできません。
 
 代わりにデバッグとログ記録には logger を使用してください。
 
 #### 4. 戻り値
 
-MCP の戻り値は通常、文字列または JSON です。例では、計算結果は result という名前の JSON フィールドで返されます。
+MCP の戻り値は通常文字列または JSON です。この例では、計算結果は result という名前の JSON フィールドで返されます。
 
-戻り値の長さは通常制限されており、IoT デバイスコマンドと同様に、通常は 1024 バイト以内です。
+戻り値の長さは通常制限されており、IoT デバイスコマンドと同様に、通常 1024 バイト以内です。
 
 #### 5. ツールリストの制限
 
@@ -207,7 +215,7 @@ MCP ツールリストには上限があります。
 
 後で設定ページに表示され、トークン数に基づいて計算されます。
 
-注意: ツールが多すぎると、デバイスのスケジューリング効率に影響する可能性があります。
+注意: ツールが多すぎるとデバイスのスケジューリング効率に影響する可能性があります。
 
 #### 6. 接続制限
 

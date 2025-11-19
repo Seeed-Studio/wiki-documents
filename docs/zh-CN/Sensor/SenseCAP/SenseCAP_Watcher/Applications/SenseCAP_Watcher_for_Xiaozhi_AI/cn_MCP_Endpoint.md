@@ -16,7 +16,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /cn/mcp_endpoint
 last_update:
-  date: 10/29/2025
+  date: 10/30/2025
   author: Twelve
 ---
 
@@ -100,6 +100,7 @@ MCP 允许服务器通过定义良好的协议向语言模型公开可调用的�
 ### 快速开始
 
 - 要求
+  - [MCP 示例代码 Github](https://github.com/78/mcp-calculator)
   - Python 3.7+
   - websockets>=11.0.3
   - python-dotenv>=1.0.0
@@ -107,13 +108,20 @@ MCP 允许服务器通过定义良好的协议向语言模型公开可调用的�
   - pydantic>=2.11.4
   - mcp-proxy>=0.8.2
 
-- 步骤 1. 安装依赖项
+- 步骤 1. 克隆仓库并导航到项目文件夹
+
+  ```bash
+  git clone https://github.com/78/mcp-calculator.git
+  cd mcp-calculator
+  ```
+
+- 步骤 2. 安装依赖项
 
   ```bash
   pip install -r requirements.txt
   ```
 
-- 步骤 2. 设置环境变量
+- 步骤 3. 设置环境变量
   - 对于 Linux/macOS
     ```bash
     export MCP_ENDPOINT=<your_mcp_endpoint>
@@ -127,7 +135,7 @@ MCP 允许服务器通过定义良好的协议向语言模型公开可调用的�
     set MCP_ENDPOINT=<your_mcp_endpoint>
     ```
 
-- 步骤 3. 运行计算器示例
+- 步骤 4. 运行计算器示例
   ```bash
   python mcp_pipe.py calculator.py
   ```
@@ -185,7 +193,7 @@ Calculating formula: math.comb(10, 3), result: 120
 
 文档字符串（使用 """..."""）指导模型何时使用该工具。
 
-它还可以提到可以在表达式中使用 math 和 random 库中的函数。
+它还可以提到可以在表达式中使用 math 和 random 库的函数。
 
 这两个库已经在示例代码中导入。
 
@@ -199,7 +207,7 @@ Calculating formula: math.comb(10, 3), result: 120
 
 MCP 返回值通常是字符串或 JSON。在示例中，计算结果在名为 result 的 JSON 字段中返回。
 
-返回值的长度通常有限制，类似于物联网设备命令，通常在 1024 字节以内。
+返回值的长度通常有限制，类似于物联网设备命令，通常在 1024 字节内。
 
 #### 5. 工具列表限制
 
@@ -219,7 +227,7 @@ MCP 工具列表有上限。
 
 以下四个 MCP 服务可供您从前面提到的 MCP Setting 中选择。
 
-保存配置并重启设备后，选定的服务将自动生效。
+保存配置并重启设备后，所选服务将自动生效。
 
 您可以通过点击 `×` 来移除服务
 
