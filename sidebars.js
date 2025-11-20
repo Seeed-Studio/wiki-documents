@@ -4063,6 +4063,8 @@ const sidebars = {
         'Robotics/Robot_Actuator/Damiao_Series',
         'Robotics/Robot_Actuator/Feetech_Servo',
         'Robotics/Robot_Actuator/HighTorque',
+        'Robotics/Robot_Actuator/HighTorque_Control',
+        'Robotics/Robot_Actuator/RobStride_Control',
       ]
     },
     {
@@ -9163,6 +9165,8 @@ const sidebars = {
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Feetech_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_HighTorque',
+        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
+        'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
       ]
     },
     {
@@ -14179,6 +14183,8 @@ const sidebars = {
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
         'es/Robotics/Robot_Actuator/es_Feetech_Servo',
         'es/Robotics/Robot_Actuator/es_HighTorque',
+        'es/Robotics/Robot_Actuator/es_HighTorque_Control',
+        'es/Robotics/Robot_Actuator/es_RobStride_Control',
       ]
     },
     {
@@ -19191,6 +19197,8 @@ const sidebars = {
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
         'ja/Robotics/Robot_Actuator/ja_Feetech_Servo',
         'ja/Robotics/Robot_Actuator/ja_HighTorque',
+        'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
+        'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
       ]
     },
     {

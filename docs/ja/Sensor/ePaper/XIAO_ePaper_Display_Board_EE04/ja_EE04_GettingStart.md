@@ -199,7 +199,7 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 
 ### Seeed Arduino GFX ライブラリのインストール
 
-**ステップ 3.** Seeed Arduino LCD ライブラリをインストール
+**ステップ 3.** Seeed GFX ライブラリをインストール
 
 :::tip
 このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性がありません。TFT ライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
@@ -405,24 +405,29 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04battery.jpg" style={{width:700, height:'auto'}}/></div>
 
 ```cpp
-#define VOLTAGE_PIN A0
+#define VOLTAGE_PIN A0 //GPIO1
+#define ADC_ENABLE_PIN A5 //GPIO6
 
 void setup() {
-  Serial.begin(115200);       
-  pinMode(VOLTAGE_PIN, INPUT); /
+  Serial.begin(115200);
+  delay(10);
+  
+  pinMode(VOLTAGE_PIN, INPUT);
+  pinMode(ADC_ENABLE_PIN, OUTPUT);
+  digitalWrite(ADC_ENABLE_PIN , HIGH);
 }
 
-void loop() {
-  int adcValue = analogRead(VOLTAGE_PIN);   
-  float voltage = (adcValue / 1023.0) * 3.3; 
 
+void loop() {
+  analogReadResolution(12); 
+  int adcValue = analogRead(VOLTAGE_PIN);
+  float voltage = (adcValue / 4096.0) *7.16;
   Serial.print("ADC Value: ");
   Serial.print(adcValue);
-  Serial.print("  Voltage: ");
+  Serial.print(" Voltage: ");
   Serial.print(voltage, 3);
   Serial.println(" V");
-
-  delay(10); 
+  delay(10);
 }
 ```
 
