@@ -712,25 +712,25 @@ If successful, the following appears in the Home Assistant notification:
 
 ```
 ┌────────────────────────────┐
-│  ReCamera (AI相机)         │
-│  └─ YOLO 模型检测对象       │
-│     （如：person、cat等）   │
+│  ReCamera (AI Camera)      │
+│  └─ YOLO Model Detects     │
+│     Objects (e.g., person, cat)  │
 └────────────┬──────────────┘
              │
              ▼
 ┌────────────────────────────┐
-│  Node-RED 流程             │
+│  Node-RED Flow             │
 │                            │
 │  [Model Info Handle]       │
-│   └─ 解析检测结果，统计数量│
-│      输出：                │
+│   └─ Parse detection results, count objects │
+│      Output:               │
 │      payload = "Current People number: 1" │
 │                            │
-│  [Function 节点]           │
-│   └─ 打包成 JSON 格式：    │
+│  [Function Node]           │
+│   └─ Pack into JSON format:│
 │      payload = { payload: "Current People number: 1" } │
 │                            │
-│  [HTTP Request 节点]       │
+│  [HTTP Request Node]       │
 │   └─ POST → HA Webhook     │
 │      URL: http://<HA_IP>:8123/api/webhook/recamera_detection │
 └────────────┬──────────────┘
@@ -739,28 +739,28 @@ If successful, the following appears in the Home Assistant notification:
 ┌────────────────────────────┐
 │  Home Assistant (HA)       │
 │                            │
-│  [Webhook 触发器]          │
-│   └─ 接收 Node-RED 传入数据│
+│  [Webhook Trigger]         │
+│   └─ Receive data sent from Node-RED │
 │                            │
-│  [自动化 Automation]       │
-│   ├─ 将 payload 写入 input_text.recamera_people_raw │
-│   │   → 在 HA 前端实时显示检测人数                 │
+│  [Automation]              │
+│   ├─ Write payload into input_text.recamera_people_raw │
+│   │   → Display detected people count in real time on HA frontend │
 │   │                                               │
-│   ├─ 条件判断：如果人数 ≥ 2                      │
-│   │     → 触发 rest_command 调用企业微信机器人   │
+│   ├─ Condition check: if count ≥ 2                │
+│   │     → Trigger rest_command to call WeCom Bot │
 │   │                                               │
-│   └─ 调用 rest_command.recamera_wechat_notify     │
-│         将检测信息 POST 给企业微信 Webhook        │
+│   └─ Call rest_command.recamera_wechat_notify     │
+│         POST detection information to WeCom Webhook│
 └────────────┬──────────────┘
              │
              ▼
 ┌────────────────────────────┐
-│  企业微信机器人（群聊中）   │
+│  WeCom Bot (Group Chat)    │
 │                            │
-│  接收到消息：               │
-│   “ReCamera 检测到多人！当前人数：Current People number: 3” │
+│  Message received:          │
+│   “ReCamera detected multiple people! Current count: Current People number: 3” │
 │                            │
-│  → 群成员即时提醒           │
+│  → Instant alert to group members │
 └────────────────────────────┘
 
 ```
