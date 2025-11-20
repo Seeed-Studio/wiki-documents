@@ -1,16 +1,16 @@
 ---
-description: Provide a tutorial for integrating reCamera with Home Assistant. Home Assistant is installed on reComputer.
+description: Provide a tutorial for integrating reCamera with Wechat work. Dependent on Home Assistant.
 title: Getting started in Wechat work
 keywords:
   - reCamera
+  - Wechat work
   - Home Assistant
   - reComputer
-  - Wechat work
 image: https://files.seeedstudio.com/wiki/reCamera/wechat_bot.png
 slug: /getting_started_in_Wechat_work_with_recamera
 sidebar_position: 8
 last_update:
-  date: 11/18/2025
+  date: 11/19/2025
   author: Xinrui Wu
 ---
 
@@ -59,11 +59,11 @@ one computer (Enterprise WeChat has been installed.)
 
 
 
-## Configuration of 1. Enterprise WeChat
+## 1.Configuration of Enterprise WeChat
 
 
 
-### 1. Create an intelligent robot
+### (1) Create an intelligent robot
 
 
 
@@ -72,7 +72,7 @@ Click Address Book-Intelligent Robot-Create Intelligent Robot
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat1.png" /></div>
 
 
-### 2. Configure the robot
+### (2) Configure the robot
 
 
 
@@ -83,7 +83,7 @@ After completing the required items, click Save
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat2.png" /></div>
 
 
-### 3. Create a new group chat
+### (3) Create a new group chat
 
 
 
@@ -91,7 +91,7 @@ Pull the robot you just created and any colleague into the group (because more t
 
 
 
-### 4. Configure message push
+### (4) Configure message push
 
 
 
@@ -118,15 +118,15 @@ If you want to see the details of how to configure, please click "know how to co
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat5.png" /></div>
 
 
-##2. reComputer AI R2130-12 configuration
+## 2. reComputer AI R2130-12 configuration
 
 
 
-### 1. System Preparation
+### (1) System Preparation
 
 
 
-#### 1. Update the system
+####  Update the system
 
 
 
@@ -135,7 +135,7 @@ sudo apt update && sudo apt upgrade -y
 ```
 
 
-#### 2. Install necessary dependencies
+####  Install necessary dependencies
 
 
 
@@ -148,11 +148,11 @@ sudo apt install -y ca-certificates curl gnupg lsb-release
 
 
 
-### Install Docker 2.
+### (2) Install Docker
 
 
 
-#### 1. Official Script Installation
+####  Official Script Installation
 
 
 
@@ -164,7 +164,7 @@ curl -fsSL https://get.docker.com | sh
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat_docker.png" /></div>
 
 
-#### 2. Allow the current user to use docker
+####  Allow the current user to use docker
 
 
 
@@ -173,7 +173,7 @@ sudo usermod -aG docker $USER
 ```
 
 
-#### 3. Then restart the system to make the permissions take effect
+####  Then restart the system to make the permissions take effect
 
 
 
@@ -182,7 +182,7 @@ sudo reboot
 ```
 
 
-#### 4. Verify Installation
+####  Verify Installation
 
 
 
@@ -203,11 +203,11 @@ If you see "Hello from Docker!" The words, indicating that the installation was 
 
 
 
-### 3. Install Home Assistant(Container Mode)
+### (3) Install Home Assistant(Container Mode)
 
 
 
-#### 1. Create a mount directory
+####  Create a mount directory
 
 
 
@@ -220,7 +220,7 @@ mkdir -p ~/homeassistant/config
 ```
 
 
-#### 2. Start the container
+####  Start the container
 
 
 
@@ -263,11 +263,11 @@ docker run -d \
 
 
 
-### 4. Access Home Assistant
+### (4) Access Home Assistant
 
 
 
-#### 1. View IP:
+####  View IP:
 
 
 
@@ -276,7 +276,7 @@ hostname -I
 ```
 
 
-#### 2. Visit the browser
+####  Visit the browser
 
 
 
@@ -314,7 +314,7 @@ The first start will enter the initialization interface, start to create an acco
 
 
 
-### 5. find the configuration file path
+### (5) find the configuration file path
 
 
 
@@ -350,11 +350,11 @@ automations.yaml  configuration.yaml  scripts.yaml ...
 
 
 
-### 6. configuration automation to receive ReCamera data
+### (6) configuration automation to receive ReCamera data
 
 
 
-#### 1. Install the editor:
+####  Install the editor:
 
 
 
@@ -363,7 +363,7 @@ sudo apt install nano -y
 ```
 
 
-#### 2. Edit 'automations.yaml ':
+####  Edit 'automations.yaml ':
 
 
 
@@ -416,7 +416,7 @@ Save and exit:
 
 
 
-### 3. Edit configuration.yaml:
+#### Edit configuration.yaml:
 
 
 
@@ -499,7 +499,7 @@ Save and exit:
 
 
 
-### 4. After saving and exiting, restart the Home Assistant:
+#### After saving and exiting, restart the Home Assistant:
 
 
 
@@ -512,11 +512,11 @@ docker restart homeassistant
 
 
 
-##3. reCamera the configuration of 2002w
+## 3. reCamera the configuration of 2002w
 
 
 
-### 1. After inserting the reCamera into the computer, access 192.168.42.1
+### (1) After inserting the reCamera into the computer, access 192.168.42.1
 
 
 
@@ -528,7 +528,7 @@ If you have been stuck and cannot open the interface, please refer to the "Resto
 
 
 
-### 2. After logging in the interface, click the lower right corner to enter "Workspace"
+### (2) After logging in the interface, click the lower right corner to enter "Workspace"
 
 
 
@@ -536,7 +536,7 @@ If you have been stuck and cannot open the interface, please refer to the "Resto
 
 
 
-### 3. Configure the node after entering the Workspace
+### (3) Configure the node after entering the Workspace
 
 
 
@@ -651,13 +651,15 @@ Click "Network" in the upper left corner to configure the network
 
 
 
+:::note
+Please remember! Make sure to connect Recamera to the network!!! Otherwise, communication will not be possible.
+:::
 
 
 
 
 
-
-##4. to view the effect
+## 4. to view the effect
 
 
 

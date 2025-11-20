@@ -5,7 +5,7 @@ keywords:
   - reCamera
   - Home Assistant
   - reComputer
-image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
+image: https://files.seeedstudio.com/wiki/reCamera/HA.png
 slug: /getting_started_for_home_assistant_with_recamera
 sidebar_position: 6
 last_update:
@@ -364,6 +364,7 @@ After setting it up, click on the "Deploy" button at the top right corner. Once 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_9.png" /></div>
 
+
 Here, you need to perform one more step, which is to connect WiFi to reCamera. It should be on the same network as the one you set up for reComputer (note that the POE version does not have WiFi functionality and requires the use of a switch with POE function to connect in the same network segment).  
 
 Click on the "Network" button in the upper left corner to configure the network.
@@ -371,7 +372,9 @@ Click on the "Network" button in the upper left corner to configure the network.
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_10.png" /></div>
 
 
-
+:::note
+Please remember! Make sure to connect Recamera to the network!!! Otherwise, communication will not be possible.
+:::
 
 
 
@@ -391,3 +394,17 @@ curl -X POST http://192.168.100.109:8123/api/webhook/recamera_detection \
 If successful, the Home Assistant notification will show: 
 > **ReCamera Detection Results**  
 Test from curl
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
