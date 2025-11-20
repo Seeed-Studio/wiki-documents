@@ -1,6 +1,6 @@
 ---
 title: XIAO 继电器扩展模块
-description: XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制交流供电设备。
+description: XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制交流电器设备。
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay_module.webp
 slug: /cn/relay_add_on_module_for_xiao
 keywords:
@@ -18,25 +18,24 @@ last_update:
 
 ## 概述
 
-XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制交流供电设备。它的特点是结合 XIAO，通过 ESPHome 接入 Home Assistant 来控制各种电器，让您的家居更智能！
+XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制交流电器设备。其特点是结合 XIAO，通过 ESPHome 接入 Home Assistant 来控制各种电器设备，让您的家居更加智能！
 
 ### 主要特性和规格
 
 | 参数               | 值           |
 |-------------------------|----------------|
-| 继电器引脚               | D1            |
 | 工作电压       | 5V             |
 | 工作电流       | 1A           |
 | 继电器寿命              | 100,000 次   |
 | 最大开关电压    | 250VAC       |
 | 最大开关电流    | 10A             |
-| 电气耐久性    | 1.5x10^4 次操作 (10A 250VAC，阻性负载，85°C，1 秒开 9 秒关)|
+| 电气耐久性    | 1.5x10^4 次操作 (10A 250VAC，阻性负载，85°C，1秒开9秒关)|
 
 更多信息，[点击此处下载 PDF 文件](https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay_module.pdf)。
 
 ## 入门指南
 
-如果您想完整地跟随本教程，您需要准备以下物品。除了 XIAO ESP32 C3，您也可以使用其他 ESP32 系列产品，如 XIAO ESP32 C6 和 XIAO ESP32 S3。本项目的最终目标是在 Home Assistant 中控制继电器模块。
+如果您想完整地学习本教程，需要准备以下物品。除了 XIAO ESP32 C3，您也可以使用其他 ESP32 系列产品，如 XIAO ESP32 C6 和 XIAO ESP32 S3。本项目的最终目标是在 Home Assistant 中控制继电器模块。
 
 <table align="center">
  <tr>
@@ -50,12 +49,12 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
  <tr>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
     </div></td>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
         </a>
     </div></td>
  </tr>
@@ -63,10 +62,10 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 
 本教程的内容将大致经过以下步骤。
 
-1. [选择您的 Home Assistant 环境](#选择您的-Home-Assistant-环境)
+1. [选择您的 Home Assistant 环境](#select-your-home-assistant-environment)
 2. 在 Home Assistant 中安装和配置 ESPHome
-3. [配置 XIAO ESP32C3 和 ESPHome 连接](#配置-XIAO-ESP32C3-和-ESPHome-连接)
-4. [将继电器模块添加到 Home Assistant 仪表板](#将继电器模块添加到-Home-Assistant-仪表板)
+3. [配置 XIAO ESP32C3 和 ESPHome 连接](#configure-the-xiao-esp32c3-and-esphome-connection)
+4. [将继电器模块添加到 Home Assistant 仪表板](#add-relay-module-to-home-assistant-dashboard)
 
 ### 快速刷写固件
 
@@ -116,35 +115,35 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 
 ## 步骤 3. 将继电器模块添加到 Home Assistant 仪表板
 
-刷写固件后，您可以看到有一个名为 **seedstudio-relay-module** 的无线网络。请连接到此网络并在浏览器中输入 `192.168.4.1` 来为您的设备配置网络。请使用与您的 Home Assistant 相同的网络。
+刷写固件后，您可以看到有一个名为 **seedstudio-relay-module** 的无线网络。请连接到此网络，并在浏览器中输入 `192.168.4.1` 来为您的设备配置网络。请使用与您的 Home Assistant 相同的网络。
 
-转到 **setting**，然后 **Devices & services**
+转到 **设置**，然后选择 **设备和服务**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/5.png" /></div>
 
-在 **Discovered** 区域，您将找到 XIAO，点击 **CONGFIUGE**
+在 **已发现** 区域中，您将找到 XIAO，点击 **配置**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/2.png" /></div>
 
-选择一个区域或保持默认，点击 **FINISH**
+选择一个区域或保持默认设置，点击 **完成**
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/4.png" /></div>
 
-之后，点击 **Devices**，找到 **xiao_esp32c3**（您之前命名的）并点击进入
+之后，点击 **设备**，找到 **xiao_esp32c3**（您之前命名的）并点击进入
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/6.png" /></div>
 
-这里是 ESPHome 设备页面，您可以添加一些自动化等。现在我们需要将其添加到仪表板，所以点击它。
+这里是 ESPHome 设备页面，您可以添加一些自动化等功能。现在我们需要将其添加到仪表板，所以点击它。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/7.png" /></div>
 
-点击 **NEXT** 然后点击 **ADD TO DASHBOARD**
+点击 **下一步** 然后点击 **添加到仪表板**
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/8.png" /></div>
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/9.png" /></div>
 
-现在，点击左侧的 **Overview**
+现在，点击左侧的 **概览**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/10.png" /></div>
 
@@ -154,7 +153,7 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 
 ### 步骤 7. 使用继电器模块控制台灯
 
-我们可以点击开关来查看继电器是否工作正常。如果您在点击开关时看到板上的小绿灯亮起，说明工作正常！
+我们可以点击开关来查看继电器是否工作正常。如果您在点击开关时看到板子上的小绿灯亮起，说明工作正常！
 
 <div class="table-center">
 <iframe width="800" height="450" src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -164,7 +163,7 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 我用这个继电器模块改造了我的小台灯。切断正极线并将其插入继电器模块的两个端口中。您可以在下面的视频中看到效果。这个继电器模块无法为 XIAO 供电，所以请记住使用电池或 USB 线缆为 XIAO 供电。
 
 :::warning
-请注意用电安全，通电期间不要触摸继电器。
+请注意用电安全，通电期间请勿触摸继电器。
 :::
 
 <div class="table-center">
@@ -173,11 +172,7 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
 
-恭喜您成功完成了 XIAO 继电器模块的学习之旅！让我们做更多有趣的改造吧！
-
-## 资源
-
-[PDF] **[XIAO 继电器扩展模块原理图](https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay_SCH.pdf)**
+恭喜您成功完成了 XIAO 继电器模块的学习之旅！让我们进行更多有趣的改造吧！
 
 ## 技术支持与产品讨论
 
