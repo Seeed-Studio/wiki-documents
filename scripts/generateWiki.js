@@ -28,6 +28,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'wio_tracker_kit', 'flash_meshtastic_kit.md'), //11.11
   path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf3800_usb_4_mic_array.md'), //11.10
   path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_HQ_POE', 'reCamera_hq_poe_microscope_demo.md'), //11.8
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Solar_Node', 'get_started_with_solar_node.md'), //11.11
+  path.join(docsDirectory, 'Robotics', 'Robot_Actuator', 'HighTorque_Control.md'), //11.19
+  path.join(docsDirectory, 'Robotics', 'Robot_Actuator', 'RobStride_Control.md'), //11.19
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）
