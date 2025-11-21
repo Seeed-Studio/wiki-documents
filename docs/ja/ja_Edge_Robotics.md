@@ -44,7 +44,7 @@ last_update:
 
 <div className="nav-grid">
 
-## 📦 ロボットキット {#ロボットキット}
+## 📦 ロボットキット {#robot-kits}
 
 <div class="category-group">
   <div class="category-card robot-kits">
@@ -53,24 +53,24 @@ last_update:
 
 <div className="card-container">
     <a href="/ja/lerobot_so100m_new/" className="nav-item">
-      <span className="text">SO100/101 アーム</span>
+      <span className="text">SO100/101 Arm</span>
     </a>
     <a href="/ja/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 アーム with IsaacSim</span>
+      <span className="text">SO100 Arm with IsaacSim</span>
     </a>
     <a href="/ja/control_robotic_arm_via_phospho/" className="nav-item">
       <span className="text">Phospho Lerobot</span>
     </a>
     <a href="/ja/training_soarm101_policy_with_isaacLab/" className="nav-item">
-    <span className="text">So Arm 強化学習</span>
+    <span className="text">So Arm強化学習</span>
     <span className="tag recommended">New</span>
     </a>
     <a href="/ja/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 アーム with IsaacSim</span>
+      <span className="text">SO100 Arm with IsaacSim</span>
       <span className="tag recommended">New</span>
     </a>
     <a href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="nav-item">
-        <span className="text">SO101 アーム with NVIDIA's GR00T</span>
+        <span className="text">SO101 Arm with NVIDIA's GR00T</span>
         <span className="tag recommended">New</span>
     </a>
 </div>
@@ -79,10 +79,10 @@ last_update:
 
 <div className="card-container">
     <a href="/ja/lerobot_lekiwi/" className="nav-item">
-      <span className="text">Lekiwi モバイルベース</span>
+      <span className="text">Lekiwiモバイルベース</span>
     </a>
     <a href="/ja/sound_follow_robot/" className="nav-item">
-      <span className="text">Lekiwi 音声追従</span>
+      <span className="text">Lekiwi音声追従</span>
     </a>
 </div>
 
@@ -90,11 +90,11 @@ last_update:
 
 <div className="card-container">
     <a href="/ja/lerobot_starai_arm/" className="nav-item">
-      <span className="text">Starai ロボットアーム</span>
+      <span className="text">Staraiロボットアーム</span>
       <span className="tag recommended">New</span>
     </a>
     <a href="/ja/starai_arm_ros_moveit/" className="nav-item">
-      <span className="text">Starai ロボットアーム Moveit2</span>
+      <span className="text">StaraiロボットアームMoveit2</span>
       <span className="tag recommended">New</span>
     </a>
     <a href="/ja/control_robotic_arm_via_gr00t" className="nav-item">
@@ -116,7 +116,7 @@ last_update:
 
 <div className="card-container">
     <a href="/ja/dm_gripper/" className="nav-item">
-      <span className="text">DM グリッパー</span>
+      <span className="text">DMグリッパー</span>
       <span className="tag recommended">New</span>
     </a>
 </div>
@@ -124,33 +124,30 @@ last_update:
 </div>
 </div>
 
-## ⚙️ アクチュエータ {#アクチュエータ}
+## ⚙️ アクチュエータ {#actuators}
 
 <div class="category-group">
 <div className="category-card actuators">
 
 <div className="card-container">
     <a href="/ja/myactuator_series/" className="nav-item">
-      <span className="text">0️⃣MyActuator X シリーズ</span>
+      <span className="text">0️⃣MyActuator Xシリーズ</span>
     </a>
     <a href="/ja/damiao_series/" className="nav-item">
-      <span className="text">1️⃣Damiao DM43 シリーズ</span>
+      <span className="text">1️⃣Damiao DM43シリーズ</span>
     </a>
     <a href="/ja/feetech_servo/" className="nav-item">
-      <span className="text">2️⃣Feetech STS3215 サーボモーター</span>
+      <span className="text">2️⃣Feetech STS3215サーボモーター</span>
     </a>
     <a href="/ja/hightorque_series/" className="nav-item">
-      <span className="text">3️⃣HighTorque シリーズ</span>
-    </a>
-    <a href="/ja/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣fashionstar シリーズ</span>
+      <span className="text">3️⃣HighTorqueシリーズ</span>
     </a>
 </div>
 
 </div>
 </div>
 
-## 👁️ センサー {#センサー}
+## 👁️ センサー {#sensors}
 
 <div class="category-group">
 <div className="category-card sensors">
@@ -165,10 +162,10 @@ last_update:
       <span className="text">MID360</span>
     </a>
     <a href="/ja/a_loam/" className="nav-item">
-      <span className="text">A-LOAM アルゴリズム</span>
+      <span className="text">A-LOAMアルゴリズム</span>
     </a>
     <a href="/ja/slamtec/" className="nav-item">
-      <span className="text">Slamtec シリーズ</span>
+      <span className="text">Slamtecシリーズ</span>
     </a>
 </div>
 
@@ -179,21 +176,21 @@ last_update:
       <span className="text">Orbbec Gemini2</span>
     </a>
     <a href="/ja/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">Orbbec デプスカメラ with ROS</span>
+      <span className="text">Orbbec深度カメラ with ROS</span>
     </a>
     <a href="/ja/orbbec_gemini_335lg" className="nav-item">
-      <span className="text">Orbbec Gemini 335Lg ステレオカメラ</span>
+      <span className="text">Orbbec Gemini 335Lgステレオカメラ</span>
       <span className="tag recommended">New</span>
     </a>
     <a href="/ja/sensing_gmsl_cameras" className="nav-item">
-      <span className="text">SENSING GMSL2 カメラ</span>
+      <span className="text">SENSING GMSL2カメラ</span>
       <span className="tag recommended">New</span>
     </a>
     <a href="/ja/orb_slam3_orbbec_gemini2/" className="nav-item">
       <span className="text">ORB-SLAM3 with Orbbec Gemini2</span>
     </a>
     <a href="/ja/csi_camera_on_ros/" className="nav-item">
-      <span className="text">CSI カメラ</span>
+      <span className="text">CSIカメラ</span>
     </a>
 </div>
 
@@ -219,22 +216,22 @@ last_update:
 </div>
 </div>
 
-## 💻 ソフトウェア {#ソフトウェア}
+## 💻 ソフトウェア {#software}
 
 <div class="category-group">
 <div className="category-card software">
 
-**ROS エコシステム**  
+**ROSエコシステム**  
 
 <div className="card-container">
     <a href="/ja/installing_ros1/" className="nav-item">
-      <span className="text">ROS1 インストール</span>
+      <span className="text">ROS1インストール</span>
     </a>
     <a href="/ja/install_ros2_humble/" className="nav-item">
-      <span className="text">ROS2 インストール</span>
+      <span className="text">ROS2インストール</span>
     </a>
     <a href="/ja/install_isaacros/" className="nav-item">
-      <span className="text">IsaacROS インストール</span>
+      <span className="text">IsaacROSインストール</span>
     </a>
     <a href="/ja/isaac_ros_apriltag/" className="nav-item">
       <span className="text">AprilTag</span>
@@ -251,7 +248,7 @@ last_update:
 </a>
 
 <a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
-  <span className="text">PX4 でのオブジェクト追跡</span>
+  <span className="text">PX4でのオブジェクト追跡</span>
 </a>
 
 </div>
@@ -259,14 +256,14 @@ last_update:
 **NVIDIA Isaac**  
 <div className="card-container">
 <a href="/ja/install_isaaclab/" className="nav-item">
-  <span className="text">Isaac Lab インストール</span>
+  <span className="text">Isaac Labインストール</span>
 </a>
 <a href="/ja/training_soarm101_policy_with_isaacLab/" className="nav-item">
-  <span className="text">So Arm 強化学習</span>
+  <span className="text">So Arm強化学習</span>
   <span className="tag recommended">New</span>
 </a>
 <a href="/ja/simulate_soarm101_by_leisaac/" className="nav-item">
-  <span className="text">SO100 アーム with IsaacSim</span>
+  <span className="text">SO100 Arm with IsaacSim</span>
   <span className="tag recommended">New</span>
 </a>
 </div>
@@ -284,7 +281,7 @@ last_update:
 </div>
 
 <style>{`
-/* 导航容器 */
+/* 導航容器 */
 .quick-nav-container {
   margin: 2rem 0;
   padding: 1rem;
@@ -296,7 +293,7 @@ last_update:
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Dark模式 - 导航容器 */
+/* Dark模式 - 導航容器 */
 html[data-theme='dark'] .quick-nav-container {
   background:
     radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
@@ -304,17 +301,17 @@ html[data-theme='dark'] .quick-nav-container {
     linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.3),
-    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内发光增强深度 */
+    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内発光増強深度 */
 }
 
-/* 导航主体 */
+/* 導航主体 */
 .quick-nav {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
 }
 
-/* 导航项 */
+/* 導航項 */
 .nav-item {
   position: relative;
   padding: 0.8rem 1.5rem;
@@ -332,27 +329,27 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Dark模式 - 导航项 */
+/* Dark模式 - 導航項 */
 html[data-theme='dark'] .nav-item {
   color: #e5e7eb;
   background:rgb(47, 50, 57);
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-/* 图标样式 */
+/* 図標様式 */
 .nav-item .icon {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   transition: transform 0.3s;
 }
 
-/* 文字样式 */
+/* 文字様式 */
 .nav-item .text {
   font-size: 0.95rem;
   white-space: nowrap;
 }
 
-/* 悬浮特效 */
+/* 悬浮特効 */
 .nav-item .hover-effect {
   position: absolute;
   bottom: 0;
@@ -365,16 +362,15 @@ html[data-theme='dark'] .nav-item {
   z-index: -1;
 }
 
-/* 悬浮动画 */
+/* 悬浮動画 */
 .nav-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   color: white;
 }
 
-/* Darkモード - ホバーアニメーション */
-html[data-theme='dark'] .nav-item:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+/* Dark模式 - 悬浮動画 */
+html[data-theme='dark'] .nav-item:hover {  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
 }
 

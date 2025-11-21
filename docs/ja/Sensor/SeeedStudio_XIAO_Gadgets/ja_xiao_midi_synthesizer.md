@@ -1,6 +1,6 @@
 ---
-description: XIAO MIDI シンセサイザーの使い方
-title: XIAO MIDI シンセサイザーの使い方
+description: XIAO MIDI シンセサイザーの入門ガイド
+title: XIAO MIDI シンセサイザーの入門ガイド
 keywords:
   - XIAO
   - MIDI
@@ -19,20 +19,20 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
 ## はじめに
 
-**XIAO MIDI シンセサイザー**は、XIAO ESP32-C3とプロフェッショナルグレードのSAM2695 MIDIチップを搭載したコンパクトなオールインワン音楽制作ガジェットです。小さなサイズにもかかわらず、豊かで表現力豊かなサウンドを提供し、最大64音のポリフォニーをサポートし、数百種類の楽器音色を提供します。サウンドを実験する開発者でも、新しい楽曲を作曲するミュージシャンでも、このシンセサイザーは音楽制作をスムーズで刺激的なものにするよう設計されています。
+**XIAO MIDI シンセサイザー**は、XIAO ESP32-C3 とプロフェッショナルグレードの SAM2695 MIDI チップを搭載したコンパクトなオールインワン音楽制作ガジェットです。小さなサイズにもかかわらず、豊かで表現力豊かなサウンドを提供し、最大64音のポリフォニーをサポートし、数百種類の楽器音色を提供します。サウンドを実験する開発者でも、新しい楽曲を作曲するミュージシャンでも、このシンセサイザーは音楽制作をスムーズで刺激的なものにするよう設計されています。
 
 ## 特徴
 
-- ゼロバリア創作、音楽初心者に最適
+- ゼロバリア制作、音楽初心者に最適
 - オールインワン MIDI + メトロノーム -- よりスマートで滑らかなワークフロー
-- 上級プレイヤー向けプロフェッショナルグレードパフォーマンス
-- 超ポータブル & 完全ハッカブル
+- 上級プレイヤー向けプロフェッショナルグレードのパフォーマンス
+- 超ポータブル & 完全にハッカブル
 
 ## ハードウェア概要
 
@@ -51,7 +51,7 @@ XIAO MIDI シンセサイザーは以下のコンポーネントを統合して�
       <th colspan="2">サウンド生成</th>
     </tr>
     <tr>
-      <td>MIDIチップ</td>
+      <td>MIDI チップ</td>
       <td>SAM2695</td>
     </tr>
     <tr>
@@ -66,19 +66,19 @@ XIAO MIDI シンセサイザーは以下のコンポーネントを統合して�
       <th colspan="2">インターフェースと接続性</th>
     </tr>
     <tr>
-      <td>3.5mmオーディオジャック</td>
-      <td>外部オーディオデバイス（スピーカーやヘッドフォンなど）の接続に使用<br />ケーブル挿入時のクラスDアンプの自動無効化と取り外し時の再有効化機能</td>
+      <td>3.5mm オーディオジャック</td>
+      <td>外部オーディオデバイス（スピーカーやヘッドフォンなど）の接続に使用<br />ケーブル挿入時のクラス D アンプの自動無効化と、取り外し時の再有効化機能を搭載</td>
     </tr>
     <tr>
       <td>物理ボタン</td>
       <td>ユーザーインタラクション用の4つのサイドマウント物理ボタン</td>
     </tr>
     <tr>
-      <td>XIAOソケット</td>
-      <td>XIAOモジュール専用ソケット、追加のサイドコネクタによる拡張機能付き</td>
+      <td>XIAO ソケット</td>
+      <td>XIAO モジュール専用に設計されたソケット、追加のサイドコネクタによる拡張機能付き</td>
     </tr>
     <tr>
-      <td>Dクラスアンプ</td>
+      <td>D クラスアンプ</td>
       <td>内蔵スピーカー</td>
     </tr>
     <tr>
@@ -89,8 +89,8 @@ XIAO MIDI シンセサイザーは以下のコンポーネントを統合して�
       <td>5V Type-C</td>
     </tr>
     <tr>
-      <td>インジケーターLED</td>
-      <td>電源状態の表示とユーザーフィードバック提供に使用される単色LED</td>
+      <td>インジケーター LED</td>
+      <td>電源状態の表示とユーザーフィードバックの提供に使用される単色 LED</td>
     </tr>
   </table>
 </div>
@@ -99,29 +99,29 @@ XIAO MIDI シンセサイザーは以下のコンポーネントを統合して�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/4.png" style={{width:1000, height:'auto'}}/></div>
 
-## はじめに
+## 入門ガイド
 
-このセクションでは、XIAO MIDI Synthesizerを初めて設定する方法をガイドします。
+このセクションでは、XIAO MIDI シンセサイザーを初めて設定する方法をガイドします。
 
-### 工場出荷時ファームウェアの使用
+### ファクトリーファームウェアの使用
 
-XIAO MIDI Synthesizerには多機能な工場出荷時ファームウェアがプリインストールされており、箱から出してすぐに複数のサウンドとリズム機能を探索できます。以下は、デフォルト機能とキー操作のクイックガイドです。
+XIAO MIDI シンセサイザーには多機能なファクトリーファームウェアが事前にフラッシュされており、箱から出してすぐに複数のサウンドとリズム機能を探索できます。以下はデフォルト機能と主要操作のクイックガイドです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/7.png" style={{width:600, height:'auto'}}/></div>
 
 **詳細なキー機能**
 
 - **サウンドテスト（デフォルトモード）：**
-  - **🎵0**: 128のプリセット楽器音を循環します。押すたびに次のサウンドに切り替わります。
-  - **🎵1**: 音程を上げます（例：C4からD4へ）。
-  - **🎵2**: 音程を下げます（例：C4からB3へ）。
-  - **🎵3**: クリックしてメトロノームを開始/停止します。
+  - **🎵0**: 128のプリセット楽器サウンドを循環。各押下で次のサウンドに切り替わります。
+  - **🎵1**: 音程を上げる（例：C4からD4へ）。
+  - **🎵2**: 音程を下げる（例：C4からB3へ）。
+  - **🎵3**: クリックでメトロノームの開始/停止。
 
 - **ビートキーパーモード：**
   - **🎵0**: （このモードでは機能なし）
-  - **🎵1**: BPM（テンポ）を1ステップ上げます（メトロノームがアクティブな時のみ動作）。
-  - **🎵2**: BPM（テンポ）を1ステップ下げます（メトロノームがアクティブな時のみ動作）。
-  - **🎵3**: クリックしてメトロノームを開始/停止します（デフォルト：120 BPM、範囲：40–240 BPM）。
+  - **🎵1**: BPM（テンポ）を1ステップ増加（メトロノームがアクティブな時のみ動作）。
+  - **🎵2**: BPM（テンポ）を1ステップ減少（メトロノームがアクティブな時のみ動作）。
+  - **🎵3**: クリックでメトロノームの開始/停止（デフォルト：120 BPM、範囲：40–240 BPM）。
 
 - **マルチトラック再生モード：**
   - **🎵0**: トラック1を再生（プリロードされたサウンドまたはシーケンス）
@@ -136,48 +136,48 @@ XIAO MIDI Synthesizerには多機能な工場出荷時ファームウェアが�
 - **🎵3**（2秒間長押し）: 次のモードに切り替え（サウンドテスト → ビートキーパー → マルチトラック再生 → ... の順で循環）
 
 :::tip
-追加の設定なしですべての機能を試すことができます。高度なカスタマイズやファームウェアの再フラッシュについては、**[StateMachineサンプルコード](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster/blob/main/examples/StateMachine/StateMachine.ino)**を参照してください。
+追加の設定なしで全ての機能を試すことができます。高度なカスタマイズやファームウェアの再フラッシュについては、**[StateMachine サンプルコード](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster/blob/main/examples/StateMachine/StateMachine.ino)**を参照してください。
 :::
 
-### BootLoaderモード
+### BootLoader モード
 
-場合によっては、XIAO MIDI Synthesizerがシリアルポート経由でプログラムできないことがあります（例：デバイスが認識されない、アップロードが失敗するなど）。このような状況では、**Bootloader（BOOT）モード**に入ってファームウェアを再フラッシュする必要があります。
+場合によっては、XIAO MIDI シンセサイザーがシリアルポート経由でプログラムできない状況があります（例：デバイスが認識されない、アップロードが失敗するなど）。このような状況では、ファームウェアを再フラッシュするために **Bootloader（BOOT）モード**に入る必要があります。
 
-#### BOOTモードに入る理由
+#### なぜ BOOT モードに入るのか？
 
-- USB/シリアル経由で正常にプログラムできない場合のデバイス復旧
-- アップロード失敗やファームウェア破損後のファームウェア再フラッシュ
+- USB/シリアル経由で正常にプログラムできない場合のデバイス復旧のため
+- アップロード失敗やファームウェア破損後のファームウェア再フラッシュのため
 
-#### BOOTモードへの入り方
+#### BOOT モードへの入り方
 
-まず、ミニシンセサイザーの背面カバーを開けて、XIAO ESP32-C3モジュール上のBOOTボタンとRESETボタンにアクセスします。2つの方法があります：
+まず、ミニシンセサイザーの背面カバーを開けて、XIAO ESP32-C3 モジュールの BOOT と RESET ボタンにアクセスします。2つの方法があります：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/5.jpg" style={{width:600, height:'auto'}}/></div>
 
 - **方法1：ボタンシーケンス**
-  1. デバイスの電源が入った状態で、**BOOT**ボタンを押し続けます（離さないでください）。
-  2. **BOOT**を押し続けながら、**RESET**ボタンを一度押します。
-  3. **BOOT**ボタンを離します。
+  1. デバイスの電源が入った状態で、**BOOT** ボタンを押し続けます（離さないでください）。
+  2. **BOOT** を押し続けながら、**RESET** ボタンを一度押します。
+  3. **BOOT** ボタンを離します。
 
 - **方法2：電源サイクル**
-  1. 電源を切断します（USB-Cケーブルを抜きます）。
-  2. **BOOT**ボタンを押し続けます。
-  3. **BOOT**を押し続けながら、電源を再接続します（USB-Cケーブルを差し込みます）。
-  4. **BOOT**ボタンを離します。
+  1. 電源を切断します（USB-C ケーブルを抜きます）。
+  2. **BOOT** ボタンを押し続けます。
+  3. **BOOT** を押し続けながら、電源を再接続します（USB-C ケーブルを差し込みます）。
+  4. **BOOT** ボタンを離します。
 
-BOOTモードに入った後、デバイスはArduino IDEまたは他のツールを介してファームウェアアップロードの準備が整います。
+BOOT モードに入ると、デバイスは Arduino IDE やその他のツールを介してファームウェアアップロードの準備が整います。
 
 ### リセット
 
-デバイスをリセットするには、XIAO ESP32-C3モジュール上の**RESET**ボタンを押すだけです。デバイスが再起動します。
+デバイスをリセットするには、XIAO ESP32-C3 モジュールの **RESET** ボタンを押すだけです。デバイスが再起動します。
 
 ## Arduino ライブラリ概要
 
 :::tip
-Arduino を初めて使用する場合は、[Arduino を始める](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduino を初めて使用する場合は、[Arduino 入門ガイド](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
-XIAO MIDI Synthesizer は [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) ライブラリによってサポートされており、包括的な MIDI 制御とサウンド合成機能を提供します。
+XIAO MIDI シンセサイザーは [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) ライブラリによってサポートされており、包括的な MIDI 制御とサウンド合成機能を提供します。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="ttps://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster" target="_blank" rel="noopener noreferrer">
@@ -185,9 +185,9 @@ XIAO MIDI Synthesizer は [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-St
     </a>
 </div><br />
 
-### 関数
+### 機能
 
-スケッチの開発を始める前に、ライブラリで利用可能な関数を見てみましょう。
+スケッチの開発を始める前に、ライブラリの利用可能な機能を見てみましょう。
 
 `static SAM2695Synth& getInstance()` – SAM2695Synth クラスのシングルトンインスタンスを返します。
 
@@ -198,7 +198,7 @@ XIAO MIDI Synthesizer は [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-St
 
 - **入力パラメータ**:
   - `T& serial`: MIDI 通信に使用するシリアルポートオブジェクト（ハードウェアまたはソフトウェアシリアル）。
-  - `int baud`: MIDI 通信のボーレート（標準 MIDI では通常 31250）。
+  - `int baud`: MIDI 通信のボーレート（標準 MIDI では通常31250）。
 - **戻り値**: なし。
 
 `void setInstrument(uint8_t bank, uint8_t channel, uint8_t value)` – 特定の MIDI チャンネルとバンクの楽器（音色）を設定します。
@@ -224,33 +224,33 @@ XIAO MIDI Synthesizer は [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-St
   - `uint8_t pitch`: MIDI ノート番号（0–127）。
 - **戻り値**: なし。
 
-`void setAllNotesOff(uint8_t channel)` – 指定されたチャンネルで現在再生中のすべてのノートをオフにします。
+`void setAllNotesOff(uint8_t channel)` – 指定されたチャンネルで現在再生中の全てのノートをオフにします。
 
 - **入力パラメータ**:
   - `uint8_t channel`: MIDI チャンネル番号（0–15）。
 - **戻り値**: なし。
 
-`void playChord(const musicData& chord)` – 提供されたコード構造内のすべてのノートにノートオンイベントを送信してコードを演奏します。
+`void playChord(const musicData& chord)` – 提供されたコード構造内の全てのノートに対してノートオンイベントを送信することでコードを演奏します。
 
 - **入力パラメータ**:
-  - `const musicData& chord`: コードのチャンネル、ノート、ベロシティ、タイミング情報を含む構造体。
+  - `const musicData& chord`: コードのチャンネル、音符、ベロシティ、タイミング情報を含む構造体。
 - **戻り値**: なし。
 
-`void setPitch(uint8_t pitch)` – 後続のノートイベントのデフォルトピッチ値を設定します。
+`void setPitch(uint8_t pitch)` – 後続の音符イベントのデフォルトピッチ値を設定します。
 
 - **入力パラメータ**:
-  - `uint8_t pitch`: デフォルトピッチとして設定する MIDI ノート番号（0–127）。
+  - `uint8_t pitch`: デフォルトピッチとして設定するMIDI音符番号（0–127）。
 - **戻り値**: なし。
 
 `uint8_t getPitch() const` – 現在のデフォルトピッチ値を取得します。
 
 - **入力パラメータ**: なし。
-- **戻り値**: 現在のデフォルト MIDI ノート番号（0–127）。
+- **戻り値**: 現在のデフォルトMIDI音符番号（0–127）。
 
-`void setVolume(uint8_t channel, uint8_t level)` – 特定の MIDI チャンネルの音量を設定します。
+`void setVolume(uint8_t channel, uint8_t level)` – 特定のMIDIチャンネルの音量を設定します。
 
 - **入力パラメータ**:
-  - `uint8_t channel`: MIDI チャンネル番号（0–15）。
+  - `uint8_t channel`: MIDIチャンネル番号（0–15）。
   - `uint8_t level`: 音量レベル（0–127）。
 - **戻り値**: なし。
 
@@ -264,40 +264,40 @@ XIAO MIDI Synthesizer は [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-St
 - **入力パラメータ**: なし。
 - **戻り値**: なし。
 
-`void increaseVelocity()` – ノートイベントのデフォルトベロシティ（音量）を上げます。
+`void increaseVelocity()` – 音符イベントのデフォルトベロシティ（音量）を上げます。
 
 - **入力パラメータ**: なし。
 - **戻り値**: なし。
 
-`void decreaseVelocity()` – ノートイベントのデフォルトベロシティ（音量）を下げます。
+`void decreaseVelocity()` – 音符イベントのデフォルトベロシティ（音量）を下げます。
 
 - **入力パラメータ**: なし。
 - **戻り値**: なし。
 
-`void increaseBpm()` – 現在のテンポ（BPM）を事前定義されたステップで上げます。
+`void increaseBpm()` – 現在のテンポ（1分間の拍数）を事前定義されたステップで上げます。
 
 - **入力パラメータ**: なし。
 - **戻り値**: なし。
 
-`void decreaseBpm()` – 現在のテンポ（BPM）を事前定義されたステップで下げます。
+`void decreaseBpm()` – 現在のテンポ（1分間の拍数）を事前定義されたステップで下げます。
 
 - **入力パラメータ**: なし。
 - **戻り値**: なし。
 
-`void setBpm(uint8_t bpm)` – テンポ（BPM）を指定された値に設定します。
+`void setBpm(uint8_t bpm)` – テンポ（1分間の拍数）を指定された値に設定します。
 
 - **入力パラメータ**:
-  - `uint8_t bpm`: 希望するテンポ（BPM）（通常 40–240）。
+  - `uint8_t bpm`: 希望するテンポ（1分間の拍数、通常40–240）。
 - **戻り値**: なし。
 
-`uint8_t getBpm() const` – 現在のテンポ（BPM）を取得します。
+`uint8_t getBpm() const` – 現在のテンポ（1分間の拍数）を取得します。
 
 - **入力パラメータ**: なし。
-- **戻り値**: 現在の BPM 値。
+- **戻り値**: 現在のBPM値。
 
 ### デフォルト変数
 
-以下のコードは、楽器タイプ、ノートなど、ライブラリで事前定義された値の一部を示しており、クエリに使用できます。
+以下のコードは、楽器タイプ、音符などのライブラリで事前定義された値の一部を示しており、参照することができます。
 
 <details>
 
@@ -581,7 +581,7 @@ typedef enum {
 
 ### インストール
 
-ステップ1. [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) ライブラリをZIPファイルとしてダウンロードします。
+ステップ 1. [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) ライブラリを ZIP ファイルとしてダウンロードします。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="ttps://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster" target="_blank" rel="noopener noreferrer">
@@ -589,15 +589,15 @@ typedef enum {
     </a>
 </div><br />
 
-ステップ2. Arduino IDEで、**Sketch > Include Library > Add .ZIP Library** をクリックし、ダウンロードしたZIPファイルを選択します。
+ステップ 2. Arduino IDE で、**Sketch > Include Library > Add .ZIP Library** をクリックし、ダウンロードした ZIP ファイルを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 
-## XIAO MIDI Synthesizer の例
+## XIAO MIDI シンセサイザーの例
 
-ライブラリがインストールされ、基本的な機能を理解したところで、XIAO MIDI Synthesizer のいくつかの例を実行して、その動作を確認してみましょう。
+ライブラリがインストールされ、基本的な機能を理解したので、XIAO MIDI シンセサイザーのいくつかの例を実行して、その動作を確認してみましょう。
 
-**ステップ1.** Arduino アプリケーションを起動します。
+**ステップ 1.** Arduino アプリケーションを起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -605,20 +605,20 @@ typedef enum {
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong></a>
 </div>
 
-**ステップ2.** 開発ボードモデルを選択し、Arduino IDE に追加します。
+**ステップ 2.** 開発ボードモデルを選択し、Arduino IDE に追加します。
 
-- XIAO MIDI Synthesizer には **XIAO ESP32-C3** が内蔵されています。追加を完了するには、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/)** を参照してください。
+- XIAO MIDI シンセサイザーには **XIAO ESP32-C3** が内蔵されています。追加を完了するには、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/)** を参照してください。
 
-### デモ1: 基本的なMIDIノート演奏
+### デモ 1: 基本的な MIDI ノート演奏
 
-このデモでは、XIAO MIDI Synthesizer を使用して単一のノートを演奏する方法を示します。
+このデモでは、XIAO MIDI シンセサイザーを使用して単一のノートを演奏する方法を示します。
 
 #### 必要な材料
 
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>XIAO MIDI Synthesizer</th>
+   <th>XIAO MIDI シンセサイザー</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -701,23 +701,23 @@ void loop()
 }
 ```
 
-> このコードは内蔵シンセサイザーでE4音を再生し、1秒ごとにオン・オフを交互に切り替えます。必要に応じて音符、楽器、タイミングを変更できます。
+> このコードは、内蔵シンセサイザーで E4 ノートを演奏し、1 秒ごとにオンとオフを切り替えます。必要に応じてノート、楽器、またはタイミングを変更できます。
 
-#### プログラム注釈
+#### プログラムの注釈
 
-このコードは、SAM2695シンセサイザーチップをベースとしたコンパクトなオーディオ合成ソリューションであるXIAO MIDIシンセサイザーの中核機能を表しています。ソフトウェア実装は、シンセサイザーが異なるシリアル通信方式を通じて様々なXIAOプラットフォームバリアントとどのようにインターフェースするかを実証しています。
+このコードは、SAM2695 シンセサイザーチップをベースとしたコンパクトなオーディオ合成ソリューションである XIAO MIDI シンセサイザーの中核機能を表しています。ソフトウェア実装では、シンセサイザーがさまざまなシリアル通信方法を通じて、さまざまな XIAO プラットフォームバリアントとどのようにインターフェースするかを示しています。
 
-XIAO MIDIシンセサイザーは、条件付きコンパイルを通じてXIAOエコシステム内の複数のマイクロコントローラープラットフォームをサポートします：
+XIAO MIDI シンセサイザーは、条件付きコンパイルを通じて XIAO エコシステム内の複数のマイクロコントローラープラットフォームをサポートします：
 
-- **AVRベースボード**: シンセサイザーチップとの通信にSoftwareSerialを利用
-- **RP2040/RP2350およびXIAO RA4M1**: 指定されたピン（D7、D6）でSoftwareSerialを実装
-- **ESP32バリアント**: Serial0を介してネイティブハードウェアシリアル機能を活用
-- **SAMDベースボード**（XIAO M0を含む）: ハードウェアUARTインターフェースを使用
-- **nRF52840**: オプションのTinyUSBサポートでUART通信を実装
+- **AVR ベースボード**: シンセサイザーチップとの通信に SoftwareSerial を利用
+- **RP2040/RP2350 および XIAO RA4M1**: 指定されたピン（D7、D6）で SoftwareSerial を実装
+- **ESP32 バリアント**: Serial0 を介してネイティブハードウェアシリアル機能を活用
+- **SAMD ベースボード**（XIAO M0 を含む）: ハードウェア UART インターフェースを使用
+- **nRF52840**: オプションの TinyUSB サポートで UART 通信を実装
 
-この汎用的なアプローチにより、シンセサイザーモジュールがXIAO製品ファミリー全体で一貫して動作することが保証されます。
+この汎用的なアプローチにより、シンセサイザーモジュールは XIAO 製品ファミリー全体で一貫して動作することが保証されます。
 
-シンセサイザー実装は2つの通信経路を確立します：
+シンセサイザーの実装では、2 つの通信経路を確立します：
 
 ```cpp
   SHOW_SERIAL.begin(USB_SERIAL_BAUD_RATE);
@@ -725,7 +725,7 @@ XIAO MIDIシンセサイザーは、条件付きコンパイルを通じてXIAO�
 ```
 
 - MIDI コマンド用の SAM2695 チップへの専用シリアル接続
-- 監視と制御のための独立したデバッグ/ユーザーインターフェースシリアル接続
+- 監視と制御のための別のデバッグ/ユーザーインターフェースシリアル接続
 
 起動時、XIAO MIDI シンセサイザーは：
 
@@ -737,9 +737,9 @@ XIAO MIDIシンセサイザーは、条件付きコンパイルを通じてXIAO�
   synth.setInstrument(0,CHANNEL_0,unit_synth_instrument_t::GrandPiano_1);
 ```
 
-4. タイミング遅延による安定化を可能にする
+4. タイミング遅延で安定化を許可
 
-デモンストレーションループは以下により基本的な音声生成機能を実演します：
+デモンストレーションループは、次の方法で基本的な音生成機能を示します：
 
 ```cpp
 void loop()
@@ -751,23 +751,23 @@ void loop()
 }
 ```
 
-1. 標準ベロシティでノートE4をトリガー
-2. 1秒間ノートを維持
+1. 標準ベロシティで E4 ノートをトリガー
+2. 1 秒間ノートを維持
 3. ノートをリリース
 4. 次のサイクル前に一時停止
 
-この実装は、教育目的、音楽プロトタイピング、または組み込みオーディオプロジェクトなど、XIAO MIDI Synthesizerプラットフォームを使用してより複雑な音楽アプリケーションを構築するための基盤を表しています。
+この実装は、教育目的、音楽プロトタイピング、または組み込みオーディオプロジェクトのいずれであっても、XIAO MIDI シンセサイザープラットフォームを使用してより複雑な音楽アプリケーションを構築できる基盤を表しています。
 
-### デモ2：ボタン制御付きリズムシーケンサー
+### デモ 2: ボタン制御付きリズムシーケンサー
 
-このデモでは、XIAO MIDI Synthesizerの物理ボタンを使用してシンプルなリズムシーケンサーを制御する方法を示します。リズムの開始/停止、およびボタンを使用したリアルタイムでのテンポ調整が可能です。
+このデモでは、XIAO MIDI シンセサイザーの物理ボタンを使用してシンプルなリズムシーケンサーを制御する方法を示します。ボタンを使用してリズムの開始/停止、およびリアルタイムでのテンポ調整ができます。
 
 #### 必要な材料
 
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>XIAO MIDI Synthesizer</th>
+   <th>XIAO MIDI シンセサイザー</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -775,7 +775,7 @@ void loop()
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -919,10 +919,10 @@ void play()
                 synth.setNoteOn(CHANNEL_9, NOTE_D2, VELOCITY_DEFAULT);
             else
                 synth.setNoteOn(CHANNEL_9, NOTE_C2, VELOCITY_DEFAULT);
-    
+
             // Increment beat count
             beatCount++;
-    
+
             // Every four beats, indicating the end of a measure
             if (beatCount >= beatsPerBar)
             {
@@ -936,7 +936,7 @@ void play()
 
 > このコードは、シンプルなリズムシーケンサーのデモンストレーションです。ボタンAでリズムのオン/オフを切り替え、ボタンBでテンポ（BPM）を上げ、ボタンCでテンポを下げます。シーケンサーはチャンネル9でMIDIノートを使用して基本的なドラムパターンを演奏します。この例を拡張して、より複雑なリズムや追加のボタン機能を追加することができます。
 
-#### プログラムの注釈
+#### プログラム解説
 
 このプログラムは、物理ボタンを通じたリアルタイムユーザーインタラクションを導入することで、基本的なMIDIノートデモを拡張しています。コードは3つのボタンを使用します：
 
@@ -944,26 +944,26 @@ void play()
 - **ボタンB**: テンポ（BPM）の増加
 - **ボタンC**: テンポ（BPM）の減少
 
-`play()`関数は、現在のBPMとノートタイプに基づいてビート間の間隔を計算し、繰り返しパターンでドラムサウンド（チャンネル9でMIDIノートD2とC2を使用）をトリガーします。ビートカウントは毎小節リセットされ、シンプルなメトロノームやドラムマシンの効果を作り出します。
+`play()`関数は、現在のBPMとノートタイプに基づいてビート間の間隔を計算し、繰り返しパターンでドラムサウンド（チャンネル9のMIDIノートD2とC2を使用）をトリガーします。ビートカウントは各小節ごとにリセットされ、シンプルなメトロノームやドラムマシンの効果を作り出します。
 
 この例では以下の方法を実演しています：
 
 - リアルタイム制御のためのボタン入力の統合
 - テンポと再生状態の動的調整
-- プログラマブルリズムジェネレーターとしてのXIAO MIDI Synthesizerの使用
+- プログラマブルリズムジェネレーターとしてのXIAO MIDIシンセサイザーの使用
 
-より多くのボタンを追加したり、異なるドラムサウンドをサポートしたり、より高度なシーケンサーロジックを実装することで、このデモをさらに強化することができます。
+このデモは、より多くのボタンの追加、異なるドラムサウンドのサポート、またはより高度なシーケンサーロジックの実装によってさらに強化することができます。
 
 ### デモ3: ボタン制御によるマルチトラックコード再生
 
-このデモでは、XIAO MIDI Synthesizerを使用してマルチトラックコードを演奏する方法を示します。各コードはボタンによってトリガーされます。2つの物理ボタンを使用して、2つの異なるコードパターンを独立して開始/停止することができます。
+このデモでは、XIAO MIDIシンセサイザーを使用してマルチトラックコードを演奏する方法を示します。各コードはボタンによってトリガーされます。2つの物理ボタンを使用して、2つの異なるコードパターンを独立して開始/停止できます。
 
 #### 必要な材料
 
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>XIAO MIDI Synthesizer</th>
+   <th>XIAO MIDIシンセサイザー</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -971,7 +971,7 @@ void play()
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -984,7 +984,7 @@ void play()
 #include <Arduino.h>
 #include "SAM2695Synth.h"
 #include "Button.h"
- 
+
 #ifdef __AVR__
     #include <SoftwareSerial.h>
     SoftwareSerial SSerial(2, 3); // RX, TX
@@ -1144,35 +1144,35 @@ void play()
 }
 ```
 
-> このコードは、2つの異なるボタンを使用して2つの異なるマルチノートコードをトリガーする方法を示しています。ボタンAは2音コードの再生を切り替え、ボタンBは4音コードの再生を切り替えます。各コードは異なるMIDIチャンネルで独自のタイミングで再生されます。
+> このコードは、2つのボタンを使用して2つの異なるマルチノートコードをトリガーする方法を実演しています。ボタンAは2ノートコードの再生を切り替え、ボタンBは4ノートコードの再生を切り替えます。各コードは異なるMIDIチャンネルで独自のタイミングで演奏されます。
 
-#### プログラム注釈
+#### プログラム解説
 
-このプログラムは、リアルタイムボタン制御によるマルチトラックコード再生を実演しています。コードは2つのコードパターン（`chordTwoNotes`と`chordFourNotes`）を定義し、それぞれが独自のMIDIチャンネル、音符、タイミングを持っています。2つのボタンが使用されます：
+このプログラムは、リアルタイムボタン制御によるマルチトラックコード再生を実演しています。コードは2つのコードパターン（`chordTwoNotes`と`chordFourNotes`）を定義し、それぞれが独自のMIDIチャンネル、ノート、タイミングを持ちます。2つのボタンが使用されます：
 
-- **ボタンA**: 2音コードシーケンスの開始/停止
-- **ボタンB**: 4音コードシーケンスの開始/停止
+- **ボタンA**: 2ノートコードシーケンスの開始/停止
+- **ボタンB**: 4ノートコードシーケンスの開始/停止
 
 `play()`関数は各コードのタイミングをチェックし、対応するフラグが有効になっている場合に再生をトリガーします。これにより、異なるコードパターンの独立した重複再生が可能になり、シンプルなマルチトラックシーケンサーをシミュレートします。
 
 この例では以下の方法を実演しています：
 
-- カスタムコード構造の定義と再生
+- カスタムコード構造の定義と演奏
 - 独立した音楽制御のための複数ボタンの使用
-- XIAO MIDI Synthesizerでより複雑で層状の音楽パフォーマンスの構築
+- XIAO MIDIシンセサイザーでより複雑で層状の音楽パフォーマンスの構築
 
-より多くのコードパターンの追加、追加ボタンのサポート、またはより高度な音楽効果のための再生同期により、このデモを拡張することができます。
+このデモは、より多くのコードパターンの追加、追加ボタンのサポート、またはより高度な音楽効果のための再生同期によって拡張することができます。
 
-### デモ4: 完全なメロディーシーケンスの再生
+### デモ4: 完全なメロディーシーケンスの演奏
 
-このデモは、XIAO MIDI Synthesizerを使用して、音符、持続時間、遅延データを配列に格納することで完全なメロディーシーケンス（楽曲など）を再生する方法を示しています。この例では、内蔵のバイオリン楽器を使用してプリプログラムされたメロディーを再生する方法を実演しています。
+このデモでは、XIAO MIDIシンセサイザーを使用して、ノート、持続時間、遅延データを配列に格納することで完全なメロディーシーケンス（楽曲など）を演奏する方法を示します。この例では、内蔵のバイオリン楽器を使用してプリプログラムされたメロディーを演奏する方法を実演しています。
 
 #### 必要な材料
 
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>XIAO MIDI Synthesizer</th>
+   <th>XIAO MIDIシンセサイザー</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -1180,7 +1180,7 @@ void play()
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -1727,7 +1727,7 @@ void setup() {
     // Set instrument sound to Violin
     synth.setInstrument(0, CHANNEL_0, unit_synth_instrument_t::Violin);
     delay(1000);
-    
+
     // Play MIDI notes
     playMidi(midi1, ARRAY_LEN(midi1));
 }
@@ -1737,25 +1737,25 @@ void loop() {
 }
 ```
 
-> このコードは、音符、持続時間、遅延の大きな配列を反復処理することで、完全なメロディーシーケンスを演奏する方法を示しています。メロディーは電源投入またはリセット後に一度演奏されます。配列を変更して異なる楽曲を演奏したり、より複雑なアレンジを追加したりできます。
+> このコードは、音符、持続時間、遅延の大きな配列を反復処理することで、完全なメロディーシーケンスを再生する方法を示しています。メロディーは電源投入またはリセット後に一度再生されます。配列を変更して異なる曲を再生したり、より複雑なアレンジを追加したりできます。
 
 #### プログラムの注釈
 
 このプログラムは以下の方法を示しています：
 
 - 音符、持続時間、遅延値の配列として完全なメロディーを保存する
-- ヘルパー関数（`playMidi`）を使用してメロディーを反復処理し、各音符を順番に演奏する
+- ヘルパー関数（`playMidi`）を使用してメロディーを反復処理し、各音符を順番に再生する
 - 再生用の特定の楽器（バイオリン）を選択する
-- 起動時に自動的に楽曲を演奏する
+- 起動時に自動的に曲を再生する
 
-このデモは以下のように拡張できます：
+このデモは以下の方法で拡張できます：
 
-- 楽器や音符データを変更して異なる楽曲を演奏する
-- 再生の開始/停止や繰り返しのボタンコントロールを追加する
+- 楽器や音符データを変更して異なる曲を再生する
+- 再生の開始/停止や繰り返しのためのボタンコントロールを追加する
 - より高度な音楽効果のためのマルチトラックやポリフォニック再生を実装する
 
 :::tip
-MIDIファイルをArduinoコードに変換したい方は、[Midi2ArduinoTone](https://tawsiftorabi.github.io/Midi2ArduinoTone/)などのツールを試すことができます。ただし、このようなツールで生成される音符値は、異なる音符マッピングを使用するため、XIAO MIDIシンセサイザーで動作するように変更が必要な場合があることにご注意ください。これらのツールは、MIDIファイルをこのシンセサイザー用に適応できる形式に変換する出発点として役立ちます。
+MIDIファイルをArduinoコードに変換したい方は、[Midi2ArduinoTone](https://tawsiftorabi.github.io/Midi2ArduinoTone/)などのツールを試すことができます。ただし、このようなツールで生成される音符値は、異なる音符マッピングを使用するため、XIAO MIDI Synthesizerで動作するように変更が必要な場合があることにご注意ください。これらのツールは、MIDIファイルをこのシンセサイザー用に適応できる形式に変換するための出発点として役立ちます。
 
 :::
 
@@ -1767,9 +1767,9 @@ MIDIファイルをArduinoコードに変換したい方は、[Midi2ArduinoTone]
 
 ## トラブルシューティング
 
-### Q1: MIDIファイルをXIAO MIDIシンセサイザー用のArduinoコードに変換するにはどうすればよいですか？
+### Q1: MIDIファイルをXIAO MIDI Synthesizer用のArduinoコードに変換するにはどうすればよいですか？
 
-MIDIファイルをXIAO MIDIシンセサイザーで使用できるArduinoコードに変換するには、以下の手順に従ってください：
+MIDIファイルをXIAO MIDI Synthesizerで使用できるArduinoコードに変換するには、以下の手順に従ってください：
 
 1. MIDIファイルを取得する
 
@@ -1783,7 +1783,7 @@ MIDIファイルをXIAO MIDIシンセサイザーで使用できるArduinoコー
 
 3. MIDIテキストを再生可能なコードに変換する
 
-    `midicomp`を使用してMIDIファイルをテキスト形式に変換した後、このテキストをXIAO MIDIシンセサイザーが演奏できるC/C++配列に処理する必要があります。Seeedはこの変換を自動化するPythonスクリプトを提供しています：
+    `midicomp`を使用してMIDIファイルをテキスト形式に変換した後、このテキストをXIAO MIDI Synthesizerが再生できるC/C++配列に処理する必要があります。Seeedはこの変換を自動化するPythonスクリプトを提供しています：
 
     - **高速リズム、シングルトラック（各音符の開始を間隔とする）：**  
     [change_fast.py](https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/res/change_fast.py)
@@ -1806,19 +1806,31 @@ MIDIファイルをXIAO MIDIシンセサイザーで使用できるArduinoコー
     3. 生成された配列をArduinoスケッチにコピーし、メロディーデータを置き換えます。
 
     :::tip
-    - スクリプトは自動的にMIDI音符番号をXIAO MIDIシンセサイザーの音符定義にマッピングします。
+    - スクリプトはMIDI音符番号をXIAO MIDI Synthesizerの音符定義に自動的にマッピングします。
     - カスタムアレンジやメモリ制約に合わせて、スクリプトや生成された配列を調整できます。
     :::
 
     4. 生成されたコードを統合する
 
     - 生成された`.h`ファイルを開き、`musicData`配列をコピーします。
-    - Arduinoプロジェクトに貼り付け、既存のメロディー配列を置き換えます。
+    - それをArduinoプロジェクトに貼り付け、既存のメロディー配列を置き換えます。
     - 必要に応じて、新しい配列構造に合わせて再生ロジックを更新します。
 
-## 技術サポート & 製品ディスカッション
+### Q2: XIAO MIDI Synthesizerにプログラムをアップロードできない場合があるのはなぜですか？
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+ESP32-C3のプログラムはUART経由でフラッシュされるため、時折プログラムがクラッシュすると、XIAOへのプログラムアップロードを妨げるエラーが発生する場合があります。また、XIAOとMIDIボードがUART経由で直接通信するため、従来のブート方法がXIAOで直接動作しない場合があります。以下の方法を試してください：
+
+1. XIAO MIDI Synthesizerの電源を入れ、XIAO ESP32-C3開発ボードを取り外します。
+2. USBケーブルを取り外します。
+3. XIAO ESP32-C3ボードのBボタンを離さずに押し続けます。
+4. USBケーブルを再接続し、その後Bボタンを離します。
+5. プログラムをアップロードします。
+
+この手順により、プログラムのアップロードが成功するはずです。
+
+## 技術サポートと製品ディスカッション
+
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
