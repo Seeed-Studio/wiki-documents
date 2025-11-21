@@ -1,5 +1,5 @@
 ---
-description: 基于 XIAO ESP32S3 & Wio-SX1262 套件的 Meshtastic
+description: 基于 XIAO ESP32S3 和 Wio-SX1262 套件的 Meshtastic
 title: XIAO ESP32-S3&Wio SX1262 套件
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /cn/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
@@ -9,7 +9,7 @@ last_update:
 ---
 
 
-[Meshtastic®](https://meshtastic.org/) 是一个开源、离网、去中心化的网状网络，专为在经济实惠的低功耗设备上运行而构建。Seeed Studio 为爱好者和工业用户提供了全面的即用型 Meshtastic 设备。XIAO ESP32S3 & Wio-SX1262 套件是为 meshtastic 开发者和创客提供的灵活解决方案。
+[Meshtastic®](https://meshtastic.org/) 是一个开源、离网、去中心化的网状网络，专为在经济实惠的低功耗设备上运行而构建。Seeed Studio 为爱好者和工业用户提供了全面的即用型 Meshtastic 设备。XIAO ESP32S3 和 Wio-SX1262 套件是为 meshtastic 开发者和制造商提供的灵活解决方案。
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 </font></span></strong>
@@ -18,14 +18,14 @@ last_update:
 ## 刷写固件
 
 :::note
-如果您购买的 XIAO ESP32S3 & Wio-SX1262 套件是在 **2024 年 10 月 24 日** 之前购买的，请按照此分步教程将固件刷写到您的设备上。请 `不要使用 NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
+如果您购买的 XIAO ESP32S3 和 Wio-SX1262 套件是在 **2024 年 10 月 24 日** 之前购买的，请按照此分步教程将固件刷写到您的设备上。请 `不要使用 NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
 :::
 
 **步骤 1**：首先，打开浏览器并访问 https://flasher.meshtastic.org/# 需要 Chrome 或 Edge 浏览器。
 
-**步骤 2**：然后，使用合适的 USB 线将设备连接到 PC。您可能需要关闭设备，然后在插入 USB 线时**按住 BOOT 按钮**。
+**步骤 2**：然后，使用合适的 USB 线缆将设备连接到 PC。您可能需要关闭设备，然后在插入 USB 线缆时**按住 BOOT 按钮**。
 
-**步骤 3**：按照以下提供的说明执行后续的刷写操作。选择设备为 "**Seeed XIAO S3**"，固件为**最新**版本，然后点击 "**Flash**"。如果您想覆盖之前的固件，不要忘记勾选 "**Full Erase and Install**"。
+**步骤 3**：按照提供的以下说明执行后续的刷写操作。选择设备为 "**Seeed XIAO S3**"，固件为**最新**版本，然后点击 "**Flash**"。如果您想覆盖之前的固件，不要忘记勾选 "**Full Erase and Install**"。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/flashfirmware1.gif" style={{width:700, height:'auto'}}/></div>
 
@@ -46,7 +46,7 @@ Meshtastic 为用户提供了多个平台软件可供选择，包括 Android 应
 
 在使用 Meshtastic 之前，需要先连接设备。有两种连接方法。第一种是使用扩展板，相应的信息将显示在显示屏上。然后，可以根据反映的信息在相应平台上进行配置。第二种是连接 XIAO 和 Wio-SX1262 模块，并使用串口工具获取节点 ID 和密码。
 
-### 方法 1：连接电池
+### 连接电池
 
 XIAO ESP32S3 内置电源管理芯片，允许 XIAO ESP32S3 通过使用电池独立供电，或通过 XIAO ESP32S3 的 USB 端口为电池充电。
 
@@ -59,13 +59,13 @@ XIAO ESP32S3 内置电源管理芯片，允许 XIAO ESP32S3 通过使用电池�
 </div>
 
 
-### 方法 2：连接扩展板
+### 连接到扩展板
 
-刷写固件并下载 Meshtastic 应用后，扩展板将是连接和附加应用的好工具，例如轻松添加 grove 传感器和模块。
+刷写固件并下载 Meshtastic 应用后，扩展板将是连接和附加应用的好工具，例如轻松添加 Grove 传感器和模块。
 
-**步骤 1**：确保要连接的设备（如 "device"）已开启并处于可发现状态。并在您的手机上打开 Meshtastic 应用。
+**步骤 1**：确保要连接的设备（如"设备"）已开启并处于可发现状态。并在您的手机上打开 Meshtastic 应用。
 
-**步骤 2**：在 Meshtastic 应用中，右下角有一个 "+" 图标。点击它让应用开始扫描附近可连接的设备。然后选择 OLED 显示屏上显示的相应设备 ID。
+**步骤 2**：在 Meshtastic 应用中，右下角有一个"+"图标。点击它让应用开始扫描附近可连接的设备。然后选择 OLED 显示屏上显示的相应设备 ID。
 
 **步骤 3**：正确选择后，输入 OLED 显示屏上显示的代码。按下按钮切换显示。
 
@@ -83,7 +83,7 @@ XIAO ESP32S3 内置电源管理芯片，允许 XIAO ESP32S3 通过使用电池�
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/dzqx32lBJso" title="Configuring Wio-SX1262 with XIAO ESP32S3 kit as Meshtastic device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### 方法 3：串口工具
+### 串口工具
 
 选择您喜欢的串口调试工具。我将以 mac 上的 Comtool 为例。选择**串口**连接，选择**相应的端口**，将波特率配置为 **115200**，并打开 **RTS 和 DTR**。打开连接，您可以看到连接数据。
 搜索 "**nodenum**" 以找到相应的节点 ID。其默认**密码是 123456**。
@@ -94,6 +94,13 @@ XIAO ESP32S3 内置电源管理芯片，允许 XIAO ESP32S3 通过使用电池�
 nodenum 的最后四位数字是 meshtastic 应用发现的设备编号 ID。例如，"nodenum 0x9e20d02c" 在 meshtastic 中是 "Meshtastic_d02c"。
 :::
 
+
+### 与 SX-1262 连接
+
+SX-1262 可以通过 B2B 接口连接到 Xiao ESP32-S3。SX-1262 使用 SPI 与 Xiao ESP32-S3 通信。
+:::warning
+兼容的 SX-1262 只能在套件内购买。
+:::
 ## 与 Wio Tracker T1000-E 通信
 
 **步骤 1**. 按照 [wiki](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#get-started-1) 连接 Wio Tracker T1000-E。
@@ -111,7 +118,7 @@ nodenum 的最后四位数字是 meshtastic 应用发现的设备编号 ID。例
 
 3. 网络设置
 
-- 确保设备处于相同的网络模式或信道设置。使用 Meshtastic APP 轻松设置相同的 'lora region' 和 'Modem preset'。
+- 确保设备处于相同的网络模式或信道设置。使用 Meshtastic APP 轻松设置为相同的 'lora region' 和 'Modem preset'。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/12.png" style={{width:350, height:'auto'}}/></div>
 
@@ -127,7 +134,7 @@ nodenum 的最后四位数字是 meshtastic 应用发现的设备编号 ID。例
 
 ## 传感器连接
 
-在 meshtastic 应用中，Wio-SX1262 与 XIAO esp32s3 套件能够支持广泛的传感器。当与 XIAO 扩展板结合使用时，它可以支持众多 grove 传感器，请查看[这里](https://github.com/meshtastic/firmware/blob/3f1c86f9535279fd17eaaab6e10a06f09915b7e4/src/detect/ScanI2C.h#L10)。此外，当与 GNSS 附加模块结合时，它形成了 meshtastic 中具有 GPS 功能的最小模块。
+在 meshtastic 应用中，Wio-SX1262 与 XIAO esp32s3 套件能够支持广泛的传感器。当与 XIAO 扩展板结合使用时，它可以支持众多 Grove 传感器，请查看[这里](https://github.com/meshtastic/firmware/blob/3f1c86f9535279fd17eaaab6e10a06f09915b7e4/src/detect/ScanI2C.h#L10)。此外，当与 GNSS 附加模块结合时，它形成了 meshtastic 中具有 GPS 功能的最小模块。
 
 ### 温湿度传感器
 
@@ -183,7 +190,7 @@ nodenum 的最后四位数字是 meshtastic 应用发现的设备编号 ID。例
 
 ### 无线电配置
 
-Meshtastic 固件中有几个配置部分，这些部分被分离出来，以便可以作为小的管理消息通过网格发送。
+Meshtastic 固件中有几个配置部分，这些部分被分开，以便可以作为小的管理消息通过网格发送。
 
 | 名称 | 描述 |
 | ---- | ---- |

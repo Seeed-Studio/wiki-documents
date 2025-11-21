@@ -199,7 +199,7 @@ Al usar la Placa de Pantalla ePaper XIAO, asegúrate de configurar el puente seg
 
 ### Instalar la Librería Seeed Arduino GFX
 
-**Paso 3.** Instalar la Librería Seeed Arduino LCD
+**Paso 3.** Instalar la Librería Seeed GFX
 
 :::tip
 Esta librería tiene la misma función que la librería TFT y no es compatible con ella. Si has instalado la librería TFT u otras librerías de pantalla similares, por favor desinstálalas primero.
@@ -405,24 +405,29 @@ Si quieres escribir tu propio código para leer el voltaje de la batería, será
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04battery.jpg" style={{width:700, height:'auto'}}/></div>
 
 ```cpp
-#define VOLTAGE_PIN A0
+#define VOLTAGE_PIN A0 //GPIO1
+#define ADC_ENABLE_PIN A5 //GPIO6
 
 void setup() {
-  Serial.begin(115200);       
-  pinMode(VOLTAGE_PIN, INPUT); /
+  Serial.begin(115200);
+  delay(10);
+  
+  pinMode(VOLTAGE_PIN, INPUT);
+  pinMode(ADC_ENABLE_PIN, OUTPUT);
+  digitalWrite(ADC_ENABLE_PIN , HIGH);
 }
 
-void loop() {
-  int adcValue = analogRead(VOLTAGE_PIN);   
-  float voltage = (adcValue / 1023.0) * 3.3; 
 
+void loop() {
+  analogReadResolution(12); 
+  int adcValue = analogRead(VOLTAGE_PIN);
+  float voltage = (adcValue / 4096.0) *7.16;
   Serial.print("ADC Value: ");
   Serial.print(adcValue);
-  Serial.print("  Voltage: ");
+  Serial.print(" Voltage: ");
   Serial.print(voltage, 3);
   Serial.println(" V");
-
-  delay(10); 
+  delay(10);
 }
 ```
 

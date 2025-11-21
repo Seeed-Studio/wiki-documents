@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.webp
 slug: /lerobot_lekiwi
 last_update:
-  date: 2025/12/11
+  date: 11/12/2025
   author: Li shanghang
 translation:
   skip: [ zh-CN ]

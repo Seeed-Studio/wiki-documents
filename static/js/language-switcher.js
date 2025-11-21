@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-11 15:29:07 (北京时间)
-// 多语言页面: 2042 个
+// 生成时间: 2025-11-20 11:17:50 (北京时间)
+// 多语言页面: 2047 个
 
 (function() {
   'use strict';
@@ -990,6 +990,12 @@
     "ja"
   ],
   "/how_to_encrypt_the_disk_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_establish_the_ethercat_on_jetson": [
     "cn",
     "en",
     "es",
@@ -2567,6 +2573,12 @@
     "es",
     "ja"
   ],
+  "/getting_started_for_home_assistant_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recamera_linux_fundamentals": [
     "cn",
     "en",
@@ -3941,7 +3953,19 @@
     "es",
     "ja"
   ],
+  "/hightorque_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/myactuator_series": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/robstride_control": [
     "cn",
     "en",
     "es",
@@ -8063,6 +8087,12 @@
     "ja"
   ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf3800_python_sdk": [
     "cn",
     "en",
     "es",

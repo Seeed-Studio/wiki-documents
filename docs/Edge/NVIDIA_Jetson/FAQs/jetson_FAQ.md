@@ -109,6 +109,10 @@ This mounts the exFAT-formatted external drive to `/media/seeed/tmp-exfat/` so t
 
 For details, please click [here](/how_to_encrypt_the_disk_for_jetson)
 
+#### Q18：How to establish communication between Jetson and EtherCAT devices?
+
+For details, please click [here](/how_to_establish_the_ethercat_on_jetson)
+
 
 ## Tech support
 

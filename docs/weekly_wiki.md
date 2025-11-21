@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 11/10/2025
+  date: 11/17/2025
   author: Frank
 ---
 
@@ -17,44 +17,48 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 10th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 17th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [reTerminal E Series ePaper Display Work with SquareLine Vision](https://wiki.seeedstudio.com/reterminal_e10xx_with_squareline_vision/)
+### [iSpy on reComputer](https://wiki.seeedstudio.com/ispy_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_4.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[SquareLine Vision](https://vision.squareline.io/) is a UI development environment based on the browser (Web) or Web-compatible environment, dedicated to quickly designing user interfaces (UI) for embedded systems (such as devices with screens).
-It is also a **design + export code** tool: you design the interface on the platform, and then you can export the design as code or resources for running on embedded devices. This article provides instructions on how to create the UI interface for the reTerminal E series paper display on SquareLine.
+This guide shows how to deploy the open-source video surveillance application iSpy on the reComputer R series edge computing devices from Seeed Studio. It covers hardware prerequisites, system updates, installing Docker and Docker Compose, creating the `docker-compose.yaml` configuration, and adding cameras to start live monitoring.
 
 </div>
 
-### [Build balenaOS for reComputer AI R2140](https://wiki.seeedstudio.com/recomputer_ai_r2140_balena/)
+### [Getting started for Home Assistant with reCamera](https://wiki.seeedstudio.com/getting_started_for_home_assistant_with_recamera/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[balena](https://www.balena.io/) is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT  applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications. This tutorial will show you how to compile, configure and burn balenaOS for recomputer AI Box.
+This guide walks you through setting up Home Assistant on a Seeed Studio reCamera system, including hardware prerequisites, installing Docker, deploying Home Assistant in a container, and configuring the camera integration and automation with the system’s data.
 
 </div>
 
-### [go2rtc on reComputer](https://wiki.seeedstudio.com/go2rtc_on_recomputer/)
+### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
+
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[go2rtc](https://github.com/AlexxIT/go2rtc) is an open-source WebRTC framework designed to facilitate real-time media streaming over the internet. It is developed by the XTLS team and aims to combine WebRTC with other media protocols like RTSP, RTMP, and HLS for efficient real-time video and audio transmission. This wiki demonstrates how to use go2rtc on recomputer.
+**EtherCAT (Ethernet for Control Automation Technology)** is an open-source, high-performance real-time Industrial Ethernet fieldbus protocol based on **IEEE 802.3 Ethernet standards**. It operates on a **master-slave architecture** and is renowned for its exceptional speed, precision, and flexibility in industrial automation environments. This document uses the [**recomputer robotics J401**](https://www.seeedstudio.com/reComputer-Robotics-Carrier-board-p-6442.html) as the **EtherCAT master** and the [**MyActuator X4**](https://www.seeedstudio.com/Myactuator-X4-P12-5-10-Planetarty-Actuator-p-6470.html) as the **slave** to demonstrate how to establish communication between a Jetson and EtherCAT devices.
 
 </div>
 
-### [Moonfire NVR on reComputer](https://wiki.seeedstudio.com/moonfire_nvr_on_recomputer/)
+### [reSpeaker XVF3800 Control with Python](https://wiki.seeedstudio.com/respeaker_xvf3800_python_sdk/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[Moonfire-NVR](https://github.com/scottlamb/moonfire-nvr) is designed with the goal of providing an easy-to-use NVR system that is lightweight and minimalistic, meaning it doesn’t come with the complexity of other more bloated commercial NVR solutions. It emphasizes functionality and simplicity, enabling users to record from IP cameras directly to a file system or cloud storage. This wiki demonstrates how to deploy moonfire nvr on recomputer.
+In this section, we are going to talk about how to control your ReSpeaker XVF-3800 using the Python SDK. It makes development more convenient for users who want to build their own applications.
+For instance, you can detect where the voice is coming from, perform voice activity detection (VAD), control LEDs, and much more.
 
 </div>
 
@@ -209,5 +213,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
 - [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
 - [weekly wiki on 2025.11.03rd](/Seeed_Elderly/weekly_wiki/wiki251103)
+- [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/wiki251110)
 
 </details>

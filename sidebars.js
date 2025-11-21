@@ -1845,6 +1845,7 @@ const sidebars = {
             id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_usb_4_mic_array',
           },
           items: [
+            
             {
               type: 'category',
               label: 'ReSpeaker XVF 3800 with XIAO Intro',
@@ -1874,6 +1875,7 @@ const sidebars = {
                 },
               ],
             },
+            'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -3795,6 +3797,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Use_IMX477_Camera_with_A603',
             'Edge/NVIDIA_Jetson/FAQs/Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
           ]
         }
       ],
@@ -4060,6 +4063,8 @@ const sidebars = {
         'Robotics/Robot_Actuator/Damiao_Series',
         'Robotics/Robot_Actuator/Feetech_Servo',
         'Robotics/Robot_Actuator/HighTorque',
+        'Robotics/Robot_Actuator/HighTorque_Control',
+        'Robotics/Robot_Actuator/RobStride_Control',
       ]
     },
     {
@@ -6977,6 +6982,7 @@ const sidebars = {
                 },
               ],
             },
+            'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -8897,6 +8903,7 @@ const sidebars = {
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Use_IMX477_Camera_with_A603',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+            'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_How_to_Establish_the_Ethercat_on_Jetson',
           ]
         }
       ],
@@ -9158,6 +9165,8 @@ const sidebars = {
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Feetech_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_HighTorque',
+        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
+        'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
       ]
     },
     {
@@ -11987,6 +11996,7 @@ const sidebars = {
                 },
               ],
             },
+            'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -13907,6 +13917,7 @@ const sidebars = {
             'es/Edge/NVIDIA_Jetson/FAQs/es_Use_IMX477_Camera_with_A603',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+            'es/Edge/NVIDIA_Jetson/FAQs/es_How_to_Establish_the_Ethercat_on_Jetson',
           ]
         }
       ],
@@ -14172,6 +14183,8 @@ const sidebars = {
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
         'es/Robotics/Robot_Actuator/es_Feetech_Servo',
         'es/Robotics/Robot_Actuator/es_HighTorque',
+        'es/Robotics/Robot_Actuator/es_HighTorque_Control',
+        'es/Robotics/Robot_Actuator/es_RobStride_Control',
       ]
     },
     {
@@ -16997,6 +17010,7 @@ const sidebars = {
                 },
               ],
             },
+            'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_python_sdk',
           ],
         },
         {
@@ -18917,6 +18931,7 @@ const sidebars = {
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Use_IMX477_Camera_with_A603',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
+            'ja/Edge/NVIDIA_Jetson/FAQs/ja_How_to_Establish_the_Ethercat_on_Jetson',
           ]
         }
       ],
@@ -19182,6 +19197,8 @@ const sidebars = {
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
         'ja/Robotics/Robot_Actuator/ja_Feetech_Servo',
         'ja/Robotics/Robot_Actuator/ja_HighTorque',
+        'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
+        'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
       ]
     },
     {

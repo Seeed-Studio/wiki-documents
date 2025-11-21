@@ -50,6 +50,18 @@ L1 E-Ink 固件目前不支持四向摇杆。如果您想使用摇杆，请购�
 只有 2.7 固件支持菜单栏。如果您想使用菜单栏，请按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
+#### 蜂鸣器
+
+如果您想开启或关闭蜂鸣器，请先`更新固件`到`2.7`版本。因为只有 2.7 版本固件才有菜单栏。
+- 开启蜂鸣器
+Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> Disable
+- 关闭蜂鸣器
+Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> All enabled
+
+<div class="table-center">
+<iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
 ### 第四部分 手机连接
 
 <div class="video-container">
@@ -131,6 +143,38 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
+### 通过网站连接
+
+如果您想在网站上发送文本消息并与其他节点通信，您现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+
+  步骤 1：打开网站
+
+[点击这里](https://client.meshtastic.org/messages/broadcast/0) 前往网站。
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  步骤 2：添加新设备
+
+    点击 "+ New Connection"。
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    有两种连接方式。您可以选择您喜欢的方法。
+
+ 方法 1：通过蓝牙
+
+    选择蓝牙方法。在弹出窗口中选择设备 ID。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ 方法 2：通过串口
+
+    选择串口方法。打开设备管理器查看设备连接到哪个端口。在弹出窗口中选择该端口。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    您的设备将显示在列表中。点击连接。如果连接成功，您可以直接在网站上看到设备状态。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
+
+
 ### 配置参数
 
 为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
@@ -204,7 +248,7 @@ import TabItem from '@theme/TabItem';
 
 ### 虚拟键盘
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
+2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。请按照[固件刷写教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## 常见问题
