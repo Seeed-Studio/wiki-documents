@@ -14181,9 +14181,10 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        'es/Robotics/Robot_Actuator/es_Feetech_Servo',
+        'es/Robotics/Robot_Actuator/es_FashionStar_Servo',
         'es/Robotics/Robot_Actuator/es_Myactuator_Series',
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
-        'es/Robotics/Robot_Actuator/es_Feetech_Servo',
         'es/Robotics/Robot_Actuator/es_HighTorque',
         'es/Robotics/Robot_Actuator/es_HighTorque_Control',
         'es/Robotics/Robot_Actuator/es_RobStride_Control',
@@ -19195,9 +19196,10 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        'ja/Robotics/Robot_Actuator/ja_Feetech_Servo',
+        'ja/Robotics/Robot_Actuator/ja_FashionStar_Servo',
         'ja/Robotics/Robot_Actuator/ja_Myactuator_Series',
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
-        'ja/Robotics/Robot_Actuator/ja_Feetech_Servo',
         'ja/Robotics/Robot_Actuator/ja_HighTorque',
         'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
         'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
