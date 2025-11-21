@@ -101,15 +101,6 @@ const docList = [
   ],
   [
     {
-      "path": "/get_started_with_meshtastic_solar_node",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp",
-      "title": "Get Started with SenseCAP Solar Node",
-      "date": "10/29/2025",
-      "title_cn": "SenseCAP Solar Node 入门指南",
-      "title_ja": "SenseCAP Solar Node の使用開始",
-      "title_es": "Comienza con SenseCAP Solar Node"
-    },
-    {
       "path": "/model_conversion_guide",
       "image": "https://files.seeedstudio.com/wiki/reCamera/013.webp",
       "title": "YOLO11n Model Conversion for reCamera: Complete Guide",
@@ -117,6 +108,15 @@ const docList = [
       "title_cn": "reCamera 的 YOLO11n 模型转换：完整指南",
       "title_ja": "reCamera 用 YOLO11n モデル変換：完全ガイド",
       "title_es": "Conversión del Modelo YOLO11n para reCamera: Guía Completa"
+    },
+    {
+      "path": "/epaper_breakout_board_with_oepl",
+      "image": "https://files.seeedstudio.com/wiki/eInk/xiao-expansion/OEPL_Config_img.webp",
+      "title": "OpenEPaperLink and ePaper config builder",
+      "date": "10/23/2025",
+      "title_cn": "OpenEPaperLink 和电子纸配置构建器",
+      "title_ja": "OpenEPaperLinkとePaper設定ビルダー",
+      "title_es": "Constructor de configuración OpenEPaperLink y ePaper"
     }
   ]
 ];

@@ -1,6 +1,6 @@
 ---
 description: |
-title: Seeed Studio XIAO nRF54L15 Sense用MicroPython
+title: Seeed Studio XIAO nRF54L15 Sense 用 MicroPython
 keywords: 
 - nRF54L15
 - xiao
@@ -12,17 +12,17 @@ last_update:
   author: Sherlock
 ---
 
-このチュートリアルは、XIAO nRF54L15をベースにThonnyでMicroPythonを使用する方法を紹介することを目的としています。
+このチュートリアルは、XIAO nRF54L15 を基に Thonny で MicroPython を使用する方法を紹介することを目的としています。
 
-[MicroPython](https://github.com/micropython/micropython/wiki)は、部分的なネイティブコードコンパイル機能を持つPythonインタープリターです。組み込みプロセッサーと制約のあるシステム向けに実装されたPython 3.5機能のサブセットを提供します。CPythonとは異なり、違いについては[こちら](https://github.com/micropython/micropython/wiki/Differences)で詳しく読むことができます。
+[MicroPython](https://github.com/micropython/micropython/wiki) は、部分的なネイティブコードコンパイル機能を持つ Python インタープリターです。組み込みプロセッサーと制約のあるシステム向けに実装された Python 3.5 機能のサブセットを提供します。CPython とは異なり、違いについては[こちら](https://github.com/micropython/micropython/wiki/Differences)で詳しく読むことができます。
 
 <!-- ## 安装Python3
 Thonny自带Python解释器，所以不需要额外安装Python环境
 Win + R -->
 
-## Thonny IDEを使用する
+## Thonny IDE を使用する
 
-XIAO nRF54L15を準備してください。
+XIAO nRF54L15 を準備します。
 
 <div class="table-center">
 <table align="center">
@@ -35,20 +35,20 @@ XIAO nRF54L15を準備してください。
 <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
 </tr>
 </table>
 </div>
 
-### Thonny IDEをインストールする
+### Thonny IDE をインストールする
 
 [Thonny IDE](https://thonny.org/)
 
-インストールに適したバージョンを選択してください。ここでは、Windowsシステムにインストールしているため、Windowsバージョンを選択しました。
+インストールに適したバージョンを選択してください。ここでは Windows システムにインストールするため、Windows バージョンを選択しました。
 
-希望するPythonバージョンの指示に従ってください。
+希望する Python バージョンの指示に従ってください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_ide_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -62,7 +62,7 @@ XIAO nRF54L15を準備してください。
     </a>
 </div><br />
 
-ローカルマシンにクローンし、このXIAO nRF54L15のMicroPythonが保存されているパスを覚えておいてください。このパスは後で使用されます。
+ローカルマシンにクローンし、この XIAO nRF54L15 の MicroPython が保存されているパスを覚えておいてください。このパスは後で使用します。
 
 ```git
 git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
@@ -70,12 +70,12 @@ git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 
 ### ボードファイルをアップロードする
 
-**ステップ1.** XIAO nRF54L15用のMicroPythonファームウェアをフラッシュする
+**ステップ 1.** XIAO nRF54L15 用の MicroPython ファームウェアをフラッシュする
 
 <!-- 如果您已经刷入了对应的MircroPython固件，可以跳过这一步骤 -->
-- ファームウェアパッケージをダウンロードして適切な場所に展開します。次にflash.batをクリックすると、自動的にファームウェアがフラッシュされます。
+- ファームウェアパッケージをダウンロードして適切な場所に展開します。その後、flash.bat をクリックすると、自動的にファームウェアがフラッシュされます。
 
-    **[ファームウェア]** [XIAO nRF54L15 MicroPythonファームウェア](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao54_flash.zip)
+    **[ファームウェア]** [XIAO nRF54L15 MicroPython ファームウェア](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao54_flash.zip)
 <!-- 这里的压缩包填入刷写固件的压缩包 -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/MicroPython_firmware_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -83,24 +83,24 @@ git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 このスクリプトには事前設定されたフラッシュツールチェーンコマンドがあります。初回使用時は少し時間がかかる場合があります。
 :::
 
-**ステップ2.** Thonny IDEを開き、インターフェースの右下角をクリックしてインタープリターオプションを設定します。MicroPython (generic)とPortを選択します
+**ステップ 2.** Thonny IDE を開き、インターフェースの右下角をクリックしてインタープリターオプションを設定します。MicroPython (generic) とポートを選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_1.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ3.** boardsファイルをアップロードする
+**ステップ 3.** ボードファイルをアップロードする
 
-- ビューを開き、"File"を選択すると、ファイルマネージャーパスが左サイドバーに表示されます。
+- ビューを開き、"File" を選択すると、ファイルマネージャーパスが左サイドバーに表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_2.png" style={{width:600, height:'auto'}}/></div>
 
-- クローンまたはダウンロードしたファイルのパスを開き、`micropython-seeed-boards\examples`を開きます
-- "boards"フォルダを選択してフラッシュにアップロードします。その後、MicroPythonデバイス/フラッシュにアップロードされたファイルが表示されます。
+- クローンまたはダウンロードしたファイルのパスを開き、`micropython-seeed-boards\examples` を開きます
+- "boards" フォルダを選択してフラッシュにアップロードします。その後、MicroPython デバイス/フラッシュにアップロードされたファイルが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_3.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ4.** LEDを点灯させる
+**ステップ 4.** LED を点灯させる
 
-コードをコピーして`F5`を押して実行します。
+コードをコピーして `F5` を押して実行します。
 
 ```py
 import time
@@ -147,17 +147,17 @@ finally:
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
     </div></td>
   </tr>
@@ -203,14 +203,14 @@ finally:
 コードの説明：
 
 - **モジュールのインポート**
-        - `time` timeモジュールをインポートします
-        - `Xiao Pin` boards.xiaoモジュールからSeeed Xiao開発ボード用のピン制御クラスをインポートします。これはボード上のピンを操作するために使用されます。
+        - `time` time モジュールをインポートします
+        - `Xiao Pin` boards.xiao モジュールから Seeed Xiao 開発ボード用のピン制御クラスをインポートします。これはボード上のピンを操作するために使用されます。
 
 - **ピンの定義**
-        - `button = "sw"` ボタンが開発ボードの"sw"ピン（ここではBOOTピン）に接続されていることを指定します
-        - `relay = 0` リレーがデジタルピンD0に接続されていることを指定します。
+        - `button = "sw"` ボタンが開発ボードの "sw" ピン（ここでは BOOT ピン）に接続されていることを指定します
+        - `relay = 0` リレーがデジタルピン D0 に接続されていることを指定します。
 
-- **メインロジック（tryブロック）**
+- **メインロジック（try ブロック）**
         - ボタンが押されたとき（状態は0）→ リレーが作動します（出力は1）。
         - ボタンが押されていないとき（状態は1）→ リレーが非作動になります（出力は0）。
 
@@ -238,22 +238,22 @@ finally:
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-V1-1.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -332,7 +332,7 @@ finally:
         - `time`：遅延を追加し、プログラムの実行リズムを制御するために使用されます。
         - `boards.xiao`：Xiao開発ボードのハードウェア制御クラスをインポートします。以下が含まれます：
         - `XiaoADC`：アナログ信号（ポテンショメータの出力など）を読み取るために使用されます。
-        - `XiaoPWM`：PWM信号を生成するために使用されます（LED の明るさを制御するため）。
+        - `XiaoPWM`：PWM信号を生成するために使用されます（LED の明るさを制御）。
 
 - **ハードウェアピンの定義**
         - `adc`は開発ボードのD0ピンに対応し（ポテンショメータの出力を接続するために使用）、`pwm`はD1ピンに対応します（LEDを接続するために使用）。
@@ -343,7 +343,7 @@ finally:
         - `PWMパラメータ`：1000Hzの周波数は、信号周期が1ミリ秒（1e6ナノ秒）であることを意味します。デューティサイクル（周期のうちハイレベルが持続する割合）がLEDの明るさを決定します（デューティサイクルが高いほど、LEDが明るくなります）。
 
 - **メインループ（コアロジック）**
-        - 電圧の読み取り：ADCを通じてポテンショメータが出力する電圧を読み取ります（単位をボルトに変換）。
+        - 電圧読み取り：ADCを通じてポテンショメータが出力する電圧を読み取ります（単位をボルトに変換）。
         - 範囲制限：電圧が0〜3.3Vの範囲内にあることを確認します（ハードウェア安全範囲）。
         - デューティサイクル計算：電圧を0〜1のデューティサイクルに線形変換します（例：1.65Vは50%のデューティサイクルに対応）。
         - デッドゾーン処理：軽微な電圧変動（ノブの軽微な振動など）を無視し、LEDの頻繁な変化を防ぎます。
@@ -370,12 +370,12 @@ finally:
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -603,9 +603,9 @@ finally:
 
 - **データ構造の定義**
         - `Coordinates`クラス：経度/緯度の値を浮動小数点数として格納するシンプルなコンテナ。
-        - `GNRMC`クラス：`$GNRMC` NMEA文から解析されたGPSデータを表します。以下を含みます：
+        - `GNRMC`クラス：`$GNRMC` NMEA文から解析されたGPSデータを表します。含まれる内容：
             - 十進度での緯度/経度
-            - 半球インジケーター（`N/S`、`E/W`）
+            - 半球インジケータ（`N/S`、`E/W`）
             - 時刻（時、分、秒 — GMT+8に調整）
             - ステータスフラグ（1 = 有効な測位、0 = 測位なし）
 
@@ -632,9 +632,9 @@ finally:
 
 - **メインロジック（tryブロック）**
         - 指定されたパラメータでUARTインターフェースを初期化します。
-        - 座標計算に必要なグローバル定数（`pi`、`a`、`ee`、`x_pi`）を定義します — 地球楕円体パラメータとスケーリング係数。
-        - UARTを介して受信するGPSデータを継続的に読み取る無限ループに入ります。
-            - `buffer`を使用して、完全な行（`\n`で終わる）が受信されるまで部分的なメッセージを蓄積します。
+        - 座標計算に必要なグローバル定数を定義（`pi`、`a`、`ee`、`x_pi`）— 地球楕円体パラメータとスケーリング係数。
+        - UART経由で受信するGPSデータを継続的に読み取る無限ループに入ります。
+            - `buffer`を使用して完全な行（`\n`で終わる）が受信されるまで部分的なメッセージを蓄積します。
             - 完全な行が到着したとき：
                 - `$GNRMC`または`$PNRMC`で始まるかチェック
                 - そうであれば、`parse_gnrmc()`を使用して解析
@@ -665,12 +665,12 @@ finally:
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -687,7 +687,7 @@ finally:
 
 <details>
 
-<summary>Code</summary>
+<summary>コード</summary>
 
 ```py
 import time
@@ -920,10 +920,10 @@ ssd1306_draw_text("HELLO WORLD", 20, 4)
 
 - **メインロジック（初期化とディスプレイ）**
         - `i2c.scan()` I2Cバスをスキャンして接続されたデバイスを検出します。
-        - SSD1306がアドレス`0x3C`で見つからない場合、例外が発生します。そうでなければ、成功メッセージが出力されます。
+        - SSD1306がアドレス`0x3C`で見つからない場合、例外が発生します。そうでなければ、成功メッセージが印刷されます。
         - `ssd1306_init()` ディスプレイハードウェアを初期化します。
-        - `ssd1306_draw_text("NRF54L15", 30, 2)` 文字列"NRF54L15"を列30、ページ2（≈ 行16）から描画します。
-        - `ssd1306_draw_text("HELLO WORLD", 20, 4)` 文字列"HELLO WORLD"を列20、ページ4（≈ 行32）から描画します。
+        - `ssd1306_draw_text("NRF54L15", 30, 2)` 文字列"NRF54L15"を列30、ページ2（≈行16）から描画します。
+        - `ssd1306_draw_text("HELLO WORLD", 20, 4)` 文字列"HELLO WORLD"を列20、ページ4（≈行32）から描画します。
 
 ### 結果
 
@@ -937,7 +937,7 @@ ssd1306_draw_text("HELLO WORLD", 20, 4)
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>ePaper Driver Board for Seeed Studio XIAO</th>
+   <th>Seeed Studio XIAO用ePaperドライバーボード</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -946,12 +946,12 @@ ssd1306_draw_text("HELLO WORLD", 20, 4)
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ePaper-breakout-Board-for-XIAO-V2-p-6374.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -1203,7 +1203,7 @@ if __name__ == "__main__":
         - まず、完全な白色背景を設定するためのデータを送信。
         - 次に、新しい画像データを行ごとに計算して送信。
         - 最後に、新しいコンテンツを表示するためのディスプレイリフレッシュをトリガー。
-        - 複数行テキスト表示をサポートし、各行は異なる位置とスケーリング比率を持つことができる。
+        - 複数行テキスト表示をサポート、各行は異なる位置とスケーリング比率を持つことが可能。
 
 - **main()関数**
         - ディスプレイを初期化。
@@ -1226,7 +1226,7 @@ if __name__ == "__main__":
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_2.png" style={{width:600, height:'auto'}}/></div>
 
-すると、MicroPythonデバイス/flashセクションの下に表示されます。
+その後、MicroPythonデバイス/フラッシュセクションの下に表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_3.png" style={{width:600, height:'auto'}}/></div>
 
@@ -1240,7 +1240,64 @@ if __name__ == "__main__":
 如果您自己自己定义或封装了模块的py文件，也请一并上传
 ::: -->
 
-## 技術サポート & 製品ディスカッション
+## FAQ
+
+### ブートローダーの更新
+
+ThonnyでMicroPythonプログラムをアップロードできない状況に遭遇した場合、工場出荷時に使用されたブートローダーが古いバージョンだったためです。
+
+**ステップ1.** 配線
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>OpenOCD / JTAG / SWD</th>
+        <th>XIAO nRF54L15</th>
+    </tr>
+    <tr>
+        <th>5V</th>
+        <th>5V</th>
+    </tr>
+    <tr>
+        <th>GND</th>
+        <th>GND</th>
+    </tr>
+    <tr>
+        <th>SWDIO</th>
+        <th>SWDIO2</th>
+    </tr>
+    <tr>
+        <th>SWDCLK</th>
+        <th>SWDCLK2</th>
+    </tr>
+    <tr>
+        <th>RST</th>
+        <th>RST</th>
+    </tr>
+  </table>
+</div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nrf54_wiring_1.png" style={{width:800, height:'auto'}}/></div>
+
+:::tip
+書き込みプロセスの失敗を防ぐため、ピン接続が正しいことを確認してください。
+:::
+
+**ステップ2.** ファームウェア書き込みプログラムをダウンロード
+
+[xiao_samd11_flash](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_samd11_flash_nrf.zip)
+
+**ステップ3.** スクリプトを実行
+
+Windowsシステムを例に取ります。ダウンロードしたファイルを解凍し、フォルダ内で右クリックしてターミナルを開きます。**.\xiao_samd11_openocd_flash.bat**を実行します。配線が正しい場合、結果は以下の画像のようになります。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nrf54.jpg" style={{width:800, height:'auto'}}/></div>
+
+:::tip
+Mac/Linuxシステムでは、**.bat**を**.sh**に変更する必要があります
+:::
+
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
