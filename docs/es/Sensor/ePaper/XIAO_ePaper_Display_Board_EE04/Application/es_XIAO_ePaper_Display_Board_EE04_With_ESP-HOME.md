@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción
 
-### Descripción del Hardware
+### Descripción General del Hardware
 
 <div class="table-center">
   <table align="center">
@@ -258,7 +258,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -398,7 +398,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -544,7 +544,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -874,7 +874,7 @@ Espera un momento y verás la retroalimentación como en la siguiente imagen. Si
 <TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes cargar el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes cargarlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. Además, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el panel ePaper a nada, solo asegúrate de que esté en línea.
@@ -891,7 +891,7 @@ Haz clic en la opción y luego el firmware se instalará automáticamente en el 
 
 ## Conceptos básicos para dibujar en ESPHome
 
-### Dibujando Gráficos Simples
+### Dibujar gráficos simples
 
 Este código YAML de ejemplo configura la interfaz SPI y la Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04 para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
 
@@ -903,7 +903,7 @@ Este código YAML de ejemplo configura la interfaz SPI y la Placa de Pantalla eP
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo YAML.
 
 <Tabs>
-<TabItem value="1.54 Inch Monochrome" label="1.54 Pulgadas Color Monocromático" default>
+<TabItem value="1.54 Inch Monochrome" label="1.54 Pulgadas Monocromático" default>
 
 ```yaml
 esphome:
@@ -963,7 +963,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch Quadruple Color" label="2.13 Pulgadas Color Cuádruple">
+<TabItem value="2.13 Inch Quadruple Color" label="2.13 Pulgadas Cuádruple Color">
 
 ```yaml
 esphome:
@@ -974,7 +974,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1042,7 +1042,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Pulgadas Color Monocromático">
+<TabItem value="2.13 Inch" label="2.13 Pulgadas Monocromático">
 
 ```yaml
 esphome:
@@ -1102,7 +1102,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch Quadruple Color" label="2.9 Pulgadas Color Cuádruple">
+<TabItem value="2.9 Inch Quadruple Color" label="2.9 Pulgadas Cuádruple Color">
 
 ```yaml
 esphome:
@@ -1113,7 +1113,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1176,7 +1176,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Pulgadas Color Monocromático">
+<TabItem value="2.9 Inch" label="2.9 Pulgadas Monocromático">
 
 ```yaml
 esphome:
@@ -1237,7 +1237,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Pulgadas Color Monocromático">
+<TabItem value="4.2 Inch" label="4.2 Pulgadas Monocromático">
 
 ```yaml
 esphome:
@@ -1297,7 +1297,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromático">
+<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Monocromático">
 
 ```yaml
 esphome:
@@ -1308,7 +1308,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1555,7 +1555,7 @@ display:
 </TabItem>
 </Tabs>
 
-Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando correctamente.
+Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando exitosamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee044.png" style={{width:1000, height:'auto'}}/></div><br />
 
@@ -1683,7 +1683,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1836,7 +1836,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1910,7 +1910,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Pulgadas Color Monocromático">
+<TabItem value="2.9 Inch" label="2.9 Pulgadas Color Monocromo">
 
 ```yaml
 esphome:
@@ -1984,7 +1984,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Pulgadas Color Monocromático">
+<TabItem value="4.2 Inch" label="4.2 Pulgadas Color Monocromo">
 
 ```yaml
 esphome:
@@ -2057,7 +2057,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromático">
+<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromo">
 
 ```yaml
 esphome:
@@ -2068,7 +2068,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2135,7 +2135,7 @@ display:
 </TabItem>
 
 
-<TabItem value="5.83 Inch" label="5.83 Pulgadas Color Monocromático">
+<TabItem value="5.83 Inch" label="5.83 Pulgadas Color Monocromo">
 
 ```yaml
 esphome:
@@ -2207,7 +2207,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="24 Pin" label="7.5 Pulgadas Color Monocromático" default>
+<TabItem value="24 Pin" label="7.5 Pulgadas Color Monocromo" default>
 
 ```yaml
 esphome:
@@ -2402,7 +2402,7 @@ glyphs:
   - "\U000F0123" # your new icon
 ```
 
-Y en la lambda de visualización:
+Y en el lambda de visualización:
 
 ```yaml
 lambda: |-
@@ -2598,7 +2598,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2670,7 +2670,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2871,7 +2871,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
