@@ -145,6 +145,9 @@ last_update:
     <a href="/cn/hightorque_series/" className="nav-item">
       <span className="text">3️⃣高擎 系列</span>
     </a>
+    <a href="/cn/fashionstar_servo/" className="nav-item">
+      <span className="text">4️⃣华馨京 系列</span>
+    </a>
 </div>
 
 </div>
