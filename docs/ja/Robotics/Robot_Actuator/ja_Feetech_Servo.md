@@ -9,8 +9,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech-ST3215-Servo.webp
 slug: /ja/feetech_servo
 last_update:
-  date: 06/24/2025
-  author: ZhuYaoHui
+  date: 11/21/2025
+  author: Li Shanghang
 ---
 
 # Feetechサーボモーター ドキュメントハブ
@@ -22,7 +22,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/STS3215-19kg-cm-7-4V-Serial-Servo-p-6338.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱</font></span></strong>
     </a>
 </div>
 
@@ -43,6 +43,15 @@ last_update:
   <a href="https://files.seeedstudio.com/products/Feetech/108090023_STS3215-C001_Datasheet.pdf" className="nav-item">
     <span className="text">ST3215-C001 7.4v 1:345</span>
   </a>
+  <a href="https://files.seeedstudio.com/products/Feetech/HL-3915-C001%2012V%201%20320%20.xlsx" className="nav-item">
+    <span className="text">HL-3915-C001 12V 1:320 </span>
+  </a>
+  <a href="https://files.seeedstudio.com/products/Feetech/HL-3615-C002%206V%201%2096%20.xlsx" className="nav-item">
+    <span className="text">HL-3615-C002 6V 1:96  </span>
+  </a>
+  <a href="https://files.seeedstudio.com/products/Feetech/FE-URT-1.xlsx" className="nav-item">
+    <span className="text">FE-URT-1  </span>
+  </a>
 
 ## SDK
 
@@ -59,7 +68,7 @@ last_update:
     <span className="text">Stm32HAL</span>
   </a>
   <a href="https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Analysis_of_SCS_Memory_Table.xlsx" className="nav-item">
-    <span className="text">SCSメモリテーブル解析</span>
+    <span className="text">SCSメモリテーブルの解析</span>
   </a>
   <a href="https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Communication_Protocol_Manual.pdf" className="nav-item">
     <span className="text">通信プロトコルマニュアル</span>
@@ -77,7 +86,7 @@ last_update:
 ## 例
 
   <a href="https://wiki.seeedstudio.com/ja/bus_servo_driver_board/" className="nav-item">
-    <span className="text">バスサーボドライバーボード / XIAOバスサーボアダプターの使用開始</span>
+    <span className="text">バスサーボドライバーボード / XIAO バスサーボアダプターの使用開始</span>
   </a>
 
 </div>
@@ -85,7 +94,7 @@ last_update:
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
