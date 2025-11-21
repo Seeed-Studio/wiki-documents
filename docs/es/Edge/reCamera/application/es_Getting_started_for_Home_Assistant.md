@@ -21,8 +21,8 @@ Home Assistant es un sistema de plataforma de hogar inteligente de código abier
 
 ## Preparación de Hardware
 
-Una reCamera (puede ser cualquiera de la serie 2002, versión HQ POE, o versión pan-tilt, pero ten en cuenta que la versión POE no tiene funcionalidad WiFi y requiere un switch con función POE para ser conectado en el mismo segmento de red)  
-un reComputer (cualquier versión está bien, aquí uso reComputer AI R2130-12 como ejemplo)  
+Una reCamera (puede ser cualquiera de la serie 2002, versión HQ POE, o versión pan-tilt, pero tenga en cuenta que la versión POE no tiene funcionalidad WiFi y requiere un switch con función POE para ser conectado en el mismo segmento de red)  
+una reComputer (cualquier versión está bien, aquí uso reComputer AI R2130-12 como ejemplo)  
 una computadora
 
 <table align="center">
@@ -41,33 +41,34 @@ una computadora
  <tr>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"3"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
    </a>
   </div></td>
 
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"3"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
    </a>
   </div></td>
 
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"3"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
    </a>
   </div></td>
 
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"3"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
    </a>
   </div></td>
  </tr>
 </table>
 
-## Instalación de Home Assistant (tomando el reComputer AI R2130-12 como ejemplo)
+## Instalación de Home Assistant (tomando la reComputer AI R2130-12 como ejemplo)
 
 ### Preparación del sistema
+
 1.actualizar sistema
 
 ```bash
@@ -81,6 +82,7 @@ sudo apt install -y ca-certificates curl gnupg lsb-release
 ```
 
 ### Instalar Docker
+
 1.Instalación con script oficial
 
 ```bash
@@ -104,13 +106,14 @@ sudo reboot
 ```bash
 docker run hello-world
 ```
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/hello_docker.png" /></div>
 
 Si ves las palabras "Hello from Docker!", indica que la instalación fue exitosa.
 
 ### Instalar Home Assistant (Modo Contenedor)
 
-1. Crear el directorio de montaje 
+1. Crear el directorio de montaje
 Para el propósito de persistir el archivo de configuración:
 
 ```bash
@@ -133,14 +136,13 @@ docker run -d \
   ghcr.io/home-assistant/home-assistant:stable
 ```
 
-Explicación de Parámetros: 
-* `--network=host`: Home Assistant puede acceder directamente a la red del host (necesario para el descubrimiento automático de dispositivos)
-* `-v ~/homeassistant/config:/config`: Guardar archivos de configuración
-* `--restart=unless-stopped`: Reinicio automático
-* `--privileged`: Habilitar acceso al hardware (USB Zigbee/Z-Wave, etc.)
+Explicación de Parámetros:
+- `--network=host`: Home Assistant puede acceder directamente a la red del host (necesario para el descubrimiento automático de dispositivos)
+- `-v ~/homeassistant/config:/config`: Guardar archivos de configuración
+- `--restart=unless-stopped`: Reinicio automático
+- `--privileged`: Habilitar acceso al hardware (USB Zigbee/Z-Wave, etc.)
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/docker.png" /></div>
-
 
 ### Acceder a Home Assistant
 
@@ -163,6 +165,7 @@ ej:
 ```bash
 http://192.168.1.88:8123
 ```
+
 El inicio inicial te llevará a la interfaz de inicialización. Luego puedes comenzar a crear una cuenta y configurar tu hogar inteligente.
 
 ### Encontrar la ruta del archivo de configuración
@@ -172,6 +175,7 @@ Todas las configuraciones de Home Assistant se guardan en:
 ```bash
 /homeassistant/config/
 ```
+
 Puedes verlo a través de las siguientes instrucciones:
 
 ```bash
@@ -180,10 +184,10 @@ ls
 ```
 
 Verás estos documentos:
+
 ```bash
 automations.yaml  configuration.yaml  scripts.yaml ...
 ```
-
 
 ### Configurar automatización para recibir datos de ReCamera
 
@@ -218,7 +222,8 @@ Reemplaza el contenido con:
   mode: single
 ```
 
-Guardar y Salir: 
+Guardar y Salir:
+
 - **Ctrl + O** → Enter (Guardar)
 - **Ctrl + X** (Salir)
 
@@ -269,7 +274,8 @@ sensor:
         icon_template: mdi:camera-outline
 ```
 
-Guardar y Salir: 
+Guardar y Salir:
+
 - **Ctrl + O** → Enter (Guardar)
 - **Ctrl + X** (Salir)
 
@@ -287,13 +293,11 @@ Si la interfaz no se puede abrir continuamente, por favor consulta la sección [
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/reset.png" /></div>
 
-
 ### Después de iniciar sesión, haz clic en la esquina inferior derecha para entrar a "Workspace"
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/logging_in.png" /></div>
 
 ### Después de entrar al Workspace, configura los nodos.
-
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_1.png" /></div>
 
@@ -326,7 +330,7 @@ currentModel += ` number: ${num}`;
 return { payload: currentModel };
 ```
 
-Después de realizar las modificaciones, haz clic en el botón "Finish" en la esquina superior derecha.
+Después de hacer las modificaciones, haz clic en el botón "Finish" en la esquina superior derecha.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_5.png" /></div>
 
@@ -334,7 +338,6 @@ Este código solo muestra el número de personas detectadas. Si quieres hacer ca
 Puedes aprender qué tipos de objetos se pueden detectar verificando el nodo del modelo.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_6.png" /></div>
-
 
 A continuación, configura el nodo function1 y reemplaza el código original con el siguiente:
 
@@ -348,7 +351,6 @@ return {
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_7.png" /></div>
 
-
 A continuación, configuraremos el nodo de solicitud HTTP. Aquí, necesitamos hacer cambios en tres áreas:
 
 | **Opción**| **Valor de Configuración**|
@@ -357,10 +359,9 @@ A continuación, configuraremos el nodo de solicitud HTTP. Aquí, necesitamos ha
 | **Dirección URL**| `http://<tu IP>:8123/api/webhook/recamera_detection`|
 | **Respuesta**| JSON Object|
 
-
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_8.png" /></div>
 
-Después de configurarlo, haz clic en el botón "Deploy" en la esquina superior derecha. Una vez que el despliegue sea exitoso, habrá un aviso.
+Después de configurarlo, haz clic en el botón "Deploy" en la esquina superior derecha. Una vez que el despliegue sea exitoso, habrá un mensaje.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_9.png" /></div>
 
@@ -370,10 +371,9 @@ Haz clic en el botón "Network" en la esquina superior izquierda para configurar
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_10.png" /></div>
 
-
-
-
-
+:::note
+¡Por favor recuerda! ¡Asegúrate de conectar reCamera a la red! De lo contrario, no será posible la comunicación.
+:::
 
 ## Ver la interfaz de resumen de Home Assistant
 
@@ -391,3 +391,17 @@ curl -X POST http://192.168.100.109:8123/api/webhook/recamera_detection \
 Si es exitoso, la notificación de Home Assistant mostrará:
 > **Resultados de Detección de reCamera**
 Test from curl
+
+## Soporte Técnico y Discusión del Producto
+
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
