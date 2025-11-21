@@ -12,6 +12,14 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.jpg" style={{width:800, height:'auto'}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="/getting_started_with_xiao_debug_mate" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
 
 ## Introduction
 
@@ -54,10 +62,6 @@ Seeed Studio XIAO Debug Mate is an open-source ESP32-S3 multi-tool that simplifi
 			<td>100x20x56 mm</td>
 		</tr>
 		<tr>
-			<td>Product Weight</td>
-			<td></td>
-		</tr>
-		<tr>
 			<td>Software</td>
 			<td>Supports DAPLink for debugging</td>
 		</tr>
@@ -89,21 +93,29 @@ Seeed Studio XIAO Debug Mate is an open-source ESP32-S3 multi-tool that simplifi
 
 The XIAO Debug Mate is a compact, all-in-one tool designed to streamline your embedded development workflow. Below is a detailed look at its hardware layout and components.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/hardware_front.png" style={{width:1000, height:'auto'}}/></div>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/hardware_back.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
 
 The device is equipped with the following key hardware components:
 
-*   **Main Controller:** ESP32-S3 (240MHz Dual-Core, 8MB Flash, 8MB PSRAM)
-*   **Display:** 2.01-inch TFT LCD with a 240x296 resolution for clear data visualization and interaction.
-*   **User Interface:** A combination of one **Rotary Encoder** (roller) for navigation and one **Button** for selection and confirmation.
-*   **Connectors:**
-    *   **USB-C Port:** For power and data communication (UART passthrough).
-    *   **Grove Port:** For connecting external UART-based Grove modules.
-    *   **XIAO Socket:** Female headers and pogo pins for plug-and-play connection with any Seeed Studio XIAO board.
-    *   **Expansion Headers:** Additional male and female pin headers to provide access to the XIAO's pins, allowing for easy connection of peripherals with DuPont wires.
-*   **Indicators:** A 36-LED matrix on the back of the device, which cleverly serves as a visual indicator for the currently selected UART baud rate.
+* ① **User Button**: A push-button located on the top edge, used for user input like making selections or confirming actions.
+
+* ② **XIAO Socket**: A dedicated socket composed of female headers, designed for a direct, plug-and-play connection with a Seeed Studio XIAO series board.
+
+* ③ **Pogo pins**: A set of spring-loaded probes located within the XIAO Socket (②). Their specific function is to make reliable electrical contact with the pads on the back side of the installed XIAO mainboard.
+
+* ④ **Outer Expansion Header**: This header breaks out the pins from the left and right sides of the XIAO mainboard. It features a dual-interface design with female headers on the top (for Dupont wires) and male pins on the bottom. This versatile design allows the entire device to be used as a daughterboard on another system.
+
+* ⑤ **Inner Expansion Header**: This header is specifically designed to break out the signals from the XIAO mainboard's back pins, which are connected via the Pogo Pins (③). Just like header ④, it features female headers on the top and male pins on the bottom, providing convenient access to the XIAO's rear-facing I/O.
+
+* ⑥ **Rotary Encoder**: A rotary encoder wheel (roller) on the top edge, used for navigating menus, scrolling through options, and adjusting values on the display.
+
+* ⑦ **Display**: 2.01-inch TFT LCD with a 240x296 resolution for clear data visualization and interaction.
+
+* ⑧ **Grove Port**: For connecting external UART-based Grove modules.
+
+* ⑨ **Baud Rate Indicator**: A visual indicator on the back of the device that clearly displays the currently selected UART baud rate.
+
+* ⑩ **USB-C Port**: A USB-C port located on the side for providing power to the device and facilitating data communication, such as programming the XIAO board or UART passthrough.
 
 ## Getting Started
 
@@ -113,11 +125,21 @@ Inside the package, you will find four pinout stickers. These are designed to be
 
 To apply them correctly, notice the small **white triangle** on one corner of each sticker. This triangle is an alignment marker. It should be oriented to match the corresponding corner of the Debug Mate's PCB. The front and back stickers also have different text orientations to ensure they are readable from the correct side. Please refer to the image below for correct placement.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/1.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/sticket_1.jpg" style={{width:600, height:'auto'}}/></div>
+
+Stickers use different colors to distinguish the functions of the two rows of pins. Dark blue pin labels correspond to the inner row, while light green pin labels correspond to the outer row.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/sticket_2.jpg" style={{width:600, height:'auto'}}/></div>
+
+The markings on the front and back sides are also different. For example, on the front side, the XIAO pins are labeled with their pin numbers: D6, D7, D8, and so on. On the back side, these pins are marked with their protocols or functions: TX, RX, SCK, and so on.
 
 ### First Power-On
 
 The XIAO Debug Mate requires a constant 5V/1A power supply via its USB-C port. Upon connecting the power, the device will boot up, display a startup animation, and then land on the main interface, ready for operation.
+
+<div class="table-center">
+<iframe width="700" height="400" src="https://files.seeedstudio.com/wiki/xiao_debug_mate/first_power.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ### Operational Logic
 
@@ -128,11 +150,17 @@ The device's interface is controlled by a simple and intuitive two-part system:
     *   **Single-Click:** Confirms a selection or enters a highlighted menu.
     *   **Long-Press (hold for >2s and release):** Acts as a "Back" button, returning you to the previous screen or menu.
 
+<div class="table-center">
+<iframe width="700" height="400" src="https://files.seeedstudio.com/wiki/xiao_debug_mate/operational_logic.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
 ### Introduction to the Operation Menu
 
 The XIAO Debug Mate's firmware is organized into three main functional pages, which you can navigate using the roller and button.
 
 **1. Main Page (Dashboard)**
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/1.jpg" style={{width:600, height:'auto'}}/></div>
 
 This is the default screen and serves as a central dashboard. It provides a real-time overview of all key functions:
 *   **Debug Status:** Indicates if the SWD `DEBUG` function is active.
@@ -141,8 +169,21 @@ This is the default screen and serves as a central dashboard. It provides a real
 
 From this page, you can access the other two main functions. Simply scroll the roller to highlight either the UART module (bottom left) or the Power module (bottom right), and then single-click the button to enter its dedicated page.
 
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>UART module</th>
+			<th>Power module</th>
+		</tr>
+		<tr>
+			<td align="center"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/2.jpg" style={{width:600, height:'auto'}}/></div></td>
+			<td align="center"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/3.jpg" style={{width:600, height:'auto'}}/></div></td>
+		</tr>
+	</table>
+</div>
+
 :::tip
-1. The Debug function is only effective under the main page menu.
+1. The Debug function **is only effective** under the main page menu.
 2. The main page cannot retrieve serial port messages. Serial port pass-through and monitoring functions require accessing the serial port settings page.
 :::
 
@@ -151,11 +192,43 @@ From this page, you can access the other two main functions. Simply scroll the r
 This page is dedicated to serial communication and offers two distinct modes:
 
 *   **UART Monitor:** This mode captures and displays serial data directly on the Debug Mate's 2.01-inch LCD screen. It's perfect for quick, on-the-go debugging without a PC.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/5.jpg" style={{width:600, height:'auto'}}/></div>
+
 *   **UART Passthrough:** In this mode, the Debug Mate acts as a USB-to-serial bridge. It forwards all serial data from the target device to your PC. The data is **not** displayed on the device's screen but can be viewed using any serial monitor software on your computer (e.g., Arduino IDE Serial Monitor, PuTTY, CoolTerm).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/4.jpg" style={{width:600, height:'auto'}}/></div>
 
 Within the UART page, you can configure the following by highlighting the option with the roller and clicking the button:
 *   **Source:** Choose between monitoring the onboard `XIAO` or an external device connected to the `Grove` port.
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>Choose XIAO</th>
+			<th>Choose Grove</th>
+		</tr>
+		<tr>
+			<td align="center"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/6.jpg" style={{width:600, height:'auto'}}/></div></td>
+			<td align="center"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/7.jpg" style={{width:600, height:'auto'}}/></div></td>
+		</tr>
+	</table>
+</div>
+
 *   **Baud Rate:** Select from 9 preset baud rates, ranging from 4800 bps to 921600 bps. The LED matrix on the back will visually update to reflect your selection.
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>Front</th>
+			<th>Back</th>
+		</tr>
+		<tr>
+			<td align="center"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/8.jpg" style={{width:600, height:'auto'}}/></div></td>
+			<td align="center"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/9.jpg" style={{width:600, height:'auto'}}/></div></td>
+		</tr>
+	</table>
+</div>
 
 **3. Power Analyzer Page**
 
@@ -164,14 +237,20 @@ This page provides a high-precision power analysis tool with three different UI 
 *   **View 1: Simple Digital Meter**
     This view presents a clean, large-font display of instantaneous Voltage (V), Current (A), and Power (W), measured with a precision of up to four decimal places.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/10.jpg" style={{width:600, height:'auto'}}/></div>
+
 *   **View 2: Low-Power Detail View**
     Optimized for low-power applications, this view focuses on current and power. It displays the values in multiple units simultaneously (e.g., `18.234 mA` and `18234 uA`), saving you the effort of manual unit conversions when tracking microamp-level consumption.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/11.jpg" style={{width:600, height:'auto'}}/></div>
 
 *   **View 3: Statistical Analysis**
     This view is ideal for project validation and battery life estimation. It tracks and displays:
     *   **Min/Max:** The minimum and maximum current and power values recorded during the session.
     *   **Total:** The cumulative energy (`Wh`) and charge (`Ah`) consumed over time.
     *   **Time:** The duration of the measurement session.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/12.jpg" style={{width:600, height:'auto'}}/></div>
 
     :::tip
     The first time you enter the View 3, the power consumption timer will start. When you press and hold the confirmation button to exit the Power Analyzer Page, the timer will reset to zero.
@@ -195,7 +274,11 @@ If you need to restart the XIAO Debug Mate, you have two options:
 1.  Unplug and re-plug the USB-C power cable.
 2.  Use the hidden **Reset button**. It is located in a small hole directly beneath the USB-C port. You can gently press it using a SIM card ejector tool or a paperclip.
 
-> **Caution:** Do not apply excessive force when using the reset button, as this could damage the internal switch.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/13.jpg" style={{width:600, height:'auto'}}/></div>
+
+:::caution
+Do not apply excessive force when using the reset button, as this could damage the internal switch.
+:::
 
 ## Boot
 
@@ -258,21 +341,21 @@ If you have `esptool` installed as part of the ESP-IDF or as a Python package, y
 <TabItem value="Windows" label="Windows" default>
 
 ```bash
-esptool.exe --chip esp32s3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 bootloader.bin 0x10000 firmware.bin 0x8000 partitions.bin
+esptool.exe --chip esp32s3 write_flash 0x0 firmware-v1.0.bin
 ```
 
 </TabItem>
 <TabItem value="MacOS" label="MacOS">
 
 ```bash
-esptool --chip esp32s3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 bootloader.bin 0x10000 firmware.bin 0x8000 partitions.bin
+esptool.py --chip esp32s3 write_flash 0x0 firmware-v1.0.bin
 ```
 
 </TabItem>
 <TabItem value="Linux" label="Linux">
 
 ```bash
-esptool --chip esp32s3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size detect 0x0 bootloader.bin 0x10000 firmware.bin 0x8000 partitions.bin
+esptool.py --chip esp32s3 write_flash 0x0 firmware-v1.0.bin
 ```
 
 </TabItem>
@@ -327,6 +410,8 @@ Make sure you have PlatformIO installed. You can install it as a VS Code extensi
 ### Q1: XIAO Debug Mate Pin Compatibility Guide
 
 **Problem:** I'm having trouble with the debug function; it seems like there's a bad connection.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/14.jpg" style={{width:600, height:'auto'}}/></div>
 
 **Solution:** This can happen due to two main reasons:
 

@@ -12,6 +12,16 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/15.jpg" style={{width:800, height:'auto'}}/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="/xiao_debug_mate_serial" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+## Introducion
+
 Welcome to the official user manual for the XIAO Debug Mate’s DAPLink functionality. This comprehensive guide is designed to help both beginners and advanced users unlock the full potential of their XIAO Debug Mate for professional debugging tasks. Here, you will learn how to connect, configure, and operate the DAPLink debugger, understand essential software tools, and follow best practices to ensure a smooth and productive debugging experience with a wide range of XIAO series development boards. Whether you are troubleshooting complex firmware or streamlining your development workflow, this document provides clear step-by-step instructions, tips, and in-depth technical explanations to support your projects from start to finish.
 
 
@@ -51,7 +61,100 @@ When GDB issues a command like "read the value of variable `x`," OpenOCD receive
 
 ### How They Work Together
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/openOCDDiagram.png" style={{width:800, height:'auto'}}/></div>
+<svg viewBox="0 0 880 480" width="100%" height="auto" style={{ backgroundColor: '#ffffff', borderRadius: '8px', padding: '10px', fontFamily: 'sans-serif' }}>
+  <defs>
+    <marker id="arrowhead-fix" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333333" />
+    </marker>
+    {/* Filter to create a background for text to prevent line overlap */}
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood floodColor="white" result="bg" />
+      <feMerge>
+        <feMergeNode in="bg"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  {/* Title */}
+  <text x="440" y="30" textAnchor="middle" fontSize="20" fontWeight="bold" fill="#333333">Embedded Debugging Architecture</text>
+
+  {/* 1. HOST PC AREA (Expanded Size) */}
+  <rect x="20" y="60" width="420" height="390" rx="10" fill="#f0f4f8" stroke="#cbd5e0" strokeWidth="2" />
+  <text x="40" y="90" fontSize="16" fontWeight="bold" fill="#555555">Host PC (Software)</text>
+
+  {/* GDB Client */}
+  <rect x="50" y="120" width="140" height="60" rx="5" fill="#fff3cd" stroke="#ffecb5" strokeWidth="2" />
+  <text x="120" y="145" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#856404">GDB Client</text>
+  <text x="120" y="165" textAnchor="middle" fontSize="10" fill="#856404">(arm-none-eabi-gdb)</text>
+
+  {/* Telnet Client */}
+  <rect x="50" y="300" width="140" height="60" rx="5" fill="#d1ecf1" stroke="#bee5eb" strokeWidth="2" />
+  <text x="120" y="325" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#0c5460">Telnet Client</text>
+  <text x="120" y="345" textAnchor="middle" fontSize="10" fill="#0c5460">(Human / Script)</text>
+
+  {/* Debug Server (OpenOCD/PyOCD) - Shifted Right slightly */}
+  <rect x="280" y="150" width="140" height="210" rx="5" fill="#d4edda" stroke="#c3e6cb" strokeWidth="2" />
+  <text x="350" y="180" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#155724">Debug Server</text>
+  <text x="350" y="200" textAnchor="middle" fontSize="12" fill="#155724">OpenOCD / PyOCD</text>
+  <line x1="290" y1="255" x2="410" y2="255" stroke="#155724" strokeWidth="1" strokeDasharray="4" />
+  <text x="350" y="275" textAnchor="middle" fontSize="11" fill="#155724" fontStyle="italic">Parses GDB/Telnet</text>
+  <text x="350" y="290" textAnchor="middle" fontSize="11" fill="#155724" fontStyle="italic">Translates to USB</text>
+
+  {/* Connections inside Host */}
+  
+  {/* GDB to Server Connection */}
+  {/* Path adjusted to go around text */}
+  <path d="M190 150 L235 150 L235 190 L270 190" fill="none" stroke="#333333" strokeWidth="2" markerEnd="url(#arrowhead-fix)" />
+  {/* Text moved UP and given a background rect effect via style or just placement */}
+  <rect x="200" y="125" width="70" height="24" fill="#f0f4f8" /> 
+  <text x="235" y="135" textAnchor="middle" fontSize="10" fill="#666666" fontWeight="bold">TCP Port 3333</text>
+  <text x="235" y="147" textAnchor="middle" fontSize="10" fill="#666666">(RSP Protocol)</text>
+
+  {/* Telnet to Server Connection */}
+  <path d="M190 330 L235 330 L235 290 L270 290" fill="none" stroke="#333333" strokeWidth="2" markerEnd="url(#arrowhead-fix)" />
+  <rect x="200" y="332" width="70" height="24" fill="#f0f4f8" />
+  <text x="235" y="345" textAnchor="middle" fontSize="10" fill="#666666" fontWeight="bold">TCP Port 4444</text>
+  <text x="235" y="357" textAnchor="middle" fontSize="10" fill="#666666">(CLI Commands)</text>
+
+  {/* 2. USB CONNECTION */}
+  <line x1="420" y1="255" x2="500" y2="255" stroke="#007bff" strokeWidth="4" />
+  <text x="460" y="240" textAnchor="middle" fontSize="12" fontWeight="bold" fill="#007bff">USB</text>
+  <text x="460" y="275" textAnchor="middle" fontSize="11" fill="#007bff">CMSIS-DAP</text>
+
+  {/* 3. HARDWARE PROBE */}
+  <rect x="500" y="180" width="160" height="150" rx="5" fill="#e2e3e5" stroke="#d6d8db" strokeWidth="2" />
+  <text x="580" y="210" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#383d41">Debug Probe</text>
+  <text x="580" y="230" textAnchor="middle" fontSize="10" fill="#555555">(Hardware Dongle)</text>
+  
+  {/* Firmware Box */}
+  <rect x="515" y="250" width="130" height="60" rx="3" fill="#ffffff" stroke="#383d41" strokeWidth="1" strokeDasharray="2,2" />
+  <text x="580" y="275" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#d63384">Firmware: DAPLink</text>
+  <text x="580" y="295" textAnchor="middle" fontSize="9" fill="#555555">Handles USB &lt;-&gt; SWD</text>
+
+  {/* 5. TARGET MCU */}
+  <rect x="720" y="190" width="130" height="130" rx="5" fill="#ffeeba" stroke="#ffdf7e" strokeWidth="2" />
+  <text x="785" y="220" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#856404">Target MCU</text>
+  <rect x="735" y="240" width="100" height="60" rx="2" fill="#ffffff" stroke="#856404" strokeWidth="1" />
+  <text x="785" y="265" textAnchor="middle" fontSize="11" fill="#333333">Core</text>
+  <text x="785" y="285" textAnchor="middle" fontSize="10" fill="#555555">(Cortex-M)</text>
+
+  {/* 4. TARGET CONNECTION */}
+  <line x1="660" y1="255" x2="720" y2="255" stroke="#333333" strokeWidth="2" markerEnd="url(#arrowhead-fix)" />
+  {/* Moved text UP to avoid overlap with the arrow */}
+  <text x="690" y="245" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#333333">SWD / JTAG</text>
+
+  {/* Legend / Explanation Box */}
+  <rect x="500" y="360" width="350" height="90" rx="5" fill="#ffffff" stroke="#eeeeee" strokeWidth="1" />
+  <text x="510" y="380" fontSize="12" fontWeight="bold" fill="#333333">Key Concepts:</text>
+  <circle cx="520" cy="400" r="3" fill="#155724" />
+  <text x="530" y="404" fontSize="11" fill="#555555">OpenOCD/PyOCD: Translates GDB commands to USB.</text>
+  <circle cx="520" cy="420" r="3" fill="#007bff" />
+  <text x="530" y="424" fontSize="11" fill="#555555">CMSIS-DAP: The standard USB protocol.</text>
+  <circle cx="520" cy="440" r="3" fill="#d63384" />
+  <text x="530" y="444" fontSize="11" fill="#555555">DAPLink: The firmware running on the probe.</text>
+
+</svg>
 
 Here is a summary of the entire debug chain, from your IDE to the target XIAO:
 
@@ -263,7 +366,12 @@ On Windows, you will need to install a generic USB driver for the CMSIS-DAP inte
 1.  Download Zadig from [its official website](https://zadig.akeo.ie/).
 2.  Connect the XIAO Debug Mate to your PC.
 3.  Run Zadig. Go to `Options` and make sure `List All Devices` is checked.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_1.png" style={{width:700, height:'auto'}}/></div>
+
 4.  From the dropdown list, find the device interface named **`CMSIS-DAP`**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_2.png" style={{width:700, height:'auto'}}/></div>
 
   :::warning
   Be very careful to select the correct interface. You may see multiple interfaces for the Debug Mate (e.g., one for serial). Only modify the `CMSIS-DAP` one.
@@ -321,6 +429,8 @@ This allows you to run `openocd` from any terminal.
       `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\bin`
     - Click OK on all windows to save.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_3.png" style={{width:1000, height:'auto'}}/></div>
+
 4.  **Verify the Installation**
 
 Open a **new** Command Prompt or PowerShell window and run:
@@ -330,6 +440,8 @@ openocd --version
 ```
 
 If the installation was successful, you will see the version information printed (e.g., `xPack Open On-Chip Debugger 0.12.0+dev-02228`).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_4.png" style={{width:700, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="MacOS" label="MacOS">
@@ -386,6 +498,8 @@ openocd --version
 ```
 
 You should see the correct xPack version information.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_5.png" style={{width:800, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="Linux" label="Linux">
@@ -446,10 +560,117 @@ You should see the correct xPack version information.
 </TabItem>
 </Tabs>
 
-
 #### Install PyOCD
 
-????????????????????????????
+:::info
+If you intend to use the firmware flashing feature for XIAO RA4M1, you may need to refer to the steps here to additionally download and use PyOCD.
+:::
+
+PyOCD is a Python-based tool for programming and debugging Arm Cortex-M microcontrollers.
+
+<Tabs>
+<TabItem value="Windows" label="Windows" default>
+
+1.  **Prerequisites**
+    Ensure you have **Python** installed on your system. If not, download it from the official [python.org](python.org) website and ensure you check the box **"Add Python to PATH"** during installation.
+
+2.  **Install PyOCD**
+    Open a Command Prompt or PowerShell window and run the following command:
+
+    ```bash
+    pip install -U pyocd
+    ```
+
+3.  **Install XIAO RA4M1 Support Pack**
+    The XIAO RA4M1 uses the `R7FA4M1AB` chip. You need to install the specific support pack for PyOCD to recognize it.
+
+    Search for the pack to confirm availability:
+    ```bash
+    pyocd pack find r7fa4m1ab
+    ```
+
+    Install the pack:
+    ```bash
+    pyocd pack install r7fa4m1ab
+    ```
+
+4.  **Verify Targets**
+    Check if the target is now recognized:
+    ```bash
+    pyocd list --targets
+    ```
+    You should see `r7fa4m1ab` in the list.
+
+</TabItem>
+<TabItem value="MacOS" label="MacOS">
+
+1.  **Prerequisites**
+    MacOS usually comes with Python, but it is recommended to use Homebrew or the official installer to get the latest version. Open your Terminal.
+
+2.  **Install PyOCD**
+    Run the following command in your Terminal:
+
+    ```bash
+    pip3 install -U pyocd
+    ```
+
+3.  **Install XIAO RA4M1 Support Pack**
+    The XIAO RA4M1 uses the `R7FA4M1AB` chip. You need to install the specific support pack.
+
+    Search for the pack:
+    ```bash
+    pyocd pack find r7fa4m1ab
+    ```
+
+    Install the pack:
+    ```bash
+    pyocd pack install r7fa4m1ab
+    ```
+
+4.  **Verify Targets**
+    Check if the target is recognized:
+    ```bash
+    pyocd list --targets
+    ```
+
+</TabItem>
+<TabItem value="Linux" label="Linux">
+
+1.  **Prerequisites**
+    Ensure `python3` and `pip` are installed via your package manager (e.g., `sudo apt install python3-pip` on Ubuntu).
+
+    :::note USB Permissions
+    On Linux, you may also need to set up udev rules to allow access to the USB device without using `sudo`.
+    :::
+
+2.  **Install PyOCD**
+    Run the following command in your Terminal:
+
+    ```bash
+    pip3 install -U pyocd
+    ```
+
+3.  **Install XIAO RA4M1 Support Pack**
+    The XIAO RA4M1 uses the `R7FA4M1AB` chip.
+
+    Search for the pack:
+    ```bash
+    pyocd pack find r7fa4m1ab
+    ```
+
+    Install the pack:
+    ```bash
+    pyocd pack install r7fa4m1ab
+    ```
+
+4.  **Verify Targets**
+    Check if the target is recognized:
+    ```bash
+    pyocd list --targets
+    ```
+
+</TabItem>
+</Tabs>
 
 
 #### Understanding the `XIAO_Debug_Mate_DAPLink_Package` Package
@@ -511,7 +732,7 @@ The XIAO Debug Mate is designed for a seamless, plug-and-play experience with al
 2.  **Ensure the USB-C port on the XIAO faces the same direction as the USB-C port on the Debug Mate.**
 3.  Firmly press the XIAO straight down into the socket until it is fully seated. This ensures that the pogo pins on the Debug Mate make a solid connection with the SWD pads on the underside of the XIAO.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/plug_in_xiao.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/connect_xiao.gif" style={{width:600, height:'auto'}}/></div>
 
 :::note
 Some of the earlier XIAO boards, such as the **XIAO SAMD21**, **XIAO RP2040**, and **XIAO nRF52840**, were designed before a unified standard for the back-side pads was established. While the Debug Mate's pogo pins are positioned to be as compatible as possible, slight variations in these older boards may lead to imperfect contact.
@@ -519,9 +740,15 @@ Some of the earlier XIAO boards, such as the **XIAO SAMD21**, **XIAO RP2040**, a
 If you experience an unstable debug connection, try **slightly adjusting the position** of the XIAO board within the socket. You may not need to push it all the way down. A small shift can often ensure the pogo pins make solid contact with the SWD pads on the back of the XIAO.
 :::
 
+:::danger hot-swapping
+We strongly advise against hot-swapping XIAO and Debug Mate!
+:::
+
 #### For Other Development Boards
 
 You can also use the XIAO Debug Mate as a generic SWD debug probe for other ARM-based development boards.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/16.jpg" style={{width:800, height:'auto'}}/></div>
 
 1.  You will need four DuPont wires (female-to-male or female-to-female, depending on your target board).
 2.  Locate the SWD debug pins on your target board. These are typically labeled `SWDIO`, `SWCLK`, `GND`, and sometimes `VTref` or `VCC`.
@@ -556,7 +783,7 @@ On modern Windows systems, the Telnet client is a legacy feature that needs to b
 4.  In the new window that appears, scroll down and find **Telnet Client**.
 5.  Check the box next to it and click **OK**. Windows will install the feature.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/enable_telnet_win.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_6.png" style={{width:1000, height:'auto'}}/></div>
 
 </TabItem>
 <TabItem value="MacOS" label="MacOS">
@@ -776,18 +1003,73 @@ A typical manual debug session might follow these steps:
 5.  Type `resume` to let the program run normally.
 6.  Type `exit` when you are finished.
 
-
-
-
-
-
-
-
 ## Flash the firmware using OpenOCD/PyOCD
 
 Beyond interactive debugging, the XIAO Debug Mate excels at programming (flashing) firmware directly onto a XIAO's microcontroller using command-line tools. The primary tools for this are **OpenOCD** (Open On-Chip Debugger) and **PyOCD**.
 
 This guide will walk you through using these powerful tools to upload pre-compiled firmware files. We use the "OpenOCD/PyOCD" designation because most compatible XIAO boards use OpenOCD, while the **XIAO RA4M1** specifically requires PyOCD for flashing.
+
+### Flashing Compatibility
+
+This table summarizes which XIAO boards and file types are supported for command-line flashing with the provided tools.
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th>XIAO Model</th>
+			<th>.bin</th>
+			<th>.elf</th>
+			<th>.hex</th>
+            <th>Bootloader</th>
+		</tr>
+		<tr>
+			<td>Seeed Studio XIAO SAMD21</td>
+			<td>✅ (OpenOCD)</td>
+			<td>❌</td>
+			<td>✅ (OpenOCD)</td>
+            <td>✅ (.bin file with OpenOCD)</td>
+		</tr>
+		<tr>
+			<td>Seeed Studio XIAO RP2040</td>
+			<td>✅ (OpenOCD)</td>
+			<td>✅ (OpenOCD)</td>
+			<td>❌</td>
+            <td>❌</td>
+		</tr>
+        <tr>
+			<td>Seeed Studio XIAO RP2350</td>
+			<td>✅ (OpenOCD)</td>
+			<td>✅ (OpenOCD)</td>
+			<td>❌</td>
+            <td>❌</td>
+		</tr>
+		<tr>
+			<td>Seeed Studio XIAO nRF52840</td>
+			<td>✅ (OpenOCD)</td>
+			<td>✅ (OpenOCD)</td>
+			<td>✅ (OpenOCD)</td>
+            <td>✅ (.hex file with OpenOCD)</td>
+		</tr>
+        <tr>
+			<td>Seeed Studio XIAO RA4M1</td>
+			<td>✅ (PyOCD)</td>
+			<td>❌</td>
+			<td>✅ (PyOCD)</td>
+            <td>✅ (.hex file with PyOCD)</td>
+		</tr>
+        <tr>
+			<td>Seeed Studio XIAO MG24</td>
+			<td>❌</td>
+			<td>❌</td>
+			<td>✅ (OpenOCD)</td>
+            <td>❌</td>
+		</tr>
+	</table>
+</div>
+
+1. The items marked with an ❌ in this compatibility table are samples that failed testing with OpenOCD v0.12.0. Please use other firmware files to save your time.
+2. Bootloader files: Only XIAO bootloader files and flashing commands are provided here. If this XIAO model does not ship with bootloader files, it will be marked with ❌.
+3. **The XIAO RA4M1 and XIAO MG24 does not support flashing `.elf` files. Attempting to flash `.elf` files to the XIAO RA4M1 or XIAO MG24 will result in bricking the device**.
 
 ### Prerequisites
 
@@ -795,7 +1077,7 @@ This guide will walk you through using these powerful tools to upload pre-compil
 
 2.  **XIAO Debug Mate Firmware Package:** We have prepared a package containing custom configuration files and example firmware. Please download and extract it. The structure is as follows:
 
-    *   `examples/`: Contains pre-compiled example firmware (`.elf`, `.hex`, `.bin`) for various XIAO boards.
+    *   `examples/`: Contains pre-compiled example firmware (`.elf`, `.hex`, `.bin`) for various XIAO boards and some XIAO bootloader files.
     *   `target/`: Contains custom OpenOCD configuration files (`.cfg`) required for specific boards like the XIAO SAMD21 and RA4M1.
     *   `XIAO_MG24_Mac_Linux_OpenOCD-v0.12.0/`: A self-contained OpenOCD for flashing the XIAO MG24 on macOS and Linux.
     *   `XIAO_MG24_Win_OpenOCD-v0.12.0/`: A self-contained OpenOCD for flashing the XIAO MG24 on Windows.
@@ -834,67 +1116,277 @@ When you compile a project, the toolchain produces a file to be uploaded to the 
 *   **.bin (Binary):** A raw, compact binary file containing only the machine code. It has no extra information about memory addresses, so the programming tool must be told where to place it.
 *   **.hex (Intel HEX):** An ASCII-text representation of the binary code. It includes memory addresses, checksums, and metadata, making it a more robust format than `.bin`.
 *   **.elf (Executable and Linkable Format):** The most comprehensive format. It contains the machine code, memory address information, and also debugging information like function names, variable names, and source code line numbers. This is the preferred format for debugging.
+*   **.bootloader (Bootloader File):** A bootloader file is a specialized firmware image that resides in a protected region of the microcontroller’s memory and is responsible for facilitating firmware flashing, device recovery, and startup tasks. On XIAO boards, the bootloader allows you to upload new application code to the device (often over USB) without needing a dedicated hardware programmer. If a device becomes unresponsive or the main program fails, re-flashing the bootloader can help recover the board. Only use the official bootloader file for your specific board model, as using an incorrect file may render the device inoperable until it is repaired with special tools.
 
 **How to get these files from your project:**
 
 *   **Arduino IDE:** After compiling (`Sketch > Verify/Compile`), use `Sketch > Export compiled Binary`. This will save a `.hex` or `.bin` file into your sketch folder.
 *   **PlatformIO:** After a successful build, the firmware files (`firmware.bin`, `firmware.hex`, `firmware.elf`) are located in your project's `.pio/build/<environment_name>/` directory.
 
+
+
+### Flashing `.bin` files
+
+#### For Seeed Studio XIAO SAMD21
+
+The standard OpenOCD package does not include the configuration file for the XIAO SAMD21. You must manually copy it from our provided package into your system's OpenOCD installation directory.
+
+**1. Copy the Configuration File**
+
+*   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_SAMD21/at91samd21g18.cfg`.
+*   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation. The path will vary by OS:
+
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
+
+:::note
+Replace `YourName` and `xpack-openocd-0.12.0-7` with your actual username and the version of OpenOCD you installed.
+:::
+
+**2. Flash the firmware**
+
+Open a new terminal anywhere on your system and run the corresponding command:
+
+*   **On Windows:**
+    ```powershell
+    openocd.exe -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program examples/Blink_SAMD21.bin 0x00002000 verify reset; shutdown"
+    ```
+
+*   **On macOS / Linux:**
+    ```bash
+    openocd -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program examples/Blink_SAMD21.bin 0x00002000 verify reset; shutdown"
+    ```
+
+---
+
+#### For Seeed Studio XIAO RP2040
+
+When using OpenOCD to flash the XIAO RP2040, it is strongly recommended to use `.elf` files instead of `.bin` files.
+
+This is because `.elf` files already contain the program's memory address information (Linker Address) internally. OpenOCD will automatically write it to the correct location (usually `0x10000000`), so you don't need to manually calculate or guess the offset address.
+
+If you must use `.bin` files, you need to manually specify the XIAO RP2040's Flash start address `0x10000000`.
+
+**On Windows:**
+```powershell
+openocd.exe -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2040.bin 0x10000000 verify reset exit"
+```
+
+**On macOS / Linux:**
+```bash
+openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2040.bin 0x10000000 verify reset exit"
+```
+
+---
+
+#### For Seeed Studio XIAO RP2350
+
+When using OpenOCD to flash the XIAO RP2350, it is strongly recommended to use `.elf` files instead of `.bin` files.
+
+This is because `.elf` files already contain the program's memory address information (Linker Address) internally. OpenOCD will automatically write it to the correct location (usually `0x10000000`), so you don't need to manually calculate or guess the offset address.
+
+If you must use `.bin` files, you need to manually specify the XIAO RP2350's Flash start address `0x10000000`.
+
+**On Windows:**
+```powershell
+openocd.exe -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2350.bin 0x10000000 verify reset exit"
+```
+
+**On macOS / Linux:**
+```bash
+openocd -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2350.bin 0x10000000 verify reset exit"
+```
+
+---
+
+#### For Seeed Studio XIAO nRF52840
+
+The configuration for nRF52 is included in the standard xPack OpenOCD. Open a terminal and run the command.
+
+**On Windows:**
+```powershell
+openocd.exe -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "program examples/Blink_nRF52840.bin 0x27000 verify reset exit"
+```
+
+**On macOS / Linux:**
+```bash
+openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "program examples/Blink_nRF52840.bin 0x27000 verify reset exit"
+```
+
+---
+
+#### For Seeed Studio XIAO RA4M1
+
+Currently, standard OpenOCD distributions often lack built-in support for the Renesas RA series, such as dedicated drivers and target configuration files. This makes using OpenOCD for flashing a complex process that requires manual setup.
+
+Therefore, we strongly recommend using `PyOCD`, which provides out-of-the-box support for the RA4M1.
+
+To flash the firmware (e.g., `Blink_RA4M1.hex`), use the command corresponding to your operating system.
+
+**On Windows:**
+```powershell
+pyocd flash -t r7fa4m1ab examples\Blink_RA4M1.bin —base-address 0x4000
+```
+
+**On macOS / Linux:**
+```bash
+pyocd flash -t r7fa4m1ab examples/Blink_RA4M1.bin —base-address 0x4000
+```
+
+
 ### Flashing `.elf` Files
 
-This format is ideal for debugging and is used by chips like the RP2040.
+:::danger
+When flashing `.elf` files, pay close attention to the firmware size. If the file exceeds 2MB, ensure your device has sufficient Flash storage space. Failure to do so may result in bricking your device!
+:::
 
-#### For Seeed Studio XIAO RP2040 / RP2350
+#### For Seeed Studio XIAO SAMD21
 
-These commands use standard configuration files (`rp2040.cfg`, `rp2350.cfg`) that are included with your main OpenOCD installation. The primary difference between operating systems is the name of the executable: `openocd` on macOS/Linux and `openocd.exe` on Windows.
+Due to the XIAO SAMD21's limited 256KB Flash memory, it typically cannot burn firmware files larger than 256KB. The Blink example's `.elf` file already reaches 658KB, making it unburnable. We recommend using smaller `.bin` or `.hex` files instead.
 
-**XIAO RP2040**
+---
+
+#### For Seeed Studio XIAO RP2040
+
+The configuration for RP2040 is included in the standard xPack OpenOCD. Open a terminal and run the command.
+
+**On Windows:**
+```powershell
+openocd.exe -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2040.elf verify reset exit"
+```
 
 **On macOS / Linux:**
 ```bash
 openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2040.elf verify reset exit"
 ```
 
-**On Windows:**
-```powershell
-# Note the use of "openocd.exe"
-openocd.exe -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2040.elf verify reset exit"
-```
-
 ---
 
-**XIAO RP2350**
+#### For Seeed Studio XIAO RP2350
+
+The configuration for RP2350 is included in the standard xPack OpenOCD. Open a terminal and run the command.
+
+**On Windows:**
+```powershell
+openocd.exe -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2350.elf verify reset exit"
+```
 
 **On macOS / Linux:**
 ```bash
 openocd -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2350.elf verify reset exit"
 ```
 
+---
+
+#### For Seeed Studio XIAO nRF52840
+
+The configuration for nRF52 is included in the standard xPack OpenOCD. Open a terminal and run the command.
+
 **On Windows:**
 ```powershell
-# Note the use of "openocd.exe"
-openocd.exe -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program examples/Blink_RP2350.elf verify reset exit"
+openocd.exe -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "program examples/Blink_nRF52840.elf verify reset exit"
 ```
 
-### Flashing `.hex` Files
+**On macOS / Linux:**
+```bash
+openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "program examples/Blink_nRF52840.elf verify reset exit"
+```
 
-The `.hex` format is a versatile standard.
+:::tip
+Sometimes you may need to flash the firmware twice for it to take effect; this is normal.
+:::
+
+---
 
 #### For Seeed Studio XIAO RA4M1
 
-You can flash the RA4M1 using either PyOCD or the OpenOCD configuration file we provide.
+:::danger DO NOT BRICK THE DEVICE
+XIAO RA4M1 prohibits flashing `.elf` files, as doing so may brick the device!!!
+:::
 
-*   **Method 1: Using PyOCD (Recommended)**
-    Ensure you have `pyocd` installed (`pip install -U pyocd`).
-    ```bash
-    pyocd flash -e sector -a 0x0 -t r7fa4m1ab examples/Blink_RA4M1.hex
+---
+
+#### For Seeed Studio XIAO MG24
+
+:::danger DO NOT BRICK THE DEVICE
+XIAO MG24 prohibits flashing `.elf` files, as doing so may brick the device!!!
+:::
+
+
+### Flashing `.hex` Files
+
+#### For Seeed Studio XIAO SAMD21
+
+The standard OpenOCD package does not include the configuration file for the XIAO SAMD21. You must manually copy it from our provided package into your system's OpenOCD installation directory.
+
+**1. Copy the Configuration File**
+
+*   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_SAMD21/at91samd21g18.cfg`.
+*   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation. The path will vary by OS:
+
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
+
+:::note
+Replace `YourName` and `xpack-openocd-0.12.0-7` with your actual username and the version of OpenOCD you installed.
+:::
+
+**2. Flash the firmware**
+
+Open a new terminal anywhere on your system and run the corresponding command:
+
+*   **On Windows:**
+    ```powershell
+    openocd.exe -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program examples/Blink_SAMD21.hex verify reset; shutdown"
     ```
 
-*   **Method 2: Using OpenOCD**
-    This command uses the custom `ra4m1.cfg` file from our package.
+*   **On macOS / Linux:**
     ```bash
-    openocd -f interface/cmsis-dap.cfg -f target/XIAO_RA4M1/ra4m1.cfg -c "program examples/Blink_RA4M1.hex verify reset exit"
+    openocd -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program examples/Blink_SAMD21.hex verify reset; shutdown"
     ```
+
+---
+
+#### For Seeed Studio XIAO nRF52840
+
+The configuration for nRF52 is included in the standard xPack OpenOCD. Open a terminal and run the command.
+
+**On Windows:**
+```powershell
+openocd.exe -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "program examples/Blink_nRF52840.hex verify reset exit"
+```
+
+**On macOS / Linux:**
+```bash
+openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "program examples/Blink_nRF52840.hex verify reset exit"
+```
+
+---
+
+#### For Seeed Studio XIAO RA4M1
+
+Currently, standard OpenOCD distributions often lack built-in support for the Renesas RA series, such as dedicated drivers and target configuration files. This makes using OpenOCD for flashing a complex process that requires manual setup.
+
+Therefore, we strongly recommend using `PyOCD`, which provides out-of-the-box support for the RA4M1.
+
+To flash the firmware (e.g., `Blink_RA4M1.hex`), use the command corresponding to your operating system.
+
+**On Windows:**
+```powershell
+pyocd flash -e sector -a 0x0 -t r7fa4m1ab examples\Blink_RA4M1.hex
+```
+
+**On macOS / Linux:**
+```bash
+pyocd flash -e sector -a 0x0 -t r7fa4m1ab examples/Blink_RA4M1.hex
+```
+
+**Command Explanation:**
+*   `pyocd flash`: Executes the flashing operation.
+*   `-e sector`: Erases the necessary sectors of the flash memory before programming.
+*   `-a 0x0`: Specifies the starting address for flashing, which is `0x00000000`.
+*   `-t r7fa4m1ab`: Specifies the target MCU type.
+*   `examples\Blink_RA4M1.hex` or `examples/Blink_RA4M1.hex`: The path to the firmware file you want to flash. Note the use of `\` on Windows and `/` on macOS/Linux.
 
 #### For Seeed Studio XIAO MG24
 
@@ -902,16 +1394,23 @@ This board requires its dedicated OpenOCD version from the package. You **must**
 
 1.  **Navigate to the correct directory:**
     *   **On Windows:** Open a Command Prompt and run:
-        `cd XIAO_MG24_Win_OpenOCD-v0.12.0/bin`
+        `cd XIAO_MG24_Win_OpenOCD-v0.12.0`
     *   **On macOS/Linux:** Open a Terminal and run:
-        `cd XIAO_MG24_Mac_Linux_OpenOCD-v0.12.0/bin`
+        `cd XIAO_MG24_Mac_Linux_OpenOCD-v0.12.0`
 
 2.  **Run the flash command:**
-    The path to the firmware is now `../../examples/Blink_MG24.hex` because you are two levels deep inside the package directory.
-    ```bash
-    # On Windows, use "openocd.exe". On macOS/Linux, use "./openocd".
-    ./openocd -f interface/cmsis-dap.cfg -f target/efm32s2_g23.cfg -c "init; reset_config srst_nogate; reset halt; program ../../examples/Blink_MG24.hex; reset; exit"
+    The path to the firmware is now `../examples/Blink_MG24.hex` because you are two levels deep inside the package directory.
+
+    **On Windows:**
+    ```powershell
+    bin\openocd.exe -f interface/cmsis-dap.cfg -f target/efm32s2_g23.cfg -c "init; reset_config srst_nogate; reset halt; program ../examples/Blink_MG24.hex; reset; exit"
     ```
+
+    **On macOS / Linux:**
+    ```bash
+    bin/openocd -f interface/cmsis-dap.cfg -f target/efm32s2_g23.cfg -c "init; reset_config srst_nogate; reset halt; program ../examples/Blink_MG24.hex; reset; exit"
+    ```
+
 
 ### Flashing Bootloader Files
 
@@ -919,72 +1418,75 @@ This is a critical operation that can restore a board.
 
 #### For Seeed Studio XIAO SAMD21
 
+The standard OpenOCD package does not include the configuration file for the XIAO SAMD21. You must manually copy it from our provided package into your system's OpenOCD installation directory.
+
+**1. Copy the Configuration File**
+
+*   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_SAMD21/at91samd21g18.cfg`.
+*   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation. The path will vary by OS:
+
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
+
+:::note
+Replace `YourName` and `xpack-openocd-0.12.0-7` with your actual username and the version of OpenOCD you installed.
+:::
+
+**2. Flash the firmware**
+
 This command uses the custom `at91samd21g18.cfg` file provided in our package to flash a `.bin` bootloader.
 
+*   **On Windows:**
+```powershell
+openocd.exe -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program examples/Bootloader_SAMD21.bin verify reset; shutdown"
+```
+
+*   **On macOS / Linux:**
 ```bash
-openocd -f interface/cmsis-dap.cfg -f target/XIAO_SAMD21/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program examples/bootloader-XIAO.bin verify reset; shutdown"
+openocd -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg -c "telnet_port disabled; init; targets; halt; program examples/Bootloader_SAMD21.bin verify reset; shutdown"
 ```
 
 #### For Seeed Studio XIAO nRF52840
 
 This process involves downloading the bootloader, then erasing the chip and flashing the new file.
 
-1.  **Download the Bootloader:**
-    *   **On macOS/Linux,** use `wget` in your terminal:
-        ```bash
-        wget https://raw.githubusercontent.com/0hotpotman0/BLE_52840_Core/refs/heads/main/bootloader/Seeed_XIAO_nRF52840_Sense/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex
-        ```
-    *   **On Windows,** open the URL above in your browser and save the `.hex` file into the root of your `XIAO_Debug_Mate_DAPLink_Package` folder.
+This command uses the standard `nrf52.cfg` from your OpenOCD installation.
 
-2.  **Flash the Bootloader:**
-    This command uses the standard `nrf52.cfg` from your OpenOCD installation.
-    ```bash
-    openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "init" -c "halt" -c "nrf5 mass_erase" -c "program Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex verify" -c "reset" -c "exit"
-    ```
+**On Windows:**
+```powershell
+openocd.exe -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "init" -c "halt" -c "nrf5 mass_erase" -c "program examples/Bootloader_nRF52840-0.6.1.hex verify" -c "reset" -c "exit"
+```
 
-### Flashing Compatibility Summary
+**On macOS / Linux:**
+```bash
+openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "init" -c "halt" -c "nrf5 mass_erase" -c "program examples/Bootloader_nRF52840-0.6.1.hex verify" -c "reset" -c "exit"
+```
 
-This table summarizes which XIAO boards and file types are supported for command-line flashing with the provided tools.
+:::tip
+After burning the Bootloader using OpenOCD and then burning the firmware bin, the firmware bin cannot run properly. You need to upload a program using Arduino to make the program run normally.
 
-<div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO Model</th>
-			<th>Supported File Type</th>
-			<th>Tool</th>
-		</tr>
-		<tr>
-			<td>Seeed Studio XIAO SAMD21</td>
-			<td>.bin (Bootloader)</td>
-			<td>OpenOCD</td>
-		</tr>
-		<tr>
-			<td>Seeed Studio XIAO RP2040</td>
-			<td>.elf</td>
-			<td>OpenOCD</td>
-		</tr>
-        <tr>
-			<td>Seeed Studio XIAO RP2350</td>
-			<td>.elf</td>
-			<td>OpenOCD</td>
-		</tr>
-		<tr>
-			<td>Seeed Studio XIAO nRF52840</td>
-			<td>.hex (Bootloader)</td>
-			<td>OpenOCD</td>
-		</tr>
-        <tr>
-			<td>Seeed Studio XIAO RA4M1</td>
-			<td>.hex</td>
-			<td>PyOCD</td>
-		</tr>
-        <tr>
-			<td>Seeed Studio XIAO MG24</td>
-			<td>.hex</td>
-			<td>OpenOCD</td>
-		</tr>
-	</table>
-</div>
+This is because Nordic series chips (such as nRF52832) Bootloaders need to check validity information about the application firmware at a specific memory address (usually called "Bootloader Settings Page") during startup. This "settings page" contains the firmware's CRC checksum, length, and validity flags.
+
+When you use general-purpose programming tools like OpenOCD to directly burn .bin files, they only write the firmware's binary data to the specified application start address, and do not automatically generate or write the "settings page" required by the Bootloader. Therefore, when the device restarts, the Bootloader cannot detect a valid settings page and determines that there is no legitimate application, thus refusing to start the firmware and usually entering DFU (Device Firmware Update) mode, waiting for updates via OTA or serial port.
+:::
+
+#### For Seeed Studio XIAO RA4M1
+
+Currently, standard OpenOCD distributions often lack built-in support for the Renesas RA series, such as dedicated drivers and target configuration files. This makes using OpenOCD for flashing a complex process that requires manual setup.
+
+Therefore, we strongly recommend using `PyOCD`, which provides out-of-the-box support for the RA4M1.
+
+To flash the Bootloader, use the command corresponding to your operating system.
+
+**On Windows:**
+```powershell
+pyocd flash -t r7fa4m1ab examples\Bootloader_RA4M1.hex —erase chip
+```
+
+**On macOS / Linux:**
+```bash
+pyocd flash -t r7fa4m1ab examples/Bootloader_RA4M1.hex —erase chip
+```
 
 
 ## Using Debugging on PlatformIO
@@ -997,10 +1499,27 @@ First, ensure you have the PlatformIO IDE extension installed in Visual Studio C
 ### Creating and Configuring a PlatformIO Project
 
 1.  **Launch PlatformIO**: Click the PlatformIO icon in the VS Code Activity Bar and select "Home" to open the PIO Home screen.
-2.  **Create a New Project**: Click on "New Project", give your project a name, and select the specific XIAO board you intend to use.
-3.  **Configure `platformio.ini`**: This is the most critical step. To enable debugging with the XIAO Debug Mate, you must modify the `platformio.ini` file located in the root of your project.
 
-    This configuration file tells PlatformIO which board and framework to use, and most importantly, what tools to use for uploading and debugging. The XIAO Debug Mate functions as a standard **CMSIS-DAP** debugger.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/17.png" style={{width:1000, height:'auto'}}/></div>
+
+2.  **Create a New Project**: Click on "New Project" and give your project a name.
+    *   **Select Board**: Search for the specific XIAO board you intend to use.
+
+:::note
+Since Seeed Studio boards are hosted in a third-party repository, your specific board might not appear in the search list by default. If this happens, you can select a generic board (or any available board) to initialize the project, and we will correct it in the next step.
+:::
+
+3.  **Configure `platformio.ini`**: This is the most critical step. To enable debugging with the XIAO Debug Mate and correctly recognize the board, you must modify the `platformio.ini` file located in the root of your project.
+
+    **Adding Seeed Studio Board Support:**
+    Seeed Studio development boards are not included in the default PlatformIO registry but are maintained in a **third-party repository**. To use them, you must specify the repository URL in your configuration.
+
+    You need to set the `platform` parameter to the following URL:
+    `https://github.com/Seeed-Studio/platform-seeedboards`
+
+    The configuration file tells PlatformIO to download the board definitions from this custom repository, and specifies what tools to use for uploading and debugging. The XIAO Debug Mate functions as a standard **CMSIS-DAP** debugger.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/18.png" style={{width:1000, height:'auto'}}/></div>
 
     Below are the recommended `platformio.ini` configurations for various XIAO models. Copy the contents corresponding to your board. We are using the development version of the platform from GitHub to ensure you have the latest board support files.
 
@@ -1091,8 +1610,6 @@ debug_tool = cmsis-dap
 
 After saving the `platformio.ini` file, PlatformIO will automatically download all the necessary toolchains and packages the next time you build or debug.
 
----
-
 ### Step-by-step debugging
 
 Step-by-step execution is a core feature for tracing your code's logic and identifying bugs.
@@ -1101,6 +1618,9 @@ Step-by-step execution is a core feature for tracing your code's logic and ident
 2.  **Start Debugging**: You can initiate a debugging session in two ways:
     *   Press the `F5` key.
     *   Navigate to the "Run and Debug" view (bug icon in the Activity Bar) and click the green "Start Debugging" arrow at the top.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/19.png" style={{width:1000, height:'auto'}}/></div>
+
 3.  **Debug Controls**: PlatformIO will compile your code, upload it to the XIAO via the Debug Mate, and pause execution at the first line of `main()` or `setup()`. A debug toolbar will appear at the top of the editor, allowing you to control the program flow:
     *   **Continue (F5)**: Resume execution until the next breakpoint is hit or the program finishes.
     *   **Step Over (F10)**: Execute the current line. If the line contains a function call, it will execute the entire function and stop on the next line.
@@ -1108,6 +1628,8 @@ Step-by-step execution is a core feature for tracing your code's logic and ident
     *   **Step Out (Shift+F11)**: If paused inside a function, this will execute the remainder of the function and return to the line where it was called.
     *   **Restart (Ctrl+Shift+F5)**: Terminate and restart the current debug session.
     *   **Stop (Shift+F5)**: Terminate the debug session.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/20.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Breakpoint debugging
 
@@ -1117,40 +1639,23 @@ If you want the program to pause at a specific location, breakpoints are the too
 2.  **Run to Breakpoint**: Start a debug session (`F5`). The program will run at full speed and automatically pause when it reaches the line with the breakpoint.
 3.  **Manage Breakpoints**: In the "Run and Debug" side panel, the "BREAKPOINTS" section lists all active breakpoints. You can enable, disable, or delete them from here.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/21.png" style={{width:1000, height:'auto'}}/></div>
+
 ### RAM Read/Write
 
 While the program is paused at a breakpoint, you can inspect and even modify the state of variables.
 
 1.  **View Variables (Read)**: In the "Run and Debug" side panel, the "VARIABLES" section displays all local and global variables within the current scope and their current values.
 2.  **Watch Variables**: If you want to monitor specific variables or expressions, go to the "WATCH" section, click the `+` icon, and enter the variable name (e.g., `myVariable` or `&myVariable` to see its memory address).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/22.png" style={{width:1000, height:'auto'}}/></div>
+
 3.  **Modify Variables (Write)**: In the "VARIABLES" or "WATCH" sections, you can often double-click on a variable's value to enter a new one. Press Enter to apply the change. This is incredibly useful for testing different conditions without restarting your program.
-
----
-
-### Firmware Flashing
-
-PlatformIO abstracts away the complexities of firmware file formats. You don't need to manually handle them.
-
-#### Flash .elf file
-
-The `.elf` file contains both the compiled code and the debugging symbols, making it essential for a debug session.
-*   **How to Flash**: When you "Start Debugging" (by pressing `F5`), PlatformIO automatically compiles your project and flashes the resulting `.elf` file to the target chip before starting the GDB server. This process is seamless.
-
-#### Flash .bin file / Flash .hex file
-
-`.bin` and `.hex` files contain only the raw program data. They are smaller and suitable for final deployment when debugging is not needed.
-*   **How to Flash**: To simply upload your program without starting a debug session, click the "Upload" button (right-arrow icon) in the VS Code status bar at the bottom. PlatformIO will compile the code and use the `upload_protocol` defined in your `platformio.ini` to flash the resulting `.bin` or `.hex` file using the XIAO Debug Mate.
-
-In summary, the PlatformIO workflow simplifies this process for you:
-*   **Debugging** automatically uses the **.elf** file.
-*   **Uploading** automatically uses the **.bin** or **.hex** file.
-
-
 
 
 ## Resources
 
-
+- **[ZIP]** [XIAO_Debug_Mate_DAPLink_Package-v1.0](https://files.seeedstudio.com/wiki/xiao_debug_mate/res/XIAO_Debug_Mate_DAPLink_Package-v1.0.zip)
 
 
 
