@@ -4059,9 +4059,10 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        'Robotics/Robot_Actuator/Feetech_Servo',
+        'Robotics/Robot_Actuator/FashionStar_Servo',
         'Robotics/Robot_Actuator/Myactuator_Series',
         'Robotics/Robot_Actuator/Damiao_Series',
-        'Robotics/Robot_Actuator/Feetech_Servo',
         'Robotics/Robot_Actuator/HighTorque',
         'Robotics/Robot_Actuator/HighTorque_Control',
         'Robotics/Robot_Actuator/RobStride_Control',
@@ -9161,9 +9162,10 @@ const sidebars = {
       type: 'category',
       label: '关节电机',
       items: [
+        'zh-CN/Robotics/Robot_Actuator/cn_Feetech_Servo',
+        'zh-CN/Robotics/Robot_Actuator/cn_FashionStar_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_Myactuator_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
-        'zh-CN/Robotics/Robot_Actuator/cn_Feetech_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_HighTorque',
         'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
         'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
