@@ -1,10 +1,10 @@
 position: 5 # float position is supported
-label: 'Applications'
+label: 'Application'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
-className: applications
+className: application
 link:
   type: generated-index
-  slug: applications
-  title: Applications
+  slug: application
+  title: Application
   description: reCamera 2002 Series applications documentation including integrating reCamera with external software and hardware platforms
