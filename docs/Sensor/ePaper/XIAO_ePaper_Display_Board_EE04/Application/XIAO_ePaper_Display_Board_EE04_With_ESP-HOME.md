@@ -258,7 +258,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -398,7 +398,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -544,7 +544,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -974,7 +974,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1113,7 +1113,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1308,7 +1308,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1683,7 +1683,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1836,7 +1836,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2068,7 +2068,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2598,7 +2598,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2670,7 +2670,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2871,7 +2871,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
