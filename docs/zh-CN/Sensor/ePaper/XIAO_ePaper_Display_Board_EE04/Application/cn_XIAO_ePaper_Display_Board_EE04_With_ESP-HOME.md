@@ -258,7 +258,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -398,7 +398,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -544,7 +544,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -858,14 +858,14 @@ display:
 
 在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green（Yellow）等设备**。
 
-点击图片后的选项将代码安装到设备上。
+点击图片下方的选项将代码安装到设备上。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-稍等片刻，您将看到如下图所示的反馈。这意味着代码正在成功运行。
+稍等片刻，您将看到如下图所示的反馈。这表示代码正在成功运行。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -974,7 +974,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1113,7 +1113,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1308,7 +1308,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1683,7 +1683,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1836,7 +1836,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2068,7 +2068,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2362,7 +2362,7 @@ display:
 
 1. `glyphs` 部分定义了从字体文件中加载哪些图标。仅加载您需要的图标可以节省设备内存。
 
-2. 程序从烧录完成到最终显示可能需要 2~3 分钟。
+2. 程序从烧录完成到最终显示可能需要 2~3 分钟时间。
 
 :::
 
@@ -2372,7 +2372,7 @@ display:
 
 #### 使用不同图标进行自定义
 
-Material Design Icons 库包含数千个您可以在项目中使用的图标。以下是如何查找和使用不同图标的方法：
+Material Design Icons 库包含数千个可在您的项目中使用的图标。以下是如何查找和使用不同图标的方法：
 
 步骤 1. 点击下方按钮访问 Material Design Icons 网站。
 
@@ -2598,7 +2598,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2670,7 +2670,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2871,7 +2871,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -3145,7 +3145,7 @@ lambda: |-
 
 **图像与文本结合**
 
-您可以在同一屏幕上显示图像和文本：
+您可以在同一屏幕上同时显示图像和文本：
 
 ```yaml
 lambda: |-
@@ -3179,7 +3179,7 @@ lambda: |-
 ```
 
 :::caution
-请记住，电子纸显示屏的刷新率有限。`update_interval: 300s` 设置意味着您的显示屏只会每 5 分钟刷新一次。根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
+请记住，电子纸显示屏的刷新率有限。`update_interval: 300s` 设置意味着您的显示屏只会每 5 分钟刷新一次。请根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
 :::
 
 通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 XIAO ePaper Display Board(ESP32-S3) - EE04 上创建丰富的信息仪表板。
