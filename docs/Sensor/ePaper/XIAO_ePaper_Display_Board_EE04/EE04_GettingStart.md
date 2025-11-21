@@ -146,7 +146,7 @@ Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin
 - **Smart Thermostat Display**: Show temperature and humidity levels, as well as control settings for your smart thermostat.
 - **Digital Photo Frame**: Create a WiFi-enabled digital photo frame that can display images from your smart home network.
 
-## Hardware Overiew
+## Hardware Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
@@ -195,11 +195,9 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 
 :::
 
-## Software Overiew
+## Software Overview
 
-### Install Seeed Arduino GFX Library
-
-**Step 3.** Install Seeed GFX Library
+### Install Seeed GFX Library
 
 :::tip
 This library has same function as TFT library and no compatible with it. If you have installed TFT library or other similary display libraries, please uninstall it first.
@@ -435,7 +433,11 @@ void loop() {
 
 ## Resources
 
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_SCH_V1.2.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Grabcad 3D File](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_V1.2_SCH&PCB.zip)
+
+
 
 ## Tech Support & Product Discussion
 
