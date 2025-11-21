@@ -9,8 +9,8 @@ keywords:
 image:   https://media-cdn.seeedstudio.com/media/catalog/pr…5d/1/-/1-108090023-feetech-st-3215-c001-servo.jpg
 slug: /cn/feetech_servo
 last_update:
-  date: 06/24/2025
-  author: ZhuYaoHui
+  date: 11/21/2025
+  author: Li Shanghang
 ---
 
 # 飞特STS系列舵机文档中心
@@ -47,7 +47,15 @@ last_update:
   <a href="https://files.seeedstudio.com/products/Feetech/108090023_STS3215-C001_Datasheet.pdf" className="nav-item">
     <span className="text">ST3215-C001 7.4v 1:345</span>
   </a>
-
+    <a href="https://files.seeedstudio.com/products/Feetech/HL-3915-C001%2012V%201%20320%20.xlsx" className="nav-item">
+    <span className="text">HL-3915-C001 12V 1:320 </span>
+  </a>
+  <a href="https://files.seeedstudio.com/products/Feetech/HL-3615-C002%206V%201%2096%20.xlsx" className="nav-item">
+    <span className="text">HL-3615-C002 6V 1:96  </span>
+  </a>
+  <a href="https://files.seeedstudio.com/products/Feetech/URT-1%E4%B8%AD%E6%96%87%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf" className="nav-item">
+    <span className="text">FE-URT-1  </span>
+  </a>
 
 ## SDK
 
