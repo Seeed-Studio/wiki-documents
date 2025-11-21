@@ -1,0 +1,185 @@
+文件表头, 强调这是基于Wifi Halow的Demo, 不要提到reTerminal
+
+目标说明 + 使用场景 + 项目价值介绍: 
+    如果您是户外爱好者, 您是否因为无法...而受到困扰? 通过这篇Wiki, 您可以实现属于自己的AI远程无线监控系统, 基于reCamera系列和Wifi Halow图传模块. 它能够帮助您在任何
+    没有信号的地方实现..., 同时提供端侧AI结果, 实现... 当然, 您可以有更多的想象空间. 包括以下但不限于:
+    
+        House周围的无线监控, 如果您有一个房子, 有一个院子, 您想实现对每个角度的监控, 检测房子附近的可疑车辆 但是不想麻烦的布线
+        以及安装路由器与交换机，或者您有一个户外场景需要检测人员, 但是普通摄像头没有算力，必须额外配置边缘主机
+
+        您有一辆卡车或者货车, 想要检测任何靠近车辆的可疑人员, 但是网络常年不稳定、无法实时上传视频 或者 但是普通摄像头必须依赖云端，断网就无法告警。
+
+        您在森林探险时希望随时接收营地固定摄像头画面，识别是否有熊或其他危险动物, 但普通无线距离太短
+
+    那为什么reCamera + Wifi Halow可以实现呢? 首先reCamera提供端侧AI + 1tops算力, 集成了Node-RED, 开发非常方便高效, 想要rtsp推流或者http发送数据, 只需要拖动节点就可以实现, 不需要大量
+    由您自己从零开始编程搭建.[插入链接]. 而关于Wifi Halow技术,它是一个..., 强调Halow可以传输1km, 在8MHz带宽可以达到16Mbps的传输速度, 相比于传统Wifi...,
+    相比于其他长程通信手段带宽更高, 支持传输文字, 音频, 图像, 视频流等多种媒介. 
+    
+    所以, 这套系统降低您开发智能系统的技术门槛, 让非专业用户也能轻松上手. 具体来说它提供了1.端侧AI模型, 不需要从0自己搭建AI架构, 不需要 AI 团队，也不需要懂算法, 上电即用  2.内置算力, 不依赖笔记本/台式机或者其他边缘计算设备 
+    3. Node_RED图形编程工具, 开发高效, 不需要学习前后端编程, 计算机网络, 系统集成等知识体系 4.远程无线连接, 部署灵活. 不需要复杂布线, 不需要交换机/路由器, 户外部署
+
+整体架构 + 硬件准备 + 工具准备
+    >图1: reCamera ---RJ45--- Halow图传模块 -----802.11ah协议------ Halow图传模块---终端设备 PC/reTerminal/其他类似reTerminal的产物
+    用文字描述这张图片
+
+    硬件准备:
+        > Note, 强调这里的终端设备,可以换成任意带有网口和屏幕的边缘计算设备,  我们使用reTerminal进行演示, reTerminal是一个带有网口等多种接口的树莓派CM4终端设备, 
+        包括但不限于笔记本, 台式机, 开发板等等, 我们鼓励您进行更多的尝试 
+
+        完成这个项目, 您需要3种reCamera中的任意一台reCamera - reCamera 2002 Series, reCamera HQ PoE, reCamera Gimbal. 
+        [三个框]
+
+        终端设备, 比如reTerminal, 如果想要移动的应用, 您可以将reTerminal配合专门的扩展板使用, 扩展板内置两节18650电池. 当然您也可以使用充电宝等其他设备为reTerminal供电
+        [两个狂, 第二个optional]
+
+        无线连接依赖Wifi Halow模块
+        [tb链接]
+
+    工具准备:
+        PC: 用来连接reCamera进行调试, 后续操作需要登录reCamera后端, 需要给reTerminal刷树莓派操作系统. 同时在PC上有问题debug会比较方便, 各种软件工具齐全
+        3条USB-C线: 一条连接reCamera到PC, 给reCamera供电, 其余两条用来给Wifi HaloW图传模块供电
+        键盘/鼠标: 连接reTerminal进行调试
+        5V3A USBC Power Adapter: 树莓派同款电源, 用来给reTerminal供电, 参考: [电源链接]
+        *(可选) 12V DC电源, 用来给reTerminal扩展板供电, 链接: [] 如果您不需要扩展板, 忽略这一条
+        *(可选) reCamera三角支架 链接: 
+        *(非必须)
+
+    您不必纠结设备的供电, 树莓派4/5供电的电源, 都可以给reTerminal使用. 同时如果您打算用扩展板, 只需要12V DC电源, 不再需要5V3A的USBC电源, 因为reTerminal可以直接从扩展板获取电源. 
+    
+详细教程: reCamera + Wifi Halow模块配置 + reTerminal配置
+    整个系统的总体思路是, 让reCamera通过Wifi HaloW与终端设备形成一个网络. 首先在终端设备(reTerminal)和reCamera上配置静态IP, 因为户外或者移动应用不能有路由器, 就没有DHCP服务, 需要手动分配IP. 分配完IP之后, 这些设备就形成
+    一个'局域网', 它们之间可以通过IP互相访问, 此时在reCamera上通过Node-RED创建流节点和http post节点, 将视频流以rtsp推流形式发送, 将yolo detection结果以http post形式发送 最终在终端设备上访问视频流和AI检测结果, 
+    比如在Windows/Linux上用VLC Media Player访问, 这篇教程将演示在Linux上通过fflag获取rtsp推流
+
+    阶段1: 配置reCamera
+        步骤1.1 用USB-C线将reCamera连接到电脑, 设备刚上电需要一些时间启动, 等待1-2分钟之后, 打开任意网页浏览器, 输入192.68.42.1进入reCamera系统. 第一次登录需要自己配置密码, 请一定记住自己的密码, 后续会用到. 进入reCamera系统之后应该看到这个页面. 
+        >图2: reCamera默认页, 
+        
+        >注意: 如果您看到的不是这个页面, 请刷新浏览器, 如果您的设备在之前使用过或者配置过, 有可能直接跳到Workspace, 此时网址是:http://192.168.42.1/#/workspace 请跳到下一步. 无论如何, 只要能进入Workspace就行
+        如果刷新还是无法解决, 请重置设备或者联系技术支持解决
+
+        步骤1.2.2 点击页面右下角的绿色按钮, 进入Workspace. 上面提到, 我们需要在Node RED上配置rtsp推流, 配置方法请参考: [Node Red rtsp链接], 配置之后应该得到如下结果:
+        >图3.2: rtsp节点配置
+        请完全遵守Node RED教程, 确保你的输出到Client sscma, 最终视频流会输出到 rtsp://admin:admin@xxx.xxx.xxx.xxx:554/live 这里的xxx.xxx.xxx.xxx就是reCamera的IP, 目前是192.168.42.1, 后续会改成你自己定义的IP. 配置完Node Red
+        视频节点之后, 记得点击Workspace的左上角进行部署, 只有部署之后, reCamera才能输出视频流
+
+        步骤1.2.3 为了让yolo检测到的结果显示在终端设备上, 我们需要将检测结果以http post的形式发送出去, 详情请参考:
+        注意这里配置http post的URL时, 需要配置成http://192.168.10.3:8123/recamera_detection
+        解释上面的URL组成部分. 最终的到的结果如下: 
+        >图3.3: http节点配置
+
+        步骤1.3. 现在来配置reCamera静态IP, 还是在刚刚修改Node RED的Workspace页面, 点击左上角的'Setting'
+        >图4: Workspace Setting画框
+
+        步骤1.4 进入设置页面之后, 选择'Terminal'进入reCamera的命令行
+        >图5: 设置页面 Terminal画框
+
+        步骤1.5 点击Terminal之后需要再次登录, 输入用户名: 'recamera', 再输入设置好的密码, 就可以使用Terminal, 效果如下. 如果您忘记了密码, 请参考以下教程重置设备: [factory reset链接]
+        >图6: Terminal页面登录之后的效果
+
+        步骤1.6 在reCamera上, 我们需要通过传统Linux网络系统（ifupdown）来配置网络. 方法非常简单, 只需要进入网络配置文件, 将reCamera上以太网的网口配置成你想要的静态IP: 192.168.xxx.xxx, 在这里我配置静态IP为
+        102.168.10.100 现在请在Terminal输入以下命令:
+        >代码1: sudo vi /etc/network/interfaces
+        这里通过vi编辑器进入网络配置文件, 在文件末尾添加几行代码:
+        >代码2: auto eth0
+                iface eth0 inet static
+                address 192.168.10.100
+                netmask 255.255.255.0
+                gateway 192.168.10.1
+        解释这几行代码是做什么的. 同时强调, 具体IP自由配置
+
+        步骤1.7 之后按Esc, 直接输入下面的代码, 输入代码之后退出vi编辑器, 返回
+        >代码3: :wq
+
+        步骤1.8 返回reCamera的Terminal, 输入ifconfig检查静态IP是否配置成功, 比如现在结果如下:
+        >图7: reCamera ifconfig结果
+        能看得到, 在'eth0'这一项, ip变成了192.168.10.100我们的配置非常成功
+
+        很好, 现在我们在reCamera上配置了静态IP, 现在让我们进入下一阶段
+
+    阶段2: 配置Wifi HaloW
+        这里展示用到的Wifi Halow模块. 详细解释Halow模块的参数
+        >图8.0 Halow模块拍照
+
+        步骤2.1 首先把其中一个Wifi HaloW模块设置成AP模式, 另一个设置成STA模式. 不用担心把AT还是STA模块接到reCamera/终端上, 顺序不重要, 但至少保证一个STA和AP模式的模块
+        >图8: Halow AP
+        >图9: Halow STA
+
+        步骤2.2 现在同时按下两个模块上的配对按钮:
+        >图10: 配对按钮
+        之后两个模块上的绿色LED会闪烁, 当闪烁停止, 绿色LED常亮时, 模块配对成功
+        >动1: 配对过程
+
+        你已经成功配对两个Wifi Halow模块了, 现在它们可以视作一条网线的两端, 您可以用来连接reCamera和终端设备了
+
+    阶段3: 配置终端设备(reTerminal)
+        我们现在要在reTerminal上配置静态IP, 理论上有很多种方法, 比如通过NetworkManager, NetworkManager是Linux系统里的一个网络管理守护进程自动帮你管理Wi-Fi/以太网/IP 地址/DHCP/热点/路由等所有网络连接的工具
+        您可以尝试通过NetworkManager. 但是为了降低学习成本, 我们用在reCamera上配置静态IP一样的方法, 为reTerminal配置IP. 
+
+        >Note: 再次强调, reTerminal可以换成任意带有网口和屏幕的(边缘)计算设备, 包括但不限于笔记本, 台式机, 开发板等等. 如果想要做静态应用, 比如在固定位置观看监控, 可以使用Window笔记本/台式机. 如果想要
+        移动应用, 其他基于树莓派, Jetson等带有屏幕的边缘计算设备都可以. 我们在这篇教程中使用reTerminal + reTerminal E10扩展板, 这个扩展板只是为了给设备室外供电, 您可以自己选择给终端设备的供电方式
+
+        步骤3.1: 启动reTerminal, reTerminal出厂自带系统. 理论上可以直接进入Raspbian, 但如果您给设备上电之后, 设备左下角绿色LED点亮/闪烁但黑屏, 请参考这篇教程重新烧录reTerminal系统, 而在这一步, 需要用到显示器对reTerminal进行调试
+        reTerminal刷机链接: [reTerminal刷机链接] 
+        
+        步骤3.2: 连接键盘鼠标到reTerminal, ctrl+alt+T 打开终端, 由于NetworkManager服务和上述方法有冲突, 我们需要手动禁用NetworkManager服务. 在reTerminal终端中输入命令:
+        >代码4: 
+            sudo systemctl stop NetworkManager
+            sudo systemctl disable NetworkManager
+            sudo systemctl mask NetworkManager
+
+        步骤3.3: 在终端里输入以下命令:
+        >代码6: sudo vi /etc/network/interfaces
+        还是通过vi编辑器进入网络配置文件, 在文件末尾添加几行代码, 这里我将reTerminal的静态IP设置为192.168.10.3
+        >代码7: auto eth0
+                iface eth0 inet static
+                address 192.168.10.3
+                netmask 255.255.255.0
+                gateway 192.168.10.1
+
+        >Note: 如果因为其他原因, 您想要重新使用NetworkManager, 在刚刚的/etc/network/interfaces文件中, 删掉刚刚添加的auto eth0以及下面的4行, 总计5行代码. 之后请在reTerminal上输入以下命令:
+        >代码8: 
+
+            sudo systemctl enable NetworkManager
+            sudo systemctl restart NetworkManager
+        
+        步骤3.4 同样, 按Esc, 直接输入下面的代码, 输入代码之后退出vi编辑器, 返回
+        >代码9: :wq
+
+        步骤3.5 返回reTerminal的终端, 输入ifconfig检查静态IP是否配置成功, 比如现在结果如下:
+        >图11: reTerminal ifconfig结果
+        在'eth0'这一项, ip变成了192.168.10.3我们的配置成功
+        
+        很好, 感谢您看到这里, 所有设备设置完毕现在可以尝试连接了:) 
+
+    阶段4: 连接和play
+        还记得我们在步骤1.2中配置了rtsp推流节点吗? 现在已经有一个rtsp视频流在 rtsp://admin:admin@192.168.xxx.xxx:554/live. 这里的192.168.xxx.xxx是你在步骤1.6中, 手动配置的reCamera静态IP, 不是边缘设备的静态IP. 那么在我的案例中
+        对应的rtsp推流是 rtsp://admin:admin@192.168.10.100:554/live 实际上您也可以使用任意的软件, 方法打开这个视频流, 比如VLC Player, 不过为了简便使用, 我们使用ffmpeg里的ffplay命令, 直接在终端打开rtsp视频流
+
+        步骤4.1 安装ffmpeg和nmap, ffmpeg用来获取rtsp推流. nmap用来监听http post 在reTerminal的Terminal里执行:
+        >代码10: 
+            sudo apt install ffmpeg
+            sudo apt install nmap
+
+        步骤4.2 执行fflay命令获取reCamera的rtsp推流, 该命令属于ffmpeg
+        ffplay -rtsp_transport udp -max_delay 20000 -probesize 2M rtsp://admin:admin@192.168.10.100:554/live
+        解释这行命令里的参数
+        此时会弹出一个新的窗口, rtsp视频流会在里面显示, 双击该窗口即可全屏播放
+        >图12: ffplay视频流
+
+        步骤4.3 现在 ctrl + alt + T 打开新的终端. 执行ncat命令监听来自reCamera的yolo检测结果, 该命令属于nmap
+        >代码11: 
+            ncat -l -p 8123
+        在这个终端, 可以看到reCamera检测到的人员数量
+        >图13: ncat返回检测数量
+
+    祝贺你! 你实现了属于自己的AI远程检测系统. 下面我们会在楼顶测试不同距离的传输效果, 如下所示
+    >动1: 2x2动图, 250m, 500m, 750m, 1km
+    可以看到成功在远距离进行视频流传输
+
+最后, 我们鼓励您进行更多的尝试, 比如使用太阳能板给设备进行供电, 这里我使用了20W太阳能板+充电宝作为演示. 您可以将充电宝替换为其他
+储能设备. 同时给reCamera加上防水外壳进行户外定点部署. 
+>图14: 太阳能板+充电宝+防水壳
+
+无论如何, 我们欢迎您与我们交流, 探讨更多的可能性, 我们也会持续优化这篇教程
+尝试更多的硬件/软件等等, 期待您的加入. 下次再见!
