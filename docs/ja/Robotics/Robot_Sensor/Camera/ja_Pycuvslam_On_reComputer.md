@@ -1,5 +1,5 @@
 ---
-description: このwikiは、RGB-Dカメラを使用したGPU加速ビジュアルSLAMアプリケーション向けに、reComputer Jetsonシリーズ上でPyCuVSLAMをセットアップして実行するための包括的な手順を提供します。
+description: このwikiは、RGB-Dカメラを使用したGPU加速ビジュアルSLAMアプリケーション向けに、reComputer Jetson シリーズでPyCuVSLAMをセットアップして実行するための包括的な手順を提供します。
 title: reComputerでのPyCuVSLAM
 keywords:
 - PyCuVSLAM
@@ -25,7 +25,7 @@ last_update:
 ## はじめに
 
 <div style={{ textAlign: "justify" }}>
-[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM)は、NVIDIAのGPU加速ビジュアルオドメトリおよびSLAMライブラリcuVSLAMのPythonラッパーです。単眼、ステレオ、RGB-D、マルチカメラ、およびビジュアル慣性（IMU）モードをサポートし、カメラストリームと直接インターフェースしてリアルタイムのカメラポーズ、マップポイント、ループクロージャ情報を出力できるシンプルなPython APIを提供します。基盤となるCUDA最適化により、PCとJetsonデバイスの両方で高精度、低遅延のSLAM推論が可能になり、ロボットナビゲーション、ドローンポジショニング、3D知覚アプリケーションに適しています。このwikiでは、reComputer上でpycuvslamをデプロイする方法について説明します。
+[PyCuVSLAM](https://github.com/NVlabs/PyCuVSLAM)は、NVIDIAのGPU加速ビジュアルオドメトリおよびSLAMライブラリcuVSLAMのPythonラッパーです。単眼、ステレオ、RGB-D、マルチカメラ、およびビジュアル慣性（IMU）モードをサポートし、カメラストリームと直接インターフェースしてリアルタイムのカメラポーズ、マップポイント、ループクロージャ情報を出力できるシンプルなPython APIを提供します。基盤となるCUDA最適化により、PCとJetsonデバイスの両方で高精度、低遅延のSLAM推論が可能になり、ロボットナビゲーション、ドローンポジショニング、3D知覚アプリケーションに適しています。このwikiでは、reComputerでpycuvslamをデプロイする方法について説明します。
 </div>
 
 <div align="center">
@@ -35,7 +35,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
 ## 前提条件
@@ -146,7 +146,7 @@ ros2 run camera_calibration cameracalibrator \
 
 :::note
 
-- `--size 8x6`は内側の角の数を指します（8×6 = 9×7グリッドの48角）
+- `--size 8x6`は内側のコーナー数を指します（8×6 = 9×7グリッドの48コーナー）
 - `--square 0.025`は正方形のサイズをメートル単位で指します（25mm）
 - `CALIBRATE`ボタンが点灯するまで、カメラを動かして異なる角度から画像をキャプチャしてください
 
@@ -157,7 +157,7 @@ ros2 run camera_calibration cameracalibrator \
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
 </div>
 
-キャリブレーションが成功すると、ターミナルに以下のようなカメラパラメータが表示されます：
+キャリブレーションが成功すると、ターミナルで次のようなカメラパラメータが取得できます：
 
 <div align="center">
     <img width={1000}
@@ -844,7 +844,7 @@ slam_optimization:
 ### カメラキャリブレーション
 
 <div style={{ textAlign: "justify" }}>
-単眼深度ビジュアルオドメトリでは、カメラと深度画像間のピクセル対ピクセル対応が必要です。[Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) は、深度と RGB（カラー）出力の両方を提供するステレオ構造光/アクティブステレオ IR 3D カメラです。その主要な機能の一つは、ハードウェア加速による深度からカラーへのアライメント（D2C、深度 → カラー）で、これは深度マップと RGB 画像がデータがホストコンピュータに到達する前にピクセルレベルで空間的に整列されることを意味します。これにより、ホストプロセッサの計算負荷が軽減され、3D 再構成、SLAM、深度を使用した物体検出などのアプリケーションでの深度 + カラーの融合が簡素化されます。
+単眼深度ビジュアルオドメトリには、カメラと深度画像間のピクセル対ピクセル対応が必要です。[Orbbec Gemini 2](https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html) は、深度と RGB（カラー）出力の両方を提供するステレオ構造光/アクティブステレオ IR 3D カメラです。その主要な機能の一つは、ハードウェア加速による深度からカラーへのアライメント（D2C、深度 → カラー）で、これは深度マップと RGB 画像がデータがホストコンピュータに到達する前にピクセルレベルで空間的に整列されることを意味します。これにより、ホストプロセッサの計算負荷が軽減され、3D 再構成、SLAM、深度を使用した物体検出などのアプリケーションでの深度 + カラーの融合が簡素化されます。
 </div>
 
 **ステップ 1.** Orbbec ROS2 ドライバをインストールします：
@@ -880,7 +880,7 @@ ros2 launch orbbec_camera gemini2.launch.py
 ```
 
 :::note
-カメラデータトピックが正常にパブリッシュされているかを観察することで、カメラノードが正常に起動できるかを確認できます。
+カメラデータトピックが正常に公開されているかを観察することで、カメラノードが正常に開始できるかどうかを確認できます。
 <div align="center">
     <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
@@ -1888,21 +1888,30 @@ def main() -> None:
                 trajectory.append(current_position)  # Add position to trajectory
 
                 # Store complete pose data
+                # cuVSLAM's odom_pose.rotation is in [x, y, z, w] order.
+                # Convert and store as [w, x, y, z] for consistent usage elsewhere.
+                raw_quat = odom_pose.rotation  # [x, y, z, w]
+                qx, qy, qz, qw = raw_quat
+                quat_wxyz = [qw, qx, qy, qz]
+
                 pose_data.append({
                     'frame_id': frame_id,                    # framesID
                     'timestamp': timestamp_ns,               # Timestamp
                     'position': current_position,            # Position [x, y, z]
-                    'rotation_quat': odom_pose.rotation,     # Rotation quaternion [w, x, y, z]
+                    'rotation_quat': quat_wxyz,              # Rotation quaternion [w, x, y, z]
                     'stationary': is_stationary if args.detect_stationary else False  # Stationary flag
                 })
 
                 # Extract position and rotation information
                 position = odom_pose.translation  # Position vector [x, y, z]
-                rotation_quat = odom_pose.rotation  # Quaternion [w, x, y, z]
+
+                # cuVSLAM returns quaternion in [x, y, z, w] order. Map to w,x,y,z for calculations.
+                rotation_quat = odom_pose.rotation  # Quaternion [x, y, z, w]
+                qx, qy, qz, qw = rotation_quat
 
                 # Convert quaternion to Euler angles（Roll, pitch, yaw）
                 import math
-                w, x, y, z = rotation_quat  # Quaternion components
+                w, x, y, z = qw, qx, qy, qz  # Quaternion components in w,x,y,z order
 
                 # Roll (rotation around X axis)
                 sinr_cosp = 2 * (w * x + y * z)
@@ -2169,7 +2178,7 @@ depth_to_color_transform:
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

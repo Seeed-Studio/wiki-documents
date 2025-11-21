@@ -35,7 +35,7 @@ Para más detalles, haz clic [aquí](/es/get_the_system_log_of_recomputer_j30_an
 
 Para más detalles, haz clic [aquí](/es/usb_timeout_during_flash)
 
-#### P7: No puedo usar el puerto USB-A, el puerto Ethernet o no hay pantalla HDMI después de flashear el dispositivo.
+#### P7: No puedo usar el puerto USB-A, puerto Ethernet o no hay pantalla HDMI después de flashear el dispositivo.
 **R:** Por favor verifica la integridad del archivo (por ejemplo, proporcionamos las sumas de verificación SHA256), para algunas placas portadoras (especialmente la serie A60X), asegúrate de que el parche del controlador se haya copiado/aplicado exitosamente al directorio **Linux_for_tegra**. Hay archivos que requieren permisos **sudo**, y cuando copies directorios, asegúrate de que el parámetro **-r** esté incluido en tu comando.
 
 #### P8: Mi sistema se bloqueó/no puede arrancar/pantalla negra/perdió controladores periféricos después de ejecutar los comandos "sudo apt-get update && sudo apt-get upgrade".
@@ -63,7 +63,7 @@ Este problema ocurre actualmente al flashear JetPack 5, y NVIDIA lo ha documenta
 Para más detalles, haz clic [aquí](/es/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
 
 #### P15: ¿Por qué no se puede ejecutar el comando `apt upgrade` en reComputer/reServer?
-Los kernels y controladores de **reComputer/reServer** están personalizados. Si se ejecuta el comando `apt upgrade`, algunos paquetes relacionados con el kernel y controladores pueden ser reemplazados con recursos oficiales de NVIDIA, lo que podría causar problemas de compatibilidad de software. <mark>Por lo tanto, por favor no ejecutes `apt upgrade` en ninguna plataforma Jetson de terceros.</mark>
+Los kernels y controladores de **reComputer/reServer** están personalizados. Si se ejecuta el comando `apt upgrade`, algunos paquetes relacionados con el kernel y controladores pueden ser reemplazados con recursos oficiales de NVIDIA, lo que podría causar problemas de compatibilidad de software. <mark>Por lo tanto, no ejecutes `apt upgrade` en ninguna plataforma Jetson de terceros.</mark>
 
 Puedes consultar las siguientes instrucciones para bloquear las fuentes APT relevantes. De esta manera, si apt upgrade se ejecuta accidentalmente, el impacto será minimizado:
 ```bash
@@ -77,9 +77,41 @@ sudo apt-mark hold nvidia-l4t-core
 
 Para más detalles, haz clic [aquí](/es/how_to_build_the_ko_module_for_seeed_jetson)
 
-#### P17：¿Cómo cifrar el disco de Jetson antes de flashear la imagen?
+#### P17：¿Cómo puedo montar un disco duro externo formateado con exFAT en Jetson (JetPack 6)?
+
+Primero, instala las dependencias:
+```
+sudo apt install build-essential autoconf automake libtool pkg-config
+sudo apt install git libfuse-dev
+```
+
+Luego clona y compila el controlador exFAT desde el código fuente:
+```
+git clone https://github.com/relan/exfat
+cd exfat
+autoreconf --install
+./configure
+make
+sudo make install
+```
+
+A continuación, monta manualmente el disco en un directorio local:
+```
+lsblk   # Check the device name of your external hard drive
+
+sudo mkdir /media/seeed/tmp-exfat   # Create a mount point
+sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
+```
+
+Esto monta la unidad externa formateada con exFAT en `/media/seeed/tmp-exfat/` para que pueda ser accedida normalmente en el Jetson.
+
+#### P18：¿Cómo cifrar el disco de Jetson antes de flashear la imagen?
 
 Para más detalles, haz clic [aquí](/es/how_to_encrypt_the_disk_for_jetson)
+
+#### P18：¿Cómo establecer comunicación entre Jetson y dispositivos EtherCAT?
+
+Para más detalles, haz clic [aquí](/es/how_to_establish_the_ethercat_on_jetson)
 
 
 ## Soporte técnico
@@ -95,3 +127,4 @@ Para más detalles, haz clic [aquí](/es/how_to_encrypt_the_disk_for_jetson)
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

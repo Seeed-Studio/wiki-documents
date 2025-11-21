@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/11/2025
+  author: Michelle Huang
 ---
 
 ## Video Tutorial
@@ -26,6 +26,10 @@ last_update:
 </div>
 
 ### Part 3: Flash New Firmware
+
+:::caution note
+Before flashing the firmware, please ensure you bought the `T1000-E for Meshtastic`. Please don't flash the firmware to other tracker model that doen't support Meshtastic. Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
+:::
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -84,6 +88,36 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
+### Connect via Website
+
+If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now. 
+
+  Step 1: Open the Website
+
+[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite. 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  Step 2: Add the new device 
+  
+    Click "+ New Connection". 
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    There are two ways to connect. You can choose your preferred method.
+
+ Method 1: Via Bluetooth
+  
+    Choose bluetooth method. Choose the device ID in the pop-up window.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ Method 2: Via Serial
+
+    Choose serial method. Open the device manager to see which port the device is connected to. Choose that port in the pop-up window.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 ### Configure the Parameters
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
@@ -206,7 +240,9 @@ The following firmware will brick your device：
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Flash%20Firmware.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
-
+:::caution note
+Before flashing the firmware, please ensure you bought the `T1000-E for Meshtastic`. Please don't flash the firmware to other tracker model that doen't support Meshtastic. Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
+:::
 #### Step 1: Enter DFU mode
 
 <Tabs>

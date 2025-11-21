@@ -165,7 +165,7 @@ This page primarily focuses on MicroPython users. For those interested in learni
 :::
 
 :::tip
-If you download the firmware from the official website, you need to have version 1.26.0 or higher to use it.[SEEED_XIAO_RP2350](https://micropython.org/download/SEEED_XIAO_RP2350/)
+Currently, the ADC function may not work properly when using the official [firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/SEEED_XIAO_RP2350.uf2). Please download and use our modified firmware first. Once the pull request is merged, we will update the relevant content on the Wiki accordingly.
 :::
 
 ### Step 1: Installing MicroPython on XIAO RP2350

@@ -183,7 +183,7 @@ J401キャリアボードは、NVIDIA Jetson Orin NX/Nanoモジュールをサ�
 
 ここでは、reComputer J4012/ J4011/ J3010およびJ3011に接続されたNVMe SSDに[Jetpack](https://developer.nvidia.com/embedded/jetpack)をフラッシュする方法を説明します。これらのデバイスはすべて内部にJ401キャリアボードを搭載しており、フラッシュ手順はすべて同じです。
 
-reComputer J40/ J30シリーズには、付属のNVMe SSDにJetPack 5.1がプリインストールされているため、フラッシュする必要はありません。ただし、JetPackで再度フラッシュしたい場合は、このガイドに従ってください。
+reComputer J40/ J30 シリーズには、付属のNVMe SSDにJetPack 5.1がプリインストールされているため、フラッシュする必要はありません。ただし、JetPackで再度フラッシュしたい場合は、このガイドに従ってください。
 
 ### サポートされるモジュール
 
@@ -245,7 +245,7 @@ reComputer J40/ J30シリーズには、付属のNVMe SSDにJetPack 5.1がプリ
 
 <summary> ステップバイステップ </summary>
 
-**ステップ1.** ジャンパーワイヤーを使用して**FC REC**ピンと**GND**ピンを接続します。
+**ステップ 1.** ジャンパーワイヤーを使用して**FC REC**ピンと**GND**ピンを接続します。
 
 <table align="center">
 <thead>
@@ -298,16 +298,16 @@ reComputer J40/ J30シリーズには、付属のNVMe SSDにJetPack 5.1がプリ
 </tbody>
 </table>
 
-**ステップ2.** 電源アダプタから付属のケーブルを接続してreComputerに電源を供給し、USB Type-Cデータ転送ケーブルでボードをUbuntuホストPCに接続します
+**ステップ 2.** 電源アダプタから付属のケーブルを接続してreComputerに電源を供給し、USB Type-Cデータ転送ケーブルでボードをUbuntuホストPCに接続します
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
 
 **ステップ 3.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、以下の出力のいずれかが返された場合、ボードは強制リカバリモードになっています。
 
-- Orin NX 16GB の場合：**0955:7323 NVidia Corp**
-- Orin NX 8GB の場合：**0955:7423 NVidia Corp**
-- Orin Nano 8GB の場合：**0955:7523 NVidia Corp**
-- Orin Nano 4GB の場合：**0955:7623 NVidia Corp**
+- Orin NX 16GB の場合: **0955:7323 NVidia Corp**
+- Orin NX 8GB の場合: **0955:7423 NVidia Corp**
+- Orin Nano 8GB の場合: **0955:7523 NVidia Corp**
+- Orin Nano 4GB の場合: **0955:7623 NVidia Corp**
 
 以下の画像は Orin NX 16GB の場合です
 
@@ -345,7 +345,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 フラッシュに進む前に、Jetson Orin NX モジュールは JetPack 5.1 以上のみをサポートし、Jetson Orin Nano モジュールは JetPack 5.1.1 以上のみをサポートすることに注意してください。
 :::
 
-まず最初に、JetPack のフラッシュに進む前に、Ubuntu ホスト PC に以下の必要な依存関係をインストールしてください。
+まず最初に、JetPack をフラッシュする前に、Ubuntu ホスト PC に以下の必要な依存関係をインストールしてください。
 
 ```sh
 sudo apt install qemu-user-static sshpass abootimg nfs-kernel-server libxml2-utils binutils -y
@@ -366,11 +366,11 @@ NVIDIA はモジュールで使用される DRAM を更新しました。新し�
 
 ここでは NVIDIA L4T 35.3.1 を使用して reComputer に Jetpack 5.1.1 をインストールします
 
-**ステップ 1：** ホスト PC に NVIDIA ドライバーを[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3531)します。必要なドライバーは以下の通りです：
+**ステップ 1:** ホスト PC に NVIDIA ドライバを[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3531)します。必要なドライバは以下の通りです：
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**ステップ 2：** これらのファイルを含むフォルダに移動して **Jetson_Linux_R35.3.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** を展開し、変更を適用して必要な前提条件をインストールします
+**ステップ 2:** これらのファイルを含むフォルダに移動して **Jetson_Linux_R35.3.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** を展開し、変更を適用して必要な前提条件をインストールします
 
 ```sh
 tar xf Jetson_Linux_R35.3.1_aarch64
@@ -380,7 +380,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**ステップ 3（オプション）：** ユーザー名、パスワード、ホスト名を設定して、デバイスの起動完了後に Ubuntu インストールウィザードを入力する必要がないようにします
+**ステップ 3（オプション）:** ユーザー名、パスワード、ホスト名を設定して、デバイスの起動完了後に Ubuntu インストールウィザードを入力する必要がないようにします
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
@@ -392,7 +392,7 @@ sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAM
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**ステップ 4：** システムを NVMe SSD にフラッシュします
+**ステップ 4:** システムを NVMe SSD にフラッシュします
 
 ```sh
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
@@ -410,7 +410,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
 Jetson デバイスのデスクトップを開くのに時間がかかる場合は、電源を再接続してください。
 :::
 
-**ステップ 5（オプション）：** Nvidia Jetpack SDK をインストールします
+**ステップ 5（オプション）:** Nvidia Jetpack SDK をインストールします
 
 **Jetson デバイス**でターミナルを開き、以下のコマンドを実行してください：
 
@@ -425,11 +425,11 @@ sudo apt install nvidia-jetpack
 
 ここでは NVIDIA L4T 35.4.1 を使用して reComputer に Jetpack 5.1.2 をインストールします
 
-**ステップ 1：** ホスト PC に NVIDIA ドライバーを[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3541)します。必要なドライバーは以下の通りです：
+**ステップ 1:** ホスト PC に NVIDIA ドライバを[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3541)します。必要なドライバは以下の通りです：
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**ステップ 2：** これらのファイルを含むフォルダに移動して **Jetson_Linux_R35.4.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** を展開し、変更を適用して必要な前提条件をインストールします
+**ステップ 2:** これらのファイルを含むフォルダに移動して **Jetson_Linux_R35.4.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** を展開し、変更を適用して必要な前提条件をインストールします
 
 ```sh
 tar xf Jetson_Linux_R35.4.1_aarch64.tbz2
@@ -441,13 +441,13 @@ sudo ./tools/l4t_flash_prerequisites.sh
 
 次に、JP5.1.2 に必要で、公式 NVIDIA JetPack リリースノートのセクション 4.2.3 で[ここ](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf)に説明されている NVIDIA のパッチを適用する必要があります。
 
-**ステップ 3：** 以下のディレクトリに移動します
+**ステップ 3:** 以下のディレクトリに移動します
 
 ```sh
 cd Linux_for_Tegra/bootloader/t186ref/BCT
 ```
 
-**ステップ 4：** ファイル **"tegra234-mb2-bct-scr-p3767-0000.dts"** を開き、**tfc** セクションの下に以下の行を追加します
+**ステップ 4:** ファイル **"tegra234-mb2-bct-scr-p3767-0000.dts"** を開き、**tfc** セクションの下に以下の行を追加します
 
 ```sh
 tfc {
@@ -457,7 +457,7 @@ tfc {
     };
 ```
 
-**ステップ 5（オプション）：** **"Linux_for_Tegra"** ディレクトリに移動し、以下のコマンドを入力してユーザー名、パスワード、ホスト名を設定して、デバイスの起動完了後に Ubuntu インストールウィザードを入力する必要がないようにします
+**ステップ 5（オプション）:** **"Linux_for_Tegra"** ディレクトリに移動し、以下のコマンドを入力してユーザー名、パスワード、ホスト名を設定して、デバイスの起動完了後に Ubuntu インストールウィザードを入力する必要がないようにします
 
 ```sh
 cd Linux_for_Tegra
@@ -470,7 +470,7 @@ sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAM
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**ステップ 6：** システムを NVMe SSD にフラッシュします
+**ステップ 6:** システムを NVMe SSD にフラッシュします
 
 ```bash
 
@@ -489,7 +489,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1   -c t
 Jetson デバイスのデスクトップを開くのに時間がかかる場合は、電源を再接続してください。
 :::
 
-**ステップ 7（オプション）：** Nvidia Jetpack SDK をインストールします
+**ステップ 7（オプション）:** Nvidia Jetpack SDK をインストールします
 
 **Jetson デバイス**でターミナルを開き、以下のコマンドを実行してください：
 
@@ -504,7 +504,7 @@ sudo apt install nvidia-jetpack
 
 ここでは reComputer に Jetpack 5.1.3 をインストールします。
 
-**ステップ 1：** 使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードします：
+**ステップ 1:** 使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードします：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -712,30 +712,30 @@ sudo apt install -y iwlwifi-modules
     <tr>
       <td>Orin NX 16GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWCZOBNb9C9AoZe-mt23jLABZk942Lf0yopVGFJFTeL5DA?e=o7epES" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQBCmNhy0cVJrxa6JEeiNb8BEXIDh3sToFvsxPMxZAo_ag?e=DYdE5M" target="_blank" rel="noopener noreferrer">ダウンロード</a>
       </td>
-      <td> 3e53f484eb41a2d81f01ba2a0512a3c13d86d90f646207a488eaf77ae0cd5d69 </td>
+      <td> 202cc35f5d7586ea18b4a67ae0542b9bf023e6c4be7414a8447b112fa93f1c17 </td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcvDRK7qgWhGty_H-P7yHZ8Bob3v9AEs_vFVd-zOC3WX5w?e=FmlfjD" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbiJ_2X2oxdNlDolexNVBisBNjdcjGv6rChPuSzhyjvWmg?e=1prjU9" target="_blank" rel="noopener noreferrer">ダウンロード</a>
       </td>
-      <td> fc22a3d1669eb311cf237b8f4252896bfb71ff860c14f7a502c60fda5439d99d </td>
+      <td> 8b4d210a39db394c00862c008012059cf9d59cec17fc235d26623549b94645be </td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EeO8T8kNkpZGl9W2QfmnKYQBeXB8-M88aZWLMvPP7uARcA?e=fBuClA" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EejFgIlZQ2xMjaEokzQKmmgBxjeYX6Xpj69I8_gMTa_lCw?e=3L00Lr" target="_blank" rel="noopener noreferrer">ダウンロード</a>
       </td>
-      <td> c2e48b41d284e4c98a2bc3409f1a1d09c61e4b60d6a5bdec3a33d084560a3bba </td>
+      <td> d3a4b0db20b373054e40814703b5f3a4b9565d28ebd59a5128b74f8d210e75b8 </td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
       <td>
-        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EY01pL5oq0FAmavoRY_p9DMBj4t-LHzRtEAh1UBQen3S3g?e=jUfauO" target="_blank" rel="noopener noreferrer">ダウンロード</a>
+        <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EbtcrNp6XlRPvznQVNOxqY0BHesCu5bUslUVzbaYCPd44g?e=EdPStQ" target="_blank" rel="noopener noreferrer">ダウンロード</a>
       </td>
-      <td> b9e4f5889a66d055d967884980aee6357316acb562c4d713ef2fdb21f4644788 </td>
+      <td> f0efee5f265dbaef49dc14d517b269e7f6582ff9977d9193d377966f36408ec3 </td>
     </tr>
   </tbody>
 </table>
@@ -844,14 +844,14 @@ Ubuntuホストマシンで、ターミナルを開いて`sha256sum <File>`コ�
 現在、新しいバージョンのreComputerを設計中です。お楽しみに！
 :::
 
-**ステップ2：** ダウンロードしたイメージファイルを展開します：
+**ステップ2:** ダウンロードしたイメージファイルを展開します：
 
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.2-36.4.3-2025-04-07.tar.gz
 ```
 
-**ステップ3：** 展開したディレクトリに移動し、以下のコマンドを実行してjetpackシステムをNVMe SSDにフラッシュします：
+**ステップ3:** 展開したディレクトリに移動し、以下のコマンドを実行してjetpackシステムをNVMe SSDにフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -867,12 +867,12 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 フラッシュコマンドは2〜10分間実行される場合があります。
 :::
 
-**ステップ4：** ボード上のHDMIコネクタを使用してJ401をディスプレイに接続し、初期設定セットアップを完了します：
+**ステップ4:** ボード上のHDMIコネクタを使用してJ401をディスプレイに接続し、初期設定セットアップを完了します：
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-必要に応じて**システム設定**を完了してください。
+必要に応じて**System Configuration**を完了してください。
 :::
 
 </TabItem>
@@ -896,7 +896,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
