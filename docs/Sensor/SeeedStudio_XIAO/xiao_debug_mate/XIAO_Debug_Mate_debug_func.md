@@ -1653,11 +1653,30 @@ While the program is paused at a breakpoint, you can inspect and even modify the
 3.  **Modify Variables (Write)**: In the "VARIABLES" or "WATCH" sections, you can often double-click on a variable's value to enter a new one. Press Enter to apply the change. This is incredibly useful for testing different conditions without restarting your program.
 
 
+## Troubleshooting
+
+### Q1: If I brick my XIAO RA4M1, is there any way to fix it?
+
+You can try reflashing the bootloader to restore the device. For the XIAO RA4M1 model, refer to **[this method](#for-seeed-studio-xiao-ra4m1-2)** for bootloader recovery.
+
+When restoring the Bootloader, if an error occurs, try connecting the XIAO RA4M1 to the XIAO Debug Mate, which is connected to your computer. Hold down the B button on the XIAO RA4M1 while simultaneously clicking the R button once, then release both R and B. Proceed to flash the Bootloader again.
+
+After flashing the Bootloader, attempt to re-update the firmware using software like Arduino. This usually restores functionality. If unsuccessful, the device may be permanently damaged and irreparable. Any actions involving flashing firmware with XIAO Debug Mate may require you to assume full responsibility.
+
+
+### Q2: How can you tell if a device has been bricked?
+
+The most straightforward way to determine if the XIAO device is damaged is that it shows no serial port connection when connected to a computer. If the device still shows no serial port connection after holding down the B button and then plugging it into the computer, the device is damaged.
+
+
+### Q3: Can damaged equipment be repaired? Can I contact technical support to request a replacement?
+
+Damage to XIAO devices is typically caused by issues with partitioning or the Bootloader file. This can usually be resolved by reflashing the Bootloader file. If this fails, there are currently no alternative solutions. Users must assume full responsibility for performing this operation themselves, so please ensure the flashing commands and firmware are verified and valid.
+
+
 ## Resources
 
 - **[ZIP]** [XIAO_Debug_Mate_DAPLink_Package-v1.0](https://files.seeedstudio.com/wiki/xiao_debug_mate/res/XIAO_Debug_Mate_DAPLink_Package-v1.0.zip)
-
-
 
 
 <div class="table-center">
