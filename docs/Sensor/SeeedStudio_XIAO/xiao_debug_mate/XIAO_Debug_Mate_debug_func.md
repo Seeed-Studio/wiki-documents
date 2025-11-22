@@ -479,7 +479,7 @@ PyOCD is a Python-based tool for programming and debugging Arm Cortex-M microcon
 <TabItem value="Windows" label="Windows" default>
 
 1.  **Prerequisites**
-    Ensure you have **Python** installed on your system. If not, download it from the official [python.org](python.org) website and ensure you check the box **"Add Python to PATH"** during installation.
+    Ensure you have **Python** installed on your system. If not, download it from the official [python.org](https://www.python.org/) website and ensure you check the box **"Add Python to PATH"** during installation.
 
 2.  **Install PyOCD**
     Open a Command Prompt or PowerShell window and run the following command:
