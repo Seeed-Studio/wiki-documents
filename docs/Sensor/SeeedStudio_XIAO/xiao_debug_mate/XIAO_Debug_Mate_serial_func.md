@@ -40,8 +40,6 @@ These are the two pins that make serial communication happen:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/uart_communica_logic.gif" style={{width:800, height:'auto'}}/></div>
 
-<UartDiagram />
-
 The most important rule to remember is that you must **cross-connect** these pins between devices. The TX pin of one device must connect to the RX pin of the other, and vice-versa. It's like a conversation: one person's mouth (TX) talks to the other person's ear (RX).
 
 ## Getting Started
