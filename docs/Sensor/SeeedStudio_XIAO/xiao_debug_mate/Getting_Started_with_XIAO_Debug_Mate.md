@@ -264,9 +264,9 @@ The power analysis function measures the power supplied to the XIAO via its **5V
 
 For detailed guides on how to use the DAPLink debugger, UART monitor, and power analyzer with specific IDEs and projects, please refer to our dedicated feature guides.
 
-- [XIAO Debug Mate DAPLink Debugger](https://wiki.seeedstudio.com/xiao_debug_mate_debug/)
-- [XIAO Debug Mate UART Monitor](https://wiki.seeedstudio.com/xiao_debug_mate_serial/)
-- [XIAO Debug Mate Power Meter](https://wiki.seeedstudio.com/xiao_debug_mate_power/)
+- [XIAO Debug Mate DAPLink Debugger](https://wiki.seeedstudio.com/xiao_debug_mate_debug)
+- [XIAO Debug Mate UART Monitor](https://wiki.seeedstudio.com/xiao_debug_mate_serial)
+- [XIAO Debug Mate Power Meter](https://wiki.seeedstudio.com/xiao_debug_mate_power)
 
 ## Reset
 

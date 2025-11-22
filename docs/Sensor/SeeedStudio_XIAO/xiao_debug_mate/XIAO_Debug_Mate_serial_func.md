@@ -52,9 +52,9 @@ export const UartDiagram = () => (
     }}
   >
     <h3 style={{ color: "#333", marginBottom: "10px" }}>UART Communication Logic</h3>
-    <p style={{ color: "#666", fontSize: "0.9em", marginBottom: "20px" }}>
+    <div style={{ color: "#666", fontSize: "0.9em", marginBottom: "20px" }}>
       The Golden Rule: <strong>TX</strong> (Transmit) must connect to <strong>RX</strong> (Receive)
-    </p>
+    </div>
 
     <svg viewBox="0 0 600 350" style={{ width: "100%", height: "auto", display: "block" }}>
       <defs>
