@@ -1,7 +1,7 @@
 ---
 description: Create a doc page with rich content.
 title: Getting Started with XIAO Debug Mate
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.webp
 slug: /getting_started_with_xiao_debug_mate
 sidebar_position: 1
 last_update:

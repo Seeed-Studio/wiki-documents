@@ -1,7 +1,7 @@
 ---
 description: Create a doc page with rich content.
 title: DAPLink Debugger
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/xiao_debug_mate/15.webp
 slug: /xiao_debug_mate_debug
 sidebar_position: 2
 last_update:
@@ -61,7 +61,100 @@ When GDB issues a command like "read the value of variable `x`," OpenOCD receive
 
 ### How They Work Together
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_concepts.png" style={{width:800, height:'auto'}}/></div>
+<svg viewBox="0 0 880 480" width="100%" height="auto" style={{ backgroundColor: '#ffffff', borderRadius: '8px', padding: '10px', fontFamily: 'sans-serif' }}>
+  <defs>
+    <marker id="arrowhead-fix" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333333" />
+    </marker>
+    {/* Filter to create a background for text to prevent line overlap */}
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood floodColor="white" result="bg" />
+      <feMerge>
+        <feMergeNode in="bg"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  {/* Title */}
+  <text x="440" y="30" textAnchor="middle" fontSize="20" fontWeight="bold" fill="#333333">Embedded Debugging Architecture</text>
+
+  {/* 1. HOST PC AREA (Expanded Size) */}
+  <rect x="20" y="60" width="420" height="390" rx="10" fill="#f0f4f8" stroke="#cbd5e0" strokeWidth="2" />
+  <text x="40" y="90" fontSize="16" fontWeight="bold" fill="#555555">Host PC (Software)</text>
+
+  {/* GDB Client */}
+  <rect x="50" y="120" width="140" height="60" rx="5" fill="#fff3cd" stroke="#ffecb5" strokeWidth="2" />
+  <text x="120" y="145" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#856404">GDB Client</text>
+  <text x="120" y="165" textAnchor="middle" fontSize="10" fill="#856404">(arm-none-eabi-gdb)</text>
+
+  {/* Telnet Client */}
+  <rect x="50" y="300" width="140" height="60" rx="5" fill="#d1ecf1" stroke="#bee5eb" strokeWidth="2" />
+  <text x="120" y="325" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#0c5460">Telnet Client</text>
+  <text x="120" y="345" textAnchor="middle" fontSize="10" fill="#0c5460">(Human / Script)</text>
+
+  {/* Debug Server (OpenOCD/PyOCD) - Shifted Right slightly */}
+  <rect x="280" y="150" width="140" height="210" rx="5" fill="#d4edda" stroke="#c3e6cb" strokeWidth="2" />
+  <text x="350" y="180" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#155724">Debug Server</text>
+  <text x="350" y="200" textAnchor="middle" fontSize="12" fill="#155724">OpenOCD / PyOCD</text>
+  <line x1="290" y1="255" x2="410" y2="255" stroke="#155724" strokeWidth="1" strokeDasharray="4" />
+  <text x="350" y="275" textAnchor="middle" fontSize="11" fill="#155724" fontStyle="italic">Parses GDB/Telnet</text>
+  <text x="350" y="290" textAnchor="middle" fontSize="11" fill="#155724" fontStyle="italic">Translates to USB</text>
+
+  {/* Connections inside Host */}
+  
+  {/* GDB to Server Connection */}
+  {/* Path adjusted to go around text */}
+  <path d="M190 150 L235 150 L235 190 L270 190" fill="none" stroke="#333333" strokeWidth="2" markerEnd="url(#arrowhead-fix)" />
+  {/* Text moved UP and given a background rect effect via style or just placement */}
+  <rect x="200" y="125" width="70" height="24" fill="#f0f4f8" /> 
+  <text x="235" y="135" textAnchor="middle" fontSize="10" fill="#666666" fontWeight="bold">TCP Port 3333</text>
+  <text x="235" y="147" textAnchor="middle" fontSize="10" fill="#666666">(RSP Protocol)</text>
+
+  {/* Telnet to Server Connection */}
+  <path d="M190 330 L235 330 L235 290 L270 290" fill="none" stroke="#333333" strokeWidth="2" markerEnd="url(#arrowhead-fix)" />
+  <rect x="200" y="332" width="70" height="24" fill="#f0f4f8" />
+  <text x="235" y="345" textAnchor="middle" fontSize="10" fill="#666666" fontWeight="bold">TCP Port 4444</text>
+  <text x="235" y="357" textAnchor="middle" fontSize="10" fill="#666666">(CLI Commands)</text>
+
+  {/* 2. USB CONNECTION */}
+  <line x1="420" y1="255" x2="500" y2="255" stroke="#007bff" strokeWidth="4" />
+  <text x="460" y="240" textAnchor="middle" fontSize="12" fontWeight="bold" fill="#007bff">USB</text>
+  <text x="460" y="275" textAnchor="middle" fontSize="11" fill="#007bff">CMSIS-DAP</text>
+
+  {/* 3. HARDWARE PROBE */}
+  <rect x="500" y="180" width="160" height="150" rx="5" fill="#e2e3e5" stroke="#d6d8db" strokeWidth="2" />
+  <text x="580" y="210" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#383d41">Debug Probe</text>
+  <text x="580" y="230" textAnchor="middle" fontSize="10" fill="#555555">(Hardware Dongle)</text>
+  
+  {/* Firmware Box */}
+  <rect x="515" y="250" width="130" height="60" rx="3" fill="#ffffff" stroke="#383d41" strokeWidth="1" strokeDasharray="2,2" />
+  <text x="580" y="275" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#d63384">Firmware: DAPLink</text>
+  <text x="580" y="295" textAnchor="middle" fontSize="9" fill="#555555">Handles USB &lt;-&gt; SWD</text>
+
+  {/* 5. TARGET MCU */}
+  <rect x="720" y="190" width="130" height="130" rx="5" fill="#ffeeba" stroke="#ffdf7e" strokeWidth="2" />
+  <text x="785" y="220" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#856404">Target MCU</text>
+  <rect x="735" y="240" width="100" height="60" rx="2" fill="#ffffff" stroke="#856404" strokeWidth="1" />
+  <text x="785" y="265" textAnchor="middle" fontSize="11" fill="#333333">Core</text>
+  <text x="785" y="285" textAnchor="middle" fontSize="10" fill="#555555">(Cortex-M)</text>
+
+  {/* 4. TARGET CONNECTION */}
+  <line x1="660" y1="255" x2="720" y2="255" stroke="#333333" strokeWidth="2" markerEnd="url(#arrowhead-fix)" />
+  {/* Moved text UP to avoid overlap with the arrow */}
+  <text x="690" y="245" textAnchor="middle" fontSize="11" fontWeight="bold" fill="#333333">SWD / JTAG</text>
+
+  {/* Legend / Explanation Box */}
+  <rect x="500" y="360" width="350" height="90" rx="5" fill="#ffffff" stroke="#eeeeee" strokeWidth="1" />
+  <text x="510" y="380" fontSize="12" fontWeight="bold" fill="#333333">Key Concepts:</text>
+  <circle cx="520" cy="400" r="3" fill="#155724" />
+  <text x="530" y="404" fontSize="11" fill="#555555">OpenOCD/PyOCD: Translates GDB commands to USB.</text>
+  <circle cx="520" cy="420" r="3" fill="#007bff" />
+  <text x="530" y="424" fontSize="11" fill="#555555">CMSIS-DAP: The standard USB protocol.</text>
+  <circle cx="520" cy="440" r="3" fill="#d63384" />
+  <text x="530" y="444" fontSize="11" fill="#555555">DAPLink: The firmware running on the probe.</text>
+
+</svg>
 
 Here is a summary of the entire debug chain, from your IDE to the target XIAO:
 

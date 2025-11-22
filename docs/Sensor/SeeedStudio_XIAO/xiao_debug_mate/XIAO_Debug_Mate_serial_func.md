@@ -1,7 +1,7 @@
 ---
 description: Create a doc page with rich content.
 title: UART Monitor
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.webp
 slug: /xiao_debug_mate_serial
 sidebar_position: 3
 last_update:
