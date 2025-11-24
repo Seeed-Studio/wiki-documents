@@ -1,5 +1,5 @@
 ---
-description: Create a doc page with rich content.
+description: This article explains how to use the XIAO Debug Mate’s DAPLink debugging feature.
 title: DAPLink Debugger
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/15.webp
 slug: /xiao_debug_mate_debug

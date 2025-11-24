@@ -1,5 +1,5 @@
 ---
-description: Create a doc page with rich content.
+description: This page explains how to use the UART monitor function of the XIAO Debug Mate.
 title: UART Monitor
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.webp
 slug: /xiao_debug_mate_serial

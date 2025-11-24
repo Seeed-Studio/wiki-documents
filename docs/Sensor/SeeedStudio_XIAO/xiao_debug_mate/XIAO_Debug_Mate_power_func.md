@@ -1,5 +1,5 @@
 ---
-description: Create a doc page with rich content.
+description: Learn how to use the Power Meter function of XIAO Debug Mate for accurate voltage, current, and power monitoring.
 title: Power Meter
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/32.webp
 slug: /xiao_debug_mate_power
