@@ -164,6 +164,140 @@ The parameter after `-p` can be any value from `0` to `n`.
     src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/slave0.png"/>
 </div>
 
+
+## 5. Example – Controlling an EtherCAT Motor on Jetson (MyActuator X4)
+
+Based on the configuration and verification steps in the previous sections, you should now be able to control an EtherCAT motor using a Jetson device.  
+
+In this section, we use the **MyActuator X4** as an example to demonstrate how to control an EtherCAT motor from the Jetson.  
+
+:::note
+This section is for reference only. Each EtherCAT motor uses a different communication protocol, so you will need to adapt the example according to the protocol used by your specific device.
+:::
+
+This example provides sample code for controlling a **MyActuator X4** EtherCAT motor. Download and compile it from GitHub:  
+```bash
+git clone https://github.com/jjjadand/ethercat-myctor.git
+cd src/build
+cmake ..
+make
+```
+The example is implemented based on the [EtherCAT-Master](https://gitlab.com/etherlab.org/ethercat), The flowchart of the program is shown below:  
+
+<details>
+<summary> Program Flowchart </summary>
+
+```bash
+                     ┌──────────────────────────────────────┐
+                     │        1. Master Initialization        │
+                     ├──────────────────────────────────────┤
+                     │ ecrt_request_master()                 │
+                     │ ecrt_master_create_domain()           │
+                     │ ecrt_master_slave_config()            │
+                     │ Configure Distributed Clock (DC)      │
+                     │ Register PDO entries (RxPDO/TxPDO)    │
+                     │ ecrt_master_activate()                │
+                     │ Get domain memory pointer             │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │      2. PREOP  →  SAFEOP Transition   │
+                     ├──────────────────────────────────────┤
+                     │ Slave boots in PREOP                 │
+                     │ Master exchanges SDO if needed       │
+                     │ (optional: set 0x6060 = CSP)         │
+                     │ DC start time prepared               │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │      3. SAFEOP → OP Transition       │
+                     ├──────────────────────────────────────┤
+                     │ Domain becomes active (WKC > 0)      │
+                     │ Application loop starts running      │
+                     │ Master supplies application time     │
+                     │ Master synchronizes DC clocks        │
+                     │ Slave goes OP (operational)          │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │        4. CiA-402 State Machine       │
+                     ├──────────────────────────────────────┤
+                     │ Write ControlWord = 0x0006 (Shutdown)│
+                     │ Wait READY_TO_SWITCH_ON              │
+                     │ Write ControlWord = 0x0007 (SwitchOn)│
+                     │ Wait SWITCHED_ON                     │
+                     │ Write ControlWord = 0x000F (EnableOp)│
+                     │ Wait OPERATION_ENABLED               │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │     5. Enter CSP Motion Operation     │
+                     ├──────────────────────────────────────┤
+                     │ Write Mode of Operation (0x6060=8)   │
+                     │ Read Actual Position (0x6064)        │
+                     │ Initialize Target Position (607A)    │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │     6. Real-Time Cyclic Operation     │
+                     ├──────────────────────────────────────┤
+                     │ loop at 1 kHz (or higher):           │
+                     │   - Sleep until next cycle           │
+                     │   - ecrt_master_application_time()   │
+                     │   - ecrt_master_sync_reference_clock │
+                     │   - ecrt_master_sync_slave_clocks    │
+                     │   - Receive / process domain         │
+                     │   - Generate new target position     │
+                     │   - Write ControlWord = 0x000F       │
+                     │   - Write OperationMode = 8 (CSP)     │
+                     │   - Write new TargetPosition         │
+                     │   - Queue & send domain              │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │     7. Monitoring & Fault Handling    │
+                     ├──────────────────────────────────────┤
+                     │ Read status word (0x6041) each cycle │
+                     │ Detect faults (bit3)                 │
+                     │ Detect target reached (0x0400)       │
+                     │ Optionally read torque/velocity      │
+                     │ Execute FAULT RESET if needed        │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │             8. Shutdown               │
+                     ├──────────────────────────────────────┤
+                     │ Stop real-time thread               │
+                     │ Write ControlWord=0 (disable)       │
+                     │ Release EtherCAT master             │
+                     └──────────────────────────────────────┘
+```
+
+</details>
+
+
+When controlling an EtherCAT motor on Jetson without a real-time kernel, it is recommended to **lock the CPU frequency to ensure stable synchronization with the EtherCAT device**.  
+
+After compiling the example, run the following commands in the terminal:  
+
+```bash
+sudo jetson_clocks # lock CPU frequency for stability
+sudo ./ethercat_master
+```
+
+After executing the program, wait for about two seconds — the motor will begin to move in a loop.
+<div align="center"><img width ="500" 
+    src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/ethercat-loop2.gif"/>
+</div>
+
+
 ## Resources
 
 - [Source code of EtherCAT Master](https://gitlab.com/etherlab.org/ethercat.git)
