@@ -1,5 +1,5 @@
 ---
-description: Create a doc page with rich content.
+description: This article provides a comprehensive introduction and usage guide for the Seeed Studio XIAO Debug Mate.
 title: Getting Started with XIAO Debug Mate
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.webp
 slug: /getting_started_with_xiao_debug_mate
