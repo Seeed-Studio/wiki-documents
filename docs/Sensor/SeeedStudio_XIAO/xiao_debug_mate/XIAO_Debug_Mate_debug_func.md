@@ -1,7 +1,7 @@
 ---
 description: Create a doc page with rich content.
 title: DAPLink Debugger
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/xiao_debug_mate/15.webp
 slug: /xiao_debug_mate_debug
 sidebar_position: 2
 last_update:
@@ -479,7 +479,7 @@ PyOCD is a Python-based tool for programming and debugging Arm Cortex-M microcon
 <TabItem value="Windows" label="Windows" default>
 
 1.  **Prerequisites**
-    Ensure you have **Python** installed on your system. If not, download it from the official [python.org](python.org) website and ensure you check the box **"Add Python to PATH"** during installation.
+    Ensure you have **Python** installed on your system. If not, download it from the official [python.org](https://www.python.org/) website and ensure you check the box **"Add Python to PATH"** during installation.
 
 2.  **Install PyOCD**
     Open a Command Prompt or PowerShell window and run the following command:

@@ -1,7 +1,7 @@
 ---
 description: Create a doc page with rich content.
 title: UART Monitor
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.webp
 slug: /xiao_debug_mate_serial
 sidebar_position: 3
 last_update:
@@ -38,6 +38,8 @@ These are the two pins that make serial communication happen:
 *   **TX (Transmit):** This is the "sending" pin. The microcontroller uses this pin to send data out.
 *   **RX (Receive):** This is the "receiving" pin. The microcontroller uses this pin to listen for incoming data.
 
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/uart_communica_logic.gif" style={{width:800, height:'auto'}}/></div> -->
+
 export const UartDiagram = () => (
   <div
     style={{
@@ -52,9 +54,9 @@ export const UartDiagram = () => (
     }}
   >
     <h3 style={{ color: "#333", marginBottom: "10px" }}>UART Communication Logic</h3>
-    <p style={{ color: "#666", fontSize: "0.9em", marginBottom: "20px" }}>
+    <div style={{ color: "#666", fontSize: "0.9em", marginBottom: "20px" }}>
       The Golden Rule: <strong>TX</strong> (Transmit) must connect to <strong>RX</strong> (Receive)
-    </p>
+    </div>
 
     <svg viewBox="0 0 600 350" style={{ width: "100%", height: "auto", display: "block" }}>
       <defs>
