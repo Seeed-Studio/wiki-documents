@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/RX8-U51H-M.webp
 slug: /fashionstar_servo
 last_update:
-  date: 11/21/2025
+  date: 11/24/2025
   author: Li Shanghang
 ---
 

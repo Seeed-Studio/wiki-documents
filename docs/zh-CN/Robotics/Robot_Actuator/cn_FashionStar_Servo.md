@@ -1,6 +1,6 @@
 ---
 description: This wiki provides tutorial for FashionStar Servo motors.
-title: 华新京舵机
+title: 华馨京舵机
 keywords:
 - actuator
 - motor
@@ -9,11 +9,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/RX8-U51H-M.webp
 slug: /cn/fashionstar_servo
 last_update:
-  date: 11/21/2025
+  date: 11/24/2025
   author: Li Shanghang
 ---
 
-# 华新京舵机文档中心
+# 华馨京舵机文档中心
 
 <div class="category-group">
   <div class="category-card robot-kits">
