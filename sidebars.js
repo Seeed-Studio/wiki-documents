@@ -8797,6 +8797,7 @@ const sidebars = {
               items: [
                 'zh-CN/Edge/NVIDIA_Jetson/Other_Devices/cn_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'zh-CN/Edge/NVIDIA_Jetson/Other_Devices/cn_RTL8822CE_Wireless_Module_for_Jetson',
+                'zh-CN/Edge/NVIDIA_Jetson/Other_Devices/cn_RM520N_Module_for_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
                 'zh-CN/Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson_Xavier_AGX_H01_Driver_Installation',
                 'zh-CN/Edge/NVIDIA_Jetson/Other_Devices/cn_Jetson-Mate',
@@ -13828,6 +13829,7 @@ const sidebars = {
               items: [
                 'es/Edge/NVIDIA_Jetson/Other_Devices/es_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'es/Edge/NVIDIA_Jetson/Other_Devices/es_RTL8822CE_Wireless_Module_for_Jetson',
+                'es/Edge/NVIDIA_Jetson/Other_Devices/es_RM520N_Module_for_Jetson',
                 'es/Edge/NVIDIA_Jetson/Other_Devices/es_Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
                 'es/Edge/NVIDIA_Jetson/Other_Devices/es_Jetson_Xavier_AGX_H01_Driver_Installation',
                 'es/Edge/NVIDIA_Jetson/Other_Devices/es_Jetson-Mate',
@@ -18859,6 +18861,7 @@ const sidebars = {
               items: [
                 'ja/Edge/NVIDIA_Jetson/Other_Devices/ja_How_to_Update_Orin_Nano_Developer_Kit_to_Super_Kit',
                 'ja/Edge/NVIDIA_Jetson/Other_Devices/ja_RTL8822CE_Wireless_Module_for_Jetson',
+                'ja/Edge/NVIDIA_Jetson/Other_Devices/ja_RM520N_Module_for_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Other_Devices/ja_Jetson_AGX_Orin_32GB_H01_Flash_Jetpack',
                 'ja/Edge/NVIDIA_Jetson/Other_Devices/ja_Jetson_Xavier_AGX_H01_Driver_Installation',
                 'ja/Edge/NVIDIA_Jetson/Other_Devices/ja_Jetson-Mate',
