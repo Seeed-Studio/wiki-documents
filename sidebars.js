@@ -3503,10 +3503,17 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'J501 Carrier Board',
+                  label: 'reServer J501 Carrier Board',
                   items: [
                     'Edge/NVIDIA_Jetson/Carrier_Boards/J501/reServer_Industrial_J501_Getting_Started',
                     'Edge/NVIDIA_Jetson/Carrier_Boards/J501/Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'J501-Mini Carrier Board',
+                  items: [
+                    'Edge/NVIDIA_Jetson/Carrier_Boards/J501_Mini/Robotics_J501_Mini_Hardware_Interfaces_Usage',
                   ],
                 },
                 {
