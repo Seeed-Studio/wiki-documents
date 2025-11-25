@@ -619,7 +619,7 @@ XIAO_Debug_Mate_DAPLink_Package/
 ```
 
 *   **`examples/`**
-    此文件夹包含各种 XIAO 开发板的预编译示例固件文件（例如 `.bin`、`.elf`、`.hex`），这些文件是从 Arduino 导出的。这些将在后续教程中用于演示如何烧录和调试微控制器。
+    此文件夹包含从 Arduino 导出的各种 XIAO 开发板的预编译示例固件文件（例如 `.bin`、`.elf`、`.hex`）。这些将在后续教程中用于演示如何烧录和调试微控制器。
 
 *   **`target/`**
     此文件夹包含官方 OpenOCD 发行版中可能缺失的 XIAO 开发板的目标配置（`.cfg`）文件。当您在现有的 OpenOCD 安装中使用 XIAO SAMD21 或 XIAO RA4M1 等开发板时，您需要手动将这些配置文件添加到您的 OpenOCD 环境中。具体步骤将在后面介绍。
@@ -824,12 +824,12 @@ nRF52 的配置包含在标准 xPack OpenOCD 中。打开终端并运行命令�
 ##### 适用于 Seeed Studio XIAO MG24
 
 :::warning[重要]
-XIAO MG24 需要 `XIAO_Debug_Mate_DAPLink_Package` 中包含的特殊版本 OpenOCD。**不要**使用系统范围的 OpenOCD 安装。您**必须**从包中提供的特定目录内运行命令。
+XIAO MG24 需要 `XIAO_Debug_Mate_DAPLink_Package` 中包含的特殊版本 OpenOCD。**不要**使用您系统范围的 OpenOCD 安装。您**必须**从包中提供的特定目录内运行命令。
 :::
 
 **1. 准备您的终端**
 
-打开命令行工具并导航到解压包中适合您操作系统的正确文件夹。
+打开您的命令行工具，并导航到解压包中适合您操作系统的正确文件夹。
 
 *   **Windows：**
     ```bash
@@ -1416,7 +1416,7 @@ pyocd flash -t r7fa4m1ab examples/Bootloader_RA4M1.hex —erase chip
 由于 Seeed Studio 开发板托管在第三方仓库中，您的特定开发板可能默认不会出现在搜索列表中。如果发生这种情况，您可以选择一个通用开发板（或任何可用的开发板）来初始化项目，我们将在下一步中进行修正。
 :::
 
-3.  **配置 `platformio.ini`**：这是最关键的步骤。要启用 XIAO Debug Mate 调试并正确识别开发板，您必须修改项目根目录中的 `platformio.ini` 文件。
+3.  **配置 `platformio.ini`**：这是最关键的步骤。要启用 XIAO Debug Mate 调试并正确识别开发板，您必须修改位于项目根目录的 `platformio.ini` 文件。
 
     **添加 Seeed Studio 开发板支持：**
     Seeed Studio 开发板不包含在默认的 PlatformIO 注册表中，而是在**第三方仓库**中维护。要使用它们，您必须在配置中指定仓库 URL。
@@ -1491,7 +1491,7 @@ debug_tool = cmsis-dap
 </TabItem>
 <TabItem value="ra4m1" label="XIAO RA4M1">
 
-注意 RA4M1 是一个特殊情况。它使用 `pyocd` 进行上传，但仍使用 `cmsis-dap` 进行调试。
+请注意，RA4M1 是一个特殊情况。它使用 `pyocd` 进行上传，但仍使用 `cmsis-dap` 进行调试。
 
 ```ini
 [env:seeed-xiao-ra4m1]
@@ -1553,11 +1553,11 @@ debug_tool = cmsis-dap
 当程序在断点处暂停时，您可以检查甚至修改变量的状态。
 
 1.  **查看变量（读取）**：在 "Run and Debug" 侧面板中，"VARIABLES" 部分显示当前作用域内的所有局部和全局变量及其当前值。
-2.  **监视变量**：如果您想监视特定变量或表达式，转到 "WATCH" 部分，点击 `+` 图标，并输入变量名（例如，`myVariable` 或 `&myVariable` 查看其内存地址）。
+2.  **监视变量**：如果您想监视特定变量或表达式，请转到 "WATCH" 部分，点击 `+` 图标，并输入变量名（例如，`myVariable` 或 `&myVariable` 以查看其内存地址）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/22.png" style={{width:1000, height:'auto'}}/></div>
 
-3.  **修改变量（写入）**：在 "VARIABLES" 或 "WATCH" 部分，您通常可以双击变量的值来输入新值。按 Enter 应用更改。这对于在不重启程序的情况下测试不同条件非常有用。
+3.  **修改变量（写入）**：在 "VARIABLES" 或 "WATCH" 部分，您通常可以双击变量的值来输入新值。按 Enter 键应用更改。这对于在不重启程序的情况下测试不同条件非常有用。
 
 
 ## 故障排除

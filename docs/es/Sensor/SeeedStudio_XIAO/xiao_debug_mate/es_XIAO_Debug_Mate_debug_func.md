@@ -357,7 +357,7 @@ Este proceso refleja la configuración manual de Windows.
 
 1.  **Descargar el paquete OpenOCD**
 
-Ve a la [página de releases de xPack OpenOCD](https://github.com/xpack-dev-tools/openocd-xpack/releases). Encuentra la versión más reciente y descarga el archivo correcto para tu Mac (ej., `...-darwin-x64.tar.gz` para Intel o `...-darwin-arm64.tar.gz` para Apple Silicon).
+Ve a la [página de releases de xPack OpenOCD](https://github.com/xpack-dev-tools/openocd-xpack/releases). Encuentra la última versión y descarga el archivo correcto para tu Mac (ej., `...-darwin-x64.tar.gz` para Intel o `...-darwin-arm64.tar.gz` para Apple Silicon).
 
 2.  **Extraer los Archivos**
 
@@ -415,7 +415,7 @@ Este proceso refleja la configuración manual en otros sistemas operativos.
 
 1.  **Descargar el paquete OpenOCD**
 
-Ve a la [página de releases de xPack OpenOCD](https://github.com/xpack-dev-tools/openocd-xpack/releases). Encuentra la versión más reciente y descarga el archivo de Linux (`...-linux-x64.tar.gz`).
+Ve a la [página de releases de xPack OpenOCD](https://github.com/xpack-dev-tools/openocd-xpack/releases). Encuentra la última versión y descarga el archivo de Linux (`...-linux-x64.tar.gz`).
 
 2.  **Extraer los Archivos**
 
@@ -512,7 +512,7 @@ PyOCD es una herramienta basada en Python para programar y depurar microcontrola
 <TabItem value="MacOS" label="MacOS">
 
 1.  **Prerrequisitos**
-    MacOS usualmente viene con Python, pero se recomienda usar Homebrew o el instalador oficial para obtener la versión más reciente. Abre tu Terminal.
+    MacOS usualmente viene con Python, pero se recomienda usar Homebrew o el instalador oficial para obtener la última versión. Abre tu Terminal.
 
 2.  **Instalar PyOCD**
     Ejecuta el siguiente comando en tu Terminal:
@@ -622,7 +622,7 @@ XIAO_Debug_Mate_DAPLink_Package/
     Esta carpeta contiene archivos de firmware de ejemplo precompilados (ej., `.bin`, `.elf`, `.hex`) para varias placas XIAO, que fueron exportados desde Arduino. Estos se usarán en tutoriales posteriores para demostrar cómo flashear y depurar los microcontroladores.
 
 *   **`target/`**
-    Esta carpeta contiene archivos de configuración de objetivo (`.cfg`) para placas XIAO que podrían faltar en la distribución oficial de OpenOCD. Cuando uses placas como el XIAO SAMD21 o XIAO RA4M1 con la instalación existente de OpenOCD de tu sistema, necesitarás agregar manualmente estos archivos de configuración a tu entorno OpenOCD. Los pasos específicos sobre cómo hacer esto se cubrirán más adelante.
+    Esta carpeta contiene archivos de configuración de objetivo (`.cfg`) para placas XIAO que podrían faltar en la distribución oficial de OpenOCD. Cuando uses placas como el XIAO SAMD21 o XIAO RA4M1 con la instalación existente de OpenOCD de tu sistema, necesitarás agregar manualmente estos archivos de configuración a tu entorno OpenOCD. Los pasos específicos de cómo hacer esto se cubrirán más adelante.
 
 *   **`XIAO_MG24_..._OpenOCD-v0.12.0/`**
     Este es un componente especial y muy importante para la placa **XIAO MG24**. Actualmente, el soporte para este chip no está disponible en las versiones oficiales de OpenOCD o las distribuciones estándar de xPack. Para resolver esto, proporcionamos paquetes OpenOCD completos e independientes tanto para Windows (`XIAO_MG24_Win_...`) como para macOS/Linux (`XIAO_MG24_Mac_Linux_...`). Cuando trabajes con el XIAO MG24, **debes** usar el ejecutable `openocd` proporcionado dentro de estas carpetas específicas.
@@ -642,7 +642,7 @@ El XIAO Debug Mate está diseñado para una experiencia perfecta y plug-and-play
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/connect_xiao.gif" style={{width:600, height:'auto'}}/></div>
 
 :::note
-Algunas de las placas XIAO más tempranas, como el **XIAO SAMD21**, **XIAO RP2040**, y **XIAO nRF52840**, fueron diseñadas antes de que se estableciera un estándar unificado para las almohadillas del lado posterior. Aunque los pines pogo del Debug Mate están posicionados para ser lo más compatibles posible, las ligeras variaciones en estas placas más antiguas pueden llevar a un contacto imperfecto.
+Algunas de las placas XIAO más tempranas, como el **XIAO SAMD21**, **XIAO RP2040**, y **XIAO nRF52840**, fueron diseñadas antes de que se estableciera un estándar unificado para las almohadillas del lado posterior. Aunque los pines pogo del Debug Mate están posicionados para ser lo más compatibles posible, ligeras variaciones en estas placas más antiguas pueden llevar a un contacto imperfecto.
 
 Si experimentas una conexión de depuración inestable, intenta **ajustar ligeramente la posición** de la placa XIAO dentro del socket. Puede que no necesites empujarla completamente hacia abajo. Un pequeño cambio a menudo puede asegurar que los pines pogo hagan contacto sólido con las almohadillas SWD en la parte posterior del XIAO.
 :::
@@ -673,7 +673,7 @@ Una vez conectado, puedes configurar OpenOCD para usar la interfaz CMSIS-DAP e i
 
 ## Interactuando con OpenOCD vía Telnet
 
-Aunque los IDEs modernos proporcionan una interfaz gráfica para la depuración, a veces necesitas una forma más directa y de bajo nivel para interactuar con el depurador. Aquí es donde entra Telnet. OpenOCD ejecuta un servidor Telnet que te permite conectarte directamente y enviar comandos basados en texto para controlar el chip objetivo. Esto es increíblemente útil para verificaciones rápidas, automatización de tareas mediante scripts, o depuración de problemas cuando un IDE completo no está disponible o no es necesario.
+Mientras que los IDEs modernos proporcionan una interfaz gráfica para la depuración, a veces necesitas una forma más directa y de bajo nivel para interactuar con el depurador. Aquí es donde entra Telnet. OpenOCD ejecuta un servidor Telnet que te permite conectarte directamente y enviar comandos basados en texto para controlar el chip objetivo. Esto es increíblemente útil para verificaciones rápidas, automatización de tareas mediante scripts, o depuración de problemas cuando un IDE completo no está disponible o no es necesario.
 
 ### Habilitando el Cliente Telnet
 
@@ -723,11 +723,11 @@ El paquete estándar de OpenOCD no incluye el archivo de configuración para el 
 *   **Archivo Fuente:** Desde el `XIAO_Debug_Mate_DAPLink_Package`, encuentra el archivo: `target/XIAO_SAMD21/at91samd21g18.cfg`.
 *   **Carpeta Destino:** Copia este archivo en la carpeta de scripts `target` de tu instalación xPack OpenOCD. La ruta variará según el SO:
 
-    *   **Windows:** `C:\Users\TuNombre\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
     *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
-Reemplaza `TuNombre` y `xpack-openocd-0.12.0-7` con tu nombre de usuario real y la versión de OpenOCD que instalaste.
+Reemplaza `YourName` y `xpack-openocd-0.12.0-7` con tu nombre de usuario real y la versión de OpenOCD que instalaste.
 :::
 
 **2. Ejecutar el Comando OpenOCD**
@@ -799,11 +799,11 @@ Similar al SAMD21, el paquete estándar de OpenOCD no incluye el archivo de conf
 *   **Archivo Fuente:** Desde el `XIAO_Debug_Mate_DAPLink_Package`, encuentra el archivo: `target/XIAO_RA4M1/ra4m1.cfg`.
 *   **Carpeta Destino:** Copia este archivo en la carpeta de scripts `target` de tu instalación xPack OpenOCD.
 
-    *   **Windows:** `C:\Users\TuNombre\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
     *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
-Reemplaza `TuNombre` y `xpack-openocd-0.12.0-7` con tu nombre de usuario real y la versión de OpenOCD que instalaste.
+Reemplaza `YourName` y `xpack-openocd-0.12.0-7` con tu nombre de usuario real y la versión de OpenOCD que instalaste.
 :::
 
 **2. Ejecutar el Comando OpenOCD**
@@ -975,7 +975,7 @@ Esta tabla resume qué placas XIAO y tipos de archivo son compatibles para el fl
 </div>
 
 1. Los elementos marcados con ❌ en esta tabla de compatibilidad son muestras que fallaron las pruebas con OpenOCD v0.12.0. Por favor usa otros archivos de firmware para ahorrar tiempo.
-2. Archivos de bootloader: Solo se proporcionan archivos de bootloader XIAO y comandos de flasheo aquí. Si este modelo XIAO no viene con archivos de bootloader, se marcará con ❌.
+2. Archivos de bootloader: Solo se proporcionan archivos de bootloader XIAO y comandos de flasheo aquí. Si este modelo XIAO no viene con archivos de bootloader, será marcado con ❌.
 3. **El XIAO RA4M1 y XIAO MG24 no soportan el flasheo de archivos `.elf`. Intentar flashear archivos `.elf` al XIAO RA4M1 o XIAO MG24 resultará en dañar el dispositivo**.
 
 ### Prerrequisitos

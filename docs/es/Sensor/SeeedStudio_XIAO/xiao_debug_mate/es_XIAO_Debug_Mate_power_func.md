@@ -95,15 +95,15 @@ Esta vista está optimizada para la observación intuitiva de proyectos de bajo 
     *   `P`: Potencia Instantánea, escalada automáticamente y mostrada en **Vatios (W)** y **milivatios (mW)**.
 
 *   **Propósito y Caso de Uso:**
-    Al desarrollar dispositivos alimentados por batería o eficientes en energía, la corriente puede caer al rango de microamperios. Esta UI **elimina la necesidad de conversión manual de unidades**, permitiéndote entender instantáneamente la magnitud del consumo de potencia de tu dispositivo. Es perfecta para:
-    *   Verificar que tu dispositivo ha entrado exitosamente en modo de sueño profundo (la corriente debería estar en el rango de µA).
+    Cuando desarrollas dispositivos alimentados por batería o eficientes en energía, la corriente puede caer al rango de microamperios. Esta UI **elimina la necesidad de conversión manual de unidades**, permitiéndote entender instantáneamente la magnitud del consumo de potencia de tu dispositivo. Es perfecta para:
+    *   Verificar que tu dispositivo ha entrado exitosamente en un modo de sueño profundo (la corriente debería estar en el rango de µA).
     *   Comparar el consumo de potencia de diferentes optimizaciones de código sin tener que calcular mentalmente las unidades.
 
 #### UI 3: Análisis Estadístico y Estimación de Batería
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/12.jpg" style={{width:600, height:'auto'}}/></div>
 
-Esta vista está diseñada para pruebas a largo plazo y validación del producto final.
+Esta vista está diseñada para pruebas a largo plazo y validación de producto final.
 
 *   **Lo que Muestra:**
     *   `Min/Max`: La **Corriente (A)** y **Potencia (W)** mínima y máxima registradas durante la sesión.

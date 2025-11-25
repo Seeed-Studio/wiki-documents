@@ -325,7 +325,7 @@ El menú de velocidad de baudios te permite seleccionar entre nueve velocidades 
 ### Conceptos Clave y Limitaciones
 
 *   **Un Depurador, No un Puente:** El Debug Mate es una herramienta de diagnóstico, no un puente de comunicación. No reenviará automáticamente datos del puerto XIAO al puerto Grove.
-*   **Parámetros Serie Fijos:** Los parámetros serie principales (8-N-1) están fijos en el firmware. Los usuarios avanzados pueden modificar el código de código abierto para cambiarlos.
+*   **Parámetros Serie Fijos:** Los parámetros serie principales (8-N-1) están fijos en el firmware. Los usuarios avanzados pueden modificar el código de fuente abierta para cambiarlos.
 *   **Monitoreo de Fuente Única:** Solo puedes monitorear activamente una fuente (XIAO o Grove) a la vez.
 
 ## Agradecimientos Especiales

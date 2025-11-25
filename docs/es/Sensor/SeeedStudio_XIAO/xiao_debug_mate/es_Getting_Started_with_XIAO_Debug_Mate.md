@@ -272,7 +272,7 @@ Para guías detalladas sobre cómo usar el depurador DAPLink, monitor UART y ana
 
 Si necesitas reiniciar el XIAO Debug Mate, tienes dos opciones:
 1.  Desconectar y volver a conectar el cable de alimentación USB-C.
-2.  Usar el **botón de Reinicio** oculto. Está ubicado en un pequeño orificio directamente debajo del puerto USB-C. Puedes presionarlo suavemente usando una herramienta extractora de tarjeta SIM o un clip.
+2.  Usar el **botón de Reinicio** oculto. Está ubicado en un pequeño orificio directamente debajo del puerto USB-C. Puedes presionarlo suavemente usando una herramienta de expulsión de tarjeta SIM o un clip.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/13.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -292,7 +292,7 @@ Para ingresar al Modo Flash:
 
 ## Firmware de fábrica
 
-Si necesitas restaurar el firmware de fábrica original, puedes hacerlo usando uno de los métodos a continuación. Primero, pon el dispositivo en **Modo Boot** como se describe en la sección anterior.
+Si necesitas restaurar el firmware original de fábrica, puedes hacerlo usando uno de los métodos a continuación. Primero, pon el dispositivo en **Modo Boot** como se describe en la sección anterior.
 
 ### Método 1: Usando Scripts de Flash
 
@@ -397,7 +397,7 @@ pio run --target upload
 
 Este método te permite:
 - Modificar el firmware para agregar características personalizadas
-- Compilar la versión de desarrollo más reciente
+- Compilar la última versión de desarrollo
 - Contribuir al proyecto de código abierto
 - Aprender de la implementación del código fuente
 
@@ -407,7 +407,7 @@ Asegúrate de tener PlatformIO instalado. Puedes instalarlo como una extensión 
 
 ## Solución de Problemas
 
-### P1: Guía de Compatibilidad de Pines de XIAO Debug Mate
+### P1: Guía de Compatibilidad de Pines del XIAO Debug Mate
 
 **Problema:** Tengo problemas con la función de depuración; parece que hay una mala conexión.
 

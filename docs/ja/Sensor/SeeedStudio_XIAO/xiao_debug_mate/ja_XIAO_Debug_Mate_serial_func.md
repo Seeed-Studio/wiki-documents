@@ -150,7 +150,7 @@ export const UartDiagram = () => (
       {/* Labels */}
       <text x="300" y="110" textAnchor="middle" fontSize="12" fill="#e67e22" fontWeight="bold">データフロー（TX → RX）</text>
       <text x="300" y="200" textAnchor="middle" fontSize="12" fill="#3498db" fontWeight="bold">データフロー（RX ← TX）</text>
-      <text x="300" y="240" textAnchor="middle" fontSize="12" fill="#333">共通グラウンド（GND）</text>
+      <text x="300" y="240" textAnchor="middle" fontSize="12" fill="#333">共通グランド（GND）</text>
     </svg>
 
     <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "15px", fontSize: "0.85em", color: "#555" }}>
@@ -310,7 +310,7 @@ Debug Mate は両方のソースからのデータを同時に表示すること
 ソースを切り替えた後、新しいソースからのコンテンツがすぐに表示されない場合があります。これは、プリンターが前の入力ソースのデータの印刷が完了するのを待ってから、新しいソースからの情報を受信するためです。
 :::
 
-3.  **メニューに入る：** ボーレートオプションについて、希望する設定がハイライトされた状態で、**ボタンを押して**設定メニューを開きます。
+3.  **メニューへの入り方：** ボーレートオプションについて、希望する設定がハイライトされた状態で、**ボタンを押して**設定メニューを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/30.jpg" style={{width:600, height:'auto'}}/></div>
 

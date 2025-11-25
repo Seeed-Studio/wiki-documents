@@ -146,7 +146,7 @@ XIAOボードと接続されたセンサーやモジュールの合計消費電�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/35.jpg" style={{width:800, height:'auto'}}/></div>
 
 :::danger 重要
-1. 測定に含めるには、周辺機器はヘッダーの**5Vピン**から電力を供給される**必要があります**。3.3Vピンから供給される電力はXIAOの内部レギュレーターによって供給され、Debug Mateでは測定**されません**。
+1. 測定に含めるには、周辺機器はヘッダーの**5Vピン**から電力を供給される**必要があります**。3.3Vピンから消費される電力はXIAOの内部レギュレーターによって供給され、Debug Mateでは測定**されません**。
 
 2. 電力測定のために周辺機器をDebug MateのGroveポートに接続**しないでください**。その電力ラインはXIAO測定回路とは別です。
 :::
