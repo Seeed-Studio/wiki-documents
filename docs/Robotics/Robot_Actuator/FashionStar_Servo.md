@@ -6,14 +6,25 @@ keywords:
 - motor
 - arm
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/RX8-U51H-M.webp
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp
 slug: /fashionstar_servo
 last_update:
-  date: 11/21/2025
+  date: 11/24/2025
   author: Li Shanghang
 ---
 
 # FashionStar Servo Motors Documents Hub
+
+<div align="center">
+
+<img width={800} src="https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp" className="nav-icon" alt="Slamtec LiDAR"/>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
+    </a>
+</div>
 
 <div class="category-group">
   <div class="category-card robot-kits">
