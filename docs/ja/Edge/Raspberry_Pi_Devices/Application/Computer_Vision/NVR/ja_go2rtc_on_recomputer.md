@@ -1,11 +1,11 @@
 ---
 description: このwikiでは、reComputer上でgo2rtcを使用する方法を説明します。
-title: reComputer上でgo2rtcを使用する
+title: reComputer上のgo2rtc
 keywords:
   - reComputer
   - go2rtc
   - NVR
-image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.webp
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/result_go2rtc.webp
 slug: /ja/go2rtc_on_recomputer
 last_update:
   date: 11/05/2025
@@ -14,7 +14,7 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# reComputer上のgo2rtc
+# reComputer で go2rtc を使う
 
 ## はじめに
 
@@ -56,7 +56,7 @@ no_comments: false # for Disqus
   </tr>
 </table>
 
-## go2rtcのダウンロード
+## go2rtcのダウンロードと実行
 
 ### システムの更新
 
@@ -118,7 +118,7 @@ server:
 
 すべてを設定したら、現在のカメラからのライブフィードを表示できます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/result_go2rtc.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif" alt="pir" width="1000" height="auto"/></p>
 
 ## 技術サポート & 製品ディスカッション
 

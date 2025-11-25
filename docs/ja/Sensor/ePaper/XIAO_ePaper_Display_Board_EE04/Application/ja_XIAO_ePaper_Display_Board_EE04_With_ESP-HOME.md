@@ -258,7 +258,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -398,7 +398,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -544,7 +544,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -805,7 +805,7 @@ display:
 </Tabs>
 
 
-**INSTALL**をクリックしてコードをデバイスにインストールすると、以下の画像が表示されます。
+**INSTALL** をクリックしてコードをデバイスにインストールすると、以下の画像が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphome_ee042.png" style={{width:1000, height:'auto'}}/></div><br />
 
@@ -813,34 +813,34 @@ display:
 <TabItem value='ブラウザ経由でインストール'>
 
 :::tip
-Home Assistantホスト（Raspberry PI/Green/Yellowなど）が遠くにある場合は、この方法をお勧めします。手元にあるコンピュータでインストールできます。
+Home Assistant ホスト（Raspberry PI/Green/Yellow など）が遠くにある場合は、この方法をお勧めします。手元にあるコンピュータでインストールできます。
 :::
 
-まず、**Manual download**をクリックしてコンパイル済みファームウェアをダウンロードする必要があります。
+まず、**Manual download** をクリックしてコンパイル済みファームウェアをダウンロードする必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-ファームウェアをePaperパネルにアップロードするこのウェブサイトを開きます。
+ファームウェアを ePaper パネルにアップロードするこのウェブサイトを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
-ESPHomeに戻ってファームウェアをダウンロードします。
+ESPHome に戻ってファームウェアをダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-**Factory format**を選択します。
+**Factory format** を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
-USBケーブルを使用して**ePaperパネルをコンピュータに接続**し、**CONNECT**をクリックします。
+USB ケーブルを使用して **ePaper パネルをコンピュータに接続** し、**CONNECT** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-usbmodemxxx（WindowsではCOMxxx）を選択し、connectをクリックします。
+usbmodemxxx（Windows では COMxxx）を選択し、connect をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-**INSTALL**をクリックし、先ほどダウンロードしたファームウェアを選択します。
+**INSTALL** をクリックし、先ほどダウンロードしたファームウェアを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:800, height:'auto'}}/></div>
 
@@ -853,10 +853,10 @@ usbmodemxxx（WindowsではCOMxxx）を選択し、connectをクリックしま�
 <TabItem value='ホスト経由でインストール'>
 
 :::tip
-Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある場合は、より簡単なこの方法をお勧めします。
+Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある場合は、より簡単なこの方法をお勧めします。
 :::
 
-デバイスにコードをインストールする前に、USBケーブルを使用して**このデバイスをHome Assistantを実行しているRaspberry PiまたはHA Green（Yellow）などに接続**する必要があります。
+デバイスにコードをインストールする前に、USB ケーブルを使用して **このデバイスを Home Assistant を実行している Raspberry Pi または HA Green（Yellow）などに接続** する必要があります。
 
 画像に従ってオプションをクリックし、デバイスにコードをインストールします。
 
@@ -893,14 +893,14 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 
 ### 簡単なグラフィックの描画
 
-このYAMLコード例は、ESPHomeプロジェクト用にSPIインターフェースとXIAO ePaper Display Board(ESP32-S3) - EE04を設定します。`lambda`セクションには、画面上に簡単な図形を描画する描画コマンドが含まれています：
+このサンプルYAMLコードは、ESPHomeプロジェクト用にSPIインターフェースとXIAO ePaper Display Board(ESP32-S3) - EE04を設定します。`lambda`セクションには、画面上に簡単な図形を描画する描画コマンドが含まれています：
 
 - 2つの長方形（1つは位置(10, 10)でサイズ100x50、もう1つは(150, 10)でサイズ50x50）
 - 1つの円（位置(250, 35)で半径25）
 - 2つの塗りつぶし長方形（位置(10, 80)と(150, 80)）
 - 1つの塗りつぶし円（位置(250, 105)で半径25）
 
-この例は、以下のコードをコピーしてYAMLファイルの`captive_portal`コード行の後に貼り付けることで使用できます。
+以下のコードをコピーして、YAMLファイルの`captive_portal`コード行の後に貼り付けることで、この例を使用できます。
 
 <Tabs>
 <TabItem value="1.54 Inch Monochrome" label="1.54インチ モノクロ" default>
@@ -974,7 +974,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1113,7 +1113,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1308,7 +1308,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1683,7 +1683,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1836,7 +1836,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2068,7 +2068,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2366,7 +2366,7 @@ display:
 
 :::
 
-ステップ 7. 設定を保存し、XIAO ePaper Display Board(ESP32-S3) - EE04 にアップロードします。以下の画像のようなフィードバックが表示されれば、コードが正常に動作していることを意味します。
+ステップ 7. 設定を保存し、XIAO ePaper Display Board(ESP32-S3) - EE04 にアップロードします。以下の画像のようなフィードバックが表示されれば、コードが正常に実行されています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee045.png" style={{width:1000, height:'auto'}}/></div><br />
 
@@ -2598,7 +2598,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2670,7 +2670,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2871,7 +2871,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -3135,7 +3135,7 @@ display:
 
 **画像の位置指定**
 
-画像を画面上の特定の座標に配置するには：
+画面上の特定の座標に画像を配置するには：
 
 ```yaml
 lambda: |-
@@ -3190,7 +3190,7 @@ ePaperディスプレイのリフレッシュレートは制限されている�
 - [ESPHome詳細例](https://esphome.io/components/display/)
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,11 +1,11 @@
 ---
 description: Este wiki demuestra cómo usar go2rtc en recomputer.
-title: Usar go2rtc en reComputer
+title: go2rtc en reComputer
 keywords:
   - reComputer
   - go2rtc
   - NVR
-image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.webp
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/result_go2rtc.webp
 slug: /es/go2rtc_on_recomputer
 last_update:
   date: 11/05/2025
@@ -18,7 +18,7 @@ no_comments: false # for Disqus
 
 ## Introducción
 
-[go2rtc](https://github.com/AlexxIT/go2rtc) es un framework WebRTC de código abierto diseñado para facilitar la transmisión de medios en tiempo real a través de internet. Es desarrollado por el equipo XTLS y tiene como objetivo combinar WebRTC con otros protocolos de medios como RTSP, RTMP y HLS para una transmisión eficiente de video y audio en tiempo real.
+[go2rtc](https://github.com/AlexxIT/go2rtc) es un framework WebRTC de código abierto diseñado para facilitar la transmisión de medios en tiempo real a través de internet. Está desarrollado por el equipo XTLS y tiene como objetivo combinar WebRTC con otros protocolos de medios como RTSP, RTMP y HLS para una transmisión eficiente de video y audio en tiempo real.
 
 [WebRTC](https://github.com/webrtc) (Web Real-Time Communication) es un protocolo ampliamente utilizado para establecer conexiones peer-to-peer y habilitar el intercambio de medios en tiempo real como videollamadas, transmisiones en vivo y otras aplicaciones en tiempo real. go2rtc facilita la implementación de WebRTC en entornos donde diferentes protocolos de medios necesitan ser convertidos en streams WebRTC para transmisión de baja latencia y escalable.
 
@@ -56,7 +56,7 @@ no_comments: false # for Disqus
   </tr>
 </table>
 
-## Descargar go2rtc
+## Descargar y ejecutar go2rtc
 
 ### Actualizar sistema
 
@@ -118,7 +118,7 @@ Abre el puerto `1984` en el host, y haz clic en el botón `Stream`.
 
 Una vez que hayamos configurado todo, podemos ver la transmisión en vivo de la cámara actual.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/result_go2rtc.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif" alt="pir" width="1000" height="auto"/></p>
 
 ## Soporte Técnico y Discusión de Productos
 

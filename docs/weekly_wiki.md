@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/27/2025
+  date: 11/17/2025
   author: Frank
 ---
 
@@ -17,72 +17,63 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 3rd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 17th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [reCamera HQ POE Getting Started Guide](https://wiki.seeedstudio.com/recamera_hd_poe_getting_started/)
+### [iSpy on reComputer](https://wiki.seeedstudio.com/ispy_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-Welcome to reCamera HQ PoE! Featuring an advanced CMOS sensor and an M12 lens mount for flexible lens replacement, reCamera 2002 HQ PoE delivers sharp, clear images. With PoE support, power and data run through a single Ethernet cable. This guide helps you set up and start using its powerful AI Vision features quickly.
-
-</div>
-
-### [YOLO11n Model Conversion for reCamera: Complete Guide](https://wiki.seeedstudio.com/model_conversion_guide/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/013.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-In this tutorial, you’ll convert a YOLO11n ONNX model into an INT8 CV181x .cvimodel and deploy it on reCamera. We cover setup (cloud or local), calibration with 100 images, TPU-MLIR conversion, validation, deployment, and troubleshooting.
+This guide shows how to deploy the open-source video surveillance application iSpy on the reComputer R series edge computing devices from Seeed Studio. It covers hardware prerequisites, system updates, installing Docker and Docker Compose, creating the `docker-compose.yaml` configuration, and adding cameras to start live monitoring.
 
 </div>
 
-### [EE04 ePaper Display with EEZ Studio](https://wiki.seeedstudio.com/epaper_ee04_eezstudio/)
+### [Getting started for Home Assistant with reCamera](https://wiki.seeedstudio.com/getting_started_for_home_assistant_with_recamera/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_effect_2_2.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This tutorial uses the XIAO ePaper Display Board EE04, based on EEZ Studio and by compiling and uploading the program using the Arduino IDE.
+This guide walks you through setting up Home Assistant on a Seeed Studio reCamera system, including hardware prerequisites, installing Docker, deploying Home Assistant in a container, and configuring the camera integration and automation with the system’s data.
 
 </div>
 
-### [XIAO ePaper Display Board EE04 with the SenseCraft HMI](https://wiki.seeedstudio.com/EE04_with_hmi/)
+### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[SenseCraft HMI](https://sensecraft.seeed.cc/hmi) lets you create professional, no-code visual interfaces through an intuitive cloud editor. Paired with the ***XIAO ePaper Display Board (ESP32-S3) – EE04***, it brings seamless integration for low-power ePaper dashboards and smart displays. This tutorial walks you through a hands-on example using a 7.3" Spectra™ 6 E-Ink display.
+**EtherCAT (Ethernet for Control Automation Technology)** is an open-source, high-performance real-time Industrial Ethernet fieldbus protocol based on **IEEE 802.3 Ethernet standards**. It operates on a **master-slave architecture** and is renowned for its exceptional speed, precision, and flexibility in industrial automation environments. This document uses the [**recomputer robotics J401**](https://www.seeedstudio.com/reComputer-Robotics-Carrier-board-p-6442.html) as the **EtherCAT master** and the [**MyActuator X4**](https://www.seeedstudio.com/Myactuator-X4-P12-5-10-Planetarty-Actuator-p-6470.html) as the **slave** to demonstrate how to establish communication between a Jetson and EtherCAT devices.
 
 </div>
 
-### [Usage of the OpenEPaperLink and ePaper config builder](https://wiki.seeedstudio.com/epaper_breakout_board_with_oepl/)
+### [reSpeaker XVF3800 Control with Python](https://wiki.seeedstudio.com/respeaker_xvf3800_python_sdk/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/seeed_logo_2.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-OpenEPaperLink (OEPL) is an open-source firmware and communication protocol for electronic shelf labels, supporting multiple displays via ESP32 or nRF52840 access points with 802.15.4 radio. In this tutorial, we use OPEL Config Builder to adjust e-paper parameters and OEPL Image Uploader to upload images.
+In this section, we are going to talk about how to control your ReSpeaker XVF-3800 using the Python SDK. It makes development more convenient for users who want to build their own applications.
+For instance, you can detect where the voice is coming from, perform voice activity detection (VAD), control LEDs, and much more.
 
 </div>
 
-## Existing Wiki Updated
+<!-- ## Existing Wiki Updated
 
 ### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
 
-We have added [instructions for using the User Buttons](https://wiki.seeedstudio.com/epaper_ee04/#user-buttons-on-xiao-epaper-display-boardesp32-s3---ee04) on the XIAO ePaper Display Board (ESP32-S3) - EE04.
+We have added [instructions for using the User Buttons](https://wiki.seeedstudio.com/epaper_ee04/#user-buttons-on-xiao-epaper-display-boardesp32-s3---ee04) on the XIAO ePaper Display Board (ESP32-S3) - EE04. -->
 
 ## The Efforts of Contributor
 
-### [Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS](https://wiki.seeedstudio.com/local_chatbot_recomputer/)
+<!-- ### [Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS](https://wiki.seeedstudio.com/local_chatbot_recomputer/)
 
 This project brings the dream of a **fully voice-interactive AI assistant** to life — running entirely **on local hardware**, without reliance on cloud services.  
-By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Large Language Models (LLMs)** using **Ollama**, the system enables natural, private, and real-time conversations between humans and machines. The entire setup runs inside Docker containers and can be deployed on **NVIDIA Jetson devices**, **edge computers**, or any Linux-based system with GPU acceleration.
+By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Large Language Models (LLMs)** using **Ollama**, the system enables natural, private, and real-time conversations between humans and machines. The entire setup runs inside Docker containers and can be deployed on **NVIDIA Jetson devices**, **edge computers**, or any Linux-based system with GPU acceleration. -->
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!
@@ -221,5 +212,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
 - [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
 - [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
+- [weekly wiki on 2025.11.03rd](/Seeed_Elderly/weekly_wiki/wiki251103)
+- [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/wiki251110)
 
 </details>

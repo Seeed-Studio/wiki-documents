@@ -7,9 +7,10 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /cn/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 10/29/2025
-  author: Michelle
+  date: 11/24/2025
+  author: Michelle Huang
 ---
+
 :::tip
 Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L1 Pro 的，但它适用于 L1 系列中的所有其他产品。
 :::
@@ -27,6 +28,10 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 
 ### 第二部分 固件刷写
 
+:::caution note
+请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+:::
+
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/hcjai4J1894?si=S_jaEfXVThWXscVJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -35,6 +40,26 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 
 <div class="video-container">
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Q97w2ompPtI?si=yLbAgE4cBbT6NbHS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+#### 四向摇杆
+L1 E-Ink 固件目前不支持四向摇杆。如果您想使用摇杆，请购买其他型号。
+
+#### 菜单栏
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
+只有 2.7 固件支持菜单栏。如果您想使用菜单栏，请按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
+
+#### 蜂鸣器
+
+如果您想开启或关闭蜂鸣器，请先`更新固件`到`2.7`版本。因为只有 2.7 版本固件才有菜单栏。
+- 开启蜂鸣器
+Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> Disable
+- 关闭蜂鸣器
+Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> All enabled
+
+<div class="table-center">
+<iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 ### 第四部分 手机连接
@@ -52,6 +77,10 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 ## 入门指南
 
 ### 刷写固件
+
+:::caution note
+请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+:::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
@@ -72,14 +101,14 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖拽到 DFU 驱动器中。文件下载完成后固件应该会被刷写，设备会重启。
+将 UF2 文件拖拽到 DFU 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
 
 ### 设备开机
 
 连接 USB 线缆激活设备。向上拨动电源开关以开机。
 
 :::tip
-如果按下按钮时设备没有响应，请先充电。请勿使用快充充电器。
+如果按下按钮时设备没有响应，请先充电。不要使用快充充电器。
 :::
 
 ### 通过应用连接
@@ -114,6 +143,38 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
+### 通过网站连接
+
+如果您想在网站上发送文本消息并与其他节点通信，您现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+
+  步骤 1：打开网站
+
+[点击这里](https://client.meshtastic.org/messages/broadcast/0) 前往网站。
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  步骤 2：添加新设备
+
+    点击 "+ New Connection"。
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    有两种连接方式。您可以选择您喜欢的方法。
+
+ 方法 1：通过蓝牙
+
+    选择蓝牙方法。在弹出窗口中选择设备 ID。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ 方法 2：通过串口
+
+    选择串口方法。打开设备管理器查看设备连接到哪个端口。在弹出窗口中选择该端口。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    您的设备将显示在列表中。点击连接。如果连接成功，您可以直接在网站上看到设备状态。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
+
+
 ### 配置参数
 
 为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
@@ -142,7 +203,7 @@ import TabItem from '@theme/TabItem';
 参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -184,11 +245,48 @@ import TabItem from '@theme/TabItem';
   </tr>
 </table>
 
+### 屏幕连接
+
+ - [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
+- 请期待我们即将推出的兼容单独销售的 OLED 屏幕。当前的 OLED 驱动器是 SSD1306。
+
+### 虚拟键盘
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
+2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。请按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
+
 ## 常见问题
 
-### 手动进入 DFU 模式
+### 设备变砖和引导程序安装
 
-将设备连接到您的电脑，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的电脑上会出现一个名为 `Tracker L1` 的新 USB 驱动器。
+**描述：**
+
+设备无响应，没有 LED 指示，无法与您的应用配对。如果您发现设备在刷写自己的固件后完全无响应，您也可以尝试重新安装引导程序。
+
+:::danger note
+当您刷写引导程序时，请确保线缆连接稳定，在刷写过程中**不要**断开连接。
+:::
+
+- 步骤 1：[点击这里下载引导程序](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+
+- 步骤 2：进入 DFU 模式
+
+  双击 RST 按钮进入 DFU 模式。磁盘名称 "Tracker L1" 将会出现。
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
+
+- 步骤 3：粘贴引导程序文件
+
+  用下载的引导程序文件覆盖磁盘中的所有文件。
+
+- 步骤 4：刷写固件
+
+  完成上述步骤后，您可以按照这个[步骤](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)刷写应用固件。您可能需要[手动进入 DFU 模式](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#entering-dfu-mode-manually)
+
+
+### 无法进入 DFU 和手动进入 DFU 模式
+
+将设备连接到您的电脑，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的电脑上将出现一个名为 `Tracker L1` 的新 USB 驱动器。
 
 ### 退出 DFU 模式
 
@@ -202,7 +300,9 @@ import TabItem from '@theme/TabItem';
 
       为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
 ## 资源
-- [3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [引导程序](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- [(V1) 3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [(V2 新四向摇杆) 3D 打印参考文件](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [外形文件](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [FCC 认证](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [CE 认证](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)

@@ -296,13 +296,13 @@ reComputer Industrial 预装了 JetPack 5.1.1 在 128GB SSD 上，并包含必�
 
 1. 在 **USB2.0 DEVICE** 端口和您的 PC 之间连接一根 USB Type-C 线缆。
 2. 使用针插入 **RECOVERY** 孔按下恢复按钮并保持按住。
-3. 将随附的 **2-Pin Terminal block power connector** 连接到板上的电源连接器，并连接随附的电源适配器和电源线为板子供电。
+3. 将随附的 **2 针端子块电源连接器**连接到板上的电源连接器，并将随附的电源适配器与电源线连接以开启板子。
 4. 释放恢复按钮。
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/97.png"/></div>
 
 :::note
-确保在按住 RECOVERY 按钮的同时为设备供电，否则它不会进入恢复模式
+确保在按住 RECOVERY 按钮的同时给设备上电，否则它不会进入恢复模式
 :::
 
 在 Ubuntu 主机 PC 上，打开终端窗口并输入命令 **lsusb**。如果返回的内容根据您使用的 Jetson SoM 有以下输出之一，则板子处于强制恢复模式。
@@ -324,17 +324,17 @@ import TabItem from '@theme/TabItem';
 
 这里我们提供 2 种不同的刷写方法。
 
-1. 下载我们准备的完整系统镜像，包括 NVIDIA JetPack、硬件外设驱动程序并刷写到设备
-2. 下载官方 NVIDIA L4T，使用包含的硬件外设驱动程序并刷写到设备
+1. 下载我们准备的完整系统镜像，其中包括 NVIDIA JetPack、硬件外设驱动程序并刷写到设备
+2. 下载官方 NVIDIA L4T，使用随附的硬件外设驱动程序并刷写到设备
 
 :::note
-第一种方法的下载大小约为 14GB，第二种方法的下载大小约为 3GB。
+第一种方法的下载大约为 14GB，第二种方法的下载大约为 3GB。
 :::
 
 <Tabs>
-<TabItem value="Method 1" label="Method 1">
+<TabItem value="Method 1" label="方法 1">
 
-- **步骤 1：** 下载对应您使用的板子的系统镜像到您的 Ubuntu PC
+- **步骤 1：** 将对应您使用的板子的系统镜像下载到您的 Ubuntu PC
 
 <div class="table-center">
   <table style={{textAlign: 'center'}}>
@@ -412,7 +412,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
-现在它将开始向板子刷写系统镜像。如果刷写成功，您将看到以下输出
+现在它将开始将系统镜像刷写到板子。如果刷写成功，您将看到以下输出
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
@@ -426,7 +426,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
   </TabItem>
-<TabItem value="Method 2" label="Method 2">
+<TabItem value="Method 2" label="方法 2">
 
 **下载并准备 NVIDIA L4T 和 rootfs**
 
@@ -442,7 +442,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 
 **下载并准备驱动程序**
 
-- **步骤 1：** 下载对应您使用的板子的驱动程序文件到您的 Ubuntu PC
+- **步骤 1：** 将对应您使用的板子的驱动程序文件下载到您的 Ubuntu PC
 
 <table>
   <thead>
@@ -616,7 +616,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-请根据您的需要完成**系统配置**。
+请根据您的需要完成 **System Configuration**。
 :::
 
 </TabItem>
@@ -699,7 +699,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <TabItem value="Jetpack 6.1" label="Jetpack6.1">
 
-- **步骤 1：**将对应您使用的开发板的系统镜像下载到您的 Ubuntu PC
+- **步骤 1：** 将对应您使用的开发板的系统镜像下载到您的 Ubuntu PC
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -774,7 +774,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 
 <TabItem value="Jetpack 6.2" label="Jetpack6.2">
 
-- **步骤 1：**将对应您使用的开发板的系统镜像下载到您的 Ubuntu PC
+
+:::danger
+如果您使用的是 **Orin NX 16GB/8GB** 模块，**请勿启用 MAXN SUPER 模式**。
+reComputer industrial J4011/J4012 的散热能力不足以支持该模式，强制使用此模式可能导致模块永久损坏。
+:::
+
+- **步骤 1：** 将对应您使用的开发板的系统镜像下载到您的 Ubuntu PC
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -786,6 +792,16 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>reComputer Industrial J4012</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EaUtjH4gdPFGkQX86xzbLyEB6sckcd09RxxGJAlH2Qs4yg?e=a1KYbF" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <th>2c06ad9dbdb85f604905ce81403e9089<br />204d77292427985a0ab6786d7eabc211</th>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWw6iP0DHf5Cl3YI2z3sHDoBl0JPabJHzEMjCItaHiOKVQ?e=fmpMfC" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <th>530f68c2a0bfda15b1e8211acb3905e<br />55f28d041bb531dcfa278e7f9bbd4118e</th>
+    </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdypjC_kT7RAqqBHytE_KLwBLU6fEpoQ5Rv_MWYk-lMszQ?e=VV0U9A" target="_blank" rel="noopener noreferrer">下载</a></td>
@@ -811,7 +827,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 :::
 
 :::note
-请注意，由于启用 `super mode` 后功耗增加和发热量增大，[reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) 和 [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) 无法在最高模式下稳定运行。因此，此次更新不包括这两款产品。
+请注意，由于启用 `super mode` 后功耗和发热量增加，[reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) 和 [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) 无法在最高模式下稳定运行。因此，此次更新不包括这两款产品。
 我们目前正在设计新版本的 reComputer。敬请期待！
 :::
 

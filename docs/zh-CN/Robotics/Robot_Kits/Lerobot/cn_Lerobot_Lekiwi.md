@@ -9,8 +9,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.png
 slug: /cn/lerobot_lekiwi
 last_update:
-  date: 2025/5/28
-  author: zhuyaohui
+  date: 2025/12/11
+  author: Li shanghang
 ---
 
 # 如何在 Lerobot 中使用 Lekiwi
@@ -29,7 +29,7 @@ last_update:
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.png" />
 </div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/LeKiwi-Full-Kit-12V-Verision.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 </a></div>
 
