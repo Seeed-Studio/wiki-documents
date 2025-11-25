@@ -8642,6 +8642,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'J501-Mini 载板',
+                  items: [
+                    'zh-CN/Edge/NVIDIA_Jetson/Carrier_Boards/J501_Mini/cn_Robotics_J501_Mini_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'J401-Robotics 载板',
                   items: [
                     'zh-CN/Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J401/cn_Robotics_J401_carrierboard_Hardware_Interfaces_Usage',
@@ -13673,6 +13680,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'J501-Mini Carrier Board',
+                  items: [
+                    'es/Edge/NVIDIA_Jetson/Carrier_Boards/J501_Mini/es_Robotics_J501_Mini_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'J401-Robotics Carrier Board',
                   items: [
                     'es/Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J401/es_Robotics_J401_carrierboard_Hardware_Interfaces_Usage',
@@ -18700,6 +18714,13 @@ const sidebars = {
                   items: [
                     'ja/Edge/NVIDIA_Jetson/Carrier_Boards/J501/ja_reServer_Industrial_J501_Getting_Started',
                     'ja/Edge/NVIDIA_Jetson/Carrier_Boards/J501/ja_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'J501-Mini キャリアボード',
+                  items: [
+                    'ja/Edge/NVIDIA_Jetson/Carrier_Boards/J501_Mini/ja_Robotics_J501_Mini_Hardware_Interfaces_Usage',
                   ],
                 },
                 {
