@@ -1,19 +1,30 @@
 ---
 description: このwikiはFashionStarサーボモーターのチュートリアルを提供します。
-title: FashionStar サーボモーター
+title: FashionStarサーボモーター
 keywords:
 - actuator
 - motor
 - arm
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/RX8-U51H-M.webp
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp
 slug: /ja/fashionstar_servo
 last_update:
-  date: 11/21/2025
+  date: 11/24/2025
   author: Li Shanghang
 ---
 
-# FashionStar サーボモーター ドキュメントハブ
+# FashionStarサーボモータードキュメントハブ
+
+<div align="center">
+
+<img width={800} src="https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp" className="nav-icon" alt="Slamtec LiDAR"/>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱</font></span></strong>
+    </a>
+</div>
 
 <div class="category-group">
   <div class="category-card robot-kits">
@@ -45,7 +56,7 @@ last_update:
     <span className="text">RX18-U100H-M 4.9N·m </span>
   </a>
   <a href="https://files.seeedstudio.com/products/Fashionstar/UC01_Datasheet_EN_V1.1.07.pdf" className="nav-item">
-    <span className="text">TTL-USB コンバーター UC-01 </span>
+    <span className="text">TTL-USBコンバーター UC-01 </span>
   </a>
 
 ## SDK
