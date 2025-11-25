@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 11/17/2025
+  date: 11/24/2025
   author: Frank
 ---
 
@@ -17,56 +17,165 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 17th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is November 24th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [iSpy on reComputer](https://wiki.seeedstudio.com/ispy_on_recomputer/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_1.png" alt="pir" width={800} height="auto" /></p>
+### [HighTorque Motor Control Complete Guide](https://wiki.seeedstudio.com/hightorque_control/)
 
 <div style={{ textAlign: "justify" }}>
 
-This guide shows how to deploy the open-source video surveillance application iSpy on the reComputer R series edge computing devices from Seeed Studio. It covers hardware prerequisites, system updates, installing Docker and Docker Compose, creating the `docker-compose.yaml` configuration, and adding cameras to start live monitoring.
+This document provides a concise guide to setting up and controlling a high-torque BLDC motor, including hardware wiring, power and CAN configuration, Linux environment setup, and example code in multiple languages to achieve precise speed, position, and torque control.
 
 </div>
 
-### [Getting started for Home Assistant with reCamera](https://wiki.seeedstudio.com/getting_started_for_home_assistant_with_recamera/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" alt="pir" width={800} height="auto" /></p>
+### [RobStride Control Library - Complete Technical Documentation](https://wiki.seeedstudio.com/robstride_control/)
 
 <div style={{ textAlign: "justify" }}>
 
-This guide walks you through setting up Home Assistant on a Seeed Studio reCamera system, including hardware prerequisites, installing Docker, deploying Home Assistant in a container, and configuring the camera integration and automation with the system’s data.
+This document provides a complete technical guide to the RobStride motor control library, covering supported motor models, architecture and CAN protocol details, multi-mode control (MIT, position, speed), environment setup, and example implementations in Python, C++, Rust, and Arduino for real-time, cross-platform motor control.
 
 </div>
 
-### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
+### [Getting started for n8n with reCamera](https://wiki.seeedstudio.com/getting_started_for_n8n_with_recamera/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/n8n_12.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-**EtherCAT (Ethernet for Control Automation Technology)** is an open-source, high-performance real-time Industrial Ethernet fieldbus protocol based on **IEEE 802.3 Ethernet standards**. It operates on a **master-slave architecture** and is renowned for its exceptional speed, precision, and flexibility in industrial automation environments. This document uses the [**recomputer robotics J401**](https://www.seeedstudio.com/reComputer-Robotics-Carrier-board-p-6442.html) as the **EtherCAT master** and the [**MyActuator X4**](https://www.seeedstudio.com/Myactuator-X4-P12-5-10-Planetarty-Actuator-p-6470.html) as the **slave** to demonstrate how to establish communication between a Jetson and EtherCAT devices.
+This tutorial introduces how to push the information recognized by reCamera in text form to n8n, enabling it to serve as the trigger source for the workflow. In this way, users can easily integrate camera detection events into their own automation systems, achieving basic functions such as message alerts, log recording, and third-party service calls, laying the foundation for more complex business logic in the future.
 
 </div>
 
-### [reSpeaker XVF3800 Control with Python](https://wiki.seeedstudio.com/respeaker_xvf3800_python_sdk/)
+### [Getting started in Telegram with reCamera](https://wiki.seeedstudio.com/getting_started_in_Telegram_work_with_recamera/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Telegram_23.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-In this section, we are going to talk about how to control your ReSpeaker XVF-3800 using the Python SDK. It makes development more convenient for users who want to build their own applications.
-For instance, you can detect where the voice is coming from, perform voice activity detection (VAD), control LEDs, and much more.
+This tutorial introduces a simple and efficient integration method: the recognition results of reCamera are pushed in text form to n8n, and then n8n automatically sends them to the user-built Telegram personal Bot via API. Through this link, any recognition event can be immediately pushed to the mobile device, thus building a lightweight notification system that spans multiple devices and platforms. The entire process does not require writing complex code; it only requires completing the necessary node configuration to quickly achieve the goal.
 
 </div>
 
-<!-- ## Existing Wiki Updated
+### [Coupling reCamera Home Assistant Enterprise WeChat](https://wiki.seeedstudio.com/getting_started_in_Wechat_work_with_recamera/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/logging_in.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document explains how to integrate reCamera with Enterprise WeChat using Home Assistant and Node-RED, guiding you through environment setup, webhook and automation configuration, and data flow so that AI detection events from reCamera can trigger real-time alerts in your WeChat workgroup.
+
+</div>
+
+### [AI remote wireless monitoring system based on reCamera and Wifi Halow](https://wiki.seeedstudio.com/ai_remote_wireless_monitor_system_with_wifi_haLow/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1_1.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document shows how to build an AI-powered remote wireless monitoring system using reCamera and Wi-Fi HaLow, including hardware setup, static IP and HaLow configuration, Node-RED workflows, and streaming AI detection results and video to a remote terminal over a long-range, low-power link.
+
+</div>
+
+### [FashionStar Servo Motors Documents Hub](https://wiki.seeedstudio.com/fashionstar_servo/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar%20servo%20all.webp" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document serves as a central hub for FashionStar servo motors, providing quick access to model datasheets, multi-platform SDKs, 3D dimensions, debugging tools, detailed technical documentation, and channels for technical support and product discussion.
+
+</div>
+
+### [Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/getting_started_with_xiao_debug_mate/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Seeed Studio XIAO Debug Mate is an open-source ESP32-S3 multi-tool that simplifies embedded system debugging with visual feedback. This all-in-one device features a standalone 2.01 inch TFT LCD display, LED status matrix, and native Seeed Studio XIAO support, delivering essential debugging functions: DAPLink chip-level debugging, built-in serial monitoring with UART passthrough, and accurate power consumption measurement. Plug-and-play design eliminates complex wiring for streamlined development.
+
+</div>
+
+### [XIAO Debug Mate DAPLink](https://wiki.seeedstudio.com/xiao_debug_mate_debug/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/15.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This comprehensive guide is designed to help both beginners and advanced users unlock the full potential of their XIAO Debug Mate for professional debugging tasks. Here, you will learn how to connect, configure, and operate the DAPLink debugger, understand essential software tools, and follow best practices to ensure a smooth and productive debugging experience with a wide range of XIAO series development boards. Whether you are troubleshooting complex firmware or streamlining your development workflow, this document provides clear step-by-step instructions, tips, and in-depth technical explanations to support your projects from start to finish.
+
+</div>
+
+### [XIAO Debug Mate Power Meter](https://wiki.seeedstudio.com/xiao_debug_mate_power/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/32.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The Power Meter feature of the XIAO Debug Mate transforms your device into a versatile, high-precision tool for measuring voltage, current, and power consumption. With an intuitive graphical interface and real-time data updates, you can easily monitor the power draw of your XIAO board or other connected hardware throughout all stages of development. 
+
+</div>
+
+### [XIAO Debug Mate UART Monitor](https://wiki.seeedstudio.com/xiao_debug_mate_serial/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This page provides clear guidance on how to use the Debug Mate for serial data monitoring. You will find step-by-step instructions for hardware setup, recommended software tools, and explanations of relevant concepts to help you make the most of the UART monitoring features in development and debugging scenarios.
+
+</div>
+
+### [Extending the MCP of SenseCAP Watcher with Grove](https://wiki.seeedstudio.com/face_regonition_with_mcp/)
+
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" alt="pir" width={400} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide explains how to deploy a face-recognition workflow using **SenseCAP Watcher (Xiaozhi)** together with a **reComputer Raspberry Pi system**. The Watcher captures images and sends them to the reComputer for face matching against a local database using the internal MCP tool.
+
+</div>
+
+### [Quectel RM520N Module for Jetson](https://wiki.seeedstudio.com/rm520n_module_for_jetson/)
+
+<div style={{ textAlign: "justify" }}>
+
+The RM520N is a series of 5G IoT modules specially optimized for IoT/eMBB applications, designed in an M.2 form factor in accordance with the 3GPP Release 16 specification, which supports both 5G NSA and SA modes. The RM520N is compatible with Quectel’s 5G module series RM50xQ, LTE-A Cat 6 module EM06, Cat 12 module series EM12/EM12xR/EM120K, and Cat 16 module EM160R-GL, facilitating migration from LTE-A to 5G.
+
+</div>
+
+### [Robotics J501 carrier board Hardware and Getting Started](https://wiki.seeedstudio.com/robotics_j501_mini_hardware_interfaces_usage/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document introduces the Robotics J501-Mini carrier board and explains how to flash JetPack OS and use its hardware interfaces, including M.2, Ethernet, USB, LEDs and other I/O ports, with step-by-step instructions and test commands for robotics and edge AI applications.
+
+</div>
+
+## Existing Wiki Updated
 
 ### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
 
-We have added [instructions for using the User Buttons](https://wiki.seeedstudio.com/epaper_ee04/#user-buttons-on-xiao-epaper-display-boardesp32-s3---ee04) on the XIAO ePaper Display Board (ESP32-S3) - EE04. -->
+We have added [instructions for using the User Buttons](https://wiki.seeedstudio.com/epaper_ee04/#user-buttons-on-xiao-epaper-display-boardesp32-s3---ee04) on the XIAO ePaper Display Board (ESP32-S3) - EE04.
+
+
+
+https://github.com/Seeed-Studio/wiki-documents/pull/3498/files
+https://github.com/Seeed-Studio/wiki-documents/pull/3529/files
+https://github.com/Seeed-Studio/wiki-documents/pull/3531/files
+
+
+
+
+
+
+
+
+
+
 
 ## The Efforts of Contributor
 
@@ -214,5 +323,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
 - [weekly wiki on 2025.11.03rd](/Seeed_Elderly/weekly_wiki/wiki251103)
 - [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/wiki251110)
+- [weekly wiki on 2025.11.17th](/Seeed_Elderly/weekly_wiki/wiki251117)
 
 </details>
