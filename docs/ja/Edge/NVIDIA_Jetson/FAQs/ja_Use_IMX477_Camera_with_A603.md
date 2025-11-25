@@ -1,6 +1,6 @@
 ---
-description: A603 JetsonキャリアボードでIMX477カメラを使用する
-title: A603 JetsonキャリアボードでIMX477カメラを使用する
+description: A603 Jetson キャリアボードで IMX477 カメラを使用する
+title: A603 Jetson キャリアボードで IMX477 カメラを使用する
 keywords:
 - reComputer
 - IMX477 Camera
@@ -14,21 +14,21 @@ last_update:
 
 ## Jetpack 5.1.2
 
-IMX477カメラを使用する必要がある場合は、[このドライバーパッケージ](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERJdh3pvdYZOqJWugsnMJKEBMkGXtU8ngY03kJeLDWSkLw?e=TuLWmL)をダウンロードし、[このチュートリアル](https://wiki.seeedstudio.com/ja/reComputer_A603_Flash_System/)に従ってJetpackシステムを再フラッシュしてください。
+IMX477 カメラを使用する必要がある場合は、[このドライバーパッケージ](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERJdh3pvdYZOqJWugsnMJKEBMkGXtU8ngY03kJeLDWSkLw?e=TuLWmL)をダウンロードし、[このチュートリアル](https://wiki.seeedstudio.com/ja/reComputer_A603_Flash_System/)に従って Jetpack システムを再フラッシュしてください。
 
 :::caution
-[ **JP5.1.2** ](https://developer.nvidia.com/embedded/jetson-linux-r3541)用のBSPを使用する必要があることにご注意ください。
+[ **JP5.1.2** ](https://developer.nvidia.com/embedded/jetson-linux-r3541) 用の BSP を使用する必要があることにご注意ください。
 :::
 
 ## Jetpack 6.0
 
-IMX477カメラを使用する必要がある場合は、[このドライバーパッケージ](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ETIsoZ25I69KsSiA6TweK4UBVfo7gBrvPyKX9pJ68J8oIA?e=a9uumE)をダウンロードし、[このチュートリアル](https://wiki.seeedstudio.com/ja/reComputer_A603_Flash_System/)に従ってJetpackシステムを再フラッシュしてください。
+IMX477 カメラを使用する必要がある場合は、[このドライバーパッケージ](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ETIsoZ25I69KsSiA6TweK4UBVfo7gBrvPyKX9pJ68J8oIA?e=a9uumE)をダウンロードし、[このチュートリアル](https://wiki.seeedstudio.com/ja/reComputer_A603_Flash_System/)に従って Jetpack システムを再フラッシュしてください。
 
 :::caution
-[ **JP6.0** ](https://developer.nvidia.com/embedded/jetson-linux-r363)用のBSPを使用する必要があることにご注意ください。
+[ **JP6.0** ](https://developer.nvidia.com/embedded/jetson-linux-r363) 用の BSP を使用する必要があることにご注意ください。
 :::
 
-システムのフラッシュが完了したら、CSIカメラを接続し、以下のコマンドを使用してカメラを起動してください：
+システムのフラッシュが完了したら、CSI カメラを接続し、以下のコマンドを使用してカメラを起動してください：
 
 ```bash
 nvgstcapture-1.0 --sensor-id=0
@@ -37,9 +37,17 @@ nvgstcapture-1.0 --sensor-id=0
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/camera.png" /></div>
 
 
+## Jetpack 6.2
+
+IMX477 カメラを使用する必要がある場合は、[このドライバーパッケージ](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC58VP43oyWQY48K__qIXBsAfz5meLpWtldH6SML_BgvCE?e=dXXvuK)をダウンロードし、[このチュートリアル](https://wiki.seeedstudio.com/ja/reComputer_A603_Flash_System/)に従って Jetpack システムを再フラッシュしてください。
+
+:::caution
+[ **JP6.2** ](https://developer.nvidia.com/embedded/jetson-linux-r3643) 用の BSP を使用する必要があることにご注意ください。
+:::
+
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

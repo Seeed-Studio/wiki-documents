@@ -6,14 +6,14 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 4/14/2023
-  author: Yvonne
+  date: 11/25/2025
+  author: Michelle Huang
 ---
 # Getting Started with SenseCAP ONE Compact Weather Sensor
 
 # Pre-Installation
 
-## Diagram
+## Installation
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image1.png" /></div>
 
@@ -79,6 +79,7 @@ The dimension of the flange plate is shown below.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image14.png" /></div>
 
+## Configuration
 # Device's Operating Mode
 
 After installation, you can power on the device, configure it and collect data from the device.
@@ -87,7 +88,7 @@ The device has two operating modes, **configuration mode, and working mode.**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image15.png" /></div>
 
-## Configure the device via USB port
+### Configure the device via USB port
 
 There is a waterproof round cover at the bottom of the device. Turn it counterclockwise to remove this cover, and you can see a USB Type-C connector and a configuration button.
 
@@ -105,7 +106,7 @@ If the driver is not installed automatically, click this link to [manually downl
 
 - Serial debug tool
 
-## SenseCAP ONE Configuration Tool
+### SenseCAP ONE Configuration Tool
 
 SenseCAP ONE Configuration Tool offers a graphical interface for you to configure the device. And you can download the tool from the GitHub link below:
 
@@ -153,7 +154,7 @@ On the upgrade page, you will need to choose to update the mainboard firmware or
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image26.png" /></div>
 
-## Serial debug tool
+### Serial debug tool
 
 The communication settings are as follows:
 
@@ -183,7 +184,7 @@ The device supports the following communication protocols:
 
 **Protocol communication parameters**
 
-<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image31.png" /></div>
+<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/DefaultDeviceAddress.png" /></div>
 
 ### Modbus-RTU Protocol Message Format
 
@@ -241,7 +242,7 @@ When the temperature is positive:
 
 3. Return temperature data 0x00006E8C (Hex), converted to decimal = 28300, get the corresponding air temperature by dividing it through 1000, air temperature = 28300/1000 = 28.3 °C
 
-**When the temperature is negative:**
+**When the temperature is negative**
 
 The temperature needs to be obtained through a complement calculation.
 
@@ -255,7 +256,9 @@ The temperature needs to be obtained through a complement calculation.
 
 5. Then the temperature measurement is -1000/1000 = -1°
 
-**S500 decode:**
+
+
+**S500 decode**
 
 Read register 0x0000~0x0005.
 
@@ -265,17 +268,25 @@ Return：26 04 40 00 00 70 80（Temperature）00 00 95 10（Humidity） 06 07 94
 
 Return：0A 04 0C 00 00 00 00（Min wind direction）00 03 6E 84（Max wind direction）00 03 C8 C0（Avg wind direction）00 00 00 00（Min wind speed）00 00 04 BC（Max wind speed）00 00 02 10（Avg wind speed）BC 78（Check code）
 
-**S700 decode:**
+**S600 decode**
 
-Read register 0x0000~0x001F and 0x0030~0x0033.
+Read register 0x0000~0x0013
+
+Send command: 45 03 00 00 00 13 0B 43
+
+Return: 45 04 40 00 00 70 80（Temperature） 00 00 95 10（Humidity） 06 07 94 40（Air pressure） 00 00 00 00（Light） 00 00 00 00（Min wind direction） 00 00 00 00（Max wind speed） 00 00 00 00（Avg wind direction） 00 00 00 00 （Min wind speed） 00 00 00 00（Max wind speed） 00 00 00 00（Avg wind speed）77FD（Check code）
+
+**S700 decode**
+
+Read register 0x0000-0x001F & 0x0030-0x0033.
 
 Send command: 14 04 00 00 00 20 F3 06
 
 Return: 14 04 40 00 00 70 80（Temperature） 00 00 95 10（Humidity） 06 07 94 40（Air pressure） 00 00 00 00（Light） 00 00 00 00（Min wind direction） 00 00 00 00（Max wind direction） 00 00 00 00（Avg wind direction） 00 00 00 00 （Min wind speed）00 00 00 00（Max wind speed) 00 00 00 00（Avg wind speed） 00 00 00 00（Accumulated rainfall） 00 00 00 00（Accumulated rainfall duration） 00 00 00 00（Rain intensity） 00 00 00 00（Maximum rainfall intensity） 00 00 6A 7C（Heating Temperature） 00 00 00 00（The dumping of state） 99 09（Check code）
 
-**S900 decode:**
+**S900 decode**
 
-Read register 0x0000~0x001F and 0x0030~0x0033.
+Read register 0x0000-0x001F & 0x0030-0x0033.
 
 Send command: 26 04 00 00 00 20 F7 05
 
@@ -287,9 +298,9 @@ Send command: 26 04 00 30 00 04 F7 11
 
 Return: 26 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(Check code)
 
-**S1000 decode:**
+**S1000 decode**
 
-Read register 0x0000~0x001F and 0x0030~0x0033.
+Read register 0x0000-0x001F and 0x0030-0x0033.
 
 Send command: 2B 04 00 00 00 20 F6 18
 
@@ -366,7 +377,7 @@ Commands come in two formats:
 ### Command List
 
 Please refer to:
-&lt;https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf&gt;
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
 
 ## SDI-12
 
@@ -440,16 +451,19 @@ Then send "continuous measurement command 0R2! the device returns 4 measured val
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image55.png" /></div>
 
-# Error code
+## Error code
 
-## Modbus error code
+### Modbus error code
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image56.png" /></div>
 
-## ASCII error code
+### ASCII error code
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image57.png" /></div>
 
-## SDI-12 error code
+### SDI-12 error code
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
+
+## Resource
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
