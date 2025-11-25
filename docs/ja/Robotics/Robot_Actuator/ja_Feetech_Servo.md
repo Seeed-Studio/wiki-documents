@@ -6,10 +6,10 @@ keywords:
 - motor
 - arm
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech-ST3215-Servo.webp
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp
 slug: /ja/feetech_servo
 last_update:
-  date: 11/21/2025
+  date: 11/24/2025
   author: Li Shanghang
 ---
 
@@ -17,7 +17,7 @@ last_update:
 
 <div align="center">
 
-<img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-108090023-feetech-st-3215-c001-servo.jpg" className="nav-icon" alt="Slamtec LiDAR"/>
+<img width={800} src="https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp" className="nav-icon" alt="Slamtec LiDAR"/>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -68,7 +68,7 @@ last_update:
     <span className="text">Stm32HAL</span>
   </a>
   <a href="https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Analysis_of_SCS_Memory_Table.xlsx" className="nav-item">
-    <span className="text">SCSメモリテーブルの解析</span>
+    <span className="text">SCSメモリテーブル解析</span>
   </a>
   <a href="https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Communication_Protocol_Manual.pdf" className="nav-item">
     <span className="text">通信プロトコルマニュアル</span>
