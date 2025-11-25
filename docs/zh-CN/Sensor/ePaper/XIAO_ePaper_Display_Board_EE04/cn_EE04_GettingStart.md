@@ -178,7 +178,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 - 对于 24 针电子纸显示屏 → 将跳线设置为 24 针
 
-⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。开机前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。在通电前请务必仔细检查跳线位置。
 
 :::
 
@@ -191,18 +191,16 @@ import Steppers from '@site/src/components/utils/Stepper';
 使用 XIAO ePaper 显示板时，请确保根据电子纸显示屏类型设置跳线：
 - 对于 50 针电子纸显示屏 → 将跳线设置为 50 针
 
-⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。开机前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。在通电前请务必仔细检查跳线位置。
 
 :::
 
 ## 软件概述
 
-### 安装 Seeed Arduino GFX 库
-
-**步骤 3.** 安装 Seeed Arduino LCD 库
+### 安装 Seeed GFX 库
 
 :::tip
-此库与 TFT 库具有相同功能，但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
+此库与 TFT 库具有相同功能但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -224,7 +222,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 :::tip
 如果您选择错误，屏幕将不显示任何内容。
 
-所以请确保您的设备或组件类型。
+所以请确保您的设备或组件类型正确。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/38.png" style={{width:800, height:'auto'}}/></div>
@@ -242,7 +240,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-## 入门指南
+## 开始使用
 
 这里，我们以 5.83 英寸显示屏为例。所有 24 针屏幕的步骤都相同；唯一的区别是在驱动程序中选择适当的屏幕尺寸。
 
@@ -295,7 +293,7 @@ EE04 具有三个用户可编程按钮，可用于各种控制目的。本节演
 </table>
 
 
-所有按钮都是低电平有效，这意味着按下时读取为 LOW，释放时读取为 HIGH。
+所有按钮都是低电平有效，意味着按下时读取为 LOW，释放时读取为 HIGH。
 
 基本按钮读取示例
 
@@ -405,24 +403,29 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04battery.jpg" style={{width:700, height:'auto'}}/></div>
 
 ```cpp
-#define VOLTAGE_PIN A0
+#define VOLTAGE_PIN A0 //GPIO1
+#define ADC_ENABLE_PIN A5 //GPIO6
 
 void setup() {
-  Serial.begin(115200);       
-  pinMode(VOLTAGE_PIN, INPUT); /
+  Serial.begin(115200);
+  delay(10);
+
+  pinMode(VOLTAGE_PIN, INPUT);
+  pinMode(ADC_ENABLE_PIN, OUTPUT);
+  digitalWrite(ADC_ENABLE_PIN , HIGH);
 }
 
-void loop() {
-  int adcValue = analogRead(VOLTAGE_PIN);   
-  float voltage = (adcValue / 1023.0) * 3.3; 
 
+void loop() {
+  analogReadResolution(12); 
+  int adcValue = analogRead(VOLTAGE_PIN);
+  float voltage = (adcValue / 4096.0) *7.16;
   Serial.print("ADC Value: ");
   Serial.print(adcValue);
-  Serial.print("  Voltage: ");
+  Serial.print(" Voltage: ");
   Serial.print(voltage, 3);
   Serial.println(" V");
-
-  delay(10); 
+  delay(10);
 }
 ```
 
@@ -430,7 +433,11 @@ void loop() {
 
 ## 资源
 
-- **[PDF]** [Seeed Studio XIAO 电子纸显示屏 EE04 原理图](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
+- **[PDF]** [Seeed Studio XIAO 电子纸显示板 EE04 原理图](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_SCH_V1.2.pdf)
+- **[PDF]** [Seeed Studio XIAO 电子纸显示板 EE04 Grabcad 3D 文件](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
+- **[ZIP]** [Seeed Studio XIAO 电子纸显示板 EE04 原理图和 PCB](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_V1.2_SCH&PCB.zip)
+
+
 
 ## 技术支持与产品讨论
 

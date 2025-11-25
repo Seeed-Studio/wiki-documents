@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-17 11:14:55 (北京时间)
-// 多语言页面: 2045 个
+// 生成时间: 2025-11-21 17:39:34 (北京时间)
+// 多语言页面: 2052 个
 
 (function() {
   'use strict';
@@ -2489,6 +2489,36 @@
     "es",
     "ja"
   ],
+  "/ai_remote_wireless_monitor_system_with_wifi_haLow": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_home_assistant_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_n8n_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_in_Telegram_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recamera_network_connection": [
     "cn",
     "en",
@@ -2568,12 +2598,6 @@
     "ja"
   ],
   "/recamera_develop_with_node-red": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
     "es",
@@ -3941,6 +3965,12 @@
     "es",
     "ja"
   ],
+  "/fashionstar_servo": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/feetech_servo": [
     "cn",
     "en",
@@ -3953,7 +3983,19 @@
     "es",
     "ja"
   ],
+  "/hightorque_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/myactuator_series": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/robstride_control": [
     "cn",
     "en",
     "es",
