@@ -1,30 +1,19 @@
 ---
 description: This wiki provides tutorial for FashionStar Servo motors.
-title: 华馨京舵机
+title: 华新京舵机
 keywords:
 - actuator
 - motor
 - arm
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/RX8-U51H-M.webp
 slug: /cn/fashionstar_servo
 last_update:
-  date: 11/24/2025
+  date: 11/21/2025
   author: Li Shanghang
 ---
 
-# 华馨京舵机文档中心
-
-<div align="center">
-
-<img width={800} src="https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp" className="nav-icon" alt="Slamtec LiDAR"/>
-</div>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
-    </a>
-</div>
+# 华新京舵机文档中心
 
 <div class="category-group">
   <div class="category-card robot-kits">

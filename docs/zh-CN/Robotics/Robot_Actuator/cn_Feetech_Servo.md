@@ -6,18 +6,20 @@ keywords:
 - motor
 - arm
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp
+image:   https://media-cdn.seeedstudio.com/media/catalog/pr…5d/1/-/1-108090023-feetech-st-3215-c001-servo.jpg
 slug: /cn/feetech_servo
 last_update:
-  date: 11/24/2025
+  date: 11/21/2025
   author: Li Shanghang
 ---
 
 # 飞特STS系列舵机文档中心
 
+
+
 <div align="center">
 
-<img width={800} src="https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp" className="nav-icon" alt="Slamtec LiDAR"/>
+<img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-108090023-feetech-st-3215-c001-servo.jpg" className="nav-icon" alt="Slamtec LiDAR"/>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -25,6 +27,8 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> 购买链接 🖱</font></span></strong>
     </a>
 </div>
+
+
 
 <div class="category-group">
   <div class="category-card robot-kits">
