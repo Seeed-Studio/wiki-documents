@@ -19,11 +19,11 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
-## 介绍
+## 简介
 
 **XIAO MIDI 合成器**是一款紧凑的一体化音乐创作设备，由 XIAO ESP32-C3 和专业级 SAM2695 MIDI 芯片驱动。尽管体积小巧，但它能提供丰富、富有表现力的声音，支持多达 64 声部复音，并提供数百种乐器音色。无论您是实验声音的开发者还是创作新曲的音乐家，这款合成器都旨在让音乐创作变得流畅而富有灵感。
 
@@ -31,7 +31,7 @@ last_update:
 
 - 零门槛创作，非常适合音乐初学者
 - 一体化 MIDI + 节拍器 -- 更智能、更流畅的工作流程
-- 专业级性能，适合高级演奏者
+- 专业级性能，适合高级玩家
 - 超便携且完全可定制
 
 ## 硬件概述
@@ -70,8 +70,8 @@ XIAO MIDI 合成器集成了以下组件：
       <td>用于连接外部音频设备（如扬声器或耳机）<br />具有插入线缆时自动禁用 D 类放大器、拔出时重新启用的功能</td>
     </tr>
     <tr>
-      <td>物理按键</td>
-      <td>四个侧面安装的物理按键用于用户交互</td>
+      <td>物理按钮</td>
+      <td>四个侧面安装的物理按钮用于用户交互</td>
     </tr>
     <tr>
       <td>XIAO 插座</td>
@@ -105,7 +105,7 @@ XIAO MIDI 合成器集成了以下组件：
 
 ### 出厂固件使用
 
-XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用地探索多种声音和节奏功能。以下是默认功能和按键操作的快速指南。
+XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用地探索多种声音和节奏功能。以下是默认功能和关键操作的快速指南。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/7.png" style={{width:600, height:'auto'}}/></div>
 
@@ -117,7 +117,7 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
   - **🎵2**：降低音符音高（例如从 C4 到 B3）。
   - **🎵3**：点击开始/停止节拍器。
 
-- **节拍器模式：**
+- **节拍保持模式：**
   - **🎵0**：（此模式下无功能）
   - **🎵1**：增加 BPM（节拍）1 步（仅在节拍器激活时有效）。
   - **🎵2**：减少 BPM（节拍）1 步（仅在节拍器激活时有效）。
@@ -133,15 +133,15 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
 
 - **🎵1**（长按 2 秒）：音量增加
 - **🎵2**（长按 2 秒）：音量减少
-- **🎵3**（长按 2 秒）：切换到下一个模式（循环切换：声音测试 → 节拍器 → 多轨播放 → ...）
+- **🎵3**（长按 2 秒）：切换到下一个模式（循环切换：声音测试 → 节拍保持 → 多轨播放 → ...）
 
 :::tip
-您可以在无需任何额外设置的情况下体验所有功能。如需高级自定义或重新刷写固件，请参阅 **[StateMachine 示例代码](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster/blob/main/examples/StateMachine/StateMachine.ino)**。
+您可以在无需任何额外设置的情况下体验所有功能。如需高级定制或重新刷写固件，请参阅 **[StateMachine 示例代码](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster/blob/main/examples/StateMachine/StateMachine.ino)**。
 :::
 
 ### 引导加载器模式
 
-在某些情况下，您可能会发现 XIAO MIDI 合成器无法通过串口编程（例如，设备无法识别或上传失败）。在这些情况下，您需要进入 **引导加载器（BOOT）模式** 来重新刷写固件。
+在某些情况下，您可能会发现 XIAO MIDI 合成器无法通过串口编程（例如，设备无法识别或上传失败）。在这些情况下，您需要进入**引导加载器（BOOT）模式**来重新刷写固件。
 
 #### 为什么要进入 BOOT 模式？
 
@@ -150,7 +150,7 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
 
 #### 如何进入 BOOT 模式
 
-首先，打开迷你合成器的后盖，以访问 XIAO ESP32-C3 模块上的 BOOT 和 RESET 按钮。有两种方法：
+首先，打开迷你合成器的后盖以访问 XIAO ESP32-C3 模块上的 BOOT 和 RESET 按钮。有两种方法：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/5.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -167,9 +167,9 @@ XIAO MIDI 合成器预装了多功能的出厂固件，让您可以开箱即用�
 
 进入 BOOT 模式后，设备将准备好通过 Arduino IDE 或其他工具进行固件上传。
 
-### 重置
+### 复位
 
-要重置设备，只需按下 XIAO ESP32-C3 模块上的 **RESET** 按钮。设备将重新启动。
+要复位设备，只需按下 XIAO ESP32-C3 模块上的 **RESET** 按钮。设备将重新启动。
 
 ## Arduino 库概述
 
@@ -185,23 +185,23 @@ XIAO MIDI 合成器由 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studi
     </a>
 </div><br />
 
-### 函数
+### 功能
 
-在我们开始开发代码之前，让我们先了解一下库的可用函数。
+在我们开始开发草图之前，让我们看看库的可用功能。
 
 `static SAM2695Synth& getInstance()` – 返回 SAM2695Synth 类的单例实例。
 
 - **输入参数**：无。
-- **返回值**：SAM2695Synth 对象的引用。
+- **返回值**：对单例 SAM2695Synth 对象的引用。
 
 `void begin(T& serial, int baud)` – 使用指定的串行接口和波特率初始化合成器。
 
 - **输入参数**：
-  - `T& serial`：用于 MIDI 通信的串行端口对象（硬件或软件串行）。
+  - `T& serial`：用于 MIDI 通信的串口对象（硬件或软件串口）。
   - `int baud`：MIDI 通信的波特率（标准 MIDI 通常为 31250）。
 - **返回值**：无。
 
-`void setInstrument(uint8_t bank, uint8_t channel, uint8_t value)` – 为特定的 MIDI 通道和音色库设置乐器（音色）。
+`void setInstrument(uint8_t bank, uint8_t channel, uint8_t value)` – 为特定 MIDI 通道和音色库设置乐器（音色）。
 
 - **输入参数**：
   - `uint8_t bank`：乐器音色库编号（0–127）。
@@ -214,7 +214,7 @@ XIAO MIDI 合成器由 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studi
 - **输入参数**：
   - `uint8_t channel`：MIDI 通道编号（0–15）。
   - `uint8_t pitch`：MIDI 音符编号（0–127）。
-  - `uint8_t velocity`：音符的力度（音量）（0–127）。
+  - `uint8_t velocity`：音符的力度（响度）（0–127）。
 - **返回值**：无。
 
 `void setNoteOff(uint8_t channel, uint8_t pitch)` – 在指定通道上为给定音高触发音符关闭事件。
@@ -224,7 +224,7 @@ XIAO MIDI 合成器由 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studi
   - `uint8_t pitch`：MIDI 音符编号（0–127）。
 - **返回值**：无。
 
-`void setAllNotesOff(uint8_t channel)` – 关闭指定通道上当前正在播放的所有音符。
+`void setAllNotesOff(uint8_t channel)` – 关闭指定通道上当前播放的所有音符。
 
 - **输入参数**：
   - `uint8_t channel`：MIDI 通道编号（0–15）。
@@ -233,10 +233,10 @@ XIAO MIDI 合成器由 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studi
 `void playChord(const musicData& chord)` – 通过为提供的和弦结构中的所有音符发送音符开启事件来播放和弦。
 
 - **输入参数**：
-  - `const musicData& chord`：包含和弦的通道、音符、力度和时间信息的结构。
+  - `const musicData& chord`：包含和弦的通道、音符、力度和时间信息的结构体。
 - **返回值**：无。
 
-`void setPitch(uint8_t pitch)` – 为后续音符事件设置默认音高值。
+`void setPitch(uint8_t pitch)` – 设置后续音符事件的默认音高值。
 
 - **输入参数**：
   - `uint8_t pitch`：要设置为默认音高的 MIDI 音符编号（0–127）。
@@ -247,7 +247,7 @@ XIAO MIDI 合成器由 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studi
 - **输入参数**：无。
 - **返回值**：当前默认 MIDI 音符编号（0–127）。
 
-`void setVolume(uint8_t channel, uint8_t level)` – 为特定 MIDI 通道设置音量。
+`void setVolume(uint8_t channel, uint8_t level)` – 设置特定 MIDI 通道的音量。
 
 - **输入参数**：
   - `uint8_t channel`：MIDI 通道编号（0–15）。
@@ -581,7 +581,7 @@ typedef enum {
 
 ### 安装
 
-步骤 1. 下载 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) 库的 ZIP 文件。
+步骤 1. 下载 [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) 库作为 ZIP 文件。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="ttps://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster" target="_blank" rel="noopener noreferrer">
@@ -589,7 +589,7 @@ typedef enum {
     </a>
 </div><br />
 
-步骤 2. 在 Arduino IDE 中，点击 **Sketch > Include Library > Add .ZIP Library**，然后选择下载的 ZIP 文件。
+步骤 2. 在 Arduino IDE 中，点击 **Sketch > Include Library > Add .ZIP Library** 并选择下载的 ZIP 文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:800, height:'auto'}}/></div>
 
@@ -626,7 +626,7 @@ typedef enum {
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -701,21 +701,21 @@ void loop()
 }
 ```
 
-> 这段代码将在内置合成器上播放E4音符，每秒交替开启和关闭。您可以根据需要更改音符、乐器或时序。
+> 此代码将在内置合成器上播放 E4 音符，每秒交替开关。您可以根据需要更改音符、乐器或时间。
 
 #### 程序注释
 
-这段代码代表了XIAO MIDI合成器的核心功能，这是一个基于SAM2695合成器芯片的紧凑型音频合成解决方案。软件实现演示了合成器如何通过不同的串行通信方法与各种XIAO平台变体进行接口。
+此代码代表了 XIAO MIDI 合成器的核心功能，这是一个基于 SAM2695 合成器芯片的紧凑音频合成解决方案。软件实现演示了合成器如何通过不同的串行通信方法与各种 XIAO 平台变体进行接口。
 
-XIAO MIDI合成器通过条件编译支持XIAO生态系统中的多个微控制器平台：
+XIAO MIDI 合成器通过条件编译支持 XIAO 生态系统中的多个微控制器平台：
 
-- **基于AVR的开发板**：利用SoftwareSerial与合成器芯片通信
-- **RP2040/RP2350和XIAO RA4M1**：在指定引脚（D7、D6）上实现SoftwareSerial
-- **ESP32变体**：通过Serial0利用原生硬件串口功能
-- **基于SAMD的开发板**（包括XIAO M0）：使用硬件UART接口
-- **nRF52840**：实现UART通信，可选支持TinyUSB
+- **基于 AVR 的开发板**：利用 SoftwareSerial 与合成器芯片通信
+- **RP2040/RP2350 和 XIAO RA4M1**：在指定引脚（D7、D6）上实现 SoftwareSerial
+- **ESP32 变体**：通过 Serial0 利用原生硬件串行功能
+- **基于 SAMD 的开发板**（包括 XIAO M0）：使用硬件 UART 接口
+- **nRF52840**：实现 UART 通信，可选支持 TinyUSB
 
-这种多样化的方法确保合成器模块在整个XIAO产品系列中都能一致工作。
+这种多功能方法确保合成器模块在整个 XIAO 产品系列中保持一致的工作。
 
 合成器实现建立了两个通信路径：
 
@@ -724,8 +724,8 @@ XIAO MIDI合成器通过条件编译支持XIAO生态系统中的多个微控制�
   synth.begin(COM_SERIAL, MIDI_SERIAL_BAUD_RATE);
 ```
 
-- 专用的串行连接到 SAM2695 芯片用于 MIDI 命令
-- 独立的调试/用户界面串行连接用于监控和控制
+- 与 SAM2695 芯片的专用串行连接，用于 MIDI 命令
+- 用于监控和控制的独立调试/用户界面串行连接
 
 在启动期间，XIAO MIDI 合成器：
 
@@ -737,9 +737,9 @@ XIAO MIDI合成器通过条件编译支持XIAO生态系统中的多个微控制�
   synth.setInstrument(0,CHANNEL_0,unit_synth_instrument_t::GrandPiano_1);
 ```
 
-4. 允许通过时序延迟进行稳定
+4. 通过时间延迟允许稳定
 
-演示循环通过以下方式展示基本的声音生成能力：
+演示循环通过以下方式展示基本声音生成功能：
 
 ```cpp
 void loop()
@@ -751,16 +751,16 @@ void loop()
 }
 ```
 
-1. 以标准力度触发音符 E4
+1. 以标准力度触发 E4 音符
 2. 保持音符一秒钟
 3. 释放音符
 4. 在下一个循环前暂停
 
-这个实现代表了使用 XIAO MIDI 合成器平台构建更复杂音乐应用的基础，无论是用于教育目的、音乐原型制作还是嵌入式音频项目。
+此实现代表了使用 XIAO MIDI 合成器平台构建更复杂音乐应用的基础，无论是用于教育目的、音乐原型制作还是嵌入式音频项目。
 
-### 演示 2：带按钮控制的节拍音序器
+### 演示 2：带按钮控制的节拍器
 
-这个演示展示了如何使用 XIAO MIDI 合成器的物理按钮来控制一个简单的节拍音序器。您可以启动/停止节拍，并使用按钮实时调整节拍速度。
+此演示展示如何使用 XIAO MIDI 合成器的物理按钮来控制简单的节拍器。您可以启动/停止节拍，并使用按钮实时调整节拍。
 
 #### 所需材料
 
@@ -775,7 +775,7 @@ void loop()
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -919,10 +919,10 @@ void play()
                 synth.setNoteOn(CHANNEL_9, NOTE_D2, VELOCITY_DEFAULT);
             else
                 synth.setNoteOn(CHANNEL_9, NOTE_C2, VELOCITY_DEFAULT);
-    
+
             // Increment beat count
             beatCount++;
-    
+
             // Every four beats, indicating the end of a measure
             if (beatCount >= beatsPerBar)
             {
@@ -934,29 +934,29 @@ void play()
 }
 ```
 
-> 这段代码演示了一个简单的节拍音序器。按钮 A 切换节拍的开/关，按钮 B 增加节拍（BPM），按钮 C 减少节拍。音序器使用第 9 通道的 MIDI 音符播放基本的鼓点模式。您可以扩展这个示例来添加更复杂的节拍或额外的按钮功能。
+> 这段代码演示了一个简单的节拍序列器。按钮 A 切换节拍的开/关，按钮 B 增加节拍（BPM），按钮 C 减少节拍。序列器使用 MIDI 通道 9 上的 MIDI 音符播放基本的鼓点模式。您可以扩展此示例以添加更复杂的节拍或其他按钮功能。
 
 #### 程序注释
 
-这个程序在基本 MIDI 音符演示的基础上，通过物理按钮引入了实时用户交互。代码使用三个按钮：
+该程序在基本 MIDI 音符演示的基础上，通过物理按钮引入了实时用户交互。代码使用三个按钮：
 
-- **按钮 A**：开始/停止节拍序列
+- **按钮 A**：启动/停止节拍序列
 - **按钮 B**：增加节拍（BPM）
 - **按钮 C**：减少节拍（BPM）
 
-`play()` 函数根据当前 BPM 和音符类型计算节拍间隔，并在重复模式中触发鼓声（使用第 9 通道的 MIDI 音符 D2 和 C2）。节拍计数每小节重置，创建一个简单的节拍器或鼓机效果。
+`play()` 函数根据当前 BPM 和音符类型计算节拍间隔，并在重复模式中触发鼓声（使用通道 9 上的 MIDI 音符 D2 和 C2）。节拍计数每小节重置，创建简单的节拍器或鼓机效果。
 
-这个示例演示了如何：
+此示例演示了如何：
 
 - 集成按钮输入进行实时控制
 - 动态调整节拍和播放状态
 - 将 XIAO MIDI 合成器用作可编程节拍生成器
 
-您可以通过添加更多按钮、支持不同的鼓声或实现更高级的音序器逻辑来进一步增强这个演示。
+您可以通过添加更多按钮、支持不同的鼓声或实现更高级的序列器逻辑来进一步增强此演示。
 
 ### 演示 3：带按钮控制的多轨和弦播放
 
-这个演示展示了如何使用 XIAO MIDI 合成器播放多轨和弦，每个和弦由按钮触发。您可以使用两个物理按钮独立地开始/停止两种不同的和弦模式。
+此演示展示了如何使用 XIAO MIDI 合成器播放多轨和弦，每个和弦由按钮触发。您可以使用两个物理按钮独立启动/停止两种不同的和弦模式。
 
 #### 所需材料
 
@@ -971,7 +971,7 @@ void play()
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -984,7 +984,7 @@ void play()
 #include <Arduino.h>
 #include "SAM2695Synth.h"
 #include "Button.h"
- 
+
 #ifdef __AVR__
     #include <SoftwareSerial.h>
     SoftwareSerial SSerial(2, 3); // RX, TX
@@ -1144,35 +1144,35 @@ void play()
 }
 ```
 
-> 这段代码演示了如何使用两个不同的按钮触发两种不同的多音符和弦。按钮A切换两音符和弦的播放，按钮B切换四音符和弦的播放。每个和弦在不同的MIDI通道上播放，并具有自己的时序。
+> 这段代码演示了如何使用两个按钮触发两种不同的多音符和弦。按钮 A 切换双音符和弦的播放，按钮 B 切换四音符和弦的播放。每个和弦在不同的 MIDI 通道上播放，并具有自己的时序。
 
 #### 程序注释
 
-这个程序演示了带有实时按钮控制的多轨和弦播放。代码定义了两个和弦模式（`chordTwoNotes` 和 `chordFourNotes`），每个都有自己的MIDI通道、音符和时序。使用两个按钮：
+该程序演示了带实时按钮控制的多轨和弦播放。代码定义了两种和弦模式（`chordTwoNotes` 和 `chordFourNotes`），每种都有自己的 MIDI 通道、音符和时序。使用两个按钮：
 
-- **按钮A**：启动/停止两音符和弦序列
-- **按钮B**：启动/停止四音符和弦序列
+- **按钮 A**：启动/停止双音符和弦序列
+- **按钮 B**：启动/停止四音符和弦序列
 
-`play()` 函数检查每个和弦的时序，如果相应的标志被启用，则触发播放。这允许不同和弦模式的独立、重叠播放，模拟一个简单的多轨音序器。
+`play()` 函数检查每个和弦的时序，如果相应的标志被启用，则触发播放。这允许不同和弦模式的独立、重叠播放，模拟简单的多轨序列器。
 
-这个示例演示了如何：
+此示例演示了如何：
 
 - 定义和播放自定义和弦结构
 - 使用多个按钮进行独立的音乐控制
-- 使用XIAO MIDI合成器构建更复杂、分层的音乐表演
+- 使用 XIAO MIDI 合成器构建更复杂的分层音乐表演
 
-您可以通过添加更多和弦模式、支持额外按钮或同步播放来扩展此演示，以获得更高级的音乐效果。
+您可以通过添加更多和弦模式、支持其他按钮或同步播放以获得更高级的音乐效果来扩展此演示。
 
-### 演示4：播放完整的旋律序列
+### 演示 4：播放完整的旋律序列
 
-这个演示展示了如何使用XIAO MIDI合成器通过在数组中存储音符、持续时间和延迟数据来播放完整的旋律序列（如一首歌曲）。该示例演示了如何使用内置的小提琴乐器播放预编程的旋律。
+此演示展示了如何使用 XIAO MIDI 合成器播放完整的旋律序列（如歌曲），通过在数组中存储音符、持续时间和延迟数据。该示例演示了如何使用内置的小提琴乐器播放预编程的旋律。
 
 #### 所需材料
 
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>XIAO MIDI合成器</th>
+   <th>XIAO MIDI 合成器</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -1180,7 +1180,7 @@ void play()
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -1727,7 +1727,7 @@ void setup() {
     // Set instrument sound to Violin
     synth.setInstrument(0, CHANNEL_0, unit_synth_instrument_t::Violin);
     delay(1000);
-    
+
     // Play MIDI notes
     playMidi(midi1, ARRAY_LEN(midi1));
 }
@@ -1737,15 +1737,15 @@ void loop() {
 }
 ```
 
-> 这段代码演示了如何通过遍历一个包含音符、持续时间和延迟的大型数组来播放完整的旋律序列。旋律将在上电或复位后播放一次。您可以修改数组来播放不同的歌曲或添加更复杂的编排。
+> 此代码演示了如何通过遍历一个包含音符、持续时间和延迟的大型数组来播放完整的旋律序列。旋律将在上电或复位后播放一次。您可以修改数组来播放不同的歌曲或添加更复杂的编排。
 
 #### 程序注释
 
-这个程序演示了如何：
+此程序演示了如何：
 
-- 将完整的旋律存储为音符、持续时间和延迟值的数组
+- 将完整旋律存储为音符、持续时间和延迟值的数组
 - 使用辅助函数（`playMidi`）遍历旋律并按顺序播放每个音符
-- 选择特定的乐器（小提琴）进行播放
+- 选择特定乐器（小提琴）进行播放
 - 在启动时自动播放歌曲
 
 您可以通过以下方式扩展此演示：
@@ -1755,35 +1755,35 @@ void loop() {
 - 实现多轨或复音播放以获得更高级的音乐效果
 
 :::tip
-对于那些希望将MIDI文件转换为Arduino代码的用户，您可以尝试使用[Midi2ArduinoTone](https://tawsiftorabi.github.io/Midi2ArduinoTone/)等工具。但是，请注意，此类工具生成的音符值可能需要修改才能与XIAO MIDI合成器配合使用，因为它们使用不同的音符映射。这些工具仍然可以作为将MIDI文件转换为您可以为此合成器调整的格式的起点。
+对于希望将 MIDI 文件转换为 Arduino 代码的用户，您可以尝试使用 [Midi2ArduinoTone](https://tawsiftorabi.github.io/Midi2ArduinoTone/) 等工具。但是，请注意此类工具生成的音符值可能需要修改才能与 XIAO MIDI 合成器配合使用，因为它们使用不同的音符映射。这些工具仍然可以作为将 MIDI 文件转换为您可以为此合成器调整的格式的起点。
 
 :::
 
 ## 资源
 
-- **[PDF]** [XIAO MIDI合成器原理图](https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/res/202004281_XIAO_MIDI_Synthesizer_v1.0_SCH&PDF_250421.pdf)
-- **[ZIP]** [XIAO MIDI合成器原理图和PCB](https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/res/202004281_XIAO_MIDI_Synthesizer_v1.0_SCH&PCB_050421.zip)
-- **[GitHub]** [Seeed_Arduino_MIDIMaster库](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster)
+- **[PDF]** [XIAO MIDI 合成器原理图](https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/res/202004281_XIAO_MIDI_Synthesizer_v1.0_SCH&PDF_250421.pdf)
+- **[ZIP]** [XIAO MIDI 合成器原理图和 PCB](https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/res/202004281_XIAO_MIDI_Synthesizer_v1.0_SCH&PCB_050421.zip)
+- **[GitHub]** [Seeed_Arduino_MIDIMaster 库](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster)
 
 ## 故障排除
 
-### Q1: 如何将MIDI文件转换为XIAO MIDI合成器的Arduino代码？
+### Q1：如何将 MIDI 文件转换为 XIAO MIDI 合成器的 Arduino 代码？
 
-要将MIDI文件转换为可与XIAO MIDI合成器一起使用的Arduino代码，您可以按照以下步骤操作：
+要将 MIDI 文件转换为可与 XIAO MIDI 合成器一起使用的 Arduino 代码，您可以按照以下步骤操作：
 
-1. 获取MIDI文件
+1. 获取 MIDI 文件
 
-    您可以从以下网站下载免费的MIDI文件：
+    您可以从以下网站下载免费的 MIDI 文件：
     - [The Wild West MIDIs](https://thewildwestmidis.github.io/?search=animals)
     - [LibreScore MIDI Library](https://github.com/LibreScore/app-librescore?tab=readme-ov-file#installation)
 
-2. 将MIDI文件转换为文本
+2. 将 MIDI 文件转换为文本
 
-    使用开源工具[midicomp](https://github.com/markc/midicomp)将您的MIDI文件转换为人类可读的文本格式。
+    使用开源工具 [midicomp](https://github.com/markc/midicomp) 将您的 MIDI 文件转换为人类可读的文本格式。
 
-3. 将MIDI文本转换为可播放的代码
+3. 将 MIDI 文本转换为可播放的代码
 
-    使用`midicomp`将MIDI文件转换为文本格式后，您需要将此文本处理为XIAO MIDI合成器可以播放的C/C++数组。Seeed提供Python脚本来自动化此转换：
+    使用 `midicomp` 将 MIDI 文件转换为文本格式后，您需要将此文本处理为 XIAO MIDI 合成器可以播放的 C/C++ 数组。Seeed 提供 Python 脚本来自动化此转换：
 
     - **快节奏，单轨（每个音符开始作为间隔）：**  
     [change_fast.py](https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/res/change_fast.py)
@@ -1794,27 +1794,39 @@ void loop() {
 
     **使用示例：**
 
-    1. 将您的MIDI文本文件（例如`1.txt`）放在与脚本相同的目录中。
+    1. 将您的 MIDI 文本文件（例如 `1.txt`）放在与脚本相同的目录中。
     2. 在终端中运行脚本：
 
     ```sh
     python change_fast.py
     ```
 
-    这将生成一个包含音符数组的头文件（例如`track_from_miditext.h`）。
+    这将生成一个包含音符数组的头文件（例如 `track_from_miditext.h`）。
 
-    3. 将生成的数组复制到您的Arduino草图中，替换旋律数据。
+    3. 将生成的数组复制到您的 Arduino 草图中，替换旋律数据。
 
     :::tip
-    - 脚本会自动将MIDI音符编号映射到XIAO MIDI合成器的音符定义。
+    - 脚本会自动将 MIDI 音符编号映射到 XIAO MIDI 合成器的音符定义。
     - 您可以调整脚本或生成的数组以进行自定义编排或适应内存限制。
     :::
 
     4. 集成生成的代码
 
-    - 打开生成的`.h`文件并复制`musicData`数组。
-    - 将其粘贴到您的Arduino项目中，替换现有的旋律数组。
+    - 打开生成的 `.h` 文件并复制 `musicData` 数组。
+    - 将其粘贴到您的 Arduino 项目中，替换现有的旋律数组。
     - 如果需要，更新您的播放逻辑以匹配新的数组结构。
+
+### Q2：为什么有时无法向 XIAO MIDI 合成器上传程序？
+
+由于 ESP32-C3 的程序是通过 UART 烧录的，偶尔的程序崩溃可能导致错误，阻止程序上传到 XIAO。此外，由于 XIAO 和 MIDI 板直接通过 UART 通信，传统的引导方法可能无法直接与 XIAO 配合使用。您可以尝试以下方法：
+
+1. 打开 XIAO MIDI 合成器电源并取下 XIAO ESP32-C3 开发板。
+2. 断开 USB 线缆。
+3. 按住 XIAO ESP32-C3 板上的 B 按钮不松开。
+4. 重新连接 USB 线缆，然后松开 B 按钮。
+5. 上传程序。
+
+此程序应该能够成功上传程序。
 
 ## 技术支持与产品讨论
 
