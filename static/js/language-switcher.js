@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-21 17:39:34 (北京时间)
-// 多语言页面: 2052 个
+// 生成时间: 2025-11-26 10:24:30 (北京时间)
+// 多语言页面: 2058 个
 
 (function() {
   'use strict';
@@ -923,7 +923,7 @@
     "es",
     "ja"
   ],
-  "/recomputer_j501_mini_getting_started": [
+  "/robotics_j501_mini_hardware_interfaces_usage": [
     "cn",
     "en",
     "es",
@@ -1098,6 +1098,12 @@
     "ja"
   ],
   "/reComputer_Jetson_Series_GPIO_Grove": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/rm520n_module_for_jetson": [
     "cn",
     "en",
     "es",
@@ -9088,6 +9094,30 @@
     "es",
     "ja"
   ],
+  "/getting_started_with_xiao_debug_mate": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_debug": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_power": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_serial": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_espnow": [
     "cn",
     "en",
@@ -10097,6 +10127,12 @@
     "ja"
   ],
   "/extending_grove_with_mcp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/face_regonition_with_mcp": [
     "cn",
     "en",
     "es",
