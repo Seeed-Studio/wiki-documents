@@ -5,8 +5,8 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
-date: 08/17/2023
-author: JoJang
+date: 11/26/2025
+author: Twelve
 ---
 
 # 使用 SenseCAP A1101 训练水表数字识别模型
@@ -18,13 +18,13 @@ author: JoJang
 
 ## 硬件准备
 
-- [SenseCAP A1101 - LoRaWAN 视觉 AI 传感器](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)
+- [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)
 - USB Type-C 数据线
 - 可联网的 Windows/ Linux/ Mac 电脑
 
 ## 软件准备
 
-在本教程中我们将使用以下软件技术
+在本教程中，我们将使用以下软件技术
 
 - [Roboflow](https://roboflow.com) - 用于标注
 - [SenseCraft Model Assistant](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process) - 用于训练
@@ -75,12 +75,12 @@ conda install libusb-1.0.26-h1c322ee_100.tar.bz2
 ```
 
 :::caution
-在更改固件执行以下操作之前，您需要确保您的 BootLoader 版本大于 2.0.0。如果您不确定，请按照[此部分](https://wiki.seeedstudio.com/cn/Train-Deploy-AI-Model-A1101/#check-bootloader-version)中提到的步骤检查 BootLoader 版本，如果版本小于 2.0.0，请按照[此部分](https://wiki.seeedstudio.com/cn/Train-Deploy-AI-Model-A1101/#update-bootloader)中提到的步骤更新 BootLoader
+在执行以下操作更改固件之前，您需要确保 BootLoader 版本大于 2.0.0。如果不确定，请按照[此部分](https://wiki.seeedstudio.com/cn/Train-Deploy-AI-Model-A1101/#check-bootloader-version)中提到的步骤检查 BootLoader 版本，如果版本小于 2.0.0，请按照[此部分](https://wiki.seeedstudio.com/cn/Train-Deploy-AI-Model-A1101/#update-bootloader)中提到的步骤更新 BootLoader
 :::
 
 ## 1. 收集图像数据
 
-- **步骤 1.** 使用 USB Type-C 线缆将 SenseCAP A1101 连接到 PC
+- **步骤 1.** 使用 USB Type-C 数据线将 SenseCAP A1101 连接到 PC
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/38.png"/></div>
 
@@ -88,13 +88,13 @@ conda install libusb-1.0.26-h1c322ee_100.tar.bz2
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
-之后您将在文件资源管理器中看到一个新的存储驱动器显示为 **SENSECAP**
+之后，您将在文件资源管理器中看到一个名为 **SENSECAP** 的新存储驱动器
 
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
 - **步骤 3.** 将[此 .uf2 文件](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/sensecap_ai_capture_firmware_v01-00.uf2)拖放到 **SENSECAP** 驱动器
 
-一旦 uf2 文件完成复制到驱动器中，驱动器将消失。这意味着 uf2 已成功上传到模块。
+uf2 文件复制到驱动器后，驱动器将立即消失。这意味着 uf2 已成功上传到模块。
 
 - **步骤 4.** 复制并粘贴[此 Python 脚本](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/blob/master/tools/capture_images_script.py)到您 PC 上新创建的名为 **capture_images_script.py** 的文件中
 
@@ -104,7 +104,7 @@ conda install libusb-1.0.26-h1c322ee_100.tar.bz2
 python3 capture_images_script.py
 ```
 
-默认情况下，它会每 300ms 捕获一张图像。如果你想改变这一点，可以按以下格式运行脚本
+默认情况下，它将每 300ms 捕获一张图像。如果您想更改此设置，可以按以下格式运行脚本
 
 ```sh
 python3 capture_images_script.py --interval <time_in_ms>
@@ -122,7 +122,7 @@ python3 capture_images_script.py --interval 1000
 
 同时，在录制过程中会打开一个预览窗口。
 
-当您捕获了足够的图像后，点击终端窗口并按下以下组合键来停止捕获过程
+捕获足够的图像后，点击终端窗口并按以下组合键停止捕获过程
 
 - Windows: Ctrl + Break
 - Linux: Ctrl + Shift + \
@@ -130,17 +130,17 @@ python3 capture_images_script.py --interval 1000
 
 ### 图像收集后更改设备固件
 
-完成数据集图像录制后，您需要确保将 SenseCAP A1101 内的固件更改回原始版本，这样您就可以再次加载目标检测模型进行检测。现在让我们来看看具体步骤。
+完成数据集图像录制后，您需要确保将 SenseCAP A1101 内的固件更改回原始版本，以便再次加载目标检测模型进行检测。现在让我们来看看步骤。
 
-- **步骤 1.** 如前所述，让 SenseCAP A1101 进入 **Boot 模式**
+- **步骤 1.** 如前所述，在 SenseCAP A1101 上进入**启动模式**
 
-- **步骤 2.** 根据您的设备，将[此 .uf2 文件](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/sensecap_ai_v01-30.uf2)拖放到 **SENSECAP** 驱动器中
+- **步骤 2.** 根据您的设备将[此 .uf2 文件](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/sensecap_ai_v01-30.uf2)拖放到 **SENSECAP** 驱动器
 
-一旦 uf2 文件完成复制到驱动器中，驱动器就会消失。这意味着 uf2 已成功上传到模块。
+uf2 文件复制到驱动器后，驱动器将立即消失。这意味着 uf2 已成功上传到模块。
 
 ## 2. 使用 RoboFlow 生成数据集
 
-[Roboflow](https://roboflow.com) 是一个基于在线的标注工具。在这里我们可以直接将录制的视频素材导入到 Roboflow 中，它会将其导出为一系列图像。这个工具非常方便，因为它可以帮助我们将数据集分配到"训练、验证和测试"中。此外，这个工具还允许我们在标记图像后对这些图像进行进一步处理。而且，它可以轻松地将标记的数据集导出为 **COCO 格式**，这正是我们所需要的！
+[Roboflow](https://roboflow.com) 是一个基于在线的标注工具。在这里，我们可以直接将录制的视频素材导入 Roboflow，它将导出为一系列图像。这个工具非常方便，因为它可以帮助我们将数据集分配到"训练、验证和测试"中。此外，该工具还允许我们在标记图像后对这些图像进行进一步处理。此外，它可以轻松将标记的数据集导出为 **COCO 格式**，这正是我们所需要的！
 
 - **步骤 1.** 点击[这里](https://app.roboflow.com/login)注册 Roboflow 账户
 
@@ -148,7 +148,7 @@ python3 capture_images_script.py --interval 1000
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/2.jpg"/></div>
 
-- **步骤 3.** 填写 **Project Name**，保持 **License (CC BY 4.0)** 和 **Project type (Object Detection (Bounding Box))** 为默认设置。在 **What will your model predict?** 列下，填写一个标注组名称。
+- **步骤 3.** 填写 **Project Name**，保持 **License (CC BY 4.0)** 和 **Project type (Object Detection (Bounding Box))** 为默认设置。在 **What will your model predict?** 列下，填写标注组名称。
 
 <div align="center"><img width="{350}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/2.png"/></div>
 
@@ -156,7 +156,7 @@ python3 capture_images_script.py --interval 1000
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/3.png"/></div>
 
-- **步骤 5.** 图像处理完成后，点击 **Finish Uploading**。耐心等待直到图像上传完成。
+- **步骤 5.** 图像处理完成后，点击 **Finish Uploading**。耐心等待图像上传完成。
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/4.jpg"/></div>
 
@@ -164,7 +164,7 @@ python3 capture_images_script.py --interval 1000
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/5.jpg"/></div>
 
-- **步骤 7.** 选择一张图像，在数字周围画一个矩形框，选择标签为 **digits** 并按 **ENTER**
+- **步骤 7.** 选择一张图像，在数字周围绘制矩形框，选择标签为 **digits** 并按 **ENTER**
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4.png"/></div>
 
@@ -186,11 +186,11 @@ python3 capture_images_script.py --interval 1000
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/27.jpg"/></div>
 
-- **步骤 13.** 现在您可以根据需要添加 **Preprocessing** 和 **Augmentation**。在这里我们将 **Resize** 选项 **更改** 为 **192x192**
+- **步骤 13.** 现在您可以根据需要添加 **Preprocessing** 和 **Augmentation**。在这里我们将**更改** **Resize** 选项为 **192x192**
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/6.png"/></div>
 
-这里我们将图像大小更改为 192x192，因为我们将使用该尺寸进行训练，训练会更快。否则，在训练过程中必须将所有图像转换为 192x192，这会消耗更多 CPU 资源并使训练过程变慢。
+在这里我们将图像大小更改为 192x192，因为我们将使用该尺寸进行训练，训练会更快。否则，在训练过程中必须将所有图像转换为 192x192，这会消耗更多 CPU 资源并使训练过程变慢。
 
 - **步骤 14.** 接下来，继续使用其余默认设置并点击 **Generate**
 
@@ -206,11 +206,11 @@ python3 capture_images_script.py --interval 1000
 
 ### 在 Google Colab 上使用 SenseCraft Model Assistant 进行训练
 
-选择了公共数据集后，我们需要训练数据集。这里我们使用 Google Colaboratory 环境在云端执行训练。此外，我们在 Colab 中使用 Roboflow api 来轻松下载我们的数据集。
+选择公共数据集后，我们需要训练数据集。在这里我们使用 Google Colaboratory 环境在云端执行训练。此外，我们在 Colab 中使用 Roboflow API 轻松下载我们的数据集。
 
-点击[这里](https://colab.research.google.com/github/Seeed-Studio/EdgeLab/blob/main/notebooks/Google-Colab-YOLOv5-A1101-Example.ipynb)打开一个已准备好的 Google Colab 工作空间，按照工作空间中提到的步骤进行操作，并逐一运行代码单元。
+点击[这里](https://github.com/Seeed-Studio/yolov5-swift/blob/master/notebooks/Google_Colab_Digital_Meter_Example.ipynb)打开一个已准备好的 Google Colab 工作空间，按照工作空间中提到的步骤逐一运行代码单元。
 
-**注意：** 在 Google Colab 中，在**步骤 4** 下的代码单元格中，您可以直接复制上述 Roboflow 中提到的代码片段
+**注意：** 在 Google Colab 中，在 **Step 4** 下的代码单元中，您可以直接复制上述 Roboflow 中提到的代码片段
 
 它将演示以下内容：
 
@@ -225,7 +225,7 @@ python3 capture_images_script.py --interval 1000
 
 现在我们将把在训练结束时获得的 **model-1.uf2** 移动到 SenseCAP A1101 中。
 
-- **步骤 1.** 安装最新版本的 [Google Chrome](https://www.google.com/chrome) 或 [Microsoft Edge 浏览器](https://www.microsoft.com/en-us/edge?r=1) 并打开它
+- **步骤 1.** 安装最新版本的 [Google Chrome](https://www.google.com/chrome) 或 [Microsoft Edge browser](https://www.microsoft.com/en-us/edge?r=1) 并打开它
 
 - **步骤 2.** 通过 USB Type-C 线缆将 SenseCAP A1101 连接到您的 PC
 
@@ -235,21 +235,21 @@ python3 capture_images_script.py --interval 1000
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
-之后，您将在文件资源管理器中看到一个新的存储驱动器显示为 **SENSECAP**
+之后，您将在文件资源管理器中看到一个新的存储驱动器显示为 **SENSECAP**  
 
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
 - **步骤 4.** 将 **model-1.uf2** 文件拖放到 **SENSECAP** 驱动器
 
-一旦 uf2 文件完成复制到驱动器中，驱动器就会消失。这意味着 uf2 已成功上传到模块。
+一旦 uf2 文件完成复制到驱动器，驱动器将消失。这意味着 uf2 已成功上传到模块。
 
 **注意：** 如果您有 4 个模型文件准备就绪，您可以逐个拖放每个模型。先放第一个模型，等待它完成复制，再次进入启动模式，放第二个模型，以此类推。如果您只将一个模型（索引为 1）加载到 SenseCAP A1101 中，它将加载该模型。
 
-- **步骤 5.** [点击这里](https://vision-ai-demo.seeed.cn/) 打开摄像头流的预览窗口
+- **步骤 5.** [点击这里](https://vision-ai-demo.seeed.cn/)打开相机流的预览窗口
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/31.png"/></div>
 
-- **步骤 6.** 点击 **Connect** 按钮。然后您将在浏览器上看到一个弹出窗口。选择 **SenseCAP Vision AI - Paired** 并点击 **Connect**
+- **步骤 6.** 点击 **Connect** 按钮。然后您将在浏览器中看到一个弹出窗口。选择 **SenseCAP Vision AI - Paired** 并点击 **Connect**
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/32.png"/></div>
 
@@ -261,19 +261,19 @@ python3 capture_images_script.py --interval 1000
 
 ## 4. 在 SenseCAP Mate 上使用 SenseCAP A1101 执行推理
 
-除了在浏览器上执行推理，我们还可以使用 SenseCAP Mate 来实现模型推理，我们将逐步实现它。
+除了在浏览器上执行推理外，我们还可以使用 SenseCAP Mate 来实现模型推理，我们将逐步实现它。
 
-- **步骤 1.** 首先，我们需要擦除 A1101 的固件，这可以通过使用 erase_model.uf2 来实现。然后将 A1101 固件升级到最新版本，并将水表数字识别模型放入 A1101
+- **步骤 1.**  首先，我们需要擦除 A1101 的固件，这可以通过使用 erase_model.uf2 来实现。然后将 A1101 固件升级到最新版本，并将水表数字识别模型放入 A1101
 
   *固件*: [erase_model.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/erase_model.uf2)、[SenseCAP-A1101_v02-00.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/sensecap_ai_v02-00.uf2)
 
   *模型*: [water_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/meter_water_pre_6.uf2)、[pfld_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/pfld_meter_pre_5.uf2)、[digital_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/meter_seg7_pre_6.uf2)
 
-  ***注意:*** water_meter 和 digital_meter 在桌面上都识别为模型名称 user-define6，在 APP 端显示为 digital_meter。pfld_meter 识别的模型名称为 user-define5，在 APP 端显示为 Point_meter。用户在部署过程中需要根据实际使用需求上传模型
+  ***注意:*** water_meter 和 digital_meter 在桌面上都识别模型名称为 user-define6，在 APP 端显示 digital_meter。pfld_meter 识别的模型名称为 user-define5，在 APP 端显示 Point_meter。用户在部署过程中需要根据实际使用需求上传模型
 
-- **步骤 2.** [点击这里](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace) 打开摄像头流的预览窗口
+- **步骤 2.**  [点击这里](https://vision-ai-demo.seeed.cn/)打开相机流的预览窗口
 
-- **步骤 3.** 点击 **Connect** 按钮。然后您将在浏览器上看到一个弹出窗口。选择 **SenseCAP A1101** - Paired 并点击 Connect
+- **步骤 3.**  点击 **Connect** 按钮。然后您将在浏览器中看到一个弹出窗口。选择 **SenseCAP A1101** - Paired 并点击 Connect
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step3.jpg"/></div>
 
@@ -285,7 +285,7 @@ python3 capture_images_script.py --interval 1000
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step_all.jpg"/></div>
 
-- **步骤 6.** 如下所示，AI Preview 显示数字仪表识别结果。
+- **步骤 6.** 如下所示，AI Preview 显示数字表识别结果。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step5.jpg"/></div>
 
@@ -303,13 +303,13 @@ python3 capture_images_script.py --interval 1000
 
 - **[网页]** [TensorFlow Lite 文档](https://www.tensorflow.org/lite/guide)
 
-- **[PDF]** [SenseCAP A1101 LoRaWAN 视觉 AI 传感器规格书](https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_spec.pdf)
+- **[PDF]** [SenseCAP A1101 LoRaWAN Vision AI 传感器规格书](https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_spec.pdf)
 
-- **[PDF]** [SenseCAP A1101 LoRaWAN 视觉 AI 传感器用户指南](https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_LoRaWAN_Vision_AI_Sensor_User_Guide_V1.0.2.pdf)
+- **[PDF]** [SenseCAP A1101 LoRaWAN Vision AI 传感器用户指南](https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_LoRaWAN_Vision_AI_Sensor_User_Guide_V1.0.2.pdf)
 
 - **[PDF]** [SenseCAP S210X LoRaWAN 传感器目录](https://files.seeedstudio.com/products/114992867/SenseCAP%20S210X%20LoRaWAN%20Sensor%20Catalogue.pdf)
 
-- **[PDF]** [SenseCAP A1101 LoRaWAN 视觉 AI 传感器常见问题](https://files.seeedstudio.com/wiki/SenseCAP-A1101/FAQ_for_SenseCAP_A1101_LoRaWAN_AI_Vision_Sensor_v1.0.0.pdf)
+- **[PDF]** [SenseCAP A1101 LoRaWAN Vision AI 传感器常见问题](https://files.seeedstudio.com/wiki/SenseCAP-A1101/FAQ_for_SenseCAP_A1101_LoRaWAN_AI_Vision_Sensor_v1.0.0.pdf)
 
 ## 技术支持与产品讨论
 

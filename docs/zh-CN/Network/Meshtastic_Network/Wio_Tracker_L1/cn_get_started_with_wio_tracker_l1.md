@@ -248,11 +248,11 @@ import TabItem from '@theme/TabItem';
 ### 屏幕连接
 
  - [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
-- 请期待我们即将推出的兼容单独销售的 OLED 屏幕。当前的 OLED 驱动器是 SSD1306。
+- 请期待我们兼容的单独销售的 OLED 屏幕，即将推出。当前的 OLED 驱动器是 SSD1306。
 
 ### 虚拟键盘
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。请按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
+2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## 常见问题
@@ -261,17 +261,17 @@ import TabItem from '@theme/TabItem';
 
 **描述：**
 
-设备无响应，没有 LED 指示，无法与您的应用配对。如果您发现设备在刷写自己的固件后完全无响应，您也可以尝试重新安装引导程序。
+设备无响应，没有 LED 灯，无法与您的应用配对。如果您发现设备在刷写自己的固件后完全死机，您也可以尝试重新安装引导程序。
 
 :::danger note
-当您刷写引导程序时，请确保线缆连接稳定，在刷写过程中**不要**断开连接。
+当您刷写引导程序时，请确保电缆连接稳定，在刷写过程中**不要**断开连接。
 :::
 
 - 步骤 1：[点击这里下载引导程序](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 
 - 步骤 2：进入 DFU 模式
 
-  双击 RST 按钮进入 DFU 模式。磁盘名称 "Tracker L1" 将会出现。
+  双击 RST 按钮进入 DFU 模式。磁盘名称 "Tracker L1" 将弹出。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
 
@@ -281,12 +281,12 @@ import TabItem from '@theme/TabItem';
 
 - 步骤 4：刷写固件
 
-  完成上述步骤后，您可以按照这个[步骤](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)刷写应用固件。您可能需要[手动进入 DFU 模式](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#entering-dfu-mode-manually)
+  当您完成上述步骤后，您可以按照这个[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)刷写应用固件。您可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 
 ### 无法进入 DFU 和手动进入 DFU 模式
 
-将设备连接到您的电脑，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的电脑上将出现一个名为 `Tracker L1` 的新 USB 驱动器。
+将设备连接到您的 PC，双击 `Reset` 按钮。黄色 LED 将保持常亮，您的 PC 上将出现一个名为 `Tracker L1` 的新 USB 驱动器。
 
 ### 退出 DFU 模式
 
