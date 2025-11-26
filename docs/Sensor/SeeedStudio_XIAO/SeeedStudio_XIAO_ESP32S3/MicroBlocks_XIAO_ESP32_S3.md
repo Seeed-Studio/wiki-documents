@@ -114,6 +114,8 @@ This script will blink the yellow user LED:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
+The [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual) includes many additional examples.
+
 ## Project Demo
 
 <div class="video-container">
