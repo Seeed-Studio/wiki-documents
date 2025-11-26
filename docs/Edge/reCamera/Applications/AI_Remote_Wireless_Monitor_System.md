@@ -359,7 +359,7 @@ nnn.nnn:9000 In fact, 192.168.nnn.nnn is the static IP address of the reTerminal
 
 Or on the Workspace page that just modified Node RED, click "Setting" in the upper left corner'
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4_1.png" /></div>
 
 > Figure 4: Workspace Setting Frame
 
