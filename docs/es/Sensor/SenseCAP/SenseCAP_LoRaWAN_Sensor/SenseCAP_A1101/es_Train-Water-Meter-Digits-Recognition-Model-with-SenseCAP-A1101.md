@@ -5,20 +5,20 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
-date: 08/17/2023
-author: JoJang
+date: 11/26/2025
+author: Twelve
 ---
 
 # Entrenar Modelo de Reconocimiento de Dígitos de Medidor de Agua con SenseCAP A1101
 
-## Descripción general
+## Descripción General
 
 En este wiki, te enseñaremos cómo entrenar tu propio modelo de medidor para tu aplicación específica y luego desplegarlo fácilmente en el SenseCAP A1101. ¡Comencemos!
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/0.jpg"/></div>
 
 ## Preparación del hardware
 
-- [SenseCAP A1101 - Sensor de Visión AI LoRaWAN](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)
+- [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)
 - Cable USB Type-C
 - Windows/ Linux/ Mac con acceso a internet
 
@@ -50,25 +50,25 @@ pip3 install libusb1
 
 ### M1/ M2 Mac
 
-- **Paso 1.** Instalar Homebrew
+- **Paso 1.** Instala Homebrew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- **Paso 2.** Instalar conda
+- **Paso 2.** Instala conda
 
 ```sh
 brew install conda
 ```
 
-- **Paso 3.** Descargar libusb
+- **Paso 3.** Descarga libusb
 
 ```sh
 wget https://conda.anaconda.org/conda-forge/osx-arm64/libusb-1.0.26-h1c322ee_100.tar.bz2
 ```
 
-- **Paso 4.** Instalar libusb
+- **Paso 4.** Instala libusb
 
 ```sh
 conda install libusb-1.0.26-h1c322ee_100.tar.bz2
@@ -80,11 +80,11 @@ Necesitas asegurarte de que tu versión de BootLoader sea mayor a 2.0.0 antes de
 
 ## 1. Recopilar Datos de Imagen
 
-- **Paso 1.** Conecta el SenseCAP A1101 a la PC usando un cable USB Type-C
+- **Paso 1.** Conecta SenseCAP A1101 a la PC usando el cable USB Type-C
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/38.png"/></div>
 
-- **Paso 2.** Haz doble clic en el botón de arranque para entrar al **modo de arranque**
+- **Paso 2.** Haz doble clic en el botón de arranque para entrar en **modo de arranque**
 
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
@@ -94,7 +94,7 @@ Después de esto verás una nueva unidad de almacenamiento mostrada en tu explor
 
 - **Paso 3.** Arrastra y suelta [este archivo .uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/sensecap_ai_capture_firmware_v01-00.uf2) a la unidad **SENSECAP**
 
-Tan pronto como el uf2 termine de copiarse en la unidad, la unidad desaparecerá. Esto significa que el uf2 ha sido cargado exitosamente al módulo.
+Tan pronto como el uf2 termine de copiarse en la unidad, la unidad desaparecerá. Esto significa que el uf2 ha sido subido exitosamente al módulo.
 
 - **Paso 4.** Copia y pega [este script de Python](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/blob/master/tools/capture_images_script.py) dentro de un archivo recién creado llamado **capture_images_script.py** en tu PC
 
@@ -116,31 +116,31 @@ Por ejemplo, para capturar una imagen cada segundo
 python3 capture_images_script.py --interval 1000
 ```
 
-Después de ejecutar el script anterior, el SenseCAP A1101 comenzará a capturar imágenes de las cámaras integradas de forma continua y las guardará todas dentro de una carpeta llamada **save_img**
+Después de que se ejecute el script anterior, SenseCAP A1101 comenzará a capturar imágenes de las cámaras integradas continuamente y las guardará todas dentro de una carpeta llamada **save_img**
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/1.png"/></div>
 
-Además, abrirá una ventana de vista previa mientras está grabando.
+También, abrirá una ventana de vista previa mientras está grabando.
 
-Después de haber capturado suficientes imágenes, haz clic en la ventana del terminal y presiona las siguientes combinaciones de teclas para detener el proceso de captura
+Después de que tengas suficientes imágenes capturadas, haz clic en la ventana del terminal y presiona las siguientes combinaciones de teclas para detener el proceso de captura
 
 - Windows: Ctrl + Break
 - Linux: Ctrl + Shift + \
 - Mac: CMD + Shift + \
 
-### Cambiar el firmware del dispositivo después de la recolección de imágenes
+### Cambiar firmware del dispositivo después de la recopilación de imágenes
 
-Después de haber terminado de grabar imágenes para el conjunto de datos, necesitas asegurarte de cambiar el firmware dentro del SenseCAP A1101 de vuelta al original, para que puedas cargar nuevamente modelos de detección de objetos para la detección. Veamos los pasos ahora.
+Después de que hayas terminado de grabar imágenes para el conjunto de datos, necesitas asegurarte de cambiar el firmware dentro del SenseCAP A1101 de vuelta al original, para que puedas cargar nuevamente modelos de detección de objetos para detección. Pasemos por los pasos ahora.
 
-- **Paso 1.** Entra en **modo Boot** en el SenseCAP A1101 como se explicó anteriormente
+- **Paso 1.** Entra en **modo de arranque** en SenseCAP A1101 como se explicó antes
 
 - **Paso 2.** Arrastra y suelta [este archivo .uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v1.1.0/sensecap_ai_v01-30.uf2) a la unidad **SENSECAP** según tu dispositivo
 
-Tan pronto como el uf2 termine de copiarse en la unidad, la unidad desaparecerá. Esto significa que el uf2 se ha subido exitosamente al módulo.
+Tan pronto como el uf2 termine de copiarse en la unidad, la unidad desaparecerá. Esto significa que el uf2 ha sido subido exitosamente al módulo.
 
 ## 2. Generar Conjunto de Datos con RoboFlow
 
-[Roboflow](https://roboflow.com) es una herramienta de anotación basada en línea. Aquí podemos importar directamente las grabaciones de video que hemos registrado en Roboflow y se exportarán como una serie de imágenes. Esta herramienta es muy conveniente porque nos permitirá ayudar a distribuir el conjunto de datos en "entrenamiento, validación y prueba". También esta herramienta nos permitirá agregar procesamiento adicional a estas imágenes después de etiquetarlas. Además, puede exportar fácilmente el conjunto de datos etiquetado en **formato COCO** que es exactamente lo que necesitamos!
+[Roboflow](https://roboflow.com) es una herramienta de anotación basada en línea. Aquí podemos importar directamente las imágenes de video que hemos grabado en Roboflow y se exportarán como una serie de imágenes. Esta herramienta es muy conveniente porque nos permitirá ayudar a distribuir el conjunto de datos en "entrenamiento, validación y prueba". También esta herramienta nos permitirá agregar procesamiento adicional a estas imágenes después de etiquetarlas. Además, puede exportar fácilmente el conjunto de datos etiquetado en **formato COCO** que es exactamente lo que necesitamos!
 
 - **Paso 1.** Haz clic [aquí](https://app.roboflow.com/login) para registrarte en una cuenta de Roboflow
 
@@ -148,11 +148,11 @@ Tan pronto como el uf2 termine de copiarse en la unidad, la unidad desaparecerá
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/2.jpg"/></div>
 
-- **Paso 3.** Completa el **Project Name**, mantén la **License (CC BY 4.0)** y **Project type (Object Detection (Bounding Box))** como predeterminados. Bajo la columna **What will your model predict?**, completa un nombre de grupo de anotación.
+- **Paso 3.** Completa **Project Name**, mantén la **License (CC BY 4.0)** y **Project type (Object Detection (Bounding Box))** como predeterminados. Bajo la columna **What will your model predict?**, completa un nombre de grupo de anotación.
 
 <div align="center"><img width="{350}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/2.png"/></div>
 
-- **Paso 4.** Arrastra y suelta las imágenes que has capturado usando el SenseCAP A1101
+- **Paso 4.** Arrastra y suelta las imágenes que has capturado usando SenseCAP A1101
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/3.png"/></div>
 
@@ -178,7 +178,7 @@ Tan pronto como el uf2 termine de copiarse en la unidad, la unidad desaparecerá
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/25.jpg"/></div>
 
-- **Paso 11.** A continuación dividiremos las imágenes entre "Train, Valid y Test". Si hay más conjuntos de datos, puede ser 80/20. Si los conjuntos de datos son menos, puede ser 85/15. Ten en cuenta que 'Train' no debe ser menor que 80.
+- **Paso 11.** A continuación dividiremos las imágenes entre "Train, Valid y Test". Si hay más conjuntos de datos, puede ser 80/20. Si los conjuntos de datos son menos, puede ser 85/15. Por favor nota que 'Train' no debería ser menos del 80.
 
 <div align="center"><img width="{330}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/12.png"/></div>
 
@@ -190,7 +190,7 @@ Tan pronto como el uf2 termine de copiarse en la unidad, la unidad desaparecerá
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/6.png"/></div>
 
-Aquí cambiamos el tamaño de imagen a 192x192 porque usaremos ese tamaño para el entrenamiento y el entrenamiento será más rápido. De lo contrario, tendrá que convertir todas las imágenes a 192x192 durante el proceso de entrenamiento, lo que consume más recursos de CPU y hace que el proceso de entrenamiento sea más lento.
+Aquí cambiamos el tamaño de imagen a 192x192 porque usaremos ese tamaño para entrenar y el entrenamiento será más rápido. De lo contrario, tendrá que convertir todas las imágenes a 192x192 durante el proceso de entrenamiento lo cual consume más recursos de CPU y hace el proceso de entrenamiento más lento.
 
 - **Paso 14.** A continuación, procede con los valores predeterminados restantes y haz clic en **Generate**
 
@@ -206,15 +206,15 @@ Esto generará un fragmento de código que usaremos más tarde dentro del entren
 
 ### Entrenar usando SenseCraft Model Assistant en Google Colab
 
-Después de haber elegido un conjunto de datos público, necesitamos entrenar el conjunto de datos. Aquí usamos un entorno de Google Colaboratory para realizar el entrenamiento en la nube. Además, usamos la api de Roboflow dentro de Colab para descargar fácilmente nuestro conjunto de datos.
+Después de que hayamos elegido un conjunto de datos público, necesitamos entrenar el conjunto de datos. Aquí usamos un entorno de Google Colaboratory para realizar entrenamiento en la nube. Además, usamos la API de Roboflow dentro de Colab para descargar fácilmente nuestro conjunto de datos.
 
-Haz clic [aquí](https://colab.research.google.com/github/Seeed-Studio/EdgeLab/blob/main/notebooks/Google-Colab-YOLOv5-A1101-Example.ipynb) para abrir un espacio de trabajo de Google Colab ya preparado, revisa los pasos mencionados en el espacio de trabajo y ejecuta las celdas de código una por una.
+Haz clic [aquí](https://github.com/Seeed-Studio/yolov5-swift/blob/master/notebooks/Google_Colab_Digital_Meter_Example.ipynb) para abrir un espacio de trabajo de Google Colab ya preparado, sigue los pasos mencionados en el espacio de trabajo y ejecuta las celdas de código una por una.
 
-**Nota:** En Google Colab, en la celda de código bajo **Paso 4**, puedes copiar directamente el fragmento de código de Roboflow como se mencionó anteriormente
+**Nota:** En Google Colab, en la celda de código bajo **Step 4**, puedes copiar directamente el fragmento de código de Roboflow como se mencionó anteriormente
 
-Esto te guiará a través de lo siguiente:
+Te guiará a través de lo siguiente:
 
-- Configurar un entorno para entrenamiento
+- Configurar un entorno para el entrenamiento
 - Descargar un conjunto de datos
 - Realizar el entrenamiento
 - Descargar el modelo entrenado
@@ -225,7 +225,7 @@ Esto te guiará a través de lo siguiente:
 
 Ahora moveremos el **model-1.uf2** que obtuvimos al final del entrenamiento al SenseCAP A1101.
 
-- **Paso 1.** Instala la última versión de [Google Chrome](https://www.google.com/chrome) o [navegador Microsoft Edge](https://www.microsoft.com/en-us/edge?r=1) y ábrelo
+- **Paso 1.** Instala la última versión de [Google Chrome](https://www.google.com/chrome) o [Microsoft Edge browser](https://www.microsoft.com/en-us/edge?r=1) y ábrelo
 
 - **Paso 2.** Conecta el SenseCAP A1101 a tu PC mediante un cable USB Type-C
 
@@ -261,9 +261,9 @@ Como puedes ver arriba, los números están siendo detectados con cajas delimita
 
 ## 4. Realizar inferencia con SenseCAP A1101 en SenseCAP Mate
 
-Además de realizar inferencia en el navegador, también podemos usar el SenseCAP Mate para implementar inferencia de modelo, lo cual implementaremos paso a paso.
+Además de realizar inferencia en el navegador, también podemos usar el SenseCAP Mate para implementar la inferencia del modelo, lo cual implementaremos paso a paso.
 
-- **Paso 1.**  Primero, necesitamos borrar el firmware del A1101, lo cual se puede lograr usando erase_model.uf2. Luego actualizar el firmware del A1101 a la última versión y soltar el modelo de reconocimiento de dígitos de medidor de agua en el A1101
+- **Paso 1.**  Primero, necesitamos borrar el firmware del A1101, lo cual se puede lograr usando erase_model.uf2. Luego actualizar el firmware del A1101 a la última versión y soltar el modelo de reconocimiento de dígitos del medidor de agua en el A1101
 
   *Firmware*: [erase_model.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/erase_model.uf2)、[SenseCAP-A1101_v02-00.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/sensecap_ai_v02-00.uf2)
 
@@ -271,7 +271,7 @@ Además de realizar inferencia en el navegador, también podemos usar el SenseCA
 
   ***Nota:*** water_meter y digital_meter ambos identifican el nombre del modelo como user-define6 en el escritorio y muestran digital_meter en el lado de la APP. El nombre del modelo identificado por pfld_meter es user-define5, y Point_meter se muestra en el lado de la APP. Los usuarios necesitan subir modelos según sus requisitos de uso reales durante el proceso de despliegue
 
-- **Paso 2.**  [Haz clic aquí](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace) para abrir una ventana de vista previa del flujo de la cámara
+- **Paso 2.**  [Haz clic aquí](https://vision-ai-demo.seeed.cn/) para abrir una ventana de vista previa del flujo de la cámara
 
 - **Paso 3.**  Haz clic en el botón **Connect**. Entonces verás una ventana emergente en el navegador. Selecciona **SenseCAP A1101** - Paired y haz clic en Connect
 
@@ -285,11 +285,11 @@ Además de realizar inferencia en el navegador, también podemos usar el SenseCA
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step_all.jpg"/></div>
 
-- **Paso 6.** Como puedes ver abajo, la AI Preview muestra los resultados de reconocimiento del medidor digital.
+- **Paso 6.** Como puedes ver abajo, la Vista Previa de AI muestra los resultados del reconocimiento del medidor digital.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step5.jpg"/></div>
 
-Después de completar los pasos anteriores, intentaremos agregar nuestro propio A1101 al dispositivo. A través de los siguientes 4 pasos, podemos ver los datos de resultado de identificación del dispositivo en cualquier momento y lugar a través de la plataforma en la nube como SenseCAP Mate.
+Después de completar los pasos anteriores, intentaremos agregar nuestro propio A1101 al dispositivo. A través de los siguientes 4 pasos, podemos ver los datos de resultado de la identificación del dispositivo en cualquier momento y lugar a través de la plataforma en la nube como SenseCAP Mate.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4stepfinal.png"/></div>
 
@@ -303,19 +303,19 @@ Después de completar los pasos anteriores, intentaremos agregar nuestro propio 
 
 - **[Página Web]** [Documentación de TensorFlow Lite](https://www.tensorflow.org/lite/guide)
 
-- **[PDF]** [Especificación del Sensor de IA de Visión LoRaWAN SenseCAP A1101](https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_spec.pdf)
+- **[PDF]** [Especificación del Sensor de Visión AI LoRaWAN SenseCAP A1101](https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_spec.pdf)
 
-- **[PDF]** [Guía del Usuario del Sensor de IA de Visión LoRaWAN SenseCAP A1101](https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_LoRaWAN_Vision_AI_Sensor_User_Guide_V1.0.2.pdf)
+- **[PDF]** [Guía del Usuario del Sensor de Visión AI LoRaWAN SenseCAP A1101](https://files.seeedstudio.com/wiki/SenseCAP-A1101/SenseCAP_A1101_LoRaWAN_Vision_AI_Sensor_User_Guide_V1.0.2.pdf)
 
 - **[PDF]** [Catálogo de Sensores LoRaWAN SenseCAP S210X](https://files.seeedstudio.com/products/114992867/SenseCAP%20S210X%20LoRaWAN%20Sensor%20Catalogue.pdf)
 
-- **[PDF]** [Preguntas Frecuentes para el Sensor de IA de Visión LoRaWAN SenseCAP A1101](https://files.seeedstudio.com/wiki/SenseCAP-A1101/FAQ_for_SenseCAP_A1101_LoRaWAN_AI_Vision_Sensor_v1.0.0.pdf)
+- **[PDF]** [FAQ para el Sensor de Visión AI LoRaWAN SenseCAP A1101](https://files.seeedstudio.com/wiki/SenseCAP-A1101/FAQ_for_SenseCAP_A1101_LoRaWAN_AI_Vision_Sensor_v1.0.0.pdf)
 
 ## Soporte Técnico y Discusión de Productos
 
  <br />
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

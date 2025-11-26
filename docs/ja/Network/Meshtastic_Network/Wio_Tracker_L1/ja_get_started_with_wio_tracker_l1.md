@@ -206,11 +206,11 @@ import TabItem from '@theme/TabItem';
 **EU_868**は、1時間のローリングベースで毎分計算される10%の時間デューティサイクル制限を遵守する必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスにLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
+デバイスでLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
 
 ### センサー接続
 
-Groveインターフェース経由でデバイスにセンサーを追加できます。以下のセンサーは、デバイスのGroveインターフェースとの互換性が確認されています。
+Grove インターフェース経由でデバイスにセンサーを追加できます。以下のセンサーは、デバイスのGrove インターフェースとの互換性が確認されています。
 
 <table>
   <tr>
@@ -240,7 +240,7 @@ Groveインターフェース経由でデバイスにセンサーを追加でき
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
-    <td>I2C キーボード</td>
+    <td>I2Cキーボード</td>
     <td>CardKB</td>
   </tr>
 </table>
@@ -261,10 +261,10 @@ Groveインターフェース経由でデバイスにセンサーを追加でき
 
 **説明：**
 
-デバイスが応答しない、LEDが点灯しない、アプリとペアリングできない場合。独自のファームウェアをフラッシュした後にデバイスが完全に動作しなくなった場合は、ブートローダーの再インストールも試してみてください。
+デバイスが応答しない、LEDが点灯しない、アプリとペアリングできない場合。独自のファームウェアをフラッシュした後にデバイスが完全に動作しなくなった場合は、ブートローダーの再インストールも試してください。
 
 :::danger note
-ブートローダーをフラッシュする際は、ケーブル接続が安定していることを確認し、フラッシュプロセス中は**絶対に**接続を切断しないでください。
+ブートローダーをフラッシュする際は、ケーブル接続が安定していることを確認し、フラッシュプロセス中は**絶対に**切断しないでください。
 :::
 
 - ステップ1：[こちらをクリックしてブートローダーをダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
@@ -281,7 +281,7 @@ Groveインターフェース経由でデバイスにセンサーを追加でき
 
 - ステップ4：ファームウェアをフラッシュする
 
-  上記の手順を完了したら、この[ステップ](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)に従ってアプリケーションファームウェアをフラッシュできます。[手動でDFUモードに入る](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#entering-dfu-mode-manually)必要がある場合があります。
+  上記の手順を完了したら、この[ステップ](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってアプリケーションファームウェアをフラッシュできます。[手動でDFUモードに入る](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)必要がある場合があります。
 
 
 ### DFUに入れない場合と手動でのDFUモード入力
@@ -298,7 +298,7 @@ Groveインターフェース経由でデバイスにセンサーを追加でき
 
 - **RSSI**はデバイスとその周辺環境によって決まります。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
 
-      最良の信号効果を得るために、干渉が最小限で障害物のない開放的な場所でデバイスを使用してください。
+      最良の信号効果を得るために、干渉が最小限で開放的で障害物のない場所でデバイスを使用してください。
 ## リソース
 - [ブートローダー](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) 3Dプリント参考ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
