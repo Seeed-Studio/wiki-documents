@@ -1,28 +1,28 @@
 ---
-description: Este wiki proporciona un tutorial para los motores servo Feetech.
+description: Este wiki proporciona un tutorial para motores servo Feetech.
 title: Motor Servo Feetech
 keywords:
 - actuator
 - motor
 - arm
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech-ST3215-Servo.webp
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp
 slug: /es/feetech_servo
 last_update:
-  date: 06/24/2025
-  author: ZhuYaoHui
+  date: 11/24/2025
+  author: Li Shanghang
 ---
 
 # Centro de Documentos de Motores Servo Feetech
 
 <div align="center">
 
-<img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-108090023-feetech-st-3215-c001-servo.jpg" className="nav-icon" alt="Slamtec LiDAR"/>
+<img width={800} src="https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp" className="nav-icon" alt="Slamtec LiDAR"/>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/STS3215-19kg-cm-7-4V-Serial-Servo-p-6338.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱</font></span></strong>
     </a>
 </div>
 
@@ -42,6 +42,15 @@ last_update:
   </a>
   <a href="https://files.seeedstudio.com/products/Feetech/108090023_STS3215-C001_Datasheet.pdf" className="nav-item">
     <span className="text">ST3215-C001 7.4v 1:345</span>
+  </a>
+  <a href="https://files.seeedstudio.com/products/Feetech/HL-3915-C001%2012V%201%20320%20.xlsx" className="nav-item">
+    <span className="text">HL-3915-C001 12V 1:320 </span>
+  </a>
+  <a href="https://files.seeedstudio.com/products/Feetech/HL-3615-C002%206V%201%2096%20.xlsx" className="nav-item">
+    <span className="text">HL-3615-C002 6V 1:96  </span>
+  </a>
+  <a href="https://files.seeedstudio.com/products/Feetech/FE-URT-1.xlsx" className="nav-item">
+    <span className="text">FE-URT-1  </span>
   </a>
 
 ## SDK
@@ -77,13 +86,13 @@ last_update:
 ## Ejemplos
 
   <a href="https://wiki.seeedstudio.com/es/bus_servo_driver_board/" className="nav-item">
-    <span className="text">Primeros Pasos con la Placa Controladora de Servo Bus / Adaptador de Servo Bus XIAO</span>
+    <span className="text">Introducción a la Placa Controladora de Servo Bus / Adaptador XIAO Bus Servo</span>
   </a>
 
 </div>
 </div>
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

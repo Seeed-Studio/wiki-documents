@@ -17,12 +17,12 @@ last_update:
 
 ## はじめに
 
-Home Assistant はオープンソースのスマートホームプラットフォームシステムで、ユーザーは自分の IoT デバイスを簡単にシステムに接続して統一管理できます。しかし、Home Assistant の主な特徴は、さまざまなセンサーデバイスの表示を実現するだけでなく、クロスプラットフォームデバイスの自動連携を実現することです。このようなスマートホームプラットフォームだけが十分な活力を持つことができます。
+Home Assistant は、オープンソースのスマートホームプラットフォームシステムで、ユーザーは自分の IoT デバイスを簡単にシステムに接続して統一管理できます。しかし、Home Assistant の主な特徴は、さまざまなセンサーデバイスの表示を実現するだけでなく、クロスプラットフォームデバイスの自動連携を実現することです。このようなスマートホームプラットフォームだけが十分な活力を持つことができます。
 
 ## ハードウェアの準備
 
 reCamera 1台（2002 シリーズ、HQ POE バージョン、またはパンチルトバージョンのいずれでも可能ですが、POE バージョンには WiFi 機能がないため、同じネットワークセグメントで POE 機能付きスイッチに接続する必要があります）  
-reComputer 1台（どのバージョンでも構いません。ここでは reComputer AI R2130-12 を例として使用します）  
+reComputer 1台（どのバージョンでも構いませんが、ここでは reComputer AI R2130-12 を例として使用します）  
 コンピューター 1台
 
 <table align="center">
@@ -41,25 +41,25 @@ reComputer 1台（どのバージョンでも構いません。ここでは reCo
  <tr>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
    </a>
   </div></td>
 
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
    </a>
   </div></td>
 
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
    </a>
   </div></td>
 
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>今すぐ入手 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
    </a>
   </div></td>
  </tr>
@@ -68,6 +68,7 @@ reComputer 1台（どのバージョンでも構いません。ここでは reCo
 ## Home Assistant のインストール（reComputer AI R2130-12 を例として）
 
 ### システムの準備
+
 1.システムの更新
 
 ```bash
@@ -81,13 +82,14 @@ sudo apt install -y ca-certificates curl gnupg lsb-release
 ```
 
 ### Docker のインストール
+
 1.公式スクリプトによるインストール
 
 ```bash
 curl -fsSL https://get.docker.com | sh
 ```
 
-2.現在のユーザーが Docker を使用できるように設定
+2.現在のユーザーが Docker を使用できるようにする
 
 ```bash
 https://files.seeedstudio.com
@@ -104,13 +106,14 @@ sudo reboot
 ```bash
 docker run hello-world
 ```
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/hello_docker.png" /></div>
 
 「Hello from Docker!」という文字が表示されれば、インストールが成功したことを示します。
 
 ### Home Assistant のインストール（コンテナモード）
 
-1. マウントディレクトリの作成 
+1. マウントディレクトリの作成
 設定ファイルを永続化するため：
 
 ```bash
@@ -133,14 +136,13 @@ docker run -d \
   ghcr.io/home-assistant/home-assistant:stable
 ```
 
-パラメータの説明： 
-* `--network=host`: Home Assistant がホストネットワークに直接アクセス可能（自動デバイス検出に必要）
-* `-v ~/homeassistant/config:/config`: 設定ファイルの保存
-* `--restart=unless-stopped`: 自動再起動
-* `--privileged`: ハードウェアアクセスの有効化（USB Zigbee/Z-Wave など）
+パラメータの説明：
+- `--network=host`: Home Assistant がホストネットワークに直接アクセス可能（自動デバイス検出に必要）
+- `-v ~/homeassistant/config:/config`: 設定ファイルの保存
+- `--restart=unless-stopped`: 自動再起動
+- `--privileged`: ハードウェアアクセスの有効化（USB Zigbee/Z-Wave など）
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/docker.png" /></div>
-
 
 ### Home Assistant へのアクセス
 
@@ -163,15 +165,17 @@ http://<your IP>:8123
 ```bash
 http://192.168.1.88:8123
 ```
-初回起動時は初期化インターフェースが表示されます。その後、アカウントの作成とスマートホームの設定を開始できます。
 
-### 設定ファイルのパスを確認
+初回起動時は初期化インターフェースに案内されます。その後、アカウントの作成とスマートホームの設定を開始できます。
+
+### 設定ファイルのパスを見つける
 
 Home Assistant のすべての設定は以下に保存されます：
 
 ```bash
 /homeassistant/config/
 ```
+
 以下のコマンドで確認できます：
 
 ```bash
@@ -179,11 +183,11 @@ cd /homeassistant/config
 ls
 ```
 
-以下のファイルが表示されます：
+これらのファイルが表示されます：
+
 ```bash
 automations.yaml  configuration.yaml  scripts.yaml ...
 ```
-
 
 ### reCamera データを受信するための自動化設定
 
@@ -218,7 +222,8 @@ sudo nano /homeassistant/config/automations.yaml
   mode: single
 ```
 
-保存して終了： 
+保存して終了：
+
 - **Ctrl + O** → Enter（保存）
 - **Ctrl + X**（終了）
 
@@ -269,7 +274,8 @@ sensor:
         icon_template: mdi:camera-outline
 ```
 
-保存して終了： 
+保存して終了：
+
 - **Ctrl + O** → Enter（保存）
 - **Ctrl + X**（終了）
 
@@ -287,13 +293,11 @@ docker restart homeassistant
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/reset.png" /></div>
 
-
 ### ログイン後、右下角をクリックして "Workspace" に入る
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/logging_in.png" /></div>
 
 ### Workspace に入った後、ノードを設定します。
-
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_1.png" /></div>
 
@@ -326,15 +330,14 @@ currentModel += ` number: ${num}`;
 return { payload: currentModel };
 ```
 
-変更を行った後、右上角の「Finish」ボタンをクリックします。
+変更後、右上角の「完了」ボタンをクリックします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_5.png" /></div>
 
-このコードは検出された人数のみを出力します。変更を加えたい場合は、検出オブジェクトを変更できます。
+このコードは検出された人数のみを出力します。変更を加えたい場合は、検出オブジェクトを修正できます。
 モデルノードを確認することで、どのタイプのオブジェクトが検出できるかを学ぶことができます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_6.png" /></div>
-
 
 次に、function1ノードを設定し、元のコードを以下のコードに置き換えます：
 
@@ -348,7 +351,6 @@ return {
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_7.png" /></div>
 
-
 次に、HTTPリクエストノードを設定します。ここでは、3つの領域に変更を加える必要があります：
 
 | **オプション**| **設定値**|
@@ -357,23 +359,21 @@ return {
 | **URLアドレス**| `http://<your IP>:8123/api/webhook/recamera_detection`|
 | **レスポンス**| JSON Object|
 
-
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_8.png" /></div>
 
-設定後、右上角の「Deploy」ボタンをクリックします。デプロイが成功すると、プロンプトが表示されます。
+設定後、右上角の "Deploy" ボタンをクリックします。デプロイが成功すると、プロンプトが表示されます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_9.png" /></div>
 
 ここで、もう一つのステップを実行する必要があります。それは、reCameraにWiFiを接続することです。reComputerに設定したものと同じネットワークに接続する必要があります（POEバージョンにはWiFi機能がないため、POE機能付きスイッチを使用して同じネットワークセグメントに接続する必要があることに注意してください）。
 
-左上角の「Network」ボタンをクリックしてネットワークを設定します。
+左上角の "Network" ボタンをクリックしてネットワークを設定します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_10.png" /></div>
 
-
-
-
-
+:::note
+覚えておいてください！reCameraをネットワークに接続することを確認してください！！！そうでなければ、通信ができません。
+:::
 
 ## Home Assistantの概要インターフェースを表示
 
@@ -391,3 +391,17 @@ curl -X POST http://192.168.100.109:8123/api/webhook/recamera_detection \
 成功した場合、Home Assistantの通知に以下が表示されます：
 > **reCamera検出結果**
 curlからのテスト
+
+## 技術サポート & 製品ディスカッション
+
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

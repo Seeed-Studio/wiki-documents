@@ -24,6 +24,7 @@ The Relay Add On Module For XIAO is a smart module from Seeed Studio designed to
 
 | Parameter               | Value           |
 |-------------------------|----------------|
+| Relay Pin               | D1            |
 | Operating Voltage       | 5V             |
 | Operating Current       | 1A           |
 | Relay Life              | 100,000 Cycle   |
@@ -173,6 +174,10 @@ Please pay attention to the safety of electricity and do not touch the relays du
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
 
 Congratulations on successfully completing your journey on Relay Module For XIAO! Let's do more interesting remodels!
+
+## Resources
+
+[PDF] **[Relay Add On Module For XIAO Relay_SCH](https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay_SCH.pdf)**
 
 ## Tech Support & Product Discussion
 
