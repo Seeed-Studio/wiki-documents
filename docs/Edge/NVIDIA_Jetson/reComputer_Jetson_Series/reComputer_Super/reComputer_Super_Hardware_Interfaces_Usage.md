@@ -525,7 +525,7 @@ Now you will see it received by reComputer Industrial as follows:
 
 The Extension Port includes a 40-pin extension header and a 12-pin control and UART header, providing versatile connectivity options for peripherals and communication interfaces.
 
-40-Pin Extension Header
+### 40-Pin Extension Header
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40pin3.jpg"/>
@@ -533,13 +533,93 @@ The Extension Port includes a 40-pin extension header and a 12-pin control and U
 
 The 40-Pin Extension Header is a versatile expansion interface that provides various functions such as GPIO, I2C, SPI, and UART, making it convenient for connecting sensors, peripherals, or other modules.
 
+The detail of 40-pin header is shown below:
+
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+<thead>
+<tr>
+  <th>Header Pin</th>
+  <th>Signal</th>
+  <th>BGA Pin</th>
+  <th>Default Function</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>3.3V</td><td>-</td><td>Main 3.3V Supply</td></tr>
+<tr><td>2</td><td>5V</td><td>-</td><td>Main 5V Supply</td></tr>
+<tr><td>3</td><td>I2C1_SDA</td><td>PDD.02</td><td>I2C #1 Data</td></tr>
+<tr><td>4</td><td>5V</td><td>-</td><td>Main 5V Supply</td></tr>
+<tr><td>5</td><td>I2C1_SCL</td><td>PDD.01</td><td>I2C #1 Clock</td></tr>
+<tr><td>6</td><td>GND</td><td>-</td><td>Ground</td></tr>
+<tr><td>7</td><td>GPIO09</td><td>PAC.06</td><td>General Purpose I/O</td></tr>
+<tr><td>8</td><td>UART1_TXD</td><td>PR.02</td><td>UART #1 Transmit</td></tr>
+<tr><td>9</td><td>GND</td><td>-</td><td>Ground</td></tr>
+<tr><td>10</td><td>UART1_RXD</td><td>PR.03</td><td>UART #1 Receive</td></tr>
+<tr><td>11</td><td>UART1_RTS</td><td>PR.04</td><td>UART #1 Request to Send</td></tr>
+<tr><td>12</td><td>I2S0_SCLK</td><td>PH.07</td><td>Audio I2S #0 Clock</td></tr>
+<tr><td>13</td><td>SPI1_SCK</td><td>PY.00</td><td>SPI #1 Clock</td></tr>
+<tr><td>14</td><td>GND</td><td>-</td><td>Ground</td></tr>
+<tr><td>15</td><td>GPIO12</td><td>PN.01</td><td>General Purpose I/O</td></tr>
+<tr><td>16</td><td>SPI1_CS1</td><td>PY.04</td><td>SPI #1 Chip Select #1</td></tr>
+<tr><td>17</td><td>3.3V</td><td>-</td><td>Main 3.3V Supply</td></tr>
+<tr><td>18</td><td>SPI1_CS0</td><td>PY.03</td><td>SPI #1 Chip Select #0</td></tr>
+<tr><td>19</td><td>SPI0_MOSI</td><td>PZ.05</td><td>SPI #0 Master Out / Slave In</td></tr>
+<tr><td>20</td><td>GND</td><td>-</td><td>Ground</td></tr>
+<tr><td>21</td><td>SPI0_MISO</td><td>PZ.04</td><td>SPI #0 Master In / Slave Out</td></tr>
+<tr><td>22</td><td>SPI1_MISO</td><td>PY.01</td><td>SPI #1 Master In / Slave Out</td></tr>
+<tr><td>23</td><td>SPI0_SCK</td><td>PZ.03</td><td>SPI #0 Clock</td></tr>
+<tr><td>24</td><td>SPI0_CS0</td><td>PZ.06</td><td>SPI #0 Chip Select #0</td></tr>
+<tr><td>25</td><td>GND</td><td>-</td><td>Ground</td></tr>
+<tr><td>26</td><td>SPI0_CS1</td><td>PZ.07</td><td>SPI #0 Chip Select #1</td></tr>
+<tr><td>27</td><td>ID_I2C_SDA (I2C0_SDA)</td><td>PDD.00</td><td>I2C #0 Data</td></tr>
+<tr><td>28</td><td>ID_I2C_SCL (I2C0_SCL)</td><td>PCC.07</td><td>I2C #0 Clock</td></tr>
+<tr><td>29</td><td>GPIO01</td><td>PQ.05</td><td>General Purpose I/O</td></tr>
+<tr><td>30</td><td>GND</td><td>-</td><td>Ground</td></tr>
+<tr><td>31</td><td>GPIO11</td><td>PQ.06</td><td>General Purpose I/O</td></tr>
+<tr><td>32</td><td>GPIO07</td><td>PG.06</td><td>General Purpose I/O</td></tr>
+<tr><td>33</td><td>GPIO13</td><td>PG.00</td><td>System Reserved</td></tr>
+<tr><td>34</td><td>GND</td><td>-</td><td>Ground</td></tr>
+<tr><td>35</td><td>I2S0_LRCK (I2S0_FS)</td><td>PI.02</td><td>Audio I2S #0 Frame Sync</td></tr>
+<tr><td>36</td><td>UART1_CTS</td><td>PR.05</td><td>UART #1 Clear to Send</td></tr>
+<tr><td>37</td><td>SPI1_MOSI</td><td>PY.02</td><td>SPI #1 Master Out / Slave In</td></tr>
+<tr><td>38</td><td>I2S0_SDIN (I2S0_DIN)</td><td>PI.01</td><td>Audio I2S #0 Data In</td></tr>
+<tr><td>39</td><td>GND</td><td>-</td><td>Ground</td></tr>
+<tr><td>40</td><td>I2S0_SDOUT (I2S0_DOUT)</td><td>PI.00</td><td>Audio I2S #0 Data Out</td></tr>
+</tbody>
+</table>
+</div>
+
+
 ### Usage Instruction
 
-**Enable 40-Pin Header:**
+Simple GPIO control example
+```bash
+#install
+sudo apt-get install gpiod
 
-  ```bash
+# Search for the corresponding number for the pin
+sudo gpiofind PH.00
+gpiochip0 43
+
+#Set the pin to H, then press Enter to release.
+sudo gpioset --mode=wait 0 43=1
+
+#Set the Pin to L, then press Enter to release.
+sudo gpioset --mode=wait 0 43=0
+
+#gpio 0_119 Low level maintained for 2 seconds
+sudo gpioset --mode=time -s 2 0 119=0
+
+#input
+sudo gpioget 0 43
+```
+**If you want to configure the GPIO that is not enabled by default, please refer to the following steps:**
+
+Enable 40-Pin Header:
+```bash
   sudo /opt/nvidia/jetson-io/jetson-io.py
-  ```
+```
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_1.png"/>
@@ -559,126 +639,34 @@ Save and reboot.
 **Configure the uncontrolled GPIO through the Overlay configuration:**
 
 **Step 1.** Download and extract the [overlay package](https://files.seeedstudio.com/wiki/overlay.zip) to your jetson device.
-
+```bash
+wget https://files.seeedstudio.com/wiki/overlay.zip
+```
 **Step 2.** Copy build.sh and gpio-overlay.dts to Jetson.
 
-**Step 3.** Run sudo ./build.sh.
-
-**Step 4.** Run sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "seeed gpio config Overlay".
-
-:::note
-This needs to be executed only once and won't be needed to be run subsequently.
-
+**Step 3.** Edit the `pio-overlay.dts` file and modify it to include the pinmux definitions for the pins you need.
+:::info
+more details you can see in [jetson-orin-nx-and-orin-nano-series-pinmux-config](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template)
 :::
 
+**Step 3.**   Enable overlay configuration.
 ```bash
-cd overlay/
-ls -l
-#total 16
-#-rwxrwxr-x 1 seeed seeed  147 Sep  9 07:33 build.sh
-#-rw-r--r-- 1 root  root  1353 Sep  9 07:36 gpio-overlay.cpp.dts
-#-rw-r--r-- 1 root  root  1214 Sep  9 07:36 gpio-overlay.dtbo
-#-rw-rw-r-- 1 seeed seeed 1879 Sep  9 07:35 gpio-overlay.dts
-sudo ./build.sh
+sudo bash ./build.sh
+#The following command needs to be executed only once.
 sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "seeed gpio config Overlay"
-#Modified /boot/extlinux/extlinux.conf to add following DTBO entries:
-#/boot/gpio-overlay.dtbo
-#Reboot system to reconfigure.
-
 ```
-
-The following are command examples for operating GPIO pins using the gpiod toolkit.
-
-**Step 1.** Install gpiod:
-
-  ```bash
-  sudo apt-get install gpiod
-  ```
-
-**Step 2.** Find pin number:
-
-  ```bash
-  sudo gpiofind PH.00
-  ```
-
-**Step 3.** Set pin high:
-
-  ```bash
-  sudo gpioset --mode=wait 0 43=1
-  ```
-
-**Step 4.** Set pin low:
-
-  ```bash
-  sudo gpioset --mode=wait 0 43=0
-  ```
-
-**Step 5.** Read input:
-
-  ```bash
-  gpioget 0 4
-  ```
-
-GPIO Control Script Example
-
+**Step 4.** Reboot the device enables the configuration to take effect.
 ```bash
-#!/bin/bash
-
-# GPIO Control Script
-# Usage:
-#   gpio_ctrl.sh <pin_name> <command>
-# Commands:
-#   get    - Read the current pin level
-#   set    - Drive the pin high
-#   clear  - Drive the pin low
-
-# Parameter validation
-if [ $# -ne 2 ]; then
-    echo "Usage: $0 <pin_name> <command>"
-    echo "Commands:"
-    echo "  get    - Read pin state"
-    echo "  set    - Set to high level"
-    echo "  clear  - Set to low level"
-    exit 1
-fi
-
-# Map and parse arguments
-PIN_NAME=$1
-COMMAND=$2
-
-# Locate the GPIO
-GPIO_INFO=$(gpiofind "$PIN_NAME" 2>/dev/null)
-if [ -z "$GPIO_INFO" ]; then
-    echo "Hardware alert: GPIO pin $PIN_NAME not found"
-    exit 1
-fi
-
-# Split info into chip and offset
-GPIO_CHIP=$(echo "$GPIO_INFO" | cut -d' ' -f1 | tr -d 'gpiochip')
-GPIO_OFFSET=$(echo "$GPIO_INFO" | awk '{print $2}')
-
-# Execute command
-case $COMMAND in
-    "get")
-        gpioget $GPIO_CHIP $GPIO_OFFSET
-        ;;
-    "set")
-        echo "Setting $PIN_NAME to high level..."
-        gpioset --mode=wait $GPIO_CHIP $GPIO_OFFSET=1
-        ;;
-    "clear")
-        echo "Setting $PIN_NAME to low level..."
-        gpioset --mode=wait $GPIO_CHIP $GPIO_OFFSET=0
-        ;;
-    *)
-        echo "Error: Invalid command. Please use get, set, or clear."
-        exit 1
-        ;;
-esac
-
+sudo reboot
+```
+**Step 5.** Now you can control the pins by `gpioset` that were just modified.
+```bash
+#For example px7
+sudo gpioset --mode=wait 0 121=1
 ```
 
-12-Pin Control and UART Header
+
+### 12-Pin Control and UART Header
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/12pin2.jpg"/>
@@ -686,9 +674,21 @@ esac
 
 The 12-Pin Control and UART Header provides essential control signals and UART communication interfaces for connecting and managing external devices.
 
+:::Note
+The pin functions of reComputer Super are similar to those of reComputer Classic. For more detailed information, please refer to [here](https://wiki.seeedstudio.com/J401_carrierboard_Hardware_Interfaces_Usage/#gpio).
+:::
+
 ## HDMI
 
 reComputer Super is equipped with an HDMI 2.1 Type A port, which supports a resolution of 7680x4320. This allows for ultra-high-definition video output.
+
+## Resources
+- [User Manual&Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+- [Temperature Test Report](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Super_Temperature_Test_Report.pdf)
+- [Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
+- [3D File](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
+- [Mechanical Document-reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
+- [Mechanical Document-reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
 
 ## Tech Support & Product Discussion
 
