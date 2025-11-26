@@ -21,19 +21,53 @@ Today is November 24th, and a brand new week has begun! Check out what Seeed Stu
 
 ## Latest Wiki Launched
 
-### [HighTorque Motor Control Complete Guide](https://wiki.seeedstudio.com/hightorque_control/)
+### [Robotics J501 carrier board Hardware and Getting Started](https://wiki.seeedstudio.com/robotics_j501_mini_hardware_interfaces_usage/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document provides a concise guide to setting up and controlling a high-torque BLDC motor, including hardware wiring, power and CAN configuration, Linux environment setup, and example code in multiple languages to achieve precise speed, position, and torque control.
+This document introduces the Robotics J501-Mini carrier board and explains how to flash JetPack OS and use its hardware interfaces, including M.2, Ethernet, USB, LEDs and other I/O ports, with step-by-step instructions and test commands for robotics and edge AI applications.
 
 </div>
 
-### [RobStride Control Library - Complete Technical Documentation](https://wiki.seeedstudio.com/robstride_control/)
+### [Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/getting_started_with_xiao_debug_mate/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document provides a complete technical guide to the RobStride motor control library, covering supported motor models, architecture and CAN protocol details, multi-mode control (MIT, position, speed), environment setup, and example implementations in Python, C++, Rust, and Arduino for real-time, cross-platform motor control.
+Seeed Studio XIAO Debug Mate is an open-source ESP32-S3 multi-tool that simplifies embedded system debugging with visual feedback. This all-in-one device features a standalone 2.01 inch TFT LCD display, LED status matrix, and native Seeed Studio XIAO support, delivering essential debugging functions: DAPLink chip-level debugging, built-in serial monitoring with UART passthrough, and accurate power consumption measurement. Plug-and-play design eliminates complex wiring for streamlined development.
+
+</div>
+
+### [XIAO Debug Mate DAPLink](https://wiki.seeedstudio.com/xiao_debug_mate_debug/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/15.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This comprehensive guide is designed to help both beginners and advanced users unlock the full potential of their XIAO Debug Mate for professional debugging tasks. Here, you will learn how to connect, configure, and operate the DAPLink debugger, understand essential software tools, and follow best practices to ensure a smooth and productive debugging experience with a wide range of XIAO series development boards. Whether you are troubleshooting complex firmware or streamlining your development workflow, this document provides clear step-by-step instructions, tips, and in-depth technical explanations to support your projects from start to finish.
+
+</div>
+
+### [XIAO Debug Mate Power Meter](https://wiki.seeedstudio.com/xiao_debug_mate_power/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/32.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The Power Meter feature of the XIAO Debug Mate transforms your device into a versatile, high-precision tool for measuring voltage, current, and power consumption. With an intuitive graphical interface and real-time data updates, you can easily monitor the power draw of your XIAO board or other connected hardware throughout all stages of development. 
+
+</div>
+
+### [XIAO Debug Mate UART Monitor](https://wiki.seeedstudio.com/xiao_debug_mate_serial/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This page provides clear guidance on how to use the Debug Mate for serial data monitoring. You will find step-by-step instructions for hardware setup, recommended software tools, and explanations of relevant concepts to help you make the most of the UART monitoring features in development and debugging scenarios.
 
 </div>
 
@@ -87,46 +121,6 @@ This document serves as a central hub for FashionStar servo motors, providing qu
 
 </div>
 
-### [Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/getting_started_with_xiao_debug_mate/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-Seeed Studio XIAO Debug Mate is an open-source ESP32-S3 multi-tool that simplifies embedded system debugging with visual feedback. This all-in-one device features a standalone 2.01 inch TFT LCD display, LED status matrix, and native Seeed Studio XIAO support, delivering essential debugging functions: DAPLink chip-level debugging, built-in serial monitoring with UART passthrough, and accurate power consumption measurement. Plug-and-play design eliminates complex wiring for streamlined development.
-
-</div>
-
-### [XIAO Debug Mate DAPLink](https://wiki.seeedstudio.com/xiao_debug_mate_debug/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/15.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This comprehensive guide is designed to help both beginners and advanced users unlock the full potential of their XIAO Debug Mate for professional debugging tasks. Here, you will learn how to connect, configure, and operate the DAPLink debugger, understand essential software tools, and follow best practices to ensure a smooth and productive debugging experience with a wide range of XIAO series development boards. Whether you are troubleshooting complex firmware or streamlining your development workflow, this document provides clear step-by-step instructions, tips, and in-depth technical explanations to support your projects from start to finish.
-
-</div>
-
-### [XIAO Debug Mate Power Meter](https://wiki.seeedstudio.com/xiao_debug_mate_power/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/32.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The Power Meter feature of the XIAO Debug Mate transforms your device into a versatile, high-precision tool for measuring voltage, current, and power consumption. With an intuitive graphical interface and real-time data updates, you can easily monitor the power draw of your XIAO board or other connected hardware throughout all stages of development. 
-
-</div>
-
-### [XIAO Debug Mate UART Monitor](https://wiki.seeedstudio.com/xiao_debug_mate_serial/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This page provides clear guidance on how to use the Debug Mate for serial data monitoring. You will find step-by-step instructions for hardware setup, recommended software tools, and explanations of relevant concepts to help you make the most of the UART monitoring features in development and debugging scenarios.
-
-</div>
-
 ### [Extending the MCP of SenseCAP Watcher with Grove](https://wiki.seeedstudio.com/face_regonition_with_mcp/)
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" alt="pir" width={400} height="auto" /></p>
@@ -134,6 +128,22 @@ This page provides clear guidance on how to use the Debug Mate for serial data m
 <div style={{ textAlign: "justify" }}>
 
 This guide explains how to deploy a face-recognition workflow using **SenseCAP Watcher (Xiaozhi)** together with a **reComputer Raspberry Pi system**. The Watcher captures images and sends them to the reComputer for face matching against a local database using the internal MCP tool.
+
+</div>
+
+### [HighTorque Motor Control Complete Guide](https://wiki.seeedstudio.com/hightorque_control/)
+
+<div style={{ textAlign: "justify" }}>
+
+This document provides a concise guide to setting up and controlling a high-torque BLDC motor, including hardware wiring, power and CAN configuration, Linux environment setup, and example code in multiple languages to achieve precise speed, position, and torque control.
+
+</div>
+
+### [RobStride Control Library - Complete Technical Documentation](https://wiki.seeedstudio.com/robstride_control/)
+
+<div style={{ textAlign: "justify" }}>
+
+This document provides a complete technical guide to the RobStride motor control library, covering supported motor models, architecture and CAN protocol details, multi-mode control (MIT, position, speed), environment setup, and example implementations in Python, C++, Rust, and Arduino for real-time, cross-platform motor control.
 
 </div>
 
@@ -145,37 +155,15 @@ The RM520N is a series of 5G IoT modules specially optimized for IoT/eMBB applic
 
 </div>
 
-### [Robotics J501 carrier board Hardware and Getting Started](https://wiki.seeedstudio.com/robotics_j501_mini_hardware_interfaces_usage/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This document introduces the Robotics J501-Mini carrier board and explains how to flash JetPack OS and use its hardware interfaces, including M.2, Ethernet, USB, LEDs and other I/O ports, with step-by-step instructions and test commands for robotics and edge AI applications.
-
-</div>
-
 ## Existing Wiki Updated
 
-### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
+### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
 
-We have added [instructions for using the User Buttons](https://wiki.seeedstudio.com/epaper_ee04/#user-buttons-on-xiao-epaper-display-boardesp32-s3---ee04) on the XIAO ePaper Display Board (ESP32-S3) - EE04.
+We have added the [Controlling an EtherCAT Motor on Jetson (MyActuator X4)](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/#5-example--controlling-an-ethercat-motor-on-jetson-myactuator-x4) example.
 
+### [reComputer R1000 Getting Started](https://wiki.seeedstudio.com/recomputer_r/)
 
-
-https://github.com/Seeed-Studio/wiki-documents/pull/3498/files
-https://github.com/Seeed-Studio/wiki-documents/pull/3529/files
-https://github.com/Seeed-Studio/wiki-documents/pull/3531/files
-
-
-
-
-
-
-
-
-
-
+We have added the [Connect to 4G Module by QMI Mode](https://wiki.seeedstudio.com/recomputer_r/#connect-to-4g-module-by-qmi-mode) example.
 
 ## The Efforts of Contributor
 
