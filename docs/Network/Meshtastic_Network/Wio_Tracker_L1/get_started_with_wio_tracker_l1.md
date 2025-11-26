@@ -281,7 +281,7 @@ When you are flashing the bootloader, please make sure the cable connection is s
 
 - step 4: Flash the firmware
 
-  When you have completed the above steps, then you can follow this [step](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) to flash the application firmware. You may need to [enter the DFUmode manually](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#entering-dfu-mode-manually)
+  When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) to flash the application firmware. You may need to [enter the DFUmode manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 
 ### Unable to enter DFU & Entering DFU Mode Manually

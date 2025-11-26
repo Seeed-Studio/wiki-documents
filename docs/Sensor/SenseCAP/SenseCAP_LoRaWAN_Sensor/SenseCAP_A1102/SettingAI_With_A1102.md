@@ -1,22 +1,22 @@
 ---
-description: Train_AI_With_A1102
-title: Deploy AI Models on SenseCAP A1102 Using SenseCraft AI
+description: Set_AI_With_A1102
+title: Setting AI Models on SenseCAP A1102 Using SenseCraft APP
 keywords:
 - Sensor Vision_AI_V2
 - SenseCAP A1102
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/20.webp
-slug: /train_ai_with_a1102
+slug: /setting_ai_with_a1102
 sidebar_position: 2
 # sidebar_class_name: hidden
 last_update:
-  date: 3/12/2024
-  author: Zeke
+  date: 11/26/2025
+  author: Twelve
 ---
 
-# Deploying AI Models on SenseCAP A1102 Using SenseCraft AI
+# Setting AI Models on SenseCAP A1102 Using SenseCraft APP
 
-The SenseCAP A1102 is a powerful sensor device that combines advanced AI capabilities with ease of deployment. This guide will walk you through deploying AI models on the A1102 using the **SenseCraft AI** app, offering step-by-step instructions for pairing, configuration, and testing.
+The SenseCAP A1102 is a powerful sensor device that combines advanced AI capabilities with ease of deployment. This guide will walk you through deploying AI models on the A1102 using the **SenseCraft** app, offering step-by-step instructions for pairing, configuration, and testing.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/20.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -88,6 +88,11 @@ From the settings menu, select your desired AI model for deployment. Choose from
 
 ### **Configuring Model Parameters**
 
+:::warning note
+If you need to modify the AI camera settings, you must follow the steps to power up the AI camera.  
+Please refer to [Power on the Vision AI camera](#power-on-the-vision-ai-camera).
+:::
+
 Set parameters like:
 
 - **Confidence Level**: Adjust the threshold for object recognition (e.g., 80% confidence).
@@ -104,6 +109,10 @@ After deploying the model, preview the camera's captured images directly in the 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/7.png" style={{width:400, height:'auto'}}/></div>
 
 ### **View Device Information**
+
+Scan the QR code on LoRaWAN Sensor S2100 to bind device.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture1.png" style={{width:400, height:'auto'}}/></div>
 
 Return to the app's homepage to check the device information of the A1102, such as model status, connectivity.
 
@@ -133,6 +142,34 @@ With 8GB of internal memory, the A1102 can automatically save recognized images 
 :::tip
 Equipped with 8GB of memory, the A1102 is able to automatically save images to the memory card when a target is recognized. When we need to access this image information, we can extract and access the required image data directly from the memory card.
 :::
+
+## **Trouble Shooting**
+
+### Common Issues
+
+1. **Two methods to configure AI models**
+  - Using the SenseCraft APP to configure the AI camera’s built-in models
+    - Connect to the bottom ESP32 port, which is used to provide power to the device.
+  - [Using the SenseCraft AI website](https://sensecraft.seeed.cc/ai) to configure AI models that are not factory-preloaded
+    - Connect to the top Himax port, which is used to flash the model to the Himax chip.
+  
+2. **The AI camera is connected but the app shows that it is not**
+  - check the status of the datalogger and make sure to configure it first in Settings before returning to Information.
+  - explanation: To save power, the datalogger only supplies power to the AI camera when entering the Settings page.
+
+3. **Breathing light vs. blinking light**
+  - A breathing light effect indicates the device is **searching for a network**.
+  - A blinking light indicates the device has entered **Bluetooth configuration mode**.
+  - If the device is in breathing-light mode, press the button once to switch to the red light, then long-press the button to enter **Bluetooth configuration mode** (blinking light).
+
+4. **The AI camera powers on successfully, but cannot be found via APP Bluetooth configuration**
+  - When the AI camera is powered on, but:
+    - The SenseCraft APP can't search the device.
+    - Try searching for **Vision AI V2**, and still not detect the device. 
+  - This indicates that the **ESP32 firmware may not be functioning correctly** (the ESP32 is responsible for Bluetooth broadcasting).
+  - **Solution:**  
+    - Connect the cable to the **ESP32 port** and open a serial monitor to check whether the ESP32 is running normally.  
+    - If abnormal logs or boot errors appear, contact technical support for instructions on **re-flashing the ESP32 firmware**.
 
 ## **Tech Support & Product Discussion**
 

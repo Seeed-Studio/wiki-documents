@@ -17,10 +17,10 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /cn/face_regonition_with_mcp
 last_update:
-  date: 11/24/2025
+  date: 11/25/2025
   author: Twelve
 ---
-# 使用 Grove 扩展 MCP
+# 使用 MCP 扩展人脸识别功能
 
 ## 概述
 
@@ -128,6 +128,13 @@ ssh <Your_reComputer's username>@<Your_reComputer's host IP>
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Face_recognition/fr10.png" style={{width:400, height:'auto'}}/></div>
 
 :::
+
+- 对于中国大陆用户，你可以先用此脚本来配置你的镜像源，以提升你的下载速度
+
+```bash
+curl -sSL https://linuxmirrors.cn/main.sh -o gnu_linux_mirror.sh
+sudo bash gnu_linux_mirror.sh
+```
 
 - 安装 Docker 并设置 docker 用户
 
@@ -238,6 +245,9 @@ AI 将自动调用 MCP 工具来检查人脸数据库。
 
 **答：** 请检查 IP 地址是否正确以及人脸识别服务是否正常运行。
 
+**问：我可以使用其他设备来部署吗？**
+
+**答：** 可以。只要是搭载 Linux 系统且可以联网的设备都能部署，只是 reComputer 的运算性能会更好。
 
 ## 技术支持
 
