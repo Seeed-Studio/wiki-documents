@@ -576,7 +576,7 @@ sudo minicom -D /dev/ttyACM2
 ACM2とACM3を例とします：
 ACM2からACM3に送信したい場合、ACM2を再度設定する必要があります：***ctrl+A***、次に***Z***を押してから***E***を押し、シリアルポート書き込みコマンドを開始します。この時、ACM2で自由に文字列を印刷でき、同時にACM3でACM2の内容を確認できます；
 逆に、ACM3からACM2に送信したい場合、ACM3を再度設定する必要があります：***ctrl+A***、次に***Z***を押してから***E***を押し、シリアルポート書き込みコマンドを開始します。この時、ACM3で自由に文字列を印刷でき、同時にACM2でACM3の内容を確認できます。図に示すとおりです。
-：：：
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 
