@@ -575,7 +575,7 @@ sudo minicom -D /dev/ttyACM2
 Take ACM2 and ACM3 as an example:
 If you want to send from ACM2 to ACM3, ACM2 needs to be set up again: ***ctrl+A*** , then press ***Z*** and then ***E*** , and then start the serial port write command. At this time, you can print strings in ACM2 at will, and you can see the contents of ACM2 in ACM3 at the same time;
 Conversely, if you want to send from ACM3 to ACM2, ACM3 needs to be set up again:  ***ctrl+A***, then press  ***Z***  and then  ***E*** , and then start the serial port write command. At this time, you can print strings in ACM3 at will, and you can see the contents of ACM3 in ACM2 at the same time. As shown in the figure.
-：：：
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 

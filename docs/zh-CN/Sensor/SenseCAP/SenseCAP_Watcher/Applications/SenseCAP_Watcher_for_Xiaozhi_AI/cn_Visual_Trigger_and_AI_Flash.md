@@ -229,7 +229,8 @@ Please use another method to flash the firmware for now.
 </Tabs>
 
 :::note
-v2.0.3 以上版本的固件需要对小智说 "打开推理开关" 来启用视觉检测。
+v1.8,8 以上版本的固件才有视觉识别唤醒的功能。
+v2.0.3 以上版本的固件需要对小智说 "打开推理开关" 来启用视觉识别唤醒功能。
 :::
 
 ## AI 模型刷写过程
@@ -266,11 +267,24 @@ v2.0.3 以上版本的固件需要对小智说 "打开推理开关" 来启用视
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI7.png" style={{width:500, height:'auto'}}/></div>
 
-### 步骤 4. 调整阈值并预览效果
+### 步骤 4. 预览效果并调整参数
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI8.png" style={{width:400, height:'auto'}}/></div>
 
-- 此外，您也可以通过与智能体对话来调整阈值
+此外，您可以通过与智能体对话来调整参数
+
+当前的视觉唤醒功能提供以下配置选项：
+
+- **目标ID** (`target`): 指定需要检测的目标ID。该ID取决于使用的视觉模型，默认值为0。
+
+- **检测持续时间** (`duration`): 单位为秒，用于调整视觉唤醒的灵敏度。默认值为1秒（此默认不包括1秒的去抖动处理）。
+
+- **置信度阈值** (`threshold`): 视觉模型识别物体的最低置信度，用于调整检测灵敏度。以百分比表示，默认值为75%。
+
+- **冷却时间** (`interval`): 单位为秒，表示一次对话结束后需要等待的时间，防止同一物体频繁打断。默认值为8秒。
+
+例如，您可以通过修改**置信度阈值参数**来调整模型的灵敏度。如果您觉得当前的阈值过于严格，可以对Watcher说：“请将置信度阈值设置为60%”。
+
 
 ## 故障排除
 
@@ -291,7 +305,7 @@ v2.0.3 以上版本的固件需要对小智说 "打开推理开关" 来启用视
 
 4. **设备无法通过视觉检测唤醒**
    - 检查串口输出中是否有相关的日志消息。
-   - 固件版本 v2.0.3 需要对小智说"打开推理开关"来启用此功能。
+   - 固件版本高于 v2.0.3 需要对小智说"打开推理开关"来启用此功能。
 
 5. **串口显示视觉识别日志但设备仍无法唤醒**
    - 前往 SenseCraft AI 平台并将 Person 模型刷写到 AI 芯片。
