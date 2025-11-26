@@ -44,7 +44,7 @@ last_update:
 
 <div className="nav-grid">
 
-## 📦 Kits de Robot {#robot-kits}
+## 📦 Kits de Robot {#kits-de-robot}
 
 <div class="category-group">
   <div class="category-card robot-kits">
@@ -124,30 +124,33 @@ last_update:
 </div>
 </div>
 
-## ⚙️ Actuadores {#actuators}
+## ⚙️ Actuadores {#actuadores}
 
 <div class="category-group">
 <div className="category-card actuators">
 
 <div className="card-container">
     <a href="/es/myactuator_series/" className="nav-item">
-      <span className="text">0️⃣MyActuator Serie X</span>
+      <span className="text">0️⃣MyActuator X Series</span>
     </a>
     <a href="/es/damiao_series/" className="nav-item">
-      <span className="text">1️⃣Damiao Serie DM43</span>
+      <span className="text">1️⃣Damiao DM43 Series</span>
     </a>
     <a href="/es/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Motor Servo Feetech STS3215</span>
     </a>
     <a href="/es/hightorque_series/" className="nav-item">
-      <span className="text">3️⃣Serie HighTorque</span>
+      <span className="text">3️⃣HighTorque Series</span>
+    </a>
+    <a href="/es/fashionstar_servo/" className="nav-item">
+      <span className="text">4️⃣fashionstar Series</span>
     </a>
 </div>
 
 </div>
 </div>
 
-## 👁️ Sensores {#sensors}
+## 👁️ Sensores {#sensores}
 
 <div class="category-group">
 <div className="category-card sensors">
@@ -165,7 +168,7 @@ last_update:
       <span className="text">Algoritmo A-LOAM</span>
     </a>
     <a href="/es/slamtec/" className="nav-item">
-      <span className="text">Serie Slamtec</span>
+      <span className="text">Slamtec Series</span>
     </a>
 </div>
 
@@ -369,8 +372,9 @@ html[data-theme='dark'] .nav-item {
   color: white;
 }
 
-/* Dark模式 - 悬浮动画 */
-html[data-theme='dark'] .nav-item:hover {  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+/* Modo Dark - animación flotante */
+html[data-theme='dark'] .nav-item:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
 }
 
@@ -382,7 +386,7 @@ html[data-theme='dark'] .nav-item:hover {  box-shadow: 0 6px 12px rgba(0,0,0,0.6
   height: 100%;
 }
 
-/* 响应式设计 */
+/* Diseño responsivo */
 @media (max-width: 768px) {
   .quick-nav {
     flex-direction: column;
@@ -401,7 +405,7 @@ html[data-theme='dark'] .nav-item:hover {  box-shadow: 0 6px 12px rgba(0,0,0,0.6
 `}</style>
 
 <style>{`
-/* 内容卡片增强版样式 */
+/* Estilos de tarjeta de contenido versión mejorada */
 .nav-grid {
   display: block;
   gap: 2rem;
@@ -420,7 +424,7 @@ html[data-theme='dark'] .nav-item:hover {  box-shadow: 0 6px 12px rgba(0,0,0,0.6
   z-index: 1;
 }
 
-/* Dark模式 - 内容卡片 */
+/* Modo Dark - tarjeta de contenido */
 html[data-theme='dark'] .category-card {
   background:rgb(30, 30, 32);
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
@@ -431,7 +435,7 @@ html[data-theme='dark'] .category-card {
   margin-bottom: 2rem;
 }
 
-/* 分类色标 */
+/* Marcador de color de categoría */
 .category-card::before {
   content: "";
   position: absolute;
@@ -446,13 +450,13 @@ html[data-theme='dark'] .category-card {
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* 悬浮特效 */
+/* Efecto flotante */
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
-/* Dark模式 - 悬浮特效 */
+/* Modo Dark - efecto flotante */
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -468,12 +472,12 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Dark模式 - 悬浮光效 */
+/* Modo Dark - efecto de luz flotante */
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
 
-/* 链接动画 */
+/* Animación de enlace */
 .category-card a {
   position: relative;
   display: inline-block;
@@ -482,7 +486,7 @@ html[data-theme='dark'] .category-card:hover::after {
   color: #333;
 }
 
-/* Dark模式 - 链接 */
+/* Modo Dark - enlace */
 html[data-theme='dark'] .category-card a {
   color: #d1d5db;
 }
@@ -492,7 +496,7 @@ html[data-theme='dark'] .category-card a {
   transform: translateX(5px);
 }
 
-/* Dark模式 - 链接悬浮 */
+/* Modo Dark - enlace flotante */
 html[data-theme='dark'] .category-card a:hover {
   color: #60a5fa;
 }
@@ -508,7 +512,7 @@ html[data-theme='dark'] .category-card a:hover {
   transition: width 0.3s;
 }
 
-/* Dark模式 - 链接下划线 */
+/* Modo Dark - subrayado de enlace */
 html[data-theme='dark'] .category-card a::after {
   background: #60a5fa;
 }
@@ -518,10 +522,10 @@ html[data-theme='dark'] .category-card a::after {
 }
 
 .card-container {
-  margin-bottom: 1.5rem; /* 原为0.1rem */
+  margin-bottom: 1.5rem; /* originalmente 0.1rem */
 }
 
-/* 标签样式增强 */
+/* Estilos de etiqueta mejorados */
 .tag {
   font-size: 0.75rem;
   padding: 2px 8px;
@@ -536,7 +540,7 @@ html[data-theme='dark'] .category-card a::after {
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
 
-/* Dark模式 - Stable标签 */
+/* Modo Dark - etiqueta Stable */
 html[data-theme='dark'] .stable {
   background: #065f46;
   color: #a7f3d0;
@@ -549,7 +553,7 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }
 
-/* Dark模式 - Recommended标签 */
+/* Modo Dark - etiqueta Recommended */
 html[data-theme='dark'] .recommended {
   background: #7f1d1d;
   color: #fca5a5;
@@ -561,12 +565,12 @@ html[data-theme='dark'] .recommended {
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-/* Dark模式 - 点击效果 */
+/* Modo Dark - efecto de clic */
 html[data-theme='dark'] .category-card:active {
   box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
 
-/* 响应式优化 */
+/* Optimización responsiva */
 @media (max-width: 768px) {
   .nav-grid {
     grid-template-columns: 1fr;
@@ -574,11 +578,11 @@ html[data-theme='dark'] .category-card:active {
 
   .category-card {
     width: 100%;
-    margin-top: 0.5rem; /* 卡片紧贴标题 */
+    margin-top: 0.5rem; /* tarjeta pegada al título */
   }
 }
 
-/* Dark模式 - 标题文字 */
+/* Modo Dark - texto de título */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -588,14 +592,14 @@ html[data-theme='dark'] h6 {
   color: #f9fafb;
 }
 
-/* Dark模式 - 正文文字 */
+/* Modo Dark - texto del cuerpo */
 html[data-theme='dark'] p,
 html[data-theme='dark'] li,
 html[data-theme='dark'] strong {
   color: #e5e7eb;
 }
 
-/* Dark模式 - 引用块 */
+/* Modo Dark - bloque de cita */
 html[data-theme='dark'] blockquote {
   color: #9ca3af;
   border-left-color: #4b5563;

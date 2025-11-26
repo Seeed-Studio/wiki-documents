@@ -58,7 +58,7 @@ Go to **File** -> **Preferences** and add the following URL to **Additional Boar
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-### Step 3. Install Seeed Arduino LCD Library
+### Step 3. Install Seeed GFX Library
 
 :::tip
 This library has same function as TFT library and no compatible with it. If you have installed TFT library or other similary display libraries, please uninstall it first.

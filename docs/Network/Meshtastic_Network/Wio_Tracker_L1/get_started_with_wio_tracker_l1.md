@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 11/12/2025
+  date: 11/24/2025
   author: Michelle Huang
 ---
 
@@ -49,6 +49,18 @@ L1 E-Ink firmware currently don't support the four-way joystick. If you want to 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
 Only the 2.7 firmware support the menu bar. If you want to use the menu bar, follow the [Flash Firmware Tutorial](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) to update firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
+
+#### Buzzer
+
+If you want to turn on or off the buzzer, please first `update the firmware` to `2.7` version. Because only the 2.7 virsion firmware has the menu bar. 
+- Turn on the buzzer
+Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> Disable
+- Turn off the buzzer
+Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> All enabled
+
+<div class="table-center">
+<iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ### Part 4 Phone Connection
 
@@ -131,6 +143,38 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
+### Connect via Website
+
+If you want to text messages and communicate with other nodes in the website, you can connect the device to the [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0) now. 
+
+  Step 1: Open the Website
+
+[Click here](https://client.meshtastic.org/messages/broadcast/0) to go to the webstite. 
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  Step 2: Add the new device 
+  
+    Click "+ New Connection". 
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    There are two ways to connect. You can choose your preferred method.
+
+ Method 1: Via Bluetooth
+  
+    Choose bluetooth method. Choose the device ID in the pop-up window.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ Method 2: Via Serial
+
+    Choose serial method. Open the device manager to see which port the device is connected to. Choose that port in the pop-up window.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
+
+
 ### Configure the Parameters
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
@@ -201,6 +245,10 @@ You can add sensor to the device via the grove interface. The following sensors 
   </tr>
 </table>
 
+### Screesn Connection
+ 
+ - [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) to get the compatible E-Ink screen.
+- Please look forward to our compatible separately-selling OLED screen, which will be available soon. The current OLED driver is SSD1306.
 
 ### Virtuak Keyboard
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
@@ -209,7 +257,34 @@ The 2.7 version firmwarw now support virtual keyboard! You can type message dire
 
 ## FAQ
 
-### Entering DFU Mode Manually
+### Device bricked & Bootloader installation
+
+**Description:**
+
+The device is not responding, no LED, can not pair with your App. If you found the device completely dead after flashing your own firmware, you can try re-install the bootloader too.
+
+:::danger note
+When you are flashing the bootloader, please make sure the cable connection is stable and **DO NOT** disconnect it during the flash process.
+:::
+
+- Step 1: [Click here to download Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+
+- step 2: Enter DFU mode
+
+  Double click the RST button to enter DFU mode. The disk name "Tracker L1" will pop out.
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
+
+- step 3: Paste the bootloader file
+
+  Cover all the files in the disk with the downloaded bootloader file.
+
+- step 4: Flash the firmware
+
+  When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) to flash the application firmware. You may need to [enter the DFUmode manually](https://wiki.seeedstudio.com/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+
+
+### Unable to enter DFU & Entering DFU Mode Manually
 
 Connect the device to your PC, double-press the `Reset` button. The yellow LED will stay solid, and a new USB drive named `Tracker L1` will appear on your PC.
 
@@ -225,6 +300,7 @@ Press the `Reset` button once to exit DFU mode.
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
 ## Resource
+- [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) 3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [(V2 New Four-way Joystick) 3D printing reference file](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [Outline File](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)

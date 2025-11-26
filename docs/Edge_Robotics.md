@@ -142,6 +142,9 @@ last_update:
     <a href="/hightorque_series/" className="nav-item">
       <span className="text">3️⃣HighTorque Series</span>
     </a>
+    <a href="/fashionstar_servo/" className="nav-item">
+      <span className="text">4️⃣fashionstar Series</span>
+    </a>
 </div>
 
 </div>

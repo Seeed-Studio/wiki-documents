@@ -37,7 +37,7 @@ EtherCATマスターとして、Jetsonは通常その**Ethernetインターフ�
 </div>
 
 :::note
-物理的なEtherCAT接続を確立した後も、ほとんどのスレーブデバイスは追加の外部電源が必要です。
+物理的なEtherCAT接続を確立した後も、ほとんどのスレーブデバイスには追加の外部電源が必要です。
 :::
 
 ## 2. EtherCATドライバーのインストール
@@ -67,7 +67,7 @@ sudo depmod -a
 ```
 
 ドライバーが正常にインストールされたことを確認するには、以下のコマンドを実行します。
-2つのカーネルモジュール`ec_master`と`ec_generic`が表示されるはずです：
+`ec_master`と`ec_generic`の2つのカーネルモジュールが表示されるはずです：
 
 ```bash
 sudo lsmod | grep "ec_"
@@ -127,7 +127,7 @@ sudo nmcli dev set eno1 managed on  # Replace eno1 with the Ethernet interface u
 
 ## 4. JetsonとEtherCATスレーブ間の通信テスト
 
-JetsonでEtherCATマスターノードが正しく初期化され、ハードウェア接続が適切に確立されていることを確認した後、ターミナルでJetsonとEtherCATデバイス間の通信をテストできます。
+JetsonでEtherCATマスターノードが正しく初期化され、ハードウェア接続が適切に確立されたことを確認した後、ターミナルでJetsonとEtherCATデバイス間の通信をテストできます。
 
 EtherCATデバイスをスキャンし、データ送信をテストしてパケット損失率が正常範囲内にあるかを確認します：
 
@@ -164,13 +164,147 @@ sudo ethercat pdos -p 0 #0 to n
     src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/slave0.png"/>
 </div>
 
+
+## 5. 例 – JetsonでEtherCATモーターを制御する（MyActuator X4）
+
+前のセクションの設定と検証手順に基づいて、Jetsonデバイスを使用してEtherCATモーターを制御できるようになったはずです。
+
+このセクションでは、**MyActuator X4**を例として、JetsonからEtherCATモーターを制御する方法を実演します。
+
+:::note
+このセクションは参考用のみです。各EtherCATモーターは異なる通信プロトコルを使用するため、特定のデバイスで使用されるプロトコルに応じて例を適応させる必要があります。
+:::
+
+この例では、**MyActuator X4** EtherCATモーターを制御するためのサンプルコードを提供します。GitHubからダウンロードしてコンパイルしてください：
+```bash
+git clone https://github.com/jjjadand/ethercat-myctor.git
+cd src/build
+cmake ..
+make
+```
+この例は[EtherCAT-Master](https://gitlab.com/etherlab.org/ethercat)に基づいて実装されています。プログラムのフローチャートを以下に示します：
+
+<details>
+<summary> プログラムフローチャート </summary>
+
+```bash
+                     ┌──────────────────────────────────────┐
+                     │        1. Master Initialization        │
+                     ├──────────────────────────────────────┤
+                     │ ecrt_request_master()                 │
+                     │ ecrt_master_create_domain()           │
+                     │ ecrt_master_slave_config()            │
+                     │ Configure Distributed Clock (DC)      │
+                     │ Register PDO entries (RxPDO/TxPDO)    │
+                     │ ecrt_master_activate()                │
+                     │ Get domain memory pointer             │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │      2. PREOP  →  SAFEOP Transition   │
+                     ├──────────────────────────────────────┤
+                     │ Slave boots in PREOP                 │
+                     │ Master exchanges SDO if needed       │
+                     │ (optional: set 0x6060 = CSP)         │
+                     │ DC start time prepared               │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │      3. SAFEOP → OP Transition       │
+                     ├──────────────────────────────────────┤
+                     │ Domain becomes active (WKC > 0)      │
+                     │ Application loop starts running      │
+                     │ Master supplies application time     │
+                     │ Master synchronizes DC clocks        │
+                     │ Slave goes OP (operational)          │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │        4. CiA-402 State Machine       │
+                     ├──────────────────────────────────────┤
+                     │ Write ControlWord = 0x0006 (Shutdown)│
+                     │ Wait READY_TO_SWITCH_ON              │
+                     │ Write ControlWord = 0x0007 (SwitchOn)│
+                     │ Wait SWITCHED_ON                     │
+                     │ Write ControlWord = 0x000F (EnableOp)│
+                     │ Wait OPERATION_ENABLED               │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │     5. Enter CSP Motion Operation     │
+                     ├──────────────────────────────────────┤
+                     │ Write Mode of Operation (0x6060=8)   │
+                     │ Read Actual Position (0x6064)        │
+                     │ Initialize Target Position (607A)    │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │     6. Real-Time Cyclic Operation     │
+                     ├──────────────────────────────────────┤
+                     │ loop at 1 kHz (or higher):           │
+                     │   - Sleep until next cycle           │
+                     │   - ecrt_master_application_time()   │
+                     │   - ecrt_master_sync_reference_clock │
+                     │   - ecrt_master_sync_slave_clocks    │
+                     │   - Receive / process domain         │
+                     │   - Generate new target position     │
+                     │   - Write ControlWord = 0x000F       │
+                     │   - Write OperationMode = 8 (CSP)     │
+                     │   - Write new TargetPosition         │
+                     │   - Queue & send domain              │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │     7. Monitoring & Fault Handling    │
+                     ├──────────────────────────────────────┤
+                     │ Read status word (0x6041) each cycle │
+                     │ Detect faults (bit3)                 │
+                     │ Detect target reached (0x0400)       │
+                     │ Optionally read torque/velocity      │
+                     │ Execute FAULT RESET if needed        │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │             8. Shutdown               │
+                     ├──────────────────────────────────────┤
+                     │ Stop real-time thread               │
+                     │ Write ControlWord=0 (disable)       │
+                     │ Release EtherCAT master             │
+                     └──────────────────────────────────────┘
+```
+
+</details>
+
+
+リアルタイムカーネルなしでJetson上のEtherCATモーターを制御する場合、**EtherCATデバイスとの安定した同期を確保するためにCPU周波数を固定することが推奨されます**。
+
+サンプルをコンパイルした後、ターミナルで以下のコマンドを実行してください：
+
+```bash
+sudo jetson_clocks # lock CPU frequency for stability
+sudo ./ethercat_master
+```
+
+プログラムを実行した後、約2秒待つとモーターがループ動作を開始します。
+<div align="center"><img width ="500" 
+    src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/ethercat-loop2.gif"/>
+</div>
+
+
 ## リソース
 
 - [EtherCAT Masterのソースコード](https://gitlab.com/etherlab.org/ethercat.git)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

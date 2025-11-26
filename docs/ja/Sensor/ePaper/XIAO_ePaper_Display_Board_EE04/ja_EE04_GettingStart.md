@@ -197,12 +197,10 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 
 ## ソフトウェア概要
 
-### Seeed Arduino GFX ライブラリのインストール
-
-**ステップ 3.** Seeed Arduino LCD ライブラリをインストール
+### Seeed GFX ライブラリのインストール
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性がありません。TFT ライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
+このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
 :::
 
 GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
@@ -244,7 +242,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 ## 開始方法
 
-ここでは、5.83インチディスプレイを例として使用します。すべての24ピンスクリーンで手順は同じです。唯一の違いは、ドライバーで適切な画面サイズを選択することです。
+ここでは、5.83インチディスプレイを例として使用します。すべての24ピンスクリーンで手順は同じです。唯一の違いは、ドライバーで適切なスクリーンサイズを選択することです。
 
 **新しい "driver.h" ファイル**を作成し、そのコードを貼り付けます。コードは次のようになります：
 
@@ -405,24 +403,29 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04battery.jpg" style={{width:700, height:'auto'}}/></div>
 
 ```cpp
-#define VOLTAGE_PIN A0
+#define VOLTAGE_PIN A0 //GPIO1
+#define ADC_ENABLE_PIN A5 //GPIO6
 
 void setup() {
-  Serial.begin(115200);       
-  pinMode(VOLTAGE_PIN, INPUT); /
+  Serial.begin(115200);
+  delay(10);
+
+  pinMode(VOLTAGE_PIN, INPUT);
+  pinMode(ADC_ENABLE_PIN, OUTPUT);
+  digitalWrite(ADC_ENABLE_PIN , HIGH);
 }
 
-void loop() {
-  int adcValue = analogRead(VOLTAGE_PIN);   
-  float voltage = (adcValue / 1023.0) * 3.3; 
 
+void loop() {
+  analogReadResolution(12); 
+  int adcValue = analogRead(VOLTAGE_PIN);
+  float voltage = (adcValue / 4096.0) *7.16;
   Serial.print("ADC Value: ");
   Serial.print(adcValue);
-  Serial.print("  Voltage: ");
+  Serial.print(" Voltage: ");
   Serial.print(voltage, 3);
   Serial.println(" V");
-
-  delay(10); 
+  delay(10);
 }
 ```
 
@@ -430,9 +433,13 @@ void loop() {
 
 ## リソース
 
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 回路図](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 回路図](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_SCH_V1.2.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Grabcad 3Dファイル](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_V1.2_SCH&PCB.zip)
 
-## 技術サポートと製品ディスカッション
+
+
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 

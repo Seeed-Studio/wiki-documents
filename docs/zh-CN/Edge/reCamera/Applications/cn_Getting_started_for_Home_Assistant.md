@@ -1,36 +1,36 @@
 ---
-description: Provide a tutorial for integrating reCamera with Home Assistant. Home Assistant is installed on reComputer.
-title: Getting started for Home Assistant
+description: 提供将 reCamera 与 Home Assistant 集成的教程。Home Assistant 安装在 reComputer 上。
+title: Home Assistant 入门指南
 keywords:
   - reCamera
   - Home Assistant
   - reComputer
-image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /getting_started_for_home_assistant_with_recamera
+image: https://files.seeedstudio.com/wiki/reCamera/HA.png
+slug: /cn/getting_started_for_home_assistant_with_recamera
 sidebar_position: 6
 last_update:
   date: 11/11/2025
   author: Xinrui Wu
 ---
 
-# Getting started for Home Assistant with reCamera
+# reCamera 的 Home Assistant 入门指南
 
-## Introduction
+## 简介
 
-Home Assistant is an open source smart home platform system, and user can easily connect their own Internet of Things devices to the system for unified management. However, the main special point of the Home Assistant is not just to realize the view of various sensing devices, but to realize the automatic linkage of cross-platform device, only such a smart home platform is enough to have vitality.
+Home Assistant 是一个开源智能家居平台系统，用户可以轻松地将自己的物联网设备连接到系统中进行统一管理。然而，Home Assistant 的主要特点不仅仅是实现各种传感设备的查看，而是实现跨平台设备的自动联动，只有这样的智能家居平台才足以具有活力。
 
-## Hardware Preparation
+## 硬件准备
 
-One reCamera (it can be any of the 2002 series, HQ POE version, or pan-tilt version, but note that the POE version does not have WiFi functionality and requires a switch with POE function to be connected in the same network segment)  
-one reComputer (any version is fine, here I use reComputer AI R2130-12 as an example)  
-one computer
+一个 reCamera（可以是 2002 系列中的任何一个、HQ POE 版本或云台版本，但请注意 POE 版本没有 WiFi 功能，需要连接具有 POE 功能的交换机在同一网段中）  
+一个 reComputer（任何版本都可以，这里我使用 reComputer AI R2130-12 作为示例）  
+一台计算机
 
 <table align="center">
  <tr>
-  <th>reCamera 2002 Series</th>
-  <th>reCamera Gimbal</th>
+  <th>reCamera 2002 系列</th>
+  <th>reCamera 云台</th>
   <th>reCamera HQ POE</th>
-  <th>reComputer AI R2000 Series</th>
+  <th>reComputer AI R2000 系列</th>
  </tr>
  <tr>
   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" style={{width:300, height:'auto'}}/></div></td>
@@ -41,85 +41,88 @@ one computer
  <tr>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
    </a>
   </div></td>
 
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
    </a>
   </div></td>
 
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
    </a>
   </div></td>
 
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
    </a>
   </div></td>
  </tr>
 </table>
 
-## Installation of Home Assistant (taking the reComputer AI R2130-12 as an example)
+## Home Assistant 安装（以 reComputer AI R2130-12 为例）
 
-### System preparation
-1.update system
+### 系统准备
+
+1.更新系统
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
-2.Install necessary dependencies
+2.安装必要的依赖项
 
 ```bash
 sudo apt install -y ca-certificates curl gnupg lsb-release
 ```
 
-### Install Docker
-1.Official script installation
+### 安装 Docker
+
+1.官方脚本安装
 
 ```bash
 curl -fsSL https://get.docker.com | sh
 ```
 
-2.Allow the current user to use Docker
+2.允许当前用户使用 Docker
 
 ```bash
 https://files.seeedstudio.com
 ```
 
-3.Restart the system to make the permissions take effect
+3.重启系统使权限生效
 
 ```bash
 sudo reboot
 ```
 
-4.Verify installation
+4.验证安装
 
 ```bash
 docker run hello-world
 ```
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/hello_docker.png" /></div>
 
-If you see the words "Hello from Docker!", it indicates that the installation was successful.
+如果您看到"Hello from Docker!"字样，表示安装成功。
 
-### Install Home Assistant (Container Mode)
+### 安装 Home Assistant（容器模式）
 
-1. Create the mount directory 
-For the purpose of persisting the configuration file:
+1. 创建挂载目录
+为了持久化配置文件：
 
 ```bash
 mkdir -p ~/homeassistant/config
 ```
 
-2. Start the container
-Run the following command to start Home Assistant  
-(this step may take a while, the speed depends on your network)
+2. 启动容器
+运行以下命令启动 Home Assistant  
+（此步骤可能需要一段时间，速度取决于您的网络）
 
 ```bash
 docker run -d \
@@ -133,73 +136,74 @@ docker run -d \
   ghcr.io/home-assistant/home-assistant:stable
 ```
 
-Parameter Explanation: 
-* `--network=host`: Home Assistant can directly access the host network (necessary for automatic device discovery)
-* `-v ~/homeassistant/config:/config`: Save configuration files
-* `--restart=unless-stopped`: Automatically restart
-* `--privileged`: Enable hardware access (USB Zigbee/Z-Wave, etc.)
+参数说明：
+- `--network=host`：Home Assistant 可以直接访问主机网络（自动设备发现所必需）
+- `-v ~/homeassistant/config:/config`：保存配置文件
+- `--restart=unless-stopped`：自动重启
+- `--privileged`：启用硬件访问（USB Zigbee/Z-Wave 等）
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/docker.png" /></div>
 
+### 访问 Home Assistant
 
-### Access Home Assistant
-
-1. Check IP
+1. 检查 IP
 
 ```bash
 hostname -I
 ```
 
-2. Access the browser
+2. 访问浏览器
 
-After Docker is started, wait for 1 to 2 minutes, and then access it in the browser:
+Docker 启动后，等待 1 到 2 分钟，然后在浏览器中访问：
 
 ```bash
 http://<your IP>:8123
 ```
 
-eg:
+例如：
 
 ```bash
 http://192.168.1.88:8123
 ```
-The initial startup will lead you to the initialization interface. You can then start creating an account and configuring your smart home.
 
-### Find the path of the configuration file
+初始启动将引导您进入初始化界面。然后您可以开始创建账户并配置您的智能家居。
 
-All the configurations of Home Assistant are saved in:
+### 查找配置文件路径
+
+Home Assistant 的所有配置都保存在：
 
 ```bash
 /homeassistant/config/
 ```
-You can view it through the following instructions:
+
+您可以通过以下指令查看：
 
 ```bash
 cd /homeassistant/config
 ls
 ```
 
-You will see these documents:
+您将看到这些文档：
+
 ```bash
 automations.yaml  configuration.yaml  scripts.yaml ...
 ```
 
+### 配置自动化以接收 reCamera 数据
 
-### Configure automation to receive ReCamera data
-
-1. Install the nano editor
+1. 安装 nano 编辑器
 
 ```bash
 sudo apt install nano -y
 ```
 
-2. Edit `automations.yaml`:
+2. 编辑 `automations.yaml`：
 
 ```bash
 sudo nano /homeassistant/config/automations.yaml
 ```
 
-Replace the content with:
+将内容替换为：
 
 ```yaml
 - alias: "ReCamera Detection"
@@ -218,17 +222,18 @@ Replace the content with:
   mode: single
 ```
 
-Save and Exit: 
-- **Ctrl + O** → Enter (Save)
-- **Ctrl + X** (Exit)
+保存并退出：
 
-3. Edit configuration.yaml:
+- **Ctrl + O** → Enter（保存）
+- **Ctrl + X**（退出）
+
+3. 编辑 configuration.yaml：
 
 ```bash
 sudo nano /homeassistant/config/automations.yaml
 ```
 
-Replace the content with:
+将内容替换为：
 
 ```yaml
 # ==========================
@@ -269,46 +274,45 @@ sensor:
         icon_template: mdi:camera-outline
 ```
 
-Save and Exit: 
-- **Ctrl + O** → Enter (Save)
-- **Ctrl + X** (Exit)
+保存并退出：
 
-4. After saving and exiting, restart Home Assistant
+- **Ctrl + O** → Enter（保存）
+- **Ctrl + X**（退出）
+
+4. 保存并退出后，重启 Home Assistant
 
 ```bash
 docker restart homeassistant
 ```
 
-## The configuration of reCamera (taking the 2002w version as an example)
+## reCamera 的配置（以 2002w 版本为例）
 
-### After inserting the reCamera into the computer, access 192.168.42.1
+### 将 reCamera 插入计算机后，访问 192.168.42.1
 
-If the interface cannot be opened continuously, please refer to the [Factory Reset](https://wiki.seeedstudio.com/recamera_getting_started/#factory-reset) section to reset the device. After the reset, visit 192.168.42.1 again. After the reset, you will be prompted to change the password.
+如果界面无法持续打开，请参考[恢复出厂设置](https://wiki.seeedstudio.com/cn/recamera_getting_started/#factory-reset)部分重置设备。重置后，再次访问 192.168.42.1。重置后，系统会提示您更改密码。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/reset.png" /></div>
 
-
-### After logging in, click the bottom right corner to enter "Workspace"
+### 登录后，点击右下角进入 "Workspace"
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/logging_in.png" /></div>
 
-### After entering the Workspace, configure the nodes.
-
+### 进入 Workspace 后，配置节点。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_1.png" /></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_2.png" /></div>
 
-Four new nodes have been added: "debug1", "debug2", "function1" and "HTTP request".  
-debug1 and debug2 are used to observe the output information, optional or not; function1 is used to process data; the HTTP request node is used to send data to Home Assistant
+添加了四个新节点："debug1"、"debug2"、"function1" 和 "HTTP request"。  
+debug1 和 debug2 用于观察输出信息，可选；function1 用于处理数据；HTTP request 节点用于向 Home Assistant 发送数据
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_3.png" /></div>
 
-Next, we need to modify the original node "Model Info Handle" so that it only outputs the quantity of a specific detection target.
+接下来，我们需要修改原始节点 "Model Info Handle"，使其只输出特定检测目标的数量。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_4.png" /></div>
 
-Double-click to open this node and replace the code with the following content:
+双击打开此节点并将代码替换为以下内容：
 
 ```javascript
 let currentModel = "Current People";
@@ -326,17 +330,16 @@ currentModel += ` number: ${num}`;
 return { payload: currentModel };
 ```
 
-After making the modifications, click the "Finish" button on the top right corner.
+修改完成后，点击右上角的"Finish"按钮。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_5.png" /></div>
 
-This code only outputs the number of detected persons. If you want to make changes, you can modify the detection object.  
-You can learn which types of objects can be detected by checking the model node.
+此代码仅输出检测到的人数。如果您想进行更改，可以修改检测对象。
+您可以通过检查模型节点来了解可以检测哪些类型的对象。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_6.png" /></div>
 
-
-Next, configure the function1 node and replace the original code with the following:
+接下来，配置 function1 节点并将原始代码替换为以下内容：
 
 ```javascript
 return {
@@ -348,39 +351,36 @@ return {
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_7.png" /></div>
 
+接下来，我们将配置 HTTP 请求节点。在这里，我们需要对三个区域进行更改：
 
-Next, we will configure the HTTP request node. Here, we need to make changes to three areas:
-
-| **Option**| **Setting Value**|
+| **选项**| **设置值**|
 |-----------|-----------|
-| **Request Method**| POST|
-| **URL Address**| `http://<your IP>:8123/api/webhook/recamera_detection`|
-| **Response**| JSON Object|
-
+| **请求方法**| POST|
+| **URL 地址**| `http://<your IP>:8123/api/webhook/recamera_detection`|
+| **响应**| JSON Object|
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_8.png" /></div>
 
-After setting it up, click on the "Deploy" button at the top right corner. Once the deployment is successful, there will be a prompt.
+设置完成后，点击右上角的 "Deploy" 按钮。部署成功后，会有提示。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_9.png" /></div>
 
-Here, you need to perform one more step, which is to connect WiFi to reCamera. It should be on the same network as the one you set up for reComputer (note that the POE version does not have WiFi functionality and requires the use of a switch with POE function to connect in the same network segment).  
+在这里，您需要执行一个额外的步骤，即将 WiFi 连接到 reCamera。它应该与您为 reComputer 设置的网络在同一网络中（请注意，POE 版本没有 WiFi 功能，需要使用具有 POE 功能的交换机连接到同一网段）。
 
-Click on the "Network" button in the upper left corner to configure the network.
+点击左上角的 "Network" 按钮来配置网络。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_10.png" /></div>
 
+:::note
+请记住！确保将 reCamera 连接到网络！！！否则将无法通信。
+:::
 
-
-
-
-
-## View the overview interface of Home Assistant
+## 查看 Home Assistant 的概览界面
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/HA.png" /></div>
 
-If no effect has been observed yet, first check if the link is not connected properly. That is, verify whether the Webhook is functioning correctly:  
-Execute in the terminal of any device (ReCamera or computer):
+如果还没有观察到效果，首先检查链接是否连接不正确。也就是说，验证 Webhook 是否正常工作：
+在任何设备（reCamera 或计算机）的终端中执行：
 
 ```shell
 curl -X POST http://192.168.100.109:8123/api/webhook/recamera_detection \
@@ -388,6 +388,20 @@ curl -X POST http://192.168.100.109:8123/api/webhook/recamera_detection \
 -d '{"payload":"Test from curl"}'
 ```
 
-If successful, the Home Assistant notification will show: 
-> **ReCamera Detection Results**  
+如果成功，Home Assistant 通知将显示：
+> **reCamera 检测结果**
 Test from curl
+
+## 技术支持与产品讨论
+
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
