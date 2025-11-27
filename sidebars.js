@@ -4267,7 +4267,7 @@ const sidebars = {
     {
       type: 'link',
       label: 'Solutions',
-      href: 'https://solution.seeed.cc/',
+      href: 'https://www.seeed.cc/category/solutions',
       className: 'sideboard_calss',
     },
     {
@@ -9357,7 +9357,7 @@ const sidebars = {
     {
       type: 'link',
       label: '解决方案',
-      href: 'https://solution.seeed.cc/',
+      href: 'https://www.seeed.cc/category/solutions',
       className: 'sideboard_calss',
     },
     // {      
@@ -14399,7 +14399,7 @@ const sidebars = {
     {
       type: 'link',
       label: 'Soluciones',
-      href: 'https://solution.seeed.cc/',
+      href: 'https://www.seeed.cc/category/solutions',
       className: 'sideboard_calss',
     },
     // {      
@@ -19438,7 +19438,7 @@ const sidebars = {
     {
       type: 'link',
       label: 'ソリューション',
-      href: 'https://solution.seeed.cc/',
+      href: 'https://www.seeed.cc/category/solutions',
       className: 'sideboard_calss',
     },
     // {      
