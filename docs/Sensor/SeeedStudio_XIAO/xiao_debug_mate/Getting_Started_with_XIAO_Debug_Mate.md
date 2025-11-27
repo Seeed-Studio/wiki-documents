@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/getting_started_with_xiao_debug_mate" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -103,9 +103,9 @@ The device is equipped with the following key hardware components:
 
 * ③ **Pogo pins**: A set of spring-loaded probes located within the XIAO Socket (②). Their specific function is to make reliable electrical contact with the pads on the back side of the installed XIAO mainboard.
 
-* ④ **Outer Expansion Header**: This header breaks out the pins from the left and right sides of the XIAO mainboard. It features a dual-interface design with female headers on the top (for Dupont wires) and male pins on the bottom. This versatile design allows the entire device to be used as a daughterboard on another system.
+* ④ **Outer Inner Expansion Header**: This header is specifically designed to break out the signals from the XIAO mainboard's back pins, which are connected via the Pogo Pins (③). It features a dual-interface design with female headers on the top (for Dupont wires) and male pins on the bottom. This versatile design allows the entire device to be used as a daughterboard on another system.
 
-* ⑤ **Inner Expansion Header**: This header is specifically designed to break out the signals from the XIAO mainboard's back pins, which are connected via the Pogo Pins (③). Just like header ④, it features female headers on the top and male pins on the bottom, providing convenient access to the XIAO's rear-facing I/O.
+* ⑤ **Inner Expansion Header**: This header breaks out the pins from the left and right sides of the XIAO mainboard. Just like header ④, it features female headers on the top and male pins on the bottom, providing convenient access to the XIAO's rear-facing I/O.
 
 * ⑥ **Rotary Encoder**: A rotary encoder wheel (roller) on the top edge, used for navigating menus, scrolling through options, and adjusting values on the display.
 
@@ -140,6 +140,10 @@ The XIAO Debug Mate requires a constant 5V/1A power supply via its USB-C port. U
 <div class="table-center">
 <iframe width="700" height="400" src="https://files.seeedstudio.com/wiki/xiao_debug_mate/first_power.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
+
+:::tip
+Generally speaking, all functions of XIAO on Debug Mate do not require additional power supply to XIAO, unless otherwise specified.
+:::
 
 ### Operational Logic
 
