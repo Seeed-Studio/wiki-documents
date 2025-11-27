@@ -185,7 +185,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -217,16 +217,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -349,7 +340,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -390,16 +381,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -533,7 +515,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -592,16 +574,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -706,7 +679,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -746,16 +719,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -887,7 +851,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -905,7 +869,7 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 :::tip
-Please update your ESPHome version to **2025.10.2** above.
+Please update your ESPHome version to **2025.11.1** above.
 :::
 
 ```yaml
@@ -924,16 +888,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
