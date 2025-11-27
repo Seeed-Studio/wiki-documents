@@ -45,7 +45,7 @@ Necesitas preparar el siguiente hardware
 
 ### Flashear OS al NVME
 
-Por favor consulta este [enlace](https://wiki.seeedstudio.com/es/recomputer_r1000_flash_OS/#steps-for-flashing-raspbian-os), y luego insértalo en la ranura M.2.
+Por favor consulta este [enlace](https://wiki.seeedstudio.com/es/recomputer_r1000_flash_OS/#pasos-para-flashear-raspbian-os), y luego insértalo en la ranura M.2.
 
 ### Arrancar desde emmc y actualizar eeprom
 
@@ -86,13 +86,13 @@ Usa `Ctrl`+`x` para guardar el archivo, y reinicia la máquina usando el comando
 sudo reboot
 ```
 
-Luego actualiza la eeprom usando el comando como se muestra a continuación:
+Luego actualiza la eeprom usando un comando como el siguiente:
 
 ```
 sudo rpi-eeprom-update -a
 ```
 
-La salida es como se muestra a continuación:
+La salida es como la siguiente:
 
 ```
 recomputer@reComputer-R100x:~ $ sudo rpi-eeprom-update -a
@@ -108,7 +108,7 @@ BOOTLOADER: up to date
     LATEST: 
 ```
 
-### Flashear la última eeprom y modificar el orden de arranque
+### Flashear la eeprom más reciente y modificar el orden de arranque
 
 Usa un comando como el siguiente para abrir raspi-config:
 
@@ -157,26 +157,26 @@ BOOT_ORDER=0xf416
 
 Usa `Ctrl`+`x` para guardar el archivo, y luego reinicia tu máquina.
 
-## Pasos para Flashear el SO Raspbian
+## Pasos para Flashear Raspbian OS
 
 > **Nota:** La imagen del sistema más reciente empaquetada por Seeed, incluyendo los controladores apropiados: [pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
 
-- **Paso 1.** Asegúrate de que el interruptor esté configurado en `Modo Flash` según el diagrama a continuación:
+- **Paso 1.** Asegúrate de que el interruptor esté configurado en `Flash mode` según el diagrama a continuación:
 
 <div class="table-center">
 
-| Posición del Interruptor                                    | Modo        | Descripción       | nRPI-BOOT |
-| ------------------------------------------------------------ | ----------- | ----------------- | --------- |
+| Posición del Interruptor                                     | Modo        | Descripción    | nRPI-BOOT |
+| ------------------------------------------------------------ | ----------- | -------------- | --------- |
 | <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | Modo normal | Arrancar desde eMMC | Low       |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | Modo Flash  | Arrancar desde USB  | High      |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | Modo flash  | Arrancar desde USB  | High      |
 
 </div>
 
-- **Paso 2.** Por favor, use el cable de datos USB Type-C para conectar al puerto Type-C en el reComputer R1000, como se muestra en la imagen a continuación,
+- **Paso 2.** Por favor usa el cable de datos USB Type-C para conectar al puerto Type-C en el reComputer R1000, como se muestra en la imagen a continuación,
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/33.png" /></div>
 
-- **Paso 3.** Por favor, conecte el cable de alimentación desde la fuente de alimentación al puerto de alimentación del reComputer R1000.
+- **Paso 3.** Por favor conecta el Cable de Alimentación desde la fuente de alimentación al puerto de alimentación del reComputer R1000.
 
 <div style={{ textAlign: 'left', marginLeft: '40px' }}>
     <img
@@ -189,123 +189,44 @@ Usa `Ctrl`+`x` para guardar el archivo, y luego reinicia tu máquina.
 <br></br>
 
 :::note
-La solución de alimentación utiliza un diodo rectificador de puente para protección contra polaridad inversa y es compatible con entradas tanto AC como DC. Esto asegura que independientemente de cómo se conecten los terminales positivo y negativo de la fuente de alimentación, el circuito no se dañará. Al usar un rectificador de puente, la polaridad del voltaje de salida permanece fija independientemente de la polaridad de entrada DC, proporcionando protección efectiva contra polaridad inversa.
+La solución de alimentación utiliza un diodo rectificador de puente para protección contra polaridad inversa y es compatible con entradas tanto AC como DC. Esto asegura que independientemente de cómo estén conectados los terminales positivo y negativo de la fuente de alimentación, el circuito no se dañará. Al usar un rectificador de puente, la polaridad del voltaje de salida permanece fija independientemente de la polaridad de entrada DC, proporcionando protección efectiva contra polaridad inversa.
 :::
 
-Ahora pasemos a la configuración del software en su computadora host. Por favor, siga los pasos según su sistema operativo deseado
+Ahora pasemos a la configuración del software en tu computadora host. Por favor sigue los pasos según tu sistema operativo deseado
 
 ### Para Windows
 
-- **Paso 1.** Descargue el **instalador de configuración rpiboot** haciendo clic **[aquí](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** para instalar los controladores necesarios y la herramienta de arranque
+- **Paso 1.** Descarga el **instalador de configuración rpiboot** haciendo clic **[aquí](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** para instalar los controladores necesarios y la herramienta de arranque
 
-- **Paso 2.** Conecte el reComputer R1000 a la PC mediante cable USB Type-C
+- **Paso 2.** Conecta el reComputer R1000 a la PC vía cable USB Type-C
 
 Windows ahora encontrará el hardware e instalará los controladores necesarios
 
-- **Paso 3.** Busque la herramienta **rpiboot** que instalamos antes y ábrala
+- **Paso 3.** Busca la herramienta **rpiboot** que instalamos antes y ábrela
 
-- **Paso 4.** Abra el **explorador de archivos** y verá la eMMC del Computer Module 4 mostrada como un **dispositivo de almacenamiento masivo USB**
+- **Paso 4.** Abre el **explorador de archivos** y verás la eMMC del Computer Module 4 mostrada como un **dispositivo de almacenamiento masivo USB**
 
-- **Paso 5.** Descargue el software **Raspberry Pi Imager** desde **[aquí](https://www.raspberrypi.org/software/)**
+- **Paso 5.** Descarga el software **Raspberry Pi Imager** desde **[aquí](https://www.raspberrypi.org/software/)**
 
-- **Paso 6.** Abra el software Raspberry Pi Imager
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
-
-- **Paso 7.** Presione **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Opciones avanzadas**
-
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
-
-Aquí puede **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar WiFi, establecer configuraciones locales** y más
-
-:::note
-El sistema tiene preestablecido un nombre de usuario y contraseña. Por favor, establezca el nombre de usuario predeterminado como "**recomputer**" y la contraseña predeterminada como "**12345678**" al iniciar sesión. Si establece credenciales diferentes y encuentra problemas, por favor vuelva a flashear el SO si compró el primer lote de reComputer R1000.
-:::
-
-- **Paso 8.** Haga clic en **CHOOSE OS** y seleccione su SO preferido
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
-
-**NOTA:** Puede seleccionar otro SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
-
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
-
-O puede usar este enlace para descargar el archivo de imagen:
-
-[Ubuntu para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
-
-- **Paso 9.** Haga clic en **CHOOSE STORAGE** y seleccione la unidad eMMC conectada
-
-- **Paso 10.** Finalmente, haga clic en **WRITE**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
-
-Por favor, espere unos minutos hasta que el proceso de flasheo esté completo.
-
-- **Paso 11.** Cambie el **interruptor de Modo de Arranque** de vuelta a la posición de **modo Normal**
-
-Ahora puede saltar a **[aquí](#install-drivers)**
-
-### Para MAC
-
-:::caution
-**Necesita instalar [homebrew](https://brew.sh/) antes de proceder con los siguientes pasos.**
-Por favor, abra una terminal y escriba ```brew -v``` para verificar si ha configurado el entorno homebrew correcto, debería ver la versión del entorno homebrew que ha instalado.
-:::
-
-- **Paso 1.** Clone el repositorio **usbboot**
-
-```sh
-git clone --depth=1 https://github.com/raspberrypi/usbboot
-cd usbboot
-```
-
-- **Paso 2.** Instalar **libusb**
-
-```sh
-brew install libusb
-```
-
-- **Paso 3.** Instalar **pkg-config**
-
-```sh
-brew install pkg-config
-```
-
-- **Paso 4.** Compilar usando make
-
-```sh
-make
-```
-
-- **Paso 5.** Ejecutar el binario
-
-```sh
-sudo ./rpiboot
-```
-
-- **Paso 6.** Conecta el reComputer R1000 a tu computadora Mac mediante un cable USB Type-C
-
-- **Paso 7.** Descarga e instala la aplicación **Raspberry Pi Imager** visitando [este enlace](https://www.raspberrypi.org/software/)
-
-- **Paso 8.** Abre la aplicación **Raspberry Pi Imager**
+- **Paso 6.** Abre el software Raspberry Pi Imager
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Paso 9.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **opciones avanzadas**
+- **Paso 7.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **opciones avanzadas**
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de idioma** y más
+Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar WiFi, establecer configuraciones de localización** y más
+
 :::note
-El sistema tiene preestablecido un nombre de usuario y contraseña. Por favor, establece el nombre de usuario predeterminado como "**recomputer**" y la contraseña predeterminada como "**12345678**" al iniciar sesión. Si estableces credenciales diferentes y encuentras problemas, por favor vuelve a flashear el SO si compraste el primer lote de reComputer R1000.
+El sistema tiene preestablecido un nombre de usuario y contraseña. Por favor establece el nombre de usuario predeterminado como "**recomputer**" y la contraseña predeterminada como "**12345678**" al iniciar sesión. Si estableces credenciales diferentes y encuentras problemas, por favor reflashea el OS si compraste el primer lote de reComputer R1000.
 :::
 
-- **Paso 10.** Haz clic en **CHOOSE OS** y selecciona tu SO preferido
+- **Paso 8.** Haz clic en **CHOOSE OS** y selecciona tu OS preferido
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Puedes seleccionar otros SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
+**NOTA:** Puedes seleccionar otro OS como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -313,58 +234,137 @@ O puedes usar este enlace para descargar el archivo de imagen:
 
 [Ubuntu para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Paso 11.** Haz clic en **CHOOSE STORAGE** y selecciona la unidad eMMC conectada
+- **Paso 9.** Haz clic en **CHOOSE STORAGE** y selecciona la unidad eMMC conectada
 
-- **Paso 12.** Finalmente, haz clic en **WRITE**
+- **Paso 10.** Finalmente, haz clic en **WRITE**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
 Por favor espera unos minutos hasta que el proceso de flasheo esté completo.
 
-- **Paso 13.** Cambia el **interruptor de modo de arranque** de vuelta a la posición de **modo normal**
+- **Paso 11.** Cambia el **interruptor de Modo de Arranque** de vuelta a la posición de **Modo normal**
 
-Ahora puedes saltar a **[aquí](#install-drivers)**
+Ahora puedes saltar a **[aquí](#instalar-controladores)**
 
-### Para Linux
+### Para MAC
 
-Usaremos Git para obtener el código fuente de **rpiboot**, así que asegúrate de que Git esté instalado
+:::caution
+**Necesitas instalar [homebrew](https://brew.sh/) antes de proceder con los siguientes pasos.**
+Por favor abre una terminal y escribe ```brew -v``` para verificar si has configurado el entorno homebrew correcto, deberías ver la versión del entorno homebrew que has instalado.
+:::
 
-- **Paso 1.** Abre una ventana de **Terminal** y escribe lo siguiente para actualizar la **lista de paquetes**
-
-```sh
-sudo apt-get update
-```
-
-- **Paso 2.** Instala **Git** con el siguiente comando
-
-```sh
-sudo apt install git pkg-config make gcc libusb-1.0-0-dev
-```
-
-- **Paso 3.** Git podría producir un error si la fecha no está configurada correctamente. Escribe lo siguiente para corregir esto
-
-```sh
-sudo date MMDDhhmm
-```
-
-**NOTA:** Donde **MM** es el mes, **DD** es la fecha, y **hh** y **mm** son las horas y minutos respectivamente.
-
-- **Paso 4.** Clona el repositorio de la herramienta **usbboot**
+- **Paso 1.** Clona el repositorio **usbboot**
 
 ```sh
 git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Paso 5.** Compilar e instalar la herramienta usbboot
+- **Paso 2.** Instala **libusb**
+
+```sh
+brew install libusb
+```
+
+- **Paso 3.** Instala **pkg-config**
+
+```sh
+brew install pkg-config
+```
+
+- **Paso 4.** Construye usando make
 
 ```sh
 make
 ```
 
-- **Paso 6.** Conecta reComputer R1000 a la PC mediante cable USB Type-C
+- **Paso 5.** Ejecuta el binario
 
-- **Paso 7.** Ejecuta la herramienta usbboot y esperará una conexión
+```sh
+sudo ./rpiboot
+```
+
+- **Paso 6.** Conecta el reComputer R1000 a tu computadora Mac vía cable USB Type-C
+
+- **Paso 7.** Descarga e Instala la Aplicación **Raspberry Pi Imager** visitando [este enlace](https://www.raspberrypi.org/software/)
+
+- **Paso 8.** Abrir la aplicación **Raspberry Pi Imager**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
+
+- **Paso 9.** Presionar **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Advanced options**
+
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
+
+Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de idioma** y más
+:::note
+El sistema tiene preestablecido un nombre de usuario y contraseña. Por favor establece el nombre de usuario predeterminado como "**recomputer**" y la contraseña predeterminada como "**12345678**" al iniciar sesión. Si estableces credenciales diferentes y encuentras problemas, por favor reflashea el OS si compraste el primer lote de reComputer R1000.
+:::
+
+- **Paso 10.** Hacer clic en **CHOOSE OS** y seleccionar tu OS preferido
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
+
+**NOTA:** Puedes seleccionar otros OS como **64-bit Ubuntu** navegando a **Other general purpose OS**
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
+
+O puedes usar este enlace para descargar el archivo de imagen:
+
+[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+
+- **Paso 11.** Hacer clic en **CHOOSE STORAGE** y seleccionar la unidad eMMC conectada
+
+- **Paso 12.** Finalmente, hacer clic en **WRITE**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
+
+Por favor espera unos minutos hasta que el proceso de flasheo esté completo.
+
+- **Paso 13.** Cambiar el **Boot Mode switch** de vuelta a la posición **Normal mode**
+
+Ahora puedes saltar a **[aquí](#instalar-controladores)**
+
+### Para Linux
+
+Usaremos Git para obtener el código fuente de **rpiboot**, así que asegúrate de que Git esté instalado
+
+- **Paso 1.** Abrir una ventana de **Terminal** y escribir lo siguiente para actualizar la **lista de paquetes**
+
+```sh
+sudo apt-get update
+```
+
+- **Paso 2.** Instalar **Git** con el siguiente comando
+
+```sh
+sudo apt install git pkg-config make gcc libusb-1.0-0-dev
+```
+
+- **Paso 3.** Git podría producir un error si la fecha no está configurada correctamente. Escribir lo siguiente para corregir esto
+
+```sh
+sudo date MMDDhhmm
+```
+
+**NOTA:** Donde **MM** es el mes, **DD** es la fecha, y **hh** y **mm** son horas y minutos respectivamente.
+
+- **Paso 4.** Clonar el repositorio de la herramienta **usbboot**
+
+```sh
+git clone --depth=1 https://github.com/raspberrypi/usbboot
+cd usbboot
+```
+
+- **Paso 5.** Construir e instalar la herramienta usbboot
+
+```sh
+make
+```
+
+- **Paso 6.** Conectar reComputer R1000 a la PC vía cable USB Type-C
+
+- **Paso 7.** Ejecutar la herramienta usbboot y esperará una conexión
 
 ```sh
 sudo ./rpiboot
@@ -394,38 +394,38 @@ rpi-imager
 El resultado se muestra a continuación:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Paso 11.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Opciones avanzadas**
+- **Paso 11.** Presionar **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Advanced options**
 
-Establece un nombre de host, establece una contraseña, configura wifi, establece configuraciones de idioma
+Establecer un nombre de host, establecer una contraseña, configurar wifi, establecer configuraciones de idioma
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/cltaltx.png" alt="pir" width="600" height="auto"/></p>
 
-Habilita SSH
+Habilitar SSH
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/enable_ssh.png" alt="pir" width="600" height="auto"/></p>
 
 Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de idioma** y más
 :::note
-El sistema tiene preestablecido un nombre de usuario y contraseña. Por favor establece el nombre de usuario predeterminado como "**recomputer**" y la contraseña predeterminada como "**12345678**" al iniciar sesión. Si estableces credenciales diferentes y encuentras problemas, por favor vuelve a flashear el SO si compraste el primer lote de reComputer R1000.
+El sistema tiene preestablecido un nombre de usuario y contraseña. Por favor establece el nombre de usuario predeterminado como "**recomputer**" y la contraseña predeterminada como "**12345678**" al iniciar sesión. Si estableces credenciales diferentes y encuentras problemas, por favor reflashea el OS si compraste el primer lote de reComputer R1000.
 :::
 
-- **Paso 11.** Haz clic en **CHOOSE OS** y selecciona tu SO preferido
+- **Paso 11.** Hacer clic en **CHOOSE OS** y seleccionar tu OS preferido
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
 
 <!-- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p> -->
 
-**NOTA:** Puedes seleccionar otro SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
+**NOTA:** Puedes seleccionar otros OS como **64-bit Ubuntu** navegando a **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
 O puedes usar este enlace para descargar el archivo de imagen:
 
-[Ubuntu para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
+[Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Paso 12.** Haz clic en **CHOOSE STORAGE** y selecciona la unidad eMMC conectada
+- **Paso 12.** Hacer clic en **CHOOSE STORAGE** y seleccionar la unidad eMMC conectada
 
-- **Paso 13.** Finalmente, haz clic en **NEXT** y **YES**
+- **Paso 13.** Finalmente, hacer clic en **NEXT** y **YES**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 
@@ -433,19 +433,19 @@ Por favor espera unos minutos hasta que el proceso de flasheo esté completo.
 El resultado se muestra a continuación:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
-- **Paso 14.** Cambia el **interruptor de Modo de Arranque** de vuelta a la posición de **modo Normal**
+- **Paso 14.** Cambiar el **Boot Mode switch** de vuelta a la posición **Normal mode**
 
 ## Instalar Controladores
 
-### Acceder al reComputer R1000 vía SSH
+### Acceder a reComputer R1000 vía SSH
 
 :::note
 
-Los siguientes pasos requieren conocimientos básicos de línea de comandos de Linux. Por favor prepárate una taza de café y alístate.
+Los siguientes pasos requieren algunos conocimientos básicos de línea de comandos de Linux. Por favor prepárate una taza de café y prepárate.
 
 :::
 
-Siguiendo los pasos de flasheo del SO anteriores, el reComputer R1000 debería tener SSH habilitado con el nombre de host `raspberrypi.local`.
+Siguiendo los pasos de flasheo de OS anteriores, el reComputer R1000 debería tener SSH habilitado con el nombre de host `raspberrypi.local`.
 
 Ahora por favor conecta el cable Ethernet al reComputer R1000 y a un router que esté en la misma red que tu computadora host.
 
@@ -461,17 +461,17 @@ si ves la siguiente salida después del comando ping, significa que ambos dispos
 
 ##### Para Windows
 
-- **Paso 1.** Abre **Símbolo del sistema** y escribe lo siguiente
+- **Paso 1.** Abrir **Command Prompt** y escribir lo siguiente
 
 ```sh
 ssh pi@raspberrypi.local
 ```
 
-- **Paso 2.** Escribe **yes** para la solicitud
+- **Paso 2.** Escribir **yes** para la solicitud
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows-prompt.png" alt="pir" width="750" height="auto"/></p>
 
-- **Paso 3.** Introduce la contraseña como sigue
+- **Paso 3.** Ingresar la contraseña como sigue
 
 ```sh
 raspberry
@@ -483,83 +483,86 @@ raspberry
 
 ##### Para Mac/Linux
 
-- **Paso 1.** Abre **Terminal** en la computadora y escribe lo siguiente
+- **Paso 1.** Abrir **Terminal** en la computadora y escribir lo siguiente
 
 ```sh
 # ssh username@hostname
 ssh pi@raspberrypi.local
 ```
 
-- **Paso 2.** Escribe **sí** para el siguiente mensaje
+- **Paso 2.** Escribir **yes** para el siguiente mensaje
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **Paso 3.** Cuando solicite la contraseña, escribe lo siguiente
+- **Paso 3.** Cuando pida la contraseña, escribir lo siguiente
 
 ```sh
 # password for user
 raspberry
 ```
 
-- **Paso 4.** Si has iniciado sesión exitosamente en el SO Raspberry Pi, verás la siguiente salida
+- **Paso 4.** Si has iniciado sesión exitosamente en el Raspberry Pi OS, verás la siguiente salida
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 
-### Instalar controladores de reComputer R1000 después de flashear un nuevo SO Raspbian
+### Instalar controladores de reComputer R1000 después de flashear nuevo Raspbian OS
 
-reComputer R1000 viene con los controladores necesarios preinstalados de fábrica, por lo que no necesitas instalar controladores adicionales. Sin embargo, si flasheas un nuevo SO por tu cuenta, necesitas instalar los controladores necesarios por separado.
+reComputer R1000 viene con los controladores necesarios preinstalados de fábrica, por lo que no necesitas instalar controladores adicionales. Sin embargo, si flasheas un nuevo OS por ti mismo, necesitas instalar los controladores necesarios por separado.
 
 :::tip
 
-**Para instalar el controlador de SO de 32 bits, por favor sigue cuidadosamente los pasos a continuación:**
+**Para instalar controladores de OS de 32 bits, por favor sigue cuidadosamente los pasos a continuación:**
 
-El Sistema Operativo que viene preinstalado en reComputer R1000 es de 64 bits, si deseas instalar un SO de 32 bits por favor usa el siguiente método para instalar los controladores DTS.
+El Sistema Operativo que viene preinstalado en reComputer R1000 es de 64 bits, si deseas instalar OS de 32 bits por favor usa el siguiente método para instalar los controladores DTS.
 
-Por favor sigue el paso [**Acceder a reComputer R1000 vía SSH**](#access-recomputer-r1000-via-ssh), y luego ingresa el siguiente comando:
+Por favor sigue el paso [**Acceder a reComputer R1000 vía SSH**](#acceder-a-recomputer-r1000-vía-ssh), y luego ingresa el siguiente comando:
 
 ```sh
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
 ```
 
-Luego continúa con el [**proceso de instalación de controladores después de flashear el nuevo SO Raspbian**](#install-recomputer-r1000-drivers-after-flashing-new-raspbian-os)
+Luego continúa el [**proceso de instalar controladores después de flashear nuevo Raspbian OS**](#instalar-controladores-de-recomputer-r1000-después-de-flashear-nuevo-raspbian-os)
 
 :::
 
-- **Paso 1.** Clona el siguiente repositorio en el shell ssh que has conectado al reComputer R1000 desde los pasos anteriores
+- **Paso 1.** Clonar el siguiente repositorio en el shell ssh que has conectado a reComputer R1000 desde los pasos anteriores
 
 ```sh
 sudo apt install git -y
 git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
-- **Paso 2.** Ingresa al repositorio
+- **Paso 2.** Entrar al repositorio
 
 ```sh
 cd seeed-linux-dtoverlays
 ```
 
-- **Paso 3.** Escribe lo siguiente para instalar los controladores
+- **Paso 3.** Escribir lo siguiente para instalar los controladores
 
 ```sh
 sudo ./scripts/reTerminal.sh --device reComputer-R100x
 ```
 
-<!-- Verás la siguiente salida si has instalado exitosamente los controladores
+<!-- You will see the following output if you have successfully installed the drivers
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"/></p> -->
 
-- **Paso 4.** Reinicia el reComputer R1000
+- **Paso 4.** Reiniciar el reComputer R1000
 
 ```sh
 sudo reboot
 ```
 
 Este proceso asegurará que tus controladores estén actualizados antes de actualizar el firmware.
-
-Para reComputer R1000 V1.0, necesita cambiar el archivo `/boot/firmware/config.txt` después de reiniciar e ingresar el siguiente comando:
+:::tip
+<div style={{ color: 'red', fontWeight: 'bold' }}>
+  Nota: Para reComputer R1000 V1.0, necesita cambiar el archivo /boot/firmware/config.txt después de reiniciar e ingresar el siguiente comando:
+</div>
+:::
 
 ```shell
  sudo nano /boot/firmware/config.txt
