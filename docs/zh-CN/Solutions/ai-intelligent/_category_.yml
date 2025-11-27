@@ -1,0 +1,10 @@
+position: 3
+label: 'AI 智能'
+collapsible: true
+collapsed: true
+className: _ai-intelligent
+# link:
+#   type: generated-index
+#   slug: cn/solution-ai-intelligent
+#   title: AI 智能
+#   description: AI驱动的解决方案和应用。
