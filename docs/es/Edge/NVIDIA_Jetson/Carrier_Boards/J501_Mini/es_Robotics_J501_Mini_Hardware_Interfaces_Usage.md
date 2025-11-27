@@ -9,7 +9,7 @@ tags:
   - Interfaces
   - Hardware
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
-slug: /es/robotics_j501_mini_hardware_interfaces_usage
+slug: /es/recomputer_j501_mini_getting_started
 last_update:
   date: 11/04/2025
   author: Dayu
@@ -113,11 +113,11 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>1x DI Conector JST de 5 Pines(GH 1.25);<br />1x DO Conector JST de 5 Pines(GH 1.25);</td>
+      <td>1x DI Conector JST de 6 Pines(GH 1.25);<br />1x DO Conector JST de 5 Pines(GH 1.25);</td>
     </tr>
       <tr>
       <td>I2S</td>
-      <td>1x I2S Conector JST de 5 Pines(GH 1.25)</td>
+      <td>1x I2S Conector JST de 6 Pines(GH 1.25)</td>
     </tr>
     <tr>
       <td>RS485</td>
@@ -125,7 +125,7 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x UART Conector JST de 4 Pines (Multiplexado con DI)</td>
+      <td>1x UART Conector JST de 6 Pines (Multiplexado con DO)</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -153,7 +153,7 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
     </tr>
     <tr>
       <th rowSpan="1">Energía</th>
-      <td colSpan="2">19-54V XT30(2+2) (Cable XT30 a 5525 DC Jack incluido)</td>
+      <td colSpan="2">19-48V XT30 (Cable XT30 a 5525 DC Jack incluido)</td>
     </tr>
     <tr>
       <th rowSpan="1">Versión Jetpack</th>

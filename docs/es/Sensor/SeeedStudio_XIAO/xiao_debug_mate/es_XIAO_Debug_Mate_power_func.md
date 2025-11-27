@@ -12,7 +12,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/32.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/es/xiao_debug_mate_power" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
@@ -53,7 +53,7 @@ No intentes borrar o alterar manualmente estos datos de calibración. Hacerlo de
 
 ## Primeros Pasos
 
-Para acceder al medidor de potencia, navega al **ícono del Medidor de Potencia** (abajo-derecha) en el menú principal y **presiona el botón**.
+Para acceder al medidor de potencia, navega al **icono del Medidor de Potencia** (abajo-derecha) en el menú principal y **presiona el botón**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/33.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -96,7 +96,7 @@ Esta vista está optimizada para la observación intuitiva de proyectos de bajo 
 
 *   **Propósito y Caso de Uso:**
     Cuando desarrollas dispositivos alimentados por batería o eficientes en energía, la corriente puede caer al rango de microamperios. Esta UI **elimina la necesidad de conversión manual de unidades**, permitiéndote entender instantáneamente la magnitud del consumo de potencia de tu dispositivo. Es perfecta para:
-    *   Verificar que tu dispositivo ha entrado exitosamente en un modo de sueño profundo (la corriente debería estar en el rango de µA).
+    *   Verificar que tu dispositivo ha entrado exitosamente en modo de sueño profundo (la corriente debería estar en el rango de µA).
     *   Comparar el consumo de potencia de diferentes optimizaciones de código sin tener que calcular mentalmente las unidades.
 
 #### UI 3: Análisis Estadístico y Estimación de Batería
@@ -170,7 +170,7 @@ El medidor de potencia no está limitado a la serie XIAO. Puedes medir cualquier
 
 ### P1: ¿El consumo de energía de la interfaz Grove también está incluido en las estadísticas?
 
-**No** conectes el periférico al puerto Grove del Debug Mate para la medición de energía, ya que su línea de alimentación está separada del circuito de medición XIAO.
+**No** conectes el periférico al puerto Grove del Debug Mate para medición de energía, ya que su línea de alimentación está separada del circuito de medición XIAO.
 
 <div class="table-center">
   <div class="button_tech_support_container">

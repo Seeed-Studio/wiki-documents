@@ -575,7 +575,7 @@ sudo minicom -D /dev/ttyACM2
 Tomando ACM2 y ACM3 como ejemplo:
 Si quieres enviar de ACM2 a ACM3, ACM2 necesita configurarse nuevamente: ***ctrl+A***, luego presionar ***Z*** y luego ***E***, y luego iniciar el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 a voluntad, y puedes ver el contenido de ACM2 en ACM3 al mismo tiempo;
 Por el contrario, si quieres enviar de ACM3 a ACM2, ACM3 necesita configurarse nuevamente: ***ctrl+A***, luego presionar ***Z*** y luego ***E***, y luego iniciar el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM3 a voluntad, y puedes ver el contenido de ACM3 en ACM2 al mismo tiempo. Como se muestra en la figura.
-：：：
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 
