@@ -281,7 +281,7 @@ Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable
 
 - Paso 4: Flashear el firmware
 
-  Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para flashear el firmware de la aplicación. Es posible que necesites [entrar en modo DFU manualmente](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#entering-dfu-mode-manually)
+  Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) para flashear el firmware de la aplicación. Es posible que necesites [entrar en modo DFU manualmente](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 
 ### No se puede entrar en DFU y entrar en modo DFU manualmente
@@ -292,7 +292,7 @@ Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED ama
 
 Presiona el botón `Reset` una vez para salir del modo DFU.
 
-### Calidad de señal
+### Calidad de la señal
 
 - **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales suelen operar por encima de -7 dB. Un dispositivo con SNR inferior a -10 dB indica un rendimiento deficiente.
 
