@@ -14219,6 +14219,7 @@ const sidebars = {
       items: [
         'es/Robotics/Robot_Actuator/es_Feetech_Servo',
         'es/Robotics/Robot_Actuator/es_FashionStar_Servo',
+        'es/Robotics/Robot_Actuator/es_Stackforce_Series',
         'es/Robotics/Robot_Actuator/es_Myactuator_Series',
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
         'es/Robotics/Robot_Actuator/es_HighTorque',
@@ -19258,6 +19259,7 @@ const sidebars = {
       items: [
         'ja/Robotics/Robot_Actuator/ja_Feetech_Servo',
         'ja/Robotics/Robot_Actuator/ja_FashionStar_Servo',
+        'ja/Robotics/Robot_Actuator/ja_Stackforce_Series',
         'ja/Robotics/Robot_Actuator/ja_Myactuator_Series',
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
         'ja/Robotics/Robot_Actuator/ja_HighTorque',
