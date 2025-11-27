@@ -12,7 +12,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
+    <a class="get_one_now_item" href="/es/xiao_debug_mate_serial" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
@@ -176,7 +176,7 @@ El XIAO Debug Mate puede monitorear datos serie de dos maneras: directamente en 
 
 ### Preparación del Software (para Monitoreo en PC)
 
-Si eliges ver los datos serie en tu computadora, necesitarás una aplicación "terminal serie" o "monitor serie". El XIAO Debug Mate aparecerá como un puerto COM estándar en tu PC. Aquí tienes algunas opciones de software populares:
+Si eliges ver los datos serie en tu computadora, necesitarás una aplicación de "terminal serie" o "monitor serie". El XIAO Debug Mate aparecerá como un puerto COM estándar en tu PC. Aquí tienes algunas opciones de software populares:
 
 *   **Monitor Serie de PlatformIO:** Si estás usando VS Code con PlatformIO, simplemente puedes hacer clic en el botón "Serial Monitor" en la barra de estado.
 *   **Monitor Serie del IDE de Arduino:** El monitor clásico y simple integrado en el IDE de Arduino.
@@ -224,10 +224,6 @@ Hay dos formas principales de hacer esto:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/25.jpg" style={{width:800, height:'auto'}}/></div>
 
-El siguiente diagrama muestra las definiciones de pines para la interfaz Grove.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/39.png" style={{width:400, height:'auto'}}/></div>
-
 :::caution Recordatorio Crucial
 Siempre asegúrate de que el pin TX de tu dispositivo esté conectado a un pin receptor en el Debug Mate, y el pin RX del dispositivo esté conectado a un pin transmisor.
 :::
@@ -253,7 +249,7 @@ Antes de explorar las características, es crucial entender cómo navegar la int
 
 2.  **Controles Principales:**
     *   **Rueda de Desplazamiento:** Usada para mover un cursor o alternar entre modos principales.
-    *   **Presión Corta del Botón:** Usada para confirmar una selección o activar el cursor de configuración.
+    *   **Presión Corta del Botón:** Usada para confirmar una selección o activar el cursor de configuraciones.
     *   **Presión Larga del Botón:** Usada para salir de un menú o regresar.
 
 Hay dos estados principales de interacción:
@@ -279,7 +275,7 @@ Con los controles básicos entendidos, ahora puedes alternar fácilmente entre l
 
 Este es el modo predeterminado, diseñado para reenviar todos los datos serie de la fuente seleccionada directamente a tu computadora para visualización en un terminal serie basado en PC.
 
-*   **Pantalla en Pantalla:** La pantalla muestra información de estado, no los datos en sí.
+*   **Pantalla en Dispositivo:** La pantalla muestra información de estado, no los datos en sí.
     *   **Arriba-Izquierda:** La fuente serie activa (por ejemplo, `XIAO`).
     *   **Arriba-Derecha:** La velocidad de baudios actual (por ejemplo, `9600`).
     *   **Centro:** Los indicadores `RX` y `TX` (desde la perspectiva del Debug Mate) se animarán para mostrar el flujo de datos hacia y desde la PC.
@@ -290,17 +286,17 @@ Este es el modo predeterminado, diseñado para reenviar todos los datos serie de
 
 Este modo captura y muestra datos serie directamente en la pantalla LCD del Debug Mate. Los datos **no** se reenvían a la PC en este modo.
 
-*   **Pantalla en Pantalla:** La pantalla está dividida en dos ventanas para mostrar el tráfico de datos.
+*   **Pantalla en Dispositivo:** La pantalla está dividida en dos ventanas para mostrar el tráfico de datos.
     *   `Ventana RX`: Muestra datos recibidos **desde el socket XIAO**.
     *   `Ventana TX`: Muestra datos recibidos **desde el puerto Grove**.
 
 :::caution
-El Debug Mate no puede mostrar datos de ambas fuentes simultáneamente. Debes seleccionar la fuente activa usando el menú de configuración.
+El Debug Mate no puede mostrar datos de ambas fuentes simultáneamente. Debes seleccionar la fuente activa usando el menú de configuraciones.
 :::
 
 ### Configurando Fuente y Velocidad de Baudios
 
-Para cambiar la fuente de datos o la velocidad de baudios, primero debes activar el cursor de configuración.
+Para cambiar la fuente de datos o la velocidad de baudios, primero debes activar el cursor de configuraciones.
 
 1.  **Activar Cursor:** Desde cualquier modo, **presiona el botón una vez**. Un cursor aparecerá en la parte superior de la pantalla.
 
