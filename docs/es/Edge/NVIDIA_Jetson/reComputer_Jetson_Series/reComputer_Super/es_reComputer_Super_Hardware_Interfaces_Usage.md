@@ -674,7 +674,7 @@ sudo gpioset --mode=wait 0 121=1
 
 El Header de Control de 12 Pines y UART proporciona señales de control esenciales e interfaces de comunicación UART para conectar y gestionar dispositivos externos.
 
-:::Note
+:::note
 Las funciones de los pines del reComputer Super son similares a las del reComputer Classic. Para información más detallada, consulta [aquí](https://wiki.seeedstudio.com/es/J401_carrierboard_Hardware_Interfaces_Usage/#gpio).
 :::
 

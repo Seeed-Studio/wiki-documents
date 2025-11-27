@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-26 10:24:30 (北京时间)
-// 多语言页面: 2058 个
+// 生成时间: 2025-11-27 11:20:16 (北京时间)
+// 多语言页面: 2061 个
 
 (function() {
   'use strict';
@@ -4007,6 +4007,12 @@
     "es",
     "ja"
   ],
+  "/stackforce_series": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/dm_gripper": [
     "cn",
     "en",
@@ -5886,6 +5892,12 @@
     "ja"
   ],
   "/ee04_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/epaper_EN04": [
     "cn",
     "en",
     "es",
@@ -9778,13 +9790,19 @@
     "es",
     "ja"
   ],
+  "/deploy_ai_with_a1102": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/sensecap_a1102": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/train_ai_with_a1102": [
+  "/setting_ai_with_a1102": [
     "cn",
     "en",
     "es",
@@ -11097,6 +11115,18 @@
     "es",
     "ja"
   ],
+  "/solutions/hello_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/crowd-flow-monitoring": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/solutions/frigate-on-jetson-nodered-gun-alerts": [
     "cn",
     "en",
@@ -11109,19 +11139,7 @@
     "es",
     "ja"
   ],
-  "/mission_pack_features_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/mission_pack_intro_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/crowd-flow-monitoring": [
+  "/ha_dify_watcher_llms": [
     "cn",
     "en",
     "es",
@@ -11133,13 +11151,13 @@
     "es",
     "ja"
   ],
-  "/ha_dify_watcher_llms": [
+  "/mission_pack_features_v3": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/solutions/hello_watcher_llms": [
+  "/mission_pack_intro_v3": [
     "cn",
     "en",
     "es",
