@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-21 17:39:34 (北京时间)
-// 多语言页面: 2052 个
+// 生成时间: 2025-11-27 11:20:16 (北京时间)
+// 多语言页面: 2061 个
 
 (function() {
   'use strict';
@@ -923,7 +923,7 @@
     "es",
     "ja"
   ],
-  "/recomputer_j501_mini_getting_started": [
+  "/robotics_j501_mini_hardware_interfaces_usage": [
     "cn",
     "en",
     "es",
@@ -1098,6 +1098,12 @@
     "ja"
   ],
   "/reComputer_Jetson_Series_GPIO_Grove": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/rm520n_module_for_jetson": [
     "cn",
     "en",
     "es",
@@ -4001,6 +4007,12 @@
     "es",
     "ja"
   ],
+  "/stackforce_series": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/dm_gripper": [
     "cn",
     "en",
@@ -5880,6 +5892,12 @@
     "ja"
   ],
   "/ee04_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/epaper_EN04": [
     "cn",
     "en",
     "es",
@@ -9088,6 +9106,30 @@
     "es",
     "ja"
   ],
+  "/getting_started_with_xiao_debug_mate": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_debug": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_power": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_serial": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_espnow": [
     "cn",
     "en",
@@ -9748,13 +9790,19 @@
     "es",
     "ja"
   ],
+  "/deploy_ai_with_a1102": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/sensecap_a1102": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/train_ai_with_a1102": [
+  "/setting_ai_with_a1102": [
     "cn",
     "en",
     "es",
@@ -10097,6 +10145,12 @@
     "ja"
   ],
   "/extending_grove_with_mcp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/face_regonition_with_mcp": [
     "cn",
     "en",
     "es",
@@ -11061,6 +11115,18 @@
     "es",
     "ja"
   ],
+  "/solutions/hello_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/crowd-flow-monitoring": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/solutions/frigate-on-jetson-nodered-gun-alerts": [
     "cn",
     "en",
@@ -11073,19 +11139,7 @@
     "es",
     "ja"
   ],
-  "/mission_pack_features_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/mission_pack_intro_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/crowd-flow-monitoring": [
+  "/ha_dify_watcher_llms": [
     "cn",
     "en",
     "es",
@@ -11097,13 +11151,13 @@
     "es",
     "ja"
   ],
-  "/ha_dify_watcher_llms": [
+  "/mission_pack_features_v3": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/solutions/hello_watcher_llms": [
+  "/mission_pack_intro_v3": [
     "cn",
     "en",
     "es",

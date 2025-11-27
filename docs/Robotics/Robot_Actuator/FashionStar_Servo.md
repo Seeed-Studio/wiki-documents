@@ -6,7 +6,7 @@ keywords:
 - motor
 - arm
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar_servo_all_homepage.webp
 slug: /fashionstar_servo
 last_update:
   date: 11/24/2025

@@ -321,6 +321,14 @@ IoTデバイスの展開と管理のためのOSプラットフォーム。
         </td>
       </tr>
       <tr>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/thingsboard_logo.png" style={{width:80, height:'auto'}}/></td>
+        <td>
+          <strong>thingsboard</strong>
+
+デバイス接続、データ管理、可視化デプロイに対応したオープンソースのIoTプラットフォームです。
+        </td>
+      </tr>
+      <tr>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/Supported_Software/influxdb.png" style={{width:80, height:'auto'}}/></td>
         <td>
           <strong>InfluxDB</strong>  

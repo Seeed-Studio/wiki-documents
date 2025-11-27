@@ -21,18 +21,18 @@ If you are an outdoor enthusiast, are you often troubled by the lack of a networ
 
 - You have a truck and want to detect any suspicious person close to the vehicle, but the network is unstable all the year round and cannot upload video in real time or ordinary cameras must rely on the cloud.
 
-- When you are exploring the forest, you want to receive the fixed camera images of the camp at any time to identify whether there are bears or other dangerous animals, but the ordinary wireless distance is too short
+- When you are exploring the forest, you want to receive the fixed camera images of the camp at any time to identify whether there are bears or other dangerous animals, but the ordinary wireless distance is too short.
 
 **So why can reCamera and Wifi Halow realize the system?** First of all, reCamera provide the end-side AI with 1Tops computing power. So it can run AI inside the gadget without relying on other edge device.
 
-It also integrates with Node-RED and makes development process very convenient and efficient. If you want rtsp to push stream or http to send data, you only need to drag the node to implement it, and you do not need to build a large number of programs from scratch. Check the link for more details: [Node-RED Tutorial on reCamera](https://wiki.seeedstudio.com/recamera_develop_with_node-red/)
+It also integrates with Node-RED and makes development process very convenient and efficient. If you want rtsp to push stream or use WebSocket to send data, you only need to drag the node to implement it, and you do not need to build a large number of programs from scratch. Check the link for more details: [Node-RED Tutorial on reCamera](https://wiki.seeedstudio.com/recamera_develop_with_node-red/)
 
 Here is an example of Node-RED development: just simply drag 3 nodes to build a AI vision workflow:
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1_1.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1_1.png" /></div>
 
 In terms of Wi-Fi HaLow, it is a low-frequency wireless technology designed for the Internet of Things, offering the advantages of long range, low power consumption, and high bandwidth. In the 902–928 MHz frequency band, it can achieve a maximum transmission rate of approximately 16 Mbps under an 8 MHz bandwidth, with a communication distance reaching up to 1 km.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1_2.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1_2.png" /></div>
 
 Compared with traditional 2.4G/5G Wi-Fi, HaLow provides stronger penetration and wider coverage; and compared with other long-range communication methods such as LoRa and Sub-GHz, HaLow offers higher bandwidth, capable of supporting the transmission of various media including text, audio, images, and even video streams simultaneously.
 
@@ -60,7 +60,7 @@ Therefore, this system can reduce the technical threshold for you to develop an 
 
 The system structure is very simple. The two HaLow modules use Ethernet cable to connect the reCamera and reTerminal respectively. After that, the two devices transmit wirelessly through Wifi HaLow.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1.png" /></div>
 
 ## Hardware preparation
 
@@ -184,7 +184,7 @@ The reTerminal here can be replaced by any edge computing device with a network 
 
 This is the Wifi Halow module we used in the project. The operating frequency band is 902-928 MHz, the bandwidth is 8 MHz, the maximum speed is 16 Mbps, the maximum communication distance can reach 1km, and the transmission power is 20 dBm. The device provides IPEX antenna interface, 10/100 Mbps network port, TTL serial port (up to 350 kbps), supports WPA2-PSK AES encryption, 5V/12V power supply, and reliable operation from -20 C to 70 C, average power consumption 1.5W.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1_2.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1_2.jpg" /></div>
 
 ## Tool preparation
 
@@ -210,7 +210,11 @@ You don't have to struggle with the device's power supply, Raspberry Pi 4/5 powe
 
 ## Detailed Tutorial: reCamera Wifi Halow Module Configuration reTerminal Configuration
 
-The general idea of the whole system is to let the reCamera form a network with the terminal equipment through Wifi HaloW. First, configure static IP on the terminal equipment (reTerminal) and reCamera, because outdoor or mobile applications cannot have routers, there is no DHCP service, and IP needs to be manually assigned. After the IP is assigned, these devices form a "local area network", and they can access each other through IP. At this time, create stream nodes and http post nodes on the reCamera through Node-RED, send the video stream in the form of rtsp push stream, and send the yolo detection result in the form of http post. Finally, the video stream and AI detection results are accessed on the terminal device, such as VLC Media Player on Windows/Linux. This tutorial will demonstrate how to obtain rtsp push stream through ffplay on Linux.
+The general idea of the whole system is to let the reCamera form a network with the terminal equipment through Wifi HaloW. First, configure static IP on the terminal equipment (reTerminal) and reCamera, because outdoor or mobile applications cannot have routers, there is no DHCP service, and IP needs to be manually assigned.
+
+After the IP is assigned, these devices form a "local area network", and they can access each other through IP. At this time, create stream nodes and WebSocket nodes on the reCamera through Node-RED, send the video stream in the form of rtsp push stream, and send the yolo detection result via WebSocket.
+
+Finally, the video stream and AI detection results are accessed on the terminal device, such as VLC Media Player on Windows/Linux. This tutorial will demonstrate how to obtain rtsp push stream through ffplay on Linux.
 
 ### Phase 1: Configure reCamera
 
@@ -220,7 +224,7 @@ Connect the reCamera to the computer with a USB-C line. It takes some time to st
 
 You need to configure your own password for the first login. Please remember your password and use it later. After entering the reCamera system, you should see this page:
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t2.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t2.png" /></div>
 
 :::note
 
@@ -236,39 +240,42 @@ If the refresh still does not resolve, please reset the device or contact techni
 
 Click the green button in the lower right corner of the page to enter the Workspace.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3.png" /></div>
 
 Workspace page display
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_0.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_0.png" /></div>
 
 Double-click the camera node to enter the configuration page. To ensure fluency, we configure the camera node as **480P, 5 frames**. You can try a higher resolution or frame rate, but the latency may be higher.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_1.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_1.png" /></div>
 
 #### Step 1.3 Configure the stream node
 
 As mentioned above, we need to configure rtsp push stream on Node-RED. In the node list on the left, slide the mouse wheel down to the bottom to find the Stream node.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_2.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_2.png" /></div>
 
 After the configuration method, please refer to: [Node-Red Stream Node Configuration](https://wiki.seeedstudio.com/recamera_develop_with_node-red/#stream-node)After configuration, you should get the following results:
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_3.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_3.png" /></div>
 
 Please fully follow the Node-RED tutorial to ensure that your output is to sscma, and the final video stream will be output to: rtsp:// admin:admin@192.168.xxx.xxx:554/live, where 192.168.xxx.xxx is the static IP address of the reCamera. Static IP can be configured freely. 192.168.10.100 is used for demonstration here.
 
-#### Step 1.4 Configure the http node
+#### Step 1.4.1 Configure the WebSocket node
 
-In order to display the results detected by yolo on the terminal equipment, we need to send the detection results in the form of http post. For details, please refer to [Node-RED HTTP Post Configuration](https://wiki.seeedstudio.com/getting_started_for_home_assistant_with_recamera/#after-entering-the-workspace-configure-the-nodes). Note that when configuring the URL of http post here, it needs to be configured as http://192.168.nnn.nnn:8123/recamera_detection 192.168. nnnn. nnn is the static IP address of the reTerminal or your own other terminal equipment, not reCamera static IP address above. 192.168.10.3 is used here for demonstration. The final result is as follows:
+In order to display the results detected by yolo on the terminal equipment, we need to send the detection results via WebSocket. The type of WebSocket node should be configured as 'connect' rather than 'listen'.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_4.png" /></div>
+When configuring the URL of WebSocket node here, it needs to be configured as ws://192.168.
+nnn.nnn:9000 In fact, 192.168.nnn.nnn is the static IP address of the reTerminal or your own other terminal equipment, not reCamera static IP address above. 192.168.10.3 is used here for demonstration. The final result is as follows:
+
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_5.png" /></div>
 
 #### Step 1.5. Enter the settings page
 
 Or on the Workspace page that just modified Node RED, click "Setting" in the upper left corner'
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4.png" /></div>
 
 > Figure 4: Workspace Setting Frame
 
@@ -276,13 +283,13 @@ Or on the Workspace page that just modified Node RED, click "Setting" in the upp
 
 After entering the settings page, select 'Terminal' to enter the reCamera command line
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t5.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t5.png" /></div>
 
 > Figure 5: Set Page Terminal Frame
 
 After clicking the Terminal, you need to log in again, enter the user name: 'recamera', and then enter the set password to use the Terminal. the effect is as follows. if you forget your password, please refer to the following tutorial to reset the device: [reCamera Factory Reset](https://wiki.seeedstudio.com/recamera_getting_started/#factory-reset)
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t6.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t6.png" /></div>
 
 > Figure 6: Effect of Terminal page after login
 
@@ -306,7 +313,7 @@ netmask 255.255.255.0
 gateway 192.168.10.1
 ```
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t7_0.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t7_0.png" /></div>
 
 These code set the Ethernet port of the configuration reCamera is static IP 192.168.10.100, the subnet mask is 255.255.255.0, and the gateway is 192.168.10.1. Of course, you can use 192.168.3.xxx or 192.168.42.xxx for specific IP free configuration. However, please make sure that it is in the same network segment as your reTerminal or terminal equipment. For example, your reCamera is 192.168.33, then the reTerminal needs to be configured as 192.168.33.nnn. If the static IP of the reTerminal becomes 192.168.32.nnn or 192.168.34.nnn, communication cannot be made.
 
@@ -316,7 +323,7 @@ After adding the above code, enter ''':wq''' to exit the vi editor and return to
 
 It should be noted that after the static IP is configured, the reCamera must be connected to the PC with a network cable. At the same time, the static IP must be configured on the PC before logging in to the reCamera again. The newly configured reCamera static IP is used when logging in. Window is used to configure static IP as a demonstration here. Again, for all devices configured with static IP, it must be ensured that they are on the same network segment, such as reCamera-192.168.10.100 and reTerminal-192.168.10.3, laptop (Windows)-192.168.10.2 Otherwise, they cannot communicate with each other. The reference configuration on the Windows is as follows:
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/tx.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/tx.png" /></div>
 
 :::
 
@@ -324,7 +331,7 @@ It should be noted that after the static IP is configured, the reCamera must be 
 
 Repeat step 1.5 to return the reCamera Settings and check whether the static IP is configured successfully:
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t7_1.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t7_1.png" /></div>
 
 Good, now we have a static IP configured on the reCamera, now let's move on to the next stage
 
@@ -334,12 +341,12 @@ Good, now we have a static IP configured on the reCamera, now let's move on to t
 
 First, set one of the Wifi HaloW modules to AP mode and the other to STA mode. Don't worry about whether the AT or STA module is connected to the reCamera/terminal. The order is not important, but at least one STA and one AP mode module are guaranteed.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t8.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t8.png" /></div>
 
 #### Step 2.2 Pairing HaLow Module
 
 Now press the pairing button on both modules at the same time:
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t9.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t9.png" /></div>
 After that, the green LED on the two modules will flash. When the flashing stops and the green LED is always on, the module pairing is successful.
 
 Very good! You have successfully paired two Wifi Halow modules, they can now be seen as both ends of a network cable, can be used to connect reCamera and terminal equipment.
@@ -357,7 +364,7 @@ Again, the reTerminal can be replaced with any (edge) computing device with a ne
 #### Step 3.1 Start reTerminal
 
 reTerminal the factory comes with the system, you can enter the Raspbian directly in theory. However, if the green LED in the lower left corner lights up/flashes but the screen is black after power-on, please refer to the following tutorial to re-burn the system. This step requires external display debugging. [reTerminal Initialization Tutorial](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-with-drivers-from-seeed-to-emmc)
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t10.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t10.jpg" /></div>
 
 #### Step 3.2 Disable NetworkManager Service
 
@@ -386,7 +393,7 @@ netmask 255.255.255.0
 gateway 192.168.10.1
 ```
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t11.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t11.jpg" /></div>
 
 :::note
 
@@ -407,7 +414,7 @@ Save ctrl s, ctrl x and exit. Then enter '''reboot''' to restart the reTerminal.
 
 Return to the reTerminal terminal and run the following command: '''ifconfig''' to verify whether the static IP address is successfully configured.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t12.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t12.png" /></div>
 
 If you see IP = **192.168.10.3** in 'eth0', it means success.
 
@@ -435,13 +442,13 @@ After installing the expansion board, you can use the usbc port on the reTermina
 
 Install the two matched image transmission modules on the reCamera and reTerminal
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_1.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_1.jpg" /></div>
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_2.jpg" /></div>
 
 #### Step 4.3 Install ffmpeg and nmap reTerminal
 
-ffmpeg is used to obtain rtsp push stream, nmap is used to listen to http post. execute in the reTerminal Terminal:
+ffmpeg is used to obtain rtsp push stream, nmap is used to list. execute in the reTerminal Terminal:
 
 ```bash
 sudo apt install ffmpeg
@@ -450,7 +457,6 @@ sudo apt install nmap
 
 #### Step 4.4 plays rtsp video stream
 
-https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow.
 Run the ffplay command to obtain the reCamera rtsp stream (belonging to the ffmpeg command):
 
 ```bash
@@ -469,17 +475,71 @@ Here's an explanation of the parameters in the ffplay command:
 
 At this time will pop up a new window, rtsp video stream will be displayed inside, double-click the window can be full-screen playback.
 
+:::note
+Alternatively, you can use VLC Player or GStreamer to open the rtsp video stream. Run following command in reTerminal terminal to install GStreamer:
+
+```bash
+sudo apt update
+sudo apt install -y \
+    gstreamer1.0-tools \
+    gstreamer1.0-plugins-base \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-plugins-bad \
+    gstreamer1.0-plugins-ugly \
+    gstreamer1.0-libav \
+    gstreamer1.0-rtsp \
+    gstreamer1.0-x \
+    gstreamer1.0-gl \
+    gstreamer1.0-alsa \
+    gstreamer1.0-pulseaudio
+
+```
+
+Then run the command to play the rtsp video stream:
+
+```bash
+gst-launch-1.0 rtspsrc location=rtsp://admin:admin@192.168.10.100:554/live latency=2000 ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! autovideosink
+```
+
+:::
+bus
+
 #### Step 4.5 Monitor Yolo Test Results
 
-Press **Ctrl + Alt + T** to open a new terminal. Run the ncat command to monitor the yolo detection results from the reCamera (this command belongs to nmap):
+Press **Ctrl + Alt + T** to open a new terminal on the reTerminal. We will start a WebSocket server to receive AI detection results. Run the following command:
 
+```bash
+wscat -l 9000
 ```
-ncat -l -p 8123
+
+When the server starts, it will show:
+
+```bash
+Listening on port 9000 (press CTRL+C to quit)
 ```
 
-In this terminal, you can see the number of people reCamera detected below the picture shows the final effect, video streaming and AI detection results are displayed on the reTerminal.
+Keep this terminal open to display the detection results pushed from the reCamera.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t14.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t15.jpg" /></div>
+The image above shows the RTSP streaming via GStreamer and the text AI detection results via WebSocket.
+
+The terminal on the left demostrates the detection results:
+
+```bash
+< counts=person:1; person(682,359,1175,704)
+< counts=person:1; person(649,359,1247,704)
+< counts=person:1; person(678,359,1188,704)
+< counts=person:1; person(652,359,1240,704)
+< counts=person:1; person(656,359,1227,704)
+< counts=person:1; person(648,359,1236,704)
+< counts=person:1; person(648,359,1243,704)
+< counts=person:1; person(650,359,1227,703)
+< counts=person:1; person(652,359,1241,704)
+< counts=person:1; person(646,359,1246,704)
+< counts=person:1; person(647,359,1244,704)
+< counts=person:1; person(653,359,1252,704)
+< counts=person:1; person(650,359,1238,704)
+```
 
 **Congratulations! You have implemented your own remote AI detection system.**
 
@@ -491,7 +551,7 @@ As mentioned at the beginning, this project is just a simple example of remote A
 
 Upload a bear-detection model to the reCamera and deploy the device at a fixed position in a forest campsite to detect potential bear intrusions. You can monitor the area from a distance through the reTerminal or other devices, helping you avoid getting too close to wildlife and reducing the risk of danger.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/ta_1.jpg" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/ta_1.jpg" /></div>
 
 ## Tech Support & Product Discussion
 
