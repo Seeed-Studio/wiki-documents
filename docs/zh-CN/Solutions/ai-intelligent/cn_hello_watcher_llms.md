@@ -143,7 +143,7 @@ Watcher 的"眼睛"（摄像头）捕获图像 → "视觉神经"（Himax 芯片
 开发者或高级用户可通过烧录不同的模型或固件，为 Watcher 赋予更强大的专属能力。
 
 详细说明请参考我们综合指南中的相关章节：
-- **[AI 模型刷入流程](/cn/visual_trigger_and_ai_flash#AI 模型刷入流程)**
+- **[AI 模型刷入流程](/cn/visual_trigger_and_ai_flash#AI-模型刷入流程)**
 - **[固件刷入流程](/cn/visual_trigger_and_ai_flash#固件刷入流程)**
 
 ## 开始对话
