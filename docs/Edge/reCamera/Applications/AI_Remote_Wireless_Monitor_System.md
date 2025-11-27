@@ -19,7 +19,7 @@ last_update:
 
 # AI remote wireless monitoring system based on reCamera and Wifi Halow
 
-
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/6.gif" /></div>
 
 If you are an outdoor enthusiast, are you often troubled by the lack of a network in the wild, the limited coverage of traditional WiFi, and the inability of the camera to transmit real-time images over long distances? Through this Wiki, you can implement your own **AI remote wireless monitoring system**, based on the **reCamera series** and **Wifi Halow** graph transmission module. Of course, you can have more imagination, including the following but not limited:
 
@@ -328,13 +328,7 @@ Double-click the camera node to enter the configuration page. To ensure fluency,
 
 
 
-As mentioned above, we need to configure rtsp push stream on Node-RED. In the node list on the left, slide the mouse wheel down to the bottom to find the Stream node.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_2.png" /></div>
-
-
-
-After the configuration method, please refer to: [Node-Red Stream Node Configuration](https://wiki.seeedstudio.com/recamera_develop_with_node-red/#stream-node)After configuration, you should get the following results:
+As mentioned above, we need to configure rtsp push stream on Node-RED. In the node list on the left, search the 'stream' node or slide the mouse wheel down to the bottom to find the Stream node. After the configuration method, please refer to: [Node-Red Stream Node Configuration](https://wiki.seeedstudio.com/recamera_develop_with_node-red/#stream-node)After configuration, you should get the following results:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_3.png" /></div>
 
@@ -564,7 +558,7 @@ Install the two matched image transmission modules on the reCamera and reTermina
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_1.jpg" /></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_2.jpg" /></div>
+<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_2.jpg" /></div>
 
 
 
