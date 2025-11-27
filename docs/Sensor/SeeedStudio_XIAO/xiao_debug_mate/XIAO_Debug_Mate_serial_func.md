@@ -12,7 +12,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/xiao_debug_mate_serial" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -223,6 +223,10 @@ There are two primary ways to do this:
 *   **Option 2: Using the Grove Port:** Use a **Grove to DuPont conversion cable**. Plug the Grove connector into the Debug Mate and connect the individual DuPont ends to your device's TX, RX, VCC, and GND pins. This is often a more stable and reliable connection.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/25.jpg" style={{width:800, height:'auto'}}/></div>
+
+The following diagram shows the pin definitions for the Grove interface.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/39.png" style={{width:400, height:'auto'}}/></div>
 
 :::caution Crucial Reminder
 Always ensure your device's TX pin is connected to a receiving pin on the Debug Mate, and the device's RX pin is connected to a transmitting pin.
