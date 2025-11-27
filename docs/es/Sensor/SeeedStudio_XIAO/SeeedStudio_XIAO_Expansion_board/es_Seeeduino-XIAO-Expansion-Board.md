@@ -16,7 +16,7 @@ last_update:
 
 Una potente placa de expansión funcional para Seeed Studio XIAO de solo la mitad del tamaño de Raspberry Pi 4. Permite construir prototipos y proyectos de manera fácil y rápida. Con sus ricos periféricos incluyendo OLED, RTC, memoria expandible, zumbador pasivo, botón RESET/Usuario, conector servo de 5V, múltiples interfaces de datos... podrías explorar infinitas posibilidades de Seeed Studio XIAO. [Circuitpython](https://circuitpython.org/) también es bien soportado por esta placa.
 
-Como factor de forma Seeed Studio XIAO, todas las placas Seeed Studio XIAO soportan tanto [Grove Shield para Seeed Studio XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) como [Seeed Studio Expansion Base para XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html). Hay una ligera diferencia entre los pines y refiriéndose al Pinout es fácil de manejar.
+Como factor de forma Seeed Studio XIAO, todas las placas Seeed Studio XIAO soportan tanto [Grove Shield para Seeed Studio XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) como [Seeed Studio Expansion Base para XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html). Hay una ligera diferencia entre los pines y refiriéndose al diagrama de pines es fácil de manejar.
 
 Seeed Studio XIAO SAMD21, Seeed Studio XIAO RP2040, y Seeed Studio XIAO nRF52840 son compatibles con la Seeed Studio Expansion Base para XIAO.
 
@@ -31,7 +31,7 @@ Seeed Studio XIAO SAMD21, Seeed Studio XIAO RP2040, y Seeed Studio XIAO nRF52840
 - **Prototipado Rápido:** Depuración fácil y Reset con botón RESET y pin SWD llevado a header macho.
 <!-- 0.96"OLED, enables visual data display without PC serial monitor; Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital; No soldering needed with all pin led out. -->
 - **Periféricos Ricos:** Pantalla OLED, RTC, espacio de memoria expandible, zumbador pasivo, botón de usuario, chip de gestión de batería a bordo.
-- **Sin Soldadura Necesaria:** Todos los pines llevados hacia afuera. Conectores Grove convenientes de plug and play soportan múltiples protocolos de datos, incluyendo IIC, UART, Analógico/Digital.
+- **Sin Soldadura Necesaria:** Todos los pines llevados hacia afuera. Conectores Grove convenientes plug and play soportan múltiples protocolos de datos, incluyendo IIC, UART, Analógico/Digital.
 - **Circuit Python Soportado:** Soporta bien circuit python. La ranura para tarjeta MicroSD permite expandir el espacio de memoria, haciendo posible asignar más librerías necesarias en prototipado y construcción de proyectos.
 - **Tamaño Mini:** Compacto y elegante con solo la mitad del tamaño de Raspberry Pi 4, especialmente adecuado para proyectos que requieren tamaño mini.
 
@@ -83,17 +83,16 @@ Seeed Studio XIAO SAMD21, Seeed Studio XIAO RP2040, y Seeed Studio XIAO nRF52840
 - Depuración SWD
 - Prototipado rápido
 - Visualización de datos
-- Proyecto de tamaño mini
+- Proyecto de Tamaño Mini
 
 ## Lista de Partes
 
-|Artículo|Valor|
+|Elemento|Valor|
 |---|---|
-|Base de Expansión Seeed Studio para XIAO  | *1 |
-
+|Seeed Studio Expansion Base para XIAO  | *1 |
 
 :::note
-Este producto no incluye Seeed Studio XIAO ni batería, Seeed Studio XIAO está introduciendo constantemente nuevos productos. Para mantenerse al día con los últimos desarrollos de productos en esta serie, visite la [página principal de la serie XIAO](https://www.seeedstudio.com/xiao-series-page).
+Este producto no incluye Seeed Studio XIAO y batería, Esta placa de expansión no soporta el XIAO nRF54L15 y XIAO MG24. Seeed Studio XIAO está constantemente introduciendo nuevos productos. Para mantenerse al día con los últimos desarrollos de productos en esta serie, visita la [página principal de la serie XIAO](https://www.seeedstudio.com/xiao-series-page).
 
 <!-- please click this link to get [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html?gclid=Cj0KCQjwufn8BRCwARIsAKzP695mYBI8wwzrR8rXiJgv9QBK5DeTJGCU9bzXvzGUheFVZxqHcuw0SgYaAqDqEALw_wcB) -->
 
@@ -103,7 +102,7 @@ Este producto no incluye Seeed Studio XIAO ni batería, Seeed Studio XIAO está 
 
 ### Materiales Requeridos
 
-| Seeed Studio XIAO SAMD21 (Pre-soldado) | Base de Expansión Seeed Studio para XIAO|
+| Seeed Studio XIAO SAMD21 (Pre-soldado) | Seeed Studio Expansion Base para XIAO|
 |--------------|--------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/102010388_Preview-07.png" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" alt="pir" width={600} height="auto" /></p>
 |[**Obtener UNO Ahora**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[**Obtener UNO Ahora**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)|
@@ -112,7 +111,7 @@ Este producto no incluye Seeed Studio XIAO ni batería, Seeed Studio XIAO está 
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/2222222222222222222222222222221.jpg" /></div>
 
-Hay una ranura externa para tarjeta MicroSD y un soporte para batería RTC, la tarjeta MicroSD se usa principalmente para guardar y ejecutar el archivo `python.py`, el RTC es para rastrear la hora actual y se puede usar para programar acciones en un momento específico.
+Hay una ranura externa para tarjeta MicroSD y un soporte para batería RTC, la tarjeta MicroSD se usa principalmente para guardar y ejecutar el archivo `python.py`, el RTC es para rastrear la hora actual y puede ser usado para programar acciones en un momento específico.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/1111111111111111111111110.jpg" /></div>
 
@@ -120,7 +119,7 @@ Hay una ranura externa para tarjeta MicroSD y un soporte para batería RTC, la t
 
 ### Diagrama de Pines
 
-Descripción de pines de conectores externos para Grove-Shield para Seeed Studio XIAO.
+Descripción de pines de headers externos para Grove-Shield para Seeed Studio XIAO.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/pinpinpin4.jpg" /></div>
 
@@ -128,22 +127,22 @@ Descripción de pines de conectores externos para Grove-Shield para Seeed Studio
 
 ### Conexión
 
-Coloque el Seeed Studio XIAO SAMD21 en la placa de expansión, el LED verde del Seeed Studio XIAO SAMD21 debería encenderse.
+Coloca el Seeed Studio XIAO SAMD21 en la placa de expansión, el LED verde del Seeed Studio XIAO SAMD21 debería encenderse.
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO-to-board.png" /></div>
 
 :::note
-Por favor conecte primero el Seeed Studio XIAO en la placa de expansión, luego conecte el Type-C, Recuerde conectar el Seeed Studio XIAO en el **centro de los dos conectores hembra**, de lo contrario dañará el Seeed Studio XIAO y la placa de expansión.
+Por favor conecta primero el Seeed Studio XIAO en la placa de expansión, luego conecta el Type-C, Recuerda conectar el Seeed Studio XIAO en el **medio de los dos conectores hembra**, de lo contrario dañarás el Seeed Studio XIAO y la placa de expansión.
 :::
 
-## Uso de la batería
+## Uso de batería
 
-La Base de Expansión Seeed Studio para XIAO puede ser alimentada por una batería, así que si hace alguna demostración que necesite ser movida, esa batería le ayudará a resolver el problema de suministro de energía. cuando conecte la batería por favor tenga cuidado con los ánodos positivo y negativo, siga la imagen para conectar la batería en caso de dañar la placa.
+La Seeed Studio Expansion Base para XIAO puede ser alimentada por una batería, así que si haces alguna demostración que necesite ser movida, esa batería te ayudará a resolver el problema de suministro de energía. cuando conectes la batería por favor ten cuidado con los ánodos positivo y negativo, sigue la imagen para conectar la batería en caso de dañar la placa.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/battery-board.png" /></div>
 
-Además, la placa carga la batería cuando conecta el cable de la batería y el cable type-C y cambia el botón a encendido.
+Además, la placa carga la batería cuando conectas el cable de la batería y el cable type-C y cambias el botón a encendido.
 
-Como en la imagen de abajo, si el LED parpadea significa que la batería no se carga o la placa no conecta la batería, si el LED se mantiene encendido significa que la batería se está cargando.
+Como en la imagen de abajo, si el LED parpadea significa que la batería no se carga o la placa no tiene batería conectada, si el LED se mantiene encendido significa que la batería se está cargando.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO_flash_light.png" /></div>
 
@@ -151,31 +150,31 @@ Como en la imagen de abajo, si el LED parpadea significa que la batería no se c
 
 Periféricos ricos a bordo incluyendo:
 
-- **Pantalla OLED:** Visualización de datos visual sin conectar a PC, lo que permite depurar de una manera más eficiente, y construir aplicaciones como un hub de sensores, sistema de monitoreo de datos, etc.
+- **Pantalla OLED:** Visualización de datos visual sin conectar a PC, lo que permite depurar de manera más eficiente, y construir aplicaciones como un hub de sensores, sistema de monitoreo de datos, etc.
 
-- **Botón RESET:** No más cables puente y cortocircuito, reinicio fácil con solo un clic.
+- **Botón RESET:** No más cables puente y cortocircuitos, reset fácil con solo un clic.
 
-- **Depuración SWD:** Pin SWD llevado como cabezal de pines macho, haciendo la conexión del depurador y descarga de firmware mucho más fácil.
+- **Depuración SWD:** Pin SWD llevado como header de pin macho, haciendo la conexión del depurador y descarga de firmware mucho más fácil.
 
 - **RTC de alta precisión:** Reloj de tiempo real de alta precisión con respaldo de batería, permite mantener tiempo preciso cuando la alimentación principal está apagada.
 
-- **Memoria expandible:** Con una ranura para tarjeta MicroSD en la parte posterior, no más preocupaciones sobre el límite de memoria al agregar librerías y usar circuit python.
+- **Memoria expandible:** Con una ranura para tarjeta MicroSD en la parte trasera, no más preocupaciones sobre límites de memoria al agregar librerías y usar circuit python.
 
 - **Botón de usuario:** Además del botón RESET, también proporciona otro botón definido por el usuario.
 
-- **Zumbador pasivo:** Podrías cambiar la frecuencia PMW para otorgar diferentes sonidos de pitido para obtener una "música de zumbador".
+- **Zumbador pasivo:** Podrías cambiar la frecuencia PWM para obtener diferentes sonidos de pitido para conseguir una "música de zumbador".
 
-- **Conectores Grove:** Todos los pines llevados, conectores grove plug and play soportan protocolos de datos comunes (Grove IIC*2, Grove UART*1, A0/D0 Grove*1)
+- **Conectores Grove:** Todos los pines llevados hacia afuera, conectores grove plug and play soportan protocolos de datos comunes (Grove IIC*2, Grove UART*1, A0/D0 Grove*1)
 
-- **Carga de batería Lipo:** Conector de batería lipo estándar JST2.0mm y sistema de gestión de batería, soporta tanto alimentación USB como de batería lipo, y fácil recarga de batería a bordo.
+- **Carga de Batería Lipo:** Conector de batería lipo estándar JST2.0mm y sistema de gestión de batería, soporta tanto suministro de energía USB como de batería lipo, y recarga de batería a bordo fácil.
 
-- **Conector servo 5V:** Salida de 5V llevada a cabezal macho para conexión de servo y sensor de 5V.
+- **Conector servo de 5V:** Salida de 5V llevada a header macho para conexión de servo y sensor de 5V.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/444.png" /></div>
 
 ### Pantalla OLED
 
-Este ejemplo introduce cómo usar la pantalla OLED en la Base de Expansión Seeed Studio para XIAO.
+Este ejemplo introduce cómo usar la pantalla OLED en la Seeed Studio Expansion Base para XIAO.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Hello_world11.jpg" /></div>
 
@@ -183,7 +182,7 @@ Este ejemplo introduce cómo usar la pantalla OLED en la Base de Expansión Seee
 
 **Paso 2**. Instala la librería [**u8g2**](https://github.com/olikraus/U8g2_Arduino), esta es la guía [**cómo instalar la librería**](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
 
-**Paso 3**. Copia el código y pégalo en el IDE de Arduino luego súbelo.
+**Paso 3**. Copia el código y pégalo en el Arduino IDE luego súbelo.
 
 **Código OLED**
 
@@ -208,13 +207,13 @@ void loop(void) {
 
 ### Control de LED por Botón de Usuario
 
-Este ejemplo presenta cómo usar el botón en la Seeed Studio Expansion Base para XIAO para controlar el LED en el Seeed Studio XIAO SAMD21.
+Este ejemplo introduce cómo usar el botón en la Seeed Studio Expansion Base para XIAO para controlar el LED en el Seeed Studio XIAO SAMD21.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/LED_botton.gif" /></div>
 
 **Paso 1**. Instala el Seeed Studio XIAO SAMD21 en la placa de expansión y luego conecta el cable Type-C.
 
-**Paso 2**. Abre Arduino IDE, copia el código y pégalo en el Arduino IDE, luego súbelo.
+**Paso 2**. Abre Arduino IDE, copia el código y pégalo en Arduino IDE, luego súbelo.
 
 **Código**
 
@@ -246,19 +245,19 @@ void loop() {
 }
 ```
 
-### Buzzer
+### Zumbador
 
-El Buzzer está conectado por defecto al Pin A3, si quieres eliminar la función del buzzer, simplemente sigue la imagen de abajo, corta la línea.
+El zumbador está conectado por defecto al Pin A3, si quieres eliminar la función del zumbador, simplemente sigue la imagen de abajo, corta la línea.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/111123232325.png" /></div>
 
-#### **Reproducir Canción con Buzzer Pasivo**
+#### **Reproducir Canción con Zumbador Pasivo**
 
-Este ejemplo usa el Buzzer en la Base de Expansión Seeed Studio para XIAO para reproducir Feliz cumpleaños.
+Este ejemplo usa el zumbador en la Base de Expansión Seeed Studio para XIAO para reproducir Feliz cumpleaños.
 
 **Paso 1**. Instala el Seeed Studio XIAO SAMD21 en la placa de expansión y luego conecta el cable Type-C.
 
-**Paso 2**. Abre Arduino IDE, Copia el código y pégalo en el Arduino IDE y luego súbelo.
+**Paso 2**. Abre Arduino IDE, copia el código y pégalo en Arduino IDE, luego súbelo.
 
 **Código**
 
@@ -317,18 +316,18 @@ void loop() {
 
 ### Control de Servo por Sensor de Ángulo Rotativo
 
-Este ejemplo utiliza un sensor de ángulo rotativo para controlar un servo a través de los puertos de integración en la Seeed Studio Expansion Base para XIAO.
+Este ejemplo usa un sensor de ángulo rotativo para controlar un servo a través de los puertos de integración en la Base de Expansión Seeed Studio para XIAO.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/rotary_servo.gif" /></div>
 
 **Paso 1**. Instala el Seeed Studio XIAO SAMD21 en la placa de expansión y luego conecta el cable Type-C.
 
-**Paso 2**. Conecta el cable del Servo al puerto **I2C**, el sensor de ángulo rotativo a **D0**.
+**Paso 2**. Conecta el cable del servo al puerto **I2C**, el sensor de ángulo rotativo a **D0**.
 
-**Paso 3**. Abre Arduino IDE, copia el código y pégalo en el Arduino IDE, luego súbelo.
+**Paso 3**. Abre Arduino IDE, copia el código y pégalo en Arduino IDE, luego súbelo.
 
 :::tip
-Si tu Placa de Desarrollo es **XIAO ESP32 Series**. Antes de ejecutar el siguiente código, necesitas instalar primero la librería ESP32Servo en **Arduino Library Manager** y cambiar el siguiente código de ```#include <Servo.h>``` a ```#include <ESP32Servo.h>```.
+Si tu placa de desarrollo es **XIAO ESP32 Series**. Antes de ejecutar el siguiente código, necesitas instalar primero la librería ESP32Servo en **Arduino Library Manager** y cambiar el siguiente código de ```#include <Servo.h>``` a ```#include <ESP32Servo.h>```.
 :::
 
 ```cpp
@@ -367,7 +366,7 @@ void loop() {
 
 ### Pantalla de reloj RTC
 
-Este ejemplo utiliza RTC para mostrar el reloj en el OLED.
+Este ejemplo usa RTC para mostrar el reloj en el OLED.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/time_clock.gif" /></div>
 
@@ -375,7 +374,7 @@ Este ejemplo utiliza RTC para mostrar el reloj en el OLED.
 
 **Paso 2**. Instala las librerías [**u8g2**](https://github.com/olikraus/U8g2_Arduino) y [**PCF8563**](https://github.com/Bill2462/PCF8563-Arduino-Library), esta es la guía [**cómo instalar la librería**](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
 
-**Paso 3**. Copia el código y pégalo en el IDE de Arduino, luego súbelo.
+**Paso 3**. Copia el código y pégalo en Arduino IDE, luego súbelo.
 
 ```cpp
 #include <Arduino.h>
@@ -425,10 +424,10 @@ void loop() {
 
 ### Función de tarjeta SD
 
-Para el XIAO SAMD21, XIAO RP2040, XIAO ESP32C3 y XIAO ESP32S3, no necesitas instalar una biblioteca de tarjeta SD separada para usar una de terceros. Este procedimiento a continuación es aplicable a estos XIAOs.
+Para el XIAO SAMD21, XIAO RP2040, XIAO ESP32C3 y XIAO ESP32S3, no necesitas instalar una librería de tarjeta SD separada para usar una de terceros. Este procedimiento a continuación es aplicable a estos XIAOs.
 
 :::tip
-El circuito de la placa de expansión está diseñado de modo que el pin CS de la ranura de tarjeta SD esté conectado al pin **D2** del XIAO.
+El circuito de la placa de expansión está diseñado de manera que el pin CS de la ranura de la tarjeta SD esté conectado al pin **D2** del XIAO.
 :::
 
 ```cpp
@@ -492,7 +491,7 @@ void loop() {
 
 ```
 
-Si estás usando la serie XIAO nRF52840 entonces puede que necesites descargar la [biblioteca SdFat](https://github.com/greiman/SdFat) por separado para poder usar la función de tarjeta SD.
+Si estás usando la serie XIAO nRF52840, entonces puede que necesites descargar la [librería SdFat](https://github.com/greiman/SdFat) por separado para poder usar la función de tarjeta SD.
 
 ```cpp
 #include <SPI.h>
@@ -576,15 +575,15 @@ Esta carcasa acrílica es fácil de ensamblar y también puede hacer que la carc
 
 ## Circuitpython en Seeed Studio XIAO SAMD21 con placa de expansión
 
-Esta wiki introduce cómo instalar y ejecutar el [**CircuitPython**](https://circuitpython.org/) oficial de Adafruit Industries en la [**placa de desarrollo Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html) !
+Este wiki introduce cómo instalar y ejecutar el [**CircuitPython**](https://circuitpython.org/) oficial de Adafruit Industries en la [**placa de desarrollo Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html)!
 
-CircuitPython es un lenguaje de programación diseñado para simplificar la experimentación y el aprendizaje de programación en placas de microcontrolador de bajo costo. Hace que comenzar sea más fácil que nunca sin necesidad de descargas previas en el escritorio. Una vez que configures tu placa, abre cualquier editor de texto y comienza a editar código. Para más información, consulta [**aquí**](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython).
+CircuitPython es un lenguaje de programación diseñado para simplificar la experimentación y el aprendizaje de programación en placas de microcontroladores de bajo costo. Hace que comenzar sea más fácil que nunca sin necesidad de descargas previas en el escritorio. Una vez que configures tu placa, abre cualquier editor de texto y comienza a editar código. Para más información, consulta [**aquí**](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython).
 
 ## Instalando CircuitPython
 
 **Paso 1.** Instala el Seeed Studio XIAO SAMD21 en la placa de expansión y luego conecta el cable Type-C.
 
-**Paso 2.** Descarga el [**Bootloader oficial de CircuitPython para Seeed Studio XIAO SAMD21**](https://circuitpython.org/board/seeeduino_xiao/). Un `.uf2`, el archivo se almacenará en la descarga de tu PC.
+**Paso 2.** Descarga el [**Bootloader oficial de CircuitPython para Seeed Studio XIAO SAMD21**](https://circuitpython.org/board/seeeduino_xiao/). Un archivo `.uf2` se almacenará en la descarga de tu PC.
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circutpyhthon.png" /></div>
 
@@ -602,11 +601,11 @@ CircuitPython es un lenguaje de programación diseñado para simplificar la expe
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Circuitpy.png" /></div>
 
-**Paso 6.** Ahora, ¡CircuitPython está cargado en Seeed Studio XIAO SAMD21! Todo lo que necesitas hacer es escribir tu programa python y nombrarlo `main.py` y arrastrarlo a la unidad `CIRCUITPY`.
+**Paso 6.** Ahora, CircuitPython está cargado en Seeed Studio XIAO SAMD21! Todo lo que necesitas hacer es escribir tu programa python y nombrarlo `main.py` y arrastrarlo a la unidad `CIRCUITPY`.
 
 ### Ejemplo de parpadeo con CircuitPython
 
-Hay un ejemplo simple que introduce cómo usar CirsuitPython en el Seeed Studio XIAO.
+Aquí hay un ejemplo simple que introduce cómo usar CircuitPython en el Seeed Studio XIAO.
 
 **Paso 1** Crea un archivo txt llamado `main` en la unidad `CIRCUITPY`.
 
@@ -617,7 +616,7 @@ Hay un ejemplo simple que introduce cómo usar CirsuitPython en el Seeed Studio 
 El nombre `main` es uno de estos: **code.txt**, **code.py**, **main.py**, **main.txt**, hay más detalles sobre [**este comportamiento**](https://docs.circuitpython.org/en/latest/README.html#behavior).
 :::
 
-**Paso 2** Usa REPL para obtener los pines del LED naranja. Para detalles sobre REPL, consulta [¡Bienvenido a CircuitPython!](https://learn.adafruit.com/welcome-to-circuitpython/the-repl) Para usar REPL, primero necesitas conectarte a la consola serial. Una vez establecida la conexión, presiona CTRL+C dos veces para entrar al modo de edición. Luego, copia el siguiente código e ingrésalo respectivamente.
+**Paso 2** Usa REPL para obtener los pines del LED naranja. Para detalles sobre REPL, consulta [Welcome to CircuitPython!](https://learn.adafruit.com/welcome-to-circuitpython/the-repl) Para usar REPL, primero necesitas conectarte a la consola serial. Una vez establecida la conexión, presiona CTRL+C dos veces para entrar al modo de edición. Luego, copia el siguiente código e ingrésalo respectivamente.
 
 ```
 >>> import board
@@ -629,7 +628,7 @@ Verás una lista de todos los pines en tu placa que están disponibles para usar
 
 ¿Ves YELLOW_LED_INVERTED? ¡Ese es el pin que usaste para hacer parpadear el LED naranja!
 
-**Paso 3** Pega el código en el archivo `main` luego guárdalo, verás el LED naranja parpadeando en la placa Seeed Studio XIAO SAMD21.
+**Paso 3** Pega el código en el archivo `main` y luego guárdalo, verás el LED naranja parpadeando en la placa Seeed Studio XIAO SAMD21.
 
 **Código**
 
@@ -650,16 +649,16 @@ while True:
 
 ### Tarjeta MicroSD para circuitpython
 
-El Seeed Studio XIAO SAMD21 tiene integrado aproximadamente 40 KB de flash, pero puede no tener suficiente espacio para almacenar archivos de código python de gran tamaño. Afortunadamente, la placa de expansión Seeed Studio XIAO SAMD21 tiene integrada una ranura para tarjeta MicroSD para extender el espacio de almacenamiento, por lo que puedes seguir estas instrucciones para aprender cómo ejecutar circuitpython en la tarjeta MicroSD.
+El Seeed Studio XIAO SAMD21 tiene incorporado aproximadamente 40 KB de flash, pero puede no tener suficiente espacio para almacenar archivos de código python de gran tamaño, afortunadamente, la placa de expansión Seeed Studio XIAO SAMD21 tiene incorporada una ranura para tarjeta MicroSD para extender el espacio de almacenamiento, así que puedes seguir esta instrucción para aprender cómo ejecutar circuitpython en la tarjeta MicroSD.
 
 :::note
 El formato del sistema de la tarjeta MicroSD es FAT o exFAT. Si usas otro formato de sistema de tarjeta MicroSD, esto causará que la tarjeta MicroSD no pueda ser reconocida.
 :::
 **Paso 1.** Prepara una tarjeta micro SD para conectar en la placa de expansión Seeed Studio XIAO SAMD21.
 
-**Paso 2.** Asumiendo que aún no has descargado el [**archivo circuitPython**](https://circuitpython.org/board/seeeduino_xiao/), por favor consulta el capítulo [**Instalando CircuitPython**](https://wiki.seeedstudio.com/es/Seeeduino-XIAO-Expansion-Board/#installing-circuitpython).
+**Paso 2.** Asumiendo que aún no has descargado el [**archivo circuitPython**](https://circuitpython.org/board/seeeduino_xiao/), consulta el capítulo [**Instalando CircuitPython**](https://wiki.seeedstudio.com/es/Seeeduino-XIAO-Expansion-Board/#installing-circuitpython).
 
-**Paso 3.** Descarga [**lib**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/lib.zip), descomprime el archivo, luego reemplázalo con la nueva lib en `CIRCUITPY`.
+**Paso 3.** Descarga [**lib**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/lib.zip) descomprime el archivo, luego reemplázalo con la nueva lib en `CIRCUITPY`.
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/lib_replace.png" /></div>
 
@@ -696,9 +695,9 @@ sys.path.append("/sd")
 sys.path.append("/sd/lib")  ## switch to the path to SD card
 ```
 
-**Ejemplo de Buzzer**
+**Ejemplo del Buzzer**
 
-Este ejemplo para probar el buzzer ejecutando el `buzzer.py` en la tarjeta MicroSD.
+Este ejemplo es para probar el buzzer ejecutando `buzzer.py` en la tarjeta MicroSD.
 
 **Paso 1.** Puedes simplemente pegar [**buzzer.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzer.py) en la tarjeta MicroSD.
 
@@ -708,10 +707,10 @@ Este ejemplo para probar el buzzer ejecutando el `buzzer.py` en la tarjeta Micro
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main.PY.png" /></div>
 
-**Paso 3.** Añade `import buzzer` en el archivo main.py.
+**Paso 3.** Agrega `import buzzer` en el archivo main.py.
 <div align="center"><img width={650} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png" /></div>
 
-Cuando termines todos los pasos, el buzzer funcionará. Si quieres ejecutar otros archivos python en la tarjeta MicroSD, por favor imita el ejemplo.
+Cuando termines todos los pasos, el buzzer funcionará. Si quieres ejecutar otros archivos python en la tarjeta MicroSD, imita el ejemplo.
 
 :::note
 Si quieres volver al modo Arduino, solo necesitas subir cualquier programa en el Arduino IDE.
@@ -733,17 +732,17 @@ Este wiki introduce cómo hacer un mini ventilador para colocar en tu habitació
 
 **Componentes requeridos**
 
-- [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
+- [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Base de Expansión Seeed Studio para XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Grove mini ventilador**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
+- [**Grove mini fan**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
 - [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
-- [**Grove - IR Receptor (Infrarrojo)**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
+- [**Grove - IR (Infrared) Receiver**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
 
 **Conexión de Hardware**
 
-Por favor sigue la misma línea de color para conectar cada sensor en la placa. Por favor conecta el cable grove del ventilador a D0, el cable grove del servo a **I2C**, el cable grove del IR a **D7**.
+Sigue la misma línea de color para conectar cada sensor en la placa. Conecta el cable grove del ventilador a D0, el cable grove del servo a **I2C**, el cable grove IR a **D7**.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_fan_pic.png" /></div>
 
@@ -753,9 +752,9 @@ Por favor sigue la misma línea de color para conectar cada sensor en la placa. 
 
 **Paso 2**. Instala la librería [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev), esta es la guía [**cómo instalar la librería**](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
 
-**Paso 3**. Copia el código y pégalo en el Arduino IDE luego súbelo.
+**Paso 3**. Copia el código y pégalo en el IDE de Arduino, luego súbelo.
 
-**Paso 4**. Coloca el Ventilador en una posición segura, trata de presionar el botón para asegurarte de que puede funcionar de manera segura.
+**Paso 4**. Coloca el ventilador en una posición segura, intenta presionar el botón para asegurarte de que pueda funcionar de manera segura.
 
 **Código**
 
@@ -836,6 +835,7 @@ void loop() {
   delay(100);
 }
 ```
+
 ### Proyecto 2 - Coche de control remoto
 
 **Descripción general**
@@ -846,21 +846,21 @@ Este wiki presenta cómo hacer un coche de control remoto.
 
 **Características**
 
-- Coche de tamaño mini fácil de atravesar por carreteras estrechas
+- Coche de tamaño mini fácil de atravesar carreteras estrechas
 
 **Componentes requeridos**
 
 - [**Seeed Studio XIAO **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Base de Expansión Seeed Studio para XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Grove - I2C Controlador de Motor Mini**](https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver.html)
-- [**DC Motor**](https://www.seeedstudio.com/130-DC-Motor-p-2023.html)
-- [**Grove - IR Receptor (Infrarrojo)**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
+- [**Grove - I2C Mini Motor Driver**](https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver.html)
+- [**Motor DC**](https://www.seeedstudio.com/130-DC-Motor-p-2023.html)
+- [**Grove - IR (Infrared) Receiver**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
 
 **Conexión de hardware**
 
-Por favor sigue la misma línea de color para conectar cada sensor en la placa. Por favor conecta el cable grove del sensor IR a D0, el cable grove del Mini Motor Driver a I2C.
+Por favor sigue la misma línea de color para conectar cada sensor en la placa. Por favor conecta el cable Grove del sensor IR a D0, el cable Grove del Mini Motor Driver a I2C.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_car.jpg" /></div>
 
@@ -868,11 +868,11 @@ Por favor sigue la misma línea de color para conectar cada sensor en la placa. 
 
 **Paso 1**. Sigue la imagen de conexión para conectar todos los sensores en la placa.
 
-**Paso 2**. Descarga el [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
+**Paso 2**. Descarga el [**IDE de Arduino**](https://www.arduino.cc/en/Main/software)
 
 **Paso 3**. Instala las librerías [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev) y [**Motor driver**](https://github.com/Seeed-Studio/Drv8830_Motor_Driver), esta es la guía [**cómo instalar la librería**](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
 
-**Paso 4**. Copia el código y pégalo en el Arduino IDE luego súbelo.
+**Paso 4**. Copia el código y pégalo en el IDE de Arduino, luego súbelo.
 
 **Código**
 
@@ -953,13 +953,13 @@ void delayUntil(unsigned long elapsedTime) {
 }
 ```
 
-### Proyecto 3 - Caja del tesoro desbloqueada por huella dactilar - Seeed Studio XIAO
+### Proyecto 3 - Caja del tesoro que se desbloquea con huella dactilar - Seeed Studio XIAO
 
 **Descripción general**
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_open.gif" /></div>
 
-Esta caja puede almacenar tus cosas importantes, y no tienes que preocuparte de que algunas personas tomen tus cosas, la caja tiene la función de huella dactilar para proteger tus cosas, y si la autorización de huella dactilar falla, el zumbador sonará la alarma y el anillo LED mostrará el color rojo, solo tu dedo ha sido registrado en la placa cuando comienza, luego pon tu dedo en la placa, cuando la huella dactilar pase la autorización, el anillo LED mostrará color verde.
+Esta caja puede almacenar tus cosas importantes, y no tienes que preocuparte de que algunas personas tomen tus cosas, la caja tiene la función de huella dactilar para proteger tus cosas, y si la autorización de huella dactilar falla, el zumbador sonará la alarma y el anillo LED mostrará el color rojo, solo tu dedo que ha sido registrado en la placa al principio, luego pon tu dedo en la placa, cuando la huella dactilar pase la autorización, el anillo LED mostrará color verde.
 
 **Características**
 
@@ -972,9 +972,9 @@ Esta caja puede almacenar tus cosas importantes, y no tienes que preocuparte de 
 
 - [**Seeed Studio XIAO SAMD21 **](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-- [**Base de Expansión Seeed Studio para XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
+- [**Seeed Studio Expansion Base for XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Seeed Grove - Escáner/Sensor de Huellas Dactilares Capacitivo**](https://www.hackster.io/products/buy/80263?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - Capacitive Fingerprint Scanner/Sensor**](https://www.hackster.io/products/buy/80263?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
 
 - [**Seeed Grove RGB LED Ring - 24**](https://www.hackster.io/products/buy/80264?s=BAhJIhMzNzA5MzAsUHJvamVjdAY6BkVG%0A)
 
@@ -994,29 +994,29 @@ Ten en cuenta que el anillo NeoPixel está conectado directamente a los pines de
 
 **Paso 1**. Sigue la imagen de conexión para conectar todos los sensores en la placa.
 
-**Paso 2**. Descarga el [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
+**Paso 2**. Descarga el [**IDE de Arduino**](https://www.arduino.cc/en/Main/software)
 
 **Paso 3**. Instala las librerías [**u8g2**](https://github.com/olikraus/U8g2_Arduino), [**Servo**](https://github.com/arduino-libraries/Servo), [**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202) y [**Seeed_LED_Ring**](https://github.com/Seeed-Studio/Seeed_LED_Ring), esta es la guía [**cómo instalar la librería**](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
 
-**Paso 4**. Copia el código y pégalo en el Arduino IDE luego súbelo.
+**Paso 4**. Copia el código y pégalo en el IDE de Arduino, luego súbelo.
 
 **Demostración**
 
 1. Registra tu huella dactilar
 
-La pantalla mostrará grabación de dedo al principio, solo necesitas poner tu dedo en el dispositivo de dedo, después de eso, el programa analizará tu huella dactilar, luego terminará el registro.
+La pantalla mostrará grabación de dedo al principio, solo necesitas poner tu dedo en el dispositivo de huella dactilar, después de eso, el programa analizará tu huella dactilar, luego terminará el registro.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_record.gif" /></div>
 
 2. Autorización de identidad (certificación aprobada)
 
-La pantalla mostrará "Por favor verificar", necesitas poner tu dedo en el dispositivo de huella dactilar, luego el anillo LED se volverá de color verde.
+La pantalla mostrará "Please verify", necesitas poner tu dedo en el dispositivo de huella dactilar, luego el anillo LED se volverá de color verde.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_open.gif" /></div>
 
 3. Autorización de identidad (certificación no aprobada)
 
-Si otras personas ponen su dedo en él, el anillo LED se volverá de color rojo y la placa mostrará "Identidad denegada" mientras tanto la alarma funcionará.
+Si otras personas ponen su dedo en él, el anillo LED se volverá de color rojo y la placa mostrará "Identity deny" mientras que la alarma funcionará.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_close.gif" /></div>
 
@@ -1176,11 +1176,11 @@ void colorWipe(uint32_t c, uint8_t wait) {
 
 ### Proyecto 4 - Base de Expansión Seeed Studio para XIAO - mjolnir
 
-**Descripción general**
+**Descripción General**
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/mjolnir/humer1.png" /></div>
 
-Este martillo es un Mjolnir simulado, necesitas registrar tu huella dactilar en este dispositivo para convertirte en su maestro. El martillo necesita un imán para adherirse al grove - electroimán hasta que su maestro lo desbloquee mediante huella dactilar, entonces el martillo se puede llevar.
+Este martillo simula a Mjolnir, necesitas registrar tu huella dactilar en este dispositivo para convertirte en su maestro. El martillo necesita un imán para adherirse al Grove - electroimán hasta que su maestro lo desbloquee mediante huella dactilar, entonces el martillo se puede llevar.
 
 **Componentes requeridos**
 
@@ -1194,7 +1194,7 @@ Este martillo es un Mjolnir simulado, necesitas registrar tu huella dactilar en 
 
 **Conexión de Hardware**
 
-Por favor conecta la placa de expansión y los módulos requeridos con cable Grove, conecta el módulo electroimán Grove al puerto D0, y conecta el módulo de huellas dactilares al puerto I2C.
+Por favor conecta la placa de expansión y los módulos requeridos con cable Grove, conecta el módulo Grove electroimán al puerto D0, y conecta el módulo de huellas dactilares al puerto I2C.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/mjolnir/66666.png" /></div>
 
@@ -1299,13 +1299,13 @@ void setup() {
   }
 ```
 
-### Proyecto 5 - Hub de Sensor de Calidad del Aire - Seeed Studio Expansion Base para XIAO
+### Proyecto 5 - Centro de Sensores de Calidad del Aire - Base de Expansión Seeed Studio para XIAO
 
-**Descripción general**
+**Descripción General**
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Air_Quality_Sensor_Hub/environment_detect_g.gif" /></div>
 
-Este es un dispositivo de detección ambiental para recopilar PM2.5, PM10, temperatura, humedad, CO2 y partículas de polvo a través del Grove - Sensor PM2.5 Láser, Grove - Sensor de CO2, Temperatura y Humedad y Grove - Sensor de polvo respectivamente.
+Este es un dispositivo de detección ambiental para recopilar PM2.5, PM10, temperatura, humedad, CO2 y partículas de polvo a través del Grove - Sensor Láser PM2.5, Grove - Sensor de CO2, Temperatura y Humedad y Grove - Sensor de Polvo respectivamente.
 
 **Componentes requeridos**
 
@@ -1313,27 +1313,27 @@ Este es un dispositivo de detección ambiental para recopilar PM2.5, PM10, tempe
 
 - [**Base de Expansión Seeed Studio para XIAO**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
-- [**Seeed Grove - Sensor de CO2, Temperatura y Humedad para Arduino (SCD30) - 3-en-1**](https://www.hackster.io/products/buy/80471?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - Sensor de CO2, Temperatura y Humedad para Arduino (SCD30) - 3 en 1**](https://www.hackster.io/products/buy/80471?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
 
-- [**Seeed Grove - Sensor de Polvo PM2.5 Láser - Compatible con Arduino - HM3301**](https://www.hackster.io/products/buy/80472?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
+- [**Seeed Grove - Sensor Láser de Polvo PM2.5 - Compatible con Arduino - HM3301**](https://www.hackster.io/products/buy/80472?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
 
 - [**Seeed Grove - Sensor de Polvo（PPD42NS）**](https://www.hackster.io/products/buy/30140?s=BAhJIhMzNzE2NzQsUHJvamVjdAY6BkVG%0A)
 
 **Conexión de Hardware**
 
-Por favor conecte cada sensor como se muestra en el diagrama. Conecte el sensor de CO2 y el sensor PM2.5 a dos puertos I2C respectivamente, y conecte el sensor de polvo al puerto UART.
+Por favor conecta cada sensor como se muestra en el diagrama. Conecta el sensor de CO2 y el sensor PM2.5 a dos puertos I2C respectivamente, y conecta el sensor de polvo al puerto UART.
 
 <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Air_Quality_Sensor_Hub/environment_detect_g.png" /></div>
 
 **Instrucciones de Arduino**
 
-**Paso 1**. Siga la imagen de conexión para conectar todos los sensores en la placa.
+**Paso 1**. Sigue la imagen de conexión para conectar todos los sensores en la placa.
 
-**Paso 2**. Descargue el [**Arduino IDE**](https://www.arduino.cc/en/Main/software)
+**Paso 2**. Descarga el [**IDE de Arduino**](https://www.arduino.cc/en/Main/software)
 
-**Paso 3**. Instale las librerías [**u8g2**](https://github.com/olikraus/U8g2_Arduino), [**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) y [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30), esta es la guía [**cómo instalar la librería**](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
+**Paso 3**. Instala las librerías [**u8g2**](https://github.com/olikraus/U8g2_Arduino), [**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301) y [**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30), esta es la guía de [**cómo instalar la librería**](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library/).
 
-**Paso 4**. Copie el código y péguelo en el Arduino IDE luego súbalo.
+**Paso 4**. Copia el código y pégalo en el IDE de Arduino, luego súbelo.
 
 **Código**
 
@@ -1529,12 +1529,12 @@ void loop() {
 
 ### Proyecto 6 - Base de Expansión Seeed Studio para XIAO - Frecuencia Cardíaca
 
-**Descripción general**
+**Descripción General**
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Heartrate_Monitor_Watch/heartRate.gif" /></div>
 
 Este proyecto simple y económico está basado en la Base de Expansión Seeed Studio para XIAO para reportar la frecuencia cardíaca.
-El dispositivo utilizado tiene una interfaz I2C de dos cables y por lo tanto mantiene el cableado al mínimo.
+El dispositivo utilizado tiene una interfaz de dos cables I2C y por lo tanto mantiene el cableado al mínimo.
 
 **Componentes requeridos**
 
@@ -1606,11 +1606,11 @@ void loop() {
 - **[PDF]**[**ETA3410**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/ETA3410.pdf)
 - **[PDF]**[**ETA6003**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/ETA6003.pdf)
 - **[PDF]**[**PCF8563T**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/PCF8563T.pdf)
-- **[PDF]**[**Seeed Studio Expansion Base for XIAO_v1.0_SCH_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_SCH_200824.pdf)
-- **[SCH]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.sch)
-- **[BRD]**[**Seeed Studio Expansion Base for XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.brd)
+- **[PDF]**[**Base de Expansión Seeed Studio para XIAO_v1.0_SCH_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_SCH_200824.pdf)
+- **[SCH]**[**Base de Expansión Seeed Studio para XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.sch)
+- **[BRD]**[**Base de Expansión Seeed Studio para XIAO_v1.0_200824**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/document/Seeeduino%20XIAO%20Expansion%20board_v1.0_200824.brd)
 
-## FAQ 
+## FAQ
 
 ### P1: ¿El PMIC en la placa de expansión XIAO proporciona energía en los pines de 5V?
 
@@ -1618,7 +1618,7 @@ El PMIC no proporciona energía; los 5V provienen directamente del USB. La corri
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -46,13 +46,13 @@ Win + R -->
 
 [Thonny IDE](https://thonny.org/)
 
-选择适合的版本进行安装。这里我在 Windows 系统上安装，所以选择了 Windows 版本。
+选择适当的版本进行安装。在这里，我在 Windows 系统上安装，所以选择了 Windows 版本。
 
 按照所需 Python 版本的说明进行操作。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_ide_1.png" style={{width:600, height:'auto'}}/></div>
 
-然后，只需按照默认步骤进行配置即可。
+然后，只需按照默认步骤进行配置。
 
 ### 下载仓库
 
@@ -70,10 +70,10 @@ git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 
 ### 上传板文件
 
-**步骤 1.** 为 XIAO nRF54L15 刷入 MicroPython 固件
+**步骤 1.** 为 XIAO nRF54L15 刷写 MicroPython 固件
 
 <!-- 如果您已经刷入了对应的 MircroPython 固件，可以跳过这一步骤 -->
-- 下载固件包并将其解压到适当位置。然后点击 flash.bat，它会自动为您刷入固件。
+- 下载固件包并将其解压到适当位置。然后点击 flash.bat，它将自动为您刷写固件。
 
     **[固件]** [XIAO nRF54L15 MicroPython 固件](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao54_flash.zip)
 <!-- 这里的压缩包填入刷写固件的压缩包 -->
@@ -89,7 +89,7 @@ git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 
 **步骤 3.** 上传板文件
 
-- 打开视图，选择 "Files"，文件管理器路径将显示在左侧边栏。
+- 打开视图，选择 "File"，文件管理器路径将显示在左侧边栏。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_2.png" style={{width:600, height:'auto'}}/></div>
 
@@ -129,15 +129,15 @@ finally:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light3.gif" style={{width:400, height:'auto'}}/></div>
 
-## 数字输入输出
+## 数字
 
 ### 硬件
 
 <table align="center">
   <tr>
       <th>Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
-         <th>Grove - Relay</th>
+        <th>Seeed Studio XIAO 扩展板配 Grove OLED</th>
+         <th>Grove - 继电器</th>
   </tr>
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -200,7 +200,7 @@ finally:
     relay.off()
 ```
 
-代码说明：
+代码解释：
 
 - **导入模块**
         - `time` 导入时间模块
@@ -326,7 +326,7 @@ finally:
     pwm.deinit()
 ```
 
-代码解释：
+代码说明：
 
 - **导入依赖库**
         - `time`：用于添加延迟和控制程序的执行节奏。
@@ -614,7 +614,7 @@ finally:
         - `bd_encrypt(gg)` — 通过应用额外的偏移和旋转将 GCJ-02 坐标转换为百度的 BD-09 坐标系统。
         - `transform(gps)` — 使用基于椭球地球模型的复杂三角函数公式将 WGS-84（原始 GPS）坐标转换为 GCJ-02 的主函数。
         - `L76X_Baidu_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02 → BD-09（百度地图格式）转换的包装器。
-        - `L76X_Google_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02（中国的 Google 地图格式）转换的包装器。
+        - `L76X_Google_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02（中国的谷歌地图格式）转换的包装器。
 
 - **解析 GNRMC 语句**
         - `parse_gnrmc(nmea_sentence)` — 将原始 NMEA `$GNRMC` 或 `$PNRMC` 字符串解析为结构化的 `GNRMC` 对象。
@@ -627,7 +627,7 @@ finally:
         - `print_gps_data(gps)` — 打印人类可读的 GPS 信息，包括：
             - 本地时间（GMT+8）
             - 带半球的原始 WGS-84 坐标
-            - 转换后的 GCJ-02（Google 兼容）和 BD-09（百度兼容）坐标
+            - 转换后的 GCJ-02（谷歌兼容）和 BD-09（百度兼容）坐标
             - 指示定位是否成功的状态消息
 
 - **主逻辑（try 块）**
@@ -681,7 +681,7 @@ finally:
 
   <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/oled.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -892,8 +892,8 @@ ssd1306_draw_text("HELLO WORLD", 20, 4)
 代码说明：
 
 - **导入模块**
-        - `time` 导入时间模块以启用延迟等时间相关功能。
-        - `XiaoI2C` 从 `boards.xiao` 模块导入 Seeed Xiao 开发板的 I2C 通信类，用于初始化和控制 I2C 外设。
+        - `time` 导入时间模块以启用与时间相关的功能，如延迟。
+        - `XiaoI2C` 从 `boards.xiao` 模块导入适用于 Seeed Xiao 开发板的 I2C 通信类，用于初始化和控制 I2C 外设。
 
 - **定义 I2C 配置**
         - `sda = 4` 指定 I2C 总线的 SDA（数据）线连接到数字引脚 D4。
@@ -937,7 +937,7 @@ ssd1306_draw_text("HELLO WORLD", 20, 4)
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>ePaper Driver Board for Seeed Studio XIAO</th>
+   <th>适用于 Seeed Studio XIAO 的电子纸驱动板</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -1171,15 +1171,15 @@ if __name__ == "__main__":
 
 - **模块导入**
         - `time`：启用时间相关功能，如延时。
-        - `XiaoPin and XiaoSPI`：从 `boards.xiao` 导入；XiaoPin 用于控制 GPIO 引脚，而 XiaoSPI 处理 SPI 通信。
+        - `XiaoPin 和 XiaoSPI`：从 `boards.xiao` 导入；XiaoPin 用于控制 GPIO 引脚，而 XiaoSPI 处理 SPI 通信。
 
 - **引脚和 SPI 配置**
-        - 定义了特定引脚：复位 (RST)、片选 (CS)、数据/命令 (DC) 和忙碌 (BUSY)。
-        - 配置了 SPI 相关引脚 (SCK、MOSI、MISO) 和 SPI 控制器。
+        - 定义了特定引脚：复位（RST）、片选（CS）、数据/命令（DC）和忙碌（BUSY）。
+        - 配置了 SPI 相关引脚（SCK、MOSI、MISO）和 SPI 控制器。
         - 初始化了所有 GPIO 引脚的工作模式（输入/输出）。
         - 创建了一个频率设置为 20 MHz 的 SPI 实例。
 
-- **ePaper 基本功能**
+- **电子纸基本功能**
         - `reset()`：对显示器执行硬件复位操作。
         - `send_command(cmd)`：传输单字节命令。
         - `send_data(data)`：发送数据，可以是单字节或多字节。
@@ -1199,7 +1199,7 @@ if __name__ == "__main__":
         - `text_pixel()`：确定在特定位置是否应绘制像素（用于文本渲染）。
 
 - **显示更新**
-        - **epaper_update_lines(lines)**：更新显示器的核心功能。
+        - **epaper_update_lines(lines)**：更新显示器的核心函数。
         - 首先，发送数据设置全白背景。
         - 然后，逐行计算并传输新的图像数据。
         - 最后，触发显示刷新以显示新内容。
@@ -1226,11 +1226,11 @@ if __name__ == "__main__":
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_2.png" style={{width:600, height:'auto'}}/></div>
 
-然后它将显示在 MicroPython device/flash 部分下。
+然后它将显示在 MicroPython 设备/闪存部分下。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_3.png" style={{width:600, height:'auto'}}/></div>
 
-**步骤 2.** 通过按下板载 Reset 按钮，可以实现自动执行效果。
+**步骤 2.** 通过按下板载复位按钮，可以实现自动执行效果。
 
 效果：
 
@@ -1239,6 +1239,63 @@ if __name__ == "__main__":
 <!-- :::tip
 如果您自己自己定义或封装了模块的 py 文件，也请一并上传
 ::: -->
+
+## 常见问题
+
+### Bootloader 更新
+
+如果您遇到无法使用 Thonny 上传 MicroPython 程序的情况，这是因为出厂时使用的 Bootloader 版本较旧。
+
+**步骤 1.** 接线
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>OpenOCD / JTAG / SWD</th>
+        <th>XIAO nRF54L15</th>
+    </tr>
+    <tr>
+        <th>5V</th>
+        <th>5V</th>
+    </tr>
+    <tr>
+        <th>GND</th>
+        <th>GND</th>
+    </tr>
+    <tr>
+        <th>SWDIO</th>
+        <th>SWDIO2</th>
+    </tr>
+    <tr>
+        <th>SWDCLK</th>
+        <th>SWDCLK2</th>
+    </tr>
+    <tr>
+        <th>RST</th>
+        <th>RST</th>
+    </tr>
+  </table>
+</div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nrf54_wiring_1.png" style={{width:800, height:'auto'}}/></div>
+
+:::tip
+请确保引脚连接正确，以防止烧录过程失败。
+:::
+
+**步骤 2.** 下载固件烧录程序
+
+[xiao_samd11_flash](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_samd11_flash_nrf.zip)
+
+**步骤 3.** 运行脚本
+
+以 Windows 系统为例。解压下载的文件，在文件夹中右键打开终端。执行 **.\xiao_samd11_openocd_flash.bat**。如果您的接线正确，结果将如下图所示。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nrf54.jpg" style={{width:800, height:'auto'}}/></div>
+
+:::tip
+在 Mac/Linux 系统上，您需要将 **.bat** 改为 **.sh**
+:::
 
 ## 技术支持与产品讨论
 

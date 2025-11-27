@@ -1100,6 +1100,8 @@ The reComputer R1000 mainboard features two Mini-PCIe slots, with Mini-PCIe slot
 Please note that if you require 4G functionality, it is necessary to purchase the corresponding 4G module and external antenna. [Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna).
 :::
 
+#### Connect to 4G module by ECM mode
+
 To interact with a 4G module using AT commands via minicom, follow these steps:
 
 **Step 1.** Please put in the 4G enabled sim-card in the [sim card slot](/recomputer_r/#sim-slot), before you power up the system.
@@ -1153,7 +1155,115 @@ Then you could reboot or wait for a while for the moudel to get internet from yo
 
 You can also use the command `ifconfig` to query the networking status of reComputer R1000.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image33.png"/></div>
+ECM mode will create a new network interface `usb0` for you to use.
+
+
+#### Connect to 4G module by QMI mode
+
+To interact with a 4G module using QMI protocol via qmicli, follow these steps:
+
+**Step 1.** Download the quectel-CM tool to the `/usr/bin/` directory.
+
+```sh
+# Use wget to download the compiled quectel-CM to /usr/bin/
+sudo wget -O /usr/bin/quectel-CM https://files.seeedstudio.com/wiki/reComputer-R1000/network/quectel-CM
+# Add execution permission
+sudo chmod 777 /usr/bin/quectel-CM
+```
+
+**Step 2.** Set the 4G network card mode to QMI.
+
+```sh
+sudo minicom -D /dev/ttyUSB2 -b 115200
+
+# Enter the following command
+AT+QCFG="usbnet",0
+# Enter the following command to verify
+AT+QCFG="usbnet"
+# Successful configuration is indicated by the following response
+AT+QCFG="usbnet",0
+
+# Enter the command to restart and enable the module
+AT+CFUN=1,1
+```
+
+**Step 3.** Test the network connection.
+
+```sh
+# Use the -s parameter to specify the APN for the data connection
+sudo ./quectel-CM -s APN
+
+# APN settings for different carriers
+China Mobile: "cmnet"
+China Unicom: "3gnet"
+China Telecom: "ctnet"
+```
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/get_start/image-1.png"/></div>
+
+Enter ifconfig to check if an IP address has been assigned
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/get_start/image-2.png"/></div>
+
+After the network connection test is successful, you can create a systemd service to ensure that the 4G module is automatically connected when the system boots up.
+
+**Step 4.** Create a systemd service file.
+
+Create an auto-start script:
+
+```sh
+sudo vi /opt/auto_4G.sh
+```
+
+Enter the following content. The APN should be determined based on your SIM card's carrier. Here, `3gnet` is the APN for China Unicom.
+
+```sh
+#!/bin/bash
+sudo quectel-CM -s 3gnet
+```
+
+Add execution permission:
+
+```bash
+sudo chmod 0755 /opt/auto_4G.sh
+```
+
+Create an auto-start service file:
+
+```bash
+sudo vi /etc/systemd/system/auto_4G.service
+```
+
+Content of the service file:
+
+```bash
+[Unit]
+Description = auto_4G daemon
+
+[Service]
+ExecStart = /opt/auto_4G.sh
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
+```
+
+Enable and start the auto_4G.service:
+
+```bash
+sudo systemctl enable auto_4G
+sudo systemctl start auto_4G
+```
+
+Then you could reboot or wait for a while for the moudel to get internet from your sim card carrier.
+
+You can also use the command `ifconfig` to query the networking status of reComputer R1000.
+
+QMI mode will create a new network interface `wwan0` for you to use.
+
+
+
 
 ### LoRa® Module
 
