@@ -14,7 +14,7 @@ last_update:
 ---
 
 
-# coupling reCamera n8n Telegram
+# Coupling reCamera n8n Telegram
 
 ## Introduction
 

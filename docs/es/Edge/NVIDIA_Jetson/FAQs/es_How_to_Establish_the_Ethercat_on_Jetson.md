@@ -164,13 +164,147 @@ El parámetro después de `-p` puede ser cualquier valor de `0` a `n`.
     src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/slave0.png"/>
 </div>
 
+
+## 5. Ejemplo – Controlando un Motor EtherCAT en Jetson (MyActuator X4)
+
+Basándose en los pasos de configuración y verificación de las secciones anteriores, ahora debería poder controlar un motor EtherCAT usando un dispositivo Jetson.  
+
+En esta sección, utilizamos el **MyActuator X4** como ejemplo para demostrar cómo controlar un motor EtherCAT desde el Jetson.  
+
+:::note
+Esta sección es solo para referencia. Cada motor EtherCAT utiliza un protocolo de comunicación diferente, por lo que necesitará adaptar el ejemplo según el protocolo utilizado por su dispositivo específico.
+:::
+
+Este ejemplo proporciona código de muestra para controlar un motor EtherCAT **MyActuator X4**. Descárguelo y compílelo desde GitHub:  
+```bash
+git clone https://github.com/jjjadand/ethercat-myctor.git
+cd src/build
+cmake ..
+make
+```
+El ejemplo está implementado basado en [EtherCAT-Master](https://gitlab.com/etherlab.org/ethercat), El diagrama de flujo del programa se muestra a continuación:  
+
+<details>
+<summary> Diagrama de Flujo del Programa </summary>
+
+```bash
+                     ┌──────────────────────────────────────┐
+                     │        1. Master Initialization        │
+                     ├──────────────────────────────────────┤
+                     │ ecrt_request_master()                 │
+                     │ ecrt_master_create_domain()           │
+                     │ ecrt_master_slave_config()            │
+                     │ Configure Distributed Clock (DC)      │
+                     │ Register PDO entries (RxPDO/TxPDO)    │
+                     │ ecrt_master_activate()                │
+                     │ Get domain memory pointer             │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │      2. PREOP  →  SAFEOP Transition   │
+                     ├──────────────────────────────────────┤
+                     │ Slave boots in PREOP                 │
+                     │ Master exchanges SDO if needed       │
+                     │ (optional: set 0x6060 = CSP)         │
+                     │ DC start time prepared               │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │      3. SAFEOP → OP Transition       │
+                     ├──────────────────────────────────────┤
+                     │ Domain becomes active (WKC > 0)      │
+                     │ Application loop starts running      │
+                     │ Master supplies application time     │
+                     │ Master synchronizes DC clocks        │
+                     │ Slave goes OP (operational)          │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │        4. CiA-402 State Machine       │
+                     ├──────────────────────────────────────┤
+                     │ Write ControlWord = 0x0006 (Shutdown)│
+                     │ Wait READY_TO_SWITCH_ON              │
+                     │ Write ControlWord = 0x0007 (SwitchOn)│
+                     │ Wait SWITCHED_ON                     │
+                     │ Write ControlWord = 0x000F (EnableOp)│
+                     │ Wait OPERATION_ENABLED               │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │     5. Enter CSP Motion Operation     │
+                     ├──────────────────────────────────────┤
+                     │ Write Mode of Operation (0x6060=8)   │
+                     │ Read Actual Position (0x6064)        │
+                     │ Initialize Target Position (607A)    │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │     6. Real-Time Cyclic Operation     │
+                     ├──────────────────────────────────────┤
+                     │ loop at 1 kHz (or higher):           │
+                     │   - Sleep until next cycle           │
+                     │   - ecrt_master_application_time()   │
+                     │   - ecrt_master_sync_reference_clock │
+                     │   - ecrt_master_sync_slave_clocks    │
+                     │   - Receive / process domain         │
+                     │   - Generate new target position     │
+                     │   - Write ControlWord = 0x000F       │
+                     │   - Write OperationMode = 8 (CSP)     │
+                     │   - Write new TargetPosition         │
+                     │   - Queue & send domain              │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │     7. Monitoring & Fault Handling    │
+                     ├──────────────────────────────────────┤
+                     │ Read status word (0x6041) each cycle │
+                     │ Detect faults (bit3)                 │
+                     │ Detect target reached (0x0400)       │
+                     │ Optionally read torque/velocity      │
+                     │ Execute FAULT RESET if needed        │
+                     └──────────────────────────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │             8. Shutdown               │
+                     ├──────────────────────────────────────┤
+                     │ Stop real-time thread               │
+                     │ Write ControlWord=0 (disable)       │
+                     │ Release EtherCAT master             │
+                     └──────────────────────────────────────┘
+```
+
+</details>
+
+
+Al controlar un motor EtherCAT en Jetson sin un kernel en tiempo real, se recomienda **bloquear la frecuencia de la CPU para asegurar una sincronización estable con el dispositivo EtherCAT**.  
+
+Después de compilar el ejemplo, ejecuta los siguientes comandos en la terminal:  
+
+```bash
+sudo jetson_clocks # lock CPU frequency for stability
+sudo ./ethercat_master
+```
+
+Después de ejecutar el programa, espera aproximadamente dos segundos — el motor comenzará a moverse en bucle.
+<div align="center"><img width ="500" 
+    src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/ethercat-loop2.gif"/>
+</div>
+
+
 ## Recursos
 
-- [Código fuente del Maestro EtherCAT](https://gitlab.com/etherlab.org/ethercat.git)
+- [Código fuente de EtherCAT Master](https://gitlab.com/etherlab.org/ethercat.git)
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -146,7 +146,7 @@ Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin
 - **Smart Thermostat Display**: Show temperature and humidity levels, as well as control settings for your smart thermostat.
 - **Digital Photo Frame**: Create a WiFi-enabled digital photo frame that can display images from your smart home network.
 
-## Hardware Overiew
+## Hardware Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
@@ -163,12 +163,12 @@ This version XIAO ePaper Display Board(ESP32-S3) - EE04 does not support NFC fun
 - [1.54-inch ePaper - Monochrome 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
 - [2.13-inch ePaper -Flexible Monochrome 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [2.13-inch ePaper - Quadruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [2.9-inch ePaper - Monochorm 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [2.9-inch ePaper - Monochrome 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
 - [2.9-inch ePaper - Quadruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [4.2-inch ePaper - Monochorm 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [4.26-inch ePaper - Monochorm 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [5.83-inch ePaper - Monochorm 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [7.5-inch ePaper - Monochorm 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [4.2-inch ePaper - Monochrome 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [4.26-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [5.83-inch ePaper - Monochrome 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [7.5-inch ePaper - Monochrome 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [7.5-inch ePaper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/37.png" style={{width:800, height:'auto'}}/></div>
@@ -195,11 +195,9 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 
 :::
 
-## Software Overiew
+## Software Overview
 
-### Install Seeed Arduino GFX Library
-
-**Step 3.** Install Seeed GFX Library
+### Install Seeed GFX Library
 
 :::tip
 This library has same function as TFT library and no compatible with it. If you have installed TFT library or other similary display libraries, please uninstall it first.
@@ -435,7 +433,11 @@ void loop() {
 
 ## Resources
 
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE04/EE04.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_SCH_V1.2.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE04 Grabcad 3D File](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_V1.2_SCH&PCB.zip)
+
+
 
 ## Tech Support & Product Discussion
 

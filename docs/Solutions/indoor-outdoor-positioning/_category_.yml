@@ -1,0 +1,10 @@
+position: 7
+label: 'Indoor-Outdoor Positioning'
+collapsible: true
+collapsed: true
+className: _indoor-outdoor-positioning
+# link:
+#   type: generated-index
+#   slug: indoor-outdoor-positioning
+#   title: Indoor-Outdoor Positioning
+#   description: Positioning and tracking solutions across indoor and outdoor environments.

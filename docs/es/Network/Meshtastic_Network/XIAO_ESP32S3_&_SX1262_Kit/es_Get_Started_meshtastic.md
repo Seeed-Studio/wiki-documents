@@ -4,7 +4,7 @@ title: XIAO ESP32-S3&Wio SX1262 Kit
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /es/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
 last_update:
-  date: 11/11/2025
+  date: 11/24/2025
   author: Michelle Huang
 ---
 
@@ -50,7 +50,7 @@ Antes de usar Meshtastic, el dispositivo necesita ser conectado primero. Hay dos
 
 El XIAO ESP32S3 tiene un chip de gestión de energía integrado que permite que el XIAO ESP32S3 sea alimentado independientemente usando una batería o cargar la batería a través del puerto USB del XIAO ESP32S3.
 
-Si quieres conectar la batería para XIAO, te recomendamos que compres una batería recargable de `litio de 3.7V` calificada con `circuito de protección`. Al soldar la batería, por favor ten cuidado de distinguir entre los terminales positivo y negativo. El terminal negativo de la fuente de alimentación debe estar en el lado más cercano al puerto USB, y el terminal positivo de la fuente de alimentación es el lado alejado del puerto USB.
+Si quieres conectar la batería para XIAO, te recomendamos que compres una batería `de litio de 3.7V` recargable calificada con `circuito de protección`. Al soldar la batería, por favor ten cuidado de distinguir entre los terminales positivo y negativo. El terminal negativo de la fuente de alimentación debe estar en el lado más cercano al puerto USB, y el terminal positivo de la fuente de alimentación es el lado alejado del puerto USB.
 
 
 
@@ -95,11 +95,11 @@ Los últimos cuatro dígitos de nodenum son el ID del número del dispositivo de
 :::
 
 
-### Conexión con SX-1262
+### Conectado a SX-1262
 
 El SX-1262 se puede conectar al Xiao ESP32-S3 a través de la interfaz B2B. El SX-1262 usa SPI para comunicarse con Xiao ESP32-S3.
 :::warning
-El SX-1262 compatible solo se puede comprar dentro del kit.  
+El SX-1262 compatible solo se puede comprar dentro del kit.
 :::
 ## Comunicarse con Wio Tracker T1000-E
 
@@ -196,7 +196,7 @@ Hay varias secciones de configuración en el firmware de Meshtastic, estas está
 | ---- | ---- |
 | [Bluetooth](https://meshtastic.org/docs/configuration/radio/bluetooth/) | Las opciones de configuración de Bluetooth son: Habilitado, Modo de Emparejamiento y PIN Fijo. |
 | [Channels](https://meshtastic.org/docs/configuration/radio/channels/) | Las opciones de configuración de Canales son: Índice, Rol y Configuraciones. |
-| [Device](https://meshtastic.org/docs/configuration/radio/device/) | Las opciones de configuración de Dispositivo son: Rol del Dispositivo, Salida Serie, Registro de Depuración y Restablecimiento de Fábrica. |
+| [Device](https://meshtastic.org/docs/configuration/radio/device/) | Las opciones de configuración de Dispositivo son: Rol del Dispositivo, Salida Serial, Registro de Depuración y Restablecimiento de Fábrica. |
 | [Display](https://meshtastic.org/docs/configuration/radio/display/) | Las opciones de configuración de Pantalla son: Duración de Pantalla Encendida, Intervalo de Carrusel Automático, Siempre Apuntar al Norte y Formato GPS. |
 | [LoRa](https://meshtastic.org/docs/configuration/radio/lora/) | Las opciones de configuración de LoRa son: Región, Preajuste de Módem, Saltos Máximos, Potencia de Transmisión, Ancho de Banda, Factor de Dispersión, Tasa de Codificación, Desplazamiento de Frecuencia, Transmisión Deshabilitada e Ignorar Array Entrante. |
 | [Network](https://meshtastic.org/docs/configuration/radio/network/) | Las opciones de configuración de Red son: WiFi Habilitado, SSID WiFi, PSK WiFi, Modo WiFi y Servidor NTP. |
@@ -218,12 +218,19 @@ Los módulos están incluidos en el firmware y permiten a los usuarios extender 
 | [MQTT](https://meshtastic.org/docs/configuration/module/mqtt/) | Reenviar paquetes a un servidor MQTT. Esto permite a los usuarios en la malla local comunicarse con usuarios en otra malla a través de internet. |
 | [Neighbor Info](https://meshtastic.org/docs/configuration/module/neighbor-info/)| Enviar información sobre vecinos de 0 saltos a la malla. |
 | [Paxcounter](https://meshtastic.org/docs/configuration/module/paxcounter/) | Contar el número de dispositivos BLE y Wifi que pasan por un nodo. |
-| [Range Test](https://meshtastic.org/docs/configuration/module/range-test/) | Enviar mensajes con ubicación GPS a intervalos para probar la distancia que pueden comunicar tus dispositivos. Requiere (al menos) un dispositivo configurado como emisor y uno como receptor. El/los receptor(es) registrarán todos los mensajes entrantes en un CSV. |
-| [Remote Hardware](https://meshtastic.org/docs/configuration/module/remote-hardware/) | Establecer y leer el estado de un GPIO remotamente a través de la malla. |
-| [Serial Module](https://meshtastic.org/docs/configuration/module/serial/) | Enviar mensajes a través de la malla enviando cadenas por un puerto serie. |
+| [Range Test](https://meshtastic.org/docs/configuration/module/range-test/) | Enviar mensajes con ubicación GPS a intervalos para probar la distancia a la que tus dispositivos pueden comunicarse. Requiere (al menos) un dispositivo configurado como emisor y uno como receptor. El/los receptor(es) registrarán todos los mensajes entrantes en un CSV. |
+| [Remote Hardware](https://meshtastic.org/docs/configuration/module/remote-hardware/) | Establecer y leer un estado GPIO remotamente a través de la malla. |
+| [Serial Module](https://meshtastic.org/docs/configuration/module/serial/) | Enviar mensajes a través de la malla enviando cadenas por un puerto serial. |
 | [Store & Forward](https://meshtastic.org/docs/configuration/module/store-and-forward-module/) | Almacena mensajes en un dispositivo para entrega después de que los clientes desconectados se reúnan con la malla. |
 | [Telemetry](https://meshtastic.org/docs/configuration/module/telemetry/) | Conectar sensores al dispositivo y transmitir lecturas a intervalos regulares a la malla. |
 | [Traceroute](https://meshtastic.org/docs/configuration/module/traceroute/) | Rastrear qué nodos se usan para saltar un mensaje a cierto destino. |
+## Recursos
+
+- [El Diagrama Esquemático del SX1262 compatible con Xiao ESP32-S3](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
+- [Archivo 3D Wio-SX1262 para XlAO](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
+- [Hoja de Datos del Módulo Wio-SX1262](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
+- [Archivo 3D de Carcasa](https://www.thingiverse.com/thing:6888371)
+- [Biblioteca Kicad del Kit XIAO ESP32S3](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20Wio%20SX1262%20for%20XIAO%20ESP32S3)
 
 ## Soporte Técnico y Discusión de Productos
 

@@ -1,13 +1,13 @@
 ---
 description: Introducción al Wio Tracker L1 Series
-title:  Introducción al Wio Tracker L1
+title: Introducción al Wio Tracker L1
 keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
 slug: /es/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 11/12/2025
+  date: 11/24/2025
   author: Michelle Huang
 ---
 
@@ -177,7 +177,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 
 ### Configurar los Parámetros
 
-Para comenzar a comunicarte a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
+Para comenzar a comunicarte a través de la malla, debes configurar tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe configurarse según tu ubicación regional.
 
 <Tabs>
 <TabItem value="ios" label="App IOS">
@@ -196,7 +196,7 @@ Para comenzar a comunicarte a través de la malla, debes establecer tu región. 
 
 |**Código de Región**|**Descripción**|**Rango de Frecuencia (MHz)**|**Ciclo de Trabajo (%)**|**Límite de Potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Sin establecer|N/A|N/A|N/A|
+|UNSET|Sin configurar|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
@@ -206,11 +206,11 @@ Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/regi
 **EU_868** debe adherirse a una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto en una base móvil de 1 hora. Tu dispositivo dejará de transmitir si lo alcanzas, hasta que se permita nuevamente.
 :::
 
-Ahora que has establecido la región LoRa en tu dispositivo, puedes continuar configurando cualquier [Configuración LoRa](https://meshtastic.org/docs/configuration/radio/lora/) para satisfacer tus necesidades.
+Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [Configuración LoRa](https://meshtastic.org/docs/configuration/radio/lora/) para satisfacer tus necesidades.
 
-### Conexión de sensor
+### Conexión de sensores
 
-Puedes agregar un sensor al dispositivo a través de la interfaz Grove. Los siguientes sensores han sido verificados como compatibles con la interfaz Grove en el dispositivo.
+Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los siguientes sensores han sido verificados como compatibles con la interfaz Grove del dispositivo.
 
 <table>
   <tr>
@@ -245,6 +245,10 @@ Puedes agregar un sensor al dispositivo a través de la interfaz Grove. Los sigu
   </tr>
 </table>
 
+### Conexión de pantalla
+
+ - [Haz clic aquí](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) para obtener la pantalla E-Ink compatible.
+- Por favor, mantente atento a nuestra pantalla OLED compatible de venta por separado, que estará disponible pronto. El controlador OLED actual es SSD1306.
 
 ### Teclado virtual
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
@@ -253,9 +257,36 @@ Puedes agregar un sensor al dispositivo a través de la interfaz Grove. Los sigu
 
 ## Preguntas frecuentes
 
-### Entrar al modo DFU manualmente
+### Dispositivo bloqueado e instalación del bootloader
 
-Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED amarillo permanecerá encendido de forma continua, y aparecerá una nueva unidad USB llamada `Tracker L1` en tu PC.
+**Descripción:**
+
+El dispositivo no responde, no hay LED, no se puede emparejar con tu aplicación. Si encuentras que el dispositivo está completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
+
+:::danger note
+Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de flasheo.
+:::
+
+- Paso 1: [Haz clic aquí para descargar el Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+
+- Paso 2: Entrar en modo DFU
+
+  Haz doble clic en el botón RST para entrar en modo DFU. Aparecerá el disco con nombre "Tracker L1".
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
+
+- Paso 3: Pegar el archivo del bootloader
+
+  Reemplaza todos los archivos en el disco con el archivo del bootloader descargado.
+
+- Paso 4: Flashear el firmware
+
+  Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) para flashear el firmware de la aplicación. Es posible que necesites [entrar en modo DFU manualmente](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+
+
+### No se puede entrar en DFU y entrar en modo DFU manualmente
+
+Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED amarillo permanecerá encendido fijo, y aparecerá una nueva unidad USB llamada `Tracker L1` en tu PC.
 
 ### Salir del modo DFU
 
@@ -269,6 +300,7 @@ Presiona el botón `Reset` una vez para salir del modo DFU.
 
       Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
 ## Recursos
+- [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) Archivo de referencia para impresión 3D](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [(V2 Nuevo joystick de cuatro direcciones) Archivo de referencia para impresión 3D](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [Archivo de contorno](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)

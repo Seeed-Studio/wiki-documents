@@ -576,7 +576,7 @@ sudo minicom -D /dev/ttyACM2
 以 ACM2 和 ACM3 为例：
 如果您想从 ACM2 发送到 ACM3，ACM2 需要重新设置：***ctrl+A***，然后按***Z***，再按***E***，然后启动串口写命令。此时您可以在 ACM2 中随意打印字符串，同时可以在 ACM3 中看到 ACM2 的内容；
 相反，如果您想从 ACM3 发送到 ACM2，ACM3 需要重新设置：***ctrl+A***，然后按***Z***，再按***E***，然后启动串口写命令。此时您可以在 ACM3 中随意打印字符串，同时可以在 ACM2 中看到 ACM3 的内容。如图所示。
-：：：
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 

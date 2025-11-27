@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /ja/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 11/12/2025
+  date: 11/24/2025
   author: Michelle Huang
 ---
 
@@ -136,7 +136,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- コード（デフォルトコードは`123456`）を入力し、`OK`をクリックしてデバイスに接続してください。
+- コードを入力し（デフォルトコードは`123456`）、`OK`をクリックしてデバイスに接続してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -206,11 +206,11 @@ import TabItem from '@theme/TabItem';
 **EU_868**は、1時間のローリングベースで毎分計算される10%の時間デューティサイクル制限を遵守する必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスにLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
+デバイスでLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)の設定を続けることができます。
 
 ### センサー接続
 
-Groveインターフェース経由でデバイスにセンサーを追加できます。以下のセンサーは、デバイスのGroveインターフェースとの互換性が確認されています。
+Grove インターフェース経由でデバイスにセンサーを追加できます。以下のセンサーは、デバイスのGrove インターフェースとの互換性が確認されています。
 
 <table>
   <tr>
@@ -240,38 +240,70 @@ Groveインターフェース経由でデバイスにセンサーを追加でき
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
-    <td>I2C キーボード</td>
+    <td>I2Cキーボード</td>
     <td>CardKB</td>
   </tr>
 </table>
 
+### スクリーン接続
 
-### バーチャルキーボード
+ - [こちらをクリック](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)して、対応するE-Inkスクリーンを入手してください。
+- 対応する別売りOLEDスクリーンは近日発売予定です。お楽しみにお待ちください。現在のOLEDドライバーはSSD1306です。
+
+### 仮想キーボード
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7 バージョンのファームウェアでバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力して他のデバイスと通信できます。ファームウェアを更新するには、[Flash Firmware Tutorial](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) に従ってください。
+2.7バージョンのファームウェアで仮想キーボードがサポートされました！デバイス上で直接メッセージを入力して、他のデバイスと通信できます。[ファームウェアフラッシュチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってファームウェアを更新してください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## FAQ
 
-### DFU モードの手動入力
+### デバイスの故障とブートローダーのインストール
 
-デバイスを PC に接続し、`Reset` ボタンを 2 回押します。黄色の LED が点灯し続け、PC に `Tracker L1` という名前の新しい USB ドライブが表示されます。
+**説明：**
 
-### DFU モードの終了
+デバイスが応答しない、LEDが点灯しない、アプリとペアリングできない場合。独自のファームウェアをフラッシュした後にデバイスが完全に動作しなくなった場合は、ブートローダーの再インストールも試してください。
 
-DFU モードを終了するには、`Reset` ボタンを 1 回押します。
+:::danger note
+ブートローダーをフラッシュする際は、ケーブル接続が安定していることを確認し、フラッシュプロセス中は**絶対に**切断しないでください。
+:::
+
+- ステップ1：[こちらをクリックしてブートローダーをダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+
+- ステップ2：DFUモードに入る
+
+  RSTボタンをダブルクリックしてDFUモードに入ります。「Tracker L1」というディスク名が表示されます。
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
+
+- ステップ3：ブートローダーファイルを貼り付ける
+
+  ディスク内のすべてのファイルをダウンロードしたブートローダーファイルで上書きします。
+
+- ステップ4：ファームウェアをフラッシュする
+
+  上記の手順を完了したら、この[ステップ](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってアプリケーションファームウェアをフラッシュできます。[手動でDFUモードに入る](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)必要がある場合があります。
+
+
+### DFUに入れない場合と手動でのDFUモード入力
+
+デバイスをPCに接続し、`Reset`ボタンをダブルプレスします。黄色のLEDが点灯し続け、PC上に`Tracker L1`という名前の新しいUSBドライブが表示されます。
+
+### DFUモードの終了
+
+`Reset`ボタンを一度押してDFUモードを終了します。
 
 ### 信号品質
 
-- **SNR** は通信リンクの品質を反映します。通常のデバイスは -7 dB 以上で動作します。SNR が -10 dB 未満のデバイスは性能が悪いことを示します。
+- **SNR**は通信リンクの品質を反映します。通常のデバイスは-7 dB以上で動作します。SNRが-10 dB未満のデバイスは性能が悪いことを示します。
 
-- **RSSI** はデバイスとその周辺環境によって決まります。通常のデバイスは -110 dBm 以上で動作します。RSSI が -115 dBm 未満のデバイスは性能が悪いと考えられます。
+- **RSSI**はデバイスとその周辺環境によって決まります。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
 
-      最良の信号効果を得るために、干渉が最小限で障害物のない開放的なエリアでデバイスを使用してください。
+      最良の信号効果を得るために、干渉が最小限で開放的で障害物のない場所でデバイスを使用してください。
 ## リソース
-- [(V1) 3D プリント参考ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
-- [(V2 新しい 4 方向ジョイスティック) 3D プリント参考ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
+- [ブートローダー](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- [(V1) 3Dプリント参考ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
+- [(V2 新4方向ジョイスティック) 3Dプリント参考ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [アウトラインファイル](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
-- [FCC 認証](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
-- [CE 認証](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
+- [FCC認証](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
+- [CE認証](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
 - [消費電力テストとバッテリー寿命計算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
