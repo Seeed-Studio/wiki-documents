@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-27 11:20:16 (北京时间)
-// 多语言页面: 2061 个
+// 生成时间: 2025-11-27 17:37:43 (北京时间)
+// 多语言页面: 2063 个
 
 (function() {
   'use strict';
@@ -923,7 +923,7 @@
     "es",
     "ja"
   ],
-  "/robotics_j501_mini_hardware_interfaces_usage": [
+  "/recomputer_j501_mini_getting_started": [
     "cn",
     "en",
     "es",
@@ -2087,6 +2087,12 @@
     "es",
     "ja"
   ],
+  "/facial_recognition_on_the_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/install_m2_coral_to_rpi5": [
     "cn",
     "en",
@@ -2520,6 +2526,12 @@
     "ja"
   ],
   "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
     "es",
