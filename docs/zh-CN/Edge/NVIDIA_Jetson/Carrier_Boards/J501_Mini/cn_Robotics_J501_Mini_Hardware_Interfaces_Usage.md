@@ -9,7 +9,7 @@ tags:
   - Interfaces
   - Hardware
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
-slug: /cn/robotics_j501_mini_hardware_interfaces_usage
+slug: /cn/recomputer_j501_mini_getting_started
 last_update:
   date: 11/04/2025
   author: Dayu
@@ -113,11 +113,11 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>1x DI JST 5 针连接器(GH 1.25)；<br />1x DO JST 5 针连接器(GH 1.25)；</td>
+      <td>1x DI JST 6 针连接器(GH 1.25)；<br />1x DO JST 5 针连接器(GH 1.25)；</td>
     </tr>
       <tr>
       <td>I2S</td>
-      <td>1x I2S JST 5 针连接器(GH 1.25)</td>
+      <td>1x I2S JST 6 针连接器(GH 1.25)</td>
     </tr>
     <tr>
       <td>RS485</td>
@@ -125,7 +125,7 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x UART JST 4 针连接器（与 DI 复用）</td>
+      <td>1x UART JST 6 针连接器（与 DO 复用）</td>
     </tr>
     <tr>
       <td>显示</td>
@@ -153,7 +153,7 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
     </tr>
     <tr>
       <th rowSpan="1">电源</th>
-      <td colSpan="2">19-54V XT30(2+2)（包含 XT30 转 5525 DC 插头线缆）</td>
+      <td colSpan="2">19-48V XT30（包含 XT30 转 5525 DC 插头线缆）</td>
     </tr>
     <tr>
       <th rowSpan="1">Jetpack 版本</th>
