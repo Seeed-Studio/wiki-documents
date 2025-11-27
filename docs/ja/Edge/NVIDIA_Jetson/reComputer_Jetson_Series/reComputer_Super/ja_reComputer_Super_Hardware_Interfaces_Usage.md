@@ -674,7 +674,7 @@ sudo gpioset --mode=wait 0 121=1
 
 12ピン制御およびUARTヘッダーは、外部デバイスの接続と管理に必要な制御信号とUART通信インターフェースを提供します。
 
-:::Note
+:::note
 reComputer Superのピン機能はreComputer Classicと似ています。詳細については[こちら](https://wiki.seeedstudio.com/ja/J401_carrierboard_Hardware_Interfaces_Usage/#gpio)を参照してください。
 :::
 
