@@ -34,7 +34,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_ONE_Weather_Station', 'SenseCAP_ONE_Compact_Weather_Station', 'Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor.md'), //11.25
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'XIAO_ESP32S3_&_SX1262_Kit', 'nrf52840_1262.md'), //11.24
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Face_Regonition_with_MCP.md'), //11.24
-  
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'get_started_with_lorawan_tracker.md'), //11.26
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_A1102', 'DeployAI_With_A1102.md'), //11.26
+  path.join(docsDirectory, 'Sensor', 'ePaper', 'XIAO_ePaper_Display_Board_EN04', 'EN04_GettingStart.md'), //11.25
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）
