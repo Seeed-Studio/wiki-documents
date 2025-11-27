@@ -1,6 +1,6 @@
 ---
 description: "Hello Watcher"
-title: SenseCAP Watcher - AI Assistant that actively interacts with the world
+title: AI Assistant that actively interacts with the world
 keywords:
 - Jarvis
 - SenseCAP Watcher

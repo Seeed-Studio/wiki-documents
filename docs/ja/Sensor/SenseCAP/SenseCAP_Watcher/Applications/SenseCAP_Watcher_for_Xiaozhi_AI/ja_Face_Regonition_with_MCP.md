@@ -17,10 +17,12 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /ja/face_regonition_with_mcp
 last_update:
-  date: 11/24/2025
+  date: 11/25/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
-# Groveを使用したMCPの拡張
+# MCPを使用した顔認識の拡張
 
 ## 概要
 
@@ -52,7 +54,7 @@ last_update:
 </table>
 
 ## 前提条件
-reComputer Raspberry Piシステムのインストールについては、このガイドに従ってください：[reComputer R2000 系列入門ガイド](https://wiki.seeedstudio.com/ja/r2000_series_getting_start/#flash-os)
+reComputer Raspberry Piシステムをインストールするには、このガイドに従ってください：[reComputer R2000 系列入門ガイド](https://wiki.seeedstudio.com/ja/r2000_series_getting_start/#flash-os)
 
 ## 実行結果
 
@@ -238,6 +240,9 @@ AIは自動的にMCPツールを呼び出して顔データベースを確認し
 
 **A:** IPアドレスが正しく、顔認識サービスが正常に動作していることを確認してください。
 
+**Q: 顔認識システムを他のデバイスにデプロイできますか？**
+
+**A:** はい。デバイスがLinuxベースのシステムを実行し、ネットワークに接続できる限り、デプロイに使用できます。ただし、reComputer系列はより優れた計算性能を提供します。
 
 ## 技術サポート
 
