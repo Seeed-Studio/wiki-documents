@@ -3422,6 +3422,7 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/real-time-ocr',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/reTerminal_ML_TFLite',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/facial_recognition_on_the_recomputer'
                   ]
                 },
               ]
