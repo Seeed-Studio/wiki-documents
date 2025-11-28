@@ -15,6 +15,8 @@ last_update:
 
 # reCamera と Wifi Halow に基づく AI リモート無線監視システム
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/6.gif" /></div>
+
 アウトドア愛好家の方は、野外でのネットワーク不足、従来のWiFiの限られたカバレッジ、カメラが長距離でリアルタイム画像を送信できないことに悩まされることがよくありませんか？このWikiを通じて、**reCamera シリーズ**と**Wifi Halow**画像伝送モジュールに基づいた独自の**AIリモート無線監視システム**を実装できます。もちろん、以下を含むがこれに限定されない、より多くの想像力を持つことができます：
 
 - 配線やルーターを必要とせずに、敷地全体の無線監視を行い、オンボードAIで不審な活動を検出したい場合。
@@ -252,11 +254,7 @@ Workspace ページの表示
 
 #### ステップ 1.3 ストリームノードの設定
 
-上記のように、Node-RED で rtsp プッシュストリームを設定する必要があります。左側のノードリストで、マウスホイールを下にスクロールして最下部まで移動し、Stream ノードを見つけます。
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_2.png" /></div>
-
-設定方法については、以下を参照してください：[Node-Red Stream Node Configuration](https://wiki.seeedstudio.com/ja/recamera_develop_with_node-red/#stream-node) 設定後、以下の結果が得られるはずです：
+前述のとおり、Node-RED 上で RTSP のプッシュ配信を設定する必要があります。左側のノード一覧で「stream」ノードを検索するか、マウスホイールで一番下までスクロールして Stream ノードを見つけてください。設定方法については、以下を参照してください：[Node-Red Stream Node Configuration](https://wiki.seeedstudio.com/ja/recamera_develop_with_node-red/#stream-node) 設定後、以下の結果が得られるはずです：
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_3.png" /></div>
 
@@ -275,7 +273,7 @@ nnn.nnn:9000 として設定する必要があります。実際、192.168.nnn.n
 
 または、Node RED を修正したばかりの Workspace ページで、左上の "Setting" をクリックします
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4_1.png" /></div>
 
 > 図 4：Workspace Setting フレーム
 
@@ -444,7 +442,7 @@ rtsp://admin:admin@192.168.10.100:554/live
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_1.jpg" /></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_2.jpg" /></div>
+<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_2.jpg" /></div>
 
 #### ステップ 4.3 ffmpeg と nmap を reTerminal にインストールする
 
