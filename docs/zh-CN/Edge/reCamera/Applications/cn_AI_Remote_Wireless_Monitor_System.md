@@ -15,6 +15,8 @@ last_update:
 
 # 基于 reCamera 和 Wifi Halow 的 AI 远程无线监控系统
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/6.gif" /></div>
+
 如果您是户外爱好者，是否经常为野外缺乏网络、传统 WiFi 覆盖范围有限、摄像头无法远距离实时传输图像而困扰？通过这个 Wiki，您可以实现自己的**AI 远程无线监控系统**，基于 **reCamera 系列**和 **Wifi Halow** 图传模块。当然，您可以有更多想象，包括但不限于以下场景：
 
 - 您希望对整个物业进行无线监控，但不需要布线或路由器，并通过板载 AI 检测可疑活动。
@@ -252,11 +254,7 @@ Workspace 页面显示
 
 #### 步骤 1.3 配置流节点
 
-如上所述，我们需要在 Node-RED 上配置 rtsp 推流。在左侧的节点列表中，向下滚动鼠标滚轮到底部找到 Stream 节点。
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_2.png" /></div>
-
-配置方法请参考：[Node-Red Stream 节点配置](https://wiki.seeedstudio.com/cn/recamera_develop_with_node-red/#stream-node)配置后，您应该得到以下结果：
+如上所述，我们需要在 Node-RED 中配置 RTSP 推流。在左侧的节点列表中，搜索 “stream” 节点，或者向下滚动鼠标滚轮到列表底部，找到 Stream 节点。配置方法请参考：[Node-Red Stream 节点配置](https://wiki.seeedstudio.com/cn/recamera_develop_with_node-red/#stream-node)配置后，您应该得到以下结果：
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_3.png" /></div>
 
@@ -275,7 +273,7 @@ nnn.nnn:9000 实际上，192.168.nnn.nnn 是 reTerminal 或您自己的其他终
 
 或者在刚刚修改 Node RED 的 Workspace 页面上，点击左上角的 "Setting"
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4_1.png" /></div>
 
 > 图 4：Workspace Setting 框架
 
@@ -444,7 +442,7 @@ rtsp://admin:admin@192.168.10.100:554/live
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_1.jpg" /></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_2.jpg" /></div>
+<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_2.jpg" /></div>
 
 #### 步骤 4.3 在 reTerminal 上安装 ffmpeg 和 nmap
 
