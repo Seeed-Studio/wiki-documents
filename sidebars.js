@@ -8533,6 +8533,7 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_real-time-ocr',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_reTerminal_ML_TFLite',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/cn_facial_recognition_on_the_recomputer'
                   ]
                 },
               ]
@@ -13535,6 +13536,7 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_real-time-ocr',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_reTerminal_ML_TFLite',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/es_facial_recognition_on_the_recomputer'
                   ]
                 },
               ]
@@ -18537,6 +18539,7 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_real-time-ocr',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_reTerminal_ML_TFLite',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/ja_facial_recognition_on_the_recomputer'
                   ]
                 },
               ]
