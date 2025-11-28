@@ -1,11 +1,11 @@
 ---
-description: 体感機能を使用してゲームを制御します。
-title: 体感機能を使用する
+description: 体感センサー機能を使って Subway Surfers を操作します。
+title: 体感センサー操作で Subway Surfers をプレイ
 keywords:
   - reCamera
   - 感覚制御
   - ゲーム
-image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_13.png 
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif
 slug: /ja/use_the_motion-sensing_function_of_recamera_to_play_games
 sidebar_position: 9
 last_update:
@@ -13,11 +13,15 @@ last_update:
   author: Xinrui Wu
 ---
 
-# 体感機能を使用する
+# 体感センサー操作で Subway Surfers をプレイ
 
 ## はじめに
 
 reCamera は強力なエッジコンピューティング機能を備えた AI カメラです。このデモでは、デバイスレベルで YOLO11n-Pose モデルをリアルタイムで実行する能力を紹介します。クラウドに依存することなく、人体の主要なポイントと姿勢を正確に識別できます。reCamera でプレイヤーの動きをキャプチャすることで、私たちの体をコントローラーに変換し、自然な体感で「Subway Run」を操作できます：ジャンプ、しゃがみ、左右への回避、すべてがシームレスな動作で実現されます！
+
+このデモを完了したあとの使用イメージは次のとおりです。
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_text.gif" /></div>
 
 ## ハードウェアの準備
 

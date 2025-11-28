@@ -1,11 +1,11 @@
 ---
-description: 使用体感功能控制游戏。
-title: 使用体感功能
+description: 使用体感功能来控制《Subway Surfers》。
+title: 使用体感传感器来玩《Subway Surfers》
 keywords:
   - reCamera
   - Sensory control
   - Game
-image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_13.png 
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif
 slug: /cn/use_the_motion-sensing_function_of_recamera_to_play_games
 sidebar_position: 9
 last_update:
@@ -13,11 +13,15 @@ last_update:
   author: Xinrui Wu
 ---
 
-# 使用体感功能
+# 使用体感传感器来玩《Subway Surfers》
 
 ## 简介
 
 reCamera 是一款配备强大边缘计算能力的 AI 摄像头。这个演示展示了它在设备级别实时运行 YOLO11n-Pose 模型的能力——无需依赖云端，它就能准确识别人体的关键点和姿态。通过 reCamera 捕捉玩家的动作，我们将身体转化为控制器，让我们能够用自然的体感操作"地铁跑酷"：跳跃、蹲下、左右闪避，一气呵成！
+
+完成本示例后，效果如下所示。
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_text.gif" /></div>
 
 ## 硬件准备
 
