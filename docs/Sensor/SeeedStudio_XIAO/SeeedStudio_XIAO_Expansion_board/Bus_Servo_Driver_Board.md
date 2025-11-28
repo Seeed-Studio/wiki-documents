@@ -129,7 +129,7 @@ This method is used when connecting directly to the UART pins of a microcontroll
 
 - **Jumper Setting (Critical):**
 
-  - Use a 2.54mm jumper cap to short-circuit the 2pin pin on the front of the board. (It's shorted by default)
+  - There is no need to use a 2.54mm jumper cap to short-circuit the 2pin pin on the front of the board. (It's not shorted by default)
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
 - **Powering the Host:** Your host device (e.g., Raspberry Pi Zero, ESP32, XIAO) will require its own separate power supply.
@@ -153,7 +153,7 @@ This method is used when connecting to a computer or single-board computer with 
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-1.png" style={{width:400, height:'auto'}}/></div>
 
-  - **Step 2.** Use a 2.54mm jumper cap to short-circuit the 2pin pin on the front of the board. (It's shorted by default)
+  - **Step 2.** Use a 2.54mm jumper cap to short-circuit the 2pin pin on the front of the board. (It's not shorted by default)
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
 ### Required Components (Before You Start)
