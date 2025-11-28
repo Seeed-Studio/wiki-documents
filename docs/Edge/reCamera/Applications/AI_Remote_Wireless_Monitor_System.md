@@ -254,7 +254,6 @@ Double-click the camera node to enter the configuration page. To ensure fluency,
 
 #### Step 1.3 Configure the stream node
 
-
 As mentioned above, we need to configure rtsp push stream on Node-RED. In the node list on the left, search the 'stream' node or slide the mouse wheel down to the bottom to find the Stream node. After the configuration method, please refer to: [Node-Red Stream Node Configuration](https://wiki.seeedstudio.com/recamera_develop_with_node-red/#stream-node)After configuration, you should get the following results:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_3.png" /></div>
