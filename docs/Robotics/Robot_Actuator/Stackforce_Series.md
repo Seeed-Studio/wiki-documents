@@ -5,7 +5,7 @@ keywords:
 - actuator
 - motor
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010.webp
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010_homepage.webp
 slug: /stackforce_series
 last_update:
   date: 11/26/2025

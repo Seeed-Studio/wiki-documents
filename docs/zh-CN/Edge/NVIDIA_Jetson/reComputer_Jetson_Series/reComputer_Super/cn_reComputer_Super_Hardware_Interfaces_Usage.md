@@ -674,7 +674,7 @@ sudo gpioset --mode=wait 0 121=1
 
 12 针控制和 UART 接头提供了用于连接和管理外部设备的基本控制信号和 UART 通信接口。
 
-:::Note
+:::note
 reComputer Super 的引脚功能与 reComputer Classic 类似。更多详细信息，请参考[这里](https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/#gpio)。
 :::
 
