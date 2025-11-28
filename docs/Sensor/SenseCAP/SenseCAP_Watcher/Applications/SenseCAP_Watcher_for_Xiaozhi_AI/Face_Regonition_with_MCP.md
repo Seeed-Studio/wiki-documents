@@ -17,10 +17,12 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /face_regonition_with_mcp
 last_update:
-  date: 11/24/2025
+  date: 11/25/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
-# Extending MCP with Grove
+# Extending Face Regonition with MCP
 
 ## Overview
 
@@ -238,6 +240,9 @@ The AI will automatically call the MCP tool to check the face database.
 
 **A:** Please check that the IP address is correct and that the face recognition service is running properly.
 
+**Q:Can I deploy the face recognition system on other devices?**
+
+**A:** Yes. As long as the device runs a Linux-based system and can connect to the network, it can be used for deployment. However, the reComputer series offers better computing performance.
 
 ## Technical Support
 

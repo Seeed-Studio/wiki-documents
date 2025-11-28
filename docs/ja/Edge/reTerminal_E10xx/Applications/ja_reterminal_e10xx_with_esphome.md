@@ -9,7 +9,6 @@ last_update:
   author: Citric
 ---
 
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -18,7 +17,7 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/ja/reterminal_e10xx_with_esphome" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="/ja/reterminal_e10xx_with_esphome" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong></a>
 </div>
 
 ## [Home Assistant](https://www.home-assistant.io/) の紹介
@@ -31,7 +30,7 @@ Home Assistant は、スマートホームデバイスを単一の統合イン�
 
 - **ローカル制御**: 多くのクラウドベースソリューションとは異なり、Home Assistant はネットワーク上でローカルに動作するため、データのプライバシーが保たれ、インターネット接続がなくても自動化が機能します。
 
-- **豊富なデバイスサポート**: Home Assistant は数千種類のスマートホームデバイスやサービスと統合でき、高い汎用性と将来性を提供します。
+- **幅広いデバイスサポート**: Home Assistant は数千種類のスマートホームデバイスやサービスと統合でき、高い汎用性と将来性を提供します。
 
 - **強力な自動化**: 時間、デバイス状態、センサー読み取り値など、さまざまなトリガーに応答する高度な自動化ルールを作成できます。
 
@@ -57,13 +56,13 @@ reTerminal E シリーズ ePaper ディスプレイは、いくつかの理由�
 
 ### ESPHome 統合
 
-ESPHome は、ESP8266/ESP32 デバイス専用に設計されたオープンソースファームウェア作成ツールです。シンプルな YAML 設定ファイルを使用してカスタムファームウェアを作成し、デバイスにフラッシュできます。reTerminal E シリーズでは、ESPHome がデバイスと Home Assistant 間の通信を可能にする重要なミドルウェアとして機能します。
+ESPHome は、ESP8266/ESP32 デバイス専用に設計されたオープンソースファームウェア作成ツールです。シンプルな YAML 設定ファイルを使用してカスタムファームウェアを作成し、デバイスにフラッシュできます。reTerminal E シリーズにとって、ESPHome はデバイスと Home Assistant 間の通信を可能にする重要なミドルウェアとして機能します。
 
 このシステムは、YAML 設定を ESP デバイス上で動作する完全機能のファームウェアに変換することで動作します。このファームウェアは、ネットワークへの接続、Home Assistant との通信、ePaper ディスプレイの制御といった複雑なタスクをすべて処理します。Home Assistant と組み合わせることで、ESPHome は高度なホームオートメーションディスプレイとコントロールを作成するための堅牢なプラットフォームを提供します。
 
 セットアップ方法とこの多用途ディスプレイを最大限に活用する方法を探ってみましょう。
 
-## 入門
+## 入門ガイド
 
 この記事のチュートリアル内容が始まる前に、以下のハードウェアを準備する必要があります。
 
@@ -84,17 +83,17 @@ ESPHome は、ESP8266/ESP32 デバイス専用に設計されたオープンソ�
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
@@ -103,7 +102,7 @@ ESPHome は、ESP8266/ESP32 デバイス専用に設計されたオープンソ�
 
 Home Assistant Green は、ホームオートメーションを実現する最も簡単でプライバシーに配慮した方法です。簡単なセットアップを提供し、すべてのスマートデバイスを単一のシステムで制御でき、すべてのデータはデフォルトでローカルに保存されます。このボードは活発な Home Assistant エコシステムの恩恵を受け、オープンソースにより毎月改善されます。
 
-このチュートリアルでは Home Assistant Green を Home Assistant ホストとして使用することをお勧めしますが、Supervisor を持つ任意の Home Assistant ホストを使用することもできます。
+このチュートリアルでは Home Assistant Green を Home Assistant ホストとして使用することをお勧めしますが、Supervisor を備えた任意の Home Assistant ホストを使用することもできます。
 
 :::tip Home Assistant のインストール
 Seeed Studio 製品の一部に Home Assistant をインストールする方法も書いていますので、参考にしてください。
@@ -136,7 +135,7 @@ Seeed Studio 製品を使用していない場合は、Home Assistant 公式ウ�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/30.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-アドオンストアで ESPHome が見つからない場合は、アドオンをサポートする Home Assistant インストール（Home Assistant OS や supervised インストールなど）を使用していることを確認してください。他のインストールタイプ（Home Assistant Container など）では、Docker を使用して ESPHome Device Builder を独立して実行する必要がある場合があります。詳細については、[公式 ESPHome ドキュメント](https://esphome.io/guides/getting_started_hassio)を参照してください。
+アドオンストアで ESPHome が見つからない場合は、アドオンをサポートする Home Assistant インストール（Home Assistant OS や supervised インストールなど）を使用していることを確認してください。他のインストールタイプ（Home Assistant Container など）の場合は、Docker を使用して ESPHome Device Builder を独立して実行する必要があります。詳細については、[公式 ESPHome ドキュメント](https://esphome.io/guides/getting_started_hassio)を参照してください。
 :::
 
 ### ステップ 2. 新しいデバイスを追加
@@ -169,7 +168,7 @@ ESPHome に移動し、**NEW DEVICE** をクリックします。
 以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
 <Tabs>
-<TabItem value="For E1001" label="E1001 用" default>
+<TabItem value="For E1001" label="E1001 向け" default>
 
 ```yaml
 # define font to display words
@@ -186,7 +185,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -201,7 +200,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="適用于 E1002">
+<TabItem value="For E1002" label="E1002 向け">
 
 ```yaml
 
@@ -218,16 +217,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -243,7 +233,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/36.png" style={{width:1000, height:'auto'}}/></div>
 
-**INSTALL** をクリックしてコードをデバイスにインストールすると、以下の画像が表示されます。
+**INSTALL** をクリックしてコードをデバイスにインストールすると、次の画像が表示されます。
 
 <Tabs>
 <TabItem value='ブラウザ経由でインストール'>
@@ -272,15 +262,15 @@ USB ケーブルを使用して **ePaper パネルをコンピュータに接続
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-usbmodemxxx（Windows では COMxxx）を選択して connect をクリックします。[問題が発生しましたか？こちらをクリック。](#Q4)
+usbmodemxxx（Windows では COMxxx）を選択し、connect をクリックします。[問題が発生しましたか？こちらをクリック。](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-**INSTALL** をクリックして、先ほどダウンロードしたファームウェアを選択します。
+**INSTALL** をクリックし、先ほどダウンロードしたファームウェアを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div>
 
-しばらく待つと、ディスプレイに「Hello world!」が表示されます ～
+しばらく待つと、ディスプレイに「Hello world!」が表示されます～
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/37.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -292,16 +282,16 @@ usbmodemxxx（Windows では COMxxx）を選択して connect をクリックし
 Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある場合は、より簡単なこの方法をお勧めします。
 :::
 
-コードをデバイスにインストールする前に、USB ケーブルを使用して **このデバイスを Home Assistant を実行している Raspberry Pi または HA Green（Yellow）などに接続** する必要があります。
+デバイスにコードをインストールする前に、USB ケーブルを使用して **このデバイスを Home Assistant を実行している Raspberry Pi または HA Green（Yellow）などに接続** する必要があります。
 
-画像に従ってオプションをクリックし、コードをデバイスにインストールします。[デバイスがディープスリープモードの時にポートが見つからない？](#port)
+画像に従ってオプションをクリックし、デバイスにコードをインストールします。[デバイスがディープスリープモードの時にポートが見つからない？](#port)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-しばらく待つと、以下の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
+しばらく待つと、次の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/37.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -310,7 +300,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 <TabItem value='Wi-Fi経由でインストール'>
 
 :::tip
-これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用して ePaper パネルにプログラムをアップロードする必要があります。その後、wifi 経由でアップロードできます。また、この方法が機能するには、YAML 設定に適切に設定された `ota` と `api` セクションが有効な暗号化キーと共に含まれていることを確認してください。
+これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用して ePaper パネルにプログラムをアップロードする必要があります。その後、wifi 経由でアップロードできます。また、この方法が機能するには、YAML 設定に有効な暗号化キーを持つ適切に設定された `ota` および `api` セクションが含まれていることを確認してください。
 :::
 
 この方法では、ePaper パネルを何にも接続する必要がなく、オンラインであることを確認するだけです。
@@ -319,7 +309,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
-しばらく待つと、以下の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱いことが原因の可能性があります。デバイスをルーターに近づけてください。[問題が発生しましたか？こちらをクリック。](#Q4)
+しばらく待つと、次の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱いことが原因の可能性があります。デバイスをルーターに近づけてください。[問題が発生しましたか？こちらをクリック。](#Q4)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/37.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -330,17 +320,17 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 ### 簡単なグラフィックの描画
 
-この YAML コード例は、ESPHome プロジェクト用の SPI インターフェースと reTerminal E シリーズ ePaper ディスプレイを設定します。`lambda` セクションには、画面に簡単な図形をレンダリングする描画コマンドが含まれています：
+この例の YAML コードは、ESPHome プロジェクト用に SPI インターフェースと reTerminal E シリーズ ePaper ディスプレイを設定します。`lambda` セクションには、画面に簡単な図形をレンダリングする描画コマンドが含まれています：
 
-- 2つの長方形（1つは位置 (10, 10) でサイズ 100x50、もう1つは (150, 10) でサイズ 50x50）
-- 1つの円（位置 (250, 35)、半径 25）
-- 2つの塗りつぶし長方形（位置 (10, 80) と (150, 80)）
-- 1つの塗りつぶし円（位置 (250, 105)、半径 25）
+- 2つの長方形（1つは位置（10, 10）でサイズ 100x50、もう1つは（150, 10）でサイズ 50x50）
+- 1つの円（250, 35）で半径 25
+- 2つの塗りつぶし長方形（（10, 80）と（150, 80））
+- 1つの塗りつぶし円（250, 105）で半径 25
 
 以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
 <Tabs>
-<TabItem value="For E1001" label="適用于 E1001" default>
+<TabItem value="For E1001" label="E1001 向け" default>
 
 ```yaml
 spi:
@@ -350,7 +340,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -369,12 +359,12 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-以下の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
+次の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/38.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="For E1002" label="適用于 E1002">
+<TabItem value="For E1002" label="E1002 向け">
 
 ```yaml
 
@@ -391,16 +381,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -418,14 +399,14 @@ display:
       it.filled_circle(250, 105, 25, WHITE);
 ```
 
-以下の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
+次の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/144.jpg" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
 
-スペースの制約により、他のパターンの描画方法と原理については詳しく説明しませんが、必要に応じて読者は [ESPHome のこの部分の詳細な例](https://esphome.io/components/display/) を読むことをお勧めします。
+スペースの制約により、他のパターンの描画方法と原理については詳しく説明しませんが、必要に応じて、読者は [ESPHome のこの部分の詳細な例](https://esphome.io/components/display/) を読むことをお勧めします。
 
 ### 表示用に Home Assistant から値を取得する
 
@@ -457,7 +438,7 @@ Open-Meteo 統合をインストールした後、Developer Tools を通じて�
 
 ステップ 3. エンティティをクリックして、利用可能なすべての属性を表示します。主要な天気属性には以下が含まれます：
 
-- `temperature`: 現在の気温（設定された単位）
+- `temperature`: 現在の温度（設定された単位）
 - `wind_bearing`: 風向
 - `wind_speed`: 風速
 
@@ -488,7 +469,7 @@ sensor:
     internal: true
 ```
 
-この設定により、ESPHome デバイスに Home Assistant 天気統合からデータを取得するセンサーエンティティが作成されます。これらのセンサーを使用して、reTerminal E シリーズ ePaper Display ディスプレイを現在の天気情報で更新できます。
+この設定により、Home Assistant の天気統合からデータを取得する ESPHome デバイス内にセンサーエンティティが作成されます。これらのセンサーを使用して、reTerminal E シリーズ ePaper ディスプレイを現在の天気情報で更新できます。
 
 :::tip
 予報データについては、将来の日の予測値を含む `weather.open_meteo_forecast` エンティティを使用する必要があります。
@@ -497,7 +478,7 @@ sensor:
 最後に、上記の値を使用するディスプレイセクションのコードを追加します。完全なコードは以下の通りです：
 
 <Tabs>
-<TabItem value="For E1001" label="適用于 E1001" default>
+<TabItem value="For E1001" label="E1001 向け" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -534,7 +515,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -556,7 +537,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="適用于 E1002">
+<TabItem value="For E1002" label="E1002 向け">
 
 ```yaml
 
@@ -593,16 +574,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -624,21 +596,21 @@ display:
 </TabItem>
 </Tabs>
 
-上記のコードをコンパイルしてデバイスにアップロードした後、最初に画面に **NaN** が表示される場合がありますが、心配する必要はありません。これは正常です。これは、デバイスがまだ Home Assistant 環境に追加されていないため、reTerminal がまだ Home Assistant データを取得できていないためです。以下の手順に従ってデバイスを追加するだけです。
+上記のコードをコンパイルしてデバイスにアップロードした後、最初に画面に **NaN** が表示される場合がありますが、心配する必要はありません。これは正常な動作です。これは、デバイスがまだ Home Assistant 環境に追加されていないため、reTerminal がまだ Home Assistant データを取得できていないためです。以下の手順に従ってデバイスを追加するだけです。
 
-#### reTerminal E シリーズ ePaper Display を Home Assistant に追加する
+#### reTerminal E シリーズ ePaper ディスプレイを Home Assistant に追加
 
 ステップ 1. デバイスをフラッシュした後、Home Assistant に戻り、**Settings → Devices & Services** に移動します。
 
-ステップ 3. Home Assistant は mDNS を介して reTerminal E シリーズ ePaper Display デバイスを自動的に検出するはずです。検出されたデバイスセクションに表示される場合は、Configure をクリックして追加します。
+ステップ 3. Home Assistant は mDNS 経由で reTerminal E シリーズ ePaper ディスプレイデバイスを自動的に検出するはずです。検出されたデバイスセクションに表示された場合は、Configure をクリックして追加します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-ステップ 4. デバイスが自動的に検出されない場合は、Add Integration をクリックして "ESPHome" を検索します。
+ステップ 4. デバイスが自動的に検出されない場合は、Add Integration をクリックして「ESPHome」を検索します。
 
-ステップ 5. reTerminal E シリーズ ePaper Display デバイスの IP アドレスと、設定した場合は API 暗号化キーを入力します。
+ステップ 5. reTerminal E シリーズ ePaper ディスプレイデバイスの IP アドレスと、設定した場合は API 暗号化キーを入力します。
 
-ステップ 6. 接続されると、reTerminal E シリーズ ePaper Display が Home Assistant にデバイスとして表示され、すべてのセンサーとコンポーネントが利用可能になります。
+ステップ 6. 接続されると、reTerminal E シリーズ ePaper ディスプレイが Home Assistant にデバイスとして表示され、すべてのセンサーとコンポーネントが利用可能になります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -646,11 +618,11 @@ display:
 プログラムは書き込み完了から最終表示まで 2〜3 分かかる場合があります。
 :::
 
-以下は、フォーマットの改善、画像配置、および追加説明を含む強化されたデモ 3 の内容です：
+以下は、改良されたフォーマット、画像配置、追加説明を含む強化されたデモ 3 の内容です：
 
 ### TrueType フォントの描画
 
-この例では、TrueType フォントを使用して reTerminal E シリーズ ePaper Display にカスタムアイコンを表示する方法を示します。Material Design Icons は、e-paper ディスプレイに最適な幅広いスケーラブルシンボルを提供します。
+この例では、TrueType フォントを使用して reTerminal E シリーズ ePaper ディスプレイにカスタムアイコンを表示する方法を示します。Material Design Icons は、e-paper ディスプレイに最適なスケーラブルなシンボルの幅広い範囲を提供します。
 
 #### 必要なツールのインストール
 
@@ -683,7 +655,7 @@ display:
 ステップ 6. `captive_portal` セクションの後に、以下のコードを ESPHome 設定ファイルに追加します。このコードは、アイコン用の 2 つのフォントサイズを定義し、天気アイコンを表示するようにディスプレイを設定します。
 
 <Tabs>
-<TabItem value="For E1001" label="適用于 E1001" default>
+<TabItem value="For E1001" label="E1001 向け" default>
 
 ```yaml
 # define font to display words
@@ -707,7 +679,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -723,7 +695,7 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="適用于 E1002">
+<TabItem value="For E1002" label="E1002 向け">
 
 ```yaml
 
@@ -747,16 +719,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -816,7 +779,7 @@ glyphs:
   - "\U000F0123" # your new icon
 ```
 
-そして表示ラムダで：
+そして表示ラムダ内で：
 
 ```yaml
 lambda: |-
@@ -866,12 +829,12 @@ config/
 複雑で美しい風景写真を表示したい場合は、より良い効果を得るために[当社のウェブサイト](https://sensecraft.seeed.cc/hmi/tools/dither)で事前に画像ディザリングを実行することをお勧めします。JPG と PNG 形式の両方がサポートされています。
 :::
 
-#### 画像表示用の ESPHome 設定
+#### 画像表示のための ESPHome 設定
 
 ステップ 5. `captive_portal` セクションの後に、以下のコードを ESPHome 設定ファイルに追加します。このコードは画像リソースを定義し、それを表示するようにディスプレイを設定します。
 
 <Tabs>
-<TabItem value="For E1001" label="適用于 E1001" default>
+<TabItem value="For E1001" label="E1001 向け" default>
 
 ```yaml
 image:
@@ -888,7 +851,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -903,10 +866,10 @@ display:
 ```
 
 </TabItem>
-<TabItem value="For E1002" label="適用于 E1002">
+<TabItem value="For E1002" label="E1002 向け">
 
 :::tip
-ESPHome バージョンを **2025.10.2** 以上に更新してください。
+ESPHome バージョンを **2025.11.1** 以上に更新してください。
 :::
 
 ```yaml
@@ -925,16 +888,7 @@ spi:
 
 display:
   - platform: epaper_spi
-    id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002 #Please update your ESPHome version to 2025.11.1 above
     update_interval: 300s
     lambda: |-
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
@@ -997,7 +951,7 @@ lambda: |-
 ```
 
 :::caution
-e-paper ディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s` 設定は、ディスプレイが5分ごとにのみリフレッシュされることを意味します。ニーズに応じてこの値を調整してください。ただし、頻繁なリフレッシュは e-paper ディスプレイの寿命を短縮する可能性があることに注意してください。
+e-paper ディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s` 設定は、ディスプレイが5分ごとにのみリフレッシュされることを意味します。必要に応じてこの値を調整してください。ただし、頻繁なリフレッシュは e-paper ディスプレイの寿命を短縮する可能性があることに注意してください。
 :::
 
 画像を、前の例で説明したテキストやその他の表示要素と組み合わせることで、reTerminal E シリーズで豊富で情報量の多いダッシュボードを作成できます。
@@ -1020,11 +974,11 @@ e-paper ディスプレイのリフレッシュレートは制限されている
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
-### Q3: reTerminal E シリーズ ePaper Display がコンピューターに接続できませんか？
+### Q3: reTerminal E シリーズ ePaper Display がコンピュータに接続できませんか？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
-数回抜き差しを試すか、プロンプトに従ってドライバーをインストールしてください。
+数回抜き差しを試すか、プロンプトに従ってドライバをインストールしてください。
 
 ## 技術サポート & 製品ディスカッション
 

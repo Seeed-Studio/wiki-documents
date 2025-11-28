@@ -1,0 +1,10 @@
+position: 1
+label: 'Visión AI'
+collapsible: true
+collapsed: true
+className: _ai-perception
+link:
+  type: generated-index
+  slug: es/ai-vision
+  title: Visión AI
+  description: Soluciones de percepción visual.

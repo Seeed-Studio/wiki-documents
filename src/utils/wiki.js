@@ -1,6 +1,26 @@
 const docList = [
   [
     {
+      "path": "/stackforce_series",
+      "image": "https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010_homepage.webp",
+      "title": "Stackforce X Series Motors Getting Start",
+      "date": "11/26/2025",
+      "title_cn": "Stackforce系列电机入门指南",
+      "title_ja": "Stackforce X 系列モーター入門ガイド",
+      "title_es": "Introducción a los Motores Serie Stackforce X"
+    },
+    {
+      "path": "/setting_ai_with_a1102",
+      "image": "https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/20.webp",
+      "title": "Setting AI Models on SenseCAP A1102 Using SenseCraft APP",
+      "date": "11/26/2025",
+      "title_cn": "使用 SenseCraft APP 在 SenseCAP A1102 上设置 AI 模型",
+      "title_ja": "SenseCraft APP を使用した SenseCAP A1102 での AI モデル設定",
+      "title_es": "Configuración de Modelos de IA en SenseCAP A1102 Usando la APP SenseCraft"
+    }
+  ],
+  [
+    {
       "path": "/rm520n_module_for_jetson",
       "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/5G/RM520N.webp",
       "title": "Quectel RM520N Module for Jetson",
@@ -97,26 +117,6 @@ const docList = [
       "title_cn": "reCamera 的 Home Assistant 入门指南",
       "title_ja": "reCamera を使用した Home Assistant の入門ガイド",
       "title_es": "Introducción a Home Assistant con reCamera"
-    }
-  ],
-  [
-    {
-      "path": "/ispy_on_recomputer",
-      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_5.webp",
-      "title": "iSpy on reComputer",
-      "date": "11/10/2025",
-      "title_cn": "reComputer 上的 iSpy",
-      "title_ja": "reComputer上のiSpy",
-      "title_es": "iSpy en reComputer"
-    },
-    {
-      "path": "/go2rtc_on_recomputer",
-      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif",
-      "title": "go2rtc on reComputer",
-      "date": "11/05/2025",
-      "title_cn": "在 reComputer 上使用 go2rtc",
-      "title_ja": "reComputer で go2rtc を使う",
-      "title_es": "go2rtc en reComputer"
     }
   ]
 ];

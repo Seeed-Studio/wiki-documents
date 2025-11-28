@@ -9,7 +9,7 @@ tags:
   - インターフェース
   - ハードウェア
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
-slug: /ja/robotics_j501_mini_hardware_interfaces_usage
+slug: /ja/recomputer_j501_mini_getting_started
 last_update:
   date: 11/04/2025
   author: Dayu
@@ -113,11 +113,11 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>1x DI JST 5-Pinコネクタ(GH 1.25);<br />1x DO JST 5-Pinコネクタ(GH 1.25);</td>
+      <td>1x DI JST 6-Pinコネクタ(GH 1.25);<br />1x DO JST 5-Pinコネクタ(GH 1.25);</td>
     </tr>
       <tr>
       <td>I2S</td>
-      <td>1x I2S JST 5-Pinコネクタ(GH 1.25)</td>
+      <td>1x I2S JST 6-Pinコネクタ(GH 1.25)</td>
     </tr>
     <tr>
       <td>RS485</td>
@@ -125,7 +125,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x UART JST 4-Pinコネクタ（DIと多重化）</td>
+      <td>1x UART JST 6-Pinコネクタ（DOと多重化）</td>
     </tr>
     <tr>
       <td>ディスプレイ</td>
@@ -153,7 +153,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
     </tr>
     <tr>
       <th rowSpan="1">電源</th>
-      <td colSpan="2">19-54V XT30(2+2)（XT30から5525 DCジャックケーブル付属）</td>
+      <td colSpan="2">19-48V XT30（XT30から5525 DCジャックケーブル付属）</td>
     </tr>
     <tr>
       <th rowSpan="1">Jetpackバージョン</th>
