@@ -19,6 +19,11 @@ last_update:
 
 <div className="quick-nav-container">
   <nav className="quick-nav">
+    <a href="#Aurora-S" className="nav-item">
+      <img width={100} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Lidar/slamtec/aurora_s.png" className="nav-icon" alt="Slamtec LiDAR"/>
+      <span className="text">Aurora-S</span>
+      <div className="hover-effect"></div>
+    </a>
     <a href="#A1-series" className="nav-item">
       <img width={100} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Lidar/slamtec/A1M8.png" className="nav-icon" alt="Slamtec LiDAR"/>
       <span className="text">A1M8</span>
@@ -58,6 +63,48 @@ last_update:
 </div>
 
 <div className="nav-grid">
+
+
+## 📦 Aurora
+
+<div class="category-group">
+  <div className="category-card robot-kits">
+
+### Datasheet
+
+<div className="card-container">
+    <a href="https://files.seeedstudio.com/products/SLAMTEC_Aurora_S/Aurora_S_datasheet.pdf" className="nav-item">
+      <span className="text">Aurora S</span>
+    </a>
+</div>
+
+### User Manual
+
+<div className="card-container">
+  <nav className="quick-nav">
+    <a href="https://files.seeedstudio.com/products/SLAMTEC_Aurora_S/Aurora_S_user_manual.pdf" className="nav-item">
+      <span className="text">Aurora S</span>
+    </a>
+  </nav>
+</div>
+
+### SDK
+
+<div className="card-container">
+    <a href="https://www.slamtec.com/en/Support#aurora" className="nav-item" target="_blank" rel="noopener noreferrer">
+      <span className="text">Developer Center</span>
+    </a>
+</div>
+
+### 3D Models
+
+<div className="card-container">
+    <a href="https://www.slamtec.com/en/Support#aurora" className="nav-item" target="_blank" rel="noopener noreferrer">
+      <span className="text">A3M1.stl</span>
+    </a>
+</div>
+</div>
+</div>
 
 ## 📦 A1 Series LiDAR {#A1-series}
 
