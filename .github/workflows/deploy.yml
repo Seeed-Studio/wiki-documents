@@ -24,7 +24,7 @@ jobs:
           node-version: 20
           cache: yarn
 
-      # ==== 新增：观测与加 swap（放在安装依赖前） ====
+      # ==== 观测与加 swap（放在安装依赖前） ====
       - name: Show runner memory
         run: node -v && free -h && df -h
 
@@ -35,7 +35,6 @@ jobs:
           sudo mkswap /swapfile
           sudo swapon /swapfile
           free -h
-      # ==== 新增结束 ====
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -87,12 +86,16 @@ jobs:
           sudo swapon /swapfile
           free -h
 
+      - name: Clean /tmp
+        run: rm -rf /tmp/* || true
+
       - uses: webfactory/ssh-agent@v0.5.0
         with:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
       - name: Deploy to GitHub Pages
         env:
           USE_SSH: true
+          GIT_DEPLOY_DIR: ${{ github.workspace }}/.deploy
         run: |
           git config --global user.email "2768073931@qq.com"
           git config --global user.name "MatthewJeffson"

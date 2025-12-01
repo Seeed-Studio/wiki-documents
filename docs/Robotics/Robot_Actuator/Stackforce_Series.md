@@ -48,7 +48,7 @@ Here's the completed table with all parameters filled in for all motor models:
     <tr><td>Rated Speed</td><td>120 RPM</td><td>110 RPM</td></tr>
     <tr><td>Maximum Speed</td><td>270 RPM</td><td>320 RPM</td></tr>
     <tr><td>Gear Ratio</td><td>8:1</td><td>8:1</td></tr>
-    <tr><td>Encoder Type</td><td>MIT Protocol</td><td>MIT Protocol</td></tr>
+    <tr><td>Communication protocol</td><td>MIT Protocol</td><td>MIT Protocol</td></tr>
     <tr><td>Control Modes</td><td>Position, Velocity, Torque Control</td><td>Position, Velocity, Torque Control</td></tr>
     <tr><td>Outer Diameter</td><td>80 mm</td><td>97 mm</td></tr>
     <tr><td>Thickness</td><td>47 mm</td><td>46 mm</td></tr>

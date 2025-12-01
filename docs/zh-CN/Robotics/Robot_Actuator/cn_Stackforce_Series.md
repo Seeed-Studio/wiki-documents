@@ -48,7 +48,7 @@ last_update:
     <tr><td>额定转速</td><td>120 RPM</td><td>110 RPM</td></tr>
     <tr><td>最大转速</td><td>270 RPM</td><td>320 RPM</td></tr>
     <tr><td>减速比</td><td>8:1</td><td>8:1</td></tr>
-    <tr><td>编码器类型</td><td>MIT协议</td><td>MIT协议</td></tr>
+    <tr><td>通信协议</td><td>MIT协议</td><td>MIT协议</td></tr>
     <tr><td>控制模式</td><td>位置，速度，力矩控制</td><td>位置，速度，力矩控制</td></tr>
     <tr><td>外径</td><td>80 mm</td><td>97 mm</td></tr>
     <tr><td>厚度</td><td>47 mm</td><td>46 mm</td></tr>
