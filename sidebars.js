@@ -711,6 +711,19 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Firmware_release_note',
           ],
         },
+        {
+          type: 'category',
+          label: 'SenseCAP T2000 Tracker',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_intro',
+          },
+          items: [
+            'Sensor/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Introduction',
+          ],
+        },
         //       {
         //            type: 'category',
         //           label: 'SenseCAP T1000-P Pet Tracker',
