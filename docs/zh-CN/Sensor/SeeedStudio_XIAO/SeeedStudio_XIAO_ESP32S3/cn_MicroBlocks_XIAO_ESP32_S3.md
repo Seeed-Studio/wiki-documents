@@ -40,7 +40,7 @@ Sense 版本包含一个扩展板，配有摄像头（OV2640 摄像头，分辨�
 
 在 Chrome 或 Edge 浏览器中运行 [MicroBlocks 编辑器](https://microblocks.fun/run/microblocks.html)。
 
-在齿轮菜单中启用"高级模式"：
+在齿轮菜单中启用"advanced mode"：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/set-advanced-mode.png" style={{width:400, height:'auto'}}/></div>
 
@@ -89,7 +89,7 @@ Sense 版本包含一个扩展板，配有摄像头（OV2640 摄像头，分辨�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-dialog-esp.png" style={{width:400, height:'auto'}}/></div>
 
-当开发板连接成功时，会出现绿色圆圈和开发板名称：
+开发板连接后会出现绿色圆圈和开发板名称：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connected-esp32s3.png" style={{width:200, height:'auto'}}/></div>
 
@@ -110,18 +110,17 @@ MicroBlocks 支持并发。最多可以同时运行十个脚本。
 
 ## 示例
 
-这个脚本将使黄色用户 LED 闪烁：
+这个脚本将闪烁黄色用户 LED：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
-[积木块参考](https://wiki.microblocks.fun/en/reference_manual) 包含许多其他示例。
+[积木块参考](https://wiki.microblocks.fun/en/reference_manual)包含许多其他示例。
 
 ## 项目演示
 
 <div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Vjjg3Hfl_UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vjjg3Hfl_UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br/>
 为了更全面的演示，创客 [Zeller](https://www.hackster.io/Zeller) 使用 XIAO ESP32S3、XIAO 扩展板以及 Grove 扬声器和 Grove 按钮配件创建了一个情绪播放器。使用 MicroBlocks，您可以创建自己喜欢的图案和音乐，而无需编写复杂的代码。详细的分步教程可以在 [Hackster](https://www.hackster.io/Zeller/mood-player-2426ef) 上找到。
 
 ## 特别感谢

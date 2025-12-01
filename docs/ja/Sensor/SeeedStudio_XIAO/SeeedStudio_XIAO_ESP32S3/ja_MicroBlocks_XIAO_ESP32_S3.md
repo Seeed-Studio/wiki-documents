@@ -28,7 +28,7 @@ Senseバージョンには、カメラボード上に2つの追加GPIOピン（�
 
 ピン13は黄色のユーザーLED（反転）です。
 
-Senseバージョンには、カメラ（1600x1200解像度のOV2640カメラまたは2048x1536解像度のOV3660）とデジタルマイクを搭載した拡張ボードが含まれています。
+Senseバージョンには、カメラ（1600x1200解像度のOV2640カメラまたは2048x1536解像度のOV3660）とデジタルマイクロフォンを搭載した拡張ボードが含まれています。
 
 **注意：カメラサポートはMicroBlocksではまだ実装されていませんが、将来追加される可能性があります。**
 
@@ -64,7 +64,7 @@ ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microbloc
 
 ESP32ボードにMicroBlocksファームウェアをインストールする際、通常は手動でブートローダーモードに入る必要はありません。
 
-必要に応じてブートローダーモードに入るには、R（リセット）ボタンを押して離しながらB（ブート）ボタンを押し続けます。
+必要に応じてブートローダーモードに入るには、R（リセット）ボタンを押して離しながら、B（ブート）ボタンを押し続けます。
 Bボタンを押し続けながらボードをコンピューターに接続することもできます。
 
 **USBコネクターの両側にある小さなBとRボタンは扱いにくいです；
@@ -114,14 +114,13 @@ MicroBlocksは並行処理をサポートしています。最大10個のスク�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
-[Blocks Reference](https://wiki.microblocks.fun/en/reference_manual)には、さらに多くの例が含まれています。
+[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には、さらに多くの例が含まれています。
 
 ## プロジェクトデモ
 
 <div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Vjjg3Hfl_UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vjjg3Hfl_UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br/>
 より包括的なデモンストレーションとして、メーカーの[Zeller](https://www.hackster.io/Zeller)がXIAO ESP32S3、XIAO拡張ボード、Grove SpeakerとGrove Buttonアクセサリを使用してMood Playerを作成しました。MicroBlocksを使用すると、複雑なコードを書くことなく、お気に入りのパターンと音楽を作成できます。詳細な手順を含むステップバイステップのチュートリアルは[Hackster](https://www.hackster.io/Zeller/mood-player-2426ef)で見つけることができます。
 
 ## 特別な感謝
