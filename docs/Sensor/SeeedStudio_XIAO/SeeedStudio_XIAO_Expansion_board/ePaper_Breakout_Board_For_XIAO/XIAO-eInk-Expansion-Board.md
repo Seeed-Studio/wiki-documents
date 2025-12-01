@@ -166,9 +166,9 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
 - If you want to use **Seeed Studio XIAO ESP32S3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** to finish adding.
 
-## Install Seeed Arduino LCD Library
+## Install Seeed GFX Library
 
-**Step 3.** Install Seeed Arduino LCD Library
+**Step 3.** Install Seeed GFX Library
 
 :::tip
 This library has same function as TFT library and no compatible with it. If you have installed TFT library or other similary display libraries, please uninstall it first.

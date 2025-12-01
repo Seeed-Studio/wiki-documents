@@ -1,6 +1,6 @@
 ---
-description: 使用 EEZ Studio 的 EE04 电子纸显示屏
-title: 使用 EEZ Studio 的 EE04 电子纸显示屏
+description: 使用 EEZ Studio 的 EE04 ePaper 显示屏
+title: 使用 EEZ Studio 的 EE04 ePaper 显示板（ESP32-S3）
 keywords:
   - epaper
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
@@ -13,33 +13,23 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_effect_2_2.jpg" style={{width:600, height:'auto'}}/></div>
 
-本教程使用 XIAO ePaper Display Board EE04，基于 EEZ Studio，通过 Arduino IDE 编译和上传程序。
+本教程使用 XIAO ePaper 显示板（ESP32-S3）- EE04，基于 EEZ Studio，通过使用 Arduino IDE 编译和上传程序。
 
-## EEZ Studio
+## [EEZ Studio](https://www.envox.eu/studio/studio-introduction/)
 
-- 为什么使用 EEZ Studio
+EEZ Studio 代表了一个独特的解决方案，当需要快速开发吸引人的 GUI 和远程控制设备进行测试和测量（T&M）自动化时。
 
-  - 可视化界面设计 – 使用所见即所得编辑器创建复杂的用户界面，减少手动编码的需求。
-
-  - 快速原型制作 – 快速测试和验证设计想法，节省开发时间和成本。
-
-  - 跨平台支持 – 构建可在多个操作系统和嵌入式目标上运行的应用程序。
-
-  - 硬件集成 – 直接连接和控制实验室仪器、物联网设备和定制板卡。
-
-  - 脚本扩展 – 使用 Lua 脚本添加逻辑、自动化和高级功能。
-
-  - 开源生态系统 – 受益于社区驱动的工具集，具有透明性和灵活性。
+由一个在设计资源受限的[复杂](https://www.envox.eu/eez-bb3)嵌入式设备方面拥有第一手经验的团队创建，EEZ Studio 使用**拖**拽和**放置**以及流程图可视化编程来设计响应式桌面和嵌入式 GUI。一系列内部开发的组件和操作以及 [LVGL](https://github.com/lvgl/lvgl) 支持（8.x 和 9.x 版本）和现成的项目模板和示例，使快速原型制作以及最终应用程序的开发成为可能。
 
 ### 硬件
 
-- 您需要准备一个 **XIAO ePaper Display Board EE04** 和一个分辨率为 648×480 的 **5.83" Monochrome eInk** 设备。
+在开始阅读本教程之前，请确保您已准备好下面列出的所有必要物品。
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EE04</th>
-        <th>5.83" Monochrome eInk</th>
+        <th>XIAO ePaper 显示板（ESP32-S3）- EE04</th>
+        <th>5.83 英寸单色 ePaper</th>
     </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:300, height:'auto'}}/></div>
@@ -60,14 +50,14 @@ last_update:
 
 ### 创建项目
 
-在顶部选择 "Create"，然后点击 "LVGL"，在相邻的 "PROJECT SETTING" 部分设置所需参数。
+在顶部，选择 **Create**，然后点击 **LVGL**，在相邻的 **PROJECT SETTING** 部分，设置所需的参数。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/create_project_1.png" style={{width:800, height:'auto'}}/></div>
 
 - Name：项目名称
 - LVGL version：选择版本 9.x
 - Location：存储工程文件的位置，可以设置为默认路径或根据实际需求自定义。
 - Project file path：工程文件的路径。此路径稍后会用到（此路径是计算机上的默认路径；您也可以自定义路径）
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/create_project_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### 工程页面介绍
 
@@ -91,9 +81,9 @@ last_update:
 
   - Debug：调试绘制的界面
 
-- Pages：管理页面；点击 "+" 添加新页面
+- Pages：管理页面。点击 **+** 添加新页面
 
-- Widgets Structure：组件管理，允许您直观地管理和选择组件
+- Widgets Structure：组件管理，允许您直观地管理和选择您的组件
 
 - Variables：连接 UI 组件、Flow 逻辑和 Action Script 的核心数据管理机制
 
@@ -101,7 +91,7 @@ last_update:
 
 - Properties：用于设置和查看对象或组件的属性参数
 
-- Components Palette：提供可选组件列表，可以拖放到设计界面中使用
+- Components Palette：提供可选组件列表，可以拖拽到设计界面中使用
 
 - Styles：定义和应用统一字体的样式规则以保持一致性
 
@@ -115,7 +105,7 @@ last_update:
 
 ### 构建项目文件
 
-此项目是为分辨率为 648*480 的 **5.83" Monochrome eInk 显示屏**设计的。因此，需要修改一些关键参数。
+此项目是为**分辨率为 648*480 的 5.83 英寸单色电子墨水显示屏**设计的。因此，需要修改一些关键参数。
 
 **步骤 1.** 选择 **Settings**，然后在 **General** 选项卡中，将 **Display width** 和 **Display height** 分别更改为 648 和 480。
 
@@ -131,18 +121,18 @@ last_update:
 
 **步骤 3.** 构建项目
 
-- 返回 **Main** 界面，将 "Hello World" 拖到屏幕中央。
+- 返回 **Main** 界面，将 **Hello World** 拖到屏幕中央。
 - 在 **STYLE** 选项卡中，调整字体大小或颜色。
 - 选择构建项目的选项。如果 **OUTPUT** 面板中没有显示错误，则项目已成功构建。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/build_project_3.png" style={{width:800, height:'auto'}}/></div>
 
-接下来，将构建的项目文件部署到 **Arduino IDE**，然后上传到相应的硬件设备进行显示。
+接下来，将构建的项目文件部署到 **Arduino IDE**，然后将它们上传到相应的硬件设备进行显示。
 
 ### Arduino IDE 设置
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考[Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
 **步骤 1.** 下载并安装 [Arduino IDE](https://www.arduino.cc/en/software) 并启动 Arduino 应用程序。
@@ -157,7 +147,7 @@ last_update:
 
 **步骤 2.** 向 Arduino IDE 添加 ESP32 开发板支持。
 
-在 Arduino IDE 中，转到 **File > Preferences** 并将以下 URL 添加到 "Additional Boards Manager URLs" 字段：
+在 Arduino IDE 中，转到 **File > Preferences** 并将以下 URL 添加到 **Additional Boards Manager URLs** 字段：
 
 ```js
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -165,13 +155,13 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 **步骤 3.** 安装 ESP32 开发板包。
 
-导航到 **Tools > Board > Boards Manager**，搜索 "esp32" 并安装 Espressif Systems 的 ESP32 包。
+导航到 **Tools > Board > Boards Manager**，搜索 **esp32** 并安装 Espressif Systems 的 ESP32 包。
 
 **步骤 4.** 选择正确的开发板。
 
 转到 **Tools > Board > ESP32 Arduino** 并选择 **XIAO_ESP32S3_PLUS**。
 
-**步骤 5.** 使用 USB-C 线缆将您的 reTerminal E 系列 ePaper Display 连接到计算机。
+**步骤 5.** 使用 USB-C 线缆将您的 reTerminal E 系列 ePaper 显示屏连接到计算机。
 
 **步骤 6.** 从 **Tools > Port** 选择正确的端口。
 
@@ -183,37 +173,37 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_GFX" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>下载库</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
 **步骤 2.** 通过在 Arduino IDE 中添加 ZIP 文件来安装库。转到 **Sketch > Include Library > Add .ZIP Library** 并选择下载的 ZIP 文件。
 
-:::note
+:::tip
 如果您之前安装了 TFT_eSPI 库，您可能需要暂时从 Arduino 库文件夹中删除或重命名它以避免冲突，因为 Seeed_GFX 是 TFT_eSPI 的分支，为 Seeed Studio 显示屏添加了额外功能。
 :::
 
-**步骤 3.** 从 Seeed_GFX 库中打开彩色示例代码：**File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
+**步骤 3.** 从 Seeed_GFX 库打开彩色示例草图：**File > Examples > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
 **步骤 4.** 创建新的 `driver.h` 文件
 
 [Seeed GFX 配置工具](https://seeed-studio.github.io/Seeed_GFX/)
 
-- 在工具页面上输入您正在使用的显示屏规格。这里选择的显示屏是 **5.83" Monochrome eInk**，驱动板是 **XIAO ePaper Display Board EE04**。
+- 在工具页面上输入您正在使用的显示屏的规格。这里，选择的显示屏是 **5.83 英寸单色 ePaper 屏幕（UC8179）**，驱动板是 **XIAO ePaper 显示板（ESP32-S3）- EE04**。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/build_project_4.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/build_project_4_1.png" style={{width:800, height:'auto'}}/></div>
 
-- 复制程序并保存为 `driver.h`。
+- 复制程序并将其保存到 `driver.h`。
 
 ```cpp
 #define BOARD_SCREEN_COMBO 503 // 5.83 inch monochrome ePaper Screen （UC8179）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EE04
 ```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/build_project_5.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/build_project_5_1.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-如果选择错误，屏幕将不显示任何内容。
+如果您选择错误，屏幕将不显示任何内容。
 因此请确保您的设备或组件类型正确。
 :::
 
@@ -221,9 +211,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 **步骤 1.** 添加文件 `e1002_display.c`、`e1002_display.h`、`lv_conf.h` 和 lvgl 库。开发板应选择为 XIAO_ESP32S3。
 
-- [e1002_display.c](https://files.seeedstudio.com/wiki/Epaper/EE04/e1002_display.cpp)
-- [e1002_display.h](https://files.seeedstudio.com/wiki/Epaper/EE04/e1002_display.h)
-- [lv_conf.h](https://files.seeedstudio.com/wiki/Epaper/EE04/lv_conf.h)
+- [点击获取相关文件](https://wiki.seeedstudio.com/cn/epaper_ee04_eezstudio/#reference--resources)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/upload_1_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -313,22 +301,20 @@ void loop()
 
 ## UI 设计  
 
-UI（用户界面）设计在嵌入式产品开发中至关重要，因为它直接决定了用户体验。一个美观、直观且响应迅速的界面不仅能提升产品的可用性，还能增强其整体吸引力。  
+接下来，我们将演示一个使用 EEZ Studio 创建的 UI 示例，以进一步说明其在界面设计方面的能力。
 
-在 EEZ Studio 中，您可以通过拖拽组件快速组装界面。利用样式、字体、位图和主题等工具精确控制视觉效果，打造专业且独特的用户体验。  
+在使用 EEZ Studio 设计 LVGL 界面时，您可能会发现以下工具特别有用：
 
-以下是推荐工具的介绍：  
-
-- [Color](https://coolors.co/)  
-- [Color Chart](https://peiseka.com/)  
-- [Icon](https://www.iconfont.cn/?spm=a313x.search_index.i3.3.559b3a81C6d3Cl)  
-- [Font](https://fonts.google.com/)  
+- 用于快速创建、调整和导出配色方案的在线调色板生成器：[Color](https://coolors.co/)  
+- 用于查找和匹配网页配色方案的在线调色板工具：[Color Chart](https://peiseka.com/)  
+- 用于下载和管理图标的大型矢量图标库平台：[Icon](https://www.iconfont.cn/?spm=a313x.search_index.i3.3.559b3a81C6d3Cl)  
+- 用于浏览和下载商业可用字体的免费字体资源网站：[Font](https://fonts.google.com/)  
 
 ### UI 绘制介绍  
 
-在本教程中，我将指导您设计网站或应用程序主页的 UI。一旦您掌握了核心技术，就能够轻松应用它们来创建任何您想要的界面。  
+- 效果图：
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_project_1.png" style={{width:800, height:'auto'}}/></div>  
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_project_1_1.png" style={{width:800, height:'auto'}}/></div>  
 
 此 UI 由四个组件组成：
 
@@ -337,53 +323,47 @@ UI（用户界面）设计在嵌入式产品开发中至关重要，因为它直
 - Checkbox  
 - Image  
 
-
 **步骤 1.** 更改画布背景颜色  
 
 默认背景颜色为白色；您可以根据自己的喜好进行更改。  
 
-  - 选择要更改背景颜色的画布。  
+- 选择要更改背景颜色的画布。  
 
-  - 勾选 **Color** 选项，然后选择您喜欢的十六进制颜色代码。  
+- 勾选 **Color** 选项，然后选择您喜欢的十六进制颜色代码。  
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_project_2.png" style={{width:800, height:'auto'}}/></div>  
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_project_2_1.png" style={{width:800, height:'auto'}}/></div>  
 
-**步骤 2.** 添加位图  
+**步骤 2.** 添加 Label  
 
-  - 点击右侧边栏中的 **Bitmaps** 选项并添加所需的图像。  
+- 将 **Label** 组件拖入画布，然后选择所需的字体大小和颜色。  
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_bitmaps_1.png" style={{width:800, height:'auto'}}/></div>  
-
-  - 根据需要为图像命名。  
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_bitmaps_2.png" style={{width:800, height:'auto'}}/></div>  
-
-  - 将 **Image** 组件拖放到画布上，并使用 **Scale** 选项设置其大小。  
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_bitmaps_3.png" style={{width:800, height:'auto'}}/></div>  
-
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_label_1_2.png" style={{width:800, height:'auto'}}/></div>  
 
 **步骤 3.** 添加线条  
 
-  - 将 **Line** 组件拖到画布上，并在 **Points** 部分设置起点和终点以确定线条的长度和位置。  
+- 将 **Line** 组件拖入画布，并在 **Points** 部分设置起点和终点以确定线条的长度和位置。参考点：0,0 0,0 0,0 0,0,648,0
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_line_1.png" style={{width:800, height:'auto'}}/></div>  
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_line_1_2.png" style={{width:800, height:'auto'}}/></div>
 
+**步骤 4.** 添加位图  
 
-**步骤 4.** 添加复选框  
+- 点击右侧边栏中的 **Bitmaps** 选项并添加所需的图像。  
 
-  - 将 **Checkbox** 组件拖到画布上，输入内容，然后调整字体大小和颜色。  
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_bitmaps_1_2.png" style={{width:800, height:'auto'}}/></div>  
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_checkout_1.png" style={{width:800, height:'auto'}}/></div>  
+- 根据需要为图像命名。  
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_bitmaps_2_2.png" style={{width:800, height:'auto'}}/></div>  
 
-**步骤 5.** 添加标签  
+- 将 **Image** 组件拖放到画布中，并使用 **Scale** 选项设置其大小。  
 
-  - 将 **Label** 组件拖到画布上，然后选择所需的字体大小和颜色。  
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_bitmaps_3_2.png" style={{width:800, height:'auto'}}/></div>  
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_label_1.png" style={{width:800, height:'auto'}}/></div>  
+**步骤 5.** 添加 Checkbox  
 
-完成这 5 个步骤并成功构建项目后，您就可以将 UI 部署到相应的设备上。  
+- 将 **Checkbox** 组件拖入画布，输入内容，然后调整字体大小和颜色。  
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_checkout_1_2.png" style={{width:800, height:'auto'}}/></div>  
 
 ### 部署和演示  
 
@@ -402,9 +382,9 @@ UI（用户界面）设计在嵌入式产品开发中至关重要，因为它直
 #include <ui.h>
 #include "e1002_display.h"
 
-const int BUTTON_KEY0 = 2;
-const int BUTTON_KEY1 = 3;
-const int BUTTON_KEY2 = 5;
+const int BUTTON_KEY1 = 2;
+const int BUTTON_KEY2 = 3;
+const int BUTTON_KEY3 = 5;
 
 int32_t page_index;
 
@@ -472,9 +452,9 @@ void setup()
   Serial.println("Initializing e-paper display...");
   e1002_display_init(&e1002_driver);
 
-  pinMode(BUTTON_KEY0, INPUT_PULLUP);
   pinMode(BUTTON_KEY1, INPUT_PULLUP);
   pinMode(BUTTON_KEY2, INPUT_PULLUP);
+  pinMode(BUTTON_KEY3, INPUT_PULLUP);
 
   ui_init();
   page_index = SCREEN_ID_SMART;
@@ -489,19 +469,19 @@ void loop()
   lv_timer_handler();
   ui_tick();
 
-  if (buttonPressed(BUTTON_KEY0, lastKey0State, lastDebounceTime0))
+  if (buttonPressed(BUTTON_KEY1, lastKey0State, lastDebounceTime0))
   {
     page_index = SCREEN_ID_SMART;
     switchPage((ScreensEnum)page_index, "Main Screen");
   }
 
-  if (buttonPressed(BUTTON_KEY1, lastKey1State, lastDebounceTime1))
+  if (buttonPressed(BUTTON_KEY2, lastKey1State, lastDebounceTime1))
   {
     page_index = SCREEN_ID_INDUSTRY;
     switchPage((ScreensEnum)page_index, "Plant Screen");
   }
 
-  if (buttonPressed(BUTTON_KEY2, lastKey2State, lastDebounceTime2))
+  if (buttonPressed(BUTTON_KEY3, lastKey2State, lastDebounceTime2))
   {
     page_index = SCREEN_ID_GAME;
     switchPage((ScreensEnum)page_index, "Workstation Screen");
@@ -520,14 +500,18 @@ void loop()
 
 </details>
 
-- 效果演示：
+- 效果演示：<br/>
+这里显示了三个不同的 UI 界面，**XIAO ePaper Display Board (ESP32-S3) – EE04** 利用其三个板载按钮在这些界面之间切换。每个按钮对应的界面为：<br/>
+KEY1: Smart<br/>
+KEY2: Industry<br/>
+KEY3: Game
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>智能</th>
-        <th>工业</th>
-        <th>游戏</th>
+        <th>Smart</th>
+        <th>Industry</th>
+        <th>Game</th>
     </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ui_effect_1_2.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -537,11 +521,16 @@ void loop()
  </table>
 </div>
 
-### 资源
+## 参考资料与资源
+
+- 驱动相关文件（点击下载）
+  - [e1002_display.c](https://files.seeedstudio.com/wiki/Epaper/EE04/e1002_display.cpp)
+  - [e1002_display.h](https://files.seeedstudio.com/wiki/Epaper/EE04/e1002_display.h)
+  - [lv_conf.h](https://files.seeedstudio.com/wiki/Epaper/EE04/lv_conf.h)
 
 - 5.83" 3D 外壳
-  - [前面](https://files.seeedstudio.com/wiki/Epaper/EE04/5.83''front.step)
-  - [后面](https://files.seeedstudio.com/wiki/Epaper/EE04/5.83''back.step)
+  - [前面板](https://files.seeedstudio.com/wiki/Epaper/EE04/5.83''front.step)
+  - [后面板](https://files.seeedstudio.com/wiki/Epaper/EE04/5.83''back.step)
 
 ## 技术支持与产品讨论
 

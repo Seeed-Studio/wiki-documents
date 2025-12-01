@@ -321,6 +321,14 @@ Raspberry Pi（又称"RPi"）最初由一个非营利组织设计和创建，旨
         </td>
       </tr>
       <tr>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/thingsboard_logo.png" style={{width:80, height:'auto'}}/></td>
+        <td>
+          <strong>thingsboard</strong>
+
+开源的物联网平台，支持设备连接、数据管理和可视化部署。
+        </td>
+      </tr>
+      <tr>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/Supported_Software/influxdb.png" style={{width:80, height:'auto'}}/></td>
         <td>
           <strong>InfluxDB</strong>  
