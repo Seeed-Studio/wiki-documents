@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-27 17:37:43 (北京时间)
-// 多语言页面: 2063 个
+// 生成时间: 2025-12-01 14:43:31 (北京时间)
+// 多语言页面: 2066 个
 
 (function() {
   'use strict';
@@ -10144,6 +10144,18 @@
     "es",
     "ja"
   ],
+  "/sensecap_t2000_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/SenseCAP_T2000_tracker/Introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/training_model_for_watcher": [
     "cn",
     "en",
@@ -11128,6 +11140,12 @@
     "ja"
   ],
   "/solutions/hello_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/mcp_external_system_integration": [
     "cn",
     "en",
     "es",
