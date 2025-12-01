@@ -100,4 +100,5 @@ jobs:
           git config --global user.email "2768073931@qq.com"
           git config --global user.name "MatthewJeffson"
           yarn install --frozen-lockfile
+          rm -rf $GIT_DEPLOY_DIR || true
           yarn deploy
