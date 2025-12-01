@@ -6,11 +6,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T2000_tracker/Introduction
 last_update:
-  date: 11/24/2025
+  date: 12/1/2025
   author: Janet
 ---
 
-
+# SenseCAP T2000 Tracker Introduction
+## Overview
 [**SenseCAP T2000**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), an industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection, a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed. The T2000-A and T2000-B support long-lasting battery operation, while the solar-powered T2000-C with a rechargeable battery ensures continuous outdoor use, making the series ideal for long-term, maintenance-free asset tracking.
 
 
@@ -193,3 +194,18 @@ Combining a 4000mAh rechargeable battery with a 0.5W solar panel for extended op
 | Protection Rating | IP67 |
 | Dimensions | 117 × 65 × 30 mm |
 | Weight | 180g |
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
