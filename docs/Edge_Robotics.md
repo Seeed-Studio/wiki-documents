@@ -139,7 +139,7 @@ last_update:
     <a href="/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Feetech STS3215 Servo Motor</span>
     </a>
-    <a href="/hightorque_series/" className="nav-item">
+    <a href="/hightorque_control" className="nav-item">
       <span className="text">3️⃣HighTorque Series</span>
     </a>
     <a href="/fashionstar_servo/" className="nav-item">
@@ -213,6 +213,9 @@ last_update:
 <div className="card-container">
     <a href="/hexfellow_y200/" className="nav-item">
       <span className="text">HEXFELLOW Y200</span>
+    </a>
+    <a href="/wheeltec_imu/" className="nav-item">
+      <span className="text">WHEELTEC IMU</span>
     </a>
 </div>
 
