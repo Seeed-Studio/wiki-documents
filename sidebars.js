@@ -14281,6 +14281,7 @@ const sidebars = {
           // },
           items: [
             'es/Robotics/Robot_Sensor/IMU/es_Hexfellow_Y200',
+            'es/Robotics/Robot_Sensor/IMU/es_WHEELTEC_IMU',
           ]
         },
       ]
@@ -19296,6 +19297,7 @@ const sidebars = {
           // },
           items: [
             'ja/Robotics/Robot_Sensor/IMU/ja_Hexfellow_Y200',
+            'ja/Robotics/Robot_Sensor/IMU/ja_WHEELTEC_IMU',
           ]
         },
       ]
