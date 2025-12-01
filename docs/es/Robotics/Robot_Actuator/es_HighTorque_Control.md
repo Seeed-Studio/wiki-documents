@@ -772,13 +772,398 @@ bus.send(msg)
 
 ---
 
+
+## Controlando Motores con [reComputer Mini Jetson Orin](/es/recomputer_jetson_mini_getting_started)
+
+Actualmente, las interfaces de comunicación CAN más utilizadas para motores en el mercado son los conectores XT30(2+2) y JST. Nuestros dispositivos **reComputer Mini Jetson Orin** y **reComputer Robotics** están equipados con puertos XT30(2+2) duales e interfaces CAN basadas en JST, proporcionando compatibilidad perfecta.
+
+**reComputer Mini:**
+<div align="center">
+  <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
+</div>
+
+**reComputer Robotics**
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig5.jpg"/>  
+</div>
+
+Para más detalles sobre el uso de CAN, consulte esta [wiki](https://wiki.seeedstudio.com/es/recomputer_jetson_mini_hardware_interfaces_usage/#can).
+
+### Habilitando la Interfaz CAN
+
+**Paso 1:** Antes de usar CAN0 y CAN1, retire la cubierta inferior y configure ambas resistencias de terminación de 120Ω en la posición ON.
+
+<div align="center">
+    <img width={300}
+     src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/7.png" />
+</div>
+
+**Paso 2:** Conecte el motor directamente al CAN0 del reComputer Mini a través de la interfaz XT30(2+2).
+
+:::tip
+Los pines H/L de la interfaz CAN del reComputer Mini son opuestos a los del motor, por lo que las conexiones H/L en el arnés XT30 2+2 necesitan ser invertidas.
+:::
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/can0-datasheet.png"/>
+</div>
+
+<div align="center">
+    <img width={800}
+     src="https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/reComputer_mini_control.png" />
+</div>
+
+:::danger
+Esta solución de alimentación solo es adecuada para el aprendizaje y pruebas de un solo motor. Para aplicaciones con múltiples motores, por favor diseñe una placa de alimentación independiente para aislar la fuente de alimentación del Jetson de la fuente de alimentación del motor para evitar que corrientes grandes pasen directamente a través del Jetson.
+:::
+
+#### Habilitando la Comunicación CAN del Jetson
+
+Abra una terminal e ingrese el siguiente comando para poner el pin GPIO en alto para activar CAN0:
+
+```bash
+gpioset --mode=wait 0 43=0
+```
+
+Si usa la interfaz JST CAN1, ponga el pin 106 en alto:
+
+```bash
+gpioset --mode=wait 0 106=0
+```
+
+Mantenga esta terminal abierta y cree una nueva terminal para configurar CAN0:
+
+```bash
+sudo modprobe mttcan
+sudo ip link set can0 type can bitrate 1000000
+sudo ip link set can0 up
+```
+
+### Control con Python
+
+- **Instalar Entorno Python**  
+
+```bash
+pip install python-can numpy
+```
+
+- **Crear Directorio de Scripts**  
+
+```bash
+mkdir -p ~/hightorque/scripts
+```
+
+- **Crear Archivo hightorque_motor.py**
+
+```bash
+cd ~/hightorque/scripts
+touch hightorque_motor.py
+```
+
+Copie el siguiente código en hightorque_motor.py.
+
+<details>
+<summary>hightorque_motor.py</summary>
+
+```python
+import can
+import numpy as np
+from time import sleep
+from enum import IntEnum
+
+class MotorType(IntEnum):
+    """Motor Type Enum"""
+    HT5046 = 0  # 5046 Motor
+    HT4538 = 1  # 4538 Motor
+    HT5047_36 = 2  # 5047/6056 Dual-pole 36 Reduction Ratio
+    HT5047_9 = 3  # 5047 Single-pole 9 Reduction Ratio
+
+class ControlMode(IntEnum):
+    """Control Mode Enum"""
+    NORMAL = 0  # Normal Mode
+    TORQUE = 1  # Torque Mode
+    COOPERATIVE = 2  # Cooperative Control Mode
+
+class Motor:
+    def __init__(self, motor_type: MotorType, slave_id: int, master_id: int):
+        """
+        Initialize Motor Object
+        :param motor_type: Motor Type
+        :param slave_id: Slave ID
+        :param master_id: Master ID
+        """
+        self.motor_type = motor_type
+        self.slave_id = slave_id
+        self.master_id = master_id
+        self.position = 0
+        self.velocity = 0
+        self.torque = 0
+        self.temperature = 0
+
+        # Set Torque Conversion Parameters Based on Motor Type
+        if motor_type == MotorType.HT5046:
+            self.torque_k = 0.005397
+            self.torque_d = -0.455107
+        elif motor_type == MotorType.HT4538:
+            self.torque_k = 0.004587
+            self.torque_d = -0.290788
+        elif motor_type == MotorType.HT5047_36:
+            self.torque_k = 0.004563
+            self.torque_d = -0.493257
+        elif motor_type == MotorType.HT5047_9:
+            self.torque_k = 0.005332
+            self.torque_d = -0.072956
+
+    def update_status(self, position: float, velocity: float, torque: float, temperature: float):
+        """Update Motor Status"""
+        self.position = position
+        self.velocity = velocity
+        self.torque = torque
+        self.temperature = temperature
+
+class MotorControl:
+    def __init__(self, channel: str, bitrate: int = 1000000):
+        """
+        Initialize Motor Controller
+        :param channel: CAN Channel
+        :param bitrate: CAN Baud Rate
+        """
+        self.bus = can.interface.Bus(channel=channel, bustype='socketcan', bitrate=bitrate)
+        self.motors = {}
+
+    def add_motor(self, motor: Motor):
+        """Add Motor to Controller"""
+        self.motors[motor.slave_id] = motor
+
+    def __send_data(self, motor_id: int, data: bytes):
+        """
+        Send CAN Data
+        :param motor_id: Motor ID
+        :param data: Data to Send
+        """
+        msg = can.Message(
+            arbitration_id=0x8000 | motor_id,
+            data=data,
+            is_extended_id=True
+        )
+        self.bus.send(msg)
+
+    def enable(self, motor: Motor):
+        """Enable Motor"""
+        data = bytes([0x01, 0x00, 0x01])
+        self.__send_data(motor.slave_id, data)
+        sleep(0.1)
+
+    def disable(self, motor: Motor):
+        """Disable Motor"""
+        data = bytes([0x01, 0x00, 0x00])
+        self.__send_data(motor.slave_id, data)
+        sleep(0.1)
+
+    def set_zero_position(self, motor: Motor):
+        """Set Motor Zero Position"""
+        data = bytes([0x40, 0x01, 0x04, 0x64, 0x20, 0x63, 0x0a])
+        self.__send_data(motor.slave_id, data)
+        sleep(1.0)  # Wait 1 second
+        self.save_settings(motor)
+
+    def save_settings(self, motor: Motor):
+        """Save Motor Settings to Flash"""
+        data = bytes([0x05, 0xb3, 0x02, 0x00, 0x00])
+        self.__send_data(motor.slave_id, data)
+
+    def control_position(self, motor: Motor, position: float, torque: float):
+        """
+        Position Control
+        :param motor: Motor Object
+        :param position: Target Position (Unit: 0.0001 turns)
+        :param torque: Torque Limit
+        """
+        pos_bytes = int(position).to_bytes(2, 'little')
+        tqe_bytes = int(torque).to_bytes(2, 'little')
+        data = bytes([0x07, 0x07]) + pos_bytes + bytes([0x80, 0x00]) + tqe_bytes
+        self.__send_data(motor.slave_id, data)
+
+    def control_velocity(self, motor: Motor, velocity: float, torque: float):
+        """
+        Velocity Control
+        :param motor: Motor Object
+        :param velocity: Target Velocity (Unit: 0.00025 turns/second)
+        :param torque: Torque Limit
+        """
+        vel_bytes = int(velocity).to_bytes(2, 'little')
+        tqe_bytes = int(torque).to_bytes(2, 'little')
+        data = bytes([0x07, 0x07, 0x00, 0x80]) + vel_bytes + tqe_bytes
+        self.__send_data(motor.slave_id, data)
+
+    def control_torque(self, motor: Motor, torque: float):
+        """
+        Torque Control
+        :param motor: Motor Object
+        :param torque: Target Torque
+        """
+        tqe_bytes = int(torque).to_bytes(2, 'little')
+        data = bytes([0x05, 0x13]) + tqe_bytes
+        self.__send_data(motor.slave_id, data)
+
+    def control_cooperative(self, motor: Motor, position: float, velocity: float, torque: float):
+        """
+        Cooperative Control (Position, Velocity, Torque Simultaneous Control)
+        :param motor: Motor Object
+        :param position: Target Position (Unit: 0.0001 turns)
+        :param velocity: Target Velocity (Unit: 0.00025 turns/second)
+        :param torque: Torque Limit
+        """
+        vel_bytes = int(velocity).to_bytes(2, 'little')
+        tqe_bytes = int(torque).to_bytes(2, 'little')
+        pos_bytes = int(position).to_bytes(2, 'little')
+        data = bytes([0x07, 0x35]) + vel_bytes + tqe_bytes + pos_bytes
+        self.__send_data(motor.slave_id, data)
+
+    def read_motor_status(self, motor: Motor):
+        """Read Motor Status"""
+        data = bytes([0x17, 0x01])
+        self.__send_data(motor.slave_id, data)
+        sleep(0.01)  # Wait for Data Reception
+
+        # Receive and Parse Data
+        msg = self.bus.recv(timeout=0.1)
+        if msg and msg.arbitration_id == (0x8000 | motor.slave_id):
+            data = msg.data
+            if len(data) >= 8 and data[0] == 0x27:
+                position = int.from_bytes(data[2:4], 'little')
+                velocity = int.from_bytes(data[4:6], 'little')
+                torque = int.from_bytes(data[6:8], 'little')
+                motor.update_status(position, velocity, torque, 0)
+
+    def periodic_read_status(self, motor: Motor, period_ms: int):
+        """
+        Set Periodic Motor Status Reading
+        :param motor: Motor Object
+        :param period_ms: Period (milliseconds)
+        """
+        period_bytes = int(period_ms).to_bytes(2, 'little')
+        data = bytes([0x05, 0xb4, 0x02, 0x00]) + period_bytes
+        self.__send_data(motor.slave_id, data)
+
+    def close(self):
+        """Close CAN Bus"""
+        self.bus.shutdown() 
+```
+
+</details>
+
+- **Crear Archivo hightorque_test.py**
+
+Copie el siguiente código en hightorque_test.py.
+
+<details>
+<summary>hightorque_test.py</summary>
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import time
+import math
+import numpy as np
+from hightorque_motor import Motor, MotorControl, MotorType
+
+# Configuration Parameters
+NUM_MOTORS = 2  # Number of Motors to Control
+CAN_INTERFACE = "can0"  # CAN Interface Name
+CAN_BITRATE = 1000000  # CAN Baud Rate
+MOTOR_TYPE = MotorType.HT5047_36  # Motor Type
+
+# Sine Wave Parameters
+FREQUENCY = 0.1  # Frequency (Hz)
+AMPLITUDE = 2500  # Amplitude (0.0001 turns)
+OFFSET = 2500    # Offset to Ensure Positive Position
+DURATION = 60.0  # Run Duration (s)
+
+def main():
+    # Create Motor Control Object
+    controller = MotorControl(channel=CAN_INTERFACE, bitrate=CAN_BITRATE)
+
+    try:
+        # Create and Add Motors
+        motors = []
+        for i in range(NUM_MOTORS):
+            motor = Motor(MOTOR_TYPE, slave_id=i+1, master_id=0)
+            controller.add_motor(motor)
+            motors.append(motor)
+
+            # Enable Motor
+            print(f"Enabling Motor {i+1}...")
+            controller.enable(motor)
+            time.sleep(1)  # Wait for Motor Enable
+
+            # Set Zero Position
+            print(f"Setting Motor {i+1} Zero Position...")
+            controller.set_zero_position(motor)
+            time.sleep(1)
+
+            # Save Settings to Flash
+            print(f"Saving Motor {i+1} Settings...")
+            controller.save_settings(motor)
+            time.sleep(1)
+
+            # Read Initial Status
+            controller.read_motor_status(motor)
+            print(f"Motor {i+1} Initial Status:")
+            print(f"Position: {motor.position * 0.0001:.4f} turns")
+            print(f"Velocity: {motor.velocity * 0.00025:.4f} turns/second")
+            print(f"Torque: {motor.torque * motor.torque_k + motor.torque_d:.4f} Nm")
+
+        # Start Sine Wave Position Control
+        print("\nStarting Sine Wave Position Control...")
+        start_time = time.time()
+        while time.time() - start_time < DURATION:
+            current_time = time.time() - start_time
+
+            # Calculate Sine Wave Position with Offset to Ensure Positive
+            position = AMPLITUDE * math.sin(2 * math.pi * FREQUENCY * current_time) + OFFSET
+
+            # Control All Motors
+            for motor in motors:
+                # Use Position Control Mode with Max Torque of 1000
+                controller.control_position(motor, position=int(position), torque=1000)
+
+            # Control Frequency
+            time.sleep(0.001)  # 1kHz Control Frequency
+
+    except KeyboardInterrupt:
+        print("\nProgram Interrupted by User")
+    finally:
+        # Disable All Motors
+        for motor in motors:
+            print(f"Disabling Motor {motor.slave_id}...")
+            controller.disable(motor)
+
+        # Close CAN Bus
+        controller.close()
+        print("CAN Bus Closed")
+
+if __name__ == "__main__":
+    main() 
+
+```
+
+</details>
+
+- **Ejecutar hightorque_test.py**
+
+```bash
+python hightorque_test.py
+```
+
 ### Escenarios de Uso Recomendados
 - **Python**: Prototipado rápido, verificación de algoritmos, experimentos educativos
 - **C++**: Entorno de producción, requisitos de alto rendimiento, sistemas de control en tiempo real
 - **Rust**: Entorno de producción, requisitos de seguridad de memoria, proyectos de mantenimiento a largo plazo
 
-### Elegir el Lenguaje Adecuado
-- **Principiantes**: Python - Simple y fácil de usar, rápido para comenzar
+### Elige el Lenguaje Adecuado
+- **Principiantes**: Python - Simple y fácil de usar, inicio rápido
 - **Desarrollo de Productos**: C++ - Alto rendimiento, control en tiempo real
 - **Proyectos a Largo Plazo**: Rust - Seguridad de memoria, características de lenguaje moderno
 
