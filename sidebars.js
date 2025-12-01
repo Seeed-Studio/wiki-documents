@@ -4089,7 +4089,6 @@ const sidebars = {
         'Robotics/Robot_Actuator/Stackforce_Series',
         'Robotics/Robot_Actuator/Myactuator_Series',
         'Robotics/Robot_Actuator/Damiao_Series',
-        'Robotics/Robot_Actuator/HighTorque',
         'Robotics/Robot_Actuator/HighTorque_Control',
         'Robotics/Robot_Actuator/RobStride_Control',
       ]
@@ -4143,6 +4142,7 @@ const sidebars = {
           // },
           items: [
             'Robotics/Robot_Sensor/IMU/Hexfellow_Y200',
+            'Robotics/Robot_Sensor/IMU/WHEELTEC_IMU',
           ]
         },
       ]
@@ -9180,7 +9180,6 @@ const sidebars = {
         'zh-CN/Robotics/Robot_Actuator/cn_Stackforce_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Myactuator_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
-        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque',
         'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
         'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
       ]
@@ -9234,6 +9233,7 @@ const sidebars = {
           // },
           items: [
             'zh-CN/Robotics/Robot_Sensor/IMU/cn_Hexfellow_Y200',
+            'zh-CN/Robotics/Robot_Sensor/IMU/cn_WHEELTEC_IMU',
           ]
         },
       ]
@@ -14187,7 +14187,6 @@ const sidebars = {
         'es/Robotics/Robot_Actuator/es_Stackforce_Series',
         'es/Robotics/Robot_Actuator/es_Myactuator_Series',
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
-        'es/Robotics/Robot_Actuator/es_HighTorque',
         'es/Robotics/Robot_Actuator/es_HighTorque_Control',
         'es/Robotics/Robot_Actuator/es_RobStride_Control',
       ]
@@ -19190,7 +19189,6 @@ const sidebars = {
         'ja/Robotics/Robot_Actuator/ja_Stackforce_Series',
         'ja/Robotics/Robot_Actuator/ja_Myactuator_Series',
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
-        'ja/Robotics/Robot_Actuator/ja_HighTorque',
         'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
         'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
       ]
