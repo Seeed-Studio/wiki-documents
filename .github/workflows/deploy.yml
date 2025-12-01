@@ -28,9 +28,9 @@ jobs:
       - name: Show runner memory
         run: node -v && free -h && df -h
 
-      - name: Add swap (8G)
+      - name: Add swap (6G)
         run: |
-          sudo fallocate -l 8G /swapfile
+          sudo fallocate -l 6G /swapfile
           sudo chmod 600 /swapfile
           sudo mkswap /swapfile
           sudo swapon /swapfile
@@ -86,19 +86,14 @@ jobs:
           sudo swapon /swapfile
           free -h
 
-      - name: Clean /tmp
-        run: rm -rf /tmp/* || true
-
       - uses: webfactory/ssh-agent@v0.5.0
         with:
           ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
       - name: Deploy to GitHub Pages
         env:
           USE_SSH: true
-          GIT_DEPLOY_DIR: ${{ github.workspace }}/.deploy
         run: |
           git config --global user.email "2768073931@qq.com"
           git config --global user.name "MatthewJeffson"
           yarn install --frozen-lockfile
-          rm -rf $GIT_DEPLOY_DIR || true
           yarn deploy
