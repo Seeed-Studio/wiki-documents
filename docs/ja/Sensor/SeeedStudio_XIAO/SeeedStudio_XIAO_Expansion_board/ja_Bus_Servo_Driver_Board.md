@@ -1,7 +1,7 @@
 ---
 description: |
-  Seeed Studioが設計したロボット用途向けのシリアルバスサーボを制御するための多用途ドライバーボード。接続方法（USBまたは直接UART）に応じて調整が必要な重要なジャンパー設定を備えています。
-title: Bus Servo Driver Board
+  ロボット用途向けにシリアルバスサーボを制御するために設計された、Seeed Studio の多用途ドライバーボード。接続方法（USB または直接 UART）に応じて調整が必要な重要なジャンパー設定を備えています。
+title: バスサーボドライバーボード
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/9.webp
 slug: /ja/bus_servo_driver_board
 keywords:
@@ -15,21 +15,21 @@ last_update:
   date: 05/27/2025
 ---
 
-# Bus Servo Driver Board / XIAO Bus Servo Adapterの使用開始
+# バスサーボドライバーボード / XIAO バスサーボアダプター入門ガイド
 
-このwikiでは、関連する2つの製品について説明します：**Bus Servo Driver Board**と**XIAO Bus Servo Adapter**です。
+このwikiでは、**バスサーボドライバーボード**と**XIAO バスサーボアダプター**という2つの関連製品について説明します。
 
-- **Bus Servo Driver Board**は、オンボードXIAO ESP32-C3マイクロコントローラーを**含まず**、3Dプリント筐体も付属しません。汎用バスサーボインターフェースボードとして機能するよう設計されており、お客様が選択した外部コントローラーを介してサーボを接続・制御できます。
+- **バスサーボドライバーボード**は、オンボード XIAO ESP32-C3 マイクロコントローラーを**含まず**、3Dプリント筐体も付属しません。汎用バスサーボインターフェースボードとして機能するよう設計されており、お好みの外部コントローラーを介してサーボを接続・制御できます。
 
-- 一方、**XIAO Bus Servo Adapter**は、メインコントローラーとしてXIAO ESP32-C3を**含み**、3Dプリントケースが付属します。このバージョンでは、オンボードXIAOを使用してバスサーボを直接制御でき、ロボティクスプロジェクト向けのより統合された、すぐに使用可能なソリューションとなっています。
+- 一方、**XIAO バスサーボアダプター**は、メインコントローラーとして XIAO ESP32-C3 を**含み**、3Dプリントケースが付属します。このバージョンでは、オンボード XIAO を使用してバスサーボを直接制御でき、ロボティクスプロジェクト向けのより統合された即座に使用可能なソリューションとなっています。
 
 両製品のセットアップと使用方法の詳細については、このガイドの残りの部分を参照してください。
 
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>Bus Servo Driver Board</th>
-        <th>XIAO Bus Servo Adapter</th>
+        <th>バスサーボドライバーボード</th>
+        <th>XIAO バスサーボアダプター</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/6.png" style={{width:250, height:'auto'}}/></div></td>
@@ -38,12 +38,12 @@ last_update:
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Bus-Servo-Driver-Board-for-XIAO-p-6413.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
           </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-Bus-Servo-Adapter-for-XIAO-p-6397.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -52,13 +52,13 @@ last_update:
 
 ## はじめに
 
-Bus Servo Driver Board / XIAO Bus Servo Adapterは、Seeed Studioが開発したコンパクトで強力なハードウェアソリューションで、ロボティクスと自動化プロジェクト向けのシリアルバスサーボを駆動するために設計されています。UART通信をサポートし、Feetech SCSシリーズを含む複数のST/SCシリーズサーボからの精密な制御とフィードバックを可能にします（[Feetech SCS/STS/TTLシリーズ公式ウェブサイト](https://www.feetechrc.com/en/scs_ttl_Servo.html)を参照）。これにより、ロボットアーム、六脚ロボット、ヒューマノイドロボット、サーボ角度と負荷フィードバックが必要な車輪型ロボットなどのアプリケーションに最適です。
+バスサーボドライバーボード / XIAO バスサーボアダプターは、ロボティクスおよび自動化プロジェクト向けにシリアルバスサーボを駆動するために設計された、Seeed Studio のコンパクトで強力なハードウェアソリューションです。UART 通信をサポートし、Feetech SCS シリーズを含む複数の ST/SC シリーズサーボからの精密な制御とフィードバックを可能にします（[Feetech SCS/STS/TTL シリーズ公式ウェブサイト](https://www.feetechrc.com/en/scs_ttl_Servo.html)を参照）。これにより、ロボットアーム、ヘキサポッド、ヒューマノイドロボット、サーボ角度と負荷フィードバックが必要な車輪型ロボットなどの用途に最適です。
 
 このガイドでは、ハードウェアセットアップ、物理的接続、主要仕様、および**重要なジャンパー設定**に焦点を当て、ユーザーがボードを効果的にプロジェクトに統合できるよう支援します。
 
 :::warning 安全警告
 
-サーボやワイヤリングを接続または切断する前に、必ず電源を切断してください。損傷を避けるため、入力電圧がサーボの要件と一致することを確認してください。
+サーボや配線を接続または切断する前に、必ず電源を切断してください。損傷を避けるため、入力電圧がサーボの要件と一致することを確認してください。
 
 :::
 
@@ -68,21 +68,21 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Bus Servo Driver Board" label="Bus Servo Driver Board">
+<TabItem value="Bus Servo Driver Board" label="バスサーボドライバーボード">
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/1.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/2.png" style={{width:800, height:'auto'}}/></div>
 
-Bus Servo Driver Boardには、いくつかの主要な接続ポイントがあります：
+バスサーボドライバーボードには、いくつかの主要な接続ポイントがあります：
 
 **入力：**
 
-- **DC IN (5.5 * 2.1mm)：** これはボードと接続されたサーボの電源入力です。ここに5&#126;12Vの電源を接続してください。*重要なのは、この電源の電圧がサーボの電圧要件と一致する必要があることです。* 例えば、STシリーズサーボは通常9Vで動作し、SCシリーズサーボは12Vが必要な場合があります。
+- **DC IN (5.5 * 2.1mm)：** これはボードと接続されたサーボの電源入力です。ここに5〜12Vの電源を接続してください。*重要なことに、この電源の電圧はサーボの電圧要件と一致する必要があります。*例えば、STシリーズサーボは通常9Vで動作し、SCシリーズサーボは12Vが必要な場合があります。
 
 **出力：**
 
-- **Servo Interface：** この専用ポートは、ST/SCシリーズバスサーボを接続する場所です。コネクタが適切に配置されていることを確認してください。
+- **サーボインターフェース：** この専用ポートは、ST/SCシリーズバスサーボを接続する場所です。コネクタが適切に配置されていることを確認してください。
 
 **制御インターフェース：**
 
@@ -90,7 +90,7 @@ Bus Servo Driver Boardには、いくつかの主要な接続ポイントがあ�
 
 </TabItem>
 
-<TabItem value="XIAO Bus Servo Adapter" label="XIAO Bus Servo Adapter">
+<TabItem value="XIAO Bus Servo Adapter" label="XIAO バスサーボアダプター">
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/3.png" style={{width:800, height:'auto'}}/></div>
 
@@ -98,25 +98,25 @@ Bus Servo Driver Boardには、いくつかの主要な接続ポイントがあ�
 
 **入力：**
 
-- **DC IN (5.5 * 2.1mm)：** これはボードと接続されたサーボの電源入力です。ここに5~12Vの電源を接続してください。*重要なのは、この電源の電圧がサーボの電圧要件と一致する必要があることです。* 例えば、STシリーズサーボは通常9Vで動作し、SCシリーズサーボは12Vが必要な場合があります。
+- **DC IN (5.5 * 2.1mm)：** これはボードと接続されたサーボの電源入力です。ここに5〜12Vの電源を接続してください。*重要なことに、この電源の電圧はサーボの電圧要件と一致する必要があります。*例えば、STシリーズサーボは通常9Vで動作し、SCシリーズサーボは12Vが必要な場合があります。
 
 **出力：**
 
-- **Servo Interface：** この専用ポートは、ST/SCシリーズバスサーボを接続する場所です。コネクタが適切に配置されていることを確認してください。
+- **サーボインターフェース：** この専用ポートは、ST/SCシリーズバスサーボを接続する場所です。コネクタが適切に配置されていることを確認してください。
 
 </TabItem>
 
 </Tabs>
 
-## はじめに
+## 入門ガイド
 
-### ドライバーボードの動作モードの選択 **（Bus Servo Driver Boardのみ）**
+### ドライバーボードの動作モードの選択 **（バスサーボドライバーボードのみ）**
 
 :::tip
-XIAO Bus Servo Adapterの場合、付属のXIAO ESP32-C3を使用してサーボを制御するために回路を変更する必要はありません。この部分は直接スキップできます。
+XIAO バスサーボアダプターの場合、付属の XIAO ESP32-C3 を使用してサーボを制御するために回路を変更する必要はありません。この部分は直接スキップできます。
 :::
 
-Bus Servo Driver Boardは2つの主要な接続方法を提供します：直接UART接続とUSB-to-UARTアダプター経由のUSB接続です。*適切な動作のためには正しいジャンパー設定が不可欠です。*
+バスサーボドライバーボードは、直接UART接続とUSB-to-UARTアダプター経由のUSB接続という2つの主要な接続方法を提供します。*適切な動作のためには、正しいジャンパー設定が不可欠です。*
 
 #### UART接続（MCU、XIAO、ESP32など用）
 
@@ -129,17 +129,17 @@ Bus Servo Driver Boardは2つの主要な接続方法を提供します：直接
 
 - **ジャンパー設定（重要）：**
 
-  - 2.54mmジャンパーキャップを使用して、ボード前面の2pinピンをショートします。（デフォルトでショートされています）
+  - ボード前面の2ピンピンを短絡するために2.54mmジャンパーキャップを使用する必要はありません。（デフォルトでは短絡されていません）
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
-- **ホストの電源供給：** ホストデバイス（例：Raspberry Pi Zero、ESP32、XIAO）には独自の電源供給が必要です。
+- **ホストの電源供給：** ホストデバイス（例：Raspberry Pi Zero、ESP32、XIAO）には、独自の別電源が必要です。
 
 #### USB接続
 
-この方法は、USBポートを持つコンピューターまたはシングルボードコンピューター（例：PCまたはRaspberry Pi 4B）に接続する際に使用されます。USBケーブルを使用してコントロールボードをコンピューターに接続するだけです。
+この方法は、USBポートを持つコンピューターまたはシングルボードコンピューター（例：PCまたはRaspberry Pi 4B）に接続する際に使用されます。USBケーブルを使用して制御ボードをコンピューターに接続するだけです。
 
 - **配線：**
-  - USBケーブルを使用してコントロールボードをコンピューターに接続するだけです。
+  - USBケーブルを使用して制御ボードをコンピューターに接続するだけです。
 
 - **ジャンパー設定（重要）：**
 
@@ -153,58 +153,58 @@ Bus Servo Driver Boardは2つの主要な接続方法を提供します：直接
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-1.png" style={{width:400, height:'auto'}}/></div>
 
-  - **ステップ2.** 2.54mmジャンパーキャップを使用して、ボード前面の2pinピンをショートします。（デフォルトでショートされています）
+  - **ステップ2.** 2.54mmジャンパーキャップを使用してボード前面の2ピンピンを短絡します。（デフォルトでは短絡されていません）
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
 ### 必要なコンポーネント（開始前に）
 
 何かを接続する前に、以下があることを確認してください：
 
-- **Bus Servo Driver Board / XIAO Bus Servo Adapter**
-- **対応するST/SCシリーズバスサーボ**：[Feetech SCS/STS/TTLシリーズ公式ウェブサイト](https://www.feetechrc.com/en/scs_ttl_Servo.html)を参照してください。
-- **5~12V電源：** バッテリーまたは電源アダプター。*電圧はサーボの仕様に合致する必要があります。*
+- **バスサーボドライバーボード / XIAO バスサーボアダプター**
+- **互換性のあるST/SCシリーズバスサーボ**：[Feetech SCS/STS/TTL シリーズ公式ウェブサイト](https://www.feetechrc.com/en/scs_ttl_Servo.html)を参照してください。
+- **5〜12V電源：** バッテリーまたは電源アダプター。*電圧はサーボの仕様と一致する必要があります。*
 - **ホストデバイス：**
   - **直接UART用：** Raspberry Pi、Arduino、ESP32、またはSeeed Studio XIAOなどのUART対応デバイス。
-  - **USB用：** コンピューター（PC、Mac、Linux）またはRaspberry Pi 4Bなどのシングルボードコンピューター、*さらに* USB-to-UARTアダプター。
+  - **USB用：** コンピューター（PC、Mac、Linux）またはRaspberry Pi 4Bなどのシングルボードコンピューター、*さらに*USB-to-UARTアダプター。
 
 :::note
-XIAO Bus Servo Adapterの場合、XIAO ESP32-C3が内蔵されているため、ホストデバイスを準備する必要はありません。
+XIAO バスサーボアダプターの場合、XIAO ESP32-C3 が内蔵されているため、ホストデバイスを準備する必要はありません。
 :::
 
-- **接続ワイヤー/アダプター：** 直接UARTを使用する場合はジャンパーワイヤー（デュポンワイヤー）（直接ヘッダー接続でXIAOを使用する場合を除く）。USB接続方法を使用する場合はUSB-to-UARTアダプター。
+- **接続ワイヤー/アダプター：** 直接UARTを使用する場合はジャンパーワイヤー（デュポンワイヤー）（XIAOを直接ヘッダー接続で使用する場合を除く）。USB接続方法を使用する場合はUSB-to-UARTアダプター。
 
 :::caution
-SCシリーズサーボを使用する場合は、電源供給がそれらの電圧要件に合致することを確認してください。ボードのDC入力ラベルはSTシリーズサーボ用に調整されていますが、SCシリーズの電圧もサポートしています。**不正なジャンパー設定はドライバーボードとの通信を妨げます。**
+SCシリーズサーボを使用する場合は、電源がその電圧要件と一致することを確認してください。ボードのDC入力ラベルはSTシリーズサーボ向けに調整されていますが、SCシリーズ電圧もサポートしています。**不正なジャンパー設定では、ドライバーボードとの通信ができません。**
 :::
 
 ## USB経由でのサーボ制御
 
-このセクションでは、USB接続を使用してBus Servo Driver Boardを通じて複数のバスサーボを制御する方法について説明します。
+このセクションでは、USB接続を使用してバスサーボドライバーボード経由で複数のバスサーボを制御する方法について説明します。
 
 ### 原理概要
 
-Bus Servo Driver Boardは、USB経由でホストデバイス（PC、Raspberry Pi、またはマイクロコントローラなど）からシリアル（UART）コマンドを受信することで動作します。これらのコマンドは接続されたバスサーボに中継されます。適切なシリアルプロトコルコマンドを送信することで、各サーボの位置、速度、その他のパラメータを個別に制御できます。
+バスサーボドライバーボードは、USB経由でホストデバイス（PC、Raspberry Pi、またはマイクロコントローラーなど）からシリアル（UART）コマンドを受信することで動作します。これらのコマンドは、接続されたバスサーボに中継されます。適切なシリアルプロトコルコマンドを送信することで、各サーボの位置、速度、その他のパラメーターを個別に制御できます。
 
 ボード自体はサーボ制御信号を自律的に解釈または生成しません。代わりに、ホストとサーボ間の透明なブリッジとして機能します。これは、サーボの通信プロトコルに従って正しいコマンドパケットを送信する責任があることを意味します。
 
 ### 参考例
 
-Feetech（ST/SC/STS/TTLシリーズ）バスサーボにコマンドを送信する実用的な例については、以下のPython例を参照してください：  
+Feetech（ST/SC/STS/TTLシリーズ）バスサーボにコマンドを送信する実用的な例については、以下のPythonサンプルを参照してください：  
 [lerobot/common/robot_devices/motors/feetech.py on GitHub](https://github.com/huggingface/lerobot/blob/main/lerobot/common/robot_devices/motors/feetech.py)
 
-この例では、Feetechサーボを制御するためのシリアルパケットの構築と送信方法を示しています。必要に応じて、コードを独自のホストプラットフォームとプログラミング言語に適応させることができます。
+この例では、Feetechサーボを制御するためのシリアルパケットの構築と送信方法を示しています。必要に応じて、コードを独自のホストプラットフォームやプログラミング言語に適応させることができます。
 
 > **注意：**  
 >
-> - 特定のコマンド形式とプロトコルは、サーボモデルによって異なる場合があります。  
+> - 具体的なコマンド形式とプロトコルは、サーボモデルによって異なる場合があります。  
 > - 正しいシリアルプロトコルとコマンド構造については、サーボの公式ドキュメントを参照してください。  
 > - サーボの要件に合致するドライバープログラムを作成または適応する必要があります。
 
 Feetech SCS/STS/TTLシリーズプロトコルの詳細については、[Feetech公式ドキュメント](https://www.feetechrc.com/en/scs_ttl_Servo.html)を参照してください。
 
-## XIAO経由でのサーボ制御
+## XIAOを介したサーボ制御
 
-次に、XIAOを通じてサーボの動作を制御するための信号送信方法とライブラリの使用方法について説明します。
+次に、XIAOを通じてサーボの動作を制御する信号の送信方法と、ライブラリの使用方法について説明します。
 
 ### Arduinoライブラリ概要
 
@@ -214,13 +214,13 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/workloads/scservo" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-### 機能
+### 関数
 
-スケッチの開発を始める前に、ライブラリで利用可能な機能を見てみましょう。
+スケッチの開発を始める前に、ライブラリで利用可能な関数を見てみましょう。
 
 - `SMS_STS(uint8_t id)` —— 指定されたIDでサーボオブジェクトを作成します。  
   パラメータ：`uint8_t id`（サーボID）  
@@ -286,55 +286,55 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
   パラメータ：`uint8_t id`、`uint8_t newid`  
   出力：なし
 
-- `void Load(uint8_t id)` —— サーボのトルクを有効にします。  
-  パラメータ: `uint8_t id`  
-  出力: なし
+- `void Load(uint8_t id)` —— サーボトルクを有効にします。  
+  パラメータ：`uint8_t id`  
+  出力：なし
 
-- `void Unload(uint8_t id)` —— サーボのトルクを無効にします。  
-  パラメータ: `uint8_t id`  
-  出力: なし
+- `void Unload(uint8_t id)` —— サーボトルクを無効にします。  
+  パラメータ：`uint8_t id`  
+  出力：なし
 
 - `int16_t ReadTorque(uint8_t id)` —— サーボのトルク状態を読み取ります。  
-  パラメータ: `uint8_t id`  
-  出力: `int16_t` (1: 有効, 0: 無効)
+  パラメータ：`uint8_t id`  
+  出力：`int16_t`（1：有効、0：無効）
 
 - `void LEDAlarm(uint8_t id, uint8_t enable)` —— LEDアラーム状態を設定します。  
-  パラメータ: `uint8_t id`, `uint8_t enable`  
-  出力: なし
+  パラメータ：`uint8_t id`、`uint8_t enable`  
+  出力：なし
 
 - `void Reset(uint8_t id)` —— サーボを工場出荷時設定にリセットします。  
-  パラメータ: `uint8_t id`  
-  出力: なし
+  パラメータ：`uint8_t id`  
+  出力：なし
 
 - `void LockEprom(uint8_t id)` —— サーボのEEPROMをロックします。  
-  パラメータ: `uint8_t id`  
-  出力: なし
+  パラメータ：`uint8_t id`  
+  出力：なし
 
 - `void UnlockEprom(uint8_t id)` —— サーボのEEPROMをアンロックします。  
-  パラメータ: `uint8_t id`  
-  出力: なし
+  パラメータ：`uint8_t id`  
+  出力：なし
 
-### XIAO の例
+### XIAO例
 
-ライブラリがインストールされ、基本的な機能を理解したので、産品名称の動作を確認するためにいくつかの例を実行してみましょう。
+ライブラリがインストールされ、基本的な関数を理解したので、産品名称のいくつかの例を実行して、その動作を確認してみましょう。
 
-**ステップ 1.** Arduino アプリケーションを起動します。
+**ステップ1.** Arduinoアプリケーションを起動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDEをダウンロード</font></span></strong></a>
 </div>
 
-**ステップ 2.** 開発ボードモデルを選択し、Arduino IDE に追加します。
+**ステップ2.** 開発ボードモデルを選択し、Arduino IDEに追加します。
 
-- 後のルーチンで **Seeed Studio XIAO ESP32-C3** を使用するには、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started#software-setup)** を参照して追加を完了してください。
+- 後のルーチンで**Seeed Studio XIAO ESP32-C3**を使用するには、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started#software-setup)**を参照して追加を完了してください。
 
-**ステップ 3.** 図に示すように配線を完了します。複数のサーボを接続する必要がある場合は、サーボに付属のワイヤーを使用して接続を完了できます。
+**ステップ3.** 図に示すように配線を完了します。複数のサーボを接続する必要がある場合は、サーボに付属のワイヤーを使用して接続を完了できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/8.jpg" style={{width:600, height:'auto'}}/></div>
 
-#### 複数のサーボを制御する
+#### 複数サーボの制御
 
 ```cpp
 #include <SCServo.h>
@@ -374,7 +374,7 @@ void setup()
   // Start the serial port for controlling the servos
   COMSerial.begin(1000000, SERIAL_8N1);
   st.pSerial = &COMSerial; // Associate the control object with the serial port
-  
+
   Serial.println("Checking servo connection status...");
   for (int i = 0; i < SERVO_NUM; i++) {
     if (st.Ping(ID[i]) != -1) {
@@ -391,7 +391,7 @@ void setup()
   // --- Power-on Self-Test ---
   // This section makes the servos move automatically on power-up to confirm they are working correctly.
   Serial.println("\nExecuting power-on self-test movement...");
-  
+
   // 1. Move to position 1024
   Serial.println("Moving to position 1024...");
   for(int i=0; i<SERVO_NUM; i++) {
@@ -462,19 +462,19 @@ void loop()
         if(i < SERVO_NUM - 1) Serial.print(", ");
       }
       Serial.println("]");
-      
+
       st.SyncWritePosEx(ID, SERVO_NUM, Pos, Speed, ACC);
     }
   }
 }
 ```
 
-この例では、XIAOとSCServoライブラリを使用して複数のFeetech SCSシリーズバスサーボを制御する方法を示しています。コードは2つのサーボを初期化し、キャリブレーションを行い、シリアルコマンドを介してユーザーがサーボの位置を対話的に調整できるようにします。シリアルモニターから'j'または'k'を送信すると、コードは接続されているすべてのサーボの角度をそれぞれ減少または増加させます。各サーボの現在位置が追跡・更新され、新しい位置は`SyncWritePosEx`関数を使用してサーボに送信されます。
+この例では、XIAOとSCServoライブラリを使用して複数のFeetech SCSシリーズバスサーボを制御する方法を示しています。コードは2つのサーボを初期化し、キャリブレーションを行い、シリアルコマンドを通じてユーザーがサーボの位置をインタラクティブに調整できるようにします。シリアルモニターから「j」または「k」を送信すると、コードは接続されたすべてのサーボの角度をそれぞれ減少または増加させます。各サーボの現在位置が追跡・更新され、新しい位置は`SyncWritePosEx`関数を使用してサーボに送信されます。
 
 独自のプロジェクト用にカスタマイズする方法：
 
-- **サーボの数**: `Servo_Num`の値を変更し、ID、Speed、ACC、Pos配列をサーボの数とIDに合わせて更新します。
-サーボID: ID配列を接続されているサーボのIDに合わせて変更します。
+- **サーボ数**: `Servo_Num`の値を変更し、ID、Speed、ACC、Pos配列をサーボの数とIDに合わせて更新します。
+サーボID: ID配列を接続されたサーボのIDに合わせて変更します。
 
 - **速度と加速度**: Speed配列とACC配列を調整して、各サーボに異なる速度と加速度を設定します。
 
@@ -484,7 +484,7 @@ void loop()
 
 - **初期位置**: `Pos`配列の初期値を設定して、サーボの開始位置を定義します。
 
-## FAQs
+## FAQ
 
 :::tip
 
@@ -507,13 +507,13 @@ void loop()
 
 <br/>
 
-## Resources
+## リソース
 
-- **[PDF]** [Bus Servo Driver Board Schematic](https://files.seeedstudio.com/wiki/bus_servo_driver_board/202004237_Servo_Driver_Board_for_Seeed_Studio_XIAO_SCH_PDF_250225.pdf)
+- **[PDF]** [バスサーボドライバーボード回路図](https://files.seeedstudio.com/wiki/bus_servo_driver_board/202004237_Servo_Driver_Board_for_Seeed_Studio_XIAO_SCH_PDF_250225.pdf)
 
-### 技術サポート・製品ディスカッション
+### 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 
