@@ -11,9 +11,10 @@ last_update:
 ---
 
 # SenseCAP T2000 Tracker Introduction
-## Overview
-[**SenseCAP T2000**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), an industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection, a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed. The T2000-A and T2000-B support long-lasting battery operation, while the solar-powered T2000-C with a rechargeable battery ensures continuous outdoor use, making the series ideal for long-term, maintenance-free asset tracking.
 
+## Overview
+
+[**SenseCAP T2000**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), an industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection, a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed. The T2000-A and T2000-B support long-lasting battery operation, while the solar-powered T2000-C with a rechargeable battery ensures continuous outdoor use, making the series ideal for long-term, maintenance-free asset tracking.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.png" alt="pir" width={800} height="auto" /></p>
 
@@ -25,8 +26,8 @@ last_update:
 
 ---
 
-
 :::tip Version Comparison
+
 || [SenseCAP T2000-A](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html) | [SenseCAP T2000-B](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-B-p-6581.html) | [SenseCAP T2000-C](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-C-p-6582.html) |
 |:---|:---:|:---:|:---:|
 | **Operating temperature** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-20 ~ 60℃</div> |
@@ -35,9 +36,6 @@ last_update:
 | **Positioning Mode** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li><li>WiFi</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li></ul></div></div> |
 | **Protection Rating** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><ul style={{"margin":"0","padding":"0","listStylePosition":"inside"}}><li>IP67</li></ul></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><ul style={{"margin":"0","padding":"0","listStylePosition":"inside"}}><li>IP67</li></ul></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><ul style={{"margin":"0","padding":"0","listStylePosition":"inside"}}><li>IP67</li></ul></div> |
 :::
-
-
-
 
 ## Features
 
@@ -59,7 +57,6 @@ The T2000 Series provides reliable and continuous asset tracking across diverse 
 - High-performance GNSS module delivering meter-level accuracy (5–10 m)  
 - Supports global multi-constellation: GPS, BeiDou, Galileo and GLONASS
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_GNSS.png" alt="pir" width={800} height="auto" /></p>
 
 **BLE & Wi-Fi Positioning**
@@ -68,7 +65,6 @@ The T2000 Series provides reliable and continuous asset tracking across diverse 
 - Data is uploaded via LoRaWAN to the application server
 - The application server calculates the real geographical location based on the MAC addresses and signal strengths (RSSI)
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_BLE_WiFi.png" alt="pir" width={800} height="auto" /></p>
 
 <br />
@@ -76,7 +72,6 @@ The T2000 Series provides reliable and continuous asset tracking across diverse 
 ### Long-Range LoRaWAN® Connectivity
 
 Our devices achieve communication ranges of up to 9.6 km in open environments through LoRaWAN® technology. Engineered for harsh conditions, they deliver consistent and reliable data transmission even in remote locations, ensuring stable and continuous network connectivity for critical applications.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Distance.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -88,7 +83,7 @@ Our devices achieve communication ranges of up to 9.6 km in open environments th
 Built with a 8000 mAh battery, allowing them to operate for over one year when using GNSS with hourly uplinks. With longer uplink intervals, their battery life can extend up to 7~9 years, providing long-term reliability for various deployment scenarios.
 
 **T2000-C (with Solar Panel)**  
-Equipped with a 0.5 W solar panel and a 4000 mAh rechargeable battery, the T2000-C supports multi-year, low-maintenance operation under regular sunlight and moderate uplink intervals. 
+Equipped with a 0.5 W solar panel and a 4000 mAh rechargeable battery, the T2000-C supports multi-year, low-maintenance operation under regular sunlight and moderate uplink intervals.
 
 *Actual battery life varies with uplink interval, positioning mode, and deployment environment. Use the [Battery Life Calculator](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Trcaker_Battery_Life_Calculation_T2000_AB.xlsx) for details.
 
@@ -108,15 +103,15 @@ Equipped with a 0.5 W solar panel and a 4000 mAh rechargeable battery, the T
 
 ### Offline Data Storage
 
-The device features robust local storage, capable of securely holding up to 1,000 data records. Even if the LoRaWAN network becomes temporarily unavailable, it continues logging data without interruption. 
+The device features robust local storage, capable of securely holding up to 1,000 data records. Even if the LoRaWAN network becomes temporarily unavailable, it continues logging data without interruption.
 
 Assuming the device remains continuously out of LoRaWAN coverage,
+
 - At an uplink interval of 1 hour, it can retain approximately up to 41 days of historical data.
 - At an uplink interval of 12 hours, it can store over 500 days of historical data.
 - At an uplink interval of 24 hours, it can retain more than 1000 days of historical data.
 
 Once the device moves back into an area with LoRaWAN coverage, it will automatically transmit all previously stored records, ensuring that your data remains complete and never gets lost.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Offiline_Data_Storage.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -130,7 +125,7 @@ The T2000 tracker offers versatile installation methods to suit diverse tracking
 
 <br />
 
-### All-in-One Software Platform Management 
+### All-in-One Software Platform Management
 
 Seamlessly integrated with the SenseCraft App, providing an end-to-end solution from QR code activation and Bluetooth configuration to real-time map tracking, remote parameter setup, and alarm management.
 
@@ -156,10 +151,10 @@ SenseCAP T2000 Series Asset Trackers are the ideal solution for managing high-va
 
 We provide three different solutions for users, and comes in three versions: A, B and C.
 
-- **T2000-A/T2000-B:** 
+- **T2000-A/T2000-B:**
 Designed for extreme environments with a robust 8000mAh built-in battery, and IP67-rated protection. Both support GNSS and Bluetooth positioning, with the T2000-B offering expanded positioning capabilities through the addition of WiFi scanning technology.
 
-- **T2000-C:** 
+- **T2000-C:**
 Combining a 4000mAh rechargeable battery with a 0.5W solar panel for extended operational life. It supports GNSS and Bluetooth positioning and maintains reliable performance in temperatures from -20°C to 60°C, all while providing the same IP67 protection as the other models.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Version_Comparison.png" alt="pir" width={800} height="auto" /></p>
@@ -194,7 +189,6 @@ Combining a 4000mAh rechargeable battery with a 0.5W solar panel for extended op
 | Protection Rating | IP67 |
 | Dimensions | 117 × 65 × 30 mm |
 | Weight | 180g |
-
 
 ## Tech Support & Product Discussion
 
