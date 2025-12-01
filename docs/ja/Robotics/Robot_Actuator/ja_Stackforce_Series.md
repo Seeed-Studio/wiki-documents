@@ -5,7 +5,7 @@ keywords:
 - actuator
 - motor
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010.webp
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010_homepage.webp
 slug: /ja/stackforce_series
 last_update:
   date: 11/26/2025
@@ -48,7 +48,7 @@ last_update:
     <tr><td>定格速度</td><td>120 RPM</td><td>110 RPM</td></tr>
     <tr><td>最大速度</td><td>270 RPM</td><td>320 RPM</td></tr>
     <tr><td>ギア比</td><td>8:1</td><td>8:1</td></tr>
-    <tr><td>エンコーダタイプ</td><td>MIT Protocol</td><td>MIT Protocol</td></tr>
+    <tr><td>通信プロトコル</td><td>MIT Protocol</td><td>MIT Protocol</td></tr>
     <tr><td>制御モード</td><td>Position, Velocity, Torque Control</td><td>Position, Velocity, Torque Control</td></tr>
     <tr><td>外径</td><td>80 mm</td><td>97 mm</td></tr>
     <tr><td>厚さ</td><td>47 mm</td><td>46 mm</td></tr>
@@ -64,7 +64,7 @@ last_update:
 2. **MITモード制御**
 3. **磁気エンコーダフィードバック**
 4. **コンパクトで軽量な設計**
-5. **高速CANバス通信サポート**
+5. **高速CANバス通信対応**
 6. **多用途アプリケーション**
 
 ## 入門ガイド
@@ -201,7 +201,7 @@ JSTインターフェースでCAN1を使用する場合は、ピン106をハイ�
 gpioset --mode=wait 0 106=0
 ```
 
-このターミナルを開いたまま、新しいターミナルを開始してCAN0を設定します。
+このターミナルを開いたまま、新しいターミナルを起動してCAN0を設定します。
 ```bash
 sudo modprobe mttcan
 sudo ip link set can0 type can bitrate 1000000
@@ -237,7 +237,7 @@ cmake ..
 make
 ```
 
-コンパイルされた実行ファイルは`build/sfmotor_control`にあります。プログラムを実行します：
+コンパイルされた実行ファイルは`build/sfmotor_control`に配置されます。プログラムを実行します：
 
 ```bash
 ./sfmotor_control
