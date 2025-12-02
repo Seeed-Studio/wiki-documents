@@ -12,7 +12,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/cn/xiao_debug_mate_serial" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
@@ -194,47 +194,51 @@ XIAO Debug Mate 提供三种灵活的方式来连接您的目标设备进行串�
 
 这是监视 XIAO 开发板最简单的方法。Debug Mate 设计为默认监听 XIAO 的 `Serial1` 端口（`D6` 和 `D7`）。
 
-1.  只需将您的 XIAO 开发板直接插入 XIAO Debug Mate 正面的母头中。
+1.  只需将您的 XIAO 开发板直接插入 XIAO Debug Mate 正面的母头插座中。
 2.  连接会自动建立。不需要额外的线缆。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/connect_xiao.gif" style={{width:600, height:'auto'}}/></div>
 
-#### 适用于 UART Grove 设备
+#### 对于 UART Grove 设备
 
-专用的 Grove 连接器可以与任何基于 UART 的 Grove 模块实现干净、安全的连接。
+专用的 Grove 连接器可以与任何基于 UART 的 Grove 模块进行干净、安全的连接。
 
 1.  拿出您的 Grove UART 设备（例如，Grove GPS 或 Grove MP3 V4）。
 2.  使用标准 Grove 线缆将其连接到 XIAO Debug Mate 右侧的 Grove 端口。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/24.jpg" style={{width:800, height:'auto'}}/></div>
 
-#### 适用于其他 UART 设备
+#### 对于其他 UART 设备
 
 :::danger 电源引脚连接说明
-是否需要连接两个开发板的 3.3V 电源引脚取决于您的其他设备是否由 Debug Mate 供电。如果其他设备通过自己独立的 USB 连接供电，则不应连接设备和 Debug Mate 的 3.3V 引脚。这样做可能会损坏设备。
+是否需要连接两个开发板的 3.3V 电源引脚取决于您的其他设备是否由 Debug Mate 供电。如果其他设备通过自己独立的 USB 连接供电，您不应该连接设备和 Debug Mate 的 3.3V 引脚。这样做可能会损坏设备。
 :::
 
 您可以监控任何具有可访问 TX 和 RX 引脚的设备，例如另一个开发板或自定义电路。
 
-主要有两种方法：
+有两种主要方法可以做到这一点：
 
 *   **选项 1：使用主排针：** 使用杜邦线将您设备的 TX 和 RX 引脚连接到 XIAO Debug Mate 的母排针。记住要交叉连接：设备 TX -> Debug Mate RX（排针上的 D7 引脚）和设备 RX -> Debug Mate TX（排针上的 D6 引脚）。
 
-*   **选项 2：使用 Grove 端口：** 使用 **Grove 转杜邦转换线缆**。将 Grove 连接器插入 Debug Mate，并将各个杜邦端连接到您设备的 TX、RX、VCC 和 GND 引脚。这通常是更稳定可靠的连接方式。
+*   **选项 2：使用 Grove 端口：** 使用 **Grove 转杜邦转换线缆**。将 Grove 连接器插入 Debug Mate，并将各个杜邦端连接到您设备的 TX、RX、VCC 和 GND 引脚。这通常是更稳定、更可靠的连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/25.jpg" style={{width:800, height:'auto'}}/></div>
+
+以下图表显示了 Grove 接口的引脚定义。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/39.png" style={{width:400, height:'auto'}}/></div>
 
 :::caution 重要提醒
 始终确保您设备的 TX 引脚连接到 Debug Mate 的接收引脚，设备的 RX 引脚连接到发送引脚。
 :::
 
-凭借其多功能设计，XIAO Debug Mate 允许您**同时连接多达两个 UART 设备**：一个通过 XIAO 插座，另一个通过 Grove 端口。然后您可以使用屏幕菜单在监控每个设备之间切换。
+由于其多功能设计，XIAO Debug Mate 允许您**同时连接多达两个 UART 设备**：一个通过 XIAO 插座，另一个通过 Grove 端口。然后您可以使用屏幕菜单在监控每个设备之间切换。
 
-这一强大功能**消除了在调试涉及多个串行设备的复杂系统时反复重新布线的痛苦过程**。
+这个强大的功能**消除了在调试涉及多个串行设备的复杂系统时反复重新布线的痛苦过程**。
 
 ## 操作串行监视器
 
-XIAO Debug Mate 具有多功能串行工具，可用于设备端和基于 PC 的监控。本指南将引导您了解其导航和功能。
+XIAO Debug Mate 具有多功能串行工具，可用于设备上和基于 PC 的监控。本指南将引导您了解其导航和功能。
 
 
 <div class="table-center">
@@ -254,8 +258,8 @@ XIAO Debug Mate 具有多功能串行工具，可用于设备端和基于 PC 的
 
 有两种主要的交互状态：
 
-*   **无光标激活：** 在此状态下，转动滚轮可在主要功能之间切换（例如，透传模式与监视器模式）。
-*   **光标激活：** 短按后，屏幕顶部会出现光标。现在，滚轮移动此光标，允许您选择要更改的设置。
+*   **无光标激活：** 在此状态下，转动滚轮在主要功能之间切换（例如，透传模式与监视器模式）。
+*   **光标激活：** 短按后，屏幕顶部出现光标。现在，滚轮移动此光标，允许您选择要更改的设置。
 
 #### 快速导航指南
 
@@ -273,7 +277,7 @@ XIAO Debug Mate 具有多功能串行工具，可用于设备端和基于 PC 的
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/26.jpg" style={{width:600, height:'auto'}}/></div>
 
-这是默认模式，旨在将所选源的所有串行数据直接转发到您的计算机，以便在基于 PC 的串行终端中查看。
+这是默认模式，设计用于将所选源的所有串行数据直接转发到您的计算机，以便在基于 PC 的串行终端中查看。
 
 *   **屏幕显示：** 屏幕显示状态信息，而不是数据本身。
     *   **左上角：** 活动串行源（例如，`XIAO`）。
@@ -330,7 +334,7 @@ Debug Mate 无法同时显示来自两个源的数据。您必须使用设置菜
 
 ## 特别感谢
 
-特别感谢 **啊猫啊狗晒太阳** 为 LED 矩阵提供的设计灵感。Debug Mate 的板载 LED 指示器设计参考了他们出色的开源项目。原始设计非常有创意且实用。
+特别感谢 **啊猫啊狗晒太阳** 为 LED 矩阵提供的设计灵感。Debug Mate 的板载 LED 指示器设计参考了他们出色的开源项目。原始设计非常有创意和实用。
 
 如果您想查看原始设计，可以通过以下链接查看演示视频和作者主页。
 

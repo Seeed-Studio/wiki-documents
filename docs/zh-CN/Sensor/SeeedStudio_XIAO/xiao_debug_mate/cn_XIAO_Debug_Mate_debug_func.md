@@ -15,19 +15,19 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/15.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/cn/xiao_debug_mate_serial" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
 ## 简介
 
-欢迎使用 XIAO Debug Mate DAPLink 功能的官方用户手册。本综合指南旨在帮助初学者和高级用户充分发挥 XIAO Debug Mate 在专业调试任务中的全部潜力。在这里，您将学习如何连接、配置和操作 DAPLink 调试器，了解基本的软件工具，并遵循最佳实践，确保与各种 XIAO 系列开发板的调试体验顺畅且高效。无论您是在排查复杂固件问题还是优化开发工作流程，本文档都提供了清晰的分步说明、技巧和深入的技术解释，为您的项目从开始到完成提供全程支持。
+欢迎使用 XIAO Debug Mate DAPLink 功能的官方用户手册。这份全面的指南旨在帮助初学者和高级用户充分发挥 XIAO Debug Mate 在专业调试任务中的全部潜力。在这里，您将学习如何连接、配置和操作 DAPLink 调试器，了解基本的软件工具，并遵循最佳实践，确保与各种 XIAO 系列开发板的调试体验顺畅且高效。无论您是在排查复杂的固件问题还是优化开发工作流程，本文档都提供了清晰的分步说明、技巧和深入的技术解释，为您的项目从开始到完成提供支持。
 
 
 ## 调试器概念解释
 
-为了有效使用 XIAO Debug Mate 的 DAPLink 功能，了解协同工作以实现调试的关键软件组件和协议会很有帮助。以下是每个概念的详细说明以及它们之间的关系。
+为了有效使用 XIAO Debug Mate 的 DAPLink 功能，了解协同工作以实现调试的关键软件组件和协议是很有帮助的。以下是每个概念的详细说明以及它们之间的关系。
 
 ### GDB
 
@@ -37,13 +37,13 @@ import TabItem from '@theme/TabItem';
 *   启动和停止程序。
 *   设置断点以在特定代码行暂停执行。
 *   逐行单步执行代码。
-*   检查变量值和内存寄存器内容。
+*   检查变量值和内存寄存器的内容。
 
 大多数现代集成开发环境（IDE），如 VS Code（配合 PlatformIO）或 Eclipse，都提供图形用户界面作为 GDB 的前端，将您的点击操作转换为 GDB 命令。
 
 ### OpenOCD/PyOCD
 
-**[OpenOCD](https://openocd.org/)**（开放片上调试器）和 **[PyOCD](https://pyocd.io/)** 是运行在主机计算机上的重要"服务器"应用程序。它们充当 GDB 高级命令与物理调试探针（在本例中为 XIAO Debug Mate）所需的低级信号之间的桥梁或转换器。
+**[OpenOCD](https://openocd.org/)**（开放片上调试器）和 **[PyOCD](https://pyocd.io/)** 是运行在主机计算机上的重要"服务器"应用程序。它们充当 GDB 的高级命令与物理调试探针（在本例中为 XIAO Debug Mate）所需的低级信号之间的桥梁或转换器。
 
 当 GDB 发出诸如"读取变量 `x` 的值"这样的命令时，OpenOCD 接收此命令，将其转换为调试探针能够理解的指令序列，并通过 USB 将这些指令发送给探针。
 
@@ -79,7 +79,7 @@ import TabItem from '@theme/TabItem';
 
 ### 兼容性检查
 
-XIAO Debug Mate 专为整个 XIAO 生态系统设计，但 DAPLink 调试功能专门针对 ARM Cortex-M 核心。然而，UART 和功耗监控功能具有通用兼容性，因为它们与架构无关。请参考下表了解详细的兼容性信息。
+XIAO Debug Mate 专为整个 XIAO 生态系统设计，但 DAPLink 调试功能专门针对 ARM Cortex-M 核心。然而，UART 和功耗监控功能是通用兼容的，因为它们与架构无关。请参考下表了解详细的兼容性信息。
 
 <div class="table-center">
 
@@ -261,45 +261,6 @@ XIAO Debug Mate 专为整个 XIAO 生态系统设计，但 DAPLink 调试功能�
 
 在开始调试之前，您需要在主机计算机上设置必要的软件。
 
-#### 安装驱动程序
-
-驱动程序要求因操作系统而异。
-
-<Tabs>
-<TabItem value="Windows" label="Windows" default>
-
-在 Windows 上，您需要为 CMSIS-DAP 接口安装通用 USB 驱动程序。最简单的方法是使用 **Zadig** 实用程序。
-
-1.  从[官方网站](https://zadig.akeo.ie/)下载 Zadig。
-2.  将 XIAO Debug Mate 连接到您的 PC。
-3.  运行 Zadig。转到 `Options` 并确保选中 `List All Devices`。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_1.png" style={{width:700, height:'auto'}}/></div>
-
-4.  从下拉列表中，找到名为 **`CMSIS-DAP`** 的设备接口。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_2.png" style={{width:700, height:'auto'}}/></div>
-
-  :::warning
-  请务必小心选择正确的接口。您可能会看到 Debug Mate 的多个接口（例如，一个用于串口）。只修改 `CMSIS-DAP` 接口。
-  :::
-
-5.  在绿色箭头右侧的框中选择 **`WinUSB`** 驱动程序。
-6.  点击 `Replace Driver`。安装完成后，您的系统就准备就绪了。
-
-</TabItem>
-<TabItem value="MacOS" label="MacOS">
-
-无需安装驱动程序。macOS 通过其通用 USB 驱动程序内置支持 CMSIS-DAP 设备。
-
-</TabItem>
-<TabItem value="Linux" label="Linux">
-
-无需安装驱动程序。Linux 内核包含 CMSIS-DAP 设备的驱动程序。
-
-</TabItem>
-</Tabs>
-
 #### 安装 OpenOCD
 
 :::tip
@@ -309,7 +270,7 @@ XIAO Debug Mate 专为整个 XIAO 生态系统设计，但 DAPLink 调试功能�
 为了确保兼容性并获得最新功能，我们强烈建议使用 **xPack** 版本的 OpenOCD。系统包管理器（如 macOS 上的 Homebrew 或 Linux 上的 APT）通常提供较旧的过时版本，可能无法与现代目标正常工作。
 
 :::tip PlatformIO 注意事项
-如果您使用 VS Code 配合 PlatformIO 扩展，PlatformIO 会在您开始调试会话时自动下载并配置适合您项目的正确版本 OpenOCD。如果您只使用 PlatformIO，则无需手动安装。
+如果您使用 VS Code 配合 PlatformIO 扩展，PlatformIO 将在您开始调试会话时自动下载并为您的项目配置正确版本的 OpenOCD。
 :::
 
 <Tabs>
@@ -319,22 +280,22 @@ XIAO Debug Mate 专为整个 XIAO 生态系统设计，但 DAPLink 调试功能�
 
 1.  **下载 OpenOCD 包**
 
-转到 [xPack OpenOCD 发布页面](https://github.com/xpack-dev-tools/openocd-xpack/releases)。向下滚动到最新版本并找到 Windows 版本（例如，`xpack-openocd-...-win32-x64.zip`）。下载此文件。
+前往 [xPack OpenOCD 发布页面](https://github.com/xpack-dev-tools/openocd-xpack/releases)。最新版本总是列在最顶部。在最新发布版本中找到 Windows 版本（例如，`xpack-openocd-...-win32-x64.zip`）并下载此文件。
 
 2.  **解压文件**
 
-右键点击下载的 ZIP 文件并选择 "Extract All..."。选择一个稳定的位置，例如 `C:\Users\YourName\AppData\Local\xPacks\OpenOCD`。解压后，您将得到一个类似 `xpack-openocd-0.12.0-7` 的文件夹，其中包含一个 `bin` 目录。
+右键点击下载的 ZIP 文件并选择"全部解压..."。选择一个稳定的位置，如 `C:\Users\YourName\AppData\Local\xPacks\OpenOCD`。解压后，您将得到一个类似 `xpack-openocd-0.12.0-7` 的文件夹，其中包含 `bin` 目录。
 
 3.  **将 OpenOCD 添加到系统 PATH**
 
-这样您就可以在任何终端中运行 `openocd`。
+这允许您从任何终端运行 `openocd`。
 
-    - 在开始菜单中搜索 "Environment Variables" 并选择 "Edit the system environment variables"。
+    - 在开始菜单中搜索"Environment Variables"并选择"Edit the system environment variables"。
     - 点击 **"Environment Variables..."**。
-    - 在 "User variables" 下，选择 **"Path"** 变量并点击 **"Edit..."**。
+    - 在"System variables"下，选择 **"Path"** 变量并点击 **"Edit..."**。
     - 点击 **"New"** 并粘贴您之前解压的 `bin` 目录的完整路径。例如：  
       `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\bin`
-    - 在所有窗口上点击 OK 以保存。
+    - 在所有窗口上点击 OK 保存。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_3.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -353,7 +314,7 @@ openocd --version
 </TabItem>
 <TabItem value="MacOS" label="MacOS">
 
-此过程与 Windows 手动设置相同。
+此过程与 Windows 手动设置相似。
 
 1.  **下载 OpenOCD 包**
 
@@ -631,23 +592,27 @@ XIAO_Debug_Mate_DAPLink_Package/
 
 连接您的硬件进行调试非常简单。
 
-#### 适用于 XIAO 开发板
+#### 对于 XIAO 开发板
+
+:::tip
+一般来说，Debug Mate 上的 XIAO 的所有功能都不需要为 XIAO 额外供电，除非另有说明。
+:::
 
 XIAO Debug Mate 专为与所有 Seeed Studio XIAO 开发板的无缝即插即用体验而设计。
 
-1.  拿起您的 XIAO 开发板，将其与 Debug Mate 上的母排针对齐。
+1.  拿起您的 XIAO 开发板并将其与 Debug Mate 上的母头对齐。
 2.  **确保 XIAO 上的 USB-C 端口与 Debug Mate 上的 USB-C 端口朝向相同方向。**
-3.  将 XIAO 垂直向下牢固按压到插座中，直到完全就位。这确保 Debug Mate 上的弹簧针与 XIAO 底部的 SWD 焊盘建立牢固连接。
+3.  将 XIAO 直接向下牢固按压到插座中，直到完全就位。这确保 Debug Mate 上的弹簧针与 XIAO 底部的 SWD 焊盘建立牢固连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/connect_xiao.gif" style={{width:600, height:'auto'}}/></div>
 
 :::note
-一些早期的 XIAO 开发板，如 **XIAO SAMD21**、**XIAO RP2040** 和 **XIAO nRF52840**，是在建立背面焊盘统一标准之前设计的。虽然 Debug Mate 的弹簧针位置设计得尽可能兼容，但这些较旧开发板的细微差异可能导致接触不完美。
+一些较早的 XIAO 开发板，如 **XIAO SAMD21**、**XIAO RP2040** 和 **XIAO nRF52840**，是在建立背面焊盘统一标准之前设计的。虽然 Debug Mate 的弹簧针位置尽可能兼容，但这些较旧开发板的轻微变化可能导致接触不完美。
 
-如果您遇到不稳定的调试连接，请尝试**稍微调整** XIAO 开发板在插座中的位置。您可能不需要将其完全按下。轻微的移动通常可以确保弹簧针与 XIAO 背面的 SWD 焊盘建立牢固接触。
+如果您遇到不稳定的调试连接，请尝试**稍微调整 XIAO 开发板在插座中的位置**。您可能不需要将其完全按下。轻微的移动通常可以确保弹簧针与 XIAO 背面的 SWD 焊盘建立牢固接触。
 :::
 
-:::danger 热插拔
+:::danger hot-swapping
 我们强烈建议不要热插拔 XIAO 和 Debug Mate！
 :::
 
@@ -657,11 +622,11 @@ XIAO Debug Mate 专为与所有 Seeed Studio XIAO 开发板的无缝即插即用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/16.jpg" style={{width:800, height:'auto'}}/></div>
 
-1.  您需要四根杜邦线（母对公或母对母，取决于您的目标开发板）。
-2.  在您的目标开发板上找到 SWD 调试引脚。这些通常标记为 `SWDIO`、`SWCLK`、`GND`，有时还有 `VTref` 或 `VCC`。
-3.  按以下方式将线缆从 XIAO Debug Mate 的扩展排针连接到您的目标开发板：
+1.  您需要四根杜邦线（母对公或母对母，取决于您的目标板）。
+2.  在目标板上找到 SWD 调试引脚。这些引脚通常标记为 `SWDIO`、`SWCLK`、`GND`，有时还有 `VTref` 或 `VCC`。
+3.  将 XIAO Debug Mate 扩展接头的线缆连接到目标板，连接方式如下：
 
-| XIAO Debug Mate 引脚 | 目标开发板引脚 | 描述                               |
+| XIAO Debug Mate 引脚 | 目标板引脚 | 描述                               |
 | :------------------ | :--------------- | :---------------------------------------- |
 | `SWDIO`             | `SWDIO`          | 串行线数据输入/输出             |
 | `SWCLK`             | `SWCLK`          | 串行线时钟                         |
@@ -673,7 +638,7 @@ XIAO Debug Mate 专为与所有 Seeed Studio XIAO 开发板的无缝即插即用
 
 ## 通过 Telnet 与 OpenOCD 交互
 
-虽然现代 IDE 提供了图形化的调试界面，但有时您需要一种更直接、更底层的方式与调试器交互。这就是 Telnet 的用武之地。OpenOCD 运行一个 Telnet 服务器，允许您直接连接并发送基于文本的命令来控制目标芯片。这对于快速检查、编写自动化任务脚本或在完整 IDE 不可用或不必要时调试问题非常有用。
+虽然现代 IDE 提供了图形化的调试界面，但有时您需要一种更直接、更底层的方式与调试器交互。这就是 Telnet 的用武之地。OpenOCD 运行一个 Telnet 服务器，允许您直接连接并发送基于文本的命令来控制目标芯片。这对于快速检查、编写自动化任务脚本，或在完整 IDE 不可用或不必要时调试问题非常有用。
 
 ### 启用 Telnet 客户端
 
@@ -694,7 +659,7 @@ XIAO Debug Mate 专为与所有 Seeed Studio XIAO 开发板的无缝即插即用
 
 </TabItem>
 <TabItem value="MacOS" label="MacOS">
-原生 Telnet 客户端可能在最新版本的 macOS 中已被移除。最简单的安装方法是使用 [Homebrew]。打开您的终端并运行：
+在最新版本的 macOS 中，原生 Telnet 客户端可能已被移除。最简单的安装方法是使用 [Homebrew]。打开终端并运行：
 ```bash
 brew install telnet
 ```
@@ -716,14 +681,14 @@ sudo apt-get install telnet
 
 ##### 适用于 Seeed Studio XIAO SAMD21
 
-标准 OpenOCD 包不包含 XIAO SAMD21 的配置文件。您必须手动将其从我们提供的包复制到系统的 OpenOCD 安装目录中。
+标准 OpenOCD 包不包含 XIAO SAMD21 的配置文件。您必须手动将其从我们提供的包中复制到系统的 OpenOCD 安装目录中。
 
 **1. 复制配置文件**
 
 *   **源文件：** 从 `XIAO_Debug_Mate_DAPLink_Package` 中找到文件：`target/XIAO_SAMD21/at91samd21g18.cfg`。
 *   **目标文件夹：** 将此文件复制到您的 xPack OpenOCD 安装的 `target` 脚本文件夹中。路径因操作系统而异：
 
-    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux：** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
@@ -732,7 +697,7 @@ sudo apt-get install telnet
 
 **2. 运行 OpenOCD 命令**
 
-在系统的任何位置打开新终端并运行相应命令：
+在系统的任意位置打开新终端并运行相应命令：
 
 *   **Windows：**
     ```bash
@@ -799,7 +764,7 @@ nRF52 的配置包含在标准 xPack OpenOCD 中。打开终端并运行命令�
 *   **源文件：** 从 `XIAO_Debug_Mate_DAPLink_Package` 中找到文件：`target/XIAO_RA4M1/ra4m1.cfg`。
 *   **目标文件夹：** 将此文件复制到您的 xPack OpenOCD 安装的 `target` 脚本文件夹中。
 
-    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux：** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
@@ -808,7 +773,7 @@ nRF52 的配置包含在标准 xPack OpenOCD 中。打开终端并运行命令�
 
 **2. 运行 OpenOCD 命令**
 
-在系统的任何位置打开新终端并运行相应命令：
+在系统的任意位置打开新终端并运行相应命令：
 
 *   **Windows：**
     ```bash
@@ -824,12 +789,12 @@ nRF52 的配置包含在标准 xPack OpenOCD 中。打开终端并运行命令�
 ##### 适用于 Seeed Studio XIAO MG24
 
 :::warning[重要]
-XIAO MG24 需要 `XIAO_Debug_Mate_DAPLink_Package` 中包含的特殊版本 OpenOCD。**不要**使用您系统范围的 OpenOCD 安装。您**必须**从包中提供的特定目录内运行命令。
+XIAO MG24 需要 `XIAO_Debug_Mate_DAPLink_Package` 中包含的特殊版本 OpenOCD。**不要**使用系统范围的 OpenOCD 安装。您**必须**从包中提供的特定目录内运行命令。
 :::
 
-**1. 准备您的终端**
+**1. 准备终端**
 
-打开您的命令行工具，并导航到解压包中适合您操作系统的正确文件夹。
+打开命令行工具并导航到解压包中适合您操作系统的正确文件夹。
 
 *   **Windows：**
     ```bash
@@ -865,7 +830,7 @@ XIAO MG24 需要 `XIAO_Debug_Mate_DAPLink_Package` 中包含的特殊版本 Open
 
 *   `-s share/openocd/scripts`：`-s` 标志至关重要。它告诉 OpenOCD 在哪里**搜索**其脚本库。设置此路径后，OpenOCD 可以找到 `-f` 标志指定的文件。
 
-*   `-f interface/cmsis-dap.cfg`：`-f` 标志指定要加载的配置**文件**。第一个文件定义了我们使用的调试适配器（标准 CMSIS-DAP 探针）。
+*   `-f interface/cmsis-dap.cfg`：`-f` 标志指定要加载的配置**文件**。第一个定义我们使用的调试适配器（标准 CMSIS-DAP 探针）。
 
 *   `-f target/rp2040.cfg`：第二个 `-f` 标志加载目标微控制器的配置（XIAO 板上的 RP2040 芯片）。
 
@@ -886,11 +851,11 @@ telnet localhost 4444
 *   `localhost` 指您自己的计算机。
 *   `4444` 是 OpenOCD 用于 Telnet 连接的默认端口号。
 
-如果连接成功，您的终端将显示来自 OpenOCD 的欢迎消息，您将看到 `>` 提示符，准备接受您的命令。
+如果连接成功，您的终端将显示来自 OpenOCD 的欢迎消息，您将看到一个 `>` 提示符，准备接受您的命令。
 
 #### 步骤 3：执行调试命令
 
-现在您可以直接在 Telnet 会话中输入命令来控制目标芯片。以下是一些最常用的命令：
+您现在可以直接在 Telnet 会话中输入命令来控制目标芯片。以下是一些最常用的命令：
 
 | 命令             | 描述                                                                                                                                                             |
 | :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -898,27 +863,27 @@ telnet localhost 4444
 | `reset halt`        | **复位并暂停。** 复位微控制器并立即暂停（停止）其执行。这是进入调试就绪状态的主要方式。                       |
 | `reg`               | **显示寄存器。** 显示所有 CPU 寄存器的当前值。                                                                                                   |
 | `mdw [address] [count]` | **内存显示字。** 读取并显示内存内容。例如，`mdw 0x20000000 10` 将显示从内存地址 `0x20000000` 开始的 10 个字（32 位值）。 |
-| `step`              | **单步执行。** 在 CPU 上执行单条指令。如果指令是函数调用，它将*进入*函数。                                      |
+| `step`              | **单步执行。** 在 CPU 上执行单条指令。如果指令是函数调用，它将步进*进入*函数。                                      |
 | `resume`            | **恢复执行。** 让程序从当前状态自由运行。它将继续运行，直到遇到断点（如果设置了任何断点）或您再次停止它。              |
-| `exit`              | **退出 Telnet。** 关闭 Telnet 连接并返回到命令提示符。另一个窗口中的 OpenOCD 服务器将保持运行。                          |
+| `exit`              | **退出 Telnet。** 关闭 Telnet 连接并返回到您的命令提示符。另一个窗口中的 OpenOCD 服务器将保持运行。                          |
 
 典型的手动调试会话可能遵循以下步骤：
 1.  输入 `init` 连接到芯片。
 2.  输入 `reset halt` 在最开始停止程序。
 3.  输入 `mdw 0x20000000 10` 检查一些 RAM 值。
-4.  输入几次 `step` 逐步执行初始启动代码。
+4.  输入 `step` 几次来逐步执行初始启动代码。
 5.  输入 `resume` 让程序正常运行。
 6.  完成后输入 `exit`。
 
 ## 使用 OpenOCD/PyOCD 烧录固件
 
-除了交互式调试外，XIAO Debug Mate 还擅长使用命令行工具直接将固件编程（烧录）到 XIAO 的微控制器上。主要工具是 **OpenOCD**（开放式片上调试器）和 **PyOCD**。
+除了交互式调试，XIAO Debug Mate 还擅长使用命令行工具直接将固件编程（烧录）到 XIAO 的微控制器上。主要工具是 **OpenOCD**（开放式片上调试器）和 **PyOCD**。
 
-本指南将引导您使用这些强大的工具上传预编译的固件文件。我们使用"OpenOCD/PyOCD"这一称谓，因为大多数兼容的 XIAO 板使用 OpenOCD，而 **XIAO RA4M1** 专门需要 PyOCD 进行烧录。
+本指南将引导您使用这些强大的工具上传预编译的固件文件。我们使用"OpenOCD/PyOCD"这个称呼，因为大多数兼容的 XIAO 开发板使用 OpenOCD，而 **XIAO RA4M1** 专门需要 PyOCD 进行烧录。
 
 ### 烧录兼容性
 
-此表总结了使用提供的工具进行命令行烧录时支持哪些 XIAO 板和文件类型。
+此表总结了哪些 XIAO 开发板和文件类型支持使用提供的工具进行命令行烧录。
 
 <div class="table-center">
 	<table align="center">
@@ -975,33 +940,33 @@ telnet localhost 4444
 </div>
 
 1. 此兼容性表中标记为 ❌ 的项目是使用 OpenOCD v0.12.0 测试失败的样本。请使用其他固件文件以节省您的时间。
-2. 引导程序文件：此处仅提供 XIAO 引导程序文件和烧录命令。如果此 XIAO 型号未随引导程序文件一起提供，将标记为 ❌。
+2. 引导程序文件：这里仅提供 XIAO 引导程序文件和烧录命令。如果此 XIAO 型号不附带引导程序文件，将标记为 ❌。
 3. **XIAO RA4M1 和 XIAO MG24 不支持烧录 `.elf` 文件。尝试将 `.elf` 文件烧录到 XIAO RA4M1 或 XIAO MG24 将导致设备变砖**。
 
 ### 先决条件
 
-1.  **OpenOCD 安装：** 对于**除 XIAO MG24 之外**的所有 XIAO 板，您需要[在系统上安装 OpenOCD 并可从命令行访问（即添加到系统的 PATH 中）](#install-openocd)。
+1.  **OpenOCD 安装：** 对于所有 XIAO 开发板**除了 XIAO MG24**，您需要[在系统上安装 OpenOCD 并可从命令行访问（即添加到系统的 PATH 中）](#install-openocd)。
 
 2.  **XIAO Debug Mate 固件包：** 我们准备了一个包含自定义配置文件和示例固件的包。请下载并解压。结构如下：
 
-    *   `examples/`：包含各种 XIAO 板的预编译示例固件（`.elf`、`.hex`、`.bin`）和一些 XIAO 引导程序文件。
-    *   `target/`：包含特定板（如 XIAO SAMD21 和 RA4M1）所需的自定义 OpenOCD 配置文件（`.cfg`）。
+    *   `examples/`：包含各种 XIAO 开发板的预编译示例固件（`.elf`、`.hex`、`.bin`）和一些 XIAO 引导程序文件。
+    *   `target/`：包含特定开发板（如 XIAO SAMD21 和 RA4M1）所需的自定义 OpenOCD 配置文件（`.cfg`）。
     *   `XIAO_MG24_Mac_Linux_OpenOCD-v0.12.0/`：用于在 macOS 和 Linux 上烧录 XIAO MG24 的独立 OpenOCD。
     *   `XIAO_MG24_Win_OpenOCD-v0.12.0/`：用于在 Windows 上烧录 XIAO MG24 的独立 OpenOCD。
 
-3.  **终端/命令提示符：** 您需要熟悉打开和使用命令行界面（例如命令提示符、PowerShell 或终端）。
+3.  **终端/命令提示符：** 您需要熟悉打开和使用命令行界面（例如，命令提示符、PowerShell 或终端）。
 
 #### 命令执行策略
 
 *   **选项 A（推荐）：从包目录运行**
 
-    本指南中的所有命令都假设您已在解压的 `XIAO_Debug_Mate_DAPLink_Package` 文件夹的根目录中打开终端。这是最简单的方法，因为固件和配置文件的相对路径将直接工作。
+    本指南中的所有命令都假设您已在解压的 `XIAO_Debug_Mate_DAPLink_Package` 文件夹的根目录中打开了终端。这是最简单的方法，因为固件和配置文件的相对路径将直接工作。
 
 *   **选项 B（高级）：从任何目录运行**
 
     如果您更喜欢从自己的项目文件夹运行命令，可以使用 `-s` 标志告诉 OpenOCD 在哪里找到我们包的自定义脚本。
 
-    *   **需要的操作：** 在您的 `openocd` 命令中添加 `-s <path_to_package_folder>`。例如：
+    *   **需要的操作：** 在您的 `openocd` 命令中添加 `-s <包文件夹路径>`。例如：
 
         ```bash
         # Replace <path_to_package_folder> with the actual path
@@ -1012,22 +977,22 @@ telnet localhost 4444
 **Windows vs. macOS/Linux：** 在所有命令中，Windows 用户应使用 `openocd.exe` 而不是 `openocd`。我们建议在文件路径中使用正斜杠（`/`）以实现跨平台兼容性。
 :::
 
-**要烧录您自己的自定义固件：**
+**烧录您自己的自定义固件：**
 
-只需将示例路径（例如 `examples/Blink_RP2040.elf`）替换为您自己固件文件的路径。
+只需将示例路径（例如，`examples/Blink_RP2040.elf`）替换为您自己的固件文件路径。
 
 ### 了解固件文件（.bin、.hex、.elf）
 
-编译项目时，工具链会生成要上传到微控制器的文件。您通常会遇到三种格式：
+当您编译项目时，工具链会生成一个要上传到微控制器的文件。您通常会遇到三种格式：
 
-*   **.bin（二进制）：** 仅包含机器代码的原始紧凑二进制文件。它没有关于内存地址的额外信息，因此必须告诉编程工具将其放置在何处。
+*   **.bin（二进制）：** 仅包含机器代码的原始、紧凑的二进制文件。它没有关于内存地址的额外信息，因此必须告诉编程工具将其放置在何处。
 *   **.hex（Intel HEX）：** 二进制代码的 ASCII 文本表示。它包括内存地址、校验和和元数据，使其比 `.bin` 更强大的格式。
 *   **.elf（可执行和可链接格式）：** 最全面的格式。它包含机器代码、内存地址信息，还包含调试信息，如函数名、变量名和源代码行号。这是调试的首选格式。
-*   **.bootloader（引导程序文件）：** 引导程序文件是一个专门的固件映像，驻留在微控制器内存的受保护区域中，负责促进固件烧录、设备恢复和启动任务。在 XIAO 板上，引导程序允许您将新的应用程序代码上传到设备（通常通过 USB），而无需专用的硬件编程器。如果设备变得无响应或主程序失败，重新烧录引导程序可以帮助恢复板子。仅使用适用于您特定板型号的官方引导程序文件，因为使用不正确的文件可能会使设备无法操作，直到使用特殊工具进行修复。
+*   **.bootloader（引导程序文件）：** 引导程序文件是一个专门的固件映像，驻留在微控制器内存的受保护区域中，负责促进固件烧录、设备恢复和启动任务。在 XIAO 开发板上，引导程序允许您将新的应用程序代码上传到设备（通常通过 USB），而无需专用的硬件编程器。如果设备变得无响应或主程序失败，重新烧录引导程序可以帮助恢复开发板。仅使用适用于您特定开发板型号的官方引导程序文件，因为使用不正确的文件可能会使设备无法操作，直到使用特殊工具修复。
 
-**如何从您的项目中获取这些文件：**
+**如何从您的项目获取这些文件：**
 
-*   **Arduino IDE：** 编译后（`Sketch > Verify/Compile`），使用 `Sketch > Export compiled Binary`。这将在您的项目文件夹中保存一个 `.hex` 或 `.bin` 文件。
+*   **Arduino IDE：** 编译后（`Sketch > Verify/Compile`），使用 `Sketch > Export compiled Binary`。这将在您的草图文件夹中保存一个 `.hex` 或 `.bin` 文件。
 *   **PlatformIO：** 成功构建后，固件文件（`firmware.bin`、`firmware.hex`、`firmware.elf`）位于您项目的 `.pio/build/<environment_name>/` 目录中。
 
 
@@ -1036,23 +1001,23 @@ telnet localhost 4444
 
 #### 适用于 Seeed Studio XIAO SAMD21
 
-标准的 OpenOCD 包不包含 XIAO SAMD21 的配置文件。您必须手动将其从我们提供的包中复制到您系统的 OpenOCD 安装目录中。
+标准 OpenOCD 包不包含 XIAO SAMD21 的配置文件。您必须从我们提供的包中手动将其复制到系统的 OpenOCD 安装目录中。
 
 **1. 复制配置文件**
 
-*   **源文件：** 从 `XIAO_Debug_Mate_DAPLink_Package` 中找到文件：`target/XIAO_SAMD21/at91samd21g18.cfg`。
+*   **源文件：** 从 `XIAO_Debug_Mate_DAPLink_Package` 中，找到文件：`target/XIAO_SAMD21/at91samd21g18.cfg`。
 *   **目标文件夹：** 将此文件复制到您的 xPack OpenOCD 安装的 `target` 脚本文件夹中。路径因操作系统而异：
 
-    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux：** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
-将 `YourName` 和 `xpack-openocd-0.12.0-7` 替换为您的实际用户名和安装的 OpenOCD 版本。
+将 `YourName` 和 `xpack-openocd-0.12.0-7` 替换为您的实际用户名和您安装的 OpenOCD 版本。
 :::
 
 **2. 烧录固件**
 
-在系统的任意位置打开新终端并运行相应的命令：
+在系统的任意位置打开新终端并运行相应命令：
 
 *   **在 Windows 上：**
     ```powershell
@@ -1070,9 +1035,9 @@ telnet localhost 4444
 
 使用 OpenOCD 烧录 XIAO RP2040 时，强烈建议使用 `.elf` 文件而不是 `.bin` 文件。
 
-这是因为 `.elf` 文件内部已经包含了程序的内存地址信息（链接器地址）。OpenOCD 会自动将其写入正确的位置（通常是 `0x10000000`），因此您无需手动计算或猜测偏移地址。
+这是因为 `.elf` 文件内部已经包含了程序的内存地址信息（链接器地址）。OpenOCD 会自动将其写入正确位置（通常是 `0x10000000`），因此您无需手动计算或猜测偏移地址。
 
-如果您必须使用 `.bin` 文件，则需要手动指定 XIAO RP2040 的 Flash 起始地址 `0x10000000`。
+如果您必须使用 `.bin` 文件，需要手动指定 XIAO RP2040 的 Flash 起始地址 `0x10000000`。
 
 **在 Windows 上：**
 ```powershell
@@ -1090,9 +1055,9 @@ openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" 
 
 使用 OpenOCD 烧录 XIAO RP2350 时，强烈建议使用 `.elf` 文件而不是 `.bin` 文件。
 
-这是因为 `.elf` 文件内部已经包含了程序的内存地址信息（链接器地址）。OpenOCD 会自动将其写入正确的位置（通常是 `0x10000000`），因此您无需手动计算或猜测偏移地址。
+这是因为 `.elf` 文件内部已经包含了程序的内存地址信息（链接器地址）。OpenOCD 会自动将其写入正确位置（通常是 `0x10000000`），因此您无需手动计算或猜测偏移地址。
 
-如果您必须使用 `.bin` 文件，则需要手动指定 XIAO RP2350 的 Flash 起始地址 `0x10000000`。
+如果您必须使用 `.bin` 文件，需要手动指定 XIAO RP2350 的 Flash 起始地址 `0x10000000`。
 
 **在 Windows 上：**
 ```powershell
@@ -1108,7 +1073,7 @@ openocd -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" 
 
 #### 适用于 Seeed Studio XIAO nRF52840
 
-nRF52 的配置包含在标准的 xPack OpenOCD 中。打开终端并运行命令。
+nRF52 的配置包含在标准 xPack OpenOCD 中。打开终端并运行命令。
 
 **在 Windows 上：**
 ```powershell
@@ -1124,11 +1089,11 @@ openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "program examples/Blin
 
 #### 适用于 Seeed Studio XIAO RA4M1
 
-目前，标准的 OpenOCD 发行版通常缺乏对 Renesas RA 系列的内置支持，例如专用驱动程序和目标配置文件。这使得使用 OpenOCD 进行烧录成为一个需要手动设置的复杂过程。
+目前，标准 OpenOCD 发行版通常缺乏对 Renesas RA 系列的内置支持，如专用驱动程序和目标配置文件。这使得使用 OpenOCD 进行烧录成为一个需要手动设置的复杂过程。
 
 因此，我们强烈建议使用 `PyOCD`，它为 RA4M1 提供开箱即用的支持。
 
-要烧录固件（例如 `Blink_RA4M1.hex`），请使用与您的操作系统对应的命令。
+要烧录固件（例如 `Blink_RA4M1.hex`），请使用与您操作系统对应的命令。
 
 **在 Windows 上：**
 ```powershell
@@ -1149,13 +1114,13 @@ pyocd flash -t r7fa4m1ab examples/Blink_RA4M1.bin —base-address 0x4000
 
 #### 适用于 Seeed Studio XIAO SAMD21
 
-由于 XIAO SAMD21 的 Flash 内存有限（256KB），通常无法烧录大于 256KB 的固件文件。Blink 示例的 `.elf` 文件已经达到 658KB，无法烧录。我们建议使用更小的 `.bin` 或 `.hex` 文件。
+由于 XIAO SAMD21 的 Flash 内存有限（256KB），通常无法烧录大于 256KB 的固件文件。Blink 示例的 `.elf` 文件已达到 658KB，无法烧录。我们建议使用更小的 `.bin` 或 `.hex` 文件。
 
 ---
 
 #### 适用于 Seeed Studio XIAO RP2040
 
-RP2040 的配置包含在标准的 xPack OpenOCD 中。打开终端并运行命令。
+RP2040 的配置包含在标准 xPack OpenOCD 中。打开终端并运行命令。
 
 **在 Windows 上：**
 ```powershell
@@ -1171,7 +1136,7 @@ openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" 
 
 #### 适用于 Seeed Studio XIAO RP2350
 
-RP2350 的配置包含在标准的 xPack OpenOCD 中。打开终端并运行命令。
+RP2350 的配置包含在标准 xPack OpenOCD 中。打开终端并运行命令。
 
 **在 Windows 上：**
 ```powershell
@@ -1187,7 +1152,7 @@ openocd -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" 
 
 #### 适用于 Seeed Studio XIAO nRF52840
 
-nRF52 的配置包含在标准的 xPack OpenOCD 中。打开终端并运行命令。
+nRF52 的配置包含在标准 xPack OpenOCD 中。打开终端并运行命令。
 
 **在 Windows 上：**
 ```powershell
@@ -1224,14 +1189,14 @@ XIAO MG24 禁止烧录 `.elf` 文件，这样做可能会使设备变砖！！�
 
 #### 适用于 Seeed Studio XIAO SAMD21
 
-标准的 OpenOCD 包不包含 XIAO SAMD21 的配置文件。您必须手动将其从我们提供的包中复制到您系统的 OpenOCD 安装目录中。
+标准 OpenOCD 包不包含 XIAO SAMD21 的配置文件。您必须从我们提供的包中手动将其复制到系统的 OpenOCD 安装目录中。
 
 **1. 复制配置文件**
 
 *   **源文件：** 从 `XIAO_Debug_Mate_DAPLink_Package` 中找到文件：`target/XIAO_SAMD21/at91samd21g18.cfg`。
 *   **目标文件夹：** 将此文件复制到您的 xPack OpenOCD 安装的 `target` 脚本文件夹中。路径因操作系统而异：
 
-    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux：** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
@@ -1240,7 +1205,7 @@ XIAO MG24 禁止烧录 `.elf` 文件，这样做可能会使设备变砖！！�
 
 **2. 烧录固件**
 
-在系统的任意位置打开新终端并运行相应的命令：
+在系统的任意位置打开新终端并运行相应命令：
 
 *   **在 Windows 上：**
     ```powershell
@@ -1256,7 +1221,7 @@ XIAO MG24 禁止烧录 `.elf` 文件，这样做可能会使设备变砖！！�
 
 #### 适用于 Seeed Studio XIAO nRF52840
 
-nRF52 的配置包含在标准的 xPack OpenOCD 中。打开终端并运行命令。
+nRF52 的配置包含在标准 xPack OpenOCD 中。打开终端并运行命令。
 
 **在 Windows 上：**
 ```powershell
@@ -1272,11 +1237,11 @@ openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "program examples/Blin
 
 #### 适用于 Seeed Studio XIAO RA4M1
 
-目前，标准的 OpenOCD 发行版通常缺乏对 Renesas RA 系列的内置支持，例如专用驱动程序和目标配置文件。这使得使用 OpenOCD 进行烧录成为一个需要手动设置的复杂过程。
+目前，标准 OpenOCD 发行版通常缺乏对 Renesas RA 系列的内置支持，如专用驱动程序和目标配置文件。这使得使用 OpenOCD 进行烧录成为一个需要手动设置的复杂过程。
 
 因此，我们强烈建议使用 `PyOCD`，它为 RA4M1 提供开箱即用的支持。
 
-要烧录固件（例如 `Blink_RA4M1.hex`），请使用与您的操作系统对应的命令。
+要烧录固件（例如 `Blink_RA4M1.hex`），请使用与您操作系统对应的命令。
 
 **在 Windows 上：**
 ```powershell
@@ -1290,14 +1255,14 @@ pyocd flash -e sector -a 0x0 -t r7fa4m1ab examples/Blink_RA4M1.hex
 
 **命令说明：**
 *   `pyocd flash`：执行烧录操作。
-*   `-e sector`: 在编程前擦除闪存的必要扇区。
-*   `-a 0x0`: 指定烧录的起始地址，即 `0x00000000`。
-*   `-t r7fa4m1ab`: 指定目标 MCU 类型。
-*   `examples\Blink_RA4M1.hex` 或 `examples/Blink_RA4M1.hex`: 要烧录的固件文件路径。注意在 Windows 上使用 `\`，在 macOS/Linux 上使用 `/`。
+*   `-e sector`：在编程前擦除闪存的必要扇区。
+*   `-a 0x0`：指定烧录的起始地址，即 `0x00000000`。
+*   `-t r7fa4m1ab`：指定目标 MCU 类型。
+*   `examples\Blink_RA4M1.hex` 或 `examples/Blink_RA4M1.hex`：要烧录的固件文件路径。注意在 Windows 上使用 `\`，在 macOS/Linux 上使用 `/`。
 
 #### 适用于 Seeed Studio XIAO MG24
 
-此开发板需要使用包中专用的 OpenOCD 版本。在运行命令前，您**必须**导航到正确的目录。
+此开发板需要使用包中专用的 OpenOCD 版本。您**必须**在运行命令前导航到正确的目录。
 
 1.  **导航到正确的目录：**
     *   **在 Windows 上：** 打开命令提示符并运行：
@@ -1319,20 +1284,20 @@ pyocd flash -e sector -a 0x0 -t r7fa4m1ab examples/Blink_RA4M1.hex
     ```
 
 
-### 烧录引导程序文件
+### 烧录引导加载程序文件
 
 这是一个可以恢复开发板的关键操作。
 
 #### 适用于 Seeed Studio XIAO SAMD21
 
-标准的 OpenOCD 包不包含 XIAO SAMD21 的配置文件。您必须从我们提供的包中手动将其复制到系统的 OpenOCD 安装目录中。
+标准的 OpenOCD 包不包含 XIAO SAMD21 的配置文件。您必须手动将我们提供的包中的配置文件复制到系统的 OpenOCD 安装目录中。
 
 **1. 复制配置文件**
 
 *   **源文件：** 从 `XIAO_Debug_Mate_DAPLink_Package` 中找到文件：`target/XIAO_SAMD21/at91samd21g18.cfg`。
 *   **目标文件夹：** 将此文件复制到您的 xPack OpenOCD 安装的 `target` 脚本文件夹中。路径因操作系统而异：
 
-    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows：** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux：** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
@@ -1341,7 +1306,7 @@ pyocd flash -e sector -a 0x0 -t r7fa4m1ab examples/Blink_RA4M1.hex
 
 **2. 烧录固件**
 
-此命令使用我们包中提供的自定义 `at91samd21g18.cfg` 文件来烧录 `.bin` 引导程序。
+此命令使用我们包中提供的自定义 `at91samd21g18.cfg` 文件来烧录 `.bin` 引导加载程序。
 
 *   **在 Windows 上：**
 ```powershell
@@ -1355,7 +1320,7 @@ openocd -f interface/cmsis-dap.cfg -f target/at91samd21g18.cfg -c "telnet_port d
 
 #### 适用于 Seeed Studio XIAO nRF52840
 
-此过程涉及下载引导程序，然后擦除芯片并烧录新文件。
+此过程涉及下载引导加载程序，然后擦除芯片并烧录新文件。
 
 此命令使用您的 OpenOCD 安装中的标准 `nrf52.cfg`。
 
@@ -1370,11 +1335,11 @@ openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "init" -c "halt" -c "n
 ```
 
 :::tip
-使用 OpenOCD 烧录引导程序后再烧录固件 bin 文件，固件 bin 无法正常运行。您需要使用 Arduino 上传程序才能使程序正常运行。
+使用 OpenOCD 烧录引导加载程序后再烧录固件 bin 文件，固件 bin 文件无法正常运行。您需要使用 Arduino 上传程序才能使程序正常运行。
 
-这是因为 Nordic 系列芯片（如 nRF52832）的引导程序在启动时需要检查特定内存地址（通常称为"引导程序设置页"）的应用固件有效性信息。此"设置页"包含固件的 CRC 校验和、长度和有效性标志。
+这是因为 Nordic 系列芯片（如 nRF52832）的引导加载程序在启动时需要检查特定内存地址（通常称为"引导加载程序设置页"）处的应用固件有效性信息。此"设置页"包含固件的 CRC 校验和、长度和有效性标志。
 
-当您使用 OpenOCD 等通用编程工具直接烧录 .bin 文件时，它们只将固件的二进制数据写入指定的应用起始地址，不会自动生成或写入引导程序所需的"设置页"。因此，当设备重启时，引导程序无法检测到有效的设置页，判断没有合法的应用程序，从而拒绝启动固件，通常会进入 DFU（设备固件更新）模式，等待通过 OTA 或串口更新。
+当您使用 OpenOCD 等通用编程工具直接烧录 .bin 文件时，它们只会将固件的二进制数据写入指定的应用启动地址，而不会自动生成或写入引导加载程序所需的"设置页"。因此，当设备重启时，引导加载程序无法检测到有效的设置页，并判断没有合法的应用程序，从而拒绝启动固件，通常会进入 DFU（设备固件更新）模式，等待通过 OTA 或串口进行更新。
 :::
 
 #### 适用于 Seeed Studio XIAO RA4M1
@@ -1383,7 +1348,7 @@ openocd -f interface/cmsis-dap.cfg -f target/nrf52.cfg -c "init" -c "halt" -c "n
 
 因此，我们强烈建议使用 `PyOCD`，它为 RA4M1 提供开箱即用的支持。
 
-要烧录引导程序，请使用与您的操作系统对应的命令。
+要烧录引导加载程序，请使用与您的操作系统对应的命令。
 
 **在 Windows 上：**
 ```powershell
@@ -1396,7 +1361,7 @@ pyocd flash -t r7fa4m1ab examples/Bootloader_RA4M1.hex —erase chip
 ```
 
 
-## 在 PlatformIO 中使用调试
+## 在 PlatformIO 上使用调试功能
 
 首先，确保您已在 Visual Studio Code 中安装了 PlatformIO IDE 扩展。
 
@@ -1410,21 +1375,21 @@ pyocd flash -t r7fa4m1ab examples/Bootloader_RA4M1.hex —erase chip
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/17.png" style={{width:1000, height:'auto'}}/></div>
 
 2.  **创建新项目**：点击 "New Project" 并为您的项目命名。
-    *   **选择开发板**：搜索您要使用的特定 XIAO 开发板。
+    *   **选择开发板**：搜索您打算使用的特定 XIAO 开发板。
 
 :::note
-由于 Seeed Studio 开发板托管在第三方仓库中，您的特定开发板可能默认不会出现在搜索列表中。如果发生这种情况，您可以选择一个通用开发板（或任何可用的开发板）来初始化项目，我们将在下一步中进行修正。
+由于 Seeed Studio 开发板托管在第三方存储库中，您的特定开发板可能默认不会出现在搜索列表中。如果发生这种情况，您可以选择一个通用开发板（或任何可用的开发板）来初始化项目，我们将在下一步中进行修正。
 :::
 
-3.  **配置 `platformio.ini`**：这是最关键的步骤。要启用 XIAO Debug Mate 调试并正确识别开发板，您必须修改位于项目根目录的 `platformio.ini` 文件。
+3.  **配置 `platformio.ini`**：这是最关键的步骤。要启用 XIAO Debug Mate 的调试功能并正确识别开发板，您必须修改位于项目根目录的 `platformio.ini` 文件。
 
     **添加 Seeed Studio 开发板支持：**
-    Seeed Studio 开发板不包含在默认的 PlatformIO 注册表中，而是在**第三方仓库**中维护。要使用它们，您必须在配置中指定仓库 URL。
+    Seeed Studio 开发板不包含在默认的 PlatformIO 注册表中，而是在**第三方存储库**中维护。要使用它们，您必须在配置中指定存储库 URL。
 
     您需要将 `platform` 参数设置为以下 URL：
     `https://github.com/Seeed-Studio/platform-seeedboards`
 
-    配置文件告诉 PlatformIO 从此自定义仓库下载开发板定义，并指定用于上传和调试的工具。XIAO Debug Mate 作为标准的 **CMSIS-DAP** 调试器运行。
+    配置文件告诉 PlatformIO 从此自定义存储库下载开发板定义，并指定用于上传和调试的工具。XIAO Debug Mate 作为标准的 **CMSIS-DAP** 调试器运行。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/18.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -1524,27 +1489,27 @@ debug_tool = cmsis-dap
 1.  **连接硬件**：将您的 XIAO 开发板插入 XIAO Debug Mate。使用 USB-C 线缆将 Debug Mate 连接到您的计算机。
 2.  **开始调试**：您可以通过两种方式启动调试会话：
     *   按 `F5` 键。
-    *   导航到 "Run and Debug" 视图（活动栏中的虫子图标）并点击顶部的绿色 "Start Debugging" 箭头。
+    *   导航到"运行和调试"视图（活动栏中的错误图标），然后点击顶部的绿色"开始调试"箭头。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/19.png" style={{width:1000, height:'auto'}}/></div>
 
-3.  **调试控制**：PlatformIO 将编译您的代码，通过 Debug Mate 上传到 XIAO，并在 `main()` 或 `setup()` 的第一行暂停执行。编辑器顶部将出现调试工具栏，允许您控制程序流程：
-    *   **Continue (F5)**：恢复执行直到下一个断点被触发或程序结束。
-    *   **Step Over (F10)**：执行当前行。如果该行包含函数调用，它将执行整个函数并在下一行停止。
-    *   **Step Into (F11)**：执行当前行。如果该行包含函数调用，调试器将进入函数并在其第一行停止。
-    *   **Step Out (Shift+F11)**：如果在函数内部暂停，这将执行函数的剩余部分并返回到调用它的行。
-    *   **Restart (Ctrl+Shift+F5)**：终止并重新启动当前调试会话。
+3.  **调试控制**：PlatformIO 将编译您的代码，通过 Debug Mate 将其上传到 XIAO，并在 `main()` 或 `setup()` 的第一行暂停执行。编辑器顶部将出现调试工具栏，允许您控制程序流程：
+    *   **继续（F5）**：恢复执行，直到遇到下一个断点或程序结束。
+    *   **单步跳过（F10）**：执行当前行。如果该行包含函数调用，它将执行整个函数并停在下一行。
+    *   **单步进入（F11）**：执行当前行。如果该行包含函数调用，调试器将进入函数并停在其第一行。
+    *   **单步跳出（Shift+F11）**：如果在函数内暂停，这将执行函数的剩余部分并返回到调用它的行。
+    *   **Restart (Ctrl+Shift+F5)**：终止并重启当前调试会话。
     *   **Stop (Shift+F5)**：终止调试会话。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/20.png" style={{width:1000, height:'auto'}}/></div>
 
 ### 断点调试
 
-如果您希望程序在特定位置暂停，断点是合适的工具。
+如果您希望程序在特定位置暂停，断点是完成此任务的工具。
 
-1.  **设置断点**：在代码编辑器中，将光标移动到您想要暂停的行号左侧。将出现一个淡红色圆点。点击它设置断点（圆点将变为亮红色）。
-2.  **运行到断点**：启动调试会话（`F5`）。程序将全速运行并在到达带有断点的行时自动暂停。
-3.  **管理断点**：在 "Run and Debug" 侧面板中，"BREAKPOINTS" 部分列出了所有活动断点。您可以从这里启用、禁用或删除它们。
+1.  **设置断点**：在代码编辑器中，将光标移动到您希望暂停的行号左侧。会出现一个淡红色圆点。点击它来设置断点（圆点会变成亮红色）。
+2.  **运行到断点**：启动调试会话（`F5`）。程序将全速运行，并在到达带有断点的行时自动暂停。
+3.  **管理断点**：在"Run and Debug"侧面板中，"BREAKPOINTS"部分列出了所有活动断点。您可以从这里启用、禁用或删除它们。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/21.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -1552,12 +1517,12 @@ debug_tool = cmsis-dap
 
 当程序在断点处暂停时，您可以检查甚至修改变量的状态。
 
-1.  **查看变量（读取）**：在 "Run and Debug" 侧面板中，"VARIABLES" 部分显示当前作用域内的所有局部和全局变量及其当前值。
-2.  **监视变量**：如果您想监视特定变量或表达式，请转到 "WATCH" 部分，点击 `+` 图标，并输入变量名（例如，`myVariable` 或 `&myVariable` 以查看其内存地址）。
+1.  **查看变量（读取）**：在"Run and Debug"侧面板中，"VARIABLES"部分显示当前作用域内的所有局部和全局变量及其当前值。
+2.  **监视变量**：如果您想监控特定变量或表达式，请转到"WATCH"部分，点击`+`图标，并输入变量名（例如，`myVariable`或`&myVariable`来查看其内存地址）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/22.png" style={{width:1000, height:'auto'}}/></div>
 
-3.  **修改变量（写入）**：在 "VARIABLES" 或 "WATCH" 部分，您通常可以双击变量的值来输入新值。按 Enter 键应用更改。这对于在不重启程序的情况下测试不同条件非常有用。
+3.  **修改变量（写入）**：在"VARIABLES"或"WATCH"部分，您通常可以双击变量的值来输入新值。按 Enter 键应用更改。这对于在不重启程序的情况下测试不同条件非常有用。
 
 
 ## 故障排除
@@ -1578,7 +1543,49 @@ debug_tool = cmsis-dap
 
 ### Q3：损坏的设备可以修复吗？我可以联系技术支持请求更换吗？
 
-XIAO 设备的损坏通常是由分区或引导加载程序文件问题引起的。这通常可以通过重新刷写引导加载程序文件来解决。如果失败，目前没有其他解决方案。用户必须对自己执行此操作承担全部责任，因此请确保刷写命令和固件已经过验证且有效。
+XIAO 设备的损坏通常是由分区或引导加载程序文件问题引起的。这通常可以通过重新刷写引导加载程序文件来解决。如果失败，目前没有其他解决方案。用户必须为自己执行此操作承担全部责任，因此请确保刷写命令和固件已经过验证且有效。
+
+### Q4：XIAO Debug Mate 需要驱动程序吗？
+
+XIAO Debug Mate 已在最新的计算机操作系统上进行了测试和验证，无需安装驱动程序即可正常工作。对于 Windows 计算机，我们建议使用 **Windows 11** 操作系统。在测试过程中，我们发现如果您使用 Zading 安装了驱动程序，可能会导致设备无法被识别。
+
+### Q5：我的 XIAO Debug Mate 在 Windows 11 上持续显示红灯且无法被识别，报告错误："unable to find a matching CMSIS-DAP device."
+
+关于您的 XIAO Debug Mate 显示红灯并在 Windows 11 上报告"unable to find a matching CMSIS-DAP device"的问题，请尝试以下故障排除步骤：
+
+**1. 验证 USB 线缆**
+
+首先，请确保您使用的 USB 线缆支持数据传输，而不仅仅是充电线缆。您可以通过检查设备是否出现在串口监视器软件中或是否可以看到任何设备日志来验证这一点。如果插入时计算机完全没有反应，请尝试更换线缆。
+
+**2. 通过 PowerShell 重新安装驱动程序**
+
+如果确认线缆正常工作，问题很可能是由错误的驱动程序安装引起的。您可以使用 PowerShell 删除冲突的驱动程序来解决此问题。请按照以下步骤操作：
+
+1.  右键点击开始按钮并选择 **Terminal (Admin)** 或 **PowerShell (Admin)**。
+
+2.  运行以下命令查找 CMSIS-DAP 驱动程序详细信息：
+
+    ```powershell
+    dism /online /get-drivers /format:table | findstr /i "cmsis-dap"
+    ```
+3.  在输出中查找 **"Published Name"**（通常看起来像`oemXX.inf`）。
+
+4.  运行以下命令删除并卸载驱动程序（将`{inf_name}`替换为您在上一步中找到的实际名称，例如`oem10.inf`）：
+
+    ```powershell
+    pnputil /delete-driver {inf_name} /uninstall
+    ```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/40.png" style={{width:1000, height:'auto'}}/></div>
+
+完成这些步骤后，请重新连接您的设备并检查是否能正确识别。
+
+### Q6：如果我系统上显示的 OpenOCD 版本与 Wiki 截图中的不同，我应该怎么办？
+
+如果您检查系统上的 OpenOCD 版本，输出与 Wiki 截图中显示的推荐版本不匹配，您可能有多个 OpenOCD 安装，或者您的系统默认使用不同的版本。
+
+在 Windows 计算机上，打开**系统环境变量**并转到**系统变量**部分。编辑`Path`变量，将 Wiki 推荐的 OpenOCD 安装路径（例如，`C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\bin`）移动到列表的最顶部。这确保推荐的 OpenOCD 版本将首先被您的系统找到和使用。进行此更改后，打开新终端并重新运行`openocd --version`以确认现在显示正确的版本。
+
 
 
 ## 资源

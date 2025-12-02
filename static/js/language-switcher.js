@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-26 10:24:30 (北京时间)
-// 多语言页面: 2058 个
+// 生成时间: 2025-12-01 14:43:31 (北京时间)
+// 多语言页面: 2066 个
 
 (function() {
   'use strict';
@@ -923,7 +923,7 @@
     "es",
     "ja"
   ],
-  "/robotics_j501_mini_hardware_interfaces_usage": [
+  "/recomputer_j501_mini_getting_started": [
     "cn",
     "en",
     "es",
@@ -2087,6 +2087,12 @@
     "es",
     "ja"
   ],
+  "/facial_recognition_on_the_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/install_m2_coral_to_rpi5": [
     "cn",
     "en",
@@ -2520,6 +2526,12 @@
     "ja"
   ],
   "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
     "es",
@@ -4002,6 +4014,12 @@
     "ja"
   ],
   "/robstride_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_series": [
     "cn",
     "en",
     "es",
@@ -5886,6 +5904,12 @@
     "ja"
   ],
   "/ee04_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/epaper_EN04": [
     "cn",
     "en",
     "es",
@@ -9778,13 +9802,19 @@
     "es",
     "ja"
   ],
+  "/deploy_ai_with_a1102": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/sensecap_a1102": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/train_ai_with_a1102": [
+  "/setting_ai_with_a1102": [
     "cn",
     "en",
     "es",
@@ -10109,6 +10139,18 @@
     "ja"
   ],
   "/Tracker_WiFi_Geolocation": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/SenseCAP_T2000_tracker/Introduction": [
     "cn",
     "en",
     "es",
@@ -11097,6 +11139,24 @@
     "es",
     "ja"
   ],
+  "/solutions/hello_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/mcp_external_system_integration": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/crowd-flow-monitoring": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/solutions/frigate-on-jetson-nodered-gun-alerts": [
     "cn",
     "en",
@@ -11109,19 +11169,7 @@
     "es",
     "ja"
   ],
-  "/mission_pack_features_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/mission_pack_intro_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/crowd-flow-monitoring": [
+  "/ha_dify_watcher_llms": [
     "cn",
     "en",
     "es",
@@ -11133,13 +11181,13 @@
     "es",
     "ja"
   ],
-  "/ha_dify_watcher_llms": [
+  "/mission_pack_features_v3": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/solutions/hello_watcher_llms": [
+  "/mission_pack_intro_v3": [
     "cn",
     "en",
     "es",

@@ -142,7 +142,7 @@ last_update:
     <a href="/cn/feetech_servo/" className="nav-item">
       <span className="text">2️⃣飞特 STS3215 舵机</span>
     </a>
-    <a href="/cn/hightorque_series/" className="nav-item">
+    <a href="/cn/hightorque_control" className="nav-item">
       <span className="text">3️⃣高擎 系列</span>
     </a>
     <a href="/cn/fashionstar_servo/" className="nav-item">
@@ -178,25 +178,47 @@ last_update:
 **📷摄像头**  
 
 <div className="card-container">
+
+- 奥比中光深度相机
+
     <a href="/cn/orbbec_gemini2/" className="nav-item">
       <span className="text">奥比中光 Gemini2 3D 摄像头入门</span>
     </a>
-    <a href="/cn/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">奥比中光深度摄像头</span>
-    </a>
     <a href="/cn/orbbec_gemini_335lg" className="nav-item">
-      <span className="text">奥比中光 Gemini 335Lg 立体摄像头</span>
+      <span className="text">奥比中光 Gemini 335Lg 深度相机</span>
       <span className="tag recommended">New</span>
     </a>
+    <a href="/cn/orbbec_gemini336" className="nav-item">
+      <span className="text">奥比中光 Gemini 336 深度相机</span>
+      <span className="tag recommended">New</span>
+    </a>
+
+- 森云GMSL相机
+
     <a href="/cn/sensing_gmsl_cameras" className="nav-item">
       <span className="text">SENSING GMSL2 摄像头</span>
       <span className="tag recommended">New</span>
+    </a>
+
+- 速腾
+
+    <a href="/cn/ac1" className="nav-item">
+      <span className="text">AC1</span>
+      <span className="tag recommended">New</span>
+    </a>
+
+- 案例
+    <a href="/cn/orbbec_depth_camera_on_ros/" className="nav-item">
+      <span className="text">奥比中光深度摄像头与ROS</span>
     </a>
     <a href="/cn/orb_slam3_orbbec_gemini2/" className="nav-item">
       <span className="text">ORB-SLAM3 与奥比中光 Gemini2</span>
     </a>
     <a href="/cn/csi_camera_on_ros/" className="nav-item">
-      <span className="text">CSI 摄像头</span>
+      <span className="text">CSI 摄像头在Jetson上的使用</span>
+    </a>
+    <a href="/cn/pycuvslam_recomputer_robotics" className="nav-item">
+      <span className="text">Jetson上跑PyCuVSLAM</span>
     </a>
 </div>
 
@@ -216,6 +238,10 @@ last_update:
 <div className="card-container">
     <a href="/cn/hexfellow_y200/" className="nav-item">
       <span className="text">HEXFELLOW Y200</span>
+    </a>
+  
+  <a href="/cn/wheeltec_imu" className="nav-item">
+      <span className="text">轮趣科技 IMU</span>
     </a>
 </div>
 

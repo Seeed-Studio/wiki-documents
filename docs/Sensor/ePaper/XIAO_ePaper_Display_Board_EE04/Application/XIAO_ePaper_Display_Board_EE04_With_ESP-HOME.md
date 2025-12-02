@@ -771,6 +771,13 @@ font:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -778,10 +785,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -1522,6 +1533,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -1529,10 +1547,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -2318,6 +2340,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -2337,18 +2366,19 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.3in-spectra-e6
+  - platform: epaper_spi
+    id: my_display
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
+    dc_pin:
+      number: GPIO10
       inverted: false
     busy_pin:
       number: GPIO4
       inverted: true
-    update_interval: 300s
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
     lambda: |-
       it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
@@ -3097,6 +3127,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -3111,10 +3148,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s

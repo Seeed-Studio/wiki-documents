@@ -1,0 +1,10 @@
+position: 7
+label: '屋内外測位'
+collapsible: true
+collapsed: true
+className: _indoor-outdoor-positioning
+# link:
+#   type: generated-index
+#   slug: ja/indoor-outdoor-positioning
+#   title: 屋内外測位
+#   description: 屋内外環境における測位・追跡ソリューション。

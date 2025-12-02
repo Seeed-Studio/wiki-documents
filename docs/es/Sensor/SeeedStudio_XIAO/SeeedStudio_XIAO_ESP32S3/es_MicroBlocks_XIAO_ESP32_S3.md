@@ -26,7 +26,7 @@ La placa tiene 11 pines GPIO (pines 0..10).
 La versión Sense tiene dos pines GPIO adicionales en la placa de la cámara (pines 11..12).
 Los pines 0..5 y 8..10 pueden ser entradas analógicas.
 
-El pin 13 es el LED amarillo del usuario (invertido).
+El pin 13 es el LED de usuario amarillo (invertido).
 
 La versión Sense incluye una placa de extensión con una cámara (ya sea una cámara OV2640 con resolución de 1600x1200 o una OV3660 con 2048x1536) y un micrófono digital.
 
@@ -40,11 +40,11 @@ Conecta la placa a tu computadora con un cable USB de datos (**no** un cable sol
 
 Ejecuta el [editor de MicroBlocks](https://microblocks.fun/run/microblocks.html) en un navegador Chrome o Edge.
 
-Habilita el "modo avanzado" en el menú de engranaje:
+Habilita el "modo avanzado" en el menú de configuración:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/set-advanced-mode.png" style={{width:400, height:'auto'}}/></div>
 
-Selecciona **install ESP firmware from microblocks.fun** del menú de engranaje expandido:
+Selecciona **install ESP firmware from microblocks.fun** del menú de configuración expandido:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/install-esp-firmware.png" style={{width:400, height:'auto'}}/></div>
 
@@ -52,7 +52,7 @@ Selecciona **xiao esp32 s3**:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/install-s3.png" style={{width:200, height:'auto'}}/></div>
 
-Cuando se te solicite, usa el botón "Connect" (ícono de enchufe) para abrir una conexión USB a la placa. Cuando comience el proceso de instalación del firmware, aparecerá un indicador de progreso:
+Cuando se te solicite, usa el botón "Connect" (icono de enchufe) para abrir una conexión USB a la placa. Cuando comience el proceso de instalación del firmware, aparecerá un indicador de progreso:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/download-progress.png" style={{width:200, height:'auto'}}/></div>
 
@@ -75,7 +75,7 @@ puede que necesites usar tu uña o una herramienta pequeña para presionarlos.**
 Conecta la placa a tu computadora con un cable USB de datos (**no** un cable solo de alimentación).
 
 Ejecuta el [editor de MicroBlocks](https://microblocks.fun/run/microblocks.html) en un navegador Chrome o Edge.
-Haz clic en el botón **connect** (ícono de enchufe):
+Haz clic en el botón **connect** (icono de enchufe):
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-button.png" style={{width:200, height:'auto'}}/></div>
 
@@ -110,18 +110,17 @@ Haz clic en el botón **Add Library** para añadir librerías.
 
 ## Ejemplo
 
-Este script hará parpadear el LED amarillo del usuario:
+Este script hará parpadear el LED de usuario amarillo:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
 La [Referencia de Bloques](https://wiki.microblocks.fun/en/reference_manual) incluye muchos ejemplos adicionales.
 
-## Demo del Proyecto
+## Demostración del Proyecto
 
 <div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=Vjjg3Hfl_UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vjjg3Hfl_UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br/>
 Para una demostración más completa, el maker [Zeller](https://www.hackster.io/Zeller) ha creado un Reproductor de Estados de Ánimo usando el XIAO ESP32S3, la Placa de Expansión XIAO, junto con accesorios Grove Speaker y Grove Button. Con MicroBlocks, puedes crear tus patrones y música favoritos sin escribir código complejo. Un tutorial paso a paso con instrucciones detalladas se puede encontrar en [Hackster](https://www.hackster.io/Zeller/mood-player-2426ef).
 
 ## Agradecimientos Especiales
