@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-Este artículo explora configuraciones avanzadas de ESPHome para tu dispositivo de pantalla ePaper reTerminal E Series, basándose en los conceptos fundamentales cubiertos en nuestra [guía de Uso Básico de ESPHome](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome). Si eres nuevo en ESPHome o en reTerminal E Series, recomendamos comenzar con la guía básica antes de profundizar en estas aplicaciones avanzadas.
+Este artículo explora configuraciones avanzadas de ESPHome para tu dispositivo de pantalla ePaper reTerminal E Series, basándose en los conceptos fundamentales cubiertos en nuestra [guía de Uso Básico de ESPHome](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome). Si eres nuevo en ESPHome o en reTerminal E Series, recomendamos comenzar con la guía básica antes de sumergirte en estas aplicaciones avanzadas.
 
 ## Capacidades de Hardware
 
@@ -324,9 +324,9 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480
 
 Esta URL capturará una captura de pantalla de tu panel predeterminado a resolución 800x480 (perfecto para reTerminal E Series).
 
-#### Optimización para Papel Electrónico
+#### Optimización para E-Paper
 
-Para pantallas de papel electrónico, agrega el parámetro `eink` para reducir la paleta de colores:
+Para pantallas e-paper, agrega el parámetro `eink` para reducir la paleta de colores:
 
 ```
 http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
@@ -394,15 +394,7 @@ online_image:
 display:
   - platform: epaper_spi
     id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       it.image(0, 0, id(dashboard_image));
@@ -444,15 +436,7 @@ online_image:
 display:
   - platform: epaper_spi
     id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       it.image(0, 0, id(dashboard_image));
@@ -465,7 +449,7 @@ display:
 Reemplaza `homeassistant.local` con la dirección IP real de tu Home Assistant si la resolución DNS local no funciona en tu red.
 :::
 
-Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de Home Assistant:
+Cuando tu configuración se haya subido y ejecutado exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de Home Assistant:
 
 <Tabs>
 <TabItem value="For E1001" label="Para E1001" default>
@@ -480,13 +464,13 @@ Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu P
 </TabItem>
 </Tabs>
 
-## Demo 3: Modo de Suspensión Profunda
+## Demo 3: Modo de Sueño Profundo
 
 :::tip
-Si comienzas a usar el programa de Suspensión Profunda, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar de Suspensión. De esta manera, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
+Si comienzas a usar el programa de Sueño Profundo, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar del Sueño. De esta manera, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
 :::
 
-Este ejemplo demuestra cómo usar el modo de suspensión profunda para reducir significativamente el consumo de energía, haciendo que tu Pantalla ePaper reTerminal E Series sea adecuada para aplicaciones alimentadas por batería.
+Este ejemplo demuestra cómo usar el modo de sueño profundo para reducir significativamente el consumo de energía, haciendo tu Pantalla ePaper reTerminal E Series adecuada para aplicaciones alimentadas por batería.
 
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
@@ -566,15 +550,6 @@ interval:
     then:
       - logger.log: "Entering deep sleep now..."
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 font:
   - file: "gfonts://Inter@700"
     id: font1
@@ -585,17 +560,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: 5min
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -609,12 +576,12 @@ display:
 
 Esta configuración:
 
-- Crea un contador que persiste a través de los ciclos de suspensión
-- Configura el dispositivo para despertar durante 30 segundos, luego dormir durante 3 minutos
+- Crea un contador que persiste a través de los ciclos de sueño
+- Configura el dispositivo para despertar por 30 segundos, luego dormir por 3 minutos
 - Actualiza la pantalla con el conteo actual de despertares
 - Opcionalmente configura un botón para despertar el dispositivo
 
-Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispositivo despierte de la suspensión:
+Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispositivo despierte del sueño:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/53.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -1018,15 +985,6 @@ i2c:
   scl: GPIO20
   sda: GPIO19
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 # Fonts
 font:
   - file: "gfonts://Inter@700"
@@ -1195,17 +1153,9 @@ time:
 
 # e-paper
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -1299,7 +1249,7 @@ display:
 
 </details>
 
-Cuando tu configuración se haya subido y ejecutado exitosamente, la pantalla ePaper de tu reTerminal E Series mostrará un panel completo con datos ambientales, hora y estado de la batería:
+Cuando tu configuración se haya subido y ejecutado exitosamente, tu pantalla ePaper de reTerminal E Series mostrará un panel completo con datos ambientales, hora y estado de la batería:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -1311,10 +1261,10 @@ Este ejemplo implementa:
 2. **Navegación con Botones**: Los botones en GPIO3 y GPIO5 se usan para navegar entre páginas
 3. **Monitoreo de Batería**: El nivel de batería se muestra con iconos apropiados que cambian según el nivel de carga
 4. **Inicialización de Hardware**: La tarjeta SD y los circuitos de monitoreo de batería se habilitan al arrancar
-5. **Visualización de Temperatura y Humedad**: Usando el sensor SHT4x integrado vía I²C
+5. **Pantalla de Temperatura y Humedad**: Usando el sensor SHT4x integrado vía I²C
 6. **Iconos Dinámicos**: Los iconos de Material Design cambian según los valores del sensor
 
-## Preguntas Frecuentes
+## FAQ
 
 ### P1: ¿Por qué no hay datos?
 
@@ -1322,7 +1272,7 @@ En este caso, debes ir a Settings -> Devices & Services -> Integrations para **R
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#port}
+### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#puerto}
 
 En este caso, debes ir a Settings -> Devices & Services -> Integrations para **AGREGAR** tu dispositivo a Home Assistant.
 
