@@ -902,6 +902,16 @@ sudo apt install pavucontrol -y
 
 その後、**pavucontrol** を開いて、必要に応じて出力音量を 100% を超えて増加させることができます。
 
+### USB ドライバーを再インストールした後、ReSpeaker が録音も再生もできない
+
+デバイスマネージャーで ReSpeaker に関連するすべてのドライバーをアンインストールしてください。これで問題が解決しました。
+
+## リソース
+
+- [ReSpeaker XVF3800 3D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
+- [ReSpeaker XVF3800 3D-エンクロージャー-上部 ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
+- [ReSpeaker XVF3800 3D-エンクロージャー-下部 ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
+
 ## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。

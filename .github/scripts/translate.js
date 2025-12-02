@@ -827,6 +827,15 @@ ${termsList}
 
 // 修复锚点链接中的空格问题
 function fixAnchorLinks(content) {
+  // 处理带路径的锚点链接，例如 /slug#fragment 或官方 Wiki 链接中的 #fragment
+  content = content.replace(
+    /\[([^\]]*)\]\(((?:\/|https:\/\/wiki\.seeedstudio\.com\/)[^)#\s]*)#([^)]*)\)/gi,
+    (match, text, base, anchor) => {
+      const fixedAnchor = anchor.replace(/\s+/g, '-');
+      return `[${text}](${base}#${fixedAnchor})`;
+    }
+  );
+
   // 修复锚点链接中的空格
   // 匹配 [文本](#锚点) 格式，将锚点中的空格替换为连字符
   content = content.replace(

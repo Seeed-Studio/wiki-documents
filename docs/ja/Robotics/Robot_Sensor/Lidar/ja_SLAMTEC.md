@@ -1,6 +1,6 @@
 ---
-description: Slamtec LiDAR製品の紹介と使用方法のドキュメント。
-title: Slamtec LiDARシリーズ
+description: Slamtec LiDAR製品と使用ドキュメントの紹介。
+title: Slamtec LiDAR シリーズ
 keywords:
 - LiDAR
 - Robotics
@@ -19,6 +19,11 @@ last_update:
 
 <div className="quick-nav-container">
   <nav className="quick-nav">
+    <a href="#Aurora-S" className="nav-item">
+      <img width={100} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Lidar/slamtec/aurora_s.png" className="nav-icon" alt="Slamtec LiDAR"/>
+      <span className="text">Aurora-S</span>
+      <div className="hover-effect"></div>
+    </a>
     <a href="#A1-series" className="nav-item">
       <img width={100} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Lidar/slamtec/A1M8.png" className="nav-icon" alt="Slamtec LiDAR"/>
       <span className="text">A1M8</span>
@@ -41,7 +46,7 @@ last_update:
     </a>
     <a href="#S2-series" className="nav-item">
       <img width={100} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Lidar/slamtec/S2.png" className="nav-icon" alt="Slamtec LiDAR"/>
-      <span className="text">S2シリーズ</span>
+      <span className="text">S2 シリーズ</span>
       <div className="hover-effect"></div>
     </a>
     <a href="#S2-series" className="nav-item">
@@ -59,7 +64,49 @@ last_update:
 
 <div className="nav-grid">
 
-## 📦 A1シリーズ LiDAR {#A1-series}
+
+## 📦 Aurora
+
+<div class="category-group">
+  <div className="category-card robot-kits">
+
+### データシート
+
+<div className="card-container">
+    <a href="https://files.seeedstudio.com/products/SLAMTEC_Aurora_S/Aurora_S_datasheet.pdf" className="nav-item">
+      <span className="text">Aurora S</span>
+    </a>
+</div>
+
+### ユーザーマニュアル
+
+<div className="card-container">
+  <nav className="quick-nav">
+    <a href="https://files.seeedstudio.com/products/SLAMTEC_Aurora_S/Aurora_S_user_manual.pdf" className="nav-item">
+      <span className="text">Aurora S</span>
+    </a>
+  </nav>
+</div>
+
+### SDK
+
+<div className="card-container">
+    <a href="https://www.slamtec.com/en/Support#aurora" className="nav-item" target="_blank" rel="noopener noreferrer">
+      <span className="text">開発者センター</span>
+    </a>
+</div>
+
+### 3Dモデル
+
+<div className="card-container">
+    <a href="https://www.slamtec.com/en/Support#aurora" className="nav-item" target="_blank" rel="noopener noreferrer">
+      <span className="text">A3M1.stl</span>
+    </a>
+</div>
+</div>
+</div>
+
+## 📦 A1 シリーズ LiDAR {#A1-series}
 
 <div class="category-group">
   <div className="category-card robot-kits">
@@ -89,7 +136,7 @@ last_update:
       <span className="text">A3M1</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=A1M8%20Datasheet-,Dev%20Kit%20User%20Manual,-A3M1%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">A2シリーズ</span>
+      <span className="text">A2 シリーズ</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=A1M8%20Datasheet-,Dev%20Kit%20User%20Manual,-A3M1%20Dev%20Kit" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A1M8</span>
@@ -107,7 +154,7 @@ last_update:
       <span className="text">通信プロトコル</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-a-series:~:text=and%20Repair%20Guide-,SDK%20%26,-Protocol" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">SDKユーザーマニュアル</span>
+      <span className="text">SDK ユーザーマニュアル</span>
     </a>
     <a href="https://github.com/slamtec/rplidar_sdk" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Github</span>
@@ -253,13 +300,13 @@ last_update:
 
 <div className="card-container">
     <a href="https://wiki.slamtec.com/display/SD#Slamtec%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83-rplidar" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">Developer Center</span>
+      <span className="text">開発者センター</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-c1:~:text=C1%20User%20Manual-,Protocol,-Protocol" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">C1 Protocol</span>
+      <span className="text">C1 プロトコル</span>
     </a>
     <a href="https://www.slamtec.com/en/Support#rplidar-c1:~:text=GitHub%20Repository-,SDk,-SDK%20User%20Manual" className="nav-item" target="_blank" rel="noopener noreferrer">
-      <span className="text">SDK User Manual</span>
+      <span className="text">SDK ユーザーマニュアル</span>
     </a>
     <a href="https://github.com/slamtec/rplidar_sdk" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Github</span>
@@ -287,7 +334,7 @@ last_update:
 </div>
 
 <style>{`
-/* 導航容器 */
+/* ナビゲーションコンテナ */
 .quick-nav-container {
   margin: 2rem 0;
   padding: 1rem;
@@ -303,22 +350,22 @@ last_update:
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Dark模式 - 導航容器 */
+/* Darkモード - ナビゲーションコンテナ */
 html[data-theme='dark'] .quick-nav-container {
   background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-/* 導航主体 */
+/* ナビゲーション本体 */
 .quick-nav {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
-  flex-wrap: wrap; /* 関鍵属性 */
-  justify-content: left; /* 可選居中 */
+  flex-wrap: wrap; /* 重要なプロパティ */
+  justify-content: left; /* オプション：中央揃え */
 }
 
-/* 導航項 */
+/* ナビゲーション項目 */
 .nav-item {
   position: relative;
   padding: 0.8rem 1.5rem;
@@ -337,27 +384,27 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Dark模式 - 導航項 */
+/* Darkモード - ナビゲーション項目 */
 html[data-theme='dark'] .nav-item {
   color: #e5e7eb;
   background: #374151;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-/* 図標様式 */
+/* アイコンスタイル */
 .nav-item .icon {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   transition: transform 0.3s;
 }
 
-/* 文字様式 */
+/* テキストスタイル */
 .nav-item .text {
   font-size: 0.95rem;
   white-space: nowrap;
 }
 
-/* 悬浮特効 */
+/* ホバー効果 */
 .nav-item .hover-effect {
   position: absolute;
   bottom: 0;
@@ -370,14 +417,14 @@ html[data-theme='dark'] .nav-item {
   z-index: -1;
 }
 
-/* 悬浮動画 */
+/* ホバーアニメーション */
 .nav-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   color: white;
 }
 
-/* Dark模式 - 悬浮動画 */
+/* Darkモード - ホバーアニメーション */
 html[data-theme='dark'] .nav-item:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
@@ -395,7 +442,7 @@ html[data-theme='dark'] .nav-item:hover {
   pointer-events: none;
 }
 
-/* 響応式設計 */
+/* レスポンシブデザイン */
 @media (max-width: 768px) {
   .quick-nav {
     flex-direction: column;
@@ -414,7 +461,7 @@ html[data-theme='dark'] .nav-item:hover {
 `}</style>
 
 <style>{`
-/* 内容卡片増強版様式 */
+/* コンテンツカード強化版スタイル */
 .nav-grid {
   display: block;
   gap: 2rem;
@@ -433,7 +480,7 @@ html[data-theme='dark'] .nav-item:hover {
   z-index: 1;
 }
 
-/* Dark模式 - 内容卡片 */
+/* Darkモード - コンテンツカード */
 html[data-theme='dark'] .category-card {
   background: #374151;
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
@@ -444,7 +491,7 @@ html[data-theme='dark'] .category-card {
   margin-bottom: 2rem;
 }
 
-/* 分類色標 */
+/* カテゴリ色標 */
 .category-card::before {
   content: "";
   position: absolute;
@@ -459,13 +506,13 @@ html[data-theme='dark'] .category-card {
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* 悬浮特効 */
+/* ホバー効果 */
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
-/* Dark模式 - 悬浮特効 */
+/* Darkモード - ホバー効果 */
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -481,12 +528,12 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Dark模式 - 悬浮光効 */
+/* Darkモード - ホバー光効果 */
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
 
-/* 链接動画 */
+/* リンクアニメーション */
 .category-card a {
   position: relative;
   display: inline-block;
@@ -495,7 +542,7 @@ html[data-theme='dark'] .category-card:hover::after {
   color: #333;
 }
 
-/* Dark模式 - 链接 */
+/* Darkモード - リンク */
 html[data-theme='dark'] .category-card a {
   color: #d1d5db;
 }
@@ -505,7 +552,7 @@ html[data-theme='dark'] .category-card a {
   transform: translateX(5px);
 }
 
-/* Dark模式 - 链接悬浮 */
+/* Darkモード - リンクホバー */
 html[data-theme='dark'] .category-card a:hover {
   color: #60a5fa;
 }
@@ -521,7 +568,7 @@ html[data-theme='dark'] .category-card a:hover {
   transition: width 0.3s;
 }
 
-/* Dark模式 - 链接下划线 */
+/* Darkモード - リンク下線 */
 html[data-theme='dark'] .category-card a::after {
   background: #60a5fa;
 }
@@ -530,7 +577,7 @@ html[data-theme='dark'] .category-card a::after {
   width: 100%;
 }
 
-/* 標签様式増強 */
+/* タグスタイル強化 */
 .tag {
   font-size: 0.75rem;
   padding: 2px 8px;
@@ -545,7 +592,7 @@ html[data-theme='dark'] .category-card a::after {
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
 
-/* Dark模式 - Stable標签 */
+/* Darkモード - Stableタグ */
 html[data-theme='dark'] .stable {
   background: #065f46;
   color: #a7f3d0;
@@ -558,7 +605,7 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }
 
-/* Dark模式 - Recommended標签 */
+/* Darkモード - Recommendedタグ */
 html[data-theme='dark'] .recommended {
   background: #7f1d1d;
   color: #fca5a5;
@@ -570,12 +617,12 @@ html[data-theme='dark'] .recommended {
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-/* Dark模式 - 点击効果 */
+/* Darkモード - クリック効果 */
 html[data-theme='dark'] .category-card:active {
   box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
 
-/* 響応式優化 */
+/* レスポンシブ最適化 */
 @media (max-width: 768px) {
   .nav-grid {
     grid-template-columns: 1fr;
@@ -583,11 +630,11 @@ html[data-theme='dark'] .category-card:active {
 
   .category-card {
     width: 100%;
-    margin-top: 0.5rem; /* 卡片緊貼標題 */
+    margin-top: 0.5rem; /* カードがタイトルに密着 */
   }
 }
 
-/* Dark模式 - 標題文字 */
+/* ダークモード - タイトルテキスト */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -597,14 +644,14 @@ html[data-theme='dark'] h6 {
   color: #f9fafb;
 }
 
-/* Dark模式 - 正文文字 */
+/* ダークモード - 本文テキスト */
 html[data-theme='dark'] p,
 html[data-theme='dark'] li,
 html[data-theme='dark'] strong {
   color: #e5e7eb;
 }
 
-/* Dark模式 - 引用块 */
+/* ダークモード - 引用ブロック */
 html[data-theme='dark'] blockquote {
   color: #9ca3af;
   border-left-color: #4b5563;
