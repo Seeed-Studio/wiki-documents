@@ -398,127 +398,48 @@ Additionally, we can manually set the fan speed using the jtop tool.
 
 ## CAN
 
-The CAN (Controller Area Network) interface is a serial communication protocol used for communication between microcontrollers and devices, featuring high speed, strong anti-interference capability, and support for multi-node communication.
+The reComputer Super series provides a CAN interface where the CAN signal is output directly from the SOM at TTL/CMOS levels, which is a non-standard differential signal requiring an external CAN transceiver to connect to a standard CAN bus; it supports CAN FD frame formats, allowing extended data length and higher data rates, making it suitable for industrial automation, robotics, automotive prototyping, and other applications requiring reliable, real-time communication.
 
 ### Hardware Connection
 
-- Please note the sequence of the connected lines (R OUT ↔ RX, D IN ↔ TX), and then convert them to CAN_L and CAN_H through the CAN bus transceiver.
+Please note the sequence of the connected lines (R OUT ↔ RX, D IN ↔ TX), and then convert them to CAN_L and CAN_H through the CAN bus transceiver.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can1.png"/>
 </div>
 
-- [PC CAN Tool Download](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)
-- 3.3V CMOS level CAN bus (not differential)
+According to the [Datasheet of reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf), connect the CAN heater to the CAN bus transceiver in the corresponding manner, then connect the CAN bus transceiver to the [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html), and finally connect it to the Jetson for loopback communication testing.
 
-:::note
-The CAN interface uses an isolated power supply, which means that the ground signal for external devices connected to the CAN interface should be connected to the **GND_ISO** pin.
-:::
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_port.png"/>
+</div>
 
-Here we have used [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) with USB Cable available on our Bazaar.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_connect.png"/>
+</div>
 
 ### Usage Instruction
 
-**Step1.** Download the driver for the USB to CAN adapter you are using from the manufacturer's website and install it. In our case, according to the adapter that we used, the drivers can be found [here](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver).
-
-**Step2.** Some adapters also come with the necessary software for the PC in order to communicate with the CAN device. In our case, according to the adapter that we used, we have downloaded and installed the software which can be found [here](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program).
-
-**Step3.** Initialize the CAN interface of Jetson.
-
-Create a new file named **`can_init.sh`** in Jetson and write the following content:
+**Step 1.** Configure and open can0:
 
 ```bash
-#!/bin/bash
-
-sudo gpioset gpiochip2 9=0 
-sudo gpioset gpiochip2 8=0
-
-sudo busybox devmem 0x0c303018 w 0xc458
-sudo busybox devmem 0x0c303010 w 0xc400
-sudo busybox devmem 0x0c303008 w 0xc458
-sudo busybox devmem 0x0c303000 w 0xc400
-
-sudo modprobe can
-sudo modprobe can_raw
-sudo modprobe mttcan
-
 sudo ip link set can0 down
-sudo ip link set can1 down
-
-sudo ip link set can0 type can bitrate 125000
-sudo ip link set can1 type can bitrate 125000
+sudo ip link set can0 type can bitrate 500000
 sudo ip link set can0 up
-sudo ip link set can1 up
-
 ```
-
-Then, run the file we just created in the Jetson terminal window:
-
+**Step 2.** Communication test.
+Open a terminal to receive signals.
 ```bash
-sudo apt-get install gpiod
-cd <path to can_init.sh>
-sudo chmod +x can_init.sh
-./can_init.sh
+candump can0
 ```
 
-**Step4.** Type ifconfig on the terminal and you will see the CAN interface in enabled.
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/can.png"/>
-</div>
-
-**Step5.** Open the CAN software that you have installed before. In this case, we will open the software that we installed according to the CAN adapter that we are using.
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/>
-</div>
-
-**Step6.** Connect the USB to CAN adapter to the PC and open **Device Manager** by searching it on windows search bar. Now you will see the connected adapter under **Ports (COM & LPT)**. Make a note of the serial port listed here. According to the below image, the serial port is **COM9**.
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/>
-</div>
-
-**Step7.** Open the CAN software, click **Refresh** next to **COM** section, click the drop-down-menu and select the serial port according to the connected adapter. Keep the **COM bps** at default and click **Open**.
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/>
-</div>
-
-**Step8.** Keep the **Mode** and **CAN bps** at default, change the **Type** to **Standard frame** and click **Set and Start**.
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/>
-</div>
-
-**Step9.** On reComputer Industrial, execute the following command to send a CAN signal to the PC:
-
-```sh
+**Step 3.** Open another terminal to send the signal.
+```bash
 cansend can0 123#abcdabcd
 ```
-
-Now you will see the above signal received by the software as shown below
-
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/46.png"/>
-</div>
-
-**Step10.** On reComputer Industrial, execute the following command to wait for receiving CAN signals from the PC:
-
-```sh
-candump can0 &
-```
-
-**Step11.** On the CAN software, click **Send a single frame**:
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/>
-</div>
-
-Now you will see it received by reComputer Industrial as follows:
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_loop.png"/>
 </div>
 
 ## Extension Port
