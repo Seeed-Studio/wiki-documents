@@ -72,7 +72,7 @@ import Steppers from '@site/src/components/utils/Stepper';
     </tr>
     <tr>
       <th>電源供給</th>
-      <td>- 3.7V Li-Battery<br />- USB Type-C</td>
+      <td>- 3.7V リチウムバッテリー<br />- USB Type-C</td>
     </tr>
     <tr>
       <th>ボタン</th>
@@ -171,14 +171,14 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 - [7.5インチ ePaper - モノクロ 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [7.5インチ ePaper - 3色 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/37.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 XIAO ePaper Display Board を使用する際は、ePaper ディスプレイのタイプに応じてジャンパーを設定してください：
 
-- 24ピン ePaper ディスプレイの場合 → ジャンパーを24ピンに設定
+- 24 Pin ePaper ディスプレイの場合 → ジャンパーを 24 Pin に設定
 
-⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常なコンテンツが表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
+⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常な内容が表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
 
 :::
 
@@ -186,12 +186,12 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 
 - [7.3インチ Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/36.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
 :::tip
 XIAO ePaper Display Board を使用する際は、ePaper ディスプレイのタイプに応じてジャンパーを設定してください：
-- 50ピン ePaper ディスプレイの場合 → ジャンパーを50ピンに設定
+- 50 Pin ePaper ディスプレイの場合 → ジャンパーを 50 Pin に設定
 
-⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常なコンテンツが表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
+⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常な内容が表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
 
 :::
 
@@ -200,7 +200,7 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 ### Seeed GFX ライブラリのインストール
 
 :::tip
-このライブラリはTFTライブラリと同じ機能を持ちますが、互換性はありません。TFTライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
+このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
 :::
 
 GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
@@ -222,10 +222,10 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 :::tip
 間違った選択をすると、画面に何も表示されません。
 
-デバイスやコンポーネントのタイプを確認してください。
+デバイスやコンポーネントのタイプを必ず確認してください。
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/38.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/6.jpg" style={{width:800, height:'auto'}}/></div>
 
 ライブラリをダウンロードした後、**Sketch** -> **Include Library** -> **Add .ZIP Library** に移動し、ダウンロードしたライブラリを選択します。
 
@@ -242,34 +242,32 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 
 ## 開始方法
 
-ここでは、5.83インチディスプレイを例として使用します。すべての24ピンスクリーンで手順は同じです。唯一の違いは、ドライバーで適切なスクリーンサイズを選択することです。
+ここでは、7.5インチディスプレイを例として使用します。すべての24ピンスクリーンで手順は同じです。唯一の違いは、ドライバーで適切な画面サイズを選択することです。
 
-**新しい「driver.h」ファイル**を作成し、そのコードを貼り付けます。コードは次のようになります：
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/40.png" style={{width:1000, height:'auto'}}/></div>
+**新しい "driver.h" ファイル**を作成し、そのコードを貼り付けます。コードは次のようになります：
 
 ```cpp
-#define BOARD_SCREEN_COMBO 503 // 5.86 inch monochrome ePaper Screen （UC8179）
+#define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
 その後、**Tools** -> **Board** -> **XIAO ESP32S3** と **Tools** -> **Port** -> **ボードが接続されているポートを選択** に移動します。次に **Upload** をクリックしてコードをアップロードします。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/32.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
-これで、ePaper画面にフィードバックが表示されます！以下はHelloworldサンプルの結果です。
+これで電子ペーパー画面にフィードバックが表示されます！以下はHelloworldサンプルの結果です。（何も表示されない場合は、リセットボタンを押してください）
 
 :::tip
-⚠️ 注意：ePaperケーブルの向き
-ePaperディスプレイをXIAO ePaper Display Boardに接続する際は、FPCケーブルが正しい方向に挿入されていることを確認してください。
+⚠️ 注意：電子ペーパーケーブルの向き
+電子ペーパーディスプレイをXIAO電子ペーパーディスプレイボードに接続する際は、FPCケーブルが正しい方向に挿入されていることを確認してください。
 
-⚠️ コネクタを逆向きにしないでください！ケーブルを逆さまに挿入すると、ePaperの表示が失敗したり、画面/ボードが損傷する可能性があります。
+⚠️ コネクタを逆向きにしないでください！ケーブルを逆さまに挿入すると、電子ペーパーが表示されなくなったり、画面/ボードが損傷する可能性があります。
 以下の画像は正しい接続を示しています：
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/32.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.jpg" style={{width:500, height:'auto'}}/></div>
 
-### XIAO ePaper Display Board(nRF52840) - EN04のユーザーボタン
+### XIAO電子ペーパーディスプレイボード(nRF52840) - EN04のユーザーボタン
 
 EN04には、さまざまな制御目的に使用できる3つのユーザープログラマブルボタンが搭載されています。このセクションでは、Arduinoを使用してボタンの状態を読み取り、ボタンの押下に応答する方法を説明します。
 
@@ -299,7 +297,7 @@ EN04では、3つのボタンがXIAO nRF52840 Plusに接続されています：
 
 このサンプルでは、ボタンの押下を検出し、シリアルモニターにメッセージを出力する方法を説明します。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/39.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.jpg" style={{width:500, height:'auto'}}/></div>
 
 <br></br>
 
@@ -346,7 +344,7 @@ void loop() {
 }
 ```
 
-### XIAO ePaper Display Board(nRF52840) - EN04のユーザーバッテリー
+### XIAO電子ペーパーディスプレイボード(nRF52840) - EN04のユーザーバッテリー
 
 バッテリー電源で動作する場合：
 
@@ -361,7 +359,7 @@ void loop() {
 :::
 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04battery.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.jpg" style={{width:600, height:'auto'}}/></div>
 
 ```cpp
 #define VOLTAGE_PIN A0 //GPIO1
@@ -403,7 +401,7 @@ void loop() {
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
