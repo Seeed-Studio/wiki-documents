@@ -1,5 +1,5 @@
 ---
-description: Mostrar a las personas cómo usar Orbbec Gemini 335Lg en la plataforma reComputer Jetson.
+description: Mostrar a las personas cómo usar Orbbec Gemini2 en la plataforma reComputer Jetson.
 title: Cámara 3D Orbbec Gemini2
 keywords:
 - Jetson
@@ -25,7 +25,7 @@ last_update:
 </div>
 
 <div style={{ textAlign: "justify" }}>
-La cámara 3D compacta Gemini 2 está basada en tecnología Active Stereo IR y está equipada con el último ASIC personalizado de Orbbec para procesamiento de profundidad de alta calidad, IMU y conectividad + alimentación USB 3.0 de un solo cable. El amplio FOV y el amplio rango de detección de profundidad hace que Gemini 2 sea adaptable para muchas aplicaciones, especialmente para robótica. Es fácil de configurar y operar con el SDK de Orbbec y entrega datos extremadamente precisos y confiables en varias condiciones de iluminación desde oscuridad total hasta semi-exterior.
+La cámara 3D compacta Gemini 2 está basada en tecnología Active Stereo IR y está equipada con el último ASIC personalizado de Orbbec para procesamiento de profundidad de alta calidad, IMU, y conectividad + alimentación USB 3.0 de un solo cable. El amplio FOV y el amplio rango de detección de profundidad hace que Gemini 2 sea adaptable para muchas aplicaciones, especialmente para robótica. Es fácil de configurar y operar con el SDK de Orbbec y entrega datos extremadamente precisos y confiables en varias condiciones de iluminación desde oscuridad total hasta semi-exterior.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -81,7 +81,7 @@ La cámara 3D compacta Gemini 2 está basada en tecnología Active Stereo IR y e
       </tr>
 
       <tr style={{ height: "46px" }}>
-        <td style={{ height: "46px", width: "132px" }}>Driver de Cámara</td>
+        <td style={{ height: "46px", width: "132px" }}>Controlador de Cámara</td>
         <td style={{ height: "46px", width: "491px" }}>UVC</td>
       </tr>
 
@@ -118,7 +118,7 @@ La cámara 3D compacta Gemini 2 está basada en tecnología Active Stereo IR y e
   </table>
 </div>
 
-## Descripción del Hardware
+## Descripción General del Hardware
 
 <div align="center">
     <img width={700}
@@ -135,9 +135,89 @@ La cámara 3D compacta Gemini 2 está basada en tecnología Active Stereo IR y e
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-3.png" />
 </div>
 
+
+## Guía de Inicio Rápido de la Serie Gemini
+- Conectar la Cámara Orbbec
+ ① Ensambla la cabeza del trípode con el trípode, y luego asegura la cámara en el trípode ensamblado, como se ilustra en el Paso 1 a continuación.
+
+  ② Usa el cable USB-C a USB-A para conectar el puerto Type-C de la cámara, como se muestra en el Paso 2 a continuación.
+
+  ③ Conecta el conector USB-A al host usando el mismo cable USB-C a USB-A, como se muestra en el Paso 3 a continuación.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/step1.png" />
+</div>
+
+- Obtener Orbbec Viewer
+
+Selecciona y descarga el [Orbbec Viewer](https://www.orbbec.com/developers/orbbec-sdk/) correspondiente basado en tu sistema y versión.
+
+- Lanzar Orbbec Viewer
+
+1. Después de iniciar el Orbbec Viewer, por favor asegúrate de que la herramienta reconozca la cámara 3D, como se indica en la siguiente imagen. 
+【Observación】Si la cámara no es reconocida, por favor verifica para asegurar que la cámara y el host estén conectados correctamente. Puedes intentar desconectar y luego reconectar el cable USB. Si aún no es reconocida, considera reemplazar el cable USB o verificar si la fuente de alimentación de la computadora host cumple con las especificaciones requeridas.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft1.png" />
+</div>
+
+
+2. Activa el botón 'Depth' en la parte superior de la herramienta para iniciar y previsualizar el flujo de profundidad.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft2.png" />
+</div>
+
+3. Activa el botón 'Color' en la parte superior de la herramienta para iniciar y previsualizar el flujo de color. El flujo de color y el flujo de profundidad se mostrarán lado a lado.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft3.png" />
+</div>
+
+4. Activa los botones 'IR Left' e 'IR Right' en la parte superior de la herramienta para iniciar y previsualizar el flujo IR.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft4.png" />
+</div>
+
+5. Activa el botón 'IMU' en la parte superior de la herramienta para iniciar y previsualizar el flujo IMU.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft5.png" />
+</div>
+
+6. Activa el botón en la parte superior de cada ventana para mostrar la información de metadatos.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft6.png" />
+</div>
+
+7. Activa el botón 'PointCloud' en la parte superior de la herramienta para iniciar y previsualizar la nube de puntos 3D
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft7.png" />
+</div>
+
+8. Activa el botón 'Display' bajo el menú 'Image View' en la izquierda para iniciar y previsualizar el flujo D2C (registro de profundidad a color). La nube de puntos 3D y el flujo D2C se mostrarán lado a lado.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft8.png" />
+</div>
+
+
+
 ## Comenzando en reComputer
 
-**Paso 1.** Descargar e instalar el SDK de Orbbec para arquitectura ARM64:
+**Paso 1.** Descarga e instala el SDK de Orbbec para arquitectura ARM64:
 
 ```bash
 # Download Orbbec SDK
@@ -147,7 +227,7 @@ wget https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.4.11/OrbbecSDK_
 unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
-**Paso 2.** Construir ejemplos y probar:
+**Paso 2.** Construye ejemplos y prueba:
 
 ```bash
 # Install udev rules
@@ -169,8 +249,8 @@ cd ..
 ## Ejemplo de aplicaciones
 
 <div style={{ textAlign: "justify" }}>
-El Orbbec Gemini2 es una cámara de profundidad compacta y de alto rendimiento ideal para robótica, visión 3D, seguimiento de objetos y automatización industrial.
-se adapta perfectamente a aplicaciones de IA embebida y computación en el borde como las de las plataformas NVIDIA Jetson.
+La Orbbec Gemini2 es una cámara de profundidad compacta y de alto rendimiento ideal para robótica, visión 3D, seguimiento de objetos y automatización industrial.
+se adapta perfectamente en aplicaciones de IA embebida y computación en el borde como aquellas en plataformas NVIDIA Jetson.
 </div>
 
 :::info
@@ -194,13 +274,14 @@ Hay algunos tutoriales de casos desarrollados por nosotros usando Gemini2:
 
 ## Recursos
 
-- [Guía de API del SDK v2 de Orbbec](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
+- [Guía API del SDK v2 de Orbbec](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
 - [Hoja de Datos](https://files.seeedstudio.com/products/Orbbec/Orbbec_Gemini_2_Series_Datasheet_V1.7_20240316.pdf)
 - [OrbbecViewer](https://github.com/orbbec/OrbbecSDK/blob/main/doc/OrbbecViewer/English/OrbbecViewer.md)
+- [ROS SDK](https://wiki.seeedstudio.com/es/orbbec_depth_camera_on_ros/)
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
