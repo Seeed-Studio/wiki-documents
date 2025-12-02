@@ -910,6 +910,10 @@ Please be careful not to short-circuit the positive and negative terminals and b
 :::
 
 ### Battery Voltage Detection
+:::tip
+If the XIAO nRF54L15 fails to boot in battery mode, you must disable the serial port during programming. Discussion outcomes regarding this issue can be found on the (forum)[https://forum.seeedstudio.com/t/xiao-nrf54l15-with-a-coin-battery/294019/33]. 
+We extend our sincere gratitude to those who provided solutions.
+:::
 
 The XIAO nRF54L15 integrates a battery voltage detection feature that centers on efficiently managing battery power measurements using the TPS22916CYFPR load switch. This guide will focus on analyzing the software implementation of the battery detection **(especially the main.c code)** and guide you on how to easily deploy and use this feature in a PlatformIO environment, avoiding the complexity of the Zephyr NCS SDK.
 
