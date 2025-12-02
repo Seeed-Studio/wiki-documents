@@ -301,7 +301,7 @@ reComputer SuperにはRTCインターフェースが搭載されており、シ�
 
 **ステップ2.** reComputer Superの電源を入れます。
 
-**ステップ3.** Ubuntuデスクトップで、右上角のドロップダウンメニューをクリックし、`Settings > Date & Time`に移動し、Ethernetケーブル経由でネットワークに接続して**Automatic Date & Time**を選択し、日付/時刻を自動的に取得します。
+**ステップ3.** Ubuntuデスクトップで、右上角のドロップダウンメニューをクリックし、`Settings > Date & Time`に移動し、Ethernetケーブルでネットワークに接続して**Automatic Date & Time**を選択し、日付/時刻を自動的に取得します。
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/>
@@ -373,9 +373,9 @@ reComputer Super には電源状態とシステムアクティビティを表示
 
 reComputer Super には、異なる電圧と冷却ニーズに対応するため、2 種類のファンコネクタが装備されています：
 
-- 1x 4 ピンファンコネクタ（5V PWM）：低電圧、低消費電力の静音ファン用に設計されており、このコネクタは PWM 速度制御をサポートし、システム温度に基づいてインテリジェントなファン速度調整を可能にして、エネルギー効率を向上させ、ノイズを低減します。
+- 1x 4ピンファンコネクタ（5V PWM）：低電圧、低電力の静音ファン用に設計されており、このコネクタは PWM 速度制御をサポートし、システム温度に基づいてファン速度をインテリジェントに調整して、エネルギー効率を向上させ、ノイズを削減します。
 
-- 1x 4 ピンファンコネクタ（12V PWM）：標準的な 12V PWM ファンと互換性があり、精密な速度制御もサポートしており、高性能冷却要件に最適です。
+- 1x 4ピンファンコネクタ（12V PWM）：標準的な 12V PWM ファンと互換性があり、精密な速度制御もサポートしており、高性能冷却要件に最適です。
 
 ### ハードウェア接続
 
@@ -387,7 +387,7 @@ reComputer Super には、異なる電圧と冷却ニーズに対応するため
 詳細については、[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)をご確認ください。
 :::
 
-**ファン速度の設定：**
+**ファン速度を設定：**
 
   ```bash
   sudo -i
@@ -398,127 +398,48 @@ reComputer Super には、異なる電圧と冷却ニーズに対応するため
 
 ## CAN
 
-CAN（Controller Area Network）インターフェースは、マイクロコントローラとデバイス間の通信に使用されるシリアル通信プロトコルで、高速、強力な抗干渉能力、マルチノード通信のサポートが特徴です。
+reComputer Super シリーズは CAN インターフェースを提供しており、CAN 信号は SOM から TTL/CMOS レベルで直接出力されます。これは標準的な差動信号ではないため、標準的な CAN バスに接続するには外部 CAN トランシーバーが必要です。CAN FD フレーム形式をサポートし、拡張データ長とより高いデータレートを可能にし、信頼性の高いリアルタイム通信を必要とする産業オートメーション、ロボティクス、自動車プロトタイピング、その他のアプリケーションに適しています。
 
 ### ハードウェア接続
 
-- 接続線の順序（R OUT ↔ RX、D IN ↔ TX）に注意し、CAN バストランシーバーを通じて CAN_L と CAN_H に変換してください。
+接続線の順序（R OUT ↔ RX、D IN ↔ TX）に注意し、CAN バストランシーバーを通じて CAN_L と CAN_H に変換してください。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can1.png"/>
 </div>
 
-- [PC CAN ツールダウンロード](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)
-- 3.3V CMOS レベル CAN バス（差動ではない）
+[reComputer Super のデータシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)に従って、CAN ヒーターを対応する方法で CAN バストランシーバーに接続し、次に CAN バストランシーバーを [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) に接続し、最後に Jetson に接続してループバック通信テストを行います。
 
-:::note
-CAN インターフェースは絶縁電源を使用しており、CAN インターフェースに接続される外部デバイスのグランド信号は **GND_ISO** ピンに接続する必要があります。
-:::
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_port.png"/>
+</div>
 
-ここでは、当社の Bazaar で入手可能な USB ケーブル付きの [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) を使用しました。
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_connect.png"/>
+</div>
 
 ### 使用方法
 
-**ステップ1.** 使用している USB to CAN アダプターのドライバーをメーカーのウェブサイトからダウンロードしてインストールします。今回の場合、使用したアダプターに応じて、ドライバーは[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)で見つけることができます。
-
-**ステップ2.** 一部のアダプターには、CAN デバイスと通信するために PC 用の必要なソフトウェアも付属しています。今回の場合、使用したアダプターに応じて、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)で見つけることができるソフトウェアをダウンロードしてインストールしました。
-
-**ステップ3.** Jetson の CAN インターフェースを初期化します。
-
-Jetson で **`can_init.sh`** という名前の新しいファイルを作成し、以下の内容を記述します：
+**ステップ 1.** can0 を設定して開きます：
 
 ```bash
-#!/bin/bash
-
-sudo gpioset gpiochip2 9=0 
-sudo gpioset gpiochip2 8=0
-
-sudo busybox devmem 0x0c303018 w 0xc458
-sudo busybox devmem 0x0c303010 w 0xc400
-sudo busybox devmem 0x0c303008 w 0xc458
-sudo busybox devmem 0x0c303000 w 0xc400
-
-sudo modprobe can
-sudo modprobe can_raw
-sudo modprobe mttcan
-
 sudo ip link set can0 down
-sudo ip link set can1 down
-
-sudo ip link set can0 type can bitrate 125000
-sudo ip link set can1 type can bitrate 125000
+sudo ip link set can0 type can bitrate 500000
 sudo ip link set can0 up
-sudo ip link set can1 up
-
 ```
-
-次に、Jetson ターミナルウィンドウで作成したファイルを実行します：
-
+**ステップ 2.** 通信テスト。
+ターミナルを開いて信号を受信します。
 ```bash
-sudo apt-get install gpiod
-cd <path to can_init.sh>
-sudo chmod +x can_init.sh
-./can_init.sh
+candump can0
 ```
 
-**ステップ4.** ターミナルで ifconfig と入力すると、CAN インターフェースが有効になっていることがわかります。
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/can.png"/>
-</div>
-
-**ステップ5.** 以前にインストールした CAN ソフトウェアを開きます。この場合、使用している CAN アダプターに応じてインストールしたソフトウェアを開きます。
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/>
-</div>
-
-**ステップ6.** USB to CAN アダプターを PC に接続し、Windows 検索バーで検索して **Device Manager** を開きます。**Ports (COM & LPT)** の下に接続されたアダプターが表示されます。ここに記載されているシリアルポートをメモしてください。下の画像によると、シリアルポートは **COM9** です。
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/>
-</div>
-
-**ステップ7.** CAN ソフトウェアを開き、**COM** セクションの横にある **Refresh** をクリックし、ドロップダウンメニューをクリックして接続されたアダプターに応じてシリアルポートを選択します。**COM bps** はデフォルトのままにして、**Open** をクリックします。
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/>
-</div>
-
-**ステップ8.** **Mode** と **CAN bps** はデフォルトのままにし、**Type** を **Standard frame** に変更して **Set and Start** をクリックします。
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/>
-</div>
-
-**ステップ9.** reComputer Industrial で、以下のコマンドを実行して PC に CAN 信号を送信します：
-
-```sh
+**ステップ 3.** 別のターミナルを開いて信号を送信します。
+```bash
 cansend can0 123#abcdabcd
 ```
-
-これで、上記の信号がソフトウェアによって受信されたことが以下のように表示されます
-
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/46.png"/>
-</div>
-
-**ステップ10.** reComputer Industrial で、以下のコマンドを実行して PC からの CAN 信号の受信を待機します：
-
-```sh
-candump can0 &
-```
-
-**ステップ11.** CAN ソフトウェアで、**Send a single frame** をクリックします：
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/>
-</div>
-
-これで、以下のように reComputer Industrial によって受信されたことがわかります：
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_loop.png"/>
 </div>
 
 ## 拡張ポート
@@ -531,7 +452,7 @@ candump can0 &
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40pin3.jpg"/>
 </div>
 
-40 ピン拡張ヘッダーは、GPIO、I2C、SPI、UART などの様々な機能を提供する多用途拡張インターフェースで、センサー、周辺機器、その他のモジュールの接続を便利にします。
+40 ピン拡張ヘッダーは、GPIO、I2C、SPI、UART などの様々な機能を提供する多用途拡張インターフェースで、センサー、周辺機器、その他のモジュールの接続に便利です。
 
 40 ピンヘッダーの詳細は以下の通りです：
 
@@ -552,7 +473,7 @@ candump can0 &
 <tr><td>4</td><td>5V</td><td>-</td><td>メイン 5V 電源</td></tr>
 <tr><td>5</td><td>I2C1_SCL</td><td>PDD.01</td><td>I2C #1 クロック</td></tr>
 <tr><td>6</td><td>GND</td><td>-</td><td>グランド</td></tr>
-<tr><td>7</td><td>GPIO09</td><td>PAC.06</td><td>汎用入出力</td></tr>
+<tr><td>7</td><td>GPIO09</td><td>PAC.06</td><td>汎用 I/O</td></tr>
 <tr><td>8</td><td>UART1_TXD</td><td>PR.02</td><td>UART #1 送信</td></tr>
 <tr><td>9</td><td>GND</td><td>-</td><td>グランド</td></tr>
 <tr><td>10</td><td>UART1_RXD</td><td>PR.03</td><td>UART #1 受信</td></tr>
@@ -560,29 +481,29 @@ candump can0 &
 <tr><td>12</td><td>I2S0_SCLK</td><td>PH.07</td><td>オーディオ I2S #0 クロック</td></tr>
 <tr><td>13</td><td>SPI1_SCK</td><td>PY.00</td><td>SPI #1 クロック</td></tr>
 <tr><td>14</td><td>GND</td><td>-</td><td>グランド</td></tr>
-<tr><td>15</td><td>GPIO12</td><td>PN.01</td><td>汎用入出力</td></tr>
+<tr><td>15</td><td>GPIO12</td><td>PN.01</td><td>汎用 I/O</td></tr>
 <tr><td>16</td><td>SPI1_CS1</td><td>PY.04</td><td>SPI #1 チップセレクト #1</td></tr>
 <tr><td>17</td><td>3.3V</td><td>-</td><td>メイン 3.3V 電源</td></tr>
 <tr><td>18</td><td>SPI1_CS0</td><td>PY.03</td><td>SPI #1 チップセレクト #0</td></tr>
 <tr><td>19</td><td>SPI0_MOSI</td><td>PZ.05</td><td>SPI #0 マスター出力/スレーブ入力</td></tr>
 <tr><td>20</td><td>GND</td><td>-</td><td>グランド</td></tr>
-<tr><td>21</td><td>SPI0_MISO</td><td>PZ.04</td><td>SPI #0 マスター入力 / スレーブ出力</td></tr>
-<tr><td>22</td><td>SPI1_MISO</td><td>PY.01</td><td>SPI #1 マスター入力 / スレーブ出力</td></tr>
+<tr><td>21</td><td>SPI0_MISO</td><td>PZ.04</td><td>SPI #0 マスター入力/スレーブ出力</td></tr>
+<tr><td>22</td><td>SPI1_MISO</td><td>PY.01</td><td>SPI #1 マスター入力/スレーブ出力</td></tr>
 <tr><td>23</td><td>SPI0_SCK</td><td>PZ.03</td><td>SPI #0 クロック</td></tr>
 <tr><td>24</td><td>SPI0_CS0</td><td>PZ.06</td><td>SPI #0 チップセレクト #0</td></tr>
 <tr><td>25</td><td>GND</td><td>-</td><td>グランド</td></tr>
 <tr><td>26</td><td>SPI0_CS1</td><td>PZ.07</td><td>SPI #0 チップセレクト #1</td></tr>
 <tr><td>27</td><td>ID_I2C_SDA (I2C0_SDA)</td><td>PDD.00</td><td>I2C #0 データ</td></tr>
 <tr><td>28</td><td>ID_I2C_SCL (I2C0_SCL)</td><td>PCC.07</td><td>I2C #0 クロック</td></tr>
-<tr><td>29</td><td>GPIO01</td><td>PQ.05</td><td>汎用入出力</td></tr>
+<tr><td>29</td><td>GPIO01</td><td>PQ.05</td><td>汎用 I/O</td></tr>
 <tr><td>30</td><td>GND</td><td>-</td><td>グランド</td></tr>
-<tr><td>31</td><td>GPIO11</td><td>PQ.06</td><td>汎用入出力</td></tr>
-<tr><td>32</td><td>GPIO07</td><td>PG.06</td><td>汎用入出力</td></tr>
+<tr><td>31</td><td>GPIO11</td><td>PQ.06</td><td>汎用 I/O</td></tr>
+<tr><td>32</td><td>GPIO07</td><td>PG.06</td><td>汎用 I/O</td></tr>
 <tr><td>33</td><td>GPIO13</td><td>PG.00</td><td>システム予約</td></tr>
 <tr><td>34</td><td>GND</td><td>-</td><td>グランド</td></tr>
 <tr><td>35</td><td>I2S0_LRCK (I2S0_FS)</td><td>PI.02</td><td>オーディオ I2S #0 フレーム同期</td></tr>
 <tr><td>36</td><td>UART1_CTS</td><td>PR.05</td><td>UART #1 送信許可</td></tr>
-<tr><td>37</td><td>SPI1_MOSI</td><td>PY.02</td><td>SPI #1 マスター出力 / スレーブ入力</td></tr>
+<tr><td>37</td><td>SPI1_MOSI</td><td>PY.02</td><td>SPI #1 マスター出力/スレーブ入力</td></tr>
 <tr><td>38</td><td>I2S0_SDIN (I2S0_DIN)</td><td>PI.01</td><td>オーディオ I2S #0 データ入力</td></tr>
 <tr><td>39</td><td>GND</td><td>-</td><td>グランド</td></tr>
 <tr><td>40</td><td>I2S0_SDOUT (I2S0_DOUT)</td><td>PI.00</td><td>オーディオ I2S #0 データ出力</td></tr>
@@ -593,7 +514,7 @@ candump can0 &
 
 ### 使用方法
 
-シンプルなGPIO制御の例
+シンプルな GPIO 制御例
 ```bash
 #install
 sudo apt-get install gpiod
@@ -614,9 +535,9 @@ sudo gpioset --mode=time -s 2 0 119=0
 #input
 sudo gpioget 0 43
 ```
-**デフォルトで有効になっていないGPIOを設定したい場合は、以下の手順を参照してください：**
+**デフォルトで有効になっていない GPIO を設定したい場合は、以下の手順を参照してください：**
 
-40ピンヘッダーを有効にする：
+40 ピンヘッダーを有効にします：
 ```bash
   sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
@@ -636,17 +557,17 @@ sudo gpioget 0 43
 
 保存して再起動します。
 
-**オーバーレイ設定を通じて制御されていないGPIOを設定する：**
+**Overlay 設定を通じて制御されていない GPIO を設定：**
 
-**ステップ 1.** [オーバーレイパッケージ](https://files.seeedstudio.com/wiki/overlay.zip)をダウンロードしてJetsonデバイスに展開します。
+**ステップ 1.** [overlay パッケージ](https://files.seeedstudio.com/wiki/overlay.zip)をダウンロードして、Jetson デバイスに展開します。
 ```bash
 wget https://files.seeedstudio.com/wiki/overlay.zip
 ```
-**ステップ 2.** build.shとgpio-overlay.dtsをJetsonにコピーします。
+**ステップ 2.** build.sh と gpio-overlay.dts を Jetson にコピーします。
 
-**ステップ 3.** `pio-overlay.dts`ファイルを編集し、必要なピンのピンマックス定義を含むように変更します。
+**ステップ 3.** `pio-overlay.dts` ファイルを編集し、必要なピンの pinmux 定義を含むように変更します。
 :::info
-詳細については[jetson-orin-nx-and-orin-nano-series-pinmux-config](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template)を参照してください
+詳細については、[jetson-orin-nx-and-orin-nano-series-pinmux-config](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template) を参照してください
 :::
 
 **ステップ 3.**   オーバーレイ設定を有効にします。
@@ -659,40 +580,40 @@ sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "seeed gpio config Overlay"
 ```bash
 sudo reboot
 ```
-**ステップ 5.** これで、変更したピンを`gpioset`で制御できるようになります。
+**ステップ 5.** これで、先ほど変更したピンを `gpioset` で制御できるようになります。
 ```bash
 #For example px7
 sudo gpioset --mode=wait 0 121=1
 ```
 
 
-### 12ピン制御およびUARTヘッダー
+### 12ピン制御・UARTヘッダー
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/12pin2.jpg"/>
 </div>
 
-12ピン制御およびUARTヘッダーは、外部デバイスの接続と管理に必要な制御信号とUART通信インターフェースを提供します。
+12ピン制御・UARTヘッダーは、外部デバイスの接続と管理に必要な制御信号とUART通信インターフェースを提供します。
 
 :::note
-reComputer Superのピン機能はreComputer Classicと似ています。詳細については[こちら](https://wiki.seeedstudio.com/ja/J401_carrierboard_Hardware_Interfaces_Usage/#gpio)を参照してください。
+reComputer Super のピン機能は reComputer Classic と似ています。詳細については、[こちら](https://wiki.seeedstudio.com/ja/J401_carrierboard_Hardware_Interfaces_Usage/#gpio) を参照してください。
 :::
 
 ## HDMI
 
-reComputer SuperはHDMI 2.1 Type Aポートを搭載しており、7680x4320の解像度をサポートしています。これにより、超高精細ビデオ出力が可能になります。
+reComputer Super は HDMI 2.1 Type A ポートを搭載しており、7680x4320 の解像度をサポートしています。これにより、超高精細ビデオ出力が可能です。
 
 ## リソース
-- [ユーザーマニュアル&データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+- [ユーザーマニュアル・データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
 - [温度テストレポート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Super_Temperature_Test_Report.pdf)
 - [回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
 - [3Dファイル](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
 - [機械図面-reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
 - [機械図面-reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
 
-## 技術サポート & 製品ディスカッション
+## 技術サポート・製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
