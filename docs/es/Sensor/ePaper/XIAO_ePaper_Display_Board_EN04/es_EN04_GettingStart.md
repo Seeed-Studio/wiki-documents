@@ -42,7 +42,7 @@ Alimentada por **XIAO nRF52840** Plus, la placa de pantalla EN04 soporta pantall
 - **Alimentado por XIAO nRF52840 Plus:** Funciona inmediatamente cuando se conecta a una pantalla ePaper compatible.
 - **Soporte de Pantalla Versátil:** Compatible con una amplia gama de pantallas ePaper, soportando interfaces de 24 pines y 50 pines con cambio fácil mediante tapas de puente.
 - **Conector BAT con Interruptor:** Proporciona conexión simple de batería e integra un interruptor, permitiendo gestión eficiente de energía y ahorro energético.
-- **Botones Amigables:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para aceleración de proyectos y funciones personalizables.
+- **Botones Amigables al Usuario:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para aceleración de proyectos y funciones personalizables.
 
 ### Especificaciones
 
@@ -146,7 +146,7 @@ Alimentada por **XIAO nRF52840** Plus, la placa de pantalla EN04 soporta pantall
 - **Pantalla de Termostato Inteligente**: Mostrar niveles de temperatura y humedad, así como configuraciones de control para su termostato inteligente.
 - **Marco de Fotos Digital**: Crear un marco de fotos digital habilitado para WiFi que puede mostrar imágenes de su red de casa inteligente.
 
-## Descripción del Hardware
+## Descripción General del Hardware
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
@@ -171,7 +171,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 - [ePaper de 7.5 pulgadas - Monocromático 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [ePaper de 7.5 pulgadas - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/37.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente según el tipo de pantalla ePaper:
@@ -186,7 +186,7 @@ Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente seg
 
 - [ePaper Spectra6 de 7.3 pulgadas](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/36.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
 :::tip
 Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente según el tipo de pantalla ePaper:
 - Para pantallas ePaper de 50 Pines → configure el puente a 50 Pines
@@ -195,7 +195,7 @@ Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente seg
 
 :::
 
-## Descripción del Software
+## Descripción General del Software
 
 ### Instalar la Biblioteca Seeed GFX
 
@@ -225,7 +225,7 @@ Si hace la elección incorrecta, la pantalla no mostrará nada.
 Así que por favor asegúrese del tipo de sus dispositivos o componentes.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/38.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/6.jpg" style={{width:800, height:'auto'}}/></div>
 
 Después de descargar la biblioteca, vaya a **Sketch** -> **Include Library** -> **Add .ZIP Library** y seleccione la biblioteca descargada.
 
@@ -242,22 +242,20 @@ Hay 4 ejemplos básicos, abra un ejemplo básico que le guste:
 
 ## Primeros Pasos
 
-Aquí, usamos una pantalla de 5.83 pulgadas como ejemplo. Los pasos son los mismos para todas las pantallas de 24 pines; la única diferencia es seleccionar el tamaño de pantalla apropiado en el controlador.
+Aquí, usamos una pantalla de 7.5 pulgadas como ejemplo. Los pasos son los mismos para todas las pantallas de 24 pines; la única diferencia es seleccionar el tamaño de pantalla apropiado en el controlador.
 
 Cree un **nuevo archivo "driver.h"** y pegue ese código en él. El código debería ser así:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/40.png" style={{width:1000, height:'auto'}}/></div>
-
 ```cpp
-#define BOARD_SCREEN_COMBO 503 // 5.86 inch monochrome ePaper Screen （UC8179）
+#define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
 Después de eso, ve a **Tools** -> **Board** -> **XIAO ESP32S3** y **Tools** -> **Port** -> **Selecciona el puerto al que está conectada tu placa**. Luego haz clic en **Upload** para subir el código.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/32.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
-¡Ahora verás la respuesta en tu pantalla de papel electrónico! A continuación se muestran los resultados de los ejemplos de Helloworld.
+¡Ahora verás la respuesta en tu pantalla de papel electrónico! A continuación se muestran los resultados de los ejemplos de Helloworld. (Si no aparece nada, por favor presiona el botón de reset)
 
 :::tip
 ⚠️ Nota: Orientación del Cable ePaper
@@ -267,7 +265,7 @@ Al conectar la pantalla ePaper a la Placa de Pantalla ePaper XIAO, asegúrate de
 La imagen de abajo muestra la conexión correcta:
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/32.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.jpg" style={{width:500, height:'auto'}}/></div>
 
 ### Botones de Usuario en la Placa de Pantalla ePaper XIAO(nRF52840) - EN04
 
@@ -299,7 +297,7 @@ Ejemplo Básico de Lectura de Botones
 
 Este ejemplo demuestra cómo detectar pulsaciones de botones e imprimir mensajes en el monitor serie.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/39.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.jpg" style={{width:500, height:'auto'}}/></div>
 
 <br></br>
 
@@ -348,7 +346,7 @@ void loop() {
 
 ### Batería de Usuario en la Placa de Pantalla ePaper XIAO(nRF52840) - EN04
 
-Cuando funciona con alimentación por batería:
+Al operar con energía de batería:
 
 - El dispositivo entrará automáticamente en modo de bajo consumo entre actualizaciones
 
@@ -361,7 +359,7 @@ Si quieres escribir código por ti mismo para leer el voltaje de la batería, se
 :::
 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04battery.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.jpg" style={{width:600, height:'auto'}}/></div>
 
 ```cpp
 #define VOLTAGE_PIN A0 //GPIO1
