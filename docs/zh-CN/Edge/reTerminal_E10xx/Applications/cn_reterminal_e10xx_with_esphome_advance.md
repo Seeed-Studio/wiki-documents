@@ -292,7 +292,7 @@ sensor:
 
 ### 创建访问令牌
 
-步骤 3. 安装后，转到 Puppet 插件的 Configuration 页面。如您所见，这里我们需要输入令牌。您需要为此插件创建一个访问令牌。
+步骤 3. 安装后，转到 Puppet 插件的配置页面。如您所见，这里我们需要输入令牌。您需要为此插件创建一个访问令牌。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/49.png" style={{width:800, height:'auto'}}/></div>
 
@@ -300,7 +300,7 @@ sensor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/50.png" style={{width:1000, height:'auto'}}/></div>
 
-步骤 5. 创建一个具有描述性名称（如 "Puppet Screenshot"）的新令牌并复制生成的令牌。
+步骤 5. 创建一个新令牌，使用描述性名称如 "Puppet Screenshot" 并复制生成的令牌。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -334,7 +334,7 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
 
 值 `2` 表示 2 色（黑白）调色板。
 
-#### 颜色反转
+#### 反转颜色
 
 添加 `invert` 参数以反转黑白颜色：
 
@@ -350,7 +350,7 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
 http://homeassistant.local:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-通过在网页浏览器中输入截图 URL 来测试。您应该能看到所选 Home Assistant 页面的截图。
+通过在网络浏览器中输入截图 URL 来测试。您应该能看到所选 Home Assistant 页面的截图。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -394,15 +394,7 @@ online_image:
 display:
   - platform: epaper_spi
     id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       it.image(0, 0, id(dashboard_image));
@@ -444,15 +436,7 @@ online_image:
 display:
   - platform: epaper_spi
     id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       it.image(0, 0, id(dashboard_image));
@@ -488,7 +472,7 @@ display:
 
 此示例演示如何使用深度睡眠模式来显著降低功耗，使您的 reTerminal E 系列电子纸显示器适用于电池供电的应用。
 
-您可以通过复制下面的代码并将其粘贴到 Yaml 文件中的 `captive_portal` 代码行之后来使用此示例。
+您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
 <TabItem value="For E1001" label="适用于 E1001" default>
@@ -566,15 +550,6 @@ interval:
     then:
       - logger.log: "Entering deep sleep now..."
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 font:
   - file: "gfonts://Inter@700"
     id: font1
@@ -585,17 +560,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: 5min
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -612,9 +579,9 @@ display:
 - 创建一个在睡眠周期中持续存在的计数器
 - 配置设备唤醒 30 秒，然后睡眠 3 分钟
 - 使用当前唤醒次数更新显示
-- 可选择配置按钮来唤醒设备
+- 可选配置按钮来唤醒设备
 
-运行时，您将看到每次设备从睡眠中唤醒时计数器都会递增：
+运行时，您将看到每次设备从睡眠中唤醒时计数器递增：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/53.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -1018,15 +985,6 @@ i2c:
   scl: GPIO20
   sda: GPIO19
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 # Fonts
 font:
   - file: "gfonts://Inter@700"
@@ -1195,17 +1153,9 @@ time:
 
 # e-paper
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -1316,9 +1266,9 @@ display:
 
 ## 常见问题
 
-### Q1: 为什么没有数据？
+### Q1：为什么没有数据？
 
-在这种情况下，您应该前往 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的 ePaper Panel？请尝试重启 Home Assistant。
+在这种情况下，您应该转到 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的 ePaper 面板？尝试重启 Home Assistant。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 

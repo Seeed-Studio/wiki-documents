@@ -771,6 +771,13 @@ font:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -778,10 +785,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -865,7 +876,7 @@ Haz clic en las opciones siguiendo la imagen para instalar el código en el disp
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-Espera un momento y verás la retroalimentación como en la siguiente imagen. Significa que el código se está ejecutando correctamente.
+Espera un momento y verás la retroalimentación como en la siguiente imagen. Significa que el código se está ejecutando exitosamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -874,12 +885,12 @@ Espera un momento y verás la retroalimentación como en la siguiente imagen. Si
 <TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. Además, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de encriptación válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el panel ePaper a nada, solo asegúrate de que esté en línea.
 
-Haz clic en la opción y luego el firmware se instalará automáticamente en el panel ePaper.
+Haz clic en la opción y luego el firmware se instalará en el panel ePaper automáticamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:800, height:'auto'}}/></div>
 
@@ -889,9 +900,9 @@ Haz clic en la opción y luego el firmware se instalará automáticamente en el 
 </TabItem>
 </Tabs>
 
-## Conceptos básicos para dibujar en ESPHome
+## Básicos para dibujar en ESPHome
 
-### Dibujar gráficos simples
+### Dibujando Gráficos Simples
 
 Este código YAML de ejemplo configura la interfaz SPI y la Placa de Pantalla ePaper XIAO(ESP32-S3) - EE04 para un proyecto ESPHome. La sección `lambda` contiene comandos de dibujo que renderizan formas simples en la pantalla:
 
@@ -903,7 +914,7 @@ Este código YAML de ejemplo configura la interfaz SPI y la Placa de Pantalla eP
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo YAML.
 
 <Tabs>
-<TabItem value="1.54 Inch Monochrome" label="1.54 Pulgadas Monocromático" default>
+<TabItem value="1.54 Inch Monochrome" label="1.54 Pulgadas Color Monocromático" default>
 
 ```yaml
 esphome:
@@ -963,7 +974,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch Quadruple Color" label="2.13 Pulgadas Cuádruple Color">
+<TabItem value="2.13 Inch Quadruple Color" label="2.13 Pulgadas Color Cuádruple">
 
 ```yaml
 esphome:
@@ -1042,7 +1053,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.13 Inch" label="2.13 Pulgadas Monocromático">
+<TabItem value="2.13 Inch" label="2.13 Pulgadas Color Monocromático">
 
 ```yaml
 esphome:
@@ -1102,7 +1113,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch Quadruple Color" label="2.9 Pulgadas Cuádruple Color">
+<TabItem value="2.9 Inch Quadruple Color" label="2.9 Pulgadas Color Cuádruple">
 
 ```yaml
 esphome:
@@ -1176,7 +1187,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Pulgadas Monocromático">
+<TabItem value="2.9 Inch" label="2.9 Pulgadas Color Monocromático">
 
 ```yaml
 esphome:
@@ -1237,7 +1248,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Pulgadas Monocromático">
+<TabItem value="4.2 Inch" label="4.2 Pulgadas Color Monocromático">
 
 ```yaml
 esphome:
@@ -1297,7 +1308,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Monocromático">
+<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromático">
 
 ```yaml
 esphome:
@@ -1522,6 +1533,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -1529,10 +1547,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -1566,7 +1588,7 @@ Debido a limitaciones de espacio, no elaboraremos demasiado sobre los métodos d
 
 Este ejemplo demuestra cómo mostrar iconos personalizados en tu XIAO ePaper Display Board(ESP32-S3) - EE04 usando fuentes TrueType. Los iconos de Material Design proporcionan una amplia gama de símbolos escalables perfectos para pantallas ePaper.
 
-#### Instalando las herramientas requeridas
+#### Instalando las Herramientas Requeridas
 
 Paso 1. Primero, necesitamos instalar el complemento **Studio Code Server** para gestionar archivos. Navega a la tienda de complementos de Home Assistant, busca **Studio Code Server** y haz clic en él.
 
@@ -1576,7 +1598,7 @@ Paso 2. Haz clic en **INSTALL** y espera a que se complete la instalación. Una 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/18.png" style={{width:800, height:'auto'}}/></div>
 
-#### Configurando fuentes de iconos
+#### Configurando las Fuentes de Iconos
 
 Paso 3. Crea una nueva carpeta llamada **fonts** en tu directorio de configuración de ESPHome. Esta carpeta almacenará los archivos de fuente TrueType necesarios para mostrar iconos.
 
@@ -1594,7 +1616,7 @@ Paso 5. Sube el archivo de fuente descargado (`materialdesignicons-webfont.ttf`)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/19.png" style={{width:800, height:'auto'}}/></div>
 
-#### Configurando ESPHome para iconos
+#### Configurando ESPHome para Iconos
 
 Paso 6. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define dos tamaños de fuente para iconos y configura la pantalla para mostrar iconos del clima.
 
@@ -1910,7 +1932,7 @@ display:
 
 </TabItem>
 
-<TabItem value="2.9 Inch" label="2.9 Pulgadas Color Monocromo">
+<TabItem value="2.9 Inch" label="2.9 Pulgadas Color Monocromático">
 
 ```yaml
 esphome:
@@ -1984,7 +2006,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.2 Inch" label="4.2 Pulgadas Color Monocromo">
+<TabItem value="4.2 Inch" label="4.2 Pulgadas Color Monocromático">
 
 ```yaml
 esphome:
@@ -2057,7 +2079,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromo">
+<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromático">
 
 ```yaml
 esphome:
@@ -2135,7 +2157,7 @@ display:
 </TabItem>
 
 
-<TabItem value="5.83 Inch" label="5.83 Pulgadas Color Monocromo">
+<TabItem value="5.83 Inch" label="5.83 Pulgadas Color Monocromático">
 
 ```yaml
 esphome:
@@ -2207,7 +2229,7 @@ display:
 ```
 </TabItem>
 
-<TabItem value="24 Pin" label="7.5 Pulgadas Color Monocromo" default>
+<TabItem value="24 Pin" label="7.5 Pulgadas Color Monocromático" default>
 
 ```yaml
 esphome:
@@ -2318,6 +2340,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -2337,18 +2366,19 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.3in-spectra-e6
+  - platform: epaper_spi
+    id: my_display
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
+    dc_pin:
+      number: GPIO10
       inverted: false
     busy_pin:
       number: GPIO4
       inverted: true
-    update_interval: 300s
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
     lambda: |-
       it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
@@ -2419,7 +2449,7 @@ Al combinar estos iconos con los datos meteorológicos de Home Assistant que con
 
 ### Visualización de Imágenes Personalizadas
 
-Este ejemplo demuestra cómo mostrar imágenes personalizadas en tu XIAO ePaper Display Board(ESP32-S3) - EE04. Puedes usar esta función para mostrar logotipos, iconos o cualquier gráfico que mejore tu experiencia de panel.
+Este ejemplo demuestra cómo mostrar imágenes personalizadas en tu XIAO ePaper Display Board(ESP32-S3) - EE04. Puedes usar esta función para mostrar logotipos, iconos o cualquier gráfico que mejore tu experiencia de panel de control.
 
 #### Preparación
 
@@ -2436,7 +2466,7 @@ config/
 
 #### Agregando Imágenes
 
-Paso 3. Descarga una imagen de muestra para probar la funcionalidad. Puedes usar el icono WiFi proporcionado abajo o usar tu propia imagen.
+Paso 3. Descarga una imagen de muestra para probar la funcionalidad. Puedes usar el icono WiFi proporcionado a continuación o usar tu propia imagen.
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
@@ -2449,7 +2479,7 @@ Paso 4. Sube la imagen descargada a la carpeta **image** que creaste anteriormen
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-Para mejores resultados en pantallas ePaper, usa imágenes de alto contraste con áreas claras en blanco y negro. Los formatos JPG y PNG son compatibles.
+Para mejores resultados en pantallas ePaper, usa imágenes de alto contraste con áreas claras en blanco y negro. Se admiten tanto formatos JPG como PNG.
 :::
 
 #### Configurando ESPHome para Visualización de Imágenes
@@ -3097,6 +3127,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -3111,10 +3148,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -3124,7 +3165,7 @@ display:
 </TabItem>
 </Tabs>
 
-Paso 6. Guarda tu configuración y súbela a tu XIAO ePaper Display Board(ESP32-S3) - EE04. Cuando se complete la actualización, tu pantalla ePaper mostrará la imagen.
+Paso 6. Guarda tu configuración y súbela a tu Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04. Cuando se complete la actualización, tu pantalla ePaper mostrará la imagen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee046.png" style={{width:1000, height:'auto'}}/></div><br />
 
@@ -3135,7 +3176,7 @@ Puedes mejorar la visualización de tus imágenes con estas técnicas adicionale
 
 **Posicionamiento de Imágenes**
 
-Para posicionar tu imagen en coordenadas específicas de la pantalla:
+Para posicionar tu imagen en coordenadas específicas en la pantalla:
 
 ```yaml
 lambda: |-
@@ -3179,12 +3220,12 @@ lambda: |-
 ```
 
 :::caution
-Recuerda que las pantallas ePaper tienen tasas de actualización limitadas. La configuración `update_interval: 300s` significa que tu pantalla se actualizará solo cada 5 minutos. Ajusta este valor según tus necesidades, pero ten en cuenta que las actualizaciones frecuentes pueden reducir la vida útil de las pantallas ePaper.
+Recuerda que las pantallas ePaper tienen tasas de refresco limitadas. La configuración `update_interval: 300s` significa que tu pantalla se refrescará solo cada 5 minutos. Ajusta este valor según tus necesidades, pero ten en cuenta que los refrescos frecuentes pueden reducir la vida útil de las pantallas ePaper.
 :::
 
 Al combinar imágenes con texto y otros elementos de visualización cubiertos en ejemplos anteriores, puedes crear paneles informativos ricos en tu XIAO ePaper Display Board(ESP32-S3) - EE04.
 
-## Referencias y Recursos
+## Referencia y Recursos
 
 - [ESPHome](https://esphome.io/)
 - [Ejemplos detallados de ESPHome](https://esphome.io/components/display/)
