@@ -281,11 +281,6 @@ J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 |
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/can0-datasheet.png"/>
 </div>
 
-:::danger
-此电源仅用于单电机学习和测试。对于多个电机，请设计单独的电源板，并将 Jetson 的电源与电机电源隔离，以避免高电流直接通过 Jetson, 烧毁Jetson需要自行承担风险。
-:::
-
-
 <div align="center">
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/15.jpg" />

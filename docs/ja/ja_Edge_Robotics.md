@@ -1,5 +1,5 @@
 ---
-description: このトピックでは、Seeed StudioのRobotics製品ドキュメントを紹介します。
+description: このトピックでは、Seeed Studioのロボティクス製品ドキュメントを紹介します。
 title: ロボティクス
 keywords:
 - robotics
@@ -139,7 +139,7 @@ last_update:
     <a href="/ja/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Feetech STS3215 サーボモーター</span>
     </a>
-    <a href="/ja/hightorque_control" className="nav-item">
+    <a href="/ja/hightorque_series/" className="nav-item">
       <span className="text">3️⃣HighTorque シリーズ</span>
     </a>
     <a href="/ja/fashionstar_servo/" className="nav-item">
@@ -179,7 +179,7 @@ last_update:
       <span className="text">Orbbec Gemini2</span>
     </a>
     <a href="/ja/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">Orbbec 深度カメラ with ROS</span>
+      <span className="text">Orbbec デプスカメラ with ROS</span>
     </a>
     <a href="/ja/orbbec_gemini_335lg" className="nav-item">
       <span className="text">Orbbec Gemini 335Lg ステレオカメラ</span>
@@ -213,9 +213,6 @@ last_update:
 <div className="card-container">
     <a href="/ja/hexfellow_y200/" className="nav-item">
       <span className="text">HEXFELLOW Y200</span>
-    </a>
-    <a href="/ja/wheeltec_imu/" className="nav-item">
-      <span className="text">WHEELTEC IMU</span>
     </a>
 </div>
 
@@ -254,7 +251,7 @@ last_update:
 </a>
 
 <a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
-  <span className="text">Object Tracking with PX4</span>
+  <span className="text">PX4 でのオブジェクト追跡</span>
 </a>
 
 </div>
@@ -287,7 +284,7 @@ last_update:
 </div>
 
 <style>{`
-/* 導航容器 */
+/* 导航容器 */
 .quick-nav-container {
   margin: 2rem 0;
   padding: 1rem;
@@ -299,7 +296,7 @@ last_update:
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Dark模式 - 導航容器 */
+/* Dark模式 - 导航容器 */
 html[data-theme='dark'] .quick-nav-container {
   background:
     radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
@@ -307,17 +304,17 @@ html[data-theme='dark'] .quick-nav-container {
     linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.3),
-    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内発光増強深度 */
+    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内发光增强深度 */
 }
 
-/* 導航主体 */
+/* 导航主体 */
 .quick-nav {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
 }
 
-/* 導航項 */
+/* 导航项 */
 .nav-item {
   position: relative;
   padding: 0.8rem 1.5rem;
@@ -335,27 +332,27 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Dark模式 - 導航項 */
+/* Dark模式 - 导航项 */
 html[data-theme='dark'] .nav-item {
   color: #e5e7eb;
   background:rgb(47, 50, 57);
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-/* 図標様式 */
+/* 图标样式 */
 .nav-item .icon {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   transition: transform 0.3s;
 }
 
-/* 文字様式 */
+/* 文字样式 */
 .nav-item .text {
   font-size: 0.95rem;
   white-space: nowrap;
 }
 
-/* 悬浮特効 */
+/* 悬浮特效 */
 .nav-item .hover-effect {
   position: absolute;
   bottom: 0;
@@ -368,7 +365,7 @@ html[data-theme='dark'] .nav-item {
   z-index: -1;
 }
 
-/* ホバーアニメーション */
+/* 悬浮动画 */
 .nav-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
@@ -438,7 +435,7 @@ html[data-theme='dark'] .category-card {
   margin-bottom: 2rem;
 }
 
-/* カテゴリ色標 */
+/* カテゴリー色標 */
 .category-card::before {
   content: "";
   position: absolute;
@@ -581,7 +578,7 @@ html[data-theme='dark'] .category-card:active {
 
   .category-card {
     width: 100%;
-    margin-top: 0.5rem; /* カードをタイトルに密着 */
+    margin-top: 0.5rem; /* カードがタイトルに密着 */
   }
 }
 

@@ -63,15 +63,15 @@ last_update:
     </a>
     <a href="/es/training_soarm101_policy_with_isaacLab/" className="nav-item">
     <span className="text">Aprendizaje por Refuerzo del Brazo So</span>
-    <span className="tag recommended">New</span>
+    <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/simulate_soarm101_by_leisaac/" className="nav-item">
       <span className="text">Brazo SO100 con IsaacSim</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="nav-item">
         <span className="text">Brazo SO101 con GR00T de NVIDIA</span>
-        <span className="tag recommended">New</span>
+        <span className="tag recommended">Nuevo</span>
     </a>
 </div>
 
@@ -91,11 +91,11 @@ last_update:
 <div className="card-container">
     <a href="/es/lerobot_starai_arm/" className="nav-item">
       <span className="text">Brazo Robótico Starai</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/starai_arm_ros_moveit/" className="nav-item">
       <span className="text">Brazo Robótico Starai Moveit2</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/control_robotic_arm_via_gr00t" className="nav-item">
   <span className="text">Star AI con GR00T de NVIDIA</span>
@@ -107,7 +107,7 @@ last_update:
 <div className="card-container">
     <a href="/es/hand_amazinghand/" className="nav-item">
       <span className="text">AmazingHand</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
 </div>
 
@@ -117,7 +117,7 @@ last_update:
 <div className="card-container">
     <a href="/es/dm_gripper/" className="nav-item">
       <span className="text">Pinza DM</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
 </div>
 
@@ -139,7 +139,7 @@ last_update:
     <a href="/es/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Motor Servo Feetech STS3215</span>
     </a>
-    <a href="/es/hightorque_control" className="nav-item">
+    <a href="/es/hightorque_series/" className="nav-item">
       <span className="text">3️⃣HighTorque Series</span>
     </a>
     <a href="/es/fashionstar_servo/" className="nav-item">
@@ -183,11 +183,11 @@ last_update:
     </a>
     <a href="/es/orbbec_gemini_335lg" className="nav-item">
       <span className="text">Cámara Estéreo Orbbec Gemini 335Lg</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/sensing_gmsl_cameras" className="nav-item">
       <span className="text">Cámaras SENSING GMSL2</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/orb_slam3_orbbec_gemini2/" className="nav-item">
       <span className="text">ORB-SLAM3 con Orbbec Gemini2</span>
@@ -213,9 +213,6 @@ last_update:
 <div className="card-container">
     <a href="/es/hexfellow_y200/" className="nav-item">
       <span className="text">HEXFELLOW Y200</span>
-    </a>
-    <a href="/es/wheeltec_imu/" className="nav-item">
-      <span className="text">WHEELTEC IMU</span>
     </a>
 </div>
 
@@ -266,11 +263,11 @@ last_update:
 </a>
 <a href="/es/training_soarm101_policy_with_isaacLab/" className="nav-item">
   <span className="text">Aprendizaje por Refuerzo del Brazo So</span>
-  <span className="tag recommended">New</span>
+  <span className="tag recommended">Nuevo</span>
 </a>
 <a href="/es/simulate_soarm101_by_leisaac/" className="nav-item">
   <span className="text">Brazo SO100 con IsaacSim</span>
-  <span className="tag recommended">New</span>
+  <span className="tag recommended">Nuevo</span>
 </a>
 </div>
 
@@ -368,14 +365,14 @@ html[data-theme='dark'] .nav-item {
   z-index: -1;
 }
 
-/* Animación de flotación */
+/* 悬浮动画 */
 .nav-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   color: white;
 }
 
-/* Modo Dark - Animación de flotación */
+/* Modo Dark - animación flotante */
 html[data-theme='dark'] .nav-item:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
@@ -408,7 +405,7 @@ html[data-theme='dark'] .nav-item:hover {
 `}</style>
 
 <style>{`
-/* Estilos de tarjeta de contenido mejorada */
+/* Estilos de tarjeta de contenido versión mejorada */
 .nav-grid {
   display: block;
   gap: 2rem;
@@ -427,7 +424,7 @@ html[data-theme='dark'] .nav-item:hover {
   z-index: 1;
 }
 
-/* Modo Dark - Tarjeta de contenido */
+/* Modo Dark - tarjeta de contenido */
 html[data-theme='dark'] .category-card {
   background:rgb(30, 30, 32);
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
@@ -453,13 +450,13 @@ html[data-theme='dark'] .category-card {
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* Efecto de flotación */
+/* Efecto flotante */
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
-/* Modo Dark - Efecto de flotación */
+/* Modo Dark - efecto flotante */
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -475,7 +472,7 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Modo Dark - Efecto de luz flotante */
+/* Modo Dark - efecto de luz flotante */
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
@@ -489,7 +486,7 @@ html[data-theme='dark'] .category-card:hover::after {
   color: #333;
 }
 
-/* Modo Dark - Enlace */
+/* Modo Dark - enlace */
 html[data-theme='dark'] .category-card a {
   color: #d1d5db;
 }
@@ -499,7 +496,7 @@ html[data-theme='dark'] .category-card a {
   transform: translateX(5px);
 }
 
-/* Modo Dark - Flotación de enlace */
+/* Modo Dark - enlace flotante */
 html[data-theme='dark'] .category-card a:hover {
   color: #60a5fa;
 }
@@ -515,7 +512,7 @@ html[data-theme='dark'] .category-card a:hover {
   transition: width 0.3s;
 }
 
-/* Modo Dark - Subrayado de enlace */
+/* Modo Dark - subrayado de enlace */
 html[data-theme='dark'] .category-card a::after {
   background: #60a5fa;
 }
@@ -525,7 +522,7 @@ html[data-theme='dark'] .category-card a::after {
 }
 
 .card-container {
-  margin-bottom: 1.5rem; /* Originalmente 0.1rem */
+  margin-bottom: 1.5rem; /* originalmente 0.1rem */
 }
 
 /* Estilos de etiqueta mejorados */
@@ -543,7 +540,7 @@ html[data-theme='dark'] .category-card a::after {
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
 
-/* Modo Dark - Etiqueta Stable */
+/* Modo Dark - etiqueta Stable */
 html[data-theme='dark'] .stable {
   background: #065f46;
   color: #a7f3d0;
@@ -556,7 +553,7 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }
 
-/* Modo Dark - Etiqueta Recommended */
+/* Modo Dark - etiqueta Recommended */
 html[data-theme='dark'] .recommended {
   background: #7f1d1d;
   color: #fca5a5;
@@ -568,7 +565,7 @@ html[data-theme='dark'] .recommended {
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-/* Modo Dark - Efecto de clic */
+/* Modo Dark - efecto de clic */
 html[data-theme='dark'] .category-card:active {
   box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
@@ -581,11 +578,11 @@ html[data-theme='dark'] .category-card:active {
 
   .category-card {
     width: 100%;
-    margin-top: 0.5rem; /* Tarjeta pegada al título */
+    margin-top: 0.5rem; /* tarjeta pegada al título */
   }
 }
 
-/* Modo Dark - Texto de título */
+/* Modo Dark - texto de título */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -595,14 +592,14 @@ html[data-theme='dark'] h6 {
   color: #f9fafb;
 }
 
-/* Modo Dark - Texto del cuerpo */
+/* Modo Dark - texto del cuerpo */
 html[data-theme='dark'] p,
 html[data-theme='dark'] li,
 html[data-theme='dark'] strong {
   color: #e5e7eb;
 }
 
-/* Modo Dark - Bloque de cita */
+/* Modo Dark - bloque de cita */
 html[data-theme='dark'] blockquote {
   color: #9ca3af;
   border-left-color: #4b5563;

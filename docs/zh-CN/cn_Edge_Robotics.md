@@ -142,7 +142,7 @@ last_update:
     <a href="/cn/feetech_servo/" className="nav-item">
       <span className="text">2️⃣飞特 STS3215 舵机</span>
     </a>
-    <a href="/cn/hightorque_control" className="nav-item">
+    <a href="/cn/hightorque_series/" className="nav-item">
       <span className="text">3️⃣高擎 系列</span>
     </a>
     <a href="/cn/fashionstar_servo/" className="nav-item">
@@ -216,10 +216,6 @@ last_update:
 <div className="card-container">
     <a href="/cn/hexfellow_y200/" className="nav-item">
       <span className="text">HEXFELLOW Y200</span>
-    </a>
-  
-  <a href="/cn/wheeltec_imu" className="nav-item">
-      <span className="text">轮趣科技 IMU</span>
     </a>
 </div>
 
