@@ -3,7 +3,7 @@ description: SenseCAP_T2000_tracker_Introduction
 title: Introduction
 keywords:
 - SenseCAP_T2000_tracker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
 slug: /SenseCAP_T2000_tracker/Introduction
 last_update:
   date: 12/1/2025

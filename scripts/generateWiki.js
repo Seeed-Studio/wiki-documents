@@ -37,6 +37,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'get_started_with_lorawan_tracker.md'), //11.26
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_A1102', 'DeployAI_With_A1102.md'), //11.26
   path.join(docsDirectory, 'Sensor', 'ePaper', 'XIAO_ePaper_Display_Board_EN04', 'EN04_GettingStart.md'), //11.25
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'SenseCAP_T2000_intro.md'), //12.1
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）
