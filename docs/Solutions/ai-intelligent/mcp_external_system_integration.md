@@ -11,7 +11,7 @@ keywords:
 - Watcher
 - External System
 - Enterprise
-image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
+image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
 slug: /mcp_external_system_integration
 last_update:
   date: 11/27/2025
