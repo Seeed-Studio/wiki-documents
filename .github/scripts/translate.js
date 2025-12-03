@@ -131,10 +131,16 @@ function preprocessDocument(content, startsInsideCodeBlock = false) {
       // 空行
       processedLines.push(`${lineId}[EMPTY_LINE]`);
     } else if (meta.inCodeBlockLine) {
-      // 代码块内行：用占位符顶替真实内容，保持行数/位置
-      processedLines.push(`${lineId}__CODE_LINE_PLH__`);
+      // 特殊情况：这一行里有 HTML 注释结束符 -->，
+      // 需要让模型看到它，否则它会以为前面的 <!-- 注释永远没结束
+      if (trimmedContent.includes('-->')) {
+        // 只暴露 -->，其余内容用占位符掩盖（模型只需要知道注释结束了）
+        processedLines.push(`${lineId}-->`);
+      } else {
+        // 普通代码行：用占位符顶替真实内容，保持行数/位置
+        processedLines.push(`${lineId}__CODE_LINE_PLH__`);
+      }
     } else {
-      // 普通行：原样（含缩进）送给模型
       processedLines.push(`${lineId}${indent}${trimmedContent}`);
     }
 
