@@ -15,6 +15,7 @@ keywords:
 - MCP
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
 slug: /ja/solutions/hello_watcher_llms
+sidebar_position: 1
 last_update:
   date: 09/16/2025
   author: Spencer
@@ -29,7 +30,7 @@ import TabItem from '@theme/TabItem';
 
 SenseCAP Watcherは、人間とデバイスの相互作用を再定義しています。
 
-独特の「フリクションレストリガー」会話能力を持ち、あなたが近づくと積極的に相互作用を開始します。これは単なる技術的なアップグレードではありません。相互作用ロジックの根本的な変化です：**初めて、主導権が人間から機械に移行し、「人間が機械に適応する」から「機械が積極的に人間に適応する」への体験的飛躍を実現しています。**
+独特な「フリクションレストリガー」会話能力を持ち、あなたが近づくと積極的に相互作用を開始します。これは単なる技術的なアップグレードではありません。相互作用ロジックの根本的な変化です：**初めて、主導権が人間から機械に移行し、「人間が機械に適応する」から「機械が積極的に人間に適応する」への体験的飛躍を実現しています。**
 
 Watcherの「鋭い目」は、強力な**オンデバイスAIビジョンチップ（Himax）**によって駆動され、オブジェクト認識とターゲット追跡のための高速ローカル処理を可能にします。拡張可能なアシスタントファームウェアと組み合わせることで、単なるカメラ以上の存在—あなたのニーズを進化し理解する専用AIアシスタントです。
 
@@ -102,7 +103,7 @@ SenseCAP Watcherは「モジュラー」インテリジェントロボットと�
 
 プロセスは以下のように簡略化できます：
 
-Watcherの「目」（カメラ）が画像をキャプチャ → 「視覚神経」（Himaxチップ）が認識を実行してアシスタントを起動 → 「脳」（バックエンドAI、MCPサービス）がコンテキストを理解して応答。
+Watcherの「目」（カメラ）が画像をキャプチャ → 「視覚神経」（Himaxチップ）が認識を実行しアシスタントを起動 → 「脳」（バックエンドAI、MCPサービス）がコンテキストを理解し応答。
 
 このモジュラー設計は高い柔軟性と拡張性を提供します。
 
@@ -116,7 +117,7 @@ Watcherの「目」（カメラ）が画像をキャプチャ → 「視覚神�
 
 わずか3ステップでWatcherをアクティベートできます：
 
-1.  **デバイスの電源投入**：Type-Cデータケーブルで電源を供給します。バッテリーを使用する場合は、サイドボタンを長押しして電源を入れます。
+1.  **デバイスの電源投入**：Type-Cデータケーブルで電源を供給。バッテリーを使用する場合は、サイドボタンを長押しして電源を入れます。
 2.  **ネットワーク接続**：起動後、デバイスはWi-Fiホットスポットを生成します。お使いの携帯電話またはコンピューターをこのホットスポットに接続してください。| 「[Watcherネットワーク設定](/ja/device_network_setup)」
 3.  **設定とアクティベーション**：ブラウザで`192.168.4.1`にアクセスしてWatcherのWi-Fiを設定し、SenseCraft AIプラットフォームの指示に従ってアクティベーションを完了してください。| 「[Watcher Webコントロールパネル](/ja/watcher_web_control_panel/)」
 
@@ -169,9 +170,9 @@ SenseCAP Watcherの基本的な理解ができたので、カメラ機能の使�
 </div>
 
 :::info[視覚起動を有効にする方法]
-デフォルトでは、視覚起動機能は無効になっています。有効にするには、Watcherが起動している時に次のように言うことができます：
+デフォルトでは、視覚起動機能は無効になっています。有効にするには、Watcherが起動している時に次のように言ってください：
 
-**"Hey Watcher, turn on model inference."**
+**「Hey Watcher, turn on model inference.」**
 :::
 
 現在の視覚起動機能は以下の設定オプションを提供します：
@@ -223,7 +224,7 @@ Watcherに話しかけてください：
 
 ## リソース
 
-ここでは、オンプレミス展開、プライバシー保護、パーソナライズされた知識ベースの構築など、ニーズに応じてSenseCAP Watcherのアプリケーション境界をさらに拡張するのに役立つ高度なリソースをいくつか紹介します：
+オンプレミス展開、プライバシー保護、パーソナライズされた知識ベースの構築など、お客様のニーズに応じてSenseCAP Watcherのアプリケーション境界をさらに拡張するのに役立つ高度なリソースをご紹介します：
 
 - [AI会話駆動スマートホーム](/ja/ha_dify_watcher_llms) - SenseCAP Watcherを通じて音声で照明、エアコン、カーテンなどのスマートホームデバイスを直接制御し、手動操作にさよならを告げます。
 <!--- [Knowledge Based chatbots](/ja/knowledge_watcher_llms) - Transform SenseCAP Watcher into a virtual exhibition secretary, automatically explaining products and solutions for businesses, with the ability to intelligently identify customer points of interest.-->
