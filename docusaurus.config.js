@@ -660,6 +660,7 @@ module.exports = (async () => {
         prism: {
           theme: lightCodeTheme,
           darkTheme: darkCodeTheme,
+          additionalLanguages: ['bash'],
         },
         contextualSearch: true,
         typesense: {
