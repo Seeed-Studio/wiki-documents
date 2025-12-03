@@ -44,9 +44,9 @@ import Steppers from '@site/src/components/utils/Stepper';
  </table>
 </div>
 
-## 介绍
+## 简介
 
-**Seeed Studio XIAO nRF54L15** 是一款紧凑、高性能的开发板，搭载了前沿的 Nordic nRF54L15 芯片。这款下一代 SoC 集成了超低功耗多协议 2.4 GHz 无线电和包含 **128 MHz Arm® Cortex®-M33 处理器**以及用于高级电源管理的 **Arm® Cortex®-M0**+ 的 MCU。它提供高达 **1.5 MB NVM 和 256 KB RAM** 的可扩展内存，以及显著延长电池寿命的内部超低功耗设计。其强大的无线电支持 **Bluetooth® 6.0（包括信道探测）、Matter、Thread、Zigbee**，以及高达 **4 Mbps** 的高吞吐量 2.4 GHz 专有模式。该开发板包含全面的外设集、集成的 **128 MHz RISC-V 协处理器**，以及诸如 **TrustZone®** 隔离和加密引擎保护等高级安全功能。凭借**内置锂离子电池管理**，XIAO nRF54L15 非常适合紧凑、安全且节能的物联网解决方案，如智能可穿戴设备、工业传感器和高级人机界面。
+**Seeed Studio XIAO nRF54L15** 是一款紧凑、高性能的开发板，搭载了前沿的 Nordic nRF54L15 芯片。这款下一代 SoC 集成了超低功耗多协议 2.4 GHz 无线电和包含 **128 MHz Arm® Cortex®-M33 处理器**以及用于高级电源管理的 **Arm® Cortex®-M0**+ 的 MCU。它提供高达 **1.5 MB NVM 和 256 KB RAM** 的可扩展内存，以及显著延长电池寿命的内部超低功耗设计。其强大的无线电支持 **Bluetooth® 6.0（包括 Channel Sounding）、Matter、Thread、Zigbee**，以及高达 **4 Mbps** 的高吞吐量 2.4 GHz 专有模式。该开发板包含全面的外设集、集成的 **128 MHz RISC-V 协处理器**，以及诸如 **TrustZone®** 隔离和加密引擎保护等高级安全功能。凭借**内置锂离子电池管理**，XIAO nRF54L15 非常适合紧凑、安全且节能的物联网解决方案，如智能可穿戴设备、工业传感器和高级人机界面。
 
 export const Highlight = ({children, color}) => (
   <span
@@ -76,7 +76,7 @@ export const Highlight = ({children, color}) => (
   <tr>
       <th>无线连接</th>
       <td align="center">
-        Bluetooth LE 6.0（包括信道探测）<br/>
+        Bluetooth LE 6.0（包括 Channel Sounding）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
@@ -85,7 +85,7 @@ export const Highlight = ({children, color}) => (
         专有 2.4 GHz 协议<br/>
       </td>
       <td align="center">
-        Bluetooth LE 6.0（包括信道探测）<br/>
+        Bluetooth LE 6.0（包括 Channel Sounding）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
@@ -163,7 +163,7 @@ export const Highlight = ({children, color}) => (
 
 - **强大的 CPU**：128 MHz Arm® Cortex®-M33 处理器，支持 DSP 指令和 FPU 浮点运算，32 位 RISC 架构，集成 128 MHz RISC-V 协处理器。
 - **超低功耗**：专为卓越的超低功耗设计，显著延长电池寿命，包含高级电源管理。
-- **多模式无线传输**：集成 2.4 GHz 多协议无线收发器，支持低功耗蓝牙（包括信道探测）、802.15.4-2020、Matter、Thread、Zigbee 和 2.4 GHz 专有模式（高达 4 Mbps）。
+- **多模式无线传输**：集成 2.4 GHz 多协议无线收发器，支持低功耗蓝牙（包括 Channel Sounding）、802.15.4-2020、Matter、Thread、Zigbee 和 2.4 GHz 专有模式（高达 4 Mbps）。
 - **强大的安全性**：高级安全功能，包括 TrustZone® 隔离、篡改检测和加密引擎侧的信道泄漏保护。
 - **丰富的片上资源**：可扩展的内存配置，高达 1.5 MB NVM 和 256 KB RAM，提供充足的存储空间。
 - **丰富的接口**：全面的外设集，包括新的全局 RTC（在系统关闭模式下可用）、14 位 ADC 和高速串行接口。内置锂电池管理。
@@ -226,7 +226,7 @@ export const Highlight = ({children, color}) => (
 
 nRF Connect SDK (NCS) 是 Nordic Semiconductor 提供的可扩展、统一的软件开发套件，专门为基于 Nordic nRF52、nRF53、nRF54、nRF70 和 nRF91 系列的无线设备构建低功耗无线应用而设计。
 
-NCS 提供了丰富的现成示例应用程序、协议栈、库和硬件驱动程序生态系统，旨在简化开发过程并加快产品上市时间。其模块化和可配置的特性为开发者提供了灵活性，既可以为内存受限的设备构建尺寸优化的软件，也可以为更高级和复杂的应用程序构建强大的功能。NCS 是托管在 GitHub 上的开源项目，为 Visual Studio Code 等集成开发环境提供出色的支持。
+NCS 提供了丰富的现成示例应用程序、协议栈、库和硬件驱动程序生态系统，旨在简化开发过程并加快产品上市时间。其模块化和可配置的特性为开发者提供了灵活性，既可以为内存受限的设备构建尺寸优化的软件，也可以为更高级和复杂的应用程序提供强大的功能。NCS 是托管在 GitHub 上的开源项目，为 Visual Studio Code 等集成开发环境提供出色的支持。
 
 ### 在 VSCode 中使用 nRF Connect SDK
 
@@ -265,7 +265,7 @@ west --version
 - nRF Connect SDK
 - VSCode nRF Connect 插件
 
-***如果您已经在计算机上预安装了它，您可以通过以下命令检查工具的版本号***
+***如果您已在计算机上预安装了该工具，可以通过以下命令检查工具的版本号***
 
 </details>
 
@@ -370,7 +370,7 @@ Our first application will be based on the Blinky example. The Blinky example is
     </a>
 </div>
 
-首先，**从 GitHub 链接克隆仓库**`git clone https://github.com/Seeed-Studio/platform-seeedboards.git` 到您首选的本地文件夹。克隆完成后，导航到 `platform-seeedboards/zephyr/` 目录。**记住这个 `zephyr` 文件夹路径**；
+首先，**从 GitHub 链接克隆仓库** `git clone https://github.com/Seeed-Studio/platform-seeedboards.git` 到您首选的本地文件夹。克隆完成后，导航到 `platform-seeedboards/zephyr/` 目录。**记住这个 `zephyr` 文件夹路径**；
 
 要在 VS Code 中为 nRF Connect 配置您的开发板，您可以按照以下步骤操作：
 
@@ -386,7 +386,7 @@ Our first application will be based on the Blinky example. The Blinky example is
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/add_board1.png" style={{width:800, height:'auto'}}/></div>
 
-- 在应用程序视图中，点击应用程序名称下方的 Add Build Configuration。
+- 在应用视图中，点击应用名称下方的 Add Build Configuration。
 
 - 我们可以在 Board target 中选择 XIAO nRF54L15 的型号，在 Base configuration files 中选择默认的 prj.config 文件，最后点击 `Generate and Build` 来构建文件。
 
@@ -395,7 +395,7 @@ Our first application will be based on the Blinky example. The Blinky example is
 #### 下载烧录插件
 
 <Tabs>
-<TabItem  value="window" label="Window" default>
+<TabItem  value="window" label="Windows" default>
 
 **附加插件：**
 
@@ -554,12 +554,12 @@ return 0;
 **LED 设备定义**：
 
 - `#define LED0_NODE DT_ALIAS(led0)`：检索 "led0" 别名的设备树节点标识符，实现对 LED 的硬件无关引用。
-- `static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios)`：使用设备树节点创建 GPIO 规范结构（`led`），包含 LED 的硬件详细信息（引脚、端口）。此处的构建错误表示不支持的硬件。
+- `static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios)`：使用设备树节点创建 GPIO 规范结构（`led`），包含 LED 的硬件详细信息（引脚、端口）。此处的构建错误表示硬件不受支持。
 
 **main() 函数初始化**：
 
 - **变量设置**：
-  - `int ret`：存储函数返回值以检查操作成功。
+  - `int ret`：存储函数返回值以检查操作是否成功。
   - `bool led_state = true`：跟踪 LED 状态（初始化为 "ON"）。
 
 - **GPIO 就绪检查**：
@@ -586,9 +586,9 @@ return 0;
 
 如果您想更深入地了解 nRF Connect SDK 的内部原理，可以参考以下课程：
 
-- [**nRF Connect SDK Fundamentals**](https://academy.nordicsemi.com/courses/nrf-connect-sdk-fundamentals/)
+- [**nRF Connect SDK 基础**](https://academy.nordicsemi.com/courses/nrf-connect-sdk-fundamentals/)
 
-- [**nRF Connect SDK Intermediate**](https://academy.nordicsemi.com/courses/nrf-connect-sdk-intermediate/)
+- [**nRF Connect SDK 中级**](https://academy.nordicsemi.com/courses/nrf-connect-sdk-intermediate/)
 
 - [**nRF Connect Vscode**](https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html)
 
@@ -608,7 +608,7 @@ return 0;
 **使用方法**
 脚本将自动创建和管理本地 Python 虚拟环境来安装必要的工具，因此可以开箱即用。
 
-### Window
+### Windows
 
 - 对于 Windows：导航到 scripts/factory_reset 目录并运行：
 
@@ -648,7 +648,7 @@ bash factory_reset.sh
 
 - 用户 LED 指示当前天线选择（LED 亮表示外部天线，LED 灭表示陶瓷天线）。
 
-- 启动时的默认天线可以通过 prj.conf 配置。
+- 启动时的默认天线可通过 prj.conf 配置。
 
 ```cpp
 /*
@@ -910,8 +910,78 @@ XIAO nRF54L15 内置电源管理芯片，允许 XIAO nRF54L15 使用电池独立
 :::
 
 ### 电池电压检测
+:::tip
 
-XIAO nRF54L15 集成了电池电压检测功能，该功能以使用 TPS22916CYFPR 负载开关高效管理电池功率测量为核心。本指南将重点分析电池检测的软件实现**（特别是 main.c 代码）**，并指导您如何在 PlatformIO 环境中轻松部署和使用此功能，避免 Zephyr NCS SDK 的复杂性。
+如果您遇到 XIAO nRF54L15 在刷写程序后仅由 3.7V 锂电池供电时无法启动的情况，请参考以下解决方案。
+
+对于当前硬件版本（v1.0），我们建议管理两个构建配置，以便在 **Bench Debugging**（USB 连接，UART 启用）和 **Battery Deployment**（独立运行，UART 禁用）之间轻松切换。
+
+**场景 A：USB Bench Debugging**
+
+**何时使用：** 您正在编写代码、刷写固件，并需要通过 **USB Serial Port** 查看日志。
+
+**配置（`prj_uart.conf`）：**
+在项目目录中创建一个名为 `prj_uart.conf` 的新文件。此覆盖文件将临时重新启用 UART 以进行调试。
+
+```properties
+# Enable UART for USB debugging
+CONFIG_SERIAL=y
+CONFIG_UART_CONSOLE=y
+```
+
+```cpp
+# Optional: Keep RTT enabled as a secondary logging backend
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_RTT_CONSOLE=y
+CONFIG_LOG_BACKEND_RTT=y
+CONFIG_LOG_BACKEND_UART=y
+```
+
+**如何构建：**
+构建项目时添加覆盖配置参数。
+
+```bash
+# Build with UART enabled for USB debugging
+west build -p always -d build_uart -b xiao_nrf54l15/nrf54l15/cpuapp . -DOVERLAY_CONFIG="prj_uart.conf"
+```
+
+**场景 B：Battery Deployment（默认）**
+
+**何时使用：** 您已完成调试，打算仅通过 **Battery Pads** 为板子供电。
+
+**配置（`prj.conf`）：**
+修改主 `prj.conf` 文件以默认禁用 UART。这确保板子在电池供电时能够正确启动。
+
+```cpp
+# Disable UART to ensure successful boot on battery
+CONFIG_SERIAL=n
+CONFIG_UART_CONSOLE=n
+```
+
+```cpp
+# Use RTT for low-power logging (requires J-Link)
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_RTT_CONSOLE=y
+CONFIG_LOG=y
+CONFIG_LOG_BACKEND_RTT=y
+```
+
+**如何构建：**
+正常构建，不使用覆盖参数。
+
+```bash
+# Build default firmware (Battery Safe)
+west build -p always -d build_batt -b xiao_nrf54l15/nrf54l15/cpuapp .
+```
+
+**总结**
+
+- **通过 USB 连接**  使用 **`prj_uart.conf`** 覆盖来启用 Serial Monitor。
+- **电池运行**  使用默认的 **`prj.conf`** 确保设备无问题启动。
+
+:::
+
+XIAO nRF54L15 集成了电池电压检测功能，该功能以使用 TPS22916CYFPR 负载开关高效管理电池功率测量为核心。本指南将重点分析电池检测的软件实现 **（特别是 main.c 代码）**，并指导您如何在 PlatformIO 环境中轻松部署和使用此功能，避免 Zephyr NCS SDK 的复杂性。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/battery_A.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:600, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -923,10 +993,10 @@ TPS22916CYFPR 芯片的作用：
 - 它是一个智能电源开关，按需控制电池电压的通断。当需要测量电池电压时，它会开启，将电池连接到分压电路；当不需要测量时，它会关闭，断开连接。
 
 - 这个功能帮助我们做什么？
-通过这种按需切换机制，该芯片大大减少了不必要的电流消耗，有效延长电池寿命。结合后续的分压电路和 nRF54L15 的 ADC（模数转换器），XIAO nRF54L15 能够准确监控电池的剩余电量，为电池供电的低功耗应用（如物联网设备）提供重要的续航优化。
+通过这种按需切换机制，芯片大大减少了不必要的电流消耗，有效延长电池寿命。结合后续的分压电路和 nRF54L15 的 ADC（模数转换器），XIAO nRF54L15 能够准确监控电池的剩余电量，为 IoT 设备等电池供电的低功耗应用提供重要的续航优化。
 
 :::note
-以下示例代码是为 PlatformIO 设计的，但它也兼容 nRF Connect SDK。
+以下示例代码专为 PlatformIO 设计，但也与 nRF Connect SDK 兼容。
 
 在 PlatformIO 中使用 XIAO nRF54L15
 如果您想在 PlatformIO 中使用 XIAO nRF54L15，请参考此教程进行配置：[XIAO nRF54L15 PlatformIO 配置](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_with_platform_io/)。
@@ -1336,7 +1406,7 @@ int main(void)
 
 - **[PDF]** [Seeed Studio XIAO nRF54L15 原理图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO nRF54L15 KiCAD 库文件](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip)
+- **[ZIP]** [Seeed Studio XIAO nRF54L15 KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip)
 
 - **[DXF]** [Seeed Studio XIAO nRF54L15 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
 
@@ -1346,7 +1416,7 @@ int main(void)
 
 - **[PDF]** [Seeed Studio XIAO nRF54L15 Sense 原理图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO nRF54L15 Sense KiCAD 库文件](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip)
+- **[ZIP]** [Seeed Studio XIAO nRF54L15 Sense KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip)
 
 - **[DXF]** [Seeed Studio XIAO nRF54L15 Sense DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
 
