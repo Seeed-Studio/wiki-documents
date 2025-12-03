@@ -1,5 +1,5 @@
 ---
-description: Este tema presenta la documentación de productos de Robótica de Seeed Studio.
+description: Este tema introduce la documentación de productos de Robótica de Seeed Studio.
 title: Robótica
 keywords:
 - robotics
@@ -175,26 +175,48 @@ last_update:
 **📷Cámara**  
 
 <div className="card-container">
+- Cámara de Profundidad Orbbec
+
     <a href="/es/orbbec_gemini2/" className="nav-item">
       <span className="text">Orbbec Gemini2</span>
     </a>
-    <a href="/es/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">Cámara de Profundidad Orbbec con ROS</span>
-    </a>
     <a href="/es/orbbec_gemini_335lg" className="nav-item">
-      <span className="text">Cámara Estéreo Orbbec Gemini 335Lg</span>
+      <span className="text">Cámara de Profundidad Orbbec Gemini 335Lg</span>
       <span className="tag recommended">New</span>
     </a>
+    <a href="/es/orbbec_gemini336" className="nav-item">
+      <span className="text">Cámara de Profundidad Orbbec Gemini 336</span>
+      <span className="tag recommended">New</span>
+    </a>
+
+- SENSING GMSL
+
     <a href="/es/sensing_gmsl_cameras" className="nav-item">
       <span className="text">Cámaras SENSING GMSL2</span>
+    </a>
+
+- RoboSense
+
+    <a href="/es/ac1" className="nav-item">
+      <span className="text">AC1</span>
       <span className="tag recommended">New</span>
+    </a>
+
+- Ejemplos
+
+    <a href="/es/orbbec_depth_camera_on_ros/" className="nav-item">
+      <span className="text">Cámara de Profundidad Orbbec con ROS</span>
     </a>
     <a href="/es/orb_slam3_orbbec_gemini2/" className="nav-item">
       <span className="text">ORB-SLAM3 con Orbbec Gemini2</span>
     </a>
     <a href="/es/csi_camera_on_ros/" className="nav-item">
-      <span className="text">Cámara CSI</span>
+      <span className="text">Cámara CSI en Jetson</span>
     </a>
+    <a href="/es/pycuvslam_recomputer_robotics/" className="nav-item">
+      <span className="text">PyCuVSLAM</span>
+    </a>
+
 </div>
 
 **🎤Voz**  
@@ -342,20 +364,20 @@ html[data-theme='dark'] .nav-item {
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-/* 图标样式 */
+/* Estilos de iconos */
 .nav-item .icon {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   transition: transform 0.3s;
 }
 
-/* 文字样式 */
+/* Estilos de texto */
 .nav-item .text {
   font-size: 0.95rem;
   white-space: nowrap;
 }
 
-/* 悬浮特效 */
+/* Efecto de hover */
 .nav-item .hover-effect {
   position: absolute;
   bottom: 0;
@@ -368,14 +390,14 @@ html[data-theme='dark'] .nav-item {
   z-index: -1;
 }
 
-/* Animación de flotación */
+/* Animación de hover */
 .nav-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   color: white;
 }
 
-/* Modo Dark - Animación de flotación */
+/* Modo Dark - Animación de hover */
 html[data-theme='dark'] .nav-item:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
@@ -408,7 +430,7 @@ html[data-theme='dark'] .nav-item:hover {
 `}</style>
 
 <style>{`
-/* Estilos de tarjeta de contenido mejorada */
+/* Estilos de tarjetas de contenido mejoradas */
 .nav-grid {
   display: block;
   gap: 2rem;
@@ -427,7 +449,7 @@ html[data-theme='dark'] .nav-item:hover {
   z-index: 1;
 }
 
-/* Modo Dark - Tarjeta de contenido */
+/* Modo Dark - Tarjetas de contenido */
 html[data-theme='dark'] .category-card {
   background:rgb(30, 30, 32);
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
@@ -453,13 +475,13 @@ html[data-theme='dark'] .category-card {
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* Efecto de flotación */
+/* Efecto de hover */
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
-/* Modo Dark - Efecto de flotación */
+/* Modo Dark - Efecto de hover */
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -475,12 +497,12 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Modo Dark - Efecto de luz flotante */
+/* Modo Dark - Efecto de luz en hover */
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
 
-/* Animación de enlace */
+/* Animación de enlaces */
 .category-card a {
   position: relative;
   display: inline-block;
@@ -489,7 +511,7 @@ html[data-theme='dark'] .category-card:hover::after {
   color: #333;
 }
 
-/* Modo Dark - Enlace */
+/* Modo Dark - Enlaces */
 html[data-theme='dark'] .category-card a {
   color: #d1d5db;
 }
@@ -499,7 +521,7 @@ html[data-theme='dark'] .category-card a {
   transform: translateX(5px);
 }
 
-/* Modo Dark - Flotación de enlace */
+/* Modo Dark - Hover de enlaces */
 html[data-theme='dark'] .category-card a:hover {
   color: #60a5fa;
 }
@@ -515,7 +537,7 @@ html[data-theme='dark'] .category-card a:hover {
   transition: width 0.3s;
 }
 
-/* Modo Dark - Subrayado de enlace */
+/* Modo Dark - Subrayado de enlaces */
 html[data-theme='dark'] .category-card a::after {
   background: #60a5fa;
 }
@@ -528,7 +550,7 @@ html[data-theme='dark'] .category-card a::after {
   margin-bottom: 1.5rem; /* Originalmente 0.1rem */
 }
 
-/* Estilos de etiqueta mejorados */
+/* Estilos de etiquetas mejorados */
 .tag {
   font-size: 0.75rem;
   padding: 2px 8px;
@@ -585,7 +607,7 @@ html[data-theme='dark'] .category-card:active {
   }
 }
 
-/* Modo Dark - Texto de título */
+/* Modo Dark - Texto de títulos */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -602,7 +624,7 @@ html[data-theme='dark'] strong {
   color: #e5e7eb;
 }
 
-/* Modo Dark - Bloque de cita */
+/* Modo Dark - Bloques de cita */
 html[data-theme='dark'] blockquote {
   color: #9ca3af;
   border-left-color: #4b5563;

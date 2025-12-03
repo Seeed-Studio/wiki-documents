@@ -4138,6 +4138,7 @@ const sidebars = {
           items: [
             'Robotics/Robot_Sensor/Camera/Getting_Start_with_AC1',
             'Robotics/Robot_Sensor/Camera/Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+            'Robotics/Robot_Sensor/Camera/Getting_Start_with_Orbbec_Gemini_336',
             'Robotics/Robot_Sensor/Camera/Orbbec_Depth_Camera',
             'Robotics/Robot_Sensor/Camera/ORB_SLAM3_with_Orbbec_Gemini2',
             'Robotics/Robot_Sensor/Camera/Pycuvslam_On_reComputer',
@@ -9241,6 +9242,7 @@ const sidebars = {
           // },
           items: [
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_AC1',
+            'zh-CN/Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini_336',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Orbbec_Depth_Camera',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_ORB_SLAM3_with_Orbbec_Gemini2',
@@ -14262,6 +14264,7 @@ const sidebars = {
           items: [
             'es/Robotics/Robot_Sensor/Camera/es_Getting_Start_with_AC1',
             'es/Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+            'es/Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini_336',
             'es/Robotics/Robot_Sensor/Camera/es_Orbbec_Depth_Camera',
             'es/Robotics/Robot_Sensor/Camera/es_ORB_SLAM3_with_Orbbec_Gemini2',
             'es/Robotics/Robot_Sensor/Camera/es_Pycuvslam_On_reComputer',
@@ -19278,6 +19281,7 @@ const sidebars = {
           items: [
             'ja/Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_AC1',
             'ja/Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+            'ja/Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini_336',
             'ja/Robotics/Robot_Sensor/Camera/ja_Orbbec_Depth_Camera',
             'ja/Robotics/Robot_Sensor/Camera/ja_ORB_SLAM3_with_Orbbec_Gemini2',
             'ja/Robotics/Robot_Sensor/Camera/ja_Pycuvslam_On_reComputer',

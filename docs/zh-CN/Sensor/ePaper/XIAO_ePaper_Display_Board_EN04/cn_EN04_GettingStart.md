@@ -25,7 +25,7 @@ import Steppers from '@site/src/components/utils/Stepper';
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EN04-p-6560.html" target="_blank">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -171,14 +171,14 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 - [7.5 英寸电子纸 - 单色 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [7.5 英寸电子纸 - 三色 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/37.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 使用 XIAO ePaper 显示板时，请确保根据电子纸显示屏类型设置跳线：
 
 - 对于 24 针电子纸显示屏 → 将跳线设置为 24 针
 
-⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。上电前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。在通电前请务必仔细检查跳线位置。
 
 :::
 
@@ -186,12 +186,12 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 - [7.3 英寸 Spectra6 电子纸](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/36.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
 :::tip
 使用 XIAO ePaper 显示板时，请确保根据电子纸显示屏类型设置跳线：
 - 对于 50 针电子纸显示屏 → 将跳线设置为 50 针
 
-⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。上电前请务必仔细检查跳线位置。
+⚠️ 使用错误的跳线设置可能导致电子纸无法显示或显示异常内容。在通电前请务必仔细检查跳线位置。
 
 :::
 
@@ -225,7 +225,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 所以请确保您的设备或组件类型。
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/38.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/6.jpg" style={{width:800, height:'auto'}}/></div>
 
 下载库后，转到 **Sketch** -> **Include Library** -> **Add .ZIP Library** 并选择下载的库。
 
@@ -242,34 +242,32 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 ## 入门指南
 
-这里，我们以 5.83 英寸显示屏为例。所有 24 针屏幕的步骤都相同；唯一的区别是在驱动程序中选择适当的屏幕尺寸。
+这里，我们以 7.5 英寸显示屏为例。所有 24 针屏幕的步骤都相同；唯一的区别是在驱动程序中选择适当的屏幕尺寸。
 
 创建一个**新的 "driver.h" 文件**并将这些代码粘贴到其中。代码应该如下所示：
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/40.png" style={{width:1000, height:'auto'}}/></div>
-
 ```cpp
-#define BOARD_SCREEN_COMBO 503 // 5.86 inch monochrome ePaper Screen （UC8179）
+#define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
 之后，转到 **Tools** -> **Board** -> **XIAO ESP32S3** 和 **Tools** -> **Port** -> **选择您的开发板连接的端口**。然后点击 **Upload** 上传代码。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/32.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
-现在您将在电子纸屏幕上看到反馈！以下是 Helloworld 示例的结果。
+现在您将在电子纸屏幕上看到反馈！以下是 Helloworld 示例的结果。（如果没有显示任何内容，请点击复位按钮）
 
 :::tip
 ⚠️ 注意：电子纸电缆方向
 将电子纸显示屏连接到 XIAO 电子纸显示板时，请确保 FPC 电缆插入方向正确。
 
-⚠️ 不要反向连接！倒插电缆可能导致电子纸无法显示甚至损坏屏幕/开发板。
+⚠️ 不要反向连接！电缆插反可能导致电子纸无法显示甚至损坏屏幕/开发板。
 下图显示了正确的连接方式：
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/32.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.jpg" style={{width:500, height:'auto'}}/></div>
 
-### XIAO 电子纸显示板(nRF52840) - EN04 上的用户按钮
+### XIAO 电子纸显示板（nRF52840）上的用户按钮 - EN04
 
 EN04 具有三个用户可编程按钮，可用于各种控制目的。本节演示如何使用 Arduino 读取按钮状态并响应按钮按下。
 
@@ -293,13 +291,13 @@ EN04 具有三个用户可编程按钮，可用于各种控制目的。本节演
 </table>
 
 
-所有按钮都是低电平有效，这意味着按下时读取为 LOW，释放时读取为 HIGH。
+所有按钮都是低电平有效，意味着按下时读取为 LOW，释放时读取为 HIGH。
 
 基本按钮读取示例
 
 此示例演示如何检测按钮按下并向串行监视器打印消息。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/39.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.jpg" style={{width:500, height:'auto'}}/></div>
 
 <br></br>
 
@@ -346,13 +344,13 @@ void loop() {
 }
 ```
 
-### XIAO 电子纸显示板(nRF52840) - EN04 上的用户电池
+### XIAO 电子纸显示板（nRF52840）上的用户电池 - EN04
 
 使用电池供电时：
 
-- 设备将在刷新之间自动进入低功耗模式
+- 设备将在刷新间隔自动进入低功耗模式
 
-- 电池寿命取决于刷新频率（在默认设置下，满电通常可使用 3 个月）
+- 电池寿命取决于刷新频率（默认设置下满电通常可使用 3 个月）
 
 - 当电池电量低于 20% 时，设备将在右上角显示低电量图标
 
@@ -361,7 +359,7 @@ void loop() {
 :::
 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04battery.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.jpg" style={{width:600, height:'auto'}}/></div>
 
 ```cpp
 #define VOLTAGE_PIN A0 //GPIO1
