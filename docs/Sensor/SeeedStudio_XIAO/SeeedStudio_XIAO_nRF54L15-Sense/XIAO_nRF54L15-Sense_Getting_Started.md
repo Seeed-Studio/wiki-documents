@@ -294,7 +294,8 @@ In your currently active terminal, type: nrfutil install device
 You should see the following output:
 ```cpp
 [00:00:02] ###### 100% [Install packages] Install packages
-``` -->
+```
+-->
 
 #### VScode configures the board and builds the burn-in file
 
