@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 11/24/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
 
@@ -76,6 +76,11 @@ Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> All enab
 
 ## Get Started
 
+:::danger note
+When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
+1. Not finishing the message transmission process
+2. Being configured
+:::
 ### Flash Firmware
 
 :::caution note
@@ -245,7 +250,7 @@ You can add sensor to the device via the grove interface. The following sensors 
   </tr>
 </table>
 
-### Screesn Connection
+### Screen Connection
  
  - [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) to get the compatible E-Ink screen.
 - Please look forward to our compatible separately-selling OLED screen, which will be available soon. The current OLED driver is SSD1306.
@@ -299,11 +304,17 @@ Press the `Reset` button once to exit DFU mode.
 - **RSSI** is determined jointly by the device and its surrounding environment. Normal device usually operates above -110 dBm. Device with an RSSI lower than -115 dBm is considered to have poor performance.
 
       To achieve the best signal effect, please use the device in an open, unobstructed area with minimal interference for use.
+
+### Compatible Antenna
+
+If you need a antenna replacement for L1 Pro, [click here](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) to get one.
+
 ## Resource
 - [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) 3D printing reference file](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [(V2 New Four-way Joystick) 3D printing reference file](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [Outline File](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
+- [TELEC Certification](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
 - [FCC Certification](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [CE Certification](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
 - [Power Consumption Test and Battery Life Calculation](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
