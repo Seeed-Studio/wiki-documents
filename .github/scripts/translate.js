@@ -429,8 +429,12 @@ ${glossaryPairs}
    - 反例（禁止）：\`<TabItem value="适用于 E1002" label="适用于 E1002">\`（有 label 时不应改 value）
 
 8. **产品系列命名（“… Series” 后缀）**：
-   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`），保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为目标语言（zh-CN → “系列”）。
-   - 示例：\`reTerminal E Series\` → \`reTerminal E 系列\`
+   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`）时，保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为**该目标语言中表示“产品系列”的常用词**。
+   - 各语言示例（仅作参考，实际输出只使用当前目标语言）：
+     - 若目标语言为 zh-CN：\`reTerminal E Series\` → \`reTerminal E 系列\`
+     - 若目标语言为 ja：\`reTerminal E Series\` → \`reTerminal E シリーズ\`
+     - 若目标语言为 es：\`reTerminal E Series\` → \`reTerminal E Serie\`
+   - **禁止**在日文或西班牙文译文中输出中文“系列”；必须使用目标语言自身的词汇。
 </translation_rules>
 
 <example>

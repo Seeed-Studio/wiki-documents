@@ -1,6 +1,6 @@
 ---
-description: この記事では、Home Assistant で reTerminal E 系列 ePaper ディスプレイのハードウェア機能を ESPHome で活用する方法について説明します。
-title: Home Assistant での reTerminal E 系列 ePaper ディスプレイの高度な ESPHome 使用法
+description: この記事では、Home Assistant で reTerminal E シリーズ ePaper ディスプレイのハードウェア機能を ESPHome で活用する方法について説明します。
+title: Home Assistant での reTerminal E シリーズ ePaper ディスプレイの高度な ESPHome 使用法
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /ja/reterminal_e10xx_with_esphome_advanced
 sidebar_position: 3
@@ -13,15 +13,15 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Home Assistant での reTerminal E 系列 ePaper ディスプレイの高度な ESPHome 使用法
+# Home Assistant での reTerminal E シリーズ ePaper ディスプレイの高度な ESPHome 使用法
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-この記事では、reTerminal E 系列 ePaper ディスプレイデバイスの高度な ESPHome 設定について探求し、[基本的な ESPHome 使用ガイド](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)で扱った基礎概念を基に構築します。ESPHome や reTerminal E 系列が初めての場合は、これらの高度なアプリケーションに取り組む前に、基本ガイドから始めることをお勧めします。
+この記事では、reTerminal E シリーズ ePaper ディスプレイデバイスの高度な ESPHome 設定について探求し、[基本的な ESPHome 使用ガイド](https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_esphome)で扱った基礎概念を基に構築します。ESPHome や reTerminal E シリーズが初めての場合は、これらの高度なアプリケーションに取り組む前に、基本ガイドから始めることをお勧めします。
 
 ## ハードウェア機能
 
-reTerminal E 系列 ePaper ディスプレイには、ESPHome を通じて Home Assistant で活用できるいくつかのハードウェアコンポーネントが含まれています：
+reTerminal E シリーズ ePaper ディスプレイには、ESPHome を通じて Home Assistant で活用できるいくつかのハードウェアコンポーネントが含まれています：
 
 - 3つのプログラマブルボタン（GPIO3、GPIO4、GPIO5）
 
@@ -35,13 +35,13 @@ reTerminal E 系列 ePaper ディスプレイには、ESPHome を通じて Home 
 
 これらの各コンポーネントを実用的なアプリケーションで使用する方法を探ってみましょう。
 
-## reTerminal E 系列 ePaper ディスプレイハードウェアコンポーネント制御
+## reTerminal E シリーズ ePaper ディスプレイハードウェアコンポーネント制御
 
-Home Assistant で reTerminal E 系列 ePaper ディスプレイの各ハードウェアコンポーネントを使用する方法を探ってみましょう。
+Home Assistant で reTerminal E シリーズ ePaper ディスプレイの各ハードウェアコンポーネントを使用する方法を探ってみましょう。
 
 ### ボタンと LED
 
-この例では、reTerminal E 系列 ePaper ディスプレイの3つのボタンを使用して機能を制御し、オンボード LED で視覚的なフィードバックを提供する方法を示します。
+この例では、reTerminal E シリーズ ePaper ディスプレイの3つのボタンを使用して機能を制御し、オンボード LED で視覚的なフィードバックを提供する方法を示します。
 
 以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
@@ -115,7 +115,7 @@ light:
 
 ### ブザー制御
 
-reTerminal E 系列 ePaper ディスプレイには GPIO45 にブザーが含まれており、音声フィードバックを提供するために使用できます。設定方法は以下の通りです：
+reTerminal E シリーズ ePaper ディスプレイには GPIO45 にブザーが含まれており、音声フィードバックを提供するために使用できます。設定方法は以下の通りです：
 
 以下のコードをコピーして、Yaml ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
@@ -178,7 +178,7 @@ binary_sensor:
 
 ### バッテリー監視
 
-reTerminal E 系列 ePaper ディスプレイは、GPIO1 のアナログ入力を通じてバッテリーレベルを監視できます。設定方法は以下の通りです：
+reTerminal E シリーズ ePaper ディスプレイは、GPIO1 のアナログ入力を通じてバッテリーレベルを監視できます。設定方法は以下の通りです：
 
 ```yaml
 esphome:
@@ -274,7 +274,7 @@ sensor:
 
 ## デモ 2. Home Assistant ダッシュボードをスクリーンショットとして撮影
 
-この例では、Home Assistant ダッシュボードのスクリーンショットを撮影し、reTerminal E 系列に表示する方法を示します。
+この例では、Home Assistant ダッシュボードのスクリーンショットを撮影し、reTerminal E シリーズに表示する方法を示します。
 
 ### [Puppet](https://github.com/balloob/home-assistant-addons) アドオンのインストール
 
