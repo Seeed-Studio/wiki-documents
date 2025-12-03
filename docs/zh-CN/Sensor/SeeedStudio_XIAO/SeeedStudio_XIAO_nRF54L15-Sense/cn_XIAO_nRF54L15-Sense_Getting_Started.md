@@ -294,75 +294,76 @@ In your currently active terminal, type: nrfutil install device
 You should see the following output:
 ```cpp
 [00:00:02] ###### 100% [Install packages] Install packages
-``` -->
+```
+-->
 
-#### VScode configures the board and builds the burn-in file
+#### VScode 配置开发板并构建烧录文件
 
-Open VS Code and search for nRF Connect for VS Code Extension Pack in the Plugin Center. This plugin pack will automatically install other VS Code plugins required for nRF Connect.
+打开 VS Code 并在插件中心搜索 nRF Connect for VS Code Extension Pack。此插件包将自动安装 nRF Connect 所需的其他 VS Code 插件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
-The nRF Connect for VS Code extension enables developers to utilize the popular Visual Studio Code Integrated Development Environment (VS Code IDE) to develop, build, debug and deploy embedded applications based on Nordic's nRF Connect SDK (Software Development Kit). The extension includes useful development tools such as a compiler interface, linker, complete build system, RTOS-enabled debugger, seamless interfacing with the nRF Connect SDK, device tree visualization editor, and an integrated serial terminal.
+nRF Connect for VS Code 扩展使开发者能够利用流行的 Visual Studio Code 集成开发环境（VS Code IDE）来开发、构建、调试和部署基于 Nordic nRF Connect SDK（软件开发工具包）的嵌入式应用程序。该扩展包含有用的开发工具，如编译器接口、链接器、完整的构建系统、支持 RTOS 的调试器、与 nRF Connect SDK 的无缝接口、设备树可视化编辑器和集成串行终端。
 
-The nRF Connect extension package for VS Code includes the following components:
+VS Code 的 nRF Connect 扩展包包含以下组件：
 
-- nRF Connect for VS Code: The main extension contains the interface between the build system and the nRF Connect SDK, as well as an interface to manage the nRF Connect SDK version and toolchain.
-- nRF DeviceTree: Provides device tree language support and a device tree visualization editor.
-- nRF Kconfig: Provides Kconfig language support.
-- nRF Terminal: Serial and RTT terminals.
-- Microsoft C/C++: Adds language support for C/C++, including features of IntelliSense.
-- CMake: CMake language support.
-- GNU Linker Mapping Files: Support for linker mapping files.
-We can download any preferred version of the nRF Connect SDK and its toolchain via the extension. The full nRF Connect for VS Code documentation is available at https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html.
+- nRF Connect for VS Code：主扩展包含构建系统与 nRF Connect SDK 之间的接口，以及管理 nRF Connect SDK 版本和工具链的接口。
+- nRF DeviceTree：提供设备树语言支持和设备树可视化编辑器。
+- nRF Kconfig：提供 Kconfig 语言支持。
+- nRF Terminal：串行和 RTT 终端。
+- Microsoft C/C++：为 C/C++ 添加语言支持，包括 IntelliSense 功能。
+- CMake：CMake 语言支持。
+- GNU Linker Mapping Files：支持链接器映射文件。
+我们可以通过扩展下载任何首选版本的 nRF Connect SDK 及其工具链。完整的 nRF Connect for VS Code 文档可在 https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html 获取。
 
-#### Installing the toolchain
+#### 安装工具链
 
-The toolchain is a collection of tools that work together to build nRF Connect SDK applications, including assembler, compiler, linker, and CMake components.
-The first time you open nRF Connect for VS Code, you will be prompted to install the toolchain. This usually happens if the extension does not detect any installed toolchain on your computer.
-Click Install Toolchain and a list of toolchain versions will be listed that can be downloaded and installed on your computer. Select the version of the toolchain that matches the version of the nRF Connect SDK you plan to use. We always recommend using the latest tagged version of the nRF Connect SDK.
+工具链是一组协同工作以构建 nRF Connect SDK 应用程序的工具，包括汇编器、编译器、链接器和 CMake 组件。
+首次打开 nRF Connect for VS Code 时，系统会提示您安装工具链。如果扩展在您的计算机上未检测到任何已安装的工具链，通常会发生这种情况。
+点击 Install Toolchain，将列出可下载并安装到您计算机上的工具链版本列表。选择与您计划使用的 nRF Connect SDK 版本匹配的工具链版本。我们始终建议使用 nRF Connect SDK 的最新标记版本。
 
-By default, nRF Connect for VS Code only displays the Released tab (i.e., the stable version) of the toolchain. If you are evaluating a new feature and would like to use the Preview tab or another type of tab (e.g. Customer Sampling -cs), click on "Show all toolchain versions" as shown below:
+默认情况下，nRF Connect for VS Code 仅显示工具链的 Released 选项卡（即稳定版本）。如果您正在评估新功能并希望使用 Preview 选项卡或其他类型的选项卡（例如 Customer Sampling -cs），请点击 "Show all toolchain versions"，如下所示：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/toolchain2.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
-**The ToolChain here is 3.0.1 or above**
+**这里的 ToolChain 版本为 3.0.1 或以上**
 :::
 
-#### Installing the nRF Connect SDK
+#### 安装 nRF Connect SDK
 
-In the nRF Connect extension for VS Code, click on Manage SDK. from the Manage SDK menu, we can install or uninstall the nRF Connect SDK version. Since this is the first time we are using the extension, the interface will only show two options.
+在 VS Code 的 nRF Connect 扩展中，点击 Manage SDK。从 Manage SDK 菜单中，我们可以安装或卸载 nRF Connect SDK 版本。由于这是我们首次使用该扩展，界面将仅显示两个选项。
 
-Clicking Install SDK will list all available nRF Connect SDK versions that can be downloaded and installed locally. Select the version of the nRF Connect SDK that is required for the development of your project.
+点击 Install SDK 将列出所有可下载并本地安装的可用 nRF Connect SDK 版本。选择您项目开发所需的 nRF Connect SDK 版本。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/install_sdk.png" style={{width:800, height:'auto'}}/></div>
 
-If you have opened the SDK folder in VS Code, instead of the Manage SDK menu option, you will see the Manage west workspace. To resolve this issue, open another window or folder in VS Code.
+如果您已在 VS Code 中打开了 SDK 文件夹，您将看到 Manage west workspace 而不是 Manage SDK 菜单选项。要解决此问题，请在 VS Code 中打开另一个窗口或文件夹。
 
 :::note
-**The nRF Connect SDK here is 3.0.1 or above**
+**这里的 nRF Connect SDK 版本为 3.0.1 或以上**
 :::
 
 :::tip
-If you do not see either of these options, make sure you have the latest version of the nRF Connect for VS Code extension package installed.
-It is important to note that the nRF Connect SDK is IDE independent, which means you can choose to use any IDE or none at all. The nRF Connect SDK is available via the https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) command line The  (nrfutil) command line interface (CLI) will download and install nRF Connect. However, we highly recommend using our nRF Connect for VS Code extension with VS Code, as it integrates not only a convenient graphical user interface (GUI) and an efficient command line interface (CLI), but also includes a number of features that will greatly simplify firmware development. Configuring other IDEs to work with the nRF Connect SDK requires additional manual steps beyond the scope of this course.
+如果您看不到这些选项中的任何一个，请确保您已安装最新版本的 nRF Connect for VS Code 扩展包。
+需要注意的是，nRF Connect SDK 是独立于 IDE 的，这意味着您可以选择使用任何 IDE 或完全不使用 IDE。nRF Connect SDK 可通过 https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) 命令行界面 (CLI) 下载和安装 nRF Connect。但是，我们强烈建议将我们的 nRF Connect for VS Code 扩展与 VS Code 一起使用，因为它不仅集成了便捷的图形用户界面 (GUI) 和高效的命令行界面 (CLI)，还包含许多将大大简化固件开发的功能。配置其他 IDE 以与 nRF Connect SDK 配合使用需要额外的手动步骤，超出了本课程的范围。
 :::
 
-#### Creating User Programs
+#### 创建用户程序
 
-In this exercise we will write a simple application based on the blinky example to control blinking LEDs on a development board. The same applies to all supported NordicSemiconductor development boards (nRF54, nRF53, nRF52, nRF70 or nRF91 series). The goal is to make sure that all the tools needed to build and burn the example are set up correctly. The focus is on learning how to create an application, build it and burn it to a Nordic chip development board using the "Copy Example" template!
+在本练习中，我们将基于 blinky 示例编写一个简单的应用程序来控制开发板上的闪烁 LED。这同样适用于所有支持的 NordicSemiconductor 开发板（nRF54、nRF53、nRF52、nRF70 或 nRF91 系列）。目标是确保构建和烧录示例所需的所有工具都已正确设置。重点是学习如何使用 "Copy Example" 模板创建应用程序、构建它并将其烧录到 Nordic 芯片开发板！
 
-- In VS Code, click the nRF Connect extension icon. In the Welcome view, click Create New Application.
+- 在 VS Code 中，点击 nRF Connect 扩展图标。在 Welcome 视图中，点击 Create New Application。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project1.png" style={{width:800, height:'auto'}}/></div>
 
-- Type blinky in the search bar and select the second Blinky sample (path zephyr/samples/basic/blinky), as shown below.
+- 在搜索栏中输入 blinky 并选择第二个 Blinky 示例（路径 zephyr/samples/basic/blinky），如下所示。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project2.png" style={{width:800, height:'auto'}}/></div>
 
-The Blinky example will cause the LED1 on the development board to blink continuously.
-Our first application will be based on the Blinky example. The Blinky example is derived from the Zephyr mold block in the nRF Connect SDK, so you will see the zephyr name in the sample path: zephyr\samples\basic\blinky.
+Blinky 示例将使开发板上的 LED1 持续闪烁。
+我们的第一个应用程序将基于 Blinky 示例。Blinky 示例源自 nRF Connect SDK 中的 Zephyr 模块，因此您将在示例路径中看到 zephyr 名称：zephyr\samples\basic\blinky。
 
-#### Add XIAO nRF54L15 Board
+#### 添加 XIAO nRF54L15 开发板
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -559,7 +560,7 @@ return 0;
 **main() 函数初始化**：
 
 - **变量设置**：
-  - `int ret`：存储函数返回值以检查操作是否成功。
+  - `int ret`：存储函数返回值以检查操作成功。
   - `bool led_state = true`：跟踪 LED 状态（初始化为 "ON"）。
 
 - **GPIO 就绪检查**：
@@ -586,9 +587,9 @@ return 0;
 
 如果您想更深入地了解 nRF Connect SDK 的内部原理，可以参考以下课程：
 
-- [**nRF Connect SDK 基础**](https://academy.nordicsemi.com/courses/nrf-connect-sdk-fundamentals/)
+- [**nRF Connect SDK Fundamentals**](https://academy.nordicsemi.com/courses/nrf-connect-sdk-fundamentals/)
 
-- [**nRF Connect SDK 中级**](https://academy.nordicsemi.com/courses/nrf-connect-sdk-intermediate/)
+- [**nRF Connect SDK Intermediate**](https://academy.nordicsemi.com/courses/nrf-connect-sdk-intermediate/)
 
 - [**nRF Connect Vscode**](https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html)
 
@@ -914,11 +915,11 @@ XIAO nRF54L15 内置电源管理芯片，允许 XIAO nRF54L15 使用电池独立
 
 如果您遇到 XIAO nRF54L15 在刷写程序后仅由 3.7V 锂电池供电时无法启动的情况，请参考以下解决方案。
 
-对于当前硬件版本（v1.0），我们建议管理两个构建配置，以便在 **Bench Debugging**（USB 连接，UART 启用）和 **Battery Deployment**（独立运行，UART 禁用）之间轻松切换。
+对于当前硬件版本（v1.0），我们建议管理两个构建配置，以便在 **工作台调试**（USB 连接，UART 启用）和 **电池部署**（独立运行，UART 禁用）之间轻松切换。
 
-**场景 A：USB Bench Debugging**
+**场景 A：USB 工作台调试**
 
-**何时使用：** 您正在编写代码、刷写固件，并需要通过 **USB Serial Port** 查看日志。
+**何时使用：** 您正在编写代码、刷写固件，并需要通过 **USB 串口** 查看日志。
 
 **配置（`prj_uart.conf`）：**
 在项目目录中创建一个名为 `prj_uart.conf` 的新文件。此覆盖文件将临时重新启用 UART 以进行调试。
@@ -945,9 +946,9 @@ CONFIG_LOG_BACKEND_UART=y
 west build -p always -d build_uart -b xiao_nrf54l15/nrf54l15/cpuapp . -DOVERLAY_CONFIG="prj_uart.conf"
 ```
 
-**场景 B：Battery Deployment（默认）**
+**场景 B：电池部署（默认）**
 
-**何时使用：** 您已完成调试，打算仅通过 **Battery Pads** 为板子供电。
+**何时使用：** 您已完成调试，打算仅通过 **电池焊盘** 为板子供电。
 
 **配置（`prj.conf`）：**
 修改主 `prj.conf` 文件以默认禁用 UART。这确保板子在电池供电时能够正确启动。
@@ -976,7 +977,7 @@ west build -p always -d build_batt -b xiao_nrf54l15/nrf54l15/cpuapp .
 
 **总结**
 
-- **通过 USB 连接**  使用 **`prj_uart.conf`** 覆盖来启用 Serial Monitor。
+- **通过 USB 连接**  使用 **`prj_uart.conf`** 覆盖来启用串口监视器。
 - **电池运行**  使用默认的 **`prj.conf`** 确保设备无问题启动。
 
 :::
@@ -996,7 +997,7 @@ TPS22916CYFPR 芯片的作用：
 通过这种按需切换机制，芯片大大减少了不必要的电流消耗，有效延长电池寿命。结合后续的分压电路和 nRF54L15 的 ADC（模数转换器），XIAO nRF54L15 能够准确监控电池的剩余电量，为 IoT 设备等电池供电的低功耗应用提供重要的续航优化。
 
 :::note
-以下示例代码专为 PlatformIO 设计，但也与 nRF Connect SDK 兼容。
+以下示例代码专为 PlatformIO 设计，但也兼容 nRF Connect SDK。
 
 在 PlatformIO 中使用 XIAO nRF54L15
 如果您想在 PlatformIO 中使用 XIAO nRF54L15，请参考此教程进行配置：[XIAO nRF54L15 PlatformIO 配置](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_with_platform_io/)。
