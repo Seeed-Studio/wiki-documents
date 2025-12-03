@@ -234,7 +234,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -533,7 +533,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -599,7 +599,7 @@ display:
       it.print(0, 150, id(font1), "Hello World!");
 ```
 
-</TabItem>
+</TabItem> -->
 
 <TabItem value="5.83 Inch" label="5.83 Inc Monochrome Color">
 
@@ -1095,7 +1095,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1308,7 +1308,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -1374,7 +1374,7 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 Inch Monochrome Color">
@@ -1830,7 +1830,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2079,7 +2079,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2154,7 +2154,7 @@ display:
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 Inch Monochrome Color">
@@ -2601,7 +2601,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2890,7 +2890,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2958,7 +2958,7 @@ display:
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 Inch Monochrome Color">
