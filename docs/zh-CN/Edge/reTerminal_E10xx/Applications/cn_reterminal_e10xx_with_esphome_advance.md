@@ -292,7 +292,7 @@ sensor:
 
 ### 创建访问令牌
 
-步骤 3. 安装后，转到 Puppet 插件的配置页面。如您所见，这里我们需要输入令牌。您需要为此插件创建一个访问令牌。
+步骤 3. 安装后，转到 Puppet 插件的 Configuration 页面。如您所见，这里我们需要输入令牌。您需要为此插件创建一个访问令牌。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/49.png" style={{width:800, height:'auto'}}/></div>
 
@@ -334,7 +334,7 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
 
 值 `2` 表示 2 色（黑白）调色板。
 
-#### 反转颜色
+#### 颜色反转
 
 添加 `invert` 参数以反转黑白颜色：
 
@@ -392,10 +392,18 @@ online_image:
       - component.update: epaper_display
 
 display:
-  - platform: epaper_spi
+  - platform: waveshare_epaper
     id: epaper_display
-    model: Seeed-reTerminal-E1002
-    update_interval: never
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
     lambda: |-
       it.image(0, 0, id(dashboard_image));
 ```
@@ -472,7 +480,7 @@ display:
 
 此示例演示如何使用深度睡眠模式来显著降低功耗，使您的 reTerminal E 系列电子纸显示器适用于电池供电的应用。
 
-您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
+您可以通过复制下面的代码并将其粘贴到 Yaml 文件中的 `captive_portal` 代码行之后来使用此示例。
 
 <Tabs>
 <TabItem value="For E1001" label="适用于 E1001" default>
