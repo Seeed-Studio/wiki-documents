@@ -13,14 +13,16 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /es/visual_trigger_and_ai_flash
 last_update:
-  date: 10/20/2025
+  date: 10/30/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Flasheo de Modelos de IA en el SenseCAP Watcher
+# Flasheando Modelos de IA en el SenseCAP Watcher
 
 ## Descripción General
 
@@ -39,7 +41,7 @@ Para una introducción completa a las características, aplicaciones y casos de 
 - PC con Windows  
 
 :::note
-Si está flasheando el **Firmware de Activación Visual**, y el modelo de su dispositivo Watcher **no es -EN**, también necesitará flashear manualmente el archivo de autenticación para uso normal (solo se requiere una vez).  
+Si está flasheando el **Firmware de Activación Visual**, y su modelo de dispositivo Watcher **no es -EN**, también necesitará flashear manualmente el archivo de autenticación para uso normal (solo requerido una vez).  
 Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watcher Agent](https://wiki.seeedstudio.com/es/flash_watcher_agent_firmware/).
 :::
 
@@ -58,7 +60,7 @@ Please use another method to flash the firmware for now.
 
   - [Plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home)
 
-- Paso 1. Abra nuestra plataforma y seleccione SenseCAP Watcher en el Espacio de Trabajo
+- Paso 1. Abra nuestra plataforma y Seleccione SenseCAP Watcher en el Espacio de Trabajo
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -92,11 +94,11 @@ Please use another method to flash the firmware for now.
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI11.png" style={{width:500, height:'auto'}}/></div>
 
-  - Seleccione la versión que desea flashear y haga clic en `Confirm`
+  - Seleccione la versión que desea flashear y Haga clic en `Confirm`
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI12.png" style={{width:500, height:'auto'}}/></div>
 
-  - Espere el proceso de actualización y reinicio
+  - Esperando el proceso de actualización y reinicio
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI13.png" style={{width:500, height:'auto'}}/></div>
 
@@ -106,11 +108,11 @@ Please use another method to flash the firmware for now.
 
 - Prerrequisitos
 
-  - **Firmware de Activación Visual v2.0.3**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **Firmware de Activación Visual v2.0.4**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Herramienta de Descarga Flash](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 o posterior)
 
-- Paso 1. Conéctese al dispositivo (puerto Type-C en la parte inferior del dispositivo) y abra su Herramienta de Descarga Flash
+- Paso 1. Conéctese al dispositivo (puerto Type-C en la parte inferior del dispositivo) y Abra su Herramienta de Descarga Flash
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
 
@@ -118,7 +120,7 @@ Please use another method to flash the firmware for now.
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting2.jpg" style={{width:600, height:'auto'}}/></div>
 
-- Paso 3. Seleccione el Puerto COM y las Configuraciones de Flash
+- Paso 3. Seleccione el Puerto COM y Configuraciones de Flash
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -152,7 +154,7 @@ Please use another method to flash the firmware for now.
 
 - Prerrequisitos
 
-  - **Firmware de Activación Visual v2.0.3**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **Firmware de Activación Visual v2.0.4**: [Enlace de Descarga](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -161,7 +163,7 @@ Please use another method to flash the firmware for now.
   ```shell
   esptool.py -p /dev/ttyACM0 -b 2000000 write_flash 0 merged-binary.bin
   ```
-  *(Nota: Ajuste el puerto `/dev/ttyACM0` según su sistema, por ejemplo, `COM3` en Windows)*
+  *(Nota: Ajuste el puerto `/dev/ttyACM0` según su sistema, ej., `COM3` en Windows)*
 
 - Paso 2. Reiniciar el Dispositivo
 
@@ -180,7 +182,7 @@ Please use another method to flash the firmware for now.
 
   - [Repositorio de Código Abierto (Colaboración Xiaozhi AI)](https://github.com/Wvirgil123/xiaozhi-esp32/tree/main)
 
-- Paso 1. Abra ESP-IDF CMD y navegue a la carpeta del proyecto
+- Paso 1. Abra ESP-IDF CMD y Navegue a la carpeta del proyecto
   ```shell
   cd xiaozhi-esp32
   ```
@@ -234,7 +236,8 @@ Please use another method to flash the firmware for now.
 </Tabs>
 
 :::note
-La versión de firmware superior a v2.0.3 requiere decir "Turn on inference switch" a Xiaozhi para habilitar la detección visual.
+Solo la versión de firmware 1.8.8 o superior soporta la funcionalidad de activación visual.
+La versión de firmware superior a v2.0.3 requiere decir "Turn on the inference switch" a Xiaozhi para habilitar la detección visual.
 :::
 
 ## Proceso de Flasheo de Modelo de IA
@@ -242,13 +245,13 @@ La versión de firmware superior a v2.0.3 requiere decir "Turn on inference swit
 ### Prerrequisitos
 - [Plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home)
 
-### Paso 1. Abra nuestra plataforma y seleccione SenseCAP Watcher en el Espacio de Trabajo
+### Paso 1. Abra nuestra plataforma y Seleccione SenseCAP Watcher en el Espacio de Trabajo
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI1.png" style={{width:800, height:'auto'}}/></div>
 
 ### Paso 2. Conéctese a nuestra Plataforma por puerto serie
 
--  Haga clic en `Connect` 
+- Haga clic en `Connect` 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
 - Seleccione el puerto serie correcto (que termine con "A")
@@ -271,37 +274,50 @@ La versión de firmware superior a v2.0.3 requiere decir "Turn on inference swit
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI7.png" style={{width:500, height:'auto'}}/></div>
 
-### Paso 4. Ajustar el umbral y previsualizar el efecto
+### Paso 4. Previsualizar el efecto y ajustar los parámetros
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI8.png" style={{width:400, height:'auto'}}/></div>
 
-- También puedes ajustar el umbral hablando con el agente
+La función actual de activación visual ofrece las siguientes opciones de configuración:
 
-## Solución de problemas
+- **ID de Objetivo** (`target`): Especifica el ID de objetivo a detectar. Este ID depende del modelo visual utilizado; el valor predeterminado es 0.
+- **Duración de Detección** (`duration`): La unidad es segundos, se utiliza para ajustar la sensibilidad de la activación visual. El valor predeterminado es 1 segundo (este valor predeterminado no incluye el procesamiento de rebote de 1 segundo).
+- **Umbral de Confianza** (`threshold`): El límite inferior de confianza para que el modelo visual reconozca un objeto, se utiliza para ajustar la sensibilidad de detección. Se representa como un porcentaje, el valor predeterminado es 75%.
+- **Período de Enfriamiento** (`interval`): La unidad es segundos, indica el tiempo de espera requerido después de que termine una conversación antes de activarse nuevamente, se utiliza para evitar interrupciones frecuentes por el mismo objeto. El valor predeterminado es 8 segundos.
 
-### Problemas comunes
+Por ejemplo, puedes ajustar la sensibilidad del modelo modificando el parámetro `threshold`. Si encuentras que el umbral actual es demasiado estricto, simplemente dile a Watcher: "Por favor, establece el umbral de confianza al 60%".
 
-1. **No se detecta puerto COM**
+## Solución de Problemas
+
+### Problemas Comunes
+
+1. **No se Detecta Puerto COM**
    - Asegúrate de estar usando el puerto Type-C inferior
    - Prueba con un cable USB diferente
    - Verifica si los controladores USB están instalados correctamente
 
-2. **Falla el flasheo**
+2. **Falla el Flasheo**
    - Al flashear Himax, selecciona el puerto COM que termine con "A".
    - Al flashear ESP32-S3, selecciona el puerto COM que termine con "B".
 
-3. **El dispositivo no responde**
-   - Usa un pin para presionar suavemente el botón de reset
+3. **El Dispositivo No Responde**
+   - Usa un alfiler para presionar suavemente el botón de reinicio
    - Intenta borrar antes de flashear
 
-4. **El dispositivo no se activa con detección visual**
+4. **El dispositivo no se activa con la detección visual**
    - Verifica si hay mensajes de registro relevantes en la salida serial.
    - La versión de firmware v2.0.3 requiere decir "Turn on inference switch" a Xiaozhi para habilitar esta función.
 
 5. **El serial muestra registros de reconocimiento visual pero el dispositivo aún no puede activarse**
-   - Ve a la plataforma SenseCraft AI y flashea el modelo Person al chip AI.
+   - Ve a la Plataforma SenseCraft AI y flashea el modelo Person al chip AI.
 
-## Soporte técnico
+## Preguntas Frecuentes
+
+**P: ¿Puedo flashear otros modelos AI a Himax?**
+
+R: Actualmente, solo se admiten los modelos Face y Person. El flasheo de otros modelos aún no es compatible y estará disponible en una actualización futura.
+
+## Soporte Técnico
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

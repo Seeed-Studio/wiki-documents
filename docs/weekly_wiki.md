@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/27/2025
+  date: 12/1/2025
   author: Frank
 ---
 
@@ -17,43 +17,108 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [AI Gun Detection Solution for Real-Time Edge Alerts](https://wiki.seeedstudio.com/solutions/frigate-on-jetson-nodered-gun-alerts/)
+### [Getting Started with XIAO ePaper Display EN04](https://wiki.seeedstudio.com/epaper_EN04/)
 
-<p style={{textAlign: 'center'}}><img src="https://cc.seeedstudio.com/wp-content/uploads/2025/08/scene_3.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The Frigate + Node-RED Gun Detection Solution is an edge AI video analytics stack that detects firearms in live camera streams and orchestrates alerting, review, and integrations. Built for privacy-preserving, low‑latency deployments on **AI Boxes**, the NVIDIA **Jetson** series and **reComputer R2000**, it combines an optimized detection engine (Frigate) with a visual automation layer (Node‑RED) and optional LLM‑assisted review.
-
-</div>
-
-### [MCP Integration in SenseCAP Watcher](https://wiki.seeedstudio.com/mcp_endpoint/)
-
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The [**MCP Endpoint (Model Context Protocol Endpoint)**](https://wiki.seeedstudio.com/mcp_endpoint/) documentation introduces its functionality in **SenseCAP Watcher**, explaining its role in AI systems, configuration methods, and usage examples to help developers quickly integrate and manage custom MCP services. Additionally, we’ve updated [**Extending Grove with MCP**](https://wiki.seeedstudio.com/extending_grove_with_mcp/), which demonstrates how to connect Grove sensors to AI systems through MCP for more flexible data interaction and application development.
+Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, NFC function and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
 
 </div>
 
-## Existing Wiki Updated
+### [SenseCAP T2000 Tracker Introduction](https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/)
 
-### [reTerminal E Series ePaper Display Works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.png" alt="pir" width={800} height="auto" /></p>
 
-We have added an operation example on how to [flash via the SenseCraft HMI platform](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/#method-2-flash-via-sensecraft-hmi-platform).
+<div style={{ textAlign: "justify" }}>
+
+[**SenseCAP T2000**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), an industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection, a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed.
+
+</div>
+
+### [Deploying AI Models on SenseCAP A1102 Using SenseCraft AI](https://wiki.seeedstudio.com/deploy_ai_with_a1102/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The SenseCAP A1102 is a powerful sensor device that combines advanced AI capabilities with ease of deployment. This guide will walk you through deployingofficial or custom AI models on the A1102 using the **SenseCraft AI** website, offering step-by-step instructions for pairing, configuration, and testing.
+
+</div>
+
+### [Play Subway Surfers with body sensor control](https://wiki.seeedstudio.com/use_the_motion-sensing_function_of_recamera_to_play_games/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_text.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The reCamera is an AI camera equipped with powerful edge computing capabilities. This demo showcases its ability to run the YOLO11n-Pose model in real-time at the device level - without relying on the cloud, it can accurately identify the key points and postures of the human body.
+
+</div>
+
+### [Deploy Facial Recognition on reComputer](https://wiki.seeedstudio.com/facial_recognition_on_the_recomputer/)
+
+<div class="video-container">
+<iframe width="800" height="400" src="https://www.youtube.com/embed/wcT_ZYsRbAE" title="Facial Recognition On Raspberry Pi CM5 reComputer with Hailo-8 NPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki will guide you through using a reComputer equipped with a `Hailo` NPU to implement real-time facial recognition. In this project, we use `SCRFD-10G` for efficient face detection, capable of quickly and accurately detecting faces of various scales, including small faces, ensuring real-time performance.
+
+</div>
+
+### [MCP Integration with External Systems](https://wiki.seeedstudio.com/mcp_external_system_integration/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide demonstrates how to integrate your existing business systems with **SenseCAP Watcher** through **MCP (Model Context Protocol)**. Unlike the basic calculator example, this tutorial focuses on a industrial use case: **voice-controlled warehouse management**.
+
+</div>
+
+### [WHEELTEC IMU IMU Sensor Getting Start](https://wiki.seeedstudio.com/wheeltec_imu/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/wheeltec/wheeltec_imu.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The WHEELTEC H30 is a high-precision attitude sensor designed to accurately measure key data of carriers, including 3D attitude angles, acceleration, angular velocity, and magnetic field strength. Engineered with industrial-grade reliability, this sensor integrates a 3-axis MEMS gyroscope, a 3-axis MEMS accelerometer, and a 3-axis magnetic sensor—delivering robust performance for professional applications.
+
+</div>
+
+### [Stackforce X Series Motors Getting Start](https://wiki.seeedstudio.com/stackforce_series/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010.webp" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This article will introduce how to get started with Stackforce series motors and how to use them with C++ and Python on the reComputer Jetson Super.
+
+</div>
+
+<!-- ## Existing Wiki Updated
+
+### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
+
+We have added the [Controlling an EtherCAT Motor on Jetson (MyActuator X4)](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/#5-example--controlling-an-ethercat-motor-on-jetson-myactuator-x4) example.
+
+### [reComputer R1000 Getting Started](https://wiki.seeedstudio.com/recomputer_r/)
+
+We have added the [Connect to 4G Module by QMI Mode](https://wiki.seeedstudio.com/recomputer_r/#connect-to-4g-module-by-qmi-mode) example. -->
 
 ## The Efforts of Contributor
 
-<!-- ### [Seeed Studio XIAO ESP32C6 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c6_nuttx/)
+<!-- ### [Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS](https://wiki.seeedstudio.com/local_chatbot_recomputer/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32C3-NuttX/nuttx.svg" style={{width:400, height:'auto'}}/></div>
-
-This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 board. NuttX is a lightweight, scalable real-time operating system known for its small footprint and broad hardware support. The guide walks through installing necessary tools, configuring the board, building the system, and flashing firmware. It includes examples for using NuttShell (NSH), USBNSH, and JUMBO applications, with a focus on practical tasks like GPIO and LED control. -->
+This project brings the dream of a **fully voice-interactive AI assistant** to life — running entirely **on local hardware**, without reliance on cloud services.  
+By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Large Language Models (LLMs)** using **Ollama**, the system enables natural, private, and real-time conversations between humans and machines. The entire setup runs inside Docker containers and can be deployed on **NVIDIA Jetson devices**, **edge computers**, or any Linux-based system with GPU acceleration. -->
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!
@@ -191,5 +256,10 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
 - [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
 - [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
+- [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
+- [weekly wiki on 2025.11.03rd](/Seeed_Elderly/weekly_wiki/wiki251103)
+- [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/wiki251110)
+- [weekly wiki on 2025.11.17th](/Seeed_Elderly/weekly_wiki/wiki251117)
+- [weekly wiki on 2025.11.24th](/Seeed_Elderly/weekly_wiki/wiki251124)
 
 </details>

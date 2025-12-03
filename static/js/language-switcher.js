@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-10-27 10:49:37 (北京时间)
-// 多语言页面: 2028 个
+// 生成时间: 2025-12-03 14:50:07 (北京时间)
+// 多语言页面: 2069 个
 
 (function() {
   'use strict';
@@ -839,6 +839,12 @@
     "es",
     "ja"
   ],
+  "/local_chatbot_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/speech_vlm": [
     "cn",
     "en",
@@ -941,6 +947,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_robotics_j501_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/create_backup_and_restore_on_recomputer": [
     "cn",
     "en",
@@ -978,6 +990,12 @@
     "ja"
   ],
   "/how_to_encrypt_the_disk_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_establish_the_ethercat_on_jetson": [
     "cn",
     "en",
     "es",
@@ -1080,6 +1098,12 @@
     "ja"
   ],
   "/reComputer_Jetson_Series_GPIO_Grove": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/rm520n_module_for_jetson": [
     "cn",
     "en",
     "es",
@@ -1476,6 +1500,12 @@
     "ja"
   ],
   "/build_balenaOS_for_reComputer_r1000": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_ai_r2140_balena": [
     "cn",
     "en",
     "es",
@@ -1967,7 +1997,25 @@
     "es",
     "ja"
   ],
+  "/go2rtc_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/gun_detection_with_frigate_nvr_on_r2000": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ispy_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/moonfire_nvr_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -2034,6 +2082,12 @@
     "ja"
   ],
   "/convert_model_to_edge_tpu_tflite_format_for_google_coral": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/facial_recognition_on_the_recomputer": [
     "cn",
     "en",
     "es",
@@ -2435,7 +2489,49 @@
     "es",
     "ja"
   ],
+  "/model_conversion_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recamera_on_device_models": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_remote_wireless_monitor_system_with_wifi_haLow": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_home_assistant_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_n8n_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_in_Telegram_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/use_the_motion-sensing_function_of_recamera_to_play_games": [
     "cn",
     "en",
     "es",
@@ -2490,6 +2586,24 @@
     "ja"
   ],
   "/recamera_pid_adjustment": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hq_poe_hardware": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hq_poe_microscope_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hq_poe_getting_started": [
     "cn",
     "en",
     "es",
@@ -2580,6 +2694,12 @@
     "ja"
   ],
   "/reterminal_e10xx_with_lopaka": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reterminal_e10xx_with_squareline_vision": [
     "cn",
     "en",
     "es",
@@ -3863,6 +3983,12 @@
     "es",
     "ja"
   ],
+  "/fashionstar_servo": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/feetech_servo": [
     "cn",
     "en",
@@ -3875,7 +4001,25 @@
     "es",
     "ja"
   ],
+  "/hightorque_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/myactuator_series": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/robstride_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_series": [
     "cn",
     "en",
     "es",
@@ -3959,6 +4103,12 @@
     "es",
     "ja"
   ],
+  "/orbbec_gemini336": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/orbbec_depth_camera_on_ros": [
     "cn",
     "en",
@@ -3990,6 +4140,12 @@
     "ja"
   ],
   "/hexfellow_y200": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/wheeltec_imu": [
     "cn",
     "en",
     "es",
@@ -5735,7 +5891,19 @@
     "es",
     "ja"
   ],
+  "/epaper_ee04_eezstudio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/EE04_with_esphome_advanced": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/EE04_with_hmi": [
     "cn",
     "en",
     "es",
@@ -5748,6 +5916,12 @@
     "ja"
   ],
   "/ee04_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/epaper_EN04": [
     "cn",
     "en",
     "es",
@@ -7990,6 +8164,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_python_sdk": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_record_playback": [
     "cn",
     "en",
@@ -8428,6 +8608,18 @@
     "es",
     "ja"
   ],
+  "/epaper_breakout_board_with_oepl": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/XIAO-eInk-Expansion-Board": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/gnss_for_xiao": [
     "cn",
     "en",
@@ -8496,11 +8688,6 @@
   ],
   "/xiao-can-bus-expansion": [
     "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/XIAO-eInk-Expansion-Board": [
     "en",
     "es",
     "ja"
@@ -8938,6 +9125,30 @@
     "ja"
   ],
   "/xiao_topic_page": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_xiao_debug_mate": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_debug": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_power": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_serial": [
     "cn",
     "en",
     "es",
@@ -9603,13 +9814,19 @@
     "es",
     "ja"
   ],
+  "/deploy_ai_with_a1102": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/sensecap_a1102": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/train_ai_with_a1102": [
+  "/setting_ai_with_a1102": [
     "cn",
     "en",
     "es",
@@ -9939,6 +10156,18 @@
     "es",
     "ja"
   ],
+  "/sensecap_t2000_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/SenseCAP_T2000_tracker/Introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/training_model_for_watcher": [
     "cn",
     "en",
@@ -9952,6 +10181,12 @@
     "ja"
   ],
   "/extending_grove_with_mcp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/face_regonition_with_mcp": [
     "cn",
     "en",
     "es",
@@ -10916,6 +11151,24 @@
     "es",
     "ja"
   ],
+  "/solutions/hello_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/solutions/smart-retail-voice-ai-solution-1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/crowd-flow-monitoring": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/solutions/frigate-on-jetson-nodered-gun-alerts": [
     "cn",
     "en",
@@ -10928,19 +11181,13 @@
     "es",
     "ja"
   ],
-  "/mission_pack_features_v3": [
+  "/ha_dify_watcher_llms": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/mission_pack_intro_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/crowd-flow-monitoring": [
+  "/mcp_external_system_integration": [
     "cn",
     "en",
     "es",
@@ -10952,13 +11199,13 @@
     "es",
     "ja"
   ],
-  "/ha_dify_watcher_llms": [
+  "/mission_pack_features_v3": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/solutions/hello_watcher_llms": [
+  "/mission_pack_intro_v3": [
     "cn",
     "en",
     "es",

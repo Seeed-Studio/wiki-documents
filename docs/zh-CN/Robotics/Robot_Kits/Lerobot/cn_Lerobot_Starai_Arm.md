@@ -13,10 +13,12 @@ last_update:
   author: LiShanghang
 ---
 
+
+
 # 基于 LeRobot 的 StarAI 机械臂入门教程
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115064656956649&bvid=BV1wJYDzEE2s&cid=32243908802&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603406916070&bvid=BV1HmUrBGEN6&cid=34225391454&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 | **跟随臂 Viola** | **领导臂 Violin** | **跟随臂 Cello** |
@@ -213,13 +215,14 @@ print(torch.cuda.is_available())
 
 UC-01 转接板 开关：
 
+
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/UC-01 debuging board switch.png" />
 </div>
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115207481328973&bvid=BV1N7puzGEG4&cid=32397135257&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603473957143&bvid=BV1XNUkBfEBz&cid=34225917561&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ### 手臂端口设置
@@ -296,22 +299,24 @@ sudo chmod 666 /dev/ttyUSB*
 机械臂开箱到遥操作视频可参考：
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115348342901390&bvid=BV1Pt47zGEEc&cid=32960351835&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603473957143&bvid=BV1XNUkBfEBz&cid=34225917561&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
 
 将手臂移动至下图**机械臂初始位置**待机, 然后再重新接上电源。新版本机械臂初始位置，（需要特别关注3，4，5号关节舵机与图片需要严格对应）：
 
+| **New Violin Leader Arm初始位置** | **Old Violin Leader Arm初始位置** | **Viola Follower Arm初始位置** |**Cello Follower Arm初始位置** |
+|:---------:|:---------:|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_init.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png) |![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_init.png) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello_init.png) |
+
+例如如下：
+
 | **Violin Leader Arm初始位置** | **Viola Follower Arm初始位置** |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
 
-老版本机械臂初始位置（需要特别关注3，4，5号关节舵机与图片需要严格对应，也可以参考新版本机械臂初始位置）：
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
-</div>
+
 
 #### leader机械臂
 
@@ -394,7 +399,7 @@ lerobot-calibrate     --robot.type=lerobot_robot_bimanual_follower  --robot.arm_
 ## 遥控操作
 
 <div class="video-container">
-<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115348342901390&bvid=BV1Pt47zGEEc&cid=32960351835&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115603473957143&bvid=BV1XNUkBfEBz&cid=34225917561&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 将手臂移动至图上位置待机。
@@ -1364,7 +1369,7 @@ pip install -e ".[pi]"
 ```bash
 lerobot-train \
   --policy.type=pi0 \
-  --dataset.repo_id=seeed/eval_test123 \ 
+  --dataset.repo_id=seeed/eval_test123 \
   --job_name=pi0_training \
   --output_dir=outputs/pi0_training \
   --policy.pretrained_path=lerobot/pi0_base \
@@ -1408,7 +1413,7 @@ pip install -e ".[pi]"
 **训练**
 ```bash
 lerobot-train \
-    --dataset.repo_id=seeed/eval_test123 \ 
+    --dataset.repo_id=seeed/eval_test123 \
     --policy.type=pi05 \
     --output_dir=outputs/pi05_training \
     --job_name=pi05_training \
@@ -1506,9 +1511,9 @@ lerobot starai github: [lerobot starai](https://github.com/servodevelop/lerobot.
 
 StarAI Robot Arm ROS2 Moveit2: [star-arm-moveit2](https://wiki.seeedstudio.com/cn/starai_arm_ros_moveit/)
 
-StarAI机械臂[相关性能介绍](https://www.bilibili.com/video/BV1wJYDzEE2s/?spm_id_from=888.80997.embed_other.whitelist&t=1.413555&bvid=BV1wJYDzEE2s&vd_source=16f6410bb6a7c9939bfb6a93fc79b27e)
+StarAI机械臂[相关性能介绍](https://www.bilibili.com/video/BV1HmUrBGEN6/?spm_id_from=333.337.search-card.all.click)
 
-StarAI机械臂[开箱视频](https://www.bilibili.com/video/BV1wRgVznECk/?spm_id_from=333.1387.homepage.video_card.click)
+StarAI机械臂[开箱视频](https://www.bilibili.com/video/BV1XNUkBfEBz/?spm_id_from=333.337.search-card.all.click&vd_source=16f6410bb6a7c9939bfb6a93fc79b27e)
 
 STEP: [STEP](https://github.com/Welt-liu/star-arm-moveit2/tree/main/hardware)
 

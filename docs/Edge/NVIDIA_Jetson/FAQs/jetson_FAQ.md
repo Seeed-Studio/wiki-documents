@@ -77,9 +77,41 @@ sudo apt-mark hold nvidia-l4t-core
 
 For details, please click [here](/how_to_build_the_ko_module_for_seeed_jetson)
 
-#### Q17：How to encrypt the disk of Jetson before flashing the image?
+#### Q17：How can I mount an external hard drive formatted with exFAT on Jetson (JetPack 6)?
+
+First, install the dependencies:
+```
+sudo apt install build-essential autoconf automake libtool pkg-config
+sudo apt install git libfuse-dev
+```
+
+Then clone and build the exFAT driver from source:
+```
+git clone https://github.com/relan/exfat
+cd exfat
+autoreconf --install
+./configure
+make
+sudo make install
+```
+
+Next, manually mount the disk to a local directory:
+```
+lsblk   # Check the device name of your external hard drive
+
+sudo mkdir /media/seeed/tmp-exfat   # Create a mount point
+sudo mount.exfat /dev/sda3 /media/seeed/tmp-exfat/
+```
+
+This mounts the exFAT-formatted external drive to `/media/seeed/tmp-exfat/` so that it can be accessed normally on the Jetson.
+
+#### Q18：How to encrypt the disk of Jetson before flashing the image?
 
 For details, please click [here](/how_to_encrypt_the_disk_for_jetson)
+
+#### Q18：How to establish communication between Jetson and EtherCAT devices?
+
+For details, please click [here](/how_to_establish_the_ethercat_on_jetson)
 
 
 ## Tech support
@@ -95,3 +127,4 @@ Thank you for choosing our products! We are **here** to provide you with differe
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

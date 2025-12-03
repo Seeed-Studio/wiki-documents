@@ -23,7 +23,7 @@ A diferencia de las pantallas tradicionales que consumen energía continuamente,
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Wiki reTerminal E1001</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"3"}>Wiki reTerminal E1001</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>Obtener uno ahora</font></span></strong>

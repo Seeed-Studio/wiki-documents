@@ -496,6 +496,7 @@ This setup allows for interactive communication with the Grove Vision AI V2 modu
 - [SenseCraft AI](https://sensecraft.seeed.cc/ai/#/home)
 - [SenseCraft AI Model Assistant](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process)
 - [Arduino Library for XIAO](https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA)
+- [Restore Grove Vision AI V2 to factory firmware](https://files.seeedstudio.com/wiki/grove-vision-ai-v2/res/Vision_AI_Module_V2_factory_flasher.zip)
 
 ## Troubleshooting
 

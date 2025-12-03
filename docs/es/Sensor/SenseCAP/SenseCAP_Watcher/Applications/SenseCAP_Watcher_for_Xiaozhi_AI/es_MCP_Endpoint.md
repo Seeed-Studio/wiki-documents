@@ -16,7 +16,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /es/mcp_endpoint
 last_update:
-  date: 10/22/2025
+  date: 10/30/2025
   author: Twelve
 ---
 
@@ -51,17 +51,6 @@ MCP permite a los servidores exponer herramientas invocables a los modelos de le
 5. Obtén la dirección del Endpoint y el Estado de Conexión
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI15.png" style={{width:400, height:'auto'}}/></div>
-
-## Seleccionar servicios MCP preproporcionados
-
-Los siguientes cuatro servicios MCP están disponibles para que elijas.
-
-Después de guardar la configuración y reiniciar el dispositivo, los servicios seleccionados entrarán en vigor automáticamente.
-
-Puedes eliminar el servicio haciendo clic en `×`
-
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI16.png" style={{width:800, height:'auto'}}/></div>
-
 
 ## Ejemplo MCP
 
@@ -108,6 +97,58 @@ A continuación se presenta una explicación detallada de algunas partes clave d
 
 - `mcp.run(transport="stdio")` : Inicia el servidor. El transporte stdio le permite comunicarse con el Watcher Agent o tu cliente MCP.
 
+### Inicio Rápido
+
+- Requisitos
+  - [MCP Example Code Github](https://github.com/78/mcp-calculator)
+  - Python 3.7+
+  - websockets>=11.0.3
+  - python-dotenv>=1.0.0
+  - mcp>=1.8.1
+  - pydantic>=2.11.4
+  - mcp-proxy>=0.8.2
+
+- Paso1. Clona el repositorio y navega a la carpeta del proyecto
+
+  ```bash
+  git clone https://github.com/78/mcp-calculator.git
+  cd mcp-calculator
+  ```
+
+- Paso2. Instala las dependencias
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- Paso3. Configura las variables de entorno
+  - Para Linux/macOS
+    ```bash
+    export MCP_ENDPOINT=<your_mcp_endpoint>
+    ```
+  - Para windows(PowerShell)
+    ```bash
+    $env:MCP_ENDPOINT="<your_mcp_endpoint>"
+    ```
+  - Para windows(CMD)
+    ```bash
+    set MCP_ENDPOINT=<your_mcp_endpoint>
+    ```
+
+- Paso4. Ejecuta el ejemplo de calculadora
+  ```bash
+  python mcp_pipe.py calculator.py
+  ```
+
+- O ejecuta todos los servidores configurados
+  ```bash
+  python mcp_pipe.py
+  ```
+
+  :::note
+  Esto requiere un archivo de configuración mcp_config.json que defina la configuración del servidor.
+  :::
+
 ### Resultado de Ejecución
 
 ```bash
@@ -128,9 +169,9 @@ Calculating formula: math.comb(10, 3), result: 120
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP1.png" style={{width:400, height:'auto'}}/></div>
 
 - Estado de Conexión: Muestra si tu conexión MCP está funcionando correctamente.
-- Icono de actualización: Actualiza el estado de tu conexión MCP.
-- Servicios Habilitados: Lista todos los servicios MCP que tu watcher puede usar.
-- Dirección del Endpoint: Tu dirección_endpoint_mcp (No compartas esto con nadie a menos que sea requerido por el soporte técnico oficial)
+- Icono de actualización: Actualiza el estado de tu conexión mcp.
+- Servicios Habilitados: Lista todos los servicios mcp que tu watcher puede usar.
+- Dirección del Endpoint: Tu mcp_endpoint_address (No compartas esto con nadie a menos que sea requerido por el soporte técnico oficial)
 
 ### Registro de Conversación
 
@@ -152,7 +193,7 @@ Si estás escribiendo una herramienta bing_search, el nombre del parámetro debe
 
 El docstring (usando """...""") guía al modelo sobre cuándo usar la herramienta.
 
-También puede mencionar que las funciones de las librerías math y random pueden usarse en la expresión.
+También puede mencionar que se pueden usar funciones de las librerías math y random en la expresión.
 
 Estas dos librerías ya han sido importadas en el código de ejemplo.
 
@@ -181,6 +222,16 @@ Nota: Tener demasiadas herramientas puede afectar la eficiencia de programación
 Cada endpoint MCP tiene un número máximo de conexiones concurrentes.
 
 Nota: Exceder este límite o tener demasiadas conexiones simultáneas puede reducir el rendimiento del dispositivo.
+
+## Seleccionar servicios mcp pre-proporcionados
+
+Los siguientes cuatro servicios MCP están disponibles para que elijas desde MCP Setting mencionado anteriormente.
+
+Después de guardar la configuración y reiniciar el dispositivo, los servicios seleccionados tomarán efecto automáticamente.
+
+Puedes remover el servicio haciendo clic en `×`
+
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI16.png" style={{width:800, height:'auto'}}/></div>
 
 ## Soporte Técnico
 

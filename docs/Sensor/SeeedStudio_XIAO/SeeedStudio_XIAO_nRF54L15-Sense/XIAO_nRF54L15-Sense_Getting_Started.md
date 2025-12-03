@@ -294,7 +294,8 @@ In your currently active terminal, type: nrfutil install device
 You should see the following output:
 ```cpp
 [00:00:02] ###### 100% [Install packages] Install packages
-``` -->
+```
+-->
 
 #### VScode configures the board and builds the burn-in file
 
@@ -598,7 +599,7 @@ If you want to have a deeper understanding of the internal principles of nRF Con
 
 For XIAO nRF54L15 boards, a factory reset script is provided to recover the board from a bad state (e.g., when it's can not upload due to the internal NVM write protection). This script will perform a mass erase of the flash and program a factory firmware.
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="hhttps://github.com/Jasionf/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Jasionf/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Factory Reset</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -910,6 +911,76 @@ Please be careful not to short-circuit the positive and negative terminals and b
 :::
 
 ### Battery Voltage Detection
+:::tip
+
+If you encounter a situation where the XIAO nRF54L15 fails to boot when powered solely by a 3.7V lithium battery after flashing the program, please refer to the solutions below.
+
+For the current hardware version (v1.0), we recommend managing two build configurations to switch easily between **Bench Debugging** (USB connected, UART enabled) and **Battery Deployment** (Standalone, UART disabled).
+
+**Scenario A: USB Bench Debugging**
+
+**When to use:** You are writing code, flashing firmware, and need to view logs via the **USB Serial Port**.
+
+**Configuration (`prj_uart.conf`):**
+Create a new file named `prj_uart.conf` in your project directory. This overlay file will temporarily re-enable UART for debugging purposes.
+
+```properties
+# Enable UART for USB debugging
+CONFIG_SERIAL=y
+CONFIG_UART_CONSOLE=y
+```
+
+```cpp
+# Optional: Keep RTT enabled as a secondary logging backend
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_RTT_CONSOLE=y
+CONFIG_LOG_BACKEND_RTT=y
+CONFIG_LOG_BACKEND_UART=y
+```
+
+**How to Build:**
+Add the overlay configuration argument when building your project.
+
+```bash
+# Build with UART enabled for USB debugging
+west build -p always -d build_uart -b xiao_nrf54l15/nrf54l15/cpuapp . -DOVERLAY_CONFIG="prj_uart.conf"
+```
+
+**Scenario B: Battery Deployment (Default)**
+
+**When to use:** You have finished debugging and intend to power the board solely via the **Battery Pads**.
+
+**Configuration (`prj.conf`):**
+Modify your main `prj.conf` file to disable UART by default. This ensures the board can boot correctly when powered by a battery.
+
+```cpp
+# Disable UART to ensure successful boot on battery
+CONFIG_SERIAL=n
+CONFIG_UART_CONSOLE=n
+```
+
+```cpp
+# Use RTT for low-power logging (requires J-Link)
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_RTT_CONSOLE=y
+CONFIG_LOG=y
+CONFIG_LOG_BACKEND_RTT=y
+```
+
+**How to Build:**
+Build normally without the overlay argument.
+
+```bash
+# Build default firmware (Battery Safe)
+west build -p always -d build_batt -b xiao_nrf54l15/nrf54l15/cpuapp .
+```
+
+**Summary**
+
+- **Plugged in via USB**  Use the **`prj_uart.conf`** overlay to enable the Serial Monitor.
+- **Running on Battery**  Use the default **`prj.conf`** to ensure the device boots without issues.
+
+:::
 
 The XIAO nRF54L15 integrates a battery voltage detection feature that centers on efficiently managing battery power measurements using the TPS22916CYFPR load switch. This guide will focus on analyzing the software implementation of the battery detection **(especially the main.c code)** and guide you on how to easily deploy and use this feature in a PlatformIO environment, avoiding the complexity of the Zephyr NCS SDK.
 

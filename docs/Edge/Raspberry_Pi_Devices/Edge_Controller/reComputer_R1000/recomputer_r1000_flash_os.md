@@ -558,8 +558,11 @@ sudo reboot
 ```
 
 This process will ensure that your drivers are up to date before updating the firmware.
-
-For reComputer R1000 V1.0, it need to change the `/boot/firmware/config.txt` file after restarting and enter the following command:
+:::tip
+<div style={{ color: 'red', fontWeight: 'bold' }}>
+  Note: For reComputer R1000 V1.0, it need to change the /boot/firmware/config.txt file after restarting and enter the following command:
+</div>
+:::
 
 ```shell
  sudo nano /boot/firmware/config.txt

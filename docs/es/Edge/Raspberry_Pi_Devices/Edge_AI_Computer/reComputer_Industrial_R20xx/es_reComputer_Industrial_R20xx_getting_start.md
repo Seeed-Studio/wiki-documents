@@ -1,12 +1,12 @@
 ---
-description: El reComputer Industrial R20xx es una puerta de enlace y controlador IoT alimentado por Raspberry Pi CM5 con capacidades de IA. Con 2GB RAM, 8GB eMMC, Ethernet dual, USB, RS485, RS232, DI/DO y conectividad inalámbrica (4G, 5G, LoRa®, Wi-Fi/BLE), es perfecto para automatización industrial y computación en el borde.
+description: El reComputer Industrial R20xx es una puerta de enlace IoT y controlador alimentado por Raspberry Pi CM5 con capacidades de IA. Con 2GB RAM, 8GB eMMC, Ethernet dual, USB, RS485, RS232, DI/DO, y conectividad inalámbrica (4G, 5G, LoRa®, Wi-Fi/BLE), es perfecto para automatización industrial y computación en el borde.
 title: Introducción al reComputer Industrial R20xx
 keywords:
 - Edge Controller
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R20xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/recomputer-industrail-r2000.webp
 slug: /es/recomputer_industrial_r20xx_getting_start
 last_update:
   date: 09/28/2025
@@ -144,7 +144,7 @@ El reComputer Industrial R20xx soporta dos opciones de fuente de alimentación: 
 El reComputer Industrial R2000 se suministra con un voltaje DC de terminal de 9~36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines.
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
 
-Para conectar a tierra el reComputer Industrial R2000, el cable de tierra se puede asegurar al tornillo ubicado a la derecha del terminal de alimentación.
+Para conectar a tierra el reComputer Industrial R2000, el cable de tierra puede asegurarse al tornillo ubicado a la derecha del terminal de alimentación.
 
 **PoE**
 
@@ -180,12 +180,12 @@ El reComputer Industrial R2000 no viene con un botón de encendido por defecto, 
 | **DO**          | 8 x Puertos DO Aislados  (Voltaje de Salida: 60V DC)                                       |
 | **HDMI**        | 2 x HDMI 2.0                                                                          |
 | **LED**        | 4 x indicadores LED                                                                     |
-| **Ranura SIM Card** | soporta Tarjeta Nano SIM                                                              |
+| **Ranura para Tarjeta SIM** | soporta Tarjeta Nano SIM                                                              |
 | **Ranura M.2 M-KEY**  | 1x 2280 para M.2 NVMe SSD ; 1x 2280 para Acelerador AI                             |
 | **Ranura M.2 B-KEY**  | 1x para 5G/4G LTE                                                                  |
 | **Ranura mini PCIe**  | 1x para 4G LTE/LoRa/Zigbee                                                         |
-| **Buzzer**          | 1                                                                                 |
-| **Botón Reset**    | 1                                                                                 |
+| **Zumbador**          | 1                                                                                 |
+| **Botón de Reset**    | 1                                                                                 |
 
 ### Estado del Indicador LED
 
@@ -215,7 +215,7 @@ El reComputer Industrial R2000 cuenta con 4 indicadores LED que sirven para señ
         <td> **ACT** </td>
         <td>Naranja</td>
         <td>Encendido</td>
-        <td>Bajo Linux este pin parpadeará para indicar acceso a eMMC. Si ocurre algún error durante el arranque, entonces este LED parpadeará un patrón de error que puede ser decodificado usando la tabla de búsqueda( [Raspberry Pi Documentation - Configuration](https://www.raspberrypi.com/documentation/computers/configuration.html)) en el sitio web de Raspberry Pi.</td>
+        <td>Bajo Linux este pin parpadeará para indicar acceso a eMMC. Si ocurre algún error durante el arranque, entonces este LED parpadeará un patrón de error que puede ser decodificado usando la tabla de consulta( [Raspberry Pi Documentation - Configuration](https://www.raspberrypi.com/documentation/computers/configuration.html)) en el sitio web de Raspberry Pi.</td>
       </tr>
       <tr>
         <td> **USER** </td>
@@ -266,11 +266,11 @@ Para más detalles por favor revise el [foro de Raspberry Pi](https://forums.ras
 
 El reComputer Industrial R2000 contiene un indicador USER, y los usuarios pueden personalizar el estado según las necesidades reales.
 
-### Buzzer
+### Zumbador
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.2_buzzer_1.png" style={{width:800, height:'auto'}}/></div>
 
-El reComputer Industrial R2000 contiene un buzzer activo, que puede ser usado para varios propósitos como alarmas y notificaciones de eventos. Ingrese en la terminal del reComputer Industrial R2000:
+El reComputer Industrial R2000 contiene un zumbador activo, que puede ser usado para varios propósitos como alarmas y notificaciones de eventos. Ingrese en la terminal del reComputer Industrial R2000:
 
 ```bash
 cat /sys/kernel/debug/gpio
@@ -380,14 +380,14 @@ Los pines del terminal se definen como sigue:
   </table>
 </div>
 
-**Cables de Conexión**
+**Conexión de Cables**
 El diagrama esquemático de los cables RS232 es el siguiente:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.4_rs232_1.png" style={{width:800, height:'auto'}}/></div>
 
 ### DI (Entrada Digital)
 
-El equipo reComputer Industrial R2000 incluye 8 puertos DI, terminales phoenix de 3 pines con espaciado de 3.5mm.
+El equipo de la serie reComputer Industrial R2000 incluye 8 puertos DI, terminales phoenix de 3 pines con espaciado de 3.5mm.
  La serigrafía de un solo DI es "DI/G_DI".
 
 **Definición de Pines**
@@ -445,7 +445,7 @@ Los pines del terminal se definen de la siguiente manera:
   </table>
 </div>
 
-**Cables de Conexión**
+**Conexión de Cables**
 El diagrama esquemático de un solo cable DI es el siguiente:
 
 <div class="table-center">
@@ -480,7 +480,7 @@ El diagrama esquemático de un solo cable DI es el siguiente:
 
 ### DO (Salida Digital)
 
-El equipo reComputer Industrial R2000 incluye 8 puertos DO, terminales phoenix de 3 pines con espaciado de 3.5mm.
+El equipo de la serie reComputer Industrial R2000 incluye 8 puertos DO, terminales phoenix de 3 pines con espaciado de 3.5mm.
 La serigrafía de un solo DO es "DO/G_DO".
 **Definición de Pines**
 Los pines del terminal se definen de la siguiente manera:
@@ -535,7 +535,7 @@ Los pines del terminal se definen de la siguiente manera:
   </table>
 </div>
 
-**Cables de Conexión**
+**Conexión de Cables**
 
 El diagrama esquemático de un solo cable DO es el siguiente:
 
@@ -596,14 +596,14 @@ El reComputer Industrial R20xx está equipado con 1 puerto USB Type-C y 4 puerto
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.9_sim_slot(internal)_1.png" style={{width:900, height:'auto'}}/></div>
 
-El equipo reComputer Industrial R2000 incluye una ranura interna para tarjeta Nano SIM, que se utiliza para instalar una tarjeta Nano SIM para obtener señales 5G/4G.
+El equipo de la serie reComputer Industrial R2000 incluye una ranura interna para tarjeta Nano SIM, que se utiliza para instalar una tarjeta Nano SIM para obtener señales 5G/4G.
 Las diferencias de tamaño entre las tarjetas SIM estándar, Micro SIM y Nano SIM son las siguientes:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.9_sim_slot(internal)_2.png" style={{width:900, height:'auto'}}/></div>
 
 > **Nota**  
 > Tenga en cuenta que la versión estándar del reComputer Industrial R2000 no viene con un módulo 5G/4G.
-> Si requiere funcionalidad 5G/4G, debe adquirir por separado un módulo 5G/4G adicional.
+> Si requiere funcionalidad 5G/4G, debe comprar por separado un módulo 5G/4G adicional.
 
 ### Ranura M.2 M-KEY
 
@@ -614,7 +614,7 @@ Las diferencias de tamaño entre las tarjetas SIM estándar, Micro SIM y Nano SI
 | **Ranura**       | **Protocolos Soportados**   |  
 |---------------|--------------------------|  
 | **M.2 M-KEY 2280** | M.2 NVMe SSD        |  
-| **M.2 M-KEY 2280** | M.2 Acelerador de IA |  
+| **M.2 M-KEY 2280** | M.2 AI  Accelerator |  
 
 La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para acomodar SSD NVMe M.2 2280 con capacidades de 128GB, 256GB, 512GB, 1TB y 2TB. Esta ranura permite la expansión de almacenamiento de alta velocidad, permitiendo a los usuarios mejorar el rendimiento y la capacidad de su sistema.
 
@@ -624,9 +624,9 @@ La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para 
 > 1. **Almacenamiento de Alta Capacidad:** Las tarjetas SSD pueden utilizarse para necesidades de almacenamiento de alta capacidad.
 > 2. **Unidad de Arranque con Imagen:** Otro uso implica usar el SSD tanto como almacenamiento de alta capacidad como para almacenar imágenes del sistema, permitiendo arrancar directamente desde la tarjeta SSD.
 >  
-> Es importante tener en cuenta que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si pretende usarla como unidad de arranque y no está seguro de qué modelo comprar, recomendamos optar por nuestro SSD de 2TB recomendado (SKU 114993467). Este modelo ha sido probado y verificado para funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
+> Es importante tener en cuenta que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si tiene la intención de usarla como unidad de arranque y no está seguro sobre qué modelo comprar, recomendamos optar por nuestro SSD de 2TB recomendado (SKU 114993467). Este modelo ha sido probado y verificado para funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
 
-La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para acomodar Aceleradores de IA PCIE M.2. Y la serie R20xx-12 ha sido preinstalada con un Acelerador de IA Hailo-8 M.2 de hasta 26TOPS.
+La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para acomodar PCIE M.2 AI Accelerator. Y la serie R20xx-12 ha sido preinstalada con un Hailo-8 M.2 AI Acceleration de hasta 26TOPS.
 
 ### Ranura Mini-PCIe
 
@@ -637,7 +637,7 @@ La ranura MiniPCIe en el reComputer Industrial R2000 está diseñada para acomod
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/reset.jpg" style={{width:200, height:'auto'}}/></div>
 
-Hay un Mini Interruptor de Botón ubicado en el orificio de reinicio del reComputer AI Industrial R2135. Al presionar este botón con un objeto delgado, se puede reiniciar el CM4. Este pin cuando está en alto señala que el CM4 ha iniciado. Llevar este pin a bajo reinicia el módulo.
+Hay un Mini Interruptor de Botón ubicado en el orificio de reinicio del reComputer AI Industrial R2135. Al presionar este botón con un objeto delgado, el CM4 puede ser reiniciado. Este pin cuando está alto señala que el CM4 ha iniciado. Llevar este pin a bajo reinicia el módulo.
 
 ### Ranura M.2 B-KEY
 
@@ -648,7 +648,7 @@ La ranura M.2 B-KEY en el reComputer Industrial R2000 está diseñada para acomo
 ### Orificio de Reinicio
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.13_reset_hole_1.png" style={{width:200, height:'auto'}}/></div>
-Hay un Mini Interruptor de Botón ubicado en el orificio de reinicio del reComputer Industrial R2000. Al presionar este botón con un objeto delgado, se puede reiniciar el CM5. Este pin cuando está en alto señala que el CM5 ha iniciado. Llevar este pin a bajo reinicia el módulo.
+Hay un Mini Interruptor de Botón ubicado en el orificio de reinicio del reComputer Industrial R2000. Al presionar este botón con un objeto delgado, el CM5 puede ser reiniciado. Este pin cuando está alto señala que el CM5 ha iniciado. Llevar este pin a bajo reinicia el módulo.
 
 ### Ethernet RJ45  
 
@@ -658,16 +658,16 @@ El **reComputer R1100** está equipado con dos puertos Ethernet:
 
 | **Nombre**  | **Tipo**                     | **Velocidades**          | **PoE PD**
 |-------|------------------------------|---------------------|----------------------------|
-| ETH0  | Ethernet Gigabit nativo CM5  | 10/100/1000 Mbit/s  | Soportado       |
+| ETH0  | CM5 Gigabit Ethernet nativo  | 10/100/1000 Mbit/s  | Soportado       |
 | ETH1  | Convertido desde USB           | 10/100 Mbit/s       | No Soportado   |
 
-El reComputer Industrial R2000 viene con dos puertos Ethernet RJ45. ETH0 es una interfaz Ethernet Gigabit nativa del CM5 que soporta tres velocidades diferentes: 10/100/1000 Mbit/s. Puede habilitar la entrega de alimentación por Ethernet (PoE) a través de esta interfaz, proporcionando energía al reComputer Industrial R2000. El otro ETH1 soporta 10/100 Mbit/s que se convierte desde USB.
+El reComputer Industrial R2000 viene con dos puertos Ethernet RJ45. ETH0 es una interfaz Gigabit Ethernet nativa del CM5 que soporta tres velocidades diferentes: 10/100/1000 Mbit/s. Puede habilitar la entrega de power-over-Ethernet (PoE) a través de esta interfaz, proporcionando energía al reComputer Industrial R2000. El otro ETH1 soporta 10/100 Mbit/s que es convertido desde USB.
 
 ### HDMI
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.15_hdmi_1.png" style={{width:200, height:'auto'}}/></div>
 
-El reComputer Industrial R2000 cuenta con 2 interfaces HDMI nativas del CM5, soportando salida de video hasta 4K @ 60 fps. Es ideal para aplicaciones que requieren múltiples pantallas, permitiendo a los usuarios mostrar su contenido en pantallas externas grandes.
+El reComputer Industrial R2000 cuenta con 2x interfaz HDMI nativa del CM5, soportando hasta salida de video 4K @ 60 fps. Es ideal para aplicaciones que requieren múltiples pantallas, permitiendo a los usuarios mostrar su contenido en pantallas externas grandes.
 
 ### RTC
 
@@ -680,7 +680,7 @@ El reComputer Industrial R2000 viene equipado con un circuito watchdog de hardwa
 
 ## Interfaces y Módulos Opcionales  
 
-El reComputer Industrial R2000 soporta una rica selección de módulos de expansión y accesorios, haciéndolo adecuado para una amplia gama de escenarios y requisitos. Si está interesado en personalizar el reComputer Industrial R2000, por favor contacte odm@seeed.cc para más información.
+El reComputer Industrial R2000 soporta una rica selección de módulos de expansión y accesorios, haciéndolo adecuado para una amplia gama de escenarios y requisitos. Si estás interesado en personalizar el reComputer Industrial R2000, por favor contacta odm@seeed.cc para más información.
 Aquí está la lista de accesorios y módulos opcionales:
 
 <div class="table-center">
@@ -695,7 +695,7 @@ Aquí está la lista de accesorios y módulos opcionales:
     </thead>
     <tbody>
       <tr>
-        <td rowspan="7">Debe usarse junto para la función LoRa®WAN</td>
+        <td rowspan="7">Debe usarse junto para la Función LoRa®WAN</td>
         <td rowspan="6">Módulo LoRa®</td>
         <td>Módulo Gateway LoRaWAN opcional por región (USB) - US915</td>
         <td>114992969</td>
@@ -740,7 +740,7 @@ Aquí está la lista de accesorios y módulos opcionales:
       <tr>
         <td rowspan="8">Antena 4G con módulo 4G para función 4G, antena GPS con módulo 4G para función GPS</td>
         <td rowspan="6">Módulo 4G</td>
-        <td>Módulo LTE Cat 4 EC25-AFXGA-Mini-PCIe - para Norteamérica</td>
+        <td>Módulo LTE Cat 4 EC25-AFXGA-Mini-PCIe - para América del Norte</td>
         <td>113991134</td>
       </tr>
       <tr>
@@ -824,7 +824,7 @@ La placa base del reComputer Industrial R20xx cuenta con dos ranuras Mini-PCIe. 
 
 ### Wi-Fi/BLE  
 
-El reComputer Industrial R20xx está alimentado por el CM5 con una versión Wi-Fi/BLE integrada, proporcionando los mismos parámetros Wi-Fi/BLE que el CM5. Para información detallada de parámetros, por favor consulte el sitio web oficial de Raspberry Pi.  
+El reComputer Industrial R20xx está alimentado por el CM5 con una versión Wi-Fi/BLE integrada, proporcionando los mismos parámetros Wi-Fi/BLE que el CM5. Para información detallada de parámetros, por favor consulta el sitio web oficial de Raspberry Pi.  
 
 ### Módulo 4G
 
@@ -835,36 +835,36 @@ La placa base del reComputer Industrial R20xx cuenta con una Ranura M.2 B-KEY y 
 La placa base del reComputer Industrial R20xx cuenta con una Ranura M.2 B-KEY, soportando un módulo 4G/5G usando el protocolo USB. El módulo 4G EC25 de Quectel ha sido completamente probado para ser compatible con el reComputer Industrial R20xx.
 
 > Nota
-> Por favor tenga en cuenta que si requiere funcionalidad 4G/5G, es necesario comprar el módulo 4G correspondiente y la antena externa, y seguir las instrucciones en la sección 4.5 "Ensamblar Módulo y Antena 4G/LoRa®/Zigbee".
+> Por favor ten en cuenta que si requieres funcionalidad 4G/5G, es necesario comprar el módulo 4G correspondiente y la antena externa, y seguir las instrucciones en la sección 4.5 "Ensamblar Módulo y Antena 4G/LoRa®/Zigbee".
 
 ### Módulo LoRa®  
 
 La ranura Mini-PCIe soporta módulo LoRa® usando el protocolo USB y SPI. El módulo WM1302 de Seeed Studio ha sido completamente probado para ser compatible con el reComputer Industrial R2000.
 
 > Nota
-> Por favor tenga en cuenta que si requiere funcionalidad LoRa®, es necesario comprar el módulo LoRa® correspondiente y la antena externa, y seguir las instrucciones en la sección 4.5 "Ensamblar Módulo y Antena 4G/LoRa®/Zigbee".
+> Por favor ten en cuenta que si requieres funcionalidad LoRa®, es necesario comprar el módulo LoRa® correspondiente y la antena externa, y seguir las instrucciones en la sección 4.5 "Ensamblar Módulo y Antena 4G/LoRa®/Zigbee".
 
 ### Módulo Zigbee
 
 La ranura Mini-PCIe ofrece soporte para módulos Zigbee utilizando el protocolo USB, permitiendo la integración perfecta de la funcionalidad Zigbee en dispositivos compatibles. Esta característica permite comunicación y control eficiente dentro de redes Zigbee, mejorando la versatilidad y conectividad del sistema. Con la ranura Mini-PCIe disponible para módulos Zigbee, los usuarios tienen la flexibilidad de implementar diversas aplicaciones para mayor confiabilidad.
 
 > Nota  
-> Por favor tenga en cuenta que si requiere funcionalidad Zigbee, es necesario comprar el módulo Zigbee correspondiente y la antena externa, y seguir las instrucciones en la sección 4.5 "Ensamblar Módulo y Antena 4G/LoRa®/Zigbee".
+> Por favor ten en cuenta que si requieres funcionalidad Zigbee, es necesario comprar el módulo Zigbee correspondiente y la antena externa, y seguir las instrucciones en la sección 4.5 "Ensamblar Módulo y Antena 4G/LoRa®/Zigbee".
 
 ### SSD
 
-El reComputer Industrial R2000 soporta SSD NVMe 2280 a través del uso de una ranura PCIe(J7). Es importante tener en cuenta que el PCIe del CM5 es gen2.0 con una velocidad teórica máxima de 5Gbps. Si está usando un SSD Gen3.0 o superior, puede que no sea capaz de alcanzar la velocidad máxima del SSD. Después de las pruebas, el reTerminal DM con SSD instalado puede alcanzar una velocidad máxima de escritura de 230MB/s y una velocidad máxima de lectura de 370MB/s. Si no está seguro de qué SSDs son compatibles, puede comprar siguiendo la lista de accesorios a continuación.
+El reComputer Industrial R2000 soporta SSD NVMe 2280 a través del uso de una ranura PCIe(J7). Es importante tener en cuenta que el PCIe del CM5 es gen2.0 con una velocidad teórica máxima de 5Gbps. Si estás usando un SSD Gen3.0 o superior, puede que no sea capaz de alcanzar la velocidad máxima del SSD. Después de las pruebas, el reTerminal DM con SSD instalado puede alcanzar una velocidad máxima de escritura de 230MB/s y una velocidad máxima de lectura de 370MB/s. Si no estás seguro de qué SSDs son compatibles, puedes comprar siguiendo la lista de accesorios a continuación.
 
 > Nota
-> Tenga en cuenta que:
-> Los resultados de las pruebas de velocidad pueden variar dependiendo del modelo de SSD, el método de prueba y el entorno de prueba. Los valores proporcionados aquí son solo para fines de referencia y se obtuvieron en el laboratorio de Seeed.
+> Ten en cuenta que:
+> Los resultados de las pruebas de velocidad pueden variar dependiendo del modelo de SSD, método de prueba y entorno de prueba. Los valores proporcionados aquí son solo para fines de referencia y fueron obtenidos en el laboratorio de Seeed.
 
 > Nota
 > Hay dos usos principales para las tarjetas SSD:
 >
 > 1. **Almacenamiento de Alta Capacidad:** Las tarjetas SSD pueden utilizarse para necesidades de almacenamiento de alta capacidad.
 > 2. **Unidad de Arranque con Imagen:** Otro uso implica utilizar el SSD tanto como almacenamiento de alta capacidad como para almacenar imágenes del sistema, permitiendo arrancar directamente desde la tarjeta SSD.
-> Es importante tener en cuenta que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si tiene la intención de usarla como unidad de arranque y no está seguro sobre qué modelo comprar, recomendamos optar por nuestro SSD recomendado de 1TB (SKU 112990267). Este modelo ha sido probado y verificado para la funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
+> Es importante tener en cuenta que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si tienes la intención de usarla como unidad de arranque y no estás seguro sobre qué modelo comprar, recomendamos optar por nuestro SSD de 1TB recomendado (SKU 112990267). Este modelo ha sido probado y verificado para funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
 
 ### Chip de Cifrado TPM 2.0
 
@@ -874,7 +874,7 @@ El TPM cuenta con el OPTIGA™ TPM SLB9670 de Infineon que cumple con la especif
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/UPS_2.png" style={{width:900, height:'auto'}}/></div>
 
-El UPS es 7F, que opera en serie. El módulo UPS está posicionado entre los componentes DC5V y CM5, con una señal GPIO utilizada para alertar a la CPU en caso de una pérdida de energía del suministro de 5V. Al recibir esta señal, la CPU ejecuta un script urgente antes de que se agote la energía del supercondensador, iniciando un comando "$ shutdown".
+El UPS es 7F, que opera en serie. El módulo UPS está posicionado entre los componentes DC5V y CM5, con una señal GPIO utilizada para alertar a la CPU en caso de pérdida de energía del suministro de 5V. Al recibir esta señal, la CPU ejecuta un script urgente antes de que se agote la energía del supercondensador, iniciando un comando "$ shutdown".
 La duración de respaldo proporcionada por el UPS depende en gran medida de la carga del sistema. A continuación se muestran algunos escenarios típicos probados con un módulo CM5 que cuenta con 4GB de RAM, almacenamiento eMMC de 32GB y un módulo Wi-Fi.
 
 | **Modo de Operación** | **Tiempo(s)**  | **Observación**          |
@@ -883,7 +883,7 @@ La duración de respaldo proporcionada por el UPS depende en gran medida de la c
 | Carga completa de CPU      | 6            | stress -c 4 -t 10m -v &       |
 
 :::note
-Para la función UPS, por favor contáctenos para más información, y la señal de alarma está activa en BAJO.
+Para la función UPS, por favor contáctanos para más información, y la señal de alarma está activa en BAJO.
 :::
 
 ## Recursos Adicionales
@@ -892,7 +892,7 @@ Para la función UPS, por favor contáctenos para más información, y la señal
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

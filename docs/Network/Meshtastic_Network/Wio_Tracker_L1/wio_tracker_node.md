@@ -7,13 +7,17 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 5/19/2025
-  author: Jessie
+  date: 11/5/2025
+  author: Michelle Huang
 ---
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
-
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+    </a>
+</div>
 The Wio Tracker L1 Series is a low-power, highly extensible [Meshtastic®](https://meshtastic.org/) node featuring LoRa (862–930 MHz), the nRF52840 for efficient processing, and an L76K GPS module for accurate location tracking. Designed for flexibility, it supports OLED and E-Ink displays, as well as solar panels and battery power, making it ideal for a wide range of IoT and off-grid applications.
 
 ## L1 Series Model
@@ -58,6 +62,10 @@ Fully compatible with the Grove ecosystem, and includes PTH headers and an SWD d
 
 ### Specification
 
+:::tip
+The latest batches of L1, L1 Lite and L1 E-Ink all come with a battery adapter cable, converting the 1mm interface to a 2mm interface. This gives you more options for batteries.
+:::
+
 <table>
   <tr>
     <th colspan="1">Processor</th>
@@ -100,7 +108,7 @@ Fully compatible with the Grove ecosystem, and includes PTH headers and an SWD d
     <td colspan="1">Solar Panel (2.0mm 2p): 5V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1">Lithium Battery (1.25mm 2p JST): 3.7V — 1A</td>
+    <td colspan="1">Lithium Battery (1mm 2p JST): 3.7V — 1A</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">OLED Screen</td>
@@ -141,4 +149,4 @@ Fully compatible with the Grove ecosystem, and includes PTH headers and an SWD d
 
 **Diagram**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/l1-diagram.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1%20Diagram.png" alt="pir" width={800} height="auto" /></p>
