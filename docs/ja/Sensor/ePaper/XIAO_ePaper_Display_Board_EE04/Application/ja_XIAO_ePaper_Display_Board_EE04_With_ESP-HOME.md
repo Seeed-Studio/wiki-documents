@@ -72,7 +72,7 @@ Seeed Studio製品を使用していない場合でも、Home Assistant公式ウ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/28.png" style={{width:1000, height:'auto'}}/></div>
 
-検索語**ESPHome**を入力します。
+検索語として**ESPHome**を入力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/29.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -234,7 +234,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -533,7 +533,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26インチ モノクロ">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -599,7 +599,7 @@ display:
       it.print(0, 150, id(font1), "Hello World!");
 ```
 
-</TabItem>
+</TabItem> -->
 
 <TabItem value="5.83 Inch" label="5.83インチ モノクロ">
 
@@ -888,7 +888,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用して ePaper Panel にプログラムをアップロードする必要があります。その後、wifi 経由でアップロードできます。また、この方法が機能するには、YAML 設定に有効な暗号化キーを持つ適切に設定された `ota` および `api` セクションが含まれていることを確認してください。
 :::
 
-この方法では、ePaper パネルを何にも接続する必要がなく、オンラインであることを確認するだけです。
+この方法では、ePaper パネルを何かに接続する必要はなく、オンラインであることを確認するだけです。
 
 オプションをクリックすると、ファームウェアが自動的に ePaper パネルにインストールされます。
 
@@ -904,14 +904,14 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 ### 簡単なグラフィックの描画
 
-この例の YAML コードは、ESPHome プロジェクト用に SPI インターフェースと XIAO ePaper Display Board（ESP32-S3）- EE04 を設定します。`lambda` セクションには、画面上に簡単な図形をレンダリングする描画コマンドが含まれています：
+この例の YAML コードは、ESPHome プロジェクト用に SPI インターフェースと XIAO ePaper Display Board（ESP32-S3）- EE04 を設定します。`lambda` セクションには、画面上に簡単な図形を描画する描画コマンドが含まれています：
 
 - 2つの長方形（1つは位置（10, 10）でサイズ 100x50、もう1つは（150, 10）でサイズ 50x50）
 - 1つの円（250, 35）で半径 25
 - 2つの塗りつぶし長方形（（10, 80）と（150, 80））
 - 1つの塗りつぶし円（250, 105）で半径 25
 
-以下のコードをコピーして、YAML ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
+この例は、以下のコードをコピーして YAML ファイルの `captive_portal` コード行の後に貼り付けることで使用できます。
 
 <Tabs>
 <TabItem value="1.54 Inch Monochrome" label="1.54 インチ モノクロ" default>
@@ -1095,7 +1095,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1308,7 +1308,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26インチ モノクロ">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -1374,7 +1374,7 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83インチ モノクロ">
@@ -1586,7 +1586,7 @@ display:
 
 ### TrueTypeフォントの描画
 
-この例では、TrueTypeフォントを使用してXIAO ePaper Display Board(ESP32-S3) - EE04にカスタムアイコンを表示する方法を説明します。Material Design Iconsは、ePaperディスプレイに最適な幅広いスケーラブルシンボルを提供します。
+この例では、TrueTypeフォントを使用してXIAO ePaper Display Board(ESP32-S3) - EE04にカスタムアイコンを表示する方法を説明します。Material Design Iconsは、ePaperディスプレイに最適な幅広いスケーラブルなシンボルを提供します。
 
 #### 必要なツールのインストール
 
@@ -1616,7 +1616,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/19.png" style={{width:800, height:'auto'}}/></div>
 
-#### アイコン用ESPHomeの設定
+#### アイコン用のESPHome設定
 
 ステップ6. `captive_portal`セクションの後に、以下のコードをESPHome設定ファイルに追加します。このコードは、アイコン用の2つのフォントサイズを定義し、天気アイコンを表示するようにディスプレイを設定します。
 
@@ -1830,7 +1830,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2079,7 +2079,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26インチ モノクロ">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2154,7 +2154,7 @@ display:
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83インチ モノクロ">
@@ -2601,7 +2601,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2890,7 +2890,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26インチ モノクロ">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2958,7 +2958,7 @@ display:
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83インチ モノクロ">
@@ -3220,7 +3220,7 @@ lambda: |-
 ```
 
 :::caution
-ePaper ディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s` 設定は、ディスプレイが5分ごとにのみリフレッシュされることを意味します。必要に応じてこの値を調整してください。ただし、頻繁なリフレッシュは ePaper ディスプレイの寿命を短くする可能性があることに注意してください。
+ePaper ディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s` 設定は、ディスプレイが5分ごとにのみリフレッシュされることを意味します。必要に応じてこの値を調整してください。ただし、頻繁なリフレッシュは ePaper ディスプレイの寿命を短縮する可能性があることに注意してください。
 :::
 
 画像を、前の例で説明したテキストやその他の表示要素と組み合わせることで、XIAO ePaper Display Board(ESP32-S3) - EE04 上に豊富で情報量の多いダッシュボードを作成できます。
