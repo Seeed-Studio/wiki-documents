@@ -322,11 +322,11 @@ El complemento Puppet lanza un servidor en el puerto 10000 que genera capturas d
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-Esta URL capturará una captura de pantalla de tu panel predeterminado a resolución 800x480 (perfecto para reTerminal E Series).
+Esta URL capturará una captura de pantalla de tu panel de control predeterminado a resolución 800x480 (perfecto para reTerminal E Series).
 
-#### Optimización para E-Paper
+#### Optimización para Papel Electrónico
 
-Para pantallas e-paper, agrega el parámetro `eink` para reducir la paleta de colores:
+Para pantallas de papel electrónico, agrega el parámetro `eink` para reducir la paleta de colores:
 
 ```
 http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
@@ -392,10 +392,18 @@ online_image:
       - component.update: epaper_display
 
 display:
-  - platform: epaper_spi
+  - platform: waveshare_epaper
     id: epaper_display
-    model: Seeed-reTerminal-E1002
-    update_interval: never
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
     lambda: |-
       it.image(0, 0, id(dashboard_image));
 ```
@@ -449,7 +457,7 @@ display:
 Reemplaza `homeassistant.local` con la dirección IP real de tu Home Assistant si la resolución DNS local no funciona en tu red.
 :::
 
-Cuando tu configuración se haya subido y ejecutado exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de Home Assistant:
+Cuando tu configuración se haya subido y ejecutado exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de control de Home Assistant:
 
 <Tabs>
 <TabItem value="For E1001" label="Para E1001" default>
@@ -464,13 +472,13 @@ Cuando tu configuración se haya subido y ejecutado exitosamente, tu Pantalla eP
 </TabItem>
 </Tabs>
 
-## Demo 3: Modo de Sueño Profundo
+## Demo 3: Modo de Suspensión Profunda
 
 :::tip
-Si comienzas a usar el programa de Sueño Profundo, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar del Sueño. De esta manera, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
+Si comienzas a usar el programa de Suspensión Profunda, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar de Suspensión. De esta manera, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
 :::
 
-Este ejemplo demuestra cómo usar el modo de sueño profundo para reducir significativamente el consumo de energía, haciendo tu Pantalla ePaper reTerminal E Series adecuada para aplicaciones alimentadas por batería.
+Este ejemplo demuestra cómo usar el modo de suspensión profunda para reducir significativamente el consumo de energía, haciendo tu Pantalla ePaper reTerminal E Series adecuada para aplicaciones alimentadas por batería.
 
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
@@ -576,12 +584,12 @@ display:
 
 Esta configuración:
 
-- Crea un contador que persiste a través de los ciclos de sueño
-- Configura el dispositivo para despertar por 30 segundos, luego dormir por 3 minutos
+- Crea un contador que persiste a través de los ciclos de suspensión
+- Configura el dispositivo para despertar durante 30 segundos, luego dormir durante 3 minutos
 - Actualiza la pantalla con el conteo actual de despertares
 - Opcionalmente configura un botón para despertar el dispositivo
 
-Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispositivo despierte del sueño:
+Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispositivo despierte de la suspensión:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/53.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -591,7 +599,7 @@ Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispo
 Para una mejor comprensión, recomendamos encarecidamente que ejecutes primero los ejemplos básicos anteriores antes de probar este ejemplo integral.
 :::
 
-Este ejemplo avanzado combina múltiples características en una solución completa de panel para el reTerminal E Series. Demuestra:
+Este ejemplo avanzado combina múltiples características en una solución completa de panel de control para el reTerminal E Series. Demuestra:
 
 1. Visualización del clima y clima interior
 2. Monitoreo de batería con iconos
@@ -1249,7 +1257,7 @@ display:
 
 </details>
 
-Cuando tu configuración se haya subido y ejecutado exitosamente, tu pantalla ePaper de reTerminal E Series mostrará un panel completo con datos ambientales, hora y estado de la batería:
+Cuando tu configuración se haya subido y ejecutado exitosamente, tu pantalla ePaper del reTerminal E Series mostrará un panel completo con datos ambientales, hora y estado de la batería:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -1261,7 +1269,7 @@ Este ejemplo implementa:
 2. **Navegación con Botones**: Los botones en GPIO3 y GPIO5 se usan para navegar entre páginas
 3. **Monitoreo de Batería**: El nivel de batería se muestra con iconos apropiados que cambian según el nivel de carga
 4. **Inicialización de Hardware**: La tarjeta SD y los circuitos de monitoreo de batería se habilitan al arrancar
-5. **Pantalla de Temperatura y Humedad**: Usando el sensor SHT4x integrado vía I²C
+5. **Visualización de Temperatura y Humedad**: Usando el sensor SHT4x integrado vía I²C
 6. **Iconos Dinámicos**: Los iconos de Material Design cambian según los valores del sensor
 
 ## FAQ

@@ -234,7 +234,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -533,7 +533,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromático">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -599,7 +599,7 @@ display:
       it.print(0, 150, id(font1), "Hello World!");
 ```
 
-</TabItem>
+</TabItem> -->
 
 <TabItem value="5.83 Inch" label="5.83 Pulgadas Color Monocromático">
 
@@ -885,7 +885,7 @@ Espera un momento y verás la retroalimentación como en la siguiente imagen. Si
 <TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de encriptación válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el panel ePaper a nada, solo asegúrate de que esté en línea.
@@ -1095,7 +1095,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1308,7 +1308,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromático">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -1374,7 +1374,7 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 Pulgadas Color Monocromático">
@@ -1577,7 +1577,7 @@ display:
 </TabItem>
 </Tabs>
 
-Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando exitosamente.
+Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee044.png" style={{width:1000, height:'auto'}}/></div><br />
 
@@ -1598,7 +1598,7 @@ Paso 2. Haz clic en **INSTALL** y espera a que se complete la instalación. Una 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/18.png" style={{width:800, height:'auto'}}/></div>
 
-#### Configurando las Fuentes de Iconos
+#### Configurando Fuentes de Iconos
 
 Paso 3. Crea una nueva carpeta llamada **fonts** en tu directorio de configuración de ESPHome. Esta carpeta almacenará los archivos de fuente TrueType necesarios para mostrar iconos.
 
@@ -1830,7 +1830,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2079,7 +2079,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromático">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2154,7 +2154,7 @@ display:
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 Pulgadas Color Monocromático">
@@ -2484,7 +2484,7 @@ Para mejores resultados en pantallas ePaper, usa imágenes de alto contraste con
 
 #### Configurando ESPHome para Visualización de Imágenes
 
-Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarla.
+Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarlo.
 
 <Tabs>
 <TabItem value="1.54 Inch" label="1.54 Pulgadas Color Monocromático" default>
@@ -2601,7 +2601,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2890,7 +2890,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Pulgadas Color Monocromático">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2958,7 +2958,7 @@ display:
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 Pulgadas Color Monocromático">
