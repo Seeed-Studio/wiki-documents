@@ -46,7 +46,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-El **Seeed Studio XIAO nRF54L15** es una placa de desarrollo compacta y de alto rendimiento que cuenta con el chip Nordic nRF54L15 de vanguardia. Este SoC de próxima generación integra una radio multi-protocolo de 2.4 GHz de ultra bajo consumo con un MCU que contiene un **procesador Arm® Cortex®-M33 de 128 MHz** y un **Arm® Cortex®-M0**+ para gestión avanzada de energía. Ofrece memoria escalable de hasta **1.5 MB NVM y 256 KB RAM**, y un diseño interno de ultra bajo consumo que extiende significativamente la vida útil de la batería. Su potente radio soporta **Bluetooth® 6.0 (incluyendo Channel Sounding), Matter, Thread, Zigbee**, y modos propietarios de 2.4 GHz de alto rendimiento de hasta **4 Mbps**. La placa incluye un conjunto completo de periféricos, un **coprocesador RISC-V de 128 MHz** integrado, y características de seguridad avanzadas como aislamiento **TrustZone®** y protección del motor criptográfico. Con **gestión integrada de batería Li-ion**, el XIAO nRF54L15 es ideal para soluciones IoT compactas, seguras y energéticamente eficientes como wearables inteligentes, sensores industriales y HMIs avanzados.
+El **Seeed Studio XIAO nRF54L15** es una placa de desarrollo compacta y de alto rendimiento que cuenta con el chip Nordic nRF54L15 de vanguardia. Este SoC de próxima generación integra una radio multi-protocolo de 2.4 GHz de ultra bajo consumo con un MCU que contiene un **procesador Arm® Cortex®-M33 de 128 MHz** y un **Arm® Cortex®-M0**+ para gestión avanzada de energía. Ofrece memoria escalable de hasta **1.5 MB NVM y 256 KB RAM**, y un diseño interno de ultra bajo consumo que extiende significativamente la vida útil de la batería. Su potente radio soporta **Bluetooth® 6.0 (incluyendo Channel Sounding), Matter, Thread, Zigbee**, y modos propietarios de 2.4 GHz de alto rendimiento hasta **4 Mbps**. La placa incluye un conjunto completo de periféricos, un **coprocesador RISC-V de 128 MHz** integrado, y características de seguridad avanzadas como aislamiento **TrustZone®** y protección del motor criptográfico. Con **gestión integrada de batería Li-ion**, el XIAO nRF54L15 es ideal para soluciones IoT compactas, seguras y eficientes energéticamente como wearables inteligentes, sensores industriales y HMIs avanzados.
 
 export const Highlight = ({children, color}) => (
   <span
@@ -82,7 +82,7 @@ export const Highlight = ({children, color}) => (
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        Protocolos propietarios de 2.4 GHz<br/>
+        Protocolos propietarios 2.4 GHz<br/>
       </td>
       <td align="center">
         Bluetooth LE 6.0（incluye Channel Sounding）<br/>
@@ -91,7 +91,7 @@ export const Highlight = ({children, color}) => (
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        Protocolos propietarios de 2.4 GHz<br/>
+        Protocolos propietarios 2.4 GHz<br/>
       </td>
   </tr>
   <tr>
@@ -102,7 +102,7 @@ export const Highlight = ({children, color}) => (
   <tr>
       <th>Sensor Integrado</th>
       <td align="center">N/A</td>
-      <td align="center">IMU de 6 DOF(LSM6DS3TR-C)<br/>Micrófono (MSM261DGT006)</td>
+      <td align="center">IMU 6 DOF(LSM6DS3TR-C)<br/>Micrófono (MSM261DGT006)</td>
   </tr>
   <tr>
       <th>Potencia TX</th>
@@ -143,7 +143,7 @@ export const Highlight = ({children, color}) => (
       <td align="center">3.7 a 5 V</td>
   </tr>
   <tr>
-      <th>ESB y Protocolos Propietarios de 2.4 GHz</th>
+      <th>ESB y Protocolos Propietarios 2.4 GHz</th>
       <td align="center">hasta 4 Mbps</td>
       <td align="center">hasta 4 Mbps</td>
   </tr>
@@ -153,7 +153,7 @@ export const Highlight = ({children, color}) => (
       <td align="center">SÍ</td>
   </tr>
   <tr>
-      <th>Sondeo de canal Bluetooth</th>
+      <th>Bluetooth channel sounding</th>
       <td align="center">SÍ</td>
       <td align="center">SÍ</td>
   </tr>
@@ -175,19 +175,19 @@ export const Highlight = ({children, color}) => (
 
 <table align="center">
   <tr>
-    <th>Diagrama de indicación frontal del XIAO nRF54L15</th>
+    <th>Diagrama de indicación frontal XIAO nRF54L15</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nRF54L15_front.png" style={{width:680, height:'auto'}}/></div></td>
   </tr>
   <tr>
-    <th>Diagrama de indicación trasero del XIAO nRF54L15</th>
+    <th>Diagrama de indicación trasero XIAO nRF54L15</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/sense_newback.png" style={{width:600, height:'auto'}}/></div></td>
   </tr>
     <tr>
-    <th>Lista de Pines del XIAO nRF54L15</th>
+    <th>Lista de Pines XIAO nRF54L15</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nr_definition.png" style={{width:800, height:'auto'}}/></div></td>
@@ -199,19 +199,19 @@ export const Highlight = ({children, color}) => (
 
  <table align="center">
   <tr>
-    <th>Diagrama de indicación frontal del XIAO nRF54L15 Sense</th>
+    <th>Diagrama de indicación frontal XIAO nRF54L15 Sense</th>
   </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nRF54L15_Sense_Font.png" style={{width:680, height:'auto'}}/></div></td>
   </tr>
   <tr>
-    <th>Diagrama de indicación trasero del XIAO nRF54L15 Sense</th>
+    <th>Diagrama de indicación trasero XIAO nRF54L15 Sense</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/sense_newback.png" style={{width:600, height:'auto'}}/></div></td>
   </tr>
     <tr>
-    <th>Lista de Pines del XIAO nRF54L15 Sense</th>
+    <th>Lista de Pines XIAO nRF54L15 Sense</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_sensedefinition.png" style={{width:800, height:'auto'}}/></div></td>
@@ -232,7 +232,7 @@ NCS proporciona un ecosistema rico de aplicaciones de muestra listas para usar, 
 
 <details>
 
-<summary>Instalar conocimientos del nRF Connect SDK por adelantado</summary>
+<summary>Instalar conocimiento del nRF Connect SDK por adelantado</summary>
 
 Este documento detalla cómo instalar el entorno de desarrollo nRF Connect SDK en una computadora con Windows 11. Lo siguiente es una descripción general de las herramientas que necesitan ser instaladas
 
@@ -294,75 +294,76 @@ In your currently active terminal, type: nrfutil install device
 You should see the following output:
 ```cpp
 [00:00:02] ###### 100% [Install packages] Install packages
-``` -->
+```
+-->
 
-#### VScode configures the board and builds the burn-in file
+#### VScode configura la placa y construye el archivo de grabación
 
-Open VS Code and search for nRF Connect for VS Code Extension Pack in the Plugin Center. This plugin pack will automatically install other VS Code plugins required for nRF Connect.
+Abre VS Code y busca nRF Connect for VS Code Extension Pack en el Centro de Plugins. Este paquete de plugins instalará automáticamente otros plugins de VS Code requeridos para nRF Connect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
-The nRF Connect for VS Code extension enables developers to utilize the popular Visual Studio Code Integrated Development Environment (VS Code IDE) to develop, build, debug and deploy embedded applications based on Nordic's nRF Connect SDK (Software Development Kit). The extension includes useful development tools such as a compiler interface, linker, complete build system, RTOS-enabled debugger, seamless interfacing with the nRF Connect SDK, device tree visualization editor, and an integrated serial terminal.
+La extensión nRF Connect for VS Code permite a los desarrolladores utilizar el popular Entorno de Desarrollo Integrado Visual Studio Code (VS Code IDE) para desarrollar, construir, depurar e implementar aplicaciones embebidas basadas en el nRF Connect SDK (Kit de Desarrollo de Software) de Nordic. La extensión incluye herramientas de desarrollo útiles como una interfaz de compilador, enlazador, sistema de construcción completo, depurador habilitado para RTOS, interfaz perfecta con el nRF Connect SDK, editor de visualización del árbol de dispositivos y un terminal serie integrado.
 
-The nRF Connect extension package for VS Code includes the following components:
+El paquete de extensión nRF Connect para VS Code incluye los siguientes componentes:
 
-- nRF Connect for VS Code: The main extension contains the interface between the build system and the nRF Connect SDK, as well as an interface to manage the nRF Connect SDK version and toolchain.
-- nRF DeviceTree: Provides device tree language support and a device tree visualization editor.
-- nRF Kconfig: Provides Kconfig language support.
-- nRF Terminal: Serial and RTT terminals.
-- Microsoft C/C++: Adds language support for C/C++, including features of IntelliSense.
-- CMake: CMake language support.
-- GNU Linker Mapping Files: Support for linker mapping files.
-We can download any preferred version of the nRF Connect SDK and its toolchain via the extension. The full nRF Connect for VS Code documentation is available at https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html.
+- nRF Connect for VS Code: La extensión principal contiene la interfaz entre el sistema de construcción y el nRF Connect SDK, así como una interfaz para gestionar la versión del nRF Connect SDK y la cadena de herramientas.
+- nRF DeviceTree: Proporciona soporte para el lenguaje del árbol de dispositivos y un editor de visualización del árbol de dispositivos.
+- nRF Kconfig: Proporciona soporte para el lenguaje Kconfig.
+- nRF Terminal: Terminales serie y RTT.
+- Microsoft C/C++: Añade soporte de lenguaje para C/C++, incluyendo características de IntelliSense.
+- CMake: Soporte para el lenguaje CMake.
+- GNU Linker Mapping Files: Soporte para archivos de mapeo del enlazador.
+Podemos descargar cualquier versión preferida del nRF Connect SDK y su cadena de herramientas a través de la extensión. La documentación completa de nRF Connect for VS Code está disponible en https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html.
 
-#### Installing the toolchain
+#### Instalación de la cadena de herramientas
 
-The toolchain is a collection of tools that work together to build nRF Connect SDK applications, including assembler, compiler, linker, and CMake components.
-The first time you open nRF Connect for VS Code, you will be prompted to install the toolchain. This usually happens if the extension does not detect any installed toolchain on your computer.
-Click Install Toolchain and a list of toolchain versions will be listed that can be downloaded and installed on your computer. Select the version of the toolchain that matches the version of the nRF Connect SDK you plan to use. We always recommend using the latest tagged version of the nRF Connect SDK.
+La cadena de herramientas es una colección de herramientas que trabajan juntas para construir aplicaciones del nRF Connect SDK, incluyendo ensamblador, compilador, enlazador y componentes CMake.
+La primera vez que abras nRF Connect for VS Code, se te pedirá que instales la cadena de herramientas. Esto generalmente sucede si la extensión no detecta ninguna cadena de herramientas instalada en tu computadora.
+Haz clic en Install Toolchain y se listará una lista de versiones de cadenas de herramientas que pueden descargarse e instalarse en tu computadora. Selecciona la versión de la cadena de herramientas que coincida con la versión del nRF Connect SDK que planeas usar. Siempre recomendamos usar la última versión etiquetada del nRF Connect SDK.
 
-By default, nRF Connect for VS Code only displays the Released tab (i.e., the stable version) of the toolchain. If you are evaluating a new feature and would like to use the Preview tab or another type of tab (e.g. Customer Sampling -cs), click on "Show all toolchain versions" as shown below:
+Por defecto, nRF Connect for VS Code solo muestra la pestaña Released (es decir, la versión estable) de la cadena de herramientas. Si estás evaluando una nueva característica y te gustaría usar la pestaña Preview u otro tipo de pestaña (por ejemplo, Customer Sampling -cs), haz clic en "Show all toolchain versions" como se muestra a continuación:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/toolchain2.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
-**The ToolChain here is 3.0.1 or above**
+**La ToolChain aquí es 3.0.1 o superior**
 :::
 
-#### Installing the nRF Connect SDK
+#### Instalación del nRF Connect SDK
 
-In the nRF Connect extension for VS Code, click on Manage SDK. from the Manage SDK menu, we can install or uninstall the nRF Connect SDK version. Since this is the first time we are using the extension, the interface will only show two options.
+En la extensión nRF Connect para VS Code, haz clic en Manage SDK. desde el menú Manage SDK, podemos instalar o desinstalar la versión del nRF Connect SDK. Como esta es la primera vez que usamos la extensión, la interfaz solo mostrará dos opciones.
 
-Clicking Install SDK will list all available nRF Connect SDK versions that can be downloaded and installed locally. Select the version of the nRF Connect SDK that is required for the development of your project.
+Hacer clic en Install SDK listará todas las versiones disponibles del nRF Connect SDK que pueden descargarse e instalarse localmente. Selecciona la versión del nRF Connect SDK que se requiere para el desarrollo de tu proyecto.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/install_sdk.png" style={{width:800, height:'auto'}}/></div>
 
-If you have opened the SDK folder in VS Code, instead of the Manage SDK menu option, you will see the Manage west workspace. To resolve this issue, open another window or folder in VS Code.
+Si has abierto la carpeta SDK en VS Code, en lugar de la opción del menú Manage SDK, verás Manage west workspace. Para resolver este problema, abre otra ventana o carpeta en VS Code.
 
 :::note
-**The nRF Connect SDK here is 3.0.1 or above**
+**El nRF Connect SDK aquí es 3.0.1 o superior**
 :::
 
 :::tip
-If you do not see either of these options, make sure you have the latest version of the nRF Connect for VS Code extension package installed.
-It is important to note that the nRF Connect SDK is IDE independent, which means you can choose to use any IDE or none at all. The nRF Connect SDK is available via the https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) command line The  (nrfutil) command line interface (CLI) will download and install nRF Connect. However, we highly recommend using our nRF Connect for VS Code extension with VS Code, as it integrates not only a convenient graphical user interface (GUI) and an efficient command line interface (CLI), but also includes a number of features that will greatly simplify firmware development. Configuring other IDEs to work with the nRF Connect SDK requires additional manual steps beyond the scope of this course.
+Si no ves ninguna de estas opciones, asegúrate de tener la última versión del paquete de extensión nRF Connect for VS Code instalado.
+Es importante tener en cuenta que el nRF Connect SDK es independiente del IDE, lo que significa que puedes elegir usar cualquier IDE o ninguno en absoluto. El nRF Connect SDK está disponible a través de la interfaz de línea de comandos (CLI) https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) que descargará e instalará nRF Connect. Sin embargo, recomendamos encarecidamente usar nuestra extensión nRF Connect for VS Code con VS Code, ya que integra no solo una interfaz gráfica de usuario (GUI) conveniente y una interfaz de línea de comandos (CLI) eficiente, sino que también incluye una serie de características que simplificarán enormemente el desarrollo de firmware. Configurar otros IDEs para trabajar con el nRF Connect SDK requiere pasos manuales adicionales más allá del alcance de este curso.
 :::
 
-#### Creating User Programs
+#### Creación de Programas de Usuario
 
-In this exercise we will write a simple application based on the blinky example to control blinking LEDs on a development board. The same applies to all supported NordicSemiconductor development boards (nRF54, nRF53, nRF52, nRF70 or nRF91 series). The goal is to make sure that all the tools needed to build and burn the example are set up correctly. The focus is on learning how to create an application, build it and burn it to a Nordic chip development board using the "Copy Example" template!
+En este ejercicio escribiremos una aplicación simple basada en el ejemplo blinky para controlar LEDs parpadeantes en una placa de desarrollo. Lo mismo se aplica a todas las placas de desarrollo de NordicSemiconductor compatibles (series nRF54, nRF53, nRF52, nRF70 o nRF91). El objetivo es asegurarse de que todas las herramientas necesarias para construir y grabar el ejemplo estén configuradas correctamente. El enfoque está en aprender cómo crear una aplicación, construirla y grabarla en una placa de desarrollo de chip Nordic usando la plantilla "Copy Example"!
 
-- In VS Code, click the nRF Connect extension icon. In the Welcome view, click Create New Application.
+- En VS Code, haz clic en el icono de la extensión nRF Connect. En la vista Welcome, haz clic en Create New Application.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project1.png" style={{width:800, height:'auto'}}/></div>
 
-- Type blinky in the search bar and select the second Blinky sample (path zephyr/samples/basic/blinky), as shown below.
+- Escribe blinky en la barra de búsqueda y selecciona el segundo ejemplo Blinky (ruta zephyr/samples/basic/blinky), como se muestra a continuación.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project2.png" style={{width:800, height:'auto'}}/></div>
 
-The Blinky example will cause the LED1 on the development board to blink continuously.
-Our first application will be based on the Blinky example. The Blinky example is derived from the Zephyr mold block in the nRF Connect SDK, so you will see the zephyr name in the sample path: zephyr\samples\basic\blinky.
+El ejemplo Blinky hará que el LED1 en la placa de desarrollo parpadee continuamente.
+Nuestra primera aplicación se basará en el ejemplo Blinky. El ejemplo Blinky se deriva del bloque molde Zephyr en el nRF Connect SDK, por lo que verás el nombre zephyr en la ruta del ejemplo: zephyr\samples\basic\blinky.
 
-#### Add XIAO nRF54L15 Board
+#### Agregar Placa XIAO nRF54L15
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards" target="_blank" rel="noopener noreferrer">
@@ -370,13 +371,13 @@ Our first application will be based on the Blinky example. The Blinky example is
     </a>
 </div>
 
-Para comenzar, **clona el repositorio desde el enlace de GitHub** `git clone https://github.com/Seeed-Studio/platform-seeedboards.git` en tu carpeta local preferida. Una vez clonado, navega al directorio `platform-seeedboards/zephyr/`. **Recuerda la ruta de esta carpeta `zephyr`**;
+Para comenzar, **clona el repositorio desde el enlace de GitHub** `git clone https://github.com/Seeed-Studio/platform-seeedboards.git` en tu carpeta local preferida. Una vez clonado, navega al directorio `platform-seeedboards/zephyr/`. **Recuerda esta ruta de la carpeta `zephyr`**;
 
 Para configurar tu placa para nRF Connect en VS Code, puedes seguir estos pasos:
 
-- Abre VS Code y ve a "Settings".
+- Abre VS Code y ve a Settings.
 
-- Escribe nRF Connect en la caja de búsqueda.
+- Escribe nRF Connect en el cuadro de búsqueda.
 
 - Encuentra el elemento de configuración Board Roots y haz clic en Edit in settings.json.
 
@@ -395,7 +396,7 @@ Para configurar tu placa para nRF Connect en VS Code, puedes seguir estos pasos:
 #### Descargar Plugin de Grabación
 
 <Tabs>
-<TabItem  value="window" label="Window" default>
+<TabItem  value="window" label="Windows" default>
 
 **Plugins Adicionales:**
 
@@ -608,7 +609,7 @@ Los scripts están ubicados en el directorio scripts/factory_reset/.
 **Uso**
 El script creará y gestionará automáticamente un entorno virtual local de Python para instalar las herramientas necesarias, por lo que puede ejecutarse directamente.
 
-### Window
+### Windows
 
 - Para Windows: Navega al directorio scripts/factory_reset y ejecuta:
 
@@ -1422,7 +1423,7 @@ int main(void)
 
 - **[XLSX]** [Hoja de pines del Seeed Studio XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx)
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
