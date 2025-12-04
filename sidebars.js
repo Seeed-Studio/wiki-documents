@@ -4097,14 +4097,21 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: 'HighTorque',
+          items: [
+            'Robotics/Robot_Actuator/HighTorque/HighTorque',
+            'Robotics/Robot_Actuator/HighTorque/HighTorque_Getting_Started',
+            'Robotics/Robot_Actuator/HighTorque/HighTorque_Control',
+          ]
+        },
         'Robotics/Robot_Actuator/Feetech_Servo',
         'Robotics/Robot_Actuator/FashionStar_Servo',
         'Robotics/Robot_Actuator/Stackforce_Series',
         'Robotics/Robot_Actuator/Myactuator_Series',
         'Robotics/Robot_Actuator/Damiao_Series',
-        'Robotics/Robot_Actuator/HighTorque_Control',
         'Robotics/Robot_Actuator/RobStride_Control',
-        'Robotics/Robot_Actuator/HighTorque_Assistant',
       ]
     },
     {
