@@ -1,18 +1,18 @@
 ---
-description: Introducción al Wio Tracker L1 Series
-title: Introducción al Wio Tracker L1
+description: Introducción al Wio Tracker L1 Serie
+title:  Introducción al Wio Tracker L1
 keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
 slug: /es/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 11/24/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
 
 :::tip
-El Wio Tracker L1 Series comparte el mismo marco de hardware. Aunque la guía en video fue para el L1 Pro, es aplicable a todos los demás productos de la serie L1.
+El Wio Tracker L1 Serie comparte el mismo marco de hardware. Aunque la guía de video fue para el L1 Pro, es aplicable a todos los demás productos de la serie L1.
 :::
 ## Tutorial en Video
 
@@ -54,9 +54,9 @@ Solo el firmware 2.7 soporta la barra de menú. Si quieres usar la barra de men�
 
 Si quieres encender o apagar el zumbador, por favor primero `actualiza el firmware` a la versión `2.7`. Porque solo el firmware versión 2.7 tiene la barra de menú.
 - Encender el zumbador
-Setting (ícono con forma de engranaje) -> Notification -> Buzzer Action -> Disable
+Setting (icono con forma de engranaje) -> Notification -> Buzzer Action -> Disable
 - Apagar el zumbador
-Setting (ícono con forma de engranaje) -> Notification -> Buzzer Action -> All enabled
+Setting (icono con forma de engranaje) -> Notification -> Buzzer Action -> All enabled
 
 <div class="table-center">
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -76,6 +76,11 @@ Setting (ícono con forma de engranaje) -> Notification -> Buzzer Action -> All 
 
 ## Introducción
 
+:::danger note
+Cuando el dispositivo esté en los estados siguientes, por favor no lo reinicies manualmente o lo apagues. De lo contrario, el dispositivo puede quedar inoperativo.
+1. No terminar el proceso de transmisión de mensajes
+2. Estar siendo configurado
+:::
 ### Flashear Firmware
 
 :::caution note
@@ -97,7 +102,7 @@ Para L1 E-Ink, selecciona el dispositivo objetivo como `Seeed Wio Tracker L1 E-I
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
 
-Enciende el dispositivo, haz clic en `Enter DFU Mode`, habrá un puerto serie llamado `Tracker L1`, haz clic y conéctalo, y debería aparecer un controlador llamado `Tracker L1`.
+Enciende el dispositivo, haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `Tracker L1`, haz clic y conéctalo, y debería aparecer un controlador llamado `Tracker L1`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -165,19 +170,19 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
     Elige el método bluetooth. Elige el ID del dispositivo en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
- Método 2: Vía Serial
+ Método 2: Vía Serie
 
-    Elige el método serial. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
+    Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión es exitosa, puedes ver el estado del dispositivo directamente en el sitio web.
+    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión tiene éxito, puedes ver el estado del dispositivo directamente en el sitio web.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 
 ### Configurar los Parámetros
 
-Para comenzar a comunicarte a través de la malla, debes configurar tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe configurarse según tu ubicación regional.
+Para comenzar a comunicarte a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
 
 <Tabs>
 <TabItem value="ios" label="App IOS">
@@ -196,7 +201,7 @@ Para comenzar a comunicarte a través de la malla, debes configurar tu región. 
 
 |**Código de Región**|**Descripción**|**Rango de Frecuencia (MHz)**|**Ciclo de Trabajo (%)**|**Límite de Potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
-|UNSET|Sin configurar|N/A|N/A|N/A|
+|UNSET|Sin establecer|N/A|N/A|N/A|
 |US|Estados Unidos|902.0 - 928.0|100|30|
 |EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
@@ -206,7 +211,7 @@ Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/regi
 **EU_868** debe adherirse a una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto en una base móvil de 1 hora. Tu dispositivo dejará de transmitir si lo alcanzas, hasta que se permita nuevamente.
 :::
 
-Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [Configuración LoRa](https://meshtastic.org/docs/configuration/radio/lora/) para satisfacer tus necesidades.
+Ahora que has configurado la región LoRa en tu dispositivo, puedes continuar configurando cualquier [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) para satisfacer tus necesidades.
 
 ### Conexión de sensores
 
@@ -255,7 +260,7 @@ Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los sigui
 ¡El firmware versión 2.7 ahora soporta teclado virtual! Puedes escribir mensajes directamente en el dispositivo para comunicarte con otros dispositivos. Sigue el [Tutorial de actualización de firmware](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) para actualizar el firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
-## Preguntas frecuentes
+## FAQ
 
 ### Dispositivo bloqueado e instalación del bootloader
 
@@ -292,18 +297,24 @@ Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED ama
 
 Presiona el botón `Reset` una vez para salir del modo DFU.
 
-### Calidad de la señal
+### Calidad de señal
 
 - **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales suelen operar por encima de -7 dB. Un dispositivo con SNR inferior a -10 dB indica un rendimiento deficiente.
 
 - **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales suelen operar por encima de -110 dBm. Un dispositivo con RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
 
       Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
+
+### Antena compatible
+
+Si necesitas un reemplazo de antena para L1 Pro, [haz clic aquí](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) para obtener una.
+
 ## Recursos
 - [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) Archivo de referencia para impresión 3D](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [(V2 Nuevo joystick de cuatro direcciones) Archivo de referencia para impresión 3D](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [Archivo de contorno](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
+- [Certificación TELEC](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
 - [Certificación FCC](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [Certificación CE](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
 - [Prueba de consumo de energía y cálculo de duración de batería](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
