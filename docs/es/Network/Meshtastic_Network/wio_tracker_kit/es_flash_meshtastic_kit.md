@@ -7,14 +7,18 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/flash_meshtastic_kit
 last_update:
-  date: 11/11/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
-
+:::danger note
+Cuando el dispositivo esté en los estados siguientes, por favor no lo reinicies manualmente ni lo apagues. De lo contrario, el dispositivo puede quedar inutilizado.
+1. No haber terminado el proceso de transmisión de mensajes
+2. Estar siendo configurado
+:::
 Este tutorial guiará a los usuarios para flashear la [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) a la versión Meshtastic, para aquellos que quieran usar la red Meshtastic.
 
 :::tip
-Si quieres flashear la placa de vuelta a la versión LoRaWAN, por favor revisa este [tutorial](https://wiki.seeedstudio.com/es/flash_to_wio_tracker/). Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inoperativo.
+Si quieres flashear la placa de vuelta a la versión LoRaWAN, por favor revisa este [tutorial](https://wiki.seeedstudio.com/es/flash_to_wio_tracker/). Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inutilizado.
 :::
 
 ### Preparación
@@ -75,7 +79,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Nota: los siguientes comandos usan `python3`, sin embargo si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de python 3.x en Windows aún usa el nombre python.exe
+Nota: los siguientes comandos usan `python3`, sin embargo si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de python 3.x en windows aún usa el nombre python.exe
 
 Para instalar en el espacio de usuario en tu directorio home:
 
@@ -108,7 +112,7 @@ cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
-Encontrarás el .exe en `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` (con `.exe` si estás en Windows).
+Encontrarás el .exe en `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` (con `.exe` si estás en windows).
 Cópialo o muévelo a otro lugar para tu conveniencia, como un directorio en tu %PATH%.
 
 </TabItem>
@@ -130,7 +134,7 @@ adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.
 adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200
 ```
 
-Reemplaza el puerto serie con el puerto de tu dispositivo. Ejemplo:
+Reemplaza el puerto serial con el puerto de tu dispositivo. Ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 </TabItem>
 </Tabs>

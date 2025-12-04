@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.webp
 slug: /ja/sensecap_indicator_meshtastic
 last_update:
-  date: 10/29/2024
-  author: Jessie
+  date: 12/3/2024
+  author: Michelle Huang
 ---
 
 
@@ -46,8 +46,8 @@ SenseCAP Indicator は、[Meshtastic®](https://meshtastic.org/) 向けに設計
 |**スクリーン解像度**|480 x 480 ピクセル|
 |**電源供給**|5V-DC、1A|
 |**バッテリー**|N/A|
-|**プロセッサ**|<p>**ESP32-S3:** Xtensa® デュアルコア 32 ビット最大 240 MHz</p><p>**RP2040:** デュアル ARM Cortex-M0+ 最大 133MHz</p>|
-|**フラッシュ**|<p>**ESP32-S3:** 8MB</p><p>**RP2040:** 2MB</p>|
+|**プロセッサ**|<p>**ESP32-S3：** Xtensa® デュアルコア 32 ビット最大 240 MHz</p><p>**RP2040：** デュアル ARM Cortex-M0+ 最大 133MHz</p>|
+|**フラッシュ**|<p>**ESP32-S3：** 8MB</p><p>**RP2040：** 2MB</p>|
 |**外部ストレージ**|最大 32GB Micro SD カードをサポート（別売り）|
 |**Wi-Fi**|802.11b/g/n、2.4GHz|
 |**Bluetooth**|Bluetooth 5.0 LE|
@@ -59,12 +59,17 @@ SenseCAP Indicator は、[Meshtastic®](https://meshtastic.org/) 向けに設計
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/HO-114993532.png" alt="pir" width={800} height="auto" /></p>
 
-## ファームウェアのフラッシュ
+## 使用開始
+:::danger note
+デバイスが以下の状態にある場合は、手動で再起動または電源を切らないでください。そうしないとデバイスが故障する可能性があります。
+1. メッセージ送信プロセスが完了していない
+2. 設定中
+:::
 
 ### アプリケーションファームウェアのフラッシュ
 
 :::caution note
-ファームウェアをフラッシュする前に、購入した Indicator が Meshtastic 対応版であることを確認してください。Meshtastic 非対応の Indicator に Meshtastic ファームウェアをフラッシュしないでください。ハードウェア損傷の原因となる可能性があります。ファームウェアの更新に `NRF-OTA を使用しない` でください。デバイスが完全に動作しなくなる可能性があります。
+ファームウェアをフラッシュする前に、購入したインジケータが Meshtastic 対応バージョンであることを確認してください。Meshtastic と互換性のないインジケータに Meshtastic ファームウェアをフラッシュしないでください。これによりハードウェアが損傷する可能性があります。ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に故障する可能性があります。
 :::
 
 **ビデオ説明**
@@ -73,13 +78,13 @@ SenseCAP Indicator は、[Meshtastic®](https://meshtastic.org/) 向けに設計
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/55Sz8kHSyV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスします。
+[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスしてください。
 
 ターゲットデバイスを `Seeed SenseCAP Indicator` に選択し、最新のファームウェアを選択して、`Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-flash.png" alt="pir" width={800} height="auto" /></p>
 
-USB ケーブルを接続しながらボタンを長押しします。
+USB ケーブルを接続しながらボタンを押し続けます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/press-button.png" alt="pir" width={400} height="auto" /></p>
 
@@ -88,14 +93,14 @@ USB ケーブルを接続しながらボタンを長押しします。
 2 つのポートが表示されるので、`USB serial port` を選択して `Connect` をクリックします。
 
 :::caution note
-`USB Serial` を選択してください。INDICATOR RP2040 ではありません。
+INDICATOR RP2040 ではなく、`USB Serial` を選択してください。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect11.png" alt="pir" width={800} height="auto" /></p>
 
 ### GPS ファームウェアのフラッシュ（オプション）
 
-SenseCAP Indicator には GPS が内蔵されていないため、GPS 位置情報を取得するには [Grove GPS モジュール](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html) が必要です。<br/>
+SenseCAP Indicator には GPS が内蔵されていないため、GPS 位置を取得するには [Grove GPS モジュール](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html) が必要です。<br/>
 GPS モジュールを Grove ポートに接続してから、GPS ファームウェアをフラッシュします。
 
 - **[GPS ファームウェアダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
@@ -110,12 +115,10 @@ GPS モジュールを Grove ポートに接続してから、GPS ファーム�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/disk.png" alt="pir" width={600} height="auto" /></p>
 
-## 使用開始
-
 `Meshtastic` アプリをダウンロード：
 
-- [IOS アプリ](https://meshtastic.org/docs/category/apple-apps/)
-- [Android アプリ](https://meshtastic.org/docs/category/android-app/)
+- [IOS App](https://meshtastic.org/docs/category/apple-apps/)
+- [Android App](https://meshtastic.org/docs/category/android-app/)
 
 ### アプリ経由での接続
 
@@ -155,7 +158,7 @@ import TabItem from '@theme/TabItem';
 
 ### パラメータの設定
 
-メッシュ通信を開始するには、地域を設定する必要があります。この設定は、デバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
+メッシュ通信を開始するには、地域を設定する必要があります。この設定により、デバイスが使用する周波数範囲が制御され、地域の場所に応じて設定する必要があります。
 
 <Tabs>
 <TabItem value="ios" label="IOS アプリ">
@@ -172,7 +175,7 @@ import TabItem from '@theme/TabItem';
 
 **地域リスト**
 
-|**地域コード**|**説明**|**周波数範囲 (MHz)**|**デューティサイクル (%)**|**電力制限 (dBm)**|
+|**地域コード**|**説明**|**周波数範囲（MHz）**|**デューティサイクル（%）**|**電力制限（dBm）**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未設定|N/A|N/A|N/A|
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
@@ -184,12 +187,12 @@ import TabItem from '@theme/TabItem';
 **EU_868** は、1 時間のローリングベースで毎分計算される 10% の時間デューティサイクル制限に従う必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスで LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) を構成できます。
+デバイスに LoRa 地域を設定したので、ニーズに合わせて [LoRa 設定](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
 
 ### キーボード
 
 :::tip note
-バージョン 2.5.xx（工場出荷時ファームウェアは v2.5.11）とバージョン 2.6.xx 以降では、キーボードの使用方法が異なります。現在のファームウェアバージョンに応じて以下を確認してください。
+バージョン 2.5.xx（工場出荷時ファームウェアは v2.5.11）とバージョン 2.6.xx 以降のキーボード使用方法は異なります。現在のファームウェアバージョンに応じて以下を確認してください。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-ve.png" alt="pir" width={400} height="auto" /></p>
@@ -212,10 +215,10 @@ import TabItem from '@theme/TabItem';
 
 RP2040 はまだ開発されていないため、`ブザー`/`SD カード`/`マップ` 機能はまだ利用できません。Meshtastic と協力して最適化を進めています。
 
-#### ロール選択
+#### 役割選択
 
 :::caution
-`Repeater` ロールを選択しないでください。デバイスが繰り返し再起動する原因となります。
+`Repeater` 役割を選択しないでください。デバイスが繰り返し再起動する原因となります。
 :::
 
 #### GPS モジュール
