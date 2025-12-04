@@ -79,7 +79,8 @@ The dimension of the flange plate is shown below.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image14.png" /></div>
 
-## Configuration
+> Note: To obtain the most accurate wind direction data possible, please ensure the physical north orientation during installation by aligning the **arrow** on the base directly toward true north. Otherwise, please enable the electronic compass during configuration.
+
 # Device's Operating Mode
 
 After installation, you can power on the device, configure it and collect data from the device.
