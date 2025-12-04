@@ -79,7 +79,8 @@ last_update:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image14.png" /></div>
 
-## 配置
+> 注意：为获得尽可能准确的风向数据，请在安装时确保设备的物理北向，将底座上的**箭头**准确指向真北。否则，请在配置过程中启用电子罗盘。
+
 # 设备的工作模式
 
 安装完成后，您可以给设备上电，配置设备并从设备收集数据。
