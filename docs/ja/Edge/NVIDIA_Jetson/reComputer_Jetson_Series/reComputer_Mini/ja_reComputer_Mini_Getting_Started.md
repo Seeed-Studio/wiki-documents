@@ -1,6 +1,6 @@
 ---
-description: この記事では、reComputer Mini（NVIDIA Jetsonプラットフォームベース）の入門ガイドを提供し、デバイスの仕様と初期セットアップおよび設定の手順を含みます。
-title: reComputer Miniの使い方
+description: この記事では、reComputer Mini（NVIDIA Jetson Orinプラットフォームベース）の入門ガイドを提供し、デバイスの仕様と初期セットアップおよび設定の手順を含みます。
+title: reComputer Mini 入門ガイド
 keywords:
   - reComputer
   - reComputer mini
@@ -13,11 +13,11 @@ last_update:
   author: Youjiang
 ---
 
-# reComputer Miniの使い方
+# reComputer Mini 入門ガイド
 
 <!-- change image -->
 
-reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載した小型AIコンピューターで、最大100 TOPSのAI性能を提供します。底面にPCIeポートを装備し、豊富な拡張機能を提供し、柔軟にカスタマイズすることも可能です。システム全体は、ドローン、パトロールロボット、配送ロボットなどの自律機械への組み込み用に設計されています。54V DC入力を直接受け入れることができ、バッテリー駆動システムで広く使用できます。
+reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載した小型AIコンピュータで、最大100 TOPSのAI性能を提供します。底部にPCIeポートを装備し、豊富な拡張機能を提供し、柔軟にカスタマイズすることも可能です。システム全体は、ドローン、パトロールロボット、配送ロボットなどの自律機械への組み込み用に設計されています。54V DC入力を直接受け入れることができ、バッテリー駆動システムで広く使用できます。
 
 <div align="center">
   <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
@@ -25,19 +25,19 @@ reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載し�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6InJlY29tcHUiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjoyLCJjX3RvdGFsX3Jlc3VsdHMiOjg4LCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0ifQ%3D%3D" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
 <!-- Buy links -->
 
 ## 特徴
 
-- **本格運用向けの優れたAI性能:** 低消費電力・低遅延で最大**100 TOPS**のAI性能を実現。NVIDIA Ampere™ GPUアーキテクチャと64ビット動作機能を組み合わせたNVIDIA Orin SoCで構築され、高度なマルチファンクション映像・画像処理とNVIDIA Deep Learning Acceleratorを統合。
-- **手のひらサイズのエッジAIデバイス:** **63mmx95mmx42mm**のコンパクトサイズで、NVIDIA Jetson Orin NX 16GBモジュール、Mini J401キャリアボード、ファン、筐体を搭載。デスクトップおよび壁面取り付けに対応。
-- **豊富なI/Oによる拡張性:** 最大7x USB、1x DP 2.1、1x RJ45（GbE用）、M.2 Key E、M.2 Key M、デュアルチャンネルCAN、拡張ボード付きGPIOを含む。
-- **市場投入の加速:** 128GB NVMe SSDに**JetPack 6.0**をプリインストール、Linux OS BSP、Jetsonソフトウェアと主要AIフレームワークをサポート。
-- **デプロイメントのスケール:** AllxonとBalenaによるOTA、リモート管理サービスをサポート。
-- **柔軟なカスタマイズ:** アクセサリーモジュールの変更、ロゴ、reComputer Mini J4012オリジナル設計に基づくハードウェアインターフェースの変更を含む。
+- **本格的なAI性能を実現：** NVIDIA Orin SoCによって構築され、NVIDIA Ampere™ GPUアーキテクチャと64ビット動作機能を組み合わせ、高度なマルチファンクションビデオおよび画像処理、NVIDIA Deep Learning Acceleratorsを統合し、低消費電力・低遅延で最大**100 TOPS**のAI性能を実現します。
+- **手のひらサイズのエッジAIデバイス：** **63mmx95mmx42mm**のコンパクトサイズで、NVIDIA Jetson Orin NX 16GBモジュール、Mini J401キャリアボード、ファン、筐体を搭載。デスクトップおよび壁面取り付けに対応。
+- **豊富なI/Oで拡張可能：** 最大7つのUSB、1つのDP 2.1、1つのGbE用RJ45、M.2 Key E、M.2 Key M、デュアルチャンネルCAN、拡張ボード付きGPIOを含みます。
+- **市場投入の加速：** 128GB NVMe SSDに**JetPack 6.0**がプリインストールされ、Linux OS BSP、Jetsonソフトウェアおよび主要なAIフレームワークをサポート。
+- **デプロイメントのスケール：** AllxonとBalenaによって提供されるOTA、リモート管理サービスをサポート。
+- **柔軟なカスタマイズ：** reComputer Mini J4012オリジナル設計をベースに、アクセサリモジュールの変更、ロゴ、ハードウェアインターフェースの変更を含みます。
 
 ## 仕様
 
@@ -70,8 +70,8 @@ reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載し�
     </tr>
     <tr>
       <td>GPU</td>
-      <td>512コア NVIDIA Ampereアーキテクチャ GPU、16 Tensor Cores搭載</td>
-      <td colSpan={3}>1024コア NVIDIA Ampereアーキテクチャ GPU、32 Tensor Cores搭載</td>
+      <td>512コア NVIDIA Ampereアーキテクチャ GPU、16 Tensorコア搭載</td>
+      <td colSpan={3}>1024コア NVIDIA Ampereアーキテクチャ GPU、32 Tensorコア搭載</td>
     </tr>
     <tr>
       <td>CPU</td>
@@ -157,7 +157,7 @@ reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載し�
     </tr>
     <tr>
       <td>ネットワーク</td>
-      <td>Ethernet</td>
+      <td>イーサネット</td>
       <td colSpan={3}>1x RJ-45 ギガビットイーサネット (10/100/1000M)</td>
     </tr>
     <tr>
@@ -183,7 +183,7 @@ reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載し�
     </tr>
     <tr>
       <td>電源</td>
-      <td colSpan={4}>2x XT30 2+2 コネクタ (12-54V DC)</td>
+      <td colSpan={4}>2x XT30 2+2コネクタ (12-54V DC)</td>
     </tr>
     <tr>
       <td colSpan={5} style={{ fontSize: '24px', fontWeight: 'bold' }}>その他</td>
@@ -198,7 +198,7 @@ reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載し�
       <td colSpan={3}>345g (拡張なし)<br />462g (拡張あり)</td>
     </tr>
     <tr>
-      <td>設置方法</td>
+      <td>設置</td>
       <td colSpan={3}>デスク、壁面取り付け</td>
     </tr>
     <tr>
@@ -248,7 +248,7 @@ reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載し�
 
 ### 前提条件
 
-- Ubuntu ホストコンピュータ
+- Ubuntuホストコンピュータ
 - reComputer Mini J4012/ J4011/ J3010 または J3011
 - USB Micro-B データ転送ケーブル
 
@@ -260,8 +260,8 @@ reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載し�
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> JetPack バージョン </td>
-        <td class="dbon" colspan="3"> Ubuntu バージョン（ホストコンピュータ） </td>
+        <td  rowspan="2"> JetPackバージョン </td>
+        <td class="dbon" colspan="3"> Ubuntuバージョン (ホストコンピュータ) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -303,23 +303,23 @@ reComputer Miniは、NVIDIA Jetson Orin Nano/Orin NXモジュールを搭載し�
     <tr>
       <td rowSpan={4}>5.1.3</td>
       <td>Orin Nx 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EfA7P_6gLnJAnxptIAURoCgBDF-emSfyD9uGWYY2vuFhmg?e=DF6a8l" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
-      <td>099bf8e706468dc36600ffdb3444168<br />3cde7454646621017fc39db49c16a2c53</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDSbMzCkdgXTJsBIw2bFLCgAV5njnZV4i3Tqk62-Z9UZGE?e=9dWNfh" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td>82ab9068c5e03081391d22dc5d7c4db<br />ac9041016c1dd7a7ec2475871a10fd543</td>
     </tr>
     <tr>
       <td>Orin Nx 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Eew7pWvWB3RLtT5vMkVTFHABADBzxS8id4xNtrQHGcO3eg?e=A4X31b" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
-      <td>6ce30b9e212310498eee2c0a363cb35<br />14b1c607ae6a1ab403d5029115bc3a71b</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC6mf8MQDgwRIDZweH69G45AYoMudFTg8oc5CiEyGU9jg8?e=KrAaiV" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td>5f016131a9ab6e90c3bd21850efe13b<br />479d72046aea4aa6d3bd2f3a04df5a7a2</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcEvOGxB9DpOuFubj-xJ1oYBixiZy4vd0t_chXQcezPy9A?e=RnX7NN" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
-      <td>b8f7a0b6d5974add33c3102824c671b<br />61ca8e278b0c5e3c38a7c5a45e251251e</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCqGvCStwmPRpVHo4yBNEJEAfiD6w_iCeRtB0IuXotrdK0?e=P5sImI" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td>a2ea4d9ad06e66e2befab14484471cb<br />6984ccef396e59262c83c40ed7911bbb2</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EYi8K66PG6xOjwiU-_x3Ey4BpZhEiLFS8c_JoEDzeTVaxg?e=TkAgJV" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
-      <td>cc6efd6e4a42f099dde47e9ed71a34e<br />0981e77c50e3dc74f38338210c1f3bda0</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQApozlc_COgSLacJfvEAe6vAXeBTLY6z8H5WOfGQMGiLU4?e=ePzheb" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td>928a20a94320e901576cfd8679affc2<br />6caae9e9a30f3bc9497534f42ac4093cc</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.0</td>
@@ -362,7 +362,7 @@ Jetpack6イメージファイルのサイズは約**16.7GB**で、ダウンロ�
 :::
 
 :::info
-ダウンロードしたファームウェアの整合性を確認するには、SHA256ハッシュ値を比較することができます。
+ダウンロードしたファームウェアの整合性を確認するには、SHA256ハッシュ値を比較できます。
 
 Ubuntuホストマシンでターミナルを開き、`sha256sum <File>`コマンドを実行してダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがwikiで提供されているSHA256ハッシュと一致する場合、ダウンロードしたファームウェアが完全で破損していないことが確認されます。
 :::
@@ -385,7 +385,7 @@ Ubuntuホストマシンでターミナルを開き、`sha256sum <File>`コマ�
   <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini_rec.png" />
 </div>
 
-- **ステップ1.** USB2.0 DEVICEポートとubuntuホストPC間にUSB Micro-Bケーブルを接続します。
+- **ステップ1.** USB2.0 DEVICEポートとubuntuホストPCの間にUSB Micro-Bケーブルを接続します。
 - **ステップ2.** ピンを使ってRECOVERYホールに挿入し、リカバリボタンを押しながら保持します。
 - **ステップ3.** 電源を接続します。
 - **ステップ4.** リカバリボタンを離します。
@@ -394,10 +394,10 @@ Ubuntuホストマシンでターミナルを開き、`sha256sum <File>`コマ�
 
 LinuxホストPCでターミナルウィンドウを開き、`lsusb`コマンドを入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかがある場合、ボードは強制リカバリモードになっています。
 
-- Orin NX 16GBの場合: 0955:7323 NVidia Corp
-- Orin NX 8GBの場合: 0955:7423 NVidia Corp
-- Orin Nano 8GBの場合: 0955:7523 NVidia Corp
-- Orin Nano 4GBの場合: 0955:7623 NVidia Corp
+- Orin NX 16GBの場合：0955:7323 NVidia Corp
+- Orin NX 8GBの場合：0955:7423 NVidia Corp
+- Orin Nano 8GBの場合：0955:7523 NVidia Corp
+- Orin Nano 4GBの場合：0955:7623 NVidia Corp
 
 以下の画像はOrin Nx 16GBの場合です：
 
@@ -411,7 +411,7 @@ LinuxホストPCでターミナルウィンドウを開き、`lsusb`コマンド
 
 <summary> 単一コマンドでデバイスをフラッシュします。 </summary>
 
-reComputer Jetson J30/40 Miniはワンクリックフラッシュスクリプトを提供しており、Jetpack 6.0のフラッシュをサポートしています。
+reComputer Jetson J30/40 Miniは、Jetpack 6.0のフラッシュをサポートするワンクリックフラッシュスクリプトを開始しました。
 
 ```bash
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
@@ -422,14 +422,14 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 </div>
 
 :::caution
-免責事項：ワンクリックフラッシュスクリプトは、jetpackフラッシュをより迅速にすることを目的としています。現在のバージョンはベータ版であり、多くの問題がある可能性があります。ご理解をお願いいたします。フラッシュの問題がある場合は、以下の`Flash The Device Step by Step`に従い、[Discord Jetsonチャンネル](https://discord.com/channels/862602258452578314/930732339624026152)でフィードバックをお寄せください。迅速に修正し、近い将来この機能を改善いたします。
+免責事項：ワンクリックフラッシュスクリプトは、jetpackフラッシュをより迅速にすることを目的としています。現在のバージョンはベータ版であり、多くの問題がある可能性があります。ご理解をお願いします。フラッシュの問題がある場合は、以下の`デバイスをステップバイステップでフラッシュ`に従い、[Discord Jetsonチャンネル](https://discord.com/channels/862602258452578314/930732339624026152)でフィードバックをお寄せください。近い将来、迅速に修正し、この機能を改善します。
 :::
 
 </details>
 
-### Jetsonへのステップバイステップフラッシュ
+### Jetsonにステップバイステップでフラッシュ
 
-**ステップ1：** ubuntuホストPC上でダウンロードしたイメージファイルを展開します：
+**ステップ1：** ubuntuホストPCでダウンロードしたイメージファイルを展開します：
 
 ```bash
 cd <path-to-image>
@@ -437,7 +437,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**ステップ 2:** 次のコマンドを実行して、jetpackシステムをNVMe SSDにフラッシュします：
+**ステップ2：** 以下のコマンドを実行してjetpackシステムをNVMe SSDにフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -450,22 +450,22 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-フラッシュコマンドは2-10分間実行される場合があります。
+フラッシュコマンドは2〜10分実行される場合があります。
 :::
 
-**ステップ3：** ボード上の **DisplayPort 対応 USB Type-C** を使用して J401 をディスプレイに接続し、初期設定を完了します。
+**ステップ3：** ボード上の**USB Type-C with DisplayPort**を使用してJ401をディスプレイに接続し、初期設定セットアップを完了します：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-必要に応じて**システム設定**を完了してください。
+ニーズに応じて**システム設定**を完了してください。
 :::
 
-**ステップ4（オプション）:** Nvidia Jetpack SDKをインストール
+**ステップ4（オプション）：** Nvidia Jetpack SDKをインストール
 
-Jetsonデバイス上でターミナルを開き、以下のコマンドを実行してください：
+Jetsonデバイスでターミナルを開き、以下のコマンドを実行してください：
 
 ```bash
 sudo apt update
@@ -480,17 +480,17 @@ sudo apt install nvidia-jetpack
 
 ## リソース
 
-- [reComptuer Mini データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf)
-- [reComptuer Mini 回路図](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_SCH.7z)
+- [reComptuer Miniデータシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf)
+- [reComptuer Mini回路図](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_SCH.7z)
 - [reComputer Mini 3Dファイル](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_3D.7z)
 - [Seeed Jetsonシリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Seeed Studio Edge AI成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetsonシリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetsonデバイス概要](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Seeed Jetsonデバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

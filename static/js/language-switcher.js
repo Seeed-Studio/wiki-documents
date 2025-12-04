@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-17 11:14:55 (北京时间)
-// 多语言页面: 2045 个
+// 生成时间: 2025-12-03 14:50:07 (北京时间)
+// 多语言页面: 2069 个
 
 (function() {
   'use strict';
@@ -1103,6 +1103,12 @@
     "es",
     "ja"
   ],
+  "/rm520n_module_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/rtl8822ce_wireless_module_for_jetson": [
     "cn",
     "en",
@@ -2081,6 +2087,12 @@
     "es",
     "ja"
   ],
+  "/facial_recognition_on_the_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/install_m2_coral_to_rpi5": [
     "cn",
     "en",
@@ -2489,6 +2501,42 @@
     "es",
     "ja"
   ],
+  "/ai_remote_wireless_monitor_system_with_wifi_haLow": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_home_assistant_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_n8n_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_in_Telegram_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/use_the_motion-sensing_function_of_recamera_to_play_games": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recamera_network_connection": [
     "cn",
     "en",
@@ -2568,12 +2616,6 @@
     "ja"
   ],
   "/recamera_develop_with_node-red": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
     "es",
@@ -3941,6 +3983,12 @@
     "es",
     "ja"
   ],
+  "/fashionstar_servo": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/feetech_servo": [
     "cn",
     "en",
@@ -3953,7 +4001,25 @@
     "es",
     "ja"
   ],
+  "/hightorque_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/myactuator_series": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/robstride_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_series": [
     "cn",
     "en",
     "es",
@@ -4037,6 +4103,12 @@
     "es",
     "ja"
   ],
+  "/orbbec_gemini336": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/orbbec_depth_camera_on_ros": [
     "cn",
     "en",
@@ -4068,6 +4140,12 @@
     "ja"
   ],
   "/hexfellow_y200": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/wheeltec_imu": [
     "cn",
     "en",
     "es",
@@ -5838,6 +5916,12 @@
     "ja"
   ],
   "/ee04_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/epaper_EN04": [
     "cn",
     "en",
     "es",
@@ -9046,6 +9130,30 @@
     "es",
     "ja"
   ],
+  "/getting_started_with_xiao_debug_mate": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_debug": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_power": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_serial": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_espnow": [
     "cn",
     "en",
@@ -9706,13 +9814,19 @@
     "es",
     "ja"
   ],
+  "/deploy_ai_with_a1102": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/sensecap_a1102": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/train_ai_with_a1102": [
+  "/setting_ai_with_a1102": [
     "cn",
     "en",
     "es",
@@ -10042,6 +10156,18 @@
     "es",
     "ja"
   ],
+  "/sensecap_t2000_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/SenseCAP_T2000_tracker/Introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/training_model_for_watcher": [
     "cn",
     "en",
@@ -10055,6 +10181,12 @@
     "ja"
   ],
   "/extending_grove_with_mcp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/face_regonition_with_mcp": [
     "cn",
     "en",
     "es",
@@ -11019,6 +11151,24 @@
     "es",
     "ja"
   ],
+  "/solutions/hello_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/solutions/smart-retail-voice-ai-solution-1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/crowd-flow-monitoring": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/solutions/frigate-on-jetson-nodered-gun-alerts": [
     "cn",
     "en",
@@ -11031,19 +11181,13 @@
     "es",
     "ja"
   ],
-  "/mission_pack_features_v3": [
+  "/ha_dify_watcher_llms": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/mission_pack_intro_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/crowd-flow-monitoring": [
+  "/mcp_external_system_integration": [
     "cn",
     "en",
     "es",
@@ -11055,13 +11199,13 @@
     "es",
     "ja"
   ],
-  "/ha_dify_watcher_llms": [
+  "/mission_pack_features_v3": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/solutions/hello_watcher_llms": [
+  "/mission_pack_intro_v3": [
     "cn",
     "en",
     "es",

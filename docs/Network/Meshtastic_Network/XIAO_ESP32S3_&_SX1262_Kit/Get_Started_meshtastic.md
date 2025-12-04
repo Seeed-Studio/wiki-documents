@@ -4,7 +4,7 @@ title: XIAO ESP32-S3&Wio SX1262 Kit
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
 last_update:
-  date: 11/11/2025
+  date: 11/24/2025
   author: Michelle Huang
 ---
 
@@ -95,11 +95,11 @@ The last four digits of nodenum are the device number ID discovered by the mesht
 :::
 
 
-### Connection with SX-1262
+### Connected to SX-1262
 
 The SX-1262 can be connected to the Xiao ESP32-S3 via the B2B interface. The SX-1262 uses SPI to  communicate with Xiao ESP32-S3.
 :::warning
-The compatible SX-1262 can only be bought within the kit.  
+The compatible SX-1262 can only be bought within the kit.
 :::
 ## Communicate with Wio Tracker T1000-E
 
@@ -224,6 +224,13 @@ Modules are included in the firmware and allow users to extend the functionality
 | [Store & Forward](https://meshtastic.org/docs/configuration/module/store-and-forward-module/) | Stores messages on a device for delivery after disconnected clients rejoin the mesh. |
 | [Telemetry](https://meshtastic.org/docs/configuration/module/telemetry/) | Attach sensors to the device and transmit readings on a regular interval to the mesh. |
 | [Traceroute](https://meshtastic.org/docs/configuration/module/traceroute/) | Track which nodes are used to hop a message to a certain destination. |
+## Resource
+
+- [The Schematic Diagram of the SX1262 compatible with Xiao ESP32-S3](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
+- [Wio-SX1262 for XlAO 3D file](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
+- [Wio-SX1262 Module Datasheet](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
+- [Casing 3D file](https://www.thingiverse.com/thing:6888371)
+- [XIAO ESP32S3 Kit Kicad Library](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20Wio%20SX1262%20for%20XIAO%20ESP32S3)
 
 ## Tech Support & Product Discussion
 

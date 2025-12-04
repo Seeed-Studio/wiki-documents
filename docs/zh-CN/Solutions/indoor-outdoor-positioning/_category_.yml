@@ -1,0 +1,10 @@
+position: 7
+label: '室内外定位'
+collapsible: true
+collapsed: true
+className: _indoor-outdoor-positioning
+# link:
+#   type: generated-index
+#   slug: cn/indoor-outdoor-positioning
+#   title: 室内外定位
+#   description: 跨室内外环境的定位和跟踪解决方案。

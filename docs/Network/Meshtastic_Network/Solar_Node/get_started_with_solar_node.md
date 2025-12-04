@@ -8,11 +8,15 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 11/11/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
 
-
+:::danger note
+When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
+1. Not finishing the message transmission process
+2. Being configured
+:::
 ## Get Started
 
 Before formal deployment, please test and configure the node first.

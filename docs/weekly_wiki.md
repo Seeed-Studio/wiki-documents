@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 11/17/2025
+  date: 12/1/2025
   author: Frank
 ---
 
@@ -17,56 +17,101 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is November 17th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [iSpy on reComputer](https://wiki.seeedstudio.com/ispy_on_recomputer/)
+### [Getting Started with XIAO ePaper Display EN04](https://wiki.seeedstudio.com/epaper_EN04/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/ispy_1.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide shows how to deploy the open-source video surveillance application iSpy on the reComputer R series edge computing devices from Seeed Studio. It covers hardware prerequisites, system updates, installing Docker and Docker Compose, creating the `docker-compose.yaml` configuration, and adding cameras to start live monitoring.
+Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, NFC function and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
 
 </div>
 
-### [Getting started for Home Assistant with reCamera](https://wiki.seeedstudio.com/getting_started_for_home_assistant_with_recamera/)
+### [SenseCAP T2000 Tracker Introduction](https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide walks you through setting up Home Assistant on a Seeed Studio reCamera system, including hardware prerequisites, installing Docker, deploying Home Assistant in a container, and configuring the camera integration and automation with the system’s data.
+[**SenseCAP T2000**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), an industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection, a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed.
 
 </div>
 
-### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
+### [Deploying AI Models on SenseCAP A1102 Using SenseCraft AI](https://wiki.seeedstudio.com/deploy_ai_with_a1102/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-**EtherCAT (Ethernet for Control Automation Technology)** is an open-source, high-performance real-time Industrial Ethernet fieldbus protocol based on **IEEE 802.3 Ethernet standards**. It operates on a **master-slave architecture** and is renowned for its exceptional speed, precision, and flexibility in industrial automation environments. This document uses the [**recomputer robotics J401**](https://www.seeedstudio.com/reComputer-Robotics-Carrier-board-p-6442.html) as the **EtherCAT master** and the [**MyActuator X4**](https://www.seeedstudio.com/Myactuator-X4-P12-5-10-Planetarty-Actuator-p-6470.html) as the **slave** to demonstrate how to establish communication between a Jetson and EtherCAT devices.
+The SenseCAP A1102 is a powerful sensor device that combines advanced AI capabilities with ease of deployment. This guide will walk you through deployingofficial or custom AI models on the A1102 using the **SenseCraft AI** website, offering step-by-step instructions for pairing, configuration, and testing.
 
 </div>
 
-### [reSpeaker XVF3800 Control with Python](https://wiki.seeedstudio.com/respeaker_xvf3800_python_sdk/)
+### [Play Subway Surfers with body sensor control](https://wiki.seeedstudio.com/use_the_motion-sensing_function_of_recamera_to_play_games/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_text.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-In this section, we are going to talk about how to control your ReSpeaker XVF-3800 using the Python SDK. It makes development more convenient for users who want to build their own applications.
-For instance, you can detect where the voice is coming from, perform voice activity detection (VAD), control LEDs, and much more.
+The reCamera is an AI camera equipped with powerful edge computing capabilities. This demo showcases its ability to run the YOLO11n-Pose model in real-time at the device level - without relying on the cloud, it can accurately identify the key points and postures of the human body.
+
+</div>
+
+### [Deploy Facial Recognition on reComputer](https://wiki.seeedstudio.com/facial_recognition_on_the_recomputer/)
+
+<div class="video-container">
+<iframe width="800" height="400" src="https://www.youtube.com/embed/wcT_ZYsRbAE" title="Facial Recognition On Raspberry Pi CM5 reComputer with Hailo-8 NPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki will guide you through using a reComputer equipped with a `Hailo` NPU to implement real-time facial recognition. In this project, we use `SCRFD-10G` for efficient face detection, capable of quickly and accurately detecting faces of various scales, including small faces, ensuring real-time performance.
+
+</div>
+
+### [MCP Integration with External Systems](https://wiki.seeedstudio.com/mcp_external_system_integration/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This guide demonstrates how to integrate your existing business systems with **SenseCAP Watcher** through **MCP (Model Context Protocol)**. Unlike the basic calculator example, this tutorial focuses on a industrial use case: **voice-controlled warehouse management**.
+
+</div>
+
+### [WHEELTEC IMU IMU Sensor Getting Start](https://wiki.seeedstudio.com/wheeltec_imu/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/wheeltec/wheeltec_imu.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The WHEELTEC H30 is a high-precision attitude sensor designed to accurately measure key data of carriers, including 3D attitude angles, acceleration, angular velocity, and magnetic field strength. Engineered with industrial-grade reliability, this sensor integrates a 3-axis MEMS gyroscope, a 3-axis MEMS accelerometer, and a 3-axis magnetic sensor—delivering robust performance for professional applications.
+
+</div>
+
+### [Stackforce X Series Motors Getting Start](https://wiki.seeedstudio.com/stackforce_series/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010.webp" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This article will introduce how to get started with Stackforce series motors and how to use them with C++ and Python on the reComputer Jetson Super.
 
 </div>
 
 <!-- ## Existing Wiki Updated
 
-### [Getting Started with XIAO ePaper Display EE04](https://wiki.seeedstudio.com/epaper_ee04/)
+### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
 
-We have added [instructions for using the User Buttons](https://wiki.seeedstudio.com/epaper_ee04/#user-buttons-on-xiao-epaper-display-boardesp32-s3---ee04) on the XIAO ePaper Display Board (ESP32-S3) - EE04. -->
+We have added the [Controlling an EtherCAT Motor on Jetson (MyActuator X4)](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/#5-example--controlling-an-ethercat-motor-on-jetson-myactuator-x4) example.
+
+### [reComputer R1000 Getting Started](https://wiki.seeedstudio.com/recomputer_r/)
+
+We have added the [Connect to 4G Module by QMI Mode](https://wiki.seeedstudio.com/recomputer_r/#connect-to-4g-module-by-qmi-mode) example. -->
 
 ## The Efforts of Contributor
 
@@ -214,5 +259,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
 - [weekly wiki on 2025.11.03rd](/Seeed_Elderly/weekly_wiki/wiki251103)
 - [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/wiki251110)
+- [weekly wiki on 2025.11.17th](/Seeed_Elderly/weekly_wiki/wiki251117)
+- [weekly wiki on 2025.11.24th](/Seeed_Elderly/weekly_wiki/wiki251124)
 
 </details>

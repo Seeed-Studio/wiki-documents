@@ -131,10 +131,16 @@ function preprocessDocument(content, startsInsideCodeBlock = false) {
       // 空行
       processedLines.push(`${lineId}[EMPTY_LINE]`);
     } else if (meta.inCodeBlockLine) {
-      // 代码块内行：用占位符顶替真实内容，保持行数/位置
-      processedLines.push(`${lineId}__CODE_LINE_PLH__`);
+      // 特殊情况：这一行里有 HTML 注释结束符 -->，
+      // 需要让模型看到它，否则它会以为前面的 <!-- 注释永远没结束
+      if (trimmedContent.includes('-->')) {
+        // 只暴露 -->，其余内容用占位符掩盖（模型只需要知道注释结束了）
+        processedLines.push(`${lineId}-->`);
+      } else {
+        // 普通代码行：用占位符顶替真实内容，保持行数/位置
+        processedLines.push(`${lineId}__CODE_LINE_PLH__`);
+      }
     } else {
-      // 普通行：原样（含缩进）送给模型
       processedLines.push(`${lineId}${indent}${trimmedContent}`);
     }
 
@@ -423,8 +429,12 @@ ${glossaryPairs}
    - 反例（禁止）：\`<TabItem value="适用于 E1002" label="适用于 E1002">\`（有 label 时不应改 value）
 
 8. **产品系列命名（“… Series” 后缀）**：
-   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`），保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为目标语言（zh-CN → “系列”）。
-   - 示例：\`reTerminal E Series\` → \`reTerminal E 系列\`
+   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`）时，保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为**该目标语言中表示“产品系列”的常用词**。
+   - 各语言示例（仅作参考，实际输出只使用当前目标语言）：
+     - 若目标语言为 zh-CN：\`reTerminal E Series\` → \`reTerminal E 系列\`
+     - 若目标语言为 ja：\`reTerminal E Series\` → \`reTerminal E シリーズ\`
+     - 若目标语言为 es：\`reTerminal E Series\` → \`reTerminal E Serie\`
+   - **禁止**在日文或西班牙文译文中输出中文“系列”；必须使用目标语言自身的词汇。
 </translation_rules>
 
 <example>
@@ -827,6 +837,15 @@ ${termsList}
 
 // 修复锚点链接中的空格问题
 function fixAnchorLinks(content) {
+  // 处理带路径的锚点链接，例如 /slug#fragment 或官方 Wiki 链接中的 #fragment
+  content = content.replace(
+    /\[([^\]]*)\]\(((?:\/|https:\/\/wiki\.seeedstudio\.com\/)[^)#\s]*)#([^)]*)\)/gi,
+    (match, text, base, anchor) => {
+      const fixedAnchor = anchor.replace(/\s+/g, '-');
+      return `[${text}](${base}#${fixedAnchor})`;
+    }
+  );
+
   // 修复锚点链接中的空格
   // 匹配 [文本](#锚点) 格式，将锚点中的空格替换为连字符
   content = content.replace(
