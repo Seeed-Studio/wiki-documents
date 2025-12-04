@@ -528,11 +528,11 @@ def check_order_status(order_id: str) -> dict:
 ## Technical Support
 
 <div class="button_tech_support_container">
-<a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
+<a href="https://discord.com/invite/kpY74apCWj" class="button_tech_support_sensecap"></a>
 <a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="mailto:solution@seeeed.cc" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
