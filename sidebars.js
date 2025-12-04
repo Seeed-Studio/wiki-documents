@@ -9217,6 +9217,7 @@ const sidebars = {
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
         'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
+        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Assistant',
       ]
     },
     {
@@ -14238,6 +14239,7 @@ const sidebars = {
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
         'es/Robotics/Robot_Actuator/es_HighTorque_Control',
         'es/Robotics/Robot_Actuator/es_RobStride_Control',
+        'es/Robotics/Robot_Actuator/es_HighTorque_Assistant',
       ]
     },
     {
@@ -19255,6 +19257,7 @@ const sidebars = {
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
         'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
         'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
+        'ja/Robotics/Robot_Actuator/ja_HighTorque_Assistant',
       ]
     },
     {
