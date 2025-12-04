@@ -127,10 +127,8 @@ This guide uses Seeed's reRouter and the reSpeaker XVF3800 microphone array to d
           <strong>Role:</strong> Processing Unit<br/><br/>
           <strong>Technical Specifications:</strong>
           <ul style={{ textAlign: 'left', marginTop: '5px' }}>
-            <li><strong>CPU:</strong> Quad-Core Processor</li>
             <li><strong>RAM:</strong> 4GB (Minimum Requirement)</li>
             <li><strong>Storage:</strong> 32GB eMMC</li>
-            <li><strong>OS:</strong> OpenWrt 24.10.3 (Build r28872)</li>
           </ul>
           <small><em>*Note: Performance below these specs has not been validated.</em></small>
         </td>
@@ -139,8 +137,6 @@ This guide uses Seeed's reRouter and the reSpeaker XVF3800 microphone array to d
            <strong>Technical Specifications:</strong>
            <ul style={{ textAlign: 'left', marginTop: '5px' }}>
             <li><strong>Model:</strong> XVF3800 4-Mic Array</li>
-            <li><strong>Firmware:</strong> v2.0.5</li>
-            <li><strong>Configuration:</strong> 1-Channel (Processed Audio)</li>
             <li><strong>Features:</strong> Noise Suppression, AEC, Beamforming</li>
            </ul>
         </td>
@@ -270,7 +266,7 @@ Connect the reSpeaker XVF3800 microphone array to **your host device** via USB t
 
     Open Command Prompt (`cmd`) or PowerShell and run:
 
-    ```bash
+    ```powershell
     git clone https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY.git
     cd reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
     ```
@@ -279,7 +275,7 @@ Connect the reSpeaker XVF3800 microphone array to **your host device** via USB t
 
     Run the following three commands to initialize the device:
 
-    ```bash
+    ```powershell
     # 1. Clear existing configuration
     .\xvf_host.exe clear_configuration 1
 
@@ -321,6 +317,14 @@ You can also use the OpenWrt web interface to configure network settings, includ
 - Open a browser and visit: http://192.168.49.1
 - Username: root
 - Password: (none / empty by default)
+
+If you need other language support, such as Chinese, you can install the `luci-i18n-base-zh-cn` package via the web interface or SSH.
+
+```shell
+opkg update
+opkg install luci-i18n-base-zh-cn
+```
+
 :::
 
 :::caution Important
@@ -377,7 +381,7 @@ wget -q -O config.yaml 'https://appstore.seeed-fleet.com/config.yaml'
 
 ##### Step 2.3: Download and Extract Models
 
-We will download the pre-trained ASR model package (approximately **480**) directly from the Seeed Studio server, verify its integrity using SHA-256, and extract it.
+We will download the pre-trained ASR model package directly from the Seeed Studio server, verify its integrity using SHA-256, and extract it.
 
 | File | URL |
 | :--- | :--- |
@@ -400,14 +404,13 @@ echo "Model package download completed. Check file size is approximately 500MB."
 
 # 4. Verify the file integrity using SHA-256 Checksum
 # The result MUST match the expected hash above.
-echo "Verifying file checksum..."
-shasum -a 256 models.zip
+sha256sum models.zip
 
 # 5. Extract the model package into the 'models' directory
 unzip -o models.zip
 
 # 6. Clean up the temporary ZIP file
-rm -f models.zip
+# rm -f models.zip
 
 # 7. Verify the model files are present
 ls -l /data-iot/respeaker/models/
@@ -486,7 +489,7 @@ docker run -d --name watchtower \
     --cleanup -i 60 sensecraft-asr-server sensecraft-voice-client
 ```
 
-##### ✅ 3. Verification
+##### 3. Verification
 
 Check the final state of the deployment.
 
@@ -500,11 +503,210 @@ docker logs sensecraft-voice-client
 
 If the logs indicate successful starting without critical errors, the SenseCraft services are successfully deployed.
 
-## Access the SenseCraft Voice Service
+---
 
-The SenseCraft Voice Client exposes a web interface on port `8090` of the reRouter's IP address.
-You can access it via a web browser at:
+it is highly recommended to reboot the device to ensure all settings, permissions, and network configurations are fully loaded and recognized by the system.
 
-```shell
-http://<reRouter_IP_Address>:8090
+```bash
+reboot
 ```
+
+## SenseCraft Voice: Edge-to-Cloud Platform Overview
+
+SenseCraft Voice is a cutting-edge platform designed to transform raw audio data captured at the edge (reRouter) into actionable business intelligence through powerful AI analysis and centralized management.
+
+The platform's unique edge-cloud architecture provides unparalleled reliability, speed, and analytical depth for enterprise-grade audio monitoring solutions.
+
+| **Feature**                       | **Value Proposition**                                        | **Key Advantages**                                           |
+| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Resilient Edge Processing**     | Guarantees continuous operation and low latency.             | Voice ASR and recognition run *locally* on the reRouter, ensuring real-time response and data collection even during network outages. |
+| **Deep AI Customization**         | Adapts the platform to specific business needs and terminology. | Administrators can define custom **Keywords, Synonyms, and AI Prompts** to direct AI analysis and ensure accurate event detection specific to their business language. |
+| **Granular Location Mapping**     | Simplifies large-scale deployment management.                | Supports hierarchical organization of thousands of edge devices by **Store, Location, and Device Name**, moving beyond confusing MAC addresses for easy filtering and reporting. |
+| **Actionable Dashboards**         | Provides immediate business insight and performance tracking. | Centralized Dashboard features **Multi-Store Filtering**, real-time **Device Online Rate**, and **Keyword Hotspot Analysis** to monitor operational status and business events instantly. |
+
+The SenseCraft Voice solution is built upon a robust edge-cloud architecture, ensuring both real-time local processing and centralized management. The service consists of two primary components: the Edge-side Client running on the reRouter, and the Cloud/Server-side Management Platform.
+
+## User Guide
+
+### Edge-side Client (reRouter) Access
+
+The Edge Client is essential for real-time validation and local setup.
+
+- **Access:** Open your web browser and navigate to the reRouter's IP address on port 8090: `http://<reRouter_IP_Address>:8090`.
+- **Core Function:** The interface provides real-time ASR transcription (to verify audio input), controls for Voiceprint Recognition (speaker identification), and Device Configuration (network settings, upstream server address).
+
+<table> <thead> <tr> <th>Module Name</th> <th>Description</th> <th>Interface Screenshot</th> </tr> </thead> <tbody> <tr> <td><b>Voice ASR</b></td> <td> <p><b>Description:</b> Displays the current operational status of the local Automatic Speech Recognition (ASR) service.</p> <p><b>Purpose:</b> Provides <b>real-time transcription</b> of detected speech, essential for verifying local audio input and recognition accuracy.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>Figure 1: Voice ASR Module</p></div> </td> </tr> <tr> <td><b>Voiceprint Recognition</b></td> <td> <p><b>Description:</b> Manages and monitors the Voiceprint Recognition system.</p> <p><b>Purpose:</b> Used to <b>register, differentiate, and identify</b> different speakers/users based on their unique voice characteristics.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>Figure 2: Voiceprint Recognition Module</p></div> </td> </tr> <tr> <td><b>Device Status & Configuration</b></td> <td> <p><b>Description:</b> Provides detailed information about the reRouter's operating status and allows core parameter changes.</p> <p><b>Purpose:</b> Enables configuration updates such as <b>network settings</b> (Wi-Fi) and changing the <b>upstream server address</b> for cloud communication.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>Figure 3: Device Status & Configuration</p></div> </td> </tr> </tbody> </table>
+
+### Cloud-side Management Platform
+
+The Cloud Platform is organized into five main navigation areas, offering powerful data analysis and system configuration tools.
+
+#### 1. Dashboard: Insights at a Glance
+
+The Dashboard is your operational command center, providing aggregated metrics and performance trends:
+
+- **Store Filtering:** Easily switch views by selecting one or more stores, with all charts updating instantly.
+- **Analysis:** Monitor **Daily Collection Trends** (hourly records) and **Keyword Hotspot Analysis** (showing which keywords are frequently triggered and the associated **Device Names**).
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/main-page-dashboard.png" alt="Dashboard Main Page" />
+
+<figcaption>Figure 4: Dashboard Interface</figcaption>
+
+</figure>
+
+</div>
+
+#### 2. Record Management: Data Auditing & Export
+
+This module provides the definitive view of all collected voice records.
+
+- **Advanced Filtering:** Use **Device Name, Store Name, Location Name, or MAC Address** for precise data retrieval. Searches are executed only after clicking the **"Filter"** button, giving users full control.
+- **Export Capability:** Select and export filtered data in **three formats** for external use (choose one at a time): **Markdown**, **Plain Text (.txt)**, or **Original Audio File**.
+- **Clarity:** All record views prioritize the easily identifiable **Device Name** over the MAC address.
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/record-management.png" alt="Record Management Interface" />
+
+<figcaption>Figure 5: Record Management Interface</figcaption>
+
+</figure>
+
+</div>
+
+#### 3. AI Analysis: Historical & Custom Processing
+
+This area handles the submission of speech records for advanced processing by the AI engine.
+
+- **Historical Sessions:** Review your past interactions with the AI analysis engine. The history window displays conversations chronologically, and clicking a session immediately loads the previous conversation thread for review.
+- **Processing:** Submit filtered records for AI processing based on the currently selected **AI Prompt**.
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/ai-analysis.png" alt="AI Analysis Interface" />
+
+<figcaption>Figure 6: AI Analysis Interface</figcaption>
+
+</figure>
+
+</div>
+
+#### 4. Store Management: Device & Location Hierarchy
+
+This area provides the necessary tools for setting up and maintaining the organizational hierarchy of all edge devices.
+
+- **Hierarchical View:** Easily manage stores, their specific in-store locations, and the associated reRouter devices.
+- **Centralized Control:** Streamline device deployment and configuration by grouping devices logically.
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/store-management.png" alt="Store Management Interface" />
+
+<figcaption>Figure 7: Store Management Interface</figcaption>
+
+</figure>
+
+</div>
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/device-management.png" alt="Device Management Interface" />
+
+<figcaption>Figure 8: Device Management Interface</figcaption>
+
+</figure>
+
+</div>
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/specific-location-management.png" alt="Specific Location Management Interface" />
+
+<figcaption>Figure 9: Specific Location Management Interface</figcaption>
+
+</figure>
+
+</div>
+
+#### 5. Backend Configuration: System Control & Customization
+
+This section allows administrators to define system-wide parameters for AI processing and event triggering.
+
+##### 5.1. Keyword Settings
+
+Define custom keywords and synonyms to identify specific business events in recordings.
+
+- **Customization:** Define **Keywords** and their **Synonyms** for event detection.
+- **Visualization:** Assign a **Marking Color** for visual distinction on the Dashboard.
+- **Management:** Supports **Adding, Editing, Deleting, and Batch Deletion**.
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/keywords-backend-management.png" alt="Keywords Backend Management Interface" />
+
+<figcaption>Figure 10: Keyword Settings Interface</figcaption>
+
+</figure>
+
+</div>
+
+##### 5.3. User Management
+
+The User Management module controls platform access and permissions.
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/user-management.png" alt="User Management Interface" />
+
+<figcaption>Figure 12: User Management Interface</figcaption>
+
+</figure>
+
+</div>
+
+##### 5.2. AI Prompt Settings
+
+Create and manage custom **AI Prompts** to dictate how the AI processes selected voice records.
+
+- **Control:** Define prompt **Name, Tags, and Content**. Only one **Enabled** prompt is active for use at a time.
+- **Management:** Supports **Adding, Editing, Deleting, and Batch Deletion**.
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/system-prompt-editing.png" alt="AI Prompt Editing Interface" />
+
+<figcaption>Figure 11: AI Prompt Settings Interface</figcaption>
+
+</figure>
+
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.com/invite/kpY74apCWj" class="button_tech_support_sensecap"></a>
+<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="mailto:solution@seeeed.cc" class="button_tech_support_sensecap2"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
