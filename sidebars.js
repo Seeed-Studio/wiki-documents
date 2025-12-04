@@ -4065,6 +4065,7 @@ const sidebars = {
         'Robotics/Robot_Actuator/HighTorque',
         'Robotics/Robot_Actuator/HighTorque_Control',
         'Robotics/Robot_Actuator/RobStride_Control',
+        'Robotics/Robot_Actuator/HighTorque_Assistant',
       ]
     },
     {
