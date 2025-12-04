@@ -8,11 +8,15 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /ja/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 11/11/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
 
-
+:::danger note
+デバイスが以下の状態にある場合は、手動で再起動または電源を切らないでください。そうしないとデバイスが故障する可能性があります。
+1. メッセージ送信プロセスが完了していない
+2. 設定中
+:::
 ## 使用開始
 
 正式な展開の前に、まずノードをテストして設定してください。
@@ -20,12 +24,12 @@ last_update:
 ### ファームウェアのフラッシュ
 
 :::caution note
-ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
+ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に故障する可能性があります。
 :::
 
 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスしてください。
 
-ターゲットデバイスを `Seeed SenseCAP Solar Node` に選択し、最新のファームウェアを選択してから、`Flash` をクリックします。
+対象デバイスを `Seeed SenseCAP Solar Node` に選択し、最新のファームウェアを選択してから `Flash` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
@@ -86,7 +90,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="iOS アプリ">
 
-- Bluetooth パネルでターゲットデバイスを選択します。
+- Bluetooth パネルで対象デバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
@@ -98,7 +102,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android アプリ">
 
-- `+` をクリックしてターゲットデバイスを選択します。
+- `+` をクリックして対象デバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
@@ -125,7 +129,7 @@ import TabItem from '@theme/TabItem';
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    接続方法は 2 つあります。お好みの方法を選択できます。
+    接続方法は 2 つあります。お好みの方法を選択してください。
 
  方法 1：Bluetooth 経由
 
@@ -137,13 +141,13 @@ import TabItem from '@theme/TabItem';
     シリアル方法を選択します。デバイスマネージャーを開いて、デバイスが接続されているポートを確認します。ポップアップウィンドウでそのポートを選択します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    デバイスがリストに表示されます。クリックして接続します。接続が成功すると、ウェブサイト上でデバイスのステータスを直接確認できます。
+    デバイスがリストに表示されます。クリックして接続します。接続が成功すると、ウェブサイト上でデバイスの状態を直接確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 ### パラメータの設定
 
-メッシュ通信を開始するには、地域を設定する必要があります。この設定は、デバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
+メッシュ通信を開始するには、地域を設定する必要があります。この設定はデバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
 
 <Tabs>
 <TabItem value="ios" label="iOS アプリ">
@@ -186,25 +190,25 @@ import TabItem from '@theme/TabItem';
 
 ### ステップバイステップ設置ガイド
 
-- ステップ 1：ワッシャーとネジを使用して、部品 1 をデバイスの底部に接続します。
+- ステップ 1：ワッシャーとネジを使用して、パーツ 1 をデバイスの底部に接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ 2：ユニバーサルジョイント（部品 2）とブラケット（部品 3）をネジで接続します。
+- ステップ 2：ユニバーサルジョイント（パーツ 2）とブラケット（パーツ 3）をネジで接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ 3：RF ケーブル（部品 4）とアンテナ（部品 5）を接続します。
+- ステップ 3：RF ケーブル（パーツ 4）とアンテナ（パーツ 5）を接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ 4：適切な位置にフープリングを取り付けます。
+- ステップ 4：フープリングを適切な位置に取り付けます。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -222,15 +226,15 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- ステップ 7：アンテナをデバイスに接続します。
+- ステップ7：アンテナをデバイスに接続します。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### 完全インストールガイダンス
+### 完全なインストールガイダンス
 
-- ビデオを通じて、インストールと初期化プロセス全体を完了できます。
+- ビデオを通じて、インストールと初期化の全プロセスを完了できます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -292,15 +296,15 @@ import TabItem from '@theme/TabItem';
 ### 消費電力
 
 消費電力は主にデータ送信頻度やGPS更新レートなどの要因に依存します。
-以下の数値は参考値のみであり、実際の使用条件によって実際の消費量は異なる場合があります。
+以下の数値は参考値であり、実際の使用条件によって実際の消費量は異なる場合があります。
 
 - **シャットダウンスリープモード消費電力**
 
 |説明|消費量|
 |---|---|
 |GPS_LED動作電流|1.02 mA|
-|電源投入済みだが未アクティブ|56.195 μA|
-|電源投入済みかつアクティブ|611 μA|
+|電源投入済み・未アクティブ|56.195 μA|
+|電源投入済み・アクティブ|611 μA|
 
 **例：**
 
@@ -325,7 +329,7 @@ import TabItem from '@theme/TabItem';
 
 - **RSSI**はデバイスとその周辺環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
 
-      最良の信号効果を得るために、干渉が最小限で開放的で障害物のない場所でデバイスを使用してください。
+      最良の信号効果を得るために、開放的で障害物がなく、干渉が最小限の場所でデバイスを使用してください。
 
 ## リソース
 - [ソーラーノードバッテリー寿命計算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
