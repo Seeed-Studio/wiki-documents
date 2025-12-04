@@ -1,7 +1,7 @@
 ---
 description: XIAO lighting driver:Li-Po powered, 3 switches + 4 PWMs, drives 3V COB filaments—light up miniatures, dioramas, wearables.
 title: COB LED Driver Board for XIAO
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
 slug: /getting_started_with_cob_board
 last_update:
   date: 11/27/2025
