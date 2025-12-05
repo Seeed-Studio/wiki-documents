@@ -28,7 +28,7 @@ Both the **Seeed Studio XIAO nRF52840** and **Seeed Studio XIAO nRF52840 Sense**
 
 For the board libraries installation, please refer to [this tutorial](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup) to finish installation. If you have already installed, we can move on and process the project.
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" /></div>
+<div align="center"><img width={900} src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" /></div>
 
 
 ## Hardware required
@@ -82,3 +82,53 @@ Here we simply send the text string "Hello World!"
 - **Step 3.** Place the NFC antenna close to the phone and you will see the following output
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NFCconnect2.png" alt="pir" width={850} height="auto" /></p>
+
+## Antenna Tuning
+
+
+  All the operations described below are based on the core logic of this document.**[Nordic Official NFC Antenna Design](https://docs.nordicsemi.com/bundle/nwp_026/page/WP/nwp_026/nWP_026_intro.html)**
+ - The NFC carrier is fixed at 13.56 MHz; the chip delivers full power only when it sees a **differential 100 Ω load at resonance**.
+
+- Tuning = using two capacitors to achieve **resonance and impedance transformation** simultaneously, so the coil appears **exactly 100 Ω**.
+
+**1.Three “Never-Change” Numbers**
+
+| Item | Fixed Value | Source |
+|---|---|---|
+| Operating frequency f | 13.56 MHz | Global NFC standard, hard-coded in nRF52840 |
+| Load the chip wants to see | 100 Ω (differential) | Nordic white-paper nWP_026 |
+
+**2.Two Quantities to Measure**
+  
+   **Coil inductance L** – measure with DMM / LCR meter / VNA at 100 kHz, value in µH.
+
+   **Coil loss resistance R** – read the series resistance from the same screen, in Ω (thicker wire & larger area → lower R).
+
+**3  Pre-Check: Is the Coil Size OK?**
+Using the impedance-transformation formula:
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NFC1.png" alt="pir" width={250} height="auto" /></p>
+
+Target: 90–120 Ω, the closer to 100 Ω the better.
+
+| Result | Meaning | Next Step |
+|---|---|---|
+| < 60 Ω | Antenna “too small” | Add turns or enlarge area |
+| 90 – 120 Ω | **PASS** | Go to Step 4 |
+| > 150 Ω | Antenna “too big” | Remove turns or shrink area |
+
+> Only after this gate is passed do you calculate capacitors; otherwise any cap value is useless.
+
+**4  Calculate Resonant Capacitance C**
+  
+Formula with fixed 13.56 MHz:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NFC2.png" alt="pir" width={250} height="auto" /></p>
+
+
+→ Gives **total capacitance**; for π-network split equally:
+
+**C1 = C2 = C / 2**  
+Pick closest E12 value (39 pF, 47 pF, 56 pF, 68 pF …).
+
