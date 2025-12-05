@@ -43,12 +43,15 @@ For the board libraries installation, please refer to [this tutorial](https://wi
 - [NFC TagInfo App (Android)](https://play.google.com/store/apps/details?id=com.nxp.taginfolite&hl=en&gl=US)
 - [NFC TagInfo App (Apple)](https://apps.apple.com/us/app/nfc-taginfo-by-nxp/id1246143596)
 
-## Hardware connection
+## Hardware connection And Overview
 
 Solder the NFC antenna to the Seeed Studio XIAO nRF52840 (Sense) as follows:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NFC-antenna-3.png" alt="pir" width={550} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/NFC-antenna-3(1).png" alt="pir" width={550} height="auto" /></p>
 
+- **Nature**: 13.56 MHz differential current-driven ports of the nRF52840 (NFC1 = P0.09, NFC2 = P0.10); must be used as a pair.
+- **Difference**: Only opposite phase; no separate function. Swapping is possible but flips the UID.
+- **Caution**: Bare pins, no ESD/TVS. Wear a wrist strap before soldering, both pads are mandatory, never use as GPIO.
 
 ## Send text string with NFC
 
