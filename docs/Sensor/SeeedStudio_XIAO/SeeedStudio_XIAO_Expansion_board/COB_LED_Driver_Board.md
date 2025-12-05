@@ -2,7 +2,7 @@
 description: XIAO lighting driver:Li-Po powered, 3 switches + 4 PWMs, drives 3V COB filaments—light up miniatures, dioramas, wearables.
 title: COB LED Driver Board for XIAO
 image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
-slug: /getting_started_with_cob_board
+slug: /getting_started_with_cob_led_dirver_board
 last_update:
   date: 11/27/2025
   author: Brandy
@@ -85,7 +85,7 @@ This is a 7-channel COB LED driver dock designed for Seeed Studio XIAO. This exp
     </tr>
     <tr>
       <th>Dimensions</th>
-      <td>25mm × 42mm × 16mm (With a Seeed Studio XIAO)</td>
+      <td>`30mm*41mm*16mm` (With a Seeed Studio XIAO)</td>
     </tr>
   </tbody>
 </table>
@@ -105,7 +105,7 @@ This is a 7-channel COB LED driver dock designed for Seeed Studio XIAO. This exp
 - **(9) D2-Low-Power Port:** A low-power port that supports a maximum current of 80mA, supports PWM dimming, and uses active LOW logic (the load operates when the level is low).
 - **(10) GND:** A ground port in the low-power area, used to connect the ground wires of low-power loads.
 - **(11) D3-Low-Power Port:** A low-power port that supports a maximum current of 80mA, supports PWM dimming, and uses active LOW logic (the load operates when the level is low).
-- **(12) GND:** A redundant ground port in the low-power area (same function as item 10), used to connect the ground wires of low-power loads.
+- **(12) D9-Low-Power Port:** A low-power port that supports a maximum current of 80mA, supports PWM dimming, and uses active LOW logic (the load operates when the level is low).
 - **(13) D8-Low-Power Port:** A low-power port that supports a maximum current of 80mA, supports PWM dimming, and uses active LOW logic (the load operates when the level is low).
 
 #### Supported COB LEDs Guide
@@ -210,7 +210,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 - If you want to use **Seeed Studio XIAO MG24** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_mg24_getting_started/#software-preparation)** to finish adding.
 
 :::tip
-This development board does not support XIAO SAMD21.COBE LED is compatible with the XIAO nRF54L15, but it's not in an Arduino environment.
+This development board does not support XIAO SAMD21.COB LED is compatible with the XIAO nRF54L15, but it's not in an Arduino environment.
 :::
 ####  Low-Power Port Driver Example
 
@@ -477,7 +477,7 @@ void loop() {
 
 ```
 
-This is the code for the breathing light style, if you like, you can use this style anywhere you want to shine
+This is a battery-powered project.This is the code for the breathing light style, if you like, you can use this style anywhere you want to shine
 Upload the program and power COB LED Driver Board, if all goes well, you can see like this:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/PWM.gif"style={{width:500, height:'auto'}}/></div>
@@ -600,7 +600,7 @@ Let's make a demo of dusk-to-dawn LED lamp, the light will change with the inten
 
 **Step 5.** Enter a **Name** for the device and enter WiFi credentials such as **Network name** and **Password**. Then click **NEXT**
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-to-dawn_LED_lamp_1.png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-to-dawn_LED_lamp_1.1.png" style={{width:400, height:'auto'}}/></div>
 
 **Step 6.** Select **ESP32-C3** and click
 
@@ -610,7 +610,7 @@ Let's make a demo of dusk-to-dawn LED lamp, the light will change with the inten
 
 **Step 8.** Click **EDIT** under the newly created board
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-ro-dawm_LED_lamp_2png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-ro-dawm_LED_lamp_2.2.png" style={{width:400, height:'auto'}}/></div>
 
 **Step 9.** The following code is partially copied to the end of the .ymal file. XIAO ESP32-C3 reads the light value from the grove digital light sensor and changes the current level of the D2 pin according to the intensity of the light, so as to control the light bar
 
@@ -771,10 +771,7 @@ We extend our special thanks to Xinyu for the valuable contribution to the 3D pr
 
 ## Safety Notes{#add-board}
 
-The driver board features two power supply circuits:
-- **USB-C 5V Port:** After step-down by the PMIC on the back, it charges the lithium battery and can simultaneously output 5V through step-up to drive the load.
-- **Lithium Battery (3.7V):** The same PMIC boosts the voltage to 5V to power the load.
-Only one of the two circuits can be used for power supply at **a time**—simultaneous connection is strictly prohibited. Otherwise, "backflow current" will form in the PMIC, causing instant breakdown and short circuit. Actual tests have confirmed the risk of burns.
+
 
 **Operation Prohibitions & Safety Rules**
  - Do not connect any peripherals during charging. Disconnect the light bar first before plugging in the USB-C cable.
