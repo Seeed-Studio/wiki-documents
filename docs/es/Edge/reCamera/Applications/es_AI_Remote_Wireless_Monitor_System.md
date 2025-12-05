@@ -15,6 +15,8 @@ last_update:
 
 # Sistema de monitoreo inalámbrico remoto con IA basado en reCamera y Wifi Halow
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/6.gif" /></div>
+
 Si eres un entusiasta de las actividades al aire libre, ¿te molesta a menudo la falta de red en la naturaleza, la cobertura limitada del WiFi tradicional y la incapacidad de la cámara para transmitir imágenes en tiempo real a largas distancias? A través de este Wiki, puedes implementar tu propio **sistema de monitoreo inalámbrico remoto con IA**, basado en la **serie reCamera** y el módulo de transmisión gráfica **Wifi Halow**. Por supuesto, puedes tener más imaginación, incluyendo lo siguiente pero no limitado a:
 
 - Quieres monitoreo inalámbrico para toda tu propiedad pero sin necesidad de cableado o routers, con IA a bordo detectando actividad sospechosa.
@@ -252,11 +254,7 @@ Haz doble clic en el nodo de cámara para entrar a la página de configuración.
 
 #### Paso 1.3 Configurar el nodo stream
 
-Como se mencionó anteriormente, necesitamos configurar push stream rtsp en Node-RED. En la lista de nodos a la izquierda, desliza la rueda del mouse hacia abajo hasta el final para encontrar el nodo Stream.
-
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_2.png" /></div>
-
-Después del método de configuración, por favor consulta: [Configuración del Nodo Stream de Node-Red](https://wiki.seeedstudio.com/es/recamera_develop_with_node-red/#stream-node) Después de la configuración, deberías obtener los siguientes resultados:
+Como se mencionó anteriormente, necesitamos configurar la transmisión RTSP de tipo *push* en Node-RED. En la lista de nodos de la izquierda, busca el nodo "stream" o desplázate con la rueda del ratón hasta el final para encontrar el nodo Stream. Después del método de configuración, por favor consulta: [Configuración del Nodo Stream de Node-Red](https://wiki.seeedstudio.com/es/recamera_develop_with_node-red/#stream-node) Después de la configuración, deberías obtener los siguientes resultados:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_3.png" /></div>
 
@@ -275,7 +273,7 @@ nnn.nnn:9000 De hecho, 192.168.nnn.nnn es la dirección IP estática del reTermi
 
 O en la página Workspace que acaba de modificar Node RED, haz clic en "Setting" en la esquina superior izquierda
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4.png" /></div>
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4_1.png" /></div>
 
 > Figura 4: Marco de Configuración del Workspace
 
@@ -444,7 +442,7 @@ Instala los dos módulos de transmisión de imagen emparejados en el reCamera y 
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_1.jpg" /></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_2.jpg" /></div>
+<div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t13_2.jpg" /></div>
 
 #### Paso 4.3 Instalar ffmpeg y nmap en reTerminal
 

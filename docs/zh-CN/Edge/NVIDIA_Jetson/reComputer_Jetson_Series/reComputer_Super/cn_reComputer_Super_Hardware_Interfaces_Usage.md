@@ -135,19 +135,19 @@ reComputer Super 总共有 4 个 USB 3.2 端口和 1 个用于调试的 USB 2.0 
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/debug1.png"/>
 </div>
 
-**步骤 5.** 打开串口工具（这里我们以 MobaXterm 工具为例），创建一个新会话。
+**步骤 5.** 打开串行端口工具（这里我们以 MobaXterm 工具为例），创建一个新会话。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/1.png"/>
 </div>
 
-**步骤 6.** 选择串口工具。
+**步骤 6.** 选择串行工具。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/2.png"/>
 </div>
 
-**步骤 7.** 选择相应的串口，将波特率设置为 115200 并点击"OK"。
+**步骤 7.** 选择相应的串行端口，将波特率设置为 115200 并点击 "OK"。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/3.png"/>
@@ -245,7 +245,7 @@ reComputer super 配备了一个用于 LTE 4G 模块的 mini-PCIe。
 </div>
 
 :::note
-如果您想取出 SIM 卡，请向内推卡片以触发内部弹簧，这样 SIM 卡就会从插槽中弹出
+如果您想取出 SIM 卡，请推入卡片以触发内部弹簧，这样 SIM 卡就会从插槽中弹出
 :::
 
 ### 使用说明
@@ -263,15 +263,15 @@ sudo apt install minicom -y
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-**步骤 3.** 按 Ctrl+A，然后按 E 打开本地回显。
+**步骤 3.** 按 Ctrl+A 然后按 E 打开本地回显。
 
-**步骤 4.** 输入命令"AT"并按回车。如果您看到响应为"OK"，则 4G 模块工作正常。
+**步骤 4.** 输入命令 "AT" 并按回车。如果您看到响应为 "OK"，则 4G 模块工作正常。
 
 <div align="center">
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/>
 </div>
 
-**步骤 5.** 输入命令"ATI"检查模块信息。
+**步骤 5.** 输入命令 "ATI" 检查模块信息。
 
 <div align="center">
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/>
@@ -321,7 +321,7 @@ cat /sys/devices/platform/bpmp/bpmp\:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/ti
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc_time1(1).png"/>
 </div>
 
-**步骤 5.** 断开网络连接并重启设备。您会发现系统时间已断电但仍正常工作。
+**步骤 5.** 断开网络连接并重启设备。您会发现系统时间已断电但仍正常运行。
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc_time2.png"/>
 </div>
@@ -334,7 +334,7 @@ reComputer Super 上有 2 个 RJ45 千兆以太网端口，支持 10/100/1000M�
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/eth.jpg"/>
 </div>
 
-每个以太网端口上有 2 个 LED（绿色和黄色）：
+每个以太网端口上有 2 个 LED 指示灯（绿色和黄色）：
 
 - 绿色 LED：仅在连接到 1000M/10G 网络时点亮。
 - 黄色 LED：显示网络活动状态。
@@ -398,127 +398,48 @@ reComputer Super 配备了两种类型的风扇连接器，以满足不同的电
 
 ## CAN
 
-CAN（控制器局域网）接口是一种用于微控制器和设备之间通信的串行通信协议，具有高速、强抗干扰能力和支持多节点通信的特点。
+reComputer Super 系列提供了一个 CAN 接口，其中 CAN 信号直接从 SOM 以 TTL/CMOS 电平输出，这是一个非标准差分信号，需要外部 CAN 收发器才能连接到标准 CAN 总线；它支持 CAN FD 帧格式，允许扩展数据长度和更高的数据速率，适用于工业自动化、机器人、汽车原型设计和其他需要可靠实时通信的应用。
 
 ### 硬件连接
 
-- 请注意连接线的顺序（R OUT ↔ RX，D IN ↔ TX），然后通过 CAN 总线收发器将它们转换为 CAN_L 和 CAN_H。
+请注意连接线的顺序（R OUT ↔ RX，D IN ↔ TX），然后通过 CAN 总线收发器将它们转换为 CAN_L 和 CAN_H。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can1.png"/>
 </div>
 
-- [PC CAN 工具下载](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)
-- 3.3V CMOS 电平 CAN 总线（非差分）
+根据 [reComputer Super 数据手册](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)，以相应的方式将 CAN 加热器连接到 CAN 总线收发器，然后将 CAN 总线收发器连接到 [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)，最后连接到 Jetson 进行环回通信测试。
 
-:::note
-CAN 接口使用隔离电源，这意味着连接到 CAN 接口的外部设备的地信号应连接到 **GND_ISO** 引脚。
-:::
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_port.png"/>
+</div>
 
-这里我们使用了我们商城上提供的 [USB to CAN 分析仪适配器](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) 和 USB 线缆。
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_connect.png"/>
+</div>
 
 ### 使用说明
 
-**步骤 1.** 从制造商网站下载您使用的 USB to CAN 适配器的驱动程序并安装。在我们的情况下，根据我们使用的适配器，驱动程序可以在[这里](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)找到。
-
-**步骤 2.** 一些适配器还为 PC 提供必要的软件以与 CAN 设备通信。在我们的情况下，根据我们使用的适配器，我们已经下载并安装了可以在[这里](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)找到的软件。
-
-**步骤 3.** 初始化 Jetson 的 CAN 接口。
-
-在 Jetson 中创建一个名为 **`can_init.sh`** 的新文件并写入以下内容：
+**步骤 1.** 配置并打开 can0：
 
 ```bash
-#!/bin/bash
-
-sudo gpioset gpiochip2 9=0 
-sudo gpioset gpiochip2 8=0
-
-sudo busybox devmem 0x0c303018 w 0xc458
-sudo busybox devmem 0x0c303010 w 0xc400
-sudo busybox devmem 0x0c303008 w 0xc458
-sudo busybox devmem 0x0c303000 w 0xc400
-
-sudo modprobe can
-sudo modprobe can_raw
-sudo modprobe mttcan
-
 sudo ip link set can0 down
-sudo ip link set can1 down
-
-sudo ip link set can0 type can bitrate 125000
-sudo ip link set can1 type can bitrate 125000
+sudo ip link set can0 type can bitrate 500000
 sudo ip link set can0 up
-sudo ip link set can1 up
-
 ```
-
-然后，在 Jetson 终端窗口中运行我们刚创建的文件：
-
+**步骤 2.** 通信测试。
+打开一个终端来接收信号。
 ```bash
-sudo apt-get install gpiod
-cd <path to can_init.sh>
-sudo chmod +x can_init.sh
-./can_init.sh
+candump can0
 ```
 
-**步骤 4.** 在终端中输入 ifconfig，您将看到 CAN 接口已启用。
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/can.png"/>
-</div>
-
-**步骤 5.** 打开您之前安装的 CAN 软件。在这种情况下，我们将打开根据我们使用的 CAN 适配器安装的软件。
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/>
-</div>
-
-**步骤 6.** 将 USB to CAN 适配器连接到 PC，并通过在 Windows 搜索栏中搜索来打开 **Device Manager**。现在您将在 **Ports (COM & LPT)** 下看到连接的适配器。记下这里列出的串行端口。根据下图，串行端口是 **COM9**。
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/>
-</div>
-
-**步骤 7.** 打开 CAN 软件，点击 **COM** 部分旁边的 **Refresh**，点击下拉菜单并根据连接的适配器选择串行端口。保持 **COM bps** 为默认值并点击 **Open**。
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/>
-</div>
-
-**步骤 8.** 保持 **Mode** 和 **CAN bps** 为默认值，将 **Type** 更改为 **Standard frame** 并点击 **Set and Start**。
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/>
-</div>
-
-**步骤 9.** 在 reComputer Industrial 上，执行以下命令向 PC 发送 CAN 信号：
-
-```sh
+**步骤 3.** 打开另一个终端来发送信号。
+```bash
 cansend can0 123#abcdabcd
 ```
-
-现在您将看到软件接收到上述信号，如下所示
-
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/46.png"/>
-</div>
-
-**步骤 10.** 在 reComputer Industrial 上，执行以下命令等待接收来自 PC 的 CAN 信号：
-
-```sh
-candump can0 &
-```
-
-**步骤 11.** 在 CAN 软件上，点击 **Send a single frame**：
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/>
-</div>
-
-现在您将看到 reComputer Industrial 接收到它，如下所示：
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_loop.png"/>
 </div>
 
 ## 扩展端口
@@ -546,10 +467,10 @@ candump can0 &
 </tr>
 </thead>
 <tbody>
-<tr><td>1</td><td>3.3V</td><td>-</td><td>主 3.3V 电源</td></tr>
-<tr><td>2</td><td>5V</td><td>-</td><td>主 5V 电源</td></tr>
+<tr><td>1</td><td>3.3V</td><td>-</td><td>主 3.3V 供电</td></tr>
+<tr><td>2</td><td>5V</td><td>-</td><td>主 5V 供电</td></tr>
 <tr><td>3</td><td>I2C1_SDA</td><td>PDD.02</td><td>I2C #1 数据</td></tr>
-<tr><td>4</td><td>5V</td><td>-</td><td>主 5V 电源</td></tr>
+<tr><td>4</td><td>5V</td><td>-</td><td>主 5V 供电</td></tr>
 <tr><td>5</td><td>I2C1_SCL</td><td>PDD.01</td><td>I2C #1 时钟</td></tr>
 <tr><td>6</td><td>GND</td><td>-</td><td>接地</td></tr>
 <tr><td>7</td><td>GPIO09</td><td>PAC.06</td><td>通用输入/输出</td></tr>
@@ -562,12 +483,12 @@ candump can0 &
 <tr><td>14</td><td>GND</td><td>-</td><td>接地</td></tr>
 <tr><td>15</td><td>GPIO12</td><td>PN.01</td><td>通用输入/输出</td></tr>
 <tr><td>16</td><td>SPI1_CS1</td><td>PY.04</td><td>SPI #1 片选 #1</td></tr>
-<tr><td>17</td><td>3.3V</td><td>-</td><td>主 3.3V 电源</td></tr>
+<tr><td>17</td><td>3.3V</td><td>-</td><td>主 3.3V 供电</td></tr>
 <tr><td>18</td><td>SPI1_CS0</td><td>PY.03</td><td>SPI #1 片选 #0</td></tr>
 <tr><td>19</td><td>SPI0_MOSI</td><td>PZ.05</td><td>SPI #0 主出/从入</td></tr>
 <tr><td>20</td><td>GND</td><td>-</td><td>接地</td></tr>
-<tr><td>21</td><td>SPI0_MISO</td><td>PZ.04</td><td>SPI #0 主入从出</td></tr>
-<tr><td>22</td><td>SPI1_MISO</td><td>PY.01</td><td>SPI #1 主入从出</td></tr>
+<tr><td>21</td><td>SPI0_MISO</td><td>PZ.04</td><td>SPI #0 主入/从出</td></tr>
+<tr><td>22</td><td>SPI1_MISO</td><td>PY.01</td><td>SPI #1 主入/从出</td></tr>
 <tr><td>23</td><td>SPI0_SCK</td><td>PZ.03</td><td>SPI #0 时钟</td></tr>
 <tr><td>24</td><td>SPI0_CS0</td><td>PZ.06</td><td>SPI #0 片选 #0</td></tr>
 <tr><td>25</td><td>GND</td><td>-</td><td>接地</td></tr>
@@ -582,7 +503,7 @@ candump can0 &
 <tr><td>34</td><td>GND</td><td>-</td><td>接地</td></tr>
 <tr><td>35</td><td>I2S0_LRCK (I2S0_FS)</td><td>PI.02</td><td>音频 I2S #0 帧同步</td></tr>
 <tr><td>36</td><td>UART1_CTS</td><td>PR.05</td><td>UART #1 清除发送</td></tr>
-<tr><td>37</td><td>SPI1_MOSI</td><td>PY.02</td><td>SPI #1 主出从入</td></tr>
+<tr><td>37</td><td>SPI1_MOSI</td><td>PY.02</td><td>SPI #1 主出/从入</td></tr>
 <tr><td>38</td><td>I2S0_SDIN (I2S0_DIN)</td><td>PI.01</td><td>音频 I2S #0 数据输入</td></tr>
 <tr><td>39</td><td>GND</td><td>-</td><td>接地</td></tr>
 <tr><td>40</td><td>I2S0_SDOUT (I2S0_DOUT)</td><td>PI.00</td><td>音频 I2S #0 数据输出</td></tr>
@@ -636,15 +557,15 @@ sudo gpioget 0 43
 
 保存并重启。
 
-**通过覆盖配置来配置未受控制的 GPIO：**
+**通过 Overlay 配置来配置未受控制的 GPIO：**
 
-**步骤 1.** 下载并解压[覆盖包](https://files.seeedstudio.com/wiki/overlay.zip)到您的 jetson 设备。
+**步骤 1.** 下载并解压 [overlay 包](https://files.seeedstudio.com/wiki/overlay.zip) 到您的 jetson 设备。
 ```bash
 wget https://files.seeedstudio.com/wiki/overlay.zip
 ```
 **步骤 2.** 将 build.sh 和 gpio-overlay.dts 复制到 Jetson。
 
-**步骤 3.** 编辑 `pio-overlay.dts` 文件并修改它以包含您需要的引脚的引脚复用定义。
+**步骤 3.** 编辑 `pio-overlay.dts` 文件并修改它以包含您需要的引脚的 pinmux 定义。
 :::info
 更多详细信息请参见 [jetson-orin-nx-and-orin-nano-series-pinmux-config](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template)
 :::
@@ -655,7 +576,7 @@ sudo bash ./build.sh
 #The following command needs to be executed only once.
 sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "seeed gpio config Overlay"
 ```
-**步骤 4.** 重启设备使配置生效。
+**步骤 4.** 重启设备以使配置生效。
 ```bash
 sudo reboot
 ```
@@ -666,13 +587,13 @@ sudo gpioset --mode=wait 0 121=1
 ```
 
 
-### 12 针控制和 UART 接头
+### 12 引脚控制和 UART 接头
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/12pin2.jpg"/>
 </div>
 
-12 针控制和 UART 接头提供了用于连接和管理外部设备的基本控制信号和 UART 通信接口。
+12 引脚控制和 UART 接头提供了用于连接和管理外部设备的基本控制信号和 UART 通信接口。
 
 :::note
 reComputer Super 的引脚功能与 reComputer Classic 类似。更多详细信息，请参考[这里](https://wiki.seeedstudio.com/cn/J401_carrierboard_Hardware_Interfaces_Usage/#gpio)。
@@ -680,7 +601,7 @@ reComputer Super 的引脚功能与 reComputer Classic 类似。更多详细信�
 
 ## HDMI
 
-reComputer Super 配备了一个 HDMI 2.1 Type A 端口，支持 7680x4320 分辨率。这允许超高清视频输出。
+reComputer Super 配备了 HDMI 2.1 Type A 端口，支持 7680x4320 分辨率。这允许超高清视频输出。
 
 ## 资源
 - [用户手册和数据表](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)

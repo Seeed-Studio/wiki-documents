@@ -711,6 +711,19 @@ const sidebars = {
             'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Firmware_release_note',
           ],
         },
+        {
+          type: 'category',
+          label: 'SenseCAP T2000 Tracker',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_intro',
+          },
+          items: [
+            'Sensor/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Introduction',
+          ],
+        },
         //       {
         //            type: 'category',
         //           label: 'SenseCAP T1000-P Pet Tracker',
@@ -1440,6 +1453,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-RS485-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Bus_Servo_Driver_Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/LED_Driver_Board',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/COB_LED_Driver_Board',
           ],
         },
         {
@@ -4089,9 +4103,9 @@ const sidebars = {
         'Robotics/Robot_Actuator/Stackforce_Series',
         'Robotics/Robot_Actuator/Myactuator_Series',
         'Robotics/Robot_Actuator/Damiao_Series',
-        'Robotics/Robot_Actuator/HighTorque',
         'Robotics/Robot_Actuator/HighTorque_Control',
         'Robotics/Robot_Actuator/RobStride_Control',
+        'Robotics/Robot_Actuator/HighTorque_Assistant',
       ]
     },
     {
@@ -4126,6 +4140,7 @@ const sidebars = {
           items: [
             'Robotics/Robot_Sensor/Camera/Getting_Start_with_AC1',
             'Robotics/Robot_Sensor/Camera/Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+            'Robotics/Robot_Sensor/Camera/Getting_Start_with_Orbbec_Gemini_336',
             'Robotics/Robot_Sensor/Camera/Orbbec_Depth_Camera',
             'Robotics/Robot_Sensor/Camera/ORB_SLAM3_with_Orbbec_Gemini2',
             'Robotics/Robot_Sensor/Camera/Pycuvslam_On_reComputer',
@@ -4143,6 +4158,7 @@ const sidebars = {
           // },
           items: [
             'Robotics/Robot_Sensor/IMU/Hexfellow_Y200',
+            'Robotics/Robot_Sensor/IMU/WHEELTEC_IMU',
           ]
         },
       ]
@@ -5806,6 +5822,19 @@ const sidebars = {
             },
             'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/cn_FAQ',
             'zh-CN/Sensor/SenseCAP/SenseCAP_T1000_Tracker/cn_Firmware_release_note',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SenseCAP T2000 追踪器',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/cn_SenseCAP_T2000_intro',
+          },
+          items: [
+            'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/cn_SenseCAP_T2000_Tracker_Introduction',
           ],
         },
         //       {
@@ -9180,9 +9209,9 @@ const sidebars = {
         'zh-CN/Robotics/Robot_Actuator/cn_Stackforce_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Myactuator_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
-        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque',
         'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
         'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
+        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Assistant',
       ]
     },
     {
@@ -9216,6 +9245,7 @@ const sidebars = {
           // },
           items: [
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_AC1',
+            'zh-CN/Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini_336',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_Orbbec_Depth_Camera',
             'zh-CN/Robotics/Robot_Sensor/Camera/cn_ORB_SLAM3_with_Orbbec_Gemini2',
@@ -9234,6 +9264,7 @@ const sidebars = {
           // },
           items: [
             'zh-CN/Robotics/Robot_Sensor/IMU/cn_Hexfellow_Y200',
+            'zh-CN/Robotics/Robot_Sensor/IMU/cn_WHEELTEC_IMU',
           ]
         },
       ]
@@ -10809,6 +10840,19 @@ const sidebars = {
             },
             'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/es_FAQ',
             'es/Sensor/SenseCAP/SenseCAP_T1000_Tracker/es_Firmware_release_note',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SenseCAP T2000 Tracker',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/es_SenseCAP_T2000_intro',
+          },
+          items: [
+            'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/es_SenseCAP_T2000_Tracker_Introduction',
           ],
         },
         //       {
@@ -14187,9 +14231,9 @@ const sidebars = {
         'es/Robotics/Robot_Actuator/es_Stackforce_Series',
         'es/Robotics/Robot_Actuator/es_Myactuator_Series',
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
-        'es/Robotics/Robot_Actuator/es_HighTorque',
         'es/Robotics/Robot_Actuator/es_HighTorque_Control',
         'es/Robotics/Robot_Actuator/es_RobStride_Control',
+        'es/Robotics/Robot_Actuator/es_HighTorque_Assistant',
       ]
     },
     {
@@ -14224,6 +14268,7 @@ const sidebars = {
           items: [
             'es/Robotics/Robot_Sensor/Camera/es_Getting_Start_with_AC1',
             'es/Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+            'es/Robotics/Robot_Sensor/Camera/es_Getting_Start_with_Orbbec_Gemini_336',
             'es/Robotics/Robot_Sensor/Camera/es_Orbbec_Depth_Camera',
             'es/Robotics/Robot_Sensor/Camera/es_ORB_SLAM3_with_Orbbec_Gemini2',
             'es/Robotics/Robot_Sensor/Camera/es_Pycuvslam_On_reComputer',
@@ -14241,6 +14286,7 @@ const sidebars = {
           // },
           items: [
             'es/Robotics/Robot_Sensor/IMU/es_Hexfellow_Y200',
+            'es/Robotics/Robot_Sensor/IMU/es_WHEELTEC_IMU',
           ]
         },
       ]
@@ -15812,6 +15858,19 @@ const sidebars = {
             },
             'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/ja_FAQ',
             'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/ja_Firmware_release_note',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SenseCAP T2000 Tracker',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/ja_SenseCAP_T2000_intro',
+          },
+          items: [
+            'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/ja_SenseCAP_T2000_Tracker_Introduction',
           ],
         },
         //       {
@@ -19190,9 +19249,9 @@ const sidebars = {
         'ja/Robotics/Robot_Actuator/ja_Stackforce_Series',
         'ja/Robotics/Robot_Actuator/ja_Myactuator_Series',
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
-        'ja/Robotics/Robot_Actuator/ja_HighTorque',
         'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
         'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
+        'ja/Robotics/Robot_Actuator/ja_HighTorque_Assistant',
       ]
     },
     {
@@ -19227,6 +19286,7 @@ const sidebars = {
           items: [
             'ja/Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_AC1',
             'ja/Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini2_3D_Camera',
+            'ja/Robotics/Robot_Sensor/Camera/ja_Getting_Start_with_Orbbec_Gemini_336',
             'ja/Robotics/Robot_Sensor/Camera/ja_Orbbec_Depth_Camera',
             'ja/Robotics/Robot_Sensor/Camera/ja_ORB_SLAM3_with_Orbbec_Gemini2',
             'ja/Robotics/Robot_Sensor/Camera/ja_Pycuvslam_On_reComputer',
@@ -19244,6 +19304,7 @@ const sidebars = {
           // },
           items: [
             'ja/Robotics/Robot_Sensor/IMU/ja_Hexfellow_Y200',
+            'ja/Robotics/Robot_Sensor/IMU/ja_WHEELTEC_IMU',
           ]
         },
       ]

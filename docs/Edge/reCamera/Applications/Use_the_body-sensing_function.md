@@ -1,11 +1,11 @@
 ---
-description: Use the body-sensing function to control the game.
-title: Use the body-sensing function
+description: Use the body-sensing function to control Subway Surfers.
+title: Play Subway Surfers with body sensor control
 keywords:
   - reCamera
   - Sensory control
   - Game
-image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_13.png 
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif 
 slug: /use_the_motion-sensing_function_of_recamera_to_play_games
 sidebar_position: 9
 last_update:
@@ -13,11 +13,15 @@ last_update:
   author: Xinrui Wu
 ---
 
-# Use the body-sensing function
+# Play Subway Surfers with body sensor control
 
 ## Introduction
 
 The reCamera is an AI camera equipped with powerful edge computing capabilities. This demo showcases its ability to run the YOLO11n-Pose model in real-time at the device level - without relying on the cloud, it can accurately identify the key points and postures of the human body. By capturing the player's movements with the reCamera, we transform our bodies into controllers, allowing us to operate "Subway Run" with natural body sensations: jumping, squatting, and dodging left and right, all in one seamless motion!
+
+Here is the usage effect after completing this demo.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_text.gif" /></div>
 
 ## Hardware Preparation
 

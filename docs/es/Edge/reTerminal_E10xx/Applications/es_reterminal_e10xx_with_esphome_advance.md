@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-Este artículo explora configuraciones avanzadas de ESPHome para tu dispositivo de pantalla ePaper reTerminal E Series, basándose en los conceptos fundamentales cubiertos en nuestra [guía de Uso Básico de ESPHome](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome). Si eres nuevo en ESPHome o en reTerminal E Series, recomendamos comenzar con la guía básica antes de profundizar en estas aplicaciones avanzadas.
+Este artículo explora configuraciones avanzadas de ESPHome para tu dispositivo de pantalla ePaper reTerminal E Series, basándose en los conceptos fundamentales cubiertos en nuestra [guía de Uso Básico de ESPHome](https://wiki.seeedstudio.com/es/reterminal_e10xx_with_esphome). Si eres nuevo en ESPHome o en reTerminal E Series, recomendamos comenzar con la guía básica antes de sumergirte en estas aplicaciones avanzadas.
 
 ## Capacidades de Hardware
 
@@ -322,7 +322,7 @@ El complemento Puppet lanza un servidor en el puerto 10000 que genera capturas d
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-Esta URL capturará una captura de pantalla de tu panel predeterminado a resolución 800x480 (perfecto para reTerminal E Series).
+Esta URL capturará una captura de pantalla de tu panel de control predeterminado a resolución 800x480 (perfecto para reTerminal E Series).
 
 #### Optimización para Papel Electrónico
 
@@ -392,9 +392,9 @@ online_image:
       - component.update: epaper_display
 
 display:
-  - platform: epaper_spi
+  - platform: waveshare_epaper
     id: epaper_display
-    model: 7.3in-spectra-e6
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -403,7 +403,7 @@ display:
     busy_pin:
       number: GPIO13
       inverted: true
-    update_interval: never
+    update_interval: 300s
     lambda: |-
       it.image(0, 0, id(dashboard_image));
 ```
@@ -444,15 +444,7 @@ online_image:
 display:
   - platform: epaper_spi
     id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       it.image(0, 0, id(dashboard_image));
@@ -465,7 +457,7 @@ display:
 Reemplaza `homeassistant.local` con la dirección IP real de tu Home Assistant si la resolución DNS local no funciona en tu red.
 :::
 
-Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de Home Assistant:
+Cuando tu configuración se haya subido y ejecutado exitosamente, tu Pantalla ePaper reTerminal E Series mostrará una captura de pantalla de tu panel de control de Home Assistant:
 
 <Tabs>
 <TabItem value="For E1001" label="Para E1001" default>
@@ -486,7 +478,7 @@ Cuando tu configuración se haya subido y esté ejecutándose exitosamente, tu P
 Si comienzas a usar el programa de Suspensión Profunda, recomendamos que lo uses preferiblemente con el botón blanco del lado derecho y configures el botón blanco del lado derecho como el botón de Despertar de Suspensión. De esta manera, cuando quieras actualizar el programa, no te encontrarás con la situación incómoda donde el dispositivo está durmiendo y no puedes subir el programa a través del puerto serie.
 :::
 
-Este ejemplo demuestra cómo usar el modo de suspensión profunda para reducir significativamente el consumo de energía, haciendo que tu Pantalla ePaper reTerminal E Series sea adecuada para aplicaciones alimentadas por batería.
+Este ejemplo demuestra cómo usar el modo de suspensión profunda para reducir significativamente el consumo de energía, haciendo tu Pantalla ePaper reTerminal E Series adecuada para aplicaciones alimentadas por batería.
 
 Puedes usar este ejemplo copiando el código de abajo y pegándolo después de la línea de código `captive_portal` en tu archivo Yaml.
 
@@ -566,15 +558,6 @@ interval:
     then:
       - logger.log: "Entering deep sleep now..."
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 font:
   - file: "gfonts://Inter@700"
     id: font1
@@ -585,17 +568,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: 5min
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -624,7 +599,7 @@ Cuando esté ejecutándose, verás un contador incrementar cada vez que el dispo
 Para una mejor comprensión, recomendamos encarecidamente que ejecutes primero los ejemplos básicos anteriores antes de probar este ejemplo integral.
 :::
 
-Este ejemplo avanzado combina múltiples características en una solución completa de panel para el reTerminal E Series. Demuestra:
+Este ejemplo avanzado combina múltiples características en una solución completa de panel de control para el reTerminal E Series. Demuestra:
 
 1. Visualización del clima y clima interior
 2. Monitoreo de batería con iconos
@@ -1018,15 +993,6 @@ i2c:
   scl: GPIO20
   sda: GPIO19
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 # Fonts
 font:
   - file: "gfonts://Inter@700"
@@ -1195,17 +1161,9 @@ time:
 
 # e-paper
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -1299,7 +1257,7 @@ display:
 
 </details>
 
-Cuando tu configuración se haya subido y ejecutado exitosamente, la pantalla ePaper de tu reTerminal E Series mostrará un panel completo con datos ambientales, hora y estado de la batería:
+Cuando tu configuración se haya subido y ejecutado exitosamente, tu pantalla ePaper del reTerminal E Series mostrará un panel completo con datos ambientales, hora y estado de la batería:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -1314,7 +1272,7 @@ Este ejemplo implementa:
 5. **Visualización de Temperatura y Humedad**: Usando el sensor SHT4x integrado vía I²C
 6. **Iconos Dinámicos**: Los iconos de Material Design cambian según los valores del sensor
 
-## Preguntas Frecuentes
+## FAQ
 
 ### P1: ¿Por qué no hay datos?
 
@@ -1322,7 +1280,7 @@ En este caso, debes ir a Settings -> Devices & Services -> Integrations para **R
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#port}
+### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#puerto}
 
 En este caso, debes ir a Settings -> Devices & Services -> Integrations para **AGREGAR** tu dispositivo a Home Assistant.
 

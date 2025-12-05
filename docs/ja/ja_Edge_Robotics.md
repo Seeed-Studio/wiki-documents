@@ -1,5 +1,5 @@
 ---
-description: このトピックでは、Seeed Studioのロボティクス製品ドキュメントを紹介します。
+description: このトピックでは、Seeed Studio のロボティクス製品ドキュメントを紹介します。
 title: ロボティクス
 keywords:
 - robotics
@@ -15,7 +15,7 @@ last_update:
 
 # 🤖 ロボティクス
 
-> *"今日の科学は明日の技術である。" - エドワード・テラー*
+> *「今日の科学は明日の技術である。」 - エドワード・テラー*
 
 <div className="quick-nav-container">
   <nav className="quick-nav">
@@ -139,7 +139,7 @@ last_update:
     <a href="/ja/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Feetech STS3215 サーボモーター</span>
     </a>
-    <a href="/ja/hightorque_series/" className="nav-item">
+    <a href="/ja/hightorque_control" className="nav-item">
       <span className="text">3️⃣HighTorque シリーズ</span>
     </a>
     <a href="/ja/fashionstar_servo/" className="nav-item">
@@ -175,26 +175,48 @@ last_update:
 **📷カメラ**  
 
 <div className="card-container">
+- Orbbec デプスカメラ
+
     <a href="/ja/orbbec_gemini2/" className="nav-item">
       <span className="text">Orbbec Gemini2</span>
     </a>
-    <a href="/ja/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">Orbbec デプスカメラ with ROS</span>
-    </a>
     <a href="/ja/orbbec_gemini_335lg" className="nav-item">
-      <span className="text">Orbbec Gemini 335Lg ステレオカメラ</span>
+      <span className="text">Orbbec Gemini 335Lg デプスカメラ</span>
       <span className="tag recommended">New</span>
     </a>
+    <a href="/ja/orbbec_gemini336" className="nav-item">
+      <span className="text">Orbbec Gemini 336 デプスカメラ</span>
+      <span className="tag recommended">New</span>
+    </a>
+
+- SENSING GMSL
+
     <a href="/ja/sensing_gmsl_cameras" className="nav-item">
       <span className="text">SENSING GMSL2 カメラ</span>
+    </a>
+
+- RoboSense
+
+    <a href="/ja/ac1" className="nav-item">
+      <span className="text">AC1</span>
       <span className="tag recommended">New</span>
+    </a>
+
+- 例
+
+    <a href="/ja/orbbec_depth_camera_on_ros/" className="nav-item">
+      <span className="text">Orbbec デプスカメラ with ROS</span>
     </a>
     <a href="/ja/orb_slam3_orbbec_gemini2/" className="nav-item">
       <span className="text">ORB-SLAM3 with Orbbec Gemini2</span>
     </a>
     <a href="/ja/csi_camera_on_ros/" className="nav-item">
-      <span className="text">CSI カメラ</span>
+      <span className="text">CSI カメラ on Jetson</span>
     </a>
+    <a href="/ja/pycuvslam_recomputer_robotics/" className="nav-item">
+      <span className="text">PyCuVSLAM</span>
+    </a>
+
 </div>
 
 **🎤音声**  
@@ -213,6 +235,9 @@ last_update:
 <div className="card-container">
     <a href="/ja/hexfellow_y200/" className="nav-item">
       <span className="text">HEXFELLOW Y200</span>
+    </a>
+    <a href="/ja/wheeltec_imu/" className="nav-item">
+      <span className="text">WHEELTEC IMU</span>
     </a>
 </div>
 
@@ -251,7 +276,7 @@ last_update:
 </a>
 
 <a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
-  <span className="text">PX4 でのオブジェクト追跡</span>
+  <span className="text">Object Tracking with PX4</span>
 </a>
 
 </div>
@@ -339,20 +364,20 @@ html[data-theme='dark'] .nav-item {
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-/* 图标样式 */
+/* アイコンスタイル */
 .nav-item .icon {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   transition: transform 0.3s;
 }
 
-/* 文字样式 */
+/* テキストスタイル */
 .nav-item .text {
   font-size: 0.95rem;
   white-space: nowrap;
 }
 
-/* 悬浮特效 */
+/* ホバー効果 */
 .nav-item .hover-effect {
   position: absolute;
   bottom: 0;
@@ -365,7 +390,7 @@ html[data-theme='dark'] .nav-item {
   z-index: -1;
 }
 
-/* 悬浮动画 */
+/* ホバーアニメーション */
 .nav-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
@@ -435,7 +460,7 @@ html[data-theme='dark'] .category-card {
   margin-bottom: 2rem;
 }
 
-/* カテゴリー色標 */
+/* カテゴリ色標 */
 .category-card::before {
   content: "";
   position: absolute;
@@ -450,13 +475,13 @@ html[data-theme='dark'] .category-card {
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* ホバー特効 */
+/* ホバー効果 */
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
-/* Darkモード - ホバー特効 */
+/* Darkモード - ホバー効果 */
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -472,7 +497,7 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Darkモード - ホバー光効 */
+/* Darkモード - ホバー光効果 */
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
@@ -582,7 +607,7 @@ html[data-theme='dark'] .category-card:active {
   }
 }
 
-/* Darkモード - タイトル文字 */
+/* Darkモード - タイトルテキスト */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -592,7 +617,7 @@ html[data-theme='dark'] h6 {
   color: #f9fafb;
 }
 
-/* Darkモード - 本文文字 */
+/* Darkモード - 本文テキスト */
 html[data-theme='dark'] p,
 html[data-theme='dark'] li,
 html[data-theme='dark'] strong {

@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /ja/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 11/5/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
 
@@ -18,7 +18,7 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 </font></span></strong>
     </a>
 </div>
-Wio Tracker L1 シリーズは、LoRa（862–930 MHz）、効率的な処理のためのnRF52840、正確な位置追跡のためのL76K GPSモジュールを搭載した、低消費電力で高い拡張性を持つ[Meshtastic®](https://meshtastic.org/)ノードです。柔軟性を重視して設計されており、OLEDおよびE-Inkディスプレイ、ソーラーパネルとバッテリー電源をサポートし、幅広いIoTおよびオフグリッドアプリケーションに最適です。
+Wio Tracker L1 シリーズは、LoRa（862–930 MHz）、効率的な処理のためのnRF52840、正確な位置追跡のためのL76K GPSモジュールを搭載した低消費電力で高い拡張性を持つ[Meshtastic®](https://meshtastic.org/)ノードです。柔軟性を重視して設計されており、OLEDおよびE-Inkディスプレイ、ソーラーパネルとバッテリー電源をサポートし、幅広いIoTおよびオフグリッドアプリケーションに最適です。
 
 ## L1 シリーズモデル
 
@@ -58,7 +58,7 @@ Type-C急速充電、ソーラー入力、Li-ionバッテリー電源をサポ�
 オプションの1.3インチOLEDおよび2.13インチE-Inkスクリーンにより、異なる消費電力と視覚的フィードバックのニーズに対応する多様なディスプレイオプションを提供します。
 
 - **高い拡張性**
-Groveエコシステムと完全に互換性があり、PTHヘッダーとSWDデバッグインターフェースを含み、カスタムハードウェア拡張と高度な開発に対応します。
+Grove エコシステムと完全に互換性があり、PTHヘッダーとSWDデバッグインターフェースを含み、カスタムハードウェア拡張と高度な開発に対応します。
 
 ### 仕様
 
@@ -70,7 +70,7 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
   <tr>
     <th colspan="1">プロセッサ</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU 最大64 MHzで動作
+      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU 最大64 MHz動作
     </th>
   </tr>
   <tr>
@@ -78,10 +78,11 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
     <td colspan="1">1 MBフラッシュおよび256 kB RAM</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="2">ワイヤレス</td>
-    <td colspan="1">
-      LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>ベース、862-930MHzをサポート
-    </td>
+    <td colspan="1" rowspan="3">ワイヤレス</td>
+    <td colspan="1">LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>ベース、862-930MHzサポート</td>
+  </tr>
+   <tr>
+  <td colspan="1">L1 Pro用LoRaアンテナ：3dBi</td>
   </tr>
   <tr>
     <td colspan="1">Bluetooth 5.0</td>
@@ -121,7 +122,7 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
     <td colspan="1">アクティブエリア（mm）：34.5 × 23.0</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">E-Inkスクリーン</td>
+    <td colspan="1" rowspan="3">[E-Inkスクリーン](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
     <td colspan="1">サイズ：2.13インチ</td>
   </tr>
   <tr>

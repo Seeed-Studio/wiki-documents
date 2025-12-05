@@ -902,6 +902,16 @@ sudo apt install pavucontrol -y
 
 Luego puedes abrir **pavucontrol** y aumentar el volumen de salida más allá del 100% si es necesario.
 
+### Después de reinstalar los controladores USB, mi ReSpeaker no graba ni reproduce
+
+Desinstala todos los controladores asociados con el ReSpeaker en el Administrador de dispositivos. Esto resolvió el problema.
+
+## Recursos
+
+- [Archivo 3D de ReSpeaker XVF3800](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
+- [Archivo 3D-Enclosure-Up de ReSpeaker XVF3800](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
+- [Archivo 3D-Enclosure-Down de ReSpeaker XVF3800](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
+
 ## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
