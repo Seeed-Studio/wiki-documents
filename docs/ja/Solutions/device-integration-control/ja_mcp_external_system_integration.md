@@ -11,7 +11,7 @@ keywords:
 - Watcher
 - External System
 - Enterprise
-image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
+image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
 slug: /ja/mcp_external_system_integration
 last_update:
   date: 11/27/2025
@@ -37,7 +37,7 @@ last_update:
 
 - **「Xiaozhi Standard Version の在庫はいくつありますか？」**
 - **「Watcher Xiaozhi Standard Version を 5 台入庫してください」**
-- **「今日の在庫サマリーは何ですか？」**
+- **「今日の在庫サマリーは？」**
 
 Watcher が音声コマンドを処理し、適切な MCP ツールを呼び出し、それが倉庫管理システムにクエリを送信したり更新したりします。
 
@@ -72,7 +72,7 @@ Watcher が音声コマンドを処理し、適切な MCP ツールを呼び出�
 ### ハードウェア
 
 - SenseCAP Watcher デバイス（Xiaozhi AI で設定済み）
-- バックエンドシステムと MCP サーバーを実行するためのコンピュータ（Windows/macOS/Linux）
+- バックエンドシステムと MCP サーバーを実行するためのコンピューター（Windows/macOS/Linux）
 
 ### ソフトウェア
 
@@ -185,8 +185,8 @@ curl http://localhost:2124/api/materials/xiaozhi
 
 パターンは簡単です：
 
-1. **`FastMCP` で MCP サーバーを作成**
-2. **`@mcp.tool()` デコレータでツール関数を定義**
+1. **FastMCP で MCP サーバーを作成**
+2. **`@mcp.tool()` デコレーターでツール関数を定義**
 3. **ツール関数内で既存の API を呼び出し**
 4. **AI が解釈するための構造化された結果を返す**
 
@@ -231,7 +231,7 @@ def query_xiaozhi_stock(product_name: str = "watcher-xiaozhi(标准版)") -> dic
 
 - **関数名**（`query_xiaozhi_stock`）→ AI が認識するツール名
 - **ドキュメント文字列** → AI がこのツールをいつ使用するかのガイド
-- **パラメータ** → AI が音声コマンドから抽出する必要があるもの
+- **パラメーター** → AI が音声コマンドから抽出する必要があるもの
 - **戻り値** → AI がユーザーに読み上げるもの
 
 #### 3. サーバーの開始
@@ -528,11 +528,11 @@ def check_order_status(order_id: str) -> dict:
 ## 技術サポート
 
 <div class="button_tech_support_container">
-<a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
+<a href="https://discord.com/invite/kpY74apCWj" class="button_tech_support_sensecap"></a>
 <a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="mailto:solution@seeeed.cc" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
