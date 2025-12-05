@@ -1,14 +1,13 @@
 ---
-description: Livbelybot Motor Debugging Assistant for HighTorque use Guide
-title: Livbelybot Motor Debugging Assistant for HighTorque use Guide
-version: GQJD2022
+description: HighTorque Motors Getting Started
+title: HighTorque Motors Getting Started
 keywords:
 - actuator
 - motor
 - arm
 - robotics
 image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
-slug: /hightorque_assistant
+slug: /hightorque_getting_started
 last_update:
   date: 12/04/2025
   author: Tienjuiwong

@@ -18,6 +18,8 @@ slug: /mcp_endpoint
 last_update:
   date: 10/30/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 # MCP Endpoint

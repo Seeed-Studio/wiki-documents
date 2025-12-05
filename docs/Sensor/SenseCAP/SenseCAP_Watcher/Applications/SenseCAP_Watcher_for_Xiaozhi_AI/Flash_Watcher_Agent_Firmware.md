@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /flash_watcher_agent_firmware
 last_update:
-  date: 09/04/2025
+  date: 12/04/2025
   author: Twelve
 translation:
   skip: [ zh-CN ]
@@ -155,6 +155,13 @@ If your Watcher model is **not -EN**, you must manually flash the authentication
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/mac.jpg" style={{width:600, height:'auto'}}/></div>
+
+:::danger note
+Please ensure that the STA MAC address you provide is correct.  
+The authentication file can only be flashed **once**, and using an incorrect address will prevent the device from binding properly.  
+Also note that the authentication file only needs to be flashed one time.
+:::
+
 2. Send an email to **sensecap@seeed.cc** with your STA MAC address and request the authentication file and flashing tool. This script will be provided in the package we send to you.
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools.jpg" style={{width:500, height:'auto'}}/></div>
 3. Go to the esp-idf terminal and navigate to the folder we send to you, run the **Python flashing script**.
