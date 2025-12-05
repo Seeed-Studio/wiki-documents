@@ -106,7 +106,7 @@ The Hailo AI Software Suite provides powerful tools to run AI models efficiently
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTE1:** We recommend flashing the **64-bit Raspberry Pi OS (Debian 12 Bookworm) image** for now. The newly released Raspberry Pi OS based on Debian 13 “Trixie” hasn’t updated the hailo-all package yet, so Bookworm will give you full Hailo support out of the box.
+**NOTE1:** We recommend flashing the (64-bit Raspberry Pi OS Debian 12 Bookworm)[https://downloads.raspberrypi.com/raspios_oldstable_full_arm64/images/raspios_oldstable_full_arm64-2025-10-02/2025-10-01-raspios-bookworm-arm64-full.img.xz] image for now. The newly released Raspberry Pi OS based on Debian 13 “Trixie” hasn’t updated the hailo-all package yet, so Bookworm will give you full Hailo support out of the box.
 Download [link](https://www.raspberrypi.com/software/operating-systems/).
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/OS.png" alt="pir" width="600" height="auto"/></p>
 Then write it to your SD card using the imager with the Use custom option.
