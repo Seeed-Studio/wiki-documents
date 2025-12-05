@@ -11,7 +11,7 @@ keywords:
 - Watcher
 - External System
 - Enterprise
-image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
+image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
 slug: /cn/mcp_external_system_integration
 last_update:
   date: 11/27/2025
@@ -71,7 +71,7 @@ Watcher 处理语音命令，调用相应的 MCP 工具，然后查询或更新�
 
 ### 硬件
 
-- SenseCAP Watcher 设备（已配置小智 AI）
+- SenseCAP Watcher 设备（配置了小智 AI）
 - 一台计算机（Windows/macOS/Linux）来运行后端系统和 MCP 服务器
 
 ### 软件
@@ -167,7 +167,7 @@ curl http://localhost:2124/api/materials/xiaozhi
 ]
 ```
 
-您还可以在以下地址浏览交互式 API 文档：http://localhost:2124/docs
+您还可以在以下地址探索交互式 API 文档：http://localhost:2124/docs
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/API_EndPoint.png" alt="mcp-system-integration"/>
@@ -178,7 +178,7 @@ curl http://localhost:2124/api/materials/xiaozhi
 演示系统已经具有用于仓库操作的 REST API。现在让我们将它们包装为 MCP 工具以实现语音控制。
 
 :::tip
-运行后端服务器后，您可以通过 http://localhost:2124/docs（Swagger UI）的交互式文档浏览所有可用的 API。完整的 MCP 服务器代码位于仓库中的 `mcp/warehouse_mcp.py`。
+运行后端服务器后，您可以通过 http://localhost:2124/docs（Swagger UI）的交互式文档探索所有可用的 API。完整的 MCP 服务器代码位于仓库中的 `mcp/warehouse_mcp.py`。
 :::
 
 ### 核心概念：API 到 MCP 工具
@@ -227,7 +227,7 @@ def query_xiaozhi_stock(product_name: str = "watcher-xiaozhi(标准版)") -> dic
     }
 ```
 
-**关键要点：**
+**要点：**
 
 - **函数名**（`query_xiaozhi_stock`）→ AI 看到的工具名
 - **文档字符串** → 指导 AI 何时使用此工具
@@ -241,7 +241,7 @@ if __name__ == "__main__":
     mcp.run(transport="stdio")
 ```
 
-### 此演示中的工具
+### 本演示中的工具
 
 `warehouse_mcp.py` 定义了 5 个工具：
 
@@ -331,8 +331,8 @@ Press Ctrl+C to stop the service
 
 返回 SenseCraft AI 平台并检查 MCP 连接状态。您应该看到：
 
-- **Connection Status**: Connected
-- **Enabled Services**: Warehouse System
+- **连接状态**：已连接
+- **已启用服务**：仓库系统
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/MCP_connected.png" alt="mcp-system-integration"/>
@@ -346,22 +346,22 @@ Press Ctrl+C to stop the service
 
 | 语音命令                                          | 预期操作                                       |
 | ------------------------------------------------------ | ----------------------------------------------------- |
-| "Query the stock of Xiaozhi Standard Version"          | 调用 `query_xiaozhi_stock` 工具                      |
-| "How many Xiaozhi Professional Version do we have?"    | 调用 `query_xiaozhi_stock` 专业版 |
-| "Stock in 5 units of Watcher Xiaozhi Standard Version" | 调用 `stock_in` 工具，数量=5                 |
-| "Stock out 3 Xiaozhi units for sales"                  | 调用 `stock_out` 工具，数量=3                |
-| "What's today's inventory summary?"                    | 调用 `get_today_statistics` 工具                     |
-| "List all Xiaozhi products"                            | 调用 `list_xiaozhi_products` 工具                    |
+| "查询小智标准版的库存"          | 调用 `query_xiaozhi_stock` 工具                      |
+| "我们有多少小智专业版？"    | 调用 `query_xiaozhi_stock` 专业版 |
+| "入库 5 台 Watcher 小智标准版" | 调用 `stock_in` 工具，数量=5                 |
+| "出库 3 台小智用于销售"                  | 调用 `stock_out` 工具，数量=3                |
+| "今天的库存汇总是什么？"                    | 调用 `get_today_statistics` 工具                     |
+| "列出所有小智产品"                            | 调用 `list_xiaozhi_products` 工具                    |
 
 ### 预期响应
 
 **查询库存：**
 
-> "库存查询成功。Watcher Xiaozhi 标准版当前在位置 A-01-01 有 150 个单位的库存。库存状态正常。"
+> "库存查询成功。Watcher 小智标准版当前在位置 A-01-01 有 150 台库存。库存状态正常。"
 
 **入库：**
 
-> "成功添加 5 个单位的 Watcher Xiaozhi 标准版。之前数量为 150，新数量为 155。"
+> "成功添加 5 台 Watcher 小智标准版。之前数量为 150，新数量为 155。"
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.png" alt="mcp-system-integration"/>
@@ -467,7 +467,7 @@ except Exception as e:
 
 ### MCP 连接超时
 
-**症状：** "Connecting to WebSocket server..." 无限期挂起
+**症状：** "正在连接到 WebSocket 服务器..." 无限期挂起
 
 **解决方案：**
 
@@ -475,7 +475,7 @@ except Exception as e:
 2. 检查您的网络连接
 3. 确保端点 URL 以 `wss://` 开头
 
-### 工具未识别
+### 工具未被识别
 
 **症状：** 语音命令未触发预期的工具
 
@@ -487,7 +487,7 @@ except Exception as e:
 
 ### 连接限制超出
 
-**症状：** "达到最大连接数"错误
+**症状：** "已达到最大连接数" 错误
 
 **解决方案：**
 
@@ -528,11 +528,11 @@ def check_order_status(order_id: str) -> dict:
 ## 技术支持
 
 <div class="button_tech_support_container">
-<a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
+<a href="https://discord.com/invite/kpY74apCWj" class="button_tech_support_sensecap"></a>
 <a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
+<a href="mailto:solution@seeeed.cc" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
