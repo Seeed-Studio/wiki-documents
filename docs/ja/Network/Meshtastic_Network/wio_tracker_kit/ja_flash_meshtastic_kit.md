@@ -7,14 +7,18 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/flash_meshtastic_kit
 last_update:
-  date: 11/11/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
-
+:::danger note
+デバイスが以下の状態にある場合は、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。
+1. メッセージ送信プロセスが完了していない
+2. 設定中
+:::
 このチュートリアルでは、Meshtastic ネットワークを使用したいユーザー向けに、[Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) を Meshtastic バージョンに書き込む方法をガイドします。
 
 :::tip
-ボードを LoRaWAN バージョンに戻したい場合は、この[チュートリアル](https://wiki.seeedstudio.com/ja/flash_to_wio_tracker/)をご確認ください。ファームウェアの更新に `NRF-OTA` を使用しないでください。デバイスが完全に動作しなくなる可能性があります。
+ボードを LoRaWAN バージョンに戻したい場合は、この[チュートリアル](https://wiki.seeedstudio.com/ja/flash_to_wio_tracker/)をご確認ください。ファームウェアの更新に `NRF-OTA` を使用しないでください。デバイスが完全に故障する可能性があります。
 :::
 
 ### 準備
@@ -108,8 +112,8 @@ cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
-.exe ファイルは `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` にあります（Windows の場合は `.exe` 付き）。
-便利なように、%PATH% 内のディレクトリなど他の場所にコピーまたは移動してください。
+.exe は `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` にあります（Windows の場合は `.exe` 付き）。
+%PATH% 内のディレクトリなど、便利な場所にコピーまたは移動してください。
 
 </TabItem>
 </Tabs>
@@ -155,7 +159,7 @@ adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.
 `.uf2` ファイルをドライバーにドラッグします。ダウンロードが自動的に実行され、その後ドライバーがログアウトします。
 
 :::tip
-このエラープロンプトは無視してください。デバイスは実際には正常にアップグレードされています。
+このエラープロンプトは無視してください。デバイスは実際に正常にアップグレードされています。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/error-prompt.png" alt="pir" width={600} height="auto" /></p>
 :::
 

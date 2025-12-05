@@ -1453,6 +1453,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-RS485-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Bus_Servo_Driver_Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/LED_Driver_Board',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/COB_LED_Driver_Board',
           ],
         },
         {
@@ -4104,6 +4105,7 @@ const sidebars = {
         'Robotics/Robot_Actuator/Damiao_Series',
         'Robotics/Robot_Actuator/HighTorque_Control',
         'Robotics/Robot_Actuator/RobStride_Control',
+        'Robotics/Robot_Actuator/HighTorque_Assistant',
       ]
     },
     {
@@ -6564,6 +6566,7 @@ const sidebars = {
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_XIAO-RS485-Expansion-Board',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_Bus_Servo_Driver_Board',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_LED_Driver_Board',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_COB_LED_Driver_Board',
           ],
         },
         {
@@ -9216,6 +9219,7 @@ const sidebars = {
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
         'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
+        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Assistant',
       ]
     },
     {
@@ -11588,6 +11592,7 @@ const sidebars = {
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_XIAO-RS485-Expansion-Board',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_Bus_Servo_Driver_Board',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_LED_Driver_Board',
+            'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_COB_LED_Driver_Board',
           ],
         },
         {
@@ -14237,6 +14242,7 @@ const sidebars = {
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
         'es/Robotics/Robot_Actuator/es_HighTorque_Control',
         'es/Robotics/Robot_Actuator/es_RobStride_Control',
+        'es/Robotics/Robot_Actuator/es_HighTorque_Assistant',
       ]
     },
     {
@@ -16605,6 +16611,7 @@ const sidebars = {
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_XIAO-RS485-Expansion-Board',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_Bus_Servo_Driver_Board',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_LED_Driver_Board',
+            'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_COB_LED_Driver_Board',
           ],
         },
         {
@@ -19254,6 +19261,7 @@ const sidebars = {
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
         'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
         'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
+        'ja/Robotics/Robot_Actuator/ja_HighTorque_Assistant',
       ]
     },
     {

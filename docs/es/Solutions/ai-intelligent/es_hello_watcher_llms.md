@@ -15,6 +15,7 @@ keywords:
 - MCP
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
 slug: /es/solutions/hello_watcher_llms
+sidebar_position: 1
 last_update:
   date: 09/16/2025
   author: Spencer
@@ -98,7 +99,7 @@ SenseCAP Watcher puede pensarse como un robot inteligente "modular", con su oper
 
 1.  **Núcleo de Hardware (ESP32S3)**: Impulsa el hardware subyacente, procesa datos de la cámara y mantiene conexiones estables a servicios en la nube.
 2.  **Nervio Visual (Chip AI Himax)**: Una poderosa unidad de procesamiento de visión AI en el dispositivo que otorga al dispositivo capacidades de percepción ambiental en tiempo real.
-3.  **Cerebro en la Nube (Servicios Backend)**: Responsable de la configuración del rol de IA, programación de herramientas MCP y gestión unificada de dispositivos.
+3.  **Cerebro en la Nube (Servicios Backend)**: Responsable de la configuración de roles de IA, programación de herramientas MCP y gestión unificada de dispositivos.
 
 El proceso puede simplificarse de la siguiente manera:
 
@@ -110,7 +111,7 @@ Este diseño modular ofrece alta flexibilidad y extensibilidad.
   <img class='img-responsive' width="680" src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/watcher-chatbot-diagram.png" alt="watcher-chatbot-diagram"/>
 </div>
 
-## Guía de Introducción
+## Guía de Inicio
 
 ### Inicio Rápido en Tres Pasos
 
@@ -146,7 +147,7 @@ Para instrucciones detalladas, por favor consulta las secciones relevantes en nu
 
 ## Iniciar una Conversación
 
-Ahora que tienes una comprensión básica de SenseCAP Watcher, puedes explorar sus capacidades conversacionales y de llamada de herramientas, como usar la función de cámara o establecer estrategias basadas en tiempo para interacción proactiva.
+Ahora que tienes un entendimiento básico de SenseCAP Watcher, puedes explorar sus capacidades conversacionales y de llamada de herramientas, como usar la función de cámara o establecer estrategias basadas en tiempo para interacción proactiva.
 
 Por ejemplo, si el nombre del rol de mi agente está configurado como `Watcher`, la configuración se vería así:
 
@@ -225,7 +226,7 @@ Dile a Watcher:
 
 Aquí tienes algunos recursos avanzados para ayudarte a expandir aún más los límites de aplicación de SenseCAP Watcher según tus necesidades, ya sea para implementación local, protección de privacidad o construcción de bases de conocimiento personalizadas:
 
-- [Hogar Inteligente Impulsado por Conversación AI](/es/ha_dify_watcher_llms) - Controla dispositivos domésticos inteligentes como luces, aire acondicionado y cortinas directamente por voz a través de SenseCAP Watcher, despidiéndote de la operación manual.
+- [Hogar Inteligente Impulsado por Conversación AI](/es/ha_dify_watcher_llms) - Controla dispositivos de hogar inteligente como luces, aire acondicionado y cortinas directamente por voz a través de SenseCAP Watcher, despídete de la operación manual.
 <!--- [Knowledge Based chatbots](/es/knowledge_watcher_llms) - Transform SenseCAP Watcher into a virtual exhibition secretary, automatically explaining products and solutions for businesses, with the ability to intelligently identify customer points of interest.-->
 
 ## Referencias
