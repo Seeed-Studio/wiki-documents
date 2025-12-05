@@ -104,6 +104,14 @@ last_update:
     </a>
 </div>
 
+## Stackforce
+
+<div className="card-container">
+    <a href="/cn/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
+      <span className="text">小轮足机器人</span>
+      <span className="tag recommended">New</span>
+    </a>
+</div>
 
 ## 🖐️ 灵巧手
 
@@ -147,6 +155,9 @@ last_update:
     </a>
     <a href="/cn/fashionstar_servo/" className="nav-item">
       <span className="text">4️⃣华馨京 系列</span>
+    </a>
+    <a href="/cn/stackforce_series/" className="nav-item">
+      <span className="text">5️⃣Stackforce 系列</span>
     </a>
 </div>
 
