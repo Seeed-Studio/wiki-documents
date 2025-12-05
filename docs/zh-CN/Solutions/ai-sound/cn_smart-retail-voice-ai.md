@@ -66,7 +66,7 @@ tags:
     </svg>
    </div>
    <div class="info-content">
-    <h3>远场零售级音频捕获</h3>
+    <h3>远场零售就绪音频捕获</h3>
     <p>该解决方案专为嘈杂零售环境中的远场音频捕获而设计。支持麦克风阵列、波束成形和噪声抑制，即使在背景音乐和周围聊天声中也能专注于真实的客户-员工对话。</p>
    </div>
   </li>
@@ -99,7 +99,7 @@ tags:
 
 ## 入门指南
 
-在本节中，我们将指导您使用 Seeed 的 reRouter 和 reSpeaker XVF3800 麦克风阵列设置智能零售语音 AI 解决方案的步骤。
+在本节中，我们将指导您完成使用 Seeed 的 reRouter 和 reSpeaker XVF3800 麦克风阵列设置智能零售语音 AI 解决方案的步骤。
 
 ### 1. 硬件要求
 
@@ -127,8 +127,10 @@ tags:
           <strong>角色：</strong>处理单元<br/><br/>
           <strong>技术规格：</strong>
           <ul style={{ textAlign: 'left', marginTop: '5px' }}>
-            <li><strong>内存：</strong>4GB（最低要求）</li>
+            <li><strong>CPU：</strong>四核处理器</li>
+            <li><strong>RAM：</strong>4GB（最低要求）</li>
             <li><strong>存储：</strong>32GB eMMC</li>
+            <li><strong>操作系统：</strong>OpenWrt 24.10.3（Build r28872）</li>
           </ul>
           <small><em>*注意：低于这些规格的性能尚未验证。</em></small>
         </td>
@@ -137,6 +139,8 @@ tags:
            <strong>技术规格：</strong>
            <ul style={{ textAlign: 'left', marginTop: '5px' }}>
             <li><strong>型号：</strong>XVF3800 4 麦克风阵列</li>
+            <li><strong>固件：</strong>v2.0.5</li>
+            <li><strong>配置：</strong>1 通道（处理后音频）</li>
             <li><strong>功能：</strong>噪声抑制、AEC、波束成形</li>
            </ul>
         </td>
@@ -158,7 +162,7 @@ tags:
 reRouter 有两个版本的 OpenWrt 固件可用：  
 一个适用于**全球用户**，另一个针对**中国大陆用户**进行了优化。
 
-当前固件基于**OpenWrt 24.10.3（构建版本 r28872）**。
+当前固件基于**OpenWrt 24.10.3（Build r28872）**。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -266,7 +270,7 @@ import TabItem from '@theme/TabItem';
 
     打开命令提示符（`cmd`）或 PowerShell 并运行：
 
-    ```powershell
+    ```bash
     git clone https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY.git
     cd reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
     ```
@@ -275,7 +279,7 @@ import TabItem from '@theme/TabItem';
 
     运行以下三个命令来初始化设备：
 
-    ```powershell
+    ```bash
     # 1. Clear existing configuration
     .\xvf_host.exe clear_configuration 1
 
@@ -317,18 +321,10 @@ ssh root@192.168.49.1
 - 打开浏览器并访问：http://192.168.49.1
 - 用户名：root
 - 密码：（默认为空）
-
-如果您需要其他语言支持，例如中文，您可以通过 Web 界面或 SSH 安装 `luci-i18n-base-zh-cn` 包。
-
-```shell
-opkg update
-opkg install luci-i18n-base-zh-cn
-```
-
 :::
 
 :::caution 重要
-在继续执行以下安装步骤之前，请验证 reRouter 可以访问互联网
+在继续执行下面的安装步骤之前，请验证 reRouter 可以访问互联网
 （例如，在 SSH 终端中运行 ping google.com 或 ping openwrt.org）。
 :::
 
@@ -381,7 +377,7 @@ wget -q -O config.yaml 'https://appstore.seeed-fleet.com/config.yaml'
 
 ##### 步骤 2.3：下载和提取模型
 
-我们将直接从 Seeed Studio 服务器下载预训练的 ASR 模型包，使用 SHA-256 验证其完整性并提取它。
+我们将直接从 Seeed Studio 服务器下载预训练的 ASR 模型包（大约 **480MB**），使用 SHA-256 验证其完整性，并提取它。
 
 | 文件 | URL |
 | :--- | :--- |
@@ -404,13 +400,14 @@ echo "Model package download completed. Check file size is approximately 500MB."
 
 # 4. Verify the file integrity using SHA-256 Checksum
 # The result MUST match the expected hash above.
-sha256sum models.zip
+echo "Verifying file checksum..."
+shasum -a 256 models.zip
 
 # 5. Extract the model package into the 'models' directory
 unzip -o models.zip
 
 # 6. Clean up the temporary ZIP file
-# rm -f models.zip
+rm -f models.zip
 
 # 7. Verify the model files are present
 ls -l /data-iot/respeaker/models/
@@ -489,7 +486,7 @@ docker run -d --name watchtower \
     --cleanup -i 60 sensecraft-asr-server sensecraft-voice-client
 ```
 
-##### 3. 验证
+##### ✅ 3. 验证
 
 检查部署的最终状态。
 
@@ -503,210 +500,11 @@ docker logs sensecraft-voice-client
 
 如果日志显示成功启动且没有严重错误，则 SenseCraft 服务已成功部署。
 
----
+## 访问 SenseCraft Voice 服务
 
-强烈建议重启设备以确保所有设置、权限和网络配置都被系统完全加载和识别。
+SenseCraft Voice Client 在 reRouter IP 地址的端口 `8090` 上公开了一个 Web 界面。
+您可以通过 Web 浏览器访问：
 
-```bash
-reboot
+```shell
+http://<reRouter_IP_Address>:8090
 ```
-
-## SenseCraft Voice：边缘到云平台概述
-
-SenseCraft Voice 是一个尖端平台，旨在通过强大的 AI 分析和集中管理，将在边缘（reRouter）捕获的原始音频数据转换为可操作的商业智能。
-
-该平台独特的边缘-云架构为企业级音频监控解决方案提供了无与伦比的可靠性、速度和分析深度。
-
-| **功能**                       | **价值主张**                                        | **关键优势**                                           |
-| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **弹性边缘处理**     | 保证持续运行和低延迟。             | 语音 ASR 和识别在 reRouter 上*本地*运行，确保实时响应和数据收集，即使在网络中断期间也能正常工作。 |
-| **深度 AI 定制**         | 使平台适应特定的业务需求和术语。 | 管理员可以定义自定义**关键词、同义词和 AI 提示**来指导 AI 分析，确保针对其业务语言的准确事件检测。 |
-| **精细位置映射**     | 简化大规模部署管理。                | 支持通过**商店、位置和设备名称**对数千个边缘设备进行分层组织，摆脱令人困惑的 MAC 地址，便于过滤和报告。 |
-| **可操作的仪表板**         | 提供即时的业务洞察和性能跟踪。 | 集中式仪表板具有**多商店过滤**、实时**设备在线率**和**关键词热点分析**功能，可即时监控运营状态和业务事件。 |
-
-SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保实时本地处理和集中管理。该服务由两个主要组件组成：运行在 reRouter 上的边缘端客户端，以及云端/服务器端管理平台。
-
-## 用户指南
-
-### 边缘端客户端（reRouter）访问
-
-边缘客户端对于实时验证和本地设置至关重要。
-
-- **访问：** 打开您的网络浏览器，导航到 reRouter 的 IP 地址的 8090 端口：`http://<reRouter_IP_Address>:8090`。
-- **核心功能：** 该界面提供实时 ASR 转录（用于验证音频输入）、声纹识别控制（说话人识别）和设备配置（网络设置、上游服务器地址）。
-
-<table> <thead> <tr> <th>模块名称</th> <th>描述</th> <th>界面截图</th> </tr> </thead> <tbody> <tr> <td><b>语音 ASR</b></td> <td> <p><b>描述：</b> 显示本地自动语音识别（ASR）服务的当前运行状态。</p> <p><b>用途：</b> 提供检测到的语音的<b>实时转录</b>，对于验证本地音频输入和识别准确性至关重要。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>图 1：语音 ASR 模块</p></div> </td> </tr> <tr> <td><b>声纹识别</b></td> <td> <p><b>描述：</b> 管理和监控声纹识别系统。</p> <p><b>用途：</b> 用于基于独特的语音特征<b>注册、区分和识别</b>不同的说话人/用户。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>图 2：声纹识别模块</p></div> </td> </tr> <tr> <td><b>设备状态与配置</b></td> <td> <p><b>描述：</b> 提供 reRouter 运行状态的详细信息，并允许更改核心参数。</p> <p><b>用途：</b> 启用配置更新，如<b>网络设置</b>（Wi-Fi）和更改用于云端通信的<b>上游服务器地址</b>。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>图 3：设备状态与配置</p></div> </td> </tr> </tbody> </table>
-
-### 云端管理平台
-
-云端平台分为五个主要导航区域，提供强大的数据分析和系统配置工具。
-
-#### 1. 仪表板：一目了然的洞察
-
-仪表板是您的运营指挥中心，提供聚合指标和性能趋势：
-
-- **商店筛选：** 通过选择一个或多个商店轻松切换视图，所有图表会立即更新。
-- **分析：** 监控**每日收集趋势**（每小时记录）和**关键词热点分析**（显示哪些关键词被频繁触发以及相关的**设备名称**）。
-
-<div align="center">
-
-<figure>
-
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/main-page-dashboard.png" alt="Dashboard Main Page" />
-
-<figcaption>图 4：仪表板界面</figcaption>
-
-</figure>
-
-</div>
-
-#### 2. 记录管理：数据审计与导出
-
-此模块提供所有收集的语音记录的权威视图。
-
-- **高级筛选：** 使用**设备名称、商店名称、位置名称或 MAC 地址**进行精确数据检索。搜索仅在点击 **"Filter"** 按钮后执行，让用户完全控制。
-- **导出功能：** 选择并以**三种格式**导出筛选的数据供外部使用（一次选择一种）：**Markdown**、**纯文本（.txt）**或**原始音频文件**。
-- **清晰度：** 所有记录视图优先显示易于识别的**设备名称**而非 MAC 地址。
-
-<div align="center">
-
-<figure>
-
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/record-management.png" alt="Record Management Interface" />
-
-<figcaption>图 5：记录管理界面</figcaption>
-
-</figure>
-
-</div>
-
-#### 3. AI 分析：历史与自定义处理
-
-此区域处理向 AI 引擎提交语音记录进行高级处理。
-
-- **历史会话：** 查看您与 AI 分析引擎的过往交互。历史窗口按时间顺序显示对话，点击会话会立即加载之前的对话线程供查看。
-- **处理：** 基于当前选择的 **AI 提示**提交筛选的记录进行 AI 处理。
-
-<div align="center">
-
-<figure>
-
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/ai-analysis.png" alt="AI Analysis Interface" />
-
-<figcaption>图 6：AI 分析界面</figcaption>
-
-</figure>
-
-</div>
-
-#### 4. 商店管理：设备与位置层次结构
-
-此区域提供设置和维护所有边缘设备组织层次结构的必要工具。
-
-- **层次视图：** 轻松管理商店、其特定的店内位置以及相关的 reRouter 设备。
-- **集中控制：** 通过逻辑分组设备来简化设备部署和配置。
-
-<div align="center">
-
-<figure>
-
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/store-management.png" alt="Store Management Interface" />
-
-<figcaption>图 7：商店管理界面</figcaption>
-
-</figure>
-
-</div>
-
-<div align="center">
-
-<figure>
-
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/device-management.png" alt="Device Management Interface" />
-
-<figcaption>图 8：设备管理界面</figcaption>
-
-</figure>
-
-</div>
-
-<div align="center">
-
-<figure>
-
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/specific-location-management.png" alt="Specific Location Management Interface" />
-
-<figcaption>图 9：特定位置管理界面</figcaption>
-
-</figure>
-
-</div>
-
-#### 5. 后端配置：系统控制与自定义
-
-此部分允许管理员定义 AI 处理和事件触发的系统级参数。
-
-##### 5.1. 关键词设置
-
-定义自定义关键词和同义词以识别录音中的特定业务事件。
-
-- **自定义：** 定义用于事件检测的**关键词**及其**同义词**。
-- **可视化：** 分配**标记颜色**以在仪表板上进行视觉区分。
-- **管理：** 支持**添加、编辑、删除和批量删除**。
-
-<div align="center">
-
-<figure>
-
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/keywords-backend-management.png" alt="Keywords Backend Management Interface" />
-
-<figcaption>图 10：关键词设置界面</figcaption>
-
-</figure>
-
-</div>
-
-##### 5.3. 用户管理
-
-用户管理模块控制平台访问和权限。
-
-<div align="center">
-
-<figure>
-
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/user-management.png" alt="User Management Interface" />
-
-<figcaption>图 12：用户管理界面</figcaption>
-
-</figure>
-
-</div>
-
-##### 5.2. AI 提示设置
-
-创建和管理自定义 **AI 提示**以指导 AI 如何处理选定的语音记录。
-
-- **控制：** 定义提示**名称、标签和内容**。一次只有一个**启用**的提示处于活动状态供使用。
-- **管理：** 支持**添加、编辑、删除和批量删除**。
-
-<div align="center">
-
-<figure>
-
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/system-prompt-editing.png" alt="AI Prompt Editing Interface" />
-
-<figcaption>图 11：AI 提示设置界面</figcaption>
-
-</figure>
-
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.com/invite/kpY74apCWj" class="button_tech_support_sensecap"></a>
-<a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="mailto:solution@seeeed.cc" class="button_tech_support_sensecap2"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>

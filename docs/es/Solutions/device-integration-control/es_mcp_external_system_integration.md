@@ -11,7 +11,7 @@ keywords:
 - Watcher
 - External System
 - Enterprise
-image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
+image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /es/mcp_external_system_integration
 last_update:
   date: 11/27/2025
@@ -23,7 +23,7 @@ last_update:
 
 ## Descripción General
 
-Esta guía demuestra cómo integrar sus sistemas empresariales existentes con **SenseCAP Watcher** a través de **MCP (Model Context Protocol)**. A diferencia del ejemplo básico de calculadora, este tutorial se enfoca en un caso de uso industrial: **gestión de almacén controlada por voz**.
+Esta guía demuestra cómo integrar tus sistemas empresariales existentes con **SenseCAP Watcher** a través de **MCP (Model Context Protocol)**. A diferencia del ejemplo básico de calculadora, este tutorial se enfoca en un caso de uso industrial: **gestión de almacén controlada por voz**.
 
 Al final de este tutorial, podrás:
 
@@ -35,7 +35,7 @@ Al final de este tutorial, podrás:
 
 Imagina un operador de almacén que necesita verificar inventario o registrar movimientos de stock mientras sus manos están ocupadas. Con la integración MCP, simplemente puede hablar al dispositivo Watcher:
 
-- **"¿Cuántos Xiaozhi Standard Version tenemos en stock?"**
+- **"¿Cuántas unidades de Xiaozhi Standard Version tenemos en stock?"**
 - **"Ingresar 5 unidades de Watcher Xiaozhi Standard Version"**
 - **"¿Cuál es el resumen de inventario de hoy?"**
 
@@ -62,7 +62,7 @@ El Watcher procesa el comando de voz, llama a la herramienta MCP apropiada, que 
 **Componentes Clave:**
 
 - **Dispositivo Watcher**: Captura comandos de voz y los envía al modelo de IA
-- **MCP Endpoint**: Servicio en la nube que conecta tu servidor MCP local con el modelo de IA
+- **Endpoint MCP**: Servicio en la nube que conecta tu servidor MCP local con el modelo de IA
 - **Servidor MCP**: Tu código Python que envuelve la lógica empresarial como herramientas invocables
 - **API Backend**: Tu API REST existente (FastAPI, Flask, etc.)
 - **Base de Datos**: Tu almacenamiento de datos empresariales
@@ -260,9 +260,9 @@ if __name__ == "__main__":
     mcp.run(transport="stdio")
 ```
 
-## Parte 3: Conectar al MCP Endpoint
+## Parte 3: Conectar al Endpoint MCP
 
-### Paso 1: Obtener tu MCP Endpoint
+### Paso 1: Obtener tu Endpoint MCP
 
 1. Inicia sesión en [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
 2. Haz clic en **Watcher Agent** en la esquina superior derecha
@@ -342,7 +342,7 @@ Regresa a la Plataforma SenseCraft AI y verifica el estado de conexión MCP. Deb
 
 ¡Ahora puedes probar la integración usando tu dispositivo Watcher!
 
-### Ejemplos de Comandos de Voz
+### Comandos de Voz de Ejemplo
 
 | Comando de Voz                                         | Acción Esperada                                       |
 | ------------------------------------------------------ | ----------------------------------------------------- |
@@ -351,7 +351,7 @@ Regresa a la Plataforma SenseCraft AI y verifica el estado de conexión MCP. Deb
 | "Ingresar 5 unidades de Watcher Xiaozhi Versión Estándar" | Llama a la herramienta `stock_in` con cantidad=5     |
 | "Sacar 3 unidades Xiaozhi para ventas"                | Llama a la herramienta `stock_out` con cantidad=3    |
 | "¿Cuál es el resumen de inventario de hoy?"            | Llama a la herramienta `get_today_statistics`        |
-| "Listar todos los productos Xiaozhi"                  | Llama a la herramienta `list_xiaozhi_products`       |
+| "Listar todos los productos Xiaozhi"                   | Llama a la herramienta `list_xiaozhi_products`       |
 
 ### Respuestas Esperadas
 
@@ -528,11 +528,11 @@ def check_order_status(order_id: str) -> dict:
 ## Soporte Técnico
 
 <div class="button_tech_support_container">
-<a href="https://discord.com/invite/kpY74apCWj" class="button_tech_support_sensecap"></a>
+<a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>
 <a href="https://support.sensecapmx.com/portal/en/home" class="button_tech_support_sensecap3"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="mailto:solution@seeeed.cc" class="button_tech_support_sensecap2"></a>
+<a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
