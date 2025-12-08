@@ -459,10 +459,13 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
   遥控器右上打到最上后，左下摇杆左右滑动控制机器人横滚运动，通过断电取消横滚。
 
+## 实际演示
+
+（待添加实际演示视频）
 
 ## 参考文档
 
-[English Document](StackForce_Mini_Wheeled_Legged_Robot)
+English Document（待添加）
 
 [StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce轮足机器人基本操作说明.pdf)
 
