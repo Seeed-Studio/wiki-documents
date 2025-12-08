@@ -211,7 +211,7 @@ reCamera 是一款开源的小型 AI 摄像头，可编程且可定制，由 RIS
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-12.png" /></div>
 
-### [核心板-C101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
+### [核心板-C101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
 <!-- 搬运github说明和图 -->
 | 板卡         | 特性                           | 版本 |
 | ------------- | ---------------------------------- | ------------ |
@@ -223,7 +223,7 @@ reCamera 是一款开源的小型 AI 摄像头，可编程且可定制，由 RIS
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [传感器板-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [传感器板-S101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 <!-- 搬运github说明和图 -->
 
 顶视图             |  底视图
@@ -276,7 +276,7 @@ reCamera 是一款开源的小型 AI 摄像头，可编程且可定制，由 RIS
 - 1 x 扬声器
 - 3 x LED 指示灯
 
-### [底板-B101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#base-board)
+### [底板-B101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#base-board)
 <!-- 搬运github说明和图 -->
 顶视图             |  底视图
 :-------------------------:|:-------------------------:
