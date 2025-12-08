@@ -1453,6 +1453,7 @@ const sidebars = {
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/XIAO-RS485-Expansion-Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Bus_Servo_Driver_Board',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/LED_Driver_Board',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/COB_LED_Driver_Board',
           ],
         },
         {
@@ -3436,8 +3437,8 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/zoneminder_on_recomputer',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/go2rtc_on_recomputer',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/moonfire_nvr_on_recomputer',
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ispy_on_recomputer'
-
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ispy_on_recomputer',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/viseron_on_recomputer'
                   ]
                 },
                 {
@@ -4098,12 +4099,20 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: 'HighTorque',
+          items: [
+            'Robotics/Robot_Actuator/HighTorque/HighTorque',
+            'Robotics/Robot_Actuator/HighTorque/HighTorque_Getting_Started',
+            'Robotics/Robot_Actuator/HighTorque/HighTorque_Control',
+          ]
+        },
         'Robotics/Robot_Actuator/Feetech_Servo',
         'Robotics/Robot_Actuator/FashionStar_Servo',
         'Robotics/Robot_Actuator/Stackforce_Series',
         'Robotics/Robot_Actuator/Myactuator_Series',
         'Robotics/Robot_Actuator/Damiao_Series',
-        'Robotics/Robot_Actuator/HighTorque_Control',
         'Robotics/Robot_Actuator/RobStride_Control',
       ]
     },
@@ -6565,6 +6574,7 @@ const sidebars = {
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_XIAO-RS485-Expansion-Board',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_Bus_Servo_Driver_Board',
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_LED_Driver_Board',
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/cn_COB_LED_Driver_Board',
           ],
         },
         {
@@ -8547,7 +8557,8 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_zoneminder_on_recomputer',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_go2rtc_on_recomputer',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_moonfire_nvr_on_recomputer',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_ispy_on_recomputer'
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_ispy_on_recomputer',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_viseron_on_recomputer'
                   ]
                 },
                 {
@@ -9203,12 +9214,20 @@ const sidebars = {
       type: 'category',
       label: '关节电机',
       items: [
+        {
+          type: 'category',
+          label: '高扭矩',
+          items: [
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque',
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Getting_Started',
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Control',
+          ]
+        },
         'zh-CN/Robotics/Robot_Actuator/cn_Feetech_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_FashionStar_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_Stackforce_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Myactuator_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
-        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
         'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
       ]
     },
@@ -11582,6 +11601,7 @@ const sidebars = {
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_XIAO-RS485-Expansion-Board',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_Bus_Servo_Driver_Board',
             'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_LED_Driver_Board',
+            'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/es_COB_LED_Driver_Board',
           ],
         },
         {
@@ -13564,7 +13584,8 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_zoneminder_on_recomputer',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_go2rtc_on_recomputer',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_moonfire_nvr_on_recomputer',
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_ispy_on_recomputer'
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_ispy_on_recomputer',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_viseron_on_recomputer'
                   ]
                 },
                 {
@@ -14224,12 +14245,20 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: 'Alto par',
+          items: [
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque',
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque_Getting_Started',
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque_Control',
+          ]
+        },
         'es/Robotics/Robot_Actuator/es_Feetech_Servo',
         'es/Robotics/Robot_Actuator/es_FashionStar_Servo',
         'es/Robotics/Robot_Actuator/es_Stackforce_Series',
         'es/Robotics/Robot_Actuator/es_Myactuator_Series',
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
-        'es/Robotics/Robot_Actuator/es_HighTorque_Control',
         'es/Robotics/Robot_Actuator/es_RobStride_Control',
       ]
     },
@@ -16599,6 +16628,7 @@ const sidebars = {
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_XIAO-RS485-Expansion-Board',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_Bus_Servo_Driver_Board',
             'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_LED_Driver_Board',
+            'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/ja_COB_LED_Driver_Board',
           ],
         },
         {
@@ -18581,7 +18611,8 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_zoneminder_on_recomputer',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_go2rtc_on_recomputer',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_moonfire_nvr_on_recomputer',
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_ispy_on_recomputer'
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_ispy_on_recomputer',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_viseron_on_recomputer'
                   ]
                 },
                 {
@@ -19241,12 +19272,20 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: '高トルク',
+          items: [
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque',
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Getting_Started',
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Control',
+          ]
+        },
         'ja/Robotics/Robot_Actuator/ja_Feetech_Servo',
         'ja/Robotics/Robot_Actuator/ja_FashionStar_Servo',
         'ja/Robotics/Robot_Actuator/ja_Stackforce_Series',
         'ja/Robotics/Robot_Actuator/ja_Myactuator_Series',
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
-        'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
         'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
       ]
     },

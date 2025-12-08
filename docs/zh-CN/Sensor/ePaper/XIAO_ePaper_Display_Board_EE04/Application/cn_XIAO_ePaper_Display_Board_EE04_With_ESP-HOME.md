@@ -1,5 +1,5 @@
 ---
-description: 本文介绍如何在 ESPHome 中利用 XIAO ePaper Display Board EE04 的硬件功能，并将其与 Home Assistant 集成。
+description: 本文介绍如何在 ESPHome 中使用 XIAO ePaper Display Board EE04 的硬件功能，并将其与 Home Assistant 集成。
 title: XIAO ePaper Display Board(ESP32-S3) 与 ESPHome
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 slug: /cn/EE04_with_esphome_advanced
@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 - 使用简单的 YAML 配置文件创建自定义智能家居设备
 - 与 Home Assistant 无缝集成，获得统一的智能家居体验
 - 通过多种接口（网页、API、MQTT）控制和监控您的设备
-- 使用强大的设备端自动化功能自动化您的家居
+- 使用强大的设备端自动化功能自动化您的家庭
 - 无需物理访问即可通过"空中升级"（OTA）更新无线更新您的设备
 
 ## 入门指南
@@ -53,9 +53,9 @@ import TabItem from '@theme/TabItem';
   </table>
 </div>
 
-Home Assistant Green 是自动化您家居的最简单、最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，默认情况下所有数据都存储在本地。这款产品受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月得到改进。
+Home Assistant Green 是自动化您家庭的最简单、最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，默认情况下所有数据都存储在本地。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月得到改进。
 
-我们还为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的指南，请参考它们。
+我们还为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的教程，请参考它们。
 
 - **[在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant/)**
 - **[在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)**
@@ -81,7 +81,7 @@ Home Assistant Green 是自动化您家居的最简单、最注重隐私的方�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/30.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅 [官方 ESPHome 文档](https://esphome.io/guides/getting_started_hassio)。
+如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅[官方 ESPHome 文档](https://esphome.io/guides/getting_started_hassio)。
 :::
 
 ### 步骤 2. 添加新设备
@@ -234,7 +234,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -533,7 +533,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -599,7 +599,7 @@ display:
       it.print(0, 150, id(font1), "Hello World!");
 ```
 
-</TabItem>
+</TabItem> -->
 
 <TabItem value="5.83 Inch" label="5.83 英寸单色">
 
@@ -867,7 +867,7 @@ display:
 如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）就在附近，我们建议使用这种方法，因为它更简单。
 :::
 
-在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green（Yellow）等设备**。
+在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green(Yellow) 等设备**。
 
 按照图像中的选项点击，将代码安装到设备。
 
@@ -888,9 +888,9 @@ display:
 这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到 ePaper Panel。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
 :::
 
-通过这种方式，您不需要将 ePaper 面板连接到任何设备，只需确保它在线即可。
+使用这种方法，您不需要将 ePaper panel 连接到任何设备，只需确保它在线即可。
 
-点击选项，然后固件将自动安装到 ePaper 面板。
+点击选项，然后固件将自动安装到 ePaper panel。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:800, height:'auto'}}/></div>
 
@@ -904,12 +904,12 @@ display:
 
 ### 绘制简单图形
 
-此示例 YAML 代码为 ESPHome 项目配置了 SPI 接口和 XIAO ePaper Display Board（ESP32-S3）- EE04。`lambda` 部分包含在屏幕上渲染简单形状的绘图命令：
+此示例 YAML 代码为 ESPHome 项目配置了 SPI 接口和 XIAO ePaper Display Board(ESP32-S3) - EE04。`lambda` 部分包含在屏幕上渲染简单形状的绘图命令：
 
 - 两个矩形（一个位于位置 (10, 10)，大小为 100x50，另一个位于 (150, 10)，大小为 50x50）
-- 一个位于 (250, 35) 的圆，半径为 25
+- 一个圆形，位于 (250, 35)，半径为 25
 - 两个填充矩形（位于 (10, 80) 和 (150, 80)）
-- 一个位于 (250, 105) 的填充圆，半径为 25
+- 一个填充圆形，位于 (250, 105)，半径为 25
 
 您可以通过复制下面的代码并将其粘贴到 YAML 文件中的 `captive_portal` 代码行之后来使用此示例。
 
@@ -1095,7 +1095,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1308,7 +1308,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
 
 ```yaml
 esphome:
@@ -1374,7 +1374,7 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 英寸单色">
@@ -1830,7 +1830,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2079,7 +2079,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2154,7 +2154,7 @@ display:
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 英寸单色">
@@ -2601,7 +2601,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2890,7 +2890,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2958,7 +2958,7 @@ display:
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 英寸单色">
@@ -3172,7 +3172,7 @@ display:
 
 #### 高级图像技术
 
-您可以使用这些额外技术来增强图像显示效果：
+您可以使用这些额外技术来增强图像显示：
 
 **定位图像**
 
@@ -3223,7 +3223,7 @@ lambda: |-
 请记住，电子纸显示器的刷新率有限。`update_interval: 300s` 设置意味着您的显示器只会每 5 分钟刷新一次。请根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示器的使用寿命。
 :::
 
-通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 XIAO ePaper Display Board(ESP32-S3) - EE04 上创建丰富、信息丰富的仪表板。
+通过将图像与文本和前面示例中涵盖的其他显示元素相结合，您可以在 XIAO ePaper Display Board(ESP32-S3) - EE04 上创建丰富、信息丰富的仪表板。
 
 ## 参考资料与资源
 

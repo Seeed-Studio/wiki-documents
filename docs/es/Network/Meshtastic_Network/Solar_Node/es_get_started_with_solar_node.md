@@ -8,11 +8,15 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /es/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 11/11/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
 
-
+:::danger note
+Cuando el dispositivo esté en los estados siguientes, por favor no lo reinicies manualmente ni lo apagues. De lo contrario, el dispositivo puede quedar inutilizado.
+1. No haber terminado el proceso de transmisión de mensajes
+2. Estar siendo configurado
+:::
 ## Comenzar
 
 Antes del despliegue formal, por favor prueba y configura el nodo primero.
@@ -20,7 +24,7 @@ Antes del despliegue formal, por favor prueba y configura el nodo primero.
 ### Flashear Firmware
 
 :::caution note
-Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inoperativo.
+Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inutilizado.
 :::
 
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
@@ -129,12 +133,12 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 
  Método 1: Vía Bluetooth
 
-    Elige el método bluetooth. Elige el ID del dispositivo en la ventana emergente.
+    Elige el método bluetooth. Selecciona el ID del dispositivo en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
- Método 2: Vía Serial
+ Método 2: Vía Serie
 
-    Elige el método serial. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
+    Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Selecciona ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión es exitosa, puedes ver el estado del dispositivo directamente en el sitio web.
@@ -177,7 +181,7 @@ Ahora que has establecido la región LoRa en tu dispositivo, puedes continuar co
 ## Instalación
 
 :::danger note
-Dado que el dispositivo se usará al aire libre por períodos prolongados, por favor evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para prevenir la acumulación de agua. Además, asegúrate de que todos los tornillos estén firmemente apretados y la cubierta esté instalada correctamente. Para mayor protección impermeable, también puedes considerar aplicar medidas de sellado adicionales.
+Dado que el dispositivo se usará al aire libre durante períodos prolongados, por favor evita instalar el panel en posición horizontal. Se recomienda una instalación inclinada o diagonal para prevenir la acumulación de agua. Además, asegúrate de que todos los tornillos estén firmemente apretados y la cubierta esté instalada correctamente. Para una protección impermeable mejorada, también puedes considerar aplicar medidas de sellado adicionales.
 :::
 
 - **Lista de Partes**
@@ -222,7 +226,7 @@ Dado que el dispositivo se usará al aire libre por períodos prolongados, por f
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Paso7: Conecta la antena al dispositivo.
+- Paso 7: Conecta la antena al dispositivo.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -252,7 +256,7 @@ Dado que el dispositivo se usará al aire libre por períodos prolongados, por f
     <th colspan="1">Modelo de sensor</th>
   </tr>
   <tr>
-    <td rowspan="4">Sensor Ambiental</td>
+    <td rowspan="4">Sensor ambiental</td>
     <td>Presión</td>
     <td>BMP085</td>
   </tr>
@@ -261,16 +265,16 @@ Dado que el dispositivo se usará al aire libre por períodos prolongados, por f
     <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td>
   </tr>
   <tr>
-    <td>Temperatura y Humedad</td>
+    <td>Temperatura y humedad</td>
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
   </tr>
   <tr>
-    <td>Temperatura, Humedad y Presión</td>
+    <td>Temperatura, humedad y presión</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
   </tr>
   <tr>
     <td rowspan="2">Otros</td>
-    <td>Frecuencia Cardíaca y SpO₂</td>
+    <td>Frecuencia cardíaca y SpO₂</td>
     <td>[MAX30102](https://www.seeedstudio.com/MAXREFDES117-HEART-RATE-AND-PULSE-OXIMETRY-MONITOR-p-2762.html)</td>
   </tr>
   <tr>
@@ -287,14 +291,14 @@ Dado que el dispositivo se usará al aire libre por períodos prolongados, por f
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## FAQ
+## Preguntas frecuentes
 
-### Consumo de Energía
+### Consumo de energía
 
 El consumo de energía depende principalmente de factores como la frecuencia de transmisión de datos y la tasa de actualización del GPS.
 Las cifras a continuación son solo de referencia; el consumo real puede variar según las condiciones de uso del mundo real.
 
-- **Consumo de Energía en Modo de Suspensión de Apagado**
+- **Consumo de energía en modo de suspensión de apagado**
 
 |Descripción|Consumo|
 |---|---|
@@ -304,28 +308,28 @@ Las cifras a continuación son solo de referencia; el consumo real puede variar 
 
 **Ejemplo:**
 
-|Capacidad de la batería |Vida útil de la batería|
+|Capacidad de la batería |Duración de la batería|
 |---|---|
 |3350|136.8|
 |12000|490.2|
 
-- **Consumo de Energía en Modo Activo**
+- **Consumo de energía en modo activo**
 
 |Modo|Corriente|
 |---|---|
-|Corriente Estática|10.65 mA|
-|Corriente de Transmisión EU868|157.74 mA|
-|Corriente de Transmisión US915|205.22 mA|
-|Corriente de Operación del GPS|50 mA|
-|Corriente de Operación del GPS_LED|1.02 mA|
+|Corriente estática|10.65 mA|
+|Corriente de transmisión EU868|157.74 mA|
+|Corriente de transmisión US915|205.22 mA|
+|Corriente de funcionamiento del GPS|50 mA|
+|Corriente de funcionamiento del GPS_LED|1.02 mA|
 
-### Calidad de la Señal
+### Calidad de la señal
 
 - **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales suelen operar por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
 
 - **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales suelen operar por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
 
-      Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
+      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
 
 ## Recursos
-- [Tabla de Cálculo de Vida Útil de la Batería del Nodo Solar](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [Tabla de cálculo de duración de batería del nodo solar](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

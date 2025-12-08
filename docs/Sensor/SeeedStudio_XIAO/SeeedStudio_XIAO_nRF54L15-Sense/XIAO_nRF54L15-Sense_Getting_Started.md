@@ -46,7 +46,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introduction
 
-The **Seeed Studio XIAO nRF54L15** is a compact, high-performance development board featuring the cutting-edge Nordic nRF54L15 chip. This next-generation SoC integrates an ultra-low-power multi-protocol 2.4 GHz radio with an MCU containing a **128 MHz Arm® Cortex®-M33 processor** and an **Arm® Cortex®-M0**+ for advanced power management. It offers scalable memory up to **1.5 MB NVM and 256 KB RAM**, and an internal ultra-low-power design that significantly extends battery life. Its powerful radio supports **Bluetooth® 6.0 (including Channel Sounding), Matter, Thread, Zigbee**, and high throughput 2.4 GHz proprietary modes up to **4 Mbps**. The board includes a comprehensive peripheral set, an integrated **128 MHz RISC-V coprocessor**, and advanced security features such as **TrustZone®** isolation and cryptographic engine protection. With **built-in Li-ion battery management**, the XIAO nRF54L15 is ideal for compact, secure and energy-efficient IoT solutions such as smart wearables, industrial sensors and advanced HMIs.
+The **Seeed Studio XIAO nRF54L15** is a compact, high-performance development board featuring the cutting-edge Nordic nRF54L15 chip. This next-generation SoC integrates an ultra-low-power multi-protocol 2.4 GHz radio with an MCU containing a **128 MHz Arm® Cortex®-M33 processor** and a **128 MHz RISC-V coprocessor**. It offers scalable memory up to **1.5 MB NVM and 256 KB RAM**, and an internal ultra-low-power design that significantly extends battery life. Its powerful radio supports **Bluetooth® 6.0 (including Channel Sounding), Matter, Thread, Zigbee**, and high throughput 2.4 GHz proprietary modes up to **4 Mbps**. The board includes a comprehensive peripheral set, an integrated **128 MHz RISC-V coprocessor**, and advanced security features such as **TrustZone®** isolation and cryptographic engine protection. With **built-in Li-ion battery management**, the XIAO nRF54L15 is ideal for compact, secure and energy-efficient IoT solutions such as smart wearables, industrial sensors and advanced HMIs.
 
 export const Highlight = ({children, color}) => (
   <span
@@ -294,7 +294,8 @@ In your currently active terminal, type: nrfutil install device
 You should see the following output:
 ```cpp
 [00:00:02] ###### 100% [Install packages] Install packages
-``` -->
+```
+-->
 
 #### VScode configures the board and builds the burn-in file
 

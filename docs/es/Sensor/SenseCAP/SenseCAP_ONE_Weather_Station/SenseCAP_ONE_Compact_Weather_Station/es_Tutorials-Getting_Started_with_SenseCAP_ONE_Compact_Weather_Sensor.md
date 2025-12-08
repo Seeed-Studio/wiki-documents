@@ -79,7 +79,8 @@ La dimensión de la placa de brida se muestra a continuación.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image14.png" /></div>
 
-## Configuración
+> Nota: Para obtener los datos de dirección del viento más precisos posible, asegúrese durante la instalación de la orientación física al norte alineando la **flecha** de la base directamente hacia el norte verdadero. De lo contrario, active la brújula electrónica durante la configuración.
+
 # Modo de Operación del Dispositivo
 
 Después de la instalación, puedes encender el dispositivo, configurarlo y recopilar datos del dispositivo.

@@ -392,10 +392,18 @@ online_image:
       - component.update: epaper_display
 
 display:
-  - platform: epaper_spi
+  - platform: waveshare_epaper
     id: epaper_display
-    model: Seeed-reTerminal-E1002
-    update_interval: never
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
     lambda: |-
       it.image(0, 0, id(dashboard_image));
 ```

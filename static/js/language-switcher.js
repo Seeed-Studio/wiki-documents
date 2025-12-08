@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-02 14:35:12 (北京时间)
-// 多语言页面: 2068 个
+// 生成时间: 2025-12-03 14:50:07 (北京时间)
+// 多语言页面: 2069 个
 
 (function() {
   'use strict';
@@ -11157,7 +11157,7 @@
     "es",
     "ja"
   ],
-  "/mcp_external_system_integration": [
+  "/solutions/smart-retail-voice-ai-solution-1": [
     "cn",
     "en",
     "es",
@@ -11182,6 +11182,12 @@
     "ja"
   ],
   "/ha_dify_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/mcp_external_system_integration": [
     "cn",
     "en",
     "es",

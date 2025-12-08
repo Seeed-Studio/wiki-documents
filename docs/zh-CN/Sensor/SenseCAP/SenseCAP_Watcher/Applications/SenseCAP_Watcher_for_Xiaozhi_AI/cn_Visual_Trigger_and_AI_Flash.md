@@ -13,7 +13,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/visual_trigger_and_ai_flash
 last_update:
-  date: 10/30/2025
+  date: 12/04/2025
   author: Twelve
 ---
 
@@ -67,6 +67,10 @@ Please use another method to flash the firmware for now.
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
 
+  :::note
+  如果你正在使用Linux或macOS操作系统，请选择较小号的串口端口
+  :::
+
   - 点击 `Connect`
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
@@ -78,6 +82,9 @@ Please use another method to flash the firmware for now.
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
 
   - 选择正确的串口（以 "B" 结尾）
+  :::note
+  如果你正在使用Linux或macOS操作系统，请选择较大号的串口端口
+  :::
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
@@ -229,7 +236,7 @@ Please use another method to flash the firmware for now.
 </Tabs>
 
 :::note
-v1.8,8 以上版本的固件才有视觉识别唤醒的功能。
+v1.8.8 以上版本的固件才有视觉识别唤醒的功能。
 v2.0.3 以上版本的固件需要对小智说 "打开推理开关" 来启用视觉识别唤醒功能。
 :::
 
@@ -249,6 +256,10 @@ v2.0.3 以上版本的固件需要对小智说 "打开推理开关" 来启用视
 
 - 选择正确的串口（以 "A" 结尾）
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+
+:::note
+如果你正在使用Linux或macOS操作系统，请选择较小号的串口端口
+:::
 
 - 点击 `Connect`
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>

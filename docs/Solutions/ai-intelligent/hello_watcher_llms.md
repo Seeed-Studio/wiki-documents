@@ -15,6 +15,7 @@ keywords:
 - MCP
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
 slug: /solutions/hello_watcher_llms
+sidebar_position: 1
 last_update:
   date: 09/16/2025
   author: Spencer
