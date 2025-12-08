@@ -40,8 +40,7 @@ You need to prepare the following hardware
 
 ## Flash OS
 
-'''
-Note
+:::note
 
 The device comes pre-installed and pre-burned with the system image.
 After powering on for the first time, you can log in using the following default account:
@@ -49,7 +48,8 @@ After powering on for the first time, you can log in using the following default
 - Password: 12345678
 
 It is recommended that you change your password immediately after logging in for security reasons.
-'''
+:::
+
 ### For Windows host computer
 
 - **Step 1.** Click the link below to download the device [image file](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)
