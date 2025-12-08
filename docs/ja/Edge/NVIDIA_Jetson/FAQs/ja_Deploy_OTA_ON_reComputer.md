@@ -107,7 +107,7 @@ export const productOptions = [
   },
 ]
 
-<OtaProductSelect options={productOptions} />
+<OtaProductSelect options={productOptions} lang="es" />
 
 
 
