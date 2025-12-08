@@ -1,14 +1,13 @@
 ---
-description: HighTorque用Livbelybotモーター調試アシスタント使用ガイド
-title: HighTorque用Livbelybotモーター調試アシスタント使用ガイド
-version: GQJD2022
+description: HighTorque Motors 入門ガイド
+title: HighTorque Motors 入門ガイド
 keywords:
 - actuator
 - motor
 - arm
 - robotics
 image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
-slug: /ja/hightorque_assistant
+slug: /ja/hightorque_getting_started
 last_update:
   date: 12/04/2025
   author: Tienjuiwong
@@ -19,8 +18,8 @@ import TabItem from '@theme/TabItem';
 
 :::note バージョン互換性
 
-このマニュアルは**High Torque Commissioning Assistant v0.11.1**以降に適用されます。
-High Torque Commissioning Assistantはモーターファームウェア**v3.1.0**以降に対応しています。
+このマニュアルは **High Torque Commissioning Assistant v0.11.1** 以降に適用されます。
+High Torque Commissioning Assistant はモーターファームウェア **v3.1.0** 以降に対応しています。
 
 :::
 
@@ -41,57 +40,57 @@ High Torque Commissioning Assistantはモーターファームウェア**v3.1.0*
 #### 接続手順
 
 1. **電源接続** 🔌
-   24V電源をFDCANモジュールに接続
+   24V電源をFDCANモジュールに接続します
 
 2. **モーターインターフェース** 🔌
-   **GH1.25-3Pケーブル**を使用してモーターXT30（2+2）インターフェースをFDCANモジュールに接続
+   **GH1.25-3Pケーブル**を使用してモーターXT30（2+2）インターフェースをFDCANモジュールに接続します
 
 3. **PC接続** 💻
-   **USB-C**でFDCANモジュールをコンピューターに接続
+   **USB-C**でFDCANモジュールをコンピューターに接続します
 
 ![モーター接続概要](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_1_1_1.png)
 
 ![詳細配線ガイド](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_1_1_2.png)
 
-## 2. High Torqueモーター調試アシスタントの使用方法と説明
+## 2. High Torque Motor Commissioning Assistant の使用方法と説明
 
 ### 🎛️ 共通機能
 
 | **機能** | **説明** |
 |---|---|
-| **🔄 USBCANデバイス再接続** | USBCANデバイスをスキャンして接続し、接続されたモーターを検出 |
-| **🆔 モーターID** | 現在接続されているモーターのドロップダウンセレクター |
-| **⚙️ モーターキャリブレーション** | モーターを再キャリブレーション（⚠️ **モーターは無負荷である必要があります**） |
-| **🎯 現在のモーターゼロリセット** | 現在の位置をゼロ基準として設定 |
-| **💾 モーターファームウェア更新** | 新しいファームウェアをダウンロードしてモーターにフラッシュ |
-| **📊 出力情報** | イベントとエラーのリアルタイムログコンソール |
+| **🔄 USBCAN Device 再接続** | USBCANデバイスをスキャンして接続し、接続されたモーターを検出します |
+| **🆔 Motor ID** | 現在接続されているモーターのドロップダウンセレクター |
+| **⚙️ Motor Calibration** | モーターを再キャリブレーションします（⚠️ **モーターは無負荷である必要があります**） |
+| **🎯 Reset Current Motor Zero** | 現在の位置をゼロ基準として設定します |
+| **💾 Update Motor Firmware** | 新しいファームウェアをダウンロードしてモーターにフラッシュします |
+| **📊 Output Information** | イベントとエラーのリアルタイムログコンソール |
 
 :::danger ⚠️ 重要な警告
-**モーターキャリブレーション**は、モーターに**負荷が接続されていない**状態で実行する必要があります。これを怠ると、エンコーダーオフセット計算が不正確になります。
+**Motor Calibration** は **無負荷** でモーターに何も取り付けられていない状態で実行する必要があります。これを怠ると、エンコーダーオフセット計算が不正確になります。
 :::
 
 ![共通機能インターフェース](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_2_1.png)
 
 :::info 操作ガイド
-**Read Parameters**を使用して現在の設定を取得し、**Write Parameters**を使用して変更をモーターに保存します。
+**Read Parameters** を使用して現在の設定を取得し、**Write Parameters** を使用して変更をモーターに保存します。
 :::
 
 | **パラメーターグループ** | **説明** |
 |---|---|
-| **📋 基本情報** | モデル、極対数、減速比、ファームウェアバージョンを表示 |
-| **🛡️ モーター保護** | 過電圧（V）および過温度（°C）制限 |
-| **⚖️ PID調整** | Kp、Ki、Kd係数 + i_limit（積分制限） |
-| **🆔 モーターID変更** | モーターIDを変更（再識別が必要） |
-| **📍 モーター位置範囲** | 位置MAX/MIN制限（無制限の場合は`nan`に設定） |
-| **🚀 回転制限** | 速度（rev/s）、加速度（rev/s²）、電流（A）制限 |
+| **📋 Basic Information** | モデル、極対数、減速比、ファームウェアバージョンを表示 |
+| **🛡️ Motor Protection** | 過電圧（V）および過温度（°C）制限 |
+| **⚖️ PID Adjustment** | Kp、Ki、Kd係数 + i_limit（積分制限） |
+| **🆔 Modify Motor ID** | モーターIDを変更（再識別が必要） |
+| **📍 Motor Position Range** | 位置MAX/MIN制限（無制限の場合は `nan` に設定） |
+| **🚀 Rotation Limits** | 速度（rev/s）、加速度（rev/s²）、電流（A）制限 |
 
 :::warning 注意
-位置範囲と回転制限セクションで無制限動作を行う場合は、値を`nan`に設定してください。
+Position Range および Rotation Limits セクションで無制限動作を行う場合は、値を `nan` に設定してください。
 :::
 
 ![パラメーター設定 - 基本](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_2_2_1.png)
 
-![パラメーター設定 - 高度](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_2_2_2.png)
+![パラメーター設定 - 詳細](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_2_2_2.png)
 
 ### 🔧 モーターデバッグ
 
@@ -99,10 +98,10 @@ High Torque Commissioning Assistantはモーターファームウェア**v3.1.0*
 
 | **機能** | **説明** |
 |---|---|
-| **📈 モーター動作モード** | **"Add Waveform"**をクリックして位置、速度、トルク、温度をリアルタイムで可視化 |
-| **📊 モーターステータス** | FDCANフレーム情報（float、int16、int32、CANフレーム） |
-| **🛠️ フレーム生成** | 開発用のカスタムCANフレームを作成 |
-| **🛑 停止とブレーキ** | モーター停止動作を制御 |
+| **📈 Motor Running Mode** | **"Add Waveform"** をクリックして位置、速度、トルク、温度をリアルタイムで可視化 |
+| **📊 Motor Status** | FDCANフレーム情報（float、int16、int32、CANフレーム） |
+| **🛠️ Generate Frame** | 開発用のカスタムCANフレームを作成 |
+| **🛑 Stop & Brake** | モーター停止動作を制御 |
 
 #### フレーム生成タイプ
 
@@ -119,12 +118,12 @@ High Torque Commissioning Assistantはモーターファームウェア**v3.1.0*
   </TabItem>
 </Tabs>
 
-#### 停止とブレーキ制御
+#### Stop & Brake 制御
 
 | **制御** | **動作** |
 |---|---|
-| **🛑 停止** | 3相すべてを切断 - モーターは慣性で停止 |
-| **⚡ ブレーキ** | 3相すべてをグランドに短絡 - モーターは**即座に**停止 |
+| **🛑 Stop** | 3相すべてを切断 - モーターは慣性で停止 |
+| **⚡ Brake** | 3相すべてをグランドに短絡 - モーターは**即座に**停止 |
 
 ![デバッグ - 波形ビュー](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_2_3_1.png)
 
@@ -136,7 +135,7 @@ High Torque Commissioning Assistantはモーターファームウェア**v3.1.0*
   <TabItem value="position" label="1️⃣ 位置モード">
     **位置モード** 🎯
 
-    モーターシャフトの精密な角度制御を提供します。目標位置を回転数で入力し、送信をクリックします。モーターは位置ループPID制御を使用して、指定された正確な位置に移動します。
+    モーターシャフトの精密な角度制御を提供します。目標位置を回転数で入力し、送信をクリックします。モーターは位置ループPID制御を使用して指定された正確な位置に移動します。
 
     **適用例：** ロボット関節、CNC機械、アクチュエーターシステム
 
@@ -178,7 +177,7 @@ High Torque Commissioning Assistantはモーターファームウェア**v3.1.0*
   <TabItem value="current" label="5️⃣ 電流モード">
     **電流モード** 🔋
 
-    モーター巻線を流れるQ軸電流を制御します。このモードは、電流が磁場強度の基本的な駆動力であるため、トルクモードよりもトルク生成をより直接的に制御します。
+    モーター巻線を流れるQ軸電流を制御します。このモードは、電流が磁場強度の基本的な駆動力であるため、トルクモードよりもトルク生成をより直接的に制御できます。
 
     **単位：** アンペア（A）
 
@@ -194,7 +193,7 @@ High Torque Commissioning Assistantはモーターファームウェア**v3.1.0*
 
     **適用例：** ロボットグリッパー、ドアアクチュエーター、力制限アプリケーション
 
-    トルク制限が不要な場合は、最大トルクを`nan`に設定してください。
+    トルク制限が不要な場合は、最大トルクを `nan` に設定してください。
 
     ![位置+速度+トルクモードインターフェース](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_2_4_6.png)
   </TabItem>
@@ -250,7 +249,7 @@ High Torque Commissioning Assistantはモーターファームウェア**v3.1.0*
 |---|---|---|
 | **0x01** | ヘッダー | 最初のサブフレームの開始 |
 | **ビット7-4** | `0000` | モーターレジスターへの書き込み操作 |
-| **ビット3-0** | `0001` | データタイプ**int8_t**、1データユニット |
+| **ビット3-0** | `0001` | データタイプ **int8_t**、1データ単位 |
 | **0x00** | レジスターアドレス | **モーターモード設定**レジスター |
 | **0x0a** | データ | モーターを**速度モード**に設定 |
 
@@ -298,12 +297,12 @@ High Torque Commissioning Assistantはモーターファームウェア**v3.1.0*
 | **39** | 🎯 範囲外 | 定義された制限外での位置制御 | 位置範囲パラメータを調整 |
 | **40** | 🔋 低電圧 | 供給電圧が低すぎる | 電源と接続を確認 |
 | **41** | ⚙️ 設定変更 | 動作中に重要な設定が変更された | パラメータを変更する前にモーターを停止 |
-| **42** | 🔄 角度無効 | 有効な整流エンコーダーなし | エンコーダーの機能と接続を確認 |
-| **43** | 📍 位置無効 | 有効な出力エンコーダーなし | 出力エンコーダーの接続を確認 |
+| **42** | 🔄 角度無効 | 有効な整流エンコーダーがない | エンコーダーの機能と接続を確認 |
+| **43** | 📍 位置無効 | 有効な出力エンコーダーがない | 出力エンコーダーの接続を確認 |
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

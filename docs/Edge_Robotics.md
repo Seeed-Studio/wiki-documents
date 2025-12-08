@@ -157,6 +157,10 @@ last_update:
     <a href="/stackforce_series/" className="nav-item">
       <span className="text">5️⃣Stackforce Series</span>
     </a>
+    <a href="/robstride_control/" className="nav-item">
+      <span className="text">5️⃣RobStride Control</span>
+      <span className="tag recommended">New</span>
+    </a>
 </div>
 
 </div>

@@ -13,7 +13,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /visual_trigger_and_ai_flash
 last_update:
-  date: 10/30/2025
+  date: 12/04/2025
   author: Twelve
 translation:
   skip: [ zh-CN ]
@@ -71,8 +71,12 @@ Please use another method to flash the firmware for now.
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
   - Select correct serial port (ending with “A”)
-    
+
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+
+  :::note
+  If you are using macOS or Linux, please choose the port with the smaller number.
+  :::
 
   - Click `Connect`
     
@@ -85,6 +89,9 @@ Please use another method to flash the firmware for now.
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
   
   - Select correct serial port (ending with "B")
+  :::note
+  If you are using macOS or Linux, please choose the port with the bigger number.
+  :::
   
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
@@ -256,6 +263,9 @@ Firmware version above v2.0.3 requires saying “Turn on the inference switch”
 
 - Select correct serial port (ending with “A”)
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+:::note
+If you are using macOS or Linux, please choose the port with the smaller number.
+:::
 
 - Click `Connect`
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>

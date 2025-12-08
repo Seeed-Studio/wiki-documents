@@ -58,7 +58,7 @@ reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度�
 | 動作湿度    | 95%                                |
 
 
-### [コアボード-C101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
+### [コアボード-C101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
 <!-- 搬运github说明和图 -->
 | ボード         | 機能                           | バージョン |
 | ------------- | ---------------------------------- | ------------ |
@@ -69,7 +69,7 @@ reCamera 2002 HQ PoE は、より鮮明で明瞭な画像を提供する高度�
 :-------------------------:|:-------------------------:
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [センサーボード-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [センサーボード-S4_GC2053](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 上面図             |  底面図

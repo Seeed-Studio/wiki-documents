@@ -211,7 +211,7 @@ reCamera es una cámara de IA de código abierto y compacta, programable y perso
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-12.png" /></div>
 
-### [Placa Principal-C101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
+### [Placa Principal-C101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
 <!-- 搬运github说明和图 -->
 | Placa         | Características                           | Versión |
 | ------------- | ---------------------------------- | ------------ |
@@ -223,7 +223,7 @@ Vista Superior             |  Vista Inferior
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [Placa de Sensor-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [Placa de Sensor-S101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 <!-- 搬运github说明和图 -->
 
 Vista Superior             |  Vista Inferior
@@ -276,7 +276,7 @@ Vista Superior             |  Vista Inferior
 - 1 x altavoz
 - 3 x indicador LED
 
-### [Placa Base-B101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#base-board)
+### [Placa Base-B101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#base-board)
 <!-- 搬运github说明和图 -->
 Vista Superior             |  Vista Inferior
 :-------------------------:|:-------------------------:

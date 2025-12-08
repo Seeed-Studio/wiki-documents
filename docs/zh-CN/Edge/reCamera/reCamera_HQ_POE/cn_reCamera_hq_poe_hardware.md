@@ -58,7 +58,7 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 | 工作湿度    | 95%                                |
 
 
-### [核心板-C101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
+### [核心板-C101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
 <!-- 搬运 github 说明和图 -->
 | 板子         | 特性                           | 版本 |
 | ------------- | ---------------------------------- | ------------ |
@@ -69,7 +69,7 @@ reCamera 2002 HQ PoE 配备了先进的 CMOS 传感器，可提供更清晰的�
 :-------------------------:|:-------------------------:
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [传感器板-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [传感器板-S4_GC2053](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 顶视图             |  底视图

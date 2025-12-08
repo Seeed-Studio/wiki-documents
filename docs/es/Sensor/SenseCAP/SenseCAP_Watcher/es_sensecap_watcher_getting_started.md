@@ -1,5 +1,5 @@
 ---
-description: SenseCAP Watcher es un vigilante de IA para ayudarte a monitorear anomalías dentro de un espacio y luego tomar acciones. Simplemente habla con Watcher para dar comandos, y ejecutará las tareas deseadas cuando ocurra el evento.
+description: SenseCAP Watcher es un observador de IA para ayudarte a monitorear anomalías dentro de un espacio y luego tomar acciones. Simplemente habla con Watcher para dar comandos, y ejecutará las tareas deseadas cuando ocurra el evento.
 title: Guía de Inicio Rápido
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg
 slug: /es/getting_started_with_watcher
@@ -21,7 +21,7 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> Video de Watcher</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Repositorio de Github</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Repositorio Github</font></span></strong>
     </a>
 </div>
 
@@ -35,11 +35,11 @@ Esta es la Guía de Inicio Rápido de SenseCAP Watcher que te ayudará a desemba
 
 ## Introducción
 
-SenseCAP Watcher es un vigilante de IA para ayudarte a monitorear anomalías dentro de un espacio y luego tomar acciones. Simplemente habla con Watcher para dar comandos, y ejecutará las tareas deseadas cuando ocurra el evento.
+SenseCAP Watcher es un observador de IA para ayudarte a monitorear anomalías dentro de un espacio y luego tomar acciones. Simplemente habla con Watcher para dar comandos, y ejecutará las tareas deseadas cuando ocurra el evento.
 
-Como recién llegado al sistema de edificios inteligentes / hogar inteligente, SenseCAP Watcher es mucho más inteligente comparado con los sensores y actuadores actuales. Entiende lo que está sucediendo dentro del espacio y luego toma acciones en consecuencia.
+Como un recién llegado al sistema de edificios inteligentes / hogar inteligente, SenseCAP Watcher es mucho más inteligente comparado con los sensores y actuadores actuales. Entiende lo que está sucediendo dentro del espacio y luego toma acciones en consecuencia.
 
-## Tareas Obligatorias
+## Obligatorio
 
 Antes de usar Watcher como asistente de espacio, debemos asegurar que los siguientes tres pasos se realicen exitosamente, lo cual es la base para todos los pasos posteriores.
 
@@ -54,11 +54,11 @@ El Watcher viene con un empaque único que funciona como un soporte elegante, si
 ### Paso 2. Encender
 
 :::caution
-¡Por favor usa un enchufe de alimentación que sea compatible con el Watcher; el Watcher debe ser alimentado por una fuente de 5V y puede quemarse si usas un adaptador de corriente no compatible o una fuente de alimentación con un voltaje mayor a 5V!
+Por favor usa un enchufe de alimentación que sea compatible con el Watcher; el Watcher debe ser alimentado por una fuente de 5V y puede quemarse si usas un adaptador de corriente no compatible o una fuente de alimentación con un voltaje mayor a 5V!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/adapter.jpg" style={{width:350, height:'auto'}}/></div>
 
-El gráfico anterior muestra las especificaciones recomendadas del adaptador. Si no sabes dónde puedes comprar el adaptador correcto, puedes elegir comprarlo directamente en el enlace a continuación.
+El gráfico anterior muestra las especificaciones recomendadas del adaptador. Si no sabes dónde puedes comprar el adaptador correcto, puedes elegir comprarlo directamente en el enlace de abajo.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/USB-Power-Adapter-for-Raspberry-Pi-4-5V-3A-p-4089.html" target="_blank">
@@ -67,7 +67,7 @@ El gráfico anterior muestra las especificaciones recomendadas del adaptador. Si
 </div>
 :::
 
-Para encender tu dispositivo Watcher, presiona y mantén presionado el botón de rueda ubicado en la esquina superior derecha durante aproximadamente 3 segundos hasta que aparezca el logo de Seeed Studio en la pantalla.
+Para encender tu dispositivo Watcher, presiona y mantén presionado el botón de rueda ubicado en la esquina superior derecha por aproximadamente 3 segundos hasta que aparezca el logo de Seeed Studio en la pantalla.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/power_on.gif" style={{width:650, height:'auto'}}/></div>
 
@@ -76,7 +76,7 @@ Para encender tu dispositivo Watcher, presiona y mantén presionado el botón de
 Una vez que se muestre el logo, suelta el botón y permite que el dispositivo complete su proceso de inicialización. Después de unos momentos, el Watcher mostrará su menú principal, indicando que está listo para usar.
 
 :::tip
-Si el dispositivo no se enciende con una pulsación larga, el dispositivo puede estar bajo de energía y puede que necesites conectar un cable para alimentarlo antes de poder despertar el Watcher.
+Si el dispositivo no se enciende con una presión larga, el dispositivo puede estar bajo de batería y puede que necesites conectar un cable para alimentarlo antes de poder despertar el Watcher.
 :::
 
 ### Paso 3. Vinculación del Dispositivo
@@ -85,7 +85,7 @@ Si el dispositivo no se enciende con una pulsación larga, el dispositivo puede 
 [SenseCraft Pro](https://wiki.seeedstudio.com/es/watcher_price/) activará automáticamente el servicio de prueba cuando tu dispositivo esté vinculado a la APP SenseCraft.
 :::
 
-Después de encender tu Watcher, si no ha sido previamente vinculado a un dispositivo, te pedirá que te conectes a la app SenseCraft. Alternativamente, puedes encontrar la opción "Conectar a APP" en el menú de Configuración. El Watcher entonces mostrará un código QR para descargar la app SenseCraft.
+Después de encender tu Watcher, si no ha sido previamente vinculado a un dispositivo, te pedirá que te conectes a la app SenseCraft. Alternativamente, puedes encontrar la opción "Connect to APP" en el menú de Configuración. El Watcher entonces mostrará un código QR para descargar la app SenseCraft.
 
 Puedes escanear el código QR o usar el enlace proporcionado para descargar la app.
 
@@ -103,7 +103,7 @@ Para proceder con la vinculación de tu Watcher a la app SenseCraft, sigue estos
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/1.svg" style={{width:550, height:'auto'}}/></div>
 
-**2.** Abre la aplicación SenseCraft en tu dispositivo móvil y toca el signo más (+) en la esquina superior derecha para agregar tu Watcher escaneando el código QR.
+**2.** Abre la app SenseCraft en tu dispositivo móvil y toca el signo más (+) en la esquina superior derecha para agregar tu Watcher escaneando el código QR.
 
 :::tip
 Asegúrate de que los permisos de Bluetooth de tu dispositivo móvil estén habilitados, ya que el proceso de vinculación requiere una conexión Bluetooth.
@@ -111,11 +111,11 @@ Asegúrate de que los permisos de Bluetooth de tu dispositivo móvil estén habi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/2.svg" style={{width:550, height:'auto'}}/></div>
 
-**3.** Después de escanear exitosamente el código QR, la aplicación navegará a la página de configuración de red. Selecciona una red Wi-Fi de 2.4GHz para conectar tu Watcher a internet.
+**3.** Después de escanear exitosamente el código QR, la app navegará a la página de configuración de red. Selecciona una red Wi-Fi de 2.4GHz para conectar tu Watcher a internet.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/3.svg" style={{width:550, height:'auto'}}/></div>
 
-Toca el botón "Next" para continuar.
+Toca el botón "Next" para proceder.
 
 **4.** Elige un nombre para tu Watcher y selecciona un grupo apropiado para él.
 
@@ -123,17 +123,17 @@ Toca el botón "Next" para continuar.
 
 Toca el botón "Finish" para completar el proceso de configuración.
 
-**5.** La aplicación SenseCraft mostrará una página de tutorial, proporcionando orientación sobre cómo usar tu Watcher. Tómate un momento para familiarizarte con las instrucciones.
+**5.** La app SenseCraft mostrará una página de tutorial, proporcionando orientación sobre cómo usar tu Watcher. Tómate un momento para familiarizarte con las instrucciones.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/5.svg" style={{width:550, height:'auto'}}/></div>
 
-Una vez que la configuración esté completa, la aplicación abrirá una ventana de chat para comunicarse con tu Watcher, mientras que el Watcher regresará a su menú principal.
+Una vez que la configuración esté completa, la app abrirá una ventana de chat para comunicarse con tu Watcher, mientras que el Watcher regresará a su menú principal.
 
-Con el proceso de vinculación terminado, tu Watcher ahora está conectado a la aplicación SenseCraft, y puedes comenzar a explorar sus características y capacidades. La aplicación sirve como una forma conveniente de interactuar con tu Watcher, ajustar configuraciones y recibir notificaciones remotamente.
+Con el proceso de vinculación terminado, tu Watcher ahora está conectado a la app SenseCraft, y puedes comenzar a explorar sus características y capacidades. La app sirve como una forma conveniente de interactuar con tu Watcher, ajustar configuraciones y recibir notificaciones remotamente.
 
 ## Programar una tarea para Watcher
 
-A continuación, selecciona el método que deseas usar para programar una tarea ejecutable para Watcher.
+A continuación, selecciona el método que quieres usar para programar una tarea ejecutable para Watcher.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -147,9 +147,9 @@ Para ejecutar una tarea desde las Plantillas de Tareas en tu Watcher, sigue esto
 
 **2.** Presiona el botón de rueda para entrar al submenú de Plantillas de Tareas.
 
-**3.** Desplázate por las plantillas de tareas disponibles usando el botón de rueda hasta encontrar la tarea modelo deseada.
+**3.** Desplázate por las plantillas de tareas disponibles usando el botón de rueda hasta que encuentres la tarea modelo deseada.
 
-**4.** Presiona el botón de rueda para seleccionar e iniciar la ejecución de la tarea elegida.
+**4.** Presiona el botón de rueda para seleccionar y comenzar a ejecutar la tarea elegida.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/run_template.gif" style={{width:650, height:'auto'}}/></div>
 
@@ -170,7 +170,7 @@ Plantillas de Tareas:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task-temp-people-detected.png" style={{width:210, height:'auto'}}/></div><br />
 
 - Detección de Mascotas:
-  - La plantilla de Detección de Mascotas se enfoca en reconocer gatos o perros.
+  - La plantilla de tarea de Detección de Mascotas se enfoca en reconocer gatos o perros.
   - Si el Watcher detecta un **gato**, activará una notificación de alarma.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task-temp-pet.png" style={{width:210, height:'auto'}}/></div><br />
@@ -201,13 +201,13 @@ La APP SenseCraft te permite enviar Tareas a tu dispositivo Watcher. En este eje
 
 **2.** En la ventana de chat, selecciona la tarea deseada de las opciones disponibles o escribe manualmente el comando *Si ves una vela, por favor notifícame*. Envía el comando a tu Watcher tocando el botón de envío o presionando enter.
 
-**3.** Al recibir el comando, Watcher lo interpretará y lo desglosará en un flujo de tarea que consiste en los componentes **Cuándo**, **Hacer** y **Frecuencia de Captura**.
+**3.** Al recibir el comando, Watcher lo interpretará y lo desglosará en un flujo de tareas que consiste en componentes de **Cuándo**, **Hacer** y **Frecuencia de Captura**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/7.svg" style={{width:550, height:'auto'}}/></div>
 
 <br />
 
-Revisa el flujo de tareas analizado para asegurar que Watcher haya entendido correctamente tu comando. La aplicación mostrará los detalles de la tarea interpretada para tu verificación. Si alguna parte del flujo de tareas no se alinea con tu comando previsto, puedes modificar los detalles de la tarea accediendo a la sección **Detail Config** dentro de la aplicación.
+Revisa el flujo de tareas analizado para asegurar que Watcher haya entendido correctamente tu comando. La app mostrará los detalles de la tarea interpretada para tu verificación. Si alguna parte del flujo de tareas no se alinea con tu comando previsto, puedes modificar los detalles de la tarea accediendo a la sección **Detail Config** dentro de la app.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/8.svg" style={{width:550, height:'auto'}}/></div>
 
@@ -221,7 +221,7 @@ Watcher descargará las instrucciones de la tarea, y una vez que la descarga est
 
 <br />
 
-**5.** Si Watcher identifica velas, enviará una alerta basada en la configuración predefinida, que puede incluir luces intermitentes, alarmas audibles y notificaciones a través de la APP SenseCraft.
+**5.** Si Watcher identifica una vela, enviará una alerta basada en la configuración predefinida, que puede incluir luces parpadeantes, alarmas audibles y notificaciones a través de la APP SenseCraft.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/10.svg" style={{width:550, height:'auto'}}/></div>
 
@@ -231,14 +231,14 @@ Ten en cuenta que debido a las limitaciones de tiempo del flujo de tareas, **hab
 
 Siguiendo estos pasos, puedes enviar comandos efectivamente a tu Watcher usando la APP SenseCraft, permitiéndole realizar tareas de monitoreo específicas y notificarte cuando se cumplan las condiciones especificadas.
 
-Recuerda revisar y ajustar regularmente la configuración y los flujos de tareas de tu Watcher para asegurar un rendimiento óptimo y alineación con tus requisitos de monitoreo. Para una descripción más detallada y explicación de las tareas y opciones de la APP, así como una descripción detallada de los intervalos, por favor lee **[Guía de Asignación de Tareas de Watcher](https://wiki.seeedstudio.com/es/getting_started_with_watcher_task/)** para aprender más.
+Recuerda revisar y ajustar regularmente la configuración y flujos de tareas de tu Watcher para asegurar un rendimiento óptimo y alineación con tus requisitos de monitoreo. Para una descripción y explicación más detallada de las tareas y opciones de la APP, así como una descripción detallada de los intervalos, lee **[Guía de Asignación de Tareas del Watcher](https://wiki.seeedstudio.com/es/getting_started_with_watcher_task/)** para aprender más.
 
 </TabItem>
 
 <TabItem value="By Voice" label="Por Voz">
 
 :::danger
-Pueden aplicarse tarifas por usar algunos de los servicios de SenseCraft AI, por favor consulta la documentación a continuación para más detalles:
+Pueden aplicarse tarifas por usar algunos de los servicios de SenseCraft AI, consulta la documentación a continuación para más detalles:
 
 **[Planes y Beneficios de SenseCraft AI para Watcher](https://wiki.seeedstudio.com/es/watcher_price/)**
 :::
@@ -248,7 +248,7 @@ El Watcher ofrece una forma conveniente e intuitiva de enviar tareas o entablar 
 1. Activar Push to Talk:
 
    - Localiza el Botón de Rueda en la esquina superior derecha del Watcher.
-   - Mantén presionado el Botón de Rueda para entrar a la interfaz de entrada de voz.
+   - Presiona y mantén presionado el Botón de Rueda para entrar a la interfaz de entrada de voz.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/push_to_talk.gif" style={{width:650, height:'auto'}}/></div><br />
 
@@ -265,24 +265,24 @@ El Watcher ofrece una forma conveniente e intuitiva de enviar tareas o entablar 
 4. Asignación de Tarea:
 
    - Si el Watcher reconoce tu entrada de voz como una asignación de tarea, automáticamente desglosará tu tarea en componentes relevantes.
-   - El Watcher mostrará tarjetas en su pantalla, mostrando el **Objeto** (qué monitorear), **Comportamiento** (qué acción buscar), **Notificación** (cómo alertarte), **Rango de Tiempo** (cuándo monitorear), y **Frecuencia** (qué tan seguido monitorear).
+   - El Watcher mostrará tarjetas en su pantalla, mostrando el **Objeto** (qué monitorear), **Comportamiento** (qué acción buscar), **Notificación** (cómo alertarte), **Rango de Tiempo** (cuándo monitorear) y **Frecuencia** (con qué frecuencia monitorear).
    - Revisa la información mostrada para asegurar que represente con precisión tu tarea prevista.
    - Si los detalles son correctos, confirma la tarea, y el Watcher comenzará a ejecutarla según los parámetros especificados.
-   - Si Watcher malentiende tu tarea, mantén presionado el botón de rueda de desplazamiento y puedes continuar a través del diálogo para tratar de corregir la comprensión de Watcher sobre la tarea. Si aún no puede entenderla correctamente después de varios intentos, recomendamos que uses la APP SenseCraft para colocar la tarea.
+   - Si Watcher malinterpreta tu tarea, mantén presionado el botón de la rueda de desplazamiento y puedes continuar a través del diálogo para tratar de corregir la comprensión de Watcher sobre la tarea. Si aún no puede entenderla correctamente después de varios intentos, recomendamos que uses la APP SenseCraft para colocar la tarea.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/80.jpg" style={{width:650, height:'auto'}}/></div>
 
 Consejos para Uso Óptimo:
 
 - Habla claramente y a un ritmo moderado para asegurar un reconocimiento de voz preciso.
-- Al hablar, por favor acércate lo más posible al Watcher, aproximadamente **3 ~ 10cm** de distancia es la mejor precisión de reconocimiento de habla.
+- Al hablar, acércate lo más posible al Watcher, aproximadamente **3 ~ 10cm** de distancia para que la precisión del reconocimiento del habla sea mejor.
 - Minimiza el ruido de fondo para mejorar la capacidad del Watcher de entender tus comandos de voz.
 - Sé específico y conciso al asignar tareas para ayudar al Watcher a interpretar con precisión tus intenciones.
 
-Aprovechando la función Push to Talk, puedes enviar tareas sin esfuerzo y entablar conversaciones con el Watcher, haciendo tu interacción con el dispositivo más natural y eficiente.
+Al aprovechar la función Push to Talk, puedes enviar tareas sin esfuerzo y entablar conversaciones con el Watcher, haciendo tu interacción con el dispositivo más natural y eficiente.
 
 :::note
-Si encuentras un error **0x7002**, significa que el estado actual de la red del Watcher no es bueno y la llamada al servicio de audio falló, por favor cambia la red o ubicación y vuelve a intentar.
+Si encuentras un error **0x7002**, significa que el estado actual de la red del Watcher no es bueno y la llamada del servicio de audio falló, cambia la red o ubicación e inténtalo de nuevo.
 :::
 
 </TabItem>
@@ -291,13 +291,13 @@ Si encuentras un error **0x7002**, significa que el estado actual de la red del 
 
 ## Para finalizar una tarea en ejecución
 
-1. Toca la pantalla una vez o presiona el botón de la rueda.
+1. Toca la pantalla una vez o presiona el botón de rueda.
 
-2. Aparecerá una ventana emergente de confirmación con dos opciones: **Menú Principal** y **Finalizar Tarea**. Para terminar la tarea, toca **Finalizar Tarea** en la pantalla o usa la rueda de desplazamiento para navegar a "Finalizar Tarea" y presiona el botón de la rueda de desplazamiento para confirmar.
+2. Aparecerá una ventana emergente de confirmación con dos opciones: **Main Menu** y **End Task**. Para terminar la tarea, toca **End Task** en la pantalla o usa la rueda de desplazamiento para navegar a "End Task" y presiona el botón de la rueda de desplazamiento para confirmar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/end_task.png" style={{width:210, height:'auto'}}/></div><br />
 
-3. Alternativamente, puedes finalizar la tarea a través de la aplicación SenseCraft APP en tu dispositivo móvil presionando el botón **Finalizar** en la tarjeta de la tarea.
+3. Alternativamente, puedes finalizar la tarea a través de la APP SenseCraft en tu dispositivo móvil presionando el botón **End** en la tarjeta de tarea.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/end-task-phone.png" style={{width:250, height:'auto'}}/></div>
 

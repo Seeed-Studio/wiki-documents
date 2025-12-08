@@ -3437,8 +3437,8 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/zoneminder_on_recomputer',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/go2rtc_on_recomputer',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/moonfire_nvr_on_recomputer',
-                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ispy_on_recomputer'
-
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ispy_on_recomputer',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/viseron_on_recomputer'
                   ]
                 },
                 {
@@ -3831,6 +3831,7 @@ const sidebars = {
           items: [
             'Edge/NVIDIA_Jetson/FAQs/jetson_FAQ',
             'Edge/NVIDIA_Jetson/FAQs/Create_Backup_and_Restore_on_reComputer',
+            'Edge/NVIDIA_Jetson/FAQs/Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'Edge/NVIDIA_Jetson/FAQs/Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'Edge/NVIDIA_Jetson/FAQs/Use_IMX477_Camera_with_A603',
@@ -4098,14 +4099,21 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: 'HighTorque',
+          items: [
+            'Robotics/Robot_Actuator/HighTorque/HighTorque',
+            'Robotics/Robot_Actuator/HighTorque/HighTorque_Getting_Started',
+            'Robotics/Robot_Actuator/HighTorque/HighTorque_Control',
+          ]
+        },
         'Robotics/Robot_Actuator/Feetech_Servo',
         'Robotics/Robot_Actuator/FashionStar_Servo',
         'Robotics/Robot_Actuator/Stackforce_Series',
         'Robotics/Robot_Actuator/Myactuator_Series',
         'Robotics/Robot_Actuator/Damiao_Series',
-        'Robotics/Robot_Actuator/HighTorque_Control',
         'Robotics/Robot_Actuator/RobStride_Control',
-        'Robotics/Robot_Actuator/HighTorque_Assistant',
       ]
     },
     {
@@ -8549,7 +8557,8 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_zoneminder_on_recomputer',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_go2rtc_on_recomputer',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_moonfire_nvr_on_recomputer',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_ispy_on_recomputer'
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_ispy_on_recomputer',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_viseron_on_recomputer'
                   ]
                 },
                 {
@@ -8942,6 +8951,7 @@ const sidebars = {
           items: [
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_jetson_FAQ',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Create_Backup_and_Restore_on_reComputer',
+            'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Use_IMX477_Camera_with_A603',
@@ -9212,14 +9222,21 @@ const sidebars = {
       type: 'category',
       label: '关节电机',
       items: [
+        {
+          type: 'category',
+          label: '高扭矩',
+          items: [
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque',
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Getting_Started',
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Control',
+          ]
+        },
         'zh-CN/Robotics/Robot_Actuator/cn_Feetech_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_FashionStar_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_Stackforce_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Myactuator_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
-        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
         'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
-        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Assistant',
       ]
     },
     {
@@ -13575,7 +13592,8 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_zoneminder_on_recomputer',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_go2rtc_on_recomputer',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_moonfire_nvr_on_recomputer',
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_ispy_on_recomputer'
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_ispy_on_recomputer',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_viseron_on_recomputer'
                   ]
                 },
                 {
@@ -13968,6 +13986,7 @@ const sidebars = {
           items: [
             'es/Edge/NVIDIA_Jetson/FAQs/es_jetson_FAQ',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Create_Backup_and_Restore_on_reComputer',
+            'es/Edge/NVIDIA_Jetson/FAQs/es_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Use_IMX477_Camera_with_A603',
@@ -14235,14 +14254,21 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: 'Alto par',
+          items: [
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque',
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque_Getting_Started',
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque_Control',
+          ]
+        },
         'es/Robotics/Robot_Actuator/es_Feetech_Servo',
         'es/Robotics/Robot_Actuator/es_FashionStar_Servo',
         'es/Robotics/Robot_Actuator/es_Stackforce_Series',
         'es/Robotics/Robot_Actuator/es_Myactuator_Series',
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
-        'es/Robotics/Robot_Actuator/es_HighTorque_Control',
         'es/Robotics/Robot_Actuator/es_RobStride_Control',
-        'es/Robotics/Robot_Actuator/es_HighTorque_Assistant',
       ]
     },
     {
@@ -18594,7 +18620,8 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_zoneminder_on_recomputer',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_go2rtc_on_recomputer',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_moonfire_nvr_on_recomputer',
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_ispy_on_recomputer'
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_ispy_on_recomputer',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_viseron_on_recomputer'
                   ]
                 },
                 {
@@ -18987,6 +19014,7 @@ const sidebars = {
           items: [
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_jetson_FAQ',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Create_Backup_and_Restore_on_reComputer',
+            'ja/Edge/NVIDIA_Jetson/FAQs/ja_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Use_IMX477_Camera_with_A603',
@@ -19254,14 +19282,21 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: '高トルク',
+          items: [
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque',
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Getting_Started',
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Control',
+          ]
+        },
         'ja/Robotics/Robot_Actuator/ja_Feetech_Servo',
         'ja/Robotics/Robot_Actuator/ja_FashionStar_Servo',
         'ja/Robotics/Robot_Actuator/ja_Stackforce_Series',
         'ja/Robotics/Robot_Actuator/ja_Myactuator_Series',
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
-        'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
         'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
-        'ja/Robotics/Robot_Actuator/ja_HighTorque_Assistant',
       ]
     },
     {
