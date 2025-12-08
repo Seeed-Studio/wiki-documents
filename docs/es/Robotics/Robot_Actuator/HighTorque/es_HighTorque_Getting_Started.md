@@ -1,14 +1,13 @@
 ---
-description: Guía de uso del Asistente de Depuración de Motor Livbelybot para HighTorque
-title: Guía de uso del Asistente de Depuración de Motor Livbelybot para HighTorque
-version: GQJD2022
+description: Introducción a Motores de Alto Torque
+title: Introducción a Motores de Alto Torque
 keywords:
 - actuator
 - motor
 - arm
 - robotics
 image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
-slug: /es/hightorque_assistant
+slug: /es/hightorque_getting_started
 last_update:
   date: 12/04/2025
   author: Tienjuiwong
@@ -160,7 +159,7 @@ Depure con diferentes modos de funcionamiento (vista detallada en [Modos de Func
 
     **Unidades:** Newton-metros (Nm)
 
-    **Ideal para:** Sistemas de tensión, operaciones de ajuste por presión, mantenimiento de carga
+    **Ideal para:** Sistemas de tensión, operaciones de ajuste por presión, sujeción de carga
 
     ![Interfaz del Modo de Torque](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_2_4_3.png)
   </TabItem>
@@ -178,7 +177,7 @@ Depure con diferentes modos de funcionamiento (vista detallada en [Modos de Func
   <TabItem value="current" label="5️⃣ Modo de Corriente">
     **Modo de Corriente** 🔋
 
-    Controla la corriente del eje Q que fluye a través de los devanados del motor. Este modo proporciona un control más directo sobre la generación de torque que el modo de torque, ya que la corriente es el impulsor fundamental de la fuerza del campo magnético.
+    Controla la corriente del eje Q que fluye a través de los devanados del motor. Este modo proporciona un control más directo sobre la generación de torque que el modo de torque, ya que la corriente es el impulsor fundamental de la intensidad del campo magnético.
 
     **Unidades:** Amperios (A)
 
@@ -202,7 +201,7 @@ Depure con diferentes modos de funcionamiento (vista detallada en [Modos de Func
   <TabItem value="trapezoidal" label="7️⃣ Control Trapezoidal">
     **Control Trapezoidal** 📈
 
-    Genera trayectorias suaves en curva S con fases controladas de aceleración y desaceleración. El motor: 1) acelerará uniformemente hasta la velocidad máxima, 2) mantendrá velocidad constante, luego 3) desacelerará uniformemente para detenerse precisamente en la posición objetivo.
+    Genera trayectorias suaves de curva S con fases controladas de aceleración y desaceleración. El motor: 1) acelerará uniformemente a velocidad máxima, 2) mantendrá velocidad constante, luego 3) desacelerará uniformemente para detenerse precisamente en la posición objetivo.
 
     **Ideal para:** Operaciones de pick-and-place, posicionamiento CNC, automatización de precisión
 
