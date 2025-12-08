@@ -60,47 +60,282 @@ The reComputer Industrial R20xx series is ideal for use in industrial AI applica
 - 1x Nano SIM card slot
 
 ## Specifications
+<div class="table-center">
+  <table border="1" cellspacing="0" cellpadding="6">
+    <thead>
+      <tr>
+        <th>Parameter </th>
+        <th colspan="2">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3">Hardware Specification</td>
+      </tr>
+      <tr>
+        <td>**Product Series**</td>
+        <td>R20xx-12</td>
+        <td>R20xx-10</td>
+      </tr>
+      <tr>
+        <td> **CPU** </td>
+        <td colspan="2">Raspberry Pi Compute Module 5, 2.4GHz quad-core 64-bit Arm Cortex-A76</td>
+      </tr>
+      <tr>
+        <td> **AI Processor** </td>
+        <td>Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS</td>
+        <td>*</td>
+      </tr>
+      <tr>
+        <td> **Operating System** </td>
+        <td colspan="2">Raspbian, Debian </td>
+      </tr>
+      <tr>
+        <td> **RAM** </td>
+        <td colspan="2">2GB/4GB/8GB/16GB</td>
+      </tr>
+      <tr>
+        <td> **eMMC** </td>
+        <td colspan="2">16GB/32GB/64GB</td>
+      </tr>
+      <tr>
+        <td colspan="3"> **System Specification** </td>
+      </tr>
+      <tr>
+        <td> Power Input </td>
+        <td colspan="2">DC 9V~36V, 2-pin Terminal Block</td>
+      </tr>
+      <tr>
+        <td>PoE(as powered device)</td>
+        <td colspan="2">IEEE 802.3at Standard 25.5W PoE</td>
+      </tr>
+      <tr>
+        <td>Power Switch</td>
+        <td colspan="2">No</td>
+      </tr>
+      <tr>
+        <td>Reboot Switch</td>
+        <td colspan="2">Yes</td>
+      </tr>
+      <tr>
+        <td colspan="3"> **Interface** </td>
+      </tr>
+      <tr>
+        <td rowspan="2"> Ethernet </td>
+        <td colspan="3"> 1 x 10/100/1000 Mbps(supports PoE PD) </td>
+      </tr>
+      <tr>
+        <td colspan="3"> 1 x 10/100 Mbps IEEE 802.3/802.3u </td>
+      </tr>
+      <tr>
+        <td rowspan="2"> USB </td>
+        <td colspan="3"> 3 x USB-A 3.0 Host; 1 x USB-A 2.0 Host </td>
+      </tr>
+      <tr>
+        <td colspan="3"> 1 x USB-C 2.0 (For flashing OS & Debug) </td>
+      </tr>
+      <tr>
+        <td> RS485 </td>
+        <td colspan="3"> 3x RS485(Isolated) </td>
+      </tr>
+      <tr>
+        <td> RS232 </td>
+        <td colspan="3"> 1x RS232(Isolated) </td>
+      </tr>
+      <tr>
+        <td rowspan="2"> DI </td>
+        <td colspan="3"> 8 x Isolated DI Ports </td>
+      </tr>
+      <tr>
+        <td colspan="3"> Input Voltage: 5~24V DC </td>
+      </tr>
+      <tr>
+        <td rowspan="2"> DO </td>
+        <td colspan="3"> 8 x Isolated DO Ports </td>
+      </tr>
+      <tr>
+        <td colspan="3"> Output Voltage: Below 60V DC </td>
+      </tr>
+      <tr>
+        <td>SIM Card</td>
+        <td colspan="3">1x Nano SIM Card Slot</td>
+      </tr>
+      <tr>
+        <td>M.2 Slot</td>
+        <td>1x M.2 M-KEY 2280 Slot for ;NVMe SSD；
+1x M.2 M-KEY 2280 Slot for  AI Accelerator
+1x M.2 NVMe Slot, t, M.2 M-KEY 2280
+(Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS);
+1x  M.2 B-KEY  3042/3052 Slot for 5G/4G LTE;</td>
+        <td>1x M.2 M-KEY 2280 Slot for NVMe SSD；
+1x M.2 M-KEY 2280 Slot for  AI Accelerator;
+1x  M.2 B-KEY  3042/3052 Slot for 5G/4G LTE
+2x M.2 NVMe Slot, t, M.2 M-KEY 2280;
+1x M.2 NVMe Slot, t, M.2 B-KEY </td>
+      </tr>
+      <tr>
+        <td>Mini-PCIe</td>
+        <td colspan="2">1x Mini-PCIe for LoRa module</td>
+      </tr>
+      <tr>
+        <td>LED</td>
+        <td colspan="2">4 x LED indicators</td>
+      </tr>
+      <tr>
+        <td>Buzzer</td>
+        <td colspan="2">1</td>
+      </tr>
+      <tr>
+        <td>Reset Button</td>
+        <td colspan="2">1</td>
+      </tr>
+      <tr>
+        <td>HDMI</td>
+        <td colspan="2">2 x HDMI 2.0</td>
+      </tr>
+      <tr>
+        <td colspan="3">Wireless Communication</td>
+      </tr>
+      <tr>
+        <td>Wi-Fi 2.4/5.0 GHz</td>
+        <td colspan="2">On-chip Wi-Fi</td>
+      </tr>
+      <tr>
+        <td>BLE 5.0</td>
+        <td colspan="2">On-chip BLE</td>
+      </tr>
+      <tr>
+        <td>LoRa®</td>
+        <td colspan="2">USB LoRa®*/SPI LoRa®*</td>
+      </tr>
+      <tr>
+        <td>4G/5G Cellular</td>
+        <td colspan="2">4G LTE/5G*</td>
+      </tr>
+      <tr>
+        <td>Zigbee</td>
+        <td colspan="2">USB Zigbee*</td>
+      </tr>
+      <tr>
+        <td colspan="3">**Standards**</td>
+      </tr>
+      <tr>
+        <td rowspan="3">EMC</td>
+        <td colspan="2">ESD: EN61000-4-2, Level 3</td>
+      </tr>
+      <tr>
+        <td colspan="2">EFT: EN61000-4-4, Level 2</td>
+      </tr>
+      <tr>
+        <td colspan="2">Surge: EN61000-4-5, Level 2</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Certification</td>
+        <td colspan="2">CE, FCC</td>
+      </tr>
+      <tr>
+        <td colspan="2">TELEC</td>
+      </tr>
+      <tr>
+        <td colspan="2">RoHS</td>
+      </tr>
+      <tr>
+        <td colspan="3">REACH</td>
+      </tr>
+      <tr>
+        <td colspan="3">**Ambient Conditions**</td>
+      </tr>
+      <tr>
+        <td>Ingress Protection</td>
+        <td colspan="2">IP40</td>
+      </tr>
+      <tr>
+        <td>Operating Temperature</td>
+        <td colspan="2">-20~65 °C</td>
+      </tr>
+      <tr>
+        <td>Operating Humidity</td>
+        <td colspan="2">10~95% RH</td>
+      </tr>
+      <tr>
+        <td>Storage Temperature</td>
+        <td colspan="2">-40~85 °C</td>
+      </tr>
+      <tr>
+        <td colspan="3">Others</td>
+      </tr>
+      <tr>
+        <td>Supercapacitor UPS</td>
+        <td colspan="2">SuperCAP UPS LTC3350 Module*</td>
+      </tr>
+      <tr>
+        <td>Hardware Watchdog</td>
+        <td colspan="2">1~255s</td>
+      </tr>
+      <tr>
+        <td>RTC</td>
+        <td colspan="2">High Accuracy RTC</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Security</td>
+        <td colspan="2">Encryption Chip TPM 2.0*</td>
+      </tr>
+      <tr>
+        <td colspan="2">ATECC608A</td>
+      </tr>
+      <tr>
+        <td>Heat Dissipation</td>
+        <td colspan="2">Fanless</td>
+      </tr>
+      <tr>
+        <td>Warranty</td>
+        <td colspan="2">2 years</td>
+      </tr>
+      <tr>
+        <td>Production Lifetime</td>
+        <td colspan="2">Until December 2036</td>
+      </tr>
+      <tr>
+        <td>**Statement**</td>
+        <td colspan="2">Options marked with * require additional purchase according to the accessories list.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-| **Category**              | **Parameters**                                                                  |
-|---------------------------|---------------------------------------------------------------------------------|
-| **Hardware Spec**         |                                                                                 |
-| **CPU**                   | Raspberry Pi Compute Module 5, 2.4GHz quad-core 64-bit Arm Cortex-A76           |
-| **AI Processor**          | Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS                             |
-| **RAM**                   | 2GB/4GB/8GB/16GB                                                                |
-| **eMMC**                  | 16GB/32GB/64GB                                                                  |
-| **Operating System**      | Raspbian, Debian                                                                |
-| **System Spec**           |                                                                                 |
-| **Power Input**           | DC 9V~36V, 2-pin Terminal Block                                                 |
-| **Interface**             |                                                                                 |
-| **Ethernet**              | 1 x 10/100/1000 Mbps(supports PoE PD)                                           |
-| **USB**                   | 3 x USB-A 3.0 Host; 1 x USB-A 2.0 Host                                          |
-| **M.2 Slot**              | 1x 2280 for M.2 NVMe SSD;1x 2280 for AI Accelerator                             |
-| **Mini-PCIe**             | 1x Mini-PCIe for LoRa module                                                    |
-| **SIM Card**              | supports Nano SIM Card                                                          |
-| **LED**                   | 4 x LED indicators                                                              |
-| **Button / Switch**       | 1x Reset Button; 1x Boot Switch                                                 |
-| **Wireless Communication**|                                                                                 |
-| **Wi-Fi 2.4/5.0 GHz**     | On-chip Wi-Fi                                                                   |
-| **BLE 5.0**               | On-chip BLE                                                                     |
-| **4G/5G Cellular**        | 4G LTE/5G*                                                                      |
-| **LoRa®**                 | USB LoRa®/SPI LoRa®                                                             |
-| **Ambient Conditions**    |                                                                                 |
-| **Ingress Protection**    | IP40                                                                            |
-| **Operating Temperature** | -20°C to 65°C                                                                   |
-| **Operating Humidity**    | 10% to 95% RH                                                                   |
-| **Others**                |                                                                                 |
-| **Watchdog**              | 1~255s                                                                          |
-| **RTC**                   | High Accuracy RTC                                                               |
-| **Security**              | Encryption Chip TPM2.0 / ATECC608A (Optional)                                   |
-| **Heat Dissipation**      | Fanless                                                                         |
-| **Warranty**              | 2 Years                                                                         |
-| **Production Lifetime**   | Until December 2030                                                             |
-| **Mechanical**            |                                                                                 |
-| **Dimension  (W x H x D)**| 197.5 mm x 155 mm x 67.5 mm                                                     |
-| **Enclosure**             | Aluminum Alloy Casing with PC Side Panels                                      |
-| **Mounting**              | DIN-rail / Wall Mount                                                           |
-| **Weight (Net)**          | 1280g                                                                            |
-| **Statement**             | Options marked with * require additional purchase according to the accessories list. |
+
+<div class="table-center">
+  <table border="1" cellspacing="0" cellpadding="6">
+    <thead>
+      <tr>
+        <th colspan="2">Component and Interface Status Statement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Reserved</td>
+        <td>Designated for future use or expansion.</td>
+      </tr>
+      <tr>
+        <td> Optional </td>
+        <td colspan="2">Designated for future use or expansion.</td>
+      </tr>
+      <tr>
+        <td> **AI Processor** </td>
+        <td>Non-essential components, users can choose to include or exclude.</td>
+      </tr>
+      <tr>
+        <td> Occupied </td>
+        <td>Currently in use and integral to product functionality.</td>
+      </tr>
+      <tr>
+        <td>Included</td>
+        <td colspan="2">Essential components provided with standard package.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/1.4_dimension_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -125,7 +360,7 @@ The Hailo AI Software Suite provides powerful tools to run AI models efficiently
 
 #### Interface Overview
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.1.1_interface_overview_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.1.1-1.png" style={{width:800, height:'auto'}}/></div>
 
 #### Mainboard Overview
 
@@ -155,7 +390,7 @@ The ETH0(PoE PD) port of reComputer Industrial R2000 can support PoE power suppl
 > Note:
 > It's worth noting that the PoE module provided with the reComputer Industrial R2000 is compliant with the IEEE 802.3at standard and can provide a maximum power supply of 25W. Therefore, if there is a need to connect high-power peripherals such as 5G or 4G modules, the PoE power supply may not be sufficient. In this case, it's recommended to use the DC terminal for power supply instead to ensure stable and reliable operation of the device.
 
-**Power Consumption**
+**Power On and Power Off**
 
 The reComputer Industrial R2000 does not come with a power button by default, and the system will automatically start up once power is connected. When shutting down, please select the shutdown option in the operating system and wait for the system to fully shut down before cutting off power. To restart the system, simply reconnect to the power.
 
@@ -213,7 +448,7 @@ The reComputer Industrial R2000 features 4 LED indicators that serve to signal t
       </tr>
       <tr>
         <td> **ACT** </td>
-        <td>Orange</td>
+        <td>Green</td>
         <td>On</td>
         <td>Under Linux this pin will flash to signify eMMC access. If any error occurs during booting, then this LED will flash an error pattern which can be decoded using the look up table( [Raspberry Pi Documentation - Configuration](https://www.raspberrypi.com/documentation/computers/configuration.html)) on the Raspberry Pi website.</td>
       </tr>
@@ -633,11 +868,6 @@ The M.2 M-KEY 2280 slot on the reComputer Industrial R2000 is designed to accomm
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.11_mini-pcie__slot_1.png" style={{width:800, height:'auto'}}/></div>
 The MiniPCIe slot on the reComputer Industrial R2000 is designed to accommodate devices such as 4G LTE, USB LoRaWAN®, and USB Zigbee.
 
-### Reset Hole
-
-<div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/reset.jpg" style={{width:200, height:'auto'}}/></div>
-
-There is a Mini Push Button Switch located in the reset hole of the reComputer AI Industrial R2135. By pressing this button with a thin object, the CM4 can be reset. This pin when high signals that the CM4 has started. Driving this pin low resets the module.
 
 ### M.2 B-KEY Slot
 

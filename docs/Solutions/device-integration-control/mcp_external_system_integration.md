@@ -10,10 +10,11 @@ keywords:
 - Voice Control
 - Watcher
 - External System
-- Enterprise
 - AI Enabled Devices
+- Qwen
+- OA
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
-slug: /mcp_external_system_integration-1
+slug: /mcp_external_system_integration
 last_update:
   date: 12/06/2025
   author: Spencer
@@ -23,39 +24,82 @@ tags:
 ---
 
 import Tabs from '@theme/Tabs';
-
 import TabItem from '@theme/TabItem';
 
 ## Overview
 
 This guide demonstrates how to use the Model Context Protocol ([MCP](https://github.com/microsoft/mcp-for-beginners/blob/main/translations/zh/00-Introduction/README.md)) to bridge Voice AI with your existing software ecosystem. By wrapping your REST APIs as MCP tools, you enable ***SenseCAP Watcher*** to interact directly with your business logic —- whether it's a Warehouse Management System (WMS), CRM, ERP, or a custom IT dashboard.
 
-[Voice Controlled Warehouse Scenario.png]
+<table class="table-center">
+  <tr>
+      <th>Smart Spatial Interaction</th>
+  </tr>
+  <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/wms-watcher-scenario.png" style={{width:480, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com.cn/solutions/smart-spatial-interaction-zh-hans" target="_blank">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Solution Bundle 🖱️</font></span></strong>
+      </a>
+    </div></td>
+  </tr>
+</table>
 
-:::tip Voice to API
-**Transform Intent into Action.**
-Instead of building a voice application from scratch, you simply expose your existing APIs to the Watcher.
-
-- **Hands-Free Operation:** Execute tasks like inventory checks or status updates without screens.
-- **Real-Time Sync:** Voice commands trigger immediate API calls, keeping data synchronized.
-- **Universal Compatibility:** If your system has an API, Watcher can control it.
-:::
-
-**Universal Integration Scenarios**:
-
-While this guide uses a **Warehouse System** as a reference implementation, the architecture applies universally:
-
-| **Industry**    | **Voice Command**                 | **Underlying System Action** |
-| --------------- | --------------------------------- | ---------------------------- |
-| **Logistics**   | *"Stock in 50 units."*            | `POST /api/inventory/add`    |
-| **Sales (CRM)** | *"Update deal status to Closed."* | `PUT /api/deals/{id}/status` |
-| **IT Ops**      | *"Restart the staging server."*   | `POST /api/servers/restart`  |
+<div class="info-section">
+  <div class="section-header">
+      <h2><a href="https://www.seeedstudio.com.cn/solutions/voicecollectionanalysis-zh-hans" target="_blank">Smart Spatial Interaction</a></h2>
+      <p>Voice to API: Transform Intent into Action. Don't build a new app from scratch. Simply expose your existing WMS endpoints to the Watcher to enable immediate voice control for your workforce.</p>
+  </div>
+    <ul class="info-list">
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="23"></line>
+                    <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+            </div>
+            <div class="info-content">
+                <h3>True Hands-Free Productivity</h3>
+                <p>Operators can query stock or log shipments while wearing gloves or driving forklifts. Keep eyes on the task and hands on the wheel for maximum safety and efficiency.</p>
+            </div>
+        </li>
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                    <path d="M3 3v5h5"></path>
+                    <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path>
+                    <path d="M16 21h5v-5"></path>
+                </svg>
+            </div>
+            <div class="info-content">
+                <h3>Zero-Latency Data Synchronization</h3>
+                <p>Eliminate the lag of paper records. Voice commands trigger direct API calls to your ERP, ensuring inventory data is synchronized the instant an item moves.</p>
+            </div>
+        </li>
+        <li class="info-item">
+            <div class="info-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+            </div>
+            <div class="info-content">
+                <h3>Universal System Interoperability</h3>
+                <p>Whether you run SAP, Oracle, or a custom SQL backend, if your system has an API, Watcher controls it. No need to migrate legacy systems to adopt AI.</p>
+            </div>
+        </li>
+    </ul>
+</div>
 
 ## Architecture
 
 Understanding the data flow is essential before writing code. The integration follows a bridge pattern where the **MCP Server** acts as a secure gateway between the AI and your internal network.
-
-### Architecture
 
 <div align="center">
   <img class='img-responsive' width={480} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/excalidraw-architecture.png" alt="excalidraw-architecture"/>
@@ -68,6 +112,16 @@ Understanding the data flow is essential before writing code. The integration fo
 3. **MCP Server (Local Bridge):** A lightweight Python script running on your machine. It translates the AI intent into specific code functions.
 4. **Backend API:** Your existing business application (FastAPI, Flask, etc.) that executes the actual logic.
 5. **Infrastructure:** Database or other services your backend relies on.
+
+**Universal Integration Scenarios**:
+
+While this guide uses a **Warehouse System** as a reference implementation, the architecture applies universally:
+
+| **Industry**    | **Voice Command**                 | **Underlying System Action** |
+| --------------- | --------------------------------- | ---------------------------- |
+| **Logistics**   | *"Stock in 50 units."*            | `POST /api/inventory/add`    |
+| **Sales (CRM)** | *"Update deal status to Closed."* | `PUT /api/deals/{id}/status` |
+| **IT Ops**      | *"Restart the staging server."*   | `POST /api/servers/restart`  |
 
 ## Demo 1: Voice-Controlled Warehouse
 
@@ -83,10 +137,13 @@ We will simulate a business environment by running a mock **Warehouse Backend** 
 - **Software:** Python 3.10+, Git.
 - **Account:** [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) account.
 
-[Device Setup Check.png]
-
 :::note Setup
 Ensure your SenseCAP Watcher is configured with **Xiaozhi AI** via [SenseCraft AI Device Center](https://sensecraft.seeed.cc/ai/device/local/37).
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecap-setup.png" alt="sensecap-setup"/>
+</div>
+
 :::
 
 ### Step 1: Deploy Target System
