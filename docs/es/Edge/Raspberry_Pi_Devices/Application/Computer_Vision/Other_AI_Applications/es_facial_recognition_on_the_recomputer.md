@@ -6,7 +6,7 @@ keywords:
   - reComputer AI 
   - face recognition
   - hailo
-# image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/facial_recognition_on_the_recomputer
 last_update:
   date: 11/18/2025
