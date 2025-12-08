@@ -1,14 +1,13 @@
 ---
-description: Livbelybot 高扭矩电机调试助手使用指南
-title: Livbelybot 高扭矩电机调试助手使用指南
-version: GQJD2022
+description: 高扭矩电机入门指南
+title: 高扭矩电机入门指南
 keywords:
 - actuator
 - motor
 - arm
 - robotics
 image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
-slug: /cn/hightorque_assistant
+slug: /cn/hightorque_getting_started
 last_update:
   date: 12/04/2025
   author: Tienjuiwong

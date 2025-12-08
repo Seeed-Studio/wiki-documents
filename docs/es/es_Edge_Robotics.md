@@ -1,5 +1,5 @@
 ---
-description: Este tema introduce la documentación de productos de Robótica de Seeed Studio.
+description: Este tema presenta la documentación de productos de Robótica de Seeed Studio.
 title: Robótica
 keywords:
 - robotics
@@ -131,19 +131,23 @@ last_update:
 
 <div className="card-container">
     <a href="/es/myactuator_series/" className="nav-item">
-      <span className="text">0️⃣MyActuator X Series</span>
+      <span className="text">0️⃣MyActuator X Serie</span>
     </a>
     <a href="/es/damiao_series/" className="nav-item">
-      <span className="text">1️⃣Damiao DM43 Series</span>
+      <span className="text">1️⃣Damiao DM43 Serie</span>
     </a>
     <a href="/es/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Motor Servo Feetech STS3215</span>
     </a>
     <a href="/es/hightorque_control" className="nav-item">
-      <span className="text">3️⃣HighTorque Series</span>
+      <span className="text">3️⃣HighTorque Serie</span>
     </a>
     <a href="/es/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣fashionstar Series</span>
+      <span className="text">4️⃣fashionstar Serie</span>
+    </a>
+    <a href="/es/robstride_control/" className="nav-item">
+      <span className="text">5️⃣Control RobStride</span>
+      <span className="tag recommended">New</span>
     </a>
 </div>
 
@@ -168,7 +172,7 @@ last_update:
       <span className="text">Algoritmo A-LOAM</span>
     </a>
     <a href="/es/slamtec/" className="nav-item">
-      <span className="text">Slamtec Series</span>
+      <span className="text">Slamtec Serie</span>
     </a>
 </div>
 
@@ -357,7 +361,7 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Dark模式 - 导航项 */
+/* Modo Dark - elementos de navegación */
 html[data-theme='dark'] .nav-item {
   color: #e5e7eb;
   background:rgb(47, 50, 57);
@@ -377,7 +381,7 @@ html[data-theme='dark'] .nav-item {
   white-space: nowrap;
 }
 
-/* Efecto de hover */
+/* Efecto hover */
 .nav-item .hover-effect {
   position: absolute;
   bottom: 0;
@@ -390,14 +394,14 @@ html[data-theme='dark'] .nav-item {
   z-index: -1;
 }
 
-/* Animación de hover */
+/* Animación hover */
 .nav-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   color: white;
 }
 
-/* Modo Dark - Animación de hover */
+/* Modo Dark - animación hover */
 html[data-theme='dark'] .nav-item:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
@@ -430,7 +434,7 @@ html[data-theme='dark'] .nav-item:hover {
 `}</style>
 
 <style>{`
-/* Estilos de tarjetas de contenido mejoradas */
+/* Estilos de tarjetas de contenido versión mejorada */
 .nav-grid {
   display: block;
   gap: 2rem;
@@ -449,7 +453,7 @@ html[data-theme='dark'] .nav-item:hover {
   z-index: 1;
 }
 
-/* Modo Dark - Tarjetas de contenido */
+/* Modo Dark - tarjetas de contenido */
 html[data-theme='dark'] .category-card {
   background:rgb(30, 30, 32);
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
@@ -475,13 +479,13 @@ html[data-theme='dark'] .category-card {
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* Efecto de hover */
+/* Efecto hover */
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
-/* Modo Dark - Efecto de hover */
+/* Modo Dark - efecto hover */
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -497,7 +501,7 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Modo Dark - Efecto de luz en hover */
+/* Modo Dark - efecto de luz hover */
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
@@ -511,7 +515,7 @@ html[data-theme='dark'] .category-card:hover::after {
   color: #333;
 }
 
-/* Modo Dark - Enlaces */
+/* Modo Dark - enlaces */
 html[data-theme='dark'] .category-card a {
   color: #d1d5db;
 }
@@ -521,7 +525,7 @@ html[data-theme='dark'] .category-card a {
   transform: translateX(5px);
 }
 
-/* Modo Dark - Hover de enlaces */
+/* Modo Dark - hover de enlaces */
 html[data-theme='dark'] .category-card a:hover {
   color: #60a5fa;
 }
@@ -537,7 +541,7 @@ html[data-theme='dark'] .category-card a:hover {
   transition: width 0.3s;
 }
 
-/* Modo Dark - Subrayado de enlaces */
+/* Modo Dark - subrayado de enlaces */
 html[data-theme='dark'] .category-card a::after {
   background: #60a5fa;
 }
@@ -547,7 +551,7 @@ html[data-theme='dark'] .category-card a::after {
 }
 
 .card-container {
-  margin-bottom: 1.5rem; /* Originalmente 0.1rem */
+  margin-bottom: 1.5rem; /* original era 0.1rem */
 }
 
 /* Estilos de etiquetas mejorados */
@@ -565,7 +569,7 @@ html[data-theme='dark'] .category-card a::after {
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
 
-/* Modo Dark - Etiqueta Stable */
+/* Modo Dark - etiqueta Stable */
 html[data-theme='dark'] .stable {
   background: #065f46;
   color: #a7f3d0;
@@ -578,7 +582,7 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }
 
-/* Modo Dark - Etiqueta Recommended */
+/* Modo Dark - etiqueta Recommended */
 html[data-theme='dark'] .recommended {
   background: #7f1d1d;
   color: #fca5a5;
@@ -590,7 +594,7 @@ html[data-theme='dark'] .recommended {
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-/* Modo Dark - Efecto de clic */
+/* Modo Dark - efecto de clic */
 html[data-theme='dark'] .category-card:active {
   box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
@@ -603,11 +607,11 @@ html[data-theme='dark'] .category-card:active {
 
   .category-card {
     width: 100%;
-    margin-top: 0.5rem; /* Tarjeta pegada al título */
+    margin-top: 0.5rem; /* tarjeta pegada al título */
   }
 }
 
-/* Modo Dark - Texto de títulos */
+/* Modo Dark - texto de títulos */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -617,14 +621,14 @@ html[data-theme='dark'] h6 {
   color: #f9fafb;
 }
 
-/* Modo Dark - Texto del cuerpo */
+/* Modo Dark - texto del cuerpo */
 html[data-theme='dark'] p,
 html[data-theme='dark'] li,
 html[data-theme='dark'] strong {
   color: #e5e7eb;
 }
 
-/* Modo Dark - Bloques de cita */
+/* Modo Dark - bloques de cita */
 html[data-theme='dark'] blockquote {
   color: #9ca3af;
   border-left-color: #4b5563;

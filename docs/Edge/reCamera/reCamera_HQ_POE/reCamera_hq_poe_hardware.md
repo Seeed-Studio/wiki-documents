@@ -58,7 +58,7 @@ reCamera 2002 HQ PoE is equipped with an advanced CMOS sensor for sharper, clear
 | Operation Humidity    | 95%                                |
 
 
-### [Core Board-C101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
+### [Core Board-C101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
 <!-- 搬运github说明和图 -->
 | Board         | Features                           | Version |
 | ------------- | ---------------------------------- | ------------ |
@@ -69,7 +69,7 @@ Top View             |  Bottom View
 :-------------------------:|:-------------------------:
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [Sensor Board-S4_GC2053](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [Sensor Board-S4_GC2053](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 
 
 Top View             |  Bottom View

@@ -1,5 +1,5 @@
 ---
-description: reComputer AI R2000 是一款基于 Raspberry Pi 5 的强大边缘 AI 计算机。配备四核 Arm Cortex-A76 处理器、8GB RAM、M.2 SSD 支持，以及提供高达 26 TOPS 算力的 Hailo-8 AI 加速模块，实现实时、低延迟和高效的 AI 推理。它是各种 AI 应用的完美选择，包括 AI 驱动的视频分析、机器视觉和智能边缘计算。
+description: reComputer AI R2000 是一款基于 Raspberry Pi 5 的强大边缘 AI 计算机。配备四核 Arm Cortex-A76 处理器、8GB RAM、M.2 SSD 支持，以及提供高达 26 TOPS 的 Hailo-8 AI 加速模块，实现实时、低延迟和高效的 AI 推理。它是各种 AI 应用的完美选择，包括 AI 驱动的视频分析、机器视觉和智能边缘计算。
 title: reComputer AI R2000 系列入门指南
 keywords:
 - Raspberry pi
@@ -20,7 +20,7 @@ last_update:
     </a>
 </div>
 
-reComputer AI R2000 系列是一款基于 Raspberry Pi 5 的强大边缘 AI 计算机。配备四核 Arm Cortex-A76 处理器、8GB RAM、M.2 SSD 支持，以及提供高达 26 TOPS 算力的 Hailo-8 AI 加速模块，实现实时、低延迟和高效的 AI 推理。它是各种 AI 应用的完美选择，包括 AI 驱动的视频分析、机器视觉和智能边缘计算。
+reComputer AI R2000 系列是一款基于 Raspberry Pi 5 的强大边缘 AI 计算机。配备四核 Arm Cortex-A76 处理器、8GB RAM、M.2 SSD 支持，以及提供高达 26 TOPS 的 Hailo-8 AI 加速模块，实现实时、低延迟和高效的 AI 推理。它是各种 AI 应用的完美选择，包括 AI 驱动的视频分析、机器视觉和智能边缘计算。
 
 ## 特性
 
@@ -28,7 +28,7 @@ reComputer AI R2000 系列是一款基于 Raspberry Pi 5 的强大边缘 AI 计�
 
 - **强大的性能**：由 Raspberry Pi 5 驱动，配备四核 Cortex-A76 CPU，高达 8GB RAM。
 
-- **每秒 26 万亿次运算**：由 Hailo AI 加速器驱动，提供高达 26 TOPS 的集成计算能力。
+- **每秒 26 万亿次运算**：由 Hailo AI 加速器驱动，提供高达 26 Tops 的集成计算能力。
 丰富的接口：2x HDMI 4Kp60、1x 以太网端口、2x USB 3.0、2x USB 2.0。
 
 - **无线连接**：双频 Wi-Fi 和 Bluetooth 5.0/BLE。
@@ -48,10 +48,10 @@ reComputer AI R2000 系列是一款基于 Raspberry Pi 5 的强大边缘 AI 计�
 | **电源供应**       | 通过 USB-C 提供 5V/5A 直流电源，支持 Power Delivery                       |
 | **视频解码器**      | 4Kp60 HEVC 解码器                                                       |
 | **Wi-Fi**              | 双频 802.11ac Wi-Fi®                                                |
-| **Bluetooth**          | Bluetooth 5.0/ BLE                                                       |
+| **蓝牙**          | Bluetooth 5.0/ BLE                                                       |
 | **电源按钮**       | 包含开/关按钮                                                          |
 | **接口**          |                                                                          |
-| **存储**            | 1 x microSD 卡槽，支持高速 SDR104 模式           |
+| **存储**            | 1 x microSD 卡插槽，支持高速 SDR104 模式           |
 | **M.2 插槽**           | 2 x M.2 插槽，支持 M.2 NVMe SSD/Hailo M.2 加速模块        |
 | **USB 端口**          | 2 × USB 3.0 端口                                                        |
 |                       | 2 × USB 2.0 端口                                                        |
@@ -70,7 +70,7 @@ reComputer AI R2000 系列是一款基于 Raspberry Pi 5 的强大边缘 AI 计�
 
 ### 硬件介绍
 
-[Hailo](https://hailo.ai/) 提供专为边缘设备上高性能深度学习应用量身定制的尖端 AI 处理器。该公司的解决方案专注于在边缘实现下一代生成式 AI，以及由先进的 AI 加速器和视觉处理器驱动的感知和视频增强。配备 Hailo-8 NPU 加速器的 reComputer_R2000 提供 26 TOPS 的 AI 性能，能够在 YOLOv8s 上实现超过 200 FPS。
+[Hailo](https://hailo.ai/) 提供专为边缘设备上高性能深度学习应用量身定制的尖端 AI 处理器。该公司的解决方案专注于在边缘实现下一代生成式 AI，以及由先进的 AI 加速器和视觉处理器驱动的感知和视频增强。配备 Hailo-8 NPU 加速器的 reComputer_R2000 提供 26 TOPs 的 AI 性能，能够在 YOLOv8s 上实现超过 200 FPS。
 
 ### 软件介绍
 
@@ -98,7 +98,7 @@ Hailo AI 软件套件提供强大的工具，可在硬件加速器上高效运�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **步骤 3.** 按键盘上的 **CTRL + SHIFT + X** 打开**高级选项**窗口
+- **步骤 3.** 在键盘上按 **CTRL + SHIFT + X** 打开**高级选项**窗口
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
@@ -106,7 +106,7 @@ Hailo AI 软件套件提供强大的工具，可在硬件加速器上高效运�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意 1：** 我们建议现在刷写 **64 位 Raspberry Pi OS（Debian 12 Bookworm）镜像**。新发布的基于 Debian 13 "Trixie" 的 Raspberry Pi OS 尚未更新 hailo-all 包，因此 Bookworm 将为您提供开箱即用的完整 Hailo 支持。
+**注意 1：** 我们建议现在刷写 (64-bit Raspberry Pi OS Debian 12 Bookworm)[https://downloads.raspberrypi.com/raspios_oldstable_full_arm64/images/raspios_oldstable_full_arm64-2025-10-02/2025-10-01-raspios-bookworm-arm64-full.img.xz] 镜像。新发布的基于 Debian 13 "Trixie" 的 Raspberry Pi OS 尚未更新 hailo-all 包，因此 Bookworm 将为您提供开箱即用的完整 Hailo 支持。
 下载[链接](https://www.raspberrypi.com/software/operating-systems/)。
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/OS.png" alt="pir" width="600" height="auto"/></p>
 然后使用镜像工具的 Use custom 选项将其写入您的 SD 卡。
@@ -114,7 +114,7 @@ Hailo AI 软件套件提供强大的工具，可在硬件加速器上高效运�
 
 如果您仍想尝试最新镜像，**您需要手动安装 Hailo 软件，而不是使用一键 hailo-all 方式；**请按照此[链接](https://wiki.seeedstudio.com/cn/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/#install-hailo-software)操作。
 
-**注意 2：** 您可以通过导航到**其他通用操作系统**来选择其他操作系统，如 **64 位 Ubuntu**
+**注意 2：** 您可以通过导航到 **Other general purpose OS** 选择其他操作系统，如 **64-bit Ubuntu**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -134,7 +134,7 @@ Hailo AI 软件套件提供强大的工具，可在硬件加速器上高效运�
 
 :::caution
 **在执行以下步骤之前，您需要安装 [homebrew](https://brew.sh/)。**
-请打开终端并输入 ```brew -V``` 来检查您是否已正确设置 homebrew 环境，您应该看到已安装的 homebrew 环境版本。
+请打开终端并输入 ```brew -V``` 检查是否已正确设置 homebrew 环境，您应该看到已安装的 homebrew 环境版本。
 :::
 
 - **步骤 1.** 通过访问[此链接](https://www.raspberrypi.org/software/)下载并安装 **Raspberry Pi Imager** 应用程序
@@ -143,7 +143,7 @@ Hailo AI 软件套件提供强大的工具，可在硬件加速器上高效运�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **步骤 3.** 按键盘上的 **CTRL + SHIFT + X** 打开**高级选项**窗口
+- **步骤 3.** 在键盘上按 **CTRL + SHIFT + X** 打开**高级选项**窗口
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
@@ -167,7 +167,7 @@ Hailo AI 软件套件提供强大的工具，可在硬件加速器上高效运�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-### 对于 Linux 主机
+### Linux 主机电脑
 
 - **步骤 1.** 下载 snap
 
@@ -294,7 +294,7 @@ rpi-imager
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
-## 将 ubuntu 刷写到 NVME
+## 将 Ubuntu 刷写到 NVME
 
 ### 第一步：使用 SD 卡更新 EEPROM
 
@@ -386,7 +386,7 @@ YOLO（You Only Look Once）系列模型是一系列专为速度和准确性而�
 
 ### Clip
 
-CLIP（Contrastive Language-Image Pretraining）是由 OpenAI 开发的机器学习模型，能够同时理解图像和文本。它经过训练可以将图像与相应的文本描述关联起来，使其能够执行涉及两种模态的任务。CLIP 具有零样本学习能力，这意味着它可以识别图像中的物体和概念，而无需专门针对这些类别进行训练。它在各种任务中表现出色，如图像分类、目标检测，甚至生成图像的文本描述。
+CLIP（Contrastive Language-Image Pretraining）是 OpenAI 开发的一种机器学习模型，能够同时理解图像和文本。它经过训练可以将图像与相应的文本描述关联起来，使其能够执行涉及两种模态的任务。CLIP 具有零样本学习能力，这意味着它可以识别图像中的物体和概念，而无需专门针对这些类别进行训练。它在各种任务中表现出色，如图像分类、目标检测，甚至生成图像的文本描述。
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification on Raspberry Pi 5 with Hailo AI Accelerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

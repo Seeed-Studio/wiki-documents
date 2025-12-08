@@ -8556,7 +8556,8 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_zoneminder_on_recomputer',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_go2rtc_on_recomputer',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_moonfire_nvr_on_recomputer',
-                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_ispy_on_recomputer'
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_ispy_on_recomputer',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/cn_viseron_on_recomputer'
                   ]
                 },
                 {
@@ -9212,14 +9213,21 @@ const sidebars = {
       type: 'category',
       label: '关节电机',
       items: [
+        {
+          type: 'category',
+          label: '高扭矩',
+          items: [
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque',
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Getting_Started',
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Control',
+          ]
+        },
         'zh-CN/Robotics/Robot_Actuator/cn_Feetech_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_FashionStar_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_Stackforce_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Myactuator_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
-        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
         'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
-        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Assistant',
       ]
     },
     {
@@ -13575,7 +13583,8 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_zoneminder_on_recomputer',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_go2rtc_on_recomputer',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_moonfire_nvr_on_recomputer',
-                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_ispy_on_recomputer'
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_ispy_on_recomputer',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/es_viseron_on_recomputer'
                   ]
                 },
                 {
@@ -14235,14 +14244,21 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: 'Alto par',
+          items: [
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque',
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque_Getting_Started',
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque_Control',
+          ]
+        },
         'es/Robotics/Robot_Actuator/es_Feetech_Servo',
         'es/Robotics/Robot_Actuator/es_FashionStar_Servo',
         'es/Robotics/Robot_Actuator/es_Stackforce_Series',
         'es/Robotics/Robot_Actuator/es_Myactuator_Series',
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
-        'es/Robotics/Robot_Actuator/es_HighTorque_Control',
         'es/Robotics/Robot_Actuator/es_RobStride_Control',
-        'es/Robotics/Robot_Actuator/es_HighTorque_Assistant',
       ]
     },
     {
@@ -18594,7 +18610,8 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_zoneminder_on_recomputer',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_go2rtc_on_recomputer',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_moonfire_nvr_on_recomputer',
-                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_ispy_on_recomputer'
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_ispy_on_recomputer',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/ja_viseron_on_recomputer'
                   ]
                 },
                 {
@@ -19254,14 +19271,21 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: '高トルク',
+          items: [
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque',
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Getting_Started',
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Control',
+          ]
+        },
         'ja/Robotics/Robot_Actuator/ja_Feetech_Servo',
         'ja/Robotics/Robot_Actuator/ja_FashionStar_Servo',
         'ja/Robotics/Robot_Actuator/ja_Stackforce_Series',
         'ja/Robotics/Robot_Actuator/ja_Myactuator_Series',
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
-        'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
         'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
-        'ja/Robotics/Robot_Actuator/ja_HighTorque_Assistant',
       ]
     },
     {
