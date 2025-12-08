@@ -6,7 +6,7 @@ keywords:
   - viseron
   - NVR
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif
-slug: /Viseron_on_reComputer
+slug: /viseron_on_recomputer
 last_update:
   date: 12/07/2025
   author: Jiahao
@@ -48,6 +48,7 @@ no_comments: false # for Disqus
 </table>
 
 ### Software Requirements
+
 ### Update system
 
 Please use the following command to run.
@@ -69,10 +70,10 @@ sudo systemctl start docker
 sudo systemctl enable docker
 docker --version
 ```
+
 The result is shown as below:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_install.png" alt="pir" width="800" height="auto"/></p>
-
 
 Please use the following command to install docker compose.
 
@@ -87,14 +88,19 @@ The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_compose_version.png" alt="pir" width="800" height="auto"/></p>
 
 ## Download Viseron
+
 ### Create folders
+
 Please use the following command to create folders
+
 ```bash
 cd ~
 mkdir -p viseron_data/{timelapse,thumbnails,snapshots,segments,models,event_clips,config}
 
 ```
+
 ### Download Model
+
 Please use the following command to download the `hef` model for hailo8 device.
 
 ```bash
@@ -102,8 +108,7 @@ cd ~/viseron_data/models
 wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.0/hailo8/yolov8n.hef
 ```
 
-### Create `docker-compose.yaml` 
-
+### Create `docker-compose.yaml`
 
 Please use the following command to create `docker-compose.yaml`.
 
@@ -133,7 +138,9 @@ services:
 ```
 
 ## Configure Viseron
+
 ### Run Viseron
+
 Please use the following command to run the viseron
 
 ```bash
@@ -148,7 +155,6 @@ docker compose up
 Please open port 8888, you will see result like below:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/UI.png" alt="pir" width="800" height="auto"/></p>
-
 
 ### Configure
 
@@ -222,7 +228,6 @@ logger:
 Please follow the steps below to run the software.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/run.png" alt="pir" width="800" height="auto"/></p>
-
 
 ## Result
 

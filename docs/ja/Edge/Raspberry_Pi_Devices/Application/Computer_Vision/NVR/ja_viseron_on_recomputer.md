@@ -1,6 +1,6 @@
 ---
 description: このwikiでは、reComputer上でviseronを使用する方法を説明します。
-title: reComputer上のviseron
+title: reComputer上のViseron
 keywords:
   - reComputer
   - viseron
@@ -18,9 +18,7 @@ no_comments: false # for Disqus
 
 ## はじめに
 
-Viseron[https://github.com/roflcoopter/viseron]は、Pythonで実装されたセルフホスト型のローカル専用NVRおよびAIコンピュータビジョンソフトウェアです。
-
-Viseronの目標は、強力で柔軟性を保ちながら、セットアップと使用を簡単にすることです。外部依存関係やクラウドサービスを必要とせず、ローカルネットワーク上で動作するように設計されています。
+[Viseron](https://github.com/roflcoopter/viseron)は、Pythonで実装されたセルフホスト型のローカル専用NVRおよびAIコンピュータビジョンソフトウェアです。Viseronの目標は、強力で柔軟性を保ちながら、セットアップと使用を簡単にすることです。外部依存関係やクラウドサービスを必要とせず、ローカルネットワーク上で動作するように設計されています。
 
 ## 前提条件
 
@@ -50,6 +48,7 @@ Viseronの目標は、強力で柔軟性を保ちながら、セットアップ�
 </table>
 
 ### ソフトウェア要件
+
 ### システムの更新
 
 以下のコマンドを使用して実行してください。
@@ -71,10 +70,10 @@ sudo systemctl start docker
 sudo systemctl enable docker
 docker --version
 ```
+
 結果は以下のように表示されます：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_install.png" alt="pir" width="800" height="auto"/></p>
-
 
 以下のコマンドを使用してdocker composeをインストールしてください。
 
@@ -89,14 +88,19 @@ docker-compose --version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_compose_version.png" alt="pir" width="800" height="auto"/></p>
 
 ## Viseronのダウンロード
+
 ### フォルダの作成
+
 以下のコマンドを使用してフォルダを作成してください
+
 ```bash
 cd ~
 mkdir -p viseron_data/{timelapse,thumbnails,snapshots,segments,models,event_clips,config}
 
 ```
+
 ### モデルのダウンロード
+
 以下のコマンドを使用してhailo8デバイス用の`hef`モデルをダウンロードしてください。
 
 ```bash
@@ -105,7 +109,6 @@ wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.
 ```
 
 ### `docker-compose.yaml`の作成
-
 
 以下のコマンドを使用して`docker-compose.yaml`を作成してください。
 
@@ -135,7 +138,9 @@ services:
 ```
 
 ## Viseronの設定
+
 ### Viseronの実行
+
 以下のコマンドを使用してviseronを実行してください
 
 ```bash
@@ -151,12 +156,11 @@ docker compose up
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/UI.png" alt="pir" width="800" height="auto"/></p>
 
-
 ### 設定
 
 以下の手順に従って`Viseron`を設定し、カメラのアドレスに応じて設定情報を置き換えてください。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/viseron_config.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/viseron_configure.png" alt="pir" width="800" height="auto"/></p>
 
 ```yaml
 # Viseron Configuration Example - Resolving Hailo component and camera identifier mismatch
@@ -224,7 +228,6 @@ logger:
 以下の手順に従ってソフトウェアを実行してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/run.png" alt="pir" width="800" height="auto"/></p>
-
 
 ## 結果
 
