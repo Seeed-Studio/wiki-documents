@@ -18,6 +18,8 @@ slug: /es/mcp_endpoint
 last_update:
   date: 10/30/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 # Endpoint MCP
@@ -56,7 +58,7 @@ MCP permite a los servidores exponer herramientas invocables a los modelos de le
 
 Agradecimientos especiales a [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) por sus contribuciones de código abierto que hicieron posible este proyecto.
 
-Puedes obtener el siguiente código desde [MCP Example Code Github](https://github.com/78/mcp-calculator)
+Puedes obtener el siguiente código desde [Código de Ejemplo MCP en Github](https://github.com/78/mcp-calculator)
 
 ### Ejemplo de código del servidor MCP
 
@@ -100,7 +102,7 @@ A continuación se presenta una explicación detallada de algunas partes clave d
 ### Inicio Rápido
 
 - Requisitos
-  - [MCP Example Code Github](https://github.com/78/mcp-calculator)
+  - [Código de Ejemplo MCP en Github](https://github.com/78/mcp-calculator)
   - Python 3.7+
   - websockets>=11.0.3
   - python-dotenv>=1.0.0
@@ -171,7 +173,7 @@ Calculating formula: math.comb(10, 3), result: 120
 - Estado de Conexión: Muestra si tu conexión MCP está funcionando correctamente.
 - Icono de actualización: Actualiza el estado de tu conexión mcp.
 - Servicios Habilitados: Lista todos los servicios mcp que tu watcher puede usar.
-- Dirección del Endpoint: Tu mcp_endpoint_address (No compartas esto con nadie a menos que sea requerido por el soporte técnico oficial)
+- Dirección del Endpoint: Tu dirección mcp_endpoint_address (No compartas esto con nadie a menos que sea requerido por el soporte técnico oficial)
 
 ### Registro de Conversación
 
@@ -205,9 +207,9 @@ Usa logger para depuración y logging en su lugar.
 
 #### 4. Valores de retorno
 
-Los valores de retorno de MCP suelen ser una cadena o JSON. En el ejemplo, el resultado del cálculo se devuelve en un campo JSON llamado result.
+Los valores de retorno de MCP son usualmente una cadena o JSON. En el ejemplo, el resultado del cálculo se devuelve en un campo JSON llamado result.
 
-La longitud de los valores de retorno suele estar limitada, similar a los comandos de dispositivos IoT, típicamente dentro de 1024 bytes.
+La longitud de los valores de retorno está usualmente limitada, similar a los comandos de dispositivos IoT, típicamente dentro de 1024 bytes.
 
 #### 5. Límite de lista de herramientas
 

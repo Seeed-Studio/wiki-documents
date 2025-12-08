@@ -210,7 +210,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 - If you want to use **Seeed Studio XIAO MG24** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_mg24_getting_started/#software-preparation)** to finish adding.
 
 :::tip
-This development board does not support XIAO SAMD21.COB LED is compatible with the XIAO nRF54L15, but it's not in an Arduino environment.
+The XIAO SAMD21 and XIAO nRF54L15 only work when powered via USB-C and cannot be used with a battery alone. Additionally, the nRF54L15 does not operate in the Arduino environment.
 :::
 ####  Low-Power Port Driver Example
 
