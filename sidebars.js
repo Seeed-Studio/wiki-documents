@@ -9209,6 +9209,13 @@ const sidebars = {
             'zh-CN/Robotics/Robot_Kits/Hand/cn_AmazingHand',
           ]
         },
+        {
+          type: 'category',
+          label: 'StackForce',
+          items: [
+            'zh-CN/Robotics/Robot_Kits/StackForce/cn_StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
       ]
     },
     {
