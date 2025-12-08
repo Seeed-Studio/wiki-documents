@@ -17,6 +17,49 @@ const texts = {
     downloadLabel: 'Download',
     missing: 'No OTA payload metadata was found for this product. Please contact Seeed support.',
   },
+
+  zh: {
+    selectProduct: '选择一个产品',
+    warningPrefix:
+      '如果你使用的是 Orin NX 16GB/8GB 模组，请不要启用 MAXN SUPER 模式。',
+    warningSuffix:
+      '{board} 的散热能力不足，强行使用该模式可能会对模组造成永久性损坏。',
+    packageTitle: 'OTA 负载包',
+    versionLabel: '目标 L4T',
+    fileLabel: '文件名',
+    shaLabel: 'SHA256',
+    downloadLabel: '下载',
+    missing: '未找到该产品的 OTA 负载元数据，请联系 Seeed 技术支持。',
+  },
+
+  ja: {
+    selectProduct: '製品を選択してください',
+    warningPrefix:
+      'Orin NX 16GB/8GB モジュールを使用している場合は、MAXN SUPER モードを有効にしないでください。',
+    warningSuffix:
+      '{board} の冷却性能は不十分であり、このモードを強制するとモジュールが恒久的な損傷を受ける可能性があります。',
+    packageTitle: 'OTA ペイロードパッケージ',
+    versionLabel: '対象 L4T',
+    fileLabel: 'ファイル名',
+    shaLabel: 'SHA256',
+    downloadLabel: 'ダウンロード',
+    missing: 'この製品の OTA ペイロードメタデータが見つかりませんでした。Seeed サポートまでお問い合わせください。',
+  },
+
+  es: {
+    selectProduct: 'Selecciona un producto',
+    warningPrefix:
+      'Si estás utilizando un módulo Orin NX de 16 GB u 8 GB, no habilites el modo MAXN SUPER.',
+    warningSuffix:
+      'La capacidad de refrigeración de {board} es insuficiente y forzar este modo puede causar daños permanentes al módulo.',
+    packageTitle: 'Paquete de payload OTA',
+    versionLabel: 'L4T objetivo',
+    fileLabel: 'Nombre de archivo',
+    shaLabel: 'SHA256',
+    downloadLabel: 'Descargar',
+    missing:
+      'No se encontró metadatos de payload OTA para este producto. Ponte en contacto con el soporte de Seeed.',
+  },
 };
 
 const toNumericArray = (value = '') => (value.match(/\d+/g) || []).map(Number);

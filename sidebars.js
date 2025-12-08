@@ -8951,6 +8951,7 @@ const sidebars = {
           items: [
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_jetson_FAQ',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Create_Backup_and_Restore_on_reComputer',
+            'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Use_IMX477_Camera_with_A603',
@@ -13978,6 +13979,7 @@ const sidebars = {
           items: [
             'es/Edge/NVIDIA_Jetson/FAQs/es_jetson_FAQ',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Create_Backup_and_Restore_on_reComputer',
+            'es/Edge/NVIDIA_Jetson/FAQs/es_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Use_IMX477_Camera_with_A603',
@@ -19005,6 +19007,7 @@ const sidebars = {
           items: [
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_jetson_FAQ',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Create_Backup_and_Restore_on_reComputer',
+            'ja/Edge/NVIDIA_Jetson/FAQs/ja_Deploy_OTA_ON_reComputer',
             // 'Edge/NVIDIA_Jetson/FAQs/Updating_Jetpack_with_OTA',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Solution_for_the_Compatibility_Issue_between_reComputer_and_VEYE_Camera',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Use_IMX477_Camera_with_A603',
