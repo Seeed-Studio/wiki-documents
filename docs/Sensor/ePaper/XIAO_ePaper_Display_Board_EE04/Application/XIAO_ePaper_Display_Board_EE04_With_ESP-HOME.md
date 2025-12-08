@@ -285,7 +285,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -425,7 +425,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -1012,7 +1012,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -1151,7 +1151,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 captive_portal:
@@ -1163,7 +1163,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: my_display
-    model: gdey0213f51
+    model: gdey029f51h
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1732,7 +1732,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -1885,7 +1885,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2655,7 +2655,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2727,7 +2727,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
  
 captive_portal:
