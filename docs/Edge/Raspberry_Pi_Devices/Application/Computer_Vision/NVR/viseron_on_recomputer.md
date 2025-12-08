@@ -1,6 +1,6 @@
 ---
 description: This wiki demonstrates how to use viseron on recomputer. 
-title: viseron on reComputer
+title: Viseron on reComputer
 keywords:
   - reComputer
   - viseron
@@ -18,9 +18,7 @@ no_comments: false # for Disqus
 
 ## Introduction
 
-Viseron[https://github.com/roflcoopter/viseron] is a self-hosted, local only NVR and AI Computer Vision software implemented in Python.
-
-The goal of Viseron is to be easy to setup and use, while still being powerful and flexible. It is designed to be run on a local network, with no external dependencies, and no cloud services required.
+[Viseron](https://github.com/roflcoopter/viseron) is a self-hosted, local only NVR and AI Computer Vision software implemented in Python.The goal of Viseron is to be easy to setup and use, while still being powerful and flexible. It is designed to be run on a local network, with no external dependencies, and no cloud services required.
 
 ## Prerequisites
 
@@ -50,6 +48,7 @@ The goal of Viseron is to be easy to setup and use, while still being powerful a
 </table>
 
 ### Software Requirements
+
 ### Update system
 
 Please use the following command to run.
@@ -71,10 +70,10 @@ sudo systemctl start docker
 sudo systemctl enable docker
 docker --version
 ```
+
 The result is shown as below:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_install.png" alt="pir" width="800" height="auto"/></p>
-
 
 Please use the following command to install docker compose.
 
@@ -89,14 +88,19 @@ The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/moonfire/docker_compose_version.png" alt="pir" width="800" height="auto"/></p>
 
 ## Download Viseron
+
 ### Create folders
+
 Please use the following command to create folders
+
 ```bash
 cd ~
 mkdir -p viseron_data/{timelapse,thumbnails,snapshots,segments,models,event_clips,config}
 
 ```
+
 ### Download Model
+
 Please use the following command to download the `hef` model for hailo8 device.
 
 ```bash
@@ -104,8 +108,7 @@ cd ~/viseron_data/models
 wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.16.0/hailo8/yolov8n.hef
 ```
 
-### Create `docker-compose.yaml` 
-
+### Create `docker-compose.yaml`
 
 Please use the following command to create `docker-compose.yaml`.
 
@@ -135,7 +138,9 @@ services:
 ```
 
 ## Configure Viseron
+
 ### Run Viseron
+
 Please use the following command to run the viseron
 
 ```bash
@@ -151,12 +156,11 @@ Please open port 8888, you will see result like below:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/UI.png" alt="pir" width="800" height="auto"/></p>
 
-
 ### Configure
 
 Please follow the steps below to configure `Viseron`, and replace the configuration information according to your camera's address.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/viseron_config.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/viseron_configure.png" alt="pir" width="800" height="auto"/></p>
 
 ```yaml
 # Viseron Configuration Example - Resolving Hailo component and camera identifier mismatch
@@ -224,7 +228,6 @@ logger:
 Please follow the steps below to run the software.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/run.png" alt="pir" width="800" height="auto"/></p>
-
 
 ## Result
 
