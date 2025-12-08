@@ -722,6 +722,13 @@ const sidebars = {
           },
           items: [
             'Sensor/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Introduction',
+            {
+              type: 'category',
+              label: 'User Guide',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/Quick_Start',
+              ],
+            },
           ],
         },
         //       {
@@ -9207,6 +9214,13 @@ const sidebars = {
           label: '灵巧手',
           items: [
             'zh-CN/Robotics/Robot_Kits/Hand/cn_AmazingHand',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'StackForce',
+          items: [
+            'zh-CN/Robotics/Robot_Kits/StackForce/cn_StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
       ]

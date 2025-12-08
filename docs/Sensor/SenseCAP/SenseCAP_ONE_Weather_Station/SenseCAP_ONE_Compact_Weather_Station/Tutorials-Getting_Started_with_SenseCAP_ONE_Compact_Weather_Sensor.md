@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 11/25/2025
-  author: Michelle Huang
+  date: 12/8/2025
+  author: Janet
 ---
 # Getting Started with SenseCAP ONE Compact Weather Sensor
 
@@ -154,6 +154,54 @@ Click "Firmware Update" to update the device firmware. Please contact sales or t
 On the upgrade page, you will need to choose to update the mainboard firmware or the driver board firmware. Select the firmware file at your local repository, and click "Update Now". If there is an unexpected power break during the update process, the update won't be executed. You will need to go through the same process to update the firmware.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image26.png" /></div>
+
+#### Firmware Upgrade
+
+1. Open `SenseCAP One Configuration Tool`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_One_Configuration_Tool.png" /></div>
+
+2. Connect the device to your computer via the Type-C cable
+
+3. Open the software, select the correct `COM` port for the device, and click `"Connect"`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Connect.png" /></div>
+
+4. After connecting, click `"Firmware Update"`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Firmware_Update.png" /></div>
+
+5. Select the target board and the corresponding firmware file
+
+- Select the `Master board`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Master_board.png" /></div>
+
+- Click `"Local File"` and browse to the firmware folder
+
+- Click `"Update"`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Update.png" /></div>
+
+6. Press the Reset button on the device (located next to the Type-C port) after clicking `"Update"`.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Reset.png" /></div>
+
+The update process will begin a few seconds after pressing the button.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Update2.png" /></div>
+
+7. Once the update is complete, press the Reset button again, then click `"OK"` on the screen.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Reset2.png" /></div>
+
+8. Repeat the above steps to flash another firmware onto `Slave Board 1`.
+
+9. Close the Firmware Update window after completion, Click `"Disconnect"`.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Disconnect.png" /></div>
+
+This completes all the firmware upgrade steps for the weather station.
 
 ### Serial debug tool
 
