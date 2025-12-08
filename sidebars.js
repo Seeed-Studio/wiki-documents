@@ -5850,6 +5850,13 @@ const sidebars = {
           },
           items: [
             'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/cn_SenseCAP_T2000_Tracker_Introduction',
+            {
+              type: 'category',
+              label: '用户指南',
+              items: [
+                'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/cn_Quick_Start',
+              ],
+            },
           ],
         },
         //       {
@@ -10885,6 +10892,13 @@ const sidebars = {
           },
           items: [
             'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/es_SenseCAP_T2000_Tracker_Introduction',
+            {
+              type: 'category',
+              label: 'Guía del usuario',
+              items: [
+                'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/es_Quick_Start',
+              ],
+            },
           ],
         },
         //       {
@@ -15913,6 +15927,13 @@ const sidebars = {
           },
           items: [
             'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/ja_SenseCAP_T2000_Tracker_Introduction',
+            {
+              type: 'category',
+              label: 'ユーザーガイド',
+              items: [
+                'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/ja_Quick_Start',
+              ],
+            },
           ],
         },
         //       {
