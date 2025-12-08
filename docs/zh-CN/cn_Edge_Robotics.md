@@ -1,6 +1,6 @@
 ---
 description: 本主题介绍 Seeed Studio 的机器人产品文档。
-title: 机器人技术
+title: 机器人
 keywords:
 - robotics
 - nvidia
@@ -13,7 +13,7 @@ last_update:
   author: ZhuYaohui
 ---
 
-# 🤖 机器人技术 
+# 🤖 机器人
 
 > *"今天的科学就是明天的技术。" - Edward Teller*
 
@@ -42,7 +42,6 @@ last_update:
   </nav>
 </div>
 
-
 <div className="nav-grid">
 
 ## 📦 机器人套件 {#robot-kits}
@@ -67,41 +66,40 @@ last_update:
     <span className="tag recommended">New</span>
     </a>
     <a href="/cn/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 Arm 导入Isaac Sim</span>
+      <span className="text">SO100 机械臂与 IsaacSim</span>
       <span className="tag recommended">New</span>
     </a>
     <a href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="nav-item">
-      <span className="text">在Jetson Thor上跑Isaac Gr00t N1.5</span>
-      <span className="tag recommended">New</span>
+        <span className="text">SO101 机械臂与 NVIDIA 的 GR00T</span>
+        <span className="tag recommended">New</span>
     </a>
 </div>
-
 
 ## 🚗 Lekiwi
 
 <div className="card-container">
     <a href="/cn/lerobot_lekiwi/" className="nav-item">
       <span className="text">Lekiwi 移动底盘</span>
-       <span className="tag recommended">New</span>
     </a>
     <a href="/cn/sound_follow_robot/" className="nav-item">
       <span className="text">Lekiwi 声音跟随</span>
     </a>
 </div>
 
-
 ## 🦾 StarAI Arm
 
 <div className="card-container">
     <a href="/cn/lerobot_starai_arm/" className="nav-item">
       <span className="text">Starai 机械臂</span>
+      <span className="tag recommended">New</span>
     </a>
     <a href="/cn/starai_arm_ros_moveit/" className="nav-item">
-      <span className="text">Starai 机械臂ROS2 Moveit</span>
+      <span className="text">Starai 机械臂 Moveit2</span>
+      <span className="tag recommended">New</span>
     </a>
     <a href="/cn/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">Starai Arm 跑Isaac GR00T</span>
-    </a>
+  <span className="text">Star AI 与 NVIDIA 的 GR00T</span>
+  </a>
 </div>
 
 ## Stackforce
@@ -122,39 +120,43 @@ last_update:
     </a>
 </div>
 
-## 🦀 末端夹爪
+
+## 🦀 末端执行器
 
 <div className="card-container">
-    <a href="/cn/dm_gripper" className="nav-item">
-      <span className="text">达妙电机末端夹爪</span>
+    <a href="/cn/dm_gripper/" className="nav-item">
+      <span className="text">DM 夹爪</span>
       <span className="tag recommended">New</span>
     </a>
 </div>
-
-
 
 </div>
 </div>
 
 ## ⚙️ 执行器 {#actuators}
+
 <div class="category-group">
 <div className="category-card actuators">
 
 <div className="card-container">
     <a href="/cn/myactuator_series/" className="nav-item">
-      <span className="text">0️⃣脉塔 X 系列</span>
+      <span className="text">0️⃣MyActuator X 系列</span>
     </a>
     <a href="/cn/damiao_series/" className="nav-item">
-      <span className="text">1️⃣达妙 DM43 系列</span>
+      <span className="text">1️⃣Damiao DM43 系列</span>
     </a>
     <a href="/cn/feetech_servo/" className="nav-item">
-      <span className="text">2️⃣飞特 STS3215 舵机</span>
+      <span className="text">2️⃣Feetech STS3215 伺服电机</span>
     </a>
     <a href="/cn/hightorque_control" className="nav-item">
-      <span className="text">3️⃣高擎 系列</span>
+      <span className="text">3️⃣HighTorque 系列</span>
     </a>
     <a href="/cn/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣华馨京 系列</span>
+      <span className="text">4️⃣fashionstar 系列</span>
+    </a>
+    <a href="/cn/robstride_control/" className="nav-item">
+      <span className="text">5️⃣RobStride 控制</span>
+      <span className="tag recommended">New</span>
     </a>
     <a href="/cn/stackforce_series/" className="nav-item">
       <span className="text">5️⃣Stackforce 系列</span>
@@ -165,14 +167,15 @@ last_update:
 </div>
 
 ## 👁️ 传感器 {#sensors}
+
 <div class="category-group">
 <div className="category-card sensors">
 
-**📡激光雷达**  
+**📡LiDAR**  
 
 <div className="card-container">
     <a href="/cn/robosense_lidar/" className="nav-item">
-      <span className="text">速腾聚创</span>
+      <span className="text">Robosense</span>
     </a>
     <a href="/cn/mid360/" className="nav-item">
       <span className="text">MID360</span>
@@ -181,56 +184,55 @@ last_update:
       <span className="text">A-LOAM 算法</span>
     </a>
     <a href="/cn/slamtec/" className="nav-item">
-      <span className="text">思岚科技系列</span>
+      <span className="text">Slamtec 系列</span>
     </a>
 </div>
 
-
-**📷摄像头**  
+**📷相机**  
 
 <div className="card-container">
-
-- 奥比中光深度相机
+- Orbbec 深度相机
 
     <a href="/cn/orbbec_gemini2/" className="nav-item">
-      <span className="text">奥比中光 Gemini2 3D 摄像头入门</span>
+      <span className="text">Orbbec Gemini2</span>
     </a>
     <a href="/cn/orbbec_gemini_335lg" className="nav-item">
-      <span className="text">奥比中光 Gemini 335Lg 深度相机</span>
+      <span className="text">Orbbec Gemini 335Lg 深度相机</span>
       <span className="tag recommended">New</span>
     </a>
     <a href="/cn/orbbec_gemini336" className="nav-item">
-      <span className="text">奥比中光 Gemini 336 深度相机</span>
+      <span className="text">Orbbec Gemini 336 深度相机</span>
       <span className="tag recommended">New</span>
     </a>
 
-- 森云GMSL相机
+- SENSING GMSL
 
     <a href="/cn/sensing_gmsl_cameras" className="nav-item">
-      <span className="text">SENSING GMSL2 摄像头</span>
-      <span className="tag recommended">New</span>
+      <span className="text">SENSING GMSL2 相机</span>
     </a>
 
-- 速腾
+- RoboSense
 
     <a href="/cn/ac1" className="nav-item">
       <span className="text">AC1</span>
       <span className="tag recommended">New</span>
     </a>
 
-- 案例
+- 示例
+
     <a href="/cn/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">奥比中光深度摄像头与ROS</span>
+      <span className="text">Orbbec 深度相机与 ROS</span>
     </a>
     <a href="/cn/orb_slam3_orbbec_gemini2/" className="nav-item">
-      <span className="text">ORB-SLAM3 与奥比中光 Gemini2</span>
+      <span className="text">ORB-SLAM3 与 Orbbec Gemini2</span>
     </a>
     <a href="/cn/csi_camera_on_ros/" className="nav-item">
-      <span className="text">CSI 摄像头在Jetson上的使用</span>
+      <span className="text">Jetson 上的 CSI 相机</span>
     </a>
-    <a href="/cn/pycuvslam_recomputer_robotics" className="nav-item">
-      <span className="text">Jetson上跑PyCuVSLAM</span>
+    <a href="/cn/pycuvslam_recomputer_robotics/" className="nav-item">
+      <span className="text">PyCuVSLAM</span>
     </a>
+
 </div>
 
 **🎤语音**  
@@ -240,7 +242,7 @@ last_update:
       <span className="text">ReSpeaker Core v2.0</span>
     </a>
     <a href="/cn/ReSpeaker_Mic_Array_v2.0/" className="nav-item">
-      <span className="text">ReSpeaker 麦克风阵列 v2.0</span>
+      <span className="text">ReSpeaker Mic Array v2.0</span>
     </a>
 </div>
 
@@ -250,17 +252,16 @@ last_update:
     <a href="/cn/hexfellow_y200/" className="nav-item">
       <span className="text">HEXFELLOW Y200</span>
     </a>
-  
-  <a href="/cn/wheeltec_imu" className="nav-item">
-      <span className="text">轮趣科技 IMU</span>
+    <a href="/cn/wheeltec_imu/" className="nav-item">
+      <span className="text">WHEELTEC IMU</span>
     </a>
 </div>
-
 
 </div>
 </div>
 
 ## 💻 软件 {#software}
+
 <div class="category-group">
 <div className="category-card software">
 
@@ -280,7 +281,7 @@ last_update:
       <span className="text">AprilTag</span>
     </a>
     <a href="/cn/isaac_ros_visual_slam/" className="nav-item">
-      <span className="text">视觉 SLAM</span>
+      <span className="text">Visual SLAM</span>
     </a>
 </div>
 
@@ -288,55 +289,47 @@ last_update:
 <div className="card-container">
 <a href="/cn/control_px4_with_recomputer_jetson/" className="nav-item">
   <span className="text">PX4 与 Jetson</span>
-  <span className="tag recommended">New</span>
 </a>
 
 <a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
   <span className="text">PX4 目标跟踪</span>
-  <span className="tag recommended">New</span>
 </a>
 
 </div>
-
 
 **NVIDIA Isaac**  
 <div className="card-container">
 <a href="/cn/install_isaaclab/" className="nav-item">
   <span className="text">Isaac Lab 安装</span>
 </a>
+<a href="/cn/training_soarm101_policy_with_isaacLab/" className="nav-item">
+  <span className="text">So Arm 强化学习</span>
+  <span className="tag recommended">New</span>
+</a>
 <a href="/cn/simulate_soarm101_by_leisaac/" className="nav-item">
   <span className="text">SO100 机械臂与 IsaacSim</span>
   <span className="tag recommended">New</span>
 </a>
-    <a href="/cn/training_soarm101_policy_with_isaacLab/" className="nav-item">
-    <span className="text">So Arm 强化学习</span>
-    <span className="tag recommended">New</span>
-    </a>
 </div>
-
 
 **VLA**  
 <div className="card-container">
 <a href="/cn/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">Star Ai Arm 跑Isaac GR00T</span>
+  <span className="text">Star AI 与 NVIDIA 的 GR00T</span>
 </a>
 </div>
 
-
 </div>
 </div>
 
 </div>
-
-
-
 
 <style>{`
 /* 导航容器 */
 .quick-nav-container {
   margin: 2rem 0;
   padding: 1rem;
-  background: 
+  background:
   radial-gradient(at 10% 20%, #f0fdf4 0%, transparent 50%),
   radial-gradient(at 90% 80%, #f0f7ff 0%, transparent 50%),
   white;
@@ -346,11 +339,11 @@ last_update:
 
 /* Dark 模式 - 导航容器 */
 html[data-theme='dark'] .quick-nav-container {
-  background: 
+  background:
     radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
     radial-gradient(at 90% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
     linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
-  box-shadow: 
+  box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.3),
     inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内发光增强深度 */
 }
@@ -368,6 +361,7 @@ html[data-theme='dark'] .quick-nav-container {
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
   display: flex;
+  margin: 6px 6px; /* 上下 6px，左右 6px */
   flex-direction: column;
   align-items: center;
   text-decoration: none !important;
@@ -451,7 +445,6 @@ html[data-theme='dark'] .nav-item:hover {
 }
 `}</style>
 
-
 <style>{`
 /* 内容卡片增强版样式 */
 .nav-grid {
@@ -505,7 +498,6 @@ html[data-theme='dark'] .category-card {
 }
 
 /* Dark 模式 - 悬浮特效 */
-
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -583,8 +575,8 @@ html[data-theme='dark'] .category-card a::after {
   transition: all 0.3s;
 }
 
-.stable { 
-  background: #e6f4ea; 
+.stable {
+  background: #e6f4ea;
   color: #137333;
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
@@ -596,8 +588,8 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(0,100,0,0.3);
 }
 
-.recommended { 
-  background: #fce8e6; 
+.recommended {
+  background: #fce8e6;
   color: #a50e0e;
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }
@@ -654,3 +646,4 @@ html[data-theme='dark'] blockquote {
   border-left-color: #4b5563;
 }
 `}</style>
+

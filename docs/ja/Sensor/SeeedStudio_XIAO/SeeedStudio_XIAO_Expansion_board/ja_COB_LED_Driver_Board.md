@@ -2,7 +2,7 @@
 description: XIAO照明ドライバー：Li-Po電源、3スイッチ + 4PWM、3V COBフィラメント駆動—ミニチュア、ジオラマ、ウェアラブルを照らします。
 title: XIAO用COB LEDドライバーボード
 image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
-slug: /ja/getting_started_with_cob_board
+slug: /ja/getting_started_with_cob_led_dirver_board
 last_update:
   date: 11/27/2025
   author: Brandy
@@ -19,15 +19,15 @@ last_update:
 
 これはSeeed Studio XIAO用に設計された7チャンネルCOB LEDドライバードックです。この拡張ボードはGPIOの電力制限を突破し、7つの出力チャンネルを提供し、特に超薄型1mm 3V COB LEDストリップに特化しています。統合されたPMICバッテリー管理により、コンパクトで高輝度なワイヤレス照明セットアップを構築するための理想的なプラグアンドプレイソリューションです。
 
- **推奨読み物：**[安全注意事項](#add-board)
+ **推奨読書：**[安全注意事項](#add-board)
 
-## はじめに
+## 概要
 
 ### 特徴
 
 - **1mm 3V COB LEDストリップに対応** 
 
-  オンボードハードウェア電流制限は、3V 1mmフレキシブルCOBストリップの電気特性に合わせて特別に調整されています。段階的な300mAと100mAの電流制限により、さまざまな長さのストリップを効果的に駆動し、メーカーに安全で安定したプラグアンドプレイ体験を提供します。
+  オンボードハードウェア電流制限は、3V 1mmフレキシブルCOBストリップの電気特性に合わせて特別に調整されています。段階的な300mAと100mAの電流制限により、様々な長さのストリップを効果的に駆動し、メーカーに安全で安定したプラグアンドプレイ体験を提供します。
 
 - **戦略的7チャンネルハイブリッド出力** 
 
@@ -35,7 +35,7 @@ last_update:
 
 - **ワイヤレスプロジェクト用バッテリー管理** 
 
-  統合された電源回路は3.7V Li-Poバッテリーまたは高出力5V USBアダプターをサポートします。ワイヤレス設置と高輝度デスクトップアンビエント照明の両方を構築するのに最適です。
+  統合電源回路は3.7V Li-Poバッテリーまたは高出力5V USBアダプターをサポートします。ワイヤレス設置と高輝度デスクトップアンビエント照明の両方の構築に最適です。
 
 - **簡単なセンサー拡張** 
 
@@ -57,16 +57,16 @@ last_update:
       </td>
     </tr>
     <tr>
-      <th>3× 高出力ポート<br/>（ネジ端子）</th>
+      <th>3×高出力ポート<br/>（ネジ端子）</th>
       <td>
         3チャンネル出力<br/>
         駆動能力：最大300mA/チャンネル<br/>
-        制御ロジック：1× 常時オン + 2× GPIOスイッチ（D0、D1）<br/>
+        制御ロジック：1×常時オン + 2×GPIOスイッチ（D0、D1）<br/>
         <small>注：オン/オフスイッチのみ、PWMサポートなし</small>
       </td>
     </tr>
     <tr>
-      <th>4× FX/PWMポート<br/>（底面パッド）</th>
+      <th>4×FX/PWMポート<br/>（底面パッド）</th>
       <td>
         4チャンネル出力<br/>
         駆動能力：最大80mA/チャンネル<br/>
@@ -85,7 +85,7 @@ last_update:
     </tr>
     <tr>
       <th>寸法</th>
-      <td>25mm × 42mm × 16mm（Seeed Studio XIAOを含む）</td>
+      <td>`30mm*41mm*16mm`（Seeed Studio XIAO付き）</td>
     </tr>
   </tbody>
 </table>
@@ -98,18 +98,18 @@ last_update:
 - **(2) D0-高出力ポート：** 最大300mAの電流をサポートする高出力ポートで、オン/オフスイッチ制御のみ可能（PWM調光はサポートされていません）、高出力負荷の接続に使用されます。
 - **(3) VCC-常時オンポート：** 最大300mAの電流をサポートする常時電源供給VCCポートで、電源スイッチによって制御されず、常に供給電圧を出力し、継続的な電力を必要とするデバイスに電力を供給できます。
 - **(4) GND：** 回路の共通グランドポートで、すべてのモジュールのグランド線を接続するために使用されます。
-- **(5) I²C Groveポート：** Grove標準I²Cインターフェース（VCC、GND、SDA、SCLピンを含む）で、I²CプロトコルをサポートするGroveモジュール（センサー、ディスプレイなど）の接続に使用されます。
-- **(6) 電源スイッチ：** 電源制御スイッチ。「ON」に切り替えると高/低出力ポートに電力を供給し、「OFF」に切り替えると電力を遮断します（VCC常時オンポートはこのスイッチによって制御されません）。
-- **(7) 電源LED：** 電源状態インジケーターライトで、電源スイッチが「ON」に切り替えられたときに点灯し、モジュールに電力が供給されていることを示します。
+- **(5) I²C Groveポート：** Grove標準I²Cインターフェース（VCC、GND、SDA、SCLピンを含む）で、I²CプロトコルをサポートするGrove モジュール（センサー、ディスプレイなど）の接続に使用されます。
+- **(6) 電源スイッチ：** 電源制御スイッチ。"ON"に切り替えると高/低出力ポートに電力を供給し、"OFF"に切り替えると電力を遮断します（VCC常時オンポートはこのスイッチによって制御されません）。
+- **(7) 電源LED：** 電源状態インジケーターライトで、電源スイッチが"ON"に切り替えられたときに点灯し、モジュールに電力が供給されていることを示します。
 - **(8) バッテリーコネクター：** 3.7Vリチウムバッテリーの接続をサポートし、モジュールに電力を供給するバッテリーインターフェースです。
 - **(9) D2-低出力ポート：** 最大80mAの電流をサポートする低出力ポートで、PWM調光をサポートし、アクティブLOWロジックを使用します（レベルが低いときに負荷が動作します）。
 - **(10) GND：** 低出力エリアのグランドポートで、低出力負荷のグランド線を接続するために使用されます。
 - **(11) D3-低出力ポート：** 最大80mAの電流をサポートする低出力ポートで、PWM調光をサポートし、アクティブLOWロジックを使用します（レベルが低いときに負荷が動作します）。
-- **(12) GND：** 低出力エリアの冗長グランドポート（項目10と同じ機能）で、低出力負荷のグランド線を接続するために使用されます。
+- **(12) D9-低出力ポート：** 最大80mAの電流をサポートする低出力ポートで、PWM調光をサポートし、アクティブLOWロジックを使用します（レベルが低いときに負荷が動作します）。
 - **(13) D8-低出力ポート：** 最大80mAの電流をサポートする低出力ポートで、PWM調光をサポートし、アクティブLOWロジックを使用します（レベルが低いときに負荷が動作します）。
 
-#### サポートされているCOB LEDガイド
-#### サポートされているLEDガイド
+#### サポートされるCOB LEDガイド
+#### サポートされるLEDガイド
 
 <div class="table-center">
  <table style={{textAlign:'center'}}>
@@ -129,7 +129,7 @@ last_update:
   </tr>
   <tr>
       <td><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/1-Double Ended COB LED Strip - White(6500K) 300mm.jpg" style={{width:150, height:'auto'}}/></td>
-      <td><a href="https://www.seeedstudio.com/Double-Ended-COB-LED-Strip-White-6500K-130mm-5PCS-p-6593.html">両端COB LEDストリップ - ホワイト（6500K） </a></td>
+      <td><a href="https://www.seeedstudio.com/Double-Ended-COB-LED-Strip-White-6500K-130mm-5PCS-p-6593.html">両端COB LEDストリップ - ホワイト（6500K）</a></td>
       <td>130mm </td>
       <td>300mA（推奨）</td>
       <td>21-25 lm（@ 300mA）</td>
@@ -166,14 +166,14 @@ COB LEDドライバーボードの潜在能力を最大限に引き出し、最�
 :::note
 安全のため：  
 - **Li-ionバッテリーを充電する際は**、LEDストリップやその他の周辺機器を取り外してください。  
-- **プログラミングやデバッグのためにUSB-C 5Vを接続する際は**、バッテリーを取り外してください。  
+- **プログラミングやデバッグ用にUSB-C 5Vを接続する際は**、バッテリーを取り外してください。  
 
 バッテリー単体**または**5V外部電源単体の使用は安全です。充電中に周辺機器を接続することは推奨されません。
 :::
 
 ### Arduinoで遊ぶ
 
-XIAOのArduino環境を設定し、オンボードパッケージを追加する必要があります。
+XIAO用のArduino環境を設定し、オンボードパッケージを追加する必要があります。
 
 :::tip
 Arduinoを初めて使用する場合は、[Arduino入門ガイド](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強く推奨します。
@@ -210,7 +210,7 @@ Arduinoを初めて使用する場合は、[Arduino入門ガイド](https://wiki
 - 後のルーチンで **Seeed Studio XIAO MG24** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_mg24_getting_started/#software-preparation)** を参照して追加を完了してください。
 
 :::tip
-この開発ボードは XIAO SAMD21 をサポートしていません。COBE LED は XIAO nRF54L15 と互換性がありますが、Arduino 環境ではありません。
+XIAO SAMD21 と XIAO nRF54L15 は USB-C 経由で電源供給された場合のみ動作し、バッテリー単体では使用できません。また、nRF54L15 は Arduino 環境では動作しません。
 :::
 ####  低電力ポートドライバーの例
 
@@ -278,7 +278,7 @@ void loop() {
 ```
 :::tip 
 
-コメント内の「低電力ポート」はアクティブローを意味します：
+コメント内の「Low-Power Port」はアクティブローを意味します：
 ピンを LOW にプルしてストリップを ON にし、リリース（HIGH）して OFF にします。
 
 :::
@@ -477,8 +477,8 @@ void loop() {
 
 ```
 
-これは呼吸ライトスタイルのコードです。お気に入りの場合は、光らせたい場所でこのスタイルを使用できます。
-プログラムをアップロードしてCOB LEDドライバーボードに電源を供給します。すべてがうまくいけば、次のように表示されます：
+これはバッテリー駆動のプロジェクトです。これは呼吸ライトスタイルのコードです。お気に入りの場合は、光らせたい場所でこのスタイルを使用できます。
+プログラムをアップロードしてCOB LEDドライバーボードに電源を供給します。すべてがうまくいけば、次のように見えるはずです：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/PWM.gif"style={{width:500, height:'auto'}}/></div>
 :::tip
@@ -542,7 +542,7 @@ ESPHomeが正常に読み込まれると、次のウィンドウが表示され�
 
 **概要**
 
-夕暮れから夜明けまでのLEDランプのデモを作成しましょう。ライトは一日を通して光の強度に応じて変化します。興味がある場合は、読み続けてください。
+夕暮れから夜明けまでのLEDランプのデモを作ってみましょう。ライトは一日を通して光の強度に応じて変化します。興味がある場合は、読み続けてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/HA_demo.jpg" style={{width:500, height:'auto'}}/></div>
 **ステップ 1.**   ハードウェア準備
@@ -584,35 +584,35 @@ ESPHomeが正常に読み込まれると、次のウィンドウが表示され�
  </tr>
 </table>
 
-**ステップ 2.** Seeed Studio XIAO ESP32-C3、COB LED Driver Board for XIAO、Single Ended COB LED Strip - White を以下のように接続します：
+**ステップ 2.** Seeed Studio XIAO ESP32-C3、XIAO用COB LEDドライバーボード、シングルエンドCOB LEDストリップ - ホワイトを以下のように接続します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/4-100061492-Single-Ended-COB-LED-Strip---White(6500K)-300mm.jpg" style={{width:500, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/connect2.png" style={{width:500, height:'auto'}}/></div>
 
-**ステップ 3.** ESPHome ページを開き、**+ NEW DEVICE** をクリックします
+**ステップ 3.** ESPHomeページを開き、**+ NEW DEVICE**をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/5.png" style={{width:900, height:'auto'}}/></div>
 
-**ステップ 4.** **CONTINUE** をクリックします
+**ステップ 4.** **CONTINUE**をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/6.png" style={{width:900, height:'auto'}}/></div>
 
-**ステップ 5.** デバイスの **Name** を入力し、**Network name** や **Password** などの WiFi 認証情報を入力します。次に **NEXT** をクリックします
+**ステップ 5.** デバイスの**Name**を入力し、**Network name**や**Password**などのWiFi認証情報を入力します。その後、**NEXT**をクリックします
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-to-dawn_LED_lamp_1.png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-to-dawn_LED_lamp_1.1.png" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 6.** **ESP32-C3** を選択してクリックします
+**ステップ 6.** **ESP32-C3**を選択してクリックします
 
-**ステップ 7.** このボードを手動で設定するため、**SKIP** をクリックします
+**ステップ 7.** このボードを手動で設定するため、**SKIP**をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/14.png" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 8.** 新しく作成されたボードの下にある **EDIT** をクリックします
+**ステップ 8.** 新しく作成されたボードの下にある**EDIT**をクリックします
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-ro-dawm_LED_lamp_2png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-ro-dawm_LED_lamp_2.2.png" style={{width:400, height:'auto'}}/></div>
 
-**ステップ 9.** 以下のコードを .yaml ファイルの末尾に部分的にコピーします。XIAO ESP32-C3 は Grove デジタル光センサーから光の値を読み取り、光の強度に応じて D2 ピンの電流レベルを変更し、ライトバーを制御します
+**ステップ 9.** 以下のコードを.yamlファイルの末尾に部分的にコピーします。XIAO ESP32-C3はGroveデジタル光センサーから光の値を読み取り、光の強度に応じてD2ピンの電流レベルを変更し、ライトバーを制御します
 
 ```yaml
 
@@ -712,33 +712,33 @@ light:
           }
 ```
 :::tip
-Home Assistant の設定では、sda、scl、pin の番号は常に GPIO 番号を指し、XIAO ボードに印刷されたシルクスクリーンラベルではありません。
+Home Assistantの設定では、sda、scl、pinの番号は常にGPIO番号を指し、XIAOボードに印刷されたシルクスクリーンラベルではありません。
 :::
 
-**ステップ 10.** 右上角の Install ボタンをクリックします。次に最後の項目 **Manual download** を選択し、**Modern format** を選択します
+**ステップ 10.** 右上角のInstallボタンをクリックします。その後、最後の項目**Manual download**を選択し、**Modern format**を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-to-dawn_LED_lamp_3.png" style={{width:500, height:'auto'}}/></div>
 
-その後、ダウンロードとコンパイルに長時間かかりますので、しばらくお待ちください。すべての準備が整うと、ファームウェア（XX.bin）が自動的にコンピューターにダウンロードされます。コンパイル成功は以下の図のように表示されます
+その後、ダウンロードとコンパイルに長時間かかりますので、お待ちください。すべての準備が整うと、ファームウェア（XX.bin）が自動的にコンピューターにダウンロードされます。コンパイルが成功すると、以下の図のように表示されます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-to-dawn_LED_lamp_4.3.png" style={{width:350, height:'auto'}}/></div>
 
-**ステップ 11.** [ESPhome Web ツール](https://web.esphome.io/?dashboard_install)を使用して XIAO ESP32 にファームウェアをアップロードし、**CONNECT** をクリックします
+**ステップ 11.** [ESPhome Webツール](https://web.esphome.io/?dashboard_install)を使用してXIAO ESP32にファームウェアをアップロードし、**CONNECT**をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/34.png" style={{width:800, height:'auto'}}/></div>
 
-ポップアップウィンドウで XIAO ESP32 のシリアルポートを選択し、**INSTALL** をクリックして、上記の手順でダウンロードした .bin ファイルを選択します。
+ポップアップウィンドウでXIAO ESP32のシリアルポートを選択し、**INSTALL**をクリックして、上記の手順でダウンロードした.binファイルを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/35.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/38.png" style={{width:500, height:'auto'}}/></div>
 
-**ステップ 12.** インストールが正常に完了すると、次のように表示されます：
+**ステップ 12.** インストールが成功すると、以下のように表示されます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/demo.gif" style={{width:700, height:'auto'}}/></div>
 光が強いときはナイトライトが消灯し、光が弱いときはナイトライトが点灯します。
 
-**ステップ 13.** インストールが正常に完了したら、ログを開くとフィードバックメッセージが表示されます。
+**ステップ 13.** インストールが成功したら、ログを開くとフィードバックメッセージが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-to-dawn_LED_lamp_5.png" style={{width:500, height:'auto'}}/></div>
 
@@ -749,56 +749,53 @@ Home Assistant の設定では、sda、scl、pin の番号は常に GPIO 番号�
 気に入った場合は、上記の手順に従って、あなただけのユニークなナイトライトを作ることもできます！
 
 :::tip
-ボードコンポーネントは -40°C から 85°C の定格ですが、全 7 チャンネルを最大負荷（合計 >1A）で駆動すると大量の熱が発生します。密閉された空間（例：密閉されたプラスチックモデル内）に設置する場合は、PMIC の熱シャットダウン保護の作動を防ぐため、受動的な換気を確保してください。
+ボードコンポーネントは-40°Cから85°Cまで定格されていますが、すべての7チャンネルを最大負荷（合計>1A）で駆動すると、大量の熱が発生します。密閉された空間（例：密閉されたプラスチックモデル内）に設置する場合は、PMICの熱シャットダウン保護の作動を防ぐため、受動的な換気を確保してください。
 :::
 
 ## 特別な感謝
-3D プリンティング作業への貴重な貢献をしてくださった Xinyu さんに特別な感謝を申し上げます。
+3Dプリント作業への貴重な貢献をしてくださったXinyuさんに特別な感謝を申し上げます。
 
  オリジナルデザインは卓越した創造性と実用的価値を示しています。オリジナルデザインをご覧になりたい方は、以下のリンクからデモンストレーション動画と作者のホームページをご利用いただけます。
 
-**[LED ランプ 3D プリントケース](https://makerworld.com.cn/zh/models/126527-leddeng-b3#profileId-11109)**
+**[LEDランプ3Dプリントケース](https://makerworld.com.cn/zh/models/126527-leddeng-b3#profileId-11109)**
 
 **[作者のホームページ](https://makerworld.com.cn/zh/@GLB_xinyulin/upload)**
 
 ## リソース
 
-[PDF] **[Seeed Studio COB LED Driver Board 回路図](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/SCH_Sch_V1.2_2025-11-21.pdf)**
+[PDF] **[Seeed Studio COB LEDドライバーボード回路図](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/SCH_Sch_V1.2_2025-11-21.pdf)**
 
-[ZIP] **[Seeed Studio COB LED Driver Board PCB](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Gerber_PCB_V1.2_2025-11-25.zip)**
+[ZIP] **[Seeed Studio COB LEDドライバーボードPCB](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Gerber_PCB_V1.2_2025-11-25.zip)**
 
-[STEP] **[Seeed Studio COB LED Driver Board 3D モデル](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/cob_led_driver_board.STEP)**
+[STEP] **[Seeed Studio COB LEDドライバーボード3Dモデル](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/cob_led_driver_board.STEP)**
 
-## 安全上の注意{#add-board}
+## 安全注意事項{#add-board}
 
-ドライバーボードには 2 つの電源回路があります：
-- **USB-C 5V ポート：** 背面の PMIC による降圧後、リチウム電池を充電し、同時に昇圧により 5V を出力して負荷を駆動できます。
-- **リチウム電池（3.7V）：** 同じ PMIC が電圧を 5V に昇圧して負荷に電力を供給します。
-2 つの回路のうち**一度に**使用できるのは 1 つだけです。同時接続は厳禁です。そうしないと、PMIC 内で「逆流電流」が形成され、瞬時に破損してショートします。実際のテストで火傷のリスクが確認されています。
 
-**動作禁止事項と安全規則**
+
+**操作禁止事項と安全規則**
  - 充電中は周辺機器を接続しないでください。USB-Cケーブルを接続する前に、まずライトバーを取り外してください。
- - USB-Cポートをデバッグする際は、バッテリーホルダーを空にしてください（バッテリーを取り付けないでください）。
- - フル負荷電流が1Aを超える場合は、筐体に放熱穴を開けることを確認してください。そうしないと、PMICが過熱してシャットダウンします。
- - 基板裏面のPMIC領域を素手で触らないでください：静電気放電（ESD）によりチップが損傷する可能性があり、フル負荷時には表面が火傷するほどの温度に達する場合があります。
+ - USB-Cポートをデバッグする際は、バッテリーホルダーを空にしてください（バッテリーを取り付けない）。
+ - 1A以上のフル負荷電流の場合は、筐体に放熱穴を開けることを確認してください。そうしないと、PMICが過熱してシャットダウンします。
+ - ボード裏面のPMIC部分を素手で触らないでください：静電気放電（ESD）によりチップが損傷する可能性があり、フル負荷時には表面が火傷するほどの温度に達する場合があります。
 **コア安全リマインダー**
- - 安全な動作のために、これら4つの規則を遵守してください：
+ - 安全な操作のために、これら4つの規則を遵守してください：
  - 周辺機器接続時は単一電源供給
- - 配線/切断前の電源オフ
- - 適切な放熱穴の提供
- - 基板裏面に触れない
+ - 配線/切断前に電源を切る
+ - 適切な放熱穴を設ける
+ - ボードの裏面に触れない
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/safety.png" style={{width:250, height:'auto'}}/></div>
 
 ## よくある質問
 
-**Q1. なぜ基板が熱くなるのですか？**
-  - ホットスワッピング現象が発生するためです。XIAOをUSBに接続してからドライバーボードに再接続すると、この過程で開発ボードの電流経路にショートサーキットが発生し、焼損することもあります。
+**Q1. なぜボードが熱くなるのですか？**
+  - ホットスワップ現象が発生するためです。XIAOをUSBに接続してからドライバーボードに再接続する際、この過程で開発ボードの電流経路にショートサーキットが発生し、場合によっては焼損することがあります。
 
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

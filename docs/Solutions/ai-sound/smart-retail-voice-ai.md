@@ -16,7 +16,7 @@ image: https://files.seeedstudio.com/wiki/solution/ai-sound/respeaker-rerouter-i
 slug: /solutions/smart-retail-voice-ai-solution-1
 sidebar_position: 2
 last_update:
-  date: 12/03/2025
+  date: 12/04/2025
   author: Spencer
 tags:
   - smart-retail
