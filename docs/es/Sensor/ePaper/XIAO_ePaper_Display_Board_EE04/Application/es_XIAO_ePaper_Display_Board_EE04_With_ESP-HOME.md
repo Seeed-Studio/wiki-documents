@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción
 
-### Descripción General del Hardware
+### Descripción del Hardware
 
 <div class="table-center">
   <table align="center">
@@ -61,7 +61,7 @@ También hemos escrito cómo instalar Home Assistant para algunos productos de S
 - **[Introducción a Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
 
 :::tip instalar Home Assistant
-Si no estás usando un producto de Seeed Studio, también puedes consultar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
+Si no estás usando un producto de Seeed Studio, también puedes verificar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
 
 - **[Instalación de Home Assistant](https://www.home-assistant.io/installation/)**
 :::
@@ -285,7 +285,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -425,7 +425,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -885,7 +885,7 @@ Espera un momento y verás la retroalimentación como en la siguiente imagen. Si
 <TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de encriptación válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el panel ePaper a nada, solo asegúrate de que esté en línea.
@@ -1012,7 +1012,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -1151,7 +1151,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 captive_portal:
@@ -1163,7 +1163,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: my_display
-    model: gdey0213f51
+    model: gdey029f51h
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1577,7 +1577,7 @@ display:
 </TabItem>
 </Tabs>
 
-Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando correctamente.
+Cuando veas la retroalimentación como la siguiente imagen, significa que el código se está ejecutando exitosamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee044.png" style={{width:1000, height:'auto'}}/></div><br />
 
@@ -1588,7 +1588,7 @@ Debido a limitaciones de espacio, no elaboraremos demasiado sobre los métodos d
 
 Este ejemplo demuestra cómo mostrar iconos personalizados en tu XIAO ePaper Display Board(ESP32-S3) - EE04 usando fuentes TrueType. Los iconos de Material Design proporcionan una amplia gama de símbolos escalables perfectos para pantallas ePaper.
 
-#### Instalando las Herramientas Requeridas
+#### Instalando Herramientas Requeridas
 
 Paso 1. Primero, necesitamos instalar el complemento **Studio Code Server** para gestionar archivos. Navega a la tienda de complementos de Home Assistant, busca **Studio Code Server** y haz clic en él.
 
@@ -1600,7 +1600,7 @@ Paso 2. Haz clic en **INSTALL** y espera a que se complete la instalación. Una 
 
 #### Configurando Fuentes de Iconos
 
-Paso 3. Crea una nueva carpeta llamada **fonts** en tu directorio de configuración de ESPHome. Esta carpeta almacenará los archivos de fuente TrueType necesarios para mostrar iconos.
+Paso 3. Crea una nueva carpeta llamada **fonts** en tu directorio de configuración de ESPHome. Esta carpeta almacenará los archivos de fuentes TrueType necesarios para mostrar iconos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphme_ee041.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1732,7 +1732,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -1885,7 +1885,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2449,7 +2449,7 @@ Al combinar estos iconos con los datos meteorológicos de Home Assistant que con
 
 ### Visualización de Imágenes Personalizadas
 
-Este ejemplo demuestra cómo mostrar imágenes personalizadas en tu XIAO ePaper Display Board(ESP32-S3) - EE04. Puedes usar esta función para mostrar logotipos, iconos o cualquier gráfico que mejore tu experiencia de panel de control.
+Este ejemplo demuestra cómo mostrar imágenes personalizadas en tu XIAO ePaper Display Board(ESP32-S3) - EE04. Puedes usar esta función para mostrar logotipos, iconos o cualquier gráfico que mejore tu experiencia de panel.
 
 #### Preparación
 
@@ -2484,7 +2484,7 @@ Para mejores resultados en pantallas ePaper, usa imágenes de alto contraste con
 
 #### Configurando ESPHome para Visualización de Imágenes
 
-Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarlo.
+Paso 5. Agrega el siguiente código a tu archivo de configuración de ESPHome después de la sección `captive_portal`. Este código define el recurso de imagen y configura la pantalla para mostrarla.
 
 <Tabs>
 <TabItem value="1.54 Inch" label="1.54 Pulgadas Color Monocromático" default>
@@ -2655,7 +2655,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2727,7 +2727,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 captive_portal:
@@ -3165,12 +3165,12 @@ display:
 </TabItem>
 </Tabs>
 
-Paso 6. Guarda tu configuración y súbela a tu Placa de Pantalla ePaper XIAO (ESP32-S3) - EE04. Cuando se complete la actualización, tu pantalla ePaper mostrará la imagen.
+Paso 6. Guarda tu configuración y súbela a tu XIAO ePaper Display Board(ESP32-S3) - EE04. Cuando se complete la actualización, tu pantalla ePaper mostrará la imagen.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee046.png" style={{width:1000, height:'auto'}}/></div><br />
 
 
-#### Técnicas Avanzadas de Imagen
+#### Técnicas Avanzadas de Imágenes
 
 Puedes mejorar la visualización de tus imágenes con estas técnicas adicionales:
 
@@ -3220,7 +3220,7 @@ lambda: |-
 ```
 
 :::caution
-Recuerda que las pantallas ePaper tienen tasas de refresco limitadas. La configuración `update_interval: 300s` significa que tu pantalla se refrescará solo cada 5 minutos. Ajusta este valor según tus necesidades, pero ten en cuenta que los refrescos frecuentes pueden reducir la vida útil de las pantallas ePaper.
+Recuerda que las pantallas ePaper tienen tasas de actualización limitadas. La configuración `update_interval: 300s` significa que tu pantalla se actualizará solo cada 5 minutos. Ajusta este valor según tus necesidades, pero ten en cuenta que las actualizaciones frecuentes pueden reducir la vida útil de las pantallas ePaper.
 :::
 
 Al combinar imágenes con texto y otros elementos de visualización cubiertos en ejemplos anteriores, puedes crear paneles informativos ricos en tu XIAO ePaper Display Board(ESP32-S3) - EE04.

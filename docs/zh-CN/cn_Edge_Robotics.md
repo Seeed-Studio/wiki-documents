@@ -102,16 +102,7 @@ last_update:
   </a>
 </div>
 
-## Stackforce
-
-<div className="card-container">
-    <a href="/cn/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
-      <span className="text">小轮足机器人</span>
-      <span className="tag recommended">New</span>
-    </a>
-</div>
-
-## 🖐️ 灵巧手
+## 🖐️ 手部
 
 <div className="card-container">
     <a href="/cn/hand_amazinghand/" className="nav-item">
@@ -157,9 +148,6 @@ last_update:
     <a href="/cn/robstride_control/" className="nav-item">
       <span className="text">5️⃣RobStride 控制</span>
       <span className="tag recommended">New</span>
-    </a>
-    <a href="/cn/stackforce_series/" className="nav-item">
-      <span className="text">5️⃣Stackforce 系列</span>
     </a>
 </div>
 
