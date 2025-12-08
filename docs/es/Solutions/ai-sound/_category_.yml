@@ -1,0 +1,10 @@
+position: 1.2
+label: 'Sonido AI'
+collapsible: true
+collapsed: true
+className: _ai-sound
+link:
+  type: generated-index
+  slug: es/ai-sound
+  title: Sonido AI
+  description: Soluciones de percepción de sonido.

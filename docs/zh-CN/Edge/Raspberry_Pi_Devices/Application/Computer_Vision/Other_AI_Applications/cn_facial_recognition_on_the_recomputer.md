@@ -6,7 +6,7 @@ keywords:
   - reComputer AI 
   - face recognition
   - hailo
-# image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/facial_recognition_on_the_recomputer
 last_update:
   date: 11/18/2025
@@ -19,7 +19,7 @@ no_comments: false # for Disqus
 
 ## 简介
 
-本 wiki 将指导您使用配备 `Hailo` NPU 的 reComputer 实现实时人脸识别。在这个项目中，我们使用 `SCRFD-10G` 进行高效的人脸检测，能够快速准确地检测各种尺度的人脸，包括小人脸，确保实时性能。同时，我们采用 `ArcFace-MobileFaceNet` 模型进行轻量级人脸识别，该模型利用 ArcFace 损失函数来提高识别精度并实现高效的身份验证。
+本 wiki 将指导您使用配备 `Hailo` NPU 的 reComputer 实现实时人脸识别。在这个项目中，我们使用 `SCRFD-10G` 进行高效的人脸检测，能够快速准确地检测各种尺度的人脸，包括小人脸，确保实时性能。同时，我们采用 `ArcFace-MobileFaceNet` 模型进行轻量级人脸识别，该模型利用 ArcFace 损失函数来提高识别准确性并实现高效的身份验证。
 
 ## 准备硬件
 

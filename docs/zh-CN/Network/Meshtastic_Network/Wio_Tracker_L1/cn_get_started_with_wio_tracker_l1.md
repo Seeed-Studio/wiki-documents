@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /cn/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 11/24/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
 
@@ -29,7 +29,7 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 ### 第二部分 固件刷写
 
 :::caution note
-请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+请`不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
 :::
 
 <div class="video-container">
@@ -52,7 +52,7 @@ L1 E-Ink 固件目前不支持四向摇杆。如果您想使用摇杆，请购�
 
 #### 蜂鸣器
 
-如果您想开启或关闭蜂鸣器，请先`更新固件`到`2.7`版本。因为只有 2.7 版本固件才有菜单栏。
+如果您想开启或关闭蜂鸣器，请先`将固件更新`到 `2.7` 版本。因为只有 2.7 版本固件才有菜单栏。
 - 开启蜂鸣器
 Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> Disable
 - 关闭蜂鸣器
@@ -76,10 +76,15 @@ Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> All enable
 
 ## 入门指南
 
+:::danger note
+当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+1. 未完成消息传输过程
+2. 正在配置中
+:::
 ### 刷写固件
 
 :::caution note
-请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+请`不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
 :::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
@@ -145,7 +150,7 @@ import TabItem from '@theme/TabItem';
 
 ### 通过网站连接
 
-如果您想在网站上发送文本消息并与其他节点通信，您现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+如果您想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
 
   步骤 1：打开网站
 
@@ -200,13 +205,13 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
+参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
 **EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
-现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa 配置](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
+现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
 
 ### 传感器连接
 
@@ -248,11 +253,11 @@ import TabItem from '@theme/TabItem';
 ### 屏幕连接
 
  - [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
-- 请期待我们兼容的单独销售的 OLED 屏幕，即将推出。当前的 OLED 驱动器是 SSD1306。
+- 请期待我们即将推出的兼容单独销售的 OLED 屏幕。当前的 OLED 驱动器是 SSD1306。
 
 ### 虚拟键盘
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
+2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。按照 [Flash Firmware Tutorial](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## 常见问题
@@ -261,10 +266,10 @@ import TabItem from '@theme/TabItem';
 
 **描述：**
 
-设备无响应，没有 LED 灯，无法与您的应用配对。如果您发现设备在刷写自己的固件后完全死机，您也可以尝试重新安装引导程序。
+设备无响应，没有 LED，无法与您的应用配对。如果您发现设备在刷入自己的固件后完全死机，您也可以尝试重新安装引导程序。
 
 :::danger note
-当您刷写引导程序时，请确保电缆连接稳定，在刷写过程中**不要**断开连接。
+当您刷入引导程序时，请确保电缆连接稳定，在刷入过程中**不要**断开连接。
 :::
 
 - 步骤 1：[点击这里下载引导程序](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
@@ -279,9 +284,9 @@ import TabItem from '@theme/TabItem';
 
   用下载的引导程序文件覆盖磁盘中的所有文件。
 
-- 步骤 4：刷写固件
+- 步骤 4：刷入固件
 
-  当您完成上述步骤后，您可以按照这个[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)刷写应用固件。您可能需要[手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+  当您完成上述步骤后，您可以按照这个 [步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 刷入应用固件。您可能需要 [手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 
 ### 无法进入 DFU 和手动进入 DFU 模式
@@ -299,11 +304,17 @@ import TabItem from '@theme/TabItem';
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上运行。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
       为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
+
+### 兼容天线
+
+如果您需要为 L1 Pro 更换天线，[点击这里](https://www.seeedstudio.com/LoRa-Antenna-Kit-for-reTerminal-DM-p-5714.html) 获取一个。
+
 ## 资源
 - [引导程序](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) 3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [(V2 新四向摇杆) 3D 打印参考文件](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
 - [外形文件](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
+- [TELEC 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
 - [FCC 认证](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [CE 认证](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)
 - [功耗测试和电池寿命计算](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20Power%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

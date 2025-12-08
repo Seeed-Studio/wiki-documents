@@ -163,7 +163,7 @@ Usando este puerto serie, a través del cable de datos USB C, puedes monitorear 
 
 M.2 Key M es una interfaz diseñada para unidades de estado sólido (SSD) de alta velocidad, proporcionando velocidades de transferencia de datos ultra rápidas, ideal para aplicaciones de alto rendimiento.
 
-### Los SSD soportados son los siguientes
+### Los SSD compatibles son los siguientes
 
 - [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
 - [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
@@ -336,10 +336,10 @@ Hay 2 puertos RJ45 Gigabit Ethernet en reComputer Super que soportan 10/100/1000
 
 Hay 2 LEDs (verde y amarillo) en cada puerto Ethernet:
 
-- LED Verde: ENCENDIDO solo cuando está conectado a una red de 1000M/10G.
+- LED Verde: Se enciende solo cuando está conectado a una red de 1000M/10G.
 - LED Amarillo: Muestra el estado de actividad de la red.
 
-Prueba la velocidad de Ethernet:
+Probar la velocidad de Ethernet:
 
 ```bash
 iperf3 -c 192.168.254.100 -R
@@ -398,148 +398,69 @@ Adicionalmente, podemos configurar manualmente la velocidad del ventilador usand
 
 ## CAN
 
-La interfaz CAN (Controller Area Network) es un protocolo de comunicación serie utilizado para la comunicación entre microcontroladores y dispositivos, caracterizado por alta velocidad, fuerte capacidad anti-interferencia y soporte para comunicación multi-nodo.
+La serie reComputer Super proporciona una interfaz CAN donde la señal CAN se emite directamente desde el SOM a niveles TTL/CMOS, que es una señal diferencial no estándar que requiere un transceptor CAN externo para conectarse a un bus CAN estándar; soporta formatos de trama CAN FD, permitiendo longitud de datos extendida y tasas de datos más altas, haciéndolo adecuado para automatización industrial, robótica, prototipado automotriz y otras aplicaciones que requieren comunicación confiable en tiempo real.
 
 ### Conexión de Hardware
 
-- Por favor nota la secuencia de las líneas conectadas (R OUT ↔ RX, D IN ↔ TX), y luego conviértelas a CAN_L y CAN_H a través del transceptor de bus CAN.
+Por favor nota la secuencia de las líneas conectadas (R OUT ↔ RX, D IN ↔ TX), y luego conviértelas a CAN_L y CAN_H a través del transceptor del bus CAN.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can1.png"/>
 </div>
 
-- [Descarga de Herramienta CAN para PC](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)
-- Bus CAN de nivel CMOS de 3.3V (no diferencial)
+Según la [Hoja de Datos de reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf), conecta el calentador CAN al transceptor del bus CAN de la manera correspondiente, luego conecta el transceptor del bus CAN al [Adaptador Analizador USB a CAN](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html), y finalmente conéctalo al Jetson para pruebas de comunicación de bucle cerrado.
 
-:::note
-La interfaz CAN utiliza una fuente de alimentación aislada, lo que significa que la señal de tierra para dispositivos externos conectados a la interfaz CAN debe conectarse al pin **GND_ISO**.
-:::
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_port.png"/>
+</div>
 
-Aquí hemos usado [Adaptador Analizador USB a CAN](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) con Cable USB disponible en nuestro Bazaar.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_connect.png"/>
+</div>
 
 ### Instrucciones de Uso
 
-**Paso 1.** Descarga el controlador para el adaptador USB a CAN que estás usando desde el sitio web del fabricante e instálalo. En nuestro caso, según el adaptador que usamos, los controladores se pueden encontrar [aquí](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver).
-
-**Paso 2.** Algunos adaptadores también vienen con el software necesario para la PC para comunicarse con el dispositivo CAN. En nuestro caso, según el adaptador que usamos, hemos descargado e instalado el software que se puede encontrar [aquí](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program).
-
-**Paso 3.** Inicializa la interfaz CAN de Jetson.
-
-Crea un nuevo archivo llamado **`can_init.sh`** en Jetson y escribe el siguiente contenido:
+**Paso 1.** Configurar y abrir can0:
 
 ```bash
-#!/bin/bash
-
-sudo gpioset gpiochip2 9=0 
-sudo gpioset gpiochip2 8=0
-
-sudo busybox devmem 0x0c303018 w 0xc458
-sudo busybox devmem 0x0c303010 w 0xc400
-sudo busybox devmem 0x0c303008 w 0xc458
-sudo busybox devmem 0x0c303000 w 0xc400
-
-sudo modprobe can
-sudo modprobe can_raw
-sudo modprobe mttcan
-
 sudo ip link set can0 down
-sudo ip link set can1 down
-
-sudo ip link set can0 type can bitrate 125000
-sudo ip link set can1 type can bitrate 125000
+sudo ip link set can0 type can bitrate 500000
 sudo ip link set can0 up
-sudo ip link set can1 up
-
 ```
-
-Luego, ejecuta el archivo que acabamos de crear en la ventana de terminal de Jetson:
-
+**Paso 2.** Prueba de comunicación.
+Abre una terminal para recibir señales.
 ```bash
-sudo apt-get install gpiod
-cd <path to can_init.sh>
-sudo chmod +x can_init.sh
-./can_init.sh
+candump can0
 ```
 
-**Paso 4.** Escribe ifconfig en el terminal y verás que la interfaz CAN está habilitada.
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/can.png"/>
-</div>
-
-**Paso 5.** Abre el software CAN que instalaste anteriormente. En este caso, abriremos el software que instalamos según el adaptador CAN que estamos usando.
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/>
-</div>
-
-**Paso 6.** Conecta el adaptador USB a CAN a la PC y abre **Device Manager** buscándolo en la barra de búsqueda de Windows. Ahora verás el adaptador conectado bajo **Ports (COM & LPT)**. Toma nota del puerto serie listado aquí. Según la imagen de abajo, el puerto serie es **COM9**.
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/>
-</div>
-
-**Paso 7.** Abre el software CAN, haz clic en **Refresh** junto a la sección **COM**, haz clic en el menú desplegable y selecciona el puerto serie según el adaptador conectado. Mantén el **COM bps** en el valor predeterminado y haz clic en **Open**.
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/>
-</div>
-
-**Paso 8.** Mantén el **Mode** y **CAN bps** en el valor predeterminado, cambia el **Type** a **Standard frame** y haz clic en **Set and Start**.
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/>
-</div>
-
-**Paso 9.** En reComputer Industrial, ejecuta el siguiente comando para enviar una señal CAN a la PC:
-
-```sh
+**Paso 3.** Abre otra terminal para enviar la señal.
+```bash
 cansend can0 123#abcdabcd
 ```
-
-Ahora verás la señal anterior recibida por el software como se muestra a continuación
-
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/46.png"/>
-</div>
-
-**Paso 10.** En reComputer Industrial, ejecuta el siguiente comando para esperar a recibir señales CAN desde la PC:
-
-```sh
-candump can0 &
-```
-
-**Paso 11.** En el software CAN, haz clic en **Send a single frame**:
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/>
-</div>
-
-Ahora verás que es recibido por reComputer Industrial como sigue:
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_loop.png"/>
 </div>
 
 ## Puerto de Extensión
 
-El Puerto de Extensión incluye un conector de extensión de 40 pines y un conector de control y UART de 12 pines, proporcionando opciones de conectividad versátiles para periféricos e interfaces de comunicación.
+El Puerto de Extensión incluye un encabezado de extensión de 40 pines y un encabezado de control y UART de 12 pines, proporcionando opciones de conectividad versátiles para periféricos e interfaces de comunicación.
 
-### Conector de Extensión de 40 Pines
+### Encabezado de Extensión de 40 Pines
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40pin3.jpg"/>
 </div>
 
-El Conector de Extensión de 40 Pines es una interfaz de expansión versátil que proporciona varias funciones como GPIO, I2C, SPI y UART, haciendo conveniente la conexión de sensores, periféricos u otros módulos.
+El Encabezado de Extensión de 40 Pines es una interfaz de expansión versátil que proporciona varias funciones como GPIO, I2C, SPI y UART, haciéndolo conveniente para conectar sensores, periféricos u otros módulos.
 
-El detalle del conector de 40 pines se muestra a continuación:
+El detalle del encabezado de 40 pines se muestra a continuación:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
 <thead>
 <tr>
-  <th>Pin del Conector</th>
+  <th>Pin del Encabezado</th>
   <th>Señal</th>
   <th>Pin BGA</th>
   <th>Función Predeterminada</th>
@@ -566,26 +487,26 @@ El detalle del conector de 40 pines se muestra a continuación:
 <tr><td>18</td><td>SPI1_CS0</td><td>PY.03</td><td>Selección de Chip SPI #1 #0</td></tr>
 <tr><td>19</td><td>SPI0_MOSI</td><td>PZ.05</td><td>SPI #0 Maestro Salida / Esclavo Entrada</td></tr>
 <tr><td>20</td><td>GND</td><td>-</td><td>Tierra</td></tr>
-<tr><td>21</td><td>SPI0_MISO</td><td>PZ.04</td><td>SPI #0 Master In / Slave Out</td></tr>
-<tr><td>22</td><td>SPI1_MISO</td><td>PY.01</td><td>SPI #1 Master In / Slave Out</td></tr>
-<tr><td>23</td><td>SPI0_SCK</td><td>PZ.03</td><td>SPI #0 Clock</td></tr>
-<tr><td>24</td><td>SPI0_CS0</td><td>PZ.06</td><td>SPI #0 Chip Select #0</td></tr>
+<tr><td>21</td><td>SPI0_MISO</td><td>PZ.04</td><td>SPI #0 Maestro Entrada / Esclavo Salida</td></tr>
+<tr><td>22</td><td>SPI1_MISO</td><td>PY.01</td><td>SPI #1 Maestro Entrada / Esclavo Salida</td></tr>
+<tr><td>23</td><td>SPI0_SCK</td><td>PZ.03</td><td>Reloj SPI #0</td></tr>
+<tr><td>24</td><td>SPI0_CS0</td><td>PZ.06</td><td>Selección de Chip SPI #0 #0</td></tr>
 <tr><td>25</td><td>GND</td><td>-</td><td>Tierra</td></tr>
-<tr><td>26</td><td>SPI0_CS1</td><td>PZ.07</td><td>SPI #0 Chip Select #1</td></tr>
-<tr><td>27</td><td>ID_I2C_SDA (I2C0_SDA)</td><td>PDD.00</td><td>I2C #0 Data</td></tr>
-<tr><td>28</td><td>ID_I2C_SCL (I2C0_SCL)</td><td>PCC.07</td><td>I2C #0 Clock</td></tr>
+<tr><td>26</td><td>SPI0_CS1</td><td>PZ.07</td><td>Selección de Chip SPI #0 #1</td></tr>
+<tr><td>27</td><td>ID_I2C_SDA (I2C0_SDA)</td><td>PDD.00</td><td>Datos I2C #0</td></tr>
+<tr><td>28</td><td>ID_I2C_SCL (I2C0_SCL)</td><td>PCC.07</td><td>Reloj I2C #0</td></tr>
 <tr><td>29</td><td>GPIO01</td><td>PQ.05</td><td>E/S de Propósito General</td></tr>
 <tr><td>30</td><td>GND</td><td>-</td><td>Tierra</td></tr>
 <tr><td>31</td><td>GPIO11</td><td>PQ.06</td><td>E/S de Propósito General</td></tr>
 <tr><td>32</td><td>GPIO07</td><td>PG.06</td><td>E/S de Propósito General</td></tr>
 <tr><td>33</td><td>GPIO13</td><td>PG.00</td><td>Reservado del Sistema</td></tr>
 <tr><td>34</td><td>GND</td><td>-</td><td>Tierra</td></tr>
-<tr><td>35</td><td>I2S0_LRCK (I2S0_FS)</td><td>PI.02</td><td>Audio I2S #0 Frame Sync</td></tr>
-<tr><td>36</td><td>UART1_CTS</td><td>PR.05</td><td>UART #1 Clear to Send</td></tr>
-<tr><td>37</td><td>SPI1_MOSI</td><td>PY.02</td><td>SPI #1 Master Out / Slave In</td></tr>
-<tr><td>38</td><td>I2S0_SDIN (I2S0_DIN)</td><td>PI.01</td><td>Audio I2S #0 Data In</td></tr>
+<tr><td>35</td><td>I2S0_LRCK (I2S0_FS)</td><td>PI.02</td><td>Sincronización de Trama de Audio I2S #0</td></tr>
+<tr><td>36</td><td>UART1_CTS</td><td>PR.05</td><td>Listo para Recibir UART #1</td></tr>
+<tr><td>37</td><td>SPI1_MOSI</td><td>PY.02</td><td>SPI #1 Maestro Salida / Esclavo Entrada</td></tr>
+<tr><td>38</td><td>I2S0_SDIN (I2S0_DIN)</td><td>PI.01</td><td>Entrada de Datos de Audio I2S #0</td></tr>
 <tr><td>39</td><td>GND</td><td>-</td><td>Tierra</td></tr>
-<tr><td>40</td><td>I2S0_SDOUT (I2S0_DOUT)</td><td>PI.00</td><td>Audio I2S #0 Data Out</td></tr>
+<tr><td>40</td><td>I2S0_SDOUT (I2S0_DOUT)</td><td>PI.00</td><td>Salida de Datos de Audio I2S #0</td></tr>
 </tbody>
 </table>
 </div>
@@ -614,9 +535,9 @@ sudo gpioset --mode=time -s 2 0 119=0
 #input
 sudo gpioget 0 43
 ```
-**Si deseas configurar el GPIO que no está habilitado por defecto, consulta los siguientes pasos:**
+**Si quieres configurar el GPIO que no está habilitado por defecto, por favor consulta los siguientes pasos:**
 
-Habilitar el Header de 40 Pines:
+Habilitar Encabezado de 40 Pines:
 ```bash
   sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
@@ -634,22 +555,22 @@ Habilitar el Header de 40 Pines:
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_3.png"/>
 </div>
 
-Guarda y reinicia.
+Guardar y reiniciar.
 
-**Configura el GPIO no controlado a través de la configuración Overlay:**
+**Configurar el GPIO no controlado a través de la configuración Overlay:**
 
-**Paso 1.** Descarga y extrae el [paquete overlay](https://files.seeedstudio.com/wiki/overlay.zip) en tu dispositivo jetson.
+**Paso 1.** Descarga y extrae el [paquete overlay](https://files.seeedstudio.com/wiki/overlay.zip) a tu dispositivo jetson.
 ```bash
 wget https://files.seeedstudio.com/wiki/overlay.zip
 ```
-**Paso 2.** Copia build.sh y gpio-overlay.dts al Jetson.
+**Paso 2.** Copia build.sh y gpio-overlay.dts a Jetson.
 
 **Paso 3.** Edita el archivo `pio-overlay.dts` y modifícalo para incluir las definiciones de pinmux para los pines que necesites.
 :::info
 más detalles puedes verlos en [jetson-orin-nx-and-orin-nano-series-pinmux-config](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template)
 :::
 
-**Paso 3.**   Habilita la configuración overlay.
+**Paso 3.**   Habilita la configuración de overlay.
 ```bash
 sudo bash ./build.sh
 #The following command needs to be executed only once.
@@ -659,23 +580,23 @@ sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "seeed gpio config Overlay"
 ```bash
 sudo reboot
 ```
-**Paso 5.** Ahora puedes controlar los pines mediante `gpioset` que acabas de modificar.
+**Paso 5.** Ahora puedes controlar los pines que acabas de modificar mediante `gpioset`.
 ```bash
 #For example px7
 sudo gpioset --mode=wait 0 121=1
 ```
 
 
-### Header de Control de 12 Pines y UART
+### Conector de Control de 12 Pines y UART
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/12pin2.jpg"/>
 </div>
 
-El Header de Control de 12 Pines y UART proporciona señales de control esenciales e interfaces de comunicación UART para conectar y gestionar dispositivos externos.
+El Conector de Control de 12 Pines y UART proporciona señales de control esenciales e interfaces de comunicación UART para conectar y gestionar dispositivos externos.
 
 :::note
-Las funciones de los pines del reComputer Super son similares a las del reComputer Classic. Para información más detallada, consulta [aquí](https://wiki.seeedstudio.com/es/J401_carrierboard_Hardware_Interfaces_Usage/#gpio).
+Las funciones de los pines de reComputer Super son similares a las de reComputer Classic. Para información más detallada, consulta [aquí](https://wiki.seeedstudio.com/es/J401_carrierboard_Hardware_Interfaces_Usage/#gpio).
 :::
 
 ## HDMI
@@ -690,7 +611,7 @@ reComputer Super está equipado con un puerto HDMI 2.1 Tipo A, que soporta una r
 - [Documento Mecánico-reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
 - [Documento Mecánico-reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

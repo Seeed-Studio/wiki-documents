@@ -7,10 +7,14 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/flash_meshtastic_kit
 last_update:
-  date: 11/11/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
-
+:::danger note
+当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+1. 未完成消息传输过程
+2. 正在配置中
+:::
 本教程将指导用户将 [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) 刷写为 Meshtastic 版本，适用于想要使用 Meshtastic 网络的用户。
 
 :::tip
@@ -98,7 +102,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-要生成实用程序的独立可执行二进制文件（Windows 和 MacOS），请运行以下命令：
+要生成工具的独立可执行二进制文件（Windows 和 MacOS），请运行以下命令：
 
 ```
 pip3 install pyinstaller

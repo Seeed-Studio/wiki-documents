@@ -1072,6 +1072,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 - [Orbbec SDK v2 API 指南](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
 - [Orbbec ROS2 驱动](https://github.com/orbbec/OrbbecSDK_ROS2)
 - [ORB-SLAM3 仓库](https://github.com/UZ-SLAMLab/ORB_SLAM3)
+- [ROS1使用教程参考Gemini2](https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/)
 
 ## 技术支持与产品讨论
 

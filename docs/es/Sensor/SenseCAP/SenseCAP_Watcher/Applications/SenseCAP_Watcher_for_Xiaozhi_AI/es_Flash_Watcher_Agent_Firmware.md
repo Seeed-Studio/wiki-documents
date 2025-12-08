@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /es/flash_watcher_agent_firmware
 last_update:
-  date: 09/04/2025
+  date: 12/04/2025
   author: Twelve
 translation:
   skip: [ zh-CN ]
@@ -77,7 +77,7 @@ Asegúrate de que todas las rutas no contengan símbolos especiales.
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting1.jpg" style={{width:300, height:'auto'}}/></div>
 
-### Paso 4. Configurar Opciones del Firmware
+### Paso 4. Configurar Ajustes del Firmware
 
 1. Haz clic en el botón "..." en la primera fila para navegar y seleccionar el archivo binario del firmware que descargaste
 2. Asegúrate de que la casilla de verificación junto al archivo de firmware esté seleccionada
@@ -155,9 +155,16 @@ Si tu modelo de Watcher **no es -EN**, debes flashear manualmente la informació
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/mac.jpg" style={{width:600, height:'auto'}}/></div>
+
+:::danger nota
+Por favor asegúrate de que la dirección STA MAC que proporciones sea correcta.  
+El archivo de autenticación solo puede ser flasheado **una vez**, y usar una dirección incorrecta impedirá que el dispositivo se vincule correctamente.  
+También ten en cuenta que el archivo de autenticación solo necesita ser flasheado una vez.
+:::
+
 2. Envía un correo electrónico a **sensecap@seeed.cc** con tu dirección STA MAC y solicita el archivo de autenticación y la herramienta de flasheo. Este script será proporcionado en el paquete que te enviemos.
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools.jpg" style={{width:500, height:'auto'}}/></div>
-3. Ve al terminal esp-idf y navega a la carpeta que te enviamos, ejecuta el **script de flasheo Python**.
+3. Ve al terminal esp-idf y navega a la carpeta que te enviamos, ejecuta el **script de flasheo de Python**.
 :::note
 Si aún no has instalado esp-idf, ve al [Sitio Web ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html) y sigue la guía oficial para descargarlo e instalarlo.
 :::

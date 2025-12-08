@@ -1,18 +1,18 @@
 ---
 description: Este wiki proporciona un tutorial para los motores de la serie Stackforce.
-title: Motores Serie Stackforce
+title: Motores de la Serie Stackforce
 keywords:
 - actuator
 - motor
 - robotics
-image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010.webp
+image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010_homepage.webp
 slug: /es/stackforce_series
 last_update:
   date: 11/26/2025
   author: Li Shanghang
 ---
 
-# Introducción a los Motores Serie Stackforce X
+# Introducción a los Motores de la Serie Stackforce X
 
 Este artículo presentará cómo comenzar con los motores de la serie Stackforce y cómo usarlos con C++ y Python en el reComputer Jetson Super.
 
@@ -29,7 +29,7 @@ Este artículo presentará cómo comenzar con los motores de la serie Stackforce
 
 ## Especificaciones
 
-Aquí está la tabla completa con todos los parámetros llenos para todos los modelos de motor:
+Aquí está la tabla completa con todos los parámetros completados para todos los modelos de motores:
 
 <table>
   <thead>
@@ -48,7 +48,7 @@ Aquí está la tabla completa con todos los parámetros llenos para todos los mo
     <tr><td>Velocidad Nominal</td><td>120 RPM</td><td>110 RPM</td></tr>
     <tr><td>Velocidad Máxima</td><td>270 RPM</td><td>320 RPM</td></tr>
     <tr><td>Relación de Engranajes</td><td>8:1</td><td>8:1</td></tr>
-    <tr><td>Tipo de Codificador</td><td>Protocolo MIT</td><td>Protocolo MIT</td></tr>
+    <tr><td>Protocolo de comunicación</td><td>MIT Protocol</td><td>MIT Protocol</td></tr>
     <tr><td>Modos de Control</td><td>Control de Posición, Velocidad, Torque</td><td>Control de Posición, Velocidad, Torque</td></tr>
     <tr><td>Diámetro Exterior</td><td>80 mm</td><td>97 mm</td></tr>
     <tr><td>Grosor</td><td>47 mm</td><td>46 mm</td></tr>
@@ -134,7 +134,7 @@ Las interfaces de comunicación CAN más comunes para motores en el mercado son 
   <img width ="800" src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig5.jpg "/>  
 </div>
 
-Para información más detallada sobre el uso de CAN, consulte este [wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/#can ).
+Para información más detallada sobre el uso de CAN, consulte este [wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/#can-).
 
 ### Habilitando la Interfaz CAN
 
@@ -178,7 +178,7 @@ Dado que [el diseño de la interfaz CAN del reComputer Mini](https://wiki.seeeds
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/TX30.jpg" />
 </div>
 
-Considerando el alto voltaje y corriente requeridos por el motor, se recomienda comprar un adaptador de alimentación de 24V 300W para alimentar el reComputer Mini para manejar un solo motor. Si se necesitan conectar más motores, se puede comprar un adaptador de alimentación de mayor potencia según el requerimiento.
+Considerando el alto voltaje y corriente requeridos por el motor, se recomienda comprar un adaptador de corriente de 24V 300W para alimentar el reComputer Mini para manejar un solo motor. Si se necesitan conectar más motores, se puede comprar un adaptador de corriente de mayor potencia según el requerimiento.
 
 <div align="center">
     <img width={600} 
@@ -257,7 +257,7 @@ El programa por defecto controla el motor con ID 0x01. Durante la operación, pu
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
