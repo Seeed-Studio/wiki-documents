@@ -44,7 +44,7 @@ last_update:
 
 <div className="nav-grid">
 
-## 📦 ロボットキット {#ロボットキット}
+## 📦 ロボットキット {#robot-kits}
 
 <div class="category-group">
   <div class="category-card robot-kits">
@@ -102,6 +102,15 @@ last_update:
   </a>
 </div>
 
+## Stackforce
+
+<div className="card-container">
+    <a href="/ja/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
+      <span className="text">ミニ車輪脚ロボット</span>
+      <span className="tag recommended">New</span>
+    </a>
+</div>
+
 ## 🖐️ ハンド
 
 <div className="card-container">
@@ -124,7 +133,7 @@ last_update:
 </div>
 </div>
 
-## ⚙️ アクチュエータ {#アクチュエータ}
+## ⚙️ アクチュエータ {#actuators}
 
 <div class="category-group">
 <div className="category-card actuators">
@@ -143,7 +152,10 @@ last_update:
       <span className="text">3️⃣HighTorque シリーズ</span>
     </a>
     <a href="/ja/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣fashionstar シリーズ</span>
+      <span className="text">4️⃣Fashionstar シリーズ</span>
+    </a>
+    <a href="/ja/stackforce_series/" className="nav-item">
+      <span className="text">5️⃣Stackforce シリーズ</span>
     </a>
     <a href="/ja/robstride_control/" className="nav-item">
       <span className="text">5️⃣RobStride コントロール</span>
@@ -154,7 +166,7 @@ last_update:
 </div>
 </div>
 
-## 👁️ センサー {#センサー}
+## 👁️ センサー {#sensors}
 
 <div class="category-group">
 <div className="category-card sensors">
@@ -248,7 +260,7 @@ last_update:
 </div>
 </div>
 
-## 💻 ソフトウェア {#ソフトウェア}
+## 💻 ソフトウェア {#software}
 
 <div class="category-group">
 <div className="category-card software">
@@ -280,7 +292,7 @@ last_update:
 </a>
 
 <a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
-  <span className="text">オブジェクト追跡 with PX4</span>
+  <span className="text">Object Tracking with PX4</span>
 </a>
 
 </div>
@@ -313,7 +325,7 @@ last_update:
 </div>
 
 <style>{`
-/* 導航容器 */
+/* 导航容器 */
 .quick-nav-container {
   margin: 2rem 0;
   padding: 1rem;
@@ -325,7 +337,7 @@ last_update:
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Dark模式 - 導航容器 */
+/* Dark模式 - 导航容器 */
 html[data-theme='dark'] .quick-nav-container {
   background:
     radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
@@ -333,17 +345,17 @@ html[data-theme='dark'] .quick-nav-container {
     linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.3),
-    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内発光増強深度 */
+    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内发光增强深度 */
 }
 
-/* 導航主体 */
+/* 导航主体 */
 .quick-nav {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
 }
 
-/* 導航項 */
+/* ナビゲーション項目 */
 .nav-item {
   position: relative;
   padding: 0.8rem 1.5rem;
@@ -551,7 +563,7 @@ html[data-theme='dark'] .category-card a::after {
 }
 
 .card-container {
-  margin-bottom: 1.5rem; /* 元は0.1rem */
+  margin-bottom: 1.5rem; /* 原为0.1rem */
 }
 
 /* タグスタイル強化 */
