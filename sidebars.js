@@ -722,6 +722,13 @@ const sidebars = {
           },
           items: [
             'Sensor/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Introduction',
+            {
+              type: 'category',
+              label: 'User Guide',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/Quick_Start',
+              ],
+            },
           ],
         },
         //       {
