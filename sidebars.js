@@ -9212,14 +9212,21 @@ const sidebars = {
       type: 'category',
       label: '关节电机',
       items: [
+        {
+          type: 'category',
+          label: '高扭矩',
+          items: [
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque',
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Getting_Started',
+            'zh-CN/Robotics/Robot_Actuator/HighTorque/cn_HighTorque_Control',
+          ]
+        },
         'zh-CN/Robotics/Robot_Actuator/cn_Feetech_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_FashionStar_Servo',
         'zh-CN/Robotics/Robot_Actuator/cn_Stackforce_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Myactuator_Series',
         'zh-CN/Robotics/Robot_Actuator/cn_Damiao_Series',
-        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Control',
         'zh-CN/Robotics/Robot_Actuator/cn_RobStride_Control',
-        'zh-CN/Robotics/Robot_Actuator/cn_HighTorque_Assistant',
       ]
     },
     {
@@ -14235,14 +14242,21 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: 'Alto par',
+          items: [
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque',
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque_Getting_Started',
+            'es/Robotics/Robot_Actuator/HighTorque/es_HighTorque_Control',
+          ]
+        },
         'es/Robotics/Robot_Actuator/es_Feetech_Servo',
         'es/Robotics/Robot_Actuator/es_FashionStar_Servo',
         'es/Robotics/Robot_Actuator/es_Stackforce_Series',
         'es/Robotics/Robot_Actuator/es_Myactuator_Series',
         'es/Robotics/Robot_Actuator/es_Damiao_Series',
-        'es/Robotics/Robot_Actuator/es_HighTorque_Control',
         'es/Robotics/Robot_Actuator/es_RobStride_Control',
-        'es/Robotics/Robot_Actuator/es_HighTorque_Assistant',
       ]
     },
     {
@@ -19254,14 +19268,21 @@ const sidebars = {
       //   id: 'Edge/NVIDIA_Jetson/Application',
       // },
       items: [
+        {
+          type: 'category',
+          label: '高トルク',
+          items: [
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque',
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Getting_Started',
+            'ja/Robotics/Robot_Actuator/HighTorque/ja_HighTorque_Control',
+          ]
+        },
         'ja/Robotics/Robot_Actuator/ja_Feetech_Servo',
         'ja/Robotics/Robot_Actuator/ja_FashionStar_Servo',
         'ja/Robotics/Robot_Actuator/ja_Stackforce_Series',
         'ja/Robotics/Robot_Actuator/ja_Myactuator_Series',
         'ja/Robotics/Robot_Actuator/ja_Damiao_Series',
-        'ja/Robotics/Robot_Actuator/ja_HighTorque_Control',
         'ja/Robotics/Robot_Actuator/ja_RobStride_Control',
-        'ja/Robotics/Robot_Actuator/ja_HighTorque_Assistant',
       ]
     },
     {
