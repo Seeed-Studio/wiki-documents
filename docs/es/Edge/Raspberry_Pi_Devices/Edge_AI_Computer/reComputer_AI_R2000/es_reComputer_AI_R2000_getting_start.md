@@ -1,6 +1,6 @@
 ---
 description: reComputer AI R2000 es una potente computadora Edge AI basada en Raspberry Pi 5. Con procesador quad-core Arm Cortex-A76, 8GB de RAM, soporte para M.2 SSD, y un módulo de aceleración AI Hailo-8 que proporciona hasta 26 TOPS, habilitando inferencia AI en tiempo real, de baja latencia y alta eficiencia. Es la elección perfecta para una amplia gama de aplicaciones AI, incluyendo análisis de video con AI, visión artificial y computación inteligente en el borde.
-title: Introducción a la Serie reComputer AI R2000
+title: Introducción a reComputer AI R2000 Serie
 keywords:
 - Raspberry pi
 - Edge AI Computer
@@ -20,7 +20,7 @@ last_update:
     </a>
 </div>
 
-La serie reComputer AI R2000 es una potente computadora Edge AI basada en Raspberry Pi 5. Con procesador quad-core Arm Cortex-A76, 8GB de RAM, soporte para M.2 SSD, y un módulo de aceleración AI Hailo-8 que proporciona hasta 26 TOPS, habilitando inferencia AI en tiempo real, de baja latencia y alta eficiencia. Es la elección perfecta para una amplia gama de aplicaciones AI, incluyendo análisis de video con AI, visión artificial y computación inteligente en el borde.
+reComputer AI R2000 Serie es una potente computadora Edge AI basada en Raspberry Pi 5. Con procesador quad-core Arm Cortex-A76, 8GB de RAM, soporte para M.2 SSD, y un módulo de aceleración AI Hailo-8 que proporciona hasta 26 TOPS, habilitando inferencia AI en tiempo real, de baja latencia y alta eficiencia. Es la elección perfecta para una amplia gama de aplicaciones AI, incluyendo análisis de video con AI, visión artificial y computación inteligente en el borde.
 
 ## Características
 
@@ -51,12 +51,12 @@ Opciones de Almacenamiento Flexibles: El slot dual M.2 PCIe2.0 soporta tanto ace
 | **Bluetooth**          | Bluetooth 5.0/ BLE                                                       |
 | **Botón de Encendido**       | Encendido/Apagado incluido                                                          |
 | **Interfaz**          |                                                                          |
-| **Almacenamiento**            | 1 x slot para tarjeta microSD, con soporte para modo SDR104 de alta velocidad           |
+| **Almacenamiento**            | 1 x ranura para tarjeta microSD, con soporte para modo SDR104 de alta velocidad           |
 | **Slot M.2**           | 2 x Slot M.2, soporta M.2 NVMe SSD/Módulo de Aceleración Hailo M.2        |
 | **Puertos USB**          | 2 × puertos USB 3.0                                                        |
 |                       | 2 × puertos USB 2.0                                                        |
 | **Ethernet**           | 1 x 10/100/1000 Mbps                                                     |
-| **Cámara/Pantalla**     | 2 × transceptores MIPI de 4 carriles para cámara/pantalla                               |
+| **Cámara/Pantalla**     | 2 × transceptores de cámara/pantalla MIPI de 4 carriles                               |
 | **Salida de Pantalla**     | 2 x puertos micro HDMI (4Kp60)                                             |
 | **Condiciones Ambientales** |                                                                          |
 | **Protección de Ingreso** | IP40                                                                     |
@@ -76,7 +76,7 @@ Opciones de Almacenamiento Flexibles: El slot dual M.2 PCIe2.0 soporta tanto ace
 
 ![](https://seeed-projects.github.io/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero/assets/images/architecture-2bfc6ed440e1add56388738e87558050.png)
 
-La Suite de Software AI de Hailo proporciona herramientas poderosas para ejecutar modelos AI de manera eficiente en aceleradores de hardware. Está diseñada para integrarse perfectamente con marcos de aprendizaje profundo existentes, ofreciendo flujos de trabajo fluidos para desarrolladores. El proceso involucra generar un HEF (Archivo Binario Ejecutable de Hailo) desde un archivo ONNX en el Entorno de Construcción de Modelos. Una vez creado, el archivo HEF se transfiere a la máquina de inferencia (Entorno de Tiempo de Ejecución), donde se usa para ejecutar inferencia con la API HailoRT. El script proporcionado facilita la conversión de un archivo ONNX en un archivo HEF dentro del Entorno de Construcción de Modelos.
+La Suite de Software AI de Hailo proporciona herramientas poderosas para ejecutar modelos AI de manera eficiente en aceleradores de hardware. Está diseñada para integrarse sin problemas con marcos de aprendizaje profundo existentes, ofreciendo flujos de trabajo fluidos para desarrolladores. El proceso involucra generar un HEF (Archivo Binario Ejecutable de Hailo) desde un archivo ONNX en el Entorno de Construcción de Modelos. Una vez creado, el archivo HEF se transfiere a la máquina de inferencia (Entorno de Tiempo de Ejecución), donde se usa para ejecutar inferencia con la API HailoRT. El script proporcionado facilita la conversión de un archivo ONNX en un archivo HEF dentro del Entorno de Construcción de Modelos.
 
 > **Nota:**
 > **Si quieres aprender más sobre ejemplos de uso del NPU Hailo, por favor haz clic en este [enlace](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero).**
@@ -106,7 +106,7 @@ La Suite de Software AI de Hailo proporciona herramientas poderosas para ejecuta
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA1:** Recomendamos flashear la imagen de **Raspberry Pi OS de 64 bits (Debian 12 Bookworm)** por ahora. El Raspberry Pi OS recién lanzado basado en Debian 13 "Trixie" aún no ha actualizado el paquete hailo-all, por lo que Bookworm te dará soporte completo de Hailo desde el inicio.
+**NOTA1:** Recomendamos flashear la imagen (64-bit Raspberry Pi OS Debian 12 Bookworm)[https://downloads.raspberrypi.com/raspios_oldstable_full_arm64/images/raspios_oldstable_full_arm64-2025-10-02/2025-10-01-raspios-bookworm-arm64-full.img.xz] por ahora. El Raspberry Pi OS recién lanzado basado en Debian 13 "Trixie" aún no ha actualizado el paquete hailo-all, por lo que Bookworm te dará soporte completo de Hailo desde el inicio.
 Enlace de descarga [link](https://www.raspberrypi.com/software/operating-systems/).
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/OS.png" alt="pir" width="600" height="auto"/></p>
 Luego escríbelo en tu tarjeta SD usando el imager con la opción Use custom.
@@ -114,7 +114,7 @@ Luego escríbelo en tu tarjeta SD usando el imager con la opción Use custom.
 
 Si aún quieres probar la imagen más reciente, **necesitarás instalar el software Hailo manualmente en lugar de usar la ruta de un comando hailo-all;** por favor sigue este [enlace](https://wiki.seeedstudio.com/es/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/#install-hailo-software).
 
-**NOTA2:** Puedes seleccionar otros SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
+**NOTA2:** Puedes seleccionar otros SO como **64-bit Ubuntu** navegando a **Other general purpose OS**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -216,7 +216,7 @@ O puedes usar este enlace para descargar el archivo de imagen:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 
-Por favor espera unos minutos hasta que el proceso de flasheo esté completo.
+Por favor espera unos minutos hasta que el proceso de grabación esté completo.
 El resultado se muestra a continuación:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="600" height="auto"/></p>
 
@@ -263,7 +263,7 @@ Si se te pide reiniciar, selecciona `Yes`.
 
 ### Configurar la Raspberry Pi para arrancar desde el SSD NVMe
 
-Si tienes fácil acceso a tu ranura de tarjeta SD podrías apagar tu Pi, sacar la tarjeta SD y (si todo funciona como se espera) debería arrancar automágicamente desde tu unidad NVMe la próxima vez que la inicies. Sin embargo, si quieres dejar la tarjeta SD donde está y aún así arrancar desde NVMe, necesitarás cambiar el orden de arranque.
+Si tienes fácil acceso a tu ranura de tarjeta SD podrías apagar tu Pi, sacar la tarjeta SD y (si todo funciona como se espera) debería arrancar automágicamente desde tu unidad NVMe la próxima vez que lo inicies. Sin embargo, si quieres dejar la tarjeta SD donde está y aún así arrancar desde NVMe, necesitarás cambiar el orden de arranque.
 
 **Paso 1**: Ingresa el siguiente comando:
 
@@ -294,7 +294,7 @@ Se te preguntará si quieres reiniciar ahora. Haz clic en `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
-## Flashear ubuntu a NVME
+## Grabar ubuntu en NVME
 
 ### Primero: Actualizar EEPROM con tarjeta SD
 
@@ -328,7 +328,7 @@ Abrir Raspberry Pi Imager:
 Elegir SO Ubuntu:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/flashos2.png" alt="pir" width="700" height="auto" /></div>
 
-Finalmente, haz clic en `Next` y espera a que el proceso de flasheo se complete.
+Finalmente, haz clic en `Next` y espera a que el proceso de grabación se complete.
 
 ### Tercero: Reemplazar el archivo del SO
 
@@ -371,18 +371,18 @@ Frigate es un NVR (Grabador de Video en Red) de código abierto diseñado para d
 </div>
 
 > **Nota:**
-> **Si quieres aprender más sobre este proyecto, por favor consulta este [enlace](https://wiki.seeedstudio.com/es/frigate_nvr_with_raspberrypi_5/).**
+> **Si quieres aprender más sobre este proyecto, consulta este [enlace](https://wiki.seeedstudio.com/es/frigate_nvr_with_raspberrypi_5/).**
 
 ### YOLO
 
-La serie de modelos YOLO (You Only Look Once) es una familia de modelos de detección de objetos en tiempo real diseñados para velocidad y precisión. A diferencia de los métodos tradicionales de detección de objetos que realizan la propuesta de regiones y la clasificación por separado, YOLO realiza ambas tareas en una sola pasada hacia adelante de la red neuronal, haciéndolo mucho más rápido. Los modelos YOLO dividen la imagen en una cuadrícula y predicen cajas delimitadoras y probabilidades de clase para cada celda de la cuadrícula. A lo largo de los años, YOLO ha evolucionado a través de varias versiones, con mejoras en precisión, velocidad y la capacidad de detectar objetos más pequeños. Los modelos YOLOv4, YOLOv5, y los recientes YOLOv7 y YOLOv8 son ampliamente utilizados para aplicaciones como vigilancia, vehículos autónomos y robótica.
+La serie de modelos YOLO (You Only Look Once) es una familia de modelos de detección de objetos en tiempo real diseñados para velocidad y precisión. A diferencia de los métodos tradicionales de detección de objetos que realizan la propuesta de regiones y la clasificación por separado, YOLO realiza ambas tareas en una sola pasada hacia adelante de la red neuronal, haciéndolo mucho más rápido. Los modelos YOLO dividen la imagen en una cuadrícula y predicen cajas delimitadoras y probabilidades de clase para cada celda de la cuadrícula. A lo largo de los años, YOLO ha evolucionado a través de varias versiones, con mejoras en precisión, velocidad y la capacidad de detectar objetos más pequeños. YOLOv4, YOLOv5, y los recientes modelos YOLOv7 y YOLOv8 son ampliamente utilizados para aplicaciones como vigilancia, vehículos autónomos y robótica.
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/olaSVKmt9YI" title="Raspberry Pi AI: YOLOv8 Object Detection - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 > **Nota:**
-> **Si quieres aprender más sobre este proyecto, por favor consulta este [enlace](https://wiki.seeedstudio.com/es/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)**.
+> **Si quieres aprender más sobre este proyecto, consulta este [enlace](https://wiki.seeedstudio.com/es/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)**.
 
 ### Clip
 
@@ -393,7 +393,7 @@ CLIP (Contrastive Language-Image Pretraining) es un modelo de aprendizaje autom�
 </div>
 
 > **Nota:**
-> **Si quieres aprender más sobre este proyecto, por favor consulta este [enlace](https://wiki.seeedstudio.com/es/clip_application_on_rpi5_with_ai_kit/).**
+> **Si quieres aprender más sobre este proyecto, consulta este [enlace](https://wiki.seeedstudio.com/es/clip_application_on_rpi5_with_ai_kit/).**
 
 ## Soporte Técnico y Discusión de Productos
 

@@ -145,6 +145,10 @@ last_update:
     <a href="/fashionstar_servo/" className="nav-item">
       <span className="text">4️⃣fashionstar Series</span>
     </a>
+    <a href="/robstride_control/" className="nav-item">
+      <span className="text">5️⃣RobStride Control</span>
+      <span className="tag recommended">New</span>
+    </a>
 </div>
 
 </div>

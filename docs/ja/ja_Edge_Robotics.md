@@ -145,6 +145,10 @@ last_update:
     <a href="/ja/fashionstar_servo/" className="nav-item">
       <span className="text">4️⃣fashionstar シリーズ</span>
     </a>
+    <a href="/ja/robstride_control/" className="nav-item">
+      <span className="text">5️⃣RobStride コントロール</span>
+      <span className="tag recommended">New</span>
+    </a>
 </div>
 
 </div>
@@ -276,7 +280,7 @@ last_update:
 </a>
 
 <a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
-  <span className="text">Object Tracking with PX4</span>
+  <span className="text">オブジェクト追跡 with PX4</span>
 </a>
 
 </div>
@@ -309,7 +313,7 @@ last_update:
 </div>
 
 <style>{`
-/* 导航容器 */
+/* 導航容器 */
 .quick-nav-container {
   margin: 2rem 0;
   padding: 1rem;
@@ -321,7 +325,7 @@ last_update:
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Dark模式 - 导航容器 */
+/* Dark模式 - 導航容器 */
 html[data-theme='dark'] .quick-nav-container {
   background:
     radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
@@ -329,17 +333,17 @@ html[data-theme='dark'] .quick-nav-container {
     linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.3),
-    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内发光增强深度 */
+    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内発光増強深度 */
 }
 
-/* 导航主体 */
+/* 導航主体 */
 .quick-nav {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
 }
 
-/* 导航项 */
+/* 導航項 */
 .nav-item {
   position: relative;
   padding: 0.8rem 1.5rem;
@@ -357,7 +361,7 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Dark模式 - 导航项 */
+/* Darkモード - ナビゲーション項目 */
 html[data-theme='dark'] .nav-item {
   color: #e5e7eb;
   background:rgb(47, 50, 57);

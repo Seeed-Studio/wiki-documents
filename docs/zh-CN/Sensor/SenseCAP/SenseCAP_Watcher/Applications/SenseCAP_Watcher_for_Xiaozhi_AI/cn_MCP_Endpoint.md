@@ -16,7 +16,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /cn/mcp_endpoint
 last_update:
-  date: 10/30/2025
+  date: 12/04/2025
   author: Twelve
 ---
 
@@ -34,23 +34,19 @@ MCP 允许服务器通过定义良好的协议向语言模型公开可调用的�
 
 ## 获取 MCP 端点
 
-1. 进入 [SenseCraft AI 平台](https://sensecraft.seeed.cc/ai/home)
+1. 进入 [Xiaozhi AI 控制面板](https://xiaozhi.me/console/agents)
 
-2. 要访问控制面板，请点击页面右上角的 Watcher Agent。
+2. 打开代理配置
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/cn_3.png" style={{width:400, height:'auto'}}/></div> 
 
-3. 打开代理配置
+3. 点击 `MCP 设置` 和 `获取 MCP 接入点`
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/agent%20conf.jpg" style={{width:300, height:'auto'}}/></div> 
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP4.png" style={{width:800, height:'auto'}}/></div>
 
-4. 点击 `MCP Setting` 和 `Get MCP Endpoint`
+4. 获取端点地址和连接状态
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI14.png" style={{width:800, height:'auto'}}/></div>
-
-5. 获取端点地址和连接状态
-
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI15.png" style={{width:400, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP5.png" style={{width:600, height:'auto'}}/></div>
 
 ## MCP 示例
 
@@ -166,18 +162,17 @@ Calculating formula: math.comb(10, 3), result: 120
 
 ### MCP 端点状态
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP1.png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP6.png" style={{width:600, height:'auto'}}/></div>
 
-- Connection Status：显示您的 MCP 连接是否正常工作。
-- Refresh 图标：刷新您的 MCP 连接状态。
-- Enabled Services：列出您的 Watcher 可以使用的所有 MCP 服务。
-- Endpoint Address：您的 mcp_endpoint_address（除非官方技术支持需要，否则不要与任何人分享）
+
+- 接入点状态：显示您的 MCP 连接是否正常工作。
+- 刷新图标：刷新您的 MCP 连接状态。
+- 启用的服务：列出您的 Watcher 可以使用的所有 MCP 服务。
+- 接入点地址：您的接入点地址（除非官方技术支持需要，否则不要与任何人分享）
 
 ### 对话日志
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP2.png" style={{width:800, height:'auto'}}/></div>
-
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP3.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP7.png" style={{width:600, height:'auto'}}/></div>
 
 ### 注意事项
 #### 1. MCP 中的工具和参数命名
@@ -225,13 +220,13 @@ MCP 工具列表有上限。
 
 ## 选择预提供的 MCP 服务
 
-以下四个 MCP 服务可供您从前面提到的 MCP Setting 中选择。
+以下若干个 MCP 服务可供您从前面提到的 MCP 设置中选择。
 
 保存配置并重启设备后，所选服务将自动生效。
 
 您可以通过点击 `×` 来移除服务
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI16.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP8.png" style={{width:800, height:'auto'}}/></div>
 
 ## 技术支持
 
