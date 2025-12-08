@@ -75,7 +75,7 @@ The reComputer Industrial R21xx series is ideal for use in industrial AI applica
         <td colspan="3">Hardware Specification</td>
       </tr>
       <tr>
-        <td>** Product Series **</td>
+        <td>**Product Series**</td>
         <td>R20xx-12</td>
         <td>R20xx-10</td>
       </tr>
