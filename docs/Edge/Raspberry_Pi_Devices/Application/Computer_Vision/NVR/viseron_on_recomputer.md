@@ -1,12 +1,12 @@
 ---
 description: This wiki demonstrates how to use viseron on recomputer. 
-title: viseron on reComputer
+title: Viseron on reComputer
 keywords:
   - reComputer
   - viseron
   - NVR
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif
-slug: /viseron_on_recomputer
+slug: /Viseron_on_reComputer
 last_update:
   date: 12/07/2025
   author: Jiahao
@@ -18,9 +18,7 @@ no_comments: false # for Disqus
 
 ## Introduction
 
-Viseron[https://github.com/roflcoopter/viseron] is a self-hosted, local only NVR and AI Computer Vision software implemented in Python.
-
-The goal of Viseron is to be easy to setup and use, while still being powerful and flexible. It is designed to be run on a local network, with no external dependencies, and no cloud services required.
+[Viseron](https://github.com/roflcoopter/viseron) is a self-hosted, local only NVR and AI Computer Vision software implemented in Python.The goal of Viseron is to be easy to setup and use, while still being powerful and flexible. It is designed to be run on a local network, with no external dependencies, and no cloud services required.
 
 ## Prerequisites
 
@@ -156,7 +154,7 @@ Please open port 8888, you will see result like below:
 
 Please follow the steps below to configure `Viseron`, and replace the configuration information according to your camera's address.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/viseron_config.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/viseron_configure.png" alt="pir" width="800" height="auto"/></p>
 
 ```yaml
 # Viseron Configuration Example - Resolving Hailo component and camera identifier mismatch
