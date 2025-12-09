@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-03 14:50:07 (北京时间)
-// 多语言页面: 2069 个
+// 生成时间: 2025-12-09 10:57:10 (北京时间)
+// 多语言页面: 2075 个
 
 (function() {
   'use strict';
@@ -954,6 +954,12 @@
     "ja"
   ],
   "/create_backup_and_restore_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deploy_ota_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -2028,6 +2034,12 @@
     "ja"
   ],
   "/reterminal_frigate": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/viseron_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -4002,6 +4014,12 @@
     "ja"
   ],
   "/hightorque_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/hightorque_getting_started": [
     "cn",
     "en",
     "es",
@@ -8608,6 +8626,12 @@
     "es",
     "ja"
   ],
+  "/getting_started_with_cob_led_dirver_board": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/epaper_breakout_board_with_oepl": [
     "cn",
     "en",
@@ -9263,6 +9287,12 @@
     "ja"
   ],
   "/xiao_soil_moisture_sensor": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/esphome_xiao_w5500_ethernet_adapter": [
     "cn",
     "en",
     "es",
@@ -10163,6 +10193,12 @@
     "ja"
   ],
   "/SenseCAP_T2000_tracker/Introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Get_Started_with_SenseCAP_T2000_tracker": [
     "cn",
     "en",
     "es",
