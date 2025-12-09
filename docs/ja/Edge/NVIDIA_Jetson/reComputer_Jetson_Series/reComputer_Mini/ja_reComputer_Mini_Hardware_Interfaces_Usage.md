@@ -447,6 +447,13 @@ sudo ./canTest.sh
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/canRX.jpg"/>
 </div>
 
+プログラムで **CAN** を使う前に、有効化する必要があります。ターミナルで次のコマンドを実行してください:
+
+```bash
+sudo gpioset --mode=wait 0 106=0 #enable CAN1
+sudo gpioset --mode=wait 0 43=0 #enable CAN0
+```
+
 ### CAN0電源出力
 
 **CAN0-PPOWER**の出力電圧は、理論的にはreComputer Miniの現在の**DC**入力電圧と等しくなります。**DC**入力電圧範囲は`12-54V`です。したがって、**CAN0 XT30 (2+2)**の電源出力範囲も`12-54V`となります。

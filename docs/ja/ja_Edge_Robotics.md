@@ -44,7 +44,7 @@ last_update:
 
 <div className="nav-grid">
 
-## 📦 ロボットキット {#ロボットキット}
+## 📦 ロボットキット {#robot-kits}
 
 <div class="category-group">
   <div class="category-card robot-kits">
@@ -102,6 +102,15 @@ last_update:
   </a>
 </div>
 
+## Stackforce
+
+<div className="card-container">
+    <a href="/ja/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
+      <span className="text">ミニ車輪脚ロボット</span>
+      <span className="tag recommended">New</span>
+    </a>
+</div>
+
 ## 🖐️ ハンド
 
 <div className="card-container">
@@ -124,7 +133,7 @@ last_update:
 </div>
 </div>
 
-## ⚙️ アクチュエータ {#アクチュエータ}
+## ⚙️ アクチュエータ {#actuators}
 
 <div class="category-group">
 <div className="category-card actuators">
@@ -143,14 +152,21 @@ last_update:
       <span className="text">3️⃣HighTorque シリーズ</span>
     </a>
     <a href="/ja/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣fashionstar シリーズ</span>
+      <span className="text">4️⃣Fashionstar シリーズ</span>
+    </a>
+    <a href="/ja/stackforce_series/" className="nav-item">
+      <span className="text">5️⃣Stackforce シリーズ</span>
+    </a>
+    <a href="/ja/robstride_control/" className="nav-item">
+      <span className="text">5️⃣RobStride コントロール</span>
+      <span className="tag recommended">New</span>
     </a>
 </div>
 
 </div>
 </div>
 
-## 👁️ センサー {#センサー}
+## 👁️ センサー {#sensors}
 
 <div class="category-group">
 <div className="category-card sensors">
@@ -244,7 +260,7 @@ last_update:
 </div>
 </div>
 
-## 💻 ソフトウェア {#ソフトウェア}
+## 💻 ソフトウェア {#software}
 
 <div class="category-group">
 <div className="category-card software">
@@ -339,7 +355,7 @@ html[data-theme='dark'] .quick-nav-container {
   gap: 1rem;
 }
 
-/* 导航项 */
+/* ナビゲーション項目 */
 .nav-item {
   position: relative;
   padding: 0.8rem 1.5rem;
@@ -357,7 +373,7 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Dark模式 - 导航项 */
+/* Darkモード - ナビゲーション項目 */
 html[data-theme='dark'] .nav-item {
   color: #e5e7eb;
   background:rgb(47, 50, 57);
@@ -547,7 +563,7 @@ html[data-theme='dark'] .category-card a::after {
 }
 
 .card-container {
-  margin-bottom: 1.5rem; /* 元は0.1rem */
+  margin-bottom: 1.5rem; /* 原为0.1rem */
 }
 
 /* タグスタイル強化 */

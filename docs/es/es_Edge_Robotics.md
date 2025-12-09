@@ -1,5 +1,5 @@
 ---
-description: Este tema introduce la documentación de productos de Robótica de Seeed Studio.
+description: Este tema presenta la documentación de productos de Robótica de Seeed Studio.
 title: Robótica
 keywords:
 - robotics
@@ -63,15 +63,15 @@ last_update:
     </a>
     <a href="/es/training_soarm101_policy_with_isaacLab/" className="nav-item">
     <span className="text">Aprendizaje por Refuerzo del Brazo So</span>
-    <span className="tag recommended">New</span>
+    <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/simulate_soarm101_by_leisaac/" className="nav-item">
       <span className="text">Brazo SO100 con IsaacSim</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="nav-item">
         <span className="text">Brazo SO101 con GR00T de NVIDIA</span>
-        <span className="tag recommended">New</span>
+        <span className="tag recommended">Nuevo</span>
     </a>
 </div>
 
@@ -91,15 +91,24 @@ last_update:
 <div className="card-container">
     <a href="/es/lerobot_starai_arm/" className="nav-item">
       <span className="text">Brazo Robótico Starai</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/starai_arm_ros_moveit/" className="nav-item">
       <span className="text">Brazo Robótico Starai Moveit2</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/control_robotic_arm_via_gr00t" className="nav-item">
   <span className="text">Star AI con GR00T de NVIDIA</span>
   </a>
+</div>
+
+## Stackforce
+
+<div className="card-container">
+    <a href="/es/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
+      <span className="text">Robot_Mini_Con_Ruedas_y_Patas</span>
+      <span className="tag recommended">Nuevo</span>
+    </a>
 </div>
 
 ## 🖐️ Mano
@@ -107,7 +116,7 @@ last_update:
 <div className="card-container">
     <a href="/es/hand_amazinghand/" className="nav-item">
       <span className="text">AmazingHand</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
 </div>
 
@@ -117,7 +126,7 @@ last_update:
 <div className="card-container">
     <a href="/es/dm_gripper/" className="nav-item">
       <span className="text">Pinza DM</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
 </div>
 
@@ -131,19 +140,26 @@ last_update:
 
 <div className="card-container">
     <a href="/es/myactuator_series/" className="nav-item">
-      <span className="text">0️⃣MyActuator X Series</span>
+      <span className="text">0️⃣MyActuator X Serie</span>
     </a>
     <a href="/es/damiao_series/" className="nav-item">
-      <span className="text">1️⃣Damiao DM43 Series</span>
+      <span className="text">1️⃣Damiao DM43 Serie</span>
     </a>
     <a href="/es/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Motor Servo Feetech STS3215</span>
     </a>
     <a href="/es/hightorque_control" className="nav-item">
-      <span className="text">3️⃣HighTorque Series</span>
+      <span className="text">3️⃣HighTorque Serie</span>
     </a>
     <a href="/es/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣fashionstar Series</span>
+      <span className="text">4️⃣Fashionstar Serie</span>
+    </a>
+    <a href="/es/stackforce_series/" className="nav-item">
+      <span className="text">5️⃣Stackforce Serie</span>
+    </a>
+    <a href="/es/robstride_control/" className="nav-item">
+      <span className="text">5️⃣Control RobStride</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
 </div>
 
@@ -168,7 +184,7 @@ last_update:
       <span className="text">Algoritmo A-LOAM</span>
     </a>
     <a href="/es/slamtec/" className="nav-item">
-      <span className="text">Slamtec Series</span>
+      <span className="text">Slamtec Serie</span>
     </a>
 </div>
 
@@ -182,11 +198,11 @@ last_update:
     </a>
     <a href="/es/orbbec_gemini_335lg" className="nav-item">
       <span className="text">Cámara de Profundidad Orbbec Gemini 335Lg</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
     <a href="/es/orbbec_gemini336" className="nav-item">
       <span className="text">Cámara de Profundidad Orbbec Gemini 336</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
 
 - SENSING GMSL
@@ -199,7 +215,7 @@ last_update:
 
     <a href="/es/ac1" className="nav-item">
       <span className="text">AC1</span>
-      <span className="tag recommended">New</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
 
 - Ejemplos
@@ -288,11 +304,11 @@ last_update:
 </a>
 <a href="/es/training_soarm101_policy_with_isaacLab/" className="nav-item">
   <span className="text">Aprendizaje por Refuerzo del Brazo So</span>
-  <span className="tag recommended">New</span>
+  <span className="tag recommended">Nuevo</span>
 </a>
 <a href="/es/simulate_soarm101_by_leisaac/" className="nav-item">
   <span className="text">Brazo SO100 con IsaacSim</span>
-  <span className="tag recommended">New</span>
+  <span className="tag recommended">Nuevo</span>
 </a>
 </div>
 
@@ -339,13 +355,13 @@ html[data-theme='dark'] .quick-nav-container {
   gap: 1rem;
 }
 
-/* 导航项 */
+/* Elementos de navegación */
 .nav-item {
   position: relative;
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
   display: flex;
-  margin: 6px 6px; /* 上下6px，左右6px */
+  margin: 6px 6px; /* 6px arriba y abajo, 6px izquierda y derecha */
   flex-direction: column;
   align-items: center;
   text-decoration: none !important;
@@ -357,7 +373,7 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Dark模式 - 导航项 */
+/* Modo Dark - Elementos de navegación */
 html[data-theme='dark'] .nav-item {
   color: #e5e7eb;
   background:rgb(47, 50, 57);
@@ -430,7 +446,7 @@ html[data-theme='dark'] .nav-item:hover {
 `}</style>
 
 <style>{`
-/* Estilos de tarjetas de contenido mejoradas */
+/* Estilos de tarjetas de contenido versión mejorada */
 .nav-grid {
   display: block;
   gap: 2rem;
@@ -547,7 +563,7 @@ html[data-theme='dark'] .category-card a::after {
 }
 
 .card-container {
-  margin-bottom: 1.5rem; /* Originalmente 0.1rem */
+  margin-bottom: 1.5rem; /* originalmente era 0.1rem */
 }
 
 /* Estilos de etiquetas mejorados */
@@ -603,7 +619,7 @@ html[data-theme='dark'] .category-card:active {
 
   .category-card {
     width: 100%;
-    margin-top: 0.5rem; /* Tarjeta pegada al título */
+    margin-top: 0.5rem; /* tarjeta pegada al título */
   }
 }
 

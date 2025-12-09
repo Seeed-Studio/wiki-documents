@@ -102,6 +102,15 @@ last_update:
   </a>
 </div>
 
+## Stackforce
+
+<div className="card-container">
+    <a href="/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
+      <span className="text">Mini_Wheeled_Legged_Robot</span>
+      <span className="tag recommended">New</span>
+    </a>
+</div>
+
 ## 🖐️ Hand
 
 <div className="card-container">
@@ -143,7 +152,14 @@ last_update:
       <span className="text">3️⃣HighTorque Series</span>
     </a>
     <a href="/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣fashionstar Series</span>
+      <span className="text">4️⃣Fashionstar Series</span>
+    </a>
+    <a href="/stackforce_series/" className="nav-item">
+      <span className="text">5️⃣Stackforce Series</span>
+    </a>
+    <a href="/robstride_control/" className="nav-item">
+      <span className="text">5️⃣RobStride Control</span>
+      <span className="tag recommended">New</span>
     </a>
 </div>
 
