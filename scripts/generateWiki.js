@@ -16,21 +16,13 @@ const excludedPaths = [
 
 
   // 排除指定文档
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'MCP_Endpoint.md'), //10.22
-  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Extending_Grove_with_MCP.md'), //10.22
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'sensecap_t1000_e.md'), //10.29
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'get_started_with_wio_tracker_l1.md'), //10.29
-  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'RpiDevices.md'), //11.7
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Wio_Tracker_L1', 'wio_tracker_node.md'), //11.5
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'XIAO_ESP32S3_&_SX1262_Kit', 'Get_Started_meshtastic.md'), //11.5
-  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_Lekiwi.md'), //11.12
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_ONE_Weather_Station', 'SenseCAP_ONE_Compact_Weather_Station', 'Introduction.md'), //11.12
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'wio_tracker_kit', 'flash_meshtastic_kit.md'), //11.11
-  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf3800_usb_4_mic_array.md'), //11.10
-  path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_HQ_POE', 'reCamera_hq_poe_microscope_demo.md'), //11.8
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Solar_Node', 'get_started_with_solar_node.md'), //11.11
-  path.join(docsDirectory, 'Robotics', 'Robot_Actuator', 'HighTorque_Control.md'), //11.19
-  path.join(docsDirectory, 'Robotics', 'Robot_Actuator', 'RobStride_Control.md'), //11.19
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_ONE_Weather_Station', 'SenseCAP_ONE_Compact_Weather_Station', 'Tutorials-Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor.md'), //11.25
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'XIAO_ESP32S3_&_SX1262_Kit', 'nrf52840_1262.md'), //11.24
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'SenseCAP_Watcher_for_Xiaozhi_AI', 'Face_Regonition_with_MCP.md'), //11.24
