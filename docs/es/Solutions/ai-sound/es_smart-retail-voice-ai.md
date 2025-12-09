@@ -535,7 +535,7 @@ El Cliente Edge es esencial para la validación en tiempo real y la configuraci�
 - **Acceso:** Abre tu navegador web y navega a la dirección IP del reRouter en el puerto 8090: `http://<reRouter_IP_Address>:8090`.
 - **Función Principal:** La interfaz proporciona transcripción ASR en tiempo real (para verificar la entrada de audio), controles para el Reconocimiento de Huella Vocal (identificación del hablante), y Configuración del Dispositivo (configuraciones de red, dirección del servidor upstream).
 
-<table> <thead> <tr> <th>Nombre del Módulo</th> <th>Descripción</th> <th>Captura de Pantalla de la Interfaz</th> </tr> </thead> <tbody> <tr> <td><b>Voice ASR</b></td> <td> <p><b>Descripción:</b> Muestra el estado operativo actual del servicio local de Reconocimiento Automático de Voz (ASR).</p> <p><b>Propósito:</b> Proporciona <b>transcripción en tiempo real</b> del habla detectada, esencial para verificar la entrada de audio local y la precisión del reconocimiento.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>Figura 1: Módulo Voice ASR</p></div> </td> </tr> <tr> <td><b>Reconocimiento de Huella Vocal</b></td> <td> <p><b>Descripción:</b> Gestiona y monitorea el sistema de Reconocimiento de Huella Vocal.</p> <p><b>Propósito:</b> Se utiliza para <b>registrar, diferenciar e identificar</b> diferentes hablantes/usuarios basándose en sus características únicas de voz.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>Figura 2: Módulo de Reconocimiento de Huella Vocal</p></div> </td> </tr> <tr> <td><b>Estado y Configuración del Dispositivo</b></td> <td> <p><b>Descripción:</b> Proporciona información detallada sobre el estado operativo del reRouter y permite cambios en parámetros principales.</p> <p><b>Propósito:</b> Permite actualizaciones de configuración como <b>configuraciones de red</b> (Wi-Fi) y cambiar la <b>dirección del servidor upstream</b> para comunicación en la nube.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>Figura 3: Estado y Configuración del Dispositivo</p></div> </td> </tr> </tbody> </table>
+<table> <thead> <tr> <th>Nombre del Módulo</th> <th>Descripción</th> <th>Captura de Pantalla de la Interfaz</th> </tr> </thead> <tbody> <tr> <td><b>Voice ASR</b></td> <td> <p><b>Descripción:</b> Muestra el estado operativo actual del servicio local de Reconocimiento Automático de Voz (ASR).</p> <p><b>Propósito:</b> Proporciona <b>transcripción en tiempo real</b> del habla detectada, esencial para verificar la entrada de audio local y la precisión del reconocimiento.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>Figura 1: Módulo Voice ASR</p></div> </td> </tr> <tr> <td><b>Reconocimiento de Huella Vocal</b></td> <td> <p><b>Descripción:</b> Gestiona y monitorea el sistema de Reconocimiento de Huella Vocal.</p> <p><b>Propósito:</b> Genera automáticamente huellas de voz únicas a partir de grabaciones de audio para permitir la diferenciación e identificación de los hablantes.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>Figura 2: Módulo de Reconocimiento de Huella Vocal</p></div> </td> </tr> <tr> <td><b>Estado y Configuración del Dispositivo</b></td> <td> <p><b>Descripción:</b> Proporciona información detallada sobre el estado operativo del reRouter y permite cambios en parámetros principales.</p> <p><b>Propósito:</b> Permite actualizaciones de configuración como <b>configuraciones de red</b> (Wi-Fi) y cambiar la <b>dirección del servidor upstream</b> para comunicación en la nube.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>Figura 3: Estado y Configuración del Dispositivo</p></div> </td> </tr> </tbody> </table>
 
 ### Plataforma de Gestión Cloud
 
@@ -566,6 +566,7 @@ Este módulo proporciona la vista definitiva de todos los registros de voz recop
 
 - **Filtrado Avanzado:** Usa **Nombre del Dispositivo, Nombre de la Tienda, Nombre de la Ubicación, o Dirección MAC** para recuperación precisa de datos. Las búsquedas se ejecutan solo después de hacer clic en el botón **"Filter"**, dando a los usuarios control total.
 - **Capacidad de Exportación:** Selecciona y exporta datos filtrados en **tres formatos** para uso externo (elige uno a la vez): **Markdown**, **Texto Plano (.txt)**, o **Archivo de Audio Original**.
+- **Auditoría de doble vista:** Cambia fácilmente entre el **Modo Conversación** para revisar los diálogos transcritos y el **Modo Cronología** para escuchar la reproducción del audio original. Este enfoque dual permite una verificación rápida de la precisión de la transcripción y una comprensión más profunda del contexto de la interacción.
 - **Claridad:** Todas las vistas de registros priorizan el **Nombre del Dispositivo** fácilmente identificable sobre la dirección MAC.
 
 <div align="center">
@@ -575,6 +576,18 @@ Este módulo proporciona la vista definitiva de todos los registros de voz recop
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/record-management.png" alt="Record Management Interface" />
 
 <figcaption>Figura 5: Interfaz de Gestión de Registros</figcaption>
+
+</figure>
+
+</div>
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="Grabación de SenseCraft Voice" />
+
+<figcaption>Figura 5.1: Modo Cronología</figcaption>
 
 </figure>
 

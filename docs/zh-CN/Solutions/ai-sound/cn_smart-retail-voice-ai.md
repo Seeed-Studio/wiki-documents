@@ -535,7 +535,7 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 - **访问：** 打开您的网络浏览器，导航到 reRouter 的 IP 地址的 8090 端口：`http://<reRouter_IP_Address>:8090`。
 - **核心功能：** 该界面提供实时 ASR 转录（用于验证音频输入）、声纹识别控制（说话人识别）和设备配置（网络设置、上游服务器地址）。
 
-<table> <thead> <tr> <th>模块名称</th> <th>描述</th> <th>界面截图</th> </tr> </thead> <tbody> <tr> <td><b>语音 ASR</b></td> <td> <p><b>描述：</b> 显示本地自动语音识别（ASR）服务的当前运行状态。</p> <p><b>用途：</b> 提供检测到的语音的<b>实时转录</b>，对于验证本地音频输入和识别准确性至关重要。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>图 1：语音 ASR 模块</p></div> </td> </tr> <tr> <td><b>声纹识别</b></td> <td> <p><b>描述：</b> 管理和监控声纹识别系统。</p> <p><b>用途：</b> 用于基于独特的语音特征<b>注册、区分和识别</b>不同的说话人/用户。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>图 2：声纹识别模块</p></div> </td> </tr> <tr> <td><b>设备状态与配置</b></td> <td> <p><b>描述：</b> 提供 reRouter 运行状态的详细信息，并允许更改核心参数。</p> <p><b>用途：</b> 启用配置更新，如<b>网络设置</b>（Wi-Fi）和更改用于云端通信的<b>上游服务器地址</b>。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>图 3：设备状态与配置</p></div> </td> </tr> </tbody> </table>
+<table> <thead> <tr> <th>模块名称</th> <th>描述</th> <th>界面截图</th> </tr> </thead> <tbody> <tr> <td><b>语音 ASR</b></td> <td> <p><b>描述：</b> 显示本地自动语音识别（ASR）服务的当前运行状态。</p> <p><b>用途：</b> 提供检测到的语音的<b>实时转录</b>，对于验证本地音频输入和识别准确性至关重要。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>图 1：语音 ASR 模块</p></div> </td> </tr> <tr> <td><b>声纹识别</b></td> <td> <p><b>描述：</b> 管理和监控声纹识别系统。</p> <p><b>用途：</b> 从音频录音中自动生成唯一声纹，以实现说话人的区分和身份识别。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>图 2：声纹识别模块</p></div> </td> </tr> <tr> <td><b>设备状态与配置</b></td> <td> <p><b>描述：</b> 提供 reRouter 运行状态的详细信息，并允许更改核心参数。</p> <p><b>用途：</b> 启用配置更新，如<b>网络设置</b>（Wi-Fi）和更改用于云端通信的<b>上游服务器地址</b>。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>图 3：设备状态与配置</p></div> </td> </tr> </tbody> </table>
 
 ### 云端管理平台
 
@@ -566,6 +566,7 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 
 - **高级筛选：** 使用**设备名称、商店名称、位置名称或 MAC 地址**进行精确数据检索。搜索仅在点击 **"Filter"** 按钮后执行，让用户完全控制。
 - **导出功能：** 选择并以**三种格式**导出筛选的数据供外部使用（一次选择一种）：**Markdown**、**纯文本（.txt）**或**原始音频文件**。
+- **双视图审计：** 可以在用于查看转写对话的 **对话模式** 和用于收听原始音频回放的 **时间轴模式** 之间轻松切换。这种双视图方式有助于快速验证转写的准确性，并更深入地理解交互的上下文。
 - **清晰度：** 所有记录视图优先显示易于识别的**设备名称**而非 MAC 地址。
 
 <div align="center">
@@ -575,6 +576,18 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/record-management.png" alt="Record Management Interface" />
 
 <figcaption>图 5：记录管理界面</figcaption>
+
+</figure>
+
+</div>
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="SenseCraft Voice 录音界面" />
+
+<figcaption>图 5.1：时间轴模式</figcaption>
 
 </figure>
 
