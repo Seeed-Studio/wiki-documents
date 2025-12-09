@@ -541,6 +541,8 @@ it is highly recommended to reboot the device to ensure all settings, permission
 reboot
 ```
 
+After reboot, you navigate to `http://192.168.49.1:8090` to access the Edge Client interface for real-time ASR transcription and device configuration. For detailed usage of the SenseCraft Voice platform, please refer to the [User Guide](#user-guide) section below.
+
 ## SenseCraft Voice: Edge-to-Cloud Platform Overview
 
 SenseCraft Voice is a cutting-edge platform designed to transform raw audio data captured at the edge (reRouter) into actionable business intelligence through powerful AI analysis and centralized management.
