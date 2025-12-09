@@ -535,7 +535,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 - **アクセス：** Webブラウザを開き、ポート8090でreRouterのIPアドレスにアクセスします：`http://<reRouter_IP_Address>:8090`。
 - **主要機能：** インターフェースは、リアルタイムASR転写（音声入力を確認するため）、声紋認識の制御（話者識別）、およびデバイス設定（ネットワーク設定、上流サーバーアドレス）を提供します。
 
-<table> <thead> <tr> <th>モジュール名</th> <th>説明</th> <th>インターフェーススクリーンショット</th> </tr> </thead> <tbody> <tr> <td><b>音声ASR</b></td> <td> <p><b>説明：</b> ローカル自動音声認識（ASR）サービスの現在の動作状況を表示します。</p> <p><b>目的：</b> 検出された音声の<b>リアルタイム転写</b>を提供し、ローカル音声入力と認識精度の検証に不可欠です。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>図1：音声ASRモジュール</p></div> </td> </tr> <tr> <td><b>声紋認識</b></td> <td> <p><b>説明：</b> 声紋認識システムを管理・監視します。</p> <p><b>目的：</b> 固有の音声特性に基づいて、異なる話者/ユーザーを<b>登録、区別、識別</b>するために使用されます。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>図2：声紋認識モジュール</p></div> </td> </tr> <tr> <td><b>デバイス状態と設定</b></td> <td> <p><b>説明：</b> reRouterの動作状況に関する詳細情報を提供し、主要パラメータの変更を可能にします。</p> <p><b>目的：</b> <b>ネットワーク設定</b>（Wi-Fi）やクラウド通信用の<b>上流サーバーアドレス</b>の変更などの設定更新を可能にします。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>図3：デバイス状態と設定</p></div> </td> </tr> </tbody> </table>
+<table> <thead> <tr> <th>モジュール名</th> <th>説明</th> <th>インターフェーススクリーンショット</th> </tr> </thead> <tbody> <tr> <td><b>音声ASR</b></td> <td> <p><b>説明：</b> ローカル自動音声認識（ASR）サービスの現在の動作状況を表示します。</p> <p><b>目的：</b> 検出された音声の<b>リアルタイム転写</b>を提供し、ローカル音声入力と認識精度の検証に不可欠です。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>図1：音声ASRモジュール</p></div> </td> </tr> <tr> <td><b>声紋認識</b></td> <td> <p><b>説明：</b> 声紋認識システムを管理・監視します。</p> <p><b>目的：</b> 話者の区別および識別を可能にするため、音声録音から固有の声紋を自動的に生成します。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>図2：声紋認識モジュール</p></div> </td> </tr> <tr> <td><b>デバイス状態と設定</b></td> <td> <p><b>説明：</b> reRouterの動作状況に関する詳細情報を提供し、主要パラメータの変更を可能にします。</p> <p><b>目的：</b> <b>ネットワーク設定</b>（Wi-Fi）やクラウド通信用の<b>上流サーバーアドレス</b>の変更などの設定更新を可能にします。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>図3：デバイス状態と設定</p></div> </td> </tr> </tbody> </table>
 
 ### クラウドサイド管理プラットフォーム
 
@@ -566,6 +566,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 - **高度なフィルタリング：** 正確なデータ取得のために**デバイス名、店舗名、場所名、またはMACアドレス**を使用します。検索は**"Filter"**ボタンをクリックした後にのみ実行され、ユーザーに完全な制御を提供します。
 - **エクスポート機能：** フィルタリングされたデータを外部使用のために**3つの形式**で選択・エクスポートします（一度に1つを選択）：**Markdown**、**プレーンテキスト（.txt）**、または**元の音声ファイル**。
+- **デュアルビュー監査:** 転写された会話を確認する **会話モード** と、元の音声再生を聴取する **タイムラインモード** を簡単に切り替えることができます。この二つのアプローチにより、転写精度を迅速に検証でき、やり取りの文脈をより深く理解することができます。
 - **明確性：** すべての記録ビューは、MACアドレスよりも識別しやすい**デバイス名**を優先します。
 
 <div align="center">
@@ -575,6 +576,18 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/record-management.png" alt="Record Management Interface" />
 
 <figcaption>図5：記録管理インターフェース</figcaption>
+
+</figure>
+
+</div>
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="SenseCraft Voice 録音画面" />
+
+<figcaption>図 5.1：タイムラインモード</figcaption>
 
 </figure>
 
