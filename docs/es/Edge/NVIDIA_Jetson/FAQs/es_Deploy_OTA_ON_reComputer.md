@@ -113,7 +113,7 @@ export const productOptions = [
 
 ### Procedimiento OTA en el dispositivo
 
-:::Note
+:::note
 Las siguientes operaciones se realizan en el Jetson (vía conexión remota)
 :::
 

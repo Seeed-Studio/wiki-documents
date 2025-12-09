@@ -447,6 +447,13 @@ By observing the two terminals, you can see that in **Terminal 1**, the number o
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/canRX.jpg"/>
 </div>
 
+You need to enable **CAN**, before using it in your program. run this command in terminal:
+
+```bash
+sudo gpioset --mode=wait 0 106=0 #enable CAN1
+sudo gpioset --mode=wait 0 43=0 #enable CAN0
+```
+
 ### CAN0 Power Output
 
 The output voltage of **CAN0-PPOWER** theoretically equals the current **DC** input voltage of the reComputer Mini. The **DC** input voltage range is `12-54V`. Therefore, the power output range of **CAN0 XT30 (2+2)** is also `12-54V`.

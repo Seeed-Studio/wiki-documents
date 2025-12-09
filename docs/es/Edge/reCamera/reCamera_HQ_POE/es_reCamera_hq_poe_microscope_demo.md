@@ -19,6 +19,8 @@ last_update:
 
 # reCamera_Microscopio
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/4.gif" /></div>
+
 ## 🔥¿Qué es reCamera_Microscopio?
 
 reCamera_Microscopio es un proyecto de código abierto basado en la [serie reCamera 2002](https://www.seeedstudio.com/reCamera-2002w-64GB-p-6249.html) y la [Placa de Sensor GC2053](https://www.seeedstudio.com/reCamera-2002-Sensor-Board-GC2053-p-6556.html). También puedes usar la [versión reCamera 2002 HQ PoE](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html) para completar este proyecto.
@@ -55,16 +57,6 @@ Más direcciones de aplicación están por ser exploradas por todos ustedes.
 5. Soporte de microscopio
 6. Adaptador de corriente de 12V
 7. Cable Type-C
-
-## 🛒Enlaces de Compra
-
-| reCamera POE & Cable Type-C                | [reCamera 2002 HQ PoE 8GB](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html) |
-| ------------------------------------------ | ------------------------------------------------------------ |
-| Impresora 3D x2                              |                [Descarga de Impresora 3D](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Microscope/3D_Printed_Case/top_2.3mf)                                              |
-| Lente M12 x2                                | [Tipo 6mmB – Microscopio Biológico (Taobao)](https://item.taobao.com/item.htm?id=966337796751&mi_id=0000aLtG3Un2BtLBwdSYZFPZI-nRQdgezdGbA6si_qz_3TY&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6&sku_properties=1627207%3A1364564910)<br />[Tipo 22mmB – Microscopio PCB (Taobao)](https://item.taobao.com/item.htm?id=966337796751&mi_id=0000aLtG3Un2BtLBwdSYZFPZI-nRQdgezdGbA6si_qz_3TY&sku_properties=1627207%3A1392136713&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6) |
-| Soporte de Extensión de Lente M12 x3              | [Soporte de Extensión de Lente M12 x3        Compra 2 y llévate 1 gratis Anillo de Extensión M12×0.5 (Taobao)](https://item.taobao.com/item.htm?id=727001812366&mi_id=0000GVjgJwtQrpMV3hfTIBkQ7C750g4UcKWmn7jTQMZm4Kk&spm=tbpc.boughtlist.suborder_itemtitle.1.442e2e8d4bcrJz) |
-| Soporte de microscopio<br />& Adaptador de corriente de 12V | [Soporte de Microscopio & Adaptador de Corriente de 12V        Soporte de Microscopio Electrónico Portátil con Luz Base de 35/50 mm (Taobao)](https://item.taobao.com/item.htm?id=749452322341&mi_id=0000hBbQQwAlptuyVy-eEdVQVGl4eia1yeh5B2o2U_KOHoQ&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6) |
-
 
 ## Pasos de Instalación
 

@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/1/2025
+  date: 12/8/2025
   author: Frank
 ---
 
@@ -17,89 +17,67 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 8th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with XIAO ePaper Display EN04](https://wiki.seeedstudio.com/epaper_EN04/)
+### [Get Started with SenseCAP T2000 Tracker](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T2000_tracker/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, NFC function and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
-
-</div>
-
-### [SenseCAP T2000 Tracker Introduction](https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[**SenseCAP T2000**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), an industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection, a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed.
+This chapter shows you how to quickly set up your SenseCAP T2000 Tracker with the SenseCraft App.
 
 </div>
 
-### [Deploying AI Models on SenseCAP A1102 Using SenseCraft AI](https://wiki.seeedstudio.com/deploy_ai_with_a1102/)
+### [Getting Started with COB LED Driver Board for Seeed Studio XIAO](https://wiki.seeedstudio.com/getting_started_with_cob_led_dirver_board/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The SenseCAP A1102 is a powerful sensor device that combines advanced AI capabilities with ease of deployment. This guide will walk you through deployingofficial or custom AI models on the A1102 using the **SenseCraft AI** website, offering step-by-step instructions for pairing, configuration, and testing.
+This is a 7-channel COB LED driver dock designed for Seeed Studio XIAO. This expansion board breaks GPIO power limits, offering 7 output channels, specifically tailored for ultra-narrow 1mm 3V COB LED strips. With integrated PMIC battery management, it is the ideal plug-and-play solution for building compact, high-brightness wireless lighting setups.
 
 </div>
 
-### [Play Subway Surfers with body sensor control](https://wiki.seeedstudio.com/use_the_motion-sensing_function_of_recamera_to_play_games/)
+### [Smart Retail Voice AI](https://wiki.seeedstudio.com/solutions/smart-retail-voice-ai-solution-1/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_text.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/ai-sound/respeaker-rerouter-in-smart-retail.webp" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The reCamera is an AI camera equipped with powerful edge computing capabilities. This demo showcases its ability to run the YOLO11n-Pose model in real-time at the device level - without relying on the cloud, it can accurately identify the key points and postures of the human body.
+Leverage Seeed's Smart Retail Voice AI solution to capture and analyze in-store customer conversations. Our edge AI technology enables on-device speech-to-text processing, transforming voice data into actionable insights without relying on cloud services. Enhance customer experience, optimize store operations, and gain valuable feedback with our offline AI-powered voice analytics tailored for retail environments.
 
 </div>
 
-### [Deploy Facial Recognition on reComputer](https://wiki.seeedstudio.com/facial_recognition_on_the_recomputer/)
+### [Viseron on reComputer](https://wiki.seeedstudio.com/viseron_on_recomputer/)
 
-<div class="video-container">
-<iframe width="800" height="400" src="https://www.youtube.com/embed/wcT_ZYsRbAE" title="Facial Recognition On Raspberry Pi CM5 reComputer with Hailo-8 NPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/viseron.gif" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki will guide you through using a reComputer equipped with a `Hailo` NPU to implement real-time facial recognition. In this project, we use `SCRFD-10G` for efficient face detection, capable of quickly and accurately detecting faces of various scales, including small faces, ensuring real-time performance.
+[Viseron](https://github.com/roflcoopter/viseron) is a self-hosted, local only NVR and AI Computer Vision software implemented in Python. The goal of Viseron is to be easy to setup and use, while still being powerful and flexible. It is designed to be run on a local network, with no external dependencies, and no cloud services required.
 
 </div>
 
-### [MCP Integration with External Systems](https://wiki.seeedstudio.com/mcp_external_system_integration/)
+### [HighTorque Motors Getting Started](https://wiki.seeedstudio.com/hightorque_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_1_1_1.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide demonstrates how to integrate your existing business systems with **SenseCAP Watcher** through **MCP (Model Context Protocol)**. Unlike the basic calculator example, this tutorial focuses on a industrial use case: **voice-controlled warehouse management**.
+This document explains how to power, wire, and safely set up the HighTorque motor, and how to use the debugging assistant software to calibrate it, tune parameters, control different operating modes (position, speed, torque, etc.), and perform basic FDCAN communication.
 
 </div>
 
-### [WHEELTEC IMU IMU Sensor Getting Start](https://wiki.seeedstudio.com/wheeltec_imu/)
+### [Deploy OTA on reComputer](https://wiki.seeedstudio.com/deploy_ota_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/wheeltec/wheeltec_imu.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The WHEELTEC H30 is a high-precision attitude sensor designed to accurately measure key data of carriers, including 3D attitude angles, acceleration, angular velocity, and magnetic field strength. Engineered with industrial-grade reliability, this sensor integrates a 3-axis MEMS gyroscope, a 3-axis MEMS accelerometer, and a 3-axis magnetic sensor—delivering robust performance for professional applications.
-
-</div>
-
-### [Stackforce X Series Motors Getting Start](https://wiki.seeedstudio.com/stackforce_series/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010.webp" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This article will introduce how to get started with Stackforce series motors and how to use them with C++ and Python on the reComputer Jetson Super.
+NVIDIA Jetson Over-the-Air (OTA) updates allow developers to upgrade edge devices from an older JetPack version to a newer release remotely via a network connection, eliminating the need for a host PC or physical USB re-flashing. This wiki will demonstrate how to perform OTA (Over-the-Air) updates on reComputer.
 
 </div>
 
@@ -261,5 +239,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/wiki251110)
 - [weekly wiki on 2025.11.17th](/Seeed_Elderly/weekly_wiki/wiki251117)
 - [weekly wiki on 2025.11.24th](/Seeed_Elderly/weekly_wiki/wiki251124)
+- [weekly wiki on 2025.12.01st](/Seeed_Elderly/weekly_wiki/wiki251201)
 
 </details>
