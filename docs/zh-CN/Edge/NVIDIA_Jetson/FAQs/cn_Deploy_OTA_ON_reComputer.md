@@ -113,7 +113,7 @@ export const productOptions = [
 
 ### 设备端 OTA 流程
 
-:::Note
+:::note
 以下操作在 Jetson 上执行（通过远程连接）
 :::
 
