@@ -815,6 +815,7 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
     .join('\n');
 
   const cleanPathPrefix = pathPrefix.startsWith('/') ? pathPrefix.slice(1) : pathPrefix;
+  const localeFolder = LANGUAGE_CONFIG[targetLang].folder;
 
   return `你是一个专业的技术文档翻译专家。请将以下 _category_.yml 文件从英文翻译成${langName}。
 
@@ -828,7 +829,13 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
    - 专有产品名称
    - 技术字段名
 4. **link字段处理**：
-   - slug值前添加 "${cleanPathPrefix}/" 前缀
+   - slug：
+     - 只修改 slug 的值
+     - 在原始值前面加 "${cleanPathPrefix}/" 作为 URL 前缀
+   - id：
+     - 只修改 id 的值，**不要翻译路径里的英文单词**
+     - 在原始 id 前加 "${localeFolder}/" 作为前缀（例如 zh-CN/、ja/、es/）
+     - 不要在 id 里使用 "${cleanPathPrefix}/"（例如不要出现 "cn/"）
 5. **术语保护**：
 ${termsList}
 
