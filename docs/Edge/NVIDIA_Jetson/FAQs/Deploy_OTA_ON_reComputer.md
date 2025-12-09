@@ -113,7 +113,7 @@ export const productOptions = [
 
 ### On-device OTA procedure
 
-:::Note
+:::note
 The following operations are performed on the Jetson (via remote connection)
 :::
 
