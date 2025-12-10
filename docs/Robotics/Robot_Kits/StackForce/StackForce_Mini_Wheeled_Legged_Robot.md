@@ -31,7 +31,7 @@ The robot includes a full-body kinematic model and a state-adaptive self-stabili
 </div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/LeKiwi-Full-Kit-12V-Verision.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
 ## Technical links
@@ -117,7 +117,7 @@ The robot includes a full-body kinematic model and a state-adaptive self-stabili
 
 ## Assembly
 
-[Mini-Wheeled-legged robot installation diagram.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20diagram.pdf)
+[Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
 <div class="video-container">
 <iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1556188467&bvid=BV121421b7zZ&cid=1616871369&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -133,7 +133,7 @@ During assembly, pay attention to the tightness of the screws. Do not overtighte
 
 ## Calibration
 
-Please first download the [code files required for calibration](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/2校准调试.7z).
+Please first download the [code files required for calibration](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Calibration_code.7z).
 
 ### Environment Setup
 
@@ -154,7 +154,7 @@ If this happens, you will need to install **MinGW-w64** manually.
 
 <summary> Step 3：Download MinGW-w64 </summary>
 
-[**Wheeled-Legged Robot Tool Pack Download Link**](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/轮足工具合集.zip)（Including MinGW-w64）
+[**Wheeled-Legged Robot Tool Pack Download Link**](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)（Including MinGW-w64）
 
 After downloading the file, extract it and find the `mingw64 folder` inside the tool pack.
 Extract it, then install it in a directory that uses only English characters.
@@ -406,7 +406,7 @@ After finishing all offset adjustments, tighten the black screws inside the serv
 
 ### S3 Calibration and Debugging
 
-[StackForce Wheel-Leg Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce轮足机器人基本操作说明.pdf)
+[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
 <div align="center">
     <img width={800}
@@ -504,7 +504,7 @@ If the left wheel turns backward, `invert M1Dir`. The right wheel is adjusted th
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/设置电机控制dir02.png" />
 </div>
 
-After completing these steps, the robot can now be controlled. The following describes how to operate it. You can also refer to the document [StackForce Wheel-Leg Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce轮足机器人基本操作说明.pdf).
+After completing these steps, the robot can now be controlled. The following describes how to operate it. You can also refer to the document [StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf).
 
 Front-side joysticks:
 
@@ -533,21 +533,21 @@ Front-side joysticks:
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-[StackForce Wheel-Leg Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce轮足机器人基本操作说明.pdf)
+[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
-[Mini-Wheeled-legged robot installation diagram.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20diagram.pdf)
+[Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
-[Full set of control board schematics](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/3全套控制板原理图.7z)
+[Full set of control board schematics](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
 
-[Example projects for the development kit](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/5例程资料.7z)
+[Example projects for the development kit](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Sample_Code_Documentation.7z)
 
-[Customer registration code acquisition](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/6客户获取注册码.7z)
+[Customer registration code acquisition](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Registration_code.7z)
 
 [urdf & stl](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/SF_bipedalWheel.zip)
 
 [BOM](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/BOM.xlsx)
 
-[Wheeled-Legged Robot Tool Pack](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/轮足工具合集.zip)
+[Wheeled-Legged Robot Tool Pack](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)
 
 ## Tech Support & Product Discussion
 
