@@ -25,7 +25,7 @@ This Wiki will show you how to Assemble and Disassemble the unit to install peri
 
 <div align="center"><img width={1000} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" /></div>
 
-### [DALL·E X SenseCAP Indicator](/SenseCAP_Indicator_DALL·E)
+### [DALL·E X SenseCAP Indicator](/SenseCAP_Indicator_DALL-E)
 
 DALL-E is an advanced AI model developed by OpenAI that can generate images from textual descriptions. DALL-E has been trained on a massive dataset of images and their corresponding textual descriptions.
 
