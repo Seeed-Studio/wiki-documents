@@ -4096,6 +4096,13 @@ const sidebars = {
             'Robotics/Robot_Kits/Hand/AmazingHand',
           ]
         },
+        {
+          type: 'category',
+          label: 'Stackforce',
+          items: [
+            'Robotics/Robot_Kits/StackForce/StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
       ]
     },
     {
