@@ -81,7 +81,7 @@ Working voltage of MCU is 3.3V. Voltage input connected to general I/O pins may 
 For power supply pins:
 The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows to power the device with a 5V supply via VIN-PIN and 5V-PIN.
 
-XIAO SAMD21 currently only supports battery power supply and **cannot connect to Type-C while a battery is connected**, as it may pose a safety risk.
+It is critical to understand that the VIN and GND pads on the back of the XIAO SAMD21 are not designed for directly connecting a battery, especially not a rechargeable lithium battery (LiPo/Li-Ion). The board lacks the essential battery management circuitry required for safe operation. These pads are simply an alternative power input point that bypasses the board's built-in protection diode. If you wish to power your project with a battery, you must use a dedicated external battery management module that provides charging and protection, and then connect that module's regulated output to the XIAO's 5V or 3V3 pin.
 
 Please pay attention to use, do not lift the shield cover.
 :::

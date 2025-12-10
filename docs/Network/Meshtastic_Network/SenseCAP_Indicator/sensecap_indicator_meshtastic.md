@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.webp
 slug: /sensecap_indicator_meshtastic
 last_update:
-  date: 10/29/2024
-  author: Jessie
+  date: 12/3/2024
+  author: Michelle Huang
 ---
 
 
@@ -59,12 +59,17 @@ SenseCAP Indicator is a 4-inch touchscreen device designed for [Meshtastic®](ht
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/HO-114993532.png" alt="pir" width={800} height="auto" /></p>
 
-## Flash Firmware
+## Get Started
+:::danger note
+When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
+1. Not finishing the message transmission process
+2. Being configured
+:::
 
 ### Flash Application Firmware
 
 :::caution note
-Before flashing the firmware, please make sure that the indicator you purchased is the version for Meshtastic. Do not flash the Meshtastic firmware onto an indicator that is not compatible with Meshtastic. This may cause hardware damage.
+Before flashing the firmware, please make sure that the indicator you purchased is the version for Meshtastic. Do not flash the Meshtastic firmware onto an indicator that is not compatible with Meshtastic. This may cause hardware damage. Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
 :::
 
 **Video Instruction**
@@ -109,8 +114,6 @@ Long press this internal button using a needle, then connect the device to your 
 Download the `UF2` file and copy it to the `RPI-RP2` drive. Firmware should be flashed after the file is downloaded and the device reboots.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/disk.png" alt="pir" width={600} height="auto" /></p>
-
-## Get Started
 
 Download `Meshtastic` App:
 

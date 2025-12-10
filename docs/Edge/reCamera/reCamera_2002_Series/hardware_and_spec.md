@@ -211,7 +211,7 @@ reCamera is an open-source and tiny AI camera, programmable and customizable, po
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-12.png" /></div>
 
-### [Core Board-C101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
+### [Core Board-C101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
 <!-- 搬运github说明和图 -->
 | Board         | Features                           | Version |
 | ------------- | ---------------------------------- | ------------ |
@@ -223,7 +223,7 @@ Top View             |  Bottom View
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
-### [Sensor Board-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
+### [Sensor Board-S101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
 <!-- 搬运github说明和图 -->
 
 Top View             |  Bottom View
@@ -276,7 +276,7 @@ Top View             |  Bottom View
 - 1 x speaker
 - 3 x LED indicator
 
-### [Base Board-B101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#base-board)
+### [Base Board-B101](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#base-board)
 <!-- 搬运github说明和图 -->
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:

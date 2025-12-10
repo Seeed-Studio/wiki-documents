@@ -102,6 +102,15 @@ last_update:
   </a>
 </div>
 
+## Stackforce
+
+<div className="card-container">
+    <a href="/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
+      <span className="text">Mini_Wheeled_Legged_Robot</span>
+      <span className="tag recommended">New</span>
+    </a>
+</div>
+
 ## 🖐️ Hand
 
 <div className="card-container">
@@ -139,8 +148,18 @@ last_update:
     <a href="/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Feetech STS3215 Servo Motor</span>
     </a>
-    <a href="/hightorque_series/" className="nav-item">
+    <a href="/hightorque_control" className="nav-item">
       <span className="text">3️⃣HighTorque Series</span>
+    </a>
+    <a href="/fashionstar_servo/" className="nav-item">
+      <span className="text">4️⃣Fashionstar Series</span>
+    </a>
+    <a href="/stackforce_series/" className="nav-item">
+      <span className="text">5️⃣Stackforce Series</span>
+    </a>
+    <a href="/robstride_control/" className="nav-item">
+      <span className="text">5️⃣RobStride Control</span>
+      <span className="tag recommended">New</span>
     </a>
 </div>
 
@@ -172,26 +191,48 @@ last_update:
 **📷Camera**  
 
 <div className="card-container">
+- Orbbec Depth Camera
+
     <a href="/orbbec_gemini2/" className="nav-item">
       <span className="text">Orbbec Gemini2</span>
     </a>
-    <a href="/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">Orbbec Depth Camera with ROS</span>
-    </a>
     <a href="/orbbec_gemini_335lg" className="nav-item">
-      <span className="text">Orbbec Gemini 335Lg Stereo Camera</span>
+      <span className="text">Orbbec Gemini 335Lg Depth Camera</span>
       <span className="tag recommended">New</span>
     </a>
+    <a href="/orbbec_gemini336" className="nav-item">
+      <span className="text">Orbbec Gemini 336 Depth Camera</span>
+      <span className="tag recommended">New</span>
+    </a>
+
+- SENSING GMSL
+
     <a href="/sensing_gmsl_cameras" className="nav-item">
       <span className="text">SENSING GMSL2 Cameras</span>
+    </a>
+
+- RoboSense
+
+    <a href="/ac1" className="nav-item">
+      <span className="text">AC1</span>
       <span className="tag recommended">New</span>
+    </a>
+
+- Examples
+
+    <a href="/orbbec_depth_camera_on_ros/" className="nav-item">
+      <span className="text">Orbbec Depth Camera with ROS</span>
     </a>
     <a href="/orb_slam3_orbbec_gemini2/" className="nav-item">
       <span className="text">ORB-SLAM3 with Orbbec Gemini2</span>
     </a>
     <a href="/csi_camera_on_ros/" className="nav-item">
-      <span className="text">CSI Camera</span>
+      <span className="text">CSI Camera on Jetson</span>
     </a>
+    <a href="/pycuvslam_recomputer_robotics/" className="nav-item">
+      <span className="text">PyCuVSLAM</span>
+    </a>
+
 </div>
 
 **🎤Voice**  
@@ -210,6 +251,9 @@ last_update:
 <div className="card-container">
     <a href="/hexfellow_y200/" className="nav-item">
       <span className="text">HEXFELLOW Y200</span>
+    </a>
+    <a href="/wheeltec_imu/" className="nav-item">
+      <span className="text">WHEELTEC IMU</span>
     </a>
 </div>
 

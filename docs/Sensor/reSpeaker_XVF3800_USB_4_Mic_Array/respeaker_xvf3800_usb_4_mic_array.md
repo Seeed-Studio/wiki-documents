@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
 slug: /respeaker_xvf3800_introduction
 last_update:
-  date: 8/20/2025
+  date: 11/10/2025
   author: Kasun Thushara
 ---
 
@@ -856,91 +856,61 @@ For deeper documentation and advanced commands, visit the official GitHub repo:
 </TabItem>
 </Tabs>
 
-## Python Examples for ReSpeaker XVF3800
+## Troubleshooting
 
-We have prepared Python examples to control the device via USB or I2C.
+### Does playback sound from speaker output not enough ?
 
-:::note
-If you would like to explore more about controlling via xvf_host with python scripts, please read this [article](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md).
-:::
+If the speaker output volume of the **ReSpeaker XVF3800** is too low on Linux, you may need to adjust the **ALSA mixer levels** for the XVF3800 sound card. Follow the steps below to increase the output volume.
 
-<Tabs>
-<TabItem value="windows" label="Windows">
+**Step 1: Open ALSA Mixer**
 
-### For Windows
+1. Open a terminal.
+2. Type the following command and press **Enter**:
+
+   ```bash
+   alsamixer
+   ```
+**Step 2: Select the XVF3800 Sound Card**
+
+1. Press **F6** to open the sound card selection menu.
+2. Use the **up/down arrow keys** to highlight the **XVF3800** sound card.
+3. Press **Enter** to confirm the selection.
+
+**Step 3: Adjust the PCM-1 Volume**
+
+1. Use the **left/right arrow keys** to navigate to **PCM-1**.
+2. Use the **up arrow key** to increase the volume level up to **100%**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/alexa.png" alt="pir" width={600} height="auto"/></p>
+
+**Step 4: Save ALSA Settings**
+
+1. Press **ESC** to exit `alsamixer`.
+2. Before unplugging the XVF3800, run the following command to save your settings:
 
 ```bash
-git clone https://github.com/KasunThushara/reSpeakerXVF.git
-cd reSpeakerXVF
-python test.py
-```
+   sudo alsactl store
+   ```
 
-Make sure Python is installed and the ReSpeaker XVF3800 is connected via USB.
+**Step 5: Additional Option (Using PulseAudio)**
 
-</TabItem>
-
-<TabItem value="rpi" label="Raspberry Pi / Linux">
-
-### For Raspberry Pi
+If you still cannot hear sound clearly after adjusting ALSA levels, try installing **PulseAudio Volume Control** for more detailed volume adjustments:
 
 ```bash
-git clone https://github.com/KasunThushara/reSpeakerXVF_rpi.git
-cd reSpeakerXVF_rpi
-chmod +x xvf_host
-python3 test.py
+sudo apt install pavucontrol -y
 ```
 
-Ensure `xvf_host` is executable and your board is connected via USB or I2C.
+You can then open **pavucontrol** and increase the output volume beyond 100% if needed.
 
-</TabItem>
-</Tabs>
+### After reinstalling the USB drivers, my ReSpeaker doesn’t record and playback
 
-The `test.py` file can be explored as follows. This is for your reference.
+Uninstall all drivers associated with the ReSpeaker in Device Manager. This resolved the issue.
 
-``` bash
-import subprocess
-import sys
-import time
+## Resources
 
-# Path to your xvf_host binary
-XVF_HOST_PATH = "./xvf_host"  # Change this if xvf_host is in a different location
-
-def run_command(*args):
-    """Run a command using the xvf_host tool."""
-    command = ["sudo", XVF_HOST_PATH] + list(map(str, args))
-    try:
-        print(f"Running: {' '.join(command)}")
-        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, text=True)
-        print("Output:\n", result.stdout)
-    except subprocess.CalledProcessError as e:
-        print("Error:\n", e.stderr)
-        sys.exit(1)
-
-if __name__ == "__main__":
-    # Example: Get device version
-    run_command("VERSION")
-    time.sleep(0.005)
-
-    # Example: Set LED to breath mode with orange color
-    run_command("led_effect", 1)
-    time.sleep(0.005)
-    run_command("led_color", "0xff8800")
-    time.sleep(0.005)
-    run_command("led_speed", 1)
-    time.sleep(0.005)
-    run_command("led_brightness", 255)
-    time.sleep(0.005)
-
-    # Example: Save current configuration
-    #run_command("save_configuration", 1)
-
-    # Uncomment to clear config
-    run_command("clear_configuration", 1)
-    time.sleep(0.005)
-
-```
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={600} height="auto"/></p>
+- [ReSpeaker XVF3800 3D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
+- [ReSpeaker XVF3800 3D-Enclosure-Up File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
+- [ReSpeaker XVF3800 3D-Enclosure-Down File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
 
 ## Tech Support & Product Discussion
 

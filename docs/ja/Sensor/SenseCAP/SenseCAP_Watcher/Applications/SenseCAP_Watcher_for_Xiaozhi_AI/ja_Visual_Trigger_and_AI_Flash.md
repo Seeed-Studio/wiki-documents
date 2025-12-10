@@ -13,8 +13,10 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /ja/visual_trigger_and_ai_flash
 last_update:
-  date: 10/20/2025
+  date: 12/04/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -24,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 ## 概要
 
-このプロジェクトを可能にしたオープンソースの貢献に対して、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を表します。
+このプロジェクトを可能にしたオープンソースの貢献に対して、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) に特別な感謝を申し上げます。
 
 このガイドでは、SenseCAP Watcher にビジュアル認識トリガー会話ファームウェアをフラッシュする方法と、デバイス上の AI モデルを交換または更新する方法に焦点を当てています。これらの操作のための実践的な指導ガイドとして意図されています。
 
@@ -72,6 +74,10 @@ Please use another method to flash the firmware for now.
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
 
+  :::note
+  macOS または Linux を使用している場合は、番号の小さいポートを選択してください。
+  :::
+
   - `Connect` をクリック
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
@@ -83,6 +89,9 @@ Please use another method to flash the firmware for now.
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
 
   - 正しいシリアルポート（"B" で終わるもの）を選択
+  :::note
+  macOS または Linux を使用している場合は、番号の大きいポートを選択してください。
+  :::
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
@@ -106,7 +115,7 @@ Please use another method to flash the firmware for now.
 
 - 前提条件
 
-  - **ビジュアルトリガーファームウェア v2.0.3**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **ビジュアルトリガーファームウェア v2.0.4**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 以降)
 
@@ -152,7 +161,7 @@ Please use another method to flash the firmware for now.
 
 - 前提条件
 
-  - **ビジュアルトリガーファームウェア v2.0.3**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **ビジュアルトリガーファームウェア v2.0.4**: [ダウンロードリンク](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -234,7 +243,8 @@ Please use another method to flash the firmware for now.
 </Tabs>
 
 :::note
-v2.0.3 以降のファームウェアバージョンでは、ビジュアル検出を有効にするために Xiaozhi に「Turn on inference switch」と言う必要があります。
+ファームウェアバージョン 1.8.8 以上のみがビジュアルウェイクアップ機能をサポートしています。
+ファームウェアバージョン v2.0.3 以上では、ビジュアル検出を有効にするために Xiaozhi に "Turn on the inference switch" と言う必要があります。
 :::
 
 ## AI モデルフラッシュプロセス
@@ -248,34 +258,44 @@ v2.0.3 以降のファームウェアバージョンでは、ビジュアル検�
 
 ### ステップ 2. シリアルポート経由でプラットフォームに接続
 
--  `Connect` をクリック 
+- `Connect` をクリック 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
-- 正しいシリアルポート（"A" で終わるもの）を選択
+- 正しいシリアルポート（"A"で終わるもの）を選択します
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+:::note
+macOSまたはLinuxを使用している場合は、番号の小さいポートを選択してください。
+:::
 
-- `Connect` をクリック
+- `Connect`をクリックします
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
 
-### ステップ 3. 既存のモデルを確認し、新しいモデルに変更する
+### ステップ3. 既存のモデルを確認し、新しいモデルに変更する
 
-- モデル名とモデルバージョンを確認
+- モデル名とモデルバージョンを確認します
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI5.png" style={{width:500, height:'auto'}}/></div>
 
-- `Select Model...` をクリックし、フラッシュしたいモデルをクリック
+- `Select Model...`をクリックし、フラッシュしたいモデルをクリックします
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI6.png" style={{width:500, height:'auto'}}/></div>
 
-- `Confirm` をクリック
+- `Confirm`をクリックします
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI7.png" style={{width:500, height:'auto'}}/></div>
 
-### ステップ 4. 閾値を調整し、効果をプレビューする
+### ステップ4. 効果をプレビューし、パラメータを調整する
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI8.png" style={{width:400, height:'auto'}}/></div>
 
-- また、エージェントと話すことで閾値を調整することもできます
+現在のビジュアルウェイクアップ機能では、以下の設定オプションが提供されています：
+
+- **ターゲットID** (`target`)：検出するターゲットIDを指定します。このIDは使用するビジュアルモデルに依存し、デフォルト値は0です。
+- **検出時間** (`duration`)：単位は秒で、ビジュアルウェイクアップの感度を調整するために使用されます。デフォルトは1秒です（このデフォルトには1秒のデバウンス処理は含まれません）。
+- **信頼度閾値** (`threshold`)：ビジュアルモデルがオブジェクトを認識するための信頼度の下限で、検出感度を調整するために使用されます。パーセンテージで表され、デフォルトは75%です。
+- **クールダウン期間** (`interval`)：単位は秒で、1つの会話が終了した後、再度トリガーされるまでに必要な待機時間を示し、同じオブジェクトによる頻繁な中断を避けるために使用されます。デフォルトは8秒です。
+
+例えば、`threshold`パラメータを変更することで、モデルの感度を調整できます。現在の閾値が厳しすぎると感じる場合は、Watcherに「信頼度閾値を60%に設定してください」と言うだけです。
 
 ## トラブルシューティング
 
@@ -284,22 +304,28 @@ v2.0.3 以降のファームウェアバージョンでは、ビジュアル検�
 1. **COMポートが検出されない**
    - 下部のType-Cポートを使用していることを確認してください
    - 別のUSBケーブルを試してください
-   - USBドライバーが正しくインストールされているか確認してください
+   - USBドライバが正しくインストールされているか確認してください
 
 2. **フラッシュが失敗する**
-   - Himaxをフラッシュする際は、「A」で終わるCOMポートを選択してください。
-   - ESP32-S3をフラッシュする際は、「B」で終わるCOMポートを選択してください。
+   - Himaxをフラッシュする際は、"A"で終わるCOMポートを選択してください。
+   - ESP32-S3をフラッシュする際は、"B"で終わるCOMポートを選択してください。
 
 3. **デバイスが応答しない**
    - ピンを使ってリセットボタンを軽く押してください
    - フラッシュ前に消去を試してください
 
-4. **視覚検出でデバイスがウェイクアップしない**
+4. **デバイスがビジュアル検出でウェイクアップしない**
    - シリアル出力に関連するログメッセージがあるか確認してください。
-   - ファームウェアバージョンv2.0.3では、この機能を有効にするために小智に「Turn on inference switch」と言う必要があります。
+   - ファームウェアバージョンv2.0.3では、この機能を有効にするために小智に「推論スイッチをオンにして」と言う必要があります。
 
-5. **シリアルに視覚認識ログが表示されるがデバイスがウェイクアップしない**
+5. **シリアルにビジュアル認識ログが表示されるが、デバイスがまだウェイクアップできない**
    - SenseCraft AIプラットフォームに移動し、PersonモデルをAIチップにフラッシュしてください。
+
+## FAQ
+
+**Q: Himaxに他のAIモデルをフラッシュできますか？**
+
+A: 現在、FaceとPersonモデルのみがサポートされています。他のモデルのフラッシュはまだサポートされておらず、将来のアップデートで利用可能になる予定です。
 
 ## 技術サポート
 

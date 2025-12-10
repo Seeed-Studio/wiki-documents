@@ -1816,6 +1816,18 @@ To convert a MIDI file into Arduino code that can be used with the XIAO MIDI Syn
     - Paste it into your Arduino project, replacing the existing melody array.
     - Update your playback logic if needed to match the new array structure.
 
+### Q2: Why is it sometimes impossible to upload programs to the XIAO MIDI Synthesizer?
+
+Since the ESP32-C3's program is flashed via UART, occasional program crashes may result in errors preventing program uploads to XIAO. Additionally, because XIAO and the MIDI board communicate directly through UART, traditional boot methods may not work directly with XIAO. You can try the following approach:
+
+1. Power on the XIAO MIDI Synthesizer and remove the XIAO ESP32-C3 development board.
+2. Disconnect the USB cable.
+3. Press and hold the B button on the XIAO ESP32-C3 board without releasing it.
+4. Reconnect the USB cable, then release the B button.
+5. Upload the program.
+
+This procedure should enable successful program upload.
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

@@ -241,6 +241,32 @@ tim.init(period=1000, mode=Timer.PERIODIC, callback=loop)
 
 Voltage on **pin A0** will start to gradually increase, after reaching maximum at appoximately *3.3V*, will drop to *0V* and cycle will repeat.
 
+### ADC Support
+ADC example MicroPython code:
+
+```python
+from machine import Pin, Timer, ADC
+led = Pin(18, Pin.OUT)  # digital output for blinking
+counter = 0             # simple counter for LED toggle
+
+ADC_CONVERT_V = 1.0 / 65535.0  # conversion factor: raw ADC (16-bit) → voltage (vref=1.0V)
+
+adc = ADC(4, vref=0)   # ADC reads on pin A4, using internal 1.0V reference
+adcVoltage = 0.0       # variable to store measured voltage
+
+def fun(tim):
+    global counter, adcVoltage  # make sure we update the global variables
+    counter += 1                # increment counter
+    adcVoltage = adc.read_u16() * ADC_CONVERT_V  # read ADC and convert to voltage
+    print(adcVoltage)           # print voltage to REPL
+    led.value(counter % 2)      # toggle LED every callback (blink)
+
+tim = Timer(-1)                    # create a virtual timer
+tim.init(period=1000,              # callback period in milliseconds (1000 ms = 1 s)
+         mode=Timer.PERIODIC,      # periodic callback
+         callback=fun)             # function to call
+```
+
 ## MicroPython Device Console
 
 Our partner **Neil** has written a command line console program for XIAO using MicroPython. With this programme you can easily upload, download and delete files. We thank him for his contribution to XIAO!

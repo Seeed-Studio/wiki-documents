@@ -774,7 +774,13 @@ Please complete the **System Configuration** according to your needs.
 
 <TabItem value="Jetpack 6.2" label="Jetpack6.2">
 
-- **Step 1:**Download the system image to your Ubuntu PC corresponding to the board you are using
+
+:::danger
+If you are using an **Orin NX 16GB/8GB** module, **do not enable MAXN SUPER mode**.
+The cooling capacity of the reComputer industrial J4011/J4012 is insufficient to support it, and forcing this mode may result in permanent damage to the module.
+:::
+
+- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -786,6 +792,16 @@ Please complete the **System Configuration** according to your needs.
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>reComputer Industrial J4012</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EaUtjH4gdPFGkQX86xzbLyEB6sckcd09RxxGJAlH2Qs4yg?e=a1KYbF" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>2c06ad9dbdb85f604905ce81403e9089<br />204d77292427985a0ab6786d7eabc211</th>
+    </tr>
+    <tr>
+      <td>reComputer Industrial J4011</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWw6iP0DHf5Cl3YI2z3sHDoBl0JPabJHzEMjCItaHiOKVQ?e=fmpMfC" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>530f68c2a0bfda15b1e8211acb3905e<br />55f28d041bb531dcfa278e7f9bbd4118e</th>
+    </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdypjC_kT7RAqqBHytE_KLwBLU6fEpoQ5Rv_MWYk-lMszQ?e=VV0U9A" target="_blank" rel="noopener noreferrer">Download</a></td>

@@ -32,7 +32,7 @@ tags:
 <br />
 
 reComputer R1000 边缘物联网控制器基于高性能 Raspberry Pi CM4 平台构建，配备四核 A72 处理器，最大支持 8GB RAM 和 32GB eMMC。配备可灵活配置的双以太网接口，还包括 3 个隔离的 RS485 通道，支持 BACnet、Modbus RTU、Modbus TCP/IP 协议。
-凭借强大的物联网网络通信能力，R1000 系列支持多种无线通信选项，包括 4G、LoRa®、Wi-Fi/BLE，允许灵活配置以充当相应的无线网关。该控制器非常适合远程设备管理、能源管理以及智能建筑领域的各种其他场景。
+凭借强大的物联网网络通信能力，R1000 系列支持多种无线通信选项，包括 4G、LoRa®、Wi-Fi/BLE，允许灵活配置以用作相应的无线网关。该控制器非常适合远程设备管理、能源管理以及智能建筑领域的各种其他场景。
 
 ## 特性
 
@@ -85,7 +85,7 @@ reComputer R1000 边缘物联网控制器基于高性能 Raspberry Pi CM4 平台
 
 > \*4G 和 LoRa® 模块默认不随 reComputer R1000 提供，请相应购买相关模块。
 
-## 命名规则
+## 命名约定
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig11.png" alt="pir" width="800" height="auto"/></p>
 
@@ -112,7 +112,7 @@ reComputer R1000 边缘物联网控制器基于高性能 Raspberry Pi CM4 平台
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>操作系统</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi OS，Ubuntu</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi OS、Ubuntu</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RAM</td>
@@ -179,7 +179,8 @@ reComputer R1000 边缘物联网控制器基于高性能 Raspberry Pi CM4 平台
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x HDMI 2.0</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>SIM 卡插槽</td>      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>支持标准 SIM 卡</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>SIM 卡插槽</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>支持标准 SIM 卡</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>M.2 插槽</td>
@@ -331,16 +332,17 @@ reComputer R1000 边缘物联网控制器基于高性能 Raspberry Pi CM4 平台
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>包含</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>标准包装中提供的必需组件。</td>
-    </tr>    <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>机械特性</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>尺寸(长 x 宽 x 高)</td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>机械</strong></td>
+    </tr>
+    <tr data-style="height: 18px;" style={{height: 18}}>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>尺寸(宽 x 高 x 深)</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>130 mm x 93 mm x 49.6 mm</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>外壳</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>6061 铝合金外壳，透明 PC 侧板</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>6061 铝合金外壳，配透明 PC 侧板</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>安装方式</td>
@@ -354,13 +356,13 @@ reComputer R1000 边缘物联网控制器基于高性能 Raspberry Pi CM4 平台
 </table>
 </div>
 
-## 硬件概览
+## 硬件概述
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig03.png" /></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig031.png" /></div>
 
-## 主板概览
+## 主板概述
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig02.png" /></div>
 
@@ -368,13 +370,13 @@ reComputer R1000 边缘物联网控制器基于高性能 Raspberry Pi CM4 平台
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig13.png" /></div>
 
-reComputer R1000 支持三种电源供电选项：AC、DC 端子和 PoE 端口。默认情况下，reComputer R1000 通过 AC/DC 端子供电（官方区域电源适配器 SKU：110061505/110061506），而**PoE 电源供电（PoE 模块，SKU：110991925）是可选的**。这提供了电源选择的灵活性，并允许与各种电源轻松集成。
+reComputer R1000 支持三种电源供电选项：AC、DC 端子和 PoE 端口。默认情况下，reComputer R1000 通过 AC/DC 端子供电（官方区域电源适配器 SKU：110061505/110061506），而**PoE 电源供电（PoE 模块，SKU：110991925）是可选的**。这提供了电源选择的灵活性，并允许轻松集成各种电源。
 
 ### 2 针电源端子
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-reComputer R1000 的额定 AC 电压为 12~24V 或 DC 电压为 9~36V。电源通过 2 针电源端子块连接器连接。要为 reComputer R1000 接地，可以将接地线固定到电源端子左上角的螺丝上。
+reComputer R1000 的额定 AC 电压为 12~24 V 或 DC 电压为 9~36V。电源通过 2 针电源端子块连接器连接。要为 reComputer R1000 接地，可以将接地线固定到电源端子左上角的螺丝上。
 
 :::note
 电源解决方案采用桥式整流二极管进行反极性保护，兼容 AC 和 DC 输入。这确保了**无论电源的正负极如何连接**，电路都不会损坏。通过使用桥式整流器，无论输入 DC 极性如何，输出电压极性都保持固定，提供有效的反极性保护。
@@ -388,22 +390,22 @@ reComputer R1000 的额定 AC 电压为 12~24V 或 DC 电压为 9~36V。电源�
 - PoE 输出：12V，最大 1.1A
 
 :::note
-值得注意的是，reComputer R1000 提供的 PoE 模块符合 IEEE 802.3af 标准，可提供最大 12.95W 的电源供应。因此，如果需要连接 SSD 或 4G 模块等大功率外设，PoE 电源供应可能不足。在这种情况下，建议使用 AC/DC 端子供电，以确保设备的稳定可靠运行。
+值得注意的是，reComputer R1000 提供的 PoE 模块符合 IEEE 802.3af 标准，可提供最大 12.95W 的电源供应。因此，如果需要连接 SSD 或 4G 模块等高功耗外设，PoE 电源供应可能不足。在这种情况下，建议使用 AC/DC 端子供电，以确保设备的稳定可靠运行。
 :::
 
 ### 功耗
 
-请参考下表了解在 Seeed Studio 实验室测试的 reComputer R1000 功耗。请注意，此值仅供参考，因为测试方法和环境可能导致结果变化。
+请参考下表了解 Seeed Studio 实验室测试的 reComputer R1000 功耗。请注意，此值仅供参考，因为测试方法和环境可能导致结果差异。
 
 | 状态   | 电压 | 电流 | 功耗 | 描述 |
 |   ---      |    ---    |   ---      |         ---          |        ---    |
 |关机  |24V      |  51mA  |    1.224W         | 关机和断电状态下的静态功耗测试。|
 |空闲      |24V      |  120mA |    2.88W          | 测试在为 reComputer R1000 设备提供 24V 电源且未运行任何测试程序时的输入电流。|
-|满载 |24V      |  230mA  |    5.52W          | 使用"stress -c 4"命令配置 CPU 满载运行。未连接外部设备。 |
+|满载 |24V      |  230mA  |    5.52W          | 使用 "stress -c 4" 命令配置 CPU 满载运行。未连接外部设备。 |
 
 ### 开机和关机
 
-reComputer R1000 默认不带电源按钮，一旦连接电源，系统将自动启动。关机时，请在操作系统中选择关机选项，等待系统完全关机后再切断电源。要重启系统，只需重新连接电源即可。
+reComputer R1000 默认不带电源按钮，一旦连接电源，系统将自动启动。关机时，请在操作系统中选择关机选项，并等待系统完全关机后再切断电源。要重启系统，只需重新连接电源即可。
 
 :::note
 请注意，关机后，请至少等待 10 秒钟再重启系统，以便内部电容器完全放电。
@@ -470,13 +472,14 @@ reComputer R1000 默认不带电源按钮，一旦连接电源，系统将自动
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>HDMI</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x HDMI 2.0</td>
-    </tr>    <tr data-style="height: 18px;" style={{height: 18}}>
+    </tr>
+    <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>支持 LCD*（板载在外壳内）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>支持 LCD*（板载于外壳内）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>扬声器*</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>支持麦克风*（板载在外壳内）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>支持麦克风*（板载于外壳内）</td>
     </tr>
   </tbody>
 </table>
@@ -496,15 +499,15 @@ reComputer R1000 配备了 6 个 LED 指示灯，用于显示设备的运行状�
 
 | LED 指示灯 | 颜色          | 状态 | 描述                                                  |
 | ------------- | -------------- | ------ | ------------------------------------------------------------ |
-| PWR           | 绿色          | 亮     | 设备已连接电源。                      |
-|               |                | 灭    | 设备未连接电源。                       |
+| PWR           | 绿色          | 亮起     | 设备已连接电源。                      |
+|               |                | 熄灭    | 设备未连接电源。                       |
 | ACT           | 绿色          |        | 在 Linux 下，此引脚会闪烁以表示 eMMC 访问。<br /> 如果启动过程中发生任何错误，此 LED 将闪烁错误模式，<br />可以使用[树莓派网站上的查找表](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes)进行解码。 |
 | USER          | 绿色/红色/蓝色 |        | 需要用户自定义。                                  |
-| RS485-1       | 绿色          | 灭    | RS485 通道 1 无数据传输。                         |
+| RS485-1       | 绿色          | 熄灭    | RS485 通道 1 无数据传输。                         |
 |               |                | 闪烁  | RS485 通道 1 正在接收或发送数据。               |
-| RS485-2       | 绿色          | 灭    | RS485 通道 2 无数据传输。                         |
+| RS485-2       | 绿色          | 熄灭    | RS485 通道 2 无数据传输。                         |
 |               |                | 闪烁  | RS485 通道 2 正在接收或发送数据。               |
-| RS485-3       | 绿色          | 灭    | RS485 通道 3 无数据传输。                         |
+| RS485-3       | 绿色          | 熄灭    | RS485 通道 3 无数据传输。                         |
 |               |                | 闪烁  | RS485 通道 3 正在接收或发送数据。               |
 
 **ACT 状态表**
@@ -528,13 +531,13 @@ reComputer R1000 配备了 6 个 LED 指示灯，用于显示设备的运行状�
 
 如果 ACT LED 以规律的四次闪烁模式闪烁，表示无法找到启动代码（start.elf）
 如果 ACT LED 以不规律的模式闪烁，表示启动已开始。
-如果 ACT LED 不闪烁，则 EEPROM 代码可能已损坏，请尝试在不连接任何设备的情况下重试以确认。更多详情请查看树莓派论坛：
+如果 ACT LED 不闪烁，则 EEPROM 代码可能已损坏，请在不连接任何设备的情况下重试以确认。更多详情请查看树莓派论坛：
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
 更多详情请查看[树莓派论坛](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151)。
 
 要控制用户 LED，我们建议使用 sysfs，这是 Linux 内核提供的伪文件系统，用于公开各种内核子系统、硬件设备及其相关驱动程序的信息。在 ReComputer R1000 上，我们将用户 LED 接口抽象为三个设备文件（led-red、led-blue 和 led-green），使用户能够通过与这些文件交互来简单地控制 LED 灯。示例如下：
 
-1. 要打开红色 LED，请在终端中输入以下命令：
+1. 要点亮红色 LED，请在终端中输入以下命令：
 
 ```bash
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
@@ -546,7 +549,7 @@ echo 1 | sudo tee /sys/class/leds/led-red/brightness
 echo 0 | sudo tee /sys/class/leds/led-red/brightness
 ```
 
-3. 您可以同时打开红色和绿色 LED，请在终端中输入以下命令：
+3. 您可以同时点亮红色和绿色 LED，请在终端中输入以下命令：
 
 ```bash
 echo 1 | sudo tee /sys/class/leds/led-red/brightness
@@ -557,20 +560,20 @@ echo 1 | sudo tee /sys/class/leds/led-green/brightness
 
 <div align="left"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig07.png" /></div>
 
-reComputer R1000 配备了一个有源蜂鸣器，可用于各种用途，如报警和事件通知。在 reComputer R1000 v1.0 中，蜂鸣器通过 GPIO21 连接到 CM4，在 reComputer R1000 1.1 中通过 GPIO20 连接到 CM4。
+reComputer R1000 配备了有源蜂鸣器，可用于各种用途，如报警和事件通知。在 reComputer R1000 v1.0 中，蜂鸣器通过 GPIO21 连接到 CM4，在 reComputer R1000 1.1 中通过 GPIO20 连接到 CM4。
 
 :::note
-要区分硬件版本（v1.0 和 v1.1），您可以参考[reComputer R1000 V1.1 产品变更详情](https://wiki.seeedstudio.com/cn/recomputer_r1000_v1_1_description/)。
+要区分硬件版本（v1.0 和 v1.1），您可以参考 [reComputer R1000 V1.1 产品变更详情](https://wiki.seeedstudio.com/cn/recomputer_r1000_v1_1_description/)。
 :::
 
-对于 reComputer R1000 v1.0 用户，蜂鸣器连接到 GPIO-21，要打开/关闭蜂鸣器，请在终端中输入以下命令：
+对于 reComputer R1000 v1.0 用户，蜂鸣器连接到 GPIO-21，要开启/关闭蜂鸣器，请在终端中输入以下命令：
 
 ```bash
 raspi-gpio set 21 op dh # turn on
 raspi-gpio set 21 op dl # turn off
 ```
 
-对于 reComputer R1000 v1.1 用户，蜂鸣器连接到 PCA9535 P15，要关闭（打开）蜂鸣器，请在终端中输入以下命令：
+对于 reComputer R1000 v1.1 用户，蜂鸣器连接到 PCA9535 P15，要关闭（开启）蜂鸣器，请在终端中输入以下命令：
 
 ```bash
 echo 591 | sudo tee /sys/class/gpio/export
@@ -584,7 +587,7 @@ echo 0 | sudo tee /sys/class/gpio/gpio591/value # turn off
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig21.png" /></div>
 
 reComputer R1000 配备了 3 组 RS485 接口，使用 3 针连接器，信号和电源均采用隔离设计，确保在工业和自动化应用中的安全可靠运行。RS485A 和 RS485B 信号使用电容隔离，提供出色的 EMI 抗扰性，满足 RS485 接口的高速通信要求。
-默认情况下，未安装 120Ω终端电阻。但是，包装盒中包含五个表面贴装电阻。如有需要，用户应自行将电阻焊接到设备上。
+默认情况下，未安装 120Ω 终端电阻。但是，包装盒中包含五个表面贴装电阻。如有需要，用户应自行将电阻焊接到设备上。
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position.png" /></div>
 
@@ -595,9 +598,9 @@ RS485 接口使用隔离电源，这意味着连接到 RS485 接口的外部设�
 
 :::
 
-以下是 reComputer 的 485 接口相关引脚数据表。
+以下是 reComputer 485 接口相关引脚的数据表。
 
-| RS485         | RS485_POWER_EN         | OS 设备文件 | P14         | 默认（高） |
+| RS485         | RS485_POWER_EN         | OS 设备文件 | P14         | 默认（高电平） |
 | ------------- | ---------------------- | -------------- | ----------- | ------------- |
 | TX5           |                        | /dev/ttyAMA5   | GPIO12      |               |
 | RX5           |                        |                | GPIO13      |               |
@@ -605,13 +608,13 @@ RS485 接口使用隔离电源，这意味着连接到 RS485 接口的外部设�
 | RX2           | ID_SC                  |                | GPIO1/ID_SC |               |
 | TX3           |                        | /dev/ttyAMA3   | GPIO4       |               |
 | RX3           |                        |                | GPIO5       |               |
-| RS485_1_DE/RE | (高/DE \|\| 低/RE) | /dev/ttyAMA2   | GPIO6       | 默认低   |
-| RS485_2_DE/RE |                        | /dev/ttyAMA3   | GPIO17      | 默认低   |
-| RS485_3_DE/RE |                        | /dev/ttyAMA5   | GPIO24      | 默认低   |
+| RS485_1_DE/RE | (高电平/DE \|\| 低电平/RE) | /dev/ttyAMA2   | GPIO6       | 默认低电平   |
+| RS485_2_DE/RE |                        | /dev/ttyAMA3   | GPIO17      | 默认低电平   |
+| RS485_3_DE/RE |                        | /dev/ttyAMA5   | GPIO24      | 默认低电平   |
 
 默认情况下，RS485 端口的电源使能端口为高电平。每个 RS485 接口都处于接收状态。您可以做一个简单的实验。
 
-将 PC 的 485 端口连接到 reComputer-R。
+将 PC 连接到 reComputer-R 的 485 端口。
 
 在 reComputer 的终端中输入：
 
@@ -629,13 +632,14 @@ cat /dev/ttyAMA2
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" /></div>
 
-reComputer R1000 的启动开关连接到 CM4 的 nRPI_BOOT 引脚。此开关为用户提供了在 eMMC 和 USB 之间选择启动源的选项。在正常模式下，开关应设置为远离带有"BOOT"标签的一侧，使系统从 eMMC 启动。相反，当用户需要刷写系统镜像时，应将开关设置为朝向"BOOT"标签，允许系统从 Type-C USB 接口启动。
+reComputer R1000 的启动开关连接到 CM4 的 nRPI_BOOT 引脚。此开关为用户提供了在 eMMC 和 USB 之间选择启动源的选项。在正常模式下，开关应设置为远离带有 "BOOT" 标签的一侧，使系统从 eMMC 启动。相反，当用户需要刷写系统镜像时，应将开关设置为朝向 "BOOT" 标签，允许系统从 Type-C USB 接口启动。
+
 <div class="table-center">
 
 | 开关位置                                              | 模式        | 描述    | nRPI-BOOT |
 | ------------------------------------------------------------ | ----------- | -------------- | --------- |
 | <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig141.png" alt="image" width="80"/> | 正常模式 | 从 eMMC 启动 | Low       |
-| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | 刷机模式  | 从 USB 启动  | High      |
+| <img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" alt="image" width="80"/>  | 刷写模式  | 从 USB 启动  | High      |
 
 </div>
 
@@ -648,7 +652,7 @@ reComputer R1000 配备了一个 USB Type-C 端口和两个 USB Type-A 端口。
 | **类型**   | **数量** | **协议** | **功能** | **描述**                                              |
 | ---------- | ------------ | ------------ | ------------ | ------------------------------------------------------------ |
 | **Type-C** | *1           | USB2.0       | USB-Device   | 用于串口调试、烧录镜像等。          |
-| **Type-A** | *2           | USB2.0       | USB-Host     | 连接不同的 USB 设备，如闪存盘、<br /> USB 键盘或鼠标。 |
+| **Type-A** | *2           | USB2.0       | USB-Host     | 连接不同的 USB 设备，如闪存驱动器、<br /> USB 键盘或鼠标。 |
 
 通过运行 **lsusb** 命令检查是否检测到 USB 集线器。此命令列出所有连接的 USB 设备，包括集线器。
 
@@ -658,7 +662,7 @@ lsusb
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/23.png" /></div>
 
-运行此命令应该显示连接到系统的 USB 设备信息，包括存在的任何 USB 集线器。
+运行此命令应显示连接到系统的 USB 设备信息，包括存在的任何 USB 集线器。
 
 如果 USB 集线器正常工作，您应该在 **lsusb** 命令的输出中看到其详细信息。如果未列出，可能是集线器或其与系统的连接存在问题。在这种情况下，您可能需要对 USB 集线器或其连接进行故障排除。
 
@@ -691,7 +695,7 @@ reComputer R1000 上的 SSD 插槽设计用于容纳 NVMe M.2 2280 SSD，容量�
 sudo fdisk -l
 ```
 
-此命令将显示连接到系统的所有磁盘列表，如果 SSD 被正确检测到，也会包括在内。查找代表您的 SSD 的条目。它们通常以 /dev/sd 开头，后跟一个字母（例如，/dev/sda、/dev/sdb 等）。
+此命令将显示连接到系统的所有磁盘列表，包括正确检测到的 SSD。查找代表您的 SSD 的条目。它们通常以 /dev/sd 开头，后跟一个字母（例如，/dev/sda、/dev/sdb 等）。
 一旦您识别出对应于 SSD 的条目，就可以根据需要进行分区或格式化。
 
 :::note
@@ -705,7 +709,7 @@ SSD 卡有两种主要用途：<br />
 
 <div align="left"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig06.png" /></div>
 <br />
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig05.png" /></div>
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/slot.png" /></div>
 <br />
 <div class="table-center">
 
@@ -726,7 +730,7 @@ SSD 卡有两种主要用途：<br />
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig16.png" /></div>
 
-reComputer R1000 的复位孔中有一个迷你按钮开关。通过用细物体按下此按钮，可以复位 CM4。此引脚为高电平时表示 CM4 已启动。将此引脚拉低会复位模块。
+reComputer R1000 的复位孔中有一个微型按钮开关。通过用细物体按下此按钮，可以复位 CM4。此引脚为高电平时表示 CM4 已启动。将此引脚拉低会复位模块。
 
 ### 以太网 RJ45
 
@@ -741,7 +745,7 @@ reComputer R1000 的复位孔中有一个迷你按钮开关。通过用细物体
 
 </div>
 
-reComputer R1000 配备两个以太网 RJ45 端口。ETH0 是 CM4 原生千兆以太网接口，支持三种不同速度：10/100/1000 Mbit/s。可以购买额外的 PoE 模块来通过此接口启用以太网供电（PoE），为 reComputer R1000 提供电源。另一个 ETH1 支持 10/100 Mbit/s，它是从 USB 转换而来的。
+reComputer R1000 配备两个以太网 RJ45 端口。ETH0 是 CM4 原生千兆以太网接口，支持三种不同速度：10/100/1000 Mbit/s。可以购买额外的 PoE 模块来通过此接口启用以太网供电（PoE），为 reComputer R1000 提供电源。另一个 ETH1 支持 10/100 Mbit/s，由 USB 转换而来。
 
 ### HDMI
 
@@ -844,7 +848,8 @@ echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
 
-:::warning此命令会触发内核崩溃，应该会导致看门狗重启系统。
+:::warning
+此命令会触发内核崩溃，应该会导致看门狗重启系统。
 :::
 
 5. 监控系统以确认它在指定的超时时间后重启。
@@ -900,7 +905,7 @@ reComputer R1000 支持丰富的扩展模块和配件选择，使其适用于各
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061641</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>Wi-Fi 功能需要此配件</td>
+      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>此配件是 Wi-Fi 功能所必需的</td>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>Wi-Fi/BLE 天线</td>
       <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>Raspberry Pi Compute Module 4 天线套件</td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992364</td>
@@ -958,7 +963,8 @@ reComputer R1000 支持丰富的扩展模块和配件选择，使其适用于各
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990247</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>256GB NVMe M.2 PCle Gen3x4 2280 内置 SSD</td>      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990246</td>
+      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>256GB NVMe M.2 PCle Gen3x4 2280 内置 SSD</td>
+      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990246</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>128GB NVMe M.2 PCle Gen3x4 2280 内置 SSD</td>
@@ -1084,19 +1090,21 @@ exit
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
-reComputer R1000 主板配备两个 Mini-PCIe 插槽，其中 Mini-PCIe 插槽 1 支持使用 USB 协议的 4G 模块。来自移远通信的 EC25 4G 模块已经过全面测试，与 reComputer R1000 完全兼容。
+reComputer R1000 主板配备两个 Mini-PCIe 插槽，其中 Mini-PCIe 插槽 1 支持使用 USB 协议的 4G 模块。来自移远的 EC25 4G 模块已经过全面测试，与 reComputer R1000 完全兼容。
 
 :::note
 请注意，如果您需要 4G 功能，需要购买相应的 4G 模块和外置天线。[请点击此处查看组装说明](/cn/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna)。
 :::
 
+#### 通过 ECM 模式连接到 4G 模块
+
 要通过 minicom 使用 AT 命令与 4G 模块交互，请按照以下步骤操作：
 
-**步骤 1.** 请在系统上电之前，将支持 4G 的 SIM 卡插入 [SIM 卡插槽](/cn/recomputer_r/#sim-slot)。
+**步骤 1.** 请在系统启动前将支持 4G 的 SIM 卡插入[SIM 卡插槽](/cn/recomputer_r/#sim-slot)。
 
 **步骤 2.** 使用 ```lsusb``` 检查 EC25-EUX 是否被检测到
 
@@ -1119,7 +1127,7 @@ sudo apt install minicom
 sudo minicom -D /dev/ttyUSB2 -b 1152008n1
 ```
 
-串行连接打开后，输入 AT 并按"回车"，您应该看到 OK。
+一旦串行连接打开，输入 AT 并按"Enter"，您应该看到 OK。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image31.png"/></div>
 
@@ -1147,14 +1155,122 @@ AT+CFUN=1,1
 
 您也可以使用命令 `ifconfig` 查询 reComputer R1000 的网络状态。
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image33.png"/></div>
+ECM 模式将为您创建一个新的网络接口 `usb0` 供您使用。
+
+
+#### 通过 QMI 模式连接到 4G 模块
+
+要通过 qmicli 使用 QMI 协议与 4G 模块交互，请按照以下步骤操作：
+
+**步骤 1.** 将 quectel-CM 工具下载到 `/usr/bin/` 目录。
+
+```sh
+# Use wget to download the compiled quectel-CM to /usr/bin/
+sudo wget -O /usr/bin/quectel-CM https://files.seeedstudio.com/wiki/reComputer-R1000/network/quectel-CM
+# Add execution permission
+sudo chmod 777 /usr/bin/quectel-CM
+```
+
+**步骤 2.** 将 4G 网卡模式设置为 QMI。
+
+```sh
+sudo minicom -D /dev/ttyUSB2 -b 115200
+
+# Enter the following command
+AT+QCFG="usbnet",0
+# Enter the following command to verify
+AT+QCFG="usbnet"
+# Successful configuration is indicated by the following response
+AT+QCFG="usbnet",0
+
+# Enter the command to restart and enable the module
+AT+CFUN=1,1
+```
+
+**步骤 3.** 测试网络连接。
+
+```sh
+# Use the -s parameter to specify the APN for the data connection
+sudo ./quectel-CM -s APN
+
+# APN settings for different carriers
+China Mobile: "cmnet"
+China Unicom: "3gnet"
+China Telecom: "ctnet"
+```
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/get_start/image-1.png"/></div>
+
+输入 ifconfig 检查是否已分配 IP 地址
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/get_start/image-2.png"/></div>
+
+网络连接测试成功后，您可以创建一个 systemd 服务来确保系统启动时 4G 模块自动连接。
+
+**步骤 4.** 创建 systemd 服务文件。
+
+创建自动启动脚本：
+
+```sh
+sudo vi /opt/auto_4G.sh
+```
+
+输入以下内容。APN 应根据您的 SIM 卡运营商确定。这里，`3gnet` 是中国联通的 APN。
+
+```sh
+#!/bin/bash
+sudo quectel-CM -s 3gnet
+```
+
+添加执行权限：
+
+```bash
+sudo chmod 0755 /opt/auto_4G.sh
+```
+
+创建自动启动服务文件：
+
+```bash
+sudo vi /etc/systemd/system/auto_4G.service
+```
+
+服务文件内容：
+
+```bash
+[Unit]
+Description = auto_4G daemon
+
+[Service]
+ExecStart = /opt/auto_4G.sh
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
+```
+
+启用并启动 auto_4G.service：
+
+```bash
+sudo systemctl enable auto_4G
+sudo systemctl start auto_4G
+```
+
+然后您可以重启或等待一段时间，让模块从您的 SIM 卡运营商获取互联网连接。
+
+您也可以使用命令 `ifconfig` 来查询 reComputer R1000 的网络状态。
+
+QMI 模式将为您创建一个新的网络接口 `wwan0` 供您使用。
+
+
+
 
 ### LoRa® 模块
 
 :::note
 两个 Mini-PCIe 插槽都支持使用 USB 协议的 LoRa® 模块。同时，Mini-PCIe 插槽 2 支持使用 SPI 协议的 LoRa® 模块。来自 Seeed Studio 的 WM1302 模块已经过全面测试，与 reComputer R1000 完全兼容。但是 USB 版本需要使用为 4G 模块设计的 Mini PCIe，这意味着如果您想同时使用 4G 模块和 LoraWAN® 模块，请选择 WM1302 LoraWAN® 模块的 SPI 版本。
 <br />
-请注意，如果您需要 LoRa® 功能，需要购买相应的 LoRa® 模块和外置天线。
+请注意，如果您需要 LoRa® 功能，必须购买相应的 LoRa® 模块和外部天线。
 :::
 
 <!-- Code -->
@@ -1169,7 +1285,7 @@ import TabItem from '@theme/TabItem';
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM1302-LoRaWAN-Gateway-Module-SPI-US-915-p-5454.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -1177,14 +1293,14 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1.** 请参考 [LoraWAN® 模块硬件组装](/cn/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) 指南，将 `WM1302 SPI LoraWAN® 模块` 安装到 `LoraWAN® Mini PCIe 插槽` 中，您应该看到 *`Lora`* 丝印。
 
-**步骤 2.** 在命令行中输入 `sudo raspi-config` 打开树莓派软件配置工具：
+**步骤 2.** 在命令行中输入 `sudo raspi-config` 打开 Raspberry Pi 软件配置工具：
 
 - 选择 Interface Options
 - 选择 SPI，然后选择 **Yes** 启用它
 - 选择 I2C，然后选择 **Yes** 启用它
-- 选择 Serial Port，然后对"Would you like a login shell..."选择 **No**，对"Would you like the serial port hardware..."选择 **Yes**
+- 选择 Serial Port，然后对 "Would you like a login shell..." 选择 **No**，对 "Would you like the serial port hardware..." 选择 **Yes**
 
-完成后，请重启树莓派以确保这些设置生效。
+完成后，请重启 Raspberry Pi 以确保这些设置生效。
 
 **步骤 3.** 下载 [WM1302 代码](https://github.com/Lora-net/sx1302_hal) 到 reComputer R1000 并编译它。
 
@@ -1197,7 +1313,8 @@ sudo vim ./libloragw/inc/loragw_i2c.h
 
 将 `#define I2C_DEVICE "/dev/i2c-1"` 更改为 `#define I2C_DEVICE "/dev/i2c-3"`。
 
-:::important如果您使用的是版本 1.1 reComputer R1000，请更改为 `#define I2C_DEVICE "/dev/i2c-6"`
+:::important
+如果您使用的是 1.1 版本的 reComputer R1000，请更改为 `#define I2C_DEVICE "/dev/i2c-6"`
 :::
 
 ```bash
@@ -1233,7 +1350,7 @@ vim global_conf.json.sx1250.EU868
 将 `"com_path": "/dev/spidev0.0"` 更改为 `"com_path": "/dev/spidev0.1"`
 
 :::important
-如果您使用的是版本 1.1 reComputer R1000，请更改为 `"com_path": "/dev/spidev1.1"`
+如果您使用的是 1.1 版本的 reComputer R1000，请更改为 `"com_path": "/dev/spidev1.1"`
 :::
 
 **步骤 6.** 启动 LoraWAN® 模块
@@ -1246,13 +1363,13 @@ cd ~/sx1302_hal/packet_forwarder
 ```
 
 </TabItem>
-<TabItem value="WM1302 USB Module" label="WM1302 USB Module">
+<TabItem value="WM1302 USB Module" label="WM1302 USB 模块">
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114992991-wio-wm1302-lorawan-gateway-module-_spi_---us915-m---first.jpg" alt="pir" width={300} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -1266,7 +1383,7 @@ cd ~/sx1302_hal/packet_forwarder
 
 完成后，请重启 Raspberry Pi 以确保这些设置生效。
 
-**步骤 3.** 下载 [WM1302 代码](https://github.com/Lora-net/sx1302_hal) 到 reTerminal 并编译。
+**步骤 3.** 下载 [WM1302 代码](https://github.com/Lora-net/sx1302_hal) 到 reTerminal 并编译它。
 
 ```sh
 cd ~/
@@ -1355,14 +1472,14 @@ cd ~/sx1302_hal/packet_forwarder
 
 ### Zigbee 模块
 
-Mini-PCIe 插槽支持使用 USB 协议的 Zigbee 模块，允许将 Zigbee 功能无缝集成到兼容设备中。此功能可在 Zigbee 网络内实现高效通信和控制，增强系统的多功能性和连接性。通过两个可用于 Zigbee 模块的 Mini-PCIe 插槽，用户可以灵活地实施多样化应用以增强可靠性。
+Mini-PCIe 插槽支持使用 USB 协议的 Zigbee 模块，允许将 Zigbee 功能无缝集成到兼容设备中。此功能可在 Zigbee 网络内实现高效的通信和控制，增强系统的多功能性和连接性。由于有两个 Mini-PCIe 插槽可用于 Zigbee 模块，用户可以灵活地实施多样化的应用以增强可靠性。
 
 :::note
-请注意，如果您需要 Zigbee 功能，需要购买相应的 Zigbee 模块和外部天线。
+请注意，如果您需要 Zigbee 功能，必须购买相应的 Zigbee 模块和外部天线。
 [请点击此处查看组装说明](/cn/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna)。
 :::
 
-#### 将带有 Zigbee 模块的 reComputer R1000 设置为 Zigbee 协调器
+#### 将 reComputer R1000 与 Zigbee 模块设置为 Zigbee 协调器
 
 **步骤 1.** 检查串口：
 使用以下命令检查可用的串口：
@@ -1409,7 +1526,7 @@ sudo apt-get install cutecom
 :::
 
 **步骤 5.** 检查设备状态：
-发送命令 `5 03 00 00 00` 检查设备状态。期望响应类似于 `55 2a 00 00 00 01 XX XX XX XX`，其中 `XX` 代表设备信息。
+发送命令 `5 03 00 00 00` 检查设备状态。期望得到类似 `55 2a 00 00 00 01 XX XX XX XX` 的响应，其中 `XX` 代表设备信息。
 
 **步骤 6.** 进入透明模式：
 如果网络组建成功，通过发送命令 `55 07 00 11 00 03 00 01 13` 进入透明模式。两个模块都应处于透明模式以进行直接通信。不要忘记将输入模式设置为 *None*。要退出透明模式，发送 `+++`。
@@ -1424,7 +1541,7 @@ sudo apt-get install cutecom
 
 ### PoE
 
-reComputer R1000 作为受电设备可以通过添加 PoE 电源模块来支持 IEEE 802.3af 标准。用户需要拆卸设备来安装 PoE 模块以实现以太网 PoE 功能。
+reComputer R1000 作为受电设备，通过添加 PoE 电源模块可以支持 IEEE 802.3af 标准。用户需要拆卸设备来安装 PoE 模块以实现以太网 PoE 功能。
 
 :::note
 reComputer R1000 支持 PoE 供电，但标准产品默认不包含 PoE 模块。Seeed 可以为批量定制订单提供 PoE 焊接和组装服务。但是，如果客户正在测试样品，他们需要[自己焊接和组装 PoE 模块](/cn/recomputer_r1000_assembly_guide/#assemble-ups-and-poe-module)。
@@ -1432,7 +1549,7 @@ reComputer R1000 支持 PoE 供电，但标准产品默认不包含 PoE 模块�
 
 ### M.2 插槽
 
-reComputer R1000 通过板上两个 Mini-PCIe 插槽下方的 PCIe 插槽（J62）支持 2280 NVMe SSD 和 AI 加速器（Hailo）。需要注意的是，CM4 的 PCIe 是 gen2.0，最大理论速度为 5Gbps。如果您使用的是 Gen3.0 或更高版本的 SSD，可能无法达到 SSD 的最大速度。经过测试，安装了 SSD 的 reTerminal DM 可以达到最大写入速度 230MB/s 和最大读取速度 370MB/s。如果您不确定哪些 SSD 兼容，可以按照下面的配件列表购买。
+reComputer R1000 通过板载两个 Mini-PCIe 插槽下方的 PCIe 插槽（J62）支持 2280 NVMe SSD 和 AI 加速器（Hailo）。需要注意的是，CM4 的 PCIe 是 gen2.0，最大理论速度为 5Gbps。如果您使用的是 Gen3.0 或更高版本的 SSD，可能无法达到 SSD 的最大速度。经过测试，安装了 SSD 的 reTerminal DM 可以达到最大写入速度 230MB/s 和最大读取速度 370MB/s。如果您不确定哪些 SSD 兼容，可以按照下面的配件列表购买。
 
 [请点击此处查看组装说明](/cn/recomputer_r1000_assembly_guide/#assemble-ssd)。
 
@@ -1442,7 +1559,8 @@ reComputer R1000 通过板上两个 Mini-PCIe 插槽下方的 PCIe 插槽（J62�
   <tbody>
   <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={4} style={{height: 18, width: '25%'}}>SSD 卡</td>
-      <td data-style="height: 18px; width: 50%;" colSpan={1} style={{height: 18, width: '50%'}}>NVMe M.2 2280 SSD 1TB</td>      <td data-style="height: 18px; width: 25%;" colSpan={1} style={{height: 18, width: '25%'}}><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">112990267</a></td>
+      <td data-style="height: 18px; width: 50%;" colSpan={1} style={{height: 18, width: '50%'}}>NVMe M.2 2280 SSD 1TB</td>
+      <td data-style="height: 18px; width: 25%;" colSpan={1} style={{height: 18, width: '25%'}}><a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">112990267</a></td>
   </tr>
   <tr data-style="height: 18px;" style={{height: 18}}>
     <td data-style="height: 18px; width: 50%;" colSpan={1} style={{height: 18, width: '50%'}}>512GB NVMe M.2 PCle Gen3x4 2280 内置 SSD</td>
@@ -1466,13 +1584,13 @@ reComputer R1000 通过板上两个 Mini-PCIe 插槽下方的 PCIe 插槽（J62�
 
 SSD 卡有两种主要用途：<br />
 1.大容量存储：SSD 卡可用于大容量存储需求。<br />
-2.带镜像的启动驱动器：另一种用途是将 SSD 既用作大容量存储，又用于存储系统镜像，允许直接从 SSD 卡启动。<br />
-需要注意的是，市场上并非所有 SSD 卡都支持第二种用途。因此，如果您打算将其用作启动驱动器并且不确定购买哪种型号，我们建议选择我们推荐的 **1TB SSD（SKU [112990267](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)）**。该型号已经过测试并验证了启动功能，降低了兼容性问题的风险，并最大限度地减少了试错成本。
+2.带镜像的启动驱动器：另一种用法是将 SSD 既用作大容量存储，又用于存储系统镜像，允许直接从 SSD 卡启动。<br />
+需要注意的是，市场上并非所有 SSD 卡都支持第二种用法。因此，如果您打算将其用作启动驱动器并且不确定购买哪种型号，我们建议选择我们推荐的 **1TB SSD（SKU [112990267](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)）**。该型号已经过测试并验证了启动功能，降低了兼容性问题的风险，并最大限度地减少了试错成本。
 :::
 
 ### 加密芯片 TPM 2.0
 
-TPM 采用英飞凌的 OPTIGA™ TPM SLB9670，符合可信计算组织 (TCG) TPM 2.0 规范，推荐作为 reComputer R1000 的加密芯片。该芯片具有 SPI 接口，应用于板载 J13 端口，以实现平台完整性、远程认证和加密服务的信任根。
+TPM 采用英飞凌的 OPTIGA™ TPM SLB9670，符合可信计算组织（TCG）TPM 2.0 规范，推荐作为 reComputer R1000 的加密芯片。该芯片具有应用于板载 J13 端口的 SPI 接口，以实现平台完整性的信任根、远程认证和加密服务。
 
 :::note
 [请点击此处查看组装说明](/cn/recomputer_r1000_assembly_guide/#assemble-tpm-20-module)。
@@ -1484,20 +1602,20 @@ TPM 采用英飞凌的 OPTIGA™ TPM SLB9670，符合可信计算组织 (TCG) TP
 ls /dev | grep tpm
 ```
 
-如果您在输出中看到 **tpm0** 和 **tpmrm0**，这意味着检测到 TPM（可信平台模块）设备并且在您的系统上可用。这表明 TPM 硬件被识别并可访问，这是一个好兆头。您可以继续使用 TPM 相关功能或应用程序，因为知道设备存在且可访问。
+如果您在输出中看到 **tpm0** 和 **tpmrm0**，这意味着检测到 TPM（可信平台模块）设备并且在您的系统上可用。这表明 TPM 硬件被识别并且可访问，这是一个好兆头。您可以继续使用与 TPM 相关的功能或应用程序，因为知道设备存在且可访问。
 
 ### UPS
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/30.png" /></div>
 
-UPS 是 7F，串联工作。UPS 模块位于 DC5V 和 CM4 组件之间，利用 GPIO 信号在 5V 电源断电时警告 CPU。收到此信号后，CPU 在超级电容器能量耗尽之前执行紧急脚本，启动"$ shutdown"命令。
+UPS 是 7F，串联工作。UPS 模块位于 DC5V 和 CM4 组件之间，利用 GPIO 信号在 5V 电源断电时警告 CPU。收到此信号后，CPU 在超级电容器能量耗尽之前执行紧急脚本，启动 "$ shutdown" 命令。
 <br />
 UPS 提供的备份持续时间很大程度上取决于系统负载。以下是使用配备 4GB RAM、32GB eMMC 存储和 Wi-Fi 模块的 CM4 模块测试的一些典型场景。
 <br />
 
-| 操作模式 | 时间(s) | 备注                                                       |
+| 操作模式 | 时间（秒） | 备注                                                       |
 | ----------------- | ------- | ------------------------------------------------------------ |
-| 空闲              | 37      | 在空闲条件下测试，加载官方驱动程序 |
+| 空闲              | 37      | 在加载官方驱动程序的空闲条件下测试 |
 | CPU 满负载  | 18      | stress -c 4 -t 10m -v &                                      |
 
 :::note
@@ -1507,7 +1625,7 @@ UPS 提供的备份持续时间很大程度上取决于系统负载。以下是�
 
 CPU 和 DC/AC 电源输入之间的 GPIO25 用于在 5V 电源断电时警告 CPU。然后 CPU 应该在超级电容器能量耗尽之前在脚本中执行一些紧急操作并运行 `$ shutdown`
 <br />
-使用此功能的另一种方法是在 GPIO 引脚更改时启动关机。给定的 GPIO 引脚配置为生成 KEY_POWER 事件的输入键。此事件由 systemd-logind 通过启动关机来处理。
+使用此功能的另一种方法是在 GPIO 引脚变化时启动关机。给定的 GPIO 引脚配置为输入键，生成 KEY_POWER 事件。此事件由 systemd-logind 处理，启动关机。
 使用 `/boot/overlays/README` 作为参考，然后修改 `/boot/config.txt`。
 
 ```bash
@@ -1521,7 +1639,7 @@ dtoverlay=gpio-shutdown,gpio_pin=25,active_low=1
 
 :::
 
-下面的 python 代码是通过 GPIO25 检测超级电容器 UPS 工作模式的演示，并在系统断电时自动保存数据并关机。
+下面的 Python 代码是通过 GPIO25 检测超级电容器 UPS 工作模式的演示，并在系统断电时自动保存数据并关机。
 
 ```python
 import RPi.GPIO as GPIO
@@ -1556,7 +1674,7 @@ while True:
 
 ### DSI 和扬声器
 
-板载预留了一个 DSI (J24) 和一个 4 针扬声器 (J7) 接口，用于特殊用途。用户需要根据自己的需求购买插件。
+板载预留了一个 DSI（J24）和一个 4 针扬声器（J7）接口，用于特殊用途。用户需要根据自己的需求购买插件。
 
 ## 其他资源
 
@@ -1568,7 +1686,7 @@ while True:
 - [reComputer R1000 宣传册中文版](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer_CN.pdf)
 - [reComputer R1000 v1.1 引脚分配](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)
 
-## 技术支持和产品讨论
+## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 

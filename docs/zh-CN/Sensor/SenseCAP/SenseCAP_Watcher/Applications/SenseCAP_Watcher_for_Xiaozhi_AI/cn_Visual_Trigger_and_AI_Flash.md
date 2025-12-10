@@ -13,7 +13,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/visual_trigger_and_ai_flash
 last_update:
-  date: 10/20/2025
+  date: 12/04/2025
   author: Twelve
 ---
 
@@ -38,15 +38,10 @@ import TabItem from '@theme/TabItem';
 - USB Type-C 数据线  
 - Windows PC  
 
-:::note
-如果您要刷写 **视觉激活固件**，且您的 Watcher 设备型号 **不是 -EN**，您还需要手动刷写认证文件以正常使用（仅需一次）。  
-详细说明请参考 [Watcher Agent 固件刷写指南](https://wiki.seeedstudio.com/cn/flash_watcher_agent_firmware/)。
-:::
-
 ## 固件刷写过程
 
 <Tabs>
-<TabItem value="sensecraft" label="SenseCraft AI" default>
+<TabItem value="sensecraft" label="SenseCraft AI 官网(仅英文版)" default>
 
 <!-- :::caution Note
 The following guide is for an internal testing website that has not yet been released.
@@ -72,6 +67,10 @@ Please use another method to flash the firmware for now.
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
 
+  :::note
+  如果你正在使用Linux或macOS操作系统，请选择较小号的串口端口
+  :::
+
   - 点击 `Connect`
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
@@ -83,6 +82,9 @@ Please use another method to flash the firmware for now.
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
 
   - 选择正确的串口（以 "B" 结尾）
+  :::note
+  如果你正在使用Linux或macOS操作系统，请选择较大号的串口端口
+  :::
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
@@ -102,11 +104,11 @@ Please use another method to flash the firmware for now.
 
 </TabItem>
 
-<TabItem value="flasher1" label="Flash Download Tool">
+<TabItem value="flasher1" label="Flash Download Tool 烧录工具">
 
 - 前提条件
 
-  - **视觉触发固件 v2.0.3**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **视觉触发固件 v2.0.4**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-cn.bin)
 
   - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip)（3.9.6 或更高版本）
 
@@ -152,7 +154,7 @@ Please use another method to flash the firmware for now.
 
 - 前提条件
 
-  - **视觉触发固件 v2.0.3**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-en.bin)
+  - **视觉触发固件 v2.0.4**：[下载链接](https://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/merged-binary-cn.bin)
 
   - [esptool.py](https://github.com/espressif/esptool)
 
@@ -234,7 +236,8 @@ Please use another method to flash the firmware for now.
 </Tabs>
 
 :::note
-v2.0.3 以上版本的固件需要对小智说 "Turn on inference switch" 来启用视觉检测。
+v1.8.8 以上版本的固件才有视觉识别唤醒的功能。
+v2.0.3 以上版本的固件需要对小智说 "打开推理开关" 来启用视觉识别唤醒功能。
 :::
 
 ## AI 模型刷写过程
@@ -254,6 +257,10 @@ v2.0.3 以上版本的固件需要对小智说 "Turn on inference switch" 来启
 - 选择正确的串口（以 "A" 结尾）
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
 
+:::note
+如果你正在使用Linux或macOS操作系统，请选择较小号的串口端口
+:::
+
 - 点击 `Connect`
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
 
@@ -271,11 +278,24 @@ v2.0.3 以上版本的固件需要对小智说 "Turn on inference switch" 来启
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI7.png" style={{width:500, height:'auto'}}/></div>
 
-### 步骤 4. 调整阈值并预览效果
+### 步骤 4. 预览效果并调整参数
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI8.png" style={{width:400, height:'auto'}}/></div>
 
-- 此外，您也可以通过与智能体对话来调整阈值
+此外，您可以通过与智能体对话来调整参数
+
+当前的视觉唤醒功能提供以下配置选项：
+
+- **目标ID** (`target`): 指定需要检测的目标ID。该ID取决于使用的视觉模型，默认值为0。
+
+- **检测持续时间** (`duration`): 单位为秒，用于调整视觉唤醒的灵敏度。默认值为1秒（此默认不包括1秒的去抖动处理）。
+
+- **置信度阈值** (`threshold`): 视觉模型识别物体的最低置信度，用于调整检测灵敏度。以百分比表示，默认值为75%。
+
+- **冷却时间** (`interval`): 单位为秒，表示一次对话结束后需要等待的时间，防止同一物体频繁打断。默认值为8秒。
+
+例如，您可以通过修改**置信度阈值参数**来调整模型的灵敏度。如果您觉得当前的阈值过于严格，可以对Watcher说：“请将置信度阈值设置为60%”。
+
 
 ## 故障排除
 
@@ -296,10 +316,16 @@ v2.0.3 以上版本的固件需要对小智说 "Turn on inference switch" 来启
 
 4. **设备无法通过视觉检测唤醒**
    - 检查串口输出中是否有相关的日志消息。
-   - 固件版本 v2.0.3 需要对小智说"Turn on inference switch"来启用此功能。
+   - 固件版本高于 v2.0.3 需要对小智说"打开推理开关"来启用此功能。
 
 5. **串口显示视觉识别日志但设备仍无法唤醒**
    - 前往 SenseCraft AI 平台并将 Person 模型刷写到 AI 芯片。
+
+## Q&A
+
+**提问: 我可以烧录其他的AI视觉模型进入Himax芯片中吗？**
+
+回答: 目前仅支持烧录人脸和人物的视觉模型，其他的模型的烧录请等待AI官网更新。
 
 ## 技术支持
 

@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/27/2025
+  date: 12/8/2025
   author: Frank
 ---
 
@@ -17,43 +17,86 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 27th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 8th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [AI Gun Detection Solution for Real-Time Edge Alerts](https://wiki.seeedstudio.com/solutions/frigate-on-jetson-nodered-gun-alerts/)
+### [Get Started with SenseCAP T2000 Tracker](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T2000_tracker/)
 
-<p style={{textAlign: 'center'}}><img src="https://cc.seeedstudio.com/wp-content/uploads/2025/08/scene_3.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The Frigate + Node-RED Gun Detection Solution is an edge AI video analytics stack that detects firearms in live camera streams and orchestrates alerting, review, and integrations. Built for privacy-preserving, low‑latency deployments on **AI Boxes**, the NVIDIA **Jetson** series and **reComputer R2000**, it combines an optimized detection engine (Frigate) with a visual automation layer (Node‑RED) and optional LLM‑assisted review.
-
-</div>
-
-### [MCP Integration in SenseCAP Watcher](https://wiki.seeedstudio.com/mcp_endpoint/)
-
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Grove/Grove4.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The [**MCP Endpoint (Model Context Protocol Endpoint)**](https://wiki.seeedstudio.com/mcp_endpoint/) documentation introduces its functionality in **SenseCAP Watcher**, explaining its role in AI systems, configuration methods, and usage examples to help developers quickly integrate and manage custom MCP services. Additionally, we’ve updated [**Extending Grove with MCP**](https://wiki.seeedstudio.com/extending_grove_with_mcp/), which demonstrates how to connect Grove sensors to AI systems through MCP for more flexible data interaction and application development.
+This chapter shows you how to quickly set up your SenseCAP T2000 Tracker with the SenseCraft App.
 
 </div>
 
-## Existing Wiki Updated
+### [Getting Started with COB LED Driver Board for Seeed Studio XIAO](https://wiki.seeedstudio.com/getting_started_with_cob_led_dirver_board/)
 
-### [reTerminal E Series ePaper Display Works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first.jpg" alt="pir" width={800} height="auto" /></p>
 
-We have added an operation example on how to [flash via the SenseCraft HMI platform](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl/#method-2-flash-via-sensecraft-hmi-platform).
+<div style={{ textAlign: "justify" }}>
+
+This is a 7-channel COB LED driver dock designed for Seeed Studio XIAO. This expansion board breaks GPIO power limits, offering 7 output channels, specifically tailored for ultra-narrow 1mm 3V COB LED strips. With integrated PMIC battery management, it is the ideal plug-and-play solution for building compact, high-brightness wireless lighting setups.
+
+</div>
+
+### [Smart Retail Voice AI](https://wiki.seeedstudio.com/solutions/smart-retail-voice-ai-solution-1/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/ai-sound/respeaker-rerouter-in-smart-retail.webp" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+Leverage Seeed's Smart Retail Voice AI solution to capture and analyze in-store customer conversations. Our edge AI technology enables on-device speech-to-text processing, transforming voice data into actionable insights without relying on cloud services. Enhance customer experience, optimize store operations, and gain valuable feedback with our offline AI-powered voice analytics tailored for retail environments.
+
+</div>
+
+### [Viseron on reComputer](https://wiki.seeedstudio.com/viseron_on_recomputer/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/viseron.gif" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+[Viseron](https://github.com/roflcoopter/viseron) is a self-hosted, local only NVR and AI Computer Vision software implemented in Python. The goal of Viseron is to be easy to setup and use, while still being powerful and flexible. It is designed to be run on a local network, with no external dependencies, and no cloud services required.
+
+</div>
+
+### [HighTorque Motors Getting Started](https://wiki.seeedstudio.com/hightorque_getting_started/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque_tool_1_1_1.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document explains how to power, wire, and safely set up the HighTorque motor, and how to use the debugging assistant software to calibrate it, tune parameters, control different operating modes (position, speed, torque, etc.), and perform basic FDCAN communication.
+
+</div>
+
+### [Deploy OTA on reComputer](https://wiki.seeedstudio.com/deploy_ota_on_recomputer/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+NVIDIA Jetson Over-the-Air (OTA) updates allow developers to upgrade edge devices from an older JetPack version to a newer release remotely via a network connection, eliminating the need for a host PC or physical USB re-flashing. This wiki will demonstrate how to perform OTA (Over-the-Air) updates on reComputer.
+
+</div>
+
+<!-- ## Existing Wiki Updated
+
+### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
+
+We have added the [Controlling an EtherCAT Motor on Jetson (MyActuator X4)](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/#5-example--controlling-an-ethercat-motor-on-jetson-myactuator-x4) example.
+
+### [reComputer R1000 Getting Started](https://wiki.seeedstudio.com/recomputer_r/)
+
+We have added the [Connect to 4G Module by QMI Mode](https://wiki.seeedstudio.com/recomputer_r/#connect-to-4g-module-by-qmi-mode) example. -->
 
 ## The Efforts of Contributor
 
-<!-- ### [Seeed Studio XIAO ESP32C6 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c6_nuttx/)
+<!-- ### [Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS](https://wiki.seeedstudio.com/local_chatbot_recomputer/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32C3-NuttX/nuttx.svg" style={{width:400, height:'auto'}}/></div>
-
-This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 board. NuttX is a lightweight, scalable real-time operating system known for its small footprint and broad hardware support. The guide walks through installing necessary tools, configuring the board, building the system, and flashing firmware. It includes examples for using NuttShell (NSH), USBNSH, and JUMBO applications, with a focus on practical tasks like GPIO and LED control. -->
+This project brings the dream of a **fully voice-interactive AI assistant** to life — running entirely **on local hardware**, without reliance on cloud services.  
+By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Large Language Models (LLMs)** using **Ollama**, the system enables natural, private, and real-time conversations between humans and machines. The entire setup runs inside Docker containers and can be deployed on **NVIDIA Jetson devices**, **edge computers**, or any Linux-based system with GPU acceleration. -->
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!
@@ -191,5 +234,11 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
 - [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
 - [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
+- [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
+- [weekly wiki on 2025.11.03rd](/Seeed_Elderly/weekly_wiki/wiki251103)
+- [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/wiki251110)
+- [weekly wiki on 2025.11.17th](/Seeed_Elderly/weekly_wiki/wiki251117)
+- [weekly wiki on 2025.11.24th](/Seeed_Elderly/weekly_wiki/wiki251124)
+- [weekly wiki on 2025.12.01st](/Seeed_Elderly/weekly_wiki/wiki251201)
 
 </details>
