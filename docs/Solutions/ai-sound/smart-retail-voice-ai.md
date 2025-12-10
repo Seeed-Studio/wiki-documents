@@ -535,7 +535,7 @@ The Edge Client is essential for real-time validation and local setup.
 - **Access:** Open your web browser and navigate to the reRouter's IP address on port 8090: `http://<reRouter_IP_Address>:8090`.
 - **Core Function:** The interface provides real-time ASR transcription (to verify audio input), controls for Voiceprint Recognition (speaker identification), and Device Configuration (network settings, upstream server address).
 
-<table> <thead> <tr> <th>Module Name</th> <th>Description</th> <th>Interface Screenshot</th> </tr> </thead> <tbody> <tr> <td><b>Voice ASR</b></td> <td> <p><b>Description:</b> Displays the current operational status of the local Automatic Speech Recognition (ASR) service.</p> <p><b>Purpose:</b> Provides <b>real-time transcription</b> of detected speech, essential for verifying local audio input and recognition accuracy.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>Figure 1: Voice ASR Module</p></div> </td> </tr> <tr> <td><b>Voiceprint Recognition</b></td> <td> <p><b>Description:</b> Manages and monitors the Voiceprint Recognition system.</p> <p><b>Purpose:</b> Used to <b>register, differentiate, and identify</b> different speakers/users based on their unique voice characteristics.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>Figure 2: Voiceprint Recognition Module</p></div> </td> </tr> <tr> <td><b>Device Status & Configuration</b></td> <td> <p><b>Description:</b> Provides detailed information about the reRouter's operating status and allows core parameter changes.</p> <p><b>Purpose:</b> Enables configuration updates such as <b>network settings</b> (Wi-Fi) and changing the <b>upstream server address</b> for cloud communication.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>Figure 3: Device Status & Configuration</p></div> </td> </tr> </tbody> </table>
+<table> <thead> <tr> <th>Module Name</th> <th>Description</th> <th>Interface Screenshot</th> </tr> </thead> <tbody> <tr> <td><b>Voice ASR</b></td> <td> <p><b>Description:</b> Displays the current operational status of the local Automatic Speech Recognition (ASR) service.</p> <p><b>Purpose:</b> Provides <b>real-time transcription</b> of detected speech, essential for verifying local audio input and recognition accuracy.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>Figure 1: Voice ASR Module</p></div> </td> </tr> <tr> <td><b>Voiceprint Recognition</b></td> <td> <p><b>Description:</b> Manages and monitors the Voiceprint Recognition system.</p> <p><b>Purpose:</b> Automatically generates unique voiceprints from audio recordings to enable speaker differentiation and identification.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>Figure 2: Voiceprint Recognition Module</p></div> </td> </tr> <tr> <td><b>Device Status & Configuration</b></td> <td> <p><b>Description:</b> Provides detailed information about the reRouter's operating status and allows core parameter changes.</p> <p><b>Purpose:</b> Enables configuration updates such as <b>network settings</b> (Wi-Fi) and changing the <b>upstream server address</b> for cloud communication.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>Figure 3: Device Status & Configuration</p></div> </td> </tr> </tbody> </table>
 
 ### Cloud-side Management Platform
 
@@ -566,6 +566,7 @@ This module provides the definitive view of all collected voice records.
 
 - **Advanced Filtering:** Use **Device Name, Store Name, Location Name, or MAC Address** for precise data retrieval. Searches are executed only after clicking the **"Filter"** button, giving users full control.
 - **Export Capability:** Select and export filtered data in **three formats** for external use (choose one at a time): **Markdown**, **Plain Text (.txt)**, or **Original Audio File**.
+- **Dual-View Auditing:** Easily switch between **Conversation Mode** to review transcribed dialogues and **Timeline Mode** to listen to the original audio playback. This dual approach allows for rapid verification of transcription accuracy and a deeper understanding of the interaction's context.
 - **Clarity:** All record views prioritize the easily identifiable **Device Name** over the MAC address.
 
 <div align="center">
@@ -575,6 +576,18 @@ This module provides the definitive view of all collected voice records.
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/record-management.png" alt="Record Management Interface" />
 
 <figcaption>Figure 5: Record Management Interface</figcaption>
+
+</figure>
+
+</div>
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="sensecraft-voice-record" />
+
+<figcaption>Figure 5.1: Timeline Mode</figcaption>
 
 </figure>
 
