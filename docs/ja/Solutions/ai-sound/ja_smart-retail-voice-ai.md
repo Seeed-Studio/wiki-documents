@@ -16,13 +16,13 @@ image: https://files.seeedstudio.com/wiki/solution/ai-sound/respeaker-rerouter-i
 slug: /ja/solutions/smart-retail-voice-ai-solution-1
 sidebar_position: 2
 last_update:
-  date: 12/03/2025
+  date: 12/04/2025
   author: Spencer
 tags:
   - smart-retail
 ---
 
-Seeedのスマートリテール音声AIソリューションを活用して、店舗内の顧客会話を捕捉・分析しましょう。当社のエッジAI技術により、デバイス上での音声テキスト変換処理が可能になり、クラウドサービスに依存することなく音声データを実用的な洞察に変換します。リテール環境に特化したオフラインAI搭載音声分析により、顧客体験を向上させ、店舗運営を最適化し、貴重なフィードバックを獲得できます。
+Seeedのスマートリテール音声AIソリューションを活用して、店舗内の顧客会話を捕捉・分析しましょう。当社のエッジAI技術により、デバイス上での音声テキスト変換処理が可能になり、クラウドサービスに依存することなく音声データを実用的な洞察に変換できます。小売環境に特化したオフラインAI搭載音声分析により、顧客体験を向上させ、店舗運営を最適化し、貴重なフィードバックを獲得できます。
 
 <table class="table-center">
   <tr>
@@ -66,8 +66,8 @@ Seeedのスマートリテール音声AIソリューションを活用して、�
     </svg>
    </div>
    <div class="info-content">
-    <h3>遠距離・リテール対応音声捕捉</h3>
-    <p>このソリューションは、騒音の多いリテール環境での遠距離音声捕捉用に設計されています。マイクアレイ、ビームフォーミング、ノイズ抑制をサポートし、背景音楽や周囲の雑談があっても実際の顧客とスタッフの会話に焦点を当てます。</p>
+    <h3>遠距離・小売対応音声捕捉</h3>
+    <p>このソリューションは、騒音の多い小売環境での遠距離音声捕捉用に設計されています。マイクアレイ、ビームフォーミング、ノイズ抑制をサポートし、背景音楽や周囲の雑談があっても実際の顧客とスタッフの会話に焦点を当てます。</p>
    </div>
   </li>
   <li class="info-item">
@@ -103,7 +103,7 @@ Seeedのスマートリテール音声AIソリューションを活用して、�
 
 ### 1. ハードウェア要件
 
-このガイドでは、SeeedのreRouterとreSpeaker XVF3800マイクアレイを使用してスマートリテール音声AIソリューションの構築方法を実演します。
+このガイドでは、SeeedのreRouterとreSpeaker XVF3800マイクアレイを使用してスマートリテール音声AIソリューションを構築する方法を説明します。
 
 <div class="table-center">
   <table align="center">
@@ -197,9 +197,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-デバイスをフラッシュモードにするためにジャンパーキャップが必要な場合があります。
+フラッシュ手順の詳細については、[reRouterフラッシュガイド](/ja/OpenWrt-Getting-Started/#初期セットアップ)を参照してください。
 
-詳細な手順については、[reRouterフラッシュガイド](/ja/OpenWrt-Getting-Started/#initial-set-up)を参照してください。
+**注意：** ガイドページのファームウェアではなく、**上記で提供されているファームウェア**を使用してください。
 
 #### 1.2. ハードウェア接続
 
@@ -241,7 +241,7 @@ reSpeaker XVF3800マイクアレイをUSB経由で**ホストデバイス**に�
     cd reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/<YOUR_HOST_DIR>
     ```
 
-  2. **設定シーケンスを実行：**
+  2. **設定シーケンスの実行：**
 
     実行権限を付与し、以下の3つのコマンドを実行してデバイスを初期化します（Linuxでは必要に応じて`sudo`を使用）：
 
@@ -273,7 +273,7 @@ reSpeaker XVF3800マイクアレイをUSB経由で**ホストデバイス**に�
 
   2. **設定シーケンスの実行：**
 
-    以下の3つのコマンドを実行してデバイスを初期化：
+    以下の3つのコマンドを実行してデバイスを初期化します：
 
     ```powershell
     # 1. Clear existing configuration
@@ -295,7 +295,7 @@ reSpeaker XVF3800マイクアレイをUSB経由で**ホストデバイス**に�
 
 開始前に、以下の条件が満たされていることを確認してください：
 
-- **アクセス：** SSH経由でのOpenWrtデバイスへのルートアクセス（例：`ssh root@192.168.49.1`）。
+- **アクセス：** SSH経由でのOpenWrtデバイスへのrootアクセス（例：`ssh root@192.168.49.1`）。
 - **ネットワーク：** OpenWrtデバイスが安定したインターネット接続を持っている。
 - **オーディオ：** reSpeaker XVF3800がreRouterに接続されている。
 
@@ -318,7 +318,7 @@ OpenWrtのWebインターフェースを使用してネットワーク設定を�
 - ユーザー名：root
 - パスワード：（なし/デフォルトで空）
 
-中国語などの他の言語サポートが必要な場合は、WebインターフェースまたはSSH経由で`luci-i18n-base-zh-cn`パッケージをインストールできます。
+中国語などの他の言語サポートが必要な場合は、Webインターフェースまたは SSH 経由で `luci-i18n-base-zh-cn` パッケージをインストールできます。
 
 ```shell
 opkg update
@@ -329,7 +329,7 @@ opkg install luci-i18n-base-zh-cn
 
 :::caution 重要
 以下のインストール手順に進む前に、reRouterがインターネットにアクセスできることを確認してください
-（例：SSHターミナルでping google.comまたはping openwrt.orgを実行）。
+（例：SSHターミナルで ping google.com または ping openwrt.org を実行）。
 :::
 
 #### 2.3 ステップバイステップインストール
@@ -340,26 +340,56 @@ OpenWrtデバイスへのSSH接続を確立した後、以下のコマンドを�
 
 このステップでは、コンテナランタイム環境と必要なツール（ファイル検証用のSHA-256チェックサムユーティリティを含む）をインストールします。
 
-```bash
-# 1. Update the local package list
-opkg update
+<Tabs>
+  <TabItem value="Global" label="グローバル" default>
 
-# 2. Install Docker core components
-# Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
-opkg install dockerd docker containerd runc
+  ```bash
+  # 1. Update the local package list
+  opkg update
 
-# 3. Install utility packages
-opkg install wget-ssl unzip ca-certificates
+  # 2. Install Docker core components
+  # Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
+  opkg install dockerd docker containerd runc
 
-# 4. Enable and start the Docker daemon service
-/etc/init.d/dockerd enable
-/etc/init.d/dockerd start
+  # 3. Install utility packages
+  opkg install wget-ssl unzip ca-certificates
 
-# 5. Wait for Docker to initialize (approx. 15-30 seconds)
-echo "Waiting for Docker service to start..."
-sleep 15 
-docker ps # Verify the service is running
-```
+  # 4. Enable and start the Docker daemon service
+  /etc/init.d/dockerd enable
+  /etc/init.d/dockerd start
+
+  # Optional: verify downloaded files
+  # sha256sum <filename>
+  ```
+
+  </TabItem>
+
+  <TabItem value="Chinese" label="中国本土">
+
+  ```bash
+  # For users in Mainland China, switch to Tsinghua University mirror for faster package downloads
+  sed -i 's_https\?://downloads.openwrt.org_https://mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+
+  # 1. Update the local package list
+  opkg update
+
+  # 2. Install Docker core components
+  # Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
+  opkg install dockerd docker containerd runc
+
+  # 3. Install utility packages
+  opkg install wget-ssl unzip ca-certificates
+
+  # 4. Enable and start the Docker daemon service
+  /etc/init.d/dockerd enable
+  /etc/init.d/dockerd start
+
+  # Optional: verify downloaded files
+  # sha256sum <filename>
+  ```
+
+  </TabItem>
+</Tabs>
 
 ##### ステップ2.2：データディレクトリと設定の準備
 
@@ -388,7 +418,7 @@ Seeed Studioサーバーから事前訓練されたASRモデルパッケージ�
 | `models.zip` | `https://files.seeedstudio.com/wiki/solution/ai-sound/reRouter-firmware-backup/models.zip` |
 | **期待されるSHA-256ハッシュ** | `7b9e7606a2ddcad56f3f72a77b16eb2c60437ae4bfc3f1423bd33db177385c9d` |
 
-SSH経由でOpenWrtホストで以下のコマンドを実行：
+SSH経由でOpenWrtホスト上で以下のコマンドを実行してください：
 
 ```bash
 # 1. Navigate to the base directory
@@ -511,20 +541,22 @@ docker logs sensecraft-voice-client
 reboot
 ```
 
+再起動後、`http://192.168.49.1:8090`にアクセスして、リアルタイムASR転写とデバイス設定のためのEdge Clientインターフェースにアクセスできます。SenseCraft Voiceプラットフォームの詳細な使用方法については、以下の[ユーザーガイド](#user-guide)セクションを参照してください。
+
 ## SenseCraft Voice：エッジ・トゥ・クラウドプラットフォーム概要
 
 SenseCraft Voiceは、エッジ（reRouter）で取得された生のオーディオデータを、強力なAI分析と集中管理を通じて実用的なビジネスインテリジェンスに変換するよう設計された最先端のプラットフォームです。
 
 このプラットフォームの独自のエッジクラウドアーキテクチャは、エンタープライズグレードのオーディオ監視ソリューションに対して、比類のない信頼性、速度、分析の深さを提供します。
 
-| **機能**                       | **価値提案**                                        | **主要な利点**                                           |
+| **機能**                       | **価値提案**                                        | **主な利点**                                           |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **堅牢なエッジ処理**     | 継続的な動作と低遅延を保証します。             | 音声ASRと認識はreRouter上で*ローカル*に実行され、ネットワーク障害時でもリアルタイム応答とデータ収集を確保します。 |
 | **深いAIカスタマイゼーション**         | プラットフォームを特定のビジネスニーズと専門用語に適応させます。 | 管理者は、AI分析を指示し、ビジネス言語に特化した正確なイベント検出を確保するために、カスタム**キーワード、同義語、AIプロンプト**を定義できます。 |
 | **詳細な位置マッピング**     | 大規模デプロイメント管理を簡素化します。                | 混乱しやすいMACアドレスを超えて、**店舗、場所、デバイス名**による数千のエッジデバイスの階層組織をサポートし、簡単なフィルタリングとレポート作成を可能にします。 |
 | **実用的なダッシュボード**         | 即座のビジネス洞察とパフォーマンス追跡を提供します。 | 集中ダッシュボードは**マルチストアフィルタリング**、リアルタイム**デバイスオンライン率**、**キーワードホットスポット分析**を特徴とし、運用状況とビジネスイベントを即座に監視します。 |
 
-SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキテクチャ上に構築されており、リアルタイムローカル処理と集中管理の両方を確保しています。このサービスは2つの主要コンポーネントで構成されています：reRouter上で動作するエッジサイドクライアントと、クラウド/サーバーサイド管理プラットフォームです。
+SenseCraft Voice ソリューションは、リアルタイムなローカル処理と集中管理の両方を確保する堅牢なエッジクラウドアーキテクチャ上に構築されています。このサービスは、reRouter 上で動作するエッジサイドクライアントと、クラウド/サーバーサイド管理プラットフォームの2つの主要コンポーネントで構成されています。
 
 ## ユーザーガイド
 
@@ -532,10 +564,10 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 エッジクライアントは、リアルタイム検証とローカルセットアップに不可欠です。
 
-- **アクセス：** Webブラウザを開き、ポート8090でreRouterのIPアドレスにアクセスします：`http://<reRouter_IP_Address>:8090`。
-- **主要機能：** インターフェースは、リアルタイムASR転写（音声入力を確認するため）、声紋認識の制御（話者識別）、およびデバイス設定（ネットワーク設定、上流サーバーアドレス）を提供します。
+- **アクセス：** ウェブブラウザを開き、reRouter の IP アドレスのポート 8090 にアクセスします：`http://192.168.49.1:8090`。
+- **主要機能：** インターフェースは、リアルタイム ASR 転写（音声入力の確認用）、声紋認識（話者識別）の制御、およびデバイス設定（ネットワーク設定、上流サーバーアドレス）を提供します。
 
-<table> <thead> <tr> <th>モジュール名</th> <th>説明</th> <th>インターフェーススクリーンショット</th> </tr> </thead> <tbody> <tr> <td><b>音声ASR</b></td> <td> <p><b>説明：</b> ローカル自動音声認識（ASR）サービスの現在の動作状況を表示します。</p> <p><b>目的：</b> 検出された音声の<b>リアルタイム転写</b>を提供し、ローカル音声入力と認識精度の検証に不可欠です。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>図1：音声ASRモジュール</p></div> </td> </tr> <tr> <td><b>声紋認識</b></td> <td> <p><b>説明：</b> 声紋認識システムを管理・監視します。</p> <p><b>目的：</b> 話者の区別および識別を可能にするため、音声録音から固有の声紋を自動的に生成します。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>図2：声紋認識モジュール</p></div> </td> </tr> <tr> <td><b>デバイス状態と設定</b></td> <td> <p><b>説明：</b> reRouterの動作状況に関する詳細情報を提供し、主要パラメータの変更を可能にします。</p> <p><b>目的：</b> <b>ネットワーク設定</b>（Wi-Fi）やクラウド通信用の<b>上流サーバーアドレス</b>の変更などの設定更新を可能にします。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>図3：デバイス状態と設定</p></div> </td> </tr> </tbody> </table>
+<table> <thead> <tr> <th>モジュール名</th> <th>説明</th> <th>インターフェーススクリーンショット</th> </tr> </thead> <tbody> <tr> <td><b>音声 ASR</b></td> <td> <p><b>説明：</b> ローカル自動音声認識（ASR）サービスの現在の動作状況を表示します。</p> <p><b>目的：</b> 検出された音声の<b>リアルタイム転写</b>を提供し、ローカル音声入力と認識精度の確認に不可欠です。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>図 1：音声 ASR モジュール</p></div> </td> </tr> <tr> <td><b>声紋認識</b></td> <td> <p><b>説明：</b> 声紋認識システムを管理・監視します。</p> <p><b>目的：</b> 音声録音から自動的に固有の声紋を生成し、話者の区別と識別を可能にします。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>図 2：声紋認識モジュール</p></div> </td> </tr> <tr> <td><b>デバイス状態と設定</b></td> <td> <p><b>説明：</b> reRouter の動作状況に関する詳細情報を提供し、主要パラメータの変更を可能にします。</p> <p><b>目的：</b> <b>ネットワーク設定</b>（Wi-Fi）やクラウド通信用の<b>上流サーバーアドレス</b>の変更などの設定更新を可能にします。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>図 3：デバイス状態と設定</p></div> </td> </tr> </tbody> </table>
 
 ### クラウドサイド管理プラットフォーム
 
@@ -554,7 +586,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/main-page-dashboard.png" alt="Dashboard Main Page" />
 
-<figcaption>図4：ダッシュボードインターフェース</figcaption>
+<figcaption>図 4：ダッシュボードインターフェース</figcaption>
 
 </figure>
 
@@ -564,10 +596,10 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 このモジュールは、収集されたすべての音声記録の決定的なビューを提供します。
 
-- **高度なフィルタリング：** 正確なデータ取得のために**デバイス名、店舗名、場所名、またはMACアドレス**を使用します。検索は**"Filter"**ボタンをクリックした後にのみ実行され、ユーザーに完全な制御を提供します。
-- **エクスポート機能：** フィルタリングされたデータを外部使用のために**3つの形式**で選択・エクスポートします（一度に1つを選択）：**Markdown**、**プレーンテキスト（.txt）**、または**元の音声ファイル**。
-- **デュアルビュー監査:** 転写された会話を確認する **会話モード** と、元の音声再生を聴取する **タイムラインモード** を簡単に切り替えることができます。この二つのアプローチにより、転写精度を迅速に検証でき、やり取りの文脈をより深く理解することができます。
-- **明確性：** すべての記録ビューは、MACアドレスよりも識別しやすい**デバイス名**を優先します。
+- **高度なフィルタリング：** **デバイス名、店舗名、場所名、または MAC アドレス**を使用して正確なデータ取得を行います。検索は **"Filter"** ボタンをクリックした後にのみ実行され、ユーザーが完全にコントロールできます。
+- **エクスポート機能：** フィルタリングされたデータを外部使用のために**3つの形式**で選択・エクスポートできます（一度に1つを選択）：**Markdown**、**プレーンテキスト（.txt）**、または**オリジナル音声ファイル**。
+- **デュアルビュー監査：** 転写された対話を確認する**会話モード**と、オリジナル音声の再生を聞く**タイムラインモード**を簡単に切り替えできます。このデュアルアプローチにより、転写精度の迅速な検証とインタラクションのコンテキストのより深い理解が可能になります。
+- **明確性：** すべての記録ビューは、MAC アドレスよりも識別しやすい**デバイス名**を優先します。
 
 <div align="center">
 
@@ -575,7 +607,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/record-management.png" alt="Record Management Interface" />
 
-<figcaption>図5：記録管理インターフェース</figcaption>
+<figcaption>図 5：記録管理インターフェース</figcaption>
 
 </figure>
 
@@ -585,7 +617,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 <figure>
 
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="SenseCraft Voice 録音画面" />
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="sensecraft-voice-record" />
 
 <figcaption>図 5.1：タイムラインモード</figcaption>
 
@@ -593,12 +625,12 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 </div>
 
-#### 3. AI分析：履歴とカスタム処理
+#### 3. AI 分析：履歴とカスタム処理
 
-このエリアは、AIエンジンによる高度な処理のための音声記録の送信を処理します。
+このエリアは、AI エンジンによる高度な処理のための音声記録の送信を処理します。
 
-- **履歴セッション：** AI分析エンジンとの過去のやり取りを確認します。履歴ウィンドウは会話を時系列で表示し、セッションをクリックすると、確認のために以前の会話スレッドが即座に読み込まれます。
-- **処理：** 現在選択されている**AIプロンプト**に基づいて、フィルタリングされた記録をAI処理に送信します。
+- **履歴セッション：** AI 分析エンジンとの過去のインタラクションを確認します。履歴ウィンドウは会話を時系列で表示し、セッションをクリックすると即座に前の会話スレッドが読み込まれて確認できます。
+- **処理：** 現在選択されている **AI プロンプト**に基づいて、フィルタリングされた記録を AI 処理に送信します。
 
 <div align="center">
 
@@ -606,7 +638,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/ai-analysis.png" alt="AI Analysis Interface" />
 
-<figcaption>図6：AI分析インターフェース</figcaption>
+<figcaption>図 6：AI 分析インターフェース</figcaption>
 
 </figure>
 
@@ -616,7 +648,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 このエリアは、すべてのエッジデバイスの組織階層を設定・維持するために必要なツールを提供します。
 
-- **階層ビュー：** 店舗、その特定の店内場所、および関連するreRouterデバイスを簡単に管理します。
+- **階層ビュー：** 店舗、その特定の店内場所、および関連する reRouter デバイスを簡単に管理します。
 - **集中制御：** デバイスを論理的にグループ化することで、デバイスの展開と設定を合理化します。
 
 <div align="center">
@@ -625,7 +657,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/store-management.png" alt="Store Management Interface" />
 
-<figcaption>図7：店舗管理インターフェース</figcaption>
+<figcaption>図 7：店舗管理インターフェース</figcaption>
 
 </figure>
 
@@ -637,7 +669,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/device-management.png" alt="Device Management Interface" />
 
-<figcaption>図8：デバイス管理インターフェース</figcaption>
+<figcaption>図 8：デバイス管理インターフェース</figcaption>
 
 </figure>
 
@@ -649,21 +681,21 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/specific-location-management.png" alt="Specific Location Management Interface" />
 
-<figcaption>図9：特定場所管理インターフェース</figcaption>
+<figcaption>図 9：特定場所管理インターフェース</figcaption>
 
 </figure>
 
 </div>
 
-#### 5. バックエンド設定：システム制御とカスタマイゼーション
+#### 5. バックエンド設定：システム制御とカスタマイズ
 
-このセクションでは、管理者がAI処理とイベントトリガーのシステム全体のパラメータを定義できます。
+このセクションでは、管理者が AI 処理とイベントトリガーのシステム全体のパラメータを定義できます。
 
 ##### 5.1. キーワード設定
 
 録音内の特定のビジネスイベントを識別するためのカスタムキーワードと同義語を定義します。
 
-- **カスタマイゼーション：** イベント検出のための**キーワード**とその**同義語**を定義します。
+- **カスタマイズ：** イベント検出のための**キーワード**とその**同義語**を定義します。
 - **視覚化：** ダッシュボードでの視覚的区別のために**マーキングカラー**を割り当てます。
 - **管理：** **追加、編集、削除、一括削除**をサポートします。
 
@@ -673,7 +705,7 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/keywords-backend-management.png" alt="Keywords Backend Management Interface" />
 
-<figcaption>図10：キーワード設定インターフェース</figcaption>
+<figcaption>図 10：キーワード設定インターフェース</figcaption>
 
 </figure>
 
@@ -689,15 +721,15 @@ SenseCraft Voice ソリューションは堅牢なエッジクラウドアーキ
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/user-management.png" alt="User Management Interface" />
 
-<figcaption>図12：ユーザー管理インターフェース</figcaption>
+<figcaption>図 12：ユーザー管理インターフェース</figcaption>
 
 </figure>
 
 </div>
 
-##### 5.2. AIプロンプト設定
+##### 5.2. AI プロンプト設定
 
-AIが選択された音声記録をどのように処理するかを指示するカスタム**AIプロンプト**を作成・管理します。
+AI が選択された音声記録をどのように処理するかを指示するカスタム **AI プロンプト**を作成・管理します。
 
 - **制御：** プロンプトの**名前、タグ、内容**を定義します。一度に1つの**有効化された**プロンプトのみが使用可能です。
 - **管理：** **追加、編集、削除、一括削除**をサポートします。
@@ -708,7 +740,7 @@ AIが選択された音声記録をどのように処理するかを指示する
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/system-prompt-editing.png" alt="AI Prompt Editing Interface" />
 
-<figcaption>図11：AIプロンプト設定インターフェース</figcaption>
+<figcaption>図 11：AI プロンプト設定インターフェース</figcaption>
 
 </figure>
 
