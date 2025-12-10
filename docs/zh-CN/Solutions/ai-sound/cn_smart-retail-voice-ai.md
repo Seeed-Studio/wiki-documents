@@ -16,7 +16,7 @@ image: https://files.seeedstudio.com/wiki/solution/ai-sound/respeaker-rerouter-i
 slug: /cn/solutions/smart-retail-voice-ai-solution-1
 sidebar_position: 2
 last_update:
-  date: 12/03/2025
+  date: 12/04/2025
   author: Spencer
 tags:
   - smart-retail
@@ -66,7 +66,7 @@ tags:
     </svg>
    </div>
    <div class="info-content">
-    <h3>远场零售级音频捕获</h3>
+    <h3>远场零售就绪音频捕获</h3>
     <p>该解决方案专为嘈杂零售环境中的远场音频捕获而设计。支持麦克风阵列、波束成形和噪声抑制，即使在背景音乐和周围聊天声中也能专注于真实的客户-员工对话。</p>
    </div>
   </li>
@@ -91,7 +91,7 @@ tags:
    </div>
    <div class="info-content">
     <h3>从对话到数据驱动决策</h3>
-    <p>SenseCraft Voice 生成的转录文本成为结构化的可分析数据。零售商可以衡量服务质量，识别常见问题和痛点，持续改进脚本、政策和整体店铺体验。</p>
+    <p>SenseCraft Voice 生成的转录成为结构化、可分析的数据。零售商可以衡量服务质量，识别常见问题和痛点，持续改进脚本、政策和整体店铺体验。</p>
    </div>
   </li>
  </ul>
@@ -99,7 +99,7 @@ tags:
 
 ## 入门指南
 
-在本节中，我们将指导您使用 Seeed 的 reRouter 和 reSpeaker XVF3800 麦克风阵列设置智能零售语音 AI 解决方案的步骤。
+在本节中，我们将指导您完成使用 Seeed 的 reRouter 和 reSpeaker XVF3800 麦克风阵列设置智能零售语音 AI 解决方案的步骤。
 
 ### 1. 硬件要求
 
@@ -197,9 +197,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-您可能需要一个跳线帽来将设备置于刷机模式。
+请参考[reRouter 刷机指南](/cn/OpenWrt-Getting-Started/#初始设置)了解刷机程序的详细说明。
 
-请参考[reRouter 刷机指南](/cn/OpenWrt-Getting-Started/#initial-set-up)获取详细说明。
+**请注意：**您应该使用**上面提供的**固件，而不是指南页面中的固件。
 
 #### 1.2. 硬件连接
 
@@ -327,7 +327,7 @@ opkg install luci-i18n-base-zh-cn
 
 :::
 
-:::caution 重要
+:::caution 重要提示
 在继续执行以下安装步骤之前，请验证 reRouter 可以访问互联网
 （例如，在 SSH 终端中运行 ping google.com 或 ping openwrt.org）。
 :::
@@ -338,28 +338,58 @@ opkg install luci-i18n-base-zh-cn
 
 ##### 步骤 1：安装 Docker 和依赖项
 
-此步骤安装容器运行时环境和必要的工具，包括用于文件验证的 SHA-256 校验和实用程序。
+此步骤安装容器运行时环境和必要工具，包括用于文件验证的 SHA-256 校验和实用程序。
 
-```bash
-# 1. Update the local package list
-opkg update
+<Tabs>
+  <TabItem value="Global" label="全球" default>
 
-# 2. Install Docker core components
-# Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
-opkg install dockerd docker containerd runc
+  ```bash
+  # 1. Update the local package list
+  opkg update
 
-# 3. Install utility packages
-opkg install wget-ssl unzip ca-certificates
+  # 2. Install Docker core components
+  # Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
+  opkg install dockerd docker containerd runc
 
-# 4. Enable and start the Docker daemon service
-/etc/init.d/dockerd enable
-/etc/init.d/dockerd start
+  # 3. Install utility packages
+  opkg install wget-ssl unzip ca-certificates
 
-# 5. Wait for Docker to initialize (approx. 15-30 seconds)
-echo "Waiting for Docker service to start..."
-sleep 15 
-docker ps # Verify the service is running
-```
+  # 4. Enable and start the Docker daemon service
+  /etc/init.d/dockerd enable
+  /etc/init.d/dockerd start
+
+  # Optional: verify downloaded files
+  # sha256sum <filename>
+  ```
+
+  </TabItem>
+
+  <TabItem value="Chinese" label="中国大陆">
+
+  ```bash
+  # For users in Mainland China, switch to Tsinghua University mirror for faster package downloads
+  sed -i 's_https\?://downloads.openwrt.org_https://mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+
+  # 1. Update the local package list
+  opkg update
+
+  # 2. Install Docker core components
+  # Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
+  opkg install dockerd docker containerd runc
+
+  # 3. Install utility packages
+  opkg install wget-ssl unzip ca-certificates
+
+  # 4. Enable and start the Docker daemon service
+  /etc/init.d/dockerd enable
+  /etc/init.d/dockerd start
+
+  # Optional: verify downloaded files
+  # sha256sum <filename>
+  ```
+
+  </TabItem>
+</Tabs>
 
 ##### 步骤 2.2：准备数据目录和配置
 
@@ -381,7 +411,7 @@ wget -q -O config.yaml 'https://appstore.seeed-fleet.com/config.yaml'
 
 ##### 步骤 2.3：下载和提取模型
 
-我们将直接从 Seeed Studio 服务器下载预训练的 ASR 模型包，使用 SHA-256 验证其完整性并提取它。
+我们将直接从 Seeed Studio 服务器下载预训练的 ASR 模型包，使用 SHA-256 验证其完整性，并提取它。
 
 | 文件 | URL |
 | :--- | :--- |
@@ -418,7 +448,7 @@ ls -l /data-iot/respeaker/models/
 
 ##### 步骤 2.4：配置音频设备权限
 
-Voice Client 容器需要对音频设备的特权访问。确保设备文件具有适当的权限。
+语音客户端容器需要对音频设备的特权访问。确保设备文件具有适当的权限。
 
 ```shell
 # 1. Check for audio devices
@@ -511,17 +541,19 @@ docker logs sensecraft-voice-client
 reboot
 ```
 
-## SenseCraft Voice：边缘到云平台概述
+重启后，您可以导航到 `http://192.168.49.1:8090` 访问边缘客户端界面，进行实时 ASR 转录和设备配置。有关 SenseCraft Voice 平台的详细使用方法，请参考下面的[用户指南](#用户指南)部分。
+
+## SenseCraft Voice：边缘到云端平台概述
 
 SenseCraft Voice 是一个尖端平台，旨在通过强大的 AI 分析和集中管理，将在边缘（reRouter）捕获的原始音频数据转换为可操作的商业智能。
 
-该平台独特的边缘-云架构为企业级音频监控解决方案提供了无与伦比的可靠性、速度和分析深度。
+该平台独特的边缘-云端架构为企业级音频监控解决方案提供了无与伦比的可靠性、速度和分析深度。
 
-| **功能**                       | **价值主张**                                        | **关键优势**                                           |
+| **功能**                       | **价值主张**                                        | **主要优势**                                           |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **弹性边缘处理**     | 保证持续运行和低延迟。             | 语音 ASR 和识别在 reRouter 上*本地*运行，确保实时响应和数据收集，即使在网络中断期间也能正常工作。 |
-| **深度 AI 定制**         | 使平台适应特定的业务需求和术语。 | 管理员可以定义自定义**关键词、同义词和 AI 提示**来指导 AI 分析，确保针对其业务语言的准确事件检测。 |
-| **精细位置映射**     | 简化大规模部署管理。                | 支持通过**商店、位置和设备名称**对数千个边缘设备进行分层组织，摆脱令人困惑的 MAC 地址，便于过滤和报告。 |
+| **深度 AI 定制**         | 使平台适应特定的业务需求和术语。 | 管理员可以定义自定义**关键词、同义词和 AI 提示**来指导 AI 分析，确保准确检测特定于其业务语言的事件。 |
+| **精细位置映射**     | 简化大规模部署管理。                | 支持按**商店、位置和设备名称**对数千个边缘设备进行分层组织，摆脱令人困惑的 MAC 地址，便于过滤和报告。 |
 | **可操作的仪表板**         | 提供即时的业务洞察和性能跟踪。 | 集中式仪表板具有**多商店过滤**、实时**设备在线率**和**关键词热点分析**功能，可即时监控运营状态和业务事件。 |
 
 SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保实时本地处理和集中管理。该服务由两个主要组件组成：运行在 reRouter 上的边缘端客户端，以及云端/服务器端管理平台。
@@ -532,10 +564,10 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 
 边缘客户端对于实时验证和本地设置至关重要。
 
-- **访问：** 打开您的网络浏览器，导航到 reRouter 的 IP 地址的 8090 端口：`http://<reRouter_IP_Address>:8090`。
+- **访问：** 打开您的网络浏览器，导航到 reRouter 的 IP 地址的 8090 端口：`http://192.168.49.1:8090`。
 - **核心功能：** 该界面提供实时 ASR 转录（用于验证音频输入）、声纹识别控制（说话人识别）和设备配置（网络设置、上游服务器地址）。
 
-<table> <thead> <tr> <th>模块名称</th> <th>描述</th> <th>界面截图</th> </tr> </thead> <tbody> <tr> <td><b>语音 ASR</b></td> <td> <p><b>描述：</b> 显示本地自动语音识别（ASR）服务的当前运行状态。</p> <p><b>用途：</b> 提供检测到的语音的<b>实时转录</b>，对于验证本地音频输入和识别准确性至关重要。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>图 1：语音 ASR 模块</p></div> </td> </tr> <tr> <td><b>声纹识别</b></td> <td> <p><b>描述：</b> 管理和监控声纹识别系统。</p> <p><b>用途：</b> 用于基于独特的语音特征<b>注册、区分和识别</b>不同的说话人/用户。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>图 2：声纹识别模块</p></div> </td> </tr> <tr> <td><b>设备状态与配置</b></td> <td> <p><b>描述：</b> 提供 reRouter 运行状态的详细信息，并允许更改核心参数。</p> <p><b>用途：</b> 启用配置更新，如<b>网络设置</b>（Wi-Fi）和更改用于云端通信的<b>上游服务器地址</b>。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>图 3：设备状态与配置</p></div> </td> </tr> </tbody> </table>
+<table> <thead> <tr> <th>模块名称</th> <th>描述</th> <th>界面截图</th> </tr> </thead> <tbody> <tr> <td><b>语音 ASR</b></td> <td> <p><b>描述：</b> 显示本地自动语音识别（ASR）服务的当前运行状态。</p> <p><b>目的：</b> 提供检测到的语音的<b>实时转录</b>，对于验证本地音频输入和识别准确性至关重要。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>图 1：语音 ASR 模块</p></div> </td> </tr> <tr> <td><b>声纹识别</b></td> <td> <p><b>描述：</b> 管理和监控声纹识别系统。</p> <p><b>目的：</b> 从音频录音中自动生成独特的声纹，以实现说话人区分和识别。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>图 2：声纹识别模块</p></div> </td> </tr> <tr> <td><b>设备状态与配置</b></td> <td> <p><b>描述：</b> 提供关于 reRouter 运行状态的详细信息，并允许更改核心参数。</p> <p><b>目的：</b> 启用配置更新，如<b>网络设置</b>（Wi-Fi）和更改用于云端通信的<b>上游服务器地址</b>。</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>图 3：设备状态与配置</p></div> </td> </tr> </tbody> </table>
 
 ### 云端管理平台
 
@@ -545,8 +577,8 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 
 仪表板是您的运营指挥中心，提供聚合指标和性能趋势：
 
-- **商店筛选：** 通过选择一个或多个商店轻松切换视图，所有图表会立即更新。
-- **分析：** 监控**每日收集趋势**（每小时记录）和**关键词热点分析**（显示哪些关键词被频繁触发以及相关的**设备名称**）。
+- **门店筛选：** 通过选择一个或多个门店轻松切换视图，所有图表会立即更新。
+- **分析：** 监控**每日收集趋势**（按小时记录）和**关键词热点分析**（显示哪些关键词被频繁触发以及相关的**设备名称**）。
 
 <div align="center">
 
@@ -564,9 +596,10 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 
 此模块提供所有收集的语音记录的权威视图。
 
-- **高级筛选：** 使用**设备名称、商店名称、位置名称或 MAC 地址**进行精确数据检索。搜索仅在点击 **"Filter"** 按钮后执行，让用户完全控制。
+- **高级筛选：** 使用**设备名称、门店名称、位置名称或 MAC 地址**进行精确数据检索。搜索仅在点击**"Filter"**按钮后执行，让用户完全控制。
 - **导出功能：** 选择并以**三种格式**导出筛选的数据供外部使用（一次选择一种）：**Markdown**、**纯文本（.txt）**或**原始音频文件**。
-- **清晰度：** 所有记录视图优先显示易于识别的**设备名称**而非 MAC 地址。
+- **双视图审计：** 轻松在**对话模式**（查看转录的对话）和**时间线模式**（收听原始音频回放）之间切换。这种双重方法允许快速验证转录准确性并更深入地理解交互的上下文。
+- **清晰度：** 所有记录视图都优先显示易于识别的**设备名称**而非 MAC 地址。
 
 <div align="center">
 
@@ -580,12 +613,24 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 
 </div>
 
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="sensecraft-voice-record" />
+
+<figcaption>图 5.1：时间线模式</figcaption>
+
+</figure>
+
+</div>
+
 #### 3. AI 分析：历史与自定义处理
 
-此区域处理向 AI 引擎提交语音记录进行高级处理。
+此区域处理向 AI 引擎提交语音记录以进行高级处理。
 
 - **历史会话：** 查看您与 AI 分析引擎的过往交互。历史窗口按时间顺序显示对话，点击会话会立即加载之前的对话线程供查看。
-- **处理：** 基于当前选择的 **AI 提示**提交筛选的记录进行 AI 处理。
+- **处理：** 基于当前选择的 **AI Prompt** 提交筛选的记录进行 AI 处理。
 
 <div align="center">
 
@@ -599,11 +644,11 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 
 </div>
 
-#### 4. 商店管理：设备与位置层次结构
+#### 4. 门店管理：设备与位置层次结构
 
 此区域提供设置和维护所有边缘设备组织层次结构的必要工具。
 
-- **层次视图：** 轻松管理商店、其特定的店内位置以及相关的 reRouter 设备。
+- **层次视图：** 轻松管理门店、其特定的店内位置以及相关的 reRouter 设备。
 - **集中控制：** 通过逻辑分组设备来简化设备部署和配置。
 
 <div align="center">
@@ -612,7 +657,7 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/store-management.png" alt="Store Management Interface" />
 
-<figcaption>图 7：商店管理界面</figcaption>
+<figcaption>图 7：门店管理界面</figcaption>
 
 </figure>
 
@@ -686,7 +731,7 @@ SenseCraft Voice 解决方案基于强大的边缘-云端架构构建，确保�
 
 创建和管理自定义 **AI 提示**以指导 AI 如何处理选定的语音记录。
 
-- **控制：** 定义提示**名称、标签和内容**。一次只有一个**启用**的提示处于活动状态供使用。
+- **控制：** 定义提示**名称、标签和内容**。一次只有一个**启用的**提示处于活动状态供使用。
 - **管理：** 支持**添加、编辑、删除和批量删除**。
 
 <div align="center">

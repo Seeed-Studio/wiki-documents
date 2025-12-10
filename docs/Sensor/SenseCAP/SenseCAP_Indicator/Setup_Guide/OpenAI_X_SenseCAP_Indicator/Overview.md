@@ -73,7 +73,7 @@ If you are not satisfied with a generated image, you can click the "Regenerate" 
 Need more detail information to know how to use ChatGPT and DALL·E models?
 
 - [SenseCAP_Indicator_ChatGPT Chat Completions](/SenseCAP_Indicator_ChatGPT)
-- [SenseCAP_Indicator_DALL·E Image Generation](/SenseCAP_Indicator_DALL·E)
+- [SenseCAP_Indicator_DALL·E Image Generation](/SenseCAP_Indicator_DALL-E)
 
 # **Tech Support**
 **Need help with your SenseCAP Indicator? We're here to assist you!**

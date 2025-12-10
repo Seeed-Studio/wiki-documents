@@ -7,7 +7,7 @@ keywords:
 - JetPack
 - reComputer
 - BSP
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop2.webp
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.webp
 slug: /deploy_ota_on_recomputer
 last_update:
   date: 12/05/2025
@@ -113,7 +113,7 @@ export const productOptions = [
 
 ### On-device OTA procedure
 
-:::Note
+:::note
 The following operations are performed on the Jetson (via remote connection)
 :::
 
