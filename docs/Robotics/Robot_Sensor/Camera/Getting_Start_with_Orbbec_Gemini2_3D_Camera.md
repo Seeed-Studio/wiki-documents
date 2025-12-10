@@ -1,5 +1,5 @@
 ---
-description: Show people how to use Orbbec Gemini 335Lg on reComputer Jetson platform.
+description: Show people how to use Orbbec Gemini2 on reComputer Jetson platform.
 title: Orbbec Gemini2 3D Camera
 keywords:
 - Jetson
@@ -135,6 +135,86 @@ The compact Gemini 2 3D camera is based on Active Stereo IR technology and is eq
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-3.png" />
 </div>
 
+
+## Gemini Series Quickstart Guide
+- Connect the Orbbec Camera
+ ① Assemble the tripod head with the tripod, and then secure the camera onto the assembled tripod, as illustrated in Step 1 below.
+
+  ② Use the USB-C to USB-A cable to connect the camera’s Type-C port, as shown in Step 2 below.
+
+  ③ Connect the USB-A connector to the host using the same USB-C to USB-A cable, as shown in Step 3 below.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/step1.png" />
+</div>
+
+- Get Orbbec Viewer
+
+Select and download the corresponding [Orbbec Viewer](https://www.orbbec.com/developers/orbbec-sdk/) based on your system and version.
+
+- Launch Orbbec Viewer
+
+1. After starting the Orbbec Viewer, please make sure that the tool recognizes the 3D camera, as indicated by the following image. 
+【Remark】If the camera is not recognized, please check to ensure that the camera and the host are properly connected. You can try disconnecting and then reconnecting the USB cable. If it still isn’t recognized, consider replacing the USB cable or verifying whether the host computer’s power supply meets the required specifications.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft1.png" />
+</div>
+
+
+2. Toggle the ‘Depth’ button at the top of the tool to start and preview the depth stream.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft2.png" />
+</div>
+
+3. Toggle the ‘Color‘ button at the top of the tool to start and preview the color stream. The color stream and depth stream will be displayed side by side.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft3.png" />
+</div>
+
+4. Toggle the ‘IR Left’ and ‘IR Right’ buttons at the top of the tool to strat and preview the IR stream.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft4.png" />
+</div>
+
+5. Toggle the ‘IMU’ button at the top of the tool to start and preview the IMU stream.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft5.png" />
+</div>
+
+6. Toggle the button on the top of each window to show the metadata information.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft6.png" />
+</div>
+
+7. Toggle the ‘PointCloud‘ button at the top of the tool to start and preview the 3D point cloud
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft7.png" />
+</div>
+
+8. Toggle the ‘Display’ button under the ‘Image View’ menu on the left to start and preview the D2C (depth to color registration) stream. The 3D point cloud and the D2C stream will be displayed side by side.
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/soft8.png" />
+</div>
+
+
+
 ## Getting Start on reComputer
 
 **Step 1.** Download and install the Orbbec SDK for ARM64 architecture:
@@ -197,6 +277,7 @@ There are some case tutorials developed by us using Gemini2:
 - [Orbbec SDK v2 API Guide](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
 - [Datasheet](https://files.seeedstudio.com/products/Orbbec/Orbbec_Gemini_2_Series_Datasheet_V1.7_20240316.pdf)
 - [OrbbecViewer](https://github.com/orbbec/OrbbecSDK/blob/main/doc/OrbbecViewer/English/OrbbecViewer.md)
+- [ROS SDK](https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/)
 
 ## Tech Support & Product Discussion
 

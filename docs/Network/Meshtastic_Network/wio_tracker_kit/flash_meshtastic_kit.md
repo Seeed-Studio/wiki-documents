@@ -7,14 +7,18 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash_meshtastic_kit
 last_update:
-  date: 6/17/2024
-  author: Jessie
+  date: 12/3/2025
+  author: Michelle Huang
 ---
-
+:::danger note
+When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
+1. Not finishing the message transmission process
+2. Being configured
+:::
 This tutorial will guide users to flash the [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) to the Meshtastic version, for those who want to use the Meshtastic network.
 
 :::tip
-If you want to flash the board back to the LoRaWAN version, please check this [tutorial](https://wiki.seeedstudio.com/flash_to_wio_tracker/).
+If you want to flash the board back to the LoRaWAN version, please check this [tutorial](https://wiki.seeedstudio.com/flash_to_wio_tracker/). Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
 :::
 
 ### Preparation

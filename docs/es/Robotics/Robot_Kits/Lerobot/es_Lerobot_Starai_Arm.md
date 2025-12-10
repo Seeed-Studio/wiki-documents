@@ -306,15 +306,15 @@ Mueve el brazo robótico a la posición inicial del brazo robótico (como se mue
 Para la posición inicial de la nueva versión del brazo robótico, se debe prestar especial atención a asegurar que los servos de las Articulaciones 3, 4 y 5 se alineen estrictamente con las posiciones en la figura.
 
 
+| **Nuevo Brazo Líder de Violín** | **Antiguo Brazo Líder de Violín** | **Brazo Seguidor de Viola** | **Brazo Seguidor de Violonchelo** |
+|:---------:|:---------:|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_init.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_init.png) | ![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello_init.png) |
+
+Por ejemplo:
+
 | **Brazo Líder Violin** | **Brazo Seguidor Viola** |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_rest.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_rest.jpg) |
-
-Posición inicial del brazo robótico de versión anterior (se debe prestar especial atención a asegurar que los servos de las Articulaciones 3, 4 y 5 se alineen estrictamente con las posiciones en la figura; la posición inicial del brazo robótico de nueva versión también puede usarse como referencia):
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
-</div>
 
 
 :::tip
@@ -1381,7 +1381,7 @@ pip install -e ".[pi]"
 ```bash
 lerobot-train \
   --policy.type=pi0 \
-  --dataset.repo_id=seeed/eval_test123 \ 
+  --dataset.repo_id=seeed/eval_test123 \
   --job_name=pi0_training \
   --output_dir=outputs/pi0_training \
   --policy.pretrained_path=lerobot/pi0_base \
@@ -1425,7 +1425,7 @@ pip install -e ".[pi]"
 **Entrenar**
 ```bash
 lerobot-train \
-    --dataset.repo_id=seeed/eval_test123 \ 
+    --dataset.repo_id=seeed/eval_test123 \
     --policy.type=pi05 \
     --output_dir=outputs/pi05_training \
     --job_name=pi05_training \

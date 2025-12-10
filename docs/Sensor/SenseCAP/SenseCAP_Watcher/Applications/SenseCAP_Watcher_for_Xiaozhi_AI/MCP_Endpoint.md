@@ -16,8 +16,10 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /mcp_endpoint
 last_update:
-  date: 10/22/2025
+  date: 10/30/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
 
 # MCP Endpoint
@@ -51,17 +53,6 @@ MCP allows servers to expose callable tools to language models through a well-de
 5. Get Endpoint adddress and Connection Status
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI15.png" style={{width:400, height:'auto'}}/></div>
-
-## Select Pre-provide mcp services
-
-The following four MCP services are available for you to choose from.
-
-After you save the configuration and restart the device, the selected services will take effect automatically.
-
-You can remove the service by click `×`
-
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI16.png" style={{width:800, height:'auto'}}/></div>
-
 
 ## MCP Example
 
@@ -107,6 +98,58 @@ Below is a detailed explanation of some key parts of the MCP server example:
 - `result = eval(python_expression)` : Uses Python’s eval() to evaluate the expression. Libraries like math and random can be used because they were imported above.
 
 - `mcp.run(transport="stdio")` : Starts the server. The stdio transport allows it to communicate with the Watcher Agent or your MCP client.
+
+### Quick Start
+
+- Requirements
+  - [MCP Example Code Github](https://github.com/78/mcp-calculator)
+  - Python 3.7+
+  - websockets>=11.0.3
+  - python-dotenv>=1.0.0
+  - mcp>=1.8.1
+  - pydantic>=2.11.4
+  - mcp-proxy>=0.8.2
+
+- Step1. Clone the repository and navigate to the project folder
+
+  ```bash
+  git clone https://github.com/78/mcp-calculator.git
+  cd mcp-calculator
+  ```
+
+- Step2. Install dependencies
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- Step3. Set up environment variables
+  - For Linux/macOS
+    ```bash
+    export MCP_ENDPOINT=<your_mcp_endpoint>
+    ```
+  - For windows(PowerShell)
+    ```bash
+    $env:MCP_ENDPOINT="<your_mcp_endpoint>"
+    ```
+  - For windows(CMD)
+    ```bash
+    set MCP_ENDPOINT=<your_mcp_endpoint>
+    ```
+
+- Step4. Run the calculator example
+  ```bash
+  python mcp_pipe.py calculator.py
+  ```
+
+- Or run all configured servers
+  ```bash
+  python mcp_pipe.py
+  ```
+
+  :::note
+  This requires an mcp_config.json configuration file defining the server settings.
+  :::
 
 ### Execution Result
 
@@ -181,6 +224,16 @@ Note: Having too many tools may affect the device’s scheduling efficiency.
 Each MCP endpoint has a maximum number of concurrent connections.
 
 Note: Exceeding this limit or having too many simultaneous connections may reduce device performance.
+
+## Select Pre-provide mcp services
+
+The following four MCP services are available for you to choose from MCP Setting mentioned before.
+
+After you save the configuration and restart the device, the selected services will take effect automatically.
+
+You can remove the service by click `×`
+
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI16.png" style={{width:800, height:'auto'}}/></div>
 
 ## Technical Support
 

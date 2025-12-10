@@ -16,7 +16,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /cn/mcp_endpoint
 last_update:
-  date: 10/22/2025
+  date: 12/04/2025
   author: Twelve
 ---
 
@@ -34,34 +34,19 @@ MCP 允许服务器通过定义良好的协议向语言模型公开可调用的�
 
 ## 获取 MCP 端点
 
-1. 进入 [SenseCraft AI 平台](https://sensecraft.seeed.cc/ai/home)
+1. 进入 [Xiaozhi AI 控制面板](https://xiaozhi.me/console/agents)
 
-2. 要访问控制面板，请点击页面右上角的 Watcher Agent。
+2. 打开代理配置
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/navigate.jpg" style={{width:800, height:'auto'}}/></div>
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/cn_3.png" style={{width:400, height:'auto'}}/></div> 
 
-3. 打开智能体配置
+3. 点击 `MCP 设置` 和 `获取 MCP 接入点`
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/agent%20conf.jpg" style={{width:300, height:'auto'}}/></div> 
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP4.png" style={{width:800, height:'auto'}}/></div>
 
-4. 点击 `MCP Setting` 和 `Get MCP Endpoint`
+4. 获取端点地址和连接状态
 
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI14.png" style={{width:800, height:'auto'}}/></div>
-
-5. 获取端点地址和连接状态
-
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI15.png" style={{width:400, height:'auto'}}/></div>
-
-## 选择预提供的 MCP 服务
-
-以下四个 MCP 服务可供您选择。
-
-保存配置并重启设备后，所选服务将自动生效。
-
-您可以通过点击 `×` 来移除服务
-
-  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI16.png" style={{width:800, height:'auto'}}/></div>
-
+  <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP5.png" style={{width:600, height:'auto'}}/></div>
 
 ## MCP 示例
 
@@ -96,9 +81,9 @@ MCP 允许服务器通过定义良好的协议向语言模型公开可调用的�
       mcp.run(transport="stdio")
 ```
 
-### 代码解释
+### 代码说明
 
-以下是 MCP 服务器示例中一些关键部分的详细解释：
+以下是 MCP 服务器示例中一些关键部分的详细说明：
 
 - `@mcp.tool()` : 将以下函数注册为可由 AI 模型远程调用的 MCP 工具。
 
@@ -107,6 +92,58 @@ MCP 允许服务器通过定义良好的协议向语言模型公开可调用的�
 - `result = eval(python_expression)` : 使用 Python 的 eval() 来评估表达式。可以使用 math 和 random 等库，因为它们已在上面导入。
 
 - `mcp.run(transport="stdio")` : 启动服务器。stdio 传输允许它与 Watcher Agent 或您的 MCP 客户端通信。
+
+### 快速开始
+
+- 要求
+  - [MCP 示例代码 Github](https://github.com/78/mcp-calculator)
+  - Python 3.7+
+  - websockets>=11.0.3
+  - python-dotenv>=1.0.0
+  - mcp>=1.8.1
+  - pydantic>=2.11.4
+  - mcp-proxy>=0.8.2
+
+- 步骤 1. 克隆仓库并导航到项目文件夹
+
+  ```bash
+  git clone https://github.com/78/mcp-calculator.git
+  cd mcp-calculator
+  ```
+
+- 步骤 2. 安装依赖项
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- 步骤 3. 设置环境变量
+  - 对于 Linux/macOS
+    ```bash
+    export MCP_ENDPOINT=<your_mcp_endpoint>
+    ```
+  - 对于 Windows（PowerShell）
+    ```bash
+    $env:MCP_ENDPOINT="<your_mcp_endpoint>"
+    ```
+  - 对于 Windows（CMD）
+    ```bash
+    set MCP_ENDPOINT=<your_mcp_endpoint>
+    ```
+
+- 步骤 4. 运行计算器示例
+  ```bash
+  python mcp_pipe.py calculator.py
+  ```
+
+- 或运行所有配置的服务器
+  ```bash
+  python mcp_pipe.py
+  ```
+
+  :::note
+  这需要一个定义服务器设置的 mcp_config.json 配置文件。
+  :::
 
 ### 执行结果
 
@@ -125,24 +162,23 @@ Calculating formula: math.comb(10, 3), result: 120
 
 ### MCP 端点状态
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP1.png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP6.png" style={{width:600, height:'auto'}}/></div>
 
-- Connection Status: 显示您的 MCP 连接是否正常工作。
-- Refresh icon: 刷新您的 MCP 连接状态。
-- Enabled Services: 列出您的 Watcher 可以使用的所有 MCP 服务。
-- Endpoint Address: 您的 MCP 端点地址（除非官方技术支持需要，否则请勿与任何人分享）
+
+- 接入点状态：显示您的 MCP 连接是否正常工作。
+- 刷新图标：刷新您的 MCP 连接状态。
+- 启用的服务：列出您的 Watcher 可以使用的所有 MCP 服务。
+- 接入点地址：您的接入点地址（除非官方技术支持需要，否则不要与任何人分享）
 
 ### 对话日志
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP2.png" style={{width:800, height:'auto'}}/></div>
-
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP3.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP7.png" style={{width:600, height:'auto'}}/></div>
 
 ### 注意事项
 #### 1. MCP 中的工具和参数命名
 
 工具及其参数的名称必须清晰，以便大型模型理解其用途。
-尽可能避免使用缩写，并提供注释解释工具的功能以及何时应该使用它。
+尽可能避免使用缩写，并提供注释说明工具的功能以及何时应该使用它。
 
 例如，名为 calculator 的工具让模型知道它是一个计算器，参数 python_expression 表示模型应该输入一个 Python 表达式。
 
@@ -152,7 +188,7 @@ Calculating formula: math.comb(10, 3), result: 120
 
 文档字符串（使用 """..."""）指导模型何时使用该工具。
 
-它还可以提到可以在表达式中使用 math 和 random 库中的函数。
+它还可以提到可以在表达式中使用 math 和 random 库的函数。
 
 这两个库已经在示例代码中导入。
 
@@ -166,7 +202,7 @@ Calculating formula: math.comb(10, 3), result: 120
 
 MCP 返回值通常是字符串或 JSON。在示例中，计算结果在名为 result 的 JSON 字段中返回。
 
-返回值的长度通常有限制，类似于 IoT 设备命令，通常在 1024 字节以内。
+返回值的长度通常有限制，类似于物联网设备命令，通常在 1024 字节内。
 
 #### 5. 工具列表限制
 
@@ -181,6 +217,16 @@ MCP 工具列表有上限。
 每个 MCP 端点都有最大并发连接数。
 
 注意：超过此限制或同时连接过多可能会降低设备性能。
+
+## 选择预提供的 MCP 服务
+
+以下若干个 MCP 服务可供您从前面提到的 MCP 设置中选择。
+
+保存配置并重启设备后，所选服务将自动生效。
+
+您可以通过点击 `×` 来移除服务
+
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/MCP/MCP8.png" style={{width:800, height:'auto'}}/></div>
 
 ## 技术支持
 

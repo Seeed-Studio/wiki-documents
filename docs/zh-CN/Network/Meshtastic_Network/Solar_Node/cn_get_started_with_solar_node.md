@@ -1,6 +1,6 @@
 ---
-description: 开始使用 SenseCAP Solar Node for Meshtastic & LoRa
-title:  开始使用 SenseCAP Solar Node
+description: SenseCAP Solar Node for Meshtastic & LoRa 入门指南
+title:  SenseCAP Solar Node 入门指南
 keywords:
 - Meshtastic
 - Solar
@@ -8,16 +8,24 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /cn/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 09/11/2025
-  author: Michelle
+  date: 12/3/2025
+  author: Michelle Huang
 ---
 
-
-## 开始使用
+:::danger note
+当设备处于以下状态时，请不要手动重启或关闭设备，否则设备可能会损坏。
+1. 未完成消息传输过程
+2. 正在配置中
+:::
+## 入门指南
 
 在正式部署之前，请先测试和配置节点。
 
 ### 刷写固件
+
+:::caution note
+请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+:::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
@@ -31,17 +39,19 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件拖拽到 DFU 驱动器中。文件下载完成后，固件应该会被刷写，设备会重启。
+将 UF2 文件拖拽到 DFU 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
 
 ### 安装电池和 GPS 模块（可选）
 
 :::tip
-推荐电池：18650 锂离子电池 3.6V（平头）。
+当您需要安装或更换电池时，请使用 `Button-top` 18650（3.6V）电池。
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
+P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用户需要手动安装电池和 GPS 模块。
 :::
 
-P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用户需要手动安装电池和 GPS 模块。
 
-- 步骤 1：拆下所有螺丝和外壳。
+
+- 步骤 1：拆下所有螺丝和盖子。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.png" alt="pir" width={800} height="auto" /></p>
 
@@ -59,9 +69,17 @@ P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用�
 确保外壳正确安装，螺丝牢固拧紧，以保持设备的防水完整性。
 :::
 
-### 设备上电
+### 开启设备
 
-连接 USB 线缆以激活设备。
+设备首次使用需要通过连接 USB 线缆来激活。如果蓝色 Mesh 指示灯闪烁，说明设备已成功开启。如下方视频所示：
+
+<div class="table-center">
+<iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+:::tip
+如果按下按钮时设备没有响应，请先充电。不要使用快充充电器。
+:::
 
 ### 通过应用连接
 
@@ -70,7 +88,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOS 应用">
 
 - 在蓝牙面板上选择目标设备。
 
@@ -82,7 +100,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android 应用">
 
 - 点击 `+` 并选择目标设备。
 
@@ -95,18 +113,50 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
+
+### 通过网站连接
+
+如果您想在网站上发送文本消息并与其他节点通信，您现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+
+  步骤 1：打开网站
+
+[点击这里](https://client.meshtastic.org/messages/broadcast/0) 前往网站。
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  步骤 2：添加新设备
+
+    点击 "+ New Connection"。
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    有两种连接方式。您可以选择您喜欢的方法。
+
+ 方法 1：通过蓝牙
+
+    选择蓝牙方法。在弹出窗口中选择设备 ID。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ 方法 2：通过串口
+
+    选择串口方法。打开设备管理器查看设备连接到哪个端口。在弹出窗口中选择该端口。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    您的设备将显示在列表中。点击连接。如果连接成功，您可以直接在网站上看到设备状态。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
+
 ### 配置参数
 
 为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的区域位置进行设置。
 
 <Tabs>
-<TabItem value="ios" label="IOS App">
+<TabItem value="ios" label="IOS 应用">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android App">
+<TabItem value="android" label="Android 应用">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -123,7 +173,7 @@ import TabItem from '@theme/TabItem';
 参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算，每分钟计算一次。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -131,7 +181,7 @@ import TabItem from '@theme/TabItem';
 ## 安装
 
 :::danger note
-由于设备将在户外长期使用，请避免将面板水平安装。建议倾斜或对角安装以防止积水。此外，确保所有螺丝牢固拧紧，外壳正确安装。为了增强防水保护，您还可以考虑采用额外的密封措施。
+由于设备将在户外长期使用，请避免将面板水平安装。建议倾斜或对角安装以防止积水。此外，确保所有螺丝牢固拧紧，盖子正确安装。为了增强防水保护，您还可以考虑采用额外的密封措施。
 :::
 
 - **零件清单**
@@ -182,7 +232,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-### 完整安装指导
+### 完整安装指南
 
 - 您可以通过视频完成整个安装和初始化过程。
 
@@ -253,8 +303,8 @@ import TabItem from '@theme/TabItem';
 |描述|功耗|
 |---|---|
 |GPS_LED 工作电流|1.02 mA|
-|已供电但未激活|56.195 μA|
-|已供电且已激活|611 μA|
+|通电但未激活|56.195 μA|
+|通电并激活|611 μA|
 
 **示例：**
 
@@ -281,4 +331,5 @@ import TabItem from '@theme/TabItem';
 
       为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
 
-更多详情请查看 [太阳能节点电池寿命计算表](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Solar%20Node%20Battery%20Life%20Calculation%20Table.xlsx)
+## 资源
+- [太阳能节点电池寿命计算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)

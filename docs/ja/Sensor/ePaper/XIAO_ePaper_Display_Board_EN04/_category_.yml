@@ -1,0 +1,5 @@
+position: 2 # float position is supported
+label: 'XIAO ePaperディスプレイボード EN04'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: xiao_epaper_display_board_en04

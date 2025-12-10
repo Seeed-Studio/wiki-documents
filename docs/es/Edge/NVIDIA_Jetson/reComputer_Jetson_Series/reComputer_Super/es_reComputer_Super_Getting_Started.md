@@ -1,6 +1,6 @@
 ---
-description: Primeros pasos con reComputer Super
-title: Primeros pasos con reComputer Super
+description: Introducción para reComputer Super
+title: Introducción a reComputer Super
 keywords:
   - reComputer Super
   - reComputer Super Getting Started
@@ -12,11 +12,11 @@ last_update:
   author: Yaohui
 ---
 
-# Primeros pasos con reComputer Super
+# Introducción a reComputer Super
 
-La Serie reComputer Super potencia el reComputer Classic, ofreciendo hasta un impulso de 1.7x de 157 TOPS en rendimiento de IA. Incluye modelos con Jetson Orin Nano (11410311, 11410312) y Jetson Orin NX (11410313, 11410314).
-Diseñado tanto para desarrollo como para producción, viene con una rica variedad de interfaces, incluyendo M.2 Key E/M, Ethernet dual RJ45, Mini-PCIe, 4xUSB 3.2, HDMI 2.1, 4xCSI, y CAN. Con Jetpack 6.2 y Linux OS BSP preinstalados, permite entrada inmediata al mercado.
-También soporta una amplia gama de marcos de trabajo LLM y IA Física, como NVIDIA, Hugging Face, ONNX, PyTorch, y ROS2/1 en el borde sin problemas, incluso fusionando estas capacidades multimodales con aplicaciones de robótica para enriquecer el desarrollo de IA Física.
+La serie reComputer Super potencia el reComputer Classic, ofreciendo hasta un aumento de 1.7x de 157 TOPS en rendimiento de IA. Incluye modelos con Jetson Orin Nano (11410311, 11410312) y Jetson Orin NX (11410313, 11410314).
+Diseñado tanto para desarrollo como para producción, viene con una rica variedad de interfaces, incluyendo M.2 Key E/M, Ethernet dual RJ45, Mini-PCIe, 4xUSB 3.2, HDMI 2.1, 4xCSI y CAN. Con Jetpack 6.2 y Linux OS BSP preinstalados, permite entrada inmediata al mercado.
+También soporta una amplia gama de marcos de trabajo de LLM y IA Física, como NVIDIA, Hugging Face, ONNX, PyTorch y ROS2/1 en el borde sin problemas, incluso fusionando estas capacidades multimodales con aplicaciones robóticas para enriquecer el desarrollo de IA Física.
 
 <div align="center">
   <img width ="900" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/super/1.png"/>  
@@ -24,54 +24,54 @@ También soporta una amplia gama de marcos de trabajo LLM y IA Física, como NVI
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Obtener uno ahora 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
 </a></div>
 
-## Características principales  
+## Características Clave  
 
-### 🚀 ​**Impulso de rendimiento**  
+### 🚀 ​**Aumento de Rendimiento**  
 
-- ​**Impulso de rendimiento de IA 1.7x** sobre reComputer Classic, ofreciendo ​**157 TOPS**  
+- ​**Aumento de rendimiento de IA de 1.7x** sobre reComputer Classic, entregando ​**157 TOPS**  
 - Impulsado por ​**Jetson Orin Nano** (Modelos: 11410311, 11410312) y ​**Jetson Orin NX** (Modelos: 11410313, 11410314)  
 
-### 🔌 ​**Rica conectividad e interfaces**  
+### 🔌 ​**Rica Conectividad e Interfaces**  
 
 - ​**M.2 Key E/M** + ​**Mini-PCIe** para expandibilidad  
-- ​**Puertos Ethernet dual RJ45** para redes de alta velocidad  
+- Puertos ​**Ethernet dual RJ45** para redes de alta velocidad  
 - ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Interfaz Serial de Cámara)  
-- Soporte ​**bus CAN** para aplicaciones industriales/robóticas  
+- Soporte de ​**bus CAN** para aplicaciones industriales/robóticas  
 
-### 🛠️ ​**Listo para desarrollo y producción**  
+### 🛠️ ​**Listo para Desarrollo y Producción**  
 
 - ​**Jetpack 6.2** y ​**Linux OS BSP** preinstalados para despliegue inmediato  
 - Integración perfecta de IA en el borde con marcos de trabajo:  
   - ​**NVIDIA**, ​**Hugging Face**, ​**ONNX**, ​**PyTorch**  
-  - ​**ROS2/1** para aplicaciones de robótica  
+  - ​**ROS2/1** para aplicaciones robóticas  
 - Soporta desarrollo de ​**IA multimodal** e ​**IA Física**  
 
-### 🤖 ​**Optimizado para IA en el borde y robótica**  
+### 🤖 ​**Optimizado para IA en el Borde y Robótica**  
 
-- Fusiona capacidades ​**LLM (Modelo de Lenguaje Grande)** con ​**IA Física** en el borde  
+- Fusiona capacidades de ​**LLM (Modelo de Lenguaje Grande)** con ​**IA Física** en el borde  
 - Ideal para robótica, automatización industrial e inferencia de IA en tiempo real  
 - Acelera la ​**entrada al mercado** con pila de software preconfigurada  
 
 :::tip
 
-### ⚠️ Directrices de Alimentación y Accesorios  
+### ⚠️ Directrices de Energía y Accesorios  
 
 #### 1. ​**Adaptador de Energía**  
 
 - ​**Jetson Orin Nano**: 12V 5A (conector barrel 5525)  
 - ​**Jetson Orin NX**: 19V 4.74A (conector barrel 5525)  
-- Siempre utiliza ​**adaptadores oficiales** que cumplan con los requisitos de energía.  
+- Siempre use ​**adaptadores oficiales** y cumpla con los requisitos de energía.  
 
 #### 2. ​**Cable de Alimentación AC**  
 
-- Usa cables tipo trébol ​**específicos para tu región**.  
+- Use cables de trébol ​**específicos de la región**.  
 
 #### 3. ​**Accesorios**  
 
-- Solo accesorios ​**oficialmente recomendados** (por ejemplo, cámaras, módulos inalámbricos) para un rendimiento y compatibilidad óptimos.
+- Solo accesorios ​**oficialmente recomendados** (ej., cámaras, módulos inalámbricos) para rendimiento y compatibilidad óptimos.
 
 :::
 
@@ -111,9 +111,9 @@ También soporta una amplia gama de marcos de trabajo LLM y IA Física, como NVI
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan={2}>CPU de 6 núcleos Arm® Cortex®-A78AE v8.2 de 64 bits<br />1.5MB L2 + 4MB L3</td>
-      <td>CPU de 6 núcleos Arm® Cortex®-A78AE v8.2 de 64 bits 1.5MB L2 + 4MB L3</td>
-      <td>CPU de 8 núcleos Arm® Cortex®-A78AE v8.2 de 64 bits 2MB L2 + 4MB L3</td>
+      <td colSpan={2}>CPU Arm® Cortex®-A78AE v8.2 de 64 bits de 6 núcleos<br />1.5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 64 bits de 6 núcleos 1.5MB L2 + 4MB L3</td>
+      <td>CPU Arm® Cortex®-A78AE v8.2 de 64 bits de 8 núcleos 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>Frecuencia Máxima de CPU</td>
@@ -122,10 +122,10 @@ También soporta una amplia gama de marcos de trabajo LLM y IA Física, como NVI
     </tr>
     <tr>
       <td>Memoria</td>
-      <td>4GB 64-bit LPDDR5<br />34 GB/s</td>
-      <td>8GB 128-bit LPDDR5<br />68 GB/s</td>
-      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
-      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
+      <td>LPDDR5 de 64 bits de 4GB<br />34 GB/s</td>
+      <td>LPDDR5 de 128 bits de 8GB<br />68 GB/s</td>
+      <td>LPDDR5 de 128 bits de 8GB 102.4GB/s</td>
+      <td>LPDDR5 de 128 bits de 16GB 102.4GB/s</td>
     </tr>
     <tr>
       <td>Acelerador DL</td>
@@ -156,7 +156,7 @@ También soporta una amplia gama de marcos de trabajo LLM y IA Física, como NVI
     </tr>
     <tr>
       <td>Almacenamiento</td>
-      <td colSpan={4}>1x M.2 KEY M PCIe (SSD M.2 NVMe 2280 de 128G incluido)</td>
+      <td colSpan={4}>1x M.2 KEY M PCIe (M.2 NVMe 2280 SSD 128G incluido)</td>
     </tr>
     <tr>
       <td rowSpan={3}>Redes</td>
@@ -194,7 +194,7 @@ También soporta una amplia gama de marcos de trabajo LLM y IA Física, como NVI
     </tr>
     <tr>
       <td>Puerto de Extensión</td>
-      <td colSpan={3}>1x conector de extensión de 40 pines;<br />1x conector de control y UART de 12 pines;</td>
+      <td colSpan={3}>1x cabecera de extensión de 40 pines;<br />1x cabecera de control y UART de 12 pines;</td>
     </tr>
     <tr>
       <td>RTC</td>
@@ -217,7 +217,7 @@ También soporta una amplia gama de marcos de trabajo LLM y IA Física, como NVI
       <td colSpan={3}>4x Orificio de Antena</td>
     </tr>
     <tr>
-      <td>Alimentación</td>
+      <td>Energía</td>
       <td colSpan={4}>Conector DC Barrel 5525 de 12-19V </td>
     </tr>
     <tr>
@@ -248,57 +248,57 @@ También soporta una amplia gama de marcos de trabajo LLM y IA Física, como NVI
 </table>
 </div>
 
-## Flash JetPack OS
+## Flashear SO JetPack
 
-### Módulo Compatible
+### Módulo Soportado
 
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
+- [Módulo NVIDIA® Jetson Orin™ Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [Módulo NVIDIA® Jetson Orin™ Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [Módulo NVIDIA® Jetson Orin™ NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [Módulo NVIDIA® Jetson Orin™ NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
 ### Prerrequisitos
 
 - PC host Ubuntu
 - reComputer Super
-- Cable de transmisión de datos USB Type-C
+- Cable de transmisión de datos USB Tipo-C
 
 :::info
 
-Recomendamos que uses dispositivos físicos con Ubuntu en lugar de máquinas virtuales.  
-Por favor, consulta la tabla a continuación para preparar la máquina anfitriona.
+Recomendamos que uses dispositivos host ubuntu físicos en lugar de máquinas virtuales.
+Por favor consulta la tabla a continuación para preparar la máquina host.
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td rowspan="2"> Versión de JetPack </td>
-        <td class="dbon" colspan="3"> Versión de Ubuntu (Computadora Anfitriona) </td>
+        <td  rowspan="2"> Versión JetPack </td>
+        <td class="dbon" colspan="3"> Versión Ubuntu (Computadora Host) </td>
     </tr>
     <tr>
-        <td> 18.04 </td>
-        <td> 20.04 </td>
-        <td> 22.04 </td>
+        <td > 18.04 </td>
+        <td > 20.04 </td>
+        <td > 22.04 </td>
     </tr>
     <tr>
-        <td>JetPack 6.x</td>
-        <td> </td>
-        <td> ✅ </td>
-        <td> ✅ </td>
+        <td >JetPack 6.x</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
 
 :::
 
-### Preparar la Imagen de Jetpack
+### Preparar la Imagen Jetpack
 
-Aquí, necesitamos descargar la imagen del sistema a nuestro PC Ubuntu correspondiente al módulo Jetson que estamos usando:
+Aquí, necesitamos descargar la imagen del sistema a nuestra PC Ubuntu correspondiente al módulo Jetson que estamos usando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Versión de Jetpack</th>
+      <th>Versión Jetpack</th>
       <th>Módulo Jetson</th>
       <th> GMSL </th>
       <th>Enlace de Descarga1</th>
@@ -336,19 +336,19 @@ Aquí, necesitamos descargar la imagen del sistema a nuestro PC Ubuntu correspon
 </div>
 
 :::danger
-El archivo de imagen de Jetpack6 tiene un tamaño aproximado de **14.1GB** y debería tardar alrededor de 60 minutos en descargarse. Por favor, espera a que la descarga se complete.
+El archivo de imagen Jetpack6 tiene aproximadamente **14.1GB** de tamaño y debería tomar alrededor de 60 minutos para descargar. Por favor, espere pacientemente a que se complete la descarga.
 :::
 
 :::info
-Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
+Para verificar la integridad del firmware descargado, puede comparar el valor hash SHA256.
 
-En una máquina anfitriona con Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, se confirma que el firmware que descargaste está completo e intacto.
+En una máquina host Ubuntu, abra la terminal y ejecute el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargó está completo e intacto.
 :::
 
-### Entrar al Modo de Recuperación Forzada
+### Entrar en Modo de Recuperación Forzada
 
 :::info
-Antes de poder continuar con los pasos de instalación, debemos asegurarnos de que la placa esté en modo de recuperación forzada.
+Antes de poder continuar con los pasos de instalación, necesitamos asegurarnos de que la placa esté en modo de recuperación forzada.
 :::
 
 <details>
@@ -365,7 +365,7 @@ Antes de poder continuar con los pasos de instalación, debemos asegurarnos de q
 
 **Paso 3.** Conecte el Super a la PC host Ubuntu con un cable de transmisión de datos USB Type-C.
 
-**Paso 4.** En la PC host Linux, abra una ventana de Terminal e ingrese el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el Jetson SoM que use, entonces la placa está en modo de recuperación forzada.
+**Paso 4.** En la PC host Linux, abra una ventana de Terminal e ingrese el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el SoM Jetson que use, entonces la placa está en modo de recuperación forzada.
 
 - Para Orin NX 16GB: **0955:7323 NVidia Corp**
 - Para Orin NX 8GB: **0955:7423 NVidia Corp**
@@ -390,34 +390,45 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2025-05-22.tar.gz
 ```
 
-**Paso 2:** Ejecuta el siguiente comando para flashear el sistema jetpack al SSD NVMe:
+**Paso 2:** Ejecute el siguiente comando para flashear el sistema jetpack al SSD NVMe:
 
 ```bash
 cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-Verás la siguiente salida si el proceso de flasheo es exitoso
+Verá la siguiente salida si el proceso de flasheo es exitoso
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-El comando de flasheo puede ejecutarse entre 2 y 10 minutos.
+El comando de flasheo puede ejecutarse durante 2-10 minutos.
 :::
 
-**Paso 3:** Conecta el monitor usando un cable HDMI y completa la configuración de inicialización del sistema reComputer Super:
+**Paso 3:** Conecte el monitor usando un cable HDMI y complete la configuración de inicialización del sistema reComputer Super:
 
 <div align="center">
-  <img width="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-Por favor, completa la **Configuración del Sistema** según tus necesidades.
+Por favor complete la **Configuración del Sistema** según sus necesidades.
 :::
+
+
+## Recursos
+
+[Hoja de Datos de la Placa Portadora reComputer Robotics J401](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+[Esquemático](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
+[Archivo 3D](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
+[Documento Mecánico-reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
+[Documento Mecánico-reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
+[Casos de Éxito de Seeed Nvidia Jetson](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+[Hoja Informativa de Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

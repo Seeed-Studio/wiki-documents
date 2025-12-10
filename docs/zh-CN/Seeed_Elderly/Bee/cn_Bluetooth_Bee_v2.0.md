@@ -8,7 +8,9 @@ slug: /cn/Bluetooth_Bee_v2.0
 last_update:
   date: 1/13/2023
   author: shuxu hu
---- 113050013
+sku: 113050013
+type: gettingstarted
+---
 
 ![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/113050014%201_02.jpg)
 
@@ -20,62 +22,66 @@ last_update:
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Bluetooth-Bee-v2.0-p-2373.html)
 
-##   特性
+## 特性
+
 ---
-###   硬件特性
 
-*   典型 -80dBm 灵敏度。
+### 硬件特性
 
-*   高达 +4dBm 的 RF 发射功率。
+- 典型 -80dBm 灵敏度。
 
-*   完全符合蓝牙 V2.0+EDR 3Mbps 调制标准。
+- 高达 +4dBm 的 RF 发射功率。
 
-*   低功耗 1.8V 操作，支持 1.8 至 3.6V I/O。
+- 完全符合蓝牙 V2.0+EDR 3Mbps 调制标准。
 
-*   PIO 控制。
+- 低功耗 1.8V 操作，支持 1.8 至 3.6V I/O。
 
-*   可编程波特率的 UART 接口。
+- PIO 控制。
 
-*   集成 PCB 天线。
+- 可编程波特率的 UART 接口。
 
-*   Bee 兼容的插针。
+- 集成 PCB 天线。
 
-###   软件特性
+- Bee 兼容的插针。
 
-*   默认波特率：38400，数据位：8，停止位：1，校验位：无校验，数据控制：有。
+### 软件特性
 
-*   支持的波特率：9600、19200、38400、57600、115200、230400、460800。
+- 默认波特率：38400，数据位：8，停止位：1，校验位：无校验，数据控制：有。
 
-*   使用 CTS 和 RTS 控制数据流。
+- 支持的波特率：9600、19200、38400、57600、115200、230400、460800。
 
-*   当在 PIO0 检测到上升脉冲时，设备将断开连接。
+- 使用 CTS 和 RTS 控制数据流。
 
-*   状态指示端口 PIO1：低-断开连接，高-已连接。
+- 当在 PIO0 检测到上升脉冲时，设备将断开连接。
 
-*   PIO10 连接到红色 LED，PIO11 连接到绿色 LED。当主设备和从设备配对时，红色和绿色 LED 每 2 秒闪烁一次；断开连接时，只有绿色 LED 每秒闪烁两次。
+- 状态指示端口 PIO1：低-断开连接，高-已连接。
 
-*   默认情况下，自动连接上次设备。
+- PIO10 连接到红色 LED，PIO11 连接到绿色 LED。当主设备和从设备配对时，红色和绿色 LED 每 2 秒闪烁一次；断开连接时，只有绿色 LED 每秒闪烁两次。
 
-*   默认允许匹配设备连接。
+- 默认情况下，自动连接上次设备。
 
-*   默认 PINCODE：0000。
+- 默认允许匹配设备连接。
 
-*   当因超出连接范围而断开时，30 分钟内自动重新连接。
+- 默认 PINCODE：0000。
+
+- 当因超出连接范围而断开时，30 分钟内自动重新连接。
 
 :::caution
     此模块的供电电压为 3.3V，超过此电压可能会对设备造成永久性损坏。
 :::
 
-##   硬件安装
+## 硬件安装
+
 ---
-###   通过 Uart Bee 将蓝牙连接到 PC
+
+### 通过 Uart Bee 将蓝牙连接到 PC
 
 <!-- 蓝牙提供了一个标准的 XBee 插座。在这里我们使用 [UartSBee V5](/cn/UartSBee_v5) 将蓝牙连接到 PC，确保通过滑块选择供电电压为 3.3V。 -->
 
 |![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPC.jpg)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPCSet.jpg)
 |---|---|
 
-###   将蓝牙连接到 Arduino
+### 将蓝牙连接到 Arduino
 
 <!-- 在这里我们使用 [XBee Shield](/cn/XBee_Shield_V2.0) 作为蓝牙和 [Seeeduino Lotus](/cn/Seeeduino_Lotus) 之间的桥梁。 -->
 
@@ -85,23 +91,25 @@ last_update:
 |---|---|
 
 ## 软件说明
+
 ---
+
 ### 约定
 
-* 出厂默认设置：
+- 出厂默认设置：
 
-    * 名称：HMSoft；
+  - 名称：HMSoft；
 
-        * 波特率：9600, N, 8, 1；
+    - 波特率：9600, N, 8, 1；
 
-        * PIN码：1234；
+    - PIN码：1234；
 
-        * 传输版本。
+    - 传输版本。
 
-* AT指令格式：
-    * 大写AT指令格式，字符串形式，不包含任何其他符号（例如 \r 或 \n）。
+- AT指令格式：
+  - 大写AT指令格式，字符串形式，不包含任何其他符号（例如 \r 或 \n）。
 
-        * 任何错误的指令将无响应。
+    - 任何错误的指令将无响应。
 
 ### AT指令（待续...）
 
