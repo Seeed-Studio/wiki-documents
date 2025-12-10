@@ -16,7 +16,7 @@ image: https://files.seeedstudio.com/wiki/solution/ai-sound/respeaker-rerouter-i
 slug: /es/solutions/smart-retail-voice-ai-solution-1
 sidebar_position: 2
 last_update:
-  date: 12/03/2025
+  date: 12/04/2025
   author: Spencer
 tags:
   - smart-retail
@@ -197,9 +197,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-Puede que necesites un puente para poner el dispositivo en modo de flasheo.
+Por favor consulta la [guía de flasheo del reRouter](/es/OpenWrt-Getting-Started/#initial-set-up) para instrucciones detalladas sobre el procedimiento de flasheo.
 
-Por favor consulta la [guía de flasheo del reRouter](/es/OpenWrt-Getting-Started/#initial-set-up) para instrucciones detalladas.
+**Ten en cuenta que:** debes usar el firmware **proporcionado arriba**, no el de la página de la guía.
 
 #### 1.2. Conexión de Hardware
 
@@ -241,7 +241,7 @@ Conecta el arreglo de micrófonos reSpeaker XVF3800 a **tu dispositivo host** v�
     cd reSpeaker_XVF3800_USB_4MIC_ARRAY/host_control/<YOUR_HOST_DIR>
     ```
 
-  2. **Ejecuta la secuencia de configuración:**
+  2. **Ejecutar la secuencia de configuración:**
 
     Otorga permisos de ejecución y ejecuta los siguientes tres comandos para inicializar el dispositivo (usa `sudo` si es necesario en Linux):
 
@@ -262,16 +262,16 @@ Conecta el arreglo de micrófonos reSpeaker XVF3800 a **tu dispositivo host** v�
 
   <TabItem value="cmd" label="Windows">
 
-  1. **Clona el repositorio y navega a la carpeta de control:**
+  1. **Clonar el repositorio y navegar a la carpeta de control:**
 
-    Abre Command Prompt (`cmd`) o PowerShell y ejecuta:
+    Abre el Símbolo del sistema (`cmd`) o PowerShell y ejecuta:
 
     ```powershell
     git clone https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY.git
     cd reSpeaker_XVF3800_USB_4MIC_ARRAY\host_control\win32
     ```
 
-  2. **Ejecuta la secuencia de configuración:**
+  2. **Ejecutar la secuencia de configuración:**
 
     Ejecuta los siguientes tres comandos para inicializar el dispositivo:
 
@@ -312,13 +312,13 @@ ssh root@192.168.49.1
 Por defecto, no se establece contraseña para el usuario root.
 
 :::tip Nota
-También puedes usar la interfaz web de OpenWrt para configurar ajustes de red, incluyendo conectar el reRouter a tu red Wi-Fi o Ethernet para acceso a internet.
+También puedes usar la interfaz web de OpenWrt para configurar los ajustes de red, incluyendo conectar el reRouter a tu red Wi-Fi o Ethernet para acceso a internet.
 
 - Abre un navegador y visita: http://192.168.49.1
 - Usuario: root
 - Contraseña: (ninguna / vacía por defecto)
 
-Si necesitas soporte para otros idiomas, como chino, puedes instalar el paquete `luci-i18n-base-zh-cn` vía la interfaz web o SSH.
+Si necesitas soporte para otros idiomas, como chino, puedes instalar el paquete `luci-i18n-base-zh-cn` a través de la interfaz web o SSH.
 
 ```shell
 opkg update
@@ -338,28 +338,58 @@ Ejecuta los siguientes comandos secuencialmente después de establecer una conex
 
 ##### Paso 1: Instalar Docker y Dependencias
 
-Este paso instala el entorno de ejecución de contenedores y herramientas necesarias, incluyendo la utilidad de suma de verificación SHA-256 para verificación de archivos.
+Este paso instala el entorno de ejecución de contenedores y las herramientas necesarias, incluyendo la utilidad de suma de verificación SHA-256 para verificación de archivos.
 
-```bash
-# 1. Update the local package list
-opkg update
+<Tabs>
+  <TabItem value="Global" label="Global" default>
 
-# 2. Install Docker core components
-# Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
-opkg install dockerd docker containerd runc
+  ```bash
+  # 1. Update the local package list
+  opkg update
 
-# 3. Install utility packages
-opkg install wget-ssl unzip ca-certificates
+  # 2. Install Docker core components
+  # Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
+  opkg install dockerd docker containerd runc
 
-# 4. Enable and start the Docker daemon service
-/etc/init.d/dockerd enable
-/etc/init.d/dockerd start
+  # 3. Install utility packages
+  opkg install wget-ssl unzip ca-certificates
 
-# 5. Wait for Docker to initialize (approx. 15-30 seconds)
-echo "Waiting for Docker service to start..."
-sleep 15 
-docker ps # Verify the service is running
-```
+  # 4. Enable and start the Docker daemon service
+  /etc/init.d/dockerd enable
+  /etc/init.d/dockerd start
+
+  # Optional: verify downloaded files
+  # sha256sum <filename>
+  ```
+
+  </TabItem>
+
+  <TabItem value="Chinese" label="China Continental">
+
+  ```bash
+  # For users in Mainland China, switch to Tsinghua University mirror for faster package downloads
+  sed -i 's_https\?://downloads.openwrt.org_https://mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+
+  # 1. Update the local package list
+  opkg update
+
+  # 2. Install Docker core components
+  # Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
+  opkg install dockerd docker containerd runc
+
+  # 3. Install utility packages
+  opkg install wget-ssl unzip ca-certificates
+
+  # 4. Enable and start the Docker daemon service
+  /etc/init.d/dockerd enable
+  /etc/init.d/dockerd start
+
+  # Optional: verify downloaded files
+  # sha256sum <filename>
+  ```
+
+  </TabItem>
+</Tabs>
 
 ##### Paso 2.2: Preparar Directorios de Datos y Configuración
 
@@ -381,7 +411,7 @@ wget -q -O config.yaml 'https://appstore.seeed-fleet.com/config.yaml'
 
 ##### Paso 2.3: Descargar y Extraer Modelos
 
-Descargaremos el paquete de modelo ASR pre-entrenado directamente desde el servidor de Seeed Studio, verificaremos su integridad usando SHA-256, y lo extraeremos.
+Descargaremos el paquete de modelo ASR preentrenado directamente desde el servidor de Seeed Studio, verificaremos su integridad usando SHA-256, y lo extraeremos.
 
 | Archivo | URL |
 | :--- | :--- |
@@ -416,9 +446,9 @@ unzip -o models.zip
 ls -l /data-iot/respeaker/models/
 ```
 
-##### Paso 2.4: Configurar Permisos de Dispositivo de Audio
+##### Paso 2.4: Configurar Permisos del Dispositivo de Audio
 
-El contenedor Voice Client requiere acceso privilegiado a los dispositivos de audio. Asegúrate de que los archivos de dispositivo tengan permisos apropiados.
+El contenedor Voice Client requiere acceso privilegiado a los dispositivos de audio. Asegúrate de que los archivos del dispositivo tengan los permisos apropiados.
 
 ```shell
 # 1. Check for audio devices
@@ -501,28 +531,30 @@ docker ps
 docker logs sensecraft-voice-client
 ```
 
-Si los logs indican un inicio exitoso sin errores críticos, los servicios SenseCraft se han desplegado exitosamente.
+Si los registros indican un inicio exitoso sin errores críticos, los servicios SenseCraft se han desplegado exitosamente.
 
 ---
 
-se recomienda encarecidamente reiniciar el dispositivo para asegurar que todas las configuraciones, permisos y configuraciones de red estén completamente cargadas y reconocidas por el sistema.
+Se recomienda encarecidamente reiniciar el dispositivo para asegurar que todas las configuraciones, permisos y configuraciones de red estén completamente cargadas y reconocidas por el sistema.
 
 ```bash
 reboot
 ```
 
-## SenseCraft Voice: Visión General de la Plataforma Edge-to-Cloud
+Después del reinicio, puedes navegar a `http://192.168.49.1:8090` para acceder a la interfaz Edge Client para transcripción ASR en tiempo real y configuración del dispositivo. Para uso detallado de la plataforma SenseCraft Voice, por favor consulta la sección [Guía del Usuario](#guía-del-usuario) a continuación.
 
-SenseCraft Voice es una plataforma de vanguardia diseñada para transformar datos de audio en bruto capturados en el edge (reRouter) en inteligencia empresarial accionable a través de análisis de IA potente y gestión centralizada.
+## SenseCraft Voice: Descripción General de la Plataforma Edge-to-Cloud
 
-La arquitectura edge-cloud única de la plataforma proporciona confiabilidad, velocidad y profundidad analítica sin precedentes para soluciones de monitoreo de audio de nivel empresarial.
+SenseCraft Voice es una plataforma de vanguardia diseñada para transformar datos de audio en bruto capturados en el borde (reRouter) en inteligencia empresarial accionable a través de análisis de IA potente y gestión centralizada.
+
+La arquitectura única edge-cloud de la plataforma proporciona confiabilidad, velocidad y profundidad analítica sin precedentes para soluciones de monitoreo de audio de nivel empresarial.
 
 | **Característica**                | **Propuesta de Valor**                                       | **Ventajas Clave**                                          |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Procesamiento Edge Resiliente** | Garantiza operación continua y baja latencia.               | El ASR de voz y reconocimiento se ejecutan *localmente* en el reRouter, asegurando respuesta en tiempo real y recolección de datos incluso durante interrupciones de red. |
 | **Personalización Profunda de IA** | Adapta la plataforma a necesidades empresariales específicas y terminología. | Los administradores pueden definir **Palabras Clave, Sinónimos y Prompts de IA** personalizados para dirigir el análisis de IA y asegurar detección precisa de eventos específicos a su lenguaje empresarial. |
-| **Mapeo Granular de Ubicación**   | Simplifica la gestión de despliegue a gran escala.          | Soporta organización jerárquica de miles de dispositivos edge por **Tienda, Ubicación y Nombre de Dispositivo**, superando las confusas direcciones MAC para filtrado y reportes fáciles. |
-| **Dashboards Accionables**        | Proporciona perspectiva empresarial inmediata y seguimiento de rendimiento. | Dashboard centralizado presenta **Filtrado Multi-Tienda**, **Tasa de Dispositivos Online** en tiempo real, y **Análisis de Hotspot de Palabras Clave** para monitorear estado operacional y eventos empresariales instantáneamente. |
+| **Mapeo Granular de Ubicación**   | Simplifica la gestión de despliegue a gran escala.          | Soporta organización jerárquica de miles de dispositivos edge por **Tienda, Ubicación y Nombre del Dispositivo**, superando las confusas direcciones MAC para filtrado y reportes fáciles. |
+| **Paneles Accionables**           | Proporciona información empresarial inmediata y seguimiento de rendimiento. | El Panel Centralizado incluye **Filtrado Multi-Tienda**, **Tasa de Dispositivos En Línea** en tiempo real, y **Análisis de Puntos Calientes de Palabras Clave** para monitorear el estado operacional y eventos empresariales instantáneamente. |
 
 La solución SenseCraft Voice está construida sobre una arquitectura edge-cloud robusta, asegurando tanto el procesamiento local en tiempo real como la gestión centralizada. El servicio consta de dos componentes principales: el Cliente Edge que se ejecuta en el reRouter, y la Plataforma de Gestión Cloud/Servidor.
 
@@ -532,18 +564,18 @@ La solución SenseCraft Voice está construida sobre una arquitectura edge-cloud
 
 El Cliente Edge es esencial para la validación en tiempo real y la configuración local.
 
-- **Acceso:** Abre tu navegador web y navega a la dirección IP del reRouter en el puerto 8090: `http://<reRouter_IP_Address>:8090`.
+- **Acceso:** Abre tu navegador web y navega a la dirección IP del reRouter en el puerto 8090: `http://192.168.49.1:8090`.
 - **Función Principal:** La interfaz proporciona transcripción ASR en tiempo real (para verificar la entrada de audio), controles para el Reconocimiento de Huella Vocal (identificación del hablante), y Configuración del Dispositivo (configuraciones de red, dirección del servidor upstream).
 
-<table> <thead> <tr> <th>Nombre del Módulo</th> <th>Descripción</th> <th>Captura de Pantalla de la Interfaz</th> </tr> </thead> <tbody> <tr> <td><b>Voice ASR</b></td> <td> <p><b>Descripción:</b> Muestra el estado operativo actual del servicio local de Reconocimiento Automático de Voz (ASR).</p> <p><b>Propósito:</b> Proporciona <b>transcripción en tiempo real</b> del habla detectada, esencial para verificar la entrada de audio local y la precisión del reconocimiento.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>Figura 1: Módulo Voice ASR</p></div> </td> </tr> <tr> <td><b>Reconocimiento de Huella Vocal</b></td> <td> <p><b>Descripción:</b> Gestiona y monitorea el sistema de Reconocimiento de Huella Vocal.</p> <p><b>Propósito:</b> Genera automáticamente huellas de voz únicas a partir de grabaciones de audio para permitir la diferenciación e identificación de los hablantes.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>Figura 2: Módulo de Reconocimiento de Huella Vocal</p></div> </td> </tr> <tr> <td><b>Estado y Configuración del Dispositivo</b></td> <td> <p><b>Descripción:</b> Proporciona información detallada sobre el estado operativo del reRouter y permite cambios en parámetros principales.</p> <p><b>Propósito:</b> Permite actualizaciones de configuración como <b>configuraciones de red</b> (Wi-Fi) y cambiar la <b>dirección del servidor upstream</b> para comunicación en la nube.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>Figura 3: Estado y Configuración del Dispositivo</p></div> </td> </tr> </tbody> </table>
+<table> <thead> <tr> <th>Nombre del Módulo</th> <th>Descripción</th> <th>Captura de Pantalla de la Interfaz</th> </tr> </thead> <tbody> <tr> <td><b>ASR de Voz</b></td> <td> <p><b>Descripción:</b> Muestra el estado operativo actual del servicio local de Reconocimiento Automático de Voz (ASR).</p> <p><b>Propósito:</b> Proporciona <b>transcripción en tiempo real</b> del habla detectada, esencial para verificar la entrada de audio local y la precisión del reconocimiento.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>Figura 1: Módulo ASR de Voz</p></div> </td> </tr> <tr> <td><b>Reconocimiento de Huella Vocal</b></td> <td> <p><b>Descripción:</b> Gestiona y monitorea el sistema de Reconocimiento de Huella Vocal.</p> <p><b>Propósito:</b> Genera automáticamente huellas vocales únicas a partir de grabaciones de audio para permitir la diferenciación e identificación de hablantes.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>Figura 2: Módulo de Reconocimiento de Huella Vocal</p></div> </td> </tr> <tr> <td><b>Estado y Configuración del Dispositivo</b></td> <td> <p><b>Descripción:</b> Proporciona información detallada sobre el estado operativo del reRouter y permite cambios en parámetros principales.</p> <p><b>Propósito:</b> Permite actualizaciones de configuración como <b>configuraciones de red</b> (Wi-Fi) y cambiar la <b>dirección del servidor upstream</b> para comunicación en la nube.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>Figura 3: Estado y Configuración del Dispositivo</p></div> </td> </tr> </tbody> </table>
 
 ### Plataforma de Gestión Cloud
 
 La Plataforma Cloud está organizada en cinco áreas de navegación principales, ofreciendo potentes herramientas de análisis de datos y configuración del sistema.
 
-#### 1. Dashboard: Información de un Vistazo
+#### 1. Panel de Control: Información de un Vistazo
 
-El Dashboard es tu centro de comando operativo, proporcionando métricas agregadas y tendencias de rendimiento:
+El Panel de Control es tu centro de comando operativo, proporcionando métricas agregadas y tendencias de rendimiento:
 
 - **Filtrado de Tiendas:** Cambia fácilmente las vistas seleccionando una o más tiendas, con todos los gráficos actualizándose instantáneamente.
 - **Análisis:** Monitorea **Tendencias de Recolección Diaria** (registros por hora) y **Análisis de Puntos Calientes de Palabras Clave** (mostrando qué palabras clave se activan frecuentemente y los **Nombres de Dispositivos** asociados).
@@ -554,7 +586,7 @@ El Dashboard es tu centro de comando operativo, proporcionando métricas agregad
 
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/main-page-dashboard.png" alt="Dashboard Main Page" />
 
-<figcaption>Figura 4: Interfaz del Dashboard</figcaption>
+<figcaption>Figura 4: Interfaz del Panel de Control</figcaption>
 
 </figure>
 
@@ -566,7 +598,7 @@ Este módulo proporciona la vista definitiva de todos los registros de voz recop
 
 - **Filtrado Avanzado:** Usa **Nombre del Dispositivo, Nombre de la Tienda, Nombre de la Ubicación, o Dirección MAC** para recuperación precisa de datos. Las búsquedas se ejecutan solo después de hacer clic en el botón **"Filter"**, dando a los usuarios control total.
 - **Capacidad de Exportación:** Selecciona y exporta datos filtrados en **tres formatos** para uso externo (elige uno a la vez): **Markdown**, **Texto Plano (.txt)**, o **Archivo de Audio Original**.
-- **Auditoría de doble vista:** Cambia fácilmente entre el **Modo Conversación** para revisar los diálogos transcritos y el **Modo Cronología** para escuchar la reproducción del audio original. Este enfoque dual permite una verificación rápida de la precisión de la transcripción y una comprensión más profunda del contexto de la interacción.
+- **Auditoría de Vista Dual:** Cambia fácilmente entre **Modo Conversación** para revisar diálogos transcritos y **Modo Línea de Tiempo** para escuchar la reproducción de audio original. Este enfoque dual permite verificación rápida de la precisión de transcripción y una comprensión más profunda del contexto de la interacción.
 - **Claridad:** Todas las vistas de registros priorizan el **Nombre del Dispositivo** fácilmente identificable sobre la dirección MAC.
 
 <div align="center">
@@ -585,9 +617,9 @@ Este módulo proporciona la vista definitiva de todos los registros de voz recop
 
 <figure>
 
-<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="Grabación de SenseCraft Voice" />
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="sensecraft-voice-record" />
 
-<figcaption>Figura 5.1: Modo Cronología</figcaption>
+<figcaption>Figura 5.1: Modo Línea de Tiempo</figcaption>
 
 </figure>
 
@@ -657,15 +689,15 @@ Esta área proporciona las herramientas necesarias para configurar y mantener la
 
 #### 5. Configuración Backend: Control del Sistema y Personalización
 
-Esta sección permite a los administradores definir parámetros a nivel del sistema para el procesamiento AI y la activación de eventos.
+Esta sección permite a los administradores definir parámetros de todo el sistema para procesamiento AI y activación de eventos.
 
 ##### 5.1. Configuración de Palabras Clave
 
 Define palabras clave personalizadas y sinónimos para identificar eventos comerciales específicos en las grabaciones.
 
 - **Personalización:** Define **Palabras Clave** y sus **Sinónimos** para detección de eventos.
-- **Visualización:** Asigna un **Color de Marcado** para distinción visual en el Dashboard.
-- **Gestión:** Soporta **Agregar, Editar, Eliminar y Eliminación en Lote**.
+- **Visualización:** Asigna un **Color de Marcado** para distinción visual en el Panel de Control.
+- **Gestión:** Soporta **Agregar, Editar, Eliminar, y Eliminación en Lote**.
 
 <div align="center">
 
@@ -699,8 +731,8 @@ El módulo de Gestión de Usuarios controla el acceso a la plataforma y los perm
 
 Crea y gestiona **AI Prompts** personalizados para dictar cómo la AI procesa los registros de voz seleccionados.
 
-- **Control:** Define **Nombre, Etiquetas y Contenido** del prompt. Solo un prompt **Habilitado** está activo para uso a la vez.
-- **Gestión:** Soporta **Agregar, Editar, Eliminar y Eliminación en Lote**.
+- **Control:** Define **Nombre, Etiquetas, y Contenido** del prompt. Solo un prompt **Habilitado** está activo para uso a la vez.
+- **Gestión:** Soporta **Agregar, Editar, Eliminar, y Eliminación en Lote**.
 
 <div align="center">
 
