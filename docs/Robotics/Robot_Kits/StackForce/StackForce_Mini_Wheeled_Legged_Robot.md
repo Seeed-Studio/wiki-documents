@@ -5,7 +5,7 @@ keywords:
 - StackForce
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
-slug: /StackForce_Mini_Wheeled_Legged_Robot
+slug: /stackforce_mini_wheeled_legged_robot
 last_update:
   date: 12/8/2025
   author: LiShanghang
@@ -111,8 +111,8 @@ The robot includes a full-body kinematic model and a state-adaptive self-stabili
 | 1:10 Wear-Resistant 6030-6085 Tires | 2 | pc | | |
 
 ## Table of Contents
-  - [Assembly](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot/#Assembly)
-  - [Calibration](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot/#Calibration)
+  - [Assembly](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/#Assembly)
+  - [Calibration](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/#Calibration)
 
 
 ## Assembly
@@ -529,7 +529,7 @@ Front-side joysticks:
 
 ## Citation
 
-[中文文档](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot)
+[中文文档](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot)
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 

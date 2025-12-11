@@ -5,7 +5,7 @@ keywords:
 - StackForce
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
-slug: /cn/StackForce_Mini_Wheeled_Legged_Robot
+slug: /cn/stackforce_mini_wheeled_legged_robot
 last_update:
   date: 12/2/2025
   author: LiShanghang
@@ -110,13 +110,13 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 
 ## 目录
-  - [安装教程](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#安装教程)
-  - [校准教程](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#校准教程)
+  - [安装教程](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#安装教程)
+  - [校准教程](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#校准教程)
 
 
 ## 安装教程
 
-[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/Installation_document.pdf)
+[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/Installation_document.pdf)
 
 <div class="video-container">
 <iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1556188467&bvid=BV121421b7zZ&cid=1616871369&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -464,13 +464,13 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 ## 参考文档
 
-[English Document](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot)
+[English Document](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot)
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
 [StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
-[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/Installation_document.pdf)
+[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/Installation_document.pdf)
 
 [全套控制板原理图](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
 

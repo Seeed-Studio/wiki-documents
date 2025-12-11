@@ -5,7 +5,7 @@ keywords:
 - StackForce
 - Robótica
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
-slug: /es/StackForce_Mini_Wheeled_Legged_Robot
+slug: /es/stackforce_mini_wheeled_legged_robot
 last_update:
   date: 12/8/2025
   author: LiShanghang
@@ -111,8 +111,8 @@ El robot incluye un modelo cinemático de cuerpo completo y un algoritmo de auto
 | Neumáticos Resistentes al Desgaste 1:10 6030-6085 | 2 | pc | | |
 
 ## Tabla de Contenidos
-  - [Ensamblaje](https://wiki.seeedstudio.com/es/StackForce_Mini_Wheeled_Legged_Robot/#Ensamblaje)
-  - [Calibración](https://wiki.seeedstudio.com/es/StackForce_Mini_Wheeled_Legged_Robot/#Calibración)
+  - [Ensamblaje](https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/#Ensamblaje)
+  - [Calibración](https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/#Calibración)
 
 
 ## Ensamblaje
@@ -529,7 +529,7 @@ Joysticks del lado frontal:
 
 ## Cita
 
-[中文文档](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot)
+[中文文档](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot)
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 

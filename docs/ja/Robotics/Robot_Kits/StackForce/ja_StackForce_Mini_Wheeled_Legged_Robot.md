@@ -5,7 +5,7 @@ keywords:
 - StackForce
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
-slug: /ja/StackForce_Mini_Wheeled_Legged_Robot
+slug: /ja/stackforce_mini_wheeled_legged_robot
 last_update:
   date: 12/8/2025
   author: LiShanghang
@@ -111,8 +111,8 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 | 1:10耐摩耗6030-6085タイヤ | 2 | 個 | | |
 
 ## 目次
-  - [組み立て](https://wiki.seeedstudio.com/ja/StackForce_Mini_Wheeled_Legged_Robot/#組み立て)
-  - [キャリブレーション](https://wiki.seeedstudio.com/ja/StackForce_Mini_Wheeled_Legged_Robot/#キャリブレーション)
+  - [組み立て](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#組み立て)
+  - [キャリブレーション](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キャリブレーション)
 
 
 ## 組み立て
@@ -529,7 +529,7 @@ Vofaを使用してモーター速度を確認します。Vofaのボーレート
 
 ## 引用
 
-[中文文档](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot)
+[中文文档](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot)
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
