@@ -36,7 +36,7 @@ Raspberry Pi CM4をベースとし、Panel PC、HMI、PLC、IIoTゲートウェ�
 - 過酷な作業環境に対応する堅牢設計：IP65フロントパネル、-10~50°C動作温度
 - ハイブリッド接続性：4G LTE、LoRaWAN®、WiFi、BLE、RS485/RS232、CANバス、1000Mイーサネット、USB、HDMIをサポート
 - ソフトウェアとハードウェアのオープンソース設計：Raspberry Pi CM4を搭載、カスタマイズや派生製品を歓迎
-- [製品保証：2年保証](Edge/Raspberry_Pi_Devices/HMI/reTerminal-DM/reterminal-dm-warranty.md)
+- [製品保証：2年保証](/ja/reterminal-dm-warranty)
 
 > \*4GおよびLoRa®モジュールはreTerminal DMにデフォルトで付属していません。関連モジュールを別途ご購入ください。
 

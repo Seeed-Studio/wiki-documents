@@ -36,7 +36,7 @@ reTerminal DM 是一款 10.1 英寸开源工业 HMI - 一个集成设备主机�
 - 恶劣工作环境的坚固设计：IP65 前面板，-10~50°C 工作温度
 - 混合连接：支持 4G LTE、LoRaWAN®、WiFi、BLE、RS485/RS232、CAN 总线、1000M 以太网、USB、HDMI
 - 软硬件开源设计：由 Raspberry Pi CM4 驱动，欢迎定制或衍生产品
-- [产品保修：两年保修](Edge/Raspberry_Pi_Devices/HMI/reTerminal-DM/reterminal-dm-warranty.md)
+- [产品保修：两年保修](/cn/reterminal-dm-warranty)
 
 > \*4G 和 LoRa® 模块默认不包含在 reTerminal DM 中，请根据需要购买相应模块。
 
