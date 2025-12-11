@@ -73,7 +73,7 @@ The ReSpeaker XVF3800 USB 4-Mic Array is a professional 4-mic circular array wit
 | **Audio Quality**             | Equal or better than the **previous XVF3000-based designs**.                                         |
 
 :::note
-The ReSpeaker XVF3800 is offered in two variants—one without XIAO and another with the XIAO ESP32S3 onboard. The version without XIAO operates with default USB firmware. To use the XIAO-integrated version, you must flash firmware built for **INT-Device (I2S) mode**. For detailed setup instructions, refer to the [official wiki guide](docs/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro.md).
+The ReSpeaker XVF3800 is offered in two variants—one without XIAO and another with the XIAO ESP32S3 onboard. The version without XIAO operates with default USB firmware. To use the XIAO-integrated version, you must flash firmware built for **INT-Device (I2S) mode**. For detailed setup instructions, refer to the [official wiki guide](/respeaker_xvf3800_xiao_getting_started).
 :::
 
 ### XIAO ESP32S3 support
