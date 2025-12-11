@@ -4107,6 +4107,13 @@ const sidebars = {
             'Robotics/Robot_Kits/Hand/AmazingHand',
           ]
         },
+        {
+          type: 'category',
+          label: 'Stackforce',
+          items: [
+            'Robotics/Robot_Kits/StackForce/StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
       ]
     },
     {
@@ -14276,6 +14283,13 @@ const sidebars = {
             'es/Robotics/Robot_Kits/Hand/es_AmazingHand',
           ]
         },
+        {
+          type: 'category',
+          label: 'Stackforce',
+          items: [
+            'es/Robotics/Robot_Kits/StackForce/es_StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
       ]
     },
     {
@@ -19309,6 +19323,13 @@ const sidebars = {
           label: 'ハンド',
           items: [
             'ja/Robotics/Robot_Kits/Hand/ja_AmazingHand',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Stackforce',
+          items: [
+            'ja/Robotics/Robot_Kits/StackForce/ja_StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
       ]

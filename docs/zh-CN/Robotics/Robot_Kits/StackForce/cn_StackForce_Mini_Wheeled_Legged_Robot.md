@@ -66,7 +66,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 ## 物料清单 (BOM)
 
-[BOM下载](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce双足轮BOM.xlsx)
+[BOM下载](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce_wheeled_legged_robot_BOM.xlsx)
 
 | 商品名称 | 数量 | 单位 | 规格 | 型号 |
 |----------|------|------|------|-----------|
@@ -111,12 +111,12 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 ## 目录
   - [安装教程](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#安装教程)
-  - [校准教程](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#安装lerobot)
+  - [校准教程](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#校准教程)
 
 
 ## 安装教程
 
-[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/双足轮安装文档0424.pdf)
+[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/Installation_document.pdf)
 
 <div class="video-container">
 <iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1556188467&bvid=BV121421b7zZ&cid=1616871369&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -132,7 +132,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 ## 校准教程
 
-请先下载[校准所需烧录的代码文件](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/2校准调试.7z)
+请先下载[校准所需烧录的代码文件](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Calibration_code.7z)
 
 ### 环境配置
 
@@ -151,39 +151,38 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 <summary> 第三步：下载 MinGW-w64 </summary>
 
-[轮足工具合集下载链接](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/轮足工具合集.zip)（内含MinGW-w64）
+[轮足工具合集下载链接](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)（内含MinGW-w64）
 
 文件下载后解压，找到轮足工具合集里的mingw64，解压后安装的路径需要全英文，不能有中文，打开解压后的文件→打开 bin 文件→复制 bin 文件的地址（例：D:\ming\mingw64\bin）。
 
-配置环境：电脑搜索打开`查看高级系统设置`→环境变量→系统变量→Path
-→新建→粘贴上一步的 bin 文件的地址，点击确定。
+配置环境：电脑搜索打开`查看高级系统设置`→`环境变量`→`系统变量`→`Path`→`新建`→`粘贴上一步的 bin 文件的地址`，点击确定。
 
 - 1：电脑搜索打开`查看高级系统设置`。
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_4.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_1.png" />
 </div>
 - 2: 点击`环境变量`。
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_3.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_2.png" />
 </div>
 - 3：双击打开 `Path`，注意是要选择`系统变量`。
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_2.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_3.png" />
 </div>
-- 4：新建环境变量。
+- 4：`新建`环境变量。
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_1.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_4.png" />
 </div>
 
 </details>
 
 第四步：编译及烧录按键说明
 
-√：编译程序 →：烧录程序到硬件 Auto：选择串口
+(**√**：编译程序 →：烧录程序到硬件&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Auto**：选择串口)
 
 :::tip
 下面是烧录按键说明，先不烧录程序。开发者先在这里了解烧录流程。
@@ -243,7 +242,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 修改注册码：
 
 每个板子的注册码都是不一样的，您的注册码我们将他贴在了主控包上的标签纸，将其输入到这个位置。
-也可以查看S1的串口信息获取注册码，前面安装文档有说明
+也可以查看S1的串口信息获取注册码，前面安装文档有说明。
 
 <div align="center">
     <img width={650}
@@ -361,7 +360,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 ### S3校准和调试
 
-[StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce轮足机器人基本操作说明.pdf)
+[StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
 <div align="center">
     <img width={800}
@@ -444,7 +443,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/设置电机控制dir02.png" />
 </div>
 
-完成上述部分后就可以对机器人控制了，按照下述部分是是实现控制，可以查看资料包第一个文件夹轮足操作说明。
+完成上述部分后就可以对机器人控制了，按照下述部分是是实现控制，可以查看[StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)。
 
 遥控器正面四个遥杆：
 - 第一步，遥控器左上打到中档，右上打到下档，左下打到最下，机器人用手扶着，让腿部自然下垂，轮子离开不与其他接触，并且保持机器人与地面平行。
@@ -465,23 +464,25 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 ## 参考文档
 
-English Document（待添加）
+[English Document](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot)
 
-[StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce轮足机器人基本操作说明.pdf)
+[gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/双足轮安装文档0424.pdf)
+[StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
-[全套控制板原理图](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/3全套控制板原理图.7z)
+[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/Installation_document.pdf)
 
-[开发套件例程资料](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/5例程资料.7z)
+[全套控制板原理图](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
 
-[客户获取注册码.7z](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/6客户获取注册码.7z)
+[开发套件例程资料](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Sample_Code_Documentation.7z)
+
+[客户获取注册码.7z](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Registration_code.7z)
 
 [urdf和stl](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/SF_bipedalWheel.zip)
 
-[BOM下载](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce双足轮BOM.xlsx)
+[BOM下载](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/StackForce_wheeled_legged_robot_BOM.xlsx)
 
-[轮足工具合集.zip](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/轮足工具合集.zip)
+[轮足工具合集.zip](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)
 
 ## 技术支持与产品讨论
 
