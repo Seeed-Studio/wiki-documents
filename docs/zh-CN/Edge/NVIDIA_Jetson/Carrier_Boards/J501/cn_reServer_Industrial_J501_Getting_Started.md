@@ -23,7 +23,7 @@ last_update:
   </a>
 </div>
 
-J501 载板是一款强大的扩展板，支持 NVIDIA Jetson AGX Orin 模块。它具有丰富的数据端口和扩展接口，完全释放了 AGX Orin 模块的全部性能。同时它支持添加 GMSL 扩展以连接多达 8 个 GMSL 摄像头。
+J501 载板是一款功能强大的扩展板，支持 NVIDIA Jetson AGX Orin 模块。它具有丰富的数据端口和扩展接口，完全释放了 AGX Orin 模块的全部性能。同时它还支持添加 GMSL 扩展，可连接多达 8 个 GMSL 摄像头。
 
 ## 特性
 
@@ -65,12 +65,12 @@ J501 载板是一款强大的扩展板，支持 NVIDIA Jetson AGX Orin 模块。
     </tr>
     <tr>
       <td>按钮</td>
-      <td> 复位按钮、恢复按钮 </td>
+      <td> Reset Button, Recovery Button </td>
     </tr>
     <tr>
       <td rowSpan={9}>扩展</td>
       <td> Mini PCIE </td>
-      <td> 1x Mini PCIe 用于 LoRaWAN®/4G/系列无线模块（模块不包含） </td>
+      <td> 1x Mini PCIe 用于 LoRaWAN®/4G/Series 无线模块（模块不包含） </td>
     </tr>
     <tr>
       <td> M.2 Key B </td>
@@ -204,30 +204,30 @@ J501 载板是一款强大的扩展板，支持 NVIDIA Jetson AGX Orin 模块。
       <td rowSpan={4}>5.1.3</td>
       <td>AGX Orin 32GB</td>
       <td>❌</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EagENvz49i1GhTAMR9xCLlkBHscdcSHkYf9PQuPFcgR50A?e=mOMJ2c" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD3U5NHij5gR5r4FB_AzC9vAbb3ERak_RvvIMoow0-X2fM?e=Ddf7Zi" target="_blank" rel="noopener noreferrer">下载</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERG3upqXAQNHsJP6ZvG2MAEBGsndVCgrLnhcKvtWoGA6tA?e=14KO6z" target="_blank" rel="noopener noreferrer">下载</a></td>
-      <td>56571770D7B1BAF53EAD3B1C173C075<br />4592601348501288C3E081FF8D51907F7</td>
+      <td>c673dc8ae75addf8ca3224cf700be35<br />4eec0ca41cb5ecabb8953c276213a7119</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUNTXrMsDcJCnIN2RvmXg6EBBLY6PRZiegvUjqI_N2i0YQ?e=SXEXXz" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD3ZjNepbc7SoC24H82Y4txAUhoSQIZ4l2ZcKGa3qgd9_E?e=bk1qc5" target="_blank" rel="noopener noreferrer">下载</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EZ7iNOxMxL9AjcKFPLygVT8Bg5qnkE-ZsMmNmHkZzNayOg?e=qv2sbB" target="_blank" rel="noopener noreferrer">下载</a></td>
-      <td>077878E3B84022BA1344ED2EE8738B9<br />EAECA6F6136468369B7DBB4FC5EF48802</td>
+      <td>425a931e65f2715d8486c68565ad711<br />fd34b626ab023d025df2d84af81b62aa3</td>
     </tr>
     <tr>
       <td>AGX Orin 64GB</td>
       <td>❌</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERoEi192vKFPnvFaqnqVz_oBNi3PAQ2W7gkZHpGu0XuuEw?e=pXYw9X" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDvJDte6YOfS5UI7C7ln0ryAVTRpxtGi9spgHOmEZG_sL8?e=jz5B4f" target="_blank" rel="noopener noreferrer">下载</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ESfErbFgQl9NudcbGZXL3LMB9wavWcQwjtW6wYYtfwkE3A?e=H5sR4J" target="_blank" rel="noopener noreferrer">下载</a></td>
-      <td>F3852FFC7A8CDDFD9C2857B2F3F6168<br />99DC69EE4D5BA92704DB192E803C29EA0</td>
+      <td>76abdd6de0a49bd95d57b361bebea59<br />a6a05e56779c7ceb863ad178f3ed98aaf</td>
     </tr>
     <tr>
       <td>AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Ecebi5JjKaVHmY-DymgG8AIBPRgAuCXVCrf4IYiKIfsMxA?e=OJPKwB" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBh9HqX5MHBQZF0WLe01k7mAXYqzHd4YJXaDt4uS2VZ8T4?e=AX0KSd" target="_blank" rel="noopener noreferrer">下载</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eccs1larF2FNhKi8MHred5kB4pQImN4ZHSgDM3BUDVzBtQ?e=reKIhD" target="_blank" rel="noopener noreferrer">下载</a></td>
-      <td>61434E1A88FF2A95F6B13B5FFA51557<br />FAE8D46C67C72DDF862DE51D91DAF6987</td>
+      <td>49076bd4bb7179dfe38c25bd5831c03<br />296bf26e86d67d9bca766a749a14257bd</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.0</td>
@@ -313,9 +313,9 @@ jetpack5 镜像文件大小约为 **4.5GB**，下载时间约为 15 分钟。Jet
 
 <details>
 
-<summary> 分步指南 </summary>
+<summary> 分步说明 </summary>
 
-**步骤 1.** 按住强制恢复按钮不要松开。
+**步骤 1.** 按住强制恢复按钮不松开。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/button.jpg" />
@@ -373,7 +373,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </div>
 
 :::info
-请根据您的需要完成**系统配置**。
+请根据您的需要完成 **System Configuration**。
 :::
 
 **步骤 4（可选）：** 安装 Nvidia Jetpack SDK
@@ -390,9 +390,9 @@ sudo apt install nvidia-jetpack
 - [reServer Industrial J501 载板数据手册](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
 - [reServer Industrial J501 原理图](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/202003906_reServer_Industrial_J501_Carrier_Board_v1.0_SCH_PDF_20240529.pdf)
 - [reServer Industrial J501 3D 文件](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/RESERVER_AGX_ORIN_CARRIER_BOARD.stp)
-- [Seeed Jetson 系列产品目录](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Seeed Jetson 系列目录](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
 - [Seeed Studio 边缘 AI 成功案例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson 系列对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Jetson 系列比较](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Jetson 设备单页介绍](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## 技术支持与产品讨论
