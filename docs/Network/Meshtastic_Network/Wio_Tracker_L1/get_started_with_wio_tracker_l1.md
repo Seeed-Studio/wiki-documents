@@ -251,9 +251,14 @@ You can add sensor to the device via the grove interface. The following sensors 
 </table>
 
 ### Screen Connection
- 
- - [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) to get the compatible E-Ink screen.
-- Please look forward to our compatible separately-selling OLED screen, which will be available soon. The current OLED driver is SSD1306.
+ - E-Ink Screen
+  [Click here](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) to get the compatible E-Ink screen.
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
+
+- OLED Screen
+Please look forward to our compatible separately-selling OLED screen, which will be available `in December`. The current OLED driver is SSD1306.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
+
 
 ### Virtuak Keyboard
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
