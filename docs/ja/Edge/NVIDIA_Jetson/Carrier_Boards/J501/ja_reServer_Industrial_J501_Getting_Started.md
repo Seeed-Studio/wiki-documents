@@ -1,5 +1,5 @@
 ---
-description: このwikiはJ501キャリアボードの機能を紹介し、J501キャリアボードにJetpackシステムをフラッシュする方法を説明します。
+description: このwikiではJ501キャリアボードの機能を紹介し、J501キャリアボードにJetpackシステムをフラッシュする方法を説明します。
 title: Jetpackのフラッシュ
 keywords:
 - reServer
@@ -23,13 +23,13 @@ last_update:
   </a>
 </div>
 
-J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポートする強力な拡張ボードです。豊富なデータポートと拡張インターフェースを備え、AGX Orinモジュールの性能を完全に引き出します。また、GMSL拡張を追加して最大8台のGMSLカメラを接続することもサポートしています。
+J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポートする強力な拡張ボードです。豊富なデータポートと拡張インターフェースを備え、AGX Orinモジュールの性能を完全に引き出します。また、GMSL拡張の追加により、最大8台のGMSLカメラの接続をサポートします。
 
 ## 特徴
 
-- **エッジコンピューティング用の最強AIコンピューターを構築：** Jetson AGX Orinモジュールとの統合を設計し、最大275 TOPSのAI性能を実現、Jetson AGX Xavierと比較して8倍のAI性能。15Wから60Wまでの電力設定が可能。
-- **複数センサー用の高速インターフェースサポート：** PCIe Gen4の22レーン、1x 10GbE、Display Port、MIPI CSI-2の16レーン、USB 3.2インターフェース、40ピンヘッダー。
-- **複数IO用の低速インターフェースサポート：** 4x DI、4x DO、3x GND_DI、2x GND_DO、1x GND_ISO、1x CAN、1x RS232/RS422/RS485。
+- **エッジコンピューティング向けの最強AIコンピューターを構築：** Jetson AGX Orinモジュールとの統合を設計し、最大275 TOPSのAI性能を実現、Jetson AGX Xavierと比較して8倍のAI性能。15Wから60Wまでの電力設定が可能。
+- **複数センサー向けの高速インターフェースサポート：** PCIe Gen4の22レーン、1x 10GbE、Display Port、MIPI CSI-2の16レーン、USB 3.2インターフェース、40ピンヘッダー。
+- **複数IO向けの低速インターフェースサポート：** 4x DI、4x DO、3x GND_DI、2x GND_DO、1x GND_ISO、1x CAN、1x RS232/RS422/RS485。
 <!-- - **BSP ready for development:** Jetpack 6 supported Board BSP ready for developing your custom system image. -->
 
 ## 仕様
@@ -61,7 +61,7 @@ J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポー
     </tr>
     <tr>
       <td>SIM</td>
-      <td> 1x Nano SIMカードスロット </td>
+      <td> 1x Nano SIM card slot </td>
     </tr>
     <tr>
       <td>Button</td>
@@ -70,11 +70,11 @@ J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポー
     <tr>
       <td rowSpan={9}>拡張</td>
       <td> Mini PCIE </td>
-      <td> 1x Mini PCIe for LoRaWAN®/4G/シリーズワイヤレス（モジュール別売） </td>
+      <td> 1x Mini PCIe for LoRaWAN®/4G/シリーズ ワイヤレス (モジュール別売) </td>
     </tr>
     <tr>
       <td> M.2 Key B </td>
-      <td> 1x M.2 Key B (3042/3052) support 4G/5G（モジュール別売） </td>
+      <td> 1x M.2 Key B (3042/3052) support 4G/5G (モジュール別売) </td>
     </tr>
     <tr>
       <td> M.2 Key E </td>
@@ -86,19 +86,19 @@ J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポー
     </tr>
     <tr>
       <td> Fan </td>
-      <td> 1x ファンコネクタ（5V PWM） </td>
+      <td> 1x Fan connectors (5V PWM) </td>
     </tr>
     <tr>
       <td> TPM </td>
-      <td> 1x TPM 2.0コネクタ（モジュール別売） </td>
+      <td> 1x TPM 2.0 connector (モジュール別売) </td>
     </tr>
     <tr>
       <td> RTC </td>
-      <td> 1x RTCソケット（CR1220付属）, <br />1x RTC 2ピン </td>
+      <td> 1x RTC socket (CR1220 included), <br />1x RTC 2-pin </td>
     </tr>
     <tr>
       <td> Camera </td>
-      <td> 2x 拡張コネクタ（各コネクタ8レーン） </td>
+      <td> 2x 拡張コネクタ (各コネクタ8レーン) </td>
     </tr>
     <tr>
       <td> PCIE </td>
@@ -107,12 +107,12 @@ J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポー
     <tr>
       <td> 電源 </td>
       <td> 電源供給 </td>
-      <td> DC 12V-36V ターミナルブロック2ピン（24V/5A電源アダプター付属）</td>
+      <td> DC 12V-36V ターミナルブロック 2ピン (24V/5A電源アダプター付属)</td>
     </tr>
     <tr>
       <td rowSpan={3}> 機械的仕様 </td>
-      <td> 寸法（W x D） </td>
-      <td> 176 x 163mm（モジュール別売）</td>
+      <td> 寸法 (W x D) </td>
+      <td> 176 x 163mm (モジュール別売)</td>
     </tr>
     <tr>
       <td> 動作温度 </td>
@@ -120,7 +120,7 @@ J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポー
     </tr>
     <tr>
       <td> 重量 </td>
-      <td> 225g（モジュール別売） </td>
+      <td> 225g (モジュール別売) </td>
     </tr>
   </tbody>
 </table>
@@ -144,22 +144,22 @@ J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポー
 ### 前提条件
 
 - Ubuntu ホストPC
-- reServer J501キャリアボード
+- reServer J501 キャリアボード
 - NVIDIA® Jetson AGX Orin™ Module 32GB/64GB
-- AGX Orinアクティブファン
-- NVMe M.2 2280内蔵SSD
-- USB Type-Cデータ転送ケーブル
+- AGX Orin アクティブファン
+- NVMe M.2 2280 内蔵SSD
+- USB Type-C データ転送ケーブル
 
 :::info
 
 仮想マシンではなく、物理的なubuntuホストデバイスを使用することをお勧めします。
-ホストマシンを準備するには、以下の表を参照してください。
+ホストマシンの準備については、以下の表を参照してください。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td  rowspan="2"> JetPackバージョン </td>
-        <td class="dbon" colspan="3"> Ubuntuバージョン（ホストコンピューター） </td>
+        <td  rowspan="2"> JetPack バージョン </td>
+        <td class="dbon" colspan="3"> Ubuntu バージョン (ホストコンピューター) </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -191,8 +191,8 @@ J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポー
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Jetpackバージョン</th>
-      <th>Jetsonモジュール</th>
+      <th>Jetpack バージョン</th>
+      <th>Jetson モジュール</th>
       <th> GMSL </th>
       <th>ダウンロードリンク1</th>
       <th>ダウンロードリンク2</th>
@@ -204,30 +204,30 @@ J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポー
       <td rowSpan={4}>5.1.3</td>
       <td>AGX Orin 32GB</td>
       <td>❌</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EagENvz49i1GhTAMR9xCLlkBHscdcSHkYf9PQuPFcgR50A?e=mOMJ2c" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD3U5NHij5gR5r4FB_AzC9vAbb3ERak_RvvIMoow0-X2fM?e=Ddf7Zi" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERG3upqXAQNHsJP6ZvG2MAEBGsndVCgrLnhcKvtWoGA6tA?e=14KO6z" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
-      <td>56571770D7B1BAF53EAD3B1C173C075<br />4592601348501288C3E081FF8D51907F7</td>
+      <td>c673dc8ae75addf8ca3224cf700be35<br />4eec0ca41cb5ecabb8953c276213a7119</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUNTXrMsDcJCnIN2RvmXg6EBBLY6PRZiegvUjqI_N2i0YQ?e=SXEXXz" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD3ZjNepbc7SoC24H82Y4txAUhoSQIZ4l2ZcKGa3qgd9_E?e=bk1qc5" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EZ7iNOxMxL9AjcKFPLygVT8Bg5qnkE-ZsMmNmHkZzNayOg?e=qv2sbB" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
-      <td>077878E3B84022BA1344ED2EE8738B9<br />EAECA6F6136468369B7DBB4FC5EF48802</td>
+      <td>425a931e65f2715d8486c68565ad711<br />fd34b626ab023d025df2d84af81b62aa3</td>
     </tr>
     <tr>
       <td>AGX Orin 64GB</td>
       <td>❌</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERoEi192vKFPnvFaqnqVz_oBNi3PAQ2W7gkZHpGu0XuuEw?e=pXYw9X" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDvJDte6YOfS5UI7C7ln0ryAVTRpxtGi9spgHOmEZG_sL8?e=jz5B4f" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ESfErbFgQl9NudcbGZXL3LMB9wavWcQwjtW6wYYtfwkE3A?e=H5sR4J" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
-      <td>F3852FFC7A8CDDFD9C2857B2F3F6168<br />99DC69EE4D5BA92704DB192E803C29EA0</td>
+      <td>76abdd6de0a49bd95d57b361bebea59<br />a6a05e56779c7ceb863ad178f3ed98aaf</td>
     </tr>
     <tr>
       <td>AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Ecebi5JjKaVHmY-DymgG8AIBPRgAuCXVCrf4IYiKIfsMxA?e=OJPKwB" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBh9HqX5MHBQZF0WLe01k7mAXYqzHd4YJXaDt4uS2VZ8T4?e=AX0KSd" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eccs1larF2FNhKi8MHred5kB4pQImN4ZHSgDM3BUDVzBtQ?e=reKIhD" target="_blank" rel="noopener noreferrer">ダウンロード</a></td>
-      <td>61434E1A88FF2A95F6B13B5FFA51557<br />FAE8D46C67C72DDF862DE51D91DAF6987</td>
+      <td>49076bd4bb7179dfe38c25bd5831c03<br />296bf26e86d67d9bca766a749a14257bd</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.0</td>
@@ -292,19 +292,19 @@ J501キャリアボードは、NVIDIA Jetson AGX Orinモジュールをサポー
 </div>
 
 :::danger
-jetpack5イメージファイルのサイズは約**4.5GB**で、ダウンロードには約15分かかります。Jetpack6イメージファイルのサイズは約**16.7GB**で、ダウンロードには約60分かかります。ダウンロードが完了するまでお待ちください。
+jetpack5 イメージファイルのサイズは約 **4.5GB** で、ダウンロードには約 15 分かかります。Jetpack6 イメージファイルのサイズは約 **16.7GB** で、ダウンロードには約 60 分かかります。ダウンロードが完了するまでお待ちください。
 :::
 
 :::info
-ダウンロードしたファームウェアの整合性を確認するには、SHA256ハッシュ値を比較できます。
+ダウンロードしたファームウェアの整合性を確認するには、SHA256 ハッシュ値を比較できます。
 
-Ubuntuホストマシンで、ターミナルを開いて`sha256sum <File>`コマンドを実行し、ダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがwikiで提供されているSHA256ハッシュと一致する場合、ダウンロードしたファームウェアが完全で破損していないことが確認されます。
+Ubuntu ホストマシンで、ターミナルを開いて `sha256sum <File>` コマンドを実行し、ダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki で提供されている SHA256 ハッシュと一致する場合、ダウンロードしたファームウェアが完全で破損していないことが確認されます。
 :::
 
-### 強制リカバリモードに入る
+### フォースリカバリモードに入る
 
 :::info
-インストール手順に進む前に、ボードが強制リカバリモードになっていることを確認する必要があります。
+インストール手順に進む前に、ボードがフォースリカバリモードになっていることを確認する必要があります。
 :::
 
 <div class="video-container">
@@ -315,24 +315,24 @@ Ubuntuホストマシンで、ターミナルを開いて`sha256sum <File>`コ�
 
 <summary> ステップバイステップ </summary>
 
-**ステップ1.** 強制リカバリボタンを離さずに押し続けます。
+**ステップ 1.** フォースリカバリボタンを離さずに押し続けます。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/button.jpg" />
 </div>
 
-**ステップ2.** 電源ケーブルを接続してキャリアボードに電源を供給します。
+**ステップ 2.** 電源ケーブルを接続してキャリアボードに電源を供給します。
 
-**ステップ3.** 強制リカバリボタンを離します。
+**ステップ 3.** フォースリカバリボタンを離します。
 
-**ステップ4.** USB Type-Cデータ転送ケーブルでボードをUbuntuホストPCに接続します。
+**ステップ 4.** USB Type-C データ転送ケーブルでボードを Ubuntu ホスト PC に接続します。
 
-**ステップ5.** LinuxホストPCでターミナルウィンドウを開き、`lsusb`コマンドを入力します。使用しているJetson SoMに応じて、返される内容に以下の出力のいずれかがある場合、ボードは強制リカバリモードになっています。
+**ステップ 5.** Linux ホスト PC でターミナルウィンドウを開き、`lsusb` コマンドを入力します。使用している Jetson SoM に応じて、返される内容に以下の出力のいずれかが含まれている場合、ボードはフォースリカバリモードになっています。
 
-- AGX Orin 32GBの場合：**0955:7223 NVidia Corp**
-- AGX Orin 64GBの場合：**0955:7023 NVidia Corp**
+- AGX Orin 32GB の場合：**0955:7223 NVidia Corp**
+- AGX Orin 64GB の場合：**0955:7023 NVidia Corp**
 
-以下の画像はAGX Orin 32GBの場合です
+以下の画像は AGX Orin 32GB の場合です
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png"/>
@@ -340,9 +340,9 @@ Ubuntuホストマシンで、ターミナルを開いて`sha256sum <File>`コ�
 
 </details>
 
-### Jetsonにフラッシュする
+### Jetson にフラッシュする
 
-**ステップ1：** ダウンロードしたイメージファイルを展開します：
+**ステップ 1：** ダウンロードしたイメージファイルを展開します：
 
 ```bash
 cd <path-to-image>
@@ -350,7 +350,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**ステップ2：** 以下のコマンドを実行してjetpackシステムをNVMe SSDにフラッシュします：
+**ステップ 2：** 以下のコマンドを実行して jetpack システムを NVMe SSD にフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -363,22 +363,22 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-フラッシュコマンドは2〜10分実行される場合があります。
+フラッシュコマンドは 2～10 分間実行される場合があります。
 :::
 
-**ステップ3：** ボード上のHDMIコネクタを使用してJ501をディスプレイに接続し、初期設定セットアップを完了します：
+**ステップ 3：** ボード上の HDMI コネクタを使用して J501 をディスプレイに接続し、初期設定セットアップを完了します：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-必要に応じて**システム設定**を完了してください。
+必要に応じて **System Configuration** を完了してください。
 :::
 
-**ステップ4（オプション）：** Nvidia Jetpack SDKをインストールする
+**ステップ 4（オプション）：** Nvidia Jetpack SDK をインストールする
 
-Jetsonデバイスでターミナルを開き、以下のコマンドを実行してください：
+Jetson デバイスでターミナルを開き、以下のコマンドを実行してください：
 
 ```bash
 sudo apt update
@@ -387,17 +387,17 @@ sudo apt install nvidia-jetpack
 
 ## リソース
 
-- [reServer Industrial J501キャリアボードデータシート](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
-- [reServer Industrial J501回路図](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/202003906_reServer_Industrial_J501_Carrier_Board_v1.0_SCH_PDF_20240529.pdf)
-- [reServer Industrial J501 3Dファイル](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/RESERVER_AGX_ORIN_CARRIER_BOARD.stp)
+- [reServer Industrial J501 キャリアボードデータシート](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
+- [reServer Industrial J501 回路図](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/202003906_reServer_Industrial_J501_Carrier_Board_v1.0_SCH_PDF_20240529.pdf)
+- [reServer Industrial J501 3D ファイル](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/RESERVER_AGX_ORIN_CARRIER_BOARD.stp)
 - [Seeed Jetson シリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Seeed Studio Edge AI成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Studio Edge AI 成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson シリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetsonデバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Seeed Jetson デバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
