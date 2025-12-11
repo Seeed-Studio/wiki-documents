@@ -36,7 +36,7 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
 - Rugged design for harsh working environment: IP65 front panel, -10~50°C operating temperature
 - Hybrid connectivity: Support 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, CAN bus, 1000M Ethernet, USB, HDMI
 - Open-source design in software and hardware: Powered by Raspberry Pi CM4, welcome customization or derivatives
-- [Product warranty: Two-year warranty](Edge/Raspberry_Pi_Devices/HMI/reTerminal-DM/reterminal-dm-warranty.md)
+- [Product warranty: Two-year warranty](/reterminal-dm-warranty)
 
 > \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly.
 
@@ -1304,11 +1304,90 @@ cd sx1302_hal
 sudo make
 ```
 
-**Step 4.** Copy the reset_lgw.sh script
+**Step 4.** Copy and modify the reset_lgw.sh script
 
 ```
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
 ```
+
+```
+cd ~/sx1302_hal/packet_forwarder
+vim reset_lgw.sh
+```
+
+Modify the reset_lgw.sh script with VIM as following:
+
+```sh
+#!/bin/bash
+
+# Dependency Check
+if ! command -v i2cset &> /dev/null; then
+    echo "Error: i2c-tools not found. Please install using: sudo apt-get install i2c-tools"
+    exit 1
+fi
+
+# Configuration
+I2C_BUS=1               # CM4_IIC1
+DEVICE_ADDR=0x21        # PCA9535 Address from schematic
+REG_OUTPUT_PORT0=0x02   # Register 2: Output Port 0
+REG_CONFIG_PORT0=0x06   # Register 6: Configuration Port 0
+PIN_MASK=0x20           # Bit 5 (0010 0000) for P05
+
+# Read a register
+read_reg() {
+    local val=$(i2cget -y $I2C_BUS $DEVICE_ADDR $1)
+    echo $val
+}
+
+# Write to a register
+write_reg() {
+    i2cset -y $I2C_BUS $DEVICE_ADDR $1 $2
+}
+
+echo "Starting SX1302 Reset Sequence on I2C Bus $I2C_BUS, Address $DEVICE_ADDR..."
+
+# Ensure the Output Register bit for P05 is LOW
+CURRENT_OUT=$(read_reg $REG_OUTPUT_PORT0)
+
+NEW_OUT=$(printf "0x%02x" $((CURRENT_OUT & ~PIN_MASK)))
+
+write_reg $REG_OUTPUT_PORT0 $NEW_OUT
+
+echo "Set Output Register P05 to LOW. (Reg $REG_OUTPUT_PORT0: $CURRENT_OUT -> $NEW_OUT)"
+
+# Configure P05 as OUTPUT
+# Configuration Register: 1 = Input, 0 = Output
+CURRENT_CFG=$(read_reg $REG_CONFIG_PORT0)
+
+NEW_CFG=$(printf "0x%02x" $((CURRENT_CFG & ~PIN_MASK)))
+
+write_reg $REG_CONFIG_PORT0 $NEW_CFG
+
+echo "Configured P05 as OUTPUT. (Reg $REG_CONFIG_PORT0: $CURRENT_CFG -> $NEW_CFG)"
+
+# Assert Reset (Drive P05 HIGH)
+CURRENT_OUT=$(read_reg $REG_OUTPUT_PORT0)
+
+RESET_HIGH=$(printf "0x%02x" $((CURRENT_OUT | PIN_MASK)))
+
+write_reg $REG_OUTPUT_PORT0 $RESET_HIGH
+
+echo "Asserting Reset (P05 HIGH)..."
+
+# Hold Reset for 200ms
+sleep 0.2
+
+# Release Reset (Drive P05 LOW)
+write_reg $REG_OUTPUT_PORT0 $NEW_OUT
+
+echo "Released Reset (P05 LOW)."
+
+echo "SX1302 Reset Complete."
+
+echo "------------------------------------"
+
+```
+
 
 **Step 5.** replace the default `SPI` port of the LoraWAN®  Module in the `global_conf.json.sx1250.US915` config file:
 
@@ -1322,12 +1401,25 @@ Then run the following code to start LoraWAN® Module according to your WM1302 o
 
 ```sh
 cd ~/sx1302_hal/packet_forwarder
+# Please select one of the following comands based on your module
+# for WM1302 LoRaWAN Gateway Module (SPI) - EU868
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868
+
+# for WM1302 LoRaWAN Gateway Module (USB) - EU868
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
+
+# for WM1302 LoRaWAN Gateway Module (SPI) - US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
+
+# for WM1302 LoRaWAN Gateway Module (USB) - US915
+./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-spi.png"/></div>
 
-Plese choose your prefered Lora® Network server and use the `EUI ID` as shown in the picture above to setup the connections.
+Plese choose your prefered Lora® Network server `server_address` and the EUI `gateway_ID` in the corresponding `global_conf.json.sx1250.xxxxx` and modify the `up/down port` to `1700` to start the concentrator.
+
+
 
 </TabItem>
 <TabItem value="WM1302 USB Module" label="WM1302 USB Module">

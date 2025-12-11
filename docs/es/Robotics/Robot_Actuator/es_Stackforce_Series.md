@@ -1,6 +1,6 @@
 ---
 description: Este wiki proporciona un tutorial para los motores de la serie Stackforce.
-title: Motores de la Serie Stackforce
+title: Motores Serie Stackforce
 keywords:
 - actuator
 - motor
@@ -10,9 +10,11 @@ slug: /es/stackforce_series
 last_update:
   date: 11/26/2025
   author: Li Shanghang
+translation:
+    skip: [zh-CN]
 ---
 
-# Introducción a los Motores de la Serie Stackforce X
+# Introducción a los Motores Stackforce X Serie
 
 Este artículo presentará cómo comenzar con los motores de la serie Stackforce y cómo usarlos con C++ y Python en el reComputer Jetson Super.
 
@@ -257,7 +259,7 @@ El programa por defecto controla el motor con ID 0x01. Durante la operación, pu
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

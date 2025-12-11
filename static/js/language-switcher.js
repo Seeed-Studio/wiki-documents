@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-09 10:57:10 (北京时间)
-// 多语言页面: 2075 个
+// 生成时间: 2025-12-11 13:53:39 (北京时间)
+// 多语言页面: 2076 个
 
 (function() {
   'use strict';
@@ -4098,6 +4098,12 @@
     "ja"
   ],
   "/starai_arm_ros_moveit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_mini_wheeled_legged_robot": [
     "cn",
     "en",
     "es",
@@ -9784,7 +9790,7 @@
     "es",
     "ja"
   ],
-  "/SenseCAP_Indicator_DALL·E": [
+  "/SenseCAP_Indicator_DALL-E": [
     "cn",
     "en",
     "es",

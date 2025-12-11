@@ -10,6 +10,8 @@ slug: /stackforce_series
 last_update:
   date: 11/26/2025
   author: Li Shanghang
+translation:
+    skip: [zh-CN]
 ---
 
 # Stackforce X Series Motors Getting Start
