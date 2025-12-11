@@ -108,7 +108,7 @@ Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> All enable
 
 将 UF2 文件拖拽到 DFU 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
 
-### 设备开机
+### 开启设备
 
 连接 USB 线缆激活设备。向上拨动电源开关以开机。
 
@@ -208,7 +208,7 @@ import TabItem from '@theme/TabItem';
 参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -251,13 +251,18 @@ import TabItem from '@theme/TabItem';
 </table>
 
 ### 屏幕连接
+ - E-Ink 屏幕
+  [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的 E-Ink 屏幕。
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
- - [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
-- 请期待我们即将推出的兼容单独销售的 OLED 屏幕。当前的 OLED 驱动器是 SSD1306。
+- OLED 屏幕
+请期待我们兼容的单独销售的 OLED 屏幕，将在 `12 月` 上市。当前的 OLED 驱动器是 SSD1306。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
+
 
 ### 虚拟键盘
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。按照 [Flash Firmware Tutorial](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 更新固件。
+2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。按照 [刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## 常见问题
@@ -266,10 +271,10 @@ import TabItem from '@theme/TabItem';
 
 **描述：**
 
-设备无响应，没有 LED，无法与您的应用配对。如果您发现设备在刷入自己的固件后完全死机，您也可以尝试重新安装引导程序。
+设备无响应，没有 LED，无法与您的应用配对。如果您发现设备在刷写自己的固件后完全死机，您也可以尝试重新安装引导程序。
 
 :::danger note
-当您刷入引导程序时，请确保电缆连接稳定，在刷入过程中**不要**断开连接。
+当您刷写引导程序时，请确保电缆连接稳定，在刷写过程中**不要**断开连接。
 :::
 
 - 步骤 1：[点击这里下载引导程序](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
@@ -284,9 +289,9 @@ import TabItem from '@theme/TabItem';
 
   用下载的引导程序文件覆盖磁盘中的所有文件。
 
-- 步骤 4：刷入固件
+- 步骤 4：刷写固件
 
-  当您完成上述步骤后，您可以按照这个 [步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 刷入应用固件。您可能需要 [手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+  完成上述步骤后，您可以按照此 [步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 刷写应用固件。您可能需要 [手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 
 ### 无法进入 DFU 和手动进入 DFU 模式
@@ -299,9 +304,9 @@ import TabItem from '@theme/TabItem';
 
 ### 信号质量
 
-- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上运行。SNR 低于 -10 dB 的设备表示性能较差。
+- **SNR** 反映通信链路的质量。正常设备通常在 -7 dB 以上运行。SNR 低于 -10 dB 的设备表示性能不佳。
 
-- **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上运行。RSSI 低于 -115 dBm 的设备被认为性能较差。
+- **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上运行。RSSI 低于 -115 dBm 的设备被认为性能不佳。
 
       为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
 

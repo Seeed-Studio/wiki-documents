@@ -78,7 +78,7 @@ Setting (icono con forma de engranaje) -> Notification -> Buzzer Action -> All e
 
 :::danger note
 Cuando el dispositivo esté en los estados siguientes, por favor no lo reinicies manualmente o lo apagues. De lo contrario, el dispositivo puede quedar inoperativo.
-1. No terminar el proceso de transmisión de mensajes
+1. No haber terminado el proceso de transmisión de mensajes
 2. Estar siendo configurado
 :::
 ### Flashear Firmware
@@ -170,9 +170,9 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
     Elige el método bluetooth. Elige el ID del dispositivo en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
- Método 2: Vía Serie
+ Método 2: Vía Serial
 
-    Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
+    Elige el método serial. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión tiene éxito, puedes ver el estado del dispositivo directamente en el sitio web.
@@ -251,9 +251,14 @@ Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los sigui
 </table>
 
 ### Conexión de pantalla
+ - Pantalla E-Ink
+  [Haz clic aquí](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) para obtener la pantalla E-Ink compatible.
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
- - [Haz clic aquí](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) para obtener la pantalla E-Ink compatible.
-- Por favor, mantente atento a nuestra pantalla OLED compatible de venta por separado, que estará disponible pronto. El controlador OLED actual es SSD1306.
+- Pantalla OLED
+Por favor, mantente atento a nuestra pantalla OLED compatible de venta por separado, que estará disponible `en diciembre`. El controlador OLED actual es SSD1306.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
+
 
 ### Teclado virtual
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
@@ -266,7 +271,7 @@ Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los sigui
 
 **Descripción:**
 
-El dispositivo no responde, no hay LED, no se puede emparejar con tu aplicación. Si encuentras que el dispositivo está completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
+El dispositivo no responde, no hay LED, no se puede emparejar con tu App. Si encuentras que el dispositivo está completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
 
 :::danger note
 Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de flasheo.
