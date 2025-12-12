@@ -36,13 +36,13 @@ El robot incluye un modelo cinemático de cuerpo completo y un algoritmo de auto
 
 ## Enlaces técnicos
 
-* **Video tutorial de código abierto de DengGe en Bilibili:** [https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc)
+- **Video tutorial de código abierto de DengGe en Bilibili:** [https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc)
 
-* **Código de fuente abierta para el curso de robot de patas con ruedas:** [https://gitee.com/StackForce/bipedal_wheeled_robot](https://gitee.com/StackForce/bipedal_wheeled_robot)
+- **Código de fuente abierta para el curso de robot de patas con ruedas:** [https://gitee.com/StackForce/bipedal_wheeled_robot](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-* **Documentación para la plataforma de desarrollo de robótica ligera StackForce:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
+- **Documentación para la plataforma de desarrollo de robótica ligera StackForce:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
 
-* **Proyectos de robots de código abierto para la plataforma de desarrollo de robótica ligera StackForce:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
+- **Proyectos de robots de código abierto para la plataforma de desarrollo de robótica ligera StackForce:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
 
 ## Características Principales
 
@@ -111,9 +111,10 @@ El robot incluye un modelo cinemático de cuerpo completo y un algoritmo de auto
 | Neumáticos Resistentes al Desgaste 1:10 6030-6085 | 2 | pc | | |
 
 ## Tabla de Contenidos
-  - [Tutorial de Versión Ensamblada](https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/#Tutorial-de-Versión-Ensamblada)
-  - [Tutorial de Versión Kit 1 - Ensamblaje](https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/#Tutorial-de-Versión-Kit-1---Ensamblaje)
-  - [Tutorial de Versión Kit 2 - Calibración](https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/#Tutorial-de-Versión-Kit-2---Calibración)
+
+- [Tutorial de Versión Ensamblada](https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/#Tutorial-de-Versión-Ensamblada)
+- [Tutorial de Versión Kit 1 - Ensamblaje](https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/#Tutorial-de-Versión-Kit-1---Ensamblaje)
+- [Tutorial de Versión Kit 2 - Calibración](https://wiki.seeedstudio.com/es/stackforce_mini_wheeled_legged_robot/#Tutorial-de-Versión-Kit-2---Calibración)
 
 ## Tutorial de Versión Ensamblada
 
@@ -170,28 +171,28 @@ Abre la `carpeta extraída` → abre la `carpeta bin` → copia la `ruta del dir
 Configuración del entorno:
 Busca y abre `Configuración Avanzada del Sistema` en tu computadora → `Variables de Entorno` → `Variables del sistema` → `Path` → `Nuevo` → pega la `ruta bin` copiada anteriormente → haz clic en `OK`.
 
-* 1: Busca y abre `Configuración Avanzada del Sistema`.
+- 1: Busca y abre `Configuración Avanzada del Sistema`.
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_1.png" />
 </div>
 
-* 2: Haz clic en `Variables de Entorno`.
+- 2: Haz clic en `Variables de Entorno`.
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_2.png" />
 </div>
 
-* 3: Haz doble clic en `Path` bajo Variables del sistema.
+- 3: Haz doble clic en `Path` bajo Variables del sistema.
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_3.png" />
 </div>
 
-* 4: Crea una nueva entrada de variable de entorno.
+- 4: Crea una nueva entrada de variable de entorno.
 
 <div align="center">
     <img width={500}
@@ -204,7 +205,7 @@ Paso 4: Instrucciones de los Botones de Compilar y Cargar
 
 (**√**: Compilar el programa →: Cargar el programa al hardware&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Auto**: Seleccionar el puerto serie)
 
-:::tip 
+:::tip
 Lo siguiente explica los botones de carga. No cargues el programa todavía. Los desarrolladores pueden revisar el proceso de carga aquí primero.
 :::
 
@@ -216,7 +217,6 @@ Después de seleccionar el puerto serie, haz clic en `Compile` (opcional) y `Upl
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/4_1.png" />
 </div>
-
 
 ### Flasheo y Depuración del S1
 
@@ -277,7 +277,7 @@ También puedes leer el `código de registro` desde la `salida serie del S1` (ex
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/S1Burn/4.png" />
 </div>
 
-**Modificar el modo de comunicación:** 
+**Modificar el modo de comunicación:**
 
 Cambia el valor en la ubicación mostrada en la imagen a `ONBOARD`. (`USB` = comunicación serie entre el chip S1 y la computadora,  `ONBOARD` = comunicación entre los chips S1 y S3.)
 
@@ -324,10 +324,9 @@ Verifica que todos los otros asistentes serie hayan liberado el puerto.
 
 </details>
 
-
 **Guía de Descarga y Uso del Asistente Serie Vofa**
 
-A continuación, abre el asistente serie y establece la velocidad de baudios a `115200` para verificar la salida serie. 
+A continuación, abre el asistente serie y establece la velocidad de baudios a `115200` para verificar la salida serie.
 Enlace de descarga del Asistente Serie Vofa: [Download Center | VOFA-Plus](https://www.vofa.plus/)
 
 <div align="center">
@@ -514,12 +513,12 @@ Después de completar estos pasos, el robot ahora puede ser controlado. Lo sigui
 
 Joysticks del lado frontal:
 
-* **Paso 1:**
+- **Paso 1:**
   Establece el interruptor superior izquierdo en `medio`, el interruptor superior derecho en `abajo`, y el stick inferior izquierdo en `más bajo`. Sostén el robot, deja que las patas cuelguen naturalmente, mantén las ruedas fuera del suelo, y mantén el cuerpo nivelado.
 
   Enciende, espera aproximadamente `10 segundos`, luego coloca el robot en el suelo y manténlo erguido.
 
-* **Paso 2:**
+- **Paso 2:**
   Establece el interruptor superior derecho en `medio`, empuja el stick inferior izquierdo `ligeramente hacia arriba`, y establece el interruptor superior izquierdo en `arriba`. El robot entra en modo de auto-equilibrio.
 
   Usa el stick inferior derecho `adelante/atrás` para moverse hacia adelante/atrás y `izquierda/derecha` para girar a la izquierda/derecha.
@@ -527,7 +526,6 @@ Joysticks del lado frontal:
   Usa el stick inferior izquierdo `arriba/abajo` para ajustar la altura de las patas.
 
   Cuando el interruptor superior derecho está en `arriba`, mueve el stick inferior izquierdo `izquierda/derecha` para controlar el balanceo. Apaga para salir del modo de balanceo.
-
 
 ## Demostración en Vivo
 
@@ -568,10 +566,3 @@ Joysticks del lado frontal:
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-

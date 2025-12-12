@@ -36,13 +36,13 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 
 ## 技術リンク
 
-* **DengGeのBilibiliオープンソースチュートリアル動画:** [https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc)
+- **DengGeのBilibiliオープンソースチュートリアル動画:** [https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc)
 
-* **車輪脚ロボットコースのオープンソースコード:** [https://gitee.com/StackForce/bipedal_wheeled_robot](https://gitee.com/StackForce/bipedal_wheeled_robot)
+- **車輪脚ロボットコースのオープンソースコード:** [https://gitee.com/StackForce/bipedal_wheeled_robot](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-* **StackForce軽量ロボティクス開発プラットフォームのドキュメント:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
+- **StackForce軽量ロボティクス開発プラットフォームのドキュメント:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
 
-* **StackForce軽量ロボティクス開発プラットフォームのオープンソースロボットプロジェクト:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
+- **StackForce軽量ロボティクス開発プラットフォームのオープンソースロボットプロジェクト:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
 
 ## 主な特徴
 
@@ -111,9 +111,10 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 | 1:10耐摩耗6030-6085タイヤ | 2 | 個 | | |
 
 ## 目次
-  - [組み立て済みバージョンチュートリアル](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#組み立て済みバージョンチュートリアル)
-  - [キットバージョンチュートリアル1-組み立て](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル1-組み立て)
-  - [キットバージョンチュートリアル2-キャリブレーション](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル2-キャリブレーション)
+
+- [組み立て済みバージョンチュートリアル](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#組み立て済みバージョンチュートリアル)
+- [キットバージョンチュートリアル1-組み立て](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル1-組み立て)
+- [キットバージョンチュートリアル2-キャリブレーション](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル2-キャリブレーション)
 
 ## 組み立て済みバージョンチュートリアル
 
@@ -170,28 +171,28 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
 環境設定：
 コンピューターで`システムの詳細設定`を検索して開く → `環境変数` → `システム変数` → `Path` → `新規` → 先ほどコピーした`binパス`を貼り付け → `OK`をクリック。
 
-* 1: `システムの詳細設定`を検索して開きます。
+- 1: `システムの詳細設定`を検索して開きます。
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_1.png" />
 </div>
 
-* 2: `環境変数`をクリックします。
+- 2: `環境変数`をクリックします。
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_2.png" />
 </div>
 
-* 3: システム変数の下にある `Path` をダブルクリックします。
+- 3: システム変数の下にある `Path` をダブルクリックします。
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_3.png" />
 </div>
 
-* 4: 新しい環境変数エントリを作成します。
+- 4: 新しい環境変数エントリを作成します。
 
 <div align="center">
     <img width={500}
@@ -204,7 +205,7 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
 
 （**√**: プログラムをコンパイル →: プログラムをハードウェアにアップロード&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Auto**: シリアルポートを選択）
 
-:::tip 
+:::tip
 以下はアップロードボタンの説明です。まだプログラムをアップロードしないでください。開発者はまずここでアップロードプロセスを確認できます。
 :::
 
@@ -216,7 +217,6 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/4_1.png" />
 </div>
-
 
 ### S1 書き込みとデバッグ
 
@@ -323,7 +323,6 @@ Vofa シリアルモニターが `閉じられている` ことを確認して�
 :::
 
 </details>
-
 
 **Vofa シリアルアシスタントのダウンロードと使用ガイド**
 
@@ -514,12 +513,12 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
 
 前面側ジョイスティック：
 
-* **ステップ 1:**
+- **ステップ 1:**
   左上のスイッチを `middle`、右上のスイッチを `down`、左下のスティックを `lowest` に設定します。ロボットを持ち、脚を自然に垂らし、車輪を地面から離し、本体を水平に保ちます。
 
   電源を入れ、約 `10秒` 待ってから、ロボットを地面に置いて直立させます。
 
-* **ステップ 2:**
+- **ステップ 2:**
   右上のスイッチを `middle` に設定し、左下のスティックを `少し上` に押し、左上のスイッチを `up` に設定します。ロボットがセルフバランスモードに入ります。
 
   右下のスティックの `前後` で前進/後退、`左右` で左右回転を行います。
@@ -527,7 +526,6 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
   左下のスティックの `上下` で脚の高さを調整します。
 
   右上のスイッチが `top` の時、左下のスティックの `左右` でロール制御を行います。ロールモードを終了するには電源を切ります。
-
 
 ## ライブデモ
 
@@ -539,21 +537,21 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
+[StackForce Wheeled_Legged_Robot基本操作マニュアル（PDF）](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
-[Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
+[ミニホイール脚ロボット設置ドキュメント.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
-[Full set of control board schematics](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
+[制御基板回路図フルセット](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
 
-[Example projects for the development kit](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Sample_Code_Documentation.7z)
+[開発キット用サンプルプロジェクト](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Sample_Code_Documentation.7z)
 
-[Customer registration code acquisition](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Registration_code.7z)
+[顧客登録コード取得](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Registration_code.7z)
 
 [urdf & stl](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/SF_bipedalWheel.zip)
 
 [BOM](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/BOM.xlsx)
 
-[Wheeled-Legged Robot Tool Pack](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)
+[ホイール脚ロボットツールパック](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)
 
 ## 技術サポート & 製品ディスカッション
 
@@ -568,10 +566,3 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
