@@ -721,6 +721,7 @@ echo 0 > /sys/class/gpio/gpio638/value
 3. When the external level is high, the value of  /sys/class/gpio/gpio638/value   is 0; when the external level is low,  /sys/class/gpio/gpio638/value  is 1.
 
 ## CAN Testing
+### Loopback test
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -821,6 +822,81 @@ sudo ip link set can0 up type can bitrate 500000
 sudo ip link set can1 up type can bitrate 500000
 echo "can0 & can1 are up @ 500 kbit/s"
 ```
+### Python-CAN Testing
+[Python-CAN](https://github.com/raspberrypi/usbboot) is a cross-platform Python library that provides a unified programming interface for Controller Area Network (CAN) bus communication, supporting a wide range of CAN hardware interfaces and virtual buses, and enabling easy implementation of CAN message transmission, reception, filtering, bus monitoring, and other operations.
+同样需要将CAN接口物理连接起来，以实现回环通信。
+1. 配置标准 CAN 波特率 (500 kbit/s)：
+
+```bash
+sudo ip link set down can0
+sudo ip link set down can1
+sudo ip link set can0 type can bitrate 500000
+sudo ip link set can1 type can bitrate 500000
+sudo ip link set up can0
+sudo ip link set up can1
+```
+2. 验证确认两个接口都处于 UP 状态：
+```bash
+ip a show can0
+ip a show can1
+```
+输出"state UP"即为UP状态。
+
+3. 配置Python 虚拟环境和依赖
+
+```bash
+mkdir rpi_can_project
+cd rpi_can_project
+python3 -m venv can_env
+source can_env/bin/activate
+pip install python-can
+```
+4. 输入python脚本
+脚本 A: 发送端 (can_sender_0.py)
+此脚本通过 can0 发送一条标准 CAN 消息。
+```python
+# can_test.py
+import can
+import time
+
+# create a bus instance using 'with' statement,
+# this will cause bus.shutdown() to be called on the block exit;
+# many other interfaces are supported as well (see documentation)
+with can.Bus(interface='socketcan',
+             channel='vcan0',
+             receive_own_messages=True) as bus:
+
+    # send a message
+    message = can.Message(arbitration_id=0x7B, is_extended_id=True,
+                          data=[0x11, 0x22, 0x33])
+    
+    try:
+        bus.send(message, timeout=0.2)
+        print(f"Message sent: ID={message.arbitration_id:X}, Data={message.data.hex()}")
+    except can.exceptions.CanOperationError as e:
+        print(f"Error sending message: {e}")
+
+    # iterate over received messages
+    print("Listening for 5 seconds...")
+    start_time = time.time()
+    
+    # 限制接收时间，避免程序无限等待
+    while time.time() - start_time < 5:
+        msg = bus.recv(timeout=1.0) # 每次等待最多1秒
+        if msg:
+            print(f"Received - ID: {msg.arbitration_id:X}, Data: {msg.data.hex()}")
+        else:
+            print("No message received in 1 second.")
+
+print("Bus shut down and program finished.")
+```
+执行运行
+```bash
+python can_test.py
+deactivate
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/python-can.png" style={{width:800, height:'auto'}}/></div>
+
 
 ## USB Hub Testing
 

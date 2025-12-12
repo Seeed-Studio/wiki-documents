@@ -624,7 +624,7 @@ Schematic diagram of RS232 wires is as follws:
 
 ### DI (Digital Input)
 
-The reComputer Industrial R2000 series equipment includes 8x DI ports, 3-Pin 3.5mm spacing phoenix terminals.
+The reComputer Industrial R2000 series equipment includes 4x DI ports, 3-Pin 3.5mm spacing phoenix terminals.
  The silkscreen of single DI is "DI/G_DI".
 
 **Pin Definition**
@@ -701,7 +701,7 @@ Schematic diagram of a single DI wires is as follws:
 
 ### DO (Digital Output)
 
-The reComputer Industrial R2000 series equipment includes 8x DO ports, 3-Pin 3.5mm spacing phoenix terminals.
+The reComputer Industrial R2000 series equipment includes 4x DO ports, 3-Pin 3.5mm spacing phoenix terminals.
 The silkscreen of single DO is "DO/G_DO".
 **Pin Definition**
 Terminal pins are defined as follows:
@@ -829,8 +829,8 @@ The Boot Switch of the reComputer Industrial R2000 is connected to the nRPI_BOOT
 
 | Switch Position | Mode         | Description      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>            | Normal mode  | Boot from eMMC   | Low       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>            | Normal mode  | Boot from eMMC   | Low       |
+|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
 
 ### USB
 
