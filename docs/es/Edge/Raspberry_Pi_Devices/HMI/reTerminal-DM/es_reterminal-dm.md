@@ -36,7 +36,7 @@ Está equipado con rica escalabilidad y conectividad híbrida, soportando bus CA
 - Diseño robusto para entorno de trabajo duro: Panel frontal IP65, temperatura de operación -10~50°C
 - Conectividad híbrida: Soporte 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, bus CAN, Ethernet 1000M, USB, HDMI
 - Diseño de código abierto en software y hardware: Alimentado por Raspberry Pi CM4, bienvenida personalización o derivados
-- [Garantía del producto: Garantía de dos años](Edge/Raspberry_Pi_Devices/HMI/reTerminal-DM/reterminal-dm-warranty.md)
+- [Garantía del producto: Garantía de dos años](/es/reterminal-dm-warranty)
 
 > \*Los módulos 4G y LoRa® no vienen con reTerminal DM por defecto, por favor compre los módulos relevantes en consecuencia.
 

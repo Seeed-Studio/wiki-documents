@@ -5,7 +5,7 @@ keywords:
 - StackForce
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
-slug: /cn/StackForce_Mini_Wheeled_Legged_Robot
+slug: /cn/stackforce_mini_wheeled_legged_robot
 last_update:
   date: 12/2/2025
   author: LiShanghang
@@ -110,9 +110,9 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 
 ## 目录
-  - [整机款教程](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#整机款教程)
-  - [散件教程-1 安装](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#散件教程1-安装)
-  - [散件教程-2 校准](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#散件教程2-校准)
+  - [整机款教程](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#整机款教程)
+  - [散件教程-1 安装](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#散件教程1-安装)
+  - [散件教程-2 校准](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#散件教程2-校准)
 
 ## 整机款教程
 
@@ -470,7 +470,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 ## 参考文档
 
-[English Document](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot)
+[English Document](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot)
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 

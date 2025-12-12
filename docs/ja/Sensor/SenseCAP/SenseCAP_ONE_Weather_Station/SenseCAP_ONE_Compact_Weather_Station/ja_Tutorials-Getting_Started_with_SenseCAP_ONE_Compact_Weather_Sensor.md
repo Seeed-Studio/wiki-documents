@@ -6,12 +6,12 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 12/8/2025
-  author: Janet
+  date: 12/11/2025
+  author: Michelle Huang
 ---
 # SenseCAP ONE コンパクト気象センサーの入門ガイド
 
-# インストール前の準備
+# 設置前の準備
 
 ## インストール
 
@@ -141,17 +141,17 @@ Settings をクリックしてデバイス設定に入り、"Read From Device" �
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image23.png" /></div>
 
-設定ページでは、デバイス名、データタイプ、データアップロード間隔を変更できます。変更後は、変更を有効にするために "Write to Device" をクリックする必要があります。
+設定ページでは、デバイス名、データタイプ、データアップロード間隔を変更できます。変更後は、"Write to Device" をクリックして変更を有効にする必要があります。
 
 アプリケーション設定では、ツールがセンサーデータを読み取るサイクルを設定でき、最小は2S、カーブのドット範囲を設定できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image24.png" /></div>
 
-"Firmware Update" をクリックしてデバイスファームウェアを更新します。ファームウェアを入手するには、営業または技術サポート（sensecap@seeed.cc）にお問い合わせください。
+"Firmware Update" をクリックしてデバイスファームウェアを更新します。ファームウェアを取得するには、営業または技術サポート（sensecap@seeed.cc）にお問い合わせください。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image25.png" /></div>
 
-アップグレードページでは、メインボードファームウェアまたはドライバーボードファームウェアの更新を選択する必要があります。ローカルリポジトリでファームウェアファイルを選択し、"Update Now" をクリックします。更新プロセス中に予期しない電源断が発生した場合、更新は実行されません。ファームウェアを更新するには、同じプロセスを実行する必要があります。
+アップグレードページでは、メインボードファームウェアまたはドライバーボードファームウェアの更新を選択する必要があります。ローカルリポジトリでファームウェアファイルを選択し、"Update Now" をクリックします。更新プロセス中に予期しない電源断が発生した場合、更新は実行されません。同じプロセスを経てファームウェアを更新する必要があります。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image26.png" /></div>
 
@@ -197,11 +197,11 @@ Settings をクリックしてデバイス設定に入り、"Read From Device" �
 
 8. 上記の手順を繰り返して、`Slave Board 1`に別のファームウェアをフラッシュします。
 
-9. 完了後、Firmware Updateウィンドウを閉じ、`"Disconnect"`をクリックします。
+9. 完了後、ファームウェアアップデートウィンドウを閉じ、`"Disconnect"`をクリックします。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Disconnect.png" /></div>
 
-これで気象ステーションのファームウェアアップグレードの全手順が完了しました。
+これで気象ステーションのファームウェアアップグレード手順がすべて完了しました。
 
 ### シリアルデバッグツール
 
@@ -211,7 +211,7 @@ Settings をクリックしてデバイス設定に入り、"Read From Device" �
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image28.png" /></div>
 
-- Serial Debug Assistantで、対応するCOMポートを選択します。
+- シリアルデバッグアシスタントで、対応するCOMポートを選択します。
 
 - "click Enter to start a new line"チェックボックスにチェックを入れます。
 
@@ -237,9 +237,9 @@ Settings をクリックしてデバイス設定に入り、"Read From Device" �
 
 ### Modbus-RTUプロトコルメッセージフォーマット
 
-センサーデータはInput Registerに格納され、読み取り専用です。
+センサーデータは入力レジスタに格納され、読み取り専用です。
 
-デバイスアドレスとRS-485の通信ボーレートはHolding Registerに格納され、変更可能です。
+デバイスアドレスとRS-485の通信ボーレートは保持レジスタに格納され、変更可能です。
 
 各レジスタは16ビットで、2バイトを占有します。
 
@@ -247,7 +247,7 @@ Settings をクリックしてデバイス設定に入り、"Read From Device" �
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image32.png" /></div>
 
-**ホールディングレジスタの読み取りと書き込み。**
+**保持レジスタの読み取りと書き込み。**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image33.png" /></div>
 
@@ -426,24 +426,23 @@ PM2.5、PM10、CO2は別途読み取る必要があります：
 ### コマンドリスト
 
 以下を参照してください：
-[SenseCAP ONE/SenseCAP ONE V3 コンパクト気象ステーション ユーザーガイド](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ## SDI-12
 
-SDI-12通信は3本の線を使用し、そのうち2本はセンサー電源線、もう1本はSDI-12信号線です。
+SDI-12通信は3本の線を使用し、そのうち2本はセンサー電源線で、もう1本はSDI-12信号線です。
 
-SDI-12バス上の各センサーには固有のアドレスがあり、'0'、'1' ～ '9'、'A' ～ 'Z'、'a' ～ 'z'に設定できます。SenseCAP ONEのSDI-12アドレスはデフォルトで'0'です。このセンサーがサポートする命令は次の章に示されており、各命令はSDI-12 v1.4に準拠しています。
+SDI-12バス上の各センサーには固有のアドレスがあり、'0'、'1' ～ '9'、'A' ～ 'Z'、'A' ～ 'Z'に設定できます。SenseCAP ONEのSDI-12アドレスはデフォルトで'0'です。このセンサーがサポートする命令は次の章に示されており、各命令はSDI-12 v1.4に準拠しています。
 
-センサーは3.6～16VのDC電源で駆動されます。センサーの電源を入れると、すぐにスリープモードに入り、データ収集機器からの指示を待ちます。SDI-12は9600bpsのボーレート、1スタートビット（ハイレベル）、7データビット（ハイ0とロー1、反論理）、1偶数パリティビット、1ストップビットを使用します。
+センサーは3.6～16VのDC電源で駆動されます。センサーの電源を入れると、すぐにスリープモードに入り、データ取得機器からの指示を待ちます。SDI-12は9600bpsのボーレート、1スタートビット（ハイレベル）、7データビット（ハイ0とロー1、反論理）、1偶数パリティビット、1ストップビットを使用します。
 
-送信される各バイトのシーケンスは次の図に示されています：
+送信される各バイトのシーケンスを次の図に示します：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/44.png" /></div>
 
 ### SDI-12コマンドと応答
 
-以下を参照してください：
-&lt;https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf&gt;
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)を参照してください
 
 ### SDI-12読み取り
 
@@ -470,9 +469,9 @@ SDI-12バス上の各センサーには固有のアドレスがあり、'0'、'1
 
 - "CRLF"をチェックします
 
-- クリックしてシリアルポートを開きます。
+- シリアルポートを開くためにクリックします。
 
-- クエリデバイスアドレスコマンド"?!"を送信し、応答"0"が表示されれば接続は正常です。
+- クエリデバイスアドレスコマンド"?!"を送信し、応答"0"が表示されれば、接続が正常であることを意味します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image50.png" /></div>
 
@@ -480,7 +479,7 @@ SDI-12バス上の各センサーには固有のアドレスがあり、'0'、'1
 
 気温、湿度、気圧、光強度を読み取ります
 
-"測定開始コマンド0M!"を送信すると、センサーはまず"00024"で応答します。これは"0M!"コマンドが測定に2秒かかり、4つの測定値を返すことを意味します。2秒後、センサーは自身のアドレス"0"で応答し、測定が完了したことを示します。
+"測定開始コマンド0M!"を送信すると、センサーはまず"00024"で応答し、これは"0M!"コマンドが測定に2秒かかり、4つの測定値を返すことを意味します。2秒後、センサーは自身のアドレス"0"で応答し、測定が完了したことを示します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image51.png" /></div>
 
@@ -515,4 +514,4 @@ SDI-12バス上の各センサーには固有のアドレスがあり、'0'、'1
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
 
 ## リソース
-[SenseCAP ONE/SenseCAP ONE V3 コンパクト気象ステーション ユーザーガイド](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)

@@ -11,6 +11,17 @@
 
 // @ts-check
 
+const DOC_LANGS = process.env.DOC_LANGS || 'all';
+const isDev = process.env.NODE_ENV === 'development';
+
+/** @type {Record<string, string[]>} */
+const langToSidebarKeys = {
+  en: ['ProductSidebar'],
+  'zh-CN': ['CNSidebar'],
+  es: ['esSidebar'],
+  ja: ['jaSidebar'],
+};
+
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
@@ -14272,6 +14283,13 @@ const sidebars = {
             'es/Robotics/Robot_Kits/Hand/es_AmazingHand',
           ]
         },
+        {
+          type: 'category',
+          label: 'Stackforce',
+          items: [
+            'es/Robotics/Robot_Kits/StackForce/es_StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
       ]
     },
     {
@@ -19307,6 +19325,13 @@ const sidebars = {
             'ja/Robotics/Robot_Kits/Hand/ja_AmazingHand',
           ]
         },
+        {
+          type: 'category',
+          label: 'Stackforce',
+          items: [
+            'ja/Robotics/Robot_Kits/StackForce/ja_StackForce_Mini_Wheeled_Legged_Robot',
+          ]
+        },
       ]
     },
     {
@@ -20272,4 +20297,60 @@ const sidebars = {
   ]
 };
 
-module.exports = sidebars;
+/**
+ * @param {{[key: string]: unknown}} allSidebars
+ */
+function filterSidebarsByLang(allSidebars) {
+  // 生产环境或未指定 DOC_LANGS：保持原样，导出全部 sidebar
+  if (!isDev || DOC_LANGS === 'all') {
+    return allSidebars;
+  }
+
+  const activeLangs = DOC_LANGS.split(',').map(
+    /** @param {string} l */
+    function (l) {
+      return l.trim();
+    }
+  ).filter(
+    /** @param {string} l */
+    function (l) {
+      return l;
+    }
+  );
+
+  const keepKeys = new Set();
+  activeLangs.forEach(
+    /** @param {string} lang */
+    function (lang) {
+      const keys = langToSidebarKeys[lang];
+      if (keys) {
+        keys.forEach(
+          /** @param {string} k */
+          function (k) {
+            keepKeys.add(k);
+          }
+        );
+      }
+    }
+  );
+
+  // 如果没匹配到任何语言，避免 dev 直接挂掉，就退回全部
+  if (keepKeys.size === 0) {
+    return allSidebars;
+  }
+
+  /** @type {{[key: string]: unknown}} */
+  const filtered = {};
+  Object.keys(allSidebars).forEach(
+    /** @param {string} key */
+    function (key) {
+      if (keepKeys.has(key)) {
+        filtered[key] = allSidebars[key];
+      }
+    }
+  );
+
+  return filtered;
+}
+
+module.exports = filterSidebarsByLang(sidebars);
