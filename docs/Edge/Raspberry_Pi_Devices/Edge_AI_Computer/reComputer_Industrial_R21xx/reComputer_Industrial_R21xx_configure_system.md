@@ -824,9 +824,8 @@ echo "can0 & can1 are up @ 500 kbit/s"
 ```
 ### Python-CAN Testing
 [Python-CAN](https://github.com/raspberrypi/usbboot) is a cross-platform Python library that provides a unified programming interface for Controller Area Network (CAN) bus communication, supporting a wide range of CAN hardware interfaces and virtual buses, and enabling easy implementation of CAN message transmission, reception, filtering, bus monitoring, and other operations.
-同样需要将CAN接口物理连接起来，以实现回环通信。
-1. 配置标准 CAN 波特率 (500 kbit/s)：
-
+Similarly, the CAN interfaces need to be physically connected to achieve loopback communication.
+1. Configure the standard CAN baud rate (500 kbit/s):
 ```bash
 sudo ip link set down can0
 sudo ip link set down can1
@@ -835,14 +834,14 @@ sudo ip link set can1 type can bitrate 500000
 sudo ip link set up can0
 sudo ip link set up can1
 ```
-2. 验证确认两个接口都处于 UP 状态：
+2. Verify that both interfaces are in the UP state: Outputting "state UP" indicates the UP state.
 ```bash
 ip a show can0
 ip a show can1
 ```
 输出"state UP"即为UP状态。
 
-3. 配置Python 虚拟环境和依赖
+3. Configure the Python virtual environment and dependencies.
 
 ```bash
 mkdir rpi_can_project
@@ -851,9 +850,8 @@ python3 -m venv can_env
 source can_env/bin/activate
 pip install python-can
 ```
-4. 输入python脚本
-脚本 A: 发送端 (can_sender_0.py)
-此脚本通过 can0 发送一条标准 CAN 消息。
+4. Enter the Python script:
+
 ```python
 # can_test.py
 import can
@@ -880,9 +878,8 @@ with can.Bus(interface='socketcan',
     print("Listening for 5 seconds...")
     start_time = time.time()
     
-    # 限制接收时间，避免程序无限等待
+
     while time.time() - start_time < 5:
-        msg = bus.recv(timeout=1.0) # 每次等待最多1秒
         if msg:
             print(f"Received - ID: {msg.arbitration_id:X}, Data: {msg.data.hex()}")
         else:
@@ -890,7 +887,7 @@ with can.Bus(interface='socketcan',
 
 print("Bus shut down and program finished.")
 ```
-执行运行
+5. Execute and run:
 ```bash
 python can_test.py
 deactivate
