@@ -111,11 +111,17 @@ The robot includes a full-body kinematic model and a state-adaptive self-stabili
 | 1:10 Wear-Resistant 6030-6085 Tires | 2 | pc | | |
 
 ## Table of Contents
-  - [Assembly](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot/#Assembly)
-  - [Calibration](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot/#Calibration)
+  - [Assembled Version Tutorial](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot/#Assembled%20Version%20Tutorial)
+  - [Kit Version Tutorial 1 - Assembly](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot/#Kit%20Version%20Tutorial%201%20-%20Assembly)
+  - [Kit Version Tutorial 2 - Calibration](https://wiki.seeedstudio.com/StackForce_Mini_Wheeled_Legged_Robot/#Kit%20Version%20Tutorial%202%20-%20Calibration)
 
+## Assembled Version Tutorial
 
-## Assembly
+[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
+ 
+You can remotely control the robot by simply starting it in the order specified in the PDF document.
+
+## Kit Version Tutorial 1 - Assembly
 
 [Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
@@ -131,7 +137,7 @@ The assembly has many steps, so please follow the guide carefully. Some holes ar
 During assembly, pay attention to the tightness of the screws. Do not overtighten them to avoid stripping or damaging the threads.
 :::
 
-## Calibration
+## Kit Version Tutorial 2 - Calibration
 
 Please first download the [code files required for calibration](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Calibration_code.7z).
 
@@ -533,7 +539,7 @@ Front-side joysticks:
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
+[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
 [Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 

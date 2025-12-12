@@ -110,13 +110,19 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 
 ## 目录
-  - [安装教程](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#安装教程)
-  - [校准教程](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#校准教程)
+  - [整机款教程](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#整机款教程)
+  - [散件教程-1 安装](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#散件教程1-安装)
+  - [散件教程-2 校准](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/#散件教程2-校准)
 
+## 整机款教程
 
-## 安装教程
+[StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf) 
+ 
+直接按照pdf文档的顺序启动机器人即可遥控。
 
-[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/Installation_document.pdf)
+## 散件教程1-安装
+
+[双足轮安装教程文档下载](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Installation_document.pdf)
 
 <div class="video-container">
 <iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1556188467&bvid=BV121421b7zZ&cid=1616871369&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -130,7 +136,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 在组装过程中，请注意螺丝的松紧程度，不要太用力拧螺丝，以防滑牙等情况出现。
 :::
 
-## 校准教程
+## 散件教程2-校准
 
 请先下载[校准所需烧录的代码文件](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Calibration_code.7z)
 
@@ -470,7 +476,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 [StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
-[双足轮安装教程文档下载](https://wiki.seeedstudio.com/cn/StackForce_Mini_Wheeled_Legged_Robot/Installation_document.pdf)
+[双足轮安装教程文档下载](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Installation_document.pdf)
 
 [全套控制板原理图](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
 
