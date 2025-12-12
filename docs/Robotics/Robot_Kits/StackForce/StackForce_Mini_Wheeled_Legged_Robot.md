@@ -125,10 +125,6 @@ You can remotely control the robot by simply starting it in the order specified 
 
 [Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
-<div class="video-container">
-<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1556188467&bvid=BV121421b7zZ&cid=1616871369&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
 :::tip
 The assembly has many steps, so please follow the guide carefully. Some holes are made for self-tapping screws, and it is normal if the screws in the package differ from those in the tutorial. This will not affect assembly, and you may use suitable replacement screws if needed.
 :::

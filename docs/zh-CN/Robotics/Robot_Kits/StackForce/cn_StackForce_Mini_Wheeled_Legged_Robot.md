@@ -125,7 +125,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 [双足轮安装教程文档下载](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Installation_document.pdf)
 
 <div class="video-container">
-<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1556188467&bvid=BV121421b7zZ&cid=1616871369&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1355811020&bvid=BV1kz421B73V&cid=1596569994&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 :::tip
