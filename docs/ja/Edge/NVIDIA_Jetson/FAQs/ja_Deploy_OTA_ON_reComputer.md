@@ -113,7 +113,7 @@ export const productOptions = [
 
 ### デバイス上でのOTA手順
 
-:::Note
+:::note
 以下の操作はJetson上で実行されます（リモート接続経由）
 :::
 

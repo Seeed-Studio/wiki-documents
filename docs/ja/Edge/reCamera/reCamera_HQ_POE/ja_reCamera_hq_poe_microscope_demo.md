@@ -19,6 +19,8 @@ last_update:
 
 # reCamera_Microscope
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/4.gif" /></div>
+
 ## 🔥reCamera_Microscope とは？
 
 reCamera_Microscope は [reCamera 2002 シリーズ](https://www.seeedstudio.com/reCamera-2002w-64GB-p-6249.html) と [GC2053 センサーボード](https://www.seeedstudio.com/reCamera-2002-Sensor-Board-GC2053-p-6556.html) をベースとしたオープンソースプロジェクトです。[reCamera 2002 HQ PoE バージョン](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html) を使用してこのプロジェクトを完成させることもできます。
@@ -55,16 +57,6 @@ reCamera Sg2002 シリーズには 1 TOPS の内蔵計算能力があり、YoloV
 5. 顕微鏡ホルダー
 6. 12V 電源アダプター
 7. Type-C ケーブル
-
-## 🛒購入リンク
-
-| reCamera POE & Type-C ケーブル                | [reCamera 2002 HQ PoE 8GB](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html) |
-| ------------------------------------------ | ------------------------------------------------------------ |
-| 3D プリンター x2                              |                [3D プリンターダウンロード](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Microscope/3D_Printed_Case/top_2.3mf)                                              |
-| M12 レンズ x2                                | [6mmB タイプ – 生物顕微鏡（Taobao）](https://item.taobao.com/item.htm?id=966337796751&mi_id=0000aLtG3Un2BtLBwdSYZFPZI-nRQdgezdGbA6si_qz_3TY&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6&sku_properties=1627207%3A1364564910)<br />[22mmB タイプ – PCB 顕微鏡（Taobao）](https://item.taobao.com/item.htm?id=966337796751&mi_id=0000aLtG3Un2BtLBwdSYZFPZI-nRQdgezdGbA6si_qz_3TY&sku_properties=1627207%3A1392136713&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6) |
-| M12 レンズ延長ブラケット x3              | [M12 レンズ延長ブラケット x3        2個購入で1個無料 M12×0.5 延長リング（Taobao）](https://item.taobao.com/item.htm?id=727001812366&mi_id=0000GVjgJwtQrpMV3hfTIBkQ7C750g4UcKWmn7jTQMZm4Kk&spm=tbpc.boughtlist.suborder_itemtitle.1.442e2e8d4bcrJz) |
-| 顕微鏡ホルダー<br />& 12V 電源アダプター | [顕微鏡ホルダー & 12V 電源アダプター        ポータブル電子顕微鏡スタンド（ライト付き）35/50 mm ベース（Taobao）](https://item.taobao.com/item.htm?id=749452322341&mi_id=0000hBbQQwAlptuyVy-eEdVQVGl4eia1yeh5B2o2U_KOHoQ&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6) |
-
 
 ## インストール手順
 

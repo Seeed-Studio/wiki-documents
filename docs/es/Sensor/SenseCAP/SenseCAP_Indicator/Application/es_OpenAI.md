@@ -885,7 +885,7 @@ int indicator_openai_init(void)
 ## Recursos
 
 1. [SenseCAP Indicator X ChatGPT](/es/SenseCAP_Indicator_ChatGPT)
-2. [SenseCAP Indicator X DALL·E](/es/SenseCAP_Indicator_DALL·E)
+2. [SenseCAP Indicator X DALL·E](/es/SenseCAP_Indicator_DALL-E)
 3. **SDK de Demostración**: El SDK de Demostración para el SenseCAP Indicator está disponible en [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32).
 4. **Guía de Usuario del SenseCAP Indicator**: La Guía de Usuario proporciona información detallada sobre el software y hardware de la Placa SenseCAP Indicator. Puedes leerla [aquí](/es/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator).
 5. **Guía de Chat completions de OpenAI**: Si eres nuevo en la API de Chat, esta guía te ayudará a comenzar. Puedes encontrarla [aquí](https://platform.openai.com/docs/guides/chat/chat-completions-beta).

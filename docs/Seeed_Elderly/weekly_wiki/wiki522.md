@@ -45,7 +45,7 @@ You can refer to the links below for more help:
 
 - [How to Set the API Key](/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key)
 - [ChatGPT Indicator](/SenseCAP_Indicator_ChatGPT)
-- [DALL·E AI Picture Generator](/SenseCAP_Indicator_DALL·E)
+- [DALL·E AI Picture Generator](/SenseCAP_Indicator_DALL-E)
 
 <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/OpenAI.png" /></div>
 
