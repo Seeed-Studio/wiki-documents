@@ -839,7 +839,7 @@ sudo ip link set up can1
 ip a show can0
 ip a show can1
 ```
-输出"state UP"即为UP状态。
+The output "state UP" indicates the UP state.
 
 3. Configure the Python virtual environment and dependencies.
 
