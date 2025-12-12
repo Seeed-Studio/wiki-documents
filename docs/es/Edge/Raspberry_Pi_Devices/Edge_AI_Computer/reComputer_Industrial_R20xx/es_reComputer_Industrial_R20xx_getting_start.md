@@ -805,12 +805,12 @@ El diagrama esquemático de un solo cable DO es el siguiente:
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.7_boot_switch_1.png" style={{width:100, height:'auto'}}/></div>
 
-El Interruptor de Arranque del reComputer Industrial R2000 está conectado al pin nRPI_BOOT del CM5. Este interruptor proporciona a los usuarios la opción de seleccionar la fuente de arranque entre eMMC y USB. En modo normal, el interruptor debe estar alejado del lado con la etiqueta "BOOT", permitiendo que el sistema arranque desde eMMC. Por el contrario, cuando los usuarios necesitan flashear la imagen del sistema, deben colocar el interruptor hacia la etiqueta "BOOT", permitiendo que el sistema arranque desde la interfaz USB Type-C.
+El Interruptor de Arranque del reComputer Industrial R20xx está conectado al pin nRPI_BOOT del CM5. Este interruptor proporciona a los usuarios la opción de seleccionar la fuente de arranque entre eMMC y USB. En modo normal, el interruptor debe estar alejado del lado con la etiqueta "BOOT", permitiendo que el sistema arranque desde eMMC. Por el contrario, cuando los usuarios necesitan flashear la imagen del sistema, deben colocar el interruptor hacia la etiqueta "BOOT", permitiendo que el sistema arranque desde la interfaz USB Type-C.
 
 | Posición del Interruptor | Modo         | Descripción      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>            | Modo normal  | Arrancar desde eMMC   | Bajo       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>             | Modo flash   | Arrancar desde USB    | Alto      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>            | Modo normal  | Arrancar desde eMMC   | Bajo       |
+|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>             | Modo flash   | Arrancar desde USB    | Alto      |
 
 ### USB
 
