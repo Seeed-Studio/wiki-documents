@@ -556,20 +556,20 @@
     {
         "product": "j501-carrier AGX-Orin 64g",
         "l4t": "35.5.0 (GMSL❌)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERoEi192vKFPnvFaqnqVz_oBNi3PAQ2W7gkZHpGu0XuuEw?e=pXYw9X",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDvJDte6YOfS5UI7C7ln0ryAVTRpxtGi9spgHOmEZG_sL8?e=jz5B4f",
         "mirrorlink": "https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ESfErbFgQl9NudcbGZXL3LMB9wavWcQwjtW6wYYtfwkE3A?e=H5sR4J",
-        "filename": "mfi_reserver-agx-orin-j501x-jp5-64g-20240522.tar.gz",
+        "filename": "mfi_reserver-agx-orin-64g-j501-5.1-35.5.0-2025-07-25.tar.gz",
         "foldername": "mfi_reserver-agx-orin-64g-j501-5.1.3-35.5.0",
-        "sha256": "F3852FFC7A8CDDFD9C2857B2F3F616899DC69EE4D5BA92704DB192E803C29EA0"
+        "sha256": "76abdd6de0a49bd95d57b361bebea59a6a05e56779c7ceb863ad178f3ed98aaf"
     },
     {
         "product": "j501-carrier AGX-Orin 64g",
         "l4t": "35.5.0 (GMSL✅)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Ecebi5JjKaVHmY-DymgG8AIBPRgAuCXVCrf4IYiKIfsMxA?e=OJPKwB",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBh9HqX5MHBQZF0WLe01k7mAXYqzHd4YJXaDt4uS2VZ8T4?e=AX0KSd",
         "mirrorlink": "https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eccs1larF2FNhKi8MHred5kB4pQImN4ZHSgDM3BUDVzBtQ?e=reKIhD",
-        "filename": "mfi_reserver-agx-orin-j501x-gmsl-jp5-64g-20240613.tar.gz",
+        "filename": "mfi_reserver-agx-orin-64g-j501-gmsl-5.1-35.5.0-2025-07-25.tar.gz",
         "foldername": "mfi_reserver-agx-orin-64g-j501-gmsl-5.1.3-35.5.0",
-        "sha256": "61434E1A88FF2A95F6B13B5FFA51557FAE8D46C67C72DDF862DE51D91DAF6987"
+        "sha256": "49076bd4bb7179dfe38c25bd5831c03296bf26e86d67d9bca766a749a14257bd"
     },
     {
         "product": "j501-carrier AGX-Orin 32g",
@@ -610,20 +610,20 @@
     {
         "product": "j501-carrier AGX-Orin 32g",
         "l4t": "35.5.0 (GMSL❌)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EagENvz49i1GhTAMR9xCLlkBHscdcSHkYf9PQuPFcgR50A?e=mOMJ2c",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD3U5NHij5gR5r4FB_AzC9vAbb3ERak_RvvIMoow0-X2fM?e=Ddf7Zi",
         "mirrorlink": "https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERG3upqXAQNHsJP6ZvG2MAEBGsndVCgrLnhcKvtWoGA6tA?e=14KO6z",
-        "filename": "mfi_reserver-agx-orin-j501x-jp5-32g-20240522.tar.gz",
+        "filename": "mfi_reserver-agx-orin-32g-j501-5.1-35.5.0-2025-07-25.tar.gz",
         "foldername": "mfi_reserver-agx-orin-32g-j501-5.1.3-35.5.0",
-        "sha256": "56571770D7B1BAF53EAD3B1C173C0754592601348501288C3E081FF8D51907F7"
+        "sha256": "c673dc8ae75addf8ca3224cf700be354eec0ca41cb5ecabb8953c276213a7119"
     },
     {
         "product": "j501-carrier AGX-Orin 32g",
         "l4t": "35.5.0 (GMSL✅)",
-        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUNTXrMsDcJCnIN2RvmXg6EBBLY6PRZiegvUjqI_N2i0YQ?e=SXEXXz",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD3ZjNepbc7SoC24H82Y4txAUhoSQIZ4l2ZcKGa3qgd9_E?e=bk1qc5",
         "mirrorlink": "https://szseeedstudio-my.sharepoint.cn/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyoujiang%5Fyu%5Fszseeedstudio%5Fpartner%5Fonmschina%5Fcn%2FDocuments%2FJetson%2DImage%2FreServer%2DJ501%2Fmfi%5Freserver%2Dagx%2Dorin%2Dj501x%2Dgmsl%2Djp5%2D32g%2D20240625%2Etar%2Egz&parent=%2Fpersonal%2Fyoujiang%5Fyu%5Fszseeedstudio%5Fpartner%5Fonmschina%5Fcn%2FDocuments%2FJetson%2DImage%2FreServer%2DJ501&ga=1",
-        "filename": "mfi_reserver-agx-orin-j501x-gmsl-jp5-32g-20240625.tar.gz",
+        "filename": "mfi_reserver-agx-orin-32g-j501-gmsl-5.1-35.5.0-2025-07-25.tar.gz",
         "foldername": "mfi_reserver-agx-orin-32g-j501-gmsl-5.1.3-35.5.0",
-        "sha256": "077878E3B84022BA1344ED2EE8738B9EAECA6F6136468369B7DBB4FC5EF48802"
+        "sha256": "425a931e65f2715d8486c68565ad711fd34b626ab023d025df2d84af81b62aa3"
     },
     {
         "product": "j4012reserver",
