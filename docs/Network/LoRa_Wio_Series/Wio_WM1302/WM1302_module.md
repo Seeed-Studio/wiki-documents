@@ -57,7 +57,7 @@ WM1302 is designed for M2M and IoT applications and can be widely applied in LPW
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/WM1302_module/WM1302_2.jpeg" alt="pir" width={600} height="auto" /></p>
 
-<br>
+<br />
 
 #### Raspberry Pi Pinout Mapping
 
