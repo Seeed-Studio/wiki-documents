@@ -5,7 +5,7 @@ keywords:
   - xiao
   - esp32c5
   - platformio
-image: https://files.seeedstudio.com/wiki/mg24_platform/top_mg24_platform02.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
 slug: /xiao_esp32c5_with_platformio
 last_update:
   date: 11/27/2025

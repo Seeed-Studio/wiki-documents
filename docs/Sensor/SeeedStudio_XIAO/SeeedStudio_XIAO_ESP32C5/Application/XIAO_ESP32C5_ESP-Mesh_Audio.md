@@ -3,7 +3,7 @@ description: |
 title: XIAO ESP32C5 ESP-Mesh Audio
 keywords:
 - xiao esp32c5
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
 slug: /xiao_esp32c5_esp-mesh_audio
 last_update:
   date: 12/12/2025
