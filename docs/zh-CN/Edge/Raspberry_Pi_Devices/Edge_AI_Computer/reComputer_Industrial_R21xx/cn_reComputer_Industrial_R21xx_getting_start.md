@@ -624,7 +624,7 @@ RS232 线缆的原理图如下：
 
 ### DI（数字输入）
 
-reComputer Industrial R2000 系列设备包含 8x DI 端口，3 针 3.5mm 间距凤凰端子。
+reComputer Industrial R2000 系列设备包含 4x DI 端口，3 针 3.5mm 间距凤凰端子。
  单个 DI 的丝印为 "DI/G_DI"。
 
 **引脚定义**
@@ -701,7 +701,7 @@ reComputer Industrial R2000 系列设备包含 8x DI 端口，3 针 3.5mm 间距
 
 ### DO（数字输出）
 
-reComputer Industrial R2000 系列设备包含 8x DO 端口，3 针 3.5mm 间距凤凰端子。
+reComputer Industrial R2000 系列设备包含 4x DO 端口，3 针 3.5mm 间距凤凰端子。
 单个 DO 的丝印为 "DO/G_DO"。
 **引脚定义**
 端子引脚定义如下：
@@ -829,8 +829,8 @@ reComputer Industrial R2000 的启动开关连接到 CM5 的 nRPI_BOOT 引脚。
 
 | 开关位置 | 模式         | 描述      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>            | 正常模式  | 从 eMMC 启动   | 低电平       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>             | 刷写模式   | 从 USB 启动    | 高电平      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>            | 正常模式  | 从 eMMC 启动   | 低电平       |
+|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>             | 刷写模式   | 从 USB 启动    | 高电平      |
 
 ### USB
 

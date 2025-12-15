@@ -805,12 +805,12 @@ reComputer Industrial R2000 シリーズ機器には、8x DO ポート、3ピン
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2.2.7_boot_switch_1.png" style={{width:100, height:'auto'}}/></div>
 
-reComputer Industrial R2000 のブートスイッチは CM5 の nRPI_BOOT ピンに接続されています。このスイッチは、ユーザーが eMMC と USB の間でブートソースを選択するオプションを提供します。通常モードでは、スイッチを「BOOT」ラベルのある側から離れた位置に設定し、システムが eMMC からブートできるようにします。逆に、ユーザーがシステムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に設定し、システムが Type-C USB インターフェースからブートできるようにします。
+reComputer Industrial R20xx のブートスイッチは CM5 の nRPI_BOOT ピンに接続されています。このスイッチは、ユーザーが eMMC と USB の間でブートソースを選択するオプションを提供します。通常モードでは、スイッチを「BOOT」ラベルのある側から離れた位置に設定し、システムが eMMC からブートできるようにします。逆に、ユーザーがシステムイメージを書き込む必要がある場合は、スイッチを「BOOT」ラベル側に設定し、システムが Type-C USB インターフェースからブートできるようにします。
 
 | スイッチ位置 | モード         | 説明      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>            | 通常モード  | eMMC からブート   | Low       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>             | フラッシュモード   | USB からブート    | High      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>            | 通常モード  | eMMC からブート   | Low       |
+|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>             | フラッシュモード   | USB からブート    | High      |
 
 ### USB
 

@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 12/8/2025
-  author: Janet
+  date: 12/11/2025
+  author: Michelle Huang
 ---
 # SenseCAP ONE 紧凑型气象传感器入门指南
 
@@ -121,7 +121,7 @@ SenseCAP ONE 配置工具为您提供图形界面来配置设备。您可以从�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image19.png" /></div>
 
-1. 打开软件，点击串口处的下拉框，选择设备对应的串口。
+1. 打开软件，点击串口的下拉框，选择设备对应的串口。
 
 2. 将波特率设置为 9600。
 
@@ -129,7 +129,7 @@ SenseCAP ONE 配置工具为您提供图形界面来配置设备。您可以从�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image20.png" /></div>
 
-点击 Settings 进入设备设置，点击 "Read From Device" 获取设备信息。
+点击 Settings 进入设备设置，点击"Read From Device"获取设备信息。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image21.png" /></div>
 
@@ -137,21 +137,21 @@ SenseCAP ONE 配置工具为您提供图形界面来配置设备。您可以从�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image22.png" /></div>
 
-2. 修改 Modbus 地址：在 Modbus 地址中写入地址，然后点击 "Write to Device"。
+2. 修改 Modbus 地址：在 Modbus 地址中写入地址，然后点击"Write to Device"。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image23.png" /></div>
 
-在配置页面，您可以修改以下内容：设备名称、数据类型和数据上传间隔。任何修改后，您都需要点击 "Write to Device" 使更改生效。
+在配置页面，您可以修改以下内容：设备名称、数据类型和数据上传间隔。任何修改后，您都需要点击"Write to Device"使更改生效。
 
 在应用程序设置中，您可以设置工具读取传感器数据的周期，最小为 2S，以及曲线的点范围。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image24.png" /></div>
 
-点击 "Firmware Update" 更新设备固件。请联系销售或技术支持 (sensecap@seeed.cc) 获取固件。
+点击"Firmware Update"更新设备固件。请联系销售或技术支持 (sensecap@seeed.cc) 获取固件。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image25.png" /></div>
 
-在升级页面，您需要选择更新主板固件或驱动板固件。在本地存储库中选择固件文件，然后点击 "Update Now"。如果在更新过程中发生意外断电，更新将不会执行。您需要重复相同的过程来更新固件。
+在升级页面，您需要选择更新主板固件或驱动板固件。在本地存储库中选择固件文件，然后点击"Update Now"。如果在更新过程中出现意外断电，更新将不会执行。您需要重复相同的过程来更新固件。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image26.png" /></div>
 
@@ -213,7 +213,7 @@ SenseCAP ONE 配置工具为您提供图形界面来配置设备。您可以从�
 
 - 在串口调试助手中，选择对应的 COM 端口。
 
-- 勾选 "click Enter to start a new line" 复选框。
+- 勾选"点击回车开始新行"复选框。
 
 - 将波特率设置为 9,600。
 
@@ -247,7 +247,7 @@ SenseCAP ONE 配置工具为您提供图形界面来配置设备。您可以从�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image32.png" /></div>
 
-**读取和写入保持寄存器。**
+**读写保持寄存器。**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image33.png" /></div>
 
@@ -257,14 +257,14 @@ SenseCAP ONE 配置工具为您提供图形界面来配置设备。您可以从�
 
 ### Modbus-RTU 读取
 
-这是一个 **Modbus Poll 工具** 的示例
+这里是 **Modbus Poll 工具** 的示例
 
 （从 &lt;https://www.modbustools.com/download.html&gt; 下载）。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image35.png" /></div>
 
 配置连接参数：波特率 9600bps，8 数据位，
-无奇偶校验，1 停止位。
+无校验，1 停止位。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image36.png" /></div>
 
@@ -369,7 +369,7 @@ PM2.5、PM10 和 CO2 需要单独读取：
 
 ### 噪声传感器
 
-噪声传感器用作独立的 RS485 传感器，与同一 RS-485 总线上的其他测量单元并联，因此需要单独读取和配置。
+噪声传感器作为独立的 RS485 传感器使用，与同一 RS-485 总线上的其他测量单元并联，因此需要单独读取和配置。
 
 规格：
 
@@ -426,15 +426,15 @@ PM2.5、PM10 和 CO2 需要单独读取：
 ### 命令列表
 
 请参考：
-[SenseCAP ONE/SenseCAP ONE V3 紧凑型气象站用户指南](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+[SenseCAP ONE/SenseCAP ONE V3 紧凑型气象站用户指南](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ## SDI-12
 
-SDI-12 通信采用三线制，其中两根为传感器电源线，另一根为 SDI-12 信号线。
+SDI-12 通信采用三线制，其中两根是传感器电源线，另一根是 SDI-12 信号线。
 
-SDI-12 总线上的每个传感器都有唯一的地址，可以设置为 '0'、'1' ~ '9'、'A' ~ 'Z'、'a' ~ 'z'。SenseCAP ONE 的 SDI-12 地址默认为 '0'。该传感器支持的指令如下一章所示，每条指令都符合 SDI-12 v1.4 标准。
+SDI-12 总线上的每个传感器都有一个唯一的地址，可以设置为 '0'、'1' ~ '9'、'A' ~ 'Z'、'a' ~ 'z'。SenseCAP ONE 的 SDI-12 地址默认为 '0'。该传感器支持的指令如下一章所示，每个指令都符合 SDI-12 v1.4 标准。
 
-传感器由 3.6~16V 直流电源供电。传感器上电后，会立即进入睡眠模式，等待数据采集设备发出指令。SDI-12 使用 9600bps 波特率，1 个起始位（高电平），7 个数据位（高 0 低 1，反逻辑），1 个偶校验位，1 个停止位。
+传感器由 3.6~16V 的直流电源供电。传感器上电后，会立即进入睡眠模式，等待数据采集设备发出指令。SDI-12 使用 9600bps 波特率，1 个起始位（高电平），7 个数据位（高 0 低 1，反逻辑），1 个偶校验位，1 个停止位。
 
 每个字节发送的序列如下图所示：
 
@@ -442,8 +442,7 @@ SDI-12 总线上的每个传感器都有唯一的地址，可以设置为 '0'、
 
 ### SDI-12 命令和响应
 
-请参考：
-&lt;https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf&gt;
+请参考 [SenseCAP ONE/SenseCAP ONE V3 紧凑型气象站用户指南](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ### SDI-12 读取
 
@@ -480,11 +479,11 @@ SDI-12 总线上的每个传感器都有唯一的地址，可以设置为 '0'、
 
 读取空气温度、空气湿度、大气压力、光照强度
 
-发送"开始测量命令 0M!"，传感器首先响应 "00024"，表示 "0M!" 命令需要 2 秒进行测量并返回 4 个测量值。2 秒后，传感器响应自己的地址 "0"，表示测量已完成。
+发送 "开始测量命令 0M!"，传感器首先响应 "00024"，表示 "0M!" 命令需要 2 秒进行测量并返回 4 个测量值。2 秒后，传感器响应自己的地址 "0"，表示测量已完成。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image51.png" /></div>
 
-然后发送"读取测量值命令 0D0!"获取本次测量的 4 个测量值，分别是空气温度 +27.01℃、空气湿度 64.74%、大气压力 100720Pa、光照强度 10Lux。
+然后发送 "读取测量值命令 0D0!" 获取本次测量的 4 个测量值，分别是空气温度 +27.01℃、空气湿度 64.74%、大气压力 100720Pa、光照强度 10Lux。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image52.png" /></div>
 
@@ -492,11 +491,11 @@ SDI-12 总线上的每个传感器都有唯一的地址，可以设置为 '0'、
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image53.png" /></div>
 
-然后发送"读取测量值命令 0D0!"获取本次测量的 6 个测量值，分别是最小风向 345.9 度、最大风向 347.5 度、平均风向 346.3 度、最小风速 2.8m/s、最大风速 2.8m/s、平均风速 2.8m/s。
+然后发送 "读取测量值命令 0D0!" 获取本次测量的 6 个测量值，分别是最小风向 345.9 度、最大风向 347.5 度、平均风向 346.3 度、最小风速 2.8m/s、最大风速 2.8m/s、平均风速 2.8m/s。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image54.png" /></div>
 
-然后发送"连续测量命令 0R2!"，设备返回 4 个测量值：累计降雨量 1.2mm、累计降雨持续时间 20 秒、降雨强度 1.2mm/h、最大降雨强度 72.0mm/h。
+然后发送 "连续测量命令 0R2!" 设备返回 4 个测量值：累计降雨量 1.2mm、累计降雨持续时间 20 秒、降雨强度 1.2mm/h、最大降雨强度 72.0mm/h。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image55.png" /></div>
 
@@ -515,4 +514,4 @@ SDI-12 总线上的每个传感器都有唯一的地址，可以设置为 '0'、
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
 
 ## 资源
-[SenseCAP ONE/SenseCAP ONE V3 紧凑型气象站用户指南](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+[SenseCAP ONE/SenseCAP ONE V3 紧凑型气象站用户指南](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)

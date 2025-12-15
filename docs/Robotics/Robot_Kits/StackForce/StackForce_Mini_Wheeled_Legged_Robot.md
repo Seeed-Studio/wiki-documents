@@ -36,13 +36,13 @@ The robot includes a full-body kinematic model and a state-adaptive self-stabili
 
 ## Technical links
 
-* **DengGe’s open-source tutorial video on Bilibili:** [https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc)
+- **DengGe’s open-source tutorial video on Bilibili:** [https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc)
 
-* **Open-source code for the wheeled-leg robot course:** [https://gitee.com/StackForce/bipedal_wheeled_robot](https://gitee.com/StackForce/bipedal_wheeled_robot)
+- **Open-source code for the wheeled-leg robot course:** [https://gitee.com/StackForce/bipedal_wheeled_robot](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-* **Documentation for the StackForce lightweight robotics development platform:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
+- **Documentation for the StackForce lightweight robotics development platform:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
 
-* **Open-source robot projects for the StackForce lightweight robotics development platform:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
+- **Open-source robot projects for the StackForce lightweight robotics development platform:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
 
 ## Main Features
 
@@ -111,11 +111,18 @@ The robot includes a full-body kinematic model and a state-adaptive self-stabili
 | 1:10 Wear-Resistant 6030-6085 Tires | 2 | pc | | |
 
 ## Table of Contents
-  - [Assembly](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/#Assembly)
-  - [Calibration](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/#Calibration)
 
+- [Assembled Version Tutorial](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/#Assembled%20Version%20Tutorial)
+- [Kit Version Tutorial 1 - Assembly](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/#Kit%20Version%20Tutorial%201%20-%20Assembly)
+- [Kit Version Tutorial 2 - Calibration](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/#Kit%20Version%20Tutorial%202%20-%20Calibration)
 
-## Assembly
+## Assembled Version Tutorial
+
+[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
+
+You can remotely control the robot by simply starting it in the order specified in the PDF document.
+
+## Kit Version Tutorial 1 - Assembly
 
 [Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
@@ -131,7 +138,7 @@ The assembly has many steps, so please follow the guide carefully. Some holes ar
 During assembly, pay attention to the tightness of the screws. Do not overtighten them to avoid stripping or damaging the threads.
 :::
 
-## Calibration
+## Kit Version Tutorial 2 - Calibration
 
 Please first download the [code files required for calibration](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Calibration_code.7z).
 
@@ -164,28 +171,28 @@ Open the `extracted folder` → open the `bin folder` → copy the `path of the 
 Environment configuration:
 Search for and open `Advanced System Settings` on your computer → `Environment Variables` → `System variables` → `Path` → `New` → paste the `bin path` copied earlier → click `OK`.
 
-* 1: Search for and open `Advanced System Settings`.
+- 1: Search for and open `Advanced System Settings`.
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_1.png" />
 </div>
 
-* 2: Click `Environment Variables`.
+- 2: Click `Environment Variables`.
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_2.png" />
 </div>
 
-* 3: Double-click `Path` under System variables.
+- 3: Double-click `Path` under System variables.
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_3.png" />
 </div>
 
-* 4: Create a new environment variable entry.
+- 4: Create a new environment variable entry.
 
 <div align="center">
     <img width={500}
@@ -198,7 +205,7 @@ Step 4: Compile and Upload Button Instructions
 
 (**√**: Compile the program →: Upload the program to the hardware&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Auto**: Select the serial port)
 
-:::tip 
+:::tip
 The following explains the upload buttons. Do not upload the program yet. Developers can review the upload process here first.
 :::
 
@@ -210,7 +217,6 @@ After selecting the serial port, click `Compile` (optional) and `Upload` to flas
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/4_1.png" />
 </div>
-
 
 ### S1 Flashing and Debugging
 
@@ -271,7 +277,7 @@ You can also read the `registration code` from the `S1 serial output` (explained
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/S1Burn/4.png" />
 </div>
 
-**Modify the communication mode:** 
+**Modify the communication mode:**
 
 Change the value at the location shown in the image to `ONBOARD`. (`USB` = serial communication between the S1 chip and the computer,  `ONBOARD` = communication between the S1 and S3 chips.)
 
@@ -318,10 +324,9 @@ Check that all other serial assistants have released the port.
 
 </details>
 
-
 **Vofa Serial Assistant Download and Usage Guide**
 
-Next, open the serial assistant and set the baud rate to `115200` to check the serial output. 
+Next, open the serial assistant and set the baud rate to `115200` to check the serial output.
 Vofa Serial Assistant download link: [Download Center | VOFA-Plus](https://www.vofa.plus/)
 
 <div align="center">
@@ -508,12 +513,12 @@ After completing these steps, the robot can now be controlled. The following des
 
 Front-side joysticks:
 
-* **Step 1:**
+- **Step 1:**
   Set the left-top switch to `middle`, the right-top switch to `down`, and the left-bottom stick to `lowest`. Hold the robot, let the legs hang naturally, keep the wheels off the ground, and keep the body level.
 
   Power on, wait about `10 seconds`, then place the robot on the ground and keep it upright.
 
-* **Step 2:**
+- **Step 2:**
   Set the right-top switch to `middle`, push the left-bottom stick `slightly up`, and set the left-top switch to `up`. The robot enters self-balancing mode.
 
   Use the right-bottom stick `forward/back` to move forward/backward and `left/right` to turn left/right.
@@ -521,7 +526,6 @@ Front-side joysticks:
   Use the left-bottom stick `up/down` to adjust leg height.
 
   When the right-top switch is at `top`, move the left-bottom stick `left/right` to control roll. Power off to exit roll mode.
-
 
 ## Live Demo
 
@@ -533,7 +537,7 @@ Front-side joysticks:
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
+[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
 [Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
@@ -562,10 +566,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
