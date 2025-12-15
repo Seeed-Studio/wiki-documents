@@ -1,6 +1,6 @@
 ---
-description: Este wiki proporciona tutoriales de ensamblaje y puesta en marcha para el Robot Bípedo con Ruedas Mini StackForce, así como materiales de aprendizaje y enlaces necesarios para su desarrollo.
-title: Robot Bípedo con Ruedas Mini StackForce
+description: Este wiki proporciona tutoriales de ensamblaje y puesta en marcha para el Robot de Patas con Ruedas Mini StackForce, así como materiales de aprendizaje y enlaces necesarios para su desarrollo.
+title: Robot de Patas con Ruedas Mini StackForce
 keywords:
 - StackForce
 - Robótica
@@ -23,7 +23,7 @@ Este tutorial solo proporciona instrucciones de ensamblaje y depuración para ay
 
 El robot bípedo de dos ruedas StackForce está desarrollado basándose en la plataforma de desarrollo de robótica ligera StackForce. Su hardware central está compuesto por la placa de control principal de la serie StackForce, la placa controladora de motor y la placa controladora de servo.
 
-El robot incluye un modelo cinemático de cuerpo completo y un algoritmo de auto-estabilización adaptativo al estado. Con la potencia de cómputo en tiempo real de la plataforma StackForce, soporta control multi-postura, auto-estabilización en terreno complejo, descenso de escaleras y movimiento estable en varias pendientes. La plataforma soporta transmisores RC, Bluetooth, comunicación serie y control inalámbrico. Los usuarios pueden programar y ajustar el sistema según sea necesario. El producto proporciona tutoriales de instalación completos y cursos en video, convirtiéndolo en un robot bípedo de dos ruedas de escritorio rentable.
+El robot incluye un modelo cinemático de cuerpo completo y un algoritmo de auto-estabilización adaptativo al estado. Con el poder de cómputo en tiempo real de la plataforma StackForce, soporta control multi-postura, auto-estabilización en terreno complejo, descenso de escaleras y movimiento estable en varias pendientes. La plataforma soporta transmisores RC, Bluetooth, comunicación serie y control inalámbrico. Los usuarios pueden programar y ajustar el sistema según sea necesario. El producto proporciona tutoriales de instalación completos y cursos en video, convirtiéndolo en un robot bípedo de dos ruedas de escritorio rentable.
 
 <div align="center">
     <img width={800}
@@ -56,7 +56,7 @@ El robot incluye un modelo cinemático de cuerpo completo y un algoritmo de auto
 
 | Especificación     | Detalles                                                  |
 |--------------------|-----------------------------------------------------------|
-| Placa de Control Principal | Placa de control principal StackForce                    |
+| Placa de Control Principal | Placa de control principal StackForce                     |
 | Placa Controladora de Motor | Controlador de motor sin escobillas de doble canal 5A (baja potencia) |
 | Motores            | Motores sin escobillas de cardán 2208                     |
 | Placa Controladora de Servo | Controlador de servo multicanal con IMU integrado         |
@@ -68,7 +68,7 @@ El robot incluye un modelo cinemático de cuerpo completo y un algoritmo de auto
 
 ## Lista de Materiales
 
-[Descarga de lista de materiales](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/BOM.xlsx)
+[Descarga de Lista de Materiales](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/BOM.xlsx)
 
 | Nombre del Artículo | Cantidad | Unidad | Especificaciones | Notas/Estándares |
 |---------------------|----------|--------|------------------|------------------|
@@ -125,10 +125,6 @@ Puedes controlar remotamente el robot simplemente iniciándolo en el orden espec
 ## Tutorial de Versión Kit 1 - Ensamblaje
 
 [Documento de instalación del robot mini de patas con ruedas.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
-
-<div class="video-container">
-<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1556188467&bvid=BV121421b7zZ&cid=1616871369&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 
 :::tip
 El ensamblaje tiene muchos pasos, así que por favor sigue la guía cuidadosamente. Algunos agujeros están hechos para tornillos autorroscantes, y es normal si los tornillos en el paquete difieren de los del tutorial. Esto no afectará el ensamblaje, y puedes usar tornillos de reemplazo adecuados si es necesario.
@@ -222,7 +218,7 @@ Después de seleccionar el puerto serie, haz clic en `Compile` (opcional) y `Upl
 
 #### Conectando el Chip S1
 
-Conecta el cable USB. `El lado con la ranura` del conector USB debe estar hacia arriba, y `el lado sin la ranura` debe estar hacia abajo. `Suelta el botón blanco` para cambiar al chip S1 (la `luz amarilla` se encenderá).
+Conecta el cable USB. `El lado con el hueco` en el conector USB debe estar hacia arriba, y `el lado sin el hueco` debe estar hacia abajo. `Suelta el botón blanco` para cambiar al chip S1 (la `luz amarilla` se encenderá).
 
 <div align="center">
     <img width={500}
@@ -237,7 +233,7 @@ Porque la placa tiene dos chips—S1 para el programa del motor y S3 para el pro
 
 #### Flasheando el Programa S1
 
-Método 1: Según el programa de control de motor S1 pre-grabado, puedes saltar adelante a `Guía de Descarga y Uso del Asistente Serie Vofa`.
+Método 1: Según el programa de control de motor S1 pre-grabado, puedes saltar a `Guía de Descarga y Uso del Asistente Serie Vofa`.
 
 <details>
 <summary>Método 2: Reflashear el programa de control de motor S1 (no recomendado)</summary>
@@ -265,7 +261,7 @@ Antes del flasheo, necesitas modificar el `código de registro` y el `modo de co
 Cada placa tiene un código de registro único.  
 Tu código de registro está impreso en la `etiqueta` adjunta al `paquete de la placa de control principal`.  
 Ingresa ese código en el `campo correspondiente`.  
-También puedes leer el `código de registro` desde la `salida serie del S1` (explicado anteriormente en la guía de instalación).
+También puedes leer el `código de registro` desde la `salida serie S1` (explicado anteriormente en la guía de instalación).
 
 <div align="center">
     <img width="650"
@@ -306,7 +302,7 @@ Después de hacer los cambios, haz clic en el ícono `→` en la esquina inferio
 </div>
 
 Solución:  
-Verifica si el cable USB está conectado al revés — el lado `sin la ranura debe estar hacia arriba`.  
+Verifica si el cable USB está conectado al revés — el lado `sin el hueco debe estar hacia arriba`.  
 Verifica si el botón blanco está suelto. Cuando está suelto, el `LED amarillo` se enciende, indicando que la placa está en `modo de flasheo S1`.
 
 3. Puerto serie ocupado
@@ -338,7 +334,7 @@ Enlace de descarga del Asistente Serie Vofa: [Download Center | VOFA-Plus](https
 
 Sostén el robot para que las ruedas estén fuera del suelo, luego presiona el `botón de reset S1`.  
 La información de pares de polos aparecerá en Vofa. Espera a que las ruedas terminen la rotación de auto-prueba.  
-Si el valor de par de polos detectado es `7`, la calibración es exitosa, como se muestra a continuación:
+Si el valor de pares de polos detectado es `7`, la calibración es exitosa, como se muestra a continuación:
 
 <div align="center">
     <img width={500}
@@ -346,7 +342,7 @@ Si el valor de par de polos detectado es `7`, la calibración es exitosa, como s
 </div>
 
 :::tip
-Si el valor de par de polos muestra `inf` u otro texto, verifica si la energía está encendida, verifica el cableado, y asegúrate de que el imán esté instalado correctamente.
+Si el valor de pares de polos muestra `inf` u otro texto, verifica si la energía está encendida, verifica el cableado, y asegúrate de que el imán esté instalado correctamente.
 
 Si el valor detectado es 6, 8, o cualquier cosa diferente a 7, la rueda puede estar montada muy apretada  
 (consulta la guía de instalación de rueda-pierna y busca `instalación de rodamiento del motor` para reinstalar).  
@@ -354,12 +350,12 @@ Si el valor detectado es 6, 8, o cualquier cosa diferente a 7, la rueda puede es
 La rueda también puede estar tocando el suelo u otro objeto.  
 Cada vez que el robot se enciende o S1 se reinicia, las ruedas deben estar fuera del suelo para que la auto-prueba funcione correctamente.
 
-Repite el proceso y presiona el `botón de reset S1` hasta que el par de polos muestre **7**.
+Repite el proceso y presiona el `botón de reset S1` hasta que los pares de polos muestren **7**.
 :::
 
-### Adquisición del Valor de Offset S3
+### Adquisición de Valor de Offset S3
 
-Después de terminar el flasheo del S1, cambia al `chip S3` y flashea el programa S3. (Asegúrate de que la ranura del puerto USB esté hacia abajo. Presiona el botón mostrado en la imagen—cuando la luz se vuelve `verde`, indica que el sistema ha cambiado a S3.)
+Después de terminar el flasheo S1, cambia al `chip S3` y flashea el programa S3. (Asegúrate de que el hueco del puerto USB esté hacia abajo. Presiona el botón mostrado en la imagen—cuando la luz se vuelve `verde`, indica que el sistema ha cambiado a S3.)
 
 <div align="center">
     <img width={500}
@@ -367,7 +363,7 @@ Después de terminar el flasheo del S1, cambia al `chip S3` y flashea el program
 </div>
 
 :::caution
-Asegúrate de remover el ensamblaje del muslo antes de flashear el programa.
+Asegúrate de quitar el ensamblaje del muslo antes de flashear el programa.
 
 <div align="center">
     <img width={500}
@@ -390,11 +386,11 @@ Asegúrate de remover el ensamblaje del muslo antes de flashear el programa.
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/S3_2.png" />
 </div>
 
-- 3. En la terminal serie, ingresa comandos como `1,2,3,4` para controlar los servos hasta que las piernas estén perfectamente verticales.  
-  **Guía de dirección:** Cuando la pierna está frente a ti, sentido horario es negativo, sentido antihorario es positivo.
+- 3. En el terminal serie, ingresa comandos como `1,2,3,4` para controlar los servos hasta que las piernas estén perfectamente verticales.  
+  **Guía de dirección:** Cuando la pierna está frente a ti, en sentido horario es negativo, en sentido antihorario es positivo.
 
 Por ejemplo: En la imagen de arriba, el servo 1 está inclinado ligeramente a la izquierda, y el servo 2 está inclinado ligeramente a la derecha.  
-Ingresa `5,-6,0,0` para corregir los servos 1 y 2 de vuelta a la vertical. (`5` significa rotar el servo 1 en sentido antihorario 5 unidades; `-6` significa rotar el servo 2 en sentido horario 6 unidades.)
+Ingresa `5,-6,0,0` para corregir los servos 1 y 2 de vuelta a la vertical. (`5` significa rotar el servo 1 en sentido antihorario por 5 unidades; `-6` significa rotar el servo 2 en sentido horario por 6 unidades.)
 
 <div align="center">
     <img width={500}
@@ -433,7 +429,7 @@ Ingresa los valores de offset obtenidos del programa anterior en las posiciones 
 
 - Después de flashear el programa, desconecta el USB.  
   `Mantén presionado 5` para encender el control remoto.  
-  Configura los interruptores: `A (superior-izquierdo) al medio`, `B (inferior-izquierdo) hacia abajo`, `C (superior-derecho) hacia abajo`.
+  Configura los interruptores: `A (arriba-izquierda) al medio`, `B (abajo-izquierda) hacia abajo`, `C (arriba-derecha) hacia abajo`.
 - Sostén el robot y mantenlo nivelado para que la calibración del giroscopio y la calibración del motor puedan proceder.  
   Presiona el botón de encendido para encender el robot.
 - Espera aproximadamente 10 segundos para que se complete la auto-verificación.  
@@ -460,7 +456,7 @@ Usa Vofa para ver las velocidades del motor. Establece la velocidad de baudios d
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/设置SpdDir02.png" />
 </div>
 
-Carga el programa en S3, abre Vofa (velocidad de baudios `921600`), establece el `interruptor A del control remoto hacia arriba` para habilitar los motores, enciende y sostén el robot mientras completa la **auto-verificación**. (Puedes verificar primero con Vofa–S1 para confirmar si la auto-verificación pasó.)
+Carga el programa a S3, abre Vofa (velocidad de baudios `921600`), establece el `interruptor A del control remoto hacia arriba` para habilitar los motores, enciende y sostén el robot mientras completa la **auto-verificación**. (Puedes verificar primero con Vofa–S1 para confirmar si la auto-verificación pasó.)
 
 <div align="center">
     <img width={500}
@@ -521,7 +517,7 @@ Joysticks del lado frontal:
 - **Paso 2:**
   Establece el interruptor superior derecho en `medio`, empuja el stick inferior izquierdo `ligeramente hacia arriba`, y establece el interruptor superior izquierdo en `arriba`. El robot entra en modo de auto-equilibrio.
 
-  Usa el stick inferior derecho `adelante/atrás` para moverse hacia adelante/atrás y `izquierda/derecha` para girar a la izquierda/derecha.
+  Usa el stick inferior derecho `adelante/atrás` para moverse hacia adelante/atrás e `izquierda/derecha` para girar a la izquierda/derecha.
 
   Usa el stick inferior izquierdo `arriba/abajo` para ajustar la altura de las patas.
 
@@ -553,7 +549,7 @@ Joysticks del lado frontal:
 
 [Paquete de Herramientas del Robot Rueda-Pata](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
