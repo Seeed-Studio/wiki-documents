@@ -14288,6 +14288,7 @@ const sidebars = {
           type: 'category',
           label: 'Stackforce',
           items: [
+            'es/Robotics/Robot_Kits/StackForce/es_StackForce_Giant_Bipedal_Wheeled_Robot',
             'es/Robotics/Robot_Kits/StackForce/es_StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
@@ -19330,6 +19331,7 @@ const sidebars = {
           type: 'category',
           label: 'Stackforce',
           items: [
+            'ja/Robotics/Robot_Kits/StackForce/ja_StackForce_Giant_Bipedal_Wheeled_Robot',
             'ja/Robotics/Robot_Kits/StackForce/ja_StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
