@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 12/8/2025
-  author: Janet
+  date: 12/11/2025
+  author: Michelle Huang
 ---
 # Introducción a SenseCAP ONE Sensor Meteorológico Compacto
 
@@ -29,7 +29,7 @@ Hay dos conectores en la parte inferior del dispositivo.
 
 - La interfaz USB Type-C te permite conectar tu computadora con un cable USB Type-C normal al dispositivo para configuración.
 
-- La interfaz principal de datos puede conectarse al cable M12 de 8 pines, soportando múltiples protocolos de bus
+- La interfaz principal de datos se puede conectar al cable M12 de 8 pines, soportando múltiples protocolos de bus
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image4.png" /></div>
 
@@ -43,7 +43,7 @@ Hay dos conectores en la parte inferior del dispositivo.
 
 El dispositivo adopta un conector M12 de 8 pines, los pines de diferentes colores proporcionan energía y comunicación de datos (como se muestra en el diagrama anterior).
 
-Cuando trabajas con RS-485, puedes conectar solo 4 cables (sin usar función de calefacción), y el resto puede ser envuelto individualmente con cinta para prevenir cortocircuitos
+Cuando trabajas con RS-485, puedes conectar solo 4 cables (sin usar función de calefacción), y el resto se puede envolver individualmente con cinta para prevenir cortocircuitos
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image7.png" /></div>
 
@@ -53,7 +53,7 @@ Los orificios del cable y los pines del conector del dispositivo deben estar ali
 
 Conecta el cable y apriétalo en sentido horario
 
-Nota: el cable debe apuntar hacia la parte inferior antes de insertarlo en la base. De lo contrario, los pines sesgados pueden causar que la comunicación sea anormal.
+Nota: el cable debe apuntar hacia la parte inferior antes de insertarlo en la parte inferior. De lo contrario, los pines sesgados pueden causar que la comunicación sea anormal.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image9.png" /></div>
 
@@ -309,63 +309,63 @@ La temperatura necesita ser obtenida a través de un cálculo de complemento.
 
 **Decodificación S500**
 
-Leer registro 0x0000~0x0005.
+Lee el registro 0x0000~0x0005.
 
-Enviar comando: 0A 04 00 00 00 06 71 73 (Código de verificación);
+Envía comando: 0A 04 00 00 00 06 71 73 (Código de verificación);
 
-Devolver: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 99 09 (Código de verificación); Leer registro 0x0008~0x0013. Enviar comando: 0A 04 00 08 00 0C 70 B6 (Código de verificación);
+Devuelve: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 99 09 (Código de verificación); Lee el registro 0x0008~0x0013. Envía comando: 0A 04 00 08 00 0C 70 B6 (Código de verificación);
 
-Devolver: 0A 04 0C 00 00 00 00 (Dirección mínima del viento) 00 03 6E 84 (Dirección máxima del viento) 00 03 C8 C0 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 04 BC (Velocidad máxima del viento) 00 00 02 10 (Velocidad promedio del viento) BC 78 (Código de verificación)
+Devuelve: 0A 04 0C 00 00 00 00 (Dirección mínima del viento) 00 03 6E 84 (Dirección máxima del viento) 00 03 C8 C0 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 04 BC (Velocidad máxima del viento) 00 00 02 10 (Velocidad promedio del viento) BC 78 (Código de verificación)
 
 **Decodificación S600**
 
-Leer registro 0x0000~0x0013
+Lee el registro 0x0000~0x0013
 
-Enviar comando: 45 03 00 00 00 13 0B 43
+Envía comando: 45 03 00 00 00 13 0B 43
 
-Devolver: 45 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 00 00 00 00 (Luz) 00 00 00 00 (Dirección mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Velocidad promedio del viento) 77FD (Código de verificación)
+Devuelve: 45 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 00 00 00 00 (Luz) 00 00 00 00 (Dirección mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Velocidad promedio del viento) 77FD (Código de verificación)
 
 **Decodificación S700**
 
-Leer registro 0x0000-0x001F & 0x0030-0x0033.
+Lee el registro 0x0000-0x001F & 0x0030-0x0033.
 
-Enviar comando: 14 04 00 00 00 20 F3 06
+Envía comando: 14 04 00 00 00 20 F3 06
 
-Devolver: 14 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 00 00 00 00 (Luz) 00 00 00 00 (Dirección mínima del viento) 00 00 00 00 (Dirección máxima del viento) 00 00 00 00 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Velocidad promedio del viento) 00 00 00 00 (Precipitación acumulada) 00 00 00 00 (Duración de precipitación acumulada) 00 00 00 00 (Intensidad de lluvia) 00 00 00 00 (Intensidad máxima de lluvia) 00 00 6A 7C (Temperatura de calentamiento) 00 00 00 00 (El estado de volcado) 99 09 (Código de verificación)
+Devuelve: 14 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 00 00 00 00 (Luz) 00 00 00 00 (Dirección mínima del viento) 00 00 00 00 (Dirección máxima del viento) 00 00 00 00 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Velocidad promedio del viento) 00 00 00 00 (Precipitación acumulada) 00 00 00 00 (Duración de precipitación acumulada) 00 00 00 00 (Intensidad de lluvia) 00 00 00 00 (Intensidad máxima de lluvia) 00 00 6A 7C (Temperatura de calentamiento) 00 00 00 00 (Estado de volcado) 99 09 (Código de verificación)
 
 **Decodificación S900**
 
-Leer registro 0x0000-0x001F & 0x0030-0x0033.
+Lee el registro 0x0000-0x001F & 0x0030-0x0033.
 
-Enviar comando: 26 04 00 00 00 20 F7 05
+Envía comando: 26 04 00 00 00 20 F7 05
 
-Devolver: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 00 00 00 00 (Luz) 00 00 00 00 (Dirección mínima del viento) 00 00 00 00 (Dirección máxima del viento) 00 00 00 00 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Velocidad promedio del viento) 00 00 00 00 (Precipitación acumulada) 00 00 00 00 (Duración de precipitación acumulada) 00 00 00 00 (Intensidad de lluvia) 00 00 00 00 (Intensidad máxima de lluvia) 00 00 6A 7C (Temperatura de calentamiento) 00 00 00 00 (El estado de volcado) 99 09 (Código de verificación)
+Devuelve: 26 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 00 00 00 00 (Luz) 00 00 00 00 (Dirección mínima del viento) 00 00 00 00 (Dirección máxima del viento) 00 00 00 00 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Velocidad promedio del viento) 00 00 00 00 (Precipitación acumulada) 00 00 00 00 (Duración de precipitación acumulada) 00 00 00 00 (Intensidad de lluvia) 00 00 00 00 (Intensidad máxima de lluvia) 00 00 6A 7C (Temperatura de calentamiento) 00 00 00 00 (Estado de volcado) 99 09 (Código de verificación)
 
 PM2.5 y PM10 necesitan ser leídos por separado:
 
-Enviar comando: 26 04 00 30 00 04 F7 11
+Envía comando: 26 04 00 30 00 04 F7 11
 
-Devolver: 26 04 08 00 00 90 88 (PM2.5) 00 00 A4 10 (PM10) 13 FA (Código de verificación)
+Devuelve: 26 04 08 00 00 90 88 (PM2.5) 00 00 A4 10 (PM10) 13 FA (Código de verificación)
 
 **Decodificación S1000**
 
-Leer registro 0x0000-0x001F y 0x0030-0x0033.
+Lee el registro 0x0000-0x001F y 0x0030-0x0033.
 
-Enviar comando: 2B 04 00 00 00 20 F6 18
+Envía comando: 2B 04 00 00 00 20 F6 18
 
-Devolver: 2B 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 00 00 00 00 (Luz) 00 00 00 00 (Dirección mínima del viento) 00 00 00 00 (Dirección máxima del viento) 00 00 00 00 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Velocidad promedio del viento) 00 00 00 00 (Precipitación acumulada) 00 00 00 00 (Duración de precipitación acumulada) 00 00 00 00 (Intensidad de lluvia) 00 00 00 00 (Intensidad máxima de lluvia) 00 00 6A 7C (Temperatura de calentamiento) 00 00 00 00 (El estado de volcado) 99 09 (Código de verificación)
+Devuelve: 2B 04 40 00 00 70 80 (Temperatura) 00 00 95 10 (Humedad) 06 07 94 40 (Presión del aire) 00 00 00 00 (Luz) 00 00 00 00 (Dirección mínima del viento) 00 00 00 00 (Dirección máxima del viento) 00 00 00 00 (Dirección promedio del viento) 00 00 00 00 (Velocidad mínima del viento) 00 00 00 00 (Velocidad máxima del viento) 00 00 00 00 (Velocidad promedio del viento) 00 00 00 00 (Precipitación acumulada) 00 00 00 00 (Duración de precipitación acumulada) 00 00 00 00 (Intensidad de lluvia) 00 00 00 00 (Intensidad máxima de lluvia) 00 00 6A 7C (Temperatura de calentamiento) 00 00 00 00 (Estado de volcado) 99 09 (Código de verificación)
 
 PM2.5, PM10, y CO2 necesitan ser leídos por separado:
 
-Enviar comando: 2B 04 00 30 00 04 F6 0C
+Envía comando: 2B 04 00 30 00 04 F6 0C
 
-Devolver: 2B 04 08 00 00 90 88 (PM2.5) 00 00 A4 10 (PM10) 13 FA (Código de verificación)
+Devuelve: 2B 04 08 00 00 90 88 (PM2.5) 00 00 A4 10 (PM10) 13 FA (Código de verificación)
 
-Leer registro 0x0040~0x0041.
+Lee el registro 0x0040~0x0041.
 
-Enviar comando: 2B 04 00 40 00 02 77 D5
+Envía comando: 2B 04 00 40 00 02 77 D5
 
-Devolver: 2B 04 04 00 0C EC 98 (CO2) FD 2F (Código de verificación);
+Devuelve: 2B 04 04 00 0C EC 98 (CO2) FD 2F (Código de verificación);
 
 ### Sensor de ruido
 
@@ -426,13 +426,13 @@ Los comandos vienen en dos formatos:
 ### Lista de Comandos
 
 Por favor consulte:
-[Guía de Usuario de SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+[Guía de Usuario de la Estación Meteorológica Compacta SenseCAP ONE/SenseCAP ONE V3](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ## SDI-12
 
 La comunicación SDI-12 adopta tres cables, dos de los cuales son cables de alimentación del sensor y el otro es el cable de señal SDI-12.
 
-Cada sensor en el bus SDI-12 tiene una dirección única, que puede configurarse como '0', '1' ~ '9', 'A' ~ 'Z', 'A' ~ 'Z'. La dirección SDI-12 del SenseCAP ONE por defecto es '0'. Las instrucciones soportadas por este sensor se muestran en el siguiente capítulo, donde cada instrucción cumple con SDI-12 v1.4.
+Cada sensor en el bus SDI-12 tiene una dirección única, que puede configurarse como '0', '1' ~ '9', 'A' ~ 'Z', 'A' ~ 'Z'. La dirección SDI-12 del SenseCAP ONE por defecto es '0'. Las instrucciones soportadas por este sensor se muestran en el siguiente capítulo, donde cada instrucción cumple con el SDI-12 v1.4.
 
 El sensor es alimentado por una fuente de alimentación DC de 3.6~16V. Después de que el sensor se enciende, entrará inmediatamente en modo de suspensión y esperará a que el equipo de adquisición de datos dé instrucciones. SDI-12 usa una velocidad de baudios de 9600bps, 1 bit de inicio (nivel alto), 7 bits de datos (alto 0 y bajo 1, anti-lógica), 1 bit de paridad par, y 1 bit de parada.
 
@@ -442,8 +442,7 @@ La secuencia de cada byte enviado se muestra en la siguiente figura:
 
 ### Comando y respuesta SDI-12
 
-Por favor consulte:
-&lt;https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf&gt;
+Por favor consulte [Guía de Usuario de la Estación Meteorológica Compacta SenseCAP ONE/SenseCAP ONE V3](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ### Lectura SDI-12
 
@@ -514,5 +513,5 @@ Luego envíe "comando de medición continua 0R2! el dispositivo devuelve 4 valor
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
 
-## Recursos
-[Guía de Usuario de SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+## Recurso
+[Guía de Usuario de la Estación Meteorológica Compacta SenseCAP ONE/SenseCAP ONE V3](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)

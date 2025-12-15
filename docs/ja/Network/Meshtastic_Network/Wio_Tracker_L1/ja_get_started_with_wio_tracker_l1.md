@@ -211,7 +211,7 @@ import TabItem from '@theme/TabItem';
 **EU_868** は、1時間のローリングベースで毎分計算される10%の時間あたりデューティサイクル制限を遵守する必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスでLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)を構成することができます。
+デバイスでLoRa地域を設定したので、必要に応じて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)を構成することができます。
 
 ### センサー接続
 
@@ -224,7 +224,7 @@ Groveインターフェースを介してデバイスにセンサーを追加で
   </tr>
   <tr>
     <td rowspan="4">環境センサー</td>
-    <td>圧力</td>
+    <td>気圧</td>
     <td>BMP085</td>
   </tr>
   <tr>
@@ -236,7 +236,7 @@ Groveインターフェースを介してデバイスにセンサーを追加で
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
   </tr>
   <tr>
-    <td>温度・湿度・圧力</td>
+    <td>温度・湿度・気圧</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
   </tr>
   <tr>
@@ -251,13 +251,18 @@ Groveインターフェースを介してデバイスにセンサーを追加で
 </table>
 
 ### スクリーン接続
+ - E-Inkスクリーン
+  互換性のあるE-Inkスクリーンを入手するには[こちらをクリック](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)してください。
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
- - [こちらをクリック](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)して、互換性のあるE-Inkスクリーンを入手してください。
-- 互換性のある別売りOLEDスクリーンの発売をお楽しみにお待ちください。近日中に利用可能になります。現在のOLEDドライバーはSSD1306です。
+- OLEDスクリーン
+互換性のある別売りOLEDスクリーンをお楽しみに。`12月`に発売予定です。現在のOLEDドライバーはSSD1306です。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
+
 
 ### バーチャルキーボード
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7バージョンのファームウェアでバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力して他のデバイスと通信できます。[ファームウェアフラッシュチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってファームウェアを更新してください。
+2.7バージョンのファームウェアでバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力して他のデバイスと通信できます。ファームウェアを更新するには[ファームウェアフラッシュチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## FAQ
@@ -266,13 +271,13 @@ Groveインターフェースを介してデバイスにセンサーを追加で
 
 **説明：**
 
-デバイスが応答せず、LEDが点灯せず、アプリとペアリングできません。独自のファームウェアをフラッシュした後にデバイスが完全に動作しなくなった場合は、ブートローダーの再インストールを試すこともできます。
+デバイスが応答しない、LEDが点灯しない、アプリとペアリングできない。独自のファームウェアをフラッシュした後にデバイスが完全に動作しなくなった場合は、ブートローダーの再インストールを試すこともできます。
 
 :::danger note
-ブートローダーをフラッシュする際は、ケーブル接続が安定していることを確認し、フラッシュプロセス中に**絶対に**切断しないでください。
+ブートローダーをフラッシュする際は、ケーブル接続が安定していることを確認し、フラッシュプロセス中は**絶対に**切断しないでください。
 :::
 
-- ステップ1：[こちらをクリックしてブートローダーをダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
+- ステップ1：[ブートローダーをダウンロードするにはこちらをクリック](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 
 - ステップ2：DFUモードに入る
 
@@ -289,19 +294,19 @@ Groveインターフェースを介してデバイスにセンサーを追加で
   上記の手順を完了したら、この[ステップ](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってアプリケーションファームウェアをフラッシュできます。[手動でDFUモードに入る](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)必要がある場合があります。
 
 
-### DFUモードに入れない場合と手動でのDFUモード入力
+### DFUに入れない・手動でDFUモードに入る
 
 デバイスをPCに接続し、`Reset`ボタンをダブルプレスします。黄色のLEDが点灯し続け、PC上に`Tracker L1`という名前の新しいUSBドライブが表示されます。
 
 ### DFUモードの終了
 
-`Reset`ボタンを一度押してDFUモードを終了します。
+DFUモードを終了するには、`Reset`ボタンを一度押します。
 
 ### 信号品質
 
 - **SNR**は通信リンクの品質を反映します。通常のデバイスは-7 dB以上で動作します。SNRが-10 dB未満のデバイスは性能が悪いことを示します。
 
-- **RSSI**はデバイスとその周囲環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
+- **RSSI**はデバイスとその周辺環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
 
       最良の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
 

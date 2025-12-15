@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-03 14:50:07 (北京时间)
-// 多语言页面: 2069 个
+// 生成时间: 2025-12-15 13:53:34 (北京时间)
+// 多语言页面: 2077 个
 
 (function() {
   'use strict';
@@ -954,6 +954,12 @@
     "ja"
   ],
   "/create_backup_and_restore_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deploy_ota_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -2028,6 +2034,12 @@
     "ja"
   ],
   "/reterminal_frigate": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/viseron_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -4007,6 +4019,12 @@
     "es",
     "ja"
   ],
+  "/hightorque_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/myactuator_series": [
     "cn",
     "en",
@@ -4080,6 +4098,17 @@
     "ja"
   ],
   "/starai_arm_ros_moveit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_giant_bipedal_wheeled_robot": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_mini_wheeled_legged_robot": [
     "cn",
     "en",
     "es",
@@ -8608,6 +8637,12 @@
     "es",
     "ja"
   ],
+  "/getting_started_with_cob_led_dirver_board": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/epaper_breakout_board_with_oepl": [
     "cn",
     "en",
@@ -9268,6 +9303,12 @@
     "es",
     "ja"
   ],
+  "/esphome_xiao_w5500_ethernet_adapter": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_w5500_ethernet_adapter": [
     "cn",
     "en",
@@ -9754,7 +9795,7 @@
     "es",
     "ja"
   ],
-  "/SenseCAP_Indicator_DALL·E": [
+  "/SenseCAP_Indicator_DALL-E": [
     "cn",
     "en",
     "es",
@@ -10163,6 +10204,12 @@
     "ja"
   ],
   "/SenseCAP_T2000_tracker/Introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Get_Started_with_SenseCAP_T2000_tracker": [
     "cn",
     "en",
     "es",

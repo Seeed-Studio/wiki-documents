@@ -624,7 +624,7 @@ RS232配線の回路図は以下の通りです：
 
 ### DI（デジタル入力）
 
-reComputer Industrial R2000 シリーズ機器には、8x DIポート、3ピン 3.5mm間隔のフェニックス端子が含まれています。
+reComputer Industrial R2000 シリーズ機器には、4x DIポート、3ピン 3.5mm間隔のフェニックス端子が含まれています。
  単一DIのシルクスクリーンは「DI/G_DI」です。
 
 **ピン定義**
@@ -701,7 +701,7 @@ reComputer Industrial R2000 シリーズ機器には、8x DIポート、3ピン 
 
 ### DO（デジタル出力）
 
-reComputer Industrial R2000 シリーズ機器には、8x DOポート、3ピン 3.5mm間隔のフェニックス端子が含まれています。
+reComputer Industrial R2000 シリーズ機器には、4x DOポート、3ピン 3.5mm間隔のフェニックス端子が含まれています。
 単一DOのシルクスクリーンは「DO/G_DO」です。
 **ピン定義**
 端子ピンは以下のように定義されています：
@@ -829,8 +829,8 @@ reComputer Industrial R2000のブートスイッチは、CM5のnRPI_BOOTピン�
 
 | スイッチ位置 | モード         | 説明      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>            | 通常モード  | eMMCからブート   | Low       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>             | フラッシュモード   | USBからブート    | High      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>            | 通常モード  | eMMCからブート   | Low       |
+|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>             | フラッシュモード   | USBからブート    | High      |
 
 ### USB
 

@@ -624,7 +624,7 @@ El diagrama esquemático de los cables RS232 es el siguiente:
 
 ### DI (Entrada Digital)
 
-El equipo de la serie reComputer Industrial R2000 incluye 8x puertos DI, terminales phoenix de 3 pines con espaciado de 3.5mm.
+El equipo de la serie reComputer Industrial R2000 incluye 4x puertos DI, terminales phoenix de 3 pines con espaciado de 3.5mm.
  La serigrafía de un solo DI es "DI/G_DI".
 
 **Definición de Pines**
@@ -701,7 +701,7 @@ El diagrama esquemático de un solo cable DI es el siguiente:
 
 ### DO (Salida Digital)
 
-El equipo de la serie reComputer Industrial R2000 incluye 8x puertos DO, terminales phoenix de 3 pines con espaciado de 3.5mm.
+El equipo de la serie reComputer Industrial R2000 incluye 4x puertos DO, terminales phoenix de 3 pines con espaciado de 3.5mm.
 La serigrafía de un solo DO es "DO/G_DO".
 **Definición de Pines**
 Los pines del terminal se definen de la siguiente manera:
@@ -829,8 +829,8 @@ El Interruptor de Arranque del reComputer Industrial R2000 está conectado al pi
 
 | Posición del Interruptor | Modo         | Descripción      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>            | Modo normal  | Arrancar desde eMMC   | Bajo       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>             | Modo flash   | Arrancar desde USB    | Alto      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>            | Modo normal  | Arrancar desde eMMC   | Bajo       |
+|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>             | Modo flash   | Arrancar desde USB    | Alto      |
 
 ### USB
 

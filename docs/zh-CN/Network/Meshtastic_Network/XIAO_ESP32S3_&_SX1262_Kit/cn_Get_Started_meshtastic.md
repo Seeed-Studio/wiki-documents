@@ -4,7 +4,7 @@ title: XIAO ESP32-S3&Wio SX1262 套件
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /cn/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
 last_update:
-  date: 11/24/2025
+  date: 12/11/2025
   author: Michelle Huang
 ---
 
@@ -23,9 +23,9 @@ last_update:
 
 **步骤 1**：首先，打开浏览器并访问 https://flasher.meshtastic.org/# 需要 Chrome 或 Edge 浏览器。
 
-**步骤 2**：然后，使用合适的 USB 线缆将设备连接到 PC。您可能需要关闭设备，然后在插入 USB 线缆时**按住 BOOT 按钮**。
+**步骤 2**：然后，使用合适的 USB 线将设备连接到 PC。您可能需要关闭设备，然后在插入 USB 线时**按住 BOOT 按钮**。
 
-**步骤 3**：按照提供的以下说明执行后续的刷写操作。选择设备为 "**Seeed XIAO S3**"，固件为**最新**版本，然后点击 "**Flash**"。如果您想覆盖之前的固件，不要忘记勾选 "**Full Erase and Install**"。
+**步骤 3**：按照以下提供的说明执行后续的刷写操作。选择设备为 "**Seeed XIAO S3**"，固件为**最新**版本，然后点击 "**Flash**"。如果您想覆盖之前的固件，不要忘记勾选 "**Full Erase and Install**"。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/flashfirmware1.gif" style={{width:700, height:'auto'}}/></div>
 
@@ -48,7 +48,7 @@ Meshtastic 为用户提供了多个平台软件可供选择，包括 Android 应
 
 ### 连接到电池
 
-XIAO ESP32S3 内置电源管理芯片，允许 XIAO ESP32S3 使用电池独立供电或通过 XIAO ESP32S3 的 USB 端口为电池充电。
+XIAO ESP32S3 内置电源管理芯片，允许 XIAO ESP32S3 通过使用电池独立供电，或通过 XIAO ESP32S3 的 USB 端口为电池充电。
 
 如果您想为 XIAO 连接电池，我们建议您购买合格的带有`保护电路`的可充电`3.7V 锂`电池。焊接电池时，请注意区分正负极。电源的负极应该是最靠近 USB 端口的一侧，电源的正极是远离 USB 端口的一侧。
 
@@ -105,7 +105,7 @@ SX-1262 可以通过 B2B 接口连接到 Xiao ESP32-S3。SX-1262 使用 SPI 与 
 
 **步骤 1**. 按照 [wiki](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#get-started-1) 连接 Wio Tracker T1000-E。
 
-**步骤 2**. 确保以下设置与您在 XIAO ESP32S3 for Meshatastic 上的配置相同。
+**步骤 2**. 确保以下设置与您在 XIAO ESP32S3 上的 Meshatastic 配置相同。
 
 1. 设备激活和设置
 
@@ -212,26 +212,37 @@ Meshtastic 固件中有几个配置部分，这些部分被分离出来，以便
 | ---- | ---- |
 | [环境照明](https://meshtastic.org/docs/configuration/module/ambient-lighting/) | 调整 NCP5623 I2C RGB LED 的亮度。 |
 | [音频](https://meshtastic.org/docs/configuration/module/audio/) | 在某些设备上启用对 Codec2 语音通信的支持。 |
-| [预设消息](https://meshtastic.org/docs/configuration/module/canned-message/) | 设置多个预定义消息，通过使用旋转编码器等输入设备直接从设备发送。 |
+| [预设消息](https://meshtastic.org/docs/configuration/module/canned-message/) | 设置一些预定义消息，使用输入设备（如旋转编码器）直接从设备发送。 |
 | [检测传感器](https://meshtastic.org/docs/configuration/module/detection-sensor/) | 配置 GPIO 引脚以监控指定的高/低状态并发送文本警报。 |
 | [外部通知](https://meshtastic.org/docs/configuration/module/external-notification/) | 传入消息能够使用您连接到设备的电路（LED、蜂鸣器等）向您发出警报。 |
 | [MQTT](https://meshtastic.org/docs/configuration/module/mqtt/) | 将数据包转发到 MQTT 服务器。这允许本地网格上的用户通过互联网与另一个网格上的用户通信。 |
 | [邻居信息](https://meshtastic.org/docs/configuration/module/neighbor-info/)| 向网格发送 0 跳邻居的信息。 |
-| [人流计数器](https://meshtastic.org/docs/configuration/module/paxcounter/) | 计算经过节点的 BLE 和 WiFi 设备数量。 |
-| [距离测试](https://meshtastic.org/docs/configuration/module/range-test/) | 定期发送带有 GPS 位置的消息以测试设备可以通信的距离。需要（至少）一个设备设置为发送器，一个设置为接收器。接收器将把所有传入消息记录到 CSV 文件中。 |
+| [人流计数器](https://meshtastic.org/docs/configuration/module/paxcounter/) | 计算经过节点的 BLE 和 Wifi 设备数量。 |
+| [距离测试](https://meshtastic.org/docs/configuration/module/range-test/) | 定期发送带有 GPS 位置的消息，以测试设备可以通信的距离。需要（至少）一个设备设置为发送器，一个设置为接收器。接收器将把所有传入消息记录到 CSV 文件中。 |
 | [远程硬件](https://meshtastic.org/docs/configuration/module/remote-hardware/) | 通过网格远程设置和读取 GPIO 状态。 |
 | [串行模块](https://meshtastic.org/docs/configuration/module/serial/) | 通过串行端口发送字符串来跨网格发送消息。 |
 | [存储转发](https://meshtastic.org/docs/configuration/module/store-and-forward-module/) | 在设备上存储消息，以便在断开连接的客户端重新加入网格后进行传递。 |
 | [遥测](https://meshtastic.org/docs/configuration/module/telemetry/) | 将传感器连接到设备并定期向网格传输读数。 |
 | [路由跟踪](https://meshtastic.org/docs/configuration/module/traceroute/) | 跟踪用于将消息跳转到特定目的地的节点。 |
 ## 资源
-
-- [与 Xiao ESP32-S3 兼容的 SX1262 原理图](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
-- [Wio-SX1262 for XlAO 3D 文件](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
-- [Wio-SX1262 模块数据手册](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
-- [外壳 3D 文件](https://www.thingiverse.com/thing:6888371)
+- **[PDF]**[与 Xiao ESP32-S3 兼容的 SX1262 原理图](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
+- **[PDF]**[Wio-SX1262 模块数据手册](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
+- **[RAR]**[Wio-SX1262 for XlAO 3D 文件](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
+- **[PDF]** [Seeed Studio XIAO ESP32S3 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 - [XIAO ESP32S3 套件 Kicad 库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20Wio%20SX1262%20for%20XIAO%20ESP32S3)
+- **[STEP]** [Seeed Studio XIAO ESP32S3 3D 模型](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Eagle 库](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
+- **[DXF]** [Seeed Studio XIAO ESP32S3 DXF 尺寸图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
+- **[LBR]** [Seeed Studio XIAO ESP32S3 Eagle 封装](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed-Studio-XIAO-ESP32S3-footprint-eagle.lbr)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 出厂固件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip)
+- **[XLSX]** [Seeed Studio XIAO ESP32S3 引脚图表](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
+- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- [外壳 3D 文件](https://www.thingiverse.com/thing:6888371)
+## 课程资源
 
+<div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
+
+- **[电子书]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
