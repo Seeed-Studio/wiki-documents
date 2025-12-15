@@ -108,16 +108,16 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 | 3D打印件 | 29 | 件 | | |
 | 1比10耐磨6030-6085轮胎 | 2 | 个 | | |
 
-
 ## 目录
-  - [整机款教程](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#整机款教程)
-  - [散件教程-1 安装](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#散件教程1-安装)
-  - [散件教程-2 校准](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#散件教程2-校准)
+
+- [整机款教程](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#整机款教程)
+- [散件教程-1 安装](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#散件教程1-安装)
+- [散件教程-2 校准](https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/#散件教程2-校准)
 
 ## 整机款教程
 
-[StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf) 
- 
+[StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
+
 直接按照pdf文档的顺序启动机器人即可遥控。
 
 ## 散件教程1-安装
@@ -164,6 +164,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 配置环境：电脑搜索打开`查看高级系统设置`→`环境变量`→`系统变量`→`Path`→`新建`→`粘贴上一步的 bin 文件的地址`，点击确定。
 
 - 1：电脑搜索打开`查看高级系统设置`。
+
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_1.png" />
@@ -203,7 +204,6 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 ### S1烧录和调试
 
-
 #### 连接S1芯片
 
 连接USB，USB有缝隙一边朝上，无缝一边朝下,松开白色按键，切换至S1芯片（黄灯亮）。
@@ -218,7 +218,6 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 
 因为板子有两个芯片，S1芯片负责电机程序的运行，S3负责舵机控制程序的运行,typec线有上下个两排排针分别通信，主控板设计两个芯片分别占用typec的一排用来烧录程序，通过白色按键来在硬件上控制电脑要把程序烧录到哪个芯片。
 :::
-
 
 #### 烧录S1程序
 
@@ -452,6 +451,7 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 完成上述部分后就可以对机器人控制了，按照下述部分是是实现控制，可以查看[StackForce轮足机器人基本操作说明.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)。
 
 遥控器正面四个遥杆：
+
 - 第一步，遥控器左上打到中档，右上打到下档，左下打到最下，机器人用手扶着，让腿部自然下垂，轮子离开不与其他接触，并且保持机器人与地面平行。
 
   开机，保持上述大约10秒后，机器人放到宽广地上，手扶着保持机器人直立。
@@ -503,10 +503,3 @@ StackForce轻量级机器人开发平台配套机器人项目开源：https://gi
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
