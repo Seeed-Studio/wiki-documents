@@ -1267,6 +1267,29 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO ESP32C5',
+          items: [
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_Getting_Started',
+            {
+              type: 'category',
+              label: 'Programming Language',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_with_PlatformIO',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_with_MicroPython',
+
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Application',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_ESP-Mesh_Audio',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C6',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_Getting_Started',
