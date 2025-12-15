@@ -131,7 +131,7 @@ WM1302 is designed for M2M and IoT applications and can be widely applied in LPW
 <tr>
   <td class="tg-4onr">11</td>
   <td class="tg-f42p">GPIO 17</td>
-  <td class="tg-f42p">SX1302_RESET<br>SPI version: Active HIGH<br>USB version: Active LOW</td>
+  <td class="tg-f42p">SX1302_RESET<br />SPI version: Active HIGH<br />USB version: Active LOW</td>
 </tr>
 
 <tr>
