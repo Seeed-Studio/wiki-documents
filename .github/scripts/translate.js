@@ -373,7 +373,7 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 所有[EMPTY_LINE]标记
    - 标记后的所有缩进（空格和制表符）
    - 代码块内容（\`\`\`之间的内容）
-   - 行内代码（\`之间的内容）
+   - 行内代码（\`...\`）中的内容必须**逐字符原样保留**：包括大小写、空格、标点、连字符等都不得改变；即使反引号内看起来是可翻译的英文单词/状态值（例如 \`Low\`、\`High\`、\`On\`、\`Off\`、\`True\`、\`False\`、\`Input\`、\`Output\`），也禁止翻译/本地化/改写
    - URL链接
    - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
    - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
