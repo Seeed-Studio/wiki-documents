@@ -420,7 +420,7 @@ For WM1302 LoRaWAN® Gateway Module USB version, the Semtech SX1302 and SX126x c
 
 - [putty](https://www.putty.org/): To connect to Raspberry Pi via SSH on Windows
 
-<br>
+<br />
 
 <!-- Code -->
 
@@ -515,7 +515,7 @@ AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 
 Save these changes by pressing `CTRL + x`, followed by `y` and `Enter` to close the text editor.
 
-<br>
+<br />
 
 You may also refer to the complete script below:
 
@@ -620,7 +620,7 @@ exit 0
 ```
 </details>
 
-<br>
+<br />
 
 Choose your prefered LoRaWAN Network Server `server_address` and the gateway EUI `gateway_ID` in the corresponding `global_conf.json.sx1250.xxxxx` based on the module you are using, and modify the `up/down port` to `1700`. Then run the following code to start the concentrator:
 
@@ -741,7 +741,7 @@ So in my case, the USB device is `ttyACM0`. The default USB device setting in `g
 
 If your device uses other USB port, we can use the `sed` command `sed -i 's/search_string/replacement_string/g' filename` to modify the `global_conf.json.sx1250.xxxxx.USB` config file for the corresponding region.
 
-<br>
+<br />
 
 Choose your prefered LoRaWAN Network Server `server_address` and the gateway EUI `gateway_ID` in the corresponding `global_conf.json.sx1250.xxxxx` based on the module you are using, and modify the `up/down port` to `1700`. Then run the following code to start the concentrator:
 
@@ -778,7 +778,7 @@ To do that, we need to register the Raspberry Pi Gateway we just build to our Lo
 ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki4.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki4.png" alt="pir" width={600} height="auto" /></p>
 
-<br>
+<br />
 
 After successfully registering the gateway, press `CTRL + c` to stop `lora_pkt_fwd`, then edit and check the `global_conf.json.sx1250.xxxx` config file to make sure that the `"gateway_ID"` and `"server_address"` entries exactly match the settings in LNS.
 
@@ -800,7 +800,7 @@ Restart `lora_pkt_fwd` by using the command `./lora_pkt_fwd -c global_conf.json.
 <details>
 <summary>Why my devices can not join the network server even if all the settings are correct?</summary>
 
-<br>
+<br />
 
 We have observed that certain modules(WM1302-US915 USB version) may fail to transmit downlink data packets properly due to difference of the hardware. To fix this issue, please modify the value of the macro `TX_JIT_DELAY` (you can find this macro in `/sx1302_hal/packet_forwarder/src/jitqueue.c`) from 40000 to 120000 and remake the sx1302_hal. 
 
