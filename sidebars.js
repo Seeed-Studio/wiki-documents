@@ -6437,6 +6437,29 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'XIAO ESP32C5',
+          items: [
+            'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/cn_XIAO_ESP32C5_Getting_Started',
+            {
+              type: 'category',
+              label: '编程语言',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/cn_XIAO_ESP32C5_with_PlatformIO',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/cn_XIAO_ESP32C5_with_MicroPython',
+
+              ],
+            },
+            {
+              type: 'category',
+              label: '应用',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_ESP-Mesh_Audio',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C6',
           items: [
             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/cn_XIAO_ESP32C6_Getting_Started',
@@ -11473,6 +11496,29 @@ const sidebars = {
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/es_xiaoesp32c3-flash-storage',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/es_XIAO-ESP32C3-for-ESPHome-Support',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/es_Xiao_C3_Ibeacon',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'XIAO ESP32C5',
+          items: [
+            'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/es_XIAO_ESP32C5_Getting_Started',
+            {
+              type: 'category',
+              label: 'Lenguaje de Programación',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/es_XIAO_ESP32C5_with_PlatformIO',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/es_XIAO_ESP32C5_with_MicroPython',
+
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Aplicación',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_ESP-Mesh_Audio',
               ],
             },
           ],
@@ -16516,6 +16562,29 @@ const sidebars = {
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/ja_xiaoesp32c3-flash-storage',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/ja_XIAO-ESP32C3-for-ESPHome-Support',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/ja_Xiao_C3_Ibeacon',
+              ],
+            },
+          ],
+        },
+        {
+          type: 'category',
+          label: 'XIAO ESP32C5',
+          items: [
+            'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/ja_XIAO_ESP32C5_Getting_Started',
+            {
+              type: 'category',
+              label: 'プログラミング言語',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/ja_XIAO_ESP32C5_with_PlatformIO',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/ja_XIAO_ESP32C5_with_MicroPython',
+
+              ],
+            },
+            {
+              type: 'category',
+              label: 'アプリケーション',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_ESP-Mesh_Audio',
               ],
             },
           ],
