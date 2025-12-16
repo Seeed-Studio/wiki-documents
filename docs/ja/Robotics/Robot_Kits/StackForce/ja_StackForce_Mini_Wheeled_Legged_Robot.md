@@ -47,7 +47,7 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 ## 主な特徴
 
 1. **オープンソースで低コスト**：オープンソースライセンスに従い、すべてのソースコードと設計ファイルが完全に利用可能で、開発者が自由に学習、修正、二次開発を行えます。
-2. **高性能モーター制御**：FOC（Field-Oriented Control）技術を搭載し、オープンループ/クローズドループ速度、位置、トルク制御をサポートし、精密な動作制御を実現します。
+2. **高性能モーター制御**：FOC（磁界指向制御）技術を搭載し、オープンループ/クローズドループ速度、位置、トルク制御をサポートし、精密な動作制御を実現します。
 3. **強力なハードウェアサポート**：ESP32メインコントローラーを使用し、I2C、SPI、PWMなどの豊富なインターフェースにより、柔軟な機能拡張が可能です。
 4. **包括的な機能**：自己バランス、高速移動、姿勢安定化、ワイヤレス制御をサポートし、様々な複雑な地形に適応します。
 5. **学習と使用が簡単**：完全なサンプルコードとビデオチュートリアルが付属し、初心者の学習障壁を大幅に下げます。
@@ -100,8 +100,8 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 | 丸頭ネジ M3×16 | 4 | 個 | M3×16 | GB/T845 |
 | 丸頭ネジ M4×18 | 2 | 個 | M4×18 | GB/T845 |
 | M2×6タッピングネジ | 16 | 個 | M2×6 | GB/T845 |
-| 平頭ネジ M2×6 | 46 | 個 | M2×6 | 304ステンレス |
-| 平頭ネジ M3×6 | 16 | 個 | M3×6 | 304ステンレス |
+| 皿頭ネジ M2×6 | 46 | 個 | M2×6 | 304ステンレス |
+| 皿頭ネジ M3×6 | 16 | 個 | M3×6 | 304ステンレス |
 | M3×7+4銅スタンドオフ | 4 | 個 | M3×7+4 | 銅 / GB |
 | 6704ZZベアリング | 4 | 個 | Ø27×Ø20×4mm | |
 | 6701ZZベアリング | 6 | 個 | Ø18×Ø12×4mm | |
@@ -113,18 +113,18 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 ## 目次
 
 - [組み立て済みバージョンチュートリアル](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#組み立て済みバージョンチュートリアル)
-- [キットバージョンチュートリアル1 - 組み立て](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル1-組み立て)
-- [キットバージョンチュートリアル2 - キャリブレーション](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル2-キャリブレーション)
+- [キットバージョンチュートリアル1-組み立て](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル1-組み立て)
+- [キットバージョンチュートリアル2-キャリブレーション](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル2-キャリブレーション)
 
 ## 組み立て済みバージョンチュートリアル
 
-[StackForce Wheeled_Legged_Robot基本操作マニュアル（PDF）](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
+[StackForce車輪脚ロボット基本操作マニュアル（PDF）](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
-PDFドキュメントで指定された順序で起動するだけで、ロボットをリモートコントロールできます。
+PDFドキュメントで指定された順序でロボットを起動するだけで、リモートでロボットを制御できます。
 
 ## キットバージョンチュートリアル1 - 組み立て
 
-[ミニ車輪脚ロボット組み立てドキュメント.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
+[ミニ車輪脚ロボットインストールドキュメント.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
 :::tip
 組み立てには多くのステップがあるため、ガイドに注意深く従ってください。一部の穴はタッピングネジ用に作られており、パッケージ内のネジがチュートリアルのものと異なる場合がありますが、これは正常です。これは組み立てに影響せず、必要に応じて適切な代替ネジを使用できます。
@@ -144,7 +144,7 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
 
 <div align="center">
     <img width="500"
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/1_1.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/EN/1_1.png" />
 </div>
 
 **ステップ2：** Visual Studio Codeを開き、拡張機能マーケットプレイスから**PlatformIO IDE**拡張機能を検索してインストールします。
@@ -211,7 +211,7 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
 
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/4_1.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/EN/4_1.png" />
 </div>
 
 ### S1 書き込みとデバッグ
@@ -302,7 +302,7 @@ VS Code でプロジェクト`BLDC_Control`を開きます。
 </div>
 
 解決方法：
-USB ケーブルが逆さまに差し込まれているかどうかを確認してください — `隙間がない側を上向き`にする必要があります。
+USB ケーブルが逆さまに差し込まれているかどうかを確認してください — `隙間がない側を上向きにする必要があります`。
 白いボタンが離されているかどうかを確認してください。離されると、`黄色い LED`が点灯し、ボードが`S1 書き込みモード`であることを示します。
 
 3. シリアルポートが占有されています
@@ -322,12 +322,11 @@ Vofa シリアルモニターが`閉じられている`ことを確認してく�
 
 **Vofa シリアルアシスタントのダウンロードと使用ガイド**
 
-次に、シリアルアシスタントを開き、ボーレートを`115200`に設定してシリアル出力を確認します。
-Vofa シリアルアシスタントダウンロードリンク：[Download Center | VOFA-Plus](https://www.vofa.plus/)
+次に、シリアルアシスタントを開き、ボーレートを`115200`に設定してシリアル出力を確認します。Vofa シリアルアシスタントのダウンロードリンク：[Download Center | VOFA-Plus](https://www.vofa.plus/)
 
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/vofa.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/EN/vofa.png" />
 </div>
 
 **S1 モーター制御プログラムのデバッグ – 極対数キャリブレーション**
@@ -342,10 +341,10 @@ Vofa シリアルアシスタントダウンロードリンク：[Download Cente
 </div>
 
 :::tip
-極対数値が`inf`や他のテキストを表示する場合は、電源が入っているかどうかを確認し、配線を確認し、磁石が正しく取り付けられていることを確認してください。
+極対数値が`inf`や他のテキストを示す場合は、電源が入っているかどうかを確認し、配線を確認し、磁石が正しく取り付けられていることを確認してください。
 
 検出値が 6、8、または 7 以外の場合、車輪が締めすぎている可能性があります
-（車輪脚取り付けガイドを参照し、`モーターベアリング取り付け`を検索して再取り付けしてください）。
+（車輪脚の取り付けガイドを参照し、`モーターベアリング取り付け`を検索して再取り付けしてください）。
 
 車輪が地面や他の物体に触れている可能性もあります。
 ロボットの電源を入れるたび、または S1 がリセットされるたびに、セルフテストが正常に実行されるよう車輪を地面から離す必要があります。
@@ -379,7 +378,7 @@ S1 の書き込みが完了したら、`S3 チップ`に切り替えて S3 プ�
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/S3_1.png" />
 </div>
 
-- 2. バッテリーの電源を入れます。サーボの回転が完了したら、脚をできるだけ地面に対して垂直になるように取り付けます。
+- 2. バッテリーの電源を入れます。サーボの回転が完了したら、脚を可能な限り地面に対して垂直になるように取り付けます。
 
 <div align="center">
     <img width={500}
@@ -460,15 +459,15 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
 
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/设置SpdDir03.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/EN/设置SpdDir03.png" />
 </div>
 
 モーターの回転を確認：
 
-- 左モーター：前方回転で **正の** 速度が表示されるべきです。  
+- 左モーター：前進回転は **正の** 速度を表示する必要があります。  
   3番目の値（M1 速度）が負の場合、`motorStatus.M1SpdDir` を反転させます。正の場合は変更不要です。
 
-- 右モーター：後方回転で **負の** 速度が表示されるべきです。  
+- 右モーター：後進回転は **負の** 速度を表示する必要があります。  
   2番目の値（M0 速度）が負の場合は変更不要です。正の場合は `motorStatus.M0SpdDir` を反転させます。
 
 <div align="center">
@@ -479,26 +478,26 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
 :::tip
 上記の説明がまだ不明確な場合は、以下の簡略化されたルールを参照してください：
 
-車輪が **前方** に回転し、Vofa が **負の** 値を表示する場合、フィードバック **dir** を `反転` します。
+車輪が **前進** し、Vofa が **負の** 値を表示する場合、フィードバック **dir** を `反転` します。
 
-車輪が **前方** に回転し、Vofa が **正の** 値を表示する場合、フィードバック **dir** を変更 `しません`。
+車輪が **前進** し、Vofa が **正の** 値を表示する場合、フィードバック **dir** を変更 `しません`。
 
-車輪が **後方** に回転し、Vofa が **正の** 値を表示する場合、フィードバック **dir** を `反転` します。
+車輪が **後進** し、Vofa が **正の** 値を表示する場合、フィードバック **dir** を `反転` します。
 
-車輪が **後方** に回転し、Vofa が **負の** 値を表示する場合、フィードバック **dir** を変更 `しません`。
+車輪が **後進** し、Vofa が **負の** 値を表示する場合、フィードバック **dir** を変更 `しません`。
 :::
 
 #### 4. モーター制御 `dir` の設定（`motors.setTargets` を検索）
 
-画像に示すようにモーター制御行のコメントアウトを解除し、その下の行をコメントアウトしてから、プログラムをフラッシュします。
+画像に示すようにモーター制御行のコメントを外し、その下の行をコメントアウトしてから、プログラムをフラッシュします。
 
 <div align="center">
     <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/设置电机控制dir01.png" />
 </div>
 
-ロボットの電源を入れます。リセットが完了したら、ロボットを持ちながら前方に傾けます。両方の車輪が前方に回転する場合、バランス方向は正しいです。  
-左車輪が後方に回転する場合は `M1Dir を反転` します。右車輪も同様に調整します。
+ロボットの電源を入れます。リセットが完了したら、ロボットを持ちながら前方に傾けます。両方の車輪が前進回転する場合、バランス方向は正しいです。  
+左車輪が後進回転する場合は `M1Dir を反転` します。右車輪も同様に調整します。
 
 <div align="center">
     <img width={500}
@@ -507,21 +506,21 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
 
 これらの手順を完了すると、ロボットを制御できるようになります。以下に操作方法を説明します。また、ドキュメント [StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf) も参照できます。
 
-前面側ジョイスティック：
+前面のジョイスティック：
 
 - **ステップ 1：**
-  左上スイッチを `middle`、右上スイッチを `down`、左下スティックを `lowest` に設定します。ロボットを持ち、脚を自然に垂らし、車輪を地面から離し、本体を水平に保ちます。
+  左上のスイッチを `middle`、右上のスイッチを `down`、左下のスティックを `lowest` に設定します。ロボットを持ち、脚を自然に垂らし、車輪を地面から離し、本体を水平に保ちます。
 
   電源を入れ、約 `10秒` 待ってから、ロボットを地面に置いて直立させます。
 
 - **ステップ 2：**
-  右上スイッチを `middle` に設定し、左下スティックを `わずかに上` に押し、左上スイッチを `up` に設定します。ロボットがセルフバランスモードに入ります。
+  右上のスイッチを `middle` に設定し、左下のスティックを `わずかに上` に押し、左上のスイッチを `up` に設定します。ロボットがセルフバランスモードに入ります。
 
-  右下スティックの `前後` で前進/後退、`左右` で左右旋回を行います。
+  右下のスティックの `前後` で前進/後退、`左右` で左右回転を行います。
 
-  左下スティックの `上下` で脚の高さを調整します。
+  左下のスティックの `上下` で脚の高さを調整します。
 
-  右上スイッチが `top` の時、左下スティックの `左右` でロール制御を行います。ロールモードを終了するには電源を切ります。
+  右上のスイッチが `top` の時、左下のスティックの `左右` でロール制御を行います。ロールモードを終了するには電源を切ります。
 
 ## ライブデモ
 
@@ -537,17 +536,17 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
 
 [Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
-[Full set of control board schematics](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
+[制御基板回路図一式](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
 
-[Example projects for the development kit](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Sample_Code_Documentation.7z)
+[開発キット用サンプルプロジェクト](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Sample_Code_Documentation.7z)
 
-[Customer registration code acquisition](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Registration_code.7z)
+[顧客登録コード取得](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Registration_code.7z)
 
 [urdf & stl](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/SF_bipedalWheel.zip)
 
 [BOM](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/BOM.xlsx)
 
-[Wheeled-Legged Robot Tool Pack](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)
+[車輪脚ロボットツールパック](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)
 
 ## 技術サポート & 製品ディスカッション
 
