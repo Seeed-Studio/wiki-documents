@@ -126,10 +126,6 @@ You can remotely control the robot by simply starting it in the order specified 
 
 [Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
-<div class="video-container">
-<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1556188467&bvid=BV121421b7zZ&cid=1616871369&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
 :::tip
 The assembly has many steps, so please follow the guide carefully. Some holes are made for self-tapping screws, and it is normal if the screws in the package differ from those in the tutorial. This will not affect assembly, and you may use suitable replacement screws if needed.
 :::
@@ -148,7 +144,7 @@ Please first download the [code files required for calibration](https://files.se
 
 <div align="center">
     <img width="500"
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/1_1.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/EN/1_1.png" />
 </div>
 
 **Step 2:** Open Visual Studio Code, then search for and install the **PlatformIO IDE** extension from the Extensions Marketplace.
@@ -215,7 +211,7 @@ After selecting the serial port, click `Compile` (optional) and `Upload` to flas
 
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/4_1.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/EN/4_1.png" />
 </div>
 
 ### S1 Flashing and Debugging
@@ -326,12 +322,11 @@ Check that all other serial assistants have released the port.
 
 **Vofa Serial Assistant Download and Usage Guide**
 
-Next, open the serial assistant and set the baud rate to `115200` to check the serial output.
-Vofa Serial Assistant download link: [Download Center | VOFA-Plus](https://www.vofa.plus/)
+Next, open the serial assistant and set the baud rate to `115200` to check the serial output. Vofa Serial Assistant download link: [Download Center | VOFA-Plus](https://www.vofa.plus/)
 
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/vofa.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/EN/vofa.png" />
 </div>
 
 **S1 Motor Control Program Debugging – Pole Pair Calibration**
@@ -464,7 +459,7 @@ Flash the program to S3, open Vofa (baud rate `921600`), set the remote controll
 
 <div align="center">
     <img width={500}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/设置SpdDir03.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/EN/设置SpdDir03.png" />
 </div>
 
 Check motor rotation:
