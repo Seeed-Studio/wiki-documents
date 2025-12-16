@@ -36,21 +36,21 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 
 ## 技術リンク
 
-- **DengGeのBilibiliオープンソースチュートリアル動画:** [https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc)
+- **DengGeのBilibiliオープンソースチュートリアル動画：** [https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc)
 
-- **車輪脚ロボットコースのオープンソースコード:** [https://gitee.com/StackForce/bipedal_wheeled_robot](https://gitee.com/StackForce/bipedal_wheeled_robot)
+- **車輪脚ロボットコースのオープンソースコード：** [https://gitee.com/StackForce/bipedal_wheeled_robot](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-- **StackForce軽量ロボティクス開発プラットフォームのドキュメント:** [http://stackforce.cc/#/](http://stackforce.cc/#/)
+- **StackForce軽量ロボティクス開発プラットフォームのドキュメント：** [http://stackforce.cc/#/](http://stackforce.cc/#/)
 
-- **StackForce軽量ロボティクス開発プラットフォームのオープンソースロボットプロジェクト:** [https://gitee.com/StackForce](https://gitee.com/StackForce)
+- **StackForce軽量ロボティクス開発プラットフォームのオープンソースロボットプロジェクト：** [https://gitee.com/StackForce](https://gitee.com/StackForce)
 
 ## 主な特徴
 
-1. **オープンソースで低コスト**: オープンソースライセンスに従い、すべてのソースコードと設計ファイルが完全に利用可能で、開発者が自由に学習、修正、二次開発を行えます。
-2. **高性能モーター制御**: FOC（磁界指向制御）技術を搭載し、オープンループ/クローズドループ速度、位置、トルク制御をサポートし、精密な動作制御を実現します。
-3. **強力なハードウェアサポート**: ESP32メインコントローラーを使用し、I2C、SPI、PWMなどの豊富なインターフェースにより、柔軟な機能拡張が可能です。
-4. **包括的な機能**: 自己バランス、高速移動、姿勢安定化、ワイヤレス制御をサポートし、様々な複雑な地形に適応します。
-5. **学習と使用が簡単**: 完全なサンプルコードとビデオチュートリアルが付属し、初心者の学習障壁を大幅に下げます。
+1. **オープンソースで低コスト**：オープンソースライセンスに従い、すべてのソースコードと設計ファイルが完全に利用可能で、開発者が自由に学習、修正、二次開発を行えます。
+2. **高性能モーター制御**：FOC（Field-Oriented Control）技術を搭載し、オープンループ/クローズドループ速度、位置、トルク制御をサポートし、精密な動作制御を実現します。
+3. **強力なハードウェアサポート**：ESP32メインコントローラーを使用し、I2C、SPI、PWMなどの豊富なインターフェースにより、柔軟な機能拡張が可能です。
+4. **包括的な機能**：自己バランス、高速移動、姿勢安定化、ワイヤレス制御をサポートし、様々な複雑な地形に適応します。
+5. **学習と使用が簡単**：完全なサンプルコードとビデオチュートリアルが付属し、初心者の学習障壁を大幅に下げます。
 
 ## 仕様
 
@@ -70,7 +70,7 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 
 [BOMダウンロード](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/BOM.xlsx)
 
-| 項目名 | 数量 | 単位 | 仕様 | 備考/規格 |
+| 品目名 | 数量 | 単位 | 仕様 | 備考/規格 |
 |-----------|----------|------|----------------|------------------|
 | | | | | |
 | **電子部品** | | | | |
@@ -82,7 +82,7 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 | DS041MG 500–2500サーボ | 4 | 個 | | |
 | MC6C-MINIリモートコントローラー | 1 | 個 | | |
 | MC7RBv2レシーバー | 1 | 個 | | |
-| 12V Li-ポリマーバッテリー | 1 | 個 | 19×34×42mm | |
+| 12Vリチウムポリマーバッテリー | 1 | 個 | 19×34×42mm | |
 | MR30-Uモーターコネクター | 2 | 個 | | モーター用 |
 | SH1.0-5Pエンコーダーケーブル | 2 | セット | | エンコーダー用 |
 | 3Pデュポンワイヤー（メス-メス） | 1 | セット | | レシーバー用 |
@@ -113,8 +113,8 @@ StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス
 ## 目次
 
 - [組み立て済みバージョンチュートリアル](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#組み立て済みバージョンチュートリアル)
-- [キットバージョンチュートリアル1-組み立て](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル1-組み立て)
-- [キットバージョンチュートリアル2-キャリブレーション](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル2-キャリブレーション)
+- [キットバージョンチュートリアル1 - 組み立て](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル1-組み立て)
+- [キットバージョンチュートリアル2 - キャリブレーション](https://wiki.seeedstudio.com/ja/stackforce_mini_wheeled_legged_robot/#キットバージョンチュートリアル2-キャリブレーション)
 
 ## 組み立て済みバージョンチュートリアル
 
@@ -124,14 +124,10 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
 
 ## キットバージョンチュートリアル1 - 組み立て
 
-[ミニ車輪脚ロボットインストールドキュメント.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
-
-<div class="video-container">
-<iframe width="900" height="500" src="//player.bilibili.com/player.html?isOutside=true&aid=1556188467&bvid=BV121421b7zZ&cid=1616871369&p=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+[ミニ車輪脚ロボット組み立てドキュメント.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
 :::tip
-組み立てには多くのステップがあるため、ガイドに注意深く従ってください。一部の穴はタッピングネジ用に作られており、パッケージ内のネジがチュートリアルのものと異なる場合は正常です。これは組み立てに影響せず、必要に応じて適切な代替ネジを使用できます。
+組み立てには多くのステップがあるため、ガイドに注意深く従ってください。一部の穴はタッピングネジ用に作られており、パッケージ内のネジがチュートリアルのものと異なる場合がありますが、これは正常です。これは組み立てに影響せず、必要に応じて適切な代替ネジを使用できます。
 :::
 
 :::caution
@@ -140,20 +136,20 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
 
 ## キットバージョンチュートリアル2 - キャリブレーション
 
-まず[キャリブレーションに必要なコードファイル](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Calibration_code.7z)をダウンロードしてください。
+まず、[キャリブレーションに必要なコードファイル](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Calibration_code.7z)をダウンロードしてください。
 
 ### 環境セットアップ
 
-**ステップ1:** [Visual Studio Code](https://code.visualstudio.com/download)をダウンロードします。
+**ステップ1：** [Visual Studio Code](https://code.visualstudio.com/download)をダウンロードします。
 
 <div align="center">
     <img width="500"
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/1_1.png" />
 </div>
 
-**ステップ2:** Visual Studio Codeを開き、拡張機能マーケットプレイスから**PlatformIO IDE**拡張機能を検索してインストールします。
+**ステップ2：** Visual Studio Codeを開き、拡張機能マーケットプレイスから**PlatformIO IDE**拡張機能を検索してインストールします。
 
-インストールをクリックした後、PlatformIOは必要な追加コンポーネントを自動的にダウンロードします。
+インストールをクリックすると、PlatformIOは必要な追加コンポーネントを自動的にダウンロードします。
 場合によっては、MinGWが不足している可能性があり、新しいフォルダーの作成ができなくなります。
 この場合、**MinGW-w64**を手動でインストールする必要があります。
 
@@ -163,36 +159,36 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
 
 [**車輪脚ロボットツールパックダウンロードリンク**](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)（MinGW-w64を含む）
 
-ファイルをダウンロードした後、解凍してツールパック内の`mingw64フォルダ`を見つけます。
-解凍してから、英語文字のみを使用するディレクトリにインストールします。
+ファイルをダウンロード後、解凍してツールパック内の`mingw64フォルダ`を見つけます。
+解凍し、英語文字のみを使用するディレクトリにインストールします。
 `解凍したフォルダ`を開く → `binフォルダ`を開く → `binディレクトリのパス`をコピー
 （例：D:\ming\mingw64\bin）。
 
 環境設定：
 コンピューターで`システムの詳細設定`を検索して開く → `環境変数` → `システム変数` → `Path` → `新規` → 先ほどコピーした`binパス`を貼り付け → `OK`をクリック。
 
-- 1: `システムの詳細設定`を検索して開きます。
+- 1：`システムの詳細設定`を検索して開きます。
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_1.png" />
 </div>
 
-- 2: `環境変数`をクリックします。
+- 2：`環境変数`をクリックします。
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_2.png" />
 </div>
 
-- 3: システム変数の下にある `Path` をダブルクリックします。
+- 3：システム変数の下の`Path`をダブルクリックします。
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/3_3.png" />
 </div>
 
-- 4: 新しい環境変数エントリを作成します。
+- 4：新しい環境変数エントリを作成します。
 
 <div align="center">
     <img width={500}
@@ -209,9 +205,9 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
 以下はアップロードボタンの説明です。まだプログラムをアップロードしないでください。開発者はまずここでアップロードプロセスを確認できます。
 :::
 
-コンピュータをハードウェアに接続した後、`Auto`（オプション）をクリックします。
+コンピュータをハードウェアに接続した後、`Auto`をクリックします（オプション）。
 システムが自動的にシリアルポートを検出し、推奨します。
-シリアルポートを選択した後、`Compile`（オプション）と `Upload` をクリックしてプログラムをハードウェアに書き込みます。
+シリアルポートを選択した後、`Compile`（オプション）と`Upload`をクリックして、プログラムをハードウェアに書き込みます。
 
 <div align="center">
     <img width={500}
@@ -222,7 +218,7 @@ PDFドキュメントで指定された順序で起動するだけで、ロボ�
 
 #### S1 チップの接続
 
-USB ケーブルを接続します。USB コネクタの `隙間がある側` を上向きに、`隙間がない側` を下向きにします。`白いボタンを離して` S1 チップに切り替えます（`黄色いライト` が点灯します）。
+USB ケーブルを接続します。USB コネクタの`隙間がある側`を上向きに、`隙間がない側`を下向きにします。`白いボタンを離して`S1 チップに切り替えます（`黄色いライト`が点灯します）。
 
 <div align="center">
     <img width={500}
@@ -237,35 +233,35 @@ USB ケーブルを接続します。USB コネクタの `隙間がある側` �
 
 #### S1 プログラムの書き込み
 
-方法 1: 事前に書き込まれた S1 モーター制御プログラムに従って、`Vofa シリアルアシスタントのダウンロードと使用ガイド` に進むことができます。
+方法 1: 事前に書き込まれた S1 モーター制御プログラムに従って、`Vofa シリアルアシスタントのダウンロードと使用ガイド`にスキップできます。
 
 <details>
-<summary>方法 2: S1 モーター制御プログラムを再書き込み（推奨しません）</summary>
+<summary>方法 2: S1 モーター制御プログラムの再書き込み（推奨しません）</summary>
 
-VS Code でプロジェクト `BLDC_Control` を開きます。
+VS Code でプロジェクト`BLDC_Control`を開きます。
 
-これにより PlatformIO が必要なライブラリを自動的にインストールするため、**プロジェクトフォルダを直接 VS Code にドラッグしないでください**。代わりに、新しい VS Code ウィンドウを開き、`File` → `Open Folder` を使用してください。
+これにより PlatformIO が必要なライブラリを自動的にインストールするため、**プロジェクトフォルダを直接 VS Code にドラッグしないでください**。代わりに、新しい VS Code ウィンドウを開き、`File` → `Open Folder`を使用してください。
 
 <div align="center">
     <img width="650"
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/S1Burn/1.png" />
 </div>
 
-`S1 プログラム` が保存されているフォルダを見つけて、Select Folder をクリックします。
+`S1 プログラム`が保存されているフォルダを見つけて、Select Folder をクリックします。
 
 <div align="center">
     <img width="650"
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/S1Burn/2.png" />
 </div>
 
-書き込み前に、`登録コード` と `通信モード` を変更する必要があります：
+書き込み前に、`登録コード`と`通信モード`を変更する必要があります：
 
-**登録コードの変更:**
+**登録コードの変更：**
 
 各ボードには固有の登録コードがあります。
-登録コードは `メイン制御ボードパッケージ` に貼られた `ラベル` に印刷されています。
-そのコードを `対応するフィールド` に入力してください。
-`S1 シリアル出力` から `登録コード` を読み取ることもできます（インストールガイドで前述）。
+登録コードは`メイン制御ボードパッケージ`に貼られた`ラベル`に印刷されています。
+そのコードを`対応するフィールド`に入力してください。
+また、`S1 シリアル出力`から`登録コード`を読み取ることもできます（インストールガイドで前述）。
 
 <div align="center">
     <img width="650"
@@ -277,19 +273,19 @@ VS Code でプロジェクト `BLDC_Control` を開きます。
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/S1Burn/4.png" />
 </div>
 
-**通信モードの変更:**
+**通信モードの変更：**
 
-画像に示された場所の値を `ONBOARD` に変更します。（`USB` = S1 チップとコンピュータ間のシリアル通信、`ONBOARD` = S1 と S3 チップ間の通信）
+画像に示された場所の値を`ONBOARD`に変更します。（`USB` = S1 チップとコンピュータ間のシリアル通信、`ONBOARD` = S1 と S3 チップ間の通信）
 
 <div align="center">
     <img width="650"
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/S1Burn/5.png" />
 </div>
 
-変更後、左下角の `→` アイコンをクリックしてプログラムを書き込みます。
+変更後、左下角の`→`アイコンをクリックしてプログラムを書き込みます。
 
 :::tip
-**書き込み中の一般的な問題と解決方法:**
+**書き込み中の一般的な問題と解決方法：**
 
 1. 書き込み成功の結果
 
@@ -305,9 +301,9 @@ VS Code でプロジェクト `BLDC_Control` を開きます。
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/S1Burn/3_2.png" />
 </div>
 
-解決方法:
-USB ケーブルが逆さまに差し込まれているかどうか確認してください — `隙間がない側を上向き` にする必要があります。
-白いボタンが離されているかどうか確認してください。離されている時、`黄色い LED` が点灯し、ボードが `S1 書き込みモード` であることを示します。
+解決方法：
+USB ケーブルが逆さまに差し込まれているかどうかを確認してください — `隙間がない側を上向き`にする必要があります。
+白いボタンが離されているかどうかを確認してください。離されると、`黄色い LED`が点灯し、ボードが`S1 書き込みモード`であることを示します。
 
 3. シリアルポートが占有されています
 
@@ -316,9 +312,9 @@ USB ケーブルが逆さまに差し込まれているかどうか確認して�
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/S1Burn/3_3.png" />
 </div>
 
-解決方法:
-他のプログラムがシリアルポートを使用しているかどうか確認してください。
-Vofa シリアルモニターが `閉じられている` ことを確認してください。
+解決方法：
+他のプログラムがシリアルポートを使用しているかどうかを確認してください。
+Vofa シリアルモニターが`閉じられている`ことを確認してください。
 他のすべてのシリアルアシスタントがポートを解放していることを確認してください。
 :::
 
@@ -326,8 +322,8 @@ Vofa シリアルモニターが `閉じられている` ことを確認して�
 
 **Vofa シリアルアシスタントのダウンロードと使用ガイド**
 
-次に、シリアルアシスタントを開き、ボーレートを `115200` に設定してシリアル出力を確認します。
-Vofa シリアルアシスタントのダウンロードリンク: [Download Center | VOFA-Plus](https://www.vofa.plus/)
+次に、シリアルアシスタントを開き、ボーレートを`115200`に設定してシリアル出力を確認します。
+Vofa シリアルアシスタントダウンロードリンク：[Download Center | VOFA-Plus](https://www.vofa.plus/)
 
 <div align="center">
     <img width={500}
@@ -336,9 +332,9 @@ Vofa シリアルアシスタントのダウンロードリンク: [Download Cen
 
 **S1 モーター制御プログラムのデバッグ – 極対数キャリブレーション**
 
-ロボットを持ち上げて車輪を地面から離し、`S1 リセットボタン` を押します。
+ロボットを持ち上げて車輪を地面から離し、`S1 リセットボタン`を押します。
 極対数情報が Vofa に表示されます。車輪のセルフテスト回転が完了するまで待ちます。
-検出された極対数値が `7` の場合、キャリブレーションは成功です。以下のように表示されます：
+検出された極対数値が`7`の場合、キャリブレーションは成功です。以下に示すとおりです：
 
 <div align="center">
     <img width={500}
@@ -346,20 +342,20 @@ Vofa シリアルアシスタントのダウンロードリンク: [Download Cen
 </div>
 
 :::tip
-極対数値が `inf` や他のテキストを表示する場合は、電源が入っているか確認し、配線を確認し、磁石が正しく取り付けられていることを確認してください。
+極対数値が`inf`や他のテキストを表示する場合は、電源が入っているかどうかを確認し、配線を確認し、磁石が正しく取り付けられていることを確認してください。
 
 検出値が 6、8、または 7 以外の場合、車輪が締めすぎている可能性があります
-（車輪脚の取り付けガイドを参照し、`モーターベアリング取り付け` を検索して再取り付けしてください）。
+（車輪脚取り付けガイドを参照し、`モーターベアリング取り付け`を検索して再取り付けしてください）。
 
 車輪が地面や他の物体に触れている可能性もあります。
 ロボットの電源を入れるたび、または S1 がリセットされるたびに、セルフテストが正常に実行されるよう車輪を地面から離す必要があります。
 
-プロセスを繰り返し、極対数が **7** を表示するまで `S1 リセットボタン` を押してください。
+プロセスを繰り返し、極対数が**7**を示すまで`S1 リセットボタン`を押してください。
 :::
 
 ### S3 オフセット値の取得
 
-S1 の書き込みが完了したら、`S3 チップ` に切り替えて S3 プログラムを書き込みます。（USB ポートの隙間が下向きになるようにしてください。画像に示されたボタンを押します — ライトが `緑色` になると、システムが S3 に切り替わったことを示します。）
+S1 の書き込みが完了したら、`S3 チップ`に切り替えて S3 プログラムを書き込みます。（USB ポートの隙間が下向きになるようにしてください。画像に示されたボタンを押します — ライトが`緑色`になると、システムが S3 に切り替わったことを示します。）
 
 <div align="center">
     <img width={500}
@@ -375,34 +371,34 @@ S1 の書き込みが完了したら、`S3 チップ` に切り替えて S3 プ�
 </div>
 :::
 
-- 1. VSCode で **bipedal_calibrate フォルダ（オフセット値キャリブレーションプログラム）** を開き、プログラムを直接書き込んでから、Vofa を開いてボーレートを `115200` に設定します。
-  `0,0,0,0` のようなシリアル出力が表示されます。これは `サーボ 1、2、3、4` のオフセット値を表します。
+- 1. VSCode で**bipedal_calibrate フォルダ（オフセット値キャリブレーションプログラム）**を開き、プログラムを直接書き込み、その後 Vofa を開いてボーレートを`115200`に設定します。
+  `0,0,0,0`のようなシリアル出力が表示されます。これは`サーボ 1、2、3、4`のオフセット値を表します。
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/S3_1.png" />
 </div>
 
-- 2. バッテリーの電源を入れます。サーボの回転が完了したら、脚を地面に対してできるだけ垂直になるように取り付けます。
+- 2. バッテリーの電源を入れます。サーボの回転が完了したら、脚をできるだけ地面に対して垂直になるように取り付けます。
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/S3_2.png" />
 </div>
 
-- 3. シリアルターミナルで `1,2,3,4` のようなコマンドを入力してサーボを制御し、脚が完全に垂直になるまで調整します。
-  **方向ガイド:** 脚があなたの方を向いている時、時計回りは負、反時計回りは正です。
+- 3. シリアルターミナルで、`1,2,3,4`のようなコマンドを入力してサーボを制御し、脚が完全に垂直になるまで調整します。
+  **方向ガイド：** 脚があなたの方を向いているとき、時計回りは負、反時計回りは正です。
 
-例: 上の画像では、サーボ 1 が少し左に傾き、サーボ 2 が少し右に傾いています。
-`5,-6,0,0` を入力してサーボ 1 と 2 を垂直に戻します。（`5` はサーボ 1 を反時計回りに 5 単位回転、`-6` はサーボ 2 を時計回りに 6 単位回転を意味します。）
+例：上の画像では、サーボ 1 が少し左に傾き、サーボ 2 が少し右に傾いています。
+`5,-6,0,0`を入力してサーボ 1 と 2 を垂直に戻します。（`5`はサーボ 1 を反時計回りに 5 単位回転、`-6`はサーボ 2 を時計回りに 6 単位回転を意味します。）
 
 <div align="center">
     <img width={500}
     src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/calibration/S3_3.png" />
 </div>
 
-同じ方法でサーボ 3 と 4 を調整します:
-`0,0,x,0` を使用してサーボ 3 を制御し、`0,0,0,x` を使用してサーボ 4 を制御します。
+同じ方法でサーボ 3 と 4 を調整します：
+`0,0,x,0`を使用してサーボ 3 を制御し、`0,0,0,x`を使用してサーボ 4 を制御します。
 すべてのオフセット調整が完了したら、サーボハウジング内の黒いネジを締めて脚を固定します。
 
 :::tip
@@ -411,7 +407,7 @@ S1 の書き込みが完了したら、`S3 チップ` に切り替えて S3 プ�
 
 ### S3 キャリブレーションとデバッグ
 
-[StackForce 車輪脚ロボット基本操作マニュアル (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
+[StackForce 車輪脚ロボット基本操作マニュアル（PDF）](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
 <div align="center">
     <img width={800}
@@ -420,8 +416,8 @@ S1 の書き込みが完了したら、`S3 チップ` に切り替えて S3 プ�
 
 #### 1. オフセット値の変更
 
-VS Code で `bipedal` フォルダ（サーボ制御プログラム）を開きます。
-`bipedal_data.h` ファイルで、`OFFSET` の下のオフセット値を更新します。
+VS Code で`bipedal`フォルダ（サーボ制御プログラム）を開きます。
+`bipedal_data.h`ファイルで、`OFFSET`の下のオフセット値を更新します。
 前のプログラムから取得したオフセット値を、以下に示す対応する位置に入力します。
 
 <div align="center">
@@ -432,14 +428,14 @@ VS Code で `bipedal` フォルダ（サーボ制御プログラム）を開き�
 #### 2. サーボデバッグ
 
 - プログラムを書き込んだ後、USB を抜きます。
-  `5 を長押し` してリモートコントローラーの電源を入れます。
-  スイッチを設定: `A（左上）を中央`、`B（左下）を下`、`C（右上）を下`。
+  `5 を長押し`してリモートコントローラーの電源を入れます。
+  スイッチを設定：`A（左上）を中央`、`B（左下）を下`、`C（右上）を下`。
 - ロボットを持ち上げて水平に保ち、ジャイロキャリブレーションとモーターキャリブレーションが進行できるようにします。
   電源ボタンを押してロボットの電源を入れます。
 - セルフチェックが完了するまで約 10 秒待ちます。
-  `A を中央` に設定してサーボを有効にします。初期位置に戻ります。
-  `C を中央` に設定してサーボキャリブレーションを終了します。
-  **B** をスライドして脚の高さ（車輪の **Y** 座標）を調整します。
+  `A を中央`に設定してサーボを有効にします。初期位置に戻ります。
+  `C を中央`に設定してサーボキャリブレーションを終了します。
+  **B**をスライドして脚の高さ（車輪の**Y**座標）を調整します。
   スライダー **D** を動かして車輪を前後に移動させます（車輪の **X** 座標）。
 - 車輪脚ロボットの動作に関する注意：  
   **D** を **前方** に押すと、サーボが回転して車輪の **X** 座標が **後方** に移動します。車輪脚ロボットが前方に傾き、**ロボットが前進** します。
@@ -513,23 +509,23 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
 
 前面側ジョイスティック：
 
-- **ステップ 1:**
-  左上のスイッチを `middle`、右上のスイッチを `down`、左下のスティックを `lowest` に設定します。ロボットを持ち、脚を自然に垂らし、車輪を地面から離し、本体を水平に保ちます。
+- **ステップ 1：**
+  左上スイッチを `middle`、右上スイッチを `down`、左下スティックを `lowest` に設定します。ロボットを持ち、脚を自然に垂らし、車輪を地面から離し、本体を水平に保ちます。
 
   電源を入れ、約 `10秒` 待ってから、ロボットを地面に置いて直立させます。
 
-- **ステップ 2:**
-  右上のスイッチを `middle` に設定し、左下のスティックを `少し上` に押し、左上のスイッチを `up` に設定します。ロボットがセルフバランスモードに入ります。
+- **ステップ 2：**
+  右上スイッチを `middle` に設定し、左下スティックを `わずかに上` に押し、左上スイッチを `up` に設定します。ロボットがセルフバランスモードに入ります。
 
-  右下のスティックの `前後` で前進/後退、`左右` で左右回転を行います。
+  右下スティックの `前後` で前進/後退、`左右` で左右旋回を行います。
 
-  左下のスティックの `上下` で脚の高さを調整します。
+  左下スティックの `上下` で脚の高さを調整します。
 
-  右上のスイッチが `top` の時、左下のスティックの `左右` でロール制御を行います。ロールモードを終了するには電源を切ります。
+  右上スイッチが `top` の時、左下スティックの `左右` でロール制御を行います。ロールモードを終了するには電源を切ります。
 
 ## ライブデモ
 
-（実際のデモビデオを追加予定）
+（実際のデモビデオは後日追加予定）
 
 ## 引用
 
@@ -537,25 +533,25 @@ Vofa を使用してモーター速度を確認します。Vofa のボーレー�
 
 [gitee](https://gitee.com/StackForce/bipedal_wheeled_robot)
 
-[StackForce Wheeled_Legged_Robot基本操作マニュアル（PDF）](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
+[StackForce Wheeled_Legged_Robot Basic Operation Manual (PDF)](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Wheeled_Legged_Robot_Operation_Manual.pdf)
 
-[ミニホイール脚ロボット設置ドキュメント.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
+[Mini-Wheeled-legged robot installation document.pdf](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/Mini-Wheeled-legged%20robot%20installation%20document.pdf)
 
-[制御基板回路図フルセット](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
+[Full set of control board schematics](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Schematic_diagram.7z)
 
-[開発キット用サンプルプロジェクト](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Sample_Code_Documentation.7z)
+[Example projects for the development kit](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Sample_Code_Documentation.7z)
 
-[顧客登録コード取得](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Registration_code.7z)
+[Customer registration code acquisition](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Registration_code.7z)
 
 [urdf & stl](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/SF_bipedalWheel.zip)
 
 [BOM](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/EN/BOM.xlsx)
 
-[ホイール脚ロボットツールパック](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)
+[Wheeled-Legged Robot Tool Pack](https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/Tool_Collection.zip)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
