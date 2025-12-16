@@ -82,7 +82,7 @@ WM1302 Pi HAT, together with the WM1302 Gateway Module and Raspberry Pi, can hel
   </tr>
   <tr>
     <td >Raspberry Pi 40-Pin Headers</td>
-    <td >Support Raspberry Pi 4 B / Support Raspberry Pi 3 A+/B/B+ / Support Raspberry Pi 2 B / Support Raspberry Pi A+/B+ /   Support Raspberry Pi Zero/Zero W</td>
+    <td >Support Raspberry Pi 5 /Support Raspberry Pi 4 B / Support Raspberry Pi 3 A+/B/B+ / Support Raspberry Pi 2 B / Support Raspberry Pi A+/B+ /   Support Raspberry Pi Zero/Zero W</td>
   </tr>
   <tr>
     <td >PCIe Header</td>
