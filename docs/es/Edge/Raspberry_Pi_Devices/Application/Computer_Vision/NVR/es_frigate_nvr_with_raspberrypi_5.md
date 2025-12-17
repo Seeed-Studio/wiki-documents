@@ -1,6 +1,6 @@
 ---
-description: Este artículo wiki proporciona una guía paso a paso sobre cómo desplegar Frigate NVR en Raspberry Pi 5 con Hailo 8.
-title: Frigate NVR con Raspberry Pi 5
+description: Este artículo wiki proporciona una guía paso a paso sobre cómo implementar Frigate NVR en Raspberry Pi 5 con Hailo 8.
+title: Frigate NVR con Raspberry Pi 5/CM5
 keywords:
   - Edge
   - reComputer r1000
@@ -17,7 +17,7 @@ no_comments: false # for Disqus
 
 ## Introducción
 
-**Frigate NVR** es un grabador de video en red de código abierto diseñado para detección de objetos en tiempo real con modelos de IA. Emparejado con la **Raspberry Pi 5**, permite una videovigilancia eficiente en el borde. Esta guía te llevará a través del proceso de instalación y configuración para una configuración óptima.
+**Frigate NVR** es un grabador de video en red de código abierto diseñado para detección de objetos en tiempo real con modelos de IA. Emparejado con el **Raspberry Pi 5/CM5**, permite una videovigilancia eficiente en el borde. Esta guía te llevará a través del proceso de instalación y configuración para una configuración óptima.
 
 ## Frigate Oficial
 
@@ -29,13 +29,34 @@ no_comments: false # for Disqus
  <table align="center">
  <tr>
   <th>reComputer AI R2130</th>
+  <th>reComputer AI Industrial R2145</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -45,7 +66,7 @@ no_comments: false # for Disqus
 
 **Alternativamente, también necesitas al menos una cámara para transmisión de video. Puedes consultar [Hardware recomendado](https://docs.frigate.video/frigate/hardware#cameras) para ver las cámaras recomendadas.**
 
-### Instalar el Controlador PCIe de Hailo
+### Instalar Controlador PCIe de Hailo
 
 #### Paso 1: Habilitar PCIe Gen 3
 
@@ -67,22 +88,22 @@ Elige "Yes" para habilitar el modo PCIe Gen 3.
 
 Después, haz clic en "Finish" para salir.
 
-Edita `/boot/firmware/config.txt`, añade la siguiente línea al final del archivo.
+Edita `/boot/firmware/config.txt`, agrega la siguiente línea al final del archivo.
 
 ```
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-#### Paso 2: Instalar el Controlador PCIe de Hailo
+#### Paso 2: Instalar Controlador PCIe de Hailo
 
-Instala el paquete dkms. Este paquete es necesario para instalar el controlador PCIe de Hailo.
+Instala el paquete dkms. Este paquete es requerido para instalar el controlador PCIe de Hailo.
 
 ```bash
 sudo apt update
 sudo apt install dkms
 ```
 
-Obtén el controlador Hailo PCIe desde [GitHub](https://github.com/hailo-ai/hailort-drivers).
+Obtén el Controlador PCIe de Hailo desde [GitHub](https://github.com/hailo-ai/hailort-drivers).
 
 ```bash
 git clone https://github.com/hailo-ai/hailort-drivers
@@ -105,19 +126,19 @@ sudo mkdir -p /lib/firmware/hailo
 sudo cp hailo8_fw*.bin /lib/firmware/hailo/hailo8_fw.bin
 ```
 
-Para evitar el problema de PCIe max_desc_page_size, también necesitamos crear una regla en `/etc/modprobe.d/hailo_pci.conf` con el siguiente contenido.
+Para evitar el problema de max_desc_page_size de PCIe, también necesitamos crear una regla en `/etc/modprobe.d/hailo_pci.conf` con el siguiente contenido.
 
 ```bash
 options hailo_pci force_desc_page_size=4096
 ```
 
-Reinicia el sistema para que surta efecto.
+Reinicia el sistema para que tome efecto.
 
 ```bash
 sudo reboot
 ```
 
-Después de reiniciar el sistema, el controlador PCIe de Hailo se instala exitosamente. Se creará el dispositivo `/dev/hailo0`. Verifica el dispositivo ejecutando el siguiente comando.
+Después de que el sistema se reinicie, el controlador PCIe de Hailo se instala exitosamente. El dispositivo `/dev/hailo0` será creado. Verifica el dispositivo ejecutando el siguiente comando.
 
 ```bash
 $ ls /dev/hailo*
@@ -128,7 +149,7 @@ $ ls /dev/hailo*
 
 En esta parte, asumimos que tienes tu cámara configurada y lista para transmitir con protocolo RTSP en resolución 1920x1080.
 
-- URL RTSP de ejemplo: `rtsp://admin:passw0rd@192.168.98.11:554/cam/realmonitor?channel=1&subtype=0`
+- Ejemplo de URL RTSP: `rtsp://admin:passw0rd@192.168.98.11:554/cam/realmonitor?channel=1&subtype=0`
 
 #### Paso 1: Preparar el Entorno
 
@@ -138,7 +159,7 @@ En esta parte, asumimos que tienes tu cámara configurada y lista para transmiti
    sudo apt update
    ```
 
-2. **Instalar Docker:**
+2. **Instala Docker:**
 
    ```bash
    curl -fsSL get.docker.com | bash
@@ -151,11 +172,11 @@ En esta parte, asumimos que tienes tu cámara configurada y lista para transmiti
    sudo reboot
    ```
 
-#### Paso 2: Desplegando Frigate
+#### Paso 2: Implementar Frigate
 
 1. **Descargar la Imagen de Frigate:**
 
-    Ve a [Package frigate](https://github.com/blakeblackshear/frigate/pkgs/container/frigate/versions), elige una imagen con el sufijo `-h8l`. En este ejemplo, elegimos `ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l`.
+    Ve a [Package frigate](https://github.com/blakeblackshear/frigate/pkgs/container/frigate/versions), elige una imagen con sufijo `-h8l`. En este ejemplo, elegimos `ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l`.
 
     ```bash
     docker pull ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l
@@ -163,7 +184,7 @@ En esta parte, asumimos que tienes tu cámara configurada y lista para transmiti
 
 2. **Crear Archivo Docker Compose:**
 
-    Aquí tienes un ejemplo del archivo `frigate.yml`, el dispositivo `hailo0` es el que creaste en el paso anterior, los archivos de configuración están en el directorio `./config` y los archivos de datos están en el directorio `./data`.:
+    Aquí hay un ejemplo del archivo `frigate.yml`, el dispositivo `hailo0` es el que creaste en el paso anterior, los archivos de configuración están en el directorio `./config` y los archivos de datos están en el directorio `./data`.:
 
     ```yml
     services:
@@ -190,7 +211,7 @@ En esta parte, asumimos que tienes tu cámara configurada y lista para transmiti
 
 3. **Editar Configuración de Frigate:**
 
-    Aquí tienes un ejemplo del archivo `config/config.yml`, que es para la aplicación Frigate:
+    Aquí hay un ejemplo del archivo `config/config.yml`, que es para la aplicación Frigate:
 
     ```yml
     database:
@@ -232,7 +253,7 @@ En esta parte, asumimos que tienes tu cámara configurada y lista para transmiti
     version: 0.15-1
     ```
 
-4. **Iniciar Instancia de Docker:**
+4. **Iniciar Instancia Docker:**
 
     ```bash
     docker compose -f frigate.yml up -d
@@ -244,22 +265,22 @@ En esta parte, asumimos que tienes tu cámara configurada y lista para transmiti
 
 ## Seeed Frigate
 
-### Modificar configuración PCIe
+### Modificar configuraciones PCIe
 
-Abrir config.txt
+Abre config.txt
 
 ```
 sudo nano /boot/firmware/config.txt 
 ```
 
-Añade el siguiente texto a config.txt
+Agrega el siguiente texto a config.txt
 
 ```
 dtparam=pciex1_gen=3
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-Luego usa `Ctrl+x` para guardar el archivo y reiniciar la caja de IA
+Luego usa `Ctrl+x` para guardar el archivo y reinicia la caja de IA
 
 ### Instalar docker y hailo-all
 
@@ -274,14 +295,14 @@ sudo apt install docker-compose-plugin
 
 ### Crear archivo yml
 
-Crear frigate.yml para docker compose para ejecutar frigate
+Crea frigate.yml para que docker compose ejecute frigate
 
 ```
 cd ~
 sudo nano frigate.yml
 ```
 
-Aquí tienes un ejemplo de frigate.yml
+Aquí hay un ejemplo de frigate.yml
 
 ```
 version: "3.9"
@@ -290,7 +311,7 @@ services:
         container_name: frigate-hailo
         privileged: true
         restart: unless-stopped
-        image: frigate_seeed:latest
+        image: mjqx2023/frigate_seeed:latest
         shm_size: 1024mb
         environment:
             - HAILO_MONITOR=1
@@ -362,7 +383,7 @@ cameras:
       threshold: 45
       contour_area: 60
       improve_contrast: true
-      
+
   home1:
     ffmpeg:
       inputs:
@@ -375,7 +396,7 @@ cameras:
       threshold: 45
       contour_area: 60
       improve_contrast: true
-      
+
   yard1:
     ffmpeg:
       inputs:
@@ -418,7 +439,7 @@ camera_groups:
       - yard1
 ```
 
-### Descargar imagen de docker y ejecutar frigate
+### Descargar imagen docker y ejecutar frigate
 
 Descargar imagen frigate_seeed
 

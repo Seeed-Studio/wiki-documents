@@ -5,14 +5,14 @@ keywords:
   - Edge
   - reComputer R2140
   - balena
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/balena/recomputer_ai_box/recomputer_ai_r2140.webp
 slug: /ja/recomputer_ai_r2140_balena
 last_update:
   date: 11/4/2025
   author: JiahaoLi
 ---
 
-[balena](https://www.balena.io/)は、開発者がIoTアプリケーションを構築、デプロイ、管理し、デバイス群全体で管理できるように設計されたモノのインターネット（IoT）プラットフォームです。幅広いデバイスアーキテクチャをサポートし、コンテナ化されたアプリケーションデプロイメント機能を含んでおり、IoTソフトウェアとHostOSを簡単に更新し、バグを修正し、IoTアプリケーションに新機能を導入することを可能にします。balenaは、コードの更新をプッシュし、デバイス設定を管理し、場所やネットワーク条件に関係なく、デバイスがフィールドで確実かつ安全に動作することを保証する統一された方法を提供します。
+[balena](https://www.balena.io/)は、開発者がIoTアプリケーションを構築、デプロイ、管理するためのInternet of Things（IoT）プラットフォームです。幅広いデバイスアーキテクチャをサポートし、コンテナ化されたアプリケーションデプロイメント機能を含んでおり、IoTソフトウェアとHostOSの簡単な更新、バグ修正、IoTアプリケーションへの新機能導入を可能にします。balenaは、コードの更新をプッシュし、デバイス設定を管理し、場所やネットワーク条件に関係なく、フィールドでデバイスが確実かつ安全に動作することを保証する統一された方法を提供します。
 
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/balena/balena.png" alt="pir" width="700" height="auto" /></div>
@@ -23,29 +23,30 @@ last_update:
 
 ### ハードウェアの準備
 
+
 <div class="table-center">
- <table class="table-nobg">
-    <tr class="table-trnobg">
-      <th class="table-trnobg">reComputer AI R2140</th>
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2140</th>
+ </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
   </tr>
-    <tr class="table-trnobg"></tr>
-  <tr class="table-trnobg">
-   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:800, height:'auto'}}/></div></td>
-  </tr>
-    <tr class="table-trnobg"></tr>
-  <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-          </a></div></td>
-        </tr>
-    </table>
+ </table>
 </div>
 
 >注意：イメージを書き込むためのSDカードとカードリーダーを準備してください。
 
 ### ソフトウェア
 
-- [balenaCloud](https://balena.io)アカウント（こちらでサインアップ）、最初の10台のデバイスは無料です。
+- [balenaCloud](https://balena.io)アカウント（こちらでサインアップ）と最初の10台のデバイスを無料で取得。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/balena/recomputer_ai_box/balena.png" alt="pir" width="800" height="auto" /></div>
 

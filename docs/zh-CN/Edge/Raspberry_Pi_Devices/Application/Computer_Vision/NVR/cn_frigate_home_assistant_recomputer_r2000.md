@@ -16,43 +16,57 @@ last_update:
   author: Kasun Thushara
 ---
 
-# Frigate NVR 和 Hailo 在 reComputer R2000 上连接 Home Assistant
+# Frigate NVR 和 Hailo 在 reComputer AI 盒子和工业盒子上连接 Home Assistant
 
-## 介绍
+## 简介
 
-Frigate NVR 是一个专为使用 AI 模型进行实时物体检测而设计的开源网络视频录像机（NVR）。它轻量级、功能强大，并通过 RTSP 协议与摄像头无缝协作。
+Frigate NVR 是一个专为使用 AI 模型进行实时物体检测而设计的开源网络视频录像机（NVR）。它轻量、强大，并通过 RTSP 协议与摄像头无缝协作。
 
 Home Assistant（HA）是一个开源的智能家居自动化平台，让您能够控制和自动化家中的设备。
 
-在本指南中，我们将引导您了解如何在配备 **Hailo PCIe** 的 **reComputer AI 盒子**上安装 **Frigate**，以及如何使用 **MQTT** 将其连接到您现有的 **Home Assistant** 设置，操作简单便捷。
+在本指南中，我们将引导您了解如何在配备 **Hailo PCIe** 的 **reComputer AI 盒子和工业盒子** 上安装 **Frigate**，以及如何使用 **MQTT** 将其连接到现有的 **Home Assistant** 设置，过程简单便捷。
 
-## 先决条件
+## 前提条件
 
 ### 硬件要求
 
 <div class="table-center">
-  <table align="center">
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2130</th>
+  <th>reComputer AI Industrial R2145</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
     <tr>
-        <th>reComputer AI Industrial R2000</th>
-         <th>reComputer AI R2000</th>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-    <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg" style={{width:250, height:'auto'}}/></div></td>
-         <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:250, height:'auto'}}/></div></td>
-    </tr>
-      <tr>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-          </a>
-      </div></td>
-<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-          </a>
-      </div></td>
-    </tr>
-  </table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## 安装 Hailo PCIe 驱动程序
@@ -67,7 +81,7 @@ sudo raspi-config
 - 导航到 `6 Advanced Options > A8 PCIe Speed`
 - 选择 `Yes` 启用 PCIe Gen 3
 - 退出并选择 `Finish`
-  
+
 <div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/pcie.png"
@@ -81,7 +95,7 @@ sudo raspi-config
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-### 步骤 2：安装 PCIe 驱动
+### 步骤 2：安装 PCIe 驱动程序
 
 ```bash
 sudo apt update
@@ -119,7 +133,7 @@ sudo reboot
 ls /dev/hailo*
 ```
 
-Expected output:
+预期输出：
 
 ```bash
 /dev/hailo0
@@ -160,7 +174,7 @@ mkdir -p ~/frigate/data/storage
 cd ~/frigate
 ```
 
-### 创建 Docker Compose 文件 (frigate.yml)
+### 创建 Docker Compose 文件（frigate.yml）
 
 ```bash
 nano frigate.yml
@@ -189,7 +203,7 @@ services:
       - 5000:5000
 ```
 
-### 创建 Frigate 配置文件 (config/config.yml)
+### 创建 Frigate 配置文件（config/config.yml）
 
 ```bash
 nano config/config.yml
@@ -259,7 +273,7 @@ docker compose -f frigate.yml up -d
 假设您正在运行 Home Assistant（HA Green、HA Yellow 或类似的独立设备）：
 
 - 如果尚未安装，请安装 [HACS](https://hacs.xyz/docs/use/)。
-- 在 HACS 中，从社区商店安装 **Frigate 集成**。
+- 在 HACS 中，从社区商店安装 **Frigate integration**。
 
 使用您的 Frigate AI 盒子的 IP 地址和端口进行配置
 
@@ -274,7 +288,7 @@ docker compose -f frigate.yml up -d
 
 按照 [官方 MQTT 集成指南](https://www.home-assistant.io/integrations/mqtt/) 安装和配置 MQTT 代理插件。
 
-### 步骤 3：更新 Frigate 配置以支持 MQTT
+### 步骤 3：为 MQTT 更新 Frigate 配置
 
 ```bash
 mqtt:
@@ -286,7 +300,7 @@ mqtt:
   password: <HA Password>
 ```
 
-Example:
+示例：
 
 ```bash
 mqtt:
@@ -298,7 +312,7 @@ mqtt:
   password: HiezenburgCook
 ```
 
-full example :
+完整示例：
 
 ```bash
 database:
@@ -357,7 +371,7 @@ sudo docker compose -f frigate.yml up -d
 ### 步骤 5：确认 MQTT 正常工作（可选）
 
 - 检查 HA 日志或 MQTT 插件日志以验证来自 Frigate 的消息
-- 在 HA 中，您现在可以在自动化中使用 Frigate 事件，例如运动警报、检测到的对象等。
+- 在 HA 中，您现在可以在自动化中使用 Frigate 事件，例如运动警报、检测到的物体等。
 
 <div style={{ textAlign: 'center' }}>
   <img
