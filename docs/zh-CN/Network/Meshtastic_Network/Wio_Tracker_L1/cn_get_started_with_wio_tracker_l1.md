@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /cn/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 12/3/2025
+  date: 12/16/2025
   author: Michelle Huang
 ---
 
@@ -29,7 +29,7 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 ### 第二部分 固件刷写
 
 :::caution note
-请`不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
+请`不要使用 NRF-OTA`更新固件，这可能导致设备完全损坏。
 :::
 
 <div class="video-container">
@@ -52,7 +52,7 @@ L1 E-Ink 固件目前不支持四向摇杆。如果您想使用摇杆，请购�
 
 #### 蜂鸣器
 
-如果您想开启或关闭蜂鸣器，请先`将固件更新`到 `2.7` 版本。因为只有 2.7 版本固件才有菜单栏。
+如果您想开启或关闭蜂鸣器，请先`将固件更新`到`2.7`版本。因为只有 2.7 版本固件才有菜单栏。
 - 开启蜂鸣器
 Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> Disable
 - 关闭蜂鸣器
@@ -84,31 +84,31 @@ Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> All enable
 ### 刷写固件
 
 :::caution note
-请`不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
+请`不要使用 NRF-OTA`更新固件，这可能导致设备完全损坏。
 :::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
-对于 L1、L1 Lite 和 L1 Pro，选择目标设备为 `Seeed Wio Tracker L1` 并选择最新固件，然后点击 `Flash`。
+对于 L1、L1 Lite 和 L1 Pro，选择目标设备为`Seeed Wio Tracker L1`并选择最新固件，然后点击`Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
-对于 L1 E-Ink，选择目标设备为 `Seeed Wio Tracker L1 E-Ink` 并选择最新固件，然后点击 `Flash`。
+对于 L1 E-Ink，选择目标设备为`Seeed Wio Tracker L1 E-Ink`并选择最新固件，然后点击`Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%201.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
 
-打开设备，点击 `Enter DFU Mode`，会出现一个名为 `Tracker L1` 的串口，点击并连接它，应该会显示一个名为 `Tracker L1` 的驱动器。
+打开设备，点击`Enter DFU Mode`，会出现一个名为`Tracker L1`的串口，点击并连接它，应该会显示一个名为`Tracker L1`的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
 将 UF2 文件拖拽到 DFU 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
 
-### 开启设备
+### 设备开机
 
 连接 USB 线缆激活设备。向上拨动电源开关以开机。
 
@@ -129,7 +129,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-- 输入显示屏上的代码，然后点击 `OK` 连接设备。
+- 输入显示屏上的代码，然后点击`OK`连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -137,11 +137,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android 应用">
 
-- 点击 `+` 并选择目标设备。
+- 点击`+`并选择目标设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- 输入代码（默认代码是 `123456`），然后点击 `OK` 连接设备。
+- 输入代码（默认代码是`123456`），然后点击`OK`连接设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -150,11 +150,11 @@ import TabItem from '@theme/TabItem';
 
 ### 通过网站连接
 
-如果您想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+如果您想在网站上发送文本消息并与其他节点通信，您现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
 
   步骤 1：打开网站
 
-[点击这里](https://client.meshtastic.org/messages/broadcast/0) 前往网站。
+[点击这里](https://client.meshtastic.org/messages/broadcast/0)前往网站。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   步骤 2：添加新设备
@@ -182,7 +182,7 @@ import TabItem from '@theme/TabItem';
 
 ### 配置参数
 
-为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
+为了开始在网格上通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
 
 <Tabs>
 <TabItem value="ios" label="IOS 应用">
@@ -205,10 +205,10 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
+参考[按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/)获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时基础每分钟计算。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -251,8 +251,8 @@ import TabItem from '@theme/TabItem';
 </table>
 
 ### 屏幕连接
- - E-Ink 屏幕
-  [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的 E-Ink 屏幕。
+ - 电子墨水屏
+  [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - OLED 屏幕
@@ -318,7 +318,8 @@ import TabItem from '@theme/TabItem';
 - [引导程序](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) 3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [(V2 新四向摇杆) 3D 打印参考文件](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
-- [外形文件](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
+- [L1 外壳设计挑战赛](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
+- [轮廓文件](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [TELEC 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
 - [FCC 认证](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [CE 认证](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)

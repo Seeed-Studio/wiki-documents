@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /ja/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 12/3/2025
+  date: 12/16/2025
   author: Michelle Huang
 ---
 
@@ -26,7 +26,7 @@ L1、L1 Lite、または L1 E-Ink モデルを初めて使用する際は、USB 
 
 
 
-### パート 2 ファームウェア書き込み
+### パート 2 ファームウェアフラッシュ
 
 :::caution note
 ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
@@ -43,16 +43,16 @@ L1、L1 Lite、または L1 E-Ink モデルを初めて使用する際は、USB 
 </div>
 
 #### 4方向ジョイスティック
-L1 E-Ink ファームウェアは現在4方向ジョイスティックをサポートしていません。ジョイスティックを使用したい場合は、他のモデルをご購入ください。
+L1 E-Ink ファームウェアは現在 4方向ジョイスティックをサポートしていません。ジョイスティックを使用したい場合は、他のモデルをご購入ください。
 
 #### メニューバー
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7 ファームウェアのみがメニューバーをサポートしています。メニューバーを使用したい場合は、[ファームウェア書き込みチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってファームウェアを更新してください。
+2.7 ファームウェアのみがメニューバーをサポートしています。メニューバーを使用したい場合は、[ファームウェアフラッシュチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってファームウェアを更新してください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### ブザー
 
-ブザーをオンまたはオフにしたい場合は、まず `ファームウェアを` `2.7` バージョンに `更新してください`。2.7 バージョンのファームウェアのみがメニューバーを持っているためです。
+ブザーをオンまたはオフにしたい場合は、まず `ファームウェアを更新` して `2.7` バージョンにしてください。2.7 バージョンのファームウェアのみがメニューバーを持っているためです。
 - ブザーをオンにする
 Setting（歯車の形のアイコン）-> Notification -> Buzzer Action -> Disable
 - ブザーをオフにする
@@ -79,15 +79,15 @@ Setting（歯車の形のアイコン）-> Notification -> Buzzer Action -> All 
 :::danger note
 デバイスが以下の状態にある場合は、手動で再起動または電源を切らないでください。そうしないとデバイスが動作しなくなる可能性があります。
 1. メッセージ送信プロセスが完了していない
-2. 設定中である
+2. 設定中
 :::
-### ファームウェア書き込み
+### ファームウェアフラッシュ
 
 :::caution note
 ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
 :::
 
-[Meshtastic Web Flasher](https://flasher.meshtastic.org/)にアクセスしてください。
+[Meshtastic Web Flasher](https://flasher.meshtastic.org/) にアクセスしてください。
 
 L1、L1 Lite、L1 Pro の場合、ターゲットデバイスを `Seeed Wio Tracker L1` に選択し、最新のファームウェアを選択してから `Flash` をクリックしてください。
 
@@ -106,7 +106,7 @@ L1 E-Ink の場合、ターゲットデバイスを `Seeed Wio Tracker L1 E-Ink`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2 ファイルを DFU ドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアが書き込まれます。
+UF2 ファイルを DFU ドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされます。
 
 ### デバイスの電源を入れる
 
@@ -154,7 +154,7 @@ import TabItem from '@theme/TabItem';
 
   ステップ 1：ウェブサイトを開く
 
-[こちらをクリック](https://client.meshtastic.org/messages/broadcast/0)してウェブサイトにアクセスしてください。
+[こちらをクリック](https://client.meshtastic.org/messages/broadcast/0) してウェブサイトにアクセスしてください。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   ステップ 2：新しいデバイスを追加
@@ -163,7 +163,7 @@ import TabItem from '@theme/TabItem';
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    接続方法は2つあります。お好みの方法を選択してください。
+    接続方法は 2 つあります。お好みの方法を選択してください。
 
  方法 1：Bluetooth 経由
 
@@ -205,10 +205,10 @@ import TabItem from '@theme/TabItem';
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868MHz|869.4 - 869.65|10|27|
 
-より包括的なリストについては、[国別 LoRa 地域](https://meshtastic.org/docs/configuration/region-by-country/)を参照してください。
+より包括的なリストについては、[国別 LoRa 地域](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
 
 :::info
-**EU_868** は、1時間のローリングベースで毎分計算される10%の時間あたりデューティサイクル制限を遵守する必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
+**EU_868** は、1時間のローリングベースで毎分計算される 10% の時間あたりデューティサイクル制限を遵守する必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
 デバイスでLoRa地域を設定したので、必要に応じて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)を構成することができます。
@@ -281,7 +281,7 @@ Groveインターフェースを介してデバイスにセンサーを追加で
 
 - ステップ2：DFUモードに入る
 
-  RSTボタンをダブルクリックしてDFUモードに入ります。「Tracker L1」というディスク名が表示されます。
+  RSTボタンをダブルクリックしてDFUモードに入ります。ディスク名「Tracker L1」がポップアップします。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
 
@@ -300,15 +300,15 @@ Groveインターフェースを介してデバイスにセンサーを追加で
 
 ### DFUモードの終了
 
-DFUモードを終了するには、`Reset`ボタンを一度押します。
+`Reset`ボタンを一度押してDFUモードを終了します。
 
 ### 信号品質
 
 - **SNR**は通信リンクの品質を反映します。通常のデバイスは-7 dB以上で動作します。SNRが-10 dB未満のデバイスは性能が悪いことを示します。
 
-- **RSSI**はデバイスとその周辺環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
+- **RSSI**はデバイスとその周囲環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
 
-      最良の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
+      最高の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
 
 ### 互換性のあるアンテナ
 
@@ -318,6 +318,7 @@ L1 Proのアンテナ交換が必要な場合は、[こちらをクリック](ht
 - [ブートローダー](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) 3Dプリント参考ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [(V2 新4方向ジョイスティック) 3Dプリント参考ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
+- [L1エンクロージャーデザインチャレンジ](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [アウトラインファイル](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [TELEC認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
 - [FCC認証](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
