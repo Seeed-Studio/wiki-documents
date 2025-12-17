@@ -1,6 +1,6 @@
 ---
-description: 本wiki展示了如何在AI Box上使用YOLO模型进行跌倒、翻越障碍物和人员跟踪检测。
-title: AI Box上的YOLOv8用于跌倒、攀爬和跟踪检测
+description: 本 wiki 展示如何在 AI Box 上使用 YOLO 模型进行跌倒、翻越障碍和人员跟踪检测。
+title: AI Box 上的 YOLOv8 用于跌倒、攀爬和跟踪检测
 keywords:
   - Edge AI
   - rpi5
@@ -18,19 +18,54 @@ no_comments: false # for Disqus
 # YOLOv8 AI Box：跌倒、攀爬和跟踪检测
 
 
-## 介绍
+## 简介
 
-本项目将指导您如何使用[reComputed AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html)或[reComputed Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html)来实现使用YOLOv8模型的跌倒检测、攀爬检测和跟踪检测。
+本项目将指导您如何使用 [reComputed AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) 或 [reComputed Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) 来实现使用 YOLOv8 模型的跌倒检测、攀爬检测和跟踪检测。
 
 
 ## 硬件准备
 
-|                                               reCompuer AI Box                                              |                                               reComputer Industry AI Box                                               |
-| :----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-| ![Raspberry Pi AI Kit](https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image114993560.jpeg) | ![reComputer R1100](https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg) |
-| [**立即购买**](https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html?utm_source=PiAICourse&utm_medium=github&utm_campaign=Course) | [**立即购买**](https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html?utm_source=PiAICourse&utm_medium=github&utm_campaign=Course) |
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2100</th>
+  <th>reComputer AI Industrial R2100</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
 
-> 💡 **注意**：本项目需要reComputer AI Box或reComputer Industry AI Box。
+
+> 💡 **注意**：本项目需要 reComputer AI Box 或 reComputer Industry AI Box。
 
 
 ##  跌倒检测
@@ -48,7 +83,7 @@ git clone https://github.com/Seeed-Projects/fall_detection_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### 准备Python环境
+### 准备 python 环境
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -81,7 +116,7 @@ git clone https://github.com/Seeed-Projects/cross_fence_with_AIBox.git
 cd cross_fence_with_AIBox
 ```
 
-### 准备Python环境
+### 准备 python 环境
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate
@@ -100,7 +135,7 @@ python app.py -i ./scale_the_fence.mp4 -n ./yolov8n.hef --show-fps -l ./common/c
 <iframe width="800" height="400" src="https://www.youtube.com/embed/_-89czNbZ_M?list=PLpH_4mf13-A3Wm6hJp7JeT4DD9NXXUAca" title="Seeed Raspberry Pi AI Box Helps in Abnormal Event Detection: Fence Climbing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## 跟踪检测
+## 跟踪
 
 ### 安装运行环境
 
@@ -115,7 +150,7 @@ git clone https://github.com/Seeed-Projects/track_people_with_AIBox.git
 cd fall_detection_with_AIBox
 ```
 
-### 准备Python环境
+### 准备 python 环境
 
 ```bash
 python -m venv .env --system-site-packages  && source .env/bin/activate

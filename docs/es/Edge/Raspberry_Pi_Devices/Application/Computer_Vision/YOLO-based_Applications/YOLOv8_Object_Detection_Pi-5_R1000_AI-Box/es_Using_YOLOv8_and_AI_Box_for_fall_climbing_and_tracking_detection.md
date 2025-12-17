@@ -1,6 +1,6 @@
 ---
-description: Este wiki muestra cómo usar un modelo YOLO en el AI Box para caídas, escalamiento de barreras y seguimiento de personas.
-title: YOLOv8 en AI Box para Caídas, Escalamiento y Seguimiento
+description: Este wiki muestra cómo usar un modelo YOLO en el AI Box para caídas, escalada de barreras y seguimiento de personas.
+title: YOLOv8 en AI Box para Caídas, Escalada y Seguimiento
 keywords:
   - Edge AI
   - rpi5
@@ -15,20 +15,55 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# YOLOv8 AI Box: Caídas, Escalamiento y Seguimiento
+# YOLOv8 AI Box: Caídas, Escalada y Seguimiento
 
 
 ## Introducción
 
-Este proyecto te guiará sobre cómo usar el [reComputed AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) o [reComputed Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) para implementar detección de caídas, detección de escalamiento y detección de seguimiento usando el modelo YOLOv8.
+Este proyecto te guiará sobre cómo usar el [reComputed AI Box](https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html) o [reComputed Industry AI Box](https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html) para implementar detección de caídas, detección de escalada y detección de seguimiento usando el modelo YOLOv8.
 
 
 ## Preparación del hardware
 
-|                                               reCompuer AI Box                                              |                                               reComputer Industry AI Box                                               |
-| :----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-| ![Raspberry Pi AI Kit](https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image114993560.jpeg) | ![reComputer R1100](https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg) |
-| [**Comprar Ahora**](https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html?utm_source=PiAICourse&utm_medium=github&utm_campaign=Course) | [**Comprar Ahora**](https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html?utm_source=PiAICourse&utm_medium=github&utm_campaign=Course) |
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2100</th>
+  <th>reComputer AI Industrial R2100</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
 
 > 💡 **Nota**: Este proyecto requiere un reComputer AI Box o un reComputer Industry AI Box.
 
@@ -66,7 +101,7 @@ python app.py -i ./falldown_test.mp4 -n ./yolov8n.hef --show-fps -l ./common/coc
 <iframe width="800" height="400" src="https://www.youtube.com/embed/H0NaAevLo2k" title="How the Seeed Raspberry Pi AI Box Helps in Abnormal Event Detection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Escalamiento de vallas
+## Escalada de vallas
 
 ### Instalar el entorno de ejecución
 

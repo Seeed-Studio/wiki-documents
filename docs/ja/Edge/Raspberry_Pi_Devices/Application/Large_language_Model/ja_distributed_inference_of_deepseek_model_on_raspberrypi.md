@@ -1,6 +1,6 @@
 ---
-description: このwikiでは、Raspberry Pi AI boxでdeepseekモデルの分散推論を実演します。
-title: Raspberry Pi AI boxでのDeepSeekモデルの分散推論
+description: このwikiでは、Raspberry Pi AI boxでのdeepseekモデルの分散推論について説明します。
+title: Raspberry Pi AI box & Industrial boxでのDeepSeekモデルの分散推論
 keywords:
   - RasberryPi Ai box
   - Deepseek
@@ -14,37 +14,58 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# Raspberry PiでのDeepSeekモデルの分散推論
+# Raspberry Pi AI box & Industrial boxでのDeepSeekモデルの分散推論
 
 ## はじめに
 
-このwikiでは、[distributed-llama](https://github.com/b4rtaz/distributed-llama)を使用して複数のRaspberry Pi AI Boxで[DeepSeek](https://github.com/deepseek-ai/DeepSeek-LLM)モデルをデプロイする方法を説明します。このwikiでは、**8GBのRAMを搭載したRaspberry Pi**を**ルートノード**として、**4GBのRAMを搭載した3台のRaspberry Pi**を**ワーカーノード**として使用し、**DeepSeek 8Bモデル**を実行しました。推論速度は**毎秒6.06トークン**に達しました。
+このwikiでは、[distributed-llama](https://github.com/b4rtaz/distributed-llama)を使用して複数のRaspberry Pi AI Boxに[DeepSeek](https://github.com/deepseek-ai/DeepSeek-LLM)モデルをデプロイする方法について説明します。このwikiでは、**8GBのRAMを搭載したRaspberry Pi**を**ルートノード**として、**4GBのRAMを搭載した3台のRaspberry Pi**を**ワーカーノード**として使用し、**DeepSeek 8Bモデル**を実行しました。推論速度は**毎秒6.06トークン**に達しました。
 
 ## ハードウェアの準備
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>reComputer AI R2130</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2130</th>
+  <th>reComputer AI Industrial R2145</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## ソフトウェアの準備
 
 ### システムの更新：
 
-`Ctrl+Alt+T`でターミナルを開き、以下のコマンドを入力します：
+`Ctrl+Alt+T`でターミナルを開き、以下のようなコマンドを入力します：
 
 ```
 sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
@@ -54,7 +75,7 @@ sudo apt full-upgrade
 
 ### ルートノードとワーカーノードにdistributed llamaをインストール
 
-`Ctrl+Alt+T`でターミナルを開き、以下のコマンドを入力して[distributed-llama](https://github.com/b4rtaz/distributed-llama.git)をインストールします：
+`Ctrl+Alt+T`でターミナルを開き、以下のようなコマンドを入力して[distributed-llama](https://github.com/b4rtaz/distributed-llama.git)をインストールします：
 
 ```
 git clone https://github.com/b4rtaz/distributed-llama.git
@@ -65,7 +86,7 @@ make dllama-api
 
 ### ワーカーノードでの実行
 
-以下のコマンドを入力してワーカーノードを動作させます：
+次に、以下のようなコマンドを入力してワーカーノードを動作させます：
 
 ```
 cd distributed-llama
@@ -118,7 +139,7 @@ cd ..
 
 ## 結果
 
-以下は4台のRaspberry Piを使用した[DeepSeek Llama 8b](https://huggingface.co/b4rtaz/Llama-3_1-8B-Q40-Instruct-Distributed-Llama)モデルの推論結果です。
+以下は、4台のRaspberry Piを使用した[DeepSeek Llama 8b](https://huggingface.co/b4rtaz/Llama-3_1-8B-Q40-Instruct-Distributed-Llama)モデルの推論結果です。
 
 
 <div align="center">
@@ -129,7 +150,7 @@ cd ..
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

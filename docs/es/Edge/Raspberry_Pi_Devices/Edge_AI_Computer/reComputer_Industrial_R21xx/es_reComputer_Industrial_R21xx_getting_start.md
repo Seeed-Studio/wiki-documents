@@ -6,14 +6,14 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/recomputer-industrail-r2100.webp
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /es/recomputer_industrial_R21xx_getting_start
 last_update:
   date: 09/28/2025
   author: Nolan Chen
 ---
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -108,7 +108,7 @@ La serie reComputer Industrial R21xx es ideal para uso en aplicaciones de IA ind
         <td colspan="2">DC 9V~36V, Bloque de Terminales de 2 pines</td>
       </tr>
       <tr>
-        <td>PoE (como dispositivo alimentado)</td>
+        <td>PoE(como dispositivo alimentado)</td>
         <td colspan="2">IEEE 802.3at Estándar 25.5W PoE</td>
       </tr>
       <tr>
@@ -124,7 +124,7 @@ La serie reComputer Industrial R21xx es ideal para uso en aplicaciones de IA ind
       </tr>
       <tr>
         <td rowspan="2"> Ethernet </td>
-        <td colspan="3"> 1 x 10/100/1000 Mbps (soporta PoE PD) </td>
+        <td colspan="3"> 1 x 10/100/1000 Mbps(soporta PoE PD) </td>
       </tr>
       <tr>
         <td colspan="3"> 1 x 10/100 Mbps IEEE 802.3/802.3u </td>
@@ -138,11 +138,11 @@ La serie reComputer Industrial R21xx es ideal para uso en aplicaciones de IA ind
       </tr>
       <tr>
         <td> RS485 </td>
-        <td colspan="3"> 3x RS485 (Aislado) </td>
+        <td colspan="3"> 3x RS485(Aislado) </td>
       </tr>
       <tr>
         <td> RS232 </td>
-        <td colspan="3"> 1x RS232 (Aislado) </td>
+        <td colspan="3"> 1x RS232(Aislado) </td>
       </tr>
       <tr>
         <td rowspan="2"> DI </td>
@@ -164,14 +164,14 @@ La serie reComputer Industrial R21xx es ideal para uso en aplicaciones de IA ind
       </tr>
       <tr>
         <td>Ranura M.2</td>
-        <td>1x Ranura M.2 M-KEY 2280 para SSD NVMe；
-1x Ranura M.2 M-KEY 2280 para Acelerador de IA
+        <td>1x Ranura M.2 M-KEY 2280 para ;SSD NVMe；
+1x Ranura M.2 M-KEY 2280 para  Acelerador de IA
 1x Ranura M.2 NVMe, t, M.2 M-KEY 2280
 (Pre-instalado 1x Hailo-8 M.2 Aceleración de IA 26TOPS);
-1x Ranura M.2 B-KEY 3042/3052 para 5G/4G LTE;</td>
+1x  Ranura M.2 B-KEY  3042/3052 para 5G/4G LTE;</td>
         <td>1x Ranura M.2 M-KEY 2280 para SSD NVMe；
-1x Ranura M.2 M-KEY 2280 para Acelerador de IA;
-1x Ranura M.2 B-KEY 3042/3052 para 5G/4G LTE
+1x Ranura M.2 M-KEY 2280 para  Acelerador de IA;
+1x  Ranura M.2 B-KEY  3042/3052 para 5G/4G LTE
 2x Ranura M.2 NVMe, t, M.2 M-KEY 2280;
 1x Ranura M.2 NVMe, t, M.2 B-KEY </td>
       </tr>
@@ -267,7 +267,7 @@ La serie reComputer Industrial R21xx es ideal para uso en aplicaciones de IA ind
         <td colspan="3">Otros</td>
       </tr>
       <tr>
-        <td>UPS Supercondensador</td>
+        <td>UPS de Supercondensador</td>
         <td colspan="2">Módulo SuperCAP UPS LTC3350*</td>
       </tr>
       <tr>
@@ -350,7 +350,7 @@ La serie reComputer Industrial R21xx es ideal para uso en aplicaciones de IA ind
 
 ![](https://seeed-projects.github.io/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero/assets/images/architecture-2bfc6ed440e1add56388738e87558050.png)
 
-La Suite de Software de IA Hailo proporciona herramientas poderosas para ejecutar modelos de IA de manera eficiente en aceleradores de hardware. Está diseñada para integrarse perfectamente con marcos de aprendizaje profundo existentes, ofreciendo flujos de trabajo fluidos para desarrolladores. El proceso involucra generar un HEF (Archivo Binario Ejecutable Hailo) desde un archivo ONNX en el Entorno de Construcción de Modelos. Una vez creado, el archivo HEF se transfiere a la máquina de inferencia (Entorno de Tiempo de Ejecución), donde se utiliza para ejecutar inferencia con la API HailoRT. El script proporcionado facilita la conversión de un archivo ONNX en un archivo HEF dentro del Entorno de Construcción de Modelos.
+La Suite de Software de IA Hailo proporciona herramientas poderosas para ejecutar modelos de IA de manera eficiente en aceleradores de hardware. Está diseñada para integrarse perfectamente con marcos de aprendizaje profundo existentes, ofreciendo flujos de trabajo fluidos para desarrolladores. El proceso implica generar un HEF (Archivo Binario Ejecutable Hailo) desde un archivo ONNX en el Entorno de Construcción de Modelos. Una vez creado, el archivo HEF se transfiere a la máquina de inferencia (Entorno de Tiempo de Ejecución), donde se utiliza para ejecutar inferencia con la API HailoRT. El script proporcionado facilita la conversión de un archivo ONNX en un archivo HEF dentro del Entorno de Construcción de Modelos.
 
 > **Nota:**
 > **Si quieres aprender más sobre ejemplos de uso de Hailo NPU, por favor haz clic en este [enlace](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero).**
@@ -377,14 +377,14 @@ El reComputer Industrial R21xx soporta dos opciones de fuente de alimentación: 
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/R1100/power_terminal.PNG" style={{width:100, height:'auto'}}/></div>
 
-El reComputer Industrial R21xx se alimenta con un voltaje DC de terminal de 9~36V. La fuente de alimentación se conecta a través del conector de bloque de terminal de alimentación de 2 pines.
+El reComputer Industrial R21xx se alimenta con un voltaje DC terminal de 9~36V. La fuente de alimentación se conecta a través del conector de bloque terminal de alimentación de 2 pines.
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
 
 Para conectar a tierra el reComputer Industrial R21xx, el cable de tierra puede asegurarse al tornillo ubicado a la derecha del terminal de alimentación.
 
 **PoE**
 
-El puerto ETH0(PoE PD) del reComputer Industrial R21xx puede soportar alimentación PoE, proporcionando una manera conveniente y eficiente de alimentar el dispositivo a través de Ethernet. Esta opción simplifica el proceso de instalación y reduce la cantidad de cableado requerido, convirtiéndolo en una solución ideal para aplicaciones con fuentes de alimentación limitadas o donde las tomas de corriente no están fácilmente disponibles.
+El puerto ETH0(PoE PD) del reComputer Industrial R21xx puede soportar alimentación PoE, proporcionando una manera conveniente y eficiente de alimentar el dispositivo a través de Ethernet. Esta opción simplifica el proceso de instalación y reduce la cantidad de cableado requerido, convirtiéndola en una solución ideal para aplicaciones con fuentes de alimentación limitadas o donde las tomas de corriente no están fácilmente disponibles.
 
 - PoE PD: IEEE 802.3at, 25.5W Máx
 
@@ -517,7 +517,7 @@ Este comando mostrará que el GPIO correspondiente al Buzzer_EN es gpio627.
 
 ### RS485
 
-El equipo de la serie reComputer Industrial R2100 incluye 2x puertos RS485, terminales phoenix de 6 pines con espaciado de 3.5mm.
+El equipo reComputer Industrial R2100 Serie incluye 2x puertos RS485, terminales phoenix de 6 pines con espaciado de 3.5mm.
 La serigrafía de un solo RS485 es "A/B/GND".
 
 **Definiciones de Pines**  
@@ -571,7 +571,7 @@ Nota: El empaque del producto contiene algunas resistencias terminales de 120 Oh
 
 ### RS232
 
-El equipo de la serie reComputer Industrial R21xx incluye 1x puerto RS232, terminales phoenix de 6 pines con espaciado de 3.5mm.
+El equipo reComputer Industrial R21xx Serie incluye 1x puerto RS232, terminales phoenix de 6 pines con espaciado de 3.5mm.
 La serigrafía de un solo RS232 es "TX/RX/GND".
 
 **Definición de Pines**
@@ -624,7 +624,7 @@ El diagrama esquemático de los cables RS232 es el siguiente:
 
 ### DI (Entrada Digital)
 
-El equipo de la serie reComputer Industrial R2000 incluye 4x puertos DI, terminales phoenix de 3 pines con espaciado de 3.5mm.
+El equipo reComputer Industrial R2000 Serie incluye 4x puertos DI, terminales phoenix de 3 pines con espaciado de 3.5mm.
  La serigrafía de un solo DI es "DI/G_DI".
 
 **Definición de Pines**
@@ -701,7 +701,7 @@ El diagrama esquemático de un solo cable DI es el siguiente:
 
 ### DO (Salida Digital)
 
-El equipo de la serie reComputer Industrial R2000 incluye 4x puertos DO, terminales phoenix de 3 pines con espaciado de 3.5mm.
+El equipo reComputer Industrial R2000 Serie incluye 4x puertos DO, terminales phoenix de 3 pines con espaciado de 3.5mm.
 La serigrafía de un solo DO es "DO/G_DO".
 **Definición de Pines**
 Los pines del terminal se definen de la siguiente manera:
@@ -773,7 +773,7 @@ El diagrama esquemático de un solo cable DO es el siguiente:
 
 ### CAN FD
 
-El equipo de la serie reComputer Industrial R2100 incluye 2x puertos CAN FD, terminales phoenix de 6 pines con espaciado de 3.5mm.
+El equipo reComputer Industrial R2100 Serie incluye 2x puertos CAN FD, terminales phoenix de 6 pines con espaciado de 3.5mm.
 La serigrafía de un solo CAN FD es "CANH/CANL/GND".
 **Definición de Pines**
 Los pines del terminal se definen de la siguiente manera:
@@ -867,12 +867,12 @@ Las diferencias de tamaño entre las tarjetas SIM estándar, Micro SIM y Nano SI
   <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/M.2_2.png" style={{width:400, height:'auto'}}/>
  </div>
 
-| **Ranura**       | **Protocolos Soportados**   |  
+| **Ranura**       | **Protocolos Compatibles**   |  
 |---------------|--------------------------|  
 | **M.2 M-KEY 2280** | M.2 NVMe SSD        |  
 | **M.2 M-KEY 2280** | M.2 AI  Accelerator |  
 
-La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para acomodar SSD NVMe M.2 2280 de 128GB, 256GB, 512GB, 1TB y 2TB de capacidad. Esta ranura permite la expansión de almacenamiento de alta velocidad, permitiendo a los usuarios mejorar el rendimiento y la capacidad de su sistema.
+La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para acomodar SSD NVMe M.2 2280 con capacidades de 128GB, 256GB, 512GB, 1TB y 2TB. Esta ranura permite la expansión de almacenamiento de alta velocidad, permitiendo a los usuarios mejorar el rendimiento y la capacidad de su sistema.
 
 > **Nota**  
 > Hay dos usos principales para las tarjetas SSD:
@@ -880,7 +880,7 @@ La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para 
 > 1. **Almacenamiento de Alta Capacidad:** Las tarjetas SSD pueden utilizarse para necesidades de almacenamiento de alta capacidad.
 > 2. **Unidad de Arranque con Imagen:** Otro uso implica utilizar el SSD tanto como almacenamiento de alta capacidad como para almacenar imágenes del sistema, permitiendo arrancar directamente desde la tarjeta SSD.
 >  
-> Es importante tener en cuenta que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si tiene la intención de usarla como unidad de arranque y no está seguro de qué modelo comprar, recomendamos optar por nuestro SSD de 2TB recomendado (SKU 114993467). Este modelo ha sido probado y verificado para funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
+> Es importante tener en cuenta que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si tiene la intención de usarla como unidad de arranque y no está seguro sobre qué modelo comprar, recomendamos optar por nuestro SSD de 2TB recomendado (SKU 114993467). Este modelo ha sido probado y verificado para funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
 
 La ranura M.2 M-KEY 2280 en el reComputer Industrial R2000 está diseñada para acomodar PCIE M.2 AI Accelerator. Y la serie R21xx-12 ha sido preinstalada con un Hailo-8 M.2 AI Acceleration de hasta 26TOPS.
 
@@ -948,27 +948,27 @@ Aquí está la lista de accesorios y módulos opcionales:
       <tr>
         <td rowspan="7">Debe usarse junto para la Función LoRa®WAN</td>
         <td rowspan="6">Módulo LoRa®</td>
-        <td>Módulo Gateway LoRaWAN opcional por región (USB) - US915</td>
+        <td>Módulo Gateway LoRaWAN Opcional por Región (USB) - US915</td>
         <td>114992969</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN opcional por región(USB)-US915</td>
+        <td>Módulo Gateway LoRaWAN Opcional por Región(USB)-US915</td>
         <td>114992629</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN opcional por región(USB)-US915</td>
+        <td>Módulo Gateway LoRaWAN Opcional por Región(USB)-US915</td>
         <td>114992991</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN opcional por región(SPI)-EU868</td>
+        <td>Módulo Gateway LoRaWAN Opcional por Región(SPI)-EU868</td>
         <td>114993268</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN opcional por región(SPI)-EU868</td>
+        <td>Módulo Gateway LoRaWAN Opcional por Región(SPI)-EU868</td>
         <td>114992549</td>
       </tr>
       <tr>
-        <td>Módulo Gateway LoRaWAN opcional por región(USB)-EU868</td>
+        <td>Módulo Gateway LoRaWAN Opcional por Región(USB)-EU868</td>
         <td>114992628</td>
       </tr>
       <tr>
@@ -991,7 +991,7 @@ Aquí está la lista de accesorios y módulos opcionales:
       <tr>
         <td rowspan="8">Antena 4G con módulo 4G para función 4G, antena GPS con módulo 4G para función GPS</td>
         <td rowspan="6">Módulo 4G</td>
-        <td>Módulo LTE Cat 4 EC25-AFXGA-Mini-PCIe - para América del Norte</td>
+        <td>Módulo LTE Cat 4 EC25-AFXGA-Mini-PCIe - para Norteamérica</td>
         <td>113991134</td>
       </tr>
       <tr>
@@ -1097,7 +1097,7 @@ La ranura Mini-PCIe soporta módulo LoRa® usando el protocolo USB y SPI. El mó
 
 ### Módulo Zigbee
 
-La ranura Mini-PCIe ofrece soporte para módulos Zigbee utilizando el protocolo USB, permitiendo la integración perfecta de la funcionalidad Zigbee en dispositivos compatibles. Esta característica permite comunicación y control eficiente dentro de redes Zigbee, mejorando la versatilidad y conectividad del sistema. Con la ranura Mini-PCIe disponible para módulos Zigbee, los usuarios tienen la flexibilidad de implementar diversas aplicaciones para mayor confiabilidad.
+La ranura Mini-PCIe ofrece soporte para módulos Zigbee que utilizan el protocolo USB, permitiendo la integración perfecta de la funcionalidad Zigbee en dispositivos compatibles. Esta característica permite comunicación y control eficiente dentro de redes Zigbee, mejorando la versatilidad y conectividad del sistema. Con la ranura Mini-PCIe disponible para módulos Zigbee, los usuarios tienen la flexibilidad de implementar diversas aplicaciones para mayor confiabilidad.
 
 > Nota  
 > Tenga en cuenta que si requiere funcionalidad Zigbee, es necesario comprar el módulo Zigbee correspondiente y antena externa, y seguir las instrucciones en la sección 4.5 "Ensamblar Módulo 4G/LoRa®/Zigbee y Antena".
@@ -1115,7 +1115,7 @@ El reComputer Industrial R2000 soporta SSD NVMe 2280 a través del uso de una ra
 >
 > 1. **Almacenamiento de Alta Capacidad:** Las tarjetas SSD pueden utilizarse para necesidades de almacenamiento de alta capacidad.
 > 2. **Unidad de Arranque con Imagen:** Otro uso involucra usar el SSD tanto como almacenamiento de alta capacidad como para almacenar imágenes del sistema, permitiendo arrancar directamente desde la tarjeta SSD.
-> Es importante tener en cuenta que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si pretende usarla como unidad de arranque y no está seguro sobre qué modelo comprar, recomendamos optar por nuestro SSD de 1TB recomendado(SKU 112990267). Este modelo ha sido probado y verificado para funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
+> Es importante tener en cuenta que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si pretende usarla como unidad de arranque y no está seguro sobre qué modelo comprar, recomendamos optar por nuestro SSD recomendado de 1TB(SKU 112990267). Este modelo ha sido probado y verificado para funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
 
 ### Chip de Encriptación TPM 2.0
 
