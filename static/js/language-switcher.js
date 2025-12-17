@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-11 13:53:39 (北京时间)
-// 多语言页面: 2076 个
+// 生成时间: 2025-12-17 13:50:58 (北京时间)
+// 多语言页面: 2082 个
 
 (function() {
   'use strict';
@@ -4099,6 +4099,11 @@
   ],
   "/starai_arm_ros_moveit": [
     "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_giant_bipedal_wheeled_robot": [
     "en",
     "es",
     "ja"
@@ -8224,6 +8229,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_voice_assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_volume": [
     "cn",
     "en",
@@ -8369,6 +8380,30 @@
     "ja"
   ],
   "/xiao_esp32c3_with_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_esp-mesh_audio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_micropyhton": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_with_platformio": [
     "cn",
     "en",
     "es",

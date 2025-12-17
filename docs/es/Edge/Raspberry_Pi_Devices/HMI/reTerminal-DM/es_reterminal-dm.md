@@ -1,5 +1,5 @@
 ---
-description: Introducción a reTerminal DM 
+description: Introducción a reTerminal DM
 title: Introducción a reTerminal DM
 keywords:
   - Edge
@@ -34,7 +34,7 @@ Está equipado con rica escalabilidad y conectividad híbrida, soportando bus CA
 - HMI, PLC, Panel PC y gateway en uno: Perfecto para los dispositivos hub distribuidos
 - Programación de código bajo para aplicaciones basadas en eventos: Node-RED integrado nativamente para edición basada en flujo y despliegue con un clic, compatible con todo el software que funciona en Raspberry Pi
 - Diseño robusto para entorno de trabajo duro: Panel frontal IP65, temperatura de operación -10~50°C
-- Conectividad híbrida: Soporte 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, bus CAN, Ethernet 1000M, USB, HDMI
+- Conectividad híbrida: Soporta 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, bus CAN, Ethernet 1000M, USB, HDMI
 - Diseño de código abierto en software y hardware: Alimentado por Raspberry Pi CM4, bienvenida personalización o derivados
 - [Garantía del producto: Garantía de dos años](/es/reterminal-dm-warranty)
 
@@ -124,7 +124,7 @@ Está equipado con rica escalabilidad y conectividad híbrida, soportando bus CA
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}> </td>
-      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Jack de Audio 3.5mm</td>
+      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Conector de Audio 3.5mm</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Cámara</td>
@@ -171,7 +171,7 @@ Está equipado con rica escalabilidad y conectividad híbrida, soportando bus CA
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>40pin GPIO</td>
-      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Interior</td>
+      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Interno</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={2} style={{height: 18, width: '98.6555%'}}><strong>Comunicación Inalámbrica</strong></td>
@@ -239,7 +239,7 @@ Está equipado con rica escalabilidad y conectividad híbrida, soportando bus CA
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Montaje</td>
-      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Panel, VESA, Riel Din</td>
+      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Panel, VESA, Din-Rail</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Peso (Neto)</td>
@@ -287,7 +287,7 @@ Está equipado con rica escalabilidad y conectividad híbrida, soportando bus CA
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/power-diagram.png" /></div>
 
-El reTerminal DM soporta dos opciones de fuente de alimentación: terminal DC y puerto PoE. Por defecto, el reTerminal DM se alimenta a través del terminal DC, mientras que **la fuente de alimentación PoE es opcional**. Esto proporciona flexibilidad en la selección de fuente de alimentación y permite una fácil integración con varias fuentes de energía.
+El reTerminal DM soporta dos opciones de fuente de alimentación: terminal DC y puerto PoE. Por defecto, el reTerminal DM se alimenta a través del terminal DC, mientras que **la fuente de alimentación PoE es opcional**. Esto proporciona flexibilidad en la selección de la fuente de alimentación y permite una fácil integración con varias fuentes de energía.
 
 ### Terminal de alimentación
 
@@ -312,13 +312,13 @@ Por favor, consulte la tabla a continuación para el consumo de energía probado
 
 | Estado   | Voltaje | Corriente | Consumo de Energía | Descripción |
 |   ---      |    ---    |   ---      |         ---          |        ---    |
-|Apagado  |         |  0.6mA  |                   | Prueba de consumo de energía estático en estado de apagado y sin alimentación.|
+|Apagado  |         |  0.6mA  |                   | Prueba de consumo de energía estático en estado de apagado y sin energía.|
 |Inactivo      |24V      |  0.165A |    3.96W          | Para probar la corriente de entrada al suministrar energía de 24V al dispositivo reTerminal DM a través del conector Terminal mientras ejecuta el sistema predeterminado de Seeed Studio, sin ejecutar ningún programa de prueba.|
 |Carga Completa |24V      |  0.37A  |    8.88W          | Configurar la CPU para ejecutar a carga completa usando el comando "stress -c 4", mientras reproduce un video y realiza comunicación CAN y RS485. Sin dispositivos externos conectados. |
 
 ### Encendido y Apagado
 
-El reTerminal DM no viene con un botón de encendido por defecto, y el sistema se iniciará automáticamente una vez que se conecte la alimentación. Al apagar, por favor seleccione la opción de apagado en el sistema operativo y espere a que el sistema se apague completamente antes de cortar la alimentación. Para reiniciar el sistema, simplemente reconecte la alimentación.
+El reTerminal DM no viene con un botón de encendido por defecto, y el sistema se iniciará automáticamente una vez que se conecte la energía. Al apagar, por favor seleccione la opción de apagado en el sistema operativo y espere a que el sistema se apague completamente antes de cortar la energía. Para reiniciar el sistema, simplemente reconecte la energía.
 
 :::note
 Tenga en cuenta que después del apagado, por favor espere al menos 10 segundos antes de reiniciar el sistema para permitir que los condensadores internos se descarguen completamente.
@@ -364,7 +364,7 @@ El reTerminal DM cuenta con tres indicadores LED que sirven para señalar el est
 
 | Etiqueta | Señal   | Fuente de Señal | Color  | Descripción |
 |  ---  |  ---     |     ---       |  ---   |     ---     |
-| PWR   | LED_nPWR | CM4           | Amarillo | Usado para indicar la alimentación del CM4. Cuando el CM4 está encendido normalmente, el LED se encenderá|
+| PWR   | LED_nPWR | CM4           | Amarillo | Usado para indicar el suministro de energía del CM4. Cuando el CM4 está encendido normalmente, el LED se encenderá|
 |USER   |          |PCA9535 - GPIO | Rojo    | Función definida por el usuario |
 |ACT    | LED_nACT |CM4            | Verde  | Usado para indicar varios estados del sistema. Ver la tabla a continuación.|
 
@@ -386,8 +386,8 @@ El reTerminal DM cuenta con tres indicadores LED que sirven para señalar el est
 | 2 | 4 | Discrepancia de firma/hash de archivo - Pi 4|
 | 4 | 4 | Tipo de placa no soportado|
 | 4 | 5 | Error fatal de firmware|
-| 4 | 6 | Falla de alimentación tipo A|
-|4 | 7 | Falla de alimentación tipo B |
+| 4 | 6 | Falla de energía tipo A|
+|4 | 7 | Falla de energía tipo B |
 
 </div>
 
@@ -395,9 +395,9 @@ El reTerminal DM cuenta con tres indicadores LED que sirven para señalar el est
 Si el LED ACT parpadea en un patrón regular de cuatro parpadeos, no puede encontrar bootcode (start.elf)<br/>
 Si el LED ACT parpadea en un patrón irregular entonces el arranque ha comenzado.<br/>
 Si el LED ACT no parpadea, entonces el código EEPROM podría estar corrupto, intente de nuevo sin nada conectado para asegurarse.<br/>
-Para más detalles por favor consulte el foro de Raspberry Pi:<br/>
+Para más detalles por favor revise el foro de Raspberry Pi:<br/>
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums<br/>
-Para más detalles por favor consulte el foro de Raspberry Pi: https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151<br/>
+Para más detalles por favor revise el foro de Raspberry Pi: https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151<br/>
 :::
 
 Para activar el LED USER por favor use el siguiente comando:
@@ -449,7 +449,7 @@ Para probar y controlar el zumbador puede simplemente establecer `1` o `0` al ar
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/multi-functional-terminal.png" /></div>
 
-#### Tabla de comparación de terminales y señales
+#### Tabla de comparación de terminal y señal
 
 <div class="table-center">
 
@@ -459,7 +459,7 @@ Para probar y controlar el zumbador puede simplemente establecer `1` o `0` al ar
 
 </div>
 
-#### Tabla de asignación de pines de terminal
+#### Tabla de asignación de pines del terminal
 
 <div class="table-center">
 
@@ -556,9 +556,9 @@ raspi-gpio get 16
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio16-state.png" /></div>
 
-donde el estado actual del `GPIO16` está configurado como `INPUT` y `pulling Down` el nivel actual del pin es `1` lo que significa `High` lo que también significa que la Entrada Digital Terminal actual `DI1` es `Low` según la tabla anterior
+donde el estado actual del `GPIO16` está configurado como `INPUT` y `pulling Down` el nivel actual del pin es `1` lo que significa `Alto` lo que también significa que la Entrada Digital Terminal actual `DI1` es `Bajo` según la tabla anterior
 
-Pongamos una señal `High` en el `DI1` conectando el terminal `DI1` al pin `Positive` de la `fuente de 5V`, luego la `Ground` de la `fuente de 5V` al `GND_DI`
+Pongamos una señal `Alto` en el `DI1` conectando el terminal `DI1` al pin `Positivo` de la `fuente de 5V`, luego la `Tierra` de la `fuente de 5V` al `GND_DI`
 
 ```sh
 raspi-gpio get 16
@@ -566,7 +566,7 @@ raspi-gpio get 16
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio16-state-high.png" /></div>
 
-Donde el nivel actual del pin del `GPIO16` es `0` lo que significa `Low` lo que también significa que la Entrada Digital Terminal actual `DI1` es `High` según la tabla anterior
+Donde el nivel actual del pin del `GPIO16` es `0` lo que significa `Bajo` lo que también significa que la Entrada Digital Terminal actual `DI1` es `Alto` según la tabla anterior
 
 ###### Salida Digital
 
@@ -587,9 +587,9 @@ raspi-gpio get 24
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio24-state-set.png" /></div>
 
-Donde el `GPIO24` correspondiente a `DO1` está configurado al estado `Output` y `pulling down`, y el nivel del `GPIO24` está configurado como `High`
+Donde el `GPIO24` correspondiente a `DO1` está configurado al estado `Output` y `pulling down`, y el nivel del `GPIO24` está configurado como `Alto`
 
-Ahora configuremos el `GPIO24` como `Low` lo que significa que la Salida `DO1` se maneja como `High`.
+Ahora configuremos el `GPIO24` como `Bajo` lo que significa que la Salida `DO1` se maneja como `Alto`.
 
 ```sh
 #set current pin state
@@ -610,7 +610,7 @@ El reTerminal DM está equipado con una interfaz RS485 a través de su conector 
 
 :::note
 Una resistencia terminal de 120Ω ha sido instalada por defecto.
-La interfaz RS485 usa una fuente de alimentación aislada, lo que significa que la señal de tierra para dispositivos externos conectados a la interfaz RS485 debe conectarse al pin GND_ISO.
+La interfaz RS485 utiliza una fuente de alimentación aislada, lo que significa que la señal de tierra para dispositivos externos conectados a la interfaz RS485 debe conectarse al pin GND_ISO.
 :::
 
 Para probar e interfaz con el RS485, debes preparar un adaptador USB a RS485, y por favor asegúrate de que la conexión sea la misma que se muestra a continuación:
@@ -618,7 +618,7 @@ Para probar e interfaz con el RS485, debes preparar un adaptador USB a RS485, y 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/rs485.png" /></div>
 
 :::note
-Por favor nota que el puerto RS485 es `/dev/ttyACM1` o `/dev/ttyCH340USB1` dependiendo de qué OS estés ejecutando.
+Por favor nota que el puerto RS485 es `/dev/ttyACM1` o `/dev/ttyCH340USB1` dependiendo de qué SO estés ejecutando.
 :::
 Por favor usa tu herramienta de comunicación serie favorita en tu computadora host para realizar la prueba a continuación:
 ejecuta el código python en reTerminal DM para probar la conexión serie RS485, donde este código configurará el puerto serie RS485 como sigue
@@ -694,10 +694,10 @@ else:
 El conector de 20 pines del reTerminal DM también incluye una interfaz RS232, que no está aislada. Porque la comunicación RS232 típicamente usa niveles de voltaje CMOS y tiene distancias de comunicación cortas, haciéndola menos susceptible a interferencias electromagnéticas del entorno.
 
 :::note
-Por favor nota que el pin Ground necesita conectarse al pin `GD` junto al pin `RX`, asegúrate de que no sea el pin `GS`.
+Por favor nota que el pin de Tierra necesita conectarse al pin `GD` junto al pin `RX`, asegúrate de que no sea el pin `GS`.
 :::
 
-Aquí está el script python de prueba para enviar datos desde reTerminal DM a la computadora host:
+Aquí está el script de prueba python para enviar datos desde reTerminal DM a la computadora host:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232-serial-send-example.png" /></div>
 
@@ -734,7 +734,7 @@ except KeyboardInterrupt:
 
 ```
 
-Aquí está el script python de prueba para recibir datos en reTerminal DM enviados desde la computadora host,
+Aquí está el script de prueba python para recibir datos en reTerminal DM enviados desde la computadora host,
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232-serial-receive-example.png" /></div>
 
@@ -778,7 +778,7 @@ except KeyboardInterrupt:
 El reTerminal DM cuenta con una interfaz CAN que soporta el protocolo CAN FD (Controller Area Network Flexible Data-Rate). La interfaz CAN está aislada usando aislamiento capacitivo, que proporciona excelente protección EMI y asegura comunicación confiable en aplicaciones industriales y de automatización. Una resistencia terminal de 120Ω ha sido instalada por defecto.
 
 :::note
-La interfaz CAN usa una fuente de alimentación aislada, lo que significa que la señal de tierra para dispositivos externos conectados a la interfaz CAN debe conectarse al pin GND_ISO
+La interfaz CAN utiliza una fuente de alimentación aislada, lo que significa que la señal de tierra para dispositivos externos conectados a la interfaz CAN debe conectarse al pin GND_ISO
 :::
 
 Para probar e interfaz con el bus CAN:
@@ -858,7 +858,7 @@ USB Tipo-C es un puerto USB 2.0 utilizado para depuración serie o flasheo de im
 El reTerminal DM utiliza una ranura para tarjeta SIM de tamaño estándar comúnmente encontrada en aplicaciones industriales, que requiere una tarjeta SIM estándar con dimensiones de 25mm x 15mm.
 
 :::note
-Ten en cuenta que la versión estándar del reTerminal DM no viene con un módulo 4G. Si requieres funcionalidad 4G, se debe comprar por separado un módulo 4G adicional. Por lo tanto, esta ranura para tarjeta SIM solo funciona si has colocado la versión compatible del módulo 4G en la ranura PCIe 4G.
+Ten en cuenta que la versión estándar del reTerminal DM no viene con un módulo 4G. Si requieres funcionalidad 4G, se debe comprar un módulo 4G adicional por separado. Por lo tanto, esta ranura para tarjeta SIM solo funciona si colocas la versión compatible del módulo 4G en la ranura PCIe 4G.
 :::
 
 ### Botón de Reinicio
@@ -871,7 +871,7 @@ Hay un Interruptor de Botón Pulsador Mini ubicado en el orificio de reinicio de
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/audio-jack.png" /></div>
 
-El reTerminal DM tiene un conector de auriculares de 3.5mm, que soporta salida de sonido, y puede conectarse a auriculares externos, altavoces, etc.
+reTerminal DM tiene un conector de auriculares de 3.5mm, que soporta salida de sonido, y puede conectarse a auriculares externos, altavoces, etc.
 
 :::note
 El conector de auriculares solo soporta salida de sonido y no soporta la función de grabación de micrófono.
@@ -895,7 +895,7 @@ El reTerminal DM viene con una interfaz Ethernet Gigabit nativa del CM4 que sopo
 
 #### GPIO de 40 Pines
 
-El diseño clásico de GPIO de 40 pines de Raspberry Pi se mantiene dentro del reTerminal DM, y la asignación de pines permanece igual que en la Raspberry Pi 4B. Los usuarios necesitan abrir la cubierta trasera para usar estos GPIOs. Debe notarse que debido a los recursos limitados del CM4 IO, el GPIO de 40 pines y muchas interfaces periféricas están multiplexadas, por lo que necesitas prestar especial atención al conflicto al usar GPIOs. Para información detallada de asignación de pines, consulta la siguiente tabla.
+El diseño clásico de GPIO de 40 pines de Raspberry Pi se mantiene dentro del reTerminal DM, y la definición de pines permanece igual que la Raspberry Pi 4B. Los usuarios necesitan abrir la cubierta trasera para usar estos GPIOs. Debe notarse que debido a los recursos limitados del CM4 IO, el GPIO de 40 pines y muchas interfaces periféricas están multiplexadas, por lo que necesitas prestar especial atención al conflicto al usar GPIOs. Para información detallada de asignación de pines, consulta la siguiente tabla.
 
 <div class="table-center">
 
@@ -1116,7 +1116,7 @@ PASO 1: Abre el archivo watchdog.conf para editarlo, generalmente ubicado en /et
 sudo nano /etc/watchdog.conf
 ```
 
-PASO 2: Busca las opciones de configuración "watchdog-device" y "watchdog-timeout" bajo `/etc/watchdog.conf`, configúralas como sigue.
+PASO 2: Busca las opciones de configuración "watchdog-device" y "watchdog-timeout" bajo `/etc/watchdog.conf`, por favor configúralas como sigue.
 
 :::note
 podrías experimentar un reinicio instantáneo cuando la opción `watchdog-timeout` se establece por debajo de `60`, para utilizar el watchdog de hardware necesitas configurar el `watchdog-device` como `/dev/watchdog1`, donde la configuración predeterminada sin `1` está utilizando el dispositivo watchdog de Broadcom.
@@ -1139,7 +1139,7 @@ watchdog-timeout = 60
 Por ejemplo, si quieres establecer el tiempo de timeout del watchdog a 60 segundos, puedes establecer el valor de `watchdog-timeout` a `60`, lo que significa que si el watchdog no recibe una señal de reinicio dentro de 60 segundos, activará una operación de reinicio automático, asumiendo que el sistema se ha bloqueado.
 
 :::warning
-puedes probar si el watchdog está activo con el siguiente comando, donde estos comandos pondrán el sistema en parada, ten cuidado al ejecutar los siguientes comandos:
+puedes probar si el watchdog está activo con el siguiente comando, donde estos comandos pondrán el sistema en parada, por favor ten cuidado al realizar los siguientes comandos:
 
 ```sh
 sudo su
@@ -1147,7 +1147,7 @@ echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
 
-Ahora tu reTerminal DM debería haberse reiniciado después del tiempo que estableciste para el watchdog-timeout
+Ahora tu reTerminal DM debería haberse reiniciado después del tiempo que hayas establecido para el watchdog-timeout
 :::
 
 #### Retroiluminación
@@ -1183,7 +1183,7 @@ La interfaz de cámara CSI está reservada en la placa principal del reTerminal 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/camera_version.png" /></div>
 
 :::note
-Ten en cuenta que la versión estándar del reTerminal DM no viene con una abertura para cámara en el panel frontal, por lo tanto, la funcionalidad de cámara no está disponible para el producto estándar. Si tienes un requerimiento de cámara personalizada, contacta odm@seeed.cc
+Ten en cuenta que la versión estándar del reTerminal DM no viene con una abertura para cámara en el panel frontal, por lo tanto, la funcionalidad de cámara no está disponible para el producto estándar. Si tienes un requerimiento de cámara personalizada, por favor contacta odm@seeed.cc
 :::
 
 ### Módulo 4G
@@ -1202,9 +1202,9 @@ Ten en cuenta que la versión estándar del reTerminal DM no viene con una abert
 - Módulo 4G EC25-EUX x1
 - Tarjeta SIM x1
 
-**Paso 1.** Consulta la guía de [Ensamblaje de Hardware del Módulo 4G EC25](/es/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) para instalar el `Módulo 4G EC25` en la `ranura PCIe 4G/LTE` donde deberías ver la serigrafía *`4G/LTE`*, y también inserta la tarjeta SIM habilitada para 4G en la [ranura de tarjeta SIM](/es/reterminal-dm/#sim-card-slot), antes de encender el sistema.
+**Paso 1.** Por favor consulta la guía de [Ensamblaje de Hardware del Módulo 4G EC25](/es/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) para instalar el `Módulo 4G EC25` en la `ranura PCIe 4G/LTE` donde deberías ver la serigrafía *`4G/LTE`*, y por favor también inserta la tarjeta sim habilitada para 4G en la [ranura de tarjeta sim](/es/reterminal-dm/#sim-card-slot), antes de encender el sistema.
 
-**Paso 2.** Verifica si el EC25-EUX es detectado usando ```lsusb```
+**Paso 2.** Verifica si EC25-EUX es detectado usando ```lsusb```
 
 ```
 lsusb
@@ -1231,7 +1231,7 @@ una vez que la conexión serial se abra, escribe AT y presiona 'Enter', y deber�
 
 **Paso 5.** Habilita el módulo 4G para conectarse a la red 4G
 
-En la misma ventana serial de minicom escribe:
+En la misma ventana serial de minicom por favor escribe:
 
 ```sh
 AT+QCFG="usbnet"
@@ -1249,7 +1249,7 @@ Luego ingresa el siguiente comando para forzar el reinicio del módem:
 AT+CFUN=1,1
 ```
 
-Luego puedes reiniciar o esperar un momento para que el módulo obtenga internet de tu operador de tarjeta SIM.
+Luego podrías reiniciar o esperar un momento para que el módulo obtenga internet de tu operador de tarjeta sim.
 
 También puedes usar el comando `ifconfig` para consultar el estado de red del reTerminal DM.
 
@@ -1315,7 +1315,7 @@ cd ~/sx1302_hal/packet_forwarder
 vim reset_lgw.sh
 ```
 
-Modifique el script reset_lgw.sh con VIM como sigue:
+Modifique el script reset_lgw.sh con un editor de texto como sigue:
 
 ```sh
 #!/bin/bash
@@ -1397,7 +1397,8 @@ sed -i 's/spidev0.0/spidev0.1/g'  global_conf.json.sx1250.US915
 
 **Paso 6.** Iniciar Módulo LoraWAN®
 
-Luego ejecute el siguiente código para iniciar el Módulo LoraWAN® según la versión de frecuencia de operación de su WM1302.
+Elija su Servidor de Red LoRaWAN preferido `server_address` y el EUI del gateway `gateway_ID` en el correspondiente `global_conf.json.sx1250.xxxxx` basado en el módulo que esté usando, y modifique el `puerto up/down` a `1700`. Luego ejecute el siguiente código para iniciar el concentrador:
+
 
 ```sh
 cd ~/sx1302_hal/packet_forwarder
@@ -1405,19 +1406,11 @@ cd ~/sx1302_hal/packet_forwarder
 # for WM1302 LoRaWAN Gateway Module (SPI) - EU868
 ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 
-# for WM1302 LoRaWAN Gateway Module (USB) - EU868
-./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
-
 # for WM1302 LoRaWAN Gateway Module (SPI) - US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
-
-# for WM1302 LoRaWAN Gateway Module (USB) - US915
-./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-spi.png"/></div>
-
-Por favor elija su servidor de red Lora® preferido `server_address` y el EUI `gateway_ID` en el `global_conf.json.sx1250.xxxxx` correspondiente y modifique el `puerto up/down` a `1700` para iniciar el concentrador.
 
 
 
@@ -1487,7 +1480,7 @@ sudo dmesg | grep 1-1.4.1
 
 así que en mi caso el dispositivo USB es `ttyACM2`
 
-Así que modifiquemos el dispositivo USB en la configuración `global_conf.json.sx1250.US915.USB` con el comando sed `sed -i 's/search_string/replacement_string/g' filename`, así que por favor siga el patrón como `sed -i 's/ttyACM0/the_result_from_above' global_conf.json.sx1250.frequency_of_your_module.USB`, tenga en cuenta que por favor reemplace `the_result_from_above` y `frequency_of_your_module` para su propia aplicación:
+Así que modifiquemos el dispositivo USB en la configuración `global_conf.json.sx1250.US915.USB` con el comando sed `sed -i 's/search_string/replacement_string/g' filename`, así que por favor siga el patrón como `sed -i 's/ttyACM0/el_resultado_de_arriba' global_conf.json.sx1250.frecuencia_de_su_módulo.USB`, tenga en cuenta que por favor reemplace `el_resultado_de_arriba` y `frecuencia_de_su_módulo` para su propia aplicación:
 
 por ejemplo en mi caso:
 
@@ -1501,17 +1494,22 @@ Por favor consulte los pasos mostrados en la imagen a continuación:
 
 **Paso 6.** Iniciar Módulo LoraWAN®
 
-Luego ejecute el siguiente código para iniciar el Módulo LoraWAN® según la versión de frecuencia de operación de su WM1302.
+Elija su Servidor de Red LoRaWAN preferido `server_address` y el EUI del gateway `gateway_ID` en el correspondiente `global_conf.json.sx1250.xxxxx` basado en el módulo que esté usando, y modifique el `puerto up/down` a `1700`. Luego ejecute el siguiente código para iniciar el concentrador:
+
 
 ```sh
-USB version
-$ cd ~/sx1302_hal/packet_forwarder
-$ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
+cd ~/sx1302_hal/packet_forwarder
+
+# Please select one of the following comands based on your module
+
+# for WM1302 LoRaWAN Gateway Module (USB) - EU868
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
+
+# for WM1302 LoRaWAN Gateway Module (USB) - US915
+./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-usb.png"/></div>
-
-Por favor elija su servidor de red Lora® preferido y use el `EUI ID` como se muestra en la imagen anterior para configurar las conexiones.
 
 </TabItem>
 </Tabs>

@@ -5,7 +5,7 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_R21xx_configure_system
 last_update:
   date: 09/28/2025
@@ -16,7 +16,7 @@ last_update:
 
 Learn how to configure and test hardware components on the reComputer Industrial R21xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, 5G，Zigbee over Mini-PCIe, RS485, RS232, CAN,DI/DO testing, UPS for safe shutdown and more.
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -721,6 +721,7 @@ echo 0 > /sys/class/gpio/gpio638/value
 3. When the external level is high, the value of  /sys/class/gpio/gpio638/value   is 0; when the external level is low,  /sys/class/gpio/gpio638/value  is 1.
 
 ## CAN Testing
+
 ### Loopback test
 
 <div class="table-center">
@@ -822,10 +823,14 @@ sudo ip link set can0 up type can bitrate 500000
 sudo ip link set can1 up type can bitrate 500000
 echo "can0 & can1 are up @ 500 kbit/s"
 ```
+
 ### Python-CAN Testing
+
 [Python-CAN](https://github.com/raspberrypi/usbboot) is a cross-platform Python library that provides a unified programming interface for Controller Area Network (CAN) bus communication, supporting a wide range of CAN hardware interfaces and virtual buses, and enabling easy implementation of CAN message transmission, reception, filtering, bus monitoring, and other operations.
 Similarly, the CAN interfaces need to be physically connected to achieve loopback communication.
+
 1. Configure the standard CAN baud rate (500 kbit/s):
+
 ```bash
 sudo ip link set down can0
 sudo ip link set down can1
@@ -834,11 +839,14 @@ sudo ip link set can1 type can bitrate 500000
 sudo ip link set up can0
 sudo ip link set up can1
 ```
+
 2. Verify that both interfaces are in the UP state: Outputting "state UP" indicates the UP state.
+
 ```bash
 ip a show can0
 ip a show can1
 ```
+
 The output "state UP" indicates the UP state.
 
 3. Configure the Python virtual environment and dependencies.
@@ -850,6 +858,7 @@ python3 -m venv can_env
 source can_env/bin/activate
 pip install python-can
 ```
+
 4. Enter the Python script:
 
 ```python
@@ -887,13 +896,15 @@ with can.Bus(interface='socketcan',
 
 print("Bus shut down and program finished.")
 ```
+
 5. Execute and run:
+
 ```bash
 python can_test.py
 deactivate
 ```
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/python-can.png" style={{width:800, height:'auto'}}/></div>
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/python-can.png" style={{width:800, height:'auto'}}/></div>
 
 ## USB Hub Testing
 

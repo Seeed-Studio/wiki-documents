@@ -44,7 +44,7 @@ EMG 检测器是连接人体和电子设备的桥梁，传感器收集微小的�
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" /></div> | <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
 :::caution
-上述提到的支持平台是/是该模块软件或理论兼容性的指示。在大多数情况下，我们只为 Arduino 平台提供软件库或代码示例。不可能为所有可能的 MCU 平台提供软件库/演示代码。因此，用户必须编写自己的软件库。
+上述提到的支持平台是模块软件或理论兼容性的指示。在大多数情况下，我们只为 Arduino 平台提供软件库或代码示例。不可能为所有可能的 MCU 平台提供软件库/演示代码。因此，用户必须编写自己的软件库。
 :::
 
 硬件概述
@@ -52,7 +52,7 @@ EMG 检测器是连接人体和电子设备的桥梁，传感器收集微小的�
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_EMG_detector.jpg" /></div>
 
-- J2：grove 接口，连接到模拟 I/O；
+- J2：Grove 接口，连接到模拟 I/O；
 - J1：EMG 一次性表面电极连接器。
 - U1：INA331IDGKT，差分放大器。
 - U2、U3：OPA333，零漂移放大器。
@@ -71,7 +71,7 @@ EMG 检测器是连接人体和电子设备的桥梁，传感器收集微小的�
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_connect.jpg" /></div>
 
 :::tip
-此产品的零件清单最近已更新。您可能会收到两种规格的连接线，它们的功能完全相同，只是颜色不同，对应关系如下图所示。
+该产品的零件清单最近已更新。您可能会收到两种规格的连接线，它们的功能完全相同，只是颜色不同，对应关系如下图所示。
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/newline.png" /></div>
 :::
 
@@ -85,18 +85,14 @@ EMG 检测器是连接人体和电子设备的桥梁，传感器收集微小的�
 
 ### 移动
 
-完成演示代码下载后，初始化大约需要 5 秒钟，初始化时您应该保持静止。
+下载演示代码完成后，需要大约 5 秒钟进行初始化，初始化时您应该保持静止。
 
-您可以看到在初始化时，LED Bar 将从第 10 级变为第 0 级。当 LED Bar 全部关闭时，您现在可以移动了。
+您可以看到在初始化时，LED Bar 会从第 10 级降到第 0 级。当 LED Bar 全部关闭时，您现在可以移动了。
 
 当您移动时，您会发现 LED Bar 的级别会发生变化。
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_emg_demo_2.gif" /></div>
 
-# Grove-EMG 传感器 v1.0
-
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/Grove-EMG_Sensor_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
 
 # Grove-EMG 传感器 v1.1
 
@@ -106,7 +102,6 @@ EMG 检测器是连接人体和电子设备的桥梁，传感器收集微小的�
 资源
 --------
 
-- [Grove-EMG 传感器 v1.0 Eagle 文件](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/Grove-EMG_Sensor_v1.0.zip)
 - [Grove-EMG 传感器 v1.1 Eagle 文件](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip)
 - [演示代码](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code)
 
@@ -125,3 +120,4 @@ EMG 检测器是连接人体和电子设备的桥梁，传感器收集微小的�
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

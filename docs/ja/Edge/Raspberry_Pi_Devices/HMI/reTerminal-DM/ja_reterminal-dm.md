@@ -20,7 +20,7 @@ Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウ�
 
 豊富な拡張性とハイブリッド接続性を備え、CANバス、RS485、RS232、ギガビットイーサネットポート、その他のインターフェースをサポートし、4G、LoRa®、WiFi、BLEなどの強力なワイヤレス通信機能も備えています。
 
-> \*4GとLoRa®モジュールはreTerminal DMにデフォルトで付属していません。関連モジュールを別途購入してください。
+> \*4GとLoRa®モジュールはreTerminal DMにデフォルトで付属していません。関連モジュールを別途ご購入ください。
 > [4Gバンドル](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -38,7 +38,7 @@ Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウ�
 - ソフトウェアとハードウェアのオープンソース設計：Raspberry Pi CM4を搭載、カスタマイズや派生製品を歓迎
 - [製品保証：2年保証](/ja/reterminal-dm-warranty)
 
-> \*4GとLoRa®モジュールはreTerminal DMにデフォルトで付属していません。関連モジュールを別途購入してください。
+> \*4GとLoRa®モジュールはreTerminal DMにデフォルトで付属していません。関連モジュールを別途ご購入ください。
 
 ## 仕様
 
@@ -54,7 +54,7 @@ Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウ�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}> </td>
-      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>クアッドコア Cortex-A72@1.5GHz</td>
+      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Quad-core Cortex-A72@1.5GHz</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>メモリ</td>
@@ -66,10 +66,10 @@ Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウ�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}> </td>
-      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>M.2 SATA SSDスロット 2280-B Key（オプション）</td>
+      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>M.2 SATA SSD スロット 2280-B Key（オプション）</td>
     </tr>
     <tr data-style="height: 36px;" style={{height: 36}}>
-      <td data-style="height: 36px; width: 35.4622%;" style={{height: 36, width: '35.4622%'}}>OSサポート</td>
+      <td data-style="height: 36px; width: 35.4622%;" style={{height: 36, width: '35.4622%'}}>OS サポート</td>
       <td data-style="height: 36px; width: 63.1933%;" style={{height: 36, width: '63.1933%'}}>Raspbian<br />SenseCraft Edge OS</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -85,7 +85,7 @@ Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウ�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>最大色数</td>
-      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>1670万色（8ビット）</td>
+      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>16.7M（8ビット）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>輝度</td>
@@ -108,7 +108,7 @@ Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウ�
       <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>7H</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 98.6555%;" colSpan={2} style={{height: 18, width: '98.6555%'}}><strong>ビデオ&オーディオ</strong></td>
+      <td data-style="height: 18px; width: 98.6555%;" colSpan={2} style={{height: 18, width: '98.6555%'}}><strong>ビデオ&amp;オーディオ</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>ビデオ</td>
@@ -250,7 +250,7 @@ Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウ�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}> </td>
-      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>CE、FCC、RoHS、Telec、REACH</td>
+      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>CE, FCC, RoHS, Telec, REACH</td>
     </tr>
     <tr>
       <td data-style="width: 98.6555%;" colSpan={2} style={{width: '98.6555%'}}><strong>その他</strong></td>
@@ -287,34 +287,34 @@ Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウ�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/power-diagram.png" /></div>
 
-reTerminal DM は2つの電源供給オプションをサポートしています：DC ターミナルと PoE ポート。デフォルトでは、reTerminal DM は DC ターミナルを通じて電源供給されますが、**PoE 電源供給はオプション**です。これにより電源供給の選択に柔軟性を提供し、様々な電源との簡単な統合を可能にします。
+reTerminal DM は2つの電源供給オプションをサポートしています：DC ターミナルと PoE ポート。デフォルトでは、reTerminal DM は DC ターミナルを通じて電源供給されますが、**PoE 電源供給はオプション**です。これにより電源供給の選択に柔軟性が提供され、様々な電源との簡単な統合が可能になります。
 
 ### 電源ターミナル
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/powerplug.png" /></div>
 
-reTerminal DM は定格電圧 12~24 V で供給されます。電源は 2ピン電源ターミナルブロックコネクタを介して接続されます。
+reTerminal DM は 12~24 V の定格電圧で供給されます。電源は 2ピン電源ターミナルブロックコネクタを介して接続されます。
 
 ### POE（オプション）
 
 :::note
-標準製品にはデフォルトで PoE モジュールは含まれていません。Seeed では、バッチカスタマイズ注文のご要望に応じて PoE はんだ付けおよび組み立てサービスを提供できます。odm@seeed.cc までお問い合わせください。
+標準製品にはデフォルトで PoE モジュールは含まれていません。Seeed では、バッチカスタマイズ注文のリクエストに応じて PoE はんだ付けおよび組み立てサービスを提供できます。odm@seeed.cc までお問い合わせください。
 :::
 
-PoE モジュールが取り付けられている場合、reTerminal DM の LAN1 ポートは PoE 電源供給をサポートし、イーサネット経由でデバイスに電力を供給する便利で効率的な方法を提供します。このオプションにより、設置プロセスが簡素化され、必要なケーブル配線量が削減されるため、電源が限られているアプリケーションや電源コンセントが容易に利用できない場所に最適なソリューションとなります。
+PoE モジュールが取り付けられている場合、reTerminal DM の LAN1 ポートは PoE 電源供給をサポートし、イーサネット経由でデバイスに電源を供給する便利で効率的な方法を提供します。このオプションにより設置プロセスが簡素化され、必要なケーブル配線量が削減されるため、電源が限られているアプリケーションや電源コンセントが容易に利用できない場所での理想的なソリューションとなります。
 
 - PoE 入力：範囲 44~57V；標準 48V
 - PoE 出力：12V、1.1A 最大
 
 ### 消費電力
 
-Seeed Studio の研究室でテストされた reTerminal DM の消費電力については、以下の表を参照してください。テスト方法と環境により結果に変動が生じる可能性があるため、この値は参考値であることにご注意ください。
+Seeed Studio の研究室でテストされた reTerminal DM の消費電力については、以下の表を参照してください。テスト方法と環境により結果に変動が生じる可能性があるため、この値は参考値としてご利用ください。
 
 | ステータス   | 電圧 | 電流 | 消費電力 | 説明 |
 |   ---      |    ---    |   ---      |         ---          |        ---    |
 |シャットダウン  |         |  0.6mA  |                   | シャットダウンおよび電源オフ状態での静的消費電力テスト。|
 |アイドル      |24V      |  0.165A |    3.96W          | デフォルトの Seeed Studio システムを実行中、テストプログラムを実行せずに、ターミナルソケット経由で reTerminal DM デバイスに 24V 電源を供給した際の入力電流をテスト。|
-|フル負荷 |24V      |  0.37A  |    8.88W          | "stress -c 4" コマンドを使用して CPU をフル負荷で実行するよう設定し、同時にビデオを再生し、CAN および RS485 通信を実行。外部デバイスは接続なし。 |
+|フル負荷 |24V      |  0.37A  |    8.88W          | "stress -c 4" コマンドを使用して CPU をフル負荷で実行し、同時にビデオを再生し、CAN & RS485 通信を実行。外部デバイスは接続なし。 |
 
 ### 電源オンと電源オフ
 
@@ -339,7 +339,7 @@ reTerminal DM にはデフォルトで電源ボタンが付属しておらず、
 reTerminal DM には、画面下部の左右に配置された 2 つの MEMS マイクロフォンが搭載されています。これらのマイクロフォンはデュアルマイクロフォンアレイとして構成でき、優れた音声収集機能を提供します。マイクロフォンは I2S インターフェースを通じてオーディオコーデックチップと通信し、コーデックチップは PCM インターフェースを通じて CM4 と通信します。reTerminal DM に選択されたオーディオコーデックチップは、TI TLV320AIC3104 低消費電力ステレオオーディオコーデックです。
 
 :::warning
-フロントパネルの IP65 等級を達成するため、マイクロフォンの開口部は防水音響膜で覆われていることにご注意ください。マイクロフォンの開口部に鋭利な物体で触れることは避けてください。
+フロントパネルの IP65 等級を達成するため、マイクロフォンの開口部は防水音響膜で覆われていることに注意してください。マイクロフォンの開口部に鋭利な物体で触れることは避けてください。
 :::
 
 マイクロフォンとのインターフェース：
@@ -348,9 +348,9 @@ reTerminal DM には、画面下部の左右に配置された 2 つの MEMS マ
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/arecord-device.png" /></div>
 
-オーディオを録音するには `audacity` アプリを使用できます。`sudo apt install audacity` を使用して audacity アプリをインストールしてください：
+音声を録音するには `audacity` アプリを使用できます。`sudo apt install audacity` を使用して audacity アプリをインストールしてください：
 
-audacity を開いてアプリを起動し、録音をクリックして内蔵マイクロフォンからオーディオを録音してください：
+audacity を開いてアプリを起動し、録音をクリックして内蔵マイクロフォンから音声を録音してください：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/recording.png" /></div>
 
@@ -358,7 +358,7 @@ audacity を開いてアプリを起動し、録音をクリックして内蔵�
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/led-indicator.png" /></div>
 
-reTerminal DM には、マシンの動作状態を示すための 3 つの LED インジケータが搭載されています。各 LED の具体的な機能と状態については、以下の表を参照してください：
+reTerminal DM には、マシンの動作状態を示す 3 つの LED インジケータが搭載されています。各 LED の具体的な機能と状態については、以下の表を参照してください：
 
 #### LED ピン割り当て
 
@@ -380,9 +380,9 @@ reTerminal DM には、マシンの動作状態を示すための 3 つの LED �
 | 0 | 8 | SDRAM 障害|
 | 0 | 9 | SDRAM 不足|
 | 0 | 10 | HALT 状態|
-| 2 | 1 | パーティションが FAT ではない|
+| 2 | 1 | パーティションが FAT でない|
 | 2 | 2 | パーティションからの読み取りに失敗 |
-| 2 | 3 | 拡張パーティションが FAT ではない|
+| 2 | 3 | 拡張パーティションが FAT でない|
 | 2 | 4 | ファイル署名/ハッシュの不一致 - Pi 4|
 | 4 | 4 | サポートされていないボードタイプ|
 | 4 | 5 | 致命的なファームウェアエラー|
@@ -394,7 +394,7 @@ reTerminal DM には、マシンの動作状態を示すための 3 つの LED �
 :::note
 ACT LED が規則的な 4 回点滅パターンで点滅する場合、ブートコード（start.elf）を見つけることができません<br/>
 ACT LED が不規則なパターンで点滅する場合、起動が開始されています。<br/>
-ACT LED が点滅しない場合、EEPROM コードが破損している可能性があります。何も接続せずに再試行して確認してください。<br/>
+ACT LED が点滅しない場合、EEPROM コードが破損している可能性があります。何も接続せずに再試行してください。<br/>
 詳細については、Raspberry Pi フォーラムをご確認ください：<br/>
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums<br/>
 詳細については、Raspberry Pi フォーラムをご確認ください：https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151<br/>
@@ -415,7 +415,7 @@ USER LED が赤色で点灯するのが確認できるはずです。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/light-sensor.png" /></div>
 
-画面の右下に位置する光センサーは、周囲光の強度を検出し、画面の明るさを自動調整して、エネルギーを節約しながら最適な視聴体験を提供する機能があります。光センサーは I2C プロトコルを通じて CM4 と通信します。
+画面右下に配置された光センサーは、周囲光の強度を検出し、画面の明るさを自動調整して、エネルギーを節約しながら最適な視聴体験を提供する機能があります。光センサーは I2C プロトコルを通じて CM4 と通信します。
 
 I2C アドレスは **0x29** です。
 
@@ -427,7 +427,7 @@ I2C アドレスは **0x29** です。
 cd /sys/bus/iio/devices/iio:device0
 ```
 
-- **ステップ 2.** 以下を入力して **Lux** 単位での光強度値を取得
+- **ステップ 2.** 以下を入力して光強度値を **Lux** で取得
 
 ```sh
 cat in_illuminance_input 
@@ -439,7 +439,7 @@ cat in_illuminance_input
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/buzzer.png" /></div>
 
-reTerminal DM には、画面の右下角に配置されたアクティブブザーが搭載されており、アラームやイベント通知など様々な目的に使用できます。ブザーは PCA9535 GPIO 拡張 IC を通じて制御され、デバイスに追加のデジタル I/O チャンネルを提供します。
+reTerminal DM には、画面右下角に配置されたアクティブブザーが搭載されており、アラームやイベント通知など様々な目的に使用できます。ブザーは PCA9535 GPIO 拡張 IC を通じて制御され、デバイスに追加のデジタル I/O チャンネルを提供します。
 
 ブザーをテストおよび制御するには、`/sys/class/leds/usr-buzzer/brightness` ファイルに `1` または `0` を設定するだけです：
 
@@ -479,18 +479,18 @@ reTerminal DM には、画面の右下角に配置されたアクティブブザ
 |12 |I2| DI2    | デジタル入力 2 |
 |13 |I3| DI3    | デジタル入力 3 |
 |14 |I4| DI4    | デジタル入力 4 |
-|15 |GI| GND_DI | 入力グランド信号、1MΩ 経由で GND に接続 |
+|15 |GI| GND_DI | 入力グランド信号、1MΩ を介して GND に接続 |
 |16 |D1| DO1    | デジタル出力 1 |
 |17 |D2| DO2    | デジタル出力 2 |
 |18 |D3| DO3    | デジタル出力 3 |
 |19 |D4| DO4    | デジタル出力 4 |
-|20 |GO| GND_DO | 出力グランド信号、0Ω 経由で GND に接続 |
+|20 |GO| GND_DO | 出力グランド信号、0Ω を介して GND に接続 |
 
 </div>
 
 #### DI/DO
 
-reTerminal DM は 4 つのデジタル入力と 4 つのデジタル出力チャンネルをサポートしており、すべて光学絶縁されているため、電圧スパイクやその他の電気的外乱からメインボードを効果的に保護します。
+reTerminal DM は 4 つのデジタル入力と 4 つのデジタル出力チャンネルをサポートしており、すべて光学的に絶縁されており、電圧スパイクやその他の電気的外乱からメインボードを効果的に保護します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/DI-DO.png" /></div>
 
@@ -516,7 +516,7 @@ reTerminal DM は 4 つのデジタル入力と 4 つのデジタル出力チャ
 :::note
 入力信号のグランドと出力信号のグランドは異なります。入力信号のグランドはGND_DIピンに接続し、出力信号のグランドはGND_DOピンに接続する必要があります。
 
-reTerminal DMのデジタル入力と出力には負論理が使用されており、Terminal IOとCM4 GPIOの論理レベル関係は以下の表に示されています。
+reTerminal DMのデジタル入力と出力に使用される負論理では、Terminal IOとCM4 GPIOの論理レベル関係は以下の表に示されています。
 
 |ターミナルデジタル入力 | CM4 GPIO検出信号 |
 | ---                   | ---                    |
@@ -544,7 +544,7 @@ raspi-gpio get
 
 ###### デジタル入力
 
-以下は、センサーをDIに配線する方法を示した回路図です：
+DIにセンサーを配線する方法を示す回路図は以下の通りです：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/sensor.png" /></div>
 
@@ -556,9 +556,9 @@ raspi-gpio get 16
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio16-state.png" /></div>
 
-ここで、`GPIO16`の現在の状態は`INPUT`に設定され、`pulling Down`されており、現在のピンレベルは`1`で`High`を意味し、上記の表によると現在のターミナルデジタル入力`DI1`は`Low`であることを意味します
+ここで`GPIO16`の現在の状態は`INPUT`に設定され、`pulling Down`で現在のピンレベルは`1`（`High`を意味）です。これは上記の表によると、現在のターミナルデジタル入力`DI1`が`Low`であることを意味します。
 
-`DI1`ターミナルを`5V電源`の`Positive`ピンに接続し、`5V電源`の`Ground`を`GND_DI`に接続することで、`DI1`に`High`信号を入力してみましょう
+`DI1`ターミナルを`5V電源`の`Positive`ピンに接続し、`5V電源`の`Ground`を`GND_DI`に接続することで、`DI1`に`High`信号を入力してみましょう。
 
 ```sh
 raspi-gpio get 16
@@ -566,11 +566,11 @@ raspi-gpio get 16
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio16-state-high.png" /></div>
 
-`GPIO16`の現在のピンレベルは`0`で`Low`を意味し、上記の表によると現在のターミナルデジタル入力`DI1`は`High`であることを意味します
+この場合、`GPIO16`の現在のピンレベルは`0`（`Low`を意味）で、上記の表によると現在のターミナルデジタル入力`DI1`が`High`であることを意味します。
 
 ###### デジタル出力
 
-以下は、負荷をDOに配線する方法を示した回路図です：
+DOに負荷を配線する方法を示す回路図は以下の通りです：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/DO.png" /></div>
 
@@ -587,9 +587,9 @@ raspi-gpio get 24
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio24-state-set.png" /></div>
 
-`DO1`に対応する`GPIO24`が`Output`と`pulling down`状態に設定され、`GPIO24`レベルが`High`に設定されています
+`DO1`に対応する`GPIO24`が`Output`と`pulling down`状態に設定され、`GPIO24`レベルが`High`に設定されています。
 
-次に、`GPIO24`を`Low`に設定します。これは`DO1`出力が`High`として駆動されることを意味します。
+次に`GPIO24`を`Low`に設定します。これは`DO1`出力が`High`として駆動されることを意味します。
 
 ```sh
 #set current pin state
@@ -606,7 +606,7 @@ raspi-gpio get 24
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/RS485.png" /></div>
 
-reTerminal DMは20ピンコネクタを通じてRS485インターフェースを搭載しており、産業および自動化アプリケーションでの安全で信頼性の高い動作を確保するために、信号と電源の両方が絶縁されています。`RS485 A`と`RS485 B`信号は容量絶縁を使用して絶縁されており、優れたEMI耐性を提供し、RS485インターフェースの高速通信要件を満たします。
+reTerminal DMは20ピンコネクタを通じてRS485インターフェースを搭載しており、産業および自動化アプリケーションでの安全で信頼性の高い動作を確保するため、信号と電源の両方が絶縁されています。`RS485 A`と`RS485 B`信号は容量絶縁を使用して絶縁されており、優れたEMI耐性を提供し、RS485インターフェースの高速通信要件を満たします。
 
 :::note
 120Ωの終端抵抗がデフォルトでインストールされています。
@@ -618,10 +618,10 @@ RS485をテストしてインターフェースするには、USB to RS485アダ
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/rs485.png" /></div>
 
 :::note
-RS485ポートは実行しているOSによって`/dev/ttyACM1`または`/dev/ttyCH340USB1`であることに注意してください。
+RS485ポートは実行しているOSによって`/dev/ttyACM1`または`/dev/ttyCH340USB1`になることに注意してください。
 :::
 ホストコンピューターでお気に入りのシリアル通信ツールを使用して、以下のテストを実行してください：
-reTerminal DMでPythonコードを実行してRS485シリアル接続をテストします。このコードはRS485シリアルポートを以下のように設定します
+reTerminal DMでPythonコードを実行してRS485シリアル接続をテストします。このコードはRS485シリアルポートを以下のように設定します：
 
 ボーレート -> 9600
 バイトサイズ -> 8ビット
@@ -691,13 +691,13 @@ else:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232.png" /></div>
 
-reTerminal DMの20ピンコネクタにはRS232インターフェースも含まれており、これは絶縁されていません。RS232通信は通常CMOSの電圧レベルを使用し、通信距離が短いため、環境からの電磁干渉の影響を受けにくいためです。
+reTerminal DMの20ピンコネクタにはRS232インターフェースも含まれており、これは絶縁されていません。RS232通信は通常CMOS電圧レベルを使用し、通信距離が短いため、環境からの電磁干渉の影響を受けにくいためです。
 
 :::note
 グランドピンは`RX`ピンの隣の`GD`ピンに接続する必要があります。`GS`ピンではないことを確認してください。
 :::
 
-以下は、reTerminal DMからホストコンピューターにデータを送信するテスト用Pythonスクリプトです：
+reTerminal DMからホストコンピューターにデータを送信するテスト用Pythonスクリプトは以下の通りです：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232-serial-send-example.png" /></div>
 
@@ -734,7 +734,7 @@ except KeyboardInterrupt:
 
 ```
 
-以下は、ホストコンピューターから送信されたデータをreTerminal DMで受信するテスト用Pythonスクリプトです。
+ホストコンピューターから送信されたデータをreTerminal DMで受信するテスト用Pythonスクリプトは以下の通りです：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232-serial-receive-example.png" /></div>
 
@@ -775,10 +775,10 @@ except KeyboardInterrupt:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/can.png" /></div>
 
-reTerminal DMは、CAN FD（Controller Area Network Flexible Data-Rate）プロトコルをサポートするCANインターフェースを搭載しています。CANインターフェースは容量絶縁を使用して絶縁されており、優れたEMI保護を提供し、産業および自動化アプリケーションでの信頼性の高い通信を確保します。120Ωの終端抵抗がデフォルトでインストールされています。
+reTerminal DMはCAN FD（Controller Area Network Flexible Data-Rate）プロトコルをサポートするCANインターフェースを搭載しています。CANインターフェースは容量絶縁を使用して絶縁されており、優れたEMI保護を提供し、産業および自動化アプリケーションでの信頼性の高い通信を確保します。120Ωの終端抵抗がデフォルトでインストールされています。
 
 :::note
-CANインターフェースは絶縁電源を使用しているため、CANインターフェースに接続される外部デバイスのグランド信号はGND_ISOピンに接続する必要があります
+CANインターフェースは絶縁電源を使用しているため、CANインターフェースに接続される外部デバイスのグランド信号はGND_ISOピンに接続する必要があります。
 :::
 
 CANバスをテストしてインターフェースするには：
@@ -800,7 +800,7 @@ CAN-utilsは、CANインターフェースを使用した非常に有用なデ�
 - canplayer – CANログファイルの再生。
 - cansend – 単一フレームの送信。
 - cangen – ランダムトラフィックの生成。
-- canbusload – 現在のCANバスの**使用率**を表示
+- canbusload – 現在のCANバス**使用率**の表示
 
 CAN-utilsのソースは[GitHubリポジトリ](https://github.com/linux-can/can-utils)から入手できます。
 
@@ -812,7 +812,7 @@ sudo ifconfig can0 txqueuelen 1000
 sudo ip link set can0 up
 ```
 
-- ステップ 3: gitを使用してテストコードをreTerminal DMにダウンロードします
+- ステップ 3: gitを使用してreTerminal DMにテストコードをダウンロードします
 
 ```sh
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple
@@ -849,7 +849,7 @@ USB 2.0 Type-Aポートが2つあり、フラッシュドライブ、ウェブ�
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/usb-c.png" /></div>
 
-USB Type-Cは、ブートスイッチの位置に応じてシリアルデバッグまたはOSイメージの書き込みに使用されるUSB 2.0ポートです。OSの書き込みについては、[OSの書き込みWikiページ](/ja/reterminal-dm-flash-OS)を参照してください。
+USB Type-Cは、ブートスイッチの位置に応じてシリアルデバッグまたはOSイメージの書き込みに使用されるUSB 2.0ポートです。OSの書き込みについては、[OSフラッシュWikiページ](/ja/reterminal-dm-flash-OS)を参照してください
 
 ### SIMカードスロット
 
@@ -865,7 +865,7 @@ reTerminal DMの標準バージョンには4Gモジュールが付属してい�
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/reset-button.png" /></div>
 
-reTerminal DMのリセット穴にミニプッシュボタンスイッチがあります。細い物体でこのボタンを押すことで、CM4をリセットできます。このボタンはCM4のRUN_PGピンに接続されています。このピンがハイの時、CM4が開始されたことを示します。このピンをローにするとモジュールがリセットされます。
+reTerminal DMのリセット穴にミニプッシュボタンスイッチがあります。細い物体でこのボタンを押すことで、CM4をリセットできます。このボタンはCM4のRUN_PGピンに接続されています。このピンがハイの時、CM4が開始されたことを示します。このピンをローにドライブするとモジュールがリセットされます。
 
 ### オーディオジャック
 
@@ -874,7 +874,7 @@ reTerminal DMのリセット穴にミニプッシュボタンスイッチがあ�
 reTerminal DMには3.5mmヘッドフォンジャックがあり、音声出力をサポートし、外部ヘッドフォン、スピーカーなどに接続できます。
 
 :::note
-ヘッドフォンジャックは音声出力のみをサポートし、マイクロフォン録音機能はサポートしていません。
+ヘッドフォンジャックは音声出力のみをサポートし、マイク録音機能はサポートしていません。
 :::
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/audio-power.png" /></div>
@@ -883,7 +883,7 @@ reTerminal DMには3.5mmヘッドフォンジャックがあり、音声出力�
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/hdmi.png" /></div>
 
-reTerminal DMは、CM4からのネイティブHDMIインターフェースを備えており、最大4K @ 60 fpsの映像出力をサポートします。複数のディスプレイが必要なアプリケーションに最適で、ユーザーは外部の大画面にコンテンツを出力できます。
+reTerminal DMは、CM4からのネイティブHDMIインターフェースを備えており、最大4K @ 60 fpsの映像出力をサポートしています。複数のディスプレイが必要なアプリケーションに最適で、ユーザーは外部の大画面にコンテンツを出力できます。
 
 ### イーサネット RJ45
 
@@ -1116,7 +1116,7 @@ watchdog.conf でウォッチドッグタイムアウト時間を設定するに
 sudo nano /etc/watchdog.conf
 ```
 
-ステップ 2：`/etc/watchdog.conf` の下にある "watchdog-device" と "watchdog-timeout" 設定オプションを探し、以下のように設定してください。
+ステップ 2：`/etc/watchdog.conf` の下にある「watchdog-device」と「watchdog-timeout」設定オプションを探し、以下のように設定してください。
 
 :::note
 `watchdog-timeout` オプションが `60` 未満に設定されている場合、即座に再起動が発生する可能性があります。ハードウェアウォッチドッグを利用するには、`watchdog-device` を `/dev/watchdog1` として設定する必要があります。`1` なしのデフォルト設定は Broadcom ウォッチドッグデバイスを利用しています。
@@ -1139,7 +1139,7 @@ watchdog-timeout = 60
 例えば、ウォッチドッグタイムアウト時間を 60 秒に設定したい場合、`watchdog-timeout` の値を `60` に設定できます。これは、ウォッチドッグが 60 秒以内にリセット信号を受信しない場合、システムがクラッシュしたと仮定して自動再起動操作をトリガーすることを意味します。
 
 :::warning
-以下のコマンドでウォッチドッグがアクティブかどうかをテストできますが、これらのコマンドはシステムを停止状態にするため、以下のコマンドを実行する際は十分注意してください：
+以下のコマンドでウォッチドッグがアクティブかどうかをテストできますが、これらのコマンドはシステムを停止状態にするため、以下のコマンドを実行する際は注意してください：
 
 ```sh
 sudo su
@@ -1169,21 +1169,21 @@ echo 5 > /sys/class/backlight/lcd_backlight/brightness
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/Camera.png" /></div>
 
-CSI カメラインターフェースは reTerminal DM メインボードに予約されており、カメラ機能をサポートするようにカスタマイズできます。フロントパネルのスペースが限られているため、小型サイズのカメラのみ使用できることにご注意ください。現在厳密にテストされたソリューションは、Raspberry Pi カメラ V2.0 ドライバーボード + Seeed カスタマイズカメラ IMX219-77 を使用しています。
+CSI カメラインターフェースは reTerminal DM メインボードに予約されており、カメラ機能をサポートするようにカスタマイズできます。フロントパネルのスペースが限られているため、小型のカメラのみ使用できることにご注意ください。現在厳密にテストされたソリューションは、Raspberry Pi カメラ V2.0 ドライバーボード + Seeed カスタマイズカメラ IMX219-77 を使用しています。
 
 <div class="table-center">
 
 | コネクタ | コネクタタイプ | ピンピッチ | レーン | FPC 向き |
 |  ---      |  ---           |   ---     |  --- | --- |
-| CSI0      | 15 ピン FPC     | 1mm       | 2    | ゴールドフィンガーが下向き |
-| CSI1      | 22 ピン FPC     | 0.5mm     | 4    | ゴールドフィンガーが上向き |
+| CSI0      | 15 ピン FPC     | 1mm       | 2    | 金指が下向き |
+| CSI1      | 22 ピン FPC     | 0.5mm     | 4    | 金指が上向き |
 
 </div>
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/camera_version.png" /></div>
 
 :::note
-reTerminal DM の標準バージョンにはフロントパネルにカメラ開口部がないため、標準製品ではカメラ機能は利用できません。カスタマイズされたカメラ要件がある場合は、odm@seeed.cc までお問い合わせください
+reTerminal DM の標準バージョンにはフロントパネルにカメラ開口部がないため、標準製品ではカメラ機能は利用できません。カスタマイズされたカメラ要件がある場合は、odm@seeed.cc にお問い合わせください
 :::
 
 ### 4G モジュール
@@ -1202,7 +1202,7 @@ reTerminal DM の標準バージョンにはフロントパネルにカメラ開
 - EC25-EUX 4G モジュール x1
 - SIM カード x1
 
-**ステップ 1.** [EC25 4G モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna)ガイドを参照して、`EC25 4G モジュール`を`4G/LTE PCIe スロット`に取り付けてください。*`4G/LTE`*のシルクスクリーンが見えるはずです。また、システムの電源を入れる前に、4G 対応 SIM カードを[SIM カードスロット](/ja/reterminal-dm/#sim-card-slot)に挿入してください。
+**ステップ 1.** [EC25 4G モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna)ガイドを参照して、`EC25 4G モジュール`を`4G/LTE PCIe スロット`に取り付けてください。*`4G/LTE`*シルクスクリーンが見えるはずです。また、システムの電源を入れる前に、4G 対応 SIM カードを[SIM カードスロット](/ja/reterminal-dm/#sim-card-slot)に挿入してください。
 
 **ステップ 2.** ```lsusb```を使用して EC25-EUX が検出されるかどうかを確認します
 
@@ -1251,7 +1251,7 @@ AT+CFUN=1,1
 
 その後、再起動するか、モジュールが SIM カードキャリアからインターネットを取得するまでしばらく待つことができます。
 
-`ifconfig` コマンドを使用して reTerminal DM のネットワーク状態を照会することもできます。
+また、`ifconfig` コマンドを使用して reTerminal DM のネットワーク状態を照会することもできます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image33.png"/></div>
 
@@ -1277,7 +1277,7 @@ import TabItem from '@theme/TabItem';
     </a>
 </div>
 
-**ステップ 1.** [LoraWAN® モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna)ガイドを参照して、`WM1302 SPI LoraWAN® モジュール`を*`Lora`*シルクスクリーンが表示されている`LoraWAN® Mini PCIeスロット`に取り付けてください。
+**ステップ 1.** [LoraWAN® モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna)ガイドを参照して、`WM1302 SPI LoraWAN® モジュール`を*`Lora`*シルクスクリーンが見える`LoraWAN® Mini PCIeスロット`に取り付けてください。
 モジュールをインストールして、必要なパッケージbuild-essential（build essentialパッケージは、ソースコードからDEBパッケージを作成するために必要なツールを含むDebianパッケージです）をインストールします。
 
 ```sh
@@ -1315,7 +1315,7 @@ cd ~/sx1302_hal/packet_forwarder
 vim reset_lgw.sh
 ```
 
-VIMを使用してreset_lgw.shスクリプトを以下のように変更します：
+以下のようにテキストエディタでreset_lgw.shスクリプトを変更します：
 
 ```sh
 #!/bin/bash
@@ -1395,9 +1395,10 @@ echo "------------------------------------"
 sed -i 's/spidev0.0/spidev0.1/g'  global_conf.json.sx1250.US915
 ```
 
-**ステップ 6.** LoraWAN® モジュールを開始
+**ステップ 6.** LoraWAN® モジュールを開始します
 
-次に、WM1302の動作周波数バージョンに応じて、以下のコードを実行してLoraWAN® モジュールを開始します。
+使用しているモジュールに基づいて、対応する`global_conf.json.sx1250.xxxxx`で希望するLoRaWANネットワークサーバー`server_address`とゲートウェイEUI `gateway_ID`を選択し、`up/down port`を`1700`に変更します。その後、以下のコードを実行してコンセントレータを開始します：
+
 
 ```sh
 cd ~/sx1302_hal/packet_forwarder
@@ -1405,24 +1406,16 @@ cd ~/sx1302_hal/packet_forwarder
 # for WM1302 LoRaWAN Gateway Module (SPI) - EU868
 ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 
-# for WM1302 LoRaWAN Gateway Module (USB) - EU868
-./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
-
 # for WM1302 LoRaWAN Gateway Module (SPI) - US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
-
-# for WM1302 LoRaWAN Gateway Module (USB) - US915
-./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-spi.png"/></div>
 
-お好みのLora® ネットワークサーバー`server_address`と対応する`global_conf.json.sx1250.xxxxx`内のEUI `gateway_ID`を選択し、コンセントレーターを開始するために`up/down port`を`1700`に変更してください。
-
 
 
 </TabItem>
-<TabItem value="WM1302 USB Module" label="WM1302 USB モジュール">
+<TabItem value="WM1302 USB Module" label="WM1302 USBモジュール">
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114992991-wio-wm1302-lorawan-gateway-module-_spi_---us915-m---first.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -1432,7 +1425,7 @@ cd ~/sx1302_hal/packet_forwarder
     </a>
 </div>
 
-**ステップ 1.** [LoraWAN® モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna)ガイドを参照して、`WM1302 USB LoraWAN® モジュール`を*`4G`*シルクスクリーンが表示されている`4G Mini PCIeスロット`に取り付けてください。
+**ステップ 1.** [LoraWAN® モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna)ガイドを参照して、`WM1302 USB LoraWAN® モジュール`を*`4G`*シルクスクリーンが見える`4G Mini PCIeスロット`に取り付けてください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/dmlora.png"/></div>
 
@@ -1453,7 +1446,7 @@ cd sx1302_hal
 sudo make
 ```
 
-**ステップ 4.** reset_lgw.shスクリプトをコピー
+**ステップ 4.** reset_lgw.shスクリプトをコピーします
 
 ```
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
@@ -1479,17 +1472,17 @@ sudo dmesg | grep 5740
 sudo modprobe cdc_acm
 ```
 
-次に、以下のようにデバイスポートを取得できます：
+その後、以下のようにデバイスポートを取得できます：
 
 ```sh
 sudo dmesg | grep 1-1.4.1
 ```
 
-私の場合、USBデバイスは`ttyACM2`です
+つまり、私の場合USBデバイスは`ttyACM2`です
 
-それでは、sedコマンド`sed -i 's/search_string/replacement_string/g' filename`を使用して`global_conf.json.sx1250.US915.USB`設定内のUSBデバイスを変更しましょう。`sed -i 's/ttyACM0/the_result_from_above' global_conf.json.sx1250.frequency_of_your_module.USB`のパターンに従ってください。`the_result_from_above`と`frequency_of_your_module`をあなたのアプリケーション用に置き換えてください：
+それでは、sedコマンド`sed -i 's/search_string/replacement_string/g' filename`を使用して`global_conf.json.sx1250.US915.USB`設定のUSBデバイスを変更しましょう。`sed -i 's/ttyACM0/the_result_from_above' global_conf.json.sx1250.frequency_of_your_module.USB`のパターンに従ってください。`the_result_from_above`と`frequency_of_your_module`をあなたのアプリケーション用に置き換えることに注意してください：
 
-例えば私の場合：
+例えば、私の場合：
 
 ```sh
 sed -i 's/ttyACM0/ttyACM2/g'  global_conf.json.sx1250.US915.USB
@@ -1499,19 +1492,24 @@ sed -i 's/ttyACM0/ttyACM2/g'  global_conf.json.sx1250.US915.USB
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/find-lora-usb.png"/></div>
 
-**ステップ 6.** LoraWAN® モジュールを開始
+**ステップ 6.** LoraWAN® モジュールを開始します
 
-次に、WM1302の動作周波数バージョンに応じて、以下のコードを実行してLoraWAN® モジュールを開始します。
+使用しているモジュールに基づいて、対応する`global_conf.json.sx1250.xxxxx`で希望するLoRaWANネットワークサーバー`server_address`とゲートウェイEUI `gateway_ID`を選択し、`up/down port`を`1700`に変更します。その後、以下のコードを実行してコンセントレータを開始します：
+
 
 ```sh
-USB version
-$ cd ~/sx1302_hal/packet_forwarder
-$ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
+cd ~/sx1302_hal/packet_forwarder
+
+# Please select one of the following comands based on your module
+
+# for WM1302 LoRaWAN Gateway Module (USB) - EU868
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
+
+# for WM1302 LoRaWAN Gateway Module (USB) - US915
+./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-usb.png"/></div>
-
-お好みのLora® ネットワークサーバーを選択し、上記の画像に示されている`EUI ID`を使用して接続を設定してください。
 
 </TabItem>
 </Tabs>
