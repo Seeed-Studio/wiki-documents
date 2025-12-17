@@ -1,6 +1,6 @@
 ---
-description: 本wiki演示如何在配备AI套件的树莓派5上使用clip。
-title: 在配备AI套件的树莓派上运行Clip应用
+description: 本 wiki 演示如何在带有 AI kit 的 raspberry pi5 上使用 clip。
+title: 在带有 AI Kit 的 Raspberry Pi 上的 Clip 应用
 keywords:
   - Edge
   - reComputer r1000
@@ -14,23 +14,23 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# 在配备AI套件的树莓派上运行Clip应用
+# 在带有 AI Kit 的 Raspberry Pi 上的 Clip 应用
 
-## 介绍
+## 简介
 
-[CLIP](https://github.com/openai/CLIP)（对比语言-图像预训练）是一个在各种（图像，文本）对上训练的神经网络。它可以通过自然语言指令来预测给定图像最相关的文本片段，而无需直接针对该任务进行优化，这类似于GPT-2和GPT-3的零样本能力。我们发现CLIP在ImageNet上的"零样本"性能与原始ResNet50相匹配，而无需使用原始的128万个标记样本中的任何一个，克服了计算机视觉中的几个主要挑战。
+[CLIP](https://github.com/openai/CLIP)（对比语言-图像预训练）是一个在各种（图像，文本）对上训练的神经网络。它可以用自然语言指令来预测给定图像最相关的文本片段，而无需直接针对该任务进行优化，类似于 GPT-2 和 3 的零样本能力。我们发现 CLIP 在 ImageNet 上的"零样本"性能与原始 ResNet50 相匹配，而无需使用原始的 128 万个标记示例中的任何一个，克服了计算机视觉中的几个主要挑战。
 
-本wiki将教您如何在[树莓派5](https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html)或[Recomputer r1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html)上部署clip应用，clip将在[AI套件](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html)上进行推理。
+本 wiki 将教您如何在 [Raspberry Pi5](https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html) 或 [Recomputer r1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html) 上部署 clip 应用，clip 将在 [AI kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) 上进行推理。
 
 ## 准备硬件
 
-### 对于Recomputer R1000
+### 适用于 Recomputer R1000
 
 <div class="table-center">
  <table align="center">
  <tr>
   <th>reComputer r1000</th>
-  <th>树莓派AI套件</th>
+  <th>Raspberry Pi AI Kit</th>
  </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991274-recomputer-r1025-10-0.jpg" style={{width:600, height:'auto'}}/></div></td>
@@ -39,32 +39,72 @@ no_comments: false # for Disqus
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-### 适用于 Raspberry Pi 5
+### 适用于 Raspberry Pi 5/CM5
+
 
 <div class="table-center">
  <table align="center">
  <tr>
+ <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
+  <th>reComputer AI Industrial R2145</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -95,14 +135,14 @@ E: Release file for http://archive.raspberrypi.com/debian/dists/bookworm/InRelea
 E: Release file for http://deb.debian.org/debian/dists/bookworm-updates/InRelease is not valid yet (invalid for another 85d 0h 52min 29s). Updates for this repository will not be applied. 
 ```
 
-这是因为树莓派上的时间设置不正确，您需要使用以下命令手动设置树莓派上的时间：
+这是因为 Raspberry Pi 上的时间设置不正确，您需要使用以下命令手动设置 Raspberry Pi 上的时间：
 
 ```
 # This command only you can connect google.com
 sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 ```
 
-设置好你的树莓派时间后，你可以更新你的树莓派。
+设置好 raspberry 时间后，您可以更新您的 raspberry。
 :::
 
 ### 设置 pcie 为 gen2/gen3（gen3 比 gen2 更快）
@@ -136,7 +176,7 @@ sudo reboot
 
 ### 检查软件和硬件
 
-在 Raspberry Pi5 上打开终端，输入以下命令检查是否已安装 hailo-all。
+在 Raspberry Pi5 上打开终端，输入以下命令来检查 hailo-all 是否已安装。
 
 ```
 hailortcli fw-control identify
@@ -145,7 +185,7 @@ hailortcli fw-control identify
 正确的结果如下所示：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_software.png" alt="pir" width={1000} height="auto"/></p>
 
-在 Raspberry Pi5 上打开终端，输入以下命令检查 hailo-8L 是否已连接。
+在 Raspberry Pi5 上打开终端，输入以下命令来检查 hailo-8L 是否已连接。
 
 ```
 lspci | grep Hailo
@@ -173,7 +213,7 @@ cd hailo-CLIP
  clip_app --input demo
 ```
 
-如果您想使用摄像头，在确保树莓派连接了您自己的摄像头后，您应该输入以下命令：
+如果您想使用自己的摄像头，在确保 raspberry 连接了您自己的摄像头后，您应该输入以下命令：
 
 ```
 clip_app --input /dev/video0
@@ -181,7 +221,7 @@ clip_app --input /dev/video0
 
 ## 结果
 
-在下面显示的视频中，您可以看到当我输入"banana"时，CLIP模型识别出了香蕉，当我输入"apple"时，模型识别出了苹果。您只需要输入不同的单词，CLIP模型就会识别不同的物体。
+在下面显示的视频中，您可以看到当我输入"banana"时，CLIP 模型识别出香蕉，当我输入"apple"时，模型识别出苹果。您只需要输入不同的单词，CLIP 模型就会识别不同的物体。
 
 <div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification on Raspberry Pi 5 with Hailo AI Accelerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -1,5 +1,5 @@
 ---
-description: SenseCAP Solar Node para Meshtastic y LoRa
+description: SenseCAP Solar Node para Meshtastic & LoRa
 title:  SenseCAP Solar Node
 keywords:
 - Meshtastic
@@ -8,15 +8,15 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /es/meshtastic_solar_node
 sidebar_position: 1
 last_update:
-  date: 4/1/2025
-  author: Jessie
+  date: 12/16/2025
+  author: Michelle Huang
 ---
 
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-Es un nodo de comunicaciones o repetidor económico alimentado por energía solar basado en [Meshtastic®](https://meshtastic.org/), que integra el controlador principal XIAO nRF52840 Plus y el módulo LoRa Wio-SX1262. Está específicamente diseñado para áreas sin cobertura de red. Soporta comunicación de larga distancia, posicionamiento preciso y operación de bajo consumo. Es adecuado para expandir la cobertura de red en áreas exteriores.
+Es un nodo de comunicaciones o repetidor solar económico basado en [Meshtastic®](https://meshtastic.org/), que integra el controlador principal XIAO nRF52840 Plus y el módulo LoRa Wio-SX1262. Está específicamente diseñado para áreas sin cobertura de red. Soporta comunicación de larga distancia, posicionamiento preciso y operación de bajo consumo. Es adecuado para expandir la cobertura de red en áreas exteriores.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank">
@@ -60,7 +60,7 @@ El Solar Node está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     </td>
   </tr>
   <tr>
-    <td><b>Módulo GPS (para versión P1-Pro)</b></td>
+    <td><b>Módulo GPS(para versión P1-Pro)</b></td>
     <td>
       <a href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">XIAO L76K</a><br />
       (Soporta GPS/GLONASS/Galileo)
@@ -115,7 +115,7 @@ El Solar Node está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     <td>Luz indicadora de estado del panel solar *1</td>
   </tr>
   <tr>
-    <td>Luz de latido de Mesh *1</td>
+    <td>Luz de latido Mesh *1</td>
   </tr>
   <tr>
     <td>Definido por el usuario *1</td>
@@ -133,7 +133,7 @@ El Solar Node está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     <td>IPX5</td>
   </tr>
   <tr>
-    <td><b>Batería (para versión P1-Pro)</b></td>
+    <td><b>Batería(para versión P1-Pro)</b></td>
     <td>
       <p>- 4 x baterías de litio 18650 (3350mAh cada una)</p>
       <p>- Soporta carga Type-C y solar.</p>
@@ -146,19 +146,12 @@ El Solar Node está disponible en dos variantes: [SenseCAP Solar Node P1](https:
     <td>FCC、CE</td>
   </tr>
   <tr>
-    <td><b>Dimensiones</b></td>
+    <td><b>Dimensión</b></td>
     <td>191.2 x 201.2 x 42.1 mm</td>
   </tr>
 </table>
 
-### Botón
 
-|Acción del Botón|Descripción|
-|--|--|
-|Presionar por 3s|Encender|
-|Presionar dos veces|Actualizar información del nodo/ubicación|
-|Presionar tres veces|Encender/apagar el GPS|
-|Presionar por 5s|Apagar|
 
 ### Descripción General del Hardware
 

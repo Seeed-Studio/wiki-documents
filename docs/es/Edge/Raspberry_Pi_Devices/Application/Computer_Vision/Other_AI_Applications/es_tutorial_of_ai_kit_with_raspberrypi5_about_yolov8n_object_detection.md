@@ -7,7 +7,7 @@ keywords:
   - Ai kit
   - YOLO
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection
+slug: /es/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection 
 last_update:
   date: 08/6/2024
   author: Jiahao
@@ -19,7 +19,7 @@ no_comments: false # for Disqus
 
 ## Introducción
 
-[YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once versión 8) es el más popular de la serie YOLO de modelos de estimación de pose en tiempo real y detección de objetos. Se basa en las fortalezas de sus predecesores introduciendo varios avances en velocidad, precisión y flexibilidad. El [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) se utiliza para acelerar la velocidad de inferencia, con un acelerador de inferencia de red neuronal de 13 TOPS construido alrededor del chip Hailo-8L.
+[YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once versión 8) es la serie YOLO más popular de modelos de estimación de pose en tiempo real y detección de objetos. Se basa en las fortalezas de sus predecesores introduciendo varios avances en velocidad, precisión y flexibilidad. El [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) se utiliza para acelerar la velocidad de inferencia, con un acelerador de inferencia de red neuronal de 13 TOPS construido alrededor del chip Hailo-8L.
 
 Este wiki te guiará sobre cómo usar YOLOv8n para detección de objetos con AI Kit en Raspberry Pi 5, desde el entrenamiento hasta el despliegue.
 
@@ -28,28 +28,28 @@ Este wiki te guiará sobre cómo usar YOLOv8n para detección de objetos con AI 
 ### Para Hailo8L 13 TOPS
 
 <div class="table-center">
- <table align="center">
- <tr>
-  <th>Raspberry Pi5 8GB</th>
-  <th>Raspberry Pi AI Kit</th>
- </tr>
+  <table align="center">
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102110919-raspberry-pi-5-8gb-font.jpg" style={{width:600, height:'auto'}}/></div></td>
-   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <th>Raspberry Pi5 8GB</th>
+      <th>Raspberry Pi AI Kit</th>
     </tr>
-  <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
-    </a>
-   </div></td>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
-    </a>
-   </div></td>
-  </tr>
- </table>
+        <tr>
+          <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102110919-raspberry-pi-5-8gb-font.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
+        </tr>
+      <tr>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+        </a>
+      </div></td>
+    </tr>
+  </table>
 </div>
 
 ### Para Hailo8 26 TOPS
@@ -57,15 +57,54 @@ Este wiki te guiará sobre cómo usar YOLOv8n para detección de objetos con AI 
 <div class="table-center">
  <table align="center">
  <tr>
+ <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
+  <th>reComputer AI Industrial R2145</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -79,7 +118,7 @@ Por favor consulta [esto](https://www.raspberrypi.com/documentation/accessories/
 ## En la Computadora Host
 
 :::note
-Vamos a instalar el software de Hailo, asegúrate de tener una cuenta de Hailo.
+Instalaremos el software hailo, asegúrate de tener una cuenta hailo.
 :::
 
 ### Instalar Ultralytics y entrenar modelo
@@ -90,7 +129,7 @@ Instalar python3.11
 sudo apt install python3.11
 ```
 
-Crea yolo_env como tu entorno virtual
+Crear yolo_env como tu entorno virtual
 
 ```
 python3.11 -m venv yolo_env
@@ -108,7 +147,7 @@ Instalar ultralytics
 pip install ultralytics
 ```
 
-Entrena YOLOv8n usando el conjunto de datos COCO. Si quieres entrenar tu propio conjunto de datos, puedes consultar [esto](https://docs.ultralytics.com) para obtener instrucciones sobre cómo hacerlo.
+Entrenar YOLOv8n usando el conjunto de datos COCO. Si quieres entrenar tu propio conjunto de datos, puedes consultar [esto](https://docs.ultralytics.com) para instrucciones sobre cómo hacerlo.
 
 ```
 mkdir yolomodel && cd yolomodel
@@ -126,7 +165,7 @@ ls
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/train_result.png" alt="pir" width={1000} height="auto"/></p>
 
-Convierte el modelo `.pt` a `.onnx`.
+Convertir el modelo `.pt` a `.onnx`.
 
 ```
 yolo export model=./best.pt imgsz=640 format=onnx opset=11 
@@ -144,7 +183,7 @@ cd ~
 sudo apt install python3.8
 ```
 
-Crea hailo_env como tu entorno virtual
+Crear hailo_env como tu entorno virtual
 
 ```
 python3.8 -m venv hailo_env
@@ -156,7 +195,7 @@ Activar el entorno
 source hailo_env/bin/activate
 ```
 
-Instala [Hailo Dataflow Compiler 3.27](https://hailo.ai/developer-zone/software-downloads/), aquí necesitas registrarte en Hailo e iniciar sesión, y descargar el software.
+Instalar [Hailo Dataflow Compiler 3.27](https://hailo.ai/developer-zone/software-downloads/), aquí necesitas registrarte en Hailo e iniciar sesión, y descargar el software.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/HDF_install.png" alt="pir" width={1000} height="auto"/></p>
 
@@ -165,7 +204,7 @@ pip install hailo_dataflow_compiler-3.27.0-py3-none-linux_x86_64.whl
 
 ```
 
-Instala [Model zoo](https://hailo.ai/developer-zone/software-downloads/), aquí necesitas registrarte en Hailo e iniciar sesión, y descargar el software.
+Instalar [Model zoo](https://hailo.ai/developer-zone/software-downloads/), aquí necesitas registrarte en Hailo e iniciar sesión, y descargar el software.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/model_zoo.png" alt="pir" width={1000} height="auto"/></p>
 
@@ -173,7 +212,7 @@ Instala [Model zoo](https://hailo.ai/developer-zone/software-downloads/), aquí 
 pip install hailo_model_zoo-2.11.0-py3-none-any.whl 
 ```
 
-Prueba si `hailo_model_zoo` está funcionando correctamente.
+Probar si `hailo_model_zoo` está funcionando correctamente.
 
 ```
 hailomz -h
@@ -181,7 +220,7 @@ hailomz -h
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/model_zoo_test.png" alt="pir" width={1000} height="auto"/></p>
 
-Instalar el archivo de github `hailo_model_zoo`
+Instalar archivo github de `hailo_model_zoo`
 
 ```
 cd yolomodel/runs/detect/retrain_yolov8n/weights
@@ -189,7 +228,7 @@ cd yolomodel/runs/detect/retrain_yolov8n/weights
 git clone https://github.com/hailo-ai/hailo_model_zoo.git
 ```
 
-Instalar el conjunto de datos coco para evaluar/optimizar/compilar el modelo yolov8n
+Instalar conjunto de datos coco para evaluar/optimizar/compilar el modelo yolov8n
 
 ```
 python hailo_model_zoo/datasets/create_coco_tfrecord.py val2017
@@ -207,7 +246,7 @@ hailomz parse --hw-arch hailo8l --ckpt ./best.onnx yolov8n
 ### Usar `hailo_model_zoo` para optimizar el modelo
 
 :::note
-Si ejecutas el siguiente comando, es posible que encuentres algunos errores. Sin embargo, puedes copiar `./hailo_model_zoo/hailo_model_zoo` a tu biblioteca local. Si el error indica que no se puede encontrar el conjunto de datos, puedes navegar a `~/.hailomz`, localizar el conjunto de datos y copiarlo a tu directorio de datos local.
+Si ejecutas el siguiente comando, puedes encontrar algunos errores. Sin embargo, puedes copiar `./hailo_model_zoo/hailo_model_zoo` a tu biblioteca local. Si el error indica que no se puede encontrar el conjunto de datos, puedes navegar a `~/.hailomz`, localizar el conjunto de datos, y copiarlo a tu directorio local de conjunto de datos.
 :::
 
 ```
@@ -224,7 +263,7 @@ hailomz compile  yolov8n --hw-arch hailo8l --har ./yolov8n.har
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/model_compile.png" alt="pir" width={1000} height="auto"/></p>
 
-Después de todo obtendrás un modelo `hef`, puedes usarlo para desplegarlo en raspberry pi5 con AI kit
+Después de todo obtendrás un modelo `hef`, puedes usarlo para desplegar en raspberry pi5 con AI kit
 
 ```
 ls
@@ -243,7 +282,7 @@ sudo apt full-upgrade
 
 ### Configurar pcie a gen2/gen3 (gen3 es más rápido que gen2)
 
-Añade el siguiente texto a ```/boot/firmware/config.txt```
+Agregar el siguiente texto a ```/boot/firmware/config.txt```
 
 ```
 #Enable the PCIe external connector
@@ -257,7 +296,7 @@ dtparam=pciex1_gen=3
 ```
 
 :::note
-Si deseas usar `gen2`, comenta la línea `dtparam=pciex1_gen=3`.
+Si quieres usar `gen2`, por favor comenta `dtparam=pciex1_gen=3`
 :::
 
 ### Instalar hailo-all y reiniciar
@@ -271,7 +310,7 @@ sudo reboot
 
 ### Verificar Software y Hardware
 
-Abre la terminal en la Raspberry Pi5, e ingresa el comando como se muestra a continuación para verificar si hailo-all ha sido instalado.
+Abre la terminal en la Raspberry Pi5, e ingresa el comando como sigue para verificar si hailo-all ha sido instalado.
 
 ```
 hailortcli fw-control identify
@@ -280,7 +319,7 @@ hailortcli fw-control identify
 El resultado correcto se muestra a continuación:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_software.png" alt="pir" width={1000} height="auto"/></p>
 
-Abre la terminal en la Raspberry Pi5, e ingresa el comando como se muestra a continuación para verificar si hailo-8L ha sido conectado.
+Abre la terminal en la Raspberry Pi5, e ingresa el comando como sigue para verificar si hailo-8L ha sido conectado.
 
 ```
 lspci | grep Hailo
@@ -296,16 +335,16 @@ git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
 ```
 
-### Copia tu modelo al raspberry pi5
+### Copiar tu modelo a la raspberry pi5
 
-Crea un directorio llamado `hailomodel`
+Crear un directorio llamado `hailomodel`
 
 ```
 mkdir hailomodel
 ```
 
 :::note
-El siguiente comando debe ejecutarse en tu computadora anfitriona, no en tu Raspberry Pi 5. Asegúrate de que tanto tu computadora anfitriona como la Raspberry Pi 5 estén conectadas a la misma red.
+El comando a continuación debe ejecutarse en tu computadora host, no en tu Raspberry Pi 5. Asegúrate de que tanto tu computadora host como la Raspberry Pi 5 estén conectadas a la misma red.
 :::
 
 ```
@@ -335,7 +374,7 @@ bash run.sh object-detection-hailo
 
 ## Resultado
 
-Aquí está el video en el que demostramos el proceso de entrenar el modelo YOLOv8n y desplegarlo en la Raspberry Pi 5. Configuramos el tamaño de lote en 8, el tamaño de entrada en 640x640, y la velocidad de fotogramas del video de entrada en 240 fps. La velocidad de inferencia alcanzada es de 136.7 fps, lo cual es excepcionalmente rápido para la mayoría de escenarios de aplicación.
+Aquí está el video en el que demostramos el proceso de entrenar el modelo YOLOv8n y desplegarlo en la Raspberry Pi 5. Configuramos el tamaño de lote a 8, el tamaño de entrada a 640x640, y la velocidad de fotogramas del video de entrada a 240 fps. La velocidad de inferencia lograda es de 136.7 fps, lo cual es excepcionalmente rápido para la mayoría de escenarios de aplicación.
 
 <div class="video-container">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/mVNrEVpvvuc" title="YOLOv8n Object Detection on Raspberry Pi 5 with AI Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -343,7 +382,7 @@ Aquí está el video en el que demostramos el proceso de entrenar el modelo YOLO
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

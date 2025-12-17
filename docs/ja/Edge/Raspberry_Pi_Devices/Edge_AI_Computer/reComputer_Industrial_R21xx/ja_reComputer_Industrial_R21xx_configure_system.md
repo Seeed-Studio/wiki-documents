@@ -5,7 +5,7 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /ja/recomputer_industrial_R21xx_configure_system
 last_update:
   date: 09/28/2025
@@ -16,7 +16,7 @@ last_update:
 
 デバイスのインストール後、reComputer Industrial R21xx シリーズでハードウェアコンポーネントを設定およびテストする方法を学びます。このwikiでは、GPIO マッピング、USER LED テスト、SPI 通信、Wi-Fi および Bluetooth スキャン、LoRa®、4G、5G、Mini-PCIe 経由の Zigbee、RS485、RS232、CAN、DI/DO テスト、安全なシャットダウンのための UPS などについて説明します。
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -96,7 +96,7 @@ gcc spidev_test.c -o spidev_test
 ./spidev_test -D /dev/spidev10.0 -v -p hello
 ```
 
-このコマンドは、指定された SPI デバイス（**/dev/spidev10.0**）で詳細出力（-v）を使用して SPI 通信をテストし、メッセージ "hello"（**-p hello**）を送信します。
+このコマンドは、指定された SPI デバイス（**/dev/spidev10.0**）で詳細出力（-v）を使用して SPI 通信をテストし、メッセージ「hello」（**-p hello**）を送信します。
 TPM モジュールの MISO と MOSI ピンをショートすることで、MOSI で送信されたデータが MISO で受信されるループバックシナリオを効果的に作成します。この設定により、実際のデバイスを接続せずに SPI 通信をテストできます。
 
 ## Wi-Fi スキャン
@@ -352,7 +352,7 @@ minicom 経由で AT コマンドを使用して 5G/4G モジュールと対話�
 nano power_5g.sh
 ```
 
-sudo nano で開き、以下のコマンドを入力してから、***ctrl+x*** を押して保存して終了します。
+sudo nano で開き、以下のコマンドを入力し、***ctrl+x*** を押して保存して終了します。
 
 ```bash
 #!/bin/bash
@@ -395,7 +395,7 @@ sudo ./power_5g.sh
 ls /dev/ttyUSB*
 ```
 
-/dev/ttyUSB0 などが出力されます：
+/dev/ttyUSB0などが出力されます：
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.8_5g_cellular_over_m.2_b-key_1.png" style={{width:800, height:'auto'}}/></div>
 適切なシリアルポートとボーレートでminicomを開きます：
 
@@ -413,7 +413,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 AT
 ```
 
-このコマンドはモジュールが応答するかどうかを確認します。モジュールが正常に動作している場合、***"OK"*** レスポンスを受信するはずです。
+このコマンドはモジュールが応答するかどうかを確認します。モジュールが正常に動作している場合、***"OK"***レスポンスを受信するはずです。
 
 2. 4Gモジュールを使用して電話番号にダイヤルするには、ATDコマンドの後に電話番号を続けて使用できます：
 
@@ -421,8 +421,8 @@ AT
 ATD<phone_number>;
 ```
 
-**phone_number** をダイヤルしたい電話番号に置き換えてください。
-電話番号の終了を示すために、コマンドの最後にセミコロン ; を含めるようにしてください。
+**phone_number**をダイヤルしたい電話番号に置き換えてください。
+電話番号の終了を示すために、コマンドの最後にセミコロン;を含めるようにしてください。
 
 ## Mini-PCIe経由の4Gセルラー
 
@@ -468,8 +468,8 @@ minicomに入ってコマンドを送信します：
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-● ***Ctrl+A,Z,E*** を順番に押します。最初にATを送信して接続されているかどうかをテストします。OKが表示されれば、接続は成功です。
-以下のコマンドを実行すると、モジュールが自動的に再起動します。minicomを終了しなければ、対応する設定情報を確認できます。
+● ***Ctrl+A,Z,E***を順番に押します。最初にATを送信して接続されているかどうかをテストします。OKが表示されれば、接続は成功です。
+以下のコマンドを実行すると、モジュールは自動的に再起動します。minicomを終了しない場合、対応する設定情報を確認できます。
 ECMダイヤルアップインターネットアクセス：
 
 ```bash
@@ -517,7 +517,7 @@ sudo apt-get install cutecom
 - インターフェースの下部にある***"Hex output"***オプションをチェックします。
 - 以下の手順に従って最初のZigbeeモジュールを設定します：
 - コーディネーターとして設定：コマンド***'55 04 00 05 00 05'***を送信し、レスポンス***'55 04 00 05 00 05'***を期待します。
-- デバイスをリセット：リセットボタンを押すか、コマンド***'55 07 00 04 00 FF FF 00 04'***を送信します。
+- デバイスリセット：リセットボタンを押すか、コマンド***'55 07 00 04 00 FF FF 00 04'***を送信します。
 - ネットワーク形成：コマンド***'55 03 00 02 02'***を送信します。
 
 4. ルーター（2番目のZigbeeモジュール）用のシリアルポートを開きます：
@@ -525,18 +525,18 @@ sudo apt-get install cutecom
 以下の手順に従って2番目のZigbeeモジュールを設定します：
 
 - ルーターとして設定：コマンド***'55 04 00 05 01 04'***を送信し、レスポンス***'55 04 00 05 00 05'***を期待します。
-- デバイスをリセット：リセットボタンを押すか、コマンド***'55 07 00 04 00 FF FF 00 04'***を送信します。
+- デバイスリセット：リセットボタンを押すか、コマンド***'55 07 00 04 00 FF FF 00 04'***を送信します。
 - ネットワーク形成：コマンド***'55 03 00 02 02'***を送信します。
 
 5. デバイス状態を確認します：
 コマンド***'55 03 00 00 00'***を送信してデバイス状態を確認します。***'55 2a 00 00 00 01 XX XX XX XX'***のようなレスポンスを期待します。ここで'XX'はデバイス情報を表します。
 6. 透過モードに入ります：
-ネットワーク形成が成功した場合、コマンド***55 07 00 11 00 03 00 01 13***を送信して透過モードに入ります。両方のモジュールが直接通信するために透過モードにある必要があります。透過モードを終了するには、"+++"を送信します。
+ネットワーク形成が成功した場合、コマンド***55 07 00 11 00 03 00 01 13***を送信して透過モードに入ります。両方のモジュールが直接通信のために透過モードにある必要があります。透過モードを終了するには、"+++"を送信します。
 7. 追加の注意事項：
 
-- ルーター設定が失敗した場合、デバイスがすでにコーディネーターである可能性があります。コマンド'55 07 00 04 02 xx xx xx'を使用してネットワークから離脱します。
+- ルーター設定が失敗した場合、デバイスはすでにコーディネーターである可能性があります。コマンド'55 07 00 04 02 xx xx xx'を使用してネットワークから離脱します。
 - コマンド'55 04 0D 00 00 0D'（クエリ）と'55 04 0D 01 XX XX'（設定）を使用して送信電力をテストします。
-各Zigbeeモジュールに対して***/dev/ttyUSB***を正しいシリアルポートに置き換えることを確認してください。これらの手順に注意深く従って、2つのモジュール間のZigbee通信を正常にテストしてください。
+各Zigbeeモジュールの正しいシリアルポートで***/dev/ttyUSB***を置き換えることを確認してください。これらの手順に注意深く従って、2つのモジュール間のZigbee通信を正常にテストしてください。
 
 ## RS485テスト
 
@@ -563,7 +563,7 @@ sudo minicom -D /dev/ttyACM2
 
 3. 開いた両方のACMで以下の操作を実行する必要があります：
 
-- ***Ctrl+A***を押してから***Z***を押すと、Minicom Command Summaryインターフェースが表示されます：
+- ***Ctrl+A***を押してから***Z***を押すと、Minicomコマンドサマリーインターフェースが表示されます：
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_1.png" style={{width:800, height:'auto'}}/></div>
 - 再度***O***を押して設定を開き、Serial port setupを選択して***Enter***を押します；すべてのRS485関連インターフェースを開き、***H/I/J/K/L***を順番に押して開きます；
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
@@ -593,7 +593,7 @@ RS232は全二重通信であるため、RS232のTXとRXを直接短絡してル
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/21-rs232.png" style={{width:800, height:'auto'}}/></div>
 
 2つのターミナルを開く必要があります。拡張ボードが接続されている場合はACM1、拡張ボードが接続されていない場合はACM2：
-**ターミナル1：***
+**ターミナル1：**
 
 ```bash
 sudo minicom -D /dev/ttyACM1 -b 9600
@@ -656,7 +656,7 @@ DIポートの入力タイプはPNPです。入力電圧5VDC～24VDC、電流100
 DIの機能をテストするには、以下の手順に従ってテストできます：
 
 1. reComputer Industrial R21xxのDIポートと外部負荷の接続が完了しています。
-2. 以下のコマンドを入力してGPIOのステータスを取得します：
+2. 以下のコマンドを入力してGPIOの状態を取得します：
 
 ```bash
 echo 588 > /sys/class/gpio/export
@@ -754,7 +754,7 @@ CAN-0_H─────●───── CAN-0_H
 CAN-1_H─────●───── CAN-1_H
 ```
 
-2. ドライバーが読み込まれていないことを防ぐため、2つのネットワークインターフェースcan0とcan1がシステムに表示されることを確認します：
+2. 2つのネットワークインターフェースcan0とcan1がシステムに表示されることを確認し、ドライバーが読み込まれていないことを防ぎます：
 
 ```bash
 # should print can0 can1
@@ -765,7 +765,7 @@ dmesg | grep -i can
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_1.png" style={{width:800, height:'auto'}}/></div>
 
-3. 2つのCANインターフェースを500 kbit/sに設定してオンラインにし、データの送受信の準備をします（安全のためローレベルに設定）：
+3. 2つのCANインターフェースを500 kbit/sに設定してオンラインにし、データの送受信準備を行います（安全のためローレベルに設定）：
 
 ```bash
 sudo ip link set can0 down
@@ -774,7 +774,7 @@ sudo ip link set can0 up type can bitrate 500000
 sudo ip link set can1 up type can bitrate 500000
 ```
 
-4. ピンのステータスを確認します：
+4. ピンの状態を確認します：
 
 ```bash
 ip -d link show can0
@@ -847,7 +847,7 @@ ip a show can0
 ip a show can1
 ```
 
-「state UP」が出力されればUP状態を示します。
+「state UP」の出力はUP状態を示します。
 
 3. Python仮想環境と依存関係を設定します。
 
@@ -910,7 +910,7 @@ deactivate
 
 USBハブをテストするには、以下の手順を使用できます：
 
-1. ***lsusb***コマンドを実行してUSBハブが検出されているかを確認します。このコマンドは、ハブを含むすべての接続されたUSBデバイスをリストします。
+1. ***lsusb***コマンドを実行してUSBハブが検出されているかを確認します。このコマンドは、ハブを含む接続されたすべてのUSBデバイスをリストします。
 
 ```bash
 lsusb
@@ -952,7 +952,7 @@ sudo hwclock -r
 
 このコマンドは、RTCに保存されている時刻を読み取って表示します。
 
-5. RTCから電源を切断し、数分待ってから再接続し、RTCが正しい時刻を保持しているかどうかを確認するためにRTC時刻を再度チェックします。
+5. RTCから電源を切断し、数分待ってから再接続し、RTC時刻を再度確認して正しい時刻が保持されているかを確認します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1000,7 +1000,7 @@ realtime = yes
 priority = 1
 ```
 
-必要に応じて他の設定を調整できます。
+必要に応じて他の設定も調整できます。
 
 3. ウォッチドッグサービスが実行されていることを確認します：
 
@@ -1020,7 +1020,7 @@ echo "c" > /proc/sysrq-trigger
 このコマンドはカーネルクラッシュを引き起こし、ウォッチドッグによってシステムが再起動されるはずです。
 
 5. 指定されたタイムアウト期間後にシステムが再起動することを確認するため、システムを監視します。
-これらの手順により、システムのウォッチドッグタイマーの機能をテストし、確認することができます。
+これらの手順により、システム上のウォッチドッグタイマーの機能をテストし、確認することができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.17_watchdog_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1117,7 +1117,7 @@ SSD を含むディスクをリストするには、fdisk -l コマンドを使�
 sudo fdisk -l
 ```
 
-このコマンドは、SSD が適切に検出されている場合はそれを含む、システムに接続されているすべてのディスクのリストを表示します。SSD を表すエントリを探してください。通常、***/dev/sd*** で始まり、その後に文字が続きます（例：***/dev/sda、/dev/sdb*** など）。
+このコマンドは、SSD が適切に検出されている場合はそれを含む、システムに接続されているすべてのディスクのリストを表示します。SSD に対応するエントリを探してください。通常、***/dev/sd*** で始まり、その後に文字が続きます（例：***/dev/sda、/dev/sdb*** など）。
 SSD に対応するエントリを特定したら、必要に応じてパーティション分割やフォーマットを進めることができます。
 
 ## 安全なシャットダウンのための UPS
@@ -1138,7 +1138,7 @@ UPS デバイスの ***'CM5_UPS_DET'*** ピンが R21xx デバイスの GPIO16 �
 sudo nano /boot/firmware/config.txt
 ```
 
-3. ファイルの最後に以下の内容を追加します：
+3. ファイルの末尾に以下の内容を追加します：
 
 ```bash
 dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
@@ -1213,7 +1213,7 @@ sudo python3 ups_shutdown.py
 ```
 
 :::note
- スクリプトがシャットダウンコマンドを実行するのに十分な権限を持つように `sudo` を使用してください。
+ スクリプトがシャットダウンコマンドを実行するのに十分な権限を持つように、`sudo` を使用してください。
 :::
 
 6. 停電テストをシミュレートします
@@ -1261,11 +1261,11 @@ python basic_pipelines/detection_simple.py
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
-アプリケーションを閉じるには、***`Ctrl+C`*** を押してください。
-これは検出例の軽量版で、CPU 負荷を最小限に抑えながら主に Hailo のパフォーマンスを実証することに焦点を当てています。内部の GStreamer ビデオ処理パイプラインは、ビデオ処理タスクを最小限に抑えることで簡素化され、YOLOv6 Nano モデルが使用されています。
+アプリケーションを終了するには、***`Ctrl+C`*** を押してください。
+これは検出例の軽量版で、CPU 負荷を最小限に抑えながら Hailo のパフォーマンスを実証することに主に焦点を当てています。内部の GStreamer ビデオ処理パイプラインは、ビデオ処理タスクを最小限に抑えることで簡素化され、YOLOv6 Nano モデルが使用されています。
 
 :::note
-購入した reComputer に Hailo-8 が含まれておらず、統合のために Hailo デバイスの購入を検討している場合は、公式 Hailo ドキュメント（https://github.com/hailo-ai）を参照してファームウェアと環境を設定し、例を実行してデバイスが正常に使用できることを確認してください。
+購入した reComputer に Hailo-8 が含まれておらず、統合のために Hailo デバイスの購入を検討している場合は、公式の Hailo ドキュメント（https://github.com/hailo-ai）を参照してファームウェアと環境を設定し、例を実行してデバイスが正常に使用できることを確認してください。
 :::
 
 ## 技術サポート & 製品ディスカッション
