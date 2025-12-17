@@ -33,7 +33,7 @@ Características
 - Sin fuente de alimentación adicional
 
 :::tip
-Más detalles sobre los módulos Grove consulte [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
+Para más detalles sobre los módulos Grove, consulta [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
 
 Plataformas Compatibles
@@ -47,12 +47,12 @@ Plataformas Compatibles
 Las plataformas mencionadas anteriormente como compatibles son una indicación de la compatibilidad de software o teórica del módulo. Solo proporcionamos biblioteca de software o ejemplos de código para la plataforma Arduino en la mayoría de los casos. No es posible proporcionar biblioteca de software / código de demostración para todas las plataformas MCU posibles. Por lo tanto, los usuarios tienen que escribir su propia biblioteca de software.
 :::
 
-Descripción General del Hardware
+Descripción del Hardware
 ------------------
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_EMG_detector.jpg" /></div>
 
-- J2: interfaz grove, conectar a E/S analógica;
+- J2: interfaz grove, conecta a E/S analógica;
 - J1: conector de Electrodos de Superficie Desechables EMG.
 - U1: INA331IDGKT, amplificador diferencial.
 - U2, U3: OPA333, amplificador de deriva cero.
@@ -64,7 +64,7 @@ Esta demostración te mostrará cómo usar Grove - LCD RGB Backlight, necesitamo
 
 ### Instalación del Hardware
 
-Conecta Grove - Base Shield a Seeeduino, luego conecta Grove - LED Bar a D8, conecta Grove - EMG Sensor a A0.
+Conecta Grove - Base Shield al Seeeduino, luego conecta Grove - LED Bar a D8, conecta Grove - EMG Sensor a A0.
 
 Finalmente, coloca los tres electrodos en tu músculo, y mantén una distancia entre cada electrodo.
 
@@ -79,7 +79,7 @@ La lista de partes de este producto ha sido actualizada recientemente. Puedes re
 
 Puedes descargar el código de demostración en github, haz clic [aquí](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code/), luego extráelo a cualquier lugar.
 
-Luego sube el código a Seeeduino, si tienes algún problema con la subida de código, por favor consulta Getting Started With Seeeduino
+Luego sube el código al Seeeduino, si tienes algún problema con la subida del código, consulta Getting Started With Seeeduino
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_ide.png" /></div>
 
@@ -93,10 +93,6 @@ Cuando te estés moviendo, puedes encontrar que el nivel de la Barra LED cambiar
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_emg_demo_2.gif" /></div>
 
-# Grove-EMG Sensor v1.0
-
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/Grove-EMG_Sensor_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
 
 # Grove-EMG Sensor v1.1
 
@@ -106,13 +102,12 @@ Cuando te estés moviendo, puedes encontrar que el nivel de la Barra LED cambiar
 Recursos
 --------
 
-- [Archivo Eagle de Grove-EMG Sensor v1.0](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/Grove-EMG_Sensor_v1.0.zip)
-- [Archivo Eagle de Grove-EMG Sensor v1.1](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip)
+- [Archivo Eagle del Grove-EMG Sensor v1.1](https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip)
 - [Código de Demostración](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code)
 
-<!-- Este archivo Markdown fue creado desde https://www.seeedstudio.com/wiki/Grove_-_EMG_Detector -->
+<!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_EMG_Detector -->
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
