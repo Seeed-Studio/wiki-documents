@@ -351,7 +351,7 @@ void loop() {
 According to the datasheet, the effective measurement range of the ESP32-C5 covers 0~3300 mV. Therefore, the built-in battery voltage acquisition circuit of the XIAO ESP32-C5 is designed with two 100K resistors for voltage division, enabling accurate reading of values.
 :::
 
-## Resource
+<!-- ## Resource
 
 - **[PDF]** [ESP32-C5 datasheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
 
@@ -363,7 +363,7 @@ According to the datasheet, the effective measurement range of the ESP32-C5 cove
 
 - 🔗**[Kicad]** [Seeed Studio XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
+- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1) -->
 
 ## Tech Support & Product Discussion
 
