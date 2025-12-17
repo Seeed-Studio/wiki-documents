@@ -1,5 +1,5 @@
 ---
-description: Esta wiki introduce las características de la placa portadora J501 y explica cómo flashear el sistema Jetpack en la placa portadora J501.
+description: Este wiki presenta las características de la placa portadora J501 y explica cómo flashear el sistema Jetpack en la placa portadora J501.
 title: Flashear Jetpack
 keywords:
 - reServer
@@ -11,7 +11,7 @@ last_update:
   author: Youjiang
 ---
 
-# Primeros Pasos con reServer J501
+# Introducción al reServer J501
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_J501.png"/>
@@ -29,8 +29,8 @@ La placa portadora J501 es una potente placa de extensión que soporta módulos 
 
 - **Construye la computadora de IA más potente para computación en el borde:** Diseñada para integrarse con el módulo Jetson AGX Orin, con hasta 275 TOPS de rendimiento de IA, 8 veces el rendimiento de IA comparado con Jetson AGX Xavier. Potencia configurable entre 15W y 60W.
 - **Soporte de interfaz de alta velocidad para múltiples sensores:** 22 carriles de PCIe Gen4, 1x 10GbE, un Display Port, 16 carriles de MIPI CSI-2, interfaces USB 3.2, y un header de 40 pines.
-- **Soporte de interfaz de baja velocidad para múltiples IO:** 4x DI, 4x DO, 3x GND_DI, 2x GND_DO, 1x GND_ISO, 1x CAN, 1x RS232/RS422/RS485.
-<!-- - **BSP listo para desarrollo:** Jetpack 6 soportado Board BSP listo para desarrollar tu imagen de sistema personalizada. -->
+- **Soporte de interfaz de baja velocidad para múltiples E/S:** 4x DI, 4x DO, 3x GND_DI, 2x GND_DO, 1x GND_ISO, 1x CAN, 1x RS232/RS422/RS485.
+<!-- - **BSP ready for development:** Jetpack 6 supported Board BSP ready for developing your custom system image. -->
 
 ## Especificaciones
 
@@ -38,13 +38,13 @@ La placa portadora J501 es una potente placa de extensión que soporta módulos 
 <table>
   <tbody>
     <tr>
-      <td rowSpan={7}>I/O</td>
+      <td rowSpan={7}>E/S</td>
       <td>Ethernet</td>
       <td> 1x LAN0 RJ45 GbE (10/100/1000Mbps), <br /> 1x LAN RJ45 GbE (10/100/1000/10000Mbps) </td>
     </tr>
     <tr>
       <td>USB</td>
-      <td> 3x USB3.1, <br /> 1x USB3.1 Type C(Modo Host), <br /> 1x USB2.0 Type C(Modo Dispositivo) </td>
+      <td> 3x USB3.1, <br /> 1x USB3.1 Type C(Modo host), <br /> 1x USB2.0 Type C(Modo dispositivo) </td>
     </tr>
     <tr>
       <td>DI/DO</td>
@@ -70,7 +70,7 @@ La placa portadora J501 es una potente placa de extensión que soporta módulos 
     <tr>
       <td rowSpan={9}>Expansión</td>
       <td> Mini PCIE </td>
-      <td> 1x Mini PCIe para LoRaWAN®/4G/Series Wireless (Módulo no incluido) </td>
+      <td> 1x Mini PCIe para LoRaWAN®/4G/Serie Inalámbrica (Módulo no incluido) </td>
     </tr>
     <tr>
       <td> M.2 Key B </td>
@@ -107,7 +107,7 @@ La placa portadora J501 es una potente placa de extensión que soporta módulos 
     <tr>
       <td> Alimentación </td>
       <td> Fuente de Alimentación </td>
-      <td> DC 12V-36V Bloque de terminales 2 pines (incluye Adaptador de Alimentación 24V/5A)</td>
+      <td> Bloque de terminales DC 12V-36V de 2 pines (incluye Adaptador de Alimentación 24V/5A)</td>
     </tr>
     <tr>
       <td rowSpan={3}> Mecánico </td>
@@ -132,20 +132,20 @@ La placa portadora J501 es una potente placa de extensión que soporta módulos 
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/hardware_overview.jpeg"/>
 </div>
 
-## Flashear SO JetPack a la Placa Portadora J501
+## Flashear JetPack OS a la Placa Portadora J501
 
 Aquí, te mostraremos cómo flashear [Jetpack](https://developer.nvidia.com/embedded/jetson-linux-archive) a un SSD NVMe conectado al reServer J501.
 
 ### Módulo Soportado
 
-- [Módulo NVIDIA® Jetson AGX Orin™ 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5458.html)
-- [Módulo NVIDIA® Jetson AGX Orin™ 64GB](https://www.seeedstudio.com/NVIDIA-JETSON-AGX-ORIN-64GB-Module-p-5552.html)
+- [NVIDIA® Jetson AGX Orin™ Module 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5956.html)
+- [NVIDIA® Jetson AGX Orin™ Module 64GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-64GB-p-5957.html)
 
 ### Prerrequisitos
 
 - PC host Ubuntu
 - Placa Portadora reServer J501
-- Módulo NVIDIA® Jetson AGX Orin™ 32GB/64GB
+- NVIDIA® Jetson AGX Orin™ Module 32GB/64GB
 - Ventilador Activo AGX Orin
 - SSD Interno NVMe M.2 2280
 - Cable de transmisión de datos USB Type-C
@@ -183,15 +183,15 @@ Por favor consulta la tabla a continuación para preparar la máquina host.
 
 :::
 
-### Preparar la Imagen de Jetpack
+### Preparar la Imagen Jetpack
 
-Aquí, necesitamos descargar la imagen del sistema a nuestra PC Ubuntu correspondiente al módulo Jetson que estamos usando:
+Aquí, necesitamos descargar la imagen del sistema a nuestro PC Ubuntu correspondiente al módulo Jetson que estamos usando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Versión de Jetpack</th>
+      <th>Versión Jetpack</th>
       <th>Módulo Jetson</th>
       <th> GMSL </th>
       <th>Enlace de Descarga1</th>
@@ -204,30 +204,30 @@ Aquí, necesitamos descargar la imagen del sistema a nuestra PC Ubuntu correspon
       <td rowSpan={4}>5.1.3</td>
       <td>AGX Orin 32GB</td>
       <td>❌</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EagENvz49i1GhTAMR9xCLlkBHscdcSHkYf9PQuPFcgR50A?e=mOMJ2c" target="_blank" rel="noopener noreferrer">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD3U5NHij5gR5r4FB_AzC9vAbb3ERak_RvvIMoow0-X2fM?e=Ddf7Zi" target="_blank" rel="noopener noreferrer">Descargar</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERG3upqXAQNHsJP6ZvG2MAEBGsndVCgrLnhcKvtWoGA6tA?e=14KO6z" target="_blank" rel="noopener noreferrer">Descargar</a></td>
-      <td>56571770D7B1BAF53EAD3B1C173C075<br />4592601348501288C3E081FF8D51907F7</td>
+      <td>c673dc8ae75addf8ca3224cf700be35<br />4eec0ca41cb5ecabb8953c276213a7119</td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EUNTXrMsDcJCnIN2RvmXg6EBBLY6PRZiegvUjqI_N2i0YQ?e=SXEXXz" target="_blank" rel="noopener noreferrer">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQD3ZjNepbc7SoC24H82Y4txAUhoSQIZ4l2ZcKGa3qgd9_E?e=bk1qc5" target="_blank" rel="noopener noreferrer">Descargar</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EZ7iNOxMxL9AjcKFPLygVT8Bg5qnkE-ZsMmNmHkZzNayOg?e=qv2sbB" target="_blank" rel="noopener noreferrer">Descargar</a></td>
-      <td>077878E3B84022BA1344ED2EE8738B9<br />EAECA6F6136468369B7DBB4FC5EF48802</td>
+      <td>425a931e65f2715d8486c68565ad711<br />fd34b626ab023d025df2d84af81b62aa3</td>
     </tr>
     <tr>
       <td>AGX Orin 64GB</td>
       <td>❌</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERoEi192vKFPnvFaqnqVz_oBNi3PAQ2W7gkZHpGu0XuuEw?e=pXYw9X" target="_blank" rel="noopener noreferrer">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDvJDte6YOfS5UI7C7ln0ryAVTRpxtGi9spgHOmEZG_sL8?e=jz5B4f" target="_blank" rel="noopener noreferrer">Descargar</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ESfErbFgQl9NudcbGZXL3LMB9wavWcQwjtW6wYYtfwkE3A?e=H5sR4J" target="_blank" rel="noopener noreferrer">Descargar</a></td>
-      <td>F3852FFC7A8CDDFD9C2857B2F3F6168<br />99DC69EE4D5BA92704DB192E803C29EA0</td>
+      <td>76abdd6de0a49bd95d57b361bebea59<br />a6a05e56779c7ceb863ad178f3ed98aaf</td>
     </tr>
     <tr>
       <td>AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Ecebi5JjKaVHmY-DymgG8AIBPRgAuCXVCrf4IYiKIfsMxA?e=OJPKwB" target="_blank" rel="noopener noreferrer">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBh9HqX5MHBQZF0WLe01k7mAXYqzHd4YJXaDt4uS2VZ8T4?e=AX0KSd" target="_blank" rel="noopener noreferrer">Descargar</a></td>
       <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eccs1larF2FNhKi8MHred5kB4pQImN4ZHSgDM3BUDVzBtQ?e=reKIhD" target="_blank" rel="noopener noreferrer">Descargar</a></td>
-      <td>61434E1A88FF2A95F6B13B5FFA51557<br />FAE8D46C67C72DDF862DE51D91DAF6987</td>
+      <td>49076bd4bb7179dfe38c25bd5831c03<br />296bf26e86d67d9bca766a749a14257bd</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.0</td>
@@ -298,10 +298,10 @@ El archivo de imagen jetpack5 tiene aproximadamente **4.5GB** de tamaño y deber
 :::info
 Para verificar la integridad del firmware descargado, puede comparar el valor hash SHA256.
 
-En una máquina host Ubuntu, abra la terminal y ejecute el comando `sha256sum <Archivo>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargó está completo e intacto.
+En una máquina host Ubuntu, abra la terminal y ejecute el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargó está completo e intacto.
 :::
 
-### Entrar al Modo de Recuperación Forzada
+### Entrar en Modo de Recuperación Forzada
 
 :::info
 Antes de poder continuar con los pasos de instalación, necesitamos asegurarnos de que la placa esté en modo de recuperación forzada.
@@ -325,9 +325,9 @@ Antes de poder continuar con los pasos de instalación, necesitamos asegurarnos 
 
 **Paso 3.** Suelte el botón de recuperación forzada.
 
-**Paso 4.** Conecte la placa a la PC host Ubuntu con un cable de transmisión de datos USB Type-C.
+**Paso 4.** Conecte la placa al PC host Ubuntu con un cable de transmisión de datos USB Type-C.
 
-**Paso 5.** En la PC host Linux, abra una ventana de Terminal e ingrese el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el SoM Jetson que use, entonces la placa está en modo de recuperación forzada.
+**Paso 5.** En el PC host Linux, abra una ventana de Terminal e ingrese el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el Jetson SoM que use, entonces la placa está en modo de recuperación forzada.
 
 - Para AGX Orin 32GB: **0955:7223 NVidia Corp**
 - Para AGX Orin 64GB: **0955:7023 NVidia Corp**
@@ -350,7 +350,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Paso 2:** Ejecuta el siguiente comando para flashear el sistema jetpack al SSD NVMe:
+**Paso 2:** Ejecute el siguiente comando para flashear el sistema jetpack al SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -358,7 +358,7 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-Verás la siguiente salida si el proceso de flasheo es exitoso
+Verá la siguiente salida si el proceso de flasheo es exitoso
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
@@ -366,19 +366,19 @@ Verás la siguiente salida si el proceso de flasheo es exitoso
 El comando de flasheo puede ejecutarse durante 2-10 minutos.
 :::
 
-**Paso 3:** Conecta el J501 a una pantalla usando el conector HDMI en la placa y completa la configuración inicial:
+**Paso 3:** Conecte el J501 a una pantalla usando el conector HDMI en la placa y complete la configuración inicial:
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-Por favor completa la **Configuración del Sistema** según tus necesidades.
+Por favor complete la **Configuración del Sistema** según sus necesidades.
 :::
 
 **Paso 4 (Opcional):** Instalar Nvidia Jetpack SDK
 
-Por favor abre la terminal en el dispositivo Jetson y ejecuta los siguientes comandos:
+Por favor abra la terminal en el dispositivo Jetson y ejecute los siguientes comandos:
 
 ```bash
 sudo apt update
@@ -387,17 +387,17 @@ sudo apt install nvidia-jetpack
 
 ## Recursos
 
-- [Hoja de datos de la placa portadora reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
+- [Hoja de Datos de la Placa Portadora reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
 - [Esquemático del reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/202003906_reServer_Industrial_J501_Carrier_Board_v1.0_SCH_PDF_20240529.pdf)
 - [Archivo 3D del reServer Industrial J501](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/RESERVER_AGX_ORIN_CARRIER_BOARD.stp)
-- [Catálogo de series Seeed Jetson](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Historias de éxito de Edge AI de Seeed Studio](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Comparación de series Seeed Jetson](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Dispositivos Seeed Jetson en una página](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Catálogo de Series Jetson de Seeed](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Historias de Éxito de Edge AI de Seeed Studio](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Comparación de Series Jetson de Seeed](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Dispositivos Jetson de Seeed en Una Página](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-## Soporte técnico y discusión de productos
+## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

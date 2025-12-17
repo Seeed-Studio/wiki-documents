@@ -9,6 +9,7 @@ last_update:
   author: Citric
 ---
 
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -349,7 +350,7 @@ You can capture any Home Assistant page by changing the URL path:
 http://homeassistant.local:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-Step 10. Test your screenshot URL by entering it in a web browser. You should see the screenshot of your selected Home Assistant page.
+Test your screenshot URL by entering it in a web browser. You should see the screenshot of your selected Home Assistant page.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -361,30 +362,39 @@ Step 11. Add the following code to your ESPHome configuration after the `captive
 <TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
-http_request:
-  verify_ssl: false
-  timeout: 10s
-  watchdog_timeout: 15s
 
-online_image:
-  - id: dashboard_image
-    format: PNG
-    type: BINARY
-    buffer_size: 30000
-    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert  # Replace with your Home Assistant address
-    update_interval: 30s
-    on_download_finished:
-      - delay: 0ms
-      - component.update: main_display
+……
+psram:
+  mode: octal
+  speed: 80MHz
+
+……
+
+captive_portal:
 
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
 
+http_request:
+  verify_ssl: false
+  timeout: 20s
+  watchdog_timeout: 25s
+
+online_image:
+  - id: dashboard_image
+    format: PNG
+    type: GRAYSCALE
+    buffer_size: 65536
+    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
+    update_interval: 1min
+    on_download_finished:
+      - component.update: epaper_display
+
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 7.50inv2
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -393,7 +403,7 @@ display:
     busy_pin:
       number: GPIO13
       inverted: true
-    update_interval: never
+    update_interval: 300s
     lambda: |-
       it.image(0, 0, id(dashboard_image));
 ```
@@ -402,46 +412,39 @@ display:
 <TabItem value="For E1002" label="For E1002">
 
 ```yaml
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
 
-http_request:
-  verify_ssl: false
-  timeout: 10s
-  watchdog_timeout: 15s
+……
+psram:
+  mode: octal
+  speed: 80MHz
 
-online_image:
-  - id: dashboard_image
-    format: PNG
-    type: BINARY
-    buffer_size: 30000
-    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert  # Replace with your Home Assistant address
-    update_interval: 30s
-    on_download_finished:
-      - delay: 0ms
-      - component.update: main_display
+……
+
+captive_portal:
 
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
 
+http_request:
+  verify_ssl: false
+  timeout: 20s
+  watchdog_timeout: 25s
+
+online_image:
+  - id: dashboard_image
+    format: PNG
+    type: RGB565
+    buffer_size: 65536
+    url: http://192.168.1.12:10000/lovelace/0?viewport=800x480
+    update_interval: 1min
+    on_download_finished:
+      - component.update: epaper_display
+
 display:
-  - platform: waveshare_epaper
-    id: main_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+  - platform: epaper_spi
+    id: epaper_display
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       it.image(0, 0, id(dashboard_image));
@@ -456,7 +459,18 @@ Replace `homeassistant.local` with your Home Assistant's actual IP address if lo
 
 When your configuration is successfully uploaded and running, your reTerminal E Series ePaper Display will display a screenshot of your Home Assistant dashboard:
 
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/54.jpg" style={{width:600, height:'auto'}}/></div>
+
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/166.jpg" style={{width:600, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
 
 ## Demo 3: Deep Sleep Mode
 
@@ -544,15 +558,6 @@ interval:
     then:
       - logger.log: "Entering deep sleep now..."
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 font:
   - file: "gfonts://Inter@700"
     id: font1
@@ -563,17 +568,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: 5min
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -996,15 +993,6 @@ i2c:
   scl: GPIO20
   sda: GPIO19
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 # Fonts
 font:
   - file: "gfonts://Inter@700"
@@ -1173,17 +1161,9 @@ time:
 
 # e-paper
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -1333,14 +1313,12 @@ In this case, your device is either offline or in deep sleep mode. Please ensure
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

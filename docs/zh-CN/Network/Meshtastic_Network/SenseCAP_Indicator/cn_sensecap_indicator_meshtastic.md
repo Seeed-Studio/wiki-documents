@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.webp
 slug: /cn/sensecap_indicator_meshtastic
 last_update:
-  date: 10/29/2024
-  author: Jessie
+  date: 12/3/2024
+  author: Michelle Huang
 ---
 
 
@@ -29,7 +29,7 @@ last_update:
 
 SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设计的 4 英寸触摸屏设备，由双 MCU（ESP32 和 RP2040）驱动，支持 Wi-Fi、BLE 和 LoRa®。它是一个开源、强大的物联网开发平台。
 
-## 介绍
+## 简介
 
 ### 特性
 
@@ -55,16 +55,21 @@ SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设�
 |**蜂鸣器（尚未开发）**|MLT-8530，谐振频率：2700Hz|
 |**认证**|CE/FCC|
 
-### 硬件概览
+### 硬件概述
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/HO-114993532.png" alt="pir" width={800} height="auto" /></p>
 
-## 刷写固件
+## 入门指南
+:::danger note
+当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+1. 未完成消息传输过程
+2. 正在配置中
+:::
 
 ### 刷写应用固件
 
 :::caution note
-在刷写固件之前，请确保您购买的指示器是 Meshtastic 版本。请勿将 Meshtastic 固件刷写到不兼容 Meshtastic 的指示器上。这可能会导致硬件损坏。
+在刷写固件之前，请确保您购买的指示器是 Meshtastic 版本。不要将 Meshtastic 固件刷写到不兼容 Meshtastic 的指示器上。这可能会导致硬件损坏。请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
 :::
 
 **视频教程**
@@ -79,7 +84,7 @@ SenseCAP Indicator 是一款专为 [Meshtastic®](https://meshtastic.org/) 设�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-flash.png" alt="pir" width={800} height="auto" /></p>
 
-在插入 USB 线缆时按住按钮。
+在插入 USB 线缆的同时按住按钮。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/press-button.png" alt="pir" width={400} height="auto" /></p>
 
@@ -109,8 +114,6 @@ SenseCAP Indicator 没有内置 GPS，要获取 GPS 位置，需要 [Grove GPS �
 下载 `UF2` 文件并将其复制到 `RPI-RP2` 驱动器。文件下载完成后固件将被刷写，设备将重启。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/disk.png" alt="pir" width={600} height="auto" /></p>
-
-## 入门指南
 
 下载 `Meshtastic` 应用：
 
@@ -178,7 +181,7 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-参考 [各国 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
+参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
 **EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
@@ -215,7 +218,7 @@ RP2040 尚未开发完成，因此 `蜂鸣器`/`SD 卡`/`地图` 功能暂时不
 #### 角色选择
 
 :::caution
-请勿选择 `Repeater` 角色，这会导致设备反复重启。
+不要选择 `Repeater` 角色，这会导致设备反复重启。
 :::
 
 #### GPS 模块

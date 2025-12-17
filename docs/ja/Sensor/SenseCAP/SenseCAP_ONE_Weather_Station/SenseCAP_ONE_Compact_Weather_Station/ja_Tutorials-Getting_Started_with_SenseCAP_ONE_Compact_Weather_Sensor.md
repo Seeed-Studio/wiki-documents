@@ -1,19 +1,19 @@
 ---
-description: SenseCAP ONE コンパクト気象センサーの使用開始
-title: SenseCAP ONE コンパクト気象センサーの使用開始
+description:  SenseCAP ONE コンパクト気象センサーの入門ガイド
+title:  SenseCAP ONE コンパクト気象センサーの入門ガイド
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 4/14/2023
-  author: Yvonne
+  date: 12/11/2025
+  author: Michelle Huang
 ---
-# SenseCAP ONE コンパクト気象センサーの使用開始
+# SenseCAP ONE コンパクト気象センサーの入門ガイド
 
-# インストール前の準備
+# 設置前の準備
 
-## 図解
+## インストール
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image1.png" /></div>
 
@@ -43,7 +43,7 @@ last_update:
 
 デバイスはM12 8ピンコネクタを採用しており、異なる色のピンが電源とデータ通信を提供します（上図参照）。
 
-RS-485で動作する場合、4本のワイヤーのみを接続できます（加熱機能を使用しない場合）。残りのワイヤーは個別にテープで包んでショートを防ぐことができます
+RS-485で動作する場合、4本のワイヤーのみを接続し（加熱機能を使用しない）、残りは個別にテープで包んでショートを防ぐことができます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image7.png" /></div>
 
@@ -53,17 +53,17 @@ RS-485で動作する場合、4本のワイヤーのみを接続できます（�
 
 ケーブルを差し込み、時計回りに締めます
 
-注意：ケーブルを底部に挿入する前に、底部に向けてください。そうしないと、ピンが斜めになり、通信が異常になる可能性があります。
+注意：ケーブルを底部に挿入する前に、底部に向けて狙いを定めてください。そうしないと、ピンが斜めになり、通信が異常になる可能性があります。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image9.png" /></div>
 
-加熱機能付きのデバイスを使用する場合、別途24V（24V@1Aを推奨）の電源が必要です。グレーワイヤー5は電源の負極に接続し、ピンクワイヤー6は電源の正極に接続します。
+加熱機能付きデバイスを使用する場合、別途24V（24V@1Aを推奨）電源が必要です。グレーワイヤー5は電源のマイナスに、ピンクワイヤー6は電源のプラスに接続します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image10.png" /></div>
 
 ### デバイスの設置
 
-主要な設置方法は2つあります。スリーブ付きのポールに取り付けるか、フランジプレート付きのプラットフォームに取り付けます。
+主要な設置方法は2つあり、スリーブ付きポールに取り付けるか、フランジプレート付きプラットフォームに取り付けます。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image11.png" /></div>
 
@@ -79,23 +79,25 @@ RS-485で動作する場合、4本のワイヤーのみを接続できます（�
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image14.png" /></div>
 
+> 注意：可能な限り正確な風向データを取得するため、設置時にベースの**矢印**を真北に直接向けて物理的な北方向を確保してください。そうでない場合は、設定時に電子コンパスを有効にしてください。
+
 # デバイスの動作モード
 
-インストール後、デバイスの電源を入れ、設定を行い、デバイスからデータを収集することができます。
+設置後、デバイスの電源を入れ、設定を行い、デバイスからデータを収集できます。
 
-デバイスには2つの動作モードがあります：**設定モード**と**動作モード**です。
+デバイスには2つの動作モードがあります：**設定モードと動作モード**です。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image15.png" /></div>
 
-## USBポート経由でのデバイス設定
+### USBポート経由でのデバイス設定
 
-デバイスの底部に防水の丸いカバーがあります。このカバーを反時計回りに回して取り外すと、USB Type-Cコネクタと設定ボタンが見えます。
+デバイスの底部に防水の丸いカバーがあります。反時計回りに回してこのカバーを取り外すと、USB Type-Cコネクタと設定ボタンが見えます。
 
 USB Type-Cケーブルでデバイスをコンピュータに接続します。コンピュータは自動的にデバイスドライバをインストールします。ドライバが正常にインストールされると、デバイスマネージャーでシリアルポートを確認できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image16.png" /></div>
 
-ドライバが自動的にインストールされない場合は、このリンクをクリックして[手動でダウンロード](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)し、[ドライバを](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)[インストール](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)してください。（バージョンはCP210x Windows Driversです）
+ドライバが自動的にインストールされない場合は、このリンクをクリックして[手動でダウンロード](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)し、[ドライバをインストール](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)してください（バージョンはCP210x Windows Drivers）。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image17.png" /></div>
 
@@ -105,7 +107,7 @@ USB Type-Cケーブルでデバイスをコンピュータに接続します。�
 
 - シリアルデバッグツール
 
-## SenseCAP ONE 設定ツール
+### SenseCAP ONE Configuration Tool
 
 SenseCAP ONE Configuration Toolは、デバイスを設定するためのグラフィカルインターフェースを提供します。以下のGitHubリンクからツールをダウンロードできます：
 
@@ -115,7 +117,7 @@ SenseCAP ONE Configuration Toolは、デバイスを設定するためのグラ�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image18.png" /></div>
 
-次の画像はSenseCAP ONE Configuration Toolのメインインターフェースを示しています。
+次の画像は、SenseCAP ONE Configuration Toolのメインインターフェースを示しています。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image19.png" /></div>
 
@@ -127,7 +129,7 @@ SenseCAP ONE Configuration Toolは、デバイスを設定するためのグラ�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image20.png" /></div>
 
-Settingsをクリックしてデバイス設定に入り、"Read From Device"をクリックしてデバイスの情報を取得します。
+Settings をクリックしてデバイス設定に入り、"Read From Device" をクリックしてデバイスの情報を取得します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image21.png" /></div>
 
@@ -135,25 +137,73 @@ Settingsをクリックしてデバイス設定に入り、"Read From Device"を
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image22.png" /></div>
 
-2. Modbusアドレスを変更します：Modbusアドレスにアドレスを書き込み、"Write to Device"をクリックします。
+2. Modbusアドレスを変更：Modbusアドレスにアドレスを書き込み、"Write to Device" をクリックします。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image23.png" /></div>
 
-設定ページでは、デバイス名、データタイプ、データアップロード間隔を変更できます。変更後は、変更を有効にするために"Write to Device"をクリックする必要があります。
+設定ページでは、デバイス名、データタイプ、データアップロード間隔を変更できます。変更後は、"Write to Device" をクリックして変更を有効にする必要があります。
 
-アプリケーション設定では、ツールがセンサーデータを読み取るサイクルを設定でき、最小は2秒で、カーブのドット範囲も設定できます。
+アプリケーション設定では、ツールがセンサーデータを読み取るサイクルを設定でき、最小は2S、カーブのドット範囲を設定できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image24.png" /></div>
 
-"Firmware Update"をクリックしてデバイスファームウェアを更新します。ファームウェアを入手するには、営業または技術サポート（sensecap@seeed.cc）にお問い合わせください。
+"Firmware Update" をクリックしてデバイスファームウェアを更新します。ファームウェアを取得するには、営業または技術サポート（sensecap@seeed.cc）にお問い合わせください。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image25.png" /></div>
 
-アップグレードページでは、メインボードファームウェアまたはドライバーボードファームウェアの更新を選択する必要があります。ローカルリポジトリでファームウェアファイルを選択し、"Update Now"をクリックします。更新プロセス中に予期しない電源断が発生した場合、更新は実行されません。ファームウェアを更新するには、同じプロセスを実行する必要があります。
+アップグレードページでは、メインボードファームウェアまたはドライバーボードファームウェアの更新を選択する必要があります。ローカルリポジトリでファームウェアファイルを選択し、"Update Now" をクリックします。更新プロセス中に予期しない電源断が発生した場合、更新は実行されません。同じプロセスを経てファームウェアを更新する必要があります。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image26.png" /></div>
 
-## シリアルデバッグツール
+#### ファームウェアアップグレード
+
+1. `SenseCAP One Configuration Tool` を開きます
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_One_Configuration_Tool.png" /></div>
+
+2. Type-Cケーブルでデバイスをコンピュータに接続します
+
+3. ソフトウェアを開き、デバイスの正しい `COM` ポートを選択し、`"Connect"` をクリックします
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Connect.png" /></div>
+
+4. 接続後、`"Firmware Update"` をクリックします
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Firmware_Update.png" /></div>
+
+5. ターゲットボードと対応するファームウェアファイルを選択します
+
+- `Master board` を選択します
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Master_board.png" /></div>
+
+- `"Local File"` をクリックし、ファームウェアフォルダを参照します
+
+- `"Update"` をクリックします
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Update.png" /></div>
+
+6. `"Update"`をクリックした後、デバイスのResetボタン（Type-Cポートの隣にあります）を押します。
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Reset.png" /></div>
+
+ボタンを押してから数秒後にアップデートプロセスが開始されます。
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Update2.png" /></div>
+
+7. アップデートが完了したら、再度Resetボタンを押し、画面上の`"OK"`をクリックします。
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Reset2.png" /></div>
+
+8. 上記の手順を繰り返して、`Slave Board 1`に別のファームウェアをフラッシュします。
+
+9. 完了後、ファームウェアアップデートウィンドウを閉じ、`"Disconnect"`をクリックします。
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Disconnect.png" /></div>
+
+これで気象ステーションのファームウェアアップグレード手順がすべて完了しました。
+
+### シリアルデバッグツール
 
 通信設定は以下の通りです：
 
@@ -163,7 +213,7 @@ Settingsをクリックしてデバイス設定に入り、"Read From Device"を
 
 - シリアルデバッグアシスタントで、対応するCOMポートを選択します。
 
-- 「Enterキーを押して新しい行を開始」チェックボックスをチェックします。
+- "click Enter to start a new line"チェックボックスにチェックを入れます。
 
 - ボーレートを9,600に設定します。
 
@@ -183,7 +233,7 @@ Settingsをクリックしてデバイス設定に入り、"Read From Device"を
 
 **プロトコル通信パラメータ**
 
-<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image31.png" /></div>
+<div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/DefaultDeviceAddress.png" /></div>
 
 ### Modbus-RTUプロトコルメッセージフォーマット
 
@@ -207,9 +257,9 @@ Settingsをクリックしてデバイス設定に入り、"Read From Device"を
 
 ### Modbus-RTU読み取り
 
-**Modbus Pollツール**の例を示します
+以下は**Modbus Pollツール**の例です
 
-(&lt;https://www.modbustools.com/download.html&gt;からダウンロード)。
+（&lt;https://www.modbustools.com/download.html&gt;からダウンロード）。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image35.png" /></div>
 
@@ -239,11 +289,11 @@ Settingsをクリックしてデバイス設定に入り、"Read From Device"を
 
 2. スレーブが01 04 04 00 00 6E 8C D6 41で応答
 
-3. 温度データ0x00006E8C（16進）を返し、10進に変換 = 28300、1000で割って対応する気温を取得、気温 = 28300/1000 = 28.3 °C
+3. 温度データ0x00006E8C（16進）を返し、10進数に変換 = 28300、1000で割って対応する気温を取得、気温 = 28300/1000 = 28.3 °C
 
-**温度が負の場合：**
+**温度が負の場合**
 
-温度は補数計算によって取得する必要があります。
+温度は補数計算を通じて取得する必要があります。
 
 1. ホストが01 04 00 00 00 02 71 CBを送信
 
@@ -251,11 +301,13 @@ Settingsをクリックしてデバイス設定に入り、"Read From Device"を
 
 3. 返された温度データFFFFFC18H（16進補数）。
 
-4. 元のコードは - (FF FF FC 18-1 = FF FF FC 17) = 80 00 03 E8（16進） = -1000（10進）。
+4. 元のコードは - (FF FF FC 18-1 = FF FF FC 17) = 80 00 03 E8（16進）= -1000（10進）。
 
-5. 温度測定値は-1000/1000 = -1°
+5. そして温度測定値は-1000/1000 = -1°
 
-**S500デコード：**
+
+
+**S500デコード**
 
 レジスタ0x0000~0x0005を読み取り。
 
@@ -265,73 +317,81 @@ Settingsをクリックしてデバイス設定に入り、"Read From Device"を
 
 返信：0A 04 0C 00 00 00 00（最小風向）00 03 6E 84（最大風向）00 03 C8 C0（平均風向）00 00 00 00（最小風速）00 00 04 BC（最大風速）00 00 02 10（平均風速）BC 78（チェックコード）
 
-**S700デコード：**
+**S600デコード**
 
-レジスタ0x0000~0x001Fと0x0030~0x0033を読み取り。
+レジスタ0x0000~0x0013を読み取り
+
+送信コマンド: 45 03 00 00 00 13 0B 43
+
+返信: 45 04 40 00 00 70 80（温度） 00 00 95 10（湿度） 06 07 94 40（気圧） 00 00 00 00（光） 00 00 00 00（最小風向） 00 00 00 00（最大風速） 00 00 00 00（平均風向） 00 00 00 00 （最小風速） 00 00 00 00（最大風速） 00 00 00 00（平均風速）77FD（チェックコード）
+
+**S700デコード**
+
+レジスタ0x0000-0x001F & 0x0030-0x0033を読み取り。
 
 送信コマンド: 14 04 00 00 00 20 F3 06
 
 返信: 14 04 40 00 00 70 80（温度） 00 00 95 10（湿度） 06 07 94 40（気圧） 00 00 00 00（光） 00 00 00 00（最小風向） 00 00 00 00（最大風向） 00 00 00 00（平均風向） 00 00 00 00 （最小風速）00 00 00 00（最大風速) 00 00 00 00（平均風速） 00 00 00 00（累積降雨量） 00 00 00 00（累積降雨時間） 00 00 00 00（雨強度） 00 00 00 00（最大雨強度） 00 00 6A 7C（加熱温度） 00 00 00 00（転倒状態） 99 09（チェックコード）
 
-**S900デコード：**
+**S900デコード**
 
-レジスタ0x0000~0x001Fと0x0030~0x0033を読み取り。
+レジスタ0x0000-0x001F & 0x0030-0x0033を読み取り。
 
 送信コマンド: 26 04 00 00 00 20 F7 05
 
 返信: 26 04 40 00 00 70 80 (温度) 00 00 95 10(湿度) 06 07 94 40(気圧) 00 00 00 00(光) 00 00 00 00(最小風向) 00 00 00 00(最大風向) 00 00 00 00(平均風向) 00 00 00 00 (最小風速) 00 00 00 00(最大風速) 00 00 00 00(平均風速) 00 00 00 00(累積降雨量) 00 00 00 00(累積降雨時間) 00 00 00 00(雨強度) 00 00 00 00(最大雨強度)00 00 6A 7C(加熱温度) 00 00 00 00(転倒状態) 99 09(チェックコード)
 
-PM2.5とPM10は別々に読み取る必要があります：
+PM2.5とPM10は別途読み取る必要があります：
 
-コマンド送信: 26 04 00 30 00 04 F7 11
+送信コマンド: 26 04 00 30 00 04 F7 11
 
-戻り値: 26 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(チェックコード)
+返信: 26 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(チェックコード)
 
-**S1000デコード:**
+**S1000デコード**
 
-レジスタ0x0000~0x001Fと0x0030~0x0033を読み取ります。
+レジスタ0x0000-0x001Fと0x0030-0x0033を読み取り。
 
-コマンド送信: 2B 04 00 00 00 20 F6 18
+送信コマンド: 2B 04 00 00 00 20 F6 18
 
-戻り値: 2B 04 40 00 00 70 80 (温度) 00 00 95 10(湿度) 06 07 94 40(気圧) 00 00 00 00(光) 00 00 00 00(最小風向) 00 00 00 00(最大風向) 00 00 00 00(平均風向) 00 00 00 00 (最小風速) 00 00 00 00(最大風速) 00 00 00 00(平均風速) 00 00 00 00(累積降雨量) 00 00 00 00(累積降雨時間) 00 00 00 00(雨強度) 00 00 00 00(最大雨強度)00 00 6A 7C(加熱温度) 00 00 00 00(ダンピング状態) 99 09(チェックコード)
+返信: 2B 04 40 00 00 70 80 (温度) 00 00 95 10(湿度) 06 07 94 40(気圧) 00 00 00 00(光) 00 00 00 00(最小風向) 00 00 00 00(最大風向) 00 00 00 00(平均風向) 00 00 00 00 (最小風速) 00 00 00 00(最大風速) 00 00 00 00(平均風速) 00 00 00 00(累積降雨量) 00 00 00 00(累積降雨時間) 00 00 00 00(雨強度) 00 00 00 00(最大雨強度)00 00 6A 7C(加熱温度) 00 00 00 00(転倒状態) 99 09(チェックコード)
 
-PM2.5、PM10、CO2は別々に読み取る必要があります：
+PM2.5、PM10、CO2は別途読み取る必要があります：
 
-コマンド送信: 2B 04 00 30 00 04 F6 0C
+送信コマンド: 2B 04 00 30 00 04 F6 0C
 
-戻り値: 2B 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(チェックコード)
+返信: 2B 04 08 00 00 90 88(PM2.5) 00 00 A4 10(PM10) 13 FA(チェックコード)
 
-レジスタ0x0040~0x0041を読み取ります。
+レジスタ0x0040~0x0041を読み取り。
 
-コマンド送信:2B 04 00 40 00 02 77 D5
+送信コマンド:2B 04 00 40 00 02 77 D5
 
-戻り値:2B 04 04 00 0C EC 98 （CO2） FD 2F （チェックコード）；
+返信:2B 04 04 00 0C EC 98 （CO2） FD 2F （チェックコード）；
 
 ### ノイズセンサー
 
-ノイズセンサーは独立したRS485センサーとして使用され、同じRS-485バス上の他の測定ユニットと並列に接続されるため、別途読み取りと設定が必要です。
+ノイズセンサーは独立したRS485センサーとして使用され、同じRS-485バス上の他の測定ユニットと並列に接続されているため、個別に読み取りと設定を行う必要があります。
 
-仕様:
+仕様：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image40.png" /></div>
 
-データ読み取りプロトコルと設定:
+データ読み取りプロトコルと設定：
 
-通信プロトコルは標準RS485 Modbus-RTUプロトコルを採用し、プロトコル通信パラメータは以下の通りです:
+通信プロトコルは標準RS485 Modbus-RTUプロトコルを採用し、プロトコル通信パラメータは以下の通りです：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image41.png" /></div>
 
-ノイズセンサー（アドレス: 40, 0x28）のデータを照会:
+ノイズセンサー（アドレス：40、0x28）のデータを照会：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image42.png" /></div>
 
-照会が成功した場合、以下の情報が返されます:
+照会が成功した場合、以下の情報が返されます：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image01.png" /></div>
 
 実際のDB = レジスタ値 /100
 
-ノイズレジスタ値は0x128E=4750で、値は=4750/100=47.5dBです
+ノイズレジスタ値は0x128E=4750で、値は=4750/100=47.5dB
 
 ## ASCIIプロトコル
 
@@ -341,19 +401,19 @@ PM2.5、PM10、CO2は別々に読み取る必要があります：
 
 ### クエリコマンド形式
 
-コマンドには2つの形式があります:
+コマンドには2つの形式があります：
 
-**1.** **=のないコマンド**は基本的なクエリ方法を指します。
+**1.** **= なしのコマンドは基本的なクエリ方法を指します。**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/11.png" /></div>
 
-*例: `?<CR><LF>`はデバイスのアドレスを照会することを示します*
+*例：`?<CR><LF>` はデバイスのアドレスをクエリすることを示します*
 
-**2.** **=のあるコマンド**は引数付きクエリを指します
+**2.** **= 付きのコマンドは引数付きのクエリを指します**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/22.png" /></div>
 
-*例: 0XA;BD=`?<CR><LF>`はデバイスのボーレートを照会することを示します*
+*例：0XA;BD=`?<CR><LF>` はデバイスのボーレートをクエリすることを示します*
 
 ### 設定コマンド形式
 
@@ -361,29 +421,28 @@ PM2.5、PM10、CO2は別々に読み取る必要があります：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/33.png" /></div>
 
-*例: 0XA;BD=96`<CR><LF>`はデバイスのボーレートを照会することを示します*
+*例：0XA;BD=96`<CR><LF>` はデバイスのボーレートをクエリすることを示します*
 
 ### コマンドリスト
 
-以下を参照してください:
-&lt;https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf&gt;
+以下を参照してください：
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ## SDI-12
 
 SDI-12通信は3本の線を使用し、そのうち2本はセンサー電源線で、もう1本はSDI-12信号線です。
 
-SDI-12バス上の各センサーは固有のアドレスを持ち、'0'、'1' ～ '9'、'A' ～ 'Z'、'a' ～ 'z'に設定できます。SenseCAP ONEのSDI-12アドレスはデフォルトで'0'です。このセンサーがサポートする命令は次の章で示されており、各命令はSDI-12 v1.4に準拠しています。
+SDI-12バス上の各センサーには固有のアドレスがあり、'0'、'1' ～ '9'、'A' ～ 'Z'、'A' ～ 'Z'に設定できます。SenseCAP ONEのSDI-12アドレスはデフォルトで'0'です。このセンサーがサポートする命令は次の章に示されており、各命令はSDI-12 v1.4に準拠しています。
 
-センサーは3.6～16VのDC電源で駆動されます。センサーの電源投入後、すぐにスリープモードに入り、データ収集機器からの命令を待機します。SDI-12は9600bpsのボーレート、1スタートビット（ハイレベル）、7データビット（ハイ0、ロー1、反論理）、1偶数パリティビット、1ストップビットを使用します。
+センサーは3.6～16VのDC電源で駆動されます。センサーの電源を入れると、すぐにスリープモードに入り、データ取得機器からの指示を待ちます。SDI-12は9600bpsのボーレート、1スタートビット（ハイレベル）、7データビット（ハイ0とロー1、反論理）、1偶数パリティビット、1ストップビットを使用します。
 
-送信される各バイトのシーケンスを以下の図に示します：
+送信される各バイトのシーケンスを次の図に示します：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/44.png" /></div>
 
-### SDI-12コマンドとレスポンス
+### SDI-12コマンドと応答
 
-以下を参照してください：
-&lt;https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf&gt;
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)を参照してください
 
 ### SDI-12読み取り
 
@@ -399,7 +458,7 @@ SDI-12バス上の各センサーは固有のアドレスを持ち、'0'、'1' �
 
 緑線（GND Data）と黄線（SDI-12 Data）を**USB to SDI-12**デバッガーに接続します。
 
-そして赤線（Vin+電源正極）と茶線（Vin-電源グランド）を12V電源に接続します。
+そして赤線（Vin+ 電源正極）と茶線（Vin- 電源グランド）を12V電源に接続します。
 
 シリアルポートデバッグアシスタントをダウンロードします：
 &lt;https://github.com/Neutree/COMTool&gt;、そしてシリアルポートデバッグツールを開きます。
@@ -410,17 +469,17 @@ SDI-12バス上の各センサーは固有のアドレスを持ち、'0'、'1' �
 
 - "CRLF"をチェックします
 
-- クリックしてシリアルポートを開きます。
+- シリアルポートを開くためにクリックします。
 
-- デバイスアドレス問い合わせコマンド"?!"を送信し、レスポンス"0"が表示されれば、接続が正常であることを意味します。
+- クエリデバイスアドレスコマンド"?!"を送信し、応答"0"が表示されれば、接続が正常であることを意味します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image50.png" /></div>
 
 **測定開始**
 
-気温、湿度、気圧、光強度を読み取り
+気温、湿度、気圧、光強度を読み取ります
 
-"測定開始コマンド0M!"を送信すると、センサーはまず"00024"で応答します。これは"0M!"コマンドが測定に2秒かかり、4つの測定値を返すことを意味します。2秒後、センサーは自身のアドレス"0"で応答し、測定が完了したことを示します。
+"測定開始コマンド0M!"を送信すると、センサーはまず"00024"で応答し、これは"0M!"コマンドが測定に2秒かかり、4つの測定値を返すことを意味します。2秒後、センサーは自身のアドレス"0"で応答し、測定が完了したことを示します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image51.png" /></div>
 
@@ -436,20 +495,23 @@ SDI-12バス上の各センサーは固有のアドレスを持ち、'0'、'1' �
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image54.png" /></div>
 
-次に"連続測定コマンド0R2!"を送信すると、デバイスは4つの測定値を返します：累積降雨量1.2mm、累積降雨時間20秒、降雨強度1.2mm/h、最大降雨強度72.0mm/hです。
+次に"連続測定コマンド0R2!"を送信すると、デバイスは4つの測定値を返します：累積降雨量1.2mm、累積降雨時間20秒、降雨強度1.2mm/h、最大降雨強度72.0mm/h。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image55.png" /></div>
 
-# エラーコード
+## エラーコード
 
-## Modbus エラーコード
+### Modbusエラーコード
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image56.png" /></div>
 
-## ASCII エラーコード
+### ASCIIエラーコード
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image57.png" /></div>
 
-## SDI-12 エラーコード
+### SDI-12エラーコード
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
+
+## リソース
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)

@@ -92,7 +92,6 @@ const translationStatus = {
 };
 
 // 预处理文档，添加行号标记（保留缩进）
-// PATCH: 新增 startsInsideCodeBlock/endsInsideCodeBlock，用于跨分块延续代码块状态
 function preprocessDocument(content, startsInsideCodeBlock = false) {
   const lines = content.split('\n');
   const processedLines = [];
@@ -132,10 +131,16 @@ function preprocessDocument(content, startsInsideCodeBlock = false) {
       // 空行
       processedLines.push(`${lineId}[EMPTY_LINE]`);
     } else if (meta.inCodeBlockLine) {
-      // 代码块内行：用占位符顶替真实内容，保持行数/位置
-      processedLines.push(`${lineId}__CODE_LINE_PLH__`);
+      // 特殊情况：这一行里有 HTML 注释结束符 -->，
+      // 需要让模型看到它，否则它会以为前面的 <!-- 注释永远没结束
+      if (trimmedContent.includes('-->')) {
+        // 只暴露 -->，其余内容用占位符掩盖（模型只需要知道注释结束了）
+        processedLines.push(`${lineId}-->`);
+      } else {
+        // 普通代码行：用占位符顶替真实内容，保持行数/位置
+        processedLines.push(`${lineId}__CODE_LINE_PLH__`);
+      }
     } else {
-      // 普通行：原样（含缩进）送给模型
       processedLines.push(`${lineId}${indent}${trimmedContent}`);
     }
 
@@ -368,7 +373,7 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 所有[EMPTY_LINE]标记
    - 标记后的所有缩进（空格和制表符）
    - 代码块内容（\`\`\`之间的内容）
-   - 行内代码（\`之间的内容）
+   - 行内代码（\`...\`）中的内容必须**逐字符原样保留**：包括大小写、空格、标点、连字符等都不得改变；即使反引号内看起来是可翻译的英文单词/状态值（例如 \`Low\`、\`High\`、\`On\`、\`Off\`、\`True\`、\`False\`、\`Input\`、\`Output\`），也禁止翻译/本地化/改写
    - URL链接
    - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
    - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
@@ -388,10 +393,25 @@ ${glossaryPairs}
    - 列表项的缩进级别必须保持不变
    - 代码块内的缩进必须完全保留
 
-5. **锚点链接处理**：
-   - 在[文本](#锚点)格式中，锚点部分的空格用连字符替换
-   - 例如：[Some Text](#some-text) → [一些文本](#一些-文本)
-   - 注意：锚点中绝不能有空格，必须用连字符连接
+5. **内部链接的锚点（fragment）处理——仅限 Seeed 内部链接（合并规则）**：
+   - 仅当链接满足以下任一条件时处理锚点：
+     1) 以 \`https://wiki.seeedstudio.com/\` 开头；或  
+     2) 为相对链接（以 \`/\` 开头或以 \`#\` 开头）
+   - **不要尝试推断标题位置**。对 \`#\` 后的 fragment 采用如下**机械流程**：
+     - 第一步：将 fragment 中的连字符 \`-\` **视为空格**，还原为一个正常短语/句子（不改变词序，不删除词元）
+     - 第二步：翻译这个短语/句子为目标语言
+     - 第三步：**将译文中的空格恢复为 \`-\`**；若译文中**没有空格**，则**不添加** \`-\`
+   - **禁止出现空格**于最终 fragment；**不得改动** \`#\` 之前的任何部分（域名、路径、查询参数等保持不变）。
+   - 处理要点：
+     - 专有名词/保留词（如 Grove, SenseCAP, API 等）按“术语保护/术语表”规则保留或按指定译法替换；
+     - 仅翻译词语本身，不新增、不删除词元，不改变顺序。
+   - 示例：
+     - \`[BLE Scanner](#ble-scanner)\`  
+       还原：\`ble scanner\` → 译文：\`BLE 扫描器\` → 空格→\`-\` → **\`#BLE-扫描器\`**
+     - \`[Intro](/Sensor/Guide/#hardware-overview)\`  
+       还原：\`hardware overview\` → 译文：\`硬件概述\`（无空格）→ **\`#硬件概述\`**
+     - \`<a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">…\`  
+       还原：\`getting started\` → 译文：\`入门指南\`（无空格）→ **\`#入门指南\`**
 
 6. **严格禁止**：
    - 添加或删除任何行
@@ -399,6 +419,22 @@ ${glossaryPairs}
    - 添加原文没有的\`\`\`代码块标记
    - 改变[LINE_X]标记的位置
    - 在锚点链接的#后面使用空格
+
+7. **组件规则（Docusaurus Tabs，仅 <TabItem>）**：
+   - 若存在 \`label="…"\` 或 \`label='…'\`：**只翻译 label 的值**；不要改动属性名；不要改动其他属性值；此时**不要改动 value**
+   - 若不存在 \`label\`，但存在 \`value="…"\` 或 \`value='…'\`：**翻译 value 的值**
+   - 示例：
+     - \`<TabItem value="For E1002" label="For E1002">\` → \`<TabItem value="For E1002" label="适用于 E1002">\`
+     - \`<TabItem value='Install through browser'>\` → \`<TabItem value='通过浏览器安装'>\`
+   - 反例（禁止）：\`<TabItem value="适用于 E1002" label="适用于 E1002">\`（有 label 时不应改 value）
+
+8. **产品系列命名（“… Series” 后缀）**：
+   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`）时，保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为**该目标语言中表示“产品系列”的常用词**。
+   - 各语言示例（仅作参考，实际输出只使用当前目标语言）：
+     - 若目标语言为 zh-CN：\`reTerminal E Series\` → \`reTerminal E 系列\`
+     - 若目标语言为 ja：\`reTerminal E Series\` → \`reTerminal E シリーズ\`
+     - 若目标语言为 es：\`reTerminal E Series\` → \`reTerminal E Serie\`
+   - **禁止**在日文或西班牙文译文中输出中文“系列”；必须使用目标语言自身的词汇。
 </translation_rules>
 
 <example>
@@ -412,32 +448,141 @@ ${glossaryPairs}
 [LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 [LINE_7] Click "Settings" in the app (File > Preferences).
 [LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
+[LINE_9] <TabItem value="For E1002" label="For E1002">
+[LINE_10] <TabItem value='Install through host'>
+[LINE_11] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
 
 正确输出：
 [LINE_0] ## 入门指南
 [LINE_1][EMPTY_LINE]
 [LINE_2] 这是一个关于以下内容的教程：
 [LINE_3]   - 第一项
-[LINE_4]   - [BLE 扫描器](#ble-扫描器)
+[LINE_4]   - [BLE 扫描器](#BLE-扫描器)
 [LINE_5]     - 嵌套项
 [LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 [LINE_7] 在应用中点击 "Settings"（File > Preferences）。
 [LINE_8] <a className="nav-item"><span className="text">开发者中心</span></a>
+[LINE_9] <TabItem value="For E1002" label="适用于 E1002">
+[LINE_10] <TabItem value='通过主机安装'>
+[LINE_11] 查看更多：[简介](/Sensor/Guide/#硬件概述)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a>
 
 错误输出（绝对禁止）：
-[LINE_0] ## 入门指南
-[LINE_1][EMPTY_LINE]
-[LINE_2] 这是一个关于以下内容的教程：
-[LINE_3] - 第一项  ❌ 缩进丢失
-[LINE_4]   - [BLE 扫描器](#ble 扫描器)  ❌ 锚点中有空格
-[LINE_5]   - 嵌套项  ❌ 缩进级别错误
-[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>  ❌ HTML/JSX 可见文本未翻译（应为“立即购买”）
-[LINE_7] 在应用中点击 “设置” （文件 > 首选项）。  ❌ 不应翻译软件界面内的菜单路径或按钮名称
-[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>  ❌ 网页自身的可见文本未翻译
+[LINE_3] - 第一项                                       ❌ 缩进丢失
+[LINE_4]   - [BLE 扫描器](#BLE 扫描器)                   ❌ 锚点中出现空格
+[LINE_9] <TabItem value="适用于 E1002" label="适用于 E1002"> ❌ 有 label 时不应改动 value
+[LINE_10] <TabItem value='Install through host'>         ❌ 无 label 时 value 未翻译
+[LINE_11] [简介](#/Sensor/Guide/硬件-概述)                 ❌ 不能改动 \`#\` 之前的 URL 结构
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门-指南">Open</a> ❌ 未按“还原短语→翻译→空格转连字符”的流程，应为 #入门指南
 </example>
 </instruction>
 
 请直接翻译以下内容，保持所有标记、缩进和格式：`;
+
+  // === 语言一致性硬约束（插入到 <translation_rules> 开头） ===
+  const LANGUAGE_GUARD =
+    '\n0. **语言一致性**：除代码、行内代码、保留术语与产品名外，所有可见文本必须使用 ' +
+    langName +
+    ' 输出；不得混用其它自然语言。若发生混用，改译为目标语言。\n';
+  prompt = prompt.replace('<translation_rules>', '<translation_rules>\n' + LANGUAGE_GUARD);
+
+  // === 按目标语言替换 <example> 为本地化示例（仅 es / ja 覆盖；默认保留中文示例） ===
+  function getLocalizedExampleBlock(lang) {
+    if (lang === 'es') {
+      return (
+`<example>
+Entrada:
+[LINE_0] ## Getting Started
+[LINE_1][EMPTY_LINE]
+[LINE_2] This is a tutorial about:
+[LINE_3]   - First item
+[LINE_4]   - [BLE Scanner](#ble-scanner)
+[LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
+[LINE_9] <TabItem value="For E1002" label="For E1002">
+[LINE_10] <TabItem value='Install through host'>
+[LINE_11] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
+
+Salida correcta:
+[LINE_0] ## Introducción
+[LINE_1][EMPTY_LINE]
+[LINE_2] Este es un tutorial sobre:
+[LINE_3]   - Primer elemento
+[LINE_4]   - [Escáner BLE](#BLE-escáner)
+[LINE_5]     - Elemento anidado
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+[LINE_7] Haz clic en "Settings" (File > Preferences) dentro de la app.
+[LINE_8] <a className="nav-item"><span className="text">Centro de Desarrolladores</span></a>
+[LINE_9] <TabItem value="For E1002" label="Para E1002">
+[LINE_10] <TabItem value='Instalar a través del host'>
+[LINE_11] Ver más: [Introducción](/Sensor/Guide/#visión-general-del-hardware)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#Primeros-pasos">Open</a>
+
+Salida incorrecta (prohibido):
+[LINE_3] - Primer elemento                           ❌ Se perdió la sangría
+[LINE_4]   - [Escáner BLE](#BLE escáner)              ❌ Espacio dentro del fragmento
+[LINE_9] <TabItem value="Para E1002" label="Para E1002"> ❌ Con label presente no se cambia value
+[LINE_10] <TabItem value='Install through host'>         ❌ Sin label, el value debe traducirse
+[LINE_11] [Introducción](#/Sensor/Guide/visión-general-del-hardware) ❌ No se modifica nada antes de "#"
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a> ❌ No usar chino en salida española
+</example>`
+      );
+    }
+
+    if (lang === 'ja') {
+      return (
+`<example>
+入力:
+[LINE_0] ## Getting Started
+[LINE_1][EMPTY_LINE]
+[LINE_2] This is a tutorial about:
+[LINE_3]   - First item
+[LINE_4]   - [BLE Scanner](#ble-scanner)
+[LINE_5]     - Nested item
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+[LINE_7] Click "Settings" in the app (File > Preferences).
+[LINE_8] <a className="nav-item"><span className="text">Developer Center</span></a>
+[LINE_9] <TabItem value="For E1002" label="For E1002">
+[LINE_10] <TabItem value='Install through host'>
+[LINE_11] See more: [Intro](/Sensor/Guide/#hardware-overview)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#getting-started">Open</a>
+
+正しい出力:
+[LINE_0] ## 入門ガイド
+[LINE_1][EMPTY_LINE]
+[LINE_2] これは次の内容についてのチュートリアルです：
+[LINE_3]   - 最初の項目
+[LINE_4]   - [BLE スキャナ](#BLE-スキャナ)
+[LINE_5]     - ネストされた項目
+[LINE_6] <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+[LINE_7] アプリ内で "Settings"（File > Preferences）をクリックします。
+[LINE_8] <a className="nav-item"><span className="text">開発者センター</span></a>
+[LINE_9] <TabItem value="For E1002" label="E1002 向け">
+[LINE_10] <TabItem value='ホスト経由でインストール'>
+[LINE_11] さらに見る：[イントロ](/Sensor/Guide/#ハードウェア概要)
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入門ガイド">Open</a>
+
+誤った出力（禁止）:
+[LINE_3] - 最初の項目                           ❌ インデント欠落
+[LINE_4]   - [BLE スキャナ](#BLE スキャナ)          ❌ fragment 内に空白
+[LINE_9] <TabItem value="E1002 向け" label="E1002 向け"> ❌ label がある場合は value を変更しない
+[LINE_10] <TabItem value='Install through host'>        ❌ label がない場合、value は翻訳する必要がある
+[LINE_11] [イントロ](#/Sensor/Guide/ハードウェア概要)   ❌ 「#」より前の URL 構造を変更しない
+[LINE_12] <a href="https://wiki.seeedstudio.com/Sensor/ABC/#入门指南">Open</a> ❌ 中国語混在
+</example>`
+      );
+    }
+    return '';
+  }
+
+  const localizedExample = getLocalizedExampleBlock(targetLang);
+  if (localizedExample) {
+    prompt = prompt.replace(/<example>[\s\S]*?<\/example>/, localizedExample);
+  }
 
   if (isChunk && chunkInfo) {
     prompt += `\n\n注意：这是第${chunkInfo.index + 1}/${chunkInfo.total}块。`;
@@ -446,8 +591,7 @@ ${glossaryPairs}
   return prompt;
 }
 
-// 验证翻译结果
-// ——改动点：自动识别原文中的代码块行，并在逐行校验时跳过这些行的格式检查
+// 验证翻译结果,自动识别原文中的代码块行，并在逐行校验时跳过这些行的格式检查
 function validateTranslation(original, translated) {
   const originalLines = original.split('\n');
   const translatedLines = translated.split('\n');
@@ -556,7 +700,6 @@ function validateTranslation(original, translated) {
 }
 
 // Claude翻译函数
-// PATCH: 新增 startsInsideCodeBlock 形参，并在 markdown 路径返回 { text, endsInsideCodeBlock }
 async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null, isCategory = false, startsInsideCodeBlock = false) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
@@ -664,7 +807,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
   }
 }
 
-// Category翻译prompt（保持原有）
+// Category翻译prompt
 function generateCategoryPrompt(targetLang, pathPrefix) {
   const langName = LANGUAGE_CONFIG[targetLang].name;
   const termsList = Object.entries(PRESERVE_TERMS)
@@ -672,6 +815,12 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
     .join('\n');
 
   const cleanPathPrefix = pathPrefix.startsWith('/') ? pathPrefix.slice(1) : pathPrefix;
+  const localeFolder = LANGUAGE_CONFIG[targetLang].folder;
+
+  const langFilePrefix =
+    targetLang === 'zh-CN' ? 'cn_' :
+    targetLang === 'ja'    ? 'ja_' :
+    targetLang === 'es'    ? 'es_' : '';
 
   return `你是一个专业的技术文档翻译专家。请将以下 _category_.yml 文件从英文翻译成${langName}。
 
@@ -685,7 +834,20 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
    - 专有产品名称
    - 技术字段名
 4. **link字段处理**：
-   - slug值前添加 "${cleanPathPrefix}/" 前缀
+   - slug：
+     - 只修改 slug 的值
+     - 在原始值前面加 "${cleanPathPrefix}/" 作为 URL 前缀
+   - id：
+     - 不翻译 id 里面的英文路径，只改“前缀”和“最后一段文件名”
+     - 假设英文原始 id 的格式是： "A/B/C/F"
+       - A/B/C 是中间目录
+       - F 是最后一段文件名（不带扩展名）
+     - 目标语言的 id 按下面的公式改写：
+       1. 保留中间目录 A/B/C 不变
+       2. 把最后一段 F 改成 "${langFilePrefix}F"
+       3. 最前面再加上语言前缀 "${localeFolder}/"
+       4. 也就是：英文 id = "A/B/C/F"
+          目标语言 id = "${localeFolder}/A/B/C/${langFilePrefix}F"
 5. **术语保护**：
 ${termsList}
 
@@ -694,6 +856,15 @@ ${termsList}
 
 // 修复锚点链接中的空格问题
 function fixAnchorLinks(content) {
+  // 处理带路径的锚点链接，例如 /slug#fragment 或官方 Wiki 链接中的 #fragment
+  content = content.replace(
+    /\[([^\]]*)\]\(((?:\/|https:\/\/wiki\.seeedstudio\.com\/)[^)#\s]*)#([^)]*)\)/gi,
+    (match, text, base, anchor) => {
+      const fixedAnchor = anchor.replace(/\s+/g, '-');
+      return `[${text}](${base}#${fixedAnchor})`;
+    }
+  );
+
   // 修复锚点链接中的空格
   // 匹配 [文本](#锚点) 格式，将锚点中的空格替换为连字符
   content = content.replace(
@@ -728,7 +899,7 @@ function fixAnchorLinks(content) {
   return content;
 }
 
-// 处理内部链接（保持原有）
+// 处理内部链接
 function processInternalLinks(content, targetLang) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig || !langConfig.pathPrefix) return content;
@@ -774,7 +945,7 @@ function processInternalLinks(content, targetLang) {
   return content;
 }
 
-// 中英文混排处理（保持原有，但避免影响锚点）
+// 中英文混排处理
 function addChineseEnglishSpacing(content) {
   // 先保存所有的锚点链接
   const anchorLinks = [];

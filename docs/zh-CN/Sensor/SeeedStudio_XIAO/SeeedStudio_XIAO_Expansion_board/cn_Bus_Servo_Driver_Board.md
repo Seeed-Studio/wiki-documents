@@ -129,7 +129,7 @@ import TabItem from '@theme/TabItem';
 
 - **跳线设置（关键）：**
 
-  - 使用 2.54mm 跳线帽短接板子正面的 2pin 引脚。（默认已短接）
+  - 无需使用 2.54mm 跳线帽短接板子正面的 2pin 引脚。（默认未短接）
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
 - **为主机供电：** 您的主机设备（如 Raspberry Pi Zero、ESP32、XIAO）需要自己的独立电源。
@@ -153,7 +153,7 @@ import TabItem from '@theme/TabItem';
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-1.png" style={{width:400, height:'auto'}}/></div>
 
-  - **步骤 2.** 使用 2.54mm 跳线帽短接板子正面的 2pin 引脚。（默认已短接）
+  - **步骤 2.** 使用 2.54mm 跳线帽短接板子正面的 2pin 引脚。（默认未短接）
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
 ### 所需组件（开始之前）

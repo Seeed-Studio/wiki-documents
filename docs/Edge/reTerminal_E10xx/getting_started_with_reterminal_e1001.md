@@ -281,12 +281,7 @@ Capture and display specific web content on your device. The Web feature can ren
 
 After pairing your device with the SenseCraft platform as described in the previous section, you'll be ready to create your first dashboard. For detailed instructions on using each feature, please refer to the corresponding Wiki pages:
 
-- [SenseCraft HMI Overview](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
-- [AI Generator Guide](https://wiki.seeedstudio.com/sensecraft_hmi_ai_generation)
-- [Gallery Usage Guide](https://wiki.seeedstudio.com/sensecraft_hmi_gallery)
-- [Canvas Design Tools](https://wiki.seeedstudio.com/sensecraft_hmi_canvas)
-- [RSS Feed Configuration](https://wiki.seeedstudio.com/sensecraft_hmi_rss)
-- [Web Content Display](https://wiki.seeedstudio.com/sensecraft_hmi_web)
+- [SenseCraft HMI Overview](https://sensecraft-hmi-docs.seeed.cc/en/)
 
 Once you've created and saved your dashboard in the SenseCraft platform, simply click "Deploy to Device," select your paired reTerminal E1001, and your custom content will be wirelessly transmitted to the device. The ePaper display will update to show your dashboard, and you can use the navigation buttons to switch between multiple pages if you've created them.
 
@@ -480,14 +475,12 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

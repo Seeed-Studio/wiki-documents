@@ -1,6 +1,6 @@
 ---
-description: この記事では、TRMNL 7.5inch(OG) DIY KitをTRMNLと連携させる方法について説明します。
-title: TRMNLとの連携
+description: この記事では、TRMNL 7.5inch(OG) DIY Kit を TRMNL と連携させる方法について説明します。
+title: TRMNL との連携
 keywords:
 - ePaper display
 - TRMNL
@@ -12,7 +12,7 @@ last_update:
   author: Allen
 ---
 
-# TRMNL 7.5inch(OG) DIY KitとTRMNLの連携
+# TRMNL 7.5inch(OG) DIY Kit と TRMNL の連携
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:1000, height:'auto'}}/></div>
 
@@ -24,50 +24,50 @@ last_update:
     </a>
 </div>
 
-## [TRMNL](https://trmnl.app/)とは？
+## [TRMNL](https://trmnl.app/) とは？
 
-TRMNLは、ますます注意散漫になるデジタル世界において、人々が集中力を保ち、落ち着いた状態を維持できるよう支援するために設計された革新的なプラットフォームです。2023年に設立されたTRMNLは、E Ink®ダッシュボード管理の主要なソリューションとして急速に成長し、従来のスクリーンの絶え間ない通知や気を散らす要素なしに情報を表示するユニークなアプローチを提供しています。
+TRMNL は、ますます注意散漫になるデジタル世界において、人々が集中力を保ち、落ち着いた状態を維持できるよう支援するために設計された革新的なプラットフォームです。2023年に設立された TRMNL は、E Ink® ダッシュボード管理の主要なソリューションとして急速に成長し、従来のスクリーンの絶え間ない通知や気を散らす要素なしに情報を表示するユニークなアプローチを提供しています。
 
-TRMNLの核心は、テクノロジーは絶え間ない注意を要求することなく私たちの生活を向上させるべきだという哲学に基づいています。このプラットフォームは、E Ink®ディスプレイを通じて重要な情報を一目で確認できるエレガントな方法を提供し、より思慮深く、侵入的でないテクノロジー体験を創造します。
+TRMNL の核心は、テクノロジーは絶え間ない注意を要求することなく私たちの生活を向上させるべきだという哲学に基づいています。このプラットフォームは、E Ink® ディスプレイを通じて重要な情報を一目で確認できるエレガントな方法を提供し、より思慮深く、侵入的でないテクノロジー体験を創造します。
 
-### なぜTRMNLを使用するのか？
+### なぜ TRMNL を使うのか？
 
-TRMNLの統合により、いくつかの魅力的な利点がもたらされます：
+TRMNL の統合により、いくつかの魅力的な利点がもたらされます：
 
-- **簡素化されたダッシュボード作成**: TRMNLの成長するアプリとインテグレーションライブラリにより、複雑なプログラミングなしでカスタム情報ディスプレイを簡単に作成できます
-- **低消費電力**: TRMNLの効率的なソフトウェアと当社のE Ink®ディスプレイの最小限の電力要件の組み合わせにより、極めてエネルギー効率の高いソリューションを実現します
+- **簡素化されたダッシュボード作成**: TRMNL の成長するアプリとインテグレーションのライブラリにより、複雑なプログラミングなしでカスタム情報ディスプレイを簡単に作成できます
+- **低消費電力**: TRMNL の効率的なソフトウェアと E Ink® ディスプレイの最小限の電力要件の組み合わせにより、極めてエネルギー効率の高いソリューションを実現します
 - **気を散らさない情報表示**: 従来のスクリーンに関連する絶え間ない通知や眼精疲労なしに、必要な情報を取得できます
-- **定期的なアップデート**: TRMNLの活発な開発により、新機能とインテグレーションが毎週追加され、ディスプレイの可能性を継続的に拡張します
-- **開発者フレンドリー**: TRMNLのオープンAPIと開発者ツールにより、特定のニーズに合わせたカスタムプラグインとインテグレーションを作成できます
+- **定期的なアップデート**: TRMNL の活発な開発により、新機能とインテグレーションが毎週追加され、ディスプレイの可能性を継続的に拡張します
+- **開発者フレンドリー**: TRMNL のオープン API と開発者ツールにより、特定のニーズに合わせたカスタムプラグインとインテグレーションを作成できます
 
-TRMNLの強力なプラットフォームと当社の高品質E Ink®ディスプレイを組み合わせることで、ユーザーの注意と時間の両方を尊重する、パーソナライズされた低消費電力情報ダッシュボードを作成するためのエレガントなソリューションを提供しています。
+TRMNL の強力なプラットフォームと高品質な E Ink® ディスプレイを組み合わせることで、ユーザーの注意と時間の両方を尊重する、パーソナライズされた低消費電力情報ダッシュボードを作成するためのエレガントなソリューションを提供しています。
 
-## TRMNLの開始方法
+## TRMNL の使用開始
 
 ### 機器の設置
 
-**ステップ1. ディスプレイをドライバーボードに接続**  
-FPCケーブルをXIAO ePaper Display Boardのコネクタに合わせ、ラッチを固定して確実な接続を確保します。  
+**ステップ 1. ディスプレイをドライバーボードに接続**  
+FPC ケーブルを XIAO ePaper Display Board のコネクタに合わせ、ラッチを固定して確実な接続を確保します。  
 
 :::tip
-FPCケーブルの金属面は上向きにする必要があります。そうでないと、コンテンツが表示されません。
+FPC ケーブルの金属面は上向きにする必要があります。そうでないと、コンテンツが表示されません。
 
 以下の設置チュートリアルに従ってください。多くの人が間違えます。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/2.jpg" style={{width:600, height:'auto'}}/></div>
 
-**ステップ2. バッテリーの取り付け**  
-バッテリーケーブルをドライバーボードのJSTコネクタに接続し、正しい極性（赤線を+、黒線を-）を確認します。  
+**ステップ 2. バッテリーの取り付け**  
+バッテリーケーブルをドライバーボードの JST コネクタに接続し、正しい極性（赤線を +、黒線を - に）を確認します。  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
 
-**ステップ3. エンクロージャーの組み立て（オプション）**  
+**ステップ 3. エンクロージャーの組み立て（オプション）**  
 
 :::tip
 スクリーンのフレキシブルケーブルは非常に壊れやすいことにご注意ください。操作時は注意してください。損傷すると、スクリーン全体が動作しなくなります。
 :::
-[Resource part](#resources)からオープンソースのエンクロージャー部品を印刷し、内部にコンポーネントを組み立てます。  
+[リソース部分](#resources)からオープンソースのエンクロージャー部品を印刷し、内部にコンポーネントを組み立てます。  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
 
@@ -78,21 +78,21 @@ FPCケーブルの金属面は上向きにする必要があります。そう�
 autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-TRMNLキットが正常に動作するかテストします。
+TRMNL キットが正常に動作するかテストします。
 
 <div class="table-center">
 <iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/test.mp4?
 autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-スクリーンをケースに差し込み、FPCを外に出します。
+スクリーンをケースに差し込み、FPC を外に出します。
 
 <div class="table-center">
 <iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/cable.mp4?
 autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-FPC延長ケーブルを接続し、ケース全体を組み立てます。
+FPC 延長ケーブルを接続し、ケース全体を組み立てます。
 
 <div class="table-center">
 <iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
@@ -107,52 +107,52 @@ autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowful
 </div>
 
 :::tip
-TRMNLキットがルーターから遠い場合は、アンテナをケースの外に移動できます。より良いパフォーマンスが得られます。
+TRMNL キットがルーターから遠い場合は、アンテナをケースの外に移動できます。より良いパフォーマンスが得られます。
 :::
 
-### TRMNLアカウントの設定とTRMNLアクセス
+### TRMNL アカウントの設定と TRMNL アクセス
 
-キットをTRMNLに接続する前に、以下を行う必要があります：
+キットを TRMNL に接続する前に、以下を行う必要があります：
 
-1. **TRMNLアクセスの購入**
+1. **TRMNL アクセスの購入**
 
-   - TRMNLウェブアプリ + デバイス機能へのアクセスを購入：[https://shop.usetrmnl.com/products/byod](https://shop.usetrmnl.com/products/byod)
-   - これにより、TRMNLのプラットフォームを使用するために必要な認証情報が提供されます
-   - [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device)にアクセスして仮想デバイスをアクティベートします（購入後最大10分かかる場合があります）
+   - TRMNL ウェブアプリ + デバイス機能へのアクセスを購入：[https://shop.usetrmnl.com/products/byod](https://shop.usetrmnl.com/products/byod)
+   - これにより、TRMNL のプラットフォームを使用するために必要な認証情報が提供されます
+   - [https://usetrmnl.com/claim-a-device](https://usetrmnl.com/claim-a-device) にアクセスして仮想デバイスをアクティベートします（購入後最大10分かかる場合があります）
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/211.png" style={{width:700, height:'auto'}}/></div>
 
-2. **TRMNLアカウントの作成**
+2. **TRMNL アカウントの作成**
 
-   - [TRMNLのウェブサイト](https://usetrmnl.com)にアクセス
-   - "Sign Up"をクリックして新しいアカウントを作成
+   - [TRMNL のウェブサイト](https://usetrmnl.com)にアクセス
+   - "Sign Up" をクリックして新しいアカウントを作成
    - 登録プロセスに従います
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/210.png" style={{width:900, height:'auto'}}/></div>
 
 :::note
-TRMNLの認証情報は機密情報です。公開したり、バージョン管理システムにコミットしたりしないでください。
+TRMNL の認証情報は機密情報です。公開したり、バージョン管理システムにコミットしたりしないでください。
 :::
 
-材料を準備し、TRMNLアクセスを購入したら、デバイスをTRMNLのプラットフォームに接続する手順に進むことができます。問題が発生したり質問がある場合は、team@usetrmnl.comでTRMNLチームに直接連絡できます。
+材料を準備し、TRMNL アクセスを購入したら、デバイスを TRMNL のプラットフォームに接続する手順に進むことができます。問題が発生したり質問がある場合は、team@usetrmnl.com で TRMNL チームに直接連絡できます。
 
 ### ファームウェアの書き込み
 
 :::tip
-新品のキットを入手した場合、内部にファームウェアが入っています。そのため、このステップをスキップできます。
+新品のキットを入手した場合、内部にファームウェアが入っているため、このステップをスキップできます。
 :::
 
-TRMNL 7.5inch(OG) DIYキットをTRMNLと連携させるには、デバイスに適切なファームウェアを書き込む必要があります。推奨される方法は3つあります：
+TRMNL 7.5inch(OG) DIY キットを TRMNL と連携させるには、デバイスに適切なファームウェアを書き込む必要があります。推奨される方法は3つあります：
 
-#### 方法1: TRMNL Web Flasherで書き込み（最も簡単）
+#### 方法 1: TRMNL Web Flasher による書き込み（最も簡単）
 
 :::tip
-Seeed互換性のため、**FW 1.5.12**以降のファームウェアを使用してください。
+Seeed 互換性のため、**FW 1.5.12** 以降のファームウェアを使用してください。
 :::
 
-1. **TRMNL Web Flasherにアクセス**
+1. **TRMNL Web Flasher にアクセス**
 
-   - [https://usetrmnl.com/flash](https://usetrmnl.com/flash)にアクセス
+   - [https://usetrmnl.com/flash](https://usetrmnl.com/flash) にアクセス
    - このツールを使用すると、ブラウザから直接デバイスに書き込みができます。
    - 画面の指示に従って書き込みプロセスを完了します。
 
@@ -160,7 +160,7 @@ Seeed互換性のため、**FW 1.5.12**以降のファームウェアを使用�
 
 ---
 
-#### 方法2: ソースからビルドして書き込み（上級ユーザー/開発者向け）
+#### 方法 2: ソースからのビルドと書き込み（上級ユーザー/開発者向け）
 
 1. **ファームウェアリポジトリのクローン**
 
@@ -172,9 +172,9 @@ Seeed互換性のため、**FW 1.5.12**以降のファームウェアを使用�
 
 :::tip
 
-コードを更新してTRMNLにPRを提出し、表示される前にレビューが必要な場合があります。最新のファームウェアバージョンを最初に使用したい場合は、Seeed ProjectのTRMNLリポジトリも使用できます。
+コードを更新して TRMNL に PR を提出し、表示される前にレビューが必要な場合があります。最新のファームウェアバージョンを最初に使用したい場合は、Seeed Project の TRMNL リポジトリも使用できます。
 
-- [Seedリポジトリ](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)にアクセスしてクローンします：
+- [Seeed リポジトリ](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)にアクセスしてクローンします：
 
     ```
     git clone https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project.git
@@ -182,27 +182,27 @@ Seeed互換性のため、**FW 1.5.12**以降のファームウェアを使用�
 
 :::
 
-2. **PlatformIOのインストール**
+2. **PlatformIO のインストール**
 
-   - [PlatformIO](https://platformio.org/)をVSCode拡張機能として、またはコマンドライン経由でインストールします。
+   - [PlatformIO](https://platformio.org/) を VSCode 拡張機能として、またはコマンドライン経由でインストールします。
 
 3. **プロジェクトを開く**
 
-   - クローンした`firmware`フォルダをVSCodeで開きます。
+   - クローンした `firmware` フォルダを VSCode で開きます。
 
 4. **正しい環境を選択**
 
-   - `platformio.ini`で、`TRMNL_7inch5_OG_DIY_Kit`環境を選択します。
+   - `platformio.ini` で、`TRMNL_7inch5_OG_DIY_Kit` 環境を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/5.png" style={{width:1000, height:'auto'}}/></div>
 
 5. **デバイスの接続**
 
-   - TRMNL 7.5inch(OG) DIYキットを接続します。
+   - TRMNL 7.5inch(OG) DIY キットを接続します。
 
 6. **ビルドとアップロード**
 
-   - PlatformIOで"Upload"ボタンをクリックするか、以下を実行します：
+   - PlatformIO で "Upload" ボタンをクリックするか、以下を実行します：
 
      ```
      pio run --target upload
@@ -212,15 +212,15 @@ Seeed互換性のため、**FW 1.5.12**以降のファームウェアを使用�
 
    - ファームウェアがコンパイルされ、デバイスにアップロードされます。
 
-## Wi-Fiの設定とTRMNLへのプレイリスト送信
+## Wi-Fi の設定と TRMNL へのプレイリスト送信
 
-TRMNL 7.5inch(OG) DIYキットをTRMNLで使用してプレイリストを送信するには、まずデバイスをWi-Fiネットワークに接続する必要があります。このプロセスは「WiFiペアリングモード」と呼ばれ、シンプルなキャプティブポータルを通じて行われます。以下の手順に従ってください：
+TRMNL 7.5inch(OG) DIY キットを TRMNL で使用してプレイリストを送信するには、まずデバイスを Wi-Fi ネットワークに接続する必要があります。このプロセスは「WiFi ペアリングモード」と呼ばれ、シンプルなキャプティブポータルを通じて行われます。以下の手順に従ってください：
 
-> 💡 **Wi-Fiのトラブルシューティング？** デバイスをWi-Fiに接続する際に問題が発生した場合は、一般的なネットワークとルーター互換性の問題の解決策について[TRMNL Device Wi-Fi Troubleshooting Guide](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting)を参照してください。
+> 💡 **Wi-Fi のトラブルシューティング？** デバイスの Wi-Fi 接続で問題が発生した場合は、一般的なネットワークとルーター互換性の問題の解決策について [TRMNL Device Wi-Fi Troubleshooting Guide](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting) を参照してください。
 
 ### 電源投入とプロビジョニングモードの開始
 
-- TRMNLファームウェアを書き込んでデバイスの電源を入れた後、まだWi-Fiに接続されていない場合は自動的にプロビジョニングモードに入ります。
+- TRMNL ファームウェアを書き込んでデバイスの電源を入れた後、Wi-Fi にまだ接続されていない場合は自動的にプロビジョニングモードに入ります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -265,21 +265,21 @@ TRMNL 7.5inch(OG) DIYキットをTRMNLで使用してプレイリストを送信
 
 ### TRMNL ウェブインターフェースにアクセスする
 
-TRMNL 7.5inch(OG) DIY キットが Wi-Fi に接続され、MAC アドレス（Device ID）を記録したら、TRMNL アカウントに追加できます：
+TRMNL 7.5inch(OG) DIY キットが Wi-Fi に接続され、MAC アドレス（デバイス ID）を記録したら、TRMNL アカウントに追加できます：
 
 1. **TRMNL ウェブインターフェースを開く**  
    - コンピューターまたはモバイルデバイスでブラウザを開き、[TRMNL ウェブインターフェース](https://trmnl.app)にアクセスします。
 
-2. **Devices ページに移動する**  
+2. **デバイスページに移動する**  
    - TRMNL インターフェースで、**Devices** セクションに移動します。
 
 3. **新しいデバイスを追加する**  
-   - **Add new device** ボタンをクリックします。通常、Devices ページの右上角または中央にあります。
+   - **Add new device** ボタンをクリックします。通常、デバイスページの右上角または中央にあります。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/220.png" style={{width:800, height:'auto'}}/></div>
 
-4. **Device ID を入力する**  
-   - ポップアップウィンドウで、TRMNL アクセスを購入した際に受け取った Device ID を入力します（これは MAC アドレスではありません）。購入確認メールまたは TRMNL ダッシュボードの Device ID を使用してください。
+4. **デバイス ID を入力する**  
+   - ポップアップウィンドウで、TRMNL アクセスを購入した際に受け取ったデバイス ID を入力します（これは MAC アドレスではありません）。購入確認メールまたは TRMNL ダッシュボードのデバイス ID を使用してください。
    - **Add new device** をクリックしてプロセスを完了します。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/212.png" style={{width:700, height:'auto'}}/></div>
@@ -291,15 +291,15 @@ TRMNL 7.5inch(OG) DIY キットが Wi-Fi に接続され、MAC アドレス（De
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/223.png" style={{width:900, height:'auto'}}/></div>
 
    - PlatformIO アップロードプロセス中に MAC アドレスを取得できます（アップロードログを確認）、またはプロビジョニングポータルから取得できます（Wi-Fi セットアップ後に表示されます）。
-   - MAC アドレスを早期に追加することで、スムーズなオンボーディングプロセスとデバイス管理が確保されます。
+   - MAC アドレスを早期に追加することで、スムーズなオンボーディングプロセスとデバイス管理を確保できます。
 
    - その後、ePaper パネルにカスタム名を設定し、必要に応じて他の設定を調整できます。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/213.png" style={{width:700, height:'auto'}}/></div>
 
-TRMNL 7.5inch(OG) DIY キットが TRMNL アカウントにリンクされました！TRMNL インターフェースから直接、プレイリスト、画像、その他のコンテンツをディスプレイに送信できるようになりました。
+TRMNL 7.5inch(OG) DIY キットが TRMNL アカウントにリンクされました！TRMNL インターフェースから直接プレイリスト、画像、その他のコンテンツをディスプレイに送信できるようになりました。
 
-> 💡 **ヒント：** 複数の ePaper パネルがある場合は、それぞれの固有の Device ID を使用して上記の手順を繰り返してください。
+> 💡 **ヒント：** 複数の ePaper パネルがある場合は、それぞれの固有のデバイス ID を使用して上記の手順を繰り返してください。
 
 :::caution
 TRMNL ウェブインターフェースでデバイスを追加した後、デバイスの設定ページに移動し、**Firmware Early Release** と **OTA Updates Enabled** の両方を**オフ**にしてください。  
@@ -311,15 +311,15 @@ XIAO ePaper パネルの安定した動作を確保するため、常に両方�
 
 ### ボタンの使用方法
 
-この開発ボードには 4 つのボタンがあります。RESET、KEY1、KEY2、KEY3 で、**TRMNL ファームウェアでは RESET と KEY1 ボタンのみを使用します。**
+この開発ボードには 4 つのボタンがあります。RESET、KEY1、KEY2、KEY3 で、**TRMNL ファームウェアでは RESET と KEY3 ボタンのみを使用します。**
 
-**KEY1 の使用方法：**
+**KEY3 の使用方法：**
 
-1. **1 回クリック：** ページを即座に更新します。
+1. **ワンクリック：** ページを即座にリフレッシュします。
 2. **ダブルクリック：** カスタム機能、設定ページで確認できます。
 3. **長押し：** 約 5 秒間、ネットワークを再設定します。
 
-**RESET の使用方法：** 1 回クリックのみでデバイスをリセットします。
+**RESET の使用方法：** ワンクリックのみでデバイスをリセットします。
 
 ## TRMNL プレイリスト機能の理解
 
@@ -375,7 +375,7 @@ TRMNL のプラグインシステムは、ePaper パネルを真に強力でカ�
 
 ### 接続済みプラグイン
 
-プラグインページの上部には、すでに TRMNL アカウントに接続されているすべてのプラグインが表示されます。これらはプレイリストに追加して ePaper パネルに表示する準備ができています。例：
+プラグインページの上部には、すでに TRMNL アカウントに接続したすべてのプラグインが表示されます。これらはプレイリストに追加して ePaper パネルに表示する準備ができています。例：
 
 - **Weather**：現在の天気状況を表示します。
 - **Days Left This Year**：年末までのカウントダウン。
@@ -391,65 +391,63 @@ TRMNL のプラグインシステムは、ePaper パネルを真に強力でカ�
 - **閲覧と検索**：検索バーやタグを使用して、興味のあるプラグインを素早く見つけます。
 - **プラグインの追加**：任意のプラグインをクリックしてアカウントに接続し、プレイリストで使用を開始します。
 
-開発者は他の人が使用できる独自のプラグインを作成して公開することもでき、エコシステムは新しい可能性で継続的に拡張されています（[プラグイン作成について詳しく学ぶ](https://docs.usetrmnl.com/go/plugin-marketplace/introduction)）。
+開発者は独自のプラグインを作成して他の人が使用できるように公開することもでき、エコシステムは新しい可能性で継続的に拡張されています（[プラグイン作成について詳しく学ぶ](https://docs.usetrmnl.com/go/plugin-marketplace/introduction)）。
 
 ---
 
-TRMNLの使用について質問がある場合や、より高度な機能を探求したい場合は、公式TRMNLドキュメントをお読みください：[https://docs.usetrmnl.com/go](https://docs.usetrmnl.com/go)
+TRMNL の使用について質問がある場合や、より高度な機能を探求したい場合は、公式 TRMNL ドキュメントをお読みください：[https://docs.usetrmnl.com/go](https://docs.usetrmnl.com/go)
 
 ## トラブルシューティング
 
-### Q1: WebやPlatformIOを使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？
+### Q1: Web や PlatformIO を使用する際に、ファームウェアをフラッシュできない問題が発生しました。どうすればよいですか？
 
-時々、間違ったプログラムを使用すると、XIAOがポートを失ったり、正常に機能しなくなったりすることがあります。一般的な問題には以下があります：
+時々、間違ったプログラムを使用すると、XIAO がポートを失ったり、正常に機能しなくなったりすることがあります。一般的な問題には以下があります：
 
 - XIAO がコンピュータに接続されているが、*ポート番号が見つからない*。
 - XIAO が接続され、ポート番号が表示されるが、*プログラムのアップロードが失敗する*。
 
-上記の2つの状況に遭遇した場合、XIAOをBootLoaderモードにすることで、デバイスが認識されない問題やアップロード失敗の問題の大部分を解決できます。具体的な方法は以下の通りです：
+上記の2つの状況に遭遇した場合、XIAO を BootLoader モードにすることを試してください。これにより、デバイスが認識されない問題やアップロード失敗の問題の大部分を解決できます。具体的な方法は以下の通りです：
 
 - **ステップ 1**. XIAO ESP32S3 の `BOOT` ボタンを離さずに押し続けます。
-- **ステップ 2**. `BOOT` ボタンを押したまま、データケーブルでコンピュータに接続します。コンピュータに接続した後、`BOOT` ボタンを離します。
-- **ステップ 3**. プログラムをアップロードするか、ファームウェアをフラッシュして XIAO ESP32S3 の動作を確認します。
+- **ステップ 2**. `BOOT` ボタンを押し続けたまま、データケーブルでコンピュータに接続します。コンピュータに接続した後、`BOOT` ボタンを離します。
+- **ステップ 3**. プログラムをアップロードするか、ファームウェアをフラッシュして、XIAO ESP32S3 の動作を確認します。
 
 ## 特別な謝辞
 
-このプロジェクトに対する強力なサポートと貴重な支援をいただいた**TRMNLチーム**全体に特別な感謝を申し上げます。特に、開発とドキュメント作成プロセス全体を通じて献身的な支援をいただいた**Bogdan**、**Ryan Kulp**、**Fr3d**、そして他のすべてのチームメンバーに感謝いたします。
+このプロジェクトに対する強力なサポートと貴重なご協力をいただいた **TRMNL チーム** 全体に特別な感謝を申し上げます。特に、開発とドキュメント作成プロセス全体を通じて献身的にご協力いただいた **Bogdan**、**Ryan Kulp**、**Fr3d**、そして他のすべてのチームメンバーに感謝いたします。
 
-皆様の専門知識と献身により、この統合が可能になり、TRMNL 7.5inch(OG) DIYキットコミュニティのユーザーエクスペリエンスが大幅に向上しました。
+皆様の専門知識と献身により、この統合が可能になり、TRMNL 7.5inch(OG) DIY キットコミュニティのユーザーエクスペリエンスが大幅に向上しました。
 
 ## トラブルシューティング
 
 ### ネットワークを再設定するには？
 
-Key3（Resetボタンの隣のボタン）を5秒間押し続けます。デバイスは初期のTRMNLインターフェースに戻り、APをアクティブにします。
+Key3（Reset ボタンの隣のボタン）を5秒間押し続けます。デバイスは初期の TRMNL インターフェースに戻り、AP をアクティブにします。
 
 ## リソース
 
-- **[ファームウェア]** [TRMNL ePaper ライブラリ（GitHub）](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
+- **[ファームウェア]** [TRMNL ePaper ライブラリ (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
 - **[ハードウェア]** [ドライバーボード回路図](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
-- **[3D プリント]** [三角形ベース](https://www.printables.com/model/1354873)  
-- **[3D プリント]** [保護付き三角形ベース](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
-- **[3D プリント]** [L 字型ベース](https://www.printables.com/model/1354879)  
+- **[3Dプリント]** [三角形ベース](https://www.printables.com/model/1354873)  
+- **[3Dプリント]** [保護付き三角形ベース](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
+- **[3Dプリント]** [L字型ベース](https://www.printables.com/model/1354879)  
 - **[Thingiverse]** [三角形ベース](https://www.thingiverse.com/thing:7091094)
 - **[Thingiverse]** [保護付き三角形ベース](https://www.thingiverse.com/thing:7097231)
-- **[Thingiverse]** [L 字型ベース](https://www.thingiverse.com/thing:7091096)
+- **[Thingiverse]** [L字型ベース](https://www.thingiverse.com/thing:7091096)
 - **[Makerworld]** [三角形ベース](https://makerworld.com/en/models/1625037-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [保護付き三角形ベース](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [L字型ベース](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

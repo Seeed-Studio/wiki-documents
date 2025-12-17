@@ -38,9 +38,9 @@ The Orbbec Gemini 2 is a high-performance RGB-D camera featuring a dual-eye stru
 
 ## Prerequisites
 
-- __[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__ preinstalled Jetpack 6.2
-- __Orbbec Gemini2 3D Camera__
-- __[ROS2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/)__ environment installed
+- **[reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)** preinstalled Jetpack 6.2
+- **Orbbec Gemini2 3D Camera**
+- **[ROS2 Humble](https://wiki.seeedstudio.com/install_ros2_humble/)** environment installed
 
 <div align="center">
     <img width={700}
@@ -49,7 +49,7 @@ The Orbbec Gemini 2 is a high-performance RGB-D camera featuring a dual-eye stru
 
 ## Install Orbbec SDK
 
-__Step 1.__ Download and install the Orbbec SDK for ARM64 architecture:
+**Step 1.** Download and install the Orbbec SDK for ARM64 architecture:
 
 ```bash
 # Download Orbbec SDK
@@ -59,7 +59,7 @@ wget https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.4.11/OrbbecSDK_
 unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
-__Step 2.__ Build examples and test:
+**Step 2.** Build examples and test:
 
 ```bash
 # Install udev rules
@@ -80,7 +80,7 @@ cd ..
 
 ## Building ORB-SLAM3
 
-__Step 1.__ Install System Dependencies:
+**Step 1.** Install System Dependencies:
 
 ```bash
 sudo apt update && sudo apt install -y \
@@ -92,7 +92,7 @@ sudo apt update && sudo apt install -y \
     libepoxy-dev python3-dev libboost-serialization-dev
 ```
 
-__Step 2.__ Install Pangolin which is required for ORB-SLAM3 visualization:
+**Step 2.** Install Pangolin which is required for ORB-SLAM3 visualization:
 
 ```bash
 git clone --recursive https://github.com/stevenlovegrove/Pangolin.git
@@ -136,7 +136,7 @@ with:
 
 :::
 
-__Step 3.__ Configuration for compiling ORB-SLAM3
+**Step 3.** Configuration for compiling ORB-SLAM3
 
 ```bash
 cd ~
@@ -164,7 +164,7 @@ std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 
 :::
 
-__Step 4.__ Test whether Pangolin is installed properly:
+**Step 4.** Test whether Pangolin is installed properly:
 
 ```bash
 ./examples/SimpleDisplay/SimpleDisplay
@@ -177,7 +177,7 @@ __Step 4.__ Test whether Pangolin is installed properly:
 
 If the installation is done correctly, the window as shown in the above picture can be opened normally.
 
-__Step 5.__ Modify CMakeLists.txt
+**Step 5.** Modify CMakeLists.txt
 
 Modify the CMakeLists.txt file to make the project compatible with the Orbbec SDK.Copy the following complete CMakeList.txt configuration directly:
 :::info
@@ -750,7 +750,7 @@ endif()
 
 </details>
 
-__Step 6.__ Create a script that uses the Orbbec Gemini2 adapter for the ORB-SLAM3 RGB-D mode
+**Step 6.** Create a script that uses the Orbbec Gemini2 adapter for the ORB-SLAM3 RGB-D mode
 
 Create a file named `rgbd_orbbec_gemini2_cpp.cc` under the `Examples/RGB-D/` directory as follows:
 
@@ -1009,7 +1009,7 @@ int main(int argc, char **argv)
 
 </details>
 
-__Step 7.__ Build ORB-SLAM3
+**Step 7.** Build ORB-SLAM3
 
 ```bash
 chmod +x build.sh
@@ -1022,7 +1022,7 @@ chmod +x build.sh
 Before running ORB-SLAM3, it is necessary to calibrate the Camera to obtain the camera's parameter configuration. Here, we demonstrate using the camera calibration tool provided by ROS to calibrate the camera and obtain its parameters.
 </div>
 
-__Step 1.__ Install Orbbec ROS2 Driver
+**Step 1.** Install Orbbec ROS2 Driver
 
 ```bash
 mkdir -p ~/ros2_ws/src
@@ -1059,17 +1059,17 @@ You can check whether the camera node can start normally by observing whether th
 </div>
 :::
 
-__Step 2.__ Install Camera Calibration Package
+**Step 2.** Install Camera Calibration Package
 
 ```bash
 sudo apt install ros-humble-camera-calibration
 ```
 
-__Step 3.__ Download Calibration Checkerboard
+**Step 3.** Download Calibration Checkerboard
 
 Download the calibration checkerboard from [Checkerboard Collection](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) and print it out.
 
-__Step 4.__ Run Camera Calibration
+**Step 4.** Run Camera Calibration
 
 ```bash
 # For 8x6 checkerboard with 25mm squares
@@ -1096,7 +1096,7 @@ Collect images from different angles, automatically calculate the camera paramet
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/cal_save.png" />
 </div>
 
-__Step 5.__ Configure the camera YAML file
+**Step 5.** Configure the camera YAML file
 
 Create a parameter configuration.yaml file named `Orbbec_Gemini2.yaml` for the Orbbec Gemini2 camera under the `Examples/RGB-D/`folder in your ORB-SLAM3 project.
 
@@ -1205,6 +1205,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 - [Orbbec SDK v2 API Guide](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
 - [Orbbec ROS2 Driver](https://github.com/orbbec/OrbbecSDK_ROS2)
 - [ORB-SLAM3 Repository](https://github.com/UZ-SLAMLab/ORB_SLAM3)
+- [ROS SDK](https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/)
 
 ## Tech Support & Product Discussion
 

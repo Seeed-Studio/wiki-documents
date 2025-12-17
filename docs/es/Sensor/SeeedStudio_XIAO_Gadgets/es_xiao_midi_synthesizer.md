@@ -1,6 +1,6 @@
 ---
-description: Primeros pasos con el Sintetizador MIDI XIAO
-title: Primeros pasos con el Sintetizador MIDI XIAO
+description: Introducción al Sintetizador MIDI XIAO
+title: Introducción al Sintetizador MIDI XIAO
 keywords:
   - XIAO
   - MIDI
@@ -19,20 +19,20 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Introducción
 
-El **Sintetizador MIDI XIAO** es un dispositivo compacto y todo en uno para la creación musical, alimentado por el XIAO ESP32-C3 y el chip MIDI SAM2695 de grado profesional. A pesar de su pequeño tamaño, ofrece un sonido rico y expresivo, soporta hasta 64 voces de polifonía y ofrece cientos de timbres de instrumentos. Ya seas un desarrollador experimentando con sonido o un músico componiendo nuevas melodías, este sintetizador está diseñado para hacer que la creación musical sea fluida e inspiradora.
+El **Sintetizador MIDI XIAO** es un dispositivo compacto y todo en uno para la creación musical, impulsado por el XIAO ESP32-C3 y el chip MIDI SAM2695 de grado profesional. A pesar de su pequeño tamaño, ofrece un sonido rico y expresivo, soporta hasta 64 voces de polifonía y ofrece cientos de timbres de instrumentos. Ya seas un desarrollador experimentando con sonido o un músico componiendo nuevas melodías, este sintetizador está diseñado para hacer que la creación musical sea fluida e inspiradora.
 
 ## Características
 
-- Creación sin barreras, perfecto para principiantes en música
-- Todo en uno MIDI + Metrónomo -- Flujo de trabajo más inteligente y fluido
-- Rendimiento de grado profesional para jugadores avanzados
-- Ultra-portátil y completamente hackeable
+- Creación Sin Barreras, Perfecto para Principiantes en Música
+- Todo en Uno MIDI + Metrónomo -- Flujo de Trabajo Más Inteligente y Fluido
+- Rendimiento de Grado Profesional para Jugadores Avanzados
+- Ultra-Portátil y Completamente Hackeable
 
 ## Descripción del Hardware
 
@@ -67,7 +67,7 @@ El Sintetizador MIDI XIAO integra los siguientes componentes:
     </tr>
     <tr>
       <td>Jack de Audio de 3.5mm</td>
-      <td>Usado para conectar dispositivos de audio externos (ej., altavoces o auriculares)<br />Cuenta con deshabilitación automática del amplificador Clase D cuando se inserta un cable y rehabilitación cuando se retira</td>
+      <td>Usado para conectar dispositivos de audio externos (ej., altavoces o auriculares)<br />Cuenta con desactivación automática del amplificador Clase D cuando se inserta un cable y reactivación cuando se retira</td>
     </tr>
     <tr>
       <td>Botones Físicos</td>
@@ -99,20 +99,20 @@ El Sintetizador MIDI XIAO integra los siguientes componentes:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/4.png" style={{width:1000, height:'auto'}}/></div>
 
-## Primeros Pasos
+## Introducción
 
 Esta sección te guiará a través de la configuración de tu Sintetizador MIDI XIAO por primera vez.
 
 ### Uso del Firmware de Fábrica
 
-El Sintetizador MIDI XIAO viene pre-programado con un firmware de fábrica versátil, permitiéndote explorar múltiples funciones de sonido y ritmo directamente desde la caja. A continuación se presenta una guía rápida de las funciones predeterminadas y operaciones clave.
+El Sintetizador MIDI XIAO viene pre-cargado con un firmware de fábrica versátil, permitiéndote explorar múltiples características de sonido y ritmo directamente desde la caja. A continuación se presenta una guía rápida de las funciones predeterminadas y operaciones clave.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/7.png" style={{width:600, height:'auto'}}/></div>
 
 **Funciones Detalladas de las Teclas**
 
 - **Prueba de Sonido (Modo Predeterminado):**
-  - **🎵0**: Recorre los 128 sonidos de instrumentos preestablecidos. Cada pulsación cambia al siguiente sonido.
+  - **🎵0**: Cicla a través de 128 sonidos de instrumentos preestablecidos. Cada pulsación cambia al siguiente sonido.
   - **🎵1**: Aumenta el tono de la nota (ej., de C4 a D4).
   - **🎵2**: Disminuye el tono de la nota (ej., de C4 a B3).
   - **🎵3**: Clic para iniciar/detener el metrónomo.
@@ -133,20 +133,20 @@ El Sintetizador MIDI XIAO viene pre-programado con un firmware de fábrica vers�
 
 - **🎵1** (mantener 2s): Subir volumen
 - **🎵2** (mantener 2s): Bajar volumen
-- **🎵3** (mantener 2s): Cambiar al siguiente modo (recorre Prueba de Sonido → Mantenedor de Ritmo → Reproducción Multi-Pista → ...)
+- **🎵3** (mantener 2s): Cambiar al siguiente modo (cicla a través de Prueba de Sonido → Mantenedor de Ritmo → Reproducción Multi-Pista → ...)
 
 :::tip
-Puedes experimentar con todas las funciones sin ninguna configuración adicional. Para personalización avanzada o para re-programar el firmware, consulta el **[código de ejemplo StateMachine](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster/blob/main/examples/StateMachine/StateMachine.ino)**.
+Puedes experimentar con todas las características sin ninguna configuración adicional. Para personalización avanzada o para re-flashear el firmware, consulta el **[código de ejemplo StateMachine](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster/blob/main/examples/StateMachine/StateMachine.ino)**.
 :::
 
 ### Modo BootLoader
 
-En algunos casos, puedes encontrar que el Sintetizador MIDI XIAO no puede ser programado a través del puerto serie (por ejemplo, si el dispositivo no es reconocido o la carga falla). En estas situaciones, necesitas entrar al **modo Bootloader (BOOT)** para re-programar el firmware.
+En algunos casos, puedes encontrar que el Sintetizador MIDI XIAO no puede ser programado a través del puerto serie (por ejemplo, si el dispositivo no es reconocido o la carga falla). En estas situaciones, necesitas entrar al **modo Bootloader (BOOT)** para re-flashear el firmware.
 
 #### ¿Por qué Entrar al Modo BOOT?
 
 - Para recuperar el dispositivo cuando no puede ser programado normalmente vía USB/serie
-- Para re-programar firmware después de una carga fallida o corrupción del firmware
+- Para re-flashear firmware después de una carga fallida o corrupción del firmware
 
 #### Cómo Entrar al Modo BOOT
 
@@ -159,25 +159,25 @@ Primero, abre la cubierta trasera del mini sintetizador para acceder a los boton
   2. Mientras mantienes **BOOT**, presiona el botón **RESET** una vez.
   3. Suelta el botón **BOOT**.
 
-- **Método 2: Ciclo de Energía**
-  1. Desconecta la energía (desenchufa el cable USB-C).
+- **Método 2: Ciclo de Alimentación**
+  1. Desconecta la alimentación (desenchufa el cable USB-C).
   2. Presiona y mantén el botón **BOOT**.
-  3. Mientras mantienes **BOOT**, reconecta la energía (enchufa el cable USB-C).
+  3. Mientras mantienes **BOOT**, reconecta la alimentación (enchufa el cable USB-C).
   4. Suelta el botón **BOOT**.
 
-Después de entrar al modo BOOT, el dispositivo estará listo para la carga de firmware a través del IDE de Arduino u otras herramientas.
+Después de entrar al modo BOOT, el dispositivo estará listo para la carga de firmware a través del Arduino IDE u otras herramientas.
 
-### Reinicio
+### Reset
 
-Para reiniciar el dispositivo, simplemente presiona el botón **RESET** en el módulo XIAO ESP32-C3. El dispositivo se reiniciará.
+Para resetear el dispositivo, simplemente presiona el botón **RESET** en el módulo XIAO ESP32-C3. El dispositivo se reiniciará.
 
-## Descripción General de la Biblioteca Arduino
+## Descripción de la Librería Arduino
 
 :::tip
-Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Primeros Pasos con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
+Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Introducción a Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-El Sintetizador MIDI XIAO está soportado por la biblioteca [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster), que proporciona capacidades integrales de control MIDI y síntesis de sonido.
+El Sintetizador MIDI XIAO está soportado por la librería [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster), que proporciona capacidades completas de control MIDI y síntesis de sonido.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="ttps://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster" target="_blank" rel="noopener noreferrer">
@@ -187,50 +187,50 @@ El Sintetizador MIDI XIAO está soportado por la biblioteca [Seeed_Arduino_MIDIM
 
 ### Función
 
-Antes de comenzar a desarrollar un sketch, veamos las funciones disponibles de la biblioteca.
+Antes de comenzar a desarrollar un sketch, veamos las funciones disponibles de la librería.
 
 `static SAM2695Synth& getInstance()` – Devuelve la instancia singleton de la clase SAM2695Synth.
 
 - **Parámetros de entrada**: Ninguno.
 - **Valor de retorno**: Referencia al objeto singleton SAM2695Synth.
 
-`void begin(T& serial, int baud)` – Inicializa el sintetizador con la interfaz serial especificada y la velocidad de baudios.
+`void begin(T& serial, int baud)` – Inicializa el sintetizador con la interfaz serie especificada y la velocidad de baudios.
 
 - **Parámetros de entrada**:
-  - `T& serial`: El objeto del puerto serial (serial por hardware o software) usado para la comunicación MIDI.
-  - `int baud`: La velocidad de baudios para la comunicación MIDI (típicamente 31250 para MIDI estándar).
+  - `T& serial`: El objeto del puerto serie (serie por hardware o software) usado para comunicación MIDI.
+  - `int baud`: La velocidad de baudios para comunicación MIDI (típicamente 31250 para MIDI estándar).
 - **Valor de retorno**: Ninguno.
 
 `void setInstrument(uint8_t bank, uint8_t channel, uint8_t value)` – Establece el instrumento (timbre) para un canal MIDI específico y banco.
 
 - **Parámetros de entrada**:
-  - `uint8_t bank`: El número del banco de instrumentos (0–127).
-  - `uint8_t channel`: El número del canal MIDI (0–15).
-  - `uint8_t value`: El número del instrumento (programa) (0–127).
+  - `uint8_t bank`: El número de banco de instrumentos (0–127).
+  - `uint8_t channel`: El número de canal MIDI (0–15).
+  - `uint8_t value`: El número de instrumento (programa) (0–127).
 - **Valor de retorno**: Ninguno.
 
-`void setNoteOn(uint8_t channel, uint8_t pitch, uint8_t velocity)` – Activa un evento de nota encendida en el canal especificado con el tono y velocidad dados.
+`void setNoteOn(uint8_t channel, uint8_t pitch, uint8_t velocity)` – Activa un evento note-on en el canal especificado con el tono y velocidad dados.
 
 - **Parámetros de entrada**:
-  - `uint8_t channel`: El número del canal MIDI (0–15).
+  - `uint8_t channel`: El número de canal MIDI (0–15).
   - `uint8_t pitch`: El número de nota MIDI (0–127).
   - `uint8_t velocity`: La velocidad (volumen) de la nota (0–127).
 - **Valor de retorno**: Ninguno.
 
-`void setNoteOff(uint8_t channel, uint8_t pitch)` – Activa un evento de nota apagada en el canal especificado para el tono dado.
+`void setNoteOff(uint8_t channel, uint8_t pitch)` – Activa un evento note-off en el canal especificado para el tono dado.
 
 - **Parámetros de entrada**:
-  - `uint8_t channel`: El número del canal MIDI (0–15).
+  - `uint8_t channel`: El número de canal MIDI (0–15).
   - `uint8_t pitch`: El número de nota MIDI (0–127).
 - **Valor de retorno**: Ninguno.
 
 `void setAllNotesOff(uint8_t channel)` – Apaga todas las notas que están sonando actualmente en el canal especificado.
 
 - **Parámetros de entrada**:
-  - `uint8_t channel`: El número del canal MIDI (0–15).
+  - `uint8_t channel`: El número de canal MIDI (0–15).
 - **Valor de retorno**: Ninguno.
 
-`void playChord(const musicData& chord)` – Reproduce un acorde enviando eventos de nota encendida para todas las notas en la estructura de acorde proporcionada.
+`void playChord(const musicData& chord)` – Reproduce un acorde enviando eventos note-on para todas las notas en la estructura de acorde proporcionada.
 
 - **Parámetros de entrada**:
   - `const musicData& chord`: Una estructura que contiene información de canal, notas, velocidad y tiempo para el acorde.
@@ -250,7 +250,7 @@ Antes de comenzar a desarrollar un sketch, veamos las funciones disponibles de l
 `void setVolume(uint8_t channel, uint8_t level)` – Establece el volumen para un canal MIDI específico.
 
 - **Parámetros de entrada**:
-  - `uint8_t channel`: El número del canal MIDI (0–15).
+  - `uint8_t channel`: El número de canal MIDI (0–15).
   - `uint8_t level`: El nivel de volumen (0–127).
 - **Valor de retorno**: Ninguno.
 
@@ -581,7 +581,7 @@ typedef enum {
 
 ### Instalación
 
-Paso 1. Descarga la biblioteca [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) como un archivo ZIP.
+Paso 1. Descarga la librería [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) como un archivo ZIP.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="ttps://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster" target="_blank" rel="noopener noreferrer">
@@ -595,7 +595,7 @@ Paso 2. En Arduino IDE, haz clic en **Sketch > Include Library > Add .ZIP Librar
 
 ## Ejemplo del Sintetizador MIDI XIAO
 
-Ahora que tenemos nuestra biblioteca instalada y entendemos las funciones básicas, ejecutemos algunos ejemplos para nuestro Sintetizador MIDI XIAO para ver cómo se comporta.
+Ahora que tenemos nuestra librería instalada y entendemos las funciones básicas, ejecutemos algunos ejemplos para nuestro Sintetizador MIDI XIAO para ver cómo se comporta.
 
 **Paso 1.** Inicia la aplicación Arduino.
 
@@ -605,9 +605,9 @@ Ahora que tenemos nuestra biblioteca instalada y entendemos las funciones básic
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong></a>
 </div>
 
-**Paso 2.** Selecciona tu modelo de placa de desarrollo y añádelo al Arduino IDE.
+**Paso 2.** Selecciona tu modelo de placa de desarrollo y agrégala al Arduino IDE.
 
-- El Sintetizador MIDI XIAO está construido con **XIAO ESP32-C3**, por favor consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Getting_Started/)** para completar la adición.
+- El Sintetizador MIDI XIAO está integrado con **XIAO ESP32-C3**, por favor consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Getting_Started/)** para completar la adición.
 
 ### Demo 1: Reproducción Básica de Notas MIDI
 
@@ -701,21 +701,21 @@ void loop()
 }
 ```
 
-> Este código reproducirá la nota E4 en el sintetizador integrado, alternando encendido y apagado cada segundo. Puedes cambiar la nota, instrumento o temporización según sea necesario.
+> Este código reproducirá la nota E4 en el sintetizador integrado, alternando encendido y apagado cada segundo. Puedes cambiar la nota, instrumento o tiempo según sea necesario.
 
 #### Anotación del programa
 
-Este código representa la funcionalidad principal del Sintetizador MIDI XIAO, una solución compacta de síntesis de audio basada en el chip sintetizador SAM2695. La implementación de software demuestra cómo el sintetizador se interfaz con varias variantes de la plataforma XIAO a través de diferentes métodos de comunicación serie.
+Este código representa la funcionalidad central del Sintetizador MIDI XIAO, una solución compacta de síntesis de audio basada en el chip sintetizador SAM2695. La implementación de software demuestra cómo el sintetizador se interfaz con varias variantes de la plataforma XIAO a través de diferentes métodos de comunicación serie.
 
 El Sintetizador MIDI XIAO soporta múltiples plataformas de microcontroladores en el ecosistema XIAO a través de compilación condicional:
 
 - **Placas basadas en AVR**: Utiliza SoftwareSerial para comunicación con el chip sintetizador
 - **RP2040/RP2350 y XIAO RA4M1**: Implementa SoftwareSerial en pines designados (D7, D6)
-- **Variantes ESP32**: Aprovecha las capacidades nativas de Hardware Serial vía Serial0
+- **Variantes ESP32**: Aprovecha las capacidades nativas de Hardware Serial a través de Serial0
 - **Placas basadas en SAMD** (incluyendo XIAO M0): Usa la interfaz UART de hardware
-- **nRF52840**: Implementa comunicación UART con soporte opcional de TinyUSB
+- **nRF52840**: Implementa comunicación UART con soporte opcional TinyUSB
 
-Este enfoque versátil asegura que el módulo sintetizador funcione consistentemente a través de toda la familia de productos XIAO.
+Este enfoque versátil asegura que el módulo sintetizador funcione consistentemente en toda la familia de productos XIAO.
 
 La implementación del sintetizador establece dos vías de comunicación:
 
@@ -725,9 +725,9 @@ La implementación del sintetizador establece dos vías de comunicación:
 ```
 
 - Una conexión serie dedicada al chip SAM2695 para comandos MIDI
-- Una conexión serie separada de depuración/interfaz de usuario para monitoreo y control
+- Una conexión serie separada de interfaz de depuración/usuario para monitoreo y control
 
-Durante el arranque, el Sintetizador MIDI XIAO:
+Durante el inicio, el Sintetizador MIDI XIAO:
 
 1. Establece comunicación serie a la velocidad de baudios apropiada
 2. Inicializa el motor sintetizador SAM2695
@@ -737,7 +737,7 @@ Durante el arranque, el Sintetizador MIDI XIAO:
   synth.setInstrument(0,CHANNEL_0,unit_synth_instrument_t::GrandPiano_1);
 ```
 
-4. Permite la estabilización con un retardo de temporización
+4. Permite estabilización con un retraso de tiempo
 
 El bucle de demostración muestra la capacidad fundamental de generación de sonido mediante:
 
@@ -756,18 +756,18 @@ void loop()
 3. Liberar la nota
 4. Pausar antes del siguiente ciclo
 
-Esta implementación representa la base sobre la cual se pueden construir aplicaciones musicales más complejas utilizando la plataforma XIAO MIDI Synthesizer, ya sea para propósitos educativos, prototipado musical o proyectos de audio embebido.
+Esta implementación representa la base sobre la cual se pueden construir aplicaciones musicales más complejas usando la plataforma Sintetizador MIDI XIAO, ya sea para propósitos educativos, prototipado musical o proyectos de audio embebido.
 
 ### Demo 2: Secuenciador de Ritmo con Control de Botones
 
-Esta demostración muestra cómo usar los botones físicos del XIAO MIDI Synthesizer para controlar un secuenciador de ritmo simple. Puedes iniciar/detener el ritmo y ajustar el tempo en tiempo real usando los botones.
+Esta demostración muestra cómo usar los botones físicos del Sintetizador MIDI XIAO para controlar un secuenciador de ritmo simple. Puedes iniciar/detener el ritmo y ajustar el tempo en tiempo real usando los botones.
 
 #### Materiales Requeridos
 
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>XIAO MIDI Synthesizer</th>
+   <th>Sintetizador MIDI XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -775,7 +775,7 @@ Esta demostración muestra cómo usar los botones físicos del XIAO MIDI Synthes
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -919,10 +919,10 @@ void play()
                 synth.setNoteOn(CHANNEL_9, NOTE_D2, VELOCITY_DEFAULT);
             else
                 synth.setNoteOn(CHANNEL_9, NOTE_C2, VELOCITY_DEFAULT);
-    
+
             // Increment beat count
             beatCount++;
-    
+
             // Every four beats, indicating the end of a measure
             if (beatCount >= beatsPerBar)
             {
@@ -934,11 +934,11 @@ void play()
 }
 ```
 
-> Este código demuestra un secuenciador de ritmo simple. El Botón A activa/desactiva el ritmo, el Botón B aumenta el tempo (BPM), y el Botón C disminuye el tempo. El secuenciador reproduce un patrón de batería básico usando notas MIDI en el Canal 9. Puedes expandir este ejemplo para añadir ritmos más complejos o funciones de botón adicionales.
+> Este código demuestra un secuenciador de ritmo simple. El Botón A activa/desactiva el ritmo, el Botón B aumenta el tempo (BPM), y el Botón C disminuye el tempo. El secuenciador reproduce un patrón de batería básico usando notas MIDI en el Canal 9. Puedes expandir este ejemplo para agregar ritmos más complejos o funciones de botón adicionales.
 
 #### Anotación del programa
 
-Este programa expande la demostración básica de notas MIDI introduciendo interacción de usuario en tiempo real a través de botones físicos. El código usa tres botones:
+Este programa expande la demostración básica de notas MIDI introduciendo interacción del usuario en tiempo real a través de botones físicos. El código utiliza tres botones:
 
 - **Botón A**: Iniciar/detener la secuencia de ritmo
 - **Botón B**: Aumentar el tempo (BPM)
@@ -948,13 +948,13 @@ La función `play()` calcula el intervalo entre beats basado en el BPM actual y 
 
 Este ejemplo demuestra cómo:
 
-- Integrar entrada de botón para control en tiempo real
+- Integrar entrada de botones para control en tiempo real
 - Ajustar dinámicamente el tempo y el estado de reproducción
 - Usar el Sintetizador MIDI XIAO como un generador de ritmo programable
 
-Puedes mejorar aún más esta demostración añadiendo más botones, soportando diferentes sonidos de batería, o implementando lógica de secuenciador más avanzada.
+Puedes mejorar aún más esta demostración agregando más botones, soportando diferentes sonidos de batería, o implementando lógica de secuenciador más avanzada.
 
-### Demo 3: Reproducción de Acordes Multi-Pista con Control de Botón
+### Demo 3: Reproducción de Acordes Multi-Pista con Control de Botones
 
 Esta demostración muestra cómo usar el Sintetizador MIDI XIAO para reproducir acordes multi-pista, con cada acorde activado por un botón. Puedes iniciar/detener independientemente dos patrones de acordes diferentes usando dos botones físicos.
 
@@ -971,7 +971,7 @@ Esta demostración muestra cómo usar el Sintetizador MIDI XIAO para reproducir 
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -984,7 +984,7 @@ Esta demostración muestra cómo usar el Sintetizador MIDI XIAO para reproducir 
 #include <Arduino.h>
 #include "SAM2695Synth.h"
 #include "Button.h"
- 
+
 #ifdef __AVR__
     #include <SoftwareSerial.h>
     SoftwareSerial SSerial(2, 3); // RX, TX
@@ -1144,16 +1144,16 @@ void play()
 }
 ```
 
-> Este código demuestra cómo activar dos acordes de múltiples notas diferentes usando dos botones. El Botón A alterna la reproducción de un acorde de dos notas, y el Botón B alterna la reproducción de un acorde de cuatro notas. Cada acorde se reproduce en un canal MIDI diferente y con su propio tiempo.
+> Este código demuestra cómo activar dos acordes multi-nota diferentes usando dos botones. El Botón A activa/desactiva la reproducción de un acorde de dos notas, y el Botón B activa/desactiva la reproducción de un acorde de cuatro notas. Cada acorde se reproduce en un canal MIDI diferente y con su propio tiempo.
 
 #### Anotación del programa
 
-Este programa demuestra la reproducción de acordes multipista con control de botones en tiempo real. El código define dos patrones de acordes (`chordTwoNotes` y `chordFourNotes`), cada uno con su propio canal MIDI, notas y tiempo. Se utilizan dos botones:
+Este programa demuestra la reproducción de acordes multi-pista con control de botones en tiempo real. El código define dos patrones de acordes (`chordTwoNotes` y `chordFourNotes`), cada uno con su propio canal MIDI, notas y tiempo. Se utilizan dos botones:
 
 - **Botón A**: Iniciar/detener la secuencia de acordes de dos notas
 - **Botón B**: Iniciar/detener la secuencia de acordes de cuatro notas
 
-La función `play()` verifica el tiempo para cada acorde y activa la reproducción si la bandera correspondiente está habilitada. Esto permite la reproducción independiente y superpuesta de diferentes patrones de acordes, simulando un secuenciador multipista simple.
+La función `play()` verifica el tiempo para cada acorde y activa la reproducción si la bandera correspondiente está habilitada. Esto permite la reproducción independiente y superpuesta de diferentes patrones de acordes, simulando un secuenciador multi-pista simple.
 
 Este ejemplo demuestra cómo:
 
@@ -1163,9 +1163,9 @@ Este ejemplo demuestra cómo:
 
 Puedes expandir esta demostración agregando más patrones de acordes, soportando botones adicionales, o sincronizando la reproducción para efectos musicales más avanzados.
 
-### Demo 4: Reproducir una Secuencia de Melodía Completa
+### Demo 4: Reproducción de una Secuencia de Melodía Completa
 
-Esta demostración muestra cómo usar el Sintetizador MIDI XIAO para reproducir una secuencia de melodía completa (como una canción) almacenando datos de nota, duración y retraso en un arreglo. El ejemplo demuestra cómo reproducir una melodía preprogramada usando el instrumento Violín incorporado.
+Esta demostración muestra cómo usar el Sintetizador MIDI XIAO para reproducir una secuencia de melodía completa (como una canción) almacenando datos de nota, duración y retraso en un array. El ejemplo demuestra cómo reproducir una melodía pre-programada usando el instrumento Violín incorporado.
 
 #### Materiales Requeridos
 
@@ -1180,7 +1180,7 @@ Esta demostración muestra cómo usar el Sintetizador MIDI XIAO para reproducir 
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -1727,7 +1727,7 @@ void setup() {
     // Set instrument sound to Violin
     synth.setInstrument(0, CHANNEL_0, unit_synth_instrument_t::Violin);
     delay(1000);
-    
+
     // Play MIDI notes
     playMidi(midi1, ARRAY_LEN(midi1));
 }
@@ -1737,13 +1737,13 @@ void loop() {
 }
 ```
 
-> Este código demuestra cómo reproducir una secuencia de melodía completa iterando a través de un gran arreglo de notas, duraciones y retrasos. La melodía se reproducirá una vez después del encendido o reinicio. Puedes modificar el arreglo para reproducir diferentes canciones o agregar arreglos más complejos.
+> Este código demuestra cómo reproducir una secuencia de melodía completa iterando a través de un gran array de notas, duraciones y retrasos. La melodía se reproducirá una vez después del encendido o reinicio. Puedes modificar el array para reproducir diferentes canciones o agregar arreglos más complejos.
 
 #### Anotación del programa
 
 Este programa demuestra cómo:
 
-- Almacenar una melodía completa como un arreglo de valores de nota, duración y retraso
+- Almacenar una melodía completa como un array de valores de nota, duración y retraso
 - Usar una función auxiliar (`playMidi`) para iterar a través de la melodía y reproducir cada nota en secuencia
 - Seleccionar un instrumento específico (Violín) para la reproducción
 - Reproducir una canción automáticamente al inicio
@@ -1769,7 +1769,7 @@ Para aquellos que buscan convertir archivos MIDI a código Arduino, pueden proba
 
 ### P1: ¿Cómo puedo convertir un archivo MIDI en código Arduino para el Sintetizador MIDI XIAO?
 
-Para convertir un archivo MIDI en código Arduino que pueda ser usado con el Sintetizador MIDI XIAO, puedes seguir estos pasos:
+Para convertir un archivo MIDI en código Arduino que pueda usarse con el Sintetizador MIDI XIAO, puedes seguir estos pasos:
 
 1. Obtener un archivo MIDI
 
@@ -1783,7 +1783,7 @@ Para convertir un archivo MIDI en código Arduino que pueda ser usado con el Sin
 
 3. Convertir el texto MIDI a código reproducible
 
-    Después de convertir tu archivo MIDI a formato de texto usando `midicomp`, necesitas procesar este texto en un arreglo C/C++ que el Sintetizador MIDI XIAO pueda reproducir. Seeed proporciona scripts de Python para automatizar esta conversión:
+    Después de convertir tu archivo MIDI a formato de texto usando `midicomp`, necesitas procesar este texto en un array de C/C++ que el Sintetizador MIDI XIAO pueda reproducir. Seeed proporciona scripts de Python para automatizar esta conversión:
 
     - **Ritmo rápido, pista única (cada inicio de nota como intervalo):**  
     [change_fast.py](https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/res/change_fast.py)
@@ -1801,33 +1801,43 @@ Para convertir un archivo MIDI en código Arduino que pueda ser usado con el Sin
     python change_fast.py
     ```
 
-    Esto generará un archivo de cabecera (ej., `track_from_miditext.h`) que contiene el arreglo de notas.
+    Esto generará un archivo de encabezado (ej., `track_from_miditext.h`) que contiene el array de notas.
 
-    3. Copia el arreglo generado en tu sketch de Arduino, reemplazando los datos de melodía.
+    3. Copia el array generado en tu sketch de Arduino, reemplazando los datos de melodía.
 
     :::tip
     - Los scripts mapean automáticamente los números de nota MIDI a las definiciones de nota del Sintetizador MIDI XIAO.
-    - Puedes ajustar el script o el arreglo generado para arreglos personalizados o para ajustarse a las limitaciones de memoria.
+    - Puedes ajustar el script o el array generado para arreglos personalizados o para ajustarse a las limitaciones de memoria.
     :::
 
     4. Integrar el código generado
 
-    - Abre el archivo `.h` generado y copia el arreglo `musicData`.
-    - Pégalo en tu proyecto Arduino, reemplazando el arreglo de melodía existente.
-    - Actualiza tu lógica de reproducción si es necesario para coincidir con la nueva estructura del arreglo.
+    - Abre el archivo `.h` generado y copia el array `musicData`.
+    - Pégalo en tu proyecto Arduino, reemplazando el array de melodía existente.
+    - Actualiza tu lógica de reproducción si es necesario para coincidir con la nueva estructura del array.
 
-## Soporte Técnico y Discusión de Productos
+### P2: ¿Por qué a veces es imposible cargar programas al Sintetizador MIDI XIAO?
+
+Dado que el programa del ESP32-C3 se flashea vía UART, los fallos ocasionales del programa pueden resultar en errores que impiden la carga de programas al XIAO. Además, debido a que XIAO y la placa MIDI se comunican directamente a través de UART, los métodos de arranque tradicionales pueden no funcionar directamente con XIAO. Puedes probar el siguiente enfoque:
+
+1. Enciende el Sintetizador MIDI XIAO y retira la placa de desarrollo XIAO ESP32-C3.
+2. Desconecta el cable USB.
+3. Mantén presionado el botón B en la placa XIAO ESP32-C3 sin soltarlo.
+4. Reconecta el cable USB, luego suelta el botón B.
+5. Carga el programa.
+
+Este procedimiento debería permitir una carga exitosa del programa.
+
+## Soporte técnico y discusión de productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,5 +1,5 @@
 ---
-description: 学习如何在安装设备后配置和测试 reComputer Industrial R21xx 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、5G、4G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、DI/DO 测试以及用于安全关机的 UPS。
+description: 了解如何在安装设备后配置和测试 reComputer Industrial R21xx 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、5G、4G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、DI/DO 测试以及用于安全关机的 UPS。
 title: 配置 reComputer Industrial R21xx
 keywords:
 - Raspberry pi
@@ -14,13 +14,13 @@ last_update:
 
 ## 概述
 
-学习如何在安装设备后配置和测试 reComputer Industrial R21xx 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、4G、5G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、CAN、DI/DO 测试、用于安全关机的 UPS 等更多内容。
+了解如何在安装设备后配置和测试 reComputer Industrial R21xx 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、4G、5G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、CAN、DI/DO 测试、用于安全关机的 UPS 等更多内容。
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -96,8 +96,8 @@ gcc spidev_test.c -o spidev_test
 ./spidev_test -D /dev/spidev10.0 -v -p hello
 ```
 
-此命令在指定的 SPI 设备（**/dev/spidev10.0**）上测试 SPI 通信，使用详细输出（-v）并发送消息"hello"（**-p hello**）。
-通过短接 TPM 模块的 MISO 和 MOSI 引脚，您实际上创建了一个回环场景，其中在 MOSI 上发送的数据在 MISO 上接收。这种设置允许您在没有连接实际设备的情况下测试 SPI 通信。
+此命令在指定的 SPI 设备（**/dev/spidev10.0**）上测试 SPI 通信，使用详细输出（-v）并发送消息 "hello"（**-p hello**）。
+通过短接 TPM 模块的 MISO 和 MOSI 引脚，您实际上创建了一个回环场景，其中在 MOSI 上发送的数据在 MISO 上接收。这种设置允许您在没有实际设备连接的情况下测试 SPI 通信。
 
 ## Wi-Fi 扫描
 
@@ -340,13 +340,13 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.2_lora_usb_1.png" style={{width:800, height:'auto'}}/></div>
 
-此命令指定用于 LoRa® USB 的配置文件。
+此命令指定要用于 LoRa® USB 的配置文件。
 
 ## 通过 M.2 B-KEY 的 5G 蜂窝网络
 
 要通过 minicom 使用 AT 命令与 5G/4G 模块交互，请按照以下步骤操作：
 
-1. 创建新的 power_5g.sh 文件：
+1. 创建一个新的 power_5g.sh 文件：
 
 ```bash
 nano power_5g.sh
@@ -389,7 +389,7 @@ echo "5g module reboot completed"
 sudo ./power_5g.sh
 ```
 
-等待 10-15 秒（模块需要一些时间来启动和枚举 USB），检查设备节点是否出现：
+等待 10-15 秒（模块需要一些时间来启动并枚举 USB），检查设备节点是否出现：
 
 ```bash
 ls /dev/ttyUSB*
@@ -407,13 +407,13 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 此命令以 115200 的波特率打开指定串口（***/dev/ttyUSB2***）的 minicom。
 
-1. 一旦 minicom 打开，您可以开始向 4G 模块发送 AT 命令。例如：
+1. 打开 minicom 后，您可以开始向 4G 模块发送 AT 命令。例如：
 
 ```bash
 AT
 ```
 
-此命令检查模块是否响应。如果模块工作正常，您应该收到 ***"OK"*** 响应。
+此命令检查模块是否响应。如果模块正常工作，您应该收到 ***"OK"*** 响应。
 
 2. 要使用 4G 模块拨打电话号码，您可以使用 ATD 命令后跟电话号码：
 
@@ -447,7 +447,7 @@ echo  0  >  gpio643/value
 sudo ./power_4g.sh
 ```
 
-等待 10-15 秒（模块需要一些时间来启动和枚举 USB），检查设备节点是否出现：
+等待 10-15 秒（模块需要一些时间来启动并枚举 USB），检查设备节点是否出现：
 
 ```bash
 ls /dev/ttyUSB*
@@ -461,7 +461,7 @@ cat /sys/class/gpio/gpio645/value # should be 0
 cat /sys/class/gpio/gpio639/value # should be 0
 ```
 
-两个值都是 0 → 脚本已正确拉低，模块处于工作状态。
+两个值都为 0 → 脚本已正确拉低，模块处于工作状态。
 进入 minicom 发送命令：
 
 ```bash
@@ -476,7 +476,7 @@ ECM 拨号上网：
 AT+QCFG="usbnet",1
 ```
 
-直到最后一行显示 OK，就成功了。
+直到最后一行显示 OK，即为成功。
 
 > 注意
 > 设备需要等待一段时间，然后您可以在 ifconfig 中查看 usb0 的 ip 地址。
@@ -492,7 +492,7 @@ ping www.baidu.com -I usb0
 
 ## 通过 Mini-PCIe 的 Zigbee
 
-要测试两个 Zigbee 模块之间的 **Zigbee 通信**，请按照以下步骤操作：  
+要测试两个 Zigbee 模块之间的 **Zigbee 通信**，请按照以下步骤操作：
 
 1. 检查可用串口
 
@@ -529,9 +529,9 @@ sudo apt-get install cutecom
 - 网络组建：发送命令 ***'55 03 00 02 02'***。
 
 5. 检查设备状态：
-发送命令 ***'55 03 00 00 00'*** 检查设备状态。期望响应类似于 ***'55 2a 00 00 00 01 XX XX XX XX'***，其中 'XX' 代表设备信息。
+发送命令 ***'55 03 00 00 00'*** 检查设备状态。期望响应类似 ***'55 2a 00 00 00 01 XX XX XX XX'***，其中 'XX' 代表设备信息。
 6. 进入透明模式：
-如果网络组建成功，通过发送命令 ***55 07 00 11 00 03 00 01 13*** 进入透明模式。两个模块都应该处于透明模式以进行直接通信。要退出透明模式，发送 "+++"。
+如果网络组建成功，通过发送命令 ***55 07 00 11 00 03 00 01 13*** 进入透明模式。两个模块都应处于透明模式以进行直接通信。要退出透明模式，发送 "+++"。
 7. 附加说明：
 
 - 如果路由器配置失败，设备可能已经是协调器。使用命令 '55 07 00 04 02 xx xx xx' 离开网络。
@@ -540,7 +540,7 @@ sudo apt-get install cutecom
 
 ## RS485 测试
 
-reComputer Industrial R21xx 包含 **2x RS485 端口**。以下是它们对应的 **COM 端口**和**设备文件**：  
+reComputer Industrial R21xx 包含 **2x RS485 端口**。以下是它们对应的 **COM 端口**和**设备文件**：
 
 | **RS485 端口数量** | **COM 端口** | **丝印标签** | **设备文件** |
 |---------------------------|--------------|----------------------|-----------------|
@@ -563,9 +563,9 @@ sudo minicom -D /dev/ttyACM2
 
 3. 需要在两个打开的 ACM 上执行以下操作：
 
-- 按 ***Ctrl+A***，然后按 ***Z***，将出现 Minicom 命令摘要界面：
+- 按 ***Ctrl+A***，然后按 ***Z***，将出现 Minicom Command Summary 界面：
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_1.png" style={{width:800, height:'auto'}}/></div>
-- 再次按 ***O*** 打开配置，选择串口设置，然后按 ***Enter***；打开所有 RS485 相关接口，依次按 ***H/I/J/K/L*** 打开；
+- 再次按 ***O*** 打开配置，选择 Serial port setup，然后按 ***Enter***；打开所有 RS485 相关接口，依次按 ***H/I/J/K/L*** 打开；
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
 
 - 所有 "YES" 显示后，按 Enter 返回，然后选择 Exit 退出。
@@ -575,7 +575,7 @@ sudo minicom -D /dev/ttyACM2
 以 ACM2 和 ACM3 为例：
 如果您想从 ACM2 发送到 ACM3，ACM2 需要重新设置：***ctrl+A***，然后按 ***Z***，再按 ***E***，然后启动串口写命令。此时您可以在 ACM2 中随意打印字符串，同时可以在 ACM3 中看到 ACM2 的内容；
 相反，如果您想从 ACM3 发送到 ACM2，ACM3 需要重新设置：***ctrl+A***，然后按 ***Z***，再按 ***E***，然后启动串口写命令。此时您可以在 ACM3 中随意打印字符串，同时可以在 ACM2 中看到 ACM3 的内容。如图所示。
-：：：
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 
@@ -592,8 +592,8 @@ reComputer Industrial R21xx 包含 **2x RS232** 端口，对应的 **COM 端口*
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/21-rs232.png" style={{width:800, height:'auto'}}/></div>
 
-您需要打开两个终端，如果连接了扩展板则是 ACM1，如果没有连接扩展板则是 ACM2：
-**终端 1：***
+您需要打开两个终端，如果连接了扩展板则为 ACM1，如果没有连接扩展板则为 ACM2：
+**终端 1：**
 
 ```bash
 sudo minicom -D /dev/ttyACM1 -b 9600
@@ -627,7 +627,7 @@ reComputer Industrial R21xx 包含 4x DI 端口，用户可以根据实际需要
       <tr>
         <th>端口数量</th>
         <th>DI 端口</th>
-        <th>对应的扩展 GPIO</th>
+        <th>对应扩展 GPIO</th>
       </tr>
     </thead>
     <tbody>
@@ -668,7 +668,7 @@ cat /sys/class/gpio/gpio588/value
 
 ## DO（数字输出）
 
-reComputer Industrial R21xx 包含 4x DO 端口，用户可以根据实际需要配置这些端口。
+reComputer Industrial R21xx 包含 4 个 DO 端口，用户可以根据实际需要配置这些端口。
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -721,6 +721,8 @@ echo 0 > /sys/class/gpio/gpio638/value
 3. 当外部电平为高时，/sys/class/gpio/gpio638/value 的值为 0；当外部电平为低时，/sys/class/gpio/gpio638/value 的值为 1。
 
 ## CAN 测试
+
+### 环回测试
 
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
@@ -811,7 +813,7 @@ cansend can0 123#DE.AD.BE.EF.CA.FE.00.11
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_5.png" style={{width:800, height:'auto'}}/></div>
 
-8. 如果您想让后续启动更简单，可以将启动命令写入脚本。您只需要在启动时执行一次即可自动拉起接口。
+8. 如果您希望后续启动更简单，可以将启动命令写入脚本。您只需要在启动时执行一次即可自动拉起接口。
 
 ```bash
 #!/bin/bash
@@ -821,6 +823,88 @@ sudo ip link set can0 up type can bitrate 500000
 sudo ip link set can1 up type can bitrate 500000
 echo "can0 & can1 are up @ 500 kbit/s"
 ```
+
+### Python-CAN 测试
+
+[Python-CAN](https://github.com/raspberrypi/usbboot) 是一个跨平台的 Python 库，为控制器局域网（CAN）总线通信提供统一的编程接口，支持广泛的 CAN 硬件接口和虚拟总线，能够轻松实现 CAN 消息传输、接收、过滤、总线监控等操作。
+同样，CAN 接口需要物理连接才能实现环回通信。
+
+1. 配置标准 CAN 波特率（500 kbit/s）：
+
+```bash
+sudo ip link set down can0
+sudo ip link set down can1
+sudo ip link set can0 type can bitrate 500000
+sudo ip link set can1 type can bitrate 500000
+sudo ip link set up can0
+sudo ip link set up can1
+```
+
+2. 验证两个接口都处于 UP 状态：输出 "state UP" 表示 UP 状态。
+
+```bash
+ip a show can0
+ip a show can1
+```
+
+输出 "state UP" 表示 UP 状态。
+
+3. 配置 Python 虚拟环境和依赖项。
+
+```bash
+mkdir rpi_can_project
+cd rpi_can_project
+python3 -m venv can_env
+source can_env/bin/activate
+pip install python-can
+```
+
+4. 输入 Python 脚本：
+
+```python
+# can_test.py
+import can
+import time
+
+# create a bus instance using 'with' statement,
+# this will cause bus.shutdown() to be called on the block exit;
+# many other interfaces are supported as well (see documentation)
+with can.Bus(interface='socketcan',
+             channel='vcan0',
+             receive_own_messages=True) as bus:
+
+    # send a message
+    message = can.Message(arbitration_id=0x7B, is_extended_id=True,
+                          data=[0x11, 0x22, 0x33])
+
+    try:
+        bus.send(message, timeout=0.2)
+        print(f"Message sent: ID={message.arbitration_id:X}, Data={message.data.hex()}")
+    except can.exceptions.CanOperationError as e:
+        print(f"Error sending message: {e}")
+
+    # iterate over received messages
+    print("Listening for 5 seconds...")
+    start_time = time.time()
+
+
+    while time.time() - start_time < 5:
+        if msg:
+            print(f"Received - ID: {msg.arbitration_id:X}, Data: {msg.data.hex()}")
+        else:
+            print("No message received in 1 second.")
+
+print("Bus shut down and program finished.")
+```
+
+5. 执行并运行：
+
+```bash
+python can_test.py
+deactivate
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/python-can.png" style={{width:800, height:'auto'}}/></div>
 
 ## USB 集线器测试
 
@@ -868,7 +952,7 @@ sudo hwclock -r
 
 此命令将读取并显示存储在 RTC 中的时间。
 
-5. 断开 RTC 的电源，等待几分钟，然后重新连接并再次检查 RTC 时间，看它是否保持了正确的时间。
+5. 断开 RTC 的电源，等待几分钟，然后重新连接并再次检查 RTC 时间，看看它是否保持了正确的时间。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.16_rtc_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -924,7 +1008,7 @@ priority = 1
 sudo systemctl start watchdog
 ```
 
-4. 要测试看门狗功能，执行以下命令模拟系统挂起：
+4. 要测试看门狗功能，执行以下命令来模拟系统挂起：
 
 ```bash
 sudo su
@@ -933,7 +1017,7 @@ echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
 
-此命令触发内核崩溃，应该导致看门狗重启系统。
+此命令会触发内核崩溃，应该会导致看门狗重启系统。
 
 5. 监控系统以确认它在指定的超时时间后重启。
 这些步骤将帮助您测试并确保系统上看门狗定时器的功能。
@@ -942,9 +1026,9 @@ echo "c" > /proc/sysrq-trigger
 
 ## 通过 GPIO 控制蜂鸣器  
 
-蜂鸣器对应的 GPIO 是 gpio627。输入以下脚本来打开/关闭蜂鸣器：
+蜂鸣器对应的 GPIO 是 gpio627。输入以下脚本来开启/关闭蜂鸣器：
 
-1. 打开蜂鸣器：
+1. 开启蜂鸣器：
 
 ```bash
 echo 627 > /sys/class/gpio/export
@@ -982,7 +1066,7 @@ ls /dev | grep tpm
 curl -LJO https://github.com/wirenboard/atecc-util/releases/download/v0.4.12/atecc-util_0.4.12_arm64.deb
 ```  
 
-2. 将 .deb 包的内容解压到当前目录：
+2. 将 .deb 包的内容提取到当前目录：
 
 ```bash
 dpkg -x ./atecc-util_0.4.12_arm64.deb .
@@ -1000,7 +1084,7 @@ cd usr/bin
 ./atecc -b 10 -s 192 -c 'serial'
 ```
 
-此命令指示 ATECC 实用程序使用插槽 10 (-b 10)，将序列号大小设置为 192 位 ***(-s 192)***，并生成随机序列号 ***(-c 'serial')***。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
+此命令指示 ATECC 实用程序使用插槽 10（-b 10），将序列号大小设置为 192 位 ***(-s 192)***，并生成随机序列号 ***(-c 'serial')***。输出将是生成的序列号，例如 ***"01235595d3d621f0ee"***。
 此过程允许您与 ATECC608A 设备交互并执行各种操作，例如生成随机序列号。
 
 ## 与 EEPROM 交互
@@ -1033,13 +1117,13 @@ cat /sys/bus/i2c/devices/6-0050/eeprom | hexdump -C
 sudo fdisk -l
 ```
 
-此命令将显示连接到系统的所有磁盘列表，如果 SSD 被正确检测到，也会包括在内。查找代表您的 SSD 的条目。它们通常以 ***/dev/sd*** 开头，后跟一个字母（例如 ***/dev/sda、/dev/sdb*** 等）。
-一旦您识别出与 SSD 对应的条目，就可以根据需要进行分区或格式化。
+此命令将显示连接到您系统的所有磁盘列表，如果 SSD 被正确检测到，也会包括在内。查找代表您的 SSD 的条目。它们通常以 ***/dev/sd*** 开头，后跟一个字母（例如 ***/dev/sda、/dev/sdb*** 等）。
+一旦您识别出对应于您的 SSD 的条目，您就可以根据需要继续对其进行分区或格式化。
 
 ## UPS 安全关机
 
-CPU 和直流电源输入之间的 GPIO6 用于在电源断开时向 CPU 发出警报。然后 CPU 应该在超级电容器能量耗尽之前在脚本中执行一些紧急操作，并运行 "$ shutdown"。
-使用此功能的另一种方法是在 GPIO 引脚状态改变时启动关机。给定的 GPIO 引脚被配置为输入键，生成 KEY_POWER 事件。此事件由 systemd-logind 处理，启动关机。
+CPU 和直流电源输入之间的 GPIO6 用于在电源断开时向 CPU 发出警报。然后 CPU 应该在超级电容器能量耗尽之前在脚本中执行一些紧急操作并运行 "$ shutdown"。
+使用此功能的另一种方法是在 GPIO 引脚发生变化时启动关机。给定的 GPIO 引脚被配置为生成 KEY_POWER 事件的输入键。此事件由 systemd-logind 处理，通过启动关机来处理。
 
 1. 硬件连接。
 
@@ -1066,7 +1150,7 @@ dtoverlay=gpio-shutdown,gpio_pin=GPIO16,active_low=1
 
 4. 准备 Python 脚本
 
-- 创建新的 Python 脚本文件：
+- 创建一个新的 Python 脚本文件：
 
 ```bash
 cd ~
@@ -1153,8 +1237,8 @@ sudo python3 ups_shutdown.py
 
 ## AI 加速器
 
-reComputer Industrial R21xx 上的 M.2 M-KEY 2280 插槽设计用于容纳 PCIE M.2 AI 加速器。R21xx-12 系列已预装 Hailo-8 M.2 AI 加速器，性能高达 26TOPS。
-如果您购买的是 R21xx-10 系列产品，您需要购买 Hailo 的 NPU 模块来启用 AI 功能。
+reComputer Industrial R21xx 上的 M.2 M-KEY 2280 插槽设计用于容纳 PCIE M.2 AI 加速器。R21xx-12 系列已预装了 Hailo-8 M.2 AI 加速器，可达 26TOPS。
+如果您购买了 R21xx-10 系列产品，您需要购买 Hailo 的 NPU 模块来启用 AI 功能。
 设备预装了 Hailo 加速器驱动程序，因此您可以直接使用并运行测试用例：
 
 1. 导航到测试用例目录
@@ -1178,10 +1262,10 @@ python basic_pipelines/detection_simple.py
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.24_ai__accelerator_1.png" style={{width:800, height:'auto'}}/></div>
 
 要关闭应用程序，请按 ***`Ctrl+C`***。
-这是检测示例的轻量级版本，主要专注于展示 Hailo 性能，同时最小化 CPU 负载。内部 GStreamer 视频处理管道通过最小化视频处理任务进行简化，并使用 YOLOv6 Nano 模型。
+这是检测示例的轻量级版本，主要专注于展示 Hailo 性能，同时最小化 CPU 负载。内部 GStreamer 视频处理管道通过最小化视频处理任务得到简化，并使用 YOLOv6 Nano 模型。
 
 :::note
-如果您购买的 reComputer 不包含 Hailo-8，并且您正在考虑购买 Hailo 设备进行集成，请参考官方 Hailo 文档 (https://github.com/hailo-ai) 来配置固件和环境，并运行示例以验证设备可以正常使用。
+如果您购买的 reComputer 不包含 Hailo-8，并且您正在考虑购买 Hailo 设备进行集成，请参考官方 Hailo 文档（https://github.com/hailo-ai）来配置固件和环境，并运行示例以验证设备可以正常使用。
 :::
 
 ## 技术支持与产品讨论
