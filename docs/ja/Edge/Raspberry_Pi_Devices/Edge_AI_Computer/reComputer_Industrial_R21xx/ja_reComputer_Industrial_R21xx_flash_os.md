@@ -6,7 +6,7 @@ keywords:
 - Edge Controller
 - reComputer Industrial R21xx
 - Flash OS
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /ja/recomputer_industrial_r21xx_flash_os
 last_update:
   date: 09/28/2025
@@ -14,15 +14,15 @@ last_update:
 ---
 # reComputer Industrial R21xx Flash OS
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
-reComputer Industrial R21xxシリーズは、Raspberry Pi CM5とHailo-8 AIアクセラレータを搭載し、このコンパクトなエッジAIシステムは、リアルタイムマルチチャンネル映像処理のために26 TOPSを提供します。クアッドコアCortex-A76 CPU、最大16GB RAM、64GB eMMC、および多様なインターフェースにより、産業用AIアプリケーションへのシームレスな統合を保証します。
+reComputer Industrial R21xx シリーズは Raspberry Pi CM5 と Hailo-8 AI アクセラレータを搭載し、このコンパクトなエッジ AI システムは、リアルタイムマルチチャンネル映像処理のために 26 TOPS を提供します。クアッドコア Cortex-A76 CPU、最大 16GB RAM、64GB eMMC、および多様なインターフェースにより、産業用 AI アプリケーションへのシームレスな統合を保証します。
 
 ## ハードウェア要件
 
@@ -35,60 +35,60 @@ reComputer Industrial R21xxシリーズは、Raspberry Pi CM5とHailo-8 AIアク
 
 ## ソフトウェア要件
 
-- [usbbootツール](https://github.com/raspberrypi/usbboot)
+- [usbboot tool](https://github.com/raspberrypi/usbboot)
 - [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
 
-## OSのフラッシュ
+## OS のフラッシュ
 
-### Windowsホストコンピュータの場合
+### Windows ホストコンピュータの場合
 
-- **ステップ1.** 以下のリンクをクリックしてデバイスの[イメージファイル](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)をダウンロードします
+- **ステップ 1.** 以下のリンクをクリックしてデバイスの[イメージファイル](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)をダウンロードします
 最後のものを選択し、日付リンクをクリックしてダウンロードします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_1.png" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ2.** **[こちら](https://www.raspberrypi.org/software/)**から**Raspberry Pi Imager**ソフトウェアをダウンロードします
+- **ステップ 2.** **[こちら](https://www.raspberrypi.org/software/)**から **Raspberry Pi Imager** ソフトウェアをダウンロードします
 
-- **ステップ3.** Raspberry Pi Imagerソフトウェアを開きます
+- **ステップ 3.** Raspberry Pi Imager ソフトウェアを開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="800" height="auto"/></p>
 
-- **ステップ4.** キーボードで**CTRL + SHIFT + X**を押して**詳細オプション**ウィンドウを開きます
+- **ステップ 4.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
 
-- **ステップ5.** **CHOOSE OS**をクリックし、ダウンロードしたイメージファイルを選択します。
+- **ステップ 5.** **CHOOSE OS** をクリックし、ダウンロードしたイメージファイルを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_5.png" alt="pir" width="800" height="auto"/></p>
 
 成功するまでイメージの書き込みを続けます。
 
-USB-Cポートを抜き、再度ブートボタンを押し、電源をオン/オフします。システムに正常にログインできれば、イメージが正常に書き込まれ、正常に使用できます。
+USB-C ポートを抜き、再度ブートボタンを押し、電源をオン/オフします。システムに正常にログインできれば、イメージが正常に書き込まれ、正常に使用できます。
 
-### MACホストコンピュータの場合
+### MAC ホストコンピュータの場合
 
 :::caution
-**以下の手順を進める前に[homebrew](https://brew.sh/)をインストールする必要があります。**
-ターミナルを開いて```brew -V```と入力し、正しいhomebrew環境がセットアップされているかを確認してください。インストールされているhomebrew環境のバージョンが表示されるはずです。
+**以下の手順を進める前に [homebrew](https://brew.sh/) をインストールする必要があります。**
+ターミナルを開いて ```brew -V``` と入力し、正しい homebrew 環境がセットアップされているかを確認してください。インストールされている homebrew 環境のバージョンが表示されるはずです。
 :::
 
-- **ステップ1.** [このリンク](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)にアクセスして**Raspberry Pi Imager**アプリケーションをダウンロードしてインストールします
+- **ステップ 1.** [このリンク](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)にアクセスして **Raspberry Pi Imager** アプリケーションをダウンロードしてインストールします
 
-- **ステップ2.** **Raspberry Pi Imager**アプリケーションを開きます
+- **ステップ 2.** **Raspberry Pi Imager** アプリケーションを開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="800" height="auto"/></p>
 
-- **ステップ3.** キーボードで**CTRL + SHIFT + X**を押して**詳細オプション**ウィンドウを開きます
+- **ステップ 3.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
 
-ここで**ホスト名の設定、SSHの有効化、パスワードの設定、wifiの設定、ローカル設定**などを行うことができます
+ここで**ホスト名の設定、SSH の有効化、パスワードの設定、wifi の設定、ローカル設定の設定**などができます
 
-- **ステップ4.** **CHOOSE OS**をクリックし、お好みのOSを選択します
+- **ステップ 4.** **CHOOSE OS** をクリックして、お好みの OS を選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="800" height="auto"/></p>
 
-**注意：** **Other general purpose OS**に移動することで、**64-bit Ubuntu**などの他のOSを選択することができます
+**注意：** **Other general purpose OS** に移動することで、**64-bit Ubuntu** などの他の OS を選択できます
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -96,27 +96,27 @@ USB-Cポートを抜き、再度ブートボタンを押し、電源をオン/�
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **ステップ5.** **CHOOSE STORAGE**をクリックします
+- **ステップ 5.** **CHOOSE STORAGE** をクリックします
 
-- **ステップ6.** 最後に、**WRITE**をクリックします
+- **ステップ 6.** 最後に、**WRITE** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="800" height="auto"/></p>
 
-### Linuxホストコンピュータの場合
+### Linux ホストコンピュータの場合
 
-- **ステップ1.** snapをダウンロードします
+- **ステップ 1.** snap をダウンロードします
 
 ```sh
 sudo apt install snap
 ```
 
-- **ステップ2.** **rpi-imager**をダウンロードします
+- **ステップ 2.** **rpi-imager** をダウンロードします
 
 ```sh
 snap install rpi-imager
 ```
 
-- **ステップ3.** Raspberry Pi Imagerソフトウェアを開きます
+- **ステップ 3.** Raspberry Pi Imager ソフトウェアを開きます
 
 ```sh
 rpi-imager
@@ -125,17 +125,17 @@ rpi-imager
 結果は以下のように表示されます：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="800" height="auto"/></p>
 
-- **ステップ4.** キーボードで**CTRL + SHIFT + X**を押して**詳細オプション**ウィンドウを開きます
+- **ステップ 4.** キーボードで **CTRL + SHIFT + X** を押して **Advanced options** ウィンドウを開きます
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
 
-ここで**ホスト名の設定、SSHの有効化、パスワードの設定、wifiの設定、ローカル設定**などを行うことができます
+ここで**ホスト名の設定、SSH の有効化、パスワードの設定、wifi の設定、ローカル設定の設定**などができます
 
-- **ステップ5.** **CHOOSE OS**をクリックし、お好みのOSを選択します
+- **ステップ 5.** **CHOOSE OS** をクリックして、お好みの OS を選択します
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
 
-**注意：** **Other general purpose OS**に移動することで、**64-bit Ubuntu**などの他のOSを選択することができます
+**注意：** **Other general purpose OS** に移動することで、**64-bit Ubuntu** などの他の OS を選択できます
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -143,9 +143,9 @@ rpi-imager
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **ステップ6.** **CHOOSE STORAGE**をクリックし、接続されたeMMCドライブを選択します
+- **ステップ 6.** **CHOOSE STORAGE** をクリックして、接続された eMMC ドライブを選択します
 
-- **ステップ7.** 最後に、**NEXT**と**YES**をクリックします
+- **ステップ 7.** 最後に、**NEXT** と **YES** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="800" height="auto"/></p>
 
@@ -153,13 +153,13 @@ rpi-imager
 結果は以下のように表示されます：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="800" height="auto"/></p>
 
-## NVMEからの起動
+## NVME からのブート
 
-### EEPROMの更新
+### EEPROM の更新
 
-*この方法は、SSDを持っており、emmcでデバイスを正常に起動した場合に機能します。システムが最新のRaspberry Piシステム（Bookworm以降）であり、RPi 5ファームウェアが2023-12-06（12月6日）以降に更新されていることを確認してください。そうでなければ、NVME関連の設定を認識しない可能性があります。*
+*この方法は SSD を持っており、emmc でデバイスを正常にブートした場合に機能します。システムが最新の Raspberry Pi システム（Bookworm 以降）であり、RPi 5 ファームウェアが 2023-12-06（12月6日）以降に更新されていることを確認してください。そうでなければ NVME 関連の設定を認識しない可能性があります。*
 
-**ステップ1**：Raspberry Piシステムが最新（Bookworm以降）であることを確認し、以下のコマンドを入力してRPi 5ファームウェアを更新します：
+**ステップ 1**：Raspberry Pi システムが最新（Bookworm 以降）であることを確認し、以下のコマンドを入力して RPi 5 ファームウェアを更新します：
 
 ```shell
   sudo apt update && sudo apt upgrade -y
@@ -167,79 +167,79 @@ rpi-imager
   sudo raspi-config
 ```
 
-`Advanced Options`まで下にスクロールしてEnterを押します：
+`Advanced Options` まで下にスクロールして Enter を押します：
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_1.png" alt="pir" width="800" height="auto" /></div>
 
-`Bootloader Version`まで下にスクロールしてEnterを押します：
+`Bootloader Version` まで下にスクロールして Enter を押します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_2.png" alt="pir" width="800" height="auto" /></div>
 
-最後に`Latest`を選択し、Enterを押します：
+最後に `Latest` を選択して Enter を押します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_3.png" alt="pir" width="800" height="auto" /></div>
 
-ここで`No`を選択します - `latest`ブートローダーが必要です。
+ここで `No` を選択します - `latest` ブートローダーが必要です。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_4.png" alt="pir" width="800" height="auto" /></div>
 
-`Finish`を選択してツールを終了します：
+`Finish` を選択してツールを終了します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_5.png" alt="pir" width="800" height="auto" /></div>
 
-再起動を求められた場合は、`Yes`を選択します。
+再起動を求められた場合は、`Yes` を選択します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_6.png" alt="pir" width="800" height="auto" /></div>
 
-**ステップ2**：メイン画面で**Applications** =>**Accessories** =>**SD Card Copier**をクリックし、**SD Card Copier**プログラムを実行し、以下の図に示すようにOSをNVME ssdにコピーします。
+**ステップ 2**：メイン画面で **Applications** =>**Accessories** =>**SD Card Copier** をクリックし、**SD Card Copier** プログラムを実行して、以下の図に示すように OS を NVME SSD にコピーします。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="800" height="auto" /></div>
 
-### Raspberry PiをNVMe SSDから起動するように設定する
+### Raspberry Pi を NVMe SSD からブートするように設定する
 
-SDカードスロットに簡単にアクセスできる場合は、Piの電源を切り、SDカードを取り出し、（すべてが期待通りに動作している場合）次回起動時に自動的にNVMeドライブから起動するはずです。ただし、SDカードをそのままにしてNVMeから起動したい場合は、起動順序を変更する必要があります。
+SD カードスロットに簡単にアクセスできる場合は、Pi の電源を切り、SD カードを取り出すことができます。（すべてが期待通りに動作している場合）次回起動時に NVMe ドライブから自動的にブートするはずです。SD カードをそのままにして NVMe からブートしたい場合は、ブート順序を変更する必要があります。
 
-**ステップ1**：以下のコマンドを入力します：
+**ステップ 1**：以下のコマンドを入力します：
 
 ```shell
   sudo raspi-config
 ```
 
-`Advanced Options`まで下にスクロールしてEnterを押します：
+`Advanced Options` まで下にスクロールして Enter を押します：
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_1.png" alt="pir" width="800" height="auto" /></div>
 
-**ステップ2**：`Boot Order`まで下にスクロールしてEnterを押します：
+**ステップ 2**：`Boot Order` まで下にスクロールして Enter を押します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_2.png" alt="pir" width="800" height="auto" /></div>
 
-**ステップ3**：`NVMe/USB Boot`を選択してEnterを押します：
+**ステップ 3**：`NVMe/USB Boot` を選択して Enter を押します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_3.png" alt="pir" width="800" height="auto" /></div>
 
-設定が確認されます。Enterを押します：
+設定が確認されます。Enter を押します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_4.png" alt="pir" width="800" height="auto" /></div>
 
-**ステップ 4**：`Back`を選択するかEscキーを押して最初の画面に戻ります。その後、右カーソルキーを使用してFinishに移動します。
+**ステップ 4**：`Back` を選択するか Esc キーを押して最初の画面に戻ります。その後、右カーソルキーを使用して Finish に移動します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_5.png" alt="pir" width="800" height="auto" /></div>
 
-今すぐ再起動するかどうか尋ねられます。`Yes`をクリックします：
+今すぐ再起動するかどうか尋ねられます。`Yes` をクリックします：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="800" height="auto" /></div>
 
-## NVMEにubuntuをフラッシュする
+## Ubuntu を NVME にフラッシュ
 
-### 最初：SDカードでEEPROMを更新する
+### 最初：SD カードで EEPROM を更新
 
 この[リンク](https://wiki.seeedstudio.com/ja/r2000_series_getting_start/#update-eeprom)を参照してください。
 
-NVMeブート順序を最高優先度に設定するには、以下のコマンドを使用します：
+NVMe ブート順序を最高優先度に設定するには、以下のコマンドを使用します：
 
 ```
 sudo rpi-eeprom-config --edit
 ```
 
-その後、rpi-eeprom-configを以下のように変更します：
+その後、以下のように rpi-eeprom-config を変更します：
 
 ```
 BOOT_UART=1
@@ -248,38 +248,38 @@ NET_INSTALL_AT_POWER_ON=1
 PCIE_PROBE=1
 ```
 
-`Ctrl+X`を使用して`y`を入力し、結果を保存します。結果は以下の通りです：
+`Ctrl+X` を使用して `y` を入力し、結果を保存します。結果は以下の通りです：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/chang_eeprom.png" alt="pir" width="800" height="auto" /></div>
 
-### 2番目：NVMeにUbuntuを書き込む
+### 2番目：Ubuntu を NVMe に書き込み
 
-Raspberry Pi Imagerを開きます：
+Raspberry Pi Imager を開きます：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/flashos1.png" alt="pir" width="800" height="auto" /></div>
 
-Ubuntu osを選択します：
+Ubuntu OS を選択します：
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/flashos2.png" alt="pir" width="800" height="auto" /></div>
 
-最後に、`Next`をクリックしてフラッシュプロセスが完了するまで待ちます。
+最後に、`Next` をクリックしてフラッシュプロセスが完了するまで待ちます。
 
-### 3番目：OSファイルを置き換える
+### 3番目：OS ファイルを置き換え
 
-この[リンク](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)で`pcie-fix.dtbo`をインストールします
+この[リンク](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)で `pcie-fix.dtbo` をインストールします
 
-pcie-fix.dtboを以下のように/overlaysファイルにコピーします：
+以下のように pcie-fix.dtbo を /overlays ファイルにコピーします：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="800" height="auto" /></div>
 
-`config.txt`を変更し、以下のようにファイルの最後に`dtoverlay=pcie-fix`を追加します：
+`config.txt` を変更し、以下のようにファイルの最後に `dtoverlay=pcie-fix` を追加します：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file2.png" alt="pir" width="800" height="auto" /></div>
 
-その後、`Ctrl+X`を使用して`y`を入力し、このファイルを保存します。
+その後、`Ctrl+X` を使用して `y` を入力し、このファイルを保存します。
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

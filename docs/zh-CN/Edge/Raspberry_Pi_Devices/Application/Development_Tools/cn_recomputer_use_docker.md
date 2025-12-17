@@ -1,6 +1,6 @@
 ---
-description: 本wiki将向您展示如何在recomputer上使用docker
-title: 在reComputer上使用docker
+description: 本教程将向您展示如何在 reComputer 上使用 docker
+title: 在 reComputer 上使用 docker
 keywords:
   - Edge
   - RasberryPi 5
@@ -14,42 +14,67 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# 在reComputer上使用docker
+# 在 reComputer 上使用 docker
 
-## 介绍
+## 简介
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker.png" style={{width:300, height:'auto'}}/></div>
 
-本wiki介绍如何在reComputer盒子上使用[docker](https://www.docker.com)。Docker是一个开源平台，用于在轻量级、可移植的容器内自动化应用程序的部署、扩展和管理。容器允许开发人员将应用程序及其依赖项打包在一个一致的环境中，确保它们在不同的计算环境中平稳运行。
+本教程介绍如何在 reComputer 盒子上使用 [docker](https://www.docker.com)。Docker 是一个开源平台，用于在轻量级、可移植的容器内自动化应用程序的部署、扩展和管理。容器允许开发人员将应用程序及其依赖项打包在一个一致的环境中，确保它们在不同的计算环境中顺利运行。
 
 ## 准备硬件
 
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer R1125</th>
+ <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
   <th>reComputer AI Industrial R2145</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -66,12 +91,13 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Install docker
+### 安装 docker
 
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
+
 ### 将当前用户添加到 docker 组
 
 ```bash
@@ -79,7 +105,7 @@ sudo usermod -aG docker $USER
 reboot
 ```
 
-### Check docker version
+### 检查 docker 版本
 
 ```bash
 docker --version
@@ -91,16 +117,16 @@ docker --version
 
 ## 使用 docker
 
-### 创建你的项目
+### 创建您的项目
 
-这里，我们使用 `my_app` 作为示例来演示 `docker` 的使用方法。
+在这里，我们使用 `my_app` 作为示例来演示 `docker` 的使用。
 
 ```bash
 mkdir my_app
 cd my_app
 ```
 
-### Creat `src` folder and creat `main.py`
+### 创建 `src` 文件夹并创建 `main.py`
 
 ```bash
 mkdir src && cd src
@@ -141,7 +167,7 @@ async def read_item(item_id: int, q: str = None):
 
 </details>
 
-### Creat `static` folder
+### 创建 `static` 文件夹
 
 ```bash
 cd .. && mkdir static
@@ -149,7 +175,7 @@ cd static
 mkdir css && mkdir js
 ```
 
-Creat `css` file:
+创建 `css` 文件：
 
 ```bash
 cd css 
@@ -278,7 +304,7 @@ footer i {
 
 </details>
 
-Then creat `js` file:
+然后创建 `js` 文件：
 
 ```bash
 cd .. && mkdir js
@@ -303,14 +329,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         });
     }
-    
+
     // Add a hover effect to the cards
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px)';
         });
-        
+
         card.addEventListener('mouseleave', function() {
             this.style.transform = '';
         });
@@ -400,12 +426,12 @@ nano index.html
     <div class="container">
         <h1>FastAPI Application</h1>
         <p>A modern, high-performance web application</p>
-        
+
         <div class="card">
             <h2>About This App</h2>
             <p>This is a simple yet elegant web application built with FastAPI. It demonstrates how to create a beautiful UI with minimal code.</p>
         </div>
-        
+
         <div class="card">
             <h2>Features</h2>
             <ul>
@@ -415,7 +441,7 @@ nano index.html
                 <li>RESTful API endpoints</li>
             </ul>
         </div>
-        
+
         <div class="card">
             <h2>Try the API</h2>
             <p>You can access the API endpoints directly:</p>
@@ -425,7 +451,7 @@ nano index.html
             </div>
         </div>
     </div>
-    
+
     <script src="/static/js/main.js"></script>
 </body>
 </html>
@@ -433,7 +459,7 @@ nano index.html
 
 </details>
 
-### Creat `Dockerfile`
+### 创建 `Dockerfile`
 
 ```bash
 cd ..
@@ -475,7 +501,7 @@ CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 </details>
 
-### Creat `requirements.txt`
+### 创建 `requirements.txt`
 
 ```bash
 nano  requirements.txt
@@ -492,7 +518,7 @@ jinja2
 
 </details>
 
-### 项目目录如下
+### 项目目录结构如下
 
 ```bash
 tree
@@ -530,9 +556,9 @@ docker run -d -p 8000:8000 jiahaoxyz/fastapi_app_ui
 
 ### 发布镜像
 
-并创建您自己的[令牌](https://app.docker.com/settings)。
+并创建您自己的 [token](https://app.docker.com/settings)。
 
->注意：`xxx` 是您在 dockerhub 上的用户名
+>注意：`xxx` 是您自己的 dockerhub 用户名
 
 ```sh
 docker login -u xxx
@@ -540,7 +566,7 @@ docker login -u xxx
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/dockerhub.png" style={{width:1000, height:'auto'}}/></div>
 
->注意：`xxx` 是您在 dockerhub 上的用户名
+>注意：`xxx` 是您自己的 dockerhub 用户名
 
 ```sh
 docker push xxx/fastapi_app_ui:latest
@@ -562,7 +588,7 @@ docker pull jiahaoxyz/fastapi_app_ui
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您对我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
