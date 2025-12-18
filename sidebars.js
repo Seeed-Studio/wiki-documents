@@ -7674,6 +7674,7 @@ const sidebars = {
             'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_getting_started_with_iot_button',
             'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_SEEED_IOT_BOTTON_FOR_ESPHOME',
             'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_seeed_iot_button_with_zigbee',
+            'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
@@ -12741,6 +12742,7 @@ const sidebars = {
             'es/Sensor/IOT_Button_for_ESPHOME/es_getting_started_with_iot_button',
             'es/Sensor/IOT_Button_for_ESPHOME/es_SEEED_IOT_BOTTON_FOR_ESPHOME',
             'es/Sensor/IOT_Button_for_ESPHOME/es_seeed_iot_button_with_zigbee',
+            'es/Sensor/IOT_Button_for_ESPHOME/es_seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
@@ -17809,6 +17811,7 @@ const sidebars = {
             'ja/Sensor/IOT_Button_for_ESPHOME/ja_getting_started_with_iot_button',
             'ja/Sensor/IOT_Button_for_ESPHOME/ja_SEEED_IOT_BOTTON_FOR_ESPHOME',
             'ja/Sensor/IOT_Button_for_ESPHOME/ja_seeed_iot_button_with_zigbee',
+            'ja/Sensor/IOT_Button_for_ESPHOME/ja_seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
