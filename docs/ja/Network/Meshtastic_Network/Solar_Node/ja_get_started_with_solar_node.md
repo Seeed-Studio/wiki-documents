@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /ja/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 12/16/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -92,7 +92,7 @@ P1-Proバージョンには内蔵バッテリーとGPSモジュールが搭載�
 </div>
 
 :::tip
-ボタンを押してもデバイスが反応しない場合は、まず充電してください。急速充電器は使用しないでください。
+ボタンを押してもデバイスが応答しない場合は、まず充電してください。急速充電器は使用しないでください。
 :::
 
 ### アプリ経由での接続
@@ -190,7 +190,7 @@ import TabItem from '@theme/TabItem';
 **EU_868** は、1時間ごとのデューティサイクル制限10%を遵守する必要があり、これは1時間のローリングベースで毎分計算されます。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスにLoRa地域を設定したので、ニーズに合わせて [LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
+デバイスでLoRa地域を設定したので、ニーズに合わせて [LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/) の設定を続けることができます。
 ### ボタン
 
 |ボタン操作|説明|
@@ -273,7 +273,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-- 以下のセンサーは、デバイス上のGroveインターフェースとの互換性が確認されています。
+- 以下のセンサーは、デバイスのGroveインターフェースとの互換性が確認されています。
 
 <table>
   <tr>
@@ -310,7 +310,7 @@ import TabItem from '@theme/TabItem';
 
 ### アンテナのアップグレード（オプション）
 
-- このビデオを見ることで、アンテナをファイバーグラス製のものに交換できます。
+- このビデオを見て、アンテナをファイバーグラス製のものに交換できます。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -332,7 +332,7 @@ import TabItem from '@theme/TabItem';
 
 #### 説明
 
-デバイスが応答しない、LEDが点灯しない、アプリとペアリングできない。
+デバイスが応答せず、LEDが点灯せず、アプリとペアリングできません。
 
 **1) デバイスがまだDFUモードに入ることができる場合は、ブートローダーの書き込みを試してください**。
 
@@ -371,7 +371,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下のコマンドは`python3`を使用していますが、Windowsの場合、Python 3.xのWindowsインストールでは依然としてpython.exeという名前を使用しているため、`python`に変更する必要がある場合があります。
+注意：以下のコマンドは`python3`を使用していますが、Windowsの場合、python 3.xのWindowsインストールではまだpython.exeという名前を使用しているため、`python`に変更する必要がある場合があります。
 
 ホームディレクトリのユーザー空間にインストールするには：
 
@@ -437,10 +437,13 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 上記の手順を完了したら、この[ステップ](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-firmware)に従ってアプリケーションファームウェアを書き込むことができます。
 
+### ファクトリーリセット
+デフォルト設定に復元したい場合は、[こちらをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_solar_node/#flash-erase)してフラッシュ消去を実行してください。その後、最新のファームウェアを再書き込みしてください。
+
 ### 消費電力
 
 消費電力は主にデータ送信頻度やGPS更新レートなどの要因に依存します。
-以下の数値は参考値のみです。実際の消費量は実際の使用条件によって異なる場合があります。
+以下の数値は参考値のみで、実際の消費量は実際の使用条件によって異なる場合があります。
 
 - **シャットダウンスリープモード消費電力**
 

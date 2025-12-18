@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /cn/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 12/3/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -112,7 +112,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">锂电池（1mm 2p JST）：3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">OLED 屏幕</td>
+    <td colspan="1" rowspan="3">[OLED 屏幕](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">尺寸：1.3 英寸</td>
   </tr>
   <tr>

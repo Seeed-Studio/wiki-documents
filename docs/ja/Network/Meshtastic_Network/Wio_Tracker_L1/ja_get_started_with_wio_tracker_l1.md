@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /ja/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 12/16/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -52,7 +52,7 @@ L1 E-Ink ファームウェアは現在 4方向ジョイスティックをサポ
 
 #### ブザー
 
-ブザーをオンまたはオフにしたい場合は、まず `ファームウェアを更新` して `2.7` バージョンにしてください。2.7 バージョンのファームウェアのみがメニューバーを持っているためです。
+ブザーをオンまたはオフにしたい場合は、まず `ファームウェアを` `2.7` バージョンに `更新してください`。2.7 バージョンのファームウェアのみがメニューバーを持っているためです。
 - ブザーをオンにする
 Setting（歯車の形のアイコン）-> Notification -> Buzzer Action -> Disable
 - ブザーをオフにする
@@ -81,6 +81,7 @@ Setting（歯車の形のアイコン）-> Notification -> Buzzer Action -> All 
 1. メッセージ送信プロセスが完了していない
 2. 設定中
 :::
+
 ### ファームウェアフラッシュ
 
 :::caution note
@@ -102,11 +103,11 @@ L1 E-Ink の場合、ターゲットデバイスを `Seeed Wio Tracker L1 E-Ink`
 <p style={{textAlign: 'center'}}><img src=" https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/img/E-Ink%20Flash%202.png" alt="pir" width={800} height="auto" /></p>
 
 
-デバイスの電源を入れ、`Enter DFU Mode` をクリックすると、`Tracker L1` という名前のシリアルポートが表示されるので、それをクリックして接続すると、`Tracker L1` という名前のドライバが表示されます。
+デバイスの電源を入れ、`Enter DFU Mode` をクリックすると、`Tracker L1` という名前のシリアルポートが表示されます。それをクリックして接続すると、`Tracker L1` という名前のドライバが表示されるはずです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2 ファイルを DFU ドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされます。
+UF2 ファイルを DFU ドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされるはずです。
 
 ### デバイスの電源を入れる
 
@@ -141,7 +142,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスに接続してください。
+- コードを入力し（デフォルトコードは `123456`）、`OK` をクリックしてデバイスに接続してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -154,7 +155,7 @@ import TabItem from '@theme/TabItem';
 
   ステップ 1：ウェブサイトを開く
 
-[こちらをクリック](https://client.meshtastic.org/messages/broadcast/0) してウェブサイトにアクセスしてください。
+[こちらをクリック](https://client.meshtastic.org/messages/broadcast/0)してウェブサイトにアクセスしてください。
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
   ステップ 2：新しいデバイスを追加
@@ -163,7 +164,7 @@ import TabItem from '@theme/TabItem';
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
-    接続方法は 2 つあります。お好みの方法を選択してください。
+    接続方法は 2 つあります。お好みの方法を選択できます。
 
  方法 1：Bluetooth 経由
 
@@ -205,7 +206,7 @@ import TabItem from '@theme/TabItem';
 |US|アメリカ合衆国|902.0 - 928.0|100|30|
 |EU_868|欧州連合 868MHz|869.4 - 869.65|10|27|
 
-より包括的なリストについては、[国別 LoRa 地域](https://meshtastic.org/docs/configuration/region-by-country/) を参照してください。
+より包括的なリストについては、[国別 LoRa 地域](https://meshtastic.org/docs/configuration/region-by-country/)を参照してください。
 
 :::info
 **EU_868** は、1時間のローリングベースで毎分計算される 10% の時間あたりデューティサイクル制限を遵守する必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
@@ -224,7 +225,7 @@ Groveインターフェースを介してデバイスにセンサーを追加で
   </tr>
   <tr>
     <td rowspan="4">環境センサー</td>
-    <td>気圧</td>
+    <td>圧力</td>
     <td>BMP085</td>
   </tr>
   <tr>
@@ -236,7 +237,7 @@ Groveインターフェースを介してデバイスにセンサーを追加で
     <td>[SHT31](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html)/SHTC3/[SHT4X](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)、AHT10</td>
   </tr>
   <tr>
-    <td>温度・湿度・気圧</td>
+    <td>温度・湿度・圧力</td>
     <td>[BME280](https://www.seeedstudio.com/Grove-BME280-Environmental-Sensor-Temperature-Humidity-Barometer.html)</td>
   </tr>
   <tr>
@@ -256,12 +257,12 @@ Groveインターフェースを介してデバイスにセンサーを追加で
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - OLEDスクリーン
-互換性のある別売りOLEDスクリーンをお楽しみに。`12月`に発売予定です。現在のOLEDドライバーはSSD1306です。
+互換性のあるOLEDスクリーンを入手するには[こちらをクリック](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)してください。現在のOLEDドライバーはSSD1306です。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 
 ### バーチャルキーボード
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
 2.7バージョンのファームウェアでバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力して他のデバイスと通信できます。ファームウェアを更新するには[ファームウェアフラッシュチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
@@ -274,7 +275,7 @@ Groveインターフェースを介してデバイスにセンサーを追加で
 デバイスが応答しない、LEDが点灯しない、アプリとペアリングできない。独自のファームウェアをフラッシュした後にデバイスが完全に動作しなくなった場合は、ブートローダーの再インストールを試すこともできます。
 
 :::danger note
-ブートローダーをフラッシュする際は、ケーブル接続が安定していることを確認し、フラッシュプロセス中は**絶対に**切断しないでください。
+ブートローダーをフラッシュする際は、ケーブル接続が安定していることを確認し、フラッシュプロセス中に**絶対に**切断しないでください。
 :::
 
 - ステップ1：[ブートローダーをダウンロードするにはこちらをクリック](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
@@ -302,13 +303,16 @@ Groveインターフェースを介してデバイスにセンサーを追加で
 
 `Reset`ボタンを一度押してDFUモードを終了します。
 
+### ファクトリーリセット
+デフォルト設定に復元したい場合は、[こちらをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)してビデオをご覧ください。フラッシュ消去を行い、最新のファームウェアを再フラッシュする必要があります。
+
 ### 信号品質
 
 - **SNR**は通信リンクの品質を反映します。通常のデバイスは-7 dB以上で動作します。SNRが-10 dB未満のデバイスは性能が悪いことを示します。
 
 - **RSSI**はデバイスとその周囲環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
 
-      最高の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
+      最良の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
 
 ### 互換性のあるアンテナ
 
