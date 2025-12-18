@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /cn/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 12/16/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -24,7 +24,7 @@ last_update:
 ### 刷写固件
 
 :::caution note
-请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+请`不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
 在刷写固件之前，请先刷写擦除固件！
 :::
 
@@ -34,7 +34,7 @@ last_update:
 
 #### 刷写擦除
 
-点击 `垃圾桶` 图标。
+点击 `trash` 符号。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/FlashEraseIcon.png" alt="pir" width={800} height="auto" /></p>
 
@@ -187,7 +187,7 @@ import TabItem from '@theme/TabItem';
 参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
-**EU_868** 必须遵守每小时 10% 的占空比限制，每分钟在滚动 1 小时基础上计算。如果达到限制，您的设备将停止传输，直到再次被允许。
+**EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算，每分钟计算一次。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
@@ -380,7 +380,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-如果运行 `pip3 install` 时出现权限错误，说明您的 `pip3` 版本较旧或设置为尝试安装到系统目录。在这种情况下，请使用 `--user` 标志：
+如果运行 `pip3 install` 时出现权限错误，您的 `pip3` 版本较旧或设置为尝试安装到系统目录。在这种情况下使用 `--user` 标志：
 
 ```
 pip3 install -r --user requirements.txt
@@ -394,7 +394,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-要生成实用程序的独立可执行二进制文件（Windows 和 MacOS），请运行以下命令：
+要生成实用程序的独立可执行二进制文件（Windows 和 MacOS），运行这些命令：
 
 ```
 pip3 install pyinstaller
@@ -404,8 +404,8 @@ cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
 
-您将在 `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` 中找到 .exe 文件（如果您在 Windows 上则带有 `.exe` 扩展名）。
-为方便起见，将其复制或移动到其他地方，例如您的 %PATH% 中的目录。
+您将在 `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` 中找到 .exe 文件（如果您在 Windows 上则带有 `.exe`）。
+为了方便起见，将其复制或移动到其他地方，例如您的 %PATH% 中的目录。
 
 </TabItem>
 </Tabs>
@@ -419,7 +419,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 **步骤 3：刷写引导程序**
 
-在终端或命令提示符中，导航到您下载引导程序压缩包的目录，并执行以下命令，将端口替换为您设备的正确端口：
+在终端或命令提示符中，导航到您下载引导程序压缩包的目录，并执行以下命令，将正确的端口替换为您的设备：
 
 - **对于 Windows**：
 
@@ -436,6 +436,9 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
 完成上述步骤后，您可以按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware)刷写应用固件。
+
+### 恢复出厂设置
+如果您想恢复到默认设置，[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase)执行闪存擦除。然后重新刷写最新固件。
 
 ### 功耗
 
