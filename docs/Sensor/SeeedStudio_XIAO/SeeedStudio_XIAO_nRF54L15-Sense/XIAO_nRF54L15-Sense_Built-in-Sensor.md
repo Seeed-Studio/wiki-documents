@@ -68,7 +68,7 @@ Once your environment is ready, the IMU driver will allow you to read raw sensor
     </a>
 </div><br />
 
-Download the repository at ``C:\Users\xxx\.platformio\platforms`` and open the ``examples\zephyr-imu``folder in VS Code. Then click on main.c, and you will see the following code:
+Download the repository to ``C:\Users\xxx\.platformio\platforms`` and open the ``examples\zephyr-imu``folder in VS Code. Then click on main.c, and you will see the following code:
 
 ```cpp
 #include <zephyr/kernel.h>
