@@ -2512,6 +2512,7 @@ const sidebars = {
             'Sensor/IOT_Button_for_ESPHOME/getting_started_with_iot_button',
             'Sensor/IOT_Button_for_ESPHOME/SEEED_IOT_BOTTON_FOR_ESPHOME',
             'Sensor/IOT_Button_for_ESPHOME/seeed_iot_button_with_zigbee',
+            'Sensor/IOT_Button_for_ESPHOME/seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
