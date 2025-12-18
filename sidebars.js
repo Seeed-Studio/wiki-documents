@@ -6456,6 +6456,7 @@ const sidebars = {
               label: '应用',
               items: [
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_ESP-Mesh_Audio',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_HomeAssistant',
               ],
             },
           ],
@@ -11522,6 +11523,7 @@ const sidebars = {
               label: 'Aplicación',
               items: [
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_ESP-Mesh_Audio',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_HomeAssistant',
               ],
             },
           ],
@@ -16589,6 +16591,7 @@ const sidebars = {
               label: 'アプリケーション',
               items: [
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_ESP-Mesh_Audio',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_HomeAssistant',
               ],
             },
           ],
