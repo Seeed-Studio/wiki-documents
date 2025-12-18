@@ -194,7 +194,7 @@ reTerminal E 系列电子纸显示器仅支持 2.4GHz WiFi 网络，不支持 5G
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/18.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+<TabItem value="Network Setup vis SenseCraft APP" label="通过 SenseCraft APP 进行网络设置">
 
 此方法使用 SenseCraft 移动应用程序通过蓝牙配置设备网络并将其添加到您的 SenseCraft 账户。
 
