@@ -19,6 +19,10 @@ translation:
 This tutorial only provides assembly and debugging instructions to help developers build a complete wheeled-leg robot as quickly as possible. If you need to learn the underlying principles of wheeled-leg robots, you may refer to the [**Bilibili tutorial video by DengGe**](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc). For secondary development, you can search for tutorials on other websites or forums.
 :::
 
+<div class="video-container">
+<iframe width="900" height="500" src="https://www.youtube.com/embed/8e2Q981ezBs?si=1n8j0nSHaYcwFrgX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Introduction
 
 The StackForce two-wheeled biped robot is developed based on the StackForce lightweight robotics development platform. Its core hardware is composed of the StackForce series main control board, motor driver board, and servo driver board.
