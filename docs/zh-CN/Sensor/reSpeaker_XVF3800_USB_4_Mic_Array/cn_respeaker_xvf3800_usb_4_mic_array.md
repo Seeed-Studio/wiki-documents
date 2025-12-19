@@ -906,6 +906,12 @@ sudo apt install pavucontrol -y
 
 在设备管理器中卸载所有与 ReSpeaker 相关的驱动程序。这样解决了问题。
 
+### 刷写固件后在 Windows 中无法作为声音设备使用？
+
+打开开始菜单并输入“设备管理器”。找到相关的 reSpeaker XVF 3800 设备，右键单击它们并选择“卸载设备”。完成后，重新连接设备（拔下并重新插入 USB），Windows 将会自动为其重新安装正确的声卡驱动程序。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
+
 ## 资源
 
 - [ReSpeaker XVF3800 3D 文件](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
