@@ -1,8 +1,8 @@
 ---
-description: A fully local, voice-interactive AI assistant that combines Speech-to-Text (STT), Text-to-Speech (TTS), and local Large Language Models (LLMs) using Ollama and NVIDIA Riva.It runs entirely on edge devices like NVIDIA Jetson — enabling private, real-time, and natural voice conversations without relying on the cloud.
-title: Chatbot on Jetson
+description: Jetson LLM Interface Controller is a fully local, voice- and text-driven AI assistant that runs entirely on NVIDIA Jetson devices. It combines local Large Language Models (via Ollama) with optional Speech-to-Text and Text-to-Speech (NVIDIA Riva) to translate natural human commands into structured, safe hardware actions. The system enables private, low-latency control of on-board interfaces (GPIO, I2C, PWM, etc.) and serves as a modular foundation for edge AI applications such as smart environments, robotics, and vision-enabled agents—without relying on the cloud.
+title: Develop Large Language Model on NVIDIA Jetson Devices and enable the control of interfaces on the board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: / 
+slug: /llm_interface_control_jetson
 last_update:
   date: 01/29/2025
   author: kourosh
