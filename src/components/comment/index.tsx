@@ -1,14 +1,18 @@
 import React from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import Giscus, { GiscusProps } from '@giscus/react';
-import {
-  useThemeConfig,
-  useColorMode,
-  ThemeConfig
-} from '@docusaurus/theme-common';
+import { useThemeConfig, useColorMode, ThemeConfig } from '@docusaurus/theme-common';
+
+import dup from '../../utils/giscus-dup.json';
 
 interface CustomThemeConfig extends ThemeConfig {
-  giscus: GiscusProps & { darkTheme: string };
+  giscus: GiscusProps & { darkTheme?: string };
+}
+
+function normalizePathname(p: string) {
+  if (!p.startsWith('/')) p = '/' + p;
+  if (!p.endsWith('/')) p = p + '/';
+  return p;
 }
 
 export const Comment = () => {
@@ -19,23 +23,32 @@ export const Comment = () => {
 
   return (
     <BrowserOnly fallback={<div>Loading Comments...</div>}>
-      {() => (
-        <div style={{ paddingTop: 50 }}>
-          <Giscus
-            id="comments"
-            mapping="title"
-            strict="1"
-            term="Welcome to @giscus/react component!"
-            reactionsEnabled="1"
-            emitMetadata="0"
-            inputPosition="bottom"
-            lang="en"
-            loading="lazy"
-            {...giscus}
-            theme={giscusTheme}
-          />
-        </div>
-      )}
+      {() => {
+        const pathname = normalizePathname(window.location.pathname);
+        const usePathname = (dup.usePathnameTerm as string[]).includes(pathname);
+
+        // ✅ 默认完全不变：老页面继续用 title（继承历史评论）
+        // ✅ 仅对“重复 title 的非保留页”：改为 pathname（避免串台，新开 discussion）
+        const term = usePathname ? pathname : document.title;
+
+        return (
+          <div style={{ paddingTop: 50 }}>
+            <Giscus
+              {...giscus}
+              id="comments"
+              mapping="specific"
+              term={term}
+              strict="1"
+              reactionsEnabled="1"
+              emitMetadata="0"
+              inputPosition="bottom"
+              lang="en"
+              loading="lazy"
+              theme={giscusTheme}
+            />
+          </div>
+        );
+      }}
     </BrowserOnly>
   );
 };
