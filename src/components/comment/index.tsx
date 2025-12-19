@@ -28,8 +28,8 @@ export const Comment = () => {
         const usePathname = (dup.usePathnameTerm as string[]).includes(pathname);
 
         // ✅ 默认完全不变：老页面继续用 title（继承历史评论）
-        // ✅ 仅对“重复 title 的非保留页”：改为 pathname（避免串台，新开 discussion）
-        const term = usePathname ? pathname : document.title;
+        // ✅ 仅对“重复 title 的非保留页”：改为 title + (pathname)
+        const term = usePathname ? `${document.title} (${pathname})` : document.title;
 
         return (
           <div style={{ paddingTop: 50 }}>
