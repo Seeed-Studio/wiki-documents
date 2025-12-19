@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-17 13:50:58 (北京时间)
-// 多语言页面: 2082 个
+// 生成时间: 2025-12-18 11:41:10 (北京时间)
+// 多语言页面: 2083 个
 
 (function() {
   'use strict';
@@ -7899,6 +7899,12 @@
     "es",
     "ja"
   ],
+  "/iot_button_v2_ha_discovery": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/seeed_iot_button_with_zigbee": [
     "cn",
     "en",
@@ -8386,6 +8392,12 @@
     "ja"
   ],
   "/xiao_esp32c5_esp-mesh_audio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_homeassistant": [
     "cn",
     "en",
     "es",
@@ -9568,12 +9580,6 @@
     "ja"
   ],
   "/Seeed_Arduino_Boards": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/iot_botton_connect_to_esphome": [
     "cn",
     "en",
     "es",

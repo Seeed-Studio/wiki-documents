@@ -1,6 +1,6 @@
 ---
-description: Comienza con SenseCAP Solar Node para Meshtastic y LoRa
-title: Comienza con SenseCAP Solar Node
+description: Comienza con SenseCAP Solar Node para Meshtastic & LoRa
+title:  Comienza con SenseCAP Solar Node
 keywords:
 - Meshtastic
 - Solar
@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /es/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 12/16/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -28,13 +28,13 @@ Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dis
 ¡Antes de flashear el firmware, por favor flashea primero el firmware de borrado!
 :::
 
-Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/). Selecciona el dispositivo objetivo como `Seeed SenseCAP Solar Node`.
+Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/). Selecciona el dispositivo objetivo como `Seeed SenseCAP Solar Node` .
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
 #### Borrado Flash
 
-Haz clic en el símbolo de `papelera`.
+Haz clic en el símbolo de `trash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/FlashEraseIcon.png" alt="pir" width={800} height="auto" /></p>
 
@@ -42,7 +42,7 @@ Descarga y copia el firmware de borrado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
 
-Haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `XIAO-xxx`, haz clic y conéctalo, y debería aparecer un controlador llamado `XIAO-xxx`. Pega el firmware de borrado en el disco.
+Haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `XIAO-xxx`, haz clic y conéctalo, y debería aparecer una unidad llamada `XIAO-xxx`. Pega el firmware de borrado en el disco.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
@@ -50,7 +50,7 @@ Este proceso puede tomar algo de tiempo. Por favor espera a que el disco "XIAO-X
 
 #### Flashear Firmware de Aplicación
 
-Elige la versión de firmware que desees. Haz clic en `flash`.
+Elige la versión de firmware que desees. haz clic en `flash`. 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
 Descarga el archivo UF2 y entra en el DFU. Arrastra el archivo UF2 a la unidad DFU. El firmware debería flashearse después de que el archivo se descargue y el dispositivo se reinicie.
@@ -58,7 +58,7 @@ Descarga el archivo UF2 y entra en el DFU. Arrastra el archivo UF2 a la unidad D
 ### Instalar Batería y Módulo GPS (Opcional)
 
 :::tip
-Cuando necesites instalar o reemplazar la batería, usa una batería 18650 (3.6V) con `botón superior`.
+Cuando necesites instalar o reemplazar la batería, usa una batería 18650 (3.6V) de `Button-top`.
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-battery.png" alt="pir" width={500} height="auto" /></p>
 La versión P1-Pro tiene batería y módulo GPS integrados, para la versión P1, el usuario necesita instalar la batería y el módulo GPS manualmente si es necesario.
 :::
@@ -85,7 +85,7 @@ Asegúrate de que la carcasa esté montada correctamente y los tornillos estén 
 
 ### Encender el dispositivo
 
-El dispositivo necesita ser activado conectando el cable USB para el primer uso. Si la luz azul Mesh parpadea, significa que el dispositivo se ha encendido exitosamente. Como se muestra en el video a continuación:
+El dispositivo necesita ser activado conectando el cable USB para el primer uso. Si la luz azul Mesh parpadea, significa que el dispositivo se ha encendido exitosamente. Tal como se muestra en el video a continuación: 
 
 <div class="table-center">
 <iframe width="700" height="250" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solarnodeturnon.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -102,7 +102,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="App iOS">
+<TabItem value="ios" label="App IOS">
 
 - Selecciona el dispositivo objetivo en el panel Bluetooth.
 
@@ -130,16 +130,16 @@ import TabItem from '@theme/TabItem';
 
 ### Conectar vía Sitio Web
 
-Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio web, puedes conectar el dispositivo al [Sitio Web de Meshtastic](https://client.meshtastic.org/messages/broadcast/0) ahora.
+Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio web, puedes conectar el dispositivo al [Sitio Web de Meshtastic](https://client.meshtastic.org/messages/broadcast/0) ahora. 
 
   Paso 1: Abrir el Sitio Web
 
-[Haz clic aquí](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web.
+[Haz clic aquí](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web. 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
 
-  Paso 2: Agregar el nuevo dispositivo
+  Paso 2: Agregar el nuevo dispositivo 
 
-    Haz clic en "+ New Connection".
+    Haz clic en "+ New Connection". 
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
 
@@ -155,7 +155,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
     Elige el método serial. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
-    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión tiene éxito, puedes ver el estado del dispositivo directamente en el sitio web.
+    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión es exitosa, puedes ver el estado del dispositivo directamente en el sitio web.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
@@ -164,7 +164,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 Para comenzar a comunicarte a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
 
 <Tabs>
-<TabItem value="ios" label="App iOS">
+<TabItem value="ios" label="App IOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
@@ -322,11 +322,11 @@ Dado que el dispositivo se usará al aire libre por períodos prolongados, por f
 
 - Razón
 
-Esto generalmente es causado por una falla en la instalación del firmware. Al instalar el firmware, mantén una conexión estable.
+Esto generalmente es causado por una falla en la grabación del firmware. Al grabar el firmware, mantén una conexión estable.
 
 - Solución de problemas
 
-[Haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-firmware) para volver a instalar el firmware.
+[Haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-firmware) para volver a grabar el firmware.
 
 ### Dispositivo bloqueado
 
@@ -334,14 +334,14 @@ Esto generalmente es causado por una falla en la instalación del firmware. Al i
 
 El dispositivo no responde, no hay LED, no se puede emparejar con tu aplicación.
 
-**1) El dispositivo aún puede entrar en modo DFU, entonces intenta instalar el bootloader**.
+**1) El dispositivo aún puede entrar en modo DFU, entonces intenta grabar el bootloader**.
 
-#### Instalar el Bootloader
+#### Grabar el Bootloader
 
 - [Descarga del bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger nota
-Cuando estés instalando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de instalación.
+Cuando estés grabando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de grabación.
 :::
 
 **Paso 1: Instalación de Adafruit-nrfutil**
@@ -352,7 +352,7 @@ Cuando estés instalando el bootloader, asegúrate de que la conexión del cable
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
 <Tabs>
-<TabItem value="pypi" label="Instalando desde PyPI">
+<TabItem value="pypi" label="Instalación desde PyPI">
 
 Este es el método recomendado, para instalar la última versión:
 
@@ -362,7 +362,7 @@ pip3 install --user adafruit-nrfutil
 
 </TabItem>
 
-<TabItem value="sou" label="Instalando desde el código fuente">
+<TabItem value="sou" label="Instalación desde código fuente">
 
 Usa este método si tienes problemas instalando con PyPi o quieres modificar la herramienta. Primero clona este repositorio y ve a su carpeta.
 
@@ -371,7 +371,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Nota: los siguientes comandos usan `python3`, sin embargo si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de Windows de python 3.x aún usa el nombre python.exe
+Nota: los siguientes comandos usan `python3`, sin embargo si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de python 3.x en Windows aún usa el nombre python.exe
 
 Para instalar en el espacio de usuario en tu directorio home:
 
@@ -410,14 +410,14 @@ Cópialo o muévelo a otro lugar para tu conveniencia, como un directorio en tu 
 </TabItem>
 </Tabs>
 
-**Paso 2: Verifica tu número de puerto**
+**Paso 2: Verifica el número de puerto**
 
 Conecta tu dispositivo a tu PC y verifica el número de puerto.
 
 Ejemplo:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
-**Paso 3: Instalar el bootloader**
+**Paso 3: Grabar el bootloader**
 
 En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, reemplazando el puerto correcto para tu dispositivo:
 
@@ -435,7 +435,10 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
 
-Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-firmware) para instalar el firmware de la aplicación.
+Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-firmware) para grabar el firmware de la aplicación.
+
+### Restablecimiento de fábrica
+Si quieres restaurar a la configuración predeterminada, [haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_solar_node/#flash-erase) para realizar un borrado de flash. Y luego vuelve a grabar el firmware más reciente.
 
 ### Consumo de energía
 
@@ -452,7 +455,7 @@ Las cifras a continuación son solo de referencia; el consumo real puede variar 
 
 **Ejemplo:**
 
-|Capacidad de la batería|Vida útil de la batería|
+|Capacidad de batería|Vida útil de la batería|
 |---|---|
 |3350|136.8|
 |12000|490.2|
@@ -467,7 +470,7 @@ Las cifras a continuación son solo de referencia; el consumo real puede variar 
 |Corriente de operación del GPS|50 mA|
 |Corriente de operación del GPS_LED|1.02 mA|
 
-### Calidad de la señal
+### Calidad de señal
 
 - **SNR** refleja la calidad del enlace de comunicación. El dispositivo normal generalmente opera por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
 
@@ -476,4 +479,4 @@ Las cifras a continuación son solo de referencia; el consumo real puede variar 
       Para lograr el mejor efecto de señal, usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
 
 ## Recursos
-- [Tabla de cálculo de vida útil de la batería del nodo solar](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
+- [Tabla de cálculo de vida útil de batería del nodo solar](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
