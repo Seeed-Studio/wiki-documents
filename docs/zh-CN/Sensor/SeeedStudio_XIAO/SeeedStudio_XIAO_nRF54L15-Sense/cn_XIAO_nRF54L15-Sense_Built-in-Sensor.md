@@ -47,7 +47,7 @@ sidebar_position: 1
 
 ### IMU 驱动程序
 
-为了简化您的开发体验并确保快速启动此 IMU 程序，我们利用 PlatformIO 平台编写了必要的驱动代码。PlatformIO 为嵌入式开发提供了全面高效的环境，是 XIAO nRF54L15 Sense 的理想选择。
+为了简化您的开发体验并确保快速启动此 IMU 程序，我们利用 PlatformIO 平台编写了必要的驱动程序代码。PlatformIO 为嵌入式开发提供了全面高效的环境，是 XIAO nRF54L15 Sense 的理想选择。
 
 在继续之前，请确保您的开发环境已正确设置。如果您尚未将 Seeed Studio XIAO nRF54L15 开发板添加到您的 PlatformIO 配置中，请参考此[链接](https://wiki.seeedstudio.com/cn/xiao_nrf54l15_with_platform_io/)获取如何配置的详细说明。这个关键步骤将使 PlatformIO 能够正确识别并为您的开发板编译代码。
 
@@ -68,13 +68,15 @@ sidebar_position: 1
     </a>
 </div><br />
 
-下载仓库并在 VS Code 中打开文件夹。然后点击 main.c，您将看到以下代码：
+将仓库下载到 ``C:\Users\xxx\.platformio\platforms`` 并在 VS Code 中打开 ``examples\zephyr-imu`` 文件夹。然后点击 main.c，您将看到以下代码：
 
 ```cpp
-#include <stdio.h>
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
+#include <zephyr/logging/log.h>
+
+LOG_MODULE_REGISTER(zephyr_imu, LOG_LEVEL_INF);
 
 static inline float out_ev(struct sensor_value *val)
 {
@@ -94,7 +96,7 @@ static void fetch_and_display(const struct device *dev)
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
 
-	printf("accel x:%f ms/2 y:%f ms/2 z:%f ms/2\n",
+	LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
 	/* lsm6dsl gyro */
@@ -103,10 +105,10 @@ static void fetch_and_display(const struct device *dev)
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
 
-	printf("gyro x:%f rad/s y:%f rad/s z:%f rad/s\n",
+	LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	printf("trig_cnt:%d\n\n", trig_cnt);
+	LOG_INF("trig_cnt:%d", trig_cnt);
 }
 
 static int set_sampling_freq(const struct device *dev)
@@ -121,14 +123,14 @@ static int set_sampling_freq(const struct device *dev)
 	ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
 			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
 	if (ret != 0) {
-		printf("Cannot set sampling frequency for accelerometer.\n");
+		LOG_ERR("Cannot set sampling frequency for accelerometer.");
 		return ret;
 	}
 
 	ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
 			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
 	if (ret != 0) {
-		printf("Cannot set sampling frequency for gyro.\n");
+		LOG_ERR("Cannot set sampling frequency for gyro.");
 		return ret;
 	}
 
@@ -154,7 +156,7 @@ static void test_trigger_mode(const struct device *dev)
 	trig.chan = SENSOR_CHAN_ACCEL_XYZ;
 
 	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
-		printf("Could not set sensor type and channel\n");
+		LOG_ERR("Could not set sensor type and channel");
 		return;
 	}
 }
@@ -178,15 +180,15 @@ int main(void)
 	const struct device *const dev = DEVICE_DT_GET(DT_ALIAS(imu0));
 
 	if (!device_is_ready(dev)) {
-		printk("%s: device not ready.\n", dev->name);
+		LOG_ERR("%s: device not ready.", dev->name);
 		return 0;
 	}
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
-	printf("Testing LSM6DSL sensor in trigger mode.\n\n");
+	LOG_INF("Testing LSM6DSL sensor in trigger mode.");
 	test_trigger_mode(dev);
 #else
-	printf("Testing LSM6DSL sensor in polling mode.\n\n");
+	LOG_INF("Testing LSM6DSL sensor in polling mode.");
 	test_polling_mode(dev);
 #endif
 	return 0;
@@ -199,14 +201,14 @@ int main(void)
 
 - 上传：构建成功后，点击 PlatformIO 工具栏中的"Upload"图标（右箭头），或使用 PlatformIO 侧边栏：PROJECT TASKS -> your_project_name -> General -> Upload。
 
-上传成功后，您应该在 PlatformIO Device Monitor 中看到类似下面示例的输出。此串行输出显示实时的加速度计和陀螺仪读数，为您的设备的运动和方向提供关键洞察。
+上传成功后，您应该在 PlatformIO Device Monitor（PROJECT TASKS -> your_project_name -> General -> Monitor）中看到类似下面示例的输出。此串行输出显示实时加速度计和陀螺仪读数，为您的设备运动和方向提供关键洞察。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/imu_display.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> 来自 PlatformIO Device Monitor 的实时 IMU 数据输出，显示原始加速度计和陀螺仪读数。</em></p>
 </div>
 
-这些原始数据通过应用适当的算法（例如滤波、传感器融合）构成了各种应用的基础，从简单的运动检测到复杂的方向跟踪。
+这些原始数据通过应用适当的算法（例如滤波、传感器融合），为从简单运动检测到复杂方向跟踪的各种应用奠定了基础。
 
 
 ## XIAO nRF54L15 Sense MIC
@@ -219,7 +221,7 @@ int main(void)
 
 - `DMIC sample=:`：表示 DMIC 采样过程的开始。
 
-- `PCM output rate:` 16000, channels: 1：确认音频输出设置，通常为 16 kHz 的采样率和单声道音频。
+- `PCM output rate:` 16000, channels: 1：确认音频输出设置，通常为 16 kHz 采样率和单声道音频。
 
 - `dmic_nrf_pdm:` PDM clock frequency: 1280000, actual PCM rate: 16000：显示内部 PDM 时钟频率和生成的 PCM 音频采样率。
 
@@ -227,11 +229,11 @@ int main(void)
 
 - `dmix_sample: Exiting:` 表示 DMIC 采样过程已停止。
 
-以下是当 DMIC 驱动程序运行时，您可以在 PlatformIO Device Monitor 中看到的典型输出示例，展示了音频数据的成功捕获和缓冲。
+以下是在 DMIC 驱动程序运行时，您可以在 PlatformIO Device Monitor 中看到的典型输出示例，展示了音频数据的成功捕获和缓冲。
 
 ### DMIC 驱动程序
 
-这些原始音频数据一旦被捕获，就可以用于广泛的应用，包括语音命令、声音事件检测、环境噪声监测以及更复杂的音频处理任务。
+一旦捕获，这些原始音频数据可用于广泛的应用，包括语音命令、声音事件检测、环境噪声监测以及更复杂的音频处理任务。
 
 以下代码示例演示了如何使用 XIAO nRF54L15 开发板上的按钮录制音频，并将录制的 WAV 文件保存到计算机上。
 

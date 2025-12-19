@@ -51,7 +51,7 @@ VS Code をベースとして、nRF Connect SDK で以下のケースを使用�
 
 続行する前に、開発環境が正しく設定されていることを確認してください。まだ Seeed Studio XIAO nRF54L15 開発ボードを PlatformIO 設定に追加していない場合は、設定方法の詳細な手順について、この[リンク](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_with_platform_io/)を参照してください。この重要なステップにより、PlatformIO がボードを適切に認識し、コードをコンパイルできるようになります。
 
-環境の準備ができたら、IMU ドライバーにより LSM6DS3TR-C から生のセンサーデータを読み取ることができます。このデータには以下が含まれます：
+環境の準備ができたら、IMU ドライバーを使用して LSM6DS3TR-C から生のセンサーデータを読み取ることができます。このデータには以下が含まれます：
 
 - 加速度計生値（accel raw）：X、Y、Z軸に沿った加速度を表します。
 
@@ -68,13 +68,15 @@ VS Code をベースとして、nRF Connect SDK で以下のケースを使用�
     </a>
 </div><br />
 
-リポジトリをダウンロードし、VS Code でフォルダを開きます。次に main.c をクリックすると、以下のコードが表示されます：
+リポジトリを ``C:\Users\xxx\.platformio\platforms`` にダウンロードし、VS Code で ``examples\zephyr-imu`` フォルダを開きます。次に main.c をクリックすると、以下のコードが表示されます：
 
 ```cpp
-#include <stdio.h>
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
+#include <zephyr/logging/log.h>
+
+LOG_MODULE_REGISTER(zephyr_imu, LOG_LEVEL_INF);
 
 static inline float out_ev(struct sensor_value *val)
 {
@@ -94,7 +96,7 @@ static void fetch_and_display(const struct device *dev)
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
 
-	printf("accel x:%f ms/2 y:%f ms/2 z:%f ms/2\n",
+	LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
 	/* lsm6dsl gyro */
@@ -103,10 +105,10 @@ static void fetch_and_display(const struct device *dev)
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
 
-	printf("gyro x:%f rad/s y:%f rad/s z:%f rad/s\n",
+	LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	printf("trig_cnt:%d\n\n", trig_cnt);
+	LOG_INF("trig_cnt:%d", trig_cnt);
 }
 
 static int set_sampling_freq(const struct device *dev)
@@ -121,14 +123,14 @@ static int set_sampling_freq(const struct device *dev)
 	ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
 			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
 	if (ret != 0) {
-		printf("Cannot set sampling frequency for accelerometer.\n");
+		LOG_ERR("Cannot set sampling frequency for accelerometer.");
 		return ret;
 	}
 
 	ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
 			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
 	if (ret != 0) {
-		printf("Cannot set sampling frequency for gyro.\n");
+		LOG_ERR("Cannot set sampling frequency for gyro.");
 		return ret;
 	}
 
@@ -154,7 +156,7 @@ static void test_trigger_mode(const struct device *dev)
 	trig.chan = SENSOR_CHAN_ACCEL_XYZ;
 
 	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
-		printf("Could not set sensor type and channel\n");
+		LOG_ERR("Could not set sensor type and channel");
 		return;
 	}
 }
@@ -178,28 +180,28 @@ int main(void)
 	const struct device *const dev = DEVICE_DT_GET(DT_ALIAS(imu0));
 
 	if (!device_is_ready(dev)) {
-		printk("%s: device not ready.\n", dev->name);
+		LOG_ERR("%s: device not ready.", dev->name);
 		return 0;
 	}
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
-	printf("Testing LSM6DSL sensor in trigger mode.\n\n");
+	LOG_INF("Testing LSM6DSL sensor in trigger mode.");
 	test_trigger_mode(dev);
 #else
-	printf("Testing LSM6DSL sensor in polling mode.\n\n");
+	LOG_INF("Testing LSM6DSL sensor in polling mode.");
 	test_polling_mode(dev);
 #endif
 	return 0;
 }
 ```
 
-次に、XIAO nRF54L15 を USB でコンピューターに接続します。VS Code で：
+次に、XIAO nRF54L15 を USB 経由でコンピューターに接続します。VS Code で：
 
 - ビルド：VS Code 下部の PlatformIO ツールバーの「Build」アイコン（チェックマーク）をクリックするか、PlatformIO サイドバーを使用します：PROJECT TASKS -> your_project_name -> General -> Build。
 
 - アップロード：ビルドが成功した後、PlatformIO ツールバーの「Upload」アイコン（右矢印）をクリックするか、PlatformIO サイドバーを使用します：PROJECT TASKS -> your_project_name -> General -> Upload。
 
-アップロードが成功すると、PlatformIO Device Monitor で以下の例のような出力が表示されるはずです。このシリアル出力は、リアルタイムの加速度計とジャイロスコープの読み取り値を示し、デバイスの動きと方向に関する重要な洞察を提供します。
+アップロードが成功した後、PlatformIO Device Monitor（PROJECT TASKS -> your_project_name -> General -> Monitor）で以下の例のような出力が表示されるはずです。このシリアル出力は、リアルタイムの加速度計とジャイロスコープの読み取り値を示し、デバイスの動きと方向に関する重要な洞察を提供します。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/imu_display.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -479,18 +481,18 @@ int main(void)
 
 次に、scriptsフォルダディレクトリでターミナルを開き、プログラムが既に書き込まれていることを前提として、以下の操作を実行します。
 
-**ステップ1:**
+**ステップ 1:**
 
 - `python3 -m pip install pyserial`
 
-**ステップ2:**
+**ステップ 2:**
 
 - `python record.py -p /dev/cu.usbmodemA0CBDDC33 -o output.wav -b 921600`
 
 :::tip
 このコマンド`python record.py -p **/dev/cu.usbmodemA0CBDDC33** -o output.wav -b 921600`では、使用するシリアルポートに置き換える必要があります。
 :::
-**ステップ3:**
+**ステップ 3:**
 
 - コマンドを実行すると、音声を録音するためにボタンを押すよう促されます。
 
@@ -501,7 +503,7 @@ int main(void)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

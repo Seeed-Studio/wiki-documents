@@ -17,7 +17,7 @@ sidebar_position: 1
 El siguiente código de ejemplo está diseñado para PlatformIO, pero también es compatible con el nRF Connect SDK.
 
 :::tip
-Basado en VS Code, si quieres usar el siguiente caso en el nRF Connect SDK, por favor consulta la conexión proporcionada, agrega el archivo app.overlay y modifica el contenido en prj.conf
+Basado en VS Code, si quieres usar el siguiente caso en el nRF Connect SDK, consulta la conexión proporcionada, agrega el archivo app.overlay y modifica el contenido en prj.conf
 
 [XIAO nRF54L15 Agregar archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/agregar-overlay-y-modificar-el-archivo-conf/).
 
@@ -47,9 +47,9 @@ Los sensores **IMU de 6 ejes (Unidad de Medición Inercial)** como el **LSM6DS3T
 
 ### Controlador IMU
 
-Para simplificar tu experiencia de desarrollo y asegurar un inicio rápido con este programa IMU, hemos aprovechado la plataforma PlatformIO para escribir el código de controlador necesario. PlatformIO ofrece un entorno integral y eficiente para el desarrollo embebido, lo que lo convierte en una opción ideal para el XIAO nRF54L15 Sense.
+Para simplificar tu experiencia de desarrollo y asegurar un inicio rápido con este programa IMU, hemos aprovechado la plataforma PlatformIO para escribir el código de controlador necesario. PlatformIO ofrece un entorno integral y eficiente para el desarrollo embebido, convirtiéndolo en una opción ideal para el XIAO nRF54L15 Sense.
 
-Antes de continuar, por favor asegúrate de que tu entorno de desarrollo esté configurado correctamente. Si aún no has agregado la placa de desarrollo Seeed Studio XIAO nRF54L15 a tu configuración de PlatformIO, por favor consulta este [enlace](https://wiki.seeedstudio.com/es/xiao_nrf54l15_with_platform_io/) para obtener instrucciones detalladas sobre cómo configurarla. Este paso crucial permitirá que PlatformIO reconozca y compile correctamente el código para tu placa.
+Antes de continuar, asegúrate de que tu entorno de desarrollo esté configurado correctamente. Si aún no has agregado la placa de desarrollo Seeed Studio XIAO nRF54L15 a tu configuración de PlatformIO, consulta este [enlace](https://wiki.seeedstudio.com/es/xiao_nrf54l15_with_platform_io/) para obtener instrucciones detalladas sobre cómo configurarla. Este paso crucial permitirá que PlatformIO reconozca y compile correctamente el código para tu placa.
 
 Una vez que tu entorno esté listo, el controlador IMU te permitirá leer datos de sensor en bruto del LSM6DS3TR-C. Estos datos incluyen:
 
@@ -68,13 +68,15 @@ Una vez que tu entorno esté listo, el controlador IMU te permitirá leer datos 
     </a>
 </div><br />
 
-Descarga el repositorio y abre la carpeta en VS Code. Luego haz clic en main.c, y verás el siguiente código:
+Descarga el repositorio a ``C:\Users\xxx\.platformio\platforms`` y abre la carpeta ``examples\zephyr-imu`` en VS Code. Luego haz clic en main.c, y verás el siguiente código:
 
 ```cpp
-#include <stdio.h>
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
+#include <zephyr/logging/log.h>
+
+LOG_MODULE_REGISTER(zephyr_imu, LOG_LEVEL_INF);
 
 static inline float out_ev(struct sensor_value *val)
 {
@@ -94,7 +96,7 @@ static void fetch_and_display(const struct device *dev)
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
 
-	printf("accel x:%f ms/2 y:%f ms/2 z:%f ms/2\n",
+	LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
 	/* lsm6dsl gyro */
@@ -103,10 +105,10 @@ static void fetch_and_display(const struct device *dev)
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
 	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
 
-	printf("gyro x:%f rad/s y:%f rad/s z:%f rad/s\n",
+	LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
 			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
 
-	printf("trig_cnt:%d\n\n", trig_cnt);
+	LOG_INF("trig_cnt:%d", trig_cnt);
 }
 
 static int set_sampling_freq(const struct device *dev)
@@ -121,14 +123,14 @@ static int set_sampling_freq(const struct device *dev)
 	ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
 			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
 	if (ret != 0) {
-		printf("Cannot set sampling frequency for accelerometer.\n");
+		LOG_ERR("Cannot set sampling frequency for accelerometer.");
 		return ret;
 	}
 
 	ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
 			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
 	if (ret != 0) {
-		printf("Cannot set sampling frequency for gyro.\n");
+		LOG_ERR("Cannot set sampling frequency for gyro.");
 		return ret;
 	}
 
@@ -154,7 +156,7 @@ static void test_trigger_mode(const struct device *dev)
 	trig.chan = SENSOR_CHAN_ACCEL_XYZ;
 
 	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
-		printf("Could not set sensor type and channel\n");
+		LOG_ERR("Could not set sensor type and channel");
 		return;
 	}
 }
@@ -178,15 +180,15 @@ int main(void)
 	const struct device *const dev = DEVICE_DT_GET(DT_ALIAS(imu0));
 
 	if (!device_is_ready(dev)) {
-		printk("%s: device not ready.\n", dev->name);
+		LOG_ERR("%s: device not ready.", dev->name);
 		return 0;
 	}
 
 #ifdef CONFIG_LSM6DSL_TRIGGER
-	printf("Testing LSM6DSL sensor in trigger mode.\n\n");
+	LOG_INF("Testing LSM6DSL sensor in trigger mode.");
 	test_trigger_mode(dev);
 #else
-	printf("Testing LSM6DSL sensor in polling mode.\n\n");
+	LOG_INF("Testing LSM6DSL sensor in polling mode.");
 	test_polling_mode(dev);
 #endif
 	return 0;
@@ -199,21 +201,21 @@ Ahora, conecta tu XIAO nRF54L15 a tu computadora vía USB. En VS Code:
 
 - Cargar: Después de una compilación exitosa, haz clic en el ícono "Upload" (flecha derecha) en la barra de herramientas de PlatformIO, o usa la barra lateral de PlatformIO: PROJECT TASKS -> nombre_de_tu_proyecto -> General -> Upload.
 
-Después de una carga exitosa, deberías ver una salida similar al ejemplo de abajo en el Monitor de Dispositivo de PlatformIO. Esta salida serial muestra lecturas en tiempo real del acelerómetro y giroscopio, proporcionando información clave sobre el movimiento y orientación de tu dispositivo.
+Después de una carga exitosa, deberías ver una salida similar al ejemplo a continuación en el Monitor de Dispositivo de PlatformIO (PROJECT TASKS -> nombre_de_tu_proyecto -> General -> Monitor). Esta salida serial muestra lecturas en tiempo real del acelerómetro y giroscopio, proporcionando información clave sobre el movimiento y orientación de tu dispositivo.
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/imu_display.png" alt="Consumo de energía de publicidad BLE del XIAO nRF54L15" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> Salida de datos IMU en tiempo real del Monitor de Dispositivo de PlatformIO, mostrando lecturas en bruto del acelerómetro y giroscopio.</em></p>
 </div>
 
-Estos datos en bruto forman la base para varias aplicaciones, desde detección simple de movimiento hasta seguimiento complejo de orientación, aplicando algoritmos apropiados (por ejemplo, filtrado, fusión de sensores).
+Estos datos en bruto forman la base para varias aplicaciones, desde la detección simple de movimiento hasta el seguimiento complejo de orientación, aplicando algoritmos apropiados (por ejemplo, filtrado, fusión de sensores).
 
 
-## Micrófono del XIAO nRF54L15 Sense
+## MIC del XIAO nRF54L15 Sense
 
 El **MSM261DGT006** es un Micrófono Digital (DMIC) que produce datos de Modulación de Densidad de Pulsos (PDM), haciéndolo adecuado para interfaz digital directa con microcontroladores como el XIAO nRF54L15 Sense. Nuestro controlador DMIC está específicamente diseñado para manejar esta salida PDM, convertirla en muestras de audio utilizables y procesarla para varias aplicaciones.
 
-El controlador inicia el micrófono, establece la frecuencia de muestreo apropiada (por ejemplo, 16000 Hz para audio estándar) y configura la frecuencia del reloj PDM. Luego lee continuamente buffers de muestra del micrófono, permitiendo la captura de audio en tiempo real.
+El controlador inicia el micrófono, establece la frecuencia de muestreo apropiada (por ejemplo, 16000 Hz para audio estándar) y configura la frecuencia del reloj PDM. Luego lee continuamente buffers de muestras del micrófono, permitiendo la captura de audio en tiempo real.
 
 La salida del controlador DMIC, cuando se ve en el Monitor de Dispositivo de PlatformIO, proporciona información crucial sobre la operación del micrófono y los datos de audio entrantes. Los mensajes clave que observarás incluyen:
 
@@ -221,13 +223,13 @@ La salida del controlador DMIC, cuando se ve en el Monitor de Dispositivo de Pla
 
 - `PCM output rate:` 16000, channels: 1: Confirma la configuración de salida de audio, típicamente una frecuencia de muestreo de 16 kHz y audio de un solo canal (mono).
 
-- `dmic_nrf_pdm:` PDM clock frequency: 1280000, actual PCM rate: 16000: Muestra la frecuencia interna del reloj PDM y la frecuencia de muestra de audio PCM resultante.
+- `dmic_nrf_pdm:` PDM clock frequency: 1280000, actual PCM rate: 16000: Muestra la frecuencia interna del reloj PDM y la frecuencia de muestreo de audio PCM resultante.
 
-- `got buffer 0x... of 3200 bytes:` Confirma que el controlador recibió exitosamente un búfer de datos de audio del micrófono. Se muestran la dirección hexadecimal (ej., 0x20004C8) y el tamaño en bytes (ej., 3200 bytes). Estos búferes contienen las muestras de audio sin procesar que luego pueden ser procesadas o analizadas.
+- `got buffer 0x... of 3200 bytes:` Confirma que el controlador recibió exitosamente un buffer de datos de audio del micrófono. Se muestran la dirección hexadecimal (ej., 0x20004C8) y el tamaño en bytes (ej., 3200 bytes). Estos buffers contienen las muestras de audio sin procesar que luego pueden ser procesadas o analizadas.
 
 - `dmix_sample: Exiting:` Indica que el proceso de muestreo DMIC ha sido detenido.
 
-A continuación se muestra un ejemplo de la salida típica que puedes esperar ver en el Monitor de Dispositivo de PlatformIO cuando el controlador DMIC está funcionando, ilustrando la captura y almacenamiento en búfer exitoso de datos de audio.
+A continuación se muestra un ejemplo de la salida típica que puedes esperar ver en el Monitor de Dispositivo de PlatformIO cuando el controlador DMIC está funcionando, ilustrando la captura y almacenamiento exitoso de datos de audio.
 
 ### Controlador DMIC
 
