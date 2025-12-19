@@ -1295,6 +1295,7 @@ const sidebars = {
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_ESP-Mesh_Audio',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_HomeAssistant',
               ],
             },
           ],
@@ -1942,6 +1943,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_voice_agent',
                   ],
                 },
               ],
@@ -2511,6 +2513,7 @@ const sidebars = {
             'Sensor/IOT_Button_for_ESPHOME/getting_started_with_iot_button',
             'Sensor/IOT_Button_for_ESPHOME/SEEED_IOT_BOTTON_FOR_ESPHOME',
             'Sensor/IOT_Button_for_ESPHOME/seeed_iot_button_with_zigbee',
+            'Sensor/IOT_Button_for_ESPHOME/seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
@@ -6454,6 +6457,7 @@ const sidebars = {
               label: '应用',
               items: [
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_ESP-Mesh_Audio',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_HomeAssistant',
               ],
             },
           ],
@@ -7100,6 +7104,7 @@ const sidebars = {
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_edgeimpulse',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2',
+                    'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_voice_agent',
                   ],
                 },
               ],
@@ -7669,6 +7674,7 @@ const sidebars = {
             'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_getting_started_with_iot_button',
             'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_SEEED_IOT_BOTTON_FOR_ESPHOME',
             'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_seeed_iot_button_with_zigbee',
+            'zh-CN/Sensor/IOT_Button_for_ESPHOME/cn_seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
@@ -11519,6 +11525,7 @@ const sidebars = {
               label: 'Aplicación',
               items: [
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_ESP-Mesh_Audio',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_HomeAssistant',
               ],
             },
           ],
@@ -12165,6 +12172,7 @@ const sidebars = {
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_edgeimpulse',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_tflm',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_ros2',
+                    'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_voice_agent',
                   ],
                 },
               ],
@@ -12734,6 +12742,7 @@ const sidebars = {
             'es/Sensor/IOT_Button_for_ESPHOME/es_getting_started_with_iot_button',
             'es/Sensor/IOT_Button_for_ESPHOME/es_SEEED_IOT_BOTTON_FOR_ESPHOME',
             'es/Sensor/IOT_Button_for_ESPHOME/es_seeed_iot_button_with_zigbee',
+            'es/Sensor/IOT_Button_for_ESPHOME/es_seeed_iot_button_with_seeed_discovery',
           ],
         },
         {
@@ -16585,6 +16594,7 @@ const sidebars = {
               label: 'アプリケーション',
               items: [
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_ESP-Mesh_Audio',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_HomeAssistant',
               ],
             },
           ],
@@ -17231,6 +17241,7 @@ const sidebars = {
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_edgeimpulse',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2',
+                    'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_voice_agent',
                   ],
                 },
               ],
@@ -17800,6 +17811,7 @@ const sidebars = {
             'ja/Sensor/IOT_Button_for_ESPHOME/ja_getting_started_with_iot_button',
             'ja/Sensor/IOT_Button_for_ESPHOME/ja_SEEED_IOT_BOTTON_FOR_ESPHOME',
             'ja/Sensor/IOT_Button_for_ESPHOME/ja_seeed_iot_button_with_zigbee',
+            'ja/Sensor/IOT_Button_for_ESPHOME/ja_seeed_iot_button_with_seeed_discovery',
           ],
         },
         {

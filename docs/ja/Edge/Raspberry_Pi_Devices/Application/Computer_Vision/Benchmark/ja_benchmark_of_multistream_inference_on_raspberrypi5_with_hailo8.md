@@ -1,6 +1,6 @@
 ---
 description: このwikiは、Raspberry Pi5とhailo8を使用したyolov8mマルチストリーム検出ベンチマークを実演します。
-title: Hailo8を搭載したRaspberrypiでのマルチストリーム推論のベンチマーク
+title: Hailo8を搭載したRaspberrypiでのマルチストリーム推論ベンチマーク
 keywords:
   - Edge
   - RasberryPi 5
@@ -14,28 +14,42 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# Hailo8を搭載したRaspberry Pi 5でのマルチストリーム推論のベンチマーク
+# Hailo8を搭載したRaspberrypi 5でのマルチストリーム推論ベンチマーク
 
 ## はじめに
 
-[YOLOv8](https://github.com/ultralytics/ultralytics)（You Only Look Once version 8）は、リアルタイム姿勢推定と物体検出モデルの人気の高いYOLOシリーズです。速度、精度、柔軟性において複数の進歩を導入することで、前身の強みを基盤として構築されています。[Hailo8](https://www.seeedstudio.com/Raspberry-Pi-Al-HAT-26-TOPS-p-6243.html)は推論速度を加速するために使用され、26 TOPSのAI性能を特徴としています。
+[YOLOv8](https://github.com/ultralytics/ultralytics)（You Only Look Once version 8）は、リアルタイム姿勢推定と物体検出モデルの人気の高いYOLOシリーズです。速度、精度、柔軟性において複数の進歩を導入することで、前身の強みを基盤としています。[Hailo8](https://www.seeedstudio.com/Raspberry-Pi-Al-HAT-26-TOPS-p-6243.html)は推論速度を加速するために使用され、26 TOPSのAI性能を特徴としています。
 
-このwikiでは、hailo8を搭載したRaspberry Pi 5でのYOLOv8m物体検出のベンチマークを紹介します。すべてのテストは同じモデル（YOLOv8m）を使用し、int8に量子化され、入力サイズは640x640解像度、バッチサイズは8に設定されています。
+このwikiでは、Raspberry Pi 5とhailo8を使用したYOLOv8mの物体検出ベンチマークを紹介します。すべてのテストは同じモデル（YOLOv8m）を使用し、int8に量子化され、入力サイズは640x640解像度、バッチサイズは8に設定されています。
 
 ## ハードウェアの準備
 
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer AI R2130</th>
+  <th>reComputer AI R2140</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -56,15 +70,15 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Hailo公式ウェブサイトでhailoソフトウェアをダウンロード
+### hailo公式ウェブサイトからhailoソフトウェアをダウンロード
 
-> **注意:**
+> **注意：**
 公式のHailoアカウントが必要で、ログインしていることを確認してください。
 この[リンク](https://hailo.ai/developer-zone/software-downloads/)をクリックして、以下の必要なライブラリをダウンロードしてください：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/multistream_benchmark_hailo8/hailo_download.png" alt="pir" width={1000} height="auto"/></p>
 
-### respberrypi5にhailort_4.19.0_arm64.debをインストール
+### raspberrypi5にhailort_4.19.0_arm64.debをインストール
 
 ```
 sudo dpkg -i hailort_4.19.0_arm64.deb 
@@ -73,7 +87,7 @@ sudo reboot
 
 ```
 
-### dkmsをインストール
+### dkmsのインストール
 
 ```
 sudo apt-get install dkms
@@ -87,20 +101,20 @@ sudo reboot
 
 ```
 
-### Python仮想環境の作成とアクティベート
+### Python仮想環境の作成と有効化
 
 ```
 python -m venv hailo_env
 source hailo_env/bin/activate
 ```
 
-### hailort-4.19.0-cp311-cp311-linux_aarch64.whlをインストール
+### hailort-4.19.0-cp311-cp311-linux_aarch64.whlのインストール
 
 ```
 pip install hailort-4.19.0-cp311-cp311-linux_aarch64.whl 
 ```
 
-### ソフトウェアがインストールされているかを確認する
+### ソフトウェアがインストールされているかの確認
 
 ```
 hailortcli fw-control identify
@@ -122,9 +136,9 @@ Part Number: HM218B1C2FAE
 Product Name: HAILO-8 AI ACC M.2 M KEY MODULE EXT TEMP
 ```
 
-### PCIeをgen2/gen3に設定する（gen3はgen2より高速）
+### pcieをgen2/gen3に設定（gen3はgen2より高速）
 
-以下のテキストを```/boot/firmware/config.txt```に追加してください
+```/boot/firmware/config.txt```に以下のテキストを追加してください
 
 ```
 #Enable the PCIe external connector
@@ -155,27 +169,27 @@ sudo apt-get install -y libcairo2-dev libgirepository1.0-dev libgstreamer1.0-dev
 sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0
 ```
 
-#### hailo_pci force_desc_page_size を設定する
+#### hailo_pci force_desc_page_sizeの設定
 
 ```
 sudo nano /etc/modprobe.d/hailo_pci.conf
 ```
 
-そして、以下の内容を入力します。
+そして以下の内容を入力してください。
 
 ```
 options hailo_pci force_desc_page_size=4096
 ```
 
-最後に、`Ctrl+X`を押し、`Y`を入力し、`Enter`を押してファイルを保存します
+最後に、`Ctrl+X`を押し、`Y`を入力し、`Enter`を押してファイルを保存してください
 
-その後、Raspberry Pi 5を再起動します
+そしてraspberrypi5を再起動してください
 
 ```
 sudo reboot
 ```
 
-#### Tappsをダウンロード
+#### Tappsのダウンロード
 
 ```
 git clone --depth 1 https://github.com/hailo-ai/tappas.git
@@ -189,13 +203,13 @@ mkdir hailort
 git clone https://github.com/hailo-ai/hailort.git hailort/sources
 ```
 
-#### common.pyを変更する
+#### common.pyの変更
 
 ```
 nano downloader/common.py
 ```
 
-以下のように内容を変更し、common.pyに`RaspberryPI5 = 'rpi5'`を追加します：
+そして以下のように内容を変更し、common.pyに`RaspberryPI5 = 'rpi5'`を追加してください：
 
 ```
 class Platform(Enum):
@@ -205,14 +219,14 @@ class Platform(Enum):
     Rockchip = 'rockchip'
     RaspberryPI = 'rpi'
     RaspberryPI5 = 'rpi5'
-    
+
     ANY = 'any'
 
     def __str__(self):
         return self.value
 ```
 
-#### tappasをインストール
+#### tappasのインストール
 
 ```
 ./install.sh --skip-hailort --target-platform rpi5
@@ -226,7 +240,7 @@ cd ./apps/h8/gstreamer/general/multistream_detection/
 nano multi_stream_detection.sh
 ```
 
-以下のように14行目に `readonly DEFAULT_BATCH_SIZE=8` を追加します：
+以下のように14行目に`readonly DEFAULT_BATCH_SIZE=8`を追加してください：
 
 ```
 readonly DEFAULT_NETWORK_NAME="yolov5"
@@ -234,7 +248,7 @@ readonly DEFAULT_BATCH_SIZE=8
 readonly MAX_NUM_OF_DEVICES=4
 ```
 
-以下のように19行目に `batch_size=$DEFAULT_BATCH_SIZE` を追加してください：
+以下のように19行目に`batch_size=$DEFAULT_BATCH_SIZE`を追加してください：
 
 ```
 network_name=$DEFAULT_NETWORK_NAME
@@ -242,7 +256,7 @@ batch_size=$DEFAULT_BATCH_SIZE
 num_of_src=12
 ```
 
-154行目に `batch-size=$batch_size` を以下のように追加してください：
+以下のように154行目に`batch-size=$batch_size`を追加してください：
 
 ```
 queue name=hailo_pre_infer_q_0 leaky=no max-size-buffers=30 max-size-bytes=0 max-size-time=0 ! \
@@ -250,7 +264,7 @@ hailonet hef-path=$hef_path batch-size=$batch_size device-count=$device_count sc
 queue name=hailo_postprocess0 leaky=no max-size-buffers=30 max-size-bytes=0 max-size-time=0 ! \
 ```
 
-最後に `Ctrl+X` を押して `Y` を入力し、ファイルを保存します。
+最後に`Ctrl+X`を押し、`Y`を入力してファイルを保存してください。
 
 ## マルチストリーム推論の実行
 
@@ -266,12 +280,12 @@ sudo chmod +x multi_stream_detection.sh
 <div class="table-center">
 
 | チャンネル数        | PCIE Gen2 性能       | PCIE Gen3 性能       |
-|---------------------|----------------------|----------------------|
+|---------------------|-----------------------|-----------------------|
 | 1チャンネルストリーム    | 39.82FPS             | 76.99FPS             |
-| 2チャンネルストリーム   | 19.86FPS             | 38.21FPS             |
-| 4チャンネルストリーム   | 8.45FPS              | 16.94FPS             |
-| 8チャンネルストリーム   | 3.85FPS              | 8.15FPS              |
-| 12チャンネルストリーム  | 2.94FPS              | 5.43FPS              |
+| 2チャンネルストリーム  | 19.86FPS             | 38.21FPS             |
+| 4チャンネルストリーム  | 8.45FPS              | 16.94FPS             |
+| 8チャンネルストリーム  | 3.85FPS              | 8.15FPS              |
+| 12チャンネルストリーム | 2.94FPS              | 5.43FPS              |
 
 </div>
 
@@ -281,7 +295,7 @@ sudo chmod +x multi_stream_detection.sh
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

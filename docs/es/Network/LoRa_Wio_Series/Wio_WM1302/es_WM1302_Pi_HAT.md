@@ -82,7 +82,7 @@ WM1302 Pi HAT, junto con el Módulo Gateway WM1302 y Raspberry Pi, puede ayudar 
   </tr>
   <tr>
     <td >Conectores de 40 Pines de Raspberry Pi</td>
-    <td >Compatible con Raspberry Pi 4 B / Compatible con Raspberry Pi 3 A+/B/B+ / Compatible con Raspberry Pi 2 B / Compatible con Raspberry Pi A+/B+ /   Compatible con Raspberry Pi Zero/Zero W</td>
+    <td >Compatible con Raspberry Pi 5 / Compatible con Raspberry Pi 4 B / Compatible con Raspberry Pi 3 A+/B/B+ / Compatible con Raspberry Pi 2 B / Compatible con Raspberry Pi A+/B+ /   Compatible con Raspberry Pi Zero/Zero W</td>
   </tr>
   <tr>
     <td >Conector PCIe</td>

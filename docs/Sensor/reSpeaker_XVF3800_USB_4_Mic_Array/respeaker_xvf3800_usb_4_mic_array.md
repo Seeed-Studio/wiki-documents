@@ -906,6 +906,12 @@ You can then open **pavucontrol** and increase the output volume beyond 100% if 
 
 Uninstall all drivers associated with the ReSpeaker in Device Manager. This resolved the issue.
 
+### Cannot use as sound devices in Windows after flashing firmware ? 
+
+Open the start menu and type Device manager. Find  related reSpeaker XVF 3800 devices, right click them and select Uninstall devices. After that, restart the device (usb plug and unplugged) and Windows will re-install the right sound card driver for it.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
+
 ## Resources
 
 - [ReSpeaker XVF3800 3D File](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)

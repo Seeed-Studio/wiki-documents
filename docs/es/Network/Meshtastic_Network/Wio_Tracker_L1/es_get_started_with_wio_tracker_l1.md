@@ -7,12 +7,12 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /es/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 12/3/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
 :::tip
-El Wio Tracker L1 Serie comparte el mismo marco de hardware. Aunque la guía de video fue para el L1 Pro, es aplicable a todos los demás productos de la serie L1.
+El Wio Tracker L1 Serie comparte el mismo marco de hardware. Aunque la guía en video fue para el L1 Pro, es aplicable a todos los demás productos de la serie L1.
 :::
 ## Tutorial en Video
 
@@ -54,9 +54,9 @@ Solo el firmware 2.7 soporta la barra de menú. Si quieres usar la barra de men�
 
 Si quieres encender o apagar el zumbador, por favor primero `actualiza el firmware` a la versión `2.7`. Porque solo el firmware versión 2.7 tiene la barra de menú.
 - Encender el zumbador
-Setting (icono con forma de engranaje) -> Notification -> Buzzer Action -> Disable
+Setting (ícono con forma de engranaje) -> Notification -> Buzzer Action -> Disable
 - Apagar el zumbador
-Setting (icono con forma de engranaje) -> Notification -> Buzzer Action -> All enabled
+Setting (ícono con forma de engranaje) -> Notification -> Buzzer Action -> All enabled
 
 <div class="table-center">
 <iframe width="350" height="450" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer%20_turnonturnoff.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -78,9 +78,10 @@ Setting (icono con forma de engranaje) -> Notification -> Buzzer Action -> All e
 
 :::danger note
 Cuando el dispositivo esté en los estados siguientes, por favor no lo reinicies manualmente o lo apagues. De lo contrario, el dispositivo puede quedar inoperativo.
-1. No haber terminado el proceso de transmisión de mensajes
+1. No terminar el proceso de transmisión de mensajes
 2. Estar siendo configurado
 :::
+
 ### Flashear Firmware
 
 :::caution note
@@ -123,7 +124,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="App iOS">
 
 - Selecciona el dispositivo objetivo en el panel de Bluetooth.
 
@@ -141,7 +142,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- Ingresa el código (código predeterminado es `123456`) y luego haz clic en `OK` para conectar el dispositivo.
+- Ingresa el código (el código predeterminado es `123456`) y luego haz clic en `OK` para conectar el dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -170,9 +171,9 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
     Elige el método bluetooth. Elige el ID del dispositivo en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
 
- Método 2: Vía Serial
+ Método 2: Vía Serie
 
-    Elige el método serial. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
+    Elige el método serie. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
 
     Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión tiene éxito, puedes ver el estado del dispositivo directamente en el sitio web.
@@ -185,7 +186,7 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
 Para comenzar a comunicarte a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
 
 <Tabs>
-<TabItem value="ios" label="App IOS">
+<TabItem value="ios" label="App iOS">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
@@ -256,12 +257,12 @@ Puedes agregar sensores al dispositivo a través de la interfaz Grove. Los sigui
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 - Pantalla OLED
-Por favor, mantente atento a nuestra pantalla OLED compatible de venta por separado, que estará disponible `en diciembre`. El controlador OLED actual es SSD1306.
+[Haz clic aquí](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) para obtener la pantalla OLED compatible. El controlador OLED actual es SSD1306.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
 
 ### Teclado virtual
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
 ¡El firmware versión 2.7 ahora soporta teclado virtual! Puedes escribir mensajes directamente en el dispositivo para comunicarte con otros dispositivos. Sigue el [Tutorial de actualización de firmware](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) para actualizar el firmware.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
@@ -271,7 +272,7 @@ Por favor, mantente atento a nuestra pantalla OLED compatible de venta por separ
 
 **Descripción:**
 
-El dispositivo no responde, no hay LED, no se puede emparejar con tu App. Si encuentras que el dispositivo está completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
+El dispositivo no responde, no hay LED, no se puede emparejar con tu aplicación. Si encuentras que el dispositivo está completamente muerto después de flashear tu propio firmware, también puedes intentar reinstalar el bootloader.
 
 :::danger note
 Cuando estés flasheando el bootloader, asegúrate de que la conexión del cable sea estable y **NO** lo desconectes durante el proceso de flasheo.
@@ -302,13 +303,16 @@ Conecta el dispositivo a tu PC, presiona dos veces el botón `Reset`. El LED ama
 
 Presiona el botón `Reset` una vez para salir del modo DFU.
 
+### Restablecimiento de fábrica
+Si quieres restaurar la configuración predeterminada, [haz clic aquí](https://wiki.seeedstudio.com/es/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) para ver el video. Necesitas hacer un borrado completo y luego volver a flashear el firmware más reciente.
+
 ### Calidad de señal
 
 - **SNR** refleja la calidad del enlace de comunicación. Los dispositivos normales suelen operar por encima de -7 dB. Un dispositivo con SNR inferior a -10 dB indica un rendimiento deficiente.
 
 - **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. Los dispositivos normales suelen operar por encima de -110 dBm. Un dispositivo con RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
 
-      Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
+      Para lograr el mejor efecto de señal, utiliza el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
 
 ### Antena compatible
 
@@ -318,6 +322,7 @@ Si necesitas un reemplazo de antena para L1 Pro, [haz clic aquí](https://www.se
 - [Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) Archivo de referencia para impresión 3D](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [(V2 Nuevo joystick de cuatro direcciones) Archivo de referencia para impresión 3D](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
+- [Desafío de diseño de carcasa L1](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [Archivo de contorno](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [Certificación TELEC](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
 - [Certificación FCC](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)

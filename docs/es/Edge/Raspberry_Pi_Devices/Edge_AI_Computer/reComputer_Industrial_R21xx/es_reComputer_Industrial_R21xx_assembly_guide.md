@@ -5,14 +5,14 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /es/recomputer_industrial_R21xx_assembly_guide
 last_update:
   date: 09/28/2025
   author: Nolan Chen
 ---
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -20,9 +20,9 @@ last_update:
     </a>
 </div>
 
-El reComputer Industrial R21xx soporta una variedad de comunicaciones inalámbricas IoT, incluyendo 4G, 5G, LoRa®, Wi-Fi/BLE y Zigbee. Soporta expansión a través de una ranura M.2 para almacenamiento SSD o capacidades de IA a través de un acelerador NPU. Si eliges incluir el acelerador de IA directamente en tu compra, obtendrás 26TOPS adicionales de potencia de cómputo. Además, nuestros servicios de ingeniería de hardware incluyen personalización de logotipos, marca de paquetes, etiquetado, flasheo de firmware y servicios de imagen, proporcionando soporte integral adaptado a tus necesidades específicas.
+El reComputer Industrial R21xx soporta una variedad de comunicaciones inalámbricas IoT, incluyendo 4G, 5G, LoRa®, Wi-Fi/BLE y Zigbee. Soporta expansión a través de una ranura M.2 para almacenamiento SSD o capacidades de IA mediante un acelerador NPU. Si eliges incluir el acelerador de IA directamente en tu compra, obtendrás 26TOPS adicionales de potencia de cómputo. Además, nuestros servicios de ingeniería de hardware incluyen personalización de logotipos, branding de paquetes, etiquetado, flasheo de firmware y servicios de imagen, proporcionando soporte integral adaptado a tus necesidades específicas.
 
-Esta Wiki te mostrará cómo ensamblar y desensamblar la unidad para instalar componentes periféricos, así como la opción de montaje
+Este Wiki te mostrará cómo ensamblar y desensamblar la unidad para instalar componentes periféricos, así como la opción de montaje
 
 ## Prerrequisitos de Hardware
 
@@ -39,12 +39,12 @@ Necesitas preparar el siguiente hardware
 
 Seguir estos pasos debería ayudarte a desensamblar el dispositivo sin problemas.
 
-**Paso 1:** Retira los cuatro tornillos en la parte inferior y retira los paneles frontal y trasero:
+**Paso 1:** Retira los cuatro tornillos en la parte inferior y quita los paneles frontal y trasero:
 
 - Localiza y desatornilla los cuatro tornillos ubicados en la parte inferior del dispositivo usando un destornillador apropiado.
-- Una vez que los tornillos sean retirados, levanta cuidadosamente los paneles frontal y trasero del dispositivo.
+- Una vez que los tornillos estén retirados, levanta cuidadosamente los paneles frontal y trasero del dispositivo.
 
-**Paso 2:** Desatornilla las tuercas del conector de antena lateral y retira el panel del piso.
+**Paso 2:** Desatornilla las tuercas del conector de antena lateral y retira el Panel del Piso.
 
 **Paso 3:** Retira los cuatro tornillos que aseguran la PCB en su lugar
 
@@ -66,7 +66,7 @@ Seguir estos pasos debería ayudarte a desensamblar el dispositivo sin problemas
 
 ## Ensamblaje del Módulo 5G/4G/LoRa®/Zigbee y Antena
 
-**Paso 1:** Retira la placa de expansión y carga el módulo 4G/módulo LoRa®/módulo Zigbee en la ranura Mini-PCIe/M.2 B-KEY y asegura los tornillos.
+**Paso 1:** Retira la Placa de Expansión y carga el módulo 4G/Módulo LoRa®/Módulo Zigbee en la ranura Mini-PCIe/M.2 B-KEY y asegura los tornillos.
 
 **Paso 2:** Conecta el alimentador al orificio de la antena en la carcasa como se muestra en el siguiente diagrama.
 
@@ -102,17 +102,17 @@ Seguir estos pasos debería ayudarte a desensamblar el dispositivo sin problemas
 
 ### Guía de Montaje en Riel DIN
 
-El reComputer Industrial R21xx ofrece varios métodos de instalación. El clip de riel DIN y los tornillos de instalación están incluidos en el empaque. Sigue el diagrama para conectar correctamente el clip de riel DIN a los orificios de montaje en el lado del dispositivo. Una vez que los tornillos estén firmemente asegurados, puedes instalar el dispositivo en el riel de montaje.
+El reComputer Industrial R21xx ofrece varios métodos de instalación. El clip de riel DIN y los tornillos de instalación están incluidos en el empaque. Sigue el diagrama para conectar correctamente el clip de riel DIN a los orificios de montaje en el lateral del dispositivo. Una vez que los tornillos estén firmemente asegurados, puedes instalar el dispositivo en el riel de montaje.
 
 #### Pasos de Instalación
 
-- **Paso 1:** Coloca el dispositivo y el clip de riel en el borde superior del riel de perfil estándar en la posición mostrada y empuja el dispositivo hacia abajo.
-- **Paso 2:** Balancea el clip de riel del dispositivo desde abajo a través del riel de perfil estándar.
+- **Paso 1:** Coloca el dispositivo y el clip del riel en el borde superior del riel de perfil estándar en la posición mostrada y empuja el dispositivo hacia abajo.
+- **Paso 2:** Balancea el clip del riel del dispositivo desde abajo a través del riel de perfil estándar.
 - **Paso 3:** Empuja el dispositivo en la dirección del riel de perfil estándar. Escucharás el dispositivo hacer clic en su lugar.
 
 #### Pasos de Remoción
 
-- **Paso 1:** Empuja hacia abajo el dispositivo hasta que sea liberado por el clip de riel.
+- **Paso 1:** Empuja hacia abajo el dispositivo hasta que sea liberado por el clip del riel.
 - **Paso 2:** Balancea el dispositivo fuera del riel de perfil estándar.
 - **Paso 3:** Levanta el dispositivo hacia arriba y fuera
 
@@ -144,19 +144,19 @@ El método de montaje vertical también es adecuado para el reComputer Industria
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={4} style={{height: 18, width: '20%'}}>Módulo LoRa®</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={4} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/47.png" /></td>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN opcional por región (SPI)-US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN Opcional por Región(SPI)-US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992969</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN opcional por región (SPI)-EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX126-SPI-EU868-p-5847.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN Opcional por Región(SPI)-EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114993268</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN opcional por región (USB)-US915</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN Opcional por Región(USB)-US915</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992991</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN opcional por región (USB)-EU868</a></td>
+      <td><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html" target="_blank" rel="noopener noreferrer">Módulo Gateway LoRaWAN Opcional por Región(USB)-EU868</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114992628</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -174,7 +174,7 @@ El método de montaje vertical también es adecuado para el reComputer Industria
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={6} style={{height: 18, width: '20%'}}>Módulo 4G</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={6} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/51.png" /></td>
-      <td><a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-AFXGA-mini-PCIe-p-5668.html" target="_blank" rel="noopener noreferrer">Módulo LTE Cat 4 EC25-AFXGA-Mini-PCIe - para Norteamérica</a></td>
+      <td><a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-AFXGA-mini-PCIe-p-5668.html" target="_blank" rel="noopener noreferrer">Módulo LTE Cat 4 EC25-AFXGA-Mini-PCIe - para América del Norte</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>113991134</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -210,7 +210,7 @@ El método de montaje vertical también es adecuado para el reComputer Industria
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061521</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>UPS Supercondensador</td>
+      <td data-style="height: 18px; width: 20%;" colSpan={1} style={{height: 18, width: '20%'}}>Supercondensador UPS</td>
       <td data-style="height: 18px; width: 30%;" colSpan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/54.png" /></td>
       <td><a href="https://www.seeedstudio.com/SuperCAP-UPS-LTC3350-Module-p-5934.html" target="_blank" rel="noopener noreferrer">Módulo SuperCAP UPS LTC3350</a></td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110992004</td>

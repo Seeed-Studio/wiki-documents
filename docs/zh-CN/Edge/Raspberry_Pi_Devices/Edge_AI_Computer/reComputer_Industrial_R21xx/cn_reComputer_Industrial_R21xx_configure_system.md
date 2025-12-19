@@ -1,11 +1,11 @@
 ---
-description: 了解如何在安装设备后配置和测试 reComputer Industrial R21xx 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、5G、4G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、DI/DO 测试以及用于安全关机的 UPS。
+description: 学习如何在安装设备后配置和测试 reComputer Industrial R21xx 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、5G、4G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、DI/DO 测试以及用于安全关机的 UPS。
 title: 配置 reComputer Industrial R21xx
 keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /cn/recomputer_industrial_R21xx_configure_system
 last_update:
   date: 09/28/2025
@@ -14,9 +14,9 @@ last_update:
 
 ## 概述
 
-了解如何在安装设备后配置和测试 reComputer Industrial R21xx 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、4G、5G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、CAN、DI/DO 测试、用于安全关机的 UPS 等更多内容。
+学习如何在安装设备后配置和测试 reComputer Industrial R21xx 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、4G、5G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、CAN、DI/DO 测试、用于安全关机的 UPS 等更多内容。
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -407,7 +407,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 此命令以 115200 的波特率打开指定串口（***/dev/ttyUSB2***）的 minicom。
 
-1. 打开 minicom 后，您可以开始向 4G 模块发送 AT 命令。例如：
+1. 一旦 minicom 打开，您可以开始向 4G 模块发送 AT 命令。例如：
 
 ```bash
 AT
@@ -461,7 +461,7 @@ cat /sys/class/gpio/gpio645/value # should be 0
 cat /sys/class/gpio/gpio639/value # should be 0
 ```
 
-两个值都为 0 → 脚本已正确拉低，模块处于工作状态。
+两个值都是 0 → 脚本已正确拉低，模块处于工作状态。
 进入 minicom 发送命令：
 
 ```bash
@@ -476,7 +476,7 @@ ECM 拨号上网：
 AT+QCFG="usbnet",1
 ```
 
-直到最后一行显示 OK，即为成功。
+直到最后一行显示 OK，就成功了。
 
 > 注意
 > 设备需要等待一段时间，然后您可以在 ifconfig 中查看 usb0 的 ip 地址。
@@ -492,7 +492,7 @@ ping www.baidu.com -I usb0
 
 ## 通过 Mini-PCIe 的 Zigbee
 
-要测试两个 Zigbee 模块之间的 **Zigbee 通信**，请按照以下步骤操作：
+要测试两个 Zigbee 模块之间的 **Zigbee 通信**，请按照以下步骤操作：  
 
 1. 检查可用串口
 
@@ -529,9 +529,9 @@ sudo apt-get install cutecom
 - 网络组建：发送命令 ***'55 03 00 02 02'***。
 
 5. 检查设备状态：
-发送命令 ***'55 03 00 00 00'*** 检查设备状态。期望响应类似 ***'55 2a 00 00 00 01 XX XX XX XX'***，其中 'XX' 代表设备信息。
+发送命令 ***'55 03 00 00 00'*** 检查设备状态。期望响应类似于 ***'55 2a 00 00 00 01 XX XX XX XX'***，其中 'XX' 代表设备信息。
 6. 进入透明模式：
-如果网络组建成功，通过发送命令 ***55 07 00 11 00 03 00 01 13*** 进入透明模式。两个模块都应处于透明模式以进行直接通信。要退出透明模式，发送 "+++"。
+如果网络组建成功，通过发送命令 ***55 07 00 11 00 03 00 01 13*** 进入透明模式。两个模块都应该处于透明模式以进行直接通信。要退出透明模式，发送 "+++"。
 7. 附加说明：
 
 - 如果路由器配置失败，设备可能已经是协调器。使用命令 '55 07 00 04 02 xx xx xx' 离开网络。
@@ -540,7 +540,7 @@ sudo apt-get install cutecom
 
 ## RS485 测试
 
-reComputer Industrial R21xx 包含 **2x RS485 端口**。以下是它们对应的 **COM 端口**和**设备文件**：
+reComputer Industrial R21xx 包含 **2x RS485 端口**。以下是它们对应的 **COM 端口**和**设备文件**：  
 
 | **RS485 端口数量** | **COM 端口** | **丝印标签** | **设备文件** |
 |---------------------------|--------------|----------------------|-----------------|
@@ -563,7 +563,7 @@ sudo minicom -D /dev/ttyACM2
 
 3. 需要在两个打开的 ACM 上执行以下操作：
 
-- 按 ***Ctrl+A***，然后按 ***Z***，将出现 Minicom Command Summary 界面：
+- 按 ***Ctrl+A***，然后按 ***Z***，将出现 Minicom 命令摘要界面：
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_1.png" style={{width:800, height:'auto'}}/></div>
 - 再次按 ***O*** 打开配置，选择 Serial port setup，然后按 ***Enter***；打开所有 RS485 相关接口，依次按 ***H/I/J/K/L*** 打开；
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_2.png" style={{width:800, height:'auto'}}/></div>
@@ -592,8 +592,8 @@ reComputer Industrial R21xx 包含 **2x RS232** 端口，对应的 **COM 端口*
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/21-rs232.png" style={{width:800, height:'auto'}}/></div>
 
-您需要打开两个终端，如果连接了扩展板则为 ACM1，如果没有连接扩展板则为 ACM2：
-**终端 1：**
+您需要打开两个终端，如果连接了扩展板则是 ACM1，如果没有连接扩展板则是 ACM2：
+**终端 1：***
 
 ```bash
 sudo minicom -D /dev/ttyACM1 -b 9600
@@ -627,7 +627,7 @@ reComputer Industrial R21xx 包含 4x DI 端口，用户可以根据实际需要
       <tr>
         <th>端口数量</th>
         <th>DI 端口</th>
-        <th>对应扩展 GPIO</th>
+        <th>对应的扩展 GPIO</th>
       </tr>
     </thead>
     <tbody>
@@ -813,7 +813,7 @@ cansend can0 123#DE.AD.BE.EF.CA.FE.00.11
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/can_test_5.png" style={{width:800, height:'auto'}}/></div>
 
-8. 如果您希望后续启动更简单，可以将启动命令写入脚本。您只需要在启动时执行一次即可自动拉起接口。
+8. 如果您想让后续启动更简单，可以将启动命令写入脚本。您只需要在启动时执行一次即可自动拉起接口。
 
 ```bash
 #!/bin/bash
@@ -1026,9 +1026,9 @@ echo "c" > /proc/sysrq-trigger
 
 ## 通过 GPIO 控制蜂鸣器  
 
-蜂鸣器对应的 GPIO 是 gpio627。输入以下脚本来开启/关闭蜂鸣器：
+蜂鸣器对应的 GPIO 是 gpio627。输入以下脚本来打开/关闭蜂鸣器：
 
-1. 开启蜂鸣器：
+1. 打开蜂鸣器：
 
 ```bash
 echo 627 > /sys/class/gpio/export
