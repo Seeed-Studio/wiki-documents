@@ -549,6 +549,7 @@ Attach a CSI camera and integrate a Vision Language Model (VLM) to enable:
 - Add `/health` endpoints for system and model checks
 - Validate commands with Pydantic models before execution
 - Profile CPU/GPU/MLP usage to avoid thermal throttling on Jetson
+- You can add TTS and STT to this project [link](https://github.com/kouroshkarimi/local_chatbot_jetson)
 
 ---
 
