@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2025-12-17T08:30:49.569Z",
+  "generatedAt": "2025-12-19T08:02:35.289Z",
   "owner": "Seeed-Studio",
   "repo": "wiki-documents",
   "category": "Q&A",
-  "duplicateTitles": 769,
-  "pathnameTermCount": 1650,
+  "duplicateTitles": 768,
+  "pathnameTermCount": 1649,
   "usePathnameTerm": [
     "/Bluetooth_Bee_Standalone/",
     "/Connecting-to-TTN/",
@@ -965,7 +965,6 @@
     "/es/hand_amazinghand/",
     "/es/home_assistant_topic/",
     "/es/home_assistant_with_sensecap_lorawan_sensors/",
-    "/es/iot_botton_connect_to_esphome/",
     "/es/isaac_ros_apriltag/",
     "/es/isaac_ros_visual_slam/",
     "/es/j401_mini_carrierboard_hardware_interfaces_usage/",
@@ -8508,19 +8507,6 @@
       ],
       "others": [
         "/es/home_assistant_with_sensecap_lorawan_sensors/"
-      ]
-    },
-    {
-      "title": "Iot Button Connect To ESPHome | Seeed Studio Wiki",
-      "keepPathname": "/iot_botton_connect_to_esphome/",
-      "keepDiscussionUrl": null,
-      "keepDiscussionNumber": null,
-      "pages": [
-        "/es/iot_botton_connect_to_esphome/",
-        "/iot_botton_connect_to_esphome/"
-      ],
-      "others": [
-        "/es/iot_botton_connect_to_esphome/"
       ]
     },
     {
