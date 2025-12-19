@@ -1,7 +1,7 @@
 ---
-description: Vigilancia doméstica con IA DIY usando Frigate NVR y acelerador de IA Hailo en reComputer R2000. Se integra perfectamente con Home Assistant para alertas inteligentes en tiempo real, detección de objetos y procesamiento eficiente de video local en el borde.
+description: Vigilancia doméstica inteligente DIY con IA usando Frigate NVR y acelerador de IA Hailo en reComputer R2000. Se integra perfectamente con Home Assistant para alertas inteligentes en tiempo real, detección de objetos y procesamiento eficiente de video local en el borde.
 
-title: Frigate NVR y Hailo en reComputer R2000 conectar con Home Assistant
+title: Frigate NVR y Hailo en reComputer R2000 conectado con Home Assistant
 
 keywords:
 - Raspberry pi
@@ -16,46 +16,60 @@ last_update:
   author: Kasun Thushara
 ---
 
-# Frigate NVR y Hailo en reComputer R2000 conectar con Home Assistant
+# Frigate NVR y Hailo en reComputer AI box & Industrial box conectado con Home Assistant
 
 ## Introducción
 
-Frigate NVR es un Grabador de Video en Red (NVR) de código abierto diseñado específicamente para detección de objetos en tiempo real usando modelos de IA. Es ligero, potente y funciona perfectamente con cámaras a través del protocolo RTSP.
+Frigate NVR es un grabador de video en red (NVR) de código abierto diseñado específicamente para detección de objetos en tiempo real usando modelos de IA. Es ligero, potente y funciona perfectamente con cámaras a través del protocolo RTSP.
 
-Home Assistant (HA) es una plataforma de código abierto para automatización de hogar inteligente que te permite controlar y automatizar dispositivos en tu hogar.
+Home Assistant (HA) es una plataforma de código abierto para automatización del hogar inteligente que te permite controlar y automatizar dispositivos en tu hogar.
 
-En esta guía, te guiaremos a través de cómo instalar **Frigate en una caja de IA reComputer** equipada con **Hailo PCIe**, y cómo conectarla a tu configuración existente de **Home Assistant** usando **MQTT** con mínimas complicaciones.
+En esta guía, te explicaremos cómo instalar **Frigate en un reComputer AI box & Industrial box** equipado con **Hailo PCIe**, y cómo conectarlo a tu configuración existente de **Home Assistant** usando **MQTT** con mínimas complicaciones.
 
 ## Prerrequisitos
 
 ### Requisitos de Hardware
 
 <div class="table-center">
-  <table align="center">
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2130</th>
+  <th>reComputer AI Industrial R2145</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
     <tr>
-        <th>reComputer AI Industrial R2000</th>
-         <th>reComputer AI R2000</th>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-    <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg" style={{width:250, height:'auto'}}/></div></td>
-         <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:250, height:'auto'}}/></div></td>
-    </tr>
-      <tr>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-          </a>
-      </div></td>
-<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-          </a>
-      </div></td>
-    </tr>
-  </table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
-## Instalar el Controlador PCIe de Hailo
+## Instalar Controlador PCIe Hailo
 
 ### Paso 1: Configuración de Raspberry Pi
 
@@ -67,7 +81,7 @@ sudo raspi-config
 - Navega a `6 Advanced Options > A8 PCIe Speed`
 - Selecciona `Yes` para habilitar PCIe Gen 3
 - Sal y selecciona `Finish`
-  
+
 <div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/pcie.png"
@@ -81,7 +95,7 @@ Añade la siguiente línea al final de `/boot/firmware/config.txt`:
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-### Paso 2: Instalar el Controlador PCIe
+### Paso 2: Instalar Controlador PCIe
 
 ```bash
 sudo apt update
@@ -104,7 +118,7 @@ sudo mkdir -p /lib/firmware/hailo
 sudo cp hailo8_fw*.bin /lib/firmware/hailo/hailo8_fw.bin
 ```
 
-### Paso 4: Solucionar el Problema del Tamaño del Descriptor PCIe
+### Paso 4: Corregir Problema de Tamaño de Descriptor PCIe
 
 Crea `/etc/modprobe.d/hailo_pci.conf` con este contenido:
 
@@ -145,7 +159,7 @@ sudo usermod -aG docker $USER
 sudo reboot
 ```
 
-### Descargar la Imagen de Frigate
+### Descargar Imagen de Frigate
 
 ```bash
 docker pull ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l
@@ -160,7 +174,7 @@ mkdir -p ~/frigate/data/storage
 cd ~/frigate
 ```
 
-### Crear archivo Docker Compose (frigate.yml)
+### Crear Archivo Docker Compose (frigate.yml)
 
 ```bash
 nano frigate.yml
@@ -189,7 +203,7 @@ services:
       - 5000:5000
 ```
 
-### Crear archivo de configuración de Frigate (config/config.yml)
+### Crear Archivo de Configuración de Frigate (config/config.yml)
 
 ```bash
 nano config/config.yml
@@ -261,7 +275,7 @@ Asumiendo que estás ejecutando Home Assistant (HA Green, HA Yellow, o dispositi
 - Instala [HACS](https://hacs.xyz/docs/use/) si no está ya instalado.
 - En HACS, instala la **integración de Frigate** desde la tienda de la comunidad.
 
-Configúrala usando la IP y puerto de tu caja de IA Frigate
+Configúrala usando la IP y puerto de tu Frigate AI box
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -270,11 +284,11 @@ Configúrala usando la IP y puerto de tu caja de IA Frigate
   />
 </div>
 
-### Paso 2: Instalar el Complemento MQTT
+### Paso 2: Instalar Complemento MQTT
 
-Sigue la [guía oficial de integración de MQTT](https://www.home-assistant.io/integrations/mqtt/) para instalar y configurar el complemento del broker MQTT.
+Sigue la [guía oficial de integración MQTT](https://www.home-assistant.io/integrations/mqtt/) para instalar y configurar el complemento del broker MQTT.
 
-### Paso 3: Actualizar la Configuración de Frigate para MQTT
+### Paso 3: Actualizar Configuración de Frigate para MQTT
 
 ```bash
 mqtt:
@@ -298,7 +312,7 @@ mqtt:
   password: HiezenburgCook
 ```
 
-ejemplo completo :
+ejemplo completo:
 
 ```bash
 database:
@@ -354,10 +368,10 @@ docker compose -f frigate.yml down
 sudo docker compose -f frigate.yml up -d
 ```
 
-### Paso 5: Confirmar que MQTT está Funcionando (opcional)
+### Paso 5: Confirmar que MQTT Funciona (opcional)
 
-- Revisa los registros de HA o los registros del complemento MQTT para verificar los mensajes de Frigate
-- En HA, ahora puedes usar los eventos de Frigate en automatizaciones, por ejemplo, alertas de movimiento, objetos detectados, etc.
+- Revisa los registros de HA o los registros del complemento MQTT para verificar mensajes de Frigate
+- En HA, ahora puedes usar eventos de Frigate en automatizaciones, por ejemplo, alertas de movimiento, objetos detectados, etc.
 
 <div style={{ textAlign: 'center' }}>
   <img

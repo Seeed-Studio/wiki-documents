@@ -1,6 +1,6 @@
 ---
-description: このwikiでは、reComputerでSQliteを使用する方法を説明します
-title: reComputerでSQliteを使用する
+description: このwikiでは、reComputer上でSQliteを使用する方法を説明します
+title: reComputer上でSQliteを使用する
 keywords:
   - Edge
   - RasberryPi 5
@@ -14,42 +14,67 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# reComputerでSQLiteを使用する
+# reComputer上でSQLiteを使用する
 
 ## はじめに
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/sqlite/sqlite.jpg" style={{width:300, height:'auto'}}/></div>
 
-このwikiでは、reComputerボックスで[SQlite](https://sqlite.org/)を使用する方法を説明します。SQLiteは軽量で組み込み型のリレーショナルデータベース管理システムで、モバイルデバイス、デスクトップアプリケーション、組み込みシステムで広く使用されています。別のサーバープロセスを必要とせず、データベースは単一の通常のディスクファイルに直接保存されます。SQLiteは使いやすく、優れたパフォーマンスを提供します。標準的なSQL構文をサポートし、小規模から中規模のデータストレージニーズに適しています。ゼロ設定と簡単なデプロイメント機能により、SQLiteは多くのプロジェクトで好まれるデータベースエンジンとなっています。
+このwikiでは、reComputerボックス上で[SQlite](https://sqlite.org/)を使用する方法について説明します。SQLiteは軽量で組み込み型のリレーショナルデータベース管理システムで、モバイルデバイス、デスクトップアプリケーション、組み込みシステムで広く使用されています。別のサーバープロセスを必要とせず、データベースは単一の通常のディスクファイルに直接保存されます。SQLiteは使いやすく、優れたパフォーマンスを提供します。標準的なSQL構文をサポートし、小規模から中規模のデータストレージニーズに適しています。ゼロ設定と簡単なデプロイメント機能により、SQLiteは多くのプロジェクトで好まれるデータベースエンジンとなっています。
 
 ## ハードウェアの準備
 
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer R1125</th>
+ <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
   <th>reComputer AI Industrial R2145</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -191,7 +216,7 @@ sqlite> .tables
 
 ### PythonでSQLiteを使用する
 
-以下のようにPythonを使用してSQLiteと対話します：
+PythonでSQLiteと対話する方法は以下の通りです：
 
 
 <details>
@@ -296,7 +321,7 @@ if __name__ == '__main__':
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

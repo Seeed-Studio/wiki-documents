@@ -1,6 +1,6 @@
 ---
-description: Este wiki te mostrará cómo usar Docker en reComputer.
-title: Usar Docker en reComputer
+description: Este wiki te mostrará cómo usar docker en recomputer
+title: Usar docker en reComputer
 keywords:
   - Edge
   - RasberryPi 5
@@ -14,42 +14,67 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# Usar Docker en reComputer
+# Usar docker en reComputer
 
 ## Introducción
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker.png" style={{width:300, height:'auto'}}/></div>
 
-Este wiki explica cómo usar [docker](https://www.docker.com) en la caja reComputer. Docker es una plataforma de código abierto utilizada para automatizar el despliegue, el escalado y la gestión de aplicaciones dentro de contenedores ligeros y portátiles. Los contenedores permiten a los desarrolladores empaquetar aplicaciones y sus dependencias en un entorno consistente, asegurando que se ejecuten sin problemas en diferentes entornos de computación.
+Este wiki explica cómo usar [docker](https://www.docker.com) en la caja reComputer. Docker es una plataforma de código abierto utilizada para automatizar el despliegue, escalado y gestión de aplicaciones dentro de contenedores ligeros y portátiles. Los contenedores permiten a los desarrolladores empaquetar aplicaciones y sus dependencias juntas en un entorno consistente, asegurando que funcionen sin problemas en diferentes entornos de computación.
 
-## Preparar el hardware
+## Preparar Hardware
 
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer R1125</th>
+ <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
   <th>reComputer AI Industrial R2145</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -73,14 +98,14 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-### Añadir el usuario actual al grupo docker
+### Agregar el usuario actual al grupo docker
 
 ```bash
 sudo usermod -aG docker $USER
 reboot
 ```
 
-### Comprobar la versión de docker
+### Verificar la versión de docker
 
 ```bash
 docker --version
@@ -94,14 +119,14 @@ El resultado es el siguiente:
 
 ### Crear tu proyecto
 
-Aquí usamos `my_app` como ejemplo para demostrar el uso de `docker`.
+Aquí, usamos `my_app` como ejemplo para demostrar el uso de `docker`.
 
 ```bash
 mkdir my_app
 cd my_app
 ```
 
-### Crear la carpeta `src` y crear `main.py`
+### Crear carpeta `src` y crear `main.py`
 
 ```bash
 mkdir src && cd src
@@ -150,7 +175,7 @@ cd static
 mkdir css && mkdir js
 ```
 
-Crear el archivo `css`:
+Crear archivo `css`:
 
 ```bash
 cd css 
@@ -279,7 +304,7 @@ footer i {
 
 </details>
 
-Luego crear el archivo `js`:
+Luego crear archivo `js`:
 
 ```bash
 cd .. && mkdir js
@@ -304,14 +329,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         });
     }
-    
+
     // Add a hover effect to the cards
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px)';
         });
-        
+
         card.addEventListener('mouseleave', function() {
             this.style.transform = '';
         });
@@ -401,12 +426,12 @@ nano index.html
     <div class="container">
         <h1>FastAPI Application</h1>
         <p>A modern, high-performance web application</p>
-        
+
         <div class="card">
             <h2>About This App</h2>
             <p>This is a simple yet elegant web application built with FastAPI. It demonstrates how to create a beautiful UI with minimal code.</p>
         </div>
-        
+
         <div class="card">
             <h2>Features</h2>
             <ul>
@@ -416,7 +441,7 @@ nano index.html
                 <li>RESTful API endpoints</li>
             </ul>
         </div>
-        
+
         <div class="card">
             <h2>Try the API</h2>
             <p>You can access the API endpoints directly:</p>
@@ -426,7 +451,7 @@ nano index.html
             </div>
         </div>
     </div>
-    
+
     <script src="/static/js/main.js"></script>
 </body>
 </html>
@@ -501,11 +526,11 @@ tree
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker_tree.png" style={{width:600, height:'auto'}}/></div>
 
-## Compilar y publicar la imagen
+## Construir y publicar imagen
 
-### Compilar imagen
+### Construir imagen
 
-> Nota: Si no tienes una cuenta para [dockerhub](https://hub.docker.com/), por favor registra una. `xxx` es el nombre de usuario de tu Docker Hub.
+>Nota: Si no tienes una cuenta en [dockerhub](https://hub.docker.com/), por favor registra una cuenta. `xxx` es tu nombre de usuario de docker hub.
 
 ```bash
 docker build -t xxx/fastapi_app_ui:latest .
@@ -531,9 +556,9 @@ El resultado se muestra a continuación:
 
 ### Publicar la imagen
 
-y crea tu propio [token](https://app.docker.com/settings).
+y crear tu propio [token](https://app.docker.com/settings).
 
-> Nota: `xxx` es tu propio nombre de usuario de dockerhub
+>Nota: `xxx` es tu propio nombre de usuario de dockerhub
 
 ```sh
 docker login -u xxx
@@ -541,7 +566,7 @@ docker login -u xxx
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/dockerhub.png" style={{width:1000, height:'auto'}}/></div>
 
-> Nota: `xxx` es tu propio nombre de usuario de dockerhub
+>Nota: `xxx` es tu propio nombre de usuario de dockerhub
 
 ```sh
 docker push xxx/fastapi_app_ui:latest
@@ -551,19 +576,19 @@ docker push xxx/fastapi_app_ui:latest
 
 ## Resultado
 
-Puedes ver que la imagen empaquetada usando Docker se ha subido a Docker Hub, y está disponible para que cualquiera la use.
+Puedes ver que la imagen empaquetada usando Docker ha sido subida a Docker Hub, y está disponible para que cualquiera la use.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker_result.png" style={{width:1000, height:'auto'}}/></div>
 
-Puedes usar mis imágenes como se muestra a continuación, y aquí está la [página de GitHub](https://github.com/LJ-Hao/Use_Docker_on_reComputer_Raspberrypi) del proyecto:
+Puedes usar mis imágenes como se muestra a continuación, y aquí está la [página de github](https://github.com/LJ-Hao/Use_Docker_on_reComputer_Raspberrypi) del proyecto:
 
 ```sh
 docker pull jiahaoxyz/fastapi_app_ui
 ```
 
-## Soporte Técnico y Discusión de Producto
+## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes formas de soporte para garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

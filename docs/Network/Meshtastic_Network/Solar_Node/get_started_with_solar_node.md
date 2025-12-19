@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 12/3/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -25,21 +25,35 @@ Before formal deployment, please test and configure the node first.
 
 :::caution note
 Please `don't use NRF-OTA` to update the firmware, it may cause the device to be completely dead.
+Before flashing the firmware, please flash the erased firmware first!
 :::
 
-Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
-
-Select the target device to `Seeed SenseCAP Solar Node` and choose the latest firmware, then click `Flash`.
+Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/). Select the target device to `Seeed SenseCAP Solar Node` .
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-solar.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
+#### Flash Erase
 
-Click `Enter DFU Mode`, there will be a serial port named `XIAO-xxx`, click and connect it, and there should be a driver named `XIAO-xxx` display.
+Click the `trash` symbol.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/FlashEraseIcon.png" alt="pir" width={800} height="auto" /></p>
+
+Download and copy the erase firmware.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/EraseUF2.png" alt="pir" width={800} height="auto" /></p>
+
+Click `Enter DFU Mode`, there will be a serial port named `XIAO-xxx`, click and connect it, and there should be a driver named `XIAO-xxx` display. Paste the erase firmware to the disk.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-Drag the UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
+This process may take some times. Please wait for the "XIAO-XXX" disk disappearing.
+
+#### Flash Application Firmware
+
+Choose the firmware version you want. click `flash`. 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
+
+Download the UF2 file and enter the DFU. Drag the UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
 
 ### Install Battery and GPS Module(Optional)
 
@@ -177,6 +191,15 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 :::
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
+### Button
+
+|Button Action|Description|
+|--|--|
+|Press PWR for 3s|Power on|
+|Press PWR twice|Update node/location info|
+|Press PWR three times|Switch on/off the GPS|
+|Press PWR for 5s|Power off|
+|Press RST twice|Manually enter DFU|
 
 ## Installation
 
@@ -187,6 +210,8 @@ Since the device will be used outdoors for extended periods, please avoid instal
 - **Part List**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
+
+
 
 ### Step-by-step Installation Guidance
 
@@ -292,6 +317,128 @@ Since the device will be used outdoors for extended periods, please avoid instal
 </div>
 
 ## FAQ
+
+### Boot Loop
+
+- Reason 
+
+This is usually caused by the firmware flashing failure. When flashing the firmware, please maintain a stable connection. 
+
+- Troubleshoot
+
+[Click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-firmware) to re-flash the firmware.
+
+### Device bricked
+
+#### Description
+
+The device not responding, no LED, can not pair with your App.
+
+**1) Device can still enter the DFU mode, then try to flash the bootloader**.
+
+#### Flash the Bootloader
+
+- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
+
+:::danger note
+When you are flashing the bootloader, please make sure the cable connection is stable and **DO NOT** disconnect it during the flash process.
+:::
+
+**Step1: Adafruit-nrfutil Installation**
+
+**Prerequisites**
+
+- [Python3](https://www.python.org/downloads/)
+- [pip3](https://pip.pypa.io/en/stable/installation/)
+
+<Tabs>
+<TabItem value="pypi" label="Installing from PyPI">
+
+This is recommended method, to install latest version:
+
+```
+pip3 install --user adafruit-nrfutil
+```
+
+</TabItem>
+
+<TabItem value="sou" label="Installing from Source">
+
+Use this method if you have issue installing with PyPi or want to modify the tool. First clone this repo and go into its folder.
+
+```
+git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
+cd Adafruit_nRF52_nrfutil
+```
+
+Note: following commands use `python3`, however if you are on Windows, you may need to change it to `python` since windows installation of python 3.x still uses the name python.exe
+
+To install in user space in your home directory:
+
+```
+pip3 install -r requirements.txt
+python3 setup.py install
+```
+
+If you get permission errors when running `pip3 install`, your `pip3` is older or is set to try to install in the system directories. In that case use the `--user` flag:
+
+```
+pip3 install -r --user requirements.txt
+python3 setup.py install
+```
+
+If you want to install in system directories (generally not recommended):
+
+```
+sudo pip3 install -r requirements.txt
+sudo python3 setup.py install
+```
+
+To generate a self-contained executable binary of the utility (Windows and MacOS), run these commands:
+
+```
+pip3 install pyinstaller
+cd Adafruit_nRF52_nrfutil
+pip3 install -r requirements.txt
+cd Adafruit_nRF52_nrfutil\nordicsemi
+pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
+```
+
+You will find the .exe in `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` ( with `.exe` if you are on windows).
+Copy or move it elsewhere for your convenience, such as directory in your %PATH%.
+
+</TabItem>
+</Tabs>
+
+**Step2: Check your port number**
+
+Connect your device to your PC, and check the port number.
+
+Example:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
+
+**Step3: Flash the bootloader**
+
+In the terminal or command prompt, navigate to the directory where you downloaded the bootloader zip package and execute the following command, replacing the correct port for your device:
+
+- **For Windows**:
+
+```
+adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p COMXX -b 115200 --singlebank --touch 1200
+```
+
+- **For others**:
+
+```
+adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/BootloaderSolar.png" alt="pir" width={800} height="auto" /></p>
+
+When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-firmware) to flash the application firmware.
+
+### Factory Reset
+If you want to restore to the default settings, [click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-erase) to perform a flash erase. And then re-flash the latest firmware.
 
 ### Power Consumption
 

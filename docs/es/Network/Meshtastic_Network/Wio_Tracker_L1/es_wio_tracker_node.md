@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /es/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 12/3/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -51,8 +51,8 @@ La Wio Tracker L1 Serie está disponible en 4 versiones—elige la que mejor se 
 - **Pre-cargado con firmware Meshtastic**
 Listo para usar desde el primer momento con firmware Meshtastic preinstalado para una configuración sin problemas.
 
-- **Opciones de Triple Fuente de Alimentación**
-Soporta carga rápida Type-C, entrada solar y alimentación por batería de iones de litio para despliegue flexible en varios entornos—ideal para aplicaciones exteriores y móviles.
+- **Opciones de Triple Alimentación**
+Soporta carga rápida Type-C, entrada solar y alimentación por batería Li-ion para despliegue flexible en varios entornos—ideal para aplicaciones exteriores y móviles.
 
 - **Soporte de Pantalla Flexible**
 Pantallas opcionales OLED de 1.3 pulgadas y E-Ink de 2.13 pulgadas, ofreciendo opciones de visualización versátiles para diferentes necesidades de consumo de energía y retroalimentación visual.
@@ -63,7 +63,7 @@ Totalmente compatible con el ecosistema Grove, e incluye cabeceras PTH y una int
 ### Especificaciones
 
 :::tip
-Los lotes más recientes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador de batería, convirtiendo la interfaz de 1mm a una interfaz de 2mm. Esto te da más opciones para baterías.
+Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador de batería, convirtiendo la interfaz de 1mm a una interfaz de 2mm. Esto te da más opciones para baterías.
 :::
 
 <table>
@@ -112,7 +112,7 @@ Los lotes más recientes de L1, L1 Lite y L1 E-Ink vienen todos con un cable ada
     <td colspan="1">Batería de Litio (1mm 2p JST): 3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">Pantalla OLED</td>
+    <td colspan="1" rowspan="3">[Pantalla OLED](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">Tamaño: 1.3 pulgadas</td>
   </tr>
   <tr>

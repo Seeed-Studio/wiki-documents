@@ -1,8 +1,6 @@
 ---
 description: Build your own local voice agent using Whisper, Ollama, and NVIDIA Jetson. Step-by-step guide for GPU setup, speech-to-text, LLM, TTS, and offline voice AI.
-
 title: Deploying an Offline Smart Voice Assistant End-to-End
-
 keywords:
 - reSpeaker
 - TTS
@@ -25,31 +23,26 @@ This project demonstrates a fully local smart voice assistant designed for smart
 
 <table align="center">
   <tr>
-      <th>ReSpeaker XVF3800 </th>
-        <th>Jetson AGX Orin 32GB H01 Kit</th>
-
+    <th>ReSpeaker XVF3800 </th>
+    <th>Jetson AGX Orin 32GB H01 Kit</th>
   </tr>
   <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" style={{width:500, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/6.png" style={{width:500, height:'auto'}}/></div></td>
-
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" style={{width:500, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/6.png" style={{width:500, height:'auto'}}/></div></td>
   </tr>
-    <tr>
-      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-        </a>
+  <tr>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
     </div></td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-        </a>
+    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+      </a>
     </div></td>
   </tr>
 </table>
-
-
-
 
 ## Prepare the Devices
 
@@ -57,9 +50,9 @@ This project demonstrates a fully local smart voice assistant designed for smart
 
 Ensure the ReSpeaker XVF3800 USB Mic Array is updated with the latest firmware before use.
 
-* Follow the official firmware update guide:
+- Follow the official firmware update guide:
 
-  * ReSpeaker XVF3800 Firmware Update [Seeed Studio Wiki](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
+  - ReSpeaker XVF3800 Firmware Update [Seeed Studio Wiki](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
 This step ensures stable USB audio input and compatibility with downstream speech processing pipelines.
 
@@ -69,9 +62,9 @@ This step ensures stable USB audio input and compatibility with downstream speec
 
 If your Jetson AGX Orin is not yet set up, flash it with the appropriate JetPack version.
 
-* Official setup guide:
+- Official setup guide:
 
-  * Jetson AGX Orin 32GB H01 Flash JetPack [Seeed Studio Wiki](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/#prerequisites)
+  - Jetson AGX Orin 32GB H01 Flash JetPack [Seeed Studio Wiki](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/#prerequisites)
 
 After flashing and booting into Ubuntu, update the system and install JetPack components:
 
@@ -138,9 +131,9 @@ If the CUDA version is displayed, GPU support is ready.
 
 Whisper is built from source to enable CUDA acceleration.
 
-* Repository:
+- Repository:
 
-  * [https://github.com/ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)
+  - [https://github.com/ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp)
 
 Install required dependencies:
 
@@ -167,9 +160,9 @@ This compiles Whisper with GPU acceleration and SDL support.
 
 Download the Whisper model from Hugging Face:
 
-* Model:
+- Model:
 
-  * ggml-base-q8_0.bin
+  - ggml-base-q8_0.bin
 
 Place the downloaded model inside the `models/` directory:
 
@@ -216,7 +209,6 @@ ollama run gemma3:4b
 
 ## Smart Voice AI Assistant – Quick Start Guide
 
-
 ### Architecture Summary
 
 1. **Wake Word Detection** – Listens continuously for a predefined activation phrase.
@@ -228,18 +220,17 @@ All processing is performed locally to ensure low latency, data privacy, and off
 
 Project repository:
 
-* [https://github.com/KasunThushara/LocalVoiceAssistant.git](https://github.com/KasunThushara/LocalVoiceAssistant)
+- [https://github.com/KasunThushara/LocalVoiceAssistant.git](https://github.com/KasunThushara/LocalVoiceAssistant)
 
-Clone the repo 
+Clone the repo
 
 ```bash
 git clone https://github.com/KasunThushara/LocalVoiceAssistant.git
 ```
 
-
 ### Quick Start
 
-####  Install Dependencies
+#### Install Dependencies
 
 Ensure Python and required system dependencies are installed, then run:
 
@@ -249,7 +240,7 @@ pip install -r requirements.txt
 
 ---
 
-####  Download a Text-to-Speech (TTS) Model
+#### Download a Text-to-Speech (TTS) Model
 
 This project uses **Piper TTS** models. Below is an example using a male English voice (Amy):
 
@@ -266,7 +257,7 @@ You may replace this with any compatible Piper voice model as needed.
 
 ---
 
-####  Download Embedding Model (One-Time Setup)
+#### Download Embedding Model (One-Time Setup)
 
 The embedding model is required for building the vector database used by the RAG pipeline.
 
@@ -278,7 +269,7 @@ This step only needs to be run once.
 
 ---
 
-####  Build the Vector Database
+#### Build the Vector Database
 
 Create or rebuild the vector database used for contextual retrieval:
 
@@ -290,7 +281,7 @@ This process indexes your documents and prepares them for fast semantic search.
 
 ---
 
-####  Run the Application
+#### Run the Application
 
 Start the Smart Voice AI Assistant:
 
@@ -302,13 +293,23 @@ Once running, the system will listen for the wake word and respond to voice quer
 
 ---
 
-
-
 ## References
 
-* [Whisper Server Example:](https://github.com/ggml-org/whisper.cpp/tree/master/examples/server)
-* [Whisper Repository:](https://github.com/ggml-org/whisper.cpp)
-* [Ollama Model Library:](https://ollama.com/library/gemma3)
-* [Ollama on Jetson Guide:](https://www.jetson-ai-lab.com/tutorial_ollama.html)
+- [Whisper Server Example:](https://github.com/ggml-org/whisper.cpp/tree/master/examples/server)
+- [Whisper Repository:](https://github.com/ggml-org/whisper.cpp)
+- [Ollama Model Library:](https://ollama.com/library/gemma3)
+- [Ollama on Jetson Guide:](https://www.jetson-ai-lab.com/tutorial_ollama.html)
 
+## Tech Support & Product Discussion
 
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /ja/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 12/3/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -49,7 +49,7 @@ Wio Tracker L1 シリーズは4つのバージョンで利用可能です。ニ�
 ### 特徴
 
 - **Meshtasticファームウェアがプリフラッシュ済み**
-Meshtasticファームウェアがプリインストールされており、開封後すぐに使用でき、シームレスなセットアップが可能です。
+シームレスなセットアップのためにMeshtasticファームウェアがプリインストールされており、箱から出してすぐに使用できます。
 
 - **3つの電源供給オプション**
 Type-C急速充電、ソーラー入力、Li-ionバッテリー電源をサポートし、様々な環境での柔軟な展開が可能で、屋外およびモバイルアプリケーションに最適です。
@@ -63,14 +63,14 @@ Grove エコシステムと完全に互換性があり、PTHヘッダーとSWD�
 ### 仕様
 
 :::tip
-L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを2mmインターフェースに変換するバッテリーアダプターケーブルが付属しています。これにより、バッテリーの選択肢が広がります。
+L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを2mmインターフェースに変換するバッテリーアダプターケーブルが付属しています。これにより、バッテリーの選択肢が増えます。
 :::
 
 <table>
   <tr>
     <th colspan="1">プロセッサ</th>
     <th colspan="1">
-      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU 最大64 MHz動作
+      Nordic nRF52840<br />ARM® Cortex®-M4 with FPU 最大64 MHzで動作
     </th>
   </tr>
   <tr>
@@ -79,7 +79,7 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
   </tr>
   <tr>
     <td colspan="1" rowspan="3">ワイヤレス</td>
-    <td colspan="1">LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>ベース、862-930MHzサポート</td>
+    <td colspan="1">LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>ベース、862-930MHzをサポート</td>
   </tr>
    <tr>
   <td colspan="1">L1 Pro用LoRaアンテナ：3dBi</td>
@@ -112,7 +112,7 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
     <td colspan="1">リチウムバッテリー（1mm 2p JST）：3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">OLEDスクリーン</td>
+    <td colspan="1" rowspan="3">[OLEDスクリーン](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">サイズ：1.3インチ</td>
   </tr>
   <tr>

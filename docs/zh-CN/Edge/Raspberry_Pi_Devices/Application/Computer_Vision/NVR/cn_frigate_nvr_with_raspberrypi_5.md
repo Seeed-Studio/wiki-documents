@@ -1,6 +1,6 @@
 ---
-description: 本wiki文章提供了如何在配备Hailo 8的Raspberry Pi 5上部署Frigate NVR的分步指南。
-title: 基于Raspberry Pi 5的Frigate NVR
+description: 本 wiki 文章提供了在 Raspberry Pi 5 上使用 Hailo 8 部署 Frigate NVR 的分步指南。
+title: Frigate NVR with Raspberry Pi 5/CM5
 keywords:
   - Edge
   - reComputer r1000
@@ -15,9 +15,9 @@ no_comments: false # for Disqus
 ---
 
 
-## 介绍
+## 简介
 
-**Frigate NVR** 是一个开源网络视频录像机，专为使用AI模型进行实时目标检测而设计。与 **Raspberry Pi 5** 配合使用，可在边缘实现高效的视频监控。本指南将引导您完成安装和配置过程，以获得最佳设置。
+**Frigate NVR** 是一个开源网络视频录像机，专为使用 AI 模型进行实时目标检测而设计。与 **Raspberry Pi 5/CM5** 配对，它能够在边缘实现高效的视频监控。本指南将引导您完成安装和配置过程，以实现最佳设置。
 
 ## 官方 Frigate
 
@@ -29,25 +29,46 @@ no_comments: false # for Disqus
  <table align="center">
  <tr>
   <th>reComputer AI R2130</th>
+  <th>reComputer AI Industrial R2145</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-**另外，您还需要至少一个摄像头用于视频流传输。您可以参考[推荐硬件](https://docs.frigate.video/frigate/hardware#cameras)查看推荐的摄像头。**
+**另外，您还需要至少一个摄像头进行视频流传输。您可以参考[推荐硬件](https://docs.frigate.video/frigate/hardware#cameras)查看推荐的摄像头。**
 
-### 安装Hailo PCIe驱动
+### 安装 Hailo PCIe 驱动程序
 
-#### 步骤1：启用PCIe Gen 3
+#### 步骤 1：启用 PCIe Gen 3
 
 打开终端并运行以下命令。
 
@@ -61,11 +82,11 @@ sudo raspi-config
 ![6 Advanced Options](https://raw.githubusercontent.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L/main/resource/1.png)
 ![A8 PCIe Speed](https://raw.githubusercontent.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L/main/resource/2.png)
 
-选择"Yes"以启用 PCIe Gen 3 模式。
+选择 "Yes" 启用 PCIe Gen 3 模式。
 
 ![Choose Yes](https://raw.githubusercontent.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L/main/resource/3.png)
 
-之后，点击"Finish"退出。
+之后，点击 "Finish" 退出。
 
 编辑 `/boot/firmware/config.txt`，在文件末尾添加以下行。
 
@@ -96,7 +117,7 @@ git checkout 24e7ff2fb58fab7029024c1a1d3f2d1914f56d7b
 sudo make install_dkms
 ```
 
-安装完成后，下载 Hailo 的固件并将其复制到 `/lib/firmware/hailo` 目录。
+安装后，下载 Hailo 固件并将其复制到 `/lib/firmware/hailo` 目录。
 
 ```bash
 cd ../..
@@ -126,7 +147,7 @@ $ ls /dev/hailo*
 
 ### 安装 Frigate NVR
 
-在这一部分，我们假设您已经设置好摄像头并准备好使用 RTSP 协议以 1920x1080 分辨率进行流媒体传输。
+在这一部分，我们假设您已经设置好摄像头并准备好使用 RTSP 协议以 1920x1080 分辨率进行流传输。
 
 - 示例 RTSP URL：`rtsp://admin:passw0rd@192.168.98.11:554/cam/realmonitor?channel=1&subtype=0`
 
@@ -145,7 +166,7 @@ $ ls /dev/hailo*
    sudo usermod -aG docker $USER
    ```
 
-3. **Reboot the system:**
+3. **重启系统：**
 
    ```
    sudo reboot
@@ -155,7 +176,7 @@ $ ls /dev/hailo*
 
 1. **拉取 Frigate 镜像：**
 
-    前往 [Package frigate](https://github.com/blakeblackshear/frigate/pkgs/container/frigate/versions)，选择一个带有 `-h8l` 后缀的镜像。在这个例子中，我们选择 `ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l`。
+    前往 [Package frigate](https://github.com/blakeblackshear/frigate/pkgs/container/frigate/versions)，选择一个带有 `-h8l` 后缀的镜像。在此示例中，我们选择 `ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l`。
 
     ```bash
     docker pull ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l
@@ -238,7 +259,7 @@ $ ls /dev/hailo*
     docker compose -f frigate.yml up -d
     ```
 
-    Frigate 启动并运行后，您可以通过 `http://<your-raspberry-pi-ip>:5000` 访问 Frigate Web UI 来检查摄像头流。
+    Frigate 启动并运行后，您可以在 `http://<your-raspberry-pi-ip>:5000` 访问 Frigate Web UI 来检查摄像头流。
 
     ![frigate-web](https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/frigate_web.webp)
 
@@ -249,18 +270,17 @@ $ ls /dev/hailo*
 打开 config.txt
 
 ```
-sudo nano /boot/firmware/config.txt
+sudo nano /boot/firmware/config.txt 
 ```
 
 将以下文本添加到 config.txt
 
 ```
-
 dtparam=pciex1_gen=3
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
 
-然后使用 `Ctrl+x` 保存文件并重启 AI 设备
+然后使用 `Ctrl+x` 保存文件并重启 AI 盒子
 
 ### 安装 docker 和 hailo-all
 
@@ -271,17 +291,18 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 sudo apt install docker-compose-plugin
+```
 
-### Create yml file
+### 创建 yml 文件
 
-创建 frigate.yml 用于 docker compose 运行 frigate
+创建 frigate.yml 供 docker compose 运行 frigate
 
 ```
 cd ~
 sudo nano frigate.yml
 ```
 
-这是 frigate.yml 的一个示例
+这是 frigate.yml 的示例
 
 ```
 version: "3.9"
@@ -321,7 +342,7 @@ cd model_cache && wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZ
 cd .. && nano config.yml
 ```
 
-这是 config.yml 的一个示例
+这是 config.yml 的示例
 
 ```yml
 database:
@@ -362,7 +383,7 @@ cameras:
       threshold: 45
       contour_area: 60
       improve_contrast: true
-      
+
   home1:
     ffmpeg:
       inputs:
@@ -375,7 +396,7 @@ cameras:
       threshold: 45
       contour_area: 60
       improve_contrast: true
-      
+
   yard1:
     ffmpeg:
       inputs:
@@ -428,7 +449,7 @@ docker pull mjqx2023/frigate_seeed
 docker compose -f frigate.yml start 
 ```
 
-然后在您的 AI 盒子网页浏览器中打开 `localhost:5000`：
+然后在您的 AI box 网页浏览器中打开 `localhost:5000`：
  ![frigate-web](https://files.seeedstudio.com/wiki/AI_box_deepseek/seeed_frigate.png)
 
 ## 技术支持与产品讨论
