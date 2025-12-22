@@ -18,7 +18,7 @@ last_update:
 
 ## はじめに
 
-真に動的なインテリジェントシステムは、単に「世界を見る」だけでなく、イベントを理解し、アクションをトリガーし、クロスプラットフォーム相互接続を実現する能力を持っています。このソリューションでは、AI ベースの ReCamera をフロントエンド感知デバイスとして使用し、Node-RED を通じてデータの解析とフォーマットを完了し、Home Assistant を自動化センターとして使用して検出結果をリアルタイムで表示し、決定を下し、さらに企業 WeChat ロボットと連携して即座の通知を実現します。全体のチェーンは、拡張可能で観察可能で自動応答するインテリジェントシーンシステムのセットを形成します。
+真に動的なインテリジェントシステムは、単に「世界を見る」だけでなく、イベントを理解し、アクションをトリガーし、クロスプラットフォーム相互接続を実現する能力を持っています。このソリューションでは、AI ベースの ReCamera をフロントエンド感知デバイスとして使用し、Node-RED を通じてデータの解析とフォーマットを完了し、その後 Home Assistant を自動化センターとして使用して検出結果をリアルタイムで表示し、決定を下し、さらに企業 WeChat ロボットと連携して即座の通知を実現します。全体のチェーンは、拡張可能で観察可能で自動応答するインテリジェントシーンシステムのセットを形成します。
 ReCamera は YOLO モデルを使用して人間やペットなどのオブジェクトをリアルタイムで検出し、Node-RED が検出結果を処理して Home Assistant にプッシュし、HA は Webhook を使用してエンティティへのデータ書き込み、条件判定、企業 WeChat グループへのアラーム情報プッシュのプロセスを自動化し、クロスプラットフォームリアルタイムアラートを実現します。このアーキテクチャは、ReCamera と HA の深い結合能力を実証するだけでなく、実用的なアプリケーションにおいて AI ビジョン、自動化ルール、企業レベルの通知システムを組み合わせて、真に「使用可能でインテリジェント」な IoT 統合ソリューションを構築する方法を反映しています。
 
 ## ハードウェア準備
@@ -30,7 +30,7 @@ reComputer 1台（どのバージョンでも構いません。ここでは reCo
 <table align="center">
  <tr>
   <th>reCamera 2002 シリーズ</th>
-  <th>reCamera ジンバル</th>
+  <th>reCamera Gimbal</th>
   <th>reCamera HQ POE</th>
   <th>reComputer AI R2000 シリーズ</th>
  </tr>
@@ -83,7 +83,7 @@ reComputer 1台（どのバージョンでも構いません。ここでは reCo
 
 ### (3) 新しいグループチャットの作成
 
-作成したロボットと任意の同僚をグループに追加します（3人以上でグループを作成できるため、グループ作成成功後に同僚をグループチャットから削除できます）
+作成したロボットと任意の同僚をグループに追加します（3人以上でグループを構築できるため、グループ構築成功後に同僚をグループチャットから削除できます）
 
 ### (4) メッセージプッシュの設定
 
@@ -93,11 +93,11 @@ reComputer 1台（どのバージョンでも構いません。ここでは reCo
 
 この手順の Webhook アドレスは、後で configuration.yaml を編集する際に役立ちます。
 
-必ず**メッセージプッシュの webhook アドレスを保護**し、漏洩を避けてください！github、ブログ、その他公開で参照できる場所に共有しないでください。悪意のある人があなたのメッセージプッシュを使用してスパムメッセージを送信する可能性があります。
+必ず**良いニュースプッシュの webhook アドレスを保護**して漏洩を避けてください！github、ブログ、その他公開で参照できる場所に共有しないでください。そうしないと悪意のある人があなたのメッセージプッシュを使用してスパムメッセージを送信する可能性があります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat4.png" /></div>
 
-設定方法の詳細を確認したい場合は、「設定方法を知る」をクリックしてください。企業 WeChat 公式がメッセージフォーマットのルーチンを提供しており、より良く理解できます。
+設定方法の詳細を確認したい場合は、「設定方法を知る」をクリックしてください。企業 WeChat 公式がメッセージフォーマットルーチンを提供しており、より良く理解できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat5.png" /></div>
 
@@ -179,7 +179,7 @@ docker run -d \
   ghcr.io/home-assistant/home-assistant:stable
 ```
 
-> パラメータの説明：
+> パラメータ説明：
 
 >>
 
@@ -203,7 +203,7 @@ docker run -d \
 hostname -I
 ```
 
-#### ブラウザでのアクセス
+#### ブラウザでアクセス
 
 コンテナ開始後 1〜2 分待ってから、ブラウザでアクセスします：
 
@@ -298,7 +298,7 @@ sudo nano /home/seeed/homeassistant/config/automations.yaml
 #### configuration.yaml の編集：
 
 ```bash
-sudo nano /home/seeed/homeassistant/config/automations.yaml
+sudo nano /home/seeed/homeassistant/config/configuration.yaml
 ```
 
 内容を置き換え：
@@ -380,21 +380,21 @@ docker restart homeassistant
 
 ### (1) reCameraをコンピュータに挿入後、192.168.42.1にアクセス
 
-スタックして画面が開けない場合は、「工場出荷時設定に戻す」セクションを参照してデバイスをリセットしてください。リセット後、再度192.168.42.1にアクセスしてください。リセット後はパスワードを変更する必要があります。
+スタックしてインターフェースが開けない場合は、「工場出荷時設定に復元」セクションを参照してデバイスをリセットしてください。リセット後、再度192.168.42.1にアクセスしてください。リセット後はパスワードを変更する必要があります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/reset.png" /></div>
 
-### (2) インターフェースにログイン後、右下角をクリックして "Workspace" に入る
+### (2) インターフェースにログイン後、右下角をクリックして「Workspace」に入る
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/logging_in.png" /></div>
 
-### (3) Workspaceに入った後、ノードを設定
+### (3) Workspaceに入った後、ノードを設定する
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_1.png" /></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_2.png" /></div>
 
-これらの4つの新しいノードが追加されました：debug1とdebug2は出力情報を観察するために使用され、必要に応じて使用します；function1はデータ処理に使用；Http requestノードはHome Assistantにデータを送信するために使用
+これらの4つの新しいノードが追加されました：debug1とdebug2は出力情報を観察するために使用され、必要かどうかは任意です；function1はデータ処理に使用されます；Http requestノードはHome Assistantにデータを送信するために使用されます
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_3.png" /></div>
 
@@ -420,7 +420,7 @@ currentModel += ` number: ${num}`;
 return { payload: currentModel };
 ```
 
-変更後、右上角の「完了」をクリック
+変更後、右上角の「Finish」をクリックします
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_5.png" /></div>
 
@@ -458,7 +458,7 @@ return {
 
 ここでもう一つのステップが必要です。それは、reCameraをWiFiに接続し、reComputerを同じネットワーク下に接続することです。
 
-左上角の「Network」をクリックしてネットワークを設定
+左上角の「Network」をクリックしてネットワークを設定します
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_10.png" /></div>
 
@@ -466,7 +466,7 @@ return {
 覚えておいてください！reCameraをネットワークに接続することを確認してください！！！そうでなければ、通信ができません。
 :::
 
-## 4. 効果を確認
+## 4. 効果を確認する
 
 この時点で、企業微信で以下の効果が見られるはずです：
 
@@ -478,7 +478,7 @@ return {
 
 効果が見られない場合は、まずリンクが機能していないかどうかを確認してください。つまり、Webhookが正常かどうかを確認してください：
 
-任意のデバイス（ReCamera、PC等）で：
+任意のデバイス（reCamera、PC等）で：
 
 ```bash
 curl -X POST http://192.168.100.109:8123/api/webhook/recamera_detection \
