@@ -1278,6 +1278,13 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Test',
+          items: [
+            'Sensor/SeeedStudio_XIAO/Test/test',
+          ],
+        },
+        {
+          type: 'category',
           label: 'XIAO ESP32C5',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_Getting_Started',
