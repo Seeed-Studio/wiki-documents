@@ -1,14 +1,14 @@
 ---
 description: Meshtastic® 网络介绍
-title: Meshtastic® 网络介绍
+title:  Meshtastic® 网络介绍
 keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/meshtastic_introduction
 sidebar_position: 1
 last_update:
-  date: 6/17/2024
-  author: Jessie
+  date: 12/11/2025
+  author: Michelle
 ---
 
 
@@ -18,7 +18,7 @@ last_update:
 
 ## 特性
 
-- 长距离通信（kboxlabs 创造了 254 公里的记录）
+- 长距离通信（kboxlabs 创下 254 公里记录）
 - 网状通信无需手机
 - 去中心化通信 - 无需专用路由器
 - 加密通信
@@ -31,15 +31,19 @@ last_update:
 
 Meshtastic 利用 LoRa，一种长距离无线电协议，在大多数地区都可以广泛使用，无需额外的许可证或认证，不像 HAM 无线电操作。
 
-这些无线电设备被设计为转发它们接收到的消息，形成一个网状网络。这种设置确保每个组成员，包括距离最远的成员，都能接收到消息。根据所采用的设置，Meshtastic 网状网络可以同时支持多达 100 个设备。
+这些无线电设备被设计为重新广播它们接收到的消息，形成一个网状网络。这种设置确保每个群组成员，包括距离最远的成员，都能接收到消息。根据所采用的设置，Meshtastic 网状网络可以同时支持多达 100 个设备。
 
-此外，Meshtastic 无线电可以与单个手机配对，允许朋友和家人直接向您的特定无线电发送消息。需要注意的是，每个设备一次只能支持一个用户的连接。"
+此外，Meshtastic 无线电可以与单个手机配对，允许朋友和家人直接向您的特定无线电发送消息。需要注意的是，每个设备一次只能支持一个用户的连接。
 
 点击[这里](https://meshtastic.org/docs/)了解更多关于 Meshtastic 网络的信息！
 
 ## 支持的硬件
 
 - [SenseCAP Card Tracker T1000-E for Meshtastic](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)
+
+- [Wio Tracker L1](https://wiki.seeedstudio.com/cn/wio_tracker_node/)
+
+- [SenseCAP Solar Node](https://wiki.seeedstudio.com/cn/solar_node/)
 
 - [SenseCAP Indicator for Meshtastic](https://www.seeedstudio.com/SenseCAP-Indicator-D1Pro-p-5644.html)
 

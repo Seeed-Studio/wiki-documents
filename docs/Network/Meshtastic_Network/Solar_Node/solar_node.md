@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /meshtastic_solar_node
 sidebar_position: 1
 last_update:
-  date: 4/1/2025
-  author: Jessie
+  date: 12/16/2025
+  author: Michelle Huang
 ---
 
 
@@ -17,6 +17,12 @@ last_update:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
 It is an economical solar-powered comms node or repeater based on [Meshtastic®](https://meshtastic.org/), integrates the XIAO nRF52840 Plus main controller, the Wio-SX1262 LoRa module. It is specifically designed for areas without network coverage. It supports long-distance communication, precise positioning, and low-power operation. It's suitable for expanding network coverage in outdoor areas.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+    </a>
+</div>
 
 ## Version Comparison
 
@@ -145,14 +151,7 @@ The Solar Node is available in two variants: [SenseCAP Solar Node P1](https://ww
   </tr>
 </table>
 
-### Button
 
-|Button Action|Description|
-|--|--|
-|Press for 3s|Power on|
-|Press twice|Update node/location info|
-|Press three times|Switch on/off the GPS|
-|Press for 5s|Power off|
 
 ### Hardware Overview
 

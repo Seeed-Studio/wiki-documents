@@ -134,6 +134,83 @@ last_update:
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-3.png" />
 </div>
 
+
+## 快速上手使用
+
+- 通过USB-C连接ORBBEC相机与你的电脑
+
+① 组装三脚架云台和三脚架，并将相机固定在组装好的三脚架上，如下面的步骤1所示。
+
+② 使用 USB-C to USB-A 数据线连接相机的Type-c连接器，如下面的步骤2所示。
+
+③ 使用 USB-C to USB-A 数据线将USB-A连接器连接到主机，如下面的步骤3所示。
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/step1.png" />
+</div>
+
+- 根据您的系统和版本选择并下载相应的[Orbbec Viewer工具](https://www.orbbec.com/developers/orbbec-sdk/)。
+
+- 启动ORBBEC VIEWER
+
+1. 启动Orbbec Viewer后，请确保该工具能够识别3D相机，如下图所示。
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/software1.png" />
+</div>
+如果相机无法识别，首先要检查相机和主机是否正确连接。您可以尝试断开USB电缆，然后重新连接。如果仍然无法识别，请考虑更换USB电缆或确认主机的电源是否符合要求的规格。
+
+2.点击工具顶部的深度按钮后，启动深度相机并可预览深度图
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/software2.png" />
+</div>
+
+3. 点击彩色按钮后启动彩色相机并可预览彩色图
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/software3.png" />
+</div>
+
+
+ 4. 点击左红外和右红外按钮后将启动左右红外相机并可预览左右红外相机的IR图
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/software4.png" />
+</div>
+
+5. 点击IMU按钮后将启动IMU数据流
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/software5.png" />
+</div>
+
+ 6. 点击每个窗口顶部的image.png按钮可显示元数据信息，再按一次即可隐藏元数据信息。
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/software6.png" />
+</div> 
+
+ 7. 点击点云按钮后将启动和预览3D点云
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/software7.png" />
+</div>
+
+ 8. 点击左侧 “图像视图” 菜单下的 “显示” 按钮可启动和预览D2C (深度对齐到彩色图像) 。
+
+<div align="center">
+    <img width={700}
+     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/software8.png" />
+</div>
+
+
 ## 在 reComputer 上开始使用
 
 **步骤 1.** 下载并安装适用于 ARM64 架构的 Orbbec SDK：
@@ -197,6 +274,7 @@ Orbbec Gemini2 是一款紧凑、高性能的深度相机，非常适合机器�
 - [Orbbec SDK v2 API 指南](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
 - [数据手册](https://files.seeedstudio.com/products/Orbbec/Orbbec_Gemini_2_Series_Datasheet_V1.7_20240316.pdf)
 - [OrbbecViewer](https://github.com/orbbec/OrbbecSDK/blob/main/doc/OrbbecViewer/English/OrbbecViewer.md)
+- [ROS使用教程参考Gemini2](https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/)
 
 ## 技术支持与产品讨论
 

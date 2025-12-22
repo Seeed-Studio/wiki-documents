@@ -1,0 +1,5 @@
+position: 9
+label: '任务包'
+collapsible: true
+collapsed: true
+className: _mission-pack-v3

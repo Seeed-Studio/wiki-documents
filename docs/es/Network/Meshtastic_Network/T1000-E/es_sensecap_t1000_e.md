@@ -1,19 +1,23 @@
 ---
-description: Comenzar con SenseCAP Card Tracker T1000-E para Meshtastic
-title: Comenzar con T1000-E Tracker
+description: Comienza con SenseCAP Card Tracker T1000-E para Meshtastic
+title: Comienza con T1000-E Tracker
 keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 11/5/2025
+  date: 12/3/2025
   author: Michelle Huang
 ---
-
+:::danger note
+Cuando el dispositivo esté en los estados siguientes, por favor no lo reinicies manualmente ni lo apagues. De lo contrario, el dispositivo puede quedar inutilizado.
+1. No haber terminado el proceso de transmisión de mensajes
+2. Estar siendo configurado
+:::
 ## Tutorial en Video
 
-### Parte 1: Configuración de Desempaque
+### Parte 1: Configuración de Desempaquetado
 
 <div class="video-container">
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/9sCHpWPSPcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -28,7 +32,7 @@ last_update:
 ### Parte 3: Flashear Nuevo Firmware
 
 :::caution note
-Antes de flashear el firmware, asegúrate de haber comprado el T1000-E para Meshtastic. Por favor no flashees el firmware a otro modelo de tracker que no soporte Meshtastic.
+Antes de flashear el firmware, por favor asegúrate de haber comprado el `T1000-E for Meshtastic`. Por favor no flashees el firmware a otro modelo de tracker que no soporte Meshtastic. Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inutilizado.
 :::
 
 <div class="video-container">
@@ -88,9 +92,39 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
+### Conectar vía Sitio Web
+
+Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio web, puedes conectar el dispositivo al [Sitio Web de Meshtastic](https://client.meshtastic.org/messages/broadcast/0) ahora.
+
+  Paso 1: Abrir el Sitio Web
+
+[Haz clic aquí](https://client.meshtastic.org/messages/broadcast/0) para ir al sitio web.
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshtasticWeb.png" alt="pir" width={1000} height="auto" /></p>
+
+  Paso 2: Agregar el nuevo dispositivo
+
+    Haz clic en "+ New Connection".
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteAddNewConnection.png" alt="pir" width={600} height="auto" /></p>
+
+    Hay dos formas de conectar. Puedes elegir tu método preferido.
+
+ Método 1: Vía Bluetooth
+
+    Elige el método bluetooth. Elige el ID del dispositivo en la ventana emergente.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/MeshWebBluetooth.png" alt="pir" width={1000} height="auto" /></p>
+
+ Método 2: Vía Serial
+
+    Elige el método serial. Abre el administrador de dispositivos para ver a qué puerto está conectado el dispositivo. Elige ese puerto en la ventana emergente.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteSerialConnection.png" alt="pir" width={1000} height="auto" /></p>
+
+    Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión es exitosa, puedes ver el estado del dispositivo directamente en el sitio web.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 ### Configurar los Parámetros
 
-Para comenzar a comunicarse a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
+Para comenzar a comunicarte a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
 
 <Tabs>
 <TabItem value="ios" label="App IOS">
@@ -177,7 +211,7 @@ Navega a `Settings` -> `External Notification` -> Habilitar `GPIO` -> Establecer
 Consulta [Configuración de Notificación Externa](https://meshtastic.org/docs/configuration/module/external-notification/) para más detalles.
 
 :::tip
-Después de actualizar la configuración del dispositivo, el dispositivo se reiniciará, lo que puede tomar algún tiempo.
+Después de actualizar la configuración del dispositivo, el dispositivo se reiniciará, lo cual puede tomar algún tiempo.
 :::
 
 ## Flashear Firmware
@@ -211,20 +245,20 @@ El siguiente firmware dañará tu dispositivo：
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Flash%20Firmware.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 :::caution note
-Antes de flashear el firmware, asegúrate de haber comprado el T1000-E para Meshtastic. Por favor no flashees el firmware a otro modelo de tracker que no soporte Meshtastic.
+Antes de flashear el firmware, por favor asegúrate de haber comprado el `T1000-E for Meshtastic`. Por favor no flashees el firmware a otro modelo de tracker que no soporte Meshtastic. Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inutilizado.
 :::
 #### Paso 1: Entrar al modo DFU
 
 <Tabs>
 <TabItem value="method1" label="Método 1">
 
-Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
+Visita [Flasheador Web de Meshtastic](https://flasher.meshtastic.org/).
 
-Conecta el dispositivo a tu PC, selecciona el dispositivo a `Seeed Card Tracker T1000-E` y elige el firmware más reciente, luego haz clic en `Flash`.
+Conecta el dispositivo a tu PC, selecciona el dispositivo como `Seeed Card Tracker T1000-E` y elige el firmware más reciente, luego haz clic en `Flash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-2.png" alt="pir" width={800} height="auto" /></p>
 
-Haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `T1000-E xxx`, haz clic y conéctalo, el LED verde estará sólido, y debería aparecer un controlador llamado `T1000-E`.
+Haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `T1000-E xxx`, haz clic y conéctalo, el LED verde se mantendrá encendido, y debería aparecer un controlador llamado `T1000-E`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-serial.png" alt="pir" width={800} height="auto" /></p>
 
@@ -232,7 +266,7 @@ Haz clic en `Enter DFU Mode`, aparecerá un puerto serie llamado `T1000-E xxx`, 
 
 <TabItem value="method2" label="Método 2">
 
-Conecta el cable USB a tu PC, mantén presionado el botón del dispositivo, luego conecta **rápidamente** el cable de carga dos veces, el LED verde estará sólido, y debería aparecer un controlador llamado `T1000-E`.
+Conecta el cable USB a tu PC, mantén presionado el botón del dispositivo, luego conecta **rápidamente** el cable de carga dos veces, el LED verde se mantendrá encendido, y debería aparecer un controlador llamado `T1000-E`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -241,7 +275,7 @@ Conecta el cable USB a tu PC, mantén presionado el botón del dispositivo, lueg
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={800} height="auto" /></p>
 
-#### Paso 2: Borrado Flash
+#### Paso 2: Borrado de Flash
 
 :::caution note
 ¡Antes de flashear el firmware, por favor flashea primero el firmware de borrado!
@@ -259,7 +293,7 @@ Este proceso puede tomar algún tiempo, espera a que la unidad desaparezca, lueg
 
 #### Paso 3: Flashear Firmware
 
-Selecciona el firmware más reciente, y descarga el archivo `UF2`.
+Selecciona el firmware más reciente y descarga el archivo `UF2`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/down-uf2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -267,7 +301,7 @@ Copia el archivo UF2 a la unidad DFU. El firmware debería ser flasheado despué
 
 ## FAQ
 
-- **Cómo verificar el nombre del dispositivo**
+### Cómo verificar el nombre del dispositivo
 
  Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
@@ -277,7 +311,7 @@ Copia el archivo UF2 a la unidad DFU. El firmware debería ser flasheado despué
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
 
-- **¿Cómo reiniciar el dispositivo?**
+### Cómo reiniciar el dispositivo
 
  Mantén presionado el botón, luego conecta el cable de carga.
 
@@ -289,7 +323,13 @@ Copia el archivo UF2 a la unidad DFU. El firmware debería ser flasheado despué
 
 - Cambia el cable de carga
 
-### El dispositivo se queda atascado en bucle de arranque
+- A veces parece que está apagado, pero en realidad es porque el LED y el zumbador no han sido activados. Verifica los siguientes parámetros: 
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
+
+ - Si aún no tienes suerte, mantén presionado el botón del dispositivo, luego conecta el cable de carga, verifica si aparece un disco en tu PC. Si es así, [haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#dispositivo-bloqueado) para reinstalar el bootloader
+
+### Dispositivo atascado en bucle de arranque
 
 **Descripción:**
 
@@ -297,7 +337,7 @@ El dispositivo se reiniciará repetidamente, y el puerto serie se conecta y desc
 
 **Solución:**
 
-- Paso 1: Intenta entrar al modo DFU manualmente: mantén presionado el botón del dispositivo, luego conecta **rápidamente** el cable de carga dos veces, el LED verde se mantendrá encendido sólido.
+- Paso 1: Intenta entrar al modo DFU manualmente: mantén presionado el botón del dispositivo, luego conecta **rápidamente** el cable de carga dos veces, el LED verde se mantendrá encendido.
 
 :::note
 Para entrar exitosamente al modo DFU, necesitas realizar esta operación rápidamente. Puede que necesites intentar múltiples veces.
@@ -305,13 +345,13 @@ Para entrar exitosamente al modo DFU, necesitas realizar esta operación rápida
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-- Paso 2: [Borrar Flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase).
+- Paso 2: [Borrar Flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-2-borrado-de-flash).
 
-- Paso 3: [Flashear Firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-3-flash-firmware).
+- Paso 3: [Flashear Firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-3-flashear-firmware).
 
 ### Dispositivo bloqueado
 
-**Descripción:**
+#### Descripción
 
 El dispositivo no responde, no hay LED, no se puede emparejar con tu App.
 
@@ -319,7 +359,7 @@ El dispositivo no responde, no hay LED, no se puede emparejar con tu App.
 
 #### Flashear el Bootloader
 
-- [Descarga del Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
+- [Descarga del bootloader](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash%20bootloader.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -339,7 +379,7 @@ Cuando estés flasheando el bootloader, por favor asegúrate de que la conexión
 <Tabs>
 <TabItem value="pypi" label="Instalando desde PyPI">
 
-Este es el método recomendado, para instalar la última versión:
+Este es el método recomendado, para instalar la versión más reciente:
 
 ```
 pip3 install --user adafruit-nrfutil
@@ -420,7 +460,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#flash-the-application-firmware) para flashear el firmware de aplicación.
+Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#flashear-el-firmware-de-aplicación) para flashear el firmware de aplicación.
 
 **2) El dispositivo no puede entrar al modo DFU, pero el puerto serie puede ser detectado**.
 
@@ -429,7 +469,7 @@ Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso]
 - Establece la velocidad de baudios a `1200`.
 
 - Conecta el dispositivo.
-   La luz parpadeará brevemente cuando lo conectes. Sigue intentando esto hasta que la luz se mantenga encendida, significa que el dispositivo puede volver al modo DFU, entonces [flashea bootloader](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#flash-the-bootloader) -> [Borra flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) -> [flashea el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-3-flash-firmware).
+   La luz parpadeará brevemente cuando lo conectes. Sigue intentando esto hasta que la luz se mantenga encendida, significa que el dispositivo puede volver al modo DFU, entonces [flashea el bootloader](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#flashear-el-bootloader) -> [Borra flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-2-borrado-de-flash) -> [flashea el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-3-flashear-firmware).
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -437,9 +477,11 @@ Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso]
 
 **3) El dispositivo no puede entrar al modo DFU y no se muestra puerto serie**
 
-- Por favor desconecta el cable de carga y deja el dispositivo por unos días hasta que la batería se agote completamente, luego conecta el cable de carga e intenta emparejarlo nuevamente.
+- mantén presionado el botón del dispositivo, luego conecta el cable de carga. Después de que aparezca un disco en tu PC, puede que veas el puerto serie.
 
-**4) Si ninguno de los pasos anteriores funciona, por favor contacta el soporte técnico: support@sensecapmx.com**
+- Si aún no tienes suerte, por favor desconecta el cable de carga y deja el dispositivo por unos días hasta que la batería esté completamente agotada, luego conecta el cable de carga e intenta emparejarlo nuevamente.
+
+**4) Si ninguno de los pasos anteriores funciona, por favor contacta al soporte técnico: support@sensecapmx.com**
 
 ### Falló el flasheo del firmware
 
@@ -447,7 +489,7 @@ Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso]
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- Verifica si el dispositivo está en modo DFU, la luz verde estará sólida cuando el dispositivo esté en modo DFU.
+ Verifica si el dispositivo está en modo DFU, la luz verde se mantendrá encendida cuando el dispositivo esté en modo DFU.
 
 - **No se puede abrir el puerto serie**
 
@@ -455,13 +497,26 @@ Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso]
 
  Verifica si el puerto es correcto, o intenta otro puerto.
 
+ ### El dispositivo se apaga automáticamente
+
+ #### Descripción
+
+ - Después de que el dispositivo se enciende, se apagará o reiniciará automáticamente después de un tiempo. 
+ - El registro del puerto serie funcionó por un tiempo y luego se detuvo.
+
+ Esto posiblemente es causado por reiniciar manual y forzosamente o apagar el dispositivo cuando el dispositivo está en los siguientes estados: no terminando el proceso de transmisión de mensajes, siendo configurado......
+
+ #### Restablecimiento de Fábrica
+
+[Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) para borrar el dispositivo. Y luego vuelve a flashear el firmware más reciente.
+
 ### Calidad de Señal
 
-  - **SNR** refleja la calidad del enlace de comunicación. El dispositivo normal usualmente opera por encima de -7 dB. Un dispositivo con SNR menor a -10 dB indica rendimiento pobre.
+  - **SNR** refleja la calidad del enlace de comunicación. El dispositivo normal usualmente opera por encima de -7 dB. Un dispositivo con un SNR menor a -10 dB indica un rendimiento deficiente.
 
-  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. El dispositivo normal usualmente opera por encima de -110 dBm. Un dispositivo con RSSI menor a -115 dBm se considera que tiene rendimiento pobre.
+  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. El dispositivo normal usualmente opera por encima de -110 dBm. Un dispositivo con un RSSI menor a -115 dBm se considera que tiene un rendimiento deficiente.
 
-      Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta, sin obstrucciones y con interferencia mínima.
+      Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima para su uso.
 
 ## Recursos
 
@@ -471,7 +526,7 @@ Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso]
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

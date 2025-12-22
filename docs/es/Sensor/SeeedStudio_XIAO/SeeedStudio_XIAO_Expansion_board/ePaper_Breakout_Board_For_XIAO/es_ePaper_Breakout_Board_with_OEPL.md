@@ -1,5 +1,5 @@
 ---
-description: Usa el generador de configuración OpenEPaperLink para generar la configuración para el e-paper
+description: Usa el generador de configuración OpenEPaperLink para generar la configuración para el papel electrónico
 title: Constructor de Configuración OpenEPaperLink para ePaper
 keywords:
 - XIAO eInk Expansion
@@ -13,13 +13,13 @@ last_update:
   author: Zovey
 ---
 
-# Uso del constructor de configuración OpenEPaperLink y ePaper
+# Constructor de configuración OpenEPaperLink y ePaper
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/seeed_logo_2.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## Introducción
 
-OpenEPaperLink (El siguiente texto se referirá a este proyecto como "OEPL") es una implementación alternativa de protocolo y firmware para etiquetas electrónicas de estante. Se admiten múltiples pantallas con puntos de acceso basados en ESP32 y comunicación por radio 802.15.4. Los escenarios de aplicación de Open EPaper Link son extensos, desde precios dinámicos en tiendas minoristas de alta gama hasta gestión inteligente de libros en bibliotecas, así como cualquier escenario de aplicación de etiquetas electrónicas donde la información de visualización necesite actualizarse con frecuencia. Ahora, este proyecto también es compatible con nRF52840.
+[OpenEPaperLink](https://openepaperlink.de/) (El siguiente texto se referirá a este proyecto como "OEPL") es un protocolo alternativo e implementación de firmware para etiquetas electrónicas de estantería. Se admiten múltiples pantallas con puntos de acceso basados en ESP32 y comunicación por radio 802.15.4. Este es un sistema de comunicación de etiquetas de papel electrónico de código abierto, que permite a los usuarios actualizar el contenido de la pantalla de tinta electrónica de forma inalámbrica. El sistema consta de un punto de acceso (AP) y dispositivos de etiqueta, y admite varios tipos de pantallas de tinta electrónica. Proporciona una amplia gama de funciones de generación y transmisión de contenido. Ahora, este proyecto también es compatible con Seeed Studio XIAO nRF52840 Sense Plus.
 
 Después de comprar la Placa de Expansión ePaper, es posible que tengas la necesidad de reemplazar la pantalla de papel electrónico con una especificación diferente. En este tutorial, utilizaremos dos herramientas para el proceso: OPEL Config Builder se usa para modificar los parámetros del papel electrónico, y OEPL Image Uploader se usa para cargar imágenes.
 
@@ -60,10 +60,10 @@ Después de comprar la Placa de Expansión ePaper, es posible que tengas la nece
 </table>
 
 :::tip
-Todos los MCU de la serie nRF52840 admiten esta herramienta, no limitado al nRF52840 Sense Plus. La pantalla ePaper solo admite una pantalla de 4.26 pulgadas. Sin embargo, continuaremos actualizando en el futuro para admitir más tamaños de pantalla.
+El MCU de la serie XIAO nRF52840 admite esta herramienta, no limitado al XIAO nRF52840 Sense Plus. La pantalla ePaper solo admite una pantalla de 4.26 pulgadas. Sin embargo, continuaremos actualizando en el futuro para admitir más tamaños de pantalla.
 :::
 
-## Uso de OEPL Config Builder
+## Uso del OEPL Config Builder
 
 ### Paso 1: Grabar el firmware BLE
 
@@ -78,11 +78,11 @@ El primer paso es que puedes obtener el firmware OEPL_BLE del repositorio oficia
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/hub_oepl.png" style={{width:700, height:'auto'}}/></div>
 
-Después de conectar Seeed Studio XIAO nRF52840 Sense Plus, la Placa de Expansión ePaper y la pantalla juntos. Luego conecta la computadora al nRF52840 usando un cable de datos USB, y después presiona el botón de reinicio dos veces consecutivamente. Entonces verás aparecer un administrador de archivos en el lado de la PC.
+Después de conectar Seeed Studio XIAO nRF52840 Sense Plus, la Placa de Expansión ePaper y la pantalla juntos. Luego conecta la computadora al nRF52840 usando un cable de datos USB, y luego presiona el botón de reinicio dos veces consecutivamente. Entonces verás aparecer un administrador de archivos en el lado de la PC.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/file_pic.png" style={{width:700, height:'auto'}}/></div>
 
-Luego, copia el archivo .uf2 que acabas de obtener de la unidad USB al administrador de archivos del nRF52840. La próxima vez que el MCU se encienda, ejecutará automáticamente este firmware .uf2.
+Luego, copia el archivo `.uf2` que se obtuvo de la unidad USB al administrador de archivos del nRF52840. La próxima vez que el MCU se encienda, ejecutará automáticamente este firmware `.uf2`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/firmware.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -103,9 +103,9 @@ Si la conexión es exitosa, puedes ver las palabras "Connected" en la caja del t
 Simplemente selecciona las variables correspondientes o ingresa parámetros en el panel para completar la configuración.
 
 - **Parámetros del Config Builder**
-  - **system_config**: Contiene información sobre el IC anfitrión y los pines de gestión de energía
+  - **system_config**: Contiene información sobre el IC host y los pines de gestión de energía
   - **manufacturer_data**: Identificador del fabricante e información de la placa
-  - **power_option**: Opciones relacionadas con el suministro de energía y el sueño
+  - **power_option**: Opciones relacionadas con la fuente de alimentación y el sueño
   - **display**: Información de pantalla/panel (opcional). Puede aparecer múltiples veces para dispositivos con varias pantallas.
   - **led**: Configuración opcional de LED (repetible).
   - **sensor_data**: Lecturas/definiciones opcionales de sensores (repetible).
@@ -114,7 +114,7 @@ Simplemente selecciona las variables correspondientes o ingresa parámetros en e
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Builder_demo_1.png" style={{width:700, height:'auto'}}/></div>
 
-Si quieres guardar la configuración que has establecido, puedes exportarla como archivo .bin, Hex y JSON dentro de este panel. Por el contrario, este panel también admite la importación de archivos JSON para propósitos de configuración. El archivo de configuración de pantalla de 4.26 se puede obtener aquí.
+Si quieres guardar la configuración que has establecido, puedes exportarla como un archivo `.bin`, `Hex` y `JSON` dentro de este panel. Por el contrario, este panel también admite la importación de archivos `JSON` para propósitos de configuración. El archivo de configuración de pantalla de 4.26 se puede obtener aquí.
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">
@@ -124,15 +124,15 @@ Si quieres guardar la configuración que has establecido, puedes exportarla como
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Package_import_1.png" style={{width:700, height:'auto'}}/></div>
 
-Después de configurar la configuración, puedes cargarla al MCU usando la función "Write Config".
+Después de configurar la configuración, puedes cargarla al MCU usando la función **Write Config**.
 
 ## Uso del OEPL Image Uploader
 
-OEPL Image Uploader es una herramienta en línea de carga de papel electrónico, y también opera a través del protocolo BLE. Esta herramienta es extremadamente liviana y sin código, eliminando la molestia de la velocidad de actualización lenta del e-paper tradicional. Su método de uso es similar al OEPL Config Builder.
+OEPL Image Uploader es una herramienta de carga de papel electrónico en línea, y también opera a través del protocolo BLE. Esta herramienta es extremadamente liviana y sin código, eliminando la molestia de la velocidad de actualización lenta del papel electrónico tradicional. Su método de uso es similar al OEPL Config Builder.
 
 ### Paso 1: Conectar al Uploader
 
-El método de conexión es similar al del Builder. El dispositivo se conecta a través de BLE. Sin embargo, debe notarse que debido a algunos conflictos entre el firmware anterior y los pines requeridos para esta carga de imagen, son necesarias algunas modificaciones al firmware antes de usar esta función web. Aquí se proporciona un nuevo firmware para grabar. Solo sigue los pasos mencionados anteriormente para realizar el proceso de grabado.
+El método de conexión es similar al del Builder. El dispositivo se conecta a través de BLE. Sin embargo, debe notarse que debido a algunos conflictos entre el firmware anterior y los pines requeridos para esta carga de imagen, algunas modificaciones al firmware son necesarias antes de usar esta función web. Aquí, se proporciona un nuevo firmware para grabar. Solo sigue los pasos mencionados anteriormente para realizar el proceso de grabado.
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/oep_config_base.json" target="_blank">

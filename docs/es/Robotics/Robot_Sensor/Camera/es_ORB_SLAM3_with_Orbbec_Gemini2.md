@@ -22,7 +22,7 @@ last_update:
 </div>
 
 <div style={{ textAlign: "justify" }}>
-La Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento que cuenta con un sensor de profundidad de luz estructurada de doble ojo y una IMU integrada de 6 ejes. Proporciona flujos de datos RGB y de profundidad completamente sincronizados, asegurando una alineación precisa en tiempo real de Profundidad a Color, lo cual es esencial para una percepción 3D precisa. Esta combinación de características hace que la Gemini 2 sea ideal para robótica, visión por computadora y otras aplicaciones 3D, permitiendo tareas como detección de objetos, mapeo, navegación y análisis espacial con alta confiabilidad y precisión. La cámara es compacta, fácil de configurar y completamente compatible con el SDK de Orbbec, lo que la hace adecuada tanto para despliegues de investigación como industriales.
+La Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento que cuenta con un sensor de profundidad de luz estructurada de doble ojo y una IMU integrada de 6 ejes. Proporciona flujos de datos RGB y de profundidad completamente sincronizados, asegurando una alineación precisa de Profundidad a Color en tiempo real, lo cual es esencial para una percepción 3D precisa. Esta combinación de características hace que la Gemini 2 sea ideal para robótica, visión por computadora y otras aplicaciones 3D, permitiendo tareas como detección de objetos, mapeo, navegación y análisis espacial con alta confiabilidad y precisión. La cámara es compacta, fácil de configurar y completamente compatible con el SDK de Orbbec, haciéndola adecuada tanto para investigación como para implementaciones industriales.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -33,7 +33,7 @@ La Orbbec Gemini 2 es una cámara RGB-D de alto rendimiento que cuenta con un se
 ## Introducción
 
 <div style={{ textAlign: "justify" }}>
-[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) es un algoritmo avanzado de SLAM visual para cámaras monoculares, estéreo y RGB-D. Utiliza características ORB para seguimiento y mapeo robustos, soporta cierre de bucle y relocalización, y ofrece alta precisión y eficiencia para robótica, AR/VR y navegación autónoma. Este wiki proporciona pasos completos para configurar y ejecutar ORB-SLAM3 en la Serie reComputer Jetson usando una cámara RGB-D Orbbec Gemini2 para aplicaciones avanzadas de SLAM visual.
+[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3) es un algoritmo avanzado de SLAM visual para cámaras monoculares, estéreo y RGB-D. Utiliza características ORB para seguimiento y mapeo robustos, soporta cierre de bucle y relocalización, y ofrece alta precisión y eficiencia para robótica, AR/VR y navegación autónoma. Este wiki proporciona pasos completos para configurar y ejecutar ORB-SLAM3 en reComputer Jetson Series usando una cámara RGB-D Orbbec Gemini2 para aplicaciones avanzadas de SLAM visual.
 </div>
 
 ## Prerrequisitos
@@ -80,7 +80,7 @@ cd ..
 
 ## Compilando ORB-SLAM3
 
-**Paso 1.** Instalar Dependencias del Sistema:
+**Paso 1.** Instalar dependencias del sistema:
 
 ```bash
 sudo apt update && sudo apt install -y \
@@ -175,7 +175,7 @@ std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/v_tool.png" />
 </div>
 
-Si la instalación se realizó correctamente, la ventana como se muestra en la imagen anterior se puede abrir normalmente.
+Si la instalación se realizó correctamente, la ventana como se muestra en la imagen anterior puede abrirse normalmente.
 
 **Paso 5.** Modificar CMakeLists.txt
 
@@ -1019,10 +1019,10 @@ chmod +x build.sh
 ## Calibración de Cámara
 
 <div style={{ textAlign: "justify" }}>
-Antes de ejecutar ORB-SLAM3, es necesario calibrar la cámara para obtener la configuración de parámetros de la cámara. Aquí, demostramos el uso de la herramienta de calibración de cámara proporcionada por ROS para calibrar la cámara y obtener sus parámetros.
+Antes de ejecutar ORB-SLAM3, es necesario calibrar la Cámara para obtener la configuración de parámetros de la cámara. Aquí, demostramos el uso de la herramienta de calibración de cámara proporcionada por ROS para calibrar la cámara y obtener sus parámetros.
 </div>
 
-**Paso 1.** Instalar el controlador ROS2 de Orbbec
+**Paso 1.** Instalar el Driver ROS2 de Orbbec
 
 ```bash
 mkdir -p ~/ros2_ws/src
@@ -1067,7 +1067,7 @@ sudo apt install ros-humble-camera-calibration
 
 **Paso 3.** Descargar el Tablero de Calibración
 
-Descarga el tablero de calibración desde [Colección de Tableros de Calibración](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) e imprímelo.
+Descarga el tablero de calibración desde [Checkerboard Collection](https://markhedleyjones.com/media/calibration-checkerboard-collection/Checkerboard-A4-25mm-8x6.pdf) e imprímelo.
 
 **Paso 4.** Ejecutar la Calibración de Cámara
 
@@ -1205,10 +1205,11 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 - [Guía de API de Orbbec SDK v2](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
 - [Driver ROS2 de Orbbec](https://github.com/orbbec/OrbbecSDK_ROS2)
 - [Repositorio ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)
+- [ROS SDK](https://wiki.seeedstudio.com/es/orbbec_depth_camera_on_ros/)
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

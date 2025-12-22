@@ -129,11 +129,11 @@ If you need to install the product in a low temperature environment or in a hars
 |Measured power|-59dBm|
 |Tx Power|-30 - +4dBm, default 0dBm|
 |Adv Interval|100ms~10s,default 500ms|
-|Password|minew123 （Letters and numbers）|
+|Password|seeed123 （Letters and numbers）|
 |Serial ID|None|
 |Device Name|BC01 (1-7 characters)|
 |Connection Mode|Yes/No|
-|Soft Reboot|minew123 （same with the password）|
+|Soft Reboot|seeed123 （same with the password）|
 |Battery Service|<p>Battery icon display, real-time detection</p><p>full grid is 100%</p>|
 
 **Compatibility information**
@@ -154,5 +154,5 @@ If you need to install the product in a low temperature environment or in a hars
 
 - **Step 3**: Settings
 
-Modify the param according to your need, and then click `Save`.
+Modify the param according to your need and click `Save`. When prompted, enter the password `seeed123` to confirm.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/setting-beacon.png" alt="pir" width={600} height="auto" /></p>

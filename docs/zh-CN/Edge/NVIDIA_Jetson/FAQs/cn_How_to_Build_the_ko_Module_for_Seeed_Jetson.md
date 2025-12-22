@@ -13,17 +13,21 @@ last_update:
 ---
 
 
-**当 reComputer/reServer 中没有所需的 `.ko` 驱动模块时，您可以在 Jetson 上编译驱动模块并加载它。本 wiki 以 JetPack 6.2 为例，演示具体步骤和重要注意事项。**
+**当 reComputer/reServer 中没有所需的 `.ko` 驱动模块时，您可以在 Jetson 上编译驱动模块并加载它。本 wiki 演示了具体步骤和重要注意事项，以 JetPack 6.2 为例。**
 
 ## 1. 准备工作空间
 
-本文以 **L4T 36.4.3**（对应 **JetPack 6.2** BSP）为例，展示如何在 **reComputer/reServer** 上为 `pl2303`（一个 USB 转串口相关驱动）编译 .ko 驱动模块。
+本文以 **L4T 36.4.3**（对应 **JetPack 6.2** BSP）为例，展示如何在 **reComputer/reServer** 上为 `pl2303`（USB 转串口相关驱动）编译 .ko 驱动模块。
+
+:::tip
+本教程在 Jetson 上下载源代码并编译 `.ko` 内核模块。
+:::
+
 
 首先，根据您的 L4T 版本从 NVIDIA 官方网站下载 BSP 源代码。
 
-
 如果您不确定 L4T 版本和 JetPack 版本之间的关系，可以参考此链接：
-https://developer.nvidia.com/embedded/jetpack-archive.
+https://developer.nvidia.com/embedded/jetpack-archive。
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/L4T-jetpack.png
 "/></div>
 
@@ -100,7 +104,7 @@ sudo rm -r /lib/modules/$(uname -r)/build
 sudo ln -s /usr/src/linux-headers-$(uname -r)-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source /lib/modules/$(uname -r)/build
 ```
 
-创建符号链接后，在您的工作空间中运行以下命令来编译并获取 `.ko` 驱动模块：
+创建符号链接后，在您的工作空间中运行以下命令来编译并获得 `.ko` 驱动模块：
 ```bash
 make
 ```
@@ -142,7 +146,7 @@ sudo modprobe pl2303
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您对我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

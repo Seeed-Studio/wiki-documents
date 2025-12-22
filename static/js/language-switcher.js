@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-04 10:38:25 (北京时间)
-// 多语言页面: 2036 个
+// 生成时间: 2025-12-22 15:01:56 (北京时间)
+// 多语言页面: 2084 个
 
 (function() {
   'use strict';
@@ -947,7 +947,19 @@
     "es",
     "ja"
   ],
+  "/recomputer_robotics_j501_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/create_backup_and_restore_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deploy_ota_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -984,6 +996,12 @@
     "ja"
   ],
   "/how_to_encrypt_the_disk_for_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/how_to_establish_the_ethercat_on_jetson": [
     "cn",
     "en",
     "es",
@@ -1086,6 +1104,12 @@
     "ja"
   ],
   "/reComputer_Jetson_Series_GPIO_Grove": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/rm520n_module_for_jetson": [
     "cn",
     "en",
     "es",
@@ -1482,6 +1506,12 @@
     "ja"
   ],
   "/build_balenaOS_for_reComputer_r1000": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_ai_r2140_balena": [
     "cn",
     "en",
     "es",
@@ -1973,7 +2003,25 @@
     "es",
     "ja"
   ],
+  "/go2rtc_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/gun_detection_with_frigate_nvr_on_r2000": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ispy_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/moonfire_nvr_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -1986,6 +2034,12 @@
     "ja"
   ],
   "/reterminal_frigate": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/viseron_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -2040,6 +2094,12 @@
     "ja"
   ],
   "/convert_model_to_edge_tpu_tflite_format_for_google_coral": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/facial_recognition_on_the_recomputer": [
     "cn",
     "en",
     "es",
@@ -2453,6 +2513,48 @@
     "es",
     "ja"
   ],
+  "/ai_remote_wireless_monitor_system_with_wifi_haLow": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_home_assistant_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_for_n8n_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_in_Telegram_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/use_the_motion-sensing_function_of_recamera_to_play_games": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recamera_network_connection": [
     "cn",
     "en",
@@ -2507,13 +2609,19 @@
     "es",
     "ja"
   ],
-  "/recamera_hd_poe_hardware": [
+  "/recamera_hq_poe_hardware": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/recamera_hd_poe_getting_started": [
+  "/recamera_hq_poe_microscope_demo": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recamera_hq_poe_getting_started": [
     "cn",
     "en",
     "es",
@@ -3893,6 +4001,12 @@
     "es",
     "ja"
   ],
+  "/fashionstar_servo": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/feetech_servo": [
     "cn",
     "en",
@@ -3905,7 +4019,31 @@
     "es",
     "ja"
   ],
+  "/hightorque_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/hightorque_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/myactuator_series": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/robstride_control": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_series": [
     "cn",
     "en",
     "es",
@@ -3971,6 +4109,17 @@
     "es",
     "ja"
   ],
+  "/stackforce_giant_bipedal_wheeled_robot": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_mini_wheeled_legged_robot": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/csi_camera_on_ros": [
     "cn",
     "en",
@@ -3984,6 +4133,12 @@
     "ja"
   ],
   "/orbbec_gemini2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/orbbec_gemini336": [
     "cn",
     "en",
     "es",
@@ -4020,6 +4175,12 @@
     "ja"
   ],
   "/hexfellow_y200": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/wheeltec_imu": [
     "cn",
     "en",
     "es",
@@ -5790,6 +5951,12 @@
     "ja"
   ],
   "/ee04_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/epaper_EN04": [
     "cn",
     "en",
     "es",
@@ -7738,6 +7905,12 @@
     "es",
     "ja"
   ],
+  "/iot_button_v2_ha_discovery": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/seeed_iot_button_with_zigbee": [
     "cn",
     "en",
@@ -8032,6 +8205,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_python_sdk": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_record_playback": [
     "cn",
     "en",
@@ -8057,6 +8236,12 @@
     "ja"
   ],
   "/respeaker_xvf3800_xiao_udp_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_voice_assistant": [
     "cn",
     "en",
     "es",
@@ -8207,6 +8392,36 @@
     "ja"
   ],
   "/xiao_esp32c3_with_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_esp-mesh_audio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_micropyhton": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_with_platformio": [
     "cn",
     "en",
     "es",
@@ -8465,6 +8680,12 @@
     "ja"
   ],
   "/bus_servo_driver_board": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_cob_led_dirver_board": [
     "cn",
     "en",
     "es",
@@ -8992,6 +9213,30 @@
     "es",
     "ja"
   ],
+  "/getting_started_with_xiao_debug_mate": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_debug": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_power": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_debug_mate_serial": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_espnow": [
     "cn",
     "en",
@@ -9101,6 +9346,12 @@
     "ja"
   ],
   "/xiao_soil_moisture_sensor": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/esphome_xiao_w5500_ethernet_adapter": [
     "cn",
     "en",
     "es",
@@ -9335,12 +9586,6 @@
     "ja"
   ],
   "/Seeed_Arduino_Boards": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/iot_botton_connect_to_esphome": [
     "cn",
     "en",
     "es",
@@ -9592,7 +9837,7 @@
     "es",
     "ja"
   ],
-  "/SenseCAP_Indicator_DALL·E": [
+  "/SenseCAP_Indicator_DALL-E": [
     "cn",
     "en",
     "es",
@@ -9652,13 +9897,19 @@
     "es",
     "ja"
   ],
+  "/deploy_ai_with_a1102": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/sensecap_a1102": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/train_ai_with_a1102": [
+  "/setting_ai_with_a1102": [
     "cn",
     "en",
     "es",
@@ -9988,6 +10239,24 @@
     "es",
     "ja"
   ],
+  "/sensecap_t2000_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/SenseCAP_T2000_tracker/Introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Get_Started_with_SenseCAP_T2000_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/training_model_for_watcher": [
     "cn",
     "en",
@@ -10001,6 +10270,12 @@
     "ja"
   ],
   "/extending_grove_with_mcp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/face_regonition_with_mcp": [
     "cn",
     "en",
     "es",
@@ -10965,6 +11240,24 @@
     "es",
     "ja"
   ],
+  "/solutions/hello_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/solutions/smart-retail-voice-ai-solution-1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/crowd-flow-monitoring": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/solutions/frigate-on-jetson-nodered-gun-alerts": [
     "cn",
     "en",
@@ -10977,19 +11270,13 @@
     "es",
     "ja"
   ],
-  "/mission_pack_features_v3": [
+  "/ha_dify_watcher_llms": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/mission_pack_intro_v3": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/crowd-flow-monitoring": [
+  "/mcp_external_system_integration": [
     "cn",
     "en",
     "es",
@@ -11001,13 +11288,13 @@
     "es",
     "ja"
   ],
-  "/ha_dify_watcher_llms": [
+  "/mission_pack_features_v3": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/solutions/hello_watcher_llms": [
+  "/mission_pack_intro_v3": [
     "cn",
     "en",
     "es",

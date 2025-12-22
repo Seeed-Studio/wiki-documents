@@ -53,7 +53,7 @@ import TabItem from '@theme/TabItem';
   </table>
 </div>
 
-Home Assistant Green 是自动化您家居的最简单、最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，默认情况下所有数据都存储在本地。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月得到改进。
+Home Assistant Green 是自动化您家居的最简单且最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，默认情况下所有数据都存储在本地。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月得到改进。
 
 我们还为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的指南，请参考它们。
 
@@ -234,7 +234,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -258,7 +258,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -285,7 +285,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -398,7 +398,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -425,7 +425,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -533,7 +533,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -544,7 +544,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -599,7 +599,7 @@ display:
       it.print(0, 150, id(font1), "Hello World!");
 ```
 
-</TabItem>
+</TabItem> -->
 
 <TabItem value="5.83 Inch" label="5.83 英寸单色">
 
@@ -771,6 +771,13 @@ font:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -778,10 +785,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -813,14 +824,14 @@ display:
 <TabItem value='通过浏览器安装'>
 
 :::tip
-如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）距离您较远，我们建议使用此方法。您可以使用手边的计算机进行安装。
+如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）距离您很远，我们建议使用此方法。您可以使用手边的计算机进行安装。
 :::
 
 首先，您需要点击 **Manual download** 下载编译好的固件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-打开这个网站，我们将在此上传固件到电子纸面板。
+打开这个网站，我们将在这里上传固件到电子纸面板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
@@ -853,12 +864,12 @@ display:
 <TabItem value='通过主机安装'>
 
 :::tip
-如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）就在附近，我们建议使用此方法，因为它更简单。
+如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）就在附近，我们建议使用这种方法，因为它更简单。
 :::
 
-在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green（Yellow）等设备**。
+在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green(Yellow) 等设备**。
 
-点击图片后的选项将代码安装到设备上。
+按照图像中的选项点击，将代码安装到设备。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
@@ -874,10 +885,10 @@ display:
 <TabItem value='通过 Wi-Fi 安装'>
 
 :::tip
-这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到 ePaper Panel。之后，您可以通过 wifi 上传。另外，请确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
+这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到 ePaper Panel。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
 :::
 
-通过这种方式，您无需将 ePaper panel 连接到任何设备，只需确保它在线即可。
+使用这种方法，您不需要将 ePaper panel 连接到任何设备，只需确保它在线即可。
 
 点击选项，然后固件将自动安装到 ePaper panel。
 
@@ -974,7 +985,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1001,7 +1012,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -1084,7 +1095,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1113,7 +1124,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1140,7 +1151,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 captive_portal:
@@ -1152,7 +1163,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: my_display
-    model: gdey0213f51
+    model: gdey029f51h
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1297,7 +1308,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
 
 ```yaml
 esphome:
@@ -1308,7 +1319,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1363,7 +1374,7 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 英寸单色">
@@ -1522,6 +1533,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -1529,10 +1547,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -1683,7 +1705,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1710,7 +1732,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -1808,7 +1830,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1836,7 +1858,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -1863,7 +1885,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2057,7 +2079,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2068,7 +2090,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2132,7 +2154,7 @@ display:
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 英寸单色">
@@ -2318,6 +2340,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -2337,18 +2366,19 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.3in-spectra-e6
+  - platform: epaper_spi
+    id: my_display
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
+    dc_pin:
+      number: GPIO10
       inverted: false
     busy_pin:
       number: GPIO4
       inverted: true
-    update_interval: 300s
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
     lambda: |-
       it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
@@ -2372,7 +2402,7 @@ display:
 
 #### 使用不同图标进行自定义
 
-Material Design Icons 库包含数千个您可以在项目中使用的图标。以下是如何查找和使用不同图标的方法：
+Material Design Icons 库包含数千个可在项目中使用的图标。以下是查找和使用不同图标的方法：
 
 步骤 1. 点击下方按钮访问 Material Design Icons 网站。
 
@@ -2409,10 +2439,10 @@ lambda: |-
   it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0123");
 ```
 
-步骤 5. 保存您更新的配置并将其上传到设备以查看新图标。
+步骤 5. 保存更新的配置并将其上传到您的设备以查看新图标。
 
 :::tip
-对于天气仪表板，考虑使用如 `F0590`（晴天）、`F0591`（多云）、`F0593`（雨天）和 `F059E`（有风）等图标。
+对于天气仪表板，考虑使用 `F0590`（晴天）、`F0591`（多云）、`F0593`（雨天）和 `F059E`（有风）等图标。
 :::
 
 通过将这些图标与我们之前设置的 Home Assistant 天气数据相结合，您可以创建一个动态天气显示，使用适当的图标显示当前天气状况。
@@ -2571,7 +2601,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2598,7 +2628,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2625,7 +2655,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2670,7 +2700,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2697,7 +2727,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 captive_portal:
@@ -2860,7 +2890,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 英寸单色">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2871,7 +2901,7 @@ esphome:
 
 
 esp32:
-  board: seeed_xiao_esp32s3
+  board: esp32-s3-devkitc-1
   framework:
     type: arduino
 
@@ -2928,7 +2958,7 @@ display:
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 英寸单色">
@@ -3097,6 +3127,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -3111,10 +3148,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -3124,18 +3165,18 @@ display:
 </TabItem>
 </Tabs>
 
-步骤 6. 保存配置并将其上传到您的 XIAO ePaper Display Board(ESP32-S3) - EE04。更新完成后，您的电子纸显示屏将显示图像。
+步骤 6. 保存您的配置并将其上传到您的 XIAO ePaper Display Board(ESP32-S3) - EE04。当更新完成后，您的电子纸显示屏将显示图像。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee046.png" style={{width:1000, height:'auto'}}/></div><br />
 
 
 #### 高级图像技术
 
-您可以使用以下附加技术来增强图像显示：
+您可以使用这些额外技术来增强图像显示：
 
 **定位图像**
 
-要将图像定位在屏幕上的特定坐标：
+要将图像定位到屏幕上的特定坐标：
 
 ```yaml
 lambda: |-
@@ -3145,7 +3186,7 @@ lambda: |-
 
 **图像与文本结合**
 
-您可以在同一屏幕上显示图像和文本：
+您可以在同一屏幕上同时显示图像和文本：
 
 ```yaml
 lambda: |-
@@ -3179,10 +3220,10 @@ lambda: |-
 ```
 
 :::caution
-请记住，电子纸显示屏的刷新率有限。`update_interval: 300s` 设置意味着您的显示屏只会每 5 分钟刷新一次。根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
+请记住，电子纸显示器的刷新率有限。`update_interval: 300s` 设置意味着您的显示器只会每 5 分钟刷新一次。请根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示器的使用寿命。
 :::
 
-通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 XIAO ePaper Display Board(ESP32-S3) - EE04 上创建丰富的信息仪表板。
+通过将图像与文本和前面示例中涵盖的其他显示元素相结合，您可以在 XIAO ePaper Display Board(ESP32-S3) - EE04 上创建丰富、信息丰富的仪表板。
 
 ## 参考资料与资源
 

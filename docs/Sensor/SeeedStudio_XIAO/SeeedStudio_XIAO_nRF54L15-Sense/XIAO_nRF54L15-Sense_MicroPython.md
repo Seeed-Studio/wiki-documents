@@ -1240,6 +1240,63 @@ effct:
 如果您自己自己定义或封装了模块的py文件，也请一并上传
 ::: -->
 
+## FAQ
+
+### Bootloader update
+
+If you encounter a situation where you are unable to upload MicroPython programs using Thonny, because the Bootloader used during the factory production was of an older version. 
+
+**Step 1.** Wiring
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>OpenOCD / JTAG / SWD</th>
+        <th>XIAO nRF54L15</th>
+    </tr>
+    <tr>
+        <th>5V</th>
+        <th>5V</th>
+    </tr>
+    <tr>
+        <th>GND</th>
+        <th>GND</th>
+    </tr>
+    <tr>
+        <th>SWDIO</th>
+        <th>SWDIO2</th>
+    </tr>
+    <tr>
+        <th>SWDCLK</th>
+        <th>SWDCLK2</th>
+    </tr>
+    <tr>
+        <th>RST</th>
+        <th>RST</th>
+    </tr>
+  </table>
+</div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nrf54_wiring_1.png" style={{width:800, height:'auto'}}/></div>
+
+:::tip
+Please make sure that the pin connections are correct to prevent the burning process from failing.
+:::
+
+**Step 2.** Download the firmware burning program
+
+[xiao_samd11_flash](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_samd11_flash_nrf.zip)
+
+**Step 3.** Run script
+
+Take the Windows system as an example. Unzip the downloaded file, right-click in the folder and open the terminal. Execute **.\xiao_samd11_openocd_flash.bat**. If your wiring is correct, the result will be as shown in the following picture.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao_nrf54.jpg" style={{width:800, height:'auto'}}/></div>
+
+:::tip
+On Mac/Linux systems, you need to change **.bat** to **.sh**
+:::
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

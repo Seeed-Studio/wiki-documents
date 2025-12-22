@@ -7,13 +7,17 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 11/5/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
-
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
+    </a>
+</div>
 The Wio Tracker L1 Series is a low-power, highly extensible [Meshtastic®](https://meshtastic.org/) node featuring LoRa (862–930 MHz), the nRF52840 for efficient processing, and an L76K GPS module for accurate location tracking. Designed for flexibility, it supports OLED and E-Ink displays, as well as solar panels and battery power, making it ideal for a wide range of IoT and off-grid applications.
 
 ## L1 Series Model
@@ -74,10 +78,11 @@ The latest batches of L1, L1 Lite and L1 E-Ink all come with a battery adapter c
     <td colspan="1">1 MB flash and 256 kB RAM</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="2">Wireless</td>
-    <td colspan="1">
-      LoRa: Based on <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>, supports 862-930MHz
-    </td>
+    <td colspan="1" rowspan="3">Wireless</td>
+    <td colspan="1">LoRa: Based on <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>, supports 862-930MHz</td>
+  </tr>
+   <tr>
+  <td colspan="1">LoRa antenna for L1 Pro: 3dBi</td>
   </tr>
   <tr>
     <td colspan="1">Bluetooth 5.0</td>
@@ -107,7 +112,7 @@ The latest batches of L1, L1 Lite and L1 E-Ink all come with a battery adapter c
     <td colspan="1">Lithium Battery (1mm 2p JST): 3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">OLED Screen</td>
+    <td colspan="1" rowspan="3">[OLED Screen](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">Size: 1.3 inch</td>
   </tr>
   <tr>
@@ -117,7 +122,7 @@ The latest batches of L1, L1 Lite and L1 E-Ink all come with a battery adapter c
     <td colspan="1">Active Area (mm): 34.5 × 23.0</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">E-Ink Screen</td>
+    <td colspan="1" rowspan="3">[E-Ink Screen](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
     <td colspan="1">Size: 2.13 inch</td>
   </tr>
   <tr>

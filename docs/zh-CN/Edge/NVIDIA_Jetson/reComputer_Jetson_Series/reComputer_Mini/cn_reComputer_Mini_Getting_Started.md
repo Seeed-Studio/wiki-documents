@@ -17,7 +17,7 @@ last_update:
 
 <!-- change image -->
 
-reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微型 AI 计算机，可提供高达 100 TOPS 的 AI 性能。它在底部配备了 PCIe 端口，提供丰富的扩展能力，也可以灵活定制。整个系统设计用于嵌入到自主机器中，如无人机、巡逻机器人、配送机器人等。它可以直接使用 54V DC 输入，能够广泛应用于电池供电系统。
+reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微型 AI 计算机，可提供高达 100 TOPS 的 AI 性能。它在底部配备了 PCIe 端口，提供丰富的扩展功能，也可以灵活定制。整个系统专为嵌入到自主机器（如无人机、巡逻机器人、配送机器人等）而设计。它可以直接接受 54V DC 输入，能够广泛用于电池供电系统。
 
 <div align="center">
   <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.jpg"/>  
@@ -32,14 +32,14 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
 
 ## 特性
 
-- **出色的生产级 AI 性能：** 实现高达 **100 TOPS** 的 AI 性能，具有低功耗和低延迟，由 NVIDIA Orin SoC 构建，结合了 NVIDIA Ampere™ GPU 架构和 64 位操作能力，集成了先进的多功能视频和图像处理，以及 NVIDIA 深度学习加速器。
+- **卓越的生产级 AI 性能：** 实现高达 **100 TOPS** 的 AI 性能，具有低功耗和低延迟，由 NVIDIA Orin SoC 构建，结合了 NVIDIA Ampere™ GPU 架构和 64 位操作能力，集成了先进的多功能视频和图像处理以及 NVIDIA 深度学习加速器。
 - **手掌大小的边缘 AI 设备：** 紧凑尺寸为 **63mmx95mmx42mm**，配备 NVIDIA Jetson Orin NX 16GB 模块、Mini J401 载板、风扇和外壳。支持桌面和壁挂安装。
-- **丰富 I/O 可扩展：** 包括多达 7x USB、1x DP 2.1、1x RJ45 千兆以太网、M.2 Key E、M.2 Key M、双通道 CAN，以及带扩展板的 GPIO。
+- **丰富 I/O 可扩展：** 包括多达 7x USB、1x DP 2.1、1x RJ45 千兆以太网、M.2 Key E、M.2 Key M、双通道 CAN 以及带扩展板的 GPIO。
 - **加速解决方案上市：** 在 128GB NVMe SSD 上预装 **JetPack 6.0**、Linux OS BSP，支持 Jetson 软件和领先的 AI 框架。
 - **规模化部署：** 支持 OTA、由 Allxon 和 Balena 提供的远程管理服务。
-- **灵活定制：** 包括更换配件模块、标识，以及基于 reComputer Mini J4012 原始设计的硬件接口修改。
+- **灵活定制：** 包括更换配件模块、标志以及基于 reComputer Mini J4012 原始设计的硬件接口修改。
 
-## 规格
+## 规格参数
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -70,14 +70,14 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
     </tr>
     <tr>
       <td>GPU</td>
-      <td>512核 NVIDIA Ampere 架构 GPU，配备 16 个 Tensor 核心</td>
-      <td colSpan={3}>1024核 NVIDIA Ampere 架构 GPU，配备 32 个 Tensor 核心</td>
+      <td>512 核 NVIDIA Ampere 架构 GPU，配备 16 个 Tensor 核心</td>
+      <td colSpan={3}>1024 核 NVIDIA Ampere 架构 GPU，配备 32 个 Tensor 核心</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan={2}>6核 Arm® Cortex®-A78AE v8.2 64位 CPU<br />1.5MB L2 + 4MB L3</td>
-      <td>6核 Arm® Cortex®-A78AE v8.2 64位 CPU 1.5MB L2 + 4MB L3</td>
-      <td>8核 Arm® Cortex®-A78AE v8.2 64位 CPU 2MB L2 + 4MB L3</td>
+      <td colSpan={2}>6 核 Arm® Cortex®-A78AE v8.2 64 位 CPU<br />1.5MB L2 + 4MB L3</td>
+      <td>6 核 Arm® Cortex®-A78AE v8.2 64 位 CPU 1.5MB L2 + 4MB L3</td>
+      <td>8 核 Arm® Cortex®-A78AE v8.2 64 位 CPU 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
       <td>CPU 最大频率</td>
@@ -86,10 +86,10 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
     </tr>
     <tr>
       <td>内存</td>
-      <td>4GB 64位 LPDDR5<br />34 GB/s</td>
-      <td>8GB 128位 LPDDR5<br />68 GB/s</td>
-      <td>8GB 128位 LPDDR5 102.4GB/s</td>
-      <td>16GB 128位 LPDDR5 102.4GB/s</td>
+      <td>4GB 64 位 LPDDR5<br />34 GB/s</td>
+      <td>8GB 128 位 LPDDR5<br />68 GB/s</td>
+      <td>8GB 128 位 LPDDR5 102.4GB/s</td>
+      <td>16GB 128 位 LPDDR5 102.4GB/s</td>
     </tr>
     <tr>
       <td>深度学习加速器</td>
@@ -130,11 +130,11 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
     </tr>
     <tr>
       <td>显示</td>
-      <td colSpan={3}>1x DP 2.1 (包含在 Type-C 连接器中)</td>
+      <td colSpan={3}>1x DP 2.1（包含在 Type-C 连接器中）</td>
     </tr>
     <tr>
       <td>风扇</td>
-      <td colSpan={3}>1x 4针风扇连接器 (5V PWM)</td>
+      <td colSpan={3}>1x 4 针风扇连接器 (5V PWM)</td>
     </tr>
     <tr>
       <td>按钮</td>
@@ -142,11 +142,11 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
     </tr>
     <tr>
       <td>扩展端口</td>
-      <td colSpan={3}>2x 60针高速连接器 (用于扩展板)<br />1x 10针电源连接器 (用于扩展板)</td>
+      <td colSpan={3}>2x 60 针高速连接器（用于扩展板）<br />1x 10 针电源连接器（用于扩展板）</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan={3}>1x RTC 2针</td>
+      <td colSpan={3}>1x RTC 2 针</td>
     </tr>
     <tr>
       <td>电源</td>
@@ -167,19 +167,19 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
     </tr>
     <tr>
       <td>CAN</td>
-      <td colSpan={3}>1x CAN JST 4针 (3.3V)；1x CAN (XT30 2+2)</td>
+      <td colSpan={3}>1x CAN JST 4pin (3.3V)；1x CAN (XT30 2+2)</td>
     </tr>
     <tr>
       <td>风扇</td>
-      <td colSpan={3}>1x 4针风扇连接器 (5V PWM)</td>
+      <td colSpan={3}>1x 4 针风扇连接器 (5V PWM)</td>
     </tr>
     <tr>
       <td>I2C</td>
-      <td colSpan={3}>2x I2C JST 4针 (3.3V)</td>
+      <td colSpan={3}>2x I2C JST 4pin (3.3V)</td>
     </tr>
     <tr>
       <td>SPI</td>
-      <td colSpan={3}>1x I2S JST 6针 (3.3V)</td>
+      <td colSpan={3}>1x I2S JST 6pin (3.3V)</td>
     </tr>
     <tr>
       <td>电源</td>
@@ -190,12 +190,12 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
     </tr>
     <tr>
       <td rowSpan={3}>机械</td>
-      <td >尺寸 (宽 x 深 x 高)</td>
-      <td colSpan={3}>63mm * 95mm * 42mm (不含扩展)<br />63mm * 95mm * 66.7mm (含扩展)</td>
+      <td >尺寸 (W x D x H)</td>
+      <td colSpan={3}>63mm * 95mm * 42mm（不含扩展）<br />63mm * 95mm * 66.7mm（含扩展）</td>
     </tr>
     <tr>
       <td>重量</td>
-      <td colSpan={3}>345g (不含扩展)<br />462g (含扩展)</td>
+      <td colSpan={3}>345g（不含扩展）<br />462g（含扩展）</td>
     </tr>
     <tr>
       <td>安装</td>
@@ -207,7 +207,7 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
     </tr>
     <tr>
       <td>保修</td>
-      <td colSpan={4}>1年</td>
+      <td colSpan={4}>1 年</td>
     </tr>
   </tbody>
 </table>
@@ -235,9 +235,9 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/B4.png"/>  
 </div>
 
-## 刷写 JetPack 操作系统
+## 刷写 JetPack OS
 
-在这里，我们将向您展示如何将 [Jetpack 6.0](https://developer.nvidia.com/embedded/jetson-linux-archive) 刷写到连接到 reComputer Mini 的 NVMe SSD 上。
+在这里，我们将向您展示如何将 [Jetpack 6.0](https://developer.nvidia.com/embedded/jetson-linux-archive) 刷写到连接到 reComputer Mini 的 NVMe SSD。
 
 ### 支持的 Nvidia Jetson 模块
 
@@ -248,7 +248,7 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
 
 ### 前提条件
 
-- Ubuntu 主机电脑
+- Ubuntu 主机计算机
 - reComputer Mini J4012/ J4011/ J3010 或 J3011
 - USB Micro-B 数据传输线
 
@@ -261,7 +261,7 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
   <tbody>
     <tr>
         <td  rowspan="2"> JetPack 版本 </td>
-        <td class="dbon" colspan="3"> Ubuntu 版本（主机电脑） </td>
+        <td class="dbon" colspan="3"> Ubuntu 版本（主机计算机） </td>
     </tr>
     <tr>
         <td > 18.04 </td>
@@ -287,7 +287,7 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
 
 ### 准备 Jetpack 镜像
 
-在这里，我们需要将与我们使用的 Jetson 模块对应的系统镜像下载到我们的 Ubuntu PC：
+在这里，我们需要将对应于我们使用的 Jetson 模块的系统镜像下载到我们的 Ubuntu PC：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -303,23 +303,23 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
     <tr>
       <td rowSpan={4}>5.1.3</td>
       <td>Orin Nx 16GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EfA7P_6gLnJAnxptIAURoCgBDF-emSfyD9uGWYY2vuFhmg?e=DF6a8l" target="_blank" rel="noopener noreferrer">下载</a></td>
-      <td>099bf8e706468dc36600ffdb3444168<br />3cde7454646621017fc39db49c16a2c53</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDSbMzCkdgXTJsBIw2bFLCgAV5njnZV4i3Tqk62-Z9UZGE?e=9dWNfh" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <td>82ab9068c5e03081391d22dc5d7c4db<br />ac9041016c1dd7a7ec2475871a10fd543</td>
     </tr>
     <tr>
       <td>Orin Nx 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/Eew7pWvWB3RLtT5vMkVTFHABADBzxS8id4xNtrQHGcO3eg?e=A4X31b" target="_blank" rel="noopener noreferrer">下载</a></td>
-      <td>6ce30b9e212310498eee2c0a363cb35<br />14b1c607ae6a1ab403d5029115bc3a71b</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQC6mf8MQDgwRIDZweH69G45AYoMudFTg8oc5CiEyGU9jg8?e=KrAaiV" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <td>5f016131a9ab6e90c3bd21850efe13b<br />479d72046aea4aa6d3bd2f3a04df5a7a2</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcEvOGxB9DpOuFubj-xJ1oYBixiZy4vd0t_chXQcezPy9A?e=RnX7NN" target="_blank" rel="noopener noreferrer">下载</a></td>
-      <td>b8f7a0b6d5974add33c3102824c671b<br />61ca8e278b0c5e3c38a7c5a45e251251e</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCqGvCStwmPRpVHo4yBNEJEAfiD6w_iCeRtB0IuXotrdK0?e=P5sImI" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <td>a2ea4d9ad06e66e2befab14484471cb<br />6984ccef396e59262c83c40ed7911bbb2</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EYi8K66PG6xOjwiU-_x3Ey4BpZhEiLFS8c_JoEDzeTVaxg?e=TkAgJV" target="_blank" rel="noopener noreferrer">下载</a></td>
-      <td>cc6efd6e4a42f099dde47e9ed71a34e<br />0981e77c50e3dc74f38338210c1f3bda0</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQApozlc_COgSLacJfvEAe6vAXeBTLY6z8H5WOfGQMGiLU4?e=ePzheb" target="_blank" rel="noopener noreferrer">下载</a></td>
+      <td>928a20a94320e901576cfd8679affc2<br />6caae9e9a30f3bc9497534f42ac4093cc</td>
     </tr>
     <tr>
       <td rowSpan={4}>6.0</td>
@@ -358,7 +358,7 @@ reComputer Mini 是一款由 NVIDIA Jetson Orin Nano/Orin NX 模块驱动的微�
 </div>
 
 :::danger
-Jetpack6 镜像文件大小约为 **16.7GB**，下载时间大约需要 60 分钟。请耐心等待下载完成。
+Jetpack6 镜像文件大小约为 **16.7GB**，下载时间约为 60 分钟。请耐心等待下载完成。
 :::
 
 :::info
@@ -370,7 +370,7 @@ Jetpack6 镜像文件大小约为 **16.7GB**，下载时间大约需要 60 分�
 ### 进入强制恢复模式
 
 :::info
-在我们进行安装步骤之前，需要确保开发板处于强制恢复模式。
+在进行安装步骤之前，我们需要确保开发板处于强制恢复模式。
 :::
 
 <div class="video-container">
@@ -379,7 +379,7 @@ Jetpack6 镜像文件大小约为 **16.7GB**，下载时间大约需要 60 分�
 
 <details>
 
-<summary> 分步说明 </summary>
+<summary> 分步指南 </summary>
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini_rec.png" />
@@ -392,7 +392,7 @@ Jetpack6 镜像文件大小约为 **16.7GB**，下载时间大约需要 60 分�
 
 </details>
 
-在 Linux 主机 PC 上，打开终端窗口并输入命令 `lsusb`。如果返回的内容根据您使用的 Jetson SoM 有以下输出之一，则表示开发板处于强制恢复模式。
+在 Linux 主机 PC 上，打开终端窗口并输入命令 `lsusb`。如果返回的内容根据您使用的 Jetson SoM 有以下输出之一，则开发板处于强制恢复模式。
 
 - 对于 Orin NX 16GB：0955:7323 NVidia Corp
 - 对于 Orin NX 8GB：0955:7423 NVidia Corp
@@ -422,7 +422,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 </div>
 
 :::caution
-免责声明：一键刷写脚本旨在使 jetpack 刷写更快速。当前版本是测试版，可能存在许多问题。希望您能理解。如果出现刷写问题，请按照下面的`逐步刷写设备`进行操作，并在我们的 [Discord Jetson 频道](https://discord.com/channels/862602258452578314/930732339624026152)中提供反馈。我们将及时修复这些问题，并在不久的将来改进此功能。
+免责声明：一键刷写脚本旨在使 jetpack 刷写更快。当前版本是测试版，可能存在许多问题。希望您能理解。如果出现刷写问题，请按照下面的 `逐步刷写设备` 进行操作，并在我们的 [Discord Jetson 频道](https://discord.com/channels/862602258452578314/930732339624026152) 中提供反馈。我们将及时修复这些问题，并在不久的将来改进此功能。
 :::
 
 </details>
@@ -437,7 +437,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**步骤 2:** 执行以下命令将 jetpack 系统刷写到 NVMe SSD：
+**步骤 2：** 执行以下命令将 jetpack 系统刷写到 NVMe SSD：
 
 ```bash
 cd mfi_xxxx
@@ -453,14 +453,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 刷写命令可能需要运行 2-10 分钟。
 :::
 
-**步骤3：** 使用主板上的 **带有 DisplayPort 功能的 USB Type-C** 将 J401 连接到显示器，并完成初始配置设置。
+**步骤 3：** 使用开发板上的 **USB Type-C with DisplayPort** 将 J401 连接到显示器，并完成初始配置设置：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
 </div>
 
 :::info
-请根据您的需要完成**系统配置**。
+请根据您的需要完成 **System Configuration**。
 :::
 
 **步骤 4（可选）：** 安装 Nvidia Jetpack SDK
@@ -475,18 +475,18 @@ sudo apt install nvidia-jetpack
 ## 硬件接口使用
 
 :::info
-如果您想了解更多关于硬件接口的详细规格和使用方法，请参考[此wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/)。
+如果您想了解更多关于硬件接口的详细规格和使用方法，请参考[此 wiki](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/)。
 :::
 
 ## 资源
 
 - [reComptuer Mini 数据手册](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf)
 - [reComptuer Mini 原理图](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_SCH.7z)
-- [reComputer Mini 3D文件](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_3D.7z)
-- [Seeed Jetson系列产品目录](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Seeed Studio边缘AI成功案例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson系列产品对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetson设备单页介绍](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [reComputer Mini 3D 文件](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_3D.7z)
+- [Seeed Jetson 系列目录](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Seeed Studio 边缘 AI 成功案例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Jetson 系列比较](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Jetson 设备单页介绍](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## 技术支持与产品讨论
 

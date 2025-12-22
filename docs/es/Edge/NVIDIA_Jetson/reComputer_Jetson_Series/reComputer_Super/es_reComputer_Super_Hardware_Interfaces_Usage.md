@@ -1,9 +1,9 @@
 ---
 description: Esta guía proporciona una descripción detallada de los componentes de hardware e interfaces del reComputer Super, incluyendo cómo conectar y usar dispositivos como cámaras CSI, puertos USB, varias interfaces M.2, mini PCIe, RTC, Ethernet, LEDs, ventiladores, CAN, puertos de extensión y HDMI, con instrucciones paso a paso y ejemplos de comandos.
-title: Hardware y Uso de Interfaces del reComputer Super
+title: Uso de Hardware e Interfaces del reComputer Super
 keywords:
   - reComputer Super
-  - Interfaces Usage
+  - Uso de Interfaces
   - Jetson
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /es/recomputer_jetson_super_hardware_interfaces_usage
@@ -16,7 +16,7 @@ last_update:
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super.png"/>  
 </div>
 
-Esta wiki presenta las diversas interfaces y hardware diferentes en el reComputer Super y cómo usarlos para expandir las ideas de tu proyecto.
+Esta wiki presenta los diversos componentes de hardware e interfaces del reComputer Super y cómo usarlos para expandir las ideas de tu proyecto.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-Bundle.html" target="_blank">
@@ -25,7 +25,7 @@ Esta wiki presenta las diversas interfaces y hardware diferentes en el reCompute
 
 ## Cámara CSI
 
-El reComputer Super soporta 4 cámaras MIPI CSI estándar para captura de imagen y video. Por favor sigue los pasos a continuación para conectar y probar tu cámara.
+El reComputer Super soporta 4 cámaras MIPI CSI estándar para captura de imágenes y video. Por favor, sigue los pasos a continuación para conectar y probar tu cámara.
 
 ### Conexión de Hardware
 
@@ -37,7 +37,7 @@ El reComputer Super soporta 4 cámaras MIPI CSI estándar para captura de imagen
 
 **Paso2.** Conecta la cámara MIPI CSI al puerto CSI apropiado en la placa del reComputer Super.
 
-**Paso3.** Asegura la cámara y asegúrate de que la conexión esté firme.
+**Paso3.** Asegura la cámara y garantiza que la conexión esté firme.
 
 ### Instrucciones de Uso
 
@@ -45,26 +45,26 @@ El reComputer Super soporta 4 cámaras MIPI CSI estándar para captura de imagen
 Antes de usar la cámara CSI, por favor asegúrate de haber instalado una versión de JetPack con los controladores de cámara necesarios.
 :::
 
-**Paso 1.** Verificar si la cámara es reconocida por el sistema:
+**Paso1.** Verifica si la cámara es reconocida por el sistema:
 
 ```bash
 ls /dev/video*
 ```
 
-**Paso 2.** (Opcional) Instala las utilidades de video si no están ya presentes:
+**Paso2.** (Opcional) Instala utilidades de video si no están presentes:
 
 ```bash
 sudo apt install v4l-utils
 ```
 
-**Paso 3.** Inicia la cámara y muestra el flujo de video usando el siguiente comando:
+**Paso3.** Inicia la cámara y muestra el flujo de video usando el siguiente comando:
 
 ```bash
 nvgstcapture-1.0 --sensor-id=0
 ```
 
 :::info
-Cambia `--sensor-id` al valor correspondiente si tienes varias cámaras.
+Cambia `--sensor-id` al valor apropiado si tienes múltiples cámaras.
 :::
 
 <div align="center">
@@ -85,7 +85,7 @@ Podemos ingresar `watch -n 1 lsusb -tv` en la terminal de Jetson para sondear lo
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/usb_lsusb.png"/>
 </div>
 
-Además, puedes probar la velocidad de lectura y escritura de dispositivos de almacenamiento USB usando el comando `dd`:
+Adicionalmente, puedes probar la velocidad de lectura y escritura de dispositivos de almacenamiento USB usando el comando `dd`:
 
 - **Lectura:**
 
@@ -97,7 +97,7 @@ Además, puedes probar la velocidad de lectura y escritura de dispositivos de al
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/usb_read.png"/>
 </div>
 
-- **Escribir:**
+- **Escritura:**
 
   ```bash
   sudo dd if=/dev/zero of=/dev/sda bs=1024M count=5 conv=fdatasync
@@ -109,7 +109,7 @@ Además, puedes probar la velocidad de lectura y escritura de dispositivos de al
 
 ### Puerto USB 2.0 Type-C
 
-Usando este puerto serie, a través del cable de datos USB C, puedes monitorear la información de depuración de entrada y salida en el lado del PC.
+Usando este puerto serie, a través del cable de datos USB C, puedes monitorear la información de depuración de entrada y salida en el lado de la PC.
 
 **Paso1.** Cambia el interruptor al modo de depuración.
 
@@ -117,19 +117,19 @@ Usando este puerto serie, a través del cable de datos USB C, puedes monitorear 
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/debug.jpg"/>
 </div>
 
-**Paso2.** Conecta el PC a través de un cable de datos USB, descarga el [Controlador CP210X](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) en tu PC.
+**Paso2.** Conecta la PC a través de un cable de datos USB, descarga el [Controlador CP210X](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads) en tu PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/download_driver.png"/>
 </div>
 
-**Paso3.** Conecta el PC a través de un cable de datos USB, extrae el archivo descargado e instala el controlador en tu PC.
+**Paso3.** Conecta la PC a través de un cable de datos USB, extrae el archivo descargado e instala el controlador en tu PC.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/install_driver.png"/>
 </div>
 
-**Paso4.** Abre el Administrador de dispositivos en tu PC con Windows y verifica el número de puerto COM asignado al reComputer Super. Debería aparecer bajo "Puertos (COM y LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número de puerto COM.
+**Paso4.** Abre el Administrador de Dispositivos en tu PC con Windows y verifica el número de puerto COM asignado al reComputer Super. Debería aparecer bajo "Ports (COM & LPT)" como "Silicon Labs CP210x USB to UART Bridge (COMX)", donde X es el número del puerto COM.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/debug1.png"/>
@@ -192,7 +192,7 @@ dd if=/dev/zero of=/home/seeed/ssd/test bs=1024M count=5 conv=fdatasync
 </div>
 
 :::danger
-Por favor, ejecuta el comando `sudo rm /home/seeed/ssd/test` para eliminar los archivos de caché después de que la prueba haya finalizado.
+Por favor ejecuta el comando `sudo rm /home/seeed/ssd/test` para eliminar los archivos de caché después de que la prueba esté completa.
 :::
 
 ## M.2 Key E
@@ -207,7 +207,7 @@ La interfaz M.2 Key E es una interfaz de datos compacta y de alta velocidad dise
 
 ### Instrucciones de Uso
 
-Después de instalar el módulo Wi-Fi y encender el dispositivo, podemos configurar los ajustes de Wi-Fi y Bluetooth del dispositivo.
+Después de instalar el módulo Wi-Fi y encender el dispositivo, podemos configurar las configuraciones de Wi-Fi y Bluetooth del dispositivo.
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-wifi-bluetooth-test.gif"/>
@@ -245,33 +245,33 @@ El reComputer super viene con un mini-PCIe para módulo LTE 4G.
 </div>
 
 :::note
-Si deseas retirar la tarjeta SIM, empuja la tarjeta para activar el resorte interno y que la SIM salga de la ranura.
+Si quieres remover la tarjeta SIM, empuja la tarjeta hacia adentro para activar el resorte interno para que la SIM salga de la ranura
 :::
 
 ### Instrucciones de Uso
 
-**Paso 1.** Instalar minicom:
+**Paso1.** Instala minicom:
 
 ```bash
 sudo apt update
 sudo apt install minicom -y
 ```
 
-**Paso 2.** Ingresa a la consola serie del módulo 4G conectado para que podamos introducir comandos AT e interactuar con el módulo 4G:
+**Paso2.** Ingresa a la consola serie del módulo 4G conectado para que podamos ingresar comandos AT e interactuar con el módulo 4G:
 
 ```bash
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-**Paso 3.** Presiona Ctrl+A y luego presiona E para activar el eco local.
+**Paso3.** Presiona Ctrl+A y luego presiona E para activar el eco local.
 
-**Paso 4.** Ingresa el comando "AT" y presiona enter. Si ves la respuesta como "OK", el módulo 4G está funcionando correctamente.
+**Paso4.** Ingresa el comando "AT" y presiona enter. Si ves la respuesta como "OK", el módulo 4G está funcionando correctamente.
 
 <div align="center">
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/>
 </div>
 
-**Paso 5.** Ingresa el comando "ATI" para verificar la información del módulo.
+**Paso5.** Ingresa el comando "ATI" para verificar la información del módulo.
 
 <div align="center">
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/>
@@ -289,7 +289,7 @@ El reComputer Super cuenta con interfaces RTC, proporcionando cronometraje preci
 
 ### Conexión de Hardware
 
-Conecta una batería de celda tipo moneda CR1225 de 3V al socket RTC en la placa como se muestra a continuación. Asegúrate de que el extremo **positivo (+)** de la batería esté mirando hacia arriba.
+Conecta una batería de celda de moneda CR1225 de 3V al socket RTC en la placa como se muestra a continuación. Asegúrate de que el extremo **positivo (+)** de la batería esté mirando hacia arriba.
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc.jpg"/>
@@ -297,21 +297,21 @@ Conecta una batería de celda tipo moneda CR1225 de 3V al socket RTC en la placa
 
 ### Instrucciones de Uso
 
-**Paso 1.** Conecta una batería RTC como se mencionó anteriormente.
+**Paso1.** Conecta una batería RTC como se mencionó anteriormente.
 
-**Paso 2.** Enciende el reComputer Super.
+**Paso2.** Enciende el reComputer Super.
 
-**Paso 3.** En el Escritorio de Ubuntu, haz clic en el menú desplegable en la esquina superior derecha, navega a `Configuración > Fecha y Hora`, conéctate a una red mediante un cable Ethernet y selecciona **Fecha y Hora Automática** para obtener la fecha/hora automáticamente.
+**Paso3.** En el Escritorio de Ubuntu, haz clic en el menú desplegable en la esquina superior derecha, navega a `Settings > Date & Time`, conéctate a una red a través de un cable Ethernet y selecciona **Automatic Date & Time** para obtener la fecha/hora automáticamente.
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/>
 </div>
 
 :::note
-Si no te has conectado a internet mediante Ethernet, puedes configurar manualmente la fecha y la hora aquí.
+Si no te has conectado a internet a través de Ethernet, puedes establecer manualmente la fecha/hora aquí.
 :::
 
-**Paso 4.** Abre una ventana de terminal y ejecuta el siguiente comando para verificar la hora del reloj de hardware:
+**Paso4.** Abre una ventana de terminal y ejecuta el siguiente comando para verificar la hora del reloj de hardware:
 
 ```bash
 cat /sys/devices/platform/bpmp/bpmp\:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
@@ -321,7 +321,7 @@ cat /sys/devices/platform/bpmp/bpmp\:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/ti
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc_time1(1).png"/>
 </div>
 
-**Paso 5.** Desconecta la conexión de red y reinicia el dispositivo. Encontrarás que la hora del sistema ha perdido energía pero aún funciona normalmente.
+**Paso 5.** Desconecta la conexión de red y reinicia el dispositivo. Encontrarás que el tiempo del sistema ha perdido energía pero aún funciona normalmente.
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc_time2.png"/>
 </div>
@@ -336,17 +336,17 @@ Hay 2 puertos RJ45 Gigabit Ethernet en reComputer Super que soportan 10/100/1000
 
 Hay 2 LEDs (verde y amarillo) en cada puerto Ethernet:
 
-- LED verde: Se enciende solo cuando está conectado a una red de 1000M/10G.
-- LED amarillo: Muestra el estado de actividad de la red.
+- LED Verde: Se enciende solo cuando está conectado a una red de 1000M/10G.
+- LED Amarillo: Muestra el estado de actividad de la red.
 
-Prueba la velocidad de Ethernet:
+Probar la velocidad de Ethernet:
 
 ```bash
 iperf3 -c 192.168.254.100 -R
 ```
 
 :::info
--c `<dirección IP>` es la dirección IP del servidor, y -R significa modo inverso.
+-c `<ip address>` es la dirección IP del servidor, y -R significa modo inverso.
 :::
 
 <div align="center">
@@ -363,7 +363,7 @@ iperf3 -c 192.168.254.100
 
 ## Indicadores LED
 
-El reComputer Super está equipado con 2 indicadores LED (PWR y ACT) para mostrar el estado de alimentación y la actividad del sistema, permitiendo a los usuarios monitorear el funcionamiento del dispositivo en tiempo real.
+El reComputer Super está equipado con 2 indicadores LED (PWR y ACT) para mostrar el estado de energía y la actividad del sistema, permitiendo a los usuarios monitorear la operación del dispositivo en tiempo real.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/led.jpg"/>
@@ -387,159 +387,160 @@ El reComputer Super está equipado con dos tipos de conectores de ventilador par
 Para más información, por favor consulta [aquí](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control).
 :::
 
-**Establecer velocidad del ventilador:**
+**Configurar velocidad del ventilador:**
 
   ```bash
   sudo -i
   echo 100 > /sys/bus/platform/devices/pwm-fan/hwmon/hwmon1/pwm1
   ```
 
-Además, podemos configurar manualmente la velocidad del ventilador usando la herramienta jtop.
+Adicionalmente, podemos configurar manualmente la velocidad del ventilador usando la herramienta jtop.
 
 ## CAN
 
-La interfaz CAN (Controller Area Network) es un protocolo de comunicación serie utilizado para la comunicación entre microcontroladores y dispositivos, que presenta alta velocidad, fuerte capacidad anti-interferencia y soporte para comunicación multi-nodo.
+La serie reComputer Super proporciona una interfaz CAN donde la señal CAN se emite directamente desde el SOM a niveles TTL/CMOS, que es una señal diferencial no estándar que requiere un transceptor CAN externo para conectarse a un bus CAN estándar; soporta formatos de trama CAN FD, permitiendo longitud de datos extendida y tasas de datos más altas, haciéndolo adecuado para automatización industrial, robótica, prototipado automotriz y otras aplicaciones que requieren comunicación confiable en tiempo real.
 
 ### Conexión de Hardware
 
-- Por favor, tenga en cuenta la secuencia de las líneas conectadas (R OUT ↔ RX, D IN ↔ TX), y luego conviértalas a CAN_L y CAN_H a través del transceptor de bus CAN.
+Por favor nota la secuencia de las líneas conectadas (R OUT ↔ RX, D IN ↔ TX), y luego conviértelas a CAN_L y CAN_H a través del transceptor del bus CAN.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can1.png"/>
 </div>
 
-- [Descarga de Herramienta CAN para PC](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)
-- Bus CAN de nivel CMOS 3.3V (no diferencial)
+Según la [Hoja de Datos de reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf), conecta el calentador CAN al transceptor del bus CAN de la manera correspondiente, luego conecta el transceptor del bus CAN al [Adaptador Analizador USB a CAN](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html), y finalmente conéctalo al Jetson para pruebas de comunicación de bucle cerrado.
 
-:::note
-La interfaz CAN utiliza una fuente de alimentación aislada, lo que significa que la señal de tierra de los dispositivos externos conectados a la interfaz CAN debe conectarse al pin **GND_ISO**.
-:::
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_port.png"/>
+</div>
 
-Aquí hemos usado [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) con Cable USB disponible en nuestro Bazaar.
+
+<div align="center">
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_connect.png"/>
+</div>
 
 ### Instrucciones de Uso
 
-**Paso1.** Descarga el controlador para el adaptador USB a CAN que estés usando desde el sitio web del fabricante e instálalo. En nuestro caso, según el adaptador que usamos, los controladores se pueden encontrar [aquí](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver).
-
-**Paso2.** Algunos adaptadores también vienen con el software necesario para la PC para comunicarse con el dispositivo CAN. En nuestro caso, según el adaptador que usamos, hemos descargado e instalado el software que se puede encontrar [aquí](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program).
-
-**Paso3.** Inicializa la interfaz CAN de Jetson.
-
-Crea un nuevo archivo llamado **`can_init.sh`** en Jetson y escribe el siguiente contenido:
+**Paso 1.** Configurar y abrir can0:
 
 ```bash
-#!/bin/bash
-
-sudo gpioset gpiochip2 9=0 
-sudo gpioset gpiochip2 8=0
-
-sudo busybox devmem 0x0c303018 w 0xc458
-sudo busybox devmem 0x0c303010 w 0xc400
-sudo busybox devmem 0x0c303008 w 0xc458
-sudo busybox devmem 0x0c303000 w 0xc400
-
-sudo modprobe can
-sudo modprobe can_raw
-sudo modprobe mttcan
-
 sudo ip link set can0 down
-sudo ip link set can1 down
-
-sudo ip link set can0 type can bitrate 125000
-sudo ip link set can1 type can bitrate 125000
+sudo ip link set can0 type can bitrate 500000
 sudo ip link set can0 up
-sudo ip link set can1 up
-
 ```
-
-Luego, ejecuta el archivo que acabamos de crear en la ventana del terminal de Jetson:
-
+**Paso 2.** Prueba de comunicación.
+Abre una terminal para recibir señales.
 ```bash
-sudo apt-get install gpiod
-cd <path to can_init.sh>
-sudo chmod +x can_init.sh
-./can_init.sh
+candump can0
 ```
 
-**Paso 4.** Escribe ifconfig en la terminal y verás que la interfaz CAN está habilitada.
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/can.png"/>
-</div>
-
-**Paso 5.** Abre el software CAN que instalaste anteriormente. En este caso, abriremos el software que instalamos según el adaptador CAN que estamos usando.
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/>
-</div>
-
-**Paso 6.** Conecta el adaptador USB a CAN al PC y abre el **Administrador de dispositivos** buscándolo en la barra de búsqueda de Windows. Ahora verás el adaptador conectado bajo **Puertos (COM y LPT)**. Anota el puerto serie que aparece aquí. Según la imagen de abajo, el puerto serie es **COM9**.
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/>
-</div>
-
-**Paso 7.** Abre el software CAN, haz clic en **Refresh** junto a la sección **COM**, haz clic en el menú desplegable y selecciona el puerto serie según el adaptador conectado. Mantén el **COM bps** en el valor predeterminado y haz clic en **Open**.
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/>
-</div>
-
-**Paso 8.** Mantén el **Mode** y **CAN bps** en los valores predeterminados, cambia el **Type** a **Standard frame** y haz clic en **Set and Start**.
-
-<div align="center">
-  <img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/>
-</div>
-
-**Paso 9.** En reComputer Industrial, ejecuta el siguiente comando para enviar una señal CAN al PC:
-
-```sh
+**Paso 3.** Abre otra terminal para enviar la señal.
+```bash
 cansend can0 123#abcdabcd
 ```
-
-Ahora verás la señal anterior recibida por el software como se muestra a continuación
-
 <div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/46.png"/>
-</div>
-
-**Paso 10.** En reComputer Industrial, ejecuta el siguiente comando para esperar a recibir señales CAN desde la PC:
-
-```sh
-candump can0 &
-```
-
-**Paso 11.** En el software CAN, haz clic en **Send a single frame**:
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/>
-</div>
-
-Ahora verás que es recibido por reComputer Industrial de la siguiente manera:
-
-<div align="center">
-  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/>
+  <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/can_loop.png"/>
 </div>
 
 ## Puerto de Extensión
 
-El Puerto de Extensión incluye un conector de extensión de 40 pines y un conector de control y UART de 12 pines, proporcionando opciones de conectividad versátiles para periféricos e interfaces de comunicación.
+El Puerto de Extensión incluye un encabezado de extensión de 40 pines y un encabezado de control y UART de 12 pines, proporcionando opciones de conectividad versátiles para periféricos e interfaces de comunicación.
 
-Conector de Extensión de 40 Pines
+### Encabezado de Extensión de 40 Pines
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40pin3.jpg"/>
 </div>
 
-El Conector de Extensión de 40 Pines es una interfaz de expansión versátil que proporciona varias funciones como GPIO, I2C, SPI, y UART, facilitando la conexión de sensores, periféricos u otros módulos.
+El Encabezado de Extensión de 40 Pines es una interfaz de expansión versátil que proporciona varias funciones como GPIO, I2C, SPI y UART, haciéndolo conveniente para conectar sensores, periféricos u otros módulos.
+
+El detalle del encabezado de 40 pines se muestra a continuación:
+
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+<thead>
+<tr>
+  <th>Pin del Encabezado</th>
+  <th>Señal</th>
+  <th>Pin BGA</th>
+  <th>Función Predeterminada</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>3.3V</td><td>-</td><td>Suministro Principal de 3.3V</td></tr>
+<tr><td>2</td><td>5V</td><td>-</td><td>Suministro Principal de 5V</td></tr>
+<tr><td>3</td><td>I2C1_SDA</td><td>PDD.02</td><td>Datos I2C #1</td></tr>
+<tr><td>4</td><td>5V</td><td>-</td><td>Suministro Principal de 5V</td></tr>
+<tr><td>5</td><td>I2C1_SCL</td><td>PDD.01</td><td>Reloj I2C #1</td></tr>
+<tr><td>6</td><td>GND</td><td>-</td><td>Tierra</td></tr>
+<tr><td>7</td><td>GPIO09</td><td>PAC.06</td><td>E/S de Propósito General</td></tr>
+<tr><td>8</td><td>UART1_TXD</td><td>PR.02</td><td>Transmisión UART #1</td></tr>
+<tr><td>9</td><td>GND</td><td>-</td><td>Tierra</td></tr>
+<tr><td>10</td><td>UART1_RXD</td><td>PR.03</td><td>Recepción UART #1</td></tr>
+<tr><td>11</td><td>UART1_RTS</td><td>PR.04</td><td>Solicitud de Envío UART #1</td></tr>
+<tr><td>12</td><td>I2S0_SCLK</td><td>PH.07</td><td>Reloj de Audio I2S #0</td></tr>
+<tr><td>13</td><td>SPI1_SCK</td><td>PY.00</td><td>Reloj SPI #1</td></tr>
+<tr><td>14</td><td>GND</td><td>-</td><td>Tierra</td></tr>
+<tr><td>15</td><td>GPIO12</td><td>PN.01</td><td>E/S de Propósito General</td></tr>
+<tr><td>16</td><td>SPI1_CS1</td><td>PY.04</td><td>Selección de Chip SPI #1 #1</td></tr>
+<tr><td>17</td><td>3.3V</td><td>-</td><td>Suministro Principal de 3.3V</td></tr>
+<tr><td>18</td><td>SPI1_CS0</td><td>PY.03</td><td>Selección de Chip SPI #1 #0</td></tr>
+<tr><td>19</td><td>SPI0_MOSI</td><td>PZ.05</td><td>SPI #0 Maestro Salida / Esclavo Entrada</td></tr>
+<tr><td>20</td><td>GND</td><td>-</td><td>Tierra</td></tr>
+<tr><td>21</td><td>SPI0_MISO</td><td>PZ.04</td><td>SPI #0 Maestro Entrada / Esclavo Salida</td></tr>
+<tr><td>22</td><td>SPI1_MISO</td><td>PY.01</td><td>SPI #1 Maestro Entrada / Esclavo Salida</td></tr>
+<tr><td>23</td><td>SPI0_SCK</td><td>PZ.03</td><td>Reloj SPI #0</td></tr>
+<tr><td>24</td><td>SPI0_CS0</td><td>PZ.06</td><td>Selección de Chip SPI #0 #0</td></tr>
+<tr><td>25</td><td>GND</td><td>-</td><td>Tierra</td></tr>
+<tr><td>26</td><td>SPI0_CS1</td><td>PZ.07</td><td>Selección de Chip SPI #0 #1</td></tr>
+<tr><td>27</td><td>ID_I2C_SDA (I2C0_SDA)</td><td>PDD.00</td><td>Datos I2C #0</td></tr>
+<tr><td>28</td><td>ID_I2C_SCL (I2C0_SCL)</td><td>PCC.07</td><td>Reloj I2C #0</td></tr>
+<tr><td>29</td><td>GPIO01</td><td>PQ.05</td><td>E/S de Propósito General</td></tr>
+<tr><td>30</td><td>GND</td><td>-</td><td>Tierra</td></tr>
+<tr><td>31</td><td>GPIO11</td><td>PQ.06</td><td>E/S de Propósito General</td></tr>
+<tr><td>32</td><td>GPIO07</td><td>PG.06</td><td>E/S de Propósito General</td></tr>
+<tr><td>33</td><td>GPIO13</td><td>PG.00</td><td>Reservado del Sistema</td></tr>
+<tr><td>34</td><td>GND</td><td>-</td><td>Tierra</td></tr>
+<tr><td>35</td><td>I2S0_LRCK (I2S0_FS)</td><td>PI.02</td><td>Sincronización de Trama de Audio I2S #0</td></tr>
+<tr><td>36</td><td>UART1_CTS</td><td>PR.05</td><td>Listo para Recibir UART #1</td></tr>
+<tr><td>37</td><td>SPI1_MOSI</td><td>PY.02</td><td>SPI #1 Maestro Salida / Esclavo Entrada</td></tr>
+<tr><td>38</td><td>I2S0_SDIN (I2S0_DIN)</td><td>PI.01</td><td>Entrada de Datos de Audio I2S #0</td></tr>
+<tr><td>39</td><td>GND</td><td>-</td><td>Tierra</td></tr>
+<tr><td>40</td><td>I2S0_SDOUT (I2S0_DOUT)</td><td>PI.00</td><td>Salida de Datos de Audio I2S #0</td></tr>
+</tbody>
+</table>
+</div>
+
 
 ### Instrucciones de Uso
 
-**Habilitar Conector de 40 Pines:**
+Ejemplo simple de control GPIO
+```bash
+#install
+sudo apt-get install gpiod
 
-  ```bash
+# Search for the corresponding number for the pin
+sudo gpiofind PH.00
+gpiochip0 43
+
+#Set the pin to H, then press Enter to release.
+sudo gpioset --mode=wait 0 43=1
+
+#Set the Pin to L, then press Enter to release.
+sudo gpioset --mode=wait 0 43=0
+
+#gpio 0_119 Low level maintained for 2 seconds
+sudo gpioset --mode=time -s 2 0 119=0
+
+#input
+sudo gpioget 0 43
+```
+**Si quieres configurar el GPIO que no está habilitado por defecto, por favor consulta los siguientes pasos:**
+
+Habilitar Encabezado de 40 Pines:
+```bash
   sudo /opt/nvidia/jetson-io/jetson-io.py
-  ```
+```
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_1.png"/>
@@ -554,144 +555,65 @@ El Conector de Extensión de 40 Pines es una interfaz de expansión versátil qu
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_3.png"/>
 </div>
 
-Guarda y reinicia.
+Guardar y reiniciar.
 
-**Configura el GPIO no controlado a través de la configuración de Overlay:**
+**Configurar el GPIO no controlado a través de la configuración Overlay:**
 
-**Paso 1.** Descarga y extrae el [paquete de overlay](https://drive.weixin.qq.com/s?k=AGEAZwfLABEmqim3hXAXcApwZFAKM) a tu dispositivo jetson.
+**Paso 1.** Descarga y extrae el [paquete overlay](https://files.seeedstudio.com/wiki/overlay.zip) a tu dispositivo jetson.
+```bash
+wget https://files.seeedstudio.com/wiki/overlay.zip
+```
+**Paso 2.** Copia build.sh y gpio-overlay.dts a Jetson.
 
-**Paso 2.** Copia build.sh y gpio-overlay.dts al Jetson.
-
-**Paso 3.** Ejecuta sudo ./build.sh.
-
-**Paso 4.** Ejecuta sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "seeed gpio config Overlay".
-
-:::note
-Esto debe ejecutarse solo una vez y no será necesario volver a ejecutarlo posteriormente.
+**Paso 3.** Edita el archivo `pio-overlay.dts` y modifícalo para incluir las definiciones de pinmux para los pines que necesites.
+:::info
+más detalles puedes verlos en [jetson-orin-nx-and-orin-nano-series-pinmux-config](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template)
 :::
 
+**Paso 3.**   Habilita la configuración de overlay.
 ```bash
-cd overlay/
-ls -l
-#total 16
-#-rwxrwxr-x 1 seeed seeed  147 Sep  9 07:33 build.sh
-#-rw-r--r-- 1 root  root  1353 Sep  9 07:36 gpio-overlay.cpp.dts
-#-rw-r--r-- 1 root  root  1214 Sep  9 07:36 gpio-overlay.dtbo
-#-rw-rw-r-- 1 seeed seeed 1879 Sep  9 07:35 gpio-overlay.dts
-sudo ./build.sh
+sudo bash ./build.sh
+#The following command needs to be executed only once.
 sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "seeed gpio config Overlay"
-#Modified /boot/extlinux/extlinux.conf to add following DTBO entries:
-#/boot/gpio-overlay.dtbo
-#Reboot system to reconfigure.
-
 ```
-
-Los siguientes son ejemplos de comandos para operar pines GPIO usando el kit de herramientas gpiod.
-
-**Paso 1.** Instalar gpiod:
-
-  ```bash
-  sudo apt-get install gpiod
-  ```
-
-**Paso 2.** Encuentra el número de pin:
-
-  ```bash
-  sudo gpiofind PH.00
-  ```
-
-**Paso 3.** Establecer el pin en alto:
-
-  ```bash
-  sudo gpioset --mode=wait 0 43=1
-  ```
-
-**Paso 4.** Establecer el pin en bajo:
-
-  ```bash
-  sudo gpioset --mode=wait 0 43=0
-  ```
-
-**Paso 5.** Leer entrada:
-
-  ```bash
-  gpioget 0 4
-  ```
-
-Ejemplo de Script de Control GPIO
-
+**Paso 4.** Reinicia el dispositivo para que la configuración surta efecto.
 ```bash
-#!/bin/bash
-
-# GPIO Control Script
-# Usage:
-#   gpio_ctrl.sh <pin_name> <command>
-# Commands:
-#   get    - Read the current pin level
-#   set    - Drive the pin high
-#   clear  - Drive the pin low
-
-# Parameter validation
-if [ $# -ne 2 ]; then
-    echo "Usage: $0 <pin_name> <command>"
-    echo "Commands:"
-    echo "  get    - Read pin state"
-    echo "  set    - Set to high level"
-    echo "  clear  - Set to low level"
-    exit 1
-fi
-
-# Map and parse arguments
-PIN_NAME=$1
-COMMAND=$2
-
-# Locate the GPIO
-GPIO_INFO=$(gpiofind "$PIN_NAME" 2>/dev/null)
-if [ -z "$GPIO_INFO" ]; then
-    echo "Hardware alert: GPIO pin $PIN_NAME not found"
-    exit 1
-fi
-
-# Split info into chip and offset
-GPIO_CHIP=$(echo "$GPIO_INFO" | cut -d' ' -f1 | tr -d 'gpiochip')
-GPIO_OFFSET=$(echo "$GPIO_INFO" | awk '{print $2}')
-
-# Execute command
-case $COMMAND in
-    "get")
-        gpioget $GPIO_CHIP $GPIO_OFFSET
-        ;;
-    "set")
-        echo "Setting $PIN_NAME to high level..."
-        gpioset --mode=wait $GPIO_CHIP $GPIO_OFFSET=1
-        ;;
-    "clear")
-        echo "Setting $PIN_NAME to low level..."
-        gpioset --mode=wait $GPIO_CHIP $GPIO_OFFSET=0
-        ;;
-    *)
-        echo "Error: Invalid command. Please use get, set, or clear."
-        exit 1
-        ;;
-esac
-
+sudo reboot
+```
+**Paso 5.** Ahora puedes controlar los pines que acabas de modificar mediante `gpioset`.
+```bash
+#For example px7
+sudo gpioset --mode=wait 0 121=1
 ```
 
-Cabecera de Control y UART de 12 Pines
+
+### Conector de Control de 12 Pines y UART
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/12pin2.jpg"/>
 </div>
 
-La Cabecera de Control y UART de 12 Pines proporciona señales de control esenciales e interfaces de comunicación UART para conectar y gestionar dispositivos externos.
+El Conector de Control de 12 Pines y UART proporciona señales de control esenciales e interfaces de comunicación UART para conectar y gestionar dispositivos externos.
+
+:::note
+Las funciones de los pines de reComputer Super son similares a las de reComputer Classic. Para información más detallada, consulta [aquí](https://wiki.seeedstudio.com/es/J401_carrierboard_Hardware_Interfaces_Usage/#gpio).
+:::
 
 ## HDMI
 
 reComputer Super está equipado con un puerto HDMI 2.1 Tipo A, que soporta una resolución de 7680x4320. Esto permite una salida de video de ultra alta definición.
 
+## Recursos
+- [Manual de Usuario y Hoja de Datos](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_super_user_manual.pdf)
+- [Informe de Prueba de Temperatura](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_Super_Temperature_Test_Report.pdf)
+- [Esquemático](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401_v1.0_SCH_PDF_250401.pdf)
+- [Archivo 3D](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Super%20J401.stp)
+- [Documento Mecánico-reComputer Super](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super.dxf)
+- [Documento Mecánico-reComputer Super PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Super_PCBA.dxf)
+
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,5 +1,5 @@
 ---
-description: このwikiでは、高度なビジュアルSLAMアプリケーション用にOrbbec Gemini2 RGB-Dカメラを使用してreComputer Jetson上でORB-SLAM3アルゴリズムをセットアップして実行するための詳細な手順を提供します。
+description: このwikiでは、高度なビジュアルSLAMアプリケーション向けに、Orbbec Gemini2 RGB-Dカメラを使用してreComputer Jetson上でORB-SLAM3アルゴリズムをセットアップし実行するための詳細な手順を提供します。
 title: ORB-SLAM3 with Orbbec Gemini2
 keywords:
 - ORB-SLAM3
@@ -27,13 +27,13 @@ Orbbec Gemini 2は、デュアルアイ構造光深度センサーと統合さ�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Orbbec-Gemini-2-3D-Camera-p-6464.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
 ## はじめに
 
 <div style={{ textAlign: "justify" }}>
-[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)は、単眼、ステレオ、RGB-Dカメラ用の高度なビジュアルSLAMアルゴリズムです。堅牢なトラッキングとマッピングのためにORB特徴を使用し、ループクロージャと再ローカライゼーションをサポートし、ロボティクス、AR/VR、自律ナビゲーションに高い精度と効率を提供します。このwikiでは、高度なビジュアルSLAMアプリケーション用にOrbbec Gemini2 RGB-Dカメラを使用してreComputer Jetsonシリーズ上でORB-SLAM3をセットアップして実行するための包括的な手順を提供します。
+[ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)は、単眼、ステレオ、RGB-Dカメラ用の高度なビジュアルSLAMアルゴリズムです。堅牢なトラッキングとマッピングのためにORB特徴を使用し、ループクロージャと再ローカライゼーションをサポートし、ロボティクス、AR/VR、自律ナビゲーション向けに高い精度と効率を提供します。このwikiでは、高度なビジュアルSLAMアプリケーション向けに、Orbbec Gemini2 RGB-Dカメラを使用してreComputer Jetson シリーズ上でORB-SLAM3をセットアップし実行するための包括的な手順を提供します。
 </div>
 
 ## 前提条件
@@ -114,7 +114,7 @@ sudo make install
 ```
 
 :::warning
-OpenEXR関連のコンパイルエラーが発生した場合、ソースコードを修正する必要があるかもしれません：
+OpenEXR関連のコンパイルエラーが発生した場合、ソースコードを修正する必要があります：
 
 `./components/pango_image/src/image_io_exr.cpp`で、以下を置き換えます：
 
@@ -144,7 +144,7 @@ git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
 cd ORB_SLAM3
 ```
 
-ORB-SLAM3は新しいC++標準との互換性の問題がある可能性があります。`monotonic_clock`の問題を修正します：
+ORB-SLAM3は新しいC++標準との互換性の問題がある場合があります。`monotonic_clock`の問題を修正します：
 
 ```bash
 # Replace monotonic_clock with steady_clock in all source files
@@ -152,7 +152,7 @@ find Examples -name "*.cc" -exec sed -i 's/monotonic_clock/steady_clock/g' {} \;
 ```
 
 :::info
-例えば、`Examples/Stereo/stereo_euroc.cc`で：
+例えば、`Examples/Stereo/stereo_euroc.cc`では：
 
 ```cpp
 // Change from:
@@ -175,13 +175,13 @@ std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/v_tool.png" />
 </div>
 
-インストールが正しく完了していれば、上記の画像に示されているようなウィンドウが正常に開くことができます。
+インストールが正しく完了していれば、上記の画像に示すようなウィンドウが正常に開けます。
 
 **ステップ 5.** CMakeLists.txtを修正します
 
-プロジェクトをOrbbec SDKと互換性があるようにCMakeLists.txtファイルを修正します。以下の完全なCMakeList.txt設定を直接コピーしてください：
+プロジェクトをOrbbec SDKと互換性を持たせるためにCMakeLists.txtファイルを修正します。以下の完全なCMakeList.txt設定を直接コピーしてください：
 :::info
-修正が必要です：`set(ORBBEC_SDK_PATH "/home/seeed/demo/OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64")`を自分でインストールしたSDKのパスに変更してください。
+修正が必要な箇所：`set(ORBBEC_SDK_PATH "/home/seeed/demo/OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64")`を、あなた自身がSDKをインストールしたパスに変更してください。
 :::
 <details>
 <summary> CMakeLists.txt </summary>
@@ -1052,7 +1052,7 @@ ros2 launch orbbec_camera gemini2.launch.py
 ```
 
 :::note
-カメラデータトピックが正常にパブリッシュされているかを観察することで、カメラノードが正常に起動できるかを確認できます。
+カメラデータトピックが正常に公開されているかどうかを観察することで、カメラノードが正常に起動できるかどうかを確認できます。
 <div align="center">
     <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/camera_topic.png" />
@@ -1079,7 +1079,7 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 
 :::note
 
-- `--size 8x6` は内側のコーナー数を指します（8×6 = 9×7グリッドの48コーナー）
+- `--size 8x6` は内側の角の数を指します（8×6 = 9×7グリッドの48角）
 - `--square 0.025` は正方形のサイズをメートル単位で指します（25mm）
 - 異なる角度から画像を撮影するためにカメラを動かしてください
 
@@ -1098,7 +1098,7 @@ ros2 run camera_calibration cameracalibrator --size 8x6 --square 0.025 \
 
 **ステップ 5.** カメラYAMLファイルの設定
 
-ORB-SLAM3プロジェクトの`Examples/RGB-D/`フォルダ下に、Orbbec Gemini2カメラ用の`Orbbec_Gemini2.yaml`という名前のパラメータ設定ファイルを作成します。
+ORB-SLAM3プロジェクトの`Examples/RGB-D/`フォルダ下に、Orbbec Gemini2カメラ用のパラメータ設定ファイル`Orbbec_Gemini2.yaml`を作成してください。
 
 <details>
 <summary> Orbbec_Gemini2.yaml </summary>
@@ -1205,10 +1205,11 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 - [Orbbec SDK v2 API ガイド](https://orbbec.github.io/docs/OrbbecSDKv2_API_User_Guide/source/3_Application_Guide/Application_Guide.html)
 - [Orbbec ROS2 ドライバー](https://github.com/orbbec/OrbbecSDK_ROS2)
 - [ORB-SLAM3 リポジトリ](https://github.com/UZ-SLAMLab/ORB_SLAM3)
+- [ROS SDK](https://wiki.seeedstudio.com/ja/orbbec_depth_camera_on_ros/)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

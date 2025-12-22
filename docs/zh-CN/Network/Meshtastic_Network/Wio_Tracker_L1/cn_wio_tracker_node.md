@@ -7,13 +7,17 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /cn/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 11/5/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.jpg" alt="pir" width={600} height="auto" /></p>
-
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Tracker-L1-p-6453.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 </font></span></strong>
+    </a>
+</div>
 Wio Tracker L1 系列是一款低功耗、高度可扩展的 [Meshtastic®](https://meshtastic.org/) 节点，具有 LoRa（862–930 MHz）、用于高效处理的 nRF52840 和用于精确位置跟踪的 L76K GPS 模块。设计灵活，支持 OLED 和 E-Ink 显示屏，以及太阳能电池板和电池供电，使其成为各种物联网和离网应用的理想选择。
 
 ## L1 系列型号
@@ -74,10 +78,11 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">1 MB 闪存和 256 kB RAM</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="2">无线</td>
-    <td colspan="1">
-      LoRa：基于 <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>，支持 862-930MHz
-    </td>
+    <td colspan="1" rowspan="3">无线</td>
+    <td colspan="1">LoRa：基于 <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>，支持 862-930MHz</td>
+  </tr>
+   <tr>
+  <td colspan="1">L1 Pro 的 LoRa 天线：3dBi</td>
   </tr>
   <tr>
     <td colspan="1">蓝牙 5.0</td>
@@ -94,7 +99,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">镀通孔（PTH）：UART/IIC/GPIO/模拟</td>
   </tr>
   <tr>
-    <td colspan="1">为 SWD 预留焊接焊盘</td>
+    <td colspan="1">为 SWD 预留的焊接焊盘</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="3">电源输入</td>
@@ -107,7 +112,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">锂电池（1mm 2p JST）：3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">OLED 屏幕</td>
+    <td colspan="1" rowspan="3">[OLED 屏幕](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">尺寸：1.3 英寸</td>
   </tr>
   <tr>
@@ -117,7 +122,7 @@ Wio Tracker L1 系列有 4 个版本可供选择——选择最适合您需求�
     <td colspan="1">有效区域（mm）：34.5 × 23.0</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">E-Ink 屏幕</td>
+    <td colspan="1" rowspan="3">[E-Ink 屏幕](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
     <td colspan="1">尺寸：2.13 英寸</td>
   </tr>
   <tr>

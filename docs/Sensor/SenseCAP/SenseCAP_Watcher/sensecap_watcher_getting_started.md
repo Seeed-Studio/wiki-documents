@@ -25,7 +25,7 @@ last_update:
     </a>
 </div>
 
-## Quick Starter Guide Vedio
+## Quick Starter Guide Video
 
 This is SenseCAP Watcher Quick Starter Guide which will help you unbox and get hands-on the device for the first time.
 
