@@ -158,7 +158,7 @@ ipconfig
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_18.png" /></div>
 
-这里的 URL 是填写我们在第一步中进入的 InfluxDB 网页链接。例如，您的网页是 192.168.7.183:8086，那么您可以为 URL 填写 http://192.168.7.183:8086。
+这里的 URL 是填写我们在第一步中进入的 InfluxDB 网页链接。例如，您的网页是 192.168.7.183:8086，那么您可以为 URL 填写 `http://192.168.7.183:8086`。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_19.png" /></div>
 

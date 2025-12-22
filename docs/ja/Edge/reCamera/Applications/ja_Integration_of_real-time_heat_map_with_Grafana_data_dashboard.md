@@ -158,7 +158,7 @@ reCamera をネットワークに接続します（コンピュータと同じ�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_18.png" /></div>
 
-ここでの URL は、最初のステップで入力した InfluxDB ウェブページのリンクを入力します。例えば、あなたのウェブページが 192.168.7.183:8086 の場合、URL には http://192.168.7.183:8086 と入力できます。
+ここでの URL は、最初のステップで入力した InfluxDB ウェブページのリンクを入力します。例えば、あなたのウェブページが 192.168.7.183:8086 の場合、URL には `http://192.168.7.183:8086` と入力できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_19.png" /></div>
 

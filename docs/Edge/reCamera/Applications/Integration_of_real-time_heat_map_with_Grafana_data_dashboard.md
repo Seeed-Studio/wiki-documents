@@ -158,7 +158,7 @@ After clicking on the small pencil, we need to fill in the URL and Token
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_18.png" /></div>
 
-The URL here is to fill in the link of InfluxDB web page we entered in the first step. For example, your web page is 192.168.7.183:8086, then you can fill in http:// 192.168.7.183:8086 for the URL.
+The URL here is to fill in the link of InfluxDB web page we entered in the first step. For example, your web page is 192.168.7.183:8086, then you can fill in `http://192.168.7.183:8086` for the URL.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_19.png" /></div>
 
