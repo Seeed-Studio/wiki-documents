@@ -13,7 +13,7 @@ last_update:
   author: Xinrui Wu
 ---
 
-# reCamera 的 Home Assistant 入门指南
+# 使用 reCamera 的 Home Assistant 入门指南
 
 ## 简介
 
@@ -21,8 +21,8 @@ Home Assistant 是一个开源智能家居平台系统，用户可以轻松地�
 
 ## 硬件准备
 
-一个 reCamera（可以是 2002 系列中的任何一个、HQ POE 版本或云台版本，但请注意 POE 版本没有 WiFi 功能，需要连接具有 POE 功能的交换机在同一网段中）  
-一个 reComputer（任何版本都可以，这里我使用 reComputer AI R2130-12 作为示例）  
+一台 reCamera（可以是 2002 系列中的任何一款、HQ POE 版本或云台版本，但请注意 POE 版本没有 WiFi 功能，需要连接具有 POE 功能的交换机在同一网段内）  
+一台 reComputer（任何版本都可以，这里我使用 reComputer AI R2130-12 作为示例）  
 一台计算机
 
 <table align="center">
@@ -69,6 +69,8 @@ Home Assistant 是一个开源智能家居平台系统，用户可以轻松地�
 
 ### 系统准备
 
+如果已经安装了 Home Assistant，请直接跳转到"查找配置文件路径"步骤进行后续配置。
+
 1.更新系统
 
 ```bash
@@ -92,7 +94,7 @@ curl -fsSL https://get.docker.com | sh
 2.允许当前用户使用 Docker
 
 ```bash
-https://files.seeedstudio.com
+sudo usermod -aG docker $USER
 ```
 
 3.重启系统使权限生效
@@ -166,7 +168,7 @@ http://<your IP>:8123
 http://192.168.1.88:8123
 ```
 
-初始启动将引导您进入初始化界面。然后您可以开始创建账户并配置您的智能家居。
+初次启动将引导您进入初始化界面。然后您可以开始创建账户并配置您的智能家居。
 
 ### 查找配置文件路径
 
@@ -230,7 +232,7 @@ sudo nano /homeassistant/config/automations.yaml
 3. 编辑 configuration.yaml：
 
 ```bash
-sudo nano /homeassistant/config/automations.yaml
+sudo nano /homeassistant/config/configuration.yaml
 ```
 
 将内容替换为：
@@ -365,14 +367,14 @@ return {
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_9.png" /></div>
 
-在这里，您需要执行一个额外的步骤，即将 WiFi 连接到 reCamera。它应该与您为 reComputer 设置的网络在同一网络中（请注意，POE 版本没有 WiFi 功能，需要使用具有 POE 功能的交换机连接到同一网段）。
+在这里，您需要执行一个额外的步骤，即为 reCamera 连接 WiFi。它应该与您为 reComputer 设置的网络在同一网络中（请注意，POE 版本没有 WiFi 功能，需要使用具有 POE 功能的交换机连接到同一网段）。
 
 点击左上角的 "Network" 按钮来配置网络。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_10.png" /></div>
 
 :::note
-请记住！确保将 reCamera 连接到网络！！！否则将无法通信。
+请记住！确保将 Recamera 连接到网络！！！否则将无法通信。
 :::
 
 ## 查看 Home Assistant 的概览界面
@@ -380,7 +382,7 @@ return {
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/HA.png" /></div>
 
 如果还没有观察到效果，首先检查链接是否连接不正确。也就是说，验证 Webhook 是否正常工作：
-在任何设备（reCamera 或计算机）的终端中执行：
+在任何设备（ReCamera 或计算机）的终端中执行：
 
 ```shell
 curl -X POST http://192.168.100.109:8123/api/webhook/recamera_detection \
@@ -389,7 +391,7 @@ curl -X POST http://192.168.100.109:8123/api/webhook/recamera_detection \
 ```
 
 如果成功，Home Assistant 通知将显示：
-> **reCamera 检测结果**
+> **ReCamera 检测结果**
 Test from curl
 
 ## 技术支持与产品讨论
