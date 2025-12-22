@@ -12,7 +12,7 @@ last_update:
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" style={{width:800, height:'auto'}}/></div>
 
-## [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+## [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 
 La siguiente es la introducción oficial de **ESP-WIFI-MESH** por Espressif Systems:
 
@@ -20,7 +20,7 @@ ESP-WIFI-MESH es una red de comunicación inalámbrica con nodos organizados en 
 
 Presenta las siguientes características:
 
-1. **Configuración Fácil y Segura** : Se admite la configuración de red mediante aplicación móvil + Bluetooth LE, permitiendo la adición rápida de nuevos nodos y la entrega segura de configuraciones.
+1. **Configuración Fácil y Segura** : Se admite la configuración de red de aplicación móvil + Bluetooth LE, permitiendo la adición rápida de nuevos nodos y la entrega segura de configuraciones.
 2. **Auto-formación y Auto-curación** : Los nodos se conectarán/reconectarán automáticamente, y la red puede formarse automáticamente y auto-curarse cuando un nodo falla.
 3. **No se Requieren Gateways Adicionales** : No se requieren gateways o infraestructura adicionales. La red Mesh puede escalar hasta miles de nodos, haciéndola adecuada para implementaciones a gran escala.
 4. **Conectividad IP** : Todos los nodos admiten comunicación IP, permitiendo tanto la interconexión entre ellos como el acceso a redes externas (a través de NAT o puente del nodo raíz).
@@ -29,7 +29,7 @@ Presenta las siguientes características:
 
 Para información más detallada, consulte el enlace oficial de Espressif Systems :
 
-- [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+- [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 - [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
 
 ## ESP-Mesh_Audio
@@ -122,7 +122,7 @@ Sube el código al XIAO ESP32-C5, abre el Monitor Serie, y la dirección IP cone
 
 Antes de usar el script Python, necesitas instalar primero el entorno Python 3. Puedes buscar los tutoriales de instalación correspondientes en línea para más detalles.<br/>
 
-Crea un archivo llamado send_audio.py en cualquier carpeta en Windows, y copia el siguiente código Python en él.。<br/>
+Crea un archivo llamado send_audio.py en cualquier carpeta en Windows, y copia el siguiente código Python en él.<br/>
 
 Llena la dirección IP impresa por el Monitor Serie del Arduino IDE en la variable **TARGET_IP** en el código.
 
@@ -178,7 +178,7 @@ La ventana del monitor del Arduino IDE devolverá la dirección IP y datos de by
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
