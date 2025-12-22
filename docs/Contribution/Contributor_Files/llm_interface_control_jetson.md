@@ -9,6 +9,8 @@ last_update:
 ---
 
 
+
+
 # Jetson LLM Interface Controller
 ![enter image description here](https://www.seeedstudio.com/blog/wp-content/uploads/2024/03/image-1030x616.png)
  
@@ -20,34 +22,36 @@ This repository is your launchpad. It demonstrates how natural language—whethe
 
 In this wiki I am going to write a starting point to create your own home assistant agent based on recomputer Nvidia Jetson Orin nx. This project uses Jetson interfaces to control the environment and you will be hands on interfaces and mixing them with an LLM agent to convert the user prompt to command due to Jetson know what to do. In other world the LLM is like a mapping from user text or voice (if you want you can add STT and TTS easily to the project) to a command that is understandable to Jetson and your coding home controller. Even you can expand this project and add some more interesting things like VLM. For example you can add a camera and try to describe the baby room and if a danger occur the agent gives a feed back or a call to your mobile.
 
+You can see the code in [THIS](https://github.com/kouroshkarimi/llm_interface_controll) link.
+
   ## ✨ What This Project Brings to Life
 
 - **🧠 Intelligent Command Parsing**
-  A local LLM (like Llama, Mistral, or another model running on your Jetson) is carefully prompted to map free-form text to structured commands. The prompt engineering is captured in [`models/jetson-controller.txt`](models/jetson-controller.txt)—a blueprint for teaching the model your domain.
+  A local LLM (like Llama, Mistral, or another model running on your Jetson) is carefully prompted to map free-form text to structured commands. The prompt engineering is captured in [`models/jetson-controller.txt`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/models/jetson-controller.txt) a blueprint for teaching the model your domain.
 
 - **🌐 Minimalist, Robust API**
-  A clean FastAPI endpoint ([`app/main.py`](app/main.py)) accepts user requests and orchestrates the entire pipeline—parsing, validation, and execution—with elegance and speed.
+  A clean FastAPI endpoint ([`app/main.py`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/main.py)) accepts user requests and orchestrates the entire pipeline—parsing, validation, and execution—with elegance and speed.
 
 - **⚡ Hardware Abstraction Layer**
-  Dive into [`app/hardware_controller.py`](app/hardware_controller.py) to find routines for GPIO, PWM, I2C, and more. This is where software pulses become physical actions: lights brighten, motors spin, sensors read.
+  Dive into [`app/hardware_controller.py`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/hardware_controller.py) to find routines for GPIO, PWM, I2C, and more. This is where software pulses become physical actions: lights brighten, motors spin, sensors read.
 
 - **🔗 LLM Agent Integration**
-  The [`app/llm_agent.py`](app/llm_agent.py) module is a thin, adaptable wrapper that communicates with your local model server. Swap models, tweak parameters, or even change APIs without breaking the flow.
+  The [`app/llm_agent.py`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/llm_agent.py) module is a thin, adaptable wrapper that communicates with your local model server. Swap models, tweak parameters, or even change APIs without breaking the flow.
 
 - **📦 Structured Output Parser**
-  Reliably extract JSON from the model’s response with [`app/command_parser.py`](app/command_parser.py). It ensures that even creative LLM outputs become predictable, actionable commands.
+  Reliably extract JSON from the model’s response with [`app/command_parser.py`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/command_parser.py). It ensures that even creative LLM outputs become predictable, actionable commands.
 
 ---
 
 ## 🧭 Navigation & Quick Links
 
 **Core Entry Points**
-- 🚪 API Gateway: [`app/main.py`](app/main.py) — The FastAPI heart of the system.
-- 🧩 Command Parser: [`app.command_parser.parse_command`](app/command_parser.py) — From text to structure.
-- 🧠 LLM Communicator: [`app.llm_agent.ask_llm`](app/llm_agent.py) — Conversations with the model.
-- ⚙️ Hardware Executor: [`app.hardware_controller.execute`](app/hardware_controller.py) — Where commands become action.
-- 📖 Model Prompt: [`models/jetson-controller.txt`](models/jetson-controller.txt) — The “personality” of your agent.
-- 📦 Dependencies: [`requirements.txt`](requirements.txt) — Python packages to fuel your journey.
+- 🚪 API Gateway: [`app/main.py`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/main.py) — The FastAPI heart of the system.
+- 🧩 Command Parser: [`app.command_parser.parse_command`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/command_parser.py) — From text to structure.
+- 🧠 LLM Communicator: [`app.llm_agent.ask_llm`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/llm_agent.py) — Conversations with the model.
+- ⚙️ Hardware Executor: [`app.hardware_controller.execute`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/hardware_controller.py) — Where commands become action.
+- 📖 Model Prompt: [`models/jetson-controller.txt`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/models/jetson-controller.txt) — The “personality” of your agent.
+- 📦 Dependencies: [`requirements.txt`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/requirements.txt) — Python packages to fuel your journey.
 
 ## 🌌 Philosophy & Vision
 
@@ -550,8 +554,8 @@ Attach a CSI camera and integrate a Vision Language Model (VLM) to enable:
 - Validate commands with Pydantic models before execution
 - Profile CPU/GPU/MLP usage to avoid thermal throttling on Jetson
 - You can add TTS and STT to this project [link](https://github.com/kouroshkarimi/local_chatbot_jetson)
-
 ---
+
 
 ## References
 
