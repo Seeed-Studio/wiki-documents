@@ -7,7 +7,7 @@ keywords:
   - Grafana
   - InfluxDB
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/headmap.gif
-slug: /Integration_of_real-time_heat_map_with_Grafana_data_dashboard
+slug: /integration_of_real-time_heat_map_with_grafana_data_dashboard
 sidebar_position: 10
 last_update: 
   date: 12/21/2025
@@ -158,7 +158,7 @@ After clicking on the small pencil, we need to fill in the URL and Token
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_18.png" /></div>
 
-The URL here is to fill in the link of InfluxDB web page we entered in the first step. For example, your web page is 192.168.7.183:8086, then you can fill in http:// 192.168.7.183:8086 for the URL.
+The URL here is to fill in the link of InfluxDB web page we entered in the first step. For example, your web page is 192.168.7.183:8086, then you can fill in `http://192.168.7.183:8086` for the URL.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_19.png" /></div>
 
