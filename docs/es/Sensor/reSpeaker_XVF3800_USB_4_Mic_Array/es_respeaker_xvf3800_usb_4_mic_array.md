@@ -73,7 +73,7 @@ El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo circular profesional de 4 mic
 | **Calidad de Audio**             | Igual o mejor que los **diseños anteriores basados en XVF3000**.                                         |
 
 :::note
-El ReSpeaker XVF3800 se ofrece en dos variantes—una sin XIAO y otra con el XIAO ESP32S3 a bordo. La versión sin XIAO opera con firmware USB por defecto. Para usar la versión integrada con XIAO, debes flashear firmware construido para **modo INT-Device (I2S)**. Para instrucciones detalladas de configuración, consulta la [guía wiki oficial](docs/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro.md).
+El ReSpeaker XVF3800 se ofrece en dos variantes—una sin XIAO y otra con el XIAO ESP32S3 a bordo. La versión sin XIAO opera con firmware USB por defecto. Para usar la versión integrada con XIAO, debes flashear firmware construido para **modo INT-Device (I2S)**. Para instrucciones detalladas de configuración, consulta la [guía wiki oficial](/es/respeaker_xvf3800_xiao_getting_started).
 :::
 
 ### Soporte XIAO ESP32S3
@@ -905,6 +905,12 @@ Luego puedes abrir **pavucontrol** y aumentar el volumen de salida más allá de
 ### Después de reinstalar los controladores USB, mi ReSpeaker no graba ni reproduce
 
 Desinstala todos los controladores asociados con el ReSpeaker en el Administrador de dispositivos. Esto resolvió el problema.
+
+### ¿No se puede usar como dispositivo de sonido en Windows después de actualizar el firmware?
+
+Abre el menú de inicio y escribe "Administrador de dispositivos". Busca los dispositivos reSpeaker XVF 3800 relacionados, haz clic derecho sobre ellos y selecciona "Desinstalar dispositivo". Después de eso, reinicia el dispositivo (desconecta y vuelve a conectar el USB) y Windows reinstalará automáticamente el controlador correcto de la tarjeta de sonido.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
 ## Recursos
 

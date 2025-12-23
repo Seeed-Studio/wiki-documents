@@ -234,7 +234,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -285,7 +285,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -425,7 +425,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -533,7 +533,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -599,7 +599,7 @@ display:
       it.print(0, 150, id(font1), "Hello World!");
 ```
 
-</TabItem>
+</TabItem> -->
 
 <TabItem value="5.83 Inch" label="5.83 Inc Monochrome Color">
 
@@ -771,6 +771,13 @@ font:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -778,10 +785,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -1001,7 +1012,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -1084,7 +1095,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1140,7 +1151,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 captive_portal:
@@ -1152,7 +1163,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: my_display
-    model: gdey0213f51
+    model: gdey029f51h
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1297,7 +1308,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -1363,7 +1374,7 @@ display:
       it.filled_circle(250, 105, 25);
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 Inch Monochrome Color">
@@ -1522,6 +1533,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -1529,10 +1547,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s
@@ -1710,7 +1732,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -1808,7 +1830,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -1863,7 +1885,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2057,7 +2079,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2132,7 +2154,7 @@ display:
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 Inch Monochrome Color">
@@ -2318,6 +2340,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 # define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
@@ -2337,18 +2366,19 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
-    id: epaper_display
-    model: 7.3in-spectra-e6
+  - platform: epaper_spi
+    id: my_display
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    reset_pin:
-      number: GPIO38
+    dc_pin:
+      number: GPIO10
       inverted: false
     busy_pin:
       number: GPIO4
       inverted: true
-    update_interval: 300s
+    reset_pin:  GPIO38
+    rotation: 0
+    update_interval: 30s
     lambda: |-
       it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
@@ -2571,7 +2601,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: epaper_display
-    model: 2.13inv
+    model: 2.13inv2 #More models you can refer to here: https://esphome.io/components/display/waveshare_epaper/
     cs_pin: GPIO44
     dc_pin: GPIO10
     reset_pin:
@@ -2625,7 +2655,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2697,7 +2727,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
  
 captive_portal:
@@ -2860,7 +2890,7 @@ display:
 
 </TabItem>
 
-<TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
+<!-- <TabItem value="4.26 Inch Monochrome Color" label="4.26 Inch Monochrome Color">
 
 ```yaml
 esphome:
@@ -2928,7 +2958,7 @@ display:
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
 ```
 
-</TabItem>
+</TabItem> -->
 
 
 <TabItem value="5.83 Inch" label="5.83 Inch Monochrome Color">
@@ -3097,6 +3127,13 @@ wifi:
 
 captive_portal:
 
+external_components:
+  - source:
+      type: git
+      url: https://github.com/esphome/esphome/
+      ref: 2025.10.5
+    components: [ epaper_spi, display ]
+
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
     id: myImage
@@ -3111,10 +3148,14 @@ spi:
 display:
   - platform: epaper_spi
     id: my_display
-    model: 7.3in-spectra-e6
+    model: 7.3in-Spectra-E6
     cs_pin: GPIO44
-    dc_pin: GPIO10
-    busy_pin: GPIO4
+    dc_pin:
+      number: GPIO10
+      inverted: false
+    busy_pin:
+      number: GPIO4
+      inverted: true
     reset_pin:  GPIO38
     rotation: 0
     update_interval: 30s

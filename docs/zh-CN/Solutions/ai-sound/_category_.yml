@@ -1,0 +1,10 @@
+position: 1.2
+label: 'AI 声音'
+collapsible: true
+collapsed: true
+className: _ai-sound
+link:
+  type: generated-index
+  slug: cn/ai-sound
+  title: AI 声音
+  description: 声音感知解决方案。

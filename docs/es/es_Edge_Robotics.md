@@ -102,6 +102,15 @@ last_update:
   </a>
 </div>
 
+## Stackforce
+
+<div className="card-container">
+    <a href="/es/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
+      <span className="text">Robot_Mini_Con_Ruedas_y_Patas</span>
+      <span className="tag recommended">Nuevo</span>
+    </a>
+</div>
+
 ## 🖐️ Mano
 
 <div className="card-container">
@@ -131,19 +140,26 @@ last_update:
 
 <div className="card-container">
     <a href="/es/myactuator_series/" className="nav-item">
-      <span className="text">0️⃣MyActuator X Series</span>
+      <span className="text">0️⃣MyActuator X Serie</span>
     </a>
     <a href="/es/damiao_series/" className="nav-item">
-      <span className="text">1️⃣Damiao DM43 Series</span>
+      <span className="text">1️⃣Damiao DM43 Serie</span>
     </a>
     <a href="/es/feetech_servo/" className="nav-item">
       <span className="text">2️⃣Motor Servo Feetech STS3215</span>
     </a>
-    <a href="/es/hightorque_series/" className="nav-item">
-      <span className="text">3️⃣HighTorque Series</span>
+    <a href="/es/hightorque_control" className="nav-item">
+      <span className="text">3️⃣HighTorque Serie</span>
     </a>
     <a href="/es/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣fashionstar Series</span>
+      <span className="text">4️⃣Fashionstar Serie</span>
+    </a>
+    <a href="/es/stackforce_series/" className="nav-item">
+      <span className="text">5️⃣Stackforce Serie</span>
+    </a>
+    <a href="/es/robstride_control/" className="nav-item">
+      <span className="text">5️⃣Control RobStride</span>
+      <span className="tag recommended">Nuevo</span>
     </a>
 </div>
 
@@ -168,33 +184,55 @@ last_update:
       <span className="text">Algoritmo A-LOAM</span>
     </a>
     <a href="/es/slamtec/" className="nav-item">
-      <span className="text">Slamtec Series</span>
+      <span className="text">Slamtec Serie</span>
     </a>
 </div>
 
 **📷Cámara**  
 
 <div className="card-container">
+- Cámara de Profundidad Orbbec
+
     <a href="/es/orbbec_gemini2/" className="nav-item">
       <span className="text">Orbbec Gemini2</span>
     </a>
-    <a href="/es/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">Cámara de Profundidad Orbbec con ROS</span>
-    </a>
     <a href="/es/orbbec_gemini_335lg" className="nav-item">
-      <span className="text">Cámara Estéreo Orbbec Gemini 335Lg</span>
+      <span className="text">Cámara de Profundidad Orbbec Gemini 335Lg</span>
       <span className="tag recommended">Nuevo</span>
     </a>
+    <a href="/es/orbbec_gemini336" className="nav-item">
+      <span className="text">Cámara de Profundidad Orbbec Gemini 336</span>
+      <span className="tag recommended">Nuevo</span>
+    </a>
+
+- SENSING GMSL
+
     <a href="/es/sensing_gmsl_cameras" className="nav-item">
       <span className="text">Cámaras SENSING GMSL2</span>
+    </a>
+
+- RoboSense
+
+    <a href="/es/ac1" className="nav-item">
+      <span className="text">AC1</span>
       <span className="tag recommended">Nuevo</span>
+    </a>
+
+- Ejemplos
+
+    <a href="/es/orbbec_depth_camera_on_ros/" className="nav-item">
+      <span className="text">Cámara de Profundidad Orbbec con ROS</span>
     </a>
     <a href="/es/orb_slam3_orbbec_gemini2/" className="nav-item">
       <span className="text">ORB-SLAM3 con Orbbec Gemini2</span>
     </a>
     <a href="/es/csi_camera_on_ros/" className="nav-item">
-      <span className="text">Cámara CSI</span>
+      <span className="text">Cámara CSI en Jetson</span>
     </a>
+    <a href="/es/pycuvslam_recomputer_robotics/" className="nav-item">
+      <span className="text">PyCuVSLAM</span>
+    </a>
+
 </div>
 
 **🎤Voz**  
@@ -213,6 +251,9 @@ last_update:
 <div className="card-container">
     <a href="/es/hexfellow_y200/" className="nav-item">
       <span className="text">HEXFELLOW Y200</span>
+    </a>
+    <a href="/es/wheeltec_imu/" className="nav-item">
+      <span className="text">WHEELTEC IMU</span>
     </a>
 </div>
 
@@ -314,13 +355,13 @@ html[data-theme='dark'] .quick-nav-container {
   gap: 1rem;
 }
 
-/* 导航项 */
+/* Elementos de navegación */
 .nav-item {
   position: relative;
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
   display: flex;
-  margin: 6px 6px; /* 上下6px，左右6px */
+  margin: 6px 6px; /* 6px arriba y abajo, 6px izquierda y derecha */
   flex-direction: column;
   align-items: center;
   text-decoration: none !important;
@@ -332,27 +373,27 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Dark模式 - 导航项 */
+/* Modo Dark - Elementos de navegación */
 html[data-theme='dark'] .nav-item {
   color: #e5e7eb;
   background:rgb(47, 50, 57);
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
-/* 图标样式 */
+/* Estilos de iconos */
 .nav-item .icon {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   transition: transform 0.3s;
 }
 
-/* 文字样式 */
+/* Estilos de texto */
 .nav-item .text {
   font-size: 0.95rem;
   white-space: nowrap;
 }
 
-/* 悬浮特效 */
+/* Efecto de hover */
 .nav-item .hover-effect {
   position: absolute;
   bottom: 0;
@@ -365,14 +406,14 @@ html[data-theme='dark'] .nav-item {
   z-index: -1;
 }
 
-/* 悬浮动画 */
+/* Animación de hover */
 .nav-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   color: white;
 }
 
-/* Modo Dark - animación flotante */
+/* Modo Dark - Animación de hover */
 html[data-theme='dark'] .nav-item:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
@@ -405,7 +446,7 @@ html[data-theme='dark'] .nav-item:hover {
 `}</style>
 
 <style>{`
-/* Estilos de tarjeta de contenido versión mejorada */
+/* Estilos de tarjetas de contenido versión mejorada */
 .nav-grid {
   display: block;
   gap: 2rem;
@@ -424,7 +465,7 @@ html[data-theme='dark'] .nav-item:hover {
   z-index: 1;
 }
 
-/* Modo Dark - tarjeta de contenido */
+/* Modo Dark - Tarjetas de contenido */
 html[data-theme='dark'] .category-card {
   background:rgb(30, 30, 32);
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
@@ -450,13 +491,13 @@ html[data-theme='dark'] .category-card {
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* Efecto flotante */
+/* Efecto de hover */
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
-/* Modo Dark - efecto flotante */
+/* Modo Dark - Efecto de hover */
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -472,12 +513,12 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Modo Dark - efecto de luz flotante */
+/* Modo Dark - Efecto de luz en hover */
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
 
-/* Animación de enlace */
+/* Animación de enlaces */
 .category-card a {
   position: relative;
   display: inline-block;
@@ -486,7 +527,7 @@ html[data-theme='dark'] .category-card:hover::after {
   color: #333;
 }
 
-/* Modo Dark - enlace */
+/* Modo Dark - Enlaces */
 html[data-theme='dark'] .category-card a {
   color: #d1d5db;
 }
@@ -496,7 +537,7 @@ html[data-theme='dark'] .category-card a {
   transform: translateX(5px);
 }
 
-/* Modo Dark - enlace flotante */
+/* Modo Dark - Hover de enlaces */
 html[data-theme='dark'] .category-card a:hover {
   color: #60a5fa;
 }
@@ -512,7 +553,7 @@ html[data-theme='dark'] .category-card a:hover {
   transition: width 0.3s;
 }
 
-/* Modo Dark - subrayado de enlace */
+/* Modo Dark - Subrayado de enlaces */
 html[data-theme='dark'] .category-card a::after {
   background: #60a5fa;
 }
@@ -522,10 +563,10 @@ html[data-theme='dark'] .category-card a::after {
 }
 
 .card-container {
-  margin-bottom: 1.5rem; /* originalmente 0.1rem */
+  margin-bottom: 1.5rem; /* originalmente era 0.1rem */
 }
 
-/* Estilos de etiqueta mejorados */
+/* Estilos de etiquetas mejorados */
 .tag {
   font-size: 0.75rem;
   padding: 2px 8px;
@@ -540,7 +581,7 @@ html[data-theme='dark'] .category-card a::after {
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
 
-/* Modo Dark - etiqueta Stable */
+/* Modo Dark - Etiqueta Stable */
 html[data-theme='dark'] .stable {
   background: #065f46;
   color: #a7f3d0;
@@ -553,7 +594,7 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }
 
-/* Modo Dark - etiqueta Recommended */
+/* Modo Dark - Etiqueta Recommended */
 html[data-theme='dark'] .recommended {
   background: #7f1d1d;
   color: #fca5a5;
@@ -565,7 +606,7 @@ html[data-theme='dark'] .recommended {
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-/* Modo Dark - efecto de clic */
+/* Modo Dark - Efecto de clic */
 html[data-theme='dark'] .category-card:active {
   box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
@@ -582,7 +623,7 @@ html[data-theme='dark'] .category-card:active {
   }
 }
 
-/* Modo Dark - texto de título */
+/* Modo Dark - Texto de títulos */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -592,14 +633,14 @@ html[data-theme='dark'] h6 {
   color: #f9fafb;
 }
 
-/* Modo Dark - texto del cuerpo */
+/* Modo Dark - Texto del cuerpo */
 html[data-theme='dark'] p,
 html[data-theme='dark'] li,
 html[data-theme='dark'] strong {
   color: #e5e7eb;
 }
 
-/* Modo Dark - bloque de cita */
+/* Modo Dark - Bloques de cita */
 html[data-theme='dark'] blockquote {
   color: #9ca3af;
   border-left-color: #4b5563;

@@ -279,7 +279,7 @@ Con los controles básicos entendidos, ahora puedes alternar fácilmente entre l
 
 Este es el modo predeterminado, diseñado para reenviar todos los datos serie de la fuente seleccionada directamente a tu computadora para visualización en un terminal serie basado en PC.
 
-*   **Pantalla en Pantalla:** La pantalla muestra información de estado, no los datos en sí.
+*   **Pantalla en Dispositivo:** La pantalla muestra información de estado, no los datos en sí.
     *   **Arriba-Izquierda:** La fuente serie activa (por ejemplo, `XIAO`).
     *   **Arriba-Derecha:** La velocidad de baudios actual (por ejemplo, `9600`).
     *   **Centro:** Los indicadores `RX` y `TX` (desde la perspectiva del Debug Mate) se animarán para mostrar el flujo de datos hacia y desde la PC.
@@ -290,17 +290,30 @@ Este es el modo predeterminado, diseñado para reenviar todos los datos serie de
 
 Este modo captura y muestra datos serie directamente en la pantalla LCD del Debug Mate. Los datos **no** se reenvían a la PC en este modo.
 
-*   **Pantalla en Pantalla:** La pantalla está dividida en dos ventanas para mostrar el tráfico de datos.
-    *   `Ventana RX`: Muestra datos recibidos **desde el socket XIAO**.
-    *   `Ventana TX`: Muestra datos recibidos **desde el puerto Grove**.
+*   **Pantalla en Dispositivo:** La pantalla está dividida en dos ventanas para mostrar el tráfico de datos.
+    *   `Ventana RX`: Muestra datos recibidos **desde el socket XIAO/Grove**.
+    *   `Ventana TX`: Muestra datos recibidos **desde la PC**.
 
 :::caution
 El Debug Mate no puede mostrar datos de ambas fuentes simultáneamente. Debes seleccionar la fuente activa usando el menú de configuración.
 :::
 
+:::note
+Las etiquetas **RX** y **TX** en este documento son siempre **desde la perspectiva del Debug Mate**:  
+- **RX** indica datos **recibidos por el Debug Mate** (es decir, señales serie que llegan *al* Debug Mate).  
+- **TX** indica datos **enviados por el Debug Mate** (es decir, señales siendo *transmitidas* por el Debug Mate).
+
+Esto significa que **los datos enviados desde el XIAO o dispositivo Grove al Debug Mate aparecerán en la ventana RX**, sin importar qué puerto esté seleccionado como fuente. El contenido mostrado en la ventana RX depende de qué fuente (XIAO/Grove) hayas elegido en la configuración.
+
+**TX** siempre se refiere a datos **originados desde la PC** — cuando escribes y envías mensajes desde un terminal serie en tu computadora, se transmiten a través del TX del Debug Mate a la fuente actualmente seleccionada (XIAO o Grove).  
+
+- En ambos modos "Passthrough" y "Monitor", la PC puede enviar datos al Debug Mate a través de su puerto COM virtual, y el Debug Mate pasará estos mensajes al dispositivo serie objetivo que seleccionaste.  
+- Lo que ves en la **ventana TX** es por tanto siempre lo que la PC está enviando a través del Debug Mate, independientemente del modo de monitoreo actual.
+:::
+
 ### Configurando Fuente y Velocidad de Baudios
 
-Para cambiar la fuente de datos o la velocidad de baudios, primero debes activar el cursor de configuración.
+Para cambiar la fuente de datos o velocidad de baudios, primero debes activar el cursor de configuración.
 
 1.  **Activar Cursor:** Desde cualquier modo, **presiona el botón una vez**. Un cursor aparecerá en la parte superior de la pantalla.
 
@@ -329,7 +342,7 @@ El menú de velocidad de baudios te permite seleccionar entre nueve velocidades 
 ### Conceptos Clave y Limitaciones
 
 *   **Un Depurador, No un Puente:** El Debug Mate es una herramienta de diagnóstico, no un puente de comunicación. No reenviará automáticamente datos del puerto XIAO al puerto Grove.
-*   **Parámetros Serie Fijos:** Los parámetros serie principales (8-N-1) están fijos en el firmware. Los usuarios avanzados pueden modificar el código de fuente abierta para cambiarlos.
+*   **Parámetros Serie Fijos:** Los parámetros serie principales (8-N-1) están fijos en el firmware. Los usuarios avanzados pueden modificar el código de código abierto para cambiarlos.
 *   **Monitoreo de Fuente Única:** Solo puedes monitorear activamente una fuente (XIAO o Grove) a la vez.
 
 ## Agradecimientos Especiales
@@ -341,14 +354,12 @@ Si te gustaría ver el diseño original, puedes revisar el video de demostració
 *   [Video de Demostración del Diseño Original](https://www.bilibili.com/video/BV1Sc411273Y/)
 *   [Página Principal de Bilibili del Autor](https://space.bilibili.com/1155738723)
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

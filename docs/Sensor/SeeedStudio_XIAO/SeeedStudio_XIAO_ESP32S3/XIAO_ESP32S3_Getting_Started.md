@@ -78,7 +78,7 @@ The **OV2640 camera** has been discontinued, and the subsequent XIAO ESP32S3 Sen
     <tr>
      <th>Built-in Sensors</th>
      <td align="center"> - </td>
-        <td align="center">OV2640 camera sensor for 1600*1200<br></br> OV3660 camera sensor for 2048*1536<br></br>Digital microphone</td>
+        <td align="center">OV2640 camera sensor for 1600 * 1200 <br></br>OV3660 camera sensor for 2048 * 1536<br></br>Digital microphone</td>
   <td align="center"> - </td>
  </tr>
     <tr>

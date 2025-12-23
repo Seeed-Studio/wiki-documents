@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /ja/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 11/5/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -18,7 +18,7 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 </font></span></strong>
     </a>
 </div>
-Wio Tracker L1 シリーズは、LoRa（862–930 MHz）、効率的な処理のためのnRF52840、正確な位置追跡のためのL76K GPSモジュールを搭載した、低消費電力で高い拡張性を持つ[Meshtastic®](https://meshtastic.org/)ノードです。柔軟性を重視して設計されており、OLEDおよびE-Inkディスプレイ、ソーラーパネルとバッテリー電源をサポートし、幅広いIoTおよびオフグリッドアプリケーションに最適です。
+Wio Tracker L1 シリーズは、LoRa（862–930 MHz）、効率的な処理のためのnRF52840、正確な位置追跡のためのL76K GPSモジュールを搭載した低消費電力で高い拡張性を持つ[Meshtastic®](https://meshtastic.org/)ノードです。柔軟性を重視して設計されており、OLEDおよびE-Inkディスプレイ、ソーラーパネルとバッテリー電源をサポートし、幅広いIoTおよびオフグリッドアプリケーションに最適です。
 
 ## L1 シリーズモデル
 
@@ -49,7 +49,7 @@ Wio Tracker L1 シリーズは4つのバージョンで利用可能です。ニ�
 ### 特徴
 
 - **Meshtasticファームウェアがプリフラッシュ済み**
-Meshtasticファームウェアがプリインストールされており、開封後すぐに使用でき、シームレスなセットアップが可能です。
+シームレスなセットアップのためにMeshtasticファームウェアがプリインストールされており、箱から出してすぐに使用できます。
 
 - **3つの電源供給オプション**
 Type-C急速充電、ソーラー入力、Li-ionバッテリー電源をサポートし、様々な環境での柔軟な展開が可能で、屋外およびモバイルアプリケーションに最適です。
@@ -58,12 +58,12 @@ Type-C急速充電、ソーラー入力、Li-ionバッテリー電源をサポ�
 オプションの1.3インチOLEDおよび2.13インチE-Inkスクリーンにより、異なる消費電力と視覚的フィードバックのニーズに対応する多様なディスプレイオプションを提供します。
 
 - **高い拡張性**
-Groveエコシステムと完全に互換性があり、PTHヘッダーとSWDデバッグインターフェースを含み、カスタムハードウェア拡張と高度な開発に対応します。
+Grove エコシステムと完全に互換性があり、PTHヘッダーとSWDデバッグインターフェースを含み、カスタムハードウェア拡張と高度な開発に対応します。
 
 ### 仕様
 
 :::tip
-L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを2mmインターフェースに変換するバッテリーアダプターケーブルが付属しています。これにより、バッテリーの選択肢が広がります。
+L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを2mmインターフェースに変換するバッテリーアダプターケーブルが付属しています。これにより、バッテリーの選択肢が増えます。
 :::
 
 <table>
@@ -78,10 +78,11 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
     <td colspan="1">1 MBフラッシュおよび256 kB RAM</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="2">ワイヤレス</td>
-    <td colspan="1">
-      LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>ベース、862-930MHzをサポート
-    </td>
+    <td colspan="1" rowspan="3">ワイヤレス</td>
+    <td colspan="1">LoRa：<a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>ベース、862-930MHzをサポート</td>
+  </tr>
+   <tr>
+  <td colspan="1">L1 Pro用LoRaアンテナ：3dBi</td>
   </tr>
   <tr>
     <td colspan="1">Bluetooth 5.0</td>
@@ -111,7 +112,7 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
     <td colspan="1">リチウムバッテリー（1mm 2p JST）：3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">OLEDスクリーン</td>
+    <td colspan="1" rowspan="3">[OLEDスクリーン](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">サイズ：1.3インチ</td>
   </tr>
   <tr>
@@ -121,7 +122,7 @@ L1、L1 Lite、L1 E-Inkの最新バッチには、1mmインターフェースを
     <td colspan="1">アクティブエリア（mm）：34.5 × 23.0</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">E-Inkスクリーン</td>
+    <td colspan="1" rowspan="3">[E-Inkスクリーン](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
     <td colspan="1">サイズ：2.13インチ</td>
   </tr>
   <tr>
