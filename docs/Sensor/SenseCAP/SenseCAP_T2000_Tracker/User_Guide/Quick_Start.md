@@ -3,10 +3,10 @@ description: Get_Started_with_SenseCAP_T2000_tracker
 title: Quick Start
 keywords:
 - SenseCAP_T2000_tracker
-image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_SenseCAP_T2000_tracker
 last_update:
-  date: 12/8/2025
+  date: 12/23/2023
   author: Janet
 ---
 
@@ -15,6 +15,10 @@ last_update:
 This chapter shows you how to quickly set up your SenseCAP T2000 Tracker with the SenseCraft App.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.png" alt="pir" width={800} height="auto" /></p>
+
+:::caution note
+Please ensure you have coverage from a LoRaWAN network, such as Helium, TTN or other LoRaWAN networks. Without LoRaWAN networks, the device cannot send data to the cloud. The easiest way to use the trackers is with the `SenseCAP LoRaWAN Gateway` and the `SenseCraft app`.
+:::
 
 ## Hardware Overview
 
@@ -289,7 +293,7 @@ Please setup the work mode according to your needs.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_WorkMode.png" alt="pir" width={800} height="auto" /></p>
 
 <table> 
-<tr><th colspan="1"><b>Parameters</b></th><th colspan="1"><b>Description</b></th><th colspan="1"><b>Default / Note</b></th></tr> <tr><td colspan="1">Heartbeat Interval</td><td colspan="1">When no data is uploaded by the device within the heartbeat interval, a heartbeat packet will be triggered. This packet only contains battery information.</td><td colspan="1">Default 720 minutes.</td></tr> <tr><td colspan="1">Enable 3-axis Sensor</td><td colspan="1">If this switch is turned on, 3-axis sensor will be collected and uploaded, but it will increase power consumption.</td><td colspan="1">Off by default.</td></tr> <tr><td colspan="1">Enable Disassembly Alarm</td><td colspan="1">If this switch is turned on, the device activates an alarm when the device is removed after installation.</td><td colspan="1">Off by default.</td></tr> <tr><td colspan="1">Disassembly Alarm Duration(min)</td><td colspan="1">This parameter specifies how long the device keeps reporting after a Disassembly Alarm is triggered, sending one real-time position packet with the alarm event every minute.</td><td colspan="1">This setting is only visible when Enable Disassembly Alarm is turned on.</td></tr> <tr><td colspan="1" rowspan="3">Work Mode</td><td colspan="1"><b>Standby Mode</b></td><td colspan="1">Uploads heartbeat packets (battery level only) based on the heartbeat interval.</td></tr> <tr><td colspan="1"><b>Periodic Mode</b></td><td colspan="1">Location and sensor data are uploaded according to the uplink interval.</td></tr> <tr><td colspan="1"><b>Event Mode</b></td><td colspan="1">Set threshold trigger conditions based on measured values such as movement and shock, and adjust the uplink interval when no event is triggered.</td></tr> <tr><td colspan="1">Uplink Interval (min)</td> <td colspan="1"><b>Periodic Mode</b></td> <td colspan="1">Periodically locates and uploads data. Default 60 minutes. Higher frequency increases power consumption.</td></tr> <tr><td colspan="1">Restore All Settings</td><td colspan="2">Restore all configuration parameters to factory settings, including LoRa, Work Mode, and Geolocation.</td></tr> 
+<tr><th colspan="1"><b>Parameters</b></th><th colspan="1"><b>Description</b></th><th colspan="1"><b>Default / Note</b></th></tr> <tr><td colspan="1">Heartbeat Interval</td><td colspan="1">When no data is uploaded by the device within the heartbeat interval, a heartbeat packet will be triggered. This packet only contains battery information.</td><td colspan="1">Default 720 minutes.</td></tr> <tr><td colspan="1">Enable 3-axis Sensor</td><td colspan="1">If this switch is turned on, 3-axis sensor will be collected and uploaded, but it will increase power consumption.</td><td colspan="1">Off by default.</td></tr> <tr><td colspan="1">Enable Disassembly Alarm</td><td colspan="1">If this switch is turned on, the device activates an alarm when the device is removed after installation.</td><td colspan="1">Enabled by default.</td></tr> <tr><td colspan="1">Disassembly Alarm Duration(min)</td><td colspan="1">This parameter specifies how long the device keeps reporting after a Disassembly Alarm is triggered, sending one real-time position packet with the alarm event every minute.</td><td colspan="1">This setting is only visible when Enable Disassembly Alarm is turned on. Default 3 minutes.</td></tr> <tr><td colspan="1" rowspan="3">Work Mode</td><td colspan="1"><b>Standby Mode</b></td><td colspan="1">Uploads heartbeat packets (battery level only) based on the heartbeat interval.</td></tr> <tr><td colspan="1"><b>Periodic Mode</b></td><td colspan="1">Location and sensor data are uploaded according to the uplink interval.</td></tr> <tr><td colspan="1"><b>Event Mode</b></td><td colspan="1">Set threshold trigger conditions based on measured values such as movement and shock, and adjust the uplink interval when no event is triggered.</td></tr> <tr><td colspan="1">Uplink Interval (min)</td> <td colspan="1"><b>Periodic Mode</b></td> <td colspan="1">Periodically locates and uploads data. Default 60 minutes. Higher frequency increases power consumption.</td></tr> <tr><td colspan="1">Restore All Settings</td><td colspan="2">Restore all configuration parameters to factory settings, including LoRa, Work Mode, and Geolocation.</td></tr> 
 </table>
 
 <br />
