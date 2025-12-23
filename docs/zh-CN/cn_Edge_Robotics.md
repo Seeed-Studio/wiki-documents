@@ -57,7 +57,7 @@ last_update:
       <span className="text">SO100/101 机械臂</span>
     </a>
     <a href="/cn/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 机械臂与 IsaacSim</span>
+      <span className="text">SO10x 机械臂与 LeIsaac</span>
     </a>
     <a href="/cn/control_robotic_arm_via_phospho/" className="nav-item">
       <span className="text">Phospho Lerobot</span>
@@ -65,10 +65,6 @@ last_update:
     <a href="/cn/training_soarm101_policy_with_isaacLab/" className="nav-item">
     <span className="text">So Arm 强化学习</span>
     <span className="tag recommended">New</span>
-    </a>
-    <a href="/cn/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 Arm 导入Isaac Sim</span>
-      <span className="tag recommended">New</span>
     </a>
     <a href="/cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="nav-item">
       <span className="text">在Jetson Thor上跑Isaac Gr00t N1.5</span>
