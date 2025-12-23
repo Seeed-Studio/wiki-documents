@@ -12,25 +12,25 @@ last_update:
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" style={{width:800, height:'auto'}}/></div>
 
-## [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+## [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 
 以下是乐鑫系统对 **ESP-WIFI-MESH** 的官方介绍：
 
-ESP-WIFI-MESH 是一个无线通信网络，节点采用网状拓扑结构组织，利用乐鑫 SoC 上的同时 AP-STA 功能。它提供了一个自组织和自愈的网络，易于部署。ESP-WIFI-MESH 的网络拓扑可以在大面积区域内扩展到 1000 个节点，无需任何特定的 Wi-Fi 基础设施支持。ESP-WIFI-MESH 还可以用于覆盖家庭部署场景中的 Wi-Fi 盲点，即 Wi-Fi 信号无法到达的区域。
+ESP-WIFI-MESH 是一个无线通信网络，节点采用网状拓扑结构组织，利用乐鑫 SoC 上的同时 AP-STA 功能。它提供了一个自组织和自愈合的网络，易于部署。ESP-WIFI-MESH 的网络拓扑可以在大面积区域内扩展到 1000 个节点，无需任何特定的 Wi-Fi 基础设施支持。ESP-WIFI-MESH 还可以用于覆盖家庭部署场景中的 Wi-Fi 盲点，即 Wi-Fi 信号无法到达的区域。
 
 它具有以下特点：
 
 1. **简单安全的设置**：支持移动应用 + 蓝牙 LE 网络配置，能够快速添加新节点并安全传递配置。
-2. **自组织和自愈**：节点将自动连接/重连，网络可以自动形成，并在节点故障时自愈。
+2. **自组织和自愈合**：节点将自动连接/重连，网络可以自动形成，并在节点故障时自愈。
 3. **无需额外网关**：不需要额外的网关或基础设施。Mesh 网络可以扩展到数千个节点，适合大规模部署。
 4. **IP 连接**：所有节点都支持 IP 通信，既能实现节点间的互连，也能访问外部网络（通过根节点 NAT 或桥接）。
-5. **安全设计**：基于标准 Wi-Fi，节点间通信可以采用 WPA2 加密来确保安全的数据传输。
-6. **应用场景**：适用于各种场景，如智能照明、智能家居、自动化控制以及大型场所的网络连接（如停车场、工厂、共享空间）。
+5. **安全设计**：基于标准 Wi-Fi，节点间通信可以采用 WPA2 加密来确保数据传输安全。
+6. **应用场景**：适用于智能照明、智能家居、自动化控制以及大型场所（如停车场、工厂、共享空间）的网络连接等各种场景。
 
 更多详细信息，请参考乐鑫系统的官方链接：
 
-- [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
-- [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
+- [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+- [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
 
 ## ESP-Mesh_Audio
 
@@ -120,7 +120,7 @@ void loop() {
 
 ### 创建 Python 脚本
 
-在使用 Python 脚本之前，您需要先安装 Python 3 环境。您可以在线搜索相应的安装教程了解详情。<br/>
+在使用 Python 脚本之前，您需要先安装 Python 3 环境。详细信息可以在线搜索相应的安装教程。<br/>
 
 在 Windows 的任意文件夹中创建一个名为 send_audio.py 的文件，并将以下 Python 代码复制到其中。<br/>
 
