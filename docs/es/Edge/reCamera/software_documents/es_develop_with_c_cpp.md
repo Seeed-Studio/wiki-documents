@@ -1,5 +1,5 @@
 ---
-description: Proporciona documentación e información para desarrolladores de C/C++
+description: Proporcionando documentación e información para desarrolladores de C/C++
 title: Desarrollar con C/C++
 keywords:
   - Edge
@@ -17,9 +17,9 @@ last_update:
 # Desarrollar en reCamera con c&cpp
 
 ## Configuración del Entorno
-Recamera tiene recursos limitados y no tiene configurado un entorno de compilación para código C. Si quieres usar C/C++ para desarrollar aplicaciones en la recamera, necesitas configurar el entorno de compilación cruzada (Compilar el programa C/C++ en otro Linux, luego transferir el archivo compilado al terminal de recamera para su ejecución). Si estás usando Windows, puedes instalar Windows Subsystem for Linux (WSL) para ejecutar Linux (Ubuntu, OpenSUSE, Kali, Debian, o Arch Linux).
+Recamera tiene recursos limitados y no tiene configurado un entorno de compilación para código C. Si quieres usar C/C++ para desarrollar aplicaciones en la recamera, necesitas configurar el entorno de compilación cruzada (Compilar el programa C/C++ en otro Linux, luego transferir el archivo compilado al terminal de la recamera para su ejecución). Si estás usando Windows, puedes instalar Windows Subsystem for Linux (WSL) para ejecutar Linux (Ubuntu, OpenSUSE, Kali, Debian, o Arch Linux).
 
- **Paso1**: Configurar el entorno de compilación en otro Linux
+ **Paso1**: Configurando el entorno de compilación en otro Linux
 
 ```bash
 sudo apt update
@@ -27,20 +27,30 @@ sudo apt install build-essential
 
 mkdir recamera && cd recamera
 
-wget https://github.com/Seeed-Studio/reCamera-OS/releases/download/0.1.5/reCameraOS_sdk_v0.1.5.tar.gz
+wget https://github.com/Seeed-Studio/reCamera-OS/releases/download/0.2.1/sg2002_reCamera_0.2.1_emmc_sdk.tar.gz
+tar -xzvf sg2002_reCamera_0.2.1_emmc_sdk.tar.gz
 
-tar -xzvf reCameraOS_sdk_v0.1.5.tar.gz
-
-git clone https://github.com/sophgo/host-tools.git
+#Note: This tool is over 10GB in size. Please be aware of your disk space.
+git clone https://github.com/sophgo/host-tools.git --depth=1
 git clone https://github.com/Seeed-Studio/sscma-example-sg200x.git
 
-export SG200X_SDK_PATH=$HOME/recamera/sg2002_recamera_emmc/
-export PATH=$HOME/recamera/host-tools/gcc/riscv64-linux-musl-x86_64/bin:$PATH
-
+export SG200X_SDK_PATH=$PWD/sg2002_recamera_emmc
+export PATH=$PWD/host-tools/gcc/riscv64-linux-musl-x86_64/bin:$PATH
 ```
 
-**Paso 2**: Compilar el programa de instancia o el programa que deseas ejecutar en Linux. Ten en cuenta que el directorio "build" creado debe estar ubicado en el directorio raíz del proyecto ("build" debe estar al mismo nivel que "CMakeLists.txt").
-
+**Paso2**: Compilando el programa de ejemplo o el programa que quieres ejecutar en el Linux. Ten en cuenta que el directorio "build" creado debe estar ubicado en el directorio raíz del proyecto ("build" debe estar al mismo nivel que "CMakeLists.txt").
+verificar las herramientas de compilación cruzada primero
+```bash
+(base) se@stu:~/recameraos$ riscv64-unknown-linux-musl-gcc -v
+Using built-in specs.
+COLLECT_GCC=riscv64-unknown-linux-musl-gcc
+COLLECT_LTO_WRAPPER=/home/se/recameraos/host-tools/gcc/riscv64-linux-musl-x86_64/bin/../libexec/gcc/riscv64-unknown-linux-musl/10.2.0/lto-wrapper
+Target: riscv64-unknown-linux-musl
+Configured with: /mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc/configure --target=riscv64-unknown-linux-musl --with-gmp=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpfr=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-mpc=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libexpat-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-libmpfr-prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/build-Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/lib-for-gcc-x86_64-linux --with-pkgversion='Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906' CXXFLAGS='-g -O2 -DTHEAD_VERSION_NUMBER=2.6.1 ' --prefix=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1 --with-sysroot=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/build-gcc-riscv64-unknown-linux-musl/Xuantie-900-gcc-linux-5.10.4-musl64-x86_64-V2.6.1/sysroot --with-system-zlib --enable-shared --enable-tls --enable-languages=c,c++ --disable-libmudflap --disable-libssp --disable-libquadmath --disable-libsanitizer --disable-nls --disable-bootstrap --src=/mnt/ssd/jenkins_iotsw/slave/workspace/Toolchain/build-gnu-riscv_4/./source/riscv/riscv-gcc --enable-multilib --with-abi=lp64d --with-arch=rv64gcxthead 'CFLAGS_FOR_TARGET=-O2   -mcmodel=medany' 'CXXFLAGS_FOR_TARGET=-O2   -mcmodel=medany'
+Thread model: posix
+Supported LTO compression algorithms: zlib
+gcc version 10.2.0 (Xuantie-900 linux-5.10.4 musl gcc Toolchain V2.6.1 B-20220906)
+```
 ```bash
 cd $HOME/recamera/sscma-example-sg200x/solutions/helloworld
 mkdir build && cd build
@@ -54,7 +64,7 @@ Puedes ver las propiedades del archivo escribiendo `file helloworld`.
 
 El "helloworld" verde (con el mismo nombre que la carpeta del programa) es el archivo ejecutable compilado.
 
-**Paso 3**: En este paso, transferiremos el archivo ejecutable compilado al terminal Linux de la recamera para ejecutarlo.
+**Paso3**: En este paso, transferiremos el archivo ejecutable compilado al terminal Linux de la recamera para ejecutarlo.
 Primero, necesitamos iniciar sesión en el terminal de la recamera. Puedes usar la versión web como se muestra a continuación.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/develop_with_c_cpp/2.2.png" /></div>
@@ -73,7 +83,7 @@ sudo scp helloworld recamera@{recamera_IP}:/home/recamera/
 
 El archivo ejecutable ha sido transferido exitosamente.
 
-**Paso 4**: Ejecuta tu archivo ejecutable en la terminal de recamera.
+**Paso4**: Ejecuta tu archivo ejecutable en el terminal de la recamera.
 
 ```bash
 ./helloworld
@@ -91,13 +101,13 @@ Proporcionamos más demos de C/C++ para recamera. Puedes clonarlos desde GitHub:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/develop_with_c_cpp/6.png" /></div>
 
-**Video_demo** es una aplicación de ejemplo que demuestra cómo usar la **recamera** para capturar fotogramas de video, guardarlos en diferentes formatos y transmitir video a través de RTSP (Protocolo de Transmisión en Tiempo Real).
-Puedes seguir el "Paso 2" para compilar y el "Paso 3" para subirlo al terminal de recamera.
-*Nota*: Antes de ejecutar el programa en el terminal de recamera, necesitas iniciar sesión en el espacio de trabajo de recamera (http://192.168.42.1/#/workspace) y terminar el Flow, ya que este programa consume recursos significativos de caché.
+**Video_demo** es una aplicación de ejemplo que demuestra cómo usar la **recamera** para capturar fotogramas de video, guardarlos en diferentes formatos y transmitir video a través de RTSP (Real-Time Streaming Protocol).
+Puedes seguir el "Paso 2" para compilar y el "Paso 3" para subirlo al terminal de la recamera.
+*Nota*: Antes de ejecutar el programa en el terminal de la recamera, necesitas iniciar sesión en el espacio de trabajo de la recamera (http://192.168.42.1/#/workspace) y terminar el Flow, ya que este programa consume recursos significativos de caché.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/develop_with_c_cpp/7.png" /></div>
 
-Necesitas ejecutar el programa con privilegios de superusuario para prevenir fallos en la asignación de memoria.
+Necesitas ejecutar el programa con privilegios de superusuario para prevenir fallos de asignación de memoria.
 
 ```bash
 sudo ./video_demo
@@ -113,19 +123,19 @@ Anotaciones de Parámetros de Salida:
    - **Canal 2**: formato H.264, resolución 1920x1080, 30 FPS
 2. Dependiendo del canal:
    - Para **Canal 0** y **Canal 1**: Los fotogramas se guardan en formatos RGB y NV21, respectivamente.
-   - Para **Canal 2**: Los fotogramas se transmiten por RTSP.
+   - Para **Canal 2**: Los fotogramas se transmiten a través de RTSP.
 
-Para ver y guardar la transmisión RTSP, puedes descargar el reproductor multimedia VLC y conectarte al flujo de red en: rtsp://192.168.42.1:8554/live0.
+Para ver y guardar el stream RTSP, puedes descargar el reproductor multimedia VLC y conectarte al stream de red en: rtsp://192.168.42.1:8554/live0.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/develop_with_c_cpp/9.png" /></div>
 
-La latencia de la transmisión RTSP está dentro de aproximadamente 2 segundos.
+La latencia del stream RTSP está dentro de aproximadamente 2 segundos.
 
 La aplicación se ejecuta indefinidamente hasta ser interrumpida (Ctrl C). La aplicación configura manejadores de señales para salir elegantemente al recibir señales de terminación (SIGINT, SIGTERM).
 
-Este ejemplo sirve como una introducción básica al uso de la recamera para procesamiento y transmisión de video. Los usuarios pueden modificar el código y adaptarlo para sus necesidades específicas, experimentando con diferentes formatos de video y configuraciones de transmisión.
+Este ejemplo sirve como una introducción básica al uso de la recamera para procesamiento y streaming de video. Los usuarios pueden modificar el código y adaptarlo para sus necesidades específicas, experimentando con diferentes formatos de video y configuraciones de streaming.
 
-Para más detalles, consulta nuestro [repositorio de GitHub](https://github.com/Seeed-Studio/OSHW-reCamera-Series).
+Para más detalles, por favor consulta nuestro [repositorio de GitHub](https://github.com/Seeed-Studio/OSHW-reCamera-Series).
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/OSHW-reCamera-Series" target="_blank" rel="noopener noreferrer">
@@ -135,7 +145,7 @@ Para más detalles, consulta nuestro [repositorio de GitHub](https://github.com/
 
 ## Soporte Técnico y Discusión de Productos
 
-Gracias por elegir nuestros productos. Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
