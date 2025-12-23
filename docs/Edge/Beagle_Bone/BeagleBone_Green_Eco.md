@@ -380,6 +380,9 @@ There're many references to help you to get more information about the board.
 
 - **[PDF]** [AM335X Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
 - **[PDF]** [Seeed Studio BeagleBone Green Eco Schematic](https://files.seeedstudio.com/products/102111198/res/BeagleBone%20Green%20Eco_V1.0_SCH_250814.pdf)
+- **[PDF]** [Seeed Studio BeagleBone Green Eco Structure Reference](https://files.seeedstudio.com/products/102111198/res/BBG_Eco_Structure_Reference_20251219.pdf)
+- **[DXF]** [Seeed Studio BeagleBone Green Eco Structure Reference](https://files.seeedstudio.com/products/102111198/res/BBG_Eco_Structure_Reference_20251219.dxf)
+
 
 ## Tech Support & Product Discussion
 
