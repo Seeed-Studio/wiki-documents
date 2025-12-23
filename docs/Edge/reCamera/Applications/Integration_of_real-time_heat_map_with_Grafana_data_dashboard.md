@@ -66,7 +66,7 @@ one computer
 
 ### 1.1 Download the InfluxDB2-2.1.1 and launch
 
-Go to the download link https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-windows-amd64.zip, download it and extract it. Press Win + R to open Command Prompt, then enter the directory where the file was extracted, and finally type:
+Go to the download [link](https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-windows-amd64.zip), download it and extract it. Press Win + R to open Command Prompt, then enter the directory where the file was extracted, and finally type:
 
 ```bash
 influxd
@@ -114,7 +114,7 @@ Click API Token to view the Token of your database, which will be used in the co
 
 ### 2.1 Install programs from SenseCraft platforms in reCamera
 
-Enter the sensecraft platform-Workspace-reCamera([reCamera](https://sensecraft.seeed.cc/ai/recamera)), find the Demo named "**Real-time heat map local blur processing Grafa**" and deploy it on your reCamera
+Enter the sensecraft platform-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera), find the Demo named "**Real-time heat map local blur processing Grafa**" and deploy it on your reCamera
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_8.png" /></div>
 
@@ -198,7 +198,7 @@ After downloading and installing, the Grafana should automatically run in the ba
 
 ### 3.2 Import Dashboard
 
-If you see that the Grafana is running at this time, you can enter the local Grafana interface for configuration by visiting http:// localhost:3000/in the browser. we click Dashboards
+If you see that the Grafana is running at this time, you can enter the local Grafana interface for configuration by visiting http:// localhost:3000/ in the browser. we click Dashboards
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_27.png" /></div>
 
@@ -210,7 +210,7 @@ Select Import dashboard
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_29.png" /></div>
 
-Please download the project I uploaded to GitHub at https://github.com/xr686/reCamera-with-Heatmap.git. After downloading and extracting it, locate the "Grafana Json File" containing "reCamera Heatmap-1766213863140.json" in it. This file is the one we need to import into Grafana.
+Please download the project I uploaded to [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). After downloading and extracting it, locate the "Grafana Json File" containing "reCamera Heatmap-1766213863140.json" in it. This file is the one we need to import into Grafana.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_30.png" /></div>
 
@@ -220,7 +220,7 @@ After importing, you should be able to see the following effect (if you do not s
 
 ## 4. Use of python calibration software
 
-Remember to first download my project on GitHub at https://github.com/xr686/reCamera-with-Heatmap.git. After extracting and opening it, locate the folder named "Heatmap area calibration", which contains three files: calibration_tool.py is the calibration program, R1.jpg is the original image captured by reCamera, and R2.png is the floor plan of the room that I drew.
+Remember to first download my project on [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). After extracting and opening it, locate the folder named "Heatmap area calibration", which contains three files: calibration_tool.py is the calibration program, R1.jpg is the original image captured by reCamera, and R2.png is the floor plan of the room that I drew.
 
 ### 4.1 Get a current native resolution image from the reCamera
 
@@ -350,7 +350,7 @@ Then go back to the command line window (CMD), you will see that the script auto
 
 ## 5. Configuration of the heat map page
 
-The web configuration for the heatmap is also available in my GitHub project at https://github.com/xr686/reCamera-with-Heatmap.git, specifically in the heatmap-demo folder, in the index.html file. We also need to modify several sections in this file; otherwise, it will not be able to run properly and receive the heat map coordinate data.
+The web configuration for the heatmap is also available in [my GitHub project](https://github.com/xr686/reCamera-with-Heatmap.git), specifically in the heatmap-demo folder, in the index.html file. We also need to modify several sections in this file; otherwise, it will not be able to run properly and receive the heat map coordinate data.
 
 ### 5.1 Webpage parameter configuration for heat map
 
@@ -381,7 +381,8 @@ BUCKET is the name of the database you created InfluxDB.
 TOKEN is your InfluxDB API Tokens, please replace the original 12345678 in HTML with your actual Token
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_57.png" /></div>
-### Refresh Interval of 5.3 Thermal Data & Query Period
+
+#### 5.1.3 Refresh Interval of  Thermal Data & Query Period
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_58.png" /></div>
 
