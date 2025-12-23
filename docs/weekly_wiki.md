@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/15/2025
+  date: 12/22/2025
   author: Frank
 ---
 
@@ -17,17 +17,67 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 22nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting started with the Two-Wheeled Biped Robot Based on the StackForce Development Platform](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/)
+### [Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The StackForce two-wheeled biped robot is developed based on the StackForce lightweight robotics development platform. Its core hardware is composed of the StackForce series main control board, motor driver board, and servo driver board. The product provides complete installation tutorials and video courses, making it a cost-effective desktop two-wheeled biped robot.
+This document introduces the getting-started process for the Seeed Studio XIAO ESP32-C5, including hardware overview, development environment setup, board configuration, and basic example uploads. It also covers power options and fundamental features, providing users with a straightforward reference for initial development with the XIAO ESP32-C5.
+
+</div>
+
+### [XIAO ESP32C5 ESP-Mesh Audio](https://wiki.seeedstudio.com/xiao_esp32c5_esp-mesh_audio/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document demonstrates how to use the Seeed Studio XIAO ESP32-C5 to implement audio transmission over an ESP-Mesh network on the 5 GHz Wi-Fi band. It explains setting up a mesh scenario with the XIAO ESP32-C5 as a root node and a computer as a child node, shows an Arduino example for receiving UDP audio data, and includes a Python script to send simulated audio packets to the board.
+
+</div>
+
+### [Connecting XIAO ESP32-C5 to Home Assistant](https://wiki.seeedstudio.com/xiao_esp32c5_homeassistant/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/S_HA_12.png" alt="pir" width={800} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki tutorial will demonstrate how to connect the Seeed Studio XIAO ESP32-C5 to Home Assistant, as well as how to control devices or transmit data after connecting Grove modules to the XIAO ESP32-C5.
+
+</div>
+
+### [Connect IoT Button V2 to Home Assistant via Seeed HA Discovery](https://wiki.seeedstudio.com/iot_button_v2_ha_discovery/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Button_HA_Discovery/1.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project will walk you through three main phases: flashing the firmware to your IoT Button V2 using a web-based flasher, installing the Seeed HA Discovery integration via HACS (Home Assistant Community Store), and discovering your button in Home Assistant for smart home automation.
+
+</div>
+
+### [Real-Time Heat Map Integration with Grafana Using reCamera](https://wiki.seeedstudio.com/integration_of_real-time_heat_map_with_grafana_data_dashboard/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/headmap.gif" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project conducts target detection using the YOLO11n model built into reCamera. It performs fuzzy processing on personnel targets and displays a heat map effect. All of this is handled locally within reCamera! And reCamera will send the detected data to the locally running Influxdb database. Then, Grafana reads the data from the Influxdb database to display real-time data dashboards.
+
+</div>
+
+### [Deploying an Offline Smart Voice Assistant End-to-End](https://wiki.seeedstudio.com/respeaker_voice_assistant/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This project demonstrates a fully local smart voice assistant designed for smart offices and smart spaces. It uses the ReSpeaker XVF3800 microphone array for high-quality voice capture, combined with on-device speech-to-text (STT) for accurate transcription. A local large language model (LLM) processes user queries intelligently without relying on the cloud, ensuring privacy and low latency. Text-to-speech (TTS) generates natural voice responses, enabling real-time interaction. The system is ideal for environments such as offices, malls, kiosks, and meeting rooms where secure, offline voice control is essential.
 
 </div>
 
@@ -153,5 +203,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.11.24th](/Seeed_Elderly/weekly_wiki/2025/wiki251124)
 - [weekly wiki on 2025.12.01st](/Seeed_Elderly/weekly_wiki/2025/wiki251201)
 - [weekly wiki on 2025.12.08th](/Seeed_Elderly/weekly_wiki/2025/wiki251208)
+- [weekly wiki on 2025.12.15th](/Seeed_Elderly/weekly_wiki/2025/wiki251215)
 
 </details>
