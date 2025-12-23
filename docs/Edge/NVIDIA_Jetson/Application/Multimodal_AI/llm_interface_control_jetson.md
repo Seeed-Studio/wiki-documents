@@ -1,6 +1,6 @@
 ---
 description: Jetson LLM Interface Controller is a fully local, voice- and text-driven AI assistant that runs entirely on NVIDIA Jetson devices. It combines local Large Language Models (via Ollama) with optional Speech-to-Text and Text-to-Speech (NVIDIA Riva) to translate natural human commands into structured, safe hardware actions. The system enables private, low-latency control of on-board interfaces (GPIO, I2C, PWM, etc.) and serves as a modular foundation for edge AI applications such as smart environments, robotics, and vision-enabled agents—without relying on the cloud.
-title: Develop Large Language Model on NVIDIA Jetson Devices and enable the control of interfaces on the board
+title: Local LLM Agent on Jetson for Safe Hardware Interface Control
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /llm_interface_control_jetson
 last_update:
@@ -9,11 +9,10 @@ last_update:
 ---
 
 
-
-
 # Jetson LLM Interface Controller
+
 ![enter image description here](https://www.seeedstudio.com/blog/wp-content/uploads/2024/03/image-1030x616.png)
- 
+
  Welcome, maker, dreamer, and builder. This isn't just another home automation project—it's the bridge between human thought and embedded action. By combining the raw computational power of an **NVIDIA Jetson Orin NX** with the reasoning capabilities of a local Large Language Model, you're creating an intelligent nervous system for your home, lab, or creative space.
 
 Imagine whispering *“make the room feel like a cozy café”* and watching lights dim, soft music begin, and the thermostat adjust—all orchestrated by an AI that truly *understands* your intent. Or picture a safety-conscious agent monitoring a baby’s room via camera, describing the scene, and alerting you at the first sign of danger.
@@ -24,7 +23,7 @@ In this wiki I am going to write a starting point to create your own home assist
 
 You can see the code in [THIS](https://github.com/kouroshkarimi/llm_interface_controll) link.
 
-  ## ✨ What This Project Brings to Life
+## ✨ What This Project Brings to Life
 
 - **🧠 Intelligent Command Parsing**
   A local LLM (like Llama, Mistral, or another model running on your Jetson) is carefully prompted to map free-form text to structured commands. The prompt engineering is captured in [`models/jetson-controller.txt`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/models/jetson-controller.txt) a blueprint for teaching the model your domain.
@@ -46,6 +45,7 @@ You can see the code in [THIS](https://github.com/kouroshkarimi/llm_interface_co
 ## 🧭 Navigation & Quick Links
 
 **Core Entry Points**
+
 - 🚪 API Gateway: [`app/main.py`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/main.py) — The FastAPI heart of the system.
 - 🧩 Command Parser: [`app.command_parser.parse_command`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/command_parser.py) — From text to structure.
 - 🧠 LLM Communicator: [`app.llm_agent.ask_llm`](https://github.com/kouroshkarimi/llm_interface_controll/blob/master/app/llm_agent.py) — Conversations with the model.
@@ -59,6 +59,7 @@ This project is built on a simple, powerful idea: **your words should control yo
 By running an LLM locally on the Jetson, we ensure privacy, low latency, and endless customization. The system is deliberately modular—each component is a puzzle piece you can replace, upgrade, or reimagine.
 
 Think of it as:
+
 - A **translator** between human intuition and machine precision.
 - A **scaffold** for building context-aware environments.
 - A **playground** for experimenting with AI on the edge.
@@ -79,6 +80,7 @@ The LLM is trained to respond with a consistent JSON structure—a contract betw
   "confidence": 0.95
 }
 ```
+
 Every field tells a story:
 
 - **intent** — The high-level goal of the request.
@@ -92,7 +94,9 @@ The full prompt—including schema examples and tone guidance—lives in:
 ```
 models/jetson-controller.txt
 ```
+
 ---
+
 ## ⚙️ Architecture: How the Magic Flows
 
 ### Step-by-Step Journey
@@ -121,6 +125,7 @@ models/jetson-controller.txt
    The system returns a success or failure message, closing the interaction.
 
 ---
+
 ## 🔧 Installation: First Steps
 
 ### Prerequisites
@@ -152,6 +157,7 @@ ollama create jetson-controller -f models/jetson-controller.txt
 Edit `app/llm_agent.py` to point to your model server. Ensure the model label matches the one defined in your prompt file.
 
 ---
+
 ## `jetson-controller.txt`
 
 ### 🧠 Purpose & Role
@@ -428,13 +434,13 @@ Any changes to this file directly affect:
 - User trust
 
 ---
+
 ## 🎬 Bringing It to Life: Examples
 
 ```bash
 # Run the uvicorn
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
-
 
 ### Example 1: Setting the Mood
 
@@ -484,6 +490,7 @@ or you can go to this link and run your command in a web UI:
 
 2. **Write a Handler**  
    Follow the pattern:
+
    ```python
    def control_new_device(params):
        return bool, str
@@ -554,8 +561,8 @@ Attach a CSI camera and integrate a Vision Language Model (VLM) to enable:
 - Validate commands with Pydantic models before execution
 - Profile CPU/GPU/MLP usage to avoid thermal throttling on Jetson
 - You can add TTS and STT to this project [link](https://github.com/kouroshkarimi/local_chatbot_jetson)
----
 
+---
 
 ## References
 
