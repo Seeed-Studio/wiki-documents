@@ -358,6 +358,8 @@ last_update:
       <td align="center">45μA</td>
       <td align="center">1.95μA</td>
       <td align="center">1.95μA</td>
+      <td align="center">-</td>
+      <td align="center">-</td>
    </tr>
    <tr>
       <td colspan="15" style={{textAlign: 'center', backgroundColor: '#007bff', padding: '10px'}}><a href="https://wiki.seeedstudio.com/xiao_topic_page/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Compatible Project</a></td>
