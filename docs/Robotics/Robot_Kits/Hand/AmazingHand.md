@@ -18,6 +18,16 @@ last_update:
 
 ---
 
+<div align="center">
+  <img width="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100063642_amazing_hand_right-1_1.jpg"/>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Amazing-Hand-Right-Hand-The-Open-Source-Robotic-Hand-Developer-Kit.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a>
+</div>
+
 The **AmazingHand** is an open-source robotic hand project designed to make research and experimentation with humanoid manipulation accessible and affordable. Traditional robotic hands are often prohibitively expensive and rely on complex, bulky forearm actuators. The AmazingHand solves this by integrating all its motors directly into a compact, 3D-printable design.
 
 Its design is inspired by the "ILDA hand" research project but simplified to lower the barrier to entry for students, hobbyists, and researchers. The wrist interface is designed for the Reachy2 robot but can be easily adapted for any platform.
