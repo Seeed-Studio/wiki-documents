@@ -66,7 +66,7 @@ una computadora
 
 ### 1.1 Descargar InfluxDB2-2.1.1 e iniciar
 
-Ve al enlace de descarga https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-windows-amd64.zip, descárgalo y extráelo. Presiona Win + R para abrir el Símbolo del sistema, luego ingresa al directorio donde se extrajo el archivo, y finalmente escribe:
+Ve al [enlace](https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-windows-amd64.zip) de descarga, descárgalo y extráelo. Presiona Win + R para abrir el Símbolo del sistema, luego ingresa al directorio donde se extrajo el archivo, y finalmente escribe:
 
 ```bash
 influxd
@@ -114,7 +114,7 @@ Haz clic en API Token para ver el Token de tu base de datos, que se utilizará e
 
 ### 2.1 Instalar programas desde plataformas SenseCraft en reCamera
 
-Ingresa a la plataforma sensecraft-Workspace-reCamera([reCamera](https://sensecraft.seeed.cc/ai/recamera)), encuentra la Demo llamada "**Real-time heat map local blur processing Grafa**" y despliégala en tu reCamera
+Ingresa a la plataforma sensecraft-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera), encuentra la Demo llamada "**Real-time heat map local blur processing Grafa**" y despliégala en tu reCamera
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_8.png" /></div>
 
@@ -158,7 +158,7 @@ Después de hacer clic en el pequeño lápiz, necesitamos completar la URL y el 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_18.png" /></div>
 
-La URL aquí es para completar el enlace de la página web de InfluxDB que ingresamos en el primer paso. Por ejemplo, tu página web es 192.168.7.183:8086, entonces puedes completar `http://192.168.7.183:8086` para la URL.
+La URL aquí es para completar el enlace de la página web de InfluxDB que ingresamos en el primer paso. Por ejemplo, si tu página web es 192.168.7.183:8086, entonces puedes completar `http://192.168.7.183:8086` para la URL.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_19.png" /></div>
 
@@ -210,17 +210,17 @@ Selecciona Import dashboard
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_29.png" /></div>
 
-Por favor descarga el proyecto que subí a GitHub en https://github.com/xr686/reCamera-with-Heatmap.git. Después de descargarlo y extraerlo, localiza la carpeta "Grafana Json File" que contiene "reCamera Heatmap-1766213863140.json". Este archivo es el que necesitamos importar en Grafana.
+Por favor descarga el proyecto que subí a [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). Después de descargarlo y extraerlo, localiza la carpeta "Grafana Json File" que contiene "reCamera Heatmap-1766213863140.json". Este archivo es el que necesitamos importar en Grafana.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_30.png" /></div>
 
-Después de importar, deberías poder ver el siguiente efecto (si no ves la siguiente pantalla, por favor ve a la sección de FAQ al final del artículo, allí habrá una solución)
+Después de importar, deberías poder ver el siguiente efecto (si no ves la siguiente pantalla, por favor ve a la sección de FAQ al final del artículo, donde habrá una solución)
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_31.png" /></div>
 
 ## 4. Uso del software de calibración de python
 
-Recuerda primero descargar mi proyecto en GitHub en https://github.com/xr686/reCamera-with-Heatmap.git. Después de extraerlo y abrirlo, localiza la carpeta llamada "Heatmap area calibration", que contiene tres archivos: calibration_tool.py es el programa de calibración, R1.jpg es la imagen original capturada por reCamera, y R2.png es el plano del piso de la habitación que dibujé.
+Recuerda primero descargar mi proyecto en [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). Después de extraerlo y abrirlo, localiza la carpeta llamada "Heatmap area calibration", que contiene tres archivos: calibration_tool.py es el programa de calibración, R1.jpg es la imagen original capturada por reCamera, y R2.png es el plano del piso de la habitación que dibujé.
 
 ### 4.1 Obtener una imagen de resolución nativa actual de la reCamera
 
@@ -350,7 +350,7 @@ Luego regresa a la ventana de línea de comandos (CMD), verás que el script gen
 
 ## 5. Configuración de la página del mapa de calor
 
-La configuración web para el mapa de calor también está disponible en mi proyecto de GitHub en https://github.com/xr686/reCamera-with-Heatmap.git, específicamente en la carpeta heatmap-demo, en el archivo index.html. También necesitamos modificar varias secciones en este archivo; de lo contrario, no podrá ejecutarse correctamente y recibir los datos de coordenadas del mapa de calor.
+La configuración web para el mapa de calor también está disponible en [mi proyecto de GitHub](https://github.com/xr686/reCamera-with-Heatmap.git), específicamente en la carpeta heatmap-demo, en el archivo index.html. También necesitamos modificar varias secciones en este archivo; de lo contrario, no podrá ejecutarse correctamente y recibir los datos de coordenadas del mapa de calor.
 
 ### 5.1 Configuración de parámetros de página web para mapa de calor
 
@@ -366,11 +366,11 @@ Por favor reemplaza el nombre del archivo de tu imagen real
 
 ##### Explicación de parámetros
 
-La URL es la dirección web del InfluxDB que abres.
+La URL es la dirección web de la InfluxDB que abres.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_54.png" /></div>
 
-ORG es el nombre de usuario cuando configuras el InfluxDB.
+ORG es el nombre de usuario cuando configuras la InfluxDB.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_55.png" /></div>
 
@@ -381,7 +381,8 @@ BUCKET es el nombre de la base de datos que creaste en InfluxDB.
 TOKEN es tu Token de API de InfluxDB, por favor reemplaza el 12345678 original en HTML con tu Token real
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_57.png" /></div>
-### Intervalo de Actualización de Datos Térmicos 5.3 y Período de Consulta
+
+#### 5.1.3 Intervalo de Actualización de Datos Térmicos y Período de Consulta
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_58.png" /></div>
 
@@ -405,7 +406,7 @@ Hay dos modos que se pueden configurar:
 
 CAM_WIDTH / CAM_HEIGHT: La resolución del streaming real de la cámara (por ejemplo, 1920x1080 o 1280x720) debe completarse aquí, de lo contrario la transformación de perspectiva será incorrecta.
 
-Este parámetro también se presenta en el paso de "4.1.1 usar reCamera para tomar fotos". Cuando conectamos el nodo de cámara con el nodo de captura, puedes ver el parámetro Resolution del nodo de cámara. Este es el parámetro de resolución que necesitas modificar. Si se selecciona 1920 × 1080 aquí, entonces en el código, debes modificar CAM WIDTH a 1920 y CAM HEIGHT a 1080
+Este parámetro también se presenta en el paso de "4.1.1 usar reCamera para tomar fotos". Cuando conectamos el nodo de cámara con el nodo de captura, puedes ver el parámetro de Resolución del nodo de cámara. Este es el parámetro de resolución que necesitas modificar. Si se selecciona 1920 × 1080 aquí, entonces en el código, debes modificar CAM WIDTH a 1920 y CAM HEIGHT a 1080
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_60.png" /></div>
 
@@ -427,7 +428,7 @@ Si es una acumulación de 1 hora (miles de puntos), max debe establecerse en 150
 
 ### 5.2 Activar el mapa de calor
 
-Presiona Win + R, escribe "cmd", ingresa la ruta "heatmap-demo", y luego introduce
+Presiona Win + R, escribe "cmd", ingresa la ruta "heatmap-demo", y luego ingresa
 
 ```bash
 python -m http.server 8080
@@ -465,7 +466,7 @@ Si encuentras el problema de cargar el mapa térmico, por favor primero verifica
 
 ### Aparece congelamiento en la imagen en tiempo real de reCamera
 
-Si encuentras que la imagen en tiempo real de reCamera se congela y aparece "WebSocket:Disconnected" después de ejecutarse por un tiempo, este es un fenómeno normal, los recursos de reCamera son limitados y la memoria se llenará demasiado. Espera a que se reanude la visualización.
+Si encuentras que la imagen en tiempo real de reCamera se congela y aparece "WebSocket:Disconnected" después de ejecutarse por un tiempo, este es un fenómeno normal, reCamera tiene recursos limitados y la memoria se llenará demasiado. Espera a que se reanude la visualización.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_66.png" /></div>
 
