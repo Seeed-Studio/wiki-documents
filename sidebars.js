@@ -3818,6 +3818,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Speech_vlm',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/use_vlm_guard_warehouse',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Local_Chatbot_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/llm_interface_control_jetson',
               ]
             },
             // Managed Services
