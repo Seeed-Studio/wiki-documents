@@ -3,10 +3,10 @@ description: Get_Started_with_SenseCAP_T2000_tracker
 title: Quick Start
 keywords:
 - SenseCAP_T2000_tracker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp
 slug: /Get_Started_with_SenseCAP_T2000_tracker
 last_update:
-  date: 12/23/2023
+  date: 12/23/2025
   author: Janet
 ---
 

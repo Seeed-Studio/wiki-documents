@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_SenseCAP_T1000_tracker
 last_update:
-  date: 12/23/2023
+  date: 12/23/2025
   author: Janet
 ---
 
