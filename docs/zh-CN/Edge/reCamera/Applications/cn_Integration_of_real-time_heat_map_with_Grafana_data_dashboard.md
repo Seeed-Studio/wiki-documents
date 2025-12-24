@@ -18,7 +18,7 @@ last_update:
 
 ## 简介
 
-本项目使用 reCamera 内置的 YOLO11n 模型进行目标检测。它对人员目标执行模糊处理并显示热力图效果。所有这些都在 reCamera 内部本地处理！reCamera 会将检测到的数据发送到本地运行的 Influxdb 数据库。然后，Grafana 从 Influxdb 数据库读取数据以显示实时数据仪表板。
+本项目使用 reCamera 内置的 YOLO11n 模型进行目标检测。它对人员目标进行模糊处理并显示热力图效果。所有这些都在 reCamera 内部本地处理！reCamera 会将检测到的数据发送到本地运行的 Influxdb 数据库。然后，Grafana 从 Influxdb 数据库读取数据以显示实时数据仪表板。
 
 以下是完成此演示后的使用效果。
 
@@ -66,7 +66,7 @@ last_update:
 
 ### 1.1 下载 InfluxDB2-2.1.1 并启动
 
-前往下载链接 https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-windows-amd64.zip，下载并解压。按 Win + R 打开命令提示符，然后进入文件解压的目录，最后输入：
+前往下载[链接](https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-windows-amd64.zip)，下载并解压。按 Win + R 打开命令提示符，然后进入文件解压的目录，最后输入：
 
 ```bash
 influxd
@@ -114,7 +114,7 @@ ipconfig
 
 ### 2.1 在 reCamera 中从 SenseCraft 平台安装程序
 
-进入 sensecraft 平台-Workspace-reCamera（[reCamera](https://sensecraft.seeed.cc/ai/recamera)），找到名为 "**Real-time heat map local blur processing Grafa**" 的演示并将其部署到您的 reCamera 上
+进入 sensecraft 平台-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera)，找到名为 "**Real-time heat map local blur processing Grafa**" 的演示并将其部署到您的 reCamera 上
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_8.png" /></div>
 
@@ -126,7 +126,7 @@ ipconfig
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_10.png" /></div>
 
-将 reCamera 连接到网络（确保它连接到与您的计算机相同的网络！！这在稍后非常重要）
+将 reCamera 连接到网络（确保它连接到与您的计算机相同的网络！！这在后面非常重要）
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_11.png" /></div>
 
@@ -174,7 +174,7 @@ ipconfig
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_22.png" /></div>
 
-然后我们点击右上角的部署以使刚才的更改生效。有一个警告弹出窗口，我们可以关闭它。
+然后我们点击右上角的部署使刚才的更改生效。有一个警告弹出窗口，我们可以关闭它。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_23.png" /></div>
 
@@ -210,7 +210,7 @@ ipconfig
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_29.png" /></div>
 
-请从 https://github.com/xr686/reCamera-with-Heatmap.git 下载我上传到 GitHub 的项目。下载并解压后，找到其中包含 "reCamera Heatmap-1766213863140.json" 的 "Grafana Json File" 文件夹。这个文件就是我们需要导入到 Grafana 的文件。
+请下载我上传到 [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git) 的项目。下载并解压后，找到包含 "reCamera Heatmap-1766213863140.json" 的 "Grafana Json File" 文件夹。这个文件就是我们需要导入到 Grafana 的文件。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_30.png" /></div>
 
@@ -220,11 +220,11 @@ ipconfig
 
 ## 4. Python 校准软件的使用
 
-记住首先从 https://github.com/xr686/reCamera-with-Heatmap.git 下载我在 GitHub 上的项目。解压并打开后，找到名为 "Heatmap area calibration" 的文件夹，其中包含三个文件：calibration_tool.py 是校准程序，R1.jpg 是 reCamera 拍摄的原始图像，R2.png 是我绘制的房间平面图。
+记住首先下载我在 [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git) 上的项目。解压并打开后，找到名为 "Heatmap area calibration" 的文件夹，其中包含三个文件：calibration_tool.py 是校准程序，R1.jpg 是 reCamera 拍摄的原始图像，R2.png 是我绘制的房间平面图。
 
 ### 4.1 从 reCamera 获取当前原生分辨率图像
 
-获取原始分辨率图像非常重要！！虽然步骤会比较麻烦，但它直接影响热力图的定位精度！请耐心操作！
+获取原始分辨率图像很重要！！虽然步骤会比较麻烦，但它直接影响热力图的定位精度！请耐心操作！
 
 #### 4.1.1 使用 reCamera 拍照
 
@@ -286,7 +286,7 @@ scp -r recamera@<reCamera IP>:/userdata/Images "The folder path of the 'Heatmap 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_40.png" /></div>
 
-您从 GitHub 下载并解压的 'Heatmap area calibration' 文件的文件夹路径，我们首先进入 Heatmap area calibration，点击文件夹上方的路径框，并复制路径。
+您从 GitHub 下载并解压后的 'Heatmap area calibration' 文件的文件夹路径，我们首先进入 Heatmap area calibration，点击文件夹上方的路径框，并复制路径。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_41.png" /></div>
 
@@ -326,7 +326,7 @@ scp -r recamera@10.228.172.71:/userdata/Images "C:\Users\seeed\Desktop\热力图
 
 校准程序是 Heatmap area calibration 路径下的 calibration_tool.py 程序。
 
-我这里默认使用 Pycharm。在使用之前，需要安装 Python 的 OpenCV 库。
+我这里默认使用 Pycharm。使用前，需要安装 Python 的 OpenCV 库。
 
 ```bash
 pip install opencv-python
@@ -344,13 +344,13 @@ pip install opencv-python
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_50.png" /></div>
 
-然后回到命令行窗口（CMD），您会看到脚本自动生成了一段 JS 代码，直接复制该代码，替换您的 index.html 中的 `const CALIBRATION = { ... };` 即可。（直到下一步的"5.5 校准的坐标数据"才会用到，暂时不用管它）
+然后回到命令行窗口（CMD），您会看到脚本自动生成了一段 JS 代码，直接复制该代码，替换您的 index.html 中的 `const CALIBRATION = { ... };` 即可。（直到下一步的"5.5 校准的坐标数据"才会用到，暂时不管它）
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_51.png" /></div>
 
 ## 5. 热力图页面的配置
 
-热力图的网页配置也在我的 GitHub 项目 https://github.com/xr686/reCamera-with-Heatmap.git 中，具体在 heatmap-demo 文件夹中的 index.html 文件中。我们还需要修改此文件中的几个部分；否则，它将无法正常运行并接收热力图坐标数据。
+热力图的网页配置也在[我的 GitHub 项目](https://github.com/xr686/reCamera-with-Heatmap.git)中，具体在 heatmap-demo 文件夹中的 index.html 文件中。我们还需要修改此文件中的几个部分；否则，它将无法正常运行并接收热力图坐标数据。
 
 ### 5.1 热力图的网页参数配置
 
@@ -381,7 +381,8 @@ BUCKET 是您创建的 InfluxDB 数据库的名称。
 TOKEN 是您的 InfluxDB API 令牌，请将 HTML 中的原始 12345678 替换为您的实际令牌
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_57.png" /></div>
-### 5.3 热力数据刷新间隔和查询周期
+
+#### 5.1.3 热力数据刷新间隔和查询周期
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_58.png" /></div>
 
@@ -405,11 +406,11 @@ REFRESH_INTERVAL 指的是刷新的毫秒数，DATA_RANGE 指的是查询过去�
 
 CAM_WIDTH / CAM_HEIGHT：相机实际流媒体的分辨率（例如 1920x1080 或 1280x720）必须在此处填写，否则透视变换将出错。
 
-此参数也在 "4.1.1 使用 reCamera 拍照" 步骤中提到。当我们将相机节点与捕获节点连接时，您可以查看相机节点的分辨率参数。这就是您需要修改的分辨率参数。如果这里选择了 1920 × 1080，那么在代码中，您应该将 CAM_WIDTH 修改为 1920，CAM_HEIGHT 修改为 1080
+此参数也在 "4.1.1 使用 reCamera 拍照" 步骤中提到。当我们将相机节点与捕获节点连接时，您可以查看相机节点的 Resolution 参数。这就是您需要修改的分辨率参数。如果这里选择了 1920 × 1080，那么在代码中，您应该将 CAM_WIDTH 修改为 1920，CAM_HEIGHT 修改为 1080
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_60.png" /></div>
 
-#### 5.1.5 校准坐标数据
+#### 5.1.5 校准的坐标数据
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_61.png" /></div>
 
@@ -423,7 +424,7 @@ CAM_WIDTH / CAM_HEIGHT：相机实际流媒体的分辨率（例如 1920x1080 �
 
 敏感度（最大值）：如果是实时模式（只有几个点），max 设置为大约 2，否则颜色太浅看不见；
 
-如果是 1 小时累积（数千个点），max 应该设置为 150 或更高，否则地图会立即变红（过度曝光）。
+如果是 1 小时累积（数千个点），max 应该设置为 150 或更高，否则地图会立即变红（过曝）。
 
 ### 5.2 激活热力图
 
@@ -477,7 +478,7 @@ python -m http.server 8080
 
 ### Grafana 面板中的"连续运行时间"是什么意思
 
-这里的"连续运行时间"指的是数据库从第一天到现在运行了多长时间，因为我在 InfluxDB 中将 reCamera 数据库的数据保留时间设置为 7 天，所以七天后会自动清除并重新计时，这里您可以在 InfluxDB 中自由设置每个数据库的数据存储时间。
+这里的"连续运行时间"指的是数据库从第一天到现在运行了多长时间，因为我在 InfluxDB 中将 reCamera 数据库的数据保留时间设置为 7 天，所以七天后会自动清除并重新计时，您可以在 InfluxDB 中自由设置每个数据库的数据存储时间。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_68.png" /></div>
 
@@ -485,7 +486,7 @@ python -m http.server 8080
 
 ### 是否可以导出数据
 
-是的，您需要在 InfluxDB Explore 界面中选择您需要的数据，然后点击 Submit，再点击 Download CSV
+可以，您需要在 InfluxDB Explore 界面中选择您需要的数据，然后点击 Submit，再点击 Download CSV
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_70.png" /></div>
 

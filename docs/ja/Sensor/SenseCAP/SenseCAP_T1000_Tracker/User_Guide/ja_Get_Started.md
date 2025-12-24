@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Get_Started_with_SenseCAP_T1000_tracker
 last_update:
-  date: 8/15/2023
-  author: Jessie
+  date: 12/23/2025
+  author: Janet
 ---
 
 
@@ -22,6 +22,11 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> ユーザーガイド </font></span></strong>
     </a>
 </div>
+<br />
+
+:::caution 注意
+Helium、TTN、またはその他の LoRaWAN ネットワークなど、LoRaWAN ネットワークのカバレッジがあることを確認してください。LoRaWAN ネットワークがない場合、デバイスはクラウドにデータを送信できません。トラッカーを使用する最も簡単な方法は、`SenseCAP LoRaWAN Gateway` と `SenseCAP app` を利用することです。
+:::
 
 ## デバイス機能
 

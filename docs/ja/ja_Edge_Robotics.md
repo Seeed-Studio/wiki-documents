@@ -49,82 +49,78 @@ last_update:
 <div class="category-group">
   <div class="category-card robot-kits">
 
-## 🤗 SO-Arm
+### 🤗 SO-Arm
 
 <div className="card-container">
-    <a href="/ja/lerobot_so100m_new/" className="nav-item">
+    <a href="/ja/lerobot_so100m_new/" className="content-card">
       <span className="text">SO100/101 アーム</span>
     </a>
-    <a href="/ja/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 アーム with IsaacSim</span>
+    <a href="/ja/simulate_soarm101_by_leisaac/" className="content-card">
+      <span className="text">SO10x アーム with LeIsaac</span>
     </a>
-    <a href="/ja/control_robotic_arm_via_phospho/" className="nav-item">
+    <a href="/ja/control_robotic_arm_via_phospho/" className="content-card">
       <span className="text">Phospho Lerobot</span>
     </a>
-    <a href="/ja/training_soarm101_policy_with_isaacLab/" className="nav-item">
-    <span className="text">So Arm 強化学習</span>
-    <span className="tag recommended">New</span>
+    <a href="/ja/training_soarm101_policy_with_isaacLab/" className="content-card">
+        <span className="text">So Arm RL トレーニング</span>
+        <span className="tag recommended">New</span>
     </a>
-    <a href="/ja/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 アーム with IsaacSim</span>
-      <span className="tag recommended">New</span>
-    </a>
-    <a href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="nav-item">
-        <span className="text">SO101 アーム with NVIDIA's GR00T</span>
+    <a href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
+        <span className="text">SO101 with NVIDIA GR00T</span>
         <span className="tag recommended">New</span>
     </a>
 </div>
 
-## 🚗 Lekiwi
+### 🚗 Lekiwi
 
 <div className="card-container">
-    <a href="/ja/lerobot_lekiwi/" className="nav-item">
+    <a href="/ja/lerobot_lekiwi/" className="content-card">
       <span className="text">Lekiwi モバイルベース</span>
     </a>
-    <a href="/ja/sound_follow_robot/" className="nav-item">
+    <a href="/ja/sound_follow_robot/" className="content-card">
       <span className="text">Lekiwi 音声追従</span>
     </a>
 </div>
 
-## 🦾 StarAI Arm
+### 🦾 StarAI Arm
 
 <div className="card-container">
-    <a href="/ja/lerobot_starai_arm/" className="nav-item">
-      <span className="text">Starai ロボットアーム</span>
+    <a href="/ja/lerobot_starai_arm/" className="content-card">
+      <span className="text">StarAI ロボットアーム</span>
       <span className="tag recommended">New</span>
     </a>
-    <a href="/ja/starai_arm_ros_moveit/" className="nav-item">
-      <span className="text">Starai ロボットアーム Moveit2</span>
+    <a href="/ja/starai_arm_ros_moveit/" className="content-card">
+      <span className="text">StarAI Arm MoveIt 2</span>
       <span className="tag recommended">New</span>
     </a>
-    <a href="/ja/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">Star AI with NVIDIA's GR00T</span>
-  </a>
-</div>
-
-## Stackforce
-
-<div className="card-container">
-    <a href="/ja/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
-      <span className="text">ミニ車輪脚ロボット</span>
-      <span className="tag recommended">New</span>
+    <a href="/ja/control_robotic_arm_via_gr00t" className="content-card">
+      <span className="text">StarAI with NVIDIA GR00T</span>
     </a>
 </div>
 
-## 🖐️ ハンド
+### 🦿脚付きホイール
 
 <div className="card-container">
-    <a href="/ja/hand_amazinghand/" className="nav-item">
+    <a href="/ja/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
+      <span className="text">ミニホイール脚ロボット</span>
+      <span className="tag recommended">New</span>
+    </a>
+</div>
+
+### 🖐️ ハンド
+
+<div className="card-container">
+    <a href="/ja/hand_amazinghand/" className="content-card">
       <span className="text">AmazingHand</span>
       <span className="tag recommended">New</span>
     </a>
 </div>
 
 
-## 🦀 エンドエフェクタ
+### 🦀 エンドエフェクタ
 
 <div className="card-container">
-    <a href="/ja/dm_gripper/" className="nav-item">
+    <a href="/ja/dm_gripper/" className="content-card">
       <span className="text">DM グリッパー</span>
       <span className="tag recommended">New</span>
     </a>
@@ -139,26 +135,26 @@ last_update:
 <div className="category-card actuators">
 
 <div className="card-container">
-    <a href="/ja/myactuator_series/" className="nav-item">
-      <span className="text">0️⃣MyActuator X シリーズ</span>
+    <a href="/ja/myactuator_series/" className="content-card">
+      <span className="text">MyActuator X シリーズ</span>
     </a>
-    <a href="/ja/damiao_series/" className="nav-item">
-      <span className="text">1️⃣Damiao DM43 シリーズ</span>
+    <a href="/ja/damiao_series/" className="content-card">
+      <span className="text">Damiao DM43 シリーズ</span>
     </a>
-    <a href="/ja/feetech_servo/" className="nav-item">
-      <span className="text">2️⃣Feetech STS3215 サーボモーター</span>
+    <a href="/ja/feetech_servo/" className="content-card">
+      <span className="text">Feetech STS3215 サーボ</span>
     </a>
-    <a href="/ja/hightorque_control" className="nav-item">
-      <span className="text">3️⃣HighTorque シリーズ</span>
+    <a href="/ja/hightorque_control" className="content-card">
+      <span className="text">HighTorque シリーズ</span>
     </a>
-    <a href="/ja/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣Fashionstar シリーズ</span>
+    <a href="/ja/fashionstar_servo/" className="content-card">
+      <span className="text">Fashionstar シリーズ</span>
     </a>
-    <a href="/ja/stackforce_series/" className="nav-item">
-      <span className="text">5️⃣Stackforce シリーズ</span>
+    <a href="/ja/stackforce_series/" className="content-card">
+      <span className="text">Stackforce シリーズ</span>
     </a>
-    <a href="/ja/robstride_control/" className="nav-item">
-      <span className="text">5️⃣RobStride コントロール</span>
+    <a href="/ja/robstride_control/" className="content-card">
+      <span className="text">RobStride コントロール</span>
       <span className="tag recommended">New</span>
     </a>
 </div>
@@ -171,88 +167,77 @@ last_update:
 <div class="category-group">
 <div className="category-card sensors">
 
-**📡LiDAR**  
+**📡 LiDAR**  
 
 <div className="card-container">
-    <a href="/ja/robosense_lidar/" className="nav-item">
-      <span className="text">Robosense</span>
+    <a href="/ja/robosense_lidar/" className="content-card">
+      <span className="text">RoboSense</span>
     </a>
-    <a href="/ja/mid360/" className="nav-item">
+    <a href="/ja/mid360/" className="content-card">
       <span className="text">MID360</span>
     </a>
-    <a href="/ja/a_loam/" className="nav-item">
+    <a href="/ja/a_loam/" className="content-card">
       <span className="text">A-LOAM アルゴリズム</span>
     </a>
-    <a href="/ja/slamtec/" className="nav-item">
+    <a href="/ja/slamtec/" className="content-card">
       <span className="text">Slamtec シリーズ</span>
     </a>
 </div>
 
-**📷カメラ**  
+**📷 カメラ**  
 
 <div className="card-container">
-- Orbbec デプスカメラ
-
-    <a href="/ja/orbbec_gemini2/" className="nav-item">
-      <span className="text">Orbbec Gemini2</span>
+    <a href="/ja/orbbec_gemini2/" className="content-card">
+      <span className="text">Orbbec Gemini 2</span>
     </a>
-    <a href="/ja/orbbec_gemini_335lg" className="nav-item">
-      <span className="text">Orbbec Gemini 335Lg デプスカメラ</span>
+    <a href="/ja/orbbec_gemini_335lg" className="content-card">
+      <span className="text">Gemini 335Lg 深度</span>
       <span className="tag recommended">New</span>
     </a>
-    <a href="/ja/orbbec_gemini336" className="nav-item">
-      <span className="text">Orbbec Gemini 336 デプスカメラ</span>
+    <a href="/ja/orbbec_gemini336" className="content-card">
+      <span className="text">Gemini 336 深度</span>
       <span className="tag recommended">New</span>
     </a>
-
-- SENSING GMSL
-
-    <a href="/ja/sensing_gmsl_cameras" className="nav-item">
-      <span className="text">SENSING GMSL2 カメラ</span>
+    <a href="/ja/sensing_gmsl_cameras" className="content-card">
+      <span className="text">SENSING GMSL2</span>
     </a>
-
-- RoboSense
-
-    <a href="/ja/ac1" className="nav-item">
-      <span className="text">AC1</span>
+    <a href="/ja/ac1" className="content-card">
+      <span className="text">RoboSense AC1</span>
       <span className="tag recommended">New</span>
     </a>
-
-- 例
-
-    <a href="/ja/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">Orbbec デプスカメラ with ROS</span>
+    <a href="/ja/orbbec_depth_camera_on_ros/" className="content-card">
+      <span className="text">Orbbec with ROS</span>
     </a>
-    <a href="/ja/orb_slam3_orbbec_gemini2/" className="nav-item">
-      <span className="text">ORB-SLAM3 with Orbbec Gemini2</span>
+    <a href="/ja/orb_slam3_orbbec_gemini2/" className="content-card">
+      <span className="text">ORB-SLAM3 Gemini2</span>
     </a>
-    <a href="/ja/csi_camera_on_ros/" className="nav-item">
+    <a href="/ja/csi_camera_on_ros/" className="content-card">
       <span className="text">CSI カメラ on Jetson</span>
     </a>
-    <a href="/ja/pycuvslam_recomputer_robotics/" className="nav-item">
+    <a href="/ja/pycuvslam_recomputer_robotics/" className="content-card">
       <span className="text">PyCuVSLAM</span>
     </a>
 
 </div>
 
-**🎤音声**  
+**🎤 音声**  
 
 <div className="card-container">
-    <a href="/ja/ReSpeaker_Core_v2.0/" className="nav-item">
+    <a href="/ja/ReSpeaker_Core_v2.0/" className="content-card">
       <span className="text">ReSpeaker Core v2.0</span>
     </a>
-    <a href="/ja/ReSpeaker_Mic_Array_v2.0/" className="nav-item">
+    <a href="/ja/ReSpeaker_Mic_Array_v2.0/" className="content-card">
       <span className="text">ReSpeaker Mic Array v2.0</span>
     </a>
 </div>
 
-**🧭IMU**  
+**🧭 IMU**  
 
 <div className="card-container">
-    <a href="/ja/hexfellow_y200/" className="nav-item">
+    <a href="/ja/hexfellow_y200/" className="content-card">
       <span className="text">HEXFELLOW Y200</span>
     </a>
-    <a href="/ja/wheeltec_imu/" className="nav-item">
+    <a href="/ja/wheeltec_imu/" className="content-card">
       <span className="text">WHEELTEC IMU</span>
     </a>
 </div>
@@ -268,54 +253,54 @@ last_update:
 **ROS エコシステム**  
 
 <div className="card-container">
-    <a href="/ja/installing_ros1/" className="nav-item">
-      <span className="text">ROS1 インストール</span>
+    <a href="/ja/installing_ros1/" className="content-card">
+      <span className="text">ROS 1 インストール</span>
     </a>
-    <a href="/ja/install_ros2_humble/" className="nav-item">
-      <span className="text">ROS2 インストール</span>
+    <a href="/ja/install_ros2_humble/" className="content-card">
+      <span className="text">ROS 2 インストール</span>
     </a>
-    <a href="/ja/install_isaacros/" className="nav-item">
-      <span className="text">IsaacROS インストール</span>
+    <a href="/ja/install_isaacros/" className="content-card">
+      <span className="text">Isaac ROS インストール</span>
     </a>
-    <a href="/ja/isaac_ros_apriltag/" className="nav-item">
-      <span className="text">AprilTag</span>
+    <a href="/ja/isaac_ros_apriltag/" className="content-card">
+      <span className="text">Isaac ROS AprilTag</span>
     </a>
-    <a href="/ja/isaac_ros_visual_slam/" className="nav-item">
-      <span className="text">Visual SLAM</span>
+    <a href="/ja/isaac_ros_visual_slam/" className="content-card">
+      <span className="text">Isaac ROS V-SLAM</span>
     </a>
 </div>
 
 **PX4**  
 <div className="card-container">
-<a href="/ja/control_px4_with_recomputer_jetson/" className="nav-item">
+<a href="/ja/control_px4_with_recomputer_jetson/" className="content-card">
   <span className="text">PX4 with Jetson</span>
 </a>
 
-<a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
-  <span className="text">Object Tracking with PX4</span>
+<a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="content-card">
+  <span className="text">オブジェクト追跡（PX4）</span>
 </a>
 
 </div>
 
 **NVIDIA Isaac**  
 <div className="card-container">
-<a href="/ja/install_isaaclab/" className="nav-item">
+<a href="/ja/install_isaaclab/" className="content-card">
   <span className="text">Isaac Lab インストール</span>
 </a>
-<a href="/ja/training_soarm101_policy_with_isaacLab/" className="nav-item">
-  <span className="text">So Arm 強化学習</span>
+<a href="/ja/training_soarm101_policy_with_isaacLab/" className="content-card">
+  <span className="text">SO Arm RL トレーニング</span>
   <span className="tag recommended">New</span>
 </a>
-<a href="/ja/simulate_soarm101_by_leisaac/" className="nav-item">
-  <span className="text">SO100 アーム with IsaacSim</span>
+<a href="/ja/simulate_soarm101_by_leisaac/" className="content-card">
+  <span className="text">SO100 Arm Isaac Sim</span>
   <span className="tag recommended">New</span>
 </a>
 </div>
 
 **VLA**  
 <div className="card-container">
-<a href="/ja/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">Star AI with NVIDIA's GR00T</span>
+<a href="/ja/control_robotic_arm_via_gr00t" className="content-card">
+  <span className="text">StarAI with NVIDIA GR00T</span>
 </a>
 </div>
 
@@ -325,43 +310,29 @@ last_update:
 </div>
 
 <style>{`
-/* 导航容器 */
+/* ====================
+   1. 顶部导航栏样式 (保持不变)
+   ==================== */
 .quick-nav-container {
   margin: 2rem 0;
   padding: 1rem;
-  background:
-  radial-gradient(at 10% 20%, #f0fdf4 0%, transparent 50%),
-  radial-gradient(at 90% 80%, #f0f7ff 0%, transparent 50%),
-  white;
+  background: radial-gradient(at 10% 20%, #f0fdf4 0%, transparent 50%), radial-gradient(at 90% 80%, #f0f7ff 0%, transparent 50%), white;
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Dark模式 - 导航容器 */
-html[data-theme='dark'] .quick-nav-container {
-  background:
-    radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
-    radial-gradient(at 90% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
-  box-shadow:
-    0 4px 6px rgba(0, 0, 0, 0.3),
-    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内发光增强深度 */
-}
-
-/* 导航主体 */
 .quick-nav {
   display: flex;
   justify-content: space-around;
   gap: 1rem;
 }
 
-/* ナビゲーション項目 */
 .nav-item {
   position: relative;
   padding: 0.8rem 1.5rem;
   border-radius: 12px;
   display: flex;
-  margin: 6px 6px; /* 上下6px，左右6px */
+  margin: 6px 6px;
   flex-direction: column;
   align-items: center;
   text-decoration: none !important;
@@ -373,277 +344,173 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Darkモード - ナビゲーション項目 */
-html[data-theme='dark'] .nav-item {
-  color: #e5e7eb;
-  background:rgb(47, 50, 57);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-}
-
-/* アイコンスタイル */
-.nav-item .icon {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  transition: transform 0.3s;
-}
-
-/* テキストスタイル */
-.nav-item .text {
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
-
-/* ホバー効果 */
+.nav-item .icon { font-size: 1.8rem; margin-bottom: 0.5rem; transition: transform 0.3s; }
+.nav-item .text { font-size: 0.95rem; white-space: nowrap; }
 .nav-item .hover-effect {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
+  position: absolute; bottom: 0; left: 0; width: 100%; height: 0;
   background: linear-gradient(135deg, #4a90e2 0%, #50e3c2 100%);
-  border-radius: 12px;
-  transition: height 0.3s ease;
-  z-index: -1;
+  border-radius: 12px; transition: height 0.3s ease; z-index: -1;
 }
+.nav-item:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); color: white; }
+.nav-item:hover .icon { transform: scale(1.2) rotate(10deg); }
+.nav-item:hover .hover-effect { height: 100%; }
 
-/* ホバーアニメーション */
-.nav-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  color: white;
-}
-
-/* Darkモード - ホバーアニメーション */
-html[data-theme='dark'] .nav-item:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
-  color: white;
-}
-
-.nav-item:hover .icon {
-  transform: scale(1.2) rotate(10deg);
-}
-
-.nav-item:hover .hover-effect {
-  height: 100%;
-}
-
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
-  .quick-nav {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .nav-item {
-    flex-direction: row;
-    justify-content: start;
-    padding: 0.8rem 1rem;
-  }
-  .nav-item .icon {
-    margin-bottom: 0;
-    margin-right: 0.8rem;
-  }
-}
-`}</style>
-
-<style>{`
-/* コンテンツカード強化版スタイル */
+/* ====================
+   2. メインカテゴリ大カード（外側コンテナ）
+   ==================== */
 .nav-grid {
   display: block;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 2rem;
 }
 
+.category-group { margin-bottom: 2.5rem; }
+
 .category-card {
   position: relative;
-  padding: 1.5rem;
+  padding: 1.8rem;
   border-radius: 16px;
   background: white;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   overflow: hidden;
-  z-index: 1;
+  border: 1px solid transparent;
 }
 
-/* Darkモード - コンテンツカード */
-html[data-theme='dark'] .category-card {
-  background:rgb(30, 30, 32);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-  color: #e5e7eb;
-}
-
-.category-group {
-  margin-bottom: 2rem;
-}
-
-/* カテゴリ色標 */
+/* カテゴリサイド装飾バー */
 .category-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6px;
-  height: 100%;
+  content: ""; position: absolute; top: 0; left: 0; width: 6px; height: 100%;
 }
-
 .robot-kits::before { background: linear-gradient(to bottom, #4a90e2, #50e3c2); }
 .actuators::before { background: linear-gradient(to bottom, #50e3c2, #a0e3c2); }
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* ホバー効果 */
-.category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+/* ====================
+   3. コンテンツ小カードレイアウト（配置と効果）
+   ==================== */
+
+/* グリッドコンテナ：配置を確保 */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* 自動改行、最小260px */
+  gap: 12px; /* カード間隔 */
+  margin-top: 12px;
+  margin-bottom: 1.5rem;
 }
 
-/* Darkモード - ホバー効果 */
-html[data-theme='dark'] .category-card:hover {
-  box-shadow: 0 12px 20px rgba(0,0,0,0.6);
+/* 小カード本体 - 競合を避けるためcontent-cardに名前変更 */
+.content-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* タイトルは左、タグは右 */
+  padding: 10px 16px;
+  background: #f9fafb;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-decoration: none !important;
+  color: var(--ifm-font-color-base);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.category-card:hover::after {
+.content-card .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 8px;
+  z-index: 2;
+}
+
+/* 小カードホバー特殊効果 */
+.content-card:hover {
+  background: #fff;
+  border-color: #4a90e2;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+  transform: translateY(-2px); /* わずかに上昇 */
+  color: #4a90e2;
+}
+
+/* ホバー時左側に小さな青いバーが表示 */
+.content-card::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-  z-index: -1;
-}
-
-/* Darkモード - ホバー光効果 */
-html[data-theme='dark'] .category-card:hover::after {
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
-}
-
-/* リンクアニメーション */
-.category-card a {
-  position: relative;
-  display: inline-block;
-  transition: all 0.2s;
-  text-decoration: none !important;
-  color: #333;
-}
-
-/* Darkモード - リンク */
-html[data-theme='dark'] .category-card a {
-  color: #d1d5db;
-}
-
-.category-card a:hover {
-  color: #4a90e2;
-  transform: translateX(5px);
-}
-
-/* Darkモード - リンクホバー */
-html[data-theme='dark'] .category-card a:hover {
-  color: #60a5fa;
-}
-
-.category-card a::after {
-  content: "";
-  position: absolute;
-  bottom: 2px;
-  left: 0;
   width: 0;
-  height: 2px;
+  height: 100%;
   background: #4a90e2;
-  transition: width 0.3s;
+  transition: width 0.2s ease;
+}
+.content-card:hover::after {
+  width: 4px; /* 幅が4pxに変更 */
 }
 
-/* Darkモード - リンク下線 */
-html[data-theme='dark'] .category-card a::after {
-  background: #60a5fa;
-}
-
-.category-card a:hover::after {
-  width: 100%;
-}
-
-.card-container {
-  margin-bottom: 1.5rem; /* 原为0.1rem */
-}
-
-/* タグスタイル強化 */
+/* ====================
+   4. タグスタイル（Tags）
+   ==================== */
 .tag {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   padding: 2px 8px;
   border-radius: 12px;
-  margin-left: 8px;
-  transition: all 0.3s;
-}
-
-.stable {
-  background: #e6f4ea;
-  color: #137333;
-  box-shadow: 0 2px 4px rgba(0,100,0,0.1);
-}
-
-/* Darkモード - Stableタグ */
-html[data-theme='dark'] .stable {
-  background: #065f46;
-  color: #a7f3d0;
-  box-shadow: 0 2px 4px rgba(0,100,0,0.3);
+  font-weight: 700;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  z-index: 2;
 }
 
 .recommended {
-  background: #fce8e6;
-  color: #a50e0e;
-  box-shadow: 0 2px 4px rgba(200,0,0,0.1);
+  background: rgba(255, 107, 107, 0.1);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  /* シンプルな呼吸アニメーション */
+  animation: pulse 2s infinite;
 }
 
-/* Darkモード - Recommendedタグ */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); }
+  70% { box-shadow: 0 0 0 4px rgba(255, 107, 107, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+}
+
+/* ====================
+   5. ダークモード対応
+   ==================== */
+html[data-theme='dark'] .quick-nav-container {
+  background: radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%), radial-gradient(at 90% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%), linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+html[data-theme='dark'] .nav-item {
+  color: #e5e7eb; background: rgb(47, 50, 57); box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+html[data-theme='dark'] .category-card {
+  background: #1b1b1d; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-color: #303033;
+}
+html[data-theme='dark'] .content-card {
+  background: #242526; color: #e5e7eb; border-color: #303033;
+}
+html[data-theme='dark'] .content-card:hover {
+  background: #2f2f32; border-color: #60a5fa; color: #60a5fa;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+html[data-theme='dark'] .content-card::after { background: #60a5fa; }
 html[data-theme='dark'] .recommended {
-  background: #7f1d1d;
-  color: #fca5a5;
-  box-shadow: 0 2px 4px rgba(200,0,0,0.3);
+  background: rgba(255, 107, 107, 0.15); color: #ff8e8e; border-color: rgba(255, 142, 142, 0.3);
 }
+html[data-theme='dark'] h2, html[data-theme='dark'] h3 { color: #f9fafb; }
+html[data-theme='dark'] strong { color: #e5e7eb; }
 
-.category-card:active {
-  transform: translateY(-2px) scale(0.98);
-  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
-}
-
-/* Darkモード - クリック効果 */
-html[data-theme='dark'] .category-card:active {
-  box-shadow: 0 6px 10px rgba(0,0,0,0.4);
-}
-
-/* レスポンシブ最適化 */
+/* ====================
+   6. モバイル端末対応
+   ==================== */
 @media (max-width: 768px) {
-  .nav-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .category-card {
-    width: 100%;
-    margin-top: 0.5rem; /* カードがタイトルに密着 */
-  }
-}
-
-/* Darkモード - タイトルテキスト */
-html[data-theme='dark'] h1,
-html[data-theme='dark'] h2,
-html[data-theme='dark'] h3,
-html[data-theme='dark'] h4,
-html[data-theme='dark'] h5,
-html[data-theme='dark'] h6 {
-  color: #f9fafb;
-}
-
-/* Darkモード - 本文テキスト */
-html[data-theme='dark'] p,
-html[data-theme='dark'] li,
-html[data-theme='dark'] strong {
-  color: #e5e7eb;
-}
-
-/* Darkモード - 引用ブロック */
-html[data-theme='dark'] blockquote {
-  color: #9ca3af;
-  border-left-color: #4b5563;
+  .quick-nav { flex-direction: column; gap: 0.5rem; }
+  .nav-item { flex-direction: row; justify-content: start; padding: 0.8rem 1rem; }
+  .nav-item .icon { margin-bottom: 0; margin-right: 0.8rem; }
+  .card-container { grid-template-columns: 1fr; } /* スマートフォン端末では単列表示 */
+  .category-card { padding: 1.2rem; }
 }
 `}</style>
-

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-19 17:01:04 (北京时间)
-// 多语言页面: 2083 个
+// 生成时间: 2025-12-22 15:01:56 (北京时间)
+// 多语言页面: 2084 个
 
 (function() {
   'use strict';
@@ -2538,6 +2538,12 @@
     "ja"
   ],
   "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
     "es",
