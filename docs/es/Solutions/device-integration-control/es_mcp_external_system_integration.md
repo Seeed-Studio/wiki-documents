@@ -16,7 +16,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
 slug: /es/mcp_external_system_integration
 last_update:
-  date: 12/23/2025
+  date: 12/06/2025
   author: Spencer
 tags:
   - mcp
@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
 
 ## Descripción General
 
-Esta guía demuestra cómo usar el Protocolo de Contexto de Modelo ([MCP](https://github.com/microsoft/mcp-for-beginners/blob/main/translations/zh/00-Introduction/README.md)) para conectar la IA de Voz con tu ecosistema de software existente. Al envolver tus APIs REST como herramientas MCP, permites que ***SenseCAP Watcher*** interactúe directamente con tu lógica empresarial —ya sea un Sistema de Gestión de Almacén (WMS), CRM, ERP, o un panel de TI personalizado.
+Esta guía demuestra cómo usar el Protocolo de Contexto de Modelo ([MCP](https://github.com/microsoft/mcp-for-beginners/blob/main/translations/zh/00-Introduction/README.md)) para conectar la IA de Voz con tu ecosistema de software existente. Al envolver tus APIs REST como herramientas MCP, permites que ***SenseCAP Watcher*** interactúe directamente con tu lógica empresarial —- ya sea un Sistema de Gestión de Almacén (WMS), CRM, ERP, o un panel de TI personalizado.
 
 <table class="table-center">
   <tr>
@@ -77,7 +77,7 @@ Esta guía demuestra cómo usar el Protocolo de Contexto de Modelo ([MCP](https:
             </div>
             <div class="info-content">
                 <h3>Sincronización de Datos de Latencia Cero</h3>
-                <p>Elimina el retraso de los registros en papel. Los comandos de voz activan llamadas API directas a tu ERP, asegurando que los datos de inventario se sincronicen al instante que un artículo se mueve.</p>
+                <p>Elimina el retraso de los registros en papel. Los comandos de voz activan llamadas directas a la API de tu ERP, asegurando que los datos de inventario se sincronicen al instante que un artículo se mueve.</p>
             </div>
         </li>
         <li class="info-item">
@@ -115,7 +115,7 @@ Entender el flujo de datos es esencial antes de escribir código. La integració
 
 **Escenarios de Integración Universal**:
 
-Aunque esta guía usa un **Sistema de Almacén** como implementación de referencia, la arquitectura se aplica universalmente:
+Mientras esta guía usa un **Sistema de Almacén** como implementación de referencia, la arquitectura se aplica universalmente:
 
 | **Industria**   | **Comando de Voz**                | **Acción del Sistema Subyacente** |
 | --------------- | --------------------------------- | --------------------------------- |
@@ -133,21 +133,31 @@ Simularemos un entorno empresarial ejecutando un **Backend de Almacén** simulad
 
 ### Prerrequisitos
 
-- **Hardware:** SenseCAP Watcher, Computadora con soporte Docker
-- **Software:** Docker o [Docker Desktop](https://www.docker.com/products/docker-desktop/) (incluye Docker Compose), Git
-- **Cuenta:** Cuenta de [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home)
+- **Hardware:** SenseCAP Watcher, Computadora (Windows/macOS/Linux).
+- **Software:** Python 3.10+, Git.
+- **Cuenta:** Cuenta de [Plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home).
 
-:::note Configuración del Watcher
-Asegúrate de que tu SenseCAP Watcher esté configurado con **Xiaozhi AI** a través del [SenseCraft AI Device Center](https://sensecraft.seeed.cc/ai/device/local/37).
+:::note Configuración
+Asegúrate de que tu SenseCAP Watcher esté configurado con **Xiaozhi AI** a través del [Centro de Dispositivos SenseCraft AI](https://sensecraft.seeed.cc/ai/device/local/37).
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecap-setup.png" alt="sensecap-setup"/>
 </div>
+
 :::
 
-### Paso 1: Desplegar el Sistema de Almacén
+### Paso 1: Desplegar Sistema Objetivo
 
-Usamos Docker para el despliegue para asegurar un entorno consistente en todas las plataformas (Windows, macOS, Linux).
+Primero, necesitamos iniciar el backend empresarial simulado. Proporcionamos scripts automatizados para manejar dependencias (usando `uv`) e inicio de servicios.
+
+:::tip instalar uv
+Usa el siguiente comando para instalar uv, un gestor de entornos Python ligero:
+
+```shell
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+:::
 
 **1. Clonar el repositorio**:
 
@@ -156,135 +166,74 @@ git clone https://github.com/suharvest/warehouse_system.git
 cd warehouse_system
 ```
 
-**2. Iniciar con Docker Compose**:
+**2. Iniciar el Servicio**:
 
-```bash
-docker-compose -f docker-compose.prod.yml up -d
+Elige tu sistema operativo para instalar dependencias e iniciar el backend automáticamente.
+
+<Tabs>
+
+<TabItem value="mac" label="Linux/macOS" default>
+
+Ejecuta el script shell para iniciar el backend y frontend:
+
+```shell
+# Navigate to the project directory warehouse_system
+chmod +x start.sh
+./start.sh # which runs the run_backend and frontend/app.py
 ```
 
-Este único comando:
+</TabItem>
 
-- Construye e inicia el servidor API backend (puerto 2124)
-- Construye e inicia la interfaz web frontend (puerto 2125)
-- Crea un volumen persistente para tu base de datos
+<TabItem value="win" label="Windows">
 
-**3. Verificar el despliegue**:
+Ejecuta el script PowerShell para iniciar el backend y frontend:
 
-Espera unos 30 segundos para que los contenedores inicien, luego verifica:
-
-```bash
-docker-compose -f docker-compose.prod.yml ps
+```powershell
+# Navigate to the project directory warehouse_system
+.\start.ps1
 ```
 
-Deberías ver ambos contenedores `warehouse-backend-prod` y `warehouse-frontend-prod` ejecutándose.
+</TabItem>
+
+</Tabs>
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/API_EndPoint.png" alt="API Documentation"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/running-warehouse-demo-successfully.png" alt="running-warehouse-demo-successfully"/>
 </div>
 
-- **UI Frontend:** Abre `http://localhost:2125` en tu navegador
-- **Documentación API:** Abre `http://localhost:2124/docs` para ver la UI de Swagger
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/API_EndPoint.png" alt="specific-location-management"/>
+</div>
 
-### Paso 2: Configuración Inicial del Sistema
+- **Verificar:** Abre tu navegador y visita `http://localhost:2124/docs`. Si ves la página de documentación de la API (como se muestra arriba), tu "Sistema Empresarial" está ejecutándose.
 
-El sistema de almacén incluye autenticación de usuario y gestión de claves API para seguridad. Necesitas configurar esto antes de conectar MCP.
-
-**1. Crear Cuenta de Administrador**:
-
-Abre `http://localhost:2125` en tu navegador. En la primera visita, verás un formulario de registro:
-
-- Ingresa tu **nombre de usuario** deseado (ej., `admin`)
-- Ingresa una **contraseña** (ej., `admin123`)
-- Haz clic en **Register**
-
-:::tip El Primer Usuario es Administrador
-El primer usuario registrado automáticamente se convierte en administrador.
-:::
-
-**2. Iniciar Sesión y Navegar a Gestión de Usuarios**:
-
-Después del registro, inicia sesión con tus credenciales. Haz clic en la pestaña **User Management** en la navegación.
-
-**3. Crear una Clave API**:
-
-En la sección de Gestión de Usuarios, encuentra el área **API Key Management**:
-
-1. Ingresa un nombre descriptivo para la clave (ej., `MCP Bridge`)
-2. Haz clic en **Create API Key**
-3. **Importante:** ¡Copia la clave API generada inmediatamente! Solo se mostrará una vez.
-
-La clave API se ve como: `wh_xxxxxxxxxxxxxxxxxxxx`
-
-:::warning Guarda tu Clave API
-La clave API solo se muestra una vez cuando se crea. Guárdala de forma segura - la necesitarás en el siguiente paso.
-:::
-
-### Paso 3: Configurar Puente MCP
+### Paso 2: Configurar Puente MCP
 
 Ahora, conectamos el backend a la IA. El código del puente reside en el directorio `mcp/`.
 
-:::tip Instalar uv
-El puente MCP usa `uv` como su gestor de entorno Python. Instálalo con:
-
-<Tabs>
-<TabItem value="mac" label="Linux/macOS" default>
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-</TabItem>
-<TabItem value="win" label="Windows (PowerShell)">
-
-```powershell
-irm https://astral.sh/uv/install.ps1 | iex
-```
-
-</TabItem>
-</Tabs>
-
-:::
-
 **1. Obtener Endpoint MCP**:
 
-Obtén tu **Dirección de Endpoint MCP** (`wss://...`) desde la [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) -> Watcher Agent -> Configuration.
+Obtén tu **Dirección de Endpoint MCP** (`wss://...`) desde la [Plataforma SenseCraft AI](https://sensecraft.seeed.cc/ai/home) -> Watcher Agent -> Configuration.
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/MCP_EndPoint.png" alt="MCP_EndPoint"/>
 </div>
 
-**2. Configurar Clave API**:
+**2. Configurar y Ejecutar**:
 
-Abre una terminal y navega a la carpeta `mcp`:
-
-```bash
-cd mcp
-
-# Copy the example config file
-cp config.yml.example config.yml
-```
-
-Edita `config.yml` con tu clave API del Paso 2:
-
-```yaml
-# Backend API address
-api_base_url: "http://localhost:2124/api"
-
-# API key (from User Management -> API Key Management)
-api_key: "wh_your-api-key-here"
-```
-
-**3. Iniciar el Puente MCP**:
+Abre una **nueva ventana de terminal** (mantén el terminal del backend anterior ejecutándose) y navega a la carpeta `mcp`.
 
 <Tabs>
 
 <TabItem value="mac" label="Linux/macOS" default>
 
-```bash
-# Set the MCP Endpoint (replace with your actual address)
+```Bash
+cd mcp
+
+# 1. Set the Endpoint (Replace with your actual address)
 export MCP_ENDPOINT="wss://your-endpoint-address"
 
-# Start the Bridge
+# 2. Start the Bridge
 ./start_mcp.sh
 ```
 
@@ -292,11 +241,13 @@ export MCP_ENDPOINT="wss://your-endpoint-address"
 
 <TabItem value="win" label="Windows (PowerShell)">
 
-```powershell
-# Set the MCP Endpoint (replace with your actual address)
+```PowerShell
+cd mcp
+
+# 1. Set the Endpoint (Replace with your actual address)
 $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
-# Start the Bridge
+# 2. Start the Bridge
 ./start_mcp.ps1
 ```
 
@@ -304,13 +255,13 @@ $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
 </Tabs>
 
-Si es exitoso, verás: `MCP Service Started Successfully!`
+Si es exitoso, verás un mensaje: `MCP Service Started Successfully!`.
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/mcp-bridge-start-successfully.png" alt="mcp-bridge-start-successfully"/>
 </div>
 
-### Paso 4: Verificación
+### Paso 3: Verificación
 
 Todo está conectado. Ahora, usa el SenseCAP Watcher para interactuar con tu sistema local.
 
@@ -327,18 +278,18 @@ Todo está conectado. Ahora, usa el SenseCAP Watcher para interactuar con tu sis
 | "Consultar el stock de Xiaozhi Versión Estándar"      | Llama a la herramienta `query_xiaozhi_stock`         |
 | "¿Cuántos Xiaozhi Versión Profesional tenemos?"       | Llama a `query_xiaozhi_stock` con versión profesional |
 | "Ingresar 5 unidades de Watcher Xiaozhi Versión Estándar" | Llama a la herramienta `stock_in` con cantidad=5     |
-| "Sacar 3 unidades Xiaozhi para ventas"                | Llama a la herramienta `stock_out` con cantidad=3    |
+| "Sacar 3 unidades de Xiaozhi para ventas"             | Llama a la herramienta `stock_out` con cantidad=3    |
 | "¿Cuál es el resumen de inventario de hoy?"            | Llama a la herramienta `get_today_statistics`        |
-| "Listar todos los productos Xiaozhi"                   | Llama a la herramienta `list_xiaozhi_products`       |
+| "Listar todos los productos Xiaozhi"                  | Llama a la herramienta `list_xiaozhi_products`       |
 
 **¿Qué sucede detrás de escena?**
 
-| **Componente**  | **Acción**                                         |
-| --------------- | -------------------------------------------------- |
-| **Watcher**     | Envía audio de voz a la nube.                     |
-| **Puente MCP**  | Recibe intención, determina que la herramienta es `query_stock`. |
-| **Sistema**     | Ejecuta `GET /materials/product-stats` con autenticación de clave API. |
-| **Resultado**   | Watcher habla: *"El stock actual es de 150 unidades."* |
+| **Componente** | **Acción**                                         |
+| -------------- | -------------------------------------------------- |
+| **Watcher**    | Envía audio de voz a la nube.                     |
+| **MCP Bridge** | Recibe intención, determina que la herramienta es `query_stock`. |
+| **Sistema**    | Ejecuta `GET /materials/product-stats`.           |
+| **Resultado**  | Watcher habla: *"El stock actual es de 150 unidades."* |
 
 ### Respuestas Esperadas
 
@@ -364,22 +315,15 @@ Abre `mcp/warehouse_mcp.py`. El primer paso es decirle al puente dónde vive tu 
 
 ```python
 # Change this line to point to your actual production server IP/Domain
-# API_BASE_URL = "http://localhost:2124/api"
-API_BASE_URL = "http://192.168.50.10:8080/api/v1"
-```
-
-O mejor, usa el archivo `config.yml`:
-
-```yaml
-api_base_url: "http://192.168.50.10:8080/api/v1"
-api_key: "your-production-api-key"
+# API_BASE_URL = "http://localhost:2124/api" 
+API_BASE_URL = "http://192.168.50.10:8080/api/v1" 
 ```
 
 ### 2. Definir Herramientas Personalizadas
 
 Para agregar un nuevo comando de voz, no necesitas entrenar un modelo. Solo necesitas escribir una función de Python.
 
-Usa el decorador `@mcp.tool()` para envolver tus llamadas API.
+Usa el decorador `@mcp.tool()` para envolver tus llamadas a la API.
 
 **Flujo de trabajo:**
 
@@ -418,7 +362,7 @@ Escribir buenas herramientas MCP es diferente de escribir funciones estándar de
 
 ### 1. Los Nombres Importan
 
-Los nombres de herramientas y parámetros deben ser descriptivos. La IA lee estos para "adivinar" qué herramienta elegir.
+Los nombres de las herramientas y parámetros deben ser descriptivos. La IA lee estos para "adivinar" qué herramienta elegir.
 
 ```Python
 # ✅ Good - Clear and descriptive
@@ -453,7 +397,7 @@ def stock_in(product_name: str, quantity: int) -> dict:
 
 :::danger Nunca uses print()
 
-MCP usa entrada/salida estándar (stdio) para comunicación entre el puente y el agente de IA. Usar print() corromperá el flujo de datos del protocolo y causará que la conexión se rompa.
+MCP usa entrada/salida estándar (stdio) para la comunicación entre el puente y el agente de IA. Usar print() corromperá el flujo de datos del protocolo y causará que la conexión se rompa.
 
 :::
 
@@ -472,7 +416,7 @@ print(f"Processing stock in: {product_name}")
 
 ### 4. Optimizar Valores de Retorno
 
-El valor de retorno es leído por la IA para generar una respuesta hablada. Manténlo conciso para reducir latencia y uso de tokens (típicamente bajo 1024 bytes).
+El valor de retorno es leído por la IA para generar una respuesta hablada. Manténlo conciso para reducir la latencia y el uso de tokens (típicamente bajo 1024 bytes).
 
 ```Python
 # ✅ Good - Concise
@@ -485,8 +429,8 @@ return {
 # ❌ Bad - Too verbose (AI doesn't need the full database history)
 return {
     "success": True,
-    "full_product_details": {...},
-    "complete_history": [...]
+    "full_product_details": {...}, 
+    "complete_history": [...] 
 }
 ```
 
@@ -511,46 +455,21 @@ except Exception as e:
 
 ### 3. Desplegar para Producción
 
-La demostración se ejecuta en tu terminal local. Para operación 24/7 a largo plazo:
+La demostración se ejecuta en tu terminal local. Para operación a largo plazo 24/7:
 
 - **Dockerizar:** Empaqueta la carpeta `mcp/` en un contenedor Docker para asegurar estabilidad del entorno.
 - **Servicio en Segundo Plano:** En lugar de ejecutar `./start_mcp.sh` en una terminal abierta, usa `systemd` (Linux) o `NSSM` (Windows) para ejecutar el script como un servicio en segundo plano.
-- **Red:** Asegúrate de que la máquina que ejecuta el Puente MCP tenga acceso estable a internet para conectarse a SenseCraft Cloud (`wss://...`).
+- **Red:** Asegúrate de que la máquina que ejecuta el MCP Bridge tenga acceso estable a internet para conectarse a SenseCraft Cloud (`wss://...`).
 
 ## Solución de Problemas
 
 <details>
-<summary>❌ Contenedores Docker No Inician</summary>
-
-- **Síntoma:** `docker-compose ps` muestra contenedores en estado "Exited".
-- **Solución:**
-  1. Verifica que Docker Desktop esté ejecutándose
-  2. Ver logs: `docker-compose -f docker-compose.prod.yml logs`
-  3. Asegúrate de que los puertos 2124 y 2125 no estén en uso
-  4. Intenta reconstruir: `docker-compose -f docker-compose.prod.yml up -d --build`
-
-</details>
-
-<details>
-<summary>❌ Clave API Inválida (401 No Autorizado)</summary>
-
-- **Síntoma:** Los logs del puente MCP muestran `401 Unauthorized` o "Invalid API Key".
-- **Solución:**
-  1. Verifica que la clave API en `mcp/config.yml` sea correcta
-  2. Verifica que la clave API siga activa en User Management
-  3. Asegúrate de que no haya espacios extra o comillas alrededor de la clave
-  4. Intenta crear una nueva clave API
-
-</details>
-
-<details>
 <summary>❌ Servicio Backend No Ejecutándose</summary>
 
-- **Síntoma:** La IA responde con "Cannot connect to backend service".
+- **Síntoma:** La IA responde con "No se puede conectar al servicio backend".
 - **Solución:**
-  1. Verifica que los contenedores Docker estén ejecutándose: `docker-compose -f docker-compose.prod.yml ps`
-  2. Verifica la salud del backend: `curl http://localhost:2124/api/dashboard/stats`
-  3. Verifica los logs del backend: `docker-compose -f docker-compose.prod.yml logs backend`
+  1. Asegúrate de que el backend esté ejecutándose: `uv run python run_backend.py`.
+  2. Verifica la disponibilidad del puerto: `curl http://localhost:2124/api/dashboard/stats`.
 
 </details>
 
@@ -559,9 +478,9 @@ La demostración se ejecuta en tu terminal local. Para operación 24/7 a largo p
 
 - **Síntoma:** El script se cuelga en "Connecting to WebSocket server..." indefinidamente.
 - **Solución:**
-  1. Verifica que tu `MCP_ENDPOINT` sea correcto (verifica errores tipográficos).
+  1. Verifica que tu `MCP_ENDPOINT` sea correcto (revisa errores tipográficos).
   2. Asegúrate de que la URL comience con `wss://` (WebSocket Seguro).
-  3. Verifica tu conexión a internet (tráfico saliente hacia SenseCraft Cloud).
+  3. Verifica tu conexión a internet (tráfico saliente a SenseCraft Cloud).
 
 </details>
 
@@ -570,18 +489,18 @@ La demostración se ejecuta en tu terminal local. Para operación 24/7 a largo p
 
 - **Síntoma:** Hablas un comando, pero la IA dice "No sé cómo hacer eso" o no activa la herramienta.
 - **Solución:**
-  1. **Verificar Nomenclatura:** Usa nombres descriptivos claros en inglés para las funciones.
-  2. **Verificar Docstrings:** Asegúrate de que el docstring describa explícitamente la *intención* (ej., "Usar esto para verificar inventario").
-  3. **Reiniciar:** Debes reiniciar el script del servidor MCP después de cualquier cambio en el código.
+  1. **Verificar Nombres:** Usa nombres descriptivos claros en inglés para las funciones.
+  2. **Verificar Docstrings:** Asegúrate de que el docstring describa explícitamente la *intención* (ej., "Usa esto para verificar stock").
+  3. **Reiniciar:** Debes reiniciar el script del servidor MCP después de cualquier cambio de código.
 
 </details>
 
 <details>
-<summary>❌ Límite de Conexión Excedido</summary>
+<summary>❌ Límite de Conexiones Excedido</summary>
 
-- **Síntoma:** El registro de errores muestra "Máximo de conexiones alcanzado".
+- **Síntoma:** El log de errores muestra "Máximo de conexiones alcanzado".
 - **Solución:**
-  1. Cada Endpoint tiene un límite de conexión. Asegúrate de no tener múltiples terminales ejecutando el script simultáneamente.
+  1. Cada Endpoint tiene un límite de conexiones. Asegúrate de no tener múltiples terminales ejecutando el script simultáneamente.
   2. Cierra otras conexiones y espera unos minutos antes de reintentar.
 
 </details>
@@ -589,25 +508,25 @@ La demostración se ejecuta en tu terminal local. Para operación 24/7 a largo p
 <details>
 <summary>❌ Conexión Rechazada / WebSocket 443 Bloqueado</summary>
 
-**Síntoma:**
-Ves `[WinError 1225] Connection refused` o el script se cuelga en `Connecting to WebSocket server...`, incluso con la URL del Endpoint correcta.
+**Síntoma:**  
+Ves `[WinError 1225] Connection refused` o el script se cuelga en `Connecting to WebSocket server...`, incluso con la URL de Endpoint correcta.
 
-**Causa:**
-**Firewall Corporativo Bloqueando.** Muchas redes de oficina (o VPNs) bloquean estrictamente el tráfico **WebSocket (wss://)** o protocolos no estándar, incluso en el puerto 443.
+**Causa:**  
+**Firewall Corporativo Bloqueando.** Muchas redes de oficina (o VPNs) bloquean estrictamente el tráfico de **WebSocket (wss://)** o protocolos no estándar, incluso en el puerto 443.
 
 **Soluciones Rápidas:**
 
-1. **📱 La "Prueba de Hotspot" (Recomendado)**
-   Desconéctate de la red de oficina/VPN y conecta tu computadora a un **Hotspot Móvil (4G/5G)**.
+1. **📱 La "Prueba de Hotspot" (Recomendado)**  
+   Desconéctate de la red de oficina/VPN y conecta tu computadora a un **Hotspot Móvil (4G/5G)**.  
    - *Si funciona:* Tu red de oficina está bloqueando la conexión.
 
-2. **🔧 Configurar Proxy**
+2. **🔧 Configurar Proxy**  
    Si tu empresa requiere un proxy, configúralo antes de ejecutar:
    - **Windows:** `$env:HTTPS_PROXY="http://your-proxy:port"`
    - **Mac/Linux:** `export HTTPS_PROXY="http://your-proxy:port"`
 
-3. **🛡️ Lista Blanca**
-   Pide a IT que permita el tráfico **WebSocket (WSS)** para: `*.seeed.cc`.
+3. **🛡️ Lista Blanca**  
+   Pide a TI que permita tráfico de **WebSocket (WSS)** para: `*.seeed.cc`.
 
 </details>
 

@@ -16,7 +16,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
 slug: /cn/mcp_external_system_integration
 last_update:
-  date: 12/23/2025
+  date: 12/06/2025
   author: Spencer
 tags:
   - mcp
@@ -127,27 +127,37 @@ import TabItem from '@theme/TabItem';
 
 我们将通过在您的本地机器上运行模拟的 **仓库后端** 和 **MCP 桥接** 来模拟业务环境。此演示支持：
 
-- 🗣️ **库存查询：** "我们有多少个小智标准版单位？"
+- 🗣️ **库存检查：** "我们有多少个小智标准版单位？"
 - 🗣️ **数据录入：** "入库 5 个 Watcher 小智单位。"
 - 🗣️ **业务洞察：** "今天的库存摘要是什么？"
 
 ### 前提条件
 
-- **硬件：** SenseCAP Watcher，支持 Docker 的计算机
-- **软件：** Docker 或 [Docker Desktop](https://www.docker.com/products/docker-desktop/)（包含 Docker Compose），Git
-- **账户：** [SenseCraft AI 平台](https://sensecraft.seeed.cc/ai/home) 账户
+- **硬件：** SenseCAP Watcher，计算机（Windows/macOS/Linux）。
+- **软件：** Python 3.10+，Git。
+- **账户：** [SenseCraft AI 平台](https://sensecraft.seeed.cc/ai/home) 账户。
 
-:::note Watcher 设置
-确保您的 SenseCAP Watcher 已通过 [SenseCraft AI Device Center](https://sensecraft.seeed.cc/ai/device/local/37) 配置了 **小智 AI**。
+:::note 设置
+确保您的 SenseCAP Watcher 已通过 [SenseCraft AI 设备中心](https://sensecraft.seeed.cc/ai/device/local/37) 配置了 **小智 AI**。
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecap-setup.png" alt="sensecap-setup"/>
 </div>
+
 :::
 
-### 步骤 1：部署仓库系统
+### 步骤 1：部署目标系统
 
-我们使用 Docker 进行部署，以确保在所有平台（Windows、macOS、Linux）上都有一致的环境。
+首先，我们需要启动模拟业务后端。我们提供自动化脚本来处理依赖项（使用 `uv`）和服务启动。
+
+:::tip 安装 uv
+使用以下命令安装 uv，一个轻量级的 Python 环境管理器：
+
+```shell
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+:::
 
 **1. 克隆仓库**：
 
@@ -156,94 +166,50 @@ git clone https://github.com/suharvest/warehouse_system.git
 cd warehouse_system
 ```
 
-**2. 使用 Docker Compose 启动**：
+**2. 启动服务**：
 
-```bash
-docker-compose -f docker-compose.prod.yml up -d
-```
-
-这个单一命令将：
-
-- 构建并启动后端 API 服务器（端口 2124）
-- 构建并启动前端 Web 界面（端口 2125）
-- 为您的数据库创建持久卷
-
-**3. 验证部署**：
-
-等待约 30 秒让容器启动，然后检查：
-
-```bash
-docker-compose -f docker-compose.prod.yml ps
-```
-
-您应该看到 `warehouse-backend-prod` 和 `warehouse-frontend-prod` 容器都在运行。
-
-<div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/API_EndPoint.png" alt="API Documentation"/>
-</div>
-
-- **前端 UI：** 在浏览器中打开 `http://localhost:2125`
-- **API 文档：** 打开 `http://localhost:2124/docs` 查看 Swagger UI
-
-### 步骤 2：初始系统设置
-
-仓库系统包含用户认证和 API 密钥管理以确保安全。您需要在连接 MCP 之前设置这些。
-
-**1. 创建管理员账户**：
-
-在浏览器中打开 `http://localhost:2125`。首次访问时，您会看到注册表单：
-
-- 输入您想要的 **用户名**（例如，`admin`）
-- 输入 **密码**（例如，`admin123`）
-- 点击 **Register**
-
-:::tip 首个用户是管理员
-第一个注册的用户自动成为管理员。
-:::
-
-**2. 登录并导航到用户管理**：
-
-注册后，使用您的凭据登录。点击导航中的 **User Management** 选项卡。
-
-**3. 创建 API 密钥**：
-
-在用户管理部分，找到 **API Key Management** 区域：
-
-1. 为密钥输入描述性名称（例如，`MCP Bridge`）
-2. 点击 **Create API Key**
-3. **重要：** 立即复制生成的 API 密钥！它只会显示一次。
-
-API 密钥看起来像：`wh_xxxxxxxxxxxxxxxxxxxx`
-
-:::warning 保存您的 API 密钥
-API 密钥只在创建时显示一次。请安全存储 - 您在下一步中会需要它。
-:::
-
-### 步骤 3：配置 MCP 桥接
-
-现在，我们将后端连接到 AI。桥接代码位于 `mcp/` 目录中。
-
-:::tip 安装 uv
-MCP 桥接使用 `uv` 作为其 Python 环境管理器。使用以下命令安装：
+选择您的操作系统来自动安装依赖项并启动后端。
 
 <Tabs>
+
 <TabItem value="mac" label="Linux/macOS" default>
 
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
+运行 shell 脚本来启动后端和前端：
+
+```shell
+# Navigate to the project directory warehouse_system
+chmod +x start.sh
+./start.sh # which runs the run_backend and frontend/app.py
 ```
 
 </TabItem>
-<TabItem value="win" label="Windows (PowerShell)">
+
+<TabItem value="win" label="Windows">
+
+运行 PowerShell 脚本来启动后端和前端：
 
 ```powershell
-irm https://astral.sh/uv/install.ps1 | iex
+# Navigate to the project directory warehouse_system
+.\start.ps1
 ```
 
 </TabItem>
+
 </Tabs>
 
-:::
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/running-warehouse-demo-successfully.png" alt="running-warehouse-demo-successfully"/>
+</div>
+
+<div align="center">
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/API_EndPoint.png" alt="specific-location-management"/>
+</div>
+
+- **验证：** 打开浏览器并访问 `http://localhost:2124/docs`。如果您看到 API 文档页面（如上所示），您的"业务系统"正在运行。
+
+### 步骤 2：配置 MCP 桥接
+
+现在，我们将后端连接到 AI。桥接代码位于 `mcp/` 目录中。
 
 **1. 获取 MCP 端点**：
 
@@ -253,38 +219,21 @@ irm https://astral.sh/uv/install.ps1 | iex
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/MCP_EndPoint.png" alt="MCP_EndPoint"/>
 </div>
 
-**2. 配置 API 密钥**：
+**2. 配置并运行**：
 
-打开终端并导航到 `mcp` 文件夹：
-
-```bash
-cd mcp
-
-# Copy the example config file
-cp config.yml.example config.yml
-```
-
-使用步骤 2 中的 API 密钥编辑 `config.yml`：
-
-```yaml
-# Backend API address
-api_base_url: "http://localhost:2124/api"
-
-# API key (from User Management -> API Key Management)
-api_key: "wh_your-api-key-here"
-```
-
-**3. 启动 MCP 桥接器**：
+打开一个 **新的终端窗口**（保持之前的后端终端运行）并导航到 `mcp` 文件夹。
 
 <Tabs>
 
 <TabItem value="mac" label="Linux/macOS" default>
 
-```bash
-# Set the MCP Endpoint (replace with your actual address)
+```Bash
+cd mcp
+
+# 1. Set the Endpoint (Replace with your actual address)
 export MCP_ENDPOINT="wss://your-endpoint-address"
 
-# Start the Bridge
+# 2. Start the Bridge
 ./start_mcp.sh
 ```
 
@@ -292,11 +241,13 @@ export MCP_ENDPOINT="wss://your-endpoint-address"
 
 <TabItem value="win" label="Windows (PowerShell)">
 
-```powershell
-# Set the MCP Endpoint (replace with your actual address)
+```PowerShell
+cd mcp
+
+# 1. Set the Endpoint (Replace with your actual address)
 $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
-# Start the Bridge
+# 2. Start the Bridge
 ./start_mcp.ps1
 ```
 
@@ -304,13 +255,13 @@ $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
 </Tabs>
 
-如果成功，您将看到：`MCP Service Started Successfully!`
+如果成功，您将看到消息：`MCP Service Started Successfully!`。
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/mcp-bridge-start-successfully.png" alt="mcp-bridge-start-successfully"/>
 </div>
 
-### 步骤 4：验证
+### 步骤 3：验证
 
 一切都已连接。现在，使用 SenseCAP Watcher 与您的本地系统进行交互。
 
@@ -336,15 +287,15 @@ $env:MCP_ENDPOINT="wss://your-endpoint-address"
 | **组件**  | **操作**                                         |
 | -------------- | -------------------------------------------------- |
 | **Watcher**    | 将语音音频发送到云端。                        |
-| **MCP 桥接器** | 接收意图，确定工具为 `query_stock`。 |
-| **系统**     | 使用 API 密钥身份验证执行 `GET /materials/product-stats`。 |
+| **MCP Bridge** | 接收意图，确定工具为 `query_stock`。 |
+| **系统**     | 执行 `GET /materials/product-stats`。           |
 | **结果**     | Watcher 说话：*"当前库存为 150 台。"*    |
 
 ### 预期响应
 
 **查询库存：**
 
-> "库存查询成功。Watcher 小智标准版当前在位置 A-01-01 有 150 台库存。库存状态正常。"
+> "库存查询成功。Watcher 小智标准版当前在 A-01-01 位置有 150 台库存。库存状态正常。"
 
 **入库：**
 
@@ -356,7 +307,7 @@ $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
 ## 为您的系统定制
 
-仓库演示只是一个模板。要集成您自己的**订单管理系统**、**CRM** 或 **IT 仪表板**，请按照以下步骤修改桥接器代码。
+仓库演示只是一个模板。要集成您自己的**订单管理系统**、**CRM** 或 **IT 仪表板**，请按照以下步骤修改桥接代码。
 
 ### 1. 指向您的真实服务器
 
@@ -364,15 +315,8 @@ $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
 ```python
 # Change this line to point to your actual production server IP/Domain
-# API_BASE_URL = "http://localhost:2124/api"
-API_BASE_URL = "http://192.168.50.10:8080/api/v1"
-```
-
-或者更好的方法是使用 `config.yml` 文件：
-
-```yaml
-api_base_url: "http://192.168.50.10:8080/api/v1"
-api_key: "your-production-api-key"
+# API_BASE_URL = "http://localhost:2124/api" 
+API_BASE_URL = "http://192.168.50.10:8080/api/v1" 
 ```
 
 ### 2. 定义自定义工具
@@ -434,7 +378,7 @@ def qry_stk(pn: str) -> dict:
 
 ### 2. 文档字符串是用户界面
 
-文档字符串**不**只是注释；它是 AI 模型的**用户界面**。它指导 AI *何时*以及*如何*使用工具。
+文档字符串**不**只是注释；它是 AI 模型的**用户界面**。它指导 AI *何时*和*如何*使用工具。
 
 ```Python
 @mcp.tool()
@@ -449,7 +393,7 @@ def stock_in(product_name: str, quantity: int) -> dict:
     """
 ```
 
-### 3. 日志记录器 vs. 打印（关键！）
+### 3. Logger vs. Print（关键！）
 
 :::danger 永远不要使用 print()
 
@@ -485,8 +429,8 @@ return {
 # ❌ Bad - Too verbose (AI doesn't need the full database history)
 return {
     "success": True,
-    "full_product_details": {...},
-    "complete_history": [...]
+    "full_product_details": {...}, 
+    "complete_history": [...] 
 }
 ```
 
@@ -511,77 +455,52 @@ except Exception as e:
 
 ### 3. 部署到生产环境
 
-演示在您的本地终端中运行。对于长期 24/7 操作：
+演示在您的本地终端中运行。对于长期 24/7 运行：
 
 - **Docker 化：** 将 `mcp/` 文件夹打包到 Docker 容器中以确保环境稳定性。
 - **后台服务：** 不要在打开的终端中运行 `./start_mcp.sh`，而是使用 `systemd`（Linux）或 `NSSM`（Windows）将脚本作为后台服务运行。
-- **网络：** 确保运行 MCP 桥接器的机器具有稳定的互联网访问以连接到 SenseCraft Cloud（`wss://...`）。
+- **网络：** 确保运行 MCP Bridge 的机器具有稳定的互联网访问以连接到 SenseCraft Cloud（`wss://...`）。
 
 ## 故障排除
 
 <details>
-<summary>❌ Docker 容器未启动</summary>
-
-- **症状：** `docker-compose ps` 显示容器处于 "Exited" 状态。
-- **解决方案：**
-  1. 检查 Docker Desktop 是否正在运行
-  2. 查看日志：`docker-compose -f docker-compose.prod.yml logs`
-  3. 确保端口 2124 和 2125 未被使用
-  4. 尝试重新构建：`docker-compose -f docker-compose.prod.yml up -d --build`
-
-</details>
-
-<details>
-<summary>❌ API 密钥无效（401 未授权）</summary>
-
-- **症状：** MCP 桥接器日志显示 `401 Unauthorized` 或 "Invalid API Key"。
-- **解决方案：**
-  1. 验证 `mcp/config.yml` 中的 API 密钥是否正确
-  2. 检查 API 密钥在用户管理中是否仍然有效
-  3. 确保密钥周围没有额外的空格或引号
-  4. 尝试创建新的 API 密钥
-
-</details>
-
-<details>
 <summary>❌ 后端服务未运行</summary>
 
-- **症状：** AI 响应 "Cannot connect to backend service"。
+- **症状：** AI 响应"无法连接到后端服务"。
 - **解决方案：**
-  1. 检查 Docker 容器是否正在运行：`docker-compose -f docker-compose.prod.yml ps`
-  2. 验证后端健康状况：`curl http://localhost:2124/api/dashboard/stats`
-  3. 检查后端日志：`docker-compose -f docker-compose.prod.yml logs backend`
+  1. 确保后端正在运行：`uv run python run_backend.py`。
+  2. 检查端口可用性：`curl http://localhost:2124/api/dashboard/stats`。
 
 </details>
 
 <details>
 <summary>❌ MCP 连接超时</summary>
 
-- **症状：** 脚本在 "Connecting to WebSocket server..." 处无限期挂起。
+- **症状：** 脚本在"Connecting to WebSocket server..."处无限期挂起。
 - **解决方案：**
   1. 验证您的 `MCP_ENDPOINT` 是否正确（检查拼写错误）。
   2. 确保 URL 以 `wss://`（安全 WebSocket）开头。
-  3. 检查您的网络连接（到 SenseCraft Cloud 的出站流量）。
+  3. 检查您的互联网连接（到 SenseCraft Cloud 的出站流量）。
 
 </details>
 
 <details>
-<summary>❌ 工具未识别</summary>
+<summary>❌ 工具未被识别</summary>
 
-- **症状：** 您说出命令，但 AI 回复"我不知道如何做到这一点"或没有触发工具。
+- **症状：** 您说出命令，但 AI 说"我不知道如何做"或不触发工具。
 - **解决方案：**
   1. **检查命名：** 为函数使用清晰的英文描述性名称。
-  2. **检查文档字符串：** 确保文档字符串明确描述*意图*（例如，"使用此功能检查库存"）。
-  3. **重启：** 任何代码更改后，您必须重启 MCP 服务器脚本。
+  2. **检查文档字符串：** 确保文档字符串明确描述*意图*（例如，"用于检查库存"）。
+  3. **重启：** 任何代码更改后必须重启 MCP 服务器脚本。
 
 </details>
 
 <details>
 <summary>❌ 连接限制超出</summary>
 
-- **症状：** 错误日志显示"已达到最大连接数"。
+- **症状：** 错误日志显示"达到最大连接数"。
 - **解决方案：**
-  1. 每个端点都有连接限制。确保您没有同时在多个终端中运行脚本。
+  1. 每个端点都有连接限制。确保您没有多个终端同时运行脚本。
   2. 关闭其他连接并等待几分钟后重试。
 
 </details>
@@ -589,25 +508,25 @@ except Exception as e:
 <details>
 <summary>❌ 连接被拒绝 / WebSocket 443 被阻止</summary>
 
-**症状：**
-您看到 `[WinError 1225] Connection refused` 或脚本在 `Connecting to WebSocket server...` 处挂起，即使使用了正确的端点 URL。
+**症状：**  
+您看到 `[WinError 1225] Connection refused` 或脚本在 `Connecting to WebSocket server...` 处挂起，即使使用正确的端点 URL。
 
-**原因：**
-**企业防火墙阻止。** 许多办公网络（或 VPN）严格阻止 **WebSocket (wss://)** 流量或非标准协议，即使在端口 443 上也是如此。
+**原因：**  
+**企业防火墙阻止。** 许多办公网络（或 VPN）严格阻止 **WebSocket (wss://)** 流量或非标准协议，即使在端口 443 上。
 
 **快速解决方案：**
 
-1. **📱 "热点测试"（推荐）**
-   断开办公网络/VPN 连接，将您的计算机连接到 **移动热点（4G/5G）**。
+1. **📱 "热点测试"（推荐）**  
+   断开办公网络/VPN 连接，将您的计算机连接到**移动热点（4G/5G）**。  
    - *如果有效：* 您的办公网络正在阻止连接。
 
-2. **🔧 配置代理**
+2. **🔧 配置代理**  
    如果您的公司需要代理，请在运行前设置：
    - **Windows：** `$env:HTTPS_PROXY="http://your-proxy:port"`
    - **Mac/Linux：** `export HTTPS_PROXY="http://your-proxy:port"`
 
-3. **🛡️ 白名单**
-   请求 IT 部门允许 **WebSocket (WSS)** 流量访问：`*.seeed.cc`。
+3. **🛡️ 白名单**  
+   要求 IT 允许 **WebSocket (WSS)** 流量：`*.seeed.cc`。
 
 </details>
 
