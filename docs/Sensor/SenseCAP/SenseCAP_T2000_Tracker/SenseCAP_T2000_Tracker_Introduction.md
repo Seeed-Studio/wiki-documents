@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
 slug: /SenseCAP_T2000_tracker/Introduction
 last_update:
-  date: 12/1/2025
+  date: 12/23/2025
   author: Janet
 ---
 
@@ -85,7 +85,7 @@ Built with a 8000 mAh battery, allowing them to operate for over one year when
 **T2000-C (with Solar Panel)**  
 Equipped with a 0.5 W solar panel and a 4000 mAh rechargeable battery, the T2000-C supports multi-year, low-maintenance operation under regular sunlight and moderate uplink intervals.
 
-*Actual battery life varies with uplink interval, positioning mode, and deployment environment. Use the [Battery Life Calculator](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Trcaker_Battery_Life_Calculation_T2000_AB.xlsx) for details.
+*Actual battery life varies with uplink interval, positioning mode, and deployment environment. Use the [Battery Life Calculator](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Trcaker_Battery_Life_Calculator_T2000.xlsx) for details.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Battery_Life.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -170,7 +170,7 @@ Combining a 4000mAh rechargeable battery with a 0.5W solar panel for extended op
 | Positioning Method | **GNSS**: L76K<br />GPS L1 C/A, QZSS L1: 1575.42 MHz<br />GLONASS L1: 1602.5625 MHz<br />BeiDou B1: 1561.098 MHz<br /><br />**BLE**: nRF52840 <br />Bluetooth 5.0<br /><br /><br />[T1000-B Only] <br />**WiFi**: ESP8684 <br />Passive Scan |
 | Power Supply | Primary Battery |
 | Battery Type / Capacity | Li/SOCI2 (ER18505) / 8000mAh |
-| Enclosure Material | PC+ASA |
+| Enclosure Material | PC+10% Glass Fiber |
 | Protection Rating | IP67 |
 | Dimensions | 117 × 65 × 30 mm |
 | Weight | 180g |
@@ -185,7 +185,7 @@ Combining a 4000mAh rechargeable battery with a 0.5W solar panel for extended op
 | Positioning Method | **GNSS**: L76K<br />GPS L1 C/A, QZSS L1: 1575.42 MHz<br />GLONASS L1: 1602.5625 MHz<br />BeiDou B1: 1561.098 MHz<br /><br />**BLE**: nRF52840 <br />Bluetooth 5.0 |
 | Power Supply | 0.5W Solar Panel + Rechargeable battery |
 | Battery Type / Capacity | Ternary lithium battery (INR18500np) / 4000mAh |
-| Enclosure Material | PC+ASA |
+| Enclosure Material | PC+10% Glass Fiber |
 | Protection Rating | IP67 |
 | Dimensions | 117 × 65 × 30 mm |
 | Weight | 180g |

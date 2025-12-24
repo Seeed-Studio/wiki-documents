@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Get_Started_with_SenseCAP_T1000_tracker
 last_update:
-  date: 8/15/2023
-  author: Jessie
+  date: 12/23/2025
+  author: Janet
 ---
 
 
@@ -22,6 +22,11 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> 用户指南 </font></span></strong>
     </a>
 </div>
+<br />
+
+:::caution 注意
+请确保您已接入 LoRaWAN 网络，例如 Helium、TTN 或其他 LoRaWAN 网络。若没有 LoRaWAN 网络，设备将无法向云端发送数据。使用这些追踪器的最简单方式是搭配 `SenseCAP LoRaWAN Gateway` 和 `SenseCAP app`。
+:::
 
 ## 设备功能
 
