@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_SenseCAP_T1000_tracker
 last_update:
-  date: 12/23/2025
+  date: 12/24/2025
   author: Janet
 ---
 
@@ -25,7 +25,7 @@ This chapter will guide you to setup the SenseCAP T1000 Tracker via SenseCAP Mat
 <br />
 
 :::caution note
-Please ensure you have coverage from a LoRaWAN network, such as Helium, TTN or other LoRaWAN networks. Without LoRaWAN networks, the device cannot send data to the cloud. The easiest way to use the trackers is with the `SenseCAP LoRaWAN Gateway` and the `SenseCAP app`.
+Please ensure you have coverage from a LoRaWAN network, such as Helium, TTN or other LoRaWAN networks. Without LoRaWAN networks, the device cannot send data to the cloud. The easiest way to use the trackers is with the `SenseCAP LoRaWAN Gateway` and the `SenseCraft app`.
 :::
 
 ## Device Functions
