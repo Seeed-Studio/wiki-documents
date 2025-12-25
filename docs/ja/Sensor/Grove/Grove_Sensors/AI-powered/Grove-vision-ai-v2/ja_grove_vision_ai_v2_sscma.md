@@ -196,7 +196,7 @@ Roboflowにログインしたら、**Create Project**をクリックします。
 Roboflowは画像のラベル付けに3つの異なる方法を提供しています：Auto Label、Roboflow Labeling、Manual Labelingです。
 
 - [**Auto Label**](https://blog.roboflow.com/yolo-world-prompting-tips/)：大規模な汎用モデルを使用して画像に自動的にラベルを付けます。
-- **Roboflow Labeling**：プロの人間ラベラーチームと協力します。最小ボリュームなし。事前コミットメントなし。バウンディングボックス注釈は$0.04から、ポリゴン注釈は$0.08から開始されます。
+- **Roboflow Labeling**：プロの人間ラベラーチームと協力します。最小ボリュームなし。事前コミットメントなし。バウンディングボックス注釈は\$0.04から、ポリゴン注釈は\$0.08から開始されます。
 - **Manual Labeling**：あなたとあなたのチームが独自の画像にラベルを付けます。
 
 以下では、最も一般的に使用される手動ラベル付けの方法について説明します。
