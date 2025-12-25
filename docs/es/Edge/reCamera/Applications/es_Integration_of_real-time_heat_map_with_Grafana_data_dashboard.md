@@ -196,9 +196,31 @@ Después de descargar e instalar, Grafana debería ejecutarse automáticamente e
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_26.png" /></div>
 
-### 3.2 Importar Panel
+### 3.2 Establecer fuente de datos
 
-Si ves que Grafana se está ejecutando en este momento, puedes ingresar a la interfaz local de Grafana para configuración visitando http://localhost:3000/ en el navegador. hacemos clic en Dashboards
+Si ves Grafana ejecutándose en este momento, puedes acceder a la interfaz local de Grafana para configuración visitando http://localhost:3000 en tu navegador. Luego hacemos clic en "Data sources" en el lado izquierdo y seleccionamos "Add new data source".
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_76.png" /></div>
+
+Luego selecciona "InfluxDB"
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_77.png" /></div>
+
+A continuación, necesitas hacer las siguientes cuatro modificaciones:  
+(1) "Query language" seleccionado como "Flux"  
+(2) Ingresa la URL de tu página web de base de datos, que es el enlace a la página web de InfluxDB que accediste en el primer paso. Por ejemplo, si la dirección de tu página web es 192.168.7.183:8086, entonces la URL que debes llenar es http://192.168.7.183:8086.  
+(3) "Organization" debe llenarse con el nombre de usuario que usaste al registrar la base de datos.  
+(4) "Default Bucket" debe llenarse con el nombre de la base de datos que has creado.  
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_78.png" /></div>
+
+Una vez que todo esté listo, haz clic en "Save & Test". Si la prueba es exitosa, mostrará "datasource is working". En este punto, puedes proceder directamente al siguiente paso. Estas configuraciones se guardarán automáticamente.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_79.png" /></div>
+
+### 3.3 Importar Dashboard
+
+Haz clic en Dashboards
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_27.png" /></div>
 
@@ -210,11 +232,11 @@ Selecciona Import dashboard
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_29.png" /></div>
 
-Por favor descarga el proyecto que subí a [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). Después de descargarlo y extraerlo, localiza la carpeta "Grafana Json File" que contiene "reCamera Heatmap-1766213863140.json". Este archivo es el que necesitamos importar en Grafana.
+Por favor descarga el proyecto que subí a [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). Después de descargarlo y extraerlo, localiza la carpeta "Grafana Json File" que contiene "reCamera Heatmap-1766213863140.json". Este archivo es el que necesitamos importar a Grafana.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_30.png" /></div>
 
-Después de importar, deberías poder ver el siguiente efecto (si no ves la siguiente pantalla, por favor ve a la sección de FAQ al final del artículo, donde habrá una solución)
+Después de importar, deberías poder ver el siguiente efecto (si no ves la siguiente pantalla, por favor ve a la sección de FAQ al final del artículo, allí habrá una solución)
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_31.png" /></div>
 
@@ -266,7 +288,7 @@ Listar Archivos
 ls
 ```
 
-Entonces deberías ver que el sistema lista algunos nombres de archivos de imagen, que son las fotos que acaba de tomar el nodo capture.
+Entonces deberías ver que el sistema lista algunos nombres de archivos de imagen, que son las fotos recién tomadas por el nodo capture.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_37.png" /></div>
 
@@ -274,7 +296,7 @@ Regresa a la interfaz de configuración de hace un momento y abre la conexión s
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_38.png" /></div>
 
-Luego presiona Win R en el teclado, ingresa cmd, y luego ingresa en la terminal
+Luego presiona Win R en el teclado, ingresa cmd, y luego ingresa en el terminal
 
 ```bash
 scp -r recamera@<reCamera IP>:/userdata/Images "The folder path of the 'Heatmap area calibration' file that you downloaded from GitHub after decompression"
@@ -336,7 +358,7 @@ Hay dos puntos a tener en cuenta: primero, las dos imágenes necesitan estar baj
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_48.png" /></div>
 
-Después de que el programa se ejecute, aparecerá una ventana para mostrar tu captura de pantalla de la cámara. En este momento, necesitas hacer clic en el área efectiva con el mouse. La secuencia de clics es muy importante: por favor haz clic en las cuatro esquinas del área que quieres seleccionar en la secuencia horaria de "superior izquierda-> superior derecha-> inferior derecha-> inferior izquierda". Por ejemplo, si solo quieres mostrar la superficie de la mesa, haz clic en las cuatro esquinas de la mesa. Después de 4 puntos, presiona cualquier tecla en el teclado (como espacio) para ingresar al siguiente paso.
+Después de que el programa se ejecute, aparecerá una ventana para mostrar tu captura de pantalla de la cámara. En este momento, necesitas hacer clic en el área efectiva con el mouse. La secuencia de clics es muy importante: por favor haz clic en las cuatro esquinas del área que quieres seleccionar en la secuencia en sentido horario de "superior izquierda-> superior derecha-> inferior derecha-> inferior izquierda". Por ejemplo, si solo quieres mostrar la superficie de la mesa, haz clic en las cuatro esquinas de la mesa. Después de 4 puntos, presiona cualquier tecla en el teclado (como espacio) para ingresar al siguiente paso.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_49.png" /></div>
 
@@ -352,13 +374,13 @@ Luego regresa a la ventana de línea de comandos (CMD), verás que el script gen
 
 La configuración web para el mapa de calor también está disponible en [mi proyecto de GitHub](https://github.com/xr686/reCamera-with-Heatmap.git), específicamente en la carpeta heatmap-demo, en el archivo index.html. También necesitamos modificar varias secciones en este archivo; de lo contrario, no podrá ejecutarse correctamente y recibir los datos de coordenadas del mapa de calor.
 
-### 5.1 Configuración de parámetros de página web para mapa de calor
+### 5.1 Configuración de parámetros de la página web para el mapa de calor
 
 #### 5.1.1 Imagen del Mapa de Calor
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_52.png" /></div>
 
-Por favor reemplaza el nombre del archivo de tu imagen real
+Por favor, reemplaza el nombre del archivo de tu imagen real
 
 #### 5.1.2 la configuración de la parte de la base de datos
 
@@ -378,7 +400,7 @@ BUCKET es el nombre de la base de datos que creaste en InfluxDB.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_56.png" /></div>
 
-TOKEN es tu Token de API de InfluxDB, por favor reemplaza el 12345678 original en HTML con tu Token real
+TOKEN es tu API Token de InfluxDB, por favor reemplaza el 12345678 original en HTML con tu Token real
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_57.png" /></div>
 
@@ -388,17 +410,17 @@ TOKEN es tu Token de API de InfluxDB, por favor reemplaza el 12345678 original e
 
 ##### Explicación de parámetros
 
-REFRESH_INTERVAL se refiere al número de milisegundos para actualizar, DATA_RANGE se refiere al tiempo de consulta en los datos pasados. El valor predeterminado "3000" y "-3s" en el código, donde "3000" significa 3000 milisegundos, es decir, actualizado cada 3 segundos, mientras que "-3s" significa consultar los datos de coordenadas térmicas en los últimos 3s.
+REFRESH_INTERVAL se refiere al número de milisegundos para actualizar, DATA_RANGE se refiere al tiempo de consulta en los datos pasados. Los valores predeterminados "3000" y "-3s" en el código, donde "3000" significa 3000 milisegundos, es decir, actualizado cada 3 segundos, mientras que "-3s" significa consultar los datos de coordenadas térmicas en los últimos 3s.
 
 ##### Selección de modo
 
 Hay dos modos que se pueden configurar:
 
-(1) "modo en tiempo real": las coordenadas térmicas se actualizarán y borrarán las coordenadas anteriores en tiempo real sin superposición acumulativa. Para realizar el modo en tiempo real, necesitas establecer el DATA_RANGE a un tiempo corto. Por ejemplo, mi valor predeterminado "-3s" y "-3s" significa consultar los datos de coordenadas térmicas en los últimos 3s, por ejemplo, el programa ha estado ejecutándose durante 10s ahora, entonces cuando configures el DATA_RANGE a -3s, los datos de coordenadas mostrados por el diagrama térmico son los datos del segundo 8-10, y los datos de coordenadas de los segundos 1-7 anteriores no se mostrarán;
+(1) "modo en tiempo real": las coordenadas térmicas se actualizarán y limpiarán las coordenadas anteriores en tiempo real sin superposición acumulativa. para realizar el modo en tiempo real, necesitas establecer el DATA_RANGE a un tiempo corto. por ejemplo, mi "-3s" predeterminado significa consultar los datos de coordenadas térmicas en los últimos 3s, por ejemplo, el programa ha estado ejecutándose durante 10s ahora, entonces cuando configures el DATA_RANGE a -3s, los datos de coordenadas mostrados por el diagrama térmico son los datos del segundo 8-10, y los datos de coordenadas de los segundos 1-7 anteriores no se mostrarán;
 
 (2) "Modo Acumulativo": Las coordenadas térmicas se actualizarán en tiempo real pero las coordenadas anteriores se superpondrán. Para realizar el modo acumulativo, necesitas establecer el DATA_RANGE a un tiempo más largo, por ejemplo, puedes establecer el DATA_RANGE a "-1h", entonces el diagrama térmico mostrará acumulativamente los datos en la última 1h. Después de que el programa se ejecute durante 2 horas, ahora se muestran los datos de la segunda hora, los datos de la primera hora no se muestran.
 
-#### 5.1.4 resolución de cámara
+#### 5.1.4 resolución de la cámara
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_59.png" /></div>
 
@@ -406,7 +428,7 @@ Hay dos modos que se pueden configurar:
 
 CAM_WIDTH / CAM_HEIGHT: La resolución del streaming real de la cámara (por ejemplo, 1920x1080 o 1280x720) debe completarse aquí, de lo contrario la transformación de perspectiva será incorrecta.
 
-Este parámetro también se presenta en el paso de "4.1.1 usar reCamera para tomar fotos". Cuando conectamos el nodo de cámara con el nodo de captura, puedes ver el parámetro de Resolución del nodo de cámara. Este es el parámetro de resolución que necesitas modificar. Si se selecciona 1920 × 1080 aquí, entonces en el código, debes modificar CAM WIDTH a 1920 y CAM HEIGHT a 1080
+Este parámetro también se presenta en el paso de "4.1.1 usar reCamera para tomar fotos". cuando conectamos el nodo de la cámara con el nodo de captura, puedes ver el parámetro Resolution del nodo de la cámara. este es el parámetro de resolución que necesitas modificar. si se selecciona 1920 × 1080 aquí, entonces en el código, debes modificar CAM WIDTH a 1920 y CAM HEIGHT a 1080
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_60.png" /></div>
 
@@ -414,7 +436,7 @@ Este parámetro también se presenta en el paso de "4.1.1 usar reCamera para tom
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_61.png" /></div>
 
-Este es el código generado en la consola después de que el programa python se ejecute en el paso anterior "uso del programa de calibración 4.3". Reemplaza este código
+Este es el código generado en la consola después de que el programa python se ejecute en el paso anterior "uso del programa de calibración 4.3". reemplaza este código
 
 #### 5.1.6 Umbral Térmico
 
@@ -428,7 +450,7 @@ Si es una acumulación de 1 hora (miles de puntos), max debe establecerse en 150
 
 ### 5.2 Activar el mapa de calor
 
-Presiona Win + R, escribe "cmd", ingresa la ruta "heatmap-demo", y luego ingresa
+Presiona Win + R, escribe "cmd", ingresa la ruta "heatmap-demo", y luego introduce
 
 ```bash
 python -m http.server 8080
@@ -436,7 +458,7 @@ python -m http.server 8080
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_72.png" /></div>
 
-Luego, abriendo la página web "[InfluxDB Heatmap (Grafana Fix + 1h Accumulation)](http://localhost:8080/index.html)" en el navegador, puedes ver que el mapa ha sido cargado.
+Luego, al abrir la página web "[InfluxDB Heatmap (Grafana Fix + 1h Accumulation)](http://localhost:8080/index.html)" en el navegador, puedes ver que el mapa ha sido cargado.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_73.png" /></div>
 
@@ -447,6 +469,12 @@ En este punto, deberías poder ver la siguiente visualización en el panel de Gr
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_74.png" /></div>
 
 ## Preguntas Frecuentes
+
+### La página web de Grafana falló al abrir
+
+Después de ingresar a "Services", encuentra "Grafana", luego haz clic derecho y selecciona "Restart". Después de eso, simplemente abre http://localhost:3000 nuevamente.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_75.png" /></div>
 
 ### El panel de Grafana se carga incorrectamente
 
@@ -460,13 +488,13 @@ Luego haz clic en Refresh
 
 ### Hay un problema cargando el mapa térmico
 
-Si encuentras el problema de cargar el mapa térmico, por favor primero verifica si todos los elementos de configuración en este paso son correctos. Si todos los elementos de configuración son correctos y aún hay un problema con la carga del mapa térmico, por favor presiona la tecla F12 en la interfaz [InfluxDB Heatmap (Grafana Fix 1h Accumulation)](http://localhost:8080/index.html) para ver la salida de la consola web para solucionar problemas.
+Si encuentras el problema de cargar el mapa térmico, por favor primero verifica si todos los elementos de configuración en este paso son correctos. si todos los elementos de configuración son correctos y aún hay un problema con la carga del mapa térmico, por favor presiona la tecla F12 en la interfaz [InfluxDB Heatmap (Grafana Fix 1h Accumulation)](http://localhost:8080/index.html) para ver la salida de la consola web para solucionar problemas.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_65.png" /></div>
 
 ### Aparece congelamiento en la imagen en tiempo real de reCamera
 
-Si encuentras que la imagen en tiempo real de reCamera se congela y aparece "WebSocket:Disconnected" después de ejecutarse por un tiempo, este es un fenómeno normal, reCamera tiene recursos limitados y la memoria se llenará demasiado. Espera a que se reanude la visualización.
+Si encuentras que la imagen en tiempo real de reCamera se congela y aparece "WebSocket:Disconnected" después de ejecutarse por un tiempo, esto es un fenómeno normal, reCamera tiene recursos limitados y la memoria se llenará demasiado. Espera a que se reanude la visualización.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_66.png" /></div>
 
@@ -476,9 +504,9 @@ Este es un fenómeno normal, porque habrá interferencia de ruido, y el valor vo
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_67.png" /></div>
 
-### ¿Qué significa "tiempo de ejecución continua" en el panel de Grafana?
+### ¿Qué significa "tiempo de funcionamiento continuo" en el panel de Grafana?
 
-El "tiempo de ejecución continua" aquí se refiere a cuánto tiempo ha estado ejecutándose la base de datos desde el primer día hasta ahora, porque establecí el tiempo de retención de datos de la base de datos reCamera en InfluxDB en 7 días, por lo que se borrará automáticamente y reiniciará el tiempo después de siete días, aquí puedes establecer libremente el tiempo de almacenamiento de datos de cada base de datos en InfluxDB.
+El "tiempo de funcionamiento continuo" aquí se refiere a cuánto tiempo ha estado funcionando la base de datos desde el primer día hasta ahora, porque establecí el tiempo de retención de datos de la base de datos reCamera en InfluxDB en 7 días, por lo que se limpiará automáticamente y reiniciará el tiempo después de siete días, aquí puedes establecer libremente el tiempo de almacenamiento de datos de cada base de datos en InfluxDB.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_68.png" /></div>
 

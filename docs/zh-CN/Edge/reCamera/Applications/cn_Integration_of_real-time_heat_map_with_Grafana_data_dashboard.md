@@ -114,7 +114,7 @@ ipconfig
 
 ### 2.1 在 reCamera 中从 SenseCraft 平台安装程序
 
-进入 sensecraft 平台-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera)，找到名为 "**Real-time heat map local blur processing Grafa**" 的演示并将其部署到您的 reCamera 上
+进入 sensecraft 平台-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera)，找到名为 "**Real-time heat map local blur processing Grafa**" 的 Demo 并将其部署到您的 reCamera 上
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_8.png" /></div>
 
@@ -146,7 +146,7 @@ ipconfig
 
 ### 2.3 配置 InfluxDB 节点
 
-此时，我们还需要向名为 Write Person Count 的节点添加一些配置信息来找到此节点。
+此时，我们还需要向名为 Write Person Count 的节点添加一些配置信息来找到这个节点。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_16.png" /></div>
 
@@ -192,13 +192,35 @@ ipconfig
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_25.png" /></div>
 
-下载安装后，Grafana 应该会自动在后台运行，您可以打开计算机的"服务"查看它是否正在运行
+下载并安装后，Grafana 应该会自动在后台运行，您可以打开计算机的"服务"查看它是否正在运行
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_26.png" /></div>
 
-### 3.2 导入仪表板
+### 3.2 设置数据源
 
-如果您此时看到 Grafana 正在运行，您可以通过在浏览器中访问 http://localhost:3000/ 进入本地 Grafana 界面进行配置。我们点击 Dashboards
+如果您此时看到 Grafana 正在运行，您可以通过在浏览器中访问 http://localhost:3000 来访问本地 Grafana 界面进行配置。然后我们点击左侧的 "Data sources" 并选择 "Add new data source"。
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_76.png" /></div>
+
+然后选择 "InfluxDB"
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_77.png" /></div>
+
+接下来，您需要进行以下四项修改：  
+(1) "Query language" 选择为 "Flux"  
+(2) 输入您数据库网页的 URL，即您在第一步中访问的 InfluxDB 网页链接。例如，如果您的网页地址是 192.168.7.183:8086，那么您应该填入的 URL 是 http://192.168.7.183:8086。  
+(3) "Organization" 应填入您注册数据库时使用的用户名。  
+(4) "Default Bucket" 应填入您创建的数据库名称。  
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_78.png" /></div>
+
+一切准备就绪后，点击 "Save & Test"。如果测试成功，将显示 "datasource is working"。此时，您可以直接进行下一步。这些设置将自动保存。
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_79.png" /></div>
+
+### 3.3 导入仪表板
+
+点击 Dashboards
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_27.png" /></div>
 
@@ -236,11 +258,11 @@ ipconfig
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_33.png" /></div>
 
-然后双击打开 capture 节点，修改以下两个选项（此节点的功能是每 2 秒拍一张照片并将其存储在 reCamera 本地），然后点击 Finish 并重新部署，点击 Run。运行三四秒后，点击 Stop Running（不需要一直运行，否则会一直拍照）。接下来，我们将把它拍摄的照片移动到本地计算机。
+然后双击打开 capture 节点，修改以下两个选项（此节点的功能是每 2 秒拍一张照片并本地存储在 reCamera 中），然后点击 Finish 并重新部署，点击 Run。运行三四秒后，点击 Stop Running（不需要一直运行，否则会一直拍照）。接下来，我们将把它拍摄的照片移动到本地计算机。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_34.png" /></div>
 
-#### 4.1.2 将 reCamera 拍摄的照片传输到我们的计算机
+#### 4.1.2 将 reCamera 拍摄的照片移植到我们的计算机
 
 让我们看看刚才拍摄的照片是否成功。
 
@@ -286,7 +308,7 @@ scp -r recamera@<reCamera IP>:/userdata/Images "The folder path of the 'Heatmap 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_40.png" /></div>
 
-您从 GitHub 下载并解压后的 'Heatmap area calibration' 文件的文件夹路径，我们首先进入 Heatmap area calibration，点击文件夹上方的路径框，并复制路径。
+您从 GitHub 下载解压后的 'Heatmap area calibration' 文件的文件夹路径，我们首先进入 Heatmap area calibration，点击文件夹上方的路径框，复制路径。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_41.png" /></div>
 
@@ -300,7 +322,7 @@ scp -r recamera@10.228.172.71:/userdata/Images "C:\Users\seeed\Desktop\热力图
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_42.png" /></div>
 
-回到刚才下载的文件夹，您会看到刚才下载的 Images 文件夹。
+回到您刚才下载的文件夹，您会看到刚才下载的 Images 文件夹。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_43.png" /></div>
 
@@ -308,7 +330,7 @@ scp -r recamera@10.228.172.71:/userdata/Images "C:\Users\seeed\Desktop\热力图
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_44.png" /></div>
 
-我们选择最新的图片，通常是最后一张图片，然后将其重命名为 R1
+我们选择最新的图片，通常是最后一张图片，将其重命名为 R1
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_45.png" /></div>
 
@@ -318,7 +340,7 @@ scp -r recamera@10.228.172.71:/userdata/Images "C:\Users\seeed\Desktop\热力图
 
 ### 4.2 准备房间平面图
 
-您可以使用 Windows 自带的绘图工具绘制并保存为图片，存储在 Heatmap area calibration 路径下，或者直接将您现有的房间平面图存储在 Heatmap area calibration 路径下。在此步骤中，您还应该记住删除我之前项目中的 R2.png，并将您的图片重命名为 R2 并存储在此路径下。
+您可以使用 Windows 自带的绘图工具绘制并保存为图片，存储在 Heatmap area calibration 路径下，或者直接将您现有的房间平面图存储在 Heatmap area calibration 路径下。在此步骤中，您还应该记住删除我之前项目中的 R2.png，将您的图片重命名为 R2 并存储在此路径下。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_47.png" /></div>
 
@@ -336,7 +358,7 @@ pip install opencv-python
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_48.png" /></div>
 
-程序运行后，会弹出一个窗口显示您的相机截图。此时您需要用鼠标点击有效区域。点击顺序非常重要：请按照"左上角->右上角->右下角->左下角"的顺时针顺序点击您要选择区域的四个角。例如，如果您只想显示桌面表面，请点击桌子的四个角。点击 4 个点后，按键盘上的任意键（如空格键）进入下一步。
+程序运行后，会弹出一个窗口显示您的相机截图。此时，您需要用鼠标点击有效区域。点击顺序非常重要：请按照"左上角->右上角->右下角->左下角"的顺时针顺序点击您要选择区域的四个角。例如，如果您只想显示桌面，请点击桌子的四个角。点击 4 个点后，按键盘上的任意键（如空格键）进入下一步。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_49.png" /></div>
 
@@ -344,15 +366,15 @@ pip install opencv-python
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_50.png" /></div>
 
-然后回到命令行窗口（CMD），您会看到脚本自动生成了一段 JS 代码，直接复制该代码，替换您的 index.html 中的 `const CALIBRATION = { ... };` 即可。（直到下一步的"5.5 校准的坐标数据"才会用到，暂时不管它）
+然后回到命令行窗口（CMD），您会看到脚本自动生成了一段 JS 代码，直接复制该代码，替换您的 index.html 中的 `const CALIBRATION = { ... };` 即可。（直到下一步的"5.5 校准的坐标数据"才会用到，暂时不用管它）
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_51.png" /></div>
 
-## 5. 热力图页面的配置
+## 5. 热力图页面配置
 
-热力图的网页配置也在[我的 GitHub 项目](https://github.com/xr686/reCamera-with-Heatmap.git)中，具体在 heatmap-demo 文件夹中的 index.html 文件中。我们还需要修改此文件中的几个部分；否则，它将无法正常运行并接收热力图坐标数据。
+热力图的网页配置也可以在[我的 GitHub 项目](https://github.com/xr686/reCamera-with-Heatmap.git)中找到，具体在 heatmap-demo 文件夹中的 index.html 文件中。我们还需要修改此文件中的几个部分；否则，它将无法正常运行并接收热力图坐标数据。
 
-### 5.1 热力图的网页参数配置
+### 5.1 热力图网页参数配置
 
 #### 5.1.1 热力图图片
 
@@ -374,11 +396,11 @@ ORG 是您配置 InfluxDB 时的用户名。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_55.png" /></div>
 
-BUCKET 是您创建的 InfluxDB 数据库的名称。
+BUCKET 是您在 InfluxDB 中创建的数据库名称。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_56.png" /></div>
 
-TOKEN 是您的 InfluxDB API 令牌，请将 HTML 中的原始 12345678 替换为您的实际令牌
+TOKEN 是您的 InfluxDB API 令牌，请将 HTML 中原来的 12345678 替换为您的实际令牌
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_57.png" /></div>
 
@@ -388,15 +410,15 @@ TOKEN 是您的 InfluxDB API 令牌，请将 HTML 中的原始 12345678 替换�
 
 ##### 参数说明
 
-REFRESH_INTERVAL 指的是刷新的毫秒数，DATA_RANGE 指的是查询过去数据的时间。代码中的默认值 "3000" 和 "-3s"，其中 "3000" 表示 3000 毫秒，即每 3 秒刷新一次，而 "-3s" 表示查询过去 3 秒的热力坐标数据。
+REFRESH_INTERVAL 指的是刷新的毫秒数，DATA_RANGE 指的是查询过去数据的时间。代码中默认的 "3000" 和 "-3s"，其中 "3000" 表示 3000 毫秒，即每 3 秒刷新一次，而 "-3s" 表示查询过去 3 秒的热力坐标数据。
 
 ##### 模式选择
 
-有两种可配置的模式：
+有两种可以配置的模式：
 
-(1) "实时模式"：热力坐标将实时刷新并清除之前的坐标，不会累积叠加。要实现实时模式，您需要将 DATA_RANGE 设置为较短的时间。例如，我的默认 "-3s" 表示查询过去 3 秒的热力坐标数据，比如程序现在已经运行了 10 秒，当您将 DATA_RANGE 配置为 -3s 时，热力图显示的坐标数据是第 8-10 秒的数据，之前 1-7 秒的坐标数据将不会显示；
+（1）"实时模式"：热力坐标将实时刷新并清除之前的坐标，不会累积叠加。要实现实时模式，您需要将 DATA_RANGE 设置为较短的时间。例如，我的默认 "-3s" 表示查询过去 3 秒的热力坐标数据，例如，程序现在已经运行了 10 秒，那么当您将 DATA_RANGE 配置为 -3s 时，热力图显示的坐标数据是第 8-10 秒的数据，之前 1-7 秒的坐标数据将不会显示；
 
-(2) "累积模式"：热力坐标将实时刷新，但之前的坐标会叠加显示。要实现累积模式，您需要将 DATA_RANGE 设置为较长的时间，例如，您可以将 DATA_RANGE 设置为 "-1h"，那么热力图将累积显示过去 1 小时的数据。程序运行 2 小时后，现在显示的是第二个小时的数据，第一个小时的数据不会显示。
+（2）"累积模式"：热力坐标将实时刷新，但之前的坐标会叠加。要实现累积模式，您需要将 DATA_RANGE 设置为较长的时间，例如，您可以将 DATA_RANGE 设置为 "-1h"，那么热力图将累积显示过去 1 小时的数据。程序运行 2 小时后，现在显示的是第二小时的数据，第一小时的数据不会显示。
 
 #### 5.1.4 相机分辨率
 
@@ -406,15 +428,15 @@ REFRESH_INTERVAL 指的是刷新的毫秒数，DATA_RANGE 指的是查询过去�
 
 CAM_WIDTH / CAM_HEIGHT：相机实际流媒体的分辨率（例如 1920x1080 或 1280x720）必须在此处填写，否则透视变换将出错。
 
-此参数也在 "4.1.1 使用 reCamera 拍照" 步骤中提到。当我们将相机节点与捕获节点连接时，您可以查看相机节点的 Resolution 参数。这就是您需要修改的分辨率参数。如果这里选择了 1920 × 1080，那么在代码中，您应该将 CAM_WIDTH 修改为 1920，CAM_HEIGHT 修改为 1080
+此参数也在"4.1.1 使用 reCamera 拍照"步骤中提到。当我们将相机节点与捕获节点连接时，您可以查看相机节点的分辨率参数。这是您需要修改的分辨率参数。如果这里选择了 1920 × 1080，那么在代码中，您应该将 CAM_WIDTH 修改为 1920，将 CAM_HEIGHT 修改为 1080
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_60.png" /></div>
 
-#### 5.1.5 校准的坐标数据
+#### 5.1.5 校准坐标数据
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_61.png" /></div>
 
-这是在前面步骤 "4.3 校准程序的使用" 中执行 Python 程序后在控制台生成的代码。替换此代码
+这是在前面步骤"4.3 校准程序的使用"中执行 Python 程序后在控制台中生成的代码。请替换此代码
 
 #### 5.1.6 热力阈值
 
@@ -436,17 +458,23 @@ python -m http.server 8080
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_72.png" /></div>
 
-然后，通过在浏览器中打开网页 "[InfluxDB Heatmap (Grafana Fix + 1h Accumulation)](http://localhost:8080/index.html)"，您可以看到地图已经加载。
+然后，通过在浏览器中打开网页"[InfluxDB Heatmap (Grafana Fix + 1h Accumulation)](http://localhost:8080/index.html)"，您可以看到地图已经加载。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_73.png" /></div>
 
 ## 6. 返回 Grafana 面板并查看最终结果
 
-此时，您应该能够在 Grafana 面板上看到以下显示。如果遇到任何问题，请参考文章末尾的"常见问题"部分。
+此时，您应该能够在 Grafana 面板上看到以下显示。如果您遇到任何问题，请参考文章末尾的"常见问题"部分。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_74.png" /></div>
 
 ## 常见问题
+
+### Grafana 网页打开失败
+
+进入 "Services" 后，找到 "Grafana"，然后右键选择 "Restart"。之后，只需再次打开 http://localhost:3000。
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_75.png" /></div>
 
 ### Grafana 面板加载错误
 
@@ -460,13 +488,13 @@ python -m http.server 8080
 
 ### 热力图加载有问题
 
-如果您遇到热力图加载问题，请首先检查此步骤中的所有配置项是否正确。如果所有配置项都正确但热力图加载仍有问题，请在 [InfluxDB Heatmap (Grafana Fix 1h Accumulation)](http://localhost:8080/index.html) 界面中按 F12 键查看网页控制台的输出以进行故障排除。
+如果您遇到热力图加载问题，请首先检查此步骤中的所有配置项是否正确。如果所有配置项都正确但热力图加载仍有问题，请在[InfluxDB Heatmap (Grafana Fix 1h Accumulation)](http://localhost:8080/index.html)界面中按 F12 键查看网页控制台的输出以进行故障排除。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_65.png" /></div>
 
 ### reCamera 实时画面出现卡顿
 
-如果您发现 reCamera 的实时画面卡顿，运行一段时间后出现 "WebSocket:Disconnected"，这是正常现象，reCamera 资源有限，内存会过满。等待它恢复显示。
+如果您发现 reCamera 的实时画面卡顿，运行一段时间后出现"WebSocket:Disconnected"，这是正常现象，reCamera 资源有限，内存会过满。等待它恢复显示。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_66.png" /></div>
 
@@ -478,7 +506,7 @@ python -m http.server 8080
 
 ### Grafana 面板中的"连续运行时间"是什么意思
 
-这里的"连续运行时间"指的是数据库从第一天到现在运行了多长时间，因为我在 InfluxDB 中将 reCamera 数据库的数据保留时间设置为 7 天，所以七天后会自动清除并重新计时，您可以在 InfluxDB 中自由设置每个数据库的数据存储时间。
+这里的"连续运行时间"指的是数据库从第一天到现在运行了多长时间，因为我在 InfluxDB 中将 reCamera 数据库的数据保留时间设置为 7 天，所以它会在七天后自动清除并重新计时，这里您可以在 InfluxDB 中自由设置每个数据库的数据存储时间。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_68.png" /></div>
 
@@ -486,7 +514,7 @@ python -m http.server 8080
 
 ### 是否可以导出数据
 
-可以，您需要在 InfluxDB Explore 界面中选择您需要的数据，然后点击 Submit，再点击 Download CSV
+是的，您需要在 InfluxDB Explore 界面中选择您需要的数据，然后点击 Submit，然后点击 Download CSV
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_70.png" /></div>
 
