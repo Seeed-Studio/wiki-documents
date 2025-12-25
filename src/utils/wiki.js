@@ -1,6 +1,35 @@
 const docList = [
   [
     {
+      "path": "/Get_Started_with_SenseCAP_T2000_tracker",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp",
+      "title": "Get Started with SenseCAP T2000 Tracker",
+      "date": "12/23/2025",
+      "title_cn": "SenseCAP T2000 追踪器入门指南",
+      "title_ja": "SenseCAP T2000 トラッカーの使用開始",
+      "title_es": "Comenzar con SenseCAP T2000 Tracker"
+    },
+    {
+      "path": "/mcp_external_system_integration",
+      "image": "https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp",
+      "title": "Bring Voice AI to Your Business System (MCP)",
+      "date": "12/23/2025",
+      "title_cn": "为您的业务系统带来语音 AI（MCP）",
+      "title_ja": "ビジネスシステムに音声 AI を導入する（MCP）",
+      "title_es": "Lleva la IA de Voz a tu Sistema Empresarial (MCP)"
+    }
+  ],
+  [
+    {
+      "path": "/xiao_esp32c5_with_micropyhton",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp",
+      "title": "Seeed Studio XIAO ESP32-C5 With Micropython",
+      "date": "12/22/2025",
+      "title_cn": "Seeed Studio XIAO ESP32-C5 与 Micropython",
+      "title_ja": "Seeed Studio XIAO ESP32-C5 と MicroPython",
+      "title_es": "Seeed Studio XIAO ESP32-C5 Con Micropython"
+    },
+    {
       "path": "/integration_of_real-time_heat_map_with_grafana_data_dashboard",
       "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/headmap.gif",
       "title": "Integration of real-time heat map with Grafana data dashboard",
@@ -8,6 +37,17 @@ const docList = [
       "title_cn": "实时热力图与 Grafana 数据仪表板的集成",
       "title_ja": "リアルタイムヒートマップと Grafana データダッシュボードの統合",
       "title_es": "Integración de mapa de calor en tiempo real con panel de datos de Grafana"
+    }
+  ],
+  [
+    {
+      "path": "/xiao_esp32c5_with_platformio",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_start.webp",
+      "title": "Platform IO with Seeed Studio XIAO ESP32-C5",
+      "date": "12/18/2025",
+      "title_cn": "Platform IO 与 Seeed Studio XIAO ESP32-C5",
+      "title_ja": "Seeed Studio XIAO ESP32-C5 での Platform IO",
+      "title_es": "Platform IO con Seeed Studio XIAO ESP32-C5"
     },
     {
       "path": "/iot_button_v2_ha_discovery",
@@ -61,15 +101,6 @@ const docList = [
   ],
   [
     {
-      "path": "/Get_Started_with_SenseCAP_T2000_tracker",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp",
-      "title": "Get Started with SenseCAP T2000 Tracker",
-      "date": "12/8/2025",
-      "title_cn": "SenseCAP T2000 Tracker 入门指南",
-      "title_ja": "SenseCAP T2000 Tracker の使用開始",
-      "title_es": "Comenzar con el SenseCAP T2000 Tracker"
-    },
-    {
       "path": "/viseron_on_recomputer",
       "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/viseron/run.webp",
       "title": "Viseron on reComputer",
@@ -77,17 +108,6 @@ const docList = [
       "title_cn": "reComputer 上的 Viseron",
       "title_ja": "reComputer上のViseron",
       "title_es": "Viseron en reComputer"
-    }
-  ],
-  [
-    {
-      "path": "/mcp_external_system_integration",
-      "image": "https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp",
-      "title": "Bring Voice AI to Your Business System (MCP)",
-      "date": "12/06/2025",
-      "title_cn": "为您的业务系统带来语音 AI（MCP）",
-      "title_ja": "ビジネスシステムに音声 AI を導入する（MCP）",
-      "title_es": "Lleva la IA de Voz a tu Sistema Empresarial (MCP)"
     },
     {
       "path": "/deploy_ota_on_recomputer",
@@ -97,26 +117,6 @@ const docList = [
       "title_cn": "在 reComputer 上部署 OTA",
       "title_ja": "reComputerでOTAをデプロイ",
       "title_es": "Desplegar OTA en reComputer"
-    }
-  ],
-  [
-    {
-      "path": "/solutions/smart-retail-voice-ai-solution-1",
-      "image": "https://files.seeedstudio.com/wiki/solution/ai-sound/respeaker-rerouter-in-smart-retail.webp",
-      "title": "Smart Retail Voice AI",
-      "date": "12/04/2025",
-      "title_cn": "智能零售语音 AI",
-      "title_ja": "スマートリテール音声AI",
-      "title_es": "IA de Voz para Retail Inteligente"
-    },
-    {
-      "path": "/use_the_motion-sensing_function_of_recamera_to_play_games",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif",
-      "title": "Play Subway Surfers with body sensor control",
-      "date": "11/27/2025",
-      "title_cn": "使用体感传感器来玩《Subway Surfers》",
-      "title_ja": "体感センサー操作で Subway Surfers をプレイ",
-      "title_es": "Juega a Subway Surfers con control por sensor corporal"
     }
   ]
 ];

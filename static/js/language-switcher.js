@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-22 15:01:56 (北京时间)
-// 多语言页面: 2084 个
+// 生成时间: 2025-12-25 13:59:08 (北京时间)
+// 多语言页面: 2085 个
 
 (function() {
   'use strict';
@@ -834,6 +834,12 @@
     "ja"
   ],
   "/Update-Jetson-Linux-OTA-Using-Allxon": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/llm_interface_control_jetson": [
     "cn",
     "en",
     "es",
@@ -8415,7 +8421,7 @@
     "es",
     "ja"
   ],
-  "/xiao_esp32c5_micropyhton": [
+  "/xiao_esp32c5_with_micropyhton": [
     "cn",
     "en",
     "es",
