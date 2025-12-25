@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 12/11/2025
-  author: Michelle Huang
+  date: 12/25/2025
+  author: Janet
 ---
 # Getting Started with SenseCAP ONE Compact Weather Sensor
 
@@ -515,3 +515,9 @@ Then send "continuous measurement command 0R2! the device returns 4 measured val
 
 ## Resource
 [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
+
+## FAQ
+
+**How is the average wind speed and direction calculated?**
+
+The default average time window is 5s. Within this window, the device will collect wind speed and directiondatafive times and return an average value.

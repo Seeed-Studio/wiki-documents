@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction
 last_update:
-  date: 3/24/2023
-  author: Yvonne
+  date: 12/25/2025
+  author: Janet
 ---
 
 # SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor
@@ -24,6 +24,10 @@ LoRaWAN® gateways can provide LoRaWAN® network coverage which is required when
 Helium Network: Sensors work in areas covered by Helium Network (Check on [Helium Explorer](https://explorer.helium.com/)). You can check the [SenseCAP M1](https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-US915-p-5023.html) and [SenseCAP M2](https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5342.html).
 
 LoRaWAN Network: Sensors work in LoRaWAN® networks, like The Things Network, Loriot, Chirpstack, etc. You can check the [SenseCAP Outdoor Gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html) and the [SenseCAP M2 Multiplatform Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html).
+
+:::tip **Note**
+The latest firmware version is `v2.1` and we highly recommend upgrading your device to the latest firmware in the SenseCraft app, as it significantly improves data reporting stability.
+:::
 
 # Application
 
