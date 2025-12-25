@@ -31,17 +31,15 @@ The latest firmware version is `v2.1` and we highly recommend upgrading your dev
 
 # Application
 
--   Backyard and Garden: Measure air temperature and humidity, rainfall, UV index, etc. in the backyard and garden to protect your family.
+- Backyard and Garden: Measure air temperature and humidity, rainfall, UV index, etc. in the backyard and garden to protect your family.
 
--   Smart Agriculture: Enable farmers to obtain climate data and information in time, take scientific management measures into production, and improve agricultural production capacity and level.
+- Smart Agriculture: Enable farmers to obtain climate data and information in time, take scientific management measures into production, and improve agricultural production capacity and level.
 
--   Meteorology: Support applications in the professional meteorological field, for example, timely reflects the changes of various abnormal meteorological conditions in the field of traffic and transportation to provide real-time scientific basis data for traffic management departments.
+- Meteorology: Support applications in the professional meteorological field, for example, timely reflects the changes of various abnormal meteorological conditions in the field of traffic and transportation to provide real-time scientific basis data for traffic management departments.
 
--   Urban Weather: Provide real-time data for urban squares, parks, scenic spots, golf courses, and other urban areas.
+- Urban Weather: Provide real-time data for urban squares, parks, scenic spots, golf courses, and other urban areas.
 
 # ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3232.png)
-
-
 
 # **Field Deployment**
 
@@ -49,20 +47,15 @@ The latest firmware version is `v2.1` and we highly recommend upgrading your dev
 
 Photo Credits: Ted Urbaniak, Mapping Network, Nibiaa
 
-# 
-
 # Specification
 
 ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3325.png)
 
 # LoRaWAN Frequency
 
-*Note: No Frequency limitation. Weather stations can be switched to
-other frequency plans at any time.*
+*Note: No Frequency limitation. Weather stations can be switched to other frequency plans at any time.*
 
-*S2120 is manufactured to support the universal frequency plan from
-863MHz \~928MHz in one SKU. That is to say, it can support the frequency
-plans below:*
+*S2120 is manufactured to support the universal frequency plan from 863MHz \~928MHz in one SKU. That is to say, it can support the frequency plans below:*
 
 |Frequency Plan|Common Name|Sub-band|
 | :- | :- | :- |
