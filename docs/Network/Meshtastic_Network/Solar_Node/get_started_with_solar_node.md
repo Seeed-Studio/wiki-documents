@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 12/18/2025
+  date: 12/24/2025
   author: Michelle Huang
 ---
 
@@ -159,7 +159,7 @@ If you want to text messages and communicate with other nodes in the website, yo
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
-### Configure the Parameters
+### Configure the LoRa
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
 
@@ -191,6 +191,17 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 :::
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
+
+### Configure GPS
+
+Please set GPS enabled. You can adjust the update inerval and broadcast interval to obtain a more up-to-date location information.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
+
+For IOS, please turn on the `Accurate Location`. Otherwise, the positioning may deviate.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
+
 ### Button
 
 |Button Action|Description|
@@ -311,6 +322,8 @@ Since the device will be used outdoors for extended periods, please avoid instal
 ### Upgrate atenna (Optional)
 
 - You can replace the antenna with a fiberglass one by watching this video.
+
+If you need an antenna with higher gain, we recommend the [860-930MHz 3dBi fiberglass](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html) antenna and the [902-928MHz 5.8dBi fiberglass](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html) antenna.
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -437,8 +450,28 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-firmware) to flash the application firmware.
 
+ ### Device automatically turn off
+
+ #### Description
+
+ - After the device turning on, it will turn off or reboot automatically after a while. 
+ - The serial port log ran for a while and then stopped.
+
+ This is possibly caused by manually and forcely rebooting or turning off the device when the device is in the following states:not finishing the messages transmission process, being configured......
+
+ #### Troubleshoot
+
+[click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-erase) to perform a flash erase. And then re-flash the latest firmware.
+
+
 ### Factory Reset
-If you want to restore to the default settings, [click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-erase) to perform a flash erase. And then re-flash the latest firmware.
+
+If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do the factory reset.
+
+- [click here](https://wiki.seeedstudio.com/get_started_with_meshtastic_solar_node/#flash-erase) to perform a flash erase. And then re-flash the latest firmware.
+
+- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### Power Consumption
 

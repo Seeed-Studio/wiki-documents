@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 12/3/2025
+  date: 12/24/2025
   author: Michelle Huang
 ---
 :::danger note
@@ -122,7 +122,8 @@ If you want to text messages and communicate with other nodes in the website, yo
     Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
-### Configure the Parameters
+
+### Configure the LoRa
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
 
@@ -155,7 +156,7 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
-### Sensor Configuration
+### Configure Sensor
 
 |Sensor|Description|
 |-|-|
@@ -213,6 +214,16 @@ Check [External Notification Config](https://meshtastic.org/docs/configuration/m
 :::tip
 After you update the device configuration, the device will restart, which may take some time.
 :::
+
+### Configure GPS
+
+Please set GPS enabled. You can adjust the update inerval and broadcast interval to obtain a more up-to-date location information.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
+
+For IOS, please turn on the `Accurate Location`. Otherwise, the positioning may deviate.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
 ## Flash Firmware
 
@@ -506,9 +517,17 @@ When you have completed the above steps, then you can follow this [step](https:/
 
  This is possibly caused by manually and forcely rebooting or turning off the device when the device is in the following states:not finishing the messages transmission process, being configured......
 
- #### Factory Reset
+ #### Troubleshoot
 
-[Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to erase the device. And then re-flash the latest firmware.
+ [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to perform a flash-erase. 
+
+ ### Factory Reset
+If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do the factory reset.
+
+- [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to flash erase the device. And then re-flash the latest firmware.
+
+- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### Signal Quality
 
