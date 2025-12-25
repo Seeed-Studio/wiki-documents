@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /cn/get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 12/18/2025
+  date: 12/24/2025
   author: Michelle Huang
 ---
 
@@ -24,7 +24,7 @@ last_update:
 ### 刷写固件
 
 :::caution note
-请`不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
+请`不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
 在刷写固件之前，请先刷写擦除固件！
 :::
 
@@ -53,7 +53,7 @@ last_update:
 选择您想要的固件版本。点击 `flash`。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/3-steps.png" alt="pir" width={800} height="auto" /></p>
 
-下载 UF2 文件并进入 DFU。将 UF2 文件拖到 DFU 驱动器中。文件下载完成并设备重启后，固件应该已刷写完成。
+下载 UF2 文件并进入 DFU。将 UF2 文件拖拽到 DFU 驱动器。文件下载完成并设备重启后，固件应该已刷写完成。
 
 ### 安装电池和 GPS 模块（可选）
 
@@ -92,7 +92,7 @@ P1-Pro 版本内置电池和 GPS 模块，对于 P1 版本，如果需要，用�
 </div>
 
 :::tip
-如果按下按钮时设备没有响应，请先充电。不要使用快充充电器。
+如果按下按钮时设备没有响应，请先充电。请勿使用快充充电器。
 :::
 
 ### 通过应用连接
@@ -159,7 +159,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
-### 配置参数
+### 配置 LoRa
 
 为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
 
@@ -191,6 +191,17 @@ import TabItem from '@theme/TabItem';
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
+
+### 配置 GPS
+
+请设置启用 GPS。您可以调整更新间隔和广播间隔以获得更及时的位置信息。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
+
+对于 IOS，请开启 `Accurate Location`。否则，定位可能会有偏差。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
+
 ### 按钮
 
 |按钮操作|描述|
@@ -221,13 +232,13 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Universal-Joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 2：用螺丝连接万向节（零件 2）和支架（零件 3）。
+- 步骤 2：用螺丝连接万向节（部件 2）和支架（部件 3）。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/joint.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- 步骤 3：连接射频线缆（零件 4）和天线（零件 5）。
+- 步骤 3：连接射频电缆（部件 4）和天线（部件 5）。
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -312,6 +323,8 @@ import TabItem from '@theme/TabItem';
 
 - 您可以通过观看此视频将天线更换为玻璃纤维天线。
 
+如果您需要更高增益的天线，我们推荐 [860-930MHz 3dBi 玻璃纤维](https://www.seeedstudio.com/LoRa-Fiberglass-Antenna-Kit-with-base-860-930MHz-3dBi-360mm-p-5315.html)天线和 [902-928MHz 5.8dBi 玻璃纤维](https://www.seeedstudio.com/RF-Explorer-LoRa-Fiberglass-Antenna-Kit-902-930MHz-5-8dBi-800mm-p-5275.html)天线。
+
 <div class="video-container">
 <iframe width="730" height="500" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
@@ -326,7 +339,7 @@ import TabItem from '@theme/TabItem';
 
 - 故障排除
 
-[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware)重新刷写固件。
+[点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware)重新刷写固件。
 
 ### 设备变砖
 
@@ -341,7 +354,7 @@ import TabItem from '@theme/TabItem';
 - [引导程序下载](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/xiao_nrf52840_ble_bootloader.zip)
 
 :::danger note
-刷写引导程序时，请确保线缆连接稳定，在刷写过程中**请勿**断开连接。
+刷写引导程序时，请确保电缆连接稳定，在刷写过程中**请勿**断开连接。
 :::
 
 **步骤 1：Adafruit-nrfutil 安装**
@@ -394,7 +407,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-要生成实用程序的独立可执行二进制文件（Windows 和 MacOS），运行这些命令：
+要生成工具的独立可执行二进制文件（Windows 和 MacOS），运行这些命令：
 
 ```
 pip3 install pyinstaller
@@ -419,7 +432,7 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 **步骤 3：刷写引导程序**
 
-在终端或命令提示符中，导航到您下载引导程序压缩包的目录，并执行以下命令，将正确的端口替换为您的设备：
+在终端或命令提示符中，导航到您下载引导程序压缩包的目录，并执行以下命令，将端口替换为您设备的正确端口：
 
 - **对于 Windows**：
 
@@ -437,21 +450,41 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 完成上述步骤后，您可以按照此[步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-firmware)刷写应用固件。
 
+ ### 设备自动关机
+
+ #### 描述
+
+ - 设备开机后，会在一段时间后自动关机或重启。
+ - 串口日志运行一段时间后停止。
+
+ 这可能是由于在设备处于以下状态时手动强制重启或关闭设备造成的：未完成消息传输过程、正在配置......
+
+ #### 故障排除
+
+[点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase)执行闪存擦除。然后重新刷写最新固件。
+
+
 ### 恢复出厂设置
-如果您想恢复到默认设置，[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase)执行闪存擦除。然后重新刷写最新固件。
+
+如果您想恢复到默认设置，可以执行恢复出厂设置。有两种方法可以执行恢复出厂设置。
+
+- [点击此处](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_solar_node/#flash-erase)执行闪存擦除。然后重新刷写最新固件。
+
+- 在应用中点击 `Factory Reset` 按钮。设备将自动使用出厂配置重启。
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### 功耗
 
 功耗主要取决于数据传输频率和 GPS 更新速率等因素。
-以下数据仅供参考；实际消耗可能因实际使用条件而异。
+以下数据仅供参考；实际功耗可能因实际使用条件而异。
 
 - **关机睡眠模式功耗**
 
-|描述|消耗|
+|描述|功耗|
 |---|---|
 |GPS_LED 工作电流|1.02 mA|
-|通电但未激活|56.195 μA|
-|通电并激活|611 μA|
+|已供电但未激活|56.195 μA|
+|已供电且已激活|611 μA|
 
 **示例：**
 
@@ -476,7 +509,7 @@ adafruit-nrfutil --verbose dfu serial --package xiao_nrf52840_ble_bootloader.zip
 
 - **RSSI** 由设备及其周围环境共同决定。正常设备通常在 -110 dBm 以上工作。RSSI 低于 -115 dBm 的设备被认为性能较差。
 
-      为了获得最佳信号效果，请在开阔、无遮挡、干扰最小的区域使用设备。
+      为了获得最佳信号效果，请在开阔、无遮挡且干扰最小的区域使用设备。
 
 ## 资源
 - [太阳能节点电池寿命计算表](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Solar%20Node%20Consumption%20Test%20and%20Battery%20Life%20Calculation.xlsx)
