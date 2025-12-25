@@ -1,16 +1,17 @@
 ---
 description: SenseCAP_T2000_tracker_Introduction
-title: 概要
+title: はじめに
 keywords:
 - SenseCAP_T2000_tracker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
 slug: /ja/SenseCAP_T2000_tracker/Introduction
 last_update:
-  date: 12/1/2025
+  date: 12/23/2025
   author: Janet
 ---
 
-# SenseCAP T2000 トラッカー概要
+
+# SenseCAP T2000 トラッカー はじめに
 
 ## 概要
 
@@ -48,13 +49,13 @@ T2000は優れたユーザーエクスペリエンスのために直感的な操
 
 ### 精密追跡
 
-T2000 シリーズは、多様な環境で信頼性の高い継続的なアセット追跡を提供します。GNSS、BLE、Wi-Fiを含む複数の測位方法をサポートしています。信号の可用性に基づいて適切な方法を自動的に選択し、異なる展開シナリオでの柔軟でシームレスな監視を可能にします。
+T2000 シリーズは、多様な環境での信頼性の高い継続的なアセット追跡を提供します。GNSS、BLE、Wi-Fiを含む複数の測位方法をサポートしています。信号の可用性に基づいて適切な方法を自動的に選択し、異なる展開シナリオでの柔軟でシームレスな監視を可能にします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Precise_Tracking.jpg" alt="pir" width={800} height="auto" /></p>
 
 **屋外GNSS測位**
 
-- メートルレベルの精度（5～10 m）を提供する高性能GNSSモジュール  
+- メートルレベルの精度（5～10m）を提供する高性能GNSSモジュール  
 - グローバルマルチコンステレーション対応：GPS、BeiDou、Galileo、GLONASS
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_GNSS.png" alt="pir" width={800} height="auto" /></p>
@@ -80,12 +81,12 @@ T2000 シリーズは、多様な環境で信頼性の高い継続的なアセ�
 ### 数年のバッテリー寿命
 
 **T2000-A / T2000-B**  
-8000 mAhバッテリーを内蔵し、1時間ごとのアップリンクでGNSSを使用する場合、1年以上の動作が可能です。より長いアップリンク間隔では、バッテリー寿命は最大7～9年まで延長でき、様々な展開シナリオで長期間の信頼性を提供します。
+8000mAhバッテリーを内蔵し、毎時アップリンクでGNSSを使用する場合、1年以上の動作が可能です。より長いアップリンク間隔では、バッテリー寿命は最大7～9年まで延長でき、様々な展開シナリオで長期的な信頼性を提供します。
 
 **T2000-C（ソーラーパネル付き）**  
-0.5Wソーラーパネルと4000 mAh充電式バッテリーを搭載し、T2000-Cは通常の日光と適度なアップリンク間隔の下で数年間の低メンテナンス動作をサポートします。
+0.5Wソーラーパネルと4000mAh充電式バッテリーを搭載したT2000-Cは、通常の日光と適度なアップリンク間隔の下で、数年間の低メンテナンス動作をサポートします。
 
-*実際のバッテリー寿命は、アップリンク間隔、測位モード、展開環境によって異なります。詳細については[バッテリー寿命計算機](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Trcaker_Battery_Life_Calculation_T2000_AB.xlsx)をご利用ください。
+*実際のバッテリー寿命は、アップリンク間隔、測位モード、展開環境によって異なります。詳細については[バッテリー寿命計算機](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Trcaker_Battery_Life_Calculator_T2000.xlsx)をご利用ください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Battery_Life.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -93,9 +94,9 @@ T2000 シリーズは、多様な環境で信頼性の高い継続的なアセ�
 
 ### アクティブセーフティ
 
-- **アンチタンパーアラート**：設置後、背面のアンチタンパーボタンが作動状態を維持します。デバイスが取り外された瞬間、最優先アラームを即座にトリガーし、重要な資産を保護します。
-- **振動・動作検出**：内蔵3軸加速度計により、疑わしい活動をリアルタイムで監視し、事態が悪化する前にインシデントを防止します。
-- **即座の通知**：重要なアラートを数秒以内に携帯電話に直接配信し、即座に行動を起こすことを可能にします。
+- **アンチタンパーアラート**：設置後、背面のアンチタンパーボタンが作動状態を維持します。デバイスが取り外された瞬間、即座に最優先アラームをトリガーして重要な資産を保護します。
+- **振動・動き検出**：内蔵3軸加速度計により、疑わしい活動をリアルタイムで監視し、事態がエスカレートする前にインシデントを防止します。
+- **即座の通知**：重要なアラートを数秒以内に直接お客様の電話に配信し、即座に行動を起こすことを可能にします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Active_Safety.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -121,13 +122,13 @@ T2000 シリーズは、多様な環境で信頼性の高い継続的なアセ�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Installation.PNG" alt="pir" width={800} height="auto" /></p>
 
-T2000トラッカーは、多様な追跡ニーズに対応する汎用的な設置方法を提供します。ネジで確実に取り付けることができ、コンテナやトラックでの使用に最適です。家畜の監視には、ストラップでデバイスをしっかりと固定できます。さらに、両面3Mステッカーを使用して簡単に取り付けることができ、迅速で信頼性の高い設置が可能です。
+T2000トラッカーは、多様な追跡ニーズに対応する汎用的な設置方法を提供します。ネジで確実に取り付けることができ、コンテナやトラックでの使用に最適です。家畜監視では、ストラップでデバイスをしっかりと固定できます。さらに、両面3Mステッカーを使用して迅速で信頼性の高い設置も簡単に行えます。
 
 <br />
 
 ### オールインワンソフトウェアプラットフォーム管理
 
-SenseCraft Appとシームレスに統合され、QRコードアクティベーションとBluetooth設定からリアルタイムマップトラッキング、リモートパラメータ設定、アラーム管理まで、エンドツーエンドソリューションを提供します。
+SenseCraft Appとシームレスに統合され、QRコードアクティベーションとBluetoothコンフィギュレーションからリアルタイムマップトラッキング、リモートパラメータセットアップ、アラーム管理まで、エンドツーエンドソリューションを提供します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Software.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -135,7 +136,7 @@ SenseCraft Appとシームレスに統合され、QRコードアクティベー�
 
 ## アプリケーション
 
-SenseCAP T2000 系列アセットトラッカーは、屋外環境での高価値で動的な資産管理に最適なソリューションです。以下の分野で広く使用されています：
+SenseCAP T2000 シリーズアセットトラッカーは、屋外環境での高価値で動的な資産管理に最適なソリューションです。以下の分野で広く使用されています：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Application.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -152,10 +153,10 @@ SenseCAP T2000 系列アセットトラッカーは、屋外環境での高価�
 ユーザー向けに3つの異なるソリューションを提供し、A、B、Cの3つのバージョンがあります。
 
 - **T2000-A/T2000-B:**
-堅牢な8000mAh内蔵バッテリーとIP67等級保護を備えた極限環境向け設計。両方ともGNSSとBluetooth測位をサポートし、T2000-BはWiFiスキャン技術の追加により拡張された測位機能を提供します。
+堅牢な8000mAh内蔵バッテリーとIP67定格保護を備えた極限環境向け設計。両方ともGNSSとBluetoothポジショニングをサポートし、T2000-BはWiFiスキャン技術の追加により拡張されたポジショニング機能を提供します。
 
 - **T2000-C:**
-4000mAh充電式バッテリーと0.5Wソーラーパネルを組み合わせて動作寿命を延長。GNSSとBluetooth測位をサポートし、-20°Cから60°Cの温度範囲で信頼性の高い性能を維持し、他のモデルと同じIP67保護を提供します。
+4000mAh充電式バッテリーと0.5Wソーラーパネルを組み合わせて動作寿命を延長。GNSSとBluetoothポジショニングをサポートし、-20°Cから60°Cの温度で信頼性の高いパフォーマンスを維持し、他のモデルと同じIP67保護を提供します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Version_Comparison.png" alt="pir" width={800} height="auto" /></p>
 
@@ -167,10 +168,10 @@ SenseCAP T2000 系列アセットトラッカーは、屋外環境での高価�
 |-----------|---------------|
 | 製品モデル | T2000-A/B |
 | LoRa周波数帯域 | EU868, US915, IN865, AU915, AS923, KR920, RU864 |
-| 測位方式 | **GNSS**: L76K<br />GPS L1 C/A, QZSS L1: 1575.42 MHz<br />GLONASS L1: 1602.5625 MHz<br />BeiDou B1: 1561.098 MHz<br /><br />**BLE**: nRF52840 <br />Bluetooth 5.0<br /><br /><br />[T1000-B のみ] <br />**WiFi**: ESP8684 <br />パッシブスキャン |
-| 電源供給 | 一次電池 |
-| 電池タイプ / 容量 | Li/SOCI2 (ER18505) / 8000mAh |
-| 筐体材料 | PC+ASA |
+| ポジショニング方法 | **GNSS**: L76K<br />GPS L1 C/A, QZSS L1: 1575.42 MHz<br />GLONASS L1: 1602.5625 MHz<br />BeiDou B1: 1561.098 MHz<br /><br />**BLE**: nRF52840 <br />Bluetooth 5.0<br /><br /><br />[T1000-B Only] <br />**WiFi**: ESP8684 <br />Passive Scan |
+| 電源供給 | プライマリバッテリー |
+| バッテリータイプ / 容量 | Li/SOCI2 (ER18505) / 8000mAh |
+| エンクロージャ材質 | PC+10% ガラス繊維 |
 | 保護等級 | IP67 |
 | 寸法 | 117 × 65 × 30 mm |
 | 重量 | 180g |
@@ -182,17 +183,17 @@ SenseCAP T2000 系列アセットトラッカーは、屋外環境での高価�
 |-----------|---------------|
 | 製品モデル | T2000-C |
 | LoRa周波数帯域 | EU868, US915, IN865, AU915, AS923, KR920, RU864 |
-| 測位方式 | **GNSS**: L76K<br />GPS L1 C/A, QZSS L1: 1575.42 MHz<br />GLONASS L1: 1602.5625 MHz<br />BeiDou B1: 1561.098 MHz<br /><br />**BLE**: nRF52840 <br />Bluetooth 5.0 |
+| ポジショニング方法 | **GNSS**: L76K<br />GPS L1 C/A, QZSS L1: 1575.42 MHz<br />GLONASS L1: 1602.5625 MHz<br />BeiDou B1: 1561.098 MHz<br /><br />**BLE**: nRF52840 <br />Bluetooth 5.0 |
 | 電源供給 | 0.5Wソーラーパネル + 充電式バッテリー |
-| 電池タイプ / 容量 | 三元リチウム電池 (INR18500np) / 4000mAh |
-| 筐体材料 | PC+ASA |
+| バッテリータイプ / 容量 | 三元リチウムバッテリー (INR18500np) / 4000mAh |
+| エンクロージャ材質 | PC+10% ガラス繊維 |
 | 保護等級 | IP67 |
 | 寸法 | 117 × 65 × 30 mm |
 | 重量 | 180g |
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
