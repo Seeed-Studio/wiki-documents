@@ -208,7 +208,7 @@ Luego selecciona "InfluxDB"
 
 A continuación, necesitas hacer las siguientes cuatro modificaciones:  
 (1) "Query language" seleccionado como "Flux"  
-(2) Ingresa la URL de tu página web de base de datos, que es el enlace a la página web de InfluxDB que accediste en el primer paso. Por ejemplo, si la dirección de tu página web es 192.168.7.183:8086, entonces la URL que debes llenar es http://192.168.7.183:8086.  
+(2) Ingresa la URL de tu página web de base de datos, que es el enlace a la página web de InfluxDB que accediste en el primer paso. Por ejemplo, si la dirección de tu página web es 192.168.7.183:8086, entonces la URL que debes llenar es `http://192.168.7.183:8086`.
 (3) "Organization" debe llenarse con el nombre de usuario que usaste al registrar la base de datos.  
 (4) "Default Bucket" debe llenarse con el nombre de la base de datos que has creado.  
 
