@@ -86,14 +86,14 @@ last_update:
             <td>Botón Reset / Boot</td>
             <td>Botón Reset / Boot</td>
             <td>Botón Reset / Boot</td>
-            <td>Botón Reset / Botón Boot</td>
+            <td>Botón reset / Botón boot</td>
         </tr>
         <tr>
             <th>LEDs Integrados</th>
-            <td>LED C / L</td>
-            <td>LED Carga / USUARIO</td>
+            <td>LED Carga / USER</td>
+            <td>LED Carga / USER</td>
             <td>LED Carga</td>
-            <td>LED Carga / USUARIO</td>
+            <td>LED Carga / USER</td>
         </tr>
         <tr>
             <th>Chip de Carga de Batería</th>
@@ -108,7 +108,7 @@ last_update:
 ### Características
 
 - **CPU Potente:** ESP32-C5, procesador RISC-V de 32 bits de núcleo único que opera hasta 240 MHz
-- **Subsistema Wi-Fi completo:** Subsistema Wi-Fi 6 de banda dual (2.4 GHz y 5 GHz) compatible con IEEE 802.11 a/b/g/n/ac/ax, soportando operación Station, SoftAP, SoftAP+Station concurrente, y modo promiscuo (monitor).
+- **Subsistema Wi-Fi completo:** Subsistema Wi-Fi 6 de banda dual (2.4 GHz y 5 GHz) compatible con IEEE 802.11 a/b/g/n/ac/ax, soportando Station, SoftAP, operación concurrente SoftAP+Station, y modo promiscuo (monitor).
 - **Subsistema Bluetooth LE:** Soporta características de Bluetooth 5 y Bluetooth mesh
 - **Mejor rendimiento RF:** Antena RF externa incluida.
 - **Chip de carga de batería:** Soporta gestión de carga y descarga de batería de litio.
@@ -186,19 +186,19 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
   <br></br>
 
 - **Paso 2.** Inicia la aplicación Arduino.
-- **Paso 3.** Abre BOARDS MANAGER -> Busca **esp32** -> Instala la versión 3.3.4 o una versión superior
+- **Paso 3.**  Abre BOARDS MANAGER -> Busca **esp32** -> Instala la versión 3.3.4 o una versión superior
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
-### Subir Programa
+### Cargar Programa
 
 Tomemos un programa de iluminación como ejemplo a continuación
 
-**Paso 1.** Selecciona **XIAO_ESP32C5** y PUERTO. Si no conoces el PUERTO, puedes volver a insertar y quitar el XIAO_ESP3-2C5 para verificar.
+**Paso 1.** Selecciona **XIAO_ESP32C5** y PORT. Si no conoces el PORT, puedes reinsertar y quitar el XIAO_ESP3-2C5 para verificar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
-**Paso 2.** Pega el código en tu Sketch
+**Paso 2.** Pega el Código en tu Sketch
 
 **LED_BUILTIN** corresponde al **LED L** en la placa de desarrollo.
 
@@ -220,13 +220,13 @@ void loop() {
 }
 ```
 
-**Paso 3.** Haz clic y Sube
+**Paso 3.** Haz clic y Cargar
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
 Demostración del efecto:
 
-Después de subir el programa, verás la luz indicadora L parpadeando a intervalos de 1 segundo, y al mismo tiempo, el monitor serie imprimirá LED ON y LED OFF.
+Después de cargar el programa, verás la luz indicadora L parpadeando a intervalos de 1 segundo, y al mismo tiempo, el monitor serie imprimirá LED ON y LED OFF.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/uoload_2.png" style={{width:800, height:'auto'}}/></div>
@@ -234,7 +234,7 @@ Después de subir el programa, verás la luz indicadora L parpadeando a interval
 ## Modo de sueño profundo
 
 El XIAO ESP32-C5 cuenta con funciones de sueño profundo y despertar. Este ejemplo utiliza un disparador de nivel alto en el pin **D0** para despertar el dispositivo del sueño profundo.<br/>
-Es importante notar que esta es una opción configurable, ya que el hardware soporta tanto disparadores de nivel alto como de nivel bajo para acomodar diferentes diseños de circuito.
+Es importante tener en cuenta que esta es una opción configurable, ya que el hardware soporta tanto disparadores de nivel alto como de nivel bajo para acomodar diferentes diseños de circuito.
 
 ```cpp
 #define WAKEUP_PIN D0 // LP_GPIO1
@@ -342,7 +342,7 @@ void loop() {
 - **`analogReadMilliVolts(BAT_Voltage_Read)`**
 
   - Esta función se usa para leer el voltaje analógico actual del pin `BAT_VOLT_PIN` y devolver un valor de voltaje calibrado en milivoltios (mV).
-  - A diferencia del `analogRead()` convencional, que solo proporciona un valor ADC crudo, `analogReadMilliVolts()` aplica automáticamente los parámetros de calibración de fábrica incorporados en el chip. Esto resulta en mayor precisión, mejor linealidad en la medición de voltaje, y elimina la necesidad de conversión manual de ADC a voltaje.
+  - A diferencia del `analogRead()` convencional, que solo proporciona un valor ADC crudo, `analogReadMilliVolts()` aplica automáticamente los parámetros de calibración de fábrica incorporados en el chip. Esto resulta en mayor precisión, linealidad mejorada en la medición de voltaje, y elimina la necesidad de conversión manual de ADC a voltaje.
   - Durante el proceso de muestreo de voltaje, se realiza un **muestreo repetido 16 veces** a través de un bucle `for`, y los resultados se acumulan. El propósito del muestreo múltiple es suprimir el ruido transitorio y errores discretos, mejorando así la estabilidad de la medición. Finalmente, el valor acumulado se divide por el número de muestras (16) para obtener un valor de voltaje promediado más suave y confiable.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>

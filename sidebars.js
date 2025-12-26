@@ -8980,6 +8980,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Speech_vlm',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_use_vlm_guard_warehouse',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Chatbot_reComputer',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_llm_interface_control_jetson',
               ]
             },
             // Managed Services
@@ -14048,6 +14049,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Speech_vlm',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_use_vlm_guard_warehouse',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Chatbot_reComputer',
+                'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_llm_interface_control_jetson',
               ]
             },
             // Managed Services
@@ -19117,6 +19119,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Speech_vlm',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_use_vlm_guard_warehouse',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Chatbot_reComputer',
+                'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_llm_interface_control_jetson',
               ]
             },
             // Managed Services

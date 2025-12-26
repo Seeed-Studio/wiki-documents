@@ -196,9 +196,31 @@ After downloading and installing, the Grafana should automatically run in the ba
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_26.png" /></div>
 
-### 3.2 Import Dashboard
+### 3.2 Set data source
 
-If you see that the Grafana is running at this time, you can enter the local Grafana interface for configuration by visiting http:// localhost:3000/ in the browser. we click Dashboards
+If you see Grafana running at this moment, you can access the local Grafana interface for configuration by visiting `http://localhost:3000` in your browser. We then click on "Data sources" on the left side and select "Add new data source".
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_76.png" /></div>
+
+Then select "InfluxDB"
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_77.png" /></div>
+
+Next, you need to make the following four revisions:  
+(1) "Query language" selected as "Flux"  
+(2) Enter the URL of your database webpage, which is the link to the InfluxDB webpage you accessed in the first step. For example, if your webpage address is 192.168.7.183:8086, then the URL you should fill in is `http://192.168.7.183:8086`.
+(3) "Organization" should be filled with the username you used when registering the database.  
+(4) "Default Bucket" should be filled with the name of the database you have created.  
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_78.png" /></div>
+
+Once everything is ready, click "Save & Test". If the test is successful, it will display "datasource is working". At this point, you can proceed directly to the next step. These settings will be automatically saved.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_79.png" /></div>
+
+### 3.3 Import Dashboard
+
+Click Dashboards
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_27.png" /></div>
 
@@ -447,6 +469,12 @@ At this point, you should be able to see the following display on the Grafana pa
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_74.png" /></div>
 
 ## Frequently Asked Questions
+
+### Grafana webpage failed to open
+
+After entering "Services", find "Grafana", then right-click and select "Restart". After that, simply open `http://localhost:3000` again.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_75.png" /></div>
 
 ### Grafana panel is loaded incorrectly
 
