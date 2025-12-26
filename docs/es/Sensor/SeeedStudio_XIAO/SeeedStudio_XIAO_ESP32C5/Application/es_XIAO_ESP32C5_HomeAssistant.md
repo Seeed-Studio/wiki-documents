@@ -4,7 +4,7 @@ description: |
 keywords:
   - xiao
   - esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /es/xiao_esp32c5_homeassistant
 last_update:
   date: 12/17/2025
@@ -55,9 +55,9 @@ Necesitas preparar los elementos listados en la tabla.
       <th>Grove - LED Rojo</th>
     </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:210, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-09bazaar939479_1040300054.jpg" style={{width:210, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-09bazaar939479_1040300054.jpg" style={{width:400, height:'auto'}}/></div></td>
     </tr>
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -236,7 +236,7 @@ Haz clic en las opciones siguiendo la imagen para instalar el código en el disp
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'120%', height:'auto'}}/></div>
 </div>
 
-Espera un momento y verás la retroalimentación como en la siguiente imagen. Significa que el código se está ejecutando correctamente.
+Espera un momento y verás la retroalimentación como en la siguiente imagen. Significa que el código se está ejecutando exitosamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -245,7 +245,7 @@ Espera un momento y verás la retroalimentación como en la siguiente imagen. Si
 <TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes cargar el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes cargarlo vía wifi. Además, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el XIAO ESP32-C5 a nada, solo asegúrate de que esté en línea.
@@ -254,7 +254,7 @@ Haz clic en la opción y luego el firmware se instalará automáticamente en el 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
-Espera un momento y verás la retroalimentación como en la siguiente imagen. Si falla, puede deberse a una señal débil. Por favor, acerca el dispositivo más a tu router.
+Espera un momento y verás la retroalimentación como en la siguiente imagen. Si falla, puede ser debido a una señal débil. Por favor mueve el dispositivo más cerca de tu router.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device7.png" style={{width:800, height:'auto'}}/></div>
 
@@ -313,13 +313,13 @@ Espera un momento y verás la retroalimentación como en la siguiente imagen. Si
 <table align="center">
   <tbody><tr>
       <th>Seeed Studio XIAO ESP32-C5</th>
-      <th>Seeed Studio Grove Base for XIAO</th>
-      <th>Grove - Temperature & Humidity Sensor (DHT11)</th>
+      <th>Seeed Studio Grove Base para XIAO</th>
+      <th>Grove - Sensor de Temperatura y Humedad (DHT11)</th>
     </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:210, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/g/r/grove-temperature-humidity-sensor-dht11-preview.png" style={{width:210, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/g/r/grove-temperature-humidity-sensor-dht11-preview.png" style={{width:400, height:'auto'}}/></div></td>
     </tr>
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -578,11 +578,11 @@ Utiliza el protocolo BTHome, ¡será descubierto automáticamente por Home Assis
 </TabItem>
 </Tabs>
 
-## Demostración de Efectos
+## Demostración del Efecto
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/S_HA_12.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-¡Felicidades! A estas alturas, deberías haber dominado dos métodos para conectar el **XIAO ESP32-C5** a **Home Assistant**. ¡Esperamos ver tus proyectos increíbles y te invitamos a compartirlos con nosotros!
+¡Felicidades! A estas alturas, deberías haber dominado dos métodos para conectar el **XIAO ESP32-C5** a **Home Assistant**. ¡Esperamos ver tus proyectos increíbles y te damos la bienvenida a compartirlos con nosotros!
 
 ## Soporte Técnico y Discusión de Productos
 

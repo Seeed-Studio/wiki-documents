@@ -4,7 +4,7 @@ description: |
 keywords:
   - xiao
   - esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /es/xiao_esp32c5_getting_started
 last_update:
   date: 11/26/2025
@@ -20,7 +20,7 @@ last_update:
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -90,10 +90,10 @@ last_update:
         </tr>
         <tr>
             <th>LEDs Integrados</th>
-            <td>LED Carga / USER</td>
-            <td>LED Carga / USER</td>
-            <td>LED Carga</td>
-            <td>LED Carga / USER</td>
+            <td>LED de Carga / USER</td>
+            <td>LED de Carga / USER</td>
+            <td>LED de Carga</td>
+            <td>LED de Carga / USER</td>
         </tr>
         <tr>
             <th>Chip de Carga de Batería</th>
@@ -115,14 +115,14 @@ last_update:
 - **Recursos abundantes en chip:** 384 KB de SRAM en chip, 320 KB de ROM
 - **Tamaño ultra pequeño:** Tan pequeño como un pulgar (21x17.8mm) factor de forma clásico de la serie XIAO para dispositivos portátiles y proyectos pequeños
 - **Características de seguridad confiables**: Aceleradores de hardware criptográfico que soportan AES-128/256, hashing de familia SHA, HMAC, un periférico de firma digital dedicado, y Secure Boot (V2).
-- **Interfaces abundantes**: 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (capaces de PWM), 5×canales ADC, y una interfaz de pad de conexión JTAG.
+- **Interfaces abundantes**: 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (capaces de PWM), 5×canales ADC, y una interfaz de pad de enlace JTAG.
 - Componentes de un solo lado, diseño de montaje superficial
 
 ## Descripción general del hardware
 
 <table align="center">
  <tr>
-     <th>Diagrama de indicaciones XIAO ESP32-C5</th>
+     <th>Diagrama de indicación XIAO ESP32-C5</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/front.png" style={{width:700, height:'auto'}}/></div></td>
@@ -190,7 +190,7 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
-### Cargar Programa
+### Subir Programa
 
 Tomemos un programa de iluminación como ejemplo a continuación
 
@@ -220,13 +220,13 @@ void loop() {
 }
 ```
 
-**Paso 3.** Haz clic y Cargar
+**Paso 3.** Haz clic y Sube
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
 Demostración del efecto:
 
-Después de cargar el programa, verás la luz indicadora L parpadeando a intervalos de 1 segundo, y al mismo tiempo, el monitor serie imprimirá LED ON y LED OFF.
+Después de subir el programa, verás la luz indicadora L parpadeando a intervalos de 1 segundo, y al mismo tiempo, el monitor serie imprimirá LED ON y LED OFF.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/uoload_2.png" style={{width:800, height:'auto'}}/></div>
@@ -234,7 +234,7 @@ Después de cargar el programa, verás la luz indicadora L parpadeando a interva
 ## Modo de sueño profundo
 
 El XIAO ESP32-C5 cuenta con funciones de sueño profundo y despertar. Este ejemplo utiliza un disparador de nivel alto en el pin **D0** para despertar el dispositivo del sueño profundo.<br/>
-Es importante tener en cuenta que esta es una opción configurable, ya que el hardware soporta tanto disparadores de nivel alto como de nivel bajo para acomodar diferentes diseños de circuito.
+Es importante notar que esta es una opción configurable, ya que el hardware soporta tanto disparadores de nivel alto como de nivel bajo para acomodar diferentes diseños de circuito.
 
 ```cpp
 #define WAKEUP_PIN D0 // LP_GPIO1
@@ -282,7 +282,7 @@ void setup(){
 void loop(){}
 ```
 
-Si eres lo suficientemente rápido para activar el monitor serie antes de que el XIAO entre en modo de sueño profundo, entonces puedes ver la salida del mensaje como se muestra a continuación. Esto significa que el XIAO ahora está **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido-apagado del **LED L** para verificar si el dispositivo ha sido despertado. Una vez que se despierte, exhibirá un efecto parpadeante.
+Si eres lo suficientemente rápido para activar el monitor serie antes de que el XIAO entre en modo de sueño profundo, entonces puedes ver la salida del mensaje como se muestra a continuación. Esto significa que el XIAO ahora está **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido-apagado del **LED L** para verificar si el dispositivo ha sido despertado. Una vez que se despierte, exhibirá un efecto de parpadeo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -307,7 +307,7 @@ Por favor ten cuidado de no cortocircuitar los terminales positivo y negativo y 
 **Instrucciones sobre el uso de baterías:**
 
 1. Por favor usa baterías calificadas que cumplan con las especificaciones.
-2. XIAO puede conectarse a tu dispositivo computadora a través de cable de datos mientras usa la batería, ten la seguridad de que XIAO tiene un chip de protección de circuito incorporado, que es seguro.
+2. XIAO puede conectarse a tu dispositivo de computadora a través de cable de datos mientras usa la batería, ten la seguridad de que XIAO tiene un chip de protección de circuito incorporado, que es seguro.
 3. Cuando XIAO ESP32-C5 es alimentado por una batería, el **LED C** se encenderá. Puedes usar esto como base para determinar si se ha llevado a cabo la gestión de carga.
 
 ### Verificar el voltaje de la batería

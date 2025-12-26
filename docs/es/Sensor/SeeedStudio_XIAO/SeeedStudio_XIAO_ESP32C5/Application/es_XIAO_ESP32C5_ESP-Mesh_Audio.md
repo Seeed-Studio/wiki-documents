@@ -3,7 +3,7 @@ description: |
 title: XIAO ESP32C5 ESP-Mesh Audio
 keywords:
 - xiao esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /es/xiao_esp32c5_esp-mesh_audio
 last_update:
   date: 12/12/2025
@@ -20,7 +20,7 @@ ESP-WIFI-MESH es una red de comunicación inalámbrica con nodos organizados en 
 
 Presenta las siguientes características:
 
-1. **Configuración Fácil y Segura** : Se admite la configuración de red de aplicación móvil + Bluetooth LE, permitiendo la adición rápida de nuevos nodos y la entrega segura de configuraciones.
+1. **Configuración Fácil y Segura** : Se admite la configuración de red mediante aplicación móvil + Bluetooth LE, permitiendo la adición rápida de nuevos nodos y la entrega segura de configuraciones.
 2. **Auto-formación y Auto-curación** : Los nodos se conectarán/reconectarán automáticamente, y la red puede formarse automáticamente y auto-curarse cuando un nodo falla.
 3. **No se Requieren Gateways Adicionales** : No se requieren gateways o infraestructura adicionales. La red Mesh puede escalar hasta miles de nodos, haciéndola adecuada para implementaciones a gran escala.
 4. **Conectividad IP** : Todos los nodos admiten comunicación IP, permitiendo tanto la interconexión entre ellos como el acceso a redes externas (a través de NAT o puente del nodo raíz).
@@ -43,7 +43,7 @@ Aquí, tu computadora actúa como un **nodo hijo Mesh**, enviando datos a travé
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -174,11 +174,11 @@ La ventana del monitor del Arduino IDE devolverá la dirección IP y datos de by
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_4.png" style={{width:800, height:'auto'}}/></div>
 
-¡Felicidades! En este punto, has aprendido cómo transmitir audio sobre la banda WiFi de 5 GHz, ¡y más innovaciones están esperando que las realices!
+¡Felicitaciones! En este punto, has aprendido cómo transmitir audio sobre la banda WiFi de 5 GHz, ¡y más innovaciones están esperando que las realices!
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
