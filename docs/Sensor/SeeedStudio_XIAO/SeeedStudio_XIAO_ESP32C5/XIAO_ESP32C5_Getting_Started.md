@@ -90,7 +90,7 @@ last_update:
         </tr>
         <tr>
             <th>Onboard LEDs</th>
-            <td>C / L LED</td>
+            <td>Charge / USER LED</td>
             <td>Charge / USER LED</td>
             <td>Charge LED</td>
             <td>Charge / USER LED</td>
