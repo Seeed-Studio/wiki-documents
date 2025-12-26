@@ -5,7 +5,7 @@ keywords:
   - xiao
   - esp32c5
   - micropython
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /cn/xiao_esp32c5_with_micropyhton
 last_update:
   date: 12/22/2025
@@ -19,7 +19,7 @@ import TabItem from '@theme/TabItem';
 
 ## 在 XIAO ESP32-C5 上使用 MicroPython
 
-接下来，我将指导您如何在 **XIAO ESP32-C5** 上使用 **MicroPython**，并基于 Windows 操作系统使用 [Thonny IDE](https://thonny.org/) 进行编程。
+接下来，我将指导您如何在 **XIAO ESP32-C5** 上使用 **MicroPython**，并使用 [Thonny IDE](https://thonny.org/) 进行编程，基于 Windows 操作系统。
 
 ### 硬件准备
 
@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -78,7 +78,7 @@ esptool.py eraase_flash
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
- 但如果检测失败或您的计算机上可能连接了多个基于 Espressif 的设备，则可以使用 --port 选项传递目标串口的名称。例如：
+ 但如果检测失败或您的计算机上可能连接了多个基于 Espressif 的设备，则请使用 --port 选项传递目标串口的名称。例如：
 
 ```bash
 esptool.py --port PORTNAME erase_flash
@@ -106,15 +106,15 @@ esptool.py --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DATE-VERSION.bin
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_6.png" style={{width:800, height:'auto'}}/></div><br/>
 
-如果 esptool.py 无法自动检测串口，您可以在命令行中明确指定。
+如果 esptool.py 无法自动检测串口，则可以在命令行中明确传递串口。
 
 ```bash
 esptool.py --port PORTNAME --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DATE-VERSION.bin
 ```
 
-- 在 Windows 上，端口名通常类似于 `COM4`。
-- 在 Linux 上，端口名通常类似于 `/dev/ttyUSB` 或 `/dev/ttyACM0`。
-- 在 Mac 上，端口名通常类似于 `/dev/cu.usbmodem01`。
+- 在 Windows 上，端口名称通常类似于 `COM4`。
+- 在 Linux 上，端口名称通常类似于 `/dev/ttyUSB` 或 `/dev/ttyACM0`。
+- 在 Mac 上，端口名称通常类似于 `/dev/cu.usbmodem01`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_7.png" style={{width:800, height:'auto'}}/></div><br/>
 
