@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010.webp
 slug: /cn/stackforce_series
 last_update:
-  date: 11/26/2025
+  date: 12/25/2025
   author: Li Shanghang
 ---
 
@@ -106,6 +106,10 @@ last_update:
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/修改CANID反馈.png"/>
 </div>
 
+:::tip
+现在设置CANID:0x01，方便后续代码测试。
+:::
+
 ### 修改CAN模式
 
 串口发送CANMODE:0或CANMODE:1
@@ -123,6 +127,10 @@ CANMODE:0为CAN2.0模式（1Mbps），CANMODE:1为CANFD模式（5Mbps）。
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/CAN模式反馈2.png"/>
 </div>
+
+:::tip
+现在设置CANMODE:0，方便后续代码测试。
+:::
 
 ## 使用 [​reComputer Mini Jetson Orin](/cn/recomputer_jetson_mini_getting_started) 控制电机
 
@@ -167,19 +175,23 @@ CANMODE:0为CAN2.0模式（1Mbps），CANMODE:1为CANFD模式（5Mbps）。
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/Mini连接.jpg" />
 </div>
+<div align="center">
+    <img width={800} 
+     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/Hardware_connect.png" />
+</div>
 
 :::tip
 因为[reComputer Mini的can接口设计](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/#can0can1-%E9%80%9A%E4%BF%A1)与电机的can接口相反，所以需要手动焊接，反接数据线。
 
 <div align="center">
-    <img width={400} 
+    <img width={700} 
      src="https://files.seeedstudio.com/wiki/recomputer_mini/can0-datasheet.png" />
-     <img width={400} 
+     <img width={700} 
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/电机can接口.png" />
 </div>
 
 <div align="center">
-    <img width={600} 
+    <img width={500} 
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/TX30.jpg" />
 </div>
 
@@ -235,7 +247,148 @@ sudo apt-get install -y python3 python3-pip python3-pybind11 python3-setuptools
 
 安装依赖项后，需按照以下步骤将驱动 SDK 安装为 C++ 库或 Python 包。两者都将使用 CMake 编译 C++ 代码。
 
-### 使用 C++ 控制
+## 电机控制和数据反馈
+
+### C++
+
+<details>
+<summary>main.cpp</summary>
+```cpp
+#include <chrono>
+#include <cstdint>
+#include <cmath>
+#include <cstdio>
+#include <thread>
+#include "CAN_comm.h"
+#include "config.h"
+
+MIT devicesState[4];
+
+uint32_t sendNum; // 用于测试发送速度
+uint32_t recNum;
+
+MIT MITCtrlParam;
+
+uint16_t sendCounter = 0;
+bool motorEnable = true;
+int receivedNumber = 0;
+uint64_t prev_ts = 0;
+float t = 0.0f;
+float targetJointAngle = 0.0f; // 目标关节角度（可在运行时通过输入修改）
+
+namespace {
+uint64_t micros_steady(){
+  using namespace std::chrono;
+  // 获取基于 steady_clock 的当前时间（微秒）
+  return duration_cast<microseconds>(steady_clock::now().time_since_epoch()).count();
+}
+}
+
+void setup() {
+  std::printf("SF Motor Control (Jetson) start\n");
+  CANInit();
+  enable(0x01); // 使能 ID 为 0x01 的电机 ← 修改 ID 可控制不同电机
+  prev_ts = micros_steady();
+  t = 0.0f;
+}
+
+uint16_t printCount = 0;
+uint16_t recCount = 0;
+
+void loop() {
+
+  recCANMessage(); // 接收 CAN 总线上的电机反馈信息
+
+  // 检查是否有新的关节角度输入
+  // （每 1000 次循环检查一次，避免频繁的阻塞式输入调用）
+  static uint16_t inputCheckCount = 0;
+  if(++inputCheckCount >= 1000){
+    inputCheckCount = 0;
+    float newAngle;
+    if(std::scanf("%f", &newAngle) == 1){
+      targetJointAngle = newAngle;
+      std::printf("目标关节角度已更新: %.3f rad\n", newAngle);
+    }
+  }
+
+  static int IDswitch = 0x01; // ← 修改 ID 可控制不同电机
+  uint64_t current_ts = micros_steady();
+
+  /*
+   * 功能：
+   *   根据时间差更新控制参数，并发送 MIT 控制指令
+   *
+   * 参数：
+   *   - current_ts : 当前时间戳
+   *   - prev_ts    : 上一次时间戳
+   *   - t          : 用于正弦/余弦计算的时间变量
+   *   - MITCtrlParam：
+   *       控制参数结构体，包括：
+   *       位置、速度、位置增益 Kp、速度增益 Kd、力矩
+   *   - IDswitch   : 电机 ID 选择器
+   *
+   * 返回：
+   *   无
+   */
+  if(current_ts - prev_ts >= 1000){ // 1 ms 控制周期
+    // 更新时间变量（增加 1 ms）
+    t += 0.001;
+
+    // 设置控制参数：
+    // 目标位置、目标速度、位置增益、速度增益、力矩
+    MITCtrlParam.pos = targetJointAngle;
+    MITCtrlParam.vel = 0;
+    MITCtrlParam.kp  = 0.5;
+    MITCtrlParam.kd  = 0.3;
+    MITCtrlParam.tor = 0;
+
+    // 更新时间戳
+    prev_ts = current_ts;
+
+    // IDswitch++;
+    // 如果 IDswitch 超过 0x04，则重置为 0x01
+    // if(IDswitch > 0x04){
+    //   IDswitch = 0x01;
+    // }
+
+    sendMITCommand(IDswitch, MITCtrlParam); // 发送 MIT 控制指令
+
+    printCount++;
+    if(printCount >= 100){
+      printCount = 0;
+      // 仅在 IDswitch 为 0x01 时打印
+      // 打印指令位置/速度 以及 电机实际位置/速度
+      if(IDswitch == 0x01){
+        std::printf(
+          "[CMD] pos: %6.3f rad vel: %6.3f rad/s | "
+          "[FB] pos: %6.3f rad vel: %6.3f rad/s\n",
+          MITCtrlParam.pos,
+          MITCtrlParam.vel,
+          devicesState[IDswitch - 1].pos,
+          devicesState[IDswitch - 1].vel
+        );
+      }
+    }
+  }
+
+  // 延时 1 ms，降低 CPU 占用
+  std::this_thread::sleep_for(std::chrono::milliseconds(1));
+}
+
+int main(){
+  setup();
+
+  while(true){
+    loop();
+  }
+
+  disable(0x01); // 关闭 ID 为 0x01 的电机
+  return 0;
+}
+
+```
+
+</details>
 
 ```bash
 cd build
@@ -251,7 +404,99 @@ make
 
 程序默认会控制 ID 为 0x01 的电机，在运行过程中可以通过键盘输入目标角度值，单位rad。同时接收电机角度，角速度的反馈数据。
 
-### 使用 python 控制
+### Python
+
+<details>
+<summary>main.py</summary>
+```python
+import sys
+import time
+import select
+
+# 导入核心控制模块（假设 sf_can_controller.py 与本文件位于同一目录）
+from sf_can_controller import MotorController 
+
+# --- 核心配置 ---
+IFACE = "can0"        
+MOTOR_ID = 1         # ← 修改 ID 可控制不同电机
+UPDATE_RATE_HZ = 100.0 
+PRINT_EVERY = 2     
+INITIAL_TARGET_DEG = 0.0
+
+# --- 主控制循环 ---
+def run_simple_test() -> None:
+    """运行一个简化的位置控制循环"""
+    
+    # 1. 初始化
+    update_period = 1.0 / UPDATE_RATE_HZ
+    target_rad = INITIAL_TARGET_DEG
+    
+    KP, KD = 0.5, 0.3  # 默认 MIT 控制参数
+    
+    controller = MotorController(interface=IFACE, motor_id=MOTOR_ID)
+    print(f"--- SF 电机测试开始 ---")
+    print(f"接口: {IFACE}, ID: {MOTOR_ID}, 频率: {UPDATE_RATE_HZ} Hz")
+    
+    # 2. 使能电机
+    controller.enable()
+    
+    last_send_time = time.perf_counter()
+    print_counter = 0
+
+    inputCheckCount = 0
+
+    # 3. 主循环
+    while True:
+        controller.poll_rx()              # 轮询接收 CAN 反馈数据
+        current_state = controller.get_motor_state()  # 获取当前电机状态
+        
+        now = time.perf_counter()
+        
+        # --- 周期性检查用户输入（每 500 次循环一次） ---
+        inputCheckCount += 1
+        if inputCheckCount >= 500:
+            inputCheckCount = 0
+            
+            # 阻塞式等待用户输入（会暂停控制循环）
+            # 注意：如果输入不是数字，将抛出 ValueError 异常
+            line = input("请输入目标关节角度: ").strip()
+            if line:
+                angle_deg = float(line)
+                target_rad = angle_deg
+                print(f"目标关节角度已更新: {angle_deg:.3f} deg")
+        
+        # 按固定周期发送 MIT 控制指令
+        if now - last_send_time >= update_period:
+            last_send_time = now
+            
+            # 发送目标位置控制指令
+            controller.send_mit_command(
+                pos=target_rad,
+                vel=0.0,
+                kp=KP,
+                kd=KD,
+                tor=0.0
+            )
+
+            # 打印电机状态
+            print_counter += 1
+            if print_counter >= PRINT_EVERY:
+                print_counter = 0
+                print(
+                    f"Cmd={target_rad:.2f} | "
+                    f"Pos={current_state.pos:.2f} (Vel={current_state.vel:.2f})"
+                )
+        
+        # 睡眠 1 ms，降低 CPU 占用
+        time.sleep(0.001)
+            
+
+if __name__ == "__main__":
+    # 运行测试程序
+    run_simple_test()
+
+```
+</details>
 
 Python 脚本位于 `script/` 目录中，可以直接运行无需编译。
 
@@ -260,6 +505,18 @@ python main.py
 ```
 
 程序默认会控制 ID 为 0x01 的电机，在运行过程中可以通过键盘输入目标角度值，单位rad。同时接收电机角度，角速度的反馈数据。
+
+## 资源文件
+
+[Step 6010](https://wiki.seeedstudio.com//wiki/robotics/Actuator/stackforce/Citation/6010.stp)  
+
+[Step 8108](https://wiki.seeedstudio.com//wiki/robotics/Actuator/stackforce/Citation/8108.stp)
+
+[8108 电机曲线](https://wiki.seeedstudio.com//wiki/robotics/Actuator/stackforce/Citation/8108Motor_Curve.png)
+
+[6010用户手册.pdf](https://wiki.seeedstudio.com/wiki/robotics/Actuator/stackforce/Citation/6010Motor_Document.pdf)
+
+[8108用户手册.pdf](https://wiki.seeedstudio.com/wiki/robotics/Actuator/stackforce/Citation/8108Motor_Document.pdf)
 
 ## 技术支持与产品讨论
 
