@@ -198,7 +198,7 @@ After downloading and installing, the Grafana should automatically run in the ba
 
 ### 3.2 Set data source
 
-If you see Grafana running at this moment, you can access the local Grafana interface for configuration by visiting http://localhost:3000 in your browser. We then click on "Data sources" on the left side and select "Add new data source".
+If you see Grafana running at this moment, you can access the local Grafana interface for configuration by visiting `http://localhost:3000` in your browser. We then click on "Data sources" on the left side and select "Add new data source".
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_76.png" /></div>
 
@@ -472,7 +472,7 @@ At this point, you should be able to see the following display on the Grafana pa
 
 ### Grafana webpage failed to open
 
-After entering "Services", find "Grafana", then right-click and select "Restart". After that, simply open http://localhost:3000 again.
+After entering "Services", find "Grafana", then right-click and select "Restart". After that, simply open `http://localhost:3000` again.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_75.png" /></div>
 

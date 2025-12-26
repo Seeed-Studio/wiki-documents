@@ -198,7 +198,7 @@ Después de descargar e instalar, Grafana debería ejecutarse automáticamente e
 
 ### 3.2 Establecer fuente de datos
 
-Si ves Grafana ejecutándose en este momento, puedes acceder a la interfaz local de Grafana para configuración visitando http://localhost:3000 en tu navegador. Luego hacemos clic en "Data sources" en el lado izquierdo y seleccionamos "Add new data source".
+Si ves Grafana ejecutándose en este momento, puedes acceder a la interfaz local de Grafana para configuración visitando `http://localhost:3000` en tu navegador. Luego hacemos clic en "Data sources" en el lado izquierdo y seleccionamos "Add new data source".
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_76.png" /></div>
 
@@ -472,7 +472,7 @@ En este punto, deberías poder ver la siguiente visualización en el panel de Gr
 
 ### La página web de Grafana falló al abrir
 
-Después de ingresar a "Services", encuentra "Grafana", luego haz clic derecho y selecciona "Restart". Después de eso, simplemente abre http://localhost:3000 nuevamente.
+Después de ingresar a "Services", encuentra "Grafana", luego haz clic derecho y selecciona "Restart". Después de eso, simplemente abre `http://localhost:3000` nuevamente.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_75.png" /></div>
 

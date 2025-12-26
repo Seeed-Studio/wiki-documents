@@ -198,7 +198,7 @@ Grafana の公式ウェブサイト [Grafana get started | Cloud, Self-managed, 
 
 ### 3.2 データソースを設定
 
-この時点で Grafana が実行されているのが確認できたら、ブラウザで http://localhost:3000 にアクセスしてローカル Grafana インターフェースにアクセスして設定できます。次に左側の "Data sources" をクリックして "Add new data source" を選択します。
+この時点で Grafana が実行されているのが確認できたら、ブラウザで `http://localhost:3000` にアクセスしてローカル Grafana インターフェースにアクセスして設定できます。次に左側の "Data sources" をクリックして "Add new data source" を選択します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_76.png" /></div>
 
@@ -472,7 +472,7 @@ python -m http.server 8080
 
 ### GrafanaのWebページが開けない
 
-「Services」に入った後、「Grafana」を見つけて右クリックし、「Restart」を選択します。その後、単純にhttp://localhost:3000を再度開いてください。
+「Services」に入った後、「Grafana」を見つけて右クリックし、「Restart」を選択します。その後、単純に`http://localhost:3000`を再度開いてください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_75.png" /></div>
 

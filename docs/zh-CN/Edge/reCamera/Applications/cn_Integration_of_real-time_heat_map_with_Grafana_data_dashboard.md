@@ -198,7 +198,7 @@ ipconfig
 
 ### 3.2 设置数据源
 
-如果您此时看到 Grafana 正在运行，您可以通过在浏览器中访问 http://localhost:3000 来访问本地 Grafana 界面进行配置。然后我们点击左侧的 "Data sources" 并选择 "Add new data source"。
+如果您此时看到 Grafana 正在运行，您可以通过在浏览器中访问 `http://localhost:3000` 来访问本地 Grafana 界面进行配置。然后我们点击左侧的 "Data sources" 并选择 "Add new data source"。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_76.png" /></div>
 
@@ -472,7 +472,7 @@ python -m http.server 8080
 
 ### Grafana 网页打开失败
 
-进入 "Services" 后，找到 "Grafana"，然后右键选择 "Restart"。之后，只需再次打开 http://localhost:3000。
+进入 "Services" 后，找到 "Grafana"，然后右键选择 "Restart"。之后，只需再次打开 `http://localhost:3000`。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_75.png" /></div>
 
