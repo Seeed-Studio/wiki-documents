@@ -109,6 +109,9 @@ Mycroft Precise is Apache-2.0 License project, which means you can modify and di
 * **[Voice Engine]** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
 * **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
+* **[Eagle]** [Respeaker_2_Mics_Pi_HAT_SCH_v2](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/202004059_ReSpeaker-2-Mics-Pi-HAT-V2.0_SCH_PDF_241121.pdf)
+
+
 ## Projects
 
 **Build Your Own Amazon Echo Using a RPI and ReSpeaker HAT**: How to build your own Amazon Echo using a Raspberry Pi and ReSpeaker 2-Mics HAT.
