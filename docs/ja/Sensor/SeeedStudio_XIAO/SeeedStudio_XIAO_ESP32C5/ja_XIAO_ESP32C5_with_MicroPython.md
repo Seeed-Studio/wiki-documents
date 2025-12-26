@@ -5,7 +5,7 @@ keywords:
   - xiao
   - esp32c5
   - micropython
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /ja/xiao_esp32c5_with_micropyhton
 last_update:
   date: 12/22/2025
@@ -15,11 +15,11 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[MicroPython](https://github.com/micropython/micropython/wiki) は、パフォーマンス重視のコードに対してネイティブコード生成をサポートする Python インタープリターです。マイクロコントローラーやリソース制約のあるシステム向けに最適化された、Python 3.6+ のコア機能のサブセットを提供します。CPython とは異なり、その違いについては [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences) ページで詳しく読むことができます。
+[MicroPython](https://github.com/micropython/micropython/wiki) は、パフォーマンスが重要なコードに対してネイティブコード生成をサポートする Python インタープリターです。マイクロコントローラーとリソース制約のあるシステム向けに最適化された、Python 3.6+ のコア機能のサブセットを提供します。CPython とは異なり、その違いについては [MicroPython vs CPython differences](https://github.com/micropython/micropython/wiki/Differences) ページで詳しく読むことができます。
 
 ## XIAO ESP32-C5 で MicroPython を使用する
 
-次に、Windows オペレーティングシステムを基に、**XIAO ESP32-C5** で **MicroPython** を使用し、[Thonny IDE](https://thonny.org/) でプログラミングする方法をご案内します。
+次に、Windows オペレーティングシステムを基に、**XIAO ESP32-C5** で **MicroPython** を使用し、[Thonny IDE](https://thonny.org/) でプログラミングする方法をガイドします。
 
 ### ハードウェアの準備
 
@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -46,7 +46,7 @@ import TabItem from '@theme/TabItem';
 
 ### MicroPython ファームウェアのデプロイ
 
-次に、XIAO ESP32-C5 に MicroPython ファームウェアをデプロイする方法をご案内します。
+次に、XIAO ESP32-C5 に MicroPython ファームウェアをデプロイする方法をガイドします。
 
 #### esptool のインストール
 
@@ -78,7 +78,7 @@ esptool.py eraase_flash
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
- しかし、これが失敗したり、コンピューターに複数の Espressif ベースのデバイスが接続されている場合は、--port オプションでターゲットシリアルポートの名前を指定してください。例：
+ しかし、これが失敗したり、コンピューターに複数の Espressif ベースのデバイスが接続されている場合は、ターゲットシリアルポートの名前と共に --port オプションを渡します。例：
 
 ```bash
 esptool.py --port PORTNAME erase_flash
@@ -106,7 +106,7 @@ esptool.py --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DATE-VERSION.bin
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_6.png" style={{width:800, height:'auto'}}/></div><br/>
 
-esptool.py がシリアルポートを自動検出できない場合は、代わりにコマンドラインで明示的に指定できます。
+esptool.py がシリアルポートを自動検出できない場合は、代わりにコマンドラインで明示的に渡すことができます。
 
 ```bash
 esptool.py --port PORTNAME --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DATE-VERSION.bin
@@ -124,7 +124,7 @@ esptool.py --port PORTNAME --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DAT
 
 ### [Thonny IDE](https://thonny.org/) のインストール
 
-インストールに適したバージョンを選択してください。ここでは Windows システムにインストールするため、Windows バージョンを選択しました。
+インストールに適したバージョンを選択してください。ここでは Windows システムにインストールしているため、Windows バージョンを選択しました。
 
 希望する Python バージョンの指示に従ってください。
 
@@ -136,13 +136,13 @@ esptool.py --port PORTNAME --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DAT
 
 ここでは、Thonny IDE で MicroPython を使用して XIAO ESP32-C5 の L LED を点灯させる方法を示します。
 
-#### **ステップ 1.** インタープリターの設定
+#### **ステップ 1.** インタープリター設定
 
 - Thonny IDE を開き、インターフェースの右下角をクリックして **Configure interpreter** オプションを選択します。MicroPython (generic) とポートを選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_8.png" style={{width:800, height:'auto'}}/></div><br/>
 
-接続が成功すると、下のシェルウィンドウに MicroPython ファームウェアのバージョン情報が出力されます。
+接続が成功すると、下のシェルウィンドウに MicroPython ファームウェアバージョン情報が出力されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_9.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -154,7 +154,7 @@ esptool.py --port PORTNAME --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DAT
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_11.png" style={{width:400, height:'auto'}}/></div><br/>
 
-- 左上の **View** -> **Files** をクリックしてチェックを入れ（横に **√** が表示されます）、左側に保存されたファイルの場所を表示するウィンドウが表示されます。
+- 左上の **View** -> **Files** をクリックしてチェックを入れ（横に **√** が表示されます）、保存されたファイルの場所を表示するウィンドウが左側に表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_12.png" style={{width:400, height:'auto'}}/></div><br/>
 
@@ -267,9 +267,9 @@ connect_wifi(SSID, PASSWORD)
 
 これにより、**XIAO ESP32-C5**が5GHz WiFiネットワークに接続することが可能であることが証明されます。
 
-### BLE例
+### BLE サンプル
 
-この例では、**XIAO ESP32-C5**のBLE機能を紹介し、nRF Connect Appを使用してそれを発見し接続する方法を実演します。
+このサンプルでは、**XIAO ESP32-C5**のBLE機能を紹介し、nRF Connect Appを使用してデバイスを発見し接続する方法を実演します。
 
 - `BLE_connect.py`という名前の新しいファイルを作成し、以下のサンプルコードをコピーしてください。
 
@@ -439,11 +439,11 @@ if __name__ == "__main__":
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_2.jpg" style={{width:'90%', height:'auto'}}/></div>
 </div><br/>
 
-おめでとうございます！上記のすべての例を完了した後、Thonny IDEでMicroPythonを使用して**XIAO ESP32-C5**でプロジェクトを開発する方法をマスターしたと確信しています。より多くの作品を見ることを楽しみにしています！
+おめでとうございます！上記のすべてのサンプルを完了することで、Thonny IDEを使用してMicroPythonで**XIAO ESP32-C5**上でプロジェクトを開発する方法をマスターしたと確信しています。皆様のより多くの作品を楽しみにしています！
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

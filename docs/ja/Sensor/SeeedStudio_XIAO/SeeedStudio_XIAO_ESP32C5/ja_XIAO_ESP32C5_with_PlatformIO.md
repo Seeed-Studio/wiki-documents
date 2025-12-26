@@ -19,17 +19,17 @@ import TabItem from '@theme/TabItem';
 
 ## [PlatformIO](https://platformio.org/) の紹介
 
-PlatformIO は、組み込みシステム向けに設計された強力で高度に拡張可能な開発エコシステムです。膨大な数の開発ボードとマイクロコントローラーのサポートをシームレスに統合し、比類のない柔軟性を提供します。PlatformIO の特徴は、その優れたスケーラビリティです：特定のボードがネイティブにサポートされていない場合でも、そのアーキテクチャにより簡単にカスタムボード定義を作成できます。
+PlatformIOは、組み込みシステム向けに設計された強力で高度に拡張可能な開発エコシステムです。膨大な数の開発ボードとマイクロコントローラーのサポートをシームレスに統合し、比類のない柔軟性を提供します。PlatformIOの特徴は、その優れたスケーラビリティです：特定のボードがネイティブにサポートされていない場合でも、そのアーキテクチャにより簡単にカスタムボード定義を作成できます。
 
-重要なことに、PlatformIO は Arduino に慣れ親しんだ開発者のギャップを埋め、関連するライブラリを含めるだけで Arduino スタイルのコードのコンパイルとデプロイを可能にします。
+重要なことに、PlatformIOはArduinoに慣れ親しんだ開発者のギャップを埋め、関連するライブラリを含めるだけでArduinoスタイルのコードのコンパイルとデプロイを可能にします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://platformio.org/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 詳細を見る 🖱️</font></span></strong></a>
 </div>
 
-## XIAO ESP32-C5 で PlatformIO を使用する
+## XIAO ESP32-C5 での PlatformIO の使用
 
-次に、PlatformIO をベースとした XIAO ESP32-C5 の開発を行い、PlatformIO の開発ワークフローを探索していきます。
+次に、PlatformIOベースでXIAO ESP32-C5の開発を行い、PlatformIOの開発ワークフローを探索していきます。
 
 ### ハードウェアの準備
 
@@ -41,7 +41,7 @@ PlatformIO は、組み込みシステム向けに設計された強力で高度
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -62,25 +62,25 @@ PlatformIO は、組み込みシステム向けに設計された強力で高度
 
 ### PlatformIO のインストール
 
-VSCode を開き、Extensions をクリックし、PlatformIO を検索してインストールを選択します。インストールが完了したら、VSCode を再起動してください。
+VSCodeを開き、Extensionsをクリックし、PlatformIOを検索してインストールを選択します。インストールが完了したら、VSCodeを再起動してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_VScode_2.png" style={{width:800, height:'auto'}}/></div>
 
 ### 新しいプロジェクト
 
-- PIO Home インターフェースを開き、`New Project` を選択します
+- PIO Homeインターフェースを開き、`New Project`を選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/EEZStudio/pio_new_project_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
 - Name: プロジェクト名を入力します
 - Board: **Seeed Studio XIAO ESP32-C5** を選択します
-- Framework: Ardunio を選択します
-- Location: エンジニアリングファイルのパスは、カスタムパスとして設定するか、デフォルトパスを選択できます。
-- **Finish** をクリックして、作成が完了するまで待ちます。その後、ワークスペースでプロジェクトファイルを開きます。
+- Framework: Arduinoを選択します
+- Location: エンジニアリングファイルのパスは、カスタムパスまたはデフォルトパスを選択できます。
+- **Finish** をクリックして作成が完了するまで待ちます。その後、ワークスペースでプロジェクトファイルを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_1.png" style={{width:800, height:'auto'}}/></div>
 
-別の PlatformIO プロジェクトをベースに変更したい場合は、以下の設定を直接参照することもできます。
+別のPlatformIOプロジェクトをベースに変更したい場合は、以下の設定を直接参照することもできます。
 
 - platfromio.ini
 
@@ -92,9 +92,9 @@ framework = arduino
 monitor_speed = 115200
 ```
 
-### LED 点滅の例
+### LED点滅の例
 
-この LED 点滅の例では、PlatformIO を使用してファイルをコンパイルおよびアップロードする方法をガイドします。
+このLED点滅の例では、PlatformIOを使用してファイルをコンパイルおよびアップロードする方法をガイドします。
 
 **ステップ 1.** サンプルコードをコピーします
 
@@ -122,7 +122,7 @@ void loop()
 
 **ステップ 2.** プロジェクトをビルドします
 
-  VS Code の下部のステータスバーにある ***√*** アイコンをクリックしてビルドします。
+  VS Codeの下部のステータスバーにある ***√*** アイコンをクリックしてビルドします。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -132,28 +132,28 @@ void loop()
 
 **ステップ 3.** アップロード
 
-  VS Code の下部のステータスバーにある **→** アイコンをクリックしてアップロードします。
+  VS Codeの下部のステータスバーにある **→** アイコンをクリックしてアップロードします。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_3_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
 **ステップ 4.** プログラムの効果を確認します
 
-下図のようにシリアルモニターを開きます。1秒間隔で LED のオン/オフ状態が印刷されます。
+下図のようにシリアルモニターを開きます。1秒間隔でLEDのオン/オフ状態が印刷されます。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_4.png" style={{width:800, height:'auto'}}/></div><br/>
 
-LED は同じ1秒間隔で点滅します。
+LEDは同じ1秒間隔で点滅します。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:400, height:'auto'}}/></div><br/>
 
-### 5 GHz Wi-Fi 接続の例
+### 5 GHz Wi-Fi接続の例
 
-XIAO ESP-C5 は 2.4 GHz と 5 GHz のデュアルバンド Wi-Fi 6 をサポートしています。この例では、5 GHz Wi-Fi ネットワークへの接続効果を実演します。<br/>
+XIAO ESP-C5は2.4 GHz & 5 GHzデュアルバンドWi-Fi 6をサポートしています。この例では、5 GHz Wi-Fiネットワークへの接続効果を実演します。<br/>
 
-以下のコードを PlatformIO プロジェクトにコピーしてください。
+以下のコードをPlatformIOプロジェクトにコピーしてください。
 <details>
 
-<summary> WiFi 接続リファレンスコード </summary>
+<summary> WiFi接続参考コード </summary>
 
 ```cpp
 #include <Arduino.h>
@@ -245,18 +245,18 @@ void loop() {
 
 コードをビルドしてアップロードします<br/>
 
-XIAO ESP32-C5 が WiFi に接続されると、シリアルモニターは接続された WiFi ネットワークの信号強度などの情報を印刷します。<br/>
-XIAO ESP32-C5 が 5 GHz Wi-Fi ネットワークに接続する強力な能力を持っていることも明確に確認できます。
+XIAO ESP32-C5がWiFiに接続されると、シリアルモニターは接続されたWiFiネットワークの信号強度などの情報を印刷します。<br/>
+XIAO ESP32-C5が5 GHz Wi-Fiネットワークに接続する強力な能力を持っていることも明確に確認できます。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_5_1.png" style={{width:600, height:'auto'}}/></div><br/>
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_6.png" style={{width:600, height:'auto'}}/></div><br/>
 
-上記の2つの例に従って、PlatformIO の基本的な開発操作をマスターしたはずです。XIAO ESP32-C5 でより興味深いプロジェクトを作成していただけることを楽しみにしています！
+上記の2つの例に従って、PlatformIOの基本的な開発操作をマスターしたはずです。XIAO ESP32-C5でより興味深いプロジェクトを作成していただけることを楽しみにしています！
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
