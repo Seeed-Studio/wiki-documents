@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 12/25/2025
-  author: Janet
+  date: 12/11/2025
+  author: Michelle Huang
 ---
 # SenseCAP ONE 紧凑型气象传感器入门指南
 
@@ -305,6 +305,8 @@ SenseCAP ONE 配置工具为您提供图形界面来配置设备。您可以从�
 
 5. 然后温度测量值为 -1000/1000 = -1°
 
+
+
 **S500 解码**
 
 读取寄存器 0x0000~0x0005。
@@ -512,11 +514,4 @@ SDI-12 总线上的每个传感器都有一个唯一的地址，可以设置为 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
 
 ## 资源
-
 [SenseCAP ONE/SenseCAP ONE V3 紧凑型气象站用户指南](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
-
-## 常见问题（FAQ）
-
-**平均风速和风向是如何计算的？**
-
-默认的平均时间窗口为 5 秒。在该时间窗口内，设备会采集 5 次风速和风向数据，并计算后返回一个平均值。

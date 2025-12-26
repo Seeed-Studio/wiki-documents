@@ -12,9 +12,9 @@ last_update:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" /></div>
 
-**El Seeed Studio BeagleBone® Green Eco** es una computadora de placa única de código abierto de grado industrial, co-desarrollada con la Fundación BeagleBoard.org® y alimentada por el robusto **TI AM3358 SoC**. Esta versión "Eco" está diseñada para alta eficiencia, incorporando un chip avanzado de gestión de energía TI (TPS6521403) para asegurar un consumo de energía optimizado. Está bien equipada para aplicaciones exigentes con generosos 16GB de almacenamiento eMMC integrado y un puerto Gigabit Ethernet para conectividad de red de alta velocidad. Para prototipado de hardware sin problemas, integra dos conectores Grove característicos, ofreciendo acceso directo y sin soldadura al extenso ecosistema de sensores y módulos Grove de Seeed.
+**El Seeed Studio BeagleBone® Green Eco** es una computadora de placa única de código abierto de grado industrial, co-desarrollada con la Fundación BeagleBoard.org® y alimentada por el robusto **SoC TI AM3358**. Esta versión "Eco" está diseñada para alta eficiencia, incorporando un chip avanzado de gestión de energía TI (TPS6521403) para asegurar un consumo de energía optimizado. Está bien equipada para aplicaciones exigentes con generosos 16GB de almacenamiento eMMC integrado y un puerto Gigabit Ethernet para conectividad de red de alta velocidad. Para prototipado de hardware sin problemas, integra dos conectores Grove característicos, ofreciendo acceso directo sin soldadura al extenso ecosistema de sensores y módulos Grove de Seeed.
 
-Arranca Linux en menos de 10 segundos y comienza el desarrollo en menos de 5 minutos con solo un cable USB.
+Inicia Linux en menos de 10 segundos y comienza el desarrollo en menos de 5 minutos con solo un cable USB.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Eco-p-6540.html" target="_blank">
@@ -34,35 +34,35 @@ Arranca Linux en menos de 10 segundos y comienza el desarrollo en menos de 5 min
 
 **Característica 3: 4X Capacidad de Almacenamiento y 10X Velocidad de Red**
 
-- Avanza con 16GB de almacenamiento eMMC integrado (un aumento de cuatro veces) y mejora la conectividad con un puerto Gigabit Ethernet, ofreciendo hasta 10 veces el ancho de banda de su predecesor para comunicación de red estable y de alta velocidad.
+- Avanza con 16GB de almacenamiento eMMC integrado (un aumento de cuatro veces) y mejora la conectividad con un puerto Gigabit Ethernet, ofreciendo hasta 10 veces el ancho de banda de su predecesor para comunicación de red estable de alta velocidad.
 
 **Característica 4: Conectividad Rica y Moderna**
 
-- Presenta interfaces de alta velocidad mejoradas incluyendo un puerto Gigabit Ethernet y un puerto USB Type-C moderno para energía y datos. Para prototipado rápido, también incluye dos conectores Grove integrados (I2C y UART)Grove - Seeed Studio, permitiendo conexión fácil y sin soldadura al extenso ecosistema de sensores y actuadores de Seeed Studio.
+- Presenta interfaces de alta velocidad mejoradas incluyendo un puerto Gigabit Ethernet y un puerto USB Type-C moderno para energía y datos. Para prototipado rápido, también incluye dos conectores Grove integrados (I2C y UART)Grove - Seeed Studio, permitiendo conexión fácil sin soldadura al extenso ecosistema de sensores y actuadores de Seeed Studio.
 
 **Característica 5: Listo para Desarrollo**
 
-- Viene precargado con una imagen de software Debian designada por la Fundación BeagleBoard.org®, proporcionando un entorno Linux robusto y familiar con herramientas y bibliotecas bien establecidas para agilizar tu proceso de desarrollo.
+- Viene precargado con una imagen de software Debian designada por la Fundación BeagleBoard.org®, proporcionando un entorno Linux robusto y familiar con herramientas y bibliotecas bien establecidas para agilizar su proceso de desarrollo.
 
 ## Especificaciones
 
 | Categoría  | Elemento              | Seeed Studio BeagleBone® Green Eco                                                                                     | Seeed Studio BeagleBone® Green                                                                 |
 |------------|-----------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Procesador | Núcleo                | TI AM3358 1GHz ARM® Cortex-A8                                                                                          | TI AM3358 1GHz ARM® Cortex-A8                                                                 |
-|            | Aceleradores          | Unidad de punto flotante NEON y acelerador de gráficos 3D                                                             | Unidad de punto flotante NEON y acelerador de gráficos 3D                                     |
+|            | Aceleradores          | Unidad de punto flotante NEON y acelerador gráfico 3D                                                                  | Unidad de punto flotante NEON y acelerador gráfico 3D                                         |
 | Memoria    | RAM                   | 512MB DDR3L, 800MHz                                                                                                    | 512MB DDR3L, 800MHz                                                                           |
 |            | Almacenamiento Flash  | **16GB eMMC (Kingston EMMC16G-WW28)**                                                                                  | 4GB 8-bit eMMC                                                                                |
 |            | EEPROM                | 4KB                                                                                                                    | 4KB                                                                                    |
-|            | Almacenamiento Externo| Ranura para tarjeta microSD, soporta hasta 32GB                                                                       | Ranura para tarjeta microSD, soporta hasta 32GB                                               |
+|            | Almacenamiento Externo| Ranura para tarjeta microSD, soporta hasta 32GB                                                                        | Ranura para tarjeta microSD, soporta hasta 32GB                                               |
 | Energía    | Gestión de Energía    | **TI TPS6521403 PMIC**                                                                                                     | TI TPS65217C PMIC                                                                             |
-|            | Regulador de Voltaje  | TI TPS62A01DRL (convertidor Buck 3.3V);TI TPS74501PDRV (LDO siempre activo 1.8V);TI TPS2117DRL (Mux de energía)     | TI TL5209DR (Regulador LDO 3.3V)                                                              |
+|            | Regulador de Voltaje  | TI TPS62A01DRL (convertidor Buck 3.3V);TI TPS74501PDRV (LDO siempre activo 1.8V);TI TPS2117DRL (Mux de energía)  | TI TL5209DR (Regulador LDO 3.3V)                                                              |
 |            | Voltaje de Entrada    | 5V DC (vía USB Type-C)                                                                                                 | 5V DC (vía micro USB)                                                                         |
-| Interfaces | USB                   | 1x USB 2.0 Host Type-A;1x USB 2.0 Type-C (energía y comunicación de dispositivo)                                     | 1x USB cliente (energía y comunicaciones);1x USB host                                         |
+| Interfaces | USB                   | 1x USB 2.0 Host Type-A;1x USB 2.0 Type-C (energía y comunicación de dispositivo)                                   | 1x USB cliente (energía y comunicaciones);1x USB host                                      |
 |            | Red                   | **Gigabit Ethernet (10/100/1000Mbps)**                                                                                 | Ethernet (10/100Mbit)                                                                         |
 |            | Cabezales de Expansión| 2x cabezales de 46 pines                                                                                               | 2x cabezales de 46 pines                                                                      |
 |            | Grove                 | 1x I2C, 1x UART2                                                                                                       | 1x I2C, 1x UART2                                                                              |
-|            | Botones               | 1x botón Reset;1x botón Usuario(Boot)                                                                                  | 1x botón Reset;1x botón Usuario(Boot);1x Botón de Encendido                                   |
-|            | Indicadores           | 1x LED de energía, 4x LEDs programables por usuario                                                                    | 4x LEDs (latido, microSD, CPU, eMMC)                                                          |
+|            | Botones               | 1x botón Reset;1x botón Usuario(Boot)                                                                              | 1x botón Reset;1x botón Usuario(Boot);1x Botón de Encendido                           |
+|            | Indicadores           | 1x LED de energía, 4x LEDs programables por usuario                                                                     | 4x LEDs (latido, microSD, CPU, eMMC)                                                          |
 | Físico     | Dimensiones           | 86.4mm x 53.3mm x 18mm                                                                                                 | 86.4mm x 53.3mm x 18mm                                                                        |
 |            | Peso                  | 40g                                                                                                                    | 45g                                                                                           |
 |            | Temperatura de Operación | **-40 ~ 85℃**                                                                                                              | 0 ~ 75℃                                                                                       |
@@ -87,7 +87,7 @@ BeagleBone® Green Eco está construido alrededor del procesador AM335x ARM Cort
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/Functional-Block-Diagram.png" /></div>
 
 **Procesador**
-BeagleBone® Green Eco integra el procesador AM335x 1GHz ARM® Cortex-A8 de Texas Instruments que combina procesamiento computacional, aceleración de gráficos y funcionalidad de control en tiempo real dentro de un solo SoC. La arquitectura implementa ARMv7-A con motor NEON™ SIMD y unidad de punto flotante VFPv3 para ejecución eficiente de tareas computacionales complejas, mientras mantiene eficiencia energética para aplicaciones embebidas.
+BeagleBone® Green Eco integra el procesador Texas Instruments AM335x 1GHz ARM® Cortex-A8 que combina procesamiento computacional, aceleración gráfica y funcionalidad de control en tiempo real dentro de un solo SoC. La arquitectura implementa ARMv7-A con motor NEON™ SIMD y unidad de punto flotante VFPv3 para ejecución eficiente de tareas computacionales complejas, mientras mantiene eficiencia energética para aplicaciones embebidas.
 Una característica distintiva es el Subsistema de Unidad Programable de Tiempo Real y Subsistema de Comunicación Industrial (PRU-ICSS), que comprende núcleos RISC de 32 bits duales operando independientemente del procesador ARM principal. Estos PRUs permiten control determinístico en tiempo real con tiempos de respuesta sub-microsegundo e implementación de protocolos de comunicación industrial especializados. El AM335x soporta sistemas operativos de alto nivel incluyendo Linux y sistemas operativos de tiempo real a través del SDK de Procesador de TI y entornos de desarrollo.
 
 - Procesador AM335x 1GHz ARM® Cortex-A8, 15.0mm x 15.0mm, NFBGA (324)
@@ -111,15 +111,15 @@ BeagleBone® Green Eco soporta:
 - 1x puerto USB 2.0 Type-C para alimentación y comunicaciones
 - 1x Interfaz Host USB 2.0, Type-A
 
-**Conectores/Headers de Expansión para Soportar Capes Específicas de Aplicación**
+**Conectores/Cabezales de Expansión para Soportar Capes Específicas de Aplicación**
 
-- 2x headers de 46 pines
-- 1x headers UART0 de 6 pines
+- 2x cabezales de 46 pines
+- 1x cabezales UART0 de 6 pines
 - Dos conectores Grove (Uno I2C y Uno UART) para conexión fácil al ecosistema Grove de sensores y actuadores
 
-**Definición de Pines del Header**
+**Definición de Pines del Cabezal**
 
-Cada pin de E/S digital tiene 8 modos diferentes que pueden seleccionarse, incluyendo GPIO.
+Cada pin de E/S digital tiene 8 modos diferentes que pueden ser seleccionados, incluyendo GPIO.
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1.png" /></div>
 
 **65 E/S Digitales Posibles**
@@ -141,7 +141,7 @@ Hasta 8 pines de E/S digitales pueden configurarse con moduladores de ancho de p
 **Entradas Analógicas**
 
 :::note
-Asegúrate de no ingresar más de 1.8V a los pines de entrada analógica. Este es un convertidor analógico-digital de 12 bits con 8 canales, 7 de los cuales están disponibles en los headers.
+Asegúrate de no ingresar más de 1.8V a los pines de entrada analógica. Este es un convertidor analógico-digital de 12 bits con 8 canales, 7 de los cuales están disponibles en los cabezales.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/4.png" /></div>
@@ -149,7 +149,7 @@ Asegúrate de no ingresar más de 1.8V a los pines de entrada analógica. Este e
 **UART**
 
 :::note
-Hay un header dedicado para acceder a los pines UART0 y conectar un cable de depuración. Cinco puertos serie adicionales se llevan a los headers de expansión, pero uno de ellos solo tiene una dirección llevada a los headers.
+Hay un cabezal dedicado para acceder a los pines UART0 y conectar un cable de depuración. Cinco puertos serie adicionales se llevan a los cabezales de expansión, pero uno de ellos solo tiene una dirección llevada a los cabezales.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/5.png" /></div>
@@ -157,7 +157,7 @@ Hay un header dedicado para acceder a los pines UART0 y conectar un cable de dep
 **I2C**
 
 :::note
-El primer bus I2C se utiliza para leer EEPROMs en placas adicionales cape y no puede usarse para otras operaciones de E/S digitales sin interferir con esa función, pero aún puedes usarlo para agregar otros dispositivos I2C en direcciones disponibles. El segundo bus I2C está disponible para que lo configures y uses.
+El primer bus I2C se utiliza para leer EEPROMs en placas de expansión cape y no puede usarse para otras operaciones de E/S digitales sin interferir con esa función, pero aún puedes usarlo para agregar otros dispositivos I2C en direcciones disponibles. El segundo bus I2C está disponible para que lo configures y uses.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/6.png" /></div>
@@ -165,12 +165,12 @@ El primer bus I2C se utiliza para leer EEPROMs en placas adicionales cape y no p
 **SPI**
 
 :::note
-    Para transferir datos rápidamente, podrías considerar usar uno de los puertos SPI.
+    Para enviar datos rápidamente, podrías considerar usar uno de los puertos SPI.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/7.png" /></div>
 
-## Introducción
+## Primeros Pasos
 
 :::note
 Este capítulo está escrito bajo Win10. Los pasos son similares para otros sistemas operativos.
@@ -195,15 +195,15 @@ Instala los controladores para tu sistema operativo para darte acceso de red-sob
 
 |Sistema Operativo | Controladores USB | Comentarios |
 |---------------------|---------|------------|
-|Windows (64-bit) | [Instalador de 64 bits](https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe)  | |
-|Windows (32-bit) | [Instalador de 32 bits](https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe)||
+|Windows (64-bit) | [Instalador de 64-bit](https://beagleboard.org/static/Drivers/Windows/BONE_D64.exe)  | |
+|Windows (32-bit) | [Instalador de 32-bit](https://beagleboard.org/static/Drivers/Windows/BONE_DRV.exe)||
 |Mac OS X|[Red](https://beagleboard.org/static/Drivers/MacOSX/RNDIS/HoRNDIS.pkg) [Serie](https://beagleboard.org/static/Drivers/MacOSX/FTDI/EnergiaFTDIDrivers2.2.18.pkg) | Instala ambos conjuntos de controladores.|
 |Linux|[mkudevrule.sh](https://beagleboard.org/static/Drivers/Linux/FTDI/mkudevrule.sh)|La instalación de controladores no es requerida, pero podrías encontrar útiles algunas reglas udev.|
 
 :::note
     Para sistemas Windows, ten en cuenta que:
 
-- La advertencia de Certificación de Controladores de Windows puede aparecer dos o tres veces. Haz clic en "Ignore", "Install" o "Run"
+- La advertencia de Certificación de Controladores de Windows puede aparecer dos o tres veces. Haz clic en "Ignorar", "Instalar" o "Ejecutar"
 - Para verificar si estás ejecutando Windows de 32 o 64 bits consulta [esto](https://support.microsoft.com/kb/827218).
 - En sistemas sin la última versión de servicio, puedes obtener un error (0xc000007b). En ese caso, por favor [instala](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523) y reintenta:
 - Puede que necesites reiniciar Windows.
@@ -258,7 +258,7 @@ Descarga e instala [7-zip.](http://www.7-zip.org/download.html)
     Elige una versión que sea adecuada para tu sistema.
 :::
 
-Usa 7-zip para descomprimir el archivo **.img** de la tarjeta SD
+Usa 7-zip para descomprimir el **archivo .img** de la tarjeta SD
 
 **PASO3. Instalar utilidad de programación de tarjeta SD**
 
@@ -276,7 +276,7 @@ Haz clic en el botón **Write**, entonces el proceso comienza.
 
 :::note
 
-- Puedes ver una advertencia sobre dañar tu dispositivo. Está bien aceptarla siempre que estés apuntando a tu tarjeta SD para escribir.
+- Puedes ver una advertencia sobre dañar tu dispositivo. Esto está bien aceptarlo siempre que estés apuntando a tu tarjeta SD para escribir.
 - No deberías tener tu BeagleBone® conectado a tu computadora en este momento.
 - Este proceso puede necesitar hasta 10 minutos.
 
@@ -290,7 +290,7 @@ Inserta la tarjeta SD en tu placa (apagada primero). Entonces la placa arrancar�
 Si no necesitas escribir la imagen a tu eMMC integrado, no necesitas leer el resto de este capítulo. De lo contrario, por favor continúa.
 :::
 
-Si deseas escribir la imagen a tu eMMC integrado, necesitas lanzar a la placa y modificar un archivo.
+Si deseas escribir la imagen a tu eMMC integrado, necesitas lanzar la placa y modificar un archivo.
 
 En **/boot/uEnv.txt**:
 
@@ -306,14 +306,14 @@ Entonces encontrarás los 4 LEDs de usuario encendidos como se muestra abajo
 ![ingresa descripción de imagen aquí](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/flashing.gif)
 
 :::note
-Si no encuentras la luz de rastreo superior, por favor presiona el botón RESET para reiniciar la placa.
+Si no encuentras la luz de seguimiento superior, por favor presiona el botón RESET para reiniciar la placa.
 :::
 
-Cuando el flasheo esté completo, todos los 4 LEDs USRx estarán **apagados**. Las últimas imágenes del flasher de Debian apagan automáticamente la placa al completarse. Esto puede tomar hasta **10 minutos**. Apaga tu placa, retira la tarjeta SD y aplica energía nuevamente para completar el proceso.
+Cuando el flasheo esté completo, todos los 4 LEDs USRx estarán **apagados**. Las últimas imágenes del flasher de Debian apagan automáticamente la placa al completarse. Esto puede tomar hasta **10 minutos**. Apague su placa, retire la tarjeta SD y aplique energía nuevamente para completar el proceso.
 
 ## Grove para Seeed Studio BeagleBone® Green
 
-Grove es un sistema de prototipado con conectores modulares y estandarizados. Grove adopta un enfoque de bloques de construcción para ensamblar electrónicos. Comparado con el sistema basado en jumpers o soldadura, es más fácil de conectar, experimentar y construir, y simplifica el sistema de aprendizaje, pero no al punto de volverse simplificado en exceso. Algunos de los otros sistemas de prototipado que existen reducen el nivel a bloques de construcción. Es bueno aprender de esa manera, pero el sistema Grove te permite construir sistemas reales. Requiere algo de aprendizaje y experiencia para conectar las cosas.
+Grove es un sistema de prototipado con conectores modulares y estandarizados. Grove adopta un enfoque de bloques de construcción para ensamblar electrónicos. Comparado con el sistema basado en jumpers o soldadura, es más fácil de conectar, experimentar y construir, y simplifica el sistema de aprendizaje, pero no hasta el punto de volverse simplista. Algunos de los otros sistemas de prototipado que existen reducen el nivel a bloques de construcción. Es bueno aprender de esa manera, pero el sistema Grove te permite construir sistemas reales. Requiere algo de aprendizaje y experiencia para conectar las cosas.
 
 A continuación se listan los módulos Grove que funcionan bien con Seeed Studio BeagleBone® Green.
 
@@ -322,7 +322,7 @@ A continuación se listan los módulos Grove que funcionan bien con Seeed Studio
 |101020054  |Grove - Acelerómetro Digital de 3 Ejes(+16g)     | I2C| [enlace](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B116g%29-p-1156.html)|
 |101020071  |Grove - Acelerómetro Digital de 3 Ejes(+400g)    | I2C| [enlace](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer%28%C2%B1400g%29-p-1897.html)|
 |101020034  |Grove - Brújula Digital de 3 Ejes                 | I2C| [enlace](https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-p-759.html)|
-|101020050  |Grove - Giroscopio Digital de 3 Ejes                    | Analógico| [enlace](https://www.seeedstudio.com/Grove-3-Axis-Digital-Gyro-p-750.html)|
+|101020050  |Grove - Giroscopio Digital de 3 Ejes                    | Analog| [enlace](https://www.seeedstudio.com/Grove-3-Axis-Digital-Gyro-p-750.html)|
 |101020081 |Grove - Acelerómetro y Brújula de 6 Ejes v2.0      | I2C| [enlace](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer&Compass-v2.0-p-2476.html)|
 |101020072 |Grove - Sensor Barómetro(BMP180)              | I2C| [enlace](https://www.seeedstudio.com/Grove-Barometer-Sensor-%28BMP180%29-p-1840.html)|
 |104030010 |Grove - LED Azul                               | I/O| [enlace](https://www.seeedstudio.com/Grove-Blue-LED-p-1139.html)|
@@ -345,10 +345,10 @@ A continuación se listan los módulos Grove que funcionan bien con Seeed Studio
 |104030005 |Grove - LED Rojo |I/O| [enlace](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html)|
 |103020005 |Grove - Relé |I/O| [enlace](https://www.seeedstudio.com/Grove-Relay-p-769.html)|
 |316010005 |Grove - Servo |I/O| [enlace](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
-|101020023 |Grove - Sensor de Sonido |Analógico| [enlace](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|
+|101020023 |Grove - Sensor de Sonido |Analog| [enlace](https://www.seeedstudio.com/Grove-Sound-Sensor-p-752.html)|
 |101020004 |Grove - Interruptor(P) |I/O| [enlace](https://www.seeedstudio.com/Grove-Switch%28P%29-p-1252.html)|
-|101020015 |Grove - Sensor de Temperatura |Analógico| [enlace](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
-|101020019 |Grove - Sensor de Temperatura y Humedad Pro |Analógico| [enlace](https://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-Pro-p-838.html)|
+|101020015 |Grove - Sensor de Temperatura |Analog| [enlace](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
+|101020019 |Grove - Sensor de Temperatura y Humedad Pro |Analog| [enlace](https://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-Pro-p-838.html)|
 
 ## Cape para Seeed Studio BeagleBone® Green
 
@@ -357,12 +357,12 @@ Necesitarás alguna placa de expansión cuando inicies un proyecto. Ya hay mucho
 |Grove Cape| Motor Bridge Cape|HDMI Cape|
 |------------|----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product3.jpg)|
-|[¡OBTENER UNO AHORA!](https://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)|[¡OBTENER UNO AHORA!](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)|[¡OBTENER UNO AHORA!](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html)|
+|[¡CONSIGUE UNO AHORA!](https://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)|[¡CONSIGUE UNO AHORA!](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)|[¡CONSIGUE UNO AHORA!](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html)|
 
 |Grove Cape| LCD de 5 Pulgadas|LCD de 7 Pulgadas|
 |------------|----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product6.jpg)|
-|[¡OBTENER UNO AHORA!](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[¡OBTENER UNO AHORA!](https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[¡OBTENER UNO AHORA!](https://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
+|[¡CONSIGUE UNO AHORA!](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[¡CONSIGUE UNO AHORA!](https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[¡CONSIGUE UNO AHORA!](https://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
 
 ## Referencias
 
@@ -380,13 +380,10 @@ Hay muchas referencias para ayudarte a obtener más información sobre la placa.
 
 - **[PDF]** [Hoja de Datos AM335X](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
 - **[PDF]** [Esquemático de Seeed Studio BeagleBone Green Eco](https://files.seeedstudio.com/products/102111198/res/BeagleBone%20Green%20Eco_V1.0_SCH_250814.pdf)
-- **[PDF]** [Referencia de Estructura de Seeed Studio BeagleBone Green Eco](https://files.seeedstudio.com/products/102111198/res/BBG_Eco_Structure_Reference_20251219.pdf)
-- **[DXF]** [Referencia de Estructura de Seeed Studio BeagleBone Green Eco](https://files.seeedstudio.com/products/102111198/res/BBG_Eco_Structure_Reference_20251219.dxf)
 
+## Soporte Técnico y Discusión del Producto
 
-## Soporte Técnico y Discusión de Productos
-
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

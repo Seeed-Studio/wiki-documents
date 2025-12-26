@@ -1,6 +1,6 @@
 ---
 description: Este tutorial explicará cómo usar correctamente la cámara en el XIAO ESP32S3 Sense.
-title: Uso de Cámara para Versión Sense
+title: Uso de la Cámara para la Versión Sense
 keywords:
 - xiao esp32s3
 - esp32s3
@@ -12,13 +12,13 @@ last_update:
   author: Citric
 ---
 
-# Uso de Cámara en Seeed Studio XIAO ESP32S3 Sense
+# Uso de la Cámara en Seeed Studio XIAO ESP32S3 Sense
 
 :::tip
 El contenido de este tutorial solo es aplicable al Seeed Studio XIAO ESP32S3 Sense.
 :::
 
-En este tutorial, te guiaremos a través del uso del módulo de cámara en el XIAO ESP32S3 Sense. Este tutorial se divide en las siguientes partes: primero, explicaremos la función de cámara proporcionada por ESP32 y sus funciones. En segundo lugar, te mostraremos cómo usar la cámara en dos dimensiones: tomar fotos y grabar videos, y finalmente, crearemos algunos proyectos interesantes en torno a tomar fotos y grabar videos.
+En este tutorial, te guiaremos a través del uso del módulo de cámara en el XIAO ESP32S3 Sense. Este tutorial está dividido en las siguientes partes, primero, explicaremos la función de cámara proporcionada por ESP32 y sus funciones. En segundo lugar, te mostraremos cómo usar la cámara en dos dimensiones: tomar fotos y grabar videos, y finalmente, crearemos algunos proyectos interesantes en torno a tomar fotos y grabar videos.
 
 <div class="table-center">
   <table align="center">
@@ -31,22 +31,22 @@ En este tutorial, te guiaremos a través del uso del módulo de cámara en el XI
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## Introducción
+## Comenzando
 
-Este tutorial puede involucrar el uso de tarjeta microSD, cámara, antena, etc. Por favor prepara los siguientes materiales e instálalos correctamente según las necesidades de tu proyecto.
+Este tutorial puede involucrar el uso de tarjeta microSD, cámara, antena, etc. Por favor, prepara los siguientes materiales e instálalos correctamente según las necesidades de tu proyecto.
 
-#### Instalación de antena
+#### Instalación de la antena
 
 En la parte inferior izquierda del frente del XIAO ESP32S3, hay un "Conector de Antena WiFi/BT" separado. Para obtener una mejor señal WiFi/Bluetooth, necesitas sacar la antena del interior del paquete e instalarla en el conector.
 
-Hay un pequeño truco para la instalación de la antena: si presionas directamente hacia abajo con fuerza, encontrarás que es muy difícil presionar y te dolerán los dedos. La forma correcta de instalar la antena es poner primero un lado del conector de la antena en el bloque del conector, luego presionar un poco hacia abajo en el otro lado, y la antena se instalará.
+Hay un pequeño truco para la instalación de la antena, si presionas fuerte directamente sobre ella, encontrarás que es muy difícil de presionar y te dolerán los dedos. La forma correcta de instalar la antena es poner primero un lado del conector de la antena en el bloque del conector, luego presionar un poco hacia abajo en el otro lado, y la antena quedará instalada.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -61,12 +61,12 @@ Ahora tenemos una nueva cámara potente completamente compatible con XIAO ESP32S
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-    </a>
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
+				<strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+				</a>
 </div>
 
-Si necesitas conocer la información detallada de parámetros de ov5640, puedes consultar el siguiente gráfico.
+Si necesitas conocer la información detallada de parámetros de la ov5640, puedes consultar la siguiente tabla.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -76,17 +76,17 @@ Todos los programas sobre cámaras en la Wiki son compatibles tanto con cámaras
 
 ### Preparar la tarjeta microSD
 
-XIAO ESP32S3 Sense soporta tarjetas microSD de hasta **32GB**, así que si estás listo para comprar una tarjeta microSD para XIAO, por favor consulta esta especificación. Y formatea la tarjeta microSD al formato **FAT32** antes de usar la tarjeta microSD.
+XIAO ESP32S3 Sense soporta tarjetas microSD de hasta **32GB**, así que si estás listo para comprar una tarjeta microSD para XIAO, por favor consulta esta especificación. Y formatea la tarjeta microSD a formato **FAT32** antes de usar la tarjeta microSD.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/67.png" style={{width:250, height:'auto'}}/></div>
 
-Después del formateo, puedes insertar la tarjeta microSD en la ranura de tarjeta microSD. Por favor nota la dirección de inserción, el lado con el contacto dorado debe mirar hacia adentro.
+Después del formateo, puedes insertar la tarjeta microSD en la ranura de la tarjeta microSD. Por favor nota la dirección de inserción, el lado con el contacto dorado debe mirar hacia adentro.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
-### Diseño del circuito de ranura de cámara para placas de expansión
+### Diseño del circuito de la ranura de cámara para placas de expansión
 
-La ranura de tarjeta XIAO ESP32S3 Sense ocupa 14 GPIOs del ESP32-S3, y los detalles de pines de la ocupación se muestran en la tabla a continuación.
+La ranura de la tarjeta XIAO ESP32S3 Sense ocupa 14 GPIOs del ESP32-S3, y los detalles de los pines ocupados se muestran en la tabla a continuación.
 
 <div class="table-center">
     <table align="center">
@@ -143,25 +143,26 @@ La ranura de tarjeta XIAO ESP32S3 Sense ocupa 14 GPIOs del ESP32-S3, y los detal
 
 ### Activar la opción PSRAM
 
-La PSRAM de ESP32 se refiere a la PSRAM externa (Pseudo Static Random Access Memory) en el chip ESP32, que proporciona espacio de memoria adicional para aumentar la memoria disponible del sistema ESP32. En el sistema ESP32, PSRAM tiene los siguientes usos principales:
+La PSRAM del ESP32 se refiere a la PSRAM externa (Pseudo Static Random Access Memory) en el chip ESP32, que proporciona espacio de memoria adicional para aumentar la memoria disponible del sistema ESP32. En el sistema ESP32, la PSRAM tiene los siguientes usos principales:
 
-1. Extender la RAM disponible: La RAM incorporada de ESP32 es limitada, especialmente para algunas aplicaciones que necesitan mucha memoria, como procesamiento de imágenes, procesamiento de audio, etc., la RAM incorporada puede no ser suficiente. Al usar PSRAM, la RAM disponible de ESP32 puede extenderse para satisfacer las necesidades de estas aplicaciones.
+1. Extender la RAM disponible: La RAM integrada del ESP32 es limitada, especialmente para algunas aplicaciones que necesitan mucha memoria, como procesamiento de imágenes, procesamiento de audio, etc., la RAM integrada puede no ser suficiente. Al usar PSRAM, la RAM disponible del ESP32 puede extenderse para satisfacer las necesidades de estas aplicaciones.
 
-2. Acceso acelerado a memoria: Dado que PSRAM es memoria externa, la velocidad de acceso es más lenta que la RAM interna, sin embargo puede usarse como caché o memoria temporal para acelerar el acceso a memoria y el procesamiento de datos.
+2. Acceso acelerado a memoria: Dado que la PSRAM es memoria externa, la velocidad de acceso es más lenta que la RAM interna, sin embargo puede usarse como caché o memoria temporal para acelerar el acceso a memoria y el procesamiento de datos.
 
-3. Búferes de almacenamiento: Para aplicaciones que requieren búferes grandes, como búferes de red, búferes de audio, etc., PSRAM puede proporcionar suficiente espacio de almacenamiento para evitar situaciones de falta de memoria.
+3. Búferes de almacenamiento: Para aplicaciones que requieren búferes grandes, como búferes de red, búferes de audio, etc., la PSRAM puede proporcionar suficiente espacio de almacenamiento para evitar situaciones de falta de memoria.
 
 Para el contenido de este tutorial, **necesitas activar la función PSRAM** del Arduino IDE para asegurar que la cámara funcione correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/94.png" style={{width:700, height:'auto'}}/></div>
 
+
 ## Descripción General de la Biblioteca de Cámara
 
-Antes de comenzar, te recomendamos leer este capítulo para entender las funciones comunes de la cámara. Para que puedas usar estas funciones para completar el desarrollo de tu propio proyecto o ser capaz de leer el programa más fácilmente.
+Antes de comenzar, te recomendamos leer este capítulo para entender las funciones comunes de la cámara. De esta manera puedes usar estas funciones para completar el desarrollo de tu propio proyecto o ser capaz de leer el programa más fácilmente.
 
 ### Parte I: esp_camera.h
 
-1. Estructura de configuración para inicialización de cámara.
+1. Estructura de configuración para la inicialización de la cámara.
 
 Lo siguiente es un ejemplo de la configuración, solo llena según la situación real de pines.
 
@@ -194,29 +195,29 @@ static camera_config_t camera_example_config = {
     };
 ```
 
-2. Inicializar el controlador de cámara.
+2. Inicializar el controlador de la cámara.
 
-Después de configurar `camera_example_config` en el formato anterior, necesitamos usar esta función para inicializar el controlador de cámara.
+Después de configurar `camera_example_config` en el formato anterior, necesitamos usar esta función para inicializar el controlador de la cámara.
 
 ```cpp
 esp_err_t esp_camera_init(const camera_config_t* config);
 ```
 
-- **Parámetros de Entrada**: Parámetros de configuración de cámara
+- **Parámetros de Entrada**: Parámetros de configuración de la cámara
 
 - **Salida**: ESP_OK en caso de éxito
 
 :::note
-Actualmente esta función solo puede llamarse una vez y no hay forma de desinicializar este módulo.
+Actualmente esta función solo puede ser llamada una vez y no hay manera de des-inicializar este módulo.
 :::
 
-3. Obtener puntero a un búfer de marco.
+3. Obtener puntero a un buffer de frame.
 
 ```cpp
 camera_fb_t* esp_camera_fb_get();
 ```
 
-Estructura de datos del búfer de marco de cámara:
+Estructura de datos del búfer de fotograma de la cámara:
 
 ```cpp
 typedef struct {
@@ -235,7 +236,7 @@ typedef struct {
 void esp_camera_fb_return(camera_fb_t * fb);
 ```
 
-- **Parámetros de Entrada**: Puntero al búfer de fotograma
+- **Parámetros de entrada**: Puntero al búfer de fotograma
 
 5. Obtener un puntero a la estructura de control del sensor de imagen.
 
@@ -245,21 +246,22 @@ sensor_t * esp_camera_sensor_get();
 
 - **Salida**: puntero al sensor
 
-6. Guardar configuraciones de cámara en almacenamiento no volátil (NVS).
+6. Guardar configuraciones de la cámara en almacenamiento no volátil (NVS).
 
 ```cpp
 esp_err_t esp_camera_save_to_nvs(const char *key);
 ```
 
-- **Parámetros de Entrada**: Un nombre de clave nvs único para las configuraciones de cámara
+- **Parámetros de Entrada**: Un nombre de clave nvs único para la configuración de la cámara
 
-7. Cargar configuraciones de cámara desde almacenamiento no volátil (NVS).
+7. Cargar configuración de la cámara desde almacenamiento no volátil (NVS).
 
 ```cpp
 esp_err_t esp_camera_load_from_nvs(const char *key);
 ```
 
-- **Parámetros de Entrada**: Un nombre de clave nvs único para las configuraciones de cámara
+- **Parámetros de Entrada**: Un nombre de clave nvs único para la configuración de la cámara
+
 
 ### Parte II: img_converters.h
 
@@ -270,99 +272,99 @@ bool fmt2jpg_cb(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, p
 ```
 
 - **Parámetros de Entrada**:
-  - **src**:       Búfer fuente en formato RGB565, RGB888, YUYV o GRAYSCALE
-  - **src_len**:   Longitud en bytes del búfer fuente
-  - **width**:     Ancho en píxeles de la imagen fuente
-  - **height**:    Alto en píxeles de la imagen fuente
-  - **format**:    Formato de la imagen fuente
-  - **quality**:   Calidad JPEG de la imagen resultante
-  - **cp**:        Callback a ser llamado para escribir los bytes del JPEG de salida
-  - **arg**:       Puntero a ser pasado al callback
+    - **src**:       Buffer fuente en formato RGB565, RGB888, YUYV o GRAYSCALE
+    - **src_len**:   Longitud en bytes del buffer fuente
+    - **width**:     Ancho en píxeles de la imagen fuente
+    - **height**:    Alto en píxeles de la imagen fuente
+    - **format**:    Formato de la imagen fuente
+    - **quality**:   Calidad JPEG de la imagen resultante
+    - **cp**:        Callback a ser llamado para escribir los bytes del JPEG de salida
+    - **arg**:       Puntero a ser pasado al callback
 
 - **Salida**: true en caso de éxito
 
-2. Convertir búfer de fotograma de cámara a JPEG.
+2. Convertir buffer de frame de cámara a JPEG.
 
 ```cpp
 bool frame2jpg_cb(camera_fb_t * fb, uint8_t quality, jpg_out_cb cb, void * arg);
 ```
 
 - **Parámetros de Entrada**:
-  - **fb**:       Búfer de fotograma de cámara fuente
-  - **quality**:  Calidad JPEG de la imagen resultante
-  - **cp**:       Callback a ser llamado para escribir los bytes del JPEG de salida
-  - **arg**:      Puntero a ser pasado al callback
+    - **fb**:       Buffer de fotograma de la cámara fuente
+    - **quality**:  Calidad JPEG de la imagen resultante
+    - **cp**:       Callback a ser llamado para escribir los bytes del JPEG de salida
+    - **arg**:      Puntero a ser pasado al callback
 
 - **Salida**: true en caso de éxito
 
-3. Convertir búfer de imagen a búfer JPEG.
+3. Convertir buffer de imagen a buffer JPEG.
 
 ```cpp
 bool fmt2jpg(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixformat_t format, uint8_t quality, uint8_t ** out, size_t * out_len);
 ```
 
 - **Parámetros de Entrada**:
-  - **src**:       Búfer fuente en formato RGB565, RGB888, YUYV o GRAYSCALE
-  - **src_len**:   Longitud en bytes del búfer fuente
-  - **width**:     Ancho en píxeles de la imagen fuente
-  - **height**:    Alto en píxeles de la imagen fuente
-  - **format**:    Formato de la imagen fuente
-  - **quality**:   Calidad JPEG de la imagen resultante
-  - **out**:       Puntero a ser poblado con la dirección del búfer resultante. DEBES liberar el puntero una vez que hayas terminado con él.
-  - **out_len**:   Puntero a ser poblado con la longitud del búfer de salida
+    - **src**:       Buffer fuente en formato RGB565, RGB888, YUYV o GRAYSCALE
+    - **src_len**:   Longitud en bytes del buffer fuente
+    - **width**:     Ancho en píxeles de la imagen fuente
+    - **height**:    Alto en píxeles de la imagen fuente
+    - **format**:    Formato de la imagen fuente
+    - **quality**:   Calidad JPEG de la imagen resultante
+    - **out**:       Puntero a ser poblado con la dirección del buffer resultante. DEBES liberar el puntero una vez que hayas terminado con él.
+    - **out_len**:   Puntero a ser poblado con la longitud del buffer de salida
 
 - **Salida**: true en caso de éxito
 
-4. Convertir búfer de fotograma de cámara a búfer JPEG.
+4. Convertir buffer de frame de cámara a buffer JPEG.
 
 ```cpp
 bool frame2jpg(camera_fb_t * fb, uint8_t quality, uint8_t ** out, size_t * out_len);
 ```
 
 - **Parámetros de Entrada**:
-  - **fb**:       Búfer de fotograma de cámara fuente
-  - **quality**:  Calidad JPEG de la imagen resultante
-  - **out**:      Puntero a ser poblado con la dirección del búfer resultante
-  - **out_len**:  Puntero a ser poblado con la longitud del búfer de salida
+    - **fb**:       Buffer de frame de la cámara fuente
+    - **quality**:  Calidad JPEG de la imagen resultante
+    - **out**:      Puntero a ser poblado con la dirección del buffer resultante
+    - **out_len**:  Puntero a ser poblado con la longitud del buffer de salida
 
 - **Salida**: true en caso de éxito
 
-5. Convertir búfer de imagen a búfer BMP.
+5. Convertir buffer de imagen a buffer BMP.
 
 ```cpp
 bool fmt2bmp(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixformat_t format, uint8_t ** out, size_t * out_len);
 ```
 
 - **Parámetros de Entrada**:
-  - **src**:       Búfer fuente en formato RGB565, RGB888, YUYV o GRAYSCALE
-  - **src_len**:   Longitud en bytes del búfer fuente
-  - **width**:     Ancho en píxeles de la imagen fuente
-  - **height**:    Alto en píxeles de la imagen fuente
-  - **format**:    Formato de la imagen fuente
-  - **quality**:   Calidad JPEG de la imagen resultante
-  - **out**:       Puntero a ser poblado con la dirección del búfer resultante.
-  - **out_len**:   Puntero a ser poblado con la longitud del búfer de salida
+    - **src**:       Buffer fuente en formato RGB565, RGB888, YUYV o GRAYSCALE
+    - **src_len**:   Longitud en bytes del buffer fuente
+    - **width**:     Ancho en píxeles de la imagen fuente
+    - **height**:    Alto en píxeles de la imagen fuente
+    - **format**:    Formato de la imagen fuente
+    - **quality**:   Calidad JPEG de la imagen resultante
+    - **out**:       Puntero a ser poblado con la dirección del buffer resultante.
+    - **out_len**:   Puntero a ser poblado con la longitud del buffer de salida
 
 - **Salida**: true en caso de éxito
 
-6. Convertir búfer de fotograma de cámara a búfer BMP.
+6. Convertir buffer de frame de cámara a buffer BMP.
 
 ```cpp
 bool frame2bmp(camera_fb_t * fb, uint8_t ** out, size_t * out_len);
 ```
 
 - **Parámetros de Entrada**:
-  - **fb**:       Búfer de fotograma de cámara fuente
-  - **quality**:  Calidad JPEG de la imagen resultante
-  - **cp**:       Callback a ser llamado para escribir los bytes del JPEG de salida
-  - **arg**:      Puntero a ser pasado al callback
+    - **fb**:       Buffer de fotograma de la cámara fuente
+    - **quality**:  Calidad JPEG de la imagen resultante
+    - **cp**:       Callback a ser llamado para escribir los bytes del JPEG de salida
+    - **arg**:      Puntero a ser pasado al callback
 
 - **Salida**: true en caso de éxito
 
 ### Parte III: app_httpd.cpp
 
 :::note
-Esta parte de la introducción de la biblioteca está basada en la sección Crear un terminal de preservación de video -- Basado en WebServer. Esta biblioteca se utiliza principalmente para realizar funciones de adquisición de imágenes y reconocimiento facial para el servidor web. No está incluida directamente en el paquete a bordo del ESP.
+Esta parte de la introducción de la biblioteca está basada en la sección Crear un terminal de preservación de video -- Basado en WebServer. Esta biblioteca se utiliza principalmente para realizar funciones de adquisición de imágenes y reconocimiento facial para el servidor web. No está incluida directamente en el paquete integrado del ESP.
 :::
 
 1. Función de reconocimiento facial.
@@ -372,8 +374,8 @@ static int run_face_recognition(fb_data_t *fb, std::list<dl::detect::result_t> *
 ```
 
 - **Parámetros de Entrada**:
-  - **fb**: un puntero a una estructura que representa un búfer de fotograma que contiene datos de imagen.
-  - **results**: un puntero a una lista de resultados de rostros detectados.
+    - **fb**: un puntero a una estructura que representa un búfer de marco que contiene datos de imagen.
+    - **results**: un puntero a una lista de resultados de caras detectadas.
 
 2. Maneja solicitudes HTTP para archivos de imagen BMP.
 
@@ -390,12 +392,13 @@ static size_t jpg_encode_stream(void *arg, size_t index, const void *data, size_
 ```
 
 - **Parámetros de Entrada**:
-  - **arg**: un puntero a un argumento definido por el usuario que se pasa a la función.
-  - **index**: un valor de índice que indica la posición actual dentro de los datos de imagen.
-  - **data**: un puntero a un búfer que contiene los datos de imagen a ser codificados.
-  - **len**: la longitud del búfer de datos.
+    - **arg**: un puntero a un argumento definido por el usuario que se pasa a la función.
+    - **index**: un valor de índice que indica la posición actual dentro de los datos de imagen.
+    - **data**: un puntero a un búfer que contiene los datos de imagen a codificar.
+    - **len**: la longitud del búfer de datos.
 
-4. Maneja solicitudes HTTP para capturar y transmitir imágenes desde la cámara.
+
+4. Maneja las solicitudes HTTP para capturar y transmitir imágenes desde la cámara.
 
 ```cpp
 static esp_err_t capture_handler(httpd_req_t *req)
@@ -411,7 +414,7 @@ static esp_err_t stream_handler(httpd_req_t *req)
 
 - **Parámetros de Entrada**: un puntero a una estructura que representa la solicitud HTTP.
 
-6. Inicializa e inicia un servidor de cámara que captura y transmite video sobre HTTP.
+6. Inicializa e inicia un servidor de cámara que captura y transmite video a través de HTTP.
 
 ```cpp
 void startCameraServer()
@@ -419,13 +422,13 @@ void startCameraServer()
 
 ## Tomando fotos con la cámara
 
-A continuación comenzamos con el uso más básico de la cámara, por ejemplo, primero usaremos la cámara para completar la adquisición de imágenes. El primer proyecto utilizaremos la tarjeta microSD, la tarea principal de este programa es obtener las imágenes de la cámara cada minuto y luego guardar las imágenes en la tarjeta microSD.
+A continuación comenzamos con el uso más básico de la cámara, por ejemplo, primero usaremos la cámara para completar la adquisición de imágenes. El primer proyecto usaremos la tarjeta microSD, la tarea principal de este programa es obtener las imágenes de la cámara cada minuto y luego guardar las imágenes en la tarjeta microSD.
 
 Antes de comenzar, haz lo que hice e instala la tarjeta microSD y la cámara.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/91.jpg" style={{width:300, height:'auto'}}/></div>
 
-Puedes encontrar el código completo del programa y los archivos de dependencia requeridos en el siguiente enlace.
+Puedes encontrar el código completo del programa y los archivos de dependencias requeridos en el siguiente enlace.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/take_photos" target="_blank" rel="noopener noreferrer">
@@ -460,7 +463,7 @@ void photo_save(const char * fileName) {
   }
   // Save photo to file
   writeFile(SD, fileName, fb->buf, fb->len);
-
+  
   // Release image buffer
   esp_camera_fb_return(fb);
 
@@ -514,7 +517,7 @@ void setup() {
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-
+  
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
   if(config.pixel_format == PIXFORMAT_JPEG){
@@ -541,7 +544,7 @@ void setup() {
     Serial.printf("Camera init failed with error 0x%x", err);
     return;
   }
-
+  
   camera_sign = true; // Camera initialization check passes
 
   // Initialize SD card
@@ -578,7 +581,7 @@ void loop() {
   if(camera_sign && sd_sign){
     // Get the current time
     unsigned long now = millis();
-
+  
     //If it has been more than 1 minute since the last shot, take a picture and save it to the SD card
     if ((now - lastCaptureTime) >= 60000) {
       char filename[32];
@@ -597,7 +600,7 @@ void loop() {
 La compilación y carga de este programa requiere otras dos dependencias, por favor ve a GitHub y descárgalas completamente.
 :::
 
-Por favor sube el programa para XIAO ESP32S3, después de que el programa se haya subido exitosamente, por favor enciende el monitor serie, ajusta la cámara para que mire hacia el objeto que quieres fotografiar, espera un minuto, la foto se guardará en la tarjeta SD. A continuación, XIAO tomará una foto cada minuto.
+Por favor carga el programa para XIAO ESP32S3, después de que el programa se cargue exitosamente, por favor enciende el monitor serie, ajusta la cámara para que apunte al objeto que quieres fotografiar, espera un minuto, la foto se guardará en la tarjeta SD. A continuación, XIAO tomará una foto cada minuto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/89.png" style={{width:700, height:'auto'}}/></div>
 
@@ -620,7 +623,7 @@ void photo_save(const char * fileName) {
   }
   // Save photo to file
   writeFile(SD, fileName, fb->buf, fb->len);
-
+  
   // Release image buffer
   esp_camera_fb_return(fb);
 
@@ -632,15 +635,15 @@ En la función que guarda la imagen en la tarjeta microSD, se realizan dos tarea
 
 Obtener la imagen se puede hacer con `esp_camera_fb_get()`, la información de la imagen se guardará en el puntero `fb`, y luego podemos escribir el `buf` de `fb` en la tarjeta SD.
 
-En la función `Setup()`, un gran segmento del programa está configurando los pines de la cámara y la inicialización de la cámara, podemos simplemente aplicarlo directamente por defecto. Si tienes requisitos para los píxeles o calidad de la cámara, puedes ajustar los valores internos según las funciones descritas en el capítulo [Resumen de la Librería de Cámara](#resumen-de-la-librería-de-cámara).
+En la función `Setup()`, un gran segmento del programa está configurando los pines de la cámara y la inicialización de la cámara, podemos simplemente aplicarlo directamente por defecto. Si tienes requisitos para los píxeles o calidad de la cámara, puedes ajustar los valores internos según las funciones descritas en el capítulo [Descripción General de la Biblioteca de Cámara](#camera-library-overview).
 
-Lo último que hacer en la función `loop()` es controlar que las fotos se tomen cada minuto y seguir el número incremental como el sufijo del nombre de archivo de las fotos tomadas.
+Lo último que hay que hacer en la función `loop()` es controlar que las fotos se tomen cada minuto y seguir el número incremental como sufijo del nombre de archivo de las fotos tomadas.
 
 ```cpp
 if(camera_sign && sd_sign){
     // Get the current time
     unsigned long now = millis();
-
+  
     //If it has been more than 1 minute since the last shot, take a picture and save it to the SD card
     if ((now - lastCaptureTime) >= 60000) {
       char filename[32];
@@ -656,11 +659,12 @@ if(camera_sign && sd_sign){
 
 Antes de ejecutar el `loop()`, configuramos dos verificaciones de bandera `camera_sign` y `sd_sign`. Esto asegura que la tarea de tomar y guardar fotos debe ejecutarse después de que las verificaciones de la cámara y la tarjeta SD se hayan ejecutado exitosamente en `Setup()`.
 
-## Proyecto I: Hacer una cámara portátil
 
-A continuación, usamos el conocimiento teórico anterior para crear un artefacto fotográfico súper pequeño. El resultado final de este proyecto es que la transmisión en vivo de la cámara se muestra en el Seeed Studio Round Display para XIAO, y cuando bloqueas el objeto que quieres fotografiar, tocas la pantalla y tomas una foto para grabar en la tarjeta microSD.
+## Proyecto I: Crear una cámara portátil
 
-### Preparación preliminar
+A continuación, utilizamos el conocimiento teórico anterior para crear un artefacto fotográfico súper pequeño. El resultado final de este proyecto es que la transmisión en vivo de la cámara se muestra en el Seeed Studio Round Display for XIAO, y cuando enfocas el objeto que quieres fotografiar, tocas la pantalla y tomas una foto para grabarla en la tarjeta microSD.
+
+### Preparación Preliminar
 
 Antes de comenzar este proyecto, necesitarás preparar el siguiente hardware con anticipación.
 
@@ -668,7 +672,7 @@ Antes de comenzar este proyecto, necesitarás preparar el siguiente hardware con
   <table align="center">
     <tr>
         <th>Seeed Studio XIAO ESP32S3 Sense</th>
-        <th>Seeed Studio Round Display para XIAO</th>
+        <th>Seeed Studio Round Display for XIAO</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -677,21 +681,21 @@ Antes de comenzar este proyecto, necesitarás preparar el siguiente hardware con
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-Dado que este proyecto usará Round Display para XIAO, por favor lee el contenido de la **[configuración del entorno Wiki de la placa de expansión de pantalla](https://wiki.seeedstudio.com/es/get_start_round_display#software-preparation)**, instala las librerías necesarias y configura el entorno TFT antes de ejecutar las rutinas de este proyecto.
+Dado que este proyecto utilizará Round Display para XIAO, por favor lee el contenido de la **[configuración del entorno Wiki de la placa de expansión de pantalla](https://wiki.seeedstudio.com/es/get_start_round_display#software-preparation)**, instala las librerías necesarias y configura el entorno TFT antes de ejecutar las rutinas de este proyecto.
 
-Dado que el XIAO EPS32S3 Sense está diseñado con tres resistencias pull-up R4~R6 conectadas a la ranura de la tarjeta SD, y la pantalla redonda también tiene resistencias pull-up, la tarjeta SD no se puede leer cuando ambas se usan al mismo tiempo. Para resolver este problema, necesitamos cortar J3 en la placa de expansión XIAO ESP32S3 Sense.
+Dado que el XIAO EPS32S3 Sense está diseñado con tres resistencias pull-up R4~R6 conectadas a la ranura de tarjeta SD, y la pantalla redonda también tiene resistencias pull-up, la tarjeta SD no puede ser leída cuando ambas se usan al mismo tiempo. Para resolver este problema, necesitamos cortar J3 en la placa de expansión XIAO ESP32S3 Sense.
 
 :::tip
 Sin embargo, **necesitamos agradecer al ingeniero Mjrovai por el nuevo método de usar la ranura de tarjeta microSD en el XIAO ESP32S3 Sense al mismo tiempo**, lo cual también es posible a nivel de software. Podemos referirnos a **[sus métodos y procedimientos](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
@@ -706,12 +710,12 @@ A continuación, por favor instala la tarjeta microSD, XIAO ESP32S3 Sense y Roun
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/101.gif" style={{width:500, height:'auto'}}/></div>
 
 :::tip
-Recomendamos que retires primero el módulo de cámara para evitar rayar la cámara cuando cortes la conexión J3 con la cuchilla.
+Te recomendamos que remuevas primero el módulo de cámara para evitar rayar la cámara cuando cortes la conexión J3 con la cuchilla.
 :::
 
 ### Operación específica
 
-Puedes encontrar el código completo del programa y los archivos de dependencias requeridos en el siguiente enlace.
+Puedes encontrar el código completo del programa y los archivos de dependencia requeridos en el siguiente enlace.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/round_display_take_picture" target="_blank" rel="noopener noreferrer">
@@ -807,7 +811,7 @@ void setup() {
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-
+  
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
   if(config.pixel_format == PIXFORMAT_JPEG){
@@ -879,7 +883,7 @@ void loop() {
       Serial.println("Failed to get camera frame buffer");
       return;
     }
-
+    
     if(display_is_pressed()){
       Serial.println("display is touched");
       char filename[32];
@@ -889,7 +893,7 @@ void loop() {
       Serial.printf("Saved picture：%s\n", filename);
       imageCount++;
     }
-
+  
     // Decode JPEG images
     uint8_t* buf = fb->buf;
     uint32_t len = fb->len;
@@ -897,7 +901,7 @@ void loop() {
     tft.setAddrWindow(0, 0, camera_width, camera_height);
     tft.pushColors(buf, len);
     tft.endWrite();
-
+      
     // Release image buffer
     esp_camera_fb_return(fb);
 
@@ -906,13 +910,13 @@ void loop() {
 }
 ```
 
-Sube el programa al XIAO ESP32S3 Sense, si la pantalla no se enciende después de una carga exitosa, es posible que necesites hacer clic en el botón Reset en XIAO, entonces verás la pantalla de monitoreo mostrada en la Round Display en tiempo real. Haz clic en cualquier lugar de la pantalla, la imagen será grabada y guardada en la tarjeta microSD.
+Sube el programa al XIAO ESP32S3 Sense, si la pantalla no se enciende después de una carga exitosa, es posible que necesites hacer clic en el botón Reset del XIAO, entonces verás la pantalla de monitoreo mostrada en la Round Display en tiempo real. Haz clic en cualquier lugar de la pantalla, la imagen será grabada y guardada en la tarjeta microSD.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/95.gif" style={{width:800, height:'auto'}}/></div>
 
 ### Anotación del programa
 
-La configuración de la cámara y la tarjeta microSD son contenidos previos, por lo que no los repetiremos aquí. Para el uso de la tarjeta microSD, puedes consultar el Wiki del [sistema de archivos XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/es/xiao_esp32s3_sense_filesystem) para aprender cómo usarla.
+La configuración de la cámara y la tarjeta microSD son contenidos previos, por lo que no los repetiremos aquí. Para el uso de la tarjeta microSD, puedes consultar el Wiki del [sistema de archivos del XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/es/xiao_esp32s3_sense_filesystem) para aprender cómo usarla.
 
 ```cpp
 // Take a photo
@@ -923,7 +927,7 @@ if (!fb) {
 }
 
 ...
-
+  
 // Release image buffer
 esp_camera_fb_return(fb);
 
@@ -944,7 +948,7 @@ if(display_is_pressed()){
 }
 ```
 
-El programa anterior se usa para verificar si la pantalla es tocada. Si es así, el código guarda la imagen capturada en un archivo en una tarjeta microSD.
+El programa anterior se utiliza para verificar si la pantalla es tocada. Si es así, el código guarda la imagen capturada en un archivo en una tarjeta microSD.
 
 ```cpp
 // Decode JPEG images
@@ -961,14 +965,14 @@ Esta parte del código muestra la imagen capturada en una pantalla. Primero recu
 ## Grabar videos cortos y guardar en tarjeta microSD
 
 :::note
-No recomendamos la exportación de codificación de video en MCU porque los recursos de biblioteca de codificación actualmente soportados son demasiado pequeños y la operación es muy complicada y tediosa.
+No recomendamos la exportación de codificación de video sobre MCU porque los recursos de la biblioteca de codificación actualmente soportada son demasiado pequeños y la operación es muy complicada y tediosa.
 
-Este ejemplo no involucra codificación de video, y el video exportado es un compuesto MJPG de AVI por frame, por lo que la grabación de video puede no ser particularmente buena y satisfactoria. El propósito de este tutorial es proporcionarte métodos simples e ideas para grabar videos cortos, y damos la bienvenida a socios que tengan mejores soluciones para enviarnos PR.
+Este ejemplo no involucra codificación de video, y el video exportado es un compuesto MJPG de AVI por frame, por lo que la grabación de video puede no ser particularmente buena y satisfactoria. El propósito de este tutorial es proporcionarte métodos simples e ideas para grabar videos cortos, y damos la bienvenida a compañeros que tengan mejores soluciones para enviar PR a nosotros.
 :::
 
 En los capítulos anteriores, dominamos cómo usar la cámara para capturar imágenes. Sabemos que una sola imagen se une para hacer una imagen de video en movimiento. Basado en esta teoría, nuestro proyecto en este capítulo te guiará sobre cómo escribir un programa para grabar un video de 10 segundos cada 1 minuto y guardarlo en una tarjeta microSD.
 
-Puedes encontrar el código completo del programa y los archivos de dependencia requeridos en el siguiente enlace.
+Puedes encontrar el código completo del programa y los archivos de dependencia requeridos debajo de este enlace.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/record_video" target="_blank" rel="noopener noreferrer">
@@ -976,7 +980,7 @@ Puedes encontrar el código completo del programa y los archivos de dependencia 
     </a>
 </div>
 
-Aquí está el programa de Arduino para este proyecto.
+Aquí está el programa Arduino para este proyecto.
 
 ```cpp
 #include "esp_camera.h"
@@ -1001,7 +1005,7 @@ int imageCount = 0;
 void setup() {
   Serial.begin(115200);
   while(!Serial);
-
+  
   // Initialize the camera
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
@@ -1036,9 +1040,9 @@ void setup() {
     Serial.printf("Camera init failed with error 0x%x", err);
     return;
   }
-
+  
   camera_sign = true;
-
+  
   // Initialize the SD card
   if (!SD.begin(SD_PIN_CS)) {
     Serial.println("SD card initialization failed!");
@@ -1063,7 +1067,7 @@ void setup() {
   } else {
     Serial.println("UNKNOWN");
   }
-
+  
   sd_sign = true;
 
   Serial.println("Video will begin in one minute, please be ready.");
@@ -1086,7 +1090,7 @@ void loop() {
       }
       Serial.printf("Recording video：%s\n", filename);
       lastCaptureTime = now;
-
+      
       // Start capturing video frames
       while ((millis() - lastCaptureTime) < captureDuration) {
         camera_fb_t *fb = esp_camera_fb_get();
@@ -1097,7 +1101,7 @@ void loop() {
         videoFile.write(fb->buf, fb->len);
         esp_camera_fb_return(fb);
       }
-
+      
       // Close the video file
       videoFile.close();
       Serial.printf("Video saved: %s\n", filename);
@@ -1112,17 +1116,18 @@ void loop() {
 }
 ```
 
-Sube el código al XIAO ESP32S3 Sense, enciende el monitor serie, en este momento por favor ajusta la posición de la cámara al objeto que quieres grabar, después de un minuto, el LED naranja en XIAO comenzará a parpadear y la grabación comenzará y se guardará en la tarjeta microSD.
+Sube el código al XIAO ESP32S3 Sense, enciende el monitor serie, en este momento por favor ajusta la posición de la cámara hacia el objeto que quieres grabar, después de un minuto, el LED naranja en el XIAO comenzará a parpadear y la grabación iniciará y se guardará en la tarjeta microSD.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/96.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
-Dado que el programa no involucra configuraciones como codificación y velocidad de fotogramas, el video puede abrirse por solo un segundo si no hay cambio en cada frame del metraje grabado.
+Dado que el programa no involucra configuraciones como codificación y velocidad de fotogramas, el video puede abrirse por solo un segundo si no hay cambios en cada fotograma de la grabación.
 :::
+
 
 ### Anotación del programa
 
-El núcleo y la clave en el procedimiento de grabación de video es seguir adquiriendo el flujo de fotos por un período continuo de 10 segundos y escribirlo a la tarjeta microSD continuamente.
+El núcleo y la clave en el procedimiento de grabación de video es mantener la adquisición del flujo de fotos durante un período continuo de 10 segundos y escribirlo a la tarjeta microSD continuamente.
 
 ```cpp
 // Start capturing video frames
@@ -1153,12 +1158,12 @@ if ((now - lastCaptureTime) >= 60000) {
 
 Al final de este tutorial, mostremos un proyecto de transmisión de video. Este proyecto te permite ver una transmisión de video en vivo en una página web creada por XIAO ESP32S3 Sense, y puedes cambiar la visualización de la pantalla configurando algunos parámetros.
 
-Puedes encontrar el código completo del programa y los archivos de dependencia requeridos en el siguiente enlace.
+Puedes encontrar el código completo del programa y los archivos de dependencias requeridos en el siguiente enlace.
 
 Si estás usando el paquete de placas esp32 con versión **2.0.x** en Arduino. Por favor descarga con:
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/CameraWebServer_for_esp-arduino_2.0.x" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/CameraWebServer" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Descargar el Código</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
@@ -1223,7 +1228,7 @@ void setup() {
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-
+  
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
   if(config.pixel_format == PIXFORMAT_JPEG){
@@ -1291,10 +1296,10 @@ void loop() {
 }
 ```
 
-Antes de subir el programa, necesitas cambiar el nombre de WiFi y la contraseña en el código por los tuyos. Después de subir el programa, si el XIAO ESP32C3 se conecta exitosamente a tu WiFi, su dirección IP será impresa.
+Antes de cargar el programa, necesitas cambiar el nombre y la contraseña del WiFi en el código por los tuyos propios. Después de cargar el programa, si el XIAO ESP32C3 se conecta exitosamente a tu WiFi, su dirección IP será impresa.
 
 :::caution
-XIAO ESP32S3 Si realizas este proyecto por un tiempo prolongado, por favor presta atención a la disipación de calor, XIAO se volverá muy caliente, ¡ten cuidado con las quemaduras!
+XIAO ESP32S3 Si realizas este proyecto por un tiempo prolongado, por favor presta atención a la disipación de calor, el XIAO se volverá muy caliente, ¡ten cuidado con las quemaduras!
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/97.png" style={{width:800, height:'auto'}}/></div>
@@ -1309,7 +1314,7 @@ Por favor abre tu navegador, recomendamos Edge o Google Chrome, e ingresa esa di
 Por favor ten en cuenta que el dispositivo en el que estás usando el navegador necesita estar en la misma LAN que XIAO.
 :::
 
-Después de configurar las especificaciones de transmisión de video que quieres establecer, haz clic en **Start Stream** en la parte inferior de la barra de herramientas izquierda y verás la transmisión en vivo de la cámara.
+Después de configurar las especificaciones de transmisión de video que deseas establecer, haz clic en **Start Stream** en la parte inferior de la barra de herramientas izquierda y verás la transmisión en vivo de la cámara.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/98.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -1325,7 +1330,8 @@ Oh, mi cara grande está encerrada en un círculo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/100.png" style={{width:600, height:'auto'}}/></div>
 
-## Enfoque Automático OV5640
+
+## OV5640 AutoFocus
 
 ### Preparación de Hardware
 
@@ -1340,18 +1346,17 @@ Oh, mi cara grande está encerrada en un círculo.
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html?qid=UXYOXT_08tfc9pt_1746512260418" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Compra ahora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-### Preparación de Software
+### Preparación del Software
 
 #### Método 1
-
-Agradecimientos especiales a **@Eric** por proporcionar el código de código abierto
+Agradecimientos especiales a **@Eric** por proporcionar el código de fuente abierta
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/0015/ESP32-OV5640-AF/tree/main" target="_blank" rel="noopener noreferrer">
@@ -1360,7 +1365,6 @@ Agradecimientos especiales a **@Eric** por proporcionar el código de código ab
 </div>
 
 **Ejemplo de Código**
-
 ``` cpp
 #include "esp_camera.h"
 #include <WiFi.h>
@@ -1410,7 +1414,7 @@ void setup() {
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-
+  
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
   if(config.pixel_format == PIXFORMAT_JPEG){
@@ -1489,7 +1493,7 @@ void loop() {
 ### Gráfico de Resultados
 
 :::tip
-La resolución debe ser superior a 1280*1024 para ver el efecto de enfoque, la pantalla se ralentizará y necesitarás esperar un momento para que la pantalla responda durante el enfoque.
+La resolución necesita estar por encima de 1280*1024 para ver el efecto de enfoque, la pantalla se ralentizará y necesitas esperar un momento para que la pantalla se enfoque.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/OV5640.gif" style={{width:700, height:'auto'}}/></div>
@@ -1497,15 +1501,14 @@ La resolución debe ser superior a 1280*1024 para ver el efecto de enfoque, la p
 #### Método 2
 
 :::tip
-La resolución debe ser superior a 1600*1200 para ver el efecto de enfoque, la pantalla se ralentizará y necesitarás esperar un momento para que la pantalla responda durante el enfoque.
+La resolución necesita estar por encima de 1600*1200 para ver el efecto de enfoque, la pantalla se ralentizará y necesitas esperar un momento para que la pantalla se enfoque.
 :::
 
-Descarga el siguiente archivo zip y agrégalo a Arduino
-
+Descarga el siguiente archivo zip y añádelo a Arduino
 - **[ZIP]** [OV5640 Auto](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/OV5640_AF.zip)
 
 :::tip
-Las librerías OV5640 del método 1 y método 2 no pueden existir al mismo tiempo
+El OV5640 en las librerías del método 1 y método 2 no pueden existir al mismo tiempo
 :::
 
 ```cpp
@@ -1641,24 +1644,27 @@ void loop() {
 Se recomienda el Modo 1 porque tiene un efecto de enfoque más pronunciado que el Modo 2 y proporciona una imagen más nítida.
 :::
 
-## Solución de Problemas
+## Solución de problemas
 
 ### P1: Cuando se usan juntos XIAO ESP32S3 Sense y Round Display, ¿tengo que cortar el pin J3? ¿Qué ranura de tarjeta SD se puede usar?
 
-R: En principio, necesitas cortar el pin J3 cuando XIAO ESP32S3 Sense se usa junto con Round Display para usar la tarjeta microSD. La razón es que hay resistencias pull-up en el diseño del circuito de ambas placas de expansión, por lo que teóricamente, si dos resistencias pull-up funcionan al mismo tiempo, entonces la ranura de tarjeta SD no funcionará correctamente. Aparecerá un mensaje de error de fallo en el montaje de la tarjeta SD. Dado que la resistencia pull-up en el Round Display no se puede bloquear, necesitas cortar J3 en la placa de expansión sense para asegurar que solo una resistencia pull-up esté funcionando cuando ambas se usan juntas. Esto también determina que cuando ambas se usan juntas, existe y solo la ranura de tarjeta SD en el Round Display está activa.
+R: En principio, necesitas cortar el pin J3 cuando XIAO ESP32S3 Sense se usa junto con Round Display para usar la tarjeta microSD. La razón es que hay resistencias pull-up en el diseño del circuito de ambas placas de expansión, por lo que teóricamente, si dos resistencias pull-up funcionan al mismo tiempo, entonces la ranura de la tarjeta SD no funcionará correctamente. Aparecerá un mensaje de error de fallo de montaje de la tarjeta SD. Dado que la resistencia pull-up en el Round Display no se puede bloquear, necesitas cortar J3 en la placa de expansión sense para asegurar que solo una resistencia pull-up esté funcionando cuando ambas se usan juntas. Esto también determina que cuando ambas se usan juntas, existe y solo la ranura de tarjeta SD en el Round Display está activa.
 
 Sin embargo, **necesitamos agradecer al ingeniero Mjrovai por el nuevo método de usar la ranura de tarjeta microSD en el XIAO ESP32S3 Sense al mismo tiempo**, lo cual también es posible a nivel de software. Podemos consultar **[sus métodos y procedimientos](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
 
+
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
+

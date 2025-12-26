@@ -21,15 +21,15 @@ Luego procederemos a desplegar nuestro modelo entrenado usando el SenseCraft Mod
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/0.png" style={{width:1000, height:'auto'}}/></div>
 
 
-Desde el conjunto de datos hasta el aterrizaje del modelo, tendremos los siguientes pasos principales.
+Desde el conjunto de datos hasta el despliegue del modelo, tendremos los siguientes pasos principales.
 
-1. [Conjuntos de Datos Etiquetados](#conjuntos-de-datos-etiquetados) —— Este capítulo se enfoca en cómo obtener conjuntos de datos que puedan ser entrenados en modelos. Hay dos formas principales de hacer esto. La primera es usar los conjuntos de datos etiquetados proporcionados por la comunidad de Roboflow, y la otra es usar tus propias imágenes específicas del escenario como conjuntos de datos, pero necesitas realizar manualmente el etiquetado tú mismo.
+1. [Conjuntos de Datos Etiquetados](#labelled-datasets) —— Este capítulo se enfoca en cómo obtener conjuntos de datos que puedan ser entrenados en modelos. Hay dos formas principales de hacer esto. La primera es usar los conjuntos de datos etiquetados proporcionados por la comunidad de Roboflow, y la otra es usar tus propias imágenes específicas del escenario como conjuntos de datos, pero necesitas realizar manualmente el etiquetado tú mismo.
 
-2. [Modelo Exportado del Entrenamiento del Conjunto de Datos](#modelo-exportado-del-entrenamiento-del-conjunto-de-datos) —— Este capítulo se enfoca en cómo entrenar para obtener un modelo que pueda ser desplegado en Grove Vision AI V2 basado en el conjunto de datos obtenido en el primer paso, usando la plataforma Google Colab.
+2. [Modelo Exportado del Entrenamiento del Conjunto de Datos](#training-dataset-exported-model) —— Este capítulo se enfoca en cómo entrenar para obtener un modelo que pueda ser desplegado en Grove Vision AI V2 basado en el conjunto de datos obtenido en el primer paso, utilizando la plataforma Google Colab.
 
-3. [Subir modelos vía SenseCraft Model Assistant](#subir-modelos-vía-sensecraft-model-assistant) —— Esta sección describe cómo usar el archivo de modelo exportado para subir el modelo a Grove Vision AI V2 usando el SenseCraft Model Assistant.
+3. [Subir modelos a través del SenseCraft Model Assistant](#upload-models-via-sensecraft-model-assistant) —— Esta sección describe cómo usar el archivo del modelo exportado para subir el modelo a Grove Vision AI V2 usando el SenseCraft Model Assistant.
 
-4. [Protocolos comunes y aplicaciones del modelo](#protocolos-comunes-y-aplicaciones-del-modelo) —— Finalmente, introduciremos el formato unificado de comunicación de datos de SenseCraft AI para que puedas utilizar el máximo potencial de tus dispositivos y modelos para hacer aplicaciones que se ajusten a tus escenarios.
+4. [Protocolos comunes y aplicaciones del modelo](#common-protocols-and-applications-of-the-model) —— Finalmente, introduciremos el formato unificado de comunicación de datos de SenseCraft AI para que puedas utilizar el máximo potencial de tus dispositivos y modelos para crear aplicaciones que se ajusten a tus escenarios.
 
 Así que sumerjámonos y comencemos el emocionante proceso de dar vida a tus datos.
 
@@ -69,12 +69,12 @@ Antes de comenzar, es posible que necesites preparar el siguiente equipo.
 	</table>
 </div>
 
-Este es el modelo de dispositivo recomendado y es todo el hardware que se usará en este tutorial. Por supuesto, si no tienes una cámara OV5647 a mano, y no tienes un XIAO, puedes usar cualquier otra cámara CSI de Raspberry Pi, y cualquier placa de desarrollo habilitada para Arduino con UART funcionará.
+Este es el modelo de dispositivo recomendado y es todo el hardware que se utilizará en este tutorial. Por supuesto, si no tienes una cámara OV5647 a mano, y no tienes un XIAO, puedes usar cualquier otra cámara Raspberry Pi CSI, y cualquier placa de desarrollo habilitada para Arduino con UART funcionará.
 
 
 ## Conjuntos de Datos Etiquetados
 
-En el contenido de esta sección, permitimos a los usuarios elegir libremente los conjuntos de datos que tienen. Esto incluye fotos de la comunidad o sus propias fotos de la escena. Este tutorial introducirá los dos escenarios dominantes. El primero es usar conjuntos de datos etiquetados listos para usar proporcionados por la comunidad de [Roboflow](https://roboflow.com/about). El otro es usar imágenes de alta resolución que hayas tomado y etiquetar el conjunto de datos. Por favor lee los diferentes tutoriales a continuación según tus necesidades.
+En el contenido de esta sección, permitimos a los usuarios elegir libremente los conjuntos de datos que tengan. Esto incluye fotos de la comunidad o sus propias fotos de la escena. Este tutorial introducirá los dos escenarios dominantes. El primero es usar conjuntos de datos etiquetados listos para usar proporcionados por la comunidad de [Roboflow](https://roboflow.com/about). El otro es usar imágenes de alta resolución que hayas tomado y etiquetado el conjunto de datos. Por favor, lee los diferentes tutoriales a continuación según tus necesidades.
 
 ### Paso 1: Crear una cuenta gratuita de Roboflow
 
@@ -97,7 +97,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="Download Labelled datasets using Roboflow" label="Descargar conjuntos de datos etiquetados usando Roboflow">
 
-Elegir un conjunto de datos adecuado de Roboflow para uso directo implica determinar el conjunto de datos que mejor se ajuste a los requisitos de tu proyecto, considerando aspectos como el tamaño del conjunto de datos, calidad, relevancia y licencias.
+Elegir un conjunto de datos adecuado de Roboflow para uso directo implica determinar el conjunto de datos que mejor se ajuste a los requisitos de tu proyecto, considerando aspectos como el tamaño del conjunto de datos, calidad, relevancia y licencia.
 
 **Paso 2. Explorar Roboflow Universe**
 
@@ -139,7 +139,7 @@ Para continuar con los pasos subsiguientes, recomendamos que exportes el conjunt
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/6.png" style={{width:1000, height:'auto'}}/></div>
 
-Luego obtendrás la **Raw URL** para este modelo, manténla segura, usaremos ese enlace en el paso de entrenamiento del modelo un poco más tarde.
+Entonces obtendrás la **URL Raw** para este modelo, mantenla segura, usaremos ese enlace en el paso de entrenamiento del modelo un poco más tarde.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/26.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -154,10 +154,10 @@ Si el conjunto de datos cumple con tus requisitos y funciona bien en las pruebas
 
 <TabItem value="Use your own images as a dataset" label="Usar tus propias imágenes como conjunto de datos">
 
-Aquí, usaré la imagen de gesto de piedra-papel-tijeras como demostración para guiarte a través de las tareas de carga de imágenes, etiquetado y exportación de un conjunto de datos en Roboflow.
+Aquí, usaré la imagen del gesto piedra-papel-tijeras como demostración para guiarte a través de las tareas de carga de imágenes, etiquetado y exportación de un conjunto de datos en Roboflow.
 
 :::note
-Recomendamos encarecidamente que uses Grove Vision AI V2 para tomar fotos de tu conjunto de datos, lo cual es lo mejor para Grove Vision AI V2. Grove Vision AI V2 está desarrollando actualmente la funcionalidad de tomar fotos, y una vez que esté lista, podrás usar Grove Vision AI V2 para capturar imágenes para tu conjunto de datos. Hasta entonces, puedes usar fotos tomadas por otros dispositivos como conjuntos de datos.
+Recomendamos encarecidamente que uses Grove Vision AI V2 para tomar fotos de tu conjunto de datos, lo cual es mejor para Grove Vision AI V2. Grove Vision AI V2 está desarrollando actualmente la parte de funcionalidad de tomar fotos, y una vez que eso esté terminado, podrás usar Grove Vision AI V2 para capturar fotos para tu conjunto de datos. Hasta entonces, puedes usar fotos tomadas por otros dispositivos como conjuntos de datos.
 :::
 
 **Paso 2. Crear un Nuevo Proyecto y Subir imágenes**
@@ -166,7 +166,7 @@ Una vez que hayas iniciado sesión en Roboflow, haz clic en **Create Project**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/7.png" style={{width:1000, height:'auto'}}/></div>
 
-Nombra tu proyecto (por ejemplo, "Piedra-Papel-Tijeras"). Define tu proyecto como **Object Detection**. Establece las **Output Labels** como **Categorical** (ya que Piedra, Papel y Tijeras son categorías distintas).
+Nombra tu proyecto (por ejemplo, "Piedra-Papel-Tijeras"). Define tu proyecto como **Detección de Objetos**. Establece las **Etiquetas de Salida** como **Categóricas** (ya que Piedra, Papel y Tijeras son categorías distintas).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/8.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -183,11 +183,11 @@ Puedes arrastrar y soltar tus imágenes o seleccionarlas desde tu computadora. S
 :::tip
 **¿Cómo se determina el tamaño del conjunto de datos?**
 
-Generalmente depende de varios factores: modelo de tarea, complejidad de la tarea, pureza de los datos, etc. Por ejemplo, el modelo de detección del cuerpo humano involucra un gran número de personas, un amplio rango, la tarea es más compleja, por lo que se necesita recopilar más datos.
+Generalmente depende de una variedad de factores: modelo de tarea, complejidad de la tarea, pureza de los datos, y así sucesivamente. Por ejemplo, el modelo de detección del cuerpo humano involucra un gran número de personas, un amplio rango, la tarea es más compleja, por lo que se necesita recopilar más datos.
 Otro ejemplo es el modelo de detección de gestos, que solo necesita detectar los tres tipos de "piedra", "tijeras" y "papel", y requiere menos categorías, por lo que el conjunto de datos recopilado es de aproximadamente 500.
 :::
 
-**Paso 3: Anotar Imágenes**
+**Paso 3: Anotando Imágenes**
 
 Después de subir, necesitarás anotar las imágenes etiquetando los gestos de mano.
 
@@ -209,7 +209,7 @@ Selecciona el botón "Start Annotating". Dibuja cajas delimitadoras alrededor de
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/13.gif" style={{width:1000, height:'auto'}}/></div>
 
-Etiqueta cada caja delimitadora como "Rock", "Paper" o "Scissors".
+Etiqueta cada caja delimitadora como "Rock", "Paper", o "Scissors".
 
 Usa el botón ">" para moverte a través de tu conjunto de datos, repitiendo el proceso de anotación para cada imagen.
 
@@ -225,12 +225,12 @@ Revisa cada imagen para asegurarte de que las cajas delimitadoras estén correct
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/15.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-El etiquetado incorrecto afecta el rendimiento general del entrenamiento y puede descartarse si algunos conjuntos de datos no cumplen con los requisitos de etiquetado. Aquí hay algunas demostraciones de mal etiquetado.
+El etiquetado incorrecto afecta el rendimiento general del entrenamiento y puede descartarse si algunos conjuntos de datos no cumplen con los requisitos de etiquetado. Aquí hay algunas demostraciones de etiquetado deficiente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/16.png" style={{width:700, height:'auto'}}/></div>
 :::
 
-**Paso 5: Generar y Exportar el Conjunto de Datos**
+**Paso 5: Generando y Exportando el Conjunto de Datos**
 
 Una vez que todas las imágenes estén anotadas. En Annotate haz clic en el botón **Add x images to Dataset** en la esquina superior derecha.
 
@@ -250,11 +250,11 @@ En **Augmentation** en el paso 4, selecciona **Mosaic**, que aumenta la generali
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/21.png" style={{width:1000, height:'auto'}}/></div>
 
-En el paso final **Create**, por favor calcula el número de imágenes razonablemente según el impulso de Roboflow; en general, mientras más imágenes tengas, más tiempo toma entrenar el modelo. Sin embargo, tener más imágenes no necesariamente hará que el modelo sea más preciso, principalmente depende de si el conjunto de datos es lo suficientemente bueno o no.
+En el paso final **Create**, por favor calcula el número de imágenes razonablemente según el boost de Roboflow; en general, mientras más imágenes tengas, más tiempo toma entrenar el modelo. Sin embargo, tener más imágenes no necesariamente hará el modelo más preciso, principalmente depende de si el conjunto de datos es lo suficientemente bueno o no.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/22.png" style={{width:1000, height:'auto'}}/></div>
 
-Haz clic en **Create** para crear una versión de tu conjunto de datos. Roboflow procesará las imágenes y anotaciones, creando un conjunto de datos versionado. Después de que se genere el conjunto de datos, haz clic en **Export Dataset**. Elige el formato **COCO** que coincida con los requisitos del modelo que entrenarás.
+Haz clic en **Create** para crear una versión de tu conjunto de datos. Roboflow procesará las imágenes y anotaciones, creando un conjunto de datos versionado. Después de que se genere el conjunto de datos, haz clic en **Export Dataset**. Elige el formato **COCO** que coincida con los requisitos del modelo que vas a entrenar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/23.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -263,20 +263,19 @@ Haz clic en **Continue** y luego obtendrás la URL Raw para este modelo. Guárda
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/27.png" style={{width:1000, height:'auto'}}/></div>
 
 
-¡Felicidades! Has usado exitosamente Roboflow para subir, anotar y exportar un conjunto de datos para un modelo de detección de gestos de mano Piedra-Papel-Tijeras. Con tu conjunto de datos listo, puedes proceder a entrenar un modelo de aprendizaje automático usando plataformas como Google Colab.
+¡Felicidades! Has usado exitosamente Roboflow para subir, anotar y exportar un conjunto de datos para un modelo de detección de gestos de mano de Piedra-Papel-Tijeras. Con tu conjunto de datos listo, puedes proceder a entrenar un modelo de aprendizaje automático usando plataformas como Google Colab.
 
 Recuerda mantener tu conjunto de datos diverso y bien anotado para mejorar la precisión de tu modelo futuro. ¡Buena suerte con el entrenamiento de tu modelo, y diviértete clasificando gestos de mano con el poder de la IA!
 </TabItem>
 </Tabs>
 
 
-## Entrenar Modelo Exportado del Conjunto de Datos
-
+## Entrenamiento del Modelo Exportado del Conjunto de Datos
 
 
 ### Paso 1. Acceder al Notebook de Colab
 
-Puedes encontrar diferentes tipos de archivos de código de Google Colab de modelos en la [Wiki del Asistente de Modelos SenseCraft](https://wiki.seeedstudio.com/es/ModelAssistant_Introduce_Quick_Start/#model-training). Si no sabes qué código deberías elegir, puedes elegir cualquiera de ellos, dependiendo de la clase de tu modelo (detección de objetos o clasificación de imágenes).
+Puedes encontrar diferentes tipos de archivos de código de modelos de Google Colab en el [Wiki del Asistente de Modelos de SenseCraft](https://wiki.seeedstudio.com/es/ModelAssistant_Introduce_Quick_Start/#model-training). Si no sabes qué código deberías elegir, puedes elegir cualquiera de ellos, dependiendo de la clase de tu modelo (detección de objetos o clasificación de imágenes).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/24.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -300,7 +299,7 @@ Por favor encuentra la sección **Download the dataset** en el código. Verás e
 !unzip -q Gesture_Detection_Swift-YOLO_192/dataset.zip -d Gesture_Detection_Swift-YOLO_192/dataset
 ```
 
-Esta pieza de código se usa para crear un directorio, descargar un conjunto de datos de Roboflow, y descomprimirlo en el directorio recién creado dentro de un entorno de Google Colab. Aquí hay un desglose de lo que hace cada línea:
+Este fragmento de código se utiliza para crear un directorio, descargar un conjunto de datos desde Roboflow y descomprimirlo en el directorio recién creado dentro de un entorno de Google Colab. Aquí tienes un desglose de lo que hace cada línea:
 
 1. `%mkdir -p Gesture_Detection_Swift-YOLO_192/dataset`:
    - Esta línea crea un nuevo directorio llamado `Gesture_Detection_Swift-YOLO_192` y un subdirectorio llamado `dataset`. La bandera `-p` asegura que el comando no devuelva un error si el directorio ya existe y crea cualquier directorio padre necesario.
@@ -311,15 +310,15 @@ Esta pieza de código se usa para crear un directorio, descargar un conjunto de 
 3. `!unzip -q Gesture_Detection_Swift-YOLO_192/dataset.zip -d Gesture_Detection_Swift-YOLO_192/dataset`:
    - Esta línea utiliza el comando `unzip` para extraer el contenido del archivo `dataset.zip` en el directorio `dataset` que se creó anteriormente. La bandera `-q` ejecuta el comando `unzip` en modo silencioso, suprimiendo la mayoría de los mensajes de salida.
 
-Para personalizar este código para tu propio enlace de modelo de Roboflow:
+Para personalizar este código para tu propio enlace de modelo desde Roboflow:
 
 1. Reemplaza `Gesture_Detection_Swift-YOLO_192` con el nombre de directorio deseado donde quieras almacenar tu conjunto de datos.
 
-2. Reemplaza la URL del conjunto de datos de Roboflow (`https://universe.roboflow.com/ds/xaMM3ZTeWy?key=5bznPZyI0t`) con el enlace a tu conjunto de datos exportado (Es la URL Raw que obtuvimos en el [último paso en Conjuntos de Datos Etiquetados](#elige-cómo-obtienes-tu-conjunto-de-datos)). Asegúrate de incluir el parámetro key si es requerido para el acceso.
+2. Reemplaza la URL del conjunto de datos de Roboflow (`https://universe.roboflow.com/ds/xaMM3ZTeWy?key=5bznPZyI0t`) con el enlace a tu conjunto de datos exportado (Es la URL Raw que obtuvimos en el [último paso en Conjuntos de Datos Etiquetados](#choose-how-you-get-your-dataset)). Asegúrate de incluir el parámetro key si es requerido para el acceso.
 
-3. Ajusta el nombre del archivo de salida en el comando `wget` si es necesario (`-O tu_directorio/tu_nombre_archivo.zip`).
+3. Ajusta el nombre de archivo de salida en el comando `wget` si es necesario (`-O tu_directorio/tu_nombre_archivo.zip`).
 
-4. Asegúrate de que el directorio de salida en el comando `unzip` coincida con el directorio que creaste y el nombre del archivo coincida con el que estableciste en el comando `wget`.
+4. Asegúrate de que el directorio de salida en el comando `unzip` coincida con el directorio que creaste y el nombre de archivo coincida con el que estableciste en el comando `wget`.
 
 :::caution
 Si cambias el nombre de un directorio de carpeta `Gesture_Detection_Swift-YOLO_192`, ten en cuenta que necesitarás hacer cambios a otros nombres de directorio en el código que se usaron antes del cambio, ¡de lo contrario puede ocurrir un error!
@@ -344,21 +343,21 @@ El siguiente paso es ajustar los parámetros de entrada del modelo. Por favor ve
 ```
 
 
-Este comando se utiliza para iniciar el proceso de entrenamiento de un modelo de aprendizaje automático, específicamente un modelo YOLO (You Only Look Once), utilizando el framework SSCMA (Seeed Studio SenseCraft Model Assistant). El comando incluye varias opciones para configurar el proceso de entrenamiento. Esto es lo que hace cada parte:
+Este comando se utiliza para iniciar el proceso de entrenamiento de un modelo de aprendizaje automático, específicamente un modelo YOLO (You Only Look Once), usando el framework SSCMA (Seeed Studio SenseCraft Model Assistant). El comando incluye varias opciones para configurar el proceso de entrenamiento. Esto es lo que hace cada parte:
 
 - `!sscma.train` es el comando para iniciar el entrenamiento dentro del framework SSCMA.
 
-- `configs/swift_yolo/swift_yolo_tiny_1xb16_300e_coco.py` especifica el archivo de configuración para el entrenamiento, que incluye configuraciones como la arquitectura del modelo, horario de entrenamiento, estrategias de aumento de datos, etc.
+- `configs/swift_yolo/swift_yolo_tiny_1xb16_300e_coco.py` especifica el archivo de configuración para el entrenamiento, que incluye configuraciones como la arquitectura del modelo, el cronograma de entrenamiento, las estrategias de aumento de datos, etc.
 
-- `--cfg-options` te permite anular las configuraciones predeterminadas especificadas en el archivo `.py` con las que proporcionas en la línea de comandos.
+- `--cfg-options` te permite sobrescribir las configuraciones predeterminadas especificadas en el archivo `.py` con las que proporciones en la línea de comandos.
 
-- `work_dir=Gesture_Detection_Swift-YOLO_192` establece el directorio donde se almacenarán las salidas del entrenamiento, como registros y puntos de control del modelo guardado.
+- `work_dir=Gesture_Detection_Swift-YOLO_192` establece el directorio donde se almacenarán las salidas del entrenamiento, como los registros y los puntos de control del modelo guardado.
 
 - `num_classes=3` especifica el número de clases que el modelo debe ser entrenado para reconocer. Depende del número de etiquetas que tengas, por ejemplo piedra, papel, tijeras deberían ser tres etiquetas.
 
 - `epochs=10` establece el número de ciclos de entrenamiento (épocas) a ejecutar. Los valores recomendados están entre 50 y 100.
 
-- `height=192` y `width=192` establecen la altura y anchura de las imágenes de entrada que el modelo espera.
+- `height=192` y `width=192` establecen la altura y el ancho de las imágenes de entrada que el modelo espera.
 
 - `data_root=Gesture_Detection_Swift-YOLO_192/dataset/` define la ruta al directorio donde se encuentran los datos de entrenamiento.
 
@@ -390,7 +389,7 @@ La forma de ejecutar el bloque de código es hacer clic en el botón de reproduc
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/30.png" style={{width:1000, height:'auto'}}/></div>
 
-El bloque de código se ejecutará después de que hagas clic en el botón, y si todo va bien, verás la señal de que la ejecución del bloque de código está completa - aparece un símbolo de marca a la izquierda del bloque. Como se muestra en la figura es el efecto después de que se complete la ejecución del primer bloque de código.
+El bloque de código se ejecutará después de que hagas clic en el botón, y si todo va bien, verás la señal de que la ejecución del bloque de código está completa - aparece un símbolo de marca de verificación a la izquierda del bloque. Como se muestra en la figura es el efecto después de que se complete la ejecución del primer bloque de código.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/31.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -418,7 +417,7 @@ Las advertencias que aparecen en el código pueden ser ignoradas.
 Cuando llegues a la sección **Evaluate the model**, tienes la opción de ejecutar el bloque de código **Evaluate the TFLite INT8 model**.
 
 :::tip
-Evaluar el modelo TFLite INT8 implica probar las predicciones del modelo cuantizado contra un conjunto de datos de prueba separado para medir su precisión y métricas de rendimiento, evaluar el impacto de la cuantización en la precisión del modelo, y perfilar su velocidad de inferencia y uso de recursos para asegurar que cumple con las restricciones de implementación para dispositivos edge.
+Evaluar el modelo TFLite INT8 implica probar las predicciones del modelo cuantizado contra un conjunto de datos de prueba separado para medir su precisión y métricas de rendimiento, evaluar el impacto de la cuantización en la precisión del modelo, y perfilar su velocidad de inferencia y uso de recursos para asegurar que cumple con las restricciones de despliegue para dispositivos edge.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/35.png" style={{width:1000, height:'auto'}}/></div>
@@ -443,34 +442,34 @@ El siguiente fragmento es la parte válida del resultado después de que ejecut�
 FPS: 128.350449 fram/s
 ```
 
-Los resultados de evaluación incluyen una serie de métricas de Precisión Promedio (AP) y Recuperación Promedio (AR), calculadas para diferentes umbrales de Intersección sobre Unión (IoU) y tamaños de objeto, que se utilizan comúnmente para evaluar el rendimiento de modelos de detección de objetos.
+Los resultados de evaluación incluyen una serie de métricas de Precisión Promedio (AP) y Recuperación Promedio (AR), calculadas para diferentes umbrales de Intersección sobre Unión (IoU) y tamaños de objetos, que se utilizan comúnmente para evaluar el rendimiento de modelos de detección de objetos.
 
 1. **AP@[IoU=0.50:0.95 | area=all | maxDets=100] = 0.450**
-   - Esta puntuación es la precisión promedio del modelo a través de un rango de umbrales IoU de 0.50 a 0.95, incrementado por 0.05. Un AP de 0.450 indica que tu modelo tiene precisión moderada a través de este rango. Esta es una métrica clave comúnmente utilizada para el conjunto de datos COCO.
+   - Esta puntuación es la precisión promedio del modelo a través de un rango de umbrales IoU desde 0.50 hasta 0.95, incrementado en 0.05. Un AP de 0.450 indica que tu modelo tiene una precisión moderada a través de este rango. Esta es una métrica clave comúnmente utilizada para el conjunto de datos COCO.
 
 2. **AP@[IoU=0.50 | area=all | maxDets=100] = 0.929**
-   - En un umbral IoU de 0.50, el modelo logra una alta precisión promedio de 0.929, sugiriendo que detecta objetos muy precisamente bajo un criterio de coincidencia más permisivo.
+   - Con un umbral IoU de 0.50, el modelo logra una alta precisión promedio de 0.929, sugiriendo que detecta objetos muy precisamente bajo un criterio de coincidencia más permisivo.
 
 3. **AP@[IoU=0.75 | area=all | maxDets=100] = 0.361**
-   - Con un umbral de IoU más estricto de 0.75, la precisión promedio del modelo cae a 0.361, indicando una disminución en el rendimiento bajo criterios de coincidencia más estrictos.
+   - Con un umbral IoU más estricto de 0.75, la precisión promedio del modelo baja a 0.361, indicando una disminución en el rendimiento bajo criterios de coincidencia más estrictos.
 
 4. **AP@[IoU=0.50:0.95 | area=small/medium/large | maxDets=100]**
-   - Las puntuaciones AP varían para objetos de diferentes tamaños. Sin embargo, el AP para objetos pequeños es -1.000, lo que podría indicar una falta de datos de evaluación para objetos pequeños o un rendimiento deficiente del modelo en la detección de objetos pequeños. Las puntuaciones AP para objetos medianos y grandes son 0.474 y 0.456, respectivamente, sugiriendo que el modelo detecta objetos medianos y grandes relativamente mejor.
+   - Las puntuaciones AP varían para objetos de diferentes tamaños. Sin embargo, el AP para objetos pequeños es -1.000, lo que podría indicar una falta de datos de evaluación para objetos pequeños o un rendimiento pobre del modelo en la detección de objetos pequeños. Las puntuaciones AP para objetos medianos y grandes son 0.474 y 0.456, respectivamente, sugiriendo que el modelo detecta objetos medianos y grandes relativamente mejor.
 
 5. **AR@[IoU=0.50:0.95 | area=all | maxDets=1/10/100]**
-   - Las tasas de recuperación promedio para diferentes valores de `maxDets` son bastante consistentes, variando de 0.515 a 0.529, indicando que el modelo recupera de manera confiable la mayoría de las instancias verdaderas positivas.
+   - Las tasas de recuperación promedio para diferentes valores de `maxDets` son bastante consistentes, variando desde 0.515 hasta 0.529, indicando que el modelo recupera de manera confiable la mayoría de las instancias verdaderas positivas.
 
 6. **FPS: 128.350449 fram/s**
-   - El modelo procesa imágenes a una velocidad muy rápida de aproximadamente 128.35 fotogramas por segundo durante la inferencia, indicando potencial para aplicaciones en tiempo real o casi en tiempo real.
+   - El modelo procesa imágenes a una velocidad muy rápida de aproximadamente 128.35 cuadros por segundo durante la inferencia, indicando potencial para aplicaciones en tiempo real o casi en tiempo real.
 
-En general, el modelo funciona excelentemente con un IoU de 0.50 y moderadamente con un IoU de 0.75. Funciona mejor en la detección de objetos medianos y grandes pero puede tener problemas detectando objetos pequeños. Además, el modelo infiere a alta velocidad, haciéndolo adecuado para escenarios que requieren procesamiento rápido. Si detectar objetos pequeños es crítico en una aplicación, podríamos necesitar optimizar más el modelo o recopilar más datos de objetos pequeños para mejorar el rendimiento.
+En general, el modelo se desempeña excelentemente con un IoU de 0.50 y moderadamente con un IoU de 0.75. Se desempeña mejor en la detección de objetos medianos y grandes pero puede tener problemas detectando objetos pequeños. Además, el modelo infiere a alta velocidad, haciéndolo adecuado para escenarios que requieren procesamiento rápido. Si detectar objetos pequeños es crítico en una aplicación, podríamos necesitar optimizar más el modelo o recopilar más datos de objetos pequeños para mejorar el rendimiento.
 
 ### Paso 6. Descargar el archivo del modelo exportado
 
 Después de la sección **Export the model**, obtendrás los archivos del modelo en varios formatos, que se almacenarán en la carpeta ModelAssistant por defecto. En este tutorial, el directorio almacenado es **Gesture_Detection_Swift_YOLO_192**.
 
 :::tip
-A veces Google Colab no actualiza automáticamente el contenido de una carpeta. En este caso, es posible que necesites actualizar el directorio de archivos haciendo clic en el ícono de actualización en la esquina superior izquierda.
+A veces Google Colab no actualiza automáticamente el contenido de una carpeta. En este caso puede que necesites actualizar el directorio de archivos haciendo clic en el ícono de actualización en la esquina superior izquierda.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/39.png" style={{width:500, height:'auto'}}/></div>
 
@@ -480,25 +479,24 @@ En el directorio anterior, los archivos del modelo **.tflite** están disponible
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/38.png" style={{width:400, height:'auto'}}/></div>
 
-Una vez que hayas encontrado los archivos del modelo, por favor descárgalos localmente a tu computadora lo antes posible, ¡Google Colab puede vaciar tu directorio de almacenamiento si permaneces inactivo por mucho tiempo!
+Una vez que hayas encontrado los archivos del modelo, por favor descárgalos localmente a tu computadora tan pronto como sea posible, ¡Google Colab puede vaciar tu directorio de almacenamiento si permaneces inactivo por mucho tiempo!
 
-Así que con los pasos realizados aquí, hemos exportado exitosamente archivos de modelo que pueden ser soportados por Grove Vision AI V2, ahora vamos a desplegar el modelo en el dispositivo.
+Así que con los pasos realizados aquí, hemos exportado exitosamente archivos de modelo que pueden ser soportados por Grove Vision AI V2, a continuación vamos a desplegar el modelo al dispositivo.
 
+## Subir modelos a través del Asistente de Modelos SenseCraft
 
-## Subir modelos a través de SenseCraft Model Assistant
+### Paso 7. Subir modelo personalizado al Grove Vision AI V2
 
-### Paso 7. Subir modelo personalizado a Grove Vision AI V2
-
-A continuación, llegamos a la página Model Assistant.
+A continuación, llegamos a la página del Asistente de Modelos.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Model Assistant 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Asistente de Modelos 🖱️</font></span></strong>
     </a>
 </div>
 <br></br>
 
-Por favor conecta el dispositivo después de seleccionar Grove Vision AI V2 y luego selecciona **Upload Custom AI Model** en la parte inferior de la página.
+Por favor conecta el dispositivo después de seleccionar Grove Vision AI V2 y luego selecciona **Subir Modelo de IA Personalizado** en la parte inferior de la página.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/40.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -508,26 +506,26 @@ Luego necesitarás preparar el nombre del modelo, el archivo del modelo y las et
 
 **Si estás descargando el conjunto de datos de Roboflow directamente**
 
-Si descargaste el conjunto de datos de Roboflow directamente, entonces puedes ver las diferentes categorías y su orden en la página Health Check. Solo instala el orden ingresado aquí.
+Si descargaste el conjunto de datos de Roboflow directamente, entonces puedes ver las diferentes categorías y su orden en la página de Verificación de Estado. Solo sigue el orden ingresado aquí.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/42.png" style={{width:1000, height:'auto'}}/></div>
 
 
 :::tip
-No necesitas llenar los números en **ID:Object**, solo llena el nombre de la categoría directamente, los números y dos puntos delante de las categorías en la imagen se agregan automáticamente.
+No necesitas llenar los números en **ID:Objeto**, solo llena el nombre de la categoría directamente, los números y dos puntos delante de las categorías en la imagen se añaden automáticamente.
 :::
 
 **Si estás usando un conjunto de datos personalizado**
 
-Si estás usando un conjunto de datos personalizado, entonces puedes ver las diferentes categorías y su orden en la página Health Check. Solo instala el orden ingresado aquí.
+Si estás usando un conjunto de datos personalizado, entonces puedes ver las diferentes categorías y su orden en la página de Verificación de Estado. Solo sigue el orden ingresado aquí.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/43.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-No necesitas llenar los números en **ID:Object**, solo llena el nombre de la categoría directamente, los números y dos puntos delante de las categorías en la imagen se agregan automáticamente.
+No necesitas llenar los números en **ID:Objeto**, solo llena el nombre de la categoría directamente, los números y dos puntos delante de las categorías en la imagen se añaden automáticamente.
 :::
 
-Luego haz clic en Send Model en la esquina inferior derecha. Esto puede tomar aproximadamente 3 a 5 minutos. Si todo va bien, entonces puedes ver los resultados de tu modelo en las ventanas Model Name y Preview arriba.
+Luego haz clic en Enviar Modelo en la esquina inferior derecha. Esto puede tomar alrededor de 3 a 5 minutos aproximadamente. Si todo va bien, entonces puedes ver los resultados de tu modelo en las ventanas de Nombre del Modelo y Vista Previa arriba.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai_v2_train_model/44.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -538,7 +536,7 @@ Habiendo llegado hasta aquí, felicitaciones, has sido capaz de entrenar y despl
 
 Durante el proceso de subir un modelo personalizado, además de los archivos del modelo que podemos visualizar siendo subidos, también está el firmware del dispositivo que necesita ser transferido al dispositivo. En el firmware del dispositivo, hay un conjunto de protocolos de comunicación establecidos que especifican el formato de salida de los resultados del modelo, y lo que el usuario puede hacer con los modelos.
 
-Debido a problemas de espacio, no estaremos expandiendo los detalles específicos de estos protocolos en esta wiki, detallaremos esta sección a través de documentación en Github. Si estás interesado en desarrollo más profundo, por favor ve aquí.
+Debido a problemas de espacio, no expandiremos los detalles específicos de estos protocolos en este wiki, detallaremos esta sección a través de documentación en Github. Si estás interesado en desarrollo más profundo, por favor ve aquí.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md" target="_blank" rel="noopener noreferrer">
@@ -556,41 +554,31 @@ Si quieres continuar usando dispositivos Arduino como el XIAO para realizar tus 
 </div>
 <br></br>
 
-Si eres principiante y quieres construir rápidamente tu propio modelo, por favor consulta el ejemplo de entrenamiento de modelo SenseCraft AI aquí.
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>Entrenamiento SenseCraft</font></span></strong>
-    </a>
-</div>
-<br></br>
-
-
 ## Solución de problemas
 
-### 1. ¿Qué pasa si sigo los pasos y termino con resultados del modelo menos que satisfactorios?
+### 1. ¿Qué pasa si sigo los pasos y obtengo resultados del modelo menos que satisfactorios?
 
-Si la precisión de reconocimiento de tu modelo es insatisfactoria, podrías diagnosticar y mejorarla considerando los siguientes aspectos:
+Si la precisión de reconocimiento de tu modelo no es satisfactoria, podrías diagnosticar y mejorarlo considerando los siguientes aspectos:
 
 1. **Calidad y Cantidad de Datos**
    - **Problema**: El conjunto de datos podría ser demasiado pequeño o carecer de diversidad, o podría haber inexactitudes en las anotaciones.
-   - **Solución**: Aumenta el tamaño y diversidad de los datos de entrenamiento, y realiza limpieza de datos para corregir cualquier error de anotación.
+   - **Solución**: Aumenta el tamaño y la diversidad de los datos de entrenamiento, y realiza limpieza de datos para corregir cualquier error de anotación.
 
 2. **Proceso de Entrenamiento**
    - **Problema**: El tiempo de entrenamiento podría ser insuficiente, o la tasa de aprendizaje podría estar configurada incorrectamente, impidiendo que el modelo aprenda efectivamente.
-   - **Solución**: Aumenta el número de épocas de entrenamiento, ajusta la tasa de aprendizaje y otros hiperparámetros, e implementa parada temprana para evitar sobreajuste.
+   - **Solución**: Aumenta el número de épocas de entrenamiento, ajusta la tasa de aprendizaje y otros hiperparámetros, e implementa parada temprana para evitar el sobreajuste.
 
 3. **Desequilibrio de Clases**
-   - **Problema**: Algunas clases tienen significativamente más muestras que otras, llevando a sesgo del modelo hacia la clase mayoritaria.
+   - **Problema**: Algunas clases tienen significativamente más muestras que otras, llevando a un sesgo del modelo hacia la clase mayoritaria.
    - **Solución**: Usa pesos de clase, sobremuestrea las clases minoritarias, o submuestrea las clases mayoritarias para equilibrar los datos.
 
-Al analizar exhaustivamente e implementar mejoras dirigidas, puedes mejorar progresivamente la precisión de tu modelo. Recuerda usar un conjunto de validación para probar el rendimiento del modelo después de cada modificación para asegurar la efectividad de tus mejoras.
+Al analizar exhaustivamente e implementar mejoras específicas, puedes mejorar progresivamente la precisión de tu modelo. Recuerda usar un conjunto de validación para probar el rendimiento del modelo después de cada modificación para asegurar la efectividad de tus mejoras.
 
 ### 2. ¿Por qué veo el mensaje **Invoke failed** en el despliegue de SenseCraft después de seguir los pasos en la Wiki?
 
-Si encuentras un Invoke failed, entonces has entrenado un modelo que no cumple con los requisitos para uso con el dispositivo. Por favor enfócate en las siguientes áreas.
+Si encuentras un Invoke failed, entonces has entrenado un modelo que no cumple con los requisitos para usar con el dispositivo. Por favor enfócate en las siguientes áreas.
 
-1. Por favor verifica si has modificado el tamaño de imagen de Colab. El tamaño de compresión por defecto es **192x192**, Grove Vision AI V2 requiere que el tamaño de imagen sea comprimido como cuadrado, por favor no uses tamaño no cuadrado para compresión. También no uses tamaño demasiado grande *(no se recomienda más de 240x240)*.
+1. Por favor verifica si has modificado el tamaño de imagen de Colab. El tamaño de compresión predeterminado es **192x192**, Grove Vision AI V2 requiere que el tamaño de imagen sea comprimido como cuadrado, por favor no uses tamaño no cuadrado para compresión. Tampoco uses tamaño demasiado grande *(no se recomienda más de 240x240)*.
 
 2. El archivo del modelo para Grove Vision AI V2 debe tener el sufijo **int8_vela.tflite**. Por favor no uses archivos de modelo en otros formatos. Esto incluye **int8.tflite, que tampoco está disponible** para Grove Vision AI V2.
 

@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 12/25/2025
-  author: Janet
+  date: 12/11/2025
+  author: Michelle Huang
 ---
 # Introducción a SenseCAP ONE Sensor Meteorológico Compacto
 
@@ -305,6 +305,8 @@ La temperatura necesita ser obtenida a través de un cálculo de complemento.
 
 5. Entonces la medición de temperatura es -1000/1000 = -1°
 
+
+
 **Decodificación S500**
 
 Lee el registro 0x0000~0x0005.
@@ -512,11 +514,4 @@ Luego envíe "comando de medición continua 0R2! el dispositivo devuelve 4 valor
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
 
 ## Recurso
-
 [Guía de Usuario de la Estación Meteorológica Compacta SenseCAP ONE/SenseCAP ONE V3](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
-
-## Preguntas frecuentes (FAQ)
-
-**¿Cómo se calcula la velocidad y la dirección media del viento?**
-
-El intervalo de tiempo promedio predeterminado es de 5 segundos. Dentro de este intervalo, el dispositivo recopila los datos de velocidad y dirección del viento cinco veces y devuelve un valor promedio.

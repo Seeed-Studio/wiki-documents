@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction
 last_update:
-  date: 12/25/2025
-  author: Janet
+  date: 3/24/2023
+  author: Yvonne
 ---
 
 # SenseCAP S2120 8-in-1 LoRaWAN 気象センサー
@@ -25,27 +25,26 @@ Helium Network: センサーはHelium Networkでカバーされているエリ�
 
 LoRaWAN Network: センサーはThe Things Network、Loriot、ChirpstackなどのLoRaWAN®ネットワークで動作します。[SenseCAP Outdoor Gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html)と[SenseCAP M2 Multiplatform Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html)をご確認ください。
 
-:::tip **注意**
-最新のファームウェアバージョンは `v2.1` です。データ報告の安定性が大幅に向上するため、SenseCraft アプリでデバイスを最新のファームウェアにアップデートすることを強くおすすめします。
-:::
-
 # アプリケーション
 
-- 裏庭と庭園: 裏庭と庭園で気温と湿度、降雨量、UV指数などを測定し、ご家族を守ります。
+-   裏庭と庭園: 裏庭と庭園で気温と湿度、降雨量、UV指数などを測定し、ご家族を守ります。
 
-- スマート農業: 農家が気候データと情報をタイムリーに取得し、科学的な管理措置を生産に取り入れ、農業生産能力とレベルを向上させることを可能にします。
+-   スマート農業: 農家が気候データと情報をタイムリーに取得し、科学的な管理措置を生産に取り入れ、農業生産能力とレベルを向上させることを可能にします。
 
-- 気象学: 専門的な気象分野でのアプリケーションをサポートし、例えば、交通・運輸分野における様々な異常気象条件の変化をタイムリーに反映し、交通管理部門にリアルタイムの科学的根拠データを提供します。
+-   気象学: 専門的な気象分野でのアプリケーションをサポートし、例えば、交通・運輸分野における様々な異常気象条件の変化をタイムリーに反映し、交通管理部門にリアルタイムの科学的根拠データを提供します。
 
-- 都市気象: 都市広場、公園、景勝地、ゴルフコース、その他の都市エリアにリアルタイムデータを提供します。
+-   都市気象: 都市広場、公園、景勝地、ゴルフコース、その他の都市エリアにリアルタイムデータを提供します。
 
 # ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3232.png)
+
 
 # **フィールド展開**
 
 ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3252.png)
 
 写真提供: Ted Urbaniak, Mapping Network, Nibiaa
+
+# 
 
 # 仕様
 

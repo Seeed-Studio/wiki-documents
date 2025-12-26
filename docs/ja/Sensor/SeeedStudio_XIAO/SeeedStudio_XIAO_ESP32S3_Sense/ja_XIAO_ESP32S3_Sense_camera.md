@@ -1,6 +1,6 @@
 ---
-description: このチュートリアルでは、XIAO ESP32S3 Sense のカメラを適切に使用する方法について説明します。
-title: Sense バージョンのカメラ使用方法
+description: このチュートリアルでは、XIAO ESP32S3 Senseのカメラを適切に使用する方法について説明します。
+title: Senseバージョンのカメラ使用方法
 keywords:
 - xiao esp32s3
 - esp32s3
@@ -12,13 +12,13 @@ last_update:
   author: Citric
 ---
 
-# Seeed Studio XIAO ESP32S3 Sense でのカメラ使用方法
+# Seeed Studio XIAO ESP32S3 Senseでのカメラ使用方法
 
 :::tip
-このチュートリアルの内容は、Seeed Studio XIAO ESP32S3 Sense にのみ適用されます。
+このチュートリアルの内容は、Seeed Studio XIAO ESP32S3 Senseにのみ適用されます。
 :::
 
-このチュートリアルでは、XIAO ESP32S3 Sense のカメラモジュールの使用方法について説明します。このチュートリアルは以下の部分に分かれており、まず ESP32 が提供するカメラ機能とその機能について説明します。次に、写真撮影と動画録画の2つの側面からカメラの使用方法をご紹介し、最後に写真撮影と動画録画を中心とした興味深いプロジェクトを作成します。
+このチュートリアルでは、XIAO ESP32S3 Senseのカメラモジュールの使用方法について説明します。このチュートリアルは以下の部分に分かれています。まず、ESP32が提供するカメラ機能とその機能について説明します。次に、写真撮影と動画録画の2つの側面からカメラの使用方法をご紹介し、最後に写真撮影と動画録画を中心とした興味深いプロジェクトを作成します。
 
 <div class="table-center">
   <table align="center">
@@ -31,70 +31,70 @@ last_update:
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## 入門ガイド
+## はじめに
 
-このチュートリアルでは、microSD カード、カメラ、アンテナなどの使用が含まれる場合があります。以下の材料を準備し、プロジェクトのニーズに応じて正しく取り付けてください。
+このチュートリアルでは、microSDカード、カメラ、アンテナなどの使用が含まれる場合があります。以下の材料を準備し、プロジェクトのニーズに応じて正しくインストールしてください。
 
 #### アンテナの取り付け
 
-XIAO ESP32S3 の前面左下に、独立した「WiFi/BT アンテナコネクタ」があります。より良い WiFi/Bluetooth 信号を得るために、パッケージ内のアンテナを取り出してコネクタに取り付ける必要があります。
+XIAO ESP32S3の前面左下に、独立した「WiFi/BTアンテナコネクタ」があります。より良いWiFi/Bluetoothシグナルを得るために、パッケージ内のアンテナを取り出してコネクタに取り付ける必要があります。
 
-アンテナの取り付けには少しコツがあります。直接強く押し込もうとすると、非常に押しにくく、指が痛くなります！正しいアンテナの取り付け方法は、まずアンテナコネクタの片側をコネクタブロックに入れ、次に反対側を少し押し下げると、アンテナが取り付けられます。
+アンテナの取り付けには少しコツがあります。直接強く押し込もうとすると、非常に押しにくく、指が痛くなることがあります！正しいアンテナの取り付け方法は、まずアンテナコネクタの片側をコネクタブロックに入れ、次に反対側を少し押し下げると、アンテナが取り付けられます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:500, height:'auto'}}/></div>
 
-### 拡張ボードの取り付け（Sense 用）
+### 拡張ボードの取り付け（Sense用）
 
-拡張ボードの取り付けは非常に簡単です。拡張ボードのコネクタを XIAO ESP32S3 の B2B コネクタに合わせ、強く押して「カチッ」という音が聞こえれば、取り付け完了です。
+拡張ボードの取り付けは非常に簡単です。拡張ボードのコネクタをXIAO ESP32S3のB2Bコネクタに合わせ、強く押して「カチッ」という音が聞こえれば、取り付け完了です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
-現在、XIAO ESP32S3 Sense と完全に互換性のある強力な新しいカメラ OV5640 を販売しており、購入された場合はカメラを交換して使用することができます。
+現在、XIAO ESP32S3 Senseと完全に互換性のある強力な新しいカメラ、OV5640を販売しており、購入された場合はカメラを交換して使用できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
     </a>
 </div>
 
-ov5640 の詳細なパラメータ情報が必要な場合は、以下のチャートを参照してください。
+OV5640の詳細なパラメータ情報が必要な場合は、以下のチャートを参照してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/datasheet.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-Wiki のカメラに関するすべてのプログラムは、OV5640 と OV2640 の両方のカメラと互換性があります。
+Wikiのカメラに関するすべてのプログラムは、OV5640とOV2640の両方のカメラと互換性があります。
 :::
 
-### microSD カードの準備
+### microSDカードの準備
 
-XIAO ESP32S3 Sense は最大 **32GB** の microSD カードをサポートしているため、XIAO 用の microSD カードを購入する予定の場合は、この仕様を参照してください。microSD カードを使用する前に、microSD カードを **FAT32** 形式でフォーマットしてください。
+XIAO ESP32S3 Senseは最大**32GB**のmicroSDカードをサポートしているため、XIAOのためにmicroSDカードを購入する予定の場合は、この仕様を参照してください。microSDカードを使用する前に、microSDカードを**FAT32**形式でフォーマットしてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/67.png" style={{width:250, height:'auto'}}/></div>
 
-フォーマット後、microSD カードを microSD カードスロットに挿入できます。挿入方向に注意してください。金色の接点がある面を内側に向けてください。
+フォーマット後、microSDカードをmicroSDカードスロットに挿入できます。挿入方向に注意してください。金色の接点がある面を内側に向けてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
 ### 拡張ボード用カメラスロット回路設計
 
-XIAO ESP32S3 Sense カードスロットは ESP32-S3 の 14 個の GPIO を占有しており、占有するピンの詳細は以下の表に示されています。
+XIAO ESP32S3 Senseカードスロットは、ESP32-S3の14個のGPIOを占有し、占有するピンの詳細は以下の表に示されています。
 
 <div class="table-center">
     <table align="center">
         <tr>
             <th align="center">ESP32-S3 GPIO</th>
-            <th align="center">カメラ</th>
+            <th align="center">Camera</th>
             <th align="center">ESP32-S3 GPIO</th>
-            <th align="center">カメラ</th>
+            <th align="center">Camera</th>
         </tr>
         <tr>
             <td align="center">GPIO10</td>
@@ -141,29 +141,29 @@ XIAO ESP32S3 Sense カードスロットは ESP32-S3 の 14 個の GPIO を占�
     </table>
 </div>
 
-### PSRAM オプションを有効にする
+### PSRAMオプションを有効にする
 
-ESP32 の PSRAM は、ESP32 チップ上の外部 PSRAM（疑似静的ランダムアクセスメモリ）を指し、ESP32 システムの利用可能メモリを増やすための追加メモリ空間を提供します。ESP32 システムにおいて、PSRAM には以下の主な用途があります：
+ESP32のPSRAMは、ESP32チップ上の外部PSRAM（Pseudo Static Random Access Memory）を指し、追加のメモリ空間を提供してESP32システムの利用可能メモリを増加させます。ESP32システムにおいて、PSRAMには以下の主な用途があります：
 
-1. 利用可能 RAM の拡張：ESP32 の内蔵 RAM は限られており、特に画像処理、音声処理など大量のメモリを必要とするアプリケーションでは、内蔵 RAM では不十分な場合があります。PSRAM を使用することで、ESP32 の利用可能 RAM を拡張し、これらのアプリケーションのニーズを満たすことができます。
+1. 利用可能RAMの拡張：ESP32の内蔵RAMは限られており、特に画像処理、音声処理など大量のメモリを必要とするアプリケーションでは、内蔵RAMでは不十分な場合があります。PSRAMを使用することで、ESP32の利用可能RAMを拡張し、これらのアプリケーションのニーズを満たすことができます。
 
-2. メモリアクセスの高速化：PSRAM は外部メモリであるため、アクセス速度は内部 RAM よりも遅くなりますが、キャッシュや一時メモリとして使用してメモリアクセスとデータ処理を高速化できます。
+2. メモリアクセスの高速化：PSRAMは外部メモリであるため、アクセス速度は内部RAMより遅くなりますが、キャッシュや一時メモリとして使用することで、メモリアクセスとデータ処理を高速化できます。
 
-3. ストレージバッファ：ネットワークバッファ、オーディオバッファなど、大きなバッファを必要とするアプリケーションでは、PSRAM が十分なストレージ空間を提供し、メモリ不足の状況を回避できます。
+3. ストレージバッファ：ネットワークバッファ、オーディオバッファなど大きなバッファを必要とするアプリケーションでは、PSRAMが十分なストレージ空間を提供し、メモリ不足の状況を回避できます。
 
-このチュートリアルの内容については、カメラが正常に動作するように Arduino IDE の **PSRAM 機能を有効にする必要があります**。
+このチュートリアルの内容では、カメラが正常に動作することを保証するために、Arduino IDEの**PSRAM機能を有効にする必要があります**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/94.png" style={{width:700, height:'auto'}}/></div>
 
-## カメラライブラリ概要
+## カメラライブラリの概要
 
-開始する前に、この章を読んで一般的なカメラ機能を理解することをお勧めします。これにより、これらの機能を使用して独自のプロジェクト開発を完了したり、プログラムをより簡単に読むことができるようになります。
+開始する前に、一般的なカメラ機能を理解するためにこの章を読むことをお勧めします。これにより、これらの機能を使用して独自のプロジェクト開発を完了したり、プログラムをより簡単に読むことができるようになります。
 
-### パート I：esp_camera.h
+### パート I: esp_camera.h
 
 1. カメラ初期化用の設定構造体。
 
-以下は設定の例です。実際のピン状況に応じて記入してください。
+以下は設定の例で、実際のピン状況に応じて記入してください。
 
 ```cpp
 static camera_config_t camera_example_config = {
@@ -194,23 +194,23 @@ static camera_config_t camera_example_config = {
     };
 ```
 
-2. カメラドライバの初期化。
+2. カメラドライバーを初期化します。
 
-上記の形式で `camera_example_config` を設定した後、この関数を使用してカメラドライバを初期化する必要があります。
+上記の形式で `camera_example_config` を設定した後、この関数を使用してカメラドライバーを初期化する必要があります。
 
 ```cpp
 esp_err_t esp_camera_init(const camera_config_t* config);
 ```
 
-- **入力パラメータ**：カメラ設定パラメータ
+- **入力パラメータ**: カメラ設定パラメータ
 
-- **出力**：成功時は ESP_OK
+- **出力**: 成功時にESP_OK
 
 :::note
-現在、この関数は一度だけ呼び出すことができ、このモジュールを非初期化する方法はありません。
+現在、この関数は一度だけ呼び出すことができ、このモジュールを初期化解除する方法はありません。
 :::
 
-3. フレームバッファへのポインタを取得。
+3. フレームバッファへのポインタを取得します。
 
 ```cpp
 camera_fb_t* esp_camera_fb_get();
@@ -229,7 +229,7 @@ typedef struct {
 } camera_fb_t;
 ```
 
-4. フレームバッファを再利用のために返却します。
+4. フレームバッファを再利用のために返却する。
 
 ```cpp
 void esp_camera_fb_return(camera_fb_t * fb);
@@ -237,7 +237,7 @@ void esp_camera_fb_return(camera_fb_t * fb);
 
 - **入力パラメータ**: フレームバッファへのポインタ
 
-5. イメージセンサー制御構造体へのポインタを取得します。
+5. 画像センサー制御構造体へのポインタを取得します。
 
 ```cpp
 sensor_t * esp_camera_sensor_get();
@@ -251,7 +251,7 @@ sensor_t * esp_camera_sensor_get();
 esp_err_t esp_camera_save_to_nvs(const char *key);
 ```
 
-- **入力パラメータ**: カメラ設定用の一意のNVSキー名
+- **入力パラメータ**: カメラ設定用の一意のnvsキー名
 
 7. 不揮発性ストレージ（NVS）からカメラ設定を読み込みます。
 
@@ -259,11 +259,11 @@ esp_err_t esp_camera_save_to_nvs(const char *key);
 esp_err_t esp_camera_load_from_nvs(const char *key);
 ```
 
-- **入力パラメータ**: カメラ設定用の一意のNVSキー名
+- **入力パラメータ**: カメラ設定用の一意のnvsキー名
 
 ### パート II: img_converters.h
 
-1. 画像バッファをJPEGに変換します。
+1. 画像バッファをJPEGに変換する。
 
 ```cpp
 bool fmt2jpg_cb(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixformat_t format, uint8_t quality, jpg_out_cb cb, void * arg);
@@ -308,8 +308,8 @@ bool fmt2jpg(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixf
   - **height**:    ソース画像の高さ（ピクセル単位）
   - **format**:    ソース画像の形式
   - **quality**:   結果画像のJPEG品質
-  - **out**:       結果バッファのアドレスで設定されるポインタ。使用後は必ずポインタを解放してください。
-  - **out_len**:   出力バッファの長さで設定されるポインタ
+  - **out**:       結果バッファのアドレスを格納するポインタ。使用後は必ずポインタを解放してください。
+  - **out_len**:   出力バッファの長さを格納するポインタ
 
 - **出力**: 成功時にtrue
 
@@ -340,8 +340,8 @@ bool fmt2bmp(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixf
   - **height**:    ソース画像の高さ（ピクセル単位）
   - **format**:    ソース画像の形式
   - **quality**:   結果画像のJPEG品質
-  - **out**:       結果バッファのアドレスで設定されるポインタ
-  - **out_len**:   出力バッファの長さで設定されるポインタ
+  - **out**:       結果バッファのアドレスを格納するポインタ
+  - **out_len**:   出力バッファの長さを格納するポインタ
 
 - **出力**: 成功時にtrue
 
@@ -362,7 +362,7 @@ bool frame2bmp(camera_fb_t * fb, uint8_t ** out, size_t * out_len);
 ### パート III: app_httpd.cpp
 
 :::note
-このライブラリ紹介の部分は、「動画保存端末の作成 -- WebServerベース」セクションに基づいています。このライブラリは主にWebサーバー用の画像取得と顔認識機能を実行するために使用されます。ESPのオンボードパッケージには直接含まれていません。
+このライブラリ紹介の部分は、動画保存端末の作成 -- Based WebServerセクションに基づいています。このライブラリは主にWebサーバーの画像取得と顔認識機能を実行するために使用されます。ESP のオンボードパッケージには直接含まれていません。
 :::
 
 1. 顔認識機能。
@@ -372,8 +372,8 @@ static int run_face_recognition(fb_data_t *fb, std::list<dl::detect::result_t> *
 ```
 
 - **入力パラメータ**:
-  - **fb**: 画像データを含むフレームバッファを表す構造体へのポインタ
-  - **results**: 検出された顔の結果リストへのポインタ
+  - **fb**: 画像データを含むフレームバッファを表す構造体へのポインタ。
+  - **results**: 検出された顔の結果のリストへのポインタ。
 
 2. BMP画像ファイルのHTTPリクエストを処理します。
 
@@ -381,19 +381,19 @@ static int run_face_recognition(fb_data_t *fb, std::list<dl::detect::result_t> *
 static esp_err_t bmp_handler(httpd_req_t *req)
 ```
 
-- **入力パラメータ**: HTTPリクエストを表す構造体へのポインタ
+- **入力パラメータ**: HTTP リクエストを表す構造体へのポインタ。
 
-3. JPEG画像データをストリーミング方式でエンコードします。
+3. JPEG 画像データをストリーミング方式でエンコードします。
 
 ```cpp
 static size_t jpg_encode_stream(void *arg, size_t index, const void *data, size_t len)
 ```
 
 - **入力パラメータ**:
-  - **arg**: 関数に渡されるユーザー定義引数へのポインタ
-  - **index**: 画像データ内の現在位置を示すインデックス値
-  - **data**: エンコードする画像データを含むバッファへのポインタ
-  - **len**: データバッファの長さ
+  - **arg**: 関数に渡されるユーザー定義引数へのポインタ。
+  - **index**: 画像データ内の現在位置を示すインデックス値。
+  - **data**: エンコードされる画像データを含むバッファへのポインタ。
+  - **len**: データバッファの長さ。
 
 4. カメラからの画像キャプチャとストリーミングのHTTPリクエストを処理します。
 
@@ -401,17 +401,17 @@ static size_t jpg_encode_stream(void *arg, size_t index, const void *data, size_
 static esp_err_t capture_handler(httpd_req_t *req)
 ```
 
-- **入力パラメータ**: HTTPリクエストを表す構造体へのポインタ
+- **入力パラメータ**: HTTP リクエストを表す構造体へのポインタ。
 
-5. カメラからの動画ストリーミングのHTTPリクエストを処理します。
+5. カメラからのストリーミング動画の HTTP リクエストを処理します。
 
 ```cpp
 static esp_err_t stream_handler(httpd_req_t *req)
 ```
 
-- **入力パラメータ**: HTTPリクエストを表す構造体へのポインタ
+- **入力パラメータ**: HTTP リクエストを表す構造体へのポインタ。
 
-6. HTTP経由で動画をキャプチャしてストリーミングするカメラサーバーを初期化して開始します。
+6. ビデオをキャプチャして HTTP 経由でストリーミングするカメラサーバーを初期化して開始します。
 
 ```cpp
 void startCameraServer()
@@ -419,21 +419,21 @@ void startCameraServer()
 
 ## カメラで写真を撮る
 
-次に、カメラの最も基本的な使用方法から始めます。例えば、まずカメラを使用して画像取得を完了します。最初のプロジェクトではmicroSDカードを使用し、このプログラムの主なタスクは1分ごとにカメラ映像を取得し、その映像をmicroSDカードに保存することです。
+次に、カメラの最も基本的な使用方法から始めます。例えば、まずカメラを使用して画像取得を完了します。最初のプロジェクトではmicroSDカードを使用し、このプログラムの主なタスクは毎分カメラの映像を取得し、その映像をmicroSDカードに保存することです。
 
-開始する前に、私がしたようにmicroSDカードとカメラを取り付けてください。
+開始する前に、私が行ったようにmicroSDカードとカメラを取り付けてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/91.jpg" style={{width:300, height:'auto'}}/></div>
 
-完全なプログラムコードと必要な依存ファイルは、以下のリンクで見つけることができます。
+以下のリンクから完全なプログラムコードと必要な依存ファイルを見つけることができます。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/take_photos" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> コードをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-このプロジェクトのArduinoプログラムは以下の通りです。
+以下がこのプロジェクトのArduinoプログラムです。
 
 ```cpp
 #include "esp_camera.h"
@@ -460,7 +460,7 @@ void photo_save(const char * fileName) {
   }
   // Save photo to file
   writeFile(SD, fileName, fb->buf, fb->len);
-
+  
   // Release image buffer
   esp_camera_fb_return(fb);
 
@@ -514,7 +514,7 @@ void setup() {
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-
+  
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
   if(config.pixel_format == PIXFORMAT_JPEG){
@@ -541,7 +541,7 @@ void setup() {
     Serial.printf("Camera init failed with error 0x%x", err);
     return;
   }
-
+  
   camera_sign = true; // Camera initialization check passes
 
   // Initialize SD card
@@ -578,7 +578,7 @@ void loop() {
   if(camera_sign && sd_sign){
     // Get the current time
     unsigned long now = millis();
-
+  
     //If it has been more than 1 minute since the last shot, take a picture and save it to the SD card
     if ((now - lastCaptureTime) >= 60000) {
       char filename[32];
@@ -597,15 +597,15 @@ void loop() {
 このプログラムのコンパイルとアップロードには他に2つの依存関係が必要です。GitHubにアクセスして完全にダウンロードしてください。
 :::
 
-XIAO ESP32S3用のプログラムをアップロードしてください。プログラムが正常にアップロードされたら、シリアルモニターを開き、撮影したいオブジェクトにカメラを向けて1分間待ってください。撮影された写真はSDカードに保存されます。その後、XIAOは1分ごとに写真を撮影します。
+XIAO ESP32S3用のプログラムをアップロードしてください。プログラムのアップロードが成功したら、シリアルモニターを開き、撮影したいオブジェクトにカメラを向けて調整し、1分間待ってください。撮影された写真はSDカードに保存されます。その後、XIAOは1分ごとに写真を撮影します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/89.png" style={{width:700, height:'auto'}}/></div>
 
-microSDカードを取り外し、カードリーダーを使用してカード内に保存された写真を確認できます。
+microSDカードを取り外し、カードリーダーを使用して、カード内に保存された写真を確認できます。
 
 ### プログラムの注釈
 
-プログラムは、使用する必要があるカメラとSDカードライブラリ、およびXIAO ESP32S3用に定義したピン依存ファイルのインポートから始まります。
+プログラムは、使用する必要があるカメラとSDカードのライブラリ、およびXIAO ESP32S3用に定義したピン依存ファイルのインポートから始まります。
 
 次に、読みやすくするために、2つの関数を順次定義します。1つは撮影した画像をSDカードに保存する関数`photo_save()`で、もう1つはファイルを書き込む関数`writeFile()`です。
 
@@ -620,7 +620,7 @@ void photo_save(const char * fileName) {
   }
   // Save photo to file
   writeFile(SD, fileName, fb->buf, fb->len);
-
+  
   // Release image buffer
   esp_camera_fb_return(fb);
 
@@ -628,19 +628,19 @@ void photo_save(const char * fileName) {
 }
 ```
 
-画像をmicroSDカードに保存する関数では、2つの主要なタスクが実行されます。1つ目は画像の取得で、2つ目はファイルを書き込む関数の呼び出しです。
+microSDカードに画像を保存する関数では、2つの主要なタスクが実行されます。1つ目は画像の取得で、2つ目はファイルを書き込む関数の呼び出しです。
 
 画像の取得は`esp_camera_fb_get()`で行うことができ、画像情報はポインタ`fb`に保存され、その後`fb`の`buf`をSDカードに書き込むことができます。
 
-`Setup()`関数では、プログラムの大部分がカメラピンの設定とカメラの初期化を行っており、デフォルトでそのまま適用できます。カメラのピクセルや品質に要求がある場合は、[カメラライブラリ概要](#camera-library-overview)の章で説明されている機能に従って内部の値を調整できます。
+`Setup()`関数では、プログラムの大部分がカメラピンの設定とカメラの初期化を行っており、デフォルトでそのまま適用できます。カメラのピクセルや品質に要件がある場合は、[Camera Library Overview](#camera-library-overview)章で説明されている機能に従って内部の値を調整できます。
 
-`loop()`関数で最後に行うことは、1分ごとに写真を撮影し、撮影した写真のファイル名サフィックスとして増分番号を使用することを制御することです。
+`loop()`関数で最後に行うことは、1分ごとに写真を撮影するように制御し、撮影した写真のファイル名サフィックスとして増分番号を付けることです。
 
 ```cpp
 if(camera_sign && sd_sign){
     // Get the current time
     unsigned long now = millis();
-
+  
     //If it has been more than 1 minute since the last shot, take a picture and save it to the SD card
     if ((now - lastCaptureTime) >= 60000) {
       char filename[32];
@@ -656,9 +656,9 @@ if(camera_sign && sd_sign){
 
 `loop()`を実行する前に、2つのフラグチェック`camera_sign`と`sd_sign`を設定します。これにより、写真の撮影と保存のタスクは、`Setup()`でカメラとSDカードのチェックが正常に実行された後に実行されることが保証されます。
 
-## プロジェクト I：ハンドヘルドカメラの製作
+## プロジェクト I: ハンドヘルドカメラの製作
 
-次に、上記の理論的知識を使用して、超小型の写真撮影デバイスを作成します。このプロジェクトの最終結果は、ライブカメラフィードがSeeed Studio Round Display for XIAOに表示され、撮影したいオブジェクトをロックしたときに、画面をタッチして写真を撮影し、microSDカードに記録することです。
+次に、上記の理論的知識を使用して、超小型の写真撮影デバイスを作成します。このプロジェクトの最終結果は、ライブカメラフィードがSeeed Studio Round Display for XIAOに表示され、撮影したいオブジェクトにロックオンしたときに、画面をタッチして写真を撮影し、microSDカードに記録することです。
 
 ### 事前準備
 
@@ -677,19 +677,19 @@ if(camera_sign && sd_sign){
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-このプロジェクトではRound Display for XIAOを使用するため、このプロジェクトのルーチンを実行する前に、**[ディスプレイ拡張ボードのWiki環境設定](https://wiki.seeedstudio.com/ja/get_start_round_display#software-preparation)**の内容を読み、必要なライブラリをインストールしてTFT環境を設定してください。
+このプロジェクトではXIAO用のRound Displayを使用するため、このプロジェクトのルーチンを実行する前に、**[ディスプレイ拡張ボードのWiki環境設定](https://wiki.seeedstudio.com/ja/get_start_round_display#software-preparation)**の内容を読み、必要なライブラリをインストールしてTFT環境を設定してください。
 
 XIAO EPS32S3 SenseはSDカードスロットに接続された3つのプルアップ抵抗R4〜R6で設計されており、ラウンドディスプレイにもプルアップ抵抗があるため、両方を同時に使用するとSDカードを読み取ることができません。この問題を解決するには、XIAO ESP32S3 Sense拡張ボードのJ3を切断する必要があります。
 
@@ -715,11 +715,11 @@ J3を切断した後、XIAO ESP32S3 SenseのSDカードスロットは正常に�
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/round_display_take_picture" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> コードをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-以下は、このプロジェクトのArduinoプログラムです。
+以下がこのプロジェクトのArduinoプログラムです。
 
 ```c
 #include <Arduino.h>
@@ -807,7 +807,7 @@ void setup() {
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-
+  
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
   if(config.pixel_format == PIXFORMAT_JPEG){
@@ -879,7 +879,7 @@ void loop() {
       Serial.println("Failed to get camera frame buffer");
       return;
     }
-
+    
     if(display_is_pressed()){
       Serial.println("display is touched");
       char filename[32];
@@ -889,7 +889,7 @@ void loop() {
       Serial.printf("Saved picture：%s\n", filename);
       imageCount++;
     }
-
+  
     // Decode JPEG images
     uint8_t* buf = fb->buf;
     uint32_t len = fb->len;
@@ -897,7 +897,7 @@ void loop() {
     tft.setAddrWindow(0, 0, camera_width, camera_height);
     tft.pushColors(buf, len);
     tft.endWrite();
-
+      
     // Release image buffer
     esp_camera_fb_return(fb);
 
@@ -906,7 +906,7 @@ void loop() {
 }
 ```
 
-プログラムをXIAO ESP32S3 Senseにアップロードします。アップロード成功後に画面が点灯しない場合は、XIAOのResetボタンをクリックする必要があるかもしれません。その後、Round Displayにリアルタイムで監視画面が表示されます。画面のどこかをクリックすると、画像が記録されmicroSDカードに保存されます。
+プログラムをXIAO ESP32S3 Senseにアップロードします。アップロードが成功した後に画面が点灯しない場合は、XIAOのリセットボタンをクリックする必要があるかもしれません。その後、Round Displayにリアルタイムで監視画面が表示されます。画面上の任意の場所をクリックすると、画像が記録されてmicroSDカードに保存されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/95.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -923,14 +923,14 @@ if (!fb) {
 }
 
 ...
-
+  
 // Release image buffer
 esp_camera_fb_return(fb);
 
 delay(10);
 ```
 
-上記のプログラムは、カメラを呼び出すための基本的なコードブロックで、画面キャプチャ、例外終了、写真バッファの解放の3つの部分に分かれています。
+上記のプログラムは、カメラを呼び出すための基本的なコードブロックであり、画面キャプチャ、例外終了、写真バッファの解放の3つの部分に分かれています。
 
 ```cpp
 if(display_is_pressed()){
@@ -944,7 +944,7 @@ if(display_is_pressed()){
 }
 ```
 
-上記のプログラムは、画面がタッチされているかどうかをチェックします。タッチされている場合、コードはキャプチャした画像をmicroSDカード上のファイルに保存します。
+上記のプログラムは、画面がタッチされているかどうかをチェックするために使用されます。タッチされている場合、コードはキャプチャした画像をmicroSDカード上のファイルに保存します。
 
 ```cpp
 // Decode JPEG images
@@ -956,27 +956,27 @@ tft.pushColors(buf, len);
 tft.endWrite();
 ```
 
-このコードの部分は、キャプチャした画像を画面に表示します。まず`camera_fb_t`構造体から画像バッファとその長さを取得します。次に、画像データを受信するように画面を設定し、`pushColors()`関数を使用して画面に画像を表示します。
+このコードの部分は、キャプチャした画像を画面に表示します。まず、`camera_fb_t`構造体から画像バッファとその長さを取得します。次に、画像データを受信するように画面を設定し、`pushColors()`関数を使用して画面に画像を表示します。
 
-## 短い動画を録画してmicroSDカードに保存
+## 短い動画を録画してmicroSDカードに保存する
 
 :::note
-現在サポートされているエンコーディングライブラリのリソースが少なすぎて、操作が非常に複雑で面倒なため、MCU上での動画エンコーディングエクスポートはお勧めしません。
+MCU上での動画エンコード出力は推奨しません。現在サポートされているエンコードライブラリのリソースが少なすぎて、操作が非常に複雑で面倒だからです。
 
-この例では動画エンコーディングは含まれておらず、エクスポートされる動画はフレームごとのAVIのMJPG合成なので、動画録画は特に良好で満足のいくものではない可能性があります。このチュートリアルの目的は、短い動画を録画するための簡単な方法とアイデアを提供することであり、より良いソリューションを持つパートナーからのPRの提出を歓迎します。
+この例では動画エンコードは含まれておらず、出力される動画はフレームごとのAVIのMJPG合成であるため、動画録画は特に良好で満足のいくものではない可能性があります。このチュートリアルの目的は、短い動画を録画するための簡単な方法とアイデアを提供することであり、より良いソリューションを持つパートナーからのPR提出を歓迎します。
 :::
 
-前の章では、カメラを使用して画像をキャプチャする方法を習得しました。単一の画像を繋ぎ合わせて動く動画画像を作ることを知っています。この理論に基づいて、この章のプロジェクトでは、1分ごとに10秒間の動画を録画してmicroSDカードに保存するプログラムの書き方をガイドします。
+前の章では、カメラを使用して画像をキャプチャする方法を習得しました。単一の画像を繋ぎ合わせて動く動画画像を作ることができることを知っています。この理論に基づいて、この章のプロジェクトでは、1分ごとに10秒間の動画を録画し、microSDカードに保存するプログラムの書き方をガイドします。
 
 以下のリンクから完全なプログラムコードと必要な依存ファイルを見つけることができます。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/record_video" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> コードをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-このプロジェクトのArduinoプログラムは以下の通りです。
+以下がこのプロジェクトのArduinoプログラムです。
 
 ```cpp
 #include "esp_camera.h"
@@ -1001,7 +1001,7 @@ int imageCount = 0;
 void setup() {
   Serial.begin(115200);
   while(!Serial);
-
+  
   // Initialize the camera
   camera_config_t config;
   config.ledc_channel = LEDC_CHANNEL_0;
@@ -1036,9 +1036,9 @@ void setup() {
     Serial.printf("Camera init failed with error 0x%x", err);
     return;
   }
-
+  
   camera_sign = true;
-
+  
   // Initialize the SD card
   if (!SD.begin(SD_PIN_CS)) {
     Serial.println("SD card initialization failed!");
@@ -1063,7 +1063,7 @@ void setup() {
   } else {
     Serial.println("UNKNOWN");
   }
-
+  
   sd_sign = true;
 
   Serial.println("Video will begin in one minute, please be ready.");
@@ -1086,7 +1086,7 @@ void loop() {
       }
       Serial.printf("Recording video：%s\n", filename);
       lastCaptureTime = now;
-
+      
       // Start capturing video frames
       while ((millis() - lastCaptureTime) < captureDuration) {
         camera_fb_t *fb = esp_camera_fb_get();
@@ -1097,7 +1097,7 @@ void loop() {
         videoFile.write(fb->buf, fb->len);
         esp_camera_fb_return(fb);
       }
-
+      
       // Close the video file
       videoFile.close();
       Serial.printf("Video saved: %s\n", filename);
@@ -1112,17 +1112,17 @@ void loop() {
 }
 ```
 
-コードをXIAO ESP32S3 Senseにアップロードし、シリアルモニターを開きます。この時、録画したいオブジェクトにカメラの位置を調整してください。1分後、XIAOのオレンジ色のLEDが点滅し始め、録画が開始されmicroSDカードに保存されます。
+コードをXIAO ESP32S3 Senseにアップロードし、シリアルモニターを開きます。この時、記録したいオブジェクトにカメラの位置を調整してください。1分後、XIAOのオレンジ色のLEDが点滅し始め、録画が開始されてmicroSDカードに保存されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/96.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
-プログラムにはエンコーディングやフレームレートなどの設定が含まれていないため、録画された映像の各フレームに変化がない場合、動画は1秒間しか開かない可能性があります。
+プログラムにはエンコーディングやフレームレートなどの設定が含まれていないため、録画された映像の各フレームに変化がない場合、ビデオは1秒間しか再生されない可能性があります。
 :::
 
 ### プログラムの注釈
 
-動画録画の手順における核心と鍵は、連続した10秒間の期間中、写真ストリームを継続的に取得し、それをmicroSDカードに継続的に書き込むことです。
+ビデオ録画手順の核心と鍵は、連続した10秒間にわたって写真ストリームを取得し続け、それをmicroSDカードに継続的に書き込むことです。
 
 ```cpp
 // Start capturing video frames
@@ -1137,7 +1137,7 @@ while ((millis() - lastCaptureTime) < captureDuration) {
 }
 ```
 
-その上で、外側に1分間の待機判定の層をネストして、動画が1分ごとに開始されることを確実にします。
+その上で、外側に1分間の待機判定のレイヤーをネストして、動画が1分ごとに開始されることを確実にします。
 
 ```cpp
 //If it has been more than 1 minute since the last video capture, start capturing a new video
@@ -1149,29 +1149,29 @@ if ((now - lastCaptureTime) >= 60000) {
 }
 ```
 
-## プロジェクト II：ビデオストリーミング
+## プロジェクト II: ビデオストリーミング
 
 このチュートリアルの最後に、ビデオストリーミングプロジェクトを紹介しましょう。このプロジェクトでは、XIAO ESP32S3 Senseによって作成されたWebページでライブビデオストリームを見ることができ、いくつかのパラメータを設定することで画面の表示を変更できます。
 
-以下のリンクから完全なプログラムコードと必要な依存ファイルを見つけることができます。
+完全なプログラムコードと必要な依存ファイルは、以下のリンクから見つけることができます。
 
-ArduinoでESP32ボードパッケージの**2.0.x**バージョンを使用している場合は、以下からダウンロードしてください：
+Arduino で **2.0.x** バージョンの esp32 boards パッケージを使用している場合は、以下からダウンロードしてください：
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/CameraWebServer_for_esp-arduino_2.0.x" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> コードをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/CameraWebServer" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-Arduino で esp32 ボードパッケージの **3.0.x** バージョンを使用している場合は、以下からダウンロードしてください：
+Arduino で **3.0.x** バージョンの esp32 boards パッケージを使用している場合は、以下からダウンロードしてください：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/tree/main/CameraWebServer_for_esp-arduino_3.0.x" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> コードをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-このプロジェクトの Arduino プログラムは以下の通りです。
+以下は、このプロジェクトのArduinoプログラムです。
 
 ```cpp
 #include "esp_camera.h"
@@ -1223,7 +1223,7 @@ void setup() {
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-
+  
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
   if(config.pixel_format == PIXFORMAT_JPEG){
@@ -1291,32 +1291,32 @@ void loop() {
 }
 ```
 
-プログラムをアップロードする前に、コード内の WiFi 名とパスワードを自分のものに変更する必要があります。プログラムをアップロードした後、XIAO ESP32C3 が WiFi に正常に接続されると、その IP アドレスが出力されます。
+プログラムをアップロードする前に、コード内のWiFi名とパスワードを自分のものに変更する必要があります。プログラムをアップロードした後、XIAO ESP32C3が正常にWiFiに接続されると、そのIPアドレスが出力されます。
 
 :::caution
-XIAO ESP32S3 でこのプロジェクトを長時間実行する場合は、放熱にご注意ください。XIAO は非常に熱くなりますので、やけどにご注意ください！
+XIAO ESP32S3 このプロジェクトを長時間実行する場合は、放熱に注意してください。XIAOは非常に熱くなりますので、やけどにご注意ください！
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/97.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-上図でご覧いただけるように、デバッグ情報の出力をオンにすると、シリアルモニターにチップカーネルのデバッグ情報が出力される場合があります。例えば `[0;31mE (2947) MFN: Partition Not found[0m` などですが、これはプログラムの実行に影響しませんのでご心配ありません。
+上図のように、デバッグ情報の出力をオンにすると、シリアルモニターにチップカーネルのデバッグ情報が出力される場合があります。例えば `[0;31mE (2947) MFN: Partition Not found[0m` などですが、心配する必要はありません。プログラムの実行には影響しません。
 :::
 
-ブラウザ（Edge または Google Chrome を推奨）を開き、その IP アドレスを入力すると、ビデオの設定ページが表示されます。
+ブラウザを開いてください。EdgeまたはGoogle Chromeを推奨します。そのIPアドレスを入力すると、ビデオの設定ページが表示されます。
 
 :::note
-ブラウザを使用するデバイスは、XIAO と同じ LAN 内にある必要があることにご注意ください。
+ブラウザを使用するデバイスは、XIAOと同じLAN内にある必要があります。
 :::
 
-設定したいビデオストリームの仕様を設定した後、左側のツールバーの下部にある **Start Stream** をクリックすると、カメラのライブフィードが表示されます。
+設定したいビデオストリームの仕様を設定した後、左側のツールバーの下部にある**Start Stream**をクリックすると、カメラのライブフィードが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/98.png" style={{width:1000, height:'auto'}}/></div>
 
-幸い、ESP32 は公式に顔認識機能もプログラムに追加しています。画質を下げて顔認識のボタンスイッチをオンにすることで、この機能を体験できます。
+幸い、ESP32は公式に顔認識機能もプログラムに追加しています。画質を下げて顔認識のボタンスイッチをオンにすることで、この機能を体験できます。
 
 :::tip
-パフォーマンス上の理由から、顔認識のスイッチをオンにする場合、画面の品質は **CIF** より高くできません。そうでないと、ウェブページでエラーがポップアップします。
+パフォーマンス上の理由から、画面の品質は**CIF**より高くできません。そうでなければ、顔認識のスイッチをオンにしたときにWebページでエラーがポップアップします。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/99.png" style={{width:400, height:'auto'}}/></div>
@@ -1327,12 +1327,12 @@ XIAO ESP32S3 でこのプロジェクトを長時間実行する場合は、放�
 
 ## OV5640 オートフォーカス
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>XIAO ESP32S3 Sense 用 OV5640 カメラ</th>
+        <th>XIAO ESP32S3 Sense用OV5640カメラ</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/OV5640.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -1340,7 +1340,7 @@ XIAO ESP32S3 でこのプロジェクトを長時間実行する場合は、放�
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html?qid=UXYOXT_08tfc9pt_1746512260418" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -1349,13 +1349,13 @@ XIAO ESP32S3 でこのプロジェクトを長時間実行する場合は、放�
 
 ### ソフトウェア準備
 
-#### 方法 1
+#### 方法1
 
 オープンソースコードを提供してくださった **@Eric** に特別な感謝を
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/0015/ESP32-OV5640-AF/tree/main" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> ライブラリをダウンロードする</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
@@ -1410,7 +1410,7 @@ void setup() {
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;
   config.fb_count = 1;
-
+  
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
   if(config.pixel_format == PIXFORMAT_JPEG){
@@ -1500,7 +1500,7 @@ void loop() {
 フォーカス効果を確認するには解像度が1600*1200以上である必要があります。フォーカス時に画面が遅延し、しばらく画面を待つ必要があります。
 :::
 
-以下のzipファイルをダウンロードしてArduinoに追加してください
+以下のzipファイルをダウンロードしてArudinoに追加してください
 
 - **[ZIP]** [OV5640 Auto](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/OV5640_AF.zip)
 
@@ -1638,20 +1638,20 @@ void loop() {
 ```
 
 :::tip
-モード1は、モード2よりもフォーカス効果がより顕著で、より鮮明な画像を提供するため推奨されます。
+モード1は、モード2よりも集束効果が顕著で、よりシャープな画像を提供するため推奨されます。
 :::
 
 ## トラブルシューティング
 
-### Q1: XIAO ESP32S3 SenseとRound Displayを一緒に使用する場合、J3ピンを切断する必要がありますか？どのSDカードスロットが使用できますか？
+### Q1: XIAO ESP32S3 SenseとRound Displayを一緒に使用する場合、J3ピンをカットする必要がありますか？どのSDカードスロットが使用できますか？
 
-A: 原則として、XIAO ESP32S3 SenseをRound Displayと一緒に使用してmicroSDカードを使用する場合は、J3ピンを切断する必要があります。理由は、両方の拡張ボードの回路設計にプルアップ抵抗があるため、理論的には2つのプルアップ抵抗が同時に動作すると、SDカードスロットが正常に動作しないからです。SDカードマウント失敗のエラーメッセージが表示されます。Round Display上のプルアップ抵抗はブロックできないため、2つを一緒に使用する際は、senseの拡張ボード上のJ3を切断して、1つのプルアップ抵抗のみが動作するようにする必要があります。これにより、両方を一緒に使用する場合、Round Display上のSDカードスロットのみがアクティブになることが決まります。
+A: 原則として、XIAO ESP32S3 SenseをRound Displayと一緒に使用してmicroSDカードを使用する場合は、J3ピンをカットする必要があります。理由は、両方の拡張ボードの回路設計にプルアップ抵抗があるため、理論的には2つのプルアップ抵抗が同時に動作すると、SDカードスロットが正常に動作しないからです。SDカードのマウント失敗のエラーメッセージが表示されます。Round Display上のプルアップ抵抗はブロックできないため、両方を一緒に使用する際に1つのプルアップ抵抗のみが動作するように、senseエクスパンションボード上のJ3をカットする必要があります。これにより、両方を一緒に使用する場合、Round Display上のSDカードスロットのみがアクティブになることが決まります。
 
-ただし、**XIAO ESP32S3 Sense上のmicroSDカードスロットを同時に使用する新しい方法を提供してくれたエンジニアMjrovaiに感謝する必要があります**。これはソフトウェアレベルでも可能です。**[彼の方法と手順](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**を参照できます。
+しかし、**XIAO ESP32S3 Sense上のmicroSDカードスロットを同時に使用する新しい方法を提供してくれたエンジニアMjrovaiに感謝する必要があります**。これはソフトウェアレベルでも可能です。**[彼の方法と手順](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**を参照できます。
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
