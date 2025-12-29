@@ -290,7 +290,7 @@ For the Linux system, Grafana needs to be started manually. After entering the d
 
 ### 3.4 Set data source
 
-After confirming that Grafana is running, at this point, you can access the local Grafana interface by visiting http://localhost:3000 in the browser for configuration. First, you need to log in. The initial username and password are both admin. After logging in, the system will prompt you to change your new password. Please remember your password. The account will still be admin and will not change.
+After confirming that Grafana is running, at this point, you can access the local Grafana interface by visiting `http://localhost:3000` in the browser for configuration. First, you need to log in. The initial username and password are both admin. After logging in, the system will prompt you to change your new password. Please remember your password. The account will still be admin and will not change.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_91.png" /></div>
 
@@ -304,7 +304,7 @@ Then select "InfluxDB"
 
 Next, you need to make the following six revisions:
 (1) "Query language" selected as "Flux"
-(2) Enter the URL of your database webpage, which is the link to the InfluxDB webpage you accessed in the first step. For example, if your webpage address is 192.168.7.183:8086, then the URL you should fill in is http://192.168.7.183:8086.
+(2) Enter the URL of your database webpage, which is the link to the InfluxDB webpage you accessed in the first step. For example, if your webpage address is 192.168.7.183:8086, then the URL you should fill in is `http://192.168.7.183:8086`.
 (3) Disable the "Basic auth" option
 (4) "Organization" should be filled with the username you used when registering the database.
 (5) Token should be filled with the API Tokens mentioned in the InfluxDB webpage as we discussed in step 2.3.

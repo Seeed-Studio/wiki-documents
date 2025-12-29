@@ -290,7 +290,7 @@ sudo vi /mnt/system/usb-ncm.sh
 
 ### 3.4 设置数据源
 
-确认 Grafana 正在运行后，此时您可以通过在浏览器中访问 http://localhost:3000 来访问本地 Grafana 界面进行配置。首先，您需要登录。初始用户名和密码都是 admin。登录后，系统会提示您更改新密码。请记住您的密码。账户仍然是 admin，不会改变。
+确认 Grafana 正在运行后，此时您可以通过在浏览器中访问 `http://localhost:3000` 来访问本地 Grafana 界面进行配置。首先，您需要登录。初始用户名和密码都是 admin。登录后，系统会提示您更改新密码。请记住您的密码。账户仍然是 admin，不会改变。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_91.png" /></div>
 
@@ -304,7 +304,7 @@ sudo vi /mnt/system/usb-ncm.sh
 
 接下来，您需要进行以下六项修改：
 (1) "Query language" 选择为 "Flux"
-(2) 输入您的数据库网页的 URL，这是您在第一步中访问的 InfluxDB 网页链接。例如，如果您的网页地址是 192.168.7.183:8086，那么您应该填入的 URL 是 http://192.168.7.183:8086。
+(2) 输入您的数据库网页的 URL，这是您在第一步中访问的 InfluxDB 网页链接。例如，如果您的网页地址是 192.168.7.183:8086，那么您应该填入的 URL 是 `http://192.168.7.183:8086`。
 (3) 禁用 "Basic auth" 选项
 (4) "Organization" 应该填入您注册数据库时使用的用户名。
 (5) Token 应该填入我们在步骤 2.3 中讨论的 InfluxDB 网页中提到的 API Tokens。

@@ -290,7 +290,7 @@ Para el sistema Linux, Grafana necesita iniciarse manualmente. Después de ingre
 
 ### 3.4 Configurar fuente de datos
 
-Después de confirmar que Grafana se está ejecutando, en este punto, puedes acceder a la interfaz local de Grafana visitando http://localhost:3000 en el navegador para la configuración. Primero, necesitas iniciar sesión. El nombre de usuario y contraseña iniciales son ambos admin. Después de iniciar sesión, el sistema te pedirá que cambies tu nueva contraseña. Por favor recuerda tu contraseña. La cuenta seguirá siendo admin y no cambiará.
+Después de confirmar que Grafana se está ejecutando, en este punto, puedes acceder a la interfaz local de Grafana visitando `http://localhost:3000` en el navegador para la configuración. Primero, necesitas iniciar sesión. El nombre de usuario y contraseña iniciales son ambos admin. Después de iniciar sesión, el sistema te pedirá que cambies tu nueva contraseña. Por favor recuerda tu contraseña. La cuenta seguirá siendo admin y no cambiará.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_91.png" /></div>
 
@@ -304,7 +304,7 @@ Luego selecciona "InfluxDB"
 
 A continuación, necesitas hacer las siguientes seis revisiones:
 (1) "Query language" seleccionado como "Flux"
-(2) Ingresa la URL de tu página web de base de datos, que es el enlace a la página web de InfluxDB que accediste en el primer paso. Por ejemplo, si la dirección de tu página web es 192.168.7.183:8086, entonces la URL que debes completar es http://192.168.7.183:8086.
+(2) Ingresa la URL de tu página web de base de datos, que es el enlace a la página web de InfluxDB que accediste en el primer paso. Por ejemplo, si la dirección de tu página web es 192.168.7.183:8086, entonces la URL que debes completar es `http://192.168.7.183:8086`.
 (3) Deshabilita la opción "Basic auth"
 (4) "Organization" debe completarse con el nombre de usuario que usaste al registrar la base de datos.
 (5) Token debe completarse con los API Tokens mencionados en la página web de InfluxDB como discutimos en el paso 2.3.
