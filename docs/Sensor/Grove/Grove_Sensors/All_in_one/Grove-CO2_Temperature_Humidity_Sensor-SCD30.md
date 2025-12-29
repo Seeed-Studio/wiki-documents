@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-CO2_Temperature_Humidity_Sensor-SCD30
 last_update:
-  date: 12/30/2022
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/main.jpg" /></div>

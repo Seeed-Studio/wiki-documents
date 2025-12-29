@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-I2C_Color_Sensor
 last_update:
-  date: 1/5/2023
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-I2C_Color_Sensor/img/Grove-I2C-Color-Sensor.jpg" /></div>

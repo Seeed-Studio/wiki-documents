@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png 
 slug: /Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor
 last_update:
-  date: 12/30/2022
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 import Tabs from '@theme/Tabs';

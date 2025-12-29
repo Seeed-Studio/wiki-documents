@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Temperature_and_Humidity_Sensor_Pro
 last_update:
-  date: 1/3/2023
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature_and_Humidity_Sensor_Pro/img/main.jpg" /></div>

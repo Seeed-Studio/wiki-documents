@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Temperature-Humidity-Sensor-DH20
 last_update:
-  date: 1/3/2023
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 

@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-TempAndHumi_Sensor-SHT31
 last_update:
-  date: 12/30/2022
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TempAndHumi_Sensor-SHT31/img/main_new.jpg" /></div>

@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED_Display_0.96inch
 last_update:
-  date: 1/9/2023
-  author: shuxu hu
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/Grove-OLED-0.96.png) -->
