@@ -3,29 +3,33 @@ description: Get_Started_with_SenseCAP_T2000_tracker
 title: Inicio Rápido
 keywords:
 - SenseCAP_T2000_tracker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp
 slug: /es/Get_Started_with_SenseCAP_T2000_tracker
 last_update:
-  date: 12/8/2023
+  date: 12/23/2025
   author: Janet
 ---
 
-# Comenzar con el SenseCAP T2000 Tracker
+# Comenzar con SenseCAP T2000 Tracker
 
 Este capítulo te muestra cómo configurar rápidamente tu SenseCAP T2000 Tracker con la App SenseCraft.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.png" alt="pir" width={800} height="auto" /></p>
 
-## Descripción General del Hardware
+:::caution note
+Por favor asegúrate de tener cobertura de una red LoRaWAN, como Helium, TTN u otras redes LoRaWAN. Sin redes LoRaWAN, el dispositivo no puede enviar datos a la nube. La forma más fácil de usar los rastreadores es con el `SenseCAP LoRaWAN Gateway` y la `SenseCraft app`.
+:::
+
+## Descripción del Hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Hardware_Overview.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000AB_Tracker_Hardware.jpg" alt="pir" width={800} height="auto" /></p>
-<div align="center">Vista Explosionada T2000-A/B</div>  
+<div align="center">Vista Explosiva T2000-A/B</div>  
 <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000C_Tracker_Hardware.jpg" alt="pir" width={800} height="auto" /></p>
-<div align="center">Vista Explosionada T2000-C con Panel Solar</div>  
+<div align="center">Vista Explosiva T2000-C con Panel Solar</div>  
 <br />
 
 ## Funciones del Dispositivo
@@ -37,7 +41,7 @@ Para aplicar a diferentes escenarios, hay varios modos de trabajo diferentes en 
 | **Modo de Trabajo** | **Descripción** | **Escenario** |
 | - | - | - |
 | Modo Standby | <ul><li>Solo se suben paquetes de latido, que incluyen únicamente información de la batería.</li><li>La ubicación se puede obtener usando el comando downlink LoRa.</li></ul> | Si necesitas localizar el dispositivo durante mucho tiempo y el dispositivo puede funcionar durante mucho tiempo antes de ser cargado, la plataforma en la nube puede emitir un comando de solicitud de ubicación para localizar el dispositivo. |
-| Modo Periódico | Establece un intervalo en el que el dispositivo sube periódicamente la ubicación, datos del acelerómetro de 3 ejes e información de la batería. | Recomendado para la mayoría de escenarios<ul><li>Seguimiento de activos</li><li>Monitoreo de ganado</li></ul> |
+| Modo Periódico | Establece un intervalo en el que el dispositivo sube periódicamente ubicación, datos del acelerómetro de 3 ejes e información de la batería. | Recomendado para la mayoría de escenarios<ul><li>Seguimiento de activos</li><li>Monitoreo de ganado</li></ul> |
 | Modo Evento | Ajusta el intervalo de subida basado en los sensores del acelerómetro de 3 ejes, incluyendo eventos de movimiento, tiempo de espera sin movimiento y eventos de choque. El dispositivo subirá ubicación, datos del acelerómetro de 3 ejes e información de la batería cada vez que se active un evento. | Se recomienda cuando necesitas monitorear el estado de movimiento del objeto rastreado. |
 
 ### Función del Sensor
@@ -60,7 +64,6 @@ El intervalo de uplink de caché se ha establecido en 40s. Los datos en caché s
 El número máximo de datos que se pueden almacenar en caché es de 1000 registros.
 
 Hacer clic en el botón `Clear Cache` borrará todos los datos en caché.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_DataCache.png" alt="pir" width={800} height="auto" /></p>
 
@@ -97,7 +100,7 @@ Hacer clic en el botón `Clear Cache` borrará todos los datos en caché.
 <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_GreenBreathingLight.gif" alt="pir" width={400} height="auto" /></p>
-<div align="center">Después del encendido, la luz verde respiratoria</div> 
+<div align="center">Después del encendido, la luz verde respiratoria</div>
 <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Bluetooth.gif" alt="pir" width={400} height="auto" /></p>
@@ -105,9 +108,7 @@ Hacer clic en el botón `Clear Cache` borrará todos los datos en caché.
 
 <br />
 
-
-
-:::info Nota
+:::info Note
 
 - Se recomienda apagar el dispositivo si no está en uso.
 - Cuando se enciende por primera vez, se recomienda probarlo al aire libre, ya que el GPS necesita actualizar la hora vía satélite.
@@ -133,14 +134,13 @@ Inicia sesión en la APP SenseCraft.
 Haz clic en la pestaña '+' en la parte superior derecha, luego escanea el código QR en la etiqueta del dispositivo.
 Haz clic en 'Add to account' luego puedes 'Configure' el dispositivo.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_AddDevice.png" alt="pir" width={800} height="auto" /></p>
 
 Acerca el imán al área del sensor y toca 4 veces rápidamente para encenderlo, luego el rastreador entrará automáticamente al emparejamiento Bluetooth (si el rastreador ya está encendido, toca 2 veces rápidamente para entrar manualmente al emparejamiento Bluetooth), y selecciona el dispositivo por SN.
 
 Hay 2 modos de configuración:
 
-- **Configuración Rápida**: Para un inicio rápido, puedes seleccionar configuración rápida de los parámetros básicos
+- **Configuración Rápida**: Para inicio rápido, puedes seleccionar configuración rápida de los parámetros básicos
 - **Configuración Avanzada**: Para establecer más parámetros por favor revisa los siguientes pasos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_ConfigurationMode.png" alt="pir" width={800} height="auto" /></p>
@@ -195,7 +195,7 @@ Debe usarse con SenseCAP Gateway. SenseCAP construye un servidor TTN propietario
     </tr>
         <tr>
     <td>SenseCAP for Helium</td>
-    <td>Cuando hay cobertura de la red Helium, los datos pueden subirse a través de Helium. Los dispositivos funcionan en una consola privada de Helium de SenseCAP. Los usuarios no necesitan crear dispositivos en la consola de Helium, listos para usar con SenseCraft App y Portal. <br /><a href="https://explorer.helium.com/" target="_blank"><span>Cobertura de Helium</span></a></td>
+    <td>Cuando hay cobertura de la red Helium, los datos pueden subirse vía Helium. Los dispositivos funcionan en una consola privada de Helium de SenseCAP. Los usuarios no necesitan crear dispositivos en la consola de Helium, listo para usar con SenseCraft App y Portal. <br /><a href="https://explorer.helium.com/" target="_blank"><span>Cobertura de Helium</span></a></td>
     </tr>
         <tr>
     <td>Helium</td>
@@ -240,7 +240,7 @@ Los rastreadores están fabricados para soportar un plan de frecuencia universal
     </tr>
             <tr>
     <td>Restaurar Configuración LoRa</td>
-    <td>Cuando "Plataforma" cambia de vuelta a SenseCAP desde otra plataforma, los parámetros LoRa (EUI/App EUI/ App Key etc.) necesitan ser restaurados</td>
+    <td>Cuando "Platform" cambia de vuelta a SenseCAP desde otra plataforma, los parámetros LoRa (EUI/App EUI/ App Key etc.) necesitan ser restaurados</td>
     <td>Puedes usar esta función cuando necesites restaurar los parámetros LoRa a los valores predeterminados de fábrica</td>
     </tr>
   </tbody>
@@ -276,7 +276,7 @@ El dispositivo usa OTAA para unirse a la red LoRaWAN por defecto. Así, puede co
 
 :::info Nota
 Cuando se usa la plataforma SenseCAP, el EUI, APP EUI y APP Key son fijos y son los mismos que la etiqueta del sensor.<br />
-Cuando el sensor se selecciona para ser usado con una plataforma pública como Helium o TTN, el EUI no cambiará, y el sensor generará un nuevo App EUI y App Key fijos para el acceso a la red.<br />
+Cuando el sensor se selecciona para usarse con una plataforma pública como Helium o TTN, el EUI no cambiará, y el sensor generará un nuevo App EUI y App Key fijos para el acceso a la red.<br />
 Para obtener información EUI en lotes, contacta a nuestro equipo de ventas.
 :::
 
@@ -288,8 +288,8 @@ Configura el modo de trabajo según tus necesidades.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_WorkMode.png" alt="pir" width={800} height="auto" /></p>
 
-<table> 
-<tr><th colspan="1"><b>Parámetros</b></th><th colspan="1"><b>Descripción</b></th><th colspan="1"><b>Predeterminado / Nota</b></th></tr> <tr><td colspan="1">Intervalo de Latido</td><td colspan="1">Cuando no se suben datos por el dispositivo dentro del intervalo de latido, se activará un paquete de latido. Este paquete solo contiene información de la batería.</td><td colspan="1">Predeterminado 720 minutos.</td></tr> <tr><td colspan="1">Habilitar Sensor de 3 Ejes</td><td colspan="1">Si este interruptor está activado, el sensor de 3 ejes será recolectado y subido, pero aumentará el consumo de energía.</td><td colspan="1">Desactivado por defecto.</td></tr> <tr><td colspan="1">Habilitar Alarma de Desmontaje</td><td colspan="1">Si este interruptor está activado, el dispositivo activa una alarma cuando el dispositivo es removido después de la instalación.</td><td colspan="1">Desactivado por defecto.</td></tr> <tr><td colspan="1">Duración de Alarma de Desmontaje(min)</td><td colspan="1">Este parámetro especifica cuánto tiempo el dispositivo sigue reportando después de que se activa una Alarma de Desmontaje, enviando un paquete de posición en tiempo real con el evento de alarma cada minuto.</td><td colspan="1">Esta configuración solo es visible cuando Habilitar Alarma de Desmontaje está activado.</td></tr> <tr><td colspan="1" rowspan="3">Modo de Trabajo</td><td colspan="1"><b>Modo de Espera</b></td><td colspan="1">Sube paquetes de latido (solo nivel de batería) basado en el intervalo de latido.</td></tr> <tr><td colspan="1"><b>Modo Periódico</b></td><td colspan="1">Los datos de ubicación y sensor se suben según el intervalo de subida.</td></tr> <tr><td colspan="1"><b>Modo de Evento</b></td><td colspan="1">Establece condiciones de activación de umbral basadas en valores medidos como movimiento y choque, y ajusta el intervalo de subida cuando no se activa ningún evento.</td></tr> <tr><td colspan="1">Intervalo de Subida (min)</td> <td colspan="1"><b>Modo Periódico</b></td> <td colspan="1">Localiza periódicamente y sube datos. Predeterminado 60 minutos. Mayor frecuencia aumenta el consumo de energía.</td></tr> <tr><td colspan="1">Restaurar Todas las Configuraciones</td><td colspan="2">Restaura todos los parámetros de configuración a los ajustes de fábrica, incluyendo LoRa, Modo de Trabajo, y Geolocalización.</td></tr> 
+<table>
+<tr><th colspan="1"><b>Parámetros</b></th><th colspan="1"><b>Descripción</b></th><th colspan="1"><b>Predeterminado / Nota</b></th></tr> <tr><td colspan="1">Intervalo de Latido</td><td colspan="1">Cuando no se suben datos por el dispositivo dentro del intervalo de latido, se activará un paquete de latido. Este paquete solo contiene información de la batería.</td><td colspan="1">Predeterminado 720 minutos.</td></tr> <tr><td colspan="1">Habilitar Sensor de 3 Ejes</td><td colspan="1">Si este interruptor está activado, el sensor de 3 ejes será recolectado y subido, pero aumentará el consumo de energía.</td><td colspan="1">Desactivado por defecto.</td></tr> <tr><td colspan="1">Habilitar Alarma de Desmontaje</td><td colspan="1">Si este interruptor está activado, el dispositivo activa una alarma cuando el dispositivo es removido después de la instalación.</td><td colspan="1">Habilitado por defecto.</td></tr> <tr><td colspan="1">Duración de Alarma de Desmontaje(min)</td><td colspan="1">Este parámetro especifica cuánto tiempo el dispositivo sigue reportando después de que se activa una Alarma de Desmontaje, enviando un paquete de posición en tiempo real con el evento de alarma cada minuto.</td><td colspan="1">Esta configuración solo es visible cuando Habilitar Alarma de Desmontaje está activado. Predeterminado 3 minutos.</td></tr> <tr><td colspan="1" rowspan="3">Modo de Trabajo</td><td colspan="1"><b>Modo de Espera</b></td><td colspan="1">Sube paquetes de latido (solo nivel de batería) basado en el intervalo de latido.</td></tr> <tr><td colspan="1"><b>Modo Periódico</b></td><td colspan="1">Los datos de ubicación y sensor se suben según el intervalo de subida.</td></tr> <tr><td colspan="1"><b>Modo de Evento</b></td><td colspan="1">Establece condiciones de activación de umbral basadas en valores medidos como movimiento y choque, y ajusta el intervalo de subida cuando no se activa ningún evento.</td></tr> <tr><td colspan="1">Intervalo de Subida (min)</td> <td colspan="1"><b>Modo Periódico</b></td> <td colspan="1">Localiza periódicamente y sube datos. Predeterminado 60 minutos. Mayor frecuencia aumenta el consumo de energía.</td></tr> <tr><td colspan="1">Restaurar Todas las Configuraciones</td><td colspan="2">Restaura todos los parámetros de configuración a los ajustes de fábrica, incluyendo LoRa, Modo de Trabajo, y Geolocalización.</td></tr>
 </table>
 
 <br />
@@ -307,8 +307,6 @@ Para el Modo de Evento, hay tres eventos:
 <tr><td rowspan="2">Evento de Inmovilidad</td><td colspan="2">Cuando el dispositivo está estacionario en una ubicación por más de cierta cantidad de tiempo, se activa un evento de tiempo de espera de inmovilidad. </td></tr>
 <tr><td>Tiempo de Espera de Inmovilidad(min)</td><td>Predeterminado es 360 minutos.</td></tr>
 </table>
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_EventMode.png" alt="pir" width={800} height="auto" /></p>
 
@@ -340,13 +338,11 @@ El rastreador soporta posicionamiento vía GNSS, Wi-Fi (Solo T2000-B soporta), y
 <tr><td><b>Limpiar Caché</b></td><td colspan="2">Limpiar todos los datos de caché históricos.</td></tr>
 </table>
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_ScanTime.png" alt="pir" width={800} height="auto" /></p>
 
-Después de configurar todos los parámetros, haz clic en "Send". 
-Si no es necesario modificar ningún parámetro, sal de la configuración Bluetooth y regresa a la página principal. 
+Después de configurar todos los parámetros, haz clic en "Send".
+Si no es necesario modificar ningún parámetro, sal de la configuración Bluetooth y regresa a la página principal.
 En este punto, el dispositivo inicia una solicitud de acceso a la red LoRa.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_SendButton.png" alt="pir" width={400} height="auto" /></p>
 
@@ -355,15 +351,14 @@ En este punto, el dispositivo inicia una solicitud de acceso a la red LoRa.
 #### App SenseCraft
 
 Verifica la Ubicación en la APP.
-Después de vincular el dispositivo, ingresa a la página del dispositivo y haz clic en el botón en la esquina superior derecha para ver los datos históricos de ubicación del dispositivo. 
-Haz clic en el filtro para elegir ver datos de ubicación bajo modos de posicionamiento como 'All/GNSS/BLE/Wi-Fi'. 
+Después de vincular el dispositivo, ingresa a la página del dispositivo y haz clic en el botón en la esquina superior derecha para ver los datos históricos de ubicación del dispositivo.
+Haz clic en el filtro para elegir ver datos de ubicación bajo modos de posicionamiento como 'All/GNSS/BLE/Wi-Fi'.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_DataView.png" alt="pir" width={800} height="auto" /></p>
 
-Si el dispositivo activa una Alarma de Desmontaje, se mostrará un ícono de alarma rojo junto a cada paquete de datos durante el período de activación.
+Si el dispositivo activa una Alarma de Desmontaje, se mostrará un icono de alarma rojo junto a cada paquete de datos durante el período de activación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm1.png" alt="pir" width={800} height="auto" /></p>
-
 
 La Alarma de Desmontaje aparecerá tanto en las páginas `Device` como `Details` en la APP, junto con una ventana de notificación, lo que ayuda a los usuarios a verificar rápidamente el estado del dispositivo.
 
