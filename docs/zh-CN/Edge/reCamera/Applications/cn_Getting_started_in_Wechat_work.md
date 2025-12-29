@@ -14,11 +14,11 @@ last_update:
   author: Xinrui Wu
 ---
 
-# 结合 reCamera Home Assistant 企业微信
+# 耦合 reCamera Home Assistant 企业微信
 
-## 介绍
+## 简介
 
-一个真正动态的智能系统绝不仅仅是"看见世界"，而是能够理解事件、触发动作并实现跨平台互联。在这个解决方案中，我们将使用基于 AI 的 ReCamera 作为前端感知设备，通过 Node-RED 完成数据解析和格式化，然后使用 Home Assistant 作为自动化中心来实时呈现检测结果、做出决策，并进一步与企业微信机器人链接以实现即时通知。整个链条形成了一套可扩展、可观察、自动响应的智能场景系统。
+一个真正动态的智能系统绝不仅仅是"看世界"，而是能够理解事件、触发动作并实现跨平台互联。在这个解决方案中，我们将使用基于 AI 的 ReCamera 作为前端感知设备，通过 Node-RED 完成数据解析和格式化，然后使用 Home Assistant 作为自动化中心来实时呈现检测结果、做出决策，并进一步与企业微信机器人链接以实现即时通知。整个链条形成了一套可扩展、可观察、自动响应的智能场景系统。
 ReCamera 使用 YOLO 模型实时检测人类和宠物等物体；Node-RED 处理检测结果并将其推送到 Home Assistant；HA 使用 Webhook 自动化将数据写入实体、执行条件判断并将报警信息推送到企业微信群的过程，实现跨平台实时警报。这种架构不仅展示了 ReCamera 和 HA 的深度耦合能力，还反映了如何在实际应用中结合 AI 视觉、自动化规则和企业级通知系统来构建真正"可用且智能"的物联网集成解决方案。
 
 ## 硬件准备
@@ -91,7 +91,7 @@ ReCamera 使用 YOLO 模型实时检测人类和宠物等物体；Node-RED 处�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat3.png" /></div>
 
-此步骤中的 Webhook 地址在稍后编辑 configuration.yaml 时会用到。
+此步骤中的 Webhook 地址在稍后编辑 configuration.yaml 时会很有用。
 
 记住，一定要**保护好消息推送的 webhook 地址**以避免泄露！不要分享到 github、博客等可以公开查阅的地方，否则坏人可以利用你的消息推送发送垃圾消息。
 
@@ -165,7 +165,7 @@ mkdir -p ~/homeassistant/config
 
 #### 启动容器
 
-运行以下命令启动 Home Assistant（此步骤需要较长时间，取决于你的网络）：
+运行以下命令启动 Home Assistant（此步骤需要很长时间，取决于你的网络）：
 
 ```bash
 docker run -d \
@@ -229,7 +229,7 @@ Home Assistant 所有配置都保存在：
 /home/seeed/homeassistant/config/
 ```
 
-可通过以下方式访问：
+可通过以下方式查看：
 
 ```bash
 cd /home/seeed/homeassistant/config
@@ -298,7 +298,7 @@ sudo nano /home/seeed/homeassistant/config/automations.yaml
 #### 编辑 configuration.yaml：
 
 ```bash
-sudo nano /home/seeed/homeassistant/config/automations.yaml
+sudo nano /home/seeed/homeassistant/config/configuration.yaml
 ```
 
 替换内容：
@@ -463,7 +463,7 @@ return {
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_10.png" /></div>
 
 :::note
-请记住！确保将 reCamera 连接到网络！！！否则无法进行通信。
+请记住！确保将 reCamera 连接到网络！！！否则将无法通信。
 :::
 
 ## 4. 查看效果

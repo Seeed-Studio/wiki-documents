@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /meshtastic_solar_node
 sidebar_position: 1
 last_update:
-  date: 4/1/2025
-  author: Jessie
+  date: 12/16/2025
+  author: Michelle Huang
 ---
 
 
@@ -151,14 +151,7 @@ The Solar Node is available in two variants: [SenseCAP Solar Node P1](https://ww
   </tr>
 </table>
 
-### Button
 
-|Button Action|Description|
-|--|--|
-|Press for 3s|Power on|
-|Press twice|Update node/location info|
-|Press three times|Switch on/off the GPS|
-|Press for 5s|Power off|
 
 ### Hardware Overview
 

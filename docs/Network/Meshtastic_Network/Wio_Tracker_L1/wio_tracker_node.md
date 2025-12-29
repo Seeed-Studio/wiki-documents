@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 12/3/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -112,7 +112,7 @@ The latest batches of L1, L1 Lite and L1 E-Ink all come with a battery adapter c
     <td colspan="1">Lithium Battery (1mm 2p JST): 3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">OLED Screen</td>
+    <td colspan="1" rowspan="3">[OLED Screen](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">Size: 1.3 inch</td>
   </tr>
   <tr>

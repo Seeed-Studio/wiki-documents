@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.web
 slug: /cn/get_started_with_meshtastic_wio_tracker_l1
 sidebar_position: 2
 last_update:
-  date: 12/3/2025
+  date: 12/24/2025
   author: Michelle Huang
 ---
 
@@ -24,12 +24,10 @@ Wio Tracker L1 系列共享相同的硬件框架。虽然视频指南是针对 L
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
-
 ### 第二部分 固件刷写
 
 :::caution note
-请`不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
+请`不要使用 NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
 :::
 
 <div class="video-container">
@@ -47,7 +45,7 @@ L1 E-Ink 固件目前不支持四向摇杆。如果您想使用摇杆，请购�
 
 #### 菜单栏
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
-只有 2.7 固件支持菜单栏。如果您想使用菜单栏，请按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)更新固件。
+只有 2.7 固件支持菜单栏。如果您想使用菜单栏，请按照[刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)来更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### 蜂鸣器
@@ -81,10 +79,11 @@ Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> All enable
 1. 未完成消息传输过程
 2. 正在配置中
 :::
+
 ### 刷写固件
 
 :::caution note
-请`不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
+请`不要使用 NRF-OTA` 来更新固件，这可能会导致设备完全损坏。
 :::
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
@@ -108,7 +107,7 @@ Setting（齿轮形状的图标）-> Notification -> Buzzer Action -> All enable
 
 将 UF2 文件拖拽到 DFU 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
 
-### 设备开机
+### 开启设备
 
 连接 USB 线缆激活设备。向上拨动电源开关以开机。
 
@@ -150,7 +149,7 @@ import TabItem from '@theme/TabItem';
 
 ### 通过网站连接
 
-如果您想在网站上发送文本消息并与其他节点通信，现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
+如果您想在网站上发送文本消息并与其他节点通信，您现在可以将设备连接到 [Meshtastic Website](https://client.meshtastic.org/messages/broadcast/0)。
 
   步骤 1：打开网站
 
@@ -180,7 +179,7 @@ import TabItem from '@theme/TabItem';
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 
-### 配置参数
+### 配置 LoRa
 
 为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
 
@@ -205,13 +204,24 @@ import TabItem from '@theme/TabItem';
 |US|美国|902.0 - 928.0|100|30|
 |EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
 
-参考 [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
+参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 
 :::info
 **EU_868** 必须遵守每小时 10% 的占空比限制，基于滚动 1 小时计算每分钟。如果达到限制，您的设备将停止传输，直到再次被允许。
 :::
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
+
+### 配置 GPS
+
+请设置启用 GPS。您可以调整更新间隔和广播间隔以获得更及时的位置信息。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
+
+对于 iOS，请开启 `Accurate Location`。否则，定位可能会出现偏差。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
+
 
 ### 传感器连接
 
@@ -251,13 +261,18 @@ import TabItem from '@theme/TabItem';
 </table>
 
 ### 屏幕连接
+ - E-Ink 屏幕
+  [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的 E-Ink 屏幕。
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
- - [点击这里](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html) 获取兼容的电子墨水屏。
-- 请期待我们即将推出的兼容单独销售的 OLED 屏幕。当前的 OLED 驱动器是 SSD1306。
+- OLED 屏幕
+[点击这里](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html) 获取兼容的 OLED 屏幕。当前的 OLED 驱动器是 SSD1306。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
+
 
 ### 虚拟键盘
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。按照 [Flash Firmware Tutorial](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 更新固件。
+<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
+2.7 版本固件现在支持虚拟键盘！您可以直接在设备上输入消息与其他设备通信。按照 [刷写固件教程](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 更新固件。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## 常见问题
@@ -266,10 +281,10 @@ import TabItem from '@theme/TabItem';
 
 **描述：**
 
-设备无响应，没有 LED，无法与您的应用配对。如果您发现设备在刷入自己的固件后完全死机，您也可以尝试重新安装引导程序。
+设备无响应，没有 LED，无法与您的应用配对。如果您发现设备在刷写自己的固件后完全死机，您也可以尝试重新安装引导程序。
 
 :::danger note
-当您刷入引导程序时，请确保电缆连接稳定，在刷入过程中**不要**断开连接。
+当您刷写引导程序时，请确保电缆连接稳定，在刷写过程中**不要**断开连接。
 :::
 
 - 步骤 1：[点击这里下载引导程序](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
@@ -284,9 +299,9 @@ import TabItem from '@theme/TabItem';
 
   用下载的引导程序文件覆盖磁盘中的所有文件。
 
-- 步骤 4：刷入固件
+- 步骤 4：刷写固件
 
-  当您完成上述步骤后，您可以按照这个 [步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 刷入应用固件。您可能需要 [手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
+  当您完成上述步骤后，您可以按照这个 [步骤](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware) 刷写应用固件。您可能需要 [手动进入 DFU 模式](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)
 
 
 ### 无法进入 DFU 和手动进入 DFU 模式
@@ -296,6 +311,28 @@ import TabItem from '@theme/TabItem';
 ### 退出 DFU 模式
 
 按一次 `Reset` 按钮退出 DFU 模式。
+
+ ### 设备自动关机
+
+ #### 描述
+
+ - 设备开机后，会在一段时间后自动关机或重启。
+ - 串口日志运行一段时间后停止。
+
+ 这可能是由于在设备处于以下状态时手动强制重启或关闭设备造成的：未完成消息传输过程、正在配置......
+
+ #### 故障排除
+
+[点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。您需要执行闪存擦除，然后重新刷写最新固件。
+
+### 恢复出厂设置
+如果您想恢复到默认设置，您可以进行恢复出厂设置。有两种方法可以进行恢复出厂设置。
+
+- [点击这里](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing) 查看视频。您需要执行闪存擦除，然后重新刷写最新固件。
+
+- 在应用中点击 `Factory Reset` 按钮。设备将自动使用出厂配置重启。
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
+
 
 ### 信号质量
 
@@ -313,7 +350,8 @@ import TabItem from '@theme/TabItem';
 - [引导程序](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 - [(V1) 3D 打印参考文件](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
 - [(V2 新四向摇杆) 3D 打印参考文件](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
-- [外形文件](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
+- [L1 外壳设计挑战赛](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
+- [轮廓文件](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [TELEC 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
 - [FCC 认证](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)
 - [CE 认证](http://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20CE%20Certification.pdf)

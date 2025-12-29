@@ -373,7 +373,7 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 所有[EMPTY_LINE]标记
    - 标记后的所有缩进（空格和制表符）
    - 代码块内容（\`\`\`之间的内容）
-   - 行内代码（\`之间的内容）
+   - 行内代码（\`...\`）中的内容必须**逐字符原样保留**：包括大小写、空格、标点、连字符等都不得改变；即使反引号内看起来是可翻译的英文单词/状态值（例如 \`Low\`、\`High\`、\`On\`、\`Off\`、\`True\`、\`False\`、\`Input\`、\`Output\`），也禁止翻译/本地化/改写
    - URL链接
    - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
    - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
@@ -815,6 +815,12 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
     .join('\n');
 
   const cleanPathPrefix = pathPrefix.startsWith('/') ? pathPrefix.slice(1) : pathPrefix;
+  const localeFolder = LANGUAGE_CONFIG[targetLang].folder;
+
+  const langFilePrefix =
+    targetLang === 'zh-CN' ? 'cn_' :
+    targetLang === 'ja'    ? 'ja_' :
+    targetLang === 'es'    ? 'es_' : '';
 
   return `你是一个专业的技术文档翻译专家。请将以下 _category_.yml 文件从英文翻译成${langName}。
 
@@ -828,7 +834,20 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
    - 专有产品名称
    - 技术字段名
 4. **link字段处理**：
-   - slug值前添加 "${cleanPathPrefix}/" 前缀
+   - slug：
+     - 只修改 slug 的值
+     - 在原始值前面加 "${cleanPathPrefix}/" 作为 URL 前缀
+   - id：
+     - 不翻译 id 里面的英文路径，只改“前缀”和“最后一段文件名”
+     - 假设英文原始 id 的格式是： "A/B/C/F"
+       - A/B/C 是中间目录
+       - F 是最后一段文件名（不带扩展名）
+     - 目标语言的 id 按下面的公式改写：
+       1. 保留中间目录 A/B/C 不变
+       2. 把最后一段 F 改成 "${langFilePrefix}F"
+       3. 最前面再加上语言前缀 "${localeFolder}/"
+       4. 也就是：英文 id = "A/B/C/F"
+          目标语言 id = "${localeFolder}/A/B/C/${langFilePrefix}F"
 5. **术语保护**：
 ${termsList}
 

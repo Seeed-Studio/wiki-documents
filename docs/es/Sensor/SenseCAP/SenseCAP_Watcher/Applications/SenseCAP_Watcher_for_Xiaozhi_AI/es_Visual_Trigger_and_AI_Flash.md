@@ -13,7 +13,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /es/visual_trigger_and_ai_flash
 last_update:
-  date: 10/30/2025
+  date: 12/04/2025
   author: Twelve
 translation:
   skip: [ zh-CN ]
@@ -41,7 +41,7 @@ Para una introducción completa a las características, aplicaciones y casos de 
 - PC con Windows  
 
 :::note
-Si está flasheando el **Firmware de Activación Visual**, y su modelo de dispositivo Watcher **no es -EN**, también necesitará flashear manualmente el archivo de autenticación para uso normal (solo requerido una vez).  
+Si está flasheando el **Firmware de Activación Visual**, y el modelo de su dispositivo Watcher **no es -EN**, también necesitará flashear manualmente el archivo de autenticación para uso normal (solo requerido una vez).  
 Para instrucciones detalladas, consulte [Guía de Flasheo de Firmware del Watcher Agent](https://wiki.seeedstudio.com/es/flash_watcher_agent_firmware/).
 :::
 
@@ -74,6 +74,10 @@ Please use another method to flash the firmware for now.
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
 
+  :::note
+  Si está usando macOS o Linux, elija el puerto con el número menor.
+  :::
+
   - Haga clic en `Connect`
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
@@ -85,6 +89,9 @@ Please use another method to flash the firmware for now.
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
 
   - Seleccione el puerto serie correcto (que termine con "B")
+  :::note
+  Si está usando macOS o Linux, elija el puerto con el número mayor.
+  :::
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
@@ -98,7 +105,7 @@ Please use another method to flash the firmware for now.
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI12.png" style={{width:500, height:'auto'}}/></div>
 
-  - Esperando el proceso de actualización y reinicio
+  - Espere el proceso de actualización y reinicio
 
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI13.png" style={{width:500, height:'auto'}}/></div>
 
@@ -236,7 +243,7 @@ Please use another method to flash the firmware for now.
 </Tabs>
 
 :::note
-Solo la versión de firmware 1.8.8 o superior soporta la funcionalidad de activación visual.
+Solo la versión de firmware 1.8.8 o superior soporta funcionalidad de activación visual.
 La versión de firmware superior a v2.0.3 requiere decir "Turn on the inference switch" a Xiaozhi para habilitar la detección visual.
 :::
 
@@ -254,8 +261,11 @@ La versión de firmware superior a v2.0.3 requiere decir "Turn on the inference 
 - Haga clic en `Connect` 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
-- Seleccione el puerto serie correcto (que termine con "A")
+- Selecciona el puerto serie correcto (que termine con "A")
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+:::note
+Si estás usando macOS o Linux, por favor elige el puerto con el número menor.
+:::
 
 - Haz clic en `Connect`
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
@@ -266,7 +276,7 @@ La versión de firmware superior a v2.0.3 requiere decir "Turn on the inference 
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI5.png" style={{width:500, height:'auto'}}/></div>
 
-- Haz clic en `Select Model...` y haz clic en el modelo que deseas flashear
+- Haz clic en `Select Model...` y haz clic en el modelo que quieres flashear
 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI6.png" style={{width:500, height:'auto'}}/></div>
 
@@ -281,11 +291,11 @@ La versión de firmware superior a v2.0.3 requiere decir "Turn on the inference 
 La función actual de activación visual ofrece las siguientes opciones de configuración:
 
 - **ID de Objetivo** (`target`): Especifica el ID de objetivo a detectar. Este ID depende del modelo visual utilizado; el valor predeterminado es 0.
-- **Duración de Detección** (`duration`): La unidad es segundos, se utiliza para ajustar la sensibilidad de la activación visual. El valor predeterminado es 1 segundo (este valor predeterminado no incluye el procesamiento de rebote de 1 segundo).
-- **Umbral de Confianza** (`threshold`): El límite inferior de confianza para que el modelo visual reconozca un objeto, se utiliza para ajustar la sensibilidad de detección. Se representa como un porcentaje, el valor predeterminado es 75%.
-- **Período de Enfriamiento** (`interval`): La unidad es segundos, indica el tiempo de espera requerido después de que termine una conversación antes de activarse nuevamente, se utiliza para evitar interrupciones frecuentes por el mismo objeto. El valor predeterminado es 8 segundos.
+- **Duración de Detección** (`duration`): La unidad es segundos, se usa para ajustar la sensibilidad de la activación visual. El valor predeterminado es 1 segundo (este valor predeterminado no incluye el procesamiento de rebote de 1 segundo).
+- **Umbral de Confianza** (`threshold`): El límite inferior de confianza para que el modelo visual reconozca un objeto, se usa para ajustar la sensibilidad de detección. Se representa como porcentaje, el valor predeterminado es 75%.
+- **Período de Enfriamiento** (`interval`): La unidad es segundos, indica el tiempo de espera requerido después de que termine una conversación antes de activarse nuevamente, se usa para evitar interrupciones frecuentes por el mismo objeto. El valor predeterminado es 8 segundos.
 
-Por ejemplo, puedes ajustar la sensibilidad del modelo modificando el parámetro `threshold`. Si encuentras que el umbral actual es demasiado estricto, simplemente dile a Watcher: "Por favor, establece el umbral de confianza al 60%".
+Por ejemplo, puedes ajustar la sensibilidad del modelo modificando el parámetro `threshold`. Si encuentras que el umbral actual es demasiado estricto, simplemente dile a Watcher: "Por favor establece el umbral de confianza al 60%".
 
 ## Solución de Problemas
 
@@ -301,21 +311,21 @@ Por ejemplo, puedes ajustar la sensibilidad del modelo modificando el parámetro
    - Al flashear ESP32-S3, selecciona el puerto COM que termine con "B".
 
 3. **El Dispositivo No Responde**
-   - Usa un alfiler para presionar suavemente el botón de reinicio
+   - Usa un pin para presionar suavemente el botón de reset
    - Intenta borrar antes de flashear
 
-4. **El dispositivo no se activa con la detección visual**
-   - Verifica si hay mensajes de registro relevantes en la salida serial.
+4. **El dispositivo no se activa con detección visual**
+   - Verifica si hay mensajes de registro relevantes en la salida serie.
    - La versión de firmware v2.0.3 requiere decir "Turn on inference switch" a Xiaozhi para habilitar esta función.
 
-5. **El serial muestra registros de reconocimiento visual pero el dispositivo aún no puede activarse**
+5. **El puerto serie muestra registros de reconocimiento visual pero el dispositivo aún no puede activarse**
    - Ve a la Plataforma SenseCraft AI y flashea el modelo Person al chip AI.
 
 ## Preguntas Frecuentes
 
 **P: ¿Puedo flashear otros modelos AI a Himax?**
 
-R: Actualmente, solo se admiten los modelos Face y Person. El flasheo de otros modelos aún no es compatible y estará disponible en una actualización futura.
+R: Actualmente, solo se admiten los modelos Face y Person. El flasheo de otros modelos aún no está soportado y estará disponible en una actualización futura.
 
 ## Soporte Técnico
 

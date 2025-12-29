@@ -53,6 +53,7 @@ Here you can choose any one of the development version to create a project file,
 </table>
 
 
+
 ### Configure platformio.ini for XIAO nRF54L15 Zephyr Support
 
 Once your project is created, locate the platformio.ini file in the root of your project directory (visible in the VS Code Explorer on the left). This file is the heart of your PlatformIO project configuration.
@@ -75,6 +76,18 @@ platform = https://github.com/Seeed-Studio/platform-seeedboards.git
 framework = zephyr
 board = seeed-xiao-nrf54l15
 ```
+:::tip
+If you previously downloaded other XIAO libraries, you must manually delete them before modifying the platform.ini file and re-downloading the required libraries.
+:::
+
+Mac Path：
+`/Users/YourName/.platformio/platforms`
+
+Window Path：
+`C:\Users\000.platformio\platforms\Seeed Studio`
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/
+platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
 <table align="center">
   <tr>
       <th>Operation four</th>
@@ -95,21 +108,6 @@ project(blinky)
 target_sources(app PRIVATE ../src/main.cpp) # If the main source file is.c, please change it to src/main.c
 ```
 Then re-save the platformio.ini file (Ctrl+S or Cmd+S) and wait for it to load completely.
-
-:::tip
-If you previously downloaded other XIAO libraries, you must manually delete them before modifying the platform.ini file and re-downloading the required libraries.
-:::
-
-Mac Path：
-`/Users/YourName/.platformio/platforms`
-
-Window Path：
-`C:\Users\000.platformio\platforms\Seeed Studio`
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/
-platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
-
-
 
 ### Compile and Upload Your First Blink Example
 

@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/1/2025
+  date: 12/22/2025
   author: Frank
 ---
 
@@ -17,89 +17,67 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 22nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with XIAO ePaper Display EN04](https://wiki.seeedstudio.com/epaper_EN04/)
+### [Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, NFC function and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
-
-</div>
-
-### [SenseCAP T2000 Tracker Introduction](https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[**SenseCAP T2000**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), an industrial-grade LoRaWAN® asset tracker, supports GNSS, Bluetooth and Wi-Fi positioning for reliable tracking across indoor and outdoor environments. It features IP67 protection, a built-in 3-axis accelerometer that detects the motion status, and an anti-tamper button that triggers a top-priority alarm if the device is removed.
+This document introduces the getting-started process for the Seeed Studio XIAO ESP32-C5, including hardware overview, development environment setup, board configuration, and basic example uploads. It also covers power options and fundamental features, providing users with a straightforward reference for initial development with the XIAO ESP32-C5.
 
 </div>
 
-### [Deploying AI Models on SenseCAP A1102 Using SenseCraft AI](https://wiki.seeedstudio.com/deploy_ai_with_a1102/)
+### [XIAO ESP32C5 ESP-Mesh Audio](https://wiki.seeedstudio.com/xiao_esp32c5_esp-mesh_audio/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The SenseCAP A1102 is a powerful sensor device that combines advanced AI capabilities with ease of deployment. This guide will walk you through deployingofficial or custom AI models on the A1102 using the **SenseCraft AI** website, offering step-by-step instructions for pairing, configuration, and testing.
+This document demonstrates how to use the Seeed Studio XIAO ESP32-C5 to implement audio transmission over an ESP-Mesh network on the 5 GHz Wi-Fi band. It explains setting up a mesh scenario with the XIAO ESP32-C5 as a root node and a computer as a child node, shows an Arduino example for receiving UDP audio data, and includes a Python script to send simulated audio packets to the board.
 
 </div>
 
-### [Play Subway Surfers with body sensor control](https://wiki.seeedstudio.com/use_the_motion-sensing_function_of_recamera_to_play_games/)
+### [Connecting XIAO ESP32-C5 to Home Assistant](https://wiki.seeedstudio.com/xiao_esp32c5_homeassistant/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_text.gif" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/S_HA_12.png" alt="pir" width={800} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The reCamera is an AI camera equipped with powerful edge computing capabilities. This demo showcases its ability to run the YOLO11n-Pose model in real-time at the device level - without relying on the cloud, it can accurately identify the key points and postures of the human body.
+This wiki tutorial will demonstrate how to connect the Seeed Studio XIAO ESP32-C5 to Home Assistant, as well as how to control devices or transmit data after connecting Grove modules to the XIAO ESP32-C5.
 
 </div>
 
-### [Deploy Facial Recognition on reComputer](https://wiki.seeedstudio.com/facial_recognition_on_the_recomputer/)
+### [Connect IoT Button V2 to Home Assistant via Seeed HA Discovery](https://wiki.seeedstudio.com/iot_button_v2_ha_discovery/)
 
-<div class="video-container">
-<iframe width="800" height="400" src="https://www.youtube.com/embed/wcT_ZYsRbAE" title="Facial Recognition On Raspberry Pi CM5 reComputer with Hailo-8 NPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Button_HA_Discovery/1.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki will guide you through using a reComputer equipped with a `Hailo` NPU to implement real-time facial recognition. In this project, we use `SCRFD-10G` for efficient face detection, capable of quickly and accurately detecting faces of various scales, including small faces, ensuring real-time performance.
+This project will walk you through three main phases: flashing the firmware to your IoT Button V2 using a web-based flasher, installing the Seeed HA Discovery integration via HACS (Home Assistant Community Store), and discovering your button in Home Assistant for smart home automation.
 
 </div>
 
-### [MCP Integration with External Systems](https://wiki.seeedstudio.com/mcp_external_system_integration/)
+### [Real-Time Heat Map Integration with Grafana Using reCamera](https://wiki.seeedstudio.com/integration_of_real-time_heat_map_with_grafana_data_dashboard/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/headmap.gif" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide demonstrates how to integrate your existing business systems with **SenseCAP Watcher** through **MCP (Model Context Protocol)**. Unlike the basic calculator example, this tutorial focuses on a industrial use case: **voice-controlled warehouse management**.
+This project conducts target detection using the YOLO11n model built into reCamera. It performs fuzzy processing on personnel targets and displays a heat map effect. All of this is handled locally within reCamera! And reCamera will send the detected data to the locally running Influxdb database. Then, Grafana reads the data from the Influxdb database to display real-time data dashboards.
 
 </div>
 
-### [WHEELTEC IMU IMU Sensor Getting Start](https://wiki.seeedstudio.com/wheeltec_imu/)
+### [Deploying an Offline Smart Voice Assistant End-to-End](https://wiki.seeedstudio.com/respeaker_voice_assistant/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/wheeltec/wheeltec_imu.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The WHEELTEC H30 is a high-precision attitude sensor designed to accurately measure key data of carriers, including 3D attitude angles, acceleration, angular velocity, and magnetic field strength. Engineered with industrial-grade reliability, this sensor integrates a 3-axis MEMS gyroscope, a 3-axis MEMS accelerometer, and a 3-axis magnetic sensor—delivering robust performance for professional applications.
-
-</div>
-
-### [Stackforce X Series Motors Getting Start](https://wiki.seeedstudio.com/stackforce_series/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010.webp" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This article will introduce how to get started with Stackforce series motors and how to use them with C++ and Python on the reComputer Jetson Super.
+This project demonstrates a fully local smart voice assistant designed for smart offices and smart spaces. It uses the ReSpeaker XVF3800 microphone array for high-quality voice capture, combined with on-device speech-to-text (STT) for accurate transcription. A local large language model (LLM) processes user queries intelligently without relying on the cloud, ensuring privacy and low latency. Text-to-speech (TTS) generates natural voice responses, enabling real-time interaction. The system is ideal for environments such as offices, malls, kiosks, and meeting rooms where secure, offline voice control is essential.
 
 </div>
 
@@ -128,138 +106,103 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 <details>
 <summary>Click here</summary>
 
-<!-- - [weekly wiki on 2.27th](/Seeed_Elderly/weekly_wiki/wiki227)
-- [weekly wiki on 3.06th](/Seeed_Elderly/weekly_wiki/wiki306)
-- [weekly wiki on 3.13th](/Seeed_Elderly/weekly_wiki/wiki313)
-- [weekly wiki on 3.20th](/Seeed_Elderly/weekly_wiki/wiki320)
-- [weekly wiki on 3.27th](/Seeed_Elderly/weekly_wiki/wiki327)
-- [weekly wiki on 4.03rd](/Seeed_Elderly/weekly_wiki/wiki403)
-- [weekly wiki on 4.10th](/Seeed_Elderly/weekly_wiki/wiki410)
-- [weekly wiki on 4.17th](/Seeed_Elderly/weekly_wiki/wiki417)
-- [weekly wiki on 4.24th](/Seeed_Elderly/weekly_wiki/wiki424)
-- [weekly wiki on 5.15th](/Seeed_Elderly/weekly_wiki/wiki515)
-- [weekly wiki on 5.22nd](/Seeed_Elderly/weekly_wiki/wiki522)
-- [weekly wiki on 5.29th](/Seeed_Elderly/weekly_wiki/wiki529)
-- [weekly wiki on 6.05th](/Seeed_Elderly/weekly_wiki/wiki605)
-- [weekly wiki on 6.12th](/Seeed_Elderly/weekly_wiki/wiki612)
-- [weekly wiki on 6.19th](/Seeed_Elderly/weekly_wiki/wiki619)
-- [weekly wiki on 7.03th](/Seeed_Elderly/weekly_wiki/wiki703)
-- [weekly wiki on 7.10th](/Seeed_Elderly/weekly_wiki/wiki710)
-- [weekly wiki on 7.17th](/Seeed_Elderly/weekly_wiki/wiki717)
-- [weekly wiki on 7.24th](/Seeed_Elderly/weekly_wiki/wiki724)
-- [weekly wiki on 7.31th](/Seeed_Elderly/weekly_wiki/wiki731)
-- [weekly wiki on 8.07th](/Seeed_Elderly/weekly_wiki/wiki807)
-- [weekly wiki on 8.21st](/Seeed_Elderly/weekly_wiki/wiki821)
-- [weekly wiki on 8.28th](/Seeed_Elderly/weekly_wiki/wiki828)
-- [weekly wiki on 9.11st](/Seeed_Elderly/weekly_wiki/wiki911)
-- [weekly wiki on 9.18th](/Seeed_Elderly/weekly_wiki/wiki918)
-- [weekly wiki on 9.25th](/Seeed_Elderly/weekly_wiki/wiki925)
-- [weekly wiki on 10.9th](/Seeed_Elderly/weekly_wiki/wiki1009)
-- [weekly wiki on 10.16th](/Seeed_Elderly/weekly_wiki/wiki1016)
-- [weekly wiki on 10.23th](/Seeed_Elderly/weekly_wiki/wiki1023)
-- [weekly wiki on 10.30th](/Seeed_Elderly/weekly_wiki/wiki1030)
-- [weekly wiki on 11.06th](/Seeed_Elderly/weekly_wiki/wiki1106)
-- [weekly wiki on 11.13th](/Seeed_Elderly/weekly_wiki/wiki1113)
-- [weekly wiki on 11.20th](/Seeed_Elderly/weekly_wiki/wiki1120)
-- [weekly wiki on 11.27th](/Seeed_Elderly/weekly_wiki/wiki1127)
-- [weekly wiki on 12.04th](/Seeed_Elderly/weekly_wiki/wiki1204)
-- [weekly wiki on 12.11th](/Seeed_Elderly/weekly_wiki/wiki1211)
-- [weekly wiki on 12.18th](/Seeed_Elderly/weekly_wiki/wiki1218)
-- [weekly wiki on 12.25th](/Seeed_Elderly/weekly_wiki/wiki1225)
-- [weekly wiki on 2024.1.08th](/Seeed_Elderly/weekly_wiki/wiki240108)
-- [weekly wiki on 2024.1.15th](/Seeed_Elderly/weekly_wiki/wiki240115)
-- [weekly wiki on 2024.1.22nd](/Seeed_Elderly/weekly_wiki/wiki240122)
-- [weekly wiki on 2024.1.29th](/Seeed_Elderly/weekly_wiki/wiki240129)
-- [weekly wiki on 2024.2.19th](/Seeed_Elderly/weekly_wiki/wiki240219)
-- [weekly wiki on 2024.2.26th](/Seeed_Elderly/weekly_wiki/wiki240226)
-- [weekly wiki on 2024.3.04th](/Seeed_Elderly/weekly_wiki/wiki240304)
-- [weekly wiki on 2024.3.11th](/Seeed_Elderly/weekly_wiki/wiki240311)
-- [weekly wiki on 2024.3.18th](/Seeed_Elderly/weekly_wiki/wiki240318)
-- [weekly wiki on 2024.3.25th](/Seeed_Elderly/weekly_wiki/wiki240325)
-- [weekly wiki on 2024.4.01st](/Seeed_Elderly/weekly_wiki/wiki240401)
-- [weekly wiki on 2024.4.08th](/Seeed_Elderly/weekly_wiki/wiki240408)
-- [weekly wiki on 2024.4.15th](/Seeed_Elderly/weekly_wiki/wiki240415)
-- [weekly wiki on 2024.4.22nd](/Seeed_Elderly/weekly_wiki/wiki240422)
-- [weekly wiki on 2024.4.29th](/Seeed_Elderly/weekly_wiki/wiki240429)
-- [weekly wiki on 2024.5.06th](/Seeed_Elderly/weekly_wiki/wiki240506)
-- [weekly wiki on 2024.5.13th](/Seeed_Elderly/weekly_wiki/wiki240513)
-- [weekly wiki on 2024.5.20th](/Seeed_Elderly/weekly_wiki/wiki240520)
-- [weekly wiki on 2024.5.27th](/Seeed_Elderly/weekly_wiki/wiki240527)
-- [weekly wiki on 2024.6.03rd](/Seeed_Elderly/weekly_wiki/wiki240603)
-- [weekly wiki on 2024.6.10th](/Seeed_Elderly/weekly_wiki/wiki240610)
-- [weekly wiki on 2024.6.17th](/Seeed_Elderly/weekly_wiki/wiki240617)
-- [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624)
-- [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/wiki240701)
-- [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/wiki240708)
-- [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/wiki240716)
-- [weekly wiki on 2024.7.22nd](/Seeed_Elderly/weekly_wiki/wiki240722)
-- [weekly wiki on 2024.7.29th](/Seeed_Elderly/weekly_wiki/wiki240729)
-- [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
-- [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
-- [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
-- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
-- [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
-- [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
-- [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/wiki240918)
-- [weekly wiki on 2024.9.23rd](/Seeed_Elderly/weekly_wiki/wiki240923)
-- [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930) -->
-- [weekly wiki on 2024.10.07th](/Seeed_Elderly/weekly_wiki/wiki241007)
-- [weekly wiki on 2024.10.14th](/Seeed_Elderly/weekly_wiki/wiki241014)
-- [weekly wiki on 2024.10.21th](/Seeed_Elderly/weekly_wiki/wiki241021)
-- [weekly wiki on 2024.10.28th](/Seeed_Elderly/weekly_wiki/wiki241028)
-- [weekly wiki on 2024.11.04th](/Seeed_Elderly/weekly_wiki/wiki241104)
-- [weekly wiki on 2024.11.11th](/Seeed_Elderly/weekly_wiki/wiki241111)
-- [weekly wiki on 2024.11.18th](/Seeed_Elderly/weekly_wiki/wiki241118)
-- [weekly wiki on 2024.11.25th](/Seeed_Elderly/weekly_wiki/wiki241125)
-- [weekly wiki on 2024.12.02nd](/Seeed_Elderly/weekly_wiki/wiki241202)
-- [weekly wiki on 2024.12.09th](/Seeed_Elderly/weekly_wiki/wiki241209)
-- [weekly wiki on 2024.12.16th](/Seeed_Elderly/weekly_wiki/wiki241216)
-- [weekly wiki on 2024.12.23rd](/Seeed_Elderly/weekly_wiki/wiki241223)
-- [weekly wiki on 2024.12.30th](/Seeed_Elderly/weekly_wiki/wiki241230)
-- [weekly wiki on 2025.1.06th](/Seeed_Elderly/weekly_wiki/wiki250106)
-- [weekly wiki on 2025.1.13th](/Seeed_Elderly/weekly_wiki/wiki250113)
-- [weekly wiki on 2025.1.20th](/Seeed_Elderly/weekly_wiki/wiki250120)
-- [weekly wiki on 2025.1.27th](/Seeed_Elderly/weekly_wiki/wiki250127)
-- [weekly wiki on 2025.2.10th](/Seeed_Elderly/weekly_wiki/wiki250210)
-- [weekly wiki on 2025.2.17th](/Seeed_Elderly/weekly_wiki/wiki250217)
-- [weekly wiki on 2025.2.24th](/Seeed_Elderly/weekly_wiki/wiki250224)
-- [weekly wiki on 2025.3.03rd](/Seeed_Elderly/weekly_wiki/wiki250303)
-- [weekly wiki on 2025.3.10th](/Seeed_Elderly/weekly_wiki/wiki250310)
-- [weekly wiki on 2025.3.17th](/Seeed_Elderly/weekly_wiki/wiki250317)
-- [weekly wiki on 2025.3.24th](/Seeed_Elderly/weekly_wiki/wiki250324)
-- [weekly wiki on 2025.3.31st](/Seeed_Elderly/weekly_wiki/wiki250331)
-- [weekly wiki on 2025.4.07th](/Seeed_Elderly/weekly_wiki/wiki250407)
-- [weekly wiki on 2025.4.14th](/Seeed_Elderly/weekly_wiki/wiki250414)
-- [weekly wiki on 2025.4.21st](/Seeed_Elderly/weekly_wiki/wiki250421)
-- [weekly wiki on 2025.4.28th](/Seeed_Elderly/weekly_wiki/wiki250428)
-- [weekly wiki on 2025.5.05th](/Seeed_Elderly/weekly_wiki/wiki250505)
-- [weekly wiki on 2025.5.12th](/Seeed_Elderly/weekly_wiki/wiki250512)
-- [weekly wiki on 2025.5.19th](/Seeed_Elderly/weekly_wiki/wiki250519)
-- [weekly wiki on 2025.5.26th](/Seeed_Elderly/weekly_wiki/wiki250526)
-- [weekly wiki on 2025.6.02nd](/Seeed_Elderly/weekly_wiki/wiki250602)
-- [weekly wiki on 2025.6.09th](/Seeed_Elderly/weekly_wiki/wiki250609)
-- [weekly wiki on 2025.6.16th](/Seeed_Elderly/weekly_wiki/wiki250616)
-- [weekly wiki on 2025.6.23rd](/Seeed_Elderly/weekly_wiki/wiki250623)
-- [weekly wiki on 2025.6.30th](/Seeed_Elderly/weekly_wiki/wiki250630)
-- [weekly wiki on 2025.7.07th](/Seeed_Elderly/weekly_wiki/wiki250707)
-- [weekly wiki on 2025.7.14th](/Seeed_Elderly/weekly_wiki/wiki250714)
-- [weekly wiki on 2025.7.21st](/Seeed_Elderly/weekly_wiki/wiki250721)
-- [weekly wiki on 2025.7.28th](/Seeed_Elderly/weekly_wiki/wiki250728)
-- [weekly wiki on 2025.8.04th](/Seeed_Elderly/weekly_wiki/wiki250804)
-- [weekly wiki on 2025.8.11th](/Seeed_Elderly/weekly_wiki/wiki250811)
-- [weekly wiki on 2025.8.18th](/Seeed_Elderly/weekly_wiki/wiki250818)
-- [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/wiki250825)
-- [weekly wiki on 2025.9.01st](/Seeed_Elderly/weekly_wiki/wiki250901)
-- [weekly wiki on 2025.9.08th](/Seeed_Elderly/weekly_wiki/wiki250908)
-- [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/wiki250915)
-- [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/wiki250922)
-- [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/wiki250929)
-- [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/wiki251013)
-- [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/wiki251020)
-- [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/wiki251027)
-- [weekly wiki on 2025.11.03rd](/Seeed_Elderly/weekly_wiki/wiki251103)
-- [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/wiki251110)
-- [weekly wiki on 2025.11.17th](/Seeed_Elderly/weekly_wiki/wiki251117)
-- [weekly wiki on 2025.11.24th](/Seeed_Elderly/weekly_wiki/wiki251124)
+<!-- - [weekly wiki on 2024.1.08th](/Seeed_Elderly/weekly_wiki/2024/wiki240108)
+- [weekly wiki on 2024.1.15th](/Seeed_Elderly/weekly_wiki/2024/wiki240115)
+- [weekly wiki on 2024.1.22nd](/Seeed_Elderly/weekly_wiki/2024/wiki240122)
+- [weekly wiki on 2024.1.29th](/Seeed_Elderly/weekly_wiki/2024/wiki240129)
+- [weekly wiki on 2024.2.19th](/Seeed_Elderly/weekly_wiki/2024/wiki240219)
+- [weekly wiki on 2024.2.26th](/Seeed_Elderly/weekly_wiki/2024/wiki240226)
+- [weekly wiki on 2024.3.04th](/Seeed_Elderly/weekly_wiki/2024/wiki240304)
+- [weekly wiki on 2024.3.11th](/Seeed_Elderly/weekly_wiki/2024/wiki240311)
+- [weekly wiki on 2024.3.18th](/Seeed_Elderly/weekly_wiki/2024/wiki240318)
+- [weekly wiki on 2024.3.25th](/Seeed_Elderly/weekly_wiki/2024/wiki240325)
+- [weekly wiki on 2024.4.01st](/Seeed_Elderly/weekly_wiki/2024/wiki240401)
+- [weekly wiki on 2024.4.08th](/Seeed_Elderly/weekly_wiki/2024/wiki240408)
+- [weekly wiki on 2024.4.15th](/Seeed_Elderly/weekly_wiki/2024/wiki240415)
+- [weekly wiki on 2024.4.22nd](/Seeed_Elderly/weekly_wiki/2024/wiki240422)
+- [weekly wiki on 2024.4.29th](/Seeed_Elderly/weekly_wiki/2024/wiki240429)
+- [weekly wiki on 2024.5.06th](/Seeed_Elderly/weekly_wiki/2024/wiki240506)
+- [weekly wiki on 2024.5.13th](/Seeed_Elderly/weekly_wiki/2024/wiki240513)
+- [weekly wiki on 2024.5.20th](/Seeed_Elderly/weekly_wiki/2024/wiki240520)
+- [weekly wiki on 2024.5.27th](/Seeed_Elderly/weekly_wiki/2024/wiki240527)
+- [weekly wiki on 2024.6.03rd](/Seeed_Elderly/weekly_wiki/2024/wiki240603)
+- [weekly wiki on 2024.6.10th](/Seeed_Elderly/weekly_wiki/2024/wiki240610)
+- [weekly wiki on 2024.6.17th](/Seeed_Elderly/weekly_wiki/2024/wiki240617)
+- [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/2024/wiki240624)
+- [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/2024/wiki240701)
+- [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/2024/wiki240708)
+- [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/2024/wiki240716)
+- [weekly wiki on 2024.7.22nd](/Seeed_Elderly/weekly_wiki/2024/wiki240722)
+- [weekly wiki on 2024.7.29th](/Seeed_Elderly/weekly_wiki/2024/wiki240729)
+- [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/2024/wiki240805)
+- [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/2024/wiki240812)
+- [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/2024/wiki240819)
+- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/2024/wiki240826)
+- [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/2024/wiki240902)
+- [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/2024/wiki240909)
+- [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/2024/wiki240918)
+- [weekly wiki on 2024.9.23rd](/Seeed_Elderly/weekly_wiki/2024/wiki240923)
+- [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/2024/wiki240930)
+- [weekly wiki on 2024.10.07th](/Seeed_Elderly/weekly_wiki/2024/wiki241007)
+- [weekly wiki on 2024.10.14th](/Seeed_Elderly/weekly_wiki/2024/wiki241014)
+- [weekly wiki on 2024.10.21th](/Seeed_Elderly/weekly_wiki/2024/wiki241021)
+- [weekly wiki on 2024.10.28th](/Seeed_Elderly/weekly_wiki/2024/wiki241028)
+- [weekly wiki on 2024.11.04th](/Seeed_Elderly/weekly_wiki/2024/wiki241104)
+- [weekly wiki on 2024.11.11th](/Seeed_Elderly/weekly_wiki/2024/wiki241111)
+- [weekly wiki on 2024.11.18th](/Seeed_Elderly/weekly_wiki/2024/wiki241118)
+- [weekly wiki on 2024.11.25th](/Seeed_Elderly/weekly_wiki/2024/wiki241125)
+- [weekly wiki on 2024.12.02nd](/Seeed_Elderly/weekly_wiki/2024/wiki241202)
+- [weekly wiki on 2024.12.09th](/Seeed_Elderly/weekly_wiki/2024/wiki241209)
+- [weekly wiki on 2024.12.16th](/Seeed_Elderly/weekly_wiki/2024/wiki241216)
+- [weekly wiki on 2024.12.23rd](/Seeed_Elderly/weekly_wiki/2024/wiki241223)
+- [weekly wiki on 2024.12.30th](/Seeed_Elderly/weekly_wiki/2024/wiki241230) -->
+- [weekly wiki on 2025.1.06th](/Seeed_Elderly/weekly_wiki/2025/wiki250106)
+- [weekly wiki on 2025.1.13th](/Seeed_Elderly/weekly_wiki/2025/wiki250113)
+- [weekly wiki on 2025.1.20th](/Seeed_Elderly/weekly_wiki/2025/wiki250120)
+- [weekly wiki on 2025.1.27th](/Seeed_Elderly/weekly_wiki/2025/wiki250127)
+- [weekly wiki on 2025.2.10th](/Seeed_Elderly/weekly_wiki/2025/wiki250210)
+- [weekly wiki on 2025.2.17th](/Seeed_Elderly/weekly_wiki/2025/wiki250217)
+- [weekly wiki on 2025.2.24th](/Seeed_Elderly/weekly_wiki/2025/wiki250224)
+- [weekly wiki on 2025.3.03rd](/Seeed_Elderly/weekly_wiki/2025/wiki250303)
+- [weekly wiki on 2025.3.10th](/Seeed_Elderly/weekly_wiki/2025/wiki250310)
+- [weekly wiki on 2025.3.17th](/Seeed_Elderly/weekly_wiki/2025/wiki250317)
+- [weekly wiki on 2025.3.24th](/Seeed_Elderly/weekly_wiki/2025/wiki250324)
+- [weekly wiki on 2025.3.31st](/Seeed_Elderly/weekly_wiki/2025/wiki250331)
+- [weekly wiki on 2025.4.07th](/Seeed_Elderly/weekly_wiki/2025/wiki250407)
+- [weekly wiki on 2025.4.14th](/Seeed_Elderly/weekly_wiki/2025/wiki250414)
+- [weekly wiki on 2025.4.21st](/Seeed_Elderly/weekly_wiki/2025/wiki250421)
+- [weekly wiki on 2025.4.28th](/Seeed_Elderly/weekly_wiki/2025/wiki250428)
+- [weekly wiki on 2025.5.05th](/Seeed_Elderly/weekly_wiki/2025/wiki250505)
+- [weekly wiki on 2025.5.12th](/Seeed_Elderly/weekly_wiki/2025/wiki250512)
+- [weekly wiki on 2025.5.19th](/Seeed_Elderly/weekly_wiki/2025/wiki250519)
+- [weekly wiki on 2025.5.26th](/Seeed_Elderly/weekly_wiki/2025/wiki250526)
+- [weekly wiki on 2025.6.02nd](/Seeed_Elderly/weekly_wiki/2025/wiki250602)
+- [weekly wiki on 2025.6.09th](/Seeed_Elderly/weekly_wiki/2025/wiki250609)
+- [weekly wiki on 2025.6.16th](/Seeed_Elderly/weekly_wiki/2025/wiki250616)
+- [weekly wiki on 2025.6.23rd](/Seeed_Elderly/weekly_wiki/2025/wiki250623)
+- [weekly wiki on 2025.6.30th](/Seeed_Elderly/weekly_wiki/2025/wiki250630)
+- [weekly wiki on 2025.7.07th](/Seeed_Elderly/weekly_wiki/2025/wiki250707)
+- [weekly wiki on 2025.7.14th](/Seeed_Elderly/weekly_wiki/2025/wiki250714)
+- [weekly wiki on 2025.7.21st](/Seeed_Elderly/weekly_wiki/2025/wiki250721)
+- [weekly wiki on 2025.7.28th](/Seeed_Elderly/weekly_wiki/2025/wiki250728)
+- [weekly wiki on 2025.8.04th](/Seeed_Elderly/weekly_wiki/2025/wiki250804)
+- [weekly wiki on 2025.8.11th](/Seeed_Elderly/weekly_wiki/2025/wiki250811)
+- [weekly wiki on 2025.8.18th](/Seeed_Elderly/weekly_wiki/2025/wiki250818)
+- [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/2025/wiki250825)
+- [weekly wiki on 2025.9.01st](/Seeed_Elderly/weekly_wiki/2025/wiki250901)
+- [weekly wiki on 2025.9.08th](/Seeed_Elderly/weekly_wiki/2025/wiki250908)
+- [weekly wiki on 2025.9.15th](/Seeed_Elderly/weekly_wiki/2025/wiki250915)
+- [weekly wiki on 2025.9.22nd](/Seeed_Elderly/weekly_wiki/2025/wiki250922)
+- [weekly wiki on 2025.9.29th](/Seeed_Elderly/weekly_wiki/2025/wiki250929)
+- [weekly wiki on 2025.10.13th](/Seeed_Elderly/weekly_wiki/2025/wiki251013)
+- [weekly wiki on 2025.10.20th](/Seeed_Elderly/weekly_wiki/2025/wiki251020)
+- [weekly wiki on 2025.10.27th](/Seeed_Elderly/weekly_wiki/2025/wiki251027)
+- [weekly wiki on 2025.11.03rd](/Seeed_Elderly/weekly_wiki/2025/wiki251103)
+- [weekly wiki on 2025.11.10th](/Seeed_Elderly/weekly_wiki/2025/wiki251110)
+- [weekly wiki on 2025.11.17th](/Seeed_Elderly/weekly_wiki/2025/wiki251117)
+- [weekly wiki on 2025.11.24th](/Seeed_Elderly/weekly_wiki/2025/wiki251124)
+- [weekly wiki on 2025.12.01st](/Seeed_Elderly/weekly_wiki/2025/wiki251201)
+- [weekly wiki on 2025.12.08th](/Seeed_Elderly/weekly_wiki/2025/wiki251208)
+- [weekly wiki on 2025.12.15th](/Seeed_Elderly/weekly_wiki/2025/wiki251215)
 
 </details>
