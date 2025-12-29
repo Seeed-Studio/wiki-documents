@@ -767,7 +767,7 @@ The pre-trained models of GR00T N1.5 are available via **Hugging Faces**. You ca
 
 All dependencies required for GR00T inference have been pre-configured in a dedicated Docker image.
 
-Use the following command to start the container:
+Use the following command to start the container, `<image_name>:<tag>` replace to what you using:
 
 ```bash
 sudo docker run --rm -it \
@@ -779,7 +779,7 @@ sudo docker run --rm -it \
   -v /etc/X11:/etc/X11 \
   --device /dev/nvhost-vic \
   -v /dev:/dev \
-  lerobot:r38.2.aarch64-cu130-24.04
+  <image_name>:<tag>
 ```
 
 Git clone the source code of Gr00t,and install it:
