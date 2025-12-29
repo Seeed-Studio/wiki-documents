@@ -1,5 +1,5 @@
 ---
-description: Este wiki presenta cómo comenzar con NVIDIA Jetson Thor y proporciona flujos de trabajo de ejemplo para implementar proyectos de IA y robótica en Thor. También se proporcionan instrucciones detalladas paso a paso y documentación de referencia.
+description: Este wiki introduce cómo comenzar con NVIDIA Jetson Thor y proporciona flujos de trabajo de ejemplo para implementar proyectos de IA y robótica en Thor. También se proporcionan instrucciones detalladas paso a paso y documentación de referencia.
 title: Ajustar Isaac GR00T N1.5 para el Brazo LeRobot SO-101 e Implementar en Jetson Thor
 
 keywords:
@@ -49,7 +49,7 @@ Los elementos de hardware incluidos en la caja son una unidad Thor y un adaptado
   <img width ="800" src="https://files.seeedstudio.com/wiki/other/physical.jpeg"/>
 </div>
 
-### Flashear la Imagen del Sistema Thor
+### Flasheando la Imagen del Sistema Thor
 
 A partir del **10 de septiembre de 2025**, la última versión disponible de imagen del sistema para Thor es **38.2**. Si necesitas volver a flashear el sistema para Thor, por favor sigue las instrucciones en esta sección.
 Elementos Requeridos para el Flasheo:
@@ -130,7 +130,7 @@ Esta sección proporciona ejemplos de cómo instalar dependencias de software co
 
 Ten en cuenta que las dependencias listadas son **solo para referencia**—por favor instala paquetes adicionales según los requisitos de sus proyectos individuales.
 
-### Instalación de Dependencias de Desarrollo Esenciales
+### Instalando Dependencias de Desarrollo Esenciales
 
 **Instalación del SDK JetPack**
 <p></p>
@@ -174,7 +174,7 @@ source ~/.bashrc
 conda --version
 ```
 
-**Instalación de la Versión GPU de PyTorch**
+**Instalando la Versión GPU de PyTorch**
 
 Compilar la versión GPU de PyTorch desde el código fuente en Thor puede resultar en problemas de compatibilidad. Por conveniencia, proporcionamos un archivo `.whl` precompilado para ayudar a los desarrolladores a configurar rápidamente un entorno de desarrollo habilitado para PyTorch en Thor.
 
@@ -189,7 +189,7 @@ Otros archivos `.whl` de dependencias precompiladas <mark>Python **3.12** + CUDA
 
 Si el archivo wheel esperado no está disponible, el desarrollador necesitará construir las dependencias requeridas por sí mismo para completar la configuración del entorno de desarrollo.
 
-### Instalación de Dependencias Adicionales
+### Instalando Dependencias Adicionales
 
 Este documento proporciona una imagen Docker de referencia para ayudar a los desarrolladores a adaptarse rápidamente al entorno de desarrollo Jetson AGX Thor.
 <mark>Esta imagen es solo para referencia, y los desarrolladores son libres de elegir si usarla basándose en sus necesidades específicas.</mark>
@@ -515,11 +515,11 @@ docker pull johnnync/isaac-gr00t:r38.2.arm64-sbsa-cu130-24.04
 ```
 
 :::warning
-Esta imagen de Docker no admite la invocación de scripts de LeRobot para la inferencia del modelo `ACT`. Si necesita ejecutar el conjunto completo de scripts de LeRobot, utilice un entorno fuera de esta imagen.
+Esta imagen de Docker no admite la invocación de scripts de LeRobot para la inferencia del modelo `ACT`. Si necesitas ejecutar el conjunto completo de scripts de LeRobot, utiliza un entorno fuera de esta imagen.
 :::
 
 
-Para ejecutar Docker en Thor, consulte el siguiente comando. Reemplace `your_docker_img:tag` con el nombre y etiqueta de su imagen de Docker, o use el ID de la imagen:
+Para ejecutar Docker en Thor, consulta el siguiente comando. Reemplaza `your_docker_img:tag` con el nombre y etiqueta de tu imagen Docker, o usa el ID de la imagen:
 
 ```bash
 sudo docker run --rm -it \
@@ -538,22 +538,22 @@ sudo docker run --rm -it \
 
 ## Recolección de Datos Usando el SO-ARM
 
-Para un tutorial detallado sobre la recolección de datos, consulte el siguiente enlace:  
-[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#record-the-dataset)  
+Para un tutorial detallado sobre la recolección de datos, consulta el siguiente enlace:  
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#grabar-el-conjunto-de-datos](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#grabar-el-conjunto-de-datos)  
 **Este enlace contiene un tutorial completo para el SO-ARM, que cubre configuración, ensamblaje, calibración, recolección de datos, entrenamiento e inferencia.**
 
 La recolección de datos para el brazo robótico lerobot se puede realizar en una PC o directamente en un dispositivo Jetson.
 
-- Método 1: Recopilar datos usando Jetson
-- Método 2: Recopilar datos usando una PC Ubuntu
+- Método 1: Recolectar datos usando Jetson
+- Método 2: Recolectar datos usando una PC Ubuntu
 
 Los procedimientos de recolección de datos son esencialmente los mismos para ambos métodos.
 
 :::warning
-**¡Jetson puede no ser capaz de transmitir simultáneamente dos cámaras USB con los mismos requisitos de ancho de banda. Si conecta dos cámaras USB, deben estar conectadas a diferentes chips de hub USB!**
+**¡Jetson puede no ser capaz de transmitir simultáneamente dos cámaras USB con los mismos requisitos de ancho de banda. Si conectas dos cámaras USB, deben estar conectadas a diferentes chips de hub USB!**
 :::
 
-Para transmitir dos cámaras USB simultáneamente en Thor, después de conectar una cámara al puerto USB-A, también necesitará usar un **hub USB externo conectado a través del puerto USB Type-C**. Esto asegura que la segunda cámara USB esté montada en un controlador de hub USB diferente dentro de Thor.
+Para transmitir dos cámaras USB simultáneamente en Thor, después de conectar una cámara al puerto USB-A, también necesitarás usar un **hub USB externo conectado a través del puerto USB Type-C**. Esto asegura que la segunda cámara USB esté montada en un controlador de hub USB diferente dentro de Thor.
  Un ejemplo de un hub USB Type-C compatible se muestra a continuación:
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/hub.png" height="400"/>
@@ -568,7 +568,7 @@ El dock USB Type-C debe conectarse a puertos específicos en Thor para asegurar 
 ### Configuración del Entorno Lerobot (opcional)
 
 El proceso de configuración del entorno de desarrollo para Lerobot se puede encontrar en la subsección del siguiente enlace:  
-[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#install-lerobot)
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#instalar-lerobot](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#instalar-lerobot)
 
 
 
@@ -576,27 +576,27 @@ El proceso de configuración del entorno de desarrollo para Lerobot se puede enc
 
 
 Los motores en cada articulación del SO-ARM necesitan ser configurados antes del ensamblaje. Los pasos de configuración se pueden encontrar en la subsección del siguiente enlace:    
-[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#configure-the-motors)
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#configurar-los-motores](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#configurar-los-motores)
 
 
 ### Ensamblaje
 
 El proceso de instalación de los brazos maestro y seguidor del SO-ARM se puede encontrar en la subsección del siguiente enlace:  
-[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#assembly](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#assembly)
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#ensamblaje](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#ensamblaje)
 
 ### Calibración del SO-ARM
 
 
-Después de que el SO-ARM haya sido completamente ensamblado, se requiere calibración. Consulte la subsección del siguiente enlace para el procedimiento de calibración:  
-[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrate)
+Después de que el SO-ARM haya sido completamente ensamblado, se requiere calibración. Consulta la subsección del siguiente enlace para el procedimiento de calibración:  
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrar](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#calibrar)
 
 
 
 :::note
-**Al calibrar los brazos robóticos, por favor NO conecte ninguna cámara USB, ya que esto puede causar conflictos de puertos o asignaciones incorrectas de puertos.**
+**Al calibrar los brazos robóticos, por favor NO conectes ninguna cámara USB, ya que esto puede causar conflictos de puertos o asignaciones incorrectas de puertos.**
 :::
 
-**Después de ejecutar el script de calibración, mueva manualmente cada articulación del brazo robótico para asegurar que alcance su rango completo de movimiento. No hacerlo puede resultar en una discrepancia entre las poses de los brazos líder y seguidor durante la teleoperación.**
+**Después de ejecutar el script de calibración, mueve manualmente cada articulación del brazo robótico para asegurar que alcance su rango completo de movimiento! No hacerlo puede resultar en una discrepancia entre las poses de los brazos líder y seguidor durante la teleoperación.**
 
 
 
@@ -604,51 +604,51 @@ Después de que el SO-ARM haya sido completamente ensamblado, se requiere calibr
 ### Agregar Cámara
 
 Generalmente se recomienda instalar una cámara en la muñeca/pinza del brazo robótico, y otra cámara en la superficie del escritorio, para asegurar una cobertura adecuada de la postura del brazo.
-<mark>El enfoque de instalación específico depende de su escenario de aplicación; el ejemplo mostrado a continuación es solo para referencia.</mark>
+<mark>El enfoque específico de instalación depende de tu escenario de aplicación; el ejemplo mostrado a continuación es solo para referencia.</mark>
 
-Para más detalles, consulte la subsección del siguiente enlace:  
-[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#add-cameras)
+Para más detalles, consulta la subsección del siguiente enlace:  
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#agregar-cámaras](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#agregar-cámaras)
 
 
 
 ### Recolección de Datos
 
 Después de completar tanto la instalación de la cámara como la calibración del brazo robótico, el procedimiento de recolección del conjunto de datos se puede encontrar en la subsección del siguiente enlace:  
-[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#record-the-dataset)
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#grabar-el-conjunto-de-datos](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#grabar-el-conjunto-de-datos)
 
 
 
-### Visualización de Datos Recopilados
+### Visualización de Datos Recolectados
 
 
-Para visualizar los datos recopilados en el SO-ARM, consulte la subsección del siguiente enlace:  
-[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#visualize-the-dataset)
+Para visualizar los datos recolectados en el SO-ARM, consulta la subsección del siguiente enlace:  
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#visualizar-el-conjunto-de-datos](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#visualizar-el-conjunto-de-datos)
 
 
 
 ### Entrenamiento de Políticas
 
-Basado en los datos recopilados, el procedimiento para entrenar una Política se puede encontrar en la subsección del siguiente enlace:  
-[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#train-a-policy)
+Basado en los datos recolectados, el procedimiento para entrenar una Política se puede encontrar en la subsección del siguiente enlace:  
+[https://wiki.seeedstudio.com/es/lerobot_so100m_new/#entrenar-una-política](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#entrenar-una-política)
 
 
 
 :::tip
-En las siguientes secciones, introduciremos una plataforma de entrenamiento basada en la nube y demostraremos el uso básico. Puede elegir completar el entrenamiento de manera más eficiente en el servidor remoto.
+En las siguientes secciones, introduciremos una plataforma de entrenamiento basada en la nube y demostraremos el uso básico. Puedes elegir completar el entrenamiento de manera más eficiente en el servidor remoto.
 :::
 
 :::note
-Si elige entrenar la política en la nube, asegúrese de que su conjunto de datos esté subido al servidor en la nube con anticipación, o descargado desde Hugging Face Hub. Sin embargo, debido a posibles problemas de red al descargar directamente desde Hugging Face Hub, se recomienda encarecidamente subir manualmente el conjunto de datos a su servidor en la nube.
+Si eliges entrenar la política en la nube, asegúrate de que tu conjunto de datos esté subido al servidor en la nube con anticipación, o descargado desde Hugging Face Hub. Sin embargo, debido a posibles problemas de red al descargar directamente desde Hugging Face Hub, se recomienda encarecidamente subir manualmente el conjunto de datos a tu servidor en la nube.
 :::
 
 ## Usar NVIDIA Brev para entrenar políticas
 
-NVIDIA Brev proporciona acceso simplificado a instancias de GPU NVIDIA en plataformas de nube populares, configuración automática del entorno y opciones de implementación flexibles, permitiendo a los desarrolladores comenzar a experimentar instantáneamente.
+NVIDIA Brev proporciona acceso simplificado a instancias GPU de NVIDIA en plataformas de nube populares, configuración automática del entorno y opciones de implementación flexibles, permitiendo a los desarrolladores comenzar a experimentar instantáneamente.
 
 URL de acceso a la plataforma:
 [https://login.brev.nvidia.com/signin](https://login.brev.nvidia.com/signin)
 
-Necesitará registrar una cuenta para usar la plataforma. Esta sección introduce el uso básico de la plataforma de entrenamiento.
+Necesitarás registrar una cuenta para usar la plataforma. Esta sección introduce el uso básico de la plataforma de entrenamiento.
 
 ### Habilitación de la Plataforma de Entrenamiento Basada en la Nube
 
@@ -711,10 +711,10 @@ pip install --no-build-isolation flash-attn==2.7.1.post4
 ```
 
 :::warning
-Si entrena o ajusta GR00T en una plataforma de nube, debe usar una GPU con arquitectura Ampere o más nueva (por ejemplo, RTX A6000 o GeForce RTX 4090). **V100 (Volta) no es compatible** para el entrenamiento o ajuste fino de GR00T.
+Si entrenas o ajustas GR00T en una plataforma de nube, debes usar una GPU con arquitectura Ampere o más nueva (por ejemplo, RTX A6000 o GeForce RTX 4090). **V100 (Volta) no es compatible** para el entrenamiento o ajuste fino de GR00T.
 :::
 
-Para más detalles sobre el ajuste fino del modelo, consulte:
+Para más detalles sobre el ajuste fino del modelo, consulta:
 [https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File](https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File)
 
 
@@ -731,7 +731,7 @@ python scripts/gr00t_finetune.py \
 ```
 
 :::note
-La configuración predeterminada de ajuste fino requiere ~25G de VRAM. Si no tiene tanta VRAM, intente agregar la bandera `--no-tune_diffusion_model` al script gr00t_finetune.py.
+La configuración predeterminada de ajuste fino requiere ~25G de VRAM. Si no tienes tanta VRAM, intenta agregar la bandera `--no-tune_diffusion_model` al script gr00t_finetune.py.
 :::
 
 <div align="center">
@@ -739,12 +739,12 @@ La configuración predeterminada de ajuste fino requiere ~25G de VRAM. Si no tie
 </div>
 
 :::note
-Si desea entrenar o ajustar Gr00t en un servidor, puede consultar este [enlace](https://github.com/NVIDIA/Isaac-GR00T).
+Si quieres entrenar o ajustar Gr00t en un servidor, puedes consultar este [enlace](https://github.com/NVIDIA/Isaac-GR00T).
 :::
 
-**Después de que se complete el entrenamiento, es posible que desee descargar el modelo a su máquina local. Pero la barra lateral de Jupyter Notebook no admite navegación directa a las carpetas de entrenamiento del modelo.**
+**Después de que el entrenamiento esté completo, es posible que quieras descargar el modelo a tu máquina local. Pero la barra lateral de Jupyter Notebook no admite navegación directa a las carpetas de entrenamiento del modelo.**
 
-La solución es: Primero comprima la carpeta objetivo en un archivo `.zip` o `.tar.gz`, luego descargue el archivo comprimido a través de la interfaz del notebook. Consulte la figura a continuación para ver un ejemplo.
+La solución es: Primero comprimir la carpeta objetivo en un archivo `.zip` o `.tar.gz`, luego descargar el archivo comprimido a través de la interfaz del notebook. Consulta la figura a continuación para un ejemplo.
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train5.png" width="600"/>
 </div>
@@ -767,7 +767,7 @@ Los modelos preentrenados de GR00T N1.5 están disponibles a través de **Huggin
 
 Todas las dependencias requeridas para la inferencia de GR00T han sido preconfiguradas en una imagen Docker dedicada.
 
-Usa el siguiente comando para iniciar el contenedor:
+Usa el siguiente comando para iniciar el contenedor, reemplaza `<image_name>:<tag>` con lo que estés usando:
 
 ```bash
 sudo docker run --rm -it \
@@ -779,7 +779,7 @@ sudo docker run --rm -it \
   -v /etc/X11:/etc/X11 \
   --device /dev/nvhost-vic \
   -v /dev:/dev \
-  lerobot:r38.2.aarch64-cu130-24.04
+  <image_name>:<tag>
 ```
 
 Clona el código fuente de Gr00t con Git e instálalo:
@@ -799,7 +799,7 @@ Gr00t es completamente compatible con los conjuntos de datos recopilados usando 
 Si ya has realizado el ajuste fino de GR00T N1.5 en NVIDIA Brev, puedes omitir este paso en Thor.
 :::
 
-**El proceso de ajuste fino puede ejecutarse tanto en la plataforma de entrenamiento en la nube proporcionada como directamente dentro del contenedor Docker en Thor**.
+**El proceso de ajuste fino puede ejecutarse ya sea en la plataforma de entrenamiento en la nube proporcionada o directamente dentro del contenedor Docker en Thor**.
 
 Si no has descargado ningún modelo GR00T preentrenado y no planeas usar una versión personalizada, puedes usar el siguiente comando para realizar el ajuste fino basado en los pesos de Hugging Face:
 
@@ -899,7 +899,7 @@ Esto a menudo se debe a problemas de red.
 Puedes instalar e iniciar sesión en Brev CLI en tu host Ubuntu local, luego intentar conectarte a tu instancia en la nube usando SSH desde tu terminal local.
 
 **P2: ¿Cómo subo datos a la plataforma de entrenamiento?**  
-Usa el siguiente comando: `scp <ruta-archivo-local> <nombre-instancia-brev>:<ruta-archivo-remoto>`, por ejemplo `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
+Usa el siguiente comando: `scp <local-file-path> <brev-instance-name>:<remote-file-path>`, por ejemplo `scp -r ./record_2_cameras/ gr00t-trainer:/home/ubuntu/Datasets`
 
 
 **P3: La pantalla de Thor se pone negra una vez que comienza la instalación**  
@@ -918,7 +918,7 @@ Recomendamos usar un teclado con cable durante el flasheo. Los teclados inalámb
 **P7: El ajuste fino en la nube de GR00T reporta "GPU no soportada"**  
 No uses GPUs anteriores a la `arquitectura Ampere` para el ajuste fino en la nube de GR00T. (ej., RTX A6000 o GeForce RTX 4090). V100 (Volta) no es compatible para entrenamiento o ajuste fino de GR00T.
 
-**P8: El nombre del dispositivo serie para la placa controladora del brazo robótico no aparece bajo /dev**  
+**P8: El nombre del dispositivo serial para la placa controladora del brazo robótico no aparece bajo /dev**  
 El sistema Thor de fábrica no incluye controladores `CH34x`. Si faltan, instálalos desde:
 https://github.com/juliagoda/CH341SER
 
@@ -927,10 +927,10 @@ Para usar un hub externo a través del Type-C de Thor, conéctalo al puerto Type
 <div align="center"> <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="200"/> </div>
 
 **P10: Al flashear con una tarjeta de captura, el sistema luego dice que la contraseña del usuario es incorrecta**  
-Al usar un escritorio de tarjeta de captura durante el flasheo, puede ocurrir un error de entrada de teclado (la entrada no coincide con lo que se escribe). Verifica dos veces la contraseña del usuario mientras la estableces.
+Al usar un escritorio de tarjeta de captura durante el flasheo, puede ocurrir un error de entrada de teclado (la entrada no coincide con lo que se escribe). Verifica dos veces la contraseña del usuario mientras la configuras.
 
 **P11: ¿Dónde está el puerto de depuración de Thor?**  
-El puerto de depuración Type-C de Thor está oculto bajo la cubierta magnética. Pueden crearse múltiples nodos de dispositivo serie; usa el que tenga el índice más pequeño para iniciar sesión en Thor vía serie.
+El puerto de depuración Type-C de Thor está oculto bajo la cubierta magnética. Pueden crearse múltiples nodos de dispositivo serial; usa el que tenga el índice más pequeño para iniciar sesión en Thor vía serial.
 
 **P12: No se pueden ejecutar scripts de LeRobot para inferir ACT en la imagen de GR00T**  
 No recomendamos invocar APIs de LeRobot para inferencia de `ACT` en un entorno Python 3.12. Los scripts de `Calibration` y `find port` están bien. Ten en cuenta que Ubuntu 24 usa Python 3.12 por defecto localmente.
@@ -942,15 +942,15 @@ nvidia-smi dmon -s puc
 ```  
 Verifica la columna `sm` en la salida.
 
-**P14: No se pueden leer datos del puerto serie del controlador del brazo robótico**  
-No conectes la cámara antes que la placa controladora SO-ARM; hacerlo puede causar un mapeo incorrecto del dispositivo serie. También asegúrate de que se hayan otorgado los permisos del puerto serie.
+**P14: No se pueden leer datos del puerto serial del controlador del brazo robótico**  
+No conectes la cámara antes que la placa controladora SO-ARM; hacerlo puede causar un mapeo incorrecto del dispositivo serial. También asegúrate de que se hayan otorgado los permisos del puerto serial.
 
 ## Referencias
 
 - https://developer.nvidia.com/embedded/jetpack
 - https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
