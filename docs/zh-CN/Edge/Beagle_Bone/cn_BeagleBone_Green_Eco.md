@@ -12,9 +12,9 @@ last_update:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1-102111198-Seeed-Studio-BeagleBoneR-Green-Eco.jpg" /></div>
 
-**Seeed Studio BeagleBone® Green Eco** 是一款工业级开源单板计算机，与 BeagleBoard.org® 基金会共同开发，采用强大的 **TI AM3358 SoC** 供电。这款"Eco"版本专为高效率而设计，集成了先进的 TI 电源管理芯片 (TPS6521403)，确保优化的能耗。它配备了丰富的 16GB 板载 eMMC 存储和千兆以太网端口，可提供高速网络连接，非常适合要求苛刻的应用。为了实现无缝硬件原型设计，它集成了两个标志性的 Grove 连接器，提供对 Seeed 广泛的 Grove 传感器和模块生态系统的直接、免焊接访问。
+**Seeed Studio BeagleBone® Green Eco** 是一款工业级开源单板计算机，与 BeagleBoard.org® 基金会共同开发，采用强大的 **TI AM3358 SoC** 供电。这款"Eco"版本专为高效率而设计，集成了先进的 TI 电源管理芯片（TPS6521403），确保优化的能耗。它配备了丰富的 16GB 板载 eMMC 存储和千兆以太网端口，可满足高速网络连接的苛刻应用需求。为了实现无缝硬件原型设计，它集成了两个标志性的 Grove 连接器，提供对 Seeed 广泛的 Grove 传感器和模块生态系统的直接、免焊接访问。
 
-在 10 秒内启动 Linux，仅用一根 USB 线缆即可在 5 分钟内开始开发。
+在 10 秒内启动 Linux，仅需一根 USB 线缆即可在 5 分钟内开始开发。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Eco-p-6540.html" target="_blank">
@@ -26,7 +26,7 @@ last_update:
 
 **特性 1：强大的核心与实时处理**
 
-- 集成 TI AM3358 1GHz ARM® Cortex-A8 处理器，配备 NEON™ SIMD 协处理器以实现加速处理。还包括双核可编程实时单元 (PRU-ICSS)，用于确定性、低延迟控制，这对工业自动化和机器人技术至关重要。
+- 集成 TI AM3358 1GHz ARM® Cortex-A8 处理器，配备 NEON™ SIMD 协处理器以实现加速处理。它还包括双核可编程实时单元（PRU-ICSS），用于确定性、低延迟控制，这对工业自动化和机器人技术至关重要。
 
 **特性 2：环保电源管理**
 
@@ -38,7 +38,7 @@ last_update:
 
 **特性 4：丰富的现代连接性**
 
-- 配备升级的高速接口，包括千兆以太网端口和现代 USB Type-C 端口，用于电源和数据传输。为了快速原型设计，还包括两个内置 Grove 连接器（I2C 和 UART）Grove - Seeed Studio，可轻松、免焊接地连接到 Seeed Studio 广泛的传感器和执行器生态系统。
+- 配备升级的高速接口，包括千兆以太网端口和现代 USB Type-C 端口，用于电源和数据传输。为了快速原型设计，它还包括两个内置的 Grove 连接器（I2C 和 UART）Grove - Seeed Studio，可轻松、免焊接地连接到 Seeed Studio 广泛的传感器和执行器生态系统。
 
 **特性 5：开发就绪**
 
@@ -46,32 +46,32 @@ last_update:
 
 ## 规格参数
 
-| 类别       | 项目                  | Seeed Studio BeagleBone® Green Eco                                                                                     | Seeed Studio BeagleBone® Green                                                                 |
+| 类别   | 项目                  | Seeed Studio BeagleBone® Green Eco                                                                                     | Seeed Studio BeagleBone® Green                                                                 |
 |------------|-----------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| 处理器     | 核心                  | TI AM3358 1GHz ARM® Cortex-A8                                                                                          | TI AM3358 1GHz ARM® Cortex-A8                                                                 |
-|            | 加速器                | NEON 浮点单元和 3D 图形加速器                                                                                           | NEON 浮点单元和 3D 图形加速器                                                                  |
-| 内存       | RAM                   | 512MB DDR3L, 800MHz                                                                                                    | 512MB DDR3L, 800MHz                                                                           |
-|            | 闪存存储              | **16GB eMMC (Kingston EMMC16G-WW28)**                                                                                  | 4GB 8-bit eMMC                                                                                |
+| 处理器  | 核心                  | TI AM3358 1GHz ARM® Cortex-A8                                                                                          | TI AM3358 1GHz ARM® Cortex-A8                                                                 |
+|            | 加速器          | NEON 浮点单元和 3D 图形加速器                                                                     | NEON 浮点单元和 3D 图形加速器                                            |
+| 内存     | RAM                   | 512MB DDR3L, 800MHz                                                                                                    | 512MB DDR3L, 800MHz                                                                           |
+|            | 闪存存储         | **16GB eMMC (Kingston EMMC16G-WW28)**                                                                                  | 4GB 8-bit eMMC                                                                                |
 |            | EEPROM                | 4KB                                                                                                                    | 4KB                                                                                    |
-|            | 外部存储              | microSD 卡槽，支持最大 32GB                                                                                            | microSD 卡槽，支持最大 32GB                                                                   |
-| 电源       | 电源管理              | **TI TPS6521403 PMIC**                                                                                                     | TI TPS65217C PMIC                                                                             |
-|            | 电压调节器            | TI TPS62A01DRL (3.3V Buck 转换器);TI TPS74501PDRV (1.8V 常开 LDO);TI TPS2117DRL (电源多路复用器)                    | TI TL5209DR (3.3V LDO 调节器)                                                                 |
-|            | 输入电压              | 5V DC (通过 USB Type-C)                                                                                                | 5V DC (通过 micro USB)                                                                        |
-| 接口       | USB                   | 1x USB 2.0 Host Type-A;1x USB 2.0 Type-C (电源和设备通信)                                                           | 1x USB 客户端 (电源和通信);1x USB 主机                                                        |
-|            | 网络                  | **千兆以太网 (10/100/1000Mbps)**                                                                                       | 以太网 (10/100Mbit)                                                                           |
-|            | 扩展接头              | 2x 46 针接头                                                                                                           | 2x 46 针接头                                                                                  |
+|            | 外部存储      | microSD 卡槽，支持最大 32GB                                                                                 | microSD 卡槽，支持最大 32GB                                                        |
+| 电源      | 电源管理      | **TI TPS6521403 PMIC**                                                                                                     | TI TPS65217C PMIC                                                                             |
+|            | 电压调节器     | TI TPS62A01DRL (3.3V Buck 转换器);TI TPS74501PDRV (1.8V Always-On LDO);TI TPS2117DRL (Power Mux)            | TI TL5209DR (3.3V LDO 调节器)                                                              |
+|            | 输入电压         | 5V DC (通过 USB Type-C)                                                                                                 | 5V DC (通过 micro USB)                                                                         |
+| 接口 | USB                   | 1x USB 2.0 Host Type-A;1x USB 2.0 Type-C (电源和设备通信)                                            | 1x USB client (电源和通信);1x USB host                                                 |
+|            | 网络               | **千兆以太网 (10/100/1000Mbps)**                                                                                 | 以太网 (10/100Mbit)                                                                         |
+|            | 扩展接头     | 2x 46 针接头                                                                                                      | 2x 46 针接头                                                                             |
 |            | Grove                 | 1x I2C, 1x UART2                                                                                                       | 1x I2C, 1x UART2                                                                              |
-|            | 按钮                  | 1x 复位按钮;1x 用户(启动)按钮                                                                                          | 1x 复位按钮;1x 用户(启动)按钮;1x 电源按钮                                                     |
-|            | 指示灯                | 1x 电源 LED，4x 用户可编程 LED                                                                                         | 4x LED (心跳、microSD、CPU、eMMC)                                                             |
-| 物理参数   | 尺寸                  | 86.4mm x 53.3mm x 18mm                                                                                                 | 86.4mm x 53.3mm x 18mm                                                                        |
-|            | 重量                  | 40g                                                                                                                    | 45g                                                                                           |
-|            | 工作温度              | **-40 ~ 85℃**                                                                                                              | 0 ~ 75℃                                                                                       |
+|            | 按钮               | 1x 复位按钮;1x 用户(启动)按钮                                                                               | 1x 复位按钮;1x 用户(启动)按钮;1x 电源按钮                                  |
+|            | 指示灯            | 1x 电源 LED，4x 用户可编程 LED                                                                                | 4x LED (心跳、microSD、CPU、eMMC)                                                       |
+| 物理   | 尺寸            | 86.4mm x 53.3mm x 18mm                                                                                                 | 86.4mm x 53.3mm x 18mm                                                                        |
+|            | 重量                | 40g                                                                                                                    | 45g                                                                                           |
+|            | 工作温度 | **-40 ~ 85℃**                                                                                                              | 0 ~ 75℃                                                                                       |
 
 ## 应用场景
 
 - 物联网
 - 智能家居
-- 工业应用
+- 工业
 - 自动化与过程控制
 - 人机界面
 - 传感器集线器
@@ -88,7 +88,7 @@ BeagleBone® Green Eco 基于德州仪器的 AM335x ARM Cortex-A8 处理器构�
 
 **处理器**
 BeagleBone® Green Eco 集成了德州仪器 AM335x 1GHz ARM® Cortex-A8 处理器，在单个 SoC 内结合了计算处理、图形加速和实时控制功能。该架构实现了带有 NEON™ SIMD 引擎和 VFPv3 浮点单元的 ARMv7-A，可高效执行复杂的计算任务，同时保持嵌入式应用的功耗效率。
-一个显著特性是可编程实时单元子系统和工业通信子系统 (PRU-ICSS)，包含独立于主 ARM 处理器运行的双 32 位 RISC 核心。这些 PRU 能够实现亚微秒响应时间的确定性实时控制和专用工业通信协议的实现。AM335x 通过 TI 的 Processor SDK 和开发环境支持包括 Linux 在内的高级操作系统和实时操作系统。
+一个独特的特性是可编程实时单元子系统和工业通信子系统（PRU-ICSS），包含独立于主 ARM 处理器运行的双 32 位 RISC 核心。这些 PRU 能够实现亚微秒响应时间的确定性实时控制和专用工业通信协议的实现。AM335x 通过 TI 的 Processor SDK 和开发环境支持包括 Linux 在内的高级操作系统和实时操作系统。
 
 - AM335x 1GHz ARM® Cortex-A8 处理器，15.0mm x 15.0mm，NFBGA (324)
 - NEON™ SIMD 协处理器和 VFPv3 浮点单元，用于加速媒体和信号处理
@@ -111,18 +111,18 @@ BeagleBone® Green Eco 支持：
 - 1x USB 2.0 Type-C 端口，用于供电和通信
 - 1x USB 2.0 主机接口，Type-A
 
-**扩展连接器/接头，支持应用特定的扩展板**
+**扩展连接器/排针，支持应用专用扩展板**
 
-- 2x 46 针接头
-- 1x 6 针 UART0 接头
+- 2x 46 针排针
+- 1x 6 针 UART0 排针
 - 两个 Grove 连接器（一个 I2C 和一个 UART），便于连接到 Grove 传感器和执行器生态系统
 
-**接头引脚定义**
+**排针定义**
 
 每个数字 I/O 引脚有 8 种不同的模式可供选择，包括 GPIO。
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/1.png" /></div>
 
-**65 个可能的数字 I/O**
+**65 个可用数字 I/O**
 
 :::note
     在 GPIO 模式下，每个数字 I/O 都可以产生中断。
@@ -133,7 +133,7 @@ BeagleBone® Green Eco 支持：
 **PWM 和定时器**
 
 :::note
-最多 8 个数字 I/O 引脚可以配置为脉宽调制器 (PWM)，用于产生控制电机的信号或创建伪模拟电压电平，而不占用任何额外的 CPU 周期。
+最多 8 个数字 I/O 引脚可以配置为脉宽调制器 (PWM)，用于产生控制电机的信号或创建伪模拟电压电平，而不占用额外的 CPU 周期。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/3.png" /></div>
@@ -141,7 +141,7 @@ BeagleBone® Green Eco 支持：
 **模拟输入**
 
 :::note
-确保不要向模拟输入引脚输入超过 1.8V 的电压。这是一个单个 12 位模数转换器，有 8 个通道，其中 7 个在接头上可用。
+确保不要向模拟输入引脚输入超过 1.8V 的电压。这是一个单 12 位模数转换器，有 8 个通道，其中 7 个在排针上可用。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/4.png" /></div>
@@ -149,7 +149,7 @@ BeagleBone® Green Eco 支持：
 **UART**
 
 :::note
-有一个专用接头用于访问 UART0 引脚和连接调试电缆。另外五个串行端口连接到扩展接头，但其中一个只有单向连接到接头。
+有一个专用排针用于访问 UART0 引脚和连接调试线缆。另外五个串行端口引出到扩展排针，但其中一个只有单向引出到排针。
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Eco/img/5.png" /></div>
@@ -203,7 +203,7 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 :::note
     对于 Windows 系统，请注意：
 
-- Windows 驱动程序认证警告可能会弹出两到三次。点击"忽略"、"安装"或"运行"
+- Windows 驱动程序认证警告可能会弹出两到三次。点击 "Ignore"、"Install" 或 "Run"
 - 要检查您运行的是 32 位还是 64 位 Windows，请参见[此处](https://support.microsoft.com/kb/827218)。
 - 在没有最新服务版本的系统上，您可能会遇到错误 (0xc000007b)。在这种情况下，请[安装](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523)并重试：
 - 您可能需要重启 Windows。
@@ -221,10 +221,10 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 
 **步骤 3. 浏览到您的 Beagle**
 
-使用 Chrome 或 Firefox（Internet Explorer 不能工作），浏览到运行在您开发板上的 Web 服务器。它将加载一个演示文稿，向您展示开发板的功能。使用键盘上的箭头键导航演示文稿。
+使用 Chrome 或 Firefox（Internet Explorer 不支持），浏览到运行在您开发板上的 Web 服务器。它将加载一个演示文稿，向您展示开发板的功能。使用键盘上的箭头键导航演示文稿。
 
 点击 [http://192.168.7.2](http://192.168.7.2) 启动到您的 Seeed Studio BeagleBone® Green。
-较旧的软件镜像需要您弹出 BeagleBone® 驱动器来启动网络。使用最新的软件镜像，不再需要该步骤。
+较旧的软件镜像需要您弹出 BeagleBone® 驱动器以启动网络。使用最新的软件镜像，不再需要该步骤。
 
 [![Click to view larger image](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/launch.png)
 
@@ -240,7 +240,7 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 
 **步骤 1. 下载最新软件镜像**
 
-首先，您必须在这里下载合适的镜像。
+首先，您必须在此处下载合适的镜像。
 
 [![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/down_latest_image.png)](https://www.beagleboard.org/distros/beaglebone-black-debian-12-11-2025-08-07-iot-vscode-v6-12-x)
 
@@ -262,7 +262,7 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 
 **步骤 3. 安装 SD 卡编程工具**
 
-下载并安装 [Image Writer for Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download)。确保下载二进制分发版。
+下载并安装 [Image Writer for Windows](https://sourceforge.net/projects/win32diskimager/files/latest/download)。确保下载二进制发行版。
 
 **步骤 4. 将镜像写入您的 SD 卡**
 
@@ -276,7 +276,7 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 
 :::note
 
-- 您可能会看到关于损坏设备的警告。只要您指向您的 SD 卡进行写入，接受这个警告是没问题的。
+- 您可能会看到关于损坏设备的警告。只要您指向您的 SD 卡进行写入，接受此警告是可以的。
 - 此时您不应该将 BeagleBone® 连接到计算机。
 - 此过程可能需要长达 10 分钟。
 
@@ -309,13 +309,13 @@ Seeed Studio BeagleBone® Green 将作为闪存驱动器运行，为您提供文
 如果您没有发现上述跟踪灯，请按 RESET 按钮重置开发板。
 :::
 
-当刷写完成时，所有 4 个 USRx LED 将**熄灭**。最新的 Debian 刷写镜像会在完成后自动关闭开发板。这可能需要**10 分钟**。关闭开发板电源，取出 SD 卡并重新上电即可完成。
+当刷写完成时，所有 4 个 USRx LED 将会**熄灭**。最新的 Debian 刷写镜像会在完成后自动关闭开发板。这可能需要**10 分钟**。关闭开发板电源，取出 SD 卡并重新上电即可完成。
 
-## Seeed Studio BeagleBone® Green 的 Grove 模块
+## Grove for Seeed Studio BeagleBone® Green
 
-Grove 是一个模块化、标准化的连接器原型系统。Grove 采用积木式方法来组装电子设备。与基于跳线或焊接的系统相比，它更容易连接、实验和构建，并简化了学习系统，但不会简化到变得愚蠢的程度。市面上的一些其他原型系统将水平降低到积木块。这样学习很有用，但 Grove 系统允许您构建真正的系统。它需要一些学习和专业知识来连接设备。
+Grove 是一个模块化、标准化的连接器原型系统。Grove 采用积木式方法来组装电子设备。与基于跳线或焊接的系统相比，它更容易连接、实验和构建，并简化了学习系统，但不会简化到变得愚蠢的程度。其他一些原型系统将水平降低到积木块。这样学习很有用，但 Grove 系统允许您构建真正的系统。它需要一些学习和专业知识来连接东西。
 
-以下列出了与 Seeed Studio BeagleBone® Green 兼容良好的 Grove 模块。
+下面列出了与 Seeed Studio BeagleBone® Green 兼容良好的 Grove 模块。
 
 |SKU        |名称|接口|链接|
 |-----------|-----|-----|----------|
@@ -336,7 +336,7 @@ Grove 是一个模块化、标准化的连接器原型系统。Grove 采用积�
 |113020003 |Grove - GPS                         |UART| [链接](https://www.seeedstudio.com/Grove-GPS-p-959.html)|
 |104030007 |Grove - 绿色 LED |I/O| [链接](https://www.seeedstudio.com/Grove-Green-LED-p-1144.html)|
 |103020013 |Grove - I2C ADC |I2C| [链接](https://wiki.seeedstudio.com/cn/Grove-I2C_ADC/)|
-|103020006 |Grove - I2C Hub |I2C| [链接](https://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)|
+|103020006 |Grove - I2C 集线器 |I2C| [链接](https://www.seeedstudio.com/Grove-I2C-Hub-p-851.html)|
 |101020079 |Grove - IMU 10DOF |I2C| [链接](https://www.seeedstudio.com/Grove-IMU-10DOF-p-2386.html)|
 |101020080 |Grove - IMU 9DOF v2.0 |I2C| [链接](https://www.seeedstudio.com/Grove-IMU-9DOF-v2.0-p-2400.html)|
 |101020040 |Grove - 红外距离中断器 |I/O| [链接](https://www.seeedstudio.com/Grove-IR-Distance-Interrupter-p-1278.html)|
@@ -350,16 +350,16 @@ Grove 是一个模块化、标准化的连接器原型系统。Grove 采用积�
 |101020015 |Grove - 温度传感器 |Analog| [链接](https://www.seeedstudio.com/Grove-Temperature-Sensor-p-774.html)|
 |101020019 |Grove - 温湿度传感器 Pro |Analog| [链接](https://www.seeedstudio.com/Grove-Temperature&Humidity-Sensor-Pro-p-838.html)|
 
-## Seeed Studio BeagleBone® Green 的扩展板
+## Cape for Seeed Studio BeagleBone® Green
 
-当您开始一个项目时，您将需要一些扩展板。已经有许多适用于 Seeed Studio BeagleBone® Green 的扩展板，包括 LCD 显示屏、电机驱动器以及 HDMI 扩展等。以下是一些推荐的扩展板。
+当您开始一个项目时，您将需要一些扩展板。已经有许多适用于 Seeed Studio BeagleBone® Green 的 cape，它们包括 LCD 显示屏、电机驱动器以及 HDMI 扩展等。以下是一些推荐的产品。
 
-|Grove 扩展板| 电机桥接扩展板|HDMI 扩展板|
+|Grove Cape| 电机桥接 Cape|HDMI Cape|
 |------------|----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product2.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product3.jpg)|
 |[立即购买！](https://www.seeedstudio.com/Grove-Cape-for-BeagleBone-Series-p-1718.html)|[立即购买！](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)|[立即购买！](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-HDMI-Cape-p-2570.html)|
 
-|Grove 扩展板| 5 英寸 LCD|7 英寸 LCD|
+|Grove Cape| 5 英寸 LCD|7 英寸 LCD|
 |------------|----------------|----------|
 |![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product5.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/BeagleBone_Green/images/product6.jpg)|
 |[立即购买！](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)|[立即购买！](https://www.seeedstudio.com/5-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2642.html)|[立即购买！](https://www.seeedstudio.com/7-Inch-BeagleBone-Green-LCD-Cape-with-Resistive-Touch-p-2643.html)|
@@ -373,13 +373,16 @@ Grove 是一个模块化、标准化的连接器原型系统。Grove 采用积�
 - [故障排除](https://beagleboard.org/getting-started#troubleshooting)
 - [硬件文档](https://beagleboard.org/getting-started#hardware)
 - [BeagleBoard 项目](https://beagleboard.org/project)
-- [Seeed Studio BeagleBone® Green Eco 的 CE 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-CE.pdf)
-- [Seeed Studio BeagleBone® Green Eco 的 FCC 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-FCC.pdf)
+- [Seeed Studio BeagleBone® Green Eco CE 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-CE.pdf)
+- [Seeed Studio BeagleBone® Green Eco FCC 认证](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/102111198-FCC.pdf)
 
 ## 资源
 
 - **[PDF]** [AM335X 数据手册](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
 - **[PDF]** [Seeed Studio BeagleBone Green Eco 原理图](https://files.seeedstudio.com/products/102111198/res/BeagleBone%20Green%20Eco_V1.0_SCH_250814.pdf)
+- **[PDF]** [Seeed Studio BeagleBone Green Eco 结构参考](https://files.seeedstudio.com/products/102111198/res/BBG_Eco_Structure_Reference_20251219.pdf)
+- **[DXF]** [Seeed Studio BeagleBone Green Eco 结构参考](https://files.seeedstudio.com/products/102111198/res/BBG_Eco_Structure_Reference_20251219.dxf)
+
 
 ## 技术支持与产品讨论
 

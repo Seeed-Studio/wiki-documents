@@ -21,7 +21,7 @@ last_update:
         <img src="https://files.seeedstudio.com/wiki/xiao_topicpage/main.jpg" style={{width:1000, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>Seeed Studio XIAO 系列是一系列拇指大小的强大微控制器单元（MCU），专为需要高性能和无线连接的空间受限项目量身定制。XIAO 系列体现了流行硬件平台如 ESP32、RP2350、RP2040、nRF52840 和 SAMD21 的精髓，兼容 Arduino，是您在边缘设备上拥抱微型机器学习（TinyML）的完美工具集。</font>
+        <font size={"2.1"}>Seeed Studio XIAO 系列是一系列拇指大小的强大微控制器单元（MCU），专为需要高性能和无线连接的空间受限项目量身定制。XIAO 系列体现了 ESP32、RP2350、RP2040、nRF52840 和 SAMD21 等流行硬件平台的精髓，兼容 Arduino，是您在边缘设备上拥抱微型机器学习（TinyML）的完美工具集。</font>
     </div>
 </div>
 <br/> <br/>
@@ -48,6 +48,10 @@ last_update:
       <th><a href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html">Seeed Studio XIAO RA4M1</a></th>
       <th><a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html">Seeed Studio XIAO MG24</a></th>
       <th><a href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html">Seeed Studio XIAO MG24 Sense</a></th>
+
+      <th><a href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html">Seeed Studio XIAO nRF54L15</a></th>
+      <th><a href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html">Seeed Studio XIAO nRF54L15 Sense</a></th>
+
    </tr>
    <tr>
       <th>SKU</th>
@@ -63,21 +67,27 @@ last_update:
       <td align="center">102010551</td>
       <td align="center">102010590</td>
       <td align="center">102010610</td>
+
+      <td align="center">101991421</td>
+      <td align="center">101991422</td>
    </tr>
    <tr>
       <th>简短描述</th>
-      <td>通用，具有很强的稳定性与兼容性</td>
-      <td>兼容树莓派 RP2040 生态</td>
-      <td>兼容树莓派 RP2350 生态</td>
+      <td>通用型，具有强大的稳定性和兼容性</td>
+      <td>兼容 Raspberry Pi RP2040 生态系统</td>
+      <td>兼容 Raspberry Pi RP2350 生态系统</td>
       <td>超低功耗蓝牙 5.0，适用于消费级产品应用</td>
-      <td>XIAO nRF52840 的高级版本，板载麦克风与六轴 IMU</td>
-      <td>具备 WiFi 与 BLE，亲民的 RISC-V</td>
-      <td>具备 Wi-Fi 6、BLE、Zigbee 与用于 Matter 的 Thread</td>
-      <td>具备 WiFi 与 BLE，高性能</td>
-      <td>XIAO ESP32S3 的高级版本，配备 OV2640/OV3660 摄像头与麦克风</td>
+      <td>XIAO nRF52840 的高级版本，配备板载麦克风和 6 轴 IMU</td>
+      <td>具有 WiFi 和 BLE，经济实惠的 Risc-V</td>
+      <td>具有 WiFi-6、BLE、Zigbee 和 Thread，支持 Matter</td>
+      <td>具有 WiFi 和 BLE，高性能</td>
+      <td>XIAO ESP32S3 的高级版本，配备 OV2640 摄像头/OV3660 摄像头和麦克风</td>
       <td>瑞萨 32 位 ARM Cortex-M4 MCU，兼容 Arduino IDE</td>
-      <td>支持 Matter、OpenThread、Zigbee、低功耗蓝牙（BLE 5.3）、蓝牙 Mesh、私有 2.4 GHz</td>
-      <td>XIAO MG24 的高级版本，带六轴加速度传感器与麦克风</td>
+      <td>Matter、Open Thread、Zigbee、低功耗蓝牙（BLE 5.3）、蓝牙网格、专有 2.4 GHz</td>
+      <td>XIAO MG24 的高级版本，配备六轴加速度传感器和麦克风</td>
+
+      <td>超低功耗，多协议 2.4 GHz，蓝牙 6.0，Matter，Zigbee，适用于物联网</td>
+      <td>XIAO nRF54L15 的高级版本，配备板载麦克风和 6 轴 IMU</td>
    </tr>
    <tr>
       <th>芯片</th>
@@ -93,27 +103,35 @@ last_update:
       <td align="center">Renesas RA4M1</td>
       <td align="center">Silicon Labs EFR32MG24</td>
       <td align="center">Silicon Labs EFR32MG24 Sense</td>
+
+      <td align="center">Nordic nRF54L15</td>
+      <td align="center">Nordic nRF54L15</td>
+
+
    </tr>
    <tr>
       <th>架构</th>
-      <td align="center">Cortex-M0+<br/>最高运行至 48MHz</td>
-      <td align="center">双核 Cortex-M0+<br/>最高运行至 133 MHz</td>
-      <td align="center">双 ARM Cortex-M33<br/>最高运行至 150 MHz，带 FPU<br/>可切换为 RISC-V（双 Hazard3 RISC-V 内核）</td>
-      <td align="center">Cortex-M4<br/>最高运行至 64 MHz</td>
-      <td align="center">Cortex-M4<br/>最高运行至 64 MHz</td>
-      <td align="center">RISC-V<br/>最高运行至 160 MHz</td>
-      <td align="center">两颗 RISC-V 处理器<br/>高性能核最高至 160 MHz<br/>低功耗核最高至 20 MHz</td>
-      <td align="center">双核 Xtensa LX7<br/>最高运行至 240 MHz</td>
-      <td align="center">双核 Xtensa LX7<br/>最高运行至 240 MHz</td>
-      <td align="center">Cortex-M4<br/>最高运行至 48 MHz，带 FPU</td>
-      <td align="center">ARM Cortex-M33<br/>最高运行至 78 MHz</td>
-      <td align="center">ARM Cortex-M33<br/>最高运行至 78 MHz</td>
+      <td align="center">Cortex-M0+<br/>运行频率高达 48MHz</td>
+      <td align="center">双核 Cortex-M0+<br/>运行频率高达 133 MHz</td>
+      <td align="center">双 ARM Cortex-M33<br/>运行频率高达 150 MHz，带 FPU<br/>可切换 RISC-V，使用双 Hazard3 RISC-V 核心</td>
+      <td align="center">Cortex-M4<br/>运行频率高达 64 MHz</td>
+      <td align="center">Cortex-M4<br/>运行频率高达 64 MHz</td>
+      <td align="center">RISC-V<br/>运行频率高达 160 MHz</td>
+      <td align="center">两个 RISC-V 处理器<br/>高性能处理器运行频率高达 160 MHz<br/>低功耗处理器运行频率高达 20 MHz</td>
+      <td align="center">双核 Xtensa LX7<br/>运行频率高达 240 MHz</td>
+      <td align="center">双核 Xtensa LX7<br/>运行频率高达 240 MHz</td>
+      <td align="center">Cortex-M4<br/>运行频率高达 48 MHz，带 FPU</td>
+      <td align="center">ARM Cortex-M33<br/>运行频率高达 78 MHz</td>
+      <td align="center">ARM Cortex-M33<br/>运行频率高达 78 MHz</td>
+
+      <td align="center">双核<br/>一个 Arm Cortex‑M33 和一个 RISC‑V，运行频率高达 128 MHz</td>
+      <td align="center">双核<br/>一个 Arm Cortex‑M33 和一个 RISC‑V，运行频率高达 128 MHz</td>
    </tr>
    <tr>
       <th>RAM</th>
       <td align="center">32 KB SRAM</td>
       <td align="center">264 KB SRAM</td>
-      <td align="center">520kB SRAM<br/>2MB 闪存</td>
+      <td align="center">520kB SRAM<br/>2MB Flash</td>
       <td align="center">256 KB RAM</td>
       <td align="center">256 KB RAM</td>
       <td align="center">400 KB SRAM</td>
@@ -123,9 +141,13 @@ last_update:
       <td align="center">32 KB SRAM</td>
       <td align="center">256kB RAM</td>
       <td align="center">256kB RAM</td>
+
+      <td align="center">256kB RAM</td>
+      <td align="center">256kB RAM</td>
+
    </tr>
    <tr>
-      <th>闪存与 ROM（芯片）</th>
+      <th>Flash&ROM（芯片）</th>
       <td align="center">256KB</td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
@@ -138,9 +160,12 @@ last_update:
       <td align="center">256KB</td>
       <td align="center">1536KB+4MB</td>
       <td align="center">1536KB+4MB</td>
+
+      <td align="center">1.5MB </td>
+      <td align="center">1.5MB</td>
    </tr>
    <tr>
-      <th>板载闪存</th>
+      <th>Flash（板载）</th>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center">2MB</td>
       <td align="center"><font size={"3"}>❌</font></td>
@@ -151,6 +176,9 @@ last_update:
       <td align="center">8MB</td>
       <td align="center">8MB</td>
       <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
+
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
    </tr>
@@ -164,10 +192,12 @@ last_update:
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
-      <td align="center">OV2640/OV3660 摄像头，麦克风</td>
+      <td align="center">OV2640 摄像头/OV3660，麦克风</td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center">六轴加速度传感器，麦克风</td>
+      <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center">IMU，麦克风</td>
    </tr>
    <tr>
       <th>PWM/模拟引脚</th>
@@ -183,6 +213,10 @@ last_update:
       <td align="center">19/14</td>
       <td align="center">22/18</td>
       <td align="center">22/18</td>
+
+      <td align="center">16/4</td>
+      <td align="center">14/4</td>
+
    </tr>
    <tr>
       <th>I2C/UART/SPI</th>
@@ -196,6 +230,9 @@ last_update:
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
+
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
    </tr>
@@ -213,9 +250,12 @@ last_update:
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+
+      <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
    </tr>
    <tr>
-      <th>Wi-Fi</th>
+      <th>WiFi</th>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
@@ -226,6 +266,9 @@ last_update:
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
+
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
    </tr>
@@ -243,6 +286,9 @@ last_update:
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+
+      <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
    </tr>
    <tr>
       <th>启动按钮</th>
@@ -256,6 +302,9 @@ last_update:
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
+
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
    </tr>
@@ -273,9 +322,12 @@ last_update:
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+
+      <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
    </tr>
    <tr>
-      <th>电池充电指示灯与芯片</th>
+      <th>电池充电 LED 和芯片</th>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
@@ -286,6 +338,9 @@ last_update:
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
+
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
    </tr>
@@ -303,9 +358,11 @@ last_update:
       <td align="center">45μA</td>
       <td align="center">1.95μA</td>
       <td align="center">1.95μA</td>
+      <td align="center">-</td>
+      <td align="center">-</td>
    </tr>
    <tr>
-      <td colspan="13" style={{textAlign: 'center', backgroundColor: '#007bff', padding: '10px'}}><a href="https://wiki.seeedstudio.com/cn/xiao_topic_page/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 兼容项目</a></td>
+      <td colspan="15" style={{textAlign: 'center', backgroundColor: '#007bff', padding: '10px'}}><a href="https://wiki.seeedstudio.com/cn/xiao_topic_page/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 兼容项目</a></td>
    </tr>
    <tr>
       <th>Arduino</th>
@@ -321,6 +378,8 @@ last_update:
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
    </tr>
    <tr>
       <th>PlatformIO</th>
@@ -333,9 +392,12 @@ last_update:
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
    </tr>
    <tr>
       <th>MicroPython</th>
@@ -351,6 +413,8 @@ last_update:
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
    </tr>
    <tr>
       <th>CircuitPython</th>
@@ -361,6 +425,8 @@ last_update:
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
       <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
@@ -381,12 +447,14 @@ last_update:
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
       <td align="center"><font size={"3"}>❌</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
+      <td align="center"><font size={"3"}>✅</font></td>
    </tr>
 </table>
 
 ## Seeed Studio XIAO 系列兼容配件
 
-作为不断发展的 Seeed Studio XIAO 生态系统，我们提供了广泛的附加产品，这些产品与 Seeed Studio XIAO 开发板兼容。[在此探索更多](https://www.seeedstudio.com/xiao-series-page)。
+作为 Seeed Studio XIAO 不断发展的生态系统，我们提供了广泛的附加组件，这些组件与 Seeed Studio XIAO 开发板兼容。[在此探索更多](https://www.seeedstudio.com/xiao-series-page)。
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/xiao_topicpage/add_on_accessories.png" /></div>
 
@@ -394,18 +462,18 @@ last_update:
 
 <table align="center" style={{fontSize: '0.9em'}}>
     <tr>
-        <th align="center"><strong>Wiki文档</strong></th>
+        <th align="center"><strong>Wiki</strong></th>
         <th align="center"><strong>书籍</strong></th>
         <th align="center"><strong>Fab Academy</strong></th>
         <th align="center"><strong>视频</strong></th>
         <th align="center"><strong>课程</strong></th>
       </tr>
    <tr>
-        <td><strong>入门Wiki文档</strong><br/>由 Seeed Studio AE 团队和社区提供</td>
+        <td><strong>入门指南 Wiki</strong><br/>由 Seeed Studio AE 团队和社区提供</td>
         <td>Power, Small Board: Mastering Arduino and TinyML<br/>由 Marcelo Rovai 和 Leo Feng 编写</td>
-        <td>Fab XIAO: How to Create a Dev Board from Scratch<br/>由 <a href="https://www.linkedin.com/in/adri%C3%A1n-torres-oma%C3%B1a/">ADRIÁN TORRES</a> 提供</td>
-        <td>TinyML with the Seeed XIAO<br/>由 Jim Bob Bennett 提供</td>
-        <td>Maker100-Eco (Economy) Robotics, IoT and TinyML Machine Learning course<br/>由 Jeremy Ellis 提供</td>
+        <td>Fab XIAO: How to Create a Dev Board from Scratch<br/>由 <a href="https://www.linkedin.com/in/adri%C3%A1n-torres-oma%C3%B1a/">ADRIÁN TORRES</a> 编写</td>
+        <td>TinyML with the Seeed XIAO<br/>由 Jim Bob Bennett 制作</td>
+        <td>Maker100-Eco (Economy) Robotics, IoT and TinyML Machine Learning course<br/>由 Jeremy Ellis 制作</td>
       </tr>
    <tr>
         <td style={{textAlign: 'center', backgroundColor: '#007bff', padding: '5px'}}><a href="https://wiki.seeedstudio.com/cn/xiao_topic_page/" style={{color: 'white', textDecoration: 'none', fontWeight: 'bold'}}>📚 Wiki</a></td>
@@ -416,7 +484,7 @@ last_update:
     </tr>
 </table>
 
-## 开源 Seeed Studio XIAO
+## Seeed Studio XIAO 开源资料
 
 ### Seeed 系列 Kicad 文件
 
@@ -517,9 +585,9 @@ last_update:
 
 - **[PDF]** [Seeed Studio XIAO ESP32C3 原理图](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32C3 KiCAD 库文件](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-KiCAD-Library.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32C3 KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-KiCAD-Library.zip)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32C3 Eagle 库文件](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-v1.2_SCH-PCB.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32C3 Eagle 库](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-v1.2_SCH-PCB.zip)
 
 - **[DXF]** [Seeed Studio XIAO ESP32C3 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip)
 
@@ -535,7 +603,7 @@ last_update:
 
 - **[PDF]** [ESP32C6 数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD 库文件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD 库](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
 
 - **[PDF]** [Seeed Studio XIAO ESP32C6 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
 
@@ -545,7 +613,7 @@ last_update:
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Eagle 库文件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Eagle 库](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
 
 - **[DXF]** [Seeed Studio XIAO ESP32S3 DXF 尺寸图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
 
@@ -561,9 +629,9 @@ last_update:
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Sense 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense KiCAD 库文件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeeduino-xiao-ESP32S3-KiCAD-Library.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense KiCAD 库](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeeduino-xiao-ESP32S3-KiCAD-Library.zip)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Eagle 库文件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH&PCB_230324.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Eagle 库](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH&PCB_230324.zip)
 
 - **[DXF]** [Seeed Studio XIAO ESP32S3 Sense DXF 尺寸图（顶部）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf)
 
@@ -583,7 +651,7 @@ last_update:
 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.0_SCH_PCB.zip)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD 库文件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD 库](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library.zip)
 
 - **[DXF]** [Seeed Studio XIAO ESP32S3 Plus DXF 尺寸图（顶部）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf)
 
@@ -593,9 +661,9 @@ last_update:
 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD 文件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_V1.0_SCH%26PCB_KICAD.zip)
 
-- **[ZIP]** [Seeed Studio XIAO Plus 底板（底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
+- **[ZIP]** [Seeed Studio XIAO Plus 底板（带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
 
-- **[ZIP]** [Seeed Studio XIAO Plus 底板（无底部引脚引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
+- **[ZIP]** [Seeed Studio XIAO Plus 底板（不带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
 
 ### Seeed Studio XIAO RP2350 Sense 开源资料
 
@@ -615,7 +683,7 @@ last_update:
 
 - **[PDF]** [Seeed Studio XIAO MG24 Sense 无线 SoC](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
 
-- **[Kicad]** [Seeed Studio XIAO MG24 Sense 封装库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- **[Kicad]** [Seeed Studio XIAO MG24 Sense 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
 - **[ZIP]** [Seeed Studio XIAO MG24 Sense PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
 
@@ -627,7 +695,7 @@ last_update:
 
 - **[PDF]** [Seeed Studio XIAO MG24 无线 SoC](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
 
-- **[Kicad]** [Seeed Studio XIAO MG24 封装库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- **[Kicad]** [Seeed Studio XIAO MG24 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
 - **[ZIP]** [Seeed Studio XIAO MG24 PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
 

@@ -16,7 +16,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
 slug: /mcp_external_system_integration
 last_update:
-  date: 12/06/2025
+  date: 12/23/2025
   author: Spencer
 tags:
   - mcp
@@ -133,31 +133,21 @@ We will simulate a business environment by running a mock **Warehouse Backend** 
 
 ### Prerequisites
 
-- **Hardware:** SenseCAP Watcher, Computer (Windows/macOS/Linux).
-- **Software:** Python 3.10+, Git.
-- **Account:** [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) account.
+- **Hardware:** SenseCAP Watcher, Computer with Docker support
+- **Software:** Docker or [Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes Docker Compose), Git
+- **Account:** [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/home) account
 
-:::note Setup
+:::note Watcher Setup
 Ensure your SenseCAP Watcher is configured with **Xiaozhi AI** via [SenseCraft AI Device Center](https://sensecraft.seeed.cc/ai/device/local/37).
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecap-setup.png" alt="sensecap-setup"/>
 </div>
-
 :::
 
-### Step 1: Deploy Target System
+### Step 1: Deploy the Warehouse System
 
-First, we need to start the mock business backend. We provide automated scripts to handle dependencies (using `uv`) and service startup.
-
-:::tip install uv
-Use the following command to install uv, a lightweight Python environment manager:
-
-```shell
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-:::
+We use Docker for deployment to ensure a consistent environment across all platforms (Windows, macOS, Linux).
 
 **1. Clone the repository**:
 
@@ -166,50 +156,94 @@ git clone https://github.com/suharvest/warehouse_system.git
 cd warehouse_system
 ```
 
-**2. Start the Service**:
+**2. Start with Docker Compose**:
 
-Choose your operating system to install dependencies and start the backend automatically.
-
-<Tabs>
-
-<TabItem value="mac" label="Linux/macOS" default>
-
-Run the shell script to start the backend and frontend:
-
-```shell
-# Navigate to the project directory warehouse_system
-chmod +x start.sh
-./start.sh # which runs the run_backend and frontend/app.py
+```bash
+docker-compose -f docker-compose.prod.yml up -d
 ```
 
-</TabItem>
+This single command will:
 
-<TabItem value="win" label="Windows">
+- Build and start the backend API server (port 2124)
+- Build and start the frontend web interface (port 2125)
+- Create a persistent volume for your database
 
-Run the PowerShell script to start the backend and frontend:
+**3. Verify the deployment**:
 
-```powershell
-# Navigate to the project directory warehouse_system
-.\start.ps1
+Wait about 30 seconds for containers to start, then check:
+
+```bash
+docker-compose -f docker-compose.prod.yml ps
 ```
 
-</TabItem>
-
-</Tabs>
+You should see both `warehouse-backend-prod` and `warehouse-frontend-prod` containers running.
 
 <div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/running-warehouse-demo-successfully.png" alt="running-warehouse-demo-successfully"/>
+  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/API_EndPoint.png" alt="API Documentation"/>
 </div>
 
-<div align="center">
-  <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/API_EndPoint.png" alt="specific-location-management"/>
-</div>
+- **Frontend UI:** Open `http://localhost:2125` in your browser
+- **API Documentation:** Open `http://localhost:2124/docs` to see the Swagger UI
 
-- **Verify:** Open your browser and visit `http://localhost:2124/docs`. If you see the API documentation page (as shown above), your "Business System" is running.
+### Step 2: Initial System Setup
 
-### Step 2: Configure MCP Bridge
+The warehouse system includes user authentication and API key management for security. You need to set this up before connecting MCP.
+
+**1. Create Admin Account**:
+
+Open `http://localhost:2125` in your browser. On first visit, you'll see a registration form:
+
+- Enter your desired **username** (e.g., `admin`)
+- Enter a **password** (e.g., `admin123`)
+- Click **Register**
+
+:::tip First User is Admin
+The first registered user automatically becomes the administrator.
+:::
+
+**2. Login and Navigate to User Management**:
+
+After registration, log in with your credentials. Click on the **User Management** tab in the navigation.
+
+**3. Create an API Key**:
+
+In the User Management section, find the **API Key Management** area:
+
+1. Enter a descriptive name for the key (e.g., `MCP Bridge`)
+2. Click **Create API Key**
+3. **Important:** Copy the generated API key immediately! It will only be shown once.
+
+The API key looks like: `wh_xxxxxxxxxxxxxxxxxxxx`
+
+:::warning Save Your API Key
+The API key is only displayed once when created. Store it securely - you'll need it in the next step.
+:::
+
+### Step 3: Configure MCP Bridge
 
 Now, we connect the backend to the AI. The bridge code resides in the `mcp/` directory.
+
+:::tip Install uv
+The MCP bridge uses `uv` as its Python environment manager. Install it with:
+
+<Tabs>
+<TabItem value="mac" label="Linux/macOS" default>
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+</TabItem>
+<TabItem value="win" label="Windows (PowerShell)">
+
+```powershell
+irm https://astral.sh/uv/install.ps1 | iex
+```
+
+</TabItem>
+</Tabs>
+
+:::
 
 **1. Get MCP Endpoint**:
 
@@ -219,21 +253,38 @@ Obtain your **MCP Endpoint Address** (`wss://...`) from the [SenseCraft AI Platf
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/MCP_EndPoint.png" alt="MCP_EndPoint"/>
 </div>
 
-**2. Configure & Run**:
+**2. Configure API Key**:
 
-Open a **new terminal window** (keep the previous backend terminal running) and navigate to the `mcp` folder.
+Open a terminal and navigate to the `mcp` folder:
+
+```bash
+cd mcp
+
+# Copy the example config file
+cp config.yml.example config.yml
+```
+
+Edit `config.yml` with your API key from Step 2:
+
+```yaml
+# Backend API address
+api_base_url: "http://localhost:2124/api"
+
+# API key (from User Management -> API Key Management)
+api_key: "wh_your-api-key-here"
+```
+
+**3. Start the MCP Bridge**:
 
 <Tabs>
 
 <TabItem value="mac" label="Linux/macOS" default>
 
-```Bash
-cd mcp
-
-# 1. Set the Endpoint (Replace with your actual address)
+```bash
+# Set the MCP Endpoint (replace with your actual address)
 export MCP_ENDPOINT="wss://your-endpoint-address"
 
-# 2. Start the Bridge
+# Start the Bridge
 ./start_mcp.sh
 ```
 
@@ -241,13 +292,11 @@ export MCP_ENDPOINT="wss://your-endpoint-address"
 
 <TabItem value="win" label="Windows (PowerShell)">
 
-```PowerShell
-cd mcp
-
-# 1. Set the Endpoint (Replace with your actual address)
+```powershell
+# Set the MCP Endpoint (replace with your actual address)
 $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
-# 2. Start the Bridge
+# Start the Bridge
 ./start_mcp.ps1
 ```
 
@@ -255,13 +304,13 @@ $env:MCP_ENDPOINT="wss://your-endpoint-address"
 
 </Tabs>
 
-If successful, you will see a message: `MCP Service Started Successfully!`.
+If successful, you will see: `MCP Service Started Successfully!`
 
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/mcp-bridge-start-successfully.png" alt="mcp-bridge-start-successfully"/>
 </div>
 
-### Step 3: Verification
+### Step 4: Verification
 
 Everything is connected. Now, use the SenseCAP Watcher to interact with your local system.
 
@@ -288,7 +337,7 @@ Now we can test the integration using your Watcher device!
 | -------------- | -------------------------------------------------- |
 | **Watcher**    | Sends voice audio to cloud.                        |
 | **MCP Bridge** | Receives intent, determines tool is `query_stock`. |
-| **System**     | Executes `GET /materials/product-stats`.           |
+| **System**     | Executes `GET /materials/product-stats` with API key authentication. |
 | **Result**     | Watcher speaks: *"Current stock is 150 units."*    |
 
 ### Expected Responses
@@ -315,8 +364,15 @@ Open `mcp/warehouse_mcp.py`. The first step is to tell the bridge where your act
 
 ```python
 # Change this line to point to your actual production server IP/Domain
-# API_BASE_URL = "http://localhost:2124/api" 
-API_BASE_URL = "http://192.168.50.10:8080/api/v1" 
+# API_BASE_URL = "http://localhost:2124/api"
+API_BASE_URL = "http://192.168.50.10:8080/api/v1"
+```
+
+Or better, use the `config.yml` file:
+
+```yaml
+api_base_url: "http://192.168.50.10:8080/api/v1"
+api_key: "your-production-api-key"
 ```
 
 ### 2. Define Custom Tools
@@ -429,8 +485,8 @@ return {
 # ❌ Bad - Too verbose (AI doesn't need the full database history)
 return {
     "success": True,
-    "full_product_details": {...}, 
-    "complete_history": [...] 
+    "full_product_details": {...},
+    "complete_history": [...]
 }
 ```
 
@@ -464,12 +520,37 @@ The demo runs in your local terminal. For long-term 24/7 operation:
 ## Troubleshooting
 
 <details>
+<summary>❌ Docker Containers Not Starting</summary>
+
+- **Symptom:** `docker-compose ps` shows containers in "Exited" state.
+- **Solution:**
+  1. Check Docker Desktop is running
+  2. View logs: `docker-compose -f docker-compose.prod.yml logs`
+  3. Ensure ports 2124 and 2125 are not in use
+  4. Try rebuilding: `docker-compose -f docker-compose.prod.yml up -d --build`
+
+</details>
+
+<details>
+<summary>❌ API Key Invalid (401 Unauthorized)</summary>
+
+- **Symptom:** MCP bridge logs show `401 Unauthorized` or "Invalid API Key".
+- **Solution:**
+  1. Verify the API key in `mcp/config.yml` is correct
+  2. Check the API key is still active in User Management
+  3. Ensure there are no extra spaces or quotes around the key
+  4. Try creating a new API key
+
+</details>
+
+<details>
 <summary>❌ Backend Service Not Running</summary>
 
 - **Symptom:** AI responds with "Cannot connect to backend service".
 - **Solution:**
-  1. Ensure the backend is running: `uv run python run_backend.py`.
-  2. Check port availability: `curl http://localhost:2124/api/dashboard/stats`.
+  1. Check Docker containers are running: `docker-compose -f docker-compose.prod.yml ps`
+  2. Verify backend health: `curl http://localhost:2124/api/dashboard/stats`
+  3. Check backend logs: `docker-compose -f docker-compose.prod.yml logs backend`
 
 </details>
 
@@ -508,24 +589,24 @@ The demo runs in your local terminal. For long-term 24/7 operation:
 <details>
 <summary>❌ Connection Refused / WebSocket 443 Blocked</summary>
 
-**Symptom:**  
+**Symptom:**
 You see `[WinError 1225] Connection refused` or the script hangs at `Connecting to WebSocket server...`, even with the correct Endpoint URL.
 
-**Cause:**  
+**Cause:**
 **Corporate Firewall Blocking.** Many office networks (or VPNs) strictly block **WebSocket (wss://)** traffic or non-standard protocols, even on port 443.
 
 **Quick Solutions:**
 
-1. **📱 The "Hotspot Test" (Recommended)**  
-   Disconnect from the office network/VPN and connect your computer to a **Mobile Hotspot (4G/5G)**.  
+1. **📱 The "Hotspot Test" (Recommended)**
+   Disconnect from the office network/VPN and connect your computer to a **Mobile Hotspot (4G/5G)**.
    - *If it works:* Your office network is blocking the connection.
 
-2. **🔧 Configure Proxy**  
+2. **🔧 Configure Proxy**
    If your company requires a proxy, set it before running:
    - **Windows:** `$env:HTTPS_PROXY="http://your-proxy:port"`
    - **Mac/Linux:** `export HTTPS_PROXY="http://your-proxy:port"`
 
-3. **🛡️ Whitelist**  
+3. **🛡️ Whitelist**
    Ask IT to allow **WebSocket (WSS)** traffic for: `*.seeed.cc`.
 
 </details>

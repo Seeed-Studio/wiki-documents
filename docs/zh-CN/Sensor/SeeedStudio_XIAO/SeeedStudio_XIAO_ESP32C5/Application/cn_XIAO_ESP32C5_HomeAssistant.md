@@ -4,7 +4,7 @@ description: |
 keywords:
   - xiao
   - esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /cn/xiao_esp32c5_homeassistant
 last_update:
   date: 12/17/2025
@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
 
 ## [Home Assistant](https://www.home-assistant.io/) 简介
 
-Home Assistant 是一个功能强大的开源家庭自动化平台，允许您从单一统一界面控制和监控智能家居设备。它充当智能家居的中央枢纽，使您能够自动化例程、监控传感器并创建更智能的生活空间。
+Home Assistant 是一个强大的开源家庭自动化平台，允许您从一个统一的界面控制和监控智能家居设备。它充当智能家居的中央枢纽，使您能够自动化例程、监控传感器并创建更智能的生活空间。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:600, height:'auto'}}/></div>
 
@@ -55,9 +55,9 @@ ESPHome 是一个专为 ESP8266 / ESP32 设备设计的开源固件创建工具�
       <th>Grove - Red LED</th>
     </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:210, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-09bazaar939479_1040300054.jpg" style={{width:210, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-09bazaar939479_1040300054.jpg" style={{width:400, height:'auto'}}/></div></td>
     </tr>
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -245,7 +245,7 @@ switch:
 <TabItem value='通过 Wi-Fi 安装'>
 
 :::tip
-这是最简单的方法，但前提是在首次安装程序时，您应该首先使用左侧的方法将程序上传到 ePaper Panel。之后，您可以通过 wifi 上传。另外，请确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
+这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到 ePaper Panel。之后，您可以通过 wifi 上传。另外，请确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
 :::
 
 通过这种方式，您无需将 XIAO ESP32-C5 连接到任何设备，只需确保它在线即可。
@@ -284,7 +284,7 @@ switch:
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/esphome_9.png" style={{width:800, height:'auto'}}/></div>
 
-**步骤 2.** 创建一个部分并将其命名为 **LED Control** -> 添加卡片
+**步骤 2.** 创建一个部分并命名为 **LED Control** -> 添加卡片
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/esphome_10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -317,9 +317,9 @@ switch:
       <th>Grove - Temperature & Humidity Sensor (DHT11)</th>
     </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:210, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/g/r/grove-temperature-humidity-sensor-dht11-preview.png" style={{width:210, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/g/r/grove-temperature-humidity-sensor-dht11-preview.png" style={{width:400, height:'auto'}}/></div></td>
     </tr>
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -582,7 +582,7 @@ void loop() {
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/S_HA_12.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-恭喜！到现在为止，您应该已经掌握了将 **XIAO ESP32-C5** 连接到 **Home Assistant** 的两种方法。我们期待看到您的精彩项目，欢迎与我们分享！
+恭喜！到目前为止，您应该已经掌握了将 **XIAO ESP32-C5** 连接到 **Home Assistant** 的两种方法。我们期待看到您的精彩项目，欢迎与我们分享！
 
 ## 技术支持与产品讨论
 
