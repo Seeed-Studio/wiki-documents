@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-TemperatureAndHumidity_Sensor
 last_update:
-  date: 1/3/2023
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 
@@ -488,55 +488,51 @@ If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to u
 :::
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library.
+:::tip
+One of the steps is to add the necessary DHT library, please make sure it is installed.
+:::
+- **Step 2**.Enter the relevant virtual environment.
 
 ```
-cd ~
-git clone https://github.com/Seeed-Studio/Seeed_Python_DHT.git
-
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
 ```
 
 - **Step 3**. Excute below commands to run the code.
 
 ```
-cd Seeed_Python_DHT
-sudo python3 setup.py install
-cd ~/Seeed_Python_DHT/examples
-python3 dht_simpleread.py 
+nano ~/grove_env/dht11_demo.py
 ```
 
-Following is the dht_simpleread.py code.
+Copy the following code
 
 ```python
 import time
 import seeed_dht
-def main():
 
-    # for DHT11/DHT22
-    sensor = seeed_dht.DHT("11", 12)
-    # for DHT10
-    # sensor = seeed_dht.DHT("10")
-    
+sensor = seeed_dht.DHT("11", 12)  
+print("DHT11 reading every second, Ctrl+C to quit")
+try:
     while True:
         humi, temp = sensor.read()
-        if not humi is None:
-            print('DHT{0}, humidity {1:.1f}%, temperature {2:.1f}*'.format(sensor.dht_type, humi, temp))
-        else:
-            print('DHT{0}, humidity & temperature: {1}'.format(sensor.dht_type, temp))
+        print(f"DHT11  Humidity {humi:.1f}%  Temperature {temp:.1f}°C")
         time.sleep(1)
+except KeyboardInterrupt:
+    print("\nBye")
 
-
-if __name__ == '__main__':
-    main()
 ```
 
 :::tip
-    If everything goes well, you will be able to see the following result
+    Save and exit:
+Ctrl+O → Enter → Ctrl+X
 :::
+
+  If everything goes well, you will be able to see the following result
+
 
 ```python
 
-pi@raspberrypi:~/Seeed_Python_DHT/examples $ python3 dht_simpleread.py 
+pi@raspberrypi:~/Seeed_Python_DHT/examples $ python ~/grove_env/dht11_demo.py 
 DHT11, humidity 39.2%, temperature 29.1*
 DHT11, humidity 39.2%, temperature 29.1*
 DHT11, humidity 39.2%, temperature 29.1*
