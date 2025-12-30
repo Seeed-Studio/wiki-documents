@@ -13,7 +13,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /visual_trigger_and_ai_flash
 last_update:
-  date: 10/30/2025
+  date: 12/04/2025
   author: Twelve
 translation:
   skip: [ zh-CN ]
@@ -71,8 +71,12 @@ Please use another method to flash the firmware for now.
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
   - Select correct serial port (ending with “A”)
-    
+
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+
+  :::note
+  If you are using macOS or Linux, please choose the port with the smaller number.
+  :::
 
   - Click `Connect`
     
@@ -85,6 +89,9 @@ Please use another method to flash the firmware for now.
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI9.png" style={{width:500, height:'auto'}}/></div>
   
   - Select correct serial port (ending with "B")
+  :::note
+  If you are using macOS or Linux, please choose the port with the bigger number.
+  :::
   
     <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI10.png" style={{width:500, height:'auto'}}/></div>
 
@@ -236,6 +243,7 @@ Please use another method to flash the firmware for now.
 </Tabs>
 
 :::note
+Only firmware version 1.8.8 or higher supports visual wake-up functionality.
 Firmware version above v2.0.3 requires saying “Turn on the inference switch” to Xiaozhi to enable visual detection.
 :::
 
@@ -250,11 +258,14 @@ Firmware version above v2.0.3 requires saying “Turn on the inference switch”
   
 ### Step 2. Connect to our Platform by serial port
 
--  Click `Connect` 
+- Click `Connect` 
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI2.png" style={{width:800, height:'auto'}}/></div>
 
 - Select correct serial port (ending with “A”)
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI3.png" style={{width:500, height:'auto'}}/></div>
+:::note
+If you are using macOS or Linux, please choose the port with the smaller number.
+:::
 
 - Click `Connect`
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI4.png" style={{width:500, height:'auto'}}/></div>
@@ -273,11 +284,18 @@ Firmware version above v2.0.3 requires saying “Turn on the inference switch”
   
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI7.png" style={{width:500, height:'auto'}}/></div>
 
-### Step 4. Adjust the Threshold and Preview the effect
+### Step 4. Preview the effect and Adjust the parameter  
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/SenseCraftAI/SenseCraftAI8.png" style={{width:400, height:'auto'}}/></div>
 
-- Also, you can adjust the threshold by talking to the agent
+The current visual wake-up function offers the following configuration options:
+
+- **Target ID** (`target`): Specifies the target ID to detect. This ID depends on the visual model used; the default value is 0.
+- **Detection Duration** (`duration`): Unit is seconds, used to adjust the sensitivity of the visual wake-up. The default is 1 second (this default does not include the 1-second debounce processing).
+- **Confidence Threshold** (`threshold`): The lower confidence limit for the visual model to recognize an object, used to adjust detection sensitivity. Represented as a percentage, the default is 75%.
+- **Cooldown Period** (`interval`): Unit is seconds, indicating the wait time required after one conversation ends before triggering again, used to avoid frequent interruptions by the same object. The default is 8 seconds.
+
+For example, you can adjust the model's sensitivity by modifying the `threshold` parameter. If you find the current threshold too strict, simply say to Watcher: "Please set the confidence threshold to 60%".
 
 ## Troubleshooting
 

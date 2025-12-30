@@ -12,7 +12,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/xiao_debug_mate_serial" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -224,6 +224,10 @@ There are two primary ways to do this:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/25.jpg" style={{width:800, height:'auto'}}/></div>
 
+The following diagram shows the pin definitions for the Grove interface.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/39.png" style={{width:400, height:'auto'}}/></div>
+
 :::caution Crucial Reminder
 Always ensure your device's TX pin is connected to a receiving pin on the Debug Mate, and the device's RX pin is connected to a transmitting pin.
 :::
@@ -287,11 +291,24 @@ This is the default mode, designed to forward all serial data from the selected 
 This mode captures and displays serial data directly on the Debug Mate's LCD screen. Data is **not** forwarded to the PC in this mode.
 
 *   **On-Screen Display:** The screen is divided into two windows to display the data traffic.
-    *   `RX Window`: Shows data received **from the XIAO socket**.
-    *   `TX Window`: Shows data received **from the Grove port**.
+    *   `RX Window`: Shows data received **from the XIAO/Grove socket**.
+    *   `TX Window`: Shows data received **from the PC**.
 
 :::caution
 The Debug Mate cannot display data from both sources simultaneously. You must select the active source using the settings menu.
+:::
+
+:::note
+The labels **RX** and **TX** in this document are always **from the Debug Mate's perspective**:  
+- **RX** indicates data **received by the Debug Mate** (i.e., serial signals coming *into* the Debug Mate).  
+- **TX** indicates data **sent out by the Debug Mate** (i.e., signals being *transmitted* by the Debug Mate).
+
+This means that **data sent from the XIAO or Grove device to the Debug Mate will appear in the RX window**, no matter which port is selected as the source. The content shown in the RX window depends on which source (XIAO/Grove) you have chosen in the settings.
+
+**TX** always refers to data **originating from the PC** — when you type and send messages from a serial terminal on your computer, they are transmitted via the Debug Mate's TX to the currently selected source (XIAO or Grove).  
+
+- In both "Passthrough" and "Monitor" modes, the PC can send data to the Debug Mate via its virtual COM port, and the Debug Mate will pass these messages to the target serial device you selected.  
+- What you see in the **TX window** is thus always what the PC is sending through the Debug Mate, regardless of current monitoring mode.
 :::
 
 ### Configuring Source and Baud Rate
@@ -337,14 +354,12 @@ If you would like to see the original design, you can check out the demonstratio
 *   [Original Design Demonstration Video](https://www.bilibili.com/video/BV1Sc411273Y/)
 *   [Author's Bilibili Homepage](https://space.bilibili.com/1155738723)
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

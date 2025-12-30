@@ -6,14 +6,14 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/recomputer-industrail-r2100.webp
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_R21xx_getting_start
 last_update:
   date: 09/28/2025
   author: Nolan Chen
 ---
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -62,46 +62,281 @@ The reComputer Industrial R21xx series is ideal for use in industrial AI applica
 
 ## Specifications
 
-| **Category**              | **Parameters**                                                                  |
-|---------------------------|---------------------------------------------------------------------------------|
-| **Hardware Spec**         |                                                                                 |
-| **CPU**                   | Raspberry Pi Compute Module 5, 2.4GHz quad-core 64-bit Arm Cortex-A76           |
-| **AI Processor**          | Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS                             |
-| **RAM**                   | 2GB/4GB/8GB/16GB                                                                |
-| **eMMC**                  | 16GB/32GB/64GB                                                                  |
-| **Operating System**      | Raspbian, Debian                                                                |
-| **System Spec**           |                                                                                 |
-| **Power Input**           | DC 9V~36V, 2-pin Terminal Block                                                 |
-| **Interface**             |                                                                                 |
-| **Ethernet**              | 1 x 10/100/1000 Mbps(supports PoE PD)                                           |
-| **USB**                   | 3 x USB-A 3.0 Host; 1 x USB-A 2.0 Host                                          |
-| **M.2 Slot**              | 1x 2280 for M.2 NVMe SSD;1x 2280 for AI Accelerator                             |
-| **Mini-PCIe**             | 1x Mini-PCIe for LoRa module                                                    |
-| **SIM Card**              | supports Nano SIM Card                                                          |
-| **LED**                   | 4 x LED indicators                                                              |
-| **Button / Switch**       | 1x Reset Button; 1x Boot Switch                                                 |
-| **Wireless Communication**|                                                                                 |
-| **Wi-Fi 2.4/5.0 GHz**     | On-chip Wi-Fi                                                                   |
-| **BLE 5.0**               | On-chip BLE                                                                     |
-| **4G/5G Cellular**        | 4G LTE/5G*                                                                      |
-| **LoRa®**                 | USB LoRa®/SPI LoRa®                                                             |
-| **Ambient Conditions**    |                                                                                 |
-| **Ingress Protection**    | IP40                                                                            |
-| **Operating Temperature** | -20°C to 65°C                                                                   |
-| **Operating Humidity**    | 10% to 95% RH                                                                   |
-| **Others**                |                                                                                 |
-| **Watchdog**              | 1~255s                                                                          |
-| **RTC**                   | High Accuracy RTC                                                               |
-| **Security**              | Encryption Chip TPM2.0 / ATECC608A (Optional)                                   |
-| **Heat Dissipation**      | Fanless                                                                         |
-| **Warranty**              | 2 Years                                                                         |
-| **Production Lifetime**   | Until December 2030                                                             |
-| **Mechanical**            |                                                                                 |
-| **Dimension  (W x H x D)**| 197.5 mm x 155 mm x 67.5 mm                                                     |
-| **Enclosure**             | Aluminum Alloy Casing with PC Side Panels                                      |
-| **Mounting**              | DIN-rail / Wall Mount                                                           |
-| **Weight (Net)**          | 1280g                                                                            |
-| **Statement**             | Options marked with * require additional purchase according to the accessories list. |
+<div class="table-center">
+  <table border="1" cellspacing="0" cellpadding="6">
+    <thead>
+      <tr>
+        <th>Parameter </th>
+        <th colspan="2">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3">Hardware Specification</td>
+      </tr>
+      <tr>
+        <td>**Product Series**</td>
+        <td>R20xx-12</td>
+        <td>R20xx-10</td>
+      </tr>
+      <tr>
+        <td> **CPU** </td>
+        <td colspan="2">Raspberry Pi Compute Module 5, 2.4GHz quad-core 64-bit Arm Cortex-A76</td>
+      </tr>
+      <tr>
+        <td> **AI Processor** </td>
+        <td>Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS</td>
+        <td>*</td>
+      </tr>
+      <tr>
+        <td> **Operating System** </td>
+        <td colspan="2">Raspbian, Debian </td>
+      </tr>
+      <tr>
+        <td> **RAM** </td>
+        <td colspan="2">2GB/4GB/8GB/16GB</td>
+      </tr>
+      <tr>
+        <td> **eMMC** </td>
+        <td colspan="2">16GB/32GB/64GB</td>
+      </tr>
+      <tr>
+        <td colspan="3"> **System Specification** </td>
+      </tr>
+      <tr>
+        <td> Power Input </td>
+        <td colspan="2">DC 9V~36V, 2-pin Terminal Block</td>
+      </tr>
+      <tr>
+        <td>PoE(as powered device)</td>
+        <td colspan="2">IEEE 802.3at Standard 25.5W PoE</td>
+      </tr>
+      <tr>
+        <td>Power Switch</td>
+        <td colspan="2">No</td>
+      </tr>
+      <tr>
+        <td>Reboot Switch</td>
+        <td colspan="2">Yes</td>
+      </tr>
+      <tr>
+        <td colspan="3"> **Interface** </td>
+      </tr>
+      <tr>
+        <td rowspan="2"> Ethernet </td>
+        <td colspan="3"> 1 x 10/100/1000 Mbps(supports PoE PD) </td>
+      </tr>
+      <tr>
+        <td colspan="3"> 1 x 10/100 Mbps IEEE 802.3/802.3u </td>
+      </tr>
+      <tr>
+        <td rowspan="2"> USB </td>
+        <td colspan="3"> 3 x USB-A 3.0 Host; 1 x USB-A 2.0 Host </td>
+      </tr>
+      <tr>
+        <td colspan="3"> 1 x USB-C 2.0 (For flashing OS & Debug) </td>
+      </tr>
+      <tr>
+        <td> RS485 </td>
+        <td colspan="3"> 3x RS485(Isolated) </td>
+      </tr>
+      <tr>
+        <td> RS232 </td>
+        <td colspan="3"> 1x RS232(Isolated) </td>
+      </tr>
+      <tr>
+        <td rowspan="2"> DI </td>
+        <td colspan="3"> 8 x Isolated DI Ports </td>
+      </tr>
+      <tr>
+        <td colspan="3"> Input Voltage: 5~24V DC </td>
+      </tr>
+      <tr>
+        <td rowspan="2"> DO </td>
+        <td colspan="3"> 8 x Isolated DO Ports </td>
+      </tr>
+      <tr>
+        <td colspan="3"> Output Voltage: Below 60V DC </td>
+      </tr>
+      <tr>
+        <td>SIM Card</td>
+        <td colspan="3">1x Nano SIM Card Slot</td>
+      </tr>
+      <tr>
+        <td>M.2 Slot</td>
+        <td>1x M.2 M-KEY 2280 Slot for ;NVMe SSD；
+1x M.2 M-KEY 2280 Slot for  AI Accelerator
+1x M.2 NVMe Slot, t, M.2 M-KEY 2280
+(Pre-installed 1x Hailo-8 M.2 AI Acceleration 26TOPS);
+1x  M.2 B-KEY  3042/3052 Slot for 5G/4G LTE;</td>
+        <td>1x M.2 M-KEY 2280 Slot for NVMe SSD；
+1x M.2 M-KEY 2280 Slot for  AI Accelerator;
+1x  M.2 B-KEY  3042/3052 Slot for 5G/4G LTE
+2x M.2 NVMe Slot, t, M.2 M-KEY 2280;
+1x M.2 NVMe Slot, t, M.2 B-KEY </td>
+      </tr>
+      <tr>
+        <td>Mini-PCIe</td>
+        <td colspan="2">1x Mini-PCIe for LoRa module</td>
+      </tr>
+      <tr>
+        <td>LED</td>
+        <td colspan="2">4 x LED indicators</td>
+      </tr>
+      <tr>
+        <td>Buzzer</td>
+        <td colspan="2">1</td>
+      </tr>
+      <tr>
+        <td>Reset Button</td>
+        <td colspan="2">1</td>
+      </tr>
+      <tr>
+        <td>HDMI</td>
+        <td colspan="2">2 x HDMI 2.0</td>
+      </tr>
+      <tr>
+        <td colspan="3">Wireless Communication</td>
+      </tr>
+      <tr>
+        <td>Wi-Fi 2.4/5.0 GHz</td>
+        <td colspan="2">On-chip Wi-Fi</td>
+      </tr>
+      <tr>
+        <td>BLE 5.0</td>
+        <td colspan="2">On-chip BLE</td>
+      </tr>
+      <tr>
+        <td>LoRa®</td>
+        <td colspan="2">USB LoRa®*/SPI LoRa®*</td>
+      </tr>
+      <tr>
+        <td>4G/5G Cellular</td>
+        <td colspan="2">4G LTE/5G*</td>
+      </tr>
+      <tr>
+        <td>Zigbee</td>
+        <td colspan="2">USB Zigbee*</td>
+      </tr>
+      <tr>
+        <td colspan="3">**Standards**</td>
+      </tr>
+      <tr>
+        <td rowspan="3">EMC</td>
+        <td colspan="2">ESD: EN61000-4-2, Level 3</td>
+      </tr>
+      <tr>
+        <td colspan="2">EFT: EN61000-4-4, Level 2</td>
+      </tr>
+      <tr>
+        <td colspan="2">Surge: EN61000-4-5, Level 2</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Certification</td>
+        <td colspan="2">CE, FCC</td>
+      </tr>
+      <tr>
+        <td colspan="2">TELEC</td>
+      </tr>
+      <tr>
+        <td colspan="2">RoHS</td>
+      </tr>
+      <tr>
+        <td colspan="3">REACH</td>
+      </tr>
+      <tr>
+        <td colspan="3">**Ambient Conditions**</td>
+      </tr>
+      <tr>
+        <td>Ingress Protection</td>
+        <td colspan="2">IP40</td>
+      </tr>
+      <tr>
+        <td>Operating Temperature</td>
+        <td colspan="2">-20~65 °C</td>
+      </tr>
+      <tr>
+        <td>Operating Humidity</td>
+        <td colspan="2">10~95% RH</td>
+      </tr>
+      <tr>
+        <td>Storage Temperature</td>
+        <td colspan="2">-40~85 °C</td>
+      </tr>
+      <tr>
+        <td colspan="3">Others</td>
+      </tr>
+      <tr>
+        <td>Supercapacitor UPS</td>
+        <td colspan="2">SuperCAP UPS LTC3350 Module*</td>
+      </tr>
+      <tr>
+        <td>Hardware Watchdog</td>
+        <td colspan="2">1~255s</td>
+      </tr>
+      <tr>
+        <td>RTC</td>
+        <td colspan="2">High Accuracy RTC</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Security</td>
+        <td colspan="2">Encryption Chip TPM 2.0*</td>
+      </tr>
+      <tr>
+        <td colspan="2">ATECC608A</td>
+      </tr>
+      <tr>
+        <td>Heat Dissipation</td>
+        <td colspan="2">Fanless</td>
+      </tr>
+      <tr>
+        <td>Warranty</td>
+        <td colspan="2">2 years</td>
+      </tr>
+      <tr>
+        <td>Production Lifetime</td>
+        <td colspan="2">Until December 2036</td>
+      </tr>
+      <tr>
+        <td>**Statement**</td>
+        <td colspan="2">Options marked with * require additional purchase according to the accessories list.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="table-center">
+  <table border="1" cellspacing="0" cellpadding="6">
+    <thead>
+      <tr>
+        <th colspan="2">Component and Interface Status Statement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Reserved</td>
+        <td>Designated for future use or expansion.</td>
+      </tr>
+      <tr>
+        <td> Optional </td>
+        <td colspan="2">Designated for future use or expansion.</td>
+      </tr>
+      <tr>
+        <td> **AI Processor** </td>
+        <td>Non-essential components, users can choose to include or exclude.</td>
+      </tr>
+      <tr>
+        <td> Occupied </td>
+        <td>Currently in use and integral to product functionality.</td>
+      </tr>
+      <tr>
+        <td>Included</td>
+        <td colspan="2">Essential components provided with standard package.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/1.4_dimension_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -389,7 +624,7 @@ Schematic diagram of RS232 wires is as follws:
 
 ### DI (Digital Input)
 
-The reComputer Industrial R2000 series equipment includes 8x DI ports, 3-Pin 3.5mm spacing phoenix terminals.
+The reComputer Industrial R2000 series equipment includes 4x DI ports, 3-Pin 3.5mm spacing phoenix terminals.
  The silkscreen of single DI is "DI/G_DI".
 
 **Pin Definition**
@@ -466,7 +701,7 @@ Schematic diagram of a single DI wires is as follws:
 
 ### DO (Digital Output)
 
-The reComputer Industrial R2000 series equipment includes 8x DO ports, 3-Pin 3.5mm spacing phoenix terminals.
+The reComputer Industrial R2000 series equipment includes 4x DO ports, 3-Pin 3.5mm spacing phoenix terminals.
 The silkscreen of single DO is "DO/G_DO".
 **Pin Definition**
 Terminal pins are defined as follows:
@@ -594,8 +829,8 @@ The Boot Switch of the reComputer Industrial R2000 is connected to the nRPI_BOOT
 
 | Switch Position | Mode         | Description      | nRPI-BOOT |
 |----------------|--------------|-----------------|-----------|
-|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>            | Normal mode  | Boot from eMMC   | Low       |
-|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
+|      <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/HIGH.png" alt="image" width="80"/>            | Normal mode  | Boot from eMMC   | Low       |
+|     <img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/LOW.png" alt="image" width="80"/>             | Flash mode   | Boot from USB    | High      |
 
 ### USB
 

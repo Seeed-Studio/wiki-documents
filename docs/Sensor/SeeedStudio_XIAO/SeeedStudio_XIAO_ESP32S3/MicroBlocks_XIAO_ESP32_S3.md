@@ -114,8 +114,14 @@ This script will blink the yellow user LED:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
-The [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual)
-includes many additional examples.
+The [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual) includes many additional examples.
+
+## Project Demo
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vjjg3Hfl_UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br/>
+For a more comprehensive demonstration, maker [Zeller](https://www.hackster.io/Zeller) has created a Mood Player using the XIAO ESP32S3, XIAO Expansion Board, along with Grove Speaker and Grove Button accessories. With MicroBlocks, you can create your favorite patterns and music without writing complex code. A step-by-step tutorial with detailed instructions can be found on [Hackster](https://www.hackster.io/Zeller/mood-player-2426ef).
 
 ## Special Thanks
 

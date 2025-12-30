@@ -12,7 +12,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/es/xiao_debug_mate_serial" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
@@ -176,7 +176,7 @@ El XIAO Debug Mate puede monitorear datos serie de dos maneras: directamente en 
 
 ### Preparación del Software (para Monitoreo en PC)
 
-Si eliges ver los datos serie en tu computadora, necesitarás una aplicación de "terminal serie" o "monitor serie". El XIAO Debug Mate aparecerá como un puerto COM estándar en tu PC. Aquí tienes algunas opciones de software populares:
+Si eliges ver los datos serie en tu computadora, necesitarás una aplicación "terminal serie" o "monitor serie". El XIAO Debug Mate aparecerá como un puerto COM estándar en tu PC. Aquí tienes algunas opciones de software populares:
 
 *   **Monitor Serie de PlatformIO:** Si estás usando VS Code con PlatformIO, simplemente puedes hacer clic en el botón "Serial Monitor" en la barra de estado.
 *   **Monitor Serie del IDE de Arduino:** El monitor clásico y simple integrado en el IDE de Arduino.
@@ -224,6 +224,10 @@ Hay dos formas principales de hacer esto:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/25.jpg" style={{width:800, height:'auto'}}/></div>
 
+El siguiente diagrama muestra las definiciones de pines para la interfaz Grove.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/39.png" style={{width:400, height:'auto'}}/></div>
+
 :::caution Recordatorio Crucial
 Siempre asegúrate de que el pin TX de tu dispositivo esté conectado a un pin receptor en el Debug Mate, y el pin RX del dispositivo esté conectado a un pin transmisor.
 :::
@@ -249,7 +253,7 @@ Antes de explorar las características, es crucial entender cómo navegar la int
 
 2.  **Controles Principales:**
     *   **Rueda de Desplazamiento:** Usada para mover un cursor o alternar entre modos principales.
-    *   **Presión Corta del Botón:** Usada para confirmar una selección o activar el cursor de configuraciones.
+    *   **Presión Corta del Botón:** Usada para confirmar una selección o activar el cursor de configuración.
     *   **Presión Larga del Botón:** Usada para salir de un menú o regresar.
 
 Hay dos estados principales de interacción:
@@ -287,16 +291,29 @@ Este es el modo predeterminado, diseñado para reenviar todos los datos serie de
 Este modo captura y muestra datos serie directamente en la pantalla LCD del Debug Mate. Los datos **no** se reenvían a la PC en este modo.
 
 *   **Pantalla en Dispositivo:** La pantalla está dividida en dos ventanas para mostrar el tráfico de datos.
-    *   `Ventana RX`: Muestra datos recibidos **desde el socket XIAO**.
-    *   `Ventana TX`: Muestra datos recibidos **desde el puerto Grove**.
+    *   `Ventana RX`: Muestra datos recibidos **desde el socket XIAO/Grove**.
+    *   `Ventana TX`: Muestra datos recibidos **desde la PC**.
 
 :::caution
-El Debug Mate no puede mostrar datos de ambas fuentes simultáneamente. Debes seleccionar la fuente activa usando el menú de configuraciones.
+El Debug Mate no puede mostrar datos de ambas fuentes simultáneamente. Debes seleccionar la fuente activa usando el menú de configuración.
+:::
+
+:::note
+Las etiquetas **RX** y **TX** en este documento son siempre **desde la perspectiva del Debug Mate**:  
+- **RX** indica datos **recibidos por el Debug Mate** (es decir, señales serie que llegan *al* Debug Mate).  
+- **TX** indica datos **enviados por el Debug Mate** (es decir, señales siendo *transmitidas* por el Debug Mate).
+
+Esto significa que **los datos enviados desde el XIAO o dispositivo Grove al Debug Mate aparecerán en la ventana RX**, sin importar qué puerto esté seleccionado como fuente. El contenido mostrado en la ventana RX depende de qué fuente (XIAO/Grove) hayas elegido en la configuración.
+
+**TX** siempre se refiere a datos **originados desde la PC** — cuando escribes y envías mensajes desde un terminal serie en tu computadora, se transmiten a través del TX del Debug Mate a la fuente actualmente seleccionada (XIAO o Grove).  
+
+- En ambos modos "Passthrough" y "Monitor", la PC puede enviar datos al Debug Mate a través de su puerto COM virtual, y el Debug Mate pasará estos mensajes al dispositivo serie objetivo que seleccionaste.  
+- Lo que ves en la **ventana TX** es por tanto siempre lo que la PC está enviando a través del Debug Mate, independientemente del modo de monitoreo actual.
 :::
 
 ### Configurando Fuente y Velocidad de Baudios
 
-Para cambiar la fuente de datos o la velocidad de baudios, primero debes activar el cursor de configuraciones.
+Para cambiar la fuente de datos o velocidad de baudios, primero debes activar el cursor de configuración.
 
 1.  **Activar Cursor:** Desde cualquier modo, **presiona el botón una vez**. Un cursor aparecerá en la parte superior de la pantalla.
 
@@ -325,7 +342,7 @@ El menú de velocidad de baudios te permite seleccionar entre nueve velocidades 
 ### Conceptos Clave y Limitaciones
 
 *   **Un Depurador, No un Puente:** El Debug Mate es una herramienta de diagnóstico, no un puente de comunicación. No reenviará automáticamente datos del puerto XIAO al puerto Grove.
-*   **Parámetros Serie Fijos:** Los parámetros serie principales (8-N-1) están fijos en el firmware. Los usuarios avanzados pueden modificar el código de fuente abierta para cambiarlos.
+*   **Parámetros Serie Fijos:** Los parámetros serie principales (8-N-1) están fijos en el firmware. Los usuarios avanzados pueden modificar el código de código abierto para cambiarlos.
 *   **Monitoreo de Fuente Única:** Solo puedes monitorear activamente una fuente (XIAO o Grove) a la vez.
 
 ## Agradecimientos Especiales
@@ -337,14 +354,12 @@ Si te gustaría ver el diseño original, puedes revisar el video de demostració
 *   [Video de Demostración del Diseño Original](https://www.bilibili.com/video/BV1Sc411273Y/)
 *   [Página Principal de Bilibili del Autor](https://space.bilibili.com/1155738723)
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

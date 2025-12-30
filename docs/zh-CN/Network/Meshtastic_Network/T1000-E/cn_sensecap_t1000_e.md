@@ -7,10 +7,14 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 11/11/2025
+  date: 12/24/2025
   author: Michelle Huang
 ---
-
+:::danger note
+当设备处于以下状态时，请不要手动重启或关闭设备。否则设备可能会损坏。
+1. 未完成消息传输过程
+2. 正在配置中
+:::
 ## 视频教程
 
 ### 第一部分：开箱设置
@@ -28,7 +32,7 @@ last_update:
 ### 第三部分：刷写新固件
 
 :::caution note
-在刷写固件之前，请确保您购买的是 `T1000-E for Meshtastic`。请不要将固件刷写到其他不支持 Meshtastic 的追踪器型号上。请 `不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+在刷写固件之前，请确保您购买的是 `T1000-E for Meshtastic`。请不要将固件刷写到其他不支持 Meshtastic 的追踪器型号上。请 `不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
 :::
 
 <div class="video-container">
@@ -53,7 +57,7 @@ last_update:
 按一次按钮开启设备，会有上升的旋律声，LED 灯会保持亮起约 1 秒。
 
 :::tip
-如果按下按钮时设备没有响应，请先充电。请勿使用快充充电器。
+如果按下按钮时设备没有响应，请先充电。不要使用快充充电器。
 :::
 
 ### 通过应用连接
@@ -63,7 +67,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 - 在蓝牙面板上选择目标设备。
 
@@ -75,7 +79,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 
 - 点击 `+` 并选择目标设备。
 
@@ -118,18 +122,19 @@ import TabItem from '@theme/TabItem';
     您的设备将显示在列表中。点击连接。如果连接成功，您可以直接在网站上看到设备状态。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
-### 配置参数
 
-为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的区域位置进行设置。
+### 配置 LoRa
+
+为了开始通过网格进行通信，您必须设置您的区域。此设置控制您的设备使用的频率范围，应根据您的地理位置进行设置。
 
 <Tabs>
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
 </TabItem>
@@ -151,7 +156,7 @@ import TabItem from '@theme/TabItem';
 
 现在您已经在设备上设置了 LoRa 区域，您可以继续配置任何 [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) 以满足您的需求。
 
-### 传感器配置
+### 配置传感器
 
 |传感器|描述|
 |-|-|
@@ -162,7 +167,7 @@ import TabItem from '@theme/TabItem';
 **温度传感器配置**
 
 <Tabs>
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 导航到 `Settings` -> `Telemetry(Sensors)` -> 启用传感器。
 
@@ -170,7 +175,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 
 导航到 `Settings` -> `Telemetry(Sensors)` -> 启用传感器。
 
@@ -187,7 +192,7 @@ import TabItem from '@theme/TabItem';
 |LED|-|24|
 
 <Tabs>
-<TabItem value="ios" label="IOS 应用">
+<TabItem value="ios" label="IOS App">
 
 导航到 `Settings` -> `External Notification` -> 启用 `GPIO` -> 设置 `Output Pin GPIO`。
 
@@ -195,7 +200,7 @@ import TabItem from '@theme/TabItem';
 
 </TabItem>
 
-<TabItem value="android" label="Android 应用">
+<TabItem value="android" label="Android App">
 
 导航到 `Settings` -> `External Notification` -> 启用 `GPIO` -> 设置 `Output Pin GPIO`。
 
@@ -210,6 +215,16 @@ import TabItem from '@theme/TabItem';
 更新设备配置后，设备将重启，这可能需要一些时间。
 :::
 
+### 配置 GPS
+
+请设置启用 GPS。您可以调整更新间隔和广播间隔以获得更及时的位置信息。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
+
+对于 IOS，请开启 `Accurate Location`。否则，定位可能会有偏差。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
+
 ## 刷写固件
 
 ### 检查固件版本
@@ -221,7 +236,7 @@ import TabItem from '@theme/TabItem';
 ### <div class="danger">⚠️请勿刷写以下固件</div>
 
 :::danger
-请勿刷写除 T1000-E 固件以外的其他固件，这可能会导致设备冻结。
+请勿刷写除 T1000-E 固件以外的其他固件，这可能导致设备冻结。
 :::
 
 以下固件会损坏您的设备：
@@ -241,7 +256,7 @@ import TabItem from '@theme/TabItem';
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Flash%20Firmware.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 :::caution note
-在刷写固件之前，请确保您购买的是 `T1000-E for Meshtastic`。请不要将固件刷写到其他不支持 Meshtastic 的追踪器型号上。请 `不要使用 NRF-OTA` 更新固件，这可能会导致设备完全损坏。
+在刷写固件之前，请确保您购买的是 `T1000-E for Meshtastic`。请不要将固件刷写到其他不支持 Meshtastic 的追踪器型号上。请 `不要使用 NRF-OTA` 更新固件，这可能导致设备完全损坏。
 :::
 #### 步骤 1：进入 DFU 模式
 
@@ -250,11 +265,11 @@ import TabItem from '@theme/TabItem';
 
 访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。
 
-将设备连接到您的 PC，选择设备为 `Seeed Card Tracker T1000-E` 并选择最新固件，然后点击 `Flash`。
+将设备连接到您的电脑，选择设备为 `Seeed Card Tracker T1000-E` 并选择最新固件，然后点击 `Flash`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-2.png" alt="pir" width={800} height="auto" /></p>
 
-点击 `Enter DFU Mode`，会显示一个名为 `T1000-E xxx` 的串口，点击并连接它，绿色 LED 会常亮，应该会显示一个名为 `T1000-E` 的驱动程序。
+点击 `Enter DFU Mode`，将显示一个名为 `T1000-E xxx` 的串口，点击并连接它，绿色 LED 将常亮，并且应该显示一个名为 `T1000-E` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-serial.png" alt="pir" width={800} height="auto" /></p>
 
@@ -262,7 +277,7 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="method2" label="方法 2">
 
-将 USB 线缆连接到您的 PC，按住设备按钮，然后**快速**连接充电线缆两次，绿色 LED 将常亮，应该会显示一个名为 `T1000-E` 的驱动器。
+将 USB 线缆连接到您的电脑，按住设备按钮，然后**快速**连接充电线缆两次，绿色 LED 将常亮，并且应该显示一个名为 `T1000-E` 的驱动器。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
@@ -293,21 +308,21 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/down-uf2.png" alt="pir" width={800} height="auto" /></p>
 
-将 UF2 文件复制到 DFU 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
+将 UF2 文件复制到 DFU 驱动器。文件下载完成后固件应该被刷写，设备将重启。
 
 ## 常见问题
 
-- **如何检查设备名称**
+### 如何检查设备名称
 
  访问 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)。<br/>
 
- 点击 `Open Serial Monitor`，将设备连接到您的 PC，检查串口日志，关键词 `using nodenum`。
+ 点击 `Open Serial Monitor`，将设备连接到您的电脑，检查串口日志，关键词 `using nodenum`。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/monitor2.png" alt="pir" width={800} height="auto" /></p>
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
 
-- **如何重启设备？**
+### 如何重启设备
 
  按住按钮，然后连接充电线缆。
 
@@ -319,11 +334,17 @@ import TabItem from '@theme/TabItem';
 
 - 更换充电线缆
 
+- 有时看起来像是关机了，但实际上是因为 LED 和蜂鸣器没有被激活。检查以下参数：
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
+
+ - 如果仍然无效，按住设备按钮，然后连接充电线缆，查看您的电脑中是否弹出磁盘。如果是，[点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#device-bricked) 重新安装引导加载程序
+
 ### 设备陷入启动循环
 
 **描述：**
 
-设备会反复重启，串口会反复连接和断开。
+设备将反复重启，串口反复连接和断开。
 
 **解决方案：**
 
@@ -335,13 +356,13 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-- 步骤 2：[擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#步骤-2 擦除闪存)。
+- 步骤 2：[擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase)。
 
-- 步骤 3：[刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#步骤-3 刷写固件)。
+- 步骤 3：[刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-3-flash-firmware)。
 
 ### 设备变砖
 
-**描述：**
+#### 描述
 
 设备无响应，无 LED，无法与您的应用配对。
 
@@ -361,7 +382,7 @@ import TabItem from '@theme/TabItem';
 
 **步骤 1：Adafruit-nrfutil 安装**
 
-**前提条件**
+**先决条件**
 
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
@@ -386,23 +407,23 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-注意：以下命令使用 `python3`，但如果您在 Windows 上，可能需要将其更改为 `python`，因为 Windows 的 python 3.x 安装仍使用名称 python.exe。
+注意：以下命令使用 `python3`，但如果您在 Windows 上，可能需要将其更改为 `python`，因为 Windows 的 python 3.x 安装仍然使用名称 python.exe。
 
-要在您的主目录中的用户空间中安装：
+在您的主目录中安装到用户空间：
 
 ```
 pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-如果在运行 `pip3 install` 时遇到权限错误，您的 `pip3` 版本较旧或设置为尝试在系统目录中安装。在这种情况下使用 `--user` 标志：
+如果在运行 `pip3 install` 时遇到权限错误，您的 `pip3` 版本较旧或设置为尝试安装到系统目录。在这种情况下使用 `--user` 标志：
 
 ```
 pip3 install -r --user requirements.txt
 python3 setup.py install
 ```
 
-如果您想在系统目录中安装（通常不推荐）：
+如果您想安装到系统目录（通常不推荐）：
 
 ```
 sudo pip3 install -r requirements.txt
@@ -427,14 +448,14 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 **步骤 2：检查您的端口号**
 
-将您的设备连接到 PC，并检查端口号。
+将您的设备连接到电脑，并检查端口号。
 
 示例：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
 **步骤 3：刷写引导加载程序**
 
-在终端或命令提示符中，导航到您下载引导加载程序压缩包的目录并执行以下命令，替换为您设备的正确端口：
+在终端或命令提示符中，导航到您下载引导加载程序 zip 包的目录并执行以下命令，替换为您设备的正确端口：
 
 - **对于 Windows**：
 
@@ -450,7 +471,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-当您完成上述步骤后，您可以按照此[步骤](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#刷写应用固件)刷写应用固件。
+当您完成上述步骤后，您可以按照此[步骤](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-application-firmware)刷写应用固件。
 
 **2) 设备无法进入 DFU 模式，但可以检测到串口**。
 
@@ -459,7 +480,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 - 将波特率设置为 `1200`。
 
 - 连接设备。
-   连接时灯会短暂闪烁。继续尝试直到灯保持常亮，意味着设备可以回到 DFU 模式，然后[刷写引导加载程序](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#刷写引导加载程序) -> [擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#步骤-2 擦除闪存) -> [刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#步骤-3 刷写固件)。
+   连接时灯会短暂闪烁。继续尝试直到灯保持常亮，意味着设备可以回到 DFU 模式，然后[刷写引导加载程序](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#flash-the-bootloader) -> [擦除闪存](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase) -> [刷写固件](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-3-flash-firmware)。
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -467,9 +488,11 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 **3) 设备无法进入 DFU 模式且无串口显示**
 
-- 请断开充电线缆，让设备放置几天直到电池完全耗尽，然后连接充电线缆并尝试重新配对。
+- 按住设备按钮，然后连接充电线缆。在您的电脑中弹出磁盘后，您可能会看到串口。
 
-**4) 如果以上步骤都不起作用，请联系技术支持：support@sensecapmx.com**
+- 如果仍然无效，请断开充电线缆并将设备放置几天直到电池完全耗尽，然后连接充电线缆并尝试再次配对。
+
+**4) 如果以上步骤都无效，请联系技术支持：support@sensecapmx.com**
 
 ### 固件刷写失败
 
@@ -477,13 +500,34 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
- 检查设备是否处于 DFU 模式，当设备处于 DFU 模式时绿灯会常亮。
+ 检查设备是否处于 DFU 模式，当设备处于 DFU 模式时绿灯将常亮。
 
 - **无法打开串口**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wrong-port.png" alt="pir" width={500} height="auto" /></p>
 
  检查端口是否正确，或尝试其他端口。
+
+ ### 设备自动关机
+
+ #### 描述
+
+ - 设备开机后，会在一段时间后自动关机或重启。
+ - 串口日志运行一段时间后停止。
+
+ 这可能是由于在设备处于以下状态时手动强制重启或关闭设备导致的：未完成消息传输过程、正在配置......
+
+ #### 故障排除
+
+ [点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase)执行闪存擦除。
+
+ ### 恢复出厂设置
+如果您想恢复到默认设置，可以进行恢复出厂设置。有两种方法可以进行恢复出厂设置。
+
+- [点击这里](https://wiki.seeedstudio.com/cn/sensecap_t1000_e/#step-2-flash-erase)对设备进行闪存擦除。然后重新刷入最新固件。
+
+- 在应用中点击 `Factory Reset` 按钮。设备将自动使用出厂配置重启。
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### 信号质量
 

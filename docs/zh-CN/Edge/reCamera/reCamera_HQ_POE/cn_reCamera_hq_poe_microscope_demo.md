@@ -19,6 +19,8 @@ last_update:
 
 # reCamera_Microscope
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/4.gif" /></div>
+
 ## 🔥什么是 reCamera_Microscope？
 
 reCamera_Microscope 是一个基于 [reCamera 2002 系列](https://www.seeedstudio.com/reCamera-2002w-64GB-p-6249.html) 和 [GC2053 传感器板](https://www.seeedstudio.com/reCamera-2002-Sensor-Board-GC2053-p-6556.html) 的开源项目。您也可以使用 [reCamera 2002 HQ PoE 版本](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html) 来完成这个项目。
@@ -55,16 +57,6 @@ reCamera Sg2002 系列内置 1 TOPS 的计算能力，允许其运行 YoloV11 �
 5. 显微镜支架
 6. 12V 电源适配器
 7. Type-C 线缆
-
-## 🛒购买链接
-
-| reCamera POE & Type-C 线缆                | [reCamera 2002 HQ PoE 8GB](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html) |
-| ------------------------------------------ | ------------------------------------------------------------ |
-| 3D 打印件 x2                              |                [3D 打印件下载](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Microscope/3D_Printed_Case/top_2.3mf)                                              |
-| M12 镜头 x2                                | [6mmB 型 – 生物显微镜（淘宝）](https://item.taobao.com/item.htm?id=966337796751&mi_id=0000aLtG3Un2BtLBwdSYZFPZI-nRQdgezdGbA6si_qz_3TY&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6&sku_properties=1627207%3A1364564910)<br />[22mmB 型 – PCB 显微镜（淘宝）](https://item.taobao.com/item.htm?id=966337796751&mi_id=0000aLtG3Un2BtLBwdSYZFPZI-nRQdgezdGbA6si_qz_3TY&sku_properties=1627207%3A1392136713&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6) |
-| M12 镜头延长支架 x3              | [M12 镜头延长支架 x3        买 2 送 1 M12×0.5 延长环（淘宝）](https://item.taobao.com/item.htm?id=727001812366&mi_id=0000GVjgJwtQrpMV3hfTIBkQ7C750g4UcKWmn7jTQMZm4Kk&spm=tbpc.boughtlist.suborder_itemtitle.1.442e2e8d4bcrJz) |
-| 显微镜支架<br />& 12V 电源适配器 | [显微镜支架 & 12V 电源适配器        便携式电子显微镜支架带灯 35/50 mm 底座（淘宝）](https://item.taobao.com/item.htm?id=749452322341&mi_id=0000hBbQQwAlptuyVy-eEdVQVGl4eia1yeh5B2o2U_KOHoQ&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6) |
-
 
 ## 安装步骤
 

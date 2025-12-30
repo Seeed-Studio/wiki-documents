@@ -1,0 +1,10 @@
+position: 5
+label: 'Monitoreo Ambiental'
+collapsible: true
+collapsed: true
+className: _environmental-monitoring
+# link:
+#   type: generated-index
+#   slug: es/environmental-monitoring
+#   title: Monitoreo Ambiental
+#   description: Sensores y análisis para condiciones del aire, agua, suelo y ambiente.

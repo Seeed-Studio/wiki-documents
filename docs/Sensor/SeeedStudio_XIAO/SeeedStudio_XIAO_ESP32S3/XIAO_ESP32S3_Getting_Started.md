@@ -78,7 +78,7 @@ The **OV2640 camera** has been discontinued, and the subsequent XIAO ESP32S3 Sen
     <tr>
      <th>Built-in Sensors</th>
      <td align="center"> - </td>
-        <td align="center">OV2640 camera sensor for 1600*1200<br></br> OV3660 camera sensor for 2048*1536<br></br>Digital microphone</td>
+        <td align="center">OV2640 camera sensor for 1600 * 1200 <br></br>OV3660 camera sensor for 2048 * 1536<br></br>Digital microphone</td>
   <td align="center"> - </td>
  </tr>
     <tr>
@@ -784,6 +784,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD file](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1_SCH_PCB.zip)
 - **[ZIP]** [Seeed Studio XIAO Plus Base with botton pad lead out](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
 - **[ZIP]** [Seeed Studio XIAO Plus Base without botton pad lead out](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
+- **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32s3-plus-1/files)
 
 ### For Seeed Studio XIAO ESP32S3 Sense Camera
 

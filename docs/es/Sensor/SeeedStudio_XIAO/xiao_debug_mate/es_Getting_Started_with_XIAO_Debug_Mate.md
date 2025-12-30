@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/es/getting_started_with_xiao_debug_mate" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción
 
-El Seeed Studio XIAO Debug Mate es una herramienta múltiple ESP32-S3 de código abierto que simplifica la depuración de sistemas embebidos con retroalimentación visual. Este dispositivo todo-en-uno cuenta con una pantalla TFT LCD independiente de 2.01 pulgadas, matriz de estado LED y soporte nativo para Seeed Studio XIAO, proporcionando funciones esenciales de depuración: depuración a nivel de chip DAPLink, monitoreo serial integrado con paso directo UART y medición precisa del consumo de energía. El diseño plug-and-play elimina el cableado complejo para un desarrollo optimizado.
+Seeed Studio XIAO Debug Mate es una herramienta múltiple ESP32-S3 de código abierto que simplifica la depuración de sistemas embebidos con retroalimentación visual. Este dispositivo todo-en-uno cuenta con una pantalla LCD TFT independiente de 2.01 pulgadas, matriz de estado LED y soporte nativo para Seeed Studio XIAO, proporcionando funciones esenciales de depuración: depuración a nivel de chip DAPLink, monitoreo serial integrado con paso directo UART y medición precisa del consumo de energía. El diseño plug-and-play elimina el cableado complejo para un desarrollo optimizado.
 
 ### Especificaciones
 
@@ -43,7 +43,7 @@ El Seeed Studio XIAO Debug Mate es una herramienta múltiple ESP32-S3 de código
 		</tr>
 		<tr>
 			<td>Pantalla</td>
-			<td>TFT LCD de 2.01 pulgadas con resolución 240 x 296</td>
+			<td>LCD TFT de 2.01 pulgadas con resolución 240 x 296</td>
 		</tr>
 		<tr>
 			<td>LED</td>
@@ -103,13 +103,13 @@ El dispositivo está equipado con los siguientes componentes de hardware clave:
 
 * ③ **Pines Pogo**: Un conjunto de sondas con resorte ubicadas dentro del Socket XIAO (②). Su función específica es hacer contacto eléctrico confiable con las almohadillas en la parte posterior de la placa principal XIAO instalada.
 
-* ④ **Conector de Expansión Exterior**: Este conector expone los pines de los lados izquierdo y derecho de la placa principal XIAO. Cuenta con un diseño de interfaz dual con conectores hembra en la parte superior (para cables Dupont) y pines macho en la parte inferior. Este diseño versátil permite que todo el dispositivo se use como una placa hija en otro sistema.
+* ④ **Conector de Expansión Exterior Interno**: Este conector está específicamente diseñado para extraer las señales de los pines posteriores de la placa principal XIAO, que están conectados a través de los Pines Pogo (③). Cuenta con un diseño de interfaz dual con conectores hembra en la parte superior (para cables Dupont) y pines macho en la parte inferior. Este diseño versátil permite que todo el dispositivo se use como una placa hija en otro sistema.
 
-* ⑤ **Conector de Expansión Interior**: Este conector está específicamente diseñado para exponer las señales de los pines traseros de la placa principal XIAO, que están conectados a través de los Pines Pogo (③). Al igual que el conector ④, cuenta con conectores hembra en la parte superior y pines macho en la parte inferior, proporcionando acceso conveniente a las E/S orientadas hacia atrás del XIAO.
+* ⑤ **Conector de Expansión Interno**: Este conector extrae los pines de los lados izquierdo y derecho de la placa principal XIAO. Al igual que el conector ④, cuenta con conectores hembra en la parte superior y pines macho en la parte inferior, proporcionando acceso conveniente a la E/S trasera del XIAO.
 
-* ⑥ **Codificador Rotatorio**: Una rueda de codificador rotatorio (rodillo) en el borde superior, utilizada para navegar menús, desplazarse por opciones y ajustar valores en la pantalla.
+* ⑥ **Codificador Rotativo**: Una rueda de codificador rotativo (rodillo) en el borde superior, utilizada para navegar menús, desplazarse por opciones y ajustar valores en la pantalla.
 
-* ⑦ **Pantalla**: TFT LCD de 2.01 pulgadas con resolución 240x296 para visualización clara de datos e interacción.
+* ⑦ **Pantalla**: LCD TFT de 2.01 pulgadas con resolución 240x296 para visualización clara de datos e interacción.
 
 * ⑧ **Puerto Grove**: Para conectar módulos Grove externos basados en UART.
 
@@ -141,14 +141,18 @@ El XIAO Debug Mate requiere una fuente de alimentación constante de 5V/1A a tra
 <iframe width="700" height="400" src="https://files.seeedstudio.com/wiki/xiao_debug_mate/first_power.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
+:::tip
+En general, todas las funciones de XIAO en Debug Mate no requieren fuente de alimentación adicional para XIAO, a menos que se especifique lo contrario.
+:::
+
 ### Lógica Operacional
 
 La interfaz del dispositivo está controlada por un sistema simple e intuitivo de dos partes:
 
-*   **Codificador Rotatorio (Rodillo):** Gira el rodillo para navegar por los menús y resaltar opciones seleccionables.
+*   **Codificador Rotativo (Rodillo):** Gira el rodillo para navegar por los menús y resaltar opciones seleccionables.
 *   **Botón:**
     *   **Clic Simple:** Confirma una selección o entra a un menú resaltado.
-    *   **Pulsación Larga (mantener presionado por >2s y soltar):** Actúa como un botón "Atrás", regresándote a la pantalla o menú anterior.
+    *   **Presión Larga (mantener presionado por >2s y soltar):** Actúa como un botón "Atrás", regresándote a la pantalla o menú anterior.
 
 <div class="table-center">
 <iframe width="700" height="400" src="https://files.seeedstudio.com/wiki/xiao_debug_mate/operational_logic.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -162,7 +166,7 @@ El firmware del XIAO Debug Mate está organizado en tres páginas funcionales pr
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/1.jpg" style={{width:600, height:'auto'}}/></div>
 
-Esta es la pantalla por defecto y sirve como un panel de control central. Proporciona una vista general en tiempo real de todas las funciones clave:
+Esta es la pantalla predeterminada y sirve como un panel de control central. Proporciona una vista general en tiempo real de todas las funciones clave:
 *   **Estado de Depuración:** Indica si la función SWD `DEBUG` está activa.
 *   **Estado UART:** Muestra la velocidad de baudios actual y la actividad en las líneas RX/TX.
 *   **Métricas de Energía:** Muestra el Voltaje instantáneo (`U`), Corriente (`I`) y Potencia (`P`) que está consumiendo el XIAO conectado.
@@ -292,7 +296,7 @@ Para ingresar al Modo Flash:
 
 ## Firmware de fábrica
 
-Si necesitas restaurar el firmware original de fábrica, puedes hacerlo usando uno de los métodos a continuación. Primero, pon el dispositivo en **Modo Boot** como se describe en la sección anterior.
+Si necesitas restaurar el firmware de fábrica original, puedes hacerlo usando uno de los métodos a continuación. Primero, pon el dispositivo en **Modo Boot** como se describe en la sección anterior.
 
 ### Método 1: Usando Scripts de Flash
 
@@ -377,7 +381,7 @@ git clone https://github.com/Seeed-Studio/OSHW-XIAO-Debug-Mate.git
    - Si usas PlatformIO IDE (extensión de VS Code), abre la carpeta que contiene `platformio.ini`
    - O usa PlatformIO Core CLI
 
-4. Pon tu XIAO Debug Mate en **Modo Boot** como se describe en la sección Boot anterior.
+4. Pon tu XIAO Debug Mate en **Modo Boot** como se describe en la sección de Arranque anterior.
 
 5. Compila y sube el firmware:
 
@@ -397,7 +401,7 @@ pio run --target upload
 
 Este método te permite:
 - Modificar el firmware para agregar características personalizadas
-- Compilar la última versión de desarrollo
+- Compilar la versión de desarrollo más reciente
 - Contribuir al proyecto de código abierto
 - Aprender de la implementación del código fuente
 
@@ -407,7 +411,7 @@ Asegúrate de tener PlatformIO instalado. Puedes instalarlo como una extensión 
 
 ## Solución de Problemas
 
-### P1: Guía de Compatibilidad de Pines del XIAO Debug Mate
+### P1: Guía de Compatibilidad de Pines de XIAO Debug Mate
 
 **Problema:** Tengo problemas con la función de depuración; parece que hay una mala conexión.
 
@@ -420,14 +424,14 @@ Asegúrate de tener PlatformIO instalado. Puedes instalarlo como una extensión 
 
     Si experimentas una conexión de depuración inestable, intenta **ajustar ligeramente la posición** de la placa XIAO dentro del socket. Puede que no necesites empujarla completamente hacia abajo. Un pequeño cambio a menudo puede asegurar que los pines pogo hagan contacto sólido con los pads SWD en la parte posterior del XIAO.
 
-2.  **Desgaste en los Conectores:**
+2.  **Desgaste de los Conectores:**
     Los conectores hembra, como cualquier conector mecánico, tienen una vida útil finita. Para maximizar su durabilidad y asegurar una conexión confiable, por favor sigue esta mejor práctica:
     *   Al insertar o remover una placa XIAO, aplica fuerza **directamente hacia arriba o hacia abajo**.
     *   **Evita mover o balancear** la placa XIAO de un lado a otro, ya que esto puede doblar los pines, ensanchar los contactos en el conector hembra y provocar conexiones deficientes con el tiempo.
 
 ## Agradecimientos Especiales
 
-Agradecimientos especiales a **啊猫啊狗晒太阳 (Ah Mao Ah Gou Shai Tai Yang)** por la inspiración de diseño para la matriz LED. El diseño del indicador LED integrado del Debug Mate es una referencia a su excelente proyecto de código abierto. El diseño original es muy creativo y práctico.
+Agradecimientos especiales a **啊猫啊狗晒太阳 (Ah Mao Ah Gou Shai Tai Yang)** por la inspiración del diseño para la matriz LED. El diseño del indicador LED integrado del Debug Mate es una referencia a su excelente proyecto de código abierto. El diseño original es muy creativo y práctico.
 
 Si te gustaría ver el diseño original, puedes consultar el video de demostración y la página principal del autor a través de los enlaces a continuación.
 
@@ -443,14 +447,12 @@ Si te gustaría ver el diseño original, puedes consultar el video de demostraci
 
 ## Soporte Técnico y Discusión del Producto
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

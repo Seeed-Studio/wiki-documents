@@ -1,7 +1,7 @@
 ---
-description: reComputer R2000上でFrigate NVRとHailo AIアクセラレータを使用したDIY AI搭載ホーム監視システム。リアルタイムスマートアラート、物体検出、エッジでの効率的なローカル動画処理のためにHome Assistantとシームレスに統合されます。
+description: Frigate NVR と Hailo AI アクセラレータを使用した reComputer R2000 での DIY AI 搭載ホーム監視システム。Home Assistant とシームレスに統合し、リアルタイムスマートアラート、物体検出、エッジでの効率的なローカル動画処理を実現します。
 
-title: reComputer R2000上のFrigate NVRとHailoをHome Assistantに接続
+title: reComputer R2000 での Frigate NVR と Hailo の Home Assistant 連携
 
 keywords:
 - Raspberry pi
@@ -16,58 +16,72 @@ last_update:
   author: Kasun Thushara
 ---
 
-# reComputer R2000上のFrigate NVRとHailoをHome Assistantに接続
+# reComputer AI box & Industrial box での Frigate NVR と Hailo の Home Assistant 連携
 
 ## はじめに
 
-Frigate NVRは、AIモデルを使用したリアルタイム物体検出専用に設計されたオープンソースのネットワークビデオレコーダー（NVR）です。軽量で強力であり、RTSPプロトコルを介してカメラとシームレスに動作します。
+Frigate NVR は、AI モデルを使用したリアルタイム物体検出専用に設計されたオープンソースのネットワークビデオレコーダー（NVR）です。軽量で強力であり、RTSP プロトコル経由でカメラとシームレスに動作します。
 
-Home Assistant（HA）は、家庭内のデバイスを制御・自動化できるスマートホーム自動化のためのオープンソースプラットフォームです。
+Home Assistant（HA）は、家庭内のデバイスを制御・自動化できるスマートホーム自動化のオープンソースプラットフォームです。
 
-このガイドでは、**Hailo PCIe**を搭載した**reComputer AIボックス**に**Frigateをインストール**し、**MQTT**を使用して既存の**Home Assistant**セットアップに最小限の手間で接続する方法を説明します。
+このガイドでは、**Hailo PCIe** を搭載した **reComputer AI box & Industrial box に Frigate をインストール**し、**MQTT** を使用して既存の **Home Assistant** セットアップに最小限の手間で接続する方法を説明します。
 
 ## 前提条件
 
 ### ハードウェア要件
 
 <div class="table-center">
-  <table align="center">
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2130</th>
+  <th>reComputer AI Industrial R2145</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
     <tr>
-        <th>reComputer AI Industrial R2000</th>
-         <th>reComputer AI R2000</th>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-    <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg" style={{width:250, height:'auto'}}/></div></td>
-         <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:250, height:'auto'}}/></div></td>
-    </tr>
-      <tr>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2135-12-p-6432.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
-          </a>
-      </div></td>
-<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
-          </a>
-      </div></td>
-    </tr>
-  </table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
-## Hailo PCIeドライバーのインストール
+## Hailo PCIe ドライバーのインストール
 
-### ステップ1：Raspberry Piの設定
+### ステップ 1: Raspberry Pi 設定
 
 ```bash
 sudo apt update
 sudo raspi-config
 ```
 
-- `6 Advanced Options > A8 PCIe Speed` に移動します
-- `Yes` を選択して PCIe Gen 3 を有効にします
-- 終了して `Finish` を選択します
-  
+- `6 Advanced Options > A8 PCIe Speed` に移動
+- `Yes` を選択して PCIe Gen 3 を有効化
+- 終了して `Finish` を選択
+
 <div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/pcie.png"
@@ -75,7 +89,7 @@ sudo raspi-config
   />
 </div>
 
-`/boot/firmware/config.txt` の末尾に以下の行を追加します：
+`/boot/firmware/config.txt` の末尾に以下の行を追加：
 
 ```bash
 dtoverlay=pciex1-compat-pi5,no-mip
@@ -104,15 +118,15 @@ sudo mkdir -p /lib/firmware/hailo
 sudo cp hailo8_fw*.bin /lib/firmware/hailo/hailo8_fw.bin
 ```
 
-### ステップ4: PCIeディスクリプタサイズの問題を修正
+### ステップ 4: PCIe ディスクリプタサイズ問題の修正
 
-以下の内容で `/etc/modprobe.d/hailo_pci.conf` を作成します：
+以下の内容で `/etc/modprobe.d/hailo_pci.conf` を作成：
 
 ```bash
 options hailo_pci force_desc_page_size=4096
 ```
 
-### ステップ5：再起動と確認
+### ステップ 5: 再起動と確認
 
 ```bash
 sudo reboot
@@ -125,11 +139,11 @@ ls /dev/hailo*
 /dev/hailo0
 ```
 
-## Frigate NVRをDockerでインストール
+## Docker を使用した Frigate NVR のインストール
 
 ### 前提条件
 
-カメラが1920x1080解像度でRTSPストリーミング用に設定されていることを確認してください。
+カメラが 1920x1080 解像度で RTSP ストリーミング用に設定されていることを確認してください。
 
 ### システムの更新
 
@@ -137,7 +151,7 @@ ls /dev/hailo*
 sudo apt update
 ```
 
-### Dockerのインストール
+### Docker のインストール
 
 ```bash
 curl -fsSL get.docker.com | bash
@@ -145,7 +159,7 @@ sudo usermod -aG docker $USER
 sudo reboot
 ```
 
-### Frigate イメージをプル
+### Frigate イメージの取得
 
 ```bash
 docker pull ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l
@@ -160,7 +174,7 @@ mkdir -p ~/frigate/data/storage
 cd ~/frigate
 ```
 
-### Docker Compose ファイル（frigate.yml）を作成する
+### Docker Compose ファイルの作成（frigate.yml）
 
 ```bash
 nano frigate.yml
@@ -189,7 +203,7 @@ services:
       - 5000:5000
 ```
 
-### Frigate設定ファイルの作成 (config/config.yml)
+### Frigate 設定ファイルの作成（config/config.yml）
 
 ```bash
 nano config/config.yml
@@ -235,15 +249,15 @@ model:
 version: 0.15-1
 ```
 
-### Frigateを開始する
+### Frigate の開始
 
 ```bash
 docker compose -f frigate.yml up -d
 ```
 
-### Web UIへのアクセス
+### Web UI へのアクセス
 
-アクセス先: `http://<your-device-ip>:5000`
+アクセス先：`http://<your-device-ip>:5000`
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -252,16 +266,16 @@ docker compose -f frigate.yml up -d
   />
 </div>
 
-## Home Assistant統合
+## Home Assistant 統合
 
-### ステップ1: HACSセットアップ
+### ステップ 1: HACS セットアップ
 
 Home Assistant（HA Green、HA Yellow、または類似のスタンドアロンデバイス）を実行していることを前提とします：
 
-- [HACS](https://hacs.xyz/docs/use/)がまだインストールされていない場合はインストールしてください。
-- HACSで、コミュニティストアから**Frigate統合**をインストールしてください。
+- まだインストールしていない場合は [HACS](https://hacs.xyz/docs/use/) をインストールします。
+- HACS で、コミュニティストアから **Frigate integration** をインストールします。
 
-Frigate AIボックスのIPアドレスとポートを使用して設定してください
+Frigate AI box の IP アドレスとポートを使用して設定します
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -270,11 +284,11 @@ Frigate AIボックスのIPアドレスとポートを使用して設定して�
   />
 </div>
 
-### ステップ2: MQTTアドオンのインストール
+### ステップ 2: MQTT アドオンのインストール
 
-[公式MQTT統合ガイド](https://www.home-assistant.io/integrations/mqtt/)に従って、MQTTブローカーアドオンをインストールして設定してください。
+[公式 MQTT 統合ガイド](https://www.home-assistant.io/integrations/mqtt/)に従って、MQTT ブローカーアドオンをインストール・設定します。
 
-### ステップ3: MQTT用のFrigate設定の更新
+### ステップ 3: MQTT 用 Frigate 設定の更新
 
 ```bash
 mqtt:
@@ -347,17 +361,17 @@ version: 0.15-1
 
 ```
 
-### ステップ4: Frigateを再起動する
+### ステップ 4: Frigate の再起動
 
 ```bash
 docker compose -f frigate.yml down
 sudo docker compose -f frigate.yml up -d
 ```
 
-### ステップ 5: MQTT が動作していることを確認する（オプション）
+### ステップ 5: MQTT が動作していることの確認（オプション）
 
-- HA ログまたは MQTT アドオンログをチェックして、Frigate からのメッセージを確認する
-- HA では、Frigate イベントを自動化で使用できるようになります（例：モーション警告、検出されたオブジェクトなど）
+- HA ログまたは MQTT アドオンログをチェックして、Frigate からのメッセージを確認
+- HA で、Frigate イベントを自動化で使用できるようになります（例：動作アラート、検出されたオブジェクトなど）
 
 <div style={{ textAlign: 'center' }}>
   <img
@@ -368,7 +382,7 @@ sudo docker compose -f frigate.yml up -d
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

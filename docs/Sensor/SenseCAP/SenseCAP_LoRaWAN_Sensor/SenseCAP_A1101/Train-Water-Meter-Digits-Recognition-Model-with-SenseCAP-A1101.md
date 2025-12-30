@@ -5,8 +5,8 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
-date: 08/17/2023
-author: JoJang
+date: 11/26/2025
+author: Twelve
 ---
 
 # Train Water Meter Digits Recognition Model with SenseCAP A1101
@@ -208,7 +208,7 @@ This will generate a code snippet that we will use later inside Google Colab tra
 
 After we have chosen a public dataset, we need to train the dataset. Here we use a Google Colaboratory environment to perform training on the cloud. Furthermore, we use Roboflow api within Colab to easily download our dataset.
 
-Click [here](https://colab.research.google.com/github/Seeed-Studio/EdgeLab/blob/main/notebooks/Google-Colab-YOLOv5-A1101-Example.ipynb) to open an already prepared Google Colab workspace, go through the steps mentioned in the workspace and run the code cells one by one.
+Click [here](https://github.com/Seeed-Studio/yolov5-swift/blob/master/notebooks/Google_Colab_Digital_Meter_Example.ipynb) to open an already prepared Google Colab workspace, go through the steps mentioned in the workspace and run the code cells one by one.
 
 **Note:** On Google Colab, in the code cell under **Step 4**, you can directly copy the code snippet from Roboflow as mentioned above
 
@@ -271,7 +271,7 @@ In addition to perform inference on the browser, we can also use the SenseCAP Ma
 
   ***Note:*** water_meter and digital_meter both identify the model name as user-define6 on the desktop and display digital_meter on the APP side. The model name identified by pfld_meter is user-define5, and Point_meter is displayed on the APP side. Users need to upload models according to their actual usage requirements during the deployment process
 
-- **Step 2.**  [Click here](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace) to open a preview window of the camera stream
+- **Step 2.**  [Click here](https://vision-ai-demo.seeed.cn/) to open a preview window of the camera stream
 
 - **Step 3.**  Click **Connect** button. Then you will see a pop up on the browser. Select **SenseCAP A1101** - Paired and click Connect
 

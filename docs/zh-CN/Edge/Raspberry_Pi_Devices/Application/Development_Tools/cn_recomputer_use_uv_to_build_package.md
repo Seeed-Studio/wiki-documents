@@ -1,6 +1,6 @@
 ---
-description: 本wiki将向您展示如何使用uv来管理您的python对象
-title: 在reComputer上使用uv
+description: 本 wiki 将向您展示如何使用 uv 来管理您的 python 对象
+title: 在 reComputer 上使用 uv
 keywords:
   - Edge
   - RasberryPi 5
@@ -14,11 +14,11 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# 在reComputer上使用uv
+# 在 reComputer 上使用 uv
 
-## 介绍
+## 简介
 
-本wiki介绍如何在reComputer盒子上使用[uv](https://github.com/astral-sh/uv)。uv是一个快速、现代且轻量级的Python包管理器和解析器。它被设计为传统Python包管理工具（如```pip```和```pip-tools```）的直接替代品，在速度、效率和可用性方面提供了显著改进。
+本 wiki 解释了如何在 reComputer 设备上使用 [uv](https://github.com/astral-sh/uv)。uv 是一个快速、现代且轻量级的 Python 包管理器和解析器。它被设计为传统 Python 包管理工具（如 ```pip``` 和 ```pip-tools```）的直接替代品，在速度、效率和可用性方面提供了显著改进。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_speed.png" style={{width:600, height:'auto'}}/></div>
 
@@ -27,29 +27,54 @@ no_comments: false # for Disqus
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer R1125</th>
+ <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
   <th>reComputer AI Industrial R2145</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -58,7 +83,7 @@ no_comments: false # for Disqus
 
 ## 准备软件
 
-### 更新系统：
+### 更新系统
 
 ```bash
 sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
@@ -76,13 +101,14 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ### 初始化项目
 
-这里，我们使用 `uv_test` 作为示例来演示 `uv` 的用法。
+在这里，我们使用 `uv_test` 作为示例来演示 `uv` 的用法。
 > **注意：** 请使用不同的项目名称，确保它与 PyPI 上的任何包都不同。
 
 ```bash
 uv init uv_test --package
 cd uv_test
 ```
+
 检查项目的结构
 
 ```bash
@@ -92,9 +118,9 @@ tree
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_tree.png" style={{width:600, height:'auto'}}/></div>
 
-### 创建 Python 环境
+### 创建 python 环境
 
-在这里您可以创建一个 Python 环境
+在这里您可以创建一个 python 环境
 
 ```bash
 uv venv 
@@ -105,15 +131,15 @@ source .venv/bin/activate
 
 ### 添加依赖项
 
-使用 `numpy` 构建功能：
+使用 `numpy` 来构建功能：
 
 ```bash
 uv add numpy
 ```
 
-### 创建函数
+### 创建功能
 
-使用 NumPy 在 `add.py` 中编写一个 `add` 函数作为示例：
+使用 NumPy 在 `add.py` 上编写一个 `add` 函数作为示例：
 
 <details>
   <summary>add.py</summary>
@@ -140,7 +166,7 @@ def add(arr1: np.ndarray, arr2: np.ndarray) -> np.ndarray:
         result = np.add(arr1, arr2)
     except ValueError:
         raise ValueError("Input arrays have incompatible shapes for element-wise addition.")
-    
+
     return result
 
 if __name__ == "__main__":
@@ -182,7 +208,7 @@ uv pip install dist/uv_test-0.1.0-py3-none-any.whl
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_install.png" style={{width:800, height:'auto'}}/></div>
 
-使用 `python` 脚本测试包：
+使用 `python` 脚本来测试包：
 
 <details>
   <summary>add.py</summary>
@@ -206,7 +232,7 @@ if __name__ == "__main__":
 uv publish
 ```
 
-结果如下所示，输入您的令牌：
+结果如下所示，并输入您的令牌：
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_pubilsh.png" style={{width:800, height:'auto'}}/></div>
 

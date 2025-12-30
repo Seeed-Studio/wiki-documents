@@ -298,7 +298,7 @@ Save and exit:
 #### Edit configuration.yaml:
 
 ```bash
-sudo nano /home/seeed/homeassistant/config/automations.yaml
+sudo nano /home/seeed/homeassistant/config/configuration.yaml
 ```
 
 Replace the content:
