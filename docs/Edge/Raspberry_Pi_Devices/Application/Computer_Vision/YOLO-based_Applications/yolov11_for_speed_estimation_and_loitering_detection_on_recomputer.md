@@ -1,25 +1,27 @@
 ---
-description: This wiki demonstrates how to deploy facial recognition on the reComputer. 
-title: Deploy Facial Recognition on reComputer
+description: This wiki demonstrates how to uses YOLOv11 for speed estimation and loitering detection.. 
+title: YOLOv11 for Speed Estimation and Loitering Detection
 keywords:
   - Edge
   - reComputer AI 
-  - face recognition
+  - YOLOv11
   - hailo
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /facial_recognition_on_the_recomputer
+slug: /yolov11_for_speed_estimation_and_loitering_detection_on_recomputer
 last_update:
-  date: 11/18/2025
+  date: 12/16/2025
   author: Jiahao
 
 no_comments: false # for Disqus
 ---
 
-# Deploy Facial Recognition on reComputer
+# YOLOv11 for Speed Estimation and Loitering Detection
 
 ## Introduction
 
-This wiki will guide you through using a reComputer equipped with a `Hailo` NPU to implement real-time facial recognition. In this project, we use `SCRFD-10G` for efficient face detection, capable of quickly and accurately detecting faces of various scales, including small faces, ensuring real-time performance. At the same time, we employ the `ArcFace-MobileFaceNet` model for lightweight face recognition, which leverages the ArcFace loss function to enhance recognition accuracy and enable efficient identity verification.
+[YOLOv11](https://github.com/ultralytics/ultralytics) is the latest and most advanced version of the "You Only Look Once" (YOLO) family of real-time object detection models，it was released in late 2024 by Ultralytics.
+
+This wiki is a comprehensive real-time object detection, tracking, and speed estimation system optimized for Hailo AI accelerators use yolov11. This project enables efficient detection of objects (with focus on persons and vehicles) with simultaneous tracking and speed calculation capabilities.
 
 ## Prepare Hardware
 
@@ -27,11 +29,15 @@ This wiki will guide you through using a reComputer equipped with a `Hailo` NPU 
   <table align="center">
     <tr>
         <th>reComputer AI Industrial R2000</th>
-         <th>reComputer AI R2000</th>
+        <th>reComputer AI R2000</th>
+        <th>reComputer Industrial R2045</th>
+        <th>reComputer Industrial R2135</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg" style={{width:250, height:'auto'}}/></div></td>
          <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:250, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:250, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -39,8 +45,18 @@ This wiki will guide you through using a reComputer equipped with a `Hailo` NPU 
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
-<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+              <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2045-12-p-6544.html" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+          </a>
+      </div></td>
+              <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
@@ -112,7 +128,6 @@ Open terminal on the Raspberry Pi5, and input command as follows to install Hail
 
 ```bash
 sudo apt install hailo-all
-sudo apt-get -y install libblas-dev nlohmann-json3-dev
 sudo reboot
 ```
 
@@ -141,46 +156,32 @@ The right result show as bellow:
 ### Install Project
 
 ```bash
-cd ~ && git clone https://github.com/Seeed-Projects/hailo-apps-infra
-cd hailo-apps-infra
-./install.sh
-source venv_hailo_apps/bin/activate
+cd ~ && git clone https://github.com/Seeed-Projects/YOLOv11-Hailo-Tracker.git
+cd YOLOv11-Hailo-Tracker
 ```
 
-### Add your photo
+### Prepare the environment
 
 ```bash
-cd /resources/face_recon/train
-# change name to the name of the person to be recognized
-mkdir name
+python -m venv .env --system-site-packages
+source .env/bin/activate
+pip install -r requirements.txt
 ```
-
-<div style={{ color: 'red', fontWeight: 'bold' }}>
-  Note: Place the photo of the person to be recognized into the folder that was just created.
-</div>
-
-### Add information to the database
-
-```bash
-cd ~/hailo-apps-infra/hailo_apps/hailo_app_python/apps/face_recognition
-python face_recognition.py --mode train
-```
-
-The right result show as bellow:
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/face/face_1.png" alt="pir" width={1000} height="auto"/></p>
 
 ### Run the project
 
-Input the command below you will see a face recognition demo:
+Access `localhost:5000` to reach the frontend and configure settings.
 
 ```bash
- python face_recognition.py --input usb
+ python run_api.py
 ```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/yolov11/image.png" alt="pir" width={1000} height="auto"/></p>
 
 ## Result
 
 <div class="video-container">
-<iframe width="800" height="400" src="https://www.youtube.com/embed/wcT_ZYsRbAE" title="Facial Recognition On Raspberry Pi CM5 reComputer with Hailo-8 NPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="400" src="https://www.youtube.com/embed/cscCVUAidGo" title="YOLOv11n on Raspberry Pi reComputer for Loitering Detection and Speed Estimation (Hailo-8)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Tech Support & Product Discussion
