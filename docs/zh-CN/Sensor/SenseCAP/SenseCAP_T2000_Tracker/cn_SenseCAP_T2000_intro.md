@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/sensecap_t2000_tracker
 last_update:
-  date: 12/1/2025
+  date: 12/23/2025
   author: Janet
 ---
 
@@ -20,6 +20,7 @@ last_update:
 
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/cn/SenseCAP_T2000_tracker/Introduction/" class="sensecap">简介</a>
+          <a href="https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T2000_tracker/" class="sensecap">用户指南</a>
 </div>
 
 ## 技术支持与产品讨论

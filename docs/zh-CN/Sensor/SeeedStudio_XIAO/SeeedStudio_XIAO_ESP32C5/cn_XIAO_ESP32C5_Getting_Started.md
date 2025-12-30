@@ -4,7 +4,7 @@ description: |
 keywords:
   - xiao
   - esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /cn/xiao_esp32c5_getting_started
 last_update:
   date: 11/26/2025
@@ -20,7 +20,7 @@ last_update:
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -90,7 +90,7 @@ last_update:
         </tr>
         <tr>
             <th>板载 LED</th>
-            <td>C / L LED</td>
+            <td>Charge / USER LED</td>
             <td>Charge / USER LED</td>
             <td>Charge LED</td>
             <td>Charge / USER LED</td>
@@ -114,7 +114,7 @@ last_update:
 - **电池充电芯片：** 支持锂电池充放电管理。
 - **丰富的片上资源：** 384 KB 片上 SRAM，320 KB ROM
 - **超小尺寸：** 拇指大小（21x17.8mm）XIAO 系列经典外形，适用于可穿戴设备和小型项目
-- **可靠的安全功能：** 加密硬件加速器支持 AES-128/256、SHA 系列哈希、HMAC、专用数字签名外设和安全启动（V2）。
+- **可靠的安全功能：** 支持 AES-128/256、SHA 系列哈希、HMAC 的加密硬件加速器，专用数字签名外设和安全启动（V2）。
 - **丰富的接口：** 1×I2C、1×SPI、2×UART、多达 11×GPIO（支持 PWM）、5×ADC 通道和 JTAG 焊盘接口。
 - 单面元件，表面贴装设计
 
@@ -144,7 +144,7 @@ last_update:
 您需要准备以下物品：
 
 - 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
-- 1 x 电脑
+- 1 x 计算机
 - 1 x USB Type-C 数据线
 
 <div class="table-center">
@@ -167,7 +167,7 @@ last_update:
 </div>
 
 :::tip
-有些 USB 数据线只能供电而不能传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否能传输数据，您可以查看[Seeed USB Type-C 支持 USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
+有些 USB 数据线只能供电而不能传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否可以传输数据，您可以查看[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
 :::
 
 ### 软件
@@ -234,7 +234,7 @@ void loop() {
 ## 深度睡眠模式
 
 XIAO ESP32-C5 具有深度睡眠和唤醒功能。此示例利用引脚**D0**上的高电平触发来从深度睡眠中唤醒设备。<br/>
-需要注意的是，这是一个可配置的选项，因为硬件支持高电平和低电平触发，以适应不同的电路设计。
+需要注意的是，这是一个可配置选项，因为硬件支持高电平和低电平触发，以适应不同的电路设计。
 
 ```cpp
 #define WAKEUP_PIN D0 // LP_GPIO1
@@ -343,7 +343,7 @@ void loop() {
 
   - 此函数用于从 `BAT_VOLT_PIN` 引脚读取当前模拟电压，并返回以毫伏 (mV) 为单位的校准电压值。
   - 与仅提供原始 ADC 值的传统 `analogRead()` 不同，`analogReadMilliVolts()` 自动应用芯片中嵌入的工厂校准参数。这提高了精度，改善了电压测量的线性度，并消除了手动 ADC 到电压转换的需要。
-  - 在电压采样过程中，通过 `for` 循环执行 **16 次重复采样**，并累积结果。多次采样的目的是抑制瞬态噪声和离散误差，从而提高测量稳定性。最后，累积值除以采样次数 (16) 以获得更平滑、更可靠的平均电压值。
+  - 在电压采样过程中，通过 `for` 循环执行 **16 次重复采样**，并累积结果。多次采样的目的是抑制瞬态噪声和离散误差，从而提高测量稳定性。最后，将累积值除以采样次数 (16) 以获得更平滑、更可靠的平均电压值。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
@@ -355,15 +355,15 @@ void loop() {
 
 - **[PDF]** [ESP32-C5 数据手册](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
+<!-- - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 
-- **[PDF]** [Seeed Studio XIAO ESP32-C5 原理图](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
+- **[PDF]** [Seeed Studio XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
 
-- **[XLSX]** [Seeed Studio XIAO ESP32-C5 引脚图表](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
+- **[XLSX]** [Seeed Studio XIAO ESP32-C5 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
 
-- 🔗**[Kicad]** [Seeed Studio XIAO ESP32-C5 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- 🔗**[Kicad]** [Seeed Studio XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step 文件](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
+- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1) -->
 
 ## 技术支持与产品讨论
 

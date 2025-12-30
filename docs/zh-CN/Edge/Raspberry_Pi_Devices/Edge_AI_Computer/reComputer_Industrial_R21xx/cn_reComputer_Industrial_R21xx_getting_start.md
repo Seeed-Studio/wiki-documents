@@ -6,14 +6,14 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/recomputer-industrail-r2100.webp
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /cn/recomputer_industrial_R21xx_getting_start
 last_update:
   date: 09/28/2025
   author: Nolan Chen
 ---
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -66,7 +66,7 @@ reComputer Industrial R21xx 系列非常适合用于工业 AI 应用。它可以
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
       <tr>
-        <th>参数 </th>
+        <th>参数</th>
         <th colspan="2">描述</th>
       </tr>
     </thead>
@@ -327,11 +327,11 @@ reComputer Industrial R21xx 系列非常适合用于工业 AI 应用。它可以
         <td>非必需组件，用户可以选择包含或排除。</td>
       </tr>
       <tr>
-        <td> 已占用 </td>
+        <td> 占用 </td>
         <td>当前正在使用且是产品功能的组成部分。</td>
       </tr>
       <tr>
-        <td>已包含</td>
+        <td>包含</td>
         <td colspan="2">标准包装中提供的必需组件。</td>
       </tr>
     </tbody>
@@ -380,7 +380,7 @@ reComputer Industrial R21xx 支持两种电源供应选项：DC 端子和 PoE �
 reComputer Industrial R21xx 通过端子提供 9~36V 的 DC 电压。电源通过 2 针电源端子块连接器连接。
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/2-pin_power_terminal_2.png" style={{width:100, height:'auto'}}/></div>
 
-要为 reComputer Industrial R21xx 接地，可以将地线固定到位于电源端子右侧的螺丝上。
+要为 reComputer Industrial R21xx 接地，接地线可以固定到位于电源端子右侧的螺丝上。
 
 **PoE**
 
@@ -393,7 +393,7 @@ reComputer Industrial R21xx 的 ETH0（PoE PD）端口可以支持 PoE 电源供
 
 **功耗**
 
-reComputer Industrial R21xx 默认不带电源按钮，一旦连接电源，系统将自动启动。关机时，请在操作系统中选择关机选项，并等待系统完全关闭后再切断电源。要重启系统，只需重新连接电源即可。
+reComputer Industrial R21xx 默认不带电源按钮，一旦连接电源，系统将自动启动。关机时，请在操作系统中选择关机选项，等待系统完全关闭后再切断电源。要重启系统，只需重新连接电源即可。
 
 #### 框图
 
@@ -441,17 +441,17 @@ reComputer Industrial R21xx 配备 4 个 LED 指示灯，用于指示机器的�
       <tr>
         <td rowspan="2"> **PWR** </td>
         <td rowspan="2">绿色 </td>
-        <td>亮起</td>
+        <td>开启</td>
         <td>设备已连接电源。</td>
       </tr>
       <tr>
-        <td>熄灭</td>
+        <td>关闭</td>
         <td>设备未连接电源。</td>
       </tr>
       <tr>
         <td> **ACT** </td>
         <td>橙色</td>
-        <td>亮起</td>
+        <td>开启</td>
         <td>在 Linux 下，此引脚将闪烁以表示 eMMC 访问。如果在启动过程中发生任何错误，则此 LED 将闪烁错误模式，可以使用 Raspberry Pi 网站上的查找表（[Raspberry Pi Documentation - Configuration](https://www.raspberrypi.com/documentation/computers/configuration.html)）进行解码。</td>
       </tr>
       <tr>
@@ -463,11 +463,11 @@ reComputer Industrial R21xx 配备 4 个 LED 指示灯，用于指示机器的�
       <tr>
         <td rowspan="2"> **4G/5G** </td>
         <td rowspan="2">绿色 </td>
-        <td>亮起</td>
+        <td>开启</td>
         <td>拨号成功，连接正常。</td>
       </tr>
       <tr>
-        <td>熄灭</td>
+        <td>关闭</td>
         <td>4G/5G 信号未连接或设备未开机。</td>
       </tr>
     </tbody>
@@ -493,7 +493,7 @@ reComputer Industrial R21xx 配备 4 个 LED 指示灯，用于指示机器的�
 | 4            | 6             | A 类电源故障                 |
 | 4            | 7             | B 类电源故障                 |
 
-如果 ACT LED 以规律的四次闪烁模式闪烁，则无法找到启动代码（start.elf）。
+如果 ACT LED 以规律的四次闪烁模式闪烁，则无法找到引导代码（start.elf）。
 如果 ACT LED 以不规律的模式闪烁，则启动已开始。
 如果 ACT LED 不闪烁，则 EEPROM 代码可能已损坏，请在不连接任何设备的情况下重试以确保。有关更多详细信息，请查看 Raspberry Pi 论坛：
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums。
@@ -882,7 +882,7 @@ reComputer Industrial R2000 上的 M.2 M-KEY 2280 插槽设计用于容纳 NVMe 
 >  
 > 需要注意的是，市场上并非所有 SSD 卡都支持第二种用法。因此，如果您打算将其用作启动驱动器并且不确定购买哪种型号，我们建议选择我们推荐的 2TB SSD（SKU 114993467）。此型号已经过测试并验证了启动功能，降低了兼容性问题的风险，并最大限度地减少了试错成本。
 
-reComputer Industrial R2000 上的 M.2 M-KEY 2280 插槽设计用于容纳 PCIE M.2 AI 加速器。R21xx-12 系列已预装了 Hailo-8 M.2 AI 加速器，算力高达 26TOPS。
+reComputer Industrial R2000 上的 M.2 M-KEY 2280 插槽设计用于容纳 PCIE M.2 AI 加速器。R21xx-12 系列已预装了 Hailo-8 M.2 AI 加速器，性能高达 26TOPS。
 
 ### Mini-PCIe 插槽
 
@@ -893,7 +893,7 @@ reComputer Industrial R2000 上的 MiniPCIe 插槽设计用于容纳 4G LTE、US
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/reset.jpg" style={{width:200, height:'auto'}}/></div>
 
-reComputer AI Industrial R2135 的复位孔中有一个微型按钮开关。通过用细物体按下此按钮，可以复位 CM4。当此引脚为高电平时，表示 CM4 已启动。将此引脚拉低会复位模块。
+reComputer AI Industrial R2135 的复位孔中有一个微型按钮开关。通过用细物体按下此按钮，可以复位 CM4。此引脚为高电平时表示 CM4 已启动。将此引脚拉低会复位模块。
 
 ### M.2 B-KEY 插槽
 
@@ -912,7 +912,7 @@ reComputer Industrial R2000 上的 M.2 B-KEY 插槽设计用于容纳 5G/4G LTE�
 | ETH0  | CM5 原生千兆以太网  | 10/100/1000 Mbit/s  | 支持       |
 | ETH1  | 从 USB 转换           | 10/100 Mbit/s       | 不支持   |
 
-reComputer Industrial R2000 配备两个以太网 RJ45 端口。ETH0 是 CM5 原生千兆以太网接口，支持三种不同速度：10/100/1000 Mbit/s。它可以通过此接口启用以太网供电（PoE），为 reComputer Industrial R2000 提供电源。另一个 ETH1 支持 10/100 Mbit/s，由 USB 转换而来。
+reComputer Industrial R2000 配备两个以太网 RJ45 端口。ETH0 是 CM5 原生千兆以太网接口，支持三种不同速度：10/100/1000 Mbit/s。它可以通过此接口启用以太网供电（PoE）传输，为 reComputer Industrial R2000 提供电源。另一个 ETH1 支持 10/100 Mbit/s，由 USB 转换而来。
 
 ### HDMI
 

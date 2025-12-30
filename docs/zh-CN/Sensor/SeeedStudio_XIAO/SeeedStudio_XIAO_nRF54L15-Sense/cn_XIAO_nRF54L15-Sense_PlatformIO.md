@@ -1,6 +1,6 @@
 ---
-description: Seeed Studio XIAO nRF54L15 with PlatformIO
-title: XIAO nRF54L15 with PlatformIO
+description: Seeed Studio XIAO nRF54L15 与 PlatformIO
+title: XIAO nRF54L15 与 PlatformIO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/mg24_platform/top_mg24_platform02.webp
@@ -17,13 +17,13 @@ platformIO_nrf54l15.png" style={{width:600, height:'auto'}}/></div>
 
 ## PlatformIO 介绍
 
-PlatformIO 是一个强大且高度可扩展的嵌入式系统开发生态系统。它无缝集成了对大量开发板和微控制器的支持，提供了无与伦比的灵活性。PlatformIO 的突出之处在于其卓越的可扩展性：即使您的特定开发板没有原生支持，其架构也允许直接进行自定义开发板定义。
+PlatformIO 是一个强大且高度可扩展的嵌入式系统开发生态系统。它无缝集成了对大量开发板和微控制器的支持，提供了无与伦比的灵活性。PlatformIO 的突出之处在于其卓越的可扩展性：即使您的特定开发板没有原生支持，其架构也允许直接的自定义开发板定义。
 
-至关重要的是，PlatformIO 为熟悉 Arduino 的开发者搭建了桥梁，通过简单地包含相关库，就能编译和部署 Arduino 风格的代码。本指南将引导您完成为 XIAO nRF54L15 设置 PlatformIO 的过程，并演示如何编译、上传和监控示例代码，使复杂的 Zephyr RTOS 开发变得非常容易上手。
+至关重要的是，PlatformIO 为熟悉 Arduino 的开发者架起了桥梁，通过简单地包含相关库，就能编译和部署 Arduino 风格的代码。本指南将引导您完成为 XIAO nRF54L15 设置 PlatformIO 的过程，并演示如何编译、上传和监控示例代码，使复杂的 Zephyr RTOS 开发变得非常容易上手。
 
 ## 为 XIAO nRF54L15 设置 PlatformIO
 
-按照以下简化步骤配置您的开发环境，并在 XIAO nRF54L15 Sense 上部署您的第一个应用程序。
+按照这些简化的步骤配置您的开发环境，并在 XIAO nRF54L15 Sense 上部署您的第一个应用程序。
 
 
 ### 为 VS Code 安装 PlatformIO IDE 扩展
@@ -39,7 +39,7 @@ PlatformIO 是一个强大且高度可扩展的嵌入式系统开发生态系统
 
 ### 创建新的 PlatformIO 项目
 
-这里您可以选择任何一个开发版本来创建项目文件，我以 XIAO ESP32 C3 为例。
+在这里您可以选择任何一个开发版本来创建项目文件，我以 XIAO ESP32 C3 为例。
 
 <table align="center">
   <tr>
@@ -52,9 +52,11 @@ PlatformIO 是一个强大且高度可扩展的嵌入式系统开发生态系统
   </tr>
 </table>
 
+
+
 ### 为 XIAO nRF54L15 Zephyr 支持配置 platformio.ini
 
-一旦您的项目创建完成，请在项目根目录中找到 platformio.ini 文件（在左侧的 VS Code 资源管理器中可见）。此文件是您的 PlatformIO 项目配置的核心。
+创建项目后，在项目目录的根目录中找到 platformio.ini 文件（在左侧的 VS Code 资源管理器中可见）。这个文件是您的 PlatformIO 项目配置的核心。
 
 <table align="center">
   <tr>
@@ -66,7 +68,7 @@ PlatformIO 是一个强大且高度可扩展的嵌入式系统开发生态系统
 </table>
 
 
-您需要将 platformio.ini 文件的全部内容替换为以下配置：
+您需要用以下配置替换 platformio.ini 文件的全部内容：
 
 ```
 [env:seeed-xiao-nrf54l15]
@@ -74,32 +76,8 @@ platform = https://github.com/Seeed-Studio/platform-seeedboards.git
 framework = zephyr
 board = seeed-xiao-nrf54l15
 ```
-
-<table align="center">
-  <tr>
-      <th>操作四</th>
-  </tr>
-  <tr>
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/platformiozephyr.jpg"/></div>
-  </tr>
-</table>
-
-
-您需要将 cMakeLists.txt 的内容替换为以下配置
-```
-set(BOARD_ROOT "$ENV{ZEPHYR_BASE}/../../platforms/Seeed Studio/zephyr")
-cmake_minimum_required(VERSION 3.13.1)
-
-find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(blinky)
-
-target_sources(app PRIVATE ../src/main.cpp) # If the main source file is.c, please change it to src/main.c
-```
-
-然后重新保存 platformio.ini 文件（Ctrl+S 或 Cmd+S）并等待其完全加载。
-
 :::tip
-如果您之前下载了其他 XIAO 库，必须在修改 platform.ini 文件并重新下载所需库之前手动删除它们。
+如果您之前下载了其他 XIAO 库，必须在修改 platform.ini 文件之前手动删除它们，然后重新下载所需的库。
 :::
 
 Mac 路径：
@@ -110,13 +88,32 @@ Windows 路径：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/
 platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
+<table align="center">
+  <tr>
+      <th>操作四</th>
+  </tr>
+  <tr>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/platformiozephyr.jpg"/></div>
+  </tr>
+</table>
 
+您需要用以下配置替换 cMakeLists.txt 的内容
+```
+set(BOARD_ROOT "$ENV{ZEPHYR_BASE}/../../platforms/Seeed Studio/zephyr")
+cmake_minimum_required(VERSION 3.13.1)
+
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(blinky)
+
+target_sources(app PRIVATE ../src/main.cpp) # If the main source file is.c, please change it to src/main.c
+```
+然后重新保存 platformio.ini 文件（Ctrl+S 或 Cmd+S）并等待其完全加载。
 
 ### 编译并上传您的第一个闪烁示例
 
-现在，让我们用经典的"闪烁"示例来测试您的设置。此代码将切换 XIAO nRF54L15 上的内置 LED。
+现在，让我们用经典的"闪烁"示例来测试您的设置。这段代码将切换 XIAO nRF54L15 上的内置 LED。
 
-将您的 src/main.cpp（或 src/main.c）文件的内容替换为以下与 Zephyr 兼容的 C 代码：
+用以下兼容 Zephyr 的 C 代码替换您的 src/main.cpp（或 src/main.c）文件的内容：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-blink" target="_blank" rel="noopener noreferrer">
@@ -125,7 +122,7 @@ platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
 </div><br />
 
 
-**接下来我们使用此代码进行编译和烧录**
+**接下来我们使用这段代码进行编译和烧录**
 
 ```cpp
 /*
@@ -138,15 +135,15 @@ platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
  #include <zephyr/device.h>
  #include <zephyr/drivers/gpio.h>
  #include <nrfx_power.h>
- 
+
  /* 1000 msec = 1 sec */
  #define SLEEP_TIME_MS   1000
- 
+
  /* The devicetree node identifier for the "led0" alias. */
  #define LED0_NODE DT_ALIAS(led0)
- 
+
  static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
- 
+
  int main(void)
  {
 	 int ret;
@@ -155,12 +152,12 @@ platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
 	 if (!gpio_is_ready_dt(&led)) {
 		 return -1;
 	 }
- 
+
 	 ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
 	 if (ret < 0) {
 		 return ret;
 	 }
- 
+
 	 while (1) {
 		 ret = gpio_pin_set_dt(&led, (int)led_is_on);
 		 if (ret < 0) {
@@ -169,7 +166,7 @@ platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
 		 led_is_on = !led_is_on;
 		 k_msleep(SLEEP_TIME_MS);
 	 }
- 
+
 	 return 0;
  }
 
@@ -177,9 +174,9 @@ platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
 
 现在，通过 USB 将您的 XIAO nRF54L15 连接到计算机。在 VS Code 中：
 
-- 构建：点击 VS Code 底部 PlatformIO 工具栏中的"构建"图标（对勾），或使用 PlatformIO 侧边栏：PROJECT TASKS -> your_project_name -> General -> Build。
+- 构建：点击 VS Code 底部 PlatformIO 工具栏中的"Build"图标（对勾），或使用 PlatformIO 侧边栏：PROJECT TASKS -> your_project_name -> General -> Build。
 
-- 上传：构建成功后，点击 PlatformIO 工具栏中的"上传"图标（右箭头），或使用 PlatformIO 侧边栏：PROJECT TASKS -> your_project_name -> General -> Upload。
+- 上传：构建成功后，点击 PlatformIO 工具栏中的"Upload"图标（右箭头），或使用 PlatformIO 侧边栏：PROJECT TASKS -> your_project_name -> General -> Upload。
 
 
 <table align="center">
@@ -191,14 +188,15 @@ platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
   </tr>
 </table>
 
-终端中的输出应该显示成功的编译和烧录过程。
+终端中的输出应该显示编译和烧录过程成功。
 
 
 ### 观察结果
 
-上传成功后，您的 XIAO nRF54L15 的内置 LED 应该开始以 1 秒的间隔闪烁。
+上传成功后，您的 XIAO nRF54L15 的内置 LED 应该开始以 1 秒间隔闪烁。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light.gif" style={{width:400, height:'auto'}}/></div>
+
 
 
 ## 技术支持与产品讨论

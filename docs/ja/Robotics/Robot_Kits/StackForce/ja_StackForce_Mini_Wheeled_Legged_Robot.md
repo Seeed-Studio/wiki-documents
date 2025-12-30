@@ -19,6 +19,10 @@ translation:
 このチュートリアルは、開発者ができるだけ早く完全な車輪脚ロボットを構築できるよう、組み立てとデバッグの手順のみを提供します。車輪脚ロボットの基本原理を学習する必要がある場合は、[**DengGeのBilibiliチュートリアル動画**](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc)を参照してください。二次開発については、他のウェブサイトやフォーラムでチュートリアルを検索できます。
 :::
 
+<div class="video-container">
+<iframe width="900" height="500" src="https://www.youtube.com/embed/8e2Q981ezBs?si=1n8j0nSHaYcwFrgX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## 概要
 
 StackForce二輪二足歩行ロボットは、StackForce軽量ロボティクス開発プラットフォームをベースに開発されています。そのコアハードウェアは、StackForce シリーズのメインコントロールボード、モータードライバーボード、サーボドライバーボードで構成されています。

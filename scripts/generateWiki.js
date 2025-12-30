@@ -36,6 +36,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'SenseCAP_T2000_Tracker_Introduction.md'), //12.1
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'StackForce', 'StackForce_Giant_Bipedal_Wheeled_Robot.md'), //12.12
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'meshtastic_intro.md'), //12.11
+  path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Solar_Node', 'solar_node.md'), //12.16
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Application', 'XIAO_ESP32C5_ESP-Mesh_Audio.md'), //12.12
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'User_Guide', 'Get_Started.md'), //12.24
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

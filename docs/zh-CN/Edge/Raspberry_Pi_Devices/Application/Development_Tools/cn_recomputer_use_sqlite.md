@@ -16,40 +16,65 @@ no_comments: false # for Disqus
 
 # 在 reComputer 上使用 SQLite
 
-## 介绍
+## 简介
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/sqlite/sqlite.jpg" style={{width:300, height:'auto'}}/></div>
 
-本 wiki 介绍如何在 reComputer 盒子上使用[SQlite](https://sqlite.org/)。SQLite 是一个轻量级的嵌入式关系数据库管理系统，广泛应用于移动设备、桌面应用程序和嵌入式系统中。它不需要单独的服务器进程；数据库直接存储在一个普通的磁盘文件中。SQLite 使用简单，性能优异。它支持标准 SQL 语法，适合中小型数据存储需求。由于其零配置和易于部署的特性，SQLite 已成为许多项目的首选数据库引擎。
+本 wiki 介绍如何在 reComputer 盒子上使用 [SQlite](https://sqlite.org/)。SQLite 是一个轻量级的嵌入式关系数据库管理系统，广泛应用于移动设备、桌面应用程序和嵌入式系统中。它不需要单独的服务器进程；数据库直接存储在一个普通的磁盘文件中。SQLite 使用简单，性能优异。它支持标准的 SQL 语法，适用于中小型数据存储需求。由于其零配置和易于部署的特性，SQLite 已成为许多项目的首选数据库引擎。
 
 ## 准备硬件
 
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer R1125</th>
+ <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
   <th>reComputer AI Industrial R2145</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -80,7 +105,7 @@ sudo apt-get install sqlite3
 sqlite3 sensordata.db
 ```
 
-使用`.help`命令可以快速提醒您所有支持的命令及其各自的用法。
+使用 `.help` 命令可以快速查看所有支持的命令及其用法。
 
 ```bash
 sqlite> .help
@@ -88,7 +113,7 @@ sqlite> .help
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/sqlite/sqlite_help.png" style={{width:1000, height:'auto'}}/></div>
 
-然后使用`.quit`退出 SQlite shell。
+然后使用 `.quit` 退出 SQlite shell。
 
 ```bash
 sqlite> .quit
@@ -151,13 +176,13 @@ sqlite> COMMIT;
 
 ### SQL 查询
 
-要访问存储在数据库中的数据，您使用 SELECT SQL 语句：
+要访问数据库中存储的数据，您可以使用 SELECT SQL 语句：
 
 ```bash
 sqlite> SELECT * FROM dhtreadings;
 1|22.4|48|2025-09-26|01:23:37|manual
 ```
-到目前为止，您只在数据库中插入了 1 个读数。您可以按如下方式插入新读数：
+到目前为止，您只在数据库中插入了 1 条读数。您可以按如下方式插入新的读数：
 
 ```bash
 sqlite> BEGIN;
@@ -165,7 +190,7 @@ sqlite> INSERT INTO dhtreadings(temperature, humidity, currentdate, currenttime,
 sqlite> COMMIT;
 ```
 
-当您 SELECT 表中存储的数据时，它返回 2 个读数：
+当您 SELECT 表中存储的数据时，它返回 2 条读数：
 
 ```bash
 sqlite> SELECT * FROM dhtreadings;
@@ -182,12 +207,12 @@ sqlite> SELECT * FROM dhtreadings;
 ```bash
 sqlite> DROP TABLE dhtreadings;
 ```
-现在，如果您输入'.tables'命令：
+现在，如果您输入 '.tables' 命令：
 
 ```bash
 sqlite> .tables
 ```
-它不返回任何内容，因为您的表已被完全删除。
+它不会返回任何内容，因为您的表已被完全删除。
 
 ### 使用 Python 与 SQLite
 
@@ -296,7 +321,7 @@ if __name__ == '__main__':
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在此为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

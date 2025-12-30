@@ -4,7 +4,7 @@ description: |
 keywords:
   - xiao
   - esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /ja/xiao_esp32c5_getting_started
 last_update:
   date: 11/26/2025
@@ -20,7 +20,7 @@ last_update:
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -64,8 +64,8 @@ last_update:
             <th>メモリ</th>
             <td>8 MB PSRAM & 8 MB Flash</td>
             <td>8 MB PSRAM & 8 MB Flash</td>
-            <td>400 KB SRAM, 4 MB Flash</td>
-            <td>512KB SRAM , 4MB Flash</td>
+            <td>400 KB SRAM、4 MB Flash</td>
+            <td>512KB SRAM、4MB Flash</td>
         </tr>
         <tr>
             <th>インターフェース</th>
@@ -90,7 +90,7 @@ last_update:
         </tr>
         <tr>
             <th>オンボード LED</th>
-            <td>C / L LED</td>
+            <td>Charge / USER LED</td>
             <td>Charge / USER LED</td>
             <td>Charge LED</td>
             <td>Charge / USER LED</td>
@@ -108,13 +108,13 @@ last_update:
 ### 特徴
 
 - **強力な CPU：** ESP32-C5、最大 240 MHz で動作する 32 ビット RISC-V シングルコアプロセッサ
-- **完全な Wi-Fi サブシステム：** IEEE 802.11 a/b/g/n/ac/ax 準拠のデュアルバンド Wi-Fi 6 サブシステム（2.4 GHz および 5 GHz）、Station、SoftAP、同時 SoftAP+Station 動作、およびプロミスキャス（モニタ）モードをサポート。
+- **完全な Wi-Fi サブシステム：** IEEE 802.11 a/b/g/n/ac/ax 準拠のデュアルバンド Wi-Fi 6 サブシステム（2.4 GHz および 5 GHz）、Station、SoftAP、同時 SoftAP+Station 動作、およびプロミスキャス（モニター）モードをサポート。
 - **Bluetooth LE サブシステム：** Bluetooth 5 および Bluetooth mesh の機能をサポート
 - **優れた RF 性能：** 外部 RF アンテナが含まれています。
 - **バッテリー充電チップ：** リチウムバッテリーの充放電管理をサポート。
 - **豊富なオンチップリソース：** 384 KB オンチップ SRAM、320 KB ROM
 - **超小型サイズ：** ウェアラブルデバイスや小型プロジェクト向けの親指サイズ（21x17.8mm）XIAO シリーズクラシックフォームファクタ
-- **信頼性の高いセキュリティ機能：** AES-128/256、SHA ファミリーハッシュ、HMAC、専用デジタル署名ペリフェラル、およびセキュアブート（V2）をサポートする暗号化ハードウェアアクセラレータ。
+- **信頼性の高いセキュリティ機能：** AES-128/256、SHA ファミリーハッシュ、HMAC をサポートする暗号化ハードウェアアクセラレータ、専用デジタル署名ペリフェラル、および Secure Boot（V2）。
 - **豊富なインターフェース：** 1×I2C、1×SPI、2×UART、最大 11×GPIO（PWM 対応）、5×ADC チャンネル、および JTAG ボンディングパッドインターフェース。
 - 片面実装部品、表面実装設計
 
@@ -137,7 +137,7 @@ last_update:
 
 ## 入門ガイド
 
-XIAO ESP32-C5 をより早く使い始められるように、以下のハードウェアとソフトウェアの準備をお読みになり、XIAO を準備してください。
+XIAO ESP32-C5 をより早く使い始められるように、以下のハードウェアとソフトウェアの準備を読んで XIAO を準備してください。
 
 ### ハードウェア
 
@@ -167,7 +167,7 @@ XIAO ESP32-C5 をより早く使い始められるように、以下のハード
 </div>
 
 :::tip
-一部の USB ケーブルは電源供給のみで、データ転送ができません。USB ケーブルをお持ちでない場合、またはお使いの USB ケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) をご確認ください。
+一部の USB ケーブルは電力供給のみでデータ転送ができません。USB ケーブルをお持ちでない場合や、お使いの USB ケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) をご確認ください。
 :::
 
 ### ソフトウェア
@@ -282,12 +282,12 @@ void setup(){
 void loop(){}
 ```
 
-XIAOがディープスリープに入る前にシリアルモニターを素早く開くことができれば、以下に示すようなメッセージ出力を確認できます。これは、XIAOが現在**スリープ状態**にあることを意味します。その後、ボタンを押すことで確認し、起動させることもできます。**L LED**のオン・オフ状態を観察して、デバイスが起動されたかどうかを確認することもできます。起動されると、点滅効果を示します。
+XIAOがディープスリープに入る前にシリアルモニターを素早く開くことができれば、以下に示すようなメッセージ出力を確認できます。これは、XIAOが現在**スリープ状態**にあることを意味します。その後、ボタンを押すことで確認し、起動することもできます。**L LED**のオン・オフ状態を観察して、デバイスが起動されたかどうかを確認することもできます。起動されると、点滅効果を示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-ディープスリープモードに入った後、XIAOのポートは消失し、再度ポート番号を確認するには起動させる必要があります！
+ディープスリープモードに入った後、XIAOのポートは消失し、再度ポート番号を確認するには起動する必要があります！
 :::
 
 :::caution
@@ -301,7 +301,7 @@ XIAO ESP32-C5は、3.7Vリチウムバッテリーを電源入力として使用
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_wiring.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-はんだ付け時に正極と負極をショートさせて、バッテリーや機器を焼損させないよう注意してください。
+はんだ付け時に正極と負極を短絡させ、バッテリーと機器を焼損させないよう注意してください。
 :::
 
 **バッテリー使用に関する注意事項：**
@@ -355,19 +355,19 @@ void loop() {
 
 - **[PDF]** [ESP32-C5 データシート](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD ライブラリ](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
+<!-- - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 
-- **[PDF]** [Seeed Studio XIAO ESP32-C5 回路図](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
+- **[PDF]** [Seeed Studio XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
 
-- **[XLSX]** [Seeed Studio XIAO ESP32-C5 ピン配置シート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
+- **[XLSX]** [Seeed Studio XIAO ESP32-C5 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
 
-- 🔗**[Kicad]** [Seeed Studio XIAO ESP32-C5 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- 🔗**[Kicad]** [Seeed Studio XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-- **[STEP]** [Seeed Studio XIAO ESP32-C5 Stepファイル](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
+- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1) -->
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

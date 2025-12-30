@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction
 last_update:
-  date: 3/24/2023
-  author: Yvonne
+  date: 12/25/2025
+  author: Janet
 ---
 
 # SenseCAP S2120 8合1 LoRaWAN 气象传感器
@@ -25,26 +25,27 @@ Helium 网络：传感器在 Helium 网络覆盖的区域内工作（在 [Helium
 
 LoRaWAN 网络：传感器在 LoRaWAN® 网络中工作，如 The Things Network、Loriot、Chirpstack 等。您可以查看 [SenseCAP 户外网关](https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html) 和 [SenseCAP M2 多平台网关](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html)。
 
+:::tip **注意**
+最新的固件版本为 `v2.1`，我们强烈建议您在 SenseCraft 应用中将设备升级到最新固件，因为该版本可显著提升数据上报的稳定性。
+:::
+
 # 应用
 
--   后院和花园：测量后院和花园的空气温度和湿度、降雨量、紫外线指数等，保护您的家人。
+- 后院和花园：测量后院和花园的空气温度和湿度、降雨量、紫外线指数等，保护您的家人。
 
--   智慧农业：使农民能够及时获得气候数据和信息，在生产中采取科学管理措施，提高农业生产能力和水平。
+- 智慧农业：使农民能够及时获得气候数据和信息，在生产中采取科学管理措施，提高农业生产能力和水平。
 
--   气象学：支持专业气象领域的应用，例如，及时反映交通运输领域各种异常气象条件的变化，为交通管理部门提供实时科学依据数据。
+- 气象学：支持专业气象领域的应用，例如，及时反映交通运输领域各种异常气象条件的变化，为交通管理部门提供实时科学依据数据。
 
--   城市天气：为城市广场、公园、景点、高尔夫球场和其他城市区域提供实时数据。
+- 城市天气：为城市广场、公园、景点、高尔夫球场和其他城市区域提供实时数据。
 
 # ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3232.png)
-
 
 # **现场部署**
 
 ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3252.png)
 
 图片来源：Ted Urbaniak, Mapping Network, Nibiaa
-
-# 
 
 # 规格
 

@@ -19,6 +19,10 @@ translation:
 Este tutorial solo proporciona instrucciones de ensamblaje y depuración para ayudar a los desarrolladores a construir un robot de patas con ruedas completo lo más rápido posible. Si necesitas aprender los principios subyacentes de los robots de patas con ruedas, puedes consultar el [**video tutorial de Bilibili por DengGe**](https://www.bilibili.com/video/BV1kz421B73V/?share_source=copy_web&vd_source=dd1f489993457f044ad480eab0e73bdc). Para desarrollo secundario, puedes buscar tutoriales en otros sitios web o foros.
 :::
 
+<div class="video-container">
+<iframe width="900" height="500" src="https://www.youtube.com/embed/8e2Q981ezBs?si=1n8j0nSHaYcwFrgX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Introducción
 
 El robot bípedo de dos ruedas StackForce está desarrollado basado en la plataforma de desarrollo de robótica ligera StackForce. Su hardware central está compuesto por la placa de control principal de la serie StackForce, la placa controladora de motor y la placa controladora de servo.

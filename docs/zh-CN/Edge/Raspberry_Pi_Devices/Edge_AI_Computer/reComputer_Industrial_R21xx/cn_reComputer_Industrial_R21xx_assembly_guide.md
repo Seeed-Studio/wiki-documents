@@ -5,14 +5,14 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /cn/recomputer_industrial_R21xx_assembly_guide
 last_update:
   date: 09/28/2025
   author: Nolan Chen
 ---
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -20,7 +20,7 @@ last_update:
     </a>
 </div>
 
-reComputer Industrial R21xx 支持多种物联网无线通信，包括 4G、5G、LoRa®、Wi-Fi/BLE 和 Zigbee。它支持通过 M.2 插槽扩展 SSD 存储或通过 NPU 加速器实现 AI 功能。如果您选择在购买时直接包含 AI 加速器，您将获得额外的 26TOPS 计算能力。此外，我们的硬件工程服务包括标志定制、包装品牌、标签、固件刷写和镜像服务，为您的特定需求提供全面的定制支持。
+reComputer Industrial R21xx 支持多种物联网无线通信，包括 4G、5G、LoRa®、Wi-Fi/BLE 和 Zigbee。它支持通过 M.2 插槽扩展 SSD 存储或通过 NPU 加速器实现 AI 功能。如果您选择在购买时直接包含 AI 加速器，您将获得额外的 26TOPS 计算能力。此外，我们的硬件工程服务包括徽标定制、包装品牌、标签、固件刷写和镜像服务，为您的特定需求提供全面的定制支持。
 
 本 Wiki 将向您展示如何组装和拆卸设备以安装外围组件，以及安装选项
 
@@ -88,7 +88,7 @@ reComputer Industrial R21xx 支持多种物联网无线通信，包括 4G、5G�
 
 **步骤 2：安装 UPS 模块**  
 
-- 使用两颗 PM2.0xL5.0 螺丝和 M2.0x5.0 支柱，将 UPS 模块固定到两个没有金属接触垫的孔上。
+- 使用两颗 PM2.0xL5.0 螺丝和 M2.0x5.0 支柱，将 UPS 模块固定在两个没有金属接触垫的孔上。
 - 确保 UPS 模块正确对齐并使用提供的螺丝和支柱牢固连接。
 
 **步骤 3：安装 PoE 模块**  
@@ -102,7 +102,7 @@ reComputer Industrial R21xx 支持多种物联网无线通信，包括 4G、5G�
 
 ### DIN 导轨安装指南
 
-reComputer Industrial R21xx 提供多种安装方式。包装中包含 DIN 导轨夹和安装螺丝。按照图示正确将 DIN 导轨夹连接到设备侧面的安装孔上。螺丝牢固拧紧后，您就可以将设备安装到安装导轨上。
+reComputer Industrial R21xx 提供多种安装方法。包装中包含 DIN 导轨夹和安装螺丝。按照图示正确将 DIN 导轨夹连接到设备侧面的安装孔上。螺丝牢固拧紧后，您就可以将设备安装到安装导轨上。
 
 #### 安装步骤
 
@@ -120,7 +120,7 @@ reComputer Industrial R21xx 提供多种安装方式。包装中包含 DIN 导�
 
 ### 壁挂安装指南
 
-垂直安装方式也适用于 reComputer Industrial R2000，但是安装支架不包含在包装盒中，需要额外购买。
+垂直安装方法也适用于 reComputer Industrial R2000，但是安装支架不包含在包装盒中，需要额外购买。
 
 #### 安装步骤
 

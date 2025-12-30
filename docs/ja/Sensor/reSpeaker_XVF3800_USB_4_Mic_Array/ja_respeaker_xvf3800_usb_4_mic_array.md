@@ -906,6 +906,12 @@ sudo apt install pavucontrol -y
 
 デバイスマネージャーで ReSpeaker に関連するすべてのドライバーをアンインストールしてください。これで問題が解決しました。
 
+### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できませんか？
+
+スタートメニューを開き、「デバイス マネージャー」と入力します。関連する reSpeaker XVF 3800 デバイスを見つけて右クリックし、「デバイスのアンインストール」を選択します。その後、デバイスを再接続してください（USB を一度抜いてから差し直します）。Windows が自動的に正しいサウンドカードドライバーを再インストールします。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
+
 ## リソース
 
 - [ReSpeaker XVF3800 3D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)

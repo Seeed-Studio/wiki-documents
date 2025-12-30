@@ -1,6 +1,6 @@
 ---
-description: 这个wiki演示了在配备hailo8的Raspberry Pi5上进行yolov8m多流检测基准测试。
-title: 在配备Hailo8的Raspberry Pi上进行多流推理的基准测试
+description: 本 wiki 演示了在配备 hailo8 的 Raspberry Pi5 上进行 yolov8m 多流检测基准测试。
+title: 在配备 Hailo8 的 Raspberry Pi 上进行多流推理的基准测试
 keywords:
   - Edge
   - RasberryPi 5
@@ -14,37 +14,51 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# 在Raspberry Pi 5配备Hailo8上进行多流推理的基准测试
+# 在配备 Hailo8 的 Raspberry Pi 5 上进行多流推理的基准测试
 
-## 介绍
+## 简介
 
-[YOLOv8](https://github.com/ultralytics/ultralytics)（You Only Look Once第8版）是最受欢迎的YOLO系列实时姿态估计和目标检测模型。它在前代产品的基础上，在速度、准确性和灵活性方面引入了多项改进。[Hailo8](https://www.seeedstudio.com/Raspberry-Pi-Al-HAT-26-TOPS-p-6243.html)用于加速推理速度，具有26 TOPS的AI性能。
+[YOLOv8](https://github.com/ultralytics/ultralytics)（You Only Look Once 第 8 版）是最受欢迎的 YOLO 系列实时姿态估计和目标检测模型。它在前代产品的基础上，在速度、准确性和灵活性方面引入了多项改进。[Hailo8](https://www.seeedstudio.com/Raspberry-Pi-Al-HAT-26-TOPS-p-6243.html) 用于加速推理速度，具有 26 TOPS 的 AI 性能。
 
-这个wiki展示了在配备hailo8的Raspberry Pi 5上进行YOLOv8m目标检测的基准测试。所有测试都使用相同的模型（YOLOv8m），量化为int8，输入尺寸为640x640分辨率，批处理大小设置为8。
+本 wiki 展示了在配备 hailo8 的 Raspberry Pi 5 上使用 YOLOv8m 进行目标检测的基准测试。所有测试都使用相同的模型（YOLOv8m），量化为 int8，输入尺寸为 640x640 分辨率，批处理大小设置为 8。
 
 ## 准备硬件
 
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer AI R2130</th>
+  <th>reComputer AI R2140</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-### 在RPi5上安装AI套件
+### 在 RPi5 上安装 AI 套件
 
-请参考[这里](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)
+请参考[此处](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)
 
 ## 准备软件
 
@@ -56,7 +70,7 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### 在 Hailo 官方网站下载 Hailo 软件
+### 在 hailo 官方网站下载 hailo 软件
 
 > **注意：**
 您需要一个官方 Hailo 账户并确保已登录。
@@ -64,7 +78,7 @@ sudo apt full-upgrade
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/multistream_benchmark_hailo8/hailo_download.png" alt="pir" width={1000} height="auto"/></p>
 
-### 在树莓派5上安装 hailort_4.19.0_arm64.deb
+### 在 raspberrypi5 上安装 hailort_4.19.0_arm64.deb
 
 ```
 sudo dpkg -i hailort_4.19.0_arm64.deb 
@@ -73,7 +87,7 @@ sudo reboot
 
 ```
 
-### Install dkms
+### 安装 dkms
 
 ```
 sudo apt-get install dkms
@@ -94,7 +108,7 @@ python -m venv hailo_env
 source hailo_env/bin/activate
 ```
 
-### Install hailort-4.19.0-cp311-cp311-linux_aarch64.whl
+### 安装 hailort-4.19.0-cp311-cp311-linux_aarch64.whl
 
 ```
 pip install hailort-4.19.0-cp311-cp311-linux_aarch64.whl 
@@ -122,9 +136,9 @@ Part Number: HM218B1C2FAE
 Product Name: HAILO-8 AI ACC M.2 M KEY MODULE EXT TEMP
 ```
 
-### 将 pcie 设置为 gen2/gen3（gen3 比 gen2 更快）
+### 设置 pcie 为 gen2/gen3（gen3 比 gen2 更快）
 
-Add following text to ```/boot/firmware/config.txt```
+将以下文本添加到 ```/boot/firmware/config.txt```
 
 ```
 #Enable the PCIe external connector
@@ -167,7 +181,7 @@ sudo nano /etc/modprobe.d/hailo_pci.conf
 options hailo_pci force_desc_page_size=4096
 ```
 
-最后，按下`Ctrl+X`，输入`Y`，然后按`Enter`保存文件
+最后，按 `Ctrl+X`，输入 `Y`，然后按 `Enter` 保存文件
 
 然后重启 raspberrypi5
 
@@ -175,13 +189,13 @@ options hailo_pci force_desc_page_size=4096
 sudo reboot
 ```
 
-#### Download Tapps
+#### 下载 Tapps
 
 ```
 git clone --depth 1 https://github.com/hailo-ai/tappas.git
 ```
 
-#### Download hailort to tapps
+#### 将 hailort 下载到 tapps
 
 ```
 cd tappas
@@ -189,13 +203,13 @@ mkdir hailort
 git clone https://github.com/hailo-ai/hailort.git hailort/sources
 ```
 
-#### Change common.py
+#### 修改 common.py
 
 ```
 nano downloader/common.py
 ```
 
-然后修改内容如下，在 common.py 中添加 `RaspberryPI5 = 'rpi5'`：
+并按如下所示修改内容，在 common.py 中添加 `RaspberryPI5 = 'rpi5'`：
 
 ```
 class Platform(Enum):
@@ -205,28 +219,28 @@ class Platform(Enum):
     Rockchip = 'rockchip'
     RaspberryPI = 'rpi'
     RaspberryPI5 = 'rpi5'
-    
+
     ANY = 'any'
 
     def __str__(self):
         return self.value
 ```
 
-#### Install tappas
+#### 安装 tappas
 
 ```
 ./install.sh --skip-hailort --target-platform rpi5
 
 ```
 
-#### Change batch size to 8
+#### 将批处理大小更改为 8
 
 ```
 cd ./apps/h8/gstreamer/general/multistream_detection/
 nano multi_stream_detection.sh
 ```
 
-将 `readonly DEFAULT_BATCH_SIZE=8` 添加到 14 行，如下所示：
+将 `readonly DEFAULT_BATCH_SIZE=8` 添加到第 14 行，如下所示：
 
 ```
 readonly DEFAULT_NETWORK_NAME="yolov5"
@@ -234,7 +248,7 @@ readonly DEFAULT_BATCH_SIZE=8
 readonly MAX_NUM_OF_DEVICES=4
 ```
 
-将 `batch_size=$DEFAULT_BATCH_SIZE` 添加到 19 行，如下所示：
+将 `batch_size=$DEFAULT_BATCH_SIZE` 添加到第 19 行，如下所示：
 
 ```
 network_name=$DEFAULT_NETWORK_NAME
@@ -242,7 +256,7 @@ batch_size=$DEFAULT_BATCH_SIZE
 num_of_src=12
 ```
 
-按如下方式将 `batch-size=$batch_size` 添加到 154 行：
+将 `batch-size=$batch_size` 添加到第 154 行，如下所示：
 
 ```
 queue name=hailo_pre_infer_q_0 leaky=no max-size-buffers=30 max-size-bytes=0 max-size-time=0 ! \
@@ -250,7 +264,7 @@ hailonet hef-path=$hef_path batch-size=$batch_size device-count=$device_count sc
 queue name=hailo_postprocess0 leaky=no max-size-buffers=30 max-size-bytes=0 max-size-time=0 ! \
 ```
 
-最后按 `Ctrl+X` 并输入 `Y` 来保存文件。
+最后按 `Ctrl+X` 并输入 `Y` 保存文件。
 
 ## 运行多流推理
 

@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
 last_update:
-  date: 12/11/2025
-  author: Michelle Huang
+  date: 12/25/2025
+  author: Janet
 ---
 # SenseCAP ONE コンパクト気象センサーの入門ガイド
 
@@ -305,8 +305,6 @@ Settings をクリックしてデバイス設定に入り、"Read From Device" �
 
 5. そして温度測定値は-1000/1000 = -1°
 
-
-
 **S500デコード**
 
 レジスタ0x0000~0x0005を読み取り。
@@ -514,4 +512,11 @@ SDI-12バス上の各センサーには固有のアドレスがあり、'0'、'1
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
 
 ## リソース
+
 [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
+
+## よくある質問（FAQ）
+
+**平均風速および風向はどのように計算されますか？**
+
+デフォルトの平均時間ウィンドウは 5 秒です。この時間内に、デバイスは風速と風向のデータを 5 回取得し、その平均値を算出して返します。
