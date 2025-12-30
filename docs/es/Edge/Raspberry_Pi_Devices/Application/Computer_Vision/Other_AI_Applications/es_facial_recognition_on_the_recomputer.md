@@ -123,7 +123,7 @@ Después de configurar la hora de tu raspberry, puedes actualizar tu raspberry.
 
 Agrega el siguiente texto a ```/boot/firmware/config.txt```
 
-```bash
+```
 #Enable the PCIe external connector
 
 dtparam=pciex1
@@ -161,7 +161,7 @@ El resultado correcto se muestra a continuación:
 
 Abre la terminal en la Raspberry Pi5, e ingresa el comando como sigue para verificar si hailo-8L ha sido conectado.
 
-```bash
+```
 lspci | grep Hailo
 ```
 

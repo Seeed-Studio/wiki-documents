@@ -123,7 +123,7 @@ Raspberry Piの時刻を設定した後、Raspberry Piを更新できます。
 
 ```/boot/firmware/config.txt```に以下のテキストを追加します
 
-```bash
+```
 #Enable the PCIe external connector
 
 dtparam=pciex1
@@ -161,7 +161,7 @@ hailortcli fw-control identify
 
 Raspberry Pi5でターミナルを開き、以下のコマンドを入力してhailo-8Lが接続されているかを確認します。
 
-```bash
+```
 lspci | grep Hailo
 ```
 

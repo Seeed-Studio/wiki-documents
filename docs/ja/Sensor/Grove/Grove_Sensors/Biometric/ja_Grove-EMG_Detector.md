@@ -52,7 +52,7 @@ Groveモジュールの詳細については、[Grove System](https://wiki.seeed
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_EMG_detector.jpg" /></div>
 
-- J2：Groveインターフェース、アナログI/Oに接続
+- J2：groveインターフェース、アナログI/Oに接続
 - J1：EMG使い捨て表面電極コネクタ
 - U1：INA331IDGKT、差動増幅器
 - U2、U3：OPA333、ゼロドリフト増幅器
@@ -77,7 +77,7 @@ Grove - Base ShieldをSeeduinoに接続し、Grove - LED BarをD8に、Grove - E
 
 ### コードのダウンロードとアップロード
 
-デモコードはgithubからダウンロードできます。[こちら](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code/)をクリックして、任意の場所に展開してください。
+githubからデモコードをダウンロードできます。[ここ](https://github.com/Seeed-Studio/Grove_EMG_detector_demo_code/)をクリックして、任意の場所に展開してください。
 
 次に、コードをSeeduinoにアップロードします。コードのアップロードに問題がある場合は、Getting Started With Seeduinoを参照してください。
 
@@ -87,18 +87,17 @@ Grove - Base ShieldをSeeduinoに接続し、Grove - LED BarをD8に、Grove - E
 
 デモコードのダウンロードが完了すると、初期化に約5秒かかります。初期化中は静止状態を保ってください。
 
-初期化中、LED Barがレベル10からレベル0まで変化するのが確認できます。LED Barがすべて消灯したら、動作できます。
+初期化中、LED Barがレベル10からレベル0まで変化するのが確認できます。LED Barがすべて消灯したら、動作を開始できます。
 
-動作すると、LED Barのレベルが変化するのが確認できます。
+動作すると、LED Barのレベルが変化することがわかります。
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_emg_demo_2.gif" /></div>
 
 
-<!-- 
 # Grove-EMGセンサー v1.1
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div> -->
+</div>
 
 リソース
 --------
