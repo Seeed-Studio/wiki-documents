@@ -41,7 +41,7 @@ Necesitas preparar un **XIAO ESP32-C5** con anticipación.
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -122,7 +122,7 @@ void loop()
 
 **Paso 2.** Construir el proyecto
 
-  Haz clic en el ícono ***√*** en la barra de estado en la parte inferior de VS Code para Build.
+  Haz clic en el ícono ***√*** en la barra de estado en la parte inferior de VS Code para Construir.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_2.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -138,7 +138,7 @@ void loop()
 
 **Paso 4.** Verificar el Efecto del Programa
 
-Abre el Serial Monitor como se muestra en la figura a continuación. Imprimirá el estado de encendido/apagado del LED a intervalos de 1 segundo.
+Abre el Monitor Serie como se muestra en la figura a continuación. Imprimirá el estado de encendido/apagado del LED a intervalos de 1 segundo.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_4.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -245,7 +245,7 @@ void loop() {
 
 Construye y Carga el código<br/>
 
-Una vez que el XIAO ESP32-C5 esté conectado a WiFi, el Serial Monitor imprimirá información como la intensidad de señal de la red WiFi conectada.<br/>
+Una vez que el XIAO ESP32-C5 esté conectado a WiFi, el Monitor Serie imprimirá información como la intensidad de señal de la red WiFi conectada.<br/>
 También se puede ver claramente que el XIAO ESP32-C5 tiene una fuerte capacidad de conectarse a redes Wi-Fi de 5 GHz.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_5_1.png" style={{width:600, height:'auto'}}/></div><br/>
