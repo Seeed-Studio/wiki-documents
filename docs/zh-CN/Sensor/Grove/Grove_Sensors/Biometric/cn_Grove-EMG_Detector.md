@@ -55,7 +55,7 @@ EMG 检测器是连接人体和电子设备的桥梁，传感器收集微小的�
 - J2：Grove 接口，连接到模拟 I/O；
 - J1：EMG 一次性表面电极连接器。
 - U1：INA331IDGKT，差分放大器。
-- U2，U3：OPA333，零漂移放大器。
+- U2、U3：OPA333，零漂移放大器。
 
 演示
 -------------
@@ -71,7 +71,7 @@ EMG 检测器是连接人体和电子设备的桥梁，传感器收集微小的�
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Emg_connect.jpg" /></div>
 
 :::tip
-此产品的零件清单最近已更新。您可能会收到两种规格的连接线，它们的功能完全相同，只是颜色不同，对应关系如下图所示。
+该产品的零件清单最近已更新。您可能会收到两种规格的连接线，它们的功能完全相同，只是颜色不同，对应关系如下图所示。
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/newline.png" /></div>
 :::
 
@@ -94,10 +94,10 @@ EMG 检测器是连接人体和电子设备的桥梁，传感器收集微小的�
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_emg_demo_2.gif" /></div>
 
 
-# Grove-EMG 传感器 v1.1
+<!-- # Grove-EMG 传感器 v1.1
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
+</div> -->
 
 资源
 --------

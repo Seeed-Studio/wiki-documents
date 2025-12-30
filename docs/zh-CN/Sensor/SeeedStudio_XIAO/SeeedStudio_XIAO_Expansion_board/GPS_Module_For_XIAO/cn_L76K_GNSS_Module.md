@@ -1,6 +1,6 @@
 ---
 title: Quectel L76K
-description: L76K GNSS 模块 for XIAO 入门指南
+description: L76K GNSS 模块 XIAO 入门指南
 keywords:
   - XIAO
   - Quectel L76K
@@ -13,7 +13,7 @@ last_update:
   author: Spencer
 ---
 
-# L76K GNSS 模块 for SeeedStudio XIAO 入门指南
+# SeeedStudio XIAO L76K GNSS 模块入门指南
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -25,11 +25,11 @@ last_update:
 
 <!-- TODO Add bazaar link -->
 
-## 简介
+## 介绍
 
-L76K GNSS 模块 for SeeedStudio XIAO 是一款多 GNSS（全球导航卫星系统）模块，兼容所有 XIAO 开发板，支持 GPS、北斗（BDS）、GLONASS 和 QZSS 系统，允许多系统组合或单系统独立定位。它还支持 AGNSS 功能，内置低噪声放大器和声表面滤波器，提供快速、准确、高性能的良好定位体验。
+SeeedStudio XIAO L76K GNSS 模块是一款与所有 XIAO 开发板兼容的多 GNSS（全球导航卫星系统）模块，支持 GPS、北斗（BDS）、GLONASS 和 QZSS 系统，允许多系统组合或单系统独立定位。它还支持 AGNSS 功能，内置低噪声放大器和声表面滤波器，提供快速、准确、高性能的良好定位体验。
 
-该模块配备高性能有源 GNSS 天线，旨在覆盖 GPS L1 C/A、北斗 B1 和 GLONASS L1 频段。设计还配有一个微小的亮绿色 LED，用于指示定位时的 1PPS 输出。
+该模块配备高性能有源 GNSS 天线，旨在覆盖 GPS L1 C/A、北斗 B1 和 GLONASS L1 频段。设计还包含一个微小的亮绿色 LED，用于指示定位时的 1PPS 输出。
 
 ### 特性
 
@@ -49,7 +49,7 @@ L76K GNSS 模块 for SeeedStudio XIAO 是一款多 GNSS（全球导航卫星系�
  </tr>
  <tr>
      <th>GNSS 频段</th>
-     <td>GPS L1 C/A: 1575.42MHz<br></br> GLONASS L1: 1602MHz<br></br> BeiDou B1: 1561.098MHz</td>
+     <td>GPS L1 C/A: 1575.42MHz<br></br> GLONASS L1: 1602MHz<br></br> 北斗 B1: 1561.098MHz</td>
  </tr>
  <tr>
      <th>通道</th>
@@ -88,7 +88,7 @@ L76K GNSS 模块 for SeeedStudio XIAO 是一款多 GNSS（全球导航卫星系�
 
 ## 硬件概述
 
-在开始之前，我们可以参考以下图片了解 L76K GNSS 模块 for SeeedStudio XIAO 的引脚设计，以便于我们理解模块的功能。
+在开始之前，我们可以参考以下图片来了解 SeeedStudio XIAO L76K GNSS 模块的引脚设计，以便于我们理解该模块的功能。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-xiao-pinout.png" style={{width:800, height:'auto'}}/></div>
 
@@ -96,7 +96,7 @@ L76K GNSS 模块 for SeeedStudio XIAO 是一款多 GNSS（全球导航卫星系�
 
 ### 硬件准备
 
-为了充分体验 L76K GNSS 模块的功能，我们建议将其与我们 XIAO 系列的主板配对使用。*以下任何 XIAO 型号*都与 L76K GNSS 模块兼容。
+为了充分体验 L76K GNSS 模块的功能，我们建议将其与我们 XIAO 系列的主板配对使用。*以下任何一款 XIAO 型号*都与 L76K GNSS 模块兼容。
 
 <table align="center">
  <tr>
@@ -116,79 +116,79 @@ L76K GNSS 模块 for SeeedStudio XIAO 是一款多 GNSS（全球导航卫星系�
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
 </table>
 
-在 XIAO 主板上使用此模块之前，您需要在模块上安装排针插座，并将有源 GNSS 天线插入模块。连接到 XIAO 时，请特别注意模块的安装方向，请不要反向插入，否则很可能烧毁模块或 XIAO。
+在XIAO主板上使用此模块之前，您需要在模块上安装排针插座，并将有源GNSS天线插入模块。连接到XIAO时，请特别注意模块的安装方向，请不要反向插入，否则很可能烧毁模块或XIAO。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-xiao-assembled.png" style={{width:500, height:'auto'}}/></div>
 
 :::caution
-请特别注意模块的安装方向，请不要反向插入，否则很可能烧毁模块或 XIAO。
+请特别注意模块的安装方向，请不要反向插入，否则很可能烧毁模块或XIAO。
 :::
 
 ### 软件准备
 
-要使用 L76K GNSS 模块 for SeeedStudio XIAO，我们需要对 XIAO 系列进行编程。推荐的编程工具是 Arduino IDE，您需要为 XIAO 配置 Arduino 环境并添加板载包。
+要使用SeeedStudio XIAO的L76K GNSS模块，我们需要对XIAO系列进行编程。推荐的编程工具是Arduino IDE，您需要为XIAO配置Arduino环境并添加板载包。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用Arduino，我们强烈建议您参考[Arduino入门指南](/cn/Getting_Started_with_Arduino/)。
 :::
 
-#### 步骤 1. 根据您的操作系统下载并安装稳定版本的 Arduino IDE
+#### 步骤1. 根据您的操作系统下载并安装稳定版本的Arduino IDE
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载 Arduino IDE</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>下载Arduino IDE</font></span></strong></a>
 </div>
 
-#### 步骤 2. 启动 Arduino 应用程序
+#### 步骤2. 启动Arduino应用程序
 
-#### 步骤 3. 为您使用的 XIAO 配置 Arduino IDE
+#### 步骤3. 为您使用的XIAO配置Arduino IDE
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO SAMD21**，请参考 **[此教程](/cn/Seeeduino-XIAO/#software)** 完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO SAMD21**，请参考**[此教程](/cn/Seeeduino-XIAO/#software)**完成添加。
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO RP2040**，请参考 **[此教程](/cn/XIAO-RP2040-with-Arduino/#software-setup)** 完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO RP2040**，请参考**[此教程](/cn/XIAO-RP2040-with-Arduino/#software-setup)**完成添加。
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO nRF52840**，请参考 **[此教程](/cn/XIAO_BLE/#software-setup)** 完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO nRF52840**，请参考**[此教程](/cn/XIAO_BLE/#software-setup)**完成添加。
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO ESP32C3**，请参考 **[此教程](/cn/XIAO_ESP32C3_Getting_Started#software-setup)** 完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32C3**，请参考**[此教程](/cn/XIAO_ESP32C3_Getting_Started#software-setup)**完成添加。
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO ESP32S3**，请参考 **[此教程](/cn/xiao_esp32s3_getting_started#software-preparation)** 完成添加。
+- 如果您想在后续例程中使用**Seeed Studio XIAO ESP32S3**，请参考**[此教程](/cn/xiao_esp32s3_getting_started#software-preparation)**完成添加。
 
-#### 步骤 4. 将 TinyGPSPlus 库添加到 Arduino
+#### 步骤4. 将TinyGPSPlus库添加到Arduino
 
-首先，您需要在 Arduino IDE 中搜索并下载最新版本的 **TinyGPSPlus** 库。
+首先，您需要在Arduino IDE中搜索并下载最新版本的**TinyGPSPlus**库。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/installing-tinygpsplus.png" style={{width:800, height:'auto'}}/></div>
 
 ## 应用演示
 
-### 示例 1：读取和显示 GNSS 数据
+### 示例1：读取和显示GNSS数据
 
-硬件和软件准备就绪后，我们开始上传第一个示例程序。L76K GNSS 模块在上电后每 1 秒通过串口打印 GNSS 信息。在此示例中，我们将使用 **TinyGPSPlus** 库来解析从模块接收的 NMEA 语句，并将包括纬度、经度和时间在内的结果打印到 Arduino IDE 的串口监视器。
+硬件和软件准备就绪后，我们开始上传第一个示例程序。L76K GNSS模块在上电后每1秒通过串口打印GNSS信息。在此示例中，我们将使用**TinyGPSPlus**库来解析从模块接收的NMEA语句，并将包括纬度、经度和时间在内的结果打印到Arduino IDE的串口监视器。
 
 以下是源代码：
 
@@ -287,6 +287,8 @@ void displayInfo() {
 
 此代码使用 TinyGPSPlus 库通过串行连接从 L76K GNSS 模块读取数据，并在串口监视器上显示有效的位置信息和日期/时间。
 
+<!-- PCN（2025年5月25日）：基于节能考量，我们移除了固定状态指示灯。因此，隐藏以下LED演示。
+
 ## 配置
 
 ### 示例 1：改变 LED 的行为
@@ -337,7 +339,7 @@ void loop() {}
 ```
 
 :::info
-有关详细信息，请参阅 Quectel_L76K_GNSS 的 CASIC 协议消息。
+有关详细信息请参阅 Quectel_L76K_GNSS 的 CASIC 协议消息。
 
 ```c
 struct CASIC_Messages {  
@@ -351,7 +353,7 @@ struct CASIC_Messages {
 } L76KStruct;
 ```
 
-:::
+::: -->
 
 ## 资源
 
@@ -370,7 +372,7 @@ struct CASIC_Messages {
 <details>
 <summary>为什么 GNSS 信息不在串口监视器上显示？</summary>
 
-确保 L76K GNSS 模块放置在室外能够接收到良好 GNSS 信号的地方。
+确保 L76K GNSS 模块放置在室外，能够接收到良好的 GNSS 信号。
 </details>
 
 <details>

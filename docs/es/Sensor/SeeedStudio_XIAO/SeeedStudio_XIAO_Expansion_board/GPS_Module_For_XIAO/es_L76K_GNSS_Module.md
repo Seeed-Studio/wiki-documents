@@ -1,6 +1,6 @@
 ---
 title: Quectel L76K
-description: Comenzar con el Módulo GNSS L76K para XIAO
+description: Comience con el módulo L76K GNSS para XIAO
 keywords:
   - XIAO
   - Quectel L76K
@@ -29,12 +29,12 @@ last_update:
 
 El Módulo GNSS L76K para SeeedStudio XIAO es un módulo Multi-GNSS (Sistema Global de Navegación por Satélite) compatible con todas las placas de desarrollo XIAO, soporta sistemas GPS, BeiDou (BDS), GLONASS y QZSS, permite posicionamiento combinado de múltiples sistemas o independiente de un solo sistema. También soporta función AGNSS, amplificador de bajo ruido integrado y filtro de superficie acústica, y proporciona una buena experiencia de posicionamiento rápida, precisa y de alto rendimiento.
 
-El módulo viene con una antena GNSS activa de alto rendimiento diseñada para cubrir las bandas GPS L1 C/A, BeiDou B1 y GLONASS L1. El diseño también tiene un pequeño LED verde brillante para indicar la salida 1PPS en fijación.
+El módulo viene con una antena GNSS activa de alto rendimiento diseñada para cubrir las bandas GPS L1 C/A, BeiDou B1 y GLONASS L1. El diseño también tiene un pequeño LED verde brillante para indicar la salida 1PPS en la fijación.
 
 ### Características
 
-- **Recepción Mejorada:** Amplificador de Bajo Ruido integrado y Filtro de Onda Acústica de Superficie para mejorar la sensibilidad y reducción de ruido
-- **Alta Precisión:** 32/72 canales, seguimiento -162dBm, sensibilidad de re-adquisición -160dBm
+- **Recepción Mejorada:** Amplificador de Bajo Ruido integrado y Filtro de Ondas Acústicas de Superficie para mejorar la sensibilidad y reducción de ruido
+- **Alta Precisión:** 32/72 canales, seguimiento de -162dBm, sensibilidad de re-adquisición de -160dBm
 - **Eficiencia Energética**: 41mA seguimiento/adquisición, 360µA en espera
 - **Sistemas Multi-GNSS**: Alimentado por Quectel L76K, soportando GPS, BeiDou, GLONASS y QZSS
 - **Antena Cerámica:** Recepción de señal mejorada, superior a las antenas tradicionales.
@@ -86,13 +86,13 @@ El módulo viene con una antena GNSS activa de alto rendimiento diseñada para c
 </table>
 </div>
 
-## Descripción General del Hardware
+## Descripción del Hardware
 
 Antes de comenzar, podemos referirnos a las siguientes imágenes para entender el diseño de pines del Módulo GNSS L76K para SeeedStudio XIAO para facilitar nuestra comprensión de la función del módulo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-xiao-pinout.png" style={{width:800, height:'auto'}}/></div>
 
-## Comenzando
+## Primeros Pasos
 
 ### Preparación del Hardware
 
@@ -142,7 +142,7 @@ Para experimentar completamente las capacidades del Módulo GNSS L76K, recomenda
  </tr>
 </table>
 
-Antes de usar este módulo en una placa madre XIAO, necesitas instalar los conectores hembra en el módulo y conectar la antena GNSS activa al módulo. Al conectar al XIAO, por favor presta especial atención a la dirección de instalación del módulo, por favor no lo conectes al revés, de lo contrario es probable que quemes el módulo o el XIAO.
+Antes de usar este módulo en una placa base XIAO, necesitas instalar los conectores de cabecera en el módulo y conectar la antena GNSS activa al módulo. Al conectar al XIAO, por favor presta especial atención a la dirección de instalación del módulo, por favor no lo conectes al revés, de lo contrario es probable que quemes el módulo o el XIAO.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-xiao-assembled.png" style={{width:500, height:'auto'}}/></div>
 
@@ -152,43 +152,43 @@ Por favor presta especial atención a la dirección de instalación del módulo,
 
 ### Preparación del Software
 
-Para usar el Módulo GNSS L76K para SeeedStudio XIAO, necesitamos programar la serie XIAO. La herramienta de programación recomendada es el IDE de Arduino, y necesitas configurar el entorno de Arduino para el XIAO y agregar el paquete de la placa.
+Para usar el Módulo GNSS L76K para SeeedStudio XIAO, necesitamos programar la serie XIAO. La herramienta de programación recomendada es el IDE de Arduino, y necesitas configurar el entorno de Arduino para el XIAO y añadir el paquete de la placa.
 
 :::tip
-Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que te refieras a [Comenzando con Arduino](/es/Getting_Started_with_Arduino/).
+Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Comenzando con Arduino](/es/Getting_Started_with_Arduino/).
 :::
 
-#### Paso 1. Descargar e Instalar la versión estable del IDE de Arduino según tu sistema operativo
+#### Paso 1. Descarga e Instala la versión estable del IDE de Arduino según tu sistema operativo
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar IDE de Arduino</font></span></strong></a>
 </div>
 
-#### Paso 2. Lanzar la aplicación Arduino
+#### Paso 2. Inicia la aplicación Arduino
 
-#### Paso 3. Configurar el IDE de Arduino para el XIAO que estás usando
+#### Paso 3. Configura el IDE de Arduino para el XIAO que estés usando
 
-- Si quieres usar **Seeed Studio XIAO SAMD21** para las rutinas posteriores, por favor refiere a **[este tutorial](/es/Seeeduino-XIAO/#software)** para terminar de agregar.
+- Si quieres usar **Seeed Studio XIAO SAMD21** para las rutinas posteriores, por favor consulta **[este tutorial](/es/Seeeduino-XIAO/#software)** para terminar de añadirlo.
 
-- Si quieres usar **Seeed Studio XIAO RP2040** para las rutinas posteriores, por favor refiere a **[este tutorial](/es/XIAO-RP2040-with-Arduino/#software-setup)** para terminar de agregar.
+- Si quieres usar **Seeed Studio XIAO RP2040** para las rutinas posteriores, por favor consulta **[este tutorial](/es/XIAO-RP2040-with-Arduino/#software-setup)** para terminar de añadirlo.
 
-- Si quieres usar **Seeed Studio XIAO nRF52840** para las rutinas posteriores, por favor refiere a **[este tutorial](/es/XIAO_BLE/#software-setup)** para terminar de agregar.
+- Si quieres usar **Seeed Studio XIAO nRF52840** para las rutinas posteriores, por favor consulta **[este tutorial](/es/XIAO_BLE/#software-setup)** para terminar de añadirlo.
 
-- Si quieres usar **Seeed Studio XIAO ESP32C3** para las rutinas posteriores, por favor refiere a **[este tutorial](/es/XIAO_ESP32C3_Getting_Started#software-setup)** para terminar de agregar.
+- Si quieres usar **Seeed Studio XIAO ESP32C3** para las rutinas posteriores, por favor consulta **[este tutorial](/es/XIAO_ESP32C3_Getting_Started#software-setup)** para terminar de añadirlo.
 
-- Si quieres usar **Seeed Studio XIAO ESP32S3** para las rutinas posteriores, por favor refiere a **[este tutorial](/es/xiao_esp32s3_getting_started#software-preparation)** para terminar de agregar.
+- Si quieres usar **Seeed Studio XIAO ESP32S3** para las rutinas posteriores, por favor consulta **[este tutorial](/es/xiao_esp32s3_getting_started#software-preparation)** para terminar de añadirlo.
 
-#### Paso 4. Agregar la librería TinyGPSPlus a Arduino
+#### Paso 4. Añade la biblioteca TinyGPSPlus a Arduino
 
-Primero, necesitas buscar y descargar la última versión de la librería **TinyGPSPlus** en el IDE de Arduino.
+Primero, necesitas buscar y descargar la última versión de la biblioteca **TinyGPSPlus** en el IDE de Arduino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/installing-tinygpsplus.png" style={{width:800, height:'auto'}}/></div>
 
-## Demo de Aplicación
+## Demostración de Aplicación
 
 ### Ejemplo 1: Lectura y Visualización de Datos GNSS
 
-Una vez que el hardware y software estén listos, comenzamos subiendo nuestro primer programa de ejemplo. El Módulo GNSS L76K imprime la información GNSS a través del puerto serie cada 1 segundo después de encenderse. En este ejemplo, usaremos la librería **TinyGPSPlus** para analizar las sentencias NMEA recibidas del módulo e imprimir los resultados incluyendo latitud, longitud y tiempo al Monitor Serie del IDE de Arduino.
+Una vez que el hardware y software estén listos, comenzamos subiendo nuestro primer programa de ejemplo. El Módulo GNSS L76K imprime la información GNSS a través del puerto serie cada 1 segundo después del encendido. En este ejemplo, usaremos la biblioteca **TinyGPSPlus** para analizar las sentencias NMEA recibidas del módulo e imprimir los resultados incluyendo latitud, longitud y tiempo al Monitor Serie del IDE de Arduino.
 
 Aquí está el código fuente:
 
@@ -279,13 +279,15 @@ void displayInfo() {
 }
 ```
 
-Simplemente selecciona el XIAO que estás usando y el número de puerto donde se encuentra el XIAO, compila y súbelo.
+Simplemente selecciona el XIAO que estés usando y el número de puerto donde se encuentra el XIAO, compila y súbelo.
 
-Asegúrate de que el Módulo GNSS L76K esté colocado al aire libre donde se puedan recibir buenas señales GNSS. Sube el código a tu XIAO y espera unos minutos, deberías ver la información mostrada en el monitor serie.
+Asegúrate de que el Módulo GNSS L76K esté colocado en el exterior donde se puedan recibir buenas señales GNSS. Sube el código a tu XIAO y espera unos minutos, deberías ver la información mostrada en el monitor serie.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-output.png" style={{width:800, height:'auto'}}/></div>
 
 Este código utiliza la biblioteca TinyGPSPlus para leer datos del módulo GNSS L76K a través de una conexión serie y muestra información de ubicación válida y fecha/hora en el monitor serie.
+
+<!-- PCN(May 25, 2025): Considering the scenario of power saving, we removed the fix status indicator. Therefore, hide the following LED demo.
 
 ## Configuración
 
@@ -337,7 +339,7 @@ void loop() {}
 ```
 
 :::info
-Para detalles, consulta los Mensajes del Protocolo CASIC de Quectel_L76K_GNSS.
+Para detalles ver Mensajes de Protocolo CASIC de Quectel_L76K_GNSS.
 
 ```c
 struct CASIC_Messages {  
@@ -351,7 +353,7 @@ struct CASIC_Messages {
 } L76KStruct;
 ```
 
-:::
+:::-->
 
 ## Recursos
 
@@ -360,22 +362,23 @@ struct CASIC_Messages {
 - **PDF**: [Quectel_L76K_GNSS_Protocol_Specification_V1.1](https://raw.githubusercontent.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO/fb74b715224e0ac153c3884e578ee8e024ed8946/docs/Quectel_L76K_GNSS_Protocol_Specification_V1.1.pdf)
 - **GitHub**: [Seeed_L76K-GNSS_for_XIAO](https://github.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO)
 
-## Solución de Problemas
+## Solución de problemas
 
 <details>
 <summary>¿Puede la celda recargable alimentar el XIAO?</summary>
-No, la celda recargable en este contexto se utiliza únicamente para el Reloj de Tiempo Real (RTC) y mantener un estado de arranque en caliente en el Módulo GNSS L76K. No puede utilizarse como fuente de alimentación principal para el XIAO o para las operaciones generales del módulo GNSS.
+No, la celda recargable en este contexto se utiliza únicamente para el Reloj de Tiempo Real (RTC) y para mantener un estado de arranque en caliente en el Módulo GNSS L76K. No puede utilizarse como fuente de alimentación principal para el XIAO o para las operaciones generales del módulo GNSS.
 </details>
 
 <details>
 <summary>¿Por qué no se muestra la información GNSS en el monitor serie?</summary>
 
-Asegúrate de que el Módulo GNSS L76K esté colocado al aire libre donde se puedan recibir buenas señales GNSS.
+Asegúrese de que el Módulo GNSS L76K esté colocado al aire libre donde se puedan recibir buenas señales GNSS.
 </details>
 
 <details>
 <summary>¿Por qué la luz verde del dispositivo permanece encendida constantemente cuando se conecta al XIAO RP2040?</summary>
-Para solucionar este problema, necesitas poner D0 y D2 en alto. La iluminación constante de la luz verde de fijación indica que el dispositivo ha entrado en un estado de funcionamiento anormal.
+Para solucionar este problema, necesita poner D0 y D2 en alto. La iluminación constante de la luz verde de fijación indica que el dispositivo ha entrado en un estado de funcionamiento anormal.
+</details>
 
 ```cpp
 pinMode(D2,OUTPUT);
@@ -383,8 +386,6 @@ digitalWrite(D2,1);
 pinMode(D0,OUTPUT);
 digitalWrite(D0,1);
 ```
-
-</details>
 
 ## Soporte Técnico y Discusión de Productos
 
