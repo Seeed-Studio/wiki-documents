@@ -8639,6 +8639,7 @@ const sidebars = {
                     },
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/cn_reTerminal-DM-Yolo5',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/cn_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/cn_yolov11_for_speed_estimation_and_loitering_detection_on_recomputer'
                   ]
                 },
                 {
@@ -13709,6 +13710,7 @@ const sidebars = {
                     },
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/es_reTerminal-DM-Yolo5',
                     'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/es_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                    'es/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/es_yolov11_for_speed_estimation_and_loitering_detection_on_recomputer'
                   ]
                 },
                 {
@@ -18780,6 +18782,7 @@ const sidebars = {
                     },
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/ja_reTerminal-DM-Yolo5',
                     'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/ja_yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/ja_yolov11_for_speed_estimation_and_loitering_detection_on_recomputer'
                   ]
                 },
                 {

@@ -123,7 +123,7 @@ sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -
 
 将以下文本添加到 ```/boot/firmware/config.txt```
 
-```
+```bash
 #Enable the PCIe external connector
 
 dtparam=pciex1
@@ -161,7 +161,7 @@ hailortcli fw-control identify
 
 在 Raspberry Pi5 上打开终端，输入以下命令来检查 hailo-8L 是否已连接。
 
-```
+```bash
 lspci | grep Hailo
 ```
 
