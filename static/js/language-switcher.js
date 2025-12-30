@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-25 13:59:08 (北京时间)
-// 多语言页面: 2085 个
+// 生成时间: 2025-12-30 15:04:32 (北京时间)
+// 多语言页面: 2088 个
 
 (function() {
   'use strict';
@@ -726,6 +726,12 @@
     "ja"
   ],
   "/deploy_dia_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deploy_live_vlm_webui_on_jetson": [
     "cn",
     "en",
     "es",
@@ -8829,6 +8835,12 @@
     "es",
     "ja"
   ],
+  "/xiao_mg24_sense_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_mg24_pin_multiplexing": [
     "cn",
     "en",
@@ -9028,6 +9040,12 @@
     "ja"
   ],
   "/xiao_ra4m1_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_ra4m1_micropython": [
     "cn",
     "en",
     "es",
