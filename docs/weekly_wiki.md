@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/22/2025
+  date: 12/29/2025
   author: Frank
 ---
 
@@ -17,9 +17,50 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 22nd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 29th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
+
+### [Seeed Studio XIAO ESP32-C5 With Micropython](https://wiki.seeedstudio.com/xiao_esp32c5_with_micropyhton/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document guides you through using MicroPython on the Seeed Studio XIAO ESP32-C5 development board, covering hardware preparation, flashing the MicroPython firmware, and writing and running example programs in Thonny IDE, such as LED blinking, Wi-Fi connectivity, and BLE demos, to help you quickly get started with this compact board that supports dual-band Wi-Fi and Bluetooth.
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### [Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/)
 
@@ -204,5 +245,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.12.01st](/Seeed_Elderly/weekly_wiki/2025/wiki251201)
 - [weekly wiki on 2025.12.08th](/Seeed_Elderly/weekly_wiki/2025/wiki251208)
 - [weekly wiki on 2025.12.15th](/Seeed_Elderly/weekly_wiki/2025/wiki251215)
+- [weekly wiki on 2025.12.22nd](/Seeed_Elderly/weekly_wiki/2025/wiki251222)
 
 </details>
