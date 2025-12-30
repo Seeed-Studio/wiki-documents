@@ -1281,6 +1281,7 @@ const sidebars = {
           label: 'XIAO ESP32C5',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_Pin_Multiplexing',
             {
               type: 'category',
               label: 'Programming Language',
@@ -1296,6 +1297,13 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_ESP-Mesh_Audio',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wireless Connection',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/XIAO_ESP32C5_WiFi_Usage',
               ],
             },
           ],
@@ -3467,6 +3475,7 @@ const sidebars = {
                     },
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/reTerminal-DM-Yolo5',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer'
                   ]
                 },
                 {
@@ -8964,6 +8973,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_How_to_run_VLM_on_reComputer',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Riva_and_Llama2_on_reComputer',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Real_Time_Subtitle_Recoder_on_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Ollama_and_AnythingLLM_on_Jetson',
@@ -14033,6 +14043,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_How_to_run_VLM_on_reComputer',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Riva_and_Llama2_on_reComputer',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Real_Time_Subtitle_Recoder_on_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Ollama_and_AnythingLLM_on_Jetson',
@@ -19103,6 +19114,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_run_VLM_on_reComputer',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Riva_and_Llama2_on_reComputer',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Real_Time_Subtitle_Recoder_on_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Ollama_and_AnythingLLM_on_Jetson',

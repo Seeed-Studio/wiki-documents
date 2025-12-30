@@ -1,7 +1,7 @@
 ---
 title: Seeed Studio XIAO RA4M1 With MicroPython
 description: Pin multiplexing with Seeed Studio XIAO RA4M1
-image: https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-RA4M1.webp
+image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/result_3.webp
 slug: /xiao_ra4m1_micropython
 keywords:
   - XIAO
@@ -337,7 +337,7 @@ Next , We will choose two sensors to reflect the characteristics of ADC .
 
 #### Software
 
-- Create a new file named pwm.py and copy the reference code into it.
+- Create a new file named adc.py and copy the reference code into it.
 
 ```py
 import time
@@ -471,7 +471,7 @@ UART is one of the most commonly used communication protocols. It allows data tr
 
 #### Software
 
-- Create a new file named pwm.py and copy the reference code into it.
+- Create a new file named uart.py and copy the reference code into it.
 
 <details>
 
@@ -768,7 +768,7 @@ XIAO RAM41 has an I2C interface that can be used for data transmission and parsi
 
 #### Software
 
-- Create a new file named pwm.py and copy the reference code into it.
+- Create a new file named i2c.py and copy the reference code into it.
 
 <details>
 
