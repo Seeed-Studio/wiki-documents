@@ -1281,6 +1281,7 @@ const sidebars = {
           label: 'XIAO ESP32C5',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_Getting_Started',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_Pin_Multiplexing',
             {
               type: 'category',
               label: 'Programming Language',
@@ -1296,6 +1297,13 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_ESP-Mesh_Audio',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Wireless Connection',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/XIAO_ESP32C5_WiFi_Usage',
               ],
             },
           ],
