@@ -17,9 +17,9 @@ import TopNav from '../../components/topNav';
 import SuccessModal from '../../components/SuccessModal';
 
 
-const baseUrl = 'http://sapi-new.seeedstudio.local' //本地环境
+// const baseUrl = 'http://sapi-new.seeedstudio.local' //本地环境
 // const baseUrl = 'http://relfusionapi.seeedstudio.com'//测试环境
-// const baseUrl='https://napi.seeedstudio.com'//正式
+const baseUrl='https://napi.seeedstudio.com'//正式
 
 function getImgUrl(str) {
 	return `https://files.seeedstudio.com/wiki/contributor/${str}.png`
