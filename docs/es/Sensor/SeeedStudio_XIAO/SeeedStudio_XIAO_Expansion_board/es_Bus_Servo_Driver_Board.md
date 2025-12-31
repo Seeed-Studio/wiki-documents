@@ -15,7 +15,7 @@ last_update:
   date: 05/27/2025
 ---
 
-# Primeros Pasos con la Placa Controladora de Servo de Bus / Adaptador de Servo de Bus XIAO
+# Introducción a la Placa Controladora de Servo de Bus / Adaptador de Servo de Bus XIAO
 
 Esta wiki cubre dos productos relacionados: la **Placa Controladora de Servo de Bus** y el **Adaptador de Servo de Bus XIAO**.
 
@@ -38,12 +38,12 @@ Por favor, consulta el resto de esta guía para obtener detalles sobre la config
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Bus-Servo-Driver-Board-for-XIAO-p-6413.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
           </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-Bus-Servo-Adapter-for-XIAO-p-6397.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -52,13 +52,13 @@ Por favor, consulta el resto de esta guía para obtener detalles sobre la config
 
 ## Introducción
 
-El Bus Servo Driver Board / XIAO Bus Servo Adapter es una solución de hardware compacta y potente de Seeed Studio, diseñada para controlar servos de bus serie para proyectos de robótica y automatización. Con soporte para comunicación UART, permite control preciso y retroalimentación de múltiples servos de la serie ST/SC, incluyendo la serie Feetech SCS (ver [Sitio Web Oficial de la Serie Feetech SCS/STS/TTL](https://www.feetechrc.com/en/scs_ttl_Servo.html)). Esto lo hace ideal para aplicaciones como brazos robóticos, hexápodos, robots humanoides y robots con ruedas que requieren retroalimentación de ángulo y carga del servo.
+La Placa Controladora de Servo de Bus / Adaptador de Servo de Bus XIAO es una solución de hardware compacta y potente de Seeed Studio, diseñada para controlar servos de bus serie para proyectos de robótica y automatización. Con soporte para comunicación UART, permite control preciso y retroalimentación de múltiples servos de la serie ST/SC, incluyendo la serie Feetech SCS (ver [Sitio Web Oficial de la Serie Feetech SCS/STS/TTL](https://www.feetechrc.com/en/scs_ttl_Servo.html)). Esto lo hace ideal para aplicaciones como brazos robóticos, hexápodos, robots humanoides y robots con ruedas que requieren retroalimentación de ángulo y carga del servo.
 
-Esta guía se enfoca en la configuración del hardware, conexiones físicas, especificaciones clave y **configuraciones críticas de jumpers** para ayudar a los usuarios a integrar la placa en sus proyectos de manera efectiva.
+Esta guía se enfoca en la configuración del hardware, conexiones físicas, especificaciones clave y **configuraciones críticas de puentes** para ayudar a los usuarios a integrar la placa en sus proyectos de manera efectiva.
 
 :::warning Advertencia de Seguridad
 
-Siempre desconecte la alimentación antes de conectar o desconectar servos o cableado. Asegúrese de que el voltaje de entrada coincida con los requisitos del servo para evitar daños.
+Siempre desconecta la alimentación antes de conectar o desconectar servos o cableado. Asegúrate de que el voltaje de entrada coincida con los requisitos del servo para evitar daños.
 
 :::
 
@@ -68,29 +68,29 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Bus Servo Driver Board" label="Bus Servo Driver Board">
+<TabItem value="Bus Servo Driver Board" label="Placa Controladora de Servo de Bus">
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/1.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/2.png" style={{width:800, height:'auto'}}/></div>
 
-El Bus Servo Driver Board presenta varios puntos de conexión clave:
+La Placa Controladora de Servo de Bus cuenta con varios puntos de conexión clave:
 
 **Entrada:**
 
-- **DC IN (5.5 * 2.1mm):** Esta es la entrada de alimentación para la placa y los servos conectados. Conecte una fuente de alimentación de 5&#126;12V aquí. *Crucialmente, el voltaje de esta fuente de alimentación debe coincidir con los requisitos de voltaje de sus servos.* Por ejemplo, los servos de la serie ST típicamente operan a 9V, mientras que los servos de la serie SC pueden requerir 12V.
+- **DC IN (5.5 * 2.1mm):** Esta es la entrada de alimentación para la placa y los servos conectados. Conecta una fuente de alimentación de 5&#126;12V aquí. *Crucialmente, el voltaje de esta fuente de alimentación debe coincidir con los requisitos de voltaje de tus servos.* Por ejemplo, los servos de la serie ST típicamente operan a 9V, mientras que los servos de la serie SC pueden requerir 12V.
 
 **Salida:**
 
-- **Interfaz del Servo:** Este puerto dedicado es donde conecta sus servos de bus de la serie ST/SC. Asegúrese de que el conector esté correctamente alineado.
+- **Interfaz de Servo:** Este puerto dedicado es donde conectas tus servos de bus de la serie ST/SC. Asegúrate de que el conector esté correctamente alineado.
 
 **Interfaz de Control:**
 
-- **UART (RX/TX):** Estos pines proporcionan comunicación serie para controlar los servos. El método de conexión y las configuraciones de jumper dependen de su dispositivo host. Vea los detalles a continuación.
+- **UART (RX/TX):** Estos pines proporcionan comunicación serie para controlar los servos. El método de conexión y las configuraciones de puente dependen de tu dispositivo host. Ver abajo para más detalles.
 
 </TabItem>
 
-<TabItem value="XIAO Bus Servo Adapter" label="XIAO Bus Servo Adapter">
+<TabItem value="XIAO Bus Servo Adapter" label="Adaptador de Servo de Bus XIAO">
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/3.png" style={{width:800, height:'auto'}}/></div>
 
@@ -98,98 +98,98 @@ El Bus Servo Driver Board presenta varios puntos de conexión clave:
 
 **Entrada:**
 
-- **DC IN (5.5 * 2.1mm):** Esta es la entrada de alimentación para la placa y los servos conectados. Conecte una fuente de alimentación de 5~12V aquí. *Crucialmente, el voltaje de esta fuente de alimentación debe coincidir con los requisitos de voltaje de sus servos.* Por ejemplo, los servos de la serie ST típicamente operan a 9V, mientras que los servos de la serie SC pueden requerir 12V.
+- **DC IN (5.5 * 2.1mm):** Esta es la entrada de alimentación para la placa y los servos conectados. Conecta una fuente de alimentación de 5~12V aquí. *Crucialmente, el voltaje de esta fuente de alimentación debe coincidir con los requisitos de voltaje de tus servos.* Por ejemplo, los servos de la serie ST típicamente operan a 9V, mientras que los servos de la serie SC pueden requerir 12V.
 
 **Salida:**
 
-- **Interfaz del Servo:** Este puerto dedicado es donde conecta sus servos de bus de la serie ST/SC. Asegúrese de que el conector esté correctamente alineado.
+- **Interfaz de Servo:** Este puerto dedicado es donde conectas tus servos de bus de la serie ST/SC. Asegúrate de que el conector esté correctamente alineado.
 
 </TabItem>
 
 </Tabs>
 
-## Comenzando
+## Introducción
 
-### Selección del modo de operación de la placa controladora **(Solo para Bus Servo Driver Board)**
+### Seleccionando el modo de operación de la placa controladora **(Solo para Placa Controladora de Servo de Bus)**
 
 :::tip
-Para XIAO Bus Servo Adapter, no necesitas modificar ningún circuito para usar el XIAO ESP32-C3 incluido para controlar los servos, puedes omitir esta parte directamente.
+Para el Adaptador de Servo de Bus XIAO, no necesitas modificar ningún circuito para usar el XIAO ESP32-C3 incluido para controlar los servos, puedes omitir esta parte directamente.
 :::
 
-La Bus Servo Driver Board ofrece dos métodos de conexión principales: conexión UART directa y conexión USB a través de un adaptador USB-a-UART. *La configuración correcta del jumper es esencial para el funcionamiento adecuado.*
+La Placa Controladora de Servo de Bus ofrece dos métodos de conexión principales: conexión UART directa y conexión USB a través de un adaptador USB-a-UART. *La configuración correcta del puente es esencial para el funcionamiento adecuado.*
 
 #### Conexión UART (para MCUs, XIAO, ESP32, etc.)
 
 Este método se usa cuando se conecta directamente a los pines UART de un microcontrolador (MCU) como un ESP32, Arduino, Seeed Studio XIAO, o una computadora de placa única.
 
 - **Cableado:**
-  - Conecta el pin `RX` en la Driver Board al pin `TX` (D7) en tu dispositivo host.
-  - Conecta el pin `TX` en la Driver Board al pin `RX` (D6) en tu dispositivo host.
+  - Conecta el pin `RX` en la Placa Controladora al pin `TX` (D7) en tu dispositivo host.
+  - Conecta el pin `TX` en la Placa Controladora al pin `RX` (D6) en tu dispositivo host.
   - Para dispositivos como el Seeed Studio XIAO, puedes conectar directamente el XIAO en los conectores proporcionados, asegurando la alineación correcta de los pines. Esto elimina la necesidad de cables Dupont separados para la conexión UART.
 
-- **Configuración del Jumper (Crítico):**
+- **Configuración de Puente (Crítica):**
 
-  - Usa una tapa de jumper de 2.54mm para cortocircuitar el pin de 2 pines en la parte frontal de la placa. (Está cortocircuitado por defecto)
+  - No hay necesidad de usar una tapa de puente de 2.54mm para cortocircuitar el pin de 2 pines en la parte frontal de la placa. (No está cortocircuitado por defecto)
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
-- **Alimentación del Host:** Tu dispositivo host (ej. Raspberry Pi Zero, ESP32, XIAO) requerirá su propia fuente de alimentación separada.
+- **Alimentando el Host:** Tu dispositivo host (ej., Raspberry Pi Zero, ESP32, XIAO) requerirá su propia fuente de alimentación separada.
 
 #### Conexión USB
 
-Este método se usa cuando se conecta a una computadora o computadora de placa única con un puerto USB (ej. una PC o Raspberry Pi 4B). Simplemente conectas la placa de control a la computadora usando un cable USB.
+Este método se usa cuando se conecta a una computadora o computadora de placa única con un puerto USB (ej., una PC o Raspberry Pi 4B). Simplemente conectas la placa de control a la computadora usando un cable USB.
 
 - **Cableado:**
   - Simplemente conecta la placa de control a tu computadora usando un cable USB.
 
-- **Configuración del Jumper (Crítico):**
+- **Configuración de Puente (Crítica):**
 
-  - **Paso 1.** Localiza el jumper de soldadura en la parte posterior de la placa. **Para comunicación USB, debes asegurar que las dos almohadillas estén conectadas (hay un puente de soldadura entre ellas).**
+  - **Paso 1.** Localiza el puente de soldadura en la parte posterior de la placa. **Para comunicación USB, debes asegurarte de que las dos almohadillas estén conectadas (hay un puente de soldadura entre ellas).**
 
-  - Almohadillas del lado posterior para versión 1:
+  - Almohadillas del lado posterior para la versión 1:
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/7.jpg" style={{width:400, height:'auto'}}/></div>
 
-  - Almohadillas del lado posterior para versión 2:
+  - Almohadillas del lado posterior para la versión 2:
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-1.png" style={{width:400, height:'auto'}}/></div>
 
-  - **Paso 2.** Usa una tapa de jumper de 2.54mm para cortocircuitar el pin de 2 pines en la parte frontal de la placa. (Está cortocircuitado por defecto)
+  - **Paso 2.** Usa una tapa de puente de 2.54mm para cortocircuitar el pin de 2 pines en la parte frontal de la placa. (No está cortocircuitado por defecto)
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
 ### Componentes Requeridos (Antes de Comenzar)
 
 Antes de conectar cualquier cosa, asegúrate de tener lo siguiente:
 
-- **Bus Servo Driver Board / XIAO Bus Servo Adapter**
-- **Servos bus compatibles de serie ST/SC**: ver [Sitio Web Oficial de Feetech SCS/STS/TTL Series](https://www.feetechrc.com/en/scs_ttl_Servo.html).
+- **Placa Controladora de Servo de Bus / Adaptador de Servo de Bus XIAO**
+- **Servos de bus de la serie ST/SC compatibles**: ver [Sitio Web Oficial de la Serie Feetech SCS/STS/TTL](https://www.feetechrc.com/en/scs_ttl_Servo.html).
 - **Fuente de Alimentación de 5~12V:** Una batería o adaptador de corriente. *El voltaje debe coincidir con las especificaciones de tu servo.*
 - **Dispositivo Host:**
   - **Para UART Directo:** Un dispositivo con capacidad UART como un Raspberry Pi, Arduino, ESP32, o Seeed Studio XIAO.
   - **Para USB:** Una computadora (PC, Mac, Linux) o una computadora de placa única como un Raspberry Pi 4B, *más* un adaptador USB-a-UART.
 
 :::note
-Para XIAO Bus Servo Adapter, XIAO ESP32-C3 está integrado, por lo que no hay necesidad de preparar un dispositivo host.
+Para el Adaptador de Servo de Bus XIAO, el XIAO ESP32-C3 está integrado, por lo que no hay necesidad de preparar un dispositivo host.
 :::
 
-- **Cables/Adaptadores de Conexión:** Cables jumper (cables Dupont) si usas UART directo (excepto cuando uses XIAO con conexión directa de conectores). Un adaptador USB-a-UART si usas el método de conexión USB.
+- **Cables/Adaptadores de Conexión:** Cables puente (cables Dupont) si usas UART directo (excepto cuando uses XIAO con conexión directa de conectores). Un adaptador USB-a-UART si usas el método de conexión USB.
 
 :::caution
-Si usas servos de serie SC, confirma que la fuente de alimentación coincida con sus requerimientos de voltaje. La etiqueta de entrada DC de la placa está adaptada para servos de serie ST pero también soporta voltajes de serie SC. **Configuraciones incorrectas del jumper impedirán la comunicación con la placa controladora.**
+Si usas servos de la serie SC, confirma que la fuente de alimentación coincida con sus requisitos de voltaje. La etiqueta de entrada DC de la placa está adaptada para servos de la serie ST pero también soporta voltajes de la serie SC. **Las configuraciones incorrectas de puente impedirán la comunicación con la placa controladora.**
 :::
 
-## Control de Servos vía USB
+## Controlando Servos vía USB
 
-Esta sección describe cómo controlar múltiples servos de bus a través de la Placa Controladora de Servos de Bus usando una conexión USB.
+Esta sección describe cómo controlar múltiples servos de bus a través de la Placa Controladora de Servo de Bus usando una conexión USB.
 
 ### Descripción General del Principio
 
-La Placa Controladora de Servos de Bus funciona recibiendo comandos serie (UART) desde tu dispositivo host (como una PC, Raspberry Pi, o microcontrolador) vía USB. Estos comandos son luego retransmitidos a los servos de bus conectados. Al enviar los comandos de protocolo serie apropiados, puedes controlar la posición, velocidad y otros parámetros de cada servo individualmente.
+La Placa Controladora de Servo de Bus funciona recibiendo comandos serie (UART) de tu dispositivo host (como una PC, Raspberry Pi, o microcontrolador) vía USB. Estos comandos son luego retransmitidos a los servos de bus conectados. Al enviar los comandos de protocolo serie apropiados, puedes controlar la posición, velocidad y otros parámetros de cada servo individualmente.
 
-La placa en sí no interpreta ni genera señales de control de servo de forma autónoma; en su lugar, actúa como un puente transparente entre tu host y los servos. Esto significa que eres responsable de enviar los paquetes de comando correctos de acuerdo al protocolo de comunicación de tu servo.
+La placa en sí no interpreta o genera señales de control de servo de forma autónoma; en su lugar, actúa como un puente transparente entre tu host y los servos. Esto significa que eres responsable de enviar los paquetes de comando correctos de acuerdo con el protocolo de comunicación de tu servo.
 
 ### Ejemplo de Referencia
 
-Para un ejemplo práctico de cómo enviar comandos a servos de bus Feetech (series ST/SC/STS/TTL), puedes consultar el siguiente ejemplo en Python:  
+Para un ejemplo práctico de cómo enviar comandos a servos de bus Feetech (series ST/SC/STS/TTL), puedes consultar el siguiente ejemplo de Python:  
 [lerobot/common/robot_devices/motors/feetech.py en GitHub](https://github.com/huggingface/lerobot/blob/main/lerobot/common/robot_devices/motors/feetech.py)
 
 Este ejemplo demuestra cómo construir y enviar paquetes serie para controlar servos Feetech. Puedes adaptar el código a tu propia plataforma host y lenguaje de programación según sea necesario.
@@ -202,14 +202,14 @@ Este ejemplo demuestra cómo construir y enviar paquetes serie para controlar se
 
 Para más detalles sobre el protocolo de las series Feetech SCS/STS/TTL, consulta la [documentación oficial de Feetech](https://www.feetechrc.com/en/scs_ttl_Servo.html).
 
-## Control de Servos vía XIAO
+## Controlando Servos a través de XIAO
 
 A continuación, describimos cómo enviar señales para controlar el movimiento del servo a través de XIAO y cómo usar la biblioteca.
 
 ### Descripción General de la Biblioteca Arduino
 
 :::tip
-Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Comenzando con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
+Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Introducción a Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -298,7 +298,7 @@ Antes de comenzar a desarrollar un sketch, veamos las funciones disponibles de l
   Parámetros: `uint8_t id`  
   Salida: `int16_t` (1: habilitado, 0: deshabilitado)
 
-- `void LEDAlarm(uint8_t id, uint8_t enable)` —— Configurar el estado de alarma LED.  
+- `void LEDAlarm(uint8_t id, uint8_t enable)` —— Establecer el estado de alarma LED.  
   Parámetros: `uint8_t id`, `uint8_t enable`  
   Salida: ninguna
 
@@ -318,7 +318,7 @@ Antes de comenzar a desarrollar un sketch, veamos las funciones disponibles de l
 
 Ahora que tenemos nuestra biblioteca instalada y entendemos las funciones básicas, ejecutemos algunos ejemplos para nuestro 产品名称 para ver cómo se comporta.
 
-**Paso 1.** Iniciar la aplicación Arduino.
+**Paso 1.** Lanza la aplicación Arduino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -326,11 +326,11 @@ Ahora que tenemos nuestra biblioteca instalada y entendemos las funciones básic
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong></a>
 </div>
 
-**Paso 2.** Seleccionar el modelo de tu placa de desarrollo y añadirla al Arduino IDE.
+**Paso 2.** Selecciona tu modelo de placa de desarrollo y agrégala al Arduino IDE.
 
 - Para usar **Seeed Studio XIAO ESP32-C3** para las rutinas posteriores, por favor consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Getting_Started#software-setup)** para completar la adición.
 
-**Paso 3.** Completar el cableado como se muestra. Si necesitas conectar múltiples servos, puedes usar los cables que vienen con los servos para completar la conexión.
+**Paso 3.** Completa el cableado como se muestra. Si necesitas conectar múltiples servos, puedes usar los cables que vienen con los servos para completar la conexión.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/8.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -374,7 +374,7 @@ void setup()
   // Start the serial port for controlling the servos
   COMSerial.begin(1000000, SERIAL_8N1);
   st.pSerial = &COMSerial; // Associate the control object with the serial port
-  
+
   Serial.println("Checking servo connection status...");
   for (int i = 0; i < SERVO_NUM; i++) {
     if (st.Ping(ID[i]) != -1) {
@@ -391,7 +391,7 @@ void setup()
   // --- Power-on Self-Test ---
   // This section makes the servos move automatically on power-up to confirm they are working correctly.
   Serial.println("\nExecuting power-on self-test movement...");
-  
+
   // 1. Move to position 1024
   Serial.println("Moving to position 1024...");
   for(int i=0; i<SERVO_NUM; i++) {
@@ -462,19 +462,19 @@ void loop()
         if(i < SERVO_NUM - 1) Serial.print(", ");
       }
       Serial.println("]");
-      
+
       st.SyncWritePosEx(ID, SERVO_NUM, Pos, Speed, ACC);
     }
   }
 }
 ```
 
-Este ejemplo demuestra cómo controlar múltiples servos de bus de la serie SCS de Feetech usando el XIAO y la biblioteca SCServo. El código inicializa dos servos, los calibra y permite al usuario ajustar sus posiciones de forma interactiva mediante comandos serie. Cuando envías 'j' o 'k' a través del monitor serie, el código disminuirá o aumentará el ángulo de todos los servos conectados, respectivamente. La posición actual de cada servo se rastrea y actualiza en consecuencia, y las nuevas posiciones se envían a los servos usando la función `SyncWritePosEx`.
+Este ejemplo demuestra cómo controlar múltiples servos de bus de la serie Feetech SCS usando el XIAO y la biblioteca SCServo. El código inicializa dos servos, los calibra y permite al usuario ajustar sus posiciones de forma interactiva mediante comandos serie. Cuando envías 'j' o 'k' a través del monitor serie, el código disminuirá o aumentará el ángulo de todos los servos conectados, respectivamente. La posición actual de cada servo se rastrea y actualiza en consecuencia, y las nuevas posiciones se envían a los servos usando la función `SyncWritePosEx`.
 
 Cómo personalizar para tu propio proyecto:
 
 - **Número de Servos**: Cambia el valor de `Servo_Num` y actualiza los arrays ID, Speed, ACC y Pos para que coincidan con el número e IDs de tus servos.
-IDs de Servo: Modifica el array ID para que coincida con los IDs de tus servos conectados.
+IDs de Servos: Modifica el array ID para que coincida con los IDs de tus servos conectados.
 
 - **Velocidad y Aceleración**: Ajusta los arrays Speed y ACC para establecer diferentes velocidades y aceleraciones para cada servo.
 
@@ -484,11 +484,11 @@ IDs de Servo: Modifica el array ID para que coincida con los IDs de tus servos c
 
 - **Posición Inicial**: Establece los valores iniciales en el array `Pos` para definir las posiciones de inicio de tus servos.
 
-## FAQs
+## Preguntas Frecuentes
 
 :::tip
 
-Se recomienda leer estas FAQs antes de comenzar tu proyecto. Abordan preguntas comunes y problemas potenciales.
+Se recomienda leer estas preguntas frecuentes antes de comenzar tu proyecto. Abordan preguntas comunes y problemas potenciales.
 
 :::
 
@@ -513,7 +513,7 @@ Sí, se admiten múltiples servos, pero asegúrate de que tu fuente de alimentac
 
 ### Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 

@@ -69,6 +69,8 @@ one computer
 
 ### System preparation
 
+If Home Assistant has already been installed, then please directly proceed to the "Find the path of the configuration file" step for the subsequent configuration.
+
 1.update system
 
 ```bash
@@ -92,7 +94,7 @@ curl -fsSL https://get.docker.com | sh
 2.Allow the current user to use Docker
 
 ```bash
-https://files.seeedstudio.com
+sudo usermod -aG docker $USER
 ```
 
 3.Restart the system to make the permissions take effect
@@ -230,7 +232,7 @@ Save and Exit:
 3. Edit configuration.yaml:
 
 ```bash
-sudo nano /homeassistant/config/automations.yaml
+sudo nano /homeassistant/config/configuration.yaml
 ```
 
 Replace the content with:

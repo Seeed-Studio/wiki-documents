@@ -7,7 +7,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.web
 slug: /es/wio_tracker_l1_node
 sidebar_position: 1
 last_update:
-  date: 11/5/2025
+  date: 12/18/2025
   author: Michelle Huang
 ---
 
@@ -18,12 +18,12 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora </font></span></strong>
     </a>
 </div>
-La serie Wio Tracker L1 es un nodo [Meshtastic®](https://meshtastic.org/) de bajo consumo y altamente extensible que cuenta con LoRa (862–930 MHz), el nRF52840 para procesamiento eficiente, y un módulo GPS L76K para seguimiento preciso de ubicación. Diseñado para flexibilidad, soporta pantallas OLED y E-Ink, así como paneles solares y alimentación por batería, haciéndolo ideal para una amplia gama de aplicaciones IoT y fuera de la red.
+La Wio Tracker L1 Serie es un nodo [Meshtastic®](https://meshtastic.org/) de bajo consumo y altamente extensible que cuenta con LoRa (862–930 MHz), el nRF52840 para procesamiento eficiente, y un módulo GPS L76K para seguimiento preciso de ubicación. Diseñado para flexibilidad, soporta pantallas OLED y E-Ink, así como paneles solares y alimentación por batería, haciéndolo ideal para una amplia gama de aplicaciones IoT y fuera de la red.
 
-## Modelo de la Serie L1
+## Modelo L1 Serie
 
 :::tip
-La serie Wio Tracker L1 está disponible en 4 versiones—elige la que mejor se adapte a tus necesidades.
+La Wio Tracker L1 Serie está disponible en 4 versiones—elige la que mejor se adapte a tus necesidades.
 :::
 
 ### Introducción de la Serie
@@ -51,14 +51,14 @@ La serie Wio Tracker L1 está disponible en 4 versiones—elige la que mejor se 
 - **Pre-cargado con firmware Meshtastic**
 Listo para usar desde el primer momento con firmware Meshtastic preinstalado para una configuración sin problemas.
 
-- **Tres Opciones de Alimentación**
-Soporta carga rápida Type-C, entrada solar y alimentación por batería de iones de litio para despliegue flexible en varios entornos—ideal para aplicaciones exteriores y móviles.
+- **Opciones de Triple Alimentación**
+Soporta carga rápida Type-C, entrada solar y alimentación por batería Li-ion para despliegue flexible en varios entornos—ideal para aplicaciones exteriores y móviles.
 
 - **Soporte de Pantalla Flexible**
 Pantallas opcionales OLED de 1.3 pulgadas y E-Ink de 2.13 pulgadas, ofreciendo opciones de visualización versátiles para diferentes necesidades de consumo de energía y retroalimentación visual.
 
 - **Alta Expandibilidad**
-Totalmente compatible con el ecosistema Grove, e incluye conectores PTH y una interfaz de depuración SWD para expansión de hardware personalizada y desarrollo avanzado.
+Totalmente compatible con el ecosistema Grove, e incluye cabeceras PTH y una interfaz de depuración SWD para expansión de hardware personalizada y desarrollo avanzado.
 
 ### Especificaciones
 
@@ -78,10 +78,11 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">1 MB flash y 256 kB RAM</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="2">Inalámbrico</td>
-    <td colspan="1">
-      LoRa: Basado en <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>, soporta 862-930MHz
-    </td>
+    <td colspan="1" rowspan="3">Inalámbrico</td>
+    <td colspan="1">LoRa: Basado en <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html">Wio-SX1262</a>, soporta 862-930MHz</td>
+  </tr>
+   <tr>
+  <td colspan="1">Antena LoRa para L1 Pro: 3dBi</td>
   </tr>
   <tr>
     <td colspan="1">Bluetooth 5.0</td>
@@ -111,7 +112,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Batería de Litio (1mm 2p JST): 3.7V — 1A</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">Pantalla OLED</td>
+    <td colspan="1" rowspan="3">[Pantalla OLED](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)</td>
     <td colspan="1">Tamaño: 1.3 pulgadas</td>
   </tr>
   <tr>
@@ -121,7 +122,7 @@ Los últimos lotes de L1, L1 Lite y L1 E-Ink vienen todos con un cable adaptador
     <td colspan="1">Área Activa (mm): 34.5 × 23.0</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">Pantalla E-Ink</td>
+    <td colspan="1" rowspan="3">[Pantalla E-Ink](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)</td>
     <td colspan="1">Tamaño: 2.13 pulgadas</td>
   </tr>
   <tr>

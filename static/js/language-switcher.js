@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-11-27 17:37:43 (北京时间)
-// 多语言页面: 2063 个
+// 生成时间: 2025-12-30 15:04:32 (北京时间)
+// 多语言页面: 2088 个
 
 (function() {
   'use strict';
@@ -731,6 +731,12 @@
     "es",
     "ja"
   ],
+  "/deploy_live_vlm_webui_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/local_ai_ssistant": [
     "cn",
     "en",
@@ -834,6 +840,12 @@
     "ja"
   ],
   "/Update-Jetson-Linux-OTA-Using-Allxon": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/llm_interface_control_jetson": [
     "cn",
     "en",
     "es",
@@ -954,6 +966,12 @@
     "ja"
   ],
   "/create_backup_and_restore_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deploy_ota_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -2033,6 +2051,12 @@
     "es",
     "ja"
   ],
+  "/viseron_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/zoneminder_on_recomputer": [
     "cn",
     "en",
@@ -2526,6 +2550,12 @@
     "ja"
   ],
   "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
     "es",
@@ -4007,6 +4037,12 @@
     "es",
     "ja"
   ],
+  "/hightorque_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/myactuator_series": [
     "cn",
     "en",
@@ -4085,6 +4121,17 @@
     "es",
     "ja"
   ],
+  "/stackforce_giant_bipedal_wheeled_robot": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_mini_wheeled_legged_robot": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/csi_camera_on_ros": [
     "cn",
     "en",
@@ -4098,6 +4145,12 @@
     "ja"
   ],
   "/orbbec_gemini2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/orbbec_gemini336": [
     "cn",
     "en",
     "es",
@@ -4134,6 +4187,12 @@
     "ja"
   ],
   "/hexfellow_y200": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/wheeltec_imu": [
     "cn",
     "en",
     "es",
@@ -7858,6 +7917,12 @@
     "es",
     "ja"
   ],
+  "/iot_button_v2_ha_discovery": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/seeed_iot_button_with_zigbee": [
     "cn",
     "en",
@@ -8188,6 +8253,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_voice_assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_volume": [
     "cn",
     "en",
@@ -8333,6 +8404,36 @@
     "ja"
   ],
   "/xiao_esp32c3_with_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_esp-mesh_audio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_with_micropyhton": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_with_platformio": [
     "cn",
     "en",
     "es",
@@ -8596,6 +8697,12 @@
     "es",
     "ja"
   ],
+  "/getting_started_with_cob_led_dirver_board": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/epaper_breakout_board_with_oepl": [
     "cn",
     "en",
@@ -8723,6 +8830,12 @@
     "ja"
   ],
   "/xiao_mg24_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_mg24_sense_micropython": [
     "cn",
     "en",
     "es",
@@ -8927,6 +9040,12 @@
     "ja"
   ],
   "/xiao_ra4m1_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_ra4m1_micropython": [
     "cn",
     "en",
     "es",
@@ -9256,6 +9375,12 @@
     "es",
     "ja"
   ],
+  "/esphome_xiao_w5500_ethernet_adapter": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_w5500_ethernet_adapter": [
     "cn",
     "en",
@@ -9485,12 +9610,6 @@
     "ja"
   ],
   "/Seeed_Arduino_Boards": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/iot_botton_connect_to_esphome": [
     "cn",
     "en",
     "es",
@@ -9742,7 +9861,7 @@
     "es",
     "ja"
   ],
-  "/SenseCAP_Indicator_DALL·E": [
+  "/SenseCAP_Indicator_DALL-E": [
     "cn",
     "en",
     "es",
@@ -10139,6 +10258,24 @@
     "ja"
   ],
   "/Tracker_WiFi_Geolocation": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/SenseCAP_T2000_tracker/Introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Get_Started_with_SenseCAP_T2000_tracker": [
     "cn",
     "en",
     "es",
@@ -11133,6 +11270,12 @@
     "es",
     "ja"
   ],
+  "/solutions/smart-retail-voice-ai-solution-1": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/crowd-flow-monitoring": [
     "cn",
     "en",
@@ -11152,6 +11295,12 @@
     "ja"
   ],
   "/ha_dify_watcher_llms": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/mcp_external_system_integration": [
     "cn",
     "en",
     "es",

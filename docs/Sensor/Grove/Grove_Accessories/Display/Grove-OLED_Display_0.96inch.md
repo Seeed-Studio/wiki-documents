@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED_Display_0.96inch
 last_update:
-  date: 1/9/2023
-  author: shuxu hu
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/Grove-OLED-0.96.png) -->
@@ -150,6 +150,7 @@ void loop(void) {
 
 - **Step 3.** We can see "Hello World!" on screen.
 
+
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -162,7 +163,7 @@ void loop(void) {
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
 
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
-- **Step 3**. Connect the OLED display to the **I^2^C** port of the Base Hat.
+- **Step 3**. Connect the OLED display to the **I2C** port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg) -->
@@ -176,22 +177,20 @@ void loop(void) {
 :::
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library.
+- **Step 2**. Enter the relevant virtual environment.
 
 ```
-cd ~
-git clone https://github.com/Seeed-Studio/grove.py
-
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
 ```
 
 - **Step 3**. Excute below command to run the code.
 
-```
-cd grove.py/grove
-python3 grove_oled_display_128x64.py
-```
+- The following is to check the grove_oled_display_128x64.py code.
 
-Following is the grove_oled_display_128x64.py code.
+```
+less grove_oled_display_128x64.py
+```
 
 ```python
 
@@ -312,7 +311,7 @@ class GroveOledDisplay128x64(object):
     VERTICAL = 0x01
     PAGE = 0x02
 
-    def __init__(self, bus=None, address=0x3C):
+    def __init__(self, bus=1, address=0x3C):
         self.bus = Bus(bus)
         self.address = address
 
@@ -416,8 +415,14 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+- Run this code
+```
+python grove_oled_display_128x64.py
+```
 
 It seems nothing happened in terminal, however you can find the most famous sentence in the cyber world if you check your oled.😄
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/GROVE-fix/OLED_result1.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
         If you use the I2C tool to scan the I2C address of the grove module, you may find two or more address. 0x04 is the adrress of the *Grove Base Hat for Raspberry Pi*.

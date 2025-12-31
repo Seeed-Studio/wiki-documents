@@ -73,7 +73,7 @@ ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的 4 麦克风圆形阵列，�
 | **音频质量**                  | 等于或优于**之前基于 XVF3000 的设计**。                                                              |
 
 :::note
-ReSpeaker XVF3800 提供两种变体——一种不带 XIAO，另一种板载 XIAO ESP32S3。不带 XIAO 的版本使用默认 USB 固件运行。要使用集成 XIAO 的版本，您必须刷入为 **INT-Device (I2S) 模式**构建的固件。有关详细设置说明，请参阅[官方 wiki 指南](docs/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro.md)。
+ReSpeaker XVF3800 提供两种变体——一种不带 XIAO，另一种板载 XIAO ESP32S3。不带 XIAO 的版本使用默认 USB 固件运行。要使用集成 XIAO 的版本，您必须刷入为 **INT-Device (I2S) 模式**构建的固件。有关详细设置说明，请参阅[官方 wiki 指南](/cn/respeaker_xvf3800_xiao_getting_started)。
 :::
 
 ### XIAO ESP32S3 支持
@@ -190,6 +190,16 @@ ReSpeaker XVF3800 上的每种固件类型支持不同的更新方法：
 ### 更新固件
 
 通过 USB 线缆将 reSpeaker XVF3800 连接到您的 PC。请注意，您需要使用 XMOS USB-C 端口（靠近 3.5mm 插孔端口）来刷写 XMOS 的固件。
+
+| 固件 | 通道数 | 说明 |
+|---------|----------|-------|
+| respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | 处理后的双通道输出 <br /> 通道 0：会议（Conference） <br /> 通道 1：ASR |
+| application_xvf3800_ua-io16-6ch-sqr-v2.0.8-test1.xe | 6 | 通道 0：处理后的音频（会议） <br /> 通道 1：处理后的音频（ASR） <br /> 通道 2：麦克风 0 原始数据 <br /> 通道 3：麦克风 1 原始数据 <br /> 通道 4：麦克风 2 原始数据 <br /> 通道 5：麦克风 3 原始数据 |
+| respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin | 2 | 处理后的双通道输出 <br /> 通道 0：会议（Conference） <br /> 通道 1：ASR |
+| respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | 处理后的双通道输出 <br /> 通道 0：ASR <br /> 通道 1：唤醒词（Wake word） |
+
+用户可以修改上述固件版本中处理后输出的通道选择。
+详细信息请参考 [XMOS 文档](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/03_using_the_host_application.html#output-selection)：
 
 #### 安装 DFU Util
 
@@ -901,6 +911,22 @@ sudo apt install pavucontrol -y
 ```
 
 然后您可以打开 **pavucontrol**，如果需要，可以将输出音量提高到 100% 以上。
+
+### 重新安装 USB 驱动程序后，我的 ReSpeaker 无法录音和播放
+
+在设备管理器中卸载所有与 ReSpeaker 相关的驱动程序。这样解决了问题。
+
+### 刷写固件后在 Windows 中无法作为声音设备使用？
+
+打开开始菜单并输入“设备管理器”。找到相关的 reSpeaker XVF 3800 设备，右键单击它们并选择“卸载设备”。完成后，重新连接设备（拔下并重新插入 USB），Windows 将会自动为其重新安装正确的声卡驱动程序。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
+
+## 资源
+
+- [ReSpeaker XVF3800 3D 文件](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
+- [ReSpeaker XVF3800 3D-外壳-上部 文件](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
+- [ReSpeaker XVF3800 3D-外壳-下部 文件](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
 
 ## 技术支持与产品讨论
 

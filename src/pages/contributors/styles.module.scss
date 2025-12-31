@@ -108,7 +108,7 @@
             color: #000;
             margin-top: 3.5%;
             overflow: hidden;
-            padding: 0 24px;
+            padding: 0 40px;
             box-sizing: border-box;
 
             .why_item {
@@ -180,14 +180,14 @@
         font-size: 16px;
 
         .like_item {
-            margin-right: 20px;
+            margin-left: 10px;
             cursor: pointer;
             display: flex;
         }
 
         .like_number {
 
-            margin-left: 6px;
+            margin-left: 0px;
         }
     }
 
@@ -209,8 +209,13 @@
             cursor: pointer;
 
             &.small {
-                padding: 5px 16px;
-                font-size: 14px;
+                padding: 4px 12px;
+                font-size: 12px;
+                background: #F7F9F2;
+                border-radius: 90px;
+                color: rgba(0, 0, 0, 0.6);
+                margin-right: 8px;
+                margin-bottom: 4px;
             }
 
             &.active {
@@ -227,76 +232,154 @@
             margin-bottom: 4.5%;
         }
 
-        .claim_item {
-            display: flex;
-            border-bottom: 1px solid #E7E7E7;
-            padding-bottom: 5%;
-            margin-bottom: 5%;
+        .claim_wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
 
-            .item_left {
-                flex: 2;
-
+            @media (max-width: 1200px) {
+                grid-template-columns: repeat(3, 1fr);
             }
 
-            .item_right {
-                flex: 1;
-                max-width: 480px;
-                margin-left: 5%;
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            @media (max-width: 480px) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .claim_item {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s;
+
+            &:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            }
+
+            .claim_card_image {
+                width: 100%;
+                height: 0;
+                padding-bottom: 40%;
+                position: relative;
+                overflow: hidden;
 
                 img {
-                    border-radius: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
+            }
 
+            .claim_card_content {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
             }
 
             .item_tab {
-                margin: 24px 0;
+                margin: 12px 0;
+                flex-wrap: wrap;
             }
 
             .item_title {
-                font-weight: 600;
-                font-size: 24px;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 1.4;
+                margin-bottom: 8px;
+                color: #000;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .item_time {
+                color: rgba(0, 0, 0, 0.4);
+                font-size: 12px;
+                margin-bottom: 12px;
             }
 
             .item_desc {
-                margin-bottom: 3.5%;
+                margin-bottom: 16px;
+                font-size: 14px;
+                line-height: 1.6;
+                color: rgba(0, 0, 0, 0.6);
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                flex: 1;
             }
 
             .item_bottom {
                 display: flex;
-                justify-content: space-between;
-
-                .item_bottom_wrapper {
-                    display: flex;
-
-                }
+                flex-direction: column;
+                gap: 12px;
+                margin-top: auto;
+                padding-top: 16px;
 
                 .item_github {
-                    background-color: #000;
+                    background-color: rgba(0, 0, 0, 0.85);
                     color: #fff;
-                    border-radius: 90px;
-                    padding: 14px;
+                    border-radius: 50px;
+                    padding: 8px 16px;
                     display: flex;
-                    justify-content: space-between;
-                    margin-right: 4%;
+                    align-items: center;
+                    gap: 8px;
                     cursor: pointer;
+                    transition: background-color 0.3s;
+                    font-size: 14px;
+                    width: max-content;
+
+                    &:hover {
+                        background-color: #000;
+                    }
 
                     .github {
-                        margin-right: 6px;
+                        font-size: 18px;
                     }
 
                     .github_name {
-                        margin: 0 10px;
-                        width: max-content;
-                        align-self: center;
+                        font-size: 14px;
                     }
                 }
 
-                .item_time {
-                    color: rgba(0, 0, 0, 0.4);
+                .like {
+                    display: flex;
+                    gap: 2px;
+                    justify-content: flex-end;
+                    align-items: center;
+                    width: 100%;
+
+                    .like_item {
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+                        cursor: pointer;
+
+                        .like_number {
+                            font-size: 14px;
+                            color: rgba(0, 0, 0, 0.6);
+                        }
+                    }
                 }
-
-
             }
         }
     }
@@ -320,54 +403,130 @@
         }
 
         .wishpool_wrapper {
-            margin-bottom: 5%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
         }
 
         .wishpool_item {
-
             background-color: #fff;
-            border-radius: 16px;
-            padding: 3.5%;
-            margin-bottom: 16px;
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s;
+
+            &:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            }
+
+            .wishpool_item_header {
+                position: relative;
+                margin-bottom: 12px;
+                min-height: 28px;
+            }
+
+            .contributor_label {
+                width: 149.5px;
+                height: 29px;
+                line-height: 29px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                padding-right: 6px;
+                // background-color: #8FC31F;
+                color: #fff;
+                font-weight: 700;
+                font-size: 14px;
+                // padding: 4px 12px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                background: url('https://files.seeedstudio.com/ranger/contributors/square.png') no-repeat 100% 100%;
+            }
+
+            .done_badge {
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                width: auto;
+                height: auto;
+                max-width: 73px;
+                max-height: 52px;
+                object-fit: contain;
+            }
 
             .item_title {
-                display: flex;
-                justify-content: space-between;
-                font-weight: bold;
+                font-weight: 700;
                 font-family: 'Montserrat-bold';
-                font-size: 24px;
+                font-size: 18px;
+                margin-bottom: 8px;
+                color: #000;
+                line-height: 1.4;
+                // margin-top: 10px;
             }
 
             .item_publish {
                 display: flex;
-                margin: 16px 0;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 12px;
+                font-size: 13px;
+                color: rgba(0, 0, 0, 1);
 
                 .item_time {
-                    margin-left: 36px;
+                    font-size: 12px;
+
+                    margin-left: 0;
+                    color: rgba(0, 0, 0, 0.6);
                 }
+            }
+
+            .item_desc {
+                font-size: 14px;
+                line-height: 1.6;
+                color: rgba(0, 0, 0, 0.6);
+                margin-bottom: 16px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 4;
+                line-clamp: 4;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                flex: 1;
             }
 
             .like {
-                margin-right: 0;
-
-                .like_item:last-child {
-                    margin-right: 0;
-                }
-            }
-
-            .item_introduce {
                 display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 16px;
+                margin-top: auto;
+                padding-top: 12px;
+                // border-top: 1px solid #f0f0f0;
+                width: 100%;
 
-                .item_desc {
-                    flex: 1;
-                }
+                .like_item {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    cursor: pointer;
 
-                .item_img {
-                    width: 98px;
-                    height: 70px;
+                    .like_number {
+                        font-size: 14px;
+                        color: rgba(0, 0, 0, 0.6);
+                    }
                 }
             }
-
         }
     }
 
@@ -399,30 +558,28 @@
         }
 
         .claim {
+            .claim_wrapper {
+                gap: 16px;
+            }
+
             .claim_item {
-
-                flex-direction: column-reverse;
-
-                .item_right {
-                    margin-left: 0;
-                    margin-top: 20px;
+                .claim_card_content {
+                    padding: 16px;
                 }
 
                 .item_bottom {
-                    display: block;
-
-                    .item_bottom_wrapper {
-                        justify-content: space-between;
-
-                    }
-
-                    .item_time {
-                        margin-top: 10px;
-                    }
+                    flex-direction: column;
+                    gap: 12px;
+                    align-items: flex-start;
 
                     .item_github {
-                        justify-content: space-between;
-                        margin-right: 0;
+                        width: 100%;
+                        justify-content: center;
+                    }
+
+                    .like {
+                        width: 100%;
+                        justify-content: flex-start;
                     }
                 }
             }
@@ -485,6 +642,7 @@
         padding: 5%;
         background-color: #fff;
         border-radius: 12px;
+        color: #000;
     }
 
     .form_wrapper {
@@ -525,6 +683,7 @@
                 border: 0;
                 padding: 0 15px;
                 margin-top: 15px;
+                color: #000;
                 background-color: #F3F5F8;
 
             }

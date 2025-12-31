@@ -25,7 +25,7 @@ import Steppers from '@site/src/components/utils/Stepper';
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EN04-p-6560.html" target="_blank">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -171,7 +171,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 - [7.5-inch ePaper - Monochorm 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [7.5-inch ePaper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/37.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 When using the XIAO ePaper Display Board, make sure to set the jumper according to the ePaper display type:
@@ -186,7 +186,7 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 
 - [7.3-inch Spectra6 ePaper](https://www.seeedstudio.com/7-3inch-Six-Color-eInk-ePaper-Display-with-800x480-Pixels-p-6567.html)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/36.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/4.jpg" style={{width:600, height:'auto'}}/></div>
 :::tip
 When using the XIAO ePaper Display Board, make sure to set the jumper according to the ePaper display type:
 - For 50 Pin ePaper displays → set the jumper to 50 Pin
@@ -225,7 +225,7 @@ If you make the wrong choice, the screen will display nothing.
 So please make sure your devices or components type.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/38.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/6.jpg" style={{width:800, height:'auto'}}/></div>
 
 After downloading the library, go to **Sketch** -> **Include Library** -> **Add .ZIP Library** and select the downloaded library.
 
@@ -242,22 +242,20 @@ There are 4 basic examples, open a basic example you like:
 
 ## Getting Start
 
-Here, we use a 5.83-inch display as an example. The steps are the same for all 24-pin screens; the only difference is selecting the appropriate screen size in the driver.
+Here, we use a 7.5-inch display as an example. The steps are the same for all 24-pin screens; the only difference is selecting the appropriate screen size in the driver.
 
 Create a **new "driver.h" file** and paste those code into it. The code should be like:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/40.png" style={{width:1000, height:'auto'}}/></div>
-
 ```cpp
-#define BOARD_SCREEN_COMBO 503 // 5.86 inch monochrome ePaper Screen （UC8179）
+#define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
 #define USE_XIAO_EPAPER_DISPLAY_BOARD_EN04
 ```
 
 After that, go to **Tools** -> **Board** -> **XIAO ESP32S3** and **Tools** -> **Port** -> **Select the port your board is connected to**. Then click **Upload** to upload the code.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/32.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
-Now you will see the feedback in your epaper screen! Following are the results of Helloworld examples.
+Now you will see the feedback in your epaper screen! Following are the results of Helloworld examples.(If nothing appears, please click the reset button)
 
 :::tip
 ⚠️ Note: ePaper Cable Orientation
@@ -267,7 +265,7 @@ When connecting the ePaper display to the XIAO ePaper Display Board, make sure t
 The image below shows the correct connection:
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/32.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.jpg" style={{width:500, height:'auto'}}/></div>
 
 ### User Buttons on XIAO ePaper Display Board(nRF52840) - EN04
 
@@ -299,7 +297,7 @@ Basic Button Reading Example
 
 This example demonstrates how to detect button presses and print messages to the serial monitor.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/39.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/3.jpg" style={{width:500, height:'auto'}}/></div>
 
 <br></br>
 
@@ -361,7 +359,7 @@ If you want to write some code by yourself to read battery voltage, it will be m
 :::
 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04battery.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/2.jpg" style={{width:600, height:'auto'}}/></div>
 
 ```cpp
 #define VOLTAGE_PIN A0 //GPIO1
@@ -393,12 +391,7 @@ void loop() {
 
 
 ## Resources
-Coming soon...
-<!-- chang to en04 -->
-<!-- - **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_SCH_V1.2.pdf)
-- **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Grabcad 3D File](https://grabcad.com/library/xiao-epaper-display-board-nRF52840-EN04-1)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_V1.2_SCH&PCB.zip) -->
-
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
 
 
 ## Tech Support & Product Discussion

@@ -131,10 +131,16 @@ function preprocessDocument(content, startsInsideCodeBlock = false) {
       // 空行
       processedLines.push(`${lineId}[EMPTY_LINE]`);
     } else if (meta.inCodeBlockLine) {
-      // 代码块内行：用占位符顶替真实内容，保持行数/位置
-      processedLines.push(`${lineId}__CODE_LINE_PLH__`);
+      // 特殊情况：这一行里有 HTML 注释结束符 -->，
+      // 需要让模型看到它，否则它会以为前面的 <!-- 注释永远没结束
+      if (trimmedContent.includes('-->')) {
+        // 只暴露 -->，其余内容用占位符掩盖（模型只需要知道注释结束了）
+        processedLines.push(`${lineId}-->`);
+      } else {
+        // 普通代码行：用占位符顶替真实内容，保持行数/位置
+        processedLines.push(`${lineId}__CODE_LINE_PLH__`);
+      }
     } else {
-      // 普通行：原样（含缩进）送给模型
       processedLines.push(`${lineId}${indent}${trimmedContent}`);
     }
 
@@ -367,7 +373,7 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    - 所有[EMPTY_LINE]标记
    - 标记后的所有缩进（空格和制表符）
    - 代码块内容（\`\`\`之间的内容）
-   - 行内代码（\`之间的内容）
+   - 行内代码（\`...\`）中的内容必须**逐字符原样保留**：包括大小写、空格、标点、连字符等都不得改变；即使反引号内看起来是可翻译的英文单词/状态值（例如 \`Low\`、\`High\`、\`On\`、\`Off\`、\`True\`、\`False\`、\`Input\`、\`Output\`），也禁止翻译/本地化/改写
    - URL链接
    - HTML 标签**结构**与**属性**保持不变（不要新增/删除/重排标签；不要修改属性名/属性值）
    - 但标签之间的**可见文本内容要翻译**（例如 <span>、<strong>、<font> 内部的文字）
@@ -423,8 +429,12 @@ ${glossaryPairs}
    - 反例（禁止）：\`<TabItem value="适用于 E1002" label="适用于 E1002">\`（有 label 时不应改 value）
 
 8. **产品系列命名（“… Series” 后缀）**：
-   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`），保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为目标语言（zh-CN → “系列”）。
-   - 示例：\`reTerminal E Series\` → \`reTerminal E 系列\`
+   - 当出现 “… Series” 这类产品线后缀（如 \`reTerminal E Series\`）时，保留前缀的产品名按术语保护/术语表不变，仅将 \`Series\` 翻译为**该目标语言中表示“产品系列”的常用词**。
+   - 各语言示例（仅作参考，实际输出只使用当前目标语言）：
+     - 若目标语言为 zh-CN：\`reTerminal E Series\` → \`reTerminal E 系列\`
+     - 若目标语言为 ja：\`reTerminal E Series\` → \`reTerminal E シリーズ\`
+     - 若目标语言为 es：\`reTerminal E Series\` → \`reTerminal E Serie\`
+   - **禁止**在日文或西班牙文译文中输出中文“系列”；必须使用目标语言自身的词汇。
 </translation_rules>
 
 <example>
@@ -805,6 +815,12 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
     .join('\n');
 
   const cleanPathPrefix = pathPrefix.startsWith('/') ? pathPrefix.slice(1) : pathPrefix;
+  const localeFolder = LANGUAGE_CONFIG[targetLang].folder;
+
+  const langFilePrefix =
+    targetLang === 'zh-CN' ? 'cn_' :
+    targetLang === 'ja'    ? 'ja_' :
+    targetLang === 'es'    ? 'es_' : '';
 
   return `你是一个专业的技术文档翻译专家。请将以下 _category_.yml 文件从英文翻译成${langName}。
 
@@ -818,7 +834,20 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
    - 专有产品名称
    - 技术字段名
 4. **link字段处理**：
-   - slug值前添加 "${cleanPathPrefix}/" 前缀
+   - slug：
+     - 只修改 slug 的值
+     - 在原始值前面加 "${cleanPathPrefix}/" 作为 URL 前缀
+   - id：
+     - 不翻译 id 里面的英文路径，只改“前缀”和“最后一段文件名”
+     - 假设英文原始 id 的格式是： "A/B/C/F"
+       - A/B/C 是中间目录
+       - F 是最后一段文件名（不带扩展名）
+     - 目标语言的 id 按下面的公式改写：
+       1. 保留中间目录 A/B/C 不变
+       2. 把最后一段 F 改成 "${langFilePrefix}F"
+       3. 最前面再加上语言前缀 "${localeFolder}/"
+       4. 也就是：英文 id = "A/B/C/F"
+          目标语言 id = "${localeFolder}/A/B/C/${langFilePrefix}F"
 5. **术语保护**：
 ${termsList}
 

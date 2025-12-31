@@ -18,6 +18,16 @@ last_update:
 
 ---
 
+<div align="center">
+  <img width="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100063642_amazing_hand_right-1_1.jpg"/>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Amazing-Hand-Right-Hand-The-Open-Source-Robotic-Hand-Developer-Kit.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+</a>
+</div>
+
 **AmazingHand** 是一个开源机械手项目，旨在让人形机器人操作的研究和实验变得易于获取且价格合理。传统的机械手往往价格昂贵，并且依赖复杂、笨重的前臂执行器。AmazingHand 通过将所有电机直接集成到紧凑的 3D 可打印设计中来解决这个问题。
 
 其设计灵感来自"ILDA hand"研究项目，但经过简化以降低学生、爱好者和研究人员的入门门槛。腕部接口专为 Reachy2 机器人设计，但可以轻松适配任何平台。

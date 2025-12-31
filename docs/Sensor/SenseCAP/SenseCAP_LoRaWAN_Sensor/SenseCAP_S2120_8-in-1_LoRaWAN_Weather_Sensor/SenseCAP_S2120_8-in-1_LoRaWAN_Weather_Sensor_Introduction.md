@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction
 last_update:
-  date: 3/24/2023
-  author: Yvonne
+  date: 12/25/2025
+  author: Janet
 ---
 
 # SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor
@@ -25,19 +25,21 @@ Helium Network: Sensors work in areas covered by Helium Network (Check on [Heli
 
 LoRaWAN Network: Sensors work in LoRaWAN® networks, like The Things Network, Loriot, Chirpstack, etc. You can check the [SenseCAP Outdoor Gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html) and the [SenseCAP M2 Multiplatform Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html).
 
+:::tip **Note**
+The latest firmware version is `v2.1` and we highly recommend upgrading your device to the latest firmware in the SenseCraft app, as it significantly improves data reporting stability.
+:::
+
 # Application
 
--   Backyard and Garden: Measure air temperature and humidity, rainfall, UV index, etc. in the backyard and garden to protect your family.
+- Backyard and Garden: Measure air temperature and humidity, rainfall, UV index, etc. in the backyard and garden to protect your family.
 
--   Smart Agriculture: Enable farmers to obtain climate data and information in time, take scientific management measures into production, and improve agricultural production capacity and level.
+- Smart Agriculture: Enable farmers to obtain climate data and information in time, take scientific management measures into production, and improve agricultural production capacity and level.
 
--   Meteorology: Support applications in the professional meteorological field, for example, timely reflects the changes of various abnormal meteorological conditions in the field of traffic and transportation to provide real-time scientific basis data for traffic management departments.
+- Meteorology: Support applications in the professional meteorological field, for example, timely reflects the changes of various abnormal meteorological conditions in the field of traffic and transportation to provide real-time scientific basis data for traffic management departments.
 
--   Urban Weather: Provide real-time data for urban squares, parks, scenic spots, golf courses, and other urban areas.
+- Urban Weather: Provide real-time data for urban squares, parks, scenic spots, golf courses, and other urban areas.
 
 # ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3232.png)
-
-
 
 # **Field Deployment**
 
@@ -45,20 +47,15 @@ LoRaWAN Network: Sensors work in LoRaWAN® networks, like The Things Network, Lo
 
 Photo Credits: Ted Urbaniak, Mapping Network, Nibiaa
 
-# 
-
 # Specification
 
 ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3325.png)
 
 # LoRaWAN Frequency
 
-*Note: No Frequency limitation. Weather stations can be switched to
-other frequency plans at any time.*
+*Note: No Frequency limitation. Weather stations can be switched to other frequency plans at any time.*
 
-*S2120 is manufactured to support the universal frequency plan from
-863MHz \~928MHz in one SKU. That is to say, it can support the frequency
-plans below:*
+*S2120 is manufactured to support the universal frequency plan from 863MHz \~928MHz in one SKU. That is to say, it can support the frequency plans below:*
 
 |Frequency Plan|Common Name|Sub-band|
 | :- | :- | :- |

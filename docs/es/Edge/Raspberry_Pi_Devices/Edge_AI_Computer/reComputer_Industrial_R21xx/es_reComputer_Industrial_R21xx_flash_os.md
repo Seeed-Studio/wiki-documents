@@ -6,7 +6,7 @@ keywords:
 - Edge Controller
 - reComputer Industrial R21xx
 - Flash OS
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /es/recomputer_industrial_r21xx_flash_os
 last_update:
   date: 09/28/2025
@@ -14,7 +14,7 @@ last_update:
 ---
 # reComputer Industrial R21xx Flash OS
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -57,7 +57,7 @@ Selecciona el último y haz clic en el enlace de fecha para descargar:
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
 
-- **Paso 5.** Haz clic en **ELEGIR OS** y selecciona el archivo de imagen descargado.
+- **Paso 5.** Haz clic en **CHOOSE OS** y selecciona el archivo de imagen descargado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_5.png" alt="pir" width="800" height="auto"/></p>
 
@@ -84,11 +84,11 @@ Por favor abre una terminal y escribe ```brew -V``` para verificar si has config
 
 Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones locales** y más
 
-- **Paso 4.** Haz clic en **ELEGIR OS** y selecciona tu OS preferido
+- **Paso 4.** Haz clic en **CHOOSE OS** y selecciona tu OS preferido
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="800" height="auto"/></p>
 
-**NOTA:** Puedes seleccionar otro OS como **Ubuntu de 64 bits** navegando a **Otro OS de propósito general**
+**NOTA:** Puedes seleccionar otro OS como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -96,27 +96,27 @@ O puedes usar este enlace para descargar el archivo de imagen:
 
 [Ubuntu para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Paso 5.** Haz clic en **ELEGIR ALMACENAMIENTO**
+- **Paso 5.** Haz clic en **CHOOSE STORAGE**
 
-- **Paso 6.** Finalmente, haz clic en **ESCRIBIR**
+- **Paso 6.** Finalmente, haz clic en **WRITE**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="800" height="auto"/></p>
 
 ### Para computadora host Linux
 
-- **Paso 1.** Descargar snap
+- **Paso 1.** Descarga snap
 
 ```sh
 sudo apt install snap
 ```
 
-- **Paso 2.** Descargar **rpi-imager**
+- **Paso 2.** Descarga **rpi-imager**
 
 ```sh
 snap install rpi-imager
 ```
 
-- **Paso 3.** Abrir el software Raspberry Pi Imager
+- **Paso 3.** Abre el software Raspberry Pi Imager
 
 ```sh
 rpi-imager
@@ -131,11 +131,11 @@ El resultado se muestra a continuación:
 
 Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones locales** y más
 
-- **Paso 5.** Haz clic en **ELEGIR OS** y selecciona tu OS preferido
+- **Paso 5.** Haz clic en **CHOOSE OS** y selecciona tu OS preferido
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
 
-**NOTA:** Puedes seleccionar otro OS como **Ubuntu de 64 bits** navegando a **Otro OS de propósito general**
+**NOTA:** Puedes seleccionar otro OS como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -143,13 +143,13 @@ O puedes usar este enlace para descargar el archivo de imagen:
 
 [Ubuntu para raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Paso 6.** Haz clic en **ELEGIR ALMACENAMIENTO** y selecciona la unidad eMMC conectada
+- **Paso 6.** Haz clic en **CHOOSE STORAGE** y selecciona la unidad eMMC conectada
 
-- **Paso 7.** Finalmente, haz clic en **SIGUIENTE** y **SÍ**
+- **Paso 7.** Finalmente, haz clic en **NEXT** y **YES**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="800" height="auto"/></p>
 
-Por favor espera unos minutos hasta que el proceso de grabación esté completo.
+Por favor espera unos minutos hasta que el proceso de flasheo esté completo.
 El resultado se muestra a continuación:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/flash_finish.png" alt="pir" width="800" height="auto"/></p>
 
@@ -167,36 +167,36 @@ El resultado se muestra a continuación:
   sudo raspi-config
 ```
 
-Desplázate hacia abajo a `Opciones Avanzadas` y presiona Enter:
+Desplázate hacia abajo a `Advanced Options` y presiona Enter:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_1.png" alt="pir" width="800" height="auto" /></div>
 
-Desplázate hacia abajo a `Versión del Bootloader` y presiona Enter:
+Desplázate hacia abajo a `Bootloader Version` y presiona Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_2.png" alt="pir" width="800" height="auto" /></div>
 
-Y finalmente elige `Último`, y presiona Enter:
+Y finalmente elige `Latest`, y presiona Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_3.png" alt="pir" width="800" height="auto" /></div>
 
-Selecciona `No` aquí - quieres el bootloader `último`.
+Selecciona `No` aquí - quieres el bootloader `latest`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_4.png" alt="pir" width="800" height="auto" /></div>
 
-Y sal de la herramienta seleccionando `Finalizar`:
+Y sal de la herramienta seleccionando `Finish`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_5.png" alt="pir" width="800" height="auto" /></div>
 
-Si se te pide reiniciar, selecciona `Sí`.
+Si se te pide reiniciar, selecciona `Yes`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_6.png" alt="pir" width="800" height="auto" /></div>
 
-**Paso 2**: Haz clic en **Aplicaciones** =>**Accesorios** =>**Copiador de Tarjeta SD** en la pantalla principal, ejecuta el programa **Copiador de Tarjeta SD**, y copia el OS al SSD NVME como se muestra en la figura a continuación.
+**Paso 2**: Haz clic en **Applications** =>**Accessories** =>**SD Card Copier** en la pantalla principal, ejecuta el programa **SD Card Copier**, y copia el OS al SSD NVME como se muestra en la figura de abajo.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/copy.gif" alt="pir" width="800" height="auto" /></div>
 
 ### Configurar la Raspberry Pi para arrancar desde el SSD NVMe
 
-Si tienes fácil acceso a tu ranura de tarjeta SD podrías apagar tu Pi, sacar la tarjeta SD y (si todo está funcionando como se espera) debería arrancar automágicamente desde tu unidad NVMe la próxima vez que la inicies. Sin embargo, si quieres dejar la tarjeta SD donde está y aún así arrancar desde NVMe, necesitarás cambiar el orden de arranque.
+Si tienes fácil acceso a tu ranura de tarjeta SD podrías apagar tu Pi, sacar la tarjeta SD y (si todo está funcionando como se espera) debería arrancar automágicamente desde tu unidad NVMe la próxima vez que lo inicies. Sin embargo, si quieres dejar la tarjeta SD donde está y aún así arrancar desde NVMe, necesitarás cambiar el orden de arranque.
 
 **Paso 1**: Ingresa el siguiente comando:
 
@@ -204,14 +204,14 @@ Si tienes fácil acceso a tu ranura de tarjeta SD podrías apagar tu Pi, sacar l
   sudo raspi-config
 ```
 
-Desplázate hacia abajo a `Opciones Avanzadas` y presiona Enter:
+Desplázate hacia abajo a `Advanced Options` y presiona Enter:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_1.png" alt="pir" width="800" height="auto" /></div>
 
-**Paso 2**: Desplázate hacia abajo a `Orden de Arranque` y presiona Enter:
+**Paso 2**: Desplázate hacia abajo a `Boot Order` y presiona Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_2.png" alt="pir" width="800" height="auto" /></div>
 
-**Paso 3**: Elige `Arranque NVMe/USB` y presiona Enter:
+**Paso 3**: Elige `NVMe/USB Boot` y presiona Enter:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_3.png" alt="pir" width="800" height="auto" /></div>
 
@@ -227,7 +227,7 @@ Se te preguntará si quieres reiniciar ahora. Haz clic en `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="800" height="auto" /></div>
 
-## Flashear ubuntu a NVME
+## Flashear ubuntu al NVME
 
 ### Primero: Actualizar EEPROM con tarjeta SD
 
@@ -277,7 +277,7 @@ Modifica el `config.txt`, agrega `dtoverlay=pcie-fix` al final del archivo como 
 
 Y luego usa `Ctrl+X` e ingresa `y` para guardar este archivo.
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

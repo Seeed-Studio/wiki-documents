@@ -1,5 +1,5 @@
 ---
-description: reComputer AI R2000は、Raspberry Pi 5をベースとした強力なエッジAIコンピュータです。クアッドコアArm Cortex-A76プロセッサ、8GB RAM、M.2 SSDサポート、最大26 TOPSを提供するHailo-8 AI加速モジュールを搭載し、リアルタイム、低遅延、高効率のAI推論を実現します。AI駆動のビデオ分析、マシンビジョン、インテリジェントエッジコンピューティングなど、幅広いAIアプリケーションに最適な選択肢です。
+description: reComputer AI R2000は、Raspberry Pi 5をベースとした強力なエッジAIコンピュータです。クアッドコアArm Cortex-A76プロセッサ、8GB RAM、M.2 SSDサポート、最大26 TOPSを提供するHailo-8 AI加速モジュールを搭載し、リアルタイム、低遅延、高効率のAI推論を実現します。AI駆動ビデオ分析、マシンビジョン、インテリジェントエッジコンピューティングなど、幅広いAIアプリケーションに最適な選択肢です。
 title: reComputer AI R2000 シリーズの入門ガイド
 keywords:
 - Raspberry pi
@@ -20,7 +20,7 @@ last_update:
     </a>
 </div>
 
-reComputer AI R2000 シリーズは、Raspberry Pi 5をベースとした強力なエッジAIコンピュータです。クアッドコアArm Cortex-A76プロセッサ、8GB RAM、M.2 SSDサポート、最大26 TOPSを提供するHailo-8 AI加速モジュールを搭載し、リアルタイム、低遅延、高効率のAI推論を実現します。AI駆動のビデオ分析、マシンビジョン、インテリジェントエッジコンピューティングなど、幅広いAIアプリケーションに最適な選択肢です。
+reComputer AI R2000 シリーズは、Raspberry Pi 5をベースとした強力なエッジAIコンピュータです。クアッドコアArm Cortex-A76プロセッサ、8GB RAM、M.2 SSDサポート、最大26 TOPSを提供するHailo-8 AI加速モジュールを搭載し、リアルタイム、低遅延、高効率のAI推論を実現します。AI駆動ビデオ分析、マシンビジョン、インテリジェントエッジコンピューティングなど、幅広いAIアプリケーションに最適な選択肢です。
 
 ## 特徴
 
@@ -28,11 +28,11 @@ reComputer AI R2000 シリーズは、Raspberry Pi 5をベースとした強力�
 
 - **強力な性能**: クアッドコアCortex-A76 CPU、最大8GB RAMを搭載したRaspberry Pi 5により駆動されます。
 
-- **毎秒26テラ演算**: 最大26 Topsの統合計算能力を提供するHailo AIアクセラレータにより駆動されます。
+- **26テラオペレーション毎秒**: 最大26 Topsの統合計算能力を提供するHailo AI加速器により駆動されます。
 豊富なインターフェース: 2x HDMI 4Kp60、1x イーサネットポート、2x USB 3.0、2x USB 2.0。
 
 - **ワイヤレス接続**: デュアルバンドWi-FiとBluetooth 5.0/BLE。
-柔軟なストレージオプション: PCIe2.0デュアルM.2スロットは、AIアクセラレータとSSDストレージの両方をサポートします。
+柔軟なストレージオプション: PCIe2.0デュアルM.2スロットは、AI加速器とSSDストレージの両方をサポートします。
 
 ## 仕様
 
@@ -41,7 +41,7 @@ reComputer AI R2000 シリーズは、Raspberry Pi 5をベースとした強力�
 | **ハードウェア仕様**      |                                                                          |
 | **CPU**                | Raspberry Pi 5、2.4GHzクアッドコア64ビットArm Cortex-A76                    |
 | **GPU**                | Raspberry Pi 5、VideoCore VII                                             |
-| **AIプロセッサ**       | Hailo-8 M.2加速モジュール、毎秒26テラ演算           |
+| **AIプロセッサ**       | Hailo-8 M.2加速モジュール、26テラオペレーション毎秒           |
 | **RAM**                | 8GB SDRAM                                                                |
 | **オペレーティングシステム**   | Raspberry Pi OS、Ubuntu                                                  |
 | **システム仕様**        |                                                                          |
@@ -49,7 +49,7 @@ reComputer AI R2000 シリーズは、Raspberry Pi 5をベースとした強力�
 | **ビデオデコーダ**      | 4Kp60 HEVCデコーダ                                                       |
 | **Wi-Fi**              | デュアルバンド802.11ac Wi-Fi®                                                |
 | **Bluetooth**          | Bluetooth 5.0/ BLE                                                       |
-| **電源ボタン**       | オン/オフ付き                                                          |
+| **電源ボタン**       | オン/オフ付属                                                          |
 | **インターフェース**          |                                                                          |
 | **ストレージ**            | 1 x microSDカードスロット、高速SDR104モード対応           |
 | **M.2スロット**           | 2 x M.2スロット、M.2 NVMe SSD/Hailo M.2加速モジュール対応        |
@@ -70,13 +70,13 @@ reComputer AI R2000 シリーズは、Raspberry Pi 5をベースとした強力�
 
 ### ハードウェア紹介
 
-[Hailo](https://hailo.ai/)は、エッジデバイス上での高性能ディープラーニングアプリケーション向けに独自に調整された最先端のAIプロセッサを提供しています。同社のソリューションは、高度なAIアクセラレータとビジョンプロセッサにより駆動される、知覚とビデオ強化と並んで、エッジでの次世代生成AIを可能にすることに焦点を当てています。そして、26 TOPsのAI性能を提供するHailo-8 NPUアクセラレータを搭載したreComputer_R2000は、YOLOv8sで200 FPS以上を達成することができます。
+[Hailo](https://hailo.ai/)は、エッジデバイス上での高性能ディープラーニングアプリケーション向けに独自に調整された最先端のAIプロセッサを提供しています。同社のソリューションは、高度なAI加速器とビジョンプロセッサにより駆動される、知覚とビデオ強化と並んで、エッジでの次世代生成AIを可能にすることに焦点を当てています。そして、26 TOPsのAI性能を提供するHailo-8 NPU加速器を搭載したreComputer_R2000は、YOLOv8sで200 FPS以上を達成することができます。
 
 ### ソフトウェア紹介
 
 ![](https://seeed-projects.github.io/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero/assets/images/architecture-2bfc6ed440e1add56388738e87558050.png)
 
-Hailo AIソフトウェアスイートは、ハードウェアアクセラレータ上でAIモデルを効率的に実行するための強力なツールを提供します。既存のディープラーニングフレームワークとシームレスに統合するように設計されており、開発者にスムーズなワークフローを提供します。このプロセスでは、モデルビルド環境でONNXファイルからHEF（Hailo実行可能バイナリファイル）を生成します。作成されると、HEFファイルは推論マシン（ランタイム環境）に転送され、HailoRT APIで推論を実行するために使用されます。提供されたスクリプトは、モデルビルド環境内でONNXファイルをHEFファイルに変換することを容易にします。
+Hailo AIソフトウェアスイートは、ハードウェア加速器上でAIモデルを効率的に実行するための強力なツールを提供します。既存のディープラーニングフレームワークとシームレスに統合するように設計されており、開発者にスムーズなワークフローを提供します。このプロセスでは、モデルビルド環境でONNXファイルからHEF（Hailo実行可能バイナリファイル）を生成します。作成されると、HEFファイルは推論マシン（ランタイム環境）に転送され、HailoRT APIで推論を実行するために使用されます。提供されたスクリプトは、モデルビルド環境内でONNXファイルをHEFファイルに変換することを容易にします。
 
 > **注意:**
 > **Hailo NPUの使用例についてさらに学びたい場合は、この[リンク](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero)をクリックしてください。**
@@ -106,15 +106,15 @@ Hailo AIソフトウェアスイートは、ハードウェアアクセラレー
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意1:** 現在のところ、**64ビットRaspberry Pi OS（Debian 12 Bookworm）イメージ**の書き込みを推奨します。新しくリリースされたDebian 13 "Trixie"ベースのRaspberry Pi OSは、まだhailo-allパッケージが更新されていないため、Bookwormを使用すると完全なHailoサポートをすぐに利用できます。
+**注意1:** 現在のところ、(64ビットRaspberry Pi OS Debian 12 Bookworm)[https://downloads.raspberrypi.com/raspios_oldstable_full_arm64/images/raspios_oldstable_full_arm64-2025-10-02/2025-10-01-raspios-bookworm-arm64-full.img.xz]イメージの書き込みを推奨します。新しくリリースされたDebian 13 "Trixie"ベースのRaspberry Pi OSは、まだhailo-allパッケージが更新されていないため、Bookwormを使用することで、すぐに完全なHailoサポートを利用できます。
 ダウンロード[リンク](https://www.raspberrypi.com/software/operating-systems/)。
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/OS.png" alt="pir" width="600" height="auto"/></p>
-次に、Use customオプションでイメージャーを使用してSDカードに書き込みます。
+次に、カスタム使用オプションでイメージャーを使用してSDカードに書き込みます。
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/img.png" alt="pir" width="600" height="auto"/></p>
 
-それでも最新のイメージを試したい場合は、**ワンコマンドのhailo-allルートを使用する代わりに、Hailoソフトウェアを手動でインストールする必要があります；**この[リンク](https://wiki.seeedstudio.com/ja/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/#install-hailo-software)に従ってください。
+それでも最新のイメージを試したい場合は、**ワンコマンドhailo-allルートを使用する代わりに、Hailoソフトウェアを手動でインストールする必要があります；**この[リンク](https://wiki.seeedstudio.com/ja/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/#install-hailo-software)に従ってください。
 
-**注意2:** **Other general purpose OS**に移動することで、**64ビットUbuntu**などの他のOSを選択することもできます
+**注意2:** **その他の汎用OS**に移動することで、**64ビットUbuntu**などの他のOSを選択できます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -147,13 +147,13 @@ Hailo AIソフトウェアスイートは、ハードウェアアクセラレー
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-ここで**ホスト名の設定、SSH の有効化、パスワードの設定、Wi-Fi の設定、ローカル設定の設定**などを行うことができます
+ここで**ホスト名の設定、SSH の有効化、パスワードの設定、Wi-Fi の設定、ローカル設定の構成**などを行うことができます
 
 - **ステップ 4.** **CHOOSE OS** をクリックして、お好みの OS を選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意:** **Other general purpose OS** に移動することで、**64-bit Ubuntu** などの他の OS を選択することができます
+**注意：** **Other general purpose OS** に移動することで、**64-bit Ubuntu** などの他の OS を選択することができます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -194,7 +194,7 @@ rpi-imager
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-ここで**ホスト名の設定、SSH の有効化、パスワードの設定、Wi-Fi の設定、ローカル設定の設定**などを行うことができます
+ここで**ホスト名の設定、SSH の有効化、パスワードの設定、Wi-Fi の設定、ローカル設定の構成**などを行うことができます
 
 - **ステップ 5.** **CHOOSE OS** をクリックして、お好みの OS を選択します
 
@@ -202,7 +202,7 @@ rpi-imager
 
 <!-- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p> -->
 
-**注意:** **Other general purpose OS** に移動することで、**64-bit Ubuntu** などの他の OS を選択することができます
+**注意：** **Other general purpose OS** に移動することで、**64-bit Ubuntu** などの他の OS を選択することができます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/35.png" /></div>
 
@@ -212,7 +212,7 @@ rpi-imager
 
 - **ステップ 6.** **CHOOSE STORAGE** をクリックして、接続された eMMC ドライブを選択します
 
-- **ステップ 7.** 最後に、**NEXT** と **YES** をクリックします
+- **ステップ 7.** 最後に、**NEXT** をクリックして **YES** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 
@@ -346,7 +346,7 @@ Ubuntu OS を選択します：
 
 ## 消費電力と温度
 
-:warning: **注意:** スタンバイ状態は以下の条件でテストされました：グラフィカルインターフェースが無効、Bluetooth がオフ、Wi-Fi が無効。コマンドは以下の通りです：
+:warning: **注意：** スタンバイ状態は以下の条件でテストされました：グラフィカルインターフェースが無効、Bluetooth がオフ、Wi-Fi が無効。コマンドは以下の通りです：
 
 ```
 sudo ifconfig wlan0 down
@@ -370,12 +370,12 @@ Frigate は AI を使用したリアルタイム物体検出用に設計され�
 <iframe width="800" height="500" src="https://www.youtube.com/embed/thmI3dz9Ugs" title="Cost-Effective AI Surveillance: Frigate on Raspberry Pi 5 with Hailo8 on PCIe3.0 to Dual M.2 hat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-> **注意:**
+> **注意：**
 > **このプロジェクトについてさらに詳しく知りたい場合は、この[リンク](https://wiki.seeedstudio.com/ja/frigate_nvr_with_raspberrypi_5/)を参照してください。**
 
 ### YOLO
 
-YOLO（You Only Look Once）シリーズのモデルは、速度と精度を重視して設計されたリアルタイム物体検出モデルのファミリーです。領域提案と分類を別々に実行する従来の物体検出手法とは異なり、YOLOはニューラルネットワークの単一フォワードパスで両方のタスクを実行するため、はるかに高速です。YOLOモデルは画像をグリッドに分割し、各グリッドセルのバウンディングボックスとクラス確率を予測します。長年にわたって、YOLOは様々なバージョンを通じて進化し、精度、速度、および小さな物体を検出する能力が向上しています。YOLOv4、YOLOv5、そして最近のYOLOv7およびYOLOv8モデルは、監視、自動運転車、ロボティクスなどのアプリケーションで広く使用されています。
+YOLO（You Only Look Once）シリーズのモデルは、速度と精度を重視して設計されたリアルタイム物体検出モデルのファミリーです。領域提案と分類を別々に実行する従来の物体検出手法とは異なり、YOLOはニューラルネットワークの単一のフォワードパスで両方のタスクを実行するため、はるかに高速です。YOLOモデルは画像をグリッドに分割し、各グリッドセルのバウンディングボックスとクラス確率を予測します。長年にわたり、YOLOは様々なバージョンを通じて進化し、精度、速度、および小さな物体を検出する能力が向上しています。YOLOv4、YOLOv5、そして最近のYOLOv7およびYOLOv8モデルは、監視、自動運転車、ロボティクスなどのアプリケーションで広く使用されています。
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/olaSVKmt9YI" title="Raspberry Pi AI: YOLOv8 Object Detection - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -386,18 +386,18 @@ YOLO（You Only Look Once）シリーズのモデルは、速度と精度を重�
 
 ### Clip
 
-CLIP（Contrastive Language-Image Pretraining）は、OpenAIによって開発された機械学習モデルで、画像とテキストを一緒に理解することができます。画像と対応するテキスト記述を関連付けるように訓練されており、両方のモダリティを含むタスクを実行することができます。CLIPはゼロショット学習が可能で、これらのカテゴリで特別に訓練されることなく、画像内の物体や概念を認識することができます。画像分類、物体検出、さらには画像のテキスト記述生成など、様々なタスクで優れた性能を示しています。
+CLIP（Contrastive Language-Image Pretraining）は、OpenAIによって開発された機械学習モデルで、画像とテキストを一緒に理解することができます。対応するテキスト記述と画像を関連付けるように訓練されており、両方のモダリティを含むタスクを実行することができます。CLIPはゼロショット学習が可能で、これらのカテゴリで特別に訓練されることなく、画像内の物体や概念を認識することができます。画像分類、物体検出、さらには画像のテキスト記述生成など、様々なタスクで強力な性能を示しています。
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification on Raspberry Pi 5 with Hailo AI Accelerator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 > **注意：**
-> **このプロジェクトについてさらに詳しく知りたい場合は、この[リンク](https://wiki.seeedstudio.com/ja/clip_application_on_rpi5_with_ai_kit/)を参照してください**。
+> **このプロジェクトについてさらに詳しく知りたい場合は、この[リンク](https://wiki.seeedstudio.com/ja/clip_application_on_rpi5_with_ai_kit/)を参照してください。**
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、様々なサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験が可能な限りスムーズになるよう、様々なサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
