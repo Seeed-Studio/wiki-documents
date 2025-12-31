@@ -56,7 +56,7 @@ Ensure the ReSpeaker XVF3800 USB Mic Array is updated with the latest firmware b
 
 This step ensures stable USB audio input and compatibility with downstream speech processing pipelines.
 
----
+
 
 #### NVIDIA Jetson AGX Orin – Initial Setup
 
@@ -73,7 +73,7 @@ sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
----
+
 
 ### CUDA Environment Configuration
 
@@ -87,7 +87,7 @@ ls /usr/local
 
 You should see a folder such as `cuda`, `cuda-12.x`, or similar.
 
----
+
 
 #### Add CUDA Paths Permanently
 
@@ -111,7 +111,7 @@ Apply the changes:
 source ~/.bashrc
 ```
 
----
+
 
 #### Verify CUDA Installation
 
@@ -123,7 +123,7 @@ nvcc --version
 
 If the CUDA version is displayed, GPU support is ready.
 
----
+
 
 ### Install Whisper with GPU Support
 
@@ -141,7 +141,7 @@ Install required dependencies:
 sudo apt-get install libsdl2-dev
 ```
 
----
+
 
 #### Build Whisper with CUDA Enabled
 
@@ -154,7 +154,7 @@ cmake --build build -j --config Release
 
 This compiles Whisper with GPU acceleration and SDL support.
 
----
+
 
 #### Download Whisper Model
 
@@ -170,7 +170,7 @@ Place the downloaded model inside the `models/` directory:
 whisper.cpp/models/
 ```
 
----
+
 
 #### Run Whisper Server
 
@@ -187,7 +187,7 @@ cd whisper.cpp
 
 This launches a real-time speech-to-text server accessible over the network.
 
----
+
 
 ### Install Ollama for Local LLM Inference
 
@@ -205,7 +205,7 @@ Run the Gemma 3 model:
 ollama run gemma3:4b
 ```
 
----
+
 
 ## Smart Voice AI Assistant – Quick Start Guide
 
@@ -238,7 +238,7 @@ Ensure Python and required system dependencies are installed, then run:
 pip install -r requirements.txt
 ```
 
----
+
 
 #### Download a Text-to-Speech (TTS) Model
 
@@ -255,7 +255,7 @@ wget -O models/en_US-amy-low.onnx.json \
 
 You may replace this with any compatible Piper voice model as needed.
 
----
+
 
 #### Download Embedding Model (One-Time Setup)
 
@@ -267,7 +267,7 @@ python download_sentence_tf.py
 
 This step only needs to be run once.
 
----
+
 
 #### Build the Vector Database
 
@@ -279,7 +279,7 @@ python test_scripts/rebuild_vector.py
 
 This process indexes your documents and prepares them for fast semantic search.
 
----
+
 
 #### Run the Application
 
@@ -291,7 +291,7 @@ python app.py
 
 Once running, the system will listen for the wake word and respond to voice queries in real time.
 
----
+
 
 ## References
 
