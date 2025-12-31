@@ -287,8 +287,6 @@ Asegúrate de que el Módulo GNSS L76K esté colocado en el exterior donde se pu
 
 Este código utiliza la biblioteca TinyGPSPlus para leer datos del módulo GNSS L76K a través de una conexión serie y muestra información de ubicación válida y fecha/hora en el monitor serie.
 
-<!-- PCN(May 25, 2025): Considering the scenario of power saving, we removed the fix status indicator. Therefore, hide the following LED demo.
-
 ## Configuración
 
 ### Ejemplo 1: Cambiar el comportamiento del LED
@@ -353,7 +351,7 @@ struct CASIC_Messages {
 } L76KStruct;
 ```
 
-:::-->
+:::
 
 ## Recursos
 

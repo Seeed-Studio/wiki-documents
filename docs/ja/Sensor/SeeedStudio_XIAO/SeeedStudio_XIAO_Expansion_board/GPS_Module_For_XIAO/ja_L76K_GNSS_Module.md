@@ -287,8 +287,6 @@ L76K GNSSモジュールが良好なGNSS信号を受信できる屋外に設置�
 
 このコードはTinyGPSPlusライブラリを使用して、シリアル接続を介してL76K GNSSモジュールからデータを読み取り、有効な位置情報と日付/時刻をシリアルモニターに表示します。
 
-<!-- PCN(May 25, 2025): Considering the scenario of power saving, we removed the fix status indicator. Therefore, hide the following LED demo.
-
 ## 設定
 
 ### 例1：LEDの動作を変更する
@@ -353,7 +351,7 @@ struct CASIC_Messages {
 } L76KStruct;
 ```
 
-:::-->
+:::
 
 ## リソース
 

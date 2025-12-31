@@ -80,7 +80,7 @@ Aquí te mostraremos cómo encender el LED USER en el XIAO MG24 usando MicroPyth
 
 #### **Paso 1.** Flashear el firmware de MicroPython
 
-- Descarga el paquete de [Firmware de MicroPython para XIAO RA4M1](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/xiao_ra4m1_flash.zip) y extráelo en la ubicación apropiada. Luego abre la terminal en esta carpeta.
+- Descarga el paquete de [Firmware MicroPython para XIAO RA4M1](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/xiao_ra4m1_flash.zip) y extráelo en la ubicación apropiada. Luego abre la terminal en esta carpeta.
 
 - Inserta el XIAO RA4M1 en el XIAO XIAO Debug Mate.
 
@@ -301,9 +301,9 @@ A continuación, elegiremos dos sensores para reflejar las características del 
 <table align="center">
  <tr>
         <th>Seeed Studio XIAO RA4M1</th>
-        <th>Seeed Studio Grove Base para XIAO </th>
-        <th>Grove - LED de Color Variable</th>
-        <th>Grove-Sensor de Ángulo Rotatorio</th>
+        <th>Seeed Studio Grove Base for XIAO </th>
+        <th>Grove - Variable Color LED</th>
+        <th>Grove-Rotary Angle Sensor</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -337,7 +337,7 @@ A continuación, elegiremos dos sensores para reflejar las características del 
 
 #### Software
 
-- Crea un nuevo archivo llamado adc.py y copia el código de referencia en él.
+- Crea un nuevo archivo llamado pwm.py y copia el código de referencia en él.
 
 ```py
 import time
@@ -471,7 +471,7 @@ UART es uno de los protocolos de comunicación más utilizados. Permite la trans
 
 #### Software
 
-- Crea un nuevo archivo llamado uart.py y copia el código de referencia en él.
+- Crea un nuevo archivo llamado pwm.py y copia el código de referencia en él.
 
 <details>
 
@@ -682,7 +682,7 @@ Explicación del Código:
 
 - **Definir Configuración UART**
         - `uart = "uart1"` Especifica la instancia del controlador UART a usar — aquí, `uart1`.
-        - `baudrate = 9600` Establece la velocidad de baudios para comunicación serie a 9600 bps.
+        - `baudrate = 9600` Establece la velocidad de baudios para la comunicación serie a 9600 bps.
         - `tx = 6` Especifica que el pin de transmisión UART (TX) está conectado al pin digital D6.
         - `rx = 7` Especifica que el pin de recepción UART (RX) está conectado al pin digital D7.
 
@@ -697,29 +697,29 @@ Explicación del Código:
 - **Funciones de Transformación de Coordenadas**
         - `transformLat(x, y)` & `transformLon(x, y)` — Funciones auxiliares que implementan parte del algoritmo de conversión WGS-84 → GCJ-02 (usado en China para ofuscación de mapas).
         - `bd_encrypt(gg)` — Convierte coordenadas GCJ-02 al sistema de coordenadas BD-09 de Baidu aplicando desplazamiento y rotación adicionales.
-        - `transform(gps)` — Función principal que convierte coordenadas WGS-84 (GPS crudo) a GCJ-02 usando fórmulas trigonométricas complejas basadas en el modelo elíptico de la Tierra.
-        - `L76X_Baidu_Coordinates(gps)` — Envoltorio que convierte GPS crudo (WGS-84) → GCJ-02 → BD-09 (formato de Mapas Baidu).
-        - `L76X_Google_Coordinates(gps)` — Envoltorio que convierte GPS crudo (WGS-84) → GCJ-02 (formato de Google Maps en China).
+        - `transform(gps)` — Función principal que convierte coordenadas WGS-84 (GPS en bruto) a GCJ-02 usando fórmulas trigonométricas complejas basadas en el modelo elíptico de la Tierra.
+        - `L76X_Baidu_Coordinates(gps)` — Envoltorio que convierte GPS en bruto (WGS-84) → GCJ-02 → BD-09 (formato de Mapas Baidu).
+        - `L76X_Google_Coordinates(gps)` — Envoltorio que convierte GPS en bruto (WGS-84) → GCJ-02 (formato de Google Maps en China).
 
 - **Analizar Sentencia GNRMC**
-        - `parse_gnrmc(nmea_sentence)` — Analiza una cadena NMEA `$GNRMC` o `$PNRMC` cruda en un objeto `GNRMC` estructurado.
-            - Extrae tiempo (convierte de UTC a GMT+8).
-            - Verifica estado (`A` = activo/posición válida, `V` = inválido).
+        - `parse_gnrmc(nmea_sentence)` — Analiza una cadena NMEA `$GNRMC` o `$PNRMC` en bruto en un objeto `GNRMC` estructurado.
+            - Extrae el tiempo (convierte de UTC a GMT+8).
+            - Verifica el estado (`A` = activo/posición válida, `V` = inválido).
             - Analiza latitud/longitud del formato DDMM.MMMMM → grados decimales.
-            - Devuelve objeto `GNRMC` poblado o uno vacío por defecto si el análisis falla.
+            - Devuelve un objeto `GNRMC` poblado o uno vacío por defecto si el análisis falla.
 
 - **Mostrar Datos GPS Formateados**
         - `print_gps_data(gps)` — Imprime información GPS legible incluyendo:
-            - Tiempo local (GMT+8)
-            - Coordenadas WGS-84 crudas con hemisferio
+            - Hora local (GMT+8)
+            - Coordenadas WGS-84 en bruto con hemisferio
             - Coordenadas convertidas GCJ-02 (compatible con Google) y BD-09 (compatible con Baidu)
             - Mensaje de estado indicando si el posicionamiento tuvo éxito
 
 - **Lógica Principal (bloque try)**
-        - Inicializa interfaz UART con parámetros especificados.
-        - Define constantes globales necesarias para matemáticas de coordenadas (`pi`, `a`, `ee`, `x_pi`) — parámetros del elipsoide terrestre y factores de escala.
-        - Entra en bucle infinito para leer continuamente datos GPS entrantes vía UART.
-            - Usa `buffer` para acumular mensajes parciales hasta que se recibe una línea completa (terminando con `\n`).
+        - Inicializa la interfaz UART con los parámetros especificados.
+        - Define constantes globales necesarias para las matemáticas de coordenadas (`pi`, `a`, `ee`, `x_pi`) — parámetros del elipsoide terrestre y factores de escala.
+        - Entra en un bucle infinito para leer continuamente datos GPS entrantes vía UART.
+            - Usa `buffer` para acumular mensajes parciales hasta que se reciba una línea completa (terminando con `\n`).
             - Cuando llega una línea completa:
                 - Verifica si comienza con `$GNRMC` o `$PNRMC`
                 - Si es así, la analiza usando `parse_gnrmc()`
@@ -727,7 +727,7 @@ Explicación del Código:
         - Maneja excepciones:
             - `KeyboardInterrupt`: Sale elegantemente con Ctrl+C.
             - `Exception` general: Captura e imprime cualquier error inesperado.
-        - Finalmente, llama `uart.deinit()` para limpiar recursos UART antes de salir.
+        - Finalmente, llama a `uart.deinit()` para limpiar recursos UART antes de salir.
 
 #### Gráfico de resultados
 
@@ -768,7 +768,7 @@ XIAO RAM41 tiene una interfaz I2C que puede usarse para transmisión de datos y 
 
 #### Software
 
-- Crea un nuevo archivo llamado i2c.py y copia el código de referencia en él.
+- Crea un nuevo archivo llamado pwm.py y copia el código de referencia en él.
 
 <details>
 
@@ -893,7 +893,7 @@ Explicación del Código:
         - `XiaoI2C`: Importa la clase I2C específica del hardware desde `boards.xiao`, que maneja el protocolo de comunicación de bajo nivel para la placa de desarrollo XIAO.
 
 - **Definir Configuración I2C**
-        - `sda = 4`, `scl = 5`: Asigna las líneas de datos I2C (SDA) y reloj (SCL) a los pines digitales D4 y D5 respectivamente.
+        - `sda = 4`, `scl = 5`: Asigna las líneas de datos (SDA) y reloj (SCL) I2C a los pines digitales D4 y D5 respectivamente.
         -`i2c = "i2c0"`: Selecciona el bus periférico I2C de hardware específico (bus 0) en el microcontrolador.
         - `frq = 400000`: Establece la velocidad de comunicación a 400 kHz (Modo Rápido), permitiendo actualizaciones rápidas de pantalla.
         - `i2c = XiaoI2C(...)`: Instancia el objeto I2C con la configuración de pines y frecuencia definida.
