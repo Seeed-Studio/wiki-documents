@@ -191,6 +191,16 @@ Cada tipo de firmware en el ReSpeaker XVF3800 soporta diferentes métodos de act
 
 Conecta el reSpeaker XVF3800 a tu PC a través del cable USB. Ten en cuenta que necesitas usar el puerto USB-C de XMOS (cerca del puerto jack de 3.5mm) para flashear el firmware de XMOS.
 
+| Firmware | Canales | Notas |
+|---------|----------|-------|
+| respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Salida procesada de 2 canales <br /> Canal 0: Conferencia <br /> Canal 1: ASR |
+| application_xvf3800_ua-io16-6ch-sqr-v2.0.8-test1.xe | 6 | Canal 0: Audio procesado (Conferencia) <br /> Canal 1: Audio procesado (ASR) <br /> Canal 2: Datos sin procesar del micrófono 0 <br /> Canal 3: Datos sin procesar del micrófono 1 <br /> Canal 4: Datos sin procesar del micrófono 2 <br /> Canal 5: Datos sin procesar del micrófono 3 |
+| respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin | 2 | Salida procesada de 2 canales <br /> Canal 0: Conferencia <br /> Canal 1: ASR |
+| respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | Salida procesada de 2 canales <br /> Canal 0: ASR <br /> Canal 1: Palabra de activación (Wake word) |
+
+Los usuarios pueden modificar la selección de los canales de salida procesados para las variantes de firmware mencionadas anteriormente.
+Para más detalles, consulte la [documentación de XMOS](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/03_using_the_host_application.html#output-selection).
+
 #### Instalar DFU Util
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) es una herramienta de línea de comandos para Device Firmware Upgrade vía USB.
