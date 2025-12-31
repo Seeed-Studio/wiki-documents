@@ -17,7 +17,7 @@ platformIO_nrf54l15.png" style={{width:600, height:'auto'}}/></div>
 
 ## Introducción a PlatformIO
 
-PlatformIO se presenta como un ecosistema de desarrollo potente y altamente extensible diseñado para sistemas embebidos. Integra sin problemas el soporte para una amplia gama de placas de desarrollo y microcontroladores, ofreciendo una flexibilidad sin igual. Lo que distingue a PlatformIO es su notable escalabilidad: incluso si tu placa específica no está soportada nativamente, su arquitectura permite definiciones de placas personalizadas de manera directa.
+PlatformIO se presenta como un ecosistema de desarrollo potente y altamente extensible diseñado para sistemas embebidos. Integra sin problemas el soporte para una amplia gama de placas de desarrollo y microcontroladores, ofreciendo una flexibilidad sin igual. Lo que distingue a PlatformIO es su notable escalabilidad: incluso si tu placa específica no está soportada nativamente, su arquitectura permite definiciones de placas personalizadas de manera sencilla.
 
 Crucialmente, PlatformIO cierra la brecha para desarrolladores familiarizados con Arduino, permitiendo la compilación e implementación de código estilo Arduino simplemente incluyendo las librerías relevantes. Esta guía te llevará a través del proceso de configurar PlatformIO para tu XIAO nRF54L15 y demostrará cómo compilar, cargar y monitorear código de ejemplo, haciendo el desarrollo complejo de Zephyr RTOS notablemente accesible.
 
@@ -52,9 +52,11 @@ Aquí puedes elegir cualquiera de las versiones de desarrollo para crear un arch
   </tr>
 </table>
 
-### Configurar platformio.ini para soporte de XIAO nRF54L15 Zephyr
 
-Una vez que tu proyecto esté creado, localiza el archivo platformio.ini en la raíz del directorio de tu proyecto (visible en el Explorador de VS Code a la izquierda). Este archivo es el corazón de la configuración de tu proyecto de PlatformIO.
+
+### Configurar platformio.ini para Soporte Zephyr del XIAO nRF54L15
+
+Una vez que tu proyecto esté creado, localiza el archivo platformio.ini en la raíz de tu directorio de proyecto (visible en el Explorador de VS Code a la izquierda). Este archivo es el corazón de la configuración de tu proyecto PlatformIO.
 
 <table align="center">
   <tr>
@@ -74,11 +76,38 @@ platform = https://github.com/Seeed-Studio/platform-seeedboards.git
 framework = zephyr
 board = seeed-xiao-nrf54l15
 ```
-
 :::tip
-Paso Crucial: Después de pegar el código, recuerda guardar el archivo platformio.ini (Ctrl+S o Cmd+S). PlatformIO detectará automáticamente los cambios y comenzará a descargar el framework Zephyr necesario y las herramientas específicas de la placa desde el repositorio GitHub platform-seeedboards. Este proceso puede tomar unos momentos.
+Si previamente descargaste otras librerías XIAO, debes eliminarlas manualmente antes de modificar el archivo platform.ini y volver a descargar las librerías requeridas.
 :::
 
+Ruta Mac：
+`/Users/YourName/.platformio/platforms`
+
+Ruta Windows：
+`C:\Users\000.platformio\platforms\Seeed Studio`
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/
+platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
+<table align="center">
+  <tr>
+      <th>Operación cuatro</th>
+  </tr>
+  <tr>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/platformiozephyr.jpg"/></div>
+  </tr>
+</table>
+
+Necesitas reemplazar el contenido de cMakeLists.txt con la siguiente configuración
+```
+set(BOARD_ROOT "$ENV{ZEPHYR_BASE}/../../platforms/Seeed Studio/zephyr")
+cmake_minimum_required(VERSION 3.13.1)
+
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+project(blinky)
+
+target_sources(app PRIVATE ../src/main.cpp) # If the main source file is.c, please change it to src/main.c
+```
+Luego vuelve a guardar el archivo platformio.ini (Ctrl+S o Cmd+S) y espera a que se cargue completamente.
 
 ### Compilar y Cargar tu Primer Ejemplo Blink
 
@@ -106,18 +135,15 @@ Reemplaza el contenido de tu archivo src/main.cpp (o src/main.c) con el siguient
  #include <zephyr/device.h>
  #include <zephyr/drivers/gpio.h>
  #include <nrfx_power.h>
- 
+
  /* 1000 msec = 1 sec */
  #define SLEEP_TIME_MS   1000
- 
+
  /* The devicetree node identifier for the "led0" alias. */
  #define LED0_NODE DT_ALIAS(led0)
- 
- /*
-  * 获取 LED 的 GPIO 规范
-  */
+
  static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
- 
+
  int main(void)
  {
 	 int ret;
@@ -126,12 +152,12 @@ Reemplaza el contenido de tu archivo src/main.cpp (o src/main.c) con el siguient
 	 if (!gpio_is_ready_dt(&led)) {
 		 return -1;
 	 }
- 
+
 	 ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
 	 if (ret < 0) {
 		 return ret;
 	 }
- 
+
 	 while (1) {
 		 ret = gpio_pin_set_dt(&led, (int)led_is_on);
 		 if (ret < 0) {
@@ -140,7 +166,7 @@ Reemplaza el contenido de tu archivo src/main.cpp (o src/main.c) con el siguient
 		 led_is_on = !led_is_on;
 		 k_msleep(SLEEP_TIME_MS);
 	 }
- 
+
 	 return 0;
  }
 
@@ -155,14 +181,14 @@ Ahora, conecta tu XIAO nRF54L15 a tu computadora vía USB. En VS Code:
 
 <table align="center">
   <tr>
-      <th>Operación cuatro</th>
+      <th>Operación cinco</th>
   </tr>
   <tr>
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/blink.jpg" /></div>
   </tr>
 </table>
 
-La salida en la terminal debería indicar un proceso exitoso de compilación y grabación.
+La salida en la terminal debería indicar un proceso de compilación y grabación exitoso.
 
 
 ### Observar el Resultado
@@ -170,6 +196,7 @@ La salida en la terminal debería indicar un proceso exitoso de compilación y g
 Después de una carga exitosa, el LED integrado de tu XIAO nRF54L15 debería comenzar a parpadear en intervalos de 1 segundo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light.gif" style={{width:400, height:'auto'}}/></div>
+
 
 
 ## Soporte Técnico y Discusión de Productos

@@ -4,7 +4,7 @@ description: |
 keywords:
   - xiao
   - esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /cn/xiao_esp32c5_getting_started
 last_update:
   date: 11/26/2025
@@ -20,7 +20,7 @@ last_update:
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -90,7 +90,7 @@ last_update:
         </tr>
         <tr>
             <th>板载 LED</th>
-            <td>C / L LED</td>
+            <td>Charge / USER LED</td>
             <td>Charge / USER LED</td>
             <td>Charge LED</td>
             <td>Charge / USER LED</td>
@@ -192,7 +192,7 @@ XIAO ESP32-C5 推荐的编程工具是 Arduino IDE，因此您需要完成 Ardui
 
 ### 上传程序
 
-下面让我们以一个点灯程序为例
+让我们以下面的点灯程序为例
 
 **步骤 1.** 选择**XIAO_ESP32C5**和 PORT。如果您不知道 PORT，可以重新插拔 XIAO_ESP32C5 来检查。
 
@@ -234,7 +234,7 @@ void loop() {
 ## 深度睡眠模式
 
 XIAO ESP32-C5 具有深度睡眠和唤醒功能。此示例利用引脚**D0**上的高电平触发来从深度睡眠中唤醒设备。<br/>
-需要注意的是，这是一个可配置的选项，因为硬件支持高电平和低电平触发，以适应不同的电路设计。
+需要注意的是，这是一个可配置选项，因为硬件支持高电平和低电平触发，以适应不同的电路设计。
 
 ```cpp
 #define WAKEUP_PIN D0 // LP_GPIO1

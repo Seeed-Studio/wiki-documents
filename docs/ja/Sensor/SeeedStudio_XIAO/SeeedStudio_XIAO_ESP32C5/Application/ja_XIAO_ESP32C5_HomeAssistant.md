@@ -4,7 +4,7 @@ description: |
 keywords:
   - xiao
   - esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /ja/xiao_esp32c5_homeassistant
 last_update:
   date: 12/17/2025
@@ -55,9 +55,9 @@ ESPHomeは、ESP8266 / ESP32デバイス専用に設計されたオープンソ�
       <th>Grove - Red LED</th>
     </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:210, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-09bazaar939479_1040300054.jpg" style={{width:210, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2018-09bazaar939479_1040300054.jpg" style={{width:400, height:'auto'}}/></div></td>
     </tr>
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -72,7 +72,7 @@ ESPHomeは、ESP8266 / ESP32デバイス専用に設計されたオープンソ�
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED.html" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 詳細を見る 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 詳細を確認 🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
@@ -193,7 +193,7 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が遠くにある�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-XIAO ESP32-C5にファームウェアをアップロードするこのウェブサイトを開きます。<br/>
+このウェブサイトを開いて、XIAO ESP32-C5にファームウェアをアップロードします。<br/>
 [ESPHome dashboard_install](https://web.esphome.io/?dashboard_install)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/esphome_4.png" style={{width:800, height:'auto'}}/></div>
@@ -236,7 +236,7 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'120%', height:'auto'}}/></div>
 </div>
 
-しばらく待つと、以下の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
+しばらく待つと、以下の画像のようなフィードバックが表示されます。これはコードが正常に動作していることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -317,9 +317,9 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
       <th>Grove - Temperature & Humidity Sensor (DHT11)</th>
     </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:210, height:'auto'}}/></div></td>
-      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/g/r/grove-temperature-humidity-sensor-dht11-preview.png" style={{width:210, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/x/i/xiao_-preview-25.png" style={{width:400, height:'auto'}}/></div></td>
+      <td><div align="center"><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/g/r/grove-temperature-humidity-sensor-dht11-preview.png" style={{width:400, height:'auto'}}/></div></td>
     </tr>
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -340,9 +340,9 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
     </tr>
   </tbody></table>
 
-### HACS インストール
+### HACS インテグレーションのインストール
 
-**Seeed Home Assistant Discovery**統合を追加する前に、まず**HACS**をインストールする必要があります。
+**Seeed Home Assistant Discovery**インテグレーションを追加する前に、まず**HACS**をインストールする必要があります。
 
 インストール手順：
 
@@ -366,7 +366,7 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/hacs_4.png" style={{width:800, height:'auto'}}/></div>
 
-### 統合のインストール
+### インテグレーションのインストール
 
 - HACS経由でのワンクリックインストール（推奨）
 
@@ -491,12 +491,12 @@ void loop() {
 }
 ```
 
-コードをアップロードした後、シリアルモニターを開きます。WiFi 接続が成功すると、対応する IP アドレスが出力されます。
+コードをアップロードした後、シリアルモニターを開きます。WiFi 接続が成功すると、対応する IP アドレスが印刷されます。
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/S_HA_8.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
 XIAO ESP-C5 はデュアルバンド WiFi（2.4 GHz & 5 GHz）をサポートしています。<br/>
-手動でのネットワーク設定が面倒だと感じる場合は、私たちが開発したファームウェア書き込みウェブページも利用できます：[Web Firmware Flasher](https://limengdu.github.io/Seeed-Homeassistant-Discovery/flasher/)
+手動でのネットワーク設定が面倒だと感じる場合は、私たちが開始したファームウェア書き込みウェブページも使用できます：[Web Firmware Flasher](https://limengdu.github.io/Seeed-Homeassistant-Discovery/flasher/)
 :::
 
 </TabItem>
@@ -582,11 +582,11 @@ BTHome プロトコルを使用し、Home Assistant によって自動的に検�
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/S_HA_12.png" style={{width:800, height:'auto'}}/></div>
 <br/>
-おめでとうございます！これで、**XIAO ESP32-C5** を **Home Assistant** に接続する 2 つの方法をマスターしたはずです。皆様の素晴らしいプロジェクトを楽しみにしており、ぜひ私たちと共有していただければと思います！
+おめでとうございます！これで、**XIAO ESP32-C5** を **Home Assistant** に接続する 2 つの方法をマスターしたはずです。あなたの素晴らしいプロジェクトを見ることを楽しみにしており、ぜひ私たちと共有してください！
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

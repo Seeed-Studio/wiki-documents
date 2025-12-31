@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-18 11:41:10 (北京时间)
-// 多语言页面: 2083 个
+// 生成时间: 2025-12-30 15:04:32 (北京时间)
+// 多语言页面: 2088 个
 
 (function() {
   'use strict';
@@ -731,6 +731,12 @@
     "es",
     "ja"
   ],
+  "/deploy_live_vlm_webui_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/local_ai_ssistant": [
     "cn",
     "en",
@@ -834,6 +840,12 @@
     "ja"
   ],
   "/Update-Jetson-Linux-OTA-Using-Allxon": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/llm_interface_control_jetson": [
     "cn",
     "en",
     "es",
@@ -2538,6 +2550,12 @@
     "ja"
   ],
   "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
     "es",
@@ -8409,7 +8427,7 @@
     "es",
     "ja"
   ],
-  "/xiao_esp32c5_micropyhton": [
+  "/xiao_esp32c5_with_micropyhton": [
     "cn",
     "en",
     "es",
@@ -8817,6 +8835,12 @@
     "es",
     "ja"
   ],
+  "/xiao_mg24_sense_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_mg24_pin_multiplexing": [
     "cn",
     "en",
@@ -9016,6 +9040,12 @@
     "ja"
   ],
   "/xiao_ra4m1_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_ra4m1_micropython": [
     "cn",
     "en",
     "es",

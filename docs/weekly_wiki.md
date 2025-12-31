@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/15/2025
+  date: 12/29/2025
   author: Frank
 ---
 
@@ -17,29 +17,74 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 15th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 29th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting started with the Two-Wheeled Biped Robot Based on the StackForce Development Platform](https://wiki.seeedstudio.com/stackforce_mini_wheeled_legged_robot/)
+### [Deploy Live VLM WebUI on reComputer Jetson](https://wiki.seeedstudio.com/deploy_live_vlm_webui_on_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp" alt="pir" width={600} height="auto" /></p>
+<div class="video-container">
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/GrdIRkmiXUc" title="Deploy Live LLM WebUI on reComputer Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-The StackForce two-wheeled biped robot is developed based on the StackForce lightweight robotics development platform. Its core hardware is composed of the StackForce series main control board, motor driver board, and servo driver board. The product provides complete installation tutorials and video courses, making it a cost-effective desktop two-wheeled biped robot.
+Live VLM WebUI is a universal web interface for real-time Vision Language Model interaction and benchmarking. It can stream your webcam to any VLM and get live AI-powered analysis - perfect for testing models, benchmarking performance, and exploring vision AI capabilities across multiple domains and hardware platforms. This wiki will show you how to deploy Live VLM WebUI on the reComputer Super J4012.
 
 </div>
 
-<!-- ## Existing Wiki Updated
+### [Seeed Studio XIAO MG24 Sense With MicroPython](https://wiki.seeedstudio.com/xiao_mg24_sense_micropython/)
 
-### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mpy_6_1.jpg" alt="pir" width={600} height="auto" /></p>
 
-We have added the [Controlling an EtherCAT Motor on Jetson (MyActuator X4)](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/#5-example--controlling-an-ethercat-motor-on-jetson-myactuator-x4) example.
+<div style={{ textAlign: "justify" }}>
 
-### [reComputer R1000 Getting Started](https://wiki.seeedstudio.com/recomputer_r/)
+This document guides you through using MicroPython on the Seeed Studio XIAO MG24 Sense development board, covering hardware preparation, installing and configuring the Thonny IDE, flashing the MicroPython firmware, and running example programs such as LED blinking, PWM control, ADC readings, and UART communication, to help you quickly get started programming this compact board with built-in sensors and rich I/O support using MicroPython.
 
-We have added the [Connect to 4G Module by QMI Mode](https://wiki.seeedstudio.com/recomputer_r/#connect-to-4g-module-by-qmi-mode) example. -->
+</div>
+
+### [Seeed Studio XIAO RA4M1 With MicroPython](https://wiki.seeedstudio.com/xiao_ra4m1_micropython/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/debug_1_1.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document guides you through using MicroPython on the Seeed Studio XIAO RA4M1 development board, covering hardware preparation, installing and configuring the Thonny IDE, flashing the MicroPython firmware, and running example programs such as LED blinking, PWM control, ADC readings, and UART communication, to help you quickly get started programming this compact ARM Cortex-M4 board with MicroPython.
+
+</div>
+
+### [Platform IO with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_with_platformio/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_started.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document walks you through developing with the Seeed Studio XIAO ESP32-C5 using PlatformIO, including preparing your hardware and software environment, installing Visual Studio Code and the PlatformIO extension, creating and configuring a new PlatformIO project for the board, and running example programs such as an LED blink and Wi-Fi connectivity demo, to help you quickly get started using this compact and flexible development platform with Arduino-style code support.
+
+</div>
+
+### [Seeed Studio XIAO ESP32-C5 With Micropython](https://wiki.seeedstudio.com/xiao_esp32c5_with_micropyhton/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document guides you through using MicroPython on the Seeed Studio XIAO ESP32-C5 development board, covering hardware preparation, flashing the MicroPython firmware, and writing and running example programs in Thonny IDE, such as LED blinking, Wi-Fi connectivity, and BLE demos, to help you quickly get started with this compact board that supports dual-band Wi-Fi and Bluetooth.
+
+</div>
+
+## Existing Wiki Updated
+
+### Added Raspberry Pi Usage Examples
+
+We have added **Raspberry Pi usage examples** to multiple product documentation pages, demonstrating how to use these products with a Raspberry Pi for quick evaluation and development.
+
+The updated documents include:
+
+- [Grove - Temperature&Humidity Sensor(DHT20)](https://wiki.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DH20/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+- [Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#play-with-raspberry-pi)
+- [Grove - I2C Color Sensor](https://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/#play-with-raspberry-pi)
+- [Grove - CO2 & Temperature & Humidity Sensor (SCD30)](https://wiki.seeedstudio.com/Grove-CO2_Temperature_Humidity_Sensor-SCD30/#play-with-raspberry-pi)
 
 ## The Efforts of Contributor
 
@@ -153,5 +198,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.11.24th](/Seeed_Elderly/weekly_wiki/2025/wiki251124)
 - [weekly wiki on 2025.12.01st](/Seeed_Elderly/weekly_wiki/2025/wiki251201)
 - [weekly wiki on 2025.12.08th](/Seeed_Elderly/weekly_wiki/2025/wiki251208)
+- [weekly wiki on 2025.12.15th](/Seeed_Elderly/weekly_wiki/2025/wiki251215)
+- [weekly wiki on 2025.12.22nd](/Seeed_Elderly/weekly_wiki/2025/wiki251222)
 
 </details>

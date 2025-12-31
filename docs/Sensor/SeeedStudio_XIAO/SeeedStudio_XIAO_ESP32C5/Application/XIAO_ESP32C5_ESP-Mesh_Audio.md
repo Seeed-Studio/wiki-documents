@@ -3,7 +3,7 @@ description: |
 title: XIAO ESP32C5 ESP-Mesh Audio
 keywords:
 - xiao esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /xiao_esp32c5_esp-mesh_audio
 last_update:
   date: 12/12/2025
@@ -12,7 +12,7 @@ last_update:
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" style={{width:800, height:'auto'}}/></div>
 
-## [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+## [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 
 The following is the official introduction to **ESP-WIFI-MESH** by Espressif Systems:
 
@@ -29,7 +29,7 @@ It features the following characteristics:
 
 For more detailed information, please refer to the official link of Espressif Systems :
 
-- [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+- [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 - [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
 
 ## ESP-Mesh_Audio
@@ -43,7 +43,7 @@ Here, your computer acts as a **Mesh child node**, sending data via a 5 GHz rout
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -122,7 +122,7 @@ Upload the code to the XIAO ESP32-C5, open the Serial Monitor, and the connected
 
 Before using the Python script, you need to install the Python 3 environment first. You can search for the corresponding installation tutorials online for details.<br/>
 
-Create a file named send_audio.py in any folder on Windows, and copy the following Python code into it.。<br/>
+Create a file named send_audio.py in any folder on Windows, and copy the following Python code into it.<br/>
 
 Fill in the IP address printed by the Serial Monitor of the Arduino IDE into the **TARGET_IP** variable in the code.
 

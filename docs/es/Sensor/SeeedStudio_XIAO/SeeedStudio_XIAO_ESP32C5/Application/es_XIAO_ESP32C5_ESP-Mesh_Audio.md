@@ -3,7 +3,7 @@ description: |
 title: XIAO ESP32C5 ESP-Mesh Audio
 keywords:
 - xiao esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /es/xiao_esp32c5_esp-mesh_audio
 last_update:
   date: 12/12/2025
@@ -12,7 +12,7 @@ last_update:
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" style={{width:800, height:'auto'}}/></div>
 
-## [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+## [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 
 La siguiente es la introducción oficial de **ESP-WIFI-MESH** por Espressif Systems:
 
@@ -29,7 +29,7 @@ Presenta las siguientes características:
 
 Para información más detallada, consulte el enlace oficial de Espressif Systems :
 
-- [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+- [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 - [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
 
 ## ESP-Mesh_Audio
@@ -43,7 +43,7 @@ Aquí, tu computadora actúa como un **nodo hijo Mesh**, enviando datos a travé
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -122,7 +122,7 @@ Sube el código al XIAO ESP32-C5, abre el Monitor Serie, y la dirección IP cone
 
 Antes de usar el script Python, necesitas instalar primero el entorno Python 3. Puedes buscar los tutoriales de instalación correspondientes en línea para más detalles.<br/>
 
-Crea un archivo llamado send_audio.py en cualquier carpeta en Windows, y copia el siguiente código Python en él.。<br/>
+Crea un archivo llamado send_audio.py en cualquier carpeta en Windows, y copia el siguiente código Python en él.<br/>
 
 Llena la dirección IP impresa por el Monitor Serie del Arduino IDE en la variable **TARGET_IP** en el código.
 
@@ -174,9 +174,9 @@ La ventana del monitor del Arduino IDE devolverá la dirección IP y datos de by
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_4.png" style={{width:800, height:'auto'}}/></div>
 
-¡Felicidades! En este punto, has aprendido cómo transmitir audio sobre la banda WiFi de 5 GHz, ¡y más innovaciones están esperando que las realices!
+¡Felicitaciones! En este punto, has aprendido cómo transmitir audio sobre la banda WiFi de 5 GHz, ¡y más innovaciones están esperando que las realices!
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 

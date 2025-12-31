@@ -3,7 +3,7 @@ description: |
 title: XIAO ESP32C5 ESP-Mesh 音频
 keywords:
 - xiao esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /cn/xiao_esp32c5_esp-mesh_audio
 last_update:
   date: 12/12/2025
@@ -12,7 +12,7 @@ last_update:
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" style={{width:800, height:'auto'}}/></div>
 
-## [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+## [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 
 以下是乐鑫系统对 **ESP-WIFI-MESH** 的官方介绍：
 
@@ -29,7 +29,7 @@ ESP-WIFI-MESH 是一个无线通信网络，节点采用网状拓扑结构组织
 
 更多详细信息，请参考乐鑫系统的官方链接：
 
-- [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+- [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 - [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
 
 ## ESP-Mesh_Audio
@@ -43,7 +43,7 @@ ESP-WIFI-MESH 是一个无线通信网络，节点采用网状拓扑结构组织
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -166,7 +166,7 @@ except KeyboardInterrupt:
 ### 运行脚本文件
 
 在存储 `send_audio.py` 的文件夹中右键单击，在此文件夹中打开终端。<br/>
-输入 `python send_audio.py` 执行脚本。成功连接后，它将每 20 毫秒向 XIAO ESP32-C5 发送音频数据。
+输入 `python send_audio.py` 执行脚本。连接成功后，它将每 20 毫秒向 XIAO ESP32-C5 发送音频数据。
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_3.png" style={{width:800, height:'auto'}}/></div>
 
