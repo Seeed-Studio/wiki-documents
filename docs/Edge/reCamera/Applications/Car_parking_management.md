@@ -11,7 +11,7 @@ image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 1
 last_update:
     date: 2025-12-17
-    author: Seeed Studio
+    author: John Xiang
 ---
 
 # AI Parking Management Demo with reCamera
@@ -93,7 +93,7 @@ You can choose **any version of reCamera** based on your deployment needs:
 ## Setup Demo 
 ### Step 1: Configure reCamera
 
-First, please follow the official getting started guide to complete the basic configuration of reCamera[reCamera Basic Configuration](https://wiki.seeedstudio.com/recamera_getting_started/)
+First, please follow the official getting started guide to complete the basic configuration of reCamera: [reCamera Basic Configuration](https://wiki.seeedstudio.com/recamera_getting_started/)
 
 After completing the initial setup, make sure that the device is powered on and connected to the network correctly.  
 Then, access the reCamera management interface and enter the **Node-RED workflow** page.
