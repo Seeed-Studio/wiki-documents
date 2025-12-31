@@ -11,7 +11,7 @@ last_update:
 ---
 # 如何使用 SWD 接口调试 Arduino 开发板
 
-在本教程中，您将学习如何**使用 SWD 接口通过 J-Link 调试编程器调试您的 Arduino 开发板**。作为参考，我们使用 Wio Terminal 作为硬件来演示调试过程。
+在本教程中，您将学习如何使用 **SWD 接口通过 J-Link 调试编程器调试您的 Arduino 开发板**。作为参考，我们使用 Wio Terminal 作为硬件来演示调试过程。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/SWD/SWD-Interface.png"/></div>
 
@@ -21,7 +21,7 @@ last_update:
 
 ## 硬件连接
 
-在开始之前，您需要以下材料：
+开始之前，您需要以下材料：
 
 1. [**Wio Terminal**](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)（或其他带有 SWD 接口的 Arduino 开发板）
 
@@ -55,11 +55,11 @@ last_update:
 
 在启动 J-Link GDB 服务器之前，您还需要打开 `Arduino` IDE 进行后续配置。
 
-### 1. 获取 Arduino 程序 ELF 文件路径
+### 1. 获取 Arduino 草图 ELF 文件路径
 
-在 Arduino IDE 的设置中，确保**编译时显示详细输出**和**上传时显示详细输出**都已勾选。
+在 Arduino IDE 的设置中，确保 **Show verbose output during compilation and upload** 都已勾选。
 
-在您要调试的 Arduino 程序下，点击**编译**（选择 Wio Terminal 作为开发板），并检查日志信息以获取 `.elf` 文件位置的路径。让我们以 `Blink` 为例：
+在您要调试的 Arduino 草图下，点击 **Compile**（选择 Wio Terminal 作为开发板），并检查日志信息以获取 `.elf` 文件位置的路径。让我们以 `Blink` 为例：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/SWD/elf.png"/></div>
 
@@ -73,7 +73,7 @@ last_update:
 
 ### 2. 获取 GCC 路径
 
-在同一程序编译日志信息下，您还可以找到 Arduino 使用的 GCC 路径，稍后也可用于 J-Link 调试编程器。
+在同一草图编译日志信息下，您还可以找到 Arduino 使用的 GCC 路径，稍后也可用于 J-Link 调试编程器。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/SWD/GCC.png"/></div>
 
@@ -83,13 +83,13 @@ last_update:
 /Users/ansonhe/Library/Arduino15/packages/Seeeduino/tools/arm-none-eabi-gcc/7-2017q4/bin
 ```
 
-## 开始使用 J-Link GDB 服务器
+## J-Link GDB 服务器入门
 
-将 J-Link 调试编程器连接到 PC，同时通过 USB 端口为 Wio Terminal 供电。启动 **J-Link GDB 服务器**，选择以下设置：
+将 J-Link 调试编程器连接到 PC，并通过 USB 端口为 Wio Terminal 供电。启动 **J-Link GDB 服务器**，选择以下设置：
 
-- 连接到 J-Link：**USB**
-- 目标设备：**Cortex-M4**
-- 目标接口：**SWD**
+- Connection to J-Link：**USB**
+- Target Device：**Cortex-M4**
+- Target Interface：**SWD**
 
 <div align="center"><img width ="{500}" src="https://files.seeedstudio.com/wiki/SWD/GDB-launch.png"/></div>
 
@@ -101,7 +101,7 @@ last_update:
 
 ## 启动 GDB 客户端
 
-现在您可以使用我们之前从 Arduino 中的 GCC 路径保存的路径来启动 GDB 客户端。打开终端并粘贴复制的路径 + `/arm-none-eabi-gdb`：
+现在您可以使用我们之前从 Arduino 中的 GCC 路径保存的路径启动 GDB 客户端。打开终端并粘贴复制的路径 + `/arm-none-eabi-gdb`：
 
 例如：`/Users/ansonhe/Library/Arduino15/packages/Seeeduino/tools/arm-none-eabi-gcc/7-2017q4/bin/arm-none-eabi-gdb`
 
@@ -114,13 +114,13 @@ last_update:
 5. `load`
 6. `monitor reset`
 
-现在您可以使用 GDB 调试您的 Arduino 草图！
+现在您可以使用 GDB 调试您的 Arduino 草图了！
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/SWD/GDB-connected.png"/></div>
 
 ### `.gdbinit` 方法
 
-您也可以创建一个 `.gdbinit` 文件，复制以下内容并将其保存在 `~/` 位置，以避免为 gdb 重复设置过程。
+您还可以创建一个 `.gdbinit` 文件，复制以下内容并将其保存在 `~/` 位置，以避免为 gdb 重复设置过程。
 
 ```
 target remote localhost:2331
@@ -131,7 +131,7 @@ load
 monitor reset
 ```
 
-现在如果您只是启动 GDB 客户端，就可以直接开始调试！
+现在如果您只是启动 GDB 客户端，您就可以直接开始调试了！
 
 ## 调试
 
@@ -146,6 +146,24 @@ GDB 的一些有用命令：
 - `delete`
 - `list`
 
+## 推荐工具：XIAO Debug Mate
+为了获得更高效的开发体验，我们推荐 [XIAO Debug Mate](https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html)。这款一体化开发工具旨在简化调试过程，为 XIAO 生态系统提供无线解决方案，同时仍是更广泛嵌入式项目的多功能实用工具。由 ESP32-S3 驱动，它是传统笨重调试器的现代替代品。
+
+**主要特性：**
+- 3 合 1 多功能工具：在一个设备中结合了 DAPLink 调试器、串行监视器和功率计。
+- 可视化反馈：配备 2.01 英寸 LCD 屏幕，可查看实时变量状态、功率曲线和串行日志，无需 PC。
+- XIAO 即插即用：直接将任何 Seeed Studio XIAO 开发板插入其中即可立即调试。
+- 通用 SWD 支持：可用作独立 SWD 探针（通过 2.54mm 扩展接头）来调试其他 ARM Cortex-M 微控制器。
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/SWD/GDB_debug.png"/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+    </a>
+</div>
+
+
 ## 资源
 
 - [官方 GNU GDB 文档](https://www.gnu.org/software/gdb/documentation/)
@@ -156,6 +174,6 @@ GDB 的一些有用命令：
 
 **Q1. 如何拆下 Wio Terminal 的外壳？**
 
-**A1.** 首先，取出 4 个角落的 4 个橡胶垫，您将看到固定 Wio Terminal 外壳的 2 个螺丝。只需拧下它们，您就可以将其拆开。
+**A1.** 首先，取出 4 个角的 4 个橡胶垫，您会看到固定 Wio Terminal 外壳的 2 个螺丝。只需拧下它们，您就可以将其拆开。
 
 <div align="center"><img width ="{450}" src="https://files.seeedstudio.com/wiki/SWD/WT.png"/></div>
