@@ -14,7 +14,6 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Controlando GPIO del reSpeaker XVF3800 a través del XIAO ESP32-S3
 
 ## Objetivo
 
