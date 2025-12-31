@@ -1,6 +1,6 @@
 ---
 description: この記事では、reTerminal E1001を素早く開始する方法をガイドします。
-title: reTerminal E1001の開始方法
+title: reTerminal E1001 入門ガイド
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/getting_started_with_reterminal_e1001
 sidebar_position: 2
@@ -12,13 +12,13 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# reTerminal E1001の開始方法
+# reTerminal E1001 入門ガイド
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div><br />
 
@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
 
 ## はじめに
 
-reTerminal E1001は、優れた3ヶ月のバッテリー寿命を持つ7.5インチのオープンソースモノクロームePaperディスプレイです。ESP32-S3を搭載し、簡単なダッシュボード作成のためのSenseCraft HMIノーコードUIプラットフォームをネイティブサポートし、さらなる開発のためにHome Assistant、TRMNL E-inkダッシュボード、Arduino、ESP-IDFをサポートしています。スマートホームダッシュボードの可視化、オフィスディスプレイ、教育プロジェクトなど、この使いやすいHMIデバイスは美しいビジュアルと柔軟なカスタマイゼーションを一つのエレガントなパッケージで提供します。
+reTerminal E1001は、優れた3ヶ月のバッテリー寿命を持つ7.5インチオープンソースモノクロームePaperディスプレイです。ESP32-S3を搭載し、簡単なダッシュボード作成のためのSenseCraft HMIノーコードUIプラットフォームをネイティブサポートし、さらなる開発のためにHome Assistant、TRMNL E-inkダッシュボード、Arduino、ESP-IDFをサポートしています。スマートホームダッシュボードの可視化、オフィスディスプレイ、教育プロジェクトなど、この即座に使用可能なHMIデバイスは、美しいビジュアルと柔軟なカスタマイゼーションを一つのエレガントなパッケージで提供します。
 
 ### 特徴
 
@@ -55,29 +55,29 @@ reTerminal E1001のハードウェアには以下が含まれます：
 9. **拡張ポート**：VDD、GND、I2C、GPIO接続を提供する8ピン拡張ヘッダー
 
 
-## 開始方法
+## 入門ガイド
 
 ### 準備
 
-**ステップ1.** reTerminal E1001を開封し、すべてのコンポーネントが含まれていることを確認してください：
+**ステップ1.** reTerminal E1001を開封し、すべてのコンポーネントが含まれていることを確認します：
 
 - reTerminal E1001デバイス
 - USB-Cケーブル
 - クイックスタートガイド
 
-**ステップ2.** （オプション）デバイスをデジタルフォトフレームとして使用する予定がある場合や、追加のストレージが必要な場合は、microSDカードを挿入してください。
+**ステップ2.** （オプション）デバイスをデジタルフォトフレームとして使用する予定がある場合や、追加のストレージが必要な場合は、microSDカードを挿入します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-reTerminal E SeriesのePaperディスプレイは、Fat32形式の最大64GBまでのMicroSDカードのみをサポートします。
+reTerminal E シリーズ ePaperディスプレイは、Fat32形式の最大32GBまでのMicroSDカードのみをサポートします。
 :::
 
-**ステップ3.** （オプション）必要に応じてUSBドライバーをインストールしてください：
+**ステップ3.** （オプション）必要に応じてUSBドライバーをインストールします：
 
 お使いのオペレーティングシステムによっては、reTerminal E1001との適切な通信を確保するためにUSBドライバーをインストールする必要がある場合があります：
 
-- **Macコンピューター用**：[WCH公式ウェブサイト](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)からCH34Xドライバーをダウンロードしてインストールしてください
+- **Macコンピューター用**：[WCH公式ウェブサイト](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)からCH34Xドライバーをダウンロードしてインストールします
 
 - **Windowsコンピューター用**：
   - Windows 11システムは通常、デフォルトでドライバーが含まれています
@@ -85,7 +85,7 @@ reTerminal E SeriesのePaperディスプレイは、Fat32形式の最大64GBま�
 
 - **Linuxシステム用**：最新のLinuxディストリビューションのほとんどは、デフォルトで必要なドライバーが含まれています
 
-**ステップ4.** デバイスが最新バージョンを実行していることを確認するためにファームウェアを更新してください：
+**ステップ4.** デバイスが最新バージョンを実行していることを確認するためにファームウェアを更新します：
 
 1. USB-Cケーブルを使用してreTerminal E1001をコンピューターに接続します
 
@@ -121,7 +121,7 @@ reTerminal E SeriesのePaperディスプレイは、Fat32形式の最大64GBま�
 
 1. ファームウェアの更新により、最適なパフォーマンスと最新機能へのアクセスが確保されます。初回使用前にこの更新を実行することをお勧めします。
 
-2. デバイスがシャットダウンまたはスリープ状態の場合、ファームウェアを適切にフラッシュすることはできません。デバイスの正しいポートを選択してもファームウェアフラッシュの進行状況が表示されない場合は、ユニット上部の緑色のボタンを押してデバイスを起動し、再試行する必要があります。
+2. デバイスがシャットダウンまたはスリープ状態の場合、ファームウェアを適切にフラッシュすることはできません。デバイスの正しいポートを選択してもファームウェアフラッシュの進行状況が表示されない場合は、ユニット上部の緑色ボタンを押してデバイスを起動し、再試行する必要があります。
 
 :::
 
@@ -150,14 +150,14 @@ reTerminal E SeriesのePaperディスプレイは、Fat32形式の最大64GBま�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:400, height:'auto'}}/></div><br />
 
-**ステップ2.** 接続すると、お使いの電話は自動的にWi-Fi設定ページにリダイレクトされるはずです。そうでない場合は、ブラウザを開いて`192.168.4.1`に移動してください。
+**ステップ2.** 接続すると、お使いの電話は自動的にWi-Fi設定ページにリダイレクトされるはずです。そうでない場合は、ブラウザを開いて`192.168.4.1`に移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/6.png" style={{width:700, height:'auto'}}/></div><br />
 
 **ステップ3.** ローカルWi-Fiネットワークを選択してパスワードを入力し、"Connect"をクリックします。
 
 :::note
-reTerminal E SeriesのePaperディスプレイは2.4GHz WiFiネットワークのみをサポートし、5GHzやその他の帯域はサポートしません。
+reTerminal E シリーズ ePaperディスプレイは2.4GHz WiFiネットワークのみをサポートし、5GHzやその他の帯域はサポートしません。
 :::
 
 **ステップ4.** 接続が成功すると、デバイスは確認音を発し、ペアリングコード画面を表示します。
@@ -178,7 +178,7 @@ reTerminal E SeriesのePaperディスプレイは2.4GHz WiFiネットワーク�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/7.png" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ3.** デバイスに名前を付け、デバイスの画面に表示されているペアリングコードを入力して**Create**をクリックします。
+**ステップ3.** デバイスに名前を付け、デバイス画面に表示されているペアリングコードを入力して**Create**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
@@ -191,7 +191,7 @@ reTerminal E SeriesのePaperディスプレイは2.4GHz WiFiネットワーク�
 
 この方法では、SenseCraftモバイルアプリを使用してデバイスのネットワークを設定し、Bluetooth経由でSenseCraftアカウントに追加します。
 
-まず、SenseCraft Appをダウンロードしてください。Google Play StoreまたはApple App Storeで「SenseCraft」を検索して見つけることができます。または、このウェブサイトからダウンロードすることもできます。
+まず、SenseCraft Appをダウンロードします。Google Play StoreまたはApple App Storeで「SenseCraft」を検索して見つけることができます。または、このウェブサイトからダウンロードすることもできます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
@@ -199,11 +199,11 @@ reTerminal E SeriesのePaperディスプレイは2.4GHz WiFiネットワーク�
     </a>
 </div><br />
 
-**ステップ 1.** SenseCraft App を開き、アカウントにサインインして、**User** タブに移動します。**Device Bluetooth Configuration** をタップしてプロセスを開始します。
+**ステップ 1.** SenseCraft アプリを開き、アカウントにサインインして、**User** タブに移動します。**Device Bluetooth Configuration** をタップしてプロセスを開始します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/151.png" style={{width:250, height:'auto'}}/></div><br />
 
-**ステップ 2.** "Please select the device type" 画面で、お使いの reTerminal モデル（例：**reTerminal E1001** または **reTerminal E1002**）を選択します。
+**ステップ 2.** 「Please select the device type」画面で、お使いの reTerminal モデル（例：**reTerminal E1001** または **reTerminal E1002**）を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/152.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -313,7 +313,7 @@ SenseCraft プラットフォームでダッシュボードを作成・保存し
 
 **ステップ 1.** 両方のナビゲーションボタン（左と右）を同時に 2 秒間長押しします。
 
-**ステップ 2.** デバイスが Wi-Fi 設定モードに入るので、[ネットワーク設定](#ネットワーク-設定)の手順を再度実行して新しいネットワークに接続できます。
+**ステップ 2.** デバイスが Wi-Fi 設定モードに入り、[ネットワークセットアップ](#network-setup)の手順を再度実行して新しいネットワークに接続できます。
 
 ### LED インジケーター
 
@@ -322,7 +322,7 @@ SenseCraft プラットフォームでダッシュボードを作成・保存し
   - 常時点灯：充電中
 
 - **緑色 LED**：
-  - 起動時に 30 秒間点灯：デバイスが電源オン中
+  - 起動時に 30 秒間点灯：デバイスが電源投入中
 
 ### バッテリー動作
 
@@ -340,7 +340,7 @@ SenseCraft プラットフォームでダッシュボードを作成・保存し
 
 ### 拡張ピン
 
-reTerminal E1001 は 8 ピン拡張ヘッダー（J2）を備えており、外部センサー、モジュール、その他のハードウェアを追加してデバイスの機能を拡張するための接続オプションを提供します。この拡張ヘッダーは複数の ESP32-S3 GPIO ピンと通信インターフェースを公開し、DIY プロジェクトの多用途な接続ポイントとなります。
+reTerminal E1001 には 8 ピン拡張ヘッダー（J2）があり、外部センサー、モジュール、その他のハードウェアを追加してデバイスの機能を拡張するための接続オプションを提供します。この拡張ヘッダーは複数の ESP32-S3 GPIO ピンと通信インターフェースを公開し、DIY プロジェクトの多用途な接続ポイントとなります。
 
 #### 拡張ヘッダーピン配置
 
@@ -422,9 +422,9 @@ reTerminal E1001 には、最適な視認性のためにデバイスを直立さ
 
 **ステップ 2.** 埋め込みナットが配置されている reTerminal E1001 の底面背部の指定された取り付けエリアにサポートスタンドを配置します。
 
-**ステップ 3.** 長いドライバーを使用して、reTerminal E1001の背面に埋め込まれたナットにネジを締めることで、スタンドをデバイスに固定します。
+**ステップ 3.** 長いドライバーを使用して、reTerminal E1001の背面にある埋め込みナットにネジを締めることで、スタンドをデバイスに固定します。
 
-**ステップ 4.** しっかりと取り付けられたら、スタンドが直立位置でサポートできる平らな面にreTerminal E1001を置きます。
+**ステップ 4.** しっかりと取り付けたら、スタンドが直立位置でサポートできる平らな面にreTerminal E1001を置きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -473,7 +473,7 @@ reTerminal E1001 には、最適な視認性のためにデバイスを直立さ
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -26,9 +26,9 @@ import TabItem from '@theme/TabItem';
 我们建议您在收到产品后**[立即完成产品的固件更新](#preliminary)**以获得最佳体验。
 :::
 
-## 介绍
+## 简介
 
-reTerminal E1001 是一款 7.5 英寸开源单色电子纸显示器，具有出色的 3 个月电池续航能力。由 ESP32-S3 驱动，原生支持我们的 SenseCraft HMI 无代码 UI 平台，可轻松创建仪表板，同时支持 Home Assistant、TRMNL E-ink 仪表板、Arduino 和 ESP-IDF 进行进一步开发。无论是智能家居仪表板可视化、办公室显示器还是教育项目，这款即用型 HMI 设备都能在一个优雅的包装中提供美观的视觉效果和灵活的定制功能。
+reTerminal E1001 是一款 7.5 英寸开源单色电子纸显示器，具有出色的 3 个月电池续航能力。由 ESP32-S3 驱动，原生支持我们的 SenseCraft HMI 无代码 UI 平台，可轻松创建仪表板，同时支持 Home Assistant、TRMNL E-ink dashboard、Arduino 和 ESP-IDF 进行进一步开发。无论是智能家居仪表板可视化、办公室显示器还是教育项目，这款即用型 HMI 设备都能在一个优雅的包装中提供美观的视觉效果和灵活的定制功能。
 
 ### 特性
 
@@ -70,7 +70,7 @@ reTerminal E1001 硬件包括：
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 MicroSD 卡。
+reTerminal E 系列电子纸显示器仅支持最大 32GB 的 Fat32 格式 MicroSD 卡。
 :::
 
 **步骤 3.** （可选）如需要，请安装 USB 驱动程序：
@@ -121,7 +121,7 @@ reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 Micro
 
 1. 更新固件可确保最佳性能并访问最新功能。建议在首次使用设备之前执行此更新。
 
-2. 当设备处于关机或睡眠状态时，无法正确刷写固件。如果您为设备选择了正确的端口但从未看到刷写固件进度，则可能需要通过按下设备顶部的绿色按钮来唤醒设备，然后重试。
+2. 当设备处于关机或睡眠状态时，无法正确刷写固件。如果您为设备选择了正确的端口但从未看到刷写固件进度，则可能需要通过按下设备顶部的绿色按钮来唤醒设备并重试。
 
 :::
 
@@ -146,7 +146,7 @@ reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 Micro
 <Tabs>
 <TabItem value="Network Setup vis PC" label="通过 PC 进行网络设置" default>
 
-**步骤 1.** 从您的智能手机或计算机连接到设备的 Wi-Fi 接入点。AP 名称将显示在屏幕上（无需密码）。网络凭据为 `reTerminal E1001-{MAC 地址}`。
+**步骤 1.** 从您的智能手机或计算机连接到设备的 Wi-Fi 接入点。AP 名称将显示在屏幕上（无需密码）。网络凭据为 `reTerminal E1001-{MAC Adress}`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:400, height:'auto'}}/></div><br />
 
@@ -257,7 +257,7 @@ reTerminal E1001 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 使用画布从头开始设计您的仪表板，这是一个拖放界面，提供各种元素：
 
-- 可自定义字体和大小的文本块
+- 具有可自定义字体和大小的文本块
 - 图像占位符
 - 时间、日期和天气小部件
 - 数据可视化工具
@@ -285,7 +285,7 @@ reTerminal E1001 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 在 SenseCraft 平台中创建并保存您的仪表板后，只需点击"Deploy to Device"，选择您配对的 reTerminal E1001，您的自定义内容将无线传输到设备。电子纸显示屏将更新以显示您的仪表板，如果您创建了多个页面，您可以使用导航按钮在它们之间切换。
 
-## 设备操作
+## 操作设备
 
 ### 刷新按钮
 
@@ -313,7 +313,7 @@ reTerminal E1001 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 **步骤 1.** 同时按住两个导航按钮（左和右）2 秒钟。
 
-**步骤 2.** 设备将进入 Wi-Fi 配置模式，您可以再次按照[网络设置](#网络-设置)步骤连接到新网络。
+**步骤 2.** 设备将进入 Wi-Fi 配置模式，您可以再次按照[网络设置](#network-setup)步骤连接到新网络。
 
 ### LED 指示灯
 
@@ -326,7 +326,7 @@ reTerminal E1001 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 ### 电池操作
 
-在电池供电时：
+使用电池供电时：
 
 - 设备将在刷新之间自动进入低功耗模式
 
@@ -374,14 +374,14 @@ reTerminal E1001 具有一个 8 引脚扩展接头（J2），提供连接选项�
    <td>ESP_IO46</td>
    <td>GPIO46</td>
    <td>GPIO/ADC</td>
-   <td>具有模拟输入功能的通用 I/O</td>
+   <td>具有模拟输入功能的通用输入/输出</td>
   </tr>
   <tr>
    <td>4</td>
    <td>ESP_IO2/ADC1_CH4</td>
    <td>GPIO2</td>
    <td>GPIO/ADC</td>
-   <td>具有模拟输入功能的通用 I/O（ADC1 通道 4）</td>
+   <td>具有模拟输入功能的通用输入/输出（ADC1 通道 4）</td>
   </tr>
   <tr>
    <td>5</td>
