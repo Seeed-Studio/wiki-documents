@@ -146,6 +146,24 @@ Some useful commands for GDB:
 - `delete`
 - `list`
 
+## Recommended Tool: XIAO Debug Mate
+For a more efficient development experience, we recommend the [XIAO Debug Mate](https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html). This all-in-one development tool is designed to simplify the debugging process, offering a wire-free solution for the XIAO ecosystem while remaining a versatile utility for broader embedded projects. Powered by the ESP32-S3, it serves as a modern alternative to traditional, bulky debuggers.
+
+**Key Features:**
+- 3-in-1 Multi-tool: Combines a DAPLink Debugger, Serial Monitor, and Power Meter in one device.
+- Visual Feedback: Features a 2.01-inch LCD screen to view real-time variable status, power curves, and serial logs without a PC.
+- Plug-and-Play for XIAO: Directly plug any Seeed Studio XIAO board into it for instant debugging.
+- Universal SWD Support: Can be used as a standalone SWD probe (via the 2.54mm expansion header) to debug other ARM Cortex-M microcontrollers.
+
+<div align="center"><img src="https://files.seeedstudio.com/wiki/SWD/GDB_debug.png"/></div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+</div>
+
+
 ## Resources
 
 - [Official GNU GDB Documentation](https://www.gnu.org/software/gdb/documentation/)
