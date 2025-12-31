@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-TempAndHumi_Sensor-SHT31
 last_update:
-  date: 12/30/2022
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TempAndHumi_Sensor-SHT31/img/main_new.jpg" /></div>
@@ -201,29 +201,25 @@ The result should be like:
 #### Software
 
 - **Step 1.** Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2.** Download the source file by cloning the grove.py library.
+- **Step 2.** Enter the relevant virtual environment.
 
 ```
-
-cd ~
-git clone https://github.com/Seeed-Studio/grove.py
-
-
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
 ```
 
 - **Step 3.** Excute below command to run the code.
 
 ```
-
-cd grove.py/grove
-python grove_temperature_humidity_sensor_sht3x.py 
-
+#Run code
+python grove_temperature_humidity_sensor_sht3x.py
+#View Code
+less grove_temperature_humidity_sensor_sht3x.py
 ```
 
 Following is the grove_temperature_humidity_sensor_sht3x.py code.
 
 ```python
-
 
 import time
 from grove.i2c import Bus
@@ -244,7 +240,7 @@ def CRC(data):
 
 class GroveTemperatureHumiditySensorSHT3x(object):
 
-    def __init__(self, address=0x44, bus=None):
+    def __init__(self, address=0x44, bus=1):
         self.address = address
 
         # I2C bus
@@ -291,31 +287,17 @@ def main():
 if __name__ == "__main__":
     main()
 
-
 ```
 
-:::tip
-If everything goes well, you will be able to see temperature and humidity
-:::
-
-```python
-
-pi@raspberrypi:~/grove.py/grove $ python grove_temperature_humidity_sensor_sht3x.py 
-Temperature in Celsius is 21.48 C
-Relative Humidity is 51.32 %
-Temperature in Celsius is 21.47 C
-Relative Humidity is 51.34 %
-Temperature in Celsius is 21.46 C
-Relative Humidity is 51.37 %
-^CTraceback (most recent call last):
-  File "grove_temperature_humidity_sensor_sht3x.py", line 95, in <module>
-    main()
-  File "grove_temperature_humidity_sensor_sht3x.py", line 91, in main
-    time.sleep(1)
-KeyboardInterrupt
-
-
+- Run this code
 ```
+
+python grove_temperature_humidity_sensor_sht3x.py
+```
+
+  If everything goes well, you will be able to see the following result
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/GROVE-fix/SHT3.png" /></div>
 
 ## Schematic Online Viewer
 
@@ -352,4 +334,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

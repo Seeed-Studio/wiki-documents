@@ -3,7 +3,7 @@ description: |
 title: XIAO ESP32C5 ESP-Mesh オーディオ
 keywords:
 - xiao esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /ja/xiao_esp32c5_esp-mesh_audio
 last_update:
   date: 12/12/2025
@@ -12,7 +12,7 @@ last_update:
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" style={{width:800, height:'auto'}}/></div>
 
-## [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+## [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 
 以下は、Espressif Systems による **ESP-WIFI-MESH** の公式紹介です：
 
@@ -21,15 +21,15 @@ ESP-WIFI-MESH は、Espressif SoC の同時 AP-STA 機能を使用してメッ�
 以下の特徴があります：
 
 1. **簡単で安全なセットアップ** : モバイルアプリ + Bluetooth LE ネットワーク設定がサポートされており、新しいノードの迅速な追加と設定の安全な配信が可能です。
-2. **自己形成および自己修復** : ノードは自動的に接続/再接続し、ノードが故障した場合にネットワークが自動的に形成され、自己修復できます。
+2. **自己形成および自己修復** : ノードは自動的に接続/再接続し、ノードが故障した際にネットワークは自動的に形成され、自己修復できます。
 3. **追加のゲートウェイ不要** : 追加のゲートウェイやインフラストラクチャは必要ありません。メッシュネットワークは数千のノードまでスケールアップでき、大規模展開に適しています。
 4. **IP 接続性** : すべてのノードが IP 通信をサポートし、ノード間の相互接続と外部ネットワークへのアクセス（ルートノード NAT またはブリッジング経由）の両方を可能にします。
-5. **設計による安全性** : 標準 Wi-Fi に基づいており、ノード間の通信は WPA2 暗号化を採用して安全なデータ伝送を確保できます。
+5. **設計による安全性** : 標準 Wi-Fi に基づき、ノード間の通信は WPA2 暗号化を採用して安全なデータ伝送を確保できます。
 6. **アプリケーション** : スマート照明、スマートホーム、自動化制御、大規模会場（駐車場、工場、共有スペースなど）でのネットワーキングなど、さまざまなシナリオに適用できます。
 
 詳細については、Espressif Systems の公式リンクを参照してください：
 
-- [ESP-WIFI-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
+- [ESP-Wi-Fi-MESH](https://www.espressif.com/en/products/sdks/esp-wifi-mesh/overview)
 - [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/esp-wifi-mesh.html)
 
 ## ESP-Mesh_Audio
@@ -43,7 +43,7 @@ ESP-WIFI-MESH は、Espressif SoC の同時 AP-STA 機能を使用してメッ�
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -166,7 +166,7 @@ except KeyboardInterrupt:
 ### スクリプトファイルの実行
 
 `send_audio.py` が保存されているフォルダーで右クリックし、このフォルダーでターミナルを開きます。<br/>
-`python send_audio.py` を入力してスクリプトを実行します。接続が成功すると、20 ms ごとに XIAO ESP32-C5 にオーディオデータを送信します。
+`python send_audio.py` と入力してスクリプトを実行します。接続が成功すると、20 ms ごとに XIAO ESP32-C5 にオーディオデータを送信します。
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_3.png" style={{width:800, height:'auto'}}/></div>
 
@@ -174,11 +174,11 @@ Arduino IDE のモニターウィンドウには、コンピューターの IP �
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_4.png" style={{width:800, height:'auto'}}/></div>
 
-おめでとうございます！この時点で、5 GHz WiFi 帯でオーディオを伝送する方法を学びました。さらなるイノベーションがあなたの実現を待っています！
+おめでとうございます！この時点で、5 GHz WiFi 帯でオーディオを伝送する方法を学びました。さらなる革新があなたの実現を待っています！
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験を可能な限りスムーズにするため、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

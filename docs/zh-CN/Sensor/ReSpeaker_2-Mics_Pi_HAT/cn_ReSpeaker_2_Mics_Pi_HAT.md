@@ -12,12 +12,12 @@ last_update:
 
 ![](https://files.seeedstudio.com/products/107100001/01.png)
 
-ReSpeaker 2-Mics Pi HAT 是一款专为 Raspberry Pi 设计的双麦克风扩展板，适用于 AI 和语音应用。这意味着您可以构建更强大、更灵活的语音产品，集成 Amazon Alexa Voice Service、Google Assistant 等服务。
+ReSpeaker 2-Mics Pi HAT 是一款专为 Raspberry Pi 设计的双麦克风扩展板，适用于 AI 和语音应用。这意味着您可以构建一个更强大、更灵活的语音产品，集成 Amazon Alexa Voice Service、Google Assistant 等。
 
 该板基于 WM8960 开发，这是一款低功耗立体声编解码器。板子两侧有 2 个麦克风用于收集声音，还提供 3 个 APA102 RGB LED、1 个用户按钮和 2 个板载 Grove 接口来扩展您的应用。此外，3.5mm 音频插孔或 JST 2.0 扬声器输出都可用于音频输出。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
 </div>
 
 ## 特性
@@ -44,7 +44,7 @@ ReSpeaker 2-Mics Pi HAT 是一款专为 Raspberry Pi 设计的双麦克风扩展
 * RGB LED：3 个 APA102 RGB LED，连接到 SPI 接口
 * WM8960：低功耗立体声编解码器
 * Raspberry Pi 40 针排针：支持 Raspberry Pi Zero、Raspberry Pi 1 B+、Raspberry Pi 2 B、Raspberry Pi 3 B 和 Raspberry Pi 3 B+
-* POWER：Micro USB 端口，用于为 ReSpeaker 2-Mics Pi HAT 供电，使用扬声器时请为板子供电以提供足够的电流
+* POWER：Micro USB 端口，用于为 ReSpeaker 2-Mics Pi HAT 供电，使用扬声器时请为板子供电以提供足够的电流。
 * I2C：Grove I2C 端口，连接到 I2C-1
 * GPIO12：Grove 数字端口，连接到 GPIO12 和 GPIO13
 * JST 2.0 SPEAKER OUT：用于连接带有 JST 2.0 连接器的扬声器
@@ -68,29 +68,29 @@ ReSpeaker 2-Mics Pi HAT 是一款专为 Raspberry Pi 设计的双麦克风扩展
 
 * **[ODYSSEY – STM32MP157C 入门指南](https://wiki.seeedstudio.com/cn/ODYSSEY-STM32MP157C/#i2s-on-odyssey-stm32mp157c)**
 
-## 在边缘端使用 Picovoice 启用语音识别
+## 使用 Picovoice 在边缘启用语音识别
 
 <div align="center"><img width = "{700}" src="https://files.seeedstudio.com/wiki/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/banner.gif"/></div>
 
-[**Picovoice**](https://picovoice.ai/) **使企业能够通过私有语音AI快速创新和差异化**。使用我们的语音识别和[**自然语言理解(NLU)技术**](https://searchenterpriseai.techtarget.com/definition/natural-language-understanding-NLU)，围绕您的品牌和产品构建统一的AI策略。
+[**Picovoice**](https://picovoice.ai/) **使企业能够通过私有语音 AI 快速创新和差异化**。使用我们的语音识别和[**自然语言理解 (NLU) 技术**](https://searchenterpriseai.techtarget.com/definition/natural-language-understanding-NLU)，围绕您的品牌和产品构建统一的 AI 策略。
 
-**Seeed已与Picovoice合作，使用[ReSpeaker 2-Mic Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html)为开发者带来边缘端语音识别解决方案。**
+**Seeed 已与 Picovoice 合作，为开发者提供使用 [ReSpeaker 2-Mic Pi HAT](https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html) 在边缘进行语音识别的解决方案。**
 
-Picovoice是一个端到端平台，用于按照您的条件构建语音产品。它能够创建类似于Alexa和Google的语音体验。但它完全100%在设备上运行。Picovoice的优势包括：
+Picovoice 是一个端到端平台，用于按您的条件构建语音产品。它能够创建类似于 Alexa 和 Google 的语音体验。但它完全在设备上运行 100%。Picovoice 的优势包括：
 
-* **私密性**：所有处理都在离线进行。本质上符合HIPAA和GDPR合规要求。
+* **私密性**：所有内容都在离线处理。本质上符合 HIPAA 和 GDPR 标准。
 * **可靠性**：无需持续连接即可运行。
 * **零延迟**：边缘优先架构消除了不可预测的网络延迟。
-* **准确性**：对噪声和混响具有抗性。在准确性方面大幅超越基于云的替代方案。
-* **跨平台**：一次设计，随处部署。使用熟悉的语言和框架进行构建。
+* **准确性**：对噪音和混响具有抗性。在很大程度上优于基于云的替代方案。
+* **跨平台**：一次设计，随处部署。使用熟悉的语言和框架构建。
 
 ## 使用 Mycroft Precise 进行开源关键词检测
 
-除了Picovoice，我们还为Mycroft Precise提供有限支持 - 这是一个开源的实时关键词检测包。Mycroft Precise是完全开源的，可以训练识别从姓名到咳嗽的任何内容。Precise设计为在Linux上运行。已知它可以在各种Linux发行版上工作，包括Debian、Ubuntu和Raspbian。根据官方README文件，"它可能在其他*nx发行版上也能运行。"
+除了 Picovoice，我们还为 Mycroft Precise 提供有限支持 - 这是一个开源实时关键词检测包。Mycroft Precise 完全开源，可以训练识别从姓名到咳嗽的任何内容。Precise 设计为在 Linux 上运行。已知它可以在各种 Linux 发行版上工作，包括 Debian、Ubuntu 和 Raspbian。根据官方 README 文件，"它可能在其他 *nx 发行版上也能运行。"
 
-Mycroft Precise是Apache-2.0许可证项目，这意味着您可以修改和分发它，包括用于商业目的 - 唯一的要求是您保留原始许可证。
+Mycroft Precise 是 Apache-2.0 许可证项目，这意味着您可以修改和分发它，包括用于商业目的 - 唯一的要求是您保留原始许可证。
 
-**您可以在相应平台的入门文档中找到Picovoice产品和Mycroft Precise的示例。**
+**您可以在相应平台的入门文档中找到 Picovoice 产品和 Mycroft Precise 的示例。**
 
 ## 原理图在线查看器
 
@@ -104,10 +104,13 @@ Mycroft Precise是Apache-2.0许可证项目，这意味着您可以修改和分�
 * **[PDF]** [Respeaker_2_Mics_Pi_HAT_SCH](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/src/ReSpeaker%202-Mics%20Pi%20HAT_SCH.pdf)
 * **[PDF]** [Respeaker_2_Mics_Pi_HAT_PCB](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/src/ReSpeaker%202-Mics%20Pi%20HAT_PCB.pdf)
 * **[3D]** [ReSpeaker 2 Mics Pi HAT 3D](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/src/ReSpeaker%202-Mics%20Pi%20HAT.zip)
-* **[驱动程序]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
-* **[算法]** [算法包括DOA、VAD、NS](https://github.com/respeaker/mic_array)
-* **[语音引擎]** [语音引擎项目，提供创建语音启用对象的构建块](https://github.com/voice-engine/voice-engine)
-* **[算法]** [AEC](https://github.com/voice-engine/ec)
+* **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
+* **[Algorithms]** [Algorithms includes DOA, VAD, NS](https://github.com/respeaker/mic_array)
+* **[Voice Engine]** [Voice Engine project, provides building blocks to create voice enabled objects](https://github.com/voice-engine/voice-engine)
+* **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
+
+* **[Eagle]** [Respeaker_2_Mics_Pi_HAT_SCH_v2](https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/202004059_ReSpeaker-2-Mics-Pi-HAT-V2.0_SCH_PDF_241121.pdf)
+
 
 ## 项目
 
@@ -115,13 +118,14 @@ Mycroft Precise是Apache-2.0许可证项目，这意味着您可以修改和分�
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/idreams/build-your-own-amazon-echo-using-a-rpi-and-respeaker-hat-7f44a0/embed' width='350'></iframe>
 
-**您的个人家庭咖啡师通过这台语音控制咖啡机变为现实**：一台开源、隐私设计的咖啡机，可以保护您最喜欢的咖啡和咖啡因摄入计划的隐私。
+**您的个人家庭咖啡师通过这台语音控制咖啡机变为现实**：一台开源、隐私设计的咖啡机，保持您最喜欢的咖啡和咖啡因摄入计划的私密性。
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4gN1bvl24ZM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
 ## 技术支持与产品讨论
+
 
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。

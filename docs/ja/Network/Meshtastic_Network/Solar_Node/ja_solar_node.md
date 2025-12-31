@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /ja/meshtastic_solar_node
 sidebar_position: 1
 last_update:
-  date: 4/1/2025
-  author: Jessie
+  date: 12/16/2025
+  author: Michelle Huang
 ---
 
 
@@ -34,11 +34,11 @@ Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar
 
 ### 特徴
 
-- 5Wソーラーパネルを統合し、外部バッテリーをサポート（ユーザー自身で提供する必要があります）。
+- 5Wソーラーパネルを統合し、外部バッテリーをサポートします（ユーザー自身で提供する必要があります）。
 - デバイスには工場でMeshtasticファームウェアがプリインストールされています。Meshtasticエコシステムにシームレスに統合できます。
 - Groveエコシステムと互換性があり、温湿度センサー、光センサーなどのセンサーのプラグアンドプレイをサポートします。
 - 長期間の屋外使用に適しています。
-- 開放エリアで8〜9KMの伝送をサポート。屋外ノードまたはリピーターとして使用でき、Meshネットワークを簡単に拡張し、ネットワークカバレッジを向上させます。
+- 開放エリアで8〜9KMの伝送をサポートします。屋外ノードまたはリピーターとして使用でき、Meshネットワークを簡単に拡張し、ネットワークカバレッジを向上させます。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
@@ -55,7 +55,7 @@ Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar
   <tr>
     <td><b>LoRaモジュール</b></td>
     <td>
-      <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html" target="_blank">Wio-SX1262モジュール</a><br />
+      <a href="https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html" target="_blank">Wio-SX1262 Module</a><br />
       (Semtech SX1262、TXOP=22dBm@862-930MHz)
     </td>
   </tr>
@@ -151,14 +151,7 @@ Solar Nodeは2つのバリエーションで利用可能です：[SenseCAP Solar
   </tr>
 </table>
 
-### ボタン
 
-|ボタン操作|説明|
-|--|--|
-|3秒間押す|電源オン|
-|2回押す|ノード/位置情報を更新|
-|3回押す|GPSのオン/オフを切り替え|
-|5秒間押す|電源オフ|
 
 ### ハードウェア概要
 

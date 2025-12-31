@@ -82,7 +82,7 @@ WM1302 Pi HATは、WM1302ゲートウェイモジュールとRaspberry Piと組�
   </tr>
   <tr>
     <td >Raspberry Pi 40-Pin Headers</td>
-    <td >Raspberry Pi 4 B 対応 / Raspberry Pi 3 A+/B/B+ 対応 / Raspberry Pi 2 B 対応 / Raspberry Pi A+/B+ 対応 /   Raspberry Pi Zero/Zero W 対応</td>
+    <td >Raspberry Pi 5 対応 / Raspberry Pi 4 B 対応 / Raspberry Pi 3 A+/B/B+ 対応 / Raspberry Pi 2 B 対応 / Raspberry Pi A+/B+ 対応 /   Raspberry Pi Zero/Zero W 対応</td>
   </tr>
   <tr>
     <td >PCIe Header</td>

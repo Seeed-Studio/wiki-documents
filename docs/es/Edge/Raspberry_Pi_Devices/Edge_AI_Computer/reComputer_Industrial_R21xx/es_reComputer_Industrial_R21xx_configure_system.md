@@ -5,7 +5,7 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /es/recomputer_industrial_R21xx_configure_system
 last_update:
   date: 09/28/2025
@@ -16,7 +16,7 @@ last_update:
 
 Aprende cómo configurar y probar componentes de hardware en la serie reComputer Industrial R21xx después de instalar dispositivos. Esta wiki cubre mapeo GPIO, pruebas de LED de usuario, comunicación SPI, escaneo Wi-Fi y Bluetooth, LoRa®, 4G, 5G, Zigbee sobre Mini-PCIe, RS485, RS232, CAN, pruebas DI/DO, UPS para apagado seguro y más.
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -34,7 +34,7 @@ Para consultar mapeos y desplazamientos GPIO, sigue estos pasos:
 cat /sys/kernel/debug/gpio
 ```
 
-**Este comando mostrará mapeos y desplazamientos GPIO**, proporcionando información esencial para depuración o configuración de pines GPIO.
+**Este comando mostrará mapeos y desplazamientos GPIO**, proporcionando información esencial para depurar o configurar pines GPIO.
 
 ## Pruebas de LED de Usuario
 
@@ -340,7 +340,7 @@ sudo  ./lora_pkt_fwd  -c  global_conf.json.sx1250.EU868.USB
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.7.2_lora_usb_1.png" style={{width:800, height:'auto'}}/></div>
 
-Este comando especifica el archivo de configuración a usar para LoRa® USB.
+Este comando especifica el archivo de configuración que se utilizará para LoRa® USB.
 
 ## 5G Celular sobre M.2 B-KEY
 
@@ -389,7 +389,7 @@ echo "5g module reboot completed"
 sudo ./power_5g.sh
 ```
 
-Después de 10-15 segundos (toma un tiempo para que el módulo se encienda y enumere USB), verifica si aparece el nodo del dispositivo:
+Después de 10-15 segundos (el módulo tarda un tiempo en encenderse y enumerar USB), verifica si aparece el nodo del dispositivo:
 
 ```bash
 ls /dev/ttyUSB*
@@ -397,7 +397,7 @@ ls /dev/ttyUSB*
 
 Salida /dev/ttyUSB0, etc.:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.8_5g_cellular_over_m.2_b-key_1.png" style={{width:800, height:'auto'}}/></div>
-Abre minicom con el puerto serie apropiado y la velocidad de baudios:
+Abre minicom con el puerto serie y la velocidad de baudios apropiados:
 
 ```bash
 sudo apt update
@@ -447,7 +447,7 @@ Ejecuta el archivo:
 sudo ./power_4g.sh
 ```
 
-Después de 10-15 segundos (toma un tiempo para que el módulo se encienda y enumere USB), verifica si aparece el nodo del dispositivo:
+Después de 10-15 segundos (el módulo tarda un tiempo en encenderse y enumerar USB), verifica si aparece el nodo del dispositivo:
 
 ```bash
 ls /dev/ttyUSB*
@@ -461,7 +461,7 @@ cat /sys/class/gpio/gpio645/value # should be 0
 cat /sys/class/gpio/gpio639/value # should be 0
 ```
 
-Ambos valores son 0 → el script ha sido correctamente bajado y el módulo está en estado de funcionamiento.
+Ambos valores son 0 → el script se ha bajado correctamente y el módulo está en estado de funcionamiento.
 Ingresa a minicom para enviar comandos:
 
 ```bash
@@ -494,7 +494,7 @@ ping www.baidu.com -I usb0
 
 Para probar la **comunicación Zigbee** entre dos módulos Zigbee, sigue estos pasos:
 
-1. Verifica los Puertos Serie Disponibles
+1. Verificar Puertos Serie Disponibles
 
 Usa el siguiente comando para verificar los puertos serie disponibles:
 
@@ -502,15 +502,15 @@ Usa el siguiente comando para verificar los puertos serie disponibles:
 cat /dev/ttyUSB*
 ```
 
-**Instala una Herramienta de Comunicación Serie**
+**Instalar una Herramienta de Comunicación Serie**
 
-2. Instala la Herramienta de Comunicación Serie:
+2. Instalar Herramienta de Comunicación Serie:
 
 ```bash
 sudo apt-get install cutecom
 ```
 
-3. Abre el Puerto Serie para el Coordinador (Primer Módulo Zigbee):
+3. Abrir Puerto Serie para Coordinador (Primer Módulo Zigbee):
 
 - Abre la herramienta cutecom y configúrala para el primer puerto serie:
 - Velocidad de baudios: ***115200***
@@ -520,25 +520,25 @@ sudo apt-get install cutecom
 - Reiniciar dispositivo: Presiona el botón de reinicio o envía el comando ***'55 07 00 04 00 FF FF 00 04'***.
 - Formación de red: Envía el comando ***'55 03 00 02 02'***.
 
-4. Abre el Puerto Serie para el Enrutador (Segundo Módulo Zigbee):
+4. Abrir Puerto Serie para Router (Segundo Módulo Zigbee):
 Abre otra instancia de ***cutecom*** y configúrala para el segundo puerto serie con la misma configuración que antes.
 Sigue estos pasos para configurar el segundo módulo Zigbee:
 
-- Establecer como enrutador: Envía el comando ***'55 04 00 05 01 04'***, espera la respuesta ***'55 04 00 05 00 05'***.
+- Establecer como router: Envía el comando ***'55 04 00 05 01 04'***, espera la respuesta ***'55 04 00 05 00 05'***.
 - Reiniciar dispositivo: Presiona el botón de reinicio o envía el comando ***'55 07 00 04 00 FF FF 00 04'***.
 - Formación de red: Envía el comando ***'55 03 00 02 02'***.
 
-5. Verifica el Estado del Dispositivo:
-Envía el comando ***'55 03 00 00 00'*** para verificar el estado del dispositivo. Espera una respuesta similar a ***'55 2a 00 00 00 01 XX XX XX XX'***, donde 'XX' representa la información del dispositivo.
-6. Ingresa al Modo Transparente:
-Si la formación de red es exitosa, ingresa al modo transparente enviando el comando ***55 07 00 11 00 03 00 01 13***. Ambos módulos deben estar en modo transparente para comunicación directa. Para salir del modo transparente, envía "+++".
+5. Verificar Estado del Dispositivo:
+Envía el comando ***'55 03 00 00 00'*** para verificar el estado del dispositivo. Espera una respuesta similar a ***'55 2a 00 00 00 01 XX XX XX XX'***, donde 'XX' representa información del dispositivo.
+6. Entrar en Modo Transparente:
+Si la formación de red es exitosa, entra en modo transparente enviando el comando ***55 07 00 11 00 03 00 01 13***. Ambos módulos deben estar en modo transparente para comunicación directa. Para salir del modo transparente, envía "+++".
 7. Notas Adicionales:
 
-- Si la configuración del enrutador falla, el dispositivo puede ya ser un coordinador. Abandona la red usando el comando '55 07 00 04 02 xx xx xx'.
+- Si la configuración del router falla, el dispositivo puede ya ser un coordinador. Abandona la red usando el comando '55 07 00 04 02 xx xx xx'.
 - Prueba la potencia de transmisión usando los comandos '55 04 0D 00 00 0D' (consulta) y '55 04 0D 01 XX XX' (establecer).
 Asegúrate de reemplazar ***/dev/ttyUSB*** con el puerto serie correcto para cada módulo Zigbee. Sigue estos pasos cuidadosamente para probar la comunicación Zigbee entre los dos módulos exitosamente.
 
-## Pruebas RS485
+## Prueba RS485
 
 El reComputer Industrial R21xx incluye **2x puertos RS485**. A continuación se muestran sus **puertos COM** y **archivos de dispositivo** correspondientes:
 
@@ -547,7 +547,7 @@ El reComputer Industrial R21xx incluye **2x puertos RS485**. A continuación se 
 | **RS485-3**                  | COM3           | A3/B3/GND3              | `/dev/ttyACM2`             |
 | **RS485-4**                  | COM4           | A4/B4/GND4              | `/dev/ttyACM3`             |
 
-Para probar la función RS485, puedes seguir los pasos a continuación (toma RS485_1 y RS485_2 como ejemplos):
+Para probar la función RS485, puedes seguir los pasos a continuación (tomando RS485_1 y RS485_2 como ejemplos):
 
 1. Por favor conecta A y B de RS485_1 y RS485_2.
 2. Abre minicom en dos ventanas de terminal respectivamente:
@@ -572,14 +572,14 @@ sudo minicom -D /dev/ttyACM2
 
 :::note
 
-Toma ACM2 y ACM3 como ejemplo:
+Tomando ACM2 y ACM3 como ejemplo:
 Si quieres enviar desde ACM2 a ACM3, ACM2 necesita configurarse nuevamente: ***ctrl+A***, luego presiona ***Z*** y luego ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM2 a voluntad, y puedes ver el contenido de ACM2 en ACM3 al mismo tiempo;
 Por el contrario, si quieres enviar desde ACM3 a ACM2, ACM3 necesita configurarse nuevamente: ***ctrl+A***, luego presiona ***Z*** y luego ***E***, y luego inicia el comando de escritura del puerto serie. En este momento, puedes imprimir cadenas en ACM3 a voluntad, y puedes ver el contenido de ACM3 en ACM2 al mismo tiempo. Como se muestra en la figura.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 
-## Pruebas RS232
+## Prueba RS232
 
 reComputer Industrial R21xx incluye **2x puertos RS232**, y los **puertos COM** y **archivos de dispositivo** correspondientes son los siguientes:
 
@@ -617,7 +617,7 @@ printf "hello seeed\r\n" > /dev/ttyACM1
 El Terminal 1 mostrará el contenido solicitado por el Terminal 2 para ser impreso.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2100/232_test.png" style={{width:800, height:'auto'}}/></div>
 
-## Pruebas DI (Entrada Digital)
+## Prueba DI (Entrada Digital)
 
 reComputer Industrial R21xx contiene 4x puertos DI, el usuario puede configurar estos puertos según las necesidades reales.
 
@@ -774,7 +774,7 @@ sudo ip link set can0 up type can bitrate 500000
 sudo ip link set can1 up type can bitrate 500000
 ```
 
-4. Confirma el estado de los pines:
+4. Confirma el estado del pin:
 
 ```bash
 ip -d link show can0
@@ -827,7 +827,7 @@ echo "can0 & can1 are up @ 500 kbit/s"
 ### Prueba Python-CAN
 
 [Python-CAN](https://github.com/raspberrypi/usbboot) es una biblioteca Python multiplataforma que proporciona una interfaz de programación unificada para la comunicación del bus Controller Area Network (CAN), soportando una amplia gama de interfaces de hardware CAN y buses virtuales, y permitiendo la implementación fácil de transmisión de mensajes CAN, recepción, filtrado, monitoreo de bus y otras operaciones.
-De manera similar, las interfaces CAN necesitan estar físicamente conectadas para lograr comunicación de bucle de retorno.
+De manera similar, las interfaces CAN necesitan estar conectadas físicamente para lograr comunicación de bucle de retorno.
 
 1. Configura la velocidad de baudios CAN estándar (500 kbit/s):
 
@@ -1122,7 +1122,7 @@ Una vez que identifiques la entrada correspondiente a tu SSD, puedes proceder co
 
 ## UPS para Apagado Seguro
 
-Un GPIO6 entre la CPU y la entrada de alimentación DC se usa para alertar a la CPU cuando la fuente de alimentación se corta. Entonces la CPU debería hacer algo urgente en un script antes del agotamiento de energía del supercapacitor y ejecutar un "$ shutdown".
+Un GPIO6 entre la CPU y la entrada de alimentación DC se usa para alertar a la CPU cuando la fuente de alimentación se corta. Entonces la CPU debería hacer algo urgente en un script antes del agotamiento de energía del supercondensador y ejecutar un "$ shutdown".
 Otra forma de usar esta función es Iniciar un apagado cuando el pin GPIO cambia. El pin GPIO dado se configura como una tecla de entrada que genera eventos KEY_POWER. Este evento es manejado por systemd-logind iniciando un apagado.
 
 1. Conexión de hardware.
@@ -1237,7 +1237,7 @@ sudo python3 ups_shutdown.py
 
 ## Acelerador de IA
 
-El slot M.2 M-KEY 2280 en el reComputer Industrial R21xx está diseñado para acomodar Aceleradores de IA PCIE M.2. Y la serie R21xx-12 ha sido preinstalada con un Acelerador de IA Hailo-8 M.2 de hasta 26TOPS.
+El slot M.2 M-KEY 2280 en el reComputer Industrial R21xx está diseñado para acomodar Acelerador de IA PCIE M.2. Y la serie R21xx-12 ha sido preinstalada con un Hailo-8 M.2 AI Acceleration hasta 26TOPS.
 Si compraste el producto de la serie R21xx-10, necesitarás comprar el módulo NPU de Hailo para habilitar la funcionalidad de IA.
 El dispositivo viene preinstalado con el controlador del acelerador Hailo, por lo que puedes usarlo directamente y ejecutar el caso de prueba:
 
