@@ -7,7 +7,7 @@ keywords:
   - 13.3 inch
   - ESP32
   - SenseCraft HMI
-image: https://files.seeedstudio.com/wiki/Epaper/EE02/1.JPG
+image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 slug: /getting_started_with_ee02
 last_update:
   date: 2025-12-20
@@ -20,7 +20,7 @@ The **EE02** is a high-performance E-ink screen driver board specifically design
 
 Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers a seamless experience for developers looking to integrate large-format E-ink displays into their IoT projects. It simplifies the driving process and supports the SenseCraft HMI platform for easy content management.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.JPG" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 ### Features
 
@@ -54,13 +54,16 @@ Similar to its sibling, the EE04 (designed for smaller screens), the EE02 offers
 
 ## Hardware Overview
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/2.JPG" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/overview.png" style={{width:800, height:'auto'}}/></div>
 
 - **USB Type-C**: For power supply and firmware flashing.
 - **FPC Connector**: To connect the 13.3-inch E-ink display.
 - **Reset Button**: To reset the board.
+- **Buttons**: They are "refresh the page","switch previous page" and "switch next page"
+- **Switch**: Control the power of battery on/off.
 - **Boot Button**: Used for entering bootloader mode.
-- **LED Indicators**: Show power and connection status.
+- **LED Indicators**: Blinking means no battery connection. Green light on means battery is charging.
+- **JST Connector**: 2 pins JST 2.0mm connector to connect battery.
 
 ## Getting Started with SenseCraft HMI
 
@@ -132,8 +135,8 @@ Finally the EE02 will receive the data and refresh the 13.3-inch screen with you
 *   This can happen if the screen hasn't been refreshed for a long time or if the power supply is unstable. Try refreshing the screen again via the HMI platform.
 
 ## Resources
-- **[PDF]** [EE02 SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
-- **[ZIP]** [EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
 
 ## Tech Support & Product Discussion
 

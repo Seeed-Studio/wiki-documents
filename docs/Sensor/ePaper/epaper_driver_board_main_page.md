@@ -1,7 +1,7 @@
 ---
 description: This article is a collection page for the ePaper Driver Boards.
 title: ePaper Driver Board Overview
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 slug: /xiao_epaper_display_board_overview
 sidebar_position: 1
 last_update:
