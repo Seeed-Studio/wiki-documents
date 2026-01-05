@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /es/WM1302_module
 last_update:
-  date: 4/24/2025
-  author: Leo
+  date: 12/15/2025
+  author: David Du
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
@@ -43,7 +43,7 @@ El WM1302 está diseñado para aplicaciones M2M e IoT y puede ser ampliamente ap
 - **Alta sensibilidad** hasta -139 dBm @SF12 con front-end TX/RX SX1250; potencia TX hasta 26 dBm @3.3V.
 - **Certificado con CE, FCC y TELEC**. Simplifica el proceso de certificación del producto final.
 
-## Descripción General del Hardware
+## Descripción del Hardware
 
 ### Diagrama
 
@@ -377,7 +377,7 @@ El WM1302 está diseñado para aplicaciones M2M e IoT y puede ser ampliamente ap
 
 - Desarrollo de dispositivos Gateway LPWAN
 
-- Desarrollo de cualquier aplicación de comunicación inalámbrica de larga distancia
+- Desarrollo de aplicaciones de comunicación inalámbrica de larga distancia
 
 - Aprendizaje e investigación de aplicaciones LoRa® y LoRaWAN®
 
@@ -386,7 +386,7 @@ El WM1302 está diseñado para aplicaciones M2M e IoT y puede ser ampliamente ap
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_4.jpeg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/WM1302_module/WM1302_4.jpeg" alt="pir" width={600} height="auto" /></p>
 
-## Introducción
+## Primeros Pasos
 
 ### Diferencia entre la versión SPI y la versión USB
 
@@ -404,7 +404,7 @@ Para el Módulo Gateway LoRaWAN® WM1302 versión USB, los chips Semtech SX1302 
 
 - WM1302 Pi Hat para Raspberry Pi
 
-- Adaptador de Alimentación para Raspberry Pi
+- Adaptador de Corriente para Raspberry Pi
 
 - Una antena LoRa®
 
@@ -622,7 +622,7 @@ exit 0
 
 <br />
 
-Elige tu Servidor de Red LoRaWAN preferido `server_address` y el EUI del gateway `gateway_ID` en el correspondiente `global_conf.json.sx1250.xxxxx` basado en el módulo que estés usando, y modifica el `up/down port` a `1700`. Luego ejecuta el siguiente código para iniciar el concentrador:
+Elige tu servidor de red LoRaWAN preferido `server_address` y el EUI del gateway `gateway_ID` en el correspondiente `global_conf.json.sx1250.xxxxx` basado en el módulo que estés usando, y modifica el `up/down port` a `1700`. Luego ejecuta el siguiente código para iniciar el concentrador:
 
 
 ```shell
@@ -764,7 +764,7 @@ cd ~/sx1302_hal/packet_forwarder
 
 ---
 
-Ahora, el reenviador de paquetes puede ejecutarse correctamente. Para reenviar exitosamente los datos a nuestro Servidor de Red LoRaWAN (por ejemplo, TTN o ChirpStack), aún necesitamos hacer algunas configuraciones en el lado del servidor.
+Ahora, el reenviador de paquetes puede ejecutarse correctamente. Para reenviar exitosamente datos a nuestro Servidor de Red LoRaWAN (por ejemplo, TTN o ChirpStack), aún necesitamos hacer algunas configuraciones en el lado del servidor.
 
 Para hacer eso, necesitamos registrar primero el Gateway de Raspberry Pi que acabamos de construir en nuestro Servidor de Red LoRa. Tomando [TTN](https://www.thethingsindustries.com/docs/getting-started/) como ejemplo, inicia sesión en la [consola TTN](https://eu1.cloud.thethings.network/console), haz clic en el botón `Gateways` en el panel del lado izquierdo y haz clic en `Register gateway`. Completa el `Gateway EUI`, `Gateway Server address` y `Frequency plan`, deja las otras opciones con la configuración predeterminada.
 
@@ -802,7 +802,7 @@ Reinicia `lora_pkt_fwd` usando el comando `./lora_pkt_fwd -c global_conf.json.sx
 
 <br />
 
-Hemos observado que ciertos módulos (versión USB WM1302-US915) pueden fallar al transmitir paquetes de datos de enlace descendente correctamente debido a diferencias del hardware. Para solucionar este problema, por favor modifica el valor de la macro `TX_JIT_DELAY` (puedes encontrar esta macro en `/sx1302_hal/packet_forwarder/src/jitqueue.c`) de 40000 a 120000 y recompila el sx1302_hal.
+Hemos observado que ciertos módulos (WM1302-US915 versión USB) pueden fallar al transmitir paquetes de datos de enlace descendente correctamente debido a diferencias del hardware. Para solucionar este problema, por favor modifica el valor de la macro `TX_JIT_DELAY` (puedes encontrar esta macro en `/sx1302_hal/packet_forwarder/src/jitqueue.c`) de 40000 a 120000 y recompila el sx1302_hal.
 
 
 </details>
