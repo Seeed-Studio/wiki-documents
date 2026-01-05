@@ -1,5 +1,5 @@
 ---
-description: このwikiは、Starai Arm Manipulator - ROS2 MoveItガイドを提供します。
+description: このwikiはStarai Arm Manipulator - ROS2 MoveItガイドを提供します。
 title: ROS2 MoveItでのStarai Arm
 keywords:
 - Moveit
@@ -25,22 +25,22 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Fashionstar-Star-Arm-Viola-Violin-p-6497.html" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入!!! 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手!!! 🖱️</font></span></strong>
 </a></div>
 
 ## 製品紹介
 
 1. **オープンソース & 二次開発が容易**
-    [Fashion Star Robotics](https://fashionrobo.com/)が提供するこのシリーズのサーボモーターは、オープンソースで簡単にカスタマイズ可能な6+1自由度ロボットアームソリューションを提供します。
+    [Fashion Star Robotics](https://fashionrobo.com/)が提供するこのサーボモーターシリーズは、オープンソースで簡単にカスタマイズ可能な6+1自由度ロボットアームソリューションを提供します。
 
 2. **様々なペイロードを持つデュアルアームシステム**
-    Violinはリーダーロボットアームとして機能します。アーム範囲の70%において、フォロワーアームViolaの動作ペイロードは300g、フォロワーアームCelloの動作ペイロードは750gです。
+    Violinはリーダーロボットアームとして機能します。アーム範囲の70%において、フォロワーアームViolaは300gの動作ペイロードを持ち、フォロワーアームCelloは750gの動作ペイロードを持ちます。
 
 3. **ROS2、Moveit2、Isaac Simをサポート**
     ロボットアームデータトピックの発行・購読とロボットアームの制御にROS2をサポートし、逆運動学計算にMoveIt2、Isaac Simでのシミュレーションもサポートします。
 
 4. **LeRobotプラットフォーム統合サポート**
-    [LeRobotプラットフォーム](https://github.com/huggingface/lerobot)との統合に特化して設計されています。このプラットフォームは、データ収集、シミュレーション、トレーニング、デプロイメントを含む実世界のロボティクスタスクにおける模倣学習のためのPyTorchモデル、データセット、ツールを提供します。
+    [LeRobotプラットフォーム](https://github.com/huggingface/lerobot)との統合のために特別に設計されています。このプラットフォームは、データ収集、シミュレーション、トレーニング、デプロイメントを含む実世界のロボティクスタスクにおける模倣学習のためのPyTorchモデル、データセット、ツールを提供します。
 
 5. **オープンソースSDK**
      PythonとC++ SDK開発をサポート
@@ -52,10 +52,10 @@ last_update:
     迅速なDIY交換を可能にします。
 
 8. **豊富な学習リソース**
-    環境設定、インストールとデバッグガイド、カスタム把持タスクの例を含む包括的なオープンソース学習リソースを提供し、ユーザーが迅速に開始してロボットアプリケーションを開発できるよう支援します。
+    環境設定、インストールとデバッグガイド、カスタム把握タスクの例を含む包括的なオープンソース学習リソースを提供し、ユーザーが迅速に開始してロボットアプリケーションを開発できるよう支援します。
 
 9. **Nvidiaプラットフォーム互換性**
-    Nvidia Jetsonプラットフォーム経由でのデプロイメントをサポートします。
+    Nvidia Jetsonプラットフォーム経由でのデプロイメントがサポートされています。
 
 ## 仕様
 
@@ -65,11 +65,11 @@ last_update:
 | リーチ                | 470mm                                             | 470mm                                             | 670mm |
 | スパン                 | 940mm                                             | 940mm                                             | 1340mm |
 | 再現性        | 2mm                                               | -                                                 | 1mm  |
-| 動作ペイロード      | 300g（リーチの70%時）                            | -                                                 |  750g（リーチの70%時）   |
+| 動作ペイロード      | 300g（リーチの70%）                            | -                                                 |  750g（リーチの70%）   |
 | サーボ               | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 |RX18-U100H-M x3<br/> RX8-U50H-M x3<br/> RX8-U51H-M x1|
 | パラレルグリッパーキット  | ✅                                                 | -                                                 | ✅   |
-| 手首回転         | Yes                                               | Yes                                               | Yes |
-| 任意位置での保持 | Yes                                               | Yes（ハンドルボタン付き）                          |  Yes|
+| 手首回転         | はい                                               | はい                                               | はい |
+| 任意位置での保持 | はい                                               | はい（ハンドルボタン付き）                          |  はい|
 | 手首カメラマウント   |参考3Dプリントファイルを提供 | | 参考3Dプリントファイルを提供
 | LeRobotとの連携   | ✅                                                 | ✅                                                 | ✅|
 | ROS 2との連携     | ✅                                                 | ✅                                                | ✅|
@@ -129,7 +129,7 @@ colcon build
 
 ```
 cd ~/starai_ws/src
-git clone https://github.com/Welt-liu/starai-arm-moveit2.git
+git clone https://github.com/Seeed-Projects/fashionstar-starai-arm-ros2.git
 cd ~/starai_ws
 colcon build
 echo "source ~/starai_ws/install/setup.bash" >> ~/.bashrc
@@ -197,7 +197,7 @@ ros2 launch cello_moveit_config moveit_write_read.launch.py
 
 ## 位置と姿勢トピック送信ノードデモ
 
-ここで `src/arm_moveit_write/src/topic_publisher.cpp` を更新します
+ここで `src/arm_moveit_write/src/topic_publisher.cpp` を更新してください
 
 ```bash
     // // viola

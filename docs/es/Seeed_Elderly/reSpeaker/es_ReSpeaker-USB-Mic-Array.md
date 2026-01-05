@@ -12,6 +12,12 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)
 
+:::important
+Este producto ha llegado al final de su vida útil (EOL).
+Si planea realizar una nueva compra o iniciar un nuevo proyecto, recomendamos encarecidamente utilizar la alternativa más reciente y compatible, [**XVF3000**](https://wiki.seeedstudio.com/es/respeaker_mic_array_v3.0/)。
+Este producto ya no se fabrica ni se mantiene activamente.
+:::
+
 Un dispositivo de captación de voz listo para usar es la voz del cliente.
 
 Durante el año pasado, [Respeaker Mic Array V2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2-0.html) se ha vendido más de 10K unidades en formato de placa de desarrollo. Los clientes siguen solicitando un dispositivo completo con carcasa, lo cual es desafiante para ellos diseñar, considerando los principios acústicos.
