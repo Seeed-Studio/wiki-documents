@@ -12,6 +12,12 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)
 
+:::important
+本製品は現在、製品ライフサイクル終了（EOL）となっています。
+新規購入や新しいプロジェクトの開始を予定されている場合は、新しくサポートされている代替製品である[**XVF3000**](https://wiki.seeedstudio.com/ja/respeaker_mic_array_v3.0/) のご使用を強く推奨します。
+本製品はすでに製造終了しており、積極的な保守も行われていません。
+:::
+
 すぐに使える音声収集デバイスは、お客様の声です。
 
 過去1年間で、[Respeaker Mic Array V2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2-0.html) は開発ボード形式で10,000台以上販売されました。お客様からは、音響原理を考慮した筐体設計が困難であることから、筐体付きの完成品デバイスの要望が絶えませんでした。

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-30 15:04:32 (北京时间)
-// 多语言页面: 2088 个
+// 生成时间: 2025-12-31 17:41:46 (北京时间)
+// 多语言页面: 2094 个
 
 (function() {
   'use strict';
@@ -2159,6 +2159,12 @@
     "es",
     "ja"
   ],
+  "/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/yolov8_on_ai_box_for_fall_climbing_tracking": [
     "cn",
     "en",
@@ -2526,6 +2532,12 @@
     "ja"
   ],
   "/ai_remote_wireless_monitor_system_with_wifi_haLow": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_parking_slot_monitoring_demo_with_recamera": [
     "cn",
     "en",
     "es",
@@ -5938,6 +5950,18 @@
     "es",
     "ja"
   ],
+  "/xiao_epaper_display_board_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_ee02": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/epaper_ee04_eezstudio": [
     "cn",
     "en",
@@ -8421,7 +8445,19 @@
     "es",
     "ja"
   ],
+  "/xiao_esp32c5_wifi_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c5_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_pin_multiplexing": [
     "cn",
     "en",
     "es",
@@ -8481,7 +8517,7 @@
     "es",
     "ja"
   ],
-  "/xiao_pin_multiplexing_esp33c6": [
+  "/xiao_pin_multiplexing_esp32c6": [
     "cn",
     "en",
     "es",

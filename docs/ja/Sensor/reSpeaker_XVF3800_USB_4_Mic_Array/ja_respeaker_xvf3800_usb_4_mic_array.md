@@ -191,6 +191,16 @@ ReSpeaker XVF3800 の各タイプのファームウェアは異なる更新方�
 
 reSpeaker XVF3800 を USB ケーブルで PC に接続します。XMOS のファームウェアをフラッシュするには、XMOS USB-C ポート（3.5mm ジャックポートの近く）を使用する必要があることに注意してください。
 
+| ファームウェア | チャンネル数 | 備考 |
+|---------|----------|-------|
+| respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | 処理済み2チャンネル出力 <br /> チャンネル 0：会議（Conference） <br /> チャンネル 1：ASR |
+| application_xvf3800_ua-io16-6ch-sqr-v2.0.8-test1.xe | 6 | チャンネル 0：処理済み音声（会議） <br /> チャンネル 1：処理済み音声（ASR） <br /> チャンネル 2：マイク 0 の生データ <br /> チャンネル 3：マイク 1 の生データ <br /> チャンネル 4：マイク 2 の生データ <br /> チャンネル 5：マイク 3 の生データ |
+| respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin | 2 | 処理済み2チャンネル出力 <br /> チャンネル 0：会議（Conference） <br /> チャンネル 1：ASR |
+| respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | 処理済み2チャンネル出力 <br /> チャンネル 0：ASR <br /> チャンネル 1：ウェイクワード（Wake word） |
+
+ユーザーは、上記のファームウェアバージョンにおいて処理済み出力チャンネルの選択を変更することができます。
+詳細については、以下の [XMOS ドキュメント](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/03_using_the_host_application.html#output-selection) を参照してください。
+
 #### DFU Util のインストール
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) は、USB 経由でデバイスファームウェアアップグレードを行うためのコマンドラインツールです。
