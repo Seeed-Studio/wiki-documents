@@ -3893,6 +3893,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_for_Jetson',
           ]
         }
       ],
