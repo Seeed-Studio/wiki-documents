@@ -12,6 +12,12 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)
 
+:::important
+本产品现已进入生命周期结束（EOL）状态。
+如果您计划购买或启动新项目，我们强烈建议使用更新且仍受支持的替代方案[**XVF3000**](https://wiki.seeedstudio.com/cn/respeaker_mic_array_v3.0/)。
+该产品已不再生产，也不再进行主动维护。
+:::
+
 开箱即用的语音拾取设备是客户的心声。
 
 在过去的一年中，[Respeaker 麦克风阵列 V2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2-0.html) 以开发板的形式销售了超过 10K 个单位。客户不断要求提供带有外壳的完整设备，考虑到声学原理，这对他们来说设计起来很有挑战性。
