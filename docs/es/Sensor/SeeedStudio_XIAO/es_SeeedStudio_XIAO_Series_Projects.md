@@ -218,7 +218,7 @@ No podemos hacerlo sin el amor y la contribución que recibimos de la comunidad,
  <table align="center">
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_esp32c6_getting_started/" target="_blank">Wiki de Introducción</a></th>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_pin_multiplexing_esp33c6/" target="_blank">Uso de Pines</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_pin_multiplexing_esp32c6/" target="_blank">Uso de Pines</a></th>
             <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/es/xiao_wifi_usage_esp32c6/" target="_blank">Uso de Wi-Fi</a></th>
   </tr>
   <tr>
