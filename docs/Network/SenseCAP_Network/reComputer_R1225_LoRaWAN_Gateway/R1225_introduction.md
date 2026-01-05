@@ -4,7 +4,7 @@ title: Introduction
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction
+slug: /r1225_introduction
 last_update:
   date: 01/04/2026
   author: Kian
