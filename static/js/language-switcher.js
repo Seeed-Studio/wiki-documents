@@ -8481,7 +8481,7 @@
     "es",
     "ja"
   ],
-  "/xiao_pin_multiplexing_esp33c6": [
+  "/xiao_pin_multiplexing_esp32c6": [
     "cn",
     "en",
     "es",
