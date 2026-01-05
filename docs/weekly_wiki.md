@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/29/2025
+  date: 01/05/2026
   author: Frank
 ---
 
@@ -17,9 +17,50 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 29th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is January 5th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
+
+### [YOLOv11 for Speed Estimation and Loitering Detection](https://wiki.seeedstudio.com/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer/)
+
+<div class="video-container">
+  <iframe width="800" height="400" src="https://www.youtube.com/embed/cscCVUAidGo" title="YOLOv11n on Raspberry Pi reComputer for Loitering Detection and Speed Estimation (Hailo-8)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div style={{ textAlign: "justify" }}>
+
+This wiki is a comprehensive real-time object detection, tracking, and speed estimation system optimized for Hailo AI accelerators use yolov11. This project enables efficient detection of objects (with focus on persons and vehicles) with simultaneous tracking and speed calculation capabilities.
+
+</div>
+
+### [Pin Multiplexing with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_pin_multiplexing/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The Seeed Studio XIAO ESP32-C5 is a powerful and versatile development board that features a variety of peripheral interfaces and GPIO pins. These pins can be used for various purposes, such as communicating with other devices, reading analog sensors, controlling LEDs, and more. In this tutorial, we will guide you on how to use the multiplexed pins of the XIAO ESP32-C5.
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### [Deploy Live VLM WebUI on reComputer Jetson](https://wiki.seeedstudio.com/deploy_live_vlm_webui_on_jetson/)
 
@@ -200,5 +241,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.12.08th](/Seeed_Elderly/weekly_wiki/2025/wiki251208)
 - [weekly wiki on 2025.12.15th](/Seeed_Elderly/weekly_wiki/2025/wiki251215)
 - [weekly wiki on 2025.12.22nd](/Seeed_Elderly/weekly_wiki/2025/wiki251222)
+- [weekly wiki on 2025.12.29th](/Seeed_Elderly/weekly_wiki/2025/wiki251229)
 
 </details>
