@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp
 slug: /Get_Started_with_SenseCAP_T2000_tracker
 last_update:
-  date: 12/8/2025
+  date: 1/5/2026
   author: Janet
 ---
 
@@ -15,6 +15,14 @@ last_update:
 This chapter shows you how to quickly set up your SenseCAP T2000 Tracker with the SenseCraft App.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.png" alt="pir" width={800} height="auto" /></p>
+
+:::caution note
+Please ensure you have coverage from a LoRaWAN network, such as Helium, TTN or other LoRaWAN networks. Without LoRaWAN networks, the device cannot send data to the cloud. The easiest way to use the trackers is with the `SenseCAP LoRaWAN Gateway` and the `SenseCraft app`.
+:::
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/krE6HBgWnRA?si=CRcLRApl1NZUHhqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Hardware Overview
 
@@ -27,6 +35,15 @@ This chapter shows you how to quickly set up your SenseCAP T2000 Tracker with th
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000C_Tracker_Hardware.jpg" alt="pir" width={800} height="auto" /></p>
 <div align="center">T2000-C with Solar Panel Exploded View</div>  
 <br />
+
+### Operating Environment
+
+SenseCAP T2000 Tracker is designed to operate reliably within a specific temperature range to ensure stable performance and battery safety. Please make sure the device is used and charged within these temperature ranges to avoid performance degradation or battery issues.
+
+| Parameter | T2000-A / T2000-B | T2000-C with Solar Panel|
+|---------|------------------|--------|
+| Operating Temperature | -40 °C ~ 85 °C | -20 °C ~ 60 °C |
+| Charging Temperature | / | 0 °C ~ 45 °C |
 
 ## Device Functions
 
@@ -51,16 +68,15 @@ The SenseCAP T2000 Tracker is equipped with 3-Axis Accelerometer.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_DataCache2.png" alt="pir" width={800} height="auto" /></p>
 
-The device can cache data, which can be enabled through Bluetooth configuration by opening `Location Data Cache`. The device uploads confirmation packets. When the LoRaWAN signal coverage is weak or there is no network coverage, the device cannot receive an ACK when uploading data. In this case, the data will be saved and entered the next cycle. When the device successfully uploads data at some point, it will send offline data. 
+The device can cache data, which can be enabled through Bluetooth configuration by opening `Location Data Cache`. The device uploads confirmation packets. When the LoRaWAN signal coverage is weak or there is no network coverage, the device cannot receive an ACK when uploading data. In this case, the data will be saved and entered the next cycle. When the device successfully uploads data at some point, it will send offline data.
 
 The device uploads the real-time location data first. Once the platform returns an ACK for that uplink, the tracker begins uploading the cached data stored locally, starting from the oldest entries to avoid overwriting newer data.
 
-The cache-uplink interval has been set to 40s. Cached data will be sent continuously at this interval until either a new real-time location uplink is triggered or the platform stops returning ACKs during the process. 
+The cache-uplink interval has been set to 40s. Cached data will be sent continuously at this interval until either a new real-time location uplink is triggered or the platform stops returning ACKs during the process.
 
 The maximum number of data that can be cached is 1000 records.
 
 Click the `Clear Cache` button will clear all cached data.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_DataCache.png" alt="pir" width={800} height="auto" /></p>
 
@@ -97,15 +113,13 @@ Click the `Clear Cache` button will clear all cached data.
 <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_GreenBreathingLight.gif" alt="pir" width={400} height="auto" /></p>
-<div align="center">After powering on, the green breathing light</div> 
+<div align="center">After powering on, the green breathing light</div>
 <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Bluetooth.gif" alt="pir" width={400} height="auto" /></p>
 <div align="center">Enter/Exit Bluetooth mode</div>  
 
 <br />
-
-
 
 :::info Note
 
@@ -133,7 +147,6 @@ Login to the SenseCraft APP.
 Click '+' tab on the top right, then scan the QR code on the device label.
 Click 'Add to account' then you can 'Configure' the device.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_AddDevice.png" alt="pir" width={800} height="auto" /></p>
 
 Bring the magnet close to the sensor area and tap 4 times quickly to turn it on, then tracker will enter the Bluetooth pairing automatically (if the tracker has powered on, tap 2 times quickly to manually enter Bluetooth pairing), and select device by SN.
@@ -147,6 +160,12 @@ There are 2 configuration modes:
 
 ### Quick Configuration
 
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qne730YZtSo?si=jLYLlO8r6SgnYIEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<br />
+
 For Quick Configuration, you only need to setup the following parameters:
 
 - **Frequency**:it should be same as your gateway.
@@ -157,6 +176,12 @@ For Quick Configuration, you only need to setup the following parameters:
 Tracker will try to join LoRaWAN network after exiting the Bluetooth pairing mode, the green breathing light flashes when trying to join the network, and flashes 5 times quickly if the network is successfully joined.
 
 ### Advanced Configuration
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ROjXT6D8xtA?si=roC5PW9Cce4Jp1Kl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<br />
 
 - Open the APP and click `Device Bluetooth Configuration` in the `User` page. Then select  `SenseCAP Asset Tracker T2000` to enter `Setup` to config the tracker.
 - Follow the steps above to enter the Bluetooth pairing mode.
@@ -169,6 +194,14 @@ There are four configuration pages in total.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_ConfigurationPage.png" alt="pir" width={800} height="auto" /></p>
 
 Click the `Measure` in the `Information` - `Basic` page, then you will get the sensor values:
+
+1. **3-Axis Accelerometer (X / Y / Z Values)**
+
+- The device reports acceleration values along the X, Y and Z axes. These readings help users understand the device’s posture, movement or vibration status during operation or installation.
+
+2. **Tamper Button Status**
+- Pressed: the device is securely installed
+- Not Pressed: the device is not fully mounted or has been removed
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Measure.png" alt="pir" width={800} height="auto" /></p>
 
@@ -288,8 +321,8 @@ Please setup the work mode according to your needs.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_WorkMode.png" alt="pir" width={800} height="auto" /></p>
 
-<table> 
-<tr><th colspan="1"><b>Parameters</b></th><th colspan="1"><b>Description</b></th><th colspan="1"><b>Default / Note</b></th></tr> <tr><td colspan="1">Heartbeat Interval</td><td colspan="1">When no data is uploaded by the device within the heartbeat interval, a heartbeat packet will be triggered. This packet only contains battery information.</td><td colspan="1">Default 720 minutes.</td></tr> <tr><td colspan="1">Enable 3-axis Sensor</td><td colspan="1">If this switch is turned on, 3-axis sensor will be collected and uploaded, but it will increase power consumption.</td><td colspan="1">Off by default.</td></tr> <tr><td colspan="1">Enable Disassembly Alarm</td><td colspan="1">If this switch is turned on, the device activates an alarm when the device is removed after installation.</td><td colspan="1">Off by default.</td></tr> <tr><td colspan="1">Disassembly Alarm Duration(min)</td><td colspan="1">This parameter specifies how long the device keeps reporting after a Disassembly Alarm is triggered, sending one real-time position packet with the alarm event every minute.</td><td colspan="1">This setting is only visible when Enable Disassembly Alarm is turned on.</td></tr> <tr><td colspan="1" rowspan="3">Work Mode</td><td colspan="1"><b>Standby Mode</b></td><td colspan="1">Uploads heartbeat packets (battery level only) based on the heartbeat interval.</td></tr> <tr><td colspan="1"><b>Periodic Mode</b></td><td colspan="1">Location and sensor data are uploaded according to the uplink interval.</td></tr> <tr><td colspan="1"><b>Event Mode</b></td><td colspan="1">Set threshold trigger conditions based on measured values such as movement and shock, and adjust the uplink interval when no event is triggered.</td></tr> <tr><td colspan="1">Uplink Interval (min)</td> <td colspan="1"><b>Periodic Mode</b></td> <td colspan="1">Periodically locates and uploads data. Default 60 minutes. Higher frequency increases power consumption.</td></tr> <tr><td colspan="1">Restore All Settings</td><td colspan="2">Restore all configuration parameters to factory settings, including LoRa, Work Mode, and Geolocation.</td></tr> 
+<table>
+<tr><th colspan="1"><b>Parameters</b></th><th colspan="1"><b>Description</b></th><th colspan="1"><b>Default / Note</b></th></tr> <tr><td colspan="1">Heartbeat Interval</td><td colspan="1">When no data is uploaded by the device within the heartbeat interval, a heartbeat packet will be triggered. This packet only contains battery information.</td><td colspan="1">Default 720 minutes.</td></tr> <tr><td colspan="1">Enable 3-axis Sensor</td><td colspan="1">If this switch is turned on, 3-axis sensor will be collected and uploaded, but it will increase power consumption.</td><td colspan="1">Off by default.</td></tr> <tr><td colspan="1">Enable Disassembly Alarm</td><td colspan="1">If this switch is turned on, the device activates an alarm when the device is removed after installation.</td><td colspan="1">Enabled by default.</td></tr> <tr><td colspan="1">Disassembly Alarm Duration(min)</td><td colspan="1">This parameter specifies how long the device keeps reporting after a Disassembly Alarm is triggered, sending one real-time position packet with the alarm event every minute.</td><td colspan="1">This setting is only visible when Enable Disassembly Alarm is turned on. Default 3 minutes.</td></tr> <tr><td colspan="1" rowspan="3">Work Mode</td><td colspan="1"><b>Standby Mode</b></td><td colspan="1">Uploads heartbeat packets (battery level only) based on the heartbeat interval.</td></tr> <tr><td colspan="1"><b>Periodic Mode</b></td><td colspan="1">Location and sensor data are uploaded according to the uplink interval.</td></tr> <tr><td colspan="1"><b>Event Mode</b></td><td colspan="1">Set threshold trigger conditions based on measured values such as movement and shock, and adjust the uplink interval when no event is triggered.</td></tr> <tr><td colspan="1">Uplink Interval (min)</td> <td colspan="1"><b>Periodic Mode</b></td> <td colspan="1">Periodically locates and uploads data. Default 60 minutes. Higher frequency increases power consumption.</td></tr> <tr><td colspan="1">Restore All Settings</td><td colspan="2">Restore all configuration parameters to factory settings, including LoRa, Work Mode, and Geolocation.</td></tr>
 </table>
 
 <br />
@@ -307,8 +340,6 @@ For Event Mode, there are three events:
 <tr><td rowspan="2">Motionless Event</td><td colspan="2">When the device is stationary in a location for more than a certain amount of time, a stationary timeout event is triggered. </td></tr>
 <tr><td>Motionless Timeout(min)</td><td>Default is 360 minutes.</td></tr>
 </table>
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_EventMode.png" alt="pir" width={800} height="auto" /></p>
 
@@ -340,13 +371,11 @@ The tracker supports positioning via GNSS, Wi-Fi (Only T2000-B support), and Blu
 <tr><td><b>Clear Cache</b></td><td colspan="2">Clear all historical cache data.</td></tr>
 </table>
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_ScanTime.png" alt="pir" width={800} height="auto" /></p>
 
-After all parameters are configured, click “Send”. 
-If no parameter needs to be modified, exit Bluetooth configuration, and return to the home page. 
+After all parameters are configured, click “Send”.
+If no parameter needs to be modified, exit Bluetooth configuration, and return to the home page.
 At this point, the device initiates a LoRa network access request.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_SendButton.png" alt="pir" width={400} height="auto" /></p>
 
@@ -355,17 +384,23 @@ At this point, the device initiates a LoRa network access request.
 #### SenseCraft App
 
 Check the Location on the APP.
-After binding the device, enter the device page and click the button in the upper right corner to view the historical location data of the device. 
-Click on the filter to choose to view location data under positioning modes such as 'All/GNSS/BLE/Wi-Fi'. 
+After binding the device, enter the device page and click the button in the upper right corner to view the historical location data of the device.
+Click on the filter to choose to view location data under positioning modes such as 'All/GNSS/BLE/Wi-Fi'.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_DataView.png" alt="pir" width={800} height="auto" /></p>
+
+Click `History`, you can view all historical positioning data for a selected date.
+Click the positioning icon in the upper-right corner to view all `Positioning Abnormal` records. When GNSS, Wi-Fi or Bluetooth scanning times out, the related event will be shown on this page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000C_Tracker_DataView2.png" alt="pir" width={800} height="auto" /></p>
 
 If the device triggers a Disassembly Alarm, a red alarm icon will be displayed next to each data packet during the triggering period.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm1.png" alt="pir" width={800} height="auto" /></p>
 
+When the disassembly alarm is trggered, a alarm notification message would be sent to your phone. Also, the disassembly alarm will appear on both the `Device` and `Details` pages in the APP, along with a notification window, which helps users quickly check the device's status.
 
-The Disassembly Alarm will appear on both the `Device` and `Details` pages in the APP, along with a notification window, which helps users quickly check the device's status.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm_Message.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm2.png" alt="pir" width={800} height="auto" /></p>
 

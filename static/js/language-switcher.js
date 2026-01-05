@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-19 17:01:04 (北京时间)
-// 多语言页面: 2083 个
+// 生成时间: 2025-12-31 17:41:46 (北京时间)
+// 多语言页面: 2094 个
 
 (function() {
   'use strict';
@@ -731,6 +731,12 @@
     "es",
     "ja"
   ],
+  "/deploy_live_vlm_webui_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/local_ai_ssistant": [
     "cn",
     "en",
@@ -834,6 +840,12 @@
     "ja"
   ],
   "/Update-Jetson-Linux-OTA-Using-Allxon": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/llm_interface_control_jetson": [
     "cn",
     "en",
     "es",
@@ -2147,6 +2159,12 @@
     "es",
     "ja"
   ],
+  "/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/yolov8_on_ai_box_for_fall_climbing_tracking": [
     "cn",
     "en",
@@ -2519,6 +2537,12 @@
     "es",
     "ja"
   ],
+  "/ai_parking_slot_monitoring_demo_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
@@ -2538,6 +2562,12 @@
     "ja"
   ],
   "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
     "es",
@@ -5920,6 +5950,18 @@
     "es",
     "ja"
   ],
+  "/xiao_epaper_display_board_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_ee02": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/epaper_ee04_eezstudio": [
     "cn",
     "en",
@@ -8403,13 +8445,25 @@
     "es",
     "ja"
   ],
+  "/xiao_esp32c5_wifi_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c5_getting_started": [
     "cn",
     "en",
     "es",
     "ja"
   ],
-  "/xiao_esp32c5_micropyhton": [
+  "/xiao_esp32c5_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_with_micropyhton": [
     "cn",
     "en",
     "es",
@@ -8463,7 +8517,7 @@
     "es",
     "ja"
   ],
-  "/xiao_pin_multiplexing_esp33c6": [
+  "/xiao_pin_multiplexing_esp32c6": [
     "cn",
     "en",
     "es",
@@ -8817,6 +8871,12 @@
     "es",
     "ja"
   ],
+  "/xiao_mg24_sense_micropython": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_mg24_pin_multiplexing": [
     "cn",
     "en",
@@ -9016,6 +9076,12 @@
     "ja"
   ],
   "/xiao_ra4m1_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_ra4m1_micropython": [
     "cn",
     "en",
     "es",

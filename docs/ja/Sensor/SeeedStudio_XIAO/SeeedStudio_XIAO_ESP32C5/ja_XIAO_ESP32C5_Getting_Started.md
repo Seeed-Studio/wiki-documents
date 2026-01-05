@@ -4,7 +4,7 @@ description: |
 keywords:
   - xiao
   - esp32c5
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5.webp
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /ja/xiao_esp32c5_getting_started
 last_update:
   date: 11/26/2025
@@ -20,7 +20,7 @@ last_update:
    <th>Seeed Studio XIAO ESP32-C5</th>
   </tr>
   <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -64,8 +64,8 @@ last_update:
             <th>メモリ</th>
             <td>8 MB PSRAM & 8 MB Flash</td>
             <td>8 MB PSRAM & 8 MB Flash</td>
-            <td>400 KB SRAM, 4 MB Flash</td>
-            <td>512KB SRAM , 4MB Flash</td>
+            <td>400 KB SRAM、4 MB Flash</td>
+            <td>512KB SRAM、4MB Flash</td>
         </tr>
         <tr>
             <th>インターフェース</th>
@@ -90,7 +90,7 @@ last_update:
         </tr>
         <tr>
             <th>オンボード LED</th>
-            <td>C / L LED</td>
+            <td>Charge / USER LED</td>
             <td>Charge / USER LED</td>
             <td>Charge LED</td>
             <td>Charge / USER LED</td>
@@ -113,8 +113,8 @@ last_update:
 - **優れた RF 性能：** 外部 RF アンテナが含まれています。
 - **バッテリー充電チップ：** リチウムバッテリーの充放電管理をサポート。
 - **豊富なオンチップリソース：** 384 KB オンチップ SRAM、320 KB ROM
-- **超小型サイズ：** ウェアラブルデバイスや小型プロジェクト向けの親指サイズ（21x17.8mm）XIAO シリーズクラシックフォームファクター
-- **信頼性の高いセキュリティ機能：** AES-128/256、SHA ファミリーハッシュ、HMAC、専用デジタル署名ペリフェラル、およびセキュアブート（V2）をサポートする暗号化ハードウェアアクセラレータ。
+- **超小型サイズ：** ウェアラブルデバイスや小型プロジェクト向けの親指サイズ（21x17.8mm）XIAO シリーズクラシックフォームファクタ
+- **信頼性の高いセキュリティ機能：** AES-128/256、SHA ファミリーハッシュ、HMAC をサポートする暗号化ハードウェアアクセラレータ、専用デジタル署名ペリフェラル、および Secure Boot（V2）。
 - **豊富なインターフェース：** 1×I2C、1×SPI、2×UART、最大 11×GPIO（PWM 対応）、5×ADC チャンネル、および JTAG ボンディングパッドインターフェース。
 - 片面実装部品、表面実装設計
 
@@ -167,7 +167,7 @@ XIAO ESP32-C5 をより早く使い始められるように、以下のハード
 </div>
 
 :::tip
-一部の USB ケーブルは電源供給のみで、データ転送ができません。USB ケーブルをお持ちでない場合や、お使いの USB ケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) をご確認ください。
+一部の USB ケーブルは電力供給のみでデータ転送ができません。USB ケーブルをお持ちでない場合や、お使いの USB ケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) をご確認ください。
 :::
 
 ### ソフトウェア
@@ -186,7 +186,7 @@ Arduino を初めて使用する場合は、[Getting Started with Arduino](https
   <br></br>
 
 - **ステップ 2.** Arduino アプリケーションを起動します。
-- **ステップ 3.** BOARDS MANAGER を開く -> **esp32** を検索 -> バージョン 3.3.4 以上をインストール
+- **ステップ 3.** BOARDS MANAGER を開く → **esp32** を検索 → バージョン 3.3.4 以上をインストール
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -226,7 +226,7 @@ void loop() {
 
 効果のデモンストレーション：
 
-プログラムをアップロードすると、L インジケータライトが 1 秒間隔で点滅し、同時にシリアルモニターに LED ON と LED OFF が印刷されます。
+プログラムをアップロードすると、L インジケータライトが 1 秒間隔で点滅し、同時にシリアルモニタに LED ON と LED OFF が印刷されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/uoload_2.png" style={{width:800, height:'auto'}}/></div>
@@ -301,7 +301,7 @@ XIAO ESP32-C5は、3.7Vリチウムバッテリーを電源入力として使用
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_wiring.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-はんだ付け時に正極と負極を短絡させて、バッテリーや機器を焼損させないよう注意してください。
+はんだ付け時に正極と負極を短絡させ、バッテリーと機器を焼損させないよう注意してください。
 :::
 
 **バッテリー使用に関する注意事項：**
@@ -367,7 +367,7 @@ void loop() {
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

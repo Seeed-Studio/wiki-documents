@@ -94,10 +94,11 @@ Grove - Base ShieldをSeeduinoに接続し、Grove - LED BarをD8に、Grove - E
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/img/Grove_emg_demo_2.gif" /></div>
 
 
+<!-- 
 # Grove-EMGセンサー v1.1
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-EMG_Detector/res/202000023+PCBA-Grove+EMG+Detector+v1.1.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
-</div>
+</div> -->
 
 リソース
 --------

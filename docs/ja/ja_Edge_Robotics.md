@@ -1,11 +1,13 @@
 ---
-description: このトピックでは、Seeed Studio のロボティクス製品ドキュメントを紹介します。
+description: このトピックでは、Seeed Studio のロボティクス製品ドキュメントと学習コースを紹介します。
 title: ロボティクス
 keywords:
 - robotics
 - nvidia
 - ros
 - isaac
+- learning
+- reinforcement learning
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/robotics_page
 last_update:
@@ -15,635 +17,657 @@ last_update:
 
 # 🤖 ロボティクス
 
-> *「今日の科学は明日の技術である。」 - エドワード・テラー*
+> *"今日の科学は明日の技術である。" - エドワード・テラー*
 
-<div className="quick-nav-container">
-  <nav className="quick-nav">
-    <a href="#robot-kits" className="nav-item">
-      <span className="icon">📦</span>
-      <span className="text">ロボットキット</span>
-      <div className="hover-effect"></div>
-    </a>
-    <a href="#actuators" className="nav-item">
-      <span className="icon">⚙️</span>
-      <span className="text">関節アクチュエータ</span>
-      <div className="hover-effect"></div>
-    </a>
-    <a href="#sensors" className="nav-item">
-      <span className="icon">👁️</span>
-      <span className="text">センサー</span>
-      <div className="hover-effect"></div>
-    </a>
-    <a href="#software" className="nav-item">
-      <span className="icon">💻</span>
-      <span className="text">ソフトウェア</span>
-      <div className="hover-effect"></div>
-    </a>
-  </nav>
-</div>
+<div className="robotic-tab-container">
 
-<div className="nav-grid">
+  <input type="radio" id="tab-hardware" name="robo-tabs" defaultChecked className="tab-input-hidden" />
+  <input type="radio" id="tab-learning" name="robo-tabs" className="tab-input-hidden" />
 
-## 📦 ロボットキット {#robot-kits}
+  <!-- 顶部 Tab 切换条 -->
+  <div className="tab-nav-wrapper">
+    <nav className="tab-nav">
+      <label htmlFor="tab-hardware" className="tab-item">
+        <span className="icon">📦</span>
+        <span className="text">ハードウェア Wiki</span>
+      </label>
+      <label htmlFor="tab-learning" className="tab-item">
+        <span className="icon">🎓</span>
+        <span className="text">学習センター</span>
+        <span className="badge">New</span>
+      </label>
+      <div className="tab-slider"></div>
+    </nav>
+  </div>
 
-<div class="category-group">
-  <div class="category-card robot-kits">
+  <!-- ==================== Tab 1: 硬件文档==================== -->
+  <div className="tab-content content-hardware">
 
-## 🤗 SO-Arm
+    <div className="quick-nav-container">
+      <nav className="quick-nav">
+        <a href="#robot-kits" className="nav-item">
+          <span className="icon">📦</span>
+          <span className="text">ロボットキット</span>
+          <div className="hover-effect"></div>
+        </a>
+        <a href="#actuators" className="nav-item">
+          <span className="icon">⚙️</span>
+          <span className="text">関節アクチュエータ</span>
+          <div className="hover-effect"></div>
+        </a>
+        <a href="#sensors" className="nav-item">
+          <span className="icon">👁️</span>
+          <span className="text">センサー</span>
+          <div className="hover-effect"></div>
+        </a>
+        <a href="#software" className="nav-item">
+          <span className="icon">💻</span>
+          <span className="text">ソフトウェア</span>
+          <div className="hover-effect"></div>
+        </a>
+      </nav>
+    </div>
 
-<div className="card-container">
-    <a href="/ja/lerobot_so100m_new/" className="nav-item">
-      <span className="text">SO100/101 アーム</span>
-    </a>
-    <a href="/ja/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 アーム with IsaacSim</span>
-    </a>
-    <a href="/ja/control_robotic_arm_via_phospho/" className="nav-item">
-      <span className="text">Phospho Lerobot</span>
-    </a>
-    <a href="/ja/training_soarm101_policy_with_isaacLab/" className="nav-item">
-    <span className="text">So Arm 強化学習</span>
-    <span className="tag recommended">New</span>
-    </a>
-    <a href="/ja/simulate_soarm101_by_leisaac/" className="nav-item">
-      <span className="text">SO100 アーム with IsaacSim</span>
-      <span className="tag recommended">New</span>
-    </a>
-    <a href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="nav-item">
-        <span className="text">SO101 アーム with NVIDIA's GR00T</span>
+    <div className="nav-grid">
+
+      <h2 id="robot-kits">📦 ロボットキット</h2>
+
+      <div className="category-group">
+        <div className="category-card robot-kits">
+
+          <h3>🤗 SO-Arm</h3>
+          <div className="card-container">
+              <a href="/ja/lerobot_so100m_new/" className="content-card">
+                <span className="text">SO100/101 Arm</span>
+              </a>
+              <a href="/ja/simulate_soarm101_by_leisaac/" className="content-card">
+                <span className="text">SO10x Arm with LeIsaac</span>
+              </a>
+              <a href="/ja/control_robotic_arm_via_phospho/" className="content-card">
+                <span className="text">Phospho Lerobot</span>
+              </a>
+              <a href="/ja/training_soarm101_policy_with_isaacLab/" className="content-card">
+                  <span className="text">So Arm RL トレーニング</span>
+                  <span className="tag recommended">New</span>
+              </a>
+              <a href="/ja/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor/" className="content-card">
+                  <span className="text">SO101 with NVIDIA GR00T</span>
+                  <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🚗 Lekiwi</h3>
+          <div className="card-container">
+              <a href="/ja/lerobot_lekiwi/" className="content-card">
+                <span className="text">Lekiwi モバイルベース</span>
+              </a>
+              <a href="/ja/sound_follow_robot/" className="content-card">
+                <span className="text">Lekiwi 音声追従</span>
+              </a>
+          </div>
+
+          <h3>🦾 StarAI Arm</h3>
+          <div className="card-container">
+              <a href="/ja/lerobot_starai_arm/" className="content-card">
+                <span className="text">StarAI ロボットアーム</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/ja/starai_arm_ros_moveit/" className="content-card">
+                <span className="text">StarAI Arm MoveIt 2</span>
+                <span className="tag recommended">New</span>
+              </a>
+              <a href="/ja/control_robotic_arm_via_gr00t" className="content-card">
+                <span className="text">StarAI with NVIDIA GR00T</span>
+              </a>
+          </div>
+
+          <h3>🦿脚付きホイール</h3>
+          <div className="card-container">
+              <a href="/ja/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
+                <span className="text">ミニ車輪脚ロボット</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🖐️ ハンド</h3>
+          <div className="card-container">
+              <a href="/ja/hand_amazinghand/" className="content-card">
+                <span className="text">AmazingHand</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+          <h3>🦀 エンドエフェクタ</h3>
+          <div className="card-container">
+              <a href="/ja/dm_gripper/" className="content-card">
+                <span className="text">DM グリッパー</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+        </div>
+      </div>
+
+      <h2 id="actuators">⚙️ アクチュエータ</h2>
+
+      <div className="category-group">
+      <div className="category-card actuators">
+
+      <div className="card-container">
+          <a href="/ja/myactuator_series/" className="content-card">
+            <span className="text">MyActuator X シリーズ</span>
+          </a>
+          <a href="/ja/damiao_series/" className="content-card">
+            <span className="text">Damiao DM43 シリーズ</span>
+          </a>
+          <a href="/ja/feetech_servo/" className="content-card">
+            <span className="text">Feetech STS3215 サーボ</span>
+          </a>
+          <a href="/ja/hightorque_control" className="content-card">
+            <span className="text">HighTorque シリーズ</span>
+          </a>
+          <a href="/ja/fashionstar_servo/" className="content-card">
+            <span className="text">Fashionstar シリーズ</span>
+          </a>
+          <a href="/ja/stackforce_series/" className="content-card">
+            <span className="text">Stackforce シリーズ</span>
+          </a>
+          <a href="/ja/robstride_control/" className="content-card">
+            <span className="text">RobStride 制御</span>
+            <span className="tag recommended">New</span>
+          </a>
+      </div>
+
+      </div>
+      </div>
+
+      <h2 id="sensors">👁️ センサー</h2>
+
+      <div className="category-group">
+      <div className="category-card sensors">
+
+      <strong>📡 LiDAR</strong>  
+
+      <div className="card-container">
+          <a href="/ja/robosense_lidar/" className="content-card">
+            <span className="text">RoboSense</span>
+          </a>
+          <a href="/ja/mid360/" className="content-card">
+            <span className="text">MID360</span>
+          </a>
+          <a href="/ja/a_loam/" className="content-card">
+            <span className="text">A-LOAM アルゴリズム</span>
+          </a>
+          <a href="/ja/slamtec/" className="content-card">
+            <span className="text">Slamtec シリーズ</span>
+          </a>
+      </div>
+
+      <strong>📷 カメラ</strong>  
+
+      <div className="card-container">
+          <a href="/ja/orbbec_gemini2/" className="content-card">
+            <span className="text">Orbbec Gemini 2</span>
+          </a>
+          <a href="/ja/orbbec_gemini_335lg" className="content-card">
+            <span className="text">Gemini 335Lg 深度</span>
+            <span className="tag recommended">New</span>
+          </a>
+          <a href="/ja/orbbec_gemini336" className="content-card">
+            <span className="text">Gemini 336 深度</span>
+            <span className="tag recommended">New</span>
+          </a>
+          <a href="/ja/sensing_gmsl_cameras" className="content-card">
+            <span className="text">SENSING GMSL2</span>
+          </a>
+          <a href="/ja/ac1" className="content-card">
+            <span className="text">RoboSense AC1</span>
+            <span className="tag recommended">New</span>
+          </a>
+          <a href="/ja/orbbec_depth_camera_on_ros/" className="content-card">
+            <span className="text">Orbbec with ROS</span>
+          </a>
+          <a href="/ja/orb_slam3_orbbec_gemini2/" className="content-card">
+            <span className="text">ORB-SLAM3 Gemini2</span>
+          </a>
+          <a href="/ja/csi_camera_on_ros/" className="content-card">
+            <span className="text">CSI Camera on Jetson</span>
+          </a>
+          <a href="/ja/pycuvslam_recomputer_robotics/" className="content-card">
+            <span className="text">PyCuVSLAM</span>
+          </a>
+
+      </div>
+
+      <strong>🎤 音声</strong>  
+
+      <div className="card-container">
+          <a href="/ja/ReSpeaker_Core_v2.0/" className="content-card">
+            <span className="text">ReSpeaker Core v2.0</span>
+          </a>
+          <a href="/ja/ReSpeaker_Mic_Array_v2.0/" className="content-card">
+            <span className="text">ReSpeaker Mic Array v2.0</span>
+          </a>
+      </div>
+
+      <strong>🧭 IMU</strong>  
+
+      <div className="card-container">
+          <a href="/ja/hexfellow_y200/" className="content-card">
+            <span className="text">HEXFELLOW Y200</span>
+          </a>
+          <a href="/ja/wheeltec_imu/" className="content-card">
+            <span className="text">WHEELTEC IMU</span>
+          </a>
+      </div>
+
+      </div>
+      </div>
+
+      <h2 id="software">💻 ソフトウェア</h2>
+
+      <div className="category-group">
+      <div className="category-card software">
+
+      <strong>ROS エコシステム</strong>  
+
+      <div className="card-container">
+          <a href="/ja/installing_ros1/" className="content-card">
+            <span className="text">ROS 1 インストール</span>
+          </a>
+          <a href="/ja/install_ros2_humble/" className="content-card">
+            <span className="text">ROS 2 インストール</span>
+          </a>
+          <a href="/ja/install_isaacros/" className="content-card">
+            <span className="text">Isaac ROS インストール</span>
+          </a>
+          <a href="/ja/isaac_ros_apriltag/" className="content-card">
+            <span className="text">Isaac ROS AprilTag</span>
+          </a>
+          <a href="/ja/isaac_ros_visual_slam/" className="content-card">
+            <span className="text">Isaac ROS V-SLAM</span>
+          </a>
+      </div>
+
+      <strong>PX4</strong>  
+      <div className="card-container">
+      <a href="/ja/control_px4_with_recomputer_jetson/" className="content-card">
+        <span className="text">PX4 with Jetson</span>
+      </a>
+
+      <a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="content-card">
+        <span className="text">オブジェクト追跡（PX4）</span>
+      </a>
+
+      </div>
+
+      <strong>NVIDIA Isaac</strong>  
+      <div className="card-container">
+      <a href="/ja/install_isaaclab/" className="content-card">
+        <span className="text">Isaac Lab インストール</span>
+      </a>
+      <a href="/ja/training_soarm101_policy_with_isaacLab/" className="content-card">
+        <span className="text">SO Arm RL トレーニング</span>
         <span className="tag recommended">New</span>
-    </a>
-</div>
+      </a>
+      <a href="/ja/simulate_soarm101_by_leisaac/" className="content-card">
+        <span className="text">SO100 Arm Isaac Sim</span>
+        <span className="tag recommended">New</span>
+      </a>
+      </div>
 
-## 🚗 Lekiwi
+      <strong>VLA</strong>  
+      <div className="card-container">
+      <a href="/ja/control_robotic_arm_via_gr00t" className="content-card">
+        <span className="text">StarAI with NVIDIA GR00T</span>
+      </a>
+      </div>
 
-<div className="card-container">
-    <a href="/ja/lerobot_lekiwi/" className="nav-item">
-      <span className="text">Lekiwi モバイルベース</span>
-    </a>
-    <a href="/ja/sound_follow_robot/" className="nav-item">
-      <span className="text">Lekiwi 音声追従</span>
-    </a>
-</div>
+      </div>
+      </div>
 
-## 🦾 StarAI Arm
+    </div>
+  </div> 
 
-<div className="card-container">
-    <a href="/ja/lerobot_starai_arm/" className="nav-item">
-      <span className="text">Starai ロボットアーム</span>
-      <span className="tag recommended">New</span>
-    </a>
-    <a href="/ja/starai_arm_ros_moveit/" className="nav-item">
-      <span className="text">Starai ロボットアーム Moveit2</span>
-      <span className="tag recommended">New</span>
-    </a>
-    <a href="/ja/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">Star AI with NVIDIA's GR00T</span>
-  </a>
-</div>
+  <!-- ==================== Tab 2: 学習センター (Learning) ==================== -->
+  <div className="tab-content content-learning">
 
-## Stackforce
+    <div className="learning-intro">
+        <h2>🎓 ロボティクス アカデミー</h2>
+        <p>ROS、シミュレーション、強化学習、高度なロボット制御をカバーする包括的なカリキュラム。</p>
+    </div>
 
-<div className="card-container">
-    <a href="/ja/StackForce_Mini_Wheeled_Legged_Robot" className="nav-item">
-      <span className="text">ミニ車輪脚ロボット</span>
-      <span className="tag recommended">New</span>
-    </a>
-</div>
+    <!-- Section 1: Core Software -->
+    <h3 className="course-section-title">💻 コアソフトウェア & シミュレーション</h3>
+    <div className="course-grid">
 
-## 🖐️ ハンド
+      <!-- ROS 1 -->
+      <a href="" className="course-card">
+        <div className="course-cover c-ros1">ROS 1</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 8h</span></div>
+          <h3>初心者向け ROS 1 基礎と自作モバイルロボット</h3>
+          <p>ノード、トピック、サービス、アクションについて学び、Python を使ってロボットをプログラムする</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-<div className="card-container">
-    <a href="/ja/hand_amazinghand/" className="nav-item">
-      <span className="text">AmazingHand</span>
-      <span className="tag recommended">New</span>
-    </a>
-</div>
+      <!-- ROS 2 -->
+      <a href="" className="course-card">
+        <div className="course-cover c-ros2">ROS 2</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8h</span></div>
+          <h3>ROS 2 Humble エッセンシャル</h3>
+          <p>Python でノード、トピック、サービス、アクションをマスターする。</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
 
-## 🦀 エンドエフェクタ
 
-<div className="card-container">
-    <a href="/ja/dm_gripper/" className="nav-item">
-      <span className="text">DM グリッパー</span>
-      <span className="tag recommended">New</span>
-    </a>
-</div>
+      <!-- Moveit2 -->
+      <a href="" className="course-card">
+        <div className="course-cover c-moveit">MoveIt 1/2</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">アーム初級</span> <span>⏱️ 6h</span></div>
+          <h3>MoveIt 1/2</h3>
+          <p>カスタムマニピュレータを MoveIt 1/2 にインポートし、順運動学と逆運動学を実装する</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-</div>
-</div>
+      <!-- Pinocchio -->
+      <a href="" className="course-card">
+        <div className="course-cover c-pinocchio">Pinocchio</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level int">アーム中級</span> <span>⏱️ 6h</span></div>
+          <h3>Pinocchio</h3>
+          <p>Pinocchio ロボティクスフレームワークを学び、独自のマニピュレータの運動学と動力学タスクを開発する</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-## ⚙️ アクチュエータ {#actuators}
 
-<div class="category-group">
-<div className="category-card actuators">
+      <!-- Isaac Sim -->
+      <a href="" className="course-card">
+        <div className="course-cover c-isaac">ISAAC</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 12h</span></div>
+          <h3>NVIDIA Isaac Sim & Lab</h3>
+          <p>Sim2Real ワークフロー、USD パイプライン、環境作成。</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-<div className="card-container">
-    <a href="/ja/myactuator_series/" className="nav-item">
-      <span className="text">0️⃣MyActuator X シリーズ</span>
-    </a>
-    <a href="/ja/damiao_series/" className="nav-item">
-      <span className="text">1️⃣Damiao DM43 シリーズ</span>
-    </a>
-    <a href="/ja/feetech_servo/" className="nav-item">
-      <span className="text">2️⃣Feetech STS3215 サーボモーター</span>
-    </a>
-    <a href="/ja/hightorque_control" className="nav-item">
-      <span className="text">3️⃣HighTorque シリーズ</span>
-    </a>
-    <a href="/ja/fashionstar_servo/" className="nav-item">
-      <span className="text">4️⃣Fashionstar シリーズ</span>
-    </a>
-    <a href="/ja/stackforce_series/" className="nav-item">
-      <span className="text">5️⃣Stackforce シリーズ</span>
-    </a>
-    <a href="/ja/robstride_control/" className="nav-item">
-      <span className="text">5️⃣RobStride コントロール</span>
-      <span className="tag recommended">New</span>
-    </a>
-</div>
+      <!-- MuJoCo -->
+      <a href="" className="course-card">
+        <div className="course-cover c-mujoco">MuJoCo</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 10h</span></div>
+          <h3>MuJoCo 物理エンジン</h3>
+          <p>アジャイルロボット制御のための動力学モデリングとシミュレーション。</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-</div>
-</div>
+      <!-- Reinforcement Learning -->
+      <a href="" className="course-card">
+        <div className="course-cover c-rl">RL</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level adv">高難度</span> <span>⏱️ 20h</span></div>
+          <h3>強化学習</h3>
+          <p>PPO、DRL トレーニングパイプライン、Jetson への展開。</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-## 👁️ センサー {#sensors}
+    </div>
 
-<div class="category-group">
-<div className="category-card sensors">
+    <!-- Section 2: Robot Applications -->
+    <h3 className="course-section-title" style={{marginTop: '3rem'}}>🤖 ロボットアプリケーション</h3>
+    <div className="course-grid">
 
-**📡LiDAR**  
+      <!-- Humanoid -->
+      <a href="" className="course-card">
+        <div className="course-cover c-human">Humanoid</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 5h</span></div>
+          <h3>小型サーボヒューマノイドロボットコース</h3>
+          <p>小型ヒューマノイドロボットのハードウェア駆動、モーション & ダンス振付、二次開発。</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-<div className="card-container">
-    <a href="/ja/robosense_lidar/" className="nav-item">
-      <span className="text">Robosense</span>
-    </a>
-    <a href="/ja/mid360/" className="nav-item">
-      <span className="text">MID360</span>
-    </a>
-    <a href="/ja/a_loam/" className="nav-item">
-      <span className="text">A-LOAM アルゴリズム</span>
-    </a>
-    <a href="/ja/slamtec/" className="nav-item">
-      <span className="text">Slamtec シリーズ</span>
-    </a>
-</div>
 
-**📷カメラ**  
+      <!-- Lekiwi -->
+      <a href="" className="course-card">
+        <div className="course-cover c-lekiwi">モバイルロボット</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 6h</span></div>
+          <h3>モバイルロボティクス（Lekiwi）</h3>
+          <p>SLAM、Navigation 2、自律巡回。</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-<div className="card-container">
-- Orbbec デプスカメラ
+      <!-- Robotic Arm -->
+      <a href="" className="course-card">
+        <div className="course-cover c-arm">ロボットアーム</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 15h</span></div>
+          <h3>StarAI アームシステムコース</h3>
+          <p>StarAI 6+1 DOF マニピュレータ：運動学、動力学、模倣学習 & 高度な VLA ベース強化学習</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-    <a href="/ja/orbbec_gemini2/" className="nav-item">
-      <span className="text">Orbbec Gemini2</span>
-    </a>
-    <a href="/ja/orbbec_gemini_335lg" className="nav-item">
-      <span className="text">Orbbec Gemini 335Lg デプスカメラ</span>
-      <span className="tag recommended">New</span>
-    </a>
-    <a href="/ja/orbbec_gemini336" className="nav-item">
-      <span className="text">Orbbec Gemini 336 デプスカメラ</span>
-      <span className="tag recommended">New</span>
-    </a>
+      <!-- Wheeled-Legged -->
+      <a href="" className="course-card">
+        <div className="course-cover c-legged">車輪脚ロボット</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8h</span></div>
+          <h3>Stackforce 車輪脚ロボットコース</h3>
+          <p>ハイブリッドロボットのバランス制御と LQR 動作計画。</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-- SENSING GMSL
+      <!-- ReachyMini -->
+      <a href="" className="course-card">
+        <div className="course-cover c-reachy">デスクトップロボット</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 8h</span></div>
+          <h3>ReachyMini コース</h3>
+          <p>ReachyMini の基本操作、インターフェースチュートリアル、二次開発の体系的コース</p>
+          <span className="btn-start">計画中</span>
+        </div>
+      </a>
 
-    <a href="/ja/sensing_gmsl_cameras" className="nav-item">
-      <span className="text">SENSING GMSL2 カメラ</span>
-    </a>
 
-- RoboSense
+    </div>
 
-    <a href="/ja/ac1" className="nav-item">
-      <span className="text">AC1</span>
-      <span className="tag recommended">New</span>
-    </a>
+  </div> 
 
-- 例
-
-    <a href="/ja/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text">Orbbec デプスカメラ with ROS</span>
-    </a>
-    <a href="/ja/orb_slam3_orbbec_gemini2/" className="nav-item">
-      <span className="text">ORB-SLAM3 with Orbbec Gemini2</span>
-    </a>
-    <a href="/ja/csi_camera_on_ros/" className="nav-item">
-      <span className="text">CSI カメラ on Jetson</span>
-    </a>
-    <a href="/ja/pycuvslam_recomputer_robotics/" className="nav-item">
-      <span className="text">PyCuVSLAM</span>
-    </a>
-
-</div>
-
-**🎤音声**  
-
-<div className="card-container">
-    <a href="/ja/ReSpeaker_Core_v2.0/" className="nav-item">
-      <span className="text">ReSpeaker Core v2.0</span>
-    </a>
-    <a href="/ja/ReSpeaker_Mic_Array_v2.0/" className="nav-item">
-      <span className="text">ReSpeaker Mic Array v2.0</span>
-    </a>
-</div>
-
-**🧭IMU**  
-
-<div className="card-container">
-    <a href="/ja/hexfellow_y200/" className="nav-item">
-      <span className="text">HEXFELLOW Y200</span>
-    </a>
-    <a href="/ja/wheeltec_imu/" className="nav-item">
-      <span className="text">WHEELTEC IMU</span>
-    </a>
-</div>
-
-</div>
-</div>
-
-## 💻 ソフトウェア {#software}
-
-<div class="category-group">
-<div className="category-card software">
-
-**ROS エコシステム**  
-
-<div className="card-container">
-    <a href="/ja/installing_ros1/" className="nav-item">
-      <span className="text">ROS1 インストール</span>
-    </a>
-    <a href="/ja/install_ros2_humble/" className="nav-item">
-      <span className="text">ROS2 インストール</span>
-    </a>
-    <a href="/ja/install_isaacros/" className="nav-item">
-      <span className="text">IsaacROS インストール</span>
-    </a>
-    <a href="/ja/isaac_ros_apriltag/" className="nav-item">
-      <span className="text">AprilTag</span>
-    </a>
-    <a href="/ja/isaac_ros_visual_slam/" className="nav-item">
-      <span className="text">Visual SLAM</span>
-    </a>
-</div>
-
-**PX4**  
-<div className="card-container">
-<a href="/ja/control_px4_with_recomputer_jetson/" className="nav-item">
-  <span className="text">PX4 with Jetson</span>
-</a>
-
-<a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
-  <span className="text">Object Tracking with PX4</span>
-</a>
-
-</div>
-
-**NVIDIA Isaac**  
-<div className="card-container">
-<a href="/ja/install_isaaclab/" className="nav-item">
-  <span className="text">Isaac Lab インストール</span>
-</a>
-<a href="/ja/training_soarm101_policy_with_isaacLab/" className="nav-item">
-  <span className="text">So Arm 強化学習</span>
-  <span className="tag recommended">New</span>
-</a>
-<a href="/ja/simulate_soarm101_by_leisaac/" className="nav-item">
-  <span className="text">SO100 アーム with IsaacSim</span>
-  <span className="tag recommended">New</span>
-</a>
-</div>
-
-**VLA**  
-<div className="card-container">
-<a href="/ja/control_robotic_arm_via_gr00t" className="nav-item">
-  <span className="text">Star AI with NVIDIA's GR00T</span>
-</a>
-</div>
-
-</div>
-</div>
-
-</div>
+</div> 
 
 <style>{`
-/* 导航容器 */
+/* =========================================
+   1. Tab Logic (CSS Only)
+   ========================================= */
+.robotic-tab-container { width: 100%; position: relative; }
+.tab-input-hidden { display: none; }
+.tab-nav-wrapper { display: flex; justify-content: center; margin-bottom: 2rem; margin-top: 1rem; }
+.tab-nav {
+  position: relative; display: flex; background: #f1f3f5; border-radius: 100px;
+  padding: 5px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); user-select: none;
+}
+.tab-item {
+  position: relative; z-index: 2; padding: 10px 30px; font-weight: 600; color: #666;
+  cursor: pointer; transition: color 0.3s ease; display: flex; align-items: center; gap: 8px; font-size: 1rem; margin: 0;
+}
+.tab-item .icon { font-size: 1.2rem; }
+.badge {
+  background: #ff4757; color: white; font-size: 0.6rem; padding: 2px 6px;
+  border-radius: 10px; margin-left: 5px; position: relative; top: -1px;
+}
+.tab-slider {
+  position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc(50% - 5px);
+  background: white; border-radius: 100px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); z-index: 1;
+}
+
+#tab-hardware:checked ~ .tab-nav-wrapper .tab-nav .tab-slider { transform: translateX(0); }
+#tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #4a90e2; }
+#tab-learning:checked ~ .tab-nav-wrapper .tab-nav .tab-slider { transform: translateX(100%); }
+#tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #7b61ff; }
+
+.tab-content { display: none; animation: fadeIn 0.4s ease; }
+#tab-hardware:checked ~ .content-hardware { display: block; }
+#tab-learning:checked ~ .content-learning { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+/* =========================================
+   2. Hardware Styles (Original)
+   ========================================= */
 .quick-nav-container {
-  margin: 2rem 0;
-  padding: 1rem;
-  background:
-  radial-gradient(at 10% 20%, #f0fdf4 0%, transparent 50%),
-  radial-gradient(at 90% 80%, #f0f7ff 0%, transparent 50%),
-  white;
-  border-radius: 16px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin: 2rem 0; padding: 1rem;
+  background: radial-gradient(at 10% 20%, #f0fdf4 0%, transparent 50%), radial-gradient(at 90% 80%, #f0f7ff 0%, transparent 50%), white;
+  border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: none;
 }
-
-/* Dark模式 - 导航容器 */
-html[data-theme='dark'] .quick-nav-container {
-  background:
-    radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
-    radial-gradient(at 90% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
-  box-shadow:
-    0 4px 6px rgba(0, 0, 0, 0.3),
-    inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内发光增强深度 */
-}
-
-/* 导航主体 */
-.quick-nav {
-  display: flex;
-  justify-content: space-around;
-  gap: 1rem;
-}
-
-/* ナビゲーション項目 */
+.quick-nav { display: flex; justify-content: space-around; gap: 1rem; }
 .nav-item {
-  position: relative;
-  padding: 0.8rem 1.5rem;
-  border-radius: 12px;
-  display: flex;
-  margin: 6px 6px; /* 上下6px，左右6px */
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none !important;
-  color: #333;
-  font-weight: 500;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  z-index: 1;
+  position: relative; padding: 0.8rem 1.5rem; border-radius: 12px; display: flex; margin: 6px 6px;
+  flex-direction: column; align-items: center; text-decoration: none !important; color: #333;
+  font-weight: 500; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 1; width: 100%;
 }
-
-/* Darkモード - ナビゲーション項目 */
-html[data-theme='dark'] .nav-item {
-  color: #e5e7eb;
-  background:rgb(47, 50, 57);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-}
-
-/* アイコンスタイル */
-.nav-item .icon {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  transition: transform 0.3s;
-}
-
-/* テキストスタイル */
-.nav-item .text {
-  font-size: 0.95rem;
-  white-space: nowrap;
-}
-
-/* ホバー効果 */
+.nav-item .icon { font-size: 1.8rem; margin-bottom: 0.5rem; transition: transform 0.3s; }
+.nav-item .text { font-size: 0.95rem; white-space: nowrap; }
 .nav-item .hover-effect {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
+  position: absolute; bottom: 0; left: 0; width: 100%; height: 0;
   background: linear-gradient(135deg, #4a90e2 0%, #50e3c2 100%);
-  border-radius: 12px;
-  transition: height 0.3s ease;
-  z-index: -1;
+  border-radius: 12px; transition: height 0.3s ease; z-index: -1;
 }
+.nav-item:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); color: white; }
+.nav-item:hover .icon { transform: scale(1.2) rotate(10deg); }
+.nav-item:hover .hover-effect { height: 100%; }
 
-/* ホバーアニメーション */
-.nav-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  color: white;
-}
-
-/* Darkモード - ホバーアニメーション */
-html[data-theme='dark'] .nav-item:hover {
-  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
-  color: white;
-}
-
-.nav-item:hover .icon {
-  transform: scale(1.2) rotate(10deg);
-}
-
-.nav-item:hover .hover-effect {
-  height: 100%;
-}
-
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
-  .quick-nav {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .nav-item {
-    flex-direction: row;
-    justify-content: start;
-    padding: 0.8rem 1rem;
-  }
-  .nav-item .icon {
-    margin-bottom: 0;
-    margin-right: 0.8rem;
-  }
-}
-`}</style>
-
-<style>{`
-/* コンテンツカード強化版スタイル */
-.nav-grid {
-  display: block;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin-top: 2rem;
-}
-
+.nav-grid { display: block; gap: 2rem; margin-top: 2rem; }
+.category-group { margin-bottom: 2.5rem; }
 .category-card {
-  position: relative;
-  padding: 1.5rem;
-  border-radius: 16px;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-  z-index: 1;
+  position: relative; padding: 1.8rem; border-radius: 16px; background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; overflow: hidden; border: 1px solid transparent;
 }
-
-/* Darkモード - コンテンツカード */
-html[data-theme='dark'] .category-card {
-  background:rgb(30, 30, 32);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-  color: #e5e7eb;
-}
-
-.category-group {
-  margin-bottom: 2rem;
-}
-
-/* カテゴリ色標 */
-.category-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6px;
-  height: 100%;
-}
-
+.category-card::before { content: ""; position: absolute; top: 0; left: 0; width: 6px; height: 100%; }
 .robot-kits::before { background: linear-gradient(to bottom, #4a90e2, #50e3c2); }
 .actuators::before { background: linear-gradient(to bottom, #50e3c2, #a0e3c2); }
 .sensors::before { background: linear-gradient(to bottom, #ff6b6b, #ff8e8e); }
 .software::before { background: linear-gradient(to bottom, #f5a623, #f5c623); }
 
-/* ホバー効果 */
-.category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+.card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 12px; margin-bottom: 1.5rem; }
+.content-card {
+  display: flex; align-items: center; justify-content: space-between; padding: 10px 16px;
+  background: #f9fafb; border: 1px solid transparent; border-radius: 8px; text-decoration: none !important;
+  color: var(--ifm-font-color-base); font-weight: 500; font-size: 0.9rem; transition: all 0.25s ease; position: relative; overflow: hidden;
+}
+.content-card .text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 8px; z-index: 2; }
+.content-card:hover {
+  background: #fff; border-color: #4a90e2; box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+  transform: translateY(-2px); color: #4a90e2;
+}
+.content-card::after { content: ""; position: absolute; top: 0; left: 0; width: 0; height: 100%; background: #4a90e2; transition: width 0.2s ease; }
+.content-card:hover::after { width: 4px; }
+
+.tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 12px; font-weight: 700; text-transform: uppercase; flex-shrink: 0; z-index: 2; }
+.recommended { background: rgba(255, 107, 107, 0.1); color: #ff6b6b; border: 1px solid rgba(255, 107, 107, 0.2); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); } 70% { box-shadow: 0 0 0 4px rgba(255, 107, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); } }
+
+/* =========================================
+   3. Learning Styles
+   ========================================= */
+.learning-intro { text-align: center; margin-bottom: 2rem; }
+.learning-intro h2 { margin-bottom: 0.5rem; background: -webkit-linear-gradient(45deg, #7b61ff, #4a90e2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.learning-intro p { color: #666; max-width: 600px; margin: 0 auto; }
+
+.course-section-title {
+  margin: 1.5rem 0 1rem; font-size: 1.2rem; font-weight: 700; color: #444; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;
 }
 
-/* Darkモード - ホバー効果 */
-html[data-theme='dark'] .category-card:hover {
-  box-shadow: 0 12px 20px rgba(0,0,0,0.6);
+.course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.course-card {
+  background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-decoration: none !important; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #eee; display: flex; flex-direction: column;
 }
+.course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 
-.category-card:hover::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
-  z-index: -1;
+/* Covers for different topics */
+.course-cover { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; color: white; letter-spacing: 1px; }
+
+/* AI & Software Colors */
+.c-ros2 { background: linear-gradient(135deg, #10b981, #059669); }
+.c-ros1 { background: linear-gradient(135deg, #4b5563, #374151); }
+.c-pinocchio { background: linear-gradient(135deg, #3b82f6, #fa000c); }
+.c-moveit { background: linear-gradient(135deg, #f90306, #ea000c); }
+.c-isaac { background: linear-gradient(135deg, #76b900, #366e00); }
+.c-rl { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.c-mujoco { background: linear-gradient(135deg, #f97316, #ea580c); }
+
+/* Robot Platform Colors */
+.c-arm { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.c-legged { background: linear-gradient(135deg, #eab308, #ca8a04); }
+.c-human { background: linear-gradient(135deg, #ec4899, #db2777); }
+.c-reachy { background: linear-gradient(135deg, #14b8a6, #0d9488); }
+.c-lekiwi { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.c-gray { background: #eee; color: #aaa; }
+
+.course-info { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; }
+.course-meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: #888; margin-bottom: 0.5rem; }
+.level { font-weight: 700; text-transform: uppercase; }
+.beg { color: #059669; } .int { color: #d97706; } .adv { color: #dc2626; }
+
+.course-info h3 { font-size: 1.1rem; margin: 0 0 0.5rem 0; color: #1f2937; line-height: 1.3; }
+.course-info p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; }
+
+.btn-start {
+  display: block; text-align: center; padding: 8px 0; background: #f0f7ff; color: #4a90e2; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
 }
+.course-card:hover .btn-start { background: #4a90e2; color: white; }
 
-/* Darkモード - ホバー光効果 */
-html[data-theme='dark'] .category-card:hover::after {
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
-}
+/* =========================================
+   4. ダークモード対応
+   ========================================= */
+html[data-theme='dark'] .tab-nav { background: #2f2f32; box-shadow: none; }
+html[data-theme='dark'] .tab-slider { background: #444; }
+html[data-theme='dark'] .tab-item { color: #aaa; }
+html[data-theme='dark'] #tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #60a5fa; }
+html[data-theme='dark'] #tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #a78bfa; }
 
-/* リンクアニメーション */
-.category-card a {
-  position: relative;
-  display: inline-block;
-  transition: all 0.2s;
-  text-decoration: none !important;
-  color: #333;
-}
+/* Hardware Dark Mode */
+html[data-theme='dark'] .quick-nav-container { background: linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); border: none; }
+html[data-theme='dark'] .nav-item { color: #e5e7eb; background: rgb(47, 50, 57); box-shadow: 0 2px 4px rgba(0,0,0,0.4); }
+html[data-theme='dark'] .category-card { background: #1b1b1d; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-color: #303033; }
+html[data-theme='dark'] .content-card { background: #242526; color: #e5e7eb; border-color: #303033; }
+html[data-theme='dark'] .content-card:hover { background: #2f2f32; border-color: #60a5fa; color: #60a5fa; }
+html[data-theme='dark'] .content-card::after { background: #60a5fa; }
+html[data-theme='dark'] .recommended { background: rgba(255, 107, 107, 0.15); color: #ff8e8e; border-color: rgba(255, 142, 142, 0.3); }
+html[data-theme='dark'] h2, html[data-theme='dark'] h3 { color: #f9fafb; }
 
-/* Darkモード - リンク */
-html[data-theme='dark'] .category-card a {
-  color: #d1d5db;
-}
+/* Learning Dark Mode */
+html[data-theme='dark'] .course-card { background: #1b1b1d; border-color: #303033; }
+html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
+html[data-theme='dark'] .course-info p { color: #9ca3af; }
+html[data-theme='dark'] .btn-start { background: #2f2f32; color: #60a5fa; }
+html[data-theme='dark'] .course-card:hover .btn-start { background: #60a5fa; color: white; }
+html[data-theme='dark'] .learning-section-title { color: #ccc; border-bottom-color: #444; }
 
-.category-card a:hover {
-  color: #4a90e2;
-  transform: translateX(5px);
-}
-
-/* Darkモード - リンクホバー */
-html[data-theme='dark'] .category-card a:hover {
-  color: #60a5fa;
-}
-
-.category-card a::after {
-  content: "";
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #4a90e2;
-  transition: width 0.3s;
-}
-
-/* Darkモード - リンク下線 */
-html[data-theme='dark'] .category-card a::after {
-  background: #60a5fa;
-}
-
-.category-card a:hover::after {
-  width: 100%;
-}
-
-.card-container {
-  margin-bottom: 1.5rem; /* 原为0.1rem */
-}
-
-/* タグスタイル強化 */
-.tag {
-  font-size: 0.75rem;
-  padding: 2px 8px;
-  border-radius: 12px;
-  margin-left: 8px;
-  transition: all 0.3s;
-}
-
-.stable {
-  background: #e6f4ea;
-  color: #137333;
-  box-shadow: 0 2px 4px rgba(0,100,0,0.1);
-}
-
-/* Darkモード - Stableタグ */
-html[data-theme='dark'] .stable {
-  background: #065f46;
-  color: #a7f3d0;
-  box-shadow: 0 2px 4px rgba(0,100,0,0.3);
-}
-
-.recommended {
-  background: #fce8e6;
-  color: #a50e0e;
-  box-shadow: 0 2px 4px rgba(200,0,0,0.1);
-}
-
-/* Darkモード - Recommendedタグ */
-html[data-theme='dark'] .recommended {
-  background: #7f1d1d;
-  color: #fca5a5;
-  box-shadow: 0 2px 4px rgba(200,0,0,0.3);
-}
-
-.category-card:active {
-  transform: translateY(-2px) scale(0.98);
-  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
-}
-
-/* Darkモード - クリック効果 */
-html[data-theme='dark'] .category-card:active {
-  box-shadow: 0 6px 10px rgba(0,0,0,0.4);
-}
-
-/* レスポンシブ最適化 */
 @media (max-width: 768px) {
-  .nav-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .category-card {
-    width: 100%;
-    margin-top: 0.5rem; /* カードがタイトルに密着 */
-  }
-}
-
-/* Darkモード - タイトルテキスト */
-html[data-theme='dark'] h1,
-html[data-theme='dark'] h2,
-html[data-theme='dark'] h3,
-html[data-theme='dark'] h4,
-html[data-theme='dark'] h5,
-html[data-theme='dark'] h6 {
-  color: #f9fafb;
-}
-
-/* Darkモード - 本文テキスト */
-html[data-theme='dark'] p,
-html[data-theme='dark'] li,
-html[data-theme='dark'] strong {
-  color: #e5e7eb;
-}
-
-/* Darkモード - 引用ブロック */
-html[data-theme='dark'] blockquote {
-  color: #9ca3af;
-  border-left-color: #4b5563;
+  .quick-nav { flex-direction: column; gap: 0.5rem; }
+  .nav-item { flex-direction: row; justify-content: start; padding: 0.8rem 1rem; }
+  .nav-item .icon { margin-bottom: 0; margin-right: 0.8rem; }
+  .card-container, .course-grid { grid-template-columns: 1fr; }
+  .category-card { padding: 1.2rem; }
+  .tab-nav { width: 100%; }
+  .tab-item { padding: 10px 15px; font-size: 0.9rem; flex: 1; justify-content: center; }
 }
 `}</style>
-

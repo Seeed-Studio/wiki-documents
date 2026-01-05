@@ -18,21 +18,21 @@ last_update:
 
 ## Introducción
 
-Un sistema inteligente verdaderamente dinámico nunca se trata simplemente de "ver el mundo", sino que es capaz de entender eventos, desencadenar acciones y lograr interconexión entre plataformas. En esta solución, utilizaremos ReCamera basada en IA como dispositivo de detección frontal, completaremos el análisis y formateo de datos a través de Node-RED, y luego usaremos Home Assistant como centro de automatización para presentar los resultados de detección en tiempo real, tomar decisiones y vincular además con el robot de WeChat empresarial para lograr notificaciones inmediatas. Toda la cadena forma un conjunto de sistema de escena inteligente expandible, observable y automáticamente responsivo.
+Un sistema inteligente verdaderamente dinámico nunca se trata simplemente de "ver el mundo", sino que es capaz de entender eventos, activar acciones y lograr interconexión entre plataformas. En esta solución, utilizaremos ReCamera basada en IA como dispositivo de detección frontal, completaremos el análisis y formateo de datos a través de Node-RED, y luego usaremos Home Assistant como centro de automatización para presentar los resultados de detección en tiempo real, tomar decisiones y vincular además con el robot de WeChat empresarial para lograr notificaciones inmediatas. Toda la cadena forma un conjunto de sistema de escena inteligente expandible, observable y automáticamente responsivo.
 ReCamera utiliza el modelo YOLO para detectar objetos como humanos y mascotas en tiempo real; Node-RED procesa los resultados de detección y los envía a Home Assistant; HA utiliza Webhook para automatizar el proceso de escribir datos a entidades, realizar juicios de condición y enviar información de alarma al grupo de WeChat empresarial, logrando alertas en tiempo real entre plataformas. Esta arquitectura no solo demuestra la capacidad de acoplamiento profundo de ReCamera y HA, sino que también refleja cómo combinar visión de IA, reglas de automatización y sistemas de notificación de nivel empresarial en aplicaciones prácticas para construir una solución integrada de IoT verdaderamente "utilizable e inteligente".
 
 ## Preparación de Hardware
 
-Una reCamera (puede ser cualquiera de la serie 2002, versión HQ POE, o versión pan-tilt, pero ten en cuenta que la versión POE no tiene funcionalidad WiFi y requiere un switch con función POE para ser conectado en el mismo segmento de red)  
+Una reCamera (puede ser cualquiera de la serie 2002, versión HQ POE, o versión pan-tilt, pero tenga en cuenta que la versión POE no tiene funcionalidad WiFi y requiere un switch con función POE para ser conectado en el mismo segmento de red)  
 una reComputer (cualquier versión está bien, aquí uso reComputer AI R2130-12 como ejemplo)  
 una computadora (Enterprise WeChat ha sido instalado.)
 
 <table align="center">
  <tr>
-  <th>reCamera 2002 Series</th>
+  <th>reCamera 2002 Serie</th>
   <th>reCamera Gimbal</th>
   <th>reCamera HQ POE</th>
-  <th>reComputer AI R2000 Series</th>
+  <th>reComputer AI R2000 Serie</th>
  </tr>
  <tr>
   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recamera_banner.png" style={{width:300, height:'auto'}}/></div></td>
@@ -71,13 +71,13 @@ una computadora (Enterprise WeChat ha sido instalado.)
 
 ### (1) Crear un robot inteligente
 
-Haz clic en Address Book-Intelligent Robot-Create Intelligent Robot
+Haz clic en Libreta de Direcciones-Robot Inteligente-Crear Robot Inteligente
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat1.png" /></div>
 
 ### (2) Configurar el robot
 
-Después de completar los elementos requeridos, haz clic en Save
+Después de completar los elementos requeridos, haz clic en Guardar
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat2.png" /></div>
 
@@ -87,7 +87,7 @@ Arrastra el robot que acabas de crear y cualquier colega al grupo (porque más d
 
 ### (4) Configurar envío de mensajes
 
-Los pasos de configuración se muestran en la siguiente figura. Después de llenar el nombre y la introducción, haz clic en Save.
+Los pasos de configuración se muestran en la siguiente figura. Después de llenar el nombre y la introducción, haz clic en Guardar.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat3.png" /></div>
 
@@ -97,7 +97,7 @@ Recuerda, asegúrate de **proteger la dirección webhook del envío de buenas no
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat4.png" /></div>
 
-Si quieres ver los detalles de cómo configurar, por favor haz clic en "know how to configure", enterprise WeChat oficial proporciona una rutina de formato de mensaje, para que puedas entender mejor
+Si quieres ver los detalles de cómo configurar, por favor haz clic en "saber cómo configurar", WeChat empresarial oficial proporciona una rutina de formato de mensaje, para que puedas entender mejor
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/wechat5.png" /></div>
 
@@ -189,7 +189,7 @@ docker run -d \
 
 > - '-- restart = unless-stopped': reinicio automático
 
-> - '-- privileged': habilitar acceso al hardware (USB Zigbee/Z-Wave, etc.)
+> - '-- privileged': habilitar acceso a hardware (USB Zigbee/Z-Wave, etc.)
 
 ---
 
@@ -217,7 +217,7 @@ Ejemplo:
 http://192.168.1.88:8123
 ```
 
-El primer inicio entrará en la interfaz de inicialización, comenzará a crear una cuenta y configurar el hogar inteligente
+El primer inicio entrará en la interfaz de inicialización, comenzar a crear una cuenta y configurar hogar inteligente
 
 ------
 
@@ -298,7 +298,7 @@ Guardar y salir:
 #### Editar configuration.yaml:
 
 ```bash
-sudo nano /home/seeed/homeassistant/config/automations.yaml
+sudo nano /home/seeed/homeassistant/config/configuration.yaml
 ```
 
 Reemplazar el contenido:
@@ -446,9 +446,9 @@ A continuación, configura el nodo http request. Aquí necesitamos modificar tre
 
 | Opciones | Valor establecido |
 | ------------ | ----------------------------------------- |
-| **Request Method** | POST |
-| **URL address** | 'http://YOUR_IP:8123/api/webhook/recamera_detection'|
-| **Return** | JSON Object |
+| **Método de Solicitud** | POST |
+| **Dirección URL** | 'http://YOUR_IP:8123/api/webhook/recamera_detection'|
+| **Retorno** | JSON Object |
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_8.png" /></div>
 

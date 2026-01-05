@@ -1,16 +1,17 @@
 ---
-description: SenseCAP_T2000_tracker_Introduction
+description: SenseCAP_T2000_tracker_Introducción
 title: Introducción
 keywords:
 - SenseCAP_T2000_tracker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
 slug: /es/SenseCAP_T2000_tracker/Introduction
 last_update:
-  date: 12/1/2025
+  date: 1/5/2026
   author: Janet
 ---
 
-# Introducción del SenseCAP T2000 Tracker
+
+# Introducción al SenseCAP T2000 Tracker
 
 ## Descripción General
 
@@ -30,7 +31,7 @@ last_update:
 
 || [SenseCAP T2000-A](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html) | [SenseCAP T2000-B](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-B-p-6581.html) | [SenseCAP T2000-C](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-C-p-6582.html) |
 |:---|:---:|:---:|:---:|
-| **Temperatura de operación** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-20 ~ 60℃</div> |
+| **Temperatura de operación** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-20 ~ 60℃<br />(Carga: 0~45℃)</div> |
 | **Fuente de Alimentación** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>Batería integrada</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>Batería integrada</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>Batería recargable integrada + Panel Solar de 0.5W</div> |
 | **Capacidad de Batería** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>8000mAh</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>8000mAh</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>4000mAh</div> |
 | **Modo de Posicionamiento** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li><li>WiFi</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li></ul></div></div> |
@@ -71,7 +72,7 @@ La Serie T2000 proporciona seguimiento de activos confiable y continuo en divers
 
 ### Conectividad LoRaWAN® de Largo Alcance
 
-Nuestros dispositivos logran rangos de comunicación de hasta 9.6 km en entornos abiertos a través de la tecnología LoRaWAN®. Diseñados para condiciones adversas, entregan transmisión de datos consistente y confiable incluso en ubicaciones remotas, asegurando conectividad de red estable y continua para aplicaciones críticas.
+Nuestros dispositivos logran rangos de comunicación de hasta 9.6 km en entornos abiertos a través de la tecnología LoRaWAN®. Diseñados para condiciones adversas, ofrecen transmisión de datos consistente y confiable incluso en ubicaciones remotas, asegurando conectividad de red estable y continua para aplicaciones críticas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Distance.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -85,7 +86,7 @@ Construidos con una batería de 8000 mAh, permitiéndoles operar por más de un 
 **T2000-C (con Panel Solar)**  
 Equipado con un panel solar de 0.5 W y una batería recargable de 4000 mAh, el T2000-C soporta operación de múltiples años y bajo mantenimiento bajo luz solar regular e intervalos de enlace ascendente moderados.
 
-*La vida real de la batería varía con el intervalo de enlace ascendente, modo de posicionamiento y entorno de implementación. Use la [Calculadora de Vida de Batería](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Trcaker_Battery_Life_Calculation_T2000_AB.xlsx) para detalles.
+*La vida real de la batería varía con el intervalo de enlace ascendente, modo de posicionamiento y entorno de implementación. Use la [Calculadora de Vida de Batería](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Tracker_Battery_Life_Calculator_T2000.xlsx) para detalles.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Battery_Life.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -127,7 +128,7 @@ El rastreador T2000 ofrece métodos de instalación versátiles para adaptarse a
 
 ### Gestión de Plataforma de Software Todo-en-Uno
 
-Integrado perfectamente con la App SenseCraft, proporcionando una solución integral desde la activación por código QR y configuración Bluetooth hasta el seguimiento de mapas en tiempo real, configuración remota de parámetros y gestión de alarmas.
+Perfectamente integrado con la App SenseCraft, proporcionando una solución integral desde la activación por código QR y configuración Bluetooth hasta el seguimiento de mapas en tiempo real, configuración remota de parámetros y gestión de alarmas.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Software.jpg" alt="pir" width={800} height="auto" /></p>
 
@@ -135,12 +136,12 @@ Integrado perfectamente con la App SenseCraft, proporcionando una solución inte
 
 ## Aplicaciones
 
-Los Rastreadores de Activos SenseCAP T2000 Series son la solución ideal para gestionar activos dinámicos de alto valor en entornos exteriores. Se utilizan ampliamente en:
+Los Rastreadores de Activos SenseCAP T2000 Serie son la solución ideal para gestionar activos dinámicos de alto valor en entornos exteriores. Se utilizan ampliamente en:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Application.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Agricultura Inteligente**: Seguimiento y programación de maquinaria agrícola grande como tractores y cosechadoras, registro de horas de trabajo y prevención de robos; Monitoreo del rango de actividad de ganado grande como ganado vacuno y caballos.
-- **Construcción e Ingeniería**: Anti-robo, seguimiento de ubicación y análisis de utilización de maquinaria pesada como excavadoras, bulldozers y grúas; Gestión de equipos de alquiler como generadores.
+- **Agricultura Inteligente**: Seguimiento y programación de maquinaria agrícola grande como tractores y cosechadoras, registro de horas de trabajo y prevención de robos; Monitoreo del rango de actividad de ganado grande como vacas y caballos.
+- **Construcción e Ingeniería**: Antirrobo, seguimiento de ubicación y análisis de utilización de maquinaria pesada como excavadoras, bulldozers y grúas; Gestión de equipos de alquiler como generadores.
 - **Logística y Transporte**: Seguimiento integral y monitoreo de seguridad de contenedores de envío internacional, remolques grandes, vagones de carga ferroviaria y carga de cadena de frío.
 
 <br />
@@ -170,7 +171,7 @@ Combinando una batería recargable de 4000mAh con un panel solar de 0.5W para un
 | Método de Posicionamiento | **GNSS**: L76K<br />GPS L1 C/A, QZSS L1: 1575.42 MHz<br />GLONASS L1: 1602.5625 MHz<br />BeiDou B1: 1561.098 MHz<br /><br />**BLE**: nRF52840 <br />Bluetooth 5.0<br /><br /><br />[Solo T1000-B] <br />**WiFi**: ESP8684 <br />Escaneo Pasivo |
 | Fuente de Alimentación | Batería Primaria |
 | Tipo de Batería / Capacidad | Li/SOCI2 (ER18505) / 8000mAh |
-| Material de la Carcasa | PC+ASA |
+| Material de la Carcasa | PC+10% Fibra de Vidrio |
 | Clasificación de Protección | IP67 |
 | Dimensiones | 117 × 65 × 30 mm |
 | Peso | 180g |
@@ -183,9 +184,9 @@ Combinando una batería recargable de 4000mAh con un panel solar de 0.5W para un
 | Modelo del Producto | T2000-C |
 | Banda de Frecuencia LoRa | EU868, US915, IN865, AU915, AS923, KR920, RU864 |
 | Método de Posicionamiento | **GNSS**: L76K<br />GPS L1 C/A, QZSS L1: 1575.42 MHz<br />GLONASS L1: 1602.5625 MHz<br />BeiDou B1: 1561.098 MHz<br /><br />**BLE**: nRF52840 <br />Bluetooth 5.0 |
-| Fuente de Alimentación | Panel Solar de 0.5W + Batería recargable |
+| Fuente de Alimentación | Panel Solar 0.5W + Batería recargable |
 | Tipo de Batería / Capacidad | Batería de litio ternaria (INR18500np) / 4000mAh |
-| Material de la Carcasa | PC+ASA |
+| Material de la Carcasa | PC+10% Fibra de Vidrio |
 | Clasificación de Protección | IP67 |
 | Dimensiones | 117 × 65 × 30 mm |
 | Peso | 180g |
