@@ -2658,6 +2658,13 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'reComputer R1225 LoRaWAN Gateway',
+          items: [
+            'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction',
+          ],
+        },
+        {
+          type: 'category',
           label: 'SenseCAP M2 Multi-Platform Gateway',
           items: [
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
