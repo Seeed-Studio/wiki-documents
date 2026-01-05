@@ -53,7 +53,7 @@ last_update:
     支持用户自行DIY，实现快速替换。
 
 8.  **丰富的学习资源**  
-    我们提供全面的开源学习资源，包括环境搭建指南、安装调试教程及自定义抓取任务示例，助力用户快速上手并开发机器人应用。
+    我们提供全面的开源学习资源，包括环境搭建指南、安装调试教程及自定义抓取任务示例，助力用户快速上手并开发机器人应用。documents
 
 9.  **兼容NVIDIA平台**  
     支持通过NVIDIA Jetson平台进行部署。
@@ -133,7 +133,7 @@ colcon build
 ### 克隆starai-arm-moveit2功能包
 ```
 cd ~/starai_ws/src
-git clone https://github.com/Welt-liu/starai-arm-moveit2.git
+git clone https://github.com/Seeed-Projects/fashionstar-starai-arm-ros2.git
 cd ~/starai_ws
 colcon build
 echo "source ~/starai_ws/install/setup.bash" >> ~/.bashrc
