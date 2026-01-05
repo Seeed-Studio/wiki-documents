@@ -34,9 +34,9 @@ import TabItem from '@theme/TabItem';
 3. 在使用和调试程序时，请尽可能减少屏幕刷新频率。长时间高速刷新屏幕也可能会降低屏幕的使用寿命。
 :::
 
-## 介绍
+## 简介
 
-reTerminal E1002 是一款 7.3 英寸开源全彩电子纸显示器，具有出色的 3 个月电池续航能力。由 ESP32-S3 驱动，原生支持我们的 SenseCraft HMI 无代码 UI 平台，可轻松创建仪表板，同时支持 Home Assistant、TRMNL E-ink 仪表板、Arduino 和 ESP-IDF 进行进一步开发。配备 E Ink® Spectra™ 6 全彩电子纸显示屏，非常适合数字相框和彩色仪表板可视化。
+reTerminal E1002 是一款 7.3 英寸开源全彩电子纸显示器，具有出色的 3 个月电池续航能力。由 ESP32-S3 驱动，原生支持我们的 SenseCraft HMI 无代码 UI 平台，可轻松创建仪表板，同时支持 Home Assistant、TRMNL E-ink dashboard、Arduino 和 ESP-IDF 进行进一步开发。配备 E Ink® Spectra™ 6 全彩电子纸显示屏，非常适合数字相框和彩色仪表板可视化。
 
 ### 特性
 
@@ -52,7 +52,7 @@ reTerminal E1002 是一款 7.3 英寸开源全彩电子纸显示器，具有出�
 
 reTerminal E1002 硬件包括：
 
-1. **7.3 英寸全彩电子纸显示屏**：800×480 分辨率的全彩显示屏
+1. **7.3 英寸全彩电子纸显示屏**：分辨率为 800×480 的全彩显示屏
 2. **按钮**：位于设备顶部，用于手动屏幕操作
 3. **麦克风**
 4. **MicroSD 卡槽**：用于扩展存储
@@ -76,7 +76,7 @@ reTerminal E1002 硬件包括：
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 MicroSD 卡。
+reTerminal E 系列电子纸显示器仅支持最大 32GB 的 Fat32 格式 MicroSD 卡。
 :::
 
 **步骤 3.** （可选）如需要，请安装 USB 驱动程序：
@@ -152,7 +152,7 @@ reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 Micro
 <Tabs>
 <TabItem value="Network Setup vis PC" label="通过 PC 进行网络设置" default>
 
-**步骤 1.** 从您的智能手机或计算机连接到设备的 Wi-Fi 接入点。AP 名称将显示在屏幕上（无需密码）。网络凭据为 `reTerminal E1002-{MAC 地址}`。
+**步骤 1.** 从您的智能手机或计算机连接到设备的 Wi-Fi 接入点。AP 名称将显示在屏幕上（无需密码）。网络凭据为 `reTerminal E1002-{MAC Adress}`。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:400, height:'auto'}}/></div><br />
 
@@ -206,7 +206,7 @@ reTerminal E 系列电子纸显示器仅支持 2.4GHz WiFi 网络，不支持 5G
     </a>
 </div><br />
 
-**步骤 1.** 打开 SenseCraft App，登录您的账户，导航到 **User** 选项卡。点击 **Device Bluetooth Configuration** 开始配置过程。
+**步骤 1.** 打开 SenseCraft App，登录您的账户，并导航到 **User** 选项卡。点击 **Device Bluetooth Configuration** 开始配置过程。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/151.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -255,14 +255,14 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 **图库**
 
-使用图库功能将您的 reTerminal E1002 转换为数字相框。上传您最喜欢的图片，平台将为电子纸显示屏优化它们。创建具有自定义过渡时间的幻灯片。
+使用图库功能将您的 reTerminal E1002 转换为数字相框。上传您喜爱的图片，平台将为电子纸显示屏优化它们。创建具有自定义过渡时间的幻灯片。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/13.png" style={{width:1000, height:'auto'}}/></div>
 
 **画布**
 
 使用画布从头开始设计您的仪表板，这是一个拖放界面，提供各种元素：
-- 可自定义字体和大小的文本块
+- 具有可自定义字体和大小的文本块
 - 图像占位符
 - 时间、日期和天气小部件
 - 数据可视化工具
@@ -272,7 +272,7 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 **RSS 订阅集成**
 
-通过向您的仪表板添加 RSS 订阅，随时了解您最喜欢的新闻来源、博客或网站的最新动态。RSS 功能允许您显示来自多个来源的标题、摘要或完整文章。
+通过向您的仪表板添加 RSS 订阅，随时了解您喜爱的新闻来源、博客或网站的最新动态。RSS 功能允许您显示来自多个来源的标题、摘要或完整文章。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/15.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -304,7 +304,7 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 ### 导航按钮
 
-如果您的仪表板包含多个页面，左右按钮允许您在多个页面之间导航：
+左右按钮允许您在仪表板包含多个页面时在它们之间导航：
 
 - **左按钮**：导航到上一页
 
@@ -318,7 +318,7 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 **步骤 1.** 同时按住两个导航按钮（左和右）2 秒钟。
 
-**步骤 2.** 设备将进入 Wi-Fi 配置模式，您可以再次按照[网络设置](#网络-设置)步骤连接到新网络。
+**步骤 2.** 设备将进入 Wi-Fi 配置模式，您可以再次按照[网络设置](#network-setup)步骤连接到新网络。
 
 ### LED 指示灯
 
@@ -371,8 +371,8 @@ reTerminal E1002 具有一个 8 引脚扩展接头（J2），为添加外部传�
 			<td>2</td>
 			<td>GND</td>
 			<td>-</td>
-			<td>地线</td>
-			<td>公共地线参考</td>
+			<td>接地</td>
+			<td>公共接地参考</td>
 		</tr>
 		<tr>
 			<td>3</td>
@@ -427,16 +427,16 @@ reTerminal E1002 配备了一个 3D 打印支撑架配件，可让您将设备�
 
 **步骤 2.** 将支撑架放置在 reTerminal E1002 底部背面的指定安装区域，该区域有嵌入式螺母。
 
-**步骤 3.** 使用长螺丝刀将螺丝拧入 reTerminal E1002 背面的嵌入式螺母中，将支架固定到设备上。
+**步骤 3.** 使用长螺丝刀将螺丝拧入 reTerminal E1002 背面的嵌入式螺母中，将支撑架固定到设备上。
 
-**步骤 4.** 牢固连接后，将 reTerminal E1002 放置在平坦表面上，支架将支撑设备保持直立位置。
+**步骤 4.** 牢固连接后，将 reTerminal E1002 放置在平坦表面上，支撑架将支撑设备保持直立位置。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::note
-支架提供固定的观看角度，无法调节。这种固定定位设计旨在在大多数使用场景中提供最佳可见性。
+支撑架提供固定的观看角度，无法调节。这种固定定位设计旨在在大多数使用场景中提供最佳可见性。
 
-支架允许设备放置在桌子、台面或架子上，使其非常适合在各种环境中用作信息显示器、控制面板或数字相框。
+支撑架允许设备放置在桌子、台面或架子上，使其非常适合在各种环境中用作信息显示器、控制面板或数字相框。
 :::
 
 ## 故障排除
