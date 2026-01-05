@@ -365,7 +365,7 @@ Sensing specifications:
 Reference materials:
 - Documentation: 
   - DHT11 Sensor: https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/
-  - XIAO ESP32C6: https://wiki.seeedstudio.com/xiao_pin_multiplexing_esp33c6/
+  - XIAO ESP32C6: https://wiki.seeedstudio.com/xiao_pin_multiplexing_esp32c6/
 
 Generate a complete project in the Example directory. Name the main file [project name with spaces replaced by underscores].ino with comprehensive code comments.
 ```
