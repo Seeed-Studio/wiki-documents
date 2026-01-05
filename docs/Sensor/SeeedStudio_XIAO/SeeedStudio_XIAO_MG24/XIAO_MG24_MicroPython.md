@@ -1,7 +1,7 @@
 ---
 title: Seeed Studio XIAO MG24 Sense With MicroPython
 description: Pin multiplexing with Seeed Studio XIAO MG24(Sense).
-image: https://files.seeedstudio.com/wiki/XIAO_MG24_Sense.webp
+image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mpy_6_1.webp
 slug: /xiao_mg24_sense_micropython
 keywords:
   - XIAO
@@ -322,7 +322,7 @@ Next , We will choose two sensors to reflect the characteristics of ADC .
 
 #### Software
 
-- Create a new file named pwm.py and copy the reference code into it.
+- Create a new file named adc.py and copy the reference code into it.
 
 ```py
 import time
@@ -453,7 +453,7 @@ UART is one of the most commonly used communication protocols. It allows data tr
 
 #### Software
 
-- Create a new file named pwm.py and copy the reference code into it.
+- Create a new file named uart.py and copy the reference code into it.
 
 <details>
 
@@ -750,7 +750,7 @@ XIAO MG24 Sense has an I2C interface that can be used for data transmission and 
 
 #### Software
 
-- Create a new file named pwm.py and copy the reference code into it.
+- Create a new file named i2c.py and copy the reference code into it.
 
 <details>
 

@@ -18,13 +18,13 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Primeros pasos con el Módulo de Relé AC Wi-Fi de 2 Canales en Home Assistant
+# Introducción al Módulo de Relé AC Wi-Fi de 2 Canales en Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/2-114993526-dual-smart-relay-module-for-xiao-45font.jpg" style={{width:420, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Dual-Smart-Relay-Module-for-XIAO-p-6309.html?utm_source=wiki" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div><br />
 
@@ -32,7 +32,7 @@ import TabItem from '@theme/TabItem';
 
 El **[Módulo de Relé AC Wi-Fi de 2 Canales](https://www.seeedstudio.com/Dual-Smart-Relay-Module-for-XIAO-p-6309.html)** es un dispositivo inteligente de Seeed Studio diseñado para controlar electrodomésticos alimentados por AC de forma inalámbrica. Su configuración de doble canal soporta control independiente de dos cargas, convirtiéndolo en una excelente opción para automatizar electrodomésticos como luces, ventiladores y otros dispositivos en un entorno de Home Assistant.
 
-Esta guía proporciona un recorrido detallado, incluyendo configuración, integración y configuración avanzada para usuarios que van desde principiantes hasta entusiastas del hogar inteligente.
+Esta guía proporciona un recorrido detallado, incluyendo configuración, integración y configuración avanzada para usuarios desde principiantes hasta entusiastas del hogar inteligente.
 
 ### Características Clave y Especificaciones
 
@@ -79,7 +79,7 @@ Esta guía proporciona un recorrido detallado, incluyendo configuración, integr
 
 :::warning Advertencia de Seguridad
 
-Siempre desconecte la alimentación de CA antes de cablear el relé. Evite usar el puerto USB mientras el dispositivo esté conectado a la alimentación de CA para prevenir riesgos eléctricos.
+Siempre desconecte la alimentación AC antes de cablear el relé. Evite usar el puerto USB mientras el dispositivo esté conectado a la alimentación AC para prevenir riesgos eléctricos.
 
 :::
 
@@ -90,8 +90,8 @@ Siempre desconecte la alimentación de CA antes de cablear el relé. Evite usar 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/relay_connections.png" style={{width: 600, height: 'auto'}}/></div>
 
 - Entrada
-  - **N (Neutro)**: Conecte el cable neutro de la fuente de alimentación de CA.
-  - **L (Vivo)**: Conecte el cable vivo de la fuente de alimentación de CA.
+  - **N (Neutro)**: Conecte el cable neutro de la fuente de alimentación AC.
+  - **L (Vivo)**: Conecte el cable vivo de la fuente de alimentación AC.
 - Salida
   - Canal 1
     - **N1 (Neutro)**: Cable neutro para la carga conectada al Relé 1.
@@ -100,12 +100,12 @@ Siempre desconecte la alimentación de CA antes de cablear el relé. Evite usar 
     - **N2 (Neutro)**: Cable neutro para la carga conectada al Relé 2.
     - **L2 (Vivo)**: Cable vivo para la carga conectada al Relé 2.
 
-## Primeros Pasos
+## Introducción
 
 ### Requisitos
 
 1. **Componentes Principales**:
-   - [Módulo de Relé de CA Wi-Fi de 2 Canales](https://www.seeedstudio.com/Dual-Smart-Relay-Module-for-XIAO-p-6309.html)
+   - [Módulo de Relé AC Wi-Fi de 2 Canales](https://www.seeedstudio.com/Dual-Smart-Relay-Module-for-XIAO-p-6309.html)
    - [Home Assistant Green](https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html)
 2. **Red**:
    - Wi-Fi estable para una interacción fluida entre el hardware y Home Assistant.
@@ -115,17 +115,17 @@ Siempre desconecte la alimentación de CA antes de cablear el relé. Evite usar 
 1. **Instalación**: homeassistant ya está preinstalado en [Home Assistant Green](https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html).
 2. **Habilitando el Complemento ESPHome**:
    - Acceda al panel de Home Assistant.
-   - Navegue a la sección "Complementos" y busque el complemento ESPHome.
-   - Haga clic en "Instalar" y luego en "Iniciar" para habilitarlo.
-   - Una vez instalado, configure el complemento para asegurar la comunicación adecuada con el XIAO ESP32C3.
+   - Navegue a la sección "Add-ons" y busque el complemento ESPHome.
+   - Haga clic en "Install" y luego en "Start" para habilitarlo.
+   - Una vez instalado, configure el complemento para asegurar una comunicación adecuada con el XIAO ESP32C3.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-enabling_ESPHome_Add-on.png" style={{width:1000, height:'auto'}}/></div>
 
-Al reunir los componentes necesarios y configurar Home Assistant con el complemento ESPHome, estará listo para proceder con la integración del Módulo de Relé de CA Wi-Fi de 2 Canales.
+Al reunir los componentes necesarios y configurar Home Assistant con el complemento ESPHome, estará listo para proceder con la integración del Módulo de Relé AC Wi-Fi de 2 Canales.
 
-### Paso 2: Preparar el Módulo de Relé
+### Paso 2: Preparando el Módulo de Relé
 
-Por defecto, su dispositivo (XIAO ESP32C3) viene pre-flasheado con firmware para el Módulo de Relé de CA Wi-Fi de 2 Canales. Sin embargo, hay dos escenarios donde puede necesitar actualizar el firmware:
+Por defecto, su dispositivo (XIAO ESP32C3) viene pre-flasheado con firmware para el Módulo de Relé AC Wi-Fi de 2 Canales. Sin embargo, hay dos escenarios donde puede necesitar actualizar el firmware:
 
 1. **Re-flashear el Firmware**: Si el firmware existente está corrupto o necesita empezar de nuevo.
 2. **Actualizar el Firmware**: Si hay una versión más nueva del firmware con funcionalidad mejorada.
@@ -133,7 +133,7 @@ Por defecto, su dispositivo (XIAO ESP32C3) viene pre-flasheado con firmware para
 Hay dos métodos simples para flashear el firmware:
 
 :::caution
-Firefox no soporta el flasheo de firmware en dispositivos ESP. Por favor use Google Chrome o Microsoft Edge en su lugar.
+Firefox no soporta flashear firmware en dispositivos ESP. Por favor use Google Chrome o Microsoft Edge en su lugar.
 :::
 
 <Tabs>
@@ -141,7 +141,7 @@ Firefox no soporta el flasheo de firmware en dispositivos ESP. Por favor use Goo
 
 Puede usar esta [Herramienta Web](https://limengdu.github.io/2-Channel_Relay_based_on_XIAO_ESP32C3/) para un método fácil y directo de flashear su firmware. Simplemente siga las instrucciones en pantalla.
 
-- Haga clic en el botón `CONECTAR` para iniciar la conexión. La herramienta actualizará automáticamente el firmware.
+- Haga clic en el botón `CONNECT` para iniciar la conexión. La herramienta actualizará automáticamente el firmware.
 
 Si algo sale mal, siga los pasos de solución de problemas en pantalla o cambie al método `ESPHome Web` para completar el proceso.
 
@@ -154,10 +154,10 @@ Para este método, necesitará descargar el archivo de firmware `bin` desde [aqu
 2. Visite la página [ESPHome Web](https://web.esphome.io/).
 3. Seleccione el archivo de firmware con el sufijo `*.factory.bin`.
 
-Vea el siguiente video para un recorrido detallado del flasheo del firmware vía ESPHome Web:
+Vea el siguiente video para un recorrido detallado de flashear el firmware a través de ESPHome Web:
 
 <div class="video-container">
-<iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Instalar firmware vía ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="Install firmware via ESPHome Web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 </TabItem>
@@ -168,7 +168,7 @@ Con cualquiera de los métodos, tendrá su firmware actualizado y listo para la 
 ### Paso 3: Configuración de Red
 
 1. **Habilitar Punto de Acceso**:
-   - Al encenderse por primera vez, el módulo creará una red Wi-Fi (SSID: `seeedstudio-relay`).
+   - Al encender por primera vez, el módulo creará una red Wi-Fi (SSID: `seeedstudio-relay`).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/2ch_relay_wifi_list.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
@@ -180,7 +180,7 @@ Con cualquiera de los métodos, tendrá su firmware actualizado y listo para la 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ap_wireless_setting_page.png" style={{width:'auto', height:680, "border-radius": '15px'}}/></div>
 
 3. **Integración con Home Assistant**:
-   - Una vez conectado a la red doméstica, el módulo será descubrible en Home Assistant bajo `Configuración -> Dispositivos y Servicios`.
+   - Una vez conectado a la red doméstica, el módulo será descubrible en Home Assistant bajo `Settings -> Devices & Services`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ha_new_device_discovered.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
@@ -190,32 +190,32 @@ De esta manera, puede conectar el módulo a su red de Home Assistant y permitir 
 
 1. **Descubrimiento Automático**:
    - Asegúrese de que **ESPHome** esté instalado en Home Assistant.
-   - Navegue a `Configuración -> Dispositivos y Servicios -> Integraciones` y busque el dispositivo.
+   - Navegue a `Settings -> Devices & Services -> Integrations` y busque el dispositivo.
 2. **Configuración Manual**:
    - Si no se descubre automáticamente, agregue manualmente el dispositivo especificando su dirección IP.
 
-Después de agregar el dispositivo, puede ver ambos interruptores en la página de Resumen. También puede establecer el nombre de cada interruptor individualmente.
+Después de agregar el dispositivo, puede ver ambos interruptores en la página de Descripción General. También puede establecer el nombre de cada interruptor individualmente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/ha_switch_overview.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
 ## Seguridad y Mantenimiento
 
 1. Inspeccione periódicamente el cableado en busca de desgaste y deterioro.
-2. Use dispositivos de protección de circuito adecuados, como fusibles o interruptores.
-3. Mantenga el dispositivo alejado del agua y del calor excesivo.
+2. Use dispositivos de protección de circuito apropiados, como fusibles o disyuntores.
+3. Mantenga el dispositivo alejado del agua y calor excesivo.
 
 ## Preguntas Frecuentes
 
-1. **¿Qué sucede si el dispositivo se desconecta del Wi-Fi?**
+1. **¿Qué pasa si el dispositivo se desconecta del Wi-Fi?**
    - El módulo intentará reconectarse automáticamente. Si falla, habilitará su punto de acceso de respaldo para reconfiguración.
-2. **¿Puedo usar el puerto USB mientras está conectado a la alimentación AC?**
-   - No, usar USB mientras está conectado a la alimentación AC puede dañar el dispositivo o crear un peligro de seguridad.
+2. **¿Puedo usar el puerto USB mientras esté conectado a la alimentación AC?**
+   - No, usar USB mientras esté conectado a la alimentación AC puede dañar el dispositivo o crear un riesgo de seguridad.
 3. **¿Puede este módulo funcionar sin Home Assistant?**
    - Sí, el módulo puede ser controlado a través de su **dirección IP local** o integrado con otras plataformas que soporten ESPHome o MQTT.
 
 ## Recursos
 
-- **Repositorio GitHub**: Acceda al Firmware de ESPHome en la [página GitHub del Módulo de Relé de Doble Canal de Seeed Studio](https://github.com/limengdu/2-Channel_Relay_based_on_XIAO_ESP32C3).
+- **Repositorio GitHub**: Acceda al Firmware ESPHome en la [página GitHub del Módulo de Relé de Doble Canal de Seeed Studio](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/xiao_2_channel_wifi_ac_energy_meter).
 - **Esquemático del Módulo de Relé de Doble Canal**: [Seeed_Studio_2-Channel_AC_Wi-Fi_Relay_SCH.pdf](https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/resource/Seeed_Studio_2-Channel_AC_Wi-Fi_Relay_SCH.pdf).
 
 ## Soporte Técnico y Discusión de Productos

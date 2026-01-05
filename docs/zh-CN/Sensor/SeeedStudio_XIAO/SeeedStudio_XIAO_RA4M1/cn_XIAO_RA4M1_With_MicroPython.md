@@ -337,7 +337,7 @@ XIAO RA4M1 开发板具有 12 位 ADC，可高分辨率读取模拟传感器值�
 
 #### 软件
 
-- 创建一个名为 pwm.py 的新文件并将参考代码复制到其中。
+- 创建一个名为 adc.py 的新文件并将参考代码复制到其中。
 
 ```py
 import time
@@ -471,7 +471,7 @@ UART 是最常用的通信协议之一。它只需两条数据线即可进行数
 
 #### 软件
 
-- 创建一个名为 pwm.py 的新文件，并将参考代码复制到其中。
+- 创建一个名为 uart.py 的新文件，并将参考代码复制到其中。
 
 <details>
 
@@ -695,21 +695,21 @@ finally:
             - 状态标志（1 = 有效定位，0 = 无定位）
 
 - **坐标转换函数**
-        - `transformLat(x, y)` 和 `transformLon(x, y)` — 实现 WGS-84 → GCJ-02 转换算法部分的辅助函数（在中国用于地图混淆）。
-        - `bd_encrypt(gg)` — 通过应用额外的偏移和旋转，将 GCJ-02 坐标转换为百度的 BD-09 坐标系统。
-        - `transform(gps)` — 使用基于椭球地球模型的复杂三角函数公式，将 WGS-84（原始 GPS）坐标转换为 GCJ-02 的主函数。
-        - `L76X_Baidu_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02 → BD-09（百度地图格式）转换的包装器。
-        - `L76X_Google_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02（中国的谷歌地图格式）转换的包装器。
+        - `transformLat(x, y)` 和 `transformLon(x, y)` —— 实现 WGS-84 → GCJ-02 转换算法部分的辅助函数（在中国用于地图混淆）。
+        - `bd_encrypt(gg)` —— 通过应用额外的偏移和旋转，将 GCJ-02 坐标转换为百度的 BD-09 坐标系统。
+        - `transform(gps)` —— 使用基于椭球地球模型的复杂三角函数公式，将 WGS-84（原始 GPS）坐标转换为 GCJ-02 的主函数。
+        - `L76X_Baidu_Coordinates(gps)` —— 将原始 GPS（WGS-84）→ GCJ-02 → BD-09（百度地图格式）转换的包装器。
+        - `L76X_Google_Coordinates(gps)` —— 将原始 GPS（WGS-84）→ GCJ-02（中国的谷歌地图格式）转换的包装器。
 
 - **解析 GNRMC 语句**
-        - `parse_gnrmc(nmea_sentence)` — 将原始 NMEA `$GNRMC` 或 `$PNRMC` 字符串解析为结构化的 `GNRMC` 对象。
+        - `parse_gnrmc(nmea_sentence)` —— 将原始 NMEA `$GNRMC` 或 `$PNRMC` 字符串解析为结构化的 `GNRMC` 对象。
             - 提取时间（从 UTC 转换为 GMT+8）。
             - 检查状态（`A` = 活动/有效定位，`V` = 无效）。
             - 从 DDMM.MMMMM 格式解析纬度/经度 → 十进制度数。
             - 返回填充的 `GNRMC` 对象，如果解析失败则返回默认空对象。
 
 - **显示格式化的 GPS 数据**
-        - `print_gps_data(gps)` — 打印人类可读的 GPS 信息，包括：
+        - `print_gps_data(gps)` —— 打印人类可读的 GPS 信息，包括：
             - 本地时间（GMT+8）
             - 带半球的原始 WGS-84 坐标
             - 转换后的 GCJ-02（谷歌兼容）和 BD-09（百度兼容）坐标
@@ -717,12 +717,12 @@ finally:
 
 - **主逻辑（try 块）**
         - 使用指定参数初始化 UART 接口。
-        - 定义坐标数学所需的全局常量（`pi`、`a`、`ee`、`x_pi`）— 地球椭球参数和缩放因子。
-        - 进入无限循环，通过 UART 持续读取传入的 GPS 数据。
+        - 定义坐标数学所需的全局常量（`pi`、`a`、`ee`、`x_pi`）—— 地球椭球参数和缩放因子。
+        - 进入无限循环以通过 UART 连续读取传入的 GPS 数据。
             - 使用 `buffer` 累积部分消息，直到接收到完整行（以 `\n` 结尾）。
             - 当完整行到达时：
                 - 检查是否以 `$GNRMC` 或 `$PNRMC` 开头
-                - 如果是，使用 `parse_gnrmc()` 解析
+                - 如果是，使用 `parse_gnrmc()` 解析它
                 - 通过 `print_gps_data()` 显示格式化输出
         - 处理异常：
             - `KeyboardInterrupt`：在 Ctrl+C 时优雅退出。
@@ -768,7 +768,7 @@ XIAO RAM41 具有 I2C 接口，可用于许多传感器的数据传输和解析�
 
 #### 软件
 
-- 创建一个名为 pwm.py 的新文件，并将参考代码复制到其中。
+- 创建一个名为 i2c.py 的新文件，并将参考代码复制到其中。
 
 <details>
 
@@ -889,7 +889,7 @@ except Exception as e:
 代码说明：
 
 - **导入模块**
-        - `time`：导入标准时间模块来处理程序暂停和延迟（这里用于 `while` 循环休眠）。
+        - `time`：导入标准时间模块以处理程序暂停和延迟（这里用于 `while` 循环休眠）。
         - `XiaoI2C`：从 `boards.xiao` 导入硬件特定的 I2C 类，该类处理 XIAO 开发板的低级通信协议。
 
 - **定义 I2C 配置**
@@ -904,7 +904,7 @@ except Exception as e:
 - **辅助函数（低级驱动程序）**
         - `ssd1306_write_command(cmd)`：向显示器发送单个控制指令。它在字节前加上 `0x00`，告诉 SSD1306 控制器后续字节是命令，而不是像素数据。
         - `ssd1306_write_commands(cmds)`：在单个 I2C 事务中高效发送一系列设置命令，以最小化开销。
-        - `ssd1306_write_data(data)`：向屏幕 RAM 发送图形数据。它在数据前添加 `0x40` 前缀，表示后续字节代表要点亮的像素。
+        - `ssd1306_write_data(data)`：向屏幕 RAM 发送图形数据。它在数据前加上 `0x40` 前缀，表示后续字节代表要点亮的像素。
 
 - **辅助函数（高级控制）**
         - `ssd1306_clear()`：清除屏幕内容。它设置列地址（0-127）和页地址（0-7）以覆盖整个屏幕，然后向每个内存位置写入零（空白像素）。

@@ -10,7 +10,7 @@ slug: /setting_ai_with_a1102
 sidebar_position: 2
 # sidebar_class_name: hidden
 last_update:
-  date: 11/26/2025
+  date: 12/31/2025
   author: Twelve
 ---
 
@@ -77,6 +77,10 @@ Once paired, click on **Advanced Settings** in the SenseCraft AI app.
 Navigate to additional configuration options by clicking **Advanced Settings** again.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/2.png" style={{width:400, height:'auto'}}/></div>
+
+Select A1102 options by clicking **AI Camera** again.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/picture10.png" style={{width:400, height:'auto'}}/></div>
 
 ## **Deploying an AI Model**
 
@@ -150,9 +154,11 @@ Equipped with 8GB of memory, the A1102 is able to automatically save images to t
 1. **Two methods to configure AI models**
   - Using the SenseCraft APP to configure the AI camera’s built-in models
     - Connect to the bottom ESP32 port, which is used to provide power to the device.
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/power_up_camera.png" style={{width:400, height:'auto'}}/></div>
   - [Using the SenseCraft AI website](https://sensecraft.seeed.cc/ai) to configure AI models that are not factory-preloaded
     - Connect to the top Himax port, which is used to flash the model to the Himax chip.
-  
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture3.png" style={{width:300, height:'auto'}}/></div>
+
 2. **The AI camera is connected but the app shows that it is not**
   - check the status of the datalogger and make sure to configure it first in Settings before returning to Information.
   - explanation: To save power, the datalogger only supplies power to the AI camera when entering the Settings page.

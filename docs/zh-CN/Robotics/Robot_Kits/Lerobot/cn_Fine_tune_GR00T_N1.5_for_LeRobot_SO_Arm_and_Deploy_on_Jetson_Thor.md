@@ -15,12 +15,12 @@ last_update:
 
 # 为 LeRobot SO-101 机械臂微调 GR00T N1.5 并在 Jetson AGX Thor 上部署
 
-## 介绍
+## 简介
 
-本 wiki 解释了如何为 **LeRobot SO-101 机械臂**微调 **NVIDIA Isaac GR00T N1.5** 并在 **NVIDIA Jetson Thor** 上部署。内容包括：
+本 wiki 解释如何为 **LeRobot SO-101 机械臂**微调 **NVIDIA Isaac GR00T N1.5** 并在 **NVIDIA Jetson Thor** 上部署。内容包括：
 
 - **LeRobot SO-101** 和 **Jetson AGX Thor** 的硬件准备
-- 在 Jetson Thor 上为 **GR00T N1.5** 设置软件环境
+- 在 Jetson Thor 上设置 **GR00T N1.5** 的软件环境
 - 使用 **LeRobot 训练平台**：数据收集、数据集格式化和 SO-101 机械臂的微调
 - 在 Jetson Thor 上部署训练好的 GR00T N1.5 策略（LeRobot + SO-101）的示例工作流程
 - 故障排除技巧和常见陷阱
@@ -77,7 +77,7 @@ last_update:
 :::
 
 从本地存储中选择下载的 ISO 镜像文件，然后选择目标设备——即您的 USB 驱动器。
-<mark>请务必仔细验证目标设备名称和挂载目录！</mark>点击 `Flash!` 并等待过程完成。完成后，用于将系统刷写到 Thor 的 USB 驱动器就准备好了：
+<mark>请务必仔细验证目标设备名称和挂载目录！</mark> 点击 `Flash!` 并等待过程完成。完成后，用于将系统刷写到 Thor 的 USB 驱动器就准备好了：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/step1.png" width="300"/>
   <img src="https://files.seeedstudio.com/wiki/other/target.png" width="300"/>
@@ -126,9 +126,9 @@ last_update:
 
 ## Thor 上的基本开发环境设置
 
-本节提供了如何在 Thor 上安装常用软件依赖项以用于开发目的的示例。这些依赖项旨在促进后续开发。
+本节提供如何在 Thor 上安装常用软件依赖项以用于开发目的的示例。这些依赖项旨在促进后续开发。
 
-请注意，列出的依赖项**仅供参考**——请根据各自项目的要求安装其他软件包。
+请注意，列出的依赖项**仅供参考**——请根据各自的项目要求安装其他软件包。
 
 ### 安装基本开发依赖项
 
@@ -187,7 +187,7 @@ conda --version
 其他 <mark>Python **3.12** + CUDA 13</mark> 为 thor 预编译的依赖项 `.whl` 文件可以在这里找到：
 [**https://pypi.jetson-ai-lab.io/sbsa/cu130**](https://pypi.jetson-ai-lab.io/sbsa/cu130)。
 
-如果没有预期的 wheel 文件，开发者需要自己构建所需的依赖项来完成开发环境的设置。
+如果预期的 wheel 文件不可用，开发者需要自己构建所需的依赖项来完成开发环境的设置。
 
 ### 安装其他依赖项
 
@@ -539,7 +539,7 @@ sudo docker run --rm -it \
 ## 使用 SO-ARM 进行数据收集
 
 有关数据收集的详细教程，请参考以下链接：  
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#record-the-dataset)  
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#记录数据集](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#记录数据集)  
 **此链接包含 SO-ARM 的完整教程，涵盖配置、组装、校准、数据收集、训练和推理。**
 
 lerobot 机械臂的数据收集可以在 PC 上执行，也可以直接在 Jetson 设备上执行。
@@ -568,7 +568,7 @@ USB Type-C 扩展坞必须连接到 Thor 上的特定端口，以确保外设正
 ### Lerobot 环境设置（可选）
 
 Lerobot 的开发环境设置过程可以在以下链接的子章节中找到：  
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#install-lerobot)
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#安装 lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#安装 lerobot)
 
 
 
@@ -576,19 +576,19 @@ Lerobot 的开发环境设置过程可以在以下链接的子章节中找到：
 
 
 SO-ARM 各关节上的电机需要在组装前进行配置。配置步骤可以在以下链接的子章节中找到：    
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#configure-the-motors)
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#配置电机](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#配置电机)
 
 
 ### 组装
 
 SO-ARM 主臂和从臂的安装过程可以在以下链接的子章节中找到：  
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#assembly](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#assembly)
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#组装](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#组装)
 
 ### SO-ARM 校准
 
 
 SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接的子章节：  
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#calibrate)
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#校准](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#校准)
 
 
 
@@ -607,14 +607,14 @@ SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接�
 <mark>具体的安装方法取决于您的应用场景；下面显示的示例仅供参考。</mark>
 
 详细信息请参考以下链接的子章节：  
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#add-cameras)
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#添加摄像头](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#添加摄像头)
 
 
 
 ### 数据收集
 
 完成摄像头安装和机械臂校准后，数据集收集程序可以在以下链接的子章节中找到：  
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#record-the-dataset)
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#记录数据集](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#记录数据集)
 
 
 
@@ -622,14 +622,14 @@ SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接�
 
 
 要可视化在 SO-ARM 上收集的数据，请参考以下链接的子章节：  
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#visualize-the-dataset)
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#可视化数据集](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#可视化数据集)
 
 
 
 ### 策略训练
 
 基于收集的数据，训练策略的程序可以在以下链接的子章节中找到：  
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#train-a-policy)
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#训练策略](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#训练策略)
 
 
 
@@ -731,7 +731,7 @@ python scripts/gr00t_finetune.py \
 ```
 
 :::note
-默认的微调设置需要约 25G 的显存。如果您没有那么多显存，请尝试在 gr00t_finetune.py 脚本中添加 `--no-tune_diffusion_model` 标志。
+默认的微调设置需要约 25G 显存。如果您没有那么多显存，请尝试在 gr00t_finetune.py 脚本中添加 `--no-tune_diffusion_model` 标志。
 :::
 
 <div align="center">
@@ -767,7 +767,7 @@ GR00T N1.5 的预训练模型可通过 **Hugging Faces** 获取。您可以从�
 
 GR00T 推理所需的所有依赖项都已在专用 Docker 镜像中预配置。
 
-使用以下命令启动容器：
+使用以下命令启动容器，将 `<image_name>:<tag>` 替换为您使用的镜像：
 
 ```bash
 sudo docker run --rm -it \
@@ -779,7 +779,7 @@ sudo docker run --rm -it \
   -v /etc/X11:/etc/X11 \
   --device /dev/nvhost-vic \
   -v /dev:/dev \
-  lerobot:r38.2.aarch64-cu130-24.04
+  <image_name>:<tag>
 ```
 
 Git 克隆 Gr00t 的源代码并安装：
@@ -791,7 +791,7 @@ pip install --upgrade setuptools
 pip install -e .[thor]
 ```
 
-Gr00t 完全兼容使用 lerobot 框架收集的数据集。请参考前面的"**数据收集**"部分来准备您的数据集，以便对 Gr00t 模型进行微调。
+Gr00t 完全兼容使用 lerobot 框架收集的数据集。请参考前面的"**数据收集**"部分来准备您的数据集，以便微调 Gr00t 模型。
 
 ### 模型微调（可选）
 
@@ -828,7 +828,7 @@ python scripts/gr00t_finetune.py \
    --base-model-path ./pretrained/GR00T-N1.5-3
 ```
 
-`--dataset-path` 是来自 SO-ARM 的收集数据的文件路径。
+`--dataset-path` 是从 SO-ARM 收集数据的文件路径。
 
 :::note
 默认微调设置需要约 25G 显存。如果您没有那么多显存，请尝试在 gr00t_finetune.py 脚本中添加 `--no-tune_diffusion_model` 标志。
@@ -836,7 +836,7 @@ python scripts/gr00t_finetune.py \
 
 ### 使用 GR00T N1.5 运行推理
 
-为了获得最佳性能，建议在部署微调后的 GR00T 模型时尽可能复制数据收集期间使用的真实世界设置。这是因为模型的泛化能力有限。
+为了获得最佳性能，建议在部署微调的 GR00T 模型时尽可能复制数据收集期间使用的真实世界设置。这是因为模型的泛化能力有限。
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400"/>
 </div>
@@ -874,7 +874,7 @@ sudo docker exec -it <container id> /bin/bahs
     --lang_instruction="Grab pens and place into pen holder."
 ```
 
-将 `index_or_path` 替换为您相机的索引号；您可以通过运行 `ls /dev/video*` 来找到它。
+将 `index_or_path` 替换为您的摄像头索引号；您可以通过运行 `ls /dev/video*` 来找到它。
 
 当客户端进程成功启动时，应出现以下输出：
 <div align="center">
@@ -903,14 +903,14 @@ sudo docker exec -it <container id> /bin/bahs
 
 
 **Q3：Thor 的屏幕在安装开始后变黑**  
-如果您在之前使用过或设置过的 Jetson AGX Thor 开发套件上使用 Jetson 安装 USB 棒，您需要在 `UEFI 设置菜单` 中启用 SoC Display Hand-Off。
+如果您在之前使用过或设置过的 Jetson AGX Thor 开发套件上使用 Jetson 安装 USB 棒，您需要在 `UEFI setup menu` 中启用 SoC Display Hand-Off。
 实际上，在此期间刷写在后台继续进行；过一段时间后，Ubuntu 桌面将出现。
 
 **Q4：我在显示器上没有视频输出（通过 KVM 连接）**  
 已知某些 KVM 切换器/设备无法很好地处理来自 Jetson AGX Thor 开发套件的视频输出。请将显示器直接连接到 Jetson AGX Thor 开发套件。
 
 **Q5：刷写 Thor 后，HDMI 在后续启动时有时显示无信号**  
-一个已证明有效的解决方法是切换到 DisplayPort (DP) 连接器进行显示输出。
+一个已被证明有效的解决方法是切换到 DisplayPort (DP) 连接器进行显示输出。
 
 **Q6：Thor 镜像刷写期间未检测到键盘输入**  
 我们建议在刷写期间使用有线键盘。无线键盘在 Thor 刷写过程中可能兼容性有限。
@@ -933,7 +933,7 @@ https://github.com/juliagoda/CH341SER
 Thor 的 Type-C 调试端口隐藏在磁性盖下。可能会创建多个串行设备节点；使用索引最小的那个通过串行登录到 Thor。
 
 **Q12：无法在 GR00T 镜像中运行 LeRobot 脚本来推理 ACT**  
-我们不建议在 Python 3.12 环境中调用 LeRobot API 进行 `ACT` 推理。`校准` 和 `查找端口` 脚本是可以的。请注意，Ubuntu 24 本地默认使用 Python 3.12。
+我们不建议在 Python 3.12 环境中调用 LeRobot API 进行 `ACT` 推理。`Calibration` 和 `find port` 脚本是可以的。请注意，Ubuntu 24 本地默认使用 Python 3.12。
 
 **Q13：如何检查 Thor 上的 GPU SM 利用率？**  
 运行：

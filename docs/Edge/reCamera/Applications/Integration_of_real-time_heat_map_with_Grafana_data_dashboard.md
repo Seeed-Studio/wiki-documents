@@ -76,6 +76,18 @@ As shown in the following figure, the startup is successful
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_1.png" /></div>
 
+If your device is an ARM architecture device running a Linux system such as a Raspberry Pi, the download link is [here](https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-linux-arm64.tar.gz).  
+
+If your device is an AMD architecture device running a Linux system, please click [here](https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-linux-amd64.tar.gz) to download.
+
+Linux device startup For InfluxDB, the same procedure applies. Enter the directory after the decompression and run it:
+
+```bash
+./influxd
+```
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_86.png" /></div>
+
 ### 1.2 Enter the InfluxDB's local webpage for configuration
 
 Then open a cmd terminal and enter the following command to query your computer IP
@@ -112,7 +124,43 @@ Click API Token to view the Token of your database, which will be used in the co
 
 ## 2.reCamera configuration
 
-### 2.1 Install programs from SenseCraft platforms in reCamera
+### 2.1 Connect reCamera to a Linux device (If you are not using a Linux device, please proceed to the next step and start from step 2.2)
+
+If you plan to connect reCamera to a Linux device, I suggest that you first use a Windows or Mac computer to connect to reCamera and make some settings changes. Otherwise, reCamera will not be able to directly connect to the Linux device.
+
+Take Windows as an example. Enter 192.168.42.1 in the browser, and then click "setting"
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_87.png" /></div>
+
+Then click on "Terminal", and enter the account name "recamera" and your password.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_88.png" /></div>
+
+Then run it on the recamera terminal (this step will require you to enter the password again):
+
+```bash
+sudo rootfs_rw on
+```
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_89.png" /></div>
+
+Then execute:
+
+```bash
+sudo vi /mnt/system/usb-ncm.sh
+```
+
+Then comment out this line (first press the "I" key on the keyboard to enter the write mode, then use the direction keys to reach this line, and add a "#" at the beginning). /etc/run_usb.sh probe acm >> /tmp/ncm.log 2>&1
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_90.png" /></div>
+
+Then just save and exit (press the ESC key on the keyboard to exit the write mode, and then enter ":wq" to save and exit).
+
+:::note
+It may become ineffective after multiple restarts and needs to be reset.
+:::
+
+### 2.2 Install programs from SenseCraft platforms in reCamera
 
 Enter the sensecraft platform-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera), find the Demo named "**Real-time heat map local blur processing Grafa**" and deploy it on your reCamera
 
@@ -120,7 +168,7 @@ Enter the sensecraft platform-Workspace-[reCamera](https://sensecraft.seeed.cc/a
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_9.png" /></div>
 
-### 2.2 connect the network and install the missing node
+### 2.3 connect the network and install the missing node
 
 After entering the workspace, this warning will pop up. This is normal. Click Close first. Later we need to install a node for the reCamera.
 
@@ -144,7 +192,7 @@ The installation takes a long time, please wait patiently, after the installatio
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_15.png" /></div>
 
-### 2.3 Configure InfluxDB Node
+### 2.4 Configure InfluxDB Node
 
 At this time, we also need to add some configuration information to the node named Write Person Count to find this node.
 
@@ -178,7 +226,7 @@ Then we click on the deployment in the upper right corner to make the change jus
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_23.png" /></div>
 
-### 2.4 View InfluxDB data
+### 2.5 View InfluxDB data
 
 At this point we can enter the InfluxDB interface to see if the data appears, if successful, click Submit, you will see the data line chart, here we query the number of data
 
@@ -188,6 +236,8 @@ At this point we can enter the InfluxDB interface to see if the data appears, if
 
 ### 3.1 Installation Grafana
 
+#### 3.1.1 Windows system
+
 Enter the Grafana's official website [Grafana get started | Cloud, Self-managed, Enterprise](https://grafana.com/get/) to download the installation package locally. The version I downloaded here is 12.3.0
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_25.png" /></div>
@@ -196,9 +246,55 @@ After downloading and installing, the Grafana should automatically run in the ba
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_26.png" /></div>
 
-### 3.2 Set data source
+#### 3.1.2 Linux system
 
-If you see Grafana running at this moment, you can access the local Grafana interface for configuration by visiting `http://localhost:3000` in your browser. We then click on "Data sources" on the left side and select "Add new data source".
+If your device is an ARM-based device running Linux such as a Raspberry Pi, then the download link is [here](https://dl.grafana.com/grafana/release/12.3.0/grafana_12.3.0_19497075765_linux_arm64.tar.gz)  
+
+If your device is an AMD-based device running the Linux system, please download the link [here](https://dl.grafana.com/grafana/release/12.3.0/grafana_12.3.0_19497075765_linux_amd64.tar.gz)
+
+Then, decompress the tar.gz file that you have downloaded.
+
+### 3.2 Modify defaults.ini to enable Grafana to embed HTML
+
+#### 3.2.1 Windows System
+
+Navigate to the "grafana/conf" directory, locate the "defaults.ini" file, and right-click to open it with Notepad.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_80.png" /></div>
+
+Press Ctrl + F, search for "disable_sanitize_html", change the original "disable_sanitize_html = false" to "disable_sanitize_html = true" to enable Grafana to embed html. After making the modification, save and exit.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_81.png" /></div>
+
+#### 3.2.2 Linux System
+
+For the Linux system, defaults.ini is also located in the conf directory.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_82.png" /></div>
+
+Right-click and select to open with an application similar to Notepad. Then, find this sentence in the picture and change the original "false" to "true".
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_83.png" /></div>
+
+### 3.3 Start Grafana
+
+For the Windows system, if you have installed Grafana, you only need to check in the "Services" section whether Grafana is running as described in Step 3.1.1. Generally, Grafana will automatically start after installation.  
+
+For the Linux system, Grafana needs to be started manually. After entering the directory of the decompressed grafana file, run the following command:
+
+```bash
+./bin/grafana-server
+```
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_84.png" /></div>
+
+### 3.4 Set data source
+
+After confirming that Grafana is running, at this point, you can access the local Grafana interface by visiting `http://localhost:3000` in the browser for configuration. First, you need to log in. The initial username and password are both admin. After logging in, the system will prompt you to change your new password. Please remember your password. The account will still be admin and will not change.
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_91.png" /></div>
+
+After logging in, we click on "Data sources" on the left side, and then select "Add new data source"
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_76.png" /></div>
 
@@ -206,19 +302,21 @@ Then select "InfluxDB"
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_77.png" /></div>
 
-Next, you need to make the following four revisions:  
-(1) "Query language" selected as "Flux"  
+Next, you need to make the following six revisions:
+(1) "Query language" selected as "Flux"
 (2) Enter the URL of your database webpage, which is the link to the InfluxDB webpage you accessed in the first step. For example, if your webpage address is 192.168.7.183:8086, then the URL you should fill in is `http://192.168.7.183:8086`.
-(3) "Organization" should be filled with the username you used when registering the database.  
-(4) "Default Bucket" should be filled with the name of the database you have created.  
+(3) Disable the "Basic auth" option
+(4) "Organization" should be filled with the username you used when registering the database.
+(5) Token should be filled with the API Tokens mentioned in the InfluxDB webpage as we discussed in step 2.3.
+(6) "Default Bucket" should be filled with the name of the database you have created.  
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_78.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_85.png" /></div>
 
 Once everything is ready, click "Save & Test". If the test is successful, it will display "datasource is working". At this point, you can proceed directly to the next step. These settings will be automatically saved.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_79.png" /></div>
 
-### 3.3 Import Dashboard
+### 3.5 Import Dashboard
 
 Click Dashboards
 
@@ -462,6 +560,8 @@ Then, by opening the webpage "[InfluxDB Heatmap (Grafana Fix + 1h Accumulation)]
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_73.png" /></div>
 
+This step is also applicable to Linux.
+
 ## 6. Return to the Grafana panel and view the final result
 
 At this point, you should be able to see the following display on the Grafana panel. If you encounter any issues, please refer to the "Frequently Asked Questions" section at the end of the article.
@@ -517,6 +617,14 @@ The "continuous running time" here refers to how long the database has been runn
 Yes, you need to select the data you need in the InfluxDB Explore interface, then click Submit, and then click Download CSV
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_70.png" /></div>
+
+### If the IP address changes, for instance if you switch to a different network, then you will need to modify these sections accordingly.
+
+(1) The IP address and verification token of the "InfluxDB Out" node in Node-RED  
+(2) The login IP of the InfluxDB database, for example:: http://10.241.1.98:8086/  
+(3) The IP of the data source in Grafana    
+(4) The IP in the HTML code of the heat map
+
 
 ## Tech Support & Product Discussion
 

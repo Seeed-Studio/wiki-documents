@@ -191,6 +191,16 @@ Each type of firmware on the ReSpeaker XVF3800 supports different update methods
 
 Connect the reSpeaker XVF3800 to your PC via the USB cable. Note that you need to use the XMOS USB-C port(close to 3.5mm jack port) to flash XMOS’s firmware.
 
+| Firmware | Channels | Notes |
+|---------|----------|-------|
+| respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Processed 2-channel output <br /> Channel 0: Conference <br /> Channel 1: ASR |
+| application_xvf3800_ua-io16-6ch-sqr-v2.0.8-test1.xe | 6 | Channel 0: Processed audio (Conference) <br /> Channel 1: Processed audio (ASR) <br /> Channel 2: Mic 0 raw data <br /> Channel 3: Mic 1 raw data <br /> Channel 4: Mic 2 raw data <br /> Channel 5: Mic 3 raw data |
+| respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin | 2 | Processed 2-channel output <br /> Channel 0: Conference <br /> Channel 1: ASR |
+| respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | Processed 2-channel output <br /> Channel 0: ASR <br /> Channel 1: Wake word |
+
+Users can modify the processed output channel selection for the firmware variants mentioned above.
+Please refer to the [XMOS documentation](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/03_using_the_host_application.html#output-selection) for details:
+
 #### Install DFU Util
 
 [`dfu-util`](http://dfu-util.sourceforge.net/) is a command line tool for Device Firmware Upgrade via USB.
