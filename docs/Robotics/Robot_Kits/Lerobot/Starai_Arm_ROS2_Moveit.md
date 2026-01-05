@@ -129,7 +129,7 @@ colcon build
 
 ```
 cd ~/starai_ws/src
-git clone https://github.com/Welt-liu/starai-arm-moveit2.git
+git clone https://github.com/Seeed-Projects/fashionstar-starai-arm-ros2.git
 cd ~/starai_ws
 colcon build
 echo "source ~/starai_ws/install/setup.bash" >> ~/.bashrc
