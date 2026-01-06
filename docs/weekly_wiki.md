@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/22/2025
+  date: 12/29/2025
   author: Frank
 ---
 
@@ -17,79 +17,74 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 22nd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is December 29th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/)
+### [Deploy Live VLM WebUI on reComputer Jetson](https://wiki.seeedstudio.com/deploy_live_vlm_webui_on_jetson/)
+
+<div class="video-container">
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/GrdIRkmiXUc" title="Deploy Live LLM WebUI on reComputer Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<div style={{ textAlign: "justify" }}>
+
+Live VLM WebUI is a universal web interface for real-time Vision Language Model interaction and benchmarking. It can stream your webcam to any VLM and get live AI-powered analysis - perfect for testing models, benchmarking performance, and exploring vision AI capabilities across multiple domains and hardware platforms. This wiki will show you how to deploy Live VLM WebUI on the reComputer Super J4012.
+
+</div>
+
+### [Seeed Studio XIAO MG24 Sense With MicroPython](https://wiki.seeedstudio.com/xiao_mg24_sense_micropython/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mpy_6_1.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document guides you through using MicroPython on the Seeed Studio XIAO MG24 Sense development board, covering hardware preparation, installing and configuring the Thonny IDE, flashing the MicroPython firmware, and running example programs such as LED blinking, PWM control, ADC readings, and UART communication, to help you quickly get started programming this compact board with built-in sensors and rich I/O support using MicroPython.
+
+</div>
+
+### [Seeed Studio XIAO RA4M1 With MicroPython](https://wiki.seeedstudio.com/xiao_ra4m1_micropython/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/debug_1_1.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document guides you through using MicroPython on the Seeed Studio XIAO RA4M1 development board, covering hardware preparation, installing and configuring the Thonny IDE, flashing the MicroPython firmware, and running example programs such as LED blinking, PWM control, ADC readings, and UART communication, to help you quickly get started programming this compact ARM Cortex-M4 board with MicroPython.
+
+</div>
+
+### [Platform IO with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_with_platformio/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_started.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This document walks you through developing with the Seeed Studio XIAO ESP32-C5 using PlatformIO, including preparing your hardware and software environment, installing Visual Studio Code and the PlatformIO extension, creating and configuring a new PlatformIO project for the board, and running example programs such as an LED blink and Wi-Fi connectivity demo, to help you quickly get started using this compact and flexible development platform with Arduino-style code support.
+
+</div>
+
+### [Seeed Studio XIAO ESP32-C5 With Micropython](https://wiki.seeedstudio.com/xiao_esp32c5_with_micropyhton/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document introduces the getting-started process for the Seeed Studio XIAO ESP32-C5, including hardware overview, development environment setup, board configuration, and basic example uploads. It also covers power options and fundamental features, providing users with a straightforward reference for initial development with the XIAO ESP32-C5.
+This document guides you through using MicroPython on the Seeed Studio XIAO ESP32-C5 development board, covering hardware preparation, flashing the MicroPython firmware, and writing and running example programs in Thonny IDE, such as LED blinking, Wi-Fi connectivity, and BLE demos, to help you quickly get started with this compact board that supports dual-band Wi-Fi and Bluetooth.
 
 </div>
 
-### [XIAO ESP32C5 ESP-Mesh Audio](https://wiki.seeedstudio.com/xiao_esp32c5_esp-mesh_audio/)
+## Existing Wiki Updated
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" alt="pir" width={600} height="auto" /></p>
+### Added Raspberry Pi Usage Examples
 
-<div style={{ textAlign: "justify" }}>
+We have added **Raspberry Pi usage examples** to multiple product documentation pages, demonstrating how to use these products with a Raspberry Pi for quick evaluation and development.
 
-This document demonstrates how to use the Seeed Studio XIAO ESP32-C5 to implement audio transmission over an ESP-Mesh network on the 5 GHz Wi-Fi band. It explains setting up a mesh scenario with the XIAO ESP32-C5 as a root node and a computer as a child node, shows an Arduino example for receiving UDP audio data, and includes a Python script to send simulated audio packets to the board.
+The updated documents include:
 
-</div>
-
-### [Connecting XIAO ESP32-C5 to Home Assistant](https://wiki.seeedstudio.com/xiao_esp32c5_homeassistant/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/S_HA_12.png" alt="pir" width={800} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This wiki tutorial will demonstrate how to connect the Seeed Studio XIAO ESP32-C5 to Home Assistant, as well as how to control devices or transmit data after connecting Grove modules to the XIAO ESP32-C5.
-
-</div>
-
-### [Connect IoT Button V2 to Home Assistant via Seeed HA Discovery](https://wiki.seeedstudio.com/iot_button_v2_ha_discovery/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Button_HA_Discovery/1.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This project will walk you through three main phases: flashing the firmware to your IoT Button V2 using a web-based flasher, installing the Seeed HA Discovery integration via HACS (Home Assistant Community Store), and discovering your button in Home Assistant for smart home automation.
-
-</div>
-
-### [Real-Time Heat Map Integration with Grafana Using reCamera](https://wiki.seeedstudio.com/integration_of_real-time_heat_map_with_grafana_data_dashboard/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/headmap.gif" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This project conducts target detection using the YOLO11n model built into reCamera. It performs fuzzy processing on personnel targets and displays a heat map effect. All of this is handled locally within reCamera! And reCamera will send the detected data to the locally running Influxdb database. Then, Grafana reads the data from the Influxdb database to display real-time data dashboards.
-
-</div>
-
-### [Deploying an Offline Smart Voice Assistant End-to-End](https://wiki.seeedstudio.com/respeaker_voice_assistant/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This project demonstrates a fully local smart voice assistant designed for smart offices and smart spaces. It uses the ReSpeaker XVF3800 microphone array for high-quality voice capture, combined with on-device speech-to-text (STT) for accurate transcription. A local large language model (LLM) processes user queries intelligently without relying on the cloud, ensuring privacy and low latency. Text-to-speech (TTS) generates natural voice responses, enabling real-time interaction. The system is ideal for environments such as offices, malls, kiosks, and meeting rooms where secure, offline voice control is essential.
-
-</div>
-
-<!-- ## Existing Wiki Updated
-
-### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
-
-We have added the [Controlling an EtherCAT Motor on Jetson (MyActuator X4)](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/#5-example--controlling-an-ethercat-motor-on-jetson-myactuator-x4) example.
-
-### [reComputer R1000 Getting Started](https://wiki.seeedstudio.com/recomputer_r/)
-
-We have added the [Connect to 4G Module by QMI Mode](https://wiki.seeedstudio.com/recomputer_r/#connect-to-4g-module-by-qmi-mode) example. -->
+- [Grove - Temperature&Humidity Sensor(DHT20)](https://wiki.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DH20/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+- [Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#play-with-raspberry-pi)
+- [Grove - I2C Color Sensor](https://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/#play-with-raspberry-pi)
+- [Grove - CO2 & Temperature & Humidity Sensor (SCD30)](https://wiki.seeedstudio.com/Grove-CO2_Temperature_Humidity_Sensor-SCD30/#play-with-raspberry-pi)
 
 ## The Efforts of Contributor
 
@@ -204,5 +199,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.12.01st](/Seeed_Elderly/weekly_wiki/2025/wiki251201)
 - [weekly wiki on 2025.12.08th](/Seeed_Elderly/weekly_wiki/2025/wiki251208)
 - [weekly wiki on 2025.12.15th](/Seeed_Elderly/weekly_wiki/2025/wiki251215)
+- [weekly wiki on 2025.12.22nd](/Seeed_Elderly/weekly_wiki/2025/wiki251222)
 
 </details>

@@ -1,7 +1,7 @@
 ---
 title: Seeed Studio XIAO MG24 Sense With MicroPython
 description: Pin multiplexing with Seeed Studio XIAO MG24(Sense).
-image: https://files.seeedstudio.com/wiki/XIAO_MG24_Sense.webp
+image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mpy_6_1.webp
 slug: /xiao_mg24_sense_micropython
 keywords:
   - XIAO

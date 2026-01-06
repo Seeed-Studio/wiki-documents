@@ -287,6 +287,8 @@ Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals ca
 
 This code uses the TinyGPSPlus library to read data from the L76K GNSS module via a serial connection and displays valid location information and date/time on the serial monitor.
 
+<!-- PCN(May 25, 2025): Considering the scenario of power saving, we removed the fix status indicator. Therefore, hide the following LED demo.
+
 ## Configuration
 
 ### Example 1: Change the behaviour of LED
@@ -351,7 +353,7 @@ struct CASIC_Messages {
 } L76KStruct;
 ```
 
-:::
+::: -->
 
 ## Resources
 

@@ -1,7 +1,7 @@
 ---
 title: Seeed Studio XIAO RA4M1 With MicroPython
 description: Pin multiplexing with Seeed Studio XIAO RA4M1
-image: https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-RA4M1.webp
+image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/result_3.webp
 slug: /xiao_ra4m1_micropython
 keywords:
   - XIAO

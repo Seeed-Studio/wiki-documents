@@ -96,8 +96,8 @@ Alimentada por **XIAO nRF52840** Plus, la placa de pantalla EN04 soporta pantall
         <tr>
             <th>Procesador</th>
             <td>XIAO nRF52840 Plus</td>
-            <td>XIAO Series</td>
-            <td>XIAO Series</td>
+            <td>XIAO Serie</td>
+            <td>XIAO Serie</td>
         </tr>
         <tr>
             <th>Pantallas ePaper Compatibles</th>
@@ -146,7 +146,7 @@ Alimentada por **XIAO nRF52840** Plus, la placa de pantalla EN04 soporta pantall
 - **Pantalla de Termostato Inteligente**: Mostrar niveles de temperatura y humedad, así como configuraciones de control para su termostato inteligente.
 - **Marco de Fotos Digital**: Crear un marco de fotos digital habilitado para WiFi que puede mostrar imágenes de su red de casa inteligente.
 
-## Descripción General del Hardware
+## Descripción del Hardware
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/hardwareoview.png" style={{width:900, height:'auto'}}/></div>
 
@@ -156,19 +156,19 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 ::: -->
 
-### ePaper Soportados
+### ePaper Soportado
 
 #### Conector de 24 Pines
 
 - [ePaper de 1.54 pulgadas - Monocromático 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-- [ePaper de 2.13 pulgadas - Flexible Monocromático 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+- [ePaper de 2.13 pulgadas - Monocromático Flexible 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
 - [ePaper de 2.13 pulgadas - Cuádruple 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-- [ePaper de 2.9 pulgadas - Monocromático 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+- [ePaper de 2.9 pulgadas - Monocromo 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
 - [ePaper de 2.9 pulgadas - Color cuádruple 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-- [ePaper de 4.2 pulgadas - Monocromático 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-- [ePaper de 4.26 pulgadas - Monocromático 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-- [ePaper de 5.83 pulgadas - Monocromático 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-- [ePaper de 7.5 pulgadas - Monocromático 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+- [ePaper de 4.2 pulgadas - Monocromo 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+- [ePaper de 4.26 pulgadas - Monocromo 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+- [ePaper de 5.83 pulgadas - Monocromo 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+- [ePaper de 7.5 pulgadas - Monocromo 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
 - [ePaper de 7.5 pulgadas - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/5.jpg" style={{width:600, height:'auto'}}/></div>
@@ -195,7 +195,7 @@ Al usar la Placa de Pantalla ePaper XIAO, asegúrese de configurar el puente seg
 
 :::
 
-## Descripción General del Software
+## Descripción del Software
 
 ### Instalar la Biblioteca Seeed GFX
 
@@ -244,7 +244,7 @@ Hay 4 ejemplos básicos, abra un ejemplo básico que le guste:
 
 Aquí, usamos una pantalla de 7.5 pulgadas como ejemplo. Los pasos son los mismos para todas las pantallas de 24 pines; la única diferencia es seleccionar el tamaño de pantalla apropiado en el controlador.
 
-Cree un **nuevo archivo "driver.h"** y pegue ese código en él. El código debería ser así:
+Cree un **nuevo archivo "driver.h"** y pegue ese código en él. El código debería ser como:
 
 ```cpp
 #define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
@@ -255,7 +255,7 @@ Después de eso, ve a **Tools** -> **Board** -> **XIAO ESP32S3** y **Tools** -> 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
-¡Ahora verás la respuesta en tu pantalla de papel electrónico! A continuación se muestran los resultados de los ejemplos de Helloworld. (Si no aparece nada, por favor presiona el botón de reset)
+¡Ahora verás la respuesta en tu pantalla de papel electrónico! A continuación se muestran los resultados de los ejemplos de Helloworld. (Si no aparece nada, presiona el botón de reset)
 
 :::tip
 ⚠️ Nota: Orientación del Cable ePaper
@@ -346,7 +346,7 @@ void loop() {
 
 ### Batería de Usuario en la Placa de Pantalla ePaper XIAO(nRF52840) - EN04
 
-Al operar con energía de batería:
+Cuando opera con energía de batería:
 
 - El dispositivo entrará automáticamente en modo de bajo consumo entre actualizaciones
 
@@ -391,12 +391,7 @@ void loop() {
 
 
 ## Recursos
-Próximamente...
-<!-- chang to en04 -->
-<!-- - **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_SCH_V1.2.pdf)
-- **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Grabcad 3D File](https://grabcad.com/library/xiao-epaper-display-board-nRF52840-EN04-1)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_V1.2_SCH&PCB.zip) -->
-
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
 
 
 ## Soporte Técnico y Discusión de Productos

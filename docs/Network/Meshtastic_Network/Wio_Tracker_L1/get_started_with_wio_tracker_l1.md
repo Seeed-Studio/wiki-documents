@@ -50,7 +50,7 @@ Only the 2.7 firmware support the menu bar. If you want to use the menu bar, fol
 
 #### Buzzer
 
-If you want to turn on or off the buzzer, please first `update the firmware` to `2.7` version. Because only the 2.7 virsion firmware has the menu bar. 
+If you want to turn on or off the buzzer, please first `update the firmware` to `2.7` version. Because only the 2.7 version firmware has the menu bar. 
 - Turn on the buzzer
 Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> Disable
 - Turn off the buzzer

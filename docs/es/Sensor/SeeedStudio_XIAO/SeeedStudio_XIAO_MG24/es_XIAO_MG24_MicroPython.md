@@ -13,7 +13,7 @@ last_update:
   sidebar_position: 9
 ---
 
-[MicroPython](https://github.com/micropython/micropython/wiki) es un intérprete de Python con una característica de compilación parcial de código nativo. Proporciona un subconjunto de características de Python 3.5, implementado para procesadores embebidos y sistemas restringidos. Es diferente de CircuitPython y puedes leer más sobre las diferencias en la [documentación de MicroPython](https://github.com/micropython/micropython/wiki/Differences).
+[MicroPython](https://github.com/micropython/micropython/wiki) es un intérprete de Python con una función de compilación de código nativo parcial. Proporciona un subconjunto de características de Python 3.5, implementado para procesadores embebidos y sistemas restringidos. Es diferente de CircuitPython y puedes leer más sobre las diferencias en la [documentación de MicroPython](https://github.com/micropython/micropython/wiki/Differences).
 
 ## Usando MicroPython con XIAO MG24
 
@@ -57,7 +57,7 @@ Luego, simplemente sigue los pasos predeterminados para la configuración.
     </a>
 </div><br />
 
-Clónalo en la máquina local, y luego recuerda la ruta donde se almacena este MicroPython de XIAO MG24. Esta ruta se usará más tarde.
+Clónalo en la máquina local, y luego recuerda la ruta donde se almacena este XIAO MG24 MicroPython. Esta ruta se usará más tarde.
 
 ```git
 git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
@@ -70,7 +70,7 @@ Aquí te mostraremos cómo encender el LED USER en el XIAO MG24 usando MicroPyth
 #### **Paso 1.** Flashear el firmware de MicroPython
 
 <!-- 如果您已经刷入了对应的MircroPython固件，可以跳过这一步骤 -->
-- Descarga el paquete de [Firmware MicroPython para XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/xiao_mg24_flash.zip) y extráelo en la ubicación apropiada. Luego abre la terminal en esta carpeta.
+- Descarga el paquete de [Firmware de MicroPython para XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/xiao_mg24_flash.zip) y extráelo en la ubicación apropiada. Luego abre la terminal en esta carpeta.
 
 - Mantén presionado el botón RESET integrado en el XIAO MG24, luego enciéndelo.
 
@@ -99,7 +99,7 @@ Abre Thonny IDE, luego haz clic en la esquina inferior derecha de la interfaz pa
 
 - Abre la vista, selecciona **File**, y la ruta del administrador de archivos se mostrará en la barra lateral izquierda.
 - Abre la ruta del archivo clonado o descargado, y abre `micropython-seeed-boards-master\examples`
-- Selecciona la carpeta **boards** y súbela al flash. Luego, podrás ver el archivo subido en el dispositivo/flash de MicroPython.
+- Selecciona la carpeta **boards** y súbela al flash. Entonces, podrás ver el archivo subido en el dispositivo/flash de MicroPython.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mpy_3.png" style={{width:600, height:'auto'}}/></div>
 
@@ -322,7 +322,7 @@ A continuación, elegiremos dos sensores para reflejar las características del 
 
 #### Software
 
-- Crea un nuevo archivo llamado pwm.py y copia el código de referencia en él.
+- Crea un nuevo archivo llamado adc.py y copia el código de referencia en él.
 
 ```py
 import time
@@ -391,7 +391,7 @@ Explicación del Código:
 - **Definir Pines y Constantes**
         - `adc_pin = 0` / `pwm_pin = 1`: Mapea los pines físicos. El pin D0 se usa para el sensor de entrada, y el pin D1 se usa para el LED de salida.
         - `FREQ / PERIOD_NS`: Establece la frecuencia de operación PWM a 1000 Hz y calcula la duración del período en nanosegundos (1,000,000 ns).
-        - `MAX_VOLTAGE / DEAD_ZONE`: Define el voltaje de referencia (3.3V) y un umbral de zona muerta del 2% para filtrar el ruido eléctrico y previene que el LED parpadee.
+        - `MAX_VOLTAGE / DEAD_ZONE`: Define el voltaje de referencia (3.3V) y un umbral de zona muerta del 2% para filtrar el ruido eléctrico y prevenir que el LED parpadee.
 
 - **Lógica Principal (bloque try)**
         - **Inicialización**: Configura los objetos ADC y PWM. El PWM comienza con un ciclo de trabajo de 0.
@@ -416,13 +416,13 @@ Explicación del Código:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/result_3.gif" style={{width:400, height:'auto'}}/></div>
 
-- La ventana Shell también imprimirá el voltaje y el porcentaje de brillo.
+- La ventana de Shell también imprimirá el voltaje y el porcentaje de brillo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mpy_5.png" style={{width:400, height:'auto'}}/></div>
 
 ### Ejemplo UART
 
-UART es uno de los protocolos de comunicación más comúnmente utilizados. Permite la transmisión de datos con solo dos líneas de datos, y su bajo costo lo hace ampliamente utilizado en muchos campos. A continuación, demostraremos la aplicación de comunicación serial tomando la transmisión de datos del módulo GPS como ejemplo.
+UART es uno de los protocolos de comunicación más comúnmente utilizados. Permite la transmisión de datos con solo dos líneas de datos, y su bajo costo lo hace ampliamente utilizado en muchos campos. A continuación, demostraremos la aplicación de comunicación serie tomando como ejemplo la transmisión de datos del módulo GPS.
 
 #### Preparación de Hardware
 
@@ -453,7 +453,7 @@ UART es uno de los protocolos de comunicación más comúnmente utilizados. Perm
 
 #### Software
 
-- Crea un nuevo archivo llamado pwm.py y copia el código de referencia en él.
+- Crea un nuevo archivo llamado uart.py y copia el código de referencia en él.
 
 <details>
 
@@ -699,7 +699,7 @@ Explicación del Código:
 
 - **Lógica Principal (bloque try)**
         - Inicializa la interfaz UART con parámetros especificados.
-        - Define constantes globales necesarias para cálculos de coordenadas (`pi`, `a`, `ee`, `x_pi`) — parámetros del elipsoide terrestre y factores de escala.
+        - Define constantes globales necesarias para matemáticas de coordenadas (`pi`, `a`, `ee`, `x_pi`) — parámetros del elipsoide terrestre y factores de escala.
         - Entra en bucle infinito para leer continuamente datos GPS entrantes vía UART.
             - Usa `buffer` para acumular mensajes parciales hasta que se reciba una línea completa (terminando con `\n`).
             - Cuando llega una línea completa:
@@ -728,7 +728,7 @@ XIAO MG24 Sense tiene una interfaz I2C que puede usarse para transmisión de dat
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO MG24 Sense</th>
-        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+        <th>Seeed Studio Expansion Base para XIAO con Grove OLED</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -750,7 +750,7 @@ XIAO MG24 Sense tiene una interfaz I2C que puede usarse para transmisión de dat
 
 #### Software
 
-- Crea un nuevo archivo llamado pwm.py y copia el código de referencia en él.
+- Crea un nuevo archivo llamado i2c.py y copia el código de referencia en él.
 
 <details>
 

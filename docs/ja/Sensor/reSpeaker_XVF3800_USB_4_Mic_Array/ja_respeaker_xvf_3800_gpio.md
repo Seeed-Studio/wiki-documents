@@ -14,7 +14,6 @@ last_update:
   author: Kasun Thushara
 ---
 
-## XIAO ESP32-S3を使用したreSpeaker XVF3800 GPIOの制御
 
 ## 目的
 
