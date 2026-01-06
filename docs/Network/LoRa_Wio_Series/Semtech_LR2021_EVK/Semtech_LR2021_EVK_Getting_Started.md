@@ -6,13 +6,14 @@ keywords:
   - XIAO
   - nRF54L15
   - docusaurus
+image: https://files.seeedstudio.com/wiki/Semtech_LR2021_EVK/image/2-100039980-LR2021-LoRa-Plus-Evaluation-kit-868Mhz-EU-V2.0.jpg
 slug: /semtech_lr2021_evk_getting_started
 last_update:
   date: 12/30/2025
   author: David Du
 ---
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Semtech_LR2021_EVK/image/2-100039980-LR2021-LoRa-Plus-Evaluation-kit-868Mhz-EU-V2.0.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Semtech_LR2021_EVK/image/Semtech-LR2021-LoRa-Plus-Evaluation-Kit.webp" style={{width:600, height:'auto'}}/></div>
 
 ## Features
 

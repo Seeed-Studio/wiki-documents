@@ -21,6 +21,16 @@ Today is January 5th, and a brand new week has begun! Check out what Seeed Studi
 
 ## Latest Wiki Launched
 
+### [Semtech LR2021 LoRa Plus™ Evaluation Kit](https://wiki.seeedstudio.com/semtech_lr2021_evk_getting_started/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Semtech_LR2021_EVK/image/2-100039980-LR2021-LoRa-Plus-Evaluation-kit-868Mhz-EU-V2.0.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+The **Semtech LR2021 LoRa Plus Evaluation Kit** features a modular design that seamlessly integrates the powerful **Seeed Studio XIAO nRF54L15 Core Board** with the **LoRa Plus Expansion Board**. This compact and robust hardware platform is specifically engineered for evaluating full-scenario ground-to-satellite communication. Its compatibility with numerous mainstream IoT protocols ensures it meets development requirements across diverse application scenarios.
+
+</div>
+
 ### [YOLOv11 for Speed Estimation and Loitering Detection](https://wiki.seeedstudio.com/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer/)
 
 <div class="video-container">
@@ -43,89 +53,29 @@ The Seeed Studio XIAO ESP32-C5 is a powerful and versatile development board tha
 
 </div>
 
+### [AI Parking Management Demo with reCamera](https://wiki.seeedstudio.com/ai_parking_slot_monitoring_demo_with_recamera/)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### [Deploy Live VLM WebUI on reComputer Jetson](https://wiki.seeedstudio.com/deploy_live_vlm_webui_on_jetson/)
-
-<div class="video-container">
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/GrdIRkmiXUc" title="Deploy Live LLM WebUI on reComputer Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/test6.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Live VLM WebUI is a universal web interface for real-time Vision Language Model interaction and benchmarking. It can stream your webcam to any VLM and get live AI-powered analysis - perfect for testing models, benchmarking performance, and exploring vision AI capabilities across multiple domains and hardware platforms. This wiki will show you how to deploy Live VLM WebUI on the reComputer Super J4012.
+This project provides an out-of-the-box demo for parking management scenarios such as commercial parking lots, residential garages, industrial parks, and campuses. It detects the occupancy status of each parking slot from camera views, applies stabilization to reduce visual jitter and short-term fluctuations, automatically summarizes parking availability, and visualizes the results directly on the preview interface for quick verification and demonstration.
 
 </div>
 
-### [Seeed Studio XIAO MG24 Sense With MicroPython](https://wiki.seeedstudio.com/xiao_mg24_sense_micropython/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mpy_6_1.jpg" alt="pir" width={600} height="auto" /></p>
+### [Creating a Custom BSP Package from Jetson Development Environment](https://wiki.seeedstudio.com/make_diy_bsp_for_jetson/)
 
 <div style={{ textAlign: "justify" }}>
 
-This document guides you through using MicroPython on the Seeed Studio XIAO MG24 Sense development board, covering hardware preparation, installing and configuring the Thonny IDE, flashing the MicroPython firmware, and running example programs such as LED blinking, PWM control, ADC readings, and UART communication, to help you quickly get started programming this compact board with built-in sensors and rich I/O support using MicroPython.
-
-</div>
-
-### [Seeed Studio XIAO RA4M1 With MicroPython](https://wiki.seeedstudio.com/xiao_ra4m1_micropython/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/debug_1_1.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This document guides you through using MicroPython on the Seeed Studio XIAO RA4M1 development board, covering hardware preparation, installing and configuring the Thonny IDE, flashing the MicroPython firmware, and running example programs such as LED blinking, PWM control, ADC readings, and UART communication, to help you quickly get started programming this compact ARM Cortex-M4 board with MicroPython.
-
-</div>
-
-### [Platform IO with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_with_platformio/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_started.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This document walks you through developing with the Seeed Studio XIAO ESP32-C5 using PlatformIO, including preparing your hardware and software environment, installing Visual Studio Code and the PlatformIO extension, creating and configuring a new PlatformIO project for the board, and running example programs such as an LED blink and Wi-Fi connectivity demo, to help you quickly get started using this compact and flexible development platform with Arduino-style code support.
-
-</div>
-
-### [Seeed Studio XIAO ESP32-C5 With Micropython](https://wiki.seeedstudio.com/xiao_esp32c5_with_micropyhton/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This document guides you through using MicroPython on the Seeed Studio XIAO ESP32-C5 development board, covering hardware preparation, flashing the MicroPython firmware, and writing and running example programs in Thonny IDE, such as LED blinking, Wi-Fi connectivity, and BLE demos, to help you quickly get started with this compact board that supports dual-band Wi-Fi and Bluetooth.
+This wiki guide demonstrates how to clone a complete development environment from an existing Jetson device and create a flashable BSP (Board Support Package) that can be used to replicate the same environment on other Jetson devices. The BSP created using this method enables complete environment cloning when flashed to other Jetson devices. This guide uses JetPack 6.2 as an example.
 
 </div>
 
 ## Existing Wiki Updated
 
-### Added Raspberry Pi Usage Examples
+### [Deploying AI Models on SenseCAP A1102 Using SenseCraft AI](https://wiki.seeedstudio.com/deploy_ai_with_a1102/)
 
-We have added **Raspberry Pi usage examples** to multiple product documentation pages, demonstrating how to use these products with a Raspberry Pi for quick evaluation and development.
-
-The updated documents include:
-
-- [Grove - Temperature&Humidity Sensor(DHT20)](https://wiki.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DH20/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
-- [Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#play-with-raspberry-pi)
-- [Grove - I2C Color Sensor](https://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/#play-with-raspberry-pi)
-- [Grove - CO2 & Temperature & Humidity Sensor (SCD30)](https://wiki.seeedstudio.com/Grove-CO2_Temperature_Humidity_Sensor-SCD30/#play-with-raspberry-pi)
+We have added a [Custom AI Model Deploying Process](https://wiki.seeedstudio.com/deploy_ai_with_a1102/#custom-ai-model-deploying-process).
 
 ## The Efforts of Contributor
 
