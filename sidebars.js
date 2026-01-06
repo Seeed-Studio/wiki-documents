@@ -7838,6 +7838,13 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'reComputer R1225 LoRaWAN 网关',
+          items: [
+            'zh-CN/Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/cn_R1225_introduction',
+          ],
+        },
+        {
+          type: 'category',
           label: 'SenseCAP M2 多平台网关',
           items: [
             'zh-CN/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/cn_SenseCAP_M2_Multi_Platform_Overview',
@@ -12916,6 +12923,13 @@ const sidebars = {
         id: 'es/Network/SenseCAP_Network/es_SenseCAP_Gateway_Intro',
       },
       items: [
+        {
+          type: 'category',
+          label: 'Gateway LoRaWAN reComputer R1225',
+          items: [
+            'es/Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/es_R1225_introduction',
+          ],
+        },
         {
           type: 'category',
           label: 'Gateway Multi-Plataforma SenseCAP M2',
@@ -17997,6 +18011,13 @@ const sidebars = {
         id: 'ja/Network/SenseCAP_Network/ja_SenseCAP_Gateway_Intro',
       },
       items: [
+        {
+          type: 'category',
+          label: 'reComputer R1225 LoRaWAN Gateway',
+          items: [
+            'ja/Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/ja_R1225_introduction',
+          ],
+        },
         {
           type: 'category',
           label: 'SenseCAP M2 Multi-Platform Gateway',
