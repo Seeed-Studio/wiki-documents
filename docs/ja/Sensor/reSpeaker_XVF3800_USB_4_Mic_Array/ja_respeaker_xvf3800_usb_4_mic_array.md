@@ -73,7 +73,7 @@ ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェ
 | **オーディオ品質**             | **従来の XVF3000 ベース設計**と同等以上                                         |
 
 :::note
-ReSpeaker XVF3800 は 2 つのバリエーションで提供されています—XIAO なしのものと、XIAO ESP32S3 をオンボードで搭載したものです。XIAO なしのバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合バージョンを使用するには、**INT-Device（I2S）モード**用にビルドされたファームウェアをフラッシュする必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](docs/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro.md)を参照してください。
+ReSpeaker XVF3800 は 2 つのバリエーションで提供されています—XIAO なしのものと、XIAO ESP32S3 をオンボードで搭載したものです。XIAO なしのバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合バージョンを使用するには、**INT-Device（I2S）モード**用にビルドされたファームウェアをフラッシュする必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](/ja/respeaker_xvf3800_xiao_getting_started)を参照してください。
 :::
 
 ### XIAO ESP32S3 サポート
@@ -901,6 +901,22 @@ sudo apt install pavucontrol -y
 ```
 
 その後、**pavucontrol** を開いて、必要に応じて出力音量を 100% を超えて増加させることができます。
+
+### USB ドライバーを再インストールした後、ReSpeaker が録音も再生もできない
+
+デバイスマネージャーで ReSpeaker に関連するすべてのドライバーをアンインストールしてください。これで問題が解決しました。
+
+### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できませんか？
+
+スタートメニューを開き、「デバイス マネージャー」と入力します。関連する reSpeaker XVF 3800 デバイスを見つけて右クリックし、「デバイスのアンインストール」を選択します。その後、デバイスを再接続してください（USB を一度抜いてから差し直します）。Windows が自動的に正しいサウンドカードドライバーを再インストールします。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
+
+## リソース
+
+- [ReSpeaker XVF3800 3D ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/respeaker_mic_array_xvf3800_1_with-xiao-0820.stp)
+- [ReSpeaker XVF3800 3D-エンクロージャー-上部 ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-up.stp)
+- [ReSpeaker XVF3800 3D-エンクロージャー-下部 ファイル](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/3d/1-down.stp)
 
 ## 技術サポート & 製品ディスカッション
 

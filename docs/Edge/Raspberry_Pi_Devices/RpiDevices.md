@@ -321,6 +321,14 @@ OS platform for IoT device deployment and management.
         </td>
       </tr>
       <tr>
+        <td><img src="https://files.seeedstudio.com/wiki/reComputer/home_page/thingsboard_logo.png" style={{width:80, height:'auto'}}/></td>
+        <td>
+          <strong>thingsboard</strong>
+  
+Open-source IoT platform supporting device connectivity, data management, and visual deployment.
+        </td>
+      </tr>
+      <tr>
         <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/homepage/Supported_Software/influxdb.png" style={{width:80, height:'auto'}}/></td>
         <td>
           <strong>InfluxDB</strong>  

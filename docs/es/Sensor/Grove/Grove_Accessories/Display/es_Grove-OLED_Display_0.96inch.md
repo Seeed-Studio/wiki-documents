@@ -1,67 +1,67 @@
 ---
-description: Grove - OLED Display 0.96 inch
-title: Grove - OLED Display 0.96 inch
+description: Grove - Pantalla OLED de 0.96 pulgadas
+title: Grove - Pantalla OLED de 0.96 pulgadas
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-OLED_Display_0.96inch
 last_update:
-  date: 1/9/2023
-  author: shuxu hu
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/Grove-OLED-0.96.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/Grove-OLED-0.96.png" alt="pir" width={600} height="auto" /></p>
 
-**Grove - OLED Display 0.96"** es un módulo OLED monocromo de matriz de 128×64 puntos con interfaz I2C de 4 pines Grove. En comparación con las pantallas LCD, las OLED son más competitivas y ofrecen numerosas ventajas como alto brillo, autoemisión, alto contraste, perfil delgado, amplio ángulo de visión, amplio rango de temperatura y bajo consumo de energía. Tiene una pantalla más grande, por lo que puede mostrar más contenido que la OLED 96×96.
+El módulo **Grove - Pantalla OLED de 0.96"** es una pantalla OLED monocromática de matriz de puntos de 128×64 con interfaz Grove 4pin I2C. Comparado con LCD, las pantallas OLED son más competitivas, ya que tienen una serie de ventajas como alto brillo, auto-emisión, alta relación de contraste, contorno delgado/fino, amplio ángulo de visión, amplio rango de temperatura y bajo consumo de energía. Tiene una pantalla más grande para que pueda mostrar más contenido que el OLED 96×96.
 
 <!-- [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/item_detail.html?p_id=781) -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/item_detail.html?p_id=781)
 
 ## Versión
 
-| Versión del producto                   | Cambios                                                                                                                                                                                    | Fecha de lanzamiento |
-|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
-| Grove - OLED Display 0.96 inch V1.1    | Inicial                                                                                                                                                                                    | Oct 2015             |
+| Versión del Producto              | Cambios                                                                                                                                                                                    | Fecha de Lanzamiento |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| Grove - Pantalla OLED de 0.96 pulgadas V1.1 | Inicial                                                                                                                                                                                    | Oct 2015      |
 
 ## Características
 
 - Interfaz compatible con Grove
-- Modo de comunicación: I2C
+- Modo de Comunicación: I2C
 - Bajo consumo de energía
-- Color de visualización: Blanco
+- Color de Pantalla: Blanco
 - Amplio rango de temperatura de funcionamiento: -20℃~70℃
 - Dirección I2C 0x3C
 
 :::note
-    Si desea usar múltiples dispositivos I2C, consulte [Software I2C](https://wiki.seeedstudio.com/es/Arduino_Software_I2C_user_guide/).
+    Si deseas usar múltiples dispositivos I2C, consulta [Software I2C](https://wiki.seeedstudio.com/es/Arduino_Software_I2C_user_guide/).
 :::
 :::warning
- Atención: un impacto fuerte o estrés sobre la OLED puede provocar la rotura de la pantalla.
+ Ten en cuenta: un impacto fuerte o estrés en el OLED causará la rotura de la pantalla.
 :::
 :::tip
-    Para más detalles sobre los módulos Grove, consulte [Grove System](https://wiki.seeedstudio.com/es/Grove_System/)
+    Más detalles sobre los módulos Grove consulta [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
 
 ## Especificaciones
 
-| Ítems                              | Mín  | Típico    | Máx    | Unidad          |
+|Elementos                              |Mín  |Norm    |Máx    |Unidad          |
 |------------------------------------|-----------|---------|-------|--------------|
-| Tensión de alimentación (VCC)      | 3.3  | 5.0    | 5.5    | V             |
-| Controlador IC                      |-          |SSD1308Z |-      |-             |
-| Color de visualización              |-          |Blanco    |-      |-             |
-| Matriz de puntos                      |-          |128×64   |-      |-             |
-| Tamaño del panel                      |-          |26.7(An)×19.26(Al)|-|mm            |
-| Área activa                      |-|21.74(An)×11.175 (Al)|-    |mm            |
-| Paso de punto                      |-|0.17(An)×0.175 (Al)|-            |mm            |
-| Tamaño de punto                      |-|0.15(An)×0.15 (Al)|-            |mm            |
-| Rango de temperatura de funcionamiento |-|-20~70 |-                      |℃            |
+|Voltaje de Alimentación (VCC)                 |3.3  |5.0    |5.5    |V             |
+|IC Controlador                      |-          |SSD1308Z |-      |-             |
+|Color de Pantalla                      |-          |Blanco    |-      |-             |
+|Matriz de Puntos                      |-          |128×64   |-      |-             |
+|Tamaño del Panel                      |-          |26.7(W)×19.26(H)|-|mm            |
+|Área Activa                      |-|21.74(W)×11.175 (H)|-    |mm            |
+|Separación de Puntos                      |-|0.17(W)×0.175 (H)|-            |mm            |
+|Tamaño de Punto                      |-|0.15(W)×0.15 (H)|-            |mm            |
+|Amplio rango de temperatura de funcionamiento |-|-20~70 |-                      |℃            |
 
 :::tip
-    Para más detalles sobre los módulos Grove, consulte [Grove System](https://wiki.seeedstudio.com/es/Grove_System/)
+    Más detalles sobre los módulos Grove consulta [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
 
-## Plataformas compatibles
+## Plataformas Soportadas
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -71,73 +71,73 @@ last_update:
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
 
 :::caution
-    Las plataformas mencionadas arriba como compatibles indican la compatibilidad de software o teórica. En la mayoría de los casos, solo proporcionamos biblioteca de software o ejemplos de código para la plataforma Arduino. No es posible ofrecer bibliotecas/demos para todas las posibles MCU. Por lo tanto, los usuarios deben escribir su propia biblioteca de software.
+    Las plataformas mencionadas anteriormente como soportadas son una indicación de la compatibilidad de software o teórica del módulo. Solo proporcionamos biblioteca de software o ejemplos de código para la plataforma Arduino en la mayoría de los casos. No es posible proporcionar biblioteca de software / código de demostración para todas las plataformas MCU posibles. Por lo tanto, los usuarios tienen que escribir su propia biblioteca de software.
 :::
 
-## Comenzando
+## Primeros Pasos
 
 :::note
-    Si es la primera vez que trabaja con Arduino, le recomendamos encarecidamente consultar [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/) antes de empezar.
+    Si esta es la primera vez que trabajas con Arduino, te recomendamos firmemente que veas [Primeros Pasos con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/) antes de comenzar.
 :::
 
 ### Jugar con Arduino
 
 #### Demostración
 
-El OLED 128×64 utiliza todos los pines del chip SSD1308; el punto de origen por defecto está en la esquina superior izquierda. También puede cambiar el punto de origen ajustando el programa para mostrar los patrones deseados. Para más detalles, consulte [SSD1308_1.0.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/SSD1308_1.0.pdf) y [LY190-128064.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/LY190-128064.pdf).
+El OLED128*64 usa todos los pines del chip SSD1308, el punto original predeterminado está en la esquina superior izquierda. También puedes cambiar el punto original ajustando el programa para mostrar los patrones deseados. Para más detalles, consulta [SSD1308_1.0.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/SSD1308_1.0.pdf) y [LY190-128064.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/LY190-128064.pdf).
 
 #### Hardware
 
-- **Paso 1.** Prepare los siguientes elementos:
+- **Paso 1.** Prepara los siguientes elementos:
 
-| Seeeduino V4 | Base Shield | Grove - OLED Display 0.96inch |
+| Seeeduino V4 | Base Shield | Grove - Pantalla OLED de 0.96 pulgadas |
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg" alt="pir" width={600} height="auto" /></p>|
-|[Obtener Uno Ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
+|[Obtener UNO Ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
 
-- **Paso 2.** Conecte Grove OLED Display 128×64 al puerto I2C del Grove Base Shield.
-- **Paso 3.** Inserte Grove - Base Shield en Seeeduino.
-- **Paso 4.** Conecte Seeeduino al PC mediante un cable USB.
+- **Paso 2.** Conecta la Pantalla OLED Grove 128*64 al puerto I2C en Grove Base Shield.
+- **Paso 3.** Conecta Grove - Base Shield en Seeeduino.
+- **Paso 4.** Conecta Seeeduino a la PC mediante un cable USB.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/with_ardu.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/with_ardu.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
- Si no dispone de Grove Base Shield, también puede conectar directamente Grove - OLED Display 0.96 inch a Seeeduino como se muestra a continuación.
+ Si no tenemos Grove Base Shield, también podemos conectar directamente Grove - Pantalla OLED de 0.96 pulgadas a Seeeduino como se muestra a continuación.
 :::
 
-| Seeeduino     | Grove - OLED Display 0.96 inch |
+| Seeeduino     | Grove - Pantalla OLED de 0.96 pulgadas |
 |---------------|-------------------------|
-| 5V            | Rojo                    |
+| 5V            | Rojo                     |
 | GND           | Negro                   |
-| SDA           | Blanco                  |
-| SCL           | Amarillo                |
+| SDA           | Blanco                   |
+| SCL           | Amarillo                  |
 
 #### Software
 
-- **Paso 1.** Descargue la [biblioteca U8G2 128×64](https://github.com/olikraus/u8g2) desde GitHub.
-- **Paso 2.** Consulte [How to install library](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la biblioteca en Arduino.
-- **Paso 3.** Copie el código en Arduino IDE y cárguelo. Si no sabe cómo subir el código, consulte [how to upload code](https://wiki.seeedstudio.com/es/Upload_Code/).
+- **Paso 1.** Descarga la [biblioteca U8G2 128*64](https://github.com/olikraus/u8g2) desde Github.
+- **Paso 2.** Consulta [Cómo instalar biblioteca](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la biblioteca para Arduino.
+- **Paso 3.** Copia el código en Arduino IDE y súbelo. Si no sabes cómo subir el código, consulta [cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/).
 
 ```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
- 
+
 #ifdef U8X8_HAVE_HW_SPI
 #include <SPI.h>
 #endif
 #ifdef U8X8_HAVE_HW_I2C
 #include <Wire.h>
 #endif
- 
+
 U8G2_SSD1306_128X64_ALT0_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE); // SSD1306 and SSD1308Z are compatible
- 
+
 // U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);    //Low spped I2C
- 
+
 void setup(void) {
   u8g2.begin();
 }
- 
+
 void loop(void) {
   u8g2.clearBuffer();                   // clear the internal memory
   u8g2.setFont(u8g2_font_ncenB08_tr);   // choose a suitable font
@@ -148,22 +148,23 @@ void loop(void) {
 
 ```
 
-- **Paso 3.** Verá "Hello World!" en la pantalla.
+- **Paso 3.** Podemos ver "Hello World!" en la pantalla.
 
-### Jugar con Raspberry Pi (con Grove Base Hat para Raspberry Pi)
+
+### Jugar con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
 
 #### Hardware
 
 - **Paso 1**. Elementos utilizados en este proyecto:
 
-| Raspberry pi                                                                                                                  | Grove Base Hat for RasPi                                                                                                                      | Grove - OLED Display 0.96 inch                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg" alt="pir" width={600} height="auto" /></p> |
-| [Obtener Uno Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)                                                 | [Obtener Uno Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)                                                        | [Obtener Uno Ahora](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)                                                              |
+| Raspberry pi | Grove Base Hat para RasPi| Grove - Pantalla OLED de 0.96 pulgadas |
+|--------------|-------------|-----------------|
+|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg" alt="pir" width={600} height="auto" /></p>|
+|[Obtener UNO Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
 
-- **Paso 2**. Inserte Grove Base Hat en la Raspberry.
-- **Paso 3**. Conecte la pantalla OLED al puerto **I^2^C** del Base Hat.
-- **Paso 4**. Conecte la Raspberry Pi al PC mediante un cable USB.
+- **Paso 2**. Conecta el Grove Base Hat al Raspberry.
+- **Paso 3**. Conecta la pantalla OLED al puerto **I2C** del Base Hat.
+- **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg) -->
 
@@ -172,26 +173,24 @@ void loop(void) {
 #### Software
 
 :::note
-     Si está utilizando **Raspberry Pi con Raspberrypi OS >= Bullseye**, debe usar esta línea de comando **solo con Python3**.
+     Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
 :::
 
-- **Paso 1**. Siga [Setting Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
-- **Paso 2**. Descargue el archivo fuente clonando la biblioteca grove.py.
+- **Paso 1**. Sigue [Setting Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
+- **Paso 2**. Ingresa al entorno virtual correspondiente.
 
 ```
-cd ~
-git clone https://github.com/Seeed-Studio/grove.py
-
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
 ```
 
-- **Paso 3**. Ejecute el siguiente comando para ejecutar el código.
+- **Paso 3**. Ejecuta el siguiente comando para ejecutar el código.
+
+- Lo siguiente es para verificar el código grove_oled_display_128x64.py.
 
 ```
-cd grove.py/grove
-python3 grove_oled_display_128x64.py
+less grove_oled_display_128x64.py
 ```
-
-A continuación se muestra el código de grove_oled_display_128x64.py.
 
 ```python
 
@@ -312,7 +311,7 @@ class GroveOledDisplay128x64(object):
     VERTICAL = 0x01
     PAGE = 0x02
 
-    def __init__(self, bus=None, address=0x3C):
+    def __init__(self, bus=1, address=0x3C):
         self.bus = Bus(bus)
         self.address = address
 
@@ -388,7 +387,7 @@ class GroveOledDisplay128x64(object):
     def show_image(self, image):
         from PIL import Image
         import numpy as np
-        
+
         im = Image.open(image)
 
         bw = im.convert('1')
@@ -416,29 +415,35 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+- Ejecuta este código
+```
+python grove_oled_display_128x64.py
+```
 
-Parece que no ocurre nada en la terminal; sin embargo, si observa su OLED, encontrará la frase más famosa del mundo cibernético. 😄
+Parece que no pasó nada en la terminal, sin embargo puedes encontrar la frase más famosa del mundo cibernético si revisas tu OLED.😄
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/GROVE-fix/OLED_result1.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
-        Si usa la herramienta I2C para escanear la dirección I2C del módulo Grove, puede encontrar dos o más direcciones. 0x04 es la dirección del *Grove Base Hat para Raspberry Pi*.
+        Si usas la herramienta I2C para escanear la dirección I2C del módulo Grove, puedes encontrar dos o más direcciones. 0x04 es la dirección del *Grove Base Hat para Raspberry Pi*.
 :::
 
 ### Jugar con Raspberry Pi (con GrovePi_Plus)
 
-El script de Python para BeagleBone Green a continuación también funciona para Raspberry Pi, pero el bus I2C es diferente. En Raspberry Pi 2/3, el bus I2C es el 1. El script funcionará en Pi cambiando `bus=2` por `bus=1`.
+El script de Python para BeagleBone Green a continuación también funciona para Raspberry Pi, pero el bus I2C es diferente. En Raspberry Pi 2/3, el bus I2C es 1. El script cambiando `bus=2` a `bus=1` funcionará en Pi.
 
 #### Hardware
 
-- **Paso 1.** Prepare los siguientes elementos:
+- **Paso 1.** Prepara los siguientes elementos:
 
-| Raspberry pi                                                                                                                  | GrovePi_Plus                                                                                                                       | Grove - OLED Display 0.96 inch                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg" alt="pir" width={600} height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg" alt="pir" width={600} height="auto" /></p> |
-| [Compra ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)                                                         | [Compra ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)                                                               | [Compra ahora](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)                                                              |
+| Raspberry pi | GrovePi_Plus | Grove - OLED Display 0.96 inch  |
+|--------------|-------------|-----------------|
+|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/grove%20oled%200.96_s.jpg" alt="pir" width={600} height="auto" /></p>|
+|[Obtener Uno Ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-OLED-Display-0.96%26quot%3B-p-781.html)|
 
-- **Paso 2.** Inserte GrovePi_Plus en la Raspberry.
-- **Paso 3.** Conecte Grove - OLED Display 0.96 inch al puerto **I2C-2** de GrovePi_Plus.
-- **Paso 4.** Conecte la Raspberry al PC mediante un cable USB.
+- **Paso 2.** Conecta el GrovePi_Plus al Raspberry.
+- **Paso 3.** Conecta Grove - OLED Display 0.96 inch al puerto **I2C-2** del GrovePi_Plus.
+- **Paso 4.** Conecta el Raspberry a la PC a través del cable USB.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/with_rpi.jpg) -->
 
@@ -446,18 +451,18 @@ El script de Python para BeagleBone Green a continuación también funciona para
 
 #### Software
 
-- **Paso 1.** Siga [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) para configurar el entorno de desarrollo.
+- **Paso 1.** Sigue [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) para configurar el entorno de desarrollo.
 
-- **Paso 2.** Vaya al directorio de demostraciones:
+- **Paso 2.** Navega al directorio de demos:
 
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
 
-- **Paso 3.**  Ver el código
+- **Paso 3.**  Para ver el código
 
 ```
-nano Grove-OLED_Display_0.96inch.py   # "Ctrl+x" para salir #
+nano Grove-OLED_Display_0.96inch.py   # "Ctrl+x" to exit #
 ```
 
 ```py
@@ -653,7 +658,7 @@ class GroveOledDisplay128x64(object):
     def show_image(self, image):
         from PIL import Image
         import numpy as np
-        
+
         im = Image.open(image)
 
         bw = im.convert('1')
@@ -679,9 +684,9 @@ if __name__ == "__main__":
     display.puts('world')
 ```
 
-- **Paso 4:** Instale la biblioteca smbus2 `sudo pip install smbus2`
+- **Paso 4:** Instalar la librería smbus2 `sudo pip install smbus2`
 
-- **Paso 5:** Ejecute el código. Veremos que el Grove - OLED muestra "Hello World".
+- **Paso 5:** Ejecutar el código. Encontraremos que el Grove - OLED muestra "Hello World".
 
 ```
 sudo python Grove-OLED_Display_0.96inch.py
@@ -689,18 +694,18 @@ sudo python Grove-OLED_Display_0.96inch.py
 
 ### Jugar con Beaglebone Green
 
-Para comenzar a editar programas que residen en BBG, puede usar el [Cloud9 IDE](https://c9.io) y consultar el [Beaglebone Green Wiki](https://wiki.seeedstudio.com/es/BeagleBone_Green/).
+Para comenzar a editar programas que residen en BBG, puedes usar el [Cloud9 IDE](https://c9.io) y consultar [Beaglebone Green Wiki](https://wiki.seeedstudio.com/es/BeagleBone_Green/).
 
-Aquí están los pasos para mostrar "Hello World" en la OLED.
+Aquí están los pasos de cómo mostrar "Hello World" en OLED.
 
 #### Hardware
 
-- **Paso 1.** Conecte Grove - OLED al conector Grove I2C en BBG.
-- **Paso 2.** Conecte Seeeduino al PC mediante un cable USB.
+- **Paso 1.** Conectar Grove - OLED al socket Grove I2C en BBG.
+- **Paso 2.** Conectar Seeeduino a PC mediante un cable USB.
 
 #### Software
 
-- **Paso 1:** Haga clic en "+" en la esquina superior derecha para crear un archivo nuevo.
+- **Paso 1:** Hacer clic en el "+" en la esquina superior derecha para crear un nuevo archivo.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/C9-create-tab.png) -->
 
@@ -708,9 +713,9 @@ Aquí están los pasos para mostrar "Hello World" en la OLED.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/C9_newfile.jpg" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 2:** Copie y pegue el siguiente código en la nueva pestaña
+- **Paso 2:** Copiar y pegar el siguiente código en la nueva pestaña
 
-```python
+``` python
 import time
 import smbus2 as smbus
 
@@ -903,7 +908,7 @@ class GroveOledDisplay128x64(object):
     def show_image(self, image):
         from PIL import Image
         import numpy as np
-        
+
         im = Image.open(image)
 
         bw = im.convert('1')
@@ -929,40 +934,40 @@ if __name__ == "__main__":
     display.puts('world')
 ```
 
-- **Paso 3:** Guarde el archivo haciendo clic en el icono del disco con la extensión .py.
+- **Paso 3:** Guarda el archivo haciendo clic en el icono del disco con la extensión .py.
 
-- **Paso 4:** Instale la biblioteca smbus2 `sudo pip3 install smbus2`
+- **Paso 4:** Instala la librería smbus2 `sudo pip3 install smbus2`
 
-- **Paso 5:** Ejecute el código. Veremos que el Grove - OLED muestra "Hello World".
+- **Paso 5:** Ejecuta el código. Encontraremos que el Grove - OLED muestra "Hello World".
 
 ```
 sudo python3 Grove-OLED_Display_0.96inch.py
 ```
 
-## Visor de esquemáticos en línea
+## Visor de Esquemas en Línea
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 ## Recursos
 
-- **[PDF]** [Grove-OLED128x64 Schematic](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64%20SCH.pdf)
+- **[PDF]** [Esquema Grove-OLED128x64](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64%20SCH.pdf)
 
-- **[PDF]** [Grove-OLED128x64 PCB](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64%20PCB.pdf)
+- **[PDF]** [PCB Grove-OLED128x64](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64%20PCB.pdf)
 
-- **[Wiki]** [Beaglebone Green Wiki](https://wiki.seeedstudio.com/es/BeagleBone_Green/)
+- **[Wiki]** [Wiki de Beaglebone Green](https://wiki.seeedstudio.com/es/BeagleBone_Green/)
 
 - **[Eagle]** [Grove-OLED128x64](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64.zip)
 
-- **[Library]** [GitHub Library for OLED](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)
+- **[Librería]** [Librería GitHub para OLED](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip)
 
-- **[Datasheet]** [Resources of SSD1308_1.0.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/SSD1308_1.0.pdf)
+- **[Hoja de Datos]** [Recursos de SSD1308_1.0.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/SSD1308_1.0.pdf)
 
-- **[Datasheet]** [Resources of LY190-128064.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/LY190-128064.pdf)
+- **[Hoja de Datos]** [Recursos de LY190-128064.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/LY190-128064.pdf)
 
-## Soporte técnico y debate sobre el producto
+## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Ofrecemos distintos canales de soporte para garantizar que su experiencia sea lo más fluida posible. Disponemos de varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

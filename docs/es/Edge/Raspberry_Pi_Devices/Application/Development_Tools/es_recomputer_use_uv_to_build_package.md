@@ -5,7 +5,7 @@ keywords:
   - Edge
   - RasberryPi 5
   - python
-image: https://files.seeedstudio.com/wiki/AI_Sensing/Application/uv/uv_speed.webp
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/recomputer_r2145.webp
 slug: /es/use_uv_to_build_package_on_recomputer
 last_update:
   date: 08/21/2025
@@ -18,26 +18,26 @@ no_comments: false # for Disqus
 
 ## Introducción
 
-Este wiki explica cómo usar [uv](https://github.com/astral-sh/uv) en reComputer box. uv es un gestor de paquetes y resolvedor para Python rápido, moderno y ligero. Está diseñado para ser un reemplazo directo de las herramientas tradicionales de gestión de paquetes de Python como ```pip``` y ```pip-tools```, ofreciendo mejoras significativas en velocidad, eficiencia y usabilidad.
+Este wiki explica cómo usar [uv](https://github.com/astral-sh/uv) en la caja reComputer. uv es un gestor de paquetes y resolvedor rápido, moderno y ligero para Python. Está diseñado para ser un reemplazo directo de las herramientas tradicionales de gestión de paquetes de Python como ```pip``` y ```pip-tools```, ofreciendo mejoras significativas en velocidad, eficiencia y usabilidad.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Sensing/Application/uv/uv_speed.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_speed.png" style={{width:600, height:'auto'}}/></div>
 
 ## Preparar Hardware
 
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer R1125</th>
+ <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
   <th>reComputer AI Industrial R2145</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
@@ -49,6 +49,31 @@ Este wiki explica cómo usar [uv](https://github.com/astral-sh/uv) en reComputer
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -77,7 +102,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### Inicializar el proyecto
 
 Aquí, usamos `uv_test` como ejemplo para demostrar el uso de `uv`.
-> **Nota:** Por favor usa un nombre de proyecto diferente para asegurarte de que sea diferente de cualquier paquete en PyPI.
+> **Nota:** Por favor, usa un nombre de proyecto diferente y asegúrate de que sea diferente de cualquier paquete en PyPI.
 
 ```bash
 uv init uv_test --package
@@ -91,22 +116,22 @@ ls -la
 tree
 ```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Sensing/Application/uv/uv_tree.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_tree.png" style={{width:600, height:'auto'}}/></div>
 
-### Crear un entorno de python
+### Crear un entorno python
 
-Aquí puedes crear un entorno de python
+Aquí puedes crear un entorno python
 
 ```bash
 uv venv 
 source .venv/bin/activate
 ```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Sensing/Application/uv/uv_environment.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_environment.png" style={{width:600, height:'auto'}}/></div>
 
-### Añadir dependencias
+### Agregar dependencias
 
-Usa `numpy` para construir la función:
+Usar `numpy` para construir función:
 
 ```bash
 uv add numpy
@@ -114,7 +139,7 @@ uv add numpy
 
 ### Crear función
 
-Usa NumPy para escribir una función `add` en `add.py` como ejemplo:
+Usar NumPy para escribir una función `add` en `add.py` como ejemplo:
 
 <details>
   <summary>add.py</summary>
@@ -141,7 +166,7 @@ def add(arr1: np.ndarray, arr2: np.ndarray) -> np.ndarray:
         result = np.add(arr1, arr2)
     except ValueError:
         raise ValueError("Input arrays have incompatible shapes for element-wise addition.")
-    
+
     return result
 
 if __name__ == "__main__":
@@ -156,7 +181,7 @@ if __name__ == "__main__":
 
 Los resultados son los siguientes:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Sensing/Application/uv/pytest.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/pytest.png" style={{width:800, height:'auto'}}/></div>
 
 ### Construir el paquete
 
@@ -169,21 +194,21 @@ uv build
 ls -a
 ```
 
-Los resultados son los siguientes:
+Los resultados son los siguientes：
 
- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Sensing/Application/uv/uv_build.png" style={{width:800, height:'auto'}}/></div>
+ <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_build.png" style={{width:800, height:'auto'}}/></div>
 
 ### Probar el paquete
 
-Instala el paquete como se muestra a continuación:
+Instalar el paquete como se muestra a continuación:
 
 ```
 uv pip install dist/uv_test-0.1.0-py3-none-any.whl 
 ```
 
- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Sensing/Application/uv/uv_install.png" style={{width:800, height:'auto'}}/></div>
+ <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_install.png" style={{width:800, height:'auto'}}/></div>
 
-Usa el script de `python` para probar el paquete:
+Usar script de `python` para probar el paquete:
 
 <details>
   <summary>add.py</summary>
@@ -201,7 +226,7 @@ if __name__ == "__main__":
 
 ### Subir el paquete a PyPi
 
-Si no tienes una cuenta de PyPI, por favor regístrate para obtener una [cuenta](https://pypi.org/account/register/) y crear un [token](https://pypi.org/manage/account/token/).
+Si no tienes una cuenta de PyPI, por favor regístrate para obtener una [cuenta](https://pypi.org/account/register/) y crea un [token](https://pypi.org/manage/account/token/).
 
 ```
 uv publish
@@ -209,13 +234,13 @@ uv publish
 
 El resultado es como se muestra a continuación, e ingresa tu token:
 
- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Sensing/Application/uv/uv_pubilsh.png" style={{width:800, height:'auto'}}/></div>
+ <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_pubilsh.png" style={{width:800, height:'auto'}}/></div>
 
 ## Resultado
 
 Finalmente, puedes ver tu proyecto subido en PyPI.
 
- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Sensing/Application/uv/uv_result.png" style={{width:800, height:'auto'}}/></div>
+ <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_result.png" style={{width:800, height:'auto'}}/></div>
 
 ## Soporte Técnico y Discusión de Productos
 

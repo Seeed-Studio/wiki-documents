@@ -17,9 +17,9 @@ sidebar_position: 1
 El siguiente código de ejemplo está diseñado para PlatformIO, pero también es compatible con el nRF Connect SDK.
 
 :::tip
-Basado en VS Code, si deseas usar el siguiente caso en el nRF Connect SDK, consulta la conexión proporcionada, agrega el archivo app.overlay y modifica el contenido en prj.conf
+Basado en VS Code, si quieres usar el siguiente caso en el nRF Connect SDK, consulta la conexión proporcionada, agrega el archivo app.overlay y modifica el contenido en prj.conf
 
-[XIAO nRF54L15 Agregar archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/add-overlay-and-modify-the-conf-file/).
+[XIAO nRF54L15 Agregar archivo overlay y modificar archivo conf](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#/agregar-overlay-y-modificar-el-archivo-conf/).
 
 :::
 
@@ -47,233 +47,177 @@ Los sensores **IMU de 6 ejes (Unidad de Medición Inercial)** como el **LSM6DS3T
 
 ### Controlador IMU
 
-Para simplificar tu experiencia de desarrollo y asegurar un inicio rápido con este programa IMU, hemos aprovechado la plataforma PlatformIO para escribir el código de controlador necesario. PlatformIO ofrece un entorno integral y eficiente para el desarrollo embebido, lo que lo convierte en una opción ideal para el XIAO nRF54L15 Sense.
+Para simplificar tu experiencia de desarrollo y asegurar un inicio rápido con este programa IMU, hemos aprovechado la plataforma PlatformIO para escribir el código de controlador necesario. PlatformIO ofrece un entorno integral y eficiente para el desarrollo embebido, convirtiéndolo en una opción ideal para el XIAO nRF54L15 Sense.
 
-Antes de continuar, asegúrate de que tu entorno de desarrollo esté configurado correctamente. Si aún no has agregado la placa de desarrollo Seeed Studio XIAO nRF54L15 a tu configuración de PlatformIO, consulta este [enlace](http://localhost:3000/xiao_nrf54l15_with_platform_io/) para obtener instrucciones detalladas sobre cómo configurarla. Este paso crucial permitirá que PlatformIO reconozca y compile correctamente el código para tu placa.
+Antes de continuar, asegúrate de que tu entorno de desarrollo esté configurado correctamente. Si aún no has agregado la placa de desarrollo Seeed Studio XIAO nRF54L15 a tu configuración de PlatformIO, consulta este [enlace](https://wiki.seeedstudio.com/es/xiao_nrf54l15_with_platform_io/) para obtener instrucciones detalladas sobre cómo configurarla. Este paso crucial permitirá que PlatformIO reconozca y compile correctamente el código para tu placa.
 
-- Una vez que tu entorno esté listo, el controlador IMU te permitirá leer datos de sensor sin procesar del LSM6DS3TR-C. Estos datos incluyen:
+Una vez que tu entorno esté listo, el controlador IMU te permitirá leer datos de sensor en bruto del LSM6DS3TR-C. Estos datos incluyen:
 
-- Valores sin procesar del acelerómetro (accel raw): Representando la aceleración a lo largo de los ejes X, Y y Z.
+- Valores en bruto del acelerómetro (accel raw): Representando la aceleración a lo largo de los ejes X, Y y Z.
 
-- Valores sin procesar del giroscopio (gyro raw): Indicando la velocidad angular alrededor de los ejes X, Y y Z.
+- Valores en bruto del giroscopio (gyro raw): Indicando la velocidad angular alrededor de los ejes X, Y y Z.
 
-Contador de activación (trig_cnt): Un contador que se incrementa con cada nueva muestra de datos.
+- Contador de disparos (trig_cnt): Un contador que se incrementa con cada nueva muestra de datos.
 
-A continuación se muestra un ejemplo de la salida serie que puedes esperar ver del IMU, como se muestra en el Monitor de Dispositivo de PlatformIO. Esta salida proporciona lecturas en tiempo real de los datos del acelerómetro y giroscopio, que son fundamentales para entender el movimiento y la orientación de tu dispositivo.
-
-<div style={{textAlign:'center'}}>
-    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/imu_display.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
-    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> Salida de datos IMU en tiempo real del Monitor de Dispositivo de PlatformIO, mostrando lecturas sin procesar del acelerómetro y giroscopio.</em></p>
-</div>
-
-Estos datos sin procesar forman la base para varias aplicaciones, desde la detección simple de movimiento hasta el seguimiento complejo de orientación, aplicando algoritmos apropiados (por ejemplo, filtrado, fusión de sensores).
 
 ---
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-imu" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
+Descarga el repositorio a ``C:\Users\xxx\.platformio\platforms`` y abre la carpeta ``examples\zephyr-imu`` en VS Code. Luego haz clic en main.c, y verás el siguiente código:
+
 ```cpp
-#include <stdio.h>
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
-#include <zephyr/drivers/i2c.h>
+#include <zephyr/drivers/sensor.h>
 #include <zephyr/logging/log.h>
-#include <zephyr/devicetree.h>
 
-LOG_MODULE_REGISTER(lsm6dso_i2c_example, LOG_LEVEL_INF);
+LOG_MODULE_REGISTER(zephyr_imu, LOG_LEVEL_INF);
 
-// --- LSM6DSO I2C address and register definitions ---
-#define LSM6DSO_I2C_ADDR    0x6A // LSM6DSO I2C device address
-
-#define LSM6DSO_REG_WHO_AM_I 0x0F // Identification register
-#define LSM6DSO_WHO_AM_I_VAL 0x6A // Expected WHO_AM_I value
-
-#define LSM6DSO_REG_CTRL1_XL 0x10 // Accelerometer control register
-#define LSM6DSO_REG_CTRL2_G  0x11 // Gyroscope control register
-// Accelerometer/gyroscope data output registers (low byte first)
-#define LSM6DSO_REG_OUTX_L_XL 0x28 // Accelerometer X axis low byte
-#define LSM6DSO_REG_OUTX_L_G  0x22 // Gyroscope X axis low byte
-
-// --- Data structure definitions ---
-// Structure for storing raw sensor data
-struct lsm6dso_raw_data {
-    int16_t accel_x;
-    int16_t accel_y;
-    int16_t accel_z;
-    int16_t gyro_x;
-    int16_t gyro_y;
-    int16_t gyro_z;
-};
-
-// --- Helper functions ---
-
-/**
- * @brief Write a single byte to an LSM6DSO register via I2C.
- */
-static int lsm6dso_i2c_reg_write_byte(const struct device *i2c_dev, uint8_t reg_addr, uint8_t value)
+static inline float out_ev(struct sensor_value *val)
 {
-    uint8_t tx_buf[2] = {reg_addr, value};
-    return i2c_write(i2c_dev, tx_buf, sizeof(tx_buf), LSM6DSO_I2C_ADDR);
+	return (val->val1 + (float)val->val2 / 1000000);
 }
 
-/**
- * @brief Read a single byte from an LSM6DSO register via I2C.
- */
-static int lsm6dso_i2c_reg_read_byte(const struct device *i2c_dev, uint8_t reg_addr, uint8_t *value)
+static void fetch_and_display(const struct device *dev)
 {
-    return i2c_reg_read_byte(i2c_dev, LSM6DSO_I2C_ADDR, reg_addr, value);
+	struct sensor_value x, y, z;
+	static int trig_cnt;
+
+	trig_cnt++;
+
+	/* lsm6dsl accel */
+	sensor_sample_fetch_chan(dev, SENSOR_CHAN_ACCEL_XYZ);
+	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_X, &x);
+	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Y, &y);
+	sensor_channel_get(dev, SENSOR_CHAN_ACCEL_Z, &z);
+
+	LOG_INF("accel x:%f m/s^2 y:%f m/s^2 z:%f m/s^2",
+			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
+
+	/* lsm6dsl gyro */
+	sensor_sample_fetch_chan(dev, SENSOR_CHAN_GYRO_XYZ);
+	sensor_channel_get(dev, SENSOR_CHAN_GYRO_X, &x);
+	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Y, &y);
+	sensor_channel_get(dev, SENSOR_CHAN_GYRO_Z, &z);
+
+	LOG_INF("gyro x:%f rad/s y:%f rad/s z:%f rad/s",
+			(double)out_ev(&x), (double)out_ev(&y), (double)out_ev(&z));
+
+	LOG_INF("trig_cnt:%d", trig_cnt);
 }
 
-/**
- * @brief Read multiple consecutive bytes from LSM6DSO register via I2C.
- */
-static int lsm6dso_i2c_reg_read_bytes(const struct device *i2c_dev, uint8_t reg_addr, uint8_t *data, uint8_t len)
+static int set_sampling_freq(const struct device *dev)
 {
-    return i2c_burst_read(i2c_dev, LSM6DSO_I2C_ADDR, reg_addr, data, len);
+	int ret = 0;
+	struct sensor_value odr_attr;
+
+	/* set accel/gyro sampling frequency to 12.5 Hz */
+	odr_attr.val1 = 12.5;
+	odr_attr.val2 = 0;
+
+	ret = sensor_attr_set(dev, SENSOR_CHAN_ACCEL_XYZ,
+			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+	if (ret != 0) {
+		LOG_ERR("Cannot set sampling frequency for accelerometer.");
+		return ret;
+	}
+
+	ret = sensor_attr_set(dev, SENSOR_CHAN_GYRO_XYZ,
+			SENSOR_ATTR_SAMPLING_FREQUENCY, &odr_attr);
+	if (ret != 0) {
+		LOG_ERR("Cannot set sampling frequency for gyro.");
+		return ret;
+	}
+
+	return 0;
 }
 
-// --- LSM6DSO driver core functionality ---
-
-/**
- * @brief Initialize the LSM6DSO sensor.
- * Check WHO_AM_I and set ODR for accelerometer and gyroscope.
- */
-static int lsm6dso_init(const struct device *i2c_dev)
+#ifdef CONFIG_LSM6DSL_TRIGGER
+static void trigger_handler(const struct device *dev,
+			    const struct sensor_trigger *trig)
 {
-    uint8_t who_am_i = 0;
-    int ret;
-
-    // Verify device ID
-    ret = lsm6dso_i2c_reg_read_byte(i2c_dev, LSM6DSO_REG_WHO_AM_I, &who_am_i);
-    if (ret != 0) {
-        LOG_ERR("Failed to read WHO_AM_I register (err: %d)", ret);
-        return ret;
-    }
-    if (who_am_i != LSM6DSO_WHO_AM_I_VAL) {
-        LOG_ERR("Invalid WHO_AM_I: 0x%02x, expected 0x%02x", who_am_i, LSM6DSO_WHO_AM_I_VAL);
-        return -ENODEV;
-    }
-    LOG_INF("LSM6DSO WHO_AM_I check passed. ID: 0x%02x", who_am_i);
-
-    // Set accelerometer ODR (12.5 Hz) and 2g range (0x20)
-    ret = lsm6dso_i2c_reg_write_byte(i2c_dev, LSM6DSO_REG_CTRL1_XL, 0x20);
-    if (ret != 0) {
-        LOG_ERR("Failed to set CTRL1_XL register (err: %d)", ret);
-        return ret;
-    }
-
-    // Set gyroscope ODR (12.5 Hz) and 250dps range (0x20)
-    ret = lsm6dso_i2c_reg_write_byte(i2c_dev, LSM6DSO_REG_CTRL2_G, 0x20);
-    if (ret != 0) {
-        LOG_ERR("Failed to set CTRL2_G register (err: %d)", ret);
-        return ret;
-    }
-
-    LOG_INF("LSM6DSO initialized successfully.");
-    return 0;
+	fetch_and_display(dev);
 }
 
-/**
- * @brief Fetch raw accelerometer and gyroscope data from LSM6DSO sensor.
- * @param i2c_dev Pointer to I2C device structure.
- * @param raw_data_out Pointer to structure for storing raw data.
- * @return 0 on success, negative value on failure.
- */
-static int lsm6dso_fetch_raw_data(const struct device *i2c_dev, struct lsm6dso_raw_data *raw_data_out)
+static void test_trigger_mode(const struct device *dev)
 {
-    uint8_t accel_data[6];
-    uint8_t gyro_data[6];
-    int ret;
+	struct sensor_trigger trig;
 
-    // Read accelerometer data (6 bytes)
-    ret = lsm6dso_i2c_reg_read_bytes(i2c_dev, LSM6DSO_REG_OUTX_L_XL, accel_data, 6);
-    if (ret != 0) {
-        LOG_ERR("Failed to read accelerometer data (err: %d).", ret);
-        return ret;
-    }
-    // Raw data is 16-bit signed integer, low byte first
-    raw_data_out->accel_x = (int16_t)(accel_data[0] | (accel_data[1] << 8));
-    raw_data_out->accel_y = (int16_t)(accel_data[2] | (accel_data[3] << 8));
-    raw_data_out->accel_z = (int16_t)(accel_data[4] | (accel_data[5] << 8));
+	if (set_sampling_freq(dev) != 0) {
+		return;
+	}
 
-    // Read gyroscope data (6 bytes)
-    ret = lsm6dso_i2c_reg_read_bytes(i2c_dev, LSM6DSO_REG_OUTX_L_G, gyro_data, 6);
-    if (ret != 0) {
-        LOG_ERR("Failed to read gyroscope data (err: %d).", ret);
-        return ret;
-    }
-    // Raw data is 16-bit signed integer, low byte first
-    raw_data_out->gyro_x = (int16_t)(gyro_data[0] | (gyro_data[1] << 8));
-    raw_data_out->gyro_y = (int16_t)(gyro_data[2] | (gyro_data[3] << 8));
-    raw_data_out->gyro_z = (int16_t)(gyro_data[4] | (gyro_data[5] << 8));
+	trig.type = SENSOR_TRIG_DATA_READY;
+	trig.chan = SENSOR_CHAN_ACCEL_XYZ;
 
-    return 0;
+	if (sensor_trigger_set(dev, &trig, trigger_handler) != 0) {
+		LOG_ERR("Could not set sensor type and channel");
+		return;
+	}
 }
 
-/**
- * @brief Display raw accelerometer and gyroscope data.
- * @param raw_data Pointer to structure containing raw data.
- * @param count Polling counter.
- */
-static void lsm6dso_display_raw_data(const struct lsm6dso_raw_data *raw_data, int count)
+#else
+static void test_polling_mode(const struct device *dev)
 {
-    printf("accel raw: X:%d Y:%d Z:%d (LSB)\n",
-           raw_data->accel_x, raw_data->accel_y, raw_data->accel_z);
-    printf("gyro raw: X:%d Y:%d Z:%d (LSB)\n",
-           raw_data->gyro_x, raw_data->gyro_y, raw_data->gyro_z);
-    printf("trig_cnt:%d\n\n", count);
-}
+	if (set_sampling_freq(dev) != 0) {
+		return;
+	}
 
-// --- Main function ---
+	while (1) {
+		fetch_and_display(dev);
+		k_sleep(K_MSEC(1000));
+	}
+}
+#endif
 
 int main(void)
 {
-    const struct device *i2c_dev = DEVICE_DT_GET(DT_NODELABEL(i2c30));
-    struct lsm6dso_raw_data sensor_data;
-    static int trig_cnt = 0; // Ensure only initialized once in main scope
+	const struct device *const dev = DEVICE_DT_GET(DT_ALIAS(imu0));
 
-    if (!device_is_ready(i2c_dev)) {
-        LOG_ERR("I2C device %s is not ready!", i2c_dev->name);
-        return 0;
-    }
-    LOG_INF("I2C device %s is ready.", i2c_dev->name);
+	if (!device_is_ready(dev)) {
+		LOG_ERR("%s: device not ready.", dev->name);
+		return 0;
+	}
 
-    if (lsm6dso_init(i2c_dev) != 0) {
-        LOG_ERR("Failed to initialize LSM6DSO sensor.");
-        return 0;
-    }
-
-    printf("Testing LSM6DSO sensor in polling mode (custom I2C driver) - Raw Data Output.\n\n");
-
-    while (1) {
-        trig_cnt++; // Increment counter at the start of each loop
-
-        // Fetch raw data
-        if (lsm6dso_fetch_raw_data(i2c_dev, &sensor_data) == 0) {
-            // Display raw data
-            lsm6dso_display_raw_data(&sensor_data, trig_cnt);
-        } else {
-            LOG_ERR("Failed to fetch data.");
-        }
-
-        k_sleep(K_MSEC(1000)); // Read once every second
-    }
-
-    return 0;
+#ifdef CONFIG_LSM6DSL_TRIGGER
+	LOG_INF("Testing LSM6DSL sensor in trigger mode.");
+	test_trigger_mode(dev);
+#else
+	LOG_INF("Testing LSM6DSL sensor in polling mode.");
+	test_polling_mode(dev);
+#endif
+	return 0;
 }
 ```
 
-## XIAO nRF54L15 Sense MIC
+Ahora, conecta tu XIAO nRF54L15 a tu computadora vía USB. En VS Code:
 
-El **MSM261DGT006** es un Micrófono Digital (DMIC) que produce datos de Modulación de Densidad de Pulso (PDM), lo que lo hace adecuado para interfaz digital directa con microcontroladores como el XIAO nRF54L15 Sense. Nuestro controlador DMIC está específicamente diseñado para manejar esta salida PDM, convertirla en muestras de audio utilizables y procesarla para diversas aplicaciones.
+- Compilar: Haz clic en el ícono "Build" (marca de verificación) en la barra de herramientas de PlatformIO en la parte inferior de VS Code, o usa la barra lateral de PlatformIO: PROJECT TASKS -> nombre_de_tu_proyecto -> General -> Build.
+
+- Cargar: Después de una compilación exitosa, haz clic en el ícono "Upload" (flecha derecha) en la barra de herramientas de PlatformIO, o usa la barra lateral de PlatformIO: PROJECT TASKS -> nombre_de_tu_proyecto -> General -> Upload.
+
+Después de una carga exitosa, deberías ver una salida similar al ejemplo a continuación en el Monitor de Dispositivo de PlatformIO (PROJECT TASKS -> nombre_de_tu_proyecto -> General -> Monitor). Esta salida serial muestra lecturas en tiempo real del acelerómetro y giroscopio, proporcionando información clave sobre el movimiento y orientación de tu dispositivo.
+
+<div style={{textAlign:'center'}}>
+    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/imu_display.png" alt="Consumo de energía de publicidad BLE del XIAO nRF54L15" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> Salida de datos IMU en tiempo real del Monitor de Dispositivo de PlatformIO, mostrando lecturas en bruto del acelerómetro y giroscopio.</em></p>
+</div>
+
+Estos datos en bruto forman la base para varias aplicaciones, desde la detección simple de movimiento hasta el seguimiento complejo de orientación, aplicando algoritmos apropiados (por ejemplo, filtrado, fusión de sensores).
+
+
+## MIC del XIAO nRF54L15 Sense
+
+El **MSM261DGT006** es un Micrófono Digital (DMIC) que produce datos de Modulación de Densidad de Pulsos (PDM), haciéndolo adecuado para interfaz digital directa con microcontroladores como el XIAO nRF54L15 Sense. Nuestro controlador DMIC está específicamente diseñado para manejar esta salida PDM, convertirla en muestras de audio utilizables y procesarla para varias aplicaciones.
 
 El controlador inicia el micrófono, establece la frecuencia de muestreo apropiada (por ejemplo, 16000 Hz para audio estándar) y configura la frecuencia del reloj PDM. Luego lee continuamente buffers de muestras del micrófono, permitiendo la captura de audio en tiempo real.
 
-La salida del controlador DMIC, cuando se visualiza en el Monitor de Dispositivo de PlatformIO, proporciona información crucial sobre el funcionamiento del micrófono y los datos de audio entrantes. Los mensajes clave que observará incluyen:
+La salida del controlador DMIC, cuando se ve en el Monitor de Dispositivo de PlatformIO, proporciona información crucial sobre la operación del micrófono y los datos de audio entrantes. Los mensajes clave que observarás incluyen:
 
 - `DMIC sample=:` Indica el inicio del proceso de muestreo DMIC.
 
@@ -281,21 +225,21 @@ La salida del controlador DMIC, cuando se visualiza en el Monitor de Dispositivo
 
 - `dmic_nrf_pdm:` PDM clock frequency: 1280000, actual PCM rate: 16000: Muestra la frecuencia interna del reloj PDM y la frecuencia de muestreo de audio PCM resultante.
 
-- `got buffer 0x... of 3200 bytes:` Confirma que el controlador recibió exitosamente un buffer de datos de audio del micrófono. Se muestran la dirección hexadecimal (por ejemplo, 0x20004C8) y el tamaño en bytes (por ejemplo, 3200 bytes). Estos buffers contienen las muestras de audio sin procesar que luego pueden ser procesadas o analizadas.
+- `got buffer 0x... of 3200 bytes:` Confirma que el controlador recibió exitosamente un buffer de datos de audio del micrófono. Se muestran la dirección hexadecimal (ej., 0x20004C8) y el tamaño en bytes (ej., 3200 bytes). Estos buffers contienen las muestras de audio sin procesar que luego pueden ser procesadas o analizadas.
 
 - `dmix_sample: Exiting:` Indica que el proceso de muestreo DMIC ha sido detenido.
 
-A continuación se muestra un ejemplo de la salida típica que puede esperar ver en el Monitor de Dispositivo de PlatformIO cuando el controlador DMIC está funcionando, ilustrando la captura y almacenamiento en buffer exitoso de datos de audio.
+A continuación se muestra un ejemplo de la salida típica que puedes esperar ver en el Monitor de Dispositivo de PlatformIO cuando el controlador DMIC está funcionando, ilustrando la captura y almacenamiento exitoso de datos de audio.
 
 ### Controlador DMIC
 
-Estos datos de audio sin procesar, una vez capturados, pueden ser utilizados para una amplia gama de aplicaciones, incluyendo comandos de voz, detección de eventos sonoros, monitoreo de ruido ambiental y tareas de procesamiento de audio más complejas.
+Estos datos de audio sin procesar, una vez capturados, pueden ser utilizados para una amplia gama de aplicaciones, incluyendo comandos de voz, detección de eventos sonoros, monitoreo de ruido ambiental y tareas más complejas de procesamiento de audio.
 
 El siguiente ejemplo de código demuestra cómo grabar audio usando el botón pulsador en la placa XIAO nRF54L15 y guardar el archivo WAV grabado en una computadora.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-dmic-recorder">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
@@ -535,7 +479,7 @@ int main(void)
 }
 ```
 
-A continuación, abra la terminal en el directorio de la carpeta scripts y realice las siguientes operaciones, siempre que el programa ya haya sido grabado.
+A continuación, abre la terminal en el directorio de la carpeta scripts y realiza las siguientes operaciones, siempre que el programa ya haya sido grabado.
 
 **Paso 1:**
 
@@ -546,18 +490,18 @@ A continuación, abra la terminal en el directorio de la carpeta scripts y reali
 - `python record.py -p /dev/cu.usbmodemA0CBDDC33 -o output.wav -b 921600`
 
 :::tip
-En este comando `python record.py -p **/dev/cu.usbmodemA0CBDDC33** -o output.wav -b 921600`, necesita reemplazarlo con su puerto serie para su uso.
+En este comando `python record.py -p **/dev/cu.usbmodemA0CBDDC33** -o output.wav -b 921600`, necesitas reemplazarlo con tu puerto serie para usarlo.
 :::
 **Paso 3:**
 
-- Después de ejecutar el comando, se le pedirá que presione el botón para grabar sonido.
+- Después de ejecutar el comando, se te pedirá que presiones el botón para grabar sonido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/dmic_record1.jpg" style={{width:900, height:'auto'}}/></div>
 
 Después de grabar el audio, el archivo se guardará en scripts
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/dmic_record2.jpg" style={{width:500, height:'auto'}}/></div>
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

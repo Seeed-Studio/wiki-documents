@@ -300,7 +300,7 @@ sensor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/50.png" style={{width:1000, height:'auto'}}/></div>
 
-步骤 5. 创建一个具有描述性名称（如 "Puppet Screenshot"）的新令牌并复制生成的令牌。
+步骤 5. 创建一个新令牌，使用描述性名称如 "Puppet Screenshot" 并复制生成的令牌。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/51.png" style={{width:800, height:'auto'}}/></div>
 
@@ -350,7 +350,7 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
 http://homeassistant.local:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-通过在网页浏览器中输入截图 URL 来测试。您应该能看到所选 Home Assistant 页面的截图。
+通过在网络浏览器中输入截图 URL 来测试。您应该能看到所选 Home Assistant 页面的截图。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -392,9 +392,9 @@ online_image:
       - component.update: epaper_display
 
 display:
-  - platform: epaper_spi
+  - platform: waveshare_epaper
     id: epaper_display
-    model: 7.3in-spectra-e6
+    model: 7.50inv2 # You can use 7.50inv2alt when you draw complex info and it display not good.
     cs_pin: GPIO10
     dc_pin: GPIO11
     reset_pin:
@@ -403,7 +403,7 @@ display:
     busy_pin:
       number: GPIO13
       inverted: true
-    update_interval: never
+    update_interval: 300s
     lambda: |-
       it.image(0, 0, id(dashboard_image));
 ```
@@ -444,15 +444,7 @@ online_image:
 display:
   - platform: epaper_spi
     id: epaper_display
-    model: 7.3in-spectra-e6
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       it.image(0, 0, id(dashboard_image));
@@ -566,15 +558,6 @@ interval:
     then:
       - logger.log: "Entering deep sleep now..."
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 font:
   - file: "gfonts://Inter@700"
     id: font1
@@ -585,17 +568,9 @@ spi:
   mosi_pin: GPIO9
 
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: 5min
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -612,9 +587,9 @@ display:
 - 创建一个在睡眠周期中持续存在的计数器
 - 配置设备唤醒 30 秒，然后睡眠 3 分钟
 - 使用当前唤醒次数更新显示
-- 可选择配置按钮来唤醒设备
+- 可选配置按钮来唤醒设备
 
-运行时，您将看到每次设备从睡眠中唤醒时计数器都会递增：
+运行时，您将看到每次设备从睡眠中唤醒时计数器递增：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/53.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -1018,15 +993,6 @@ i2c:
   scl: GPIO20
   sda: GPIO19
 
-# for model 7.3in-e
-external_components:
-  - source:
-      type: git
-      url: https://github.com/lublak/esphome
-      ref: dev
-    components: [ waveshare_epaper ]
-
-
 # Fonts
 font:
   - file: "gfonts://Inter@700"
@@ -1195,17 +1161,9 @@ time:
 
 # e-paper
 display:
-  - platform: waveshare_epaper
+  - platform: epaper_spi
     id: epaper_display
-    model: 7.30in-e
-    cs_pin: GPIO10
-    dc_pin: GPIO11
-    reset_pin:
-      number: GPIO12
-      inverted: false
-    busy_pin:
-      number: GPIO13
-      inverted: true
+    model: Seeed-reTerminal-E1002
     update_interval: never
     lambda: |-
       const auto BLACK   = Color(0,   0,   0,   0);
@@ -1316,9 +1274,9 @@ display:
 
 ## 常见问题
 
-### Q1: 为什么没有数据？
+### Q1：为什么没有数据？
 
-在这种情况下，您应该前往 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的 ePaper Panel？请尝试重启 Home Assistant。
+在这种情况下，您应该转到 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的 ePaper 面板？尝试重启 Home Assistant。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 

@@ -23,22 +23,23 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Hardware Preparation
 
+
 <div class="table-center">
- <table class="table-nobg">
-    <tr class="table-trnobg">
-      <th class="table-trnobg">reComputer AI R2140</th>
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2140</th>
+ </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
   </tr>
-    <tr class="table-trnobg"></tr>
-  <tr class="table-trnobg">
-   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:800, height:'auto'}}/></div></td>
-  </tr>
-    <tr class="table-trnobg"></tr>
-  <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-          </a></div></td>
-        </tr>
-    </table>
+ </table>
 </div>
 
 >Note: Prepare an SD card and a card reader to burn the image.

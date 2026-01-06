@@ -12,7 +12,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/ja/xiao_debug_mate_serial" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
@@ -148,9 +148,9 @@ export const UartDiagram = () => (
       </circle>
 
       {/* Labels */}
-      <text x="300" y="110" textAnchor="middle" fontSize="12" fill="#e67e22" fontWeight="bold">データフロー（TX → RX）</text>
-      <text x="300" y="200" textAnchor="middle" fontSize="12" fill="#3498db" fontWeight="bold">データフロー（RX ← TX）</text>
-      <text x="300" y="240" textAnchor="middle" fontSize="12" fill="#333">共通グランド（GND）</text>
+      <text x="300" y="110" textAnchor="middle" fontSize="12" fill="#e67e22" fontWeight="bold">データフロー (TX &rarr; RX)</text>
+      <text x="300" y="200" textAnchor="middle" fontSize="12" fill="#3498db" fontWeight="bold">データフロー (RX &larr; TX)</text>
+      <text x="300" y="240" textAnchor="middle" fontSize="12" fill="#333">共通グランド (GND)</text>
     </svg>
 
     <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "15px", fontSize: "0.85em", color: "#555" }}>
@@ -176,7 +176,7 @@ XIAO Debug Mateは、内蔵LCDスクリーンで直接、またはコンピュ�
 
 ### ソフトウェア準備（PCモニタリング用）
 
-コンピューターでシリアルデータを表示する場合は、「シリアルターミナル」または「シリアルモニター」アプリケーションが必要です。XIAO Debug MateはPCで標準のCOMポートとして表示されます。以下は人気のあるソフトウェアの選択肢です：
+コンピューターでシリアルデータを表示する場合は、「シリアルターミナル」または「シリアルモニター」アプリケーションが必要です。XIAO Debug MateはPC上で標準のCOMポートとして表示されます。以下は人気のあるソフトウェア選択肢です：
 
 *   **PlatformIO Serial Monitor：** VS CodeでPlatformIOを使用している場合は、ステータスバーの "Serial Monitor" ボタンをクリックするだけです。
 *   **Arduino IDE Serial Monitor：** Arduino IDEに組み込まれたクラシックでシンプルなモニター。
@@ -194,14 +194,14 @@ XIAO Debug Mateは、シリアルモニタリング用にターゲットデバ�
 
 これはXIAOボードをモニタリングする最も簡単な方法です。Debug Mateは、デフォルトでXIAOの`Serial1`ポート（`D6`と`D7`）を監視するように設計されています。
 
-1.  XIAOボードをXIAO Debug Mateの前面にある雌ヘッダーに直接差し込むだけです。
-2.  接続は自動的に行われます。追加の配線は必要ありません。
+1.  XIAOボードをXIAO Debug Mate前面のメスヘッダーに直接差し込むだけです。
+2.  接続は自動的に行われます。追加のワイヤーは必要ありません。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/connect_xiao.gif" style={{width:600, height:'auto'}}/></div>
 
-#### Grove UART デバイス用
+#### UART Grove デバイス用
 
-専用の Grove コネクタにより、任意の UART ベースの Grove モジュールへのクリーンで安全な接続が可能です。
+専用の Grove コネクタにより、UART ベースの Grove モジュールとのクリーンで安全な接続が可能です。
 
 1.  Grove UART デバイス（例：Grove GPS や Grove MP3 V4）を用意します。
 2.  標準の Grove ケーブルを使用して、XIAO Debug Mate の右側にある Grove ポートに接続します。
@@ -211,10 +211,10 @@ XIAO Debug Mateは、シリアルモニタリング用にターゲットデバ�
 #### その他の UART デバイス用
 
 :::danger 電源ピン接続の注意事項
-2つの開発ボードの3.3V電源ピンを接続する必要があるかどうかは、他のデバイスがDebug Mateから電源供給されているかどうかによります。他のデバイスが独自のUSB接続で電源供給されている場合は、デバイスとDebug Mateの3.3Vピンを接続しないでください。接続するとデバイスが損傷する可能性があります。
+2つの開発ボードの3.3V電源ピンを接続する必要があるかどうかは、他のデバイスがDebug Mateから電源供給されているかどうかによります。他のデバイスが独自のUSB接続で電源供給されている場合は、デバイスとDebug Mateの3.3Vピンを接続しないでください。そうするとデバイスが損傷する可能性があります。
 :::
 
-アクセス可能な TX および RX ピンを持つ任意のデバイス（他の開発ボードやカスタム回路など）を監視できます。
+他の開発ボードやカスタム回路など、アクセス可能な TX および RX ピンを持つ任意のデバイスを監視できます。
 
 これを行う主な方法は2つあります：
 
@@ -224,17 +224,21 @@ XIAO Debug Mateは、シリアルモニタリング用にターゲットデバ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/25.jpg" style={{width:800, height:'auto'}}/></div>
 
+以下の図は Grove インターフェースのピン定義を示しています。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/39.png" style={{width:400, height:'auto'}}/></div>
+
 :::caution 重要な注意事項
 デバイスの TX ピンが Debug Mate の受信ピンに接続され、デバイスの RX ピンが送信ピンに接続されていることを常に確認してください。
 :::
 
-汎用性の高い設計により、XIAO Debug Mate では**最大2つの UART デバイスを同時に接続**できます：1つは XIAO ソケット経由、もう1つは Grove ポート経由です。その後、画面上のメニューを使用して各デバイスの監視を切り替えることができます。
+多用途な設計により、XIAO Debug Mate では**最大2つの UART デバイスを同時に接続**できます：1つは XIAO ソケット経由、もう1つは Grove ポート経由です。その後、画面上のメニューを使用して各デバイスの監視を切り替えることができます。
 
-この強力な機能により、**複数のシリアルデバイスを含む複雑なシステムをデバッグする際の面倒な再配線プロセスが不要**になります。
+この強力な機能により、**複数のシリアルデバイスを含む複雑なシステムをデバッグする際の面倒な再配線プロセスが不要になります**。
 
 ## シリアルモニターの操作
 
-XIAO Debug Mate は、デバイス上および PC ベースの監視の両方に使用できる汎用シリアルツールを搭載しています。このガイドでは、ナビゲーションと機能について説明します。
+XIAO Debug Mate は、デバイス上と PC ベースの両方の監視に使用できる多用途なシリアルツールを備えています。このガイドでは、ナビゲーションと機能について説明します。
 
 
 <div class="table-center">
@@ -243,7 +247,7 @@ XIAO Debug Mate は、デバイス上および PC ベースの監視の両方に
 
 ### 基本的なナビゲーションとコントロール
 
-機能を探索する前に、インターフェースのナビゲーション方法を理解することが重要です。すべての操作は、スクロールホイールとボタンを使用して実行されます。
+機能を探索する前に、インターフェースのナビゲーション方法を理解することが重要です。すべての操作はスクロールホイールとボタンを使用して実行されます。
 
 1.  **メニューへの入り方：** メイン画面から、**スクロールホイール**を使用して**シリアルツールアイコン**（左下）をハイライトします。**ボタンを押して**シリアルメニューに入ります。
 
@@ -259,7 +263,7 @@ XIAO Debug Mate は、デバイス上および PC ベースの監視の両方に
 
 #### クイックナビゲーションガイド
 
-| 操作 | 機能 |
+| アクション | 機能 |
 | :--- | :--- |
 | **スクロールホイール（カーソルなし）** | パススルーモードとモニターモード間の切り替え。 |
 | **ボタン短押し** | ソース/ボーレート用の選択カーソルを有効化。 |
@@ -267,31 +271,44 @@ XIAO Debug Mate は、デバイス上および PC ベースの監視の両方に
 
 ### 2つの監視モード
 
-基本コントロールを理解したら、2つの主要な動作モード間を簡単に切り替えることができます。**スクロールホイール**を回すだけで（カーソルが非アクティブの状態で）切り替えられます。
+基本コントロールを理解したら、2つの主要な動作モード間を簡単に切り替えることができます。**スクロールホイール**を回すだけで（カーソルが非アクティブの間）切り替えられます。
 
 #### 1. パススルーモード（PC へ）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/26.jpg" style={{width:600, height:'auto'}}/></div>
 
-これはデフォルトモードで、選択されたソースからのすべてのシリアルデータを PC ベースのシリアルターミナルで表示するために、コンピュータに直接転送するように設計されています。
+これはデフォルトモードで、選択されたソースからのすべてのシリアルデータを PC ベースのシリアルターミナルで表示するために、コンピューターに直接転送するように設計されています。
 
 *   **画面表示：** 画面にはデータ自体ではなく、ステータス情報が表示されます。
     *   **左上：** アクティブなシリアルソース（例：`XIAO`）。
     *   **右上：** 現在のボーレート（例：`9600`）。
-    *   **中央：** `RX` および `TX` インジケータ（Debug Mate の視点から）が、PC との間のデータフローを示すためにアニメーションします。
+    *   **中央：** `RX` および `TX` インジケーター（Debug Mate の視点から）が PC との間のデータフローを示すためにアニメーションします。
 
 #### 2. モニターモード（LCD 上）
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/27.jpg" style={{width:600, height:'auto'}}/></div>
 
-このモードは、シリアルデータを Debug Mate の LCD 画面に直接キャプチャして表示します。このモードでは、データは PC に転送**されません**。
+このモードは、シリアルデータを Debug Mate の LCD 画面に直接キャプチャして表示します。このモードではデータは PC に転送**されません**。
 
-*   **画面表示：** 画面は2つのウィンドウに分割され、データトラフィックを表示します。
-    *   `RX ウィンドウ`：**XIAO ソケットから**受信したデータを表示します。
-    *   `TX ウィンドウ`：**Grove ポートから**受信したデータを表示します。
+*   **画面表示：** 画面は2つのウィンドウに分割されてデータトラフィックを表示します。
+    *   `RX ウィンドウ`：**XIAO/Grove ソケットから受信した**データを表示します。
+    *   `TX ウィンドウ`：**PC から受信した**データを表示します。
 
 :::caution
 Debug Mate は両方のソースからのデータを同時に表示することはできません。設定メニューを使用してアクティブなソースを選択する必要があります。
+:::
+
+:::note
+この文書の**RX**と**TX**のラベルは常に**Debug Mate の視点から**のものです：  
+- **RX**は**Debug Mate が受信した**データを示します（つまり、Debug Mate *に入ってくる*シリアル信号）。  
+- **TX**は**Debug Mate が送信した**データを示します（つまり、Debug Mate が*送信している*信号）。
+
+これは、**XIAO や Grove デバイスから Debug Mate に送信されたデータは RX ウィンドウに表示される**ことを意味し、どのポートがソースとして選択されているかは関係ありません。RX ウィンドウに表示される内容は、設定で選択したソース（XIAO/Grove）によって決まります。
+
+**TX**は常に**PC から発信された**データを指します — コンピューターのシリアルターミナルからメッセージを入力して送信すると、それらは Debug Mate の TX を介して現在選択されているソース（XIAO または Grove）に送信されます。  
+
+- 「パススルー」と「モニター」の両方のモードで、PC は仮想 COM ポート経由で Debug Mate にデータを送信でき、Debug Mate はこれらのメッセージを選択したターゲットシリアルデバイスに渡します。  
+- したがって、**TX ウィンドウ**に表示されるのは、現在の監視モードに関係なく、常に PC が Debug Mate を通じて送信しているものです。
 :::
 
 ### ソースとボーレートの設定
@@ -302,21 +319,21 @@ Debug Mate は両方のソースからのデータを同時に表示すること
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/28.jpg" style={{width:600, height:'auto'}}/></div>
 
-2.  **設定の選択：** **ボタン**を使用して、ソース（`XIAO`/`Grove`）とボーレート間でカーソルを移動します。
+2.  **設定の選択：** **ボタン**を使用してカーソルをソース（`XIAO`/`Grove`）とボーレート間で移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/29.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-ソースを切り替えた後、新しいソースからのコンテンツがすぐに表示されない場合があります。これは、プリンターが前の入力ソースのデータの印刷が完了するのを待ってから、新しいソースからの情報を受信するためです。
+ソースを切り替えた後、新しいソースからのコンテンツがすぐに表示されない場合があります。これは、プリンターが前の入力ソースのデータの印刷が完了するのを待ってから、新しいソースからの情報を受信する必要があるためです。
 :::
 
-3.  **メニューへの入り方：** ボーレートオプションについて、希望する設定がハイライトされた状態で、**ボタンを押して**設定メニューを開きます。
+3.  **メニューに入る：** ボーレートオプションについて、希望する設定がハイライトされた状態で、**ボタンを押して**設定メニューを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/30.jpg" style={{width:600, height:'auto'}}/></div>
 
 4.  **値の変更：** **スクロールホイール**を使用してボーレートを選択し、**ボタンを押して**確認します。
 
-#### ボーレートメニューと視覚的インジケータ
+#### ボーレートメニューと視覚的インジケーター
 
 ボーレートメニューでは、9つの一般的なレート（4800から921600）から選択できます。独特な視覚的演出として、このメニューに入ると**デバイス背面の36個のLEDマトリックス**も有効になり、選択されたレートを反映して光のパターンが変化します。
 
@@ -325,26 +342,24 @@ Debug Mate は両方のソースからのデータを同時に表示すること
 ### 重要な概念と制限事項
 
 *   **ブリッジではなくデバッガー：** Debug Mate は診断ツールであり、通信ブリッジではありません。XIAO ポートから Grove ポートへのデータの自動転送は行いません。
-*   **固定シリアルパラメータ：** コアシリアルパラメータ（8-N-1）はファームウェアで固定されています。上級ユーザーはオープンソースコードを変更してこれらを変更できます。
+*   **固定シリアルパラメーター：** コアシリアルパラメーター（8-N-1）はファームウェアで固定されています。上級ユーザーはオープンソースコードを変更してこれらを変更できます。
 *   **単一ソース監視：** 一度に1つのソース（XIAO または Grove）のみをアクティブに監視できます。
 
 ## 特別な謝辞
 
-LED マトリックスのデザインインスピレーションを提供してくださった**啊猫啊狗晒太阳 (Ah Mao Ah Gou Shai Tai Yang)**に特別な感謝を申し上げます。Debug Mate のオンボード LED インジケータのデザインは、彼らの優れたオープンソースプロジェクトを参考にしています。オリジナルのデザインは非常に創造的で実用的です。
+LED マトリックスのデザインインスピレーションを提供してくださった**啊猫啊狗晒太阳 (Ah Mao Ah Gou Shai Tai Yang)**に特別な感謝を申し上げます。Debug Mate のオンボード LED インジケーターのデザインは、彼らの優れたオープンソースプロジェクトを参考にしています。オリジナルのデザインは非常に創造的で実用的です。
 
 オリジナルのデザインをご覧になりたい場合は、以下のリンクからデモンストレーション動画と作者のホームページをご確認ください。
 
 *   [オリジナルデザインデモンストレーション動画](https://www.bilibili.com/video/BV1Sc411273Y/)
-*   [作者のBilibiliホームページ](https://space.bilibili.com/1155738723)
+*   [作者の Bilibili ホームページ](https://space.bilibili.com/1155738723)
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,0 +1,10 @@
+position: 7
+label: 'Posicionamiento Interior-Exterior'
+collapsible: true
+collapsed: true
+className: _indoor-outdoor-positioning
+# link:
+#   type: generated-index
+#   slug: es/indoor-outdoor-positioning
+#   title: Posicionamiento Interior-Exterior
+#   description: Soluciones de posicionamiento y seguimiento en entornos interiores y exteriores.

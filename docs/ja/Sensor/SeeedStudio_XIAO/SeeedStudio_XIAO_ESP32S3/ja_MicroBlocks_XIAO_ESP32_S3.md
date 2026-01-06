@@ -12,7 +12,7 @@ last_update:
 
 ## MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを提供します。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストにMicroBlocksを好んで使用しています。
+MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラムできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを提供します。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストにMicroBlocksを好んで使用しています。
 
 ## XIAO ESP32S3 ピン配置とハードウェア機能
 
@@ -20,7 +20,7 @@ MicroBlocksは、初心者（9歳から大人まで）がマイクロコント�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-esp32s3-sense-pinout.jpg" style={{width:600, height:'auto'}}/></div>
 
-このボードは外部アンテナ（付属）を介してWi-FiとBLE接続の両方を提供します。
+このボードは、外部アンテナ（付属）を介してWi-FiとBLE接続の両方を提供します。
 
 ボードには11個のGPIOピン（ピン0..10）があります。
 Senseバージョンには、カメラボード上に2つの追加GPIOピン（ピン11..12）があります。
@@ -30,7 +30,7 @@ Senseバージョンには、カメラボード上に2つの追加GPIOピン（�
 
 Senseバージョンには、カメラ（1600x1200解像度のOV2640カメラまたは2048x1536解像度のOV3660）とデジタルマイクロフォンを搭載した拡張ボードが含まれています。
 
-**注意：カメラサポートはまだMicroBlocksに実装されていませんが、将来追加される可能性があります。**
+**注意：カメラサポートはMicroBlocksではまだ実装されていませんが、将来追加される可能性があります。**
 
 ## MicroBlocksファームウェアのインストール
 
@@ -40,7 +40,7 @@ Senseバージョンには、カメラ（1600x1200解像度のOV2640カメラま
 
 ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行します。
 
-ギアメニューで「アドバンスモード」を有効にします：
+ギアメニューで「advanced mode」を有効にします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/set-advanced-mode.png" style={{width:400, height:'auto'}}/></div>
 
@@ -52,7 +52,7 @@ ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microbloc
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/install-s3.png" style={{width:200, height:'auto'}}/></div>
 
-プロンプトが表示されたら、「Connect」ボタン（プラグアイコン）を使用してボードへのUSB接続を開きます。ファームウェアインストールプロセスが開始されると、進行状況インジケーターが表示されます：
+プロンプトが表示されたら、"Connect"ボタン（プラグアイコン）を使用してボードへのUSB接続を開きます。ファームウェアインストールプロセスが開始されると、進行状況インジケーターが表示されます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/download-progress.png" style={{width:200, height:'auto'}}/></div>
 
@@ -64,11 +64,11 @@ ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microbloc
 
 ESP32ボードにMicroBlocksファームウェアをインストールする際、通常は手動でブートローダーモードに入る必要はありません。
 
-必要に応じてブートローダーモードに入るには、B（ブート）ボタンを押し続けながらR（リセット）ボタンを押して離します。
+必要に応じてブートローダーモードに入るには、R（リセット）ボタンを押して離しながら、B（ブート）ボタンを押し続けます。
 Bボタンを押し続けながらボードをコンピューターに接続することもできます。
 
-**USBコネクターの両側にある小さなBとRボタンは扱いにくいため、
-爪や小さな工具を使って押す必要があるかもしれません。**
+**USBコネクターの両側にある小さなBとRボタンは扱いにくいです；
+押すには爪や小さな工具を使用する必要があるかもしれません。**
 
 ## ボードをMicroBlocksに接続する
 
@@ -114,12 +114,18 @@ MicroBlocksは並行処理をサポートしています。最大10個のスク�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
-[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)
-には多くの追加例が含まれています。
+[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)には、さらに多くの例が含まれています。
+
+## プロジェクトデモ
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vjjg3Hfl_UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br/>
+より包括的なデモンストレーションとして、メーカーの[Zeller](https://www.hackster.io/Zeller)がXIAO ESP32S3、XIAO拡張ボード、Grove SpeakerとGrove Buttonアクセサリを使用してMood Playerを作成しました。MicroBlocksを使用すると、複雑なコードを書くことなく、お気に入りのパターンと音楽を作成できます。詳細な手順を含むステップバイステップのチュートリアルは[Hackster](https://www.hackster.io/Zeller/mood-player-2426ef)で見つけることができます。
 
 ## 特別な感謝
 
-この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
+記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
 
 ## MicroBlocksリソース
 

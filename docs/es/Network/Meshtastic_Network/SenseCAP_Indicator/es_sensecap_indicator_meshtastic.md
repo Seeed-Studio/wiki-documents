@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.webp
 slug: /es/sensecap_indicator_meshtastic
 last_update:
-  date: 10/29/2024
-  author: Jessie
+  date: 12/3/2024
+  author: Michelle Huang
 ---
 
 
@@ -33,7 +33,7 @@ SenseCAP Indicator es un dispositivo de pantalla táctil de 4 pulgadas diseñado
 
 ### Características
 
-- **Soporta Meshtastic:** Pre-cargado con firmware de Meshtastic, está listo para funcionar una vez encendido. También puedes actualizar el firmware usando Meshtastic Flasher.<br/>
+- **Soporta Meshtastic:** Pre-flasheado con firmware de Meshtastic, está listo para funcionar una vez encendido. También puedes actualizar el firmware usando Meshtastic Flasher.<br/>
 - **MCUs Duales y GPIOs Abundantes:** Equipado con potentes MCUs duales ESP32S3 y RP2040 y más de 400 GPIOs compatibles con Grove para opciones de expansión flexibles.<br/>
 - **Hub LoRa® Local para Conectividad IoT:** Integrado con el chip LoRa® Semtech SX1262, el dispositivo puede convertirse en un Gateway LoRaWAN® de Canal Único mediante tutorial. Alternativamente, conecta dispositivos LoRa® a plataformas IoT populares como Matter vía Wi-Fi.<br/>
 - **Plataforma Completamente de Código Abierto:** Aprovecha el extenso ecosistema de código abierto de ESP32 y Raspberry Pi para infinitas posibilidades de aplicación.<br/>
@@ -52,19 +52,24 @@ SenseCAP Indicator es un dispositivo de pantalla táctil de 4 pulgadas diseñado
 |**Wi-Fi**|802.11b/g/n, 2.4GHz|
 |**Bluetooth**|Bluetooth 5.0 LE|
 |**LoRa(SX1262**)|Soporta 862-930MHz|
-|**Zumbador(Aún no desarrollado)**|MLT-8530, Frecuencia de Resonancia：2700Hz|
+|**Buzzer(Aún no desarrollado)**|MLT-8530, Frecuencia de Resonancia：2700Hz|
 |**Certificación**|CE/FCC|
 
 ### Descripción General del Hardware
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/HO-114993532.png" alt="pir" width={800} height="auto" /></p>
 
-## Flashear Firmware
+## Comenzar
+:::danger nota
+Cuando el dispositivo esté en los estados siguientes, por favor no lo reinicies manualmente ni lo apagues. De lo contrario, el dispositivo puede quedar inutilizado.
+1. No terminar el proceso de transmisión de mensajes
+2. Estar siendo configurado
+:::
 
 ### Flashear Firmware de Aplicación
 
-:::caution note
-Antes de flashear el firmware, por favor asegúrate de que el indicator que compraste es la versión para Meshtastic. No flashees el firmware de Meshtastic en un indicator que no sea compatible con Meshtastic. Esto puede causar daño al hardware. Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente muerto.
+:::caution nota
+Antes de flashear el firmware, por favor asegúrate de que el indicator que compraste es la versión para Meshtastic. No flashees el firmware de Meshtastic en un indicator que no sea compatible con Meshtastic. Esto puede causar daño al hardware. Por favor `no uses NRF-OTA` para actualizar el firmware, puede causar que el dispositivo quede completamente inutilizado.
 :::
 
 **Instrucciones en Video**
@@ -75,7 +80,7 @@ Antes de flashear el firmware, por favor asegúrate de que el indicator que comp
 
 Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
-Selecciona el dispositivo objetivo a `Seeed SenseCAP Indicator` y elige el firmware más reciente, luego haz clic en `Flash`.
+Selecciona el dispositivo objetivo como `Seeed SenseCAP Indicator` y elige el firmware más reciente, luego haz clic en `Flash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-flash.png" alt="pir" width={800} height="auto" /></p>
 
@@ -83,11 +88,11 @@ Mantén presionado el botón mientras conectas el cable USB.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/press-button.png" alt="pir" width={400} height="auto" /></p>
 
-Habilita el `Full Erase and Install`, y haz clic en `Erase Flash and Install`.
+Habilita `Full Erase and Install`, y haz clic en `Erase Flash and Install`.
 
 Se mostrarán 2 puertos, selecciona el `USB serial port` y haz clic en `Connect`.
 
-:::caution note
+:::caution nota
 Por favor selecciona el `USB Serial`, no el INDICATOR RP2040.
 :::
 
@@ -109,8 +114,6 @@ Mantén presionado este botón interno usando una aguja, luego conecta el dispos
 Descarga el archivo `UF2` y cópialo a la unidad `RPI-RP2`. El firmware debería flashearse después de que el archivo se descargue y el dispositivo se reinicie.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/disk.png" alt="pir" width={600} height="auto" /></p>
-
-## Comenzar
 
 Descarga la App `Meshtastic`:
 
@@ -188,7 +191,7 @@ Ahora que has establecido la región LoRa en tu dispositivo, puedes continuar co
 
 ### Teclado
 
-:::tip note
+:::tip nota
 El uso del teclado de la versión 2.5.xx(El firmware de fábrica es v2.5.11.) y la versión más nueva que 2.6.xx es diferente. Por favor verifica lo siguiente según tu versión actual de firmware.
 :::
 
@@ -210,7 +213,7 @@ El uso del teclado de la versión 2.5.xx(El firmware de fábrica es v2.5.11.) y 
 
 #### Parte RP2040
 
-RP2040 aún no ha sido desarrollado, por lo que las funciones de `zumbador`/`tarjeta SD`/`mapa` no están disponibles aún. Estamos trabajando con Meshtastic para optimizarlo.
+RP2040 aún no ha sido desarrollado, por lo que las funciones de `buzzer`/`tarjeta SD`/`mapa` no están disponibles aún. Estamos trabajando con Meshtastic para optimizarlo.
 
 #### Selección de Rol
 

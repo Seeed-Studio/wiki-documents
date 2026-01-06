@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/15.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/xiao_debug_mate_serial" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -261,45 +261,6 @@ The XIAO Debug Mate is designed for the entire XIAO ecosystem, but the DAPLink d
 
 Before you can start debugging, you need to set up your host computer with the necessary software.
 
-#### Install Drivers
-
-The driver requirements vary by operating system.
-
-<Tabs>
-<TabItem value="Windows" label="Windows" default>
-
-On Windows, you will need to install a generic USB driver for the CMSIS-DAP interface. The easiest way to do this is with the **Zadig** utility.
-
-1.  Download Zadig from [its official website](https://zadig.akeo.ie/).
-2.  Connect the XIAO Debug Mate to your PC.
-3.  Run Zadig. Go to `Options` and make sure `List All Devices` is checked.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_1.png" style={{width:700, height:'auto'}}/></div>
-
-4.  From the dropdown list, find the device interface named **`CMSIS-DAP`**.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/debug_2.png" style={{width:700, height:'auto'}}/></div>
-
-  :::warning
-  Be very careful to select the correct interface. You may see multiple interfaces for the Debug Mate (e.g., one for serial). Only modify the `CMSIS-DAP` one.
-  :::
-
-5.  Select the **`WinUSB`** driver in the box to the right of the green arrow.
-6.  Click `Replace Driver`. After the installation is complete, your system will be ready.
-
-</TabItem>
-<TabItem value="MacOS" label="MacOS">
-
-No driver installation is necessary. macOS has built-in support for CMSIS-DAP devices through its generic USB drivers.
-
-</TabItem>
-<TabItem value="Linux" label="Linux">
-
-No driver installation is necessary. The Linux kernel includes drivers for CMSIS-DAP devices.
-
-</TabItem>
-</Tabs>
-
 #### Install OpenOCD
 
 :::tip
@@ -309,7 +270,7 @@ Verified: Please use OpenOCD version 0.12.0-7 or later.
 To ensure compatibility and have access to the latest features, we strongly recommend using the **xPack** version of OpenOCD. System package managers (like Homebrew on macOS or APT on Linux) often provide older, outdated versions which may not work correctly with modern targets.
 
 :::tip PlatformIO Note
-If you are using VS Code with the PlatformIO extension, PlatformIO will automatically download and configure the correct version of OpenOCD for your project when you start a debug session. If you only use PlatformIO, no manual installation is needed.
+If you are using VS Code with the PlatformIO extension, PlatformIO will automatically download and configure the correct version of OpenOCD for your project when you start a debug session.
 :::
 
 <Tabs>
@@ -319,7 +280,7 @@ On Windows, the manual installation method is straightforward.
 
 1.  **Download the OpenOCD package**
 
-Go to the [xPack OpenOCD releases page](https://github.com/xpack-dev-tools/openocd-xpack/releases). Scroll down to the latest release and find the Windows version (e.g., `xpack-openocd-...-win32-x64.zip`). Download this file.
+Go to the [xPack OpenOCD releases page](https://github.com/xpack-dev-tools/openocd-xpack/releases). The latest release is always listed at the very top. Find the Windows version (e.g., `xpack-openocd-...-win32-x64.zip`) in the topmost release and download this file.
 
 2.  **Extract the Files**
 
@@ -331,7 +292,7 @@ This allows you to run `openocd` from any terminal.
 
     - Search for "Environment Variables" in the Start Menu and select "Edit the system environment variables".
     - Click **"Environment Variables..."**.
-    - Under "User variables", select the **"Path"** variable and click **"Edit..."**.
+    - Under "System variables", select the **"Path"** variable and click **"Edit..."**.
     - Click **"New"** and paste the full path to the `bin` directory you extracted earlier. For example:  
       `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\bin`
     - Click OK on all windows to save.
@@ -633,6 +594,10 @@ Connecting your hardware for debugging is straightforward.
 
 #### For XIAO Boards
 
+:::tip
+Generally speaking, all functions of XIAO on Debug Mate do not require additional power supply to XIAO, unless otherwise specified.
+:::
+
 The XIAO Debug Mate is designed for a seamless, plug-and-play experience with all Seeed Studio XIAO boards.
 
 1.  Take your XIAO board and align it with the female headers on the Debug Mate.
@@ -723,7 +688,7 @@ The standard OpenOCD package does not include the configuration file for the XIA
 *   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_SAMD21/at91samd21g18.cfg`.
 *   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation. The path will vary by OS:
 
-    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
@@ -799,7 +764,7 @@ Similar to the SAMD21, the standard OpenOCD package does not include the configu
 *   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_RA4M1/ra4m1.cfg`.
 *   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation.
 
-    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
@@ -1043,7 +1008,7 @@ The standard OpenOCD package does not include the configuration file for the XIA
 *   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_SAMD21/at91samd21g18.cfg`.
 *   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation. The path will vary by OS:
 
-    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
@@ -1231,7 +1196,7 @@ The standard OpenOCD package does not include the configuration file for the XIA
 *   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_SAMD21/at91samd21g18.cfg`.
 *   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation. The path will vary by OS:
 
-    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
@@ -1332,7 +1297,7 @@ The standard OpenOCD package does not include the configuration file for the XIA
 *   **Source File:** From the `XIAO_Debug_Mate_DAPLink_Package`, find the file: `target/XIAO_SAMD21/at91samd21g18.cfg`.
 *   **Destination Folder:** Copy this file into the `target` script folder of your xPack OpenOCD installation. The path will vary by OS:
 
-    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\share\openocd\scripts\target\`
+    *   **Windows:** `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\openocd\scripts\target\`
     *   **macOS / Linux:** `~/opt/xpack-openocd-0.12.0-7/share/openocd/scripts/target/`
 
 :::note
@@ -1580,20 +1545,60 @@ The most straightforward way to determine if the XIAO device is damaged is that 
 
 Damage to XIAO devices is typically caused by issues with partitioning or the Bootloader file. This can usually be resolved by reflashing the Bootloader file. If this fails, there are currently no alternative solutions. Users must assume full responsibility for performing this operation themselves, so please ensure the flashing commands and firmware are verified and valid.
 
+### Q4: Does XIAO Debug Mate require a driver?
+
+XIAO Debug Mate has been tested and verified on the latest computer operating systems and functions normally without requiring driver installation. For Windows computers, we recommend using the **Windows 11** operating system. During testing, we discovered that if you have installed drivers using Zading, it may cause the device to fail to be recognized.
+
+### Q5: My XIAO Debug Mate consistently displays a red light on Windows 11 and cannot be recognized, reporting the error: “unable to find a matching CMSIS-DAP device.”
+
+Regarding the issue where your XIAO Debug Mate shows a red light and reports "unable to find a matching CMSIS-DAP device" on Windows 11, please try the following troubleshooting steps:
+
+**1. Verify the USB Cable**
+
+First, please ensure that the USB cable you are using supports data transfer and is not just a charging cable. You can verify this by checking if the device appears in a serial monitor software or if you can see any device logs. If the computer does not react at all when plugged in, try swapping the cable.
+
+**2. Reinstall the Driver via PowerShell**
+
+If the cable is confirmed to be working, the issue is likely caused by an incorrect driver installation. You can resolve this by removing the conflicting driver using PowerShell. Please follow these steps:
+
+1.  Right-click the Start button and select **Terminal (Admin)** or **PowerShell (Admin)**.
+
+2.  Run the following command to find the CMSIS-DAP driver details:
+
+    ```powershell
+    dism /online /get-drivers /format:table | findstr /i "cmsis-dap"
+    ```
+3.  Look for the **"Published Name"** (usually looks like `oemXX.inf`) in the output.
+
+4.  Run the following command to delete and uninstall the driver (replace `{inf_name}` with the actual name you found in the previous step, e.g., `oem10.inf`):
+
+    ```powershell
+    pnputil /delete-driver {inf_name} /uninstall
+    ```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/40.png" style={{width:1000, height:'auto'}}/></div>
+
+After completing these steps, please reconnect your device and check if it is recognized correctly.
+
+### Q6: What should I do if the OpenOCD version shown on my system is different from the screenshot in the Wiki?
+
+If you check the OpenOCD version on your system and the output does not match the recommended version shown in the Wiki screenshots, you may have multiple OpenOCD installations, or your system is using a different version by default.
+
+On Windows computers, open the **System Environment Variables** and go to the **System variables** section. Edit the `Path` variable and move the path for the Wiki-recommended OpenOCD installation (for example, `C:\Users\YourName\AppData\Local\xPacks\OpenOCD\xpack-openocd-0.12.0-7\bin`) to the very top of the list. This ensures the recommended OpenOCD version will be found and used first by your system. After making this change, open a new terminal and re-run `openocd --version` to confirm that the correct version is now shown.
+
+
 
 ## Resources
 
 - **[ZIP]** [XIAO_Debug_Mate_DAPLink_Package-v1.0](https://files.seeedstudio.com/wiki/xiao_debug_mate/res/XIAO_Debug_Mate_DAPLink_Package-v1.0.zip)
 
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

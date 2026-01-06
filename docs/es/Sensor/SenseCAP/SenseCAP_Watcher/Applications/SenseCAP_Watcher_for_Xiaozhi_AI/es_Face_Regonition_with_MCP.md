@@ -17,10 +17,12 @@ keywords:
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /es/face_regonition_with_mcp
 last_update:
-  date: 11/24/2025
+  date: 11/25/2025
   author: Twelve
+translation:
+  skip: [ zh-CN ]
 ---
-# Extendiendo MCP con Grove
+# Extendiendo el Reconocimiento Facial con MCP
 
 ## Descripción General
 
@@ -238,6 +240,9 @@ La IA automáticamente llamará a la herramienta MCP para verificar la base de d
 
 **R:** Por favor verifica que la dirección IP sea correcta y que el servicio de reconocimiento facial esté ejecutándose correctamente.
 
+**P: ¿Puedo implementar el sistema de reconocimiento facial en otros dispositivos?**
+
+**R:** Sí. Siempre que el dispositivo ejecute un sistema basado en Linux y pueda conectarse a la red, puede usarse para la implementación. Sin embargo, la serie reComputer ofrece mejor rendimiento de cómputo.
 
 ## Soporte Técnico
 

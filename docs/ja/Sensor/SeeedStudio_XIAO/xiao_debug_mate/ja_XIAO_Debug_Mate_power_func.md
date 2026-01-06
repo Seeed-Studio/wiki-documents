@@ -12,7 +12,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/32.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/ja/xiao_debug_mate_power" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
@@ -63,7 +63,7 @@ Power Meter機能は、開発プロセスの特定の段階に合わせて調整
 
 **ナビゲーション：**
 *   **UIの切り替え：** 単純に**スクロールホイールを回す**だけで3つのパワーメーター画面を循環できます。カーソルはありません；ページ全体が変更されます。
-*   **データのリセット：** UI 3の統計は、**ボタンを長押し**してメインメニューに戻る時のみクリアされます。
+*   **データのリセット：** UI 3の統計は、**ボタンを長押し**してメインメニューに戻るときのみクリアされます。
 
 #### UI 1：高精度ダッシュボード
 
@@ -79,7 +79,7 @@ Power Meter機能は、開発プロセスの特定の段階に合わせて調整
 *   **目的と使用例：**
     このUIは**リアルタイムデバッグと基本的な健全性チェック**のためのものです。その高精度により、電力消費のわずかな変動も確認できます。この画面を使用して以下を迅速に検証します：
     *   デバイスがアイドル時に予想される電流量を消費しているか。
-    *   周辺機器（画面やセンサーなど）をオンにした時の即座の電力への影響。
+    *   周辺機器（画面やセンサーなど）をオンにした際の即座の電力への影響。
     *   5V電源の安定性。
 
 
@@ -95,7 +95,7 @@ Power Meter機能は、開発プロセスの特定の段階に合わせて調整
     *   `P`：瞬時電力、自動的にスケールされ**ワット（W）**と**ミリワット（mW）**で表示。
 
 *   **目的と使用例：**
-    バッテリー駆動またはエネルギー効率的なデバイスを開発する際、電流はマイクロアンペア範囲まで下がることがあります。このUIは**手動での単位変換の必要性を排除**し、デバイスの消費電力の大きさを瞬時に理解できます。以下に最適です：
+    バッテリー駆動またはエネルギー効率的なデバイスを開発する際、電流はマイクロアンペア範囲まで低下することがあります。このUIは**手動での単位変換の必要性を排除し**、デバイスの消費電力の大きさを瞬時に理解できます。以下に最適です：
     *   デバイスが正常にディープスリープモードに入ったことの確認（電流はµA範囲であるべき）。
     *   単位を手動で計算することなく、異なるコード最適化の電力消費を比較。
 
@@ -111,7 +111,7 @@ Power Meter機能は、開発プロセスの特定の段階に合わせて調整
     *   `Time`：測定セッション開始からの経過時間。
 
 *   **動作：**
-    タイマーとデータ蓄積は、この画面に最初に入った時に**自動的に開始**されます。UI 1またはUI 2への切り替えはデータを**リセットしません**。長期テストの実行中にリアルタイム値を確認できます。データはメインメニューに戻る時のみクリアされます。
+    タイマーとデータ蓄積は、この画面に最初に入ったときに**自動的に開始**されます。UI 1またはUI 2への切り替えはデータを**リセットしません**。長期テストの実行中にリアルタイム値を確認できます。データはメインメニューに戻るときのみクリアされます。
 
 *   **目的と使用例：**
     このUIは**デプロイ前検証**に不可欠です。バッテリーにコミットする前に、デバイスのワークロードをシミュレートし、この画面を使用して以下を行えます：
@@ -134,7 +134,7 @@ XIAOをLi-Poバッテリーで直接給電する場合、通常は背面の3.3V�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_debug_mate/connect_xiao.gif" style={{width:600, height:'auto'}}/></div>
 
-1.  XIAOボードをXIAO Debug Mateの前面のメスヘッダーに直接差し込むだけです。
+1.  XIAOボードをXIAO Debug Mateの前面のメスヘッダーに直接差し込みます。
 2.  Debug MateはXIAOに自動的に電力を供給し、総消費電力の測定を開始します。
 
 ### XIAOとその周辺機器の測定
@@ -172,14 +172,12 @@ XIAOボードと接続されたセンサーやモジュールの合計消費電�
 
 電力測定のためにペリフェラルをDebug MateのGroveポートに接続**しないでください**。その電力線はXIAO測定回路とは別になっています。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

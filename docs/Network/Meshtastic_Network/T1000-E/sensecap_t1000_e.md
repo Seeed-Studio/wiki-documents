@@ -7,10 +7,14 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t1000_e
 sidebar_position: 2
 last_update:
-  date: 11/11/2025
+  date: 12/24/2025
   author: Michelle Huang
 ---
-
+:::danger note
+When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.
+1. Not finishing the message transmission process
+2. Being configured
+:::
 ## Video Tutorial
 
 ### Part 1: Unboxing Setup
@@ -118,7 +122,8 @@ If you want to text messages and communicate with other nodes in the website, yo
     Your device will be shown in the list. Click to connect. If the connection succeed, you can see the device status directly on the website.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
-### Configure the Parameters
+
+### Configure the LoRa
 
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
 
@@ -151,7 +156,7 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
-### Sensor Configuration
+### Configure Sensor
 
 |Sensor|Description|
 |-|-|
@@ -209,6 +214,16 @@ Check [External Notification Config](https://meshtastic.org/docs/configuration/m
 :::tip
 After you update the device configuration, the device will restart, which may take some time.
 :::
+
+### Configure GPS
+
+Please set GPS enabled. You can adjust the update inerval and broadcast interval to obtain a more up-to-date location information.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
+
+For IOS, please turn on the `Accurate Location`. Otherwise, the positioning may deviate.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
 
 ## Flash Firmware
 
@@ -297,7 +312,7 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 
 ## FAQ
 
-- **How to check the device name**
+### How to check the device name
 
  Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
@@ -307,7 +322,7 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
 
-- **How to reboot the device?**
+### How to reboot the device
 
  Press and hold the button, then connect the charging cable.
 
@@ -318,6 +333,12 @@ Copy UF2 file to the DFU drive. Firmware should be flashed after the file is dow
 - Charge the device for 1~2 hours
 
 - Change the charging cable
+
+- Sometimes it looks like turning off, but in fact it is because the LED and the buzzer have not been activated. Check the following parameters: 
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/LEDLightEnable.png" alt="pir" width={800} height="auto" /></p>
+ 
+ - If still no luck, press and hold the device button, then connect the charging cable, see whether or not the a disk pop out in your PC. If so, [click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#device-bricked) to re-install the bootloader
 
 ### Device stuck in boot loop
 
@@ -341,7 +362,7 @@ To successfully enter the DFU mode, you need to perform this operation quickly. 
 
 ### Device bricked
 
-**Description:**
+#### Description
 
 The device not responding, no LED, can not pair with your App.
 
@@ -467,7 +488,9 @@ When you have completed the above steps, then you can follow this [step](https:/
 
 **3) Device can not enter DFU mode and no serial port display**
 
-- Please disconnect the charging cable and leave the device for a few days until the battery is completely drained, then connect the charging cable and try to pair it again.
+- press and hold the device button, then connect the charging cabl. After a disk pop out in your PC, you may see the serial port.
+
+- If still no luck, please disconnect the charging cable and leave the device for a few days until the battery is completely drained, then connect the charging cable and try to pair it again.
 
 **4) If none of the above steps work, please contact the tech support: support@sensecapmx.com**
 
@@ -484,6 +507,27 @@ When you have completed the above steps, then you can follow this [step](https:/
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wrong-port.png" alt="pir" width={500} height="auto" /></p>
 
  Check if the port is correct, or try another port.
+
+ ### Device automatically turn off
+
+ #### Description
+
+ - After the device turning on, it will turn off or reboot automatically after a while. 
+ - The serial port log ran for a while and then stopped.
+
+ This is possibly caused by manually and forcely rebooting or turning off the device when the device is in the following states:not finishing the messages transmission process, being configured......
+
+ #### Troubleshoot
+
+ [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to perform a flash-erase. 
+
+ ### Factory Reset
+If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do the factory reset.
+
+- [Click here](https://wiki.seeedstudio.com/sensecap_t1000_e/#step-2-flash-erase) to flash erase the device. And then re-flash the latest firmware.
+
+- Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
 ### Signal Quality
 

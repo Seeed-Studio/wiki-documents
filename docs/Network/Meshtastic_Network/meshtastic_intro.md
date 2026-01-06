@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /meshtastic_introduction
 sidebar_position: 1
 last_update:
-  date: 6/17/2024
-  author: Jessie
+  date: 12/11/2025
+  author: Michelle
 ---
 
 
@@ -40,6 +40,10 @@ Click [here](https://meshtastic.org/docs/) to learn more about Meshtastic networ
 ## Supported Hardware
 
 - [SenseCAP Card Tracker T1000-E for Meshtastic](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)
+
+- [Wio Tracker L1](https://wiki.seeedstudio.com/wio_tracker_node/)
+
+- [SenseCAP Solar Node](https://wiki.seeedstudio.com/solar_node/)
 
 - [SenseCAP Indicator for Meshtastic](https://www.seeedstudio.com/SenseCAP-Indicator-D1Pro-p-5644.html)
 

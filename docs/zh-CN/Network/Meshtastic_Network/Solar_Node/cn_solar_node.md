@@ -8,15 +8,15 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /cn/meshtastic_solar_node
 sidebar_position: 1
 last_update:
-  date: 4/1/2025
-  author: Jessie
+  date: 12/16/2025
+  author: Michelle Huang
 ---
 
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.png" alt="pir" width={800} height="auto" /></p>
 
-这是一个基于 [Meshtastic®](https://meshtastic.org/) 的经济型太阳能供电通信节点或中继器，集成了 XIAO nRF52840 Plus 主控制器和 Wio-SX1262 LoRa 模块。它专为没有网络覆盖的区域而设计。支持长距离通信、精确定位和低功耗运行。适用于扩展户外区域的网络覆盖。
+这是一个基于 [Meshtastic®](https://meshtastic.org/) 的经济型太阳能通信节点或中继器，集成了 XIAO nRF52840 Plus 主控制器和 Wio-SX1262 LoRa 模块。它专为无网络覆盖区域设计，支持长距离通信、精确定位和低功耗运行，适用于扩展户外区域的网络覆盖。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Solar-Node-P1-Pro-for-Meshtastic-LoRa-p-6412.html" target="_blank">
@@ -35,10 +35,10 @@ Solar Node 有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.co
 ### 特性
 
 - 集成 5W 太阳能板，支持外接电池（需用户自行提供）。
-- 设备出厂预装 Meshtastic 固件。可无缝集成到 Meshtastic 生态系统中。
+- 设备出厂预装 Meshtastic 固件，可无缝集成到 Meshtastic 生态系统中。
 - 兼容 Grove 生态系统，支持温湿度传感器、光传感器等传感器的即插即用。
 - 适用于长期户外使用。
-- 在开阔区域支持 8 到 9 公里传输。可用作户外节点或中继器，轻松扩展 Mesh 网络并增强网络覆盖。
+- 在开阔区域支持 8 到 9 公里传输距离。可用作户外节点或中继器，轻松扩展 Mesh 网络并增强网络覆盖。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-114993633-3.png" alt="pir" width={800} height="auto" /></p>
 
@@ -136,7 +136,7 @@ Solar Node 有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.co
     <td><b>电池（P1-Pro 版本）</b></td>
     <td>
       <p>- 4 x 18650 锂电池（每个 3350mAh）</p>
-      <p>- 支持 Type-C 和太阳能充电。</p>
+      <p>- 支持 Type-C 和太阳能充电</p>
       <p>- 放电环境：-40～60°C</p>
       <p>- 充电环境：0-50°C</p>
     </td>
@@ -151,18 +151,11 @@ Solar Node 有两个版本：[SenseCAP Solar Node P1](https://www.seeedstudio.co
   </tr>
 </table>
 
-### 按钮
 
-|按钮操作|描述|
-|--|--|
-|按住 3 秒|开机|
-|按两次|更新节点/位置信息|
-|按三次|开启/关闭 GPS|
-|按住 5 秒|关机|
 
 ### 硬件概述
 
-**交互元件**
+**交互组件**
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/interactive.png" alt="pir" width={800} height="auto" /></p>
 
 **配件**

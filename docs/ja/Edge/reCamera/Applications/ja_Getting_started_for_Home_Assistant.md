@@ -1,6 +1,6 @@
 ---
 description: reCamera と Home Assistant の統合チュートリアルを提供します。Home Assistant は reComputer にインストールされています。
-title: Home Assistant の入門ガイド
+title: Home Assistant 入門ガイド
 keywords:
   - reCamera
   - Home Assistant
@@ -13,16 +13,16 @@ last_update:
   author: Xinrui Wu
 ---
 
-# reCamera を使用した Home Assistant の入門ガイド
+# reCamera を使用した Home Assistant 入門ガイド
 
 ## はじめに
 
 Home Assistant は、オープンソースのスマートホームプラットフォームシステムで、ユーザーは自分の IoT デバイスを簡単にシステムに接続して統一管理できます。しかし、Home Assistant の主な特徴は、さまざまなセンサーデバイスの表示を実現するだけでなく、クロスプラットフォームデバイスの自動連携を実現することです。このようなスマートホームプラットフォームだけが十分な活力を持つことができます。
 
-## ハードウェアの準備
+## ハードウェア準備
 
 reCamera 1台（2002 シリーズ、HQ POE バージョン、またはパンチルトバージョンのいずれでも可能ですが、POE バージョンには WiFi 機能がないため、同じネットワークセグメントで POE 機能付きスイッチに接続する必要があります）  
-reComputer 1台（どのバージョンでも構いませんが、ここでは reComputer AI R2130-12 を例として使用します）  
+reComputer 1台（どのバージョンでも構いません。ここでは reComputer AI R2130-12 を例として使用します）  
 コンピューター 1台
 
 <table align="center">
@@ -67,7 +67,9 @@ reComputer 1台（どのバージョンでも構いませんが、ここでは r
 
 ## Home Assistant のインストール（reComputer AI R2130-12 を例として）
 
-### システムの準備
+### システム準備
+
+Home Assistant が既にインストールされている場合は、「設定ファイルのパスを見つける」ステップに直接進んで、後続の設定を行ってください。
 
 1.システムの更新
 
@@ -92,7 +94,7 @@ curl -fsSL https://get.docker.com | sh
 2.現在のユーザーが Docker を使用できるようにする
 
 ```bash
-https://files.seeedstudio.com
+sudo usermod -aG docker $USER
 ```
 
 3.権限を有効にするためにシステムを再起動
@@ -166,7 +168,7 @@ http://<your IP>:8123
 http://192.168.1.88:8123
 ```
 
-初回起動時は初期化インターフェースに案内されます。その後、アカウントの作成とスマートホームの設定を開始できます。
+初回起動時は初期化インターフェースが表示されます。その後、アカウントの作成とスマートホームの設定を開始できます。
 
 ### 設定ファイルのパスを見つける
 
@@ -230,7 +232,7 @@ sudo nano /homeassistant/config/automations.yaml
 3. configuration.yaml の編集：
 
 ```bash
-sudo nano /homeassistant/config/automations.yaml
+sudo nano /homeassistant/config/configuration.yaml
 ```
 
 内容を以下に置き換えます：
@@ -289,7 +291,7 @@ docker restart homeassistant
 
 ### reCamera をコンピューターに接続後、192.168.42.1 にアクセス
 
-インターフェースが継続的に開けない場合は、[ファクトリーリセット](https://wiki.seeedstudio.com/ja/recamera_getting_started/#factory-reset)セクションを参照してデバイスをリセットしてください。リセット後、再度 192.168.42.1 にアクセスしてください。リセット後、パスワードの変更を求められます。
+インターフェースが継続的に開けない場合は、[Factory Reset](https://wiki.seeedstudio.com/ja/recamera_getting_started/#factory-reset) セクションを参照してデバイスをリセットしてください。リセット後、再度 192.168.42.1 にアクセスしてください。リセット後、パスワードの変更を求められます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/reset.png" /></div>
 
@@ -297,7 +299,7 @@ docker restart homeassistant
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/logging_in.png" /></div>
 
-### Workspace に入った後、ノードを設定します。
+### Workspace に入った後、ノードを設定する
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_1.png" /></div>
 
@@ -330,7 +332,7 @@ currentModel += ` number: ${num}`;
 return { payload: currentModel };
 ```
 
-変更後、右上角の「完了」ボタンをクリックします。
+変更後、右上角の「Finish」ボタンをクリックします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/workspace_ha_5.png" /></div>
 
@@ -394,7 +396,7 @@ curlからのテスト
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験ができるだけスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

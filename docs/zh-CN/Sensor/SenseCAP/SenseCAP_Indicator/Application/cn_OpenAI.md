@@ -885,7 +885,7 @@ int indicator_openai_init(void)
 ## 资源
 
 1. [SenseCAP Indicator X ChatGPT](/cn/SenseCAP_Indicator_ChatGPT)
-2. [SenseCAP Indicator X DALL·E](/cn/SenseCAP_Indicator_DALL·E)
+2. [SenseCAP Indicator X DALL·E](/cn/SenseCAP_Indicator_DALL-E)
 3. **演示 SDK**：SenseCAP Indicator 的演示 SDK 可在 [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) 上获取。
 4. **SenseCAP Indicator 用户指南**：用户指南提供了关于 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
 5. **Chat completions OpenAI 指南**：如果您是 Chat API 的新手，本指南将帮助您入门。您可以在[这里](https://platform.openai.com/docs/guides/chat/chat-completions-beta)找到它。

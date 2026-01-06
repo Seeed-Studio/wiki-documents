@@ -5,7 +5,7 @@ keywords:
 - Raspberry pi
 - Edge Controller
 - reComputer Industrial R21xx
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_R21xx_configure_system
 last_update:
   date: 09/28/2025
@@ -16,7 +16,7 @@ last_update:
 
 Learn how to configure and test hardware components on the reComputer Industrial R21xx series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, 5G，Zigbee over Mini-PCIe, RS485, RS232, CAN,DI/DO testing, UPS for safe shutdown and more.
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
@@ -575,7 +575,7 @@ sudo minicom -D /dev/ttyACM2
 Take ACM2 and ACM3 as an example:
 If you want to send from ACM2 to ACM3, ACM2 needs to be set up again: ***ctrl+A*** , then press ***Z*** and then ***E*** , and then start the serial port write command. At this time, you can print strings in ACM2 at will, and you can see the contents of ACM2 in ACM3 at the same time;
 Conversely, if you want to send from ACM3 to ACM2, ACM3 needs to be set up again:  ***ctrl+A***, then press  ***Z***  and then  ***E*** , and then start the serial port write command. At this time, you can print strings in ACM3 at will, and you can see the contents of ACM3 in ACM2 at the same time. As shown in the figure.
-：：：
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.11_rs485_testing_3.png" style={{width:800, height:'auto'}}/></div>
 
@@ -722,6 +722,8 @@ echo 0 > /sys/class/gpio/gpio638/value
 
 ## CAN Testing
 
+### Loopback test
+
 <div class="table-center">
   <table border="1" cellspacing="0" cellpadding="6">
     <thead>
@@ -821,6 +823,88 @@ sudo ip link set can0 up type can bitrate 500000
 sudo ip link set can1 up type can bitrate 500000
 echo "can0 & can1 are up @ 500 kbit/s"
 ```
+
+### Python-CAN Testing
+
+[Python-CAN](https://github.com/raspberrypi/usbboot) is a cross-platform Python library that provides a unified programming interface for Controller Area Network (CAN) bus communication, supporting a wide range of CAN hardware interfaces and virtual buses, and enabling easy implementation of CAN message transmission, reception, filtering, bus monitoring, and other operations.
+Similarly, the CAN interfaces need to be physically connected to achieve loopback communication.
+
+1. Configure the standard CAN baud rate (500 kbit/s):
+
+```bash
+sudo ip link set down can0
+sudo ip link set down can1
+sudo ip link set can0 type can bitrate 500000
+sudo ip link set can1 type can bitrate 500000
+sudo ip link set up can0
+sudo ip link set up can1
+```
+
+2. Verify that both interfaces are in the UP state: Outputting "state UP" indicates the UP state.
+
+```bash
+ip a show can0
+ip a show can1
+```
+
+The output "state UP" indicates the UP state.
+
+3. Configure the Python virtual environment and dependencies.
+
+```bash
+mkdir rpi_can_project
+cd rpi_can_project
+python3 -m venv can_env
+source can_env/bin/activate
+pip install python-can
+```
+
+4. Enter the Python script:
+
+```python
+# can_test.py
+import can
+import time
+
+# create a bus instance using 'with' statement,
+# this will cause bus.shutdown() to be called on the block exit;
+# many other interfaces are supported as well (see documentation)
+with can.Bus(interface='socketcan',
+             channel='vcan0',
+             receive_own_messages=True) as bus:
+
+    # send a message
+    message = can.Message(arbitration_id=0x7B, is_extended_id=True,
+                          data=[0x11, 0x22, 0x33])
+    
+    try:
+        bus.send(message, timeout=0.2)
+        print(f"Message sent: ID={message.arbitration_id:X}, Data={message.data.hex()}")
+    except can.exceptions.CanOperationError as e:
+        print(f"Error sending message: {e}")
+
+    # iterate over received messages
+    print("Listening for 5 seconds...")
+    start_time = time.time()
+    
+
+    while time.time() - start_time < 5:
+        if msg:
+            print(f"Received - ID: {msg.arbitration_id:X}, Data: {msg.data.hex()}")
+        else:
+            print("No message received in 1 second.")
+
+print("Bus shut down and program finished.")
+```
+
+5. Execute and run:
+
+```bash
+python can_test.py
+deactivate
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/python-can.png" style={{width:800, height:'auto'}}/></div>
 
 ## USB Hub Testing
 
