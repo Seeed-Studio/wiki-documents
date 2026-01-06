@@ -740,6 +740,13 @@ const sidebars = {
                 'Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: 'Integrated with LoRaWAN Network Server',
+              items: [
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
