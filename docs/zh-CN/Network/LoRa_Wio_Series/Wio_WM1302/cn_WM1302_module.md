@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /cn/WM1302_module
 last_update:
-  date: 4/24/2025
-  author: Leo
+  date: 12/15/2025
+  author: David Du
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
@@ -17,7 +17,7 @@ last_update:
 <!-- <p style="text-align:center"><a href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-EU868-p-4889.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>  -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-EU868-p-4889.html)
 > LoRaWAN® 是 LoRa Alliance® 的授权商标。
-LoRa® 标识是 Semtech Corporation 或其子公司的商标。
+LoRa® 商标是 Semtech Corporation 或其子公司的商标。
 
 :::note
 我们最近发布了基于 Wio-E5 模块的 Wio-E5 系列。
@@ -27,20 +27,20 @@ LoRa® 标识是 Semtech Corporation 或其子公司的商标。
 要了解更多关于使用 STM32Cube MCU Package for STM32WL series(SDK) 创建 LoRaWAN® 终端节点、加入并向 LoRaWAN® 网络发送数据的信息，请阅读[迷你开发板](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/)和[开发套件](https://wiki.seeedstudio.com/cn/LoRa_E5_Dev_Board/)的 wiki 页面。
 :::
 
-WM1302 模块是新一代采用 mini-PCIe 外形规格的 LoRaWAN® 网关模块。基于 Semtech® SX1302 基带 LoRaWAN® 芯片，WM1302 释放了网关产品长距离无线传输的更大潜在容量。与之前的 SX1301 和 SX1308 LoRa® 芯片相比，它具有更高的灵敏度、更低的功耗和更低的工作温度。
+WM1302 模块是新一代采用 mini-PCIe 外形规格的 LoRaWAN® 网关模块。基于 Semtech® SX1302 基带 LoRaWAN® 芯片，WM1302 为网关产品释放了更大的长距离无线传输潜力。与之前的 SX1301 和 SX1308 LoRa® 芯片相比，它具有更高的灵敏度、更低的功耗和更低的工作温度。
 
-WM1302 LoRaWAN® 网关模块在 US915 和 EU868 频段上都有 SPI 和 USB 版本，使您能够拥有广泛的 LoRaWAN® 频率计划选择，包括 EU868、US915、AS923、AS920、AU915、KR920 和 IN865。
+WM1302 LoRaWAN® 网关模块在 US915 和 EU868 频段上都有 SPI 和 USB 版本，让您可以选择广泛的 LoRaWAN® 频率计划选项，包括 EU868、US915、AS923、AS920、AU915、KR920 和 IN865。
 
 WM1302 模块已通过 CE、FCC 和 Telec 认证，有助于简化 LoRaWAN® 网关设备的开发和认证过程。
 
-WM1302 专为 M2M 和 IoT 应用而设计，可广泛应用于支持 LPWAN 网关的场景。它将是您显著降低开发 LoRa® 网关设备（包括 LoRaWAN® 网关、热点等）时的技术难度和时间消耗的完美选择。
+WM1302 专为 M2M 和 IoT 应用而设计，可广泛应用于支持 LPWAN 网关的场景。它将是您显著降低开发 LoRa® 网关设备（包括 LoRaWAN® 网关、热点等）的技术难度和时间消耗的完美选择。
 
 ## 特性
 
-- **采用 Semtech® SX1302 基带 LoRa® 芯片**，极低功耗和高性能。
+- **采用 Semtech® SX1302 基带 LoRa® 芯片**，功耗极低，性能卓越。
 - **采用标准 52 针金手指的 Mini-PCIe 外形规格**，易于与各种网关设备集成。
 - **超低工作温度**，无需额外散热，减小 LoRaWAN® 网关的尺寸。
-- **高灵敏度**，在 SX1250 TX/RX 前端下可达 -139 dBm @SF12；TX 功率在 @3.3V 下可达 26 dBm。
+- **高灵敏度**，配合 SX1250 TX/RX 前端可达 -139 dBm @SF12；TX 功率在 @3.3V 时可达 26 dBm。
 - **通过 CE、FCC 和 TELEC 认证**。简化最终产品认证过程。
 
 ## 硬件概述
@@ -64,7 +64,7 @@ WM1302 专为 M2M 和 IoT 应用而设计，可广泛应用于支持 LPWAN 网�
 <table class="tg">
 <thead>
 <tr>
-<th class="tg-4onr">40 Pin No.(BOARD#)</th><th class="tg-ev79">Raspberry Pi GPIO(BCM#)</th><th class="tg-ev79">WM1302 Pi HAT Pinout</th>
+<th class="tg-4onr">40 引脚编号(BOARD#)</th><th class="tg-ev79">Raspberry Pi GPIO(BCM#)</th><th class="tg-ev79">WM1302 Pi HAT 引脚</th>
 </tr>
 </thead>
 <tbody>
@@ -131,7 +131,7 @@ WM1302 专为 M2M 和 IoT 应用而设计，可广泛应用于支持 LPWAN 网�
 <tr>
   <td class="tg-4onr">11</td>
   <td class="tg-f42p">GPIO 17</td>
-  <td class="tg-f42p">SX1302_RESET<br />SPI version: Active HIGH<br />USB version: Active LOW</td>
+  <td class="tg-f42p">SX1302_RESET<br />SPI 版本：高电平有效<br />USB 版本：低电平有效</td>
 </tr>
 
 <tr>
@@ -335,7 +335,7 @@ WM1302 专为 M2M 和 IoT 应用而设计，可广泛应用于支持 LPWAN 网�
     <td class="tg-f42p">25 dBm（3.3V 电源供电）</td>
   </tr>
   <tr>
-    <td class="tg-4onr">LED</td>
+    <td class="tg-4onr">LED 指示灯</td>
     <td class="tg-f42p" colspan="2">电源：绿色 配置：红色 TX：绿色 RX：蓝色</td>
   </tr>
   <tr>
@@ -360,11 +360,11 @@ WM1302 专为 M2M 和 IoT 应用而设计，可广泛应用于支持 LPWAN 网�
   </tr>
   <tr>
     <td class="tg-4onr">工作温度</td>
-    <td class="tg-f42p" colspan="2">-40°C 至 85°C</td>
+    <td class="tg-f42p" colspan="2">-40°C to 85°C</td>
   </tr>
   <tr>
     <td class="tg-4onr">尺寸</td>
-    <td class="tg-f42p" colspan="2">30 mm（宽）× 50.95 mm（长）</td>
+    <td class="tg-f42p" colspan="2">30 mm (width) × 50.95 mm (length)</td>
   </tr>
   <tr>
     <td class="tg-4onr">认证</td>
@@ -457,7 +457,7 @@ sudo raspi-config
 
 3. 选择 `I2C`，然后选择 `Yes` 启用它
 
-4. 选择 `Serial Port`，然后对"Would you like a login shell..."选择 `No`，对"Would you like the serial port hardware..."选择 `Yes`
+4. 选择 `Serial Port`，然后对 "Would you like a login shell..." 选择 `No`，对 "Would you like the serial port hardware..." 选择 `Yes`
 
 5. 完成后，请重启 Raspberry Pi 以确保这些设置生效。
 
@@ -766,7 +766,7 @@ cd ~/sx1302_hal/packet_forwarder
 
 现在，数据包转发器能够正确运行。要成功将数据转发到我们的 LoRaWAN 网络服务器（例如 TTN 或 ChripStack），我们仍需要在服务器端进行一些配置。
 
-为此，我们需要首先将刚刚构建的 Raspberry Pi 网关注册到我们的 LoRa 网络服务器。以 [TTN](https://www.thethingsindustries.com/docs/getting-started/) 为例，登录 [TTN 控制台](https://eu1.cloud.thethings.network/console)，点击左侧面板上的 `Gateways` 按钮，然后点击 `Register gateway`。填写 `Gateway EUI`、`Gateway Server address` 和 `Frequency plan`，其他选项保持默认设置。
+为此，我们需要首先将刚刚构建的 Raspberry Pi 网关注册到我们的 LoRa 网络服务器。以 [TTN](https://www.thethingsindustries.com/docs/getting-started/) 为例，登录 [TTN console](https://eu1.cloud.thethings.network/console)，点击左侧面板上的 `Gateways` 按钮，然后点击 `Register gateway`。填写 `Gateway EUI`、`Gateway Server address` 和 `Frequency plan`，其他选项保持默认设置。
 
 - **Gateway EUI：** 您网关的 64 位唯一标识符。
 
