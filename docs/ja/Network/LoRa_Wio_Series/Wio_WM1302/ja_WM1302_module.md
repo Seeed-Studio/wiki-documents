@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /ja/WM1302_module
 last_update:
-  date: 4/24/2025
-  author: Leo
+  date: 12/15/2025
+  author: David Du
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
@@ -22,9 +22,9 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
 :::note
 私たちは最近、Wio-E5 モジュールをベースとした Wio-E5 シリーズをリリースしました。
 
-[こちら](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Wio-E5 Module](https://wiki.seeedstudio.com/ja/LoRa-E5_STM32WLE5JC_Module/) [Grove module](https://wiki.seeedstudio.com/ja/Grove_LoRa_E5_New_Version/)、[mini Dev boards](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/) から [Development Kit](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/) まで、LoRa-E5 ファミリーの新しいメンバーをご覧ください。
+[ここ](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Wio-E5 Module](https://wiki.seeedstudio.com/ja/LoRa-E5_STM32WLE5JC_Module/) [Grove module](https://wiki.seeedstudio.com/ja/Grove_LoRa_E5_New_Version/)、[mini Dev boards](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/) から [Development Kit](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/) まで、LoRa-E5 ファミリーの新しいメンバーをご覧ください。
 
-STM32WL シリーズ用 STM32Cube MCU パッケージ（SDK）を使用して LoRaWAN® エンドノードを作成し、LoRaWAN® ネットワークに参加してデータを送信する方法について詳しく学ぶには、[mini Dev boards](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/) と [Development Kit](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/) の wiki ページをご覧ください。
+STM32WL シリーズ用 STM32Cube MCU パッケージ（SDK）を使用して LoRaWAN® エンドノードを作成し、LoRaWAN® ネットワークに参加してデータを送信する方法について詳しく学ぶには、[mini Dev boards](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/) と [Development Kit](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/) の wiki ページをお読みください。
 :::
 
 WM1302 モジュールは、mini-PCIe フォームファクターを採用した新世代の LoRaWAN® ゲートウェイモジュールです。Semtech® SX1302 ベースバンド LoRaWAN® チップをベースとした WM1302 は、ゲートウェイ製品の長距離無線伝送のより大きな潜在能力を解き放ちます。従来の SX1301 および SX1308 LoRa® チップと比較して、より高い感度、より少ない消費電力、より低い動作温度を特徴としています。
@@ -40,7 +40,7 @@ WM1302 は M2M および IoT アプリケーション向けに設計されてお
 - **Semtech® SX1302 ベースバンド LoRa® チップを搭載**、極めて低い消費電力と高性能。
 - **標準 52 ピンゴールドフィンガーを備えた Mini-PCIe フォームファクター**、様々なゲートウェイデバイスとの統合が容易。
 - **超低動作温度**、追加の放熱が不要で、LoRaWAN® ゲートウェイのサイズを削減。
-- **高感度** SX1250 TX/RX フロントエンドで SF12 時 -139 dBm まで対応；TX 出力は 3.3V で最大 26 dBm。
+- **高感度** SX1250 TX/RX フロントエンドで -139 dBm @SF12 まで対応；TX 出力は @3.3V で最大 26 dBm。
 - **CE、FCC、TELEC 認証取得済み**。最終製品の認証プロセスを簡素化。
 
 ## ハードウェア概要
@@ -463,7 +463,7 @@ sudo raspi-config
 
 #### ステップ3. SX1302ソースコードの取得とコンパイル
 
-それでは`git`をインストールし、githubから`sx1302_hal`（SX1302 LoRaゲートウェイ用ライブラリとプログラム）をダウンロードしましょう：
+次に`git`をインストールし、githubから`sx1302_hal`（SX1302 LoRaゲートウェイ用のライブラリとプログラム）をダウンロードしましょう：
 
 ```shell
 sudo apt update
@@ -743,7 +743,7 @@ pi@raspberrypi:~/sx1302_hal/packet_forwarder $ sudo dmesg | grep 1-1.3
 
 <br />
 
-使用しているモジュールに基づいて、対応する `global_conf.json.sx1250.xxxxx` で希望する LoRaWAN ネットワークサーバー `server_address` とゲートウェイ EUI `gateway_ID` を選択し、`up/down port` を `1700` に変更します。その後、以下のコードを実行してコンセントレーターを開始します：
+使用しているモジュールに基づいて、対応する `global_conf.json.sx1250.xxxxx` で希望する LoRaWAN ネットワークサーバー `server_address` とゲートウェイ EUI `gateway_ID` を選択し、`up/down port` を `1700` に変更します。次に以下のコードを実行してコンセントレーターを開始します：
 
 ```shell
 cd ~/sx1302_hal/packet_forwarder
@@ -766,7 +766,7 @@ cd ~/sx1302_hal/packet_forwarder
 
 これで、パケットフォワーダーが正常に動作できるようになりました。LoRaWAN ネットワークサーバー（TTN や ChripStack など）にデータを正常に転送するには、サーバー側でいくつかの設定を行う必要があります。
 
-そのためには、まず構築した Raspberry Pi ゲートウェイを LoRa ネットワークサーバーに登録する必要があります。[TTN](https://www.thethingsindustries.com/docs/getting-started/) を例に取ると、[TTN コンソール](https://eu1.cloud.thethings.network/console) にログインし、左側のパネルの `Gateways` ボタンをクリックして `Register gateway` をクリックします。`Gateway EUI`、`Gateway Server address`、`Frequency plan` を入力し、他のオプションはデフォルト設定のままにします。
+そのためには、まず構築した Raspberry Pi ゲートウェイを LoRa ネットワークサーバーに登録する必要があります。[TTN](https://www.thethingsindustries.com/docs/getting-started/) を例に取ると、[TTN コンソール](https://eu1.cloud.thethings.network/console) にログインし、左側パネルの `Gateways` ボタンをクリックして `Register gateway` をクリックします。`Gateway EUI`、`Gateway Server address`、`Frequency plan` を入力し、他のオプションはデフォルト設定のままにします。
 
 - **Gateway EUI:** ゲートウェイの 64 ビット一意識別子。
 
@@ -793,12 +793,12 @@ cd ~/sx1302_hal/packet_forwarder
     ...
 ```
 
-`./lora_pkt_fwd -c global_conf.json.sx1250.xxxxx` コマンドを使用して `lora_pkt_fwd` を再起動すると、Raspberry Pi ゲートウェイが TTN に接続されていることを確認できるはずです。
+コマンド `./lora_pkt_fwd -c global_conf.json.sx1250.xxxxx` を使用して `lora_pkt_fwd` を再起動すると、Raspberry Pi ゲートウェイが TTN に接続されていることが確認できるはずです。
 
 ## FAQ
 
 <details>
-<summary>すべての設定が正しくても、デバイスがネットワークサーバーに参加できないのはなぜですか？</summary>
+<summary>すべての設定が正しくてもデバイスがネットワークサーバーに参加できないのはなぜですか？</summary>
 
 <br />
 
