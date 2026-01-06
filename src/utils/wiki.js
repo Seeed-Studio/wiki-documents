@@ -11,7 +11,7 @@ const docList = [
     },
     {
       "path": "/semtech_lr2021_evk_getting_started",
-      "image": "https://files.seeedstudio.com/wiki/Semtech_LR2021_EVK/image/2-100039980-LR2021-LoRa-Plus-Evaluation-kit-868Mhz-EU-V2.0.jpg",
+      "image": "https://files.seeedstudio.com/wiki/Semtech_LR2021_EVK/image/Semtech-LR2021-LoRa-Plus-Evaluation-Kit.webp",
       "title": "Semtech LR2021 LoRa Plus™ Evaluation Kit",
       "date": "12/30/2025",
       "title_cn": "Semtech LR2021 LoRa Plus™ 评估套件",
