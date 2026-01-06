@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /WM1302_module
 last_update:
-  date: 4/24/2025
-  author: Leo
+  date: 12/15/2025
+  author: David Du
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
