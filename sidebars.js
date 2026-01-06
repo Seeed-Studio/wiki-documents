@@ -2658,6 +2658,13 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'reComputer R1225 LoRaWAN Gateway',
+          items: [
+            'Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/R1225_introduction',
+          ],
+        },
+        {
+          type: 'category',
           label: 'SenseCAP M2 Multi-Platform Gateway',
           items: [
             'Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview',
@@ -3893,6 +3900,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_for_Jetson',
           ]
         }
       ],
@@ -7830,6 +7838,13 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'reComputer R1225 LoRaWAN 网关',
+          items: [
+            'zh-CN/Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/cn_R1225_introduction',
+          ],
+        },
+        {
+          type: 'category',
           label: 'SenseCAP M2 多平台网关',
           items: [
             'zh-CN/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/cn_SenseCAP_M2_Multi_Platform_Overview',
@@ -9065,6 +9080,7 @@ const sidebars = {
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_How_to_Establish_the_Ethercat_on_Jetson',
+            'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_for_Jetson',
           ]
         }
       ],
@@ -12909,6 +12925,13 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'Gateway LoRaWAN reComputer R1225',
+          items: [
+            'es/Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/es_R1225_introduction',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Gateway Multi-Plataforma SenseCAP M2',
           items: [
             'es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/es_SenseCAP_M2_Multi_Platform_Overview',
@@ -14144,6 +14167,7 @@ const sidebars = {
             'es/Edge/NVIDIA_Jetson/FAQs/es_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'es/Edge/NVIDIA_Jetson/FAQs/es_How_to_Establish_the_Ethercat_on_Jetson',
+            'es/Edge/NVIDIA_Jetson/FAQs/es_Make_DIY_BSP_for_Jetson',
           ]
         }
       ],
@@ -17989,6 +18013,13 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'reComputer R1225 LoRaWAN Gateway',
+          items: [
+            'ja/Network/SenseCAP_Network/reComputer_R1225_LoRaWAN_Gateway/ja_R1225_introduction',
+          ],
+        },
+        {
+          type: 'category',
           label: 'SenseCAP M2 Multi-Platform Gateway',
           items: [
             'ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/ja_SenseCAP_M2_Multi_Platform_Overview',
@@ -19224,6 +19255,7 @@ const sidebars = {
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Differences_of_L4T_Between_Seeed_and_NVIDIA',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_How_to_Establish_the_Ethercat_on_Jetson',
+            'ja/Edge/NVIDIA_Jetson/FAQs/ja_Make_DIY_BSP_for_Jetson',
           ]
         }
       ],
