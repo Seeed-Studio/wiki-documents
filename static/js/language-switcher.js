@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-31 17:41:46 (北京时间)
-// 多语言页面: 2094 个
+// 生成时间: 2026-01-06 10:50:50 (北京时间)
+// 多语言页面: 2097 个
 
 (function() {
   'use strict';
@@ -1032,6 +1032,12 @@
     "ja"
   ],
   "/Jetson_FAQ": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/make_diy_bsp_for_jetson": [
     "cn",
     "en",
     "es",
@@ -3101,6 +3107,12 @@
     "es",
     "ja"
   ],
+  "/semtech_lr2021_evk_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/LoRa-E5_STM32WLE5JC_Module": [
     "cn",
     "en",
@@ -3732,6 +3744,12 @@
     "ja"
   ],
   "/M2_Kit_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/r1225_introduction": [
     "cn",
     "en",
     "es",
