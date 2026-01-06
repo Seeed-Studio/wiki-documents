@@ -16,6 +16,13 @@ With a range of products that cater to the needs of different users, from hobbyi
 
 In addition to the LoRaWAN sensors, SenseCAP also provides different types of gateway, including hotspots for web3 and LoRaWAN gateways for the LoRaWAN sensing solutions, and an array of software, cloud services, and APIs, allowing users to collect, store, and analyze data in real-time. The combination of hardware, software, and cloud services enables users to quickly respond to changes in their environment and make data-driven decisions.
 
+> [!NOTE]
+> R1225
+
+```test
+R1225
+```
+
 ## Introduction
 
 **SenseCAP Gateway** is an industrial-grade, high-performance gateway designed for long-range wireless communication. Developed by Seeed Studio, the SenseCAP Gateway serves as a critical component in the Internet of Things (IoT) ecosystem, enabling robust and reliable connectivity for a wide range of applications.
@@ -48,6 +55,11 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/029cab35952193f5e1ea3c80fda40937-2.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/1ef6149dd438035c41238babee3f27e5-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
+
+### reComputer R1225 LoRaWAN Gateway
+
+reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN gateway & controller, CM4-powered, with AI capabilities. With 3*RS485, dual-ethernets, BACnet, and Modbus support, equipped with all the necessary features that a robust and reliable industrial edge IoT device needs. With compatibility with AI NPU accelerator, it's a perfect fit for remote access control, especially BMS, BAS, and iBMS.
+
 
 ### SenseCAP M2 Multi-Platform Gateway
 
