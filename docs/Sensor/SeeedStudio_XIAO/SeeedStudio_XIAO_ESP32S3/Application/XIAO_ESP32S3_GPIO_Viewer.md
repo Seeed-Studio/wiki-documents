@@ -3,7 +3,7 @@ description: A MicroPython-based real-time GPIO monitor for the Seeed Studio XIA
 title: Seeed Studio XIAO ESP32-S3 (Sense) GPIO Viewer
 keywords:
 - GPIO Viewer
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_10.png
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_10.webp
 slug: /XIAO_ESP32S3_GPIO_Viewer
 last_update:
   date: 01/06/2026
