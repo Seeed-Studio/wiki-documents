@@ -5,6 +5,7 @@ keywords:
 - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-Rotary_Angle_Sensor
+sku: 101020048, 101020017
 last_update:
   date: 1/19/2023
   author: jianjing Huang

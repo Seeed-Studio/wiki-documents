@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-IR_Distance_Interrupter_v1.2/
 slug: /cn/Grove-IR_Distance_Interrupter_v1.2
+sku: 101020175, 101020040
 last_update:
   date: 01/03/2022
   author: gunengyu

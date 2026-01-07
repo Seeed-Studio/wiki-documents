@@ -6,6 +6,7 @@ keywords:
 - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig1.webp
 slug: /hexfellow_y200
+sku: 101090143
 last_update:
   date: 06/18/2025
   author: ZhuYaoHui

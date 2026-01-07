@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio_LTE_Cat_M1_NB-IoT_Tracker/
 slug: /es/Wio_LTE_Cat_M1_NB-IoT_Tracker
+sku: 102991016
 last_update:
   date: 01/11/2022
   author: gunengyu

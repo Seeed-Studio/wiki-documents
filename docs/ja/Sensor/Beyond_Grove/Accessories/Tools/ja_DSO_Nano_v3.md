@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/DSO_Nano_v3
+sku: 109990013
 last_update:
   date: 05/15/2025
   author: gunengyu

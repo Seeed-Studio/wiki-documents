@@ -5,6 +5,7 @@ keywords:
 - アクセサリ 充電
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A
+sku: 105030005
 last_update:
   date: 05/15/2025
   author: jianjing Huang

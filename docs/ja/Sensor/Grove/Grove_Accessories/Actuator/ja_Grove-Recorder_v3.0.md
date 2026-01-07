@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Recorder_v3.0/
 slug: /ja/Grove-Recorder_v3.0
+sku: 107020029
 last_update:
   date: 05/15/2025
   author: gunengyu

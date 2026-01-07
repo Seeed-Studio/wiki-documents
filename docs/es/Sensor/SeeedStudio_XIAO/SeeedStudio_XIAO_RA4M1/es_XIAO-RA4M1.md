@@ -4,6 +4,7 @@ description: |
   XIAO RA4M1 - La Placa de Desarrollo Más Pequeña Basada en Renesas RA4M1 de 32 bits, Compatible con Arduino IDE, 19 GPIOs, LED RGB, CAN BUS, USB 2.0
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
 slug: /es/getting_started_xiao_ra4m1
+sku: 102010551,102010638
 keywords:
   - XIAO
   - RA4M1

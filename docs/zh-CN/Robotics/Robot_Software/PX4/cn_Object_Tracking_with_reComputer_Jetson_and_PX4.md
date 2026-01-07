@@ -12,6 +12,7 @@ keywords:
 - 无人机
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.webp
 slug: /cn/object_tracking_with_reComputer_jetson_and_pX4
+sku: 101090144,100071398
 last_update:
   date: 2025/8/08
   author: Zibo

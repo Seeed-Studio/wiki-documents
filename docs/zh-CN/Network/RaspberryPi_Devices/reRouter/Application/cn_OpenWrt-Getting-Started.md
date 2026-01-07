@@ -5,6 +5,7 @@ keywords:
 - 软件 OpenWrt
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/OpenWrt-Getting-Started
+sku: 102110497,110110090,110110110
 last_update:
   date: 2023/1/13
   author: jianjing Huang

@@ -3,6 +3,7 @@ title: Introducción a Seeed Studio XIAO MG24
 description: |
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /es/xiao_mg24_getting_started
+sku: 102010590,102010610,102010693,102010690,102010691,102010692
 keywords:
   - XIAO
   - MG24

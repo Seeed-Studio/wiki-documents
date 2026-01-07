@@ -3,6 +3,7 @@ description: Tutorial del Módulo Wi-Fi HaLow Wio-WM6108 con XIAO ESP32S3
 title: Introducción al Módulo Wi-Fi HaLow para XIAO
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/20.webp
 slug: /es/getting_started_with_wifi_halow_module_for_xiao
+sku: 109100041
 sidebar_class_name: hidden
 last_update:
   date: 02/12/2025

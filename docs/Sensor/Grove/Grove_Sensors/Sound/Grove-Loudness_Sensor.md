@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Loudness_Sensor/
 slug: /Grove-Loudness_Sensor
+sku: 101020063
 last_update:
   date: 01/06/2022
   author: gunengyu

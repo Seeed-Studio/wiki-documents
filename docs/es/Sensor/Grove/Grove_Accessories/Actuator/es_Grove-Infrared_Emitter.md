@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Infrared_Emitter/
 slug: /es/Grove-Infrared_Emitter
+sku: 101020026
 last_update:
   date: 01/09/2022
   author: gunengyu

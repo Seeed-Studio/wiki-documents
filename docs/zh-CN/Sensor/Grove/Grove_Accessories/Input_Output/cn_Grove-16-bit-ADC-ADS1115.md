@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-16-bit-ADC-ADS1115
+sku: 109020041
 last_update:
   date: 2/22/2023
   author: jianjing Huang

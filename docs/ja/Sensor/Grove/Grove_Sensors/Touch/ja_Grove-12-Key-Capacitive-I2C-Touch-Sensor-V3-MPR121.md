@@ -5,6 +5,7 @@ keywords:
 - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-12-Key-Capacitive-I2C-Touch-Sensor-V3-MPR121
+sku: 101020872
 last_update:
   date: 05/15/2025
   author: jianjing Huang

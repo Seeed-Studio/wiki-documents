@@ -6,6 +6,7 @@ keywords:
   - ESP32-C6
 image: https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/button_buzzer.webp
 slug: /getting_started_with_seeed_iot_button
+sku: 113110044
 last_update:
   date: 04/08/2025
   author: Citric

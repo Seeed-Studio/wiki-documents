@@ -5,6 +5,7 @@ keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/EL_Shield
+sku: 104030000
 last_update:
   date: 2/16/2023
   author: jianjing Huang

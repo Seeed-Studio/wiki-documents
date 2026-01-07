@@ -7,6 +7,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /ja/LoRa_E5_mini
+sku: 113990939, 113991156
 last_update:
   date: 01/30/2023
   author: hushuxu

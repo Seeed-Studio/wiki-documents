@@ -5,6 +5,7 @@ keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Seeeduino-Cortex-M0
+sku: 102010248
 last_update:
   date: 05/15/2025
   author: shuxu hu

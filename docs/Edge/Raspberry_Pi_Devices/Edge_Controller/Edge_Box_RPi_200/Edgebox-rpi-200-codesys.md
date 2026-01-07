@@ -7,6 +7,7 @@ keywords:
   - Embedded_ML
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Edgebox-rpi-200-codesys
+sku: 102991558, 102991559, 102110771, 102110772, E23010424, 114110227, 114993117
 last_update:
   date: 2/1/2023
   author: Peter Pan

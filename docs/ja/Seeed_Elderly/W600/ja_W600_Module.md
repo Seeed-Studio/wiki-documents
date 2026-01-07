@@ -5,6 +5,7 @@ keywords:
 - Air602_WiFi_Development_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/W600_Module
+sku: 102110269,113020031,102991180
 last_update:
   date: 05/15/2025
   author: Matthew

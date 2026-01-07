@@ -4,6 +4,7 @@ description: |
   来自 Seeed Studio 的智能设备，专为无线控制交流供电设备而设计
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/dual_smart_relay_module_for_xiao_45font.webp
 slug: /cn/2_channel_wifi_ac_relay
+sku: 114993526
 keywords:
   - XIAO
   - Home Assistant
