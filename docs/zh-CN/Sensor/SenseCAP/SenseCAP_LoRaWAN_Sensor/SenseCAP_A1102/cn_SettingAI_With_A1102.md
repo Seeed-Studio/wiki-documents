@@ -10,13 +10,13 @@ slug: /cn/setting_ai_with_a1102
 sidebar_position: 2
 # sidebar_class_name: hidden
 last_update:
-  date: 11/26/2025
+  date: 12/31/2025
   author: Twelve
 ---
 
 # 使用 SenseCraft APP 在 SenseCAP A1102 上设置 AI 模型
 
-SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI 功能和易于部署的特点。本指南将引导您使用 **SenseCraft** 应用在 A1102 上部署 AI 模型，提供配对、配置和测试的分步说明。
+SenseCAP A1102 是一款功能强大的传感器设备，结合了先进的 AI 功能和易于部署的特性。本指南将引导您使用 **SenseCraft** 应用在 A1102 上部署 AI 模型，提供配对、配置和测试的分步说明。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/20.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -66,7 +66,7 @@ SenseCAP A1102 是一款专为边缘 AI 应用设计的智能摄像头传感器�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/step2.png" style={{width:400, height:'auto'}}/></div>
 
-按住 SenseCAP A1102 上的电源按钮 **三秒钟** 以启用配对模式。
+按住 SenseCAP A1102 上的电源按钮**三秒钟**以启用配对模式。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/11.png" style={{width:400, height:'auto'}}/></div>
 
@@ -77,6 +77,10 @@ SenseCAP A1102 是一款专为边缘 AI 应用设计的智能摄像头传感器�
 再次点击 **Advanced Settings** 导航到其他配置选项。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/2.png" style={{width:400, height:'auto'}}/></div>
+
+再次点击 **AI Camera** 选择 A1102 选项。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/picture10.png" style={{width:400, height:'auto'}}/></div>
 
 ## **部署 AI 模型**
 
@@ -90,13 +94,13 @@ SenseCAP A1102 是一款专为边缘 AI 应用设计的智能摄像头传感器�
 
 :::warning note
 如果您需要修改 AI 摄像头设置，必须按照步骤为 AI 摄像头供电。  
-请参考 [启动视觉 AI 摄像头](#启动视觉-AI-摄像头)。
+请参考[启动视觉 AI 摄像头](#启动视觉-AI-摄像头)。
 :::
 
-设置参数如：
+设置参数，如：
 
 - **置信度级别**：调整物体识别的阈值（例如，80% 置信度）。
-- **保存识别图像**：启用或禁用将识别的图像保存到存储卡。
+- **保存识别图像**：启用或禁用将识别图像保存到存储卡。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/5.png" style={{width:400, height:'auto'}}/></div>
 
@@ -129,15 +133,15 @@ SenseCAP A1102 是一款专为边缘 AI 应用设计的智能摄像头传感器�
 找到 A1102 设备上的缝隙，轻轻插入螺丝刀。施加一点力将其撬开。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/8.jpg" style={{width:400, height:'auto'}}/></div>
 
-找到四个螺丝孔并旋转旋钮将其打开。确保在转动时施加一致的压力以确保它们松开。
+找到四个螺丝孔并旋转旋钮将其打开。确保在转动时施加一致的压力，以确保它们松动。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/9.jpg" style={{width:400, height:'auto'}}/></div>
 
-螺丝松开后，取下盖子以访问 SD 卡插槽。然后您可以取出 SD 卡来读取存储在其中的信息。
+螺丝松动后，取下盖子以访问 SD 卡插槽。然后您可以取出 SD 卡来读取存储在其中的信息。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/A1102_10.jpg" style={{width:400, height:'auto'}}/></div>
 
 ### **自动图像保存**
 
-凭借 8GB 内部存储，A1102 可以自动将识别的图像保存到存储卡。稍后访问和检索这些图像用于分析或报告。
+凭借 8GB 的内部存储，A1102 可以自动将识别的图像保存到存储卡。稍后访问和检索这些图像用于分析或报告。
 
 :::tip
 配备 8GB 内存，A1102 能够在识别到目标时自动将图像保存到存储卡。当我们需要访问这些图像信息时，可以直接从存储卡中提取和访问所需的图像数据。
@@ -150,26 +154,28 @@ SenseCAP A1102 是一款专为边缘 AI 应用设计的智能摄像头传感器�
 1. **配置 AI 模型的两种方法**
   - 使用 SenseCraft APP 配置 AI 摄像头的内置模型
     - 连接到底部 ESP32 端口，用于为设备供电。
-  - [使用 SenseCraft AI 网站](https://sensecraft.seeed.cc/ai) 配置非出厂预加载的 AI 模型
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/power_up_camera.png" style={{width:400, height:'auto'}}/></div>
+  - [使用 SenseCraft AI 网站](https://sensecraft.seeed.cc/ai)配置非出厂预加载的 AI 模型
     - 连接到顶部 Himax 端口，用于将模型刷写到 Himax 芯片。
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture3.png" style={{width:300, height:'auto'}}/></div>
 
 2. **AI 摄像头已连接但应用显示未连接**
-  - 检查数据记录器的状态，确保在返回 Information 之前先在 Settings 中配置它。
-  - 说明：为了节省电力，数据记录器只有在进入 Settings 页面时才为 AI 摄像头供电。
+  - 检查数据记录器的状态，确保在返回信息页面之前先在设置中配置它。
+  - 说明：为了节省电力，数据记录器只有在进入设置页面时才为 AI 摄像头供电。
 
 3. **呼吸灯与闪烁灯**
-  - 呼吸灯效果表示设备正在 **搜索网络**。
-  - 闪烁灯表示设备已进入 **蓝牙配置模式**。
-  - 如果设备处于呼吸灯模式，按一次按钮切换到红灯，然后长按按钮进入 **蓝牙配置模式**（闪烁灯）。
+  - 呼吸灯效果表示设备正在**搜索网络**。
+  - 闪烁灯表示设备已进入**蓝牙配置模式**。
+  - 如果设备处于呼吸灯模式，按一次按钮切换到红灯，然后长按按钮进入**蓝牙配置模式**（闪烁灯）。
 
 4. **AI 摄像头成功启动，但无法通过 APP 蓝牙配置找到**
-  - 当 AI 摄像头启动时，但是：
+  - 当 AI 摄像头启动时，但：
     - SenseCraft APP 无法搜索到设备。
     - 尝试搜索 **Vision AI V2**，仍然检测不到设备。
   - 这表明 **ESP32 固件可能无法正常工作**（ESP32 负责蓝牙广播）。
   - **解决方案：**  
-    - 将电缆连接到 **ESP32 端口** 并打开串行监视器检查 ESP32 是否正常运行。  
-    - 如果出现异常日志或启动错误，请联系技术支持获取 **重新刷写 ESP32 固件** 的说明。
+    - 将电缆连接到 **ESP32 端口**并打开串行监视器检查 ESP32 是否正常运行。  
+    - 如果出现异常日志或启动错误，请联系技术支持获取**重新刷写 ESP32 固件**的说明。
 
 ## **技术支持与产品讨论**
 

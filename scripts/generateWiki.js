@@ -39,6 +39,21 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'Solar_Node', 'solar_node.md'), //12.16
   path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Application', 'XIAO_ESP32C5_ESP-Mesh_Audio.md'), //12.12
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'User_Guide', 'Get_Started.md'), //12.24
+  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Accessories', 'Display', 'Grove-OLED_Display_0.96inch.md'), //12.29
+  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'All_in_one', 'Grove-CO2_Temperature_Humidity_Sensor-SCD30.md'), //12.29
+  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Light', 'Grove-I2C_Color_Sensor.md'), //12.29
+  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor.md'), //12.29
+  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-TempAndHumi_Sensor-SHT31.md'), //12.29
+  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-Temperature-Humidity-Sensor-DH20.md'), //12.29
+  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-TemperatureAndHumidity_Sensor.md'), //12.29
+  path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-Temperature_and_Humidity_Sensor_Pro.md'), //12.29
+  path.join(docsDirectory, 'Top_Brand', 'Raspberry_Pi', 'Pi_HAT', 'Grove_Base_Hat_for_Raspberry_Pi.md'), //12.29
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor', 'SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction.md'), //12.29
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Make_DIY_BSP_for_Jetson.md'), //1.4
+  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'R1225_introduction.md'), //1.4
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_A1102', 'SettingAI_With_A1102.md'), //12.31
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Wireless_Connection', 'XIAO_ESP32C5_WiFi_Usage.md'), //12.30
+  path.join(docsDirectory, 'Sensor', 'ePaper', 'epaper_driver_board_main_page.md'), //12.21
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

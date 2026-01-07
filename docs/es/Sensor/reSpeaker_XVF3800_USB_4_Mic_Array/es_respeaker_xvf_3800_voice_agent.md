@@ -56,8 +56,6 @@ Asegúrate de que el Array de Micrófonos USB ReSpeaker XVF3800 esté actualizad
 
 Este paso asegura entrada de audio USB estable y compatibilidad con pipelines de procesamiento de voz posteriores.
 
----
-
 #### NVIDIA Jetson AGX Orin – Configuración Inicial
 
 Si tu Jetson AGX Orin aún no está configurado, flashéalo con la versión apropiada de JetPack.
@@ -73,8 +71,6 @@ sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
----
-
 ### Configuración del Entorno CUDA
 
 #### Verificar la Versión de CUDA Instalada
@@ -86,8 +82,6 @@ ls /usr/local
 ```
 
 Deberías ver una carpeta como `cuda`, `cuda-12.x`, o similar.
-
----
 
 #### Agregar Rutas de CUDA Permanentemente
 
@@ -111,8 +105,6 @@ Aplica los cambios:
 source ~/.bashrc
 ```
 
----
-
 #### Verificar la Instalación de CUDA
 
 Confirma que CUDA esté correctamente instalado y accesible:
@@ -122,8 +114,6 @@ nvcc --version
 ```
 
 Si se muestra la versión de CUDA, el soporte de GPU está listo.
-
----
 
 ### Instalar Whisper con Soporte de GPU
 
@@ -141,8 +131,6 @@ Instala las dependencias requeridas:
 sudo apt-get install libsdl2-dev
 ```
 
----
-
 #### Construir Whisper con CUDA Habilitado
 
 Desde el directorio `whisper.cpp`, ejecuta:
@@ -153,8 +141,6 @@ cmake --build build -j --config Release
 ```
 
 Esto compila Whisper con aceleración de GPU y soporte SDL.
-
----
 
 #### Descargar el Modelo de Whisper
 
@@ -169,8 +155,6 @@ Coloca el modelo descargado dentro del directorio `models/`:
 ```bash
 whisper.cpp/models/
 ```
-
----
 
 #### Ejecutar el Servidor de Whisper
 
@@ -187,8 +171,6 @@ cd whisper.cpp
 
 Esto lanza un servidor de speech-to-text en tiempo real accesible a través de la red.
 
----
-
 ### Instalar Ollama para Inferencia de LLM Local
 
 Ollama oficialmente soporta dispositivos NVIDIA Jetson y proporciona ejecución de LLM local acelerada por CUDA.
@@ -204,8 +186,6 @@ Ejecuta el modelo Gemma 3:
 ```bash
 ollama run gemma3:4b
 ```
-
----
 
 ## Asistente de IA de Voz Inteligente – Guía de Inicio Rápido
 
@@ -238,8 +218,6 @@ Asegúrate de que Python y las dependencias del sistema requeridas estén instal
 pip install -r requirements.txt
 ```
 
----
-
 #### Descargar un Modelo de Text-to-Speech (TTS)
 
 Este proyecto usa modelos **Piper TTS**. A continuación se muestra un ejemplo usando una voz masculina en inglés (Amy):
@@ -255,8 +233,6 @@ wget -O models/en_US-amy-low.onnx.json \
 
 Puedes reemplazar esto con cualquier modelo de voz Piper compatible según sea necesario.
 
----
-
 #### Descargar Modelo de Embedding (Configuración Única)
 
 El modelo de embedding es requerido para construir la base de datos vectorial usada por el pipeline RAG.
@@ -266,8 +242,6 @@ python download_sentence_tf.py
 ```
 
 Este paso solo necesita ejecutarse una vez.
-
----
 
 #### Construir la Base de Datos Vectorial
 
@@ -279,8 +253,6 @@ python test_scripts/rebuild_vector.py
 
 Este proceso indexa tus documentos y los prepara para búsqueda semántica rápida.
 
----
-
 #### Ejecutar la Aplicación
 
 Inicia el Asistente de IA de Voz Inteligente:
@@ -290,8 +262,6 @@ python app.py
 ```
 
 Una vez en funcionamiento, el sistema escuchará la palabra de activación y responderá a consultas de voz en tiempo real.
-
----
 
 ## Referencias
 

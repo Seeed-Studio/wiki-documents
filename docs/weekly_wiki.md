@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/22/2025
+  date: 01/05/2026
   author: Frank
 ---
 
@@ -17,79 +17,65 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 22nd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is January 5th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/)
+### [Semtech LR2021 LoRa Plus™ Evaluation Kit](https://wiki.seeedstudio.com/semtech_lr2021_evk_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This document introduces the getting-started process for the Seeed Studio XIAO ESP32-C5, including hardware overview, development environment setup, board configuration, and basic example uploads. It also covers power options and fundamental features, providing users with a straightforward reference for initial development with the XIAO ESP32-C5.
-
-</div>
-
-### [XIAO ESP32C5 ESP-Mesh Audio](https://wiki.seeedstudio.com/xiao_esp32c5_esp-mesh_audio/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Semtech_LR2021_EVK/image/2-100039980-LR2021-LoRa-Plus-Evaluation-kit-868Mhz-EU-V2.0.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document demonstrates how to use the Seeed Studio XIAO ESP32-C5 to implement audio transmission over an ESP-Mesh network on the 5 GHz Wi-Fi band. It explains setting up a mesh scenario with the XIAO ESP32-C5 as a root node and a computer as a child node, shows an Arduino example for receiving UDP audio data, and includes a Python script to send simulated audio packets to the board.
+The **Semtech LR2021 LoRa Plus Evaluation Kit** features a modular design that seamlessly integrates the powerful **Seeed Studio XIAO nRF54L15 Core Board** with the **LoRa Plus Expansion Board**. This compact and robust hardware platform is specifically engineered for evaluating full-scenario ground-to-satellite communication. Its compatibility with numerous mainstream IoT protocols ensures it meets development requirements across diverse application scenarios.
 
 </div>
 
-### [Connecting XIAO ESP32-C5 to Home Assistant](https://wiki.seeedstudio.com/xiao_esp32c5_homeassistant/)
+### [YOLOv11 for Speed Estimation and Loitering Detection](https://wiki.seeedstudio.com/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/S_HA_12.png" alt="pir" width={800} height="auto" /></p>
+<div class="video-container">
+  <iframe width="800" height="400" src="https://www.youtube.com/embed/cscCVUAidGo" title="YOLOv11n on Raspberry Pi reComputer for Loitering Detection and Speed Estimation (Hailo-8)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki tutorial will demonstrate how to connect the Seeed Studio XIAO ESP32-C5 to Home Assistant, as well as how to control devices or transmit data after connecting Grove modules to the XIAO ESP32-C5.
+This wiki is a comprehensive real-time object detection, tracking, and speed estimation system optimized for Hailo AI accelerators use yolov11. This project enables efficient detection of objects (with focus on persons and vehicles) with simultaneous tracking and speed calculation capabilities.
 
 </div>
 
-### [Connect IoT Button V2 to Home Assistant via Seeed HA Discovery](https://wiki.seeedstudio.com/iot_button_v2_ha_discovery/)
+### [Pin Multiplexing with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_pin_multiplexing/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Button_HA_Discovery/1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project will walk you through three main phases: flashing the firmware to your IoT Button V2 using a web-based flasher, installing the Seeed HA Discovery integration via HACS (Home Assistant Community Store), and discovering your button in Home Assistant for smart home automation.
+The Seeed Studio XIAO ESP32-C5 is a powerful and versatile development board that features a variety of peripheral interfaces and GPIO pins. These pins can be used for various purposes, such as communicating with other devices, reading analog sensors, controlling LEDs, and more. In this tutorial, we will guide you on how to use the multiplexed pins of the XIAO ESP32-C5.
 
 </div>
 
-### [Real-Time Heat Map Integration with Grafana Using reCamera](https://wiki.seeedstudio.com/integration_of_real-time_heat_map_with_grafana_data_dashboard/)
+### [AI Parking Management Demo with reCamera](https://wiki.seeedstudio.com/ai_parking_slot_monitoring_demo_with_recamera/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/headmap.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/test6.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This project conducts target detection using the YOLO11n model built into reCamera. It performs fuzzy processing on personnel targets and displays a heat map effect. All of this is handled locally within reCamera! And reCamera will send the detected data to the locally running Influxdb database. Then, Grafana reads the data from the Influxdb database to display real-time data dashboards.
+This project provides an out-of-the-box demo for parking management scenarios such as commercial parking lots, residential garages, industrial parks, and campuses. It detects the occupancy status of each parking slot from camera views, applies stabilization to reduce visual jitter and short-term fluctuations, automatically summarizes parking availability, and visualizes the results directly on the preview interface for quick verification and demonstration.
 
 </div>
 
-### [Deploying an Offline Smart Voice Assistant End-to-End](https://wiki.seeedstudio.com/respeaker_voice_assistant/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+### [Creating a Custom BSP Package from Jetson Development Environment](https://wiki.seeedstudio.com/make_diy_bsp_for_jetson/)
 
 <div style={{ textAlign: "justify" }}>
 
-This project demonstrates a fully local smart voice assistant designed for smart offices and smart spaces. It uses the ReSpeaker XVF3800 microphone array for high-quality voice capture, combined with on-device speech-to-text (STT) for accurate transcription. A local large language model (LLM) processes user queries intelligently without relying on the cloud, ensuring privacy and low latency. Text-to-speech (TTS) generates natural voice responses, enabling real-time interaction. The system is ideal for environments such as offices, malls, kiosks, and meeting rooms where secure, offline voice control is essential.
+This wiki guide demonstrates how to clone a complete development environment from an existing Jetson device and create a flashable BSP (Board Support Package) that can be used to replicate the same environment on other Jetson devices. The BSP created using this method enables complete environment cloning when flashed to other Jetson devices. This guide uses JetPack 6.2 as an example.
 
 </div>
 
-<!-- ## Existing Wiki Updated
+## Existing Wiki Updated
 
-### [How to establish communication between Jetson and EtherCAT devices](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/)
+### [Deploying AI Models on SenseCAP A1102 Using SenseCraft AI](https://wiki.seeedstudio.com/deploy_ai_with_a1102/)
 
-We have added the [Controlling an EtherCAT Motor on Jetson (MyActuator X4)](https://wiki.seeedstudio.com/how_to_establish_the_ethercat_on_jetson/#5-example--controlling-an-ethercat-motor-on-jetson-myactuator-x4) example.
-
-### [reComputer R1000 Getting Started](https://wiki.seeedstudio.com/recomputer_r/)
-
-We have added the [Connect to 4G Module by QMI Mode](https://wiki.seeedstudio.com/recomputer_r/#connect-to-4g-module-by-qmi-mode) example. -->
+We have added a [Custom AI Model Deploying Process](https://wiki.seeedstudio.com/deploy_ai_with_a1102/#custom-ai-model-deploying-process).
 
 ## The Efforts of Contributor
 
@@ -204,5 +190,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.12.01st](/Seeed_Elderly/weekly_wiki/2025/wiki251201)
 - [weekly wiki on 2025.12.08th](/Seeed_Elderly/weekly_wiki/2025/wiki251208)
 - [weekly wiki on 2025.12.15th](/Seeed_Elderly/weekly_wiki/2025/wiki251215)
+- [weekly wiki on 2025.12.22nd](/Seeed_Elderly/weekly_wiki/2025/wiki251222)
+- [weekly wiki on 2025.12.29th](/Seeed_Elderly/weekly_wiki/2025/wiki251229)
 
 </details>

@@ -12,6 +12,12 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)
 
+:::important 
+This product is now End of Life (EOL).
+If you are planning to purchase or start a new project, we strongly recommend using [**XVF3000**](https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/), the newer and supported alternative.
+It is no longer manufactured or actively maintained.
+:::
+
 An out-of-the-box voice pick-up device is the voice of the customer.
 
 During the past year, [Respeaker Mic Array V2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2-0.html)  has been sold out for more than 10K units in the format of the development board. Customers keep requesting a complete device with an enclosure, which is challenging for them to design it, considering the acoustic principles.
