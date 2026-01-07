@@ -3,7 +3,7 @@ description: 基于 MicroPython 的 Seeed Studio XIAO ESP32-S3 (Sense) 实时 GP
 title: Seeed Studio XIAO ESP32-S3 (Sense) GPIO 查看器
 keywords:
 - GPIO Viewer
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_10.png
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_10.webp
 slug: /cn/XIAO_ESP32S3_GPIO_Viewer
 last_update:
   date: 01/06/2026
@@ -162,7 +162,7 @@ print("Hello from XIAO!")
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_6.png" style={{width:800, height:'auto'}}/></div>
 
-4. 在您的计算机上，打开一个**网络浏览器**并输入该 IP（例如 http://192.168.6.80:8080）。
+4. 在您的计算机上，打开一个**网络浏览器**并输入该 IP（例如 http://192.168.6.80:8080 ）。
 5. 您将看到显示引脚状态的**实时 GPIO 仪表板**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_8.png" style={{width:800, height:'auto'}}/></div>

@@ -3,7 +3,7 @@ description: Seeed Studio XIAO ESP32-S3 (Sense) 用の MicroPython ベースの�
 title: Seeed Studio XIAO ESP32-S3 (Sense) GPIO ビューア
 keywords:
 - GPIO Viewer
-image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_10.png
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_10.webp
 slug: /ja/XIAO_ESP32S3_GPIO_Viewer
 last_update:
   date: 01/06/2026
@@ -162,7 +162,7 @@ Thonny で：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_6.png" style={{width:800, height:'auto'}}/></div>
 
-4. コンピューターで **Web ブラウザ** を開き、その IP を入力します（例：http://192.168.6.80:8080）。
+4. コンピューターで **Web ブラウザ** を開き、その IP を入力します（例：http://192.168.6.80:8080 ）。
 5. ピン状態を表示する **リアルタイム GPIO ダッシュボード** が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_8.png" style={{width:800, height:'auto'}}/></div>
