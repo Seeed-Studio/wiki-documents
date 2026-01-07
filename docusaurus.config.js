@@ -706,7 +706,7 @@ module.exports = (async () => {
         },
         contextualSearch: true,
         typesense: {
-          typesenseCollectionName: 'wiki_platform_1760422701',
+          typesenseCollectionName: 'wiki_platform_test_1767765204',
           typesenseServerConfig: {
             nodes: [
               {
@@ -714,7 +714,7 @@ module.exports = (async () => {
                 protocol: 'https',
               },
             ],
-            apiKey: 'YnYgTcnP0OsCToBc4QzqzSq3RXjx7sqE',
+            apiKey: 'z1DHV8drOZizrn9TSlf0U9QgNENgBxGR',
           },
           typesenseSearchParameters: {
             query_by: 'hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
@@ -729,7 +729,7 @@ module.exports = (async () => {
                 ...searchParameters,
                 query_by: 'sku_tag',
                 query: inputString,
-                filter_by: 'doc_type_tag:=gettingstarted && !doc_type_tag:=project',
+                // filter_by: 'doc_type_tag:=gettingstarted && !doc_type_tag:=project',
               };
             }
             return searchParameters;
