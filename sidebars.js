@@ -5930,6 +5930,13 @@ const sidebars = {
                 'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/cn_Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: '与 LoRaWAN 网络服务器集成',
+              items: [
+                'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/cn_Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
@@ -11018,6 +11025,13 @@ const sidebars = {
                 'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/es_Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: 'Integrado con el servidor de red LoRaWAN',
+              items: [
+                'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
@@ -16107,6 +16121,13 @@ const sidebars = {
                 'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/ja_Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: 'LoRaWAN ネットワークサーバーとの統合',
+              items: [
+                'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/ja_Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {

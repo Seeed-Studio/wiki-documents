@@ -15,7 +15,7 @@ last_update:
   author: Dayu
 ---
 
-本 wiki 指南演示如何从现有 Jetson 设备克隆完整的开发环境，并创建可刷写的 BSP（板级支持包），该 BSP 可用于在其他 Jetson 设备上复制相同的环境。使用此方法创建的 BSP 在刷写到其他 Jetson 设备时能够实现完整的环境克隆。
+本 wiki 指南演示了如何从现有 Jetson 设备克隆完整的开发环境，并创建可刷写的 BSP（板级支持包），该 BSP 可用于在其他 Jetson 设备上复制相同的环境。使用此方法创建的 BSP 在刷写到其他 Jetson 设备时能够实现完整的环境克隆。
 
 本指南以 JetPack 6.2 为例。
 
@@ -42,13 +42,17 @@ reComputer Classic 系列的散热不足以支持 MAXN 超级模式。如果您�
     </tr>
   </thead>
   <tbody>
+      <tr>
+      <td>6.0</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDNJYXWuLpRTL-8U39aMd4UAcrfcWTjtkSjCsJ3ZisTFck?e=s7PNxX">下载</a></td>
+    </tr>
     <tr>
       <td>6.2</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDPKrVl7UDaTYXmxi1CoTu2AcsHUPKLqNw_olmvlPBODqQ?e=gWuNzv">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA9G3wk_0LMQ65sJpp7_HQYAf1ShPRNi0WRSFGWNU3_XN8?e=uQFpeH">下载</a></td>
     </tr>
     <tr>
       <td>6.2.1</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB3JLwYRpS8SqoqjWuXJmmmAW56Nvpdn8YnbYLW7g5_FHM?e=Gqe1XR">下载</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBqETUyZgfSSrL0w7OEp3q-AbTyZVWbh9l5utvtQPsfpZ0?e=T3TiLg">下载</a></td>
     </tr>
   </tbody>
 </table>
@@ -64,7 +68,7 @@ sudo apt-get install -y \
   libxml2-utils qemu-user-static
 ```
 
-解压下载的包并使用以下命令在您的 PC 终端中生成必要的内容：
+解压下载的包，并在您的 PC 终端中使用以下命令生成必要的内容：
 
 ```bash
 sudo tar xpf xxx.tar.gz
@@ -113,7 +117,7 @@ cd Linux_for_Tegra/source
 确保您的 PC 有足够的磁盘空间。BSP 大小通常需要大约两倍于您的 Jetson 开发环境所使用的存储空间。
 :::
 
-返回到 PC 上的 `Linux_for_Tegra/` 目录并执行以下命令从 Jetson 设备复制完整的开发环境：
+在您的 PC 上导航回 `Linux_for_Tegra/` 目录，并执行以下命令从 Jetson 设备复制完整的开发环境：
 
 ```bash
 sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b -c <board-name>
@@ -137,7 +141,7 @@ sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b -c recomputer-or
 - recomputer-orin-robotics-j401
 - recomputer-orin-super-j401
 
-将克隆的内容打包成可刷写的 BSP（备份设备在此过程中必须保持恢复模式）：
+将克隆的内容打包成可刷写的 BSP（在此过程中备份设备必须保持在恢复模式）：
 
 ```bash
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --use-backup-image --no-flash --network usb0 --massflash 5 <board-name> internal
@@ -154,7 +158,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --use-backup-image --no-flash --ne
 
 `mfi_xxxxx.tar.gz` 文件是可刷写的 BSP。解压后，它会创建 `mfi_xxxxx` 目录。
 
-**（可选）** 如果您需要生成适用于工厂生产的 QSPI 闪存格式 BSP，请按如下方式修改 BSP 创建参数（备份设备在此过程中必须保持恢复模式）：
+**（可选）** 如果您需要生成适用于工厂生产的 QSPI 闪存格式 BSP，请按如下方式修改 BSP 创建参数（在此过程中备份设备必须保持在恢复模式）：
 
 ```bash
 sudo BOARDID=$BOARDID BOARDSKU=$BOARDSKU FAB=$FAB BOARDREV=$BOARDREV CHIP_SKU=$CHIP_SKU ./tools/kernel_flash/l4t_initrd_flash.sh \
@@ -171,7 +175,7 @@ sudo BOARDID=$BOARDID BOARDSKU=$BOARDSKU FAB=$FAB BOARDREV=$BOARDREV CHIP_SKU=$C
 
 ## 3. 刷写和验证
 
-从前面的步骤获得 tar.gz BSP 包后，您可以使用单个命令解压并将其刷写到其他目标 Jetson 设备，实现完整的开发环境克隆。**此 BSP 与环境无关，可以复制到其他 PC 上使用。**
+从前面的步骤获得 tar.gz BSP 包后，您可以使用单个命令将其解压并刷写到其他目标 Jetson 设备，实现完整的开发环境克隆。**此 BSP 与环境无关，可以复制到其他 PC 上使用。**
 
 严格按照以下命令格式解压包：
 
