@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-10A_DC_Current_Sensor-ACS725
+sku: 101020616
 last_update:
   date: 05/15/2025
   author: jianjing Huang

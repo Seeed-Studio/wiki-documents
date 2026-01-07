@@ -5,6 +5,7 @@ keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch
+sku: 104990263,104990262
 last_update:
   date: 05/15/2025
   author: jianjing Huang

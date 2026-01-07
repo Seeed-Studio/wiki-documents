@@ -7,6 +7,7 @@ keywords:
   - GNSS
 image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg
 slug: /get_start_l76k_gnss
+sku: 109100021
 sidebar_position: 0
 last_update:
   date: 2024-10-14

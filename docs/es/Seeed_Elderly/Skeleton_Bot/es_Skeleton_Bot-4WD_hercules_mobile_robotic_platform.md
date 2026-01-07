@@ -5,6 +5,7 @@ keywords:
 - Skeleton_Bot-4WD_hercules_mobile_robotic_platform
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Skeleton_Bot-4WD_hercules_mobile_robotic_platform
+sku: 110010000
 last_update:
   date: 01/20/2023
   author: Matthew

@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Loudness_Sensor/
 slug: /ja/Grove-Loudness_Sensor
+sku: 101020063
 last_update:
   date: 05/15/2025
   author: gunengyu

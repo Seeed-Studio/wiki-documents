@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-SHT4x
+sku: 101021033,101021032
 last_update:
   date: 1/4/2022
   author: jianjing Huang

@@ -3,6 +3,7 @@ description: Introducción al Kit de Prototipo de Sensores
 title: Introducción al Kit de Prototipo de Sensores
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/K1100-Getting-Started
+sku: 110991748
 last_update:
   date: 11/30/2022
   author: Citric

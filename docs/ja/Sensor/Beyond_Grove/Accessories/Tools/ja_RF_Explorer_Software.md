@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/RF_Explorer_Software/
 slug: /ja/RF_Explorer_Software
+sku: 109990009, 109990011, 109990010
 last_update:
   date: 05/15/2025
   author: gunengyu

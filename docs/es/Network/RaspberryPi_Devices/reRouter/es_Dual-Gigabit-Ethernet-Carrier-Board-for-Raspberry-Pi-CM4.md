@@ -5,6 +5,7 @@ keywords:
 - Device
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4
+sku: 102110497,110110090,110110110
 last_update:
   date: 1/10/2022
   author: jianjing Huang

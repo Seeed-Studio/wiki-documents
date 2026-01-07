@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bluetooth_V4.0_HM_11_BLE_Module
+sku: 317030001
 last_update:
   date: 1/13/2023
   author: shuxu hu

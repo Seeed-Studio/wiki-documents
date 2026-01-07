@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/G1-8_Water_Flow_Sensor/
 slug: /G1-8_Water_Flow_Sensor
+sku: 314150001
 last_update:
   date: 02/03/2022
   author: gunengyu

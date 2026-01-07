@@ -3,6 +3,7 @@ description: This article describes how to get the reTerminal E Series ePaper Di
 title: reTerminal E Series ePaper Display Work with ESPHome for Home Assistant
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
+sku: 100017057,100073581
 sidebar_position: 2
 last_update:
   date: 07/21/2025

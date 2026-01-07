@@ -4,6 +4,7 @@ description: |
   A smart IR remote  from Seeed Studio, designed to integrate traditional appliances like TVs and air conditioners into your Home Assistant smart home ecosystem.
 image: https://files.seeedstudio.com/wiki/XIAO_IR_MATE/XIAO-Smart-IR-Mate.webp
 slug: /XIAO_IR_Mate_Smart_IR_Remote
+sku: 109990586
 keywords:
   - XIAO
   - Home Assistant

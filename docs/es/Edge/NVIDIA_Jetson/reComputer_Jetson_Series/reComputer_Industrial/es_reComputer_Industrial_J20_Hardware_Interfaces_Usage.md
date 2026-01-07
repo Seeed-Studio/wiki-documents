@@ -5,6 +5,7 @@ tags:
   - reComputer Industrial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reComputer_Industrial_J20_Hardware_Interfaces_Usage
+sku: 114993114
 last_update:
   date: 05/16/2023
   author: Lakshantha

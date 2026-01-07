@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Thumb_Joystick
+sku: 101020028
 last_update:
   date: 2/22/2023
   author: jianjing Huang

@@ -6,6 +6,7 @@ keywords:
   - reTerminal-DM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reterminal-dm
+sku: 114070201,114070221,E23010420,114070262
 last_update:
   date: 12/15/2025
   author: David Du
