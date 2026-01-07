@@ -3,6 +3,7 @@ description: センサープロトタイプキットの紹介
 title: センサープロトタイプキットの紹介
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/K1100-Getting-Started
+sku: 110991748
 last_update:
   date: 05/15/2025
   author: Citric

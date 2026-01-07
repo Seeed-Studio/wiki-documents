@@ -5,6 +5,7 @@ keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11
+sku: 102110464
 last_update:
   date: 1/12/2023
   author: jianjing Huang

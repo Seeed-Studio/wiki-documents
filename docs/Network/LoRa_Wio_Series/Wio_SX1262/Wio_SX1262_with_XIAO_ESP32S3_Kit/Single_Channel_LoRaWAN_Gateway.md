@@ -4,6 +4,7 @@ title: Single Channel LoRaWAN Gateway
 keywords: ["XIAO ESP32S3", "LoRa", "Wio SX1262", "Single Channel Gateway"]
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /wio_sx1262_xiao_esp32s3_for_single_channel_gateway
+sku: 102010611
 sidebar_position: 3
 last_update:
   date: 10/09/2024

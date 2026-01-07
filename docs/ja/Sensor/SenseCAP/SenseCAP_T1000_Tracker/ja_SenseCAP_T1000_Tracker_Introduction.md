@@ -5,6 +5,7 @@ keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_T1000_tracker/Introduction
+sku: 114993073, 114993169, 114993168, 113991194, 114993207, 114993208, 114993106, E2025081201, E2025081501
 last_update:
   date: 10/11/2025
   author: Twelve

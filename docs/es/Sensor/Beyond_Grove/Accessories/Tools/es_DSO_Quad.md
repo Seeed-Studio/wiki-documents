@@ -5,6 +5,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/DSO_Quad/
 slug: /es/DSO_Quad
+sku: 109990015, 109990016
 last_update:
   date: 02/03/2022
   author: gunengyu

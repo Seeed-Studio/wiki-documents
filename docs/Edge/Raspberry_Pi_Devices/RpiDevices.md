@@ -13,6 +13,7 @@ keywords:
 - Respberry Pi Original
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /raspberry-pi-devices
+sku: 110110110,110110205,102110919,102110918,113060086,102111005,102111098
 last_update:
   date: 11/7/2025
   author: Nolan Chen

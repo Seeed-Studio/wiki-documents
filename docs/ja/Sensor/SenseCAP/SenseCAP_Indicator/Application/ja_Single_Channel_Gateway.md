@@ -8,6 +8,7 @@ keywords:
 - Single Channel Gateway
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/61.webp
 slug: /ja/SenseCAP_Indicator_Single_Channel_Gateway
+sku: 114993532
 toc_max_heading_level: 4
 sidebar_position: 5
 last_update:

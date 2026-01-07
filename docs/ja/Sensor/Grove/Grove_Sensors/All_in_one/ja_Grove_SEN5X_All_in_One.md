@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove_SEN5X_All_in_One
+sku: 101021014,101021013
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -3,6 +3,7 @@ description: The Sensor Prototype Kit Introduction
 title: The Sensor Prototype Kit Introduction
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100-Getting-Started
+sku: 110991748
 last_update:
   date: 11/30/2022
   author: Citric

@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-Shield-for-Wio-Lite/
 slug: /cn/Grove-Shield-for-Wio-Lite
+sku: 103020252
 last_update:
   date: 01/11/2022
   author: gunengyu

@@ -5,6 +5,7 @@ keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove_Beginner_Kit_for_Arduino
+sku: 110020171
 last_update:
   date: 2/14/2023
   author: hushuxu

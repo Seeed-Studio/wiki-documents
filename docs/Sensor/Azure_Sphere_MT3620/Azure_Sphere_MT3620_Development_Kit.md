@@ -5,6 +5,7 @@ keywords:
 - Azure_Sphere_MT3620_Development_Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Azure_Sphere_MT3620_Development_Kit
+sku: 102991100, 102991099, 102991012
 last_update:
   date: 1/12/2023
   author: jianjing Huang

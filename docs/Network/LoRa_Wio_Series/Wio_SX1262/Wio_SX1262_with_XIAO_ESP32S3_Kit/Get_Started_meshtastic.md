@@ -3,6 +3,7 @@ description: Meshtastic based on Wio-SX1262 with XIAO esp32s3 module
 title: Get Started for Meshtastic
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /wio_sx1262_xiao_esp32s3_for_meshtastic
+sku: 102010611,113110064
 sidebar_position: 2
 last_update:
   date: 09/30/2024

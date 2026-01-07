@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-RGB_LED_Stick-10-WS2813_Mini
+sku: 104020131,104020172,104020170
 last_update:
   date: 1/7/2023
   author: shuxu hu

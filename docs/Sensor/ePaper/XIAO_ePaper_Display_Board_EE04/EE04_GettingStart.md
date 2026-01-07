@@ -6,6 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
 sidebar_position: 1
 slug: /epaper_ee04
+sku: 104990861,100075670,100064541,E25102101
 last_update:
   date: 09/25/2025
   author: Jason

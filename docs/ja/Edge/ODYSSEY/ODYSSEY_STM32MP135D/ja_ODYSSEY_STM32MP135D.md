@@ -3,6 +3,7 @@ description: ODYSSEY, STM32MP135D
 title: ODYSSEY – STM32MP135D の使い方
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/ODYSSEY-STM32MP135D
+sku: 102110701,102110859
 last_update:
   date: 05/15/2025
   author: Xogium

@@ -5,6 +5,7 @@ keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone-Green-Gateway
+sku: 102110381
 last_update:
   date: 1/10/2023
   author: jianjing Huang

@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/Wireless Sensor Node - Solar Kit/
 slug: /Wireless_Sensor_Node-Solar_Kit
+sku: 110060005
 last_update:
   date: 02/03/2022
   author: gunengyu
