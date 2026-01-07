@@ -3841,6 +3841,7 @@ const sidebars = {
               label: 'Multimodal AI',
               items: [
                 // Models
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Local_Voice_LLM_for_Reachy_Mini',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Speech_vlm',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/use_vlm_guard_warehouse',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Local_Chatbot_reComputer',
@@ -6630,6 +6631,7 @@ const sidebars = {
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_ESPHome',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_SSCMA',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_Voice_Pomodoro',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -9029,6 +9031,7 @@ const sidebars = {
               label: '多模态 AI',
               items: [
                 // Models
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Voice_LLM_for_Reachy_Mini',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Speech_vlm',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_use_vlm_guard_warehouse',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Chatbot_reComputer',
@@ -11725,6 +11728,7 @@ const sidebars = {
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_ESPHome',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_SSCMA',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_Voice_Pomodoro',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -14124,6 +14128,7 @@ const sidebars = {
               label: 'IA Multimodal',
               items: [
                 // Models
+                'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Voice_LLM_for_Reachy_Mini',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Speech_vlm',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_use_vlm_guard_warehouse',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Chatbot_reComputer',
@@ -16821,6 +16826,7 @@ const sidebars = {
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_ESPHome',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_SSCMA',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_Voice_Pomodoro',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -19220,6 +19226,7 @@ const sidebars = {
               label: 'マルチモーダル AI',
               items: [
                 // Models
+                'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Speech_vlm',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_use_vlm_guard_warehouse',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Chatbot_reComputer',
