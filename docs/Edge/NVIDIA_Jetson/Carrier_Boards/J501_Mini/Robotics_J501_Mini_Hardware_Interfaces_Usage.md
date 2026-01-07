@@ -690,7 +690,7 @@ Create `test_can.sh` to test data transmission and reception between **CAN0** an
 ```bash
 touch test_can.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
 The script code for `test_can.sh` is as follows:
 
@@ -754,7 +754,7 @@ Create `test_canfd.sh` to test data transmission and reception between CAN0 and 
 ```bash
 touch test_canfd.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
 The script code for `test_canfdfd.sh` is as follows:
 
@@ -1332,19 +1332,19 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video0 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video1 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video2 ! \
 'video/x-raw,width=1920,height=1536,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video3 ! \
 'video/x-raw,width=3840,height=2160,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 ```
 
 <div align="center">
