@@ -9031,6 +9031,7 @@ const sidebars = {
               label: '多模态 AI',
               items: [
                 // Models
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Voice_LLM_for_Reachy_Mini',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Speech_vlm',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_use_vlm_guard_warehouse',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Chatbot_reComputer',
@@ -14127,6 +14128,7 @@ const sidebars = {
               label: 'IA Multimodal',
               items: [
                 // Models
+                'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Voice_LLM_for_Reachy_Mini',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Speech_vlm',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_use_vlm_guard_warehouse',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Chatbot_reComputer',
@@ -19224,6 +19226,7 @@ const sidebars = {
               label: 'マルチモーダル AI',
               items: [
                 // Models
+                'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Speech_vlm',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_use_vlm_guard_warehouse',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Chatbot_reComputer',
