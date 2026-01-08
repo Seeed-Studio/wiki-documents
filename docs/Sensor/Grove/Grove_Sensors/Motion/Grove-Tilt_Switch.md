@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Tilt_Switch
+sku: 101020025
 last_update:
   date: 1/6/2023
   author: shuxu hu

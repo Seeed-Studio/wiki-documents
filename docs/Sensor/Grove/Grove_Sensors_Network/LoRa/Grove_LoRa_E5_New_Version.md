@@ -8,6 +8,7 @@ keywords:
 description: Grove LoRa-E5, a powerful and versatile LoRa module by Seeed Studio. Explore its features, datasheets, certifications, and relevant SDKs
 image: https://files.seeedstudio.com/wiki/Grove-Wio-E5/1.jpg
 slug: /Grove_LoRa_E5_New_Version
+sku: 113020091
 last_update:
   date: 07/25/2024
   author: Spencer

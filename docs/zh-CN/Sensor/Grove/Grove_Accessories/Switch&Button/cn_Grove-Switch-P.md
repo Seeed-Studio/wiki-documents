@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-Switch-P
+sku: 101020004
 last_update:
   date: 1/31/2023
   author: jianjing Huang

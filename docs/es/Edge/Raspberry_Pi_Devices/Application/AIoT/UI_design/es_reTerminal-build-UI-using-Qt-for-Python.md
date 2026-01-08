@@ -6,6 +6,7 @@ keywords:
   - reTerminal Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reTerminal-build-UI-using-Qt-for-Python
+sku: 102110638, 110070048
 last_update:
   date: 1/31/2023
   author: jianjing Huang

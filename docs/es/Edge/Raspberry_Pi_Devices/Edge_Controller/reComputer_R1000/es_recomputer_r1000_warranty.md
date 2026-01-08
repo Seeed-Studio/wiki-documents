@@ -6,6 +6,7 @@ keywords:
   - recomputer_r1000
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/recomputer_r1000_warranty
+sku: E24010521, 113991274
 last_update:
   date: 05/13/2024
   author: Parker Hu

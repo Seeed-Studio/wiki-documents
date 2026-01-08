@@ -7,6 +7,7 @@ keywords:
   - Embedded_ML
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal_ML_TFLite
+sku: 102110638, 110070048
 last_update:
   date: 2/1/2023
   author: jianjing Huang

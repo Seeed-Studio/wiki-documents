@@ -6,6 +6,7 @@ keywords:
 - can bus
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/xiao-can-bus-expansion
+sku: 105100001
 last_update:
   date: 6/6/2023
   author: Stephen Lo

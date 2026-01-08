@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-6-Position_DIP_Switch
+sku: 111020043
 last_update:
   date: 05/15/2025
   author: jianjing Huang

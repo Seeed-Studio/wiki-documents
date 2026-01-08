@@ -5,6 +5,7 @@ keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/ReSpeaker-USB-Mic-Array
+sku: 107990193
 last_update:
   date: 1/12/2023
   author: jianjing Huang

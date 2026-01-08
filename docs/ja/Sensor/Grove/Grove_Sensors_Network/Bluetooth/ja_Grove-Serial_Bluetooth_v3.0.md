@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Serial_Bluetooth_v3.0/
 slug: /ja/Grove-Serial_Bluetooth_v3.0
+sku: 113020008
 last_update:
   date: 05/15/2025
   author: gunengyu

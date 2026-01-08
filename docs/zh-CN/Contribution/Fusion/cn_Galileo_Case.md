@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Galileo_Case
+sku: 110990417
 last_update:
   date: 2023/1/13
   author: shuxu hu

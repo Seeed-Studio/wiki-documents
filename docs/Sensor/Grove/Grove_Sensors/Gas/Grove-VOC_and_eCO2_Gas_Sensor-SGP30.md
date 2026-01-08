@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-VOC_and_eCO2_Gas_Sensor-SGP30
+sku: 101020512
 last_update:
   date: 1/4/2023
   author: shuxu hu

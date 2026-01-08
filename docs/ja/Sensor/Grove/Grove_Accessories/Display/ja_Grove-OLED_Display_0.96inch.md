@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-OLED_Display_0.96inch
+sku: 104030008
 last_update:
   date: 12/29/2025
   author: Brandy

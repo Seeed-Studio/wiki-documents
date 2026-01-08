@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/img/main.webp
 slug: /ja/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680
+sku: 101020513
 last_update:
   date: 05/15/2025
   author: Priyanshu Roy

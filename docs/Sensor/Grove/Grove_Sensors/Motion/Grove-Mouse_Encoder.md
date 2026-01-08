@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Mouse_Encoder
+sku: 103020030
 last_update:
   date: 1/7/2023
   author: shuxu hu

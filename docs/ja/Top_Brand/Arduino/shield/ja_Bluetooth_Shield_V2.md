@@ -3,6 +3,7 @@ description: Bluetooth_Shield_V2
 title: Bluetooth Shield V2
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Bluetooth_Shield_V2
+sku: 113030019
 last_update:
   date: 05/15/2025
   author: Eico 

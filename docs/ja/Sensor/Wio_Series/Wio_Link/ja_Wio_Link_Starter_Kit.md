@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio_Link_Starter_Kit/
 slug: /ja/Wio_Link_Starter_Kit
+sku: 110020051
 last_update:
   date: 05/15/2025
   author: gunengyu

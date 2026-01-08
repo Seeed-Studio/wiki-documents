@@ -3,6 +3,7 @@ description: reTerminal上でのNEQTO Engine for Linuxの開始方法
 title: reTerminal上でのNEQTO Engine for Linuxの開始方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/neqto_engine_for_linux_reTerminal
+sku: 110070048
 last_update:
   date: 04/17/2024
   author: Kazuhiro Ozuchi

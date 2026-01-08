@@ -4,6 +4,7 @@ description: |
   XIAO RP2350, a cutting-edge microcontroller from Seeed Studio. It features a dual-core processor, increased SRAM and flash memory, and enhanced connectivity.
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/RP2350-thumbnail.webp
 slug: /getting-started-xiao-rp2350
+sku: 102010550,102010637
 keywords:
   - xiao
   - RP2350

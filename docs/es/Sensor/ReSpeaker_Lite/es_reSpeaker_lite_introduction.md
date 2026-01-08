@@ -5,6 +5,7 @@ keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reSpeaker_usb_v3
+sku: 107990273,E24072601
 last_update:
   date: 6/28/2024
   author: Jessie

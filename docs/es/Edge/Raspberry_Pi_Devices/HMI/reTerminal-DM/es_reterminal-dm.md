@@ -6,9 +6,10 @@ keywords:
   - reTerminal-DM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reterminal-dm
+sku: 114070201,114070221,E23010420,114070262
 last_update:
-  date: 04/23/2023
-  author: Peter Pan
+  date: 12/15/2025
+  author: David Du
 ---
 # Introducción a reTerminal DM
 
@@ -124,7 +125,7 @@ Está equipado con rica escalabilidad y conectividad híbrida, soportando bus CA
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}> </td>
-      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Conector de Audio 3.5mm</td>
+      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Jack de Audio 3.5mm</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Cámara</td>
@@ -171,7 +172,7 @@ Está equipado con rica escalabilidad y conectividad híbrida, soportando bus CA
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>40pin GPIO</td>
-      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Interno</td>
+      <td data-style="height: 18px; width: 63.1933%;" style={{height: 18, width: '63.1933%'}}>Interior</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={2} style={{height: 18, width: '98.6555%'}}><strong>Comunicación Inalámbrica</strong></td>
@@ -395,9 +396,9 @@ El reTerminal DM cuenta con tres indicadores LED que sirven para señalar el est
 Si el LED ACT parpadea en un patrón regular de cuatro parpadeos, no puede encontrar bootcode (start.elf)<br/>
 Si el LED ACT parpadea en un patrón irregular entonces el arranque ha comenzado.<br/>
 Si el LED ACT no parpadea, entonces el código EEPROM podría estar corrupto, intente de nuevo sin nada conectado para asegurarse.<br/>
-Para más detalles por favor revise el foro de Raspberry Pi:<br/>
+Para más detalles por favor consulte el foro de Raspberry Pi:<br/>
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums<br/>
-Para más detalles por favor revise el foro de Raspberry Pi: https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151<br/>
+Para más detalles por favor consulte el foro de Raspberry Pi: https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151<br/>
 :::
 
 Para activar el LED USER por favor use el siguiente comando:
@@ -520,13 +521,13 @@ La lógica negativa utilizada para las entradas y salidas digitales del reTermin
 
 |Entrada Digital Terminal | Señal Detectada CM4 GPIO |
 | ---                     | ---                      |
-| Bajo                    | Alto                     |
-| Alto                    | Bajo                     |
+| Low                     | High                     |
+| High                    | Low                      |
 
 | Salida CM4 GPIO         | Salida Digital Terminal  |
 | ---                     | ---                      |
-| Alto                    | Bajo                     |
-| Bajo                    | Alto                     |
+| High                    | Low                      |
+| Low                     | High                     |
 
 :::
 
@@ -556,9 +557,9 @@ raspi-gpio get 16
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio16-state.png" /></div>
 
-donde el estado actual del `GPIO16` está configurado como `INPUT` y `pulling Down` el nivel actual del pin es `1` lo que significa `Alto` lo que también significa que la Entrada Digital Terminal actual `DI1` es `Bajo` según la tabla anterior
+donde el estado actual del `GPIO16` está configurado como `INPUT` y `pulling Down` el nivel actual del pin es `1` lo que significa `High` lo que también significa que la Entrada Digital Terminal actual `DI1` es `Low` según la tabla anterior
 
-Pongamos una señal `Alto` en el `DI1` conectando el terminal `DI1` al pin `Positivo` de la `fuente de 5V`, luego la `Tierra` de la `fuente de 5V` al `GND_DI`
+Pongamos una señal `High` en el `DI1` conectando el terminal `DI1` al pin `Positive` de la `fuente de 5V`, luego la `Ground` de la `fuente de 5V` al `GND_DI`
 
 ```sh
 raspi-gpio get 16
@@ -566,7 +567,7 @@ raspi-gpio get 16
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio16-state-high.png" /></div>
 
-Donde el nivel actual del pin del `GPIO16` es `0` lo que significa `Bajo` lo que también significa que la Entrada Digital Terminal actual `DI1` es `Alto` según la tabla anterior
+Donde el nivel actual del pin del `GPIO16` es `0` lo que significa `Low` lo que también significa que la Entrada Digital Terminal actual `DI1` es `High` según la tabla anterior
 
 ###### Salida Digital
 
@@ -574,7 +575,7 @@ Aquí hay un esquema que muestra cómo cablear Carga a DO:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/DO.png" /></div>
 
-Para controlar el valor del estado de salida digital, primero necesitamos configurar el estado del pin como `Output` y `pulling Down`:
+Para controlar el valor de estado de la salida digital, primero necesitamos configurar el estado del pin como `Output` y `pulling Down`:
 
 ```sh
 #set current pin state
@@ -587,9 +588,9 @@ raspi-gpio get 24
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio24-state-set.png" /></div>
 
-Donde el `GPIO24` correspondiente a `DO1` está configurado al estado `Output` y `pulling down`, y el nivel del `GPIO24` está configurado como `Alto`
+Donde el `GPIO24` correspondiente a `DO1` está configurado al estado `Output` y `pulling down`, y el nivel `GPIO24` está configurado a `High`
 
-Ahora configuremos el `GPIO24` como `Bajo` lo que significa que la Salida `DO1` se maneja como `Alto`.
+Ahora configuremos el `GPIO24` a `Low` lo que significa que la Salida `DO1` se maneja como `High`.
 
 ```sh
 #set current pin state
@@ -618,7 +619,7 @@ Para probar e interfaz con el RS485, debes preparar un adaptador USB a RS485, y 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/rs485.png" /></div>
 
 :::note
-Por favor nota que el puerto RS485 es `/dev/ttyACM1` o `/dev/ttyCH340USB1` dependiendo de qué SO estés ejecutando.
+Por favor nota que el puerto RS485 es `/dev/ttyACM1` o `/dev/ttyCH340USB1` dependiendo de qué OS estés ejecutando.
 :::
 Por favor usa tu herramienta de comunicación serie favorita en tu computadora host para realizar la prueba a continuación:
 ejecuta el código python en reTerminal DM para probar la conexión serie RS485, donde este código configurará el puerto serie RS485 como sigue
@@ -694,10 +695,10 @@ else:
 El conector de 20 pines del reTerminal DM también incluye una interfaz RS232, que no está aislada. Porque la comunicación RS232 típicamente usa niveles de voltaje CMOS y tiene distancias de comunicación cortas, haciéndola menos susceptible a interferencias electromagnéticas del entorno.
 
 :::note
-Por favor nota que el pin de Tierra necesita conectarse al pin `GD` junto al pin `RX`, asegúrate de que no sea el pin `GS`.
+Por favor nota que el pin Ground necesita conectarse al pin `GD` junto al pin `RX`, asegúrate de que no sea el pin `GS`.
 :::
 
-Aquí está el script de prueba python para enviar datos desde reTerminal DM a la computadora host:
+Aquí está el script python de prueba para enviar datos desde reTerminal DM a la computadora host:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232-serial-send-example.png" /></div>
 
@@ -734,7 +735,7 @@ except KeyboardInterrupt:
 
 ```
 
-Aquí está el script de prueba python para recibir datos en reTerminal DM enviados desde la computadora host,
+Aquí está el script python de prueba para recibir datos en reTerminal DM enviados desde la computadora host,
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232-serial-receive-example.png" /></div>
 
@@ -782,7 +783,7 @@ La interfaz CAN utiliza una fuente de alimentación aislada, lo que significa qu
 :::
 
 Para probar e interfaz con el bus CAN:
-Por favor, conecta el adaptador USB a CAN como se muestra en la imagen a continuación:
+Por favor conecta el adaptador USB a CAN como se muestra en la imagen a continuación:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus-connection.png" /></div>
 
@@ -849,7 +850,7 @@ Hay dos puertos USB 2.0 Tipo-A, a los cuales puedes conectar dispositivos USB co
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/usb-c.png" /></div>
 
-USB Tipo-C es un puerto USB 2.0 utilizado para depuración serie o flasheo de imagen del SO dependiendo de la posición del interruptor de arranque. Para flashear el SO, consulta la [página Wiki de Flasheo de SO](/es/reterminal-dm-flash-OS)
+USB Tipo-C es un puerto USB 2.0 utilizado para depuración serial o flasheo de imagen del SO dependiendo de la posición del interruptor de arranque. Para flashear el SO, consulta la [página Wiki de Flasheo de SO](/es/reterminal-dm-flash-OS)
 
 ### Ranura para Tarjeta SIM
 
@@ -889,7 +890,7 @@ El reTerminal DM cuenta con una interfaz HDMI nativa del CM4, soportando hasta s
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/RJ45.png" /></div>
 
-El reTerminal DM viene con una interfaz Ethernet Gigabit nativa del CM4 que soporta tres velocidades diferentes: 10/100/1000 Mbit/s. Se puede comprar un módulo PoE adicional para habilitar la entrega de energía sobre Ethernet (PoE) a través de esta interfaz, proporcionando energía al reTerminal DM.
+El reTerminal DM viene con una interfaz Ethernet Gigabit nativa del CM4 que soporta tres velocidades diferentes: 10/100/1000 Mbit/s. Se puede comprar un módulo PoE adicional para habilitar la entrega de alimentación por Ethernet (PoE) a través de esta interfaz, proporcionando energía al reTerminal DM.
 
 ### Interfaz Interna
 
@@ -1080,7 +1081,7 @@ El diseño clásico de GPIO de 40 pines de Raspberry Pi se mantiene dentro del r
 
 #### RTC
 
-El reTerminal DM cuenta con un circuito RTC que viene preinstalado con una batería CR2032, permitiéndole mantener la funcionalidad de cronometraje incluso en caso de pérdida de energía.
+El reTerminal DM cuenta con un circuito RTC que viene preinstalado con una batería CR2032, lo que le permite mantener la funcionalidad de cronometraje incluso en caso de pérdida de energía.
 
 Usa el siguiente comando para cambiar el reloj de hardware con el reloj del sistema actual
 
@@ -1204,7 +1205,7 @@ Ten en cuenta que la versión estándar del reTerminal DM no viene con una abert
 
 **Paso 1.** Por favor consulta la guía de [Ensamblaje de Hardware del Módulo 4G EC25](/es/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) para instalar el `Módulo 4G EC25` en la `ranura PCIe 4G/LTE` donde deberías ver la serigrafía *`4G/LTE`*, y por favor también inserta la tarjeta sim habilitada para 4G en la [ranura de tarjeta sim](/es/reterminal-dm/#sim-card-slot), antes de encender el sistema.
 
-**Paso 2.** Verifica si EC25-EUX es detectado usando ```lsusb```
+**Paso 2.** Verifica si el EC25-EUX es detectado usando ```lsusb```
 
 ```
 lsusb
@@ -1258,7 +1259,7 @@ También puedes usar el comando `ifconfig` para consultar el estado de red del r
 ### Módulo LoraWAN®
 
 :::note
-reTerminal DM soporta tanto la versión USB como SPI del Módulo LoraWAN® WM1302, sin embargo la versión USB necesitará utilizar el Mini PCIe diseñado para el Módulo 4G, lo que significa que si quieres usar tanto el Módulo 4G como el Módulo LoraWAN® por favor elige la versión SPI del Módulo LoraWAN® WM1302.
+reTerminal DM soporta tanto la versión USB como SPI del Módulo WM1302 LoraWAN®, sin embargo la versión USB necesitará utilizar el Mini PCIe diseñado para el Módulo 4G, lo que significa que si quieres usar tanto el Módulo 4G como el Módulo LoraWAN®, por favor elige la versión SPI del Módulo WM1302 LoraWAN®.
 :::
 
 <!-- Code -->
@@ -1315,7 +1316,7 @@ cd ~/sx1302_hal/packet_forwarder
 vim reset_lgw.sh
 ```
 
-Modifique el script reset_lgw.sh con un editor de texto como sigue:
+Modifique el script reset_lgw.sh con el editor de texto como sigue:
 
 ```sh
 #!/bin/bash
@@ -1415,7 +1416,7 @@ cd ~/sx1302_hal/packet_forwarder
 
 
 </TabItem>
-<TabItem value="WM1302 USB Module" label="Módulo USB WM1302">
+<TabItem value="WM1302 USB Module" label="Módulo WM1302 USB">
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114992991-wio-wm1302-lorawan-gateway-module-_spi_---us915-m---first.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -1480,7 +1481,7 @@ sudo dmesg | grep 1-1.4.1
 
 así que en mi caso el dispositivo USB es `ttyACM2`
 
-Así que modifiquemos el dispositivo USB en la configuración `global_conf.json.sx1250.US915.USB` con el comando sed `sed -i 's/search_string/replacement_string/g' filename`, así que por favor siga el patrón como `sed -i 's/ttyACM0/el_resultado_de_arriba' global_conf.json.sx1250.frecuencia_de_su_módulo.USB`, tenga en cuenta que por favor reemplace `el_resultado_de_arriba` y `frecuencia_de_su_módulo` para su propia aplicación:
+Así que modifiquemos el dispositivo USB en la configuración `global_conf.json.sx1250.US915.USB` con el comando sed `sed -i 's/search_string/replacement_string/g' filename`, así que por favor siga el patrón como `sed -i 's/ttyACM0/the_result_from_above' global_conf.json.sx1250.frequency_of_your_module.USB`, tenga en cuenta que por favor reemplace `the_result_from_above` y `frequency_of_your_module` para su propia aplicación:
 
 por ejemplo en mi caso:
 
@@ -1521,7 +1522,7 @@ cd ~/sx1302_hal/packet_forwarder
 El reTerminal DM cuenta con una interfaz PCIe que se deriva del CM4, que soporta PCIe 2.0 y teóricamente proporciona una velocidad máxima de transmisión de 5Gbps. Esto permite la expansión de varias interfaces de alta velocidad como Gigabit Ethernet y NVMe SSD. Hemos desarrollado múltiples tarjetas de expansión basadas en interfaces PCIe, USB e I2C para satisfacer diferentes requisitos de escenarios. Esto también facilita las necesidades de personalización.
 
 :::note
-Por favor tenga en cuenta que el producto estándar no incluye una tarjeta de expansión PCIe por defecto. Seeed puede proporcionar servicios de ensamblaje para pedidos de personalización en lotes.
+Por favor tenga en cuenta que el producto estándar no incluye una tarjeta de expansión PCIe por defecto. Seeed puede proporcionar servicios de ensamblaje para pedidos de personalización por lotes.
 :::
 
 ### POE
@@ -1529,7 +1530,7 @@ Por favor tenga en cuenta que el producto estándar no incluye una tarjeta de ex
 El reTerminal DM puede soportar el estándar IEEE 802.3af PD (Dispositivos Alimentados) agregando un módulo de alimentación PoE.
 
 :::note
-El reTerminal DM soporta alimentación PoE, pero el producto estándar no incluye un módulo PoE por defecto. Seeed puede proporcionar servicios de soldadura y ensamblaje PoE para pedidos de personalización en lotes. Sin embargo, si un cliente está probando una muestra, necesitará soldar y ensamblar el módulo PoE por sí mismo.
+El reTerminal DM soporta alimentación PoE, pero el producto estándar no incluye un módulo PoE por defecto. Seeed puede proporcionar servicios de soldadura y ensamblaje PoE para pedidos de personalización por lotes. Sin embargo, si un cliente está probando una muestra, necesitará soldar y ensamblar el módulo PoE por sí mismo.
 :::
 
 ### SSD
@@ -1544,7 +1545,7 @@ La versión estándar del reTerminal DM no soporta SSD y requiere la compra de u
 
 - [Hoja de Datos del reTerminal DM](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminalDM_datasheet.pdf)
 - [Manual de Usuario del reTerminal DM](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal-DM-User-Manual.pdf)
-- [Diseño Esquemático del reTerminal DM y Diseño PCB y Archivos Gerber](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal_DM_schematic_design_files.zip)
+- [Diseño Esquemático y Diseño PCB y Archivos Gerber del reTerminal DM](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal_DM_schematic_design_files.zip)
 - [Archivo de Diseño Estructural del reTerminal DM.stp](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal-DM-Structural-Design-File.stp)
 
 ## Soporte Técnico y Discusión de Productos

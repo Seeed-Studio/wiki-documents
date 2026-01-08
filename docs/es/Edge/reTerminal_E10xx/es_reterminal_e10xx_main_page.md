@@ -3,6 +3,7 @@ description: Este artículo es una página de colección para la serie reTermina
 title: Serie reTerminal E
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /es/reterminal_e10xx_main_page
+sku: 100017057,100073581
 sidebar_position: 1
 last_update:
   date: 07/21/2025
