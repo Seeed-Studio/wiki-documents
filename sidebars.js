@@ -3846,6 +3846,15 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/llm_interface_control_jetson',
               ]
             },
+            {
+              type: 'category',
+              label: 'Physical AI',
+              items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Chatbot_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+              ]
+            },
             // Managed Services
             {
               type: 'category',
