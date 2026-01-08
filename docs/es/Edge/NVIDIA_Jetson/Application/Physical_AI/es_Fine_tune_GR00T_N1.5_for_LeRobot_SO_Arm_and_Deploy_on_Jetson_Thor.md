@@ -8,6 +8,7 @@ keywords:
 - Seeed
 image: https://files.seeedstudio.com/wiki/other/cover1.png
 slug: /es/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk
+sku: 100060965,114993668
 last_update:
   date: 2025-9-11
   author: AI&Robotics Group
@@ -128,9 +129,9 @@ Esta imagen del sistema no incluye CUDA, TensorRT u otros componentes SDK de Jet
 
 Esta sección proporciona ejemplos de cómo instalar dependencias de software comúnmente utilizadas en Thor para propósitos de desarrollo. Estas dependencias tienen como objetivo facilitar el desarrollo posterior.
 
-Por favor nota que las dependencias listadas son **solo para referencia**—por favor instala paquetes adicionales según los requisitos de sus proyectos individuales.
+Ten en cuenta que las dependencias listadas son **solo para referencia**—por favor instala paquetes adicionales según los requisitos de sus proyectos individuales.
 
-### Instalación de Dependencias de Desarrollo Esenciales
+### Instalación de Dependencias Esenciales de Desarrollo
 
 **Instalación del SDK JetPack**
 <p></p>
@@ -596,7 +597,7 @@ Después de que el SO-ARM haya sido completamente ensamblado, se requiere calibr
 **Al calibrar los brazos robóticos, por favor NO conectes ninguna cámara USB, ya que esto puede causar conflictos de puertos o asignaciones incorrectas de puertos.**
 :::
 
-**Después de ejecutar el script de calibración, mueve manualmente cada articulación del brazo robótico para asegurar que alcance su rango completo de movimiento! No hacerlo puede resultar en una discrepancia entre las poses de los brazos líder y seguidor durante la teleoperación.**
+**Después de ejecutar el script de calibración, mueve manualmente cada articulación del brazo robótico para asegurar que alcance su rango completo de movimiento. No hacerlo puede resultar en una discrepancia entre las poses de los brazos líder y seguidor durante la teleoperación.**
 
 
 
@@ -604,7 +605,7 @@ Después de que el SO-ARM haya sido completamente ensamblado, se requiere calibr
 ### Agregar Cámara
 
 Generalmente se recomienda instalar una cámara en la muñeca/pinza del brazo robótico, y otra cámara en la superficie del escritorio, para asegurar una cobertura adecuada de la postura del brazo.
-<mark>El enfoque de instalación específico depende de tu escenario de aplicación; el ejemplo mostrado a continuación es solo para referencia.</mark>
+<mark>El enfoque específico de instalación depende de tu escenario de aplicación; el ejemplo mostrado a continuación es solo para referencia.</mark>
 
 Para más detalles, consulta la subsección del siguiente enlace:  
 [https://wiki.seeedstudio.com/es/lerobot_so100m_new/#agregar-cámaras](https://wiki.seeedstudio.com/es/lerobot_so100m_new/#agregar-cámaras)
@@ -856,7 +857,7 @@ Al lanzarse exitosamente, la terminal debería mostrar registros similares a:
   <img src="https://files.seeedstudio.com/wiki/other/deploy1.png" width="600"/>
 </div>
 
-Abre otra terminal y usa el siguiente comando para entrar al mismo contenedor desde un shell diferente:
+Abre otra terminal y usa el siguiente comando para ingresar al mismo contenedor desde un shell diferente:
 
 ```bash
 sudo docker exec -it <container id> /bin/bahs
@@ -918,7 +919,7 @@ Recomendamos usar un teclado con cable durante el flasheo. Los teclados inalámb
 **P7: El ajuste fino en la nube de GR00T reporta "GPU no soportada"**  
 No uses GPUs anteriores a la `arquitectura Ampere` para el ajuste fino en la nube de GR00T. (ej., RTX A6000 o GeForce RTX 4090). V100 (Volta) no es compatible para entrenamiento o ajuste fino de GR00T.
 
-**P8: El nombre del dispositivo serial para la placa controladora del brazo robótico no aparece bajo /dev**  
+**P8: El nombre del dispositivo serie para la placa controladora del brazo robótico no aparece bajo /dev**  
 El sistema Thor de fábrica no incluye controladores `CH34x`. Si faltan, instálalos desde:
 https://github.com/juliagoda/CH341SER
 
@@ -930,7 +931,7 @@ Para usar un hub externo a través del Type-C de Thor, conéctalo al puerto Type
 Al usar un escritorio de tarjeta de captura durante el flasheo, puede ocurrir un error de entrada de teclado (la entrada no coincide con lo que se escribe). Verifica dos veces la contraseña del usuario mientras la configuras.
 
 **P11: ¿Dónde está el puerto de depuración de Thor?**  
-El puerto de depuración Type-C de Thor está oculto bajo la cubierta magnética. Pueden crearse múltiples nodos de dispositivo serial; usa el que tenga el índice más pequeño para iniciar sesión en Thor vía serial.
+El puerto de depuración Type-C de Thor está oculto bajo la cubierta magnética. Pueden crearse múltiples nodos de dispositivo serie; usa el que tenga el índice más pequeño para iniciar sesión en Thor vía serie.
 
 **P12: No se pueden ejecutar scripts de LeRobot para inferir ACT en la imagen de GR00T**  
 No recomendamos invocar APIs de LeRobot para inferencia de `ACT` en un entorno Python 3.12. Los scripts de `Calibration` y `find port` están bien. Ten en cuenta que Ubuntu 24 usa Python 3.12 por defecto localmente.
@@ -942,8 +943,8 @@ nvidia-smi dmon -s puc
 ```  
 Verifica la columna `sm` en la salida.
 
-**P14: No se pueden leer datos del puerto serial del controlador del brazo robótico**  
-No conectes la cámara antes que la placa controladora SO-ARM; hacerlo puede causar un mapeo incorrecto del dispositivo serial. También asegúrate de que se hayan otorgado los permisos del puerto serial.
+**P14: No se pueden leer datos del puerto serie del controlador del brazo robótico**  
+No conectes la cámara antes que la placa controladora SO-ARM; hacerlo puede causar un mapeo incorrecto del dispositivo serie. También asegúrate de que se hayan otorgado los permisos del puerto serie.
 
 ## Referencias
 
