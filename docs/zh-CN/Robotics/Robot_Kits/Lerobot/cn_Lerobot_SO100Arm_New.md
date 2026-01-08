@@ -647,15 +647,15 @@ lerobot-teleoperate \
     ```
   可以忽略红色报错。
 
-4.将orbbec sdk克隆到`~/lerobot/src/cameras`目录下
+4.将orbbec sdk克隆到`~/lerobot/src/lerobot/cameras`目录下
 
   ```bash
-  cd ~/lerobot/src/cameras
+  cd ~/lerobot/src/lerobot/cameras
   git clone https://github.com/ZhuYaoHui1998/orbbec.git
   ```
 
 5.修改utils.py和__init__.py
-- 在`~/lerobot/src/lerobot/cameras`目录下找到`utils.py`，在`40`行处添加如下代码：
+- 在`~/lerobot/src/lerobot/cameras`目录下找到`utils.py`，在大概`45`行处添加如下代码：
 
 ```python
 elif cfg.type == "orbbec":
@@ -666,7 +666,7 @@ elif cfg.type == "orbbec":
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/utils.png" />
 </div>
 
 - 在`~/lerobot/src/lerobot/cameras`目录下找到`__init__.py`，在`18`行处添加如下代码：
