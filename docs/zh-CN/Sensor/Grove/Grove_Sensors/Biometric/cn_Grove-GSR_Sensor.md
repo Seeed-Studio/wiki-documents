@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-GSR_Sensor
+sku: 101020052
 last_update:
   date: 1/6/2023
   author: Seraphina

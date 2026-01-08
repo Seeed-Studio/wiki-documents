@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Solid_State_Relay/
 slug: /ja/Grove-Solid_State_Relay
+sku: 103020004
 last_update:
   date: 05/15/2025
   author: gunengyu

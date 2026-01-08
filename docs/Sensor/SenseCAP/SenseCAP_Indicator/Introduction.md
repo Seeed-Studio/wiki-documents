@@ -5,6 +5,7 @@ keywords:
 - Get Started SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png
 slug: /Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator
+sku: 114993068,114993071,114993069,114993070
 sidebar_position: 1
 last_update:
   date: 10/13/2025

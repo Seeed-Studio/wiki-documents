@@ -4,6 +4,7 @@ title: Shield Grove para Arduino Nano
 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove_Shield_for_Arduino_Nano
+sku: 103100124
 last_update:
   date: 02/02/2023  
   author: Eico 

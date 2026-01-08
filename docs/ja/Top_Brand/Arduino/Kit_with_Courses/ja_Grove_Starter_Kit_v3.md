@@ -5,6 +5,7 @@ keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove_Starter_Kit_v3
+sku: 110060024
 last_update:
   date: 05/15/2025
   author: shuxu hu

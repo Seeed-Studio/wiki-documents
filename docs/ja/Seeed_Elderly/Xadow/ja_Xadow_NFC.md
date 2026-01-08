@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Xadow_NFC
+sku: 113040000
 last_update:
   date: 05/15/2025
   author: shuxu hu

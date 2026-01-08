@@ -6,6 +6,7 @@ keywords:
 - grove vision ai v2
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/connect_vision_ai_v2_to_sensecap_mate
+sku: 101021112,E23011220,104990982
 last_update:
   date: 05/15/2025
   author: Citric

@@ -4,6 +4,7 @@ title: 4A Motor Shield
 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /4A_Motor_Shield
+sku: 105030004
 last_update:
   date: 01/11/2023  
   author: Eico 

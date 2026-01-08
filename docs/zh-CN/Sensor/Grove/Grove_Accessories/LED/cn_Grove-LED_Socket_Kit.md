@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-LED_Socket_Kit
+sku: 104030009, 104030010
 last_update:
   date: 1/7/2023
   author: shuxu hu

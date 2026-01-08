@@ -3,6 +3,7 @@ description: Motor_Shield_V2.0
 title: Motor Shield V2.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Motor_Shield_V2.0
+sku: 105030001
 last_update:
   date: 01/30/2023  
   author: Eico 

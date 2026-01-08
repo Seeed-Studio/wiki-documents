@@ -3,6 +3,7 @@ description: この記事では、reTerminal E シリーズ ePaper ディスプ�
 title: reTerminal E シリーズ ePaper ディスプレイが TRMNL と連携
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp
 slug: /ja/reterminal_e10xx_trmnl
+sku: 100073581
 sidebar_position: 1
 last_update:
   date: 09/19/2025

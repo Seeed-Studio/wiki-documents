@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-6-Axis_Accelerometer&Gyroscope_BMI088
+sku: 101020584
 last_update:
   date: 1/6/2023
   author: shuxu hu

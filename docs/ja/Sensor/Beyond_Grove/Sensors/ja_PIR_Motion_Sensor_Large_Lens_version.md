@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/PIR_Motion_Sensor_Large_Lens_version/
 slug: /ja/PIR_Motion_Sensor_Large_Lens_version
+sku: 101020060
 last_update:
   date: 05/15/2025
   author: gunengyu

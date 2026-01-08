@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Buzzer/
 slug: /Grove-Buzzer
+sku: 107020000
 last_update:
   date: 01/09/2022
   author: gunengyu

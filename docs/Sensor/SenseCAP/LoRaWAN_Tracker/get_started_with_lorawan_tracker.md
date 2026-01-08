@@ -6,6 +6,7 @@ keywords:
 - LoRaWAN
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /get_started_with_lorawan_tracker
+sku: 114993591
 sidebar_position: 1
 last_update:
   date: 11/26/2025

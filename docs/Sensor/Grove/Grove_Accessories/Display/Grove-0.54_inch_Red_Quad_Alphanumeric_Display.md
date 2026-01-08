@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-0.54_inch_Red_Quad_Alphanumeric_Display
+sku: 104020133
 last_update:
   date: 1/7/2023
   author: shuxu hu

@@ -8,6 +8,7 @@ keywords:
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/button.webp
 slug: /cn/seeed_iot_button_with_zigbee
+sku: 113110044
 last_update:
   date: 03/14/2025
   author: Citric

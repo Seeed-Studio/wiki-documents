@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/SDLogger-Open_Hardware_Data_Logger/
 slug: /cn/SDLogger-Open_Hardware_Data_Logger
+sku: 105990002
 last_update:
   date: 02/03/2022
   author: gunengyu

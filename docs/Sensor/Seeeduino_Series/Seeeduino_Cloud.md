@@ -5,6 +5,7 @@ keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Cloud
+sku: 102010021
 last_update:
   date: 1/31/2023
   author: shuxu hu

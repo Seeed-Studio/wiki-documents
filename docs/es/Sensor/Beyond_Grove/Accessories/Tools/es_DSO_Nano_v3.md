@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/DSO_Nano_v3
+sku: 109990013
 last_update:
   date: 02/03/2022
   author: gunengyu

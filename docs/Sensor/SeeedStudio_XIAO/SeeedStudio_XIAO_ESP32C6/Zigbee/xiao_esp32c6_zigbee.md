@@ -3,6 +3,7 @@ description: In this tutorial, we will embark on a journey to explore Zigbee app
 title: XIAO ESP32C6 Zigbee Quick Start Guide (ESP-IDF)
 image: https://files.seeedstudio.com/wiki/xiaoc6_zigbee/3.jpg
 slug: /xiao_esp32c6_zigbee
+sku: 113991254, 102010636, 101991470
 last_update:
   date: 05/30/2024
   author: Citric

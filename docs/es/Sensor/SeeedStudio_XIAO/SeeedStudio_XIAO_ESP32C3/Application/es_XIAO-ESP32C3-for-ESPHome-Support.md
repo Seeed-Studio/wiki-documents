@@ -5,6 +5,7 @@ keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /es/XIAO-ESP32C3-for-ESPHome-Support
+sku: 113991054,110061541,102010633
 last_update:
   date: 10/20/2023
   author: Zachary
