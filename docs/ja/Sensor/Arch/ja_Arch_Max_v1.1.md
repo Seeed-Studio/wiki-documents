@@ -5,6 +5,7 @@ keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Arch_Max_v1.1
+sku: 102110014
 last_update:
   date: 05/15/2025
   author: hushuxu

@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Weight_Sensor_Load_Cell_0-500g/
 slug: /ja/Weight_Sensor_Load_Cell_0-500g
+sku: 314990000
 last_update:
   date: 05/15/2025
   author: gunengyu

@@ -1,6 +1,6 @@
 ---
-description: Crear un BSP Personalizado desde un Entorno de Desarrollo Jetson Existente
-title: Creando un Paquete BSP Personalizado desde un Entorno de Desarrollo Jetson
+description: Crear un BSP personalizado desde un entorno de desarrollo Jetson existente
+title: Creación de un paquete BSP personalizado desde un entorno de desarrollo Jetson
 keywords:
 - reComputer
 - BSP
@@ -22,14 +22,14 @@ Esta guía usa JetPack 6.2 como ejemplo.
 ## Prerrequisitos
 
 - Dispositivo Jetson fuente (con entorno de desarrollo configurado)
-- Computadora Host Ubuntu 22.04
+- Computadora host Ubuntu 22.04
 - Cable de transmisión de datos USB Type-C
 
 :::danger
 La serie reComputer Classic tiene refrigeración insuficiente para soportar el modo súper MAXN. Si has flasheado JetPack 6.2 en un dispositivo de la serie reComputer Classic, no habilites el modo MAXN.
 :::
 
-## 1. Preparar Directorio de Trabajo en PC
+## 1. Preparar directorio de trabajo en PC
 
 Descarga el paquete de directorio de trabajo requerido de la tabla a continuación:
 
@@ -38,17 +38,21 @@ Descarga el paquete de directorio de trabajo requerido de la tabla a continuaci�
   <thead>
     <tr>
       <th>Versión JetPack</th>
-      <th>Enlace de Descarga ⬇️</th>
+      <th>Enlace de descarga ⬇️</th>
     </tr>
   </thead>
   <tbody>
+      <tr>
+      <td>6.0</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDNJYXWuLpRTL-8U39aMd4UAcrfcWTjtkSjCsJ3ZisTFck?e=s7PNxX">Descargar</a></td>
+    </tr>
     <tr>
       <td>6.2</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDPKrVl7UDaTYXmxi1CoTu2AcsHUPKLqNw_olmvlPBODqQ?e=gWuNzv">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQA9G3wk_0LMQ65sJpp7_HQYAf1ShPRNi0WRSFGWNU3_XN8?e=uQFpeH">Descargar</a></td>
     </tr>
     <tr>
       <td>6.2.1</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB3JLwYRpS8SqoqjWuXJmmmAW56Nvpdn8YnbYLW7g5_FHM?e=Gqe1XR">Descargar</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBqETUyZgfSSrL0w7OEp3q-AbTyZVWbh9l5utvtQPsfpZ0?e=T3TiLg">Descargar</a></td>
     </tr>
   </tbody>
 </table>
@@ -100,7 +104,7 @@ Después de que la compilación esté completa, copia e instala los componentes 
 
 El directorio de trabajo ahora está preparado. Los pasos subsiguientes se realizarán en el directorio `Linux_for_Tegra/` para clonar el entorno de desarrollo completo desde el dispositivo Jetson y crear el BSP.
 
-## 2. Generar BSP Personalizado
+## 2. Generar BSP personalizado
 
 Conecta tu dispositivo Jetson fuente a tu PC usando un cable de datos USB Type-C a través del puerto de flasheo, y asegúrate de que tu Jetson fuente esté en modo Recovery.
 
@@ -148,7 +152,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --use-backup-image --no-flash --ne
 
 Reemplaza `<board-name>` con el nombre de tu dispositivo, similar al paso anterior.
 
-Este proceso toma tiempo considerable. Después de completarse, se generarán archivos con el prefijo `mfi_` y un paquete comprimido `tar.gz` en el directorio `Linux_for_Tegra/`.
+Este proceso toma un tiempo considerable. Después de completarse, se generarán archivos con el prefijo `mfi_` y un paquete comprimido `tar.gz` en el directorio `Linux_for_Tegra/`.
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/generate-bsp.png"/></div>
 
@@ -169,7 +173,7 @@ sudo BOARDID=$BOARDID BOARDSKU=$BOARDSKU FAB=$FAB BOARDREV=$BOARDREV CHIP_SKU=$C
 --network usb0 recomputer-orin-super-j401 internal
 ```
 
-## 3. Flashear y Verificar
+## 3. Flashear y verificar
 
 Después de obtener el paquete BSP tar.gz de los pasos anteriores, puedes extraerlo y flashearlo a otros dispositivos Jetson objetivo con un solo comando, logrando la clonación completa del entorno de desarrollo. **Este BSP es independiente del entorno y puede copiarse a otras PCs para su uso.**
 
@@ -189,7 +193,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 El flasheo también requiere que el Jetson objetivo esté en modo Recovery. Para pasos detallados de flasheo, consulta el mismo enlace (**no necesitas descargar un nuevo BSP**):
 [https://wiki.seeedstudio.com/es/flash/jetpack_to_selected_product/](https://wiki.seeedstudio.com/flash/jetpack_to_selected_product/)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y discusión de productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 

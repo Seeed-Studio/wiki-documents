@@ -3,6 +3,7 @@ description: Getting Started with AI Assistant.
 title: Getting Started with AI Assistant
 image: https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/Top_Pic.webp
 slug: /ai_assistant_getting_started
+sku: 114993645
 # sidebar_position: 2
 last_update:
   date: 08/07/2025

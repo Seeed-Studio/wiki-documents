@@ -1440,6 +1440,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_ESPHome',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_SSCMA',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Voice_Pomodoro',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -3840,6 +3841,7 @@ const sidebars = {
               label: 'Multimodal AI',
               items: [
                 // Models
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Local_Voice_LLM_for_Reachy_Mini',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Speech_vlm',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/use_vlm_guard_warehouse',
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Local_Chatbot_reComputer',
@@ -4171,10 +4173,17 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'ReachyMini',
+          items: [
+            'Robotics/Robot_Kits/ReachyMini/ReachyMini_Getting_Started',
+          ]
+        },
+        {
+          type: 'category',
           label: 'Stackforce',
           items: [
             'Robotics/Robot_Kits/StackForce/StackForce_Giant_Bipedal_Wheeled_Robot',
-            'Robotics/Robot_Kits/StackForce/StackForce_Mini_Wheeled_Legged_Robot',   
+            'Robotics/Robot_Kits/StackForce/StackForce_Mini_Wheeled_Legged_Robot',
           ]
         },
       ]
@@ -5938,6 +5947,13 @@ const sidebars = {
                 'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/cn_Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: '与 LoRaWAN 网络服务器集成',
+              items: [
+                'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/cn_Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
@@ -6631,6 +6647,7 @@ const sidebars = {
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_ESPHome',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_SSCMA',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_Voice_Pomodoro',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/cn_XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -9030,6 +9047,7 @@ const sidebars = {
               label: '多模态 AI',
               items: [
                 // Models
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Voice_LLM_for_Reachy_Mini',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Speech_vlm',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_use_vlm_guard_warehouse',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_Local_Chatbot_reComputer',
@@ -11026,6 +11044,13 @@ const sidebars = {
                 'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/es_Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: 'Integrado con el servidor de red LoRaWAN',
+              items: [
+                'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
@@ -11719,6 +11744,7 @@ const sidebars = {
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_ESPHome',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_SSCMA',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_Voice_Pomodoro',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/es_XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -14118,6 +14144,7 @@ const sidebars = {
               label: 'IA Multimodal',
               items: [
                 // Models
+                'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Voice_LLM_for_Reachy_Mini',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Speech_vlm',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_use_vlm_guard_warehouse',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Chatbot_reComputer',
@@ -16115,6 +16142,13 @@ const sidebars = {
                 'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/User_Guide/ja_Quick_Start',
               ],
             },
+            {
+              type: 'category',
+              label: 'LoRaWAN ネットワークサーバーとの統合',
+              items: [
+                'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/ja_Connect_to_The_Things_Network'
+              ],
+            }
           ],
         },
         //       {
@@ -16808,6 +16842,7 @@ const sidebars = {
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_ESPHome',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_SSCMA',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_Voice_Pomodoro',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/ja_XIAO_ESP32S3_GPIO_Viewer',
               ],
             },
           ],
@@ -19207,6 +19242,7 @@ const sidebars = {
               label: 'マルチモーダル AI',
               items: [
                 // Models
+                'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Speech_vlm',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_use_vlm_guard_warehouse',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Chatbot_reComputer',

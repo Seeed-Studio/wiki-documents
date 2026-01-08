@@ -5,6 +5,7 @@ keywords:
 - コース付きキット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove_Starter_kit_for_Arduino_101
+sku: 110020109
 last_update:
   date: 05/15/2025
   author: jianjing Huang

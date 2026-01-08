@@ -6,6 +6,7 @@ keywords:
 - 重量センサー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/grove_adc_for_load_cell_hx711
+sku: 101020712
 last_update:
   date: 05/15/2025
   author: Carla

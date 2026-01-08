@@ -6,6 +6,7 @@ keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
 slug: /ja/respeaker_xvf3800_introduction
+sku: 101991441,114993701
 last_update:
   date: 11/10/2025
   author: Kasun Thushara
@@ -194,7 +195,7 @@ reSpeaker XVF3800 を USB ケーブルで PC に接続します。XMOS のファ
 | ファームウェア | チャンネル数 | 備考 |
 |---------|----------|-------|
 | respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | 処理済み2チャンネル出力 <br /> チャンネル 0：会議（Conference） <br /> チャンネル 1：ASR |
-| application_xvf3800_ua-io16-6ch-sqr-v2.0.8-test1.xe | 6 | チャンネル 0：処理済み音声（会議） <br /> チャンネル 1：処理済み音声（ASR） <br /> チャンネル 2：マイク 0 の生データ <br /> チャンネル 3：マイク 1 の生データ <br /> チャンネル 4：マイク 2 の生データ <br /> チャンネル 5：マイク 3 の生データ |
+| respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | チャンネル 0：処理済み音声（会議） <br /> チャンネル 1：処理済み音声（ASR） <br /> チャンネル 2：マイク 0 の生データ <br /> チャンネル 3：マイク 1 の生データ <br /> チャンネル 4：マイク 2 の生データ <br /> チャンネル 5：マイク 3 の生データ |
 | respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin | 2 | 処理済み2チャンネル出力 <br /> チャンネル 0：会議（Conference） <br /> チャンネル 1：ASR |
 | respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | 処理済み2チャンネル出力 <br /> チャンネル 0：ASR <br /> チャンネル 1：ウェイクワード（Wake word） |
 

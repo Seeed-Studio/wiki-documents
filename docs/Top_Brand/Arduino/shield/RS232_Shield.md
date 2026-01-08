@@ -4,6 +4,7 @@ title: RS232 Shield
 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RS232_Shield
+sku: 113030016
 last_update:
   date: 01/30/2023  
   author: Eico 

@@ -3,6 +3,7 @@ title: XIAO用リレーアドオンモジュール
 description: XIAO用リレーアドオンモジュールは、AC電源機器を制御するためにSeeed Studioが設計したスマートモジュールです。
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay_module.webp
 slug: /ja/relay_add_on_module_for_xiao
+sku: 114993555
 keywords:
   - XIAO
   - Home Assistant

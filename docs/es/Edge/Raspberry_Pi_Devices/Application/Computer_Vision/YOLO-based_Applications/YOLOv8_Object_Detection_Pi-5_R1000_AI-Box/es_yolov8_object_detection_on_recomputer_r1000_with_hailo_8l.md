@@ -7,6 +7,7 @@ keywords:
   - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l
+sku: 113991274,E24010521
 last_update:
   date: 06/26/2024
   author: Jiahao

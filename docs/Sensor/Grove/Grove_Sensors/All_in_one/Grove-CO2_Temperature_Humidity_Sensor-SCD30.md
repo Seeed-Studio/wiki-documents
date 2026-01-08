@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-CO2_Temperature_Humidity_Sensor-SCD30
+sku: 101020634
 last_update:
   date: 12/29/2025
   author: Brandy

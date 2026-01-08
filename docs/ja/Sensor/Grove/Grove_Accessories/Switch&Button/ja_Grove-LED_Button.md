@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-LED_Button
+sku: 111020046, 111020045, 111020044
 last_update:
   date: 05/15/2025
   author: jianjing Huang

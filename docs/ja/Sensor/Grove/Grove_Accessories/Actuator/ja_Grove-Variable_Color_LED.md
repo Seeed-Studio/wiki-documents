@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Variable_Color_LED/
 slug: /ja/Grove-Variable_Color_LED
+sku: 101020472, 104020001
 last_update:
   date: 05/15/2025
   author: gunengyu

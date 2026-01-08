@@ -5,6 +5,7 @@ keywords:
 - Wio_terminal Audio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-Terminal-Audio-Overview
+sku: A1716470
 last_update:
   date: 1/16/2023
   author: jianjing Huang

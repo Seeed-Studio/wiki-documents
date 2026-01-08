@@ -4,6 +4,7 @@ description: |
   XIAO RA4M1 - Smallest Dev Borad Based on 32-bit Renesas RA4M1, Arduino IDE-Ready, 19 GPIOs, RGB LED, CAN BUS, USB 2.0
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
 slug: /getting_started_xiao_ra4m1
+sku: 102010551,102010638
 keywords:
   - XIAO
   - RA4M1

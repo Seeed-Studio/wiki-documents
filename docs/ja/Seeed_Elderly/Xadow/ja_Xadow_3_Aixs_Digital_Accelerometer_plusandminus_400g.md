@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g
+sku: 101040002
 last_update:
   date: 05/15/2025
   author: shuxu hu

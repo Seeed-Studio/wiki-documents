@@ -8,6 +8,7 @@ keywords:
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /cn/lerobot_so100m_new
+sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 9/26/2025
   author: LiShanghang

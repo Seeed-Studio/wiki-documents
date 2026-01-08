@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Bus_Pirate_v3_assembled/
 slug: /cn/Bus_Pirate_v3_assembled
+sku: 102990041, 102990038
 last_update:
   date: 02/03/2022
   author: gunengyu

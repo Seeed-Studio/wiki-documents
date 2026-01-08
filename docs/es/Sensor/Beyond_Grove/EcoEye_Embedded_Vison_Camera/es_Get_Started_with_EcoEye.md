@@ -5,6 +5,7 @@ keywords:
 - EcoEye–Embedded_Vision_Camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Get_Started_with_EcoEye_Embedded_Vision_Camera
+sku: 101991121
 last_update:
   date: 11/24/2023
   author: Yvonne

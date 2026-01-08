@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Chest_Strap_Heart_Rate_Sensor
+sku: 101020066
 last_update:
   date: 05/15/2025
   author: jianjing Huang
