@@ -548,6 +548,35 @@ If you want to learn to use more of the deep sleep mode and wake-up functions, y
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/16.png" style={{width:600, height:'auto'}}/></div>
 :::
 
+## ESPHome
+
+Use the following sketch as a template for the xiao esp32c6 in esphome:
+
+```yaml
+esp32:
+  board: seeed_xiao_esp32c6
+  variant: ESP32C6
+  framework:
+    type: esp-idf # Arduino is not supported
+
+output:
+  - platform: gpio
+    id: rf_switch_enable
+    pin: RF_SWITCH_EN
+    inverted: true
+  - platform: gpio
+    id: rf_antenna_select
+    pin: RF_ANT_SELECT
+
+esphome:
+  min_version: 2025.12.5
+  on_boot:
+    - priority: 700 # priority should be > 600 (sensors) and < 800 (gpio)
+      then:
+        - output.turn_on: rf_switch_enable # On: Enable the antenna switch, required for wifi
+        - output.turn_off: rf_antenna_select # Off: Use the on-board antenna
+```
+
 ## Resources
 
 - **[PDF]** [ESP32C6 datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf)
