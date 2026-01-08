@@ -3848,6 +3848,15 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Multimodal_AI/llm_interface_control_jetson',
               ]
             },
+            {
+              type: 'category',
+              label: 'Physical AI',
+              items: [
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Chatbot_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+              ]
+            },
             // Managed Services
             {
               type: 'category',
@@ -9045,6 +9054,15 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Multimodal_AI/cn_llm_interface_control_jetson',
               ]
             },
+            {
+              type: 'category',
+              label: '具身智能',
+              items: [
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Chatbot_reComputer',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+              ]
+            },
             // Managed Services
             {
               type: 'category',
@@ -14140,6 +14158,15 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_use_vlm_guard_warehouse',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_Local_Chatbot_reComputer',
                 'es/Edge/NVIDIA_Jetson/Application/Multimodal_AI/es_llm_interface_control_jetson',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'IA Encarnada',
+              items: [
+                'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Chatbot_reComputer',
+                'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
+                'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
             },
             // Managed Services
@@ -19238,6 +19265,15 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_use_vlm_guard_warehouse',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_Local_Chatbot_reComputer',
                 'ja/Edge/NVIDIA_Jetson/Application/Multimodal_AI/ja_llm_interface_control_jetson',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'エンボディド AI',
+              items: [
+                'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Chatbot_reComputer',
+                'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
+                'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
             },
             // Managed Services
