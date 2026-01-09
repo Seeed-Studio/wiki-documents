@@ -4,6 +4,7 @@ description: |
   XIAO RP2350，来自 Seeed Studio 的尖端微控制器。它具有双核处理器、增加的 SRAM 和闪存以及增强的连接性。
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/RP2350-thumbnail.webp
 slug: /cn/getting-started-xiao-rp2350
+sku: 102010550,102010637
 keywords:
   - xiao
   - RP2350

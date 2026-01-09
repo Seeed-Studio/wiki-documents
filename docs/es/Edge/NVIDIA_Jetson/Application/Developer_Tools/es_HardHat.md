@@ -7,6 +7,7 @@ tags:
   - AI model deploy
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/HardHat
+sku: 110061402,110061483
 last_update:
   date: 01/04/2023
   author: Bill

@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Optical_Rotary_Encoder-TCUT1600X01
+sku: 101020587
 last_update:
   date: 05/15/2025
   author: shuxu hu

@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-OLED-Display-1.12-SH1107_V3.0
+sku: 104020250
 last_update:
   date: 1/9/2023
   author: shuxu hu

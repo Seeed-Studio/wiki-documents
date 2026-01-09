@@ -6,9 +6,10 @@ keywords:
   - docusaurus
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /WM1302_module
+sku: 114992549, 114992550, 114992629, 114992628, 113100022, 114992967, 114992969, 114992991, 100021717, 114993268
 last_update:
-  date: 4/24/2025
-  author: Leo
+  date: 12/15/2025
+  author: David Du
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
@@ -25,6 +26,10 @@ We has recently released the Wio-E5 Series based on Wio-E5 module.
 Click [here](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3) to meet new members of the LoRa-E5 family from the [Wio-E5 Module](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/) [Grove module](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/), [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) to [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/).
 
 To learn more on creating a LoRaWAN® End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and to send data to LoRaWAN® Network, read more on wiki pages for [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) and [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/).
+:::
+
+:::note
+The WM1302 module offers two distinct interface versions. The `SPI` version is currently the mainstream choice. If you prefer the `USB` version, hardware modifications require certain adjustments to the original official firmware for the module to function properly. For more details, please refer to the **FAQ** part.
 :::
 
 WM1302 module is a new generation of LoRaWAN® gateway module with mini-PCIe form-factor. Based on the Semtech® SX1302 baseband LoRaWAN® chip, WM1302 unlocks the greater potential capacity of long-range wireless transmission for gateway products. It features higher sensitivity, less power consumption, and lower operating temperature than the previous SX1301 and SX1308 LoRa® chip.
@@ -501,7 +506,82 @@ SX1261_RESET_PIN=22     # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-Modify the `SX1302_RESET_PIN`, `SX1302_POWER_EN_PIN` and `SX1261_RESET_PIN` as following:
+Here we use the `cat /sys/kernel/debug/gpio` command, which is a debugging interface provided by the kernel's `debugfs` filesystem. It is primarily used to monitor the real-time status of all GPIO pins on the Raspberry Pi.
+
+`gpiochip0` is what we're really interested in: The WM1302 module connects to the Raspberry Pi via the Pi HAT's 40-pin header, and all of it is managed by this controller.
+
+```shell
+pi@raspberrypi:~/sx1302_hal/packet_forwarder $ cat /sys/kernel/debug/gpio
+gpiochip0: GPIOs 571-624, parent: platform/1f000d0000.gpio, pinctrl-rp1:
+ gpio-571 (ID_SDA              )
+ gpio-572 (ID_SCL              )
+ gpio-573 (GPIO2               )
+ gpio-574 (GPIO3               )
+ gpio-575 (GPIO4               )
+ gpio-576 (GPIO5               )
+ gpio-577 (GPIO6               )
+ gpio-578 (GPIO7               |spi0 CS1            ) out hi ACTIVE LOW
+ gpio-579 (GPIO8               |spi0 CS0            ) out hi ACTIVE LOW
+ gpio-580 (GPIO9               )
+ gpio-581 (GPIO10              )
+ gpio-582 (GPIO11              )
+ gpio-583 (GPIO12              )
+ gpio-584 (GPIO13              )
+ gpio-585 (GPIO14              )
+ gpio-586 (GPIO15              )
+ gpio-587 (GPIO16              )
+ gpio-588 (GPIO17              )
+ gpio-589 (GPIO18              )
+ gpio-590 (GPIO19              )
+ gpio-591 (GPIO20              )
+ gpio-592 (GPIO21              )
+ gpio-593 (GPIO22              )
+ gpio-594 (GPIO23              )
+ gpio-595 (GPIO24              )
+ gpio-596 (GPIO25              )
+ gpio-597 (GPIO26              )
+ gpio-598 (GPIO27              )
+ gpio-599 (PCIE_RP1_WAKE       )
+ gpio-600 (FAN_TACH            )
+ gpio-601 (HOST_SDA            )
+ gpio-602 (HOST_SCL            )
+ gpio-603 (ETH_RST_N           |phy-reset           ) out hi ACTIVE LOW
+ gpio-604 (-                   )
+ gpio-605 (CD0_IO0_MICCLK      |cam0_reg            ) out lo 
+ gpio-606 (CD0_IO0_MICDAT0     )
+ gpio-607 (RP1_PCIE_CLKREQ_N   )
+ gpio-608 (-                   )
+ gpio-609 (CD0_SDA             )
+ gpio-610 (CD0_SCL             )
+ gpio-611 (CD1_SDA             )
+ gpio-612 (CD1_SCL             )
+ gpio-613 (USB_VBUS_EN         )
+ gpio-614 (USB_OC_N            )
+ gpio-615 (RP1_STAT_LED        |PWR                 ) out hi ACTIVE LOW
+ gpio-616 (FAN_PWM             )
+ gpio-617 (CD1_IO0_MICCLK      |cam1_reg            ) out lo 
+ gpio-618 (2712_WAKE           )
+ gpio-619 (CD1_IO1_MICDAT1     )
+ gpio-620 (EN_MAX_USB_CUR      )
+ gpio-621 (-                   )
+ gpio-622 (-                   )
+ gpio-623 (-                   )
+ gpio-624 (-                   )
+```
+
+If your system does not automatically mount debugfs, you must manually mount it first:
+
+```shell
+sudo mount -t debugfs none /sys/kernel/debug
+```
+
+According to the information, we can find out the relationship between GPIO pins `gpio-588, gpio-589, gpio-576` and its corresponding physical pinout index `(GPIO17), (GPIO18), (GPIO5)`.
+
+:::note
+Please refer to the **Raspberry Pi Pinout Mapping** table for the comprehensive GPIO pin mappings.
+:::
+
+Modify the `SX1302_RESET_PIN`, `SX1302_POWER_EN_PIN` and `SX1261_RESET_PIN` based on the GPIO info we get as following:
 
 ```shell
 # GPIO mapping has to be adapted with HW

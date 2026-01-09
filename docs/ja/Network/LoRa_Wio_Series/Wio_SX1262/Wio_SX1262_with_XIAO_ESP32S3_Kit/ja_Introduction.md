@@ -3,6 +3,7 @@ description: XIAO ESP32S3 & Wio-SX1262 キットの紹介
 title: XIAO ESP32S3 & Wio-SX1262 キット紹介
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /ja/wio_sx1262_with_xiao_esp32s3_kit
+sku: 102010611
 sidebar_position: 1
 last_update:
   date: 09/30/2024

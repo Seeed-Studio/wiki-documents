@@ -5,6 +5,7 @@ keywords:
 - Arduino シールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Small_e-Paper_Shield_V2
+sku: 104030019
 last_update:
   date: 05/15/2025
   author: jianjing Huang

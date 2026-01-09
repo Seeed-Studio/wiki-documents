@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /wio_gps_board
+sku: 102990824
 last_update:
   date: 01/11/2022
   author: gunengyu

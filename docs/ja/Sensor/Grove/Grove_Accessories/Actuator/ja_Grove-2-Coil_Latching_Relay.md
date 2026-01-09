@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-2-Coil_Latching_Relay/
 slug: /ja/Grove-2-Coil_Latching_Relay
+sku: 103020010
 last_update:
   date: 05/15/2025
   author: gunengyu

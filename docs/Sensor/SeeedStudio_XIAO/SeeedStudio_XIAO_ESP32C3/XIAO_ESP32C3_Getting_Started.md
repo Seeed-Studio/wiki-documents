@@ -3,7 +3,7 @@ description: Getting Started with Seeed Studio XIAO ESP32C3
 title: Getting Started with Seeed Studio XIAO ESP32C3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_ESP32C3_Getting_Started
-sku: 113991054
+sku: 113991054,102010633,101991467
 type: gettingstarted
 last_update:
   date: 08/14/2024

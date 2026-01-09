@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-IMU_10DOF_v2.0
+sku: 101020252
 last_update:
   date: 1/5/2023
   author: shuxu hu

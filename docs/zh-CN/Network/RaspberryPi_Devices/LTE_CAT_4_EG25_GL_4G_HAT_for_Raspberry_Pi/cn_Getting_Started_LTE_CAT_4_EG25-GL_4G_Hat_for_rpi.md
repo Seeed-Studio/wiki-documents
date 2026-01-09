@@ -11,6 +11,7 @@ keywords:
   - 边缘计算
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/1-114993408-LTE-CAT-4-EG25-GL-4G-HAT-for-Raspberry-Pi.webp
 slug: /cn/getting_started_raspberry_pi_4g_lte_hat
+sku: 114993408
 last_update:
   date: 2024/10/12
   author: Kasun Thushara

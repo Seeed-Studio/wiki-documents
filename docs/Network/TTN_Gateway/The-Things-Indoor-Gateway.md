@@ -5,6 +5,7 @@ keywords:
 - Sorftware Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /The-Things-Indoor-Gateway
+sku: 114992464,114992469,114992468
 last_update:
   date: 2/1/2023
   author: jianjing Huang

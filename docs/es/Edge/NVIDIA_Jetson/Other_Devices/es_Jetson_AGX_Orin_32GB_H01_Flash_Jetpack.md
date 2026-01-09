@@ -5,6 +5,7 @@ tags:
   - NVIDIA Jetson H01
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack
+sku: 114110207
 last_update:
   date: 10/14/2025
   author: Lakshantha/Youjiang

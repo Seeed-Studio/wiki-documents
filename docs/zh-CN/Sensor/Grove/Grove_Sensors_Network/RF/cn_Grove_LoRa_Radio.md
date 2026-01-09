@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove_LoRa_Radio/
 slug: /cn/Grove_LoRa_Radio
+sku: 113060007, 113060006
 last_update:
   date: 01/06/2022
   author: gunengyu

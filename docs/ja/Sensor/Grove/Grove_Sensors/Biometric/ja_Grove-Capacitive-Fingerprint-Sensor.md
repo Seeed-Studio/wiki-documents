@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Capacitive-Fingerprint-Sensor
+sku: 101020713
 last_update:
   date: 05/15/2025
   author: jianjing Huang

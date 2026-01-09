@@ -5,6 +5,7 @@ keywords:
 - Sorftware OpenWrt
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /OpenWrt-Getting-Started
+sku: 102110497,110110090,110110110
 last_update:
   date: 1/13/2023
   author: jianjing Huang

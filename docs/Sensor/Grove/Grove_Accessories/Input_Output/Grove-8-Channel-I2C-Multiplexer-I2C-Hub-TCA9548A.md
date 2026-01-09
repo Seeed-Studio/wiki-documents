@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A/
 slug: /Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A
+sku: 103020293
 last_update:
   date: 01/09/2022
   author: gunengyu

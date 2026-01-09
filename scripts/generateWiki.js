@@ -49,6 +49,11 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-Temperature_and_Humidity_Sensor_Pro.md'), //12.29
   path.join(docsDirectory, 'Top_Brand', 'Raspberry_Pi', 'Pi_HAT', 'Grove_Base_Hat_for_Raspberry_Pi.md'), //12.29
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor', 'SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction.md'), //12.29
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Make_DIY_BSP_for_Jetson.md'), //1.4
+  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'R1225_introduction.md'), //1.4
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_A1102', 'SettingAI_With_A1102.md'), //12.31
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Wireless_Connection', 'XIAO_ESP32C5_WiFi_Usage.md'), //12.30
+  path.join(docsDirectory, 'Sensor', 'ePaper', 'epaper_driver_board_main_page.md'), //12.21
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

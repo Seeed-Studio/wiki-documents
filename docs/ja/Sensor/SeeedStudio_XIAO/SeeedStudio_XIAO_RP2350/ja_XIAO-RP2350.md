@@ -4,6 +4,7 @@ description: |
   XIAO RP2350は、Seeed Studioの最先端マイクロコントローラーです。デュアルコアプロセッサ、増強されたSRAMとフラッシュメモリ、強化された接続性を特徴としています。
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/RP2350-thumbnail.webp
 slug: /ja/getting-started-xiao-rp2350
+sku: 102010550,102010637
 keywords:
   - xiao
   - RP2350

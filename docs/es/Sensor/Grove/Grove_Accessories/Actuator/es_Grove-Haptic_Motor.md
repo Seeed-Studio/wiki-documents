@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Haptic_Motor/
 slug: /es/Grove-Haptic_Motor
+sku: 105020011
 last_update:
   date: 01/09/2022
   author: gunengyu

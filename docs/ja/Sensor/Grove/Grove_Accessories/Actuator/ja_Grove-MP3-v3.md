@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-MP3-v3/
 slug: /ja/Grove-MP3-v3
+sku: 107020069
 last_update:
   date: 05/15/2025
   author: gunengyu

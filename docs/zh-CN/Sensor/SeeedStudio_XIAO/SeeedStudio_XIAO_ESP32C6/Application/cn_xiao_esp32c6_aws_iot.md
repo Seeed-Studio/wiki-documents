@@ -5,6 +5,7 @@ keywords:
 - xiao esp32c6
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/xiao_esp32c6_aws_iot
+sku: 113991254,102010636,101991470
 last_update:
   date: 03/29/2024
   author: Citric

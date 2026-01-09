@@ -3,6 +3,7 @@ description: ODYSSEY - X86J41x5
 title: ODYSSEY 用 LTE モジュール
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/ODYSSEY-X86J4105-LTE-Module
+sku: 113990854,113990855,113990856,110991412,110991465,102110477,102110478,102110479
 last_update:
   date: 05/15/2025
   author: w0x7ce

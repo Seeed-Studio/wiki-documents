@@ -3,6 +3,7 @@ description: Learn how to use the Power Meter function of XIAO Debug Mate for ac
 title: Power Meter
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/32.webp
 slug: /xiao_debug_mate_power
+sku: 109990585
 sidebar_position: 4
 last_update:
   date: 10/22/2025

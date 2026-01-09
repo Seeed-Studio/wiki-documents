@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Differential_Amplifier_v1.2/
 slug: /es/Grove-Differential_Amplifier_v1.2
+sku: 103020016
 last_update:
   date: 01/09/2022
   author: gunengyu

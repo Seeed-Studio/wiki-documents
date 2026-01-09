@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED-Display-0.96-SSD1315
+sku: 104020208
 last_update:
   date: 1/9/2023
   author: shuxu hu

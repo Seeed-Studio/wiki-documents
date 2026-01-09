@@ -3,6 +3,7 @@ description: Introducción al Asistente de IA.
 title: Introducción al Asistente de IA
 image: https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/Top_Pic.webp
 slug: /es/ai_assistant_getting_started
+sku: 114993645
 # sidebar_position: 2
 last_update:
   date: 08/07/2025

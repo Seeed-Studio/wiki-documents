@@ -3,6 +3,7 @@ description: reTerminalにHome Assistantをインストールする方法
 title: reTerminalでHome Assistantを始める
 image: https://avatars.githubusercontent.com/u/4452826?s=400&amp;v=4
 slug: /ja/reTerminal_Home_Assistant
+sku: E23010426,E24121301,E2025081502,E2025081503
 last_update:
   date: 1/31/2023
   author: jianjing Huang
