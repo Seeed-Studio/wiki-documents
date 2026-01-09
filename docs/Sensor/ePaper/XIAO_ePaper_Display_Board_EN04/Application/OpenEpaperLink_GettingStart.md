@@ -5,12 +5,13 @@ keywords:
   - epaper
   - oepl
   - en04
-image: https://github.com/user-attachments/assets/e72b5b6e-f477-467b-981d-5ffe05615f49
+image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
 slug: /epaper_EN04_OEPL
+sku: E25120101
 last_update:
   date: 12/10/2025
-  author: Tomasz
+  author: Tomasz/Allen
 ---
 
 import Tabs from '@theme/Tabs';
@@ -25,9 +26,9 @@ import Steppers from '@site/src/components/utils/Stepper';
         <th>XIAO ePaper Display Board EN04</th>
     </tr>
     <tr>
-    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg"/></div>
+    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/diy_kit_pic.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-DIY-Kit-EN04.html" target="_blank">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
