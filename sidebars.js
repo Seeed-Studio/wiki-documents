@@ -1288,7 +1288,6 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_with_PlatformIO',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/XIAO_ESP32C5_with_MicroPython',
-
               ],
             },
             {
@@ -1297,6 +1296,15 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_ESP-Mesh_Audio',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Zigbee',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/XIAO_ESP32C5_Zigbee_idf',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/XIAO_ESP32C5_Zigbee_arduino',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/XIAO_ESP32C5_Zigbee_homeassistant',
               ],
             },
             {
