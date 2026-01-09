@@ -472,9 +472,13 @@ Where `--robot.port` parameter should be modified according to your actual seria
 
 **🎥 Demo Results**
 
-The author's inference results of GR00T N1.6 on AGX Orin 64G are shown in the video below:
+After launching the inference request, you can see the action sequence output by GR00T N1.6 in the terminal. Each inference produces eight actions:
+
+<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/gr00t-infer.jpg" width="800"/> </div>
+
+The author's inference results of GR00T N1.6 on AGX Orin 64G are shown in the video below. **The first half shows** the inference output in the terminal after starting the GR00T N1.6 program—you can see that eight actions are output per inference. **The second half** demonstrates the real-world result: the robot arm successfully grasping fruit and placing it onto a plate.
 <div class="video-container">
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/GCRkKmRnfn0" title="GPT-OSS Running Live on NVIDIA Jetson Orin NX!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/MuzIkoKYOwU" title="GR00T N1.6 Inference Demo on AGX Orin 64G" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
