@@ -1,6 +1,6 @@
 ---
 description: Getting Started with EE02 13.3-inch E-ink Driver Board
-title: Getting Started with EE02
+title: Getting Started with XIAO ePaper Display Board - EE02
 keywords:
   - E-ink
   - Driver Board
