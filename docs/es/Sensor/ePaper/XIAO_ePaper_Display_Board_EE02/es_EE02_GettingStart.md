@@ -1,6 +1,6 @@
 ---
 description: Introducción al EE02 Placa Controladora de Pantalla E-ink de 13.3 pulgadas
-title: Introducción al EE02
+title: Introducción a la Placa de Pantalla ePaper XIAO - EE02
 keywords:
   - E-ink
   - Driver Board
@@ -18,7 +18,7 @@ last_update:
 
 El **EE02** es una placa controladora de pantalla E-ink de alto rendimiento diseñada específicamente para pantallas de papel electrónico de **13.3 pulgadas**. Alimentado por el chip ESP32-S3, soporta conectividad Wi-Fi y Bluetooth, convirtiéndolo en una solución ideal para aplicaciones de pantalla inalámbrica.
 
-Similar a su hermano, el EE04 (diseñado para pantallas más pequeñas), el EE02 ofrece una experiencia perfecta para desarrolladores que buscan integrar pantallas E-ink de gran formato en sus proyectos IoT. Simplifica el proceso de control y soporta la plataforma SenseCraft HMI para una gestión fácil del contenido.
+Similar a su hermano, el EE04 (diseñado para pantallas más pequeñas), el EE02 ofrece una experiencia fluida para desarrolladores que buscan integrar pantallas E-ink de gran formato en sus proyectos IoT. Simplifica el proceso de control y soporta la plataforma SenseCraft HMI para una gestión fácil del contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -49,7 +49,7 @@ Similar a su hermano, el EE04 (diseñado para pantallas más pequeñas), el EE02
 - **Señalización Digital**: Ideal para menús de restaurantes, letreros de salas de conferencias y etiquetas de precios minoristas.
 - **Hogar Inteligente**: Paneles de información para clima, calendario y estado de automatización del hogar.
 - **HMI Industrial**: Pantallas de estado de bajo consumo para maquinaria y gestión de almacenes.
-- **Educación**: Lectores de libros electrónicos o tableros de información de aulas.
+- **Educación**: Lectores de libros electrónicos o tableros de información para aulas.
 - **Oficina**: Placas de identificación de escritorio o tableros de anuncios.
 
 ## Descripción del Hardware
@@ -87,7 +87,7 @@ Después de la imagen de bienvenida, la pantalla se actualizará automáticament
 ### Configuración de Red
 
 **Paso 4. Configurar Wi-Fi vía Teléfono Móvil**
-Usa tu teléfono móvil para escanear el código QR mostrado en la pantalla (o conectarte al hotspot indicado). Sigue las indicaciones en tu teléfono para ingresar tu SSID de Wi-Fi local y contraseña para conectar el EE02 a internet.
+Usa tu teléfono móvil para escanear el código QR mostrado en la pantalla (o conéctate al hotspot indicado). Sigue las indicaciones en tu teléfono para ingresar tu SSID de Wi-Fi local y contraseña para conectar el EE02 a internet.
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/6.JPG" style={{width:300,height:'auto'}}/></div> -->
 
@@ -135,8 +135,8 @@ Finalmente el EE02 recibirá los datos y actualizará la pantalla de 13.3 pulgad
 *   Esto puede suceder si la pantalla no se ha actualizado por mucho tiempo o si el suministro de energía es inestable. Intenta actualizar la pantalla nuevamente vía la plataforma HMI.
 
 ## Recursos
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[PDF]** [Esquemático del Seeed Studio XIAO ePaper Display EE02](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
+- **[ZIP]** [PCBA y SCH del Seeed Studio XIAO ePaper Display EE02](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
 
 ## Soporte Técnico y Discusión del Producto
 
