@@ -1,12 +1,12 @@
 ---
-description: LoRaWAN 追踪器蓝牙 AT 命令说明
-title: LoRaWAN 追踪器蓝牙 AT 命令说明
+description: LoRaWAN Tracker 蓝牙 AT 命令说明
+title: LoRaWAN Tracker 蓝牙 AT 命令说明
 keywords:
 - Tracker
 - App
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /cn/tracker_at_command
-sidebar_position: 3
+sidebar_position: 5
 last_update:
   date: 4/15/2025
   author: Jessie
@@ -16,21 +16,21 @@ last_update:
 
 ## 前提条件
 
-- 一台搭载 LoRaWAN 固件的 T1000-E 设备。
+- 一台运行 LoRaWAN 固件的 T1000-E 设备。
 - 支持蓝牙 4.0+ 的手机。
-- [LoRaWAN 追踪器 AT 命令列表](https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/LoRaWAN%20Tracker%20AT%20Command.pdf)
+- [LoRaWAN Tracker AT 命令列表](https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/LoRaWAN%20Tracker%20AT%20Command.pdf)
 - 移动开发框架（例如，React Native + react-native-ble-plx）。
 
 ### 发现 BLE 服务和特征
 
-要在应用程序中发现和过滤您的 BLE 设备：
+要在应用中发现并过滤您的 BLE 设备：
 
 - 扫描附近的蓝牙设备。
 - 通过 `["2886", "A886", "a6ed0701-d344-460a-8075-b9e8ec90d71b"]` 过滤扫描结果。
 
 - 可选择通过设备的广播名称过滤设备：
 
- 在 `react-native-ble-plx` 中，本地名称可以通过 `(Device).localName` 访问。
+ 在 `react-native-ble-plx` 中，本地名称可通过 `(Device).localName` 访问。
 
  仅保留 `localName` 包含 `T1000` 的设备。
 
@@ -42,7 +42,7 @@ last_update:
 
 - 连接后，发现所有服务和特征。
 
-- 定位 UUID 为以下的 UART 服务：
+- 找到 UUID 为以下值的 UART 服务：
 `49535343-FE7D-4AE5-8FA9-9FAFD205E455`
 
 - 在此服务中，有两个关键特征：
