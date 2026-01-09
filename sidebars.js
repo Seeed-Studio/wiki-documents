@@ -3130,6 +3130,11 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_assembly_guide'
               ]
             },
+            {
+              type: 'doc',
+              id: 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_FAQ',
+              label: 'reComputer AI FAQ'
+            },
           ]
         },
         {
