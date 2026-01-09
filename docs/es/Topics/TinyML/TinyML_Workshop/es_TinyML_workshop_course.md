@@ -5,6 +5,7 @@ keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /es/tinyml_workshop_course_new
+sku: 110992064
 last_update:
   date: 09/24/2024
   author: Citric, Matthew,Frank

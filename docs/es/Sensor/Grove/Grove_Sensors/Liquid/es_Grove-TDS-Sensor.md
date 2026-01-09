@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-TDS-Sensor
+sku: 101020753
 last_update:
   date: 7/12/2024
   author: Harrison Xu

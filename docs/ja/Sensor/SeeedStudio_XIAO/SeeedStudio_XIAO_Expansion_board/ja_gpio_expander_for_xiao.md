@@ -3,6 +3,7 @@ description: リッチなコンテンツを持つドキュメントページを�
 title: XIAO用IOエキスパンダー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/io_expander_for_xiao
+sku: 103030415
 last_update:
   date: 09/18/2023
   author: Stephen Lo

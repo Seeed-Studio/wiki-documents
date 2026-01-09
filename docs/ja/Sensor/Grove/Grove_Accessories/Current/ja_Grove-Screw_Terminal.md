@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Screw_Terminal/
 slug: /ja/Grove-Screw_Terminal
+sku: 103020007
 last_update:
   date: 05/15/2025
   author: gunengyu

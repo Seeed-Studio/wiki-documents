@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-I2C_UV_Sensor-VEML6070
+sku: 101020600
 last_update:
   date: 1/5/2023
   author: jianjing Huang

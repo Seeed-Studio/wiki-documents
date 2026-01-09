@@ -8,6 +8,7 @@ tags:
   - robots
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini.webp
 slug: /ja/recomputer_jetson_mini_hardware_interfaces_usage
+sku: 114993553,114993551,102111001,102110999,114993592,114993593
 last_update:
   date: 12/16/2024
   author: Youjiang

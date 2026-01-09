@@ -6,6 +6,7 @@ keywords:
   - ドキュサウラス
 image: https://wiki.seeedstudio.com/ja/Grove-Adjustable_PIR_Motion_Sensor/
 slug: /ja/Grove-Adjustable_PIR_Motion_Sensor
+sku: 101020617
 last_update:
   date: 05/15/2025
   author: gunengyu

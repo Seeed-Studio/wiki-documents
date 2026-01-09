@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /ja/LoRa-E5_STM32WLE5JC_Module
+sku: 317990687,317990829
 last_update:
   date: 01/30/2023
   author: hushuxu

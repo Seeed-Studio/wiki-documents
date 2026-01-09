@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/433Mhz_RF_Link_Kit/
 slug: /es/433Mhz_RF_Link_Kit
+sku: 113990010
 last_update:
   date: 02/03/2022
   author: gunengyu

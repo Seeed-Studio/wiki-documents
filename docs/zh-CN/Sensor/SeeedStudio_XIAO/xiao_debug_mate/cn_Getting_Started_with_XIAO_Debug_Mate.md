@@ -3,6 +3,7 @@ description: 本文提供了 Seeed Studio XIAO Debug Mate 的全面介绍和使�
 title: XIAO Debug Mate 入门指南
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.webp
 slug: /cn/getting_started_with_xiao_debug_mate
+sku: 109990585
 sidebar_position: 1
 last_update:
   date: 10/22/2025

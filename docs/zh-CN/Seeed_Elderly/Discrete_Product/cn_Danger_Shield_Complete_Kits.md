@@ -5,6 +5,7 @@ keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Danger_Shield_Complete_Kits
+sku: 103990021
 last_update:
   date: 1/13/2023
   author: shuxu hu

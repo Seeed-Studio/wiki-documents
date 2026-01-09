@@ -5,6 +5,7 @@ keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/High_Accuracy_Pi_RTC-DS3231
+sku: 103030278
 last_update:
   date: 05/15/2025
   author: jianjing Huang

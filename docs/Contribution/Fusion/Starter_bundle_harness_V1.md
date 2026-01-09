@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Starter_bundle_harness_V1
+sku: 110060009
 last_update:
   date: 1/13/2023
   author: shuxu hu

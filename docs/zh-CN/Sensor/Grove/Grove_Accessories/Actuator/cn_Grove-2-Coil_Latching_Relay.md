@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-2-Coil_Latching_Relay/
 slug: /cn/Grove-2-Coil_Latching_Relay
+sku: 103020010
 last_update:
   date: 01/09/2022
   author: gunengyu

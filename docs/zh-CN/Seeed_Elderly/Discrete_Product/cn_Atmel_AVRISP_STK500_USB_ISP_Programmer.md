@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Atmel_AVRISP_STK500_USB_ISP_Programmer
+sku: 105990010
 last_update:
   date: 1/13/2023
   author: shuxu hu

@@ -3,6 +3,7 @@ description: Este artículo proporciona una introducción completa y guía de us
 title: Introducción al XIAO Debug Mate
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.webp
 slug: /es/getting_started_with_xiao_debug_mate
+sku: 109990585
 sidebar_position: 1
 last_update:
   date: 10/22/2025

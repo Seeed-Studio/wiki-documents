@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/Wio-Lite-W600/
 slug: /Wio-Lite-W600
+sku: 102991180
 last_update:
   date: 01/11/2022
   author: gunengyu

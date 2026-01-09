@@ -3,6 +3,7 @@ description: Create a doc page with rich content.
 title: IO Expander for XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /io_expander_for_xiao
+sku: 103030415
 last_update:
   date: 09/18/2023
   author: Stephen Lo

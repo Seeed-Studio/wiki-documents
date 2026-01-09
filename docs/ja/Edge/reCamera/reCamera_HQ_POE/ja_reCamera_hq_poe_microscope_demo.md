@@ -11,6 +11,7 @@ keywords:
   - Microscope
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 slug: /ja/recamera_hq_poe_microscope_demo
+sku: 100041077,100018917,100029708,100074316
 sidebar_position: 3
 last_update:
   date: 11/08/2025

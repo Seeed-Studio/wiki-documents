@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-Vibration_Sensor_SW-420
+sku: 101020586
 last_update:
   date: 1/7/2023
   author: shuxu hu

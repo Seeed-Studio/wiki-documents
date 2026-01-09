@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio-Extension-RTC/
 slug: /es/Wio-Extension-RTC
+sku: 103100082
 last_update:
   date: 01/11/2022
   author: gunengyu

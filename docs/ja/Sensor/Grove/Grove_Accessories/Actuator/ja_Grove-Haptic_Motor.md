@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Haptic_Motor/
 slug: /ja/Grove-Haptic_Motor
+sku: 105020011
 last_update:
   date: 05/15/2025
   author: gunengyu

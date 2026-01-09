@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-LCD_RGB_Backlight
+sku: 104030001
 last_update:
   date: 1/7/2023
   author: shuxu hu

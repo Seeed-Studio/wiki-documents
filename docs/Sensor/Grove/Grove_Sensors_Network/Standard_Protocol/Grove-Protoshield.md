@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-Protoshield.md/
 slug: /Grove-Protoshield
+sku: 101020035
 last_update:
   date: 01/06/2022
   author: gunengyu

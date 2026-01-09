@@ -5,6 +5,7 @@ keywords:
 - home assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /es/home_assistant_topic
+sku: 113110024
 last_update:
   date: 2/26/2024
   author: Matthew, Jenna and Kasun Thushara

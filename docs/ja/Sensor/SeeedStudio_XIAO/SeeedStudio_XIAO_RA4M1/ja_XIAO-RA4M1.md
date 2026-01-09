@@ -4,6 +4,7 @@ description: |
   XIAO RA4M1 - 32ビットRenesas RA4M1ベースの最小開発ボード、Arduino IDE対応、19 GPIO、RGB LED、CAN BUS、USB 2.0
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
 slug: /ja/getting_started_xiao_ra4m1
+sku: 102010551,102010638
 keywords:
   - XIAO
   - RA4M1

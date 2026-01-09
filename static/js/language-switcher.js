@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-31 17:41:46 (北京时间)
-// 多语言页面: 2094 个
+// 生成时间: 2026-01-07 15:30:55 (北京时间)
+// 多语言页面: 2101 个
 
 (function() {
   'use strict';
@@ -857,6 +857,12 @@
     "es",
     "ja"
   ],
+  "/local_voice_llm_on_recomputer_jetson_for_reachy_mini": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/speech_vlm": [
     "cn",
     "en",
@@ -1032,6 +1038,12 @@
     "ja"
   ],
   "/Jetson_FAQ": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/make_diy_bsp_for_jetson": [
     "cn",
     "en",
     "es",
@@ -3101,6 +3113,12 @@
     "es",
     "ja"
   ],
+  "/semtech_lr2021_evk_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/LoRa-E5_STM32WLE5JC_Module": [
     "cn",
     "en",
@@ -3732,6 +3750,12 @@
     "ja"
   ],
   "/M2_Kit_Getting_Started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/r1225_introduction": [
     "cn",
     "en",
     "es",
@@ -8445,6 +8469,12 @@
     "es",
     "ja"
   ],
+  "/xiao_esp32c5_buletooth_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c5_wifi_usage": [
     "cn",
     "en",
@@ -8602,6 +8632,12 @@
     "ja"
   ],
   "/geolocation_tracker_with_XIAO_ESP32S3": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/XIAO_ESP32S3_GPIO_Viewer": [
     "cn",
     "en",
     "es",
@@ -10294,6 +10330,12 @@
     "ja"
   ],
   "/Tracker_WiFi_Geolocation": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_ttn": [
     "cn",
     "en",
     "es",
