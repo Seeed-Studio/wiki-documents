@@ -8,6 +8,7 @@ keywords:
 - Seeed
 image: https://files.seeedstudio.com/wiki/other/cover1.png
 slug: /cn/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk
+sku: 100060965,114993668
 last_update:
   date: 2025-9-11
   author: AI&Robotics Group
@@ -17,10 +18,10 @@ last_update:
 
 ## 简介
 
-本 wiki 解释了如何为 **LeRobot SO-101 机械臂**微调 **NVIDIA Isaac GR00T N1.5** 并在 **NVIDIA Jetson Thor** 上部署。内容包括：
+本 wiki 解释如何为 **LeRobot SO-101 机械臂**微调 **NVIDIA Isaac GR00T N1.5** 并在 **NVIDIA Jetson Thor** 上部署。内容包括：
 
 - **LeRobot SO-101** 和 **Jetson AGX Thor** 的硬件准备
-- 在 Jetson Thor 上设置 **GR00T N1.5** 的软件环境
+- 在 Jetson Thor 上为 **GR00T N1.5** 设置软件环境
 - 使用 **LeRobot 训练平台**：数据收集、数据集格式化和 SO-101 机械臂的微调
 - 在 Jetson Thor 上部署训练好的 GR00T N1.5 策略（LeRobot + SO-101）的示例工作流程
 - 故障排除技巧和常见陷阱
@@ -126,7 +127,7 @@ last_update:
 
 ## Thor 上的基本开发环境设置
 
-本节提供了如何在 Thor 上安装常用软件依赖项以用于开发目的的示例。这些依赖项旨在促进后续开发。
+本节提供如何在 Thor 上安装常用软件依赖项以用于开发目的的示例。这些依赖项旨在促进后续开发。
 
 请注意，列出的依赖项**仅供参考**——请根据各自项目的要求安装其他软件包。
 
@@ -187,7 +188,7 @@ conda --version
 其他 <mark>Python **3.12** + CUDA 13</mark> 预编译的 thor 依赖项 `.whl` 文件可以在这里找到：
 [**https://pypi.jetson-ai-lab.io/sbsa/cu130**](https://pypi.jetson-ai-lab.io/sbsa/cu130)。
 
-如果预期的 wheel 文件不可用，开发者需要自己构建所需的依赖项来完成开发环境的设置。
+如果没有预期的 wheel 文件，开发者需要自己构建所需的依赖项来完成开发环境的设置。
 
 ### 安装其他依赖项
 
@@ -731,7 +732,7 @@ python scripts/gr00t_finetune.py \
 ```
 
 :::note
-默认微调设置需要约 25G 显存。如果您没有那么多显存，请尝试在 gr00t_finetune.py 脚本中添加 `--no-tune_diffusion_model` 标志。
+默认的微调设置需要约 25G 的显存。如果您没有那么多显存，请尝试在 gr00t_finetune.py 脚本中添加 `--no-tune_diffusion_model` 标志。
 :::
 
 <div align="center">
@@ -791,7 +792,7 @@ pip install --upgrade setuptools
 pip install -e .[thor]
 ```
 
-Gr00t 完全兼容使用 lerobot 框架收集的数据集。请参考前面的"**数据收集**"部分来准备您的数据集，以便微调 Gr00t 模型。
+Gr00t 完全兼容使用 lerobot 框架收集的数据集。请参考前面的"**数据收集**"部分来准备您的数据集，以便对 Gr00t 模型进行微调。
 
 ### 模型微调（可选）
 
@@ -836,7 +837,7 @@ python scripts/gr00t_finetune.py \
 
 ### 使用 GR00T N1.5 运行推理
 
-为了获得最佳性能，建议在部署微调的 GR00T 模型时尽可能复制数据收集期间使用的真实世界设置。这是因为模型的泛化能力有限。
+为了获得最佳性能，建议在部署微调后的 GR00T 模型时尽可能复制数据收集期间使用的真实世界设置。这是因为模型的泛化能力有限。
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400"/>
 </div>
