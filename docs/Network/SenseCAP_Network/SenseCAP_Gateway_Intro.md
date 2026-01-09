@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network/SenseCAP_Network/SenseCAP_Gateway_Intro
 last_update:
-  date: 09/26/2023
-  author: Jessie
+  date: 01/08/2026
+  author: Kian
 ---
 
 
@@ -16,12 +16,10 @@ With a range of products that cater to the needs of different users, from hobbyi
 
 In addition to the LoRaWAN sensors, SenseCAP also provides different types of gateway, including hotspots for web3 and LoRaWAN gateways for the LoRaWAN sensing solutions, and an array of software, cloud services, and APIs, allowing users to collect, store, and analyze data in real-time. The combination of hardware, software, and cloud services enables users to quickly respond to changes in their environment and make data-driven decisions.
 
-> [!NOTE]
-> R1225
-
-```test
-R1225
-```
+:::caution info
+**Filling the Industrial-Grade Gap, Redefining LoRaWAN Edge Capabilities**
+> Introducing the New reComputer R1225 LoRaWAN Gateway — An Industrial-Grade LoRaWAN + Sensing + Control Integrated Gateway for BMS / BAS / iBMS
+:::
 
 ## Introduction
 
@@ -58,7 +56,21 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
 
 ### reComputer R1225 LoRaWAN Gateway
 
-reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN gateway & controller, CM4-powered, with AI capabilities. With 3*RS485, dual-ethernets, BACnet, and Modbus support, equipped with all the necessary features that a robust and reliable industrial edge IoT device needs. With compatibility with AI NPU accelerator, it's a perfect fit for remote access control, especially BMS, BAS, and iBMS.
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Appearance_Image/R1225_White_Background_1.png" style={{width:900, height:400}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>reComputer R1225 LoRaWAN Gateway is a powerful and flexible industry Raspberry Pi IoT LoRaWAN gateway & controller, CM4-powered, with AI capabilities. With 3*RS485, dual-ethernets, BACnet, and Modbus support, equipped with all the necessary features that a robust and reliable industrial edge IoT device needs. With compatibility with AI NPU accelerator, it's a perfect fit for remote access control, especially BMS, BAS, and iBMS. </font>
+    </div>
+</div>
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center', marginTop: '48px'}}>
+    <a class="get_one_now_item" href="" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
+    <!--缺少商详链接，待产品上架后补上-->
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/r1225_introduction/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
+</div>
 
 
 ### SenseCAP M2 Multi-Platform Gateway
