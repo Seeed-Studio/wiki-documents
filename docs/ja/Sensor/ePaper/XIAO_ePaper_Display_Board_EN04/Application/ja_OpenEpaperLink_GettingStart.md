@@ -1,13 +1,13 @@
 ---
-description: OpenEPaperLink BLE DIY キットを使用した OpenEPaperLink のセットアップと設定
-title: Open Display DIY キットを使用した Open Display ファームウェアのセットアップと設定
+description: OpenEPaperLink BLE DIY キットを使用した OpenEPaperLink の設定と構成
+title: Open Display DIY キットを使用した Open Display ファームウェアの設定と構成
 keywords:
   - epaper
   - oepl
   - en04
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
-slug: /ja/epaper_EN04_OEPL
+slug: /ja/EN04_opendisplay
 sku: E25120101
 last_update:
   date: 12/10/2025
@@ -18,12 +18,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Open Display DIY キットを使用した Open Display ファームウェアのセットアップと設定
+# Open Display DIY キットを使用した Open Display ファームウェアの設定と構成
 
 <div class="table-center">
 <table align="center">
     <tr>
-        <th>XIAO ePaper Display Board EN04</th>
+        <th>XIAO ePaper ディスプレイボード EN04</th>
     </tr>
     <tr>
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/diy_kit_pic.jpg"/></div>
@@ -38,7 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## はじめに
 
-**XIAO nRF52840** Plus を搭載した XIAO EN04 ePaper Display Board は、OEPL_BLE ファームウェアを使用して Bluetooth 対応の電子ペーパーディスプレイを始める最も簡単な方法です。802.15.4 無線を備えた専用アクセスポイントを必要とする従来の OpenEPaperLink システムとは異なり、このボードは Bluetooth Low Energy を使用して、スマートフォン、コンピューター、または Home Assistant から直接ワイヤレス制御を行います。
+**XIAO nRF52840** Plus を搭載した XIAO EN04 ePaper ディスプレイボードは、OEPL_BLE ファームウェアを使用して Bluetooth 対応の電子ペーパーディスプレイを始める最も簡単な方法です。802.15.4 無線を備えた専用アクセスポイントを必要とする従来の OpenEPaperLink システムとは異なり、このボードは Bluetooth Low Energy を使用して、スマートフォン、コンピューター、または Home Assistant から直接ワイヤレス制御を行います。
 
 ### アプリケーション
 
@@ -53,8 +53,8 @@ OpenEPaperLink（OEPL）は、電子ペーパーディスプレイ用のファ�
 
 [OEPL_BLE ファームウェア](https://github.com/OpenEPaperLink/OEPL_BLE)は以下を可能にします：
 - **Bluetooth Low Energy（BLE）通信**: 専用アクセスポイントを必要とせずに直接ワイヤレス制御
-- **専用ハードウェアサポート**: XIAO ePaper Board EN04、EE04 などの専用ボードで動作
-- **Web ベースのフラッシュと設定**: [openepaperlink.org/ble](https://openepaperlink.org/ble/) の Web インターフェースを通じた簡単なセットアップと画像アップロード
+- **専用ハードウェアサポート**: XIAO ePaper ボード EN04、EE04 などの専用設計ボードに対応
+- **Web ベースのフラッシュと構成**: [openepaperlink.org/ble](https://openepaperlink.org/ble/) の Web インターフェースを通じた簡単なセットアップと画像アップロード
 - **複数ディスプレイサポート**: さまざまな電子ペーパーサイズとコントローラーに対応
 
 
@@ -63,11 +63,11 @@ OpenEPaperLink（OEPL）は、電子ペーパーディスプレイ用のファ�
 OEPL_BLE ファームウェアは、カスタム電子ペーパーディスプレイプロジェクトにいくつかの利点を提供します：
 
 - **アクセスポイント不要**: 直接通信に Bluetooth Low Energy を使用 - 追加ハードウェア不要
-- **Web ベースツール**: ブラウザベースツールを通じた簡単なファームウェアインストール、設定、画像アップロード
-- **専用ハードウェア**: EN04 などのボード用に設計され、商用 ESL タグに限定されない
+- **Web ベースツール**: ブラウザベースツールを通じた簡単なファームウェアインストール、構成、画像アップロード
+- **専用設計ハードウェア**: EN04 などのボード用に設計され、商用 ESL タグに限定されない
 - **オープンソース＆無料**: GitHub で活発に開発されている完全オープンソースプロジェクト
-- **複数マイクロコントローラーサポート**: nRF52840、ESP32-S3、ESP32-C6、ESP32-C3 で動作
-- **簡単セットアップ**: ボードに単一ファイルをドラッグアンドドロップでファームウェアアップロード、Web インターフェースで設定、複雑なプログラミング不要
+- **複数マイクロコントローラーサポート**: nRF52840、ESP32-S3、ESP32-C6、ESP32-C3 に対応
+- **簡単セットアップ**: ボードに単一ファイルをドラッグ＆ドロップでファームウェアアップロード、Web インターフェースで構成、複雑なプログラミング不要
 - **バッテリー効率**: 電子ペーパーディスプレイでの低消費電力動作に最適化
 - **活発なコミュニティ**: [OpenEPaperLink Discord](https://discord.gg/fekcBc5RN5) を通じたサポートと開発
 
@@ -77,23 +77,23 @@ OEPL_BLE ファームウェアは、カスタム電子ペーパーディスプ�
 ### ハードウェア組み立て
 
 **ステップ 1. ディスプレイをドライバーボードに接続**  
-FPC ケーブルを XIAO EN04 Board のコネクターに合わせ、ラッチを固定して確実な接続を確保します。  
+FPC ケーブルを XIAO EN04 ボードのコネクターに合わせ、ラッチを固定して確実な接続を確保します。  
 
 :::tip
-FPC ケーブルの金属面は上向きにする必要があります。そうでないと、コンテンツが表示されません。ほとんどのディスプレイには FPC ケーブルに 1 と 50 があり、これらの番号はボード上のものと一致する必要があります！
+FPC ケーブルの金属面は上向きにする必要があります。そうでないと、コンテンツが表示されません。ほとんどのディスプレイには FPC ケーブルに 1 と 50 の番号があり、これらの番号はボード上の番号と一致する必要があります！
 
-以下のインストールチュートリアルに従ってください。多くの人が間違えます。
+多くの人が間違えるため、以下のインストールチュートリアルに従ってください。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/hardware.jpg" style={{width:600, height:'auto'}}/></div>
 
-**ステップ 2. バッテリーを取り付ける**  
+**ステップ 2. バッテリーの取り付け**  
 バッテリーケーブルをドライバーボードの JST コネクターに接続し、正しい極性（赤線を +、黒線を - に）を確認します。  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/battery.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-極性を再確認してください。異なるバッテリーは配線が混在している場合があります。赤と黒が合わない場合、針を使用して JST コネクターから簡単に取り外し、正しく配置できます。
+極性を再確認してください。異なるバッテリーは配線が混在している場合があります。赤と黒が合わない場合は、針を使って JST コネクターから簡単に取り外し、正しく配置できます。
 :::
 
 
@@ -105,7 +105,7 @@ FPC ケーブルの金属面は上向きにする必要があります。そう�
 OEPL_BLE ファームウェアをインストールする最も簡単な方法は、Web ベースのインストーラーを使用することです。
 
 **ステップ 1. Web インストーラーを開く**  
-ブラウザで [OEPL Web Installer](https://openepaperlink.org/ble/install/) にアクセスします。
+ブラウザで [OEPL Web インストーラー](https://openepaperlink.org/ble/install/) にアクセスします。
 
 **ステップ 2. ボードを選択**  
 デバイスリストから **"Seeed EN04 4.26"** または **"Seeed EN04 7.3"**（またはハードウェアに適したプリセット）を選択します（キット内のディスプレイサイズに基づく）。
@@ -114,7 +114,7 @@ OEPL_BLE ファームウェアをインストールする最も簡単な方法�
 **"Download Firmware"** ボタンをクリックし、**"NRF52840.uf2"** をハードドライブに保存します。
 
 **ステップ 4. ボードを接続**  
-USB-C ケーブルを使用して XIAO ePaper Board EN04 をコンピューターに接続します。
+USB-C ケーブルを使用して XIAO ePaper ボード EN04 をコンピューターに接続します。
 
 **ステップ 5. ファームウェアをインストール**  
 リセットボタンを連続して 2 回押します。PC にファイルマネージャーがポップアップ表示されます。ダウンロードした **"NRF52840.uf2"** ファイルを表示される USB ドライブ（USB ドライブは DFU モードの EN04 ボード）にコピーします。
@@ -126,15 +126,15 @@ USB-C ケーブルを使用して XIAO ePaper Board EN04 をコンピュータ�
 - 異なる USB ポートを使用する
 :::
 
-**ステップ 6. ボードを設定**  
-[OEPL Configuration Page](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) を開き、ボードに接続します。
+**ステップ 6. ボードを構成**  
+[OEPL 構成ページ](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) を開き、ボードに接続します。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step6.png" style={{width:600, height:'auto'}}/></div>
 
 
 **"Seeed EN04 4.26"** または **"Seeed EN04 7.3"** を選択した場合、**"Auto Install to Device"** が表示されます。
-これは DIY キットを設定する最も簡単な方法です。
+これは DIY キットを構成する最も簡単な方法です。
 
 **ステップ 7. ボードに接続**
 ページの **"Connect"** ボタンを押します。利用可能な OEPL デバイスを表示するウィンドウが表示されるので、新しいデバイスを選択して **"Pair"** を押します。
@@ -142,13 +142,13 @@ USB-C ケーブルを使用して XIAO ePaper Board EN04 をコンピュータ�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step7.png"  style={{width:500, height:'auto'}}/></div>
 
 
-**ステップ 8. 設定をボードに保存**  
-最後に **"Auto Install to Device"** ボタンを押します。これにより設定がデバイスに保存されます。
+**ステップ 8. 構成をボードに保存**  
+最後に **"Auto Install to Device"** ボタンを押します。これにより構成がデバイスに保存されます。
 
 
-### 設定の確認
+### 構成の確認
 
-インストールと設定後、ディスプレイにスタートアップ画面が表示されます。デバイスは Bluetooth 経由でコンテンツを表示する準備ができました。
+インストールと構成後、ディスプレイにスタートアップ画面が表示されます。デバイスは Bluetooth 経由でコンテンツを表示する準備ができました。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/boot_screen.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -160,7 +160,7 @@ USB-C ケーブルを使用して XIAO ePaper Board EN04 をコンピュータ�
 ### Web ディスプレイツールの使用
 
 **ステップ 1. ディスプレイツールを開く**  
-ブラウザで [OpenEPaperLink BLE Tester](https://openepaperlink.org/ble/display/) にアクセスします。
+ブラウザで [OpenEPaperLink BLE テスター](https://openepaperlink.org/ble/display/) にアクセスします。
 
 **ステップ 2. デバイスに接続**  
 **"Connect"** をクリックし、Bluetooth ペアリングダイアログから OEPL デバイスを選択します。
@@ -200,14 +200,14 @@ USB-C ケーブルを使用して XIAO ePaper Board EN04 をコンピュータ�
 Home Assistant と統合するには、Bluetooth 対応のセットアップが必要です：
 - **Home Assistant Green**（内蔵 Bluetooth）
 - Bluetooth サポートを備えたハードウェア上の **Home Assistant OS/Supervised**
-- **ESPHome Bluetooth Proxy**（より良い範囲のため推奨）
+- **ESPHome Bluetooth プロキシ**（より良い範囲のため推奨）
 
 **注意**: Bluetooth プロキシとして動作する Shelly デバイスは、OEPL で必要な **アクティブ接続をサポートしていない** ため、この統合には使用できません。
 :::
 
 **ステップ 1. 統合をインストール**
 
-詳細なインストール手順については、[OpenEPaperLink Home Assistant Integration Repository](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help) を参照してください。
+詳細なインストール手順については、[OpenEPaperLink Home Assistant 統合リポジトリ](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help) を参照してください。
 
 統合をインストールする最も簡単な方法は **HACS**（Home Assistant Community Store）経由です。以下のボタンをクリックして、HACS でリポジトリを直接開きます：
 
@@ -217,7 +217,7 @@ Home Assistant と統合するには、Bluetooth 対応のセットアップが�
 HACS 経由でカスタム統合をインストールした後、変更を有効にするために **Home Assistant を再起動** する必要があります。
 :::
 
-**ステップ 2. 発見されたデバイスを追加**
+**ステップ 2. 検出されたデバイスを追加**
 
 Home Assistant が再起動したら：
 1. **Settings > Devices & services** に移動します。
@@ -241,7 +241,7 @@ OpenEPaperLink デバイスを Home Assistant に統合したら、センサー�
 
 Home Assistant では、**Visual Editor** を使用するか、**YAML** コードを直接記述してオートメーションを作成できます。以下に両方の方法の例を示します。
 
-#### 例 1：センサーデータの表示（Visual Editor）
+#### 例 1: センサーデータの表示（Visual Editor）
 
 1.  **Settings > Automations & Scenes** に移動し、**Create Automation** をクリックします。
 2.  **Time Pattern** トリガーを追加します（例：10分ごと）。
@@ -305,7 +305,7 @@ Home Assistant では、**Visual Editor** を使用するか、**YAML** コー�
 上記のペイロードで使用されているエンティティ ID（例：`sensor.living_room_temperature`、`sensor.living_room_humidity`）は例です。Home Assistant の実際のセンサーのエンティティ ID に**必ず**置き換えてください。
 :::
 
-#### 例 2：カウントダウンタイマー（YAML）
+#### 例 2: カウントダウンタイマー（YAML）
 
 上級ユーザーの場合、YAML モードでオートメーションを編集できます。このオートメーションは、特定の日付（例：クリスマス）までの残り日数を計算して表示します。
 
@@ -376,22 +376,22 @@ actions:
 
 ### ファームウェアインストールの問題
 
-**問題**：EN04 ボードを接続後、PC が新しい USB ドライブを検出しない
-- **解決策**：
+**問題**: EN04 ボードを接続後、PC が新しい USB ドライブを検出しない
+- **解決策**: 
   - 別の USB ケーブルを試してください（電源専用ではなくデータケーブル）
-  - ボード接続後にリセットボタンを2回押してください
+  - ボード接続後、リセットボタンを2回押してください
 
 
 ### 設定の問題
 
-**問題**：EN04 ボードが発見されない
-- **解決策**：
-  - ボード上の LED が点滅することを確認してください - これによりデバイスに電源が供給されていることが確認されます
+**問題**: EN04 ボードが発見されない
+- **解決策**:
+  - ボード上の LED が点滅することを確認してください - これによりデバイスに電源が供給されていることが確認できます
   - ボードの再起動を試してください
   - ファームウェアのインストールを確認するか、ファイルを再度コピーしてください
 
-**問題**：ファームウェアインストール後にディスプレイに何も表示されない
-- **解決策**：
+**問題**: ファームウェアインストール後にディスプレイに何も表示されない
+- **解決策**:
   - FPC ケーブルが正しく挿入されていることを確認してください（金属接点が上向き）
   - ケーブルが完全に挿入され、ラッチされていることを確認してください
   - 設定が正しいかどうかを確認してください（コンフィギュレーターを介してボードに接続し、設定を読み取ることができます）
@@ -399,14 +399,14 @@ actions:
 
 ### Bluetooth 接続の問題
 
-**問題**：Bluetooth ペアリングで OEPL デバイスが見つからない
-- **解決策**：
+**問題**: Bluetooth ペアリングで OEPL デバイスが見つからない
+- **解決策**:
   - デバイスの電源が入っており、ファームウェアがインストールされていることを確認してください
-  - デバイスに近づいてください（2〜3メートル以内）
+  - デバイスに近づいてください（2-3メートル以内）
   - コンピューター/電話で Bluetooth が有効になっていることを確認してください
 
-**問題**：画像アップロード中に接続が切断される
-- **解決策**：
+**問題**: 画像アップロード中に接続が切断される
+- **解決策**:
   - アップロード中はデバイスの近くにいてください
   - バッテリーが十分に充電されているか、USB 経由でデバイスに電源を供給してください
   - 非常に大きな画像のアップロードは避けてください
@@ -414,15 +414,15 @@ actions:
 
 ### バッテリーと電源の問題
 
-**問題**：バッテリー寿命が短い
-- **解決策**：
+**問題**: バッテリー寿命が短い
+- **解決策**:
   - コンフィギュレーターでより長いスリープ間隔を設定してください
-  - 常に最新バージョンのファームウェアを使用してください。各バージョンでバッテリー使用量が最適化されています
+  - 常に最新バージョンのファームウェアを使用してください；各バージョンでバッテリー使用量が最適化されています
   - ディスプレイのリフレッシュ頻度を減らしてください
-  - バッテリーが完全に充電されていることを確認してください（Li-Po の場合は 4.2V）
+  - バッテリーが完全に充電されていることを確認してください（Li-Po の場合 4.2V）
 
-**問題**：デバイスが充電されない
-- **解決策**：
+**問題**: デバイスが充電されない
+- **解決策**:
   - バッテリーの極性を確認してください（赤：+、黒：-）
   - 充電ケーブルが十分な電流を供給することを確認してください（最低 500mA）
   - 電源スイッチが ON 位置にあることを確認してください
@@ -440,7 +440,7 @@ actions:
 
 
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
