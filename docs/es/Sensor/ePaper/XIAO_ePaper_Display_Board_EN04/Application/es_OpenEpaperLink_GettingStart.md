@@ -1,6 +1,6 @@
 ---
 description: Configuración y configuración de OpenEPaperLink con el Kit DIY OpenEPaperLink BLE
-title: Configuración y configuración de OpenEPaperLink con el Kit DIY OpenEPaperLink BLE
+title: Configuración y configuración del firmware Open Display con el Kit DIY Open Display
 keywords:
   - epaper
   - oepl
@@ -18,7 +18,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Configuración y configuración de OpenEPaperLink con el Kit DIY OpenEPaperLink BLE
+# Configuración y configuración del firmware Open Display con el Kit DIY Open Display
 
 <div class="table-center">
 <table align="center">
@@ -47,9 +47,9 @@ Alimentada por **XIAO nRF52840** Plus, la Placa de Pantalla ePaper XIAO EN04 es 
 - **Alertas de Seguridad**: Muestra alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
 - **Pantalla de Termostato Inteligente**: Muestra niveles de temperatura y humedad, así como configuraciones de control para tu termostato inteligente.
 
-## ¿Qué es [OpenEPaperLink](https://openepaperlink.de/)?
+## ¿Qué es [Open Display](https://openepaperlink.de/)?
 
-OpenEPaperLink (OEPL) es un proyecto de código abierto que proporciona firmware y protocolos para pantallas de papel electrónico. Mientras que el proyecto principal OEPL se enfoca en reutilizar Etiquetas Electrónicas de Estante (ESL) comerciales, el **firmware OEPL_BLE** está diseñado específicamente para construcciones de hardware personalizadas usando microcontroladores como el nRF52840 y ESP32.
+OpenEPaperLink (OEPL) es un proyecto de código abierto que proporciona firmware y protocolos para pantallas de papel electrónico. Mientras que el proyecto principal OEPL se enfoca en reutilizar Etiquetas Electrónicas de Estante (ESL) comerciales, el **firmware OEPL_BLE** está diseñado específicamente para construcciones de hardware personalizado usando microcontroladores como el nRF52840 y ESP32.
 
 El [firmware OEPL_BLE](https://github.com/OpenEPaperLink/OEPL_BLE) habilita:
 - **Comunicación Bluetooth Low Energy (BLE)**: Control inalámbrico directo sin requerir puntos de acceso dedicados
@@ -58,7 +58,7 @@ El [firmware OEPL_BLE](https://github.com/OpenEPaperLink/OEPL_BLE) habilita:
 - **Soporte de Múltiples Pantallas**: Compatible con varios tamaños de papel electrónico y controladores
 
 
-### ¿Por qué usar OEPL_BLE?
+### ¿Por qué usar el firmware Open Display?
 
 El firmware OEPL_BLE ofrece varias ventajas para proyectos de pantallas de papel electrónico personalizadas:
 
@@ -72,7 +72,7 @@ El firmware OEPL_BLE ofrece varias ventajas para proyectos de pantallas de papel
 - **Comunidad Activa**: Soporte y desarrollo a través de [OpenEPaperLink Discord](https://discord.gg/fekcBc5RN5)
 
 
-## Comenzando con OEPL_BLE
+## Comenzando con el firmware Open Display
 
 ### Ensamblaje de Hardware
 
@@ -107,7 +107,7 @@ La forma más fácil de instalar el firmware OEPL_BLE es usando el instalador ba
 **Paso 1. Abrir el Instalador Web**  
 Visita el [Instalador Web OEPL](https://openepaperlink.org/ble/install/) en un navegador.
 
-**Paso 2. Seleccionar Tu Dispositivo**  
+**Paso 2. Seleccionar Tu Placa**  
 Elige **"Seeed EN04 4.26"** o **"Seeed EN04 7.3"** (o cualquier preconfiguración que se adapte a tu hardware) de la lista de dispositivos (basado en el tamaño de pantalla en tu kit).
 
 **Paso 3. Descargar el firmware**  
@@ -142,7 +142,7 @@ Presiona el botón **"Connect"** en la página. Deberías ver una ventana mostra
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step7.png"  style={{width:500, height:'auto'}}/></div>
 
 
-**Paso 7. Guardar la configuración en la Placa**  
+**Paso 8. Guardar la configuración en la Placa**  
 Lo último que hay que hacer es presionar el botón **"Auto Install to Device"**, esto guardará la configuración en el dispositivo.
 
 
@@ -197,8 +197,8 @@ Puedes crear contenido de pantalla personalizado usando:
 
 ### Integración con Home Assistant
 :::tip
-Para integrar con Home Assistant, necesitas una configuración capaz de Bluetooth:
-- **Home Assistant Green** (Bluetooth incorporado)
+Para integrar con Home Assistant, necesitas una configuración con capacidad Bluetooth:
+- **Home Assistant Green** (Bluetooth integrado)
 - **Home Assistant OS/Supervised** en hardware con soporte Bluetooth
 - **ESPHome Bluetooth Proxy** (recomendado para mejor alcance)
 
@@ -223,7 +223,7 @@ Una vez que Home Assistant se haya reiniciado:
 1. Navega a **Settings > Devices & services**.
 2. Deberías ver tu dispositivo OEPL listado bajo **Discovered**.
 3. Haz clic en **Add**.
-4. Aparecerá un diálogo permitiéndote establecer el **Name** y **Area** del dispositivo.
+4. Aparecerá un diálogo que te permitirá configurar el **Nombre** y **Área** del dispositivo.
 5. Haz clic en **Finish**. Serás redirigido a la página de detalles del dispositivo donde puedes gestionar tu pantalla de papel electrónico.
 
 Verás una nueva imagen mostrada en la pantalla, indicando que el dispositivo está conectado a Home Assistant.
@@ -244,7 +244,7 @@ Puedes crear automatizaciones en Home Assistant usando el **Editor Visual** o es
 #### Ejemplo 1: Mostrar Datos de Sensores (Editor Visual)
 
 1.  Ve a **Settings > Automations & Scenes** y haz clic en **Create Automation**.
-2.  Añade un disparador **Time Pattern** (por ejemplo, cada 10 minutos).
+2.  Añade un disparador de **Time Pattern** (por ejemplo, cada 10 minutos).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/add_trigger.png" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/fill_trigger.png" style={{width:800, height:'auto'}}/></div>
@@ -301,8 +301,8 @@ Puedes crear automatizaciones en Home Assistant usando el **Editor Visual** o es
   color: "black"
 ```
 
-:::caution Importante: IDs de Entidades
-Los IDs de entidades utilizados en el payload anterior (por ejemplo, `sensor.living_room_temperature`, `sensor.living_room_humidity`) son ejemplos. **Debes** reemplazarlos con los IDs de Entidades reales de tus sensores en Home Assistant.
+:::caution Importante: IDs de Entidad
+Los IDs de entidad utilizados en el payload anterior (por ejemplo, `sensor.living_room_temperature`, `sensor.living_room_humidity`) son ejemplos. **Debes** reemplazarlos con los IDs de Entidad reales de tus sensores en Home Assistant.
 :::
 
 #### Ejemplo 2: Temporizador de Cuenta Regresiva (YAML)
@@ -365,6 +365,12 @@ Para encontrar tu ID de Dispositivo:
 3. Cambia al **modo YAML** (haz clic en los tres puntos en la esquina superior derecha de la tarjeta de acción).
 4. Copia el `device_id` del código YAML y pégalo en tu automatización.
 :::
+
+## Bonus
+
+Si buscas una forma elegante de montar tu pantalla, echa un vistazo a este inserto impreso en 3D para el marco IKEA RODALM. Permite un montaje fácil de la pantalla.
+
+- **[MakerWorld]** [Inserto Seeed 7.3" Spectra para Marco IKEA RODALM](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
 
 ## Solución de Problemas
 
