@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-12-03 14:50:07 (北京时间)
-// 多语言页面: 2069 个
+// 生成时间: 2026-01-07 15:30:55 (北京时间)
+// 多语言页面: 2101 个
 
 (function() {
   'use strict';
@@ -731,6 +731,12 @@
     "es",
     "ja"
   ],
+  "/deploy_live_vlm_webui_on_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/local_ai_ssistant": [
     "cn",
     "en",
@@ -839,7 +845,19 @@
     "es",
     "ja"
   ],
+  "/llm_interface_control_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/local_chatbot_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/local_voice_llm_on_recomputer_jetson_for_reachy_mini": [
     "cn",
     "en",
     "es",
@@ -959,6 +977,12 @@
     "es",
     "ja"
   ],
+  "/deploy_ota_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/differences_of_l4t_between_seeed_and_nvidia": [
     "cn",
     "en",
@@ -1014,6 +1038,12 @@
     "ja"
   ],
   "/Jetson_FAQ": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/make_diy_bsp_for_jetson": [
     "cn",
     "en",
     "es",
@@ -2033,6 +2063,12 @@
     "es",
     "ja"
   ],
+  "/viseron_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/zoneminder_on_recomputer": [
     "cn",
     "en",
@@ -2130,6 +2166,12 @@
     "ja"
   ],
   "/reTerminal-DM-Yolo5": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer": [
     "cn",
     "en",
     "es",
@@ -2507,6 +2549,12 @@
     "es",
     "ja"
   ],
+  "/ai_parking_slot_monitoring_demo_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/getting_started_for_home_assistant_with_recamera": [
     "cn",
     "en",
@@ -2526,6 +2574,12 @@
     "ja"
   ],
   "/getting_started_in_Wechat_work_with_recamera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/integration_of_real-time_heat_map_with_grafana_data_dashboard": [
     "cn",
     "en",
     "es",
@@ -3054,6 +3108,12 @@
     "ja"
   ],
   "/License": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/semtech_lr2021_evk_getting_started": [
     "cn",
     "en",
     "es",
@@ -3695,6 +3755,12 @@
     "es",
     "ja"
   ],
+  "/r1225_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/Network/SenseCAP_Network/Sensecap-LoRaWAN-Gateway-and-Wireless-Sensor-User-Guide": [
     "cn",
     "en",
@@ -4007,6 +4073,12 @@
     "es",
     "ja"
   ],
+  "/hightorque_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/myactuator_series": [
     "cn",
     "en",
@@ -4080,6 +4152,17 @@
     "ja"
   ],
   "/starai_arm_ros_moveit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_giant_bipedal_wheeled_robot": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/stackforce_mini_wheeled_legged_robot": [
     "cn",
     "en",
     "es",
@@ -5886,6 +5969,18 @@
     "ja"
   ],
   "/Wireless_Sensor_Node-Solar_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_epaper_display_board_overview": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_ee02": [
     "cn",
     "en",
     "es",
@@ -7870,6 +7965,12 @@
     "es",
     "ja"
   ],
+  "/iot_button_v2_ha_discovery": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/seeed_iot_button_with_zigbee": [
     "cn",
     "en",
@@ -8200,6 +8301,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_voice_assistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_volume": [
     "cn",
     "en",
@@ -8350,6 +8457,54 @@
     "es",
     "ja"
   ],
+  "/xiao_esp32c5_esp-mesh_audio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_buletooth_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_wifi_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_with_micropyhton": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c6_aws_iot": [
     "cn",
     "en",
@@ -8392,7 +8547,7 @@
     "es",
     "ja"
   ],
-  "/xiao_pin_multiplexing_esp33c6": [
+  "/xiao_pin_multiplexing_esp32c6": [
     "cn",
     "en",
     "es",
@@ -8477,6 +8632,12 @@
     "ja"
   ],
   "/geolocation_tracker_with_XIAO_ESP32S3": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/XIAO_ESP32S3_GPIO_Viewer": [
     "cn",
     "en",
     "es",
@@ -8603,6 +8764,12 @@
     "ja"
   ],
   "/bus_servo_driver_board": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_cob_led_dirver_board": [
     "cn",
     "en",
     "es",
@@ -8735,6 +8902,12 @@
     "ja"
   ],
   "/xiao_mg24_getting_started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_mg24_sense_micropython": [
     "cn",
     "en",
     "es",
@@ -8939,6 +9112,12 @@
     "ja"
   ],
   "/xiao_ra4m1_pin_multiplexing": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_ra4m1_micropython": [
     "cn",
     "en",
     "es",
@@ -9268,6 +9447,12 @@
     "es",
     "ja"
   ],
+  "/esphome_xiao_w5500_ethernet_adapter": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_w5500_ethernet_adapter": [
     "cn",
     "en",
@@ -9497,12 +9682,6 @@
     "ja"
   ],
   "/Seeed_Arduino_Boards": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/iot_botton_connect_to_esphome": [
     "cn",
     "en",
     "es",
@@ -9754,7 +9933,7 @@
     "es",
     "ja"
   ],
-  "/SenseCAP_Indicator_DALL·E": [
+  "/SenseCAP_Indicator_DALL-E": [
     "cn",
     "en",
     "es",
@@ -10156,6 +10335,12 @@
     "es",
     "ja"
   ],
+  "/sensecap_t2000_tracker_ttn": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/sensecap_t2000_tracker": [
     "cn",
     "en",
@@ -10163,6 +10348,12 @@
     "ja"
   ],
   "/SenseCAP_T2000_tracker/Introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Get_Started_with_SenseCAP_T2000_tracker": [
     "cn",
     "en",
     "es",

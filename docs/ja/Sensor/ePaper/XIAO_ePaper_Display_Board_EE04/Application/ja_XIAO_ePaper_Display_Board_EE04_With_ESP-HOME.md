@@ -57,13 +57,13 @@ Home Assistant Greenは、ホームを自動化する最も簡単でプライバ
 
 また、Seeed Studioの一部製品にHome Assistantをインストールする方法についても記載していますので、参考にしてください。
 
-- **[Getting Started with Home Assistant on ODYSSEY-X86](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)**
-- **[Getting Started with Home Assistant on LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)**
+- **[ODYSSEY-X86でHome Assistantを始める](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)**
+- **[LinkStar H68K/reRouter CM4でHome Assistantを始める](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)**
 
 :::tip Home Assistantのインストール
-Seeed Studio製品を使用していない場合でも、Home Assistant公式ウェブサイトで他の製品にHome Assistantをインストールする方法を確認・学習できます。
+Seeed Studio製品を使用していない場合でも、Home Assistant公式ウェブサイトで他の製品にHome Assistantをインストールする方法を確認し、学習することができます。
 
-- **[Home Assistant Installation](https://www.home-assistant.io/installation/)**
+- **[Home Assistantインストール](https://www.home-assistant.io/installation/)**
 :::
 
 ### ステップ1. ESPHomeのインストール
@@ -285,7 +285,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -425,7 +425,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -855,7 +855,7 @@ usbmodemxxx（Windows では COMxxx）を選択し、connect をクリックし�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:800, height:'auto'}}/></div>
 
-しばらく待つと、ディスプレイに「Hello world!」が表示されます～
+しばらく待つと、ディスプレイに「Hello world!」が表示されます ～
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/ee04.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -869,7 +869,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 デバイスにコードをインストールする前に、USB ケーブルを使用して**このデバイスを Home Assistant を実行している Raspberry Pi または HA Green（Yellow）などに接続**する必要があります。
 
-画像に従ってオプションをクリックし、デバイスにコードをインストールします。
+画像に従ってオプションをクリックして、デバイスにコードをインストールします。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
@@ -882,7 +882,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 </TabItem>
 
-<TabItem value='Wi-Fi 経由でインストール'>
+<TabItem value='Wi-Fi経由でインストール'>
 
 :::tip
 これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用して ePaper Panel にプログラムをアップロードする必要があります。その後、wifi 経由でアップロードできます。また、この方法が機能するには、YAML 設定に有効な暗号化キーを持つ適切に設定された `ota` および `api` セクションが含まれていることを確認してください。
@@ -890,7 +890,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 この方法では、ePaper パネルを何かに接続する必要はなく、オンラインであることを確認するだけです。
 
-オプションをクリックすると、ファームウェアが自動的に ePaper パネルにインストールされます。
+オプションをクリックすると、ファームウェアが ePaper パネルに自動的にインストールされます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:800, height:'auto'}}/></div>
 
@@ -904,14 +904,14 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 ### 簡単なグラフィックの描画
 
-この例の YAML コードは、ESPHome プロジェクト用に SPI インターフェースと XIAO ePaper Display Board（ESP32-S3）- EE04 を設定します。`lambda` セクションには、画面上に簡単な図形を描画する描画コマンドが含まれています：
+この YAML コード例は、ESPHome プロジェクト用の SPI インターフェースと XIAO ePaper Display Board（ESP32-S3）- EE04 を設定します。`lambda` セクションには、画面上に簡単な図形をレンダリングする描画コマンドが含まれています：
 
 - 2つの長方形（1つは位置（10, 10）でサイズ 100x50、もう1つは（150, 10）でサイズ 50x50）
 - 1つの円（250, 35）で半径 25
 - 2つの塗りつぶし長方形（（10, 80）と（150, 80））
 - 1つの塗りつぶし円（250, 105）で半径 25
 
-この例は、以下のコードをコピーして YAML ファイルの `captive_portal` コード行の後に貼り付けることで使用できます。
+以下のコードをコピーして、YAML ファイルの `captive_portal` コード行の後に貼り付けることで、この例を使用できます。
 
 <Tabs>
 <TabItem value="1.54 Inch Monochrome" label="1.54 インチ モノクロ" default>
@@ -1012,7 +1012,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 font:
@@ -1151,7 +1151,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 captive_portal:
@@ -1163,7 +1163,7 @@ spi:
 display:
   - platform: waveshare_epaper
     id: my_display
-    model: gdey0213f51
+    model: gdey029f51h
     cs_pin: GPIO44
     dc_pin: GPIO10
     busy_pin: GPIO4
@@ -1581,7 +1581,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee044.png" style={{width:1000, height:'auto'}}/></div><br />
 
-スペースの制約により、他のパターンの描画方法と原理については詳しく説明しませんが、必要に応じて[ESPHomeのこの部分の詳細な例](https://esphome.io/components/display/)を読むことをお勧めします。
+スペースの制約により、他のパターンの描画方法と原理については詳しく説明しませんが、必要に応じて読者は[ESPHomeのこの部分の詳細な例](https://esphome.io/components/display/)を読むことをお勧めします。
 
 
 ### TrueTypeフォントの描画
@@ -1732,7 +1732,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -1885,7 +1885,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2396,7 +2396,7 @@ display:
 
 :::
 
-ステップ 7. 設定を保存し、XIAO ePaper Display Board(ESP32-S3) - EE04 にアップロードします。以下の画像のようなフィードバックが表示されれば、コードが正常に動作していることを意味します。
+ステップ 7. 設定を保存し、XIAO ePaper Display Board(ESP32-S3) - EE04 にアップロードします。以下の画像のようなフィードバックが表示されれば、コードが正常に実行されています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee045.png" style={{width:1000, height:'auto'}}/></div><br />
 
@@ -2439,7 +2439,7 @@ lambda: |-
   it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0123");
 ```
 
-ステップ 5. 更新された設定を保存し、デバイスにアップロードして新しいアイコンを確認します。
+ステップ 5. 更新した設定を保存し、デバイスにアップロードして新しいアイコンを確認します。
 
 :::tip
 天気ダッシュボードには、`F0590`（晴れ）、`F0591`（部分的に曇り）、`F0593`（雨）、`F059E`（風）などのアイコンの使用を検討してください。
@@ -2482,7 +2482,7 @@ config/
 ePaper ディスプレイで最良の結果を得るには、明確な黒と白の領域を持つ高コントラストの画像を使用してください。JPG と PNG の両方の形式がサポートされています。
 :::
 
-#### 画像表示のための ESPHome 設定
+#### 画像表示用の ESPHome 設定
 
 ステップ 5. `captive_portal` セクションの後に、以下のコードを ESPHome 設定ファイルに追加します。このコードは画像リソースを定義し、それを表示するようにディスプレイを設定します。
 
@@ -2655,7 +2655,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 
@@ -2727,7 +2727,7 @@ wifi:
     password: "123456789"
 
 external_components:
-  - source: github://xcjk-tofuture/seeed_esphome
+  - source: github://xcjk-tofuture/esphome@dev
     components: [ waveshare_epaper ]
 
 captive_portal:
@@ -3165,7 +3165,7 @@ display:
 </TabItem>
 </Tabs>
 
-ステップ 6. 設定を保存し、XIAO ePaper Display Board(ESP32-S3) - EE04にアップロードします。更新が完了すると、ePaperディスプレイに画像が表示されます。
+ステップ 6. 設定を保存し、XIAO ePaper Display Board(ESP32-S3) - EE04にアップロードします。アップデートが完了すると、ePaperディスプレイに画像が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/esphomeee046.png" style={{width:1000, height:'auto'}}/></div><br />
 
@@ -3220,18 +3220,18 @@ lambda: |-
 ```
 
 :::caution
-ePaper ディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s` 設定は、ディスプレイが5分ごとにのみリフレッシュされることを意味します。必要に応じてこの値を調整してください。ただし、頻繁なリフレッシュは ePaper ディスプレイの寿命を短縮する可能性があることに注意してください。
+ePaperディスプレイのリフレッシュレートは制限されていることを覚えておいてください。`update_interval: 300s`設定は、ディスプレイが5分ごとにのみ更新されることを意味します。必要に応じてこの値を調整してください。ただし、頻繁な更新はePaperディスプレイの寿命を短くする可能性があることに注意してください。
 :::
 
-画像を、前の例で説明したテキストやその他の表示要素と組み合わせることで、XIAO ePaper Display Board(ESP32-S3) - EE04 上に豊富で情報量の多いダッシュボードを作成できます。
+画像を前の例で説明したテキストやその他の表示要素と組み合わせることで、XIAO ePaper Display Board(ESP32-S3) - EE04で豊富で情報量の多いダッシュボードを作成できます。
 
 ## リファレンス & リソース
 
 - [ESPHome](https://esphome.io/)
-- [ESPHome 詳細例](https://esphome.io/components/display/)
+- [ESPHome詳細例](https://esphome.io/components/display/)
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

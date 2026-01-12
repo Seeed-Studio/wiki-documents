@@ -7,6 +7,7 @@ keywords:
   - GNSS
 image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/1-L76K-GNSS-Module-for-Seeed-Studio-XIAO-45font.jpg
 slug: /get_start_l76k_gnss
+sku: 109100021
 sidebar_position: 0
 last_update:
   date: 2024-10-14
@@ -287,6 +288,8 @@ Make sure that the L76K GNSS Module is placed outdoor where good GNSS signals ca
 
 This code uses the TinyGPSPlus library to read data from the L76K GNSS module via a serial connection and displays valid location information and date/time on the serial monitor.
 
+<!-- PCN(May 25, 2025): Considering the scenario of power saving, we removed the fix status indicator. Therefore, hide the following LED demo.
+
 ## Configuration
 
 ### Example 1: Change the behaviour of LED
@@ -351,7 +354,7 @@ struct CASIC_Messages {
 } L76KStruct;
 ```
 
-:::
+::: -->
 
 ## Resources
 

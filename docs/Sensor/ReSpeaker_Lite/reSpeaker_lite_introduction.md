@@ -5,6 +5,7 @@ keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
+sku: 107990273,E24072601
 last_update:
   date: 6/28/2024
   author: Jessie
@@ -313,3 +314,5 @@ dfu-util -l
 [ReSpeaker Lite XMOS Firmware](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
 
 [ReSpeaker Lite Github](https://github.com/respeaker/ReSpeaker_Lite/)
+
+[ReSpeaker Lite 3D file](https://files.seeedstudio.com/wiki/respeakerv3/ReSpeakerLitev1.1.step)

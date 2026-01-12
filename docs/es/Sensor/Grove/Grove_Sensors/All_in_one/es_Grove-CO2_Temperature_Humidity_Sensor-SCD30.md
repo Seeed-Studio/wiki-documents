@@ -5,16 +5,17 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-CO2_Temperature_Humidity_Sensor-SCD30
+sku: 101020634
 last_update:
-  date: 12/30/2022
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/main.jpg" /></div>
 
-El Grove - Sensor de CO2, Temperatura y Humedad (SCD30) es un sensor de dióxido de carbono de alta precisión, que está basado en el Sensirion SCD30. El rango de medición de este sensor es de 0 ppm-40'000 ppm, y la precisión de medición puede alcanzar ±(30 ppm + 3%) entre 400ppm a 10'000ppm.
+El Grove - Sensor de CO2, Temperatura y Humedad (SCD30) es un sensor de dióxido de carbono de alta precisión, basado en el Sensirion SCD30. El rango de medición de este sensor es de 0 ppm-40'000 ppm, y la precisión de medición puede alcanzar ±(30 ppm + 3%) entre 400ppm y 10'000ppm.
 
-Además de la tecnología de medición Infrarroja No Dispersiva (NDIR) para la detección de CO2, el SCD30 integra sensores de humedad y temperatura de Sensirion en el mismo módulo sensor.
+Además de la tecnología de medición infrarroja no dispersiva (NDIR) para la detección de CO2, el SCD30 integra sensores de humedad y temperatura de Sensirion en el mismo módulo sensor.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html" target="_blank">
@@ -27,7 +28,7 @@ Además de la tecnología de medición Infrarroja No Dispersiva (NDIR) para la d
 
 Con el [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) y el [registrador de datos S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) de SenseCAP, puedes convertir fácilmente el Grove en un sensor LoRaWAN®. Seeed no solo te ayuda con la creación de prototipos, sino que también te ofrece la posibilidad de expandir tu proyecto con la serie SenseCAP de [sensores industriales](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP) robustos.
 
-Los sensores industriales de la serie SenseCAP S210x proporcionan una experiencia lista para usar para el sensado ambiental. Por favor, consulta el Sensor Inalámbrico de CO2, Temperatura y Humedad S2103 con mayor rendimiento y robustez para el monitoreo de calidad del aire. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC, y una estación meteorológica 8 en 1. Prueba el último [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) para tu próximo proyecto industrial exitoso.
+Los sensores industriales de la serie SenseCAP S210x proporcionan una experiencia lista para usar para el monitoreo ambiental. Por favor, consulta el Sensor Inalámbrico S2103 de CO2, Temperatura y Humedad con mayor rendimiento y robustez para el monitoreo de la calidad del aire. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC, y una estación meteorológica 8 en 1. Prueba el último [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) para tu próximo proyecto industrial exitoso.
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
   <tbody>
@@ -50,7 +51,6 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 | Versión del Producto  | Cambios                                                                                               | Fecha de Lanzamiento |
 |------------------|-------------------------------------------------------------------------------------------------------|---------------|
 | Grove - Sensor de CO2, Temperatura y Humedad (SCD30) V1.0 | Inicial                                                                                               | Dic 2018      |
-
 
 ## Ideas de Aplicación
 
@@ -79,12 +79,12 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 |Vida útil del sensor|15 años|
 |Interfaz|I2C|
 |Dirección I2C|0x61|
-|Tamaño|L: 61mm A: 42mm H: 19mm|
+|Tamaño|L: 61mm W: 42mm H: 19mm|
 |Peso|19.7g|
-|Tamaño del Paquete|L: 110mm A: 70mm H: 40mm|
+|Tamaño del paquete|L: 110mm W: 70mm H: 40mm|
 |Peso bruto| 27g|
 
-<div align="center"><b>Tabla 1.</b><i>Especificación General</i></div>
+<div align="center"><b>Tabla 1.</b><i>Especificaciones Generales</i></div>
 
 |Parámetro|Condiciones|Valor|
 |---|---|----|
@@ -92,7 +92,6 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 |Precisión| 400ppm – 10'000ppm| ± (30 ppm + 3%)|
 |Repetibilidad|400ppm – 10'000ppm|10ppm|
 |Tiempo de respuesta|τ63%|20 s|
-
 
 <div align="center"><b>Tabla 2.</b><i>Especificaciones del Sensor de CO2</i></div>
 
@@ -111,7 +110,6 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 |Precisión| 0 – 50°C| ±0.5°C|
 |Repetibilidad||0.1°C|
 |Tiempo de respuesta|τ63%|> 2 s|
-
 
 <div align="center"><b>Tabla 4.</b><i>Especificaciones del Sensor de Temperatura</i></div>
 
@@ -137,7 +135,7 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" /></div> | <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg" /></div>| <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg" /></div>|
 
-## Comenzando
+## Primeros Pasos
 
 ### Jugar con Arduino
 
@@ -153,16 +151,16 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 >Además, puedes considerar nuestro nuevo [Seeeduino Lotus M0+](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html), que es equivalente a la combinación de Seeeduino V4.2 y Baseshield.
 
 :::note
-  **1** Por favor conecta el cable USB con cuidado, de lo contrario podrías dañar el puerto. Por favor usa el cable USB con 4 cables en su interior, el cable de 2 cables no puede transferir datos. Si no estás seguro sobre el cable que tienes, puedes hacer clic [aquí](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) para comprar
+  **1** Por favor conecta el cable USB con cuidado, de lo contrario podrías dañar el puerto. Por favor usa el cable USB con 4 cables internos, el cable de 2 cables no puede transferir datos. Si no estás seguro sobre el cable que tienes, puedes hacer clic [aquí](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) para comprar
 
   **2** Cada módulo Grove viene con un cable Grove cuando lo compras. En caso de que pierdas el cable Grove, puedes hacer clic [aquí](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) para comprar.
 :::
 
-**Conexión de Hardware**
+**Conexión del Hardware**
 
-- **Paso 1.** Conecta el Grove - CO2 & Temperature & Humidity Sensor (SCD30) al puerto **I2C** del Base Shield.
+- **Paso 1.** Conecta el Grove - Sensor de CO2, Temperatura y Humedad (SCD30) al puerto **I2C** del Base Shield.
 
-- **Paso 2.** Conecta Grove - Base Shield en Seeeduino.
+- **Paso 2.** Conecta Grove - Base Shield al Seeeduino.
 
 - **Paso 3.** Conecta Seeeduino a la PC mediante un cable USB.
 
@@ -171,7 +169,7 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 #### Software
 
 :::caution
-        Si esta es la primera vez que trabajas con Arduino, te recomendamos encarecidamente que veas [Comenzando con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/) antes de empezar.
+        Si esta es la primera vez que trabajas con Arduino, te recomendamos encarecidamente que veas [Primeros Pasos con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/) antes de comenzar.
 :::
 
 - **Paso 1.** Descarga la [Librería Seeed SCD30](https://github.com/Seeed-Studio/Seeed_SCD30) desde Github.
@@ -179,15 +177,15 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 - **Paso 2.** Consulta [Cómo instalar librería](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la librería para Arduino.
 
 - **Paso 3.** Reinicia el IDE de Arduino. Abre el ejemplo, puedes abrirlo de las siguientes tres maneras：
-    a. Ábrelo directamente en el IDE de Arduino a través de la ruta: **File --> Examples -->Grove_scd30_co2_sensor-->SCD30_Example**.
+    a. Ábrelo directamente en el Arduino IDE a través de la ruta: **File --> Examples -->Grove_scd30_co2_sensor-->SCD30_Example**.
 
     <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/c1.jpg" /></div>
 
-    b. Ábrelo en tu computadora haciendo clic en **SCD30_Example.ino** que puedes encontrar en la carpeta **XXXX\Arduino\libraries\Seeed_SCD30-master\examples\SCD30_Example**, **XXXX** es la ubicación donde instalaste el IDE de Arduino.
+    b. Ábrelo en tu computadora haciendo clic en **SCD30_Example.ino** que puedes encontrar en la carpeta **XXXX\Arduino\libraries\Seeed_SCD30-master\examples\SCD30_Example**, **XXXX** es la ubicación donde instalaste el Arduino IDE.
 
     <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/c3.jpg" /></div>
 
-    c. O, puedes simplemente hacer clic en el icono ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) en la esquina superior derecha del bloque de código para copiar el siguiente código en un nuevo sketch en el IDE de Arduino.
+    c. O, puedes simplemente hacer clic en el icono ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) en la esquina superior derecha del bloque de código para copiar el siguiente código en un nuevo sketch en el Arduino IDE.
 
 ```cpp
 #include "SCD30.h"
@@ -210,6 +208,7 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 #endif
 
 
+
 void setup()
 {
     Wire.begin();
@@ -221,7 +220,7 @@ void setup()
 void loop()
 {
     float result[3] = {0};
-    
+
     if(scd30.isAvailable())
     {
         scd30.getCarbonDioxideConcentration(result);
@@ -240,20 +239,20 @@ void loop()
         SERIAL.println(" ");
         SERIAL.println(" ");
     }
-    
+
     delay(2000);
 }
 
 ```
 
 :::caution
-        El archivo de biblioteca puede actualizarse. Este código puede no ser aplicable al archivo de biblioteca actualizado, por lo que recomendamos que uses los primeros dos métodos.
+        El archivo de biblioteca puede ser actualizado. Este código puede no ser aplicable al archivo de biblioteca actualizado, por lo que recomendamos que uses los primeros dos métodos.
 :::
 
-- **Paso 4.** Sube la demostración. Si no sabes cómo subir el código, por favor consulta [Cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/).
+- **Paso 4.** Sube la demostración. Si no sabes cómo subir el código, por favor revisa [Cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/).
 
 :::tip
-  Si todo va bien, los datos en bruto del Grove - Sensor de CO2, Temperatura y Humedad (SCD30) deberían poder leerse desde el Monitor Serie.
+  Si todo va bien, los datos en bruto del Grove - CO2 & Temperature & Humidity Sensor (SCD30) deberían poder leerse desde el Monitor Serie.
 :::
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/c2.jpg" /></div>
@@ -267,24 +266,232 @@ Para obtener resultados más precisos en un escenario práctico, necesitas prest
 
 ### Colocación
 
-Por favor consulta las [Directrices de Diseño SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/CD_AN_SCD30_Design-In_Guidelines_D2.pdf) para la colocación correcta.
+Por favor consulta las [Guías de Diseño SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/CD_AN_SCD30_Design-In_Guidelines_D2.pdf) para la colocación correcta.
 
 ### Calibración
 
-Cuando se activa por primera vez se necesita un período mínimo de 7 días para que el algoritmo pueda encontrar su conjunto inicial de parámetros para ASC. El sensor debe estar expuesto al aire fresco durante al menos 1 hora cada día. También durante ese período, el sensor no debe desconectarse de la fuente de alimentación, de lo contrario el procedimiento para encontrar parámetros de calibración se aborta y debe reiniciarse desde el principio. Los parámetros calculados exitosamente se almacenan en la memoria no volátil del SCD30 teniendo el efecto de que después de un reinicio los parámetros previamente encontrados para ASC siguen presentes. Para más detalles sobre la calibración, por favor consulta la [Descripción de Interfaz del Módulo Sensor Sensirion SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf)
+Cuando se activa por primera vez, se necesita un período mínimo de 7 días para que el algoritmo pueda encontrar su conjunto inicial de parámetros para ASC. El sensor debe estar expuesto al aire fresco durante al menos 1 hora cada día. También durante ese período, el sensor no debe desconectarse de la fuente de alimentación, de lo contrario el procedimiento para encontrar parámetros de calibración se aborta y debe reiniciarse desde el principio. Los parámetros calculados exitosamente se almacenan en la memoria no volátil del SCD30 teniendo el efecto de que después de un reinicio los parámetros previamente encontrados para ASC siguen presentes. Para más detalles sobre la calibración, por favor consulta la [Descripción de Interfaz del Módulo Sensor Sensirion SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf)
 
-Hay dos muestras ino en la carpeta de biblioteca SCD30, puedes ejecutar el `SCD30_auto_calibration.ino` para iniciar la calibración.
+Hay dos muestras ino en la carpeta de la biblioteca SCD30, puedes ejecutar el `SCD30_auto_calibration.ino` para iniciar la calibración.
 
-### Jugar Con Wio Terminal (ArduPy)
+### Jugar con Raspberry Pi 
 
 #### Hardware
 
-- **Paso 1.** Prepara las siguientes cosas:
+- **Paso 1**. Cosas usadas en este proyecto:
+
+| Raspberry pi | Grove Base Hat para RasPi| Grove-CO2 & T&H SCD30 |
+|--------------|-------------|-----------------|
+|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/thumbnial.png" alt="pir" width={600} height="auto" /></p>|
+|[Obtener UNO Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html)|
+
+- **Paso 2**. Conecta el Grove Base Hat al Raspberry.
+- **Paso 3**. Conecta el Grove-CO2 al puerto **I2C** del Base Hat.
+- **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
+
+<!-- ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg) -->
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/GROVE-fix/C02.jpg" alt="pir" width={600} height="auto" /></p>
+
+#### Software
+
+:::note
+     Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
+:::
+
+- **Paso 1**. Sigue [Configuración de Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
+- **Paso 2**. Entra al entorno virtual relevante.
+
+```
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
+```
+
+- **Paso 3**. Ejecuta el siguiente comando para ejecutar el código.
+
+- Lo siguiente es para revisar el código grove_co2_scd30.py.
+
+```
+less grove_co2_scd30.py
+```
+
+```python
+
+from typing import NoReturn
+from grove.i2c import Bus
+import struct
+import time
+
+
+class GroveCo2Scd30(object):
+    __COMMAND_TRIGGER_CONTINUOUS_MEASUREMENT = 0x0010
+    __COMMAND_STOP_CONTINUOUS_MEASUREMENT = 0x0104
+    __COMMAND_SET_MEASUREMENT_INTERVAL = 0x4600
+    __COMMAND_GET_DATA_READY_STATUS = 0x0202
+    __COMMAND_READ_MEASUREMENT = 0x0300
+    __COMMAND_ACTIVATE_ASC = 0x5306
+    __COMMAND_SET_FRC = 0x5204
+    __COMMAND_SET_TEMPRATURE_OFFSET = 0x5403
+    __COMMAND_ALTITUDE_COMPENSATION = 0x5102
+    __COMMAND_READ_FIRMWARE_VERSION = 0xd100
+    __COMMAND_SOFT_RESET = 0xd304
+
+    def __init__(self, address=0x61, bus=1):
+        self.address = address
+        self.bus = Bus(bus)
+
+        self.set_measurement_interval(2)
+        self.trigger_continuous_measurement()
+
+    @staticmethod
+    def _calc_crc(data: list) -> int:
+        crc = 0xff
+
+        for d in data:
+            crc ^= d
+
+            for _ in range(8):
+                if crc & 0x80:
+                    crc = ((crc << 1) ^ 0x31) & 0xff
+                else:
+                    crc = (crc << 1) & 0xff
+
+        return crc
+
+    def _write(self, cmd: int, data: list):
+        write_data = list(struct.pack(">H", cmd))
+        if data is not None:
+            for d in data:
+                write_data.extend(struct.pack(">H", d))
+                write_data.append(GroveCo2Scd30._calc_crc(struct.pack(">H", d)))
+
+        write_msg = self.bus.msg.write(self.address, write_data)
+        self.bus.i2c_rdwr(write_msg)
+
+    def _read(self, address: int, data_number: int) -> list:
+        write_data = list(struct.pack(">H", address))
+
+        write_msg = self.bus.msg.write(self.address, write_data)
+        self.bus.i2c_rdwr(write_msg)
+
+        read_msg = self.bus.msg.read(self.address, 3 * data_number)
+        self.bus.i2c_rdwr(read_msg)
+
+        result = []
+        for i in range(data_number):
+            d = read_msg.buf[i*3:i*3+2]
+            if GroveCo2Scd30._calc_crc(d) != read_msg.buf[i*3+2][0]:
+                raise ValueError("CRC mismatch")
+
+            result.append(struct.unpack(">H", d)[0])
+
+        return result
+
+    def trigger_continuous_measurement(self, pressure: int = 0):
+        self._write(self.__COMMAND_TRIGGER_CONTINUOUS_MEASUREMENT, [pressure])
+
+    def stop_continuous_measurement(self):
+        self._write(self.__COMMAND_STOP_CONTINUOUS_MEASUREMENT, None)
+
+    def set_measurement_interval(self, interval: int):
+        self._write(self.__COMMAND_SET_MEASUREMENT_INTERVAL, [interval])
+
+    def get_measurement_interval(self) -> int:
+        data = self._read(self.__COMMAND_SET_MEASUREMENT_INTERVAL, 1)
+
+        return data[0]
+
+    def get_data_ready_status(self) -> bool:
+        data = self._read(self.__COMMAND_GET_DATA_READY_STATUS, 1)
+
+        return True if data[0] == 1 else False
+
+    def read_measurement(self) -> tuple:
+        data = self._read(self.__COMMAND_READ_MEASUREMENT, 6)
+
+        data_bytes = struct.pack(">HHHHHH", data[0], data[1], data[2], data[3], data[4], data[5])
+        data_floats = struct.unpack(">fff", data_bytes)
+        co2 = data_floats[0]
+        temp = data_floats[1]
+        humi = data_floats[2]
+
+        return co2, temp, humi
+
+    def set_forced_recalibration(self, co2: float):
+        self._write(self.__COMMAND_SET_FRC, [int(co2)])
+
+    def set_automatic_self_calibration(self, activate: bool):
+        self._write(self.__COMMAND_ACTIVATE_ASC, [1 if activate else 0])
+
+    def get_automatic_self_calibration(self) -> bool:
+        data = self._read(self.__COMMAND_ACTIVATE_ASC, 1)
+
+        return True if data[0] == 1 else False
+
+    def set_temperature_offset(self, offset: float):
+        self._write(self.__COMMAND_SET_TEMPRATURE_OFFSET, [int(offset * 100)])
+
+    def get_temperature_offset(self) -> float:
+        data = self._read(self.__COMMAND_SET_TEMPRATURE_OFFSET, 1)
+
+        return float(data[0]) / 100
+
+    def set_altitude_compensation(self, altitude: int):
+        self._write(self.__COMMAND_ALTITUDE_COMPENSATION, [altitude])
+
+    def get_altitude_compensation(self) -> int:
+        data = self._read(self.__COMMAND_ALTITUDE_COMPENSATION, 1)
+
+        return data[0]
+
+    def read(self) -> tuple:
+        if not self.get_data_ready_status():
+            return None
+
+        return self.read_measurement()
+
+
+def main() -> NoReturn:
+    sensor = GroveCo2Scd30()
+
+    while True:
+        if sensor.get_data_ready_status():
+            co2, temperature, humidity = sensor.read()
+            print(f"CO2 concentration is {co2:.1f} ppm")
+            print(f"Temperature in Celsius is {temperature:.2f} C")
+            print(f"Relative Humidity is {humidity:.2f} %")
+
+        time.sleep(1)
+
+
+if __name__ == "__main__":
+    main()
+```
+- Ejecuta este código
+```
+python grove_co2_scd30.py
+
+```
+
+Si todo va bien, verás el siguiente fenómeno.😄
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/GROVE-fix/co2_result.png" alt="pir" width={600} height="auto" /></p>
+
+
+
+
+
+
+### Jugar con Wio Terminal (ArduPy)
+
+#### Hardware
+
+- **Paso 1.** Prepara los siguientes elementos:
 
 | Wio Terminal | Grove-CO2 & T&H SCD30 |
 |--------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/thumbnial.png" /></div>|
-|[Consigue Uno Ahora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Consigue Uno Ahora](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html)|
+|[Obtener Uno Ahora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html)|
 
 - **Paso 2.** Conecta Grove-CO2 & T&H SCD30 al puerto Grove **I2C** del Wio Terminal.
 
@@ -294,9 +501,9 @@ Hay dos muestras ino en la carpeta de biblioteca SCD30, puedes ejecutar el `SCD3
 
 #### Software
 
-- **Paso 1.** Sigue [**ArduPy Getting Started**](https://wiki.seeedstudio.com/es/ArduPy/) para configurar el entorno de desarrollo ArduPy en Wio Terminal.
+- **Paso 1.** Sigue [**Introducción a ArduPy**](https://wiki.seeedstudio.com/es/ArduPy/) para configurar el entorno de desarrollo ArduPy en Wio Terminal.
 
-- **Paso 2.** Asegúrate de que el firmware ArduPy esté flasheado en Wio Terminal. Para más información, por favor sigue [**aquí**](https://wiki.seeedstudio.com/es/ArduPy/#ardupy-aip-cli-getting-started).
+- **Paso 2.** Asegúrate de que el firmware ArduPy esté flasheado en Wio Terminal. Para más información, sigue [**aquí**](https://wiki.seeedstudio.com/es/ArduPy/#ardupy-aip-cli-getting-started).
 
 ```sh
 aip install Seeed-Studio/seeed-ardupy-scd30
@@ -353,7 +560,7 @@ aip shell -n -c "runfile <YourPythonFilePath>"
 # aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-scd30.py"
 ```
 
-- **Paso 5.** Veremos los 3 valores de datos mostrados en la terminal como se muestra a continuación, y mostrándose en la pantalla LCD del Wio Terminal.
+- **Paso 5.** Veremos los 3 valores de datos mostrados en la terminal como se muestra a continuación, y también en la pantalla LCD del Wio Terminal.
 
 ```python
 ansonhe@Ansons-Macbook-Pro ~:aip shell -n -c "runfile /Users/ansonhe/Desktop/ArduPy-scd30.py"
@@ -381,14 +588,14 @@ Humidity: 66.61072
 
 ## Recursos
 
-- **[ZIP]** [Grove - Sensor de CO2, Temperatura y Humedad (SCD30) Archivo de esquemas](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Grove-CO2_Temperature_Humidity_Sensor-SCD30.zip)
+- **[ZIP]** [Archivo de esquemas Grove - CO2 & Temperature & Humidity Sensor (SCD30)](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Grove-CO2_Temperature_Humidity_Sensor-SCD30.zip)
 - **[PDF]** [Guía de Diseño SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/CD_AN_SCD30_Design-In_Guidelines_D2.pdf)
 - **[PDF]** [Hoja de Datos SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)
 - **[PDF]** [Descripción de Interfaz SCD30](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf)
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

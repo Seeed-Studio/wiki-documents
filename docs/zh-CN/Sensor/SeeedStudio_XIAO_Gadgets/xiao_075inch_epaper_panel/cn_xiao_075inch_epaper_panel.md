@@ -3,6 +3,7 @@ description: '此页面是 XIAO 7.5" 电子纸面板的导航页面。'
 title: XIAO 7.5" 电子纸面板入门指南
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.webp
 slug: /cn/xiao_075inch_epaper_panel
+sku: 114993635
 sidebar_position: 1
 last_update:
   date: 05/19/2025

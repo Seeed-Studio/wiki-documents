@@ -6,6 +6,7 @@ keywords:
   - reComputer Carrier_Board_for_Jetson_Moudule
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reComputer_A203_Flash_System
+sku: 114110047,114110049,114110048,103110043
 last_update:
   date: 01/05/2023
   author: w0x7ce

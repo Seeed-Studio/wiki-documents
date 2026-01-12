@@ -5,8 +5,9 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP-ONE-Compact-Weather-Station-Introduction
+sku: 101990787, 101990693, 101990784, 101990902, 101991022, 101991021, 101991023, 101991024, 101991044, 101990961, 101991102, 101991050, 101991232, 101991141
 last_update:
-  date: 11/12/2025
+  date: 12/11/2025
   author: Michelle Huang
 ---
 # SenseCAP ONE Series Compact Weather Stations
@@ -158,12 +159,12 @@ We also provide the SenseCAP [Sensor Hub 4G Data Logger](https://solution.seeeds
 
 
 ## Applications
-- Smart Agriculture
-- Smart City
-- Smart Buildings
+- [Smart Agriculture](https://www.hackster.io/angelfernandodls/revolutionizing-agriculture-in-puebla-53786c)
+- [Smart City](https://www.seeedstudio.com/blog/2023/04/25/smart-city-500-sensecap-lorawan-devices-deployed-to-mitigate-urban-heat-island-in-cagliari-italy/)
+- [Smart Buildings](https://www.hackster.io/Pistachio9to5/tango-with-home-assistant-and-sensecap-sensors-1ee587)
 - Transportation and Traffic
 - Smart Industry
-- Weather Monitoring
+- [Weather Monitoring](https://www.seeedstudio.com/blog/2022/09/28/observing-the-real-time-local-weather-why-you-should-have-a-home-weather-station/)
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/4.png"/></div>
 
 ## General Specifications

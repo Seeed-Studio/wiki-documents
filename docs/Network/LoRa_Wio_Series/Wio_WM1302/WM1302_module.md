@@ -6,9 +6,10 @@ keywords:
   - docusaurus
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /WM1302_module
+sku: 114992549, 114992550, 114992629, 114992628, 113100022, 114992967, 114992969, 114992991, 100021717, 114993268
 last_update:
-  date: 4/24/2025
-  author: Leo
+  date: 12/15/2025
+  author: David Du
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
@@ -25,6 +26,10 @@ We has recently released the Wio-E5 Series based on Wio-E5 module.
 Click [here](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3) to meet new members of the LoRa-E5 family from the [Wio-E5 Module](https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/) [Grove module](https://wiki.seeedstudio.com/Grove_LoRa_E5_New_Version/), [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) to [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/).
 
 To learn more on creating a LoRaWAN® End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and to send data to LoRaWAN® Network, read more on wiki pages for [mini Dev boards](https://wiki.seeedstudio.com/LoRa_E5_mini/) and [Development Kit](https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/).
+:::
+
+:::note
+The WM1302 module offers two distinct interface versions. The `SPI` version is currently the mainstream choice. If you prefer the `USB` version, hardware modifications require certain adjustments to the original official firmware for the module to function properly. For more details, please refer to the **FAQ** part.
 :::
 
 WM1302 module is a new generation of LoRaWAN® gateway module with mini-PCIe form-factor. Based on the Semtech® SX1302 baseband LoRaWAN® chip, WM1302 unlocks the greater potential capacity of long-range wireless transmission for gateway products. It features higher sensitivity, less power consumption, and lower operating temperature than the previous SX1301 and SX1308 LoRa® chip.
@@ -56,6 +61,261 @@ WM1302 is designed for M2M and IoT applications and can be widely applied in LPW
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/WM1302_module/WM1302_1.png" alt="pir" width={600} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/WM1302_module/WM1302_2.jpeg" alt="pir" width={600} height="auto" /></p>
+
+<br />
+
+#### Raspberry Pi Pinout Mapping
+
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-4onr">40 Pin No.(BOARD#)</th><th class="tg-ev79">Raspberry Pi GPIO(BCM#)</th><th class="tg-ev79">WM1302 Pi HAT Pinout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td class="tg-4onr">1</td>
+  <td class="tg-f42p">3.3V</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">2</td>
+  <td class="tg-f42p">5V</td>
+  <td class="tg-f42p">5V</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">3</td>
+  <td class="tg-f42p">GPIO 2</td>
+  <td class="tg-f42p">I2C_SDA</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">4</td>
+  <td class="tg-f42p">5V</td>
+  <td class="tg-f42p">5V</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">5</td>
+  <td class="tg-f42p">GPIO 3</td>
+  <td class="tg-f42p">I2C_SCL</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">6</td>
+  <td class="tg-f42p">GND</td>
+  <td class="tg-f42p">GND</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">7</td>
+  <td class="tg-f42p">GPIO 4</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">8</td>
+  <td class="tg-f42p">GPIO 14</td>
+  <td class="tg-f42p">GPS_RXD</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">9</td>
+  <td class="tg-f42p">GND</td>
+  <td class="tg-f42p">GND</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">10</td>
+  <td class="tg-f42p">GPIO 15</td>
+  <td class="tg-f42p">GPS_TXD</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">11</td>
+  <td class="tg-f42p">GPIO 17</td>
+  <td class="tg-f42p">SX1302_RESET<br />SPI version: Active HIGH<br />USB version: Active LOW</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">12</td>
+  <td class="tg-f42p">GPIO 18</td>
+  <td class="tg-f42p">SX1262_BUSY</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">13</td>
+  <td class="tg-f42p">GPIO 27</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">14</td>
+  <td class="tg-f42p">GND</td>
+  <td class="tg-f42p">GND</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">15</td>
+  <td class="tg-f42p">GPIO 22</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">16</td>
+  <td class="tg-f42p">GPIO 23</td>
+  <td class="tg-f42p">SX1262_DIO1</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">17</td>
+  <td class="tg-f42p">3.3V</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">18</td>
+  <td class="tg-f42p">GPIO 24</td>
+  <td class="tg-f42p">SX1262_DIO2</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">19</td>
+  <td class="tg-f42p">GPIO 10</td>
+  <td class="tg-f42p">SPI_MOSI</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">20</td>
+  <td class="tg-f42p">GND</td>
+  <td class="tg-f42p">GND</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">21</td>
+  <td class="tg-f42p">GPIO 9</td>
+  <td class="tg-f42p">SPI_MISO</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">22</td>
+  <td class="tg-f42p">GPIO 25</td>
+  <td class="tg-f42p">GPS_RST</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">23</td>
+  <td class="tg-f42p">GPIO 11</td>
+  <td class="tg-f42p">SPI_SCK</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">24</td>
+  <td class="tg-f42p">GPIO 8</td>
+  <td class="tg-f42p">SX1302_CS</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">25</td>
+  <td class="tg-f42p">GND</td>
+  <td class="tg-f42p">GND</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">26</td>
+  <td class="tg-f42p">GPIO 7</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">27</td>
+  <td class="tg-f42p">GPIO 0</td>
+  <td class="tg-f42p">I2C_SDA(EEPROM)</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">28</td>
+  <td class="tg-f42p">GPIO 1</td>
+  <td class="tg-f42p">I2C_SCL(EEPROM)</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">29</td>
+  <td class="tg-f42p">GPIO 5</td>
+  <td class="tg-f42p">SX1262_RST</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">30</td>
+  <td class="tg-f42p">GND</td>
+  <td class="tg-f42p">GND</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">31</td>
+  <td class="tg-f42p">GPIO 6</td>
+  <td class="tg-f42p">SX1262_CS</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">32</td>
+  <td class="tg-f42p">GPIO 12</td>
+  <td class="tg-f42p">GPS_WAKE_UP</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">33</td>
+  <td class="tg-f42p">GPIO 13</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">34</td>
+  <td class="tg-f42p">GND</td>
+  <td class="tg-f42p">GND</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">35</td>
+  <td class="tg-f42p">GPIO 19</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">36</td>
+  <td class="tg-f42p">GPIO 16</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">37</td>
+  <td class="tg-f42p">GPIO 26</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">38</td>
+  <td class="tg-f42p">GPIO 20</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">39</td>
+  <td class="tg-f42p">GND</td>
+  <td class="tg-f42p">GND</td>
+</tr>
+
+<tr>
+  <td class="tg-4onr">40</td>
+  <td class="tg-f42p">GPIO 21</td>
+  <td class="tg-f42p">NC</td>
+</tr>
+
+</tbody>
+</table>
+
 
 ## Specification
 
@@ -165,20 +425,27 @@ For WM1302 LoRaWAN® Gateway Module USB version, the Semtech SX1302 and SX126x c
 
 - [putty](https://www.putty.org/): To connect to Raspberry Pi via SSH on Windows
 
+<br />
+
+<!-- Code -->
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="WM1302 SPI Version" label="WM1302 SPI Version">
+
 #### Step1. Mounting WM1302 Raspberry Pi Hat and install WM1302 module
 
-It is easy to mount the Pi Hat on Raspberry Pi 40 Pin Header. Power off Raspberry Pi first, insert WM1302 module to the Pi Hat as the following picture and screw it down.
+Power off Raspberry Pi first, insert WM1302 module to the Pi Hat as the following picture and screw it down.
 
 <!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki1.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki1.jpg" alt="pir" width={600} height="auto" /></p>
-If USB version WM1302 module is using, please also connect its Type C port to the Raspberry Pi USB port with a Type C USB cable.
 
-<!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki2.jpg) -->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki2.jpg" alt="pir" width={600} height="auto" /></p>
 
 #### Step2. Enable the Raspbian I2C and SPI interface
 
-WM1302 module communicates with Raspberry Pi with SPI and I2C. But these two interfaces are not enabled by default in Raspbian, so developer need to enable them before using WM1302. Here, we introduce a command line way to enable SPI and I2C interface.
+WM1302 module communicates with Raspberry Pi via SPI and I2C interfaces. But these two interfaces are not enabled by default in Raspbian, so developer need to enable them before using WM1302. Here, we introduce a command line way to enable SPI and I2C interface.
 
 First, login in Raspberry Pi via SSH or using a monitor(don't use serial console as the GPS module on the Pi Hat takes over the Pi's hardware UART pins), then type `sudo raspi-config` in command line to open Rasberry Pi Software Configuration Tool:
 
@@ -219,54 +486,15 @@ make
 
 #### Step4. Run Semtech SX1302 packet forwarder
 
-:::caution Note
-In the new Linux kernel, the **sysfs interface** has been replaced by the **chardev interface**.
-
-This causes the reset_lgw.sh provided in the sx_1302 repository to not reset the module properly and output the following logs:
+Copy `reset_lgw.sh` to `packet_forwarder` folder, and modify the `reset pin` for SX1302 and SX1261 in `reset_lgw.sh` script with text editor `nano`:
 
 ```shell
-...
-./reset_lgw.sh: 26: echo: echo: I/O error
-./reset_lgw.sh: 27: echo: echo: I/O error
-./reset_lgw.sh: 28: echo: echo: I/O error
-./reset_lgw.sh: 29: echo: echo: I/O error
-./reset_lgw.sh: 32: cannot create /sys/class/gpio/gpio17/direction: Directory nonexistent
-./reset_lgw.sh: 33: cannot create /sys/class/gpio/gpio5/direction: Directory nonexistent
-./reset_lgw.sh: 34: cannot create /sys/class/gpio/gpio18/direction: Directory nonexistent
-./reset_lgw.sh: 35: cannot create /sys/class/gpio/gpio13/direction: Directory nonexistent
-CoreCell reset through GPIO17...
-SX1261 reset through GPIO17...
-CoreCell power enable through GPIO18...
-CoreCell ADC reset through GPIO13...
-./reset_lgw.sh: 45: cannot create /sys/class/gpio/gpio18/value: Directory nonexistent
-./reset_lgw.sh: 47: cannot create /sys/class/gpio/gpio17/value: Directory nonexistent
-./reset_lgw.sh: 48: cannot create /sys/class/gpio/gpio17/value: Directory nonexistent
-./reset_lgw.sh: 50: cannot create /sys/class/gpio/gpio5/value: Directory nonexistent
-./reset_lgw.sh: 51: cannot create /sys/class/gpio/gpio5/value: Directory nonexistent
-./reset_lgw.sh: 53: cannot create /sys/class/gpio/gpio13/value: Directory nonexistent
-./reset_lgw.sh: 54: cannot create /sys/class/gpio/gpio13/value: Directory nonexistent
-...
-```
-
-To determine if the system you are running on still has the **sysfs interface**, you can run the following command:
-
-```shell
-ls /sys/class/gpio
-```
-
-:::
-
-**For Linux with sysfs interface:**
-
-If a series of `gpiox` folders appear in it, it means that your system kernel still has the **sysfs interface**, and you can use the script above to reset the module.
-
-Modify `reset pin` for SX1302 and SX1261 in `reset_lgw.sh` script, with text editor `nano`:
-
-```shell
+cp tools/reset_lgw.sh packet_forwarder/
+cd packet_forwarder
 nano tools/reset_lgw.sh
 ```
 
-The following code is shown at the head of text editor:
+You will see the default `reset pin` as following:
 
 ```shell
 # GPIO mapping has to be adapted with HW
@@ -278,60 +506,188 @@ SX1261_RESET_PIN=22     # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-Use the navigation keys to move the cursor, change `SX1302_RESET_PIN=23` to `SX1302_RESET_PIN=17` and `SX1261_RESET_PIN=22` to `SX1261_RESET_PIN=5`, as following:
+Here we use the `cat /sys/kernel/debug/gpio` command, which is a debugging interface provided by the kernel's `debugfs` filesystem. It is primarily used to monitor the real-time status of all GPIO pins on the Raspberry Pi.
+
+`gpiochip0` is what we're really interested in: The WM1302 module connects to the Raspberry Pi via the Pi HAT's 40-pin header, and all of it is managed by this controller.
+
+```shell
+pi@raspberrypi:~/sx1302_hal/packet_forwarder $ cat /sys/kernel/debug/gpio
+gpiochip0: GPIOs 571-624, parent: platform/1f000d0000.gpio, pinctrl-rp1:
+ gpio-571 (ID_SDA              )
+ gpio-572 (ID_SCL              )
+ gpio-573 (GPIO2               )
+ gpio-574 (GPIO3               )
+ gpio-575 (GPIO4               )
+ gpio-576 (GPIO5               )
+ gpio-577 (GPIO6               )
+ gpio-578 (GPIO7               |spi0 CS1            ) out hi ACTIVE LOW
+ gpio-579 (GPIO8               |spi0 CS0            ) out hi ACTIVE LOW
+ gpio-580 (GPIO9               )
+ gpio-581 (GPIO10              )
+ gpio-582 (GPIO11              )
+ gpio-583 (GPIO12              )
+ gpio-584 (GPIO13              )
+ gpio-585 (GPIO14              )
+ gpio-586 (GPIO15              )
+ gpio-587 (GPIO16              )
+ gpio-588 (GPIO17              )
+ gpio-589 (GPIO18              )
+ gpio-590 (GPIO19              )
+ gpio-591 (GPIO20              )
+ gpio-592 (GPIO21              )
+ gpio-593 (GPIO22              )
+ gpio-594 (GPIO23              )
+ gpio-595 (GPIO24              )
+ gpio-596 (GPIO25              )
+ gpio-597 (GPIO26              )
+ gpio-598 (GPIO27              )
+ gpio-599 (PCIE_RP1_WAKE       )
+ gpio-600 (FAN_TACH            )
+ gpio-601 (HOST_SDA            )
+ gpio-602 (HOST_SCL            )
+ gpio-603 (ETH_RST_N           |phy-reset           ) out hi ACTIVE LOW
+ gpio-604 (-                   )
+ gpio-605 (CD0_IO0_MICCLK      |cam0_reg            ) out lo 
+ gpio-606 (CD0_IO0_MICDAT0     )
+ gpio-607 (RP1_PCIE_CLKREQ_N   )
+ gpio-608 (-                   )
+ gpio-609 (CD0_SDA             )
+ gpio-610 (CD0_SCL             )
+ gpio-611 (CD1_SDA             )
+ gpio-612 (CD1_SCL             )
+ gpio-613 (USB_VBUS_EN         )
+ gpio-614 (USB_OC_N            )
+ gpio-615 (RP1_STAT_LED        |PWR                 ) out hi ACTIVE LOW
+ gpio-616 (FAN_PWM             )
+ gpio-617 (CD1_IO0_MICCLK      |cam1_reg            ) out lo 
+ gpio-618 (2712_WAKE           )
+ gpio-619 (CD1_IO1_MICDAT1     )
+ gpio-620 (EN_MAX_USB_CUR      )
+ gpio-621 (-                   )
+ gpio-622 (-                   )
+ gpio-623 (-                   )
+ gpio-624 (-                   )
+```
+
+If your system does not automatically mount debugfs, you must manually mount it first:
+
+```shell
+sudo mount -t debugfs none /sys/kernel/debug
+```
+
+According to the information, we can find out the relationship between GPIO pins `gpio-588, gpio-589, gpio-576` and its corresponding physical pinout index `(GPIO17), (GPIO18), (GPIO5)`.
+
+:::note
+Please refer to the **Raspberry Pi Pinout Mapping** table for the comprehensive GPIO pin mappings.
+:::
+
+Modify the `SX1302_RESET_PIN`, `SX1302_POWER_EN_PIN` and `SX1261_RESET_PIN` based on the GPIO info we get as following:
 
 ```shell
 # GPIO mapping has to be adapted with HW
 #
 
-SX1302_RESET_PIN=17     # SX1302 reset
-SX1302_POWER_EN_PIN=18  # SX1302 power enable
-SX1261_RESET_PIN=5      # SX1261 reset (LBT / Spectral Scan)
+SX1302_RESET_PIN=588     # SX1302 reset
+SX1302_POWER_EN_PIN=589  # SX1302 power enable
+SX1261_RESET_PIN=576      # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-Save these changes by pressing `CTRL + x`, and then `y`, finally pressing `Enter` to close the text editor.
+Save these changes by pressing `CTRL + x`, followed by `y` and `Enter` to close the text editor.
 
-**For Linux without sysfs interface:**
+<br />
 
-If there is no folder named `gpiox` in it, then you need to call the GPIO using the **Libgpiod package**.
-
-The reset_lgw.sh script to control the GPIO using the Libgpiod package is as follows:
+You may also refer to the complete script below:
 
 <details>
 <summary>reset_lgw.sh</summary>
 
 ```shell
-SX1302_RESET_PIN=17     # SX1302 reset
-SX1302_POWER_EN_PIN=18  # SX1302 power enable
-SX1261_RESET_PIN=5     # SX1261 reset (LBT / Spectral Scan)
+#!/bin/sh
 
+# This script is intended to be used on SX1302 CoreCell platform, it performs
+# the following actions:
+#       - export/unpexort GPIO23 and GPIO18 used to reset the SX1302 chip and to enable the LDOs
+#       - export/unexport GPIO22 used to reset the optional SX1261 radio used for LBT/Spectral Scan
+#
+# Usage examples:
+#       ./reset_lgw.sh stop
+#       ./reset_lgw.sh start
+
+# GPIO mapping has to be adapted with HW
+#
+
+SX1302_RESET_PIN=588     # SX1302 reset
+SX1302_POWER_EN_PIN=589  # SX1302 power enable
+SX1261_RESET_PIN=576     # SX1261 reset (LBT / Spectral Scan)
+AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 
 WAIT_GPIO() {
     sleep 0.1
 }
 
+init() {
+    # setup GPIOs
+    echo "$SX1302_RESET_PIN" > /sys/class/gpio/export; WAIT_GPIO
+    echo "$SX1261_RESET_PIN" > /sys/class/gpio/export; WAIT_GPIO
+    echo "$SX1302_POWER_EN_PIN" > /sys/class/gpio/export; WAIT_GPIO
+    echo "$AD5338R_RESET_PIN" > /sys/class/gpio/export; WAIT_GPIO
+
+    # set GPIOs as output
+    echo "out" > /sys/class/gpio/gpio$SX1302_RESET_PIN/direction; WAIT_GPIO
+    echo "out" > /sys/class/gpio/gpio$SX1261_RESET_PIN/direction; WAIT_GPIO
+    echo "out" > /sys/class/gpio/gpio$SX1302_POWER_EN_PIN/direction; WAIT_GPIO
+    echo "out" > /sys/class/gpio/gpio$AD5338R_RESET_PIN/direction; WAIT_GPIO
+}
+
 reset() {
     echo "CoreCell reset through GPIO$SX1302_RESET_PIN..."
-    echo "SX1261 reset through GPIO$SX1261_RESET_PIN..."
+    echo "SX1261 reset through GPIO$SX1302_RESET_PIN..."
     echo "CoreCell power enable through GPIO$SX1302_POWER_EN_PIN..."
+    echo "CoreCell ADC reset through GPIO$AD5338R_RESET_PIN..."
 
     # write output for SX1302 CoreCell power_enable and reset
-    gpioset gpiochip0 $SX1302_POWER_EN_PIN=1; WAIT_GPIO
-    
-    gpioset gpiochip0 $SX1302_RESET_PIN=1; WAIT_GPIO
-    gpioset gpiochip0 $SX1302_RESET_PIN=0; WAIT_GPIO
+    echo "1" > /sys/class/gpio/gpio$SX1302_POWER_EN_PIN/value; WAIT_GPIO
 
-    gpioset gpiochip0 $SX1261_RESET_PIN=0; WAIT_GPIO
-    gpioset gpiochip0 $SX1261_RESET_PIN=1; WAIT_GPIO
+    echo "1" > /sys/class/gpio/gpio$SX1302_RESET_PIN/value; WAIT_GPIO
+    echo "0" > /sys/class/gpio/gpio$SX1302_RESET_PIN/value; WAIT_GPIO
+
+    echo "0" > /sys/class/gpio/gpio$SX1261_RESET_PIN/value; WAIT_GPIO
+    echo "1" > /sys/class/gpio/gpio$SX1261_RESET_PIN/value; WAIT_GPIO
+
+    echo "0" > /sys/class/gpio/gpio$AD5338R_RESET_PIN/value; WAIT_GPIO
+    echo "1" > /sys/class/gpio/gpio$AD5338R_RESET_PIN/value; WAIT_GPIO
+}
+
+term() {
+    # cleanup all GPIOs
+    if [ -d /sys/class/gpio/gpio$SX1302_RESET_PIN ]
+    then
+        echo "$SX1302_RESET_PIN" > /sys/class/gpio/unexport; WAIT_GPIO
+    fi
+    if [ -d /sys/class/gpio/gpio$SX1261_RESET_PIN ]
+    then
+        echo "$SX1261_RESET_PIN" > /sys/class/gpio/unexport; WAIT_GPIO
+    fi
+    if [ -d /sys/class/gpio/gpio$SX1302_POWER_EN_PIN ]
+    then
+        echo "$SX1302_POWER_EN_PIN" > /sys/class/gpio/unexport; WAIT_GPIO
+    fi
+    if [ -d /sys/class/gpio/gpio$AD5338R_RESET_PIN ]
+    then
+        echo "$AD5338R_RESET_PIN" > /sys/class/gpio/unexport; WAIT_GPIO
+    fi
 }
 
 case "$1" in
     start)
+    term # just in case
+    init
     reset
     ;;
     stop)
     reset
+    term
     ;;
     *)
     echo "Usage: $0 {start|stop}"
@@ -340,88 +696,196 @@ case "$1" in
 esac
 
 exit 0
-```
 
+```
 </details>
 
-Copy `reset_lgw.sh` to `packet_forwarder` folder, then run `lora_pkt_fwd`. Please note that you should select a `global_conf.json.sx1250.xxxx` config file based on the module you are using:
+<br />
+
+Choose your prefered LoRaWAN Network Server `server_address` and the gateway EUI `gateway_ID` in the corresponding `global_conf.json.sx1250.xxxxx` based on the module you are using, and modify the `up/down port` to `1700`. Then run the following code to start the concentrator:
+
 
 ```shell
-cp tools/reset_lgw.sh packet_forwarder/
-cd packet_forwarder
+cd ~/sx1302_hal/packet_forwarder
 
 # Please select one of the following comands based on your module
 # for WM1302 LoRaWAN Gateway Module (SPI) - EU868
 ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 
-# for WM1302 LoRaWAN Gateway Module (USB) - EU868
-./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
-
 # for WM1302 LoRaWAN Gateway Module (SPI) - US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915
+```
+
+</TabItem>
+<TabItem value="WM1302 USB Version" label="WM1302 USB Version">
+
+#### Step1. Mounting WM1302 Raspberry Pi Hat and install WM1302 module
+
+Power off Raspberry Pi first, insert WM1302 module to the Pi Hat as the following picture and screw it down. Connect its Type C port to one of the Raspberry Pi USB port with a Type C USB cable.
+
+<!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki2.jpg) -->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki2.jpg" alt="pir" width={600} height="auto" /></p>
+
+#### Step2. Enable the Raspbian I2C and SPI interface
+
+WM1302 module communicates with Raspberry Pi with SPI and I2C. But these two interfaces are not enabled by default in Raspbian, so developer need to enable them before using WM1302. Here, we introduce a command line way to enable SPI and I2C interface.
+
+First, login in Raspberry Pi via SSH or using a monitor(don't use serial console as the GPS module on the Pi Hat takes over the Pi's hardware UART pins), then type `sudo raspi-config` in command line to open Rasberry Pi Software Configuration Tool:
+
+
+```shell
+sudo raspi-config
+```
+
+<!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki3.png) -->
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki3.png" alt="pir" width={600} height="auto" /></p>
+
+1. Select `Interface Options`
+
+2. Select `SPI`, then select `Yes` to enable it
+
+3. Select `I2C`, then select `Yes` to enable it
+
+4. Select `Serial Port`, then select `No` for "Would you like a login shell..." and select `Yes` for "Would you like the serial port hardware..."
+
+5. After this, please reboot Raspberry Pi to make sure these settings work.
+
+#### Step3. Get and compile SX1302 source code
+
+Now let's install `git` and download `sx1302_hal`(library and programs for SX1302 LoRa Gateway) from github:
+
+```shell
+sudo apt update
+sudo apt install -y git
+cd ~
+git clone https://github.com/Lora-net/sx1302_hal
+```
+
+Move to `sx1302_hal` folder and compile everything:
+
+```shell
+cd ~/sx1302_hal
+make
+```
+
+#### Step4. Run Semtech SX1302 packet forwarder
+
+To get the specific USB port please follow the steps below:
+
+```shell
+lsusb
+```
+
+In my case, the `Product` ID of our WM1302 module is `8047`
+
+```shell
+pi@raspberrypi:~/sx1302_hal/packet_forwarder $ lsusb
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 2109:3431 VIA Labs, Inc. Hub
+Bus 001 Device 003: ID 2886:8047 Seeed Technology Co., Ltd. WM1302 USB Port  
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+```
+
+Then get the USB device with the `Product ID` `8047`. 
+
+```shell
+sudo dmesg | grep 8047
+sudo modprobe cdc_acm
+```
+
+In my case, the USB port number is `1-1.3`.
+
+```shell
+pi@raspberrypi:~/sx1302_hal/packet_forwarder $ sudo dmesg | grep 8047
+[  215.459617] usb 1-1.3: New USB device found, idVendor=2886, idProduct=8047, bcdDevice= 2.00
+```
+
+Now we can get the device port by using:
+
+```shell
+sudo dmesg | grep 1-1.3
+```
+
+```shell
+pi@raspberrypi:~/sx1302_hal/packet_forwarder $ sudo dmesg | grep 1-1.3
+[  215.364299] usb 1-1.3: new full-speed USB device number 3 using xhci_hcd
+[  215.459617] usb 1-1.3: New USB device found, idVendor=2886, idProduct=8047, bcdDevice= 2.00
+[  215.459643] usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[  215.459657] usb 1-1.3: Product: WM1302 USB Port  
+[  215.459669] usb 1-1.3: Manufacturer: SEEED
+[  215.459680] usb 1-1.3: SerialNumber: 4E100336FF7F
+[  215.543301] cdc_acm 1-1.3:1.0: ttyACM0: USB ACM device
+```
+
+So in my case, the USB device is `ttyACM0`. The default USB device setting in `global_conf.json.sx1250.xxxxx.USB` is `ttyACM0`, so we do not need to do anything here.
+
+If your device uses other USB port, we can use the `sed` command `sed -i 's/search_string/replacement_string/g' filename` to modify the `global_conf.json.sx1250.xxxxx.USB` config file for the corresponding region.
+
+<br />
+
+Choose your prefered LoRaWAN Network Server `server_address` and the gateway EUI `gateway_ID` in the corresponding `global_conf.json.sx1250.xxxxx` based on the module you are using, and modify the `up/down port` to `1700`. Then run the following code to start the concentrator:
+
+```shell
+cd ~/sx1302_hal/packet_forwarder
+
+# Please select one of the following comands based on your module
+
+# for WM1302 LoRaWAN Gateway Module (USB) - EU868
+./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
 
 # for WM1302 LoRaWAN Gateway Module (USB) - US915
 ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
 
-Now, packet forwarder are able to run correctly. But there are still something to do if developers need to forward lora® packet to their LoRa® Server(e.g. TTN or chripstack).
+</TabItem>
+</Tabs>
 
-To achieve this target, developers must add the Raspberry Pi Gateway to Lora Server first. Take [TTNv3](https://www.thethingsindustries.com/docs/getting-started/) as an example, login [TTNv3 console](https://eu1.cloud.thethings.network/console), click `Go to gateways` and click `Add gateway`, in the `Add gateway` page you will find dozens of settings to fill. What you need to focus on are `Gateway EUI` and `Gateway Server address` and `Frequency plan`, the others just leave it to the default.
+<!-- Code END -->
 
-- `Gateway EUI`: A 64 bit extended unique identifier for your gateway, we set it to `AA555A0000000000` in this wiki
+---
 
-- `Gateway Server address`:  The server addresss which gateway will connect to, copy this to clipboard, developers need to save this to the config file later
+Now, packet forwarder are able to run correctly. To successfully forward data to our LoRaWAN Network Server(e.g. TTN or ChripStack), we still need to make some configurations on the server side.
 
-- `Frequency plan`:  If using EU868 module, choose `Europe 863-870 MHz (SF9 for RX2)`, if using US915 module, choose `United States 902-928 MHz, FSB 2`
+To do that, we need to register the Raspberry Pi Gateway we just build to our LoRa Network Server first. Take [TTN](https://www.thethingsindustries.com/docs/getting-started/) as an example, login [TTN console](https://eu1.cloud.thethings.network/console), click `Gateways` button on the left-hand side panel and click `Register gateway`. Fill the `Gateway EUI`, `Gateway Server address` and `Frequency plan`, leave other options with the default settings.
+
+- **Gateway EUI:** A 64 bit unique identifier for your gateway.
+
+- **Gateway Server address:**  The URL of the cluster on which the network server deployed(`eu1.cloud.thethings.network` for example). 
+
+- **Frequency plan:**  Configure the corresponding frequency plan based on your region. `Europe 863-870 MHz (SF9 for RX2-recommended)` for Europe, `United States 902-928 MHz, FSB 2` for US.
+
 <!-- 
 ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki4.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki4.png" alt="pir" width={600} height="auto" /></p>
-After adding gateway, back to the Raspberry Pi, press `CTRL + c` to stop `lora_pkt_fwd`, then edit the `global_conf.json.sx1250.xxxx` config file you used just now, with text editor `nano`:
 
-```shell
-# Please select one of the following comands based on your module
-# for WM1302 LoRaWAN Gateway Module (SPI) - EU868
-nano global_conf.json.sx1250.EU868
+<br />
 
-# for WM1302 LoRaWAN Gateway Module (USB) - EU868
-nano global_conf.json.sx1250.EU868.USB
-
-# for WM1302 LoRaWAN Gateway Module (SPI) - US915
-nano global_conf.json.sx1250.US915
-
-# for WM1302 LoRaWAN Gateway Module (USB) - US915
-nano global_conf.json.sx1250.US915.USB
-```
-
-Basically, you need to modify these parameters: `"gateway_ID" "server_address" "serv_port_up" "serv_port_down"`, which can be found at the tail of the config file. Copy `Gateway Server address` to `"server_address"`, change `"serv_port_up"` and `"serv_port_down"` to `1700`, these parameters should be edited like this:
+After successfully registering the gateway, press `CTRL + c` to stop `lora_pkt_fwd`, then edit and check the `global_conf.json.sx1250.xxxx` config file to make sure that the `"gateway_ID"` and `"server_address"` entries exactly match the settings in LNS.
 
 ```json
+    ...
 "gateway_conf": {
     "gateway_ID": "AA555A0000000000",
     /* change with default server address/ports */
     "server_address": "eu1.cloud.thethings.network",
     "serv_port_up": 1700,
     "serv_port_down": 1700,
+    ...
 ```
 
-Save these changes by pressing `CTRL + x`, and then `y`, finally pressing `Enter` to close the text editor.
+Restart `lora_pkt_fwd` by using the command `./lora_pkt_fwd -c global_conf.json.sx1250.xxxxx`, and you should be able to find your Raspberry Pi Gateway are conntected to TTN.
 
-Restart `lora_pkt_fwd`, you will find your Raspberry Pi Gateway are conntected to TTNv3.
+## FAQ
 
-```shell
-# Please select one of the following comands based on your module
-# for WM1302 LoRaWAN Gateway Module (SPI) - EU868
-./lora_pkt_fwd -c global_conf.json.sx1250.EU868
+<details>
+<summary>Why my devices can not join the network server even if all the settings are correct?</summary>
 
-# for WM1302 LoRaWAN Gateway Module (USB) - EU868
-./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
+<br />
 
-# for WM1302 LoRaWAN Gateway Module (SPI) - US915
-./lora_pkt_fwd -c global_conf.json.sx1250.US915
+We have observed that certain modules(WM1302-US915 USB version) may fail to transmit downlink data packets properly due to difference of the hardware. To fix this issue, please modify the value of the macro `TX_JIT_DELAY` (you can find this macro in `/sx1302_hal/packet_forwarder/src/jitqueue.c`) from 40000 to 120000 and remake the sx1302_hal. 
 
-# for WM1302 LoRaWAN Gateway Module (USB) - US915
-./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
-```
+
+</details>
 
 ## Sources
 

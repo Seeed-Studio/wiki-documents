@@ -5,9 +5,10 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_SenseCAP_ONE_Compact_Weather_Sensor
+sku: 101990787,101990693,101990784,101990902,101990961,101991022,101991021,101991023,101991024,101991044,101991102,101991050,101991232,101991141
 last_update:
-  date: 11/25/2025
-  author: Michelle Huang
+  date: 12/25/2025
+  author: Janet
 ---
 # Getting Started with SenseCAP ONE Compact Weather Sensor
 
@@ -155,6 +156,54 @@ On the upgrade page, you will need to choose to update the mainboard firmware or
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image26.png" /></div>
 
+#### Firmware Upgrade
+
+1. Open `SenseCAP One Configuration Tool`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/SenseCAP_One_Configuration_Tool.png" /></div>
+
+2. Connect the device to your computer via the Type-C cable
+
+3. Open the software, select the correct `COM` port for the device, and click `"Connect"`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Connect.png" /></div>
+
+4. After connecting, click `"Firmware Update"`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Firmware_Update.png" /></div>
+
+5. Select the target board and the corresponding firmware file
+
+- Select the `Master board`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Master_board.png" /></div>
+
+- Click `"Local File"` and browse to the firmware folder
+
+- Click `"Update"`
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Update.png" /></div>
+
+6. Press the Reset button on the device (located next to the Type-C port) after clicking `"Update"`.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Reset.png" /></div>
+
+The update process will begin a few seconds after pressing the button.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Update2.png" /></div>
+
+7. Once the update is complete, press the Reset button again, then click `"OK"` on the screen.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Reset2.png" /></div>
+
+8. Repeat the above steps to flash another firmware onto `Slave Board 1`.
+
+9. Close the Firmware Update window after completion, Click `"Disconnect"`.
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/Disconnect.png" /></div>
+
+This completes all the firmware upgrade steps for the weather station.
+
 ### Serial debug tool
 
 The communication settings are as follows:
@@ -256,8 +305,6 @@ The temperature needs to be obtained through a complement calculation.
 4. The original code is - (FF FF FC 18-1 = FF FF FC 17) = 80 00 03 E8(Hex) = -1000 (Decimal).
 
 5. Then the temperature measurement is -1000/1000 = -1°
-
-
 
 **S500 decode**
 
@@ -378,7 +425,7 @@ Commands come in two formats:
 ### Command List
 
 Please refer to:
-[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ## SDI-12
 
@@ -394,8 +441,7 @@ The sequence of each byte sent is shown in the following figure:
 
 ### SDI-12 command and response
 
-Please refer to:
-&lt;https://files.seeedstudio.com/products/101990784/SenseCAP%20ONE%20Compact%20Weather%20Sensor%20User%20Guide-v2.0.pdf&gt;
+Please refer to [SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
 
 ### SDI-12 Read
 
@@ -467,4 +513,11 @@ Then send "continuous measurement command 0R2! the device returns 4 measured val
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
 
 ## Resource
-[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.5.pdf)
+
+[SenseCAP ONE/SenseCAP ONE V3 Compact Weather Station User Guide](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_ONE/SenseCAP_ONE_V3_Compact_Weather_Station_User_Guide_V1.6.pdf)
+
+## FAQ
+
+**How is the average wind speed and direction calculated?**
+
+The default average time window is 5s. Within this window, the device will collect wind speed and directiondatafive times and return an average value.

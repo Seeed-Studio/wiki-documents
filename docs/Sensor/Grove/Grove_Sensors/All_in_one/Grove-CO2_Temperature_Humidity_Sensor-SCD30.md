@@ -5,9 +5,10 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-CO2_Temperature_Humidity_Sensor-SCD30
+sku: 101020634
 last_update:
-  date: 12/30/2022
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/main.jpg" /></div>
@@ -272,6 +273,214 @@ Please refer to the [SCD30 Design-In Guidelines](https://files.seeedstudio.com/w
 When activated for the first time a period of minimum 7 days is needed so that the algorithm can find its initial parameter set for ASC. The sensor has to be exposed to fresh air for at least 1 hour every day. Also during that period, the sensor may not be disconnected from the power supply, otherwise the procedure to find calibration parameters is aborted and has to be restarted from the beginning. The successfully calculated parameters are stored in non-volatile memory of the SCD30 having the effect that after a restart the previously found parameters for ASC are still present. For more detail about the calibration, please refer to the [Interface Description Sensirion SCD30 Sensor Module](https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/res/Sensirion_CO2_Sensors_SCD30_Interface_Description.pdf)
 
 There are two ino sample in the SCD30 library foldor, you can run the `SCD30_auto_calibration.ino` to start the calibration.
+
+### Play With Raspberry Pi 
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi| Grove-CO2 & T&H SCD30 |
+|--------------|-------------|-----------------|
+|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-CO2-Temperature-Humidity-Sensor-SCD30/img/thumbnial.png" alt="pir" width={600} height="auto" /></p>|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the  Grove-CO2 to the **I2C** port of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+<!-- ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg) -->
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/GROVE-fix/C02.jpg" alt="pir" width={600} height="auto" /></p>
+
+#### Software
+
+:::note
+     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::
+
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Enter the relevant virtual environment.
+
+```
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
+```
+
+- **Step 3**. Excute below command to run the code.
+
+- The following is to check the grove_co2_scd30.py code.
+
+```
+less grove_co2_scd30.py
+```
+
+```python
+
+from typing import NoReturn
+from grove.i2c import Bus
+import struct
+import time
+
+
+class GroveCo2Scd30(object):
+    __COMMAND_TRIGGER_CONTINUOUS_MEASUREMENT = 0x0010
+    __COMMAND_STOP_CONTINUOUS_MEASUREMENT = 0x0104
+    __COMMAND_SET_MEASUREMENT_INTERVAL = 0x4600
+    __COMMAND_GET_DATA_READY_STATUS = 0x0202
+    __COMMAND_READ_MEASUREMENT = 0x0300
+    __COMMAND_ACTIVATE_ASC = 0x5306
+    __COMMAND_SET_FRC = 0x5204
+    __COMMAND_SET_TEMPRATURE_OFFSET = 0x5403
+    __COMMAND_ALTITUDE_COMPENSATION = 0x5102
+    __COMMAND_READ_FIRMWARE_VERSION = 0xd100
+    __COMMAND_SOFT_RESET = 0xd304
+
+    def __init__(self, address=0x61, bus=1):
+        self.address = address
+        self.bus = Bus(bus)
+
+        self.set_measurement_interval(2)
+        self.trigger_continuous_measurement()
+
+    @staticmethod
+    def _calc_crc(data: list) -> int:
+        crc = 0xff
+
+        for d in data:
+            crc ^= d
+
+            for _ in range(8):
+                if crc & 0x80:
+                    crc = ((crc << 1) ^ 0x31) & 0xff
+                else:
+                    crc = (crc << 1) & 0xff
+
+        return crc
+
+    def _write(self, cmd: int, data: list):
+        write_data = list(struct.pack(">H", cmd))
+        if data is not None:
+            for d in data:
+                write_data.extend(struct.pack(">H", d))
+                write_data.append(GroveCo2Scd30._calc_crc(struct.pack(">H", d)))
+
+        write_msg = self.bus.msg.write(self.address, write_data)
+        self.bus.i2c_rdwr(write_msg)
+
+    def _read(self, address: int, data_number: int) -> list:
+        write_data = list(struct.pack(">H", address))
+
+        write_msg = self.bus.msg.write(self.address, write_data)
+        self.bus.i2c_rdwr(write_msg)
+
+        read_msg = self.bus.msg.read(self.address, 3 * data_number)
+        self.bus.i2c_rdwr(read_msg)
+
+        result = []
+        for i in range(data_number):
+            d = read_msg.buf[i*3:i*3+2]
+            if GroveCo2Scd30._calc_crc(d) != read_msg.buf[i*3+2][0]:
+                raise ValueError("CRC mismatch")
+
+            result.append(struct.unpack(">H", d)[0])
+
+        return result
+
+    def trigger_continuous_measurement(self, pressure: int = 0):
+        self._write(self.__COMMAND_TRIGGER_CONTINUOUS_MEASUREMENT, [pressure])
+
+    def stop_continuous_measurement(self):
+        self._write(self.__COMMAND_STOP_CONTINUOUS_MEASUREMENT, None)
+
+    def set_measurement_interval(self, interval: int):
+        self._write(self.__COMMAND_SET_MEASUREMENT_INTERVAL, [interval])
+
+    def get_measurement_interval(self) -> int:
+        data = self._read(self.__COMMAND_SET_MEASUREMENT_INTERVAL, 1)
+
+        return data[0]
+
+    def get_data_ready_status(self) -> bool:
+        data = self._read(self.__COMMAND_GET_DATA_READY_STATUS, 1)
+
+        return True if data[0] == 1 else False
+
+    def read_measurement(self) -> tuple:
+        data = self._read(self.__COMMAND_READ_MEASUREMENT, 6)
+
+        data_bytes = struct.pack(">HHHHHH", data[0], data[1], data[2], data[3], data[4], data[5])
+        data_floats = struct.unpack(">fff", data_bytes)
+        co2 = data_floats[0]
+        temp = data_floats[1]
+        humi = data_floats[2]
+
+        return co2, temp, humi
+
+    def set_forced_recalibration(self, co2: float):
+        self._write(self.__COMMAND_SET_FRC, [int(co2)])
+
+    def set_automatic_self_calibration(self, activate: bool):
+        self._write(self.__COMMAND_ACTIVATE_ASC, [1 if activate else 0])
+
+    def get_automatic_self_calibration(self) -> bool:
+        data = self._read(self.__COMMAND_ACTIVATE_ASC, 1)
+
+        return True if data[0] == 1 else False
+
+    def set_temperature_offset(self, offset: float):
+        self._write(self.__COMMAND_SET_TEMPRATURE_OFFSET, [int(offset * 100)])
+
+    def get_temperature_offset(self) -> float:
+        data = self._read(self.__COMMAND_SET_TEMPRATURE_OFFSET, 1)
+
+        return float(data[0]) / 100
+
+    def set_altitude_compensation(self, altitude: int):
+        self._write(self.__COMMAND_ALTITUDE_COMPENSATION, [altitude])
+
+    def get_altitude_compensation(self) -> int:
+        data = self._read(self.__COMMAND_ALTITUDE_COMPENSATION, 1)
+
+        return data[0]
+
+    def read(self) -> tuple:
+        if not self.get_data_ready_status():
+            return None
+
+        return self.read_measurement()
+
+
+def main() -> NoReturn:
+    sensor = GroveCo2Scd30()
+
+    while True:
+        if sensor.get_data_ready_status():
+            co2, temperature, humidity = sensor.read()
+            print(f"CO2 concentration is {co2:.1f} ppm")
+            print(f"Temperature in Celsius is {temperature:.2f} C")
+            print(f"Relative Humidity is {humidity:.2f} %")
+
+        time.sleep(1)
+
+
+if __name__ == "__main__":
+    main()
+```
+- Run this code
+```
+python grove_co2_scd30.py
+
+```
+
+If everything goes smoothly, you will see the following phenomenon.😄
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/GROVE-fix/co2_result.png" alt="pir" width={600} height="auto" /></p>
+
+
+
+
+
 
 ### Play With Wio Terminal (ArduPy)
 

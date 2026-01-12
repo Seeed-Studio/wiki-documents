@@ -1,5 +1,5 @@
 ---
-description: このwikiでは、Raspberry Pi5とRaspberry Pi Compute Module 4でyolov8sのポーズ推定と物体検出のベンチマークを実演します。
+description: このwikiは、Raspberry Pi5とRaspberry Pi Compute Module 4でのyolov8sポーズ推定と物体検出のベンチマークを実演します。
 title: RPi5とCM4でrpi ai kitを使用してyolov8sを実行するベンチマーク
 keywords:
   - Edge
@@ -7,6 +7,7 @@ keywords:
   - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit
+sku: 103990663
 last_update:
   date: 07/17/2024
   author: Jiahao
@@ -18,9 +19,9 @@ no_comments: false # for Disqus
 
 ## はじめに
 
-[YOLOv8](https://github.com/ultralytics/ultralytics)（You Only Look Once version 8）は、リアルタイムポーズ推定と物体検出モデルの人気のYOLOシリーズです。速度、精度、柔軟性において複数の進歩を導入することで、前身の強みを基盤として構築されています。[Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html)は推論速度を加速するために使用され、Hailo-8Lチップを中心に構築された13 TOPSニューラルネットワーク推論アクセラレータを特徴としています。
+[YOLOv8](https://github.com/ultralytics/ultralytics)（You Only Look Once version 8）は、リアルタイムポーズ推定と物体検出モデルの人気の高いYOLO シリーズです。速度、精度、柔軟性において複数の進歩を導入することで、前身の強みを基盤としています。[Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html)は推論速度を加速するために使用され、Hailo-8Lチップを中心に構築された13 TOPSニューラルネットワーク推論アクセラレータを特徴としています。
 
-このwikiでは、Raspberry Pi 5とRaspberry Pi Compute Module 4でのポーズ推定と物体検出のためのYOLOv8sのベンチマークを紹介します。すべてのテストは同じモデル（YOLOv8s）を使用し、int8に量子化され、入力サイズは640x640解像度、バッチサイズは1に設定され、240 FPSの同じビデオからの入力を使用しています。
+このwikiでは、Raspberry Pi 5とRaspberry Pi Compute Module 4でのポーズ推定と物体検出のためのYOLOv8sのベンチマークを紹介します。すべてのテストは同じモデル（YOLOv8s）を使用し、int8に量子化され、入力サイズは640x640解像度、バッチサイズは1に設定され、240 FPSの同じビデオからの入力を使用します。
 
 ## ハードウェアの準備
 
@@ -39,12 +40,12 @@ no_comments: false # for Disqus
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -56,22 +57,56 @@ no_comments: false # for Disqus
 <div class="table-center">
  <table align="center">
  <tr>
+  <th>reComputer AI R2140</th>
   <th>Raspberry Pi5 8GB</th>
   <th>Raspberry Pi AI Kit</th>
  </tr>
     <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102110919-raspberry-pi-5-8gb-font.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+
+### Raspberry Pi CM5用
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -85,24 +120,24 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="Method 1" label="Pi5 Benchmark">
+<TabItem value="Method 1" label="Pi5ベンチマーク">
 
-### RPi5にAIキットをインストールする
+### RPi5にAI kitをインストール
 
 [こちら](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)を参照してください
 
 ### Hailoソフトウェアのインストールとインストールの確認
 
-#### システムを更新する
+#### システムの更新
 
 ```
 sudo apt update
 sudo apt full-upgrade
 ```
 
-#### PCIeをgen2/gen3に設定する（gen3はgen2より高速）
+#### pcieをgen2/gen3に設定（gen3はgen2より高速）
 
-以下のテキストを ```/boot/firmware/config.txt``` に追加してください
+```/boot/firmware/config.txt```に以下のテキストを追加
 
 ```
 #Enable the PCIe external connector
@@ -139,7 +174,7 @@ hailortcli fw-control identify
 正しい結果は以下のように表示されます：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_software.png" alt="pir" width={1000} height="auto"/></p>
 
-Raspberry Pi5でターミナルを開き、以下のコマンドを入力してhailo-8Lが接続されているかどうかを確認します。
+Raspberry Pi5でターミナルを開き、以下のコマンドを入力してhailo-8Lが接続されているかを確認します。
 
 ```
 lspci | grep Hailo
@@ -151,7 +186,7 @@ lspci | grep Hailo
 ### プロジェクトの実行
 
 <Tabs>
-<TabItem value="Method 1" label="ポーズ推定の実行">
+<TabItem value="Method 1" label="ポーズ推定を実行">
 
 #### プロジェクトのインストール
 
@@ -180,7 +215,7 @@ bash run.sh pose-estimation
 
 </TabItem>
 
-<TabItem value="Method 2" label="オブジェクト検出を実行">
+<TabItem value="Method 2" label="物体検出を実行">
 
 #### プロジェクトのインストール
 
@@ -212,12 +247,12 @@ bash run.sh object-detection
 
 </TabItem>
 
-<TabItem value="Method 2" label="CM4 ベンチマーク">
+<TabItem value="Method 2" label="CM4ベンチマーク">
 
 物体検出については、以下のwikiを参照してください：
 [yolov8_object_detection_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/ja/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)
 
-姿勢推定については、以下のwikiを参照してください：
+ポーズ推定については、以下のwikiを参照してください：
 [yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/ja/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/)
 </TabItem>
 
@@ -245,7 +280,7 @@ bash run.sh object-detection
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

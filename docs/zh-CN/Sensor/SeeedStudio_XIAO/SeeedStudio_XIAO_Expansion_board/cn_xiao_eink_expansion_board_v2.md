@@ -1,8 +1,9 @@
 ---
 title: ePaper 驱动板
-description: eInk XIAO 扩展板是 Seeed Studio 设计的智能模块，用于在电子纸屏幕上显示内容。
+description: XIAO 的 eInk 扩展板是 Seeed Studio 设计的智能模块，用于在电子纸屏幕上显示内容。
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/titleimg.webp
 slug: /cn/xiao_eink_expansion_board_v2
+sku: 104990861,114993558
 keywords:
   - XIAO
   - epaper
@@ -28,7 +29,7 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 此分线板不包含 ePaper 显示屏；显示屏需要单独购买。
 :::
 
-## 介绍
+## 简介
 
 ### 特性
 
@@ -36,12 +37,12 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 - **带开关的 BAT 连接器**：便于电池连接，并包含开关以结合电池和开关实现更高效的节能。
 - **24 针 PFC 连接器**：为各种外设提供多样化的连接选项。
 - **扩展 IO 端口**：支持连接额外的传感器，如温湿度传感器，以增强功能。
-- **兼容 Seeed Studio XIAO 生态系统**：与 XIAO 系列（预焊接版本）无缝集成，用于多样化的项目开发。
+- **兼容 Seeed Studio XIAO 生态系统**：与 XIAO 系列（预焊接版本）无缝集成，适用于多样化的项目开发。
 
 ### 应用
 
 - **智能家居仪表板**：显示实时信息，如天气更新、日历事件和来自各种智能家居设备的通知。
-- **能耗监控**：显示来自智能电表的能耗数据，帮助房主更有效地跟踪和管理能源使用。
+- **能耗监控**：显示智能电表的能耗数据，帮助房主更高效地跟踪和管理能源使用。
 - **安全警报**：显示安全事件的警报和通知，如运动检测或门窗传感器激活。
 - **智能恒温器显示**：显示温湿度水平以及智能恒温器的控制设置。
 - **数字相框**：创建支持 WiFi 的数字相框，可以显示来自智能家居网络的图像。
@@ -75,37 +76,37 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 
 ### 支持的 eInk
 
-1. [1.54 英寸电子纸 - 点阵 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
-2. [2.13 英寸电子纸 - 柔性单色 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
-3. [2.13 英寸电子纸 - 四色 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
-4. [2.9 英寸电子纸 - 单色 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
-5. [2.9 英寸电子纸 - 四色 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
-6. [4.2 英寸电子纸 - 单色 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-7. [4.26 英寸电子纸 - 单色 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
-8. [5.65 英寸电子纸 - 七色 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
-9. [5.83 英寸电子纸 - 单色 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-10. [7.5 英寸电子纸 - 单色 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
-11. [7.5 英寸电子纸 - 三色 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
+1. [1.54 英寸 E-paper - 点阵 200x200](https://www.seeedstudio.com/1-54-Monochrome-ePaper-Display-with-200x200-Pixels-p-5776.html)
+2. [2.13 英寸 E-Paper - 柔性单色 212x104](https://www.seeedstudio.com/2-13-Flexible-Monochrome-ePaper-Display-with-212x104-Pixels-p-5781.html)
+3. [2.13 英寸 E-Paper - 四色 212x104](https://www.seeedstudio.com/2-13-Quadruple-Color-ePaper-Display-with-122x250-Pixels-p-5779.html)
+4. [2.9 英寸 E-paper - 单色 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
+5. [2.9 英寸 e-paper - 四色 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
+6. [4.2 英寸 E-Paper - 单色 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
+7. [4.26 英寸 E-Paper - 单色 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+8. [5.65 英寸 E-paper - 七色 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
+9. [5.83 英寸 E-paper - 单色 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+10. [7.5 英寸 E-paper - 单色 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+11. [7.5 英寸 E-paper - 三色 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 ## 入门指南
 
-要使用 **XIAO eInk 扩展板**，我们需要对 XIAO 系列进行编程。XIAO 支持的不同尺寸电子纸的表格如下：
+ 要使用 **XIAO eInk 扩展板**，我们需要对 XIAO 系列进行编程。XIAO 支持的不同尺寸 E-paper 表格如下：
 
 <div class="table-center">
 
-|      电子纸 / XIAO     | XIAO SAMD21 | XIAO RP2040|  XIAO nRF52840 | XIAO ESP32-C3 | XIAO ESP32-S3 |
+|      E-paper / XIAO     | XIAO SAMD21 | XIAO RP2040|  XIAO nRF52840 | XIAO ESP32-C3 | XIAO ESP32-S3 |
 |       ---      |  ---  | --- | --- | --- | --- |
-|1.54英寸电子纸 - 点阵 200x200           | ✅ | ✅ | ✅ | ✅ | ✅ |
-|2.13英寸电子纸 - 柔性单色 212x104 | ✅ | ✅ | ✅ | ✅ | ✅ |
-|2.13英寸电子纸 - 四色 212x104          | ✅ | ✅ | ✅ | ✅ | ✅ |
-|2.9英寸电子纸 - 单色 128x296           | ✅ | ✅ | ✅ | ✅ | ✅ |
-|2.9英寸电子纸 - 四色 128x296     | ✅ | ✅ | ✅ | ✅ | ✅ |
-|4.2英寸电子纸 - 单色 400x300           | ✅ | ✅ | ✅ | ✅ | ✅ |
-|4.26英寸电子纸 - 单色 800x480          | RAM 溢出 | ✅ | ✅ | ✅ | ✅ |
-|5.65英寸电子纸 - 七色 600x480        | FLASH 溢出 | ✅ | ✅ | ✅ | ✅ |
-|5.83英寸电子纸 - 单色 648x480          | ✅ | ✅ | ✅ | ✅ | ✅ |
-|7.5英寸电子纸 - 单色 800x480           | RAM 溢出 | ✅ | ✅ | ✅ | ✅ |
-|7.5英寸电子纸 - 三色 800x480           | RAM 溢出 | ✅ | ✅ | ✅ | ✅ |
+|1.54 英寸 E-paper - 点阵 200x200           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|2.13 英寸 E-Paper - 柔性单色 212x104 | ✅ | ✅ | ✅ | ✅ | ✅ |
+|2.13 英寸 E-Paper - 四色 212x104          | ✅ | ✅ | ✅ | ✅ | ✅ |
+|2.9 英寸 E-paper - 单色 128x296           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|2.9 英寸 e-paper - 四色 128x296     | ✅ | ✅ | ✅ | ✅ | ✅ |
+|4.2 英寸 E-Paper - 单色 400x300           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|4.26 英寸 E-Paper - 单色 800x480          | RAM 溢出 | ✅ | ✅ | ✅ | ✅ |
+|5.65 英寸 E-paper - 七色 600x480        | FLASH 溢出 | ✅ | ✅ | ✅ | ✅ |
+|5.83 英寸 E-paper - 单色 648x480          | ✅ | ✅ | ✅ | ✅ | ✅ |
+|7.5 英寸 E-paper - 单色 800x480           | RAM 溢出 | ✅ | ✅ | ✅ | ✅ |
+|7.5 英寸 E-paper - 三色 800x480           | RAM 溢出 | ✅ | ✅ | ✅ | ✅ |
 
 </div>
 
@@ -131,27 +132,27 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
     <tr>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
       </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
       </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
       </a>
   </div></td>
   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
       </a>
   </div></td>
      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
       <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
       </a>
   </div></td>
  </tr>
@@ -161,12 +162,12 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_xiao.gif" style={{width:700, height:'auto'}}/></div>
 
-**步骤 3.** 将 eInk 插入 FPC 连接器：小心地将您的电子纸滑入电子纸转接板上的 24 针 FPC 连接器。
+**步骤 3.** 将 eInk 插入 FPC 连接器：小心地将您的 E-paper 滑入 ePaper 分线板上的 24 针 FPC 连接器。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/connect_eink.gif" style={{width:700, height:'auto'}}/></div>
 
 ### 软件准备
 
-推荐的编程工具是 Arduino IDE，您需要为 XIAO 配置 Arduino 环境并添加板载包。
+ 推荐的编程工具是 Arduino IDE，您需要为 XIAO 配置 Arduino 环境并添加板载包。
 :::tip
 如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
@@ -181,24 +182,24 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
     </a>
 </div>
 
-**步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE。
+**步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE 中。
 
-- 如果您想在后续例程中使用 **Seeed Studio XIAO SAMD21**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)** 完成添加。
+- 如果您想在后续教程中使用 **Seeed Studio XIAO SAMD21**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO/#software)** 完成添加。
 
-- 如果您想在后续例程中使用 **Seeed Studio XIAO RP2040**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)** 完成添加。
+- 如果您想在后续教程中使用 **Seeed Studio XIAO RP2040**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)** 完成添加。
 
-- 如果您想在后续例程中使用 **Seeed Studio XIAO nRF52840**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)** 完成添加。
+- 如果您想在后续教程中使用 **Seeed Studio XIAO nRF52840**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO_BLE/#software-setup)** 完成添加。
 
-- 如果您想在后续例程中使用 **Seeed Studio XIAO ESP32C3**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started#software-setup)** 完成添加。
+- 如果您想在后续教程中使用 **Seeed Studio XIAO ESP32C3**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Getting_Started#software-setup)** 完成添加。
 
-- 如果您想在后续例程中使用 **Seeed Studio XIAO ESP32S3**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started#software-preparation)** 完成添加。
+- 如果您想在后续教程中使用 **Seeed Studio XIAO ESP32S3**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started#software-preparation)** 完成添加。
 
 ## 安装 Seeed GFX 库
 
 **步骤 3.** 安装 Seeed GFX 库
 
 :::tip
-此库与 TFT 库具有相同功能但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
+此库与 TFT 库具有相同功能，但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -220,10 +221,10 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 :::tip
 如果您选择错误，屏幕将不显示任何内容。
 
-所以请确保您的设备或组件类型正确。
+因此请确保您的设备或组件类型正确。
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/epaper_display.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/config.jpg" style={{width:600, height:'auto'}}/></div>
 
 下载库后，转到 **Sketch** -> **Include Library** -> **Add .ZIP Library** 并选择下载的库。
 
@@ -240,14 +241,14 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 
 ### 上传代码
 
-创建一个**新的 "driver.h" 文件**并将这些代码粘贴到其中。代码应该如下所示：
+创建一个 **新的 "driver.h" 文件** 并将这些代码粘贴到其中。代码应该如下所示：
 
 ```cpp
 #define BOARD_SCREEN_COMBO 504 // 2.9 inch monochrome ePaper Screen （SSD1680）
 #define USE_XIAO_EPAPER_BREAKOUT_BOARD
 ```
 
-之后，转到 **工具** -> **开发板** -> **XIAO ESP32C6** 和 **工具** -> **端口** -> **选择您的开发板连接的端口**。然后点击 **上传** 来上传代码。
+之后，转到 **Tools** -> **Board** -> **XIAO ESP32C6** 和 **Tools** -> **Port** -> **选择您的开发板连接的端口**。然后点击 **Upload** 上传代码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/table.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -256,14 +257,14 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/153.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::caution
-如果您使用的是 1.54 英寸或 2.9 英寸电子墨水屏，由于其驱动芯片的特性，在使用时钟等动态效果时可能会出现闪烁现象。请放心，这不是程序问题。但是，不建议长时间运行动态效果示例，以免缩短屏幕的使用寿命。
+如果您使用的是 1.54 英寸或 2.9 英寸电子墨水屏，由于其驱动芯片的特性，在使用时钟等动态效果时可能会出现闪烁。请放心，这不是程序问题。但是，不建议长时间运行动态效果示例，以免缩短屏幕的使用寿命。
 
-如果您使用的是 5.83 和 7.5 英寸屏幕，它们有不同的芯片，因此不会出现闪烁现象。
+如果您使用的是 5.83 英寸和 7.5 英寸屏幕，它们有不同的芯片，因此不会出现闪烁现象。
 :::
 
 ## 图像提取软件
 
-### 网站使用方法（推荐）
+### 网站的使用（推荐）
 
 这里我使用 7.5 英寸电子墨水屏进行测试
 
@@ -278,29 +279,29 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 
 **步骤 2**. 图像设置
 
-- 画布尺寸
-  - 画布尺寸：设置画布的尺寸。例如，800 x 480 像素意味着画布宽度为 800 像素，高度为 480 像素。
+- Canvas Size(s)
+  - Canvas Size：设置画布的尺寸。例如，800 x 480 像素意味着画布宽度为 800 像素，高度为 480 像素。
 
-- 背景颜色
-  - 背景颜色：选择画布的背景颜色。选项包括：
+- Background Color
+  - Background Color：选择画布的背景颜色。选项包括：
 
-  - 白色：白色背景
-  - 黑色：黑色背景
+  - White：白色背景
+  - Black：黑色背景
 
-- 透明：透明背景
-  - 反转图像颜色
-  - 反转图像颜色：此选项用于反转图像的颜色。选中时，图像的颜色将被反转。
+- Transparent：透明背景
+  - Invert Image Color
+  - Invert Image Color：此选项用于反转图像的颜色。选中时，图像的颜色将被反转。
 
-- 亮度/透明度阈值
-  - 亮度/透明度阈值：设置像素的亮度值，范围从 0 到 255。较高的值使像素更亮；低于此值的像素将变为黑色。
+- Brightness / Alpha Threshold
+  - Brightness / Alpha Threshold：设置像素的亮度值，范围从 0 到 255。较高的值使像素更亮；低于此值的像素将变为黑色。
 
-- 缩放
-  - 缩放：选择图像的缩放方法。选项包括：
+- Scaling
+  - Scaling：选择图像的缩放方法。选项包括：
 
-- 原始尺寸：保持原始尺寸
+- Original size：保持原始尺寸
   - 其他缩放选项（具体选项可能需要进一步说明）
-- 居中
-  - 居中：选择是否将图像在画布上居中。注意：此选项仅在图像大于原始尺寸时有效。
+- Center
+  - Center：选择是否将图像在画布上居中。注意：此选项仅在图像大于原始尺寸时有效。
 
 **步骤 3**. 预览
 
@@ -318,33 +319,33 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/epaper_display.jpg" style={{width:700, height:'auto'}}/></div>
 
-### Image2lcd 软件使用方法
+### Image2lcd 软件的使用
 
 #### 如何制作图片
 
-使用 Windows 内置软件 **画图** 创建一张与您使用的屏幕 **分辨率相同** 的图片，并将其保存为 `BMP` 或 `JPG` 文件；
+使用 Windows 内置软件 **Paint** 创建与您使用的屏幕 **相同分辨率** 的图片，并将其保存为 `BMP` 或 `JPG` 文件；
 
 :::note
 您的图片分辨率必须与您使用的屏幕相同，例如，4.2 英寸电子纸是 400 x 300 像素，那么您不能使用 300 x 400 的尺寸，这会导致 image2lcd 输出的 `.h` 文件多出 200 字节。
 :::
 
-图片的颜色应与 Windows 自带画图板的标准颜色一致。画图板的颜色如下：
+图片的颜色应与 Windows 自带画板的标准颜色一致。画板的颜色如下：
 
 <div class="table-center">
 
 |      电子纸      | 颜色 |
 |       ---      |  ---   |
-|1.54英寸电子纸 - 点阵 200x200           | 纯黑白          |
-|2.13英寸电子纸 - 柔性单色 212x104 | 纯黑白          |
-|2.13英寸电子纸 - 四色 212x104          | 黑、白、红、黄 |
-|2.9英寸电子纸 - 单色 128x296           | 纯黑白          |
-|2.9英寸电子纸 - 四色 128x296     | 黑、白、红、黄 |
-|4.2英寸电子纸 - 单色 400x300           | 纯黑白          |
-|4.26英寸电子纸 - 单色 800x480          | 纯黑白          |
-|5.65英寸电子纸 - 七色 600x480        | 黑、白、红、黄、蓝、绿、橙|
-|5.83英寸电子纸 - 单色 648x480          | 纯黑白          |
-|7.5英寸电子纸 - 单色 800x480           | 纯黑白          |
-|7.5英寸电子纸 - 三色 800x480           | 纯黑白          |
+|1.54 英寸电子纸 - 点阵 200x200           | 纯黑白          |
+|2.13 英寸电子纸 - 柔性单色 212x104 | 纯黑白          |
+|2.13 英寸电子纸 - 四色 212x104          | 黑、白、红、黄 |
+|2.9 英寸电子纸 - 单色 128x296           | 纯黑白          |
+|2.9 英寸电子纸 - 四色 128x296     | 黑、白、红、黄 |
+|4.2 英寸电子纸 - 单色 400x300           | 纯黑白          |
+|4.26 英寸电子纸 - 单色 800x480          | 纯黑白          |
+|5.65 英寸电子纸 - 七色 600x480        | 黑、白、红、黄、蓝、绿、橙|
+|5.83 英寸电子纸 - 单色 648x480          | 纯黑白          |
+|7.5 英寸电子纸 - 单色 800x480           | 纯黑白          |
+|7.5 英寸电子纸 - 三色 800x480           | 纯黑白          |
 
 </div>
 
@@ -353,93 +354,93 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 **步骤 1.** 打开 [Image2lcd.7z](https://files.seeedstudio.com/wiki/eInk/xiao-expansion/Image2Lcd.7z)，解压并打开应用程序。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/1.png" style={{width:700, height:'auto'}}/></div>
 
-**步骤 2.** 打开图片，选择"输出文件类型"为"C array (*.c)"，选择"扫描模式"为"Horizon Scan"，其他参数设置如下所示：
+**步骤 2.** 打开图片，选择 "Output file type" 为 "C array (*.c)"，选择 "Scan mode" 为 "Horizon Scan"，其他参数设置如下所示：
 
 <div class="table-center">
   <table align="center">
     <tr>
         <th>电子纸</th>
-        <th>位像素</th>
+        <th>BitPixl</th>
         <th>最大宽度和高度</th>
         <th>反转颜色</th>
         <th>显示模式</th>
     </tr>
     <tr>
-        <th>1.54英寸电子纸 - 点阵 200x200</th>
-        <td align="center">单色</td>
+        <th>1.54 英寸电子纸 - 点阵 200x200</th>
+        <td align="center">Monochrome</td>
         <td align="center">200x200</td>
         <td align="center">✅</td>
-        <td align="center">左右镜像</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>2.13英寸电子纸 - 柔性单色 212x104</th>
-        <td align="center">单色</td>
+        <th>2.13 英寸电子纸 - 柔性单色 212x104</th>
+        <td align="center">Monochrome</td>
         <td align="center">104x212</td>
         <td align="center">✅</td>
-        <td align="center">正常</td>
+        <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>2.13英寸电子纸 - 四色 212x104 </th>
-        <td align="center">4 灰度</td>
+        <th>2.13 英寸电子纸 - 四灰度 212x104 </th>
+        <td align="center">4 Gray</td>
         <td align="center">104x212</td>
         <td align="center">/</td>
-        <td align="center">正常</td>
+        <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>2.9英寸电子纸 - 单色 128x296</th>
-         <td align="center">单色</td>
+        <th>2.9 英寸电子纸 - 单色 128x296</th>
+         <td align="center">Monochrome</td>
         <td align="center">128x296</td>
         <td align="center">✅</td>
-        <td align="center">正常</td>
+        <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>2.9英寸电子纸 - 四色 128x296 </th>
-        <td align="center">4 灰度</td>
+        <th>2.9 英寸电子纸 - 四色 128x296 </th>
+        <td align="center">4 Gray</td>
         <td align="center">128x296</td>
         <td align="center">/</td>
-        <td align="center">正常</td>
+        <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>4.2英寸电子纸 - 单色 400x300</th>
-        <td align="center">单色</td>
+        <th>4.2 英寸电子纸 - 单色 400x300</th>
+        <td align="center">Monochrome</td>
         <td align="center">400x300</td>
         <td align="center">✅</td>
-        <td align="center">左右镜像</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>4.26英寸电子纸 - 单色 800x480</th>
-        <td align="center">单色</td>
+        <th>4.26 英寸电子纸 - 单色 800x480</th>
+        <td align="center">Monochrome</td>
         <td align="center">800x480</td>
         <td align="center">/</td>
-        <td align="center">左右镜像</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>5.65英寸电子纸 - 七色 600x480</th>
-        <td align="center">256 色</td>
+        <th>5.65 英寸电子纸 - 七色 600x480</th>
+        <td align="center">256 colors</td>
         <td align="center">600x448</td>
         <td align="center">/</td>
-        <td align="center">正常</td>
+        <td align="center">Normal</td>
     </tr>
     <tr>
-        <th>5.83英寸电子纸 - 单色 648x480</th>
-        <td align="center">单色</td>
+        <th>5.83 英寸电子纸 - 单色 648x480</th>
+        <td align="center">Monochrome</td>
         <td align="center">600x480</td>
         <td align="center">✅</td>
-        <td align="center">左右镜像</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>7.5英寸电子纸 - 单色 800x480</th>
-        <td align="center">单色</td>
+        <th>7.5 英寸电子纸 - 单色 800x480</th>
+        <td align="center">Monochrome</td>
         <td align="center">800x480</td>
         <td align="center">✅</td>
-        <td align="center">左右镜像</td>
+        <td align="center">Mirror left-right</td>
     </tr>
     <tr>
-        <th>7.5英寸电子纸 - 三色 800x480</th>
-        <td align="center">单色</td>
+        <th>7.5 英寸电子纸 - 三色 800x480</th>
+        <td align="center">Monochrome</td>
         <td align="center">800x480</td>
         <td align="center">/</td>
-        <td align="center">正常</td>
+        <td align="center">Normal</td>
     </tr>
   </table>
 </div>
@@ -452,13 +453,13 @@ ePaper 驱动板配备 24 针 FPC 连接器、内置充电 IC 以实现高效安
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/2.png" style={{width:700, height:'auto'}}/></div>
 :::
 
-**步骤 3.** 点击"Save"将 lcd 输出数组保存为 `.h` 文件。
+**步骤 3.** 点击 "Save" 将 LCD 输出数组保存为 `.h` 文件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/eInk/xiao-expansion/7.png" style={{width:500, height:'auto'}}/></div>
 
 ## 资源
 
-- **[PDF]**: [ePaper Driver Board SCH PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
+- **[PDF]**: [电子纸驱动板原理图 PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
 
 ## 技术支持与产品讨论
 

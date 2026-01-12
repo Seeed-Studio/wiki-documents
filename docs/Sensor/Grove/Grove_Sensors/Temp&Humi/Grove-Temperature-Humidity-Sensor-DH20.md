@@ -5,9 +5,10 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Temperature-Humidity-Sensor-DH20
+sku: 101020932
 last_update:
-  date: 1/3/2023
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 
@@ -185,6 +186,100 @@ And the output should be something like... :
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/output.png" /></div>
 
 The values are based on the current environment.
+
+
+### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
+#### Hardware
+
+- **Step 1**. Things used in this project:
+
+| Raspberry pi | Grove Base Hat for RasPi|Grove - Temperature & Humidity Sensor V2.0 |
+|--------------|-------------|-----------------|
+|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/getonenow.png" /></div>|
+|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html)|
+
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Grove - Temperature & Humidity Sensor V2.0 to the **I2C** port of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+
+<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/GROVE-fix/DHT20.jpg" /></div>
+
+:::note
+For step 3 you are able to connect the temperature and humidity sensor pro to **any GPIO Port** but make sure you change the command with the corresponding port number.
+:::
+
+#### Software
+
+:::caution
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+:::
+
+
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+:::tip
+One of the steps is to add the necessary DHT library, please make sure it is installed.
+:::
+- **Step 2**. Enter the relevant virtual environment.
+
+```
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
+```
+
+- **Step 3**. Excute below commands to run the code.
+
+```
+nano ~/grove_env/dht20_demo.py
+```
+
+Copy the following code
+
+```python
+import time
+import seeed_dht
+
+# for DHT10/20
+sensor = seeed_dht.DHT("20") 
+# sensor = seeed_dht.DHT("10") 
+# for DHT11/DHT22
+#sensor = seeed_dht.DHT("22", 12) 
+   
+print("DHT11 reading every second, Ctrl+C to quit")
+try:
+    while True:
+        humi, temp = sensor.read()
+        print(f"DHT11  Humidity {humi:.1f}%  Temperature {temp:.1f}°C")
+        time.sleep(1)
+except KeyboardInterrupt:
+    print("\nBye")
+
+```
+
+:::tip
+    Save and exit:
+Ctrl+O → Enter → Ctrl+X
+:::
+
+  If everything goes well, you will be able to see the following result
+
+```python
+
+pi@raspberrypi:~/Seeed_Python_DHT/examples $ python ~/grove_env/dht20_demo.py
+ 
+DHT20, humidity 39.2%, temperature 29.1*
+DHT20, humidity 39.2%, temperature 29.1*
+DHT20, humidity 39.2%, temperature 29.1*
+DHT20, humidity 39.1%, temperature 29.1*
+DHT20, humidity 40.0%, temperature 29.1*
+DHT20, humidity 39.9%, temperature 29.1*
+DHT20, humidity 40.3%, temperature 29.1*
+DHT20, humidity 42.0%, temperature 29.1*
+```
+
+You can quit this program by simply press ++ctrl+c++.
+
+
 
 ## Play with MicroPython
 

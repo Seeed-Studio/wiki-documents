@@ -3,6 +3,7 @@ title: Módulo Complementario de Relé Para XIAO
 description: El Módulo Complementario de Relé Para XIAO es un módulo inteligente de Seeed Studio diseñado para controlar electrodomésticos alimentados por CA.
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay_module.webp
 slug: /es/relay_add_on_module_for_xiao
+sku: 114993555
 keywords:
   - XIAO
   - Home Assistant

@@ -8,6 +8,7 @@ keywords:
   - nodered
 image: https://files.seeedstudio.com/wiki/reCamera/develop_with_nodered.webp
 slug: /ja/recamera_develop_with_node-red
+sku: E2025081502
 sidebar_position: 3
 last_update:
   date: 02/15/2025

@@ -6,6 +6,7 @@ keywords:
 - Vision AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_sscma
+sku: 101021112,E23011220,104990982
 last_update:
   date: 03/12/2024
   author: Citric
@@ -552,6 +553,15 @@ If you want to continue to use Arduino devices such as the XIAO to realise your 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/grove_vision_ai_v2_software_support/#demo-1-use-xiao-to-get-recognition-results" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Arduino Example🖱️</font></span></strong>
+    </a>
+</div>
+<br></br>
+
+If you’re a beginner and want to quickly build your own model, please refer to the SenseCraft AI model training example here.
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection/" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft Training</font></span></strong>
     </a>
 </div>
 <br></br>

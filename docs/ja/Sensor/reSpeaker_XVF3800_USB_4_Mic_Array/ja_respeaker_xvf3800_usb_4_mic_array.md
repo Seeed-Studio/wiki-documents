@@ -6,6 +6,7 @@ keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
 slug: /ja/respeaker_xvf3800_introduction
+sku: 101991441,114993701
 last_update:
   date: 11/10/2025
   author: Kasun Thushara
@@ -73,7 +74,7 @@ ReSpeaker XVF3800 USB 4-Mic Array は、XMOS XVF3800 を搭載したプロフェ
 | **オーディオ品質**             | **従来の XVF3000 ベース設計**と同等以上                                         |
 
 :::note
-ReSpeaker XVF3800 は 2 つのバリエーションで提供されています—XIAO なしのものと、XIAO ESP32S3 をオンボードで搭載したものです。XIAO なしのバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合バージョンを使用するには、**INT-Device（I2S）モード**用にビルドされたファームウェアをフラッシュする必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](docs/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro.md)を参照してください。
+ReSpeaker XVF3800 は 2 つのバリエーションで提供されています—XIAO なしのものと、XIAO ESP32S3 をオンボードで搭載したものです。XIAO なしのバージョンはデフォルトの USB ファームウェアで動作します。XIAO 統合バージョンを使用するには、**INT-Device（I2S）モード**用にビルドされたファームウェアをフラッシュする必要があります。詳細なセットアップ手順については、[公式 wiki ガイド](/ja/respeaker_xvf3800_xiao_getting_started)を参照してください。
 :::
 
 ### XIAO ESP32S3 サポート
@@ -190,6 +191,16 @@ ReSpeaker XVF3800 の各タイプのファームウェアは異なる更新方�
 ### ファームウェアの更新
 
 reSpeaker XVF3800 を USB ケーブルで PC に接続します。XMOS のファームウェアをフラッシュするには、XMOS USB-C ポート（3.5mm ジャックポートの近く）を使用する必要があることに注意してください。
+
+| ファームウェア | チャンネル数 | 備考 |
+|---------|----------|-------|
+| respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | 処理済み2チャンネル出力 <br /> チャンネル 0：会議（Conference） <br /> チャンネル 1：ASR |
+| respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | チャンネル 0：処理済み音声（会議） <br /> チャンネル 1：処理済み音声（ASR） <br /> チャンネル 2：マイク 0 の生データ <br /> チャンネル 3：マイク 1 の生データ <br /> チャンネル 4：マイク 2 の生データ <br /> チャンネル 5：マイク 3 の生データ |
+| respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin | 2 | 処理済み2チャンネル出力 <br /> チャンネル 0：会議（Conference） <br /> チャンネル 1：ASR |
+| respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | 処理済み2チャンネル出力 <br /> チャンネル 0：ASR <br /> チャンネル 1：ウェイクワード（Wake word） |
+
+ユーザーは、上記のファームウェアバージョンにおいて処理済み出力チャンネルの選択を変更することができます。
+詳細については、以下の [XMOS ドキュメント](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/03_using_the_host_application.html#output-selection) を参照してください。
 
 #### DFU Util のインストール
 
@@ -905,6 +916,12 @@ sudo apt install pavucontrol -y
 ### USB ドライバーを再インストールした後、ReSpeaker が録音も再生もできない
 
 デバイスマネージャーで ReSpeaker に関連するすべてのドライバーをアンインストールしてください。これで問題が解決しました。
+
+### ファームウェアを書き込んだ後、Windows でサウンドデバイスとして使用できませんか？
+
+スタートメニューを開き、「デバイス マネージャー」と入力します。関連する reSpeaker XVF 3800 デバイスを見つけて右クリックし、「デバイスのアンインストール」を選択します。その後、デバイスを再接続してください（USB を一度抜いてから差し直します）。Windows が自動的に正しいサウンドカードドライバーを再インストールします。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
 ## リソース
 

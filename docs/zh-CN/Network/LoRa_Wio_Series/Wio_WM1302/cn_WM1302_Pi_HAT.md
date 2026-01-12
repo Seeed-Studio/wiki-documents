@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /cn/WM1302_Pi_HAT
+sku: 114992549,114992550,114992629,114992628,113100022,114992967,114992969,114992991,100021717
 last_update:
   date: 01/30/2023
   author: hushuxu
@@ -82,7 +83,7 @@ WM1302 Pi HAT 与 WM1302 网关模块和树莓派一起，可以帮助构建完�
   </tr>
   <tr>
     <td >Raspberry Pi 40 针接头</td>
-    <td >支持 Raspberry Pi 4 B / 支持 Raspberry Pi 3 A+/B/B+ / 支持 Raspberry Pi 2 B / 支持 Raspberry Pi A+/B+ /   支持 Raspberry Pi Zero/Zero W</td>
+    <td >支持 Raspberry Pi 5 / 支持 Raspberry Pi 4 B / 支持 Raspberry Pi 3 A+/B/B+ / 支持 Raspberry Pi 2 B / 支持 Raspberry Pi A+/B+ /   支持 Raspberry Pi Zero/Zero W</td>
   </tr>
   <tr>
     <td >PCIe 接头</td>

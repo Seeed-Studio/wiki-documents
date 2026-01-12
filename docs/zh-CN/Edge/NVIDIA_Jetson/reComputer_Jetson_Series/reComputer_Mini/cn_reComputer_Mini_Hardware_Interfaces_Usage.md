@@ -8,6 +8,7 @@ tags:
   - robots
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini.webp
 slug: /cn/recomputer_jetson_mini_hardware_interfaces_usage
+sku: 114993553,114993551,102111001,102110999,114993592,114993593
 last_update:
   date: 12/16/2024
   author: Youjiang
@@ -261,6 +262,7 @@ reComputer Mini载板有两个4针GH-1.25 UART接口：**UART1**和**UART-DEBUG*
 sudo apt update
 sudo apt install cutecom
 ```
+
 在两个不同的终端中打开 **Cutecom**。
 
 ```bash
@@ -344,11 +346,13 @@ sudo apt update
 sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
+
 然后重启您的 reComputer Mini：
 
 ```bash
 sudo reboot
 ```
+
 安装 **jtop** 后，你可以在终端中启动它：
 
 ```bash
@@ -443,6 +447,13 @@ sudo ./canTest.sh
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/canRX.jpg"/>
 </div>
+
+在在程序中使用 **CAN** 之前，你需要先启用它。在终端中运行以下命令：
+
+```bash
+sudo gpioset --mode=wait 0 106=0 #enable CAN1
+sudo gpioset --mode=wait 0 43=0 #enable CAN0
+```
 
 ### CAN0 电源输出
 

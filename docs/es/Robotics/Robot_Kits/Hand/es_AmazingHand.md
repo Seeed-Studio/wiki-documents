@@ -12,11 +12,22 @@ keywords:
 - Arduino
 - Python
 slug: /es/hand_amazinghand
+sku: 100062181,100063642
 last_update:
   date: 9/10/2025
   author: TienjuiWong
 
 ---
+
+<div align="center">
+  <img width="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100063642_amazing_hand_right-1_1.jpg"/>
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Amazing-Hand-Right-Hand-The-Open-Source-Robotic-Hand-Developer-Kit.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora 🖱️</font></span></strong>
+</a>
+</div>
 
 La **AmazingHand** es un proyecto de mano robótica de código abierto diseñado para hacer que la investigación y experimentación con manipulación humanoide sea accesible y asequible. Las manos robóticas tradicionales suelen ser prohibitivamente caras y dependen de actuadores de antebrazo complejos y voluminosos. La AmazingHand resuelve esto integrando todos sus motores directamente en un diseño compacto e imprimible en 3D.
 

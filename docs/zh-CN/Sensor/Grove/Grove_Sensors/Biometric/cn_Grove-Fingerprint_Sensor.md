@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-Fingerprint_Sensor
+sku: 101020057
 last_update:
   date: 1/6/2023
   author: jianjing Huang

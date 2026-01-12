@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-Oxygen-Sensor-Pro
+sku: 101020912
 last_update:
   date: 1/4/2023
   author: shuxu hu

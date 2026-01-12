@@ -5,6 +5,7 @@ import clsx from 'clsx'
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SuccessModal from '../../components/SuccessModal';
 
 const getIndexImage = (src) => {
   return src && require(`../../../assets/index/${src}`).default;
@@ -27,6 +28,7 @@ function IndexForm() {
   ]
   const [tabActive, setTabActive] = useState('Contributors')
   const [loading, setLoading] = useState(false)
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false)
 
   const { register, handleSubmit,reset, formState: { errors } } = useForm();
   const onSubmit = (data) => {
@@ -44,17 +46,22 @@ function IndexForm() {
       .then(res => {
         console.log(res)
         if (+res.code === 0) {
-            toast.success('Submit Success!');
             reset()
+            setIsSuccessModalOpen(true)
+            const timer = setTimeout(() => {
+              setIsSuccessModalOpen(false)
+              clearTimeout(timer)
+            }, 5000);
         }else{
-          toast.success('Submit Error!');
+          toast.error('Submit Error!');
         }
         setLoading(false)
 
       })
       .catch(error => {
-        toast.success('Submit Error!');
+        toast.error('Submit Error!');
         console.error('Error fetching data:', error);
+        setLoading(false)
       });
   };
 
@@ -107,6 +114,12 @@ function IndexForm() {
         </div>
       </form>
       <ToastContainer></ToastContainer>
+      <SuccessModal
+        visible={isSuccessModalOpen}
+        onClose={() => setIsSuccessModalOpen(false)}
+        title="Submission successful"
+        content="We are appreciated your kindness helping! Our manager Matthew(<a href='mailto:opensource@seeed.cc' target='_blank'>opensource@seeed.cc</a>) will contact you soon enough!  "
+      />
     </div>
   )
 }

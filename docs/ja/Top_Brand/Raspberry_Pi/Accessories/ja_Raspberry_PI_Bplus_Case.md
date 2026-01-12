@@ -5,6 +5,7 @@ keywords:
 - アクセサリー
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Raspberry_PI_Bplus_Case
+sku: 114990084
 last_update:
   date: 05/15/2025
   author: jianjing Huang

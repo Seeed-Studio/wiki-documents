@@ -5,9 +5,10 @@ keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/sensecap_t1000_e
+sku: 114993369
 sidebar_position: 2
 last_update:
-  date: 12/3/2025
+  date: 12/24/2025
   author: Michelle Huang
 ---
 :::danger note
@@ -122,7 +123,8 @@ Si quieres enviar mensajes de texto y comunicarte con otros nodos en el sitio we
     Tu dispositivo se mostrará en la lista. Haz clic para conectar. Si la conexión es exitosa, puedes ver el estado del dispositivo directamente en el sitio web.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
-### Configurar los Parámetros
+
+### Configurar el LoRa
 
 Para comenzar a comunicarte a través de la malla, debes establecer tu región. Esta configuración controla qué rango de frecuencia usa tu dispositivo y debe establecerse según tu ubicación regional.
 
@@ -155,7 +157,7 @@ Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/regi
 
 Ahora que has establecido la región LoRa en tu dispositivo, puedes continuar configurando cualquier [Configuración LoRa](https://meshtastic.org/docs/configuration/radio/lora/) para satisfacer tus necesidades.
 
-### Configuración de Sensores
+### Configurar Sensor
 
 |Sensor|Descripción|
 |-|-|
@@ -214,6 +216,16 @@ Consulta [Configuración de Notificación Externa](https://meshtastic.org/docs/c
 Después de actualizar la configuración del dispositivo, el dispositivo se reiniciará, lo cual puede tomar algún tiempo.
 :::
 
+### Configurar GPS
+
+Por favor establece GPS habilitado. Puedes ajustar el intervalo de actualización e intervalo de transmisión para obtener información de ubicación más actualizada.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
+
+Para IOS, por favor activa la `Accurate Location`. De lo contrario, el posicionamiento puede desviarse.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
+
 ## Flashear Firmware
 
 ### Verificar la Versión del Firmware
@@ -252,7 +264,7 @@ Antes de flashear el firmware, por favor asegúrate de haber comprado el `T1000-
 <Tabs>
 <TabItem value="method1" label="Método 1">
 
-Visita [Flasheador Web de Meshtastic](https://flasher.meshtastic.org/).
+Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
 Conecta el dispositivo a tu PC, selecciona el dispositivo como `Seeed Card Tracker T1000-E` y elige el firmware más reciente, luego haz clic en `Flash`.
 
@@ -387,7 +399,7 @@ pip3 install --user adafruit-nrfutil
 
 </TabItem>
 
-<TabItem value="sou" label="Instalando desde Código Fuente">
+<TabItem value="sou" label="Instalando desde el Código Fuente">
 
 Usa este método si tienes problemas instalando con PyPi o quieres modificar la herramienta. Primero clona este repositorio y ve a su carpeta.
 
@@ -396,7 +408,7 @@ git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
 cd Adafruit_nRF52_nrfutil
 ```
 
-Nota: los siguientes comandos usan `python3`, sin embargo si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de Windows de python 3.x aún usa el nombre python.exe
+Nota: los siguientes comandos usan `python3`, sin embargo si estás en Windows, puede que necesites cambiarlo a `python` ya que la instalación de python 3.x en Windows aún usa el nombre python.exe
 
 Para instalar en el espacio de usuario en tu directorio home:
 
@@ -469,7 +481,7 @@ Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso]
 - Establece la velocidad de baudios a `1200`.
 
 - Conecta el dispositivo.
-   La luz parpadeará brevemente cuando lo conectes. Sigue intentando esto hasta que la luz se mantenga encendida, significa que el dispositivo puede volver al modo DFU, entonces [flashea el bootloader](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#flashear-el-bootloader) -> [Borra flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-2-borrado-de-flash) -> [flashea el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-3-flashear-firmware).
+   La luz parpadeará brevemente cuando lo conectes. Sigue intentando esto hasta que la luz se mantenga encendida, significa que el dispositivo puede volver al modo DFU, entonces [flashea bootloader](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#flashear-el-bootloader) -> [Borrar flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-2-borrado-de-flash) -> [flashear el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-3-flashear-firmware).
 
 <div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -479,7 +491,7 @@ Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso]
 
 - mantén presionado el botón del dispositivo, luego conecta el cable de carga. Después de que aparezca un disco en tu PC, puede que veas el puerto serie.
 
-- Si aún no tienes suerte, por favor desconecta el cable de carga y deja el dispositivo por unos días hasta que la batería esté completamente agotada, luego conecta el cable de carga e intenta emparejarlo nuevamente.
+- Si aún no tienes suerte, por favor desconecta el cable de carga y deja el dispositivo por unos días hasta que la batería se agote completamente, luego conecta el cable de carga e intenta emparejarlo nuevamente.
 
 **4) Si ninguno de los pasos anteriores funciona, por favor contacta al soporte técnico: support@sensecapmx.com**
 
@@ -495,36 +507,44 @@ Cuando hayas completado los pasos anteriores, entonces puedes seguir este [paso]
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wrong-port.png" alt="pir" width={500} height="auto" /></p>
 
- Verifica si el puerto es correcto, o intenta otro puerto.
+ Verifica si el puerto es correcto, o prueba con otro puerto.
 
  ### El dispositivo se apaga automáticamente
 
  #### Descripción
 
- - Después de que el dispositivo se enciende, se apagará o reiniciará automáticamente después de un tiempo. 
+ - Después de encender el dispositivo, se apagará o reiniciará automáticamente después de un tiempo.
  - El registro del puerto serie funcionó por un tiempo y luego se detuvo.
 
- Esto posiblemente es causado por reiniciar manual y forzosamente o apagar el dispositivo cuando el dispositivo está en los siguientes estados: no terminando el proceso de transmisión de mensajes, siendo configurado......
+ Esto posiblemente es causado por reiniciar o apagar manualmente y forzadamente el dispositivo cuando el dispositivo está en los siguientes estados: no terminando el proceso de transmisión de mensajes, siendo configurado......
 
- #### Restablecimiento de Fábrica
+ #### Solución de problemas
 
-[Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) para borrar el dispositivo. Y luego vuelve a flashear el firmware más reciente.
+ [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) para realizar un borrado de flash.
 
-### Calidad de Señal
+ ### Restablecimiento de fábrica
+Si quieres restaurar la configuración predeterminada, puedes hacer el restablecimiento de fábrica. Hay dos métodos para hacer el restablecimiento de fábrica.
 
-  - **SNR** refleja la calidad del enlace de comunicación. El dispositivo normal usualmente opera por encima de -7 dB. Un dispositivo con un SNR menor a -10 dB indica un rendimiento deficiente.
+- [Haz clic aquí](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#step-2-flash-erase) para borrar el flash del dispositivo. Y luego vuelve a flashear el firmware más reciente.
 
-  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. El dispositivo normal usualmente opera por encima de -110 dBm. Un dispositivo con un RSSI menor a -115 dBm se considera que tiene un rendimiento deficiente.
+- Haz clic en el botón `Factory Reset` en la App. El dispositivo se reiniciará con la configuración de fábrica automáticamente.
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
 
-      Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima para su uso.
+### Calidad de la señal
+
+  - **SNR** refleja la calidad del enlace de comunicación. El dispositivo normal generalmente opera por encima de -7 dB. Un dispositivo con un SNR inferior a -10 dB indica un rendimiento deficiente.
+
+  - **RSSI** está determinado conjuntamente por el dispositivo y su entorno circundante. El dispositivo normal generalmente opera por encima de -110 dBm. Un dispositivo con un RSSI inferior a -115 dBm se considera que tiene un rendimiento deficiente.
+
+      Para lograr el mejor efecto de señal, por favor usa el dispositivo en un área abierta y sin obstrucciones con interferencia mínima.
 
 ## Recursos
 
 - [Documentación de Meshtastic](https://meshtastic.org/docs/introduction/)
-- [Hoja de Datos del SenseCAP T1000 Tracker](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
+- [Hoja de datos del SenseCAP T1000 Tracker](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker_T1000_Datasheet.pdf)
 
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y discusión de productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

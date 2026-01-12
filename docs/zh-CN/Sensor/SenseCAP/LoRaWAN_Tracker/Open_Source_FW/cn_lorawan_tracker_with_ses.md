@@ -5,7 +5,7 @@ keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_opensource.webp
 slug: /cn/open_source_lorawan
-sidebar_position: 2
+sidebar_position: 3
 last_update:
   date: 1/2/2025
   author: Jessie
@@ -17,7 +17,7 @@ last_update:
 ### 硬件准备
 
 - SenseCAP T1000-E x 1
-- USB 数据线 x 1
+- USB 线缆 x 1
 - 计算机 x 1
 
 ### 软件准备
@@ -48,7 +48,7 @@ nRF5 SDK 通过包含广泛的驱动程序、库、外设示例、SoftDevices �
 
 #### Seeed T1000-E 示例包
 
-Seeed 提供了一个示例项目，帮助开发者更快地入门。此示例包括 LoRaWAN 通信、定位信息获取、板载传感器数据获取等。
+Seeed 为开发者提供了一个示例项目，以便更快地入门。此示例包括 LoRaWAN 通信、定位信息获取、板载传感器数据获取等。
 
 <a  href="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Seeed_T1000_E_Dev_Board_Alpha-main.zip" target="_blank"><span>Seeed 示例-下载</span></a>
 
@@ -59,19 +59,19 @@ Seeed 提供了一个示例项目，帮助开发者更快地入门。此示例�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/file-path.png" alt="pir" width={600} height="auto" /></p>
 
-### 检查 Bootloader 信息
+### 检查引导加载程序信息
 
-开始之前，请先检查 bootloader 信息。
+开始之前，请先检查引导加载程序信息。
 
 - **步骤 1：** 进入 DFU 模式
 
- 将 USB 数据线连接到您的 PC，按住设备按钮，然后连接充电线，应该会显示一个名为 `T1000-E` 的驱动器。
+ 将 USB 线缆连接到您的 PC，按住设备按钮，然后连接充电线缆，应该会显示一个名为 `T1000-E` 的驱动器。
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
 - **步骤 2：** 检查 INFO_UF2.TXT
 
- 正确的 bootloader 信息如图所示：
+ 正确的引导加载程序信息如图所示：
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/bootloader-info.png" alt="pir" width={600} height="auto" /></p>
 
@@ -109,7 +109,7 @@ python uf2conv.py filename.hex -c -f 0xADA52840 -o filename.uf2
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/convert-uf2.png" alt="pir" width={600} height="auto" /></p>
 
-#### 刷写应用固件
+#### 烧录应用程序固件
 
 - **步骤 1：** 进入 DFU 模式
 
@@ -117,29 +117,29 @@ python uf2conv.py filename.hex -c -f 0xADA52840 -o filename.uf2
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
-- **步骤 2：** 刷写 LoRaWAN 应用固件
+- **步骤 2：** 烧录 LoRaWAN 应用程序固件
 
- 将 `UF2` 文件复制到 DFU 驱动器。文件下载完成后固件应该会被刷写，设备会重启。
+ 将 `UF2` 文件复制到 DFU 驱动器。文件下载完成后固件应该会被烧录，设备会重启。
 
 ### 连接到 LNS
 
-在本节中，我们将把设备连接到 LNS（这里我们以 TTN 为例）来查看数据，并通过 TTN Mapper 检查位置。
+在本节中，我们将设备连接到 LNS（这里以 TTN 为例）来查看数据，并通过 TTN Mapper 检查位置。
 
-首先，注册一个 The Things Industries 或 The Things Network 账户。
+首先，在 The Things Industries 或 The Things Network 注册账户。
 
 #### 步骤 1：创建应用程序
 
-导航到应用程序页面，点击"+Create application"。
+导航到 Applications 页面，点击 "+Create application"。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/create_application.png" alt="pir" width={800} height="auto" /></p>
 
-输入应用程序 ID，点击 Create Application 保存您的更改。
+输入 Application ID，点击 Create Application 保存更改。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/create_application1.png" alt="pir" width={800} height="auto" /></p>
 
 #### 步骤 2：注册设备
 
-点击"Register end device"。
+点击 "Register end device"。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device.png" alt="pir" width={800} height="auto" /></p>
 
@@ -154,7 +154,7 @@ python uf2conv.py filename.hex -c -f 0xADA52840 -o filename.uf2
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device1.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
-JoinEUI/DevEUI/APPEUI：这些是您在之前设置中在 'lorawan_key_config.h' 文件中定义的。
+JoinEUI/DevEUI/APPEUI：您在之前设置的 'lorawan_key_config.h' 文件中定义的内容。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keys-define.png" alt="pir" width={600} height="auto" /></p>
 :::
 
@@ -166,5 +166,5 @@ JoinEUI/DevEUI/APPEUI：这些是您在之前设置中在 'lorawan_key_config.h'
 
 ### 恢复出厂固件
 
-- 使用出厂固件，刷写 `t1000_e_dev_kit_11_lorawan_tracker.uf2` 固件。
-- 使用 SenseCAP 云，需要通过扫描设备标签上的二维码来导入 SenseCAP 密钥。
+- 使用出厂固件，烧录 `t1000_e_dev_kit_11_lorawan_tracker.uf2` 固件。
+- 使用 SenseCAP 云，需要通过扫描设备标签上的二维码导入 SenseCAP 密钥。

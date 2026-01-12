@@ -1,6 +1,6 @@
 ---
 description: このwikiでは、reComputer上でdockerを使用する方法を説明します
-title: reComputer上でDockerを使用する
+title: reComputer上でdockerを使用する
 keywords:
   - Edge
   - RasberryPi 5
@@ -14,42 +14,67 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# reComputer上でDockerを使用する
+# reComputer上でdockerを使用する
 
 ## はじめに
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker.png" style={{width:300, height:'auto'}}/></div>
 
-このwikiでは、reComputerボックス上で[docker](https://www.docker.com)を使用する方法について説明します。Dockerは、軽量でポータブルなコンテナ内でアプリケーションのデプロイメント、スケーリング、管理を自動化するために使用されるオープンソースプラットフォームです。コンテナにより、開発者はアプリケーションとその依存関係を一貫した環境でパッケージ化でき、異なるコンピューティング環境間でスムーズに実行できることを保証します。
+このwikiでは、reComputerボックス上で[docker](https://www.docker.com)を使用する方法について説明します。Dockerは、軽量でポータブルなコンテナ内でアプリケーションのデプロイメント、スケーリング、管理を自動化するために使用されるオープンソースプラットフォームです。コンテナにより、開発者はアプリケーションとその依存関係を一貫した環境にまとめてパッケージ化でき、異なるコンピューティング環境間でスムーズに実行できることを保証します。
 
 ## ハードウェアの準備
 
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer R1125</th>
+ <th>reComputer R1125</th>
   <th>reComputer AI R2130</th>
   <th>reComputer AI Industrial R2145</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991334.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-r2145.jpeg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1125-10-p-6256.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-Industrial-R2145-12-p-6486.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -73,14 +98,14 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-### 現在のユーザーをdockerグループに追加する
+### 現在のユーザーをdockerグループに追加
 
 ```bash
 sudo usermod -aG docker $USER
 reboot
 ```
 
-### dockerのバージョンを確認する
+### dockerバージョンの確認
 
 ```bash
 docker --version
@@ -90,18 +115,18 @@ docker --version
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker_version.png" style={{width:600, height:'auto'}}/></div>
 
-## dockerを使用する
+## dockerの使用
 
-### プロジェクトを作成する
+### プロジェクトの作成
 
-ここでは、`my_app`を例として`docker`の使用方法を説明します。
+ここでは、`docker`の使用方法を実演するために`my_app`を例として使用します。
 
 ```bash
 mkdir my_app
 cd my_app
 ```
 
-### `src` フォルダを作成し、`main.py` を作成する
+### `src`フォルダの作成と`main.py`の作成
 
 ```bash
 mkdir src && cd src
@@ -142,7 +167,7 @@ async def read_item(item_id: int, q: str = None):
 
 </details>
 
-### `static` フォルダを作成
+### `static`フォルダの作成
 
 ```bash
 cd .. && mkdir static
@@ -150,7 +175,7 @@ cd static
 mkdir css && mkdir js
 ```
 
-Creat `css` file:
+`css`ファイルの作成：
 
 ```bash
 cd css 
@@ -279,7 +304,7 @@ footer i {
 
 </details>
 
-次に `js` ファイルを作成します：
+次に`js`ファイルを作成します：
 
 ```bash
 cd .. && mkdir js
@@ -304,14 +329,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         });
     }
-    
+
     // Add a hover effect to the cards
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px)';
         });
-        
+
         card.addEventListener('mouseleave', function() {
             this.style.transform = '';
         });
@@ -321,7 +346,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </details>
 
-### `html`ファイルを作成
+### `html`ファイルの作成
 
 ```bash
 cd ../../
@@ -401,12 +426,12 @@ nano index.html
     <div class="container">
         <h1>FastAPI Application</h1>
         <p>A modern, high-performance web application</p>
-        
+
         <div class="card">
             <h2>About This App</h2>
             <p>This is a simple yet elegant web application built with FastAPI. It demonstrates how to create a beautiful UI with minimal code.</p>
         </div>
-        
+
         <div class="card">
             <h2>Features</h2>
             <ul>
@@ -416,7 +441,7 @@ nano index.html
                 <li>RESTful API endpoints</li>
             </ul>
         </div>
-        
+
         <div class="card">
             <h2>Try the API</h2>
             <p>You can access the API endpoints directly:</p>
@@ -426,7 +451,7 @@ nano index.html
             </div>
         </div>
     </div>
-    
+
     <script src="/static/js/main.js"></script>
 </body>
 </html>
@@ -434,7 +459,7 @@ nano index.html
 
 </details>
 
-### Creat `Dockerfile`
+### `Dockerfile` を作成
 
 ```bash
 cd ..
@@ -505,7 +530,7 @@ tree
 
 ### イメージのビルド
 
->注意：[dockerhub](https://hub.docker.com/)のアカウントをお持ちでない場合は、アカウントを登録してください。`xxx`はあなたのdocker hubのユーザー名です。
+>注意：[dockerhub](https://hub.docker.com/) のアカウントをお持ちでない場合は、アカウントを登録してください。`xxx` は Docker Hub のユーザー名です。
 
 ```bash
 docker build -t xxx/fastapi_app_ui:latest .
@@ -513,7 +538,7 @@ docker build -t xxx/fastapi_app_ui:latest .
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker_image.png" style={{width:1000, height:'auto'}}/></div>
 
-### イメージをテストする
+### イメージのテスト
 
 ```bash
 docker image ls -a
@@ -529,11 +554,11 @@ docker run -d -p 8000:8000 jiahaoxyz/fastapi_app_ui
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker_2.png" style={{width:1000, height:'auto'}}/></div>
 
-### イメージを公開する
+### イメージの公開
 
 そして独自の[トークン](https://app.docker.com/settings)を作成します。
 
->注意: `xxx` は DockerHub のあなた自身のユーザー名です
+>注意：`xxx` は Docker Hub の独自のユーザー名です
 
 ```sh
 docker login -u xxx
@@ -541,7 +566,7 @@ docker login -u xxx
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/dockerhub.png" style={{width:1000, height:'auto'}}/></div>
 
->注意：`xxx`はあなた自身のdockerhubのユーザー名です
+>注意：`xxx` は Docker Hub の独自のユーザー名です
 
 ```sh
 docker push xxx/fastapi_app_ui:latest
@@ -551,19 +576,19 @@ docker push xxx/fastapi_app_ui:latest
 
 ## 結果
 
-Dockerを使用してパッケージ化されたイメージがDocker Hubにアップロードされ、誰でも使用できるようになったことが確認できます。
+Docker を使用してパッケージ化されたイメージが Docker Hub にアップロードされ、誰でも使用できるようになったことがわかります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker_result.png" style={{width:1000, height:'auto'}}/></div>
 
-以下のように私のイメージを使用することができます。こちらがプロジェクトの[githubページ](https://github.com/LJ-Hao/Use_Docker_on_reComputer_Raspberrypi)です：
+以下のように私のイメージを使用できます。こちらがプロジェクトの [GitHub ページ](https://github.com/LJ-Hao/Use_Docker_on_reComputer_Raspberrypi) です：
 
 ```sh
 docker pull jiahaoxyz/fastapi_app_ui
 ```
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

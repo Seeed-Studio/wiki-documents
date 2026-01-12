@@ -6,6 +6,7 @@ keywords:
 - TRMNL
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp
 slug: /cn/ogdiy_kit_works_with_esphome
+sku: 104991005
 sidebar_position: 3
 last_update:
   date: 07/24/2025
@@ -27,13 +28,13 @@ import TabItem from '@theme/TabItem';
 
 ## [Home Assistant](https://www.home-assistant.io/) 简介
 
-Home Assistant 是一个功能强大的开源家庭自动化平台，允许您从一个统一的界面控制和监控智能家居设备。它充当智能家居的中央枢纽，使您能够自动化日常任务、监控传感器并创建更智能的生活空间。
+Home Assistant 是一个功能强大的开源家庭自动化平台，允许您从一个统一的界面控制和监控智能家居设备。它充当智能家居的中央枢纽，使您能够自动化例程、监控传感器并创建更智能的生活空间。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:900, height:'auto'}}/></div>
 
 ### 为什么选择 Home Assistant？
 
-- **本地控制**：与许多基于云的解决方案不同，Home Assistant 在您的网络上本地运行，确保您的数据保持私密，即使没有互联网连接，您的自动化也能正常工作。
+- **本地控制**：与许多基于云的解决方案不同，Home Assistant 在您的网络上本地运行，确保您的数据保持私密，即使没有互联网访问，您的自动化也能正常工作。
 
 - **广泛的设备支持**：Home Assistant 与数千种不同的智能家居设备和服务集成，使其具有高度的通用性和面向未来的特性。
 
@@ -61,7 +62,7 @@ TRMNL 7.5inch(OG) DIY Kit 是 Home Assistant 的绝佳伴侣，原因如下：
 
 ### ESPHome 集成
 
-ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以刷写到您的设备上。对于 TRMNL 7.5inch(OG) DIY Kit，ESPHome 充当设备与 Home Assistant 之间通信的重要中间件。
+ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以刷写到您的设备上。对于 TRMNL 7.5inch(OG) DIY Kit，ESPHome 作为重要的中间件，实现设备与 Home Assistant 之间的通信。
 
 该系统通过将您的 YAML 配置转换为在 ESP 设备上运行的功能齐全的固件来工作。该固件处理连接到网络、与 Home Assistant 通信以及控制电子纸显示屏的所有复杂任务。当与 Home Assistant 结合使用时，ESPHome 为创建复杂的家庭自动化显示和控制提供了强大的平台。
 
@@ -98,7 +99,7 @@ ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允
   </table>
 </div>
 
-Home Assistant Green 是自动化家居最简单、最注重隐私的方式。它提供轻松的设置，允许您用一个系统控制所有智能设备，默认情况下所有数据都存储在本地。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月改进。
+Home Assistant Green 是自动化家庭最简单、最注重隐私的方式。它提供轻松的设置，允许您用一个系统控制所有智能设备，默认情况下所有数据都存储在本地。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月改进。
 
 我们建议在本教程中使用 Home Assistant Green 作为 Home Assistant 主机，或者您可以使用任何带有 Supervisor 的 Home Assistant 主机。
 
@@ -264,17 +265,17 @@ display:
 点击 **INSTALL** 将代码安装到设备，您将看到以下图像。
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='通过浏览器安装'>
 
 :::tip
-如果您的 Home Assistant 主机（树莓派/Green/Yellow 等）距离您很远，我们建议使用此方法。您可以使用手边的计算机进行安装。
+如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）距离您很远，我们建议使用此方法。您可以使用手边的计算机进行安装。
 :::
 
 首先，您需要点击 **Manual download** 下载编译好的固件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-打开这个网站，我们将在这里上传固件到电子纸面板。
+打开这个网站，我们将在这里将固件上传到电子纸面板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
@@ -282,7 +283,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-选择 Factory 格式。
+选择 Factory format。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
@@ -307,13 +308,13 @@ display:
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='通过主机安装'>
 
 :::tip
-如果您的 Home Assistant 主机（树莓派/Green/Yellow 等）就在附近，我们建议使用此方法，因为它更简单。
+如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）就在附近，我们建议使用此方法，因为它更简单。
 :::
 
-在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的树莓派或 HA Green（Yellow）等**。
+在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green（Yellow）等**。
 
 按照图像中的选项点击以将代码安装到设备。[设备在深度睡眠模式下找不到端口？](#port)
 
@@ -331,7 +332,7 @@ display:
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='通过 Wi-Fi 安装'>
 
 :::tip
 这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到电子纸面板。之后，您可以通过 wifi 上传。另外，请确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
@@ -491,7 +492,7 @@ display:
 
 此示例将在显示屏上显示图标。
 
-首先，我们需要安装一个文件编辑器插件。搜索 **Studio Code Server** 并点击它。点击 **INSTALL** 和 **START**。
+首先，我们需要安装文件编辑器插件。搜索 **Studio Code Server** 并点击它。点击 **INSTALL** 和 **START**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:800, height:'auto'}}/></div>
 
@@ -569,7 +570,7 @@ display:
 
 与前面的示例一样，我们需要安装 **Studio Code Server** 并创建一个名为 **image** 的新文件夹来保存图像。
 
-然后将图像放入 **image** 文件夹。您可以点击下面的按钮下载一张图像来试试。
+然后将图像放入 **image** 文件夹。您可以点击下面的按钮下载一张图像进行尝试。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
@@ -623,11 +624,11 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/96.jpg" style={{width:800, height:'auto'}}/></div>
 
-请参阅下一步创建令牌并粘贴到此处。
+查看下一步创建令牌并粘贴到此处。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/88.jpg" style={{width:800, height:'auto'}}/></div>
 
-转到 **Security page** 底部并创建一个令牌，然后复制并粘贴到 **Puppet** 插件中。
+转到 **Security page** 底部并创建令牌，然后复制并粘贴到 **Puppet** 插件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/85.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -663,11 +664,20 @@ http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-您可以在浏览器中输入此链接来查看截图效果。
+您可以通过在浏览器中输入此链接来查看截图效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
-您可以复制下面的代码并将其粘贴到 `captive_portal` 之后，如下所示。
+复制下面的代码并将其粘贴到 `esp32` 后面：
+
+```yaml
+# Enable PSRAM support since online_image requires more than the available RAM capacity
+psram:
+  mode: octal
+  speed: 80MHz
+```
+
+您可以复制下面的代码并将其粘贴到 `captive_portal` 后面，如下所示。
 
 ```yaml
 http_request:
@@ -705,7 +715,7 @@ display:
       it.image(0, 0, id(dashboard_image));
 ```
 
-当您看到如下图所示的反馈时，说明代码运行成功。
+当您看到如下图所示的反馈时，表示代码运行成功。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/94.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -717,7 +727,7 @@ display:
 
 此示例将展示如何使用深度睡眠模式来节省电力。每 6 小时更新一次信息。
 
-您可以复制下面的代码并将其粘贴到 `captive_portal` 之后，如下所示。
+您可以复制下面的代码并将其粘贴到 `captive_portal` 后面，如下所示。
 
 ```yaml
 globals:
@@ -808,6 +818,11 @@ esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: arduino
+
+# Enable PSRAM support since online_image requires more than the available RAM capacity
+psram:
+  mode: octal
+  speed: 80MHz
 
 # Enable logging
 logger:
@@ -1115,19 +1130,19 @@ display:
 
 ## 常见问题
 
-### Q1: 为什么没有数据？
+### Q1：为什么没有数据？
 
-在这种情况下，您应该转到 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的电子纸面板？尝试重启 HA。
+在这种情况下，您应该转到 Settings -> Devices & Services -> Integrations 来**重新配置**设备。没有找到您的 ePaper 面板？尝试重启 HA。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### Q2: 为什么我无法在 Home Assistant 中获取这些数据？ {#port}
+### Q2：为什么我无法在 Home Assistant 中获取这些数据？ {#port}
 
 在这种情况下，您应该转到 Settings -> Devices & Services -> Integrations 来**添加**您的设备到 HA。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
-### <span id="deepmode">Q3</span>: 当设备处于深度睡眠模式时，如何上传新程序？
+### <span id="deepmode">Q3</span>：当设备处于深度睡眠模式时，如何上传新程序？
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/103.png" style={{width:'100%', height:'auto'}}/></div>
@@ -1144,17 +1159,17 @@ display:
 
 4. 最后，重新插入电缆并上传新程序。
 
-### <span id="Q4">Q4</span>: TRMNL 7.5inch(OG) DIY Kit 无法连接到您的计算机？
+### <span id="Q4">Q4</span>：TRMNL 7.5inch(OG) DIY Kit 无法连接到您的计算机？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
 尝试多次拔插，或者根据提示安装驱动程序。
 
-### <span id="Q5">Q5</span>: Wi-Fi 上传程序失败？
+### <span id="Q5">Q5</span>：Wi-Fi 上传程序失败？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/74.png" style={{width:800, height:'auto'}}/></div>
 
-在这种情况下，您的电子纸面板处于离线状态或深度睡眠模式。请让它上线或唤醒它。
+在这种情况下，您的 epaper 面板处于离线状态或深度睡眠模式。请让它上线或唤醒它。
 
 ## 技术支持与产品讨论
 

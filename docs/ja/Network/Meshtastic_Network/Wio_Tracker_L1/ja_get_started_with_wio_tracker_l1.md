@@ -5,9 +5,10 @@ keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
 slug: /ja/get_started_with_meshtastic_wio_tracker_l1
+sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
-  date: 12/3/2025
+  date: 12/24/2025
   author: Michelle Huang
 ---
 
@@ -24,9 +25,7 @@ L1、L1 Lite、または L1 E-Ink モデルを初めて使用する際は、USB 
 <iframe width="700" height="395" src="https://www.youtube.com/embed/Wi_YmE76YcY?si=Ad-pUhle5X9QppPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
-
-### パート 2 ファームウェア書き込み
+### パート 2 ファームウェアフラッシュ
 
 :::caution note
 ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
@@ -47,7 +46,7 @@ L1 E-Ink ファームウェアは現在4方向ジョイスティックをサポ�
 
 #### メニューバー
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/Menu.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7 ファームウェアのみがメニューバーをサポートしています。メニューバーを使用したい場合は、[ファームウェア書き込みチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってファームウェアを更新してください。
+2.7 ファームウェアのみがメニューバーをサポートしています。メニューバーを使用したい場合は、[ファームウェアフラッシュチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってファームウェアを更新してください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 #### ブザー
@@ -79,9 +78,10 @@ Setting（歯車の形のアイコン）-> Notification -> Buzzer Action -> All 
 :::danger note
 デバイスが以下の状態にある場合は、手動で再起動または電源を切らないでください。そうしないとデバイスが動作しなくなる可能性があります。
 1. メッセージ送信プロセスが完了していない
-2. 設定中である
+2. 設定中
 :::
-### ファームウェア書き込み
+
+### ファームウェアフラッシュ
 
 :::caution note
 ファームウェアの更新に `NRF-OTA を使用しないでください`。デバイスが完全に動作しなくなる可能性があります。
@@ -106,7 +106,7 @@ L1 E-Ink の場合、ターゲットデバイスを `Seeed Wio Tracker L1 E-Ink`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/52840-connect.png" alt="pir" width={800} height="auto" /></p>
 
-UF2 ファイルを DFU ドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアが書き込まれます。
+UF2 ファイルを DFU ドライブにドラッグしてください。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされます。
 
 ### デバイスの電源を入れる
 
@@ -141,7 +141,7 @@ import TabItem from '@theme/TabItem';
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-- コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスに接続してください。
+- コードを入力し（デフォルトコードは `123456`）、`OK` をクリックしてデバイスに接続してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -180,7 +180,7 @@ import TabItem from '@theme/TabItem';
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WebsiteConnectionSuccess.png" alt="pir" width={300} height="auto" /></p>
 
 
-### パラメータの設定
+### LoRa の設定
 
 メッシュ通信を開始するには、地域を設定する必要があります。この設定は、デバイスが使用する周波数範囲を制御し、地域の場所に応じて設定する必要があります。
 
@@ -211,7 +211,18 @@ import TabItem from '@theme/TabItem';
 **EU_868** は、1時間のローリングベースで毎分計算される10%の時間あたりデューティサイクル制限を遵守する必要があります。制限に達すると、再び許可されるまでデバイスは送信を停止します。
 :::
 
-デバイスでLoRa地域を設定したので、ニーズに合わせて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)を構成することができます。
+デバイスでLoRa地域を設定したので、必要に応じて[LoRa設定](https://meshtastic.org/docs/configuration/radio/lora/)を構成することができます。
+
+### GPS設定
+
+GPSを有効にしてください。更新間隔とブロードキャスト間隔を調整して、より最新の位置情報を取得できます。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MeshGPS.png" alt="pir" width={500} height="auto" /></p>
+
+iOSの場合は、`Accurate Location`をオンにしてください。そうしないと、位置情報がずれる可能性があります。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSAccurateLocation.jpg" alt="pir" width={200} height="auto" /></p>
+
 
 ### センサー接続
 
@@ -229,7 +240,7 @@ Groveインターフェースを介してデバイスにセンサーを追加で
   </tr>
   <tr>
     <td>温度</td>
-    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html) 、PCT2075</td>
+    <td>[MCP9808](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temperature-Sensor-MCP9808.html)、PCT2075</td>
   </tr>
   <tr>
     <td>温度・湿度</td>
@@ -251,13 +262,18 @@ Groveインターフェースを介してデバイスにセンサーを追加で
 </table>
 
 ### スクリーン接続
+ - E-Inkスクリーン
+  [こちらをクリック](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)して、互換性のあるE-Inkスクリーンを入手してください。
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/E-Ink_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
 
- - [こちらをクリック](https://www.seeedstudio.com/2-13-Monochrome-ePaper-Display-with-122x250-Pixels-p-5778.html)して、互換性のあるE-Inkスクリーンを入手してください。
-- 互換性のある別売りOLEDスクリーンの発売をお楽しみにお待ちください。近日中に利用可能になります。現在のOLEDドライバーはSSD1306です。
+- OLEDスクリーン
+[こちらをクリック](https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html)して、互換性のあるOLEDスクリーンを入手してください。現在のOLEDドライバーはSSD1306です。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/OLED_Screen_Connection.jpg" alt="pir" width={300} height="auto" /></p>
+
 
 ### バーチャルキーボード
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/virtual_keyboard.jpeg" alt="pir" width={600} height="auto" /></p>
-2.7バージョンのファームウェアでバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力して他のデバイスと通信できます。[ファームウェアフラッシュチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってファームウェアを更新してください。
+<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/1-3inch-OLED-128-64-White-FPC-p-6614.html" alt="pir" width={600} height="auto" /></p>
+2.7バージョンのファームウェアでバーチャルキーボードがサポートされました！デバイス上で直接メッセージを入力して、他のデバイスと通信できます。[ファームウェアフラッシュチュートリアル](http://localhost:3000/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってファームウェアを更新してください。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/version.png" alt="pir" width={600} height="auto" /></p>
 
 ## FAQ
@@ -266,30 +282,30 @@ Groveインターフェースを介してデバイスにセンサーを追加で
 
 **説明：**
 
-デバイスが応答せず、LEDが点灯せず、アプリとペアリングできません。独自のファームウェアをフラッシュした後にデバイスが完全に動作しなくなった場合は、ブートローダーの再インストールを試すこともできます。
+デバイスが応答しない、LEDが点灯しない、アプリとペアリングできない。独自のファームウェアをフラッシュした後にデバイスが完全に動作しなくなった場合は、ブートローダーの再インストールを試すこともできます。
 
 :::danger note
-ブートローダーをフラッシュする際は、ケーブル接続が安定していることを確認し、フラッシュプロセス中に**絶対に**切断しないでください。
+ブートローダーをフラッシュする際は、ケーブル接続が安定していることを確認し、フラッシュプロセス中は**絶対に**切断しないでください。
 :::
 
 - ステップ1：[こちらをクリックしてブートローダーをダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
 
 - ステップ2：DFUモードに入る
 
-  RSTボタンをダブルクリックしてDFUモードに入ります。「Tracker L1」というディスク名が表示されます。
+  RSTボタンをダブルクリックしてDFUモードに入ります。「Tracker L1」という名前のディスクが表示されます。
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1RstButton.png" alt="pir" width={300} height="auto" /></p>
 
 - ステップ3：ブートローダーファイルを貼り付ける
 
-  ダウンロードしたブートローダーファイルでディスク内のすべてのファイルを上書きします。
+  ディスク内のすべてのファイルをダウンロードしたブートローダーファイルで上書きします。
 
 - ステップ4：ファームウェアをフラッシュする
 
   上記の手順を完了したら、この[ステップ](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#flash-firmware)に従ってアプリケーションファームウェアをフラッシュできます。[手動でDFUモードに入る](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#unable-to-enter-dfu--entering-dfu-mode-manually)必要がある場合があります。
 
 
-### DFUモードに入れない場合と手動でのDFUモード入力
+### DFUに入れない・手動でDFUモードに入る
 
 デバイスをPCに接続し、`Reset`ボタンをダブルプレスします。黄色のLEDが点灯し続け、PC上に`Tracker L1`という名前の新しいUSBドライブが表示されます。
 
@@ -297,13 +313,35 @@ Groveインターフェースを介してデバイスにセンサーを追加で
 
 `Reset`ボタンを一度押してDFUモードを終了します。
 
+ ### デバイスの自動電源オフ
+
+ #### 説明
+
+ - デバイスの電源を入れた後、しばらくすると自動的に電源が切れたり再起動したりします。
+ - シリアルポートログがしばらく実行された後、停止します。
+
+ これは、デバイスが次の状態にあるときに手動で強制的に再起動または電源を切ったことが原因である可能性があります：メッセージ送信プロセスが完了していない、設定中......
+
+ #### トラブルシューティング
+
+[こちらをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)してビデオをご覧ください。フラッシュ消去を実行し、最新のファームウェアを再フラッシュする必要があります。
+
+### ファクトリーリセット
+デフォルト設定に復元したい場合は、ファクトリーリセットを実行できます。ファクトリーリセットを実行する方法は2つあります。
+
+- [こちらをクリック](https://wiki.seeedstudio.com/ja/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)してビデオをご覧ください。フラッシュ消去を実行し、最新のファームウェアを再フラッシュする必要があります。
+
+- アプリの`Factory Reset`ボタンをクリックします。デバイスは工場出荷時設定で自動的に再起動します。
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Factory.png" alt="pir" width={400} height="auto" /></p>
+
+
 ### 信号品質
 
 - **SNR**は通信リンクの品質を反映します。通常のデバイスは-7 dB以上で動作します。SNRが-10 dB未満のデバイスは性能が悪いことを示します。
 
 - **RSSI**はデバイスとその周囲環境によって共同で決定されます。通常のデバイスは-110 dBm以上で動作します。RSSIが-115 dBm未満のデバイスは性能が悪いと考えられます。
 
-      最良の信号効果を得るために、干渉が最小限の開放的で障害物のない場所でデバイスを使用してください。
+      最高の信号効果を得るために、開放的で障害物のない、干渉の少ない場所でデバイスを使用してください。
 
 ### 互換性のあるアンテナ
 
@@ -311,8 +349,9 @@ L1 Proのアンテナ交換が必要な場合は、[こちらをクリック](ht
 
 ## リソース
 - [ブートローダー](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_l1_bootloader.uf2)
-- [(V1) 3Dプリント参考ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing) 
-- [(V2 新4方向ジョイスティック) 3Dプリント参考ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip) 
+- [(V1) 3Dプリント参考ファイル](https://www.printables.com/model/1355571-wio-tracker-l1-pro-for-meshtastic-enclosure-casing)
+- [(V2 新4方向ジョイスティック) 3Dプリント参考ファイル](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/L1pro%203D%20Enclosure.zip)
+- [L1エンクロージャーデザインチャレンジ](https://www.hackster.io/contests/SeeedMeshtasticDeviceDesign2025/hardware_applications#challengeNav)
 - [アウトラインファイル](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Wio%20Tracker%20L1%20outline.dxf)
 - [TELEC認証](https://files.seeedstudio.com/Seeed_Certificate/documents_certificate/WioL1series-TELEC.pdf)
 - [FCC認証](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%20L1%20FCC%20Certification.pdf)

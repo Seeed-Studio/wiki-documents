@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-I2C_ADC/
 slug: /cn/Grove-I2C_ADC
+sku: 103020013
 last_update:
   date: 01/06/2022
   author: gunengyu

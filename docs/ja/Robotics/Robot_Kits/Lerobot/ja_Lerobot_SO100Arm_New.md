@@ -1,5 +1,5 @@
 ---
-description: このwikiは、SO ARM100の組み立てとデバッグのチュートリアルを提供し、最新版のLerobotフレームワーク内でのデータ収集とトレーニングを実現します。
+description: このwikiは、SO ARM100の組み立てとデバッグのチュートリアルを提供し、最新バージョンのLerobotフレームワーク内でのデータ収集とトレーニングを実現します。
 title: LerobotでのSoArm
 keywords:
 - Lerobot
@@ -8,6 +8,7 @@ keywords:
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /ja/lerobot_so100m_new
+sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 9/26/2025
   author: LiShanghang
@@ -18,12 +19,12 @@ translation:
 # LeRobotを使用したSO-ARM100およびSO-ARM101ロボットアームの入門
 
 :::tip
-このチュートリアルのメンテナンスは最新版の[lerobot](https://huggingface.co/docs/lerobot/index)に更新されています。以前のバージョンのチュートリアルを参照したい場合は、[こちら](https://wiki.seeedstudio.com/ja/lerobot_so100m/)をクリックしてください。
+このチュートリアルのメンテナンスは最新バージョンの[lerobot](https://huggingface.co/docs/lerobot/index)に更新されています。以前のバージョンのチュートリアルを参照したい場合は、[こちら](https://wiki.seeedstudio.com/ja/lerobot_so100m/)をクリックしてください。
 :::
 
 ## はじめに
 
-[SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100)は、[TheRobotStudio](https://www.therobotstudio.com/)によって開始された完全オープンソースのロボットアームプロジェクトです。フォロワーアームとリーダーロボットアームが含まれており、詳細な3Dプリントファイルと操作ガイドも提供されています。[LeRobot](https://github.com/huggingface/lerobot/tree/main)は、PyTorchで実世界のロボティクス向けのモデル、データセット、ツールを提供することに取り組んでいます。その目的は、ロボティクスの参入障壁を下げ、誰もがデータセットと事前訓練済みモデルの共有に貢献し、恩恵を受けられるようにすることです。LeRobotは、模倣学習を中心とした実世界での応用に検証された最先端の方法論を統合しています。人間が収集したデモンストレーションを特徴とする事前訓練済みモデル、データセット、シミュレーション環境のスイートを提供し、ユーザーがロボットの組み立ての必要なしに開始できるようにしています。今後数週間で、現在利用可能な最もコスト効率的で有能なロボットでの実世界ロボティクスのサポートを拡張する予定です。
+[SO-10xARM](https://github.com/TheRobotStudio/SO-ARM100)は、[TheRobotStudio](https://www.therobotstudio.com/)によって開始された完全にオープンソースのロボットアームプロジェクトです。フォロワーアームとリーダーロボットアームが含まれており、詳細な3Dプリントファイルと操作ガイドも提供されています。[LeRobot](https://github.com/huggingface/lerobot/tree/main)は、PyTorchで実世界のロボティクス向けのモデル、データセット、ツールを提供することに取り組んでいます。その目的は、ロボティクスの参入障壁を下げ、誰もがデータセットと事前訓練されたモデルの共有に貢献し、恩恵を受けることができるようにすることです。LeRobotは、実世界での応用に検証された最先端の方法論を統合し、模倣学習を中心としています。人間が収集したデモンストレーションを特徴とする事前訓練されたモデル、データセット、シミュレーション環境のスイートを提供し、ユーザーがロボットの組み立ての必要なしに開始できるようにしています。今後数週間で、現在利用可能な最もコスト効率的で有能なロボットでの実世界のロボティクスのサポートを拡張する予定です。
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/sD34HnAkGNc?si=hqKd_sH5Oc9sdcwd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -31,7 +32,7 @@ translation:
 
 ## プロジェクト紹介
 
-SO-ARM10xとreComputer Jetson AIインテリジェントロボットキットは、高精度ロボットアーム制御と強力なAIコンピューティングプラットフォームをシームレスに組み合わせ、包括的なロボット開発ソリューションを提供します。このキットは、Jetson OrinまたはAGX Orinプラットフォームをベースに、SO-ARM10xロボットアームとLeRobot AIフレームワークを組み合わせ、教育、研究、産業自動化などの複数のシナリオに適用可能なインテリジェントロボットシステムをユーザーに提供します。
+SO-ARM10xとreComputer Jetson AIインテリジェントロボットキットは、高精度ロボットアーム制御と強力なAIコンピューティングプラットフォームをシームレスに組み合わせ、包括的なロボット開発ソリューションを提供します。このキットは、Jetson OrinまたはAGX Orinプラットフォームをベースとし、SO-ARM10xロボットアームとLeRobot AIフレームワークを組み合わせて、教育、研究、産業自動化などの複数のシナリオに適用可能なインテリジェントロボットシステムをユーザーに提供します。
 このwikiは、SO ARM10xの組み立てとデバッグのチュートリアルを提供し、Lerobotフレームワーク内でのデータ収集とトレーニングを実現します。
 
   <div align="center">
@@ -48,19 +49,19 @@ SO-ARM10xとreComputer Jetson AIインテリジェントロボットキットは
 
 1. **オープンソースで低コスト**：[TheRobotStudio](https://github.com/TheRobotStudio/SO-ARM100)からのオープンソース、低コストロボットアームソリューションです
 2. **LeRobotとの統合**：[LeRobotプラットフォーム](https://github.com/huggingface/lerobot)との統合のために設計されています
-3. **豊富な学習リソース**：組み立てと校正ガイド、テスト、データ収集、トレーニング、デプロイメントのチュートリアルなど、包括的なオープンソース学習リソースを提供し、ユーザーが迅速に開始してロボットアプリケーションを開発できるよう支援します。
+3. **豊富な学習リソース**：組み立てとキャリブレーションガイド、テスト、データ収集、トレーニング、デプロイメントのチュートリアルなど、包括的なオープンソース学習リソースを提供し、ユーザーが迅速に開始してロボットアプリケーションを開発できるよう支援します。
 4. **Nvidiaとの互換性**：このアームキットをreComputer Mini J4012 Orin NX 16 GBでデプロイします。
 5. **マルチシーン応用**：教育、科学研究、自動化生産、ロボティクスなどの分野に適用可能で、ユーザーが様々な複雑なタスクで効率的で精密なロボット操作を実現するのを支援します。
 
 ## 新機能：
 
 - 配線の最適化：SO-ARM100と比較して、SO-ARM101は改良された配線を特徴とし、以前にジョイント3で見られた切断問題を防ぎます。新しい配線設計により、ジョイントの可動範囲も制限されなくなりました。
-- リーダーアームの異なるギア比：リーダーアームは最適化されたギア比のモーターを使用し、性能を向上させ、外部ギアボックスの必要性を排除しました。
+- リーダーアームの異なるギア比：リーダーアームは最適化されたギア比のモーターを使用し、性能を向上させ、外部ギアボックスの必要性を排除しています。
 - 新機能サポート：リーダーアームがフォロワーアームをリアルタイムで追従できるようになりました。これは、人間がロボットの動作に介入して修正できる今後の学習ポリシーにとって重要です。
 
 :::caution
 
-Seeed Studioは、ハードウェア自体の品質についてのみ責任を負います。チュートリアルは公式ドキュメントに厳密に従って更新されています。解決できないソフトウェアの問題や環境依存の問題に遭遇した場合は、このチュートリアルの最後にあるFAQセクションを確認することに加えて、[LeRobotプラットフォーム](https://github.com/huggingface/lerobot)または[LeRobot Discordチャンネル](https://discord.gg/8TnwDdjFGU)に速やかに問題を報告してください。
+Seeed Studioは、ハードウェア自体の品質についてのみ責任を負います。チュートリアルは公式ドキュメントに厳密に従って更新されています。解決できないソフトウェアの問題や環境依存の問題に遭遇した場合は、このチュートリアルの最後にあるFAQセクションを確認することに加えて、[LeRobotプラットフォーム](https://github.com/huggingface/lerobot)または[LeRobot Discordチャンネル](https://discord.gg/8TnwDdjFGU)に問題を速やかに報告してください。
 
 :::
 
@@ -79,21 +80,21 @@ Seeed Studioは、ハードウェア自体の品質についてのみ責任を�
     </tr>
     <tr>
       <th></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">アームキット</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">アームキットPro</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">アームキット</a></th>
-      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">アームキットPro</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Arm Kit</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Arm Kit Pro</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">Arm Kit</a></th>
+      <th><a href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit-Pro-p-6343.html" target="_blank">Arm Kit Pro</a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>リーダーアーム</td>
-      <td rowSpan="2">全ジョイント用の1:345ギア比を持つ12x ST-3215-C001（7.4V）モーター</td>
-      <td rowSpan="2">全ジョイント用の1:345ギア比を持つ12x ST-3215-C018/ST-3215-C047（12V）モーター</td>
+      <td rowSpan="2">全ジョイント用の1:345ギア比を持つ12x ST-3215- C001 (7.4V) モーター</td>
+      <td rowSpan="2">全ジョイント用の1:345ギア比を持つ12x ST-3215-C018/ST-3215-C047 (12V) モーター</td>
       <td colSpan="2">
-        ジョイント2のみ用の1:345ギア比を持つ1x ST-3215-C001（7.4V）モーター<br />
-        ジョイント1と3用の1:191ギア比を持つ2x ST-3215-C044（7.4V）モーター<br />
-        ジョイント4、5、グリッパー（ジョイント6）用の1:147ギア比を持つ3x ST-3215-C046（7.4V）モーター
+        ジョイント2のみ用の1:345ギア比を持つ1x ST-3215- C001 (7.4V) モーター<br />
+        ジョイント1と3用の1:191ギア比を持つ2x ST-3215-C044 (7.4V) モーター<br />
+        ジョイント4、5、グリッパー（ジョイント6）用の1:147ギア比を持つ3x ST-3215-C046 (7.4V) モーター
       </td>
     </tr>
     <tr>
@@ -131,7 +132,7 @@ Seeed Studioは、ハードウェア自体の品質についてのみ責任を�
 
 :::danger
 
-アームキット版を購入した場合、両方の電源は5Vです。アームキットPro版を購入した場合は、リーダーロボットアームの校正とすべてのステップに5V電源を使用し、フォロワーロボットアームの校正とすべてのステップに12V電源を使用してください。
+Arm Kitバージョンを購入した場合、両方の電源は5Vです。Arm Kit Proバージョンを購入した場合は、リーダーロボットアームのキャリブレーションとすべてのステップに5V電源を使用し、フォロワーロボットアームのキャリブレーションとすべてのステップに12V電源を使用してください。
 
 :::
 
@@ -171,7 +172,7 @@ Seeed Studioは、ハードウェア自体の品質についてのみ責任を�
 
   [D. 組み立て](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#assembly)
 
-  [E. 校正](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#calibrate)
+  [E. キャリブレーション](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#calibrate)
 
   [F. テレオペレーション](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#teleoperate)
 
@@ -190,7 +191,7 @@ Seeed Studioは、ハードウェア自体の品質についてのみ責任を�
 ## 3Dプリントガイド
 
 :::caution
-SO101の公式アップデートに伴い、SO100はサポートされなくなり、公式によるとソースファイルは削除されますが、ソースファイルは依然として私たちの[Makerworld](https://makerworld.com/zh/models/908660)で見つけることができます。ただし、以前にSO100を購入したユーザーについては、チュートリアルとインストール方法は引き続き互換性があります。SO101のプリントは、SO100のモーターキットインストールと完全に互換性があります。
+SO101の公式アップデートに伴い、SO100はもはやサポートされず、公式によるとソースファイルは削除されますが、ソースファイルは依然として私たちの[Makerworld](https://makerworld.com/zh/models/908660)で見つけることができます。ただし、以前にSO100を購入したユーザーについては、チュートリアルとインストール方法は互換性があります。SO101のプリントは、SO100のモーターキットインストールと完全に互換性があります。
 :::
 
 ### ステップ1：プリンターを選択する
@@ -198,17 +199,17 @@ SO101の公式アップデートに伴い、SO100はサポートされなくな�
 提供されるSTLファイルは、多くのFDMプリンターでプリント可能です。以下はテスト済みで推奨される設定ですが、他の設定でも動作する可能性があります。
 
 - 材料：PLA+
-- ノズル径と精度：0.4mmノズル径で0.2mmレイヤー高さ、または0.6mmノズルで0.4mmレイヤー高さ。
+- ノズル径と精度：0.2mmレイヤー高さでの0.4mmノズル径、または0.4mmレイヤー高さでの0.6mmノズル。
 - インフィル密度：15%  
 
 ### ステップ2：プリンターをセットアップする
 
 - プリンターが校正され、ベッドレベルがプリンター固有の指示に従って正しく設定されていることを確認してください。
 - プリントベッドを清掃し、ほこりや油脂がないことを確認してください。水やその他の液体でベッドを清掃した場合は、ベッドを乾燥させてください。
-- プリンターが推奨する場合は、標準的なグルースティックを使用し、ベッドのプリント領域全体に薄く均一な接着剤の層を塗布してください。塊や不均一な塗布は避けてください。
+- プリンターが推奨する場合は、標準的なグルースティックを使用し、ベッドのプリント領域全体に薄く均一にグルーを塗布してください。塊や不均一な塗布は避けてください。
 - プリンター固有の指示に従ってプリンターフィラメントをロードしてください。
 - プリンター設定が上記で推奨されたものと一致することを確認してください（ほとんどのプリンターには複数の設定があるため、最も近いものを選択してください）。
-- すべての場所でサポートを設定しますが、水平に対して45度を超える傾斜は無視してください。
+- 水平面に対して45度を超える傾斜は無視して、すべての場所にサポートを設定してください。
 - 水平軸を持つネジ穴にはサポートがないようにしてください。
 
 ### ステップ3：パーツを印刷する
@@ -249,7 +250,7 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-2. lerobot用の新しいconda環境を作成してアクティベート
+2. lerobotのための新しいconda環境を作成してアクティベート
 
 ```bash
 conda create -y -n lerobot python=3.10 && conda activate lerobot
@@ -268,7 +269,7 @@ conda install ffmpeg -c conda-forge
 ```
 
 :::tip
-これは通常、libsvtav1エンコーダーでコンパイルされたプラットフォーム用のffmpeg 7.Xをインストールします。libsvtav1がサポートされていない場合（ffmpeg -encodersでサポートされているエンコーダーを確認）、以下を実行できます：
+これは通常、libsvtav1エンコーダーでコンパイルされたプラットフォーム用のffmpeg 7.Xをインストールします。libsvtav1がサポートされていない場合（ffmpeg -encodersでサポートされているエンコーダーを確認）、以下のことができます：
 
 - [すべてのプラットフォーム] 以下を使用してffmpeg 7.Xを明示的にインストール：
 
@@ -326,9 +327,9 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="SO101" label="SO101">
 
-SO-ARM101のサーボ校正と初期化プロセスは、方法とコードの両方においてSO-ARM100と同じです。ただし、SO-ARM101リーダーアームの最初の3つの関節のギア比はSO-ARM100と異なるため、注意深く区別して校正することが重要です。
+SO-ARM101のサーボ校正と初期化プロセスは、方法とコードの両方においてSO-ARM100と同じです。ただし、SO-ARM101リーダーアームの最初の3つの関節のギア比はSO-ARM100のものと異なるため、注意深く区別して校正することが重要です。
 
-モーターを設定するには、リーダーアーム用に1つのバスサーボアダプターと6つのモーターを指定し、同様にフォロワーアーム用に他のバスサーボアダプターと6つのモーターを指定します。それらにラベルを付け、各モーターがフォロワーF用かリーダーL用か、そして1から6までのIDを書くと便利です。**フォロワーアーム**の関節1から6を表すために**F1–F6**を使用し、**リーダーアーム**の関節1から6を表すために**L1–L6**を使用します。対応するサーボモデル、関節の割り当て、ギア比の詳細は以下の通りです：
+モーターを設定するには、リーダーアーム用に1つのバスサーボアダプターと6つのモーターを指定し、同様にフォロワーアーム用に他のバスサーボアダプターと6つのモーターを指定します。それらにラベルを付け、各モーターがフォロワーF用かリーダーL用か、そして1から6までのIDを書くと便利です。**フォロワーアーム**の関節1から6を表すために**F1–F6**を使用し、**リーダーアーム**の関節1から6を表すために**L1–L6**を使用します。対応するサーボモデル、関節割り当て、ギア比の詳細は以下の通りです：
 
 | サーボモデル                            | ギア比 | 対応する関節         |
 |----------------------------------------|------------|------------------------------|
@@ -339,7 +340,7 @@ SO-ARM101のサーボ校正と初期化プロセスは、方法とコードの�
 | ST-3215-C001(7.4V) / C018(12V) / C047(12V)             | 1:345      | F1–F6                        |
 
 :::danger
-モーターバスに5Vまたは12Vの電源を接続する必要があります。STS3215 7.4Vモーター用には5V、STS3215 12Vモーター用には12Vです。リーダーアームは常に7.4Vモーターを使用するため、12Vと7.4Vモーターがある場合は正しい電源を接続するよう注意してください。そうしないとモーターを焼損する可能性があります！次に、USBを介してモーターバスをコンピューターに接続します。USBは電力を供給しないため、電源とUSBの両方を接続する必要があることに注意してください。
+モーターバスに5Vまたは12Vの電源を接続してください。STS3215 7.4Vモーター用には5V、STS3215 12Vモーター用には12Vです。リーダーアームは常に7.4Vモーターを使用するため、12Vと7.4Vモーターがある場合は正しい電源を接続するよう注意してください。そうしないとモーターを焼損する可能性があります！次に、USB経由でモーターバスをコンピューターに接続します。USBは電力を供給しないため、電源とUSBの両方を接続する必要があることに注意してください。
 :::
 
 <div align="center">
@@ -347,7 +348,7 @@ SO-ARM101のサーボ校正と初期化プロセスは、方法とコードの�
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" />
 </div>
 
-***以下はコード校正手順です。上記の画像の参照配線サーボで校正してください***
+***以下はコード校正ステップです。上記の画像の参照配線サーボで校正してください***
 
 アームに関連するUSBポートを見つける
 各アームの正しいポートを見つけるために、ユーティリティスクリプトを2回実行します：
@@ -441,7 +442,7 @@ Connect the controller board to the 'wrist_roll' motor only and press enter.
 :::
 
 :::tip
-Enterを押す前に、各ステップでケーブル接続を確認してください。例えば、ボードを操作する際に電源ケーブルが外れる可能性があります。
+Enterを押す前に、各ステップでケーブル接続を確認してください。例えば、ボードを操作している間に電源ケーブルが外れる可能性があります。
 :::
 
 完了すると、スクリプトは単純に終了し、この時点でモーターは使用準備が整います。これで、各モーターから次のモーターへ3ピンケーブルを接続し、最初のモーター（id=1の「ショルダーパン」）からコントローラーボードへケーブルを接続できます。コントローラーボードはアームのベースに取り付けることができます。
@@ -480,7 +481,7 @@ lerobot-setup-motors \
 | ST-3215-C001(7.4V) / C018(12V) / C047(12V)             | 1:345      | F1–F6                        |
 
 :::danger
-**SO101 Arm Kit Standard Edition**を購入した場合、すべての電源は5Vです。**SO101 Arm Kit Pro Edition**を購入した場合、リーダーアームは各ステップで5V電源を使用してキャリブレーションと操作を行い、フォロワーアームは各ステップで12V電源を使用してキャリブレーションと操作を行う必要があります。
+**SO101 Arm Kit Standard Edition**を購入した場合、すべての電源は5Vです。**SO101 Arm Kit Pro Edition**を購入した場合、リーダーアームは5V電源を使用して各ステップでキャリブレーションと操作を行い、フォロワーアームは12V電源を使用して各ステップでキャリブレーションと操作を行う必要があります。
 :::
 
 **リーダーアームの組み立て**
@@ -518,10 +519,10 @@ SO100とSO101のコードは互換性があります。SO100のユーザーは�
 :::
 
 :::danger
-**SO101 Arm Kit Standard Edition**を購入した場合、すべての電源は5Vです。**SO101 Arm Kit Pro Edition**を購入した場合、リーダーアームは各ステップで5V電源を使用してキャリブレーションと操作を行い、フォロワーアームは各ステップで12V電源を使用してキャリブレーションと操作を行う必要があります。
+**SO101 Arm Kit Standard Edition**を購入した場合、すべての電源は5Vです。**SO101 Arm Kit Pro Edition**を購入した場合、リーダーアームは5V電源を使用して各ステップでキャリブレーションと操作を行い、フォロワーアームは12V電源を使用して各ステップでキャリブレーションと操作を行う必要があります。
 :::
 
-次に、SO-10xロボットに電源とデータケーブルを接続してキャリブレーションを行い、リーダーアームとフォロワーアームが同じ物理的位置にあるときに同じ位置値を持つようにする必要があります。このキャリブレーションは、1つのSO-10xロボットで訓練されたニューラルネットワークが別のロボットでも動作するようにするために不可欠です。ロボットアームを再キャリブレーションする必要がある場合は、`~/.cache/huggingface/lerobot/calibration/robots`または`~/.cache/huggingface/lerobot/calibration/teleoperators`の下のファイルを削除してから、ロボットアームを再キャリブレーションしてください。そうしないと、エラープロンプトが表示されます。ロボットアームのキャリブレーション情報は、このディレクトリの下のJSONファイルに保存されます。
+次に、SO-10xロボットに電源とデータケーブルを接続してキャリブレーションを行い、リーダーアームとフォロワーアームが同じ物理的位置にあるときに同じ位置値を持つようにする必要があります。このキャリブレーションは、1つのSO-10xロボットで訓練されたニューラルネットワークが別のロボットで動作できるようにするために不可欠です。ロボットアームを再キャリブレーションする必要がある場合は、`~/.cache/huggingface/lerobot/calibration/robots`または`~/.cache/huggingface/lerobot/calibration/teleoperators`の下のファイルを削除してから、ロボットアームを再キャリブレーションしてください。そうしないと、エラープロンプトが表示されます。ロボットアームのキャリブレーション情報は、このディレクトリの下のJSONファイルに保存されます。
 
 **フォロワーアームの手動キャリブレーション**
 
@@ -564,7 +565,7 @@ lerobot-calibrate \
 **シンプルなテレオペレーション**
 これでロボットをテレオペレーションする準備が整いました！この簡単なスクリプトを実行してください（カメラには接続せず、表示もしません）：
 
-ロボットに関連付けられたIDは、キャリブレーションファイルを保存するために使用されることに注意してください。同じセットアップを使用してテレオペレーション、記録、評価を行う際は、同じIDを使用することが重要です。
+ロボットに関連付けられたIDは、キャリブレーションファイルを保存するために使用されることに注意してください。同じセットアップを使用する際は、テレオペレーション、記録、評価時に同じIDを使用することが重要です。
 
 ```bash
 sudo chmod 666 /dev/ttyACM*
@@ -614,7 +615,7 @@ lerobot-teleoperate \
 
 2. SDKの対応する**.whlファイル**をダウンロードしてインストールします  
    [pyorbbecsdk Releases](https://github.com/orbbec/pyorbbecsdk/releases)にアクセスし、  
-   Pythonバージョンに基づいて選択してインストールしてください。例：
+   お使いのPythonバージョンに基づいて選択してインストールしてください。例：
 
    ```bash
    pip install pyorbbecsdk-x.x.x-cp310-cp310-linux_x86_64.whl
@@ -635,16 +636,16 @@ lerobot-teleoperate \
 
   赤いエラーメッセージは無視できます。
 
-4. Orbbec SDKを`~/lerobot/src/cameras`ディレクトリにクローンします
+4. Orbbec SDKを`~/lerobot/src/lerobot/cameras`ディレクトリにクローンします
 
   ```bash
-  cd ~/lerobot/src/cameras
+  cd ~/lerobot/src/lerobot/cameras
   git clone https://github.com/ZhuYaoHui1998/orbbec.git
   ```
 
 5. utils.pyと**init**.pyを修正します
 
-- `~/lerobot/src/lerobot/cameras`ディレクトリの`utils.py`を見つけ、40行目に以下のコードを追加してください：
+- `~/lerobot/src/lerobot/cameras`ディレクトリで`utils.py`を見つけ、約45行目に以下のコードを追加してください：
 
 ```python
 elif cfg.type == "orbbec":
@@ -655,10 +656,10 @@ elif cfg.type == "orbbec":
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/utils.png" />
 </div>
 
-- `~/lerobot/src/lerobot/cameras`ディレクトリの`__init__.py`を見つけ、18行目に以下のコードを追加してください：
+- `~/lerobot/src/lerobot/cameras`ディレクトリで`__init__.py`を見つけ、18行目に以下のコードを追加してください：
 
 ```python
 from .orbbec.configuration_orbbec import OrbbecCameraConfig
@@ -736,7 +737,7 @@ Camera #0:
 各カメラで撮影された写真は`outputs/captured_images`ディレクトリで確認できます。
 
 :::warning
-macOSでIntel RealSenseカメラを使用する際、このエラーが発生する可能性があります：Error finding RealSense cameras: failed to set power state。これはsudo権限で同じコマンドを実行することで解決できます。なお、macOSでのRealSenseカメラの使用は不安定です。
+macOSでIntel RealSenseカメラを使用する際、このエラーが発生する可能性があります：Error finding RealSense cameras: failed to set power state。これは同じコマンドをsudo権限で実行することで解決できます。macOSでRealSenseカメラを使用することは不安定であることに注意してください。
 :::
 
 その後、テレオペレーション中にコンピュータでカメラを表示できるようになります。以下のコードを実行してください。これは最初のデータセットを記録する前にセットアップを準備するのに役立ちます。
@@ -756,7 +757,7 @@ lerobot-teleoperate \
 より多くのカメラがある場合は、`--robot.cameras`を変更してカメラを追加できます。index_or_pathの形式に注意してください。これは`python -m lerobot.find_cameras opencv`で出力されるカメラIDの最後の桁によって決まります。
 
 :::tip
-`fourcc: "MJPG"`形式の画像は圧縮されています。より高い解像度を試すことができ、`YUYV`形式も試すことができます。ただし、後者は画像解像度とFPSを低下させ、ロボットアームの動作にラグを生じさせます。現在、`MJPG`形式では、`1920*1080`の解像度で3台のカメラを`30FPS`を維持しながらサポートできます。とはいえ、同じUSB HUBを介して2台のカメラをコンピュータに接続することは推奨されません。
+`fourcc: "MJPG"`形式の画像は圧縮されています。より高い解像度を試すことができ、`YUYV`形式も試すことができます。ただし、後者は画像解像度とFPSを低下させ、ロボットアームの動作に遅延を生じさせます。現在、`MJPG`形式では、`1920*1080`の解像度で3台のカメラをサポートしながら`30FPS`を維持できます。とはいえ、同じUSB HUBを介して2台のカメラをコンピュータに接続することは推奨されません。
 :::
 
 
@@ -775,7 +776,7 @@ lerobot-teleoperate \
 ```
 
 :::tip
-`fourcc: "MJPG"`形式の画像は圧縮されています。より高い解像度を試すことができ、`YUYV`形式も試すことができます。ただし、後者は画像解像度とFPSを低下させ、ロボットアームの動作にラグを生じさせます。現在、`MJPG`形式では、`1920*1080`の解像度で3台のカメラを`30FPS`を維持しながらサポートできます。とはいえ、同じUSB HUBを介して2台のカメラをコンピュータに接続することは推奨されません。
+`fourcc: "MJPG"`形式の画像は圧縮されています。より高い解像度を試すことができ、`YUYV`形式も試すことができます。ただし、後者は画像解像度とFPSを低下させ、ロボットアームの動作に遅延を生じさせます。現在、`MJPG`形式では、`1920*1080`の解像度で3台のカメラをサポートしながら`30FPS`を維持できます。とはいえ、同じUSB HUBを介して2台のカメラをコンピュータに接続することは推奨されません。
 :::
 
 
@@ -821,7 +822,7 @@ lerobot-record \
     --dataset.reset_time_s=30 
 ```
 
-この中で、`repo_id` は慣例的に変更でき、`push_to_hub=false` です。最終的に、データセットはホームフォルダの `~/.cache/huggingface/lerobot` ディレクトリに保存され、前述の `seeedstudio123/test` フォルダが作成されます。
+その中で、`repo_id` は慣例的に変更でき、`push_to_hub=false` です。最終的に、データセットはホームフォルダの `~/.cache/huggingface/lerobot` ディレクトリに保存され、前述の `seeedstudio123/test` フォルダが作成されます。
 
 - データセットをアップロードするために Hugging Face hub 機能を使用したい場合で、以前に行ったことがない場合は、[Hugging Face 設定](https://huggingface.co/settings/tokens)から生成できる書き込みアクセストークンを使用してログインしていることを確認してください：
 
@@ -864,18 +865,18 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 
 **記録機能**
 
-**record** 機能は、ロボット動作中のデータキャプチャと管理のためのツール群を提供します。
+**record** 機能は、ロボット動作中のデータキャプチャと管理のためのツール一式を提供します。
 
 **1. データストレージ**
 
 - データは `LeRobotDataset` 形式を使用して保存され、記録中にディスクに保存されます。
-- デフォルトでは、記録後にデータセットが Hugging Face ページにプッシュされます。
+- デフォルトでは、データセットは記録後に Hugging Face ページにプッシュされます。
 - アップロードを無効にするには、`--dataset.push_to_hub=False` を使用します
 
 **2. チェックポイントと再開**
 
-- 記録中にチェックポイントが自動的に作成されます。
-- 中断後に再開するには、同じコマンドを `--resume=true` で再実行します
+- チェックポイントは記録中に自動的に作成されます。
+- 中断後に再開するには、`--resume=true` を付けて同じコマンドを再実行します
 
 ⚠️ 重要な注意：再開時は、`--dataset.num_episodes` を記録する追加エピソード数に設定してください（データセット内の目標総エピソード数ではありません）。
 
@@ -925,7 +926,7 @@ pip install pynput==1.6.8
 
 💡 経験則：カメラ画像だけを見てタスクを自分で実行できるようにする必要があります。
 
-この重要なトピックについてより深く掘り下げたい場合は、良いデータセットとは何かについて書いた[ブログ記事](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset)をチェックできます。
+この重要なトピックについてより深く掘り下げたい場合は、良いデータセットとは何かについて書いた[ブログ投稿](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset)をチェックできます。
 
 **トラブルシューティング**
 
@@ -1035,7 +1036,7 @@ lerobot-train \
 
 - **データセット指定**：パラメータ `--dataset.repo_id=${HF_USER}/so101_test` を通じてデータセットを提供します。
 - **訓練ステップ**：`--steps=300000` を使用して訓練ステップ数を変更します。アルゴリズムはデフォルトで800000ステップですが、タスクの難易度と訓練中の損失を観察することで調整できます。
-- **ポリシータイプ**：`policy.type=act` でポリシーを提供します。同様に、[`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`] などのポリシー間で切り替えることができ、これにより `configuration_act.py` から設定が読み込まれます。重要なことに、この情報はすでにデータセットに保存されているため、このポリシーはロボット（例：`laptop` と `phone`）のモーター状態、モーターアクション、カメラ数に自動的に適応します。
+- **ポリシータイプ**：`policy.type=act` でポリシーを提供します。同様に、[`act`, `diffusion`, `pi0`, `pi0fast`, `pi0fast`, `sac`, `smolvla`] などのポリシー間で切り替えることができ、これにより `configuration_act.py` から設定が読み込まれます。重要なことに、このポリシーは、この情報がすでにデータセットに保存されているため、ロボット（例：`laptop` と `phone`）のモーター状態、モーターアクション、カメラ数に自動的に適応します。
 - **デバイス選択**：Nvidia GPU で訓練しているため `policy.device=cuda` を提供しますが、Apple Silicon で訓練する場合は `policy.device=mps` を使用できます。
 - **可視化ツール**：[Weights and Biases](https://docs.wandb.ai/quickstart) を使用して訓練チャートを可視化するために `wandb.enable=true` を提供します。これはオプションですが、使用する場合は `wandb login` を実行してログインしていることを確認してください。
 
@@ -1046,7 +1047,7 @@ lerobot-train \
 SO100 と SO101 のコードは互換性があります。SO100 のユーザーは SO101 のパラメータとコードを直接利用して操作できます。
 :::
 
-[`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) の `record` 機能を使用できますが、入力としてポリシーチェックポイントを使用します。例えば、10の評価エピソードを記録するには次のコマンドを実行します：
+`record` 関数を [`lerobot/record.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/record.py) から使用できますが、ポリシーチェックポイントを入力として使用します。例えば、10回の評価エピソードを記録するには、次のコマンドを実行します：
 
 ```bash
 lerobot-record \
@@ -1074,9 +1075,9 @@ lerobot-record \
   --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
 ```
 
-1. `--policy.path` パラメータは、ポリシー訓練結果の重みファイルのパスを示します（例：`outputs/train/act_so101_test/checkpoints/last/pretrained_model`）。モデル訓練結果の重みファイルをHubにアップロードした場合は、モデルリポジトリも使用できます（例：`${HF_USER}/act_so100_test`）。
+1. `--policy.path` パラメータは、ポリシー訓練結果の重みファイルへのパスを示します（例：`outputs/train/act_so101_test/checkpoints/last/pretrained_model`）。モデル訓練結果の重みファイルをHubにアップロードした場合、モデルリポジトリも使用できます（例：`${HF_USER}/act_so100_test`）。
 
-2. データセット名 `dataset.repo_id` は `eval_` で始まります。この操作により、評価中にビデオとデータが個別に記録され、`eval_` で始まるフォルダに保存されます（例：`seeed/eval_test123`）。
+2. データセット名 `dataset.repo_id` は `eval_` で始まります。この操作により、評価中のビデオとデータが個別に記録され、`eval_` で始まるフォルダに保存されます（例：`seeed/eval_test123`）。
 
 3. 評価フェーズで `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'` エラーが発生した場合は、まず `eval_` で始まるフォルダを削除してから、プログラムを再実行してください。
 
@@ -1093,23 +1094,23 @@ lerobot-record \
 <details>
 <summary> SmolVLA </summary>
 
-[SmolVLA](https://huggingface.co/docs/lerobot/smolvla)は、Hugging Faceのロボティクス向け軽量基盤モデルです。LeRobotデータセットでの簡単なファインチューニングを目的として設計されており、開発を加速させます！
+[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) は、Hugging Face のロボティクス向け軽量基盤モデルです。LeRobot データセットでの簡単なファインチューニングを目的として設計されており、開発を加速させます！
 
 **環境のセットアップ**
 
-以下を実行してSmolVLAの依存関係をインストールします：
+次のコマンドを実行して SmolVLA の依存関係をインストールします：
 
 ```bash
 pip install -e ".[smolvla]"
 ```
 
-**データでSmolVLAをファインチューニング**
+**データで SmolVLA をファインチューニング**
 
-事前訓練済みの450Mモデル[smolvla_base](https://hf.co/lerobot/smolvla_base)を使用して、あなたのデータでファインチューニングします。20kステップでモデルを訓練するには、単一のA100 GPUで約4時間かかります。パフォーマンスとユースケースに基づいてステップ数を調整してください。
+事前訓練済みの450Mモデルである [smolvla_base](https://hf.co/lerobot/smolvla_base) を使用して、あなたのデータでファインチューニングします。20k ステップでモデルを訓練すると、単一のA100 GPUで約4時間かかります。パフォーマンスとユースケースに基づいてステップ数を調整する必要があります。
 
-GPUデバイスがない場合は、[Google Colab](https://colab.research.google.com/github/huggingface/notebooks/blob/main/lerobot/training-smolvla.ipynb)のノートブックを使用して訓練できます。
+GPU デバイスがない場合は、[Google Colab](https://colab.research.google.com/github/huggingface/notebooks/blob/main/lerobot/training-smolvla.ipynb) のノートブックを使用して訓練できます。
 
-`--dataset.repo_id`を使用してデータセットを訓練スクリプトに渡します。インストールをテストしたい場合は、[SmolVLA論文](https://huggingface.co/papers/2506.01844)用に収集したデータセットの1つを使用する以下のコマンドを実行してください。
+`--dataset.repo_id` を使用してデータセットを訓練スクリプトに渡します。インストールをテストしたい場合は、[SmolVLA Paper](https://huggingface.co/papers/2506.01844) 用に収集したデータセットの1つを使用する次のコマンドを実行してください。
 
 ```bash
 lerobot-train \
@@ -1124,18 +1125,18 @@ lerobot-train \
 ```
 
 :::tip
-GPUが許可し、読み込み時間が短い限り、小さなバッチサイズから始めて段階的に増やすことができます。
+小さなバッチサイズから始めて、GPU が許可し、読み込み時間が短い限り、段階的に増やすことができます。
 :::
 
-ファインチューニングは芸術です。ファインチューニングオプションの完全な概要については、以下を実行してください：
+ファインチューニングは芸術です。ファインチューニングのオプションの完全な概要については、次を実行してください：
 
 ```bash
 lerobot-train --help
 ```
 
-**ファインチューニングされたモデルの評価とリアルタイム実行**
+**ファインチューニングされたモデルを評価してリアルタイムで実行**
 
-エピソードを記録する場合と同様に、HuggingFace Hubにログインすることをお勧めします。対応する手順に従ってください：[データセットの記録](https://huggingface.co/docs/lerobot/il_robots)。ログイン後、以下を実行してセットアップで推論を実行できます：
+エピソードを記録する場合と同様に、HuggingFace Hub にログインすることをお勧めします。対応する手順に従うことができます：[データセットの記録](https://huggingface.co/docs/lerobot/il_robots)。ログインしたら、次の方法でセットアップで推論を実行できます：
 
 ```bash
 lerobot-record \
@@ -1161,22 +1162,22 @@ lerobot-record \
 <details>
 <summary> LIBERO </summary>
 
-[LIBERO](https://huggingface.co/docs/lerobot/libero)は、生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前訓練されるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットの構築に向けた重要なステップです。
+[LIBERO](https://huggingface.co/docs/lerobot/libero) は、生涯ロボット学習を研究するために設計されたベンチマークです。ロボットは工場で一度だけ事前訓練されるのではなく、時間をかけて人間のユーザーと共に学習し適応し続ける必要があるという考えです。この継続的な適応は意思決定における生涯学習（LLDM）と呼ばれ、真にパーソナライズされたヘルパーとなるロボットの構築に向けた重要なステップです。
 
-- 📄 [LIBERO論文](https://arxiv.org/abs/2306.03310)
-- 💻 [元のLIBEROリポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
+- 📄 [LIBERO 論文](https://arxiv.org/abs/2306.03310)
+- 💻 [オリジナル LIBERO リポジトリ](https://github.com/Lifelong-Robot-Learning/LIBERO)
 
-**LIBEROでの評価**
+**LIBERO での評価**
 
-**LeRobot**では、LIBEROをフレームワークに移植し、主に軽量Vision-Language-Actionモデルである[SmolVLA](https://huggingface.co/docs/lerobot/en/smolvla)の**評価**に使用しました。
+**LeRobot** では、LIBERO をフレームワークに移植し、主に軽量Vision-Language-Actionモデルである [SmolVLA](https://huggingface.co/docs/lerobot/en/smolvla) の**評価**に使用しました。
 
-LIBEROは現在、**マルチ評価対応シミュレーション**の一部となっており、フラグ1つで**単一のタスクスイート**または**複数のスイートを同時に**ベンチマークできます。
+LIBERO は現在、**マルチ評価対応シミュレーション**の一部となっており、**単一のタスクスイート**または**複数のスイートを同時に**フラグ一つでベンチマークできます。
 
-LIBEROをインストールするには、LeRobotの公式手順に従った後、`pip install -e ".[libero]"`を実行してください。
+LIBERO をインストールするには、LeRobot の公式手順に従った後、`pip install -e ".[libero]"` を実行するだけです。
 
 ***単一スイート評価***
 
-1つのLIBEROスイートでポリシーを評価：
+一つの LIBERO スイートでポリシーを評価：
 
 ```bash
 lerobot-eval \
@@ -1187,9 +1188,9 @@ lerobot-eval \
   --eval.n_episodes=3
 ```
 
-- `--env.task`はスイート（`libero_object`、`libero_spatial`など）を選択します。
-- `--eval.batch_size`は並列実行する環境数を制御します。
-- `--eval.n_episodes`は実行する総エピソード数を設定します。
+- `--env.task` はスイート（`libero_object`、`libero_spatial` など）を選択します。
+- `--eval.batch_size` は並列実行する環境数を制御します。
+- `--eval.n_episodes` は実行する総エピソード数を設定します。
 
 ***マルチスイート評価***
 
@@ -1204,7 +1205,7 @@ lerobot-eval \
   --eval.n_episodes=2
 ```
 
-- マルチスイート評価には、`--env.task`にカンマ区切りのリストを渡します。
+- マルチスイート評価には `--env.task` にカンマ区切りのリストを渡します。
 
 **訓練コマンドの例**
 
@@ -1227,7 +1228,7 @@ lerobot-train \
 
 **レンダリングに関する注意**
 
-LeRobotはシミュレーションにMuJoCoを使用します。訓練または評価の前にレンダリングバックエンドを設定する必要があります：
+LeRobot はシミュレーションに MuJoCo を使用します。訓練や評価の前にレンダリングバックエンドを設定する必要があります：
 
 - `export MUJOCO_GL=egl` → ヘッドレスサーバー用（例：HPC、クラウド）
 
@@ -1237,7 +1238,7 @@ LeRobotはシミュレーションにMuJoCoを使用します。訓練または�
 <details>
 <summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
 
-[Pi0](https://huggingface.co/docs/lerobot/pi0)を参照してください
+[Pi0](https://huggingface.co/docs/lerobot/pi0) を参照してください
 
 ```bash
 pip install -e ".[pi]"
@@ -1281,7 +1282,7 @@ lerobot-record \
 <details>
 <summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
 
-[Pi0.5](https://huggingface.co/docs/lerobot/pi05)を参照してください
+[Pi0.5](https://huggingface.co/docs/lerobot/pi05) を参照してください
 
 ```bash
 pip install -e ".[pi]"
@@ -1326,21 +1327,21 @@ lerobot-record \
 <details>
 <summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
 
-[GR00T N1.5](https://huggingface.co/docs/lerobot/groot)を参照してください
+[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) を参照してください
 
 
 </details>
 
 
 
-以下のエラーが発生した場合：
+次のエラーが発生した場合：
 
 <div align="center">
     <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/stack_bug.png" />
 </div>
 
-以下のコマンドを実行して解決してください：
+次のコマンドを実行して解決してください：
 
 ```bash
 pip install datasets==2.19
@@ -1358,14 +1359,14 @@ lerobot-train \
 
 **ポリシーチェックポイントのアップロード**
 
-トレーニングが完了したら、最新のチェックポイントを以下でアップロードします：
+トレーニングが完了したら、最新のチェックポイントを次のコマンドでアップロードします：
 
 ```bash
 huggingface-cli upload ${HF_USER}/act_so101_test \
   outputs/train/act_so101_test/checkpoints/last/pretrained_model
 ```
 
-中間チェックポイントも以下でアップロードできます：
+中間チェックポイントも次のコマンドでアップロードできます：
 
 ```bash
 CKPT=010000
@@ -1379,7 +1380,7 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
 
 - このドキュメント/チュートリアルに従っている場合は、推奨されるGitHubリポジトリ `https://github.com/Seeed-Projects/lerobot.git` をgit cloneしてください。このドキュメントで推奨されるリポジトリは検証済みの安定版です。公式のLerobotリポジトリは最新版に継続的に更新されており、異なるデータセットバージョン、異なるコマンドなどの予期しない問題を引き起こす可能性があります。
 
-- サーボIDのキャリブレーション時に以下のエラーが発生した場合：
+- サーボIDのキャリブレーション時に次のエラーが発生した場合：
 
   ```bash
   `Motor ‘gripper’ was not found, Make sure it is connected`
@@ -1387,7 +1388,7 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
 
   通信ケーブルがサーボに正しく接続されているか、電源が正しい電圧を供給しているかを慎重に確認してください。
 
-- 以下のエラーが発生した場合：
+- 次のエラーが発生した場合：
 
   ```bash
   Could not connect on port "/dev/ttyACM0"
@@ -1395,7 +1396,7 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
 
   `ls /dev/ttyACM*` を実行してACM0が存在することが確認できる場合、シリアルポートの権限を付与し忘れています。ターミナルで `sudo chmod 666 /dev/ttyACM*` を入力して修正してください。
 
-- 以下のエラーが発生した場合：
+- 次のエラーが発生した場合：
 
   ```bash
   No valid stream found in input file. Is -1 of the desired media type?
@@ -1408,7 +1409,7 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
 </div>
 
-- 以下のエラーが発生した場合：
+- 次のエラーが発生した場合：
 
   ```bash
   ConnectionError: Failed to sync read 'Present_Position' on ids=[1,2,3,4,5,6] after 1 tries. [TxRxResult] There is no status packet!
@@ -1416,15 +1417,15 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
 
   対応するポートのロボットアームが電源オンになっているか、バスサーボのデータケーブルが緩んでいるか切断されていないかを確認する必要があります。サーボのライトが点灯していない場合、前のサーボのケーブルが緩んでいることを意味します。
 
-- ロボットアームのキャリブレーション時に以下のエラーが発生した場合：
+- ロボットアームのキャリブレーション時に次のエラーが発生した場合：
 
   ```bash
   Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)
   ```
 
-  ロボットアームの電源を切って再起動し、再度キャリブレーションを試してください。この方法は、キャリブレーション中にMAX角度が数万の値に達した場合にも使用できます。これで解決しない場合は、中央値キャリブレーションやID書き込みを含む対応するサーボの再キャリブレーションが必要です。
+  ロボットアームの電源を切って再起動し、再度キャリブレーションを試してください。この方法は、キャリブレーション中にMAX角度が数万の値に達した場合にも使用できます。これで解決しない場合は、中央値キャリブレーションとID書き込みを含む対応するサーボの再キャリブレーションが必要です。
 
-- 評価フェーズで以下のエラーが発生した場合：
+- 評価フェーズで次のエラーが発生した場合：
 
   ```bash
   File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'
@@ -1432,7 +1433,7 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
 
   まず `eval_` で始まるフォルダを削除してから、プログラムを再実行してください。
 
-- 評価フェーズで以下のエラーが発生した場合：
+- 評価フェーズで次のエラーが発生した場合：
 
   ```bash
   `mean` is infinity. You should either initialize with `stats` as an argument or use a pretrained model
@@ -1442,7 +1443,7 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
 
 - ロボットアームの部品を修理または交換した場合は、`~/.cache/huggingface/lerobot/calibration/robots` または `~/.cache/huggingface/lerobot/calibration/teleoperators` 下のファイルを完全に削除し、ロボットアームを再キャリブレーションしてください。そうしないと、これらのディレクトリのJSONファイルにキャリブレーション情報が保存されているため、エラーメッセージが表示される可能性があります。
 
-- 50セットのデータでACTをトレーニングするには、RTX 3060（8GB）搭載のノートパソコンで約6時間、RTX 4090またはA100 GPUを搭載したコンピュータで約2-3時間かかります。
+- 50セットのデータでACTをトレーニングするには、RTX 3060（8GB）搭載のラップトップで約6時間、RTX 4090またはA100 GPUを搭載したコンピュータで約2-3時間かかります。
 
 - データ収集中は、カメラの位置、角度、周囲の照明を安定させてください。カメラに映る不安定な背景や歩行者の量を減らしてください。展開環境の変化が過度になると、ロボットアームが適切に把握できなくなる可能性があります。
 
@@ -1457,18 +1458,18 @@ pip3 install rerun-sdk==0.23
 ```
 
 :::tip
-ソフトウェアの問題や環境依存の問題で解決できない場合は、このチュートリアルの最後のFAQセクションを確認することに加えて、[LeRobotプラットフォーム](https://github.com/huggingface/lerobot)または[LeRobot Discordチャンネル](https://discord.gg/8TnwDdjFGU)に速やかに問題を報告してください。
+解決できないソフトウェアの問題や環境依存の問題が発生した場合は、このチュートリアルの最後にあるFAQセクションを確認するほか、[LeRobotプラットフォーム](https://github.com/huggingface/lerobot) または [LeRobot Discordチャンネル](https://discord.gg/8TnwDdjFGU) に速やかに問題を報告してください。
 :::
 
 ## 引用
 
 [中文文档](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/)
 
-TheRobotStudio Project: [SO-ARM10x](https://github.com/TheRobotStudio/SO-ARM100)
+TheRobotStudio プロジェクト：[SO-ARM10x](https://github.com/TheRobotStudio/SO-ARM100)
 
-Huggingface Project: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
+Huggingface プロジェクト：[Lerobot](https://github.com/huggingface/lerobot/tree/main)
 
-Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/master/packages/robots/lerobot)
+Dnsty：[Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/master/packages/robots/lerobot)
 
 [Jetson AI Lab](https://www.jetson-ai-lab.com/lerobot.html)
 
@@ -1482,7 +1483,7 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

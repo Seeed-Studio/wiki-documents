@@ -1,12 +1,13 @@
 ---
-description: Esta wiki demuestra la evaluación comparativa de estimación de pose y detección de objetos con yolov8s en Raspberry Pi5 y Raspberry Pi Compute Module 4.
-title: Evaluación comparativa en RPi5 y CM4 ejecutando yolov8s con rpi ai kit
+description: Este wiki demuestra la estimación de poses yolov8s y el benchmark de detección de objetos en Raspberry Pi5 y Raspberry Pi Compute Module 4.
+title: Benchmark en RPi5 y CM4 ejecutando yolov8s con rpi ai kit
 keywords:
   - Edge
   - reComputer r1000
   - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit
+sku: 103990663
 last_update:
   date: 07/17/2024
   author: Jiahao
@@ -14,13 +15,13 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# Evaluación comparativa en RPi5 y CM4 ejecutando yolov8s con rpi ai kit
+# Benchmark en RPi5 y CM4 ejecutando yolov8s con rpi ai kit
 
 ## Introducción
 
-[YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once versión 8) es el más popular de la serie YOLO de modelos de estimación de pose y detección de objetos en tiempo real. Se basa en las fortalezas de sus predecesores introduciendo varios avances en velocidad, precisión y flexibilidad. El [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) se utiliza para acelerar la velocidad de inferencia, con un acelerador de inferencia de red neuronal de 13 TOPS construido alrededor del chip Hailo-8L.
+[YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once versión 8) es la serie YOLO más popular de modelos de estimación de poses y detección de objetos en tiempo real. Se basa en las fortalezas de sus predecesores introduciendo varios avances en velocidad, precisión y flexibilidad. El [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) se utiliza para acelerar la velocidad de inferencia, con un acelerador de inferencia de red neuronal de 13 TOPS construido alrededor del chip Hailo-8L.
 
-Esta wiki muestra la evaluación comparativa de YOLOv8s para estimación de pose y detección de objetos en Raspberry Pi 5 y Raspberry Pi Compute Module 4. Todas las pruebas utilizan el mismo modelo (YOLOv8s), cuantizado a int8, con un tamaño de entrada de resolución 640x640, tamaño de lote establecido en 1, y entrada del mismo video a 240 FPS.
+Este wiki muestra el benchmarking de YOLOv8s para estimación de poses y detección de objetos en Raspberry Pi 5 y Raspberry Pi Compute Module 4. Todas las pruebas utilizan el mismo modelo (YOLOv8s), cuantizado a int8, con un tamaño de entrada de resolución 640x640, tamaño de lote establecido en 1, y entrada del mismo video a 240 FPS.
 
 ## Preparar Hardware
 
@@ -56,22 +57,56 @@ Esta wiki muestra la evaluación comparativa de YOLOv8s para estimación de pose
 <div class="table-center">
  <table align="center">
  <tr>
+  <th>reComputer AI R2140</th>
   <th>Raspberry Pi5 8GB</th>
   <th>Raspberry Pi AI Kit</th>
  </tr>
     <tr>
+    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102110919-raspberry-pi-5-8gb-font.jpg" style={{width:600, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+
+### Para Raspberry Pi CM5
+<div class="table-center">
+ <table align="center">
+ <tr>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
+ </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
+    </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
@@ -85,13 +120,13 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="Method 1" label="Pi5 Benchmark">
+<TabItem value="Method 1" label="Benchmark Pi5">
 
-### Instalar el kit de IA en RPi5
+### Instalar AI kit en RPi5
 
-Por favor consulta [esto](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)
+Por favor consulte [esto](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)
 
-### Instalar el Software Hailo y Verificar la Instalación
+### Instalar Software Hailo y Verificar Instalación
 
 #### actualizar el sistema
 
@@ -100,9 +135,9 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-#### Configurar pcie a gen2/gen3 (gen3 es más rápido que gen2)
+#### Configurar pcie a gen2/gen3(gen3 es más rápido que gen2)
 
-Añade el siguiente texto a ```/boot/firmware/config.txt```
+Agregar el siguiente texto a ```/boot/firmware/config.txt```
 
 ```
 #Enable the PCIe external connector
@@ -116,12 +151,12 @@ dtparam=pciex1_gen=3
 ```
 
 :::note
-Si quieres usar Gen2, por favor comenta la línea `dtparam=pciex1_gen=3`.
+Si quieres usar gen2, por favor comenta dtparam=pciex1_gen=3
 :::
 
 #### Instalar hailo-all y reiniciar
 
-Abre la terminal en la Raspberry Pi5, e ingresa el comando como se muestra a continuación para instalar el software Hailo.
+Abrir terminal en el Raspberry Pi5, e ingresar el comando como sigue para instalar el software Hailo.
 
 ```
 sudo apt install hailo-all
@@ -130,7 +165,7 @@ sudo reboot
 
 #### Verificar Software y Hardware
 
-Abre la terminal en la Raspberry Pi5, e ingresa el comando como se muestra a continuación para verificar si hailo-all ha sido instalado.
+Abrir terminal en el Raspberry Pi5, e ingresar el comando como sigue para verificar si hailo-all ha sido instalado.
 
 ```
 hailortcli fw-control identify
@@ -139,7 +174,7 @@ hailortcli fw-control identify
 El resultado correcto se muestra a continuación:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_software.png" alt="pir" width={1000} height="auto"/></p>
 
-Abre la terminal en la Raspberry Pi5, e ingresa el comando como se muestra a continuación para verificar si hailo-8L ha sido conectado.
+Abrir terminal en el Raspberry Pi5, e ingresar el comando como sigue para verificar si hailo-8L ha sido conectado.
 
 ```
 lspci | grep Hailo
@@ -151,7 +186,7 @@ El resultado correcto se muestra a continuación:
 ### Ejecutar Proyecto
 
 <Tabs>
-<TabItem value="Method 1" label="Ejecutar estimación de pose">
+<TabItem value="Method 1" label="Ejecutar estimación de poses">
 
 #### Instalar Proyecto
 
@@ -214,10 +249,10 @@ bash run.sh object-detection
 
 <TabItem value="Method 2" label="Benchmark CM4">
 
-Para detección de objetos, consulte la siguiente wiki:
+Para detección de objetos por favor consulte el siguiente wiki:
 [yolov8_object_detection_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/es/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)
 
-Para estimación de pose, consulte la siguiente wiki:
+Para estimación de poses por favor consulte el siguiente wiki:
 [yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/es/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/)
 </TabItem>
 

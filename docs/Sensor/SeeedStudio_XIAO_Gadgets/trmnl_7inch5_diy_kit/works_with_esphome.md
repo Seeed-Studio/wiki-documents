@@ -6,6 +6,7 @@ keywords:
 - TRMNL
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp
 slug: /ogdiy_kit_works_with_esphome
+sku: 104991005
 sidebar_position: 3
 last_update:
   date: 07/24/2025
@@ -667,6 +668,15 @@ You can take a look the effect of the screenshot by input this link in your brow
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
+Copy the code below and paste it after `esp32`:
+
+```yaml
+# Enable PSRAM support since online_image requires more than the available RAM capacity
+psram:
+  mode: octal
+  speed: 80MHz
+```
+
 You can copy the code below and paste it after `captive_portal` as shown below.
 
 ```yaml
@@ -808,7 +818,12 @@ esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: arduino
-    
+
+# Enable PSRAM support since online_image requires more than the available RAM capacity
+psram:
+  mode: octal
+  speed: 80MHz
+
 # Enable logging
 logger:
 

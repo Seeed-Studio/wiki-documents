@@ -3,6 +3,7 @@ description: 学习如何使用 XIAO Debug Mate 的功率计功能进行精确�
 title: 功率计
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/32.webp
 slug: /cn/xiao_debug_mate_power
+sku: 109990585
 sidebar_position: 4
 last_update:
   date: 10/22/2025
@@ -172,14 +173,12 @@ XIAO Debug Mate 测量从 XIAO 的 **5V 电源输入**消耗的功率。这个 5
 
 **不要** 将外设连接到 Debug Mate 的 Grove 端口进行功耗测量，因为其电源线与 XIAO 测量电路是分离的。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

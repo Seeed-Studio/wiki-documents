@@ -6,6 +6,7 @@ keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
 slug: /respeaker_xvf3800_introduction
+sku: 101991441,114993701
 last_update:
   date: 11/10/2025
   author: Kasun Thushara
@@ -73,7 +74,7 @@ The ReSpeaker XVF3800 USB 4-Mic Array is a professional 4-mic circular array wit
 | **Audio Quality**             | Equal or better than the **previous XVF3000-based designs**.                                         |
 
 :::note
-The ReSpeaker XVF3800 is offered in two variants—one without XIAO and another with the XIAO ESP32S3 onboard. The version without XIAO operates with default USB firmware. To use the XIAO-integrated version, you must flash firmware built for **INT-Device (I2S) mode**. For detailed setup instructions, refer to the [official wiki guide](docs/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro.md).
+The ReSpeaker XVF3800 is offered in two variants—one without XIAO and another with the XIAO ESP32S3 onboard. The version without XIAO operates with default USB firmware. To use the XIAO-integrated version, you must flash firmware built for **INT-Device (I2S) mode**. For detailed setup instructions, refer to the [official wiki guide](/respeaker_xvf3800_xiao_getting_started).
 :::
 
 ### XIAO ESP32S3 support
@@ -190,6 +191,16 @@ Each type of firmware on the ReSpeaker XVF3800 supports different update methods
 ### Update Firmware
 
 Connect the reSpeaker XVF3800 to your PC via the USB cable. Note that you need to use the XMOS USB-C port(close to 3.5mm jack port) to flash XMOS’s firmware.
+
+| Firmware | Channels | Notes |
+|---------|----------|-------|
+| respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin | 2 | Processed 2-channel output <br /> Channel 0: Conference <br /> Channel 1: ASR |
+| respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin | 6 | Channel 0: Processed audio (Conference) <br /> Channel 1: Processed audio (ASR) <br /> Channel 2: Mic 0 raw data <br /> Channel 3: Mic 1 raw data <br /> Channel 4: Mic 2 raw data <br /> Channel 5: Mic 3 raw data |
+| respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin | 2 | Processed 2-channel output <br /> Channel 0: Conference <br /> Channel 1: ASR |
+| respeaker_xvf3800_i2s_master_dfu_firmware_v1.0.x_48k.bin | 2 | Processed 2-channel output <br /> Channel 0: ASR <br /> Channel 1: Wake word |
+
+Users can modify the processed output channel selection for the firmware variants mentioned above.
+Please refer to the [XMOS documentation](https://www.xmos.com/documentation/XM-014888-PC/html/modules/fwk_xvf/doc/user_guide/03_using_the_host_application.html#output-selection) for details:
 
 #### Install DFU Util
 
@@ -905,6 +916,12 @@ You can then open **pavucontrol** and increase the output volume beyond 100% if 
 ### After reinstalling the USB drivers, my ReSpeaker doesn’t record and playback
 
 Uninstall all drivers associated with the ReSpeaker in Device Manager. This resolved the issue.
+
+### Cannot use as sound devices in Windows after flashing firmware ? 
+
+Open the start menu and type Device manager. Find  related reSpeaker XVF 3800 devices, right click them and select Uninstall devices. After that, restart the device (usb plug and unplugged) and Windows will re-install the right sound card driver for it.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker_xvf_3800_dfu.png" alt="pir" width={600} height="auto"/></p>
 
 ## Resources
 

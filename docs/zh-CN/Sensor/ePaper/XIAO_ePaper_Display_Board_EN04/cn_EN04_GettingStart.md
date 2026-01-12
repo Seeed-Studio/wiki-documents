@@ -6,6 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
 slug: /cn/epaper_EN04
+sku: 100003489,E25120101
 last_update:
   date: 11/25/2025
   author: Allen
@@ -100,7 +101,7 @@ import Steppers from '@site/src/components/utils/Stepper';
             <td>XIAO 系列</td>
         </tr>
         <tr>
-            <th>兼容电子纸显示屏</th>
+            <th>兼容的电子纸显示屏</th>
             <td>24 针电子纸<br />50 针电子纸</td>
             <td>24 针电子纸</td>
             <td>24 针电子纸</td>
@@ -240,7 +241,7 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-## 入门指南
+## 开始使用
 
 这里，我们以 7.5 英寸显示屏为例。所有 24 针屏幕的步骤都相同；唯一的区别是在驱动程序中选择适当的屏幕尺寸。
 
@@ -255,19 +256,19 @@ This version XIAO ePaper Display Board(nRF52840) - EN04 does not support NFC fun
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
-现在您将在电子纸屏幕上看到反馈！以下是 Helloworld 示例的结果。（如果没有显示任何内容，请点击复位按钮）
+现在您将在电子纸屏幕上看到反馈！以下是 Helloworld 示例的结果。（如果没有显示任何内容，请按下复位按钮）
 
 :::tip
-⚠️ 注意：电子纸电缆方向
-将电子纸显示屏连接到 XIAO 电子纸显示板时，请确保 FPC 电缆插入方向正确。
+⚠️ 注意：电子纸排线方向
+将电子纸显示屏连接到 XIAO 电子纸显示板时，请确保 FPC 排线插入方向正确。
 
-⚠️ 不要反向连接！电缆插反可能导致电子纸无法显示甚至损坏屏幕/开发板。
+⚠️ 不要反向连接！倒置插入排线可能导致电子纸无法显示，甚至损坏屏幕/开发板。
 下图显示了正确的连接方式：
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/1.jpg" style={{width:500, height:'auto'}}/></div>
 
-### XIAO 电子纸显示板（nRF52840）上的用户按钮 - EN04
+### XIAO 电子纸显示板(nRF52840) - EN04 上的用户按钮
 
 EN04 具有三个用户可编程按钮，可用于各种控制目的。本节演示如何使用 Arduino 读取按钮状态并响应按钮按下。
 
@@ -344,13 +345,13 @@ void loop() {
 }
 ```
 
-### XIAO 电子纸显示板（nRF52840）上的用户电池 - EN04
+### XIAO 电子纸显示板(nRF52840) - EN04 上的用户电池
 
 使用电池供电时：
 
-- 设备将在刷新间隔自动进入低功耗模式
+- 设备将在刷新之间自动进入低功耗模式
 
-- 电池寿命取决于刷新频率（默认设置下满电通常可使用 3 个月）
+- 电池寿命取决于刷新频率（在默认设置下，满电通常可使用 3 个月）
 
 - 当电池电量低于 20% 时，设备将在右上角显示低电量图标
 
@@ -391,12 +392,7 @@ void loop() {
 
 
 ## 资源
-即将推出...
-<!-- chang to en04 -->
-<!-- - **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_SCH_V1.2.pdf)
-- **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Grabcad 3D File](https://grabcad.com/library/xiao-epaper-display-board-nRF52840-EN04-1)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_V1.2_SCH&PCB.zip) -->
-
+- **[ZIP]** [Seeed Studio XIAO 电子纸显示屏 EN04 原理图和 PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
 
 
 ## 技术支持与产品讨论

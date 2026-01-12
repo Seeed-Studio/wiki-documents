@@ -8,6 +8,7 @@ tags:
   - robots
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini.webp
 slug: /ja/recomputer_jetson_mini_hardware_interfaces_usage
+sku: 114993553,114993551,102111001,102110999,114993592,114993593
 last_update:
   date: 12/16/2024
   author: Youjiang
@@ -446,6 +447,13 @@ sudo ./canTest.sh
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/canRX.jpg"/>
 </div>
+
+プログラムで **CAN** を使う前に、有効化する必要があります。ターミナルで次のコマンドを実行してください:
+
+```bash
+sudo gpioset --mode=wait 0 106=0 #enable CAN1
+sudo gpioset --mode=wait 0 43=0 #enable CAN0
+```
 
 ### CAN0電源出力
 

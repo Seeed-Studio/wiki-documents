@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Vibration_Motor/
 slug: /es/Grove-Vibration_Motor
+sku: 103020027, 105020003
 last_update:
   date: 01/09/2022
   author: gunengyu

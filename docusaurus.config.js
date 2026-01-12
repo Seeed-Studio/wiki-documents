@@ -7,6 +7,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 // 从 frontmatter 中提取 aliases
 function getFrontmatterAliases() {
   try {
+    // dev 模式直接跳过，避免全量扫描
+    if (process.env.NODE_ENV === 'development') {
+      return [];
+    }
+    
     const fs = require('fs');
     const path = require('path');
     const glob = require('glob');
@@ -51,7 +56,7 @@ function getFrontmatterAliases() {
             existingPaths.add(`/${docPath}`);
           }
         }
-      } catch (error) {
+      } catch (/** @type {any} */ error) {
         // 静默处理
       }
     });
@@ -59,7 +64,7 @@ function getFrontmatterAliases() {
     // console.log(`📄 发现 ${existingPaths.size} 个有效的页面路径`);
     
     // 现在处理 aliases
-    const redirects = [];
+    const redirects = /** @type {{from: string; to: string}[]} */ ([]);
     let processedCount = 0;
     let skippedCount = 0;
     
@@ -74,6 +79,7 @@ function getFrontmatterAliases() {
           if (frontmatterText.includes('aliases:')) {
             const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
             
+            /** @type {string[]} */
             let aliases = [];
             
             // 方括号格式: aliases: ["/path1", "/path2"]
@@ -92,9 +98,12 @@ function getFrontmatterAliases() {
                   .split('\n')
                   .map(line => {
                     const match = line.match(/^\s*-\s*(.+)$/);
-                    return match ? match[1].trim().replace(/['"]/g, '') : null;
+                    return match ? match[1].trim().replace(/['"]/g, '') : '';
                   })
-                  .filter(alias => alias);
+                  .filter(
+                    /** @param {string} alias */
+                    alias => alias
+                  );
               }
             }
             
@@ -125,7 +134,7 @@ function getFrontmatterAliases() {
             }
           }
         }
-      } catch (error) {
+      } catch (/** @type {any} */ error) {
         console.warn(`警告: 处理文件 ${filePath} 时出错: ${error.message}`);
       }
     });
@@ -138,7 +147,7 @@ function getFrontmatterAliases() {
     
     return redirects;
     
-  } catch (error) {
+  } catch (/** @type {any} */ error) {
     console.error('处理 frontmatter aliases 时出错:', error.message);
     return [];
   }
@@ -149,6 +158,12 @@ module.exports = (async () => {
   // Dynamically import ESM modules
   const remarkMath = (await import('remark-math')).default;
   const rehypeKatex = (await import('rehype-katex')).default;
+
+  // 用于单语言 / 多语言 dev 控制
+  const isDev = process.env.NODE_ENV === 'development';
+  const rawDocLangs = process.env.DOC_LANGS || 'all';
+  const activeLangs = rawDocLangs.split(',').map(l => l.trim()).filter(Boolean);
+  const knownLangDirs = ['zh-CN', 'ja', 'es'];
 
   /** @type {import('@docusaurus/types').Config} */
   const config = {
@@ -215,39 +230,66 @@ module.exports = (async () => {
         'classic',
         /** @type {import('@docusaurus/preset-classic').Options} */
         ({
-          docs: {
-            routeBasePath: '/',
-            sidebarPath: require.resolve('./sidebars.js'),
+          docs: (function () {
+            const base = {
+              routeBasePath: '/',
+              sidebarPath: require.resolve('./sidebars.js'),
 
-            // Use the resolved plugins directly as an array
-            remarkPlugins: [remarkMath],
-            rehypePlugins: [rehypeKatex],
+              // Use the resolved plugins directly as an array
+              remarkPlugins: [remarkMath],
+              rehypePlugins: [rehypeKatex],
 
-            // Please change this to your repo.
-            // Remove this to remove the "edit this page" links.
-            editLocalizedFiles: false,
-            editCurrentVersion: false,
+              // Please change this to your repo.
+              // Remove this to remove the "edit this page" links.
+              editLocalizedFiles: false,
+              editCurrentVersion: false,
 
-            beforeDefaultRemarkPlugins: [],
-            beforeDefaultRehypePlugins: [],
+              beforeDefaultRemarkPlugins: [],
+              beforeDefaultRehypePlugins: [],
 
-            showLastUpdateAuthor: true,
-            showLastUpdateTime: true,
-            disableVersioning: false,
-            includeCurrentVersion: true,
-            lastVersion: undefined,
+              showLastUpdateAuthor: true,
+              showLastUpdateTime: true,
+              disableVersioning: false,
+              includeCurrentVersion: true,
+              lastVersion: undefined,
 
-            include: ['**/*.md', '**/*.mdx'],
-            exclude: [
-              '**/_*.{js,jsx,ts,tsx,md,mdx}',
-              '**/_*/**',
-              '**/*.test.{js,jsx,ts,tsx}',
-              '**/__tests__/**',
-            ],
+              include: ['**/*.md', '**/*.mdx'],
+              exclude: [
+                '**/_*.{js,jsx,ts,tsx,md,mdx}',
+                '**/_*/**',
+                '**/*.test.{js,jsx,ts,tsx}',
+                '**/__tests__/**',
+              ],
 
-            editUrl:
-              'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
-          },
+              editUrl:
+                'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
+            };
+
+            // dev 下如果设置了 DOC_LANGS，则只处理部分语言目录
+            if (isDev && rawDocLangs !== 'all') {
+              const wantEn = activeLangs.indexOf('en') !== -1;
+              const nonEnWanted = activeLangs.filter(function (l) { return l !== 'en'; });
+
+              if (wantEn) {
+                // 需要英文 + 若干非英文语言：排除不需要的语言目录
+                const unwantedDirs = knownLangDirs.filter(function (dir) {
+                  return nonEnWanted.indexOf(dir) === -1;
+                });
+                base.exclude = base.exclude.concat(unwantedDirs.map(function (dir) {
+                  return dir + '/**';
+                }));
+              } else if (nonEnWanted.length > 0) {
+                // 不需要英文，只保留指定的非英文语言目录
+                base.include = [];
+                nonEnWanted.forEach(function (lang) {
+                  base.include.push(lang + '/**/*.md');
+                  base.include.push(lang + '/**/*.mdx');
+                });
+              }
+            }
+
+            return base;
+          })(),
 
           googleTagManager: {
             containerId: 'GTM-M4JG2HVB',
@@ -664,7 +706,7 @@ module.exports = (async () => {
         },
         contextualSearch: true,
         typesense: {
-          typesenseCollectionName: 'wiki_platform_1760422701',
+          typesenseCollectionName: 'wiki_platform_test_1767765204',
           typesenseServerConfig: {
             nodes: [
               {
@@ -672,19 +714,22 @@ module.exports = (async () => {
                 protocol: 'https',
               },
             ],
-            apiKey: 'YnYgTcnP0OsCToBc4QzqzSq3RXjx7sqE',
+            apiKey: 'z1DHV8drOZizrn9TSlf0U9QgNENgBxGR',
           },
           typesenseSearchParameters: {
             query_by: 'hierarchy.lvl0,hierarchy.lvl2,content,sku_tag',
           },
-          transformSearchParameters: (inputString, searchParameters) => {
+          transformSearchParameters: (
+            /** @type {string} */ inputString,
+            /** @type {Record<string, unknown>} */ searchParameters,
+          ) => {
             if (/^\d{5,}$/.test(inputString)) {
               console.log('检测到 SKU 搜索:', inputString);
               return {
                 ...searchParameters,
                 query_by: 'sku_tag',
                 query: inputString,
-                filter_by: 'doc_type_tag:=gettingstarted && !doc_type_tag:=project',
+                // filter_by: 'doc_type_tag:=gettingstarted && !doc_type_tag:=project',
               };
             }
             return searchParameters;

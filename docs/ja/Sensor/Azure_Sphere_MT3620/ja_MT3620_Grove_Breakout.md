@@ -5,6 +5,7 @@ keywords:
 - Azure_Sphere_MT3620_Development_Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/MT3620_Grove_Breakout
+sku: 103100123, 110061008
 last_update:
   date: 05/15/2025
   author: jianjing Huang

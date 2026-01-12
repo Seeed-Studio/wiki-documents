@@ -1,50 +1,51 @@
 ---
 description: ESP-Matter環境のインストールと設定方法を紹介します。
-title: XIAO ESP32シリーズでのMatter開発
+title: XIAO ESP32 シリーズでのMatter開発
 keywords:
 - ESP-IDF
 - matter
 - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/xiao_esp32_matter_env
+sku: 113991254,102010636,101991470
 last_update:
   date: 05/15/2024
   author: Citric
 ---
 
-# XIAO ESP32シリーズでのMatter開発
+# XIAO ESP32 シリーズでのMatter開発
 
 :::tip
-この記事は、Seeed Studio XIAO ESP32開発Matterシリーズの第3回チュートリアルです。前回のチュートリアルをまだ読んでいない場合は、デバイスが要求通りに設定されていることを確認するために、まず前回のチュートリアルを読むことをお勧めします。
+この記事は、Seeed Studio XIAO ESP32開発Matterシリーズの3番目のチュートリアルです。前のチュートリアルを読んでいない場合は、まずそれらを読んで、デバイスが要求通りに設定されていることを確認することをお勧めします。
 
 - **[Espressif ESP-IDFを使用したXIAOでの開発](https://wiki.seeedstudio.com/ja/xiao_idf)**
-- **[XIAO ESP32シリーズでMatterを素早く始める](https://wiki.seeedstudio.com/ja/getting_started_with_matter)**
+- **[XIAO ESP32 シリーズでMatterを素早く始める](https://wiki.seeedstudio.com/ja/getting_started_with_matter)**
 
 :::
 
-急速に進化するモノのインターネット（IoT）の世界において、スマートホームデバイス同士の通信と相互作用の方法を革命的に変える新しいプレイヤーが登場しました。Matterをご紹介します。これは、さまざまなスマートホームエコシステム間のギャップを埋め、世界中のユーザーにシームレスで相互運用可能な体験を提供することを約束する統一プロトコルです。
+急速に進化するモノのインターネット（IoT）の世界において、スマートホームデバイスの通信と相互作用の方法を革命的に変える新しいプレイヤーが登場しました。Matterは、さまざまなスマートホームエコシステム間のギャップを埋め、世界中のユーザーにシームレスで相互運用可能な体験を提供することを約束する統一プロトコルです。
 
-では、Matterとは一体何で、なぜIoTコミュニティでこれほど多くの興奮を生み出しているのでしょうか？Matterは、異なるメーカーのスマートホームデバイスが努力なく連携できるようにするオープンソースの標準化されたプロトコルです。通信のための共通言語とフレームワークを提供することで、IoTデバイスの開発と展開を簡素化することを目的としています。
+では、Matterとは正確に何で、なぜIoTコミュニティでこれほど多くの興奮を生み出しているのでしょうか？Matterは、異なるメーカーのスマートホームデバイスが努力なく連携できるようにするオープンソースの標準化されたプロトコルです。通信のための共通言語とフレームワークを提供することで、IoTデバイスの開発と展開を簡素化することを目的としています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/Matter-stack.png" style={{width:700, height:'auto'}}/></div>
 
 - スマートホームデバイス用の通信プロトコル。
-- 2022年10月4日に1.0バージョンがリリース（2回延期された後）。
+- 2回延期された後、2022年10月4日に1.0バージョンがリリース。
 - 標準化されたコマンドセットにより、異なるメーカーのデバイス同士が通信可能。
 - Thread、Wi-Fi、またはEthernetを使用してIPネットワーク上で動作。
-- Security by DesignとZero-Trustを使用。
-- ローカルで動作 – 通常はMatterハブを介してクラウドに接続。
+- セキュリティ・バイ・デザインとゼロトラストを使用。
+- ローカルで動作 - 通常はMatterハブ経由でクラウドに接続。
 - Zigbee、Z-Wave、433MHzなどの他のスマートホーム標準と共存。
 - バッテリー寿命と範囲は無線ネットワーク技術に依存。
-- Matterハブによって調整される。
+- Matterハブによって調整。
 
-Matterの価値提案は明確です：より接続された、ユーザーフレンドリーで安全なスマートホーム体験への道を提供します。Matterを採用することで、デバイスメーカーは自社製品がAmazon Alexa、Google Home、Apple HomeKitなどの幅広いスマートホームプラットフォームやアシスタントと互換性があることを保証できます。この相互運用性は消費者に利益をもたらすだけでなく、IoT分野の開発者や企業にとって新しい機会も開きます。
+Matterの価値提案は明確です：より接続され、ユーザーフレンドリーで安全なスマートホーム体験への道を提供します。Matterを採用することで、デバイスメーカーは自社製品がAmazon Alexa、Google Home、Apple HomeKitなどの幅広いスマートホームプラットフォームやアシスタントと互換性があることを保証できます。この相互運用性は消費者に利益をもたらすだけでなく、IoT分野の開発者や企業にとって新しい機会も開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/Matter-network.jpg" style={{width:800, height:'auto'}}/></div>
 
-開発者としてMatterを採用することは、デバイスとサービスの広大なエコシステムを活用することを意味し、既存のスマートホームセットアップとシームレスに統合できる革新的なソリューションを作成できます。Matterの力を活用することで、デバイス通信と互換性の複雑さを心配することなく、魅力的なユーザー体験と機能の構築に集中できます。
+開発者として、Matterを採用することは、デバイスとサービスの広大なエコシステムを活用することを意味し、既存のスマートホームセットアップとシームレスに統合できる革新的なソリューションを作成できます。Matterの力を活用することで、デバイス通信と互換性の複雑さを心配するのではなく、魅力的なユーザー体験と機能の構築に集中できます。
 
-Matter開発の旅を始めるには、適切なツールと環境が必要です。このチュートリアルでは、IoTアプリケーション専用に設計されたコンパクトで強力なボードであるSeeed Studio XIAO ESP32C6を使用してMatter開発環境をセットアップするプロセスをガイドします。ESP32-C6マイクロコントローラーと豊富な周辺インターフェースを備えたXIAO ESP32C6は、Matter互換デバイスの開発に理想的な選択肢です。
+Matter開発の旅を始めるには、適切なツールと環境が必要です。このチュートリアルでは、IoTアプリケーション専用に設計されたコンパクトで強力なボードであるSeeed Studio XIAO ESP32C6を使用してMatter開発環境をセットアップするプロセスをガイドします。ESP32-C6マイクロコントローラーと豊富な周辺インターフェースを備えたXIAO ESP32C6は、Matter対応デバイスの開発に理想的な選択肢です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/Thread-matter-smart-homes.png" style={{width:800, height:'auto'}}/></div>
 
@@ -54,52 +55,60 @@ Matter開発の旅を始めるには、適切なツールと環境が必要で�
 
 ## ソフトウェアの準備
 
-以下に、この記事で使用するシステムバージョン、ESP-IDFバージョン、およびESP-Matterバージョンを参考として一覧表示します。これは正常に動作することがテストされた安定版です。
+以下に、この記事で使用するシステムバージョン、ESP-IDFバージョン、ESP-Matterバージョンを参考として一覧表示します。これは正常に動作することがテストされた安定版です。
 
 - **ホスト**: [Ubuntu 22.04 LTS (Jammy Jellyfish)](https://releases.ubuntu.com/jammy/)。
 - **ESP-IDF**: タグ [v5.2.1](https://github.com/espressif/esp-idf/tree/v5.2.1)。
 - **ESP-Matter**: mainブランチ、2024年5月10日時点、コミット [bf56832](https://github.com/espressif/esp-matter/commit/bf568327d41ca29167fcf2743ace1941432e4aa5)。
-- **connectedhomeip**: 現在コミット [13ab158f10](https://github.com/project-chip/connectedhomeip/tree/13ab158f10) で動作、2024年5月10日時点。
+- **connectedhomeip**: 現在、2024年5月10日時点でコミット [13ab158f10](https://github.com/project-chip/connectedhomeip/tree/13ab158f10) で動作。
 - **[Git](https://git-scm.com/)**
 - **[Visual Studio Code](https://code.visualstudio.com/)**
 
 ## ハードウェアの準備
 
-このセクションでは、Ubuntu環境でESP-IDFの使用を設定し、ESP-IDFが提供する照明例を実行する方法を詳しく説明します。そのため、この記事では以下のXIAO ESP32シリーズのいずれかを準備するだけで十分です。
+このセクションでは、Ubuntu環境でESP-IDFの使用を設定し、ESP-IDFが提供する照明サンプルを実行する方法を詳しく説明します。そのため、この記事では以下のXIAO ESP32シリーズのいずれかを準備するだけで十分です。
 
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>XIAO ESP32C3</th>
-   <th>XIAO ESP32S3</th>
-            <th>XIAO ESP32C6</th>
+   <th>XIAO ESP32-C3</th>
+   <th>XIAO ESP32-S3</th>
+   <th>XIAO ESP32-C5</th>
+    <th>XIAO ESP32-C6</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
-            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html
+        " target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
   </tr>
  </table>
 </div>
 
-XIAOに加えて、WS281xモデルのライトバーまたはライトビーズも必要です。現在Espressifが提供しているライトの例は単一のビーズのみをサポートしているため、ストリップまたはビーズのどちらを使用しても、1つのライトのみが点灯します。配線を簡単にするために、Grove Base for XIAOの購入もお勧めします。
+XIAOに加えて、WS281xモデルのライトバーまたはライトビーズも必要です。現在、Espressifが提供するライトサンプルは単一のビーズのみをサポートしているため、ストリップまたはビーズのどちらを使用しても、1つのライトのみが点灯します。配線を簡単にするために、Grove Base for XIAOも入手することをお勧めします。
 
 <div class="table-center">
  <table align="center">
@@ -114,18 +123,18 @@ XIAOに加えて、WS281xモデルのライトバーまたはライトビーズ�
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Mini.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a></div></td>
   </tr>
  </table>
 </div>
 
-インターフェースを統一するため、この例では **D9** ピンを使用します。LEDストリップまたはビーズをXIAOの **D9** ピンに接続してください。
+インターフェースを統一するため、この例では**D9**ピンを使用します。LEDストリップまたはビーズをXIAOの**D9**ピンに接続してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/17.png" style={{width:400, height:'auto'}}/></div>
 
@@ -135,13 +144,17 @@ XIAOに加えて、WS281xモデルのライトバーまたはライトビーズ�
 <iframe width="800" height="400" src="https://www.youtube.com/embed/g9hBp84xs1E?si=fzE--HA7v8H8R090?si=iH-oouOl_ItkG7vF?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-## ESP-Matter のステップバイステップインストール
+## ESP-Matterのステップバイステップインストール
 
 :::tip
-Matter の環境インストールを開始する前に、[ESP-IDFプログラミング環境がインストールされ、アクセス可能であること](https://wiki.seeedstudio.com/ja/xiao_idf/#step-5-set-up-environment-variables)を確認してください。
+Matterの環境インストールを開始する前に、[ESP-IDFプログラミング環境をインストールしてアクセスできる](https://wiki.seeedstudio.com/ja/xiao_idf/#step-5-set-up-environment-variables)ことを確認してください。
 :::
 
-### ステップ1. 依存関係のインストール
+:::tip
+ESP-IDF環境をセットアップする際は、使用しているXIAOボードが現在のMatter環境と互換性があることを確認する必要があります。例えば、XIAO ESP32-C5とXIAO ESP32-C6を使用する場合、このwikiを書いている時点でサポートされている最新バージョンはESP-IDF v5.5.1です。詳細については、[サポートされているESP-IDFとconnectedhomeipバージョン](https://github.com/espressif/esp-matter)をご覧ください。
+:::
+
+### ステップ 1. 依存関係のインストール
 
 まず、`apt-get` を使用して必要なパッケージをインストールする必要があります。ターミナルを開いて、以下のコマンドを実行してください：
 
@@ -151,11 +164,11 @@ sudo apt-get install git gcc g++ pkg-config libssl-dev libdbus-1-dev \
      python3-pip unzip libgirepository1.0-dev libcairo2-dev libreadline-dev
 ```
 
-このコマンドは、Matter SDKのビルドと実行に必要な`git`、コンパイラ（`gcc`、`g++`）、ライブラリなどの様々なパッケージをインストールします。
+このコマンドは、`git`、コンパイラ（`gcc`、`g++`）、Matter SDK のビルドと実行に必要なライブラリなど、さまざまなパッケージをインストールします。
 
-### ステップ2. ESP-Matterリポジトリのクローン
+### ステップ 2. ESP-Matter リポジトリのクローン
 
-`git clone`コマンドを使用して、GitHubから`esp-matter`リポジトリをクローンします。depth 1を指定して最新のスナップショットのみを取得します：
+GitHub から `esp-matter` リポジトリを `git clone` コマンドで深度 1 でクローンし、最新のスナップショットのみを取得します：
 
 ```bash
 cd ~/esp
@@ -169,18 +182,18 @@ cd esp-matter
 git submodule update --init --depth 1
 ```
 
-`connectedhomeip` ディレクトリに移動し、特定のプラットフォーム用のサブモジュールを管理するPythonスクリプトを実行します：
+`connectedhomeip` ディレクトリに移動し、特定のプラットフォーム用のサブモジュールを管理する Python スクリプトを実行します：
 
 ```bash
 cd ./connectedhomeip/connectedhomeip
 ./scripts/checkout_submodules.py --platform esp32 linux --shallow
 ```
 
-このスクリプトは、ESP32とLinuxの両プラットフォームのサブモジュールを浅い方法（最新のコミットのみ）で更新します。
+このスクリプトは、ESP32 と Linux プラットフォームの両方のサブモジュールを浅い方法（最新のコミットのみ）で更新します。
 
-### ステップ3. ESP-Matterをインストール
+### ステップ 3. ESP-Matter のインストール
 
-`esp-matter`のルートディレクトリに戻り、インストールスクリプトを実行します：
+`esp-matter` ルートディレクトリに戻り、インストールスクリプトを実行します：
 
 ```bash
 cd ../..
@@ -189,7 +202,7 @@ cd ../..
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/1.png" style={{width:1000, height:'auto'}}/></div>
 
-このスクリプトは、ESP-Matter SDK固有の追加の依存関係をインストールします。
+このスクリプトは、ESP-Matter SDK 固有の追加の依存関係をインストールします。
 
 ### ステップ 4. 環境変数の設定
 
@@ -201,17 +214,17 @@ source ./export.sh
 
 このコマンドは、必要な環境パスと変数でシェルを設定します。
 
-### ステップ 5（オプション）。ESP-Matter 開発環境への迅速なアクセス
+### ステップ 5（オプション）. ESP-Matter 開発環境への簡単アクセス
 
 提供されたエイリアスと環境変数設定を `.bashrc` ファイルに追加するには、以下の手順に従ってください。これにより、IDF と Matter 開発セットアップ間の簡単な切り替えが可能になり、より高速なビルドのために ccache が有効になります。
 
-ターミナルを開き、テキストエディタを使用してホームディレクトリにある `.bashrc` ファイルを開きます。`nano` または任意のエディタを使用できます。例えば：
+ターミナルを開き、テキストエディタを使用してホームディレクトリにある `.bashrc` ファイルを開きます。`nano` または任意のエディタを使用できます。例：
 
 ```bash
 nano ~/.bashrc
 ```
 
-`.bashrc` ファイルの最下部までスクロールし、以下の行を追加してください：
+`.bashrc` ファイルの最下部までスクロールし、以下の行を追加します：
 
 ```bash
 # Alias for setting up the ESP-Matter environment
@@ -221,40 +234,40 @@ alias get_matter='. ~/esp/esp-matter/export.sh'
 alias set_cache='export IDF_CCACHE_ENABLE=1'
 ```
 
-行を追加した後、ファイルを保存してテキストエディタを終了します。`nano`を使用している場合は、`Ctrl+O`を押して保存し、`Enter`を押して確認してから、`Ctrl+X`で終了できます。
+行を追加した後、ファイルを保存してテキストエディタを終了します。`nano` を使用している場合は、`Ctrl+O` を押して保存し、`Enter` を押して確認し、`Ctrl+X` で終了できます。
 
-変更を有効にするには、`.bashrc`ファイルを再読み込みする必要があります。`.bashrc`ファイルをソースするか、ターミナルを閉じて再度開くことで実行できます。`.bashrc`ファイルをソースするには、以下のコマンドを使用します：
+変更を有効にするには、`.bashrc` ファイルを再読み込みする必要があります。`.bashrc` ファイルをソースするか、ターミナルを閉じて再度開くことで実行できます。`.bashrc` ファイルをソースするには、以下のコマンドを使用します：
 
 ```bash
 source ~/.bashrc
 ```
 
-これで任意のターミナルセッションで `get_matter` と `set_cache` を実行して、esp-matter環境をセットアップまたはリフレッシュできます。
+これで、任意のターミナルセッションで `get_matter` と `set_cache` を実行して、esp-matter 環境を設定または更新できます。
 
 ```bash
 get_matter
 set_cache
 ```
 
-## lightサンプルの実行
+## ライトサンプルの実行
 
-Matter環境が設定されたら、サンプルアプリケーションlightをコンパイルしてアップロードし、動作を確認できます。
+Matter 環境が設定されたら、サンプルアプリケーション light をコンパイルしてアップロードし、動作を確認できます。
 
-### ステップ1. プロジェクトのパラメータを設定する
+### ステップ 1. プロジェクトパラメータの設定
 
-`examples/light`ディレクトリに移動します。
+`examples/light` ディレクトリに移動します。
 
 ```bash
 cd examples/light                # Navigate to the light example directory
 ```
 
-以前のビルドファイルを削除するためのクリーン操作を実行します。
+以前のビルドファイルを削除するためにクリーン操作を実行します。
 
 ```bash
 rm -rf build/                     # Clean previous build files
 ```
 
-ターゲットをESP32-C6に設定してください。
+ターゲットを ESP32-C6 に設定します。
 
 ```bash
 idf.py set-target esp32c6        # Set the build target to ESP32-C6
@@ -266,26 +279,27 @@ idf.py set-target esp32c6        # Set the build target to ESP32-C6
 idf.py menuconfig                # Enter the configuration menu
 ```
 
-`menuconfig`内で、`Channel for console oputput`オプションを見つけて有効にする必要があります。通常、このオプションは**Component config** -> **ESP System Settings**の下にあります。
+`menuconfig` 内で、`Channel for console oputput` オプションを見つけて有効にする必要があります。通常、このオプションは **Component config** -> **ESP System Settings** の下にあります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/7.png" style={{width:1000, height:'auto'}}/></div>
 
 1. 矢印キーを使用してオプションに移動します。
-2. SpaceまたはEnterを押してオプションを選択します：`USB Serial/JTAG Controller`。
+2. スペースまたは Enter を押してオプションを選択します：`USB Serial/JTAG Controller`。
 
-異なるXIAOの場合、GPIOピン番号も更新する必要があります。このオプションは**Component config -> Board Support Package (generic) -> LEDs**の下にあります。
+異なる XIAO の場合、GPIO ピン番号も更新する必要があります。このオプションは **Component config -> Board Support Package (generic) -> LEDs** の下にあります。
 
-- XIAO ESP32C3の場合、D9のGPIOは9です。
-- XIAO ESP32S3の場合、D9のGPIOは8です。
-- XIAO ESP32C6の場合、D9のGPIOは20です。
+- XIAO ESP32-C3 の場合、D9 の GPIO は 9 です。
+- XIAO ESP32-S3 の場合、D9 の GPIO は 8 です。
+- XIAO ESP32-C5 の場合、D9 の GPIO は 9 です。
+- XIAO ESP32C6 の場合、D9 の GPIO は 20 です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/33.png" style={{width:1000, height:'auto'}}/></div>
 
 1. 矢印キーを使用してオプションに移動します。
-2. SpaceまたはEnterを押してGPIO番号を入力します。
-3. 必要なオプションを有効にした後、`q`を押して`menuconfig`を終了し、`y`を押します。
+2. スペースまたは Enter を押して GPIO 番号を入力します。
+3. 必要なオプションを有効にした後、`q` を押して `menuconfig` を終了し、`y` を押します。
 
-### ステップ2. サンプルアプリケーションのコンパイルとアップロード
+### ステップ 2. サンプルアプリケーションのコンパイルとアップロード
 
 ビルドとフラッシュプロセスを続行します：
 
@@ -293,7 +307,7 @@ idf.py menuconfig                # Enter the configuration menu
 idf.py build                      # Build the project
 ```
 
-コンパイルが正常に完了すると、以下の結果が表示されます。
+コンパイルが正常に進むと、以下の結果が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/2.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -303,41 +317,41 @@ idf.py build                      # Build the project
 idf.py -p /dev/ttyACM0 flash monitor  # Flash the firmware and monitor the output
 ```
 
-`/dev/ttyACM0`を、実際のXIAO ESP32に対応するUSBデバイスファイルに置き換えてください（異なる場合）。
+異なる場合は、`/dev/ttyACM0` を XIAO ESP32 に対応する実際の USB デバイスファイルに置き換えてください。
 
-すべての指示に注意深く従い、次のステップに進む前に各ステップが正常に完了することを確認してください。エラーが発生した場合は、続行する前にそれらを解決する必要があります。
+すべての指示に注意深く従い、次のステップに進む前に各ステップが正常に完了することを確認してください。エラーが発生した場合は、続行する前に解決する必要があります。
 
 :::tip
-Matterのファームウェアをフラッシュする過程で、権限がない状況に遭遇する可能性があります。この場合、以下のコマンドを使用してデバイスのポートに権限を与え、プログラムを再度アップロードしてください。デバイスが接続されたり再起動されたりすると、権限を再度与える必要がある場合があります。
+Matter のファームウェアをフラッシュする過程で、権限がない状況に遭遇する可能性があります。その場合は、以下のコマンドを使用してデバイスのポートに権限を与え、プログラムを再度アップロードしてください。デバイスが接続されたり再起動されたりすると、権限を再度与える必要がある場合があります。
 
 ```
 sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
 ```
 
-`/dev/ttyACM0` を、実際のXIAO ESP32に対応するUSBデバイスファイルに置き換えてください（異なる場合）。
+異なる場合は、`/dev/ttyACM0` を XIAO ESP32 に対応する実際の USB デバイスファイルに置き換えてください。
 :::
 
-おめでとうございます。ファームウェアの書き込みが成功した場合、モニターでターミナルにデバッグログの出力が表示されます。
+おめでとうございます。ファームウェアのフラッシュに成功した場合、モニターでターミナルにデバッグログ出力が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/3.png" style={{width:1000, height:'auto'}}/></div>
 
-次に、matterコマンドとchip-toolを使用してMatterデバイスを設定し、Matterデバイスのデバッグと確認を完了する方法を学習します。
+次に、matter コマンドと chip-tool を使用して Matter デバイスを設定し、Matter デバイスのデバッグと確認を完了する方法を学習します。
 
 ## ホスト制御とデバイスコミッショニング
 
-`menuconfig`で`console oputput to USB Serial`のChannelを設定しました。これは、USBインターフェースを使用してXIAOを制御し、ネットワークへの参加設定やその他のデバッグを行うためです。このステップは重要で、シリアルツールを使用してデバイスにコマンドを発行できるかどうかを決定します。
+`menuconfig` で Channel for `console oputput to USB Serial` を設定した目的は、USB インターフェースを使用して XIAO を制御し、ネットワークへの参加設定やその他のデバッグを行えるようにすることです。このステップは重要で、シリアルツールを使用してデバイスにコマンドを発行できるかどうかを決定します。
 
-これらは、ケーブル経由で接続してデバイスを直接制御するコマンドで、通常`matter`で始まります。
+これらは、ケーブル経由で接続してデバイスを直接制御するコマンドで、通常 `matter` で始まります。
 
 ### 一般的なコマンド
 
-- BLEコマンド：BLEアドバタイズメントの開始と停止：
+- BLE コマンド：BLE アドバタイズメントの開始と停止：
 
  ```
  matter ble [start|stop|state]
  ```
 
-- Wi-Fiコマンド：Wi-Fiモードの設定と取得：
+- Wi-Fi コマンド：Wi-Fi モードの設定と取得：
 
  ```
  matter wifi mode [disable|ap|sta]
@@ -361,7 +375,7 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
  matter onboardingcodes
  ```
 
-- 属性取得：（IDは16進数）：
+- 属性取得：（ID は 16 進数）：
 
  ```
  matter esp attribute get <endpoint_id> <cluster_id> <attribute_id>
@@ -373,7 +387,7 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
   matter esp attribute get 0x1 0x6 0x0
   ```
 
-- 属性設定：（IDは16進数）：
+- 属性設定：（ID は 16 進数）：
 
  ```
  matter esp attribute set <endpoint_id> <cluster_id> <attribute_id> <attribute value>
@@ -399,74 +413,78 @@ sudo chmod 666 /dev/ttyACM0       # Grant permissions to the USB device file
 
 ### 使用方法
 
-#### ステップ1. Minicomのインストール
+#### ステップ 1. Minicom のインストール
 
-Minicomは、Unix系オペレーティングシステム用のテキストベースのモデム制御およびターミナルエミュレーションプログラムです。Minicomをインストールすることで、XIAOにMatter制御コマンドを簡単に送信できます。UbuntuにMinicomをインストールするには、ターミナルを開いて以下のコマンドを入力します：
+Minicom は、Unix 系オペレーティングシステム用のテキストベースのモデム制御およびターミナルエミュレーションプログラムです。Minicom をインストールすることで、XIAO に Matter 制御コマンドを簡単に送信できます。Ubuntu に Minicom をインストールするには、ターミナルを開いて以下のコマンドを入力します：
 
 ```bash
 sudo apt update
 sudo apt install minicom
 ```
 
-このコマンドはパッケージリストを更新し、Minicomをインストールします。
+このコマンドは、パッケージリストを更新し、Minicom をインストールします。
 
-#### ステップ2. ユーザー権限の設定
+#### ステップ 2. ユーザー権限の設定
 
-`ttyACM0`などのシリアルポートに非rootユーザーがアクセスできるようにするには、ユーザーを`dialout`グループに追加する必要があります。以下のコマンドで実行できます：
+非 root ユーザーが `ttyACM0` などのシリアルポートにアクセスできるようにするには、ユーザーを `dialout` グループに追加する必要があります。以下のコマンドで実行できます：
 
 ```bash
 sudo usermod -a -G dialout $USER
 ```
 
-`$USER` をあなたのユーザー名に置き換えるか、現在ログインしているユーザーに適用する場合は省略してください。このコマンドを実行した後、グループの変更を有効にするために**ログアウトして再度ログインする必要があります**。
+`$USER` をユーザー名に置き換えるか、現在ログインしているユーザーに適用する場合は省略してください。このコマンドを実行した後、グループ変更を有効にするために**ログアウトして再度ログインする必要があります**。
 
-#### ステップ 3. Minicom のセットアップ
+#### ステップ 3. Minicom の設定
 
-次に、`ttyACM0` ポートを使用するように Minicom を設定する必要があります。以下のコマンドでセットアップモードで Minicom を実行してください：
+次に、`ttyACM0` ポートを使用するように Minicom を設定する必要があります。以下のコマンドで Minicom をセットアップモードで実行します：
 
 ```bash
 sudo minicom -s
 ```
 
-セットアップメニューで、以下の手順に従ってください：
+セットアップメニューで、以下の手順に従います：
 
-1. **Serial port setup**を選択します。
-2. 'A'を押してSerial Deviceを`/dev/ttyACM0`に変更します。
-3. 必要に応じて他の設定を調整します。デフォルト設定は通常9600 8N1（9600ボー、パリティなし、8データビット、1ストップビット）です。ボーレートを**115200**に変更するだけで済みます。
-4. 'Enter'を押してこの画面を終了します。
+1. **Serial port setup** を選択します。
+2. 'A' を押してシリアルデバイスを `/dev/ttyACM0` に変更します。
+3. 必要に応じて他の設定を調整します。デフォルト設定は通常 9600 8N1（9600 ボー、パリティなし、8 データビット、1 ストップビット）です。ボーレートを **115200** に変更するだけです。
+4. 'Enter' を押してこの画面を終了します。
 
 #### ステップ 4. 設定の保存
 
-シリアルポートの設定後：
+シリアルポートを設定した後：
 
-1. **Save setup as dfl**を選択して、これをデフォルト設定にします。
-2. **Exit from Minicom**を選択してMinicomeセットアップを終了します。
+1. **Save setup as dfl** を選択して、これをデフォルト設定にします。
+2. **Exit from Minicom** を選択して Minicom セットアップを終了します。
 
-#### ステップ 5: Minicomの実行
+#### ステップ 5：Minicom の実行
 
-デフォルト設定でMinicomを開始するには、次のように入力するだけです：
+デフォルト設定でMinicomを開始するには、次のように入力します：
 
 ```bash
 minicom
 ```
 
-sudo権限で実行する必要がある場合（例：権限の問題が発生した場合）は、以下を使用できます：
+sudo権限で実行する必要がある場合（例：権限の問題が発生した場合）、次のコマンドを使用できます：
 
 ```bash
 sudo minicom
 ```
 
-Minicomを終了するには、`Ctrl-A`を押してから`Z`を押してヘルプメニューを表示し、その後`X`を押してプログラムを終了します。
+Minicomを終了するには、`Ctrl-A`を押してから`Z`を押してヘルプメニューを表示し、`X`を押してプログラムを終了します。
 
 #### ステップ6. XIAOの配信ネットワークの設定
 
-以下のコマンドを使用してXIAOをネットワークに接続します。ネットワークを選択する際は、XIAOは2.4Gネットワークのみをサポートし、5Gネットワークはサポートしていないことに注意してください。
+次のコマンドを使用してXIAOをネットワークに接続します。ネットワークを選択する際は、2.4Gネットワーク接続を選択できます。
+
+:::tip
+このチュートリアルでは、デュアルバンド2.4G & 5G WiFiをサポートするXIAO ESP32-C5を除き、すべてのXIAOシリーズボードは2.4G WiFiのみをサポートします。
+:::
 
 ```
 matter esp wifi connect <ssid> <password>
 ```
 
-正常にペアリングが完了した後、以下のコマンドを使用してMatterデバイスの非常に重要な情報を照会できます：**VendorID**、**ProductId**、**Discriminator**、および**PinCode**。この情報は、Chip-toolツールでデバッグする際にデバイスをペアリングするのに役立ちます。
+ペアリングが成功した後、次のコマンドを使用してMatterデバイスの非常に重要な情報を照会できます：**VendorID**、**ProductId**、**Discriminator**、**PinCode**。この情報は、Chip-toolツールでデバッグする際にデバイスをペアリングするのに役立ちます。
 
 ```
 matter config
@@ -474,7 +492,7 @@ matter config
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/8.png" style={{width:1000, height:'auto'}}/></div>
 
-最後に、以下のコマンドを使用してオンボーディングペアリングコードペイロードをダンプします。
+最後に、次のコマンドを使用してオンボーディングペアリングコードペイロードをダンプします。
 
 ```
 matter onboardingcodes onnetwork
@@ -482,35 +500,35 @@ matter onboardingcodes onnetwork
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/9.png" style={{width:1000, height:'auto'}}/></div>
 
-ここで最後に表示されるのは、デバイスのペアリングQRコードへのリンクです。QRコードを使用して、[Getting Started](https://wiki.seeedstudio.com/ja/getting_started_with_matter/#step-2-add-a-device-by-scanning-the-code-using-the-iphone-home-app)の手順と同様に、携帯電話でコードをスキャンしてMatterデバイスをバインドできます。
+ここで最後に表示されるのは、デバイスのペアリングQRコードへのリンクです。QRコードを使用して、[入門ガイド](https://wiki.seeedstudio.com/ja/getting_started_with_matter/#step-2-add-a-device-by-scanning-the-code-using-the-iphone-home-app)の手順と同様に、携帯電話でコードをスキャンしてMatterデバイスをバインドできます。
 
 ## Chip-toolを使用したMatterデバイスのリモートデバッグ
 
-Matterデバイスはスマートホームの重要な部分であり、デバッグとセットアップのために常にデータケーブルを使用するのは実用的ではありません。Matterデバッグツールの中で最も一般的に使用されるのはChip-toolで、デバイスが接続されているときにリモートでデバッグするのに役立ちます。
+Matterデバイスはスマートホームの重要な部分であり、デバッグと設定のために常にデータケーブルを使用するのは実用的ではありません。Matterデバッグツールの中で最も一般的に使用されるのはChip-toolで、デバイスが接続されているときにリモートでデバッグするのに役立ちます。
 
-Chip-toolコマンドは通常Chip-toolスクリプトを必要とするため、通常は`chip-tool`で始まります。
+Chip-toolコマンドは通常Chip-toolスクリプトを必要とするため、通常`chip-tool`で始まります。
 
-### IPを介したデバイスのペアリング
+### IP経由でデバイスをペアリング
 
-以下のコマンドはデバイスを発見し、提供されたセットアップコードを使用して最初に発見されたデバイスとのペアリングを試行します：
+以下のコマンドはデバイスを発見し、提供されたセットアップコードを使用して最初に発見したデバイスとのペアリングを試行します：
 
 ```
 chip-tool pairing onnetwork ${NODE_ID_TO_ASSIGN} 20202021
 ```
 
-以下のコマンドは、長い識別子3840を持つデバイスを発見し、提供されたセットアップコードを使用して発見した最初のデバイスとのペアリングを試行します：
+以下のコマンドは長い識別子3840を持つデバイスを発見し、提供されたセットアップコードを使用して最初に発見したデバイスとのペアリングを試行します：
 
 ```
 chip-tool pairing onnetwork-long ${NODE_ID_TO_ASSIGN} 20202021 3840
 ```
 
-以下のコマンドは、指定されたQRコード（デバイスが起動時にログ出力するもの）に基づいてデバイスを検出し、最初に発見されたデバイスとのペアリングを試行します。
+以下のコマンドは指定されたQRコード（デバイスが起動時にログに記録するもの）に基づいてデバイスを発見し、最初に発見したデバイスとのペアリングを試行します。
 
 ```
 chip-tool pairing code ${NODE_ID_TO_ASSIGN} MT:#######
 ```
 
-これらすべてのケースにおいて、デバイスには node id `${NODE_ID_TO_ASSIGN}` が割り当てられます（これは10進数または0xプレフィックス付きの16進数である必要があります）。
+これらすべての場合において、デバイスにはノードID `${NODE_ID_TO_ASSIGN}`が割り当てられます（これは10進数または0x接頭辞付きの16進数である必要があります）。
 
 ### 現在コミッションされているデバイスを忘れる
 
@@ -518,9 +536,9 @@ chip-tool pairing code ${NODE_ID_TO_ASSIGN} MT:#######
 chip-tool pairing unpair
 ```
 
-### クライアントを使用してMatterコマンドを送信する
+### クライアントを使用してMatterコマンドを送信
 
-クライアントを使用してMatterコマンドを送信するには、ビルドされた実行ファイルを実行し、ターゲットクラスター名、ターゲットコマンド名、およびエンドポイントIDを渡します。
+クライアントを使用してMatterコマンドを送信するには、ビルドされた実行可能ファイルを実行し、ターゲットクラスタ名、ターゲットコマンド名、およびエンドポイントIDを渡します。
 
 エンドポイントIDは1から240の間である必要があります。
 
@@ -532,21 +550,21 @@ chip-tool onoff on 1
 
 ### 使用方法
 
-Chip-toolでデバッグする準備ができたら、XIAOをコンピューターから切断し、電源に接続できます。
+Chip-toolでデバッグする準備ができたら、XIAOをコンピュータから切断し、電源に接続できます。
 
-最初のステップとして、デバイスをペアリングする必要があります。これは上記の[IPでデバイスをペアリング](#pair-a-device-over-ip)セクションのいずれかの方法を使用して行うことができます。
+最初のステップとして、デバイスをマッチングする必要があります。これは上記の[IP経由でデバイスをペアリング](#IP経由でデバイスをペアリング)セクションの任意の方法を使用して行うことができます。
 
-例えば、私は以下のコマンドを使用します。
+例えば、私は次のコマンドを使用します。
 
 ```
 chip-tool pairing onnetwork-long 0x12 20202021 3840
 ```
 
-この場合、デバイスにはノードID `0x12`（10進数または0xプレフィックス付きの16進数である必要があります）が割り当てられます。20202021はPinCodeで、3840はDiscriminatorです。
+この場合、デバイスにはノードID `0x12`が割り当てられます（これは10進数または0x接頭辞付きの16進数である必要があります）。20202021はPinCodeで、3840はDiscriminatorです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/5.png" style={{width:1000, height:'auto'}}/></div>
 
-最後に、以下のコマンドでライトのオン/オフを制御できることを確認します。
+最後に、次のコマンドでライトのオン/オフを制御できることを確認します。
 
 ライトをオンにする：
 
@@ -554,7 +572,7 @@ chip-tool pairing onnetwork-long 0x12 20202021 3840
 chip-tool onoff on 0x12 0x1
 ```
 
-ライトを消す：
+ライトをオフにする：
 
 ```
 chip-tool onoff off 0x12 0x1
@@ -562,41 +580,46 @@ chip-tool onoff off 0x12 0x1
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/6.png" style={{width:1000, height:'auto'}}/></div>
 
-0x12は、マッチング時にデバイスに割り当てられるノードIDです。
+0x12は、マッチング時にデバイスに割り当てられたノードIDです。
 
-皆さん、おめでとうございます。ここで実行したチュートリアルの手順により、ESP-Matterの開発フレームワークの一般的な手順とデバッグツールの使用について、初歩的な理解を得られたと思います。まだ理解できない部分や慣れていない部分がある場合は、今後のチュートリアルで引き続き使用方法をガイドしていきますので、ご期待ください！
+皆さん、おめでとうございます。ここで実行したチュートリアルの手順により、ESP-Matterの開発フレームワークの一般的な手順とデバッグツールの使用について基本的な理解を得られたと思います。まだ理解できない部分や慣れていない部分がある場合は、今後のチュートリアルで引き続き使用方法をガイドしますので、お楽しみに！
 
 ## トラブルシューティング
 
 ### Q1: 環境のインストール中にさまざまなエラーが発生するのはなぜですか？
 
-ESP-Matterの環境は少し要求が厳しく、開発によく使用されるUbuntuホストを使用している場合、一部のPython依存関係のバージョンの違いによりエラーが発生する可能性があります。Matterフレームワークは Seeed によって開発されたものではないため、この部分の問題については私たちにできることはおそらくありません。そのため、インストールで問題が発生した場合は、公式の **[ESP-Matterリポジトリ](https://github.com/espressif/esp-matter)** にissueを提出してヘルプを求めることをお勧めします。
+ESP-Matterの環境は少し要求が厳しく、開発によく使用されるUbuntuホストを使用している場合、一部のPython依存関係の異なるバージョンによりエラーが発生する可能性があります。MatterフレームワークはSeeedによって開発されていないため、この部分の問題については私たちにできることはおそらくありません。インストールで問題が発生した場合は、公式の**[ESP-Matterリポジトリ](https://github.com/espressif/esp-matter)**にissueを提出してヘルプを求めることをお勧めします。
 
-### Q2: Matterの環境をアンインストールするにはどうすればよいですか？
+### Q2: コンポーネントの解決に失敗
 
-`./install.sh` スクリプトを実行してPython環境の設定ステップで止まってしまう場合は、あなたのMatterの[バージョン](#prepare-the-software)がconnectedhomeipのバージョンと一致しているかを確認する必要があるかもしれません。
+v4.xからv5.0+にアップグレード後、多くの機能モジュール（mqtt、json、esp_https_serverなど）がコアフレームワークから削除され、独立したコンポーネントに変換されました。その結果、コンパイル中にコンポーネント依存関係の欠落エラーが発生する可能性があります。エラーメッセージに従って不足しているコンポーネントを追加できます。<br/>
+参考：[The ESP Component Registry](https://components.espressif.com/)
 
-リセットする簡単な方法は、以下のコマンドを実行することです。
+### Q3: Matterの環境をアンインストールするにはどうすればよいですか？
+
+`./install.sh`スクリプトを実行してPython環境の設定ステップで停止してしまう場合は、Matterの[バージョン](#prepare-the-software)がconnectedhomeipのバージョンと一致しているかを確認する必要があります。
+
+リセットする簡単な方法は、次のコマンドを実行することです。
 
 ```
 rm -r connectedhomeip/connectedhomeip/.environment
 ```
 
-その後、connectedhomeipブランチの適切なバージョンを再度プルしてください。
+その後、適切なバージョンのconnectedhomeipブランチを再度プルします。
 
 ```
 git submodule update --init --depth 1
 ```
 
-それでも動作しない場合は、esp-matter フォルダ全体を削除し、Wiki の内容に従って再度実行してください。
+それでもうまくいかない場合は、esp-matterフォルダ全体を削除し、Wikiの内容に従って再度実行してください。
 
 ## リソース
 
 - **[ESPRESSIF Matter - Developing with the SDK](https://docs.espressif.com/projects/esp-matter/en/latest/esp32/developing.html#)**
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

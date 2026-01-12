@@ -3,6 +3,7 @@ description: このページでは、XIAO Debug MateのUARTモニター機能の
 title: UARTモニター
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.webp
 slug: /ja/xiao_debug_mate_serial
+sku: 109990585
 sidebar_position: 3
 last_update:
   date: 10/22/2025
@@ -354,14 +355,12 @@ LED マトリックスのデザインインスピレーションを提供して�
 *   [オリジナルデザインデモンストレーション動画](https://www.bilibili.com/video/BV1Sc411273Y/)
 *   [作者の Bilibili ホームページ](https://space.bilibili.com/1155738723)
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -8,8 +8,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010_homepage.webp
 slug: /stackforce_series
 last_update:
-  date: 11/26/2025
+  date: 12/25/2025
   author: Li Shanghang
+translation:
+    skip: [zh-CN]
 ---
 
 # Stackforce X Series Motors Getting Start
@@ -104,6 +106,10 @@ The CANID to be sent is 0x**, and the set ID is 0x**, with a maximum limit of 0x
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/修改CANID反馈.png"/>
 </div>
 
+:::tip
+You can set the CANID:0x01 for easier testing in the subsequent code.
+:::
+
 ### Modifying CAN Mode
 Send CANMODE:0 or CANMODE:1 via the serial port.
 
@@ -120,6 +126,10 @@ Successful modification of CAN mode is shown in the figures below:
     <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/CAN模式反馈2.png"/>
 </div>
+
+:::tip
+You can set the CANMODE:0 for easier testing in the subsequent code.
+:::
 
 ## Using [reComputer Mini Jetson Orin](/cn/recomputer_jetson_mini_getting_started) to Control Motors
 The most common CAN communication interfaces for motors on the market are **XT30 (2+2)** and **JST connectors**. Our **reComputer Mini Jetson Orin** and **reComputer Robotics** devices are equipped with **dual XT30 (2+2) interfaces** and **CAN interfaces based on JST**, providing seamless compatibility.
@@ -149,7 +159,7 @@ Turn off the toggle switch of the 120Ω CAN communication terminal resistor inte
 
 <div align="center">
     <img width={400} 
-     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/电阻开关.png" />
+     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/EN/resistance_switch.png" />
 </div>
 
 :::tip
@@ -162,27 +172,31 @@ If the Recomputer Mini has not set the 120Ω terminal resistor to ON, you can ch
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/Mini连接.jpg" />
 </div>
+<div align="center">
+    <img width={800} 
+     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/Hardware_connect.png" />
+</div>
 
 :::tip
 Since [the CAN interface design of the reComputer Mini](https://wiki.seeedstudio.com/cn/recomputer_jetson_mini_hardware_interfaces_usage/#can0can1-%E9%80%9A%E4%BF%A1) is opposite to that of the motor’s CAN interface, manual soldering is required to reverse the data lines.
 
 <div align="center">
-    <img width={400} 
+    <img width={700} 
      src="https://files.seeedstudio.com/wiki/recomputer_mini/can0-datasheet.png" />
-     <img width={400} 
-     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/电机can接口.png" />
+     <img width={700} 
+     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/EN/MotorCAN.png" />
 </div>
 
 <div align="center">
-    <img width={600} 
-     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/TX30.jpg" />
+    <img width={500} 
+     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/EN/TX30.jpg" />
 </div>
 
-Considering the high voltage and current required by the motor, it is recommended to purchase a 24V 300W power adapter to power the reComputer Mini for driving a single motor. If more motors need to be connected, a higher-power power adapter can be purchased according to the requirement.
+Considering the high voltage and current required by the motor, it is recommended to purchase a 24V 300W power adapter to power the reComputer Mini for driving a single motor. If more motors need to be connected, a `higher-power` power adapter can be purchased according to the requirement.
 
 <div align="center">
     <img width={600} 
-     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/适配器.jpg " />
+     src="https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/EN/Power_adapter.png" />
 </div>
 :::
 
@@ -208,7 +222,7 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-### Setting Up Python and C++ Environment
+### Setting Up C++ and Python Environment
 
 **Step 1:** Clone the SDK.
 ```bash
@@ -229,7 +243,138 @@ sudo apt-get install -y python3 python3-pip python3-pybind11 python3-setuptools
 
 After installing the dependencies, follow the steps below to install the driver SDK as a C++ library or a Python package. Both will use CMake to compile the C++ code.
 
-### Using C++ for Control
+## Motor Control and Data Receive
+
+### C++
+
+<details>
+<summary>main.cpp</summary>
+```cpp
+#include <chrono>
+#include <cstdint>
+#include <cmath>
+#include <cstdio>
+#include <thread>
+#include "CAN_comm.h"
+#include "config.h"
+
+MIT devicesState[4];
+
+uint32_t sendNum; // for testing send speed
+uint32_t recNum;
+
+MIT MITCtrlParam;
+
+uint16_t sendCounter = 0;
+bool motorEnable = true;
+int receivedNumber = 0;
+uint64_t prev_ts = 0;
+float t = 0.0f;
+float targetJointAngle = 0.0f; // Target joint angle (can be modified at runtime via input)
+
+namespace {
+uint64_t micros_steady(){
+  using namespace std::chrono;
+  return duration_cast<microseconds>(steady_clock::now().time_since_epoch()).count();
+}
+}
+
+void setup() {
+  std::printf("SF Motor Control (Jetson) start\n");
+  CANInit();
+  enable(0x01); // Enable motor with ID 0x01  <- Change ID to control different motors
+  prev_ts = micros_steady();
+  t = 0.0f;
+}
+
+uint16_t printCount = 0;
+uint16_t recCount = 0;
+
+void loop() {
+
+  recCANMessage();
+
+  // Check for new joint angle input
+  // (Check once every 1000 loops to avoid frequent blocking input calls)
+  static uint16_t inputCheckCount = 0;
+  if(++inputCheckCount >= 1000){
+    inputCheckCount = 0;
+    float newAngle;
+    if(std::scanf("%f", &newAngle) == 1){
+      targetJointAngle = newAngle;
+      std::printf("Target joint angle updated: %.3f rad\n", newAngle);
+    }
+  }
+
+  static int IDswitch = 0x01; // <- Change ID to control different motors
+  uint64_t current_ts = micros_steady();
+
+  /*
+   * Function:
+   *   Update control parameters based on time difference and send MIT command.
+   *
+   * Parameters:
+   *   - current_ts: current timestamp
+   *   - prev_ts   : previous timestamp
+   *   - t         : time variable used for sine/cosine calculations
+   *   - MITCtrlParam:
+   *       Control parameter structure including position, velocity,
+   *       position gain (Kp), velocity gain (Kd), and torque
+   *   - IDswitch  : motor ID selector
+   *
+   * Return:
+   *   None
+   */
+  if(current_ts - prev_ts >= 1000){ // 1 ms control period
+    // Update time variable (increase by 1 ms)
+    t += 0.001;
+
+    // Set control parameters:
+    // target position, target velocity, position gain, velocity gain, and torque
+    MITCtrlParam.pos = targetJointAngle;
+    MITCtrlParam.vel = 0;
+    MITCtrlParam.kp  = 0.5;
+    MITCtrlParam.kd  = 0.3;
+    MITCtrlParam.tor = 0;
+
+    // Update previous timestamp
+    prev_ts = current_ts;
+
+    // IDswitch++;
+    // If IDswitch exceeds 0x04, reset it to 0x01
+    // if(IDswitch > 0x04){
+    //   IDswitch = 0x01;
+    // }
+
+    sendMITCommand(IDswitch, MITCtrlParam); // Send MIT command
+
+    printCount++;
+    if(printCount >= 100){
+      printCount = 0;
+      // Only print when IDswitch is 0x01
+      // Print commanded position/velocity and actual motor position/velocity
+      if(IDswitch == 0x01){
+        std::printf( "[CMD] pos: %6.3f rad vel: %6.3f rad/s | " "[FB] pos: %6.3f rad vel: %6.3f rad/s\n", MITCtrlParam.pos, MITCtrlParam.vel, devicesState[IDswitch - 1].pos, devicesState[IDswitch - 1].vel );
+      }
+    }
+  }
+
+  std::this_thread::sleep_for(std::chrono::milliseconds(1));
+}
+
+int main(){
+  setup();
+
+  while(true){
+    loop();
+  }
+
+  disable(0x01); // Disable motor with ID 0x01
+  return 0;
+}
+```
+
+</details>
 
 ```bash
 cd build
@@ -245,7 +390,97 @@ The compiled executable will be located at `build/sfmotor_control`. Run the prog
 
 The program defaults to controlling the motor with ID 0x01. During operation, you can input the target angle value (in radians) via the keyboard. It also receives feedback data on the motor’s angle and angular velocity.
 
-### Using Python for Control
+### Python
+
+<details>
+<summary>main.py</summary>
+```python
+import sys
+import time
+import select
+
+# Import core control module (assumes sf_can_controller.py is in the same directory)
+from sf_can_controller import MotorController 
+
+# --- Core Configuration ---
+IFACE = "can0"        
+MOTOR_ID = 1         # <- Change ID to control different motors
+UPDATE_RATE_HZ = 100.0 
+PRINT_EVERY = 2     
+INITIAL_TARGET_DEG = 0.0
+
+# --- Main Control Loop ---
+def run_simple_test() -> None:
+    """Run a simplified position control loop."""
+    
+    # 1. Initialization
+    update_period = 1.0 / UPDATE_RATE_HZ
+    target_rad = INITIAL_TARGET_DEG
+    
+    KP, KD = 0.5, 0.3  # Default MIT parameters
+    
+    controller = MotorController(interface=IFACE, motor_id=MOTOR_ID)
+    print(f"--- SF Motor Test Start ---")
+    print(f"Interface: {IFACE}, ID: {MOTOR_ID}, Rate: {UPDATE_RATE_HZ} Hz")
+    
+    # 2. Enable motor
+    controller.enable()
+    
+    last_send_time = time.perf_counter()
+    print_counter = 0
+
+    inputCheckCount = 0
+
+    # 3. Main loop
+    while True:
+        controller.poll_rx()
+        current_state = controller.get_motor_state()
+        
+        now = time.perf_counter()
+        
+        # --- Periodic input check (every 500 loops) ---
+        inputCheckCount += 1
+        if inputCheckCount >= 500:
+            inputCheckCount = 0
+            
+            # Blocking I/O waiting for user input (this will pause the control loop)
+            # Note: If the input is not a number, a ValueError will be raised.
+            line = input("Please enter target joint angle: ").strip()
+            if line:
+                angle_deg = float(line)
+                target_rad = angle_deg
+                print(f"Target joint angle updated: {angle_deg:.3f} deg")
+        
+        # Periodically send MIT command
+        if now - last_send_time >= update_period:
+            last_send_time = now
+            
+            # Send target position command
+            controller.send_mit_command(
+                pos=target_rad,
+                vel=0.0,
+                kp=KP,
+                kd=KD,
+                tor=0.0
+            )
+
+            # Print motor state
+            print_counter += 1
+            if print_counter >= PRINT_EVERY:
+                print_counter = 0
+                print(
+                    f"Cmd={target_rad:.2f} | "
+                    f"Pos={current_state.pos:.2f} (Vel={current_state.vel:.2f})"
+                )
+        
+        time.sleep(0.001)
+            
+
+if __name__ == "__main__":
+    # Run test
+    run_simple_test()
+```
+</details>
 
 The Python script is located in the `script/` directory and can be run directly without compilation.
 
@@ -254,6 +489,20 @@ python main.py
 ```
 
 The program defaults to controlling the motor with ID 0x01. During operation, you can input the target angle value (in radians) via the keyboard. It also receives feedback data on the motor’s angle and angular velocity.
+
+
+## Citation
+
+[Step 6010](https://wiki.seeedstudio.com//wiki/robotics/Actuator/stackforce/Citation/6010.stp)  
+
+[Step 8108](https://wiki.seeedstudio.com//wiki/robotics/Actuator/stackforce/Citation/8108.stp)
+
+[8108 Motor_Curve](https://wiki.seeedstudio.com//wiki/robotics/Actuator/stackforce/Citation/8108Motor_Curve.png)
+
+[6010Motor_Document.pdf](https://wiki.seeedstudio.com/wiki/robotics/Actuator/stackforce/Citation/6010Motor_Document.pdf)
+
+[8108Motor_Document.pdf](https://wiki.seeedstudio.com/wiki/robotics/Actuator/stackforce/Citation/8108Motor_Document.pdf)
+
 
 ## Tech Support & Product Discussion
 

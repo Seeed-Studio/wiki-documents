@@ -7,14 +7,19 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Network/SenseCAP_Network/SenseCAP_Gateway_Intro
 last_update:
-  date: 09/26/2023
-  author: Jessie
+  date: 01/08/2026
+  author: Kian
 ---
 
 
 Con una gama de productos que satisfacen las necesidades de diferentes usuarios, desde aficionados hasta industriales, la línea de productos SenseCAP ofrece un conjunto integral de soluciones para digitalizar el mundo que nos rodea.
 
 Además de los sensores LoRaWAN, SenseCAP también proporciona diferentes tipos de gateway, incluyendo hotspots para web3 y gateways LoRaWAN para las soluciones de detección LoRaWAN, y una variedad de software, servicios en la nube y APIs, permitiendo a los usuarios recopilar, almacenar y analizar datos en tiempo real. La combinación de hardware, software y servicios en la nube permite a los usuarios responder rápidamente a los cambios en su entorno y tomar decisiones basadas en datos.
+
+:::caution info
+**Llenando el Vacío de Grado Industrial, Redefiniendo las Capacidades Edge de LoRaWAN**
+> Presentamos el Nuevo Gateway LoRaWAN reComputer R1225 — Un Gateway Integrado de Grado Industrial LoRaWAN + Detección + Control para BMS / BAS / iBMS
+:::
 
 ## Introducción
 
@@ -24,11 +29,11 @@ Además de los sensores LoRaWAN, SenseCAP también proporciona diferentes tipos 
 
 Las características clave del SenseCAP Gateway incluyen:
 
-- Alta Confiabilidad: Construido para resistir condiciones ambientales adversas con carcasas con clasificación IP66.
+- Alta Confiabilidad: Construido para resistir condiciones ambientales adversas con carcasas clasificadas IP66.
 - Largo Alcance: Capaz de proporcionar cobertura extensa con tecnología LoRa.
 - Alto Rendimiento: Equipado con potentes capacidades de procesamiento para gestionar numerosos dispositivos conectados.
-- Facilidad de Despliegue: Configuración y mantenimiento simples, haciéndolo accesible para varios usuarios e industrias.
-- Escalabilidad: Soporta despliegues IoT a gran escala con alto rendimiento de datos y numerosas conexiones de dispositivos.
+- Facilidad de Implementación: Configuración y mantenimiento simples, haciéndolo accesible para varios usuarios e industrias.
+- Escalabilidad: Soporta implementaciones IoT a gran escala con alto rendimiento de datos y numerosas conexiones de dispositivos.
 
 Las aplicaciones del SenseCAP Gateway van desde agricultura inteligente y monitoreo ambiental hasta automatización industrial y ciudades inteligentes.
 
@@ -36,18 +41,37 @@ Las aplicaciones del SenseCAP Gateway van desde agricultura inteligente y monito
 
 LoRa (Long Range) es un protocolo de red de área amplia de baja potencia (LPWAN) diseñado para dispositivos inalámbricos operados por batería en redes regionales, nacionales o globales. LoRa es ideal para aplicaciones que requieren transmisión de datos de largo alcance, baja potencia y segura.
 
-1. Técnica de Modulación: LoRa utiliza modulación Chirp Spread Spectrum (CSS), que extiende la señal a través de un amplio rango de frecuencias, proporcionando resistencia robusta a la interferencia y degradación de la señal.
+1. Técnica de Modulación: LoRa utiliza modulación Chirp Spread Spectrum (CSS), que extiende la señal a través de un amplio rango de frecuencias, proporcionando resistencia robusta a interferencias y degradación de señal.
 2. Largo Alcance: LoRa puede transmitir datos a distancias de hasta 15 km en áreas rurales y 5 km en áreas urbanas, haciéndolo adecuado para una amplia variedad de aplicaciones.
 3. Bajo Consumo de Energía: Los dispositivos que utilizan LoRa pueden operar con baterías pequeñas durante varios años debido a los bajos requerimientos de energía.
-4. Baja Tasa de Datos: Aunque LoRa soporta comunicación de largo alcance, está optimizado para tasas de datos bajas, típicamente variando de 0.3 kbps a 50 kbps.
+4. Baja Tasa de Datos: Aunque LoRa soporta comunicación de largo alcance, está optimizado para bajas tasas de datos, típicamente variando de 0.3 kbps a 50 kbps.
 5. Comunicación Segura: LoRa proporciona características de seguridad sólidas, incluyendo cifrado de extremo a extremo, asegurando la integridad y confidencialidad de los datos.
-6. LoRa se utiliza típicamente en una topología de estrella de estrellas donde los gateways retransmiten mensajes entre dispositivos finales y un servidor de red central. El gateway actúa como un puente transparente, convirtiendo paquetes RF a paquetes IP y viceversa.
+6. LoRa se utiliza típicamente en una topología estrella de estrellas donde los gateways retransmiten mensajes entre dispositivos finales y un servidor de red central. El gateway actúa como un puente transparente, convirtiendo paquetes RF a paquetes IP y viceversa.
 
 ## Productos de Hardware
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/029cab35952193f5e1ea3c80fda40937-2.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/1ef6149dd438035c41238babee3f27e5-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
+
+### reComputer R1225 LoRaWAN Gateway
+
+<div class="all_container">
+    <div class="xiao_topic_page_pic">
+        <img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Appearance_Image/R1225_White_Background_1.png" style={{width:900, height:400}}/>
+    </div>
+    <div class="xiao_topic_page_font1">
+        <font size={"2.1"}>reComputer R1225 LoRaWAN Gateway es un gateway y controlador IoT LoRaWAN industrial Raspberry Pi potente y flexible, alimentado por CM4, con capacidades de IA. Con 3*RS485, ethernet dual, soporte BACnet y Modbus, equipado con todas las características necesarias que un dispositivo IoT edge industrial robusto y confiable necesita. Con compatibilidad con acelerador NPU de IA, es perfecto para control de acceso remoto, especialmente BMS, BAS e iBMS. </font>
+    </div>
+</div>
+<br /><br /><br /><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center', marginTop: '48px'}}>
+    <a class="get_one_now_item" href="" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Comprar Ahora</font></span></strong></a>
+    <!--缺少商详链接，待产品上架后补上-->
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/r1225_introduction/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Aprender Más</font></span></strong></a>
+</div>
+
 
 ### SenseCAP M2 Multi-Platform Gateway
 
@@ -76,7 +100,7 @@ LoRa (Long Range) es un protocolo de red de área amplia de baja potencia (LPWAN
         <img src="https://www.sensecapmx.com/wp-content/uploads/2022/06/sensecapm1.webp" style={{width:900, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>SenseCAP M1 es un gateway LoRaWAN interior de alto rendimiento y listo para usar conectado a la Red Helium LongFi™. Está basado en Raspberry Pi 4 e integrado con un concentrador LoRa WM1302/WM1303 (Semtech SX1302/SX1303). Proporciona BLE integrado, que te ayuda a configurar el dispositivo en unos pocos pasos simples y soporta conexión a internet vía Wi-Fi o Ethernet. </font>
+        <font size={"2.1"}>SenseCAP M1 es un gateway interior LoRaWAN de alto rendimiento y listo para usar conectado a la Red Helium LongFi™. Está basado en Raspberry Pi 4 e integrado con un concentrador LoRa WM1302/WM1303 (Semtech SX1302/SX1303). Proporciona BLE incorporado, que te ayuda a configurar el dispositivo en unos pocos pasos simples y soporta conexión a internet vía Wi-Fi o Ethernet. </font>
     </div>
 </div>
 
@@ -112,7 +136,7 @@ LoRa (Long Range) es un protocolo de red de área amplia de baja potencia (LPWAN
         <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-sensecap-m2-light-hotspot-software-license--first_1_.jpg" style={{width:900, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>SenseCAP M2 Light Hotspot es un gateway Helium LoRaWAN de alto rendimiento que permite a los usuarios unirse a la red Helium con un costo mínimo. Se proporcionan planes de licencia SenseCAP flexibles desde $0.05 por día para permitir a los usuarios disfrutar de los beneficios de PoC y transferencia de datos con inversión mínima y más flexibilidad. </font>
+        <font size={"2.1"}>SenseCAP M2 Light Hotspot es un gateway Helium LoRaWAN de alto rendimiento que permite a los usuarios unirse a la red Helium con un costo mínimo. Se proporcionan planes de Licencia SenseCAP flexibles desde $0.05 por día para permitir a los usuarios disfrutar de los beneficios de PoC y transferencia de datos con inversión mínima y más flexibilidad. </font>
     </div>
 </div>
 
@@ -123,7 +147,7 @@ LoRa (Long Range) es un protocolo de red de área amplia de baja potencia (LPWAN
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Aprender Más</font></span></strong></a>
 </div>
 
-### Flux Gateway
+### Gateway Flux
 
 #### SenseCAP M4
 
@@ -132,7 +156,7 @@ LoRa (Long Range) es un protocolo de red de área amplia de baja potencia (LPWAN
         <img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview.png" style={{width:900, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>SenseCAP M4 Square es un dispositivo diseñado para ejecutar múltiples aplicaciones Web 3.0. La configuración sin código del CUMULUS FluxNode y el hotspot ligero Helium proporciona una red computacional escalable y descentralizada para Flux y millas de cobertura de red inalámbrica y capacidad de transmisión de datos para dispositivos LoRa/LoRaWAN. </font>
+        <font size={"2.1"}>SenseCAP M4 Square es un dispositivo diseñado para ejecutar múltiples aplicaciones Web 3.0. Sin código, configuración perfecta del CUMULUS FluxNode y hotspot ligero de Helium proporciona una red computacional escalable y descentralizada para Flux y millas de cobertura de red inalámbrica y capacidad de transmisión de datos para dispositivos LoRa/LoRaWAN. </font>
     </div>
 </div>
 
@@ -140,7 +164,7 @@ LoRa (Long Range) es un protocolo de red de área amplia de baja potencia (LPWAN
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M4-Sqaure-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Comprar Ahora</font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saber Más</font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Aprender Más</font></span></strong></a>
 </div>
 
 ### Gateway Exterior
@@ -150,7 +174,7 @@ LoRa (Long Range) es un protocolo de red de área amplia de baja potencia (LPWAN
         <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/s/e/sensecap_lorawan_eu868_1.png" style={{width:900, height:'auto'}}/>
     </div>
     <div class="xiao_topic_page_font1">
-        <font size={"2.1"}>SenseCAP Gateway - LoRaWAN es un producto exterior de grado industrial IP66, soporta un rango de temperatura de funcionamiento extendido, haciéndolo aplicable para escenarios IoT de recolección de datos de largo alcance y bajo consumo de energía como agricultura inteligente. </font>
+        <font size={"2.1"}>SenseCAP Gateway - LoRaWAN es un producto exterior de grado industrial IP66, soporta un rango de temperatura de operación extendido, haciéndolo aplicable para escenarios IoT de recolección de datos de largo alcance y bajo consumo de energía como agricultura inteligente. </font>
     </div>
 </div>
 
@@ -158,7 +182,7 @@ LoRa (Long Range) es un protocolo de red de área amplia de baja potencia (LPWAN
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Comprar Ahora</font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Saber Más</font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Aprender Más</font></span></strong></a>
 </div>
 
 ## Servicios en la Nube SenseCAP
@@ -188,14 +212,14 @@ SenseCAP Hotspot App es una aplicación todo-en-uno que ayuda a los usuarios a c
 Una forma eficiente de gestionar tus dispositivos SenseCAP y recompensas, el Panel de Control SenseCAP proporciona la información más actualizada sobre tus hotspots desde dispositivos, blockchain. .
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/dashboard.png" alt="pir" width={1000} height="auto" /></p>
 
-## ✨ Proyecto de Colaboradores
+## ✨ Proyecto de Contribuyente
 
-- Tenemos una lista de tareas para actualizar esta página, que está categorizada bajo nuestro [proyecto de colaboradores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), ya que estamos dedicados a mejorar la experiencia del usuario y proporcionar mejor soporte a través del desarrollo de nuestra plataforma wiki.
-- [Tu contribución a esta página](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33962531) es esencial para nosotros! Realmente valoramos tu aporte y agradeceríamos enormemente tu asistencia en la generación de ideas.
+- Tenemos una lista de tareas para actualizar esta página, que está categorizada bajo nuestro [proyecto de contribuyente](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), ya que estamos dedicados a mejorar la experiencia del usuario y proporcionar mejor soporte a través del desarrollo de nuestra plataforma wiki.
+- [Tu contribución a esta página](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33962531) es esencial para nosotros! Realmente valoramos tu aporte y agradeceríamos mucho tu asistencia en generar ideas.
 
-## Soporte Técnico de SenseCAP
+## Soporte Técnico SenseCAP
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>

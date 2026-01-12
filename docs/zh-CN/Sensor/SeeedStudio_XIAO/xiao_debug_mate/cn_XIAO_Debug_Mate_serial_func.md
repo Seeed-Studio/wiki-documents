@@ -3,6 +3,7 @@ description: 本页面介绍如何使用 XIAO Debug Mate 的 UART 监视器功�
 title: UART 监视器
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.webp
 slug: /cn/xiao_debug_mate_serial
+sku: 109990585
 sidebar_position: 3
 last_update:
   date: 10/22/2025
@@ -354,14 +355,12 @@ Debug Mate 无法同时显示来自两个源的数据。您必须使用设置菜
 *   [原始设计演示视频](https://www.bilibili.com/video/BV1Sc411273Y/)
 *   [作者的 Bilibili 主页](https://space.bilibili.com/1155738723)
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

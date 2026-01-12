@@ -2,7 +2,8 @@
 description: XIAO 照明驱动器：锂电池供电，3 个开关 + 4 个 PWM，驱动 3V COB 灯丝——点亮微缩模型、立体模型、可穿戴设备。
 title: XIAO COB LED 驱动板
 image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
-slug: /cn/getting_started_with_cob_board
+slug: /cn/getting_started_with_cob_led_dirver_board
+sku: 100079172,E25121201
 last_update:
   date: 11/27/2025
   author: Brandy
@@ -17,7 +18,7 @@ last_update:
     </a>
 </div><br />
 
-这是一款专为 Seeed Studio XIAO 设计的 7 通道 COB LED 驱动扩展板。该扩展板突破了 GPIO 功率限制，提供 7 个输出通道，专门为超窄 1mm 3V COB LED 灯带量身定制。集成 PMIC 电池管理功能，是构建紧凑、高亮度无线照明装置的理想即插即用解决方案。
+这是一款专为 Seeed Studio XIAO 设计的 7 通道 COB LED 驱动扩展板。该扩展板突破了 GPIO 功率限制，提供 7 个输出通道，专门为超窄 1mm 3V COB LED 灯带量身定制。集成 PMIC 电池管理功能，是构建紧凑、高亮度无线照明系统的理想即插即用解决方案。
 
  **推荐阅读：**[安全注意事项](#add-board)
 
@@ -27,11 +28,11 @@ last_update:
 
 - **适配 1mm 3V COB LED 灯带** 
 
-  板载硬件限流专门调校以匹配 3V 1mm 柔性 COB 灯带的电气特性。分层的 300mA 和 100mA 电流限制有效驱动各种长度的灯带，为创客提供安全、稳定的即插即用体验。
+  板载硬件限流专门调校以匹配 3V 1mm 柔性 COB 灯带的电气特性。分层的 300mA 和 100mA 电流限制有效驱动各种长度的灯带，为创客提供安全、稳定和即插即用的体验。
 
 - **策略性 7 通道混合输出** 
 
-  用单块板高效管理整个照明装置。具有 3 个高功率通道（300mA）用于明亮的主照明，4 个可调光通道（80mA）用于精细的呼吸或渐变效果。一块板处理所有需求——保持主灯明亮，效果灯动态。
+  通过单块板高效管理整个照明系统。具有 3 个高功率通道（300mA）用于明亮的主照明，4 个可调光通道（80mA）用于精细的呼吸或渐变效果。一块板处理所有需求——保持主灯明亮，效果灯动态。
 
 - **无线项目的电池管理** 
 
@@ -39,7 +40,7 @@ last_update:
 
 - **简易传感器扩展** 
 
-  包含标准 Grove I2C 连接器，可轻松连接传感器，让您的照明项目智能响应环境变化。
+  包含标准 Grove I2C 连接器，可轻松连接传感器，让您的照明项目能够智能地响应环境变化。
 
   ### 规格参数
 <table className="spec-table">
@@ -53,11 +54,11 @@ last_update:
       <td>
         5V USB（通过 XIAO）<br/>
         <small>注意：建议使用 5V/2A+ 壁式适配器进行满载运行。</small><br/>
-        3.7V 锂电池（通过板载电池接口）
+        3.7V 锂电池（通过板载电池端口）
       </td>
     </tr>
     <tr>
-      <th>3× 高功率接口<br/>（螺丝端子）</th>
+      <th>3× 高功率端口<br/>（螺丝端子）</th>
       <td>
         3 通道输出<br/>
         驱动能力：最大 300mA/通道<br/>
@@ -66,7 +67,7 @@ last_update:
       </td>
     </tr>
     <tr>
-      <th>4× FX/PWM 接口<br/>（底部焊盘）</th>
+      <th>4× FX/PWM 端口<br/>（底部焊盘）</th>
       <td>
         4 通道输出<br/>
         驱动能力：最大 80mA/通道<br/>
@@ -75,7 +76,7 @@ last_update:
       </td>
     </tr>
     <tr>
-      <th>板载组件</th>
+      <th>板载</th>
       <td>
         Grove I²C 连接器 ×1<br/>
         电源开关 ×1<br/>
@@ -85,7 +86,7 @@ last_update:
     </tr>
     <tr>
       <th>尺寸</th>
-      <td>25mm × 42mm × 16mm（配备 Seeed Studio XIAO）</td>
+      <td>`30mm*41mm*16mm`（配备 Seeed Studio XIAO）</td>
     </tr>
   </tbody>
 </table>
@@ -94,19 +95,19 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/IO.png" style={{width:1000, height:'auto'}}/></div>
 
-- **(1) D1-高功率接口：** 支持最大 300mA 电流的高功率接口，仅允许开/关开关控制（不支持 PWM 调光），用于连接高功率负载。
-- **(2) D0-高功率接口：** 支持最大 300mA 电流的高功率接口，仅允许开/关开关控制（不支持 PWM 调光），用于连接高功率负载。
-- **(3) VCC-常开接口：** 支持最大 300mA 电流的常供电 VCC 接口，不受电源开关控制，始终输出供电电压，可为需要持续供电的设备供电。
-- **(4) GND：** 电路的公共接地接口，用于连接所有模块的接地线。
-- **(5) I²C Grove 接口：** Grove 标准 I²C 接口（包含 VCC、GND、SDA、SCL 引脚），用于连接支持 I²C 协议的 Grove 模块（如传感器、显示器）。
-- **(6) 电源开关：** 电源控制开关；切换到 "ON" 时，为高/低功率接口供电；切换到 "OFF" 时，切断电源（VCC 常开接口不受此开关控制）。
+- **(1) D1-高功率端口：** 支持最大 300mA 电流的高功率端口，仅允许开/关开关控制（不支持 PWM 调光），用于连接高功率负载。
+- **(2) D0-高功率端口：** 支持最大 300mA 电流的高功率端口，仅允许开/关开关控制（不支持 PWM 调光），用于连接高功率负载。
+- **(3) VCC-常开端口：** 支持最大 300mA 电流的常供电 VCC 端口，不受电源开关控制，始终输出供电电压，可为需要持续供电的设备供电。
+- **(4) GND：** 电路的公共接地端口，用于连接所有模块的接地线。
+- **(5) I²C Grove 端口：** Grove 标准 I²C 接口（包括 VCC、GND、SDA、SCL 引脚），用于连接支持 I²C 协议的 Grove 模块（如传感器、显示器）。
+- **(6) 电源开关：** 电源控制开关；切换到 "ON" 时，为高/低功率端口供电；切换到 "OFF" 时，切断电源（VCC 常开端口不受此开关控制）。
 - **(7) 电源 LED：** 电源状态指示灯，当电源开关切换到 "ON" 时点亮，表示模块已通电。
 - **(8) 电池连接器：** 电池接口，支持连接 3.7V 锂电池为模块供电。
-- **(9) D2-低功率接口：** 支持最大 80mA 电流的低功率接口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
-- **(10) GND：** 低功率区域的接地接口，用于连接低功率负载的接地线。
-- **(11) D3-低功率接口：** 支持最大 80mA 电流的低功率接口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
-- **(12) GND：** 低功率区域的冗余接地接口（功能与第 10 项相同），用于连接低功率负载的接地线。
-- **(13) D8-低功率接口：** 支持最大 80mA 电流的低功率接口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
+- **(9) D2-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
+- **(10) GND：** 低功率区域的接地端口，用于连接低功率负载的接地线。
+- **(11) D3-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
+- **(12) D9-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
+- **(13) D8-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
 
 #### 支持的 COB LED 指南
 #### 支持的 LED 指南
@@ -165,10 +166,10 @@ last_update:
 
 :::note
 安全提示：  
-- **为锂离子电池充电时**，请断开 LED 灯带和任何其他外设。  
+- **充电锂离子电池时**，请断开 LED 灯带和任何其他外设。  
 - **连接 USB-C 5V 进行编程或调试时**，请断开电池。  
 
-单独使用**电池**或单独使用 **5V 外部电源**是安全的。不建议在充电时连接外设设备。
+单独使用**电池**或单独使用 **5V 外部电源**是安全的。不建议在充电时连接外围设备。
 :::
 
 ### 使用 Arduino
@@ -210,11 +211,11 @@ last_update:
 - 如果您想在后续教程中使用 **Seeed Studio XIAO MG24**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/xiao_mg24_getting_started/#software-preparation)** 完成添加。
 
 :::tip
-此开发板不支持 XIAO SAMD21。COBE LED 与 XIAO nRF54L15 兼容，但不在 Arduino 环境中。
+XIAO SAMD21 和 XIAO nRF54L15 只能通过 USB-C 供电工作，不能单独使用电池。此外，nRF54L15 不能在 Arduino 环境中运行。
 :::
 ####  低功耗端口驱动示例
 
-支持最大电流 80mA 的低功耗端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
+一个支持最大电流 80mA 的低功耗端口，支持 PWM 调光，使用低电平有效逻辑（当电平为低时负载工作）。
 
 **步骤 1.** 硬件准备
 
@@ -253,7 +254,7 @@ last_update:
 :::tip
 将 XIAO 连接到驱动板时，请务必拔掉 USB 线。
 :::
-**步骤 2.**  按如下所示连接 Seeed Studio XIAO ESP32-C3、XIAO COB LED 驱动板和单端 COB LED 灯带：
+**步骤 2.**  按照下图连接 Seeed Studio XIAO ESP32-C3、XIAO COB LED 驱动板和单端 COB LED 灯带：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/4-100061492-Single-Ended-COB-LED-Strip---White(6500K)-300mm.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -284,13 +285,13 @@ void loop() {
 :::
 代码简单地控制 GPIO 引脚的高低电平。
 由于驱动板已经配置好，您无需下载任何额外的库。
-按照图像链接，上传程序并为 COB LED 驱动板供电，如果一切顺利，您可以看到如下效果：
+按照图片链接，上传程序并为 COB LED 驱动板供电，如果一切顺利，您可以看到如下效果：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/D2_new.jpg" style={{width:700, height:'auto'}}/></div>
 
 #### 高功耗端口驱动示例
 
-支持最大电流 300mA 的高功耗端口，仅允许开/关切换控制（不支持 PWM 调光），用于连接高功耗负载。
+一个支持最大电流 300mA 的高功耗端口，仅允许开/关切换控制（不支持 PWM 调光），用于连接高功耗负载。
 
 **步骤 1.**  硬件准备
 <table align="center">
@@ -325,7 +326,7 @@ void loop() {
 
 
 
-**步骤 2.**  按如下所示连接 Seeed Studio XIAO ESP32-C3、XIAO COB LED 驱动板和双端 COB LED 灯带：
+**步骤 2.**  按照下图连接 Seeed Studio XIAO ESP32-C3、XIAO COB LED 驱动板和双端 COB LED 灯带：
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/4-100074846-Double-Ended-COB-LED-Strip---White(6500K)-130mm.jpg" style={{width:400, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/D4_new.jpg" style={{width:400, height:'auto'}}/></div>
@@ -352,14 +353,14 @@ void loop() {
 
 代码简单地控制 GPIO 引脚的高低电平。
 由于驱动板已经配置好，您无需下载任何额外的库。
-按照图像链接，上传程序并为 COB LED 驱动板供电，如果一切顺利，您可以看到如下效果：
+按照图片链接，上传程序并为 COB LED 驱动板供电，如果一切顺利，您可以看到如下效果：
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/D4_new_light.jpg" style={{width:700, height:'auto'}}/></div>
 
 ####   低功耗端口驱动 PWM 示例
 
-支持最大电流 80mA 的低功耗端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
+一个支持最大电流 80mA 的低功耗端口，支持 PWM 调光，使用低电平有效逻辑（当电平为低时负载工作）。
 **步骤 1.**   硬件准备
 
 <table align="center">
@@ -477,8 +478,8 @@ void loop() {
 
 ```
 
-这是呼吸灯效果的代码，如果您喜欢，可以在任何您想要发光的地方使用这种效果
-上传程序并为 COB LED 驱动板供电，如果一切顺利，您可以看到如下效果：
+这是一个电池供电的项目。这是呼吸灯样式的代码，如果你喜欢，可以在任何你想要发光的地方使用这种样式
+上传程序并为 COB LED 驱动板供电，如果一切顺利，你可以看到如下效果：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/PWM.gif"style={{width:500, height:'auto'}}/></div>
 :::tip
@@ -487,7 +488,7 @@ void loop() {
 :::
 :::note
 **严禁热插拔！**
-请先组装 XIAO 和驱动板，然后再插入 USB 线。
+始终先组装 XIAO 和驱动板，然后再插入 USB 线。
 切勿在 XIAO 仍连接 USB 线时尝试连接。可能会导致 PMIC 损坏。
 :::
 
@@ -516,10 +517,10 @@ void loop() {
 
 #### 软件准备
 
-[ESPHome](https://esphome.io/) 是一个旨在让管理您的 ESP 开发板尽可能简单的工具。它读取 YAML 配置文件并创建自定义固件，然后将其安装到您的 ESP 设备上。在 ESPHome 配置中添加的设备或传感器将自动显示在 Home Assistant 的用户界面中。ESPHome 可以帮助您连接并将数据发送到 Home Assistant 设备。
+[ESPHome](https://esphome.io/) 是一个旨在让管理 ESP 开发板尽可能简单的工具。它读取 YAML 配置文件并创建自定义固件，然后将其安装到你的 ESP 设备上。在 ESPHome 配置中添加的设备或传感器将自动显示在 Home Assistant 的用户界面中。ESPHome 可以帮助你连接并将数据发送到 Home Assistant 设备。
 
 :::note
-如果这是您第一次使用 Home Assistant 和 ESPHome，您可以按照<strong>[这里](https://www.home-assistant.io/installation/)</strong>的分步指南来安装 Home Assistant。
+如果这是你第一次使用 Home Assistant 和 ESPHome，你可以按照<strong>[这里](https://www.home-assistant.io/installation/)</strong>的分步指南来安装 Home Assistant。
 :::
 
 ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单安装。
@@ -534,7 +535,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/3.png" style={{width:900, height:'auto'}}/></div>
 
-如果 ESPHome 成功加载，您将看到以下窗口
+如果 ESPHome 成功加载，你将看到以下窗口
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/4.png" style={{width:900, height:'auto'}}/></div>
 
@@ -542,7 +543,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 **概述**
 
-让我们制作一个黄昏到黎明 LED 灯的演示，灯光将随着一天中光照强度的变化而改变。如果您感兴趣，请继续阅读。
+让我们制作一个黄昏到黎明 LED 灯的演示，灯光将随着一天中光照强度的变化而改变。如果你感兴趣，请继续阅读。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/HA_demo.jpg" style={{width:500, height:'auto'}}/></div>
 **步骤 1.** 硬件准备
@@ -584,7 +585,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
  </tr>
 </table>
 
-**步骤 2.** 按照下图所示连接 Seeed Studio XIAO ESP32-C3、XIAO COB LED 驱动板和单端 COB LED 灯带 - 白色：
+**步骤 2.** 按照下图所示连接 Seeed Studio XIAO ESP32-C3、COB LED Driver Board for XIAO 和单端 COB LED 灯带 - 白色：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/4-100061492-Single-Ended-COB-LED-Strip---White(6500K)-300mm.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -600,7 +601,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 **步骤 5.** 为设备输入一个 **Name**，并输入 WiFi 凭据，如 **Network name** 和 **Password**。然后点击 **NEXT**
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-to-dawn_LED_lamp_1.png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-to-dawn_LED_lamp_1.1.png" style={{width:400, height:'auto'}}/></div>
 
 **步骤 6.** 选择 **ESP32-C3** 并点击
 
@@ -610,7 +611,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 **步骤 8.** 点击新创建板下的 **EDIT**
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-ro-dawm_LED_lamp_2png" style={{width:400, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-ro-dawm_LED_lamp_2.2.png" style={{width:400, height:'auto'}}/></div>
 
 **步骤 9.** 将以下代码部分复制到 .ymal 文件的末尾。XIAO ESP32-C3 从 Grove 数字光传感器读取光值，并根据光强度改变 D2 引脚的电流级别，从而控制灯带
 
@@ -749,7 +750,7 @@ light:
 如果您喜欢，您也可以按照上述步骤制作一个属于您自己的独特夜灯！
 
 :::tip
-虽然板载组件的额定工作温度为 -40°C 至 85°C，但在最大负载下驱动所有 7 个通道（总计 >1A）会产生大量热量。如果安装在密闭空间中（例如密封的塑料模型内），请确保被动通风以防止触发 PMIC 的热关断保护。
+虽然板载组件的额定工作温度为 -40°C 至 85°C，但在最大负载下驱动所有 7 个通道（总电流 >1A）会产生大量热量。如果安装在密闭空间中（例如密封的塑料模型内），请确保被动通风以防止触发 PMIC 的热关断保护。
 :::
 
 ## 特别感谢
@@ -763,36 +764,33 @@ light:
 
 ## 资源
 
-[PDF] **[Seeed Studio COB LED 驱动板原理图](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/SCH_Sch_V1.2_2025-11-21.pdf)**
+[PDF] **[Seeed Studio COB LED Driver Board 原理图](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/SCH_Sch_V1.2_2025-11-21.pdf)**
 
-[ZIP] **[Seeed Studio COB LED 驱动板 PCB](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Gerber_PCB_V1.2_2025-11-25.zip)**
+[ZIP] **[Seeed Studio COB LED Driver Board PCB](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Gerber_PCB_V1.2_2025-11-25.zip)**
 
-[STEP] **[Seeed Studio COB LED 驱动板 3D 模型](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/cob_led_driver_board.STEP)**
+[STEP] **[Seeed Studio COB LED Driver Board 3D 模型](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/cob_led_driver_board.STEP)**
 
 ## 安全注意事项{#add-board}
 
-驱动板具有两个电源供应电路：
-- **USB-C 5V 端口：** 经过背面 PMIC 降压后，为锂电池充电，并可同时通过升压输出 5V 来驱动负载。
-- **锂电池（3.7V）：** 同一个 PMIC 将电压升压至 5V 为负载供电。
-两个电路**一次**只能使用其中一个进行供电——严禁同时连接。否则，PMIC 中会形成"回流电流"，导致瞬间击穿和短路。实际测试已确认存在烧伤风险。
+
 
 **操作禁止事项和安全规则**
- - 充电时不要连接任何外设。在插入 USB-C 线缆之前，请先断开灯条连接。
+ - 充电时不要连接任何外设。在插入 USB-C 线缆之前，请先断开灯带。
  - 调试 USB-C 端口时，电池座必须为空（未安装电池）。
- - 对于满载电流 >1A 的情况，请确保在外壳上钻孔散热；否则，PMIC 会过热并关闭。
- - 切勿用裸手触摸板子背面的 PMIC 区域：静电放电（ESD）可能损坏芯片，且满载时表面可能达到烫伤温度。
+ - 对于满载电流 >1A 的情况，确保在外壳上钻散热孔；否则，PMIC 会过热并关闭。
+ - 切勿用裸手触摸板背面的 PMIC 区域：静电放电（ESD）可能损坏芯片，且满载时表面可能达到烫伤温度。
 **核心安全提醒**
- - 遵循以下四条规则以确保安全操作：
+ - 遵守这四条规则以确保安全操作：
  - 连接外设时使用单一电源
- - 接线/断开连接前先断电
+ - 接线/断开连接前请先断电
  - 提供充足的散热孔
- - 不要触摸板子背面
+ - 请勿触摸电路板背面
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/safety.png" style={{width:250, height:'auto'}}/></div>
 
 ## 常见问题
 
-**Q1. 为什么我的板子会发热？**
+**Q1. 为什么我的电路板会发热？**
   - 因为存在热插拔现象。当 XIAO 插入 USB 然后再插回驱动板时，这个过程会导致开发板电流通道短路，甚至烧毁。
 
 

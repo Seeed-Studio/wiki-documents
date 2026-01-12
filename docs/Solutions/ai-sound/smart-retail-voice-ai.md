@@ -197,9 +197,9 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-You may need a jumper cap to put the device into flashing mode.
+Please refer to the [reRouter flashing guide](/OpenWrt-Getting-Started/#initial-set-up) for detailed instructions on the flashing procedure.
 
-Please refer to the [reRouter flashing guide](/OpenWrt-Getting-Started/#initial-set-up) for detailed instructions.
+**Note that:** you should use the firmware **provided above**, not the one from the guide page.
 
 #### 1.2. Hardware Connection
 
@@ -340,26 +340,56 @@ Execute the following commands sequentially after establishing an SSH connection
 
 This step installs the container runtime environment and necessary tools, including the SHA-256 checksum utility for file verification.
 
-```bash
-# 1. Update the local package list
-opkg update
+<Tabs>
+  <TabItem value="Global" label="Global" default>
 
-# 2. Install Docker core components
-# Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
-opkg install dockerd docker containerd runc
+  ```bash
+  # 1. Update the local package list
+  opkg update
 
-# 3. Install utility packages
-opkg install wget-ssl unzip ca-certificates
+  # 2. Install Docker core components
+  # Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
+  opkg install dockerd docker containerd runc
 
-# 4. Enable and start the Docker daemon service
-/etc/init.d/dockerd enable
-/etc/init.d/dockerd start
+  # 3. Install utility packages
+  opkg install wget-ssl unzip ca-certificates
 
-# 5. Wait for Docker to initialize (approx. 15-30 seconds)
-echo "Waiting for Docker service to start..."
-sleep 15 
-docker ps # Verify the service is running
-```
+  # 4. Enable and start the Docker daemon service
+  /etc/init.d/dockerd enable
+  /etc/init.d/dockerd start
+
+  # Optional: verify downloaded files
+  # sha256sum <filename>
+  ```
+
+  </TabItem>
+
+  <TabItem value="Chinese" label="Chinese Mainland">
+  
+  ```bash
+  # For users in Mainland China, switch to Tsinghua University mirror for faster package downloads
+  sed -i 's_https\?://downloads.openwrt.org_https://mirrors.tuna.tsinghua.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+
+  # 1. Update the local package list
+  opkg update
+
+  # 2. Install Docker core components
+  # Note: On some systems, you might need to install these separately: dockerd, docker, containerd, runc
+  opkg install dockerd docker containerd runc
+
+  # 3. Install utility packages
+  opkg install wget-ssl unzip ca-certificates
+
+  # 4. Enable and start the Docker daemon service
+  /etc/init.d/dockerd enable
+  /etc/init.d/dockerd start
+
+  # Optional: verify downloaded files
+  # sha256sum <filename>
+  ```
+
+  </TabItem>
+</Tabs>
 
 ##### Step 2.2: Prepare Data Directories and Configuration
 
@@ -511,6 +541,8 @@ it is highly recommended to reboot the device to ensure all settings, permission
 reboot
 ```
 
+After reboot, you navigate to `http://192.168.49.1:8090` to access the Edge Client interface for real-time ASR transcription and device configuration. For detailed usage of the SenseCraft Voice platform, please refer to the [User Guide](#user-guide) section below.
+
 ## SenseCraft Voice: Edge-to-Cloud Platform Overview
 
 SenseCraft Voice is a cutting-edge platform designed to transform raw audio data captured at the edge (reRouter) into actionable business intelligence through powerful AI analysis and centralized management.
@@ -532,10 +564,10 @@ The SenseCraft Voice solution is built upon a robust edge-cloud architecture, en
 
 The Edge Client is essential for real-time validation and local setup.
 
-- **Access:** Open your web browser and navigate to the reRouter's IP address on port 8090: `http://<reRouter_IP_Address>:8090`.
+- **Access:** Open your web browser and navigate to the reRouter's IP address on port 8090: `http://192.168.49.1:8090`.
 - **Core Function:** The interface provides real-time ASR transcription (to verify audio input), controls for Voiceprint Recognition (speaker identification), and Device Configuration (network settings, upstream server address).
 
-<table> <thead> <tr> <th>Module Name</th> <th>Description</th> <th>Interface Screenshot</th> </tr> </thead> <tbody> <tr> <td><b>Voice ASR</b></td> <td> <p><b>Description:</b> Displays the current operational status of the local Automatic Speech Recognition (ASR) service.</p> <p><b>Purpose:</b> Provides <b>real-time transcription</b> of detected speech, essential for verifying local audio input and recognition accuracy.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>Figure 1: Voice ASR Module</p></div> </td> </tr> <tr> <td><b>Voiceprint Recognition</b></td> <td> <p><b>Description:</b> Manages and monitors the Voiceprint Recognition system.</p> <p><b>Purpose:</b> Used to <b>register, differentiate, and identify</b> different speakers/users based on their unique voice characteristics.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>Figure 2: Voiceprint Recognition Module</p></div> </td> </tr> <tr> <td><b>Device Status & Configuration</b></td> <td> <p><b>Description:</b> Provides detailed information about the reRouter's operating status and allows core parameter changes.</p> <p><b>Purpose:</b> Enables configuration updates such as <b>network settings</b> (Wi-Fi) and changing the <b>upstream server address</b> for cloud communication.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>Figure 3: Device Status & Configuration</p></div> </td> </tr> </tbody> </table>
+<table> <thead> <tr> <th>Module Name</th> <th>Description</th> <th>Interface Screenshot</th> </tr> </thead> <tbody> <tr> <td><b>Voice ASR</b></td> <td> <p><b>Description:</b> Displays the current operational status of the local Automatic Speech Recognition (ASR) service.</p> <p><b>Purpose:</b> Provides <b>real-time transcription</b> of detected speech, essential for verifying local audio input and recognition accuracy.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voice-asr.png" alt="Voice ASR Module Interface"/> <p>Figure 1: Voice ASR Module</p></div> </td> </tr> <tr> <td><b>Voiceprint Recognition</b></td> <td> <p><b>Description:</b> Manages and monitors the Voiceprint Recognition system.</p> <p><b>Purpose:</b> Automatically generates unique voiceprints from audio recordings to enable speaker differentiation and identification.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/voiceprint-recognition.png" alt="Voiceprint Recognition Module Interface"/> <p>Figure 2: Voiceprint Recognition Module</p></div> </td> </tr> <tr> <td><b>Device Status & Configuration</b></td> <td> <p><b>Description:</b> Provides detailed information about the reRouter's operating status and allows core parameter changes.</p> <p><b>Purpose:</b> Enables configuration updates such as <b>network settings</b> (Wi-Fi) and changing the <b>upstream server address</b> for cloud communication.</p> </td> <td> <div align="center"> <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/edge/device-status-configuration.png" alt="Device Status and Configuration Module Interface"/> <p>Figure 3: Device Status & Configuration</p></div> </td> </tr> </tbody> </table>
 
 ### Cloud-side Management Platform
 
@@ -566,6 +598,7 @@ This module provides the definitive view of all collected voice records.
 
 - **Advanced Filtering:** Use **Device Name, Store Name, Location Name, or MAC Address** for precise data retrieval. Searches are executed only after clicking the **"Filter"** button, giving users full control.
 - **Export Capability:** Select and export filtered data in **three formats** for external use (choose one at a time): **Markdown**, **Plain Text (.txt)**, or **Original Audio File**.
+- **Dual-View Auditing:** Easily switch between **Conversation Mode** to review transcribed dialogues and **Timeline Mode** to listen to the original audio playback. This dual approach allows for rapid verification of transcription accuracy and a deeper understanding of the interaction's context.
 - **Clarity:** All record views prioritize the easily identifiable **Device Name** over the MAC address.
 
 <div align="center">
@@ -575,6 +608,18 @@ This module provides the definitive view of all collected voice records.
 <img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-sound/sensecraft-voice/cloud/record-management.png" alt="Record Management Interface" />
 
 <figcaption>Figure 5: Record Management Interface</figcaption>
+
+</figure>
+
+</div>
+
+<div align="center">
+
+<figure>
+
+<img className='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/sensecraft-voice-record.png" alt="sensecraft-voice-record" />
+
+<figcaption>Figure 5.1: Timeline Mode</figcaption>
 
 </figure>
 

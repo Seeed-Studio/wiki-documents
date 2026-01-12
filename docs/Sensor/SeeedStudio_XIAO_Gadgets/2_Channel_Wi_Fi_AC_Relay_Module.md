@@ -4,6 +4,7 @@ description: |
   A smart device from Seeed Studio designed to control AC-powered appliances wirelessly
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/dual_smart_relay_module_for_xiao_45font.webp
 slug: /2_channel_wifi_ac_relay
+sku: 114993526
 keywords:
   - XIAO
   - Home Assistant
@@ -215,7 +216,7 @@ After adding the device, you can see both switches in the Overview page. You can
 
 ## Resources
 
-- **GitHub Repository**: Access the ESPHome Firmware at the [Seeed Studio Dual Channel Relay Module GitHub page](https://github.com/limengdu/2-Channel_Relay_based_on_XIAO_ESP32C3).
+- **GitHub Repository**: Access the ESPHome Firmware at the [Seeed Studio Dual Channel Relay Module GitHub page](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/xiao_2_channel_wifi_ac_energy_meter).
 - **Dual Channel Relay Module Schematic**: [Seeed_Studio_2-Channel_AC_Wi-Fi_Relay_SCH.pdf](https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/resource/Seeed_Studio_2-Channel_AC_Wi-Fi_Relay_SCH.pdf).
 
 ## Tech Support & Product Discussion

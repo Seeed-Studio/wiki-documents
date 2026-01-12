@@ -27,14 +27,28 @@ Este wiki muestra el benchmarking de YOLOv8m para detección de objetos en Raspb
 <div class="table-center">
  <table align="center">
  <tr>
-  <th>reComputer AI R2130</th>
+  <th>reComputer AI R2140</th>
+  <th>reComputer Industrial R20xx</th>
+  <th>reComputer Industrial R21xx</th>
  </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/q/q/qq_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg" style={{width:600, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2140-12-p-6431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2035-12-p-6542.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -42,11 +56,11 @@ Este wiki muestra el benchmarking de YOLOv8m para detección de objetos en Raspb
  </table>
 </div>
 
-### Instalar el kit de IA en RPi5
+### Instalar kit de IA en RPi5
 
-Por favor consulta [esto](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)
+Por favor consulte [esto](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)
 
-## Preparar el software
+## Preparar software
 
 ### actualizar el sistema
 
@@ -56,11 +70,11 @@ sudo apt update
 sudo apt full-upgrade
 ```
 
-### Descargar el software de hailo en el sitio web oficial de Hailo
+### Descargar software hailo en la web oficial de hailo
 
 > **Nota:**
-necesitas una cuenta oficial de Hailo y asegurarte de haber iniciado sesión.
-Haz clic en este [enlace](https://hailo.ai/developer-zone/software-downloads/) para descargar las librerías necesarias como se muestra a continuación:
+necesitas una cuenta oficial de Hailo y asegurarte de estar conectado.
+Haz clic en este [enlace](https://hailo.ai/developer-zone/software-downloads/) para descargar las librerías necesarias como sigue:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/multistream_benchmark_hailo8/hailo_download.png" alt="pir" width={1000} height="auto"/></p>
 
@@ -106,7 +120,7 @@ pip install hailort-4.19.0-cp311-cp311-linux_aarch64.whl
 hailortcli fw-control identify
 ```
 
-El resultado se muestra a continuación:
+El resultado se muestra como sigue:
 
 ```
 ain@pi5-hailo:~ $ hailortcli fw-control identify
@@ -122,9 +136,9 @@ Part Number: HM218B1C2FAE
 Product Name: HAILO-8 AI ACC M.2 M KEY MODULE EXT TEMP
 ```
 
-### Configurar pcie a gen2/gen3 (gen3 es más rápido que gen2)
+### Configurar pcie a gen2/gen3(gen3 es más rápido que gen2)
 
-Añade el siguiente texto a ```/boot/firmware/config.txt```
+Agregar el siguiente texto a ```/boot/firmware/config.txt```
 
 ```
 #Enable the PCIe external connector
@@ -138,12 +152,12 @@ dtparam=pciex1_gen=3
 ```
 
 :::note
-Si deseas usar `gen2`, comenta la línea `dtparam=pciex1_gen=3`.
+Si quieres usar gen2, por favor comenta dtparam=pciex1_gen=3
 :::
 
 ### Instalar Tapps
 
-#### Instalar las librerías necesarias
+#### Instalar librerías necesarias
 
 ```
 sudo apt-get install -y rsync ffmpeg x11-utils python3-dev python3-pip python3-setuptools python3-virtualenv python-gi-dev libgirepository1.0-dev gcc-12 g++-12 cmake git libzmq3-dev
@@ -155,7 +169,7 @@ sudo apt-get install -y libcairo2-dev libgirepository1.0-dev libgstreamer1.0-dev
 sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0
 ```
 
-#### Establecer hailo_pci force_desc_page_size
+#### Configurar hailo_pci force_desc_page_size
 
 ```
 sudo nano /etc/modprobe.d/hailo_pci.conf
@@ -169,7 +183,7 @@ options hailo_pci force_desc_page_size=4096
 
 Finalmente, presiona `Ctrl+X`, escribe `Y`, y presiona `Enter` para guardar el archivo
 
-Y luego reinicia la raspberrypi5
+Y luego reinicia el raspberrypi5
 
 ```
 sudo reboot
@@ -195,7 +209,7 @@ git clone https://github.com/hailo-ai/hailort.git hailort/sources
 nano downloader/common.py
 ```
 
-Y cambia el contenido como se muestra a continuación, añade `RaspberryPI5 = 'rpi5'` en common.py:
+Y cambiar el contenido como se muestra abajo, agregar `RaspberryPI5 = 'rpi5'` en common.py:
 
 ```
 class Platform(Enum):
@@ -205,7 +219,7 @@ class Platform(Enum):
     Rockchip = 'rockchip'
     RaspberryPI = 'rpi'
     RaspberryPI5 = 'rpi5'
-    
+
     ANY = 'any'
 
     def __str__(self):
@@ -219,14 +233,14 @@ class Platform(Enum):
 
 ```
 
-#### Cambiar el tamaño del lote a 8
+#### Cambiar tamaño de lote a 8
 
 ```
 cd ./apps/h8/gstreamer/general/multistream_detection/
 nano multi_stream_detection.sh
 ```
 
-Añade `readonly DEFAULT_BATCH_SIZE=8` a la línea 14 como sigue:
+Agregar `readonly DEFAULT_BATCH_SIZE=8` a la línea 14 como sigue:
 
 ```
 readonly DEFAULT_NETWORK_NAME="yolov5"
@@ -234,7 +248,7 @@ readonly DEFAULT_BATCH_SIZE=8
 readonly MAX_NUM_OF_DEVICES=4
 ```
 
-Añade `batch_size=$DEFAULT_BATCH_SIZE` a la línea 19 como sigue:
+Agregar `batch_size=$DEFAULT_BATCH_SIZE` a la línea 19 como sigue:
 
 ```
 network_name=$DEFAULT_NETWORK_NAME
@@ -242,7 +256,7 @@ batch_size=$DEFAULT_BATCH_SIZE
 num_of_src=12
 ```
 
-Añade `batch-size=$batch_size` a la línea 154 como sigue:
+Agregar `batch-size=$batch_size` a la línea 154 como sigue:
 
 ```
 queue name=hailo_pre_infer_q_0 leaky=no max-size-buffers=30 max-size-bytes=0 max-size-time=0 ! \
@@ -261,17 +275,17 @@ sudo chmod +x multi_stream_detection.sh
 
 ## Resultado
 
-Todos los resultados se basan en inferencia con un tamaño de entrada del modelo de 640x640, el tamaño del lote es 8, y una resolución de video de 1280x760, que es 720p.
+Todos los resultados se basan en inferencia con un tamaño de entrada del modelo de 640x640, tamaño de lote de 8, y una resolución de video de 1280x760, que es 720p.
 
 <div class="table-center">
 
-| Cantidad de Canales  | Rendimiento PCIE Gen2 | Rendimiento PCIE Gen3 |
-|----------------------|-----------------------|-----------------------|
-| 1 canal de stream    | 39.82FPS             | 76.99FPS             |
-| 2 canales de streams | 19.86FPS             | 38.21FPS             |
-| 4 canales de streams | 8.45FPS              | 16.94FPS             |
-| 8 canales de streams | 3.85FPS              | 8.15FPS              |
-| 12 canales de streams| 2.94FPS              | 5.43FPS              |
+| Cantidad de Canales | Rendimiento PCIE Gen2 | Rendimiento PCIE Gen3 |
+|---------------------|-----------------------|-----------------------|
+| 1 canal stream      | 39.82FPS             | 76.99FPS             |
+| 2 canales streams   | 19.86FPS             | 38.21FPS             |
+| 4 canales streams   | 8.45FPS              | 16.94FPS             |
+| 8 canales streams   | 3.85FPS              | 8.15FPS              |
+| 12 canales streams  | 2.94FPS              | 5.43FPS              |
 
 </div>
 
@@ -281,7 +295,7 @@ Todos los resultados se basan en inferencia con un tamaño de entrada del modelo
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

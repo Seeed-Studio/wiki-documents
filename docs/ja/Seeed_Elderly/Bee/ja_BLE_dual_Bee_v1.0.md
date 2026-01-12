@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/BLE_dual_Bee_v1.0
+sku: 113050013
 last_update:
   date: 05/15/2025
   author: shuxu hu

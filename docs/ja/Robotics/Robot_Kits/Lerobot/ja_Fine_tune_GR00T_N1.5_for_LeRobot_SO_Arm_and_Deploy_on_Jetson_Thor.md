@@ -17,12 +17,12 @@ last_update:
 
 ## はじめに
 
-このwikiでは、**LeRobot SO-101 アーム**用の**NVIDIA Isaac GR00T N1.5**をファインチューニングし、**NVIDIA Jetson Thor**にデプロイする方法を説明します。以下の内容を含みます：
+このwikiでは、**LeRobot SO-101 アーム**用の**NVIDIA Isaac GR00T N1.5**を**ファインチューニング**し、**NVIDIA Jetson Thor**にデプロイする方法を説明します。以下の内容を含みます：
 
-- **LeRobot SO-101** と **Jetson AGX Thor** のハードウェア準備
-- Jetson Thor 上での **GR00T N1.5** のソフトウェア環境セットアップ
-- **LeRobot トレーニングプラットフォーム**の使用：データ収集、データセット形式、SO-101 アーム用のファインチューニング
-- トレーニング済み GR00T N1.5 ポリシー（LeRobot + SO-101）を Jetson Thor にデプロイするワークフロー例
+- **LeRobot SO-101**と**Jetson AGX Thor**のハードウェア準備
+- Jetson Thor上での**GR00T N1.5**のソフトウェア環境セットアップ
+- **LeRobotトレーニングプラットフォーム**の使用：データ収集、データセット形式設定、SO-101アーム用ファインチューニング
+- トレーニング済みGR00T N1.5ポリシー（LeRobot + SO-101）をJetson Thorにデプロイするワークフロー例
 - トラブルシューティングのヒントと一般的な落とし穴
 
 <div align="center">
@@ -37,47 +37,47 @@ last_update:
 
 ### Jetson Thor の概要
 
-**NVIDIA® Jetson AGX Thor™ Developer Kit**は、物理AIとヒューマノイドロボティクスのためのパワーハウスです。NVIDIA Blackwell GPU を中心に構築され、**128 GB の高速メモリ**を含み、**40-130 W**（一般的な使用では最大130 W）の電力エンベロープ内で動作しながら、**最大2,070 FP4 TFLOPS**のAI計算能力を提供します。
+**NVIDIA® Jetson AGX Thor™ Developer Kit**は、物理AIとヒューマノイドロボティクスのためのパワーハウスです。NVIDIA Blackwell GPUを中心に構築され、**128 GB高速メモリ**を搭載し、**40-130 W**（一般的な使用では最大130 W）の電力エンベロープ内で動作しながら、**最大2,070 FP4 TFLOPS**のAI計算能力を提供します。
 
-Jetson AGX Thor Developer Kit は Seeed Studio からこちらで入手できます：[Seeed – NVIDIA Jetson AGX Thor™ Developer Kit](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html)
+Jetson AGX Thor Developer KitはSeeed Studioから入手できます：[Seeed – NVIDIA Jetson AGX Thor™ Developer Kit](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Thor-Developer-Kit-p-9965.html)
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/other/thor-post.png"/>
 </div>
 
-ボックスに含まれるハードウェアアイテムは、Thor ユニット1台と電源アダプターです：
+ボックスに含まれるハードウェアアイテムは、Thorユニット1台と電源アダプター1個です：
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/other/physical.jpeg"/>
 </div>
 
-### Thor システムイメージの書き込み
+### Thorシステムイメージの書き込み
 
-**2025年9月10日**現在、Thor で利用可能な最新のシステムイメージバージョンは **38.2** です。Thor のシステムを再書き込みする必要がある場合は、このセクションの手順に従ってください。
+**2025年9月10日**現在、Thorで利用可能な最新のシステムイメージバージョンは**38.2**です。Thorのシステムを再書き込みする必要がある場合は、このセクションの手順に従ってください。
 書き込みに必要なアイテム：
 
-- 25 GB 以上の利用可能なディスク容量を持つホストデバイス（Ubuntu または Windows OS サポート）
-- 最低16 GB の容量を持つUSBドライブ
-- モニターと DP/HDMI ディスプレイケーブル
-- 240 W 以上を供給できる電源環境
-- USB インターフェースを持つキーボード
+- 25 GB以上の利用可能ディスク容量を持つホストデバイス（Ubuntu または Windows OS対応）
+- 最低16 GBの容量を持つUSBドライブ
+- モニターとDP/HDMIディスプレイケーブル
+- 240 W以上を供給可能な電源環境
+- USBインターフェース付きキーボード
 
-まず、NVIDIA公式ウェブサイトから Thor 用の ISO 形式システムイメージをダウンロードします。ダウンロードページにアクセスするには[こちら](https://developer.nvidia.com/embedded/jetpack/downloads)をクリックしてください：
+まず、NVIDIA公式ウェブサイトからThor用のISO形式システムイメージをダウンロードします。ダウンロードページにアクセスするには[こちら](https://developer.nvidia.com/embedded/jetpack/downloads)をクリックしてください：
 
 <div align="center">
   <img width ="700" src="https://files.seeedstudio.com/wiki/other/38.2-iso.png"/>
 </div>
 
-ホストマシンに Balena Etcher をインストールします。インストーラーをダウンロードするには[こちら](https://etcher.balena.io/#:~:text=DOWNLOAD-,Download%20Etcher,-ASSET)をクリックし、ホストオペレーティングシステムに基づいて適切なバージョンを選択してください：
+ホストマシンにBalena Etcherをインストールします。インストーラーをダウンロードするには[こちら](https://etcher.balena.io/#:~:text=DOWNLOAD-,Download%20Etcher,-ASSET)をクリックし、ホストオペレーティングシステムに基づいて適切なバージョンを選択してください：
 <div align="center">
   <img width ="700" src="https://files.seeedstudio.com/wiki/other/balena.jpg"/>
 </div>
 
-ISO イメージファイルをダウンロードし、**Balena Etcher** を正常にインストールした後、USB ドライブをホストマシンに挿入します。次に、**Balena Etcher** を起動して Thor 書き込み用のブータブル USB ドライブを作成します：
+ISOイメージファイルをダウンロードし、**Balena Etcher**のインストールが正常に完了したら、USBドライブをホストマシンに挿入します。次に、**Balena Etcher**を起動してThor書き込み用のブータブルUSBドライブを作成します：
 :::danger
-このプロセスは USB ドライブをフォーマットします。事前に重要なデータをバックアップしてください。
+この処理によりUSBドライブがフォーマットされます。事前に重要なデータをバックアップしてください。
 :::
 
-ローカルストレージからダウンロードした ISO イメージファイルを選択し、次にターゲットデバイス（つまり、USB ドライブ）を選択します。
-<mark>ターゲットデバイス名とマウントディレクトリを慎重に確認してください！</mark> `Flash!` をクリックし、プロセスが完了するまで待ちます。完了すると、Thor にシステムを書き込むための USB ドライブの準備が整います：
+ローカルストレージからダウンロードしたISOイメージファイルを選択し、次にターゲットデバイス（つまり、USBドライブ）を選択します。
+<mark>ターゲットデバイス名とマウントディレクトリを慎重に確認してください！</mark> `Flash!`をクリックして処理が完了するまで待ちます。完了すると、ThorにシステムをフラッシュするためのUSBドライブが準備完了です：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/step1.png" width="300"/>
   <img src="https://files.seeedstudio.com/wiki/other/target.png" width="300"/>
@@ -86,14 +86,14 @@ ISO イメージファイルをダウンロードし、**Balena Etcher** を正�
 
 <p></p>
 
-次に、準備した USB ドライブ、キーボード、ディスプレイケーブル（DP/HDMI）、電源（Type-C）を Thor ボードに挿入して書き込みプロセスを開始します。
+次に、準備したUSBドライブ、キーボード、ディスプレイケーブル（DP/HDMI）、電源（Type-C）をThorボードに挿入して書き込み処理を開始します。
 <div align="center">
   <img width ="700" src="https://files.seeedstudio.com/wiki/other/flash-insert.jpg"/>
 </div>
 
 <p></p>
 
-Thor の電源を入れ、ブートインターフェースに入ります。`Boot Manager` を選択し、次に Thor に挿入された USB ドライブ（USB ドライブ名に基づく）を選択します。Esc を押して前のメニューに戻り、`Continue` を選択します：
+Thorの電源を入れてブートインターフェースに入ります。`Boot Manager`を選択し、次にThorに挿入されたUSBドライブ（USBドライブ名に基づく）を選択します。Escを押して前のメニューに戻り、`Continue`を選択します：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/BootM.png" width="300"/>
   <img src="https://files.seeedstudio.com/wiki/other/selectU.png" width="300"/>
@@ -102,14 +102,14 @@ Thor の電源を入れ、ブートインターフェースに入ります。`Bo
 
 <p></p>
 
-短い黒い画面の後、以下のインターフェースが表示されます。`Jetson Thor options` を選択して Enter を押します。次に、オプション
-`Flash Jetson AGX Thor Developer Kit on NVMe 0.2.0-r38.2` を選択して、システムイメージを Thor の NVMe ソリッドステートドライブに書き込みます：
+短い黒い画面の後、以下のインターフェースが表示されます。`Jetson Thor options`を選択してEnterを押します。次に、
+`Flash Jetson AGX Thor Developer Kit on NVMe 0.2.0-r38.2`オプションを選択してシステムイメージをThorのNVMeソリッドステートドライブに書き込みます：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/option.png" width="450"/>
   <img src="https://files.seeedstudio.com/wiki/other/flash-M2.png" width="450"/>
 </div>
 
-大量のログ情報が画面に表示されます。約**15分**待ちます。この段階が完了すると、デバイスは自動的に再起動し、次のインターフェースに進みます。**Update Progress** バーが100%に達するまで待ちます。これは書き込みプロセスが正常に完了したことを示します：
+大量のログ情報が画面に表示されます。約**15分間**お待ちください。この段階が完了すると、デバイスは自動的に再起動し、次のインターフェースに進みます。**Update Progress**バーが100%に達するまで待ちます。これで書き込み処理が正常に完了したことを示します：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/option.png" width="450"/>
   <img src="https://files.seeedstudio.com/wiki/other/flash-M2.png" width="450"/>
@@ -126,7 +126,7 @@ Thor の電源を入れ、ブートインターフェースに入ります。`Bo
 
 ## Thor での基本開発環境セットアップ
 
-このセクションでは、開発目的で Thor によく使用されるソフトウェア依存関係をインストールする方法の例を提供します。これらの依存関係は、後続の開発を促進することを目的としています。
+このセクションでは、開発目的でThor上によく使用されるソフトウェア依存関係をインストールする方法の例を提供します。これらの依存関係は、後続の開発を促進することを目的としています。
 
 リストされた依存関係は**参考のみ**であることに注意してください。個々のプロジェクト要件に応じて追加のパッケージをインストールしてください。
 
@@ -134,7 +134,7 @@ Thor の電源を入れ、ブートインターフェースに入ります。`Bo
 
 **JetPack SDK インストール**
 <p></p>
-ターミナルを開き、以下のコマンドを実行します。短時間待つと、CUDA、TensorRT、その他のSDKコンポーネントがインストールされます：
+ターミナルを開いて以下のコマンドを実行します。少し待つと、CUDA、TensorRT、その他のSDKコンポーネントがインストールされます：
 ```bash
 sudo apt update
 sudo apt install nvidia-jetpack
@@ -142,7 +142,7 @@ sudo apt install nvidia-jetpack
 
 **ブラウザインストール**
 
-Firefox は Ubuntu 24.04 で安定して動作することがテストされ、確認されています：
+FirefoxはUbuntu 24.04で安定して動作することがテストされ確認されています：
 
 ```bash
 sudo apt update
@@ -151,7 +151,7 @@ sudo apt install firefox
 
 **Jtop インストール**
 
-jtop をインストールするには、以下の手順を参照してください。
+jtopをインストールするには、以下の手順を参照してください。
 
 ```bash
 sudo apt update
@@ -164,7 +164,7 @@ sudo pip3 install jetson-stats
 
 **Miniconda インストール**
 
-Miniconda は開発環境を分離するために使用されます。miniconda をインストールするには、以下の手順を参照してください：
+Minicondaは開発環境を分離するために使用されます。minicondaをインストールするには、以下の手順を参照してください：
 
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh
@@ -176,29 +176,29 @@ conda --version
 
 **GPU版PyTorchのインストール**
 
-Thor でソースから GPU 版 PyTorch をコンパイルすると、互換性の問題が発生する可能性があります。便宜上、Thor で PyTorch 対応の開発環境を迅速にセットアップするのに役立つ、事前コンパイル済みの `.whl` ファイルを提供します。
+Thor上でGPU版PyTorchをソースからコンパイルすると、互換性の問題が発生する可能性があります。便宜上、開発者がThor上でPyTorch対応の開発環境を迅速にセットアップできるよう、プリコンパイル済みの`.whl`ファイルを提供します。
 
-ここでは、Thor に PyTorch 2.9 をインストールするための事前コンパイル済みホイールファイルを提供します。このファイルは `Python 3.10 + CUDA 13` 環境でコンパイルされました。
-[**Python 3.10 + CUDA 13 pytorch2.9**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=vrAjhN) をクリックして `.whl` ファイルをダウンロードしてください。
-[**Python 3.10 + CUDA 13 torchvision0.24**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ESDkmxLfCW1MkI8YBfrdWVAB4u3OPvnb4rOhlvw4QvoS_Q?e=YJE0Pr) をクリックして `.whl` ファイルをダウンロードしてください。
-[**Python 3.10 + CUDA 13 torchvision0.23**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQYGDJxMk1ZAgJHgEMZIfg8Blcrs2owxx3ZM603WgBXhhA?e=MdWMI9) をクリックして `.whl` ファイルをダウンロードしてください。
+ここでは、Thor上でPyTorch 2.9をインストールするためのプリコンパイル済みwheelファイルを提供します。このファイルは`Python 3.10 + CUDA 13`環境でコンパイルされました。
+[**Python 3.10 + CUDA 13 pytorch2.9**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVe_c8F4DR9CluC049HCYoMBP3UXta1kqLEDTvkcYU6s-A?e=vrAjhN)をクリックして`.whl`ファイルをダウンロードしてください。
+[**Python 3.10 + CUDA 13 torchvision0.24**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ESDkmxLfCW1MkI8YBfrdWVAB4u3OPvnb4rOhlvw4QvoS_Q?e=YJE0Pr)をクリックして`.whl`ファイルをダウンロードしてください。
+[**Python 3.10 + CUDA 13 torchvision0.23**](https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQYGDJxMk1ZAgJHgEMZIfg8Blcrs2owxx3ZM603WgBXhhA?e=MdWMI9)をクリックして`.whl`ファイルをダウンロードしてください。
 
 
-その他の <mark>Python **3.12** + CUDA 13</mark> thor 用事前コンパイル済み依存関係 `.whl` ファイルは以下で見つけることができます：
+その他の<mark>Python **3.12** + CUDA 13</mark>プリコンパイル済み依存関係`.whl`ファイルはこちらで見つけることができます：
 [**https://pypi.jetson-ai-lab.io/sbsa/cu130**](https://pypi.jetson-ai-lab.io/sbsa/cu130)。
 
-期待されるホイールファイルが利用できない場合、開発者は開発環境のセットアップを完了するために必要な依存関係を自分でビルドする必要があります。
+期待されるwheelファイルが利用できない場合、開発者は開発環境のセットアップを完了するために必要な依存関係を自分でビルドする必要があります。
 
 ### 追加依存関係のインストール
 
-このドキュメントでは、開発者が Jetson AGX Thor 開発環境に迅速に適応できるよう支援するリファレンス Docker イメージを提供します。
+このドキュメントでは、開発者がJetson AGX Thor開発環境に迅速に適応できるよう、参考用のDockerイメージを提供します。
 <mark>このイメージは参考のみであり、開発者は特定のニーズに基づいて使用するかどうかを自由に選択できます。</mark>
 
 :::note
 イメージサイズが40 GBを超えるため、サーバーからのダウンロードは比較的遅くなります。
 :::
 
-この Docker イメージは GR00T N1.5 推論を安定して実行できます。イメージ内の `pip list` コマンドの出力は以下の通りです：
+このDockerイメージはGR00T N1.5推論を安定して実行できます。イメージ内の`pip list`コマンドの出力は以下の通りです：
 
 <details>
 <summary> pip.list </summary>
@@ -508,18 +508,18 @@ zipp                      3.23.0                             /opt/venv/lib/pytho
 
 </details>
 
-このイメージは Docker Hub から直接プルでき、`PyTorch`、`TensorRT`、`FlashAttention` などの一般的に使用される依存関係が含まれています：
+イメージはDocker Hubから直接プルでき、`PyTorch`、`TensorRT`、`FlashAttention`などの一般的に使用される依存関係が含まれています：
 
 ```bash
 docker pull johnnync/isaac-gr00t:r38.2.arm64-sbsa-cu130-24.04
 ```
 
 :::warning
-この Docker イメージは `ACT` モデル推論用の LeRobot スクリプトの呼び出しをサポートしていません。完全な LeRobot スクリプトスイートを実行する必要がある場合は、このイメージ外の環境を使用してください。
+このDockerイメージは`ACT`モデル推論用のLeRobotスクリプトの呼び出しをサポートしていません。完全なLeRobotスクリプトスイートを実行する必要がある場合は、このイメージ外の環境を使用してください。
 :::
 
 
-Thor で Docker を実行するには、以下のコマンドを参照してください。`your_docker_img:tag` を Docker イメージ名とタグに置き換えるか、イメージ ID を使用してください：
+ThorでDockerを実行するには、以下のコマンドを参照してください。`your_docker_img:tag`をあなたのDockerイメージ名とタグに置き換えるか、イメージIDを使用してください：
 
 ```bash
 sudo docker run --rm -it \
@@ -536,100 +536,100 @@ sudo docker run --rm -it \
 
 
 
-## SO-ARM を使用したデータ収集
+## SO-ARMを使用したデータ収集
 
 データ収集の詳細なチュートリアルについては、以下のリンクを参照してください：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#record-the-dataset)  
-**このリンクには、構成、組み立て、キャリブレーション、データ収集、トレーニング、推論をカバーする SO-ARM の完全なチュートリアルが含まれています。**
+[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの記録](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの記録)  
+**このリンクには、設定、組み立て、キャリブレーション、データ収集、トレーニング、推論をカバーするSO-ARMの完全なチュートリアルが含まれています。**
 
-lerobot ロボットアームのデータ収集は、PC または Jetson デバイス上で直接実行できます。
+lerobotロボットアームのデータ収集は、PCまたはJetsonデバイス上で直接実行できます。
 
-- 方法 1：Jetson を使用してデータを収集
-- 方法 2：Ubuntu PC を使用してデータを収集
+- 方法1：Jetsonを使用してデータを収集
+- 方法2：Ubuntu PCを使用してデータを収集
 
 データ収集手順は両方の方法で基本的に同じです。
 
 :::warning
-**Jetson は同じ帯域幅要件を持つ 2 台の USB カメラを同時にストリーミングできない場合があります。2 台の USB カメラを接続する場合は、異なる USB ハブチップに接続する必要があります！**
+**Jetsonは同じ帯域幅要件を持つ2つのUSBカメラを同時にストリーミングできない場合があります。2つのUSBカメラを接続する場合は、異なるUSBハブチップに接続する必要があります！**
 :::
 
-Thor で 2 台の USB カメラを同時にストリーミングするには、1 台のカメラを USB-A ポートに接続した後、**USB Type-C ポート経由で接続された外部 USB ハブ**も使用する必要があります。これにより、2 台目の USB カメラが Thor 内の異なる USB ハブコントローラーにマウントされることが保証されます。
- 互換性のある USB Type-C ハブの例を以下に示します：
+ThorでUSBカメラを2台同時にストリーミングするには、1台のカメラをUSB-Aポートに接続した後、**USB Type-Cポート経由で接続された外部USBハブ**も使用する必要があります。これにより、2台目のUSBカメラがThor内の異なるUSBハブコントローラーにマウントされることが保証されます。
+ 互換性のあるUSB Type-Cハブの例を以下に示します：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/hub.png" height="400"/>
 </div>
 
 
-USB Type-C ドックは、周辺機器が適切に機能するように、Thor の特定のポートに接続する必要があります。以下に示すとおりです：
+USB Type-Cドックは、周辺機器が適切に機能するように、Thorの特定のポートに接続する必要があります。以下に示すとおりです：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/thor-typec.png" height="400"/>
 </div>
 
-### Lerobot 環境セットアップ（オプション）
+### Lerobot環境セットアップ（オプション）
 
-Lerobot の開発環境セットアップ手順は、以下のリンクのサブセクションで確認できます：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#install-lerobot)
+Lerobotの開発環境セットアップ手順は、以下のリンクのサブセクションで確認できます：  
+[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#lerobotのインストール](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#lerobotのインストール)
 
 
 
 ### モーターの設定
 
 
-SO-ARM の各関節のモーターは、組み立て前に設定する必要があります。設定手順は、以下のリンクのサブセクションで確認できます：    
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#configure-the-motors)
+SO-ARMの各関節のモーターは、組み立て前に設定する必要があります。設定手順は以下のリンクのサブセクションで確認できます：    
+[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#モーターの設定](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#モーターの設定)
 
 
 ### 組み立て
 
-SO-ARM のマスターアームとフォロワーアームのインストール手順は、以下のリンクのサブセクションで確認できます：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#assembly](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#assembly)
+SO-ARMのマスターアームとフォロワーアームのインストール手順は、以下のリンクのサブセクションで確認できます：  
+[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#組み立て](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#組み立て)
 
-### SO-ARM キャリブレーション
+### SO-ARMキャリブレーション
 
 
-SO-ARM が完全に組み立てられた後、キャリブレーションが必要です。キャリブレーション手順については、以下のリンクのサブセクションを参照してください：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#calibrate)
+SO-ARMが完全に組み立てられた後、キャリブレーションが必要です。キャリブレーション手順については、以下のリンクのサブセクションを参照してください：  
+[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#キャリブレート](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#キャリブレート)
 
 
 
 :::note
-**ロボットアームをキャリブレーションする際は、USB カメラを接続しないでください。ポートの競合や不正なポート割り当てが発生する可能性があります。**
+**ロボットアームをキャリブレーションする際は、ポートの競合や不正なポート割り当てを引き起こす可能性があるため、USBカメラを接続しないでください。**
 :::
 
-**キャリブレーションスクリプトを実行した後、ロボットアームの各関節を手動で動かして、完全な可動域に到達することを確認してください！これを行わないと、テレオペレーション中にリーダーアームとフォロワーアームの姿勢が一致しない可能性があります。**
+**キャリブレーションスクリプトを実行した後、ロボットアームの各関節を手動で動かして、完全な可動域に到達することを確認してください！これを行わないと、テレオペレーション中にリーダーアームとフォロワーアームのポーズが一致しない可能性があります。**
 
 
 
 
 ### カメラの追加
 
-一般的に、ロボットアームの手首/グリッパーに 1 台のカメラを設置し、デスクトップ表面にもう 1 台のカメラを設置して、アームの姿勢を適切にカバーすることが推奨されます。
+一般的に、ロボットアームの手首/グリッパーに1台のカメラを、デスクトップ表面にもう1台のカメラを設置して、アームの姿勢を適切にカバーすることが推奨されます。
 <mark>具体的な設置方法はアプリケーションシナリオによって異なります。以下に示す例は参考用です。</mark>
 
 詳細については、以下のリンクのサブセクションを参照してください：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#add-cameras)
+[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#カメラの追加](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#カメラの追加)
 
 
 
 ### データ収集
 
 カメラの設置とロボットアームのキャリブレーションの両方が完了した後、データセット収集手順は以下のリンクのサブセクションで確認できます：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#record-the-dataset)
+[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの記録](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの記録)
 
 
 
 ### 収集したデータの可視化
 
 
-SO-ARM で収集したデータを可視化するには、以下のリンクのサブセクションを参照してください：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#visualize-the-dataset)
+SO-ARMで収集したデータを可視化するには、以下のリンクのサブセクションを参照してください：  
+[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの可視化](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#データセットの可視化)
 
 
 
 ### ポリシートレーニング
 
 収集したデータに基づいて、ポリシーをトレーニングする手順は以下のリンクのサブセクションで確認できます：  
-[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#train-a-policy](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#train-a-policy)
+[https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#ポリシーのトレーニング](https://wiki.seeedstudio.com/ja/lerobot_so100m_new/#ポリシーのトレーニング)
 
 
 
@@ -638,14 +638,14 @@ SO-ARM で収集したデータを可視化するには、以下のリンクの�
 :::
 
 :::note
-クラウドでポリシーをトレーニングすることを選択した場合は、データセットが事前にクラウドサーバーにアップロードされているか、Hugging Face Hub からダウンロードされていることを確認してください。ただし、Hugging Face Hub から直接ダウンロードする際の潜在的なネットワーク問題のため、データセットをクラウドサーバーに手動でアップロードすることを強く推奨します。
+クラウドでポリシーをトレーニングすることを選択した場合は、データセットが事前にクラウドサーバーにアップロードされているか、Hugging Face Hubからダウンロードされていることを確認してください。ただし、Hugging Face Hubから直接ダウンロードする際の潜在的なネットワーク問題のため、データセットを手動でクラウドサーバーにアップロードすることを強く推奨します。
 :::
 
-## NVIDIA Brev を使用したポリシートレーニング
+## ポリシートレーニングにNVIDIA Brevを使用
 
-NVIDIA Brev は、人気のクラウドプラットフォーム上の NVIDIA GPU インスタンスへの合理化されたアクセス、自動環境セットアップ、柔軟なデプロイメントオプションを提供し、開発者が即座に実験を開始できるようにします。
+NVIDIA Brevは、人気のクラウドプラットフォーム上のNVIDIA GPUインスタンスへの合理化されたアクセス、自動環境セットアップ、柔軟なデプロイメントオプションを提供し、開発者が即座に実験を開始できるようにします。
 
-プラットフォームアクセス URL：
+プラットフォームアクセスURL：
 [https://login.brev.nvidia.com/signin](https://login.brev.nvidia.com/signin)
 
 プラットフォームを使用するにはアカウントを登録する必要があります。このセクションでは、トレーニングプラットフォームの基本的な使用方法を紹介します。
@@ -654,25 +654,25 @@ NVIDIA Brev は、人気のクラウドプラットフォーム上の NVIDIA GPU
 
 **ステップバイステップの手順**
 
-- クラウドサーバーインスタンスの作成 - ステップ 1
+- クラウドサーバーインスタンスの作成 - ステップ1
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train0.png" width="600"/>
 </div>
 
-- クラウドサーバーインスタンスの作成 - ステップ 2
+- クラウドサーバーインスタンスの作成 - ステップ2
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train1.png" width="600"/>
 </div>
 
-- クラウドサーバーインスタンスの作成 - ステップ 3
+- クラウドサーバーインスタンスの作成 - ステップ3
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train2.png" width="600"/>
 </div>
 
-**ウェブベース Jupyter Notebook の起動**：
+**WebベースのJupyter Notebookの起動**：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/jnote0.png" width="600"/>
 </div>
@@ -682,9 +682,9 @@ NVIDIA Brev は、人気のクラウドプラットフォーム上の NVIDIA GPU
 
 ### モデルのトレーニングとサーバーからのエクスポート
 
-**開発者はノートブックターミナル内で直接モデルをトレーニングできます。以下は GR00T N1.5 をトレーニングし、その後サーバーからエクスポートする例です。**
+**開発者はノートブックターミナル内で直接モデルをトレーニングできます。以下は、GR00T N1.5をトレーニングし、その後サーバーからエクスポートする例です。**
 
-サーバーに Conda をインストール：
+サーバーにCondaをインストール：
 
 ```bash
 mkdir -p ~/miniconda3
@@ -695,13 +695,13 @@ source ~/miniconda3/bin/activate
 conda init --all
 ```
 
-Isaac-GR00T リポジトリのクローン： 
+Isaac-GR00Tリポジトリのクローン： 
 ```bash
 git clone https://github.com/NVIDIA/Isaac-GR00T
 cd Isaac-GR00T
 ```
 
-gr00t 環境の作成：
+gr00t環境の作成：
 ```bash
 conda create -n gr00t python=3.10
 conda activate gr00t
@@ -711,14 +711,14 @@ pip install --no-build-isolation flash-attn==2.7.1.post4
 ```
 
 :::warning
-クラウドプラットフォームで GR00T をトレーニングまたはファインチューニングする場合は、Ampere 以降のアーキテクチャを持つ GPU（例：RTX A6000 または GeForce RTX 4090）を使用する必要があります。**V100（Volta）は GR00T のトレーニングまたはファインチューニングではサポートされていません**。
+クラウドプラットフォームでGR00Tをトレーニングまたはファインチューニングする場合は、Ampere以降のアーキテクチャを持つGPU（例：RTX A6000またはGeForce RTX 4090）を使用する必要があります。**V100（Volta）はサポートされていません**GR00Tのトレーニングまたはファインチューニングには対応していません。
 :::
 
 モデルのファインチューニングの詳細については、以下を参照してください：
 [https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File](https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning#:~:text=1.2%20Configure%20Modality%20File)
 
 
-GR00T N1.5 モデルのファインチューニング：
+GR00T N1.5モデルのファインチューニング：
 
 ```bash
 python scripts/gr00t_finetune.py \
@@ -731,7 +731,7 @@ python scripts/gr00t_finetune.py \
 ```
 
 :::note
-デフォルトのファインチューニング設定には約 25G の VRAM が必要です。それだけの VRAM がない場合は、gr00t_finetune.py スクリプトに `--no-tune_diffusion_model` フラグを追加してみてください。
+デフォルトのファインチューニング設定には約25GのVRAMが必要です。そのようなVRAMがない場合は、gr00t_finetune.pyスクリプトに`--no-tune_diffusion_model`フラグを追加してみてください。
 :::
 
 <div align="center">
@@ -739,21 +739,21 @@ python scripts/gr00t_finetune.py \
 </div>
 
 :::note
-サーバーで Gr00t をトレーニングまたはファインチューニングしたい場合は、この[リンク](https://github.com/NVIDIA/Isaac-GR00T)を参照してください。
+サーバーでGr00tをトレーニングまたはファインチューニングしたい場合は、この[リンク](https://github.com/NVIDIA/Isaac-GR00T)を参照してください。
 :::
 
-**トレーニングが完了した後、モデルをローカルマシンにダウンロードしたい場合があります。しかし、Jupyter Notebook サイドバーはモデルトレーニングフォルダーへの直接ナビゲーションをサポートしていません。**
+**トレーニングが完了した後、モデルをローカルマシンにダウンロードしたい場合があります。しかし、Jupyter Notebookサイドバーはモデルトレーニングフォルダーへの直接ナビゲーションをサポートしていません。**
 
-解決策は次のとおりです：まず対象フォルダーを `.zip` または `.tar.gz` アーカイブに圧縮し、次にノートブックインターフェースを通じてアーカイブファイルをダウンロードします。例については以下の図を参照してください。
+解決策は次のとおりです：まず対象フォルダーを`.zip`または`.tar.gz`アーカイブに圧縮し、次にノートブックインターフェースを通じてアーカイブファイルをダウンロードします。例については以下の図を参照してください。
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/train5.png" width="600"/>
 </div>
 
-## Thor での Isaac GR00T N1.5 推論
+## ThorでのIsaac GR00T N1.5推論
 
-Jetson AGX Thor は、強力なエッジコンピューティングおよびデプロイメントプラットフォームとして、大規模モデル推論をサポートするのに十分なリソースを提供します。このセクションでは、前述の内容に基づいて、Thor で GR00T N1.5 の推論を実行する方法を説明します。
+Jetson AGX Thorは、強力なエッジコンピューティングおよびデプロイメントプラットフォームとして、大規模モデル推論をサポートするのに十分なリソースを提供します。このセクションでは、前述の内容に基づいて、ThorでGR00T N1.5の推論を実行する方法を説明します。
 
-GR00T N1.5は、ロボット学習分野においてNVIDIA Researchがリリースしたオープンソースのベースラインシステムです。特に大規模モデル駆動の模倣学習とポリシー学習に焦点を当てた、エンボディードAIの訓練と推論のための統一フレームワークの提供を目的としています。
+GR00T N1.5は、ロボット学習分野でNVIDIA Researchがリリースしたオープンソースのベースラインシステムです。特に大規模モデル駆動の模倣学習とポリシー学習に焦点を当てた、エンボディードAIの訓練と推論のための統一フレームワークの提供を目的としています。
 
 ### 準備
 
@@ -767,7 +767,7 @@ GR00T N1.5の事前訓練済みモデルは**Hugging Faces**経由で利用可�
 
 GR00T推論に必要なすべての依存関係は、専用のDockerイメージに事前設定されています。
 
-以下のコマンドを使用してコンテナを起動します：
+以下のコマンドを使用してコンテナを開始します。`<image_name>:<tag>`は使用しているものに置き換えてください：
 
 ```bash
 sudo docker run --rm -it \
@@ -779,10 +779,10 @@ sudo docker run --rm -it \
   -v /etc/X11:/etc/X11 \
   --device /dev/nvhost-vic \
   -v /dev:/dev \
-  lerobot:r38.2.aarch64-cu130-24.04
+  <image_name>:<tag>
 ```
 
-Gr00tのソースコードをgit cloneし、インストールします：
+Gr00tのソースコードをGitクローンし、インストールします：
 
 ```bash
 git clone https://github.com/NVIDIA/Isaac-GR00T.git
@@ -796,7 +796,7 @@ Gr00tは、lerobotフレームワークを使用して収集されたデータ�
 ### モデルファインチューニング（オプション）
 
 :::warning
-NVIDIA BrevでGR00T N1.5のファインチューニングを既に実行している場合は、Thorでのこのステップをスキップできます。
+NVIDIA BrevでGR00T N1.5のファインチューニングを既に実行している場合は、Thor上でこのステップをスキップできます。
 :::
 
 **ファインチューニングプロセスは、提供されたクラウド訓練プラットフォームまたはThor上のDockerコンテナ内で直接実行できます**。
@@ -828,7 +828,7 @@ python scripts/gr00t_finetune.py \
    --base-model-path ./pretrained/GR00T-N1.5-3
 ```
 
-`--dataset-path`は、SO-ARMからの収集データのファイルパスです。
+`--dataset-path`は、SO-ARMから収集されたデータのファイルパスです。
 
 :::note
 デフォルトのファインチューニング設定には約25GのVRAMが必要です。十分なVRAMがない場合は、gr00t_finetune.pyスクリプトに`--no-tune_diffusion_model`フラグを追加してみてください。
@@ -836,7 +836,7 @@ python scripts/gr00t_finetune.py \
 
 ### GR00T N1.5での推論実行
 
-最適なパフォーマンスを実現するために、ファインチューニングされたGR00Tモデルをデプロイする際は、データ収集時に使用された実世界のセットアップをできるだけ忠実に再現することを推奨します。これは、モデルの汎化能力が限定的であるためです。
+最適なパフォーマンスを実現するために、ファインチューニングされたGR00Tモデルをデプロイする際は、データ収集時に使用された実世界のセットアップを可能な限り忠実に再現することを推奨します。これは、モデルの汎化能力が限定的であるためです。
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/deploy.jpg" width="400"/>
 </div>
@@ -884,17 +884,17 @@ sudo docker exec -it <container id> /bin/bahs
 :::tip
 クライアントプロセスの初回実行時には、アームのサーボを校正する必要があります。校正プロセスは前述の通りです。
 
-適切なテレオペレーションと推論動作を確保するために、各関節が可動域全体を動くことを確認してください。
+適切なテレオペレーションと推論動作を確保するため、各関節が可動域全体を動くことを確認してください。
 :::
 
-すべてが設定されると、GR00T N1.5をJetson AGX Thorに正常にデプロイできます。システムとハードウェア環境が完全な推論をサポートすることが確認されました：
+すべてが設定されると、GR00T N1.5をJetson AGX Thor上に正常にデプロイできます。システムとハードウェア環境は、完全な推論をサポートすることが確認されました：
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/other/123.gif" width="600"/>
 </div>
 
 ## FAQ
 
-**Q1: クラウド訓練プラットフォームでBrev CLIツールが動作しない？**  
+**Q1: Brev CLIツールがクラウド訓練プラットフォームで動作しない？**  
 これは多くの場合、ネットワークの問題が原因です。
 ローカルのUbuntuホストにBrev CLIをインストールしてログインし、ローカルターミナルからSSHを使用してクラウドインスタンスに接続を試みてください。
 
@@ -909,17 +909,17 @@ sudo docker exec -it <container id> /bin/bahs
 **Q4: モニターに映像出力がない（KVM経由で接続）**  
 一部のKVMスイッチ/デバイスは、Jetson AGX Thor Developer Kitからの映像出力を適切に処理できないことが知られています。モニターをJetson AGX Thor Developer Kitに直接接続してください。
 
-**Q5: Thorのフラッシュ後、その後の起動でHDMIが信号なしを表示することがある**  
-効果的であることが証明された回避策は、表示出力にDisplayPort（DP）コネクタに切り替えることです。
+**Q5: Thorフラッシュ後、その後の起動でHDMIが信号なしを表示することがある**  
+効果的であることが証明されている回避策は、表示出力をDisplayPort（DP）コネクタに切り替えることです。
 
 **Q6: Thorイメージフラッシュ中にキーボード入力が検出されない**  
-フラッシュ中は有線キーボードの使用を推奨します。ワイヤレスキーボードは、Thorフラッシュプロセス中に互換性が限定される場合があります。
+フラッシュ中は有線キーボードの使用を推奨します。ワイヤレスキーボードは、Thorフラッシュプロセス中に互換性が制限される場合があります。
 
 **Q7: GR00Tのクラウドファインチューニングで「GPU not supported」エラーが発生**  
 GR00Tのクラウドファインチューニングには、`Ampereアーキテクチャ`より古いGPUを使用しないでください（例：RTX A6000またはGeForce RTX 4090）。V100（Volta）はGR00Tの訓練やファインチューニングには対応していません。
 
 **Q8: ロボットアームコントローラーボードのシリアルデバイス名が/dev下に表示されない**  
-標準のThorシステムには`CH34x`ドライバーが含まれていません。不足している場合は、以下からインストールしてください：
+標準のThorシステムには`CH34x`ドライバが含まれていません。不足している場合は、以下からインストールしてください：
 https://github.com/juliagoda/CH341SER
 
 **Q9: ThorのType-Cポートが外部ハブを認識しない**  
@@ -930,10 +930,10 @@ ThorのType-C経由で外部ハブを使用するには、QSFP28コネクタに�
 フラッシュ中にキャプチャカードデスクトップを使用する場合、キーボード入力のバグが発生する可能性があります（入力が入力内容と一致しない）。設定時にユーザーパスワードを再確認してください。
 
 **Q11: Thorのデバッグポートはどこにある？**  
-ThorのType-Cデバッグポートは磁気カバーの下に隠れています。複数のシリアルデバイスノードが作成される場合があります。最小のインデックスを持つものを使用してシリアル経由でThorにログインしてください。
+ThorのType-Cデバッグポートは磁気カバーの下に隠れています。複数のシリアルデバイスノードが作成される場合があります。シリアル経由でThorにログインするには、最小のインデックスのものを使用してください。
 
 **Q12: GR00TイメージでLeRobotスクリプトを実行してACTを推論できない**  
-Python 3.12環境でのLeRobot APIを使用した`ACT`推論の呼び出しは推奨しません。`Calibration`と`find port`スクリプトは問題ありません。Ubuntu 24はローカルでデフォルトでPython 3.12を使用することに注意してください。
+Python 3.12環境で`ACT`推論にLeRobot APIを呼び出すことは推奨しません。`Calibration`と`find port`スクリプトは問題ありません。Ubuntu 24はローカルでデフォルトでPython 3.12を使用することに注意してください。
 
 **Q13: ThorでGPU SM使用率を確認するには？**  
 以下を実行してください：
@@ -952,7 +952,7 @@ SO-ARMドライバーボードの前にカメラを接続しないでくださ�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

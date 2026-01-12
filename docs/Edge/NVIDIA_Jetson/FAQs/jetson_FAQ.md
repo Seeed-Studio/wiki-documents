@@ -113,6 +113,9 @@ For details, please click [here](/how_to_encrypt_the_disk_for_jetson)
 
 For details, please click [here](/how_to_establish_the_ethercat_on_jetson)
 
+#### Q18 I did not modify anything related to the Jetson kernel, but during boot the Jetson reported a UUID-related error and then entered the recovery terminal.
+
+Solution for this issue: please click [here](/deal_the_issue_of_UUID)
 
 ## Tech support
 

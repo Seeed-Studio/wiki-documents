@@ -5,6 +5,7 @@ keywords:
   - wio 
 image: https://wiki.seeedstudio.com/es/wio_gps_board/
 slug: /es/LoRa_E5_Dev_Board
+sku: 113990934, 113991157
 last_update:
   date: 01/30/2023
   author: hushuxu

@@ -5,6 +5,7 @@ keywords:
 - Wio_terminal 拡張ボード
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Wio-Terminal-Chassis-Battery_650mAh
+sku: 103990463, 103990564
 last_update:
   date: 05/15/2025
   author: jianjing Huang

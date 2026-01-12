@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wireless-Fall-Detection-Device/
 slug: /es/Wireless-Fall-Detection-Device
+sku: 102991555
 last_update:
   date: 01/11/2022
   author: gunengyu

@@ -3,6 +3,7 @@ title: ePaper Driver Board
 description: The eInk expansion board For XIAO is a smart module from Seeed Studio designed to display something in epaper screen. 
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/titleimg.webp
 slug: /xiao_eink_expansion_board_v2
+sku: 104990861,114993558
 keywords:
   - XIAO
   - epaper
@@ -223,7 +224,7 @@ If you make the wrong choice, the screen will display nothing.
 So please make sure your devices or components type.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/epaper_display.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/config.jpg" style={{width:600, height:'auto'}}/></div>
 
 After downloading the library, go to **Sketch** -> **Include Library** -> **Add .ZIP Library** and select the downloaded library.
 

@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /WM1302_Pi_HAT
+sku: 114992549,114992550,114992629,114992628,113100022,114992967,114992969,114992991,100021717
 last_update:
   date: 01/30/2023
   author: hushuxu
@@ -82,7 +83,7 @@ WM1302 Pi HAT, together with the WM1302 Gateway Module and Raspberry Pi, can hel
   </tr>
   <tr>
     <td >Raspberry Pi 40-Pin Headers</td>
-    <td >Support Raspberry Pi 4 B / Support Raspberry Pi 3 A+/B/B+ / Support Raspberry Pi 2 B / Support Raspberry Pi A+/B+ /   Support Raspberry Pi Zero/Zero W</td>
+    <td >Support Raspberry Pi 5 /Support Raspberry Pi 4 B / Support Raspberry Pi 3 A+/B/B+ / Support Raspberry Pi 2 B / Support Raspberry Pi A+/B+ /   Support Raspberry Pi Zero/Zero W</td>
   </tr>
   <tr>
     <td >PCIe Header</td>

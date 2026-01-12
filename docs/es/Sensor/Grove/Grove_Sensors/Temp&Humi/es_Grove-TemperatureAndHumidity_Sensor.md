@@ -5,9 +5,10 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-TemperatureAndHumidity_Sensor
+sku: 101020011
 last_update:
-  date: 1/3/2023
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 
@@ -15,15 +16,15 @@ last_update:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/main.jpg" /></div>
 
-Este sensor de Temperatura y Humedad proporciona una salida digital precalibrada. Un elemento sensor capacitivo único mide la humedad relativa y la temperatura se mide mediante un termistor de coeficiente de temperatura negativo (NTC). Tiene excelente confiabilidad y estabilidad a largo plazo. Tenga en cuenta que este sensor no funcionará para temperaturas por debajo de 0 grados.
+Este sensor de temperatura y humedad proporciona una salida digital precalibrada. Un elemento sensor capacitivo único mide la humedad relativa y la temperatura se mide mediante un termistor de coeficiente de temperatura negativo (NTC). Tiene excelente confiabilidad y estabilidad a largo plazo. Ten en cuenta que este sensor no funcionará para temperaturas por debajo de 0 grados.
 
 <p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT1-p-745.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png" width="210" height="41"  border="0" /></a></p>
 
 ## Actualizable a Sensores Industriales
 
-Con el [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) y el [registrador de datos S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) de SenseCAP, puede convertir fácilmente el Grove en un sensor LoRaWAN®. Seeed no solo le ayuda con la creación de prototipos, sino que también le ofrece la posibilidad de expandir su proyecto con la serie SenseCAP de [sensores industriales](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP) robustos.
+Con el [controlador S2110](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) y el [registrador de datos S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) de SenseCAP, puedes convertir fácilmente el Grove en un sensor LoRaWAN®. Seeed no solo te ayuda con la creación de prototipos, sino que también te ofrece la posibilidad de expandir tu proyecto con la serie SenseCAP de [sensores industriales](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP) robustos.
 
-Los sensores industriales de la serie SenseCAP S210x proporcionan una experiencia lista para usar para la detección ambiental. Consulte el Sensor Inalámbrico de Temperatura y Humedad S2101 con mayor rendimiento y robustez para el monitoreo de la calidad del aire. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC, y una estación meteorológica 8 en 1. Pruebe el último [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) para su próximo proyecto industrial exitoso.
+Los sensores industriales de la serie SenseCAP S210x proporcionan una experiencia lista para usar para la detección ambiental. Consulta el Sensor Inalámbrico de Temperatura y Humedad S2101 con mayor rendimiento y robustez para el monitoreo de la calidad del aire. La serie incluye sensores para humedad del suelo, temperatura y humedad del aire, intensidad de luz, CO2, EC, y una estación meteorológica 8 en 1. Prueba el último [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) para tu próximo proyecto industrial exitoso.
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
   <tbody>
@@ -42,7 +43,7 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
     <tr>
       <td align="center">
         <a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank">
-          <strong>S2101 Temp. y Humedad del Aire</strong>
+          <strong>S2101 Temperatura y Humedad del Aire</strong>
         </a>
       </td>
     </tr>
@@ -54,14 +55,14 @@ Los sensores industriales de la serie SenseCAP S210x proporcionan una experienci
 --------
 
 - Medición de humedad relativa y temperatura
-- Calibración con compensación de temperatura de rango completo
+- Compensación de temperatura de rango completo calibrada
 - Señal digital
 - Estabilidad a largo plazo
 - Larga distancia de transmisión (>20m)
 - Bajo consumo de energía
 
 :::tip
-Para más detalles sobre los módulos Grove, consulte [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
+Para más detalles sobre los módulos Grove, consulta [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/)
 :::
 
 ## Ideas de Aplicaciones
@@ -83,7 +84,7 @@ Para más detalles sobre los módulos Grove, consulte [Sistema Grove](https://wi
 |--------------|------------------------|
 | Tamaño PCB   | 2.0cm*4.0cm            |
 | Interfaz     | Conector de pines de 2.0mm |
-| Estructura IO | SIG,VCC,GND,NC         |
+| Estructura E/S | SIG,VCC,GND,NC       |
 | ROHS         | SÍ                     |
 
 ### Características Electrónicas
@@ -243,7 +244,7 @@ Temperatura
 </tr>
 <tr align="center">
 <td rowspan="2">
- Sensibilidad
+ Sensibilidad
 </td>
 <td>
 Humedad
@@ -357,7 +358,7 @@ Las plataformas mencionadas anteriormente como compatibles son una indicación d
 
 Primeros Pasos
 
-Cuando el MCU envía una señal de activación, el sensor cambiará del modo de bajo consumo de energía al modo activo. Después de la señal de activación, el sensor enviará una señal de respuesta de vuelta al MCU, luego se envían 40 bits de datos recopilados y se activa una nueva recopilación de señal. (Tenga en cuenta que los 40 bits de datos recopilados que se envían desde el sensor al MCU ya están recopilados antes de que llegue la señal de activación.) Una señal de activación recibe una vez 40 bits de datos de respuesta del sensor. Se utiliza datos de bus único para la comunicación entre MCU y sensor.
+Cuando el MCU envía una señal de activación, el sensor cambiará del modo de bajo consumo de energía al modo activo. Después de la señal de activación, el sensor enviará una señal de respuesta de vuelta al MCU, luego se envían 40 bits de datos recolectados y se activa una nueva recolección de señal. (Ten en cuenta que los 40 bits de datos recolectados que se envían del sensor al MCU ya fueron recolectados antes de que llegue la señal de activación.) Una señal de activación recibe una vez 40 bits de datos de respuesta del sensor. Se utiliza datos de bus único para la comunicación entre MCU y sensor.
 El proceso de comunicación se muestra a continuación:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/Twig-Temperature_Humidity.jpg" /></div>
@@ -372,27 +373,27 @@ Cuesta 5ms para una sola comunicación. El bit de orden superior de los datos se
 Si esta es la primera vez que trabajas con Arduino, te recomendamos firmemente que veas [Primeros Pasos con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/) antes de comenzar.
 :::
 
-### Jugar Con Arduino
+### Jugar con Arduino
 
 #### Hardware
 
-- **Paso 1.** Prepara las siguientes cosas:
+- **Paso 1.** Prepara los siguientes elementos:
 
 | Seeeduino V4.2 | Base Shield| Sensor de Temperatura y Humedad|
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/list.jpg" /></div>|
 |[Obtener Uno Ahora](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|
 
-- **Paso 2.** Conecta Grove - Temperature&Humidity Sensor al puerto **D2** del Grove-Base Shield.
+- **Paso 2.** Conecta Grove - Sensor de Temperatura y Humedad al puerto **D2** del Grove-Base Shield.
 
 - **Paso 3.** Conecta Grove - Base Shield al Seeeduino.
 
-- **Paso 4.** Conecta el Seeeduino a la PC mediante un cable USB.
+- **Paso 4.** Conecta Seeeduino a la PC mediante un cable USB.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/connect_arduino.jpg" /></div>
 
 :::note
- Si no tenemos Grove Base Shield, también podemos conectar directamente Grove - Temperature and Humidity Sensor Pro al Seeeduino como se muestra a continuación.
+ Si no tenemos Grove Base Shield, también podemos conectar directamente Grove - Temperature and Humidity Sensor Pro a Seeeduino como se muestra a continuación.
 :::
 
 | Seeeduino       | Temperature&Humidity Sensor |
@@ -404,16 +405,16 @@ Si esta es la primera vez que trabajas con Arduino, te recomendamos firmemente q
 
 #### Software
 
-- **Paso 1.** Descarga la [biblioteca DHT de Seeed](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) desde Github.
+- **Paso 1.** Descarga la [librería Seeed DHT](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor) desde Github.
 
-- **Paso 2.** Consulta [Cómo instalar biblioteca](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la biblioteca para Arduino.
+- **Paso 2.** Consulta [Cómo instalar librería](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la librería para Arduino.
 
 - **Paso 3.** Reinicia el IDE de Arduino. Abre el ejemplo "DHTtester" a través de la ruta: **File --> Examples --> Grove_Humidity_Temperature_Sensor-master --> DHTtester**. A través de esta demostración, podemos leer la información de temperatura y humedad relativa del ambiente.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Temperature_and_Humidity_Sensor_Pro/img/path.png" /></div>
 
 :::note
-Este Grove - Temperature&Humidity Sensor y nuestro otro producto [Grove-Temperature&Humidity Sensor pro](https://wiki.seeedstudio.com/es/Grove-Temperature_and_Humidity_Sensor_Pro/) comparten esta biblioteca. Sin importar qué producto estés usando, asegúrate de haber activado la línea de definición del sensor de tu placa y comentado las líneas de definición de otras especificaciones. Por ejemplo, el sensor que usamos en Grove - Temperature&Humidity Sensor es DHT 11. Así que la parte de definición de la especificación del sensor debería ser:
+Este Grove - Temperature&Humidity Sensor y nuestro otro producto [Grove-Temperature&Humidity Sensor pro](https://wiki.seeedstudio.com/es/Grove-Temperature_and_Humidity_Sensor_Pro/) comparten esta librería. Sin importar qué producto estés usando, asegúrate de haber activado la línea de definición del sensor de tu placa y comentado las líneas de definición de otras especificaciones. Por ejemplo, el sensor que usamos en Grove - Temperature&Humidity Sensor es DHT 11. Así que la parte de definición de la especificación del sensor debería ser:
 :::
 
 ```
@@ -422,13 +423,13 @@ Este Grove - Temperature&Humidity Sensor y nuestro otro producto [Grove-Temperat
 //#define DHTTYPE DHT21   // DHT 21 (AM2301)
 ```
 
-La configuración predeterminada de la biblioteca es `DHT 22`, por lo que necesitas cambiarla a `DHT 11` manualmente.
+La configuración predeterminada de la librería es `DHT 22`, así que necesitas cambiarla a `DHT 11` manualmente.
 
 - **Paso 4.** Sube la demostración. Si no sabes cómo subir el código, por favor revisa [cómo subir código](https://wiki.seeedstudio.com/es/Upload_Code/).
 
-- **Paso 5.** Abre el **Monitor Serie** del IDE de Arduino haciendo clic en **Tool-> Serial Monitor**. O presiona las teclas ++ctrl+shift+m++ al mismo tiempo. Si todo va bien, obtendrás la temperatura.
+- **Paso 5.** Abre el **Serial Monitor** del IDE de Arduino haciendo clic en **Tool-> Serial Monitor**. O presiona las teclas ++ctrl+shift+m++ al mismo tiempo. Si todo va bien, obtendrás la temperatura.
 
-El resultado debería ser así:
+El resultado debería ser como:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/result_ar.png" /></div>
 
@@ -440,7 +441,7 @@ El resultado debería ser así:
 
 **Paso 2.** Conecta el Base Shield a tu Seeeduino/Arduino.
 
-**Paso 3.** Conecta el Seeeduino/Arduino a tu PC mediante un cable USB.
+**Paso 3.** Conecta Seeeduino/Arduino a tu PC mediante un cable USB.
 
 #### Software
 
@@ -457,7 +458,7 @@ Si esta es tu primera vez usando Codecraft, consulta también [Guía para usar C
 Sube el programa a tu Arduino/Seeeduino.
 
 :::tip
-Cuando el código termine de subirse, verás la temperatura y humedad mostradas en el Monitor Serie.
+Cuando el código termine de subirse, verás la temperatura y humedad mostradas en el Serial Monitor.
 :::
 
 ### Jugar con Raspberry Pi (Con Grove Base Hat para Raspberry Pi)
@@ -469,11 +470,11 @@ Cuando el código termine de subirse, verás la temperatura y humedad mostradas 
 | Raspberry pi | Grove Base Hat para RasPi| Grove - Temp & Hum Sensor|
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/list.jpg" /></div>|
-|[Consigue UNO Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Consigue UNO Ahora](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|
+|[Obtener UNO Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Obtener UNO Ahora](https://www.seeedstudio.com/Grove-Temp%26Humi-Sensor-p-745.html)|
 
 - **Paso 2**. Conecta el Grove Base Hat al Raspberry.
 - **Paso 3**. Conecta el sensor de temperatura y humedad al Puerto 12 del Base Hat.
-- **Paso 4**. Conecta el Raspberry Pi a la PC a través del cable USB.
+- **Paso 4**. Conecta el Raspberry Pi a la PC mediante cable USB.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/Temp_Hum_Hat.jpg" /></div>
 
@@ -484,59 +485,55 @@ Para el paso 3 puedes conectar el sensor de temperatura y humedad a **cualquier 
 #### Software
 
 :::caution
-Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
+Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comando **solo con Python3**.
 :::
 
 - **Paso 1**. Sigue [Configuración de Software](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/#installation) para configurar el entorno de desarrollo.
-- **Paso 2**. Descarga el archivo fuente clonando la biblioteca grove.py.
+:::tip
+Uno de los pasos es añadir la librería DHT necesaria, por favor asegúrate de que esté instalada.
+:::
+- **Paso 2**.Entra al entorno virtual relevante.
 
 ```
-cd ~
-git clone https://github.com/Seeed-Studio/Seeed_Python_DHT.git
-
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
 ```
 
-- **Paso 3**. Ejecuta los siguientes comandos para ejecutar el código.
+- **Paso 3**. Ejecuta los comandos de abajo para ejecutar el código.
 
 ```
-cd Seeed_Python_DHT
-sudo python3 setup.py install
-cd ~/Seeed_Python_DHT/examples
-python3 dht_simpleread.py 
+nano ~/grove_env/dht11_demo.py
 ```
 
-A continuación se muestra el código de dht_simpleread.py.
+Copia el siguiente código
 
 ```python
 import time
 import seeed_dht
-def main():
 
-    # for DHT11/DHT22
-    sensor = seeed_dht.DHT("11", 12)
-    # for DHT10
-    # sensor = seeed_dht.DHT("10")
-    
+sensor = seeed_dht.DHT("11", 12)  
+print("DHT11 reading every second, Ctrl+C to quit")
+try:
     while True:
         humi, temp = sensor.read()
-        if not humi is None:
-            print('DHT{0}, humidity {1:.1f}%, temperature {2:.1f}*'.format(sensor.dht_type, humi, temp))
-        else:
-            print('DHT{0}, humidity & temperature: {1}'.format(sensor.dht_type, temp))
+        print(f"DHT11  Humidity {humi:.1f}%  Temperature {temp:.1f}°C")
         time.sleep(1)
+except KeyboardInterrupt:
+    print("\nBye")
 
-
-if __name__ == '__main__':
-    main()
 ```
 
 :::tip
-    Si todo va bien, podrás ver el siguiente resultado
+    Guardar y salir:
+Ctrl+O → Enter → Ctrl+X
 :::
+
+  Si todo va bien, podrás ver el siguiente resultado
+
 
 ```python
 
-pi@raspberrypi:~/Seeed_Python_DHT/examples $ python3 dht_simpleread.py 
+pi@raspberrypi:~/Seeed_Python_DHT/examples $ python ~/grove_env/dht11_demo.py 
 DHT11, humidity 39.2%, temperature 29.1*
 DHT11, humidity 39.2%, temperature 29.1*
 DHT11, humidity 39.2%, temperature 29.1*
@@ -557,7 +554,7 @@ Primero, necesitas preparar las siguientes cosas:
 
 - **Paso 1.** Prepara las siguientes cosas:
 
-| Raspberry pi | GrovePi_Plus | Sensor de Temperatura y Humedad|
+| Raspberry pi | GrovePi_Plus | Temperature&Humidity Sensor|
 |--------------|-------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/list.jpg" /></div>|
 |[Obtener Uno Ahora](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-Temperature%26Humidity-Sensor-Pro-p-838.html)|
@@ -572,9 +569,9 @@ Primero, necesitas preparar las siguientes cosas:
 
 #### Software
 
-- **Paso 1.** Sigue [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) para configurar el entorno de desarrollo.
+- **Paso 1.** Sigue [Configuración de Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) para configurar el entorno de desarrollo.
 
-- **Paso 2.** Sigue [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) para actualizar el firmware más reciente del GrovePi.
+- **Paso 2.** Sigue [Actualización del Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) para actualizar el firmware más reciente del GrovePi.
 
 :::tip
 En esta wiki usamos la ruta **~/GrovePi/** en lugar de **/home/pi/Desktop/GrovePi**, necesitas asegurarte de que el Paso 2 y el Paso 3 usen la misma ruta.
@@ -585,7 +582,7 @@ Te sugerimos firmemente que actualices el firmware, o para algunos sensores podr
 :::
 
 :::caution
-Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
+Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comando **solo con Python3**.
 :::
 
 - **Paso 3.** Clona el repositorio de Github.
@@ -596,7 +593,7 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
-- **Paso 4.** Verifica el código.
+- **Paso 4.** Revisa el código.
 
 ```python
 
@@ -605,7 +602,7 @@ sudo nano grove_dht_pro.py
 
 ```
 
-El código debería ser así:
+El código debería ser como:
 
 ```python
 import grovepi
@@ -636,16 +633,16 @@ while True:
 Luego presiona ++ctrl+x++ para salir de nano.
 
 :::note
-El Grove - Temperature&Humidity Sensor y el Grove - Temperature&Humidity Sensor pro comparten el mismo código python que se llama `grove_dht_pro.py`. La única diferencia es que para la sentencia `[temp,humidity] = grovepi.dht(sensor,blue)`. Usamos el parámetro `blue` para Grove - Temperature&Humidity Sensor mientras que usamos `white` para el Grove - Temperature&Humidity Sensor pro. El valor por defecto es blue, así que para este sensor no necesitas cambiar el código.
+El Grove - Temperature&Humidity Sensor y el Grove - Temperature&Humidity Sensor pro comparten el mismo código python que se llama `grove_dht_pro.py`. La única diferencia es que para la sentencia `[temp,humidity] = grovepi.dht(sensor,blue)`. Usamos el parámetro `blue` para Grove - Temperature&Humidity Sensor mientras que usamos `white` para el Grove - Temperature&Humidity Sensor pro. El valor predeterminado es blue, así que para este sensor no necesitas cambiar el código.
 :::
 
-- **Paso 5.** Ejecuta los siguientes comandos para obtener el valor.
+- **Paso 5.** Ejecuta los comandos de abajo para obtener el valor.
 
 ```
 sudo python3 grove_dht_pro.py
 ```
 
-El resultado debería ser como:
+El resultado debería ser así:
 
 ```python
 
@@ -674,19 +671,19 @@ temp = 26.00 C humidity =40.00%
 | Wio Terminal | Grove - Sensor de Temperatura y Humedad (DHT11) |
 |--------------|-----------------|
 |<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png" /></div>|<div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/new.jpeg" /></div>|
-|[Consigue Uno Ahora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Consigue Uno Ahora](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html)|
+|[Obtener Uno Ahora](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Obtener Uno Ahora](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html)|
 
-- **Paso 2.** Conecta Grove - Temperature & Humidity Sensor al puerto **D0** del Wio Terminal.
+- **Paso 2.** Conecta Grove - Sensor de Temperatura y Humedad al puerto **D0** del Wio Terminal.
 
-- **Paso 3.** Conecta el Wio Terminal a la PC a través del cable USB Type-C.
+- **Paso 3.** Conecta Wio Terminal a la PC a través del cable USB Type-C.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/new-connect.jpeg" /></div>
 
 #### Software
 
-- **Paso 1.** Sigue [**ArduPy Getting Started**](https://wiki.seeedstudio.com/es/ArduPy/) para configurar el entorno de desarrollo ArduPy en el Wio Terminal.
+- **Paso 1.** Sigue [**Introducción a ArduPy**](https://wiki.seeedstudio.com/es/ArduPy/) para configurar el entorno de desarrollo ArduPy en Wio Terminal.
 
-- **Paso 2.** Asegúrate de que el firmware ArduPy contenga la biblioteca DHT usando los siguientes comandos. Para más información, por favor sigue [**aquí**](https://wiki.seeedstudio.com/es/ArduPy/#using-aip-to-include-other-ardupy-librariesfrom-arduino-libraries-example).
+- **Paso 2.** Asegúrate de que el firmware ArduPy contenga la biblioteca DHT usando los siguientes comandos. Para más información, sigue [**aquí**](https://wiki.seeedstudio.com/es/ArduPy/#using-aip-to-include-other-ardupy-librariesfrom-arduino-libraries-example).
 
 ```sh
 aip install Seeed-Studio/seeed-ardupy-dht/archive/main.zip
@@ -724,7 +721,7 @@ def main(): # main function
         # obtain readings 
         t = dht.temperature # store temperature readings in variable 
         h = dht.humidity # store humidity readings in variable 
-        
+
         # display temp readings
         spr.setTextSize(4)
         spr.setTextColor(spr.color.WHITE,spr.color.DARKGREEN)
@@ -741,7 +738,7 @@ def main(): # main function
 
         print("temperature:",t,"C", end ="     ")
         print("humidity:",h,"%RH")
- 
+
 if __name__ == "__main__": # check whether this is run from main.py
     main() # execute function
 ```
@@ -783,26 +780,27 @@ temperature: 31.0 C     humidity: 87.0 %RH
 
 - **[Zip]** [Archivo eagle del Sensor de Temperatura y Humedad](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/res/Temperature_Humidity.zip)
 
-- **[Zip]** [Librería del Sensor de Temperatura y Humedad](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
+- **[Zip]** [Biblioteca del Sensor de Temperatura y Humedad](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor)
 
 - **[Codecraft]** [Archivo CDC](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/res/Grove_Temperature_and_Humidity_Sensor_CDC_File.zip)
 
 ## Proyectos
 
-**Sistema de Gestión de Baños**: Usando el sistema múltiples personas pueden compartir un solo baño de manera eficiente.
+**Sistema de Gestión de Baños**: Usando el sistema, múltiples personas pueden compartir un solo baño de manera eficiente.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/taifur/toilet-management-system-8e2786/embed' width='350'></iframe>
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

@@ -3,6 +3,7 @@ description: 正確な電圧、電流、電力監視のためのXIAO Debug Mate�
 title: Power Meter
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/32.webp
 slug: /ja/xiao_debug_mate_power
+sku: 109990585
 sidebar_position: 4
 last_update:
   date: 10/22/2025
@@ -172,14 +173,12 @@ XIAOボードと接続されたセンサーやモジュールの合計消費電�
 
 電力測定のためにペリフェラルをDebug MateのGroveポートに接続**しないでください**。その電力線はXIAO測定回路とは別になっています。
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

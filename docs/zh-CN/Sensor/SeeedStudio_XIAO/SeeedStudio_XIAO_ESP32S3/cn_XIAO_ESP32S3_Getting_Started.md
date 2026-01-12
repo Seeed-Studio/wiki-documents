@@ -6,7 +6,7 @@ keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/xiao_esp32s3_getting_started
-sku: 113991114, 113991115, 102010671
+sku: 113991114, 113991115, 114010001, 102010634, 102010635, 102010671
 type: gettingstarted
 last_update:
   date: 08/14/2024
@@ -48,7 +48,7 @@ import TabItem from '@theme/TabItem';
  </tr>
 </table>
 
-## 介绍
+## 简介
 
 Seeed Studio XIAO 系列是小型开发板，具有相似的硬件结构，尺寸真正达到拇指大小。代号"XIAO"代表其一半特性"Tiny"（微小），另一半则是"Puissant"（强大）。
 
@@ -78,7 +78,7 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
     <tr>
      <th>内置传感器</th>
      <td align="center"> - </td>
-        <td align="center">OV2640 摄像头传感器，分辨率 1600*1200<br></br> OV3660 摄像头传感器，分辨率 2048*1536<br></br>数字麦克风</td>
+        <td align="center">OV2640 摄像头传感器，分辨率 1600 * 1200 <br></br>OV3660 摄像头传感器，分辨率 2048 * 1536<br></br>数字麦克风</td>
   <td align="center"> - </td>
  </tr>
     <tr>
@@ -96,7 +96,7 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
     <tr>
      <th>尺寸</th>
      <td align="center">21 x 17.8mm</td>
-        <td align="center">21 x 17.8 x 15mm（含扩展板）</td>
+        <td align="center">21 x 17.8 x 15mm（带扩展板）</td>
   <td align="center">21 x 17.8mm</td>
  </tr>
     <tr>
@@ -105,7 +105,7 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
  </tr>
     <tr>
      <td>电路工作电压（准备运行）： <br></br> - Type-C：5V@<strong>19mA</strong> <br></br> - BAT：3.8V@<strong>22mA</strong></td>
-        <td>电路工作电压（准备运行）： <br></br> - Type-C：5V@<strong>38.3mA</strong> <br></br> - BAT：3.8V@<strong>43.2mA</strong>（含扩展板）</td>
+        <td>电路工作电压（准备运行）： <br></br> - Type-C：5V@<strong>38.3mA</strong> <br></br> - BAT：3.8V@<strong>43.2mA</strong>（带扩展板）</td>
   <td>电路工作电压（准备运行）： <br></br> - Type-C：5V@<strong>28mA</strong> <br></br> - BAT：3.8V@<strong>35mA</strong></td>
  </tr>
  <tr>
@@ -130,13 +130,13 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
     <tr>
         <th>Wi-Fi 启用功耗</th>
         <td align="center">活动模式：<strong>~ 100 mA</strong></td>
-        <td align="center">活动模式：<strong>~ 110 mA</strong>（含扩展板）</td>
+        <td align="center">活动模式：<strong>~ 110 mA</strong>（带扩展板）</td>
   <td align="center">活动模式：<strong>~ 85 mA</strong></td>
     </tr>
     <tr>
         <th>BLE 启用功耗</th>
         <td align="center">活动模式：<strong>~ 85 mA</strong></td>
-        <td align="center">活动模式：<strong>~ 102 mA</strong>（含扩展板）</td>
+        <td align="center">活动模式：<strong>~ 102 mA</strong>（带扩展板）</td>
   <td align="center">活动模式：<strong>~ 77 mA</strong></td>
     </tr>
     <tr>
@@ -148,11 +148,11 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
 ### 特性
 
 - **强大的 MCU 板**：集成 ESP32S3 32 位双核 Xtensa 处理器芯片，运行频率高达 240 MHz，配备多个开发端口，支持 Arduino / MicroPython
-- **高级功能**（Sense 版本）：可拆卸的 **OV2640 摄像头传感器，分辨率 1600x1200** 和 **OV3660 摄像头传感器，分辨率 2048x1536**，兼容 OV5640 摄像头传感器，集成额外的数字麦克风
-- **精心设计的电源**：锂电池充电管理功能，提供 4 种功耗模式，允许深度睡眠模式下功耗低至 14μA
+- **高级功能**（适用于 Sense）：可拆卸的 **OV2640 摄像头传感器，分辨率 1600x1200** 和 **OV3660 摄像头传感器，分辨率 2048x1536**，兼容 OV5640 摄像头传感器，集成额外的数字麦克风
+- **精心设计的电源**：锂电池充电管理功能，提供 4 种功耗模式，允许深度睡眠模式，功耗低至 14μA
 - **大容量存储带来更多可能性**：提供 8MB PSRAM 和 8MB FLASH（**Plus** 版本为 16MB），支持 SD 卡插槽用于外部 32GB FAT 存储（仅适用于 XIAO ESP32S3）
 - **出色的射频性能**：支持 2.4GHz Wi-Fi 和 BLE 双无线通信，连接 U.FL 天线时支持 100m+ 远程通信
-- **拇指大小的紧凑设计**：21 x 17.8mm，采用 XIAO 经典外形，适合空间受限的项目，如可穿戴设备
+- **拇指大小的紧凑设计**：21 x 17.8mm，采用 XIAO 的经典外形，适用于空间受限的项目，如可穿戴设备
 
 <table align="center">
  <tr>
@@ -246,13 +246,13 @@ XIAO ESP32S3 Plus 的 B2B 连接器与 [Wio-SX1262 扩展板](https://www.seeeds
 
 ### 电源引脚
 
-- 5V - 这是来自 USB 端口的 5v 输出。您也可以将其用作电压输入，但您必须在外部电源和此引脚之间有某种二极管（肖特基、信号、功率），阳极连接电池，阴极连接 5V 引脚。
-- 3V3 - 这是板载稳压器的稳压输出。您可以提取 700mA
+- 5V - 这是来自 USB 端口的 5V 输出。您也可以将其用作电压输入，但您必须在外部电源和此引脚之间安装某种二极管（肖特基、信号、功率），阳极连接电池，阴极连接 5V 引脚。
+- 3V3 - 这是板载稳压器的稳压输出。您可以获得 700mA 电流
 - GND - 电源/数据/信号地
 
 ### 启动引脚
 
-在每次启动或复位时，芯片需要一些初始配置参数，例如以哪种启动模式加载芯片、闪存电压等。这些参数通过启动引脚传递。复位后，启动引脚作为常规 IO 引脚运行。
+在每次启动或复位时，芯片需要一些初始配置参数，例如以哪种启动模式加载芯片、闪存电压等。这些参数通过启动引脚传递。复位后，启动引脚作为常规 IO 引脚工作。
 
 在芯片复位时由给定启动引脚控制的参数如下：
 
@@ -282,13 +282,13 @@ GPIO0、GPIO45 和 GPIO46 在芯片复位时连接到芯片内部的弱上拉/�
 
 1. **XIAO ESP32S3**
 
-常规版本中预设的出厂程序是触摸引脚点亮程序。当您给 XIAO 通电时，触摸它的一些引脚，橙色用户指示灯将点亮。
+常规版本中预设的出厂程序是触摸引脚点亮程序。当您给 XIAO 通电时，触摸其某些引脚，橙色用户指示灯将点亮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/105.jpg" style={{width:600, height:'auto'}}/></div>
 
 2. **XIAO ESP32S3 Sense**
 
-XIAO ESP32S3 Sense 出厂时预装了 WebCam 示例程序。您可以通过给 XIAO 安装好天线并通电来使用此程序。有关详细信息，您可以阅读关于此程序的 Wiki。
+XIAO ESP32S3 Sense 出厂时预装了 WebCam 示例程序。您可以通过给 XIAO 安装好天线并通电来使用此程序。详细信息，您可以阅读关于此程序的 Wiki。
 
 - [视频流](https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage#project-ii-video-streaming)
 
@@ -306,9 +306,9 @@ XIAO ESP32S3 默认出厂时不带排针，您需要准备自己的排针并将�
 
 #### 天线安装
 
-在 XIAO ESP32S3 正面的左下角，有一个独立的"WiFi/BT 天线连接器"。为了获得更好的 WiFi/蓝牙信号，您需要取出包装内的天线并将其安装在连接器上。
+在 XIAO ESP32S3 正面的左下角，有一个独立的 "WiFi/BT Antenna Connector"。为了获得更好的 WiFi/蓝牙信号，您需要取出包装内的天线并将其安装在连接器上。
 
-天线的安装有一个小技巧，如果您直接用力按下，您会发现很难按下，手指会疼！正确的天线安装方法是先将天线连接器的一侧放入连接器块中，然后在另一侧稍微按下，天线就会安装好。
+天线的安装有一个小技巧，如果您直接用力按下，您会发现很难按下，手指会疼！正确的天线安装方法是先将天线连接器的一侧放入连接器块中，然后在另一侧稍微按下，天线就安装好了。
 
 拆卸天线也是如此，不要用蛮力直接拉天线，一侧用力抬起，天线很容易取下。
 
@@ -386,13 +386,13 @@ Wiki 中所有关于摄像头的程序都与 OV5640、OV2640 和 OV3660 摄像�
 
 ***购买说明：*** 购买 XIAO ESP32S3 Sense 时，需要注意的是只有**配备摄像头的型号**才包含散热器。如果您的 ESP32S3 版本不包含摄像头，您需要单独购买散热器。
 
-***安装提示：*** 优先用散热器覆盖散热垫，因为它直接位于 ESP32S3 芯片上方，这是主要的热源。正确对齐确保最佳散热效果，并注意尽可能保持 BAT 引脚不被遮挡。
+***安装提示：*** 优先用散热器覆盖散热垫，因为它直接位于 ESP32S3 芯片上方，这是主要的热源。正确对齐确保最佳散热，并注意尽可能保持 BAT 引脚不被遮挡。
 :::
 
 现在，让我们开始安装过程：
 
 ***步骤 1. 准备散热器：***
-首先撕掉散热器的保护膜以露出导热胶。这将为散热器与 ESP32S3 芯片的牢固连接做好准备。
+首先撕掉散热器的保护膜以露出导热胶。这将为散热器牢固附着到 ESP32S3 芯片做好准备。
 
 <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/heat-sink.jpg" style={{width:400, height:'auto'}}/></div></td>
 <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/remove-heat-sink-cover.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -422,14 +422,14 @@ Wiki 中所有关于摄像头的程序都与 OV5640、OV2640 和 OV3660 摄像�
 
 ***步骤 3：最终检查和测试***
 
-安装后，确保一切都牢固固定，没有短路风险。验证散热器是否正确对齐并牢固连接。
+安装后，确保一切都牢固固定，没有短路风险。验证散热器正确对齐并牢固附着。
 
 ### 软件准备
 
 XIAO ESP32S3 推荐的编程工具是 Arduino IDE，因此作为软件准备的一部分，您需要完成 Arduino 安装。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考[Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
 - **步骤 1.** 根据您的操作系统下载并安装稳定版本的 Arduino IDE。
@@ -493,7 +493,7 @@ XIAO ESP32S3 的板载包需要 **2.0.8** 及以上版本才可用。
 
 - **步骤 4.** 选择您的开发板和端口。
 
-在 Arduino IDE 顶部，您可以直接选择端口。这很可能是名称中包含 "usbmodem" 或 "usbserial" 的端口。如果您不确定，请拔出再插入以查看哪个端口消失了。
+在 Arduino IDE 顶部，您可以直接选择端口。这很可能是名称中包含 "usbmodem" 或 "usbserial" 的端口。如果您不确定，请拔出并重新插入以查看哪个端口消失了。
 
 </TabItem>
 </Tabs>
@@ -551,7 +551,7 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 </TabItem>
 </Tabs>
 
-完成这些准备后，您就可以开始为 XIAO ESP32S3 编写程序进行编译和上传了。
+完成这些准备后，您可以开始为 XIAO ESP32S3 编写程序进行编译和上传。
 
 ### BootLoader 模式
 
@@ -564,7 +564,7 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 
 - **步骤 1**. 按住 XIAO ESP32S3 上的 `BOOT` 按钮不松开。
 - **步骤 2**. 保持按住 `BOOT` 按钮，然后通过数据线连接到计算机。连接到计算机后松开 `BOOT` 按钮。
-- **步骤 3**. 上传 **File > Examples > 01.Basics > Blink** 程序来检查 XIAO ESP32S3 的运行情况。
+- **步骤 3**。上传 **File > Examples > 01.Basics > Blink** 程序来检查 XIAO ESP32S3 的运行状态。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/15.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -596,7 +596,7 @@ After you have downloaded the above zip, please unzip it and you will see two fi
  </tr>
 </table>
 
-恭喜您，您已经学会了如何为 XIAO ESP32S3 编写和上传程序！
+恭喜，您已经学会了如何为 XIAO ESP32S3 编写和上传程序！
 
 :::note
 只有当 XIAO ESP32S3 上的用户 LED 引脚设置为高电平时，LED 才会熄灭，只有当引脚设置为低电平时，LED 才会点亮。
@@ -633,7 +633,7 @@ XIAO ESP32S3 系列内置电源管理芯片，允许 XIAO ESP32S3 通过电池�
 我们了解到一些用户希望直接将 UF2 文件刷写到 XIAO，这将实现批量刷写程序的过程。这里我们将描述这种方法。
 
 <Tabs>
-<TabItem value="method1" label="方法 I" default>
+<TabItem value="method1" label="方法一" default>
 
 :::note
 此方法目前仅适用于 Windows 系统。
@@ -666,7 +666,7 @@ XIAO ESP32S3 系列内置电源管理芯片，允许 XIAO ESP32S3 通过电池�
 :::tip
 
 1. 确保您的程序已编译并正确运行；否则，UF2 文件可能无法按预期执行。
-2. **xiaos3-bin2uf2** 文件夹中提供了一个 Blink 的示例 UF2 文件。上传后，XIAO ESP32S3 上的橙色 LED 将闪烁。您可以使用此 UF2 文件作为测试。
+2. **xiaos3-bin2uf2** 文件夹中提供了一个 Blink 的示例 UF2 文件。上传后，XIAO ESP32S3 上的橙色 LED 将闪烁。您可以使用此 UF2 文件进行测试。
 
 :::
 
@@ -680,11 +680,11 @@ XIAO ESP32S3 系列内置电源管理芯片，允许 XIAO ESP32S3 通过电池�
 
 </TabItem>
 
-<TabItem value="method2" label="方法 II" >
+<TabItem value="method2" label="方法二" >
 
-该项目由从 IDF 定制的第二阶段引导加载程序和作为第三阶段引导加载程序的 UF2 工厂应用程序组成。
+该项目由自定义 IDF 的第二阶段引导加载程序和作为第三阶段引导加载程序的 UF2 工厂应用程序组成。
 
-**注意：** 由于 IDF 正在积极开发并且变化非常频繁，它作为子模块包含在 lib/esp-idf 中，请在那里运行导出脚本以正确设置您的环境。
+**注意：** 由于 IDF 正在积极开发且变化非常频繁，它作为子模块包含在 lib/esp-idf 中，请在那里运行导出脚本以正确设置您的环境。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/adafruit/tinyuf2/tree/master/ports/espressif" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div>
 
@@ -748,7 +748,7 @@ XIAO ESP32S3 由于其高集成度，是所有 XIAO 中最复杂的一个，PCB 
 
 [PDF] **[ESP32-S3 数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)**
 
-### Seeed Studio XIAO ESP32S3
+### 适用于 Seeed Studio XIAO ESP32S3
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Eagle 库文件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
@@ -760,7 +760,7 @@ XIAO ESP32S3 由于其高集成度，是所有 XIAO 中最复杂的一个，PCB 
 
 - 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-### Seeed Studio XIAO ESP32S3 Sense
+### 适用于 Seeed Studio XIAO ESP32S3 Sense
 
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Sense 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf)
@@ -774,7 +774,7 @@ XIAO ESP32S3 由于其高集成度，是所有 XIAO 中最复杂的一个，PCB 
 - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D 模型](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip)
 - 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 Sense FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-### Seeed Studio XIAO ESP32S3 Plus
+### 适用于 Seeed Studio XIAO ESP32S3 Plus
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Plus 原理图](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_SCH_PDF.pdf)
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD 库](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library2.zip)
@@ -784,8 +784,9 @@ XIAO ESP32S3 由于其高集成度，是所有 XIAO 中最复杂的一个，PCB 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD 文件](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1_SCH_PCB.zip)
 - **[ZIP]** [Seeed Studio XIAO Plus 底板（带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
 - **[ZIP]** [Seeed Studio XIAO Plus 底板（不带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
+- **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D 模型](https://grabcad.com/library/seeed-studio-xiao-esp32s3-plus-1/files)
 
-### Seeed Studio XIAO ESP32S3 Sense 摄像头
+### 适用于 Seeed Studio XIAO ESP32S3 Sense 摄像头
 
 - **[PDF]** [OV3660 数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf)
 - **[PDF]** [OV5640 数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf)

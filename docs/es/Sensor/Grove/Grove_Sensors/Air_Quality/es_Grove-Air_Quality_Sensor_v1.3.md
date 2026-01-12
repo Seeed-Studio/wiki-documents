@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove_Air_Quality_Sensor_v1.3/img/Grove-Air_Quality_Sensor_v1.3.webp
 slug: /es/Grove-Air_Quality_Sensor_v1.3
+sku: 101020078
 last_update:
   date: 4/14/2025
   author: Priyanshu Roy

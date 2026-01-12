@@ -3,6 +3,7 @@ description: この記事では、Seeed Studio XIAO Debug Mateの包括的な紹
 title: XIAO Debug Mateの入門ガイド
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_1.webp
 slug: /ja/getting_started_with_xiao_debug_mate
+sku: 109990585
 sidebar_position: 1
 last_update:
   date: 10/22/2025
@@ -447,14 +448,12 @@ LEDマトリックスのデザインインスピレーションを提供して�
 
 ## 技術サポート & 製品ディスカッション
 
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
 
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

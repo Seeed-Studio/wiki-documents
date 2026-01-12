@@ -11,6 +11,7 @@ keywords:
   - Microscope
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 slug: /recamera_hq_poe_microscope_demo
+sku: 100041077,100018917,100029708,100074316
 sidebar_position: 3
 last_update:
   date: 11/08/2025
@@ -18,6 +19,8 @@ last_update:
 ---
 
 # reCamera_Microscope
+
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/microscope/4.gif" /></div>
 
 ## 🔥What is reCamera_Microscope?
 
@@ -55,16 +58,6 @@ More application directions are yet to be explored by all of you.
 5. microscope holder
 6. 12V power adapter
 7. Type-C cable
-
-## 🛒Purchase Links
-
-| reCamera POE & Type-C cable                | [reCamera 2002 HQ PoE 8GB](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html) |
-| ------------------------------------------ | ------------------------------------------------------------ |
-| 3D Printer x2                              |                [3D Printer Download](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Microscope/3D_Printed_Case/top_2.3mf)                                              |
-| M12 lens x2                                | [6mmB type – Biological Microscope (Taobao)](https://item.taobao.com/item.htm?id=966337796751&mi_id=0000aLtG3Un2BtLBwdSYZFPZI-nRQdgezdGbA6si_qz_3TY&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6&sku_properties=1627207%3A1364564910)<br />[22mmB type – PCB Microscope (Taobao)](https://item.taobao.com/item.htm?id=966337796751&mi_id=0000aLtG3Un2BtLBwdSYZFPZI-nRQdgezdGbA6si_qz_3TY&sku_properties=1627207%3A1392136713&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6) |
-| M12 Lens Extension Bracket x3              | [M12 Lens Extension Bracket x3        Buy 2 get 1 free M12×0.5 Extension Ring (Taobao)](https://item.taobao.com/item.htm?id=727001812366&mi_id=0000GVjgJwtQrpMV3hfTIBkQ7C750g4UcKWmn7jTQMZm4Kk&spm=tbpc.boughtlist.suborder_itemtitle.1.442e2e8d4bcrJz) |
-| microscope holder<br />& 12V power adapter | [Microscope Holder & 12V Power Adapter        Portable Electronic Microscope Stand with Light 35/50 mm Base (Taobao)](https://item.taobao.com/item.htm?id=749452322341&mi_id=0000hBbQQwAlptuyVy-eEdVQVGl4eia1yeh5B2o2U_KOHoQ&spm=tbpc.boughtlist.suborder_itemtitle.1.55272e8dr0BSO6) |
-
 
 ## Installation Steps
 

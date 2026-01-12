@@ -7,6 +7,7 @@ keywords:
 - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32_matter_env
+sku: 113991254,102010636,101991470
 last_update:
   date: 05/15/2024
   author: Citric
@@ -70,14 +71,16 @@ In this section, we will detail how to configure the use of ESP-IDF in Ubuntu's 
 <div class="table-center">
  <table align="center">
   <tr>
-   <th>XIAO ESP32C3</th>
-   <th>XIAO ESP32S3</th>
-            <th>XIAO ESP32C6</th>
+   <th>XIAO ESP32-C3</th>
+   <th>XIAO ESP32-S3</th>
+   <th>XIAO ESP32-C5</th>
+    <th>XIAO ESP32-C6</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
-            <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" style={{width:400, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
   </tr>
   <tr>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -87,6 +90,12 @@ In this section, we will detail how to configure the use of ESP-IDF in Ubuntu's 
    </div></td>
    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html
+        " target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
    </div></td>
@@ -139,6 +148,10 @@ In order to unify the interface, we will use the **D9** pin as an example in thi
 
 :::tip
 Before starting the environment installation for Matter, make sure you have [installed and accessed the ESP-IDF programming environment](https://wiki.seeedstudio.com/xiao_idf/#step-5-set-up-environment-variables).
+:::
+
+:::tip
+When setting up the ESP-IDF environment, you need to ensure that the XIAO board you are using is compatible with the current Matter environment. For example, when using the XIAO ESP32-C5 and XIAO ESP32-C6, the latest supported version at the time of writing this wiki is ESP-IDF v5.5.1. For more details, please visit [Supported ESP-IDF and connectedhomeip versions](https://github.com/espressif/esp-matter)
 :::
 
 ### Step 1. Install Dependencies
@@ -275,8 +288,9 @@ Within `menuconfig`, you need to locate and enable the `Channel for console oput
 
 For a different XIAO, we also need to update its GPIO pin number. This option can be found under **Component config -> Board Support Package (generic) -> LEDs**.
 
-- For XIAO ESP32C3, the GPIO of D9 is 9.
-- For XIAO ESP32S3, the GPIO of D9 is 8.
+- For XIAO ESP32-C3, the GPIO of D9 is 9.
+- For XIAO ESP32-S3, the GPIO of D9 is 8.
+- For XIAO ESP32-C5, the GPIO of D9 is 9.
 - For XIAO ESP32C6, the GPIO of D9 is 20.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/33.png" style={{width:1000, height:'auto'}}/></div>
@@ -460,7 +474,11 @@ To exit Minicom, press `Ctrl-A` then press `Z` to bring up the help menu, and th
 
 #### Step 6. Setting up the XIAO distribution network
 
-Use the following command to get XIAO connected to your network. When selecting a network, you should note that XIAO only supports 2.4G networks, not 5G networks.
+Use the following command to get XIAO connected to your network. When selecting a network, you can opt for the 2.4G network connection.
+
+:::tip
+In the tutorial, all XIAO series boards only support 2.4G WiFi except XIAO ESP32-C5, which supports dual-band 2.4G & 5G WiFi.
+:::
 
 ```
 matter esp wifi connect <ssid> <password>
@@ -572,7 +590,12 @@ Congratulations to everyone, the tutorial steps carried out here, I believe you 
 
 ESP-Matter's environment is a bit more demanding, and if you are using an Ubuntu host that is often used for development, it is likely that errors will occur due to different versions of some Python dependencies. Since the Matter framework is not developed by Seeed, there is probably nothing we can do about this part of the problem, so we recommend that you submit an issue to the official **[ESP-Matter repository](https://github.com/espressif/esp-matter)** for help if you encounter problems with the installation.
 
-### Q2: How do I uninstall Matter's environment?
+### Q2: Failed to resolve component
+
+After upgrading from v4.x to v5.0+, many functional modules (such as mqtt, json, esp_https_server, etc.) have been removed from the core framework and converted into independent components. Consequently, component dependency missing errors may occur during compilation. You can add the missing components according to the error messages.<br/>
+Reference: [The ESP Component Registry](https://components.espressif.com/)
+
+### Q3: How do I uninstall Matter's environment?
 
 If you are running `./install.sh` script and get stuck in the step of configuring your Python environment, then you may need to check that your [version](#prepare-the-software) of Matter matches the version of connectedhomeip.
 

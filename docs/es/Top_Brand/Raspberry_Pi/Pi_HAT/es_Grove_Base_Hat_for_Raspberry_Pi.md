@@ -5,9 +5,10 @@ keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove_Base_Hat_for_Raspberry_Pi
+sku: 103030275
 last_update:
-  date: 1/11/2023
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 import Tabs from '@theme/Tabs';
@@ -15,11 +16,11 @@ import TabItem from '@theme/TabItem';
 
 ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/main.jpg)
 
-Hoy en día, la serie grove de sensores, actuadores y pantallas ha crecido hasta convertirse en una gran familia. Cada vez más módulos grove se unirán a todo el ecosistema Grove en el futuro. Vemos que Grove ayuda a makers, ingenieros, profesores, estudiantes e incluso artistas a construir, hacer, crear... Siempre sentimos que es nuestra responsabilidad hacer que el módulo Grove sea compatible con más plataformas. Ahora te traemos el Grove Base Hat para Raspberry Pi y el [Grove Base Hat para Raspberry Pi Zero](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero-p-3187.html), en otras palabras, le traemos a la Raspberry Pi todo el Sistema Grove.
+Hoy en día, la serie Grove de sensores, actuadores y pantallas ha crecido hasta convertirse en una gran familia. Cada vez más módulos Grove se unirán a todo el ecosistema Grove en el futuro. Vemos que Grove ayuda a makers, ingenieros, profesores, estudiantes e incluso artistas a construir, hacer, crear... Siempre sentimos que es nuestra responsabilidad hacer que el módulo Grove sea compatible con más plataformas. Ahora te traemos el Grove Base Hat para Raspberry Pi y [Grove Base Hat para Raspberry Pi Zero](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-Zero-p-3187.html), en otras palabras, le traemos a la Raspberry Pi todo el Sistema Grove.
 
 El Grove Base Hat para Raspberry Pi proporciona puertos Digital/Analógico/I2C/PWM/UART para satisfacer todas tus necesidades. Con la ayuda del MCU integrado, un ADC de 12 bits y 8 canales también está disponible para Raspberry Pi.
 
-Francamente hablando, son aproximadamente 60 módulos Grove los que soportan el Grove Base Hat para Raspberry Pi ahora. Sin embargo, continuaremos agregando nuevos módulos compatibles, mientras más uses, más grove se agregará.
+Francamente hablando, son aproximadamente 60 módulos Grove los que soportan el Grove Base Hat para Raspberry Pi ahora. Sin embargo, continuaremos agregando nuevos módulos compatibles, cuanto más uses, más Grove se agregará.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html" target="_blank">
@@ -46,7 +47,7 @@ Francamente hablando, son aproximadamente 60 módulos Grove los que soportan el 
 |Dirección I2C|0x04/0x08|
 
 :::caution
-El voltaje de funcionamiento es de 3.3V, por favor no introduzca más de 3.3V, de lo contrario puede dañar la Raspberry Pi. Además, este hat no puede funcionar con módulos grove de 5V a través del puerto grove, por favor use módulos Grove compatibles con 3.3V.
+El voltaje de operación es 3.3V, por favor no ingreses más de 3.3V, de lo contrario puede dañar la Raspberry Pi. Además, este hat no puede funcionar con módulos Grove de 5V a través del puerto Grove, por favor usa módulos Grove compatibles con 3.3V.
 :::
 
 ## Descripción General del Hardware
@@ -59,20 +60,20 @@ El voltaje de funcionamiento es de 3.3V, por favor no introduzca más de 3.3V, d
 
 **GPIO**
 
-La misma distribución de pines que la raspberry pi.
+La misma distribución de pines que la Raspberry Pi.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/1.jpg)
 
 **PWM(modulación por ancho de pulso)**
 
-El Puerto PWM Grove se conecta al pin GPIO/BCM pin12(PWM0) y GPIO/BCM pin13(PWM1), que es el pin PWM de hardware de Raspberry Pi, además, puedes usar todos los pines GPIO como pin PWM por software.
+El Puerto PWM Grove se conecta al pin GPIO/BCM 12(PWM0) y al pin GPIO/BCM 13(PWM1), que es el pin PWM de hardware de Raspberry Pi, además, puedes usar todos los pines GPIO como pin PWM por software.
 
 :::note
-0- Todos los números de pin de la capa de serigrafía junto al puerto Grove son el número de pin BCM. La diferencia entre los pines BCM y los pines físicos por favor consulte [aquí](https://www.raspberrypi.org/forums/viewtopic.php?p=726435)
+0- Todos los números de pin de la capa de serigrafía junto al puerto Grove son números de pin BCM. La diferencia entre los pines BCM y los pines físicos por favor consulta [aquí](https://www.raspberrypi.org/forums/viewtopic.php?p=726435)
 
 1- Comparado con el PWM de hardware, el PWM por software no es tan preciso y tendrá problemas en altas frecuencias.
 
-2- El pin GPIO/BCM pin18 también está marcado como PWM0, en realidad el GPIO/BCM 12 y el GPIO/BCM 18 comparten el mismo canal PWM, por lo que no pueden configurarse a diferentes velocidades.
+2- El pin GPIO/BCM 18 también está marcado como PWM0, en realidad el GPIO/BCM 12 y el GPIO/BCM 18 comparten el mismo canal PWM, por lo que no pueden configurarse a diferentes velocidades.
 
 3- La salida del conector de audio también usa PWM 0 y PWM 1, por lo que no puedes tener salida de audio en ese conector y usar los PWMs al mismo tiempo.
 :::
@@ -87,21 +88,21 @@ El puerto UART Grove se conecta al GPIO14(UART0 TX) y GPIO15(UART0 RX). UART se 
 
 **Digital**
 
-Hay 6 conectores Grove digitales en esta placa, normalmente el cable amarillo (que se conecta al pin superior de los 4 pines del conector Grove) del cable Grove es el cable de señal, por lo que nombramos el puerto Grove digital **D5/D16/D18/D22/D24/D26**.
+Hay 6 conectores Grove digitales en esta placa, normalmente el cable amarillo (que se conecta al pin superior del conector Grove de 4 pines) del cable Grove es el cable de señal, por lo que nombramos los puertos Grove digitales **D5/D16/D18/D22/D24/D26**.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/4.jpg)
 
 **Analógico**
 
-Como sabemos, no hay ADC en la Raspberry Pi, por lo que no puede funcionar con sensores analógicos directamente. Ahora con la ayuda del MCU integrado STM32, el hat base Grove puede funcionar como un ADC externo de 12 bits, lo que significa que puedes usar sensores analógicos con tu Raspberry Pi. Aún más agradable es que no uno sino cuatro conectores Grove analógicos están disponibles.
+Como sabemos, no hay ADC en la Raspberry Pi, por lo que no puede funcionar con sensores analógicos directamente. Ahora con la ayuda del MCU integrado STM32, el Grove base hat puede funcionar como un ADC externo de 12 bits, lo que significa que puedes usar sensores analógicos con tu Raspberry Pi. Aún más agradable es que no uno sino cuatro conectores Grove analógicos están disponibles.
 
-El sensor analógico introduce el voltaje analógico en el ADC de 12 bits. Después de que el ADC convierte los datos analógicos a datos digitales, introduce los datos digitales a la Raspberry Pi a través de la interfaz I2C.
+El sensor analógico ingresa el voltaje analógico al ADC de 12 bits. Después de que el ADC convierte los datos analógicos a datos digitales, ingresa los datos digitales a la Raspberry Pi a través de la interfaz I2C.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/5.jpg)
 
 **I2C**
 
-Hay tres puertos I2C disponibles en esta placa, todos se conectan directamente al pin I2C de la raspberry. Puedes considerar esta parte como un hub I2C. La mayoría de los nuevos módulos grove de seeed tienen interfaz I2C, puedes encontrar que esos tres puertos son extremadamente útiles.
+Hay tres puertos I2C disponibles en esta placa, todos se conectan directamente al pin I2C de la Raspberry. Puedes considerar esta parte como un hub I2C. La mayoría de los nuevos módulos Grove de Seeed tienen interfaz I2C, puedes encontrar que esos tres puertos son extremadamente útiles.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/pin-out/7.jpg)
 
@@ -115,20 +116,20 @@ Usamos el puerto SWD para grabar el firmware a este hat. Además, puedes ver 3 p
 
 | Parámetro                   | [Grove Base Hat para Raspberry Pi](https://wiki.seeedstudio.com/es/Grove_Base_Hat_for_Raspberry_Pi/)                   | [GrovePi+](https://wiki.seeedstudio.com/es/GrovePi_Plus/)                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Voltaje de Funcionamiento             | 3.3V                                                                                                              | 5V                                                                                                                               |
+| Voltaje de Trabajo          | 3.3V                                                                                                              | 5V                                                                                                                               |
 | MCU                         | STM32F030F4P6                                                                                                     | ATMEGA328P                                                                                                                       |
-| Puertos Grove                 | 6 x Digital(3.3V); 4 x Analógico(3.3V) ; 3 x I2C(3.3V); 1 x PWM(3.3V) ; 1 x RPISER(UART) conecta a Raspberry Pi(3.3V) ; 1 x SWD | 7 x Digital(5V); 3 x Analógico(5V) ;3 x I2C(5V) ;1 x SERIAL: Conecta a ATMEGA328P D0/1(5V) ; 1 x RPISER: Conecta a Raspberry Pi(3.3V) ;1 x ISP |
-| Grove-Digital               | Conecta a Raspberry Pi directamente                                                                                  | Conecta a pines digitales ATMEGA328P y transfiere a señal I2C, luego a través de convertidor de nivel a Raspberry Pi                      |
-| Grove-Analógico                | Conecta a STM32F030F4P6(ADC 12bit) y luego transfiere a señal I2C, enruta a Raspberry Pi directamente                | Conecta a pines analógicos ATMEGA328P(ADC 10bit) y luego transfiere a señal I2C, luego a través de convertidor de nivel a Raspberry Pi       |
-| Grove-I2C                   | Conecta a Raspberry Pi directamente                                                                                  | Conecta a través de convertidor de nivel a Raspberry Pi                                                                                  |
-| Grove-PWM                   | Conecta a Raspberry Pi directamente                                                                                  | NA                                                                                                                               |
-| RPISER                      | Conecta a Raspberry Pi directamente                                                                                  | Conecta a Raspberry Pi directamente                                                                                                 |
-| SERIAL                      | NA                                                                                                                | Conecta a pines digitales ATMEGA328P D0/D1 y transfiere a señal I2C, luego a través de convertidor de nivel a Raspberry Pi                |
+| Puertos Grove               | 6 x Digital(3.3V); 4 x Analógico(3.3V) ; 3 x I2C(3.3V); 1 x PWM(3.3V) ; 1 x RPISER(UART) conecta a Raspberry Pi(3.3V) ; 1 x SWD | 7 x Digital(5V); 3 x Analógico(5V) ;3 x I2C(5V) ;1 x SERIAL: Conecta a ATMEGA328P D0/1(5V) ; 1 x RPISER: Conecta a Raspberry Pi(3.3V) ;1 x ISP |
+| Grove-Digital               | Conecta a Raspberry Pi directamente                                                                               | Conecta a pines digitales ATMEGA328P y transfiere a señal I2C, luego a través de convertidor de nivel a Raspberry Pi            |
+| Grove-Analógico             | Conecta a STM32F030F4P6(ADC 12bit) y luego transfiere a señal I2C, enruta a Raspberry Pi directamente            | Conecta a pines analógicos ATMEGA328P(ADC 10bit) y luego transfiere a señal I2C, luego a través de convertidor de nivel a Raspberry Pi |
+| Grove-I2C                   | Conecta a Raspberry Pi directamente                                                                               | Conecta a través de convertidor de nivel a Raspberry Pi                                                                         |
+| Grove-PWM                   | Conecta a Raspberry Pi directamente                                                                               | NA                                                                                                                               |
+| RPISER                      | Conecta a Raspberry Pi directamente                                                                               | Conecta a Raspberry Pi directamente                                                                                              |
+| SERIAL                      | NA                                                                                                                | Conecta a pines digitales ATMEGA328P D0/D1 y transfiere a señal I2C, luego a través de convertidor de nivel a Raspberry Pi     |
 | SWD                         | Graba firmware a STM32F030F4P6                                                                                    | NA                                                                                                                               |
 | ISP                         | NA                                                                                                                | Graba firmware a ATMEGA328P                                                                                                      |
 | Pines del Conector Raspberry Pi | 40                                                                                                                | 26                                                                                                                               |
 
-## Comenzando
+## Primeros Pasos
 
 ### Hardware
 
@@ -145,7 +146,7 @@ Usamos el puerto SWD para grabar el firmware a este hat. Además, puedes ver 3 p
 - **Paso 3.** Alimenta la Raspberry Pi con cable micro-usb.
 
 :::caution
-Recomendamos que enciendas las Raspberry Pi después de que todas las conexiones de hardware estén completas. Por favor no conectes en caliente el módulo sensor, de lo contrario la Raspberry Pi puede fallar.
+Recomendamos que enciendas las Raspberry Pis después de que todas las conexiones de hardware estén completas. Por favor, no conectes en caliente el módulo sensor, de lo contrario la Raspberry Pi puede fallar.
 :::
 
 ### Software
@@ -160,7 +161,7 @@ Si experimentas problemas usando el Grove Base Hat para Pi con la librería `gro
 
 :::
 
-En esta sección introduciremos cómo instalar la librería **seeed grove.py** y cómo usar I2C, PWM, puerto Digital y analógico del Grove Base Hat para Raspberry Pi.
+En esta sección introduciremos cómo instalar la librería **seeed grove.py** y cómo usar los puertos I2C, PWM, Digital y analógico del Grove Base Hat para Raspberry Pi.
 
 :::tip
 Si no sabes cómo usar una raspberry pi, por favor revisa [aquí](https://www.raspberrypi.org/documentation/) antes de comenzar.
@@ -168,14 +169,14 @@ Si no sabes cómo usar una raspberry pi, por favor revisa [aquí](https://www.ra
 
 #### Arquitectura
 
-Para operar sensores grove, el grove.py depende de muchas librerías de interfaz de hardware como mraa/smbus2/rpi.gpi/rpi_ws281x.
+Para operar sensores grove, grove.py depende de muchas librerías de interfaz de hardware como mraa/smbus2/rpi.gpi/rpi_ws281x.
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/Seeed-Studio/grove.py/raw/master/images/grove-py-arch.png" /></p>
 
 #### Instalación
 
-:::caution
-Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**. La siguiente instrucción funciona en el OS Bookworm.
+:::tip
+Un entorno virtual es actualmente la forma más estable y recomendada para replicar en Bookworm.
 :::
 
 ##### Instalar Dependencias
@@ -186,12 +187,20 @@ Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usa
 echo "deb https://seeed-studio.github.io/pi_repo/ stretch main" | sudo tee /etc/apt/sources.list.d/seeed.list
 ```
 
-**Añadir clave GPG pública**
+**Agregar clave GPG pública**
 
 ```linux
-curl https://seeed-studio.github.io/pi_repo/public.key | sudo apt-key add -
-# or
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BB8F40F3
+curl https://seeed-studio.github.io/pi_repo/public.key | sudo tee /etc/apt/trusted.gpg.d/seeed.gpg > /dev/null
+sudo apt update
+```
+
+**Instalar dependencias subyacentes (global está bien)**
+
+```linux
+# Optional: Seeed binary package (not needed for most sensors)
+sudo apt install libbmi088 libbma456
+# Required: Python layer dependencies
+pip install smbus2 pyserial seeed-python-dht   # DHT DHT series required
 ```
 
 **Habilitar interfaz I2C**
@@ -200,61 +209,52 @@ curl https://seeed-studio.github.io/pi_repo/public.key | sudo apt-key add -
 sudo raspi-config
 ```
 
-- Selecciona interfacingg Options>I2C>Yes>Ok>Finish
+- Selecciona Interfacing Options>I2C>Yes>Ok>Finish
 - Habilita la interfaz I2C
 
 **Instalar paquetes requeridos**
+:::tip
+En la última versión de Python3, se recomienda usar *virtualenv* para gestión aislada de paquetes.
+:::
 
-En la versión más reciente de Python3, se recomienda usar *virtualenv* para el manejo aislado de paquetes.
+:::tip
+Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**. La siguiente instrucción funciona en Bookworm OS.
+:::
 
 <Tabs>
-<TabItem value="python3" label="entorno global" default>
 
-```linux
-sudo pip3 install rpi_ws281x
-pip3 install RPi.GPIO
-```
-
-</TabItem>
 <TabItem value="env" label="entorno virtual" default>
 
 ```linux
-sudo apt install python3-virtualenv
-virtualenv -p python3 env
-source env/bin/activate
-
-pip install rpi_ws281x RPi.GPIO
+# Create once
+mkdir ~/grove_env && cd ~/grove_env
+python3 -m venv --system-site-packages env
+# From now on, you need to run this first every time you open the terminal.
+source ~/grove_env/env/bin/activate 
 ```
 
 </TabItem>
 </Tabs>
 
-:::note
-Puede haber problemas al usar RPi.GPIO en la Pi 5, como se discute [aquí](https://forums.raspberrypi.com/viewtopic.php?t=367169#p2230294). se recomienda reemplazar RPi.GPIO con rpi-lgpio. Comandos:
 
-```linux
-pip uninstall RPi.GPIO
-pip install rpi-lgpio
-```
 
-:::
 
 ##### Instalar grove.py
 
-Solo para principiantes o usuarios de biblioteca, por favor instale con el método en línea.
+Para principiantes o solo usuarios de librería, por favor instala con el método en línea.
 
-- Instalación automática de dependencias y despliegue de biblioteca.
+- Instalación automática de dependencias y despliegue de librería.
 - Rápido para comenzar, no se requiere operación manual.
 
-Para desarrolladores o usuarios avanzados, por favor instale las dependencias y luego instale grove.py con el código fuente.
+Para desarrolladores o usuarios avanzados, por favor instala dependencias y luego instala grove.py con código fuente.
 
 - Incluye el repositorio completo de `grove.py`, código fuente, ejemplos y documentación
-- Adecuado para ver código fuente y ejemplos, modificar funciones de biblioteca
+- Adecuado para ver código fuente y ejemplos, modificar funciones de librería
 
 <Tabs>
-<TabItem  value="Beginner" label="Para principiantes o usuarios de biblioteca" default>
+<TabItem  value="Beginner" label="Para principiantes o usuarios de librería" default>
 
-Para instalar en el entorno global, puede escribir el siguiente comando:
+Para instalar en el entorno global, puedes escribir el siguiente comando:
 
 ```linux
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
@@ -267,7 +267,10 @@ curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | bash -
 ```
 
 </TabItem>
-<TabItem  value="Developer" label="Para desarrollador o usuario avanzado" default>
+<TabItem  value="Developer" label="Para desarrolladores o usuarios avanzados" default>
+
+
+
 
 Para instalar en el entorno global, puedes escribir el siguiente comando:
 
@@ -280,6 +283,8 @@ sudo pip3 install .
 Si quieres instalar en un entorno virtual, primero activa tu virtualenv y escribe el siguiente comando:
 
 ```linux
+# Execute in a virtual environment
+cd ~/grove_env
 git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py
 pip3 install .
@@ -287,6 +292,26 @@ pip3 install .
 
 </TabItem>
 </Tabs>
+
+:::note
+
+ Debido a actualizaciones en la Raspberry Pi, el script de instalación de un clic es relativamente antiguo y puede no funcionar para instalación de un clic. Se recomienda usar el segundo método - el método de código fuente más estable para descargar la librería Grove.
+
+:::
+
+**Plantilla General para Ejecutar Rutinas (Cada Vez que se Abre una Nueva Terminal)**
+
+Entorno virtual
+```linux
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
+python grove_xxx.py          # xxx = Module Name
+```
+
+Entorno global
+```linux
+ grove_xxx.py          # xxx = Module Name
+```
 
 ### Uso
 
@@ -391,7 +416,7 @@ Tomaremos el [Grove - Ultrasonic Ranger](https://www.seeedstudio.com/Grove-Ultra
 Escribe el siguiente comando `grove_ultrasonic_ranger 5 6` en la interfaz de línea de comandos.
 
 ```python
-pi@raspberrypi:~$ grove_ultrasonic_ranger 5 6
+pi@raspberrypi:~$  grove_ultrasonic_ranger 5 6
 Detecting distance...
 6.979909436456088 cm
 7.966469074117726 cm
@@ -416,7 +441,7 @@ Cuando cambies la distancia entre el Grove - Ultrasonic Ranger y el objeto objet
 Presiona ++ctrl+c++ para salir.
 
 :::caution
-Para la mayoría de módulos grove, necesitas añadir el parámetro del número de pin, como `grove_ultrasonic_ranger 5 6`, **5** y **6** son los pines GPIO/BCM. Sin embargo, puedes haber notado que en el primer ejemplo `grove_pwm_buzzer`, no añadimos un parámetro después del comando. Esto es porque el puerto PWM y el puerto I2C no requieren parámetros de número de pin. Puedes encontrar la serigrafía del número de pin justo al lado del conector Grove.
+Para la mayoría de módulos grove, necesitas agregar el parámetro de número de pin, como `grove_ultrasonic_ranger 5 6`, **5** y **6** son los pines GPIO/BCM. Sin embargo, puedes haber notado que en el primer ejemplo `grove_pwm_buzzer`, no agregamos un parámetro después del comando. Esto es porque el puerto PWM y el puerto I2C no requieren parámetros de número de pin. Puedes encontrar el número de pin serigrafiado justo al lado del socket Grove.
 :::
 
 **Puerto Analógico**
@@ -434,7 +459,7 @@ Tomaremos el [Grove - Air quality sensor v1.3](https://www.seeedstudio.com/Grove
 Escribe el siguiente comando `grove_air_quality_sensor_v1_3 0 1` en la interfaz de línea de comandos.
 
 ```python
-pi@raspberrypi:~$ grove_air_quality_sensor_v1_3 0 1
+pi@raspberrypi:~$  grove_air_quality_sensor_v1_3 0 1
 Detecting ...
 62, Air Quality OK.
 63, Air Quality OK.
@@ -462,13 +487,13 @@ KeyboardInterrupt
 Puedes usar este sensor para detectar la calidad del aire. Presiona ++ctrl+c++ para salir.
 
 :::note
-Es posible que hayas notado que para el puerto analógico, el número de pin en la serigrafía es algo como **A1, A0**, sin embargo en el comando usamos el parámetro **0** y **1**, igual que el puerto digital. Así que por favor asegúrate de conectar el módulo en el puerto correcto, de lo contrario puede haber conflictos de pines.
+Puede que hayas notado que para el puerto analógico, el número de pin en la serigrafía es algo como **A1, A0**, sin embargo en el comando usamos el parámetro **0** y **1**, igual que el puerto digital. Así que por favor asegúrate de conectar el módulo en el puerto correcto, de lo contrario puede haber conflictos de pines.
 :::
 
 **I2C**
 
 :::caution
-Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comandos **solo con Python3**.
+Si estás usando **Raspberry Pi con Raspberrypi OS >= Bullseye**, tienes que usar esta línea de comando **solo con Python3**.
 :::
 
 Tomaremos el [Grove - OLED Display 128x64](https://www.seeedstudio.com/Grove-OLED-Display-0-9-p-781.html) como ejemplo para introducir el puerto I2C.
@@ -480,16 +505,16 @@ Tomaremos el [Grove - OLED Display 128x64](https://www.seeedstudio.com/Grove-OLE
 Escribe el siguiente comando `grove_oled_display_128x64` en la interfaz de línea de comandos.
 
 ```
-(env)pi@raspberrypi:~$ grove_oled_display_128x64
+(env)pi@raspberrypi:~$ python grove_oled_display_128x64
 ```
 
-Parece que no pasó nada, sin embargo puedes encontrar la oración más famosa del mundo cibernético si revisas tu oled.😄
+Parece que no pasó nada, sin embargo puedes encontrar la frase más famosa del mundo cibernético si revisas tu oled.😄
 
 :::note
-Si usas la herramienta I2C para escanear la dirección I2C del módulo grove, puedes encontrar dos o más direcciones. 0x04 es la dirección del *Grove Base Hat para Raspberry Pi*.
+Si usas la herramienta I2C para escanear la dirección I2C del módulo Grove, puedes encontrar dos o más direcciones. 0x04 es la dirección del *Grove Base Hat for Raspberry Pi*.
 :::
 
-## Visor de Esquemático en Línea
+## Visor de Esquemas en Línea
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/res/Raspberry%20Pi%20Grove%20Base%20HAT%20v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
@@ -498,12 +523,12 @@ Si usas la herramienta I2C para escanear la dirección I2C del módulo grove, pu
 
 :::noteChange Nota:
 
-Debido a que los chips de la serie ST32 están agotados globalmente, los precios han aumentado varias veces y no hay una fecha de entrega clara. No tenemos más opción que cambiar al chip MM32. Los modelos de reemplazo específicos son los siguientes: STM32F030F4P6TR es reemplazado por MM32F031F6P6. Después de que el chip es reemplazado, las funciones del producto, características, métodos de uso y códigos permanecen sin cambios. Debe notarse que la versión del firmware ha cambiado, y el firmware de fábrica ha sido ajustado según los diferentes chips. Si necesitas volver a grabar el firmware, por favor descarga el firmware correspondiente al chip.
+Debido a que los chips de la serie ST32 están agotados globalmente, los precios han aumentado varias veces y no hay una fecha de entrega clara. No tenemos más opción que cambiar al chip MM32. Los modelos de reemplazo específicos son los siguientes: STM32F030F4P6TR es reemplazado por MM32F031F6P6. Después de que el chip es reemplazado, las funciones del producto, características, métodos de uso y códigos permanecen sin cambios. Debe notarse que la versión del firmware ha cambiado, y el firmware de fábrica ha sido ajustado según diferentes chips. Si necesitas volver a grabar el firmware, por favor descarga el firmware correspondiente al chip.
 :::
 
 ## Recursos
 
-- **[Zip]** [Archivos Eagle del Grove Base Hat para Raspberry Pi](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/res/Raspberry%20Pi%20Grove%20Base%20HAT%20v1.0.zip)
+- **[Zip]** [Archivos Eagle de Grove Base Hat para Raspberry Pi](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/res/Raspberry%20Pi%20Grove%20Base%20HAT%20v1.0.zip)
 
 - **[Zip]** [Librería Seeed Grove.py](https://github.com/Seeed-Studio/grove.py/archive/master.zip)
 
@@ -517,7 +542,7 @@ Debido a que los chips de la serie ST32 están agotados globalmente, los precios
 
 ## Proyecto
 
-Este es el Video de introducción de este producto.
+Este es el video de introducción de este producto.
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0dFQWwXOOBI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -525,7 +550,7 @@ Este es el Video de introducción de este producto.
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

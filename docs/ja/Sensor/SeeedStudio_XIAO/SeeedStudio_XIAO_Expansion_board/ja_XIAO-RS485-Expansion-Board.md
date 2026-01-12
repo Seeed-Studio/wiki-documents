@@ -5,6 +5,7 @@ keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/top.webp
 slug: /ja/XIAO-RS485-Expansion-Board
+sku: 113991354
 last_update:
   date: 11/20/2024
   author: Jason

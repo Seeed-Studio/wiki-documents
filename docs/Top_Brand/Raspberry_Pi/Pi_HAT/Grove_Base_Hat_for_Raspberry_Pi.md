@@ -5,9 +5,10 @@ keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Base_Hat_for_Raspberry_Pi
+sku: 103030275
 last_update:
-  date: 1/11/2023
-  author: jianjing Huang
+  date: 12/29/2025
+  author: Brandy
 ---
 
 import Tabs from '@theme/Tabs';
@@ -174,8 +175,8 @@ To operate grove sensors, the grove.py depends many hardware interface libraries
 
 #### Installation
 
-:::caution
-If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**. The following instruction is working on Bookworm OS.
+:::tip
+A virtual environment is currently the most stable and recommended way to replicate in Bookworm.
 :::
 
 ##### Install Dependencies
@@ -189,9 +190,17 @@ echo "deb https://seeed-studio.github.io/pi_repo/ stretch main" | sudo tee /etc/
 **Add public GPG key**
 
 ```linux
-curl https://seeed-studio.github.io/pi_repo/public.key | sudo apt-key add -
-# or
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BB8F40F3
+curl https://seeed-studio.github.io/pi_repo/public.key | sudo tee /etc/apt/trusted.gpg.d/seeed.gpg > /dev/null
+sudo apt update
+```
+
+**Install underlying dependencies (global is fine)**
+
+```linux
+# Optional: Seeed binary package (not needed for most sensors)
+sudo apt install libbmi088 libbma456
+# Required: Python layer dependencies
+pip install smbus2 pyserial seeed-python-dht   # DHT DHT series required
 ```
 
 **Enable I2C interface**
@@ -204,40 +213,31 @@ sudo raspi-config
 - Enable I2C interface
 
 **Install required packages**
-
+:::tip
 In the lastest version of Python3, it is recommended to use *virtualenv* for isolated package management.
+:::
+
+:::tip
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**. The following instruction is working on Bookworm OS.
+:::
 
 <Tabs>
-<TabItem value="python3" label="global environment" default>
 
-```linux
-sudo pip3 install rpi_ws281x
-pip3 install RPi.GPIO
-```
-
-</TabItem>
 <TabItem value="env" label="vertual environment" default>
 
 ```linux
-sudo apt install python3-virtualenv
-virtualenv -p python3 env
-source env/bin/activate
-
-pip install rpi_ws281x RPi.GPIO
+# Create once
+mkdir ~/grove_env && cd ~/grove_env
+python3 -m venv --system-site-packages env
+# From now on, you need to run this first every time you open the terminal.
+source ~/grove_env/env/bin/activate 
 ```
 
 </TabItem>
 </Tabs>
 
-:::note
-There might be issues using RPi.GPIO on the Pi 5, as discussed [here](https://forums.raspberrypi.com/viewtopic.php?t=367169#p2230294). it is recommended to replace RPi.GPIO with rpi-lgpio. Commands:
 
-```linux
-pip uninstall RPi.GPIO
-pip install rpi-lgpio
-```
 
-:::
 
 ##### Install grove.py
 
@@ -269,6 +269,9 @@ curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | bash -
 </TabItem>
 <TabItem  value="Developer" label="For developer or advanced user" default>
 
+
+
+
 To install into the global environment, you can type the following command:
 
 ```linux
@@ -280,6 +283,8 @@ sudo pip3 install .
 If you want to install into a virtual environment, first active your virtualenv and type the following command:
 
 ```linux
+# Execute in a virtual environment
+cd ~/grove_env
 git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py
 pip3 install .
@@ -287,6 +292,26 @@ pip3 install .
 
 </TabItem>
 </Tabs>
+
+:::note
+
+ Due to updates to the Raspberry Pi, the one-click installation script is relatively old and may not work for one-click installation. It is recommended to use the second method - the more stable source code method to download the Grove library.
+
+:::
+
+**General Template for Running Routines (Every Time a New Terminal Opens)**
+
+Virtual environment
+```linux
+source ~/grove_env/env/bin/activate
+cd ~/grove_env/grove.py/grove
+python grove_xxx.py          # xxx = Module Name
+```
+
+Global environment
+```linux
+ grove_xxx.py          # xxx = Module Name
+```
 
 ### Usage
 
@@ -391,7 +416,7 @@ We will take the [Grove - Ultrasonic Ranger](https://www.seeedstudio.com/Grove-U
 Tap the following command `grove_ultrasonic_ranger 5 6` in the command line interface.
 
 ```python
-pi@raspberrypi:~$ grove_ultrasonic_ranger 5 6
+pi@raspberrypi:~$  grove_ultrasonic_ranger 5 6
 Detecting distance...
 6.979909436456088 cm
 7.966469074117726 cm
@@ -434,7 +459,7 @@ We will take the [Grove - Air quality sensor v1.3](https://www.seeedstudio.com/G
 Tap the following command `grove_air_quality_sensor_v1_3 0 1` in the command line interface.
 
 ```python
-pi@raspberrypi:~$ grove_air_quality_sensor_v1_3 0 1
+pi@raspberrypi:~$  grove_air_quality_sensor_v1_3 0 1
 Detecting ...
 62, Air Quality OK.
 63, Air Quality OK.
@@ -480,7 +505,7 @@ We will take the [Grove - OLED Display 128x64](https://www.seeedstudio.com/Grove
 Tap the following command `grove_oled_display_128x64` in the command line interface.
 
 ```
-(env)pi@raspberrypi:~$ grove_oled_display_128x64
+(env)pi@raspberrypi:~$ python grove_oled_display_128x64
 ```
 
 It seems nothing happened, however you can find the most famous sentence in the cyber world if you check your oled.😄

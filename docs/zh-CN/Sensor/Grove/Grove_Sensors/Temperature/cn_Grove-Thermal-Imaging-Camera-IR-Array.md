@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-Thermal-Imaging-Camera-IR-Array
+sku: 114020142, 114020141, 101020892, 101020992
 last_update:
   date: 1/3/2023
   author: jianjing Huang

@@ -6,6 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
 slug: /epaper_EN04
+sku: 100003489,E25120101
 last_update:
   date: 11/25/2025
   author: Allen
@@ -391,12 +392,7 @@ void loop() {
 
 
 ## Resources
-Coming soon...
-<!-- chang to en04 -->
-<!-- - **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Schematic](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_SCH_V1.2.pdf)
-- **[PDF]** [Seeed Studio XIAO ePaper Display EN04 Grabcad 3D File](https://grabcad.com/library/xiao-epaper-display-board-nRF52840-EN04-1)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/XIAO_ePaper_Display_Board_EN04_V1.2_SCH&PCB.zip) -->
-
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EN04 SCH&PCB](https://files.seeedstudio.com/wiki/Epaper/EN04/202004502_XIAO_ePaper_Display_Board_EN04_V1_SCH_and_PCB.zip)
 
 
 ## Tech Support & Product Discussion

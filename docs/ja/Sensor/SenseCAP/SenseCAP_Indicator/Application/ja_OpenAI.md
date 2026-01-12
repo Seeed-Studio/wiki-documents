@@ -885,7 +885,7 @@ int indicator_openai_init(void)
 ## リソース
 
 1. [SenseCAP Indicator X ChatGPT](/ja/SenseCAP_Indicator_ChatGPT)
-2. [SenseCAP Indicator X DALL·E](/ja/SenseCAP_Indicator_DALL·E)
+2. [SenseCAP Indicator X DALL·E](/ja/SenseCAP_Indicator_DALL-E)
 3. **Demo SDK**: SenseCAP IndicatorのDemo SDKは[GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)で入手できます。
 4. **SenseCAP Indicator ユーザーガイド**: ユーザーガイドでは、SenseCAP Indicatorボードのソフトウェアとハードウェアに関する詳細情報を提供しています。[こちら](/ja/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)でお読みいただけます。
 5. **Chat completions OpenAI ガイド**: Chat APIが初めての方は、このガイドが役立ちます。[こちら](https://platform.openai.com/docs/guides/chat/chat-completions-beta)でご確認ください。

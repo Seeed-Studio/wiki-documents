@@ -8,6 +8,7 @@ tags:
   - robots
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini.webp
 slug: /recomputer_jetson_mini_hardware_interfaces_usage
+sku: 114993553,114993551,102111001,102110999,114993592,114993593
 last_update:
   date: 12/16/2024
   author: Youjiang
@@ -446,6 +447,13 @@ By observing the two terminals, you can see that in **Terminal 1**, the number o
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/canRX.jpg"/>
 </div>
+
+You need to enable **CAN**, before using it in your program. run this command in terminal:
+
+```bash
+sudo gpioset --mode=wait 0 106=0 #enable CAN1
+sudo gpioset --mode=wait 0 43=0 #enable CAN0
+```
 
 ### CAN0 Power Output
 

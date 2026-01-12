@@ -5,6 +5,7 @@ keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Mega_Protoshield_Kit
+sku: 110060001
 last_update:
   date: 1/31/2023
   author: shuxu hu

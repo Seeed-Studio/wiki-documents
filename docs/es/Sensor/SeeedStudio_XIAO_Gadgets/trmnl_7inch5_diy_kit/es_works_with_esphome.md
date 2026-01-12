@@ -6,6 +6,7 @@ keywords:
 - TRMNL
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp
 slug: /es/ogdiy_kit_works_with_esphome
+sku: 104991005
 sidebar_position: 3
 last_update:
   date: 07/24/2025
@@ -67,7 +68,7 @@ El sistema funciona convirtiendo tu configuración YAML en firmware completament
 
 Exploremos cómo configurarlo y aprovechar al máximo esta pantalla versátil.
 
-## Comenzando
+## Primeros Pasos
 
 Antes de que comience el contenido del tutorial de este artículo, es posible que necesites tener el siguiente hardware listo.
 
@@ -105,9 +106,9 @@ Recomendamos usar Home Assistant Green como el host de Home Assistant para este 
 :::tip instalar Home Assistant
 También hemos escrito cómo instalar Home Assistant para algunos productos de Seeed Studio, por favor consúltalos.
 
-- **[Comenzando con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
-- **[Comenzando con Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
-- **[Comenzando con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
+- **[Primeros Pasos con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
+- **[Primeros Pasos con Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
+- **[Primeros Pasos con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
 
 Si no estás usando un producto de Seeed Studio, también puedes verificar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
 
@@ -117,7 +118,7 @@ Si no estás usando un producto de Seeed Studio, también puedes verificar y apr
 ### Instalación del Equipo
 
 **Paso 1. Conectar la Pantalla a la Placa del Controlador**  
-Alinea el cable FPC con el conector en la XIAO ePaper Display Board, luego asegura el pestillo para garantizar una conexión firme.  
+Alinea el cable FPC con el conector en la Placa de Pantalla ePaper XIAO, luego asegura el pestillo para garantizar una conexión firme.  
 
 :::tip
 El lado metálico del cable FPC debe estar hacia arriba, de lo contrario, no se mostrará contenido.
@@ -137,7 +138,7 @@ Conecta el cable de la batería al conector JST en la placa del controlador, ase
 :::tip
 Ten en cuenta que el cable flexible de la pantalla es muy frágil. Ten cuidado al operar. Si se daña, toda la pantalla dejará de funcionar.
 :::
-Imprime las partes de la carcasa de código abierto de la [parte de Recursos](#resources) y ensambla los componentes dentro.  
+Imprime las partes de la carcasa de código abierto desde la [parte de Recursos](#resources) y ensambla los componentes en el interior.  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
 
@@ -264,7 +265,7 @@ display:
 Haz clic en **INSTALL** para instalar el código en el dispositivo y verás la siguiente imagen.
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='Instalar a través del navegador'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con la computadora que tengas a mano.
@@ -307,7 +308,7 @@ Espera un momento y verás '¡Hello world!' en la pantalla ～
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='Instalar a través del host'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más simple.
@@ -331,10 +332,10 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Signi
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de encriptación válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el panel ePaper a nada, solo asegúrate de que esté en línea.
@@ -470,7 +471,7 @@ Instala esos códigos en tu dispositivo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/15.png" style={{width:1000, height:'auto'}}/></div>
 
-La función del código es obtener **weather**, **temperature** y **pressure** de HA y mostrarlos en la pantalla.
+La función del código es obtener **clima**, **temperatura** y **presión** de HA y mostrarlos en la pantalla.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/39.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -491,7 +492,7 @@ Cuando veas la retroalimentación como la siguiente imagen, significa que el có
 
 Este ejemplo mostrará un icono en la pantalla.
 
-Primero, necesitamos instalar un complemento de File Editor. Busca **Studio Code Server** y haz clic en él. Haz clic en **INSTALL** y **START**.
+Primero, necesitamos instalar un complemento de Editor de Archivos. Busca **Studio Code Server** y haz clic en él. Haz clic en **INSTALL** y **START**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:800, height:'auto'}}/></div>
 
@@ -619,7 +620,7 @@ Primero, necesitas instalar un complemento de captura de pantalla **Puppet**, [h
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/83.jpg" style={{width:800, height:'auto'}}/></div>
 
-Ten en cuenta que la versión debe ser **superior o igual a 1.11.4**. Después de la instalación, ve a la **Configuration page**. Necesitamos crear un access_token para este complemento.
+Ten en cuenta que la versión debe ser **superior o igual a 1.11.4**. Después de la instalación, ve a la **página de Configuración**. Necesitamos crear un access_token para este complemento.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/96.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -627,7 +628,7 @@ Ve al siguiente paso para crear un token y pegarlo aquí.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/88.jpg" style={{width:800, height:'auto'}}/></div>
 
-Ve al final de la **Security page** y crea un token, luego cópialo y pégalo en el complemento **Puppet**.
+Ve al final de la **página de Seguridad** y crea un token, y luego cópialo y pégalo en el complemento **Puppet**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/85.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -635,7 +636,7 @@ Recuerda **reiniciar** el complemento Puppet.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/95.jpg" style={{width:800, height:'auto'}}/></div>
 
-Iniciar el complemento lanzará un nuevo servidor en el puerto 10000. Cualquier ruta que solicites devolverá una captura de pantalla de esa página. Necesitarás especificar el tamaño de ventana gráfica que deseas.
+Iniciar el complemento lanzará un nuevo servidor en el puerto 10000. Cualquier ruta que solicites devolverá una captura de pantalla de esa página. Necesitarás especificar el tamaño de ventana gráfica que desees.
 
 Por ejemplo, para obtener una captura de pantalla de 1000px x 1000px de tu panel de control predeterminado, solicita:
 
@@ -645,7 +646,7 @@ Por ejemplo, para obtener una captura de pantalla de 1000px x 1000px de tu panel
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000
 ```
 
-Para reducir la paleta de colores para pantallas E Ink®, puedes agregar el parámetro eink. El valor representa el número de colores (incluyendo el negro) a usar. Por ejemplo, para una pantalla E Ink® de 2 colores:
+Para reducir la paleta de colores para pantallas E Ink®, puedes agregar el parámetro eink. El valor representa el número de colores (incluyendo negro) a usar. Por ejemplo, para una pantalla E Ink® de 2 colores:
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2
@@ -657,7 +658,7 @@ Si estás usando eink=2, también puedes invertir los colores agregando el pará
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 ```
 
-Además, también puedes capturar otras páginas, por ejemplo la página **To-do lists** en HA:
+Además, también puedes capturar otra página, por ejemplo la página de **listas de tareas** en HA:
 
 ```python
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert
@@ -666,6 +667,15 @@ http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert
 Puedes ver el efecto de la captura de pantalla ingresando este enlace en tu navegador.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
+
+Copia el código a continuación y pégalo después de `esp32`:
+
+```yaml
+# Enable PSRAM support since online_image requires more than the available RAM capacity
+psram:
+  mode: octal
+  speed: 80MHz
+```
 
 Puedes copiar el código a continuación y pegarlo después de `captive_portal` como se muestra a continuación.
 
@@ -712,7 +722,7 @@ Cuando veas la retroalimentación como la siguiente imagen, significa que el có
 ## Demo2. Modo de sueño profundo
 
 :::tip
-Durante el modo de sueño profundo, no puedes subir código al dispositivo directamente. Necesitas entrar al modo de descarga.[Haz clic aquí para ir a Q3.](#port)
+Durante el modo de sueño profundo, no puedes subir código al dispositivo directamente. Necesitas entrar al modo de descarga.[Haz clic aquí para ir a Q3.](#puerto)
 :::
 
 Este ejemplo mostrará cómo usar el modo de sueño profundo para ahorrar energía. Actualiza información cada 6 horas.
@@ -762,7 +772,7 @@ display:
       it.printf(100, 100, id(font1), "Wakeup count: %d", id(sleep_counter));
 ```
 
-Verás un contador. Se incrementará en uno cada vez que se despierte.
+Verás un contador. Se incrementará en uno cada vez que despierte.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/90.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -808,6 +818,11 @@ esp32:
   board: esp32-s3-devkitc-1
   framework:
     type: arduino
+
+# Enable PSRAM support since online_image requires more than the available RAM capacity
+psram:
+  mode: octal
+  speed: 80MHz
 
 # Enable logging
 logger:
@@ -1121,7 +1136,7 @@ En este caso, debes ir a Settings -> Devices & Services -> Integrations para **R
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#port}
+### P2: ¿Por qué no puedo obtener esos datos en Home Assistant? {#puerto}
 
 En este caso, debes ir a Settings -> Devices & Services -> Integrations para **AGREGAR** tu dispositivo a HA.
 
@@ -1156,7 +1171,7 @@ Intenta desconectarlo y volver a conectarlo varias veces, o simplemente instala 
 
 En este caso, tu panel epaper está desconectado o en modo de sueño profundo. Por favor, conéctalo o despiértalo.
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

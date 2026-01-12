@@ -5,6 +5,7 @@ keywords:
 - Sorftware Allxon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Update-Jetson-Linux-OTA-Using-Allxon
+sku: 110110144,110110146,110110184,110110185,110110186,110110187
 last_update:
   date: 1/13/2023
   author: jianjing Huang

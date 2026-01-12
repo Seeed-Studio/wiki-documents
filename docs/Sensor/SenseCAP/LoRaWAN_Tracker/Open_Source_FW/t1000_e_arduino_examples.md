@@ -5,7 +5,7 @@ keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/tracker-t1000-e-for-meshtastic.webp
 slug: /t1000_e_arduino_examples
-sidebar_position: 3
+sidebar_position: 4
 last_update:
   date: 03/24/2025
   author: Frederik Funk
