@@ -447,7 +447,7 @@ The M.2 Key E slot supports Wi-Fi 6 and Bluetooth 5.x modules for wireless conne
 
 :::tip
 
-**Note: Before using the key e/key m/key b interface, you must remove the housing screws and install the corresponding module as shown in the figure below.**
+**Note: Before using the interface, you must remove the housing screws and install the corresponding module as shown in the figure below.**
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/open-board.png"/>
 </div>
@@ -486,7 +486,7 @@ The M.2 Key B slot supports 4G/5G cellular modules with Nano SIM card holder.
 
 :::tip
 
-**Note: Before using the key e/key m/key b interface, you must remove the housing screws and install the corresponding module as shown in the figure below.**
+**Note: Before using the interface, you must remove the housing screws and install the corresponding module as shown in the figure below.**
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/open-board.png"/>
 </div>
@@ -873,9 +873,9 @@ sudo gpioset --mode=wait gpiochip1 7=1
 
 The following script implements loopback communication testing between CAN0/CAN1 and CAN2/CAN3, including enabling the terminal resistor, configuring the bitrate, and bidirectional data transmission.
 
-<!-- <div align="center">
+<div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/can_hw_2.png"/>
-</div> -->
+</div>
 
 The wiring diagram is shown below:
 
