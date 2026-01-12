@@ -7,7 +7,7 @@ keywords:
   - en04
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
-slug: /cn/epaper_EN04_OEPL
+slug: /cn/EN04_opendisplay
 sku: E25120101
 last_update:
   date: 12/10/2025
@@ -38,7 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 简介
 
-由 **XIAO nRF52840** Plus 驱动，XIAO EN04 ePaper Display Board 是使用 OEPL_BLE 固件开始蓝牙电子纸显示屏的最简单方式。与需要专用 802.15.4 无线电接入点的传统 OpenEPaperLink 系统不同，该板使用低功耗蓝牙从您的手机、计算机或 Home Assistant 进行直接无线控制。
+由 **XIAO nRF52840** Plus 驱动，XIAO EN04 ePaper Display Board 是使用 OEPL_BLE 固件开始蓝牙电子纸显示器的最简单方式。与需要专用 802.15.4 无线电接入点的传统 OpenEPaperLink 系统不同，该板使用低功耗蓝牙从您的手机、计算机或 Home Assistant 进行直接无线控制。
 
 ### 应用
 
@@ -49,13 +49,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## 什么是 [Open Display](https://openepaperlink.de/)？
 
-OpenEPaperLink (OEPL) 是一个为电子纸显示屏提供固件和协议的开源项目。虽然主要的 OEPL 项目专注于重新利用商业电子货架标签 (ESL)，但 **OEPL_BLE 固件** 专门为使用 nRF52840 和 ESP32 等微控制器的定制硬件构建而设计。
+OpenEPaperLink (OEPL) 是一个为电子纸显示器提供固件和协议的开源项目。虽然主要的 OEPL 项目专注于重新利用商业电子货架标签 (ESL)，但 **OEPL_BLE 固件** 专门为使用 nRF52840 和 ESP32 等微控制器的定制硬件构建而设计。
 
 [OEPL_BLE 固件](https://github.com/OpenEPaperLink/OEPL_BLE) 支持：
 - **低功耗蓝牙 (BLE) 通信**：无需专用接入点的直接无线控制
 - **专用硬件支持**：适用于专门构建的板，如 XIAO ePaper Board EN04、EE04 等
 - **基于 Web 的刷写和配置**：通过 [openepaperlink.org/ble](https://openepaperlink.org/ble/) 的 Web 界面轻松设置和图像上传
-- **多显示屏支持**：兼容各种电子纸尺寸和控制器
+- **多显示器支持**：兼容各种电子纸尺寸和控制器
 
 
 ### 为什么使用 Open Display 固件？
@@ -68,7 +68,7 @@ OEPL_BLE 固件为定制电子纸显示项目提供了几个优势：
 - **开源且免费**：完全开源项目，在 GitHub 上积极开发
 - **多微控制器支持**：适用于 nRF52840、ESP32-S3、ESP32-C6 和 ESP32-C3
 - **简单设置**：通过拖放单个文件到您的板上传固件，通过 Web 界面配置，无需复杂编程
-- **电池高效**：针对电子纸显示屏的低功耗操作进行优化
+- **电池高效**：针对电子纸显示器的低功耗操作进行优化
 - **活跃社区**：通过 [OpenEPaperLink Discord](https://discord.gg/fekcBc5RN5) 提供支持和开发
 
 
@@ -76,13 +76,13 @@ OEPL_BLE 固件为定制电子纸显示项目提供了几个优势：
 
 ### 硬件组装
 
-**步骤 1. 将显示屏连接到驱动板**  
+**步骤 1. 将显示器连接到驱动板**  
 将 FPC 电缆与 XIAO EN04 板上的连接器对齐，然后固定锁扣以确保牢固连接。  
 
 :::tip
-FPC 电缆的金属面应朝上，否则不会显示任何内容。大多数显示屏在 FPC 电缆上有 1 和 50，这些数字必须与板上的数字对齐！
+FPC 电缆的金属面应朝上，否则不会显示任何内容。大多数显示器在 FPC 电缆上有 1 和 50，这些数字必须与板上的数字对齐！
 
-请按照下面的安装教程，很多人都弄错了。
+请按照下面的安装教程，很多人都搞错了。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/hardware.jpg" style={{width:600, height:'auto'}}/></div>
@@ -105,10 +105,10 @@ FPC 电缆的金属面应朝上，否则不会显示任何内容。大多数显�
 安装 OEPL_BLE 固件的最简单方法是使用基于 Web 的安装器。
 
 **步骤 1. 打开 Web 安装器**  
-在浏览器中访问 [OEPL Web 安装器](https://openepaperlink.org/ble/install/)。
+在浏览器中访问 [OEPL Web Installer](https://openepaperlink.org/ble/install/)。
 
 **步骤 2. 选择您的板**  
-从设备列表中选择 **"Seeed EN04 4.26"** 或 **"Seeed EN04 7.3"**（或任何适合您硬件的预设）（基于套件中的显示屏尺寸）。
+从设备列表中选择 **"Seeed EN04 4.26"** 或 **"Seeed EN04 7.3"**（或任何适合您硬件的预设）（基于套件中的显示器尺寸）。
 
 **步骤 3. 下载固件**  
 点击 **"Download Firmware"** 按钮并将 **"NRF52840.uf2"** 保存到您的硬盘上。
@@ -127,7 +127,7 @@ FPC 电缆的金属面应朝上，否则不会显示任何内容。大多数显�
 :::
 
 **步骤 6. 配置板**  
-打开 [OEPL 配置页面](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) 并连接到您的板。
+打开 [OEPL Configuration Page](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) 并连接到您的板。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step6.png" style={{width:600, height:'auto'}}/></div>
@@ -148,19 +148,19 @@ FPC 电缆的金属面应朝上，否则不会显示任何内容。大多数显�
 
 ### 验证配置
 
-安装和配置后，显示屏应显示启动屏幕。设备现在准备通过蓝牙显示内容。
+安装和配置后，显示器应显示启动屏幕。设备现在准备通过蓝牙显示内容。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/boot_screen.jpg" style={{width:500, height:'auto'}}/></div>
 
 
 
 
-## 上传图像到显示屏
+## 上传图像到显示器
 
 ### 使用 Web 显示工具
 
 **步骤 1. 打开显示工具**  
-在浏览器中访问 [OpenEPaperLink BLE 测试器](https://openepaperlink.org/ble/display/)。
+在浏览器中访问 [OpenEPaperLink BLE Tester](https://openepaperlink.org/ble/display/)。
 
 **步骤 2. 连接到设备**  
 点击 **"Connect"** 并从蓝牙配对对话框中选择您的 OEPL 设备。
@@ -176,13 +176,13 @@ FPC 电缆的金属面应朝上，否则不会显示任何内容。大多数显�
 
 :::tip
 为获得最佳效果：
-- 使用与您的显示分辨率匹配的图像（7.3" 显示屏为 800x480 像素）
-- 黑白图像在单色显示屏上效果最佳
+- 使用与您的显示器分辨率匹配的图像（7.3" 显示器为 800x480 像素）
+- 黑白图像在单色显示器上效果最佳
 - 该工具将自动转换和抖动彩色图像
 :::
 
 **步骤 4. 上传图像**  
-点击 **"Upload Image"** 将图像发送到您的显示屏。电子纸将刷新并显示您的图像。
+点击 **"Upload Image"** 将图像发送到您的显示器。电子纸将刷新并显示您的图像。
 
 
 
@@ -200,16 +200,16 @@ FPC 电缆的金属面应朝上，否则不会显示任何内容。大多数显�
 要与 Home Assistant 集成，您需要支持蓝牙的设置：
 - **Home Assistant Green**（内置蓝牙）
 - **Home Assistant OS/Supervised** 在支持蓝牙的硬件上
-- **ESPHome 蓝牙代理**（推荐以获得更好的范围）
+- **ESPHome Bluetooth Proxy**（推荐以获得更好的范围）
 
 **注意**：作为蓝牙代理的 Shelly 设备 **不支持 OEPL 所需的主动连接**，因此不能用于此集成。
 :::
 
 **步骤 1. 安装集成**
 
-有关详细安装说明，请参阅 [OpenEPaperLink Home Assistant 集成存储库](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help)。
+有关详细安装说明，请参阅 [OpenEPaperLink Home Assistant Integration Repository](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help)。
 
-安装集成的最简单方法是通过 **HACS**（Home Assistant 社区商店）。点击下面的按钮直接在 HACS 中打开存储库：
+安装集成的最简单方法是通过 **HACS**（Home Assistant Community Store）。点击下面的按钮直接在 HACS 中打开存储库：
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=OpenEpaperLink&repository=Home_Assistant_Integration)
 
@@ -224,9 +224,9 @@ Home Assistant 重启后：
 2. 您应该在 **Discovered** 下看到您的 OEPL 设备。
 3. 点击 **Add**。
 4. 将出现一个对话框，允许您设置设备的 **Name** 和 **Area**。
-5. 点击 **Finish**。您将被重定向到设备详情页面，在那里您可以管理您的电子纸显示器。
+5. 点击 **Finish**。您将被重定向到设备详情页面，在那里您可以管理您的电子纸显示屏。
 
-您将看到显示器上显示了一张新图像，表明设备已连接到 Home Assistant。
+您将看到显示屏上显示了一张新图像，表明设备已连接到 Home Assistant。
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/pair_ha.jpg" style={{width:500, height:'auto'}}/></div>
@@ -237,7 +237,7 @@ Home Assistant 重启后：
 
 ### 自动化显示更新
 
-更新显示的主要服务是 `open_epaper_link.drawcustom`。此服务允许您在显示器上绘制文本、图标、图像和形状。有关支持的类型和参数的完整列表，请参阅 [drawcustom 文档](https://github.com/OpenEPaperLink/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md)。
+更新显示的主要服务是 `open_epaper_link.drawcustom`。此服务允许您在显示屏上绘制文本、图标、图像和形状。有关支持的类型和参数的完整列表，请参考 [drawcustom 文档](https://github.com/OpenEPaperLink/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md)。
 
 您可以使用 **Visual Editor** 或直接编写 **YAML** 代码在 Home Assistant 中创建自动化。以下是两种方法的示例。
 
@@ -261,7 +261,7 @@ Home Assistant 重启后：
 
 <!-- <div style={{textAlign:'center'}}><img src={require('./ha_automation_visual.jpg').default} style={{width:800, height:'auto'}}/></div> -->
 
-**Payload 配置：**
+**载荷配置：**
 
 ```yaml
 - type: "text"
@@ -302,7 +302,7 @@ Home Assistant 重启后：
 ```
 
 :::caution 重要提示：实体 ID
-上述 payload 中使用的实体 ID（例如，`sensor.living_room_temperature`、`sensor.living_room_humidity`）仅为示例。您**必须**将它们替换为您在 Home Assistant 中传感器的实际实体 ID。
+上述载荷中使用的实体 ID（例如，`sensor.living_room_temperature`、`sensor.living_room_humidity`）仅为示例。您**必须**将它们替换为您在 Home Assistant 中传感器的实际实体 ID。
 :::
 
 #### 示例 2：倒计时器（YAML）
@@ -357,7 +357,7 @@ actions:
 ```
 
 :::caution 重要提示：设备 ID
-上述示例中显示的 `device_id`（`2ad706d4aa7c657b6fe99a733cef2253`）仅为示例。您**必须**将其替换为您自己的 OpenEPaperLink 显示器的实际设备 ID。
+上述示例中显示的 `device_id`（`2ad706d4aa7c657b6fe99a733cef2253`）仅为示例。您**必须**将其替换为您自己的 OpenEPaperLink 显示屏的实际设备 ID。
 
 要查找您的设备 ID：
 1. 使用可视化编辑器在 Home Assistant 中创建新的自动化。
@@ -368,7 +368,7 @@ actions:
 
 ## 额外内容
 
-如果您正在寻找一种时尚的方式来安装您的显示器，请查看这个用于 IKEA RODALM 相框的 3D 打印插件。它允许轻松安装显示器。
+如果您正在寻找一种时尚的方式来安装您的显示屏，请查看这个用于 IKEA RODALM 相框的 3D 打印插件。它允许轻松安装显示屏。
 
 - **[MakerWorld]** [Seeed 7.3" Spectra Insert for IKEA RODALM Frame](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
 
@@ -390,7 +390,7 @@ actions:
   - 尝试重启板子
   - 验证固件安装或重新复制文件
 
-**问题**：固件安装后显示器无显示
+**问题**：固件安装后显示屏无显示
 - **解决方案**：
   - 验证 FPC 线缆是否正确插入（金属触点朝上）
   - 检查线缆是否完全插入并锁定
@@ -424,7 +424,7 @@ actions:
 **问题**：设备无法充电
 - **解决方案**：
   - 检查电池极性（红色：+，黑色：-）
-  - 验证充电线缆提供足够的电流（最小 500mA）
+  - 验证充电线缆提供足够的电流（最少 500mA）
   - 确保电源开关处于 ON 位置
   - 使用不同的 USB 电源测试
 

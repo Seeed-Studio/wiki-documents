@@ -1,13 +1,13 @@
 ---
-description: Configuración y configuración de OpenEPaperLink con el Kit DIY OpenEPaperLink BLE
-title: Configuración y configuración del firmware Open Display con el Kit DIY Open Display
+description: Configurar y configurar OpenEPaperLink con el Kit DIY OpenEPaperLink BLE
+title: Configurar y configurar el firmware Open Display con el Kit DIY Open Display
 keywords:
   - epaper
   - oepl
   - en04
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
-slug: /es/epaper_EN04_OEPL
+slug: /es/EN04_opendisplay
 sku: E25120101
 last_update:
   date: 12/10/2025
@@ -18,7 +18,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Configuración y configuración del firmware Open Display con el Kit DIY Open Display
+# Configurar y configurar el firmware Open Display con el Kit DIY Open Display
 
 <div class="table-center">
 <table align="center">
@@ -42,10 +42,10 @@ Alimentada por **XIAO nRF52840** Plus, la Placa de Pantalla ePaper XIAO EN04 es 
 
 ### Aplicación
 
-- **Panel de Control de Casa Inteligente**: Muestra información en tiempo real como actualizaciones del clima, eventos del calendario y notificaciones de varios dispositivos de casa inteligente.
-- **Monitoreo de Energía**: Muestra datos de consumo de energía de medidores inteligentes, ayudando a los propietarios a rastrear y gestionar su uso de energía de manera más eficiente.
-- **Alertas de Seguridad**: Muestra alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
-- **Pantalla de Termostato Inteligente**: Muestra niveles de temperatura y humedad, así como configuraciones de control para tu termostato inteligente.
+- **Panel de Control de Casa Inteligente**: Mostrar información en tiempo real como actualizaciones del clima, eventos del calendario y notificaciones de varios dispositivos de casa inteligente.
+- **Monitoreo de Energía**: Mostrar datos de consumo de energía de medidores inteligentes, ayudando a los propietarios a rastrear y gestionar su uso de energía de manera más eficiente.
+- **Alertas de Seguridad**: Mostrar alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
+- **Pantalla de Termostato Inteligente**: Mostrar niveles de temperatura y humedad, así como configuraciones de control para tu termostato inteligente.
 
 ## ¿Qué es [Open Display](https://openepaperlink.de/)?
 
@@ -67,7 +67,7 @@ El firmware OEPL_BLE ofrece varias ventajas para proyectos de pantallas de papel
 - **Hardware Construido Específicamente**: Diseñado para placas como la EN04, no limitado a etiquetas ESL comerciales
 - **Código Abierto y Gratuito**: Proyecto completamente de código abierto con desarrollo activo en GitHub
 - **Soporte de Múltiples Microcontroladores**: Funciona con nRF52840, ESP32-S3, ESP32-C6 y ESP32-C3
-- **Configuración Simple**: Carga firmware mediante arrastrar y soltar un solo archivo a tu placa, configura vía interfaz web, no se requiere programación compleja
+- **Configuración Simple**: Cargar firmware mediante arrastrar y soltar un solo archivo a tu placa, configurar vía interfaz web, no se requiere programación compleja
 - **Eficiente en Batería**: Optimizado para operación de bajo consumo con pantallas de papel electrónico
 - **Comunidad Activa**: Soporte y desarrollo a través de [OpenEPaperLink Discord](https://discord.gg/fekcBc5RN5)
 
@@ -108,7 +108,7 @@ La forma más fácil de instalar el firmware OEPL_BLE es usando el instalador ba
 Visita el [Instalador Web OEPL](https://openepaperlink.org/ble/install/) en un navegador.
 
 **Paso 2. Seleccionar Tu Placa**  
-Elige **"Seeed EN04 4.26"** o **"Seeed EN04 7.3"** (o cualquier preconfiguración que se adapte a tu hardware) de la lista de dispositivos (basado en el tamaño de pantalla en tu kit).
+Elige **"Seeed EN04 4.26"** o **"Seeed EN04 7.3"** (o cualquier preajuste que se adapte a tu hardware) de la lista de dispositivos (basado en el tamaño de pantalla en tu kit).
 
 **Paso 3. Descargar el firmware**  
 Haz clic en el botón **"Download Firmware"** y guarda el **"NRF52840.uf2"** en tu disco duro.
@@ -178,7 +178,7 @@ Haz clic en **"Select Image"** y elige un archivo de imagen de tu computadora.
 Para mejores resultados:
 - Usa imágenes que coincidan con la resolución de tu pantalla (la pantalla de 7.3" es de 800x480 píxeles)
 - Las imágenes en blanco y negro funcionan mejor en pantallas monocromáticas
-- La herramienta convertirá automáticamente y aplicará dithering a las imágenes en color
+- La herramienta convertirá automáticamente y aplicará dithering a las imágenes a color
 :::
 
 **Paso 4. Subir Imagen**  
@@ -197,7 +197,7 @@ Puedes crear contenido de pantalla personalizado usando:
 
 ### Integración con Home Assistant
 :::tip
-Para integrar con Home Assistant, necesitas una configuración con capacidad Bluetooth:
+Para integrar con Home Assistant, necesitas una configuración capaz de Bluetooth:
 - **Home Assistant Green** (Bluetooth integrado)
 - **Home Assistant OS/Supervised** en hardware con soporte Bluetooth
 - **ESPHome Bluetooth Proxy** (recomendado para mejor alcance)
@@ -307,7 +307,7 @@ Los IDs de entidad utilizados en el payload anterior (por ejemplo, `sensor.livin
 
 #### Ejemplo 2: Temporizador de Cuenta Regresiva (YAML)
 
-Para usuarios avanzados, puedes editar la automatización en modo YAML. Esta automatización calcula los días restantes hasta una fecha específica (por ejemplo, Navidad) y la muestra.
+Para usuarios avanzados, puedes editar la automatización en modo YAML. Esta automatización calcula los días restantes hasta una fecha específica (por ejemplo, Navidad) y los muestra.
 
 ```yaml
 alias: Update ePaper Display - Countdown
@@ -368,7 +368,7 @@ Para encontrar tu ID de Dispositivo:
 
 ## Bonus
 
-Si buscas una forma elegante de montar tu pantalla, echa un vistazo a este inserto impreso en 3D para el marco IKEA RODALM. Permite un montaje fácil de la pantalla.
+Si estás buscando una forma elegante de montar tu pantalla, echa un vistazo a este inserto impreso en 3D para el marco IKEA RODALM. Permite un montaje fácil de la pantalla.
 
 - **[MakerWorld]** [Inserto Seeed 7.3" Spectra para Marco IKEA RODALM](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
 
@@ -376,7 +376,7 @@ Si buscas una forma elegante de montar tu pantalla, echa un vistazo a este inser
 
 ### Problemas de Instalación de Firmware
 
-**Problema**: La PC no detecta una nueva unidad USB después de conectar la placa EN04
+**Problema**: El PC no detecta una nueva unidad USB después de conectar la placa EN04
 - **Solución**: 
   - Prueba un cable USB diferente (cable de datos, no solo de alimentación)
   - Presiona el botón de reset dos veces después de conectar la placa
@@ -393,7 +393,7 @@ Si buscas una forma elegante de montar tu pantalla, echa un vistazo a este inser
 **Problema**: La pantalla no muestra nada después de la instalación del firmware
 - **Solución**:
   - Verifica que el cable FPC esté insertado correctamente (contactos metálicos hacia arriba)
-  - Verifica que el cable esté completamente insertado y asegurado
+  - Comprueba que el cable esté completamente insertado y asegurado
   - Verifica si la configuración es correcta (puedes conectarte a la placa a través del configurador y leer la configuración)
 
 
