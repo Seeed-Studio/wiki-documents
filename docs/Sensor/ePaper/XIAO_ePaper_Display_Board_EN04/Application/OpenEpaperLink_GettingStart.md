@@ -1,13 +1,13 @@
 ---
 description: Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
-title: Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
+title: Setup and Configure Open Display firmware with the Open Display DIY Kit
 keywords:
   - epaper
   - oepl
   - en04
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
-slug: /epaper_EN04_OEPL
+slug: /EN04_opendisplay
 sku: E25120101
 last_update:
   date: 12/10/2025
@@ -18,7 +18,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Setup and Configure OpenEPaperLink with OpenEPaperLink BLE DIY Kit
+# Setup and Configure Open Display firmware with the Open Display DIY Kit
 
 <div class="table-center">
 <table align="center">
@@ -47,7 +47,7 @@ Powered by **XIAO nRF52840** Plus, the XIAO EN04 ePaper Display Board is the eas
 - **Security Alerts**: Display alerts and notifications about security events, such as motion detection or door/window sensor activation.
 - **Smart Thermostat Display**: Show temperature and humidity levels, as well as control settings for your smart thermostat.
 
-## What is [OpenEPaperLink](https://openepaperlink.de/)?
+## What is [Open Display](https://openepaperlink.de/)?
 
 OpenEPaperLink (OEPL) is an open-source project that provides firmware and protocols for e-paper displays. While the main OEPL project focuses on repurposing commercial Electronic Shelf Labels (ESL), the **OEPL_BLE firmware** is designed specifically for custom hardware builds using microcontrollers like the nRF52840 and ESP32.
 
@@ -58,7 +58,7 @@ The [OEPL_BLE firmware](https://github.com/OpenEPaperLink/OEPL_BLE) enables:
 - **Multiple Display Support**: Compatible with various e-paper sizes and controllers
 
 
-### Why use OEPL_BLE?
+### Why use Open Display firmware?
 
 The OEPL_BLE firmware offers several advantages for custom e-paper display projects:
 
@@ -72,7 +72,7 @@ The OEPL_BLE firmware offers several advantages for custom e-paper display proje
 - **Active Community**: Support and development through [OpenEPaperLink Discord](https://discord.gg/fekcBc5RN5)
 
 
-## Getting Started with OEPL_BLE
+## Getting Started with Open Display firmware
 
 ### Hardware Assembly
 
@@ -107,7 +107,7 @@ The easiest way to install the OEPL_BLE firmware is using the web-based installe
 **Step 1. Open Web Installer**  
 Visit the [OEPL Web Installer](https://openepaperlink.org/ble/install/) in a browser.
 
-**Step 2. Select Your Device**  
+**Step 2. Select Your Board**  
 Choose **"Seeed EN04 4.26"** or **"Seeed EN04 7.3"** (or any preset that suits your hardware) from the device list (based on the display size in your kit).
 
 **Step 3. Download the firmware**  
@@ -142,7 +142,7 @@ Press the **""Connect** button on the page. You should see a window showing avai
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step7.png"  style={{width:500, height:'auto'}}/></div>
 
 
-**Step 7. Save the configuration to the Board**  
+**Step 8. Save the configuration to the Board**  
 The last thing to do is to press the **"Auto Install to Device"** button, this will save the configuration to the device.
 
 
@@ -365,6 +365,12 @@ To find your Device ID:
 3. Switch to **YAML mode** (click the three dots in the top-right corner of the action card).
 4. Copy the `device_id` from the YAML code and paste it into your automation.
 :::
+
+## Bonus
+
+If you are looking for a stylish way to mount your display, check out this 3D printed insert for the IKEA RODALM frame. It allows for easy mounting of the display.
+
+- **[MakerWorld]** [Seeed 7.3" Spectra Insert for IKEA RODALM Frame](https://makerworld.com/pl/models/2103122-seeed-7-3-spectra-insert-for-ikea-rodalm-frame)
 
 ## Troubleshooting
 
