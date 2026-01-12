@@ -7,7 +7,7 @@ keywords:
   - en04
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
-slug: /epaper_EN04_OEPL
+slug: /EN04_opendisplay
 sku: E25120101
 last_update:
   date: 12/10/2025
