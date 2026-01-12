@@ -5,7 +5,7 @@ keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/tracker-t1000-e-for-meshtastic.webp
 slug: /cn/t1000_e_arduino_examples
-sidebar_position: 3
+sidebar_position: 4
 last_update:
   date: 03/24/2025
   author: Frederik Funk
@@ -26,11 +26,11 @@ last_update:
     </tr>
     <tr>
       <td>Button</td>
-      <td>打印按钮事件 - 检测按钮状态变化并打印事件信息，用于用户交互。</td>
+      <td>打印按钮事件 - 检测按钮状态变化并打印事件信息以供用户交互。</td>
     </tr>
     <tr>
       <td>Buzzer</td>
-      <td>循环播放声音 - 驱动蜂鸣器产生声音，用于提醒或报警。</td>
+      <td>循环播放声音 - 驱动蜂鸣器产生声音用于提醒或报警。</td>
     </tr>
     <tr>
       <td>Sensor</td>
@@ -38,7 +38,7 @@ last_update:
     </tr>
     <tr>
       <td>Accelerometer</td>
-      <td>打印 ax/ay/az/事件值 - 收集加速度数据，用于运动检测和姿态识别。</td>
+      <td>打印 ax/ay/az/事件值 - 收集加速度数据用于运动检测和姿态识别。</td>
     </tr>
     <tr>
       <td>GNSS</td>
@@ -79,19 +79,19 @@ last_update:
 
 在开始开发之前，需要以下软件工具。
 
-查看这里了解如何[开始使用 Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+请查看这里了解如何 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 
 :::tip
 版本需要新于 v1.6.12。
 :::
 
-## 开始使用
+## 入门指南
 
-### 先决条件
+### 前提条件
 
 1. 添加 URL
 
-导航到 `文件` -> `首选项`，并将以下 URL 添加到 `附加开发板管理器网址`：
+导航到 `File` -> `Preferences`，并将以下 URL 添加到 `Additional Boards Manager URLs`：
 
 ```
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
@@ -120,7 +120,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ### 上传到目标设备
 
-由于 T1000-E 引导加载程序 _仅_ 支持通过 `.uf2` 拖放方式刷写，因此无法直接通过 Arduino IDE 上传示例。
+由于 T1000-E 引导加载程序_仅_支持通过 `.uf2` 拖放方式刷写，因此无法直接通过 Arduino IDE 上传示例。
 请按照以下步骤操作：
 
 1. 从 Arduino IDE 导出编译后的二进制文件。您将在与 `.ino` 草图相同的文件夹中找到它。
@@ -134,15 +134,15 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
-4. 将 `.uf2` 文件复制到大容量存储设备。复制完成后，设备会自动开始运行它。
+4. 将 `.uf2` 文件复制到大容量存储设备。复制完成后，设备会自动开始运行。
 
-## 读取串行消息
+## 读取串口消息
 
-使用 `Serial.println` 和 `Serial.printf` 从设备打印出的消息可以使用 Arduino IDE 的集成终端读取。
+使用 `Serial.println` 和 `Serial.printf` 从设备打印的消息可以使用 Arduino IDE 的集成终端读取。
 确保您已启用并选择了 USB-CDC：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/usb_cdc.png" alt="pir" width={800} height="auto" /></p>
 
-然后使用 `Tools -> Serial Monitor` 打开串行监视器并开始观察消息：
+然后使用 `Tools -> Serial Monitor` 打开串口监视器并开始观察消息：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/serial_monitor.png" alt="pir" width={800} height="auto" /></p>
 
 ## LoRaWAN 示例
@@ -156,17 +156,17 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 #### 步骤 1：创建应用程序
 
-导航到应用程序页面并点击"+ Create application"。
+导航到 Applications 页面并点击 "+ Create application"。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/create_application.png" alt="pir" width={800} height="auto" /></p>
 
-输入应用程序 ID 并点击"Create application"保存您的更改。
+输入 Application ID 并点击 "Create application" 保存您的更改。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/create_application1.png" alt="pir" width={800} height="auto" /></p>
 
 #### 步骤 2：注册设备
 
-点击"+ Register end device"。
+点击 "+ Register end device"。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device.png" alt="pir" width={800} height="auto" /></p>
 
 设置以下参数：
@@ -177,7 +177,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device1.png" alt="pir" width={800} height="auto" /></p>
 
-现在，为您的设备创建凭据。生成新的凭据集或输入现有的凭据。
+现在，为您的设备创建凭据。生成新的一组或输入现有的凭据。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device5.png" alt="pir" width={800} height="auto" /></p>
 
 ### 调整示例代码
@@ -197,8 +197,8 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ## ✨ 贡献者项目
 
-- 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 特别感谢 [Frederik](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=Support+Arduino+to+our+new+open-source+LoRaWAN+device%2C+the+new+T1000-E+for+LoRaWAN&pane=issue&itemId=94352679&issue=Seeed-Studio%7Cwiki-documents%7C2144) 的专注努力。您的工作将被[展示](https://wiki.seeedstudio.com/contributors/)。
+- 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
+- 特别感谢 [Frederik](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=Support+Arduino+to+our+new+open-source+LoRaWAN+device%2C+the+new+T1000-E+for+LoRaWAN&pane=issue&itemId=94352679&issue=Seeed-Studio%7Cwiki-documents%7C2144) 的专注努力。您的工作将被[展示](https://wiki.seeedstudio.com/cn/contributors/)。
 
 ## 技术支持与产品讨论
 

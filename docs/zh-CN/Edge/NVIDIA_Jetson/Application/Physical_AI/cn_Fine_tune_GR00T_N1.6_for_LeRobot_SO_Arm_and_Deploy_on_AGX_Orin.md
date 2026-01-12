@@ -113,7 +113,7 @@ git checkout d483f00b1c13116bda020bead9d16dca497b2f6d
 git submodule update --init --recursive
 ```
 
-在 `Isaac-GR00T` 目录中创建虚拟环境并安装依赖项：
+保持在 `Isaac-GR00T` 目录中创建虚拟环境并安装依赖项：
 
 ```bash
 cd Isaac-GR00T
@@ -178,7 +178,7 @@ git checkout d483f00b1c13116bda020bead9d16dca497b2f6d
 git submodule update --init --recursive
 ```
 
-在 `Isaac-GR00T` 目录中创建虚拟环境并安装依赖项：
+保持在 `Isaac-GR00T` 目录中创建虚拟环境并安装依赖项：
 
 ```bash
 cd Isaac-GR00T
@@ -193,7 +193,7 @@ uv pip install -e . --verbose
 uv pip install --no-deps -e ../../../../
 ```
 
-根据您服务器的 CUDA 版本（作者使用 CUDA 12.8），从 PyTorch 官方网站找到对应的 torch 2.8 和 torchvision 0.22.0 GPU 版本的安装命令：
+根据您服务器的 CUDA 版本（作者使用 CUDA 12.8），从 PyTorch 官方网站找到 torch 2.8 和 torchvision 0.22.0 GPU 版本的相应安装命令：
 
 🔗 [点击此处查找安装命令](https://pytorch.org/get-started/previous-versions/)
 
@@ -241,26 +241,26 @@ lerobot 机械臂的数据收集可以在 PC 上执行，也可以直接在 Jets
 
 ### LeRobot 环境设置（可选）
 
-Lerobot 的开发环境设置过程可以在以下链接的子章节中找到：  
+Lerobot 的开发环境设置过程可以在以下链接的子部分中找到：  
 🔗 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#install-lerobot](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#install-lerobot)
 
 
 
 ### 配置电机
 
-SO-ARM 各关节上的电机需要在组装前进行配置。配置步骤可以在以下链接的子章节中找到：    
+SO-ARM 各关节上的电机需要在组装前进行配置。配置步骤可以在以下链接的子部分中找到：    
 🔗 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#configure-the-motors](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#configure-the-motors)
 
 
 ### 组装
 
-SO-ARM 主臂和从臂的安装过程可以在以下链接的子章节中找到：  
+SO-ARM 主臂和从臂的安装过程可以在以下链接的子部分中找到：  
 🔗 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#assembly](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#assembly)
 
 ### SO-ARM 校准
 
 
-SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接的子章节：  
+SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接的子部分：  
 🔗 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#calibrate](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#calibrate)
 
 
@@ -269,18 +269,18 @@ SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接�
 **校准机械臂时，请不要连接任何 USB 摄像头，因为这可能导致端口冲突或端口分配错误。**
 :::
 
-**运行校准脚本后，手动移动机械臂的每个关节，确保其达到完整的运动范围！否则可能导致遥操作期间主臂和从臂姿态不匹配。**
+**运行校准脚本后，手动移动机械臂的每个关节以确保其达到完整的运动范围！否则可能导致遥操作期间主臂和从臂姿态不匹配。**
 
 
 
 
 ### 摄像头设置
 
-通常建议在机械臂的手腕/夹爪上安装一个摄像头，在桌面表面安装另一个摄像头，以确保对机械臂姿态的适当覆盖。
+通常建议在机械臂的腕部/夹爪上安装一个摄像头，在桌面表面安装另一个摄像头，以确保对机械臂姿态的适当覆盖。
 <mark>具体的安装方法取决于您的应用场景；下面显示的示例仅供参考。</mark>
 
 详细信息请参考以下链接的子章节：  
-🔗 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#添加摄像头)
+🔗 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#add-cameras](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#add-cameras)
 
 
 
@@ -297,7 +297,7 @@ SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接�
 
 
 完成摄像头安装和机械臂校准后，数据集收集程序可在以下链接的子章节中找到：  
-[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#记录数据集)
+[https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#record-the-dataset](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#record-the-dataset)
 
 
 
@@ -305,7 +305,7 @@ SO-ARM 完全组装后，需要进行校准。校准程序请参考以下链接�
 
 
 要可视化在 SO-ARM 上收集的数据，请参考以下链接的子章节：  
-🔗 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#可视化数据集)
+🔗 [https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#visualize-the-dataset](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/#visualize-the-dataset)
 
 
 
@@ -430,7 +430,7 @@ CUDA_VISIBLE_DEVICES=0 python \
 | `--modality-config-path` | 用户指定的模态配置路径（仅对 NEW_EMBODIMENT 标签必需） |
 | `--output-dir` | 保存检查点的目录 |
 | `--save-steps` | 每 N 步保存检查点 |
-| `--max-steps` | 训练步骤总数 |
+| `--max-steps` | 训练步数总数 |
 | `--use-wandb` | 启用 Weights & Biases 日志记录以进行实验跟踪 |
 
 
@@ -472,9 +472,13 @@ uv run python gr00t/eval/real_robot/SO100/eval_so100.py \
 
 **🎥 演示结果**
 
-作者在 AGX Orin 64G 上运行 GR00T N1.6 的推理结果如下视频所示：
+启动推理请求后，您可以在终端中看到 GR00T N1.6 输出的动作序列。每次推理产生八个动作：
+
+<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/gr00t-infer.jpg" width="800"/> </div>
+
+作者在 AGX Orin 64G 上的 GR00T N1.6 推理结果如下视频所示。**前半部分展示了**启动 GR00T N1.6 程序后终端中的推理输出——您可以看到每次推理输出八个动作。**后半部分**演示了真实世界的结果：机械臂成功抓取水果并将其放置到盘子上。
 <div class="video-container">
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/GCRkKmRnfn0" title="GPT-OSS Running Live on NVIDIA Jetson Orin NX!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/MuzIkoKYOwU" title="GR00T N1.6 Inference Demo on AGX Orin 64G" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 

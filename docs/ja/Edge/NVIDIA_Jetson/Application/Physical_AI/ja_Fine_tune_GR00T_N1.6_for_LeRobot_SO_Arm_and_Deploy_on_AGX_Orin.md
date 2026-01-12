@@ -317,7 +317,7 @@ SO-ARMで収集したデータを可視化するには、以下のリンクの�
 
 ## 🚀 L20を使用したポリシーのトレーニング
 
-著者はNVIDIAのL20 GPUを選択して事前トレーニング済みモデルのファインチューニングを行いました。他のサーバーグレードGPUをレンタルすることもできますが、ファインチューニングプロセスで48GBの利用可能なVRAMがあることを確認してください。
+著者は事前トレーニング済みモデルのファインチューニングにNVIDIAのL20 GPUを選択しました。他のサーバーグレードGPUをレンタルすることもできますが、ファインチューニングプロセスで48GBの利用可能なVRAMがあることを確認してください。
 
 ### データセット形式の変換
 
@@ -437,7 +437,7 @@ CUDA_VISIBLE_DEVICES=0 python \
 
 ## 🚀 AGX Orin 64Gでのファインチューニング済みモデルによる推論
 
-前の手順に従ってAGX OrinでGR00T N1.6環境を設定していることを確認してください。
+前の手順に従ってAGX Orin上でGR00T N1.6環境を設定していることを確認してください。
 
 **🖥️ ターミナル1：ローカル推論サーバーの開始**
 
@@ -472,9 +472,13 @@ uv run python gr00t/eval/real_robot/SO100/eval_so100.py \
 
 **🎥 デモ結果**
 
-著者のAGX Orin 64GでのGR00T N1.6の推論結果は以下の動画で示されています：
+推論リクエストを起動した後、ターミナルでGR00T N1.6が出力するアクションシーケンスを確認できます。各推論では8つのアクションが生成されます：
+
+<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/gr00t-infer.jpg" width="800"/> </div>
+
+AGX Orin 64G上でのGR00T N1.6の著者の推論結果を以下のビデオで示します。**前半では**GR00T N1.6プログラム開始後のターミナルでの推論出力を示しており、推論ごとに8つのアクションが出力されることがわかります。**後半では**実世界での結果を実演しており、ロボットアームが果物を正常に掴んで皿の上に置くことに成功しています。
 <div class="video-container">
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/GCRkKmRnfn0" title="GPT-OSS Running Live on NVIDIA Jetson Orin NX!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/MuzIkoKYOwU" title="GR00T N1.6 Inference Demo on AGX Orin 64G" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
@@ -488,7 +492,7 @@ uv run python gr00t/eval/real_robot/SO100/eval_so100.py \
 
 ## 🤝 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

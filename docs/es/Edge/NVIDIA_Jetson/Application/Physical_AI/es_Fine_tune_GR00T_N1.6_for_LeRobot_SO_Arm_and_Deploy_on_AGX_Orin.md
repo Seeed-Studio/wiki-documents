@@ -274,7 +274,7 @@ Después de que el SO-ARM haya sido completamente ensamblado, se requiere calibr
 
 
 
-### Configuración de la Cámara
+### Configuración de Cámara
 
 Generalmente se recomienda instalar una cámara en la muñeca/pinza del brazo robótico, y otra cámara en la superficie del escritorio, para asegurar una cobertura adecuada de la postura del brazo.
 <mark>El enfoque de instalación específico depende de tu escenario de aplicación; el ejemplo mostrado a continuación es solo para referencia.</mark>
@@ -468,13 +468,17 @@ uv run python gr00t/eval/real_robot/SO100/eval_so100.py \
   --lang_instruction="grasp fruit into plate"
 ```
 
-Donde el parámetro `--robot.port` debe modificarse según el nombre real de tu puerto serie, e `index_or_path` también debe modificarse según los números de índice del dispositivo de tus dos cámaras.
+Donde el parámetro `--robot.port` debe modificarse según el nombre real de tu puerto serie, y `index_or_path` también debe modificarse según los números de índice del dispositivo de tus dos cámaras.
 
-**🎥 Resultados de Demostración**
+**🎥 Resultados de la Demo**
 
-Los resultados de inferencia del autor de GR00T N1.6 en AGX Orin 64G se muestran en el video a continuación:
+Después de lanzar la solicitud de inferencia, puedes ver la secuencia de acciones generada por GR00T N1.6 en el terminal. Cada inferencia produce ocho acciones:
+
+<div align="center"> <img src="https://files.seeedstudio.com/wiki/other/gr00t-infer.jpg" width="800"/> </div>
+
+Los resultados de inferencia del autor de GR00T N1.6 en AGX Orin 64G se muestran en el video a continuación. **La primera mitad muestra** la salida de inferencia en el terminal después de iniciar el programa GR00T N1.6—puedes ver que se generan ocho acciones por inferencia. **La segunda mitad** demuestra el resultado en el mundo real: el brazo robótico agarrando exitosamente fruta y colocándola en un plato.
 <div class="video-container">
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/GCRkKmRnfn0" title="GPT-OSS Running Live on NVIDIA Jetson Orin NX!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/MuzIkoKYOwU" title="Demo de Inferencia GR00T N1.6 en AGX Orin 64G" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
