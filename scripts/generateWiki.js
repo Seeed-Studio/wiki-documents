@@ -54,6 +54,10 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_A1102', 'SettingAI_With_A1102.md'), //12.31
   path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Wireless_Connection', 'XIAO_ESP32C5_WiFi_Usage.md'), //12.30
   path.join(docsDirectory, 'Sensor', 'ePaper', 'epaper_driver_board_main_page.md'), //12.21
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Deal_the_Issue_of_UUID_error.md'), //1.8
+  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'SenseCAP_Gateway_Intro.md'), //1.8
+  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_APP', 'overview.md'), //1.8
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_The_Things_Network.md'), //1.6
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

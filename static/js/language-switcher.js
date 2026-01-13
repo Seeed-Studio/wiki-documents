@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-07 15:30:55 (北京时间)
-// 多语言页面: 2101 个
+// 生成时间: 2026-01-13 09:58:49 (北京时间)
+// 多语言页面: 2112 个
 
 (function() {
   'use strict';
@@ -533,6 +533,12 @@
     "es",
     "ja"
   ],
+  "/deploy_depth_anything_v3_jetson_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/deploy_frigate_on_jetson": [
     "cn",
     "en",
@@ -875,6 +881,24 @@
     "es",
     "ja"
   ],
+  "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/local_chatbot_recomputer_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/reComputer_A203_Flash_System": [
     "cn",
     "en",
@@ -1008,6 +1032,12 @@
     "ja"
   ],
   "/how_to_build_the_source_code_project_for_seeed_jetson_bsp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deal_the_issue_of_UUID": [
     "cn",
     "en",
     "es",
@@ -4139,6 +4169,12 @@
     "es",
     "ja"
   ],
+  "/lerobot_soarm101_Rynnbot_Developer_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/lerobot_starai_arm": [
     "cn",
     "en",
@@ -6011,6 +6047,12 @@
     "ja"
   ],
   "/ee04_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/EN04_opendisplay": [
     "cn",
     "en",
     "es",
@@ -8505,6 +8547,24 @@
     "es",
     "ja"
   ],
+  "/xiao_esp32c5_zigbee_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_idf": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c6_aws_iot": [
     "cn",
     "en",
@@ -9724,6 +9784,12 @@
     "ja"
   ],
   "/get_started_with_lorawan_tracker": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/t1000e_for_lorawan_introduction": [
     "cn",
     "en",
     "es",

@@ -16,7 +16,7 @@ last_update:
   author: Dayu
 ---
 
-# Robotics J501キャリアボード ハードウェアと入門ガイド
+# Robotics J501キャリアボードハードウェアと入門ガイド
 
 reComputer Robotics J501 Miniは、先進的なロボティクス向けに設計されたコンパクトで高性能なエッジAIキャリアボードです。NVIDIA Jetson AGX Orinモジュール（32GB/64GB）のMAXNモードに対応し、最大275 TOPSのAI性能を提供します。デュアルギガビットEthernetポート、5GおよびWi-Fi/BTモジュール用M.2スロット、2つのUSB 3.2ポート、CAN、GMSL2（オプション拡張経由）、I2C、UARTなどの豊富な接続オプションを備え、様々なセンサーからの複雑なデータを処理できる強力なロボティクスブレインとして機能します。JetPack 6.2.1とLinux BSPがプリインストールされており、シームレスな展開を保証します。
 
@@ -58,7 +58,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
 - ユーザーマニュアル x 1
 
 :::note
-1.高電圧電源および動作温度時には、熱設計ガイドに従って堅牢な放熱ソリューションを設計してください。
+1.高電圧電源供給および動作温度時には、熱設計ガイドに従って堅牢な放熱ソリューションを設計してください。
 2.より良い性能のためにモジュール用ヒートシンクを取り付けてください。
 3.高電圧入力および高負荷での動作中は、やけどを防ぐためヒートシンクに触れないでください。
 4.検証用電源アダプター推奨、Seed公式ウェブサイトで推奨されている電源アダプターを使用してください。
@@ -91,7 +91,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
       <td>1x M.2 KEY M PCIe (M.2 NVMe 2280 SSD)</td>
     </tr>
     <tr>
-      <th rowSpan="2">ネットワーキング</th>
+      <th rowSpan="2">ネットワーク</th>
       <td>M.2 KEY E</td>
       <td>1x M.2 Key E WiFi/Bluetoothモジュール用</td>
     </tr>
@@ -206,8 +206,8 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
 
 :::info
 
-仮想マシンではなく、物理的なubuntuホストデバイスの使用を推奨します。
-ホストマシンを準備するために、以下の表を参照してください。
+仮想マシンではなく、物理的なubuntuホストデバイスを使用することをお勧めします。
+ホストマシンを準備するには、以下の表を参照してください。
 
 <table style={{textAlign: 'center'}}>
   <tbody>
@@ -269,7 +269,7 @@ Jetpack6イメージファイルのサイズは約**14.2GB**で、ダウンロ�
 :::
 
 :::info
-ダウンロードしたファームウェアの整合性を確認するために、SHA256ハッシュ値を比較できます。
+ダウンロードしたファームウェアの整合性を確認するには、SHA256ハッシュ値を比較できます。
 
 Ubuntuホストマシンで、ターミナルを開き、コマンド`sha256sum <File>`を実行してダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがwikiで提供されているSHA256ハッシュと一致する場合、ダウンロードしたファームウェアが完全で破損していないことが確認されます。
 :::
@@ -287,21 +287,21 @@ Ubuntuホストマシンで、ターミナルを開き、コマンド`sha256sum 
 
 <summary> ステップバイステップ </summary>
 
-**ステップ 1.** RESETモードのボタンを押し続けます。
+**ステップ1.** RESETモードのボタンを押し続けます。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
 </div>
 
-**ステップ 2.** 電源ケーブルを接続してキャリアボードに電源を投入し、RESTボタンを離します。
+**ステップ2.** 電源ケーブルを接続してキャリアボードに電源を投入し、**REC**ボタンを離します。
 
-**ステップ 3.** USB Type-Cデータ転送ケーブルでボードをUbuntuホストPCに接続します。
+**ステップ3.** USB Type-Cデータ転送ケーブルでボードをUbuntuホストPCに接続します。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png" />
 </div>
 
-**ステップ 4.** LinuxホストPCで、ターミナルウィンドウを開き、コマンド`lsusb`を入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかがある場合、ボードは強制リカバリモードになっています。
+**ステップ4.** LinuxホストPCで、ターミナルウィンドウを開き、コマンド`lsusb`を入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかがある場合、ボードは強制リカバリモードになっています。
 
 - AGX Orin 32GB用：**0955:7223 NVidia Corp**
 - AGX Orin 64GB の場合：**0955:7023 NVidia Corp**
@@ -314,7 +314,7 @@ Ubuntuホストマシンで、ターミナルを開き、コマンド`sha256sum 
 
 </details>
 
-### Jetson への書き込み
+### Jetson へのフラッシュ
 
 **ステップ 1：** ダウンロードしたイメージファイルを展開します：
 
@@ -324,7 +324,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2025-09-08.tar.gz
 ```
 
-**ステップ 2：** 以下のコマンドを実行して、jetpack システムを NVMe SSD に書き込みます：
+**ステップ 2：** 以下のコマンドを実行して、jetpack システムを NVMe SSD にフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -332,12 +332,12 @@ cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-書き込みプロセスが成功すると、以下の出力が表示されます
+フラッシュプロセスが成功すると、以下の出力が表示されます
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-書き込みコマンドは 2～10 分間実行される場合があります。
+フラッシュコマンドは 2～10 分間実行される場合があります。
 :::
 
 **ステップ 3：** Robotics J501-Mini をディスプレイに接続します。PD to HDMI アダプターを使用して HDMI 入力をサポートするディスプレイに接続するか、PD ケーブルを使用して PD 入力をサポートするディスプレイに直接接続し、初期設定セットアップを完了します：
@@ -418,7 +418,7 @@ sudo chmod +x test_nvme.sh
 
 ## M.2 Key E
 
-M.2 Key E インターフェースは、Wi-Fi や Bluetooth などのワイヤレスモジュールを接続するために主に使用される標準的な M.2 コネクタで、ワイヤレス通信機能を拡張します。
+M.2 Key E インターフェースは標準的な M.2 コネクタで、主に Wi-Fi や Bluetooth などのワイヤレスモジュールの接続に使用され、ワイヤレス通信機能を拡張します。
 
 ### ハードウェア接続
 
@@ -446,7 +446,7 @@ Bluetooth 機能は M.2 Key E スロット経由で利用できます。
 
 ## Ethernet
 
-Robotics j501-Mini キャリアボードは、高速有線ネットワーク接続用に 2 つの 1Gbps RJ45 Ethernet ポートを搭載しています。
+Robotics j501-Mini キャリアボードは、高速有線ネットワーク接続のために 1Gbps と 10Gbps の RJ45 Ethernet ポートを各 1 つ搭載しています。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/ethernet-real.png"/>
@@ -507,7 +507,7 @@ Robotics j501-Mini キャリアボードには、2 つの USB 3.2 Type-A ポー�
 
 ### USB-A 速度テスト
 
-USB デバイス速度をテストするスクリプトを作成します：
+USB デバイスの速度をテストするスクリプトを作成します：
 
 ```bash
 sudo vim test_usb
@@ -547,7 +547,7 @@ sudo chmod +x test_usb
 </div>
 
 
-PC（Jetson ではない）で、シリアルポートログインツールをインストールして `/dev/ttyUSB0`（`ttyUSB1`、2 の場合もあります）にログインします：
+PC（Jetson ではない）でシリアルポートログインツールをインストールし、`/dev/ttyUSB0`（`ttyUSB1`、2 の場合もあります）にログインします：
 
 ```bash
 sudo apt update
@@ -618,7 +618,7 @@ echo $1 > /sys/devices/platform/pwm-fan/hwmon/hwmon1/pwm1
 
 CAN（Controller Area Network）は、マイクロコントローラーとデバイスがホストコンピューターなしで相互に通信できるようにする堅牢な車両バス標準です。
 
-J501 Mini は、JST 4 ピン（GH1.25）に統合された 2 つの CAN インターフェースを提供します。さらに、両方の CAN インターフェースは **CAN-FD をサポート**しており、CAN0 と CAN1 は以下に示されています：
+J501 Mini は JST 4 ピン（GH1.25）に統合された 2 つの CAN インターフェースを提供します。さらに、両方の CAN インターフェースは **CAN-FD をサポート**しており、CAN0 と CAN1 は以下に示されています：
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can-real.png"/>
@@ -940,7 +940,7 @@ sudo cp tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb /boot/
 sudo cp tegra234-j501x-0000%2Bp3701-0005-recomputer-mini.dtb /boot/
 ```
 
-`/boot/extlinux/extlinux.conf` をバックアップして修正し、新しい `.dtb` ファイルを指す行を追加します：
+`/boot/extlinux/extlinux.conf` をバックアップして変更し、新しい `.dtb` ファイルを指す行を追加します：
 
 ```bash
 sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
@@ -981,7 +981,7 @@ Robotics J501-MiniはRS485用のJST 4ピン（GH 1.25）ヘッダーを提供し
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/485-real.png"/>
 </div>
 
-**RS485** データシート回路図を以下に示します：
+**RS485** データシートの回路図を以下に示します：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/485-jst.png"/>
@@ -1012,8 +1012,8 @@ sudo apt install cutecom
 sudo cutecom
 ```
 
-`/dev/ttyTHS4` を選択し、JetsonとPCの両方をボーレート9600に設定し、RS485からUSBモジュール経由でJetsonとPCを接続します。
-シリアルデータ送受信の効果を以下の図に示します：
+`/dev/ttyTHS4` を選択し、JetsonとPCの両方のボーレートを9600に設定し、RS485からUSBモジュール経由でJetsonとPCを接続します。
+シリアルデータの送受信効果を以下の図に示します：
 
 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '5px' }}>
   <img src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/485_jetson.png" alt="Jetson side" height={200} />
@@ -1022,7 +1022,7 @@ sudo cutecom
 
 ## I2S
 
-I2Sインターフェースは、デバイス間でステレオオーディオデータを送信するために設計されたデジタルオーディオ通信バスを提供します。Robotics J501-Miniは標準的なI2Sシグナリングをサポートし、音声対話、音源定位、リアルタイムオーディオ処理などのアプリケーション向けに高品質、低遅延のオーディオ入出力を可能にします。
+I2Sインターフェースは、デバイス間でステレオオーディオデータを送信するために設計されたデジタルオーディオ通信バスを提供します。Robotics J501-Miniは標準的なI2Sシグナリングをサポートし、音声対話、音源定位、リアルタイムオーディオ処理などのアプリケーション向けに高品質で低遅延のオーディオ入出力を可能にします。
 
 ### ハードウェア接続
 Robotics J501-Miniは **I2S** 用の1x JST 5ピンコネクタ（GH 1.25）を提供します。
@@ -1032,7 +1032,7 @@ Robotics J501-Miniは **I2S** 用の1x JST 5ピンコネクタ（GH 1.25）を�
 </div>
 
 
-**I2S** データシート回路図を以下に示します：
+**I2S** データシートの回路図を以下に示します：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/i2s-jst.png"/>
@@ -1180,7 +1180,7 @@ Robotics J501-Miniは **RTC**（3V）用の標準2ピンヘッダーを提供し
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/rtc0.png"/>
 </div>
 
-**RTC** データシート回路図を以下に示します：
+**RTC** データシートの回路図を以下に示します：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/rtc1.png"/>
@@ -1358,7 +1358,7 @@ Robotics J501 Miniは高解像度ディスプレイ出力用のHDMIを搭載し�
 
 ## リソース
 
-- [reComputer Robotics J501-Mini キャリアボード回路図](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/reComputer_mini_J501_datasheet.pdf)
+- [reComputer Robotics J501-Mini キャリアボード回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
 
 <!-- - [reComputer Robotics J501-Mini Carrier Board Datasheet]() -->
 
@@ -1366,7 +1366,7 @@ Robotics J501 Miniは高解像度ディスプレイ出力用のHDMIを搭載し�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
