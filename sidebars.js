@@ -1322,6 +1322,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/XIAO_ESP32C5_Buletooth_Usage',
               ],
             },
+            {
+              type: 'category',
+              label: 'RTOS',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/XIAO_ESP32C5_With_FreeRTOS',
+              ],
+            },
           ],
         },
         {
@@ -3615,6 +3622,13 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J401/Robotics_J401_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
+                // {
+                //   type: 'category',
+                //   label: 'J501-Robotics Carrier Board',
+                //   items: [
+                //     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J501/reComputer_Robotics_J501_Getting_Started',
+                //   ],
+                // },
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A205/reComputer_A205_Flash_System',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A603/A603_Flash_JetPack',
@@ -3700,10 +3714,10 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics',
+                  label: 'reComputer Robotics J40',
                   items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/reComputer_Robotics_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/reComputer_Robotics_Hardware_Interfaces_Usage'
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/reComputer_Robotics_Getting_Started',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/reComputer_Robotics_Hardware_Interfaces_Usage'
                   ],
                 },
                 {
@@ -6521,6 +6535,15 @@ const sidebars = {
               items: [
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Zigbee',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/cn_XIAO_ESP32C5_Zigbee_idf',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/cn_XIAO_ESP32C5_Zigbee_arduino',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/cn_XIAO_ESP32C5_Zigbee_homeassistant',
               ],
             },
             {
@@ -11633,6 +11656,15 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Zigbee',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/es_XIAO_ESP32C5_Zigbee_idf',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/es_XIAO_ESP32C5_Zigbee_arduino',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/es_XIAO_ESP32C5_Zigbee_homeassistant',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Conexión Inalámbrica',
               items: [
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/es_XIAO_ESP32C5_WiFi_Usage',
@@ -14477,6 +14509,7 @@ const sidebars = {
             'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_Starai_Arm',
             'es/Robotics/Robot_Kits/Lerobot/es_Starai_Arm_ROS2_Moveit',
             'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_SO100Arm_New',
+            'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_SO_ARM101_DAMO',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_Lekiwi',
             'es/Robotics/Robot_Kits/Lerobot/es_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
@@ -16737,6 +16770,15 @@ const sidebars = {
               items: [
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Zigbee',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/ja_XIAO_ESP32C5_Zigbee_idf',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/ja_XIAO_ESP32C5_Zigbee_arduino',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/ja_XIAO_ESP32C5_Zigbee_homeassistant',
               ],
             },
             {
@@ -19585,6 +19627,7 @@ const sidebars = {
             'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_Starai_Arm',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Starai_Arm_ROS2_Moveit',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO100Arm_New',
+            'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO_ARM101_DAMO',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_Lekiwi',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
