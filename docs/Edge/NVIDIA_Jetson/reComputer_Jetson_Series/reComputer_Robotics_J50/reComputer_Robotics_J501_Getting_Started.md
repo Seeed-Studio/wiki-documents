@@ -10,6 +10,7 @@ tags:
   - Hardware
 image: https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg
 slug: /ai_robotics_recomputer_j501_robotics_getting_started
+sku: 100090853,100076722,100060802,100032662
 last_update:
   date: 12/09/2025
   author: Lorraine
