@@ -6525,6 +6525,15 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Zigbee',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/cn_XIAO_ESP32C5_Zigbee_idf',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/cn_XIAO_ESP32C5_Zigbee_arduino',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/cn_XIAO_ESP32C5_Zigbee_homeassistant',
+              ],
+            },
+            {
+              type: 'category',
               label: '无线连接',
               items: [
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/cn_XIAO_ESP32C5_WiFi_Usage',
@@ -11629,6 +11638,15 @@ const sidebars = {
               items: [
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Zigbee',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/es_XIAO_ESP32C5_Zigbee_idf',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/es_XIAO_ESP32C5_Zigbee_arduino',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/es_XIAO_ESP32C5_Zigbee_homeassistant',
               ],
             },
             {
@@ -16738,6 +16756,15 @@ const sidebars = {
               items: [
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_HomeAssistant',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Zigbee',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/ja_XIAO_ESP32C5_Zigbee_idf',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/ja_XIAO_ESP32C5_Zigbee_arduino',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Zigbee/ja_XIAO_ESP32C5_Zigbee_homeassistant',
               ],
             },
             {

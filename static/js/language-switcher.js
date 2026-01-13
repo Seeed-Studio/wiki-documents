@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-13 09:27:43 (北京时间)
-// 多语言页面: 2109 个
+// 生成时间: 2026-01-13 09:58:49 (北京时间)
+// 多语言页面: 2112 个
 
 (function() {
   'use strict';
@@ -8542,6 +8542,24 @@
     "ja"
   ],
   "/xiao_esp32c5_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_idf": [
     "cn",
     "en",
     "es",
