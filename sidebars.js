@@ -3615,6 +3615,13 @@ const sidebars = {
                     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J401/Robotics_J401_carrierboard_Hardware_Interfaces_Usage',
                   ],
                 },
+                // {
+                //   type: 'category',
+                //   label: 'J501-Robotics Carrier Board',
+                //   items: [
+                //     'Edge/NVIDIA_Jetson/Carrier_Boards/Robotics_J501/reComputer_Robotics_J501_Getting_Started',
+                //   ],
+                // },
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A205/reComputer_A205_Flash_System',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/A603/A603_Flash_JetPack',
@@ -3700,10 +3707,10 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics',
+                  label: 'reComputer Robotics J40',
                   items: [
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/reComputer_Robotics_Getting_Started',
-                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/reComputer_Robotics_Hardware_Interfaces_Usage'
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/reComputer_Robotics_Getting_Started',
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/reComputer_Robotics_Hardware_Interfaces_Usage'
                   ],
                 },
                 {
