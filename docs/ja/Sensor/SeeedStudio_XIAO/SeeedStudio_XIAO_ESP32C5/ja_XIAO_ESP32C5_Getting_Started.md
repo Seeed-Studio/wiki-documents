@@ -89,7 +89,7 @@ last_update:
             <td>Reset button / Boot button</td>
         </tr>
         <tr>
-            <th>オンボード LED</th>
+            <th>オンボードLED</th>
             <td>Charge / USER LED</td>
             <td>Charge / USER LED</td>
             <td>Charge LED</td>
@@ -107,15 +107,15 @@ last_update:
 
 ### 特徴
 
-- **強力な CPU：** ESP32-C5、最大 240 MHz で動作する 32 ビット RISC-V シングルコアプロセッサ
-- **完全な Wi-Fi サブシステム：** IEEE 802.11 a/b/g/n/ac/ax 準拠のデュアルバンド Wi-Fi 6 サブシステム（2.4 GHz および 5 GHz）、Station、SoftAP、同時 SoftAP+Station 動作、およびプロミスキャス（モニター）モードをサポート。
-- **Bluetooth LE サブシステム：** Bluetooth 5 および Bluetooth mesh の機能をサポート
-- **優れた RF 性能：** 外部 RF アンテナが含まれています。
-- **バッテリー充電チップ：** リチウムバッテリーの充放電管理をサポート。
-- **豊富なオンチップリソース：** 384 KB オンチップ SRAM、320 KB ROM
-- **超小型サイズ：** ウェアラブルデバイスや小型プロジェクト向けの親指サイズ（21x17.8mm）XIAO シリーズクラシックフォームファクタ
-- **信頼性の高いセキュリティ機能：** AES-128/256、SHA ファミリーハッシュ、HMAC をサポートする暗号化ハードウェアアクセラレータ、専用デジタル署名ペリフェラル、および Secure Boot（V2）。
-- **豊富なインターフェース：** 1×I2C、1×SPI、2×UART、最大 11×GPIO（PWM 対応）、5×ADC チャンネル、および JTAG ボンディングパッドインターフェース。
+- **強力なCPU:** ESP32-C5、最大240 MHzで動作する32ビットRISC-Vシングルコアプロセッサ
+- **完全なWi-Fiサブシステム:** IEEE 802.11 a/b/g/n/ac/ax準拠のデュアルバンドWi-Fi 6サブシステム（2.4 GHzおよび5 GHz）、Station、SoftAP、同時SoftAP+Station動作、およびプロミスキャス（モニター）モードをサポート。
+- **Bluetooth LEサブシステム:** Bluetooth 5およびBluetoothメッシュの機能をサポート
+- **優れたRF性能:** 外部RFアンテナが含まれています。
+- **バッテリー充電チップ:** リチウムバッテリーの充放電管理をサポート。
+- **豊富なオンチップリソース:** 384 KBオンチップSRAM、320 KB ROM
+- **超小型サイズ:** ウェアラブルデバイスや小型プロジェクト向けの親指サイズ（21x17.8mm）XIAO シリーズクラシックフォームファクター
+- **信頼性の高いセキュリティ機能**: AES-128/256、SHAファミリーハッシュ、HMAC、専用デジタル署名ペリフェラル、およびSecure Boot（V2）をサポートする暗号化ハードウェアアクセラレータ。
+- **豊富なインターフェース**: 1×I2C、1×SPI、2×UART、最大11×GPIO（PWM対応）、5×ADCチャンネル、およびJTAGボンディングパッドインターフェース。
 - 片面実装部品、表面実装設計
 
 ## ハードウェア概要
@@ -137,7 +137,7 @@ last_update:
 
 ## 入門ガイド
 
-XIAO ESP32-C5 をより早く使い始められるように、以下のハードウェアとソフトウェアの準備を読んで XIAO を準備してください。
+XIAO ESP32-C5をより早く使い始められるように、以下のハードウェアとソフトウェアの準備を読んでXIAOを準備してください。
 
 ### ハードウェア
 
@@ -145,7 +145,7 @@ XIAO ESP32-C5 をより早く使い始められるように、以下のハード
 
 - 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
 - 1 x コンピュータ
-- 1 x USB Type-C ケーブル
+- 1 x USB Type-Cケーブル
 
 <div class="table-center">
  <table>
@@ -167,26 +167,26 @@ XIAO ESP32-C5 をより早く使い始められるように、以下のハード
 </div>
 
 :::tip
-一部の USB ケーブルは電力供給のみでデータ転送ができません。USB ケーブルをお持ちでない場合や、お使いの USB ケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) をご確認ください。
+一部のUSBケーブルは電源供給のみでデータ転送ができません。USBケーブルをお持ちでない場合、またはお使いのUSBケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)をご確認ください。
 :::
 
 ### ソフトウェア
 
-XIAO ESP32-C5 の推奨プログラミングツールは Arduino IDE ですので、ソフトウェア準備の一環として Arduino のインストールを完了する必要があります。
+XIAO ESP32-C5の推奨プログラミングツールはArduino IDEですので、ソフトウェア準備の一環としてArduinoのインストールを完了する必要があります。
 
 :::tip
-Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
-- **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDE の安定版をダウンロードしてインストールします。
+- **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDEの安定版をダウンロードしてインストールします。
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
-      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong></a>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDEをダウンロード</font></span></strong></a>
   </div>
   <br></br>
 
-- **ステップ 2.** Arduino アプリケーションを起動します。
-- **ステップ 3.** BOARDS MANAGER を開く → **esp32** を検索 → バージョン 3.3.4 以上をインストール
+- **ステップ 2.** Arduinoアプリケーションを起動します。
+- **ステップ 3.**  BOARDS MANAGER を開く -> **esp32** を検索 -> バージョン3.3.4以上をインストール
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -194,7 +194,7 @@ Arduino を初めて使用する場合は、[Getting Started with Arduino](https
 
 以下では点灯プログラムを例に説明します
 
-**ステップ 1.** **XIAO_ESP32C5** と PORT を選択します。PORT がわからない場合は、XIAO_ESP32C5 を再挿入して確認できます。
+**ステップ 1.** **XIAO_ESP32C5** と PORT を選択します。PORTがわからない場合は、XIAO_ESP32C5を再挿入して確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
@@ -226,14 +226,14 @@ void loop() {
 
 効果のデモンストレーション：
 
-プログラムをアップロードすると、L インジケータライトが 1 秒間隔で点滅し、同時にシリアルモニタに LED ON と LED OFF が印刷されます。
+プログラムをアップロードすると、L表示灯が1秒間隔で点滅し、同時にシリアルモニターにLED ONとLED OFFが印刷されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/uoload_2.png" style={{width:800, height:'auto'}}/></div>
 
 ## ディープスリープモード
 
-XIAO ESP32-C5 はディープスリープとウェイクアップ機能を備えています。この例では、ピン **D0** のハイレベルトリガーを使用してデバイスをディープスリープから起動します。<br/>
+XIAO ESP32-C5はディープスリープとウェイクアップ機能を備えています。この例では、ピン **D0** のハイレベルトリガーを使用してデバイスをディープスリープから起動します。<br/>
 これは設定可能なオプションであることに注意してください。ハードウェアは異なる回路設計に対応するため、ハイレベルとローレベルの両方のトリガーをサポートしています。
 
 ```cpp
@@ -282,12 +282,12 @@ void setup(){
 void loop(){}
 ```
 
-XIAOがディープスリープに入る前にシリアルモニターを素早く開くことができれば、以下に示すようなメッセージ出力を確認できます。これは、XIAOが現在**スリープ状態**にあることを意味します。その後、ボタンを押すことで確認し、起動することもできます。**L LED**のオン・オフ状態を観察して、デバイスが起動されたかどうかを確認することもできます。起動されると、点滅効果を示します。
+XIAOがディープスリープに入る前にシリアルモニターを素早く開くことができれば、以下に示すようなメッセージ出力を確認できます。これは、XIAOが現在**スリープ状態**にあることを意味します。その後、ボタンを押すことで確認し、起動させることもできます。**L LED**のオン・オフ状態を観察して、デバイスが起動されたかどうかを確認することもできます。起動されると、点滅効果を示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-ディープスリープモードに入った後、XIAOのポートは消失し、再度ポート番号を確認するには起動する必要があります！
+ディープスリープモードに入った後、XIAOのポートは消失し、再度ポート番号を確認するには起動させる必要があります！
 :::
 
 :::caution
@@ -301,13 +301,13 @@ XIAO ESP32-C5は、3.7Vリチウムバッテリーを電源入力として使用
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_wiring.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-はんだ付け時に正極と負極を短絡させ、バッテリーと機器を焼損させないよう注意してください。
+はんだ付けの際は、正極と負極をショートさせてバッテリーや機器を焼損させないよう注意してください。
 :::
 
 **バッテリー使用に関する注意事項：**
 
 1. 仕様に適合した認定バッテリーを使用してください。
-2. XIAOはバッテリー使用中でもデータケーブル経由でコンピューターデバイスに接続できます。XIAOには回路保護チップが内蔵されているため、安全です。
+2. XIAOはバッテリー使用中でもデータケーブル経由でコンピューターデバイスに接続できます。XIAOには回路保護チップが内蔵されているため安全です。
 3. XIAO ESP32-C5がバッテリーで駆動されている場合、**C LED**が点灯します。これを充電管理が実行されているかどうかを判断する基準として使用できます。
 
 ### バッテリー電圧の確認
@@ -325,7 +325,7 @@ void setup() {
   Serial.begin(115200);
   pinMode(BAT_VOLT_PIN, INPUT);         // Configure A0 as ADC input
   pinMode(BAT_VOLT_PIN_EN , OUTPUT);
-  digitalWrite(BAT_VOLT_PIN_EN , LOW);
+  digitalWrite(BAT_VOLT_PIN_EN , HIGH);
 }
 
 void loop() {
@@ -343,7 +343,7 @@ void loop() {
 
   - この関数は、`BAT_VOLT_PIN`ピンから現在のアナログ電圧を読み取り、ミリボルト（mV）単位で校正された電圧値を返すために使用されます。
   - 生のADC値のみを提供する従来の`analogRead()`とは異なり、`analogReadMilliVolts()`はチップに埋め込まれた工場校正パラメータを自動的に適用します。これにより、より高い精度、電圧測定における線形性の向上が実現され、手動でのADC-電圧変換が不要になります。
-  - 電圧サンプリングプロセス中、`for`ループを通じて**16回の反復サンプリング**が実行され、結果が累積されます。複数回サンプリングの目的は、過渡ノイズと離散エラーを抑制し、測定安定性を向上させることです。最後に、累積値をサンプル数（16）で除算して、よりスムーズで信頼性の高い平均電圧値を取得します。
+  - 電圧サンプリングプロセス中、`for`ループを通じて**16回の繰り返しサンプリング**が実行され、結果が累積されます。複数回サンプリングの目的は、過渡ノイズと離散エラーを抑制し、測定安定性を向上させることです。最後に、累積値をサンプル数（16）で除算して、よりスムーズで信頼性の高い平均電圧値を取得します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
