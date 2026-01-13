@@ -64,8 +64,8 @@ last_update:
             <th>メモリ</th>
             <td>8 MB PSRAM & 8 MB Flash</td>
             <td>8 MB PSRAM & 8 MB Flash</td>
-            <td>400 KB SRAM、4 MB Flash</td>
-            <td>512KB SRAM、4MB Flash</td>
+            <td>400 KB SRAM, 4 MB Flash</td>
+            <td>512KB SRAM , 4MB Flash</td>
         </tr>
         <tr>
             <th>インターフェース</th>
@@ -108,14 +108,14 @@ last_update:
 ### 特徴
 
 - **強力なCPU:** ESP32-C5、最大240 MHzで動作する32ビットRISC-Vシングルコアプロセッサ
-- **完全なWi-Fiサブシステム:** IEEE 802.11 a/b/g/n/ac/ax準拠のデュアルバンドWi-Fi 6サブシステム（2.4 GHzおよび5 GHz）、Station、SoftAP、同時SoftAP+Station動作、およびプロミスキャス（モニター）モードをサポート。
+- **完全なWi-Fiサブシステム:** IEEE 802.11 a/b/g/n/ac/ax準拠のデュアルバンドWi-Fi 6サブシステム（2.4 GHzおよび5 GHz）、Station、SoftAP、同時SoftAP+Station動作、およびプロミスキャス（モニタ）モードをサポート。
 - **Bluetooth LEサブシステム:** Bluetooth 5およびBluetoothメッシュの機能をサポート
 - **優れたRF性能:** 外部RFアンテナが含まれています。
 - **バッテリー充電チップ:** リチウムバッテリーの充放電管理をサポート。
 - **豊富なオンチップリソース:** 384 KBオンチップSRAM、320 KB ROM
-- **超小型サイズ:** ウェアラブルデバイスや小型プロジェクト向けの親指サイズ（21x17.8mm）XIAO シリーズクラシックフォームファクター
+- **超小型サイズ:** 親指ほどの小ささ（21x17.8mm）XIAOシリーズクラシックフォームファクタで、ウェアラブルデバイスや小型プロジェクトに最適
 - **信頼性の高いセキュリティ機能**: AES-128/256、SHAファミリーハッシュ、HMAC、専用デジタル署名ペリフェラル、およびSecure Boot（V2）をサポートする暗号化ハードウェアアクセラレータ。
-- **豊富なインターフェース**: 1×I2C、1×SPI、2×UART、最大11×GPIO（PWM対応）、5×ADCチャンネル、およびJTAGボンディングパッドインターフェース。
+- **豊富なインターフェース**: 1×I2C、1×SPI、2×UART、最大11×GPIO（PWM対応）、5×ADCチャネル、およびJTAGボンディングパッドインターフェース。
 - 片面実装部品、表面実装設計
 
 ## ハードウェア概要
@@ -137,7 +137,7 @@ last_update:
 
 ## 入門ガイド
 
-XIAO ESP32-C5をより早く使い始められるように、以下のハードウェアとソフトウェアの準備を読んでXIAOを準備してください。
+XIAO ESP32-C5をより早く使い始められるように、以下のハードウェアとソフトウェアの準備をお読みになり、XIAOを準備してください。
 
 ### ハードウェア
 
@@ -167,7 +167,7 @@ XIAO ESP32-C5をより早く使い始められるように、以下のハード�
 </div>
 
 :::tip
-一部のUSBケーブルは電源供給のみでデータ転送ができません。USBケーブルをお持ちでない場合、またはお使いのUSBケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)をご確認ください。
+一部のUSBケーブルは電源供給のみで、データ転送ができません。USBケーブルをお持ちでない場合、またはお使いのUSBケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)をご確認ください。
 :::
 
 ### ソフトウェア
@@ -186,7 +186,7 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
   <br></br>
 
 - **ステップ 2.** Arduinoアプリケーションを起動します。
-- **ステップ 3.**  BOARDS MANAGER を開く -> **esp32** を検索 -> バージョン3.3.4以上をインストール
+- **ステップ 3.**  BOARDS MANAGER を開く -> **esp32** を検索 -> バージョン3.3.5以上をインストール
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -226,7 +226,7 @@ void loop() {
 
 効果のデモンストレーション：
 
-プログラムをアップロードすると、L表示灯が1秒間隔で点滅し、同時にシリアルモニターにLED ONとLED OFFが印刷されます。
+プログラムをアップロードすると、L表示灯が1秒間隔で点滅し、同時にシリアルモニタにLED ONとLED OFFが印刷されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/uoload_2.png" style={{width:800, height:'auto'}}/></div>

@@ -110,7 +110,7 @@ last_update:
 - **强大的 CPU：** ESP32-C5，32 位 RISC-V 单核处理器，运行频率高达 240 MHz
 - **完整的 Wi-Fi 子系统：** 双频 Wi-Fi 6 子系统（2.4 GHz 和 5 GHz），符合 IEEE 802.11 a/b/g/n/ac/ax 标准，支持 Station、SoftAP、并发 SoftAP+Station 操作和混杂（监控）模式。
 - **Bluetooth LE 子系统：** 支持 Bluetooth 5 和 Bluetooth mesh 功能
-- **更好的 RF 性能：** 包含外部 RF 天线。
+- **更好的射频性能：** 包含外部射频天线。
 - **电池充电芯片：** 支持锂电池充放电管理。
 - **丰富的片上资源：** 384 KB 片上 SRAM，320 KB ROM
 - **超小尺寸：** 拇指大小（21x17.8mm）XIAO 系列经典外形，适用于可穿戴设备和小型项目
@@ -186,7 +186,7 @@ XIAO ESP32-C5 推荐的编程工具是 Arduino IDE，因此您需要完成 Ardui
   <br></br>
 
 - **步骤 2.** 启动 Arduino 应用程序。
-- **步骤 3.** 打开 BOARDS MANAGER -> 搜索**esp32** -> 安装版本 3.3.4 或更高版本
+- **步骤 3.** 打开 BOARDS MANAGER -> 搜索**esp32** -> 安装版本 3.3.5 或更高版本
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -194,7 +194,7 @@ XIAO ESP32-C5 推荐的编程工具是 Arduino IDE，因此您需要完成 Ardui
 
 让我们以下面的点灯程序为例
 
-**步骤 1.** 选择**XIAO_ESP32C5**和 PORT。如果您不知道 PORT，可以重新插拔 XIAO_ESP32C5 来检查。
+**步骤 1.** 选择**XIAO_ESP32C5**和端口。如果您不知道端口，可以重新插拔 XIAO_ESP32C5 来检查。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
@@ -234,7 +234,7 @@ void loop() {
 ## 深度睡眠模式
 
 XIAO ESP32-C5 具有深度睡眠和唤醒功能。此示例利用引脚**D0**上的高电平触发来从深度睡眠中唤醒设备。<br/>
-需要注意的是，这是一个可配置选项，因为硬件支持高电平和低电平触发，以适应不同的电路设计。
+需要注意的是，这是一个可配置的选项，因为硬件支持高电平和低电平触发，以适应不同的电路设计。
 
 ```cpp
 #define WAKEUP_PIN D0 // LP_GPIO1
@@ -291,7 +291,7 @@ void loop(){}
 :::
 
 :::caution
-目前 XIAO ESP32-C5 仅支持 GPIO 唤醒，唯一支持唤醒的引脚是 D0~D1。此程序可能无法在其他引脚上工作。
+目前 XIAO ESP32-C5 仅支持 GPIO 唤醒，支持唤醒的引脚只有 D0~D1。此程序可能无法在其他引脚上工作。
 :::
 
 ## 电池使用
@@ -343,7 +343,7 @@ void loop() {
 
   - 此函数用于从 `BAT_VOLT_PIN` 引脚读取当前模拟电压，并返回以毫伏 (mV) 为单位的校准电压值。
   - 与仅提供原始 ADC 值的传统 `analogRead()` 不同，`analogReadMilliVolts()` 自动应用芯片中嵌入的工厂校准参数。这提高了精度，改善了电压测量的线性度，并消除了手动 ADC 到电压转换的需要。
-  - 在电压采样过程中，通过 `for` 循环执行 **16 次重复采样**，并累积结果。多次采样的目的是抑制瞬态噪声和离散误差，从而提高测量稳定性。最后，将累积值除以采样次数 (16) 以获得更平滑、更可靠的平均电压值。
+  - 在电压采样过程中，通过 `for` 循环执行 **16 次重复采样**，并累积结果。多次采样的目的是抑制瞬态噪声和离散误差，从而提高测量稳定性。最后，累积值除以采样次数 (16) 以获得更平滑、更可靠的平均电压值。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
