@@ -138,6 +138,39 @@ The XIAO RP2350 packs the power of the Raspberry Pi RP2350 (dual Cortex-M33 core
 
 Need more details on pinouts? Navigate to [Assets and Resources](#assets--resources) below.
 
+
+## **Pin Map**
+| XIAO Pin                 | Function   | Chip Pin     | Alternate Functions | Description                          |
+| :---------------------: | :-------: | :----------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS       |              |                    | Power Input/Output                   |
+| GND                     |            |              |                    |                                      |
+| 3V3                     | 3V3_OUT    |              |                    | Power Output                         |
+| D0                      | Analog     | GPIO26       |                    | GPIO, ADC                            |
+| D1                      | Analog     | GPIO27       |                    | GPIO, ADC                            |
+| D2                      | Analog     | GPIO28       |                    | GPIO, ADC                            |
+| D3                      | SPIO_CSn   | GPIO5        |                    | GPIO, SPI                            |
+| D4                      | SDA1       | GPIO6        |                    | GPIO, I2C Data                       |
+| D5                      | SCL1       | GPIO7        |                    | GPIO, I2C Clock                      |
+| D6                      | TX0        | GPIO0        |                    | GPIO, UART Transmit                  |
+| D7                      | RX0        | GPIO1        |                    | GPIO, UART Receive                   |
+| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO, SPI Clock                      |
+| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO, SPI Data                       |
+| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO, SPI Data                       |
+| D11                     | RX1        | GPIO21       |                    | GPIO, UART Receive                   |
+| D12                     | TX1        | GPIO20       |                    | GPIO, UART Transmit                  |
+| D13                     | SCL0       | GPIO17       |                    | GPIO, I2C Clock                      |
+| D14                     | SDA0       | GPIO16       |                    | GPIO, I2C Data                       |
+| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO, SPI Data                       |
+| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO, SPI Data                       |
+| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO, SPI Clock                      |
+| D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
+| ADC_BAT                 |            | GPIO29       |                    | Read the BAT voltage value           |
+| Reset                   |            | RUN          |                    | RUN                                  |
+| Boot                    |            | RP2040_BOOT  |                    | Enter Boot Mode                      |
+| CHARGE_LED              |            | NCHG         |                    | CHG-LED_Red                          |
+| RGB LED                 |            | GPIO22       |                    | RGB LED                              |
+| USER_LED                |            | GPIO25       |                    | User Light_Yellow                    |
+
 ## Platform Supported
 
 The XIAO RP2350, powered by the RP2350, supports MicroPython and the C/C++ SDK provided by Raspberry Pi. This flexibility allows developers to choose their preferred programming language and environment for prototyping and development.
