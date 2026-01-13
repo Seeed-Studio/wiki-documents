@@ -186,7 +186,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
   <br></br>
 
 - **Step 2.** Launch the Arduino application.
-- **Step 3.**  Open BOARDS MANAGER -> Search **esp32** -> Install version 3.3.4 or a higher version
+- **Step 3.**  Open BOARDS MANAGER -> Search **esp32** -> Install version 3.3.5 or a higher version
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 

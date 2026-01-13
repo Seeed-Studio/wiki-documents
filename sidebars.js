@@ -1322,6 +1322,13 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/XIAO_ESP32C5_Buletooth_Usage',
               ],
             },
+            {
+              type: 'category',
+              label: 'RTOS',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/XIAO_ESP32C5_With_FreeRTOS',
+              ],
+            },
           ],
         },
         {
