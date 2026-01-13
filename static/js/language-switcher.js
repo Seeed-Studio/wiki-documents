@@ -1,5 +1,5 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-13 09:58:49 (北京时间)
+// 生成时间: 2026-01-13 16:47:58 (北京时间)
 // 多语言页面: 2112 个
 
 (function() {
@@ -989,12 +989,6 @@
     "es",
     "ja"
   ],
-  "/recomputer_robotics_j501_getting_started": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/create_backup_and_restore_on_recomputer": [
     "cn",
     "en",
@@ -1314,6 +1308,12 @@
     "ja"
   ],
   "/recomputer_robotics_j401_hardware_interfaces_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_robotics_recomputer_j501_robotics_getting_started": [
     "cn",
     "en",
     "es",

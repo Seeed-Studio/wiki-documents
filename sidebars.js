@@ -8924,10 +8924,10 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics',
+                  label: 'reComputer Robotics J40',
                   items: [
-                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/cn_reComputer_Robotics_Getting_Started',
-                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/cn_reComputer_Robotics_Hardware_Interfaces_Usage',
+                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/cn_reComputer_Robotics_Getting_Started',
+                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/cn_reComputer_Robotics_Hardware_Interfaces_Usage',
                   ],
                 },
                 {
@@ -14041,10 +14041,10 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics',
+                  label: 'reComputer Robotics J40',
                   items: [
-                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/es_reComputer_Robotics_Getting_Started',
-                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/es_reComputer_Robotics_Hardware_Interfaces_Usage',
+                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/es_reComputer_Robotics_Getting_Started',
+                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/es_reComputer_Robotics_Hardware_Interfaces_Usage',
                   ],
                 },
                 {
@@ -19159,10 +19159,10 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics',
+                  label: 'reComputer Robotics J40',
                   items: [
-                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/ja_reComputer_Robotics_Getting_Started',
-                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/ja_reComputer_Robotics_Hardware_Interfaces_Usage',
+                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Getting_Started',
+                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Hardware_Interfaces_Usage',
                   ],
                 },
                 {
