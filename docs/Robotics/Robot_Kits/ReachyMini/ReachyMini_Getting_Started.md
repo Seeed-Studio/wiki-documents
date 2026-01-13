@@ -10,6 +10,7 @@ keywords:
 - Open Source
 - Humanoid Robot
 - Python
+image: https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp
 slug: /reachymini_getting_started
 sku:
 translation:

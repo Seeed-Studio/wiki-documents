@@ -325,7 +325,7 @@ void setup() {
   Serial.begin(115200);
   pinMode(BAT_VOLT_PIN, INPUT);         // Configure A0 as ADC input
   pinMode(BAT_VOLT_PIN_EN , OUTPUT);
-  digitalWrite(BAT_VOLT_PIN_EN , LOW);
+  digitalWrite(BAT_VOLT_PIN_EN , HIGH);
 }
 
 void loop() {
