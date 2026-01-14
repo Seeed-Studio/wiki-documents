@@ -195,6 +195,9 @@ export const Highlight = ({children, color}) => (
   </tr>
 </table>
 
+ 
+
+
  </TabItem>
  <TabItem value="54L15Sense" label="XIAO nRF54L15 Sense" default>
 
@@ -222,6 +225,45 @@ export const Highlight = ({children, color}) => (
 </TabItem>
 
 </Tabs>
+
+## **Pin Map**
+| XIAO Pin                | Function   | Chip Pin   | Description                  |
+| :--------------------: | :-------: | :-------:| :-------------------------- |
+| 5V                     | VBUS       |                               | Power Input/Output           |
+| GND                    |            |                               |                              |
+| 3V3                    | 3V3_OUT    |                              | Power Output                 |
+| D0                     | Analog     | P1.04                        | GPIO, ADC                    |
+| D1                     | Analog     | P1.05                        | GPIO, ADC                    |
+| D2                     | Analog     | P1.06                         | GPIO, ADC                    |
+| D3                     | Analog     | P1.07                         | GPIO, ADC                    |
+| D4                     | SDA-0      | P1.10                         | GPIO, I2C Data               |
+| D5                     | SCL-0      | P1.11                         | GPIO, I2C Clock              |
+| D6                     | TX         | P2.08                         | GPIO, UART Transmit          |
+| D7                     | RX         | P2.07                         | GPIO, UART Receive           |
+| D8                     | SPI_SCK    | P2.01                         | GPIO, SPI Clock              |
+| D9                     | SPI_MISO   | P2.04                         | GPIO, SPI Data               |
+| D10                    | SPI_MOSI   | P2.02                         | GPIO, SPI Data               |
+| D11                    | SCL-1      | P0.03                         | GPIO, I2C                    |
+| D12                    | SDA-1      | P0.04                         | GPIO,I2C                     |
+| D13                    | GPIO       | P2.10                         | GPIO                         |
+| D14                    | GPIO       | P2.09                         | GPIO                         |
+| D15                    | GPIO       | P2.06                         | GPIO                         |
+| nRF54L15_SWCLK         |            | SWDCLK                        | JTAG                         |
+| nRF54L15_SWD-IO        |            | SWDIO                         | JTAG                         |
+| nRF54L15_RST           |            | RST                           | JTAG                         |
+| SAMD11_SWCLK           |            | PA30                          | JTAG                         |
+| SAMD11_SWDIO           |            | PA31                          | JTAG                         |
+| SAMD11_RST             |            | RST2                          | JTAG                         |
+| NFC1                   |            | P1.02                         | NRF                          |
+| NFC2                   |            | P1.03                         | NRF                          |
+| Reset                  |            | nRF54_RESET                    | EN                           |
+| USER KEY               |            | P0.00                         | User Key                     |
+| RF Switch Port Select  |            | P2.05                         | Switch onboard antenna       |
+| RF Switch Power        |            | P2.03                         | Power                        |
+| AIN7_VBAT              |            | P1.14                         | Read the BAT voltage value   |
+| CHARGE_LED             |            | charge_LED                    | CHG-LED_Red                  |
+| USER_LED               |            | P2.00                         | User Light                   |
+
 
 ## nRFConnect SDK Usage
 
