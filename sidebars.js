@@ -3722,6 +3722,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/reComputer_Robotics_J501_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/recomputer_j401b_getting_start',
@@ -6554,6 +6561,13 @@ const sidebars = {
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/cn_XIAO_ESP32C5_Buletooth_Usage',
               ],
             },
+            {
+              type: 'category',
+              label: 'RTOS',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/cn_XIAO_ESP32C5_With_FreeRTOS',
+              ],
+            },
           ],
         },
         {
@@ -8931,10 +8945,17 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics',
+                  label: 'reComputer Robotics J40',
                   items: [
-                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/cn_reComputer_Robotics_Getting_Started',
-                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/cn_reComputer_Robotics_Hardware_Interfaces_Usage',
+                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/cn_reComputer_Robotics_Getting_Started',
+                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/cn_reComputer_Robotics_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/cn_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
                 {
@@ -11671,6 +11692,13 @@ const sidebars = {
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/es_XIAO_ESP32C5_Buletooth_Usage',
               ],
             },
+            {
+              type: 'category',
+              label: 'RTOS',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/es_XIAO_ESP32C5_With_FreeRTOS',
+              ],
+            },
           ],
         },
         {
@@ -14048,10 +14076,17 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics',
+                  label: 'reComputer Robotics J40',
                   items: [
-                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/es_reComputer_Robotics_Getting_Started',
-                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/es_reComputer_Robotics_Hardware_Interfaces_Usage',
+                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/es_reComputer_Robotics_Getting_Started',
+                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/es_reComputer_Robotics_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/es_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
                 {
@@ -16789,6 +16824,13 @@ const sidebars = {
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/ja_XIAO_ESP32C5_Buletooth_Usage',
               ],
             },
+            {
+              type: 'category',
+              label: 'RTOS',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/ja_XIAO_ESP32C5_With_FreeRTOS',
+              ],
+            },
           ],
         },
         {
@@ -19166,10 +19208,17 @@ const sidebars = {
                 },
                 {
                   type: 'category',
-                  label: 'reComputer Robotics',
+                  label: 'reComputer Robotics J40',
                   items: [
-                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/ja_reComputer_Robotics_Getting_Started',
-                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics/ja_reComputer_Robotics_Hardware_Interfaces_Usage',
+                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Getting_Started',
+                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/ja_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
                 {

@@ -8,7 +8,7 @@
     "start:en": "cross-env NODE_ENV=development DOC_LANGS=en NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
     "start:cn": "cross-env NODE_ENV=development DOC_LANGS=zh-CN NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
     "start:en+cn": "cross-env NODE_ENV=development DOC_LANGS=en,zh-CN NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
-    "build": "cross-env NODE_OPTIONS=--max-old-space-size=6144 docusaurus build",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 docusaurus build",
     "serve": "docusaurus serve",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -60,6 +60,7 @@
     "@docusaurus/eslint-plugin": "3.8.1",
     "@docusaurus/module-type-aliases": "3.8.1",
     "@tsconfig/docusaurus": "^1.0.5",
+    "baseline-browser-mapping": "^2.9.14",
     "cross-env": "^10.1.0",
     "glob": "^11.0.2",
     "typescript": "^4.7.4"
