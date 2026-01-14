@@ -135,6 +135,33 @@ last_update:
  </tr>
 </table>
 
+ ## **Pin Map**
+| XIAO Pin                | Function   | Chip Pin  | Alternate Functions       | Description                  |
+| :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
+| 5V                     | VBUS       |           |                          | Power Input/Output           |
+| GND                    |            |           |                          |                              |
+| 3V3                    | 3V3_OUT    |           |                          | Power Output                 |
+| D0                     | Analog     | GPIO1     | LP_UART_DSRN,LP_GPIO1    | GPIO, ADC                    |
+| D1                     |            | GPIO0     | LP_UART_DTRN,LP_GPIO0    | GPIO                         |
+| D2                     |            | GPIO25    |                          | GPIO                         |
+| D3                     |            | GPIO7     | SDIO_DATA1               | GPIO                         |
+| D4                     | SDA        | GPIO23    |                          | GPIO, I2C Data               |
+| D5                     | SCL        | GPIO24    |                          | GPIO, I2C Clock              |
+| D6                     | TX         | GPIO11    |                          | GPIO, UART Transmit          |
+| D7                     | RX         | GPIO12    |                          | GPIO, UART Receive           |
+| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO, SPI Clock              |
+| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO, SPI Data               |
+| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO, SPI Data               |
+| MTDO                   |            | GPIO5     |                          | JTAG                         |
+| MTDI                   |            | GPIO3     |                          | JTAG, ADC                    |
+| MTCK                   |            | GPIO4     |                          | JTAG, ADC                    |
+| MTMS                   |            | GPIO2     |                          | JTAG, ADC                    |
+| ADC_BAT                |            | GPIO06    |                          | Read the BAT voltage value   |
+| Reset                  |            | CHIP_EN   |                          | EN                           |
+| Boot                   |            | GPIO28    |                          | Enter Boot Mode              |
+| U.FL-R-SMT1            |            | LNA_IN    |                          | UFL antenna                  |
+| CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_Red                  |
+| USER_LED               |            | GPIO27    |                          | User Light_Yellow            |
 ## Getting Started
 
 To enable you to get started with the XIAO ESP32-C5 faster, please read the hardware and software preparation below to prepare the XIAO.
@@ -186,7 +213,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
   <br></br>
 
 - **Step 2.** Launch the Arduino application.
-- **Step 3.**  Open BOARDS MANAGER -> Search **esp32** -> Install version 3.3.4 or a higher version
+- **Step 3.**  Open BOARDS MANAGER -> Search **esp32** -> Install version 3.3.5 or a higher version
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
