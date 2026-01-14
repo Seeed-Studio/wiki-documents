@@ -6554,6 +6554,13 @@ const sidebars = {
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/cn_XIAO_ESP32C5_Buletooth_Usage',
               ],
             },
+            {
+              type: 'category',
+              label: 'RTOS',
+              items: [
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/cn_XIAO_ESP32C5_With_FreeRTOS',
+              ],
+            },
           ],
         },
         {
@@ -11669,6 +11676,13 @@ const sidebars = {
               items: [
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/es_XIAO_ESP32C5_WiFi_Usage',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/es_XIAO_ESP32C5_Buletooth_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'RTOS',
+              items: [
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/es_XIAO_ESP32C5_With_FreeRTOS',
               ],
             },
           ],
@@ -16787,6 +16801,13 @@ const sidebars = {
               items: [
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/ja_XIAO_ESP32C5_WiFi_Usage',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Wireless_Connection/ja_XIAO_ESP32C5_Buletooth_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'RTOS',
+              items: [
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/RTOS/ja_XIAO_ESP32C5_With_FreeRTOS',
               ],
             },
           ],
