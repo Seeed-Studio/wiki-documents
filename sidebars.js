@@ -3479,7 +3479,8 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_r1000_flowfuse_getting_start',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reTerminal-DM_intro_machinechat_jedi',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reterminal-dm-sensecraft-edge-os-intro',
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_use_ups'
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_use_ups',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reComputer-RS485-test'
                   ]
                 },
               ]
@@ -3740,6 +3741,13 @@ const sidebars = {
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/reComputer_Robotics_Getting_Started',
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/reComputer_Robotics_Hardware_Interfaces_Usage'
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
                 {
@@ -8968,6 +8976,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/cn_reComputer_Robotics_J501_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/cn_recomputer_j401b_getting_start',
@@ -14104,6 +14119,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/es_reComputer_Robotics_J501_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/es_recomputer_j401b_getting_start',
@@ -19225,6 +19247,13 @@ const sidebars = {
                   items: [
                     'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Getting_Started',
                     'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/ja_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
                 {
