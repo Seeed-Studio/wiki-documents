@@ -61,7 +61,7 @@ on:
         default: 'manual'
 
 env:
-  NODE_OPTIONS: --max_old_space_size=8192
+  NODE_OPTIONS: --max_old_space_size=4092
   
 jobs:
   test-deploy:
