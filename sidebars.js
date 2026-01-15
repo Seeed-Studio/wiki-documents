@@ -3479,7 +3479,8 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_r1000_flowfuse_getting_start',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reTerminal-DM_intro_machinechat_jedi',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reterminal-dm-sensecraft-edge-os-intro',
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_use_ups'
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_use_ups',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reComputer-RS485-test'
                   ]
                 },
               ]
