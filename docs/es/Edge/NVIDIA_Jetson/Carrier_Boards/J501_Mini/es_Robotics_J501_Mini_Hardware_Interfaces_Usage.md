@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona una introducción completa a las características de hardware y el uso de interfaces de la placa portadora reComputer Jetson Robotics J501-Mini. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como M.2, Ethernet, USB, CAN, UART, DI/DO, I2S y expansión de cámara GMSL2, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J501-Mini.
+description: Este wiki proporciona una introducción completa a las características de hardware y uso de interfaces de la placa portadora reComputer Jetson Robotics J501-Mini. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como M.2, Ethernet, USB, CAN, UART, DI/DO, I2S y expansión de cámara GMSL2, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J501-Mini.
 title: Flash Jetpack && Uso de Interfaces
 tags:
   - J501-Robotics carrier board
@@ -18,7 +18,7 @@ last_update:
 
 # Hardware de la placa portadora Robotics J501 y Primeros Pasos
 
-El reComputer Robotics J501 Mini es una placa portadora de IA de borde compacta y de alto rendimiento diseñada para robótica avanzada. Compatible con módulos NVIDIA Jetson AGX Orin (32GB/64GB) en modo MAXN, ofrece hasta 275 TOPS de rendimiento de IA. Equipado con amplias opciones de conectividad—incluyendo puertos Ethernet Gigabit duales, ranuras M.2 para módulos 5G y Wi-Fi/BT, 2 puertos USB 3.2, CAN, GMSL2 (vía expansión opcional), I2C y UART—sirve como un cerebro robótico potente capaz de procesar datos complejos de varios sensores. Preinstalado con JetPack 6.2.1 y Linux BSP, asegura un despliegue sin problemas.​
+El reComputer Robotics J501 Mini es una placa portadora de IA de borde compacta y de alto rendimiento diseñada para robótica avanzada. Compatible con módulos NVIDIA Jetson AGX Orin (32GB/64GB) en modo MAXN, ofrece hasta 275 TOPS de rendimiento de IA. Equipado con amplias opciones de conectividad—incluyendo puertos Ethernet Gigabit duales, ranuras M.2 para módulos 5G y Wi-Fi/BT, 2 puertos USB 3.2, CAN, GMSL2 (vía expansión opcional), I2C y UART—sirve como un cerebro robótico poderoso capaz de procesar datos complejos de varios sensores. Preinstalado con JetPack 6.2.1 y Linux BSP, asegura un despliegue sin problemas.​
 
 Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1, el reComputer Robotics J501 Mini conecta la toma de decisiones impulsada por modelos de lenguaje grandes con el control físico de robótica, como planificación de movimiento y fusión de sensores. Ideal para el desarrollo rápido de robots autónomos, acelera el tiempo de comercialización con interfaces listas para usar y frameworks de IA optimizados.
 
@@ -58,14 +58,14 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
 - Manual de Usuario x 1
 
 :::note
-1.Por favor diseñe una solución robusta de disipación de calor según la Guía de Diseño Térmico, cuando esté en fuente de alimentación de alto voltaje y temperatura de operación.
+1.Por favor diseñe una solución robusta de disipación de calor según la Guía de Diseño Térmico, cuando esté en suministro de alta tensión y temperatura de operación.
 2.Por favor adjunte disipador de calor para el módulo para mejor rendimiento.
-3.Durante la operación con entrada de alto voltaje y alta carga, por favor no toque el disipador de calor para prevenir quemaduras.
+3.Durante la operación con entrada de alta tensión y alta carga, por favor no toque el disipador de calor para prevenir quemaduras.
 4.Recomendación de Adaptador de Energía para Validación, por favor use el adaptador de energía recomendado en el sitio web oficial de Seeed.
 
 - Adaptador de Energía 19V/4.74A 5525 Barrel Jack
-- Asegure que se cumplan los requisitos máximos de consumo de energía.
-2.Compatibilidad de Cable de Alimentación AC
+- Asegúrese de que se cumplan los requisitos máximos de consumo de energía.
+2.Compatibilidad del Cable de Alimentación AC
 - Compre cables de alimentación AC trébol específicos de la región según su ubicación.
 3.Compatibilidad de Accesorios
 - Use solo accesorios oficialmente recomendados (ej., módulos inalámbricos, cámaras, periféricos) para rendimiento y compatibilidad óptimos.
@@ -110,23 +110,23 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2x CAN Conector JST 4-Pin(GH 1.25);</td>
+      <td>2x CAN Conector JST de 4 Pines(GH 1.25);</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>1x DI Conector JST 6-Pin(GH 1.25);<br />1x DO Conector JST 5-Pin(GH 1.25);</td>
+      <td>1x DI Conector JST de 6 Pines(GH 1.25);<br />1x DO Conector JST de 5 Pines(GH 1.25);</td>
     </tr>
       <tr>
       <td>I2S</td>
-      <td>1x I2S Conector JST 6-Pin(GH 1.25)</td>
+      <td>1x I2S Conector JST de 6 Pines(GH 1.25)</td>
     </tr>
     <tr>
       <td>RS485</td>
-      <td>1x RS-485 Conector JST 4-Pin(GH 1.25)</td>
+      <td>1x RS-485 Conector JST de 4 Pines(GH 1.25)</td>
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x UART Conector JST 6-Pin (Multiplexado con DO)</td>
+      <td>1x UART Conector JST de 6 Pines (Multiplexado con DO)</td>
     </tr>
     <tr>
       <td>Pantalla</td>
@@ -134,7 +134,7 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
     </tr>
     <tr>
       <td>Ventilador</td>
-      <td>1x Conector de Ventilador 4 Pin(12V PWM)</td>
+      <td>1x Conector de Ventilador de 4 Pines(12V PWM)</td>
     </tr>
     <tr>
       <td>Puerto de Extensión</td>
@@ -142,11 +142,11 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC 2-pin;</td>
+      <td>1x RTC de 2 pines;</td>
     </tr>
     <tr>
       <td>LED</td>
-      <td>1x PWR LED, Verde;<br />1x SSD LED, Verde;<br />1x USR LED, RGB</td>
+      <td>1x LED PWR, Verde;<br />1x LED SSD, Verde;<br />1x LED USR, RGB</td>
     </tr>
     <tr>
       <td>Botón</td>
@@ -293,7 +293,7 @@ Antes de que podamos continuar con los pasos de instalación, necesitamos asegur
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
 </div>
 
-**Paso 2.** Encienda la placa portadora conectando el cable de alimentación, luego suelte el botón REST.
+**Paso 2.** Encienda la placa portadora conectando el cable de alimentación, luego suelte el botón **REC**.
 
 **Paso 3.** Conecte la placa al PC host Ubuntu con un cable de transmisión de datos USB Tipo-C.
 
@@ -446,7 +446,7 @@ La funcionalidad Bluetooth está disponible a través del slot M.2 Key E.
 
 ## Ethernet
 
-La placa portadora Robotics j501-Mini cuenta con 2 puertos Ethernet RJ45 de 1Gbps para conectividad de red cableada de alta velocidad.
+La placa portadora Robotics j501-Mini cuenta con un puerto Ethernet RJ45 de 1Gbps y uno de 10Gbps para conectividad de red cableada de alta velocidad.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/ethernet-real.png"/>
@@ -566,7 +566,7 @@ Luego puedes controlar la terminal del Jetson a través del puerto serie en otro
 
 El reComputer Jetson Robotics j501-Mini está equipado con: 
 
-- 1x Conector de Ventilador de 4 Pines (12V PWM): Compatible con ventiladores PWM estándar de 12V, también soporta control preciso de velocidad, haciéndolo ideal para requisitos de refrigeración de alto rendimiento.
+- 1x Conector de Ventilador de 4 Pines (12V PWM): Compatible con ventiladores PWM estándar de 12V, también soporta control de velocidad preciso, haciéndolo ideal para requisitos de refrigeración de alto rendimiento.
 
 ### Conexión de Hardware
 
@@ -947,7 +947,7 @@ sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
 sudo vim /boot/extlinux/extlinux.conf
 ```
 
-Basado en el nombre del archivo de árbol de dispositivos que estás usando, agrega una línea `FDT=/tu_ruta` en `extlinux.conf`. Tomando AGX Orin 32G como ejemplo:
+Basándote en el nombre del archivo de árbol de dispositivos que estás usando, agrega una línea `FDT=/tu_ruta` en `extlinux.conf`. Tomando AGX Orin 32G como ejemplo:
 
 ```python
 LABEL primary
@@ -971,7 +971,7 @@ sudo minicom -D /dev/ttyTHS1
 
 ## RS485
 
-La interfaz RS485 proporciona un canal de comunicación diferencial robusto y resistente al ruido comúnmente utilizado en entornos industriales. Soporta comunicación serie de larga distancia y multi-punto, y es ideal para conectar sensores, controladores de motores, PLCs y otros dispositivos industriales.
+La interfaz RS485 proporciona un canal de comunicación diferencial robusto y resistente al ruido comúnmente utilizado en entornos industriales. Soporta comunicación serie de larga distancia y multi-punto, siendo ideal para conectar sensores, controladores de motores, PLCs y otros dispositivos industriales.
 
 ### Conexión de Hardware
 
@@ -1358,7 +1358,7 @@ El Robotics J501 Mini está equipado con un HDMI para salida de pantalla de alta
 
 ## Recursos
 
-- [Esquemático de la Placa Portadora reComputer Robotics J501-Mini](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/reComputer_mini_J501_datasheet.pdf)
+- [Esquemático de la Placa Portadora reComputer Robotics J501-Mini](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
 
 <!-- - [reComputer Robotics J501-Mini Carrier Board Datasheet]() -->
 

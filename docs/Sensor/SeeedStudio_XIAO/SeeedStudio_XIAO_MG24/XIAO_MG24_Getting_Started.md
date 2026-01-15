@@ -145,6 +145,39 @@ sidebar_position: 0
 - 3V3 - This is the regulated output from the onboard regulator.
 - GND - Power/data/signal ground
 
+## **Pin Map**
+| XIAO Pin                 | Function         | Chip Pin  | Alternate Functions | Description                          |
+| :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS             |           |                    | Power Input/Output                   |
+| GND                     |                  |           |                    |                                      |
+| 3V3                     | 3V3_OUT          |           |                    | Power Output                         |
+| D0                      | Analog          | PC00      |                    | GPIO, ADC                            |
+| D1                      | Analog          | PC01      |                    | GPIO, ADC                            |
+| D2                      | Analog          | PC02      |                    | GPIO, ADC                            |
+| D3                      | Analog          | PC03      |                    | GPIO, SPI, ADC                       |
+| D4                      | Analog,SDA       | PC04      |                    | GPIO, I2C Data, ADC                  |
+| D5                      | Analog,SCL       | PC05      |                    | GPIO, I2C Clock, ADC                 |
+| D6                      | Analog,TX0       | PC06      |                    | GPIO, UART Transmit, ADC             |
+| D7                      | Analog,RX0       | PC07      |                    | GPIO, UART Receive, ADC              |
+| D8                      | Analog,SCK0      | PA03      |                    | GPIO, SPI Clock, ADC                 |
+| D9                      | Analog,MISO0     | PA04      |                    | GPIO, SPI Data, ADC                  |
+| D10                     | Analog,MOSI0     | PA05      |                    | GPIO, SPI Data, ADC                  |
+| D11                     | Analog          | PA09      | SAMD11_TX          | GPIO, UART Receive, ADC              |
+| D12                     | Analog          | PA08      | SAMD11_RX          | GPIO, UART Transmit, ADC             |
+| D13                     | Analog          | PB02      |                    | GPIO, I2C Clock, ADC                 |
+| D14                     | Analog          | PB03      |                    | GPIO, I2C Data, ADC                  |
+| D15                     | Analog,MOSI1     | PB00      |                    | GPIO, SPI Data, ADC                  |
+| D16                     | Analog,MISO1     | PB01      |                    | GPIO, SPI Data, ADC                  |
+| D17                     | Analog,SCK1      | PA00      |                    | GPIO, SPI Clock, ADC                 |
+| D18                     | Analog,CS        | PD02      | Csn                | GPIO, Csn, ADC               |
+| ADC_BAT                 |                  | PD04      |                    | Read the BAT voltage value           |
+| RF Switch Port Select   |                  | PB04      |                    | Switch onboard antenna and the UFL antenna |
+| RF Switch Power         |                  | PB05      |                    | RF Power                             |
+| Reset                   |                  | RESET     |                    | RESET                                |
+| CHARGE_LED              |                  | VBUS      |                    | CHG-LED_Red                          |
+| USER_LED                |                  | PA07      |                    | User Light_Yellow                    |
+
+
 ## Getting started
 
 To enable you to get started with the XIAO MG24 faster, please read the hardware and software preparation below to prepare the XIAO.

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-06 10:50:50 (北京时间)
-// 多语言页面: 2097 个
+// 生成时间: 2026-01-14 09:36:20 (北京时间)
+// 多语言页面: 2113 个
 
 (function() {
   'use strict';
@@ -533,6 +533,12 @@
     "es",
     "ja"
   ],
+  "/deploy_depth_anything_v3_jetson_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/deploy_frigate_on_jetson": [
     "cn",
     "en",
@@ -857,6 +863,12 @@
     "es",
     "ja"
   ],
+  "/local_voice_llm_on_recomputer_jetson_for_reachy_mini": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/speech_vlm": [
     "cn",
     "en",
@@ -864,6 +876,24 @@
     "ja"
   ],
   "/vlm": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/local_chatbot_recomputer_bk": [
     "cn",
     "en",
     "es",
@@ -959,12 +989,6 @@
     "es",
     "ja"
   ],
-  "/recomputer_robotics_j501_getting_started": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/create_backup_and_restore_on_recomputer": [
     "cn",
     "en",
@@ -1002,6 +1026,12 @@
     "ja"
   ],
   "/how_to_build_the_source_code_project_for_seeed_jetson_bsp": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deal_the_issue_of_UUID": [
     "cn",
     "en",
     "es",
@@ -1278,6 +1308,12 @@
     "ja"
   ],
   "/recomputer_robotics_j401_hardware_interfaces_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_robotics_recomputer_j501_robotics_getting_started": [
     "cn",
     "en",
     "es",
@@ -4133,6 +4169,12 @@
     "es",
     "ja"
   ],
+  "/lerobot_soarm101_Rynnbot_Developer_Kit": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/lerobot_starai_arm": [
     "cn",
     "en",
@@ -6005,6 +6047,12 @@
     "ja"
   ],
   "/ee04_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/EN04_opendisplay": [
     "cn",
     "en",
     "es",
@@ -8463,6 +8511,18 @@
     "es",
     "ja"
   ],
+  "/xiao_esp32c5_with_freertos": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_buletooth_usage": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c5_wifi_usage": [
     "cn",
     "en",
@@ -8488,6 +8548,24 @@
     "ja"
   ],
   "/xiao_esp32c5_with_platformio": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_arduino": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32c5_zigbee_idf": [
     "cn",
     "en",
     "es",
@@ -8620,6 +8698,12 @@
     "ja"
   ],
   "/geolocation_tracker_with_XIAO_ESP32S3": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/XIAO_ESP32S3_GPIO_Viewer": [
     "cn",
     "en",
     "es",
@@ -9711,6 +9795,12 @@
     "es",
     "ja"
   ],
+  "/t1000e_for_lorawan_introduction": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/open_source_lorawan": [
     "cn",
     "en",
@@ -10312,6 +10402,12 @@
     "ja"
   ],
   "/Tracker_WiFi_Geolocation": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_ttn": [
     "cn",
     "en",
     "es",

@@ -204,6 +204,31 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
  </tr>
 </table>
 
+ ## **Pin Map**
+| XIAO Pin        | Function  | Chip Pin  | Alternate Functions                  | Description          |
+| :-------------: | :-------: | :-------: | :---------------------------------: | :-----------------: |
+| 5V              | VBUS      |           |                                     | Power Input/Output   |
+| GND             |           |           |                                     |                      |
+| 3V3             | 3V3_OUT   |           |                                     | Power Output         |
+| D0              | Analog    | GPIO2     | ADC1_CH2,                           | GPIO, ADC            |
+| D1              | Analog    | GPIO3     | ADC1_CH3                            | GPIO, ADC            |
+| D2              | Analog    | GPIO4     | ADC1_CH4, FSPIHD, MTMS              | GPIO, ADC            |
+| D3              | Analog    | GPIO5     | ADC2_CH0, FSPIWP, MTDI              | GPIO, ADC            |
+| D4              | SDA       | GPIO6     | FSPICLK, MTCK                       | GPIO, I2C Data       |
+| D5              | SCL       | GPIO7     | FSPID, MTDO                         | GPIO, I2C Clock      |
+| D6              | TX        | GPIO21    | U0TXD                               | GPIO, UART Transmit  |
+| D7              | RX        | GPIO20    | U0RXD                               | GPIO, UART Receive   |
+| D8              | SCK       | GPIO8     |                                     | GPIO, SPI Clock      |
+| D9              | MISO      | GPIO9     |                                     | GPIO, SPI Data       |
+| D10             | MOSI      | GPIO10    | FSPICS0                             | GPIO, SPI Data       |
+| MTDO            |           | GPIO7     |                             |            JTAG              |
+| MTDI            |           | GPIO5     |                        |        JTAG, ADC                  |
+| MTCK            |           | GPIO6     |                           |        JTAG, ADC               |
+| MTMS            |           | GPIO4     |                            |               JTAG, ADC       |
+| Reset           |           | CHIP_EN   |                                     | EN                   |
+| Boot            |           | GPIO9     |                                     | Enter Boot Mode      |
+| U.FL-R-SMT1     |           | LNA_IN    |                                     | UFL antenna          |
+| Light           |           | VCC_3V3   |                                     | CHG-LED              |
 ### Power Pins
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.

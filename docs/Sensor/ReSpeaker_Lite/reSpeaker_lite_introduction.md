@@ -314,3 +314,5 @@ dfu-util -l
 [ReSpeaker Lite XMOS Firmware](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
 
 [ReSpeaker Lite Github](https://github.com/respeaker/ReSpeaker_Lite/)
+
+[ReSpeaker Lite 3D file](https://files.seeedstudio.com/wiki/respeakerv3/ReSpeakerLitev1.1.step)
