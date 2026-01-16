@@ -66,7 +66,7 @@ last_update:
 
 ## Configuración del Entorno
 
-**Paso 1.** Instalar Dependencias
+**Paso 1.**Instalar Dependencias
 
 ```bash
 sudo apt update
@@ -157,7 +157,7 @@ chmod +x generate_engines.sh
 # Generate TensorRT engines from ONNX models
 ./generate_engines.sh onnx
 ```
-Por favor ten paciencia mientras se genera el archivo `.engine`. Una vez que la conversión esté completa, se crearán dos archivos en el directorio `onnx` como sigue.
+Por favor ten paciencia mientras se genera el archivo `.engine`. Una vez que la conversión esté completa, se crearán dos archivos en el directorio `onnx` como se muestra a continuación.
 
 <div align="center">
     <img width={1000}
@@ -185,15 +185,84 @@ ls /dev/video*
 
 **Paso 2.** Calibración de cámara
 
-Puedes consultar [este wiki](https://wiki.seeedstudio.com/es/pycuvslam_recomputer_robotics/#camera-calibration) para la calibración de cámara.
+El paquete `v4l2_camera` actúa como un puente entre la API Linux Video4Linux2 (V4L2) y los tópicos ROS 2, publicando mensajes de imagen e información de cámara que pueden ser fácilmente utilizados en pipelines de calibración.
+
+Instalar Paquete de Calibración de Cámara:
+
+```bash
+# Install Camera Calibration Package
+sudo apt install ros-humble-camera-calibration
+
+# v4l2_camera is the official ROS2 maintained node that can directly publish USB camera images
+sudo apt install ros-${ROS_DISTRO}-v4l2-camera
+```
+
+lanzar nodo de cámara:
+
+```bash
+# Launch camera node
+ros2 run v4l2_camera v4l2_camera_node \
+  --ros-args \
+  -p image_size:=[640,480] \
+  -p pixel_format:=YUYV
+```
+
+Los tópicos publicados por defecto son:
+
+- `/image_raw` - Imagen cruda de la cámara
+- `/camera` - Información de la cámara
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image.png" />
+</div>
+
+Ejecutar calibración de cámara:
+
+```bash
+# In another terminal
+ros2 run camera_calibration cameracalibrator \
+  --size 8x6 \
+  --square 0.025 \
+  --fisheye-recompute-extrinsicsts \
+  --fisheye-fix-skew \
+  --ros-args --remap image:=/image_raw --remap camera:=/v4l2_camera
+```
+
+:::note
+- `--size 8x6` se refiere al número de esquinas internas (8×6 = 48 esquinas para una cuadrícula de 9×7)
+- `--square 0.025` se refiere al tamaño del cuadrado en metros (25mm)
+- Mueve la cámara alrededor para capturar imágenes desde diferentes ángulos hasta que el botón `CALIBRATE` se ilumine
+
+:::
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
+</div>
+
+Después de una calibración exitosa, obtendrás parámetros de cámara en el terminal similares a:
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
+</div>
+
+Puedes consultar [este wiki](https://wiki.seeedstudio.com/es/pycuvslam_recomputer_robotics/#camera-calibration) para calibración de cámara.
 Escribe los parámetros calibrados en el archivo `camera_info_example.yaml`
 
 **Paso 3.** Lanzar Nodo de Cámara USB
 
+Guarda los parámetros de calibración en el archivo `camera_info_example.yaml` para rectificar la distorsión ojo de pez de la cámara GMSL. Luego, ejecuta el siguiente comando para estimación de profundidad en tiempo real:
 ```bash
 #Start the script for camera depth estimation
-./run_camera_depth_rviz.sh
+CAMERA_INFO_FILE=camera_info_example.yaml ENABLE_UNDISTORTION=1 ./run_camera_depth.sh
 ```
+
+<div class="video-container">
+  <iframe width="1029" height="579" src="https://www.youtube.com/embed/3Khm3OpLg3M" title="Deploy Depth Anything V3 on reComputer Mini J501" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 
 ### Video para Estimación de Profundidad
 
@@ -224,7 +293,7 @@ Prepara un archivo de video para estimación de profundidad.
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
