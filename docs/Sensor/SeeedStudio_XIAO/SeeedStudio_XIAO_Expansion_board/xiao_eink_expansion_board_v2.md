@@ -245,7 +245,7 @@ Create a **new "driver.h" file** and paste those code into it. The code should b
 
 ```cpp
 #define BOARD_SCREEN_COMBO 504 // 2.9 inch monochrome ePaper Screen （SSD1680）
-#define USE_XIAO_EPAPER_BREAKOUT_BOARD
+#define USE_XIAO_EPAPER_DRIVER_BOARD
 ```
 
 After that, go to **Tools** -> **Board** -> **XIAO ESP32C6** and **Tools** -> **Port** -> **Select the port your board is connected to**. Then click **Upload** to upload the code.

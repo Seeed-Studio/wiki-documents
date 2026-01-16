@@ -430,7 +430,39 @@ void loop() {
 }
 ```
 
+### Displaying Custom Images on XIAO ePaper Display Board (ESP32-S3) - EE04
 
+Find the Bitmap example in the GFX library and select it.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image1.png" style={{width:700, height:'auto'}}/></div>
+
+Please note that you need to create a driver.h file within your project directory.[For details, click to learn more.](#install-seeed-gfx-library).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image2.png" style={{width:700, height:'auto'}}/></div>
+
+Next, navigate to the SenseCraft HMI Tool at https://sensecraft.seeed.cc/hmi/tools/dither and upload the image you wish to display.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image3m.png" style={{width:700, height:'auto'}}/></div>
+
+After uploading the image, generate the C array (image data).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image4.png" style={{width:700, height:'auto'}}/></div>
+
+Copy the array content. Be careful to only copy the hex data and not include any irrelevant characters.
+
+:::tip 
+If the colors on your display appear inverted compared to your original design, select the Invert Colors option in the HMI tool before generating the code.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image5.png" style={{width:700, height:'auto'}}/></div>
+
+Overwrite the existing array in the image.c or image.h file within your Arduino sketch.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image6.png" style={{width:700, height:'auto'}}/></div>
+
+Finally, upload the program to your XIAO ESP32-S3. You should now see your custom image displayed on the ePaper screen.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image7.png" style={{width:700, height:'auto'}}/></div>
 
 ## Resources
 
