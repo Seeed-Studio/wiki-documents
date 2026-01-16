@@ -185,15 +185,84 @@ ls /dev/video*
 
 **Step 2.** Camera calibration
 
+`v4l2_camera` Package acts as a bridge between the Linux Video4Linux2 (V4L2) API and ROS 2 topics, publishing image and camera info messages that can be easily used in calibration pipelines.
+
+Install Camera Calibration Package:
+
+```bash
+# Install Camera Calibration Package
+sudo apt install ros-humble-camera-calibration
+
+# v4l2_camera is the official ROS2 maintained node that can directly publish USB camera images
+sudo apt install ros-${ROS_DISTRO}-v4l2-camera
+```
+ 
+launch camera node:
+
+```bash
+# Launch camera node
+ros2 run v4l2_camera v4l2_camera_node \
+  --ros-args \
+  -p image_size:=[640,480] \
+  -p pixel_format:=YUYV
+```
+
+The default topics published are:
+
+- `/image_raw` - Raw camera image
+- `/camera` - Camera info
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image.png" />
+</div>
+
+Run camera calibration :
+
+```bash
+# In another terminal
+ros2 run camera_calibration cameracalibrator \
+  --size 8x6 \
+  --square 0.025 \
+  --fisheye-recompute-extrinsicsts \
+  --fisheye-fix-skew \
+  --ros-args --remap image:=/image_raw --remap camera:=/v4l2_camera
+```
+
+:::note
+- `--size 8x6` refers to the number of inner corners (8×6 = 48 corners for a 9×7 grid)
+- `--square 0.025` refers to the square size in meters (25mm)
+- Move the camera around to capture images from different angles until the `CALIBRATE` button lights up
+
+:::
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
+</div>
+
+After successful calibration, you will obtain camera parameters in the terminal similar to:
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
+</div>
+
 You can refer to [this wiki](https://wiki.seeedstudio.com/pycuvslam_recomputer_robotics/#camera-calibration) for camera calibration.
 Write the calibrated parameters into the `camera_info_example.yaml` file
 
 **Step 3.** Launch USB Camera Node 
 
+Save the calibration parameters to the `camera_info_example.yaml` file to rectify the fisheye distortion of the GMSL camera. Then, run the following command for real-time depth estimation:
 ```bash
 #Start the script for camera depth estimation
-./run_camera_depth_rviz.sh
+CAMERA_INFO_FILE=camera_info_example.yaml ENABLE_UNDISTORTION=1 ./run_camera_depth.sh
 ```
+
+<div class="video-container">
+  <iframe width="1029" height="579" src="https://www.youtube.com/embed/3Khm3OpLg3M" title="Deploy Depth Anything V3 on reComputer Mini J501" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 
 ### Video for Depth Estimation
 
