@@ -86,14 +86,14 @@ last_update:
             <td>Botón Reset / Boot</td>
             <td>Botón Reset / Boot</td>
             <td>Botón Reset / Boot</td>
-            <td>Botón reset / Botón boot</td>
+            <td>Botón Reset / Botón Boot</td>
         </tr>
         <tr>
             <th>LEDs Integrados</th>
-            <td>LED de Carga / USER</td>
-            <td>LED de Carga / USER</td>
+            <td>LED de Carga / LED de USUARIO</td>
+            <td>LED de Carga / LED de USUARIO</td>
             <td>LED de Carga</td>
-            <td>LED de Carga / USER</td>
+            <td>LED de Carga / LED de USUARIO</td>
         </tr>
         <tr>
             <th>Chip de Carga de Batería</th>
@@ -112,10 +112,10 @@ last_update:
 - **Subsistema Bluetooth LE:** Soporta características de Bluetooth 5 y Bluetooth mesh
 - **Mejor rendimiento RF:** Antena RF externa incluida.
 - **Chip de carga de batería:** Soporta gestión de carga y descarga de batería de litio.
-- **Recursos abundantes en chip:** 384 KB de SRAM en chip, 320 KB de ROM
+- **Recursos ricos en chip:** 384 KB de SRAM en chip, 320 KB de ROM
 - **Tamaño ultra pequeño:** Tan pequeño como un pulgar (21x17.8mm) factor de forma clásico de la serie XIAO para dispositivos portátiles y proyectos pequeños
 - **Características de seguridad confiables**: Aceleradores de hardware criptográfico que soportan AES-128/256, hashing de familia SHA, HMAC, un periférico de firma digital dedicado, y Secure Boot (V2).
-- **Interfaces abundantes**: 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (capaces de PWM), 5×canales ADC, y una interfaz de pad de enlace JTAG.
+- **Interfaces ricas**: 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (capaces de PWM), 5×canales ADC, y una interfaz de pad de enlace JTAG.
 - Componentes de un solo lado, diseño de montaje superficial
 
 ## Descripción general del hardware
@@ -135,6 +135,33 @@ last_update:
  </tr>
 </table>
 
+ ## **Mapa de Pines**
+| Pin XIAO                | Función   | Pin del Chip  | Funciones Alternativas       | Descripción                  |
+| :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
+| 5V                     | VBUS       |           |                          | Entrada/Salida de Energía           |
+| GND                    |            |           |                          |                              |
+| 3V3                    | 3V3_OUT    |           |                          | Salida de Energía                 |
+| D0                     | Analógico     | GPIO1     | LP_UART_DSRN,LP_GPIO1    | GPIO, ADC                    |
+| D1                     |            | GPIO0     | LP_UART_DTRN,LP_GPIO0    | GPIO                         |
+| D2                     |            | GPIO25    |                          | GPIO                         |
+| D3                     |            | GPIO7     | SDIO_DATA1               | GPIO                         |
+| D4                     | SDA        | GPIO23    |                          | GPIO, Datos I2C               |
+| D5                     | SCL        | GPIO24    |                          | GPIO, Reloj I2C              |
+| D6                     | TX         | GPIO11    |                          | GPIO, Transmisión UART          |
+| D7                     | RX         | GPIO12    |                          | GPIO, Recepción UART           |
+| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO, Reloj SPI              |
+| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO, Datos SPI               |
+| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO, Datos SPI               |
+| MTDO                   |            | GPIO5     |                          | JTAG                         |
+| MTDI                   |            | GPIO3     |                          | JTAG, ADC                    |
+| MTCK                   |            | GPIO4     |                          | JTAG, ADC                    |
+| MTMS                   |            | GPIO2     |                          | JTAG, ADC                    |
+| ADC_BAT                |            | GPIO06    |                          | Leer el valor de voltaje de BAT   |
+| Reset                  |            | CHIP_EN   |                          | EN                           |
+| Boot                   |            | GPIO28    |                          | Entrar en Modo Boot              |
+| U.FL-R-SMT1            |            | LNA_IN    |                          | Antena UFL                  |
+| CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_Rojo                  |
+| USER_LED               |            | GPIO27    |                          | Luz de Usuario_Amarillo            |
 ## Introducción
 
 Para permitirte comenzar con el XIAO ESP32-C5 más rápido, por favor lee la preparación de hardware y software a continuación para preparar el XIAO.
@@ -186,15 +213,15 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
   <br></br>
 
 - **Paso 2.** Inicia la aplicación Arduino.
-- **Paso 3.**  Abre BOARDS MANAGER -> Busca **esp32** -> Instala la versión 3.3.4 o una versión superior
+- **Paso 3.**  Abre BOARDS MANAGER -> Busca **esp32** -> Instala la versión 3.3.5 o una versión superior
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
-### Subir Programa
+### Cargar Programa
 
 Tomemos un programa de iluminación como ejemplo a continuación
 
-**Paso 1.** Selecciona **XIAO_ESP32C5** y PORT. Si no conoces el PORT, puedes reinsertar y quitar el XIAO_ESP3-2C5 para verificar.
+**Paso 1.** Selecciona **XIAO_ESP32C5** y PUERTO. Si no conoces el PUERTO, puedes volver a insertar y quitar el XIAO_ESP3-2C5 para verificar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
@@ -220,7 +247,7 @@ void loop() {
 }
 ```
 
-**Paso 3.** Haz clic y Sube
+**Paso 3.** Haz Clic y Sube
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -234,7 +261,7 @@ Después de subir el programa, verás la luz indicadora L parpadeando a interval
 ## Modo de sueño profundo
 
 El XIAO ESP32-C5 cuenta con funciones de sueño profundo y despertar. Este ejemplo utiliza un disparador de nivel alto en el pin **D0** para despertar el dispositivo del sueño profundo.<br/>
-Es importante notar que esta es una opción configurable, ya que el hardware soporta tanto disparadores de nivel alto como de nivel bajo para acomodar diferentes diseños de circuito.
+Es importante tener en cuenta que esta es una opción configurable, ya que el hardware soporta tanto disparadores de nivel alto como de nivel bajo para acomodar diferentes diseños de circuito.
 
 ```cpp
 #define WAKEUP_PIN D0 // LP_GPIO1
@@ -282,7 +309,7 @@ void setup(){
 void loop(){}
 ```
 
-Si eres lo suficientemente rápido para activar el monitor serie antes de que el XIAO entre en modo de sueño profundo, entonces puedes ver la salida del mensaje como se muestra a continuación. Esto significa que el XIAO ahora está **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido-apagado del **LED L** para verificar si el dispositivo ha sido despertado. Una vez que se despierte, exhibirá un efecto de parpadeo.
+Si eres lo suficientemente rápido para abrir el monitor serie antes de que el XIAO entre en sueño profundo, entonces puedes ver la salida del mensaje como se muestra a continuación. Esto significa que el XIAO ahora está **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido-apagado del **LED L** para verificar si el dispositivo ha sido despertado. Una vez que se despierte, exhibirá un efecto de parpadeo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -308,7 +335,7 @@ Por favor ten cuidado de no cortocircuitar los terminales positivo y negativo y 
 
 1. Por favor usa baterías calificadas que cumplan con las especificaciones.
 2. XIAO puede conectarse a tu dispositivo de computadora a través de cable de datos mientras usa la batería, ten la seguridad de que XIAO tiene un chip de protección de circuito incorporado, que es seguro.
-3. Cuando XIAO ESP32-C5 es alimentado por una batería, el **LED C** se encenderá. Puedes usar esto como base para determinar si se ha llevado a cabo la gestión de carga.
+3. Cuando el XIAO ESP32-C5 es alimentado por una batería, el **LED C** se encenderá. Puedes usar esto como base para determinar si se ha llevado a cabo la gestión de carga.
 
 ### Verificar el voltaje de la batería
 
@@ -325,7 +352,7 @@ void setup() {
   Serial.begin(115200);
   pinMode(BAT_VOLT_PIN, INPUT);         // Configure A0 as ADC input
   pinMode(BAT_VOLT_PIN_EN , OUTPUT);
-  digitalWrite(BAT_VOLT_PIN_EN , LOW);
+  digitalWrite(BAT_VOLT_PIN_EN , HIGH);
 }
 
 void loop() {
@@ -348,7 +375,7 @@ void loop() {
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
 :::tip
-Según la hoja de datos, el rango de medición efectivo del ESP32-C5 cubre 0~3300 mV. Por lo tanto, el circuito de adquisición de voltaje de batería incorporado del XIAO ESP32-C5 está diseñado con dos resistores de 100K para división de voltaje, permitiendo la lectura precisa de valores.
+Según la hoja de datos, el rango de medición efectivo del ESP32-C5 cubre 0~3300 mV. Por lo tanto, el circuito de adquisición de voltaje de batería incorporado del XIAO ESP32-C5 está diseñado con dos resistencias de 100K para división de voltaje, permitiendo la lectura precisa de valores.
 :::
 
 ## Recursos
