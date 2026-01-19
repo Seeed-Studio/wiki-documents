@@ -342,24 +342,35 @@ last_update:
     <div className="course-grid">
 
       <!-- ROS 1 -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/1.%E4%B8%AD%E6%96%87/1.ROS%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%85%AB%E8%AE%B2/README.MD" className="course-card">
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 8小时</span></div>
-          <h3>ROS 1 基础入门及Diy自己的移动机器人</h3>
-          <p>学习节点、话题、服务和动作，使用 Python 进行机器人编程。</p>
-          <span className="btn-start">计划中</span>
+          <h3>ROS 1 基础入门八讲</h3>
+          <p>学习节点、话题、服务和基础入门</p>
+          <span className="btn-start">开始学习</span>
+        </div>
+      </a>
+
+      <!-- ROS 1 -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/1.%E4%B8%AD%E6%96%87/2.ROS%E6%9C%BA%E5%99%A8%E4%BA%BA%E4%BB%BF%E7%9C%9F%E4%B8%83%E8%AE%B2/README.MD" className="course-card">
+        <div className="course-cover c-ros1">ROS 1</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 8小时</span></div>
+          <h3>ROS1 机器人仿真七讲</h3>
+          <p>从建模仿真到自主导航。</p>
+          <span className="btn-start">开始学习</span>
         </div>
       </a>
 
       <!-- ROS 2 -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/1.%E4%B8%AD%E6%96%87/1.ROS2%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%85%AB%E8%AE%B2/README.MD" className="course-card">
         <div className="course-cover c-ros2">ROS 2</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 4小时</span></div>
-          <h3>ROS 2 基础入门</h3>
-          <p>学习节点、话题、服务和动作。</p>
-          <span className="btn-start">计划中</span>
+          <h3>ROS 2 基础入门八讲</h3>
+          <p>学习节点、话题、服务和基础入门。</p>
+          <span className="btn-start">开始学习</span>
         </div>
       </a>
 
@@ -372,7 +383,7 @@ last_update:
           <div className="course-meta"><span className="level beg">机械臂入门</span> <span>⏱️ 6h</span></div>
           <h3>MoveIt 1/2</h3>
           <p>学习Moveit 1/2 导入自己的机械臂并完成运动学正逆解 </p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-plan">计划中</span>
         </div>
       </a>
 
@@ -383,7 +394,7 @@ last_update:
           <div className="course-meta"><span className="level int">机械臂进阶</span> <span>⏱️ 6小时</span></div>
           <h3>匹诺曹Pinocchio</h3>
           <p>学习匹诺曹机器人学框架，开发自己机械臂的运动学及动力学任务</p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-plan">计划中</span>
         </div>
       </a>
 
@@ -394,7 +405,7 @@ last_update:
           <div className="course-meta"><span className="level adv">高级</span> <span>⏱️ 12小时</span></div>
           <h3>NVIDIA Isaac Sim & Lab</h3>
           <p>Sim2Real 仿真到现实工作流，USD 管道与环境搭建。</p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-plan">计划中</span>
         </div>
       </a>
 
@@ -405,7 +416,7 @@ last_update:
           <div className="course-meta"><span className="level adv">高级</span> <span>⏱️ 10小时</span></div>
           <h3>MuJoCo 物理引擎</h3>
           <p>面向敏捷机器人控制的高精度动力学建模与仿真。</p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-plan">计划中</span>
         </div>
       </a>
 
@@ -416,7 +427,7 @@ last_update:
           <div className="course-meta"><span className="level adv">困难</span> <span>⏱️ 20小时</span></div>
           <h3>机器人强化学习</h3>
           <p>PPO 算法、深度强化学习训练流程，以及 Jetson 端部署。</p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-plan">计划中</span>
         </div>
       </a>
 
@@ -433,7 +444,7 @@ last_update:
           <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 5小时</span></div>
           <h3>小形舵机机器人入门课程</h3>
           <p>小型人形机器人硬件驱动、动作舞蹈编排及二次开发</p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-plan">计划中</span>
         </div>
       </a>
 
@@ -444,7 +455,7 @@ last_update:
           <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 6小时</span></div>
           <h3>移动机器人开发 Lekiwi</h3>
           <p>基于 Lekiwi 底盘的 SLAM 建图、Nav2 导航与自动巡逻。</p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-plan">计划中</span>
         </div>
       </a>
 
@@ -455,7 +466,7 @@ last_update:
           <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 15小时</span></div>
           <h3>StarAi 机械臂系统课程</h3>
           <p>StarAI 6+1自由度机械臂运动学、动力学到模仿学习和强化学习VLA进阶 </p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-plan">计划中</span>
         </div>
       </a>
 
@@ -466,19 +477,19 @@ last_update:
           <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 8小时</span></div>
           <h3>StackForce 轮足机器人系统课程</h3>
           <p>轮足机器人的LQR平衡控制算法与运动规划。</p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-plan">计划中</span>
         </div>
       </a>
 
 
       <!-- ReachyMini -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ReachyMini_Tutorial/1.%E4%B8%AD%E6%96%87/README.md" className="course-card">
         <div className="course-cover c-reachy">桌面机器人</div>
         <div className="course-info">
           <div className="course-meta"><span className="level adv">高级</span> <span>⏱️ 8小时</span></div>
           <h3>ReachyMini 系统课程</h3>
           <p>ReachyMini 基本使用、接口教程及二次开发系统课程。</p>
-          <span className="btn-start">计划中</span>
+          <span className="btn-start">开始学习</span>
         </div>
       </a>
 
@@ -606,8 +617,8 @@ last_update:
 /* AI & Software Colors */
 .c-ros2 { background: linear-gradient(135deg, #10b981, #059669); }
 .c-ros1 { background: linear-gradient(135deg, #4b5563, #374151); }
-.c-moveit { background: linear-gradient(135deg, #f90306, #ea000c); }
 .c-pinocchio { background: linear-gradient(135deg, #3b82f6, #fa000c); }
+.c-moveit { background: linear-gradient(135deg, #f90306, #ea000c); }
 .c-isaac { background: linear-gradient(135deg, #76b900, #366e00); }
 .c-rl { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
 .c-mujoco { background: linear-gradient(135deg, #f97316, #ea580c); }
@@ -629,9 +640,31 @@ last_update:
 .course-info p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; }
 
 .btn-start {
-  display: block; text-align: center; padding: 8px 0; background: #f0f7ff; color: #4a90e2; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
+  display: block; text-align: center; padding: 8px 0; background:  #ecfdf5; color: #059669; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
 }
-.course-card:hover .btn-start { background: #4a90e2; color: white; }
+.course-card:hover .btn-start { background: #10b981; color: white; }
+
+.btn-plan {
+  display: block; 
+  text-align: center; 
+  padding: 8px 0; 
+  font-weight: 600; 
+  font-size: 0.9rem; 
+  border-radius: 8px; 
+  transition: all 0.2s;
+
+  /* 差异化设计 */
+  background: #fff7ed; /* 极浅的橙色背景 */
+  color: #ea580c;      /* 较深的橙色文字 */
+  cursor: default;
+}
+
+/* Hover 效果：保持暖色调，不像 Start 按钮那样反转颜色，避免抢夺视线 */
+.course-card:hover .btn-plan {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
 
 /* =========================================
    4. Dark Mode 适配
@@ -658,6 +691,8 @@ html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
 html[data-theme='dark'] .course-info p { color: #9ca3af; }
 html[data-theme='dark'] .btn-start { background: #2f2f32; color: #60a5fa; }
 html[data-theme='dark'] .course-card:hover .btn-start { background: #60a5fa; color: white; }
+html[data-theme='dark'] .btn-plan { background: #2f2f32; color: #ea580c; }
+html[data-theme='dark'] .course-card:hover .btn-plan { background: #ea580c; color: white; }
 html[data-theme='dark'] .learning-section-title { color: #ccc; border-bottom-color: #444; }
 
 @media (max-width: 768px) {
