@@ -3457,7 +3457,8 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_r1000_flowfuse_getting_start',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reTerminal-DM_intro_machinechat_jedi',
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reterminal-dm-sensecraft-edge-os-intro',
-                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_use_ups'
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_use_ups',
+                    'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reComputer-RS485-test'
                   ]
                 },
               ]
@@ -3722,6 +3723,13 @@ const sidebars = {
                 },
                 {
                   type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/reComputer_Robotics_J501_Getting_Started',
+                  ],
+                },
+                {
+                  type: 'category',
                   label: 'reComputer J401B',
                   items: [
                     'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J401B/recomputer_j401b_getting_start',
@@ -3920,6 +3928,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Install_torch_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/vnc_for_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Implement_Ethercat_communication_on_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Distributed_llama_cpp_RPC_on_Jetson',
               ]
             },
           ]
@@ -8689,6 +8698,7 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reTerminal-DM_intro_machinechat_jedi',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reterminal-dm-sensecraft-edge-os-intro',
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_recomputer_use_ups',
+                    'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reComputer-RS485-test'
                   ]
                 },
               ]
@@ -8942,6 +8952,13 @@ const sidebars = {
                   items: [
                     'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/cn_reComputer_Robotics_Getting_Started',
                     'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/cn_reComputer_Robotics_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'zh-CN/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/cn_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
                 {
@@ -13813,6 +13830,7 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_reTerminal-DM_intro_machinechat_jedi',
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_reterminal-dm-sensecraft-edge-os-intro',
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_recomputer_use_ups',
+                    'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_reComputer-RS485-test'
                   ]
                 },
               ]
@@ -14066,6 +14084,13 @@ const sidebars = {
                   items: [
                     'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/es_reComputer_Robotics_Getting_Started',
                     'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/es_reComputer_Robotics_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'es/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/es_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
                 {
@@ -18938,6 +18963,7 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_reTerminal-DM_intro_machinechat_jedi',
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_reterminal-dm-sensecraft-edge-os-intro',
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_recomputer_use_ups',
+                    'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_reComputer-RS485-test'
                   ]
                 },
               ]
@@ -19191,6 +19217,13 @@ const sidebars = {
                   items: [
                     'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Getting_Started',
                     'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J40/ja_reComputer_Robotics_Hardware_Interfaces_Usage',
+                  ],
+                },
+                {
+                  type: 'category',
+                  label: 'reComputer Robotics J50',
+                  items: [
+                    'ja/Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Robotics_J50/ja_reComputer_Robotics_J501_Getting_Started',
                   ],
                 },
                 {
