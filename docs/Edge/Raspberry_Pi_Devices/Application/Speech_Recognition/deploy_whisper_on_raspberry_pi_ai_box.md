@@ -19,7 +19,11 @@ no_comments: false # for Disqus
 
 ## Introduction
 
+[Whisper](https://github.com/openai/whisper) is a versatile, state-of-the-art Automatic Speech Recognition (ASR) and speech processing model developed by OpenAI. Unlike traditional speech-to-text systems, Whisper was trained on 680,000 hours of multilingual and multitask supervised data collected from the web. This massive and diverse dataset makes the model exceptionally robust to accents, background noise, and technical terminology.
+
 This guide provides a comprehensive walkthrough for the deployment and utilization of [Whisper](https://github.com/openai/whisper) on the Raspberry Pi AI Box.
+
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/openai/whisper/main/approach.png" style={{width:500, height:'auto'}}/></div>
 
 ## Prepare Hardware
 
