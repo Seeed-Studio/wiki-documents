@@ -26,7 +26,7 @@ last_update:
 ## 简介
 
 <div style={{ textAlign: "justify" }}>
-[Depth Anything V3](https://github.com/ByteDance-Seed/depth-anything-3) 是一个最先进的单目深度估计模型，通过从单个 RGB 图像生成高质量深度图来革新 3D 感知。与需要专用硬件或多摄像头输入的传统深度估计方法不同，Depth Anything V3 利用先进的深度学习技术，仅使用标准 2D 图像来预测准确的深度信息。这使其在硬件约束和计算效率是关键考虑因素的边缘 AI 应用中特别有价值。本 wiki 将指导您在 Jetson AGX Orin 上部署 Depth Anything V3，并集成 ROS2 以实现实时机器人应用。
+[Depth Anything V3](https://github.com/ByteDance-Seed/depth-anything-3) 是一个最先进的单目深度估计模型，通过从单个 RGB 图像生成高质量深度图来革新 3D 感知。与需要专用硬件或多摄像头输入的传统深度估计方法不同，Depth Anything V3 利用先进的深度学习技术，仅使用标准 2D 图像来预测准确的深度信息。这使其对于硬件约束和计算效率是关键考虑因素的边缘 AI 应用特别有价值。本 wiki 将指导您在 Jetson AGX Orin 上部署 Depth Anything V3，并集成 ROS2 用于实时机器人应用。
 </div>
 
 <div align="center">
@@ -39,7 +39,7 @@ last_update:
 <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 </a></div>
 
-## 前提条件
+## 先决条件
 
 - **[reComputer Mini J501 载板](https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html)**（Jetson AGX Orin），配备 JetPack 6.2
 - USB 摄像头
@@ -185,15 +185,84 @@ ls /dev/video*
 
 **步骤 2.** 摄像头标定
 
+`v4l2_camera` 包充当 Linux Video4Linux2 (V4L2) API 和 ROS 2 话题之间的桥梁，发布可在标定流水线中轻松使用的图像和摄像头信息消息。
+
+安装摄像头标定包：
+
+```bash
+# Install Camera Calibration Package
+sudo apt install ros-humble-camera-calibration
+
+# v4l2_camera is the official ROS2 maintained node that can directly publish USB camera images
+sudo apt install ros-${ROS_DISTRO}-v4l2-camera
+```
+
+启动摄像头节点：
+
+```bash
+# Launch camera node
+ros2 run v4l2_camera v4l2_camera_node \
+  --ros-args \
+  -p image_size:=[640,480] \
+  -p pixel_format:=YUYV
+```
+
+默认发布的话题有：
+
+- `/image_raw` - 原始摄像头图像
+- `/camera` - 摄像头信息
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image.png" />
+</div>
+
+运行摄像头标定：
+
+```bash
+# In another terminal
+ros2 run camera_calibration cameracalibrator \
+  --size 8x6 \
+  --square 0.025 \
+  --fisheye-recompute-extrinsicsts \
+  --fisheye-fix-skew \
+  --ros-args --remap image:=/image_raw --remap camera:=/v4l2_camera
+```
+
+:::note
+- `--size 8x6` 指的是内角点数量（8×6 = 48 个角点，对应 9×7 网格）
+- `--square 0.025` 指的是方格大小，单位为米（25mm）
+- 移动摄像头从不同角度捕获图像，直到 `CALIBRATE` 按钮亮起
+
+:::
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
+</div>
+
+标定成功后，您将在终端中获得类似的摄像头参数：
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
+</div>
+
 您可以参考[此 wiki](https://wiki.seeedstudio.com/cn/pycuvslam_recomputer_robotics/#camera-calibration) 进行摄像头标定。
 将标定参数写入 `camera_info_example.yaml` 文件
 
 **步骤 3.** 启动 USB 摄像头节点
 
+将标定参数保存到 `camera_info_example.yaml` 文件中，以校正 GMSL 摄像头的鱼眼畸变。然后，运行以下命令进行实时深度估计：
 ```bash
 #Start the script for camera depth estimation
-./run_camera_depth_rviz.sh
+CAMERA_INFO_FILE=camera_info_example.yaml ENABLE_UNDISTORTION=1 ./run_camera_depth.sh
 ```
+
+<div class="video-container">
+  <iframe width="1029" height="579" src="https://www.youtube.com/embed/3Khm3OpLg3M" title="Deploy Depth Anything V3 on reComputer Mini J501" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 
 ### 视频深度估计
 
