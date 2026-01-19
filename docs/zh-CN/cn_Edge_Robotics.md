@@ -347,7 +347,7 @@ last_update:
         <div className="course-info">
           <div className="course-meta"><span className="level beg">入门</span> <span>⏱️ 8小时</span></div>
           <h3>ROS 1 基础入门八讲</h3>
-          <p>学习节点、话题、服务和基础操作</p>
+          <p>学习节点、话题、服务和基础入门</p>
           <span className="btn-start">开始学习</span>
         </div>
       </a>
@@ -364,13 +364,13 @@ last_update:
       </a>
 
       <!-- ROS 2 -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/1.%E4%B8%AD%E6%96%87/1.ROS2%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E5%85%AB%E8%AE%B2/README.MD" className="course-card">
         <div className="course-cover c-ros2">ROS 2</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 4小时</span></div>
-          <h3>ROS 2 基础入门</h3>
-          <p>学习节点、话题、服务和动作。</p>
-          <span className="btn-plan">计划中</span>
+          <h3>ROS 2 基础入门八讲</h3>
+          <p>学习节点、话题、服务和基础入门。</p>
+          <span className="btn-start">开始学习</span>
         </div>
       </a>
 

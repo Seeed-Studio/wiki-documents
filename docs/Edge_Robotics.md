@@ -347,7 +347,7 @@ last_update:
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 8h</span></div>
           <h3>ROS 1 Basics: 8 Lectures</h3>
-          <p>Learn About Nodes, Topics, Services, and Actions</p>
+          <p>Learn About Nodes, Topics, Services, and Basics Learning</p>
           <span className="btn-start">Learning</span>
         </div>
       </a>
@@ -364,13 +364,13 @@ last_update:
       </a>
 
       <!-- ROS 2 -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/2.English/1.%20ROS%20Basics%208%20lectures/README.MD" className="course-card">
         <div className="course-cover c-ros2">ROS 2</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 8h</span></div>
-          <h3>ROS 2 Humble Essentials</h3>
-          <p>Master Nodes, Topics, Services, and Actions with Python.</p>
-          <span className="btn-plan">Planning</span>
+          <h3>ROS 2 Humble Basics: 8 Lectures</h3>
+          <p>Learn About Nodes, Topics, Services, and Basics Learning</p>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
