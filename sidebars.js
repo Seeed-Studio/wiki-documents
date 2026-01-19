@@ -9161,6 +9161,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Install_torch_on_reComputer',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_vnc_for_reComputer',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Implement_Ethercat_communication_on_reComputer',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Distributed_llama_cpp_RPC_on_Jetson',
               ]
             },
           ]
@@ -14293,6 +14294,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Install_torch_on_reComputer',
                 'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_vnc_for_reComputer',
                 'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Implement_Ethercat_communication_on_reComputer',
+                'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Distributed_llama_cpp_RPC_on_Jetson',
               ]
             },
           ]
@@ -19426,6 +19428,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Install_torch_on_reComputer',
                 'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_vnc_for_reComputer',
                 'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Implement_Ethercat_communication_on_reComputer',
+                'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Distributed_llama_cpp_RPC_on_Jetson',
               ]
             },
           ]
