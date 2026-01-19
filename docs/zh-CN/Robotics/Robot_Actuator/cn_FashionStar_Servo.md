@@ -21,7 +21,7 @@ last_update:
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Fashionstar-RP6-U15H-M-Servo-p-6514.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
     </a>
 </div>
