@@ -1,12 +1,12 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Arrayは、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご体験ください。
+description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご体験ください。
 
-title: reSpeaker XVF3800のPythonによる制御
+title: reSpeaker XVF3800 の Python による制御
 keywords:
 - reSpeaker
 - python
 - sdk
-image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.jpg
+image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /ja/respeaker_xvf3800_python_sdk
 last_update:
   date: 11/14/2025
@@ -15,16 +15,16 @@ last_update:
 
 ## はじめに
 
-このセクションでは、Python SDKを使用してReSpeaker XVF-3800を制御する方法について説明します。これにより、独自のアプリケーションを構築したいユーザーにとって開発がより便利になります。
-例えば、音声がどこから来ているかを検出したり、音声活動検出（VAD）を実行したり、LEDを制御したりすることができます。
+このセクションでは、Python SDK を使用して ReSpeaker XVF-3800 を制御する方法について説明します。これにより、独自のアプリケーションを構築したいユーザーにとって開発がより便利になります。
+例えば、音声がどこから来ているかを検出したり、音声活動検出（VAD）を実行したり、LED を制御したりすることができます。
 
 ## Python SDK
 
-USBファームウェアを使用してXVF3800と通信する方法について、包括的なPythonガイドを提供しています。このPythonスクリプトは、XVF3800の**XVF_Host**を必要とせずに、お気に入りのIDEで実行できます。
+USB ファームウェアを使用して XVF3800 と通信する方法について、包括的な Python ガイドを提供しています。この Python スクリプトは、XVF3800 **XVF_Host** を必要とせずに、お気に入りの IDE で実行できます。この[リンク](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control)から、より多くのコマンドを見つけることができます。
 
-`pyusb`ライブラリをインストールする必要があります。
+`pyusb` ライブラリをインストールする必要があります。
 
-### DOAとVADの取得方法
+### DOA と VAD の取得方法
 
 ```python
 import sys
@@ -140,15 +140,15 @@ if __name__ == '__main__':
 
 ```
 
-## XVF_Hostの使用
+## XVF_Host の使用
 
-XVF_Hostとは何かを理解するために、ドキュメントを参照してください。
-このセクションでは、Pythonスクリプトを使用して[XVF_Host](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#how-to-control-respeaker-xvf3800)を操作します。
+XVF_Host とは何かを理解するために、ドキュメントを参照してください。
+このセクションでは、Python スクリプトを使用して [XVF_Host](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/#how-to-control-respeaker-xvf3800) を操作します。
 
-### ReSpeaker XVF3800のPython例
+### ReSpeaker XVF3800 の Python サンプル
 
 :::note
-Pythonスクリプトでxvf_hostを介した制御についてさらに詳しく知りたい場合は、この[記事](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)をお読みください。
+Python スクリプトを使用した xvf_host による制御についてさらに詳しく知りたい場合は、この[記事](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/blob/master/host_control/README.md)をお読みください。
 :::
 
 import Tabs from '@theme/Tabs';
@@ -158,7 +158,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="windows" label="Windows">
 
-### Windows向け
+### Windows 向け
 
 ```bash
 git clone https://github.com/KasunThushara/reSpeakerXVF.git
@@ -166,13 +166,13 @@ cd reSpeakerXVF
 python test.py
 ```
 
-Pythonがインストールされており、ReSpeaker XVF3800がUSB経由で接続されていることを確認してください。
+Python がインストールされており、ReSpeaker XVF3800 が USB 経由で接続されていることを確認してください。
 
 </TabItem>
 
 <TabItem value="rpi" label="Raspberry Pi / Linux">
 
-### Raspberry Pi向け
+### Raspberry Pi 向け
 
 ```bash
 git clone https://github.com/KasunThushara/reSpeakerXVF_rpi.git
@@ -181,12 +181,12 @@ chmod +x xvf_host
 python3 test.py
 ```
 
-`xvf_host`が実行可能であり、ボードがUSBまたはI2C経由で接続されていることを確認してください。
+`xvf_host` が実行可能であり、ボードが USB または I2C 経由で接続されていることを確認してください。
 
 </TabItem>
 </Tabs>
 
-`test.py`ファイルは以下のように探索できます。これはLinux上での参考用です。
+`test.py` ファイルは以下のように探索できます。これは Linux での参考用です。
 
 ```python
 import subprocess
@@ -237,9 +237,9 @@ if __name__ == "__main__":
 
 
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
