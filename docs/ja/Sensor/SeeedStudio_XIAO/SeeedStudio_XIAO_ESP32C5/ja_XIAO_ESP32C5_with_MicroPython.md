@@ -106,7 +106,7 @@ esptool.py --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DATE-VERSION.bin
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_6.png" style={{width:800, height:'auto'}}/></div><br/>
 
-esptool.py がシリアルポートを自動検出できない場合は、代わりにコマンドラインで明示的に渡すことができます。
+esptool.py がシリアルポートを自動的に検出できない場合は、代わりにコマンドラインで明示的に渡すことができます。
 
 ```bash
 esptool.py --port PORTNAME --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DATE-VERSION.bin
@@ -136,13 +136,13 @@ esptool.py --port PORTNAME --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DAT
 
 ここでは、Thonny IDE で MicroPython を使用して XIAO ESP32-C5 の L LED を点灯させる方法を示します。
 
-#### **ステップ 1.** インタープリター設定
+#### **ステップ 1.** インタープリターの設定
 
 - Thonny IDE を開き、インターフェースの右下角をクリックして **Configure interpreter** オプションを選択します。MicroPython (generic) とポートを選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_8.png" style={{width:800, height:'auto'}}/></div><br/>
 
-接続が成功すると、下のシェルウィンドウに MicroPython ファームウェアバージョン情報が出力されます。
+接続が成功すると、下のシェルウィンドウに MicroPython ファームウェアのバージョン情報が出力されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_9.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -191,13 +191,13 @@ while True:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_14_1.png" style={{width:600, height:'auto'}}/></div><br/>
 
-- オンボードの L LED が 1 秒間隔で点滅します。
+- オンボード L LED が 1 秒間隔で点滅します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:400, height:'auto'}}/></div>
 
 ### 5 GHz Wi-Fi 接続の例
 
-XIAO ESP-C5 は 2.4 GHz & 5 GHz デュアルバンド Wi-Fi 6 をサポートしています。この例では、5 GHz Wi-Fi ネットワークに接続する効果を実演します。
+XIAO ESP-C5 は 2.4 GHz と 5 GHz デュアルバンド Wi-Fi 6 をサポートしています。この例では、5 GHz Wi-Fi ネットワークに接続する効果を実演します。
 
 - `wifi_connect.py` という名前の新しいファイルを作成し、以下のサンプルコードをコピーします。
 
