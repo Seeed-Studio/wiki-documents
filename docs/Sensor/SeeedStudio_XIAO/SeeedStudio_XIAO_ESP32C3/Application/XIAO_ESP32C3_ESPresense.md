@@ -8,6 +8,7 @@ keywords:
   - MQTT
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C3_ESPresense/image132.webp
 slug: /xiao-esp32c3-espresense
+sku: 113991054
 last_update:
   date: 01/16/2026
   author: Carla Guo
