@@ -113,9 +113,9 @@ last_update:
 - **優れたRF性能:** 外部RFアンテナが含まれています。
 - **バッテリー充電チップ:** リチウムバッテリーの充電および放電管理をサポート。
 - **豊富なオンチップリソース:** 384 KBオンチップSRAM、320 KB ROM
-- **超小型サイズ:** 親指ほどの小ささ（21x17.8mm）XIAOシリーズの定番フォームファクタで、ウェアラブルデバイスや小型プロジェクトに最適
+- **超小型サイズ:** 親指ほどの小ささ（21x17.8mm）XIAOシリーズクラシックフォームファクタで、ウェアラブルデバイスや小型プロジェクトに最適
 - **信頼性の高いセキュリティ機能**: AES-128/256、SHAファミリーハッシュ、HMAC、専用デジタル署名ペリフェラル、およびSecure Boot（V2）をサポートする暗号化ハードウェアアクセラレータ。
-- **豊富なインターフェース**: 1×I2C、1×SPI、2×UART、最大11×GPIO（PWM対応）、5×ADCチャンネル、およびJTAGボンディングパッドインターフェース。
+- **豊富なインターフェース**: 1×I2C、1×SPI、2×UART、最大11×GPIO（PWM対応）、5×ADCチャネル、およびJTAG（裏面のパッド）ボンディングパッドインターフェース。
 - 片面実装部品、表面実装設計
 
 ## ハードウェア概要
@@ -156,9 +156,10 @@ last_update:
 | MTDI                   |            | GPIO3     |                          | JTAG、ADC                    |
 | MTCK                   |            | GPIO4     |                          | JTAG、ADC                    |
 | MTMS                   |            | GPIO2     |                          | JTAG、ADC                    |
-| ADC_BAT                |            | GPIO06    |                          | BAT電圧値を読み取り   |
+| ADC_BAT                |            | GPIO6    |                          | BAT電圧値を読み取り   |
+| ADC_CRL                |            | GPIO26    |                          | 電力節約のため測定回路を制御（有効/無効）します。   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
-| Boot                   |            | GPIO28    |                          | ブートモードに入る              |
+| Boot                   |            | GPIO28    |                          | Bootモードに入る              |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | UFLアンテナ                  |
 | CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_Red                  |
 | USER_LED               |            | GPIO27    |                          | ユーザーライト_Yellow            |
@@ -194,7 +195,7 @@ XIAO ESP32-C5をより早く使い始められるように、以下のハード�
 </div>
 
 :::tip
-一部のUSBケーブルは電源供給のみでデータ転送ができません。USBケーブルをお持ちでない場合、またはお使いのUSBケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)をご確認ください。
+一部のUSBケーブルは電力供給のみでデータ転送ができません。USBケーブルをお持ちでない場合、またはお持ちのUSBケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)をご確認ください。
 :::
 
 ### ソフトウェア
@@ -221,11 +222,11 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 以下では点灯プログラムを例に説明します
 
-**ステップ 1.** **XIAO_ESP32C5** と PORT を選択します。PORTがわからない場合は、XIAO_ESP32C5を再挿入して確認できます。
+**ステップ 1.** **XIAO_ESP32C5** と PORT を選択します。PORT が分からない場合は、XIAO_ESP32C5 を再挿入して取り外し、確認してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
-**ステップ 2.** スケッチにコードを貼り付け
+**ステップ 2.** スケッチにコードを貼り付けます
 
 **LED_BUILTIN** は開発ボード上の **L LED** に対応しています。
 
@@ -253,7 +254,7 @@ void loop() {
 
 効果のデモンストレーション：
 
-プログラムをアップロードすると、L インジケータライトが 1 秒間隔で点滅し、同時にシリアルモニタに LED ON と LED OFF が印刷されます。
+プログラムをアップロードすると、L インジケーターライトが 1 秒間隔で点滅し、同時にシリアルモニターに LED ON と LED OFF が印刷されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/uoload_2.png" style={{width:800, height:'auto'}}/></div>
@@ -309,7 +310,7 @@ void setup(){
 void loop(){}
 ```
 
-XIAO がディープスリープに入る前にシリアルモニタを開くのが十分に早ければ、以下に示すようなメッセージ出力を見ることができます。これは XIAO が現在**スリープ状態**であることを意味します。その後、ボタンを押すことで表示と起動を確認することもできます。デバイスが起動されたかどうかを確認するために、**L LED** のオン・オフ状態を観察することもできます。起動されると、点滅効果を示します。
+XIAO がディープスリープに入る前にシリアルモニターを開くのが十分に早ければ、以下に示すようなメッセージ出力を見ることができます。これは XIAO が現在**スリープ状態**であることを意味します。その後、ボタンを押すことで表示して起動することもできます。デバイスが起動されたかどうかを確認するために、**L LED** のオン・オフ状態を観察することもできます。起動されると、点滅効果を示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -328,13 +329,13 @@ XIAO ESP32-C5 は 3.7V リチウムバッテリーを電源供給入力として
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_wiring.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-はんだ付け時に正極と負極をショートさせてバッテリーと機器を燃やさないよう注意してください。
+はんだ付けの際は、正極と負極を短絡させてバッテリーと機器を焼損させないよう注意してください。
 :::
 
 **バッテリー使用に関する注意事項：**
 
 1. 仕様に適合する認定されたバッテリーを使用してください。
-2. XIAO はバッテリーを使用しながらデータケーブル経由でコンピュータデバイスに接続できます。XIAO には回路保護チップが内蔵されているため安全です。
+2. XIAO はバッテリーを使用しながらデータケーブル経由でコンピューターデバイスに接続できます。XIAO には回路保護チップが内蔵されているため安全です。
 3. XIAO ESP32-C5 がバッテリーで電源供給されている場合、**C LED** が点灯します。これを充電管理が実行されているかどうかを判断する基準として使用できます。
 
 ### バッテリー電圧の確認
@@ -369,32 +370,37 @@ void loop() {
 - **`analogReadMilliVolts(BAT_Voltage_Read)`**
 
   - この関数は `BAT_VOLT_PIN` ピンから現在のアナログ電圧を読み取り、ミリボルト（mV）単位で校正された電圧値を返すために使用されます。
-  - 生の ADC 値のみを提供する従来の `analogRead()` とは異なり、`analogReadMilliVolts()` はチップに埋め込まれた工場校正パラメータを自動的に適用します。これにより、より高い精度、電圧測定の線形性の向上、手動での ADC から電圧への変換の必要性が排除されます。
+  - 生の ADC 値のみを提供する従来の `analogRead()` とは異なり、`analogReadMilliVolts()` はチップに埋め込まれた工場校正パラメータを自動的に適用します。これにより、より高い精度、電圧測定における線形性の向上、および手動での ADC から電圧への変換の必要性が排除されます。
   - 電圧サンプリングプロセス中、`for` ループを通じて **16 回の繰り返しサンプリング**が実行され、結果が累積されます。複数回サンプリングの目的は、過渡ノイズと離散エラーを抑制し、測定安定性を向上させることです。最後に、累積値をサンプル数（16）で割って、よりスムーズで信頼性の高い平均電圧値を取得します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
 :::tip
-データシートによると、ESP32-C5 の有効測定範囲は 0～3300 mV をカバーしています。そのため、XIAO ESP32-C5 の内蔵バッテリー電圧取得回路は、電圧分割用に 2 つの 100K 抵抗で設計されており、正確な値の読み取りを可能にしています。
+データシートによると、ESP32-C5 の有効測定範囲は 0～3300 mV をカバーしています。そのため、XIAO ESP32-C5 の内蔵バッテリー電圧取得回路は、2 つの 100K 抵抗による分圧設計により、正確な値の読み取りを可能にしています。
 :::
 
 ## リソース
 
+- **[PDF]** [ESP32-C5 データシート](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
+
 - **[PDF]** [ESP32-C5 データシート](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
+- **[PCB 設計ファイル]** [XIAO ESP32-C5 KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
+- **[回路図]** [XIAO ESP32-C5 回路図](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
 
-<!-- - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 
-- **[PDF]** [Seeed Studio XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
+- **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD ライブラリ](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 
-- **[XLSX]** [Seeed Studio XIAO ESP32-C5 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
+- **[PDF]** [Seeed Studio XIAO ESP32-C5 回路図](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
 
-- 🔗**[Kicad]** [Seeed Studio XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- **[XLSX]** [Seeed Studio XIAO ESP32-C5 ピン配置シート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
 
-- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1) -->
+- **[Kicad]** [Seeed Studio XIAO ESP32-C5 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-## 技術サポートと製品ディスカッション
+- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step ファイル](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+## 技術サポート & 製品ディスカッション
+
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
