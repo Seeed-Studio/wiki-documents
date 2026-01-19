@@ -3465,6 +3465,13 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Speech Recognition',
+              items: [
+                'Edge/Raspberry_Pi_Devices/Application/Speech_Recognition/deploy_whisper_on_raspberry_pi_ai_box',
+              ]
+            },
+            {
+              type: 'category',
               label: 'Computer Vision',
               items: [
                 {
