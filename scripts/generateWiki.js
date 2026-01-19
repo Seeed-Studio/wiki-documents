@@ -58,6 +58,13 @@ const excludedPaths = [
   path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'SenseCAP_Gateway_Intro.md'), //1.8
   path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_APP', 'overview.md'), //1.8
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_The_Things_Network.md'), //1.6
+  path.join(docsDirectory, 'Network', 'LoRa_Wio_Series', 'Wio-E5', 'LoRa_E5_mini.md'), //1.15
+  path.join(docsDirectory, 'Sensor', 'ePaper', 'XIAO_ePaper_Display_Board_EN04', 'Application', 'OpenEpaperLink_GettingStart.md'), //1.13
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_arduino.md'), //1.9
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_homeassistant.md'), //1.9
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_idf.md'), //1.9  
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Application', 'XIAO_ESP32C5_WiFi_Throughput_tester.md'), //1.16
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_SO_ARM101_DAMO.md'), //1.12
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）
