@@ -588,7 +588,7 @@ void loop() {
 
 After uploading the program, you can monitor it via the UART function of the Seeed Studio **XIAO Debug Mate**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_startedpin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 If you have not used the Seeed Studio XIAO Debug Mate before, you can visit  [Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/getting_started_with_xiao_debug_mate/).
