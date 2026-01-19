@@ -156,7 +156,8 @@ last_update:
 | MTDI                   |            | GPIO3     |                          | JTAG, ADC                    |
 | MTCK                   |            | GPIO4     |                          | JTAG, ADC                    |
 | MTMS                   |            | GPIO2     |                          | JTAG, ADC                    |
-| ADC_BAT                |            | GPIO06    |                          | Read the BAT voltage value   |
+| ADC_BAT                |            | GPIO6    |                          | Read the BAT voltage value   |
+| ADC_CRL                |            | GPIO26    |                          | Controls (enables/disables) the measurement circuit to save power.   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
 | Boot                   |            | GPIO28    |                          | Enter Boot Mode              |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | UFL antenna                  |
@@ -381,6 +382,11 @@ According to the datasheet, the effective measurement range of the ESP32-C5 cove
 ## Resource
 
 - **[PDF]** [ESP32-C5 datasheet](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
+
+- **[PDF]** [ESP32-C5 datasheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
+- **[PCB Design Files]** [XIAO ESP32-C5 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
+- **[Schematic]** [XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
+
 
 - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 
