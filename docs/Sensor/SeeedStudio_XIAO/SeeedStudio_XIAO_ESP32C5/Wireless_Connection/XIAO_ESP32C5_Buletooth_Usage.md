@@ -187,7 +187,6 @@ void loop() {
   Serial.println("Scan completed, clearing results...");
   
   pBLEScan->clearResults();   // Clear cache to release memory
-  delete foundDevices; //Release pointer
   delay(2000);
 }
 ```
