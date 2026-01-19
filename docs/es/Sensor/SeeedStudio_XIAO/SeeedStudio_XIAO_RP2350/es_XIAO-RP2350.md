@@ -36,12 +36,12 @@ El XIAO RP2350 empaqueta la potencia del Raspberry Pi RP2350 (núcleos duales Co
 
 ## Características
 
-- **Placa MCU Potente:** Equipada con un chip Raspberry Pi RP2350 que cuenta con doble Arm Cortex-M33 @ 150MHz con FPU.
-- **Características de Seguridad Mejoradas:** Arranque seguro integrado y cargador de arranque cifrado garantizan la seguridad de la aplicación.
+- **Placa MCU Potente:** Equipada con un chip Raspberry Pi RP2350 que cuenta con dual Arm Cortex-M33 @ 150MHz con FPU.
+- **Características de Seguridad Mejoradas:** Arranque seguro integrado y cargador de arranque cifrado aseguran la seguridad de la aplicación.
 - **Soporte de Software:** Compatible con C/C++ y MicroPython, asegurando desarrollo fácil de proyectos y prototipado.
 - **Recursos Integrados Ricos:** Integra un LED RGB, 2MB Flash, 520kB SRAM, y 19 GPIOs multifunción(Analógico, Digital, I²C, UART, SPI, PWM).
-- **8 Nuevos IOs Expandidos:** Comparado con MCUs XIAO anteriores, la adición de 8 pines IO en la parte posterior soporta aplicaciones más complejas.
-- **Diseño de Energía Eficiente:** Consumo ultra bajo de solo 50μA en modo de suspensión, habilitando alimentación por batería. Medición directa del voltaje de la batería a través de IO interno mejora el sistema de gestión de batería (BMS).
+- **8 Nuevos IOs Expandidos:** Comparado con MCUs XIAO anteriores, la adición de 8 pines IO en la parte trasera soporta aplicaciones más complejas.
+- **Diseño de Energía Eficiente:** Consumo ultra bajo de solo 50μA en modo de suspensión, habilitando alimentación por batería. Medición directa del voltaje de la batería vía IO interno mejora el sistema de gestión de batería (BMS).
 - **Diseño Compacto del Tamaño del Pulgar:** Midiendo 21 x 17.8mm, adoptando el factor de forma clásico XIAO de Seeed Studio, ideal para aplicaciones conscientes del espacio.
 - **Amigable para Producción:** Diseño de Dispositivo de Montaje Superficial (SMD) con todos los componentes en el frente y agujeros de estampado en ambos lados, facilitando la producción en masa eficiente.
 
@@ -102,7 +102,7 @@ El XIAO RP2350 empaqueta la potencia del Raspberry Pi RP2350 (núcleos duales Co
         <td>Arduino, PlatformIO, MicroPython, CircuitPython, <a href="https://wiki.seeedstudio.com/es/xiao_topic_page/">y más por venir</a></td>
     </tr>
     <tr>
-        <td>Temperatura de Funcionamiento</td>
+        <td>Temperatura de Trabajo</td>
         <td align="center" colspan="2">-20°C~70°C</td>
     </tr>
     <tr>
@@ -136,7 +136,7 @@ El XIAO RP2350 empaqueta la potencia del Raspberry Pi RP2350 (núcleos duales Co
 </table>
 </div>
 
-¿Necesitas más detalles sobre los pinouts? Navega a [Recursos y Activos](#recursos-y-activos) a continuación.
+¿Necesitas más detalles sobre los pinouts? Navega a [Recursos y Activos](#recursos-y-activos) abajo.
 
 
 ## **Mapa de Pines**
@@ -195,14 +195,10 @@ El XIAO RP2350, alimentado por el RP2350, soporta MicroPython y el SDK de C/C++ 
 ## Introducción▶️
 
 :::info attention
-Esta página se enfoca principalmente en usuarios de MicroPython. Para aquellos interesados en aprender programación SDK o para usuarios avanzados, es posible que deseen comenzar con el [SDK de C/C++ de la serie Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf). Esta guía te ayudará a configurar el entorno y comenzar con código de ejemplo. Además, puedes visitar [XIAO RP2350 con SDK C/C++](/es/xiao-rp2350-c-cpp-sdk) para instrucciones más específicas relacionadas con el XIAO RP2350.
+Esta página se enfoca principalmente en usuarios de MicroPython. Para aquellos interesados en aprender programación SDK o para usuarios avanzados, es posible que quieran comenzar con el [SDK C/C++ de la serie Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf). Esta guía te ayudará a configurar el entorno y comenzar con código de ejemplo. Adicionalmente, puedes visitar [XIAO RP2350 con SDK C/C++](/es/xiao-rp2350-c-cpp-sdk) para instrucciones más específicas relacionadas con el XIAO RP2350.
 :::
 
-:::tip
-Actualmente, la función ADC puede no funcionar correctamente al usar el [firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/SEEED_XIAO_RP2350.uf2) oficial. Por favor, descarga y usa nuestro firmware modificado primero. Una vez que se fusione la solicitud de extracción, actualizaremos el contenido relevante en la Wiki en consecuencia.
-:::
-
-### Paso 1: Instalando MicroPython en XIAO RP2350
+### Paso 1: Instalación de MicroPython en XIAO RP2350
 
 Para instalar el firmware de MicroPython en el XIAO RP2350, sigue estos pasos:
 
@@ -212,7 +208,9 @@ Para instalar el firmware de MicroPython en el XIAO RP2350, sigue estos pasos:
 - Descarga el archivo de firmware `.uf2` más reciente compatible con el XIAO RP2350.
 
 :::tip
-El firmware predeterminado es para arquitectura ARM, si quieres usar RISC-V, por favor usa la versión de firmware correspondiente en el enlace.
+1. El firmware predeterminado es para arquitectura ARM, si quieres usar RISC-V, por favor usa la versión de firmware correspondiente en el enlace.
+
+2. Por favor asegúrate de estar usando la versión de firmware más reciente, ya que el firmware más antiguo puede contener varias vulnerabilidades de software.
 :::
 
 **Paso 1.2 Entrar en Modo BOOTSEL:**  
@@ -254,15 +252,15 @@ Puedes entrar en modo BOOTSEL en el XIAO RP2350 usando cualquiera de los dos mé
 **Paso 1.3. Instalar el Firmware:**  
 
 - **Arrastra y suelta** el archivo `.uf2` descargado en la unidad de almacenamiento extraíble del XIAO RP2350.
-- La placa se reiniciará automáticamente después de que se copie el archivo, completando la instalación del firmware.
+- La placa se reiniciará automáticamente después de que el archivo sea copiado, completando la instalación del firmware.
 
-### Paso 2: Instalando Thonny IDE
+### Paso 2: Instalación del IDE Thonny
 
 :::tip acerca de MicroPython
 
 [MicroPython](https://micropython.org/) es un lenguaje interpretado similar a [Python](https://www.python.org/). Sin embargo, a diferencia de Python, MicroPython se ejecuta directamente en el hardware (bare-metal), proporcionando un prompt interactivo (REPL) para ejecutar comandos inmediatamente, así como la capacidad de ejecutar e importar scripts desde el sistema de archivos integrado.
 
-Para conectarte a la placa XIAO RP2350 y comenzar a escribir y ejecutar tu código Python, puedes usar cualquier herramienta de terminal que soporte conexiones serie, como minicom, PuTTY, electerm, warp, y más. Para una experiencia *más amigable*, puedes usar **[Thonny](https://thonny.org/)** por su facilidad de uso, características integradas e interfaz amigable para principiantes. De esta manera, puedes disfrutar escribiendo y ejecutando tu código Python directamente en el dispositivo.
+Para conectarte a la placa XIAO RP2350 y comenzar a escribir y ejecutar tu código Python, puedes usar cualquier herramienta de terminal que soporte conexiones seriales, como minicom, PuTTY, electerm, warp, y más. Para una experiencia *más amigable*, puedes usar **[Thonny](https://thonny.org/)** por su facilidad de uso, características integradas e interfaz amigable para principiantes. De esta manera, puedes disfrutar escribiendo y ejecutando tu código Python directamente en el dispositivo.
 
 :::
 
@@ -584,7 +582,7 @@ Además, sumérgete en la vibrante comunidad Raspberry Pi para expandir tu conoc
 - **[Tema Pico en GitHub](https://github.com/topics/pico)**: Explora repositorios y discusiones relacionadas con el Pico.
 - **[Hackster.io](https://www.hackster.io/)**: Descubre proyectos y tutoriales relacionados con varias plataformas de hardware, incluyendo XIAO y Raspberry Pi.
 - **[Instructables](https://www.instructables.com/)**: Encuentra proyectos DIY y guías paso a paso para crear con XIAO y otro hardware.
-- **[Comunidad Element14](https://www.element14.com/community/)**: Participa en discusiones, seminarios web y proyectos relacionados con electrónica y sistemas embebidos.
+- **[Comunidad Element14](https://www.element14.com/community/)**: Participa en discusiones, webinars y proyectos relacionados con electrónica y sistemas embebidos.
 
 Y más, siempre eres bienvenido a compartir tus proyectos en nuestro [Discord de Seeed Studio](https://discord.com/invite/kpY74apCWj) y [Foro de Seeed Studio](https://forum.seeedstudio.com/). Estas plataformas proporcionan una excelente oportunidad para conectar con otros makers, obtener retroalimentación y encontrar inspiración. Ya sea que necesites ayuda para solucionar un problema, quieras mostrar tu última creación, o simplemente desees ser parte de una comunidad de apoyo, *el Discord y Foro de Seeed Studio* son los lugares perfectos para participar y colaborar.
 
