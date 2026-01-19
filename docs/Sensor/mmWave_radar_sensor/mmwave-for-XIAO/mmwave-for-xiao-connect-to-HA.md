@@ -120,85 +120,54 @@ Finally, click **overview** in the upper left corner, you will see the mmwave-fo
 Next, you can get creative with your automation!
 
 # mmWave for XIAO to Home Assistant via Wifi using ESPHome
-The following yaml file connects a Seeed XIAO ESP32S3 Sense with Radar module to Home Assistant, using the ESPHome firmware:
+The following yaml file connects a Seeed XIAO ESP32-C3 with Radar module to Home Assistant, using the ESPHome firmware:
 
 ```
 # Configuration for ESPHome
-esphome:
-  # Name of the ESP32-S3 device
-  name: "seeed-xiao-esp32s3-cam"
-  
-  # PlatformIO build options
-  platformio_options:
-    build_flags: -DBOARD_HAS_PSRAM
-    board_build.arduino.memory_type: qio_opi
-    board_build.f_flash: 80000000L
-    board_build.flash_mode: qio 
+substitutions:
+  name: "xiao-24ghz-mmwave"
+  friendly_name: "XIAO 24GHz mmwave"
 
-# Configuration for ESP32 board
+esphome:
+  name: "${name}"
+  friendly_name: "${friendly_name}"
+  name_add_mac_suffix: True
+
 esp32:
-  board: esp32-s3-devkitc-1
+  board: esp32-c3-devkitm-1
   framework:
     type: arduino
 
 # Enable logging
 logger:
 
-# Enable Home Assistant API - use your api and password
+# Enable Home Assistant API
 api:
-  encryption:
-    key: ""
 
 ota:
   - platform: esphome
-    password: ""
 
-# Wi-Fi configuration - fill with your data
 wifi:
-  ssid: ""
-  password: ""
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Xiao-Esp32s3 Fallback Hotspot"
-    password: ""
+    ssid: "${friendly_name}"
 
-# Captive portal configuration
 captive_portal:
 
-# Configuration for the ESP32 Camera
-esp32_camera:
-  id: espcam
-  name: Xiao Cam
-  external_clock:
-    pin: GPIO10
-    frequency: 20MHz
-  i2c_pins:
-    sda: GPIO40
-    scl: GPIO39
-  data_pins: [GPIO15, GPIO17, GPIO18, GPIO16, GPIO14, GPIO12, GPIO11, GPIO48]
-  vsync_pin: GPIO38
-  href_pin: GPIO47
-  pixel_clock_pin: GPIO13
-  resolution: 800x600
-  
-# Configuration for the ESP32 Camera Web Server
-esp32_camera_web_server:
-  - port: 8080
-    mode: stream
-  - port: 8081
-    mode: snapshot
-
-# Configuration for the 24GHz mmwave XIAO Radar
-ld2410:
-  id: ld2410_radar
-  
 uart:
-  tx_pin: GPIO4
-  rx_pin: GPIO3
-  baud_rate: 256000
+  id: mmWave_uart
+  tx_pin: GPIO5  # D3
+  rx_pin: GPIO4  # D2
+  baud_rate: 9600
   parity: NONE
   stop_bits: 1
+
+ld2410:
+  id: ld2410_radar
+  uart_id: mmWave_uart
 
 number:
   - platform: ld2410

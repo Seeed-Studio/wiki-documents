@@ -27,7 +27,7 @@ import Steppers from '@site/src/components/utils/Stepper';
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now [表情]</font></span></strong>
         </a>
     </div></td>
     </tr>
@@ -179,7 +179,7 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 
 - For 24 Pin ePaper displays → set the jumper to 24 Pin
 
-⚠️ Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
+[表情] Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
 
 :::
 
@@ -192,7 +192,7 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 When using the XIAO ePaper Display Board, make sure to set the jumper according to the ePaper display type:
 - For 50 Pin ePaper displays → set the jumper to 50 Pin
 
-⚠️ Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
+[表情] Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
 
 :::
 
@@ -261,10 +261,10 @@ After that, go to **Tools** -> **Board** -> **XIAO ESP32S3** and **Tools** -> **
 Now you will see the feedback in your epaper screen! Following are the results of Helloworld examples.
 
 :::tip
-⚠️ Note: ePaper Cable Orientation
+[表情] Note: ePaper Cable Orientation
 When connecting the ePaper display to the XIAO ePaper Display Board, make sure the FPC cable is inserted in the correct direction.
 
-⚠️ Do not reverse the connector! Inserting the cable upside down may cause the ePaper to fail to display or even damage the screen/board.
+[表情] Do not reverse the connector! Inserting the cable upside down may cause the ePaper to fail to display or even damage the screen/board.
 The image below shows the correct connection:
 :::
 
@@ -430,7 +430,39 @@ void loop() {
 }
 ```
 
+### Displaying Custom Images on XIAO ePaper Display Board (ESP32-S3) - EE04
 
+Find the Bitmap example in the GFX library and select it.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image1.png" style={{width:700, height:'auto'}}/></div>
+
+Please note that you need to create a driver.h file within your project directory.[For details, click to learn more.](#install-seeed-gfx-library).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image2.png" style={{width:700, height:'auto'}}/></div>
+
+Next, navigate to the SenseCraft HMI Tool at https://sensecraft.seeed.cc/hmi/tools/dither and upload the image you wish to display.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image3m.png" style={{width:700, height:'auto'}}/></div>
+
+After uploading the image, generate the C array (image data).
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image4.png" style={{width:700, height:'auto'}}/></div>
+
+Copy the array content. Be careful to only copy the hex data and not include any irrelevant characters.
+
+:::tip 
+If the colors on your display appear inverted compared to your original design, select the Invert Colors option in the HMI tool before generating the code.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image5.png" style={{width:700, height:'auto'}}/></div>
+
+Overwrite the existing array in the image.c or image.h file within your Arduino sketch.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image6.png" style={{width:700, height:'auto'}}/></div>
+
+Finally, upload the program to your XIAO ESP32-S3. You should now see your custom image displayed on the ePaper screen.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image7.png" style={{width:700, height:'auto'}}/></div>
 
 ## Resources
 
