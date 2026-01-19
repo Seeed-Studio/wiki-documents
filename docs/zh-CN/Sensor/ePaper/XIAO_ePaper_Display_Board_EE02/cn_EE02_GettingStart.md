@@ -1,6 +1,6 @@
 ---
 description: EE02 13.3 英寸电子墨水屏驱动板入门指南
-title: EE02 入门指南
+title: XIAO ePaper Display Board - EE02 入门指南
 keywords:
   - E-ink
   - Driver Board
@@ -25,7 +25,7 @@ last_update:
 ### 特性
 
 - **强大的控制器**：基于 ESP32-S3 构建，提供强大的处理能力和无线功能。
-- **专为大屏设计**：专门优化以驱动 13.3 英寸电子墨水屏，具有高稳定性和清晰度。
+- **专为大屏设计**：专门优化用于驱动 13.3 英寸电子墨水屏，具有高稳定性和清晰度。
 - **无线连接**：支持 Wi-Fi 和蓝牙 5.0 (LE)，实现远程数据更新和云集成。
 - **低功耗**：专为能效设计，适用于电池供电应用。
 - **易于集成**：兼容 SenseCraft HMI，支持拖拽式界面设计和远程管理。
@@ -38,7 +38,7 @@ last_update:
 | **控制器** | ESP32-S3 |
 | **支持屏幕尺寸** | 13.3 英寸电子墨水屏 |
 | **连接性** | Wi-Fi 802.11 b/g/n，蓝牙 5.0 (LE) |
-| **电源供应** | 通过 USB Type-C 提供 5V |
+| **电源供应** | 5V 通过 USB Type-C |
 | **工作电压** | 3.3V |
 | **接口** | USB Type-C，用于电子墨水屏的 FPC 连接器 |
 | **尺寸** | 80x40 mm |
@@ -48,7 +48,7 @@ last_update:
 
 - **数字标牌**：适用于餐厅菜单、会议室标识和零售价格标签。
 - **智能家居**：天气、日历和家庭自动化状态的信息仪表板。
-- **工业人机界面**：机械和仓库管理的低功耗状态显示。
+- **工业 HMI**：机械和仓库管理的低功耗状态显示。
 - **教育**：电子书阅读器或教室信息板。
 - **办公**：桌牌或公告板。
 
@@ -80,7 +80,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/4.JPG" style={{width:300,height:'auto'}}/></div>
 
 **步骤 3. 进入网络配置模式**
-欢迎图像显示后，屏幕将自动刷新以显示网络配置界面。这表示设备已准备好连接 Wi-Fi。
+欢迎图像显示后，屏幕将自动刷新显示网络配置界面。这表示设备已准备好连接 Wi-Fi。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/5.JPG" style={{width:300,height:'auto'}}/></div>
 
@@ -92,14 +92,14 @@ last_update:
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/6.JPG" style={{width:300,height:'auto'}}/></div> -->
 
 **步骤 5. 获取配对码**
-网络配置成功后，屏幕将再次刷新并显示唯一的**配对码**（或设备 ID）。您在下一步中将需要此代码。
+网络配置成功后，屏幕将再次刷新并显示唯一的**配对码**（或设备 ID）。您在下一步中需要此代码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.JPG" style={{width:300,height:'auto'}}/></div>
 
 ### 平台绑定与更新
 
 **步骤 6. 在 SenseCraft HMI 上绑定设备**
-访问 [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi/device)。登录您的账户。导航到设备管理部分并选择"Add Device"。输入电子墨水屏上显示的配对码，将设备绑定到您的账户。
+访问 [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi/device)。登录您的账户。导航到设备管理部分并选择 "Add Device"。输入电子墨水屏上显示的配对码，将设备绑定到您的账户。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -109,7 +109,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.jpg" style={{width:800, height:'auto'}}/></div>
 
 **步骤 8. 应用您的图像**
-完成后，点击右上角的"Apply"按钮，然后选择您希望接收图像的设备。EE02 将接收数据并用您的新内容刷新 13.3 英寸屏幕。
+完成后，点击右上角的 "Apply" 按钮，然后选择您希望接收图像的设备。EE02 将接收数据并用您的新内容刷新 13.3 英寸屏幕。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -135,7 +135,8 @@ last_update:
 *   如果屏幕长时间未刷新或电源供应不稳定，可能会出现这种情况。尝试通过 HMI 平台再次刷新屏幕。
 
 ## 资源
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 原理图](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
+- **[PDF]** [13.3 E6 eInk Display module Datasheet](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
 - **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
 
 ## 技术支持与产品讨论

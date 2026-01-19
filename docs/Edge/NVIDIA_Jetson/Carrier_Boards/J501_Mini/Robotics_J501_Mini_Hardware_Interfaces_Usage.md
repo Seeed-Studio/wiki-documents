@@ -293,7 +293,7 @@ Before we can move on to the installation steps, we need to make sure that the b
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
 </div>
 
-**Step 2.** Power up the carrier board by connecting the power cable, then release REST button .
+**Step 2.** Power up the carrier board by connecting the power cable, then release **REC** button .
 
 **Step 3.** Connect the board to the Ubuntu host PC with a USB Type-C data transmission cable.
 
@@ -446,7 +446,7 @@ Bluetooth functionality is available via the M.2 Key E slot.
 
 ## Ethernet
 
-The Robotics j501-Mini carrier board features 2 1Gbps RJ45 Ethernet ports for high-speed wired network connectivity.
+The Robotics j501-Mini carrier board features one 1Gbps and one 10Gbps RJ45 Ethernet ports for high-speed wired network connectivity.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/ethernet-real.png"/>
@@ -1358,7 +1358,7 @@ The Robotics J501 Mini is equipped with an HDMI for high-resolution display outp
 
 ## Resources
 
-- [reComputer Robotics J501-Mini Carrier Board Schematic](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/reComputer_mini_J501_datasheet.pdf)
+- [reComputer Robotics J501-Mini Carrier Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
 
 <!-- - [reComputer Robotics J501-Mini Carrier Board Datasheet]() -->
 

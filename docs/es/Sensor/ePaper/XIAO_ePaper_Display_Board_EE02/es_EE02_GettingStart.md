@@ -1,6 +1,6 @@
 ---
 description: Introducción al EE02 Placa Controladora de Pantalla E-ink de 13.3 pulgadas
-title: Introducción al EE02
+title: Introducción a la Placa de Pantalla ePaper XIAO - EE02
 keywords:
   - E-ink
   - Driver Board
@@ -65,7 +65,7 @@ Similar a su hermano, el EE04 (diseñado para pantallas más pequeñas), el EE02
 - **Indicadores LED**: El parpadeo significa que no hay conexión de batería. La luz verde encendida significa que la batería se está cargando.
 - **Conector JST**: Conector JST 2.0mm de 2 pines para conectar la batería.
 
-## Introducción con SenseCraft HMI
+## Introducción a SenseCraft HMI
 
 Esta sección te guiará a través de la conexión de tu EE02 a la plataforma SenseCraft HMI, permitiéndote actualizar fácilmente el contenido de la pantalla de forma inalámbrica.
 
@@ -135,8 +135,9 @@ Finalmente el EE02 recibirá los datos y actualizará la pantalla de 13.3 pulgad
 *   Esto puede suceder si la pantalla no se ha actualizado por mucho tiempo o si el suministro de energía es inestable. Intenta actualizar la pantalla nuevamente vía la plataforma HMI.
 
 ## Recursos
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[PDF]** [Hoja de Datos del Módulo de Pantalla eInk E6 de 13.3](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
+- **[PDF]** [Esquemático de la Placa de Pantalla ePaper XIAO EE02 de Seeed Studio](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
+- **[ZIP]** [PCBA y SCH de la Placa de Pantalla ePaper XIAO EE02 de Seeed Studio](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
 
 ## Soporte Técnico y Discusión del Producto
 

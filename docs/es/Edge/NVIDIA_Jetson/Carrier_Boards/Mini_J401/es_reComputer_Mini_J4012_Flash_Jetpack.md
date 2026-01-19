@@ -25,15 +25,14 @@ reComputer Mini es una computadora de IA diminuta alimentada por el módulo NVID
 
 <!-- Buy links -->
 
-## Características 
+## Características
 
 - **Rendimiento de IA Brillante para Producción:** Alcanza hasta **100 TOPS** de rendimiento de IA con baja potencia y latencia, construido por NVIDIA Orin SoC combinando la arquitectura GPU NVIDIA Ampere™ con capacidad operativa de 64 bits, procesamiento avanzado integrado de video e imagen multifunción, y Aceleradores de Aprendizaje Profundo NVIDIA.
 - **Dispositivo de IA Edge del Tamaño de la Mano:** Tamaño compacto de **63mmx95mmx42mm**, con módulo NVIDIA Jetson Orin NX 16GB, placa portadora Mini J401, ventilador y carcasa. Soporta montaje de escritorio y pared.
 - **Expandible con E/S Ricas:** Incluye hasta 7x USB, 1x DP 2.1, 2x CSI, 1x RJ45 para GbE, M.2 Key E, M.2 Key M, CAN de canal dual, y GPIO con placa de extensión.
-- **Acelerar Soluciones al Mercado:** **JetPack 6.0** preinstalado en SSD NVMe de 128GB, BSP de OS Linux, soportando software Jetson y frameworks de IA líderes. 
-- **Escalar para desplegar:** soporta OTA, servicios de gestión remota alimentados por Allxon y Balena. 
+- **Acelerar Soluciones al Mercado:** **JetPack 6.0** preinstalado en SSD NVMe de 128GB, BSP de OS Linux, soportando software Jetson y frameworks de IA líderes.
+- **Escalar para desplegar:** soporta OTA, servicios de gestión remota alimentados por Allxon y Balena.
 - **Personalización Flexible:** incluye cambio de módulos de accesorios, logo, y modificación de interfaces de hardware basada en el diseño original reComputer Mini J4012.
-
 
 ## Especificaciones
 
@@ -209,7 +208,7 @@ reComputer Mini es una computadora de IA diminuta alimentada por el módulo NVID
 </table>
 </div>
 
-## Descripción General del Hardware 
+## Descripción General del Hardware
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/B1.png"/>  
@@ -227,17 +226,16 @@ reComputer Mini es una computadora de IA diminuta alimentada por el módulo NVID
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/B4.png"/>  
 </div>
 
-
 ## Flashear SO JetPack
 
 Aquí, te mostraremos cómo flashear [Jetpack 6.0](https://developer.nvidia.com/embedded/jetson-linux-archive) a un SSD NVMe conectado al reComputer Mini.
 
 ### Módulo Nvidia Jetson Soportado
 
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html) 
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html) 
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html) 
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html) 
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html)
 
 ### Prerrequisitos
 
@@ -249,7 +247,7 @@ Aquí, te mostraremos cómo flashear [Jetpack 6.0](https://developer.nvidia.com/
 
 Recomendamos que uses dispositivos host ubuntu físicos en lugar de máquinas virtuales.
 Por favor consulta la tabla a continuación para preparar la máquina host.
-        
+
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
@@ -355,7 +353,7 @@ El archivo de imagen Jetpack6 tiene aproximadamente **16.7GB** de tamaño y debe
 :::
 
 :::info
-Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256. 
+Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
 
 En una máquina host Ubuntu, abre la terminal y ejecuta el comando `sha256sum <Archivo>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
 :::
@@ -386,6 +384,7 @@ Antes de que podamos continuar con los pasos de instalación, necesitamos asegur
 </details>
 
 En la PC host Linux, abre una ventana de Terminal e ingresa el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el SoM Jetson que uses, entonces la placa está en modo de recuperación forzada.
+
 - Para Orin NX 16GB: 0955:7323 NVidia Corp
 - Para Orin NX 8GB: 0955:7423 NVidia Corp
 - Para Orin Nano 8GB: 0955:7523 NVidia Corp
@@ -396,15 +395,14 @@ La imagen de abajo es para Orin Nx 16GB:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/3.png"/>
 </div>
-
-
+<!-- 
 ### Flashear a Jetson con un Solo Comando.
 
 <details>
 
 <summary> Flashear el dispositivo con un solo comando. </summary>
 
-El reComputer Jetson J30/40 Mini ha lanzado un script de flasheo de un clic, que soporta flashear Jetpack 6.0. 
+El reComputer Jetson J30/40 Mini ha lanzado un script de flasheo de un clic, que soporta flashear Jetpack 6.0.
 
 ```bash
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
@@ -418,8 +416,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 Descargo de responsabilidad: El script de flasheo de un clic tiene como objetivo hacer que el flasheo de jetpack sea más rápido. La versión actual es una versión beta y puede tener muchos problemas. Esperamos su comprensión. Si hay problemas de flasheo, siga los pasos de `Flashear el Dispositivo Paso a Paso` a continuación y proporcione comentarios en nuestro [canal Discord de Jetson](https://discord.com/channels/862602258452578314/930732339624026152). Los solucionaremos rápidamente y mejoraremos esta función en un futuro cercano.
 :::
 
-</details>
-
+</details> -->
 
 ### Flashear a Jetson Paso a Paso
 
@@ -431,7 +428,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Paso 2:** Ejecuta el siguiente comando para flashear el sistema jetpack al SSD NVMe: 
+**Paso 2:** Ejecuta el siguiente comando para flashear el sistema jetpack al SSD NVMe:
 
 ```bash
 cd mfi_xxxx
@@ -473,6 +470,7 @@ Si quieres aprender más sobre las especificaciones detalladas y el uso de la in
 :::
 
 ## Recursos
+
 - [Hoja de Datos de reComptuer Mini](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf)
 - [Esquemático de reComptuer Mini](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_SCH.7z)
 - [Archivo 3D de reComputer Mini](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_3D.7z)
@@ -481,17 +479,16 @@ Si quieres aprender más sobre las especificaciones detalladas y el uso de la in
 - [Comparación de Series Jetson de Seeed](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Dispositivos Jetson de Seeed en Una Página](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-
 ## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -39,7 +39,7 @@ Para más detalles, haz clic [aquí](/es/usb_timeout_during_flash)
 **R:** Por favor verifica la integridad del archivo (por ejemplo, proporcionamos las sumas de verificación SHA256), para algunas placas portadoras (especialmente la serie A60X), asegúrate de que el parche del controlador se haya copiado/aplicado exitosamente al directorio **Linux_for_tegra**. Hay archivos que requieren permisos **sudo**, y cuando copies directorios, asegúrate de que el parámetro **-r** esté incluido en tu comando.
 
 #### P8: Mi sistema se bloqueó/no puede arrancar/pantalla negra/perdió controladores periféricos después de ejecutar los comandos "sudo apt-get update && sudo apt-get upgrade".
-**R:** Estos problemas se pueden resumir como **"¿Por qué no puedo actualizar el sistema con apt upgrade en placas portadoras personalizadas?"** La respuesta corta es: **No** ejecutes el comando apt upgrade en placas portadoras **personalizadas/de terceros**. Además, evita ejecutar cualquier script que incluya comandos apt upgrade o usar herramientas de actualización GUI en Ubuntu. Los paquetes Debian del servidor no tienen en cuenta el diseño específico de nuestras placas personalizadas, y forzar la actualización puede causar incompatibilidades que pueden dañar tu dispositivo. Este proceso solo es compatible con el devkit oficial. Para resolver estos problemas, sigue nuestra guía para volver a flashear el JetPack.
+**R:** Estos problemas se pueden resumir como **"¿Por qué no puedo actualizar el sistema con apt upgrade en placas portadoras personalizadas?"** La respuesta corta es: **No** ejecutes el comando apt upgrade en placas portadoras **personalizadas/de terceros**. Además, evita ejecutar cualquier script que incluya comandos apt upgrade o usar herramientas de actualización GUI en Ubuntu. Los paquetes Debian del servidor no tienen en cuenta el diseño específico de nuestras placas personalizadas, y forzar la actualización puede causar incompatibilidades que pueden dañar tu dispositivo. Este proceso solo es compatible con el devkit oficial. Para resolver estos problemas, sigue nuestra guía para reflashear el JetPack.
 
 #### P9: ¿Cómo puedo actualizar paquetes de software si me dijiste que no puedo ejecutar apt upgrade? ¿Habrá riesgos de seguridad si no actualizo el software?
 
@@ -113,6 +113,9 @@ Para más detalles, haz clic [aquí](/es/how_to_encrypt_the_disk_for_jetson)
 
 Para más detalles, haz clic [aquí](/es/how_to_establish_the_ethercat_on_jetson)
 
+#### P18 No modifiqué nada relacionado con el kernel de Jetson, pero durante el arranque el Jetson reportó un error relacionado con UUID y luego entró al terminal de recuperación.
+
+Solución para este problema: haz clic [aquí](/es/deal_the_issue_of_UUID)
 
 ## Soporte técnico
 
