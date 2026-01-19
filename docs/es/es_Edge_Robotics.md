@@ -311,7 +311,7 @@ last_update:
         <span className="tag recommended">Nuevo</span>
       </a>
       <a href="/es/simulate_soarm101_by_leisaac/" className="content-card">
-        <span className="text">Brazo SO100 Isaac Sim</span>
+        <span className="text">Simulación Isaac de Brazo SO100</span>
         <span className="tag recommended">Nuevo</span>
       </a>
       </div>
@@ -341,25 +341,36 @@ last_update:
     <h3 className="course-section-title">💻 Software Principal y Simulación</h3>
     <div className="course-grid">
 
-      <!-- ROS 1 -->
-      <a href="" className="course-card">
+      <!-- ROS Basics: 8 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/1.%20ROS%20Basics%208%20lectures/README.md" className="course-card">
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Principiante</span> <span>⏱️ 8h</span></div>
-          <h3>Fundamentos de ROS 1 para Principiantes y Crea Tu Propio Robot Móvil</h3>
-          <p>Aprende sobre Nodos, Temas, Servicios y Acciones, y Programa Robots Usando Python</p>
-          <span className="btn-start">Planificando</span>
+          <h3>Fundamentos de ROS 1: 8 Conferencias</h3>
+          <p>Aprende sobre Nodos, Temas, Servicios y Aprendizaje Básico</p>
+          <span className="btn-start">Aprender</span>
+        </div>
+      </a>
+
+      <!-- ROS Robot Simulation: 7 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/2.%20ROS%20Robot%20Simulation%207%20Lectures/README.MD" className="course-card">
+        <div className="course-cover c-ros1">ROS 1</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">Principiante</span> <span>⏱️ 8h</span></div>
+          <h3>Simulación de Robot ROS 1: 7 Conferencias.</h3>
+          <p>	Desde el modelado hasta la navegación autónoma.</p>
+          <span className="btn-start">Aprender</span>
         </div>
       </a>
 
       <!-- ROS 2 -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/2.English/1.%20ROS%20Basics%208%20lectures/README.MD" className="course-card">
         <div className="course-cover c-ros2">ROS 2</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">Intermedio</span> <span>⏱️ 8h</span></div>
-          <h3>Fundamentos de ROS 2 Humble</h3>
-          <p>Domina Nodos, Temas, Servicios y Acciones con Python.</p>
-          <span className="btn-start">Planificando</span>
+          <h3>Fundamentos de ROS 2 Humble: 8 Conferencias</h3>
+          <p>Aprende sobre Nodos, Temas, Servicios y Aprendizaje Básico</p>
+          <span className="btn-start">Aprender</span>
         </div>
       </a>
 
@@ -371,8 +382,8 @@ last_update:
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Brazo Principiante</span> <span>⏱️ 6h</span></div>
           <h3>MoveIt 1/2</h3>
-          <p>Importa un Manipulador Personalizado a MoveIt 1/2 e Implementa Cinemática Directa e Inversa</p>
-          <span className="btn-start">Planificando</span>
+          <p>Importar un Manipulador Personalizado a MoveIt 1/2 e Implementar Cinemática Directa e Inversa</p>
+          <span className="btn-plan">Planificando</span>
         </div>
       </a>
 
@@ -382,8 +393,8 @@ last_update:
         <div className="course-info">
           <div className="course-meta"><span className="level int">Brazo Intermedio</span> <span>⏱️ 6h</span></div>
           <h3>Pinocchio</h3>
-          <p>Aprende el Framework de Robótica Pinocchio y Desarrolla Tareas de Cinemática y Dinámica para Tu Propio Manipulador</p>
-          <span className="btn-start">Planificando</span>
+          <p>Aprende el Framework de Robótica Pinocchio y Desarrolla Tareas de Cinemática y Dinámica para tu Propio Manipulador</p>
+          <span className="btn-plan">Planificando</span>
         </div>
       </a>
 
@@ -395,7 +406,7 @@ last_update:
           <div className="course-meta"><span className="level adv">Avanzado</span> <span>⏱️ 12h</span></div>
           <h3>NVIDIA Isaac Sim & Lab</h3>
           <p>Flujos de trabajo Sim2Real, pipelines USD y creación de entornos.</p>
-          <span className="btn-start">Planificando</span>
+          <span className="btn-plan">Planificando</span>
         </div>
       </a>
 
@@ -406,7 +417,7 @@ last_update:
           <div className="course-meta"><span className="level adv">Avanzado</span> <span>⏱️ 10h</span></div>
           <h3>Motor de Física MuJoCo</h3>
           <p>Modelado de dinámicas y simulación para control ágil de robots.</p>
-          <span className="btn-start">Planificando</span>
+          <span className="btn-plan">Planificando</span>
         </div>
       </a>
 
@@ -417,7 +428,7 @@ last_update:
           <div className="course-meta"><span className="level adv">Difícil</span> <span>⏱️ 20h</span></div>
           <h3>Aprendizaje por Refuerzo</h3>
           <p>PPO, pipelines de entrenamiento DRL y despliegue en Jetson.</p>
-          <span className="btn-start">Planificando</span>
+          <span className="btn-plan">Planificando</span>
         </div>
       </a>
 
@@ -432,9 +443,9 @@ last_update:
         <div className="course-cover c-human">Humanoide</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Principiante</span> <span>⏱️ 5h</span></div>
-          <h3>Curso de Robots Humanoides de Servo Pequeño</h3>
+          <h3>Curso de Robots Humanoides de Servo Pequeño </h3>
           <p>Control de Hardware, Coreografía de Movimiento y Danza, y Desarrollo Secundario para Robots Humanoides Pequeños.</p>
-          <span className="btn-start">Planificando</span>
+          <span className="btn-plan">Planificando</span>
         </div>
       </a>
 
@@ -446,7 +457,7 @@ last_update:
           <div className="course-meta"><span className="level beg">Principiante</span> <span>⏱️ 6h</span></div>
           <h3>Robótica Móvil (Lekiwi)</h3>
           <p>SLAM, Navigation 2 y patrullaje autónomo.</p>
-          <span className="btn-start">Planificando</span>
+          <span className="btn-plan">Planificando</span>
         </div>
       </a>
 
@@ -457,7 +468,7 @@ last_update:
           <div className="course-meta"><span className="level int">Intermedio</span> <span>⏱️ 15h</span></div>
           <h3>Curso del Sistema de Brazo StarAI</h3>
           <p>Manipulador StarAI 6+1 DOF: Cinemática, Dinámica, Aprendizaje por Imitación y Aprendizaje por Refuerzo Avanzado basado en VLA</p>
-          <span className="btn-start">Planificando</span>
+          <span className="btn-plan">Planificando</span>
         </div>
       </a>
 
@@ -468,18 +479,18 @@ last_update:
           <div className="course-meta"><span className="level int">Intermedio</span> <span>⏱️ 8h</span></div>
           <h3>Curso de Robots de Ruedas-Patas Stackforce</h3>
           <p>Control de equilibrio y planificación de movimiento LQR para robots híbridos.</p>
-          <span className="btn-start">Planificando</span>
+          <span className="btn-plan">Planificando</span>
         </div>
       </a>
 
       <!-- ReachyMini -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ReachyMini_Tutorial/2.English/README.md" className="course-card">
         <div className="course-cover c-reachy">Robot de Escritorio</div>
         <div className="course-info">
           <div className="course-meta"><span className="level adv">Avanzado</span> <span>⏱️ 8h</span></div>
-          <h3>Curso ReachyMini</h3>
+          <h3>Tutorial de ReachyMini 13 Conferencias</h3>
           <p>Curso Sistemático sobre Operación Básica, Tutoriales de Interfaz y Desarrollo Secundario de ReachyMini</p>
-          <span className="btn-start">Planificando</span>
+          <span className="btn-start">Aprender</span>
         </div>
       </a>
 
@@ -630,9 +641,31 @@ last_update:
 .course-info p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; }
 
 .btn-start {
-  display: block; text-align: center; padding: 8px 0; background: #f0f7ff; color: #4a90e2; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
+  display: block; text-align: center; padding: 8px 0; background:  #ecfdf5; color: #059669; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
 }
-.course-card:hover .btn-start { background: #4a90e2; color: white; }
+.course-card:hover .btn-start { background: #10b981; color: white; }
+
+.btn-plan {
+  display: block; 
+  text-align: center; 
+  padding: 8px 0; 
+  font-weight: 600; 
+  font-size: 0.9rem; 
+  border-radius: 8px; 
+  transition: all 0.2s;
+
+  /* 差异化设计 */
+  background: #fff7ed; /* 极浅的橙色背景 */
+  color: #ea580c;      /* 较深的橙色文字 */
+  cursor: default;
+}
+
+/* Hover 效果：保持暖色调，不像 Start 按钮那样反转颜色，避免抢夺视线 */
+.course-card:hover .btn-plan {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
 
 /* =========================================
    4. Dark Mode 适配
@@ -659,6 +692,8 @@ html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
 html[data-theme='dark'] .course-info p { color: #9ca3af; }
 html[data-theme='dark'] .btn-start { background: #2f2f32; color: #60a5fa; }
 html[data-theme='dark'] .course-card:hover .btn-start { background: #60a5fa; color: white; }
+html[data-theme='dark'] .btn-plan { background: #2f2f32; color: #ea580c; }
+html[data-theme='dark'] .course-card:hover .btn-plan { background: #ea580c; color: white; }
 html[data-theme='dark'] .learning-section-title { color: #ccc; border-bottom-color: #444; }
 
 @media (max-width: 768px) {
