@@ -11,142 +11,166 @@ function getFrontmatterAliases() {
     if (process.env.NODE_ENV === 'development') {
       return [];
     }
-    
+
     const fs = require('fs');
     const path = require('path');
     const glob = require('glob');
-    
+
     const docsDir = path.join(__dirname, 'docs');
-    
+
     if (!fs.existsSync(docsDir)) {
       console.warn('警告: docs 目录不存在，跳过 aliases 处理');
       return [];
     }
-    
+
     const files = glob.sync(path.join(docsDir, '**/*.{md,mdx}'), {
       windowsPathsNoEscape: true,
-      dot: false
+      dot: false,
     });
-    
+
     if (files.length === 0) {
       console.warn('警告: 没有找到任何文档文件');
       return [];
     }
-    
-    // 首先收集所有真实存在的页面路径
+
+    // 更健壮：兼容 BOM + \r\n
+    const FM_RE = /^\uFEFF?---\s*\r?\n([\s\S]*?)\r?\n---/;
+
+    // 先收集所有真实页面路径（slug 或文件路径）
     const existingPaths = new Set();
-    
-    files.forEach(filePath => {
+
+    /** @param {string} p */
+    const normPath = (p) => {
+      if (!p) return '/';
+      let x = p.startsWith('/') ? p : `/${p}`;
+      // 去掉重复 //
+      x = x.replace(/\/{2,}/g, '/');
+      return x;
+    };
+
+    /** @param {string} p */
+    const withSlash = (p) => (p.endsWith('/') ? p : `${p}/`);
+
+    /** @param {string} p */
+    const withoutSlash = (p) => (p !== '/' && p.endsWith('/') ? p.slice(0, -1) : p);
+
+    // 收集 existingPaths（同时放入带/不带 / 两种形式）
+    files.forEach((filePath) => {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
-        const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
-        
-        if (frontmatterMatch) {
-          const frontmatterText = frontmatterMatch[1];
-          const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
-          
-          if (slugMatch) {
-            const slug = slugMatch[1];
-            const targetPath = slug.startsWith('/') ? slug : `/${slug}`;
-            existingPaths.add(targetPath);
-          } else {
-            // 如果没有 slug，使用文件路径
-            const relativePath = path.relative(docsDir, filePath);
-            const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
-            existingPaths.add(`/${docPath}`);
-          }
+        const fm = content.match(FM_RE);
+        if (!fm) return;
+
+        const frontmatterText = fm[1];
+        const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
+
+        let target;
+        if (slugMatch) {
+          target = normPath(slugMatch[1].trim());
+        } else {
+          const relativePath = path.relative(docsDir, filePath);
+          const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
+          target = normPath(docPath);
         }
-      } catch (/** @type {any} */ error) {
-        // 静默处理
+
+        existingPaths.add(withoutSlash(target));
+        existingPaths.add(withSlash(target));
+      } catch {
+        // ignore
       }
     });
-    
-    // console.log(`📄 发现 ${existingPaths.size} 个有效的页面路径`);
-    
-    // 现在处理 aliases
+
     const redirects = /** @type {{from: string; to: string}[]} */ ([]);
     let processedCount = 0;
     let skippedCount = 0;
-    
-    files.forEach(filePath => {
+
+    // 解析 aliases 并生成 redirects
+    files.forEach((filePath) => {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
-        const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/);
-        
-        if (frontmatterMatch) {
-          const frontmatterText = frontmatterMatch[1];
-          
-          if (frontmatterText.includes('aliases:')) {
-            const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
-            
-            /** @type {string[]} */
-            let aliases = [];
-            
-            // 方括号格式: aliases: ["/path1", "/path2"]
-            const bracketMatch = frontmatterText.match(/aliases:\s*\[(.*?)\]/s);
-            if (bracketMatch) {
-              aliases = bracketMatch[1]
-                .split(',')
-                .map(alias => alias.trim().replace(/['"]/g, ''))
-                .filter(alias => alias);
-            } else {
-              // YAML 数组格式
-              const yamlMatch = frontmatterText.match(/aliases:\s*\n((?:\s*-\s*.+\n?)*)/);
-              if (yamlMatch) {
-                const yamlAliases = yamlMatch[1];
-                aliases = yamlAliases
-                  .split('\n')
-                  .map(line => {
-                    const match = line.match(/^\s*-\s*(.+)$/);
-                    return match ? match[1].trim().replace(/['"]/g, '') : '';
-                  })
-                  .filter(
-                    /** @param {string} alias */
-                    alias => alias
-                  );
-              }
-            }
-            
-            if (aliases.length > 0) {
-              // 确定目标路径
-              let targetPath;
-              if (slugMatch) {
-                const slug = slugMatch[1];
-                targetPath = slug.startsWith('/') ? slug : `/${slug}`;
-              } else {
-                const relativePath = path.relative(docsDir, filePath);
-                const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
-                targetPath = `/${docPath}`;
-              }
-              
-              // 验证目标路径是否存在
-              if (existingPaths.has(targetPath)) {
-                // 添加重定向规则
-                aliases.forEach(alias => {
-                  const from = alias.startsWith('/') ? alias : `/${alias}`;
-                  redirects.push({ from, to: targetPath });
-                });
-                processedCount++;
-              } else {
-                // console.warn(`⚠️  跳过无效的目标路径: ${targetPath} (来自文件: ${path.relative(__dirname, filePath)})`);
-                skippedCount++;
-              }
-            }
+        const fm = content.match(FM_RE);
+        if (!fm) return;
+
+        const frontmatterText = fm[1];
+        if (!frontmatterText.includes('aliases:')) return;
+
+        const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
+
+        /** @type {string[]} */
+        let aliases = [];
+
+        // aliases: ["/a", "/b"]
+        const bracketMatch = frontmatterText.match(/aliases:\s*\[(.*?)\]/s);
+        if (bracketMatch) {
+          aliases = bracketMatch[1]
+            .split(',')
+            .map((a) => a.trim().replace(/['"]/g, ''))
+            .filter(Boolean);
+        } else {
+          // YAML list
+          const yamlMatch = frontmatterText.match(/aliases:\s*\r?\n((?:\s*-\s*.+\r?\n?)*)/);
+          if (yamlMatch) {
+            aliases = yamlMatch[1]
+              .split(/\r?\n/)
+              .map((line) => {
+                const m = line.match(/^\s*-\s*(.+)$/);
+                return m ? m[1].trim().replace(/['"]/g, '') : '';
+              })
+              .filter(Boolean);
           }
         }
+
+        if (aliases.length === 0) return;
+
+        // 目标路径
+        let targetPath;
+        if (slugMatch) {
+          targetPath = normPath(slugMatch[1].trim());
+        } else {
+          const relativePath = path.relative(docsDir, filePath);
+          const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
+          targetPath = normPath(docPath);
+        }
+
+        // 你的站点 trailingSlash: true，但我们同时生成 to 的两种形式以适配不同环境
+        const toNo = withoutSlash(targetPath);
+        const toSl = withSlash(targetPath);
+
+        // 验证目标存在
+        if (!existingPaths.has(toNo) && !existingPaths.has(toSl)) {
+          skippedCount++;
+          return;
+        }
+
+        // 生成 redirects：from / from/ -> to / to/
+        aliases.forEach((alias) => {
+          const fromRaw = normPath(alias.trim());
+          const fromNo = withoutSlash(fromRaw);
+          const fromSl = withSlash(fromRaw);
+
+          // 1) 不带 / 的 from -> 带 / 的 to
+          redirects.push({ from: fromNo, to: toSl });
+          // 2) 带 / 的 from -> 带 / 的 to
+          redirects.push({ from: fromSl, to: toSl });
+
+          // 3) 不带 / 的 from -> 不带 / 的 to（某些服务器/环境更吃这个）
+          redirects.push({ from: fromNo, to: toNo });
+          // 4) 带 / 的 from -> 不带 / 的 to
+          redirects.push({ from: fromSl, to: toNo });
+        });
+
+        processedCount++;
       } catch (/** @type {any} */ error) {
         console.warn(`警告: 处理文件 ${filePath} 时出错: ${error.message}`);
       }
     });
-    
-    // 构建时输出信息
-    // console.log(`🔗 从 ${processedCount} 个文档中创建 ${redirects.length} 个有效的 aliases 重定向`);
-    // if (skippedCount > 0) {
-    //   console.log(`⚠️  跳过了 ${skippedCount} 个无效的目标路径`);
-    // }
-    
+
+    console.log(`🔗 从 ${processedCount} 个文档中创建 ${redirects.length} 个有效的 aliases 重定向`);
+    if (skippedCount > 0) {
+      console.log(`⚠️  跳过了 ${skippedCount} 个无效的目标路径`);
+    }
+
     return redirects;
-    
   } catch (/** @type {any} */ error) {
     console.error('处理 frontmatter aliases 时出错:', error.message);
     return [];
