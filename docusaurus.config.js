@@ -7,7 +7,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 // 从 frontmatter 中提取 aliases
 function getFrontmatterAliases() {
   try {
-    // dev 模式直接跳过，避免全量扫描
     if (process.env.NODE_ENV === 'development') {
       return [];
     }
@@ -17,7 +16,6 @@ function getFrontmatterAliases() {
     const glob = require('glob');
 
     const docsDir = path.join(__dirname, 'docs');
-
     if (!fs.existsSync(docsDir)) {
       console.warn('警告: docs 目录不存在，跳过 aliases 处理');
       return [];
@@ -33,17 +31,13 @@ function getFrontmatterAliases() {
       return [];
     }
 
-    // 更健壮：兼容 BOM + \r\n
+    // 兼容 BOM + \r\n
     const FM_RE = /^\uFEFF?---\s*\r?\n([\s\S]*?)\r?\n---/;
-
-    // 先收集所有真实页面路径（slug 或文件路径）
-    const existingPaths = new Set();
 
     /** @param {string} p */
     const normPath = (p) => {
       if (!p) return '/';
       let x = p.startsWith('/') ? p : `/${p}`;
-      // 去掉重复 //
       x = x.replace(/\/{2,}/g, '/');
       return x;
     };
@@ -51,10 +45,9 @@ function getFrontmatterAliases() {
     /** @param {string} p */
     const withSlash = (p) => (p.endsWith('/') ? p : `${p}/`);
 
-    /** @param {string} p */
-    const withoutSlash = (p) => (p !== '/' && p.endsWith('/') ? p.slice(0, -1) : p);
+    // 收集所有真实页面路径（用于校验 to 是否存在）
+    const existingPaths = new Set();
 
-    // 收集 existingPaths（同时放入带/不带 / 两种形式）
     files.forEach((filePath) => {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
@@ -64,6 +57,7 @@ function getFrontmatterAliases() {
         const frontmatterText = fm[1];
         const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
 
+        /** @type {string} */
         let target;
         if (slugMatch) {
           target = normPath(slugMatch[1].trim());
@@ -73,18 +67,21 @@ function getFrontmatterAliases() {
           target = normPath(docPath);
         }
 
-        existingPaths.add(withoutSlash(target));
+        existingPaths.add(target);
         existingPaths.add(withSlash(target));
       } catch {
         // ignore
       }
     });
 
-    const redirects = /** @type {{from: string; to: string}[]} */ ([]);
+    /** @type {{from: string; to: string}[]} */
+    const redirects = [];
+    const seenFrom = new Set(); // from 去重，避免 EEXIST
+
     let processedCount = 0;
     let skippedCount = 0;
+    let dedupedCount = 0;
 
-    // 解析 aliases 并生成 redirects
     files.forEach((filePath) => {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
@@ -99,7 +96,6 @@ function getFrontmatterAliases() {
         /** @type {string[]} */
         let aliases = [];
 
-        // aliases: ["/a", "/b"]
         const bracketMatch = frontmatterText.match(/aliases:\s*\[(.*?)\]/s);
         if (bracketMatch) {
           aliases = bracketMatch[1]
@@ -107,7 +103,6 @@ function getFrontmatterAliases() {
             .map((a) => a.trim().replace(/['"]/g, ''))
             .filter(Boolean);
         } else {
-          // YAML list
           const yamlMatch = frontmatterText.match(/aliases:\s*\r?\n((?:\s*-\s*.+\r?\n?)*)/);
           if (yamlMatch) {
             aliases = yamlMatch[1]
@@ -122,7 +117,8 @@ function getFrontmatterAliases() {
 
         if (aliases.length === 0) return;
 
-        // 目标路径
+        // 目标路径（统一用带 /，你配置 trailingSlash:true）
+        /** @type {string} */
         let targetPath;
         if (slugMatch) {
           targetPath = normPath(slugMatch[1].trim());
@@ -131,32 +127,24 @@ function getFrontmatterAliases() {
           const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
           targetPath = normPath(docPath);
         }
+        const to = withSlash(targetPath);
 
-        // 你的站点 trailingSlash: true，但我们同时生成 to 的两种形式以适配不同环境
-        const toNo = withoutSlash(targetPath);
-        const toSl = withSlash(targetPath);
-
-        // 验证目标存在
-        if (!existingPaths.has(toNo) && !existingPaths.has(toSl)) {
+        // to 必须存在（任意一种形式存在都算）
+        if (!existingPaths.has(targetPath) && !existingPaths.has(to)) {
           skippedCount++;
           return;
         }
 
-        // 生成 redirects：from / from/ -> to / to/
+        // 只生成 “带 / 的 from”，并去重
         aliases.forEach((alias) => {
-          const fromRaw = normPath(alias.trim());
-          const fromNo = withoutSlash(fromRaw);
-          const fromSl = withSlash(fromRaw);
+          const from = withSlash(normPath(alias.trim()));
 
-          // 1) 不带 / 的 from -> 带 / 的 to
-          redirects.push({ from: fromNo, to: toSl });
-          // 2) 带 / 的 from -> 带 / 的 to
-          redirects.push({ from: fromSl, to: toSl });
-
-          // 3) 不带 / 的 from -> 不带 / 的 to（某些服务器/环境更吃这个）
-          redirects.push({ from: fromNo, to: toNo });
-          // 4) 带 / 的 from -> 不带 / 的 to
-          redirects.push({ from: fromSl, to: toNo });
+          if (seenFrom.has(from)) {
+            dedupedCount++;
+            return;
+          }
+          seenFrom.add(from);
+          redirects.push({ from, to });
         });
 
         processedCount++;
@@ -165,7 +153,9 @@ function getFrontmatterAliases() {
       }
     });
 
-    console.log(`🔗 从 ${processedCount} 个文档中创建 ${redirects.length} 个有效的 aliases 重定向`);
+    console.log(
+      `🔗 从 ${processedCount} 个文档中创建 ${redirects.length} 个有效的 aliases 重定向（去重丢弃 ${dedupedCount} 条）`,
+    );
     if (skippedCount > 0) {
       console.log(`⚠️  跳过了 ${skippedCount} 个无效的目标路径`);
     }
