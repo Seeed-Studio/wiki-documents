@@ -9,6 +9,7 @@ keywords:
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
 slug: /es/respeaker_xvf3800_xiao_http_audio_stream
+sku: 114993702,114993700
 last_update:
   date: 1/19/2025
   author: Kasun Thushara
