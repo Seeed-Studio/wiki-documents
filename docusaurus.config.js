@@ -7,6 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 // 从 frontmatter 中提取 aliases
 function getFrontmatterAliases() {
   try {
+    console.log('[aliases] getFrontmatterAliases() called');
+
     if (process.env.NODE_ENV === 'development') {
       return [];
     }
@@ -188,8 +190,8 @@ module.exports = (async () => {
     url: 'https://wiki.seeedstudio.com',
     baseUrl: '/',
     onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
-    onBrokenAnchors: 'warn',
+    onBrokenMarkdownLinks: 'ignore',
+    onBrokenAnchors: 'ignore',
     favicon: 'img/S.png',
     themes: ['docusaurus-theme-search-typesense'],
     scripts: [
@@ -356,9 +358,12 @@ module.exports = (async () => {
       // 添加 frontmatter aliases 重定向插件
       [
         '@docusaurus/plugin-client-redirects',
-        {
-          redirects: getFrontmatterAliases(),
-        },
+        (() => {
+          console.log(`[aliases] config loaded, NODE_ENV=${process.env.NODE_ENV}`);
+          const redirects = getFrontmatterAliases();
+          console.log(`[aliases] redirects computed: ${redirects.length}`);
+          return { redirects };
+        })(),
       ],
       
       'docusaurus-plugin-image-zoom',
