@@ -91,7 +91,7 @@ In Seeed, we greatly value our community of Seeeders. The [Seeed Studio Contribu
 
 ### More about Collaborative Programs
 
-- [The Ranger Program](https://wiki.seeedstudio.com/ranger/)
+- [The Ranger Program](https://www.seeedstudio.com/ranger-program/)
 - [The Contributor Program](https://wiki.seeedstudio.com/contributors/)
 - [Apply for Rangers](https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform)
 - [Direct to Assignment](https://github.com/orgs/Seeed-Studio/projects/6)
