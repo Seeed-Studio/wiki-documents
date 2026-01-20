@@ -1,6 +1,6 @@
 ---
-description: mmWaveセンサーをHAに接続する方法の紹介。
-title: mmWave for XIAO を Bluetooth または Wifi 経由で Home Assistant に接続
+description: mmWave センサーが HA に接続する方法の紹介。
+title: XIAO 用 mmWave から Home Assistant へ Bluetooth または Wifi 経由で接続
 keywords:
 - mmwave
 - radar
@@ -11,13 +11,13 @@ last_update:
   author: Allen, Djair
 ---
 
-# mmWave for XIAO を Bluetooth 経由で Home Assistant に接続
+# XIAO 用 mmWave から Home Assistant へ Bluetooth 経由で接続
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/9.png" style={{width:1000, height:'auto'}}/></div>
 
 ## はじめに
 
-24GHz mmWave Sensor for XIAO - Human Static Presence は、Seeed Studio XIAO シリーズ用の拡張ボードです。これは、FMCW 原理に基づいたアンテナ一体型の高感度 mmWave センサーです。センサー信号処理と正確な人体検知アルゴリズムを組み合わせることで、動いている状態と静止している状態の人体を識別できます。
+24GHz mmWave Sensor for XIAO - Human Static Presence は、Seeed Studio XIAO シリーズ用の拡張ボードです。これは FMCW 原理に基づいたアンテナ一体型の高感度 mmwave センサーです。センサー信号処理と正確な人体感知アルゴリズムを組み合わせることで、動いている状態と静止している状態の人体を識別できます。
 
 この章では、主に 24GHz mmWave Sensor for XIAO が Bluetooth 経由で HA に接続する方法を紹介します。24GHz mmWave Sensor for XIAO の詳細な機能については、[こちら](https://wiki.seeedstudio.com/ja/mmwave_for_xiao/)を参照してください。
 
@@ -25,7 +25,7 @@ last_update:
 この Wiki のすべての内容は 24GHz mmWave for XIAO にのみ適用され、他のミリ波センサーには使用できない場合があります。
 :::
 
-## はじめに
+## 入門ガイド
 
 ### ハードウェアの準備
 
@@ -43,18 +43,18 @@ last_update:
     <tr>
 		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     		<a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     		</a>
 		</div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 				</a>
         </div></td>
 	</tr>
 </table>
 
-このセンサーはXIAO互換性を考慮して設計されているため、一般的にこのセンサーを使用したい場合は、XIAOを準備し、センサー用のメスヘッダーピンを取り付ける必要があります。XIAOに接続する際は、センサーの取り付け方向に特に注意してください。逆向きに差し込まないでください。そうしないとセンサーやXIAOを焼損する可能性があります。
+このセンサーは XIAO 互換性のために設計されているため、一般的に、このセンサーを使用したい場合は、XIAO を準備し、センサー用のメスヘッダーピンを取り付ける必要があります。XIAO に接続する際は、センサーの取り付け方向に特に注意してください。逆向きに差し込まないでください。そうしないと、センサーや XIAO を焼損する可能性があります。
 
 :::caution
 正しい方向は、センサーのアンテナが外側を向くようにすることです。
@@ -62,10 +62,10 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/5.png" style={{width:800, height:'auto'}}/></div>
 
-接続方向が正しいことを確認した後、USB-Cタイプケーブルをコンピューターまたは3.3V電源に接続すると、センサーが動作を開始します。
+接続方向が正しいことを確認した後、USB-C タイプケーブルをコンピューターまたは 3.3V 電源に接続すると、センサーが動作を開始します。
 
 :::tip
-現在XIAOが手元にない場合は、TTLをmmwave for XIAOの3.3VピンとGNDピンに接続して個別に電源を供給することもでき、このチュートリアルの内容を使用することができます。このチュートリアルでは、RXピンとTXピンを使用する必要はありません。
+現在 XIAO が手元にない場合は、TTL を 3.3V ピンと GND ピンに接続して mmwave for XIAO に個別に電源を供給することもできます。これもこのチュートリアルの内容を使用して実行できます。このチュートリアルでは、RX と TX ピンを使用する必要はありません。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/10.jpg" style={{width:300, height:'auto'}}/></div>
 :::
@@ -73,35 +73,35 @@ last_update:
 
 ### ソフトウェアの準備
 
-まだHomeAssistantをインストールしていない場合は、[こちら](https://www.home-assistant.io/installation/)をクリックしてHomeAssistantの公式チュートリアルを参照してください。
+まだ HomeAssistant をインストールしていない場合は、[こちら](https://www.home-assistant.io/installation/)をクリックして公式の HomeAssistant チュートリアルを参照してください。
 
 ## 手順
 
-### ステップ1. デバイスの発見
+### ステップ 1. デバイスの発見
 
-Home Assistantで、左下の**setting**をクリックし、中央の**Devices&Services**を選択します。
+Home Assistant で、左下の **setting** をクリックし、中央の **Devices&Services** を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/1.png" style={{width:1000, height:'auto'}}/></div>
 
-Discoveredゾーンにセンサーアイコンが表示されるので、**configure**をクリックします。
+Discovered ゾーンにセンサーアイコンが表示されるので、**configure** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/2.png" style={{width:1000, height:'auto'}}/></div>
 
-ポップアップウィンドウが表示されるので、**submit**をクリックします。
+ポップアップウィンドウが表示されるので、**submit** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/3.png" style={{width:1000, height:'auto'}}/></div>
 
-設定成功のポップアップが表示されるので、**finish**をクリックします。
+設定成功のポップアップが表示されるので、**finish** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/4.png" style={{width:1000, height:'auto'}}/></div>
 
-### ステップ2. デバイスの設定
+### ステップ 2. デバイスの設定
 
-configuredゾーンで、**ld2410_ble**をクリックします。
+設定済みゾーンで、**ld2410_ble** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/5.png" style={{width:1000, height:'auto'}}/></div>
 
-センサー設定ページに入ったら、**1 device**をクリックします。
+センサー設定ページに入ったら、**1 device** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -109,96 +109,65 @@ configuredゾーンで、**ld2410_ble**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/7.png" style={{width:1000, height:'auto'}}/></div>
 
-ポップアップウィンドウで**ADD TO DASHBOARD**を選択します。
+ポップアップウィンドウで **ADD TO DASHBOARD** を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/8.png" style={{width:1000, height:'auto'}}/></div>
 
-最後に、左上の**overview**をクリックすると、mmwave-for-xiaoセンサーデータがダッシュボードに正常に表示されます。これでmmwave for xiaoセンサーがHome Assistantに正常に接続されました。
+最後に、左上の **overview** をクリックすると、mmwave-for-xiao センサーデータがダッシュボードに正常に表示されます。これで mmwave for xiao センサーが Home Assistant に正常に接続されました。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/9.png" style={{width:1000, height:'auto'}}/></div>
 
-次に、自動化を創造的に活用できます！
+次に、自動化で創造性を発揮してください！
 
-# ESPHomeを使用してWifi経由でmmWave for XIAOをHome Assistantに接続
-以下のyamlファイルは、ESPHomeファームウェアを使用して、レーダーモジュール付きSeeed XIAO ESP32S3 SenseをHome Assistantに接続します：
+# ESPHome を使用した Wifi 経由での XIAO 用 mmWave から Home Assistant への接続
+以下の yaml ファイルは、ESPHome ファームウェアを使用して、レーダーモジュール付きの Seeed XIAO ESP32-C3 を Home Assistant に接続します：
 
 ```
 # Configuration for ESPHome
-esphome:
-  # Name of the ESP32-S3 device
-  name: "seeed-xiao-esp32s3-cam"
-  
-  # PlatformIO build options
-  platformio_options:
-    build_flags: -DBOARD_HAS_PSRAM
-    board_build.arduino.memory_type: qio_opi
-    board_build.f_flash: 80000000L
-    board_build.flash_mode: qio 
+substitutions:
+  name: "xiao-24ghz-mmwave"
+  friendly_name: "XIAO 24GHz mmwave"
 
-# Configuration for ESP32 board
+esphome:
+  name: "${name}"
+  friendly_name: "${friendly_name}"
+  name_add_mac_suffix: True
+
 esp32:
-  board: esp32-s3-devkitc-1
+  board: esp32-c3-devkitm-1
   framework:
     type: arduino
 
 # Enable logging
 logger:
 
-# Enable Home Assistant API - use your api and password
+# Enable Home Assistant API
 api:
-  encryption:
-    key: ""
 
 ota:
   - platform: esphome
-    password: ""
 
-# Wi-Fi configuration - fill with your data
 wifi:
-  ssid: ""
-  password: ""
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Xiao-Esp32s3 Fallback Hotspot"
-    password: ""
+    ssid: "${friendly_name}"
 
-# Captive portal configuration
 captive_portal:
 
-# Configuration for the ESP32 Camera
-esp32_camera:
-  id: espcam
-  name: Xiao Cam
-  external_clock:
-    pin: GPIO10
-    frequency: 20MHz
-  i2c_pins:
-    sda: GPIO40
-    scl: GPIO39
-  data_pins: [GPIO15, GPIO17, GPIO18, GPIO16, GPIO14, GPIO12, GPIO11, GPIO48]
-  vsync_pin: GPIO38
-  href_pin: GPIO47
-  pixel_clock_pin: GPIO13
-  resolution: 800x600
-  
-# Configuration for the ESP32 Camera Web Server
-esp32_camera_web_server:
-  - port: 8080
-    mode: stream
-  - port: 8081
-    mode: snapshot
-
-# Configuration for the 24GHz mmwave XIAO Radar
-ld2410:
-  id: ld2410_radar
-  
 uart:
-  tx_pin: GPIO4
-  rx_pin: GPIO3
-  baud_rate: 256000
+  id: mmWave_uart
+  tx_pin: GPIO5  # D3
+  rx_pin: GPIO4  # D2
+  baud_rate: 9600
   parity: NONE
   stop_bits: 1
+
+ld2410:
+  id: ld2410_radar
+  uart_id: mmWave_uart
 
 number:
   - platform: ld2410
@@ -326,9 +295,9 @@ sensor:
         name: g8 still energy
 ```
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
