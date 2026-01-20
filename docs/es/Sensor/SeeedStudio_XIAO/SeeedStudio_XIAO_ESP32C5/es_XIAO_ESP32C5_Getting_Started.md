@@ -206,7 +206,7 @@ La herramienta de programación recomendada para el XIAO ESP32-C5 es el Arduino 
 Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-- **Paso 1.** Descarga e instala la versión estable de Arduino IDE según tu sistema operativo.
+- **Paso 1.** Descarga e instala la versión estable del Arduino IDE según tu sistema operativo.
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
       <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong></a>
@@ -248,13 +248,13 @@ void loop() {
 }
 ```
 
-**Paso 3.** Haz clic y Sube
+**Paso 3.** Haz clic y Cargar
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
 Demostración del efecto:
 
-Después de subir el programa, verás la luz indicadora L parpadeando a intervalos de 1 segundo, y al mismo tiempo, el monitor serie imprimirá LED ON y LED OFF.
+Después de cargar el programa, verás la luz indicadora L parpadeando a intervalos de 1 segundo, y al mismo tiempo, el monitor serie imprimirá LED ON y LED OFF.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_2.gif" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/uoload_2.png" style={{width:800, height:'auto'}}/></div>
@@ -262,7 +262,7 @@ Después de subir el programa, verás la luz indicadora L parpadeando a interval
 ## Modo de sueño profundo
 
 El XIAO ESP32-C5 cuenta con funciones de sueño profundo y despertar. Este ejemplo utiliza un disparador de nivel alto en el pin **D0** para despertar el dispositivo del sueño profundo.<br/>
-Es importante tener en cuenta que esta es una opción configurable, ya que el hardware soporta tanto disparadores de nivel alto como de nivel bajo para acomodar diferentes diseños de circuito.
+Es importante tener en cuenta que esta es una opción configurable, ya que el hardware admite tanto disparadores de nivel alto como de nivel bajo para adaptarse a diferentes diseños de circuitos.
 
 ```cpp
 #define WAKEUP_PIN D0 // LP_GPIO1
@@ -310,7 +310,7 @@ void setup(){
 void loop(){}
 ```
 
-Si eres lo suficientemente rápido para abrir el monitor serie antes de que el XIAO entre en sueño profundo, entonces puedes ver la salida del mensaje como se muestra a continuación. Esto significa que el XIAO ahora está **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido-apagado del **LED L** para verificar si el dispositivo ha sido despertado. Una vez que se despierte, exhibirá un efecto de parpadeo.
+Si eres lo suficientemente rápido para activar el monitor serie antes de que el XIAO entre en sueño profundo, entonces puedes ver la salida del mensaje como se muestra a continuación. Esto significa que el XIAO ahora está **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido-apagado del **LED L** para verificar si el dispositivo ha sido despertado. Una vez que se despierte, exhibirá un efecto de parpadeo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -319,7 +319,7 @@ Si eres lo suficientemente rápido para abrir el monitor serie antes de que el X
 :::
 
 :::caution
-Actualmente el XIAO ESP32-C5 solo soporta despertar por GPIO, y los únicos pines que soportan despertar son D0~D1. Este programa puede no funcionar en otros pines.
+Actualmente el XIAO ESP32-C5 solo admite despertar por GPIO, y los únicos pines que admiten despertar son D0~D1. Este programa puede no funcionar en otros pines.
 :::
 
 ## Uso de Batería
@@ -329,14 +329,14 @@ El XIAO ESP32-C5 es capaz de usar una batería de litio de 3.7V como entrada de 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_wiring.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-Por favor ten cuidado de no cortocircuitar los terminales positivo y negativo y quemar la batería y el equipo al soldar.
+Ten cuidado de no cortocircuitar los terminales positivo y negativo y quemar la batería y el equipo al soldar.
 :::
 
 **Instrucciones sobre el uso de baterías:**
 
 1. Por favor usa baterías calificadas que cumplan con las especificaciones.
-2. XIAO puede conectarse a tu dispositivo de computadora a través de cable de datos mientras usa la batería, ten la seguridad de que XIAO tiene un chip de protección de circuito incorporado, que es seguro.
-3. Cuando el XIAO ESP32-C5 es alimentado por una batería, el **LED C** se encenderá. Puedes usar esto como base para determinar si se ha llevado a cabo la gestión de carga.
+2. XIAO puede conectarse a tu dispositivo informático a través de cable de datos mientras usa la batería, ten la seguridad de que XIAO tiene un chip de protección de circuito incorporado, que es seguro.
+3. Cuando XIAO ESP32-C5 es alimentado por una batería, el **LED C** se encenderá. Puedes usar esto como base para determinar si se ha llevado a cabo la gestión de carga.
 
 ### Verificar el voltaje de la batería
 
