@@ -115,7 +115,7 @@ last_update:
 - **丰富的片上资源：** 384 KB 片上 SRAM，320 KB ROM
 - **超小尺寸：** 拇指大小（21x17.8mm）XIAO 系列经典外形，适用于可穿戴设备和小型项目
 - **可靠的安全功能：** 支持 AES-128/256、SHA 系列哈希、HMAC 的加密硬件加速器，专用数字签名外设和安全启动（V2）。
-- **丰富的接口：** 1×I2C、1×SPI、2×UART、多达 11×GPIO（支持 PWM）、5×ADC 通道和 JTAG（背面焊盘）绑定焊盘接口。
+- **丰富的接口：** 1×I2C、1×SPI、2×UART、多达 11×GPIO（支持 PWM）、5×ADC 通道和 JTAG（背面焊盘）接合焊盘接口。
 - 单面元件，表面贴装设计
 
 ## 硬件概述
@@ -195,7 +195,7 @@ last_update:
 </div>
 
 :::tip
-有些 USB 数据线只能供电而不能传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否可以传输数据，您可以查看[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
+某些 USB 数据线只能供电而无法传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否可以传输数据，您可以查看[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
 :::
 
 ### 软件
@@ -214,13 +214,13 @@ XIAO ESP32-C5 推荐的编程工具是 Arduino IDE，因此您需要完成 Ardui
   <br></br>
 
 - **步骤 2.** 启动 Arduino 应用程序。
-- **步骤 3.** 打开 BOARDS MANAGER -> 搜索**esp32** -> 安装 3.3.5 版本或更高版本
+- **步骤 3.** 打开 BOARDS MANAGER -> 搜索**esp32** -> 安装版本 3.3.5 或更高版本
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
 ### 上传程序
 
-下面让我们以一个点亮程序为例
+让我们以下面的点灯程序为例
 
 **步骤 1.** 选择 **XIAO_ESP32C5** 和端口。如果您不知道端口号，可以重新插拔 XIAO_ESP32C5 来检查。
 
@@ -262,7 +262,7 @@ void loop() {
 ## 深度睡眠模式
 
 XIAO ESP32-C5 具有深度睡眠和唤醒功能。此示例利用引脚 **D0** 上的高电平触发来从深度睡眠中唤醒设备。<br/>
-需要注意的是，这是一个可配置的选项，因为硬件支持高电平和低电平触发，以适应不同的电路设计。
+需要注意的是，这是一个可配置选项，因为硬件支持高电平和低电平触发，以适应不同的电路设计。
 
 ```cpp
 #define WAKEUP_PIN D0 // LP_GPIO1
@@ -310,7 +310,7 @@ void setup(){
 void loop(){}
 ```
 
-如果您能够在 XIAO 进入深度睡眠之前快速打开串口监视器，那么您可以看到如下所示的消息输出。这意味着 XIAO 现在处于**睡眠状态**。然后您也可以通过按下按钮来查看并激活它。您还可以观察 **L LED** 的开关状态来检查设备是否已被唤醒。一旦被唤醒，它将呈现闪烁效果。
+如果您能够在 XIAO 进入深度睡眠之前快速打开串口监视器，那么您可以看到如下所示的消息输出。这意味着 XIAO 现在处于**睡眠**状态。然后您也可以通过按下按钮来查看并激活它。您还可以观察 **L LED** 的开关状态来检查设备是否已被唤醒。一旦被唤醒，它将呈现闪烁效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -336,7 +336,7 @@ XIAO ESP32-C5 能够使用 3.7V 锂电池作为电源输入。您可以参考以
 
 1. 请使用符合规格的合格电池。
 2. 使用电池时，XIAO 可以通过数据线连接到您的计算机设备，请放心，XIAO 内置电路保护芯片，是安全的。
-3. 当 XIAO ESP32-C5 由电池供电时，**C LED** 将点亮。您可以以此作为判断是否进行了充电管理的依据。
+3. 当 XIAO ESP32-C5 由电池供电时，**C LED** 将亮起。您可以以此作为判断是否进行了充电管理的依据。
 
 ### 检查电池电压
 
@@ -371,7 +371,7 @@ void loop() {
 
   - 此函数用于从 `BAT_VOLT_PIN` 引脚读取当前模拟电压，并返回以毫伏 (mV) 为单位的校准电压值。
   - 与仅提供原始 ADC 值的传统 `analogRead()` 不同，`analogReadMilliVolts()` 自动应用芯片中嵌入的工厂校准参数。这提高了精度，改善了电压测量的线性度，并消除了手动 ADC 到电压转换的需要。
-  - 在电压采样过程中，通过 `for` 循环执行 **16 次重复采样**，并累积结果。多次采样的目的是抑制瞬态噪声和离散误差，从而提高测量稳定性。最后，累积值除以采样次数（16）以获得更平滑、更可靠的平均电压值。
+  - 在电压采样过程中，通过 `for` 循环执行 **16 次重复采样**，并累积结果。多次采样的目的是抑制瞬态噪声和离散误差，从而提高测量稳定性。最后，将累积值除以采样次数（16）以获得更平滑、更可靠的平均电压值。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
@@ -383,10 +383,8 @@ void loop() {
 
 - **[PDF]** [ESP32-C5 数据手册](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
 
-- **[PDF]** [ESP32-C5 数据手册](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
 - **[PCB 设计文件]** [XIAO ESP32-C5 KiCad 项目](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
 - **[原理图]** [XIAO ESP32-C5 原理图](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
-
 
 - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 

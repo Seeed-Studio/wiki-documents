@@ -89,7 +89,7 @@ last_update:
             <td>Reset button / Boot button</td>
         </tr>
         <tr>
-            <th>オンボード LED</th>
+            <th>オンボードLED</th>
             <td>Charge / USER LED</td>
             <td>Charge / USER LED</td>
             <td>Charge LED</td>
@@ -136,7 +136,7 @@ last_update:
 </table>
 
  ## **ピンマップ**
-| XIAO ピン                | 機能   | チップピン  | 代替機能       | 説明                  |
+| XIAOピン                | 機能   | チップピン  | 代替機能       | 説明                  |
 | :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
 | 5V                     | VBUS       |           |                          | 電源入力/出力           |
 | GND                    |            |           |                          |                              |
@@ -145,13 +145,13 @@ last_update:
 | D1                     |            | GPIO0     | LP_UART_DTRN,LP_GPIO0    | GPIO                         |
 | D2                     |            | GPIO25    |                          | GPIO                         |
 | D3                     |            | GPIO7     | SDIO_DATA1               | GPIO                         |
-| D4                     | SDA        | GPIO23    |                          | GPIO、I2C データ               |
-| D5                     | SCL        | GPIO24    |                          | GPIO、I2C クロック              |
-| D6                     | TX         | GPIO11    |                          | GPIO、UART 送信          |
-| D7                     | RX         | GPIO12    |                          | GPIO、UART 受信           |
-| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO、SPI クロック              |
-| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO、SPI データ               |
-| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO、SPI データ               |
+| D4                     | SDA        | GPIO23    |                          | GPIO、I2Cデータ               |
+| D5                     | SCL        | GPIO24    |                          | GPIO、I2Cクロック              |
+| D6                     | TX         | GPIO11    |                          | GPIO、UART送信          |
+| D7                     | RX         | GPIO12    |                          | GPIO、UART受信           |
+| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO、SPIクロック              |
+| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO、SPIデータ               |
+| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO、SPIデータ               |
 | MTDO                   |            | GPIO5     |                          | JTAG                         |
 | MTDI                   |            | GPIO3     |                          | JTAG、ADC                    |
 | MTCK                   |            | GPIO4     |                          | JTAG、ADC                    |
@@ -162,10 +162,10 @@ last_update:
 | Boot                   |            | GPIO28    |                          | Bootモードに入る              |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | UFLアンテナ                  |
 | CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_Red                  |
-| USER_LED               |            | GPIO27    |                          | User Light_Yellow            |
+| USER_LED               |            | GPIO27    |                          | ユーザーライト_Yellow            |
 ## 入門ガイド
 
-XIAO ESP32-C5 をより早く使い始められるように、以下のハードウェアとソフトウェアの準備を読んで XIAO を準備してください。
+XIAO ESP32-C5をより早く使い始められるように、以下のハードウェアとソフトウェアの準備を読んでXIAOを準備してください。
 
 ### ハードウェア
 
@@ -173,7 +173,7 @@ XIAO ESP32-C5 をより早く使い始められるように、以下のハード
 
 - 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
 - 1 x コンピュータ
-- 1 x USB Type-C ケーブル
+- 1 x USB Type-Cケーブル
 
 <div class="table-center">
  <table>
@@ -200,21 +200,21 @@ XIAO ESP32-C5 をより早く使い始められるように、以下のハード
 
 ### ソフトウェア
 
-XIAO ESP32-C5 の推奨プログラミングツールは Arduino IDE ですので、ソフトウェア準備の一環として Arduino のインストールを完了する必要があります。
+XIAO ESP32-C5の推奨プログラミングツールはArduino IDEです。そのため、ソフトウェア準備の一環としてArduinoのインストールを完了する必要があります。
 
 :::tip
-Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
-- **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDE の安定版をダウンロードしてインストールします。
+- **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDEの安定版をダウンロードしてインストールします。
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
-      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong></a>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDEをダウンロード</font></span></strong></a>
   </div>
   <br></br>
 
-- **ステップ 2.** Arduino アプリケーションを起動します。
-- **ステップ 3.**  BOARDS MANAGER を開く -> **esp32** を検索 -> バージョン 3.3.5 以上をインストール
+- **ステップ 2.** Arduinoアプリケーションを起動します。
+- **ステップ 3.**  BOARDS MANAGER を開く -> **esp32** を検索 -> バージョン3.3.5以上をインストール
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -310,7 +310,7 @@ void setup(){
 void loop(){}
 ```
 
-XIAO がディープスリープに入る前にシリアルモニターを開くのが十分に早ければ、以下に示すようなメッセージ出力を見ることができます。これは XIAO が現在**スリープ状態**であることを意味します。その後、ボタンを押すことで表示して起動することもできます。デバイスが起動されたかどうかを確認するために、**L LED** のオン・オフ状態を観察することもできます。起動されると、点滅効果を示します。
+XIAO がディープスリープに入る前にシリアルモニターを開くのが十分に早ければ、以下に示すようなメッセージ出力を見ることができます。これは XIAO が現在**スリープ状態**であることを意味します。その後、ボタンを押すことで表示と起動を確認することもできます。デバイスが起動されたかどうかを確認するために、**L LED** のオン・オフ状態を観察することもできます。起動されると、点滅効果を示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -340,7 +340,7 @@ XIAO ESP32-C5 は 3.7V リチウムバッテリーを電源供給入力として
 
 ### バッテリー電圧の確認
 
-XIAO ESP32-C5 には SGM40567 バッテリー充電チップと TPS22916CYFPR バッテリー電圧取得チップが搭載されています。**BAT_VOLT_PIN_EN** を有効にしてバッテリー電圧取得機能を起動し、**BAT_VOLT_PIN** を通じてバッテリー電圧を読み取ることができます。
+XIAO ESP32-C5 は SGM40567 バッテリー充電チップと TPS22916CYFPR バッテリー電圧取得チップを搭載しています。**BAT_VOLT_PIN_EN** を有効にしてバッテリー電圧取得機能を起動し、**BAT_VOLT_PIN** を通じてバッテリー電圧を読み取ることができます。
 
 :::tip
 XIAO ESP32C5 では、BAT_VOLT_PIN に対応するピンは GPIO6 で、BAT_VOLT_PIN_EN に対応するピンは GPIO26 です。
@@ -370,23 +370,21 @@ void loop() {
 - **`analogReadMilliVolts(BAT_Voltage_Read)`**
 
   - この関数は `BAT_VOLT_PIN` ピンから現在のアナログ電圧を読み取り、ミリボルト（mV）単位で校正された電圧値を返すために使用されます。
-  - 生の ADC 値のみを提供する従来の `analogRead()` とは異なり、`analogReadMilliVolts()` はチップに埋め込まれた工場校正パラメータを自動的に適用します。これにより、より高い精度、電圧測定における線形性の向上、および手動での ADC から電圧への変換の必要性が排除されます。
+  - 生の ADC 値のみを提供する従来の `analogRead()` とは異なり、`analogReadMilliVolts()` はチップに埋め込まれた工場校正パラメータを自動的に適用します。これにより、より高い精度、電圧測定における線形性の向上が実現され、手動での ADC から電圧への変換が不要になります。
   - 電圧サンプリングプロセス中、`for` ループを通じて **16 回の繰り返しサンプリング**が実行され、結果が累積されます。複数回サンプリングの目的は、過渡ノイズと離散エラーを抑制し、測定安定性を向上させることです。最後に、累積値をサンプル数（16）で割って、よりスムーズで信頼性の高い平均電圧値を取得します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
 :::tip
-データシートによると、ESP32-C5 の有効測定範囲は 0～3300 mV をカバーしています。そのため、XIAO ESP32-C5 の内蔵バッテリー電圧取得回路は、2 つの 100K 抵抗による分圧設計により、正確な値の読み取りを可能にしています。
+データシートによると、ESP32-C5 の有効測定範囲は 0～3300 mV をカバーしています。そのため、XIAO ESP32-C5 の内蔵バッテリー電圧取得回路は、電圧分割用に 2 つの 100K 抵抗で設計されており、正確な値の読み取りを可能にしています。
 :::
 
 ## リソース
 
 - **[PDF]** [ESP32-C5 データシート](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
 
-- **[PDF]** [ESP32-C5 データシート](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
 - **[PCB 設計ファイル]** [XIAO ESP32-C5 KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
 - **[回路図]** [XIAO ESP32-C5 回路図](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
-
 
 - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD ライブラリ](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 
@@ -398,7 +396,7 @@ void loop() {
 
 - **[STEP]** [Seeed Studio XIAO ESP32-C5 Step ファイル](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
