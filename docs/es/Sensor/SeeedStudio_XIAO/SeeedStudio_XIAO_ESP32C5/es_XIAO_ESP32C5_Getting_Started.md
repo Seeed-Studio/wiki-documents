@@ -90,10 +90,10 @@ last_update:
         </tr>
         <tr>
             <th>LEDs Integrados</th>
-            <td>LED de Carga / LED de USUARIO</td>
-            <td>LED de Carga / LED de USUARIO</td>
+            <td>LED de Carga / Usuario</td>
+            <td>LED de Carga / Usuario</td>
             <td>LED de Carga</td>
-            <td>LED de Carga / LED de USUARIO</td>
+            <td>LED de Carga / Usuario</td>
         </tr>
         <tr>
             <th>Chip de Carga de Batería</th>
@@ -112,7 +112,7 @@ last_update:
 - **Subsistema Bluetooth LE:** Soporta características de Bluetooth 5 y Bluetooth mesh
 - **Mejor rendimiento RF:** Antena RF externa incluida.
 - **Chip de carga de batería:** Soporta gestión de carga y descarga de batería de litio.
-- **Recursos ricos en chip:** 384 KB de SRAM en chip, 320 KB de ROM
+- **Recursos abundantes en chip:** 384 KB de SRAM en chip, 320 KB de ROM
 - **Tamaño ultra pequeño:** Tan pequeño como un pulgar (21x17.8mm) factor de forma clásico de la serie XIAO para dispositivos portátiles y proyectos pequeños
 - **Características de seguridad confiables**: Aceleradores de hardware criptográfico que soportan AES-128/256, familia de hash SHA, HMAC, un periférico de firma digital dedicado, y Secure Boot (V2).
 - **Interfaces ricas**: 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (capaces de PWM), 5×canales ADC, y una interfaz de pads de conexión JTAG (pads en el lado reverso).
@@ -136,7 +136,7 @@ last_update:
 </table>
 
  ## **Mapa de Pines**
-| Pin XIAO                | Función   | Pin del Chip  | Funciones Alternativas       | Descripción                  |
+| Pin XIAO               | Función   | Pin del Chip  | Funciones Alternativas       | Descripción                  |
 | :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
 | 5V                     | VBUS       |           |                          | Entrada/Salida de Energía           |
 | GND                    |            |           |                          |                              |
@@ -206,7 +206,7 @@ La herramienta de programación recomendada para el XIAO ESP32-C5 es el Arduino 
 Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-- **Paso 1.** Descarga e instala la versión estable del Arduino IDE según tu sistema operativo.
+- **Paso 1.** Descarga e instala la versión estable de Arduino IDE según tu sistema operativo.
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
       <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong></a>
@@ -398,7 +398,7 @@ Según la hoja de datos, el rango de medición efectivo del ESP32-C5 cubre 0~330
 
 - **[STEP]** [Archivo Step Seeed Studio XIAO ESP32-C5](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 

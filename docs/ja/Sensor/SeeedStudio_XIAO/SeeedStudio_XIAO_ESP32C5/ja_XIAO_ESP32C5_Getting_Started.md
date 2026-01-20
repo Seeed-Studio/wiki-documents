@@ -89,7 +89,7 @@ last_update:
             <td>Reset button / Boot button</td>
         </tr>
         <tr>
-            <th>オンボードLED</th>
+            <th>オンボード LED</th>
             <td>Charge / USER LED</td>
             <td>Charge / USER LED</td>
             <td>Charge LED</td>
@@ -136,7 +136,7 @@ last_update:
 </table>
 
  ## **ピンマップ**
-| XIAOピン                | 機能   | チップピン  | 代替機能       | 説明                  |
+| XIAO ピン                | 機能   | チップピン  | 代替機能       | 説明                  |
 | :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
 | 5V                     | VBUS       |           |                          | 電源入力/出力           |
 | GND                    |            |           |                          |                              |
@@ -145,13 +145,13 @@ last_update:
 | D1                     |            | GPIO0     | LP_UART_DTRN,LP_GPIO0    | GPIO                         |
 | D2                     |            | GPIO25    |                          | GPIO                         |
 | D3                     |            | GPIO7     | SDIO_DATA1               | GPIO                         |
-| D4                     | SDA        | GPIO23    |                          | GPIO、I2Cデータ               |
-| D5                     | SCL        | GPIO24    |                          | GPIO、I2Cクロック              |
-| D6                     | TX         | GPIO11    |                          | GPIO、UART送信          |
-| D7                     | RX         | GPIO12    |                          | GPIO、UART受信           |
-| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO、SPIクロック              |
-| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO、SPIデータ               |
-| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO、SPIデータ               |
+| D4                     | SDA        | GPIO23    |                          | GPIO、I2C データ               |
+| D5                     | SCL        | GPIO24    |                          | GPIO、I2C クロック              |
+| D6                     | TX         | GPIO11    |                          | GPIO、UART 送信          |
+| D7                     | RX         | GPIO12    |                          | GPIO、UART 受信           |
+| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO、SPI クロック              |
+| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO、SPI データ               |
+| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO、SPI データ               |
 | MTDO                   |            | GPIO5     |                          | JTAG                         |
 | MTDI                   |            | GPIO3     |                          | JTAG、ADC                    |
 | MTCK                   |            | GPIO4     |                          | JTAG、ADC                    |
@@ -162,10 +162,10 @@ last_update:
 | Boot                   |            | GPIO28    |                          | Bootモードに入る              |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | UFLアンテナ                  |
 | CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_Red                  |
-| USER_LED               |            | GPIO27    |                          | ユーザーライト_Yellow            |
+| USER_LED               |            | GPIO27    |                          | User Light_Yellow            |
 ## 入門ガイド
 
-XIAO ESP32-C5をより早く使い始められるように、以下のハードウェアとソフトウェアの準備を読んでXIAOを準備してください。
+XIAO ESP32-C5 をより早く使い始められるように、以下のハードウェアとソフトウェアの準備を読んで XIAO を準備してください。
 
 ### ハードウェア
 
@@ -173,7 +173,7 @@ XIAO ESP32-C5をより早く使い始められるように、以下のハード�
 
 - 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
 - 1 x コンピュータ
-- 1 x USB Type-Cケーブル
+- 1 x USB Type-C ケーブル
 
 <div class="table-center">
  <table>
@@ -200,21 +200,21 @@ XIAO ESP32-C5をより早く使い始められるように、以下のハード�
 
 ### ソフトウェア
 
-XIAO ESP32-C5の推奨プログラミングツールはArduino IDEです。そのため、ソフトウェア準備の一環としてArduinoのインストールを完了する必要があります。
+XIAO ESP32-C5 の推奨プログラミングツールは Arduino IDE ですので、ソフトウェア準備の一環として Arduino のインストールを完了する必要があります。
 
 :::tip
-Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 :::
 
-- **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDEの安定版をダウンロードしてインストールします。
+- **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDE の安定版をダウンロードしてインストールします。
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
-      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDEをダウンロード</font></span></strong></a>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong></a>
   </div>
   <br></br>
 
-- **ステップ 2.** Arduinoアプリケーションを起動します。
-- **ステップ 3.**  BOARDS MANAGER を開く -> **esp32** を検索 -> バージョン3.3.5以上をインストール
+- **ステップ 2.** Arduino アプリケーションを起動します。
+- **ステップ 3.**  BOARDS MANAGER を開く -> **esp32** を検索 -> バージョン 3.3.5 以上をインストール
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
