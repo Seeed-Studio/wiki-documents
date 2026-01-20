@@ -107,15 +107,15 @@ last_update:
 
 ### 特徴
 
-- **強力なCPU:** ESP32-C5、最大240 MHzで動作する32ビットRISC-Vシングルコアプロセッサ
+- **強力なCPU:** ESP32-C5、最大240MHzで動作する32ビットRISC-Vシングルコアプロセッサ
 - **完全なWi-Fiサブシステム:** IEEE 802.11 a/b/g/n/ac/ax準拠のデュアルバンドWi-Fi 6サブシステム（2.4 GHzおよび5 GHz）、Station、SoftAP、同時SoftAP+Station動作、およびプロミスキャス（モニタ）モードをサポート。
 - **Bluetooth LEサブシステム:** Bluetooth 5およびBluetoothメッシュの機能をサポート
-- **優れたRF性能:** 外部RFアンテナが含まれています。
-- **バッテリー充電チップ:** リチウムバッテリーの充電および放電管理をサポート。
+- **優れたRF性能:** 外部RFアンテナが付属。
+- **バッテリー充電チップ:** リチウムバッテリーの充放電管理をサポート。
 - **豊富なオンチップリソース:** 384 KBオンチップSRAM、320 KB ROM
 - **超小型サイズ:** 親指ほどの小ささ（21x17.8mm）XIAOシリーズクラシックフォームファクタで、ウェアラブルデバイスや小型プロジェクトに最適
 - **信頼性の高いセキュリティ機能**: AES-128/256、SHAファミリーハッシュ、HMAC、専用デジタル署名ペリフェラル、およびSecure Boot（V2）をサポートする暗号化ハードウェアアクセラレータ。
-- **豊富なインターフェース**: 1×I2C、1×SPI、2×UART、最大11×GPIO（PWM対応）、5×ADCチャネル、およびJTAG（裏面のパッド）ボンディングパッドインターフェース。
+- **豊富なインターフェース**: 1×I2C、1×SPI、2×UART、最大11×GPIO（PWM対応）、5×ADCチャンネル、およびJTAG（裏面のパッド）ボンディングパッドインターフェース。
 - 片面実装部品、表面実装設計
 
 ## ハードウェア概要
@@ -157,7 +157,7 @@ last_update:
 | MTCK                   |            | GPIO4     |                          | JTAG、ADC                    |
 | MTMS                   |            | GPIO2     |                          | JTAG、ADC                    |
 | ADC_BAT                |            | GPIO6    |                          | BAT電圧値を読み取り   |
-| ADC_CRL                |            | GPIO26    |                          | 電力節約のため測定回路を制御（有効/無効）します。   |
+| ADC_CRL                |            | GPIO26    |                          | 電力節約のため測定回路を制御（有効/無効）。   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
 | Boot                   |            | GPIO28    |                          | Bootモードに入る              |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | UFLアンテナ                  |
@@ -195,7 +195,7 @@ XIAO ESP32-C5をより早く使い始められるように、以下のハード�
 </div>
 
 :::tip
-一部のUSBケーブルは電力供給のみでデータ転送ができません。USBケーブルをお持ちでない場合、またはお持ちのUSBケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)をご確認ください。
+一部のUSBケーブルは電力供給のみで、データ転送ができません。USBケーブルをお持ちでない場合、またはお持ちのUSBケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)をご確認ください。
 :::
 
 ### ソフトウェア
@@ -248,7 +248,7 @@ void loop() {
 }
 ```
 
-**ステップ 3.** クリックしてアップロード
+**ステップ 3.** クリックしてアップロードします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -322,7 +322,7 @@ XIAO がディープスリープに入る前にシリアルモニターを開く
 現在、XIAO ESP32-C5 は GPIO ウェイクアップのみをサポートしており、ウェイクアップをサポートするピンは D0～D1 のみです。このプログラムは他のピンでは動作しない可能性があります。
 :::
 
-## バッテリー使用
+## バッテリーの使用
 
 XIAO ESP32-C5 は 3.7V リチウムバッテリーを電源供給入力として使用することができます。配線方法については、以下の図を参照してください。
 
@@ -332,7 +332,7 @@ XIAO ESP32-C5 は 3.7V リチウムバッテリーを電源供給入力として
 はんだ付けの際は、正極と負極を短絡させてバッテリーと機器を焼損させないよう注意してください。
 :::
 
-**バッテリー使用に関する注意事項：**
+**バッテリーの使用に関する注意事項：**
 
 1. 仕様に適合する認定されたバッテリーを使用してください。
 2. XIAO はバッテリーを使用しながらデータケーブル経由でコンピューターデバイスに接続できます。XIAO には回路保護チップが内蔵されているため安全です。
@@ -381,24 +381,13 @@ void loop() {
 
 ## リソース
 
-- **[PDF]** [ESP32-C5 データシート](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
-
+- **[PDF]** [ESP32-C5 データシート](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
 - **[PCB 設計ファイル]** [XIAO ESP32-C5 KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
 - **[回路図]** [XIAO ESP32-C5 回路図](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD ライブラリ](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
-
-- **[PDF]** [Seeed Studio XIAO ESP32-C5 回路図](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
-
-- **[XLSX]** [Seeed Studio XIAO ESP32-C5 ピン配置シート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
-
-- **[Kicad]** [Seeed Studio XIAO ESP32-C5 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
-- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step ファイル](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
-
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

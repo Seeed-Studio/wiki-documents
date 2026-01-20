@@ -159,7 +159,7 @@ last_update:
 | ADC_BAT                |            | GPIO6    |                          | 读取电池电压值              |
 | ADC_CRL                |            | GPIO26    |                          | 控制（启用/禁用）测量电路以节省电源。   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
-| Boot                   |            | GPIO28    |                          | 进入启动模式                |
+| Boot                   |            | GPIO28    |                          | 进入 Boot 模式                |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | UFL 天线                     |
 | CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_Red                  |
 | USER_LED               |            | GPIO27    |                          | User Light_Yellow            |
@@ -172,7 +172,7 @@ last_update:
 您需要准备以下物品：
 
 - 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
-- 1 x 计算机
+- 1 x 电脑
 - 1 x USB Type-C 数据线
 
 <div class="table-center">
@@ -381,20 +381,9 @@ void loop() {
 
 ## 资源
 
-- **[PDF]** [ESP32-C5 数据手册](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
-
+- **[PDF]** [ESP32-C5 数据手册](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
 - **[PCB 设计文件]** [XIAO ESP32-C5 KiCad 项目](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
 - **[原理图]** [XIAO ESP32-C5 原理图](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
-
-- **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
-
-- **[PDF]** [Seeed Studio XIAO ESP32-C5 原理图](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
-
-- **[XLSX]** [Seeed Studio XIAO ESP32-C5 引脚图表](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
-
-- **[Kicad]** [Seeed Studio XIAO ESP32-C5 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
-- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step 文件](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
 
 ## 技术支持与产品讨论
 

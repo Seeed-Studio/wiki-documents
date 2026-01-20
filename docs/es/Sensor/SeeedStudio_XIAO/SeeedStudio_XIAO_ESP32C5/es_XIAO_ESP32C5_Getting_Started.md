@@ -222,7 +222,7 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
 
 Tomemos un programa de iluminación como ejemplo a continuación
 
-**Paso 1.** Selecciona **XIAO_ESP32C5** y PUERTO. Si no conoces el PUERTO, puedes volver a insertar y quitar el XIAO_ESP32C5 para verificarlo.
+**Paso 1.** Selecciona **XIAO_ESP32C5** y PUERTO. Si no conoces el PUERTO, puedes reinsertar y quitar el XIAO_ESP32C5 para verificar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
@@ -322,7 +322,7 @@ Si eres lo suficientemente rápido para activar el monitor serie antes de que el
 Actualmente el XIAO ESP32-C5 solo admite despertar por GPIO, y los únicos pines que admiten despertar son D0~D1. Este programa puede no funcionar en otros pines.
 :::
 
-## Uso de batería
+## Uso de Batería
 
 El XIAO ESP32-C5 es capaz de usar una batería de litio de 3.7V como entrada de alimentación. Puedes consultar el siguiente diagrama para el método de cableado.
 
@@ -381,22 +381,11 @@ Según la hoja de datos, el rango de medición efectivo del ESP32-C5 cubre 0~330
 
 ## Recursos
 
-- **[PDF]** [Hoja de datos ESP32-C5](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
-
+- **[PDF]** [Hoja de datos ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
 - **[Archivos de Diseño PCB]** [Proyecto KiCad XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
 - **[Esquemático]** [Esquemático XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
 
-- **[ZIP]** [Librerías KiCAD Seeed Studio XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
-
-- **[PDF]** [Esquemático Seeed Studio XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
-
-- **[XLSX]** [Hoja de pines Seeed Studio XIAO ESP32-C5](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
-
-- **[Kicad]** [Huella Seeed Studio XIAO ESP32-C5](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
-- **[STEP]** [Archivo Step Seeed Studio XIAO ESP32-C5](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
-
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
