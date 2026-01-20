@@ -1970,6 +1970,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_gpio',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_mqtt_stream',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_udp_streaming',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_http',
                 {
                   type: 'category',
                   label: 'Application',
@@ -3464,6 +3465,13 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reComputer-RS485-test'
                   ]
                 },
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Speech Recognition',
+              items: [
+                'Edge/Raspberry_Pi_Devices/Application/Speech_Recognition/deploy_whisper_on_raspberry_pi_ai_box',
               ]
             },
             {
@@ -7222,6 +7230,7 @@ const sidebars = {
                 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_gpio',
                 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_mqtt_stream',
                 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_udp_streaming',
+                'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_http',
                 {
                   type: 'category',
                   label: '应用',
@@ -8716,6 +8725,13 @@ const sidebars = {
                     'zh-CN/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/cn_reComputer-RS485-test'
                   ]
                 },
+              ]
+            },
+            {
+              type: 'category',
+              label: '语音识别',
+              items: [
+                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Speech_Recognition/cn_deploy_whisper_on_raspberry_pi_ai_box',
               ]
             },
             {
@@ -12367,6 +12383,7 @@ const sidebars = {
                 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_gpio',
                 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_mqtt_stream',
                 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_udp_streaming',
+                'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_http',
                 {
                   type: 'category',
                   label: 'Aplicación',
@@ -13861,6 +13878,13 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_reComputer-RS485-test'
                   ]
                 },
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Reconocimiento de Voz',
+              items: [
+                'es/Edge/Raspberry_Pi_Devices/Application/Speech_Recognition/es_deploy_whisper_on_raspberry_pi_ai_box',
               ]
             },
             {
@@ -17513,6 +17537,7 @@ const sidebars = {
                 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_gpio',
                 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_mqtt_stream',
                 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_udp_streaming',
+                'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_http',
                 {
                   type: 'category',
                   label: 'アプリケーション',
@@ -19007,6 +19032,13 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_reComputer-RS485-test'
                   ]
                 },
+              ]
+            },
+            {
+              type: 'category',
+              label: '音声認識',
+              items: [
+                'ja/Edge/Raspberry_Pi_Devices/Application/Speech_Recognition/ja_deploy_whisper_on_raspberry_pi_ai_box',
               ]
             },
             {
