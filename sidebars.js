@@ -8728,6 +8728,13 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: '语音识别',
+              items: [
+                'zh-CN/Edge/Raspberry_Pi_Devices/Application/Speech_Recognition/cn_deploy_whisper_on_raspberry_pi_ai_box',
+              ]
+            },
+            {
+              type: 'category',
               label: '计算机视觉',
               items: [
                 {
@@ -13869,6 +13876,13 @@ const sidebars = {
                     'es/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/es_reComputer-RS485-test'
                   ]
                 },
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Reconocimiento de Voz',
+              items: [
+                'es/Edge/Raspberry_Pi_Devices/Application/Speech_Recognition/es_deploy_whisper_on_raspberry_pi_ai_box',
               ]
             },
             {
@@ -19015,6 +19029,13 @@ const sidebars = {
                     'ja/Edge/Raspberry_Pi_Devices/Application/AIoT/Others/ja_reComputer-RS485-test'
                   ]
                 },
+              ]
+            },
+            {
+              type: 'category',
+              label: '音声認識',
+              items: [
+                'ja/Edge/Raspberry_Pi_Devices/Application/Speech_Recognition/ja_deploy_whisper_on_raspberry_pi_ai_box',
               ]
             },
             {
