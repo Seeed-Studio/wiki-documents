@@ -27,7 +27,7 @@ import Steppers from '@site/src/components/utils/Stepper';
     <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg"/></div>
     <div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now [表情]</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
     </tr>
@@ -179,7 +179,7 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 
 - For 24 Pin ePaper displays → set the jumper to 24 Pin
 
-[表情] Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
+⚠️ Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
 
 :::
 
@@ -192,7 +192,7 @@ When using the XIAO ePaper Display Board, make sure to set the jumper according 
 When using the XIAO ePaper Display Board, make sure to set the jumper according to the ePaper display type:
 - For 50 Pin ePaper displays → set the jumper to 50 Pin
 
-[表情] Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
+⚠️ Using the wrong jumper setting may cause the ePaper to fail to display or show abnormal content. Always double-check the jumper position before powering on.
 
 :::
 
@@ -261,10 +261,10 @@ After that, go to **Tools** -> **Board** -> **XIAO ESP32S3** and **Tools** -> **
 Now you will see the feedback in your epaper screen! Following are the results of Helloworld examples.
 
 :::tip
-[表情] Note: ePaper Cable Orientation
+⚠️ Note: ePaper Cable Orientation
 When connecting the ePaper display to the XIAO ePaper Display Board, make sure the FPC cable is inserted in the correct direction.
 
-[表情] Do not reverse the connector! Inserting the cable upside down may cause the ePaper to fail to display or even damage the screen/board.
+⚠️ Do not reverse the connector! Inserting the cable upside down may cause the ePaper to fail to display or even damage the screen/board.
 The image below shows the correct connection:
 :::
 
