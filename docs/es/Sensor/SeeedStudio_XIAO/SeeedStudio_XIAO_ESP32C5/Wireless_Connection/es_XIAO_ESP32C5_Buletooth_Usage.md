@@ -79,7 +79,7 @@ Sobre la parte BLE del XIAO ESP32-C5, introduciremos su uso en las siguientes tr
 
 - [Algunos conceptos fundamentales](#algunos-conceptos-fundamentales) -- Primero conoceremos algunos conceptos que pueden usarse frecuentemente en BLE para ayudarnos a entender el proceso de ejecución y el pensamiento de los programas BLE.
 - [Escáner BLE](#escáner-BLE) -- Esta sección explicará cómo buscar dispositivos Bluetooth cercanos e imprimirlos en el monitor serie.
-- [Servidor/cliente BLE](#servidor-cliente-BLE) -- Esta sección explicará cómo usar XIAO ESP32-C5 como Servidor y Cliente para enviar y recibir mensajes de datos especificados. También se usará para recibir o enviar mensajes desde el teléfono al XIAO.
+- [Servidor/cliente BLE](#servidor-cliente-BLE) -- Esta sección explicará cómo usar XIAO ESP32-C5 como Servidor y Cliente para enviar y recibir mensajes de datos especificados. También se usará para recibir o enviar mensajes desde el teléfono a XIAO.
 
 ### Algunos conceptos fundamentales
 
@@ -107,7 +107,7 @@ Al usar el protocolo GATT, los dispositivos Bluetooth pueden comunicarse en dife
 
 #### Característica BLE
 
-ATT significa Attribute Protocol. Es el mecanismo subyacente para el intercambio de datos en BLE. ATT se basa en un conjunto de comandos, como Requests, Responses, Notifications e Indications. En la Pila de Protocolos Bluetooth, ATT es la capa responsable de transportar datos, convirtiéndola en el enfoque principal al analizar paquetes de datos Bluetooth.
+ATT significa Attribute Protocol. Es el mecanismo subyacente para el intercambio de datos en BLE. ATT se basa en un conjunto de comandos, como Requests, Responses, Notifications e Indications. En la Pila de Protocolos Bluetooth, ATT es la capa responsable de transportar datos, convirtiéndolo en el enfoque principal al analizar paquetes de datos Bluetooth.
 
 Comando ATT, formalmente conocido como ATT PDU (Protocol Data Unit). Incluye 4 categorías: read, write, notify e indicate. Estos comandos pueden dividirse en dos tipos: Operaciones como **Write Request** e **Indication** requieren un reconocimiento del par, mientras que **Write Command** y **Notification** no.
 
@@ -187,7 +187,6 @@ void loop() {
   Serial.println("Scan completed, clearing results...");
 
   pBLEScan->clearResults();   // Clear cache to release memory
-  delete foundDevices; //Release pointer
   delay(2000);
 }
 ```
