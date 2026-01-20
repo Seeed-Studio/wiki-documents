@@ -9,7 +9,9 @@ function getFrontmatterAliases() {
   try {
     console.log('[aliases] getFrontmatterAliases() called');
 
-    if (process.env.NODE_ENV === 'development') {
+    // 只在本地 dev server（docusaurus start）跳过，build/deploy 必须执行
+    const isDevServer = process.env.BABEL_ENV === 'development';
+    if (isDevServer) {
       return [];
     }
 
@@ -553,7 +555,7 @@ module.exports = (async () => {
             {
               type: 'dropdown',
               label: 'Get Involved',
-              to: '/ranger',
+              to: 'https://www.seeedstudio.com/ranger-program',
               position: 'left',
               className: 'navbar_dorp_items',
               items: [
@@ -563,7 +565,7 @@ module.exports = (async () => {
                 },
                 {
                   label: 'Rangers',
-                  to: '/ranger',
+                  to: 'https://www.seeedstudio.com/ranger-program/',
                 },
                 {
                   label: 'Contributors',
@@ -756,7 +758,7 @@ module.exports = (async () => {
         },
         announcementBar: {
           id: 'support_us',
-          content: '<span id="announcement-text">Collaborate with Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creator</a>, <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger</a>, or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor</a>, there is always a role ideal for you!</span>',
+          content: '<span id="announcement-text">Collaborate with Seeed - <a target="_blank" href="https://www.seeedstudio.com/blog/affiliate-program/">Creator</a>, <a target="_blank" href="https://www.seeedstudio.com/ranger-program/">Ranger</a>, or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor</a>, there is always a role ideal for you!</span>',
           backgroundColor: '#013949',
           textColor: '#FFFFFF',
           isCloseable: false,
