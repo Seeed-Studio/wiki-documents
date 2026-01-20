@@ -1280,6 +1280,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/xiaoesp32c3-flash-storage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO-ESP32C3-for-ESPHome-Support',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/Xiao_C3_Ibeacon',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/Application/XIAO_ESP32C3_ESPresense',
               ],
             },
           ],
@@ -1969,6 +1970,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_gpio',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_mqtt_stream',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_udp_streaming',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_http',
                 {
                   type: 'category',
                   label: 'Application',
@@ -3463,6 +3465,13 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reComputer-RS485-test'
                   ]
                 },
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Speech Recognition',
+              items: [
+                'Edge/Raspberry_Pi_Devices/Application/Speech_Recognition/deploy_whisper_on_raspberry_pi_ai_box',
               ]
             },
             {
