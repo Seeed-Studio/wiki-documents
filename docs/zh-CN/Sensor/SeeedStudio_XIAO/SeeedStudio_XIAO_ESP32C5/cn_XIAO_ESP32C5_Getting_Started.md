@@ -115,7 +115,7 @@ last_update:
 - **丰富的片上资源：** 384 KB 片上 SRAM，320 KB ROM
 - **超小尺寸：** 拇指大小（21x17.8mm）XIAO 系列经典外形，适用于可穿戴设备和小型项目
 - **可靠的安全功能：** 支持 AES-128/256、SHA 系列哈希、HMAC 的加密硬件加速器，专用数字签名外设和安全启动（V2）。
-- **丰富的接口：** 1×I2C、1×SPI、2×UART、多达 11×GPIO（支持 PWM）、5×ADC 通道和 JTAG（背面焊盘）接口。
+- **丰富的接口：** 1×I2C、1×SPI、2×UART、多达 11×GPIO（支持 PWM）、5×ADC 通道和 JTAG（背面焊盘）绑定焊盘接口。
 - 单面元件，表面贴装设计
 
 ## 硬件概述
@@ -156,9 +156,10 @@ last_update:
 | MTDI                   |            | GPIO3     |                          | JTAG, ADC                    |
 | MTCK                   |            | GPIO4     |                          | JTAG, ADC                    |
 | MTMS                   |            | GPIO2     |                          | JTAG, ADC                    |
-| ADC_BAT                |            | GPIO06    |                          | 读取电池电压值              |
+| ADC_BAT                |            | GPIO6    |                          | 读取电池电压值              |
+| ADC_CRL                |            | GPIO26    |                          | 控制（启用/禁用）测量电路以节省电源。   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
-| Boot                   |            | GPIO28    |                          | 进入 Boot 模式                |
+| Boot                   |            | GPIO28    |                          | 进入启动模式                |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | UFL 天线                     |
 | CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_Red                  |
 | USER_LED               |            | GPIO27    |                          | User Light_Yellow            |
@@ -171,7 +172,7 @@ last_update:
 您需要准备以下物品：
 
 - 1 x [Seeed Studio XIAO ESP32-C5](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-5884.html)
-- 1 x 电脑
+- 1 x 计算机
 - 1 x USB Type-C 数据线
 
 <div class="table-center">
@@ -194,7 +195,7 @@ last_update:
 </div>
 
 :::tip
-有些 USB 数据线只能供电而不能传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否能传输数据，您可以查看[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
+有些 USB 数据线只能供电而不能传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否可以传输数据，您可以查看[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
 :::
 
 ### 软件
@@ -219,9 +220,9 @@ XIAO ESP32-C5 推荐的编程工具是 Arduino IDE，因此您需要完成 Ardui
 
 ### 上传程序
 
-下面我们以一个点亮程序为例
+下面让我们以一个点亮程序为例
 
-**步骤 1.** 选择**XIAO_ESP32C5**和 PORT。如果您不知道 PORT，可以重新插拔 XIAO_ESP32C5 来检查。
+**步骤 1.** 选择 **XIAO_ESP32C5** 和端口。如果您不知道端口号，可以重新插拔 XIAO_ESP32C5 来检查。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
@@ -309,7 +310,7 @@ void setup(){
 void loop(){}
 ```
 
-如果您能够在 XIAO 进入深度睡眠之前快速打开串口监视器，那么您可以看到如下所示的消息输出。这意味着 XIAO 现在处于**睡眠**状态。然后您也可以通过按下按钮来查看并激活它。您还可以观察 **L LED** 的开关状态来检查设备是否已被唤醒。一旦被唤醒，它将呈现闪烁效果。
+如果您能够在 XIAO 进入深度睡眠之前快速打开串口监视器，那么您可以看到如下所示的消息输出。这意味着 XIAO 现在处于**睡眠状态**。然后您也可以通过按下按钮来查看并激活它。您还可以观察 **L LED** 的开关状态来检查设备是否已被唤醒。一旦被唤醒，它将呈现闪烁效果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -369,18 +370,23 @@ void loop() {
 - **`analogReadMilliVolts(BAT_Voltage_Read)`**
 
   - 此函数用于从 `BAT_VOLT_PIN` 引脚读取当前模拟电压，并返回以毫伏 (mV) 为单位的校准电压值。
-  - 与仅提供原始 ADC 值的传统 `analogRead()` 不同，`analogReadMilliVolts()` 自动应用芯片中嵌入的出厂校准参数。这提高了精度，改善了电压测量的线性度，并消除了手动 ADC 到电压转换的需要。
-  - 在电压采样过程中，通过 `for` 循环执行 **16 次重复采样**，并累积结果。多次采样的目的是抑制瞬态噪声和离散误差，从而提高测量稳定性。最后，将累积值除以采样次数 (16) 以获得更平滑、更可靠的平均电压值。
+  - 与仅提供原始 ADC 值的传统 `analogRead()` 不同，`analogReadMilliVolts()` 自动应用芯片中嵌入的工厂校准参数。这提高了精度，改善了电压测量的线性度，并消除了手动 ADC 到电压转换的需要。
+  - 在电压采样过程中，通过 `for` 循环执行 **16 次重复采样**，并累积结果。多次采样的目的是抑制瞬态噪声和离散误差，从而提高测量稳定性。最后，累积值除以采样次数（16）以获得更平滑、更可靠的平均电压值。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
 :::tip
-根据数据手册，ESP32-C5 的有效测量范围涵盖 0~3300 mV。因此，XIAO ESP32-C5 的内置电池电压采集电路设计了两个 100K 电阻进行分压，能够准确读取数值。
+根据数据手册，ESP32-C5 的有效测量范围覆盖 0~3300 mV。因此，XIAO ESP32-C5 的内置电池电压采集电路设计有两个 100K 电阻进行分压，能够准确读取数值。
 :::
 
 ## 资源
 
 - **[PDF]** [ESP32-C5 数据手册](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
+
+- **[PDF]** [ESP32-C5 数据手册](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
+- **[PCB 设计文件]** [XIAO ESP32-C5 KiCad 项目](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
+- **[原理图]** [XIAO ESP32-C5 原理图](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
+
 
 - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 

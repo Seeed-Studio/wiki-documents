@@ -20,7 +20,22 @@ last_update:
 
 这是一款专为 Seeed Studio XIAO 设计的 7 通道 COB LED 驱动扩展板。该扩展板突破了 GPIO 功率限制，提供 7 个输出通道，专门为超窄 1mm 3V COB LED 灯带量身定制。集成 PMIC 电池管理功能，是构建紧凑、高亮度无线照明系统的理想即插即用解决方案。
 
- **推荐阅读：**[安全注意事项](#add-board)
+ ## 安全注意事项
+
+**操作禁止事项和安全规则**
+ - 充电时不要连接任何外设。在插入 USB-C 线缆之前，请先断开灯带连接。
+ - 调试 USB-C 端口时，电池座必须为空（未安装电池）。
+ - 满载电流 >1A 时，确保在外壳上钻散热孔；否则 PMIC 会过热并关闭。
+ - 切勿用手直接触摸板子背面的 PMIC 区域：静电放电（ESD）可能损坏芯片，满载时表面可能达到烫伤温度。
+**核心安全提醒**
+ - 遵守以下四条规则以确保安全操作：
+ - 连接外设时使用单一电源
+ - 接线/断开连接前先断电
+ - 提供充足的散热孔
+ - 不要触摸板子背面
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/safety.png" style={{width:250, height:'auto'}}/></div>
+
 
 ## 简介
 
@@ -32,7 +47,7 @@ last_update:
 
 - **策略性 7 通道混合输出** 
 
-  通过单块板高效管理整个照明系统。具有 3 个高功率通道（300mA）用于明亮的主照明，4 个可调光通道（80mA）用于精细的呼吸或渐变效果。一块板处理所有需求——保持主灯明亮，效果灯动态。
+  用单块板高效管理整个照明系统。具有 3 个高功率通道（300mA）用于明亮的主照明，4 个可调光通道（80mA）用于精细的呼吸或渐变效果。一块板处理所有需求——保持主灯明亮，效果灯动态。
 
 - **无线项目的电池管理** 
 
@@ -53,7 +68,7 @@ last_update:
       <th>电源输入</th>
       <td>
         5V USB（通过 XIAO）<br/>
-        <small>注意：建议使用 5V/2A+ 壁式适配器进行满载运行。</small><br/>
+        <small>注意：建议使用 5V/2A+ 壁式适配器进行满载操作。</small><br/>
         3.7V 锂电池（通过板载电池端口）
       </td>
     </tr>
@@ -86,7 +101,7 @@ last_update:
     </tr>
     <tr>
       <th>尺寸</th>
-      <td>`30mm*41mm*16mm`（配备 Seeed Studio XIAO）</td>
+      <td>`30mm*41mm*16mm`（配 Seeed Studio XIAO）</td>
     </tr>
   </tbody>
 </table>
@@ -99,15 +114,15 @@ last_update:
 - **(2) D0-高功率端口：** 支持最大 300mA 电流的高功率端口，仅允许开/关开关控制（不支持 PWM 调光），用于连接高功率负载。
 - **(3) VCC-常开端口：** 支持最大 300mA 电流的常供电 VCC 端口，不受电源开关控制，始终输出供电电压，可为需要持续供电的设备供电。
 - **(4) GND：** 电路的公共接地端口，用于连接所有模块的接地线。
-- **(5) I²C Grove 端口：** Grove 标准 I²C 接口（包括 VCC、GND、SDA、SCL 引脚），用于连接支持 I²C 协议的 Grove 模块（如传感器、显示器）。
+- **(5) I²C Grove 端口：** Grove 标准 I²C 接口（包含 VCC、GND、SDA、SCL 引脚），用于连接支持 I²C 协议的 Grove 模块（如传感器、显示器）。
 - **(6) 电源开关：** 电源控制开关；切换到 "ON" 时，为高/低功率端口供电；切换到 "OFF" 时，切断电源（VCC 常开端口不受此开关控制）。
 - **(7) 电源 LED：** 电源状态指示灯，当电源开关切换到 "ON" 时点亮，表示模块已通电。
 - **(8) 电池连接器：** 电池接口，支持连接 3.7V 锂电池为模块供电。
-- **(9) D2-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
+- **(9) D2-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（低电平时负载工作）。
 - **(10) GND：** 低功率区域的接地端口，用于连接低功率负载的接地线。
-- **(11) D3-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
-- **(12) D9-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
-- **(13) D8-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（电平为低时负载工作）。
+- **(11) D3-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（低电平时负载工作）。
+- **(12) D9-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（低电平时负载工作）。
+- **(13) D8-低功率端口：** 支持最大 80mA 电流的低功率端口，支持 PWM 调光，使用低电平有效逻辑（低电平时负载工作）。
 
 #### 支持的 COB LED 指南
 #### 支持的 LED 指南
@@ -162,14 +177,14 @@ last_update:
 
 ## 入门指南
 
-为了充分发挥 COB LED 驱动板的潜力并享受最佳体验，我们强烈建议将其与 Seeed Studio XIAO 开发板和我们匹配的 COB LED 灯带配对使用。
+为了充分发挥 COB LED 驱动板的潜力并享受最佳体验，我们强烈建议将其与 Seeed Studio XIAO 板和我们匹配的 COB LED 灯带配对使用。
 
 :::note
-安全提示：  
-- **充电锂离子电池时**，请断开 LED 灯带和任何其他外设。  
+为了安全：  
+- **为锂离子电池充电时**，请断开 LED 灯带和任何其他外设。  
 - **连接 USB-C 5V 进行编程或调试时**，请断开电池。  
 
-单独使用**电池**或单独使用 **5V 外部电源**是安全的。不建议在充电时连接外围设备。
+单独使用电池**或**单独使用 5V 外部电源是安全的。不建议在充电时连接外设设备。
 :::
 
 ### 使用 Arduino
@@ -192,9 +207,9 @@ last_update:
     </a>
 </div>
 
-**步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE。
+**步骤 2.** 选择您的开发板型号并将其添加到 Arduino IDE 中。
 
-- 如果您想在后续教程中使用 **Seeed Studio XIAO RP2040**，请参考**[此教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)**完成添加。
+- 如果您想在后续教程中使用 **Seeed Studio XIAO RP2040**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/XIAO-RP2040-with-Arduino/#software-setup)** 完成添加。
 
 - 如果您想在后续教程中使用 **Seeed Studio XIAO RP2350**，请参考 **[此教程](https://wiki.seeedstudio.com/cn/xiao_rp2350_arduino/#setting-up-the-software)** 完成添加。
 
@@ -279,7 +294,7 @@ void loop() {
 ```
 :::tip 
 
-注释中的"低功耗端口"意味着低电平有效：
+注释中的"Low-Power Port"意味着低电平有效：
 将引脚拉低以打开灯带，释放（高电平）以关闭灯带。
 
 :::
@@ -478,7 +493,7 @@ void loop() {
 
 ```
 
-这是一个电池供电的项目。这是呼吸灯样式的代码，如果你喜欢，可以在任何你想要发光的地方使用这种样式
+这是一个电池供电的项目。这是呼吸灯样式的代码，如果你喜欢，可以在任何你想要发光的地方使用这种样式。
 上传程序并为 COB LED 驱动板供电，如果一切顺利，你可以看到如下效果：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/PWM.gif"style={{width:500, height:'auto'}}/></div>
@@ -488,8 +503,8 @@ void loop() {
 :::
 :::note
 **严禁热插拔！**
-始终先组装 XIAO 和驱动板，然后再插入 USB 线。
-切勿在 XIAO 仍连接 USB 线时尝试连接。可能会导致 PMIC 损坏。
+始终先组装 XIAO 和驱动板，然后再插入 USB 线缆。
+切勿在 XIAO 仍连接 USB 线缆时尝试配对。可能会导致 PMIC 损坏。
 :::
 
 
@@ -585,7 +600,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
  </tr>
 </table>
 
-**步骤 2.** 按照下图所示连接 Seeed Studio XIAO ESP32-C3、COB LED Driver Board for XIAO 和单端 COB LED 灯带 - 白色：
+**步骤 2.** 按照下图所示连接 Seeed Studio XIAO ESP32-C3、XIAO COB LED 驱动板和单端 COB LED 灯带 - 白色：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/4-100061492-Single-Ended-COB-LED-Strip---White(6500K)-300mm.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -613,7 +628,7 @@ ESPHome 作为 **Home Assistant 插件**提供，可以通过插件商店简单�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Dusk-ro-dawm_LED_lamp_2.2.png" style={{width:400, height:'auto'}}/></div>
 
-**步骤 9.** 将以下代码部分复制到 .ymal 文件的末尾。XIAO ESP32-C3 从 Grove 数字光传感器读取光值，并根据光强度改变 D2 引脚的电流级别，从而控制灯带
+**步骤 9.** 将以下代码部分复制到 .ymal 文件的末尾。XIAO ESP32-C3 从 Grove 数字光传感器读取光值，并根据光强度改变 D2 引脚的电流电平，从而控制灯带
 
 ```yaml
 
@@ -750,7 +765,7 @@ light:
 如果您喜欢，您也可以按照上述步骤制作一个属于您自己的独特夜灯！
 
 :::tip
-虽然板载组件的额定工作温度为 -40°C 至 85°C，但在最大负载下驱动所有 7 个通道（总电流 >1A）会产生大量热量。如果安装在密闭空间中（例如密封的塑料模型内），请确保被动通风以防止触发 PMIC 的热关断保护。
+虽然板载组件的额定工作温度为 -40°C 至 85°C，但在最大负载下驱动所有 7 个通道（总计 >1A）会产生大量热量。如果安装在密闭空间中（例如密封的塑料模型内），请确保被动通风以防止触发 PMIC 的热关断保护。
 :::
 
 ## 特别感谢
@@ -764,34 +779,17 @@ light:
 
 ## 资源
 
-[PDF] **[Seeed Studio COB LED Driver Board 原理图](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/SCH_Sch_V1.2_2025-11-21.pdf)**
+[PDF] **[Seeed Studio COB LED 驱动板原理图](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/SCH_Sch_V1.2_2025-11-21.pdf)**
 
-[ZIP] **[Seeed Studio COB LED Driver Board PCB](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Gerber_PCB_V1.2_2025-11-25.zip)**
+[ZIP] **[Seeed Studio COB LED 驱动板 PCB](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Gerber_PCB_V1.2_2025-11-25.zip)**
 
-[STEP] **[Seeed Studio COB LED Driver Board 3D 模型](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/cob_led_driver_board.STEP)**
+[STEP] **[Seeed Studio COB LED 驱动板 3D 模型](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/cob_led_driver_board.STEP)**
 
-## 安全注意事项{#add-board}
-
-
-
-**操作禁止事项和安全规则**
- - 充电时不要连接任何外设。在插入 USB-C 线缆之前，请先断开灯带。
- - 调试 USB-C 端口时，电池座必须为空（未安装电池）。
- - 对于满载电流 >1A 的情况，确保在外壳上钻散热孔；否则，PMIC 会过热并关闭。
- - 切勿用裸手触摸板背面的 PMIC 区域：静电放电（ESD）可能损坏芯片，且满载时表面可能达到烫伤温度。
-**核心安全提醒**
- - 遵守这四条规则以确保安全操作：
- - 连接外设时使用单一电源
- - 接线/断开连接前请先断电
- - 提供充足的散热孔
- - 请勿触摸电路板背面
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/safety.png" style={{width:250, height:'auto'}}/></div>
 
 ## 常见问题
 
-**Q1. 为什么我的电路板会发热？**
-  - 因为存在热插拔现象。当 XIAO 插入 USB 然后再插回驱动板时，这个过程会导致开发板电流通道短路，甚至烧毁。
+**Q1. 为什么我的板子会发热？**
+  - 因为存在热插拔现象。当 XIAO 插入 USB 然后再插回驱动板时，这个过程会导致开发板的电流通道短路，甚至烧毁。
 
 
 ## 技术支持与产品讨论
