@@ -112,14 +112,14 @@ Si esptool.py no puede detectar automáticamente el puerto serie, entonces puede
 esptool.py --port PORTNAME --baud 460800 write_flash 0x2000 ESP32_BOARD_NAME-DATE-VERSION.bin
 ```
 
-- En Windows, el nombre del puerto es usualmente similar a `COM4`.
-- En Linux, el nombre del puerto es usualmente similar a `/dev/ttyUSB` o `/dev/ttyACM0`.
-- En Mac, el nombre del puerto es usualmente similar a `/dev/cu.usbmodem01`.
+- En Windows, el nombre del puerto suele ser similar a `COM4`.
+- En Linux, el nombre del puerto suele ser similar a `/dev/ttyUSB` o `/dev/ttyACM0`.
+- En Mac, el nombre del puerto suele ser similar a `/dev/cu.usbmodem01`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_7.png" style={{width:800, height:'auto'}}/></div><br/>
 
 :::tip
-Si el flasheo comienza y luego falla a mitad de camino, intenta remover la opción `--baud 460800` para flashear a la velocidad predeterminada más lenta.
+Si el flasheo comienza y luego falla a mitad de camino, intenta eliminar la opción `--baud 460800` para flashear a la velocidad predeterminada más lenta.
 :::
 
 ### Instalar [Thonny IDE](https://thonny.org/)
@@ -138,7 +138,7 @@ Aquí te mostraremos cómo encender el LED L en el XIAO ESP32-C5 usando MicroPyt
 
 #### **Paso 1.** Configuración del Intérprete
 
-- Abre Thonny IDE, luego haz clic en la esquina inferior derecha de la interfaz para las opciones de **Configure interpreter**. Selecciona MicroPython (generic) y Port
+- Abre Thonny IDE, luego haz clic en la esquina inferior derecha de la interfaz para las opciones **Configure interpreter**. Selecciona MicroPython (generic) y Port
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_8.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -154,7 +154,7 @@ Después de una conexión exitosa, la información de la versión del firmware d
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_11.png" style={{width:400, height:'auto'}}/></div><br/>
 
-- Haz clic en **View** -> **Files** en la esquina superior izquierda para marcarlo (aparecerá un **√** junto a él), y una ventana mostrando la ubicación de tus archivos almacenados aparecerá en el lado izquierdo.
+- Haz clic en **View** -> **Files** en la esquina superior izquierda para marcarlo (aparecerá un **√** junto a él), y una ventana que muestra la ubicación de tus archivos almacenados aparecerá en el lado izquierdo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_12.png" style={{width:400, height:'auto'}}/></div><br/>
 
@@ -265,11 +265,11 @@ Antes de ejecutar un nuevo código de ejemplo, necesitas hacer clic en el ícono
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_6.png" style={{width:600, height:'auto'}}/></div><br/>
 
-Esto demuestra que es factible para el **XIAO ESP32-C5** conectarse a una red WiFi de 5GHz.
+Esto demuestra que es factible que el **XIAO ESP32-C5** se conecte a una red WiFi de 5GHz.
 
 ### Ejemplo BLE
 
-Este ejemplo te mostrará la funcionalidad BLE del **XIAO ESP32-C5**, y demostrará cómo descubrirlo y conectarse a él usando la App nRF Connect.
+Este ejemplo te mostrará la funcionalidad BLE del **XIAO ESP32-C5**, y demostrará cómo descubrirlo y conectarse a él usando la aplicación nRF Connect.
 
 - Crea un nuevo archivo llamado `BLE_connect.py` y copia el siguiente código de ejemplo en él.
 
@@ -430,7 +430,7 @@ if __name__ == "__main__":
 
 </details>
 
-- Luego ejecuta el código, abre la app nRF Connect en tu teléfono, y descubrirás el dispositivo llamado **XIAO ESP32-C5-BLE**. Después de una conexión exitosa, el LED L integrado se encenderá, y la información del conteo de transmisión también se imprimirá en ese momento.
+- Luego ejecuta el código, abre la aplicación nRF Connect en tu teléfono, y descubrirás el dispositivo llamado **XIAO ESP32-C5-BLE**. Después de una conexión exitosa, el LED L integrado se encenderá, y la información del conteo de transmisión también se imprimirá en ese momento.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/micropython_16.png" style={{width:800, height:'auto'}}/></div><br/>
 
