@@ -296,8 +296,8 @@ module.exports = (async () => {
                 'https://github.com/Seeed-Studio/wiki-documents/blob/docusaurus-version/',
             };
 
-            // dev 下如果设置了 DOC_LANGS，则只处理部分语言目录
-            if (isDev && rawDocLangs !== 'all') {
+            // dev + build 都允许用 DOC_LANGS 限制扫描范围
+            if (rawDocLangs !== 'all') {
               const wantEn = activeLangs.indexOf('en') !== -1;
               const nonEnWanted = activeLangs.filter(function (l) { return l !== 'en'; });
 

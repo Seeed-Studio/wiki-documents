@@ -187,11 +187,11 @@ function isEnglishOnlyWiki(url: string) {
     const u = new URL(url);
     const hostOk = /(^|\.)wiki\.seeedstudio\.com$/i.test(u.hostname);
     const p = u.pathname.replace(/\/+$/, '/');
-    if (hostOk && (p === '/contributors/' || p === '/ranger/')) return true;
+    if (hostOk && (p === '/contributors/')) return true;
   } catch {
     // 相对地址
     const p = url.replace(/[?#].*$/, '').replace(/\/+$/, '/');
-    if (p === '/contributors/' || p === '/ranger/') return true;
+    if (p === '/contributors/') return true;
   }
   return false;
 }
