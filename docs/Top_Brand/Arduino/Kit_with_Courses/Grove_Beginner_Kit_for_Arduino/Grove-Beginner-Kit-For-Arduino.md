@@ -103,7 +103,7 @@ Shake the modules up and down and it should come out quite easily!
 |**Display Module**||
 |OLED Display|x1|
 |**Grove Cables**|x6|
-|**Micro USB Cable** (previous version) / **USB Cable** (ew version dated October 2025)|x1|
+|**Micro USB Cable** (previous version) / **USB Cable** (new version dated October 2025)|x1|
 
 ## Learning Objectives
 
