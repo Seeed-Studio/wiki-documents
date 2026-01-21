@@ -18,17 +18,11 @@ function getFrontmatterAliases() {
     const argv = process.argv.join(' ');
     const isStartCommand = /\bdocusaurus\b.*\bstart\b/.test(argv) || /\bstart\b/.test(argv);
     if (isStartCommand) {
-      console.log('[aliases] skip scanning in dev server (start)');
       return [];
     }
 
-    console.log('[aliases] getFrontmatterAliases() called');
-    console.log(`[aliases] argv=${argv}`);
-    console.log(`[aliases] NODE_ENV=${process.env.NODE_ENV} BABEL_ENV=${process.env.BABEL_ENV}`);
-
     const docsDir = path.join(__dirname, 'docs');
     const docsExists = fs.existsSync(docsDir);
-    console.log('[aliases] docsDir:', docsDir, 'exists=', docsExists);
 
     if (!docsExists) {
       console.warn('警告: docs 目录不存在，跳过 aliases 处理');
@@ -41,8 +35,6 @@ function getFrontmatterAliases() {
       dot: false,
       nodir: true,
     });
-
-    console.log('[aliases] matched files:', files.length);
 
     if (files.length === 0) {
       console.warn('警告: 没有找到任何文档文件');
@@ -178,7 +170,6 @@ function getFrontmatterAliases() {
       }
     }
 
-    console.log('[aliases] files containing "aliases:" in frontmatter:', aliasFrontmatterFiles);
     console.log(
       `🔗 从 ${processedDocsWithAliases} 个文档中创建 ${redirects.length} 个有效的 aliases 重定向（去重丢弃 ${dedupedCount} 条）`,
     );
@@ -383,9 +374,7 @@ module.exports = (async () => {
       [
         '@docusaurus/plugin-client-redirects',
         (() => {
-          console.log(`[aliases] config loaded, NODE_ENV=${process.env.NODE_ENV}`);
           const redirects = getFrontmatterAliases();
-          console.log(`[aliases] redirects computed: ${redirects.length}`);
           return { redirects };
         })(),
       ],
