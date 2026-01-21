@@ -103,7 +103,7 @@ Shake the modules up and down and it should come out quite easily!
 |**Display Module**||
 |OLED Display|x1|
 |**Grove Cables**|x6|
-|**Micro USB Cable**|x1|
+|**Micro USB Cable** (previous version) / **USB Cable** (ew version dated October 2025)|x1|
 
 ## Learning Objectives
 
@@ -2048,7 +2048,7 @@ Looking closely at the Grove Beginner Kit For Arduino you will see that there ar
 
     - [**Grove Beginner Kit for Arduino Schematic Design Files V1.0 Preview Version**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-for-Arduino-SCH-PCB.zip)
 
-    - [**Grove Beginner Kit for Arduino Schematic Design Files V1.1 New Version**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove_Beginner_Kit_for_Arduino_v2.3_SCH&PCB_250812.zip)
+    - [**Grove Beginner Kit for Arduino Schematic Design Files V1.1 New Version**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove_Beginner_Kit_for_Arduino_SCH_PCB_v1.1_251111.zip)
 
 3. **Modules Libraries on Github:**
 
@@ -2064,7 +2064,7 @@ Looking closely at the Grove Beginner Kit For Arduino you will see that there ar
 
 6. [**Grove Beginner Kit For Arduino Resources in one [20200401] (7z)**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Resources-in-one(20200401).7z)
 
-7. [**Grove Beginner Kit For Arduino Codecraft Graphical Programming Course web v7**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Codecraft-Graphical-Programming-Course-web-v7.pdf)
+7. [**Grove Beginner Kit For Arduino Codecraft Graphical Programming Course web v8**](https://files.seeedstudio.com/wiki/Grove-Beginner-Kit-For-Arduino/res/Grove-Beginner-Kit-For-Arduino-Codecraft-Graphical-Programming-Course-web-v8.pdf)
 
 ## More Learning
 
