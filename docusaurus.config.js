@@ -7,56 +7,39 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 // 从 frontmatter 中提取 aliases
 function getFrontmatterAliases() {
   try {
+    // 只在本地 dev server（docusaurus start）跳过，build/deploy 必须执行
+    const isDevServer = process.env.BABEL_ENV === 'development';
+    if (isDevServer) {
+      return [];
+    }
+
     const fs = require('fs');
     const path = require('path');
     const glob = require('glob');
 
-    // ====== 1) 只在本地 dev server 跳过（更可靠的判断） ======
-    // Docusaurus 在 start/build/deploy 的环境变量有时会被工具链改写，
-    // 所以不要再单纯依赖 NODE_ENV/BABEL_ENV。
-    // 这里用一个更稳的策略：如果是交互式 dev server（start）才跳过扫描。
-    const argv = process.argv.join(' ');
-    const isStartCommand = /\bdocusaurus\b.*\bstart\b/.test(argv) || /\bstart\b/.test(argv);
-    if (isStartCommand) {
-      console.log('[aliases] skip scanning in dev server (start)');
-      return [];
-    }
-
-    console.log('[aliases] getFrontmatterAliases() called');
-    console.log(`[aliases] argv=${argv}`);
-    console.log(`[aliases] NODE_ENV=${process.env.NODE_ENV} BABEL_ENV=${process.env.BABEL_ENV}`);
-
     const docsDir = path.join(__dirname, 'docs');
-    const docsExists = fs.existsSync(docsDir);
-    console.log('[aliases] docsDir:', docsDir, 'exists=', docsExists);
-
-    if (!docsExists) {
+    if (!fs.existsSync(docsDir)) {
       console.warn('警告: docs 目录不存在，跳过 aliases 处理');
       return [];
     }
 
-    // ====== 2) 扫描所有 md/mdx ======
     const files = glob.sync(path.join(docsDir, '**/*.{md,mdx}'), {
       windowsPathsNoEscape: true,
       dot: false,
-      nodir: true,
     });
-
-    console.log('[aliases] matched files:', files.length);
 
     if (files.length === 0) {
       console.warn('警告: 没有找到任何文档文件');
       return [];
     }
 
-    // ====== 3) 更稳的 frontmatter 匹配（兼容 BOM / CRLF / 前置空行） ======
-    const FM_RE = /^\uFEFF?\s*---\s*\r?\n([\s\S]*?)\r?\n---/;
+    // 兼容 BOM + \r\n
+    const FM_RE = /^\uFEFF?---\s*\r?\n([\s\S]*?)\r?\n---/;
 
     /** @param {string} p */
     const normPath = (p) => {
       if (!p) return '/';
-      let x = p.trim();
-      x = x.startsWith('/') ? x : `/${x}`;
+      let x = p.startsWith('/') ? p : `/${p}`;
       x = x.replace(/\/{2,}/g, '/');
       return x;
     };
@@ -64,14 +47,14 @@ function getFrontmatterAliases() {
     /** @param {string} p */
     const withSlash = (p) => (p.endsWith('/') ? p : `${p}/`);
 
-    // ====== 4) 先收集所有真实页面路径（slug 或文件路径）用于 to 校验 ======
+    // 收集所有真实页面路径（用于校验 to 是否存在）
     const existingPaths = new Set();
 
-    for (const filePath of files) {
+    files.forEach((filePath) => {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
         const fm = content.match(FM_RE);
-        if (!fm) continue;
+        if (!fm) return;
 
         const frontmatterText = fm[1];
         const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
@@ -79,7 +62,7 @@ function getFrontmatterAliases() {
         /** @type {string} */
         let target;
         if (slugMatch) {
-          target = normPath(slugMatch[1]);
+          target = normPath(slugMatch[1].trim());
         } else {
           const relativePath = path.relative(docsDir, filePath);
           const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
@@ -89,37 +72,32 @@ function getFrontmatterAliases() {
         existingPaths.add(target);
         existingPaths.add(withSlash(target));
       } catch {
-        // ignore single file errors
+        // ignore
       }
-    }
+    });
 
-    // ====== 5) 生成 redirects（from 去重 + 只生成带 / 的 from） ======
     /** @type {{from: string; to: string}[]} */
     const redirects = [];
-    const seenFrom = new Set();
+    const seenFrom = new Set(); // from 去重，避免 EEXIST
 
-    let processedDocsWithAliases = 0;
-    let aliasFrontmatterFiles = 0;
+    let processedCount = 0;
     let skippedCount = 0;
     let dedupedCount = 0;
 
-    for (const filePath of files) {
+    files.forEach((filePath) => {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
         const fm = content.match(FM_RE);
-        if (!fm) continue;
+        if (!fm) return;
 
         const frontmatterText = fm[1];
-        if (!frontmatterText.includes('aliases:')) continue;
-
-        aliasFrontmatterFiles++;
+        if (!frontmatterText.includes('aliases:')) return;
 
         const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
 
         /** @type {string[]} */
         let aliases = [];
 
-        // 形式 1：aliases: ["/a", "/b"]
         const bracketMatch = frontmatterText.match(/aliases:\s*\[(.*?)\]/s);
         if (bracketMatch) {
           aliases = bracketMatch[1]
@@ -127,7 +105,6 @@ function getFrontmatterAliases() {
             .map((a) => a.trim().replace(/['"]/g, ''))
             .filter(Boolean);
         } else {
-          // 形式 2：YAML list
           const yamlMatch = frontmatterText.match(/aliases:\s*\r?\n((?:\s*-\s*.+\r?\n?)*)/);
           if (yamlMatch) {
             aliases = yamlMatch[1]
@@ -140,13 +117,13 @@ function getFrontmatterAliases() {
           }
         }
 
-        if (aliases.length === 0) continue;
+        if (aliases.length === 0) return;
 
-        // 目标路径（统一带 /）
+        // 目标路径（统一用带 /，你配置 trailingSlash:true）
         /** @type {string} */
         let targetPath;
         if (slugMatch) {
-          targetPath = normPath(slugMatch[1]);
+          targetPath = normPath(slugMatch[1].trim());
         } else {
           const relativePath = path.relative(docsDir, filePath);
           const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
@@ -154,33 +131,32 @@ function getFrontmatterAliases() {
         }
         const to = withSlash(targetPath);
 
-        // to 校验：存在任意一种就认为有效
+        // to 必须存在（任意一种形式存在都算）
         if (!existingPaths.has(targetPath) && !existingPaths.has(to)) {
           skippedCount++;
-          continue;
+          return;
         }
 
-        // from：只生成带 / 的版本（避免 trailingSlash 下落盘冲突）
-        for (const alias of aliases) {
-          const from = withSlash(normPath(alias));
+        // 只生成 “带 / 的 from”，并去重
+        aliases.forEach((alias) => {
+          const from = withSlash(normPath(alias.trim()));
 
           if (seenFrom.has(from)) {
             dedupedCount++;
-            continue;
+            return;
           }
           seenFrom.add(from);
           redirects.push({ from, to });
-        }
+        });
 
-        processedDocsWithAliases++;
+        processedCount++;
       } catch (/** @type {any} */ error) {
         console.warn(`警告: 处理文件 ${filePath} 时出错: ${error.message}`);
       }
-    }
+    });
 
-    console.log('[aliases] files containing "aliases:" in frontmatter:', aliasFrontmatterFiles);
     console.log(
-      `🔗 从 ${processedDocsWithAliases} 个文档中创建 ${redirects.length} 个有效的 aliases 重定向（去重丢弃 ${dedupedCount} 条）`,
+      `🔗 从 ${processedCount} 个文档中创建 ${redirects.length} 个有效的 aliases 重定向（去重丢弃 ${dedupedCount} 条）`,
     );
     if (skippedCount > 0) {
       console.log(`⚠️  跳过了 ${skippedCount} 个无效的目标路径`);
@@ -382,12 +358,9 @@ module.exports = (async () => {
       // 添加 frontmatter aliases 重定向插件
       [
         '@docusaurus/plugin-client-redirects',
-        (() => {
-          console.log(`[aliases] config loaded, NODE_ENV=${process.env.NODE_ENV}`);
-          const redirects = getFrontmatterAliases();
-          console.log(`[aliases] redirects computed: ${redirects.length}`);
-          return { redirects };
-        })(),
+        {
+          redirects: getFrontmatterAliases(),
+        },
       ],
       
       'docusaurus-plugin-image-zoom',
