@@ -17,7 +17,7 @@ last_update:
 
 # 🤖 ロボティクス
 
-> *"今日の科学は明日の技術である。" - エドワード・テラー*
+> *「今日の科学は明日の技術である。」 - エドワード・テラー*
 
 <div className="robotic-tab-container">
 
@@ -78,10 +78,10 @@ last_update:
           <h3>🤗 SO-Arm</h3>
           <div className="card-container">
               <a href="/ja/lerobot_so100m_new/" className="content-card">
-                <span className="text">SO100/101 Arm</span>
+                <span className="text">SO100/101 アーム</span>
               </a>
               <a href="/ja/simulate_soarm101_by_leisaac/" className="content-card">
-                <span className="text">SO10x Arm with LeIsaac</span>
+                <span className="text">SO10x アーム with LeIsaac</span>
               </a>
               <a href="/ja/control_robotic_arm_via_phospho/" className="content-card">
                 <span className="text">Phospho Lerobot</span>
@@ -102,7 +102,7 @@ last_update:
                 <span className="text">Lekiwi モバイルベース</span>
               </a>
               <a href="/ja/sound_follow_robot/" className="content-card">
-                <span className="text">Lekiwi 音声追従</span>
+                <span className="text">Lekiwi サウンドフォロー</span>
               </a>
           </div>
 
@@ -124,7 +124,7 @@ last_update:
           <h3>🦿脚付きホイール</h3>
           <div className="card-container">
               <a href="/ja/StackForce_Mini_Wheeled_Legged_Robot" className="content-card">
-                <span className="text">ミニ車輪脚ロボット</span>
+                <span className="text">ミニホイール脚ロボット</span>
                 <span className="tag recommended">New</span>
               </a>
           </div>
@@ -173,7 +173,7 @@ last_update:
             <span className="text">Stackforce シリーズ</span>
           </a>
           <a href="/ja/robstride_control/" className="content-card">
-            <span className="text">RobStride 制御</span>
+            <span className="text">RobStride コントロール</span>
             <span className="tag recommended">New</span>
           </a>
       </div>
@@ -231,7 +231,7 @@ last_update:
             <span className="text">ORB-SLAM3 Gemini2</span>
           </a>
           <a href="/ja/csi_camera_on_ros/" className="content-card">
-            <span className="text">CSI Camera on Jetson</span>
+            <span className="text">CSI カメラ on Jetson</span>
           </a>
           <a href="/ja/pycuvslam_recomputer_robotics/" className="content-card">
             <span className="text">PyCuVSLAM</span>
@@ -292,7 +292,7 @@ last_update:
       <strong>PX4</strong>  
       <div className="card-container">
       <a href="/ja/control_px4_with_recomputer_jetson/" className="content-card">
-        <span className="text">PX4 with Jetson</span>
+        <span className="text">PX4 と Jetson</span>
       </a>
 
       <a href="/ja/object_tracking_with_reComputer_jetson_and_pX4/" className="content-card">
@@ -319,7 +319,7 @@ last_update:
       <strong>VLA</strong>  
       <div className="card-container">
       <a href="/ja/control_robotic_arm_via_gr00t" className="content-card">
-        <span className="text">StarAI with NVIDIA GR00T</span>
+        <span className="text">StarAI と NVIDIA GR00T</span>
       </a>
       </div>
 
@@ -341,25 +341,36 @@ last_update:
     <h3 className="course-section-title">💻 コアソフトウェア & シミュレーション</h3>
     <div className="course-grid">
 
-      <!-- ROS 1 -->
-      <a href="" className="course-card">
+      <!-- ROS Basics: 8 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/1.%20ROS%20Basics%208%20lectures/README.md" className="course-card">
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 8h</span></div>
-          <h3>初心者向け ROS 1 基礎と自作モバイルロボット</h3>
-          <p>ノード、トピック、サービス、アクションについて学び、Python を使ってロボットをプログラムする</p>
-          <span className="btn-start">計画中</span>
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 8時間</span></div>
+          <h3>ROS 1 基礎：8講義</h3>
+          <p>ノード、トピック、サービス、基礎学習について学ぶ</p>
+          <span className="btn-start">学習</span>
+        </div>
+      </a>
+
+      <!-- ROS Robot Simulation: 7 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/2.%20ROS%20Robot%20Simulation%207%20Lectures/README.MD" className="course-card">
+        <div className="course-cover c-ros1">ROS 1</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 8時間</span></div>
+          <h3>ROS 1 ロボットシミュレーション：7講義</h3>
+          <p>モデリングから自律ナビゲーションまで。</p>
+          <span className="btn-start">学習</span>
         </div>
       </a>
 
       <!-- ROS 2 -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/2.English/1.%20ROS%20Basics%208%20lectures/README.MD" className="course-card">
         <div className="course-cover c-ros2">ROS 2</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8h</span></div>
-          <h3>ROS 2 Humble エッセンシャル</h3>
-          <p>Python でノード、トピック、サービス、アクションをマスターする。</p>
-          <span className="btn-start">計画中</span>
+          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8時間</span></div>
+          <h3>ROS 2 Humble 基礎：8講義</h3>
+          <p>ノード、トピック、サービス、基礎学習について学ぶ</p>
+          <span className="btn-start">学習</span>
         </div>
       </a>
 
@@ -369,10 +380,10 @@ last_update:
       <a href="" className="course-card">
         <div className="course-cover c-moveit">MoveIt 1/2</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">アーム初級</span> <span>⏱️ 6h</span></div>
+          <div className="course-meta"><span className="level beg">アーム初級</span> <span>⏱️ 6時間</span></div>
           <h3>MoveIt 1/2</h3>
-          <p>カスタムマニピュレータを MoveIt 1/2 にインポートし、順運動学と逆運動学を実装する</p>
-          <span className="btn-start">計画中</span>
+          <p>カスタムマニピュレータを MoveIt 1/2 にインポートし、順運動学と逆運動学を実装</p>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
@@ -380,10 +391,10 @@ last_update:
       <a href="" className="course-card">
         <div className="course-cover c-pinocchio">Pinocchio</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">アーム中級</span> <span>⏱️ 6h</span></div>
+          <div className="course-meta"><span className="level int">アーム中級</span> <span>⏱️ 6時間</span></div>
           <h3>Pinocchio</h3>
-          <p>Pinocchio ロボティクスフレームワークを学び、独自のマニピュレータの運動学と動力学タスクを開発する</p>
-          <span className="btn-start">計画中</span>
+          <p>Pinocchio ロボティクスフレームワークを学び、独自のマニピュレータの運動学と動力学タスクを開発</p>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
@@ -392,10 +403,10 @@ last_update:
       <a href="" className="course-card">
         <div className="course-cover c-isaac">ISAAC</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 12h</span></div>
+          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 12時間</span></div>
           <h3>NVIDIA Isaac Sim & Lab</h3>
           <p>Sim2Real ワークフロー、USD パイプライン、環境作成。</p>
-          <span className="btn-start">計画中</span>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
@@ -403,10 +414,10 @@ last_update:
       <a href="" className="course-card">
         <div className="course-cover c-mujoco">MuJoCo</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 10h</span></div>
+          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 10時間</span></div>
           <h3>MuJoCo 物理エンジン</h3>
-          <p>アジャイルロボット制御のための動力学モデリングとシミュレーション。</p>
-          <span className="btn-start">計画中</span>
+          <p>アジャイルロボット制御のためのモデル動力学とシミュレーション。</p>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
@@ -414,10 +425,10 @@ last_update:
       <a href="" className="course-card">
         <div className="course-cover c-rl">RL</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">高難度</span> <span>⏱️ 20h</span></div>
+          <div className="course-meta"><span className="level adv">高難度</span> <span>⏱️ 20時間</span></div>
           <h3>強化学習</h3>
           <p>PPO、DRL トレーニングパイプライン、Jetson への展開。</p>
-          <span className="btn-start">計画中</span>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
@@ -429,24 +440,24 @@ last_update:
 
       <!-- Humanoid -->
       <a href="" className="course-card">
-        <div className="course-cover c-human">Humanoid</div>
+        <div className="course-cover c-human">ヒューマノイド</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 5h</span></div>
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 5時間</span></div>
           <h3>小型サーボヒューマノイドロボットコース</h3>
           <p>小型ヒューマノイドロボットのハードウェア駆動、モーション & ダンス振付、二次開発。</p>
-          <span className="btn-start">計画中</span>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
 
       <!-- Lekiwi -->
       <a href="" className="course-card">
-        <div className="course-cover c-lekiwi">モバイルロボット</div>
+        <div className="course-cover c-lekiwi">移動ロボット</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 6h</span></div>
-          <h3>モバイルロボティクス（Lekiwi）</h3>
-          <p>SLAM、Navigation 2、自律巡回。</p>
-          <span className="btn-start">計画中</span>
+          <div className="course-meta"><span className="level beg">初級</span> <span>⏱️ 6時間</span></div>
+          <h3>移動ロボティクス（Lekiwi）</h3>
+          <p>SLAM、Navigation 2、自律パトロール。</p>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
@@ -454,10 +465,10 @@ last_update:
       <a href="" className="course-card">
         <div className="course-cover c-arm">ロボットアーム</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 15h</span></div>
+          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 15時間</span></div>
           <h3>StarAI アームシステムコース</h3>
           <p>StarAI 6+1 DOF マニピュレータ：運動学、動力学、模倣学習 & 高度な VLA ベース強化学習</p>
-          <span className="btn-start">計画中</span>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
@@ -465,21 +476,21 @@ last_update:
       <a href="" className="course-card">
         <div className="course-cover c-legged">車輪脚ロボット</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8h</span></div>
+          <div className="course-meta"><span className="level int">中級</span> <span>⏱️ 8時間</span></div>
           <h3>Stackforce 車輪脚ロボットコース</h3>
           <p>ハイブリッドロボットのバランス制御と LQR 動作計画。</p>
-          <span className="btn-start">計画中</span>
+          <span className="btn-plan">計画中</span>
         </div>
       </a>
 
       <!-- ReachyMini -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ReachyMini_Tutorial/2.English/README.md" className="course-card">
         <div className="course-cover c-reachy">デスクトップロボット</div>
         <div className="course-info">
-          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 8h</span></div>
-          <h3>ReachyMini コース</h3>
-          <p>ReachyMini の基本操作、インターフェースチュートリアル、二次開発の体系的コース</p>
-          <span className="btn-start">計画中</span>
+          <div className="course-meta"><span className="level adv">上級</span> <span>⏱️ 8時間</span></div>
+          <h3>ReachyMini チュートリアル 13講義</h3>
+          <p>ReachyMini の基本操作、インターフェースチュートリアル、二次開発に関する体系的コース</p>
+          <span className="btn-start">学習</span>
         </div>
       </a>
 
@@ -528,7 +539,7 @@ last_update:
 @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
 /* =========================================
-   2. Hardware Styles (Original)
+   2. ハードウェアスタイル（オリジナル）
    ========================================= */
 .quick-nav-container {
   margin: 2rem 0; padding: 1rem;
@@ -584,7 +595,7 @@ last_update:
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.2); } 70% { box-shadow: 0 0 0 4px rgba(255, 107, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); } }
 
 /* =========================================
-   3. Learning Styles
+   3. 学習スタイル
    ========================================= */
 .learning-intro { text-align: center; margin-bottom: 2rem; }
 .learning-intro h2 { margin-bottom: 0.5rem; background: -webkit-linear-gradient(45deg, #7b61ff, #4a90e2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -601,10 +612,10 @@ last_update:
 }
 .course-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
 
-/* Covers for different topics */
+/* 異なるトピックのカバー */
 .course-cover { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; color: white; letter-spacing: 1px; }
 
-/* AI & Software Colors */
+/* AI & ソフトウェアの色 */
 .c-ros2 { background: linear-gradient(135deg, #10b981, #059669); }
 .c-ros1 { background: linear-gradient(135deg, #4b5563, #374151); }
 .c-pinocchio { background: linear-gradient(135deg, #3b82f6, #fa000c); }
@@ -613,7 +624,7 @@ last_update:
 .c-rl { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
 .c-mujoco { background: linear-gradient(135deg, #f97316, #ea580c); }
 
-/* Robot Platform Colors */
+/* ロボットプラットフォームの色 */
 .c-arm { background: linear-gradient(135deg, #3b82f6, #2563eb); }
 .c-legged { background: linear-gradient(135deg, #eab308, #ca8a04); }
 .c-human { background: linear-gradient(135deg, #ec4899, #db2777); }
@@ -630,9 +641,31 @@ last_update:
 .course-info p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; }
 
 .btn-start {
-  display: block; text-align: center; padding: 8px 0; background: #f0f7ff; color: #4a90e2; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
+  display: block; text-align: center; padding: 8px 0; background:  #ecfdf5; color: #059669; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
 }
-.course-card:hover .btn-start { background: #4a90e2; color: white; }
+.course-card:hover .btn-start { background: #10b981; color: white; }
+
+.btn-plan {
+  display: block; 
+  text-align: center; 
+  padding: 8px 0; 
+  font-weight: 600; 
+  font-size: 0.9rem; 
+  border-radius: 8px; 
+  transition: all 0.2s;
+
+  /* 差別化デザイン */
+  background: #fff7ed; /* 極薄のオレンジ背景 */
+  color: #ea580c;      /* 濃いオレンジテキスト */
+  cursor: default;
+}
+
+/* ホバー効果：暖色調を保持し、Startボタンのような色反転はせず、視線を奪わない */
+.course-card:hover .btn-plan {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
 
 /* =========================================
    4. ダークモード対応
@@ -643,7 +676,7 @@ html[data-theme='dark'] .tab-item { color: #aaa; }
 html[data-theme='dark'] #tab-hardware:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-hardware"] { color: #60a5fa; }
 html[data-theme='dark'] #tab-learning:checked ~ .tab-nav-wrapper .tab-nav label[htmlFor="tab-learning"] { color: #a78bfa; }
 
-/* Hardware Dark Mode */
+/* ハードウェアダークモード */
 html[data-theme='dark'] .quick-nav-container { background: linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); border: none; }
 html[data-theme='dark'] .nav-item { color: #e5e7eb; background: rgb(47, 50, 57); box-shadow: 0 2px 4px rgba(0,0,0,0.4); }
 html[data-theme='dark'] .category-card { background: #1b1b1d; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border-color: #303033; }
@@ -653,12 +686,14 @@ html[data-theme='dark'] .content-card::after { background: #60a5fa; }
 html[data-theme='dark'] .recommended { background: rgba(255, 107, 107, 0.15); color: #ff8e8e; border-color: rgba(255, 142, 142, 0.3); }
 html[data-theme='dark'] h2, html[data-theme='dark'] h3 { color: #f9fafb; }
 
-/* Learning Dark Mode */
+/* 学習ダークモード */
 html[data-theme='dark'] .course-card { background: #1b1b1d; border-color: #303033; }
 html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
 html[data-theme='dark'] .course-info p { color: #9ca3af; }
 html[data-theme='dark'] .btn-start { background: #2f2f32; color: #60a5fa; }
 html[data-theme='dark'] .course-card:hover .btn-start { background: #60a5fa; color: white; }
+html[data-theme='dark'] .btn-plan { background: #2f2f32; color: #ea580c; }
+html[data-theme='dark'] .course-card:hover .btn-plan { background: #ea580c; color: white; }
 html[data-theme='dark'] .learning-section-title { color: #ccc; border-bottom-color: #444; }
 
 @media (max-width: 768px) {

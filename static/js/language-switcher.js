@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-14 09:36:20 (北京时间)
-// 多语言页面: 2113 个
+// 生成时间: 2026-01-20 11:27:57 (北京时间)
+// 多语言页面: 2119 个
 
 (function() {
   'use strict';
@@ -642,6 +642,12 @@
     "ja"
   ],
   "/DeciAI-Getting-Started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_robotics_distributed_llama_cpp_rpc_jetson": [
     "cn",
     "en",
     "es",
@@ -1967,6 +1973,12 @@
     "es",
     "ja"
   ],
+  "/recomputer_rs485_loopback_test": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/recomputer_r1000_flow_fuse": [
     "cn",
     "en",
@@ -2250,6 +2262,12 @@
     "ja"
   ],
   "/distributed_inference_of_deepseek_model_on_raspberrypi": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/deploy_whisper_on_raspberry_pi_ai_box": [
     "cn",
     "en",
     "es",
@@ -8301,6 +8319,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_xiao_http_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
     "cn",
     "en",
@@ -8439,6 +8463,12 @@
     "es",
     "ja"
   ],
+  "/xiao-esp32c3-espresense": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c3_microblocks": [
     "cn",
     "en",
@@ -8506,6 +8536,12 @@
     "ja"
   ],
   "/xiao_esp32c5_homeassistant": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xaio_esp32c5_wifi_throughput_tester": [
     "cn",
     "en",
     "es",

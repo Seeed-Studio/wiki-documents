@@ -115,7 +115,7 @@ last_update:
 - **Rich on-chip resources:** 384 KB on-chip SRAM, 320 KB of ROM
 - **Ultra small size:** As small as a thumb(21x17.8mm) XIAO series classic form-factor for wearable devices and small projects
 - **Reliable security features**: Cryptographic hardware accelerators supporting AES-128/256, SHA family hashing, HMAC, a dedicated digital signature peripheral, and Secure Boot (V2).
-- **Rich interfaces**: 1×I2C, 1×SPI, 2×UART, up to 11×GPIO (PWM-capable), 5×ADC channels, and a JTAG bonding-pad interface.
+- **Rich interfaces**: 1×I2C, 1×SPI, 2×UART, up to 11×GPIO (PWM-capable), 5×ADC channels, and a JTAG(pads on the reverse side) bonding-pad interface.
 - Single-sided components, surface mounting design
 
 ## Hardware overview
@@ -156,7 +156,8 @@ last_update:
 | MTDI                   |            | GPIO3     |                          | JTAG, ADC                    |
 | MTCK                   |            | GPIO4     |                          | JTAG, ADC                    |
 | MTMS                   |            | GPIO2     |                          | JTAG, ADC                    |
-| ADC_BAT                |            | GPIO06    |                          | Read the BAT voltage value   |
+| ADC_BAT                |            | GPIO6    |                          | Read the BAT voltage value   |
+| ADC_CRL                |            | GPIO26    |                          | Controls (enables/disables) the measurement circuit to save power.   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
 | Boot                   |            | GPIO28    |                          | Enter Boot Mode              |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | UFL antenna                  |
@@ -380,17 +381,22 @@ According to the datasheet, the effective measurement range of the ESP32-C5 cove
 
 ## Resource
 
-- **[PDF]** [ESP32-C5 datasheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
+- **[PDF]** [ESP32-C5 datasheet](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
 
-<!-- - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
+- **[PDF]** [ESP32-C5 datasheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
+- **[PCB Design Files]** [XIAO ESP32-C5 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
+- **[Schematic]** [XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
+
+
+- **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 
 - **[PDF]** [Seeed Studio XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
 
 - **[XLSX]** [Seeed Studio XIAO ESP32-C5 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
 
-- 🔗**[Kicad]** [Seeed Studio XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- **[Kicad]** [Seeed Studio XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1) -->
+- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
 
 ## Tech Support & Product Discussion
 

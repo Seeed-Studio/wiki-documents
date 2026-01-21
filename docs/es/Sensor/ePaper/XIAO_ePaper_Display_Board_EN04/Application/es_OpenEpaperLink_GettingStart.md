@@ -1,16 +1,16 @@
 ---
-description: Configurar y configurar OpenEPaperLink con el Kit DIY OpenEPaperLink BLE
-title: Configurar y configurar el firmware Open Display con el Kit DIY Open Display
+description: Configurar y Configurar OpenDisplay con el Kit OpenDisplay
+title: Configurar y Configurar el firmware OpenDisplay con el Kit OpenDisplay
 keywords:
   - epaper
-  - oepl
+  - opendisplay
   - en04
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
-sidebar_position: 1
+sidebar_position: 1 
 slug: /es/EN04_opendisplay
 sku: E25120101
 last_update:
-  date: 12/10/2025
+  date: 01/13/2026
   author: Tomasz/Allen
 ---
 
@@ -18,7 +18,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
-# Configurar y configurar el firmware Open Display con el Kit DIY Open Display
+# Configurar y Configurar el firmware OpenDisplay con el Kit OpenDisplay
 
 <div class="table-center">
 <table align="center">
@@ -38,7 +38,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-Alimentada por **XIAO nRF52840** Plus, la Placa de Pantalla ePaper XIAO EN04 es la forma más fácil de comenzar con pantallas de papel electrónico habilitadas para Bluetooth usando el firmware OEPL_BLE. A diferencia de los sistemas OpenEPaperLink tradicionales que requieren Puntos de Acceso dedicados con radios 802.15.4, esta placa utiliza Bluetooth Low Energy para control inalámbrico directo desde tu teléfono, computadora o Home Assistant.
+Alimentada por **XIAO nRF52840** Plus, la Placa de Pantalla ePaper XIAO EN04 es la forma más fácil de comenzar con pantallas de papel electrónico habilitadas para Bluetooth usando el firmware OpenDisplay. A diferencia de los sistemas tradicionales que requieren Puntos de Acceso dedicados con radios 802.15.4, esta placa utiliza Bluetooth Low Energy para control inalámbrico directo desde tu teléfono, computadora o Home Assistant.
 
 ### Aplicación
 
@@ -47,32 +47,32 @@ Alimentada por **XIAO nRF52840** Plus, la Placa de Pantalla ePaper XIAO EN04 es 
 - **Alertas de Seguridad**: Mostrar alertas y notificaciones sobre eventos de seguridad, como detección de movimiento o activación de sensores de puertas/ventanas.
 - **Pantalla de Termostato Inteligente**: Mostrar niveles de temperatura y humedad, así como configuraciones de control para tu termostato inteligente.
 
-## ¿Qué es [Open Display](https://openepaperlink.de/)?
+## ¿Qué es [OpenDisplay](https://opendisplay.org)?
 
-OpenEPaperLink (OEPL) es un proyecto de código abierto que proporciona firmware y protocolos para pantallas de papel electrónico. Mientras que el proyecto principal OEPL se enfoca en reutilizar Etiquetas Electrónicas de Estante (ESL) comerciales, el **firmware OEPL_BLE** está diseñado específicamente para construcciones de hardware personalizado usando microcontroladores como el nRF52840 y ESP32.
+OpenDisplay es un proyecto de código abierto que proporciona firmware y protocolos para pantallas de papel electrónico. Está diseñado específicamente para construcciones de hardware personalizadas usando microcontroladores como el nRF52840 y ESP32.
 
-El [firmware OEPL_BLE](https://github.com/OpenEPaperLink/OEPL_BLE) habilita:
+El [firmware OpenDisplay](https://github.com/OpenDisplay-org/Firmware) habilita:
 - **Comunicación Bluetooth Low Energy (BLE)**: Control inalámbrico directo sin requerir puntos de acceso dedicados
 - **Soporte de Hardware Dedicado**: Funciona con placas construidas específicamente como la Placa ePaper XIAO EN04, EE04 y otras
-- **Flasheo y Configuración Basados en Web**: Configuración fácil y carga de imágenes a través de interfaz web en [openepaperlink.org/ble](https://openepaperlink.org/ble/)
+- **Flasheo y Configuración Basados en Web**: Configuración fácil y carga de imágenes a través de interfaz web en [https://opendisplay.org/firmware/install](https://opendisplay.org/firmware/install/index.html)
 - **Soporte de Múltiples Pantallas**: Compatible con varios tamaños de papel electrónico y controladores
 
 
-### ¿Por qué usar el firmware Open Display?
+### ¿Por qué usar el firmware OpenDisplay?
 
-El firmware OEPL_BLE ofrece varias ventajas para proyectos de pantallas de papel electrónico personalizadas:
+El firmware OpenDisplay ofrece varias ventajas para proyectos de pantallas de papel electrónico personalizadas:
 
 - **No Requiere Punto de Acceso**: Utiliza Bluetooth Low Energy para comunicación directa - no se necesita hardware adicional
 - **Herramientas Basadas en Web**: Instalación de firmware fácil, configuración y carga de imágenes a través de herramientas basadas en navegador
 - **Hardware Construido Específicamente**: Diseñado para placas como la EN04, no limitado a etiquetas ESL comerciales
 - **Código Abierto y Gratuito**: Proyecto completamente de código abierto con desarrollo activo en GitHub
 - **Soporte de Múltiples Microcontroladores**: Funciona con nRF52840, ESP32-S3, ESP32-C6 y ESP32-C3
-- **Configuración Simple**: Cargar firmware mediante arrastrar y soltar un solo archivo a tu placa, configurar vía interfaz web, no se requiere programación compleja
+- **Configuración Simple**: Cargar firmware mediante arrastrar y soltar un solo archivo a tu placa, configurar a través de interfaz web, no se requiere programación compleja
 - **Eficiente en Batería**: Optimizado para operación de bajo consumo con pantallas de papel electrónico
-- **Comunidad Activa**: Soporte y desarrollo a través de [OpenEPaperLink Discord](https://discord.gg/fekcBc5RN5)
+- **Comunidad Activa**: Soporte y desarrollo a través de [OpenDisplay Discord](https://discord.gg/WG7tbTzF9Z)
 
 
-## Comenzando con el firmware Open Display
+## Comenzando con el firmware OpenDisplay
 
 ### Ensamblaje de Hardware
 
@@ -98,17 +98,17 @@ Verifica dos veces la polaridad, diferentes baterías pueden tener cableado mixt
 
 
 
-## Instalando el Firmware OEPL_BLE
+## Instalando el Firmware OpenDisplay
 
 ### Método del Instalador Web (Recomendado)
 
-La forma más fácil de instalar el firmware OEPL_BLE es usando el instalador basado en web.
+La forma más fácil de instalar el firmware OpenDisplay es usando el instalador basado en web.
 
 **Paso 1. Abrir el Instalador Web**  
-Visita el [Instalador Web OEPL](https://openepaperlink.org/ble/install/) en un navegador.
+Visita el [Instalador Web OpenDisplay](https://opendisplay.org/firmware/install/index.html) en un navegador.
 
 **Paso 2. Seleccionar Tu Placa**  
-Elige **"Seeed EN04 4.26"** o **"Seeed EN04 7.3"** (o cualquier preajuste que se adapte a tu hardware) de la lista de dispositivos (basado en el tamaño de pantalla en tu kit).
+Elige **"Seeed EN04 4.26"** o **"Seeed EN04 7.3"** (o cualquier preconfiguración que se adapte a tu hardware) de la lista de dispositivos (basado en el tamaño de pantalla en tu kit).
 
 **Paso 3. Descargar el firmware**  
 Haz clic en el botón **"Download Firmware"** y guarda el **"NRF52840.uf2"** en tu disco duro.
@@ -127,17 +127,17 @@ Si la instalación falla, intenta:
 :::
 
 **Paso 6. Configurar la Placa**  
-Abre la [Página de Configuración OEPL](https://openepaperlink.org/ble/config/?config=nrf52840-en04-s6) y conéctate a tu placa.
+Abre la [Página de Configuración OpenDisplay](https://opendisplay.org/firmware/config/?config=nrf52840-en04-s6) y conéctate a tu placa.
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step6.png" style={{width:600, height:'auto'}}/></div>
 
 
 Si seleccionaste **"Seeed EN04 4.26"** o **"Seeed EN04 7.3"**, verás **"Auto Install to Device"**.
-Esta es la forma más fácil de configurar tu Kit DIY.
+Esta es la forma más fácil de configurar tu Kit.
 
 **Paso 7. Conectar a la Placa**
-Presiona el botón **"Connect"** en la página. Deberías ver una ventana mostrando dispositivos OEPL disponibles, selecciona el nuevo dispositivo y presiona **"Pair"**
+Presiona el botón **"Connect"** en la página. Deberías ver una ventana mostrando dispositivos OpenDisplay disponibles, selecciona el nuevo dispositivo y presiona **"Pair"**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/step7.png"  style={{width:500, height:'auto'}}/></div>
 
@@ -159,11 +159,11 @@ Después de la instalación y configuración, la pantalla debería mostrar una p
 
 ### Usando la Herramienta de Pantalla Web
 
-**Paso 1. Abrir Herramienta de Pantalla**  
-Visita [OpenEPaperLink BLE Tester](https://openepaperlink.org/ble/display/) en tu navegador.
+**Paso 1. Herramienta OpenDisplay**  
+Visita [OpenDisplay BLE Tester](https://opendisplay.org/firmware/display/index.html) en tu navegador.
 
 **Paso 2. Conectar al Dispositivo**  
-Haz clic en **"Connect"** y selecciona tu dispositivo OEPL del diálogo de emparejamiento Bluetooth.
+Haz clic en **"Connect"** y selecciona tu dispositivo OpenDisplay del diálogo de emparejamiento Bluetooth.
 
 **Paso 3. Seleccionar Imagen**  
 Haz clic en **"Select Image"** y elige un archivo de imagen de tu computadora.
@@ -178,7 +178,7 @@ Haz clic en **"Select Image"** y elige un archivo de imagen de tu computadora.
 Para mejores resultados:
 - Usa imágenes que coincidan con la resolución de tu pantalla (la pantalla de 7.3" es de 800x480 píxeles)
 - Las imágenes en blanco y negro funcionan mejor en pantallas monocromáticas
-- La herramienta convertirá automáticamente y aplicará dithering a las imágenes a color
+- La herramienta convertirá automáticamente y aplicará dithering a las imágenes en color
 :::
 
 **Paso 4. Subir Imagen**  
@@ -197,17 +197,17 @@ Puedes crear contenido de pantalla personalizado usando:
 
 ### Integración con Home Assistant
 :::tip
-Para integrar con Home Assistant, necesitas una configuración capaz de Bluetooth:
+Para integrar con Home Assistant, necesitas una configuración con capacidad Bluetooth:
 - **Home Assistant Green** (Bluetooth integrado)
 - **Home Assistant OS/Supervised** en hardware con soporte Bluetooth
 - **ESPHome Bluetooth Proxy** (recomendado para mejor alcance)
 
-**Nota**: Los dispositivos Shelly actuando como proxies Bluetooth **no soportan conexiones activas** requeridas por OEPL, por lo que no pueden ser usados para esta integración.
+**Nota**: Los dispositivos Shelly actuando como proxies Bluetooth **no soportan conexiones activas** requeridas por OpenDisplay, por lo que no pueden ser usados para esta integración.
 :::
 
 **Paso 1. Instalar Integración**
 
-Para instrucciones detalladas de instalación, por favor consulta el [Repositorio de Integración de Home Assistant OpenEPaperLink](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help).
+Para instrucciones detalladas de instalación, por favor consulta el [Repositorio de Integración OpenDisplay Home Assistant](https://github.com/OpenEPaperLink/Home_Assistant_Integration?tab=readme-ov-file#getting-help).
 
 La forma más fácil de instalar la integración es vía **HACS** (Home Assistant Community Store). Haz clic en el botón de abajo para abrir el repositorio directamente en HACS:
 
@@ -221,9 +221,9 @@ Después de instalar la integración personalizada vía HACS, debes **reiniciar 
 
 Una vez que Home Assistant se haya reiniciado:
 1. Navega a **Settings > Devices & services**.
-2. Deberías ver tu dispositivo OEPL listado bajo **Discovered**.
+2. Deberías ver tu dispositivo OpenDisplay listado bajo **Discovered**.
 3. Haz clic en **Add**.
-4. Aparecerá un diálogo que te permitirá configurar el **Nombre** y **Área** del dispositivo.
+4. Aparecerá un diálogo permitiéndote establecer el **Name** y **Area** del dispositivo.
 5. Haz clic en **Finish**. Serás redirigido a la página de detalles del dispositivo donde puedes gestionar tu pantalla de papel electrónico.
 
 Verás una nueva imagen mostrada en la pantalla, indicando que el dispositivo está conectado a Home Assistant.
@@ -233,23 +233,23 @@ Verás una nueva imagen mostrada en la pantalla, indicando que el dispositivo es
 
 ## Uso con Home Assistant
 
-Una vez que hayas integrado tu dispositivo OpenEPaperLink con Home Assistant, puedes crear automatizaciones para actualizar dinámicamente el contenido de la pantalla basándote en datos de sensores, tiempo u otros eventos.
+Una vez que hayas integrado tu dispositivo OpenDisplay con Home Assistant, puedes crear automatizaciones para actualizar dinámicamente el contenido de la pantalla basándote en datos de sensores, tiempo u otros eventos.
 
 ### Automatización de Actualizaciones de Pantalla
 
-El servicio principal para actualizar la pantalla es `open_epaper_link.drawcustom`. Este servicio te permite dibujar texto, iconos, imágenes y formas en la pantalla. Para una lista completa de tipos y parámetros soportados, consulta la [documentación de drawcustom](https://github.com/OpenEPaperLink/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md).
+El servicio principal para actualizar la pantalla es `open_epaper_link.drawcustom`. Este servicio te permite dibujar texto, iconos, imágenes y formas en la pantalla. Para una lista completa de tipos y parámetros soportados, consulta la [documentación de drawcustom](https://github.com/OpenDisplay-org/Home_Assistant_Integration/blob/main/docs/drawcustom/supported_types.md).
 
-Puedes crear automatizaciones en Home Assistant usando el **Editor Visual** o escribiendo código **YAML** directamente. A continuación se muestran ejemplos de ambos métodos.
+Puedes crear automatizaciones en Home Assistant usando el **Visual Editor** o escribiendo código **YAML** directamente. A continuación se muestran ejemplos de ambos métodos.
 
 #### Ejemplo 1: Mostrar Datos de Sensores (Editor Visual)
 
 1.  Ve a **Settings > Automations & Scenes** y haz clic en **Create Automation**.
-2.  Añade un disparador de **Time Pattern** (por ejemplo, cada 10 minutos).
+2.  Añade un disparador **Time Pattern** (por ejemplo, cada 10 minutos).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/add_trigger.png" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/fill_trigger.png" style={{width:800, height:'auto'}}/></div>
 
-3.  Añade una **Action** y selecciona **OpenEPaperLink: Draw Custom Image**.
+3.  Añade una **Action** y selecciona **OpenDisplay: Draw Custom Image**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/add_action.png" style={{width:800, height:'auto'}}/></div>
 
@@ -307,7 +307,7 @@ Los IDs de entidad utilizados en el payload anterior (por ejemplo, `sensor.livin
 
 #### Ejemplo 2: Temporizador de Cuenta Regresiva (YAML)
 
-Para usuarios avanzados, puedes editar la automatización en modo YAML. Esta automatización calcula los días restantes hasta una fecha específica (por ejemplo, Navidad) y los muestra.
+Para usuarios avanzados, puedes editar la automatización en modo YAML. Esta automatización calcula los días restantes hasta una fecha específica (por ejemplo, Navidad) y la muestra.
 
 ```yaml
 alias: Update ePaper Display - Countdown
@@ -357,11 +357,11 @@ actions:
 ```
 
 :::caution Importante: ID del Dispositivo
-El `device_id` mostrado en el ejemplo anterior (`2ad706d4aa7c657b6fe99a733cef2253`) es solo un ejemplo. **Debes** reemplazarlo con el ID de Dispositivo real de tu propia pantalla OpenEPaperLink.
+El `device_id` mostrado en el ejemplo anterior (`2ad706d4aa7c657b6fe99a733cef2253`) es solo un ejemplo. **Debes** reemplazarlo con el ID de Dispositivo real de tu propia pantalla OpenDisplay.
 
 Para encontrar tu ID de Dispositivo:
 1. Crea una nueva automatización en Home Assistant usando el Editor Visual.
-2. Selecciona tu dispositivo OpenEPaperLink en la configuración de la acción.
+2. Selecciona tu dispositivo OpenDisplay en la configuración de la acción.
 3. Cambia al **modo YAML** (haz clic en los tres puntos en la esquina superior derecha de la tarjeta de acción).
 4. Copia el `device_id` del código YAML y pégalo en tu automatización.
 :::
@@ -376,7 +376,7 @@ Si estás buscando una forma elegante de montar tu pantalla, echa un vistazo a e
 
 ### Problemas de Instalación de Firmware
 
-**Problema**: El PC no detecta una nueva unidad USB después de conectar la placa EN04
+**Problema**: La PC no detecta una nueva unidad USB después de conectar la placa EN04
 - **Solución**: 
   - Prueba un cable USB diferente (cable de datos, no solo de alimentación)
   - Presiona el botón de reset dos veces después de conectar la placa
@@ -393,13 +393,13 @@ Si estás buscando una forma elegante de montar tu pantalla, echa un vistazo a e
 **Problema**: La pantalla no muestra nada después de la instalación del firmware
 - **Solución**:
   - Verifica que el cable FPC esté insertado correctamente (contactos metálicos hacia arriba)
-  - Comprueba que el cable esté completamente insertado y asegurado
+  - Verifica que el cable esté completamente insertado y asegurado
   - Verifica si la configuración es correcta (puedes conectarte a la placa a través del configurador y leer la configuración)
 
 
 ### Problemas de Conexión Bluetooth
 
-**Problema**: No se puede encontrar el dispositivo OEPL en el emparejamiento Bluetooth
+**Problema**: No se puede encontrar el dispositivo OpenDisplay en el emparejamiento Bluetooth
 - **Solución**:
   - Asegúrate de que el dispositivo esté encendido y el firmware esté instalado
   - Acércate al dispositivo (dentro de 2-3 metros)
@@ -424,19 +424,18 @@ Si estás buscando una forma elegante de montar tu pantalla, echa un vistazo a e
 **Problema**: El dispositivo no carga
 - **Solución**:
   - Verifica la polaridad de la batería (rojo: +, negro: -)
-  - Verifica que el cable de carga proporcione corriente suficiente (mín. 500mA)
+  - Verifica que el cable de carga proporcione suficiente corriente (mín. 500mA)
   - Asegúrate de que el interruptor de alimentación esté en posición ON
   - Prueba con una fuente de alimentación USB diferente
 
 ## Recursos
 
-- **[GitHub]** [Repositorio de Firmware OEPL_BLE](https://github.com/OpenEPaperLink/OEPL_BLE)
-- **[Herramienta Web]** [Instalador Web de Firmware](https://openepaperlink.org/ble/install/)
-- **[Herramienta Web]** [Constructor de Configuración](https://openepaperlink.org/ble/config/)
-- **[Herramienta Web]** [Probador de Pantalla](https://openepaperlink.org/ble/display/)
-- **[Discord]** [Comunidad OpenEPaperLink](https://discord.gg/fekcBc5RN5)
-- **[Sitio Web]** [Sitio Oficial de OpenEPaperLink](https://openepaperlink.de/)
-- **[Documentación]** [Wiki de OpenEPaperLink](https://github.com/OpenEPaperLink/OpenEPaperLink/wiki)
+- **[GitHub]** [Repositorio de Firmware OpenDisplay](https://github.com/OpenDisplay-org/Firmware)
+- **[Herramienta Web]** [Instalador Web de Firmware](https://opendisplay.org/firmware/install/index.html)
+- **[Herramienta Web]** [Constructor de Configuración](https://opendisplay.org/firmware/config/index.html)
+- **[Herramienta Web]** [Probador de Pantalla](https://opendisplay.org/firmware/display/index.html)
+- **[Discord]** [Comunidad OpenDisplay](https://discord.gg/WG7tbTzF9Z)
+- **[Sitio Web]** [Sitio Oficial OpenDisplay](https://opendisplay.org)
 
 
 

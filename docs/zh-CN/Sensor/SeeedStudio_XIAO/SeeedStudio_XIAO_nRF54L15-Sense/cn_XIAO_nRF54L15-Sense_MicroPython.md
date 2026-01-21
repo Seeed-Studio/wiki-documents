@@ -1,6 +1,6 @@
 ---
 description: |
-title: Seeed Studio XIAO nRF54L15 Sense 的 MicroPython
+title: Seeed Studio XIAO nRF54L15 的 MicroPython
 keywords: 
 - nRF54L15
 - xiao
@@ -8,45 +8,61 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.webp
 slug: /cn/xiao_nrf54l15_sense_micropython
 last_update:
-  date: 9/23/2025
-  author: Sherlock
+  date: 1/15/2026
+  author: Brandy
 ---
+
+
+
+### 了解 MicroPython
 
 本教程旨在介绍如何在基于 XIAO nRF54L15 的 Thonny 上使用 MicroPython。
 
-[MicroPython](https://github.com/micropython/micropython/wiki) 是一个具有部分本机代码编译功能的 Python 解释器。它提供了 Python 3.5 功能的子集，专为嵌入式处理器和受限系统实现。它与 CPython 不同，您可以在[这里](https://github.com/micropython/micropython/wiki/Differences)了解更多差异。
+[MicroPython](https://github.com/micropython/micropython/wiki) 是一个具有部分本机代码编译功能的 Python 解释器。它提供了 Python 3.5 功能的子集，专为嵌入式处理器和受限系统实现。它与 CPython 不同，您可以在[这里](https://github.com/micropython/micropython/wiki/Differences)了解更多差异。如果您需要更多有趣的集合，可以查看[这里](
+https://awesome-micropython.com/)
 
 <!-- ## 安装 Python3
 Thonny 自带 Python 解释器，所以不需要额外安装 Python 环境
 Win + R -->
 
-## 使用 Thonny IDE
+## 准备硬件
 
-准备一个 XIAO nRF54L15。
-
-<div class="table-center">
 <table align="center">
-<tr>
-<th>Seeed Studio XIAO nRF54L15 Sense</th>
-</tr>
-<tr>
-<th><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></th>
-</tr>
-<tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-    </a>
-   </div></td>
-</tr>
+ <tr>
+  <th>Seeed Studio XIAO nRF54L15 </th>
+        <th> Seeed Studio XIAO nRF54L15 Sense</th>
+        <th>Seeed Studio XIAO Debug Mate</th>
+ </tr>
+ <tr>
+
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/16.png" style={{width:150, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-xiao-debugger.jpg" style={{width:250, height:'auto'}}/></div></td>
+ </tr>
+    <tr>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+      </a>
+  </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+      </a>
+  </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+      </a>
+  </div></td>
+ </tr>
 </table>
-</div>
 
 ### 安装 Thonny IDE
 
 [Thonny IDE](https://thonny.org/)
 
-选择适当的版本进行安装。在这里，我在 Windows 系统上安装，所以选择了 Windows 版本。
+选择适当的版本进行安装。这里，我在 Windows 系统上安装，所以选择了 Windows 版本。
 
 按照所需 Python 版本的说明进行操作。
 
@@ -56,11 +72,6 @@ Win + R -->
 
 ### 下载仓库
 
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
 
 将其克隆到本地机器，然后记住存储此 XIAO nRF54L15 的 MicroPython 的路径。此路径稍后会用到。
 
@@ -68,7 +79,11 @@ Win + R -->
 git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 ```
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/2.png" style={{width:600, height:'auto'}}/></div>
+
 ### 上传板文件
+
+**步骤 0.** 使用 USB 线将 XIAO NRF54L15 连接到计算机
 
 **步骤 1.** 为 XIAO nRF54L15 刷写 MicroPython 固件
 
@@ -77,10 +92,12 @@ git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 
     **[固件]** [XIAO nRF54L15 MicroPython 固件](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao54_flash.zip)
 <!-- 这里的压缩包填入刷写固件的压缩包 -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/MicroPython_firmware_1.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/10.png" style={{width:600, height:'auto'}}/></div>
+结果如下
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/3.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-此脚本已预配置刷写工具链命令。如果您是第一次使用，可能需要一点时间。
+此脚本已预配置刷写工具链命令。如果您是第一次使用，可能需要一点时间。下载后会自动崩溃。如果未插入 XIAO NRF54L15，刷写过程中会出现 '200' 错误。
 :::
 
 **步骤 2.** 打开 Thonny IDE，然后点击界面右下角配置解释器选项。选择 MicroPython (generic) 和端口
@@ -89,18 +106,22 @@ git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 
 **步骤 3.** 上传板文件
 
-- 打开视图，选择 "File"，文件管理器路径将显示在左侧边栏。
+- 打开 "view"，选择 "File"，文件管理器路径将显示在左侧边栏。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/11.png" style={{width:600, height:'auto'}}/></div>
 
 - 打开克隆或下载文件的路径，并打开 `micropython-seeed-boards\examples`
-- 选择 "boards" 文件夹并将其上传到闪存。然后，您将能够在 MicroPython 设备/闪存上看到上传的文件。
+-右键点击 "boards" 文件夹并将其上传到闪存。然后，您将能够在 MicroPython 设备/闪存上看到上传的文件。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_3.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/12.png" style={{width:600, height:'auto'}}/></div>
+
+正常情况下，位置 '3' 会出现一个图标
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/13.png" style={{width:600, height:'auto'}}/></div>
 
 **步骤 4.** 点亮 LED
 
-复制代码并按 `F5` 运行。
+打开一个新文件（XX.py）或转到开始页面，然后复制代码并按 `F5` 运行。
 
 ```py
 import time
@@ -136,13 +157,13 @@ finally:
 <table align="center">
   <tr>
       <th>Seeed Studio XIAO nRF54L15 Sense</th>
-        <th>Seeed Studio XIAO 扩展板配 Grove OLED</th>
-         <th>Grove - 继电器</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
+         <th>Grove - Relay</th>
   </tr>
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Relay/img/Twig-Relay.jpg" style={{width:500, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2017-07bazaar501790_10402004845.jpg" style={{width:500, height:'auto'}}/></div></td>
   </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -155,8 +176,8 @@ finally:
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
     </div></td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
+        <td><div class="Grove – Chainable RGB LED V2.0" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Chainable-RGB-Led-V2-0.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -165,58 +186,37 @@ finally:
 
 ### 软件
 
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/button.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
 ```py
-import time
-from boards.xiao import XiaoPin
+from machine import Pin
+from boards.xiao_nrf54l15 import xiao_nrf54l15 as xiao
 
-button = "sw"
-relay = 0      #D0
+# Define a function to get the GPIO information corresponding to pin A0
+def get_a0_pin():
+    # Get the information of pin A0 through the pin method of the xiao module
+    # According to the definition in xiao_nrf54l15.py, A0 corresponds to digital pin 0
+    pin_info = xiao.pin(0)  # Get the information of digital pin 0, the return value is a tuple, such as ("gpio1", 4)
+    return pin_info
 
-try:
-    # Initialize button and relay
-    button = XiaoPin(button, XiaoPin.IN)
-    relay = XiaoPin(relay, XiaoPin.OUT)
-    relay.value(0)
-    while True:
-        # Read button state 
-        button_state = button.value()
+# Define a function to set pin A0 to high level
+def set_a0_high():
+    # Get the GPIO information of pin A0
+    gpio_port, gpio_pin = get_a0_pin()  # Get the port and pin number
+    # Create a Pin object, specify the pin as output mode, and set it to high level
+    pin = Pin((gpio_port, gpio_pin), Pin.OUT)  # Initialize the pin as output mode
+    pin.value(1)  # Set the pin to high level
 
-        # Control relay based on button state
-        if button_state == 0:       
-            relay.value(1)         
-        else:                      
-            relay.value(0)
-except KeyboardInterrupt:
-    print("\nProgram interrupted by user")
-except Exception as e:
-    print("\nError occurred: %s" % {e})
-finally:
-    relay.off()
+# Main program
+if __name__ == "__main__":
+    set_a0_high()  # Call the function to set pin A0 to high level
+    print("Pin A0 has been set to high level")  # Output prompt information
 ```
 
 代码解释：
-
-- **导入模块**
-        - `time` 导入时间模块
-        - `Xiao Pin` 从 boards.xiao 模块导入 Seeed Xiao 开发板的引脚控制类，用于操作板上的引脚。
-
-- **定义引脚**
-        - `button = "sw"` 指定按钮连接到开发板的 "sw" 引脚（这里是 BOOT 引脚）
-        - `relay = 0` 指定继电器连接到数字引脚 D0。
-
-- **主逻辑（try 块）**
-        - 当按钮被按下时（状态为 0）→ 继电器被激活（输出为 1）。
-        - 当按钮未被按下时（状态为 1）→ 继电器被停用（输出为 0）。
+这段代码有四个部分，包括导入模块、获取引脚 A0 的 GPIO 信息的函数、将引脚 A0 设置为高电平的函数，以及主函数，其中在主程序中调用了将引脚 A0 设置为高电平的操作。
 
 ### 结果
 <!-- 添加对应 GIF 图 -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light2.gif" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/15.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## 模拟
 
@@ -260,12 +260,6 @@ finally:
 </table>
 
 ### 软件
-
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/adc.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
 
 ```py
 import time
@@ -327,326 +321,17 @@ finally:
 ```
 
 代码说明：
+这段代码可以分为四个部分：
+ - 导入模块：包括用于延时操作的 time 模块，以及 XiaoADC 和 XiaoPWM 模块
+ - 初始化硬件：定义 ADC 和 PWM 引脚，并初始化 ADC 以读取电位器的电压，初始化 PWM 以控制 LED 亮度。
+ - 主程序逻辑：在无限循环中，读取电位器的电压，将其转换为 PWM 占空比，并根据电压调整 LED 亮度。
+ - 异常处理和清理：捕获用户中断（如按下 Ctrl+C）和其他异常，以确保程序安全退出。
 
-- **导入依赖库**
-        - `time`：用于添加延迟和控制程序的执行节奏。
-        - `boards.xiao`：导入 Xiao 开发板的硬件控制类，包括：
-        - `XiaoADC`：用于读取模拟信号（如电位器输出）。
-        - `XiaoPWM`：用于生成 PWM 信号（控制 LED 亮度）。
 
-- **定义硬件引脚**
-        - `adc` 对应开发板的 D0 引脚（用于连接电位器的输出），`pwm` 对应 D1 引脚（用于连接 LED）。
-
-- **初始化硬件（try 块）**
-        - `XiaoADC(adc)`：将 D0 引脚初始化为 ADC 输入模式，用于读取电位器的电压信号。
-        - `XiaoPWM(pwm)`：将 D1 引脚初始化为 PWM 输出模式，用于控制 LED。
-        - `PWM 参数`：频率为 1000Hz 意味着信号周期为 1 毫秒（1e6 纳秒）。占空比（高电平持续时间占周期的比例）决定 LED 亮度（占空比越高，LED 越亮）。
-
-- **主循环（核心逻辑）**
-        - 读取电压：通过 ADC 读取电位器输出的电压（转换单位为伏特）。
-        - 范围限制：确保电压在 0~3.3V 范围内（硬件安全范围）。
-        - 占空比计算：将电压线性转换为 0~1 的占空比（例如，1.65V 对应 50% 占空比）。
-        - 死区处理：忽略微小的电压波动（如旋钮的轻微抖动），防止 LED 频繁变化。
-        - 控制 LED：通过 PWM 占空比调节 LED 亮度（占空比越高，LED 越亮）。
 
 ### 结果
 <!-- 添加对应 GIF 图 -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/adc.gif" style={{width:500, height:'auto'}}/></div>
-
-## UART
-
-### 硬件
-
-<div class="table-center">
- <table align="center">
-  <tr>
-   <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>L76K GNSS Module for Seeed Studio XIAO</th>
-  </tr>
-  <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/GNSS.jpg" style={{width:250, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-    </a>
-   </div></td>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-    </a>
-   </div></td>
-  </tr>
- </table>
-</div>
-
-### 软件
-
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/imu.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-<details>
-
-<summary>代码</summary>
-
-```py
-from boards.xiao import XiaoUART
-import time
-import math
-
-uart = "uart1"
-baudrate = 9600
-tx = 6              # D6
-rx = 7              # D7
-
-# Coordinate structure
-class Coordinates:
-    def __init__(self, Lon=0.0, Lat=0.0):
-        self.Lon = Lon
-        self.Lat = Lat
-
-# GPS data structure
-class GNRMC:
-    def __init__(self):
-        self.Lon = 0.0      # GPS Longitude
-        self.Lat = 0.0      # GPS Latitude
-        self.Lon_area = ''  # E or W
-        self.Lat_area = ''  # N or S
-        self.Time_H = 0     # Time Hour
-        self.Time_M = 0     # Time Minute
-        self.Time_S = 0     # Time Second
-        self.Status = 0     # 1: Successful positioning, 0: Positioning failed
-
-# Convert WGS-84 to GCJ-02
-def transformLat(x, y):
-    ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * math.sqrt(abs(x))
-    ret += (20.0 * math.sin(6.0 * x * pi) + 20.0 * math.sin(2.0 * x * pi)) * 2.0 / 3.0
-    ret += (20.0 * math.sin(y * pi) + 40.0 * math.sin(y / 3.0 * pi)) * 2.0 / 3.0
-    ret += (160.0 * math.sin(y / 12.0 * pi) + 320 * math.sin(y * pi / 30.0)) * 2.0 / 3.0
-    return ret
-
-# Convert WGS-84 to GCJ-02
-def transformLon(x, y):
-    ret = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * math.sqrt(abs(x))
-    ret += (20.0 * math.sin(6.0 * x * pi) + 20.0 * math.sin(2.0 * x * pi)) * 2.0 / 3.0
-    ret += (20.0 * math.sin(x * pi) + 40.0 * math.sin(x / 3.0 * pi)) * 2.0 / 3.0
-    ret += (150.0 * math.sin(x / 12.0 * pi) + 300.0 * math.sin(x / 30.0 * pi)) * 2.0 / 3.0
-    return ret
-
-# Convert GCJ-02 to BD-09
-def bd_encrypt(gg):
-    bd = Coordinates()
-    x = gg.Lon
-    y = gg.Lat
-    z = math.sqrt(x * x + y * y) + 0.00002 * math.sin(y * x_pi)
-    theta = math.atan2(y, x) + 0.000003 * math.cos(x * x_pi)
-    bd.Lon = z * math.cos(theta) + 0.0065
-    bd.Lat = z * math.sin(theta) + 0.006
-    return bd
-
-# Convert WGS-84 to GCJ-02
-def transform(gps):
-    gg = Coordinates()
-    dLat = transformLat(gps.Lon - 105.0, gps.Lat - 35.0)
-    dLon = transformLon(gps.Lon - 105.0, gps.Lat - 35.0)
-    radLat = gps.Lat / 180.0 * pi
-    magic = math.sin(radLat)
-    magic = 1 - ee * magic * magic
-    sqrtMagic = math.sqrt(magic)
-    dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * pi)
-    dLon = (dLon * 180.0) / (a / sqrtMagic * math.cos(radLat) * pi)
-    gg.Lat = gps.Lat + dLat
-    gg.Lon = gps.Lon + dLon
-    return gg
-
-# Convert to Baidu coordinates (BD-09)
-def L76X_Baidu_Coordinates(gps):
-    wgs84_coords = Coordinates(gps.Lon, gps.Lat)
-    gcj02_coords = transform(wgs84_coords)
-    bd09_coords = bd_encrypt(gcj02_coords)
-    return bd09_coords
-
-# Convert to Google coordinates (GCJ-02)
-def L76X_Google_Coordinates(gps):
-    wgs84_coords = Coordinates(gps.Lon, gps.Lat)
-    gcj02_coords = transform(wgs84_coords)
-    return gcj02_coords
-
-# Parse GNRMC NMEA sentence
-def parse_gnrmc(nmea_sentence):
-    gps = GNRMC()
-
-    if not nmea_sentence.startswith(b'$GNRMC') and not nmea_sentence.startswith(b'$PNRMC'):
-        return gps
-
-    try:
-        # Convert to string and split by commas
-        sentence_str = nmea_sentence.decode('ascii', 'ignore')
-        fields = sentence_str.split(',')
-
-        if len(fields) < 12:
-            return gps
-
-        # Parse time field (HHMMSS.sss)
-        if fields[1]:
-            time_str = fields[1]
-            if '.' in time_str:
-                time_str = time_str.split('.')[0]
-            if len(time_str) >= 6:
-                gps.Time_H = int(time_str[0:2]) + 8  # GMT+8
-                gps.Time_M = int(time_str[2:4])
-                gps.Time_S = int(time_str[4:6])
-                if gps.Time_H >= 24:
-                    gps.Time_H -= 24
-
-        # Parse status
-        gps.Status = 1 if fields[2] == 'A' else 0
-
-        if gps.Status == 1:
-            # Parse latitude (DDMM.MMMMM)
-            if fields[3] and fields[4]:
-                lat_str = fields[3]
-                if '.' in lat_str:
-                    degrees = float(lat_str[0:2])
-                    minutes = float(lat_str[2:])
-                    gps.Lat = degrees + minutes / 60.0
-                    gps.Lat_area = fields[4]
-
-            # Parse longitude (DDDMM.MMMMM)
-            if fields[5] and fields[6]:
-                lon_str = fields[5]
-                if '.' in lon_str:
-                    degrees = float(lon_str[0:3])
-                    minutes = float(lon_str[3:])
-                    gps.Lon = degrees + minutes / 60.0
-                    gps.Lon_area = fields[6]
-
-    except Exception as e:
-        print("Parse error:", e)
-
-    return gps
-
-# Print formatted GPS data
-def print_gps_data(gps):
-    print("\n--- GPS Data ---")
-    print("Time (GMT+8): {:02d}:{:02d}:{:02d}".format(gps.Time_H, gps.Time_M, gps.Time_S))
-    if gps.Status == 1:
-        print("Latitude (WGS-84): {:.6f} {}".format(gps.Lat, gps.Lat_area))
-        print("Longitude (WGS-84): {:.6f} {}".format(gps.Lon, gps.Lon_area))
-
-        # Coordinate conversion
-        baidu_coords = L76X_Baidu_Coordinates(gps)
-        google_coords = L76X_Google_Coordinates(gps)
-
-        print("Baidu Latitude: {:.6f}".format(baidu_coords.Lat))
-        print("Baidu Longitude: {:.6f}".format(baidu_coords.Lon))
-        print("Google Latitude: {:.6f}".format(google_coords.Lat))
-        print("Google Longitude: {:.6f}".format(google_coords.Lon))
-        print("GPS positioning successful.")
-    else:
-        print("GPS positioning failed or no valid data.")
-
-try:
-    uart = XiaoUART(uart, baudrate, tx, rx)
-    # Initialize UART
-    uart.init(9600, bits=8, parity=None, stop=1)
-    # Buffer to accumulate complete messages
-    buffer = bytearray()
-    # Constants for coordinate transformation
-    pi = 3.14159265358979324
-    a = 6378245.0
-    ee = 0.00669342162296594323
-    x_pi = 3.14159265358979324 * 3000.0 / 180.0
-    while True:
-        available = uart.any()
-        if available > 0:
-            # Read all available bytes
-            data = uart.read(available)
-            buffer.extend(data)
-            # Check if we have a complete line (ends with newline)
-            if b'\n' in buffer:
-                # Find the newline position
-                newline_pos = buffer.find(b'\n')
-                # Extract the complete message
-                complete_message = buffer[:newline_pos + 1]
-                # Remove the processed part from buffer
-                buffer = buffer[newline_pos + 1:]
-                # Parse GNRMC sentences
-                if complete_message.startswith(b'$GNRMC') or complete_message.startswith(b'$PNRMC'):
-                    gps_data = parse_gnrmc(complete_message)
-                    print_gps_data(gps_data)
-except KeyboardInterrupt:
-    print("\nProgram interrupted by user")
-except Exception as e:
-    print("\nError occurred: %s" % {e})
-finally:
-    uart.deinit()
-```
-
-</details>
-
-- **导入模块**
-        - `XiaoUART` 从 `boards.xiao` 模块导入适用于 Seeed Xiao 开发板的 UART 通信类，用于初始化和控制串行通信。
-        - `time` 导入时间模块以支持与时间相关的功能（虽然在这里没有直接使用，但为了潜在的未来使用或兼容性而导入）。
-        - `math` 导入坐标转换算法所需的数学函数（`sin`、`cos`、`sqrt`、`atan2` 等）。
-
-- **定义 UART 配置**
-        - `uart = "uart1"` 指定要使用的 UART 控制器实例——这里是 `uart1`。
-        - `baudrate = 9600` 将串行通信的波特率设置为 9600 bps。
-        - `tx = 6` 指定 UART 发送引脚（TX）连接到数字引脚 D6。
-        - `rx = 7` 指定 UART 接收引脚（RX）连接到数字引脚 D7。
-
-- **定义数据结构**
-        - `Coordinates` 类：用于存储经度/纬度值作为浮点数的简单容器。
-        - `GNRMC` 类：表示从 `$GNRMC` NMEA 语句解析的 GPS 数据。包含：
-            - 十进制度数的纬度/经度
-            - 半球指示符（`N/S`、`E/W`）
-            - 时间（小时、分钟、秒——调整为 GMT+8）
-            - 状态标志（1 = 有效定位，0 = 无定位）
-
-- **坐标转换函数**
-        - `transformLat(x, y)` 和 `transformLon(x, y)` — 实现 WGS-84 → GCJ-02 转换算法部分的辅助函数（在中国用于地图混淆）。
-        - `bd_encrypt(gg)` — 通过应用额外的偏移和旋转将 GCJ-02 坐标转换为百度的 BD-09 坐标系统。
-        - `transform(gps)` — 使用基于椭球地球模型的复杂三角函数公式将 WGS-84（原始 GPS）坐标转换为 GCJ-02 的主函数。
-        - `L76X_Baidu_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02 → BD-09（百度地图格式）转换的包装器。
-        - `L76X_Google_Coordinates(gps)` — 将原始 GPS（WGS-84）→ GCJ-02（中国的谷歌地图格式）转换的包装器。
-
-- **解析 GNRMC 语句**
-        - `parse_gnrmc(nmea_sentence)` — 将原始 NMEA `$GNRMC` 或 `$PNRMC` 字符串解析为结构化的 `GNRMC` 对象。
-            - 提取时间（从 UTC 转换为 GMT+8）。
-            - 检查状态（`A` = 活动/有效定位，`V` = 无效）。
-            - 从 DDMM.MMMMM 格式解析纬度/经度 → 十进制度数。
-            - 返回填充的 `GNRMC` 对象，如果解析失败则返回默认空对象。
-
-- **显示格式化的 GPS 数据**
-        - `print_gps_data(gps)` — 打印人类可读的 GPS 信息，包括：
-            - 本地时间（GMT+8）
-            - 带半球的原始 WGS-84 坐标
-            - 转换后的 GCJ-02（谷歌兼容）和 BD-09（百度兼容）坐标
-            - 指示定位是否成功的状态消息
-
-- **主逻辑（try 块）**
-        - 使用指定参数初始化 UART 接口。
-        - 定义坐标数学所需的全局常量（`pi`、`a`、`ee`、`x_pi`）——地球椭球参数和缩放因子。
-        - 进入无限循环以通过 UART 持续读取传入的 GPS 数据。
-            - 使用 `buffer` 累积部分消息，直到接收到完整行（以 `\n` 结尾）。
-            - 当完整行到达时：
-                - 检查是否以 `$GNRMC` 或 `$PNRMC` 开头
-                - 如果是，使用 `parse_gnrmc()` 解析
-                - 通过 `print_gps_data()` 显示格式化输出
-        - 处理异常：
-            - `KeyboardInterrupt`：在 Ctrl+C 时优雅退出。
-            - 一般 `Exception`：捕获并打印任何意外错误。
-        - 最后，调用 `uart.deinit()` 在退出前清理 UART 资源。
-
-### 结果
-<!-- 添加对应 GIF 图 -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/UART_GPS_2.png" style={{width:800, height:'auto'}}/></div>
 
 ## I2C
 
@@ -679,15 +364,6 @@ finally:
 
 ### 软件
 
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/oled.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-<details>
-
-<summary>代码</summary>
 
 ```py
 import time
@@ -887,47 +563,24 @@ ssd1306_draw_text("NRF54L15", 30, 2)
 ssd1306_draw_text("HELLO WORLD", 20, 4)
 ```
 
-</details>
-
 代码说明：
 
-- **导入模块**
-        - `time` 导入时间模块以启用与时间相关的功能，如延迟。
-        - `XiaoI2C` 从 `boards.xiao` 模块导入适用于 Seeed Xiao 开发板的 I2C 通信类，用于初始化和控制 I2C 外设。
+此代码通过 I2C 通信初始化和控制 SSD1306 OLED 显示屏，定义显示屏的命令和参数，并实现清屏、初始化和显示文本的功能。
 
-- **定义 I2C 配置**
-        - `sda = 4` 指定 I2C 总线的 SDA（数据）线连接到数字引脚 D4。
-        - `scl = 5` 指定 I2C 总线的 SCL（时钟）线连接到数字引脚 D5。
-        - `i2c = "i2c0"` 指定要使用的 I2C 控制器实例——这里是 `i2c0`。
-        - `frq = 400000` 将 I2C 总线频率设置为 400 kHz（标准快速模式）。
-        - `i2c = XiaoI2C(i2c, sda, scl, frq)` 使用指定参数初始化 I2C 接口。
+- 导入模块并初始化 I2C 通信：
+       导入了 time 模块用于延时操作，导入了 XiaoI2C 模块来初始化 I2C 通信。定义了 I2C 的 SDA 和 SCL 引脚，并设置了 I2C 频率。然后创建了一个 XiaoI2C 对象，用于与 I2C 设备（如 OLED 显示屏）进行通信。
 
-- **定义 SSD1306 常量**
-        - `SSD1306_I2C_ADDR = 0x3C` SSD1306 OLED 显示屏的默认 I2C 地址。
-        - 各种命令常量（`SSD1306_SET_CONTRAST`、`SSD1306_DISPLAY_ON` 等）定义了用于配置和控制显示硬件的控制命令。
-        - `SSD1306_WIDTH = 128`、`SSD1306_HEIGHT = 64`、`SSD1306_PAGES = 8` 定义显示分辨率和页面结构（每页高 8 行）。
 
-- **定义字体数据**
-        - `font_data` 一个将 ASCII 字符映射到其 8x8 像素位图表示的字典。每个字符表示为 8 个字节的列表，其中每个字节对应一行像素（LSB = 最左侧像素）。
-
-- **辅助函数**
-        - `ssd1306_write_command(cmd)` 通过 I2C 使用控制字节 `0x00` 向 SSD1306 发送单个命令字节。
-        - `ssd1306_write_commands(cmds)` 在一次事务中发送多个命令字节。
-        - `ssd1306_write_data(data)` 使用控制字节 `0x40`（数据模式）向 SSD1306 发送显示数据字节。
-        - `ssd1306_clear()` 通过向所有页面和列写入零字节来清除整个显示。
-        - `ssd1306_init()` 使用推荐设置初始化 SSD1306 显示，包括对比度、多路复用比、内存模式和打开显示。
-        - `ssd1306_draw_text(text, x, y)` 从列 `x` 和页面 `y` 开始绘制文本。它将每个字符转换为其 8x8 字体位图，顺时针旋转 90°（以匹配显示方向），并将像素数据写入显示缓冲区。
-
-- **主逻辑（初始化和显示）**
-        - `i2c.scan()` 扫描 I2C 总线以检测连接的设备。
-        - 如果在地址 `0x3C` 处未找到 SSD1306，则抛出异常；否则打印成功消息。
-        - `ssd1306_init()` 初始化显示硬件。
-        - `ssd1306_draw_text("NRF54L15", 30, 2)` 从列 30、页面 2（≈ 第 16 行）开始绘制字符串 "NRF54L15"。
-        - `ssd1306_draw_text("HELLO WORLD", 20, 4)` 从列 20、页面 4（≈ 第 32 行）开始绘制字符串 "HELLO WORLD"。
+- 定义 SSD1306 显示屏的指令和参数：
+       定义了 SSD1306 显示屏的 I2C 地址和一系列控制命令（如设置对比度、显示开/关等）。还定义了显示屏的尺寸参数（宽度、高度和页数）以及一个简单的 8x8 点阵字体库，用于在屏幕上显示字符。
+- 定义辅助函数：
+        定义了一系列辅助函数，用于向 SSD1306 发送命令和数据。
+- 主程序逻辑：
+      首先通过执行 I2C 扫描来检查 SSD1306 显示屏是否连接到 I2C 总线。如果找到显示屏，则调用 ssd1306_init 函数初始化显示屏。然后调用 ssd1306_draw_text 函数在显示屏上显示两行文本 "NRF54L15" 和 "HELLO WORLD"。
 
 ### 结果
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/i2c_result.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/14.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## SPI
 
@@ -937,7 +590,7 @@ ssd1306_draw_text("HELLO WORLD", 20, 4)
  <table align="center">
   <tr>
    <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>适用于 Seeed Studio XIAO 的电子纸驱动板</th>
+   <th>ePaper Driver Board for Seeed Studio XIAO</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -959,16 +612,6 @@ ssd1306_draw_text("HELLO WORLD", 20, 4)
 </div>
 
 ### 软件
-
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/imu.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-<details>
-
-<summary>代码</summary>
 
 ```py
 import time
@@ -1165,50 +808,48 @@ if __name__ == "__main__":
     main()
 ```
 
-</details>
-
 代码说明：
 
-- **模块导入**
+- 模块导入
         - `time`：启用时间相关功能，如延时。
-        - `XiaoPin 和 XiaoSPI`：从 `boards.xiao` 导入；XiaoPin 用于控制 GPIO 引脚，而 XiaoSPI 处理 SPI 通信。
+        - `XiaoPin and XiaoSPI`：从 `boards.xiao` 导入；XiaoPin 用于控制 GPIO 引脚，而 XiaoSPI 处理 SPI 通信。
 
-- **引脚和 SPI 配置**
-        - 定义了特定引脚：复位（RST）、片选（CS）、数据/命令（DC）和忙碌（BUSY）。
-        - 配置了 SPI 相关引脚（SCK、MOSI、MISO）和 SPI 控制器。
+- 引脚和 SPI 配置
+        - 定义了特定引脚：复位 (RST)、片选 (CS)、数据/命令 (DC) 和忙碌 (BUSY)。
+        - 配置了 SPI 相关引脚 (SCK、MOSI、MISO) 和 SPI 控制器。
         - 初始化了所有 GPIO 引脚的工作模式（输入/输出）。
-        - 创建了一个频率设置为 20 MHz 的 SPI 实例。
+        - 创建了一个 SPI 实例，设置频率为 20 MHz。
 
-- **电子纸基本功能**
-        - `reset()`：对显示器执行硬件复位操作。
+- ePaper 基本功能
+        - `reset()`：对显示屏执行硬件复位操作。
         - `send_command(cmd)`：传输单字节命令。
         - `send_data(data)`：发送数据，可以是单字节或多字节。
-        - `wait_until_idle()`：等待显示器进入空闲状态（目前通过简单延时实现）。
-        - `init_display()`：执行显示器的初始化程序。
-        - `clear_screen()`：清除屏幕，将其设置为全白状态。
+        - `wait_until_idle()`：等待显示屏进入空闲状态（目前通过简单延时实现）。
+        - `init_display()`：执行显示屏的初始化程序。
+        - `clear_screen()`：清屏，将其设置为全白状态。
 
-- **显示参数**
-        - `WIDTH, HEIGHT = 800, 480`：指定显示器的分辨率。
+- 显示参数
+        - `WIDTH, HEIGHT = 800, 480`：指定显示屏的分辨率。
         - `BYTES_PER_ROW`：表示每行像素所需的字节数。
-        - `linebuf`：临时存储单行像素数据的行缓冲区。
+        - `linebuf`：行缓冲区，临时存储单行的像素数据。
 
-- **字体系统**
+- 字体系统
         - 定义了一个简单的 5x7 像素字体，存储在 `G` 字典中。
         - `glyph(ch)`：检索给定字符对应的像素数据。
         - `text_size()`：计算文本在指定缩放比例下显示时的尺寸。
-        - `text_pixel()`：确定在特定位置是否应绘制像素（用于文本渲染）。
+        - `text_pixel()`: 确定是否应在特定位置绘制像素（用于文本渲染）。
 
-- **显示更新**
-        - **epaper_update_lines(lines)**：更新显示器的核心函数。
+- 显示更新
+        - **epaper_update_lines(lines)**: 更新显示的核心函数。
         - 首先，发送数据设置全白背景。
         - 然后，逐行计算并传输新的图像数据。
         - 最后，触发显示刷新以显示新内容。
         - 支持多行文本显示，每行可以有不同的位置和缩放比例。
 
-- **main() 函数**
-        - 初始化显示器。
+- main() 函数
+        - 初始化显示。
         - 计算文本的居中位置。
-        - 创建文本行的配置列表。
+        - 为文本行创建配置列表。
         - 调用 `epaper_update_lines()` 更新显示内容。
         - 进入无限睡眠循环。
 

@@ -377,7 +377,7 @@ El reComputer R1000 soporta tres opciones de fuente de alimentación: terminal A
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-El reComputer R1000 se suministra con un voltaje nominal AC de 12~24 V o voltaje DC de 9~36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines. Para conectar a tierra el reComputer R1000, el cable de tierra se puede asegurar al tornillo ubicado en la esquina superior izquierda del terminal de alimentación.
+El reComputer R1000 se suministra con un voltaje nominal AC de 12\~24 V o voltaje DC de 9\~36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines. Para conectar a tierra el reComputer R1000, el cable de tierra se puede asegurar al tornillo ubicado en la esquina superior izquierda del terminal de alimentación.
 
 :::note
 La solución de alimentación utiliza un diodo rectificador de puente para protección contra polaridad inversa y es compatible con entradas tanto AC como DC. Esto asegura que **independientemente de cómo estén conectados los terminales positivo y negativo de la fuente de alimentación**, el circuito no se dañará. Al usar un rectificador de puente, la polaridad del voltaje de salida permanece fija independientemente de la polaridad de entrada DC, proporcionando protección efectiva contra polaridad inversa.

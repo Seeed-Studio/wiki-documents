@@ -341,25 +341,36 @@ last_update:
     <h3 className="course-section-title">💻 Core Software & Simulation</h3>
     <div className="course-grid">
       
-      <!-- ROS 1 -->
-      <a href="" className="course-card">
+      <!-- ROS Basics: 8 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/1.%20ROS%20Basics%208%20lectures/README.md" className="course-card">
         <div className="course-cover c-ros1">ROS 1</div>
         <div className="course-info">
           <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 8h</span></div>
-          <h3>ROS 1 Basics for Beginners and DIY Your Own Mobile Robot</h3>
-          <p>Learn About Nodes, Topics, Services, and Actions, and Program Robots Using Python</p>
-          <span className="btn-start">Planning</span>
+          <h3>ROS 1 Basics: 8 Lectures</h3>
+          <p>Learn About Nodes, Topics, Services, and Basics Learning</p>
+          <span className="btn-start">Learning</span>
+        </div>
+      </a>
+
+      <!-- ROS Robot Simulation: 7 Lectures -->
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS1_Turorial/2.English/2.%20ROS%20Robot%20Simulation%207%20Lectures/README.MD" className="course-card">
+        <div className="course-cover c-ros1">ROS 1</div>
+        <div className="course-info">
+          <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 8h</span></div>
+          <h3>ROS 1 Robot Simulation: 7 Lectures.</h3>
+          <p>	From modeling to autonomous navigation.</p>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
       <!-- ROS 2 -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ROS2_Tutorial/2.English/1.%20ROS%20Basics%208%20lectures/README.MD" className="course-card">
         <div className="course-cover c-ros2">ROS 2</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 8h</span></div>
-          <h3>ROS 2 Humble Essentials</h3>
-          <p>Master Nodes, Topics, Services, and Actions with Python.</p>
-          <span className="btn-start">Planning</span>
+          <h3>ROS 2 Humble Basics: 8 Lectures</h3>
+          <p>Learn About Nodes, Topics, Services, and Basics Learning</p>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
@@ -372,7 +383,7 @@ last_update:
           <div className="course-meta"><span className="level beg">Arm Beginner</span> <span>⏱️ 6h</span></div>
           <h3>MoveIt 1/2</h3>
           <p>Import a Custom Manipulator into MoveIt 1/2 and Implement Forward and Inverse Kinematics</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -383,7 +394,7 @@ last_update:
           <div className="course-meta"><span className="level int">Arm Intermediate</span> <span>⏱️ 6h</span></div>
           <h3>Pinocchio</h3>
           <p>Learn the Pinocchio Robotics Framework and Develop Kinematics and Dynamics Tasks for Your Own Manipulator</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -395,7 +406,7 @@ last_update:
           <div className="course-meta"><span className="level adv">Advanced</span> <span>⏱️ 12h</span></div>
           <h3>NVIDIA Isaac Sim & Lab</h3>
           <p>Sim2Real workflows, USD pipelines, and environment creation.</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -406,7 +417,7 @@ last_update:
           <div className="course-meta"><span className="level adv">Advanced</span> <span>⏱️ 10h</span></div>
           <h3>MuJoCo Physics Engine</h3>
           <p>Model dynamics and simulation for agile robot control.</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -417,7 +428,7 @@ last_update:
           <div className="course-meta"><span className="level adv">Hard</span> <span>⏱️ 20h</span></div>
           <h3>Reinforcement Learning</h3>
           <p>PPO, DRL training pipelines, and deployment to Jetson.</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -434,7 +445,7 @@ last_update:
           <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 5h</span></div>
           <h3>Small Servo Humanoid Robots Course </h3>
           <p>Hardware Driving, Motion & Dance Choreography, and Secondary Development for Small Humanoid Robots.</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -446,7 +457,7 @@ last_update:
           <div className="course-meta"><span className="level beg">Beginner</span> <span>⏱️ 6h</span></div>
           <h3>Mobile Robotics (Lekiwi)</h3>
           <p>SLAM, Navigation 2, and autonomous patrolling.</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -457,7 +468,7 @@ last_update:
           <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 15h</span></div>
           <h3>StarAI Arm System Course</h3>
           <p>StarAI 6+1 DOF Manipulator: Kinematics, Dynamics, Imitation Learning & Advanced VLA-based Reinforcement Learning</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
@@ -468,18 +479,18 @@ last_update:
           <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 8h</span></div>
           <h3>Stackforce Wheeled-Legged Robots Course</h3>
           <p>Balance control and LQR motion planning for hybrid robots.</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-plan">Planning</span>
         </div>
       </a>
 
       <!-- ReachyMini -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_ReachyMini_Tutorial/2.English/README.md" className="course-card">
         <div className="course-cover c-reachy">Desktop Robot</div>
         <div className="course-info">
           <div className="course-meta"><span className="level adv">Advanced</span> <span>⏱️ 8h</span></div>
-          <h3>ReachyMini Course</h3>
+          <h3>ReachyMini Tutorial 13 Lectures</h3>
           <p>Systematic Course on Basic Operation, Interface Tutorials and Secondary Development of ReachyMini</p>
-          <span className="btn-start">Planning</span>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
@@ -630,9 +641,31 @@ last_update:
 .course-info p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 1.5rem; flex-grow: 1; }
 
 .btn-start {
-  display: block; text-align: center; padding: 8px 0; background: #f0f7ff; color: #4a90e2; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
+  display: block; text-align: center; padding: 8px 0; background:  #ecfdf5; color: #059669; font-weight: 600; font-size: 0.9rem; border-radius: 8px; transition: background 0.2s;
 }
-.course-card:hover .btn-start { background: #4a90e2; color: white; }
+.course-card:hover .btn-start { background: #10b981; color: white; }
+
+.btn-plan {
+  display: block; 
+  text-align: center; 
+  padding: 8px 0; 
+  font-weight: 600; 
+  font-size: 0.9rem; 
+  border-radius: 8px; 
+  transition: all 0.2s;
+
+  /* 差异化设计 */
+  background: #fff7ed; /* 极浅的橙色背景 */
+  color: #ea580c;      /* 较深的橙色文字 */
+  cursor: default;
+}
+
+/* Hover 效果：保持暖色调，不像 Start 按钮那样反转颜色，避免抢夺视线 */
+.course-card:hover .btn-plan {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
 
 /* =========================================
    4. Dark Mode 适配
@@ -659,6 +692,8 @@ html[data-theme='dark'] .course-info h3 { color: #f3f4f6; }
 html[data-theme='dark'] .course-info p { color: #9ca3af; }
 html[data-theme='dark'] .btn-start { background: #2f2f32; color: #60a5fa; }
 html[data-theme='dark'] .course-card:hover .btn-start { background: #60a5fa; color: white; }
+html[data-theme='dark'] .btn-plan { background: #2f2f32; color: #ea580c; }
+html[data-theme='dark'] .course-card:hover .btn-plan { background: #ea580c; color: white; }
 html[data-theme='dark'] .learning-section-title { color: #ccc; border-bottom-color: #444; }
 
 @media (max-width: 768px) {

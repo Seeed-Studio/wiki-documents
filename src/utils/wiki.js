@@ -1,6 +1,15 @@
 const docList = [
   [
     {
+      "path": "/xiao_esp32c5_with_freertos",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
+      "title": "XIAO ESP32-C5 With FreeRTOS",
+      "date": "1/13/2026",
+      "title_cn": "XIAO ESP32-C5 与 FreeRTOS",
+      "title_ja": "XIAO ESP32-C5 と FreeRTOS",
+      "title_es": "XIAO ESP32-C5 Con FreeRTOS"
+    },
+    {
       "path": "/deploy_depth_anything_v3_jetson_agx_orin",
       "image": "https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp",
       "title": "Deploy Depth Anything V3 on Jetson AGX Orin",
@@ -8,6 +17,17 @@ const docList = [
       "title_cn": "在 Jetson AGX Orin 上部署 Depth Anything V3",
       "title_ja": "Jetson AGX Orin上でDepth Anything V3をデプロイ",
       "title_es": "Desplegar Depth Anything V3 en Jetson AGX Orin"
+    }
+  ],
+  [
+    {
+      "path": "/ai_robotics_distributed_llama_cpp_rpc_jetson",
+      "image": "https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg",
+      "title": "Distributed llama.cpp on reComputer Jetson (RPC Mode)",
+      "date": "2026-01-09T00:00:00.000Z",
+      "title_cn": "在 reComputer Jetson 上的分布式 llama.cpp（RPC 模式）",
+      "title_ja": "reComputer Jetson での分散 llama.cpp（RPC モード）",
+      "title_es": "llama.cpp Distribuido en reComputer Jetson (Modo RPC)"
     },
     {
       "path": "/t1000e_for_lorawan_introduction",
@@ -94,26 +114,6 @@ const docList = [
       "title_cn": "Semtech LR2021 LoRa Plus™ 评估套件",
       "title_ja": "Semtech LR2021 LoRa Plus™ 評価キット",
       "title_es": "Kit de Evaluación Semtech LR2021 LoRa Plus™"
-    }
-  ],
-  [
-    {
-      "path": "/xiao_esp32c5_pin_multiplexing",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
-      "title": "Pin Multiplexing with Seeed Studio XIAO ESP32-C5",
-      "date": "12/30/2025",
-      "title_cn": "Seeed Studio XIAO ESP32-C5 引脚复用",
-      "title_ja": "Seeed Studio XIAO ESP32-C5でのピン多重化",
-      "title_es": "Multiplexación de Pines con Seeed Studio XIAO ESP32-C5"
-    },
-    {
-      "path": "/deploy_live_vlm_webui_on_jetson",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/gptoss-running-live.webp",
-      "title": "Deploy Live VLM WebUI on reComputer Jetson",
-      "date": "12/26/2025",
-      "title_cn": "在 reComputer Jetson 上部署 Live VLM WebUI",
-      "title_ja": "reComputer Jetson に Live VLM WebUI をデプロイする",
-      "title_es": "Implementar Live VLM WebUI en reComputer Jetson"
     }
   ]
 ];

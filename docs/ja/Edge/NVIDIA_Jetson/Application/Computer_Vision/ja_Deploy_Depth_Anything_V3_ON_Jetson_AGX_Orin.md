@@ -1,5 +1,5 @@
 ---
-description: このwikiは、Jetson AGX Orinデバイス上でDepth Anything V3をデプロイするための包括的なステップバイステップガイドを提供します。環境設定、主要な依存関係（CUDA、ROS2、TensorRT）のインストール、TensorRTエンジンへのモデル変換、USBカメラ統合によるリアルタイム深度推定をカバーしています。このガイドでは、Depth Anything V3が単一のRGB画像から最小限の計算オーバーヘッドで高品質な深度マップを生成する能力を強調し、エッジデバイス上でのロボティクス、自律ナビゲーション、3D知覚アプリケーションに最適であることを示しています。
+description: このwikiは、Jetson AGX Orinデバイス上でDepth Anything V3をデプロイするための包括的なステップバイステップガイドを提供します。環境設定、主要な依存関係（CUDA、ROS2、TensorRT）のインストール、TensorRTエンジンへのモデル変換、USBカメラ統合によるリアルタイム深度推定をカバーしています。このガイドでは、Depth Anything V3が単一のRGB画像から最小限の計算オーバーヘッドで高品質な深度マップを生成する能力を強調し、エッジデバイス上でのロボティクス、自律ナビゲーション、3D知覚アプリケーションに理想的であることを示しています。
 title: Jetson AGX Orin上でDepth Anything V3をデプロイ
 keywords:
 - Depth Anything V3
@@ -66,7 +66,7 @@ last_update:
 
 ## 環境設定
 
-**ステップ1.** 依存関係のインストール
+**ステップ1.**依存関係のインストール
 
 ```bash
 sudo apt update
@@ -157,7 +157,7 @@ chmod +x generate_engines.sh
 # Generate TensorRT engines from ONNX models
 ./generate_engines.sh onnx
 ```
-`.engine`ファイルが生成されている間、しばらくお待ちください。変換が完了すると、以下のように`onnx`ディレクトリに2つのファイルが作成されます。
+`.engine`ファイルが生成されている間、しばらくお待ちください。変換が完了すると、`onnx`ディレクトリに以下のように2つのファイルが作成されます。
 
 <div align="center">
     <img width={1000}
@@ -167,7 +167,7 @@ chmod +x generate_engines.sh
 
 ## 深度推定の実行
 
-### カメラによる深度推定
+### 深度推定用カメラ
 
 **ステップ1.** USBカメラの接続
 
@@ -185,17 +185,86 @@ ls /dev/video*
 
 **ステップ2.** カメラキャリブレーション
 
+`v4l2_camera`パッケージは、Linux Video4Linux2（V4L2）APIとROS 2トピック間のブリッジとして機能し、キャリブレーションパイプラインで簡単に使用できる画像とカメラ情報メッセージを配信します。
+
+カメラキャリブレーションパッケージのインストール：
+
+```bash
+# Install Camera Calibration Package
+sudo apt install ros-humble-camera-calibration
+
+# v4l2_camera is the official ROS2 maintained node that can directly publish USB camera images
+sudo apt install ros-${ROS_DISTRO}-v4l2-camera
+```
+
+カメラノードの起動：
+
+```bash
+# Launch camera node
+ros2 run v4l2_camera v4l2_camera_node \
+  --ros-args \
+  -p image_size:=[640,480] \
+  -p pixel_format:=YUYV
+```
+
+デフォルトで配信されるトピックは：
+
+- `/image_raw` - 生カメラ画像
+- `/camera` - カメラ情報
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/image.png" />
+</div>
+
+カメラキャリブレーションの実行：
+
+```bash
+# In another terminal
+ros2 run camera_calibration cameracalibrator \
+  --size 8x6 \
+  --square 0.025 \
+  --fisheye-recompute-extrinsicsts \
+  --fisheye-fix-skew \
+  --ros-args --remap image:=/image_raw --remap camera:=/v4l2_camera
+```
+
+:::note
+- `--size 8x6`は内側の角の数を指します（8×6 = 9×7グリッドの48角）
+- `--square 0.025`は正方形のサイズをメートル単位で指します（25mm）
+- `CALIBRATE`ボタンが点灯するまで、カメラを動かしてさまざまな角度から画像をキャプチャしてください
+
+:::
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal2.png" />
+</div>
+
+キャリブレーションが成功すると、ターミナルで以下のようなカメラパラメータが取得されます：
+
+<div align="center">
+    <img width={1000}
+    src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/cal3.png" />
+</div>
+
 カメラキャリブレーションについては、[このwiki](https://wiki.seeedstudio.com/ja/pycuvslam_recomputer_robotics/#camera-calibration)を参照してください。
 キャリブレーションされたパラメータを`camera_info_example.yaml`ファイルに書き込みます
 
 **ステップ3.** USBカメラノードの起動
 
+GMSLカメラの魚眼歪みを補正するために、キャリブレーションパラメータを`camera_info_example.yaml`ファイルに保存します。その後、リアルタイム深度推定のために以下のコマンドを実行します：
 ```bash
 #Start the script for camera depth estimation
-./run_camera_depth_rviz.sh
+CAMERA_INFO_FILE=camera_info_example.yaml ENABLE_UNDISTORTION=1 ./run_camera_depth.sh
 ```
 
-### ビデオによる深度推定
+<div class="video-container">
+  <iframe width="1029" height="579" src="https://www.youtube.com/embed/3Khm3OpLg3M" title="Deploy Depth Anything V3 on reComputer Mini J501" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+### 深度推定用ビデオ
 
 **ステップ1.** ビデオファイルの準備
 
@@ -224,7 +293,7 @@ ls /dev/video*
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -45,7 +45,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 - **带开关的电池连接器：** 提供简单的电池连接并集成开关，实现高效的电源管理和节能。
 - **用户友好的按钮：** 包括 1 个复位按钮和 3 个用户可编程按钮，为项目加速和自定义功能提供灵活性。
 
-### 规格参数
+### 规格
 
 <table>
   <thead>
@@ -89,7 +89,7 @@ import Steppers from '@site/src/components/utils/Stepper';
         <tr>
             <th>产品</th>
             <th>电子纸显示板 EE04</th>
-<th><a href="https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/">电子纸扩展板</a></th>
+<th><a href="https://wiki.seeedstudio.com/cn/XIAO-eInk-Expansion-Board/">电子纸分线板</a></th>
 <th><a href="https://wiki.seeedstudio.com/cn/xiao_eink_expansion_board_v2/">电子纸驱动板</a></th>
         </tr>
     </thead>
@@ -101,7 +101,7 @@ import Steppers from '@site/src/components/utils/Stepper';
             <td>XIAO 系列</td>
         </tr>
         <tr>
-            <th>兼容电子纸显示屏</th>
+            <th>兼容的电子纸显示屏</th>
             <td>24 针电子纸<br />50 针电子纸</td>
             <td>24 针电子纸</td>
             <td>24 针电子纸</td>
@@ -139,7 +139,7 @@ import Steppers from '@site/src/components/utils/Stepper';
     </tbody>
 </table>
 
-### 应用场景
+### 应用
 
 - **智能家居仪表板**：显示实时信息，如天气更新、日历事件和来自各种智能家居设备的通知。
 - **能耗监控**：显示智能电表的能耗数据，帮助房主更有效地跟踪和管理能源使用。
@@ -201,7 +201,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 ### 安装 Seeed GFX 库
 
 :::tip
-此库与 TFT 库具有相同功能但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
+此库与 TFT 库具有相同功能，但不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
 :::
 
 从 GitHub 下载并安装 Seeed GFX 库。
@@ -223,7 +223,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 :::tip
 如果您选择错误，屏幕将不显示任何内容。
 
-所以请确保您的设备或组件类型正确。
+所以请确保您的设备或组件类型。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/38.png" style={{width:800, height:'auto'}}/></div>
@@ -241,7 +241,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-## 开始使用
+## 入门指南
 
 这里，我们以 5.83 英寸显示屏为例。所有 24 针屏幕的步骤都相同；唯一的区别是在驱动程序中选择适当的屏幕尺寸。
 
@@ -264,13 +264,13 @@ import Steppers from '@site/src/components/utils/Stepper';
 ⚠️ 注意：电子纸电缆方向
 将电子纸显示屏连接到 XIAO 电子纸显示板时，请确保 FPC 电缆插入方向正确。
 
-⚠️ 不要反向连接！倒插电缆可能导致电子纸无法显示甚至损坏屏幕/开发板。
-下图显示了正确的连接方式：
+⚠️ 不要反向连接器！倒置插入电缆可能导致电子纸无法显示甚至损坏屏幕/开发板。
+下图显示了正确的连接：
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/32.jpg" style={{width:500, height:'auto'}}/></div>
 
-### XIAO 电子纸显示板（ESP32-S3）- EE04 上的用户按钮
+### XIAO 电子纸显示板(ESP32-S3) - EE04 上的用户按钮
 
 EE04 具有三个用户可编程按钮，可用于各种控制目的。本节演示如何使用 Arduino 读取按钮状态并响应按钮按下。
 
@@ -386,7 +386,7 @@ void loop() {
 }
 ```
 
-### XIAO 电子纸显示板（ESP32-S3）- EE04 上的用户电池
+### XIAO 电子纸显示板(ESP32-S3) - EE04 上的用户电池
 
 使用电池供电时：
 
@@ -430,13 +430,45 @@ void loop() {
 }
 ```
 
+### 在 XIAO 电子纸显示板 (ESP32-S3) - EE04 上显示自定义图像
 
+在 GFX 库中找到 Bitmap 示例并选择它。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image1.png" style={{width:700, height:'auto'}}/></div>
+
+请注意，您需要在项目目录中创建一个 driver.h 文件。[详细信息，点击了解更多。](#install-seeed-gfx-library)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image2.png" style={{width:700, height:'auto'}}/></div>
+
+接下来，导航到 SenseCraft HMI 工具 https://sensecraft.seeed.cc/hmi/tools/dither 并上传您希望显示的图像。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image3m.png" style={{width:700, height:'auto'}}/></div>
+
+上传图像后，生成 C 数组（图像数据）。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image4.png" style={{width:700, height:'auto'}}/></div>
+
+复制数组内容。注意只复制十六进制数据，不要包含任何无关字符。
+
+:::tip 
+如果您的显示屏上的颜色与原始设计相比出现反转，请在生成代码之前在 HMI 工具中选择 Invert Colors 选项。
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image5.png" style={{width:700, height:'auto'}}/></div>
+
+覆盖 Arduino 草图中 image.c 或 image.h 文件中的现有数组。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image6.png" style={{width:700, height:'auto'}}/></div>
+
+最后，将程序上传到您的 XIAO ESP32-S3。您现在应该看到您的自定义图像显示在电子纸屏幕上。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image7.png" style={{width:700, height:'auto'}}/></div>
 
 ## 资源
 
-- **[PDF]** [Seeed Studio XIAO 电子纸显示板 EE04 原理图](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_SCH_V1.2.pdf)
-- **[PDF]** [Seeed Studio XIAO 电子纸显示板 EE04 Grabcad 3D 文件](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
-- **[ZIP]** [Seeed Studio XIAO 电子纸显示板 EE04 原理图和 PCB](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_V1.2_SCH&PCB.zip)
+- **[PDF]** [Seeed Studio XIAO 电子纸显示 EE04 原理图](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_SCH_V1.2.pdf)
+- **[PDF]** [Seeed Studio XIAO 电子纸显示 EE04 Grabcad 3D 文件](https://grabcad.com/library/xiao-epaper-display-board-esp32-s3-ee04-1)
+- **[ZIP]** [Seeed Studio XIAO 电子纸显示 EE04 原理图和 PCB](https://files.seeedstudio.com/wiki/Epaper/EE04/XIAO_ePaper_Display_Board_EE04_V1.2_SCH&PCB.zip)
 
 
 

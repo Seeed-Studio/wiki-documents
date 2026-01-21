@@ -53,7 +53,7 @@ Enjoy flexible recruitment and opportunities to explore diverse experiences with
     contactEmail: 'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
     contactLinkText: 'Ranger Application Form',
     buttons: [
-      { text: 'Explore Ranger Program', link: 'https://wiki.seeedstudio.com/ranger/', primary: true },
+      { text: 'Explore Ranger Program', link: 'https://www.seeedstudio.com/ranger-program/', primary: true },
     ],
     image: 'ranger_banner.png',
   },

@@ -35,7 +35,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 The Seeed Studio XIAO ESP32-C5 is a powerful and versatile development board that features a variety of peripheral interfaces and GPIO pins. These pins can be used for various purposes, such as communicating with other devices, reading analog sensors, controlling LEDs, and more. In this tutorial, we will guide you on how to use the multiplexed pins of the XIAO ESP32-C5.<br/>
-In summary, the XIAO ESP32-C5 features 1×I2C, 1×SPI, 2×UART, up to 11×GPIO (PWM-capable), 5×ADC channels, and a JTAG bonding-pad interface.
+In summary, the XIAO ESP32-C5 features 1×I2C, 1×SPI, 2×UART, up to 11×GPIO (PWM-capable), 5×ADC channels, and a JTAG(pads on the reverse side) bonding-pad interface.
 
 ## Getting Started
 
@@ -588,7 +588,7 @@ void loop() {
 
 After uploading the program, you can monitor it via the UART function of the Seeed Studio **XIAO Debug Mate**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_3.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 If you have not used the Seeed Studio XIAO Debug Mate before, you can visit  [Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/getting_started_with_xiao_debug_mate/).

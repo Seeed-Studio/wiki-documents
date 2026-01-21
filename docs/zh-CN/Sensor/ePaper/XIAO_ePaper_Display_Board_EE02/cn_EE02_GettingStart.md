@@ -38,7 +38,7 @@ last_update:
 | **控制器** | ESP32-S3 |
 | **支持屏幕尺寸** | 13.3 英寸电子墨水屏 |
 | **连接性** | Wi-Fi 802.11 b/g/n，蓝牙 5.0 (LE) |
-| **电源供应** | 通过 USB Type-C 提供 5V |
+| **电源供应** | 5V 通过 USB Type-C |
 | **工作电压** | 3.3V |
 | **接口** | USB Type-C，用于电子墨水屏的 FPC 连接器 |
 | **尺寸** | 80x40 mm |
@@ -56,7 +56,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/overview.png" style={{width:800, height:'auto'}}/></div>
 
-- **USB Type-C**：用于电源供应和固件烧录。
+- **USB Type-C**：用于供电和固件烧录。
 - **FPC 连接器**：连接 13.3 英寸电子墨水屏。
 - **复位按钮**：重置开发板。
 - **按钮**：分别是"刷新页面"、"切换上一页"和"切换下一页"
@@ -135,7 +135,8 @@ last_update:
 *   如果屏幕长时间未刷新或电源供应不稳定，可能会出现这种情况。尝试通过 HMI 平台再次刷新屏幕。
 
 ## 资源
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 原理图](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
+- **[PDF]** [13.3 E6 eInk Display module Datasheet](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
 - **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
 
 ## 技术支持与产品讨论

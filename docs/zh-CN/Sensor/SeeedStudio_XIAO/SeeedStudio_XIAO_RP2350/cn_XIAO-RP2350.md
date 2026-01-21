@@ -79,8 +79,8 @@ XIAO RP2350 将 Raspberry Pi RP2350（双 Cortex-M33 内核，运行频率 150MH
     </tr>
     <tr>
         <td>接口</td>
-        <td>11 个引脚：4x 模拟、11x 数字、1x I²C、1x UART、1x SPI，全部 PWM</td>
-        <td><b>19 个引脚：3x 模拟、19x 数字、2x I²C、2x UART、2x SPI，全部 PWM</b></td>
+        <td>11 个引脚：4x 模拟、11x 数字、1x I²C、1x UART、1x SPI，全部支持 PWM</td>
+        <td><b>19 个引脚：3x 模拟、19x 数字、2x I²C、2x UART、2x SPI，全部支持 PWM</b></td>
     </tr>
     <tr>
         <td>按钮</td>
@@ -136,7 +136,7 @@ XIAO RP2350 将 Raspberry Pi RP2350（双 Cortex-M33 内核，运行频率 150MH
 </table>
 </div>
 
-需要更多引脚图详细信息？请导航到下面的[资产和资源](#assets--resources)。
+需要更多引脚详细信息？请导航到下面的[资产和资源](#assets--resources)。
 
 
 ## **引脚映射**
@@ -198,21 +198,19 @@ XIAO RP2350 由 RP2350 驱动，支持 MicroPython 和 Raspberry Pi 提供的 C/
 本页面主要面向 MicroPython 用户。对于有兴趣学习 SDK 编程或高级用户，您可能希望从 [Raspberry Pi Pico 系列 C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) 开始。本指南将帮助您设置环境并开始使用示例代码。此外，您可以访问 [XIAO RP2350 与 C/C++ SDK](/cn/xiao-rp2350-c-cpp-sdk) 获取与 XIAO RP2350 相关的更具体说明。
 :::
 
-:::tip
-目前，使用官方[固件](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/SEEED_XIAO_RP2350.uf2)时，ADC 功能可能无法正常工作。请先下载并使用我们修改过的固件。一旦拉取请求被合并，我们将相应地更新 Wiki 上的相关内容。
-:::
-
 ### 步骤 1：在 XIAO RP2350 上安装 MicroPython
 
 要在 XIAO RP2350 上安装 MicroPython 固件，请按照以下步骤操作：
 
 **步骤 1.1. 下载 MicroPython 固件：**  
 
-- 导航到 [MicroPython Downloads](https://micropython.org/download/SEEED_XIAO_RP2350/) 页面。
+- 访问 [MicroPython Downloads](https://micropython.org/download/SEEED_XIAO_RP2350/) 页面。
 - 下载与 XIAO RP2350 兼容的最新 `.uf2` 固件文件。
 
 :::tip
-默认固件适用于 ARM 架构，如果您想使用 RISC-V，请使用链接中相应的固件版本。
+1. 默认固件适用于 ARM 架构，如果您想使用 RISC-V，请使用链接中相应的固件版本。
+
+2. 请确保您使用的是最新的固件版本，因为旧版固件可能包含各种软件漏洞。
 :::
 
 **步骤 1.2 进入 BOOTSEL 模式：**  
@@ -220,32 +218,32 @@ XIAO RP2350 由 RP2350 驱动，支持 MicroPython 和 Raspberry Pi 提供的 C/
 您可以使用以下两种方法之一在 XIAO RP2350 上进入 BOOTSEL 模式：
 
 <Tabs>
-<TabItem value="method1" label="方法 1：连接计算机之前" default>
+<TabItem value="method1" label="方法 1：连接电脑前" default>
 
 1. **按住 BOOT 按钮**：  
-   当您的 XIAO RP2350 与计算机断开连接时，**按住** BOOT 按钮。
-2. **连接到您的计算机**：  
-   在按住 BOOT 按钮的同时，使用 USB 线缆将 XIAO RP2350 连接到您的计算机。
-3. **释放 BOOT 按钮**：  
-   在开发板连接到您的计算机后，您可以释放 BOOT 按钮。XIAO RP2350 现在应该处于 BOOTSEL 模式，您的计算机将识别它为可移动存储设备。
+   当您的 XIAO RP2350 与电脑断开连接时，**按住** BOOT 按钮。
+2. **连接到您的电脑**：  
+   在按住 BOOT 按钮的同时，使用 USB 线将 XIAO RP2350 连接到您的电脑。
+3. **松开 BOOT 按钮**：  
+   在开发板连接到您的电脑后，您可以松开 BOOT 按钮。XIAO RP2350 现在应该处于 BOOTSEL 模式，您的电脑将识别它为可移动存储设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/>
-<div style={{ marginTop: '-8px' }}><em>按住 Boot-> 插入线缆-> 释放 Boot</em></div>
+<div style={{ marginTop: '-8px' }}><em>按住 Boot-> 插入线缆-> 松开 Boot</em></div>
 </div>
 
 </TabItem>
 
-<TabItem value="method2" label="方法 2：连接计算机时">
+<TabItem value="method2" label="方法 2：连接电脑时">
 
 1. **按住 BOOT 按钮**：  
-   在 XIAO RP2350 已连接到您的计算机时，按住 BOOT 按钮。
+   在 XIAO RP2350 已连接到您的电脑时，按住 BOOT 按钮。
 2. **点击 RESET 按钮**：  
-   在仍然按住 BOOT 按钮的同时，按下并释放 RESET 按钮，该按钮在上图中标记为"B"，位于开发板右下角。
-3. **释放 BOOT 按钮**：  
-   按下 RESET 按钮后，释放 BOOT 按钮。XIAO RP2350 现在应该处于 BOOTSEL 模式，您的计算机将识别它为可移动存储设备。
+   在仍然按住 BOOT 按钮的同时，按下并松开 RESET 按钮，该按钮在上图中开发板右下角标记为 "B"。
+3. **松开 BOOT 按钮**：  
+   按下 RESET 按钮后，松开 BOOT 按钮。XIAO RP2350 现在应该处于 BOOTSEL 模式，您的电脑将识别它为可移动存储设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/>
-<div style={{ marginTop: '-8px' }}><em>按住 Boot-> 点击 Reset-> 释放 Boot</em></div>
+<div style={{ marginTop: '-8px' }}><em>按住 Boot-> 点击 Reset-> 松开 Boot</em></div>
 </div>
 
 </TabItem>
@@ -253,7 +251,7 @@ XIAO RP2350 由 RP2350 驱动，支持 MicroPython 和 Raspberry Pi 提供的 C/
 
 **步骤 1.3. 安装固件：**  
 
-- **拖放**下载的 `.uf2` 文件到 XIAO RP2350 的可移动存储驱动器中。
+- **拖拽** 下载的 `.uf2` 文件到 XIAO RP2350 的可移动存储驱动器中。
 - 文件复制完成后，开发板将自动重启，完成固件安装。
 
 ### 步骤 2：安装 Thonny IDE
@@ -273,8 +271,8 @@ Thonny IDE 是一个对初学者友好的 Python 编辑器，非常适合 MicroP
    - 选择适合您操作系统（Windows、macOS 或 Linux）的安装程序并下载。
 
 2. **安装 Thonny：**  
-   - **运行**下载的安装程序。
-   - **按照**屏幕上的说明完成安装过程。
+   - **运行** 下载的安装程序。
+   - **按照** 屏幕上的说明完成安装过程。
 
 3. **为 MicroPython 配置 Thonny：**  
    - **打开** Thonny IDE。
@@ -305,8 +303,8 @@ Thonny IDE 是一个对初学者友好的 Python 编辑器，非常适合 MicroP
 让开发板闪烁 LED 通常是每个人运行的第一个程序。XIAO RP2350 也是如此。
 
 :::note
-根据原理图，`USER LED`（XIAO RP2350 上的黄色 LED）连接到 `GPIO25/D19`。
-对于所有 XIAO 系列开发板，`USER LED` 在设置为`低电平`时会**点亮**，在设置为`高电平`时会**熄灭**。
+根据原理图，XIAO RP2350 上的 `USER LED`（黄色 LED）连接到 `GPIO25/D19`。
+对于所有 XIAO 系列开发板，`USER LED` 在设置为 `低电平` 时会**点亮**，在设置为 `高电平` 时会**熄灭**。
 :::
 
 <Tabs>
@@ -466,7 +464,7 @@ while True:
 
 但是使用 XIAO RP2350，这个过程得到了简化。您现在可以直接使用 `A3/GPIO29` 引脚来读取电池电压水平，简化您的设计和开发。只需记住将 `GPIO19` 引脚设置为高电平，因为这是启用电池电量读取所必需的。
 
-跟随这个代码片段，使用 Pico SDK 读取电池电压：
+按照这个代码片段使用 Pico SDK 读取电池电压：
 
 <Tabs>
   <TabItem value="python" label="MicroPython" default>
@@ -566,7 +564,7 @@ XIAO RP2350 利用了 Raspberry Pi RP2350 的强大功能，充分利用了 Rasp
 
 ### 扩展和应用
 
-[XIAO 系列](/cn/xiao_topic_page)拥有大量的外设和外设配件供您学习和使用，无论您想要一个允许完美交互的彩色屏幕，还是一个集成了明亮简洁 RGB 灯的开发板等等，都等待着您的探索。
+[XIAO 系列](/cn/xiao_topic_page)拥有大量的外设和外设配件供您学习和使用，无论您想要一个允许完美交互的彩色屏幕，还是一个带有明亮简洁 RGB 灯的集成板等等，都等待着您的探索。
 
 作为 XIAO 家族的一员，XIAO RP2350 也是如此。当然，为了更好地利用引出的额外引脚，新的*外设和开发板*将不断推出，充分利用其创造的性能。
 
@@ -575,7 +573,7 @@ XIAO RP2350 利用了 Raspberry Pi RP2350 的强大功能，充分利用了 Rasp
 
 ### 社区和学习
 
-此外，深入充满活力的 Raspberry Pi 社区，扩展您的知识并发现新的项目想法。利用社区共享的资源、论坛和教程来增强您使用 XIAO RP2350 的体验。除了 Seeed Studio Wiki 之外，这里还有一些其他推荐的学习地方：
+此外，深入活跃的 Raspberry Pi 社区，扩展您的知识并发现新的项目想法。利用社区共享的资源、论坛和教程来增强您使用 XIAO RP2350 的体验。除了 Seeed Studio Wiki 之外，这里还有一些其他推荐的学习地方：
 
 - **[Raspberry Pi 文档](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)**：获取关于 RP2350 的可靠和最新信息。
 - **[Raspberry Pi 论坛](https://www.raspberrypi.org/forums/)**：与其他爱好者互动，提问并分享您的项目。
@@ -586,11 +584,11 @@ XIAO RP2350 利用了 Raspberry Pi RP2350 的强大功能，充分利用了 Rasp
 - **[Instructables](https://www.instructables.com/)**：查找使用 XIAO 和其他硬件创建的 DIY 项目和分步指南。
 - **[Element14 社区](https://www.element14.com/community/)**：参与与电子和嵌入式系统相关的讨论、网络研讨会和项目。
 
-更多的是，我们始终欢迎您在我们的 [Seeed Studio Discord](https://discord.com/invite/kpY74apCWj) 和 [Seeed Studio 论坛](https://forum.seeedstudio.com/)上分享您的项目。这些平台提供了与其他创客联系、获得反馈和寻找灵感的绝佳机会。无论您需要帮助解决问题、想要展示您的最新作品，还是只是希望成为支持性社区的一部分，*Seeed Studio 的 Discord 和论坛*都是参与和协作的完美场所。
+更多的是，我们始终欢迎您在我们的 [Seeed Studio Discord](https://discord.com/invite/kpY74apCWj) 和 [Seeed Studio 论坛](https://forum.seeedstudio.com/)上分享您的项目。这些平台为您提供了与其他创客联系、获得反馈和寻找灵感的绝佳机会。无论您需要帮助解决问题、想要展示您的最新作品，还是只是希望成为支持性社区的一部分，*Seeed Studio 的 Discord 和论坛*都是参与和协作的完美场所。
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

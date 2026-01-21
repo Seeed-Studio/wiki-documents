@@ -1,5 +1,5 @@
 ---
-description: Comenzando con Wio-E5 mini.
+description: Introducción al Wio-E5 mini.
 title: Wio-E5 mini
 nointro:
 keywords:
@@ -9,8 +9,8 @@ image: https://wiki.seeedstudio.com/es/wio_gps_board/
 slug: /es/LoRa_E5_mini
 sku: 113990939, 113991156
 last_update:
-  date: 01/30/2023
-  author: hushuxu
+  date: 01/15/2026
+  author: David Du
 ---
 <!-- ![](https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/113990939_preview-07.png) -->
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/113990939_preview-07.png" alt="pir" width={600} height="auto" /></p>
@@ -24,11 +24,11 @@ last_update:
 </div>
 
 > LoRaWAN® es una marca utilizada bajo licencia de LoRa Alliance®.
-La marca LoRa® es una marca registrada de Semtech Corporation o sus subsidiarias.
+La marca LoRa® es una marca comercial de Semtech Corporation o sus subsidiarias.
 
 Wio-E5 mini es una placa de desarrollo de tamaño compacto adecuada para pruebas rápidas y construcción de prototipos de tamaño pequeño y te ayuda a diseñar tu dispositivo IoT inalámbrico LoRaWAN® ideal con un rango de transmisión de larga distancia.
 
-Wio-E5 mini está integrado con el [Módulo Wio-E5 STM32WLE5JC](https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html), que ofrece la primera combinación mundial de RF LoRa® y chip MCU en un solo chip diminuto y está certificado por FCC y CE. Está alimentado por el núcleo ARM Cortex-M4 y el chip LoRa® Semtech SX126X y soporta el protocolo LoRaWAN® en frecuencias mundiales y modulaciones (G)FSK, BPSK, (G)MSK y LoRa®.
+Wio-E5 mini está integrado con [Wio-E5 STM32WLE5JC Module](https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html), que ofrece la primera combinación mundial de RF LoRa® y chip MCU en un solo chip diminuto y está certificado por FCC y CE. Está alimentado por el núcleo ARM Cortex-M4 y el chip LoRa® Semtech SX126X y soporta el protocolo LoRaWAN® en frecuencia mundial y modulaciones (G)FSK, BPSK, (G)MSK y LoRa®.
 
 Aprende más sobre [Wio-E5](https://wiki.seeedstudio.com/es/LoRa-E5_STM32WLE5JC_Module/) aquí.
 
@@ -37,39 +37,39 @@ Más comparación entre el Wio-E5 y el chip LoRa® RFM95:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Wio-E5/2.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Wio-E5/2.png" alt="pir" width={600} height="auto" /></p>
 
-Wio-E5 mini expone todos los GPIOs del Wio-E5, incluyendo UART, ADC, SPI, IIC, etc. Contiene botones RESET y BOOT y es fácil de usar. Soportando el protocolo LoRaWAN®, Wio-E5 mini presenta transmisión de ultra largo alcance y consumo de energía ultra bajo: es capaz de lograr un rango de transmisión de hasta 10 km, y la corriente de sueño de los módulos Wio-E5 a bordo es tan baja como 2.1 uA (modo WOR). Está diseñado con estándares industriales con una temperatura de trabajo amplia de -40 ℃ ~ 85℃, alta sensibilidad entre -116.5dBm ~ -136 dBm, y potencia de salida RF de hasta +20.8 dBm a 3.3V.
+Wio-E5 mini expone todos los GPIOs del Wio-E5, incluyendo UART, ADC, SPI, IIC, etc. Contiene botones RESET y BOOT y es fácil de usar. Compatible con el protocolo LoRaWAN®, Wio-E5 mini presenta transmisión de ultra largo alcance y consumo de energía ultra bajo: es capaz de lograr un rango de transmisión de hasta 10 km, y la corriente de sueño de los módulos Wio-E5 a bordo es tan baja como 2.1 uA (modo WOR). Está diseñado con estándares industriales con una temperatura de trabajo amplia de -40 ℃ ~ 85℃, alta sensibilidad entre -116.5dBm ~ -136 dBm, y potencia de salida RF de hasta +20.8 dBm a 3.3V.
 
-Además del Wio-E5 mini, también proporcionamos otras opciones incluyendo la Placa de Desarrollo Wio-E5 que lleva interfaces y características más complejas para desbloquear el rendimiento más poderoso del módulo Wio-E5. Proporciona una gama más amplia de protocolos de acceso y tipos superabundantes de interfaces. Por lo tanto, puedes probar y prototipar el módulo rápidamente con RS-485, interfaces Grove, y GPIOs ricos. (Aprende más sobre la Placa de Desarrollo Wio-E5)
+Además del Wio-E5 mini, también proporcionamos otras opciones incluyendo la Placa de Desarrollo Wio-E5 que lleva interfaces y características más complejas para desbloquear el rendimiento más poderoso del módulo Wio-E5. Proporciona una gama más amplia de protocolos de acceso y tipos superabundantes de interfaces. Por lo tanto, puedes probar y prototipar el módulo rápidamente con RS-485, interfaces Grove y GPIOs ricos. (Aprende más sobre la Placa de Desarrollo Wio-E5)
 
 Dado que Wio-E5 es un chip LoRaWAN® con un MCU, hay tres formas principales de utilizar el Wio-E5 mini:
 
 **1. Conectar Wio-E5 mini a PC y controlar por comandos AT**
 
-Hay una función USB a UART incorporada a bordo, podrías conectar el Wio-E5 mini a tu PC con un cable USB tipo C, y usar software de comunicación serie para enviar comandos AT y leer datos de la placa.
+Hay una función USB a UART integrada a bordo, podrías conectar el Wio-E5 mini a tu PC con un cable USB tipo C, y usar software de comunicación serie para enviar comandos AT y leer datos de la placa.
 
 **2. Conectar Wio-E5 mini a otra placa principal vía UART y controlar por comandos AT**
 
-Por ejemplo, conectar Wio-E5 mini a Seeeduino XIAO y la Placa de Expansión vía UART, y enviar comandos AT y leer datos desde Seeeduino XIAO a través del monitor serie del IDE de Arduino.
+Por ejemplo, conectar Wio-E5 mini a Seeeduino XIAO y la Placa de Expansión vía UART, y enviar comandos AT y leer datos desde Seeeduino XIAO a través del monitor serie de Arduino IDE.
 
 **3. Desarrollo de Aplicación de Usuario usando SDK**
 
-Desarrolla tu propia placa de desarrollo LoRa® con función MCU usando STM32Cube Programmer, que es el SDK proporcionado oficialmente por STMicroelectronics. Para descargar este recurso SDK, por favor encuentra los recursos en aprendizaje y documentación abajo.
+Desarrolla tu propia placa de desarrollo LoRa® con función MCU usando STM32Cube Programmer, que es el SDK oficialmente proporcionado por STMicroelectronics. Para descargar este recurso SDK, por favor encuentra los recursos en aprendizaje y documentación abajo.
 
-Con todas las características sobresalientes listadas arriba, el Wio-E5 mini será una elección superior para desarrollo de dispositivos IoT, pruebas, prototipado, y aplicaciones en escenarios IoT de larga distancia y consumo de energía ultra bajo como agricultura inteligente, oficina inteligente, e industria inteligente.
+Con todas las características sobresalientes listadas arriba, el Wio-E5 mini será una opción superior para desarrollo de dispositivos IoT, pruebas, prototipado y aplicaciones en escenarios IoT de larga distancia y consumo de energía ultra bajo como agricultura inteligente, oficina inteligente e industria inteligente.
 
 Si no estás familiarizado con la tecnología LoRa® y LoRaWAN®, por favor revisa este blog [LoRa®pedia](https://www.seeedstudio.com/blog/2020/08/03/lorapedia-an-introduction-of-lora-and-lorawan-technology/) en detalle.
 
 ## Características
 
-- Todos los GPIOs del Wio-E5 STM32WLE5JC están disponibles
+- Todos los GPIOs expuestos del Wio-E5 STM32WLE5JC
 
-- Compatible con planes de frecuencia LoRaWAN® y LoRa® globales
+- Plan de frecuencia LoRaWAN® y LoRa® global soportado
 
 - Rango de transmisión de larga distancia hasta 10km (valor ideal en área abierta)
 
 - Tamaño mini y compacto, adecuado para pruebas rápidas y construcción de prototipos de tamaño pequeño
 
-- Convenientes botones RESET y BOOT en la placa
+- Botones RESET y BOOT convenientes a bordo
 
 ## Descripción General del Hardware
 
@@ -122,10 +122,11 @@ Si no estás familiarizado con la tecnología LoRa® y LoRaWAN®, por favor revi
 </tr>
 <tr>
 <td class="tg-g9rn">corriente</td>
-<td class="tg-g9rn">Corriente de reposo del módulo Wio-E5 tan baja como 2.1uA (modo WOR)</td>
+<td class="tg-g9rn">Corriente de sueño del módulo Wio-E5 tan baja como 2.1uA (modo WOR)</td>
 </tr>
 </tbody>
 </table>
+
 <div></div>
 <div></div>
 <div></div>
@@ -148,7 +149,7 @@ Si no estás familiarizado con la tecnología LoRa® y LoRaWAN®, por favor revi
 <td class="tg-uu1j" colspan="2">Pegatina*1 </td>
 </tr>
 <tr>
-<td class="tg-uu1j" colspan="2">Pines macho 1X12 *2</td>
+<td class="tg-uu1j" colspan="2">Cabezales de pines macho 1X12 *2</td>
 </tr>
 </tbody>
 </table>
@@ -156,8 +157,8 @@ Si no estás familiarizado con la tecnología LoRa® y LoRaWAN®, por favor revi
 ## Aplicaciones
 
 - Pruebas fáciles del módulo Wio-E5
-- Prototipado rápido de dimensiones pequeñas de dispositivos LoRa® con Wio-E5
-- Desarrollo de cualquier aplicación de comunicación inalámbrica de larga distancia
+- Prototipado rápido de pequeñas dimensiones de dispositivos LoRa® con Wio-E5
+- Cualquier desarrollo de aplicación de comunicación inalámbrica de larga distancia
 - Aprendizaje e investigación de aplicaciones LoRa® y LoRaWAN®
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/317990687/image/application.png" alt="pir" width={600} height="auto" /></p>
@@ -166,14 +167,14 @@ Si no estás familiarizado con la tecnología LoRa® y LoRaWAN®, por favor revi
 
 **1. Firmware AT de Fábrica**
 
-La serie wio-E5 tiene un firmware de comandos AT integrado, que soporta el protocolo LoRaWAN® Clase A/B/C y un amplio plan de frecuencias: EU868/US915/AU915/AS923/KR920/IN865. Con este firmware de comandos AT, los desarrolladores pueden construir fácil y rápidamente su prototipo o aplicación.
+La serie wio-E5 tiene un firmware de comandos AT integrado, que soporta el protocolo LoRaWAN® Clase A/B/C y un plan de frecuencia amplio: EU868/US915/AU915/AS923/KR920/IN865. Con este firmware de comandos AT, los desarrolladores pueden construir fácil y rápidamente su prototipo o aplicación.
 
-El firmware de comandos AT contiene un bootloader para DFU y la aplicación AT. El pin "PB13/SPI_SCK/BOOT" se usa para controlar que Wio-E5 permanezca en el bootloader o salte a la aplicación AT. Cuando PB13 está en HIGH, el módulo saltará a la aplicación AT después del reset, con una velocidad de baudios por defecto de 9600. Cuando PB13 está en LOW (presiona el botón "Boot" en Wio-E5 mini), el módulo permanecerá en el bootloader, y seguirá transmitiendo el carácter "C" cada 1S a una velocidad de baudios de 115200.
+El firmware de comandos AT contiene un bootloader para DFU y la aplicación AT. El pin "PB13/SPI_SCK/BOOT" se usa para controlar que Wio-E5 permanezca en el bootloader o salte a la aplicación AT. Cuando PB13 está en ALTO, el módulo saltará a la aplicación AT después del reset, con una velocidad de baudios predeterminada de 9600. Cuando PB13 está en BAJO (presiona el botón "Boot" en Wio-E5 mini), el módulo permanecerá en el bootloader, y seguirá transmitiendo el carácter "C" cada 1S a velocidad de baudios 115200.
 
 :::tip
 
-- El Firmware AT de Fábrica está programado con RDP(Protección de Lectura) Nivel 1, los desarrolladores necesitan remover RDP primero con STM32Cube Programmer. Nota que regresar RDP a nivel 0 causará un borrado masivo de la memoria flash y el Firmware AT de Fábrica no podrá ser restaurado nuevamente.
-- El pin "PB13/SPI_SCK/BOOT" en el módulo Wio-E5 es solo un GPIO normal, no el pin "BOOT0" del MCU. Este pin "PB13/SPI_SCK/BOOT" se usa en el bootloader del firmware AT de Fábrica, para decidir saltar a APP o permanecer en bootloader(para DFU). El pin real "BOOT0" no sale al módulo, por lo que los usuarios necesitan tener cuidado al desarrollar aplicaciones de bajo consumo
+- El Firmware AT de Fábrica está programado con RDP(Protección de Lectura) Nivel 1, los desarrolladores necesitan remover RDP primero con STM32Cube Programmer. Nota que regresar RDP a nivel 0 causará un borrado masivo de la memoria flash y el Firmware AT de Fábrica no puede ser restaurado nuevamente.
+- El pin "PB13/SPI_SCK/BOOT" en el módulo Wio-E5 es solo un GPIO normal, no el pin "BOOT0" del MCU. Este pin "PB13/SPI_SCK/BOOT" se usa en el bootloader del firmware AT de Fábrica, para decidir saltar a APP o permanecer en bootloader(para DFU). El pin real "BOOT0" no se conecta al módulo, por lo que los usuarios necesitan tener cuidado al desarrollar las aplicaciones de bajo consumo
 
 :::
 
@@ -183,7 +184,7 @@ El firmware de comandos AT contiene un bootloader para DFU y la aplicación AT. 
 
 - TCXO de 32MHz
 
-- Fuente de alimentación TCXO: PB0-VDD_TCXO
+- Suministro de energía TCXO: PB0-VDD_TCXO
 
 2.2 LSE
 
@@ -197,7 +198,7 @@ El firmware de comandos AT contiene un bootloader para DFU y la aplicación AT. 
 
 - Transmitir(alta potencia de salida, modo SMPS): PA4=0, PA5=1
 
-## Comenzando
+## Introducción
 
 ### Inicio rápido de Comandos AT
 
@@ -205,7 +206,7 @@ El firmware de comandos AT contiene un bootloader para DFU y la aplicación AT. 
 
 - **Paso 1.** Conecta Wio-E5 mini a PC vía un cable Type-C
 
-- **Paso 2.** Abre una herramienta serial(ej. Arduino Serial Monitor), selecciona el puerto COM correcto, establece la velocidad de baudios a 9600 y selecciona Both NL & CR
+- **Paso 2.** Abre una herramienta serie(ej. Monitor Serie de Arduino), selecciona el puerto COM correcto, establece la velocidad de baudios a 9600 y selecciona Both NL & CR
 
 - **Paso 3.** Intenta enviar "AT" y verás la respuesta.
 
@@ -216,24 +217,24 @@ El firmware de comandos AT contiene un bootloader para DFU y la aplicación AT. 
 | Formato de Comando | Retorno | Descripción |
 | --- | --- | --- |
 | AT | +AT: OK | Comando de prueba |
-| AT+VER | +VER: \$MAJOR.\$MINOR.\$PATCH <br></br> +VER: 4.0.11 | Verificar versión del firmware |
-| AT+ID // Leer todo, DevAddr( ABP), DevEui( OTAA), AppEui( OTAA)<br></br>AT+ID = DevAddr // Leer Dirección del Dispositivo<br></br>AT+ID = DevEui // Leer DevEui<br></br>AT+ID = AppEui // Leer AppEui | +ID: DevAddr, xx: xx: xx:xx<br></br>+ID: DevEui, xx:xx:xx:xx:xx:xx:xx:xx<br></br>+ID: AppEui13, xx:xx:xx:xx:xx:xx:xx | Se usa para verificar el ID del módulo LoRaWAN. El ID se trata como números big endian. |
+| AT+VER | +VER: \$MAJOR.\$MINOR.\$PATCH <br></br> +VER: 4.0.11 | Verificar versión del Firmware |
+| AT+ID // Leer todo, DevAddr( ABP), DevEui( OTAA), AppEui( OTAA)<br></br>AT+ID = DevAddr // Leer Dirección del Dispositivo<br></br>AT+ID = DevEui // Leer DevEui<br></br>AT+ID = AppEui // Leer AppEui | +ID: DevAddr, xx: xx: xx:xx<br></br>+ID: DevEui, xx:xx:xx:xx:xx:xx:xx:xx<br></br>+ID: AppEui13, xx:xx:xx:xx:xx:xx:xx | Usar para verificar el ID del módulo LoRaWAN. ID es tratado como números big endian. |
 | AT+ID = DevAddr, "01234567" // Establecer nueva DevAddr<br></br>AT+ID = DevEui, "0123456789ABCDEF" // Establecer nueva DevEui<br></br>AT+ID = AppEui, "0123456789ABCDEF" // Establecer nueva AppEui | +ID: DevAddr, 01:23:45:67<br></br>+ID: DevEui, 01:23:45:67:89:AB:CD:EF<br></br>+ID: AppEui, 01:23:45:67:89:AB:CD:EF | Cambiar el ID |
 | AT+RESET | +RESET: OK | Reiniciar el módulo |
-| AT+MSG="Data to send" | +MSG: Start<br></br>+MSG: FPENDING // La bandera FPENDING del frame de enlace descendente está activada<br></br>+MSG: Link 20, 1<br></br>+MSG: ACK Received // LinkCheckAns recibido<br></br>+ MSG: MULTICAST // El frame de enlace descendente es un mensaje multicast<br></br>+MSG: PORT: 8; RX: "12345678" //Se recibió mensaje de enlace descendente<br></br>+MSG: RXWIN2, RSSI -106, SNR 4 //Intensidad de señal del frame de enlace descendente<br></br>+MSG: Done | enviar frame en formato string que no necesita ser confirmado por el servidor |
+| AT+MSG="Data to send" | +MSG: Start<br></br>+MSG: FPENDING // La bandera FPENDING del frame de enlace descendente está establecida<br></br>+MSG: Link 20, 1<br></br>+MSG: ACK Received // LinkCheckAns recibido<br></br>+ MSG: MULTICAST // El frame de enlace descendente es mensaje multi cast<br></br>+MSG: PORT: 8; RX: "12345678" //Mensaje de enlace descendente es recibido<br></br>+MSG: RXWIN2, RSSI -106, SNR 4 //Fuerza de señal del frame de enlace descendente<br></br>+MSG: Done | enviar frame de formato string que no necesita ser confirmado por el servidor |
 | AT+PORT = "port"<br></br>ej: AT+PORT = 8 //Establecer puerto a 8 | + PORT: 8 | Establecer número de puerto que será usado por el comando MSG/CMSG/MSGHEX/CMSGHEX para enviar mensaje, el número de puerto debe estar en el rango de 1 a 255. |
-| AT+ADR=" state"<br></br>ej: AT+ADR=ON // Habilitar función ADR<br></br>AT+ ADR= OFF // Deshabilitar función ADR<br></br>AT+ADR=? // Verificar configuración ADR actual | +ADR: ON  // Consulta/configuración ADR retorna | Establecer función ADR del módulo LoRaWAN |
-| AT+DR // Verificar DataRate seleccionado actualmente<br></br>AT+DR=drx // "drx" debe estar en el rango 0~15 | +DR: DR0<br></br>+DR: US915 DR0 SF10 BW12 | Usar DRx definido por LoRaWAN para establecer la tasa de datos del módem AT LoRaWAN. |
-| AT+ DR= band //" band" podría ser nombres de banda definidos en el Capítulo 3 Planes de Banda<br></br>AT+ DR= SCHEME // Verificar banda actual | (EU868) +DR: EU868<br></br>+DR: EU868 DR0 SF12 BW125K<br></br>+DR: EU868 DR1 SF11 BW125K<br></br>+DR: EU868 DR2 SF10 BW125K<br></br>+DR: EU868 DR3 SF9 BW125K<br></br>+DR: EU868 DR4 SF8 BW125K<br></br>+DR: EU868 DR5 SF7 BW125K<br></br>+DR: EU868 DR6 SF7 BW125K<br></br>+DR: EU868 DR7 FSK<br></br>+DR: EU868 DR8 RFU<br></br>+DR: EU868 DR9 RFU<br></br>+DR: EU868 DR10 RFU<br></br>+DR: EU868 DR11 RFU<br></br>+DR: EU868 DR12 RFU<br></br>+DR: EU868 DR13 RFU<br></br>+DR: EU868 DR14 RFU<br></br>+DR: EU868 DR15 RFU | Esquema de tasa de datos |
+| AT+ADR=" state"<br></br>ej: AT+ADR=ON // Habilitar función ADR<br></br>AT+ ADR= OFF // Deshabilitar función ADR<br></br>AT+ADR=? // Verificar configuración ADR actual | +ADR: ON  // Consulta/establecimiento ADR retorno | Establecer función ADR del módulo LoRaWAN |
+| AT+DR // Verificar DataRate seleccionado actual<br></br>AT+DR=drx // "drx" debe estar en el rango 0~15 | +DR: DR0<br></br>+DR: US915 DR0 SF10 BW12 | Usar DRx definido por LoRaWAN para establecer datarate del módem AT LoRaWAN. |
+| AT+ DR= band //" band" podría ser nombres de banda definidos en el Capítulo3 Planes de Banda<br></br>AT+ DR= SCHEME // Verificar banda actual | (EU868) +DR: EU868<br></br>+DR: EU868 DR0 SF12 BW125K<br></br>+DR: EU868 DR1 SF11 BW125K<br></br>+DR: EU868 DR2 SF10 BW125K<br></br>+DR: EU868 DR3 SF9 BW125K<br></br>+DR: EU868 DR4 SF8 BW125K<br></br>+DR: EU868 DR5 SF7 BW125K<br></br>+DR: EU868 DR6 SF7 BW125K<br></br>+DR: EU868 DR7 FSK<br></br>+DR: EU868 DR8 RFU<br></br>+DR: EU868 DR9 RFU<br></br>+DR: EU868 DR10 RFU<br></br>+DR: EU868 DR11 RFU<br></br>+DR: EU868 DR12 RFU<br></br>+DR: EU868 DR13 RFU<br></br>+DR: EU868 DR14 RFU<br></br>+DR: EU868 DR15 RFU | Esquema de velocidad de datos |
 | AT + CH // consultar todos los canales<br></br>AT + CH = ch // verificar frecuencia de canal único |  | Consultar Configuración de Canal |
 | AT+CH="chn", ["freq"], ["drmin"], ["drmax"]<br></br>// Cambiar la frecuencia del canal chn a "Freq"<br></br>// "freq" está en MHz.<br></br>// Rango disponible "drmin"/"drmax" DR0 ~ DR15 | +CH: 3,433700000,DR0:DR5<br></br>+CH: 3,433700000,DR | Establecer parámetro de canal del módem LoRaWAN, Establecer frecuencia cero para eliminar un canal. |
 | AT+CH=chn,ON<br></br>AT+CH=chn, OFF |  | Habilitar o Deshabilitar Canal |
 | AT+ KEY= NWKSKEY, " clave de 16 bytes de longitud"<br></br>ej: AT+KEY=NWKSKEY, "2B7E151628AED2A6ABF7158809CF4F3C"<br></br>ej: AT+KEY=NWKSKEY, "2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C" | + KEY: NWKSKEY 2B7E151628AED2A6ABF7158809CF4F3C | Cambiar clave de sesión de red (NWKSKEY) |
 | AT+ KEY= APPSKEY, " clave de 16 bytes de longitud"<br></br>ej: AT+KEY=APPSKEY, "2B7E151628AED2A6ABF7158809CF4F3C"<br></br>ej: AT+KEY= APPSKEY, "2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 | + KEY: APPSKEY 2B7E151628AED2A6ABF7158809CF4F3C | Cambiar clave de sesión de aplicación (APPSKEY) |
 | AT+ FDEFAULT<br></br>AT+ FDEFAULT= Seeed | +FDEFAULT: OK | Reiniciar módem AT LoRaWAN a configuración predeterminada de fábrica |
-| T+ DFU=" Nuevo estado"<br></br>ej: AT+DFU=ON // Habilitar función DFU<br></br>ej: AT+DFU=OFF //Deshabilitar función DFU<br></br>AT+DFU=? // Verificar si DFU está habilitado configuración | +DFU: ON<br></br>+DFU: OFF | Se usa para entrar al modo DFU |
-| T+MODE="mode"<br></br>ej: AT+MODE=TEST // Entrar modo TEST<br></br>ej: AT+MODE= LWOTAA // Entrar modo LWOTAA<br></br>ej: AT+MODE= LWABP // Entrar modo LWABP | +MODE: LWABP // Entrar modo TEST exitosamente<br></br>+MODE: LWOTAA // Entrar modo LWOTAA exitosamente<br></br>+MODE: TEST // Entrar modo TEST exitosamente | Se usa para seleccionar modo de trabajo |
-| AT + JOIN<br></br>AT + JOIN = FORCE | a) Unión exitosa +JOIN: Starting<br></br>+ JOIN: NORMAL<br></br>+JOIN: NetID 000024 DevAddr 48:00:00:01<br></br>+JOIN: Done<br></br>b) Unión falló<br></br>+JOIN: Join failed<br></br>c) Proceso de unión en curso<br></br>+ JOIN: LoRaWAN modem is busy | Cuando el modo OTAA está habilitado, el comando JOIN se puede usar para unirse a una red conocida |
+| T+ DFU=" Nuevo estado"<br></br>ej: AT+DFU=ON // Habilitar función DFU<br></br>ej: AT+DFU=OFF //Deshabilitar función DFU<br></br>AT+DFU=? // Verificar si DFU está habilitado configuración | +DFU: ON<br></br>+DFU: OFF | Usar para entrar al modo DFU |
+| T+MODE="mode"<br></br>ej: AT+MODE=TEST // Entrar modo TEST<br></br>ej: AT+MODE= LWOTAA // Entrar modo LWOTAA<br></br>ej: AT+MODE= LWABP // Entrar modo LWABP | +MODE: LWABP // Entrar modo TEST exitosamente<br></br>+MODE: LWOTAA // Entrar modo LWOTAA exitosamente<br></br>+MODE: TEST // Entrar modo TEST exitosamente | Usar para seleccionar modo de trabajo |
+| AT + JOIN<br></br>AT + JOIN = FORCE | a) Unión exitosa +JOIN: Starting<br></br>+ JOIN: NORMAL<br></br>+JOIN: NetID 000024 DevAddr 48:00:00:01<br></br>+JOIN: Done<br></br>b) Unión fallida<br></br>+JOIN: Join failed<br></br>c) Proceso de unión en curso<br></br>+ JOIN: LoRaWAN modem is busy | Cuando el modo OTAA está habilitado, el comando JOIN podría usarse para unirse a una red conocida |
 
 Para más información, consulte [la Especificación de Comandos](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf).
 
@@ -279,7 +280,7 @@ La siguiente es la aplicación recién creada
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/10.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 10.** Mientras el módulo Wio-E5 aún sea accesible a través de la consola serial, envíe los siguientes comandos AT en el monitor serial:
+- **Paso 10.** Mientras el módulo Wio-E5 aún sea accesible a través de la consola serie, envíe los siguientes comandos AT en el monitor serie:
 
   - `AT+ID=DevEui` para obtener su Device EUI
   - `AT+ID=AppEui`, para obtener su App EUI
@@ -296,13 +297,13 @@ Tx: AT+KEY=APPKEY,"2B7E151628AED2A6ABF7158809CF4F3C"
 Rx: +KEY: APPKEY 2B7E151628AED2A6ABF7158809CF4F3C
 ```
 
-- **Paso 11.** Copia y pega la información anterior en los campos **DevEUI**, **AppEUI** y **AppKey**. El campo **End device ID** se llenará automáticamente cuando completemos **DevEUI**. Finalmente haz clic en **Register end device**
+- **Paso 11.** Copie y pegue la información anterior en los campos **DevEUI**, **AppEUI** y **AppKey**. El campo **End device ID** se completará automáticamente cuando completemos **DevEUI**. Finalmente haga clic en **Register end device**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 12.** Registra tu Gateway LoRaWAN® con la Consola de TTN. Por favor consulta las instrucciones mostradas [aquí](https://wiki.seeedstudio.com/es/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)
+- **Paso 12.** Registre su Gateway LoRaWAN® con TTN Console. Por favor consulte las instrucciones mostradas [aquí](https://wiki.seeedstudio.com/es/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)
 
-- **Paso 13.** Escribe los siguientes comandos AT para conectarte a TTN
+- **Paso 13.** Escriba los siguientes comandos AT para conectarse a TTN
 
 ```
 // If you are using US915
@@ -336,13 +337,13 @@ Rx: +JOIN: Start
 +JOIN: Done
 ```
 
-Si ves **+JOIN: Network joined** en tu consola serie, ¡eso significa que tu dispositivo se ha conectado exitosamente a TTN!
+Si ve **+JOIN: Network joined** en su consola serie, ¡eso significa que su dispositivo se ha conectado exitosamente a TTN!
 
-También puedes verificar el estado de tu dispositivo en la página **End devices**
+También puede verificar el estado de su dispositivo en la página **End devices**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/13.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 14.** Escribe los siguientes comandos AT para enviar datos a TTN
+- **Paso 14.** Escriba los siguientes comandos AT para enviar datos a TTN
 
 ```
 // send string "HELLO" to TTN 
@@ -357,19 +358,19 @@ Rx: +MSGHEX: Start
 +MSGHEX: Done
 ```
 
-Para más información sobre los Comandos AT, consulte [Especificación de Comandos AT de Wio-E5](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
+Para más información sobre Comandos AT, por favor consulte [Especificación de Comandos AT de Wio-E5](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
 
-### Desarrollar con el Paquete MCU STM32Cube
+### Desarrollar con STM32Cube MCU Package
 
-Esta sección es para Wio-E5 mini, con el objetivo de construir varias aplicaciones con el Paquete MCU STM32Cube para la serie STM32WL (SDK).
+Esta sección es para Wio-E5 mini, con el objetivo de construir varias aplicaciones con STM32Cube MCU Package para la serie STM32WL (SDK).
 
-**Nota:** Ahora hemos actualizado la biblioteca para soportar v1.1.0 que es la versión más reciente del Paquete MCU STM32Cube para la serie STM32WL.
+**Nota:** Ahora hemos actualizado la biblioteca para soportar v1.1.0 que es la versión más reciente de STM32Cube MCU Package para la serie STM32WL.
 
 :::note
-Por favor lea primero la sección [Borrar Firmware AT de Fábrica](https://wiki.seeedstudio.com/es/LoRa_E5_mini/#21-erase-factory-at-firmware), ya que necesitamos borrar el Firmware AT de Fábrica antes de programar con el SDK. Después de borrar el Firmware AT de Fábrica NO se puede recuperar.
+Por favor lea primero la sección [Borrar Firmware AT de Fábrica](https://wiki.seeedstudio.com/es/LoRa_E5_mini/#21-erase-factory-at-firmware), ya que necesitamos borrar el Firmware AT de Fábrica antes de programar con SDK. Después de borrar el Firmware AT de Fábrica NO PUEDE ser recuperado.
 :::
 
-#### Preparativos
+#### Preparaciones
 
 Software:
 
@@ -381,11 +382,11 @@ Hardware:
 
 - Gateway LoRaWAN® conectado a Servidor de Red LoRaWAN® (ej. TTN)
 
-- Un cable USB Tipo-C y un ST-LINK. Conecte el cable Tipo-C al puerto Tipo-C de la placa para alimentación y comunicación serie. Conecte el ST-LINK a los pines SWD como sigue
+- Un cable USB Type-C y un ST-LINK. Conecte el cable Type-C al puerto Type-C de la placa para alimentación y comunicación serie. Conecte el ST-LINK a los pines SWD como sigue
 
 ![connection](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/connection.png)
 
-#### Resumen de Configuración de GPIO
+#### Resumen de Configuración GPIO
 
 - Como el diseño de hardware de la serie Wio-E5 es un poco diferente al NUCLEO-WL55JC, la placa de desarrollo oficial STM32WL55JC de ST, los desarrolladores necesitan reconfigurar algunos gpios, para adaptar el ejemplo del SDK a la serie Wio-E5. Ya hemos reconfigurado los GPIOs, pero creemos que es necesario señalar la diferencia.
 
@@ -393,18 +394,22 @@ Hardware:
 |---------|---------------------|------------------------------------------|
 |RF_CTRL1|PC4|PA4|
 |RF_CTRL2|PC5|PA5|
-|RF_CTRL3|PC3|None|
+|RF_CTRL3|PC3|Ninguno|
 |BUT1|PA0|PB13 (Botón Boot)|
-|BUT2|PA1|None|
-|BUT3|PC6|None|
-|LED1|PB15|None|
+|BUT2|PA1|Ninguno|
+|BUT3|PC6|Ninguno|
+|LED1|PB15|Ninguno|
 |LED2|PB9|PB5|
-|LED3|PB11|None|
-|DBG1|PB12|PA0 (Botón D0)|
-|DBG2|PB13|PB10|
-|DBG3|PB14|PB3|
-|DBG4|PB10|PB4|
+|LED3|PB11|Ninguno|
+|PROB1|PB12|PA0 (Botón D0)|
+|PROB2|PB13|PB10|
+|PROB3|PB14|PB3|
+|PROB4|PB10|PB4|
 |Usart|Usart2(PA2/PA3)|Usart1(PB6/PB7)|
+
+:::note
+La etiqueta `PROB` se refiere al pin de Probe Line. Estos pines pueden configurarse como la función adicional `CM4_EVENTOUT`. Como parte de los componentes de depuración CoreSight del núcleo Arm Cortex-M4, esta característica permite depuración no intrusiva y etiquetado de eventos a nivel de hardware. Monitorea las actividades internas de la CPU en tiempo real sin pausar la CPU u ocupar interfaces de comunicación (como UART), convirtiendo "eventos" que son difíciles de observar directamente en software en señales eléctricas medibles.
+:::
 
 ### Aplicaciones
 
@@ -412,33 +417,33 @@ Ahora exploraremos varias aplicaciones para Wio-E5 mini con STM32Cube MCU Packag
 
 #### Nodo Final LoRaWAN®
 
-Esta aplicación conectará Wio-E5 mini con TTN (The Things Network) y enviará datos después de conectarse con una puerta de enlace LoRaWAN®.
+Esta aplicación conectará Wio-E5 mini con TTN (The Things Network) y enviará datos después de conectarse con un gateway LoRaWAN®.
 
-- **Paso 1.** Haz clic [aquí](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) para visitar el repositorio **Seeed-Studio/LoRaWan-E5-Node** y descárgalo como un archivo ZIP
+- **Paso 1.** Haga clic [aquí](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) para visitar el repositorio **Seeed-Studio/LoRaWan-E5-Node** y descárguelo como un archivo ZIP
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 2.** Extrae el archivo ZIP y navega a `LoRaWan-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node > STM32CubeIDE`
+- **Paso 2.** Extraiga el archivo ZIP y navegue a `LoRaWan-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node > STM32CubeIDE`
 
-- **Paso 3.** Haz doble clic en el archivo **.project**
+- **Paso 3.** Haga doble clic en el archivo **.project**
 
-  **Nota:** Para MAC, debería tomar una de las opciones siguientes para abrir el proyecto:
+  **Nota:** Para MAC, debe tomar una de las opciones siguientes para abrir el proyecto:
 
-  - **1.** Navega a `Wio-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node`. Haz doble clic en el archivo "LoRaWAN_End_Node.ioc".
+  - **1.** Navegue a `Wio-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node`. Haga doble clic en el archivo "LoRaWAN_End_Node.ioc".
 
-  - **2.** Usa "Import Projects from File System or Archieve" como se muestra en las imágenes siguientes.
+  - **2.** Use "Import Projects from File System or Archieve" como las imágenes siguientes.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/MAC.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 4.** Haz clic derecho en el proyecto y haz clic en **Properties**
+- **Paso 4.** Haga clic derecho en el proyecto y haga clic en **Properties**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/properties-open-2.jpg" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 5.** Navega a `C/C++ Build > Settings > MCU Post build outputs`, marca **Convert to Intel Hex file (-O ihex)** y haz clic en **Apply and Close**
+- **Paso 5.** Navegue a `C/C++ Build > Settings > MCU Post build outputs`, marque **Convert to Intel Hex file (-O ihex)** y haga clic en **Apply and Close**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/set-hex.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 6.** Haz clic en **Build 'Debug'**, y debería compilar sin errores
+- **Paso 6.** Haga clic en **Build 'Debug'**, y debería compilar sin errores
 
 ![build](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/build.png)
 
@@ -446,7 +451,7 @@ Esta aplicación conectará Wio-E5 mini con TTN (The Things Network) y enviará 
 
 Ahora modificaremos nuestro **Device EUI**, **Application EUI**, **Application KEY** y **Región LoRawan®**
 
-- **Paso 7.** Por favor sigue la [guía](https://wiki.seeedstudio.com/es/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network) aquí para configurar tu aplicación TTN, obtén tu **Application EUI** y cópialo a la definición de macro `LORAWAN_JOIN_EUI` en `LoRaWAN/App/se-identity.h`, por ejemplo, el Application EUI aquí es `80 00 00 00 00 00 00 0x07`:
+- **Paso 7.** Por favor sigue la [guía](https://wiki.seeedstudio.com/es/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network) aquí para configurar tu aplicación TTN, obtener tu **Application EUI** y copiarlo a la definición de macro `LORAWAN_JOIN_EUI` en `LoRaWAN/App/se-identity.h`, por ejemplo, el Application EUI aquí es `80 00 00 00 00 00 00 0x07`:
 
 ```cpp
 // LoRaWAN/App/se-identity.h
@@ -457,7 +462,7 @@ Ahora modificaremos nuestro **Device EUI**, **Application EUI**, **Application K
 #define LORAWAN_JOIN_EUI                                   { 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07 }
 ```
 
-- **Paso 8.** También puedes modificar tu **Device EUI** y **Application Key**, configurando la definición de macro `LORAWAN_DEVICE_EUI` y `LORAWAN_NWK_KEY` en `LoRaWAN/App/se-identity.h`. Asegúrate de que `LORAWAN_DEVICE_EUI` y `LORAWAN_NWK_KEY` sean iguales al `Device EUI` y `App Key` en la consola de TTN.
+- **Paso 8.** También puedes modificar tu **Device EUI** y **Application Key**, configurando las definiciones de macro `LORAWAN_DEVICE_EUI` y `LORAWAN_NWK_KEY` en `LoRaWAN/App/se-identity.h`. Asegúrate de que `LORAWAN_DEVICE_EUI` y `LORAWAN_NWK_KEY` sean iguales al `Device EUI` y `App Key` en la consola TTN.
 
 ```cpp
 // LoRaWAN/App/se-identity.h
@@ -487,7 +492,7 @@ Ahora modificaremos nuestro **Device EUI**, **Application EUI**, **Application K
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/lora-app-h.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 10.** Después de las modificaciones anteriores, **reconstruye** el ejemplo y programa tu Wio-E5. Abre `STM32CubeProgrammer`, conecta ST-LINK a tu PC, mantén presionado el `Botón RESET` de tu dispositivo, luego haz clic en `Connect` y suelta el `Botón RESET`:
+- **Paso 10.** Después de las modificaciones anteriores, **recompila** el ejemplo y programa tu Wio-E5. Abre `STM32CubeProgrammer`, conecta ST-LINK a tu PC, mantén presionado el `RESET Button` de tu dispositivo, luego haz clic en `Connect` y suelta el `RESET Button`:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -495,13 +500,13 @@ Ahora modificaremos nuestro **Device EUI**, **Application EUI**, **Application K
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 12.** Ahora, ve a la página `Erasing & Programming`, selecciona la ruta de tu archivo hex (por ejemplo: `C:\Users\user\Downloads\LoRaWan-E5-Node\Projects\Applications\LoRaWAN\LoRaWAN_End_Node\STM32CubeIDE\Debug\LoRaWAN_End_Node.hex`), selecciona las opciones de programación como se muestra en la siguiente imagen, ¡luego haz clic en `Start Programming`!
+- **Paso 12.** Ahora, ve a la página `Erasing & Programming`, selecciona la ruta de tu archivo hex (por ejemplo: `C:\Users\user\Downloads\LoRaWan-E5-Node\Projects\Applications\LoRaWAN\LoRaWAN_End_Node\STM32CubeIDE\Debug\LoRaWAN_End_Node.hex`), selecciona las opciones de programación como en la siguiente imagen, ¡luego haz clic en `Start Programming`!
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program3.png" alt="pir" width={600} height="auto" /></p>
 
 Verás el mensaje **Download verified successfully**, una vez que la programación haya terminado.
 
-- **Paso 13.** Si tu Gateway LoRaWAN® y TTN están configurados, ¡Wio-E5 se unirá exitosamente después del reinicio! Un paquete LoRaWAN® de confirmación será enviado a TTN cada 30 segundos. El siguiente registro se imprimirá en el monitor serie (aquí se usa el Monitor Serie de Arduino) si la unión es exitosa:
+- **Paso 13.** Si tu Gateway LoRaWAN® y TTN están configurados, ¡Wio-E5 se unirá exitosamente después del reinicio! Un paquete LoRaWAN® de confirmación se enviará a TTN cada 30 segundos. El siguiente registro se imprimirá en el monitor serie (aquí se usa Arduino Serial Monitor) si la unión es exitosa:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/TTN-joined.png" alt="pir" width={600} height="auto" /></p>
 
@@ -515,13 +520,13 @@ Verás el mensaje **Download verified successfully**, una vez que la programaci�
 #define RBI_CONF_RFO     RBI_CONF_RFO_LP
 ```
 
-Aunque **RBI_CONF_RFO** está definido como **RBI_CONF_RFO_LP_HP** en `radio_board_if.h`, no se utilizará porque **USE_BSP_DRIVER** está definido y la función **BSP_RADIO_GetTxConfig()** devuelve **RADIO_CONF_RFO_HP**
+Aunque **RBI_CONF_RFO** está definido como **RBI_CONF_RFO_LP_HP** en `radio_board_if.h`, no se usará porque **USE_BSP_DRIVER** está definido y la función **BSP_RADIO_GetTxConfig()** devuelve **RADIO_CONF_RFO_HP**
 
 #### FreeRTOS LoRaWAN®
 
-Esta aplicación también conectará Wio-E5 mini con TTN (The Things Network) y enviará datos después de conectarse con una puerta de enlace LoRaWAN®. La diferencia entre la aplicación anterior LoRaWAN® End Node y esta aplicación FreeRTOS LoRaWAN® es que la anterior se ejecuta en bare metal mientras que esta se ejecuta bajo FreeRTOS.
+Esta aplicación también conectará Wio-E5 mini con TTN (The Things Network) y enviará datos después de conectarse con un gateway LoRaWAN®. La diferencia entre la aplicación anterior de Nodo Final LoRaWAN® y esta aplicación FreeRTOS LoRaWAN® es que la anterior se ejecuta en metal desnudo mientras que esta se ejecuta bajo FreeRTOS.
 
-- **Paso 1.** Haz clic [aquí](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) para visitar el repositorio **Seeed-Studio/LoRaWan-E5-Node** y descárgalo como un archivo ZIP
+- **Paso 1.** Haz clic [aquí](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) para visitar el repositorio **Seeed-Studio/LoRaWan-E5-Node** y descargarlo como archivo ZIP
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width={600} height="auto" /></p>
 
@@ -529,13 +534,13 @@ Esta aplicación también conectará Wio-E5 mini con TTN (The Things Network) y 
 
 - **Paso 3.** Haz doble clic en el archivo **.project**
 
-- **Paso 4.** ¡Consulta el **paso 4 - paso 13** de la aplicación anterior **LoRaWAN® End Node** para conectar Wio-E5 mini con TTN!
+- **Paso 4.** Consulta los **pasos 4 - 13** de la aplicación anterior **Nodo Final LoRaWAN®** para conectar Wio-E5 mini con TTN!
 
 #### FreeRTOS LoRaWAN® AT
 
-Esta aplicación también conectará Wio-E5 mini con TTN (The Things Network) y enviará datos después de conectarse con una puerta de enlace LoRaWAN®. La diferencia entre la aplicación anterior FreeRTOS LoRaWAN y esta aplicación es que puedes usar comandos AT.
+Esta aplicación también conectará Wio-E5 mini con TTN (The Things Network) y enviará datos después de conectarse con un gateway LoRaWAN®. La diferencia entre la aplicación anterior FreeRTOS LoRaWAN y esta aplicación es que puedes usar comandos AT.
 
-- **Paso 1.** Haz clic [aquí](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) para visitar el repositorio **Seeed-Studio/LoRaWan-E5-Node** y descárgalo como un archivo ZIP
+- **Paso 1.** Haz clic [aquí](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) para visitar el repositorio **Seeed-Studio/LoRaWan-E5-Node** y descargarlo como archivo ZIP
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width={600} height="auto" /></p>
 
@@ -543,7 +548,7 @@ Esta aplicación también conectará Wio-E5 mini con TTN (The Things Network) y 
 
 - **Paso 3.** Haz doble clic en el archivo **.project**
 
-- **Paso 4.** Consulta el **paso 4 - paso 12** de la aplicación anterior **LoRaWAN End Node**
+- **Paso 4.** Consulta los **pasos 4 - 12** de la aplicación anterior **Nodo Final LoRaWAN**
 
 - **Paso 5.** Abre un monitor serie como **Arduino Serial Monitor** y verás la siguiente salida
 
@@ -553,7 +558,7 @@ Esta aplicación también conectará Wio-E5 mini con TTN (The Things Network) y 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/at-commands.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 7.** Si aún quieres cambiar **Device EUI**, **Application EUI**, **Application KEY** y **LoRawan® Region**, puedes cambiarlos usando comandos AT. Sin embargo, estos parámetros ya están configurados en **se-identity.h** y **lora_app.h** en este ejemplo
+- **Paso 7.** Si aún quieres cambiar **Device EUI**, **Application EUI**, **Application KEY** y **Región LoRawan®**, puedes cambiarlos usando comandos AT. Sin embargo, estos parámetros ya están configurados en **se-identity.h** y **lora_app.h** en este ejemplo
 
 - **Paso 8.** Escribe **AT+JOIN=1** y verás la siguiente salida una vez que la unión sea exitosa!
 
@@ -563,9 +568,9 @@ Esta aplicación también conectará Wio-E5 mini con TTN (The Things Network) y 
 
 #### FreeRTOS LowPower
 
-Esta aplicación habilitará el modo de bajo consumo en Wio-E5 mini. Una vez que la aplicación esté cargada, la placa consumirá energía normalmente durante 2 segundos y entrará en modo de bajo consumo durante 2 segundos y así sucesivamente.
+Esta aplicación habilitará el modo de bajo consumo en Wio-E5 mini. Una vez que la aplicación esté flasheada, la placa consumirá energía normalmente durante 2 segundos y entrará en modo de bajo consumo durante 2 segundos y así sucesivamente.
 
-- **Paso 1.** Haz clic [aquí](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) para visitar el repositorio **Seeed-Studio/LoRaWan-E5-Node** y descárgalo como un archivo ZIP
+- **Paso 1.** Haz clic [aquí](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) para visitar el repositorio **Seeed-Studio/LoRaWan-E5-Node** y descargarlo como archivo ZIP
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width={600} height="auto" /></p>
 
@@ -587,7 +592,7 @@ Esta aplicación habilitará el modo de bajo consumo en Wio-E5 mini. Una vez que
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-lpower-success.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 7.** Abre `STM32CubeProgrammer`, conecta ST-LINK a tu PC, mantén presionado el `Botón RESET` de tu dispositivo, luego haz clic en `Connect` y suelta el `Botón RESET`:
+- **Paso 7.** Abre `STM32CubeProgrammer`, conecta ST-LINK a tu PC, mantén presionado el `RESET Button` de tu dispositivo, luego haz clic en `Connect` y suelta el `RESET Button`:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -595,19 +600,19 @@ Esta aplicación habilitará el modo de bajo consumo en Wio-E5 mini. Una vez que
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png" alt="pir" width={600} height="auto" /></p>
 
-- **Paso 9.** Ahora, ve a la página `Erasing & Programming`, selecciona la ruta de tu archivo hex (por ejemplo: `C:\Users\user\Downloads\LoRaWan-E5-Node\Projects\Applications\FreeRTOS\FreeRTOS_LowPower\Debug\FreeRTOS_LowPower.hex`), selecciona las opciones de programación como en la siguiente imagen, ¡luego haz clic en `Start Programming`!
+- **Paso 9.** Ahora, ve a la página `Erasing & Programming`, selecciona la ruta de tu archivo hex (por ejemplo: `C:\Users\user\Downloads\LoRaWan-E5-Node\Projects\Applications\FreeRTOS\FreeRTOS_LowPower\Debug\FreeRTOS_LowPower.hex`), selecciona las opciones de programación como se muestra en la siguiente imagen, ¡luego haz clic en `Start Programming`!
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program3.png" alt="pir" width={600} height="auto" /></p>
 
 Verás el mensaje **Download verified successfully**, una vez que la programación haya terminado.
 
-- **Paso 10.** Conecta el Wio-E5 mini a una PC conectando un medidor de potencia. Notarás que el LED rojo en la placa parpadea cada segundo y la placa alterna entre estados normal y de bajo consumo (La corriente en el medidor de potencia baja durante 1 segundo para el estado de bajo consumo y vuelve a subir durante 1 segundo para el estado de funcionamiento normal)
+- **Paso 10.** Conecta el Wio-E5 mini a una PC conectando un medidor de potencia. Notarás que el LED rojo en la placa parpadea cada segundo y la placa alterna entre estados normales y de bajo consumo (La corriente en el medidor de potencia baja durante 1 segundo para el estado de bajo consumo y vuelve a subir durante 1 segundo para el estado de funcionamiento normal)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/low-power-demo-2.gif" alt="pir" width={600} height="auto" /></p>
 
 #### Bajo Consumo
 
-Esta aplicación también habilitará el modo de bajo consumo en el Wio-E5 mini. La diferencia entre la aplicación anterior de Bajo Consumo FreeRTOS y esta aplicación de Bajo Consumo es que la anterior se ejecuta bajo FreeRTOS mientras que esta se ejecuta en bare metal.
+Esta aplicación también habilitará el modo de bajo consumo en Wio-E5 mini. La diferencia entre la aplicación anterior FreeRTOS LowPower y esta aplicación Low Power es que la anterior se ejecuta bajo FreeRTOS mientras que esta se ejecuta en bare metal.
 
 - **Paso 1.** Haz clic [aquí](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) para visitar el repositorio **Seeed-Studio/LoRaWan-E5-Node** y descárgalo como un archivo ZIP
 
@@ -617,11 +622,11 @@ Esta aplicación también habilitará el modo de bajo consumo en el Wio-E5 mini.
 
 - **Paso 3.** Haz doble clic en el archivo **.project**
 
-- **Paso 4.** Consulta el **paso 4 - paso 10** de la aplicación anterior de **Bajo Consumo FreeRTOS** y verás la misma salida al final en el medidor de potencia!
+- **Paso 4.** Consulta el **paso 4 - paso 10** de la aplicación anterior **FreeRTOS LowPower** y verás la misma salida al final en el medidor de potencia!
 
 ## Recursos
 
-Hoja de datos del Wio-E5 mini:
+Hoja de datos de Wio-E5 mini:
 
 - <p><a href="http://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.brd">Wio-E5 mini v1.0.brd</a></p>
 
@@ -629,25 +634,25 @@ Hoja de datos del Wio-E5 mini:
 
 - <p><a href="http://files.seeedstudio.com/products/113990939/LoRa-E5%20mini%20v1.0.sch">Wio-E5 mini v1.0.sch</a></p>
 
-Hoja de datos del Wio-E5:
+Hoja de datos de Wio-E5:
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.1.pdf">Hoja de datos y especificaciones del Wio-E5</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.1.pdf">Hoja de datos y especificaciones de Wio-E5</a></p>
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">Especificación de comandos AT del Wio-E5</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">Especificación de comandos AT de Wio-E5</a></p>
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/STM32WLE5JC%20Datasheet.pdf">Hoja de datos del STM32WLE5JC</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/STM32WLE5JC%20Datasheet.pdf">Hoja de datos STM32WLE5JC</a></p>
 
-Certificaciones del Wio-E5:
+Certificaciones de Wio-E5:
 
 - <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20Certification%20CE-VOC-RED.pdf">Certificación Wio-E5-HF CE-VOC-RED</a></p>
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">Certificación FCC del Wio-E5-HF -DSS</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">Certificación FCC Wio-E5-HF -DSS</a></p>
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">Certificación FCC del Wio-E5-HF -DTS</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">Certificación FCC Wio-E5-HF -DTS</a></p>
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/Telec.zip">Certificación TELEC del Wio-E5-HF</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/Telec.zip">Certificación TELEC Wio-E5-HF</a></p>
 
-- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20IC%20ID.pdf">Certificación IC del Wio-E5-HF</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20IC%20ID.pdf">Certificación IC Wio-E5-HF</a></p>
 
 SDK relevante:
 
@@ -655,7 +660,7 @@ SDK relevante:
 
 ## Soporte Técnico y Discusión de Productos
 
-Por favor envía cualquier problema técnico a nuestro [foro](http://forum.seeedstudio.com/).
+Por favor, envía cualquier problema técnico a nuestro [foro](http://forum.seeedstudio.com/).
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

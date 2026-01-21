@@ -377,7 +377,7 @@ reComputer R1000 支持三种电源供电选项：AC、DC 端子和 PoE 端口�
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-reComputer R1000 的额定 AC 电压为 12~24 V 或 DC 电压为 9~36V。电源通过 2 针电源端子块连接器连接。要为 reComputer R1000 接地，可以将接地线固定到电源端子左上角的螺丝上。
+reComputer R1000 的额定 AC 电压为 12\~24 V 或 DC 电压为 9\~36V。电源通过 2 针电源端子块连接器连接。要为 reComputer R1000 接地，可以将接地线固定到电源端子左上角的螺丝上。
 
 :::note
 电源解决方案采用桥式整流二极管进行反极性保护，兼容 AC 和 DC 输入。这确保了**无论电源的正负极如何连接**，电路都不会损坏。通过使用桥式整流器，无论输入 DC 极性如何，输出电压极性都保持固定，提供有效的反极性保护。

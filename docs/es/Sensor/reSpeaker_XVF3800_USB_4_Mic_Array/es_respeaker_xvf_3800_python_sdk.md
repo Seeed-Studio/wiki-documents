@@ -1,12 +1,12 @@
 ---
-description: El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo de micrófonos circular profesional con AEC, formación de haz, supresión de ruido y captura de voz de 360°. Emparejado con el XIAO ESP32S3, permite control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre la integración perfecta y flexibilidad de modo dual.
+description: El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo de micrófonos circular profesional con AEC, formación de haces, supresión de ruido y captura de voz de 360°. Emparejado con el XIAO ESP32S3, permite control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre la integración perfecta y flexibilidad de modo dual.
 
 title: Control del reSpeaker XVF3800 con Python
 keywords:
 - reSpeaker
 - python
 - sdk
-image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.jpg
+image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /es/respeaker_xvf3800_python_sdk
 last_update:
   date: 11/14/2025
@@ -16,11 +16,11 @@ last_update:
 ## Introducción 
 
 En esta sección, vamos a hablar sobre cómo controlar tu ReSpeaker XVF-3800 usando el SDK de Python. Hace que el desarrollo sea más conveniente para usuarios que quieren construir sus propias aplicaciones.
-Por ejemplo, puedes detectar de dónde viene la voz, realizar detección de actividad de voz (VAD), controlar LEDs y mucho más.
+Por ejemplo, puedes detectar de dónde viene la voz, realizar detección de actividad de voz (VAD), controlar LEDs, y mucho más.
 
 ## SDK de Python
 
-Tenemos una guía completa de Python sobre cómo comunicarse con el XVF3800 usando el firmware USB. Este script de Python puede ejecutarse en tu IDE favorito sin requerir el **XVF_Host** del XVF3800.
+Tenemos una guía completa de Python sobre cómo comunicarse con el XVF3800 usando el firmware USB. Este script de Python puede ejecutarse en tu IDE favorito sin requerir el **XVF_Host** del XVF3800. Puedes encontrar más comandos desde este [enlace](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control).
 
 Necesitas instalar la librería `pyusb`.
 
@@ -143,7 +143,7 @@ if __name__ == '__main__':
 ## Usando XVF_Host 
 
 Por favor consulta la documentación para entender qué es XVF_Host.
-En esta sección, vamos a trabajar con [XVF_Host](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#cómo-controlar-respeaker-xvf3800) usando un script de Python.
+En esta sección, vamos a trabajar con [XVF_Host](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#how-to-control-respeaker-xvf3800) usando un script de Python.
 
 ### Ejemplos de Python para ReSpeaker XVF3800
 
@@ -186,7 +186,7 @@ Asegúrate de que `xvf_host` sea ejecutable y tu placa esté conectada vía USB 
 </TabItem>
 </Tabs>
 
-El archivo `test.py` puede explorarse de la siguiente manera. Esto es para tu referencia en Linux.
+El archivo `test.py` puede explorarse como sigue. Esto es para tu referencia en Linux.
 
 ```python
 import subprocess
@@ -237,7 +237,7 @@ if __name__ == "__main__":
 
 
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 

@@ -34,8 +34,8 @@ import TabItem from '@theme/TabItem';
  </table>
 </div>
 
-El Seeed Studio XIAO ESP32-C5 es una placa de desarrollo potente y versátil que cuenta con una variedad de interfaces periféricas y pines GPIO. Estos pines pueden usarse para diversos propósitos, como comunicarse con otros dispositivos, leer sensores analógicos, controlar LEDs y más. En este tutorial, te guiaremos sobre cómo usar los pines multiplexados del XIAO ESP32-C5.<br/>
-En resumen, el XIAO ESP32-C5 cuenta con 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (capaces de PWM), 5×canales ADC y una interfaz de pad de conexión JTAG.
+El Seeed Studio XIAO ESP32-C5 es una placa de desarrollo potente y versátil que cuenta con una variedad de interfaces periféricas y pines GPIO. Estos pines pueden utilizarse para diversos propósitos, como comunicarse con otros dispositivos, leer sensores analógicos, controlar LEDs y más. En este tutorial, te guiaremos sobre cómo usar los pines multiplexados del XIAO ESP32-C5.<br/>
+En resumen, el XIAO ESP32-C5 cuenta con 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (capaces de PWM), 5×canales ADC, y una interfaz de pads de conexión JTAG (pads en el lado reverso).
 
 ## Introducción
 
@@ -64,7 +64,7 @@ Antes de comenzar, revisemos todos los pines que tiene el XIAO ESP32-C5 y sus fu
 
 ### Digital
 
-Los 11 pines IO (D0–D10) del XIAO ESP32-C5 soportan funciones digitales. A continuación se muestra un ejemplo práctico que demuestra cómo usar funciones digitales para controlar el estado de encendido/apagado de una luz, y puedes multiplexar estos pines según tus requisitos específicos.
+Los 11 pines IO (D0–D10) del XIAO ESP32-C5 soportan funciones digitales. A continuación se muestra un ejemplo práctico que demuestra cómo usar funciones digitales para controlar el estado encendido/apagado de una luz, y puedes multiplexar estos pines según tus requisitos específicos.
 
 #### Preparación de Hardware
 
@@ -111,7 +111,7 @@ Los 11 pines IO (D0–D10) del XIAO ESP32-C5 soportan funciones digitales. A con
 Los siguientes ejemplos de código están basados en Arduino IDE y PlatformIO respectivamente, y logran el mismo efecto de control. Puedes seleccionar y reutilizar el código apropiado según tu situación de desarrollo actual.
 
 <Tabs>
-<TabItem value='Arduino IDE'>
+<TabItem value=' Arduino IDE'>
 
 - Código de Referencia
 
@@ -477,7 +477,7 @@ void loop() {
 
 #### Resultado
 
-Abre el monitor serie, y mostrará el valor ADC crudo (analogValue), valor en milivoltios (analogVolts), y valor de voltaje (voltage) leído del Grove-Rotary Angle Sensor. Ocurrirán cambios obvios mientras rotas el Grove-Rotary Angle Sensor.
+Abre el monitor serie, e imprimirá el valor ADC crudo (analogValue), valor en milivoltios (analogVolts), y valor de voltaje (voltage) leído del Grove-Rotary Angle Sensor. Cambios obvios ocurrirán mientras rotas el Grove-Rotary Angle Sensor.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_3.png" style={{width:600, height:'auto'}}/></div>
 
@@ -487,7 +487,7 @@ El XIAO ESP32-C5 cuenta con dos interfaces de comunicación serie por hardware: 
 
 #### USB / UART1 Serial
 
-Para **USB Serial**, conecta la placa directamente a una computadora vía USB-C para monitoreo — esta es la interfaz utilizada en los ejemplos anteriores. Para **UART1 Serial**, usa el Seeed Studio **XIAO Debug Mate** para monitoreo.
+Para **USB Serial**, conecta la placa directamente a una computadora vía USB-C para monitoreo — esta es la interfaz usada en los ejemplos anteriores. Para **UART1 Serial**, usa el Seeed Studio **XIAO Debug Mate** para monitoreo.
 
 ##### Preparación de Hardware
 
@@ -588,7 +588,7 @@ void loop() {
 
 Después de cargar el programa, puedes monitorearlo a través de la función UART del Seeed Studio **XIAO Debug Mate**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_3.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 Si no has usado el Seeed Studio XIAO Debug Mate antes, puedes visitar [Introducción al XIAO Debug Mate](https://wiki.seeedstudio.com/es/getting_started_with_xiao_debug_mate/).
@@ -916,7 +916,7 @@ El chip XIAO ESP32-C5 integra una interfaz SPI, que puede usarse para conectar d
 Los siguientes fragmentos de código están basados en Arduino IDE y PlatformIO respectivamente, y logran el mismo efecto de visualización. Puedes seleccionar y reutilizar el código apropiado según tus necesidades reales de desarrollo.
 
 <Tabs>
-<TabItem value=' Arduino IDE'>
+<TabItem value='Arduino IDE'>
 
 - Instala la librería U8g2.
 

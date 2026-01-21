@@ -1,5 +1,5 @@
 ---
-title: Introducción al Seeed Studio XIAO ESP32-C5
+title: Introducción a Seeed Studio XIAO ESP32-C5
 description: |
 keywords:
   - xiao
@@ -86,14 +86,14 @@ last_update:
             <td>Botón Reset / Boot</td>
             <td>Botón Reset / Boot</td>
             <td>Botón Reset / Boot</td>
-            <td>Botón Reset / Botón Boot</td>
+            <td>Botón reset / Botón boot</td>
         </tr>
         <tr>
             <th>LEDs Integrados</th>
-            <td>LED de Carga / LED de USUARIO</td>
-            <td>LED de Carga / LED de USUARIO</td>
+            <td>LED de Carga / Usuario</td>
+            <td>LED de Carga / Usuario</td>
             <td>LED de Carga</td>
-            <td>LED de Carga / LED de USUARIO</td>
+            <td>LED de Carga / Usuario</td>
         </tr>
         <tr>
             <th>Chip de Carga de Batería</th>
@@ -112,10 +112,10 @@ last_update:
 - **Subsistema Bluetooth LE:** Soporta características de Bluetooth 5 y Bluetooth mesh
 - **Mejor rendimiento RF:** Antena RF externa incluida.
 - **Chip de carga de batería:** Soporta gestión de carga y descarga de batería de litio.
-- **Recursos ricos en chip:** 384 KB de SRAM en chip, 320 KB de ROM
+- **Recursos abundantes en chip:** 384 KB de SRAM en chip, 320 KB de ROM
 - **Tamaño ultra pequeño:** Tan pequeño como un pulgar (21x17.8mm) factor de forma clásico de la serie XIAO para dispositivos portátiles y proyectos pequeños
-- **Características de seguridad confiables**: Aceleradores de hardware criptográfico que soportan AES-128/256, hashing de familia SHA, HMAC, un periférico de firma digital dedicado, y Secure Boot (V2).
-- **Interfaces ricas**: 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (capaces de PWM), 5×canales ADC, y una interfaz de pad de enlace JTAG.
+- **Características de seguridad confiables**: Aceleradores de hardware criptográfico que soportan AES-128/256, familia de hash SHA, HMAC, un periférico de firma digital dedicado, y Secure Boot (V2).
+- **Interfaces ricas**: 1×I2C, 1×SPI, 2×UART, hasta 11×GPIO (capaces de PWM), 5×canales ADC, y una interfaz de pads de conexión JTAG (pads en el lado reverso).
 - Componentes de un solo lado, diseño de montaje superficial
 
 ## Descripción general del hardware
@@ -136,7 +136,7 @@ last_update:
 </table>
 
  ## **Mapa de Pines**
-| Pin XIAO                | Función   | Pin del Chip  | Funciones Alternativas       | Descripción                  |
+| Pin XIAO               | Función   | Pin del Chip  | Funciones Alternativas       | Descripción                  |
 | :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
 | 5V                     | VBUS       |           |                          | Entrada/Salida de Energía           |
 | GND                    |            |           |                          |                              |
@@ -156,7 +156,8 @@ last_update:
 | MTDI                   |            | GPIO3     |                          | JTAG, ADC                    |
 | MTCK                   |            | GPIO4     |                          | JTAG, ADC                    |
 | MTMS                   |            | GPIO2     |                          | JTAG, ADC                    |
-| ADC_BAT                |            | GPIO06    |                          | Leer el valor de voltaje de BAT   |
+| ADC_BAT                |            | GPIO6    |                          | Leer el valor de voltaje de la batería   |
+| ADC_CRL                |            | GPIO26    |                          | Controla (habilita/deshabilita) el circuito de medición para ahorrar energía.   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
 | Boot                   |            | GPIO28    |                          | Entrar en Modo Boot              |
 | U.FL-R-SMT1            |            | LNA_IN    |                          | Antena UFL                  |
@@ -205,7 +206,7 @@ La herramienta de programación recomendada para el XIAO ESP32-C5 es el Arduino 
 Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-- **Paso 1.** Descarga e instala la versión estable del Arduino IDE según tu sistema operativo.
+- **Paso 1.** Descarga e instala la versión estable de Arduino IDE según tu sistema operativo.
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
       <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong></a>
@@ -217,15 +218,15 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
-### Cargar Programa
+### Subir Programa
 
 Tomemos un programa de iluminación como ejemplo a continuación
 
-**Paso 1.** Selecciona **XIAO_ESP32C5** y PUERTO. Si no conoces el PUERTO, puedes volver a insertar y quitar el XIAO_ESP3-2C5 para verificar.
+**Paso 1.** Selecciona **XIAO_ESP32C5** y PUERTO. Si no conoces el PUERTO, puedes volver a insertar y quitar el XIAO_ESP32C5 para verificarlo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/select_board.png" style={{width:800, height:'auto'}}/></div>
 
-**Paso 2.** Pega el Código en tu Sketch
+**Paso 2.** Pega el código en tu Sketch
 
 **LED_BUILTIN** corresponde al **LED L** en la placa de desarrollo.
 
@@ -247,7 +248,7 @@ void loop() {
 }
 ```
 
-**Paso 3.** Haz Clic y Sube
+**Paso 3.** Haz clic y Sube
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/upload_1.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -309,7 +310,7 @@ void setup(){
 void loop(){}
 ```
 
-Si eres lo suficientemente rápido para abrir el monitor serie antes de que el XIAO entre en sueño profundo, entonces puedes ver la salida del mensaje como se muestra a continuación. Esto significa que el XIAO ahora está **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido-apagado del **LED L** para verificar si el dispositivo ha sido despertado. Una vez que se despierte, exhibirá un efecto de parpadeo.
+Si eres lo suficientemente rápido para activar el monitor serie antes de que el XIAO entre en sueño profundo, entonces puedes ver la salida del mensaje como se muestra a continuación. Esto significa que el XIAO está ahora **dormido**. Luego también puedes verlo y activarlo presionando el botón. También puedes observar el estado de encendido-apagado del **LED L** para verificar si el dispositivo ha sido despertado. Una vez que se despierte, exhibirá un efecto de parpadeo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/deepsleepmode_1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -321,7 +322,7 @@ Si eres lo suficientemente rápido para abrir el monitor serie antes de que el X
 Actualmente el XIAO ESP32-C5 solo soporta despertar por GPIO, y los únicos pines que soportan despertar son D0~D1. Este programa puede no funcionar en otros pines.
 :::
 
-## Uso de Batería
+## Uso de batería
 
 El XIAO ESP32-C5 es capaz de usar una batería de litio de 3.7V como entrada de alimentación. Puedes consultar el siguiente diagrama para el método de cableado.
 
@@ -335,7 +336,7 @@ Por favor ten cuidado de no cortocircuitar los terminales positivo y negativo y 
 
 1. Por favor usa baterías calificadas que cumplan con las especificaciones.
 2. XIAO puede conectarse a tu dispositivo de computadora a través de cable de datos mientras usa la batería, ten la seguridad de que XIAO tiene un chip de protección de circuito incorporado, que es seguro.
-3. Cuando el XIAO ESP32-C5 es alimentado por una batería, el **LED C** se encenderá. Puedes usar esto como base para determinar si se ha llevado a cabo la gestión de carga.
+3. Cuando XIAO ESP32-C5 es alimentado por una batería, el **LED C** se encenderá. Puedes usar esto como base para determinar si se ha llevado a cabo la gestión de carga.
 
 ### Verificar el voltaje de la batería
 
@@ -369,30 +370,35 @@ void loop() {
 - **`analogReadMilliVolts(BAT_Voltage_Read)`**
 
   - Esta función se usa para leer el voltaje analógico actual del pin `BAT_VOLT_PIN` y devolver un valor de voltaje calibrado en milivoltios (mV).
-  - A diferencia del `analogRead()` convencional, que solo proporciona un valor ADC crudo, `analogReadMilliVolts()` aplica automáticamente los parámetros de calibración de fábrica incorporados en el chip. Esto resulta en mayor precisión, linealidad mejorada en la medición de voltaje, y elimina la necesidad de conversión manual de ADC a voltaje.
+  - A diferencia del `analogRead()` convencional, que solo proporciona un valor ADC crudo, `analogReadMilliVolts()` aplica automáticamente los parámetros de calibración de fábrica incorporados en el chip. Esto resulta en mayor precisión, mejor linealidad en la medición de voltaje, y elimina la necesidad de conversión manual de ADC a voltaje.
   - Durante el proceso de muestreo de voltaje, se realiza un **muestreo repetido 16 veces** a través de un bucle `for`, y los resultados se acumulan. El propósito del muestreo múltiple es suprimir el ruido transitorio y errores discretos, mejorando así la estabilidad de la medición. Finalmente, el valor acumulado se divide por el número de muestras (16) para obtener un valor de voltaje promediado más suave y confiable.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/battery_print_1.png" alt="pir" width="800" height="auto"/></div>
 
 :::tip
-Según la hoja de datos, el rango de medición efectivo del ESP32-C5 cubre 0~3300 mV. Por lo tanto, el circuito de adquisición de voltaje de batería incorporado del XIAO ESP32-C5 está diseñado con dos resistencias de 100K para división de voltaje, permitiendo la lectura precisa de valores.
+Según la hoja de datos, el rango de medición efectivo del ESP32-C5 cubre 0~3300 mV. Por lo tanto, el circuito de adquisición de voltaje de batería incorporado del XIAO ESP32-C5 está diseñado con dos resistores de 100K para división de voltaje, permitiendo la lectura precisa de valores.
 :::
 
 ## Recursos
 
+- **[PDF]** [Hoja de datos ESP32-C5](https://documentation.espressif.com/esp32-c5_datasheet_en.pdf)
+
 - **[PDF]** [Hoja de datos ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
+- **[Archivos de diseño PCB]** [Proyecto KiCad XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
+- **[Esquemático]** [Esquemático XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
 
-<!-- - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 
-- **[PDF]** [Seeed Studio XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
+- **[ZIP]** [Librerías KiCAD Seeed Studio XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
 
-- **[XLSX]** [Seeed Studio XIAO ESP32-C5 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
+- **[PDF]** [Esquemático Seeed Studio XIAO ESP32-C5](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
 
-- 🔗**[Kicad]** [Seeed Studio XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- **[XLSX]** [Hoja de pines Seeed Studio XIAO ESP32-C5](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
 
-- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1) -->
+- **[Kicad]** [Huella Seeed Studio XIAO ESP32-C5](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-## Soporte Técnico y Discusión de Productos
+- **[STEP]** [Archivo Step Seeed Studio XIAO ESP32-C5](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
+
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 

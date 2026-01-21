@@ -317,7 +317,7 @@ reComputer J40/ J30 系列在随附的 NVMe SSD 上预装了 JetPack 5.1，因�
 **步骤 4.** 移除跳线
 
 </details>
-
+<!-- 
 ### 使用单个命令刷写设备
 
 <details>
@@ -338,7 +338,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 免责声明：一键刷写脚本旨在使 jetpack 刷写更快。当前版本是测试版，可能存在许多问题。希望您能理解。如果出现刷写问题，请按照下面的 `逐步刷写设备` 进行操作，并在我们的 [Discord Jetson 频道](https://discord.com/channels/862602258452578314/930732339624026152) 中提供反馈。我们将及时修复这些问题，并在不久的将来改进此功能。
 :::
 
-</details>
+</details> -->
 
 ### 逐步刷写设备
 

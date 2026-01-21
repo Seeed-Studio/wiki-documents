@@ -143,7 +143,7 @@ ea094cbd-3695-4205-b32d-70c1dea93c35
 
 #### BLE 扫描器
 
-在 **BLE 扫描器模式** 中，XIAO ESP32-C5 充当 **中央设备** 或 **观察者**。它不建立连接，而是 **监听** 周围区域其他设备广播的广告数据包。
+在 **BLE 扫描器模式**下，XIAO ESP32-C5 充当 **中央设备**或 **观察者**。它不建立连接，而是**监听**周围区域其他设备广播的广告数据包。
 
 ##### 程序
 
@@ -187,7 +187,6 @@ void loop() {
   Serial.println("Scan completed, clearing results...");
 
   pBLEScan->clearResults();   // Clear cache to release memory
-  delete foundDevices; //Release pointer
   delay(2000);
 }
 ```
@@ -200,7 +199,7 @@ void loop() {
 
 #### BLE 服务器/客户端
 
-在 BLE 服务器模式下，创建一个服务和特征，广播其存在，并等待其他设备连接以读取和写入数据。<br/>
+在 BLE 服务器模式下，创建一个服务和特征，广播其存在，并等待其他设备连接以读写数据。<br/>
 在 BLE 客户端模式下，客户端扫描特定的服务 UUID，找到服务器后发起连接，并读取或写入服务器的特征值。
 
 ##### BLE 服务器程序
@@ -452,7 +451,7 @@ void scanAndConnect() {
 
 2. 更快的连接速度。
 
-3. API 兼容性：它被设计为与原生 Arduino BLE 库的语法几乎完全兼容，只需要修改头文件和进行少量类型调整。
+3. API 兼容性：它被设计为与原生 Arduino BLE 库的语法几乎完全兼容，只需要修改头文件和少量类型调整。
 
 您可以访问作者的 GitHub 仓库：[NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino/tree/master) 了解更多详情。<br/>
 

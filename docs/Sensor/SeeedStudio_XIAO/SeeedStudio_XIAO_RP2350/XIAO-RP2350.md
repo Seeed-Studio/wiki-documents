@@ -198,10 +198,6 @@ The XIAO RP2350, powered by the RP2350, supports MicroPython and the C/C++ SDK p
 This page primarily focuses on MicroPython users. For those interested in learning SDK programming or for advanced users, you may want to start with the [Raspberry Pi Pico-series C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf). This guide will help you set up the environment and get started with example code. Additionally, you can visit [XIAO RP2350 with C/C++ SDK](/xiao-rp2350-c-cpp-sdk) for more specific instructions related to the XIAO RP2350.
 :::
 
-:::tip
-Currently, the ADC function may not work properly when using the official [firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/SEEED_XIAO_RP2350.uf2). Please download and use our modified firmware first. Once the pull request is merged, we will update the relevant content on the Wiki accordingly.
-:::
-
 ### Step 1: Installing MicroPython on XIAO RP2350
 
 To install the MicroPython firmware on the XIAO RP2350, follow these steps:
@@ -212,7 +208,9 @@ To install the MicroPython firmware on the XIAO RP2350, follow these steps:
 - Download the latest `.uf2` firmware file compatible with the XIAO RP2350.
 
 :::tip
-The default firmware is for ARM architecture, if you want to use RISC-V, please use the corresponding firmware version in the link.
+1. The default firmware is for ARM architecture, if you want to use RISC-V, please use the corresponding firmware version in the link.
+
+2. Please ensure you are using the latest firmware version, as older firmware may contain various software vulnerabilities.
 :::
 
 **Step 1.2 Enter BOOTSEL Mode:**  

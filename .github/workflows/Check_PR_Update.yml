@@ -61,7 +61,7 @@ on:
         default: 'manual'
 
 env:
-  NODE_OPTIONS: --max_old_space_size=8192
+  NODE_OPTIONS: --max-old-space-size=6144
   
 jobs:
   test-deploy:
@@ -108,9 +108,9 @@ jobs:
       - name: Show runner memory
         run: node -v && free -h && df -h
 
-      - name: Add swap (5G)
+      - name: Add swap (6G)
         run: |
-          sudo fallocate -l 5G /swapfile
+          sudo fallocate -l 6G /swapfile
           sudo chmod 600 /swapfile
           sudo mkswap /swapfile
           sudo swapon /swapfile

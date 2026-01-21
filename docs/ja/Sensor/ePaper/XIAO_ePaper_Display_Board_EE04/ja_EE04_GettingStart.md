@@ -73,7 +73,7 @@ import Steppers from '@site/src/components/utils/Stepper';
     </tr>
     <tr>
       <th>電源供給</th>
-      <td>- 3.7V リチウムバッテリー<br />- USB Type-C</td>
+      <td>- 3.7V Li-Battery<br />- USB Type-C</td>
     </tr>
     <tr>
       <th>ボタン</th>
@@ -143,7 +143,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 - **スマートホームダッシュボード**: 天気予報、カレンダーイベント、各種スマートホームデバイスからの通知などのリアルタイム情報を表示します。
 - **エネルギー監視**: スマートメーターからのエネルギー消費データを表示し、住宅所有者がエネルギー使用量をより効率的に追跡・管理できるよう支援します。
-- **セキュリティアラート**: 動作検知やドア・窓センサーの作動など、セキュリティイベントに関するアラートと通知を表示します。
+- **セキュリティアラート**: 動作検知やドア・窓センサーの作動などのセキュリティイベントに関するアラートと通知を表示します。
 - **スマートサーモスタットディスプレイ**: 温度と湿度レベル、およびスマートサーモスタットの制御設定を表示します。
 - **デジタルフォトフレーム**: スマートホームネットワークから画像を表示できる WiFi 対応デジタルフォトフレームを作成します。
 
@@ -179,7 +179,7 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 
 - 24 Pin ePaper ディスプレイの場合 → ジャンパーを 24 Pin に設定
 
-⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常な内容が表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
+⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常なコンテンツが表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
 
 :::
 
@@ -192,7 +192,7 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 XIAO ePaper Display Board を使用する際は、ePaper ディスプレイのタイプに応じてジャンパーを設定してください：
 - 50 Pin ePaper ディスプレイの場合 → ジャンパーを 50 Pin に設定
 
-⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常な内容が表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
+⚠️ 間違ったジャンパー設定を使用すると、ePaper の表示が失敗したり、異常なコンテンツが表示される可能性があります。電源を入れる前に、必ずジャンパーの位置を再確認してください。
 
 :::
 
@@ -201,7 +201,7 @@ XIAO ePaper Display Board を使用する際は、ePaper ディスプレイの�
 ### Seeed GFX ライブラリのインストール
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
+このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性がありません。TFT ライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
 :::
 
 GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
@@ -214,7 +214,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 </a>
 </div>
 
-下にスクロールしてこのリンクを開きます。
+下にスクロールして、このリンクを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -264,7 +264,7 @@ GitHub から Seeed GFX ライブラリをダウンロードしてインスト�
 ⚠️ 注意：ePaperケーブルの向き
 ePaperディスプレイをXIAO ePaper Display Boardに接続する際は、FPCケーブルが正しい方向に挿入されていることを確認してください。
 
-⚠️ コネクタを逆向きにしないでください！ケーブルを逆さまに挿入すると、ePaperの表示が失敗したり、画面/ボードが損傷する可能性があります。
+⚠️ コネクタを逆向きにしないでください！ケーブルを逆さまに挿入すると、ePaperが表示されなくなったり、画面/ボードが損傷する可能性があります。
 以下の画像は正しい接続を示しています：
 :::
 
@@ -272,7 +272,7 @@ ePaperディスプレイをXIAO ePaper Display Boardに接続する際は、FPC�
 
 ### XIAO ePaper Display Board(ESP32-S3) - EE04のユーザーボタン
 
-EE04には、さまざまな制御目的に使用できる3つのユーザープログラマブルボタンが搭載されています。このセクションでは、Arduinoを使用してボタンの状態を読み取り、ボタンの押下に応答する方法を説明します。
+EE04には、様々な制御目的に使用できる3つのユーザープログラマブルボタンが搭載されています。このセクションでは、Arduinoを使用してボタンの状態を読み取り、ボタンの押下に応答する方法を説明します。
 
 EE04では、3つのボタンがXIAO ESP32-S3 Plusに接続されています：
 
@@ -430,7 +430,39 @@ void loop() {
 }
 ```
 
+### XIAO ePaper Display Board (ESP32-S3) - EE04でのカスタム画像の表示
 
+GFXライブラリでBitmapサンプルを見つけて選択します。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image1.png" style={{width:700, height:'auto'}}/></div>
+
+プロジェクトディレクトリ内にdriver.hファイルを作成する必要があることに注意してください。[詳細については、こちらをクリックして詳細を確認してください。](#install-seeed-gfx-library)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image2.png" style={{width:700, height:'auto'}}/></div>
+
+次に、https://sensecraft.seeed.cc/hmi/tools/dither のSenseCraft HMI Toolに移動し、表示したい画像をアップロードします。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image3m.png" style={{width:700, height:'auto'}}/></div>
+
+画像をアップロードした後、C配列（画像データ）を生成します。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image4.png" style={{width:700, height:'auto'}}/></div>
+
+配列の内容をコピーします。16進データのみをコピーし、無関係な文字を含めないよう注意してください。
+
+:::tip 
+ディスプレイの色が元のデザインと比べて反転して表示される場合は、コードを生成する前にHMIツールでInvert Colorsオプションを選択してください。
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image5.png" style={{width:700, height:'auto'}}/></div>
+
+Arduinoスケッチ内のimage.cまたはimage.hファイルの既存の配列を上書きします。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image6.png" style={{width:700, height:'auto'}}/></div>
+
+最後に、プログラムをXIAO ESP32-S3にアップロードします。これで、ePaper画面にカスタム画像が表示されるはずです。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/show_custom_image7.png" style={{width:700, height:'auto'}}/></div>
 
 ## リソース
 
@@ -442,7 +474,7 @@ void loop() {
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

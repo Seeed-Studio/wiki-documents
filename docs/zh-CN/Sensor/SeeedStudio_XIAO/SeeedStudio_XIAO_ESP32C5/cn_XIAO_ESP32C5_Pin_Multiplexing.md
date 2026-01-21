@@ -35,7 +35,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 Seeed Studio XIAO ESP32-C5 是一款功能强大且用途广泛的开发板，具有多种外设接口和 GPIO 引脚。这些引脚可用于各种用途，如与其他设备通信、读取模拟传感器、控制 LED 等。在本教程中，我们将指导您如何使用 XIAO ESP32-C5 的复用引脚。<br/>
-总结来说，XIAO ESP32-C5 具有 1×I2C、1×SPI、2×UART、多达 11×GPIO（支持 PWM）、5×ADC 通道和一个 JTAG 焊盘接口。
+总结来说，XIAO ESP32-C5 具有 1×I2C、1×SPI、2×UART、多达 11×GPIO（支持 PWM）、5×ADC 通道和一个 JTAG（背面焊盘）接合焊盘接口。
 
 ## 入门指南
 
@@ -226,12 +226,12 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_1.gif" style={{width:400, height:'auto'}}/></div>
 
 :::tip
-如果按下按钮后没有达到上述效果，您可能需要先按下板载的 RESET 按钮来唤醒开发板。
+如果按下按钮后没有达到上述效果，您可能需要先按下板载 RESET 按钮来唤醒开发板。
 :::
 
 ### PWM
 
-XIAO ESP32-C5 的所有引脚 D0–D11 都支持 PWM 功能。PWM 可用于驱动舵机、电机和 LED 灯等设备。以下是一个 PWM 控制呼吸灯的示例，用于演示 PWM 的功能。
+XIAO ESP32-C5 的所有引脚 D0–D11 都支持 PWM 功能。PWM 可用于驱动伺服电机、电机和 LED 灯等设备。以下是一个 PWM 控制呼吸灯的示例，用于演示 PWM 的功能。
 
 #### 硬件准备
 
@@ -588,7 +588,7 @@ void loop() {
 
 上传程序后，您可以通过 Seeed Studio **XIAO Debug Mate** 的 UART 功能进行监控。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_3.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 如果您之前没有使用过 Seeed Studio XIAO Debug Mate，可以访问 [XIAO Debug Mate 入门指南](https://wiki.seeedstudio.com/cn/getting_started_with_xiao_debug_mate/)。
@@ -596,7 +596,7 @@ void loop() {
 
 #### 软件串口
 
-本节将通过使用通用引脚模拟串口通信引脚来演示软件串口通信的功能。
+本节将通过使用通用引脚模拟串口通信引脚来演示软件串口通信功能。
 
 ##### 硬件准备
 
@@ -879,7 +879,7 @@ void loop(void) {
 
 ### SPI
 
-XIAO ESP32-C5 芯片集成了 SPI 接口，可用于连接外部 SPI 设备，如闪存、显示器和传感器。本示例使用 SPI 屏幕演示 SPI 的功能。
+XIAO ESP32-C5 芯片集成了 SPI 接口，可用于连接外部 SPI 设备，如闪存、显示器和传感器。本示例使用 SPI 屏幕演示 SPI 功能。
 
 #### 硬件准备
 

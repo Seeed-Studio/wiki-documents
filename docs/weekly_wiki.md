@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 01/12/2026
+  date: 01/19/2026
   author: Frank
 ---
 
@@ -17,131 +17,58 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is January 12th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is January 19th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [ReachyMini Getting Started](https://wiki.seeedstudio.com/reachymini_getting_started/)
+### [Robotics J501 Hardware and Getting Started](https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/)
 
-<div style={{maxWidth: '800px', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'}}>
-  <video width="100%"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    style={{display: 'block'}}
-    ref={(video) => { if (video) video.play().catch(() => {}); }}>
-    <source src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.mp4" type="video/mp4"/>
-    Your browser does not support the video tag.
-  </video>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The **Reachy Mini** is the first open-source desktop robot designed to explore human-robot interaction and creative custom applications. Developed collaboratively by **Pollen Robotics** and **Hugging Face**, this compact humanoid robot brings professional-grade robotics capabilities to your desk at an affordable price point. Optimized and manufactured by **Seeed Studio**, Reachy Mini combines expressive physical interaction with modern AI capabilities. Whether you're building voice assistants, computer vision applications, or educational tools, Reachy Mini provides a complete platform for real-world AI experimentation.
+The reComputer Robotics J501 is a high-performance edge AI carrier board designed for advanced robotics and industrial applications. Compatible with NVIDIA Jetson AGX Orin modules (32GB/64GB) in MAXN mode, it delivers up to 275 TOPS of AI performance.
 
 </div>
 
-### [Deploy local voice LLM on reComputer Mini for Reachy Mini](https://wiki.seeedstudio.com/local_voice_llm_on_recomputer_jetson_for_reachy_mini/)
+### [reComputer R1225 LoRaWAN Gateway Overview](https://wiki.seeedstudio.com/r1225_introduction/)
 
-<div class="video-container">
-  <iframe width="801" height="450" src="https://www.youtube.com/embed/broyI7PLm_g" title="Double Mini! Deploy local voice LLM on reComputer Mini for Reachy Mini!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Appearance_Image/R1225_White_Background.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Double Mini! This project will build a fully localized, low-latency, and high-privacy voice interactive robotic assistant system. Centered around the reComputer Mini J501 edge computing device, it deploys local speech recognition, large language model, and speech synthesis services. Using the open-source robotic platform Reachy Mini as the physical terminal for human-computer interaction, it achieves an embodied intelligent interactive experience that is perceptive, conversational, and actionable.
+reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN gateway & controller, CM4-powered, with AI capabilities. With 3*RS485, dual-ethernets, BACnet, and Modbus support, equipped with all the necessary features that a robust and reliable industrial edge IoT device needs. With compatibility with AI NPU accelerator, it's a perfect fit for remote access control, especially BMS, BAS, and iBMS.
 
 </div>
 
-### [SenseCAP T2000 Tracker: Connecting to The Things Network (TTN)](https://wiki.seeedstudio.com/sensecap_t2000_tracker_ttn/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/003.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide explains how to connect and configure the SenseCAP T2000 LoRaWAN® Tracker with The Things Network (TTN), including device registration, network settings, and data transmission.
-
-</div>
-
-### [Buletooth usage with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_buletooth_usage/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/49.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The Seeed Studio XIAO ESP32-C5 is a powerful development board that supports Bluetooth 5, BLE, and Mesh networking, making it an ideal choice for a wide range of IoT applications that require wireless connectivity. In this tutorial, we will focus on the basic features of the XIAO ESP32-C5's Bluetooth capabilities, such as how to scan for nearby Bluetooth devices, how to establish a Bluetooth connection, and how to transmit and receive data over a Bluetooth connection.
-
-</div>
-
-### [WiFi usage with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_wifi_usage/)
+### [XIAO ESP32-C5 With FreeRTOS](https://wiki.seeedstudio.com/xiao_esp32c5_with_freertos/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The Seeed Studio XIAO ESP32-C5 supports dual-band 2.4 GHz & 5 GHz Wi-Fi, featuring a dual-band Wi-Fi 6 (802.11ax) radio with backward compatibility for 802.11a/b/g/n/ac standards. In addition, this development board supports U.FL antenna connectivity, which is designed to enhance the wireless connection performance of the XIAO ESP32-C5. In this tutorial, we will explore how to leverage the Wi-Fi functionality of the XIAO ESP32-C5 to connect to a Wi-Fi network and perform basic network tasks.
+FreeRTOS is an open source RTOS kernel that is pre-integrated into the Arduino ESP32 Core (which is built upon ESP-IDF). Thus, every Arduino sketch running on an ESP32 is actually utilizing FreeRTOS in the background. The FreeRTOS kernel is ported to all ESP chip architectures, including Xtensa and RISC-V (e.g., XIAO ESP32-C5).
+Therefore, this tutorial is written based on the Arduino framework to provide a more accessible development experience.
 
 </div>
 
-### [XIAO ESP32-S3 (Sense) GPIO Viewer](https://wiki.seeedstudio.com/XIAO_ESP32S3_GPIO_Viewer/)
+### [reComputer RS485 test](https://wiki.seeedstudio.com/recomputer_rs485_loopback_test/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_1.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991274-recomputer-r1025-10-0.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[XIAO ESP32-S3 (Sense) GPIO Viewer](https://github.com/TuzaaBap/Seeed-Studio-XIAO-ESP32S3-GPIOViewer) is a MicroPython-based real-time GPIO monitor for the Seeed Studio XIAO ESP32-S3 (Sense). Displays live digital pin states (HIGH/LOW/TOUCH) through a local web interface using Thonny.
+This wiki applies to all reComputer devices with RS485 interfaces include reComputer R10/R11/R20/R21 and can be used to test whether the RS485 receiving and transmitting functions are working correctly.
 
 </div>
 
-### [Fine-tune GR00T N1.5 for LeRobot SO-101 Arm and Deploy on Jetson AGX Thor](https://wiki.seeedstudio.com/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor_bk/)
+### [Distributed llama.cpp on reComputer Jetson (RPC Mode)](https://wiki.seeedstudio.com/ai_robotics_distributed_llama_cpp_rpc_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/other/cover1.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This guide describes how to fine-tune NVIDIA Isaac GR00T N1.5 for the LeRobot SO-101 robotic arm and deploy it on NVIDIA Jetson Thor, covering hardware setup, software environment configuration, model training with LeRobot, deployment workflows, and common troubleshooting tips.
-
-</div>
-
-### [Fine-tune GR00T N1.6 for LeRobot SO-101 Arm and Deploy on AGX Orin](https://wiki.seeedstudio.com/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/other/form.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RPC_on_jetson/rpc_test.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This guide explains how to fine-tune NVIDIA Isaac GR00T N1.6 for the LeRobot SO-101 robotic arm and deploy it using AGX Orin 64G, covering hardware setup, software environment configuration, training with the LeRobot platform, deployment workflows, and common troubleshooting tips.
-
-</div>
-
-### [Building a Voice-Interactive Chatbot with Local LLMs, STT, and TTS](https://wiki.seeedstudio.com/local_chatbot_recomputer_bk/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/local_voice_chatbot/terminal_ollama.gif" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This project brings the dream of a **fully voice-interactive AI assistant** to life — running entirely **on local hardware**, without reliance on cloud services. By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Large Language Models (LLMs)** using **Ollama**, the system enables natural, private, and real-time conversations between humans and machines. The entire setup runs inside Docker containers and can be deployed on **NVIDIA Jetson devices**, **edge computers**, or any Linux-based system with GPU acceleration.
-
-</div>
-
-### [Setup and Configure Open Display firmware with the Open Display DIY Kit](https://wiki.seeedstudio.com/EN04_opendisplay/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/OPEL/diy_kit_pic.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-Powered by **XIAO nRF52840** Plus, the XIAO EN04 ePaper Display Board is the easiest way to get started with Bluetooth-enabled e-paper displays using the OEPL_BLE firmware. Unlike traditional OpenEPaperLink systems that require dedicated Access Points with 802.15.4 radios, this board uses Bluetooth Low Energy for direct wireless control from your phone, computer, or Home Assistant.
-
-</div>
-
-### [Deploy Depth Anything V3 on Jetson AGX Orin](https://wiki.seeedstudio.com/deploy_depth_anything_v3_jetson_agx_orin/)
-
-<p style={{textAlign: 'center'}}><img src="https://github.com/ByteDance-Seed/Depth-Anything-3/raw/main/assets/images/demo320-2.gif" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-[Depth Anything V3](https://github.com/ByteDance-Seed/depth-anything-3) is a state-of-the-art monocular depth estimation model that revolutionizes 3D perception by generating high-quality depth maps from single RGB images. This guide shows how to deploy Depth Anything V3 for real-time monocular depth estimation on NVIDIA Jetson AGX Orin with ROS2, including environment setup, model optimization, and running depth inference from cameras or video streams.
+This wiki applies to all reComputer devices with RS485 interfaces include reComputer R10/R11/R20/R21 and can be used to test whether the RS485 receiving and transmitting functions are working correctly.
 
 </div>
 
@@ -266,6 +193,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.12.15th](/Seeed_Elderly/weekly_wiki/2025/wiki251215)
 - [weekly wiki on 2025.12.22nd](/Seeed_Elderly/weekly_wiki/2025/wiki251222)
 - [weekly wiki on 2025.12.29th](/Seeed_Elderly/weekly_wiki/2025/wiki251229)
-- [weekly wiki on 2025.12.29th](/Seeed_Elderly/weekly_wiki/2026/wiki260105)
+- [weekly wiki on 2026.1.05th](/Seeed_Elderly/weekly_wiki/2026/wiki260105)
+- [weekly wiki on 2026.1.12th](/Seeed_Elderly/weekly_wiki/2026/wiki260112)
 
 </details>
