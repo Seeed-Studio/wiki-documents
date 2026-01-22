@@ -3847,6 +3847,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/deploy_frigate_on_jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/AI-NVR_with_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_NVBLOX_ON_Jetson_AGX_Orin',
               ]
             },
             // Generative AI
@@ -3895,6 +3896,7 @@ const sidebars = {
               label: 'Physical AI',
               items: [
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Chatbot_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Voice_LLM_for_Reachy_Mini',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
