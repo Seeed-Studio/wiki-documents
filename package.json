@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "cross-env NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
+    "start": "cross-env NODE_OPTIONS=--max-old-space-size=8192 docusaurus start --host 0.0.0.0",
     "start:en": "cross-env NODE_ENV=development DOC_LANGS=en NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
     "start:cn": "cross-env NODE_ENV=development DOC_LANGS=zh-CN NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
     "start:en+cn": "cross-env NODE_ENV=development DOC_LANGS=en,zh-CN NODE_OPTIONS=--max-old-space-size=6144 docusaurus start --host 0.0.0.0",
