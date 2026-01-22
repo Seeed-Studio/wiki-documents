@@ -3,6 +3,7 @@ description: This wiki details how to deploy and operate a fully local voice-int
 title: Deploy local voice LLM on reComputer Mini for Reachy Mini! 
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reachy_mini/world_frame.webp
 slug: /local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk
+sku: E2025123101
 last_update:
   date: 01/06/2026
   author: youjiang
