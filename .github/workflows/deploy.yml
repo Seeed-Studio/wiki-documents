@@ -8,6 +8,7 @@ on:
     
 env:
   NODE_OPTIONS: --max-old-space-size=6144
+  DOCUSAURUS_IGNORE_SSG_WARNINGS: "true"
 
 permissions:
   contents: read
