@@ -139,6 +139,190 @@ Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
   system target will be made. Selected target: None
 ```
 
+### Board Configuration for XIAO ESP32S3
+
+After setting up ESP-IDF, you need to configure your project specifically for the XIAO ESP32S3 board to take advantage of its hardware features including 8MB Flash and 8MB Octal PSRAM.
+
+#### Set Target Device
+
+In your ESP-IDF project directory, set the target to ESP32-S3:
+
+```bash
+idf.py set-target esp32s3
+```
+
+#### Enable Full Build Options
+
+In your project's root `CMakeLists.txt`, ensure `MINIMAL_BUILD` is set to `OFF`:
+
+```cmake
+idf_build_set_property(MINIMAL_BUILD OFF)
+```
+
+This enables all configuration options in menuconfig.
+
+#### Configure Flash and PSRAM
+
+Open the configuration menu:
+
+```bash
+idf.py menuconfig
+```
+
+**Flash Size Configuration:**
+1. Navigate to: **Serial flasher config → Flash size**
+2. Set to: **8 MB**
+
+**PSRAM Configuration:**
+1. Navigate to: **Component config → ESP PSRAM**
+2. Enable: **Support for external, SPI-connected RAM**
+3. Set **SPI RAM mode** to: **Octal Mode PSRAM**
+4. Set **SPI RAM clock** to: **80MHz**
+
+:::info
+The XIAO ESP32S3 uses Octal PSRAM, not Quad mode. Selecting the correct mode is essential for the 8MB PSRAM to function properly.
+:::
+
+#### Update Main Component Dependencies
+
+In `/main/CMakeLists.txt`, ensure PSRAM and SPI flash components are included:
+
+```cmake
+idf_component_register(
+    SRCS "main.c"
+    INCLUDE_DIRS "."
+    PRIV_REQUIRES esp_psram spi_flash
+)
+```
+
+#### Create Board Pin Configuration Component
+
+Create a reusable component for XIAO pin definitions to make your code more readable and portable:
+
+```bash
+mkdir -p ./components/board_config/include/
+```
+
+Create `./components/board_config/include/xiao_pins.h`:
+
+```c
+// xiao_pins.h
+#pragma once
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Analog / Digital Pins
+#define XIAO_D0     1
+#define XIAO_D1     2
+#define XIAO_D2     3
+#define XIAO_D3     4
+#define XIAO_D4     5
+#define XIAO_D5     6
+#define XIAO_D6     43
+#define XIAO_D7     44
+#define XIAO_D8     7
+#define XIAO_D9     8
+#define XIAO_D10    9
+
+// Onboard User LED (Active Low)
+#define XIAO_LED    21
+
+// I2C Pins (Default)
+#define XIAO_SDA    5   // Same as D4
+#define XIAO_SCL    6   // Same as D5
+
+// SPI Pins (Default)
+#define XIAO_MISO   9   // Same as D10
+#define XIAO_MOSI   10
+#define XIAO_SCK    8   // Same as D9
+#define XIAO_SS     7   // Same as D8
+
+#ifdef __cplusplus
+}
+#endif
+```
+
+Create `./components/board_config/CMakeLists.txt`:
+
+```cmake
+idf_component_register(INCLUDE_DIRS "include")
+```
+
+:::tip
+These pin definitions match the silkscreen labels on the XIAO ESP32S3 board, making your code more readable. For example, use `XIAO_LED` instead of hard-coding GPIO 21.
+:::
+
+#### Use Pin Definitions in Your Code
+
+In your main application or any component, include the header:
+
+```c
+#include "xiao_pins.h"
+
+void app_main(void) {
+    // Example: Configure LED pin
+    gpio_set_direction(XIAO_LED, GPIO_MODE_OUTPUT);
+    gpio_set_level(XIAO_LED, 0);  // Turn on (active low)
+}
+```
+
+#### Pin Mapping Reference
+
+![Xiao ESP32S3 Pinout reference picture](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg)
+
+| Label | GPIO | Alt Function |
+|-------|------|--------------|
+| D0    | 1    | ADC1_CH0     |
+| D1    | 2    | ADC1_CH1     |
+| D2    | 3    | ADC1_CH2     |
+| D3    | 4    | ADC1_CH3     |
+| D4    | 5    | ADC1_CH4, SDA |
+| D5    | 6    | ADC1_CH5, SCL |
+| D6    | 43   | TX           |
+| D7    | 44   | RX           |
+| D8    | 7    | ADC1_CH6, SS |
+| D9    | 8    | ADC1_CH7, SCK |
+| D10   | 9    | ADC1_CH8, MISO |
+
+:::note
+- GPIO 19 and 20 are used for USB D-/D+ and should not be reconfigured
+- The onboard LED on GPIO 21 is active LOW (set to 0 to turn on)
+- All pins D0-D10 support analog input via ADC1
+:::
+
+#### Building and Flashing
+
+Build your project:
+
+```bash
+idf.py build
+```
+
+Flash to the XIAO ESP32-S3:
+
+```bash
+idf.py -p /dev/ttyACM0 flash monitor
+```
+
+Replace `/dev/ttyACM0` with your actual serial port (on Windows, typically `COM3`, `COM4`, etc.).
+
+#### Troubleshooting Board Configuration
+
+**PSRAM Not Detected:**
+- Verify Octal mode is selected (not Quad)
+- Check that flash size is set to 8MB
+- Ensure ESP-IDF version is 4.4 or later
+
+**Upload Fails:**
+- Press and hold the BOOT button while connecting USB
+- Try reducing upload speed: `idf.py -p PORT -b 115200 flash`
+
+**Pin Conflicts:**
+- Avoid using GPIO pins 19 and 20 (USB D- and D+)
+- XIAO_LED (GPIO 21) is shared with the onboard LED
+
 ## What are Task?
 
 Tasks are small functions/ jobs that the the processor is requested to perform with a set of settings. Tasks can range from small functions to infinite looping functions.  
