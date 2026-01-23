@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-20 11:27:57 (北京时间)
-// 多语言页面: 2119 个
+// 生成时间: 2026-01-23 09:40:31 (北京时间)
+// 多语言页面: 2121 个
 
 (function() {
   'use strict';
@@ -545,6 +545,12 @@
     "es",
     "ja"
   ],
+  "/deploy_nvblox_jetson_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/deploy_visual_perception_engine_recomputer": [
     "cn",
     "en",
@@ -900,6 +906,12 @@
     "ja"
   ],
   "/local_chatbot_recomputer_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk": [
     "cn",
     "en",
     "es",
