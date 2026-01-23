@@ -588,7 +588,7 @@ void loop() {
 
 上传程序后，您可以通过 Seeed Studio **XIAO Debug Mate** 的 UART 功能进行监控。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_startedpin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 如果您之前没有使用过 Seeed Studio XIAO Debug Mate，可以访问 [XIAO Debug Mate 入门指南](https://wiki.seeedstudio.com/cn/getting_started_with_xiao_debug_mate/)。

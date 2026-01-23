@@ -1,6 +1,46 @@
 const docList = [
   [
     {
+      "path": "/deploy_whisper_on_raspberry_pi_ai_box",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png",
+      "title": "Deploy Whisper on  Raspberry Pi AI box",
+      "date": "01/19/2026",
+      "title_cn": "在树莓派 AI 盒子上部署 Whisper",
+      "title_ja": "Raspberry Pi AI ボックスに Whisper をデプロイする",
+      "title_es": "Desplegar Whisper en Raspberry Pi AI box"
+    },
+    {
+      "path": "/xiao-esp32c3-espresense",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C3_ESPresense/image132.webp",
+      "title": "Deploying ESPresense on Seeed Studio XIAO ESP32-C3 with Home Assistant",
+      "date": "01/16/2026",
+      "title_cn": "在 Seeed Studio XIAO ESP32-C3 上部署 ESPresense 与 Home Assistant",
+      "title_ja": "Seeed Studio XIAO ESP32-C3でESPresenseをHome Assistantと連携してデプロイする",
+      "title_es": "Desplegando ESPresense en Seeed Studio XIAO ESP32-C3 con Home Assistant"
+    }
+  ],
+  [
+    {
+      "path": "/xiao_nrf54l15_sense_micropython",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.webp",
+      "title": "MicroPython for Seeed Studio XIAO nRF54L15",
+      "date": "1/15/2026",
+      "title_cn": "Seeed Studio XIAO nRF54L15 的 MicroPython",
+      "title_ja": "Seeed Studio XIAO nRF54L15 用 MicroPython",
+      "title_es": "MicroPython para Seeed Studio XIAO nRF54L15"
+    },
+    {
+      "path": "/recomputer_rs485_loopback_test",
+      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/RS485/RS485_connection.jpg",
+      "title": "reComputer RS485 test",
+      "date": "01/14/2026",
+      "title_cn": "reComputer RS485 测试",
+      "title_ja": "reComputer RS485 テスト",
+      "title_es": "Prueba RS485 de reComputer"
+    }
+  ],
+  [
+    {
       "path": "/xiao_esp32c5_with_freertos",
       "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
       "title": "XIAO ESP32-C5 With FreeRTOS",
@@ -74,46 +114,6 @@ const docList = [
       "title_cn": "🤖 为 LeRobot SO-101 机械臂微调 GR00T N1.6 并在 AGX Orin 上部署",
       "title_ja": "🤖 LeRobot SO-101 アーム用 GR00T N1.6 のファインチューニングと AGX Orin でのデプロイ",
       "title_es": "🤖 Ajustar GR00T N1.6 para el Brazo LeRobot SO-101 y Desplegar en AGX Orin"
-    }
-  ],
-  [
-    {
-      "path": "/xiao_esp32c5_buletooth_usage",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
-      "title": "Buletooth usage with Seeed Studio XIAO ESP32-C5",
-      "date": "01/06/2026",
-      "title_cn": "Seeed Studio XIAO ESP32-C5 的蓝牙使用",
-      "title_ja": "Seeed Studio XIAO ESP32-C5 での Bluetooth 使用方法",
-      "title_es": "Uso de Bluetooth con Seeed Studio XIAO ESP32-C5"
-    },
-    {
-      "path": "/XIAO_ESP32S3_GPIO_Viewer",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32S3_GPIO_Viewer/gpio_viewer_10.webp",
-      "title": "XIAO ESP32-S3 (Sense) GPIO Viewer",
-      "date": "01/06/2026",
-      "title_cn": "XIAO ESP32-S3 (Sense) GPIO 查看器",
-      "title_ja": "XIAO ESP32-S3 (Sense) GPIO ビューア",
-      "title_es": "Visor GPIO del XIAO ESP32-S3 (Sense)"
-    }
-  ],
-  [
-    {
-      "path": "/Get_Started_with_SenseCAP_T2000_tracker",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp",
-      "title": "Get Started with SenseCAP T2000 Tracker",
-      "date": "1/5/2026",
-      "title_cn": "SenseCAP T2000 Tracker 入门指南",
-      "title_ja": "SenseCAP T2000 Tracker の使用開始",
-      "title_es": "Comenzar con SenseCAP T2000 Tracker"
-    },
-    {
-      "path": "/semtech_lr2021_evk_getting_started",
-      "image": "https://files.seeedstudio.com/wiki/Semtech_LR2021_EVK/image/Semtech-LR2021-LoRa-Plus-Evaluation-Kit.webp",
-      "title": "Semtech LR2021 LoRa Plus™ Evaluation Kit",
-      "date": "12/30/2025",
-      "title_cn": "Semtech LR2021 LoRa Plus™ 评估套件",
-      "title_ja": "Semtech LR2021 LoRa Plus™ 評価キット",
-      "title_es": "Kit de Evaluación Semtech LR2021 LoRa Plus™"
     }
   ]
 ];

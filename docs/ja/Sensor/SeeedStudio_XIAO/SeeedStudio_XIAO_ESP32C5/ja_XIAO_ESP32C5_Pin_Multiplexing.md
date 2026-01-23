@@ -226,7 +226,7 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_1.gif" style={{width:400, height:'auto'}}/></div>
 
 :::tip
-ボタンを押した後に上記の効果が得られない場合は、まずオンボードの RESET ボタンを押してボードを起動する必要があるかもしれません。
+ボタンを押しても上記の効果が得られない場合は、まずオンボードの RESET ボタンを押してボードを起動する必要があるかもしれません。
 :::
 
 ### PWM
@@ -351,7 +351,7 @@ void loop() {
 
 #### 結果
 
-コードをアップロードした後、Grove - Variable Color LEDがブリージングライト効果を表示します。
+コードをアップロードした後、Grove - Variable Color LEDがブリージング（呼吸）ライト効果を表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_2.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -588,7 +588,7 @@ void loop() {
 
 プログラムをアップロードした後、Seeed Studio **XIAO Debug Mate** の UART 機能を使用して監視できます。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_startedpin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pin_mux_debug.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 Seeed Studio XIAO Debug Mate を以前に使用したことがない場合は、[Getting Started with XIAO Debug Mate](https://wiki.seeedstudio.com/ja/getting_started_with_xiao_debug_mate/) をご覧ください。

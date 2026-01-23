@@ -53,7 +53,7 @@ Enjoy flexible recruitment and opportunities to explore diverse experiences with
     contactEmail: 'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
     contactLinkText: 'Ranger Application Form',
     buttons: [
-      { text: 'Explore Ranger Program', link: 'https://wiki.seeedstudio.com/ranger/', primary: true },
+      { text: 'Explore Ranger Program', link: 'https://www.seeedstudio.com/ranger-program/', primary: true },
     ],
     image: 'ranger_banner.png',
   },
@@ -187,11 +187,11 @@ function isEnglishOnlyWiki(url: string) {
     const u = new URL(url);
     const hostOk = /(^|\.)wiki\.seeedstudio\.com$/i.test(u.hostname);
     const p = u.pathname.replace(/\/+$/, '/');
-    if (hostOk && (p === '/contributors/' || p === '/ranger/')) return true;
+    if (hostOk && (p === '/contributors/')) return true;
   } catch {
     // 相对地址
     const p = url.replace(/[?#].*$/, '').replace(/\/+$/, '/');
-    if (p === '/contributors/' || p === '/ranger/') return true;
+    if (p === '/contributors/') return true;
   }
   return false;
 }

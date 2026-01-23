@@ -35,15 +35,15 @@ last_update:
 </div>
 
 Seeed Studio XIAO ESP32-C5 は、デュアルバンド 2.4 GHz & 5 GHz Wi-Fi をサポートし、802.11a/b/g/n/ac 規格との下位互換性を持つデュアルバンド Wi-Fi 6（802.11ax）無線機能を搭載しています。さらに、この開発ボードは U.FL アンテナ接続をサポートしており、XIAO ESP32-C5 の無線接続性能を向上させるよう設計されています。このチュートリアルでは、XIAO ESP32-C5 の Wi-Fi 機能を活用して Wi-Fi ネットワークに接続し、基本的なネットワークタスクを実行する方法を探ります。<br/>
-以下のチュートリアルでは、コンパイルとアップロードに Arduino IDE を使用します。Arduino IDE の経験がまだない場合は、[Seeed Studio XIAO ESP32-C5 入門ガイド](https://wiki.seeedstudio.com/ja/xiao_esp32c5_getting_started/)をご覧ください。<br/>
+以下のチュートリアルでは、コンパイルとアップロードに Arduino IDE を使用します。Arduino IDE の経験がまだない場合は、[Seeed Studio XIAO ESP32-C5 入門ガイド](https://wiki.seeedstudio.com/ja/xiao_esp32c5_getting_started/) をご覧ください。<br/>
 
 ## 入門ガイド
 
 ### アンテナの取り付け
 
-Seeed Studio XIAO ESP32-C5 のパッケージ内には、専用の **Wi-Fi/BT アンテナコネクタ**があります。最適な WiFi/Bluetooth 信号強度を得るには、パッケージに含まれているアンテナを取り出してコネクタに接続する必要があります。<br/>
+Seeed Studio XIAO ESP32-C5 のパッケージ内には、専用の **Wi-Fi/BT アンテナコネクタ** があります。最適な WiFi/Bluetooth 信号強度を得るには、パッケージに含まれているアンテナを取り出してコネクタに接続する必要があります。<br/>
 :::tip
-より強い信号ゲイン効果を得たい場合は、**RP-SMA オスコネクタ付き 2.4G/5G 外部アンテナ**を購入して取り付けることができます — パッケージに含まれている内蔵 FPC アンテナよりもはるかに高いゲインを提供します！
+より強い信号ゲイン効果を得たい場合は、**RP-SMA オスコネクタ付き 2.4G/5G 外部アンテナ** を購入して取り付けることができます — パッケージに含まれている内蔵 FPC アンテナよりもはるかに高いゲインを提供します！
 :::
 <div class="table-center">
  <table>
@@ -69,14 +69,14 @@ Seeed Studio XIAO ESP32-C5 のパッケージ内には、専用の **Wi-Fi/BT �
 - XIAO ESP32-C5 は幅広い Wi-Fi ネットワーク機能を提供します。一般的に、ESP32 の内蔵パッケージ内の WiFi ライブラリの機能を確認し、対応する機能を選択して望ましい機能を実現できます。次に、よく使用されるインターフェースをいくつかリストアップし、その使用方法を紹介します。
 
 :::tip
-Wi-Fi 使用チュートリアルを直接開始したい場合は、[WiFi 使用例](#wifi-使用例)にジャンプできます。
+Wi-Fi 使用チュートリアルを直接開始したい場合は、[WiFi 使用例](#wifi-使用例) にジャンプできます。
 :::
 
 ### 汎用 WiFi 機能
 
 - `WiFiGenericClass::getHostname()` -- ESP32 用 WiFi ライブラリの機能で、デバイスのホスト名を文字列として返します。ホスト名は、ネットワーク上でデバイスを識別する一意の名前です。この機能は、以前に `WiFiGenericClass::setHostname()` を使用して設定されたホスト名を取得します。ホスト名が設定されていない場合は、デフォルトのホスト名が返されます。
 
-- `WiFiGenericClass::persistent(bool persistent)` -- ESP32 WiFi ライブラリの永続モードを有効または無効にするために使用されるメソッドです。永続モードが有効になると、Wi-Fi 設定は不揮発性メモリ（NVM）に保存され、電源サイクルやリセット後も保持されます。永続モードが無効になると、設定は RAM に保存され、電源サイクルやリセット後に失われます。
+- `WiFiGenericClass::persistent(bool persistent)` -- ESP32 WiFi ライブラリの永続モードを有効または無効にするために使用されるメソッドです。永続モードが有効になっている場合、Wi-Fi 設定は不揮発性メモリ（NVM）に保存され、電源サイクルやリセット後も保持されます。永続モードが無効になっている場合、設定は RAM に保存され、電源サイクルやリセット後に失われます。
 
  	- **入力パラメータ**
   		- **persistent**: 引数が true の場合、永続モードが有効になります。引数が false の場合、永続モードが無効になります。
@@ -323,7 +323,7 @@ Wi-Fi 使用チュートリアルを直接開始したい場合は、[WiFi 使�
 
  	- **出力**: True/False
 
-- `WiFiMulti::run(uint32_t connectTimeout)` -- この関数は、保存されたアクセスポイントの1つに正常に接続するまで、順次順序で接続を試行します。
+- `WiFiMulti::run(uint32_t connectTimeout)` -- この関数は、正常に接続できるまで、保存されたアクセスポイントの1つに順次接続を試行します。
 
  	- **入力パラメータ**
   		- **connectTimeout**: このパラメータは、接続を待機する最大時間をミリ秒で指定します。connectTimeoutが0に設定されている場合、関数はタイムアウトせず、無期限に接続を試行します。
@@ -336,89 +336,123 @@ Wi-Fi 使用チュートリアルを直接開始したい場合は、[WiFi 使�
 
 ### ネットワークスキャン
 
-XIAO ESP32-C5 はデュアルバンド 2.4 GHz & 5 GHz Wi-Fi をサポートしており、スキャンモードで周囲の 2.4 GHz および 5 GHz Wi-Fi ネットワークとその信号強度をスキャンできます。
+XIAO ESP32-C5はデュアルバンド2.4 GHz & 5 GHz Wi-Fiをサポートしており、スキャンモードで周囲の2.4 GHzおよび5 GHz Wi-Fiネットワークとその信号強度をスキャンできます。
 
 #### プログラム
 
-以下は、XIAO ESP32-C5 が周囲の Wi-Fi ネットワークをスキャンする方法を示すサンプルプログラムです。
+以下は、XIAO ESP32-C5が周囲のWi-Fiネットワークをスキャンする方法を示すサンプルプログラムです。
 
 - 参考コード
 
+<details>
+
+<summary>WiFiScan.ino</summary>
+
 ```cpp
-#include <WiFi.h>
+/*
+ *  This sketch demonstrates how to scan WiFi networks. For chips that support 5GHz band, separate scans are done for all bands.
+ *  The API is based on the Arduino WiFi Shield library, but has significant changes as newer WiFi functions are supported.
+ *  E.g. the return value of `encryptionType()` different because more modern encryption is supported.
+ */
+#include "WiFi.h"
 
 void setup() {
-    Serial.begin(115200);
-
-    // Set WiFi to Station mode and disconnect from an AP if it was previously connected
-    WiFi.mode(WIFI_STA);
-    WiFi.disconnect();
-    delay(100);
-
-    Serial.println("Setup done. Starting WiFi Scan...");
+  Serial.begin(115200);
+  // Enable Station Interface
+  WiFi.STA.begin();
+  Serial.println("Setup done");
 }
 
-void loop() {
-    Serial.println("Scanning for networks...");
-
-    // WiFi.scanNetworks() returns the number of networks found
-    // 'false' = synchronous scan (waits until done)
-    // 'true' = show hidden networks
-    int n = WiFi.scanNetworks(false, true);
-
-    if (n == 0) {
-        Serial.println("No networks found");
-    } else {
-        Serial.print(n);
-        Serial.println(" networks found");
-        Serial.println("Nr | SSID                             | RSSI  | Ch | Encryption");
-        Serial.println("------------------------------------------------------------------");
-
-        for (int i = 0; i < n; ++i) {
-            // Print SSID and RSSI for each network found
-            Serial.printf("%2d | %-32.32s | %4d | %2d | ", 
-                          i + 1, 
-                          WiFi.SSID(i).c_str(), 
-                          WiFi.RSSI(i), 
-                          WiFi.channel(i)); // C5 will show 5GHz channels (e.g., 36, 40, etc.) if detected
-
-            // Determine encryption type
-            switch (WiFi.encryptionType(i)) {
-                case WIFI_AUTH_OPEN: Serial.print("Open"); break;
-                case WIFI_AUTH_WEP:  Serial.print("WEP"); break;
-                case WIFI_AUTH_WPA_PSK: Serial.print("WPA"); break;
-                case WIFI_AUTH_WPA2_PSK: Serial.print("WPA2"); break;
-                case WIFI_AUTH_WPA_WPA2_PSK: Serial.print("WPA+WPA2"); break;
-                case WIFI_AUTH_WPA3_PSK: Serial.print("WPA3"); break; // C5 supports WPA3 natively
-                default: Serial.print("Unknown");
-            }
-            Serial.println();
-            delay(10);
-        }
+void ScanWiFi() {
+  Serial.println("Scan start");
+  // WiFi.scanNetworks will return the number of networks found.
+  int n = WiFi.scanNetworks();
+  Serial.println("Scan done");
+  if (n == 0) {
+    Serial.println("no networks found");
+  } else {
+    Serial.print(n);
+    Serial.println(" networks found");
+    Serial.println("Nr | SSID                             | RSSI | CH | Encryption");
+    for (int i = 0; i < n; ++i) {
+      // Print SSID and RSSI for each network found
+      Serial.printf("%2d", i + 1);
+      Serial.print(" | ");
+      Serial.printf("%-32.32s", WiFi.SSID(i).c_str());
+      Serial.print(" | ");
+      Serial.printf("%4ld", WiFi.RSSI(i));
+      Serial.print(" | ");
+      Serial.printf("%2ld", WiFi.channel(i));
+      Serial.print(" | ");
+      switch (WiFi.encryptionType(i)) {
+        case WIFI_AUTH_OPEN:            Serial.print("open"); break;
+        case WIFI_AUTH_WEP:             Serial.print("WEP"); break;
+        case WIFI_AUTH_WPA_PSK:         Serial.print("WPA"); break;
+        case WIFI_AUTH_WPA2_PSK:        Serial.print("WPA2"); break;
+        case WIFI_AUTH_WPA_WPA2_PSK:    Serial.print("WPA+WPA2"); break;
+        case WIFI_AUTH_WPA2_ENTERPRISE: Serial.print("WPA2-EAP"); break;
+        case WIFI_AUTH_WPA3_PSK:        Serial.print("WPA3"); break;
+        case WIFI_AUTH_WPA2_WPA3_PSK:   Serial.print("WPA2+WPA3"); break;
+        case WIFI_AUTH_WAPI_PSK:        Serial.print("WAPI"); break;
+        default:                        Serial.print("unknown");
+      }
+      Serial.println();
+      delay(10);
     }
-    Serial.println("");
+  }
 
-    // Clean up RAM
-    WiFi.scanDelete();
-
-    // Wait a bit before scanning again
-    delay(5000);
+  // Delete the scan result to free memory for code below.
+  WiFi.scanDelete();
+  Serial.println("-------------------------------------");
+}
+void loop() {
+  Serial.println("-------------------------------------");
+  Serial.println("Default wifi band mode scan:");
+  Serial.println("-------------------------------------");
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5, 4, 2)
+  WiFi.setBandMode(WIFI_BAND_MODE_AUTO);
+#endif
+  ScanWiFi();
+#if CONFIG_SOC_WIFI_SUPPORT_5G
+  // Wait a bit before scanning again.
+  delay(1000);
+  Serial.println("-------------------------------------");
+  Serial.println("2.4 Ghz wifi band mode scan:");
+  Serial.println("-------------------------------------");
+  WiFi.setBandMode(WIFI_BAND_MODE_2G_ONLY);
+  ScanWiFi();
+  // Wait a bit before scanning again.
+  delay(1000);
+  Serial.println("-------------------------------------");
+  Serial.println("5 Ghz wifi band mode scan:");
+  Serial.println("-------------------------------------");
+  WiFi.setBandMode(WIFI_BAND_MODE_5G_ONLY);
+  ScanWiFi();
+#endif
+  // Wait a bit before scanning again.
+  delay(10000);
 }
 ```
 
+</details>
+
 #### 効果の表示
 
-- プログラムをアップロードした後、Arduino IDE のシリアルモニターを開くと、スキャンされた Wi-Fi 情報が出力されます。
+- プログラムをアップロードした後、Arduino IDEのシリアルモニターを開くと、スキャンされたWi-Fi情報が出力されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_1.png" style={{width:800, height:'auto'}}/></div>
 
-### Wi-Fi ネットワークへの接続
+### Wi-Fiネットワークへの接続
 
-Wi-Fi の範囲内で、対象の Wi-Fi ネットワークの SSID と PASSWORD を知っていれば、XIAO ESP32-C5 がサポートする STA モードを使用して特定の Wi-Fi ネットワークに接続できます。
+Wi-Fiカバレッジ内で、対象のWi-FiネットワークのSSIDとPASSWORDを知っていれば、XIAO ESP32-C5がサポートするSTAモードを使用して特定のWi-Fiネットワークに接続できます。
 
 #### プログラム
 
-次に、XIAO ESP32-C5 が指定された Wi-Fi ネットワークに接続する方法を示すサンプルプログラムを提供します。
+次に、XIAO ESP32-C5が指定されたWi-Fiネットワークに接続する方法を示すサンプルプログラムを提供します。
+
+:::tip
+XIAO ESP32-C5はデュアルバンドWi-Fi（2.4 GHz & 5 GHz）をサポートしており、ご家庭のネットワークに基づいて接続を選択できます。
+:::
 
 - 参考コード
 
@@ -476,19 +510,20 @@ void loop() {
 
 #### 効果の表示
 
-- プログラムをアップロードした後、Arduino IDE のシリアルモニターを開くと、接続された Wi-Fi ネットワークの IP アドレスなどの情報が出力されます。
+- プログラムをアップロードした後、Arduino IDEのシリアルモニターを開くと、接続されたWi-FiネットワークのIPアドレスなどの情報が出力されます。
+- 私の環境では5 GHzネットワークに接続されています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_2.png" style={{width:800, height:'auto'}}/></div>
 
-### AP モード
+### APモード
 
-XIAO ESP32-C5 は他のデバイスが接続するためのホットスポットとして動作できます。つまり、ルーターに接続することなく、Wi-Fi 対応デバイスを使用して XIAO ESP32-C5 に接続できます。
+XIAO ESP32-C5は他のデバイスが接続するためのホットスポットとして動作できます。つまり、ルーターに接続することなく、Wi-Fi対応デバイスを使用してXIAO ESP32-C5に接続できます。
 
-簡単に言うと、XIAO ESP32-C5 をアクセスポイントとして設定すると、独自の独立した Wi-Fi ネットワークが作成され、近くの Wi-Fi デバイス（ステーション）が接続できます（スマートフォンやコンピューターなど）。
+簡単に言うと、XIAO ESP32-C5をアクセスポイントとして設定すると、独自の独立したWi-Fiネットワークが作成され、近くのWi-Fiデバイス（ステーション）が接続できます（スマートフォンやコンピューターなど）。
 
 #### プログラム
 
-次に、XIAO ESP32-C5 がホットスポットを作成し、他のデバイスがそれに接続する方法を示すサンプルプログラムを紹介します。
+次に、XIAO ESP32-C5がホットスポットを作成し、他のデバイスがそれに接続する方法を示すサンプルプログラムを紹介します。
 
 - 参考コード
 
@@ -550,23 +585,23 @@ void loop() {
 
 #### 効果の表示
 
-- プログラムをコンパイルしてアップロードした後、WLAN 機能を使用して AP ホットスポットを発見できます。
+- プログラムをコンパイルしてアップロードした後、WLAN機能を使用してAPホットスポットを発見できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_3.png" style={{width:800, height:'auto'}}/></div>
 
-- 接続が成功すると、シリアルモニターに IP アドレスが印刷され、同時にオンボード USER LED が点灯します。
+- 接続が成功すると、シリアルモニターにIPアドレスが印刷され、同時にオンボードUSER LEDが点灯します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_4.png" style={{width:800, height:'auto'}}/></div>
 
-### WiFi & MQTT の使用
+### WiFi & MQTT使用法
 
-MQTT プロトコルは IoT デバイスで広く使用されており、XIAO ESP32-C5 はこのプロトコルをサポートしています。つまり、XIAO ESP32-C5 を使用して多くの興味深い IoT プロジェクトを開発できます。
+MQTTプロトコルはIoTデバイスで広く使用されており、XIAO ESP32-C5はこのプロトコルをサポートしています。つまり、XIAO ESP32-C5を使用して多くの興味深いIoTプロジェクトを開発できます。
 
 #### プログラム
 
-次に、XIAO ESP32-C5 で MQTT プロトコルを使用する方法を示す参考プログラムを紹介します。
+次に、XIAO ESP32-C5でMQTTプロトコルを使用する方法を示す参考プログラムを紹介します。
 
-- `PubSubClient` ライブラリをインストール
+- `PubSubClient`ライブラリをインストール
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_library_1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -761,7 +796,7 @@ void loop() {
 #### 効果の実演
 
 :::tip
-`https://jsonplaceholder.typicode.com` は開発とテスト目的に特別に設計された無料のモックREST APIテストサービスです。実際のデータの永続的な変更や保存はサポートしていません。
+`https://jsonplaceholder.typicode.com` は開発とテスト目的専用に設計された無料のモックREST APIテストサービスです。実際のデータの永続的な変更や保存はサポートしていません。
 :::
 
 - コードをアップロードした後、`https://jsonplaceholder.typicode.com/todos/1` を開いて、Arduino IDEのシリアルモニターツールで情報が一致しているかを確認できます。
@@ -865,7 +900,7 @@ void loop() {
 
 - 2台のXIAO ESP32-C5デバイスにコードをアップロードし、任意のシリアルポートツールを開いて結果を確認します。
 
-XIAO ESP32-C5デバイス1がネットワーク形成を開始し、メッセージを送信します。
+XIAO ESP32-C5デバイス1がネットワーク形成を開始してメッセージを送信します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_10.png" style={{width:800, height:'auto'}}/></div><br/>
 
@@ -1260,13 +1295,13 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_13.png" style={{width:800, height:'auto'}}/></div><br/>
 
 :::tip
-Webページに表示されるコントロールとセンサーはカスタマイズ可能です。新しいものを追加し、特定のニーズに応じて生成されたWebページを変更できます。参考：[ESPAsyncWebServer](https://github.com/lacamera/ESPAsyncWebServer)
+Webページに表示されるコントロールとセンサーはカスタマイズ可能です。特定のニーズに応じて新しいものを追加し、生成されたWebページを変更できます。参考：[ESPAsyncWebServer](https://github.com/lacamera/ESPAsyncWebServer)
 :::
 
 :::tip
 XIAO ESP32-C5によって生成されるAPホットスポットは、デフォルトではインターネットに接続できません。インターネット接続が必要な場合は、以下の2つの方法のいずれかを採用できます：<br/>
 方法1：XIAO ESP32-C5をHome Assistantに接続する。参考：[Connecting XIAO ESP32-C5 to Home Assistant](https://wiki.seeedstudio.com/ja/xiao_esp32c5_homeassistant/)<br/>
-方法2：MQTTサービスを使用してクラウドサーバーにデータをアップロードする。この方法では一定量のサービスクレジットの購入が必要な場合があります。参考：[Goole Cloud](https://cloud.google.com/)<br/>
+方法2：MQTTサービスを使用してクラウドサーバーにデータをアップロードする。この方法では一定のサービスクレジットの購入が必要な場合があります。参考：[Goole Cloud](https://cloud.google.com/)<br/>
 :::
 
 ## 技術サポート & 製品ディスカッション

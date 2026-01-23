@@ -15,11 +15,11 @@ last_update:
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" /></div>
 
-这是一款专为 Seeed Studio XIAO 设计的功能强大的扩展板，尺寸仅为树莓派 4 的一半。它能够以简单快速的方式构建原型和项目。凭借其丰富的外设，包括 OLED、RTC、可扩展存储器、无源蜂鸣器、RESET/用户按钮、5V 舵机连接器、多种数据接口等，您可以探索 Seeed Studio XIAO 的无限可能性。该板还很好地支持 [Circuitpython](https://circuitpython.org/)。
+一款功能强大的 Seeed Studio XIAO 功能扩展板，尺寸仅为树莓派 4 的一半。它能够以简单快速的方式构建原型和项目。凭借其丰富的外设，包括 OLED、RTC、可扩展存储器、无源蜂鸣器、RESET/用户按钮、5V 舵机连接器、多种数据接口……您可以探索 Seeed Studio XIAO 的无限可能性。该板还很好地支持 [Circuitpython](https://circuitpython.org/)。
 
-作为 Seeed Studio XIAO 外形规格，所有 Seeed Studio XIAO 板都支持 [Grove Shield for Seeed Studio XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)。引脚之间存在细微差异，参考引脚图可以轻松管理。
+作为 Seeed Studio XIAO 外形规格，所有 Seeed Studio XIAO 板都支持 [Grove Shield for Seeed Studio XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)。引脚之间存在细微差异，参考引脚图很容易管理。
 
-Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040 和 Seeed Studio XIAO nRF52840 都与 Seeed Studio Expansion Base for XIAO 兼容。
+Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040 和 Seeed Studio XIAO nRF52840 与 Seeed Studio Expansion Base for XIAO 兼容。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
@@ -32,17 +32,17 @@ Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040 和 Seeed Studio XIAO nRF528
 - **快速原型制作：** 通过 RESET 按钮和引出到公头的 SWD 引脚轻松调试和复位。
 <!-- 0.96"OLED, enables visual data display without PC serial monitor; Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital; No soldering needed with all pin led out. -->
 - **丰富的外设：** OLED 显示屏、RTC、可扩展存储空间、无源蜂鸣器、用户按钮、板载电池管理芯片。
-- **无需焊接：** 所有引脚都已引出。便捷的即插即用 Grove 连接器支持多种数据协议，包括 IIC、UART、模拟/数字。
+- **无需焊接：** 所有引脚引出。便捷的即插即用 Grove 连接器支持多种数据协议，包括 IIC、UART、模拟/数字。
 - **支持 Circuit Python：** 很好地支持 circuit python。MicroSD 卡槽可扩展存储空间，使得在原型制作和项目构建中分配更多所需库成为可能。
 - **小型尺寸：** 紧凑优雅，仅为树莓派 4 尺寸的一半，特别适合需要小型尺寸的项目。
 
-## 规格参数
+## 规格
 
 <div class="table-center">
 <table align="center">
   <tr>
     <th>项目</th>
-    <th>数值</th>
+    <th>值</th>
   </tr>
   <tr>
     <td>工作电压</td>
@@ -93,7 +93,7 @@ Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040 和 Seeed Studio XIAO nRF528
 |Seeed Studio Expansion Base for XIAO  | *1 |
 
 :::note
-本产品不包含 Seeed Studio XIAO 和电池，此扩展板不支持 XIAO nRF54L15 和 XIAO MG24。Seeed Studio XIAO 不断推出新产品。要了解该系列的最新产品动态，请访问 [XIAO 系列主页](https://www.seeedstudio.com/xiao-series-page)。
+本产品不包含 Seeed Studio XIAO 和电池。由于 SWD 引脚不同，此扩展板不支持 XIAO nRF54L15 和 XIAO MG24。Seeed Studio XIAO 不断推出新产品。要了解该系列的最新产品开发，请访问 [XIAO 系列主页](https://www.seeedstudio.com/xiao-series-page)。
 
 <!-- please click this link to get [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html?gclid=Cj0KCQjwufn8BRCwARIsAKzP695mYBI8wwzrR8rXiJgv9QBK5DeTJGCU9bzXvzGUheFVZxqHcuw0SgYaAqDqEALw_wcB) -->
 
@@ -112,7 +112,7 @@ Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040 和 Seeed Studio XIAO nRF528
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/2222222222222222222222222222221.jpg" /></div>
 
-有一个外部 MicroSD 卡槽和 RTC 电池座，MicroSD 卡主要用于保存和运行 `python.py` 文件，RTC 用于跟踪当前时间，可用于在特定时间编程执行操作。
+有一个外部 MicroSD 卡槽和 RTC 电池座，MicroSD 卡主要用于保存和运行 `python.py` 文件，RTC 用于跟踪当前时间，可用于在特定时间编程操作。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/1111111111111111111111110.jpg" /></div>
 
@@ -128,11 +128,11 @@ Grove-Shield for Seeed Studio XIAO 的外部接头引脚描述。
 
 ### 连接
 
-将 Seeed Studio XIAO SAMD21 放在扩展板上，Seeed Studio XIAO SAMD21 的绿色 LED 应该亮起。
+将 Seeed Studio XIAO SAMD21 放在扩展板上，Seeed Studio XIAO SAMD21 绿色 LED 应该亮起。
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO-to-board.png" /></div>
 
 :::note
-请先将 Seeed Studio XIAO 插在扩展板上，然后插入 Type-C，记住将 Seeed Studio XIAO 插入**两个母头连接器的中间**，否则会损坏 Seeed Studio XIAO 和扩展板。
+请先将 Seeed Studio XIAO 插在扩展板上，然后插入 Type-C，记住将 Seeed Studio XIAO 插入**两个母头连接器的中间**，否则您将损坏 Seeed Studio XIAO 和扩展板。
 :::
 
 ## 电池使用
@@ -151,23 +151,23 @@ Seeed Studio Expansion Base for XIAO 可以由电池供电，所以如果您做�
 
 板载丰富的外设包括：
 
-- **OLED 显示屏：** 无需连接 PC 即可进行可视化数据显示，实现更高效的调试方式，并构建传感器集线器、数据监控系统等应用。
+- **OLED 显示屏：** 无需连接 PC 即可进行可视化数据显示，能够以更高效的方式进行调试，并构建传感器集线器、数据监控系统等应用。
 
 - **RESET 按钮：** 无需跳线和短路，一键轻松复位。
 
 - **SWD 调试：** SWD 引脚引出为公头，使调试器连接和固件下载更加容易。
 
-- **高精度 RTC：** 带电池备份的高精度实时时钟，在主电源关闭时仍能保持准确时间。
+- **高精度 RTC：** 带电池备份的高精度实时时钟，能够在主电源关闭时保持准确时间。
 
 - **可扩展存储：** 背面有 MicroSD 卡槽，在添加库和使用 circuit python 时不再担心内存限制。
 
-- **用户按钮：** 除了 RESET 按钮外，还提供另一个用户自定义按钮。
+- **用户按钮：** 除了 RESET 按钮外，还提供另一个用户定义的按钮。
 
-- **无源蜂鸣器：** 您可以改变 PWM 频率来产生不同的蜂鸣声，制作"蜂鸣器音乐"。
+- **无源蜂鸣器：** 您可以改变 PMW 频率来产生不同的蜂鸣声，获得"蜂鸣器音乐"。
 
-- **Grove 连接器：** 所有引脚都已引出，即插即用的 Grove 连接器支持常见数据协议（Grove IIC*2、Grove UART*1、A0/D0 Grove*1）
+- **Grove 连接器：** 所有引脚引出，即插即用的 Grove 连接器支持常见数据协议（Grove IIC*2、Grove UART*1、A0/D0 Grove*1）
 
-- **锂电池充电：** JST2.0mm 标准锂电池连接器和电池管理系统，支持 USB 和锂电池双电源供电，以及便捷的板载电池充电。
+- **锂电池充电：** JST2.0mm 标准锂电池连接器和电池管理系统，支持 USB 和锂电池双电源供应，以及便捷的板载电池充电。
 
 - **5V 舵机连接器：** 5V 输出引出到公头，用于 5V 舵机和传感器连接。
 
@@ -175,7 +175,7 @@ Seeed Studio Expansion Base for XIAO 可以由电池供电，所以如果您做�
 
 ### OLED 显示屏
 
-本示例介绍如何使用 Seeed Studio Expansion Base for XIAO 上的 OLED 显示屏。
+此示例介绍如何使用 Seeed Studio Expansion Base for XIAO 上的 OLED 显示屏。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Hello_world11.jpg" /></div>
 
@@ -208,7 +208,7 @@ void loop(void) {
 
 ### 通过用户按钮控制 LED
 
-本示例介绍如何使用 Seeed Studio Expansion Base for XIAO 上的按钮来控制 Seeed Studio XIAO SAMD21 上的 LED。
+此示例介绍如何使用 Seeed Studio Expansion Base for XIAO 上的按钮来控制 Seeed Studio XIAO SAMD21 上的 LED。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/LED_botton.gif" /></div>
 
@@ -492,7 +492,7 @@ void loop() {
 
 ```
 
-如果您使用的是 XIAO nRF52840 系列，那么您可能需要单独下载 [SdFat 库](https://github.com/greiman/SdFat) 才能使用 SD 卡功能。
+如果您使用的是 XIAO nRF52840 系列，那么您可能需要单独下载 [SdFat 库](https://github.com/greiman/SdFat) 以使用 SD 卡功能。
 
 ```cpp
 #include <SPI.h>
@@ -562,7 +562,7 @@ void loop() {
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/XIAO-p-4812.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
 
-我们为 Seeed Studio XIAO 扩展底板制作了这个[**亚克力外壳**](https://www.seeedstudio.com/XIAO-p-4812.html)来保护它，这些是亚克力外壳组件。
+我们为 Seeed Studio XIAO 扩展底板制作了这个[**亚克力外壳**](https://www.seeedstudio.com/XIAO-p-4812.html)，用于保护 Seeed Studio XIAO 扩展底板，这些是亚克力外壳组件。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/componets.png" /></div>
 
@@ -574,7 +574,7 @@ void loop() {
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Acrylic_Case/build_up.gif" /></div>
 
-## 在带扩展板的 Seeed Studio XIAO SAMD21 上使用 Circuitpython
+## 在带扩展板的 Seeed Studio XIAO SAMD21 上运行 CircuitPython
 
 本教程介绍如何在[**Seeed Studio XIAO SAMD21 开发板**](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html)上安装和运行 Adafruit Industries 官方的[**CircuitPython**](https://circuitpython.org/)！
 
@@ -617,14 +617,14 @@ CircuitPython 是一种编程语言，旨在简化在低成本微控制器板上
 `main` 名称可以是以下之一：**code.txt**、**code.py**、**main.py**、**main.txt**，关于[**此行为**](https://docs.circuitpython.org/en/latest/README.html#behavior)有更多详细信息。
 :::
 
-**步骤 2** 使用 REPL 获取橙色 LED 的引脚。有关 REPL 的详细信息，请参阅[欢迎使用 CircuitPython！](https://learn.adafruit.com/welcome-to-circuitpython/the-repl) 要使用 REPL，您首先需要连接到串行控制台。建立连接后，按 CTRL+C 两次进入编辑模式。然后，复制以下代码并分别输入。
+**步骤 2** 使用 REPL 获取橙色 LED 的引脚。有关 REPL 的详细信息，请参阅 [Welcome to CircuitPython!](https://learn.adafruit.com/welcome-to-circuitpython/the-repl) 要使用 REPL，您首先需要连接到串行控制台。建立连接后，按 CTRL+C 两次进入编辑模式。然后，复制以下代码并分别输入。
 
 ```
 >>> import board
 >>> dir(board)
 ```
 
-您将看到开发板上所有可用引脚的列表，这些引脚可以在您的代码中使用。每个开发板会根据可用引脚数量略有不同。
+您将看到开发板上所有可在代码中使用的引脚列表。每个开发板会根据可用引脚数量略有不同。
 ![image.png](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board12.png)
 
 您看到 YELLOW_LED_INVERTED 了吗？这就是您用来闪烁橙色 LED 的引脚！
@@ -987,7 +987,7 @@ void delayUntil(unsigned long elapsedTime) {
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/finger_pinter.png" /></div>
 
-注意 NeoPixel 环通过三根不同颜色的线直接连接到 XIAO 开发板的引脚：用黄线将 NeoPixel 环的 DIN 引脚连接到 XIAO 的 D1 引脚，用红线将 NeoPixel 环的 VIN 引脚连接到 XIAO 的 3V3 引脚，用黑线将 NeoPixel 环的 GND 引脚连接到 XIAO 的 GND 引脚。
+注意，NeoPixel 环通过三根不同颜色的线直接连接到 XIAO 开发板的引脚：用黄线将 NeoPixel 环的 DIN 引脚连接到 XIAO 的 D1 引脚，用红线将 NeoPixel 环的 VIN 引脚连接到 XIAO 的 3V3 引脚，用黑线将 NeoPixel 环的 GND 引脚连接到 XIAO 的 GND 引脚。
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board13.jpeg)
 
@@ -1017,7 +1017,7 @@ void delayUntil(unsigned long elapsedTime) {
 
 3. 身份验证（未通过认证）
 
-如果其他人将手指放在上面，LED 环将变为红色，板子将显示"Identity deny"，同时警报器将工作。
+如果其他人将手指放在上面，LED 环将变为红色，板子将显示 "Identity deny"，同时警报器将工作。
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_close.gif" /></div>
 
@@ -1195,7 +1195,7 @@ void colorWipe(uint32_t c, uint8_t wait) {
 
 **硬件连接**
 
-请用 Grove 线将扩展板和所需模块连接起来，将 Grove 电磁铁模块连接到 D0 端口，将指纹模块连接到 I2C 端口。
+请用 Grove 线连接扩展板和所需模块，将 Grove 电磁铁模块连接到 D0 端口，将指纹模块连接到 I2C 端口。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/mjolnir/66666.png" /></div>
 
@@ -1322,13 +1322,13 @@ void setup() {
 
 **硬件连接**
 
-请按照图表所示连接每个传感器。将 CO2 传感器和 PM2.5 传感器分别连接到两个 I2C 端口，并将灰尘传感器连接到 UART 端口。
+请按照图表所示连接每个传感器。将 CO2 传感器和 PM2.5 传感器分别连接到两个 I2C 端口，并将粉尘传感器连接到 UART 端口。
 
 <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Air_Quality_Sensor_Hub/environment_detect_g.png" /></div>
 
 **Arduino 说明**
 
-**步骤 1**. 按照连接图将所有传感器连接到板上。
+**步骤 1**. 按照连接图将所有传感器连接到开发板上。
 
 **步骤 2**. 下载 [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
@@ -1553,7 +1553,7 @@ void loop() {
 
 **Arduino 说明**
 
-**步骤 1**. 按照连接图将所有传感器连接到板上。
+**步骤 1**. 按照连接图将所有传感器连接到开发板上。
 
 **步骤 2**. 下载 [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)
 
@@ -1619,7 +1619,7 @@ PMIC 不输出电源；5V 直接来自 USB。5V 引脚上提供的电流等于 U
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在此为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

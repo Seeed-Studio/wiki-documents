@@ -136,7 +136,7 @@ Si quieres comenzar directamente el tutorial de uso de Wi-Fi, puedes saltar a [E
 
  	- **Salida**: True/False.
 
-- `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- Desconectarse de la red.
+- `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- Desconectar de la red.
 
  	- **Parámetros de Entrada**
   		- **wifioff**: wifioff `true` para apagar la radio Wi-Fi.
@@ -148,7 +148,7 @@ Si quieres comenzar directamente el tutorial de uso de Wi-Fi, puedes saltar a [E
 
  	- **Parámetros de Entrada**
   		- **local_ip**: Configuración de ip estática.
-  		- **gateway**: Configuración de gateway estático.
+  		- **gateway**: Configuración de puerta de enlace estática.
   		- **subnet**: Máscara de subred estática.
   		- **dns1**: Servidor DNS estático 1.
   		- **dns2**: Servidor DNS estático 2.
@@ -344,67 +344,97 @@ A continuación se muestra un programa de ejemplo para mostrar cómo el XIAO ESP
 
 - Código de Referencia
 
+<details>
+
+<summary>WiFiScan.ino</summary>
+
 ```cpp
-#include <WiFi.h>
+/*
+ *  This sketch demonstrates how to scan WiFi networks. For chips that support 5GHz band, separate scans are done for all bands.
+ *  The API is based on the Arduino WiFi Shield library, but has significant changes as newer WiFi functions are supported.
+ *  E.g. the return value of `encryptionType()` different because more modern encryption is supported.
+ */
+#include "WiFi.h"
 
 void setup() {
-    Serial.begin(115200);
-
-    // Set WiFi to Station mode and disconnect from an AP if it was previously connected
-    WiFi.mode(WIFI_STA);
-    WiFi.disconnect();
-    delay(100);
-
-    Serial.println("Setup done. Starting WiFi Scan...");
+  Serial.begin(115200);
+  // Enable Station Interface
+  WiFi.STA.begin();
+  Serial.println("Setup done");
 }
 
-void loop() {
-    Serial.println("Scanning for networks...");
-
-    // WiFi.scanNetworks() returns the number of networks found
-    // 'false' = synchronous scan (waits until done)
-    // 'true' = show hidden networks
-    int n = WiFi.scanNetworks(false, true);
-
-    if (n == 0) {
-        Serial.println("No networks found");
-    } else {
-        Serial.print(n);
-        Serial.println(" networks found");
-        Serial.println("Nr | SSID                             | RSSI  | Ch | Encryption");
-        Serial.println("------------------------------------------------------------------");
-
-        for (int i = 0; i < n; ++i) {
-            // Print SSID and RSSI for each network found
-            Serial.printf("%2d | %-32.32s | %4d | %2d | ", 
-                          i + 1, 
-                          WiFi.SSID(i).c_str(), 
-                          WiFi.RSSI(i), 
-                          WiFi.channel(i)); // C5 will show 5GHz channels (e.g., 36, 40, etc.) if detected
-
-            // Determine encryption type
-            switch (WiFi.encryptionType(i)) {
-                case WIFI_AUTH_OPEN: Serial.print("Open"); break;
-                case WIFI_AUTH_WEP:  Serial.print("WEP"); break;
-                case WIFI_AUTH_WPA_PSK: Serial.print("WPA"); break;
-                case WIFI_AUTH_WPA2_PSK: Serial.print("WPA2"); break;
-                case WIFI_AUTH_WPA_WPA2_PSK: Serial.print("WPA+WPA2"); break;
-                case WIFI_AUTH_WPA3_PSK: Serial.print("WPA3"); break; // C5 supports WPA3 natively
-                default: Serial.print("Unknown");
-            }
-            Serial.println();
-            delay(10);
-        }
+void ScanWiFi() {
+  Serial.println("Scan start");
+  // WiFi.scanNetworks will return the number of networks found.
+  int n = WiFi.scanNetworks();
+  Serial.println("Scan done");
+  if (n == 0) {
+    Serial.println("no networks found");
+  } else {
+    Serial.print(n);
+    Serial.println(" networks found");
+    Serial.println("Nr | SSID                             | RSSI | CH | Encryption");
+    for (int i = 0; i < n; ++i) {
+      // Print SSID and RSSI for each network found
+      Serial.printf("%2d", i + 1);
+      Serial.print(" | ");
+      Serial.printf("%-32.32s", WiFi.SSID(i).c_str());
+      Serial.print(" | ");
+      Serial.printf("%4ld", WiFi.RSSI(i));
+      Serial.print(" | ");
+      Serial.printf("%2ld", WiFi.channel(i));
+      Serial.print(" | ");
+      switch (WiFi.encryptionType(i)) {
+        case WIFI_AUTH_OPEN:            Serial.print("open"); break;
+        case WIFI_AUTH_WEP:             Serial.print("WEP"); break;
+        case WIFI_AUTH_WPA_PSK:         Serial.print("WPA"); break;
+        case WIFI_AUTH_WPA2_PSK:        Serial.print("WPA2"); break;
+        case WIFI_AUTH_WPA_WPA2_PSK:    Serial.print("WPA+WPA2"); break;
+        case WIFI_AUTH_WPA2_ENTERPRISE: Serial.print("WPA2-EAP"); break;
+        case WIFI_AUTH_WPA3_PSK:        Serial.print("WPA3"); break;
+        case WIFI_AUTH_WPA2_WPA3_PSK:   Serial.print("WPA2+WPA3"); break;
+        case WIFI_AUTH_WAPI_PSK:        Serial.print("WAPI"); break;
+        default:                        Serial.print("unknown");
+      }
+      Serial.println();
+      delay(10);
     }
-    Serial.println("");
+  }
 
-    // Clean up RAM
-    WiFi.scanDelete();
-
-    // Wait a bit before scanning again
-    delay(5000);
+  // Delete the scan result to free memory for code below.
+  WiFi.scanDelete();
+  Serial.println("-------------------------------------");
+}
+void loop() {
+  Serial.println("-------------------------------------");
+  Serial.println("Default wifi band mode scan:");
+  Serial.println("-------------------------------------");
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(5, 4, 2)
+  WiFi.setBandMode(WIFI_BAND_MODE_AUTO);
+#endif
+  ScanWiFi();
+#if CONFIG_SOC_WIFI_SUPPORT_5G
+  // Wait a bit before scanning again.
+  delay(1000);
+  Serial.println("-------------------------------------");
+  Serial.println("2.4 Ghz wifi band mode scan:");
+  Serial.println("-------------------------------------");
+  WiFi.setBandMode(WIFI_BAND_MODE_2G_ONLY);
+  ScanWiFi();
+  // Wait a bit before scanning again.
+  delay(1000);
+  Serial.println("-------------------------------------");
+  Serial.println("5 Ghz wifi band mode scan:");
+  Serial.println("-------------------------------------");
+  WiFi.setBandMode(WIFI_BAND_MODE_5G_ONLY);
+  ScanWiFi();
+#endif
+  // Wait a bit before scanning again.
+  delay(10000);
 }
 ```
+
+</details>
 
 #### Presentación del Efecto
 
@@ -419,6 +449,10 @@ Dentro de la cobertura Wi-Fi, puedes conectarte a una red Wi-Fi específica a tr
 #### Programa
 
 A continuación, se proporciona un programa de ejemplo para mostrar cómo el XIAO ESP32-C5 se conecta a una red Wi-Fi especificada.
+
+:::tip
+XIAO ESP32-C5 soporta Wi-Fi de banda dual (2.4 GHz y 5 GHz), permitiéndote elegir la conexión basada en tu red doméstica.
+:::
 
 - Código de Referencia
 
@@ -477,6 +511,7 @@ void loop() {
 #### Presentación del Efecto
 
 - Después de cargar el programa, abre el Monitor Serie del IDE de Arduino, y se mostrará información como la dirección IP de la red Wi-Fi conectada.
+- Estoy conectado a la red de 5 GHz en mi entorno.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -1255,7 +1290,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_12.png" style={{width:800, height:'auto'}}/></div><br/>
 
-- Ingresa la dirección IP para ir a la página web.
+- Ingresa la dirección IP para saltar a la página web.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/wifi_usage_13.png" style={{width:800, height:'auto'}}/></div><br/>
 

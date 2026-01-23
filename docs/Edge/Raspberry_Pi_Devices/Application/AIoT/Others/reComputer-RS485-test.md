@@ -5,11 +5,11 @@ keywords:
   - RS485
   - reComputer
   - loopback test
-image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/RS485/RS485_connection.jpg
 slug: /recomputer_rs485_loopback_test
 sku: 113991314,113991274, 113991294, 113991295, 113991334, 113991374, 113991375,100020831, 100045506, 100080766, 100026042, 100061305, 100099044, 100097052, 100091962  
 last_update:
-  date: 01/14/2025
+  date: 01/14/2026
   author: Jiahao
 ---
 

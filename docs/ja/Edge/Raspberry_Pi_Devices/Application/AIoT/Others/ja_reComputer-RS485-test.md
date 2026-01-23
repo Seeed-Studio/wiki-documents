@@ -9,13 +9,13 @@ image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/0
 slug: /ja/recomputer_rs485_loopback_test
 sku: 113991314,113991274, 113991294, 113991295, 113991334, 113991374, 113991375,100020831, 100045506, 100080766, 100026042, 100061305, 100099044, 100097052, 100091962  
 last_update:
-  date: 01/14/2025
+  date: 01/14/2026
   author: Jiahao
 ---
 
 ## はじめに
 
-この Wiki は、reComputer R10/R11/R20/R21 を含む RS485 インターフェースを持つすべての reComputer デバイスに適用され、RS485 の受信および送信機能が正常に動作しているかどうかをテストするために使用できます。
+この Wiki は、RS485 インターフェースを持つすべての reComputer デバイス（reComputer R10/R11/R20/R21 を含む）に適用され、RS485 の受信および送信機能が正しく動作しているかをテストするために使用できます。
 
 ## ハードウェアの準備
 
@@ -60,7 +60,7 @@ last_update:
 
 ## 接続
 
-テストする RS485 インターフェースのペアを選択し、A1 を A2 に接続し、B1 を B2 に接続してください：
+テストする RS485 インターフェースのペアを選択し、A1 を A2 に、B1 を B2 に接続してください：
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/RS485/RS485_connection.jpg" /></center>
 
