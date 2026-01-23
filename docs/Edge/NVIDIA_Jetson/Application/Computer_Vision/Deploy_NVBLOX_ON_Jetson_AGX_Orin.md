@@ -14,7 +14,7 @@ keywords:
 - TSDF
 - ESDF
 - 3D Mapping
-image: https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp
+image: https://files.seeedstudio.com/wiki/other/page-nvblox.jpg
 slug: /deploy_nvblox_jetson_agx_orin
 sku: 101090144,100020039
 last_update:
@@ -184,14 +184,6 @@ Installing Isaac ROS requires logging into NVIDIA NGC in the terminal and enteri
 :::
 
 
-<!-- ```bash
-# Add CUDA environment variables to .bashrc
-echo '
-# CUDA Environmentexport CUDA_HOME=/usr/local/cuda
-export PATH=$CUDA_HOME/bin:$PATH
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
-export CUDACXX=$CUDA_HOME/bin/nvcc
-' >> ~/.bashrc
 
 # Reload shell configuration
 source ~/.bashrc -->
@@ -286,6 +278,17 @@ Install additional dependencies:
 sudo apt update
 sudo apt-get install -y ros-humble-magic-enum
 sudo apt-get install -y ros-humble-foxglove-msgs
+```
+
+Add CUDA environment variables to `.bashrc`: 
+
+```bash
+echo '
+CUDA_HOME=/usr/local/cuda
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export CUDACXX=$CUDA_HOME/bin/nvcc
+' >> ~/.bashrc
 ```
 
 Create symbolic links:
