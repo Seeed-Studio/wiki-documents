@@ -14,7 +14,7 @@ keywords:
 - TSDF
 - ESDF
 - 3D Mapping
-image: https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp
+image: https://files.seeedstudio.com/wiki/other/page-nvblox.jpg
 slug: /cn/deploy_nvblox_jetson_agx_orin
 sku: 101090144,100020039
 last_update:
@@ -31,11 +31,11 @@ last_update:
 ## 简介
 
 <div style={{ textAlign: "justify" }}>
-[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) 是 NVIDIA 开发的高性能 GPU 加速 3D 建图框架，用于实时机器人感知。与单目深度估计模型不同，NVBlox 使用来自 RGB-D 相机或立体相机的真实深度输入来构建准确的 3D 场景表示。
+[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) 是 NVIDIA 开发的高性能 GPU 加速 3D 建图框架，用于实时机器人感知。与单目深度估计模型不同，NVBlox 使用来自 RGB-D 相机或立体相机的真实深度输入来构建精确的 3D 场景表示。
 
 它实时构建密集的 TSDF（截断符号距离场）和 ESDF（欧几里得符号距离场）地图，实现高质量的 3D 重建、障碍物感知导航和碰撞检测。NVBlox 还可以生成网格、基于体素的代价地图以及适用于自主移动机器人（AMR）的 3D 占用表示。
 
-这使其在边缘 AI 应用中特别有价值，在这些应用中硬件约束和计算效率是关键考虑因素。本 wiki 演示了如何在 **Jetson AGX Orin** 上部署 Isaac ROS NVBlox，集成 **ROS 2**，使用 **Orbbec RGB-D 相机** 和移动机器人平台实现完全的设备端感知和导航管道。🚀
+这使其在边缘 AI 应用中特别有价值，在这些应用中硬件约束和计算效率是关键考虑因素。本 wiki 演示了如何在 **Jetson AGX Orin** 上部署 Isaac ROS NVBlox，集成 **ROS 2**，使用 **Orbbec RGB-D 相机** 和移动机器人平台来实现完全的设备端感知和导航管道。🚀
 
 </div>
 
@@ -65,11 +65,11 @@ last_update:
 
 ## 技术亮点
 
-- **实时 3D 建图**：NVBlox 使用 GPU 加速实时生成密集的 TSDF 和 ESDF 地图，为机器人应用实现高质量的 3D 场景重建。
+- **实时 3D 建图**：NVBlox 使用 GPU 加速实时生成密集的 TSDF 和 ESDF 地图，为机器人应用提供高质量的 3D 场景重建。
 
-- **RGB-D 相机集成**：利用 Orbbec RGB-D 相机的真实深度信息创建准确的 3D 表示，无需依赖单目深度估计。
+- **RGB-D 相机集成**：利用 Orbbec RGB-D 相机的真实深度信息创建精确的 3D 表示，无需依赖单目深度估计。
 
-- **边缘部署优化**：专为 Jetson AGX Orin 等边缘设备的高效推理而设计，具有 CUDA 优化以实现最大性能。
+- **边缘部署优化**：专为 Jetson AGX Orin 等边缘设备的高效推理而设计，具有 CUDA 优化以获得最大性能。
 
 - **导航就绪输出**：生成适用于自主导航和碰撞避免的网格、基于体素的代价地图和 3D 占用网格。
 
@@ -184,14 +184,6 @@ cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
 :::
 
 
-<!-- ```bash
-# Add CUDA environment variables to .bashrc
-echo '
-# CUDA Environmentexport CUDA_HOME=/usr/local/cuda
-export PATH=$CUDA_HOME/bin:$PATH
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
-export CUDACXX=$CUDA_HOME/bin/nvcc
-' >> ~/.bashrc
 
 # Reload shell configuration
 source ~/.bashrc -->
@@ -262,7 +254,7 @@ cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
   ./scripts/run_dev.sh
 ```
 
-（可选）如果遇到类似以下错误：
+（可选）如果遇到类似以下的错误：
 
 ```bash
 Finished pulling pre-built base image: nvcr.io/nvidia/isaac/ros:aarch64-ros2_humble_4c0c55dddd2bbcc3e8d5f9753bee634c
@@ -286,6 +278,17 @@ sudo nvidia-ctk cdi generate --mode=csv --output=/etc/cdi/nvidia.yaml
 sudo apt update
 sudo apt-get install -y ros-humble-magic-enum
 sudo apt-get install -y ros-humble-foxglove-msgs
+```
+
+将 CUDA 环境变量添加到 `.bashrc`：
+
+```bash
+echo '
+CUDA_HOME=/usr/local/cuda
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export CUDACXX=$CUDA_HOME/bin/nvcc
+' >> ~/.bashrc
 ```
 
 创建符号链接：

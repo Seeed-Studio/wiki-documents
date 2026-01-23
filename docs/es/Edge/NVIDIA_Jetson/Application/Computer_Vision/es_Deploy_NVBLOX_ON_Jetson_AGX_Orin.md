@@ -14,7 +14,7 @@ keywords:
 - TSDF
 - ESDF
 - 3D Mapping
-image: https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp
+image: https://files.seeedstudio.com/wiki/other/page-nvblox.jpg
 slug: /es/deploy_nvblox_jetson_agx_orin
 sku: 101090144,100020039
 last_update:
@@ -31,11 +31,11 @@ last_update:
 ## Introducción
 
 <div style={{ textAlign: "justify" }}>
-[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) es un marco de mapeo 3D de alto rendimiento acelerado por GPU desarrollado por NVIDIA para percepción robótica en tiempo real. A diferencia de los modelos de estimación de profundidad monocular, NVBlox consume entrada de profundidad real de cámaras RGB-D o cámaras estéreo para construir representaciones precisas de escenas 3D.
+[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) es un marco de mapeo 3D de alto rendimiento acelerado por GPU desarrollado por NVIDIA para percepción robótica en tiempo real. A diferencia de los modelos de estimación de profundidad monocular, NVBlox consume entrada de profundidad real de cámaras RGB-D o cámaras estéreo para construir representaciones 3D precisas de la escena.
 
 Construye mapas densos TSDF (Campo de Distancia Firmado Truncado) y ESDF (Campo de Distancia Firmado Euclidiano) en tiempo real, permitiendo reconstrucción 3D de alta calidad, navegación consciente de obstáculos y verificación de colisiones. NVBlox también puede generar mallas, mapas de costos basados en vóxeles y representaciones de ocupación 3D adecuadas para robots móviles autónomos (AMR).
 
-Esto lo hace particularmente valioso para aplicaciones de Edge AI donde las limitaciones de hardware y la eficiencia computacional son consideraciones críticas. Este wiki demuestra cómo desplegar Isaac ROS NVBlox en **Jetson AGX Orin** con integración de **ROS 2**, usando una **cámara RGB-D Orbbec** y una plataforma de robot móvil para lograr un pipeline completo de percepción y navegación en el dispositivo. 🚀
+Esto lo hace particularmente valioso para aplicaciones de Edge AI donde las limitaciones de hardware y la eficiencia computacional son consideraciones críticas. Este wiki demuestra cómo desplegar Isaac ROS NVBlox en **Jetson AGX Orin** con integración de **ROS 2**, usando una **cámara RGB-D Orbbec** y una plataforma de robot móvil para lograr un pipeline de percepción y navegación completamente en el dispositivo. 🚀
 
 </div>
 
@@ -65,11 +65,11 @@ Esto lo hace particularmente valioso para aplicaciones de Edge AI donde las limi
 
 ## Características Técnicas Destacadas
 
-- **Mapeo 3D en Tiempo Real**: NVBlox genera mapas densos TSDF y ESDF en tiempo real usando aceleración GPU, permitiendo reconstrucción de escenas 3D de alta calidad para aplicaciones robóticas.
+- **Mapeo 3D en Tiempo Real**: NVBlox genera mapas densos TSDF y ESDF en tiempo real usando aceleración GPU, permitiendo reconstrucción 3D de alta calidad para aplicaciones robóticas.
 
 - **Integración de Cámara RGB-D**: Aprovecha información de profundidad real de cámaras RGB-D Orbbec para crear representaciones 3D precisas sin depender de estimación de profundidad monocular.
 
-- **Optimizado para Despliegue en Edge**: Específicamente diseñado para inferencia eficiente en dispositivos edge como Jetson AGX Orin, con optimización CUDA para máximo rendimiento.
+- **Optimizado para Despliegue en el Borde**: Específicamente diseñado para inferencia eficiente en dispositivos de borde como Jetson AGX Orin, con optimización CUDA para máximo rendimiento.
 
 - **Salidas Listas para Navegación**: Genera mallas, mapas de costos basados en vóxeles y grillas de ocupación 3D adecuadas para navegación autónoma y evitación de colisiones.
 
@@ -184,14 +184,6 @@ Instalar Isaac ROS requiere iniciar sesión en NVIDIA NGC en el terminal e ingre
 :::
 
 
-<!-- ```bash
-# Add CUDA environment variables to .bashrc
-echo '
-# CUDA Environmentexport CUDA_HOME=/usr/local/cuda
-export PATH=$CUDA_HOME/bin:$PATH
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
-export CUDACXX=$CUDA_HOME/bin/nvcc
-' >> ~/.bashrc
 
 # Reload shell configuration
 source ~/.bashrc -->
@@ -288,6 +280,17 @@ sudo apt-get install -y ros-humble-magic-enum
 sudo apt-get install -y ros-humble-foxglove-msgs
 ```
 
+Agregar variables de entorno CUDA a `.bashrc`: 
+
+```bash
+echo '
+CUDA_HOME=/usr/local/cuda
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export CUDACXX=$CUDA_HOME/bin/nvcc
+' >> ~/.bashrc
+```
+
 Crear enlaces simbólicos:
 ```bash
 sudo ln -sf /opt/ros/humble/include/magic_enum.hpp /usr/include/magic_enum.hpp
@@ -320,7 +323,7 @@ ros2 launch orbbec_camera <camera_name>.launch.py
 # Example: ros2 launch orbbec_camera gemini2.launch.py
 ```
 
-Aquí hay algunos parámetros `<camera_name>` soportados:
+Aquí hay algunos parámetros `<camera_name>` soportados: 
 - gemini210
 - gemini2
 - gemini2L
@@ -366,7 +369,7 @@ Puedes ver la salida de NVBlox de cuadrículas de ocupación 3D y mallas en RViz
   <img width="1000" src="https://files.seeedstudio.com/wiki/other/rviz.jpg"/>
 </div>
 
-RViz se puede configurar como se muestra a continuación. Habilita los resultados de visualización que desees y selecciona los nombres de temas disponibles:
+RViz puede configurarse como se muestra a continuación. Habilita los resultados de visualización que desees y selecciona los nombres de temas disponibles:
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/other/rviz-lan.jpg"/>
 </div>
@@ -377,7 +380,7 @@ Finalmente, montando el AGX Orin y la cámara Orbbec en un AGV móvil, puedes lo
   <iframe width="1029" height="579" src="https://www.youtube.com/embed/_TKNGejfGIo" title="Deploy NVBlox on reComputer Mini J501" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-Esto se puede usar para detección de obstáculos y construcción de mapas de malla 3D de escenas para robots móviles. 🤖
+Esto puede usarse para detección de obstáculos y construcción de mapas de malla 3D de escenas para robots móviles. 🤖
 
 
 
