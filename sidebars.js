@@ -1971,6 +1971,7 @@ const sidebars = {
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_mqtt_stream',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_udp_streaming',
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_http',
+                'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_doa_vad',
                 {
                   type: 'category',
                   label: 'Application',
@@ -3847,6 +3848,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/deploy_frigate_on_jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/AI-NVR_with_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_NVBLOX_ON_Jetson_AGX_Orin',
               ]
             },
             // Generative AI
@@ -3895,6 +3897,7 @@ const sidebars = {
               label: 'Physical AI',
               items: [
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Chatbot_reComputer',
+                'Edge/NVIDIA_Jetson/Application/Physical_AI/Local_Voice_LLM_for_Reachy_Mini',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'Edge/NVIDIA_Jetson/Application/Physical_AI/Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
@@ -7222,6 +7225,7 @@ const sidebars = {
                 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_mqtt_stream',
                 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_udp_streaming',
                 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_http',
+                'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_doa_vad',
                 {
                   type: 'category',
                   label: '应用',
@@ -9091,6 +9095,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_deploy_frigate_on_jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_AI-NVR_with_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
               ]
             },
             // Generative AI
@@ -9139,6 +9144,7 @@ const sidebars = {
               label: '具身智能',
               items: [
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Chatbot_reComputer',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Voice_LLM_for_Reachy_Mini',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
@@ -12366,6 +12372,7 @@ const sidebars = {
                 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_mqtt_stream',
                 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_udp_streaming',
                 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_http',
+                'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_doa_vad',
                 {
                   type: 'category',
                   label: 'Aplicación',
@@ -14235,6 +14242,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_deploy_frigate_on_jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_AI-NVR_with_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
+                'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
               ]
             },
             // Generative AI
@@ -14283,6 +14291,7 @@ const sidebars = {
               label: 'IA Encarnada',
               items: [
                 'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Chatbot_reComputer',
+                'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Voice_LLM_for_Reachy_Mini',
                 'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]
@@ -17511,6 +17520,7 @@ const sidebars = {
                 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_mqtt_stream',
                 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_udp_streaming',
                 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_http',
+                'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_doa_vad',
                 {
                   type: 'category',
                   label: 'アプリケーション',
@@ -19380,6 +19390,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_deploy_frigate_on_jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_AI-NVR_with_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
+                'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
               ]
             },
             // Generative AI
@@ -19428,6 +19439,7 @@ const sidebars = {
               label: 'エンボディド AI',
               items: [
                 'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Chatbot_reComputer',
+                'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
                 'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
               ]

@@ -154,6 +154,8 @@ export const Highlight = ({children, color}) => (
     </tbody>
 </table>
 
+> [XIAO ESP32-S3 vs ESP32-C3 vs ESP32-C6: ¿Cuál es el mejor para tu proyecto?](https://www.seeedstudio.com/blog/2026/01/14/xiao-esp32-s3-c3-c6-comparison/)
+
 ### Características
 
 - **Conectividad Mejorada**: Integra conectividad de radio Wi-Fi 6 (802.11ax) de ***2.4*** GHz, Bluetooth 5(LE) e IEEE 802.15.4, permitiendo la aplicación de protocolos **Thread** y **Zigbee**.

@@ -24,6 +24,10 @@ Seeed studio is **NOT responsible** for any damage to the device caused by the u
 - <a  href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-4G-EU868-p-5599.html" target="_blank"><span> <b>M2 Multi-Platform LoRaWAN Indoor Gateway(SX1302-4G)</b></span></a>
 - <a  href="https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5339.html" target="_blank"><span> <b>M2 Data-Only LoRaWAN Indoor Gateway(SX1302)</b></span></a>
 
+:::note
+Due to variations in hardware, flashing the M2 gateway for Helium (models: `114992751`, `114992752`, `114992755`, `114992808`, `114992826`, `114992828`) with open-source firmware requires not only the firmware image but also the corresponding U-Boot loader. For detailed instructions, please refer to the **Flash the U-Boot** section.
+:::
+
 ## Prepare the firmware
 
 ### Download the pre-built firmware
@@ -141,6 +145,34 @@ Before you begin the following step, we recommend download the lastest version o
 **Step 6:** Wait for the firmware to finish uploading, after which the device will prompt `Switch baudrate to 57600 bps and press ESC...`. Follow the device prompts. Then device will automatically install the firmware and reboot.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/opensource11.png" alt="pir" width={800} height="auto" /></p>
+
+## Flash the U-Boot
+
+:::note
+When flashing the open‑source firmware into the Helium M2 LoRaWAN Indoor Gateway, please ensure that you also [Download](https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/uboot_v1.1.3-8-general.bin) and Flash the corresponding U‑Boot image to the device. This step is required for the gateway to function properly.
+:::
+
+### Flash firmware via Serial
+
+**Step 1:** Use a Type-C cable to connect the device to the computer.
+
+**Step 2:** Connect to the device using the serial port called `USB-SERIAL CH340` with **Baudrate 57600**.
+
+**Step 3:** Restart the device. When the device enters U-Boot, select `Command 7` to enter the system update.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/flash_uboot_1.png" alt="pir" width={800} height="auto" /></p>
+
+**Step 4:** Upload the firmware using kermit protocol. Teraterm has provide kermit transmit tool. You can refer to the image below to upload the U-Boot.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/opensource12.png" alt="pir" width={800} height="auto" /></p>
+
+**Step 5:** Waiting for the flashing to complete and restart the device. When the device enters U-Boot, select `Command 4` to enter the U-Boot command. Then input `spi erase 0x50000 0x1FB0000` to erase the block followed.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/flash_uboot_2.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/flash_uboot_3.png" alt="pir" width={800} height="auto" /></p>
+
+Then you can restart the device and flash the firmware image as instructed in the **Flash the firmware** section.
 
 ## Login into Console
 
