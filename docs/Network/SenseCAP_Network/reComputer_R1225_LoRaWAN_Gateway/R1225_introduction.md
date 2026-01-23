@@ -30,10 +30,10 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
 - Multiple isolated RS485 channels supports high and low speeds communication.
 
 - Supports BACnet, Modbus RTU, and Modbus TCP/IP protocol
-- Up to 8GB RAM supports the processing of thousands of data points, ensuring efficient performance
+- Up to 4GB RAM supports the processing of thousands of data points, ensuring efficient performance
 - Clear dual-sided LED indicators help check operational status quickly
 - High-quality metal case, compatible with DIN-rail and Wall installation
-- Supports Yocto and Buildroot for customized OS
+- Open-source Software Seeed Gateway OS，ChirpStack, Basics™ Station, Packet Forward build in. Supports customization and derivative development.
 
 ### Powerful Performance
 
@@ -232,9 +232,6 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>CE, FCC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>TELEC</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>RoHS</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -261,7 +258,7 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Supercapacitor UPS</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>SuperCAP UPS LTC3350 Module*</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>SuperCAP UPS LTC3350 Module</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Hardware Watchdog</td>
@@ -284,15 +281,11 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Warranty</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 years</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2 years</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Production Lifetime</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Until December 2030</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Statement</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Options marked with * require additional purchase according to the accessories list.</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>Component and Interface Status Statement</strong></td>
@@ -335,6 +328,11 @@ reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN ga
   </tbody>
 </table>
 </div>
+
+### Statement
+
+**Options marked with * require additional purchase according to the accessories list.**
+    
 
 ## Hardware Overview
 
@@ -408,7 +406,7 @@ Please note that after shutting down, please wait for **at least 10 seconds** be
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>Ethernet</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100/1000 Mbps IEEE 1588-2008(supports PoE*)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100/1000 Mbps IEEE 1588-2008(supports PoE)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100 Mbps IEEE802.3/802.3u</td>
@@ -509,6 +507,11 @@ If the ACT LED blinks in an irregular pattern then booting has started.
 If the ACT LED doesn't blink, then the EEPROM code might be corrupted, try again without anything connected to make sure. For more detail please check the Raspberry Pi forum:
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
 For more detail please check the [Raspberry Pi forum](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151).
+
+
+#### Customizable LED lights via the Luci interface
+
+#### Control LED lights via commands
 
 To control the user LEDs, we recommend using sysfs, a pseudo-filesystem provided by the Linux kernel that exposes information about various kernel subsystems, hardware devices, and their associated drivers. On the reComputer R1225, we have abstracted the user LED interface into three device files (led-red, led-blue, and led-green), enabling users to control the LED lights simply by interacting with these files. The examples are as follows:
 
@@ -647,7 +650,7 @@ If the USB hub is functioning properly, you should see its details listed in the
 <br />
 The reComputer R1225 uses a standard-size SIM card slot commonly found in industrial applications, which requires a standard SIM card with dimensions of 25mm x 15mm.
 :::note
-Please note that the standard version of reComputer R1225 does not come with a 4G module. If you require 4G functionality, an additional 4G module must be purchased separately.
+The reComputer R1225 is available in a 4G version. If you purchase the standard edition (without the 4G module), you can buy a 4G module separately for installation. Bazaar Mall currently offers two 4G modules:Europe(EMEA & Thai <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>) and America(North America **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**)
 :::
 
 ### SSD Slot
@@ -837,42 +840,31 @@ It is important to note that due to the reComputer R1225's metal casing, Wi-Fi/B
 
 #### Connect wifi
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+##### Connect to Wi-Fi via the Luci UI
 
-<Tabs>
-  <TabItem value="wifi-1" label="Connect to Wi-Fi via the Luci UI">
+##### Command to connect to Wi-Fi
+  
+step1. To scan for Wi-Fi networks:
 
-    <!-- 在这里写 WM1302 SPI Version 的内容 -->
+  ```bash
+  nmcli dev wifi list
+  ```
 
-  </TabItem>
+step2. Connect to the wifi network:
 
-  <TabItem value="wifi-2" label="Command to connect to Wi-Fi">
+  ```bash
+  sudo nmcli dev wifi connect network-ssid password "network-password"
+  sudo nmcli --ask dev wifi connect network-ssid
+  ```
 
-    step1. To scan for Wi-Fi networks:
+step3. After the device is powered on, it will automatically connect to wifi.  
+  If you want to delete the saved WiFi information:
 
-    ```bash
-    nmcli dev wifi list
-    ```
+  ```bash
+  nmcli con del network-ssid
+  ```
 
-    step2. Connect to the wifi network:
-
-    ```bash
-    sudo nmcli dev wifi connect network-ssid password "network-password"
-    sudo nmcli --ask dev wifi connect network-ssid
-    ```
-
-    step3. After the device is powered on, it will automatically connect to wifi.  
-    If you want to delete the saved WiFi information:
-
-    ```bash
-    nmcli con del network-ssid
-    ```
-
-    After the connection is disconnected, connect to another wifi.
-  </TabItem>
-</Tabs>
-
+  After the connection is disconnected, connect to another wifi.
 
 
 #### Connect bluetooth devices
@@ -940,7 +932,7 @@ exit
 
 The reComputer R1225 LoRaWAN Gateway is available in Standard and 4G versions. The Mini-PCIe Slot 1 on the Standard version is vacant, while the 4G version comes with a pre-installed Mini-PCIe module tailored for Europe(EMEA & Thai <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>) and America(North America **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**) respectively.
 
-### LoRa® Module(occupied)
+### LoRa® Module(included)
 
 The Mini-PCIe Slot 2 on the reComputer R1225 LoRaWAN Gateway is occupied by the SPI LoRa® module.
 
@@ -995,7 +987,7 @@ It's important to note that not all SSD cards available in the market support th
 The TPM features Infineon’s OPTIGA™ TPM SLB9670 which is compliant to the Trusted Computing Group (TCG) TPM 2.0 specification is recommened as encryption chip to the reComputer R1225. The chip features an SPI interface applied for port J13 on board, to enable a root of trust for platform integrity, remote attestation, and cryptographic services.
 
 :::note
-[Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-tpm-20-module).
+[Please click here for assemble instruction](https://wiki.seeedstudio.com/recomputer_r1000_assembly_guide/#assemble-tpm-20-module).
 :::
 
 If you connect TPM 2.0 module to device, the following code can help check TPM connection.
