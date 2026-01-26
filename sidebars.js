@@ -755,7 +755,9 @@ const sidebars = {
               type: 'category',
               label: 'Integrated with LoRaWAN Network Server',
               items: [
-                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network'
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_Helium',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_AWS_IoT_Core'
               ],
             }
           ],
@@ -6009,7 +6011,9 @@ const sidebars = {
               type: 'category',
               label: '与 LoRaWAN 网络服务器集成',
               items: [
-                'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/cn_Connect_to_The_Things_Network'
+                'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/cn_Connect_to_The_Things_Network',
+                'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/cn_Connect_to_Helium',
+                'zh-CN/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/cn_Connect_to_AWS_IoT_Core'
               ],
             }
           ],
@@ -11156,7 +11160,9 @@ const sidebars = {
               type: 'category',
               label: 'Integrado con el servidor de red LoRaWAN',
               items: [
-                'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_The_Things_Network'
+                'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_The_Things_Network',
+                'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_Helium',
+                'es/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/es_Connect_to_AWS_IoT_Core'
               ],
             }
           ],
@@ -16304,7 +16310,9 @@ const sidebars = {
               type: 'category',
               label: 'LoRaWAN ネットワークサーバーとの統合',
               items: [
-                'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/ja_Connect_to_The_Things_Network'
+                'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/ja_Connect_to_The_Things_Network',
+                'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/ja_Connect_to_Helium',
+                'ja/Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/ja_Connect_to_AWS_IoT_Core'
               ],
             }
           ],
