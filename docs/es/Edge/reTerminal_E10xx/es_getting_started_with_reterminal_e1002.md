@@ -26,8 +26,8 @@ import TabItem from '@theme/TabItem';
 Recomendamos que **[completes la actualización del firmware de tu producto](#preliminary)** tan pronto como lo recibas para obtener la mejor experiencia.
 :::
 
-:::danger Advertencia sobre la vida útil de la pantalla
-1. Si tu reTerminal ha estado inactivo durante mucho tiempo, puedes mantener presionado el botón verde del dispositivo durante 5 segundos para limpiar el contenido de la pantalla (usando el firmware de fábrica), lo que puede prevenir eficazmente las sombras residuales y aumentar la vida útil de la pantalla.
+:::danger Advertencia de vida útil de la pantalla
+1. Si tu reTerminal ha estado inactivo durante mucho tiempo, puedes mantener presionado el botón verde del dispositivo durante 5 segundos para limpiar el contenido de la pantalla (usando el firmware de fábrica), lo que puede prevenir eficazmente la imagen residual y aumentar la vida útil de la pantalla.
 
 2. Siempre que sea posible, no muestres una pantalla durante un período prolongado (más de 1 día), ya que esto puede crear una imagen residual, y se recomienda que la imagen de la pantalla se actualice al menos una vez al día. Si el dispositivo no se usa durante mucho tiempo, se recomienda limpiar el contenido de la pantalla del dispositivo.
 
@@ -76,10 +76,11 @@ El hardware de reTerminal E1002 incluye:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-La pantalla ePaper reTerminal E Serie solo soporta tarjetas MicroSD de hasta 32GB en formato Fat32.
+La pantalla ePaper reTerminal E Serie solo soporta tarjetas MicroSD de hasta 64GB en formato Fat32.  
+La tarjeta SD de 64GB está formateada como exFAT por defecto. Después de formatearla a FAT32, puede montarse exitosamente y usarse para almacenar imágenes.
 :::
 
-**Paso 3.** (Opcional) Instala los controladores USB si es necesario:
+**Paso 3.** (Opcional) Instala controladores USB si es necesario:
 
 Dependiendo de tu sistema operativo, es posible que necesites instalar controladores USB para asegurar una comunicación adecuada con tu reTerminal E1002:
 
@@ -113,7 +114,7 @@ Dependiendo de tu sistema operativo, es posible que necesites instalar controlad
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
-6. Selecciona tu dispositivo reTerminal E1002 de la lista. Según este tutorial, debes elegir **reTerminal E1002 7.3" Full Color Display**.
+6. Selecciona tu dispositivo reTerminal E1002 de la lista. Según este tutorial, deberías elegir **reTerminal E1002 7.3" Full Color Display**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/11.png" style={{width:800, height:'auto'}}/></div>
 
@@ -126,7 +127,7 @@ Dependiendo de tu sistema operativo, es posible que necesites instalar controlad
 :::note
 1. Actualizar el firmware asegura un rendimiento óptimo y acceso a las características más recientes. Se recomienda realizar esta actualización antes de usar tu dispositivo por primera vez.
 
-2. No es posible flashear el firmware correctamente cuando el dispositivo está en estado de apagado o suspensión. Si seleccionas el puerto correcto para tu dispositivo pero nunca ves el progreso de flasheo del firmware, entonces es posible que necesites despertar el dispositivo presionando el botón verde en la parte superior de la unidad e intentar nuevamente.
+2. No es posible flashear el firmware correctamente cuando el dispositivo está en estado de apagado o suspensión. Si seleccionas el puerto correcto para tu dispositivo pero nunca ves el progreso de flasheo del firmware, entonces es posible que necesites despertar el dispositivo presionando el botón verde en la parte superior de la unidad e intentar de nuevo.
 :::
 
 ### Encendido
@@ -152,7 +153,7 @@ Por lo tanto, necesitamos completar los siguientes pasos de configuración de re
 <Tabs>
 <TabItem value="Network Setup vis PC" label="Configuración de Red vía PC" default>
 
-**Paso 1.** Conéctate al punto de acceso Wi-Fi del dispositivo desde tu smartphone o computadora. El nombre del AP aparecerá en la pantalla (no se requiere contraseña). Las credenciales de red son `reTerminal E1002-{Dirección MAC}`.
+**Paso 1.** Conéctate al punto de acceso Wi-Fi del dispositivo desde tu smartphone o computadora. El nombre del AP aparecerá en la pantalla (no se requiere contraseña). Las credenciales de red son `reTerminal E1002-{MAC Adress}`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:400, height:'auto'}}/></div><br />
 
@@ -194,7 +195,7 @@ La pantalla ePaper reTerminal E Serie solo soporta redes WiFi de 2.4GHz, no 5GHz
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/18.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Configuración de Red vía SenseCraft APP">
+<TabItem value="Network Setup vis SenseCraft APP" label="Configuración de Red vía APP SenseCraft">
 
 Este método utiliza la aplicación móvil SenseCraft para configurar la red del dispositivo y agregarlo a tu cuenta SenseCraft vía Bluetooth.
 
@@ -218,7 +219,7 @@ Primero, descarga la App SenseCraft. Puedes encontrarla buscando "SenseCraft" en
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/153.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 4.** Una vez conectado vía Bluetooth, la app te pedirá configurar la conexión Wi-Fi. Selecciona tu red Wi-Fi local de 2.4GHz de la lista desplegable, ingresa la contraseña y toca **Next**.
+**Paso 4.** Una vez conectado vía Bluetooth, la app te solicitará configurar la conexión Wi-Fi. Selecciona tu red Wi-Fi local de 2.4GHz de la lista desplegable, ingresa la contraseña y toca **Next**.
 
 :::note
 El dispositivo solo puede configurarse vía una red Wi-Fi de 2.4G.
@@ -234,14 +235,14 @@ El dispositivo solo puede configurarse vía una red Wi-Fi de 2.4G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 7.** Puedes tocar en el dispositivo en la lista para ver su página **Device Detail**. Desde aquí, puedes gestionar el dispositivo y subir fotos. Para diseño de dashboard y canvas más complejos, se te pedirá usar la versión de navegador web de SenseCraft.
+**Paso 7.** Puedes tocar en el dispositivo en la lista para ver su página **Device Detail**. Desde aquí, puedes gestionar el dispositivo y subir fotos. Para diseño más complejo de paneles de control y canvas, se te solicitará usar la versión de navegador web de SenseCraft.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
 
 </TabItem>
 </Tabs>
 
-## Creando un Dashboard
+## Creando un Panel de Control
 
 El reTerminal E1002 se integra perfectamente con la plataforma SenseCraft HMI, que proporciona herramientas poderosas para crear y personalizar contenido para tu dispositivo. En lugar de detallar operaciones paso a paso aquí, exploremos las características clave de la plataforma para ayudarte a entender qué es posible.
 
@@ -249,7 +250,7 @@ El reTerminal E1002 se integra perfectamente con la plataforma SenseCraft HMI, q
 
 **Generador AI**
 
-¡Deja que la inteligencia artificial diseñe tu dashboard! Simplemente describe qué información quieres mostrar, y el Generador AI creará automáticamente un diseño atractivo y funcional. Esto es perfecto para generar rápidamente pantallas de clima, calendarios, listas de tareas o paneles informativos sin trabajo de diseño manual.
+¡Deja que la inteligencia artificial diseñe tu panel de control! Simplemente describe qué información quieres mostrar, y el Generador AI creará automáticamente un diseño atractivo y funcional. Esto es perfecto para generar rápidamente pantallas de clima, calendarios, listas de tareas o paneles informativos sin trabajo de diseño manual.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/12.png" style={{width:300, height:'auto'}}/></div>
 
@@ -261,7 +262,7 @@ Transforma tu reTerminal E1002 en un marco de fotos digital con la función Gale
 
 **Canvas**
 
-Diseña tu dashboard desde cero con Canvas, una interfaz de arrastrar y soltar que ofrece varios elementos:
+Diseña tu panel de control desde cero con Canvas, una interfaz de arrastrar y soltar que ofrece varios elementos:
 - Bloques de texto con fuentes y tamaños personalizables
 - Marcadores de posición para imágenes
 - Widgets para hora, fecha y clima
@@ -272,23 +273,23 @@ Diseña tu dashboard desde cero con Canvas, una interfaz de arrastrar y soltar q
 
 **Integración de Feed RSS**
 
-Mantente actualizado con tus fuentes de noticias, blogs o sitios web favoritos agregando feeds RSS a tu dashboard. La función RSS te permite mostrar titulares, resúmenes o artículos completos de múltiples fuentes.
+Mantente actualizado con tus fuentes de noticias, blogs o sitios web favoritos agregando feeds RSS a tu panel de control. La función RSS te permite mostrar titulares, resúmenes o artículos completos de múltiples fuentes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/15.png" style={{width:1000, height:'auto'}}/></div>
 
 **Visualización de Contenido Web**
 
-Captura y muestra contenido web específico en tu dispositivo. La función Web puede renderizar porciones seleccionadas de sitios web, permitiéndote mostrar información como horarios de transporte, tickers de acciones u otras fuentes de datos en línea.
+Captura y muestra contenido web específico en tu dispositivo. La función Web puede renderizar porciones seleccionadas de sitios web, permitiéndote mostrar información como horarios de transporte, cotizaciones bursátiles u otras fuentes de datos en línea.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/22.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Comenzando con SenseCraft HMI
 
-Después de emparejar tu dispositivo con la plataforma SenseCraft como se describe en la sección anterior, estarás listo para crear tu primer dashboard. Para instrucciones detalladas sobre el uso de cada función, consulta las páginas Wiki correspondientes:
+Después de emparejar tu dispositivo con la plataforma SenseCraft como se describe en la sección anterior, estarás listo para crear tu primer panel de control. Para instrucciones detalladas sobre el uso de cada función, consulta las páginas Wiki correspondientes:
 
 - [Visión General de SenseCraft HMI](https://sensecraft-hmi-docs.seeed.cc/en/)
 
-Una vez que hayas creado y guardado tu dashboard en la plataforma SenseCraft, simplemente haz clic en "Deploy to Device", selecciona tu reTerminal E1002 emparejado, y tu contenido personalizado será transmitido inalámbricamente al dispositivo. La pantalla ePaper se actualizará para mostrar tu dashboard, y puedes usar los botones de navegación para cambiar entre múltiples páginas si las has creado.
+Una vez que hayas creado y guardado tu panel de control en la plataforma SenseCraft, simplemente haz clic en "Deploy to Device", selecciona tu reTerminal E1002 emparejado, y tu contenido personalizado será transmitido inalámbricamente al dispositivo. La pantalla ePaper se actualizará para mostrar tu panel de control, y puedes usar los botones de navegación para cambiar entre múltiples páginas si las has creado.
 
 ## Operando el Dispositivo
 
@@ -296,15 +297,15 @@ Una vez que hayas creado y guardado tu dashboard en la plataforma SenseCraft, si
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/137.jpg" style={{width:700, height:'auto'}}/></div>
 
-El botón de actualización en la parte superior del dispositivo tiene varias funciones:
+El botón de actualización en la parte superior del dispositivo cumple varias funciones:
 
-- **Presión Simple**: Actualiza manualmente la pantalla y verifica nuevo contenido de la plataforma SenseCraft. El zumbador emitirá un pitido una vez para confirmar la acción. Este botón también se usa comúnmente para despertar el dispositivo. Puedes usar este botón para despertar un dispositivo cuando se ha dormido y un comando de actualización del dashboard usualmente no está inmediatamente disponible para el dispositivo.
+- **Presión Simple**: Actualiza manualmente la pantalla y verifica nuevo contenido de la plataforma SenseCraft. El zumbador emitirá un pitido una vez para confirmar la acción. Este botón también se usa comúnmente para despertar el dispositivo. Puedes usar este botón para despertar un dispositivo cuando se ha dormido y un comando de actualización del panel de control usualmente no está inmediatamente disponible para el dispositivo.
 
 - **Presión Larga** (funcionalidad futura): Activará el modo de entrada de voz.
 
 ### Botones de Navegación
 
-Los botones izquierdo y derecho te permiten navegar entre múltiples páginas si tu dashboard contiene más de una página:
+Los botones izquierdo y derecho te permiten navegar entre múltiples páginas si tu panel de control contiene más de una página:
 
 - **Botón Izquierdo**: Navegar a la página anterior
 
@@ -318,7 +319,7 @@ Si necesitas conectarte a una red Wi-Fi diferente:
 
 **Paso 1.** Presiona y mantén ambos botones de navegación (izquierdo y derecho) simultáneamente por 2 segundos.
 
-**Paso 2.** El dispositivo entrará en modo de configuración Wi-Fi, y puedes seguir los pasos de [Configuración de Red](#network-setup) nuevamente para conectarte a una nueva red.
+**Paso 2.** El dispositivo entrará en modo de configuración Wi-Fi, y puedes seguir los pasos de [Configuración de Red](#configuración-de-red) nuevamente para conectarte a una nueva red.
 
 ### Indicadores LED
 
@@ -466,7 +467,7 @@ El soporte permite que el dispositivo se coloque en escritorios, encimeras o est
 
 - El dispositivo intentará automáticamente reconectarse a redes conocidas
 - Cuando se reconecte, el icono de desconexión Wi-Fi desaparecerá
-- Si no puede reconectarse, sigue el procedimiento de Reinicio de Red mencionado arriba
+- Si no puede reconectarse, sigue el procedimiento de Reinicio de Red anterior
 
 ## Recursos
 
@@ -476,7 +477,7 @@ El soporte permite que el dispositivo se coloque en escritorios, encimeras o est
 - [Archivo STP del modelo 3D exterior completo](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
 <!-- - [GitHub Repository](/es/getting_started_with_reterminal_e1002) -->
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

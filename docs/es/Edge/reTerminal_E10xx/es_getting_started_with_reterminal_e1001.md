@@ -28,13 +28,13 @@ Recomendamos que **[completes la actualización del firmware de tu producto](#pr
 
 ## Introducción
 
-reTerminal E1001 es una pantalla ePaper monocromática de código abierto de 7.5 pulgadas con una excepcional duración de batería de 3 meses. Alimentado por ESP32-S3, soporta nativamente nuestra plataforma HMI sin código SenseCraft para la creación sin esfuerzo de paneles de control, mientras que también es compatible con Home Assistant, panel de control E-ink TRMNL, Arduino y ESP-IDF para desarrollo adicional. Ya sea para visualización de paneles de control de hogar inteligente, pantallas de oficina o proyectos educativos, este dispositivo HMI listo para usar ofrece visuales hermosos y personalización flexible en un paquete elegante.
+reTerminal E1001 es una pantalla ePaper monocromática de código abierto de 7.5 pulgadas con una excepcional duración de batería de 3 meses. Alimentado por ESP32-S3, soporta nativamente nuestra plataforma de interfaz de usuario sin código SenseCraft HMI para la creación sin esfuerzo de paneles de control, mientras que también soporta Home Assistant, TRMNL E-ink dashboard, Arduino y ESP-IDF para desarrollo adicional. Ya sea para visualización de paneles de control de hogar inteligente, pantallas de oficina o proyectos educativos, este dispositivo HMI listo para usar ofrece visuales hermosos y personalización flexible en un paquete elegante.
 
 ### Características
 
 - **Pantalla ePaper Hermosa y Lista para Usar**
 - **Ultra Bajo Consumo con Duración de Batería de 3 Meses**
-- **Diseño y Despliegue de UI Sin Código con SenseCraft HMI**
+- **Diseño e Implementación de Interfaz Sin Código con SenseCraft HMI**
 - **Funciona con Plataformas de Software Populares**
 - **Personalización Flexible de Hardware y Software**
 
@@ -70,7 +70,8 @@ El hardware de reTerminal E1001 incluye:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-La Pantalla ePaper reTerminal E Serie solo soporta tarjetas MicroSD de hasta 32GB en formato Fat32.
+La Pantalla ePaper reTerminal E Serie solo soporta tarjetas MicroSD de hasta 64GB en formato Fat32.  
+La tarjeta SD de 64GB está formateada como exFAT por defecto. Después de formatearla a FAT32, puede montarse exitosamente y usarse para almacenar imágenes.
 :::
 
 **Paso 3.** (Opcional) Instala controladores USB si es necesario:
@@ -83,7 +84,7 @@ Dependiendo de tu sistema operativo, es posible que necesites instalar controlad
   - Los sistemas Windows 11 típicamente incluyen el controlador por defecto
   - Para Windows 10 y versiones anteriores, es posible que necesites descargar e instalar el controlador CH341 desde el [sitio web oficial de WCH](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
 
-- **Para sistemas Linux**: La mayoría de las distribuciones modernas de Linux incluyen los controladores necesarios por defecto
+- **Para sistemas Linux**: La mayoría de las distribuciones Linux modernas incluyen los controladores necesarios por defecto
 
 **Paso 4.** Actualiza el firmware para asegurar que tu dispositivo esté ejecutando la versión más reciente:
 
@@ -107,13 +108,13 @@ Dependiendo de tu sistema operativo, es posible que necesites instalar controlad
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
-6. Selecciona tu dispositivo reTerminal E1001 de la lista. Según este tutorial, debes elegir **reTerminal E1001 7.5" Monochrome Display**.
+6. Selecciona tu dispositivo reTerminal E1001 de la lista. Según este tutorial, deberías elegir **reTerminal E1001 7.5" Monochrome Display**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/11.png" style={{width:800, height:'auto'}}/></div>
 
 7. Elige la versión de firmware más reciente del menú desplegable
 
-8. Haz clic en **Flash** y espera a que se complete el proceso de actualización
+8. Haz clic en **Flash** y espera a que el proceso de actualización se complete
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -199,19 +200,19 @@ Primero, descarga la App SenseCraft. Puedes encontrarla buscando "SenseCraft" en
     </a>
 </div><br />
 
-**Paso 1.** Abre la App SenseCraft, inicia sesión en tu cuenta y navega a la pestaña **User**. Toca en **Device Bluetooth Configuration** para comenzar el proceso.
+**Paso 1.** Abre la aplicación SenseCraft, inicia sesión en tu cuenta y navega a la pestaña **User**. Toca **Device Bluetooth Configuration** para comenzar el proceso.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/151.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 2.** En la pantalla "Please select the device type", elige tu modelo reTerminal (por ejemplo, **reTerminal E1001** o **reTerminal E1002**).
+**Paso 2.** En la pantalla "Please select the device type", elige tu modelo de reTerminal (por ejemplo, **reTerminal E1001** o **reTerminal E1002**).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/152.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 3.** Sigue las instrucciones en pantalla para poner tu dispositivo en modo de transmisión Bluetooth. Esto se hace típicamente presionando los botones de página **Up** y **Down** simultáneamente. Asegúrate de que el Bluetooth de tu teléfono esté habilitado. Toca **Scan**, y la app descubrirá dispositivos cercanos. Selecciona tu dispositivo de la lista para conectar.
+**Paso 3.** Sigue las instrucciones en pantalla para poner tu dispositivo en modo de transmisión Bluetooth. Esto se hace típicamente presionando los botones de página **Up** y **Down** simultáneamente. Asegúrate de que el Bluetooth de tu teléfono esté habilitado. Toca **Scan**, y la aplicación descubrirá dispositivos cercanos. Selecciona tu dispositivo de la lista para conectar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/153.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 4.** Una vez conectado vía Bluetooth, la app te pedirá configurar la conexión Wi-Fi. Selecciona tu red Wi-Fi local de 2.4GHz de la lista desplegable, ingresa la contraseña y toca **Next**.
+**Paso 4.** Una vez conectado vía Bluetooth, la aplicación te pedirá configurar la conexión Wi-Fi. Selecciona tu red Wi-Fi local de 2.4GHz de la lista desplegable, ingresa la contraseña y toca **Next**.
 
 :::note
 El dispositivo solo puede configurarse a través de una red Wi-Fi de 2.4G.
@@ -219,15 +220,15 @@ El dispositivo solo puede configurarse a través de una red Wi-Fi de 2.4G.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/154.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 5.** La app enviará las credenciales Wi-Fi al dispositivo y lo agregará a tu cuenta SenseCraft. Aparecerá un mensaje "Device added successfully" al completarse. Ahora puedes tocar **Start exploring!** para continuar.
+**Paso 5.** La aplicación enviará las credenciales Wi-Fi al dispositivo y lo agregará a tu cuenta SenseCraft. Aparecerá un mensaje "Device added successfully" al completarse. Ahora puedes tocar **Start exploring!** para continuar.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/155.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 6.** Tu reTerminal ahora aparecerá en tu lista de dispositivos en la pestaña principal **Device** de la app, conectado exitosamente a tu cuenta SenseCraft.
+**Paso 6.** Tu reTerminal ahora aparecerá en tu lista de dispositivos en la pestaña principal **Device** de la aplicación, conectado exitosamente a tu cuenta SenseCraft.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
-**Paso 7.** Puedes tocar en el dispositivo en la lista para ver su página **Device Detail**. Desde aquí, puedes gestionar el dispositivo y subir fotos. Para diseño de dashboard y canvas más complejos, se te pedirá usar la versión de navegador web de SenseCraft.
+**Paso 7.** Puedes tocar el dispositivo en la lista para ver su página **Device Detail**. Desde aquí, puedes gestionar el dispositivo y subir fotos. Para diseño de tableros y lienzos más complejos, se te pedirá usar la versión de navegador web de SenseCraft.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -235,7 +236,7 @@ El dispositivo solo puede configurarse a través de una red Wi-Fi de 2.4G.
 </Tabs>
 
 
-## Creando un Dashboard
+## Creando un Tablero
 
 El reTerminal E1001 se integra perfectamente con la plataforma SenseCraft HMI, que proporciona herramientas poderosas para crear y personalizar contenido para tu dispositivo. En lugar de detallar operaciones paso a paso aquí, exploremos las características clave de la plataforma para ayudarte a entender qué es posible.
 
@@ -243,7 +244,7 @@ El reTerminal E1001 se integra perfectamente con la plataforma SenseCraft HMI, q
 
 **Generador AI**
 
-¡Deja que la inteligencia artificial diseñe tu dashboard! Simplemente describe qué información quieres mostrar, y el Generador AI creará automáticamente un diseño atractivo y funcional. Esto es perfecto para generar rápidamente pantallas de clima, calendarios, listas de tareas o paneles informativos sin trabajo de diseño manual.
+¡Deja que la inteligencia artificial diseñe tu tablero! Simplemente describe qué información quieres mostrar, y el Generador AI creará automáticamente un diseño atractivo y funcional. Esto es perfecto para generar rápidamente pantallas de clima, calendarios, listas de tareas o paneles informativos sin trabajo de diseño manual.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/12.png" style={{width:300, height:'auto'}}/></div>
 
@@ -253,9 +254,9 @@ Transforma tu reTerminal E1001 en un marco de fotos digital con la función Gale
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/19.png" style={{width:1000, height:'auto'}}/></div>
 
-**Canvas**
+**Lienzo**
 
-Diseña tu dashboard desde cero con Canvas, una interfaz de arrastrar y soltar que ofrece varios elementos:
+Diseña tu tablero desde cero con Lienzo, una interfaz de arrastrar y soltar que ofrece varios elementos:
 
 - Bloques de texto con fuentes y tamaños personalizables
 - Marcadores de posición para imágenes
@@ -265,25 +266,25 @@ Diseña tu dashboard desde cero con Canvas, una interfaz de arrastrar y soltar q
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/20.png" style={{width:1000, height:'auto'}}/></div>
 
-**Integración de RSS Feed**
+**Integración de Feeds RSS**
 
-Mantente actualizado con tus fuentes de noticias, blogs o sitios web favoritos agregando feeds RSS a tu dashboard. La función RSS te permite mostrar titulares, resúmenes o artículos completos de múltiples fuentes.
+Mantente actualizado con tus fuentes de noticias, blogs o sitios web favoritos agregando feeds RSS a tu tablero. La función RSS te permite mostrar titulares, resúmenes o artículos completos de múltiples fuentes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/21.png" style={{width:1000, height:'auto'}}/></div>
 
 **Visualización de Contenido Web**
 
-Captura y muestra contenido web específico en tu dispositivo. La función Web puede renderizar porciones seleccionadas de sitios web, permitiéndote mostrar información como horarios de transporte, cotizaciones de acciones u otras fuentes de datos en línea.
+Captura y muestra contenido web específico en tu dispositivo. La función Web puede renderizar porciones seleccionadas de sitios web, permitiéndote mostrar información como horarios de tránsito, cotizaciones bursátiles u otras fuentes de datos en línea.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/16.png" style={{width:1000, height:'auto'}}/></div>
 
 ### Comenzando con SenseCraft HMI
 
-Después de emparejar tu dispositivo con la plataforma SenseCraft como se describe en la sección anterior, estarás listo para crear tu primer dashboard. Para instrucciones detalladas sobre el uso de cada función, consulta las páginas Wiki correspondientes:
+Después de emparejar tu dispositivo con la plataforma SenseCraft como se describe en la sección anterior, estarás listo para crear tu primer tablero. Para instrucciones detalladas sobre el uso de cada función, consulta las páginas Wiki correspondientes:
 
 - [Visión General de SenseCraft HMI](https://sensecraft-hmi-docs.seeed.cc/en/)
 
-Una vez que hayas creado y guardado tu dashboard en la plataforma SenseCraft, simplemente haz clic en "Deploy to Device", selecciona tu reTerminal E1001 emparejado, y tu contenido personalizado será transmitido inalámbricamente al dispositivo. La pantalla ePaper se actualizará para mostrar tu dashboard, y puedes usar los botones de navegación para cambiar entre múltiples páginas si las has creado.
+Una vez que hayas creado y guardado tu tablero en la plataforma SenseCraft, simplemente haz clic en "Deploy to Device", selecciona tu reTerminal E1001 emparejado, y tu contenido personalizado será transmitido inalámbricamente al dispositivo. La pantalla ePaper se actualizará para mostrar tu tablero, y puedes usar los botones de navegación para cambiar entre múltiples páginas si las has creado.
 
 ## Operando el Dispositivo
 
@@ -293,13 +294,13 @@ Una vez que hayas creado y guardado tu dashboard en la plataforma SenseCraft, si
 
 El botón de actualización en la parte superior del dispositivo tiene varias funciones:
 
-- **Presión Simple**: Actualiza manualmente la pantalla y verifica nuevo contenido de la plataforma SenseCraft. El zumbador emitirá un pitido una vez para confirmar la acción. Este botón también se usa comúnmente para despertar el dispositivo. Puedes usar este botón para despertar un dispositivo cuando se ha dormido y un comando de actualización del dashboard usualmente no está inmediatamente disponible para el dispositivo.
+- **Presión Simple**: Actualiza manualmente la pantalla y verifica nuevo contenido de la plataforma SenseCraft. El zumbador emitirá un pitido una vez para confirmar la acción. Este botón también se usa comúnmente para despertar el dispositivo. Puedes usar este botón para despertar un dispositivo cuando se ha dormido y un comando de actualización del tablero usualmente no está inmediatamente disponible para el dispositivo.
 
 - **Presión Larga** (funcionalidad futura): Activará el modo de entrada de voz.
 
 ### Botones de Navegación
 
-Los botones izquierdo y derecho te permiten navegar entre múltiples páginas si tu dashboard contiene más de una página:
+Los botones izquierdo y derecho te permiten navegar entre múltiples páginas si tu tablero contiene más de una página:
 
 - **Botón Izquierdo**: Navegar a la página anterior
 
@@ -342,9 +343,9 @@ Si quieres escribir algo de código por ti mismo para leer el voltaje de la bate
 
 El reTerminal E1001 cuenta con un conector de expansión de 8 pines (J2) que proporciona opciones de conectividad para agregar sensores externos, módulos u otro hardware para extender la funcionalidad de tu dispositivo. Este conector de expansión expone varios pines GPIO del ESP32-S3 e interfaces de comunicación, convirtiéndolo en un punto de conexión versátil para tus proyectos DIY.
 
-#### Pinout del Conector de Expansión
+#### Distribución de Pines del Conector de Expansión
 
-El conector de expansión de 8 pines (J2) tiene el siguiente pinout:
+El conector de expansión de 8 pines (J2) tiene la siguiente distribución de pines:
 
 <div class="table-center">
  <table align="center">
@@ -420,18 +421,18 @@ El reTerminal E1001 viene con un accesorio de soporte impreso en 3D que te permi
 
 **Paso 1.** Localiza el soporte impreso en 3D incluido en el paquete.
 
-**Paso 2.** Posiciona el soporte contra el área de montaje designada en la parte inferior trasera del reTerminal E1001 donde están ubicadas las tuercas empotradas.
+**Paso 2.** Posiciona el soporte contra el área de montaje designada en la parte inferior trasera del reTerminal E1001 donde se encuentran las tuercas empotradas.
 
-**Paso 3.** Usa un destornillador largo para asegurar el soporte al dispositivo apretando los tornillos en las tuercas empotradas en la parte posterior del reTerminal E1001.
+**Paso 3.** Usa un destornillador largo para asegurar el soporte al dispositivo apretando los tornillos en las tuercas empotradas en la parte trasera del reTerminal E1001.
 
-**Paso 4.** Una vez asegurado firmemente, coloca el reTerminal E1001 en una superficie plana donde el soporte lo mantenga en posición vertical.
+**Paso 4.** Una vez asegurado firmemente, coloca el reTerminal E1001 en una superficie plana donde el soporte lo mantendrá en posición vertical.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::note
-El soporte proporciona un ángulo de visión fijo y no se puede ajustar. Este posicionamiento fijo está diseñado para ofrecer una visibilidad óptima en la mayoría de los escenarios de uso.
+El soporte proporciona un ángulo de visualización fijo y no se puede ajustar. Este posicionamiento fijo está diseñado para ofrecer una visibilidad óptima en la mayoría de los escenarios de uso.
 
-El soporte permite colocar el dispositivo en escritorios, encimeras o estantes, haciéndolo ideal para usar como pantalla de información, panel de control o marco de fotos digital en varios entornos.
+El soporte permite que el dispositivo se coloque en escritorios, encimeras o estantes, haciéndolo ideal para usar como pantalla de información, panel de control o marco de fotos digital en varios entornos.
 :::
 
 ## Solución de Problemas
@@ -468,7 +469,7 @@ El soporte permite colocar el dispositivo en escritorios, encimeras o estantes, 
 - [Esquemático del reTerminal E1001 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004307_reTerminal_E1001_V1.0_SCH_250805.pdf)
 - [Hoja de Datos del ESP32-S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [Documentación de la Plataforma SenseCraft HMI](https://wiki.seeedstudio.com/es/sensecraft_hmi_overview)
-- [Archivo STP del modelo 3D exterior completo](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
+- [Archivo STP del modelo 3D exterior general](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
 <!-- - [GitHub Repository](/es/getting_started_with_reterminal_e1001) -->
 
 ## Soporte Técnico y Discusión de Productos
