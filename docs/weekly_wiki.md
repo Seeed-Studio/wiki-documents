@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 01/19/2026
+  date: 01/26/2026
   author: Frank
 ---
 
@@ -17,58 +17,89 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is January 19th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is January 26th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Robotics J501 Hardware and Getting Started](https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/)
+### [Deploy local voice LLM on reComputer Mini for Reachy Mini](https://wiki.seeedstudio.com/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" alt="pir" width={600} height="auto" /></p>
+<div class="video-container">
+  <iframe width="801" height="450" src="https://www.youtube.com/embed/broyI7PLm_g" title="Double Mini! Deploy local voice LLM on reComputer Mini for Reachy Mini!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-The reComputer Robotics J501 is a high-performance edge AI carrier board designed for advanced robotics and industrial applications. Compatible with NVIDIA Jetson AGX Orin modules (32GB/64GB) in MAXN mode, it delivers up to 275 TOPS of AI performance.
+Double Mini! This project will build a fully localized, low-latency, and high-privacy voice interactive robotic assistant system. Centered around the reComputer Mini J501 edge computing device, it deploys local speech recognition, large language model, and speech synthesis services. Using the open-source robotic platform Reachy Mini as the physical terminal for human-computer interaction, it achieves an embodied intelligent interactive experience that is perceptive, conversational, and actionable.
 
 </div>
 
-### [reComputer R1225 LoRaWAN Gateway Overview](https://wiki.seeedstudio.com/r1225_introduction/)
+### [Deploy NVBlox with Orbbec Camera on Jetson AGX Orin](https://wiki.seeedstudio.com/deploy_nvblox_jetson_agx_orin/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Appearance_Image/R1225_White_Background.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_nvblox/isaac_sim_nvblox_humans.gif" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN gateway & controller, CM4-powered, with AI capabilities. With 3*RS485, dual-ethernets, BACnet, and Modbus support, equipped with all the necessary features that a robust and reliable industrial edge IoT device needs. With compatibility with AI NPU accelerator, it's a perfect fit for remote access control, especially BMS, BAS, and iBMS.
+[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) is a high-performance GPU-accelerated 3D mapping framework developed by NVIDIA for real-time robotic perception. Unlike monocular depth estimation models, NVBlox consumes true depth input from RGB-D cameras or stereo cameras to construct accurate 3D scene representations. This wiki demonstrates how to deploy Isaac ROS NVBlox on **Jetson AGX Orin** with **ROS 2** integration, using an **Orbbec RGB-D camera** and a mobile robot platform to achieve a fully on-device perception and navigation pipeline.
 
 </div>
 
-### [XIAO ESP32-C5 With FreeRTOS](https://wiki.seeedstudio.com/xiao_esp32c5_with_freertos/)
+### [Deploy Whisper on Raspberry Pi AI box](https://wiki.seeedstudio.com/deploy_whisper_on_raspberry_pi_ai_box/)
+
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/openai/whisper/main/approach.png" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+[Whisper](https://github.com/openai/whisper) is a versatile, state-of-the-art Automatic Speech Recognition (ASR) and speech processing model developed by OpenAI. Unlike traditional speech-to-text systems, Whisper was trained on 680,000 hours of multilingual and multitask supervised data collected from the web. This massive and diverse dataset makes the model exceptionally robust to accents, background noise, and technical terminology. This guide provides a comprehensive walkthrough for the deployment and utilization of [Whisper](https://github.com/openai/whisper) on the Raspberry Pi AI Box.
+
+</div>
+
+### [reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+These two guides demonstrate how to use the **ReSpeaker XVF3800 USB Mic Array** together with the **Seeed Studio XIAO ESP32S3** to build embedded audio applications, covering both raw audio streaming and on-device voice intelligence features.
+
+- **[HTTP Audio Streaming](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_http_audio_stream/)**  
+  This guide shows how to capture audio from the XVF3800 using the XIAO ESP32S3, record 5 seconds of 16 kHz stereo 32-bit PCM audio, store it in PSRAM, and upload the audio over Wi-Fi to a Python-based Flask HTTP server as a standard WAV file.
+
+- **[DoA and VAD](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_doa_vad/)**  
+  This guide focuses on leveraging the XVF3800’s built-in **Voice Activity Detection (VAD)** and **Direction of Arrival (DoA)** capabilities. These inference results are computed internally by the XMOS XVF3800 and can be accessed by the host MCU over I2C, enabling features such as wake-on-voice, sound source localization, and direction-aware feedback without processing raw audio data on the MCU.
+
+</div>
+
+### [Seeed Studio XIAO ESP32-C5 Wi-Fi Throughput Testing Tool](https://wiki.seeedstudio.com/xaio_esp32c5_wifi_throughput_tester/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-FreeRTOS is an open source RTOS kernel that is pre-integrated into the Arduino ESP32 Core (which is built upon ESP-IDF). Thus, every Arduino sketch running on an ESP32 is actually utilizing FreeRTOS in the background. The FreeRTOS kernel is ported to all ESP chip architectures, including Xtensa and RISC-V (e.g., XIAO ESP32-C5).
-Therefore, this tutorial is written based on the Arduino framework to provide a more accessible development experience.
+The Seeed Studio XIAO ESP32-C5 features the ESP32-C5 as its core processor.The ESP32-C5 is the industry's first RISC-V microcontroller to support dual-band Wi-Fi 6 (802.11ax) in both the 2.4GHz and 5GHz bands. Boasting exceptional wireless performance, it holds significant potential for applications in smart homes, the Internet of Things (IoT), and various other scenarios. Next, we will use a Wi-Fi throughput testing tool to visually demonstrate the powerful data throughput capabilities of the XIAO ESP32-C5 based on Wi-Fi 6, across both the 2.4GHz and 5GHz frequency bands!
 
 </div>
 
-### [reComputer RS485 test](https://wiki.seeedstudio.com/recomputer_rs485_loopback_test/)
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991274-recomputer-r1025-10-0.jpg" alt="pir" width={600} height="auto" /></p>
+### [Deploying ESPresense on Seeed Studio XIAO ESP32-C3 with Home Assistant](https://wiki.seeedstudio.com/xiao-esp32c3-espresense/)
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki applies to all reComputer devices with RS485 interfaces include reComputer R10/R11/R20/R21 and can be used to test whether the RS485 receiving and transmitting functions are working correctly.
+This document describes how to integrate the open-source Bluetooth presence detection system, **ESPresense**, with the **Seeed Studio XIAO ESP32-C3**. The presence detection node based on the XIAO ESP32-C3 can work with the [MQTT Room component](https://www.home-assistant.io/components/sensor.mqtt_room/) of Home Assistant to enable indoor positioning.
 
 </div>
 
-### [Distributed llama.cpp on reComputer Jetson (RPC Mode)](https://wiki.seeedstudio.com/ai_robotics_distributed_llama_cpp_rpc_jetson/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RPC_on_jetson/rpc_test.png" alt="pir" width={600} height="auto" /></p>
+### [Connecting SenseCAP T2000 Tracker to AWS IoT Core](https://wiki.seeedstudio.com/sensecap_t2000_tracker_aws/)
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki applies to all reComputer devices with RS485 interfaces include reComputer R10/R11/R20/R21 and can be used to test whether the RS485 receiving and transmitting functions are working correctly.
+This document describes how to connect the SenseCAP T2000 Tracker to AWS IoT Core. By following this guide, you will create and configure the required AWS IoT resources and enable secure and reliable data transmission from the SenseCAP T2000 to the AWS cloud for further data processing, storage, and visualization.
+
+</div>
+
+### [Connecting SenseCAP T2000 Tracker to Helium](https://wiki.seeedstudio.com/sensecap_t2000_tracker_helium/)
+
+<div style={{ textAlign: "justify" }}>
+
+This document explains how to connect the SenseCAP T2000 Tracker to the Helium LoRaWAN® network. By following this guide, you will configure the device and Helium network settings to enable the T2000 to join Helium and transmit tracking data over the decentralized LoRaWAN infrastructure for further processing and use.
 
 </div>
 
@@ -195,5 +226,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.12.29th](/Seeed_Elderly/weekly_wiki/2025/wiki251229)
 - [weekly wiki on 2026.1.05th](/Seeed_Elderly/weekly_wiki/2026/wiki260105)
 - [weekly wiki on 2026.1.12th](/Seeed_Elderly/weekly_wiki/2026/wiki260112)
+- [weekly wiki on 2026.1.19th](/Seeed_Elderly/weekly_wiki/2026/wiki260119)
 
 </details>

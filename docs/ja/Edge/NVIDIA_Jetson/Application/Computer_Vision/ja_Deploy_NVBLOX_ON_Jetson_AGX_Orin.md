@@ -27,7 +27,6 @@ last_update:
      src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_nvblox/isaac_sim_nvblox_humans.gif"/>
 </div>
 
-
 ## はじめに
 
 <div style={{ textAlign: "justify" }}>
@@ -58,7 +57,6 @@ last_update:
 - Orbbec ROS2 SDKのインストールが必要
 - Isaac ROSのインストールが必要
 
-
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/other/page-nvblox.jpg"/>
 </div>
@@ -80,6 +78,7 @@ last_update:
 ### 基本依存関係のインストール
 
 ターミナルで以下の依存関係をインストールします：
+
 ```bash
 sudo apt update
 sudo apt-get install python3-pip # Install Python3
@@ -87,7 +86,6 @@ sudo apt-get install nvidia-jetpack # Install developer tools
 sudo pip3 install jetson-stats # Install Jtop to check JetPack version
 sudo apt-get install git-lfs # Install Git LFS
 ```
-
 
 ### Docker CEのインストール
 
@@ -183,16 +181,12 @@ cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
 Isaac ROSのインストールには、ターミナルでNVIDIA NGCにログインし、NGCアカウントで生成されたAPIキーを入力する必要があります 🔑
 :::
 
-
-
-# シェル設定をリロード
-source ~/.bashrc -->
-
 ### Orbbec SDK ROS2のインストール
 
 Orbbec RGB-Dカメラを使用するには、SDKドライバーのインストールが必要です。このガイドでは、Build from Sourceメソッドを使用します。
 
 依存関係をインストール：
+
 ```bash
 sudo apt install libgflags-dev nlohmann-json3-dev \
 ros-$ROS_DISTRO-image-transport ros-${ROS_DISTRO}-image-transport-plugins ros-${ROS_DISTRO}-compressed-image-transport \
@@ -233,7 +227,6 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 このスクリプトが実行されない場合、権限の問題によりデバイスのオープンが失敗します。sudo（管理者権限）でサンプルを実行する必要があります。⚠️
 :::
 
-
 ## NVBloxの展開
 
 ### NVBloxのビルド
@@ -264,6 +257,7 @@ docker: Error response from daemon: failed to create task for container: failed 
 ```
 
 ターミナルで以下のコマンドを実行して修正を試すことができます：
+
 ```bash
 sudo nvidia-ctk cdi generate --mode=csv --output=/etc/cdi/nvidia.yaml
 ```
@@ -274,6 +268,7 @@ sudo nvidia-ctk cdi generate --mode=csv --output=/etc/cdi/nvidia.yaml
 </div>
 
 追加の依存関係をインストール：
+
 ```bash
 sudo apt update
 sudo apt-get install -y ros-humble-magic-enum
@@ -292,6 +287,7 @@ export CUDACXX=$CUDA_HOME/bin/nvcc
 ```
 
 シンボリックリンクを作成：
+
 ```bash
 sudo ln -sf /opt/ros/humble/include/magic_enum.hpp /usr/include/magic_enum.hpp
 
@@ -300,6 +296,7 @@ sudo ln -sfn /opt/ros/humble/include/foxglove_msgs/foxglove_msgs/msg /opt/ros/hu
 ```
 
 `/workspaces/isaac_ros-dev`でワークスペースをビルドし、初期化：
+
 ```bash
 colcon build --symlink-install --cmake-args -DBUILD_TESTING=OFF
 source install/setup.bash
@@ -324,6 +321,7 @@ ros2 launch orbbec_camera <camera_name>.launch.py
 ```
 
 サポートされている`<camera_name>`パラメータの例：
+
 - gemini210
 - gemini2
 - gemini2L
@@ -335,11 +333,13 @@ Docker コンテナ内で Orbbec スクリプトを開始しないでくださ�
 :::
 
 Isaac ROS コンテナはデフォルトでローカルに公開された ROS2 とブリッジします。Docker コンテナ内で、次のように入力します：
+
 ```bash
 ros2 topic list
 ```
 
 通常、Docker コンテナ内で Orbbec カメラによって公開される以下のデータトピックが表示されるはずです：
+
 ```yaml
 /camera/accel/imu_info
 /camera/color/camera_info
@@ -382,9 +382,6 @@ RViz は以下のように設定できます。必要な可視化結果を有効
 
 これは、モバイルロボットの障害物検出とシーンの 3D メッシュマップ構築に使用できます。🤖
 
-
-
-
 ## 参考文献
 
 - [Isaac ROS Common GitHub Repository](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common)
@@ -392,7 +389,6 @@ RViz は以下のように設定できます。必要な可視化結果を有効
 - [Isaac NVBlox Orbbec GitHub Repository](https://github.com/jjjadand/isaac-NVblox-Orbbec#)
 - [ROS2 Humble Documentation](https://docs.ros.org/en/humble/)
 - [Orbbec SDK ROS2 Documentation](https://github.com/orbbec/OrbbecSDK_ROS2)
-
 
 ## 技術サポート & 製品ディスカッション
 
@@ -407,4 +403,3 @@ RViz は以下のように設定できます。必要な可視化結果を有効
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

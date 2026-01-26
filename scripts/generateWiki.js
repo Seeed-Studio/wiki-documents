@@ -65,6 +65,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_idf.md'), //1.9  
   path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Application', 'XIAO_ESP32C5_WiFi_Throughput_tester.md'), //1.16
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_SO_ARM101_DAMO.md'), //1.12
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Decoder.md'), //1.26
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_AWS_IoT_Core.md'), //1.23
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_Helium.md'), //1.23  
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）
