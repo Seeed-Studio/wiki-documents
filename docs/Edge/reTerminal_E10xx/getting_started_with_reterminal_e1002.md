@@ -76,7 +76,8 @@ The reTerminal E1002 hardware includes:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-The reTerminal E Series ePaper Display only supports MicroSD cards up to 32GB in Fat32 format.
+The reTerminal E Series ePaper Display only supports MicroSD cards up to 64GB in Fat32 format.  
+The 64GB SD card is formatted as exFAT by default. After formatting it to FAT32, it can be successfully mounted and used to store images.
 :::
 
 **Step 3.** (Optional) Install USB drivers if needed:

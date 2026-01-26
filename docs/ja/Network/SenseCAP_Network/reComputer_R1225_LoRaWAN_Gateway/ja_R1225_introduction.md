@@ -20,7 +20,7 @@ last_update:
 </div>
 
 ## 概要
-reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲートウェイ＆コントローラーで、CM4を搭載し、AI機能を備えています。3つのRS485、デュアルイーサネット、BACnet、Modbusサポートを備え、堅牢で信頼性の高い産業用エッジIoTデバイスに必要なすべての機能を装備しています。AI NPUアクセラレータとの互換性により、特にBMS、BAS、iBMSなどのリモートアクセス制御に最適です。
+reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲートウェイ＆コントローラーで、CM4を搭載し、AI機能を備えています。3つのRS485、デュアルイーサネット、BACnet、Modbusサポートを備え、堅牢で信頼性の高い産業用エッジIoTデバイスに必要なすべての機能を装備しています。AI NPUアクセラレータとの互換性により、リモートアクセス制御、特にBMS、BAS、iBMSに最適です。
 
 
 ## 特徴
@@ -30,16 +30,16 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
 - 複数の絶縁RS485チャンネルが高速・低速通信をサポート。
 
 - BACnet、Modbus RTU、Modbus TCP/IPプロトコルをサポート
-- 最大8GBのRAMが数千のデータポイントの処理をサポートし、効率的なパフォーマンスを保証
-- 明確な両面LEDインジケータにより、動作状態を素早く確認可能
-- 高品質な金属ケース、DINレールおよび壁面取り付けに対応
-- カスタマイズされたOSのためのYoctoとBuildrootをサポート
+- 最大4GB RAMが数千のデータポイントの処理をサポートし、効率的なパフォーマンスを保証
+- 明確な両面LEDインジケータが動作状況を素早く確認可能
+- 高品質メタルケース、DINレールおよび壁面取り付けに対応
+- オープンソースソフトウェアSeeed Gateway OS、ChirpStack、Basics™ Station、Packet Forward内蔵。カスタマイズと派生開発をサポート。
 
 ### 強力なパフォーマンス
 
-- Raspberry Pi CM4を搭載
+- Raspberry Pi CM4搭載
 
-- Broadcom BCM2711クアッドコアCortex-A72（ARM v8）64ビットSoC @ 1.5GHz
+- Broadcom BCM2711 クアッドコア Cortex-A72 (ARM v8) 64ビット SoC @ 1.5GHz
 - 最大4GB RAMおよび32GB eMMC
 
 ### 豊富なワイヤレス機能
@@ -49,20 +49,20 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
 - オンチップBLE
 
 - Mini-PCIe1: LTE
-  - 4Gバージョンには事前にLTEモジュールがインストール済み：
-    - EU868: EC25-EUX-mini-PCIe（LTE Cat 4）
-    - US915: EC25-AFXGA-mini-PCIe（LTE Cat 4）
+  - 4Gバージョンには LTEモジュールがプリインストール：
+    - EU868: EC25-EUX-mini-PCIe (LTE Cat 4)
+    - US915: EC25-AFXGA-mini-PCIe (LTE Cat 4)
 
-- Mini-PCIe2: 事前インストール済みSPI LoRa®モジュール
-  - EU868: Wio-WM1302 LoRaWANゲートウェイモジュール（SPI）- EU868
-  - US915: Wio-WM1302 LoRaWANゲートウェイモジュール（SPI）- US915 
+- Mini-PCIe2: SPI LoRa®モジュールプリインストール
+  - EU868: Wio-WM1302 LoRaWAN Gateway Module (SPI) - EU868
+  - US915: Wio-WM1302 LoRaWAN Gateway Module (SPI) - US915 
 
 ### 豊富なインターフェース
 
 - 3x RS485（絶縁）
 
-- 1x 10M/100M/1000Mイーサネット（PoEサポート）
-- 1x 10M/100Mイーサネット
+- 1x 10M/100M/1000M イーサネット（PoEサポート）
+- 1x 10M/100M イーサネット
 - 1x HDMI 2.0
 - 2x Type-A USB2.0
 - 1x Type-C USB2.0（OS更新用USBコンソール）
@@ -73,7 +73,7 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
 - ハードウェアウォッチドッグ
 
 - UPSスーパーキャパシタ（**付属**）
-- PCサイドパネル付き金属筐体
+- PCサイドパネル付きメタルケーシング
 - ESD: EN61000-4-2、レベル3
 - EFT: EN61000-4-4、レベル2
 - サージ: EN61000-4-5、レベル2
@@ -99,7 +99,7 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>CPU</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi CM4、クアッドコアCortex-A72@ 1.5GHz</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi CM4、クアッドコア Cortex-A72@ 1.5GHz</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>オペレーティングシステム</td>
@@ -122,7 +122,7 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>PoE（受電デバイスとして）</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IEEE 802.3af標準 12.95W PoE</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IEEE 802.3af 標準 12.95W PoE</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>供給電圧（AC/DC）</td>
@@ -149,7 +149,7 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>イーサネット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100/1000 Mbps（PoEサポート*）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100/1000 Mbps（PoE*サポート）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100 Mbps IEEE802.3/802.3u</td>
@@ -159,7 +159,7 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2 x USB-A 2.0 ホスト</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x USB-C 2.0（OSフラッシュ用）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x USB-C 2.0（OS書き込み用）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RS485</td>
@@ -171,11 +171,11 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>SIMカードスロット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準SIMカードをサポート</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準SIMカードサポート</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>M.2スロット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>M.2 NVMe SSDをサポート</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>M.2 NVMe SSDサポート</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>LED</td>
@@ -199,12 +199,12 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>Wi-Fi 2.4/5.0 GHz</td>
       <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>オンチップ Wi-Fi</td>
-      <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>はい</td>
+      <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>あり</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" style={{height: 18, width: '35.4622%'}}>BLE 5.0</td>
       <td data-style="height: 18px; width: 31.5967%;" style={{height: 18, width: '31.5967%'}}>オンチップ BLE</td>
-      <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>はい</td>
+      <td data-style="height: 18px; width: 31.5966%;" style={{height: 18, width: '31.5966%'}}>あり</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>LoRa®（使用中）</td>
@@ -219,20 +219,17 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={3} style={{height: 18, width: '35.4622%'}}>EMC</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>ESD:  EN61000-4-2, レベル 3</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>ESD: EN61000-4-2、レベル 3</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>EFT:  EN61000-4-4, レベル 2</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>EFT: EN61000-4-4、レベル 2</td>
     </tr>
      <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>サージ:  EN61000-4-5, レベル 2</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>サージ: EN61000-4-5、レベル 2</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={3} style={{height: 18, width: '35.4622%'}}>認証</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>CE, FCC</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>TELEC</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>CE、FCC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>RoHS</td>
@@ -241,7 +238,7 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>環境条件</strong></td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>保護等級</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>防塵防水等級</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IP40</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -261,11 +258,11 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>スーパーキャパシタ UPS</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>SuperCAP UPS LTC3350 モジュール*</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>SuperCAP UPS LTC3350 モジュール</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>ハードウェアウォッチドッグ</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1~255s</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1~255秒</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RTC</td>
@@ -284,15 +281,11 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>保証</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1年</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2年</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>製品寿命</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2030年12月まで</td>
-    </tr>
-    <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>注記</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>*印のオプションは、アクセサリリストに従って別途購入が必要です。</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 98.6555%;" colSpan={3} style={{height: 18, width: '98.6555%'}}><strong>コンポーネントとインターフェース状態説明</strong></td>
@@ -336,6 +329,11 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
 </table>
 </div>
 
+### 注意事項
+
+**「*」が付いたオプションは、アクセサリリストに従って追加購入が必要です。**
+
+
 ## ハードウェア概要
 
 <!--缺少3天线接口照片，待更新后补充-->
@@ -347,16 +345,16 @@ reComputer R1225は、強力で柔軟な産業用Raspberry Pi IoT LoRaWANゲー�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig13.png" /></div>
 
-reComputer R1225は3つの電源供給オプションをサポートしています：AC、DCターミナル、PoEポート。デフォルトでは、reComputer R1225はAC/DCターミナル（公式地域電源アダプタ SKU:110061505/110061506）を通じて電源供給されますが、**PoE電源供給（PoEモジュール、SKU:110991925）が含まれています**。これにより電源供給の選択に柔軟性を提供し、様々な電源との簡単な統合を可能にします。
+reComputer R1225は3つの電源供給オプションをサポートしています：AC、DCターミナル、PoEポート。デフォルトでは、reComputer R1225はAC/DCターミナル（公式地域別電源アダプタSKU:110061505/110061506）を通じて電源供給されますが、**PoE電源供給（PoEモジュール、SKU:110991925）が含まれています**。これにより電源供給の選択に柔軟性を提供し、様々な電源との簡単な統合を可能にします。
 
 ### 2ピン電源ターミナル
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-reComputer R1225は公称AC電圧12&#126;24 VまたはDC電圧9&#126;36Vで供給されます。電源は2ピン電源ターミナルブロックコネクタを介して接続されます。reComputer R1225をアースするには、アース線を電源ターミナルの左上角にあるネジに固定できます。
+reComputer R1225は、公称AC電圧12&#126;24VまたはDC電圧9&#126;36Vで供給されます。電源は2ピン電源ターミナルブロックコネクタを介して接続されます。reComputer R1225をアースするには、アース線を電源ターミナルの左上角にあるネジに固定できます。
 
 :::note
-電源ソリューションは逆極性保護のためにブリッジ整流ダイオードを使用し、ACとDCの両方の入力に対応しています。これにより、**電源の正極と負極の端子がどのように接続されても**、回路が損傷することはありません。ブリッジ整流器を使用することで、入力DC極性に関係なく出力電圧極性は固定されたままとなり、効果的な逆極性保護を提供します。
+電源ソリューションは逆極性保護のためにブリッジ整流ダイオードを使用し、ACとDCの両方の入力に対応しています。これにより、**電源の正極と負極の端子がどのように接続されても**、回路が損傷することはありません。ブリッジ整流器を使用することで、入力DC極性に関係なく出力電圧極性が固定され、効果的な逆極性保護を提供します。
 :::
 
 ### POE（付属）
@@ -367,16 +365,16 @@ PoEモジュールが取り付けられた状態で、reComputer R1225のETH0ポ
 - PoE出力：12V、1.1A最大
 
 :::note
-reComputer R1225に付属するPoEモジュールはIEEE 802.3af規格に準拠しており、最大12.95Wの電源供給が可能であることは注目に値します。**したがって、SSDや4Gモジュールなどの高電力周辺機器を接続する必要がある場合、PoE電源供給では不十分な場合があります**。この場合、デバイスの安定した信頼性のある動作を確保するために、代わりにAC/DCターミナルを電源供給に使用することをお勧めします。
+reComputer R1225に付属するPoEモジュールはIEEE 802.3af規格に準拠しており、最大12.95Wの電源供給が可能であることは注目に値します。**したがって、SSDや4Gモジュールなどの高電力周辺機器を接続する必要がある場合、PoE電源供給では不十分な場合があります**。この場合、デバイスの安定した信頼性のある動作を確保するために、代わりにAC/DCターミナルを使用した電源供給を推奨します。
 :::
 
 ### 消費電力
 
-Seeed Studioの研究室でテストされたreComputer R1225の消費電力については、以下の表を参照してください。テスト方法と環境により結果にばらつきが生じる可能性があるため、この値は参考値であることにご注意ください。
+Seeed Studioの実験室でテストされたreComputer R1225の消費電力については、以下の表を参照してください。テスト方法と環境により結果に変動が生じる可能性があるため、この値は参考値であることにご注意ください。
 
 待测试
 
-| ステータス   | 電圧 | 電流 | 消費電力 | 説明 |
+| ステータス | 電圧 | 電流 | 消費電力 | 説明 |
 |   ---    |    ---  |   ---   |         ---       |      ---    |
 |シャットダウン  |24V      |  mA   |    W         | シャットダウンおよび電源オフ状態での静的消費電力テスト。|
 |アイドル      |24V      |  mA  |    W          | テストプログラムを実行せずにreComputer R1225デバイスに24V電源を供給した際の入力電流をテスト。|
@@ -387,7 +385,7 @@ Seeed Studioの研究室でテストされたreComputer R1225の消費電力に�
 reComputer R1225にはデフォルトで電源ボタンが付属しておらず、電源が接続されるとシステムが自動的に起動します。シャットダウン時は、オペレーティングシステムでシャットダウンオプションを選択し、電源を切断する前にシステムが完全にシャットダウンするまで待ってください。システムを再起動するには、単に電源を再接続してください。
 
 :::note
-シャットダウン後は、内部コンデンサが完全に放電されるよう、システムを再起動する前に**少なくとも10秒間**お待ちください。
+シャットダウン後は、内部コンデンサが完全に放電されるよう、システムを再起動する前に**少なくとも10秒間**待ってください。
 :::
 
 ## ブロック図
@@ -408,7 +406,7 @@ reComputer R1225にはデフォルトで電源ボタンが付属しておらず�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>イーサネット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100/1000 Mbps IEEE 1588-2008（PoE*対応）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100/1000 Mbps IEEE 1588-2008（PoEサポート）</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x 10/100 Mbps IEEE802.3/802.3u</td>
@@ -430,11 +428,11 @@ reComputer R1225にはデフォルトで電源ボタンが付属しておらず�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>SIMカードスロット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準SIMカード対応</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>標準SIMカードサポート</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>M.2スロット</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>M.2 NVMe SSD対応</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>M.2 NVMe SSDサポート</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>LED</td>
@@ -454,7 +452,7 @@ reComputer R1225にはデフォルトで電源ボタンが付属しておらず�
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>DSI</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LCD*対応（筐体内のボード上）</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>LCD*サポート（筐体内のボード上）</td>
     </tr>
   </tbody>
 </table>
@@ -474,15 +472,15 @@ reComputer R1225は、マシンの動作状態を示す6つのLEDインジケー
 
 | LEDインジケータ | 色          | ステータス | 説明                                                  |
 | ------------- | -------------- | ------ | ------------------------------------------------------------ |
-| PWR           | 緑          | 点灯     | デバイスが電源に接続されています。                      |
-|               |                | 消灯    | デバイスが電源に接続されていません。                       |
-| ACT           | 緑          |        | Linuxでは、このピンはeMMCアクセスを示すために点滅します。<br />起動中にエラーが発生した場合、このLEDはエラーパターンで点滅し、<br />[Raspberry Piウェブサイトの参照表](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes)を使用してデコードできます。 |
+| PWR           | 緑          | オン     | デバイスが電源に接続されています。                      |
+|               |                | オフ    | デバイスが電源に接続されていません。                       |
+| ACT           | 緑          |        | Linuxでは、このピンはeMMCアクセスを示すために点滅します。<br />起動中にエラーが発生した場合、このLEDはエラーパターンで点滅し、<br />[Raspberry Piウェブサイトの参照テーブル](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes)を使用してデコードできます。 |
 | USER          | 緑/赤/青 |        | ユーザーによって定義される必要があります。                                  |
-| RS485-1       | 緑          | 消灯    | RS485チャンネル1でデータ転送なし。                         |
+| RS485-1       | 緑          | オフ    | RS485チャンネル1でデータ転送なし。                         |
 |               |                | 点滅  | RS485チャンネル1がデータを受信または送信中。               |
-| RS485-2       | 緑          | 消灯    | RS485チャンネル2でデータ転送なし。                         |
+| RS485-2       | 緑          | オフ    | RS485チャンネル2でデータ転送なし。                         |
 |               |                | 点滅  | RS485チャンネル2がデータを受信または送信中。               |
-| RS485-3       | 緑          | 消灯    | RS485チャンネル3でデータ転送なし。                         |
+| RS485-3       | 緑          | オフ    | RS485チャンネル3でデータ転送なし。                         |
 |               |                | 点滅  | RS485チャンネル3がデータを受信または送信中。               |
 
 **ACT ステータステーブル**
@@ -506,11 +504,16 @@ reComputer R1225は、マシンの動作状態を示す6つのLEDインジケー
 
 ACT LED が規則的な4回点滅パターンで点滅する場合、ブートコード（start.elf）が見つかりません
 ACT LED が不規則なパターンで点滅する場合、起動が開始されています。
-ACT LED が点滅しない場合、EEPROM コードが破損している可能性があります。何も接続せずに再度試して確認してください。詳細については、Raspberry Pi フォーラムをご確認ください：
+ACT LED が点滅しない場合、EEPROM コードが破損している可能性があります。何も接続せずに再度試してください。詳細については、Raspberry Pi フォーラムをご確認ください：
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
 詳細については、[Raspberry Pi フォーラム](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151)をご確認ください。
 
-ユーザー LED を制御するには、Linux カーネルが提供する疑似ファイルシステムである sysfs の使用をお勧めします。これは、さまざまなカーネルサブシステム、ハードウェアデバイス、および関連するドライバーに関する情報を公開します。reComputer R1225 では、ユーザー LED インターフェースを3つのデバイスファイル（led-red、led-blue、led-green）に抽象化し、ユーザーがこれらのファイルとやり取りするだけで LED ライトを制御できるようにしています。例は以下の通りです：
+
+#### Luci インターフェース経由でのカスタマイズ可能な LED ライト
+
+#### コマンド経由での LED ライト制御
+
+ユーザー LED を制御するために、Linux カーネルが提供する疑似ファイルシステムである sysfs の使用をお勧めします。これは、さまざまなカーネルサブシステム、ハードウェアデバイス、および関連するドライバーに関する情報を公開します。reComputer R1225 では、ユーザー LED インターフェースを3つのデバイスファイル（led-red、led-blue、led-green）に抽象化し、ユーザーがこれらのファイルとやり取りするだけで LED ライトを制御できるようにしています。例は以下の通りです：
 
 1. 赤色 LED を点灯するには、ターミナルで以下のコマンドを入力してください：
 
@@ -535,9 +538,9 @@ echo 1 | sudo tee /sys/class/leds/led-green/brightness
 
 <div align="left"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig07.png" /></div>
 
-reComputer R1225 にはアクティブブザーが搭載されており、アラームやイベント通知など様々な目的で使用できます。
+reComputer R1225 にはアクティブブザーが搭載されており、アラームやイベント通知など、さまざまな目的に使用できます。
 
-reComputer R1225 ユーザー向け（**R1225 は R1000 v1.1 ハードウェアプラットフォームをベースにしています**）、ブザーは PCA9535 P15 に接続されています。ブザーをオフ（オン）にするには、ターミナルで以下のコマンドを入力してください：
+reComputer R1225 ユーザー（**R1225 は R1000 v1.1 ハードウェアプラットフォームに基づいています**）の場合、ブザーは PCA9535 P15 に接続されています。ブザーをオフ（オン）にするには、ターミナルで以下のコマンドを入力してください：
 
 ```bash
 echo 591 | sudo tee /sys/class/gpio/export
@@ -550,8 +553,8 @@ echo 0 | sudo tee /sys/class/gpio/gpio591/value # turn off
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig21.png" /></div>
 
-reComputer R1225 には、3ピンコネクタを使用した3セットの RS485 インターフェースが装備されており、産業および自動化アプリケーションでの安全で信頼性の高い動作を確保するため、信号と電源の両方が絶縁されています。RS485A および RS485B 信号は容量絶縁を使用して絶縁されており、優れた EMI 耐性を提供し、RS485 インターフェースの高速通信要件を満たします。
-**デフォルトでは、120Ω 終端抵抗は実装されていません。ただし、パッケージボックスには5つの表面実装抵抗器が含まれています。必要に応じて、ユーザー自身で抵抗器をデバイスにはんだ付けする必要があります。**
+reComputer R1225 には、3ピンコネクタを使用した3セットの RS485 インターフェースが装備されており、産業および自動化アプリケーションでの安全で信頼性の高い動作を確保するために、信号と電源の両方が絶縁されています。RS485A および RS485B 信号は容量絶縁を使用して絶縁されており、優れた EMI 耐性を提供し、RS485 インターフェースの高速通信要件を満たします。
+**デフォルトでは、120Ω 終端抵抗は取り付けられていません。ただし、パッケージボックスには5つの表面実装抵抗器が含まれています。必要に応じて、ユーザーが自分で抵抗器をデバイスにはんだ付けする必要があります。**
 
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position.png" /></div>
 
@@ -596,7 +599,7 @@ cat /dev/ttyAMA2
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig14.png" /></div>
 
-reComputer R1225 のブートスイッチは CM4 の nRPI_BOOT ピンに接続されています。このスイッチは、ユーザーに eMMC と USB 間でブートソースを選択するオプションを提供します。通常モードでは、スイッチを "BOOT" ラベルのある側から離れた位置に設定し、システムが eMMC から起動できるようにします。逆に、ユーザーがシステムイメージを書き込む必要がある場合は、スイッチを "BOOT" ラベル側に設定し、システムが Type-C USB インターフェースから起動できるようにします。
+reComputer R1225 のブートスイッチは CM4 の nRPI_BOOT ピンに接続されています。このスイッチは、ユーザーに eMMC と USB 間でブートソースを選択するオプションを提供します。通常モードでは、スイッチを "BOOT" ラベルのある側から離して設定し、システムが eMMC から起動できるようにします。逆に、ユーザーがシステムイメージをフラッシュする必要がある場合は、スイッチを "BOOT" ラベルの方向に設定し、システムが Type-C USB インターフェースから起動できるようにします。
 
 <div class="table-center">
 
@@ -620,9 +623,9 @@ reComputer R1225 には、1つの USB Type-C ポートと2つの USB Type-A ポ�
 | **タイプ**   | **数量** | **プロトコル** | **機能** | **説明**                                              |
 | ---------- | ------------ | ------------ | ------------ | ------------------------------------------------------------ |
 | **Type-C** | *1           | USB2.0       | USB-Device   | シリアルポートデバッグ、イメージ書き込みなどに使用          |
-| **Type-A** | *2           | USB2.0       | USB-Host     | フラッシュドライブ、USB キーボード、<br />マウスなどの様々な USB デバイスを接続 |
+| **Type-A** | *2           | USB2.0       | USB-Host     | フラッシュドライブ、USB キーボード、<br />マウスなどの異なる USB デバイスを接続 |
 
-**lsusb** コマンドを実行して、USB ハブが検出されているかを確認します。このコマンドは、ハブを含むすべての接続された USB デバイスをリストします。
+**lsusb** コマンドを実行して、USB ハブが検出されているかどうかを確認します。このコマンドは、ハブを含む接続されているすべての USB デバイスをリストします。
 
 ```shell
 lsusb
@@ -630,7 +633,7 @@ lsusb
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/23.png" /></div>
 
-このコマンドを実行すると、存在する USB ハブを含む、システムに接続された USB デバイスに関する情報が表示されます。
+このコマンドを実行すると、存在する USB ハブを含む、システムに接続されている USB デバイスに関する情報が表示されます。
 
 USB ハブが正常に機能している場合、**lsusb** コマンドの出力にその詳細がリストされているはずです。リストされていない場合、ハブまたはシステムへの接続に問題がある可能性があります。そのような場合は、USB ハブまたはその接続のトラブルシューティングが必要になる場合があります。
 
@@ -647,33 +650,33 @@ USB ハブが正常に機能している場合、**lsusb** コマンドの出力
 <br />
 reComputer R1225 は、産業用アプリケーションで一般的に見られる標準サイズの SIM カードスロットを使用しており、25mm x 15mm の寸法の標準 SIM カードが必要です。
 :::note
-reComputer R1225 の標準バージョンには 4G モジュールが付属していないことにご注意ください。4G 機能が必要な場合は、追加の 4G モジュールを別途購入する必要があります。
+reComputer R1225は4Gバージョンが利用可能です。標準版（4Gモジュールなし）を購入した場合、4Gモジュールを別途購入してインストールできます。Bazaar Mallでは現在2つの4Gモジュールを提供しています：ヨーロッパ（EMEA & Thai <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>）とアメリカ（北米 **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**）
 :::
 
-### SSD スロット
+### SSDスロット
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig08.png" /></div>
 <br />
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig04.png" /></div>
-reComputer R1225 の SSD スロットは、128GB、256GB、512GB、1TB 容量の NVMe M.2 2280 SSD に対応するよう設計されています。このスロットにより高速ストレージ拡張が可能になり、ユーザーはシステムのパフォーマンスと容量を向上させることができます。
+reComputer R1225のSSDスロットは、128GB、256GB、512GB、1TBの容量のNVMe M.2 2280 SSDに対応するよう設計されています。このスロットにより高速ストレージ拡張が可能で、ユーザーはシステムのパフォーマンスと容量を向上させることができます。
 
-SSDを含むディスクをリストするには、*fdisk -l* コマンドを使用できます。方法は以下の通りです：
+SSDを含むディスクをリストするには、*fdisk -l*コマンドを使用できます。方法は以下の通りです：
 
 ```bash
 sudo fdisk -l
 ```
 
-このコマンドは、SSDが正しく検出されている場合、それを含むシステムに接続されているすべてのディスクのリストを表示します。SSDを表すエントリを探してください。通常、/dev/sdの後に文字が続く形式（例：/dev/sda、/dev/sdb など）で始まります。
+このコマンドは、SSDが正しく検出されている場合はそれを含む、システムに接続されているすべてのディスクのリストを表示します。SSDを表すエントリを探してください。通常、/dev/sdの後に文字が続きます（例：/dev/sda、/dev/sdb など）。
 SSDに対応するエントリを特定したら、必要に応じてパーティション分割やフォーマットを進めることができます。
 
 :::note
 SSDカードには主に2つの用途があります：<br />
-1.大容量ストレージ：SSDカードは大容量ストレージのニーズに活用できます。<br />
+1.大容量ストレージ：SSDカードは大容量ストレージのニーズに利用できます。<br />
 2.イメージ付きブートドライブ：もう一つの用途は、SSDを大容量ストレージとシステムイメージの保存の両方に使用し、SSDカードから直接ブートできるようにすることです。<br />
-市場で入手可能なすべてのSSDカードが2番目の用途をサポートしているわけではないことに注意することが重要です。したがって、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、推奨する1TB SSD（SKU 112990267）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みで、互換性の問題のリスクを軽減し、試行錯誤のコストを最小限に抑えます。
+市場で入手可能なすべてのSSDカードが2番目の用途をサポートしているわけではないことに注意することが重要です。そのため、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、推奨する1TB SSD（SKU 112990267）を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みで、互換性の問題のリスクを軽減し、試行錯誤のコストを最小限に抑えます。
 :::
 
-### Mini-PCIeスロット
+### Mini-PCleスロット
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig06.png" /></div>
 <br />
@@ -694,13 +697,13 @@ reComputer R1225には標準版と4G版があります：標準版では、Mini-
 
 
 
-この装置には2つのMini-PCIeインターフェース、すなわちMini-PCIeスロット1とMini-PCIeスロット2があります。スロット1はSIMカードスロットに接続され、USBプロトコルをサポートし、スロット2はUSBとSPIの両方のプロトコルをサポートしますが、SIMカードスロットには接続されません。したがって、4G LTEなどのデバイスはスロット1を通じて接続でき、SPI LoRa®デバイスはスロット2を通じて接続できます。
+この装置には2つのMini-PCIeインターフェース、すなわちMini-PCIeスロット1とMini-PCIeスロット2があります。スロット1はSIMカードスロットに接続されUSBプロトコルをサポートし、スロット2はUSBとSPIの両方のプロトコルをサポートしますがSIMカードスロットには接続されません。そのため、4G LTEなどのデバイスはスロット1を通じて接続でき、SPI LoRa®デバイスはスロット2を通じて接続できます。
 
-### リセットホール
+### リセット穴
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig16.png" /></div>
 
-reComputer R1225のリセットホールには小型プッシュボタンスイッチがあります。細い物体でこのボタンを押すことで、CM4をリセットできます。このピンがハイの時、CM4が開始したことを示します。このピンをローにドライブするとモジュールがリセットされます。
+reComputer R1225のリセット穴にはミニプッシュボタンスイッチがあります。細い物体でこのボタンを押すことで、CM4をリセットできます。このピンがハイの時はCM4が開始したことを示します。このピンをローにするとモジュールがリセットされます。
 
 ### イーサネット RJ45
 
@@ -715,17 +718,17 @@ reComputer R1225のリセットホールには小型プッシュボタンスイ�
 
 </div>
 
-reComputer R1225には2つのイーサネットRJ45ポートが付属しています。ETH0は3つの異なる速度（10/100/1000 Mbit/s）をサポートするCM4ネイティブギガビットイーサネットインターフェースです。追加のPoEモジュールを購入して、このインターフェースを通じてパワーオーバーイーサネット（PoE）配信を有効にし、reComputer R1225に電力を供給できます。もう一つのETH1は10/100 Mbit/sをサポートし、USBから変換されています。
+reComputer R1225には2つのイーサネットRJ45ポートが付属しています。ETH0は3つの異なる速度（10/100/1000 Mbit/s）をサポートするCM4ネイティブギガビットイーサネットインターフェースです。追加のPoEモジュールを購入することで、このインターフェースを通じてパワーオーバーイーサネット（PoE）配信を有効にし、reComputer R1225に電力を供給できます。もう一つのETH1は10/100 Mbit/sをサポートし、USBから変換されています。
 
 ### HDMI
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig17.png" /></div>
 
-reComputer R1225は、CM4からのネイティブHDMIインターフェースを備え、最大4K @ 60 fpsのビデオ出力をサポートします。複数のディスプレイが必要なアプリケーションに最適で、ユーザーがコンテンツを外部の大画面に出力できます。
+reComputer R1225はCM4からのネイティブHDMIインターフェースを備え、最大4K @ 60 fpsのビデオ出力をサポートします。複数のディスプレイが必要なアプリケーションに最適で、ユーザーは外部の大画面にコンテンツを出力できます。
 
 ### RTC
 
-reComputer R1225は、CR2032バッテリーが事前にインストールされたRTC回路を備えており、電源喪失時でも時刻保持機能を維持できます。
+reComputer R1225はCR2032バッテリーが事前にインストールされたRTC回路を備えており、電源喪失時でも時刻保持機能を維持できます。
 
 リアルタイムクロック（RTC）機能をテストするには、以下の手順に従ってください：
 
@@ -754,12 +757,12 @@ sudo hwclock --hctosys
 sudo hwclock -r
 ```
 
-このコマンドは、RTCに保存されている時刻を読み取って表示します。
+このコマンドはRTCに保存されている時刻を読み取り表示します。
 5. RTCから電源を切断し、数分待ってから再接続し、RTCが正しい時刻を保持しているかどうかを確認するためにRTC時刻を再度チェックします。
 
 ### ウォッチドッグ
 
-reComputer R1225には、システムの異常クラッシュ時に自動システム再起動を保証する独立したハードウェアウォッチドッグ回路が装備されています。ウォッチドッグ回路はRTCを通じて実装され、1秒から255秒までの柔軟な給餌時間を可能にします。
+reComputer R1225は、システムの異常クラッシュ時に自動システム再起動を保証する独立したハードウェアウォッチドッグ回路を搭載しています。ウォッチドッグ回路はRTCを通じて実装され、1秒から255秒までの柔軟な給餌時間を可能にします。
 
 ウォッチドッグテストを実行するには、以下の手順に従ってください：
 
@@ -822,62 +825,51 @@ echo "c" > /proc/sysrq-trigger
 このコマンドはカーネルクラッシュを引き起こし、ウォッチドッグがシステムを再起動させるはずです。
 :::
 
-5. システムを監視して、指定されたタイムアウト期間後に再起動することを確認します。
-これらの手順は、システムのウォッチドッグタイマーの機能をテストし、確認するのに役立ちます。
+5. 指定されたタイムアウト期間後にシステムが再起動することを確認するためにシステムを監視します。
+これらの手順は、システム上のウォッチドッグタイマーの機能をテストし確認するのに役立ちます。
 
 ## オプションインターフェースとモジュール
 
-### Wi-Fi/BLE（付属）
+### Wi-Fi/BLE（含まれています）
 
 reComputer R1225は、オンボードWi-Fi/BLEバージョンのCM4によって駆動され、CM4と同じWi-Fi/BLEパラメータを提供します。詳細なパラメータ情報については、Raspberry Pi公式ウェブサイトを参照してください。
 
 :::note
-reComputer R1225の金属筐体により、Wi-Fi/BLE信号が金属外装を貫通するのが困難な場合があることに注意することが重要です。したがって、この機能が必要な場合は、用意した外部アンテナの取り付けをお勧めします。
+reComputer R1225の金属筐体により、Wi-Fi/BLE信号が金属外装を貫通するのが困難な場合があることに注意することが重要です。そのため、この機能が必要な場合は、用意した外部アンテナの取り付けをお勧めします。
 :::
 
-#### Wi-Fi接続
+#### Wi-Fiに接続
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+##### Luci UIを介してWi-Fiに接続
 
-<Tabs>
-  <TabItem value="wifi-1" label="Luci UIを介してWi-Fiに接続">
+##### Wi-Fiに接続するコマンド
 
-    <!-- 在这里写 WM1302 SPI Version 的内容 -->
+ステップ1. Wi-Fiネットワークをスキャンするには：
 
-  </TabItem>
+  ```bash
+  nmcli dev wifi list
+  ```
 
-  <TabItem value="wifi-2" label="コマンドでWi-Fiに接続">
+ステップ2. Wi-Fiネットワークに接続します：
 
-    ステップ1. Wi-Fiネットワークをスキャンします：
+  ```bash
+  sudo nmcli dev wifi connect network-ssid password "network-password"
+  sudo nmcli --ask dev wifi connect network-ssid
+  ```
 
-    ```bash
-    nmcli dev wifi list
-    ```
+ステップ3. デバイスの電源を入れると、自動的にWi-Fiに接続されます。  
+  保存されたWiFi情報を削除したい場合：
 
-    ステップ2. Wi-Fiネットワークに接続します：
+  ```bash
+  nmcli con del network-ssid
+  ```
 
-    ```bash
-    sudo nmcli dev wifi connect network-ssid password "network-password"
-    sudo nmcli --ask dev wifi connect network-ssid
-    ```
-
-    ステップ3. デバイスの電源を入れると、自動的にWi-Fiに接続されます。  
-    保存されたWiFi情報を削除したい場合：
-
-    ```bash
-    nmcli con del network-ssid
-    ```
-
-    接続が切断された後、別のWi-Fiに接続します。
-  </TabItem>
-</Tabs>
+  接続が切断された後、別のWi-Fiに接続します。
 
 
+#### Bluetoothデバイスに接続
 
-#### Bluetoothデバイスの接続
-
-Bluetoothデバイスを追加する前に、コンピュータのBluetoothサービスが開始され、実行されている必要があります。これはsystemctlコマンドで確認できます。
+Bluetoothデバイスを追加する前に、コンピュータのBluetoothサービスが開始され実行されている必要があります。これはsystemctlコマンドで確認できます。
 
 ```bash
 sudo systemctl status bluetooth
@@ -936,21 +928,21 @@ bluetoothctl
 exit 
 ```
 
-### 4G モジュール（オプション）
+### 4Gモジュール（オプション）
 
 reComputer R1225 LoRaWAN ゲートウェイは、標準版と4G版で利用可能です。標準版のMini-PCIeスロット1は空いていますが、4G版にはヨーロッパ（EMEA & Thai <a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">**SKU 113991135**</a>）とアメリカ（北米 **<a href="https://www.seeedstudio.com/LTE-Cat-4-EC25-EUX-mini-PCIe-p-5669.html">SKU 113991134</a>**）向けにそれぞれ調整されたMini-PCIeモジュールが事前にインストールされています。
 
-### LoRa® モジュール（占有済み）
+### LoRa®モジュール（付属）
 
-reComputer R1225 LoRaWAN ゲートウェイのMini-PCIeスロット2は、SPI LoRa® モジュールによって占有されています。
+reComputer R1225 LoRaWAN ゲートウェイのMini-PCIeスロット2は、SPI LoRa®モジュールによって占有されています。
 
 ### PoE（付属）
 
 reComputer R1225 LoRaWAN ゲートウェイにはPoEモジュールが搭載されており、ユーザーが自分で購入、はんだ付け、組み立てを行う必要がありません。
 
-### M.2 スロット（オプション）
+### M.2スロット（オプション）
 
-reComputer R1225は、基板上の2つのMini-PCIeスロットの下にあるPCIeスロット（J62）を使用して、2280 NVMe SSDとAIアクセラレータ（Hailo）をサポートします。CM4のPCIeはgen2.0で最大理論速度が5Gbpsであることに注意が必要です。Gen3.0以上のSSDを使用している場合、SSDの最大速度を達成できない可能性があります。テスト後、SSDを搭載したreTerminal DMは最大書き込み速度230MB/s、最大読み取り速度370MB/sを達成できます。どのSSDが互換性があるか不明な場合は、以下のアクセサリリストに従って購入できます。
+reComputer R1225は、基板上の2つのMini-PCIeスロットの下にあるPCIeスロット（J62）を使用して、2280 NVMe SSDとAIアクセラレータ（Hailo）をサポートします。CM4のPCIeはgen2.0で最大理論速度が5Gbpsであることに注意することが重要です。Gen3.0以上のSSDを使用している場合、SSDの最大速度を達成できない可能性があります。テスト後、SSDを搭載したreTerminal DMは最大書き込み速度230MB/s、最大読み取り速度370MB/sを達成できます。どのSSDが互換性があるか不明な場合は、以下のアクセサリリストに従って購入できます。
 
 [組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-ssd)。
 
@@ -986,19 +978,19 @@ reComputer R1225は、基板上の2つのMini-PCIeスロットの下にあるPCI
 SSDカードには主に2つの用途があります：<br />
 1.大容量ストレージ：SSDカードは大容量ストレージのニーズに利用できます。<br />
 2.イメージ付きブートドライブ：もう一つの用途は、SSDを大容量ストレージとシステムイメージの保存の両方に使用し、SSDカードから直接ブートできるようにすることです。<br />
-市場で入手可能なすべてのSSDカードが2番目の用途をサポートしているわけではないことに注意が必要です。したがって、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、推奨する**1TB SSD（<a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">SKU [112990267]</a>）**を選択することをお勧めします。このモデルはブート機能についてテストおよび検証済みで、互換性の問題のリスクを軽減し、試行錯誤のコストを最小限に抑えます。
+市場で入手可能なすべてのSSDカードが2番目の用途をサポートしているわけではないことに注意することが重要です。したがって、ブートドライブとして使用する予定で、どのモデルを購入すべきか不明な場合は、推奨する**1TB SSD（<a href="https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html">SKU [112990267]</a>）**を選択することをお勧めします。このモデルはブート機能についてテストおよび検証されており、互換性の問題のリスクを軽減し、試行錯誤のコストを最小限に抑えます。
 :::
 
 
-### 暗号化チップ TPM 2.0（オプション）
+### 暗号化チップTPM 2.0（オプション）
 
-TPMは、Trusted Computing Group（TCG）TPM 2.0仕様に準拠したInfineonのOPTIGA™ TPM SLB9670を特徴とし、reComputer R1225の暗号化チップとして推奨されています。このチップは基板上のポートJ13に適用されるSPIインターフェースを特徴とし、プラットフォームの整合性、リモート認証、暗号化サービスの信頼の根拠を可能にします。
+TPMは、Trusted Computing Group（TCG）TPM 2.0仕様に準拠したInfineonのOPTIGA™ TPM SLB9670を特徴とし、reComputer R1225の暗号化チップとして推奨されます。このチップは基板上のポートJ13に適用されるSPIインターフェースを特徴とし、プラットフォームの整合性、リモート認証、暗号化サービスの信頼の根拠を可能にします。
 
 :::note
-[組み立て手順についてはこちらをクリックしてください](/ja/recomputer_r1000_assembly_guide/#assemble-tpm-20-module)。
+[組み立て手順についてはこちらをクリックしてください](https://wiki.seeedstudio.com/ja/recomputer_r1000_assembly_guide/#assemble-tpm-20-module)。
 :::
 
-TPM 2.0モジュールをデバイスに接続した場合、以下のコードでTPM接続を確認できます。
+TPM 2.0モジュールをデバイスに接続した場合、以下のコードがTPM接続の確認に役立ちます。
 
 ```bash
 ls /dev | grep tpm
@@ -1018,16 +1010,16 @@ UPSによって提供されるバックアップ時間は、システム負荷�
 | 動作モード | 時間（秒） | 備考                                                       |
 | ----------------- | ------- | ------------------------------------------------------------ |
 | アイドル              | 37      | 公式ドライバープログラムがロードされたアイドル状態でのテスト |
-| CPU フル負荷  | 18      | stress -c 4 -t 10m -v &                                      |
+| CPUフル負荷  | 18      | stress -c 4 -t 10m -v &                                      |
 
 :::note
 UPS機能については詳細情報をお問い合わせください。アラーム信号はアクティブLOWです。
 :::
 
-CPUとDC/AC電源入力間のGPIO25は、5V電源がダウンした際にCPUに警告するために使用されます。その後、CPUはスーパーキャパシタのエネルギー枯渇前にスクリプトで緊急処理を行い、`$ shutdown`を実行する必要があります。
+CPUとDC/AC電源入力の間のGPIO25は、5V電源がダウンした際にCPUに警告するために使用されます。その後、CPUはスーパーキャパシタのエネルギー枯渇前にスクリプトで緊急処理を行い、`$ shutdown`を実行する必要があります。
 <br />
-この機能を使用するもう一つの方法は、GPIOピンの変化時にシャットダウンを開始することです。指定されたGPIOピンは、KEY_POWERイベントを生成する入力キーとして設定されます。このイベントはsystemd-logindによって処理され、シャットダウンが開始されます。
-参考として`/boot/overlays/README`を使用し、`/boot/config.txt`を変更してください。
+この機能を使用するもう一つの方法は、GPIOピンの変化時にシャットダウンを開始することです。指定されたGPIOピンは、KEY_POWERイベントを生成する入力キーとして設定されます。このイベントはsystemd-logindによってシャットダウンを開始することで処理されます。
+参考として`/boot/overlays/README`を使用し、`/boot/config.txt`を変更します。
 
 ```bash
 dtoverlay=gpio-shutdown,gpio_pin=25,active_low=1
@@ -1068,7 +1060,7 @@ while True:
 
 ### DSI（オプション） 
 
-基板上に1つのDSI（J24）が特別な用途のために予約されています。ユーザーは自分のニーズに応じてプラグインを購入してください。
+基板上に1つのDSI（J24）が特別な用途のために予約されています。ユーザーは自分のニーズに応じてプラグインを購入することが求められます。
 
 ## 追加リソース
 
@@ -1078,7 +1070,7 @@ while True:
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただき、ありがとうございます！当社の製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

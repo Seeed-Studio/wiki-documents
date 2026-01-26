@@ -154,6 +154,8 @@ export const Highlight = ({children, color}) => (
     </tbody>
 </table>
 
+> [XIAO ESP32-S3 vs ESP32-C3 vs ESP32-C6：あなたのプロジェクトに最適なのはどれ？](https://www.seeedstudio.com/blog/2026/01/14/xiao-esp32-s3-c3-c6-comparison/)
+
 ### 特徴
 
 - **強化された接続性**: ***2.4*** GHz Wi-Fi 6（802.11ax）、Bluetooth 5（LE）、IEEE 802.15.4無線接続を統合し、**Thread**および**Zigbee**プロトコルの適用を可能にします。
