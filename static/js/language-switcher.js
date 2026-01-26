@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-23 14:41:00 (北京时间)
-// 多语言页面: 2122 个
+// 生成时间: 2026-01-26 14:11:23 (北京时间)
+// 多语言页面: 2124 个
 
 (function() {
   'use strict';
@@ -10456,6 +10456,18 @@
     "ja"
   ],
   "/Tracker_WiFi_Geolocation": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_aws": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_helium": [
     "cn",
     "en",
     "es",
