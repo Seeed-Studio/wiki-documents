@@ -755,7 +755,9 @@ const sidebars = {
               type: 'category',
               label: 'Integrated with LoRaWAN Network Server',
               items: [
-                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network'
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_The_Things_Network',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_Helium',
+                'Sensor/SenseCAP/SenseCAP_T2000_Tracker/Integrated_with_LoRaWAN_Network_Server/Connect_to_AWS_IoT_Core'
               ],
             }
           ],
