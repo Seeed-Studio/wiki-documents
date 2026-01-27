@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-23 14:41:00 (北京时间)
-// 多语言页面: 2122 个
+// 生成时间: 2026-01-27 10:20:09 (北京时间)
+// 多语言页面: 2125 个
 
 (function() {
   'use strict';
@@ -8565,6 +8565,12 @@
     "es",
     "ja"
   ],
+  "/xiao-esp32--series-espresense": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_esp32c5_with_freertos": [
     "cn",
     "en",
@@ -10456,6 +10462,18 @@
     "ja"
   ],
   "/Tracker_WiFi_Geolocation": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_aws": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_helium": [
     "cn",
     "en",
     "es",

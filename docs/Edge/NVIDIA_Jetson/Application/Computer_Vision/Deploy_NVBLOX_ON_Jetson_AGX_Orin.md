@@ -27,7 +27,6 @@ last_update:
      src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_nvblox/isaac_sim_nvblox_humans.gif"/>
 </div>
 
-
 ## Introduction
 
 <div style={{ textAlign: "justify" }}>
@@ -58,7 +57,6 @@ This makes it particularly valuable for edge AI applications where hardware cons
 - Orbbec ROS2 SDK installation required
 - Isaac ROS installation required
 
-
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/other/page-nvblox.jpg"/>
 </div>
@@ -80,6 +78,7 @@ This makes it particularly valuable for edge AI applications where hardware cons
 ### Install Basic Dependencies
 
 Install the following dependencies in your terminal:
+
 ```bash
 sudo apt update
 sudo apt-get install python3-pip # Install Python3
@@ -87,7 +86,6 @@ sudo apt-get install nvidia-jetpack # Install developer tools
 sudo pip3 install jetson-stats # Install Jtop to check JetPack version
 sudo apt-get install git-lfs # Install Git LFS
 ```
-
 
 ### Install Docker CE
 
@@ -183,16 +181,12 @@ Running `./scripts/run_dev.sh` will automatically install Isaac ROS and start th
 Installing Isaac ROS requires logging into NVIDIA NGC in the terminal and entering your NGC account-generated API Key 🔑
 :::
 
-
-
-# Reload shell configuration
-source ~/.bashrc -->
-
 ### Install Orbbec SDK ROS2
 
 Using Orbbec RGB-D cameras requires installing the SDK driver. This guide uses the Build from Source method.
 
 Install dependencies:
+
 ```bash
 sudo apt install libgflags-dev nlohmann-json3-dev \
 ros-$ROS_DISTRO-image-transport ros-${ROS_DISTRO}-image-transport-plugins ros-${ROS_DISTRO}-compressed-image-transport \
@@ -233,7 +227,6 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 If this script is not executed, opening the device will fail due to permission issues. You would need to run the sample with sudo (administrator privileges). ⚠️
 :::
 
-
 ## Deploy NVBlox
 
 ### Build NVBlox
@@ -264,6 +257,7 @@ docker: Error response from daemon: failed to create task for container: failed 
 ```
 
 You can try running the following command in the terminal to fix it:
+
 ```bash
 sudo nvidia-ctk cdi generate --mode=csv --output=/etc/cdi/nvidia.yaml
 ```
@@ -274,13 +268,14 @@ After successfully starting the container, you should see something like this:
 </div>
 
 Install additional dependencies:
+
 ```bash
 sudo apt update
 sudo apt-get install -y ros-humble-magic-enum
 sudo apt-get install -y ros-humble-foxglove-msgs
 ```
 
-Add CUDA environment variables to `.bashrc`: 
+Add CUDA environment variables to `.bashrc`:
 
 ```bash
 echo '
@@ -292,6 +287,7 @@ export CUDACXX=$CUDA_HOME/bin/nvcc
 ```
 
 Create symbolic links:
+
 ```bash
 sudo ln -sf /opt/ros/humble/include/magic_enum.hpp /usr/include/magic_enum.hpp
 
@@ -300,6 +296,7 @@ sudo ln -sfn /opt/ros/humble/include/foxglove_msgs/foxglove_msgs/msg /opt/ros/hu
 ```
 
 Build and initialize the workspace in `/workspaces/isaac_ros-dev`:
+
 ```bash
 colcon build --symlink-install --cmake-args -DBUILD_TESTING=OFF
 source install/setup.bash
@@ -323,7 +320,8 @@ ros2 launch orbbec_camera <camera_name>.launch.py
 # Example: ros2 launch orbbec_camera gemini2.launch.py
 ```
 
-Here are some supported `<camera_name>` parameters: 
+Here are some supported `<camera_name>` parameters:
+
 - gemini210
 - gemini2
 - gemini2L
@@ -335,11 +333,13 @@ Note that you should NOT start the Orbbec script inside the Docker container. Ma
 :::
 
 The Isaac ROS container bridges with locally published ROS2 by default. In the Docker container, enter:
+
 ```bash
 ros2 topic list
 ```
 
 Normally, you should see the following data topics published by the Orbbec camera in the Docker container:
+
 ```yaml
 /camera/accel/imu_info
 /camera/color/camera_info
@@ -382,9 +382,6 @@ Finally, by mounting the AGX Orin and Orbbec camera on a mobile AGV, you can ach
 
 This can be used for obstacle detection and building 3D mesh maps of scenes for mobile robots. 🤖
 
-
-
-
 ## References
 
 - [Isaac ROS Common GitHub Repository](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common)
@@ -392,7 +389,6 @@ This can be used for obstacle detection and building 3D mesh maps of scenes for 
 - [Isaac NVBlox Orbbec GitHub Repository](https://github.com/jjjadand/isaac-NVblox-Orbbec#)
 - [ROS2 Humble Documentation](https://docs.ros.org/en/humble/)
 - [Orbbec SDK ROS2 Documentation](https://github.com/orbbec/OrbbecSDK_ROS2)
-
 
 ## Tech Support & Product Discussion
 
@@ -407,4 +403,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
