@@ -262,9 +262,9 @@ export const productOptions = [
   }
 ]
 
-<div className="hero hero--primary" style={{background: 'linear-gradient(135deg, #003a4a 0%, #8dc21f 100%)'}}>
+<div className="hero hero--primary" style={{background: 'linear-gradient(135deg, #003a4a 0%, #8dc21f 100%)', margin: '0 calc(-1 * var(--ifm-spacing-horizontal))', marginBottom: '2rem'}}>
   <div className="container">
-    <h1 className="hero__title">
+    <h1 className="hero__title" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap'}}>
       <span style={{fontSize: '3.5rem', animation: 'pulse 2s infinite'}}>⚡</span>
       Flash Jetson Linux
     </h1>
@@ -284,8 +284,13 @@ export const productOptions = [
   {/* Mount the Select Components */}
   <ProductSelect options={productOptions} />
   
-  <div className="alert alert--info margin-top--lg" style={{background: 'linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%)', border: '1px solid #8dc21f'}}>
-    <div className="alert__heading">
+  <div className="alert alert--info margin-top--lg" style={{
+    background: 'var(--ifm-color-emphasis-100)',
+    border: '1px solid #8dc21f',
+    '--ifm-alert-background-color': 'var(--ifm-color-emphasis-100)',
+    '--ifm-alert-border-color': '#8dc21f'
+  }}>
+    <div className="alert__heading" style={{display: 'flex', alignItems: 'center'}}>
       <span style={{fontSize: '1.5rem', marginRight: '0.5rem'}}>🚀</span>
       JetPack 6.2 with MAXN Super Mode
     </div>
@@ -294,7 +299,11 @@ export const productOptions = [
       <a href="https://seeedstudio88-my.sharepoint.com/:x:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EX8k1puq5J1IgMZKYYdmuqgB_EtGjxSB7_-hRjUGjTa0dQ?e=1QSozj" 
          target="_blank" 
          className="button button--primary" 
-         style={{background: 'linear-gradient(135deg, #8dc21f 0%, #74b281 100%)', border: 'none'}}>
+         style={{
+           background: 'linear-gradient(135deg, #8dc21f 0%, #74b281 100%)', 
+           border: 'none',
+           color: 'white'
+         }}>
         📋 View Device Compatibility
       </a>
     </div>
@@ -303,7 +312,7 @@ export const productOptions = [
 
 ## Download
 
-<div className="card margin-bottom--lg">
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #0ea5e9'}}>
   <div className="card__body">
     <OneDriveLink />
   </div>
@@ -319,7 +328,7 @@ export const productOptions = [
 
 ## Prepare Requirements
 
-<div className="card margin-bottom--lg">
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #10b981'}}>
   <div className="card__body">
     <PrepareRequirementsMini />
     <PrepareRequirementsRobotics />
@@ -335,7 +344,7 @@ export const productOptions = [
 
 ## Enter Recovery Mode
 
-<div className="card margin-bottom--lg">
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #8b5cf6'}}>
   <div className="card__body">
     <RecoveryRobotics />
     <RecoveryMini />
@@ -351,7 +360,7 @@ export const productOptions = [
 
 ## Install Dependencies
 
-<div className="card margin-bottom--lg">
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #f97316'}}>
   <div className="card__body">
     <div className="admonition admonition-info">
       <div className="admonition-content">
@@ -414,7 +423,11 @@ export const productOptions = [
 
 ## Extract and Flash
 
-<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #8dc21f', background: 'linear-gradient(135deg, var(--ifm-card-background-color) 0%, rgba(141, 194, 31, 0.05) 100%)'}}>
+<div className="card margin-bottom--lg" style={{
+  borderLeft: '4px solid #8dc21f', 
+  background: 'linear-gradient(135deg, var(--ifm-card-background-color) 0%, rgba(141, 194, 31, 0.05) 100%)',
+  '--ifm-card-background-color': 'var(--ifm-background-surface-color)'
+}}>
   <div className="card__body">
     <ExtractAndFlash />
   </div>
@@ -435,8 +448,12 @@ export const productOptions = [
         <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" 
            target="_blank" 
            className="button button--primary button--block"
-           style={{background: '#8dc21f', borderColor: '#8dc21f'}}>
-          reComputer-Jetson-for-Beginners →
+           style={{
+             background: '#8dc21f', 
+             borderColor: '#8dc21f',
+             color: 'white'
+           }}>
+          Jetson-for-Beginners →
         </a>
       </div>
     </div>
@@ -454,8 +471,12 @@ export const productOptions = [
         <a href="https://github.com/Seeed-Projects/jetson-examples" 
            target="_blank" 
            className="button button--primary button--block"
-           style={{background: '#8dc21f', borderColor: '#8dc21f'}}>
-          jetson-examples →
+           style={{
+             background: '#8dc21f', 
+             borderColor: '#8dc21f',
+             color: 'white'
+           }}>
+          Jetson-examples →
         </a>
       </div>
     </div>
@@ -473,7 +494,11 @@ export const productOptions = [
         <a href="https://github.com/Seeed-Studio/Linux_for_Tegra" 
            target="_blank" 
            className="button button--primary button--block"
-           style={{background: '#8dc21f', borderColor: '#8dc21f'}}>
+           style={{
+             background: '#8dc21f', 
+             borderColor: '#8dc21f',
+             color: 'white'
+           }}>
           Seeed's L4T Source →
         </a>
       </div>
@@ -495,7 +520,11 @@ export const productOptions = [
       <p>Join our active community for discussions, troubleshooting, and sharing projects.</p>
       <a href="https://forum.seeedstudio.com/" 
          className="button button--outline button--primary"
-         style={{borderColor: '#8dc21f', color: '#8dc21f'}}>
+         style={{
+           borderColor: '#8dc21f', 
+           color: '#8dc21f',
+           '--ifm-button-color': '#8dc21f'
+         }}>
         Visit Forum
       </a>
     </div>
@@ -508,7 +537,11 @@ export const productOptions = [
       <p>Get personalized support from our technical team for specific issues.</p>
       <a href="https://www.seeedstudio.com/contacts" 
          className="button button--outline button--primary"
-         style={{borderColor: '#8dc21f', color: '#8dc21f'}}>
+         style={{
+           borderColor: '#8dc21f', 
+           color: '#8dc21f',
+           '--ifm-button-color': '#8dc21f'
+         }}>
         Contact Us
       </a>
     </div>
@@ -521,7 +554,11 @@ export const productOptions = [
       <p>Real-time chat with developers and enthusiasts in our Discord server.</p>
       <a href="https://discord.gg/eWkprNDMU7" 
          className="button button--outline button--primary"
-         style={{borderColor: '#8dc21f', color: '#8dc21f'}}>
+         style={{
+           borderColor: '#8dc21f', 
+           color: '#8dc21f',
+           '--ifm-button-color': '#8dc21f'
+         }}>
         Join Discord
       </a>
     </div>
@@ -530,12 +567,19 @@ export const productOptions = [
   <div className="col col--3">
     <div className="card text--center padding--lg height--full">
       <div style={{fontSize: '3rem', marginBottom: '1rem'}}>🐛</div>
-      <h3>GitHub Discussions</h3>
+      <h3>GitHub Issues</h3>
       <p>Report issues, request features, and contribute to our documentation.</p>
       <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" 
          className="button button--outline button--primary"
-         style={{borderColor: '#8dc21f', color: '#8dc21f'}}>
-        GitHub Discussions
+         style={{
+           borderColor: '#8dc21f', 
+           color: '#8dc21f',
+           '--ifm-button-color': '#8dc21f',
+           whiteSpace: 'nowrap',
+           overflow: 'hidden',
+           textOverflow: 'ellipsis'
+         }}>
+        GitHub Issues
       </a>
     </div>
   </div>
