@@ -192,7 +192,7 @@ This example introduces how to use the OLED display on the Seeed Studio Expansio
 #include <U8x8lib.h>
 #include <Wire.h>
 
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE, /* clock=*/ SCL, /* data=*/ SDA );   // OLEDs without Reset of the Display
 
 void setup(void) {
   u8x8.begin();
@@ -205,6 +205,22 @@ void loop(void) {
   u8x8.print("Hello World!");
 }
 ```
+:::note
+**IMPORTANT UPDATE**
+Earlier versions of this Wiki used an incorrect constructor for the U8X8 driver which had it's parameters in the wrong order. This can cause heap corruption and other program instabilities.
+
+That code was:
+```cpp
+#include <Arduino.h>
+#include <U8x8lib.h>
+#include <Wire.h>
+
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8( /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE );   // OLEDs without Reset of the Display
+```
+See https://github.com/olikraus/u8g2/wiki/u8x8setupcpp#communication for more details.
+
+If this fixes any of your board's strange behavior, be sure to let "cgwaltney" know on the forums.
+:::
 
 ### LED control by User Button
 
