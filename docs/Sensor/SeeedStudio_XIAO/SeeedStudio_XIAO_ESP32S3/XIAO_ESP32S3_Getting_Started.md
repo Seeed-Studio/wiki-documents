@@ -228,10 +228,10 @@ Before everything starts, it is quite essential to have some basic parameters of
 | MTDI                    |                  | GPIO41                                                 |                    | JTAG, ADC                            |
 | MTCK                    |                  | GPIO39                                                 |                    | JTAG, ADC                            |
 | MTMS                    |                  | GPIO42                                                 |                    | JTAG, ADC                            |
-| Reset                   |                  | CHIP_EN                                                |                    | EN                                   |
+| Reset                   |                  | EN                                                |                    | EN                                   |
 | Boot                    |                  | GPIO0                                                  |                    | Enter Boot Mode                      |
 | U.FL-R-SMT1             |                  | LNA_IN                                                 |                    | UFL antenna                          |
-| CHARGE_LED              |                  | VCC_3V3                                                |                    | CHG-LED                              |
+| CHARGE_LED              |                  |                                                |                    | CHG-LED                              |
 | USER_LED                |                  | GPIO21                                                 |                    | User Light                           |
 | Digital microphone_CLK  |                  | GPIO42                                                 |                    | PDM clock pin for MIC                |
 | Digital microphone_DATA |                  | GPIO41                                                 |                    | PDM data pin for MIC                 |
