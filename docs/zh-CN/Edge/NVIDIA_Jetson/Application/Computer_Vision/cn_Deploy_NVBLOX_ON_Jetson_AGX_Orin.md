@@ -14,7 +14,7 @@ keywords:
 - TSDF
 - ESDF
 - 3D Mapping
-image: https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp
+image: https://files.seeedstudio.com/wiki/other/page-nvblox.jpg
 slug: /cn/deploy_nvblox_jetson_agx_orin
 sku: 101090144,100020039
 last_update:
@@ -27,15 +27,14 @@ last_update:
      src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_nvblox/isaac_sim_nvblox_humans.gif"/>
 </div>
 
-
 ## 简介
 
 <div style={{ textAlign: "justify" }}>
-[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) 是 NVIDIA 开发的高性能 GPU 加速 3D 建图框架，用于实时机器人感知。与单目深度估计模型不同，NVBlox 使用来自 RGB-D 相机或立体相机的真实深度输入来构建准确的 3D 场景表示。
+[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) 是 NVIDIA 开发的高性能 GPU 加速 3D 建图框架，用于实时机器人感知。与单目深度估计模型不同，NVBlox 使用来自 RGB-D 相机或立体相机的真实深度输入来构建精确的 3D 场景表示。
 
 它实时构建密集的 TSDF（截断符号距离场）和 ESDF（欧几里得符号距离场）地图，实现高质量的 3D 重建、障碍物感知导航和碰撞检测。NVBlox 还可以生成网格、基于体素的代价地图以及适用于自主移动机器人（AMR）的 3D 占用表示。
 
-这使其在边缘 AI 应用中特别有价值，在这些应用中硬件约束和计算效率是关键考虑因素。本 wiki 演示了如何在 **Jetson AGX Orin** 上部署 Isaac ROS NVBlox，集成 **ROS 2**，使用 **Orbbec RGB-D 相机** 和移动机器人平台实现完全的设备端感知和导航管道。🚀
+这使其在边缘 AI 应用中特别有价值，在这些应用中硬件约束和计算效率是关键考虑因素。本 wiki 演示了如何在 **Jetson AGX Orin** 上部署 Isaac ROS NVBlox，集成 **ROS 2**，使用 **Orbbec RGB-D 相机** 和移动机器人平台来实现完全的设备端感知和导航管道。🚀
 
 </div>
 
@@ -58,18 +57,17 @@ last_update:
 - 需要安装 Orbbec ROS2 SDK
 - 需要安装 Isaac ROS
 
-
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/other/page-nvblox.jpg"/>
 </div>
 
 ## 技术亮点
 
-- **实时 3D 建图**：NVBlox 使用 GPU 加速实时生成密集的 TSDF 和 ESDF 地图，为机器人应用实现高质量的 3D 场景重建。
+- **实时 3D 建图**：NVBlox 使用 GPU 加速实时生成密集的 TSDF 和 ESDF 地图，为机器人应用提供高质量的 3D 场景重建。
 
-- **RGB-D 相机集成**：利用 Orbbec RGB-D 相机的真实深度信息创建准确的 3D 表示，无需依赖单目深度估计。
+- **RGB-D 相机集成**：利用 Orbbec RGB-D 相机的真实深度信息创建精确的 3D 表示，无需依赖单目深度估计。
 
-- **边缘部署优化**：专为 Jetson AGX Orin 等边缘设备的高效推理而设计，具有 CUDA 优化以实现最大性能。
+- **边缘部署优化**：专为 Jetson AGX Orin 等边缘设备的高效推理而设计，具有 CUDA 优化以获得最大性能。
 
 - **导航就绪输出**：生成适用于自主导航和碰撞避免的网格、基于体素的代价地图和 3D 占用网格。
 
@@ -80,6 +78,7 @@ last_update:
 ### 安装基本依赖
 
 在终端中安装以下依赖：
+
 ```bash
 sudo apt update
 sudo apt-get install python3-pip # Install Python3
@@ -87,7 +86,6 @@ sudo apt-get install nvidia-jetpack # Install developer tools
 sudo pip3 install jetson-stats # Install Jtop to check JetPack version
 sudo apt-get install git-lfs # Install Git LFS
 ```
-
 
 ### 安装 Docker CE
 
@@ -183,24 +181,12 @@ cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
 安装 Isaac ROS 需要在终端中登录 NVIDIA NGC 并输入您的 NGC 账户生成的 API Key 🔑
 :::
 
-
-<!-- ```bash
-# Add CUDA environment variables to .bashrc
-echo '
-# CUDA Environmentexport CUDA_HOME=/usr/local/cuda
-export PATH=$CUDA_HOME/bin:$PATH
-export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
-export CUDACXX=$CUDA_HOME/bin/nvcc
-' >> ~/.bashrc
-
-# Reload shell configuration
-source ~/.bashrc -->
-
 ### 安装 Orbbec SDK ROS2
 
 使用 Orbbec RGB-D 相机需要安装 SDK 驱动。本指南使用从源码构建的方法。
 
 安装依赖：
+
 ```bash
 sudo apt install libgflags-dev nlohmann-json3-dev \
 ros-$ROS_DISTRO-image-transport ros-${ROS_DISTRO}-image-transport-plugins ros-${ROS_DISTRO}-compressed-image-transport \
@@ -241,7 +227,6 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 如果不执行此脚本，由于权限问题，打开设备将失败。您需要使用 sudo（管理员权限）运行示例。⚠️
 :::
 
-
 ## 部署 NVBlox
 
 ### 构建 NVBlox
@@ -262,7 +247,7 @@ cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
   ./scripts/run_dev.sh
 ```
 
-（可选）如果遇到类似以下错误：
+（可选）如果遇到类似以下的错误：
 
 ```bash
 Finished pulling pre-built base image: nvcr.io/nvidia/isaac/ros:aarch64-ros2_humble_4c0c55dddd2bbcc3e8d5f9753bee634c
@@ -272,6 +257,7 @@ docker: Error response from daemon: failed to create task for container: failed 
 ```
 
 您可以尝试在终端中运行以下命令来修复：
+
 ```bash
 sudo nvidia-ctk cdi generate --mode=csv --output=/etc/cdi/nvidia.yaml
 ```
@@ -282,13 +268,26 @@ sudo nvidia-ctk cdi generate --mode=csv --output=/etc/cdi/nvidia.yaml
 </div>
 
 安装额外依赖：
+
 ```bash
 sudo apt update
 sudo apt-get install -y ros-humble-magic-enum
 sudo apt-get install -y ros-humble-foxglove-msgs
 ```
 
+将 CUDA 环境变量添加到 `.bashrc`：
+
+```bash
+echo '
+CUDA_HOME=/usr/local/cuda
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+export CUDACXX=$CUDA_HOME/bin/nvcc
+' >> ~/.bashrc
+```
+
 创建符号链接：
+
 ```bash
 sudo ln -sf /opt/ros/humble/include/magic_enum.hpp /usr/include/magic_enum.hpp
 
@@ -297,6 +296,7 @@ sudo ln -sfn /opt/ros/humble/include/foxglove_msgs/foxglove_msgs/msg /opt/ros/hu
 ```
 
 在 `/workspaces/isaac_ros-dev` 中构建并初始化工作空间：
+
 ```bash
 colcon build --symlink-install --cmake-args -DBUILD_TESTING=OFF
 source install/setup.bash
@@ -321,6 +321,7 @@ ros2 launch orbbec_camera <camera_name>.launch.py
 ```
 
 以下是一些支持的 `<camera_name>` 参数：
+
 - gemini210
 - gemini2
 - gemini2L
@@ -332,11 +333,13 @@ ros2 launch orbbec_camera <camera_name>.launch.py
 :::
 
 Isaac ROS 容器默认与本地发布的 ROS2 桥接。在 Docker 容器中，输入：
+
 ```bash
 ros2 topic list
 ```
 
 通常，您应该在 Docker 容器中看到 Orbbec 相机发布的以下数据主题：
+
 ```yaml
 /camera/accel/imu_info
 /camera/color/camera_info
@@ -379,9 +382,6 @@ RViz 可以按如下所示进行配置。启用您想要的可视化结果并选
 
 这可以用于移动机器人的障碍物检测和构建场景的 3D 网格地图。🤖
 
-
-
-
 ## 参考资料
 
 - [Isaac ROS Common GitHub 仓库](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common)
@@ -389,7 +389,6 @@ RViz 可以按如下所示进行配置。启用您想要的可视化结果并选
 - [Isaac NVBlox Orbbec GitHub 仓库](https://github.com/jjjadand/isaac-NVblox-Orbbec#)
 - [ROS2 Humble 文档](https://docs.ros.org/en/humble/)
 - [Orbbec SDK ROS2 文档](https://github.com/orbbec/OrbbecSDK_ROS2)
-
 
 ## 技术支持与产品讨论
 
@@ -404,4 +403,3 @@ RViz 可以按如下所示进行配置。启用您想要的可视化结果并选
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

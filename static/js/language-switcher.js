@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-23 09:40:31 (北京时间)
-// 多语言页面: 2121 个
+// 生成时间: 2026-01-27 10:20:09 (北京时间)
+// 多语言页面: 2125 个
 
 (function() {
   'use strict';
@@ -8313,6 +8313,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_edge_impulse": [
     "cn",
     "en",
@@ -8554,6 +8560,12 @@
     "ja"
   ],
   "/xaio_esp32c5_wifi_throughput_tester": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao-esp32--series-espresense": [
     "cn",
     "en",
     "es",
@@ -10450,6 +10462,18 @@
     "ja"
   ],
   "/Tracker_WiFi_Geolocation": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_aws": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_helium": [
     "cn",
     "en",
     "es",
