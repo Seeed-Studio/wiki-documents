@@ -19,7 +19,15 @@ import { PrepareRequirementsMini,PrepareRequirementsRobotics, PrepareRequirement
          PrepareRequirementsSuper,PrepareRequirementsClassic,PrepareRequirementsReserver,ExtractAndFlash} from '@site/src/components/jetson/FlashCodeBlock'; 
 import { ProductSelect } from '@site/src/components/jetson/JetsonSelect';
 import { RecoveryRobotics, RecoveryMini, RecoverySuper, RecoveryClassic, RecoveryIndustrial, RecoveryReserver, RecoveryJ501, RecoveryJ501Mini, RecoveryJ501Robotics} from '@site/src/components/jetson/FlashCodeBlock'; 
-import '@site/src/css/flash-jetpack.css'; 
+
+<style>
+{`
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+`}
+</style> 
 
 {/*
   The Jetson drop down selection
@@ -254,13 +262,13 @@ export const productOptions = [
   }
 ]
 
-<div className="flash-jetpack-hero">
-  <div className="hero-content">
-    <h1 className="hero-title">
-      <span className="hero-icon">⚡</span>
+<div className="hero hero--primary" style={{background: 'linear-gradient(135deg, #003a4a 0%, #8dc21f 100%)'}}>
+  <div className="container">
+    <h1 className="hero__title">
+      <span style={{fontSize: '3.5rem', animation: 'pulse 2s infinite'}}>⚡</span>
       Flash Jetson Linux
     </h1>
-    <p className="hero-subtitle">
+    <p className="hero__subtitle">
       Streamlined flashing process for all Seeed Studio Jetson devices. Select your product and follow the guided steps below.
     </p>
   </div>
@@ -268,24 +276,25 @@ export const productOptions = [
 
 ## Select Your Device
 
-<div className="product-selection-section">
-  <div className="section-header">
+<div className="container margin-bottom--xl">
+  <div className="text--center margin-bottom--lg">
     <p>Choose your Jetson device and the Linux version you want to flash</p>
   </div>
   
   {/* Mount the Select Components */}
   <ProductSelect options={productOptions} />
   
-  <div className="info-banner">
-    <div className="banner-content">
-      <div className="banner-icon">🚀</div>
-      <div className="banner-text">
-        <strong>JetPack 6.2 with MAXN Super Mode</strong>
-        <p>Enhanced performance configurations now available for Orin Nano and Orin NX modules. <a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">Learn more</a></p>
-      </div>
+  <div className="alert alert--info margin-top--lg" style={{background: 'linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%)', border: '1px solid #8dc21f'}}>
+    <div className="alert__heading">
+      <span style={{fontSize: '1.5rem', marginRight: '0.5rem'}}>🚀</span>
+      JetPack 6.2 with MAXN Super Mode
     </div>
-    <div className="compatibility-link">
-      <a href="https://seeedstudio88-my.sharepoint.com/:x:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EX8k1puq5J1IgMZKYYdmuqgB_EtGjxSB7_-hRjUGjTa0dQ?e=1QSozj" target="_blank" className="compatibility-btn">
+    <p>Enhanced performance configurations now available for Orin Nano and Orin NX modules. <a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">Learn more</a></p>
+    <div className="text--center margin-top--md">
+      <a href="https://seeedstudio88-my.sharepoint.com/:x:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EX8k1puq5J1IgMZKYYdmuqgB_EtGjxSB7_-hRjUGjTa0dQ?e=1QSozj" 
+         target="_blank" 
+         className="button button--primary" 
+         style={{background: 'linear-gradient(135deg, #8dc21f 0%, #74b281 100%)', border: 'none'}}>
         📋 View Device Compatibility
       </a>
     </div>
@@ -294,24 +303,24 @@ export const productOptions = [
 
 ## Download
 
-<div className="step-card">
-  <div className="step-content">
+<div className="card margin-bottom--lg">
+  <div className="card__body">
     <OneDriveLink />
   </div>
 </div>
 
 ## Verify SHA256 (Optional)
 
-<div className="step-card optional">
-  <div className="step-content">
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #f59e0b'}}>
+  <div className="card__body">
     <VerifySHA256 />
   </div>
 </div>
 
 ## Prepare Requirements
 
-<div className="step-card">
-  <div className="step-content">
+<div className="card margin-bottom--lg">
+  <div className="card__body">
     <PrepareRequirementsMini />
     <PrepareRequirementsRobotics />
     <PrepareRequirementsSuper />
@@ -326,8 +335,8 @@ export const productOptions = [
 
 ## Enter Recovery Mode
 
-<div className="step-card">
-  <div className="step-content">
+<div className="card margin-bottom--lg">
+  <div className="card__body">
     <RecoveryRobotics />
     <RecoveryMini />
     <RecoverySuper /> 
@@ -342,10 +351,12 @@ export const productOptions = [
 
 ## Install Dependencies
 
-<div className="step-card">
-  <div className="step-content">
-    <div className="dependencies-info">
-      <p>Install the required flash dependencies on your Host PC:</p>
+<div className="card margin-bottom--lg">
+  <div className="card__body">
+    <div className="admonition admonition-info">
+      <div className="admonition-content">
+        <p><strong>Install the required flash dependencies on your Host PC:</strong></p>
+      </div>
     </div>
     
     ```bash
@@ -371,19 +382,31 @@ export const productOptions = [
                             zstd
     ```
 
-    <div className="version-specific">
-      <div className="version-note">
-        <strong>Ubuntu 18.04 and below:</strong>
-        ```bash
-        sudo apt-get install -y liblz4-tool
-        ```
+    <div className="row margin-top--md">
+      <div className="col col--6">
+        <div className="admonition admonition-tip">
+          <div className="admonition-heading">
+            <h5>Ubuntu 18.04 and below</h5>
+          </div>
+          <div className="admonition-content">
+            ```bash
+            sudo apt-get install -y liblz4-tool
+            ```
+          </div>
+        </div>
       </div>
       
-      <div className="version-note">
-        <strong>Ubuntu 20.04 / 22.04 and above:</strong>
-        ```bash
-        sudo apt-get install -y lz4
-        ```
+      <div className="col col--6">
+        <div className="admonition admonition-tip">
+          <div className="admonition-heading">
+            <h5>Ubuntu 20.04 / 22.04 and above</h5>
+          </div>
+          <div className="admonition-content">
+            ```bash
+            sudo apt-get install -y lz4
+            ```
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -391,75 +414,129 @@ export const productOptions = [
 
 ## Extract and Flash
 
-<div className="step-card final-step">
-  <div className="step-content">
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #8dc21f', background: 'linear-gradient(135deg, var(--ifm-card-background-color) 0%, rgba(141, 194, 31, 0.05) 100%)'}}>
+  <div className="card__body">
     <ExtractAndFlash />
   </div>
 </div> 
 
-<div className="resources-section">
-  <h2>📚 Resources & Examples</h2>
+## Resources & Examples
+
+<div className="row margin-bottom--xl">
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🚀 Getting Started</h3>
+      </div>
+      <div className="card__body">
+        <p>Complete beginner's guide to Jetson development with practical examples and tutorials.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" 
+           target="_blank" 
+           className="button button--primary button--block"
+           style={{background: '#8dc21f', borderColor: '#8dc21f'}}>
+          reComputer-Jetson-for-Beginners →
+        </a>
+      </div>
+    </div>
+  </div>
   
-  <div className="resources-grid">
-    <div className="resource-card">
-      <h3>🚀 Getting Started</h3>
-      <p>Complete beginner's guide to Jetson development with practical examples and tutorials.</p>
-      <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" target="_blank">
-        reComputer-Jetson-for-Beginners →
-      </a>
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>💡 Code Examples</h3>
+      </div>
+      <div className="card__body">
+        <p>Ready-to-use code examples for AI, computer vision, and robotics applications.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://github.com/Seeed-Projects/jetson-examples" 
+           target="_blank" 
+           className="button button--primary button--block"
+           style={{background: '#8dc21f', borderColor: '#8dc21f'}}>
+          jetson-examples →
+        </a>
+      </div>
     </div>
-    
-    <div className="resource-card">
-      <h3>💡 Code Examples</h3>
-      <p>Ready-to-use code examples for AI, computer vision, and robotics applications.</p>
-      <a href="https://github.com/Seeed-Projects/jetson-examples" target="_blank">
-        jetson-examples →
-      </a>
-    </div>
-    
-    <div className="resource-card">
-      <h3>🔧 Source Code</h3>
-      <p>Access Seeed's customized Linux for Tegra (L4T) source code and modifications.</p>
-      <a href="https://github.com/Seeed-Studio/Linux_for_Tegra" target="_blank">
-        Seeed's L4T Source →
-      </a>
+  </div>
+  
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🔧 Source Code</h3>
+      </div>
+      <div className="card__body">
+        <p>Access Seeed's customized Linux for Tegra (L4T) source code and modifications.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://github.com/Seeed-Studio/Linux_for_Tegra" 
+           target="_blank" 
+           className="button button--primary button--block"
+           style={{background: '#8dc21f', borderColor: '#8dc21f'}}>
+          Seeed's L4T Source →
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<div className="tech-support-section">
-  <div className="support-header">
-    <h2>🤝 Tech Support & Product Discussion</h2>
-    <p>We're here to help! Choose your preferred support channel below.</p>
-  </div>
-  
-  <div className="support-grid">
-    <div className="support-card">
-      <div className="support-icon">💬</div>
+## Tech Support & Product Discussion
+
+<div className="text--center margin-bottom--lg">
+  <p className="text--lg">We're here to help! Choose your preferred support channel below.</p>
+</div>
+
+<div className="row">
+  <div className="col col--3">
+    <div className="card text--center padding--lg height--full">
+      <div style={{fontSize: '3rem', marginBottom: '1rem'}}>💬</div>
       <h3>Community Forum</h3>
       <p>Join our active community for discussions, troubleshooting, and sharing projects.</p>
-      <a href="https://forum.seeedstudio.com/" className="support-link">Visit Forum</a>
+      <a href="https://forum.seeedstudio.com/" 
+         className="button button--outline button--primary"
+         style={{borderColor: '#8dc21f', color: '#8dc21f'}}>
+        Visit Forum
+      </a>
     </div>
-    
-    <div className="support-card">
-      <div className="support-icon">📧</div>
+  </div>
+  
+  <div className="col col--3">
+    <div className="card text--center padding--lg height--full">
+      <div style={{fontSize: '3rem', marginBottom: '1rem'}}>📧</div>
       <h3>Direct Contact</h3>
       <p>Get personalized support from our technical team for specific issues.</p>
-      <a href="https://www.seeedstudio.com/contacts" className="support-link">Contact Us</a>
+      <a href="https://www.seeedstudio.com/contacts" 
+         className="button button--outline button--primary"
+         style={{borderColor: '#8dc21f', color: '#8dc21f'}}>
+        Contact Us
+      </a>
     </div>
-    
-    <div className="support-card">
-      <div className="support-icon">💭</div>
+  </div>
+  
+  <div className="col col--3">
+    <div className="card text--center padding--lg height--full">
+      <div style={{fontSize: '3rem', marginBottom: '1rem'}}>💭</div>
       <h3>Discord Community</h3>
       <p>Real-time chat with developers and enthusiasts in our Discord server.</p>
-      <a href="https://discord.gg/eWkprNDMU7" className="support-link">Join Discord</a>
+      <a href="https://discord.gg/eWkprNDMU7" 
+         className="button button--outline button--primary"
+         style={{borderColor: '#8dc21f', color: '#8dc21f'}}>
+        Join Discord
+      </a>
     </div>
-    
-    <div className="support-card">
-      <div className="support-icon">🐛</div>
+  </div>
+  
+  <div className="col col--3">
+    <div className="card text--center padding--lg height--full">
+      <div style={{fontSize: '3rem', marginBottom: '1rem'}}>🐛</div>
       <h3>GitHub Discussions</h3>
       <p>Report issues, request features, and contribute to our documentation.</p>
-      <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="support-link">GitHub Discussions</a>
+      <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" 
+         className="button button--outline button--primary"
+         style={{borderColor: '#8dc21f', color: '#8dc21f'}}>
+        GitHub Discussions
+      </a>
     </div>
   </div>
 </div>
