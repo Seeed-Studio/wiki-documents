@@ -1,6 +1,6 @@
 ---
-description: Este artículo proporciona instrucciones sobre cómo crear la interfaz de usuario para la pantalla de papel electrónico de la serie reTerminal E en SquareLine.
-title: Pantalla ePaper de la Serie reTerminal E Trabajando con SquareLine Vision
+description: Este artículo proporciona instrucciones sobre cómo crear la interfaz de usuario para la pantalla de papel de la serie reTerminal E en SquareLine.
+title: Pantalla ePaper de la serie reTerminal E funciona con SquareLine Vision
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
 slug: /es/reterminal_e10xx_with_squareline_vision
 sidebar_position: 3
@@ -9,7 +9,7 @@ last_update:
   author: Zovey
 ---
 
-# Pantalla ePaper de la Serie reTerminal E Trabajando con SquareLine Vision
+# Pantalla ePaper de la serie reTerminal E funciona con SquareLine Vision
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_4.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -26,11 +26,15 @@ También es una herramienta de **diseño + exportación de código**: diseñas l
 - **Prototipado Embebido Rápido** – Previsualiza y valida instantáneamente tu interfaz de usuario en escritorio o hardware objetivo, reduciendo dramáticamente el tiempo de iteración de diseño a dispositivo.
 - **Exportación Potenciada por LVGL** – Exporta sin problemas tus diseños en código fuente limpio basado en LVGL, listo para compilar en dispositivos embebidos, microcontroladores o entornos de simulación.
 
-Con SquareLine Vision, puedes ir del concepto al prototipo de interfaz de usuario embebida interactiva en minutos — combinando flexibilidad de diseño, vista previa en tiempo real y salida LVGL lista para producción para acelerar todo tu ciclo de desarrollo de producto.
+Con SquareLine Vision, puedes ir del concepto al prototipo de interfaz de usuario embebida interactiva en minutos — combinando flexibilidad de diseño, previsualización en tiempo real y salida LVGL lista para producción para acelerar todo tu ciclo de desarrollo de producto.
 
 ### Materiales Requeridos
 
-Para completar este tutorial, por favor prepara uno de los siguientes dispositivos de la serie reTerminal E, E1001 es monocromático y E1002 es a todo color:
+Para completar este tutorial, por favor prepara uno de los siguientes dispositivos de la serie reTerminal E:
+
+:::note
+Hasta ahora, SquareLine Vision solo es compatible con reTerminal E1002 y aún no soporta reTerminal E1001. Sin embargo, el equipo oficial ya está trabajando en las adaptaciones necesarias.
+:::
 
 <div class="table-center">
   <table align="center">
@@ -65,7 +69,7 @@ Para completar este tutorial, por favor prepara uno de los siguientes dispositiv
 ### Introducción de Componentes
 
 Toda la plataforma SquareLine Vision se puede dividir en dos partes: **Launcher** y la **Interfaz de Aplicación**.
-En la interfaz del **Launcher**, podemos ver las siguientes tres funciones principales:
+En la interfaz **Launcher**, podemos ver las siguientes tres funciones principales:
 - proyectos
 - manejar importaciones
 - controlar configuraciones de cuenta
@@ -83,7 +87,7 @@ Cuando tengas una comprensión clara de la estructura organizacional general y l
 
 ### Iniciar un nuevo Proyecto LVGL
 
-En la parte superior de la interfaz del Launcher de SquareLine Vision, haz clic en el botón `Create new`. Luego, selecciona `Seeed Studio` para ver nuestros productos. Elige el `reTerminal E1002` para crear un proyecto.
+En la parte superior de la interfaz SquareLine Vision Launcher, haz clic en el botón `Create new`. Luego, selecciona `Seeed Studio` para ver nuestros productos. Elige el `reTerminal E1002` para crear un proyecto.
 Las configuraciones fijas de este proyecto son:
 - `Resolution`: 800x480
 - `Offset`: 0(x), 0(y)
@@ -175,7 +179,7 @@ La barra de herramientas incluye opciones para la configuración del proyecto, g
 - **Modo de reproducción**: Inicia la vista previa y prueba la simulación de la interfaz de usuario.
 - **Enviar reporte de error**: Proporciona acceso directo al sistema de reporte de errores.
 - **Usuario(s)**: Muestra todos los usuarios activos que están trabajando actualmente en tu proyecto, apoyando los esfuerzos de diseño colaborativo.
-- **Opciones de vista**: Puedes alternar la visualización del minimapa e introducir valores de porcentaje de zoom precisos en un campo de entrada dedicado.
+- **Opciones de vista**: Puedes alternar la visualización del minimapa e ingresar valores precisos de porcentaje de zoom en un campo de entrada dedicado.
 - **Versión**: Muestra la versión actual de SquareLine Vision en la que se está ejecutando tu proyecto, asegurando que estés al tanto de tu entorno de software.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_6.png" style={{width:500, height:'auto'}}/></div>
@@ -225,7 +229,7 @@ Interfaz principal para el subsistema GUI. Proporciona funciones de alto nivel p
 
 ## Grabación del programa
 
-El módulo de control principal del E1002 es ESP32-S3. Si quieres programar la pantalla e-paper de la reTerminal E Serie usando PlatformIO, necesitas configurar la opción para soportar ESP32 en el archivo `.ini`.
+El módulo de control principal del E1002 es ESP32-S3. Si quieres programar la pantalla e-paper de la serie reTerminal E usando PlatformIO, necesitas configurar la opción para soportar ESP32 en el archivo `.ini`.
 
 :::tip
 Si esta es tu primera vez usando PlatformIO, te recomendamos encarecidamente que consultes [Getting Started with PlatformIO](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32s3.html).
@@ -248,21 +252,15 @@ Si esta es tu primera vez usando PlatformIO, te recomendamos encarecidamente que
 
 ### Rutina de referencia
 
-Hemos proporcionado tres plantillas existentes, cada una con una interfaz de usuario diferente que puede mostrar el panel de clima en tiempo real. También se integran con [OpenWeather](https://openweathermap.org/)(Es una plataforma de servicio que proporciona datos meteorológicos globales) para obtener cambios climáticos en tiempo real. Todo lo que necesitas hacer es obtener la API KEY de OpenWeather y conectarte a WIFI para usarlas normalmente.
+Hemos proporcionado dos rutinas existentes, cada una con una interfaz de usuario diferente que puede mostrar el panel de clima en tiempo real. También se integran con [OpenWeather](https://openweathermap.org/)(Es una plataforma de servicio que proporciona datos meteorológicos globales) para obtener cambios climáticos en tiempo real. Todo lo que necesitas hacer es obtener la API KEY de OpenWeather y conectarte a WIFI para usarlas normalmente.
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Clima Monocromático </th>
-      <th>Clima a Todo Color </th>
-      <th>Clima a Todo Color 2</th>
+      <th>Seeed Weather 7 epaper</th>
+      <th>Seeed Weather 13 epaper</th>
     </tr>
     <tr>
-      <td><div align="center">
-        <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/res/weather_gray.zip" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Haz clic aquí para obtener</button></p>
-        </a>
-      </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/weather_7_fix.zip" target="_blank">
         <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Haz clic aquí para obtener</button></p>
@@ -290,7 +288,7 @@ Hemos proporcionado tres plantillas existentes, cada una con una interfaz de usu
 
 - **Paso 4**: Conecta el reTerminal a la computadora usando un cable de datos USB, y selecciona el puerto serie apropiado para el proceso de grabación. Luego haz clic en el botón `upload` para realizar el proceso de grabación.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_3.png" style={{width:700, height:'auto'}}/></div>
-  Cuando el siguiente contenido aparece en la terminal, indica que el proceso de grabación ha sido exitoso. Posteriormente, el reTerminal actualizará automáticamente la imagen de la pantalla.
+  Cuando el siguiente contenido aparezca en la terminal, indica que el proceso de grabación ha sido exitoso. Posteriormente, el reTerminal actualizará automáticamente la imagen de la pantalla.
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/pio_4.png" style={{width:700, height:'auto'}}/></div>
 
 ## Presentación de resultados
@@ -298,21 +296,19 @@ Hemos proporcionado tres plantillas existentes, cada una con una interfaz de usu
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Clima Monocromático </th>
-      <th>Clima a Todo Color </th>
-      <th>Clima a Todo Color 2</th>
+      <th>Seeed Weather 7 epaper</th>
+      <th>Seeed Weather 13 epaper</th>
     </tr>
     <tr>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/squareline_BW_template.jpeg" style={{width:350, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_4.jpg" style={{width:350, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_3.jpg" style={{width:350, height:'auto'}}/></div></td>
     </tr>
   </table>
 </div>
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
