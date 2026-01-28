@@ -3853,6 +3853,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/AI-NVR_with_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_NVBLOX_ON_Jetson_AGX_Orin',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv26_Dual_USB_Camera_Image_Processing_System on_Jetson',
               ]
             },
             // Generative AI
