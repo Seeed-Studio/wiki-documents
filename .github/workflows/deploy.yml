@@ -29,12 +29,28 @@ jobs:
       - name: Show runner memory
         run: node -v && free -h && df -h
 
-      - name: Add swap (6G)
+      - name: Add extra swap (6G)
         run: |
-          sudo fallocate -l 6G /swapfile
-          sudo chmod 600 /swapfile
-          sudo mkswap /swapfile
-          sudo swapon /swapfile
+          set -euxo pipefail
+
+          echo "== Before =="
+          sudo swapon --show || true
+          free -h
+
+          SWAP=/mnt/ci.swap
+
+          if [ -f "$SWAP" ]; then
+            sudo swapoff "$SWAP" || true
+            sudo rm -f "$SWAP"
+          fi
+
+          sudo fallocate -l 6G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
+          sudo chmod 600 "$SWAP"
+          sudo mkswap "$SWAP"
+          sudo swapon "$SWAP"
+
+          echo "== After =="
+          sudo swapon --show || true
           free -h
 
       - name: Install dependencies
@@ -79,12 +95,28 @@ jobs:
       - name: Show runner memory
         run: node -v && free -h && df -h
 
-      - name: Add swap (6G)
+      - name: Add extra swap (6G)
         run: |
-          sudo fallocate -l 6G /swapfile
-          sudo chmod 600 /swapfile
-          sudo mkswap /swapfile
-          sudo swapon /swapfile
+          set -euxo pipefail
+
+          echo "== Before =="
+          sudo swapon --show || true
+          free -h
+
+          SWAP=/mnt/ci.swap
+
+          if [ -f "$SWAP" ]; then
+            sudo swapoff "$SWAP" || true
+            sudo rm -f "$SWAP"
+          fi
+
+          sudo fallocate -l 6G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
+          sudo chmod 600 "$SWAP"
+          sudo mkswap "$SWAP"
+          sudo swapon "$SWAP"
+
+          echo "== After =="
+          sudo swapon --show || true
           free -h
 
       - uses: webfactory/ssh-agent@v0.5.0
