@@ -82,7 +82,7 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
   <td align="center"> - </td>
  </tr>
     <tr>
-     <th>存储</th>
+     <th>内存</th>
      <td align="center">片上 8M PSRAM 和 8MB Flash</td>
         <td align="center">片上 8M PSRAM 和 8MB Flash <br></br> 板载 SD 卡插槽，支持 32GB FAT</td>
   <td align="center">片上 8M PSRAM 和 <strong>16MB</strong> Flash</td>
@@ -150,7 +150,7 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
 - **强大的 MCU 板**：集成 ESP32S3 32 位双核 Xtensa 处理器芯片，运行频率高达 240 MHz，配备多个开发端口，支持 Arduino / MicroPython
 - **高级功能**（适用于 Sense）：可拆卸的 **OV2640 摄像头传感器，分辨率 1600x1200** 和 **OV3660 摄像头传感器，分辨率 2048x1536**，兼容 OV5640 摄像头传感器，集成额外的数字麦克风
 - **精心设计的电源**：锂电池充电管理功能，提供 4 种功耗模式，允许深度睡眠模式，功耗低至 14μA
-- **大容量存储带来更多可能性**：提供 8MB PSRAM 和 8MB FLASH（**Plus** 版本为 16MB），支持 SD 卡插槽用于外部 32GB FAT 存储（仅适用于 XIAO ESP32S3）
+- **大容量内存带来更多可能性**：提供 8MB PSRAM 和 8MB FLASH（**Plus** 版本为 16MB），支持 SD 卡插槽用于外部 32GB FAT 内存（仅适用于 XIAO ESP32S3）
 - **出色的射频性能**：支持 2.4GHz Wi-Fi 和 BLE 双无线通信，连接 U.FL 天线时支持 100m+ 远程通信
 - **拇指大小的紧凑设计**：21 x 17.8mm，采用 XIAO 经典外形，适用于空间受限的项目，如可穿戴设备
 
@@ -228,10 +228,10 @@ Seeed Studio XIAO ESP32S3 Sense 集成了摄像头传感器、数字麦克风和
 | MTDI                    |                  | GPIO41                                                 |                    | JTAG, ADC                            |
 | MTCK                    |                  | GPIO39                                                 |                    | JTAG, ADC                            |
 | MTMS                    |                  | GPIO42                                                 |                    | JTAG, ADC                            |
-| Reset                   |                  | CHIP_EN                                                |                    | EN                                   |
+| Reset                   |                  | EN                                                |                    | EN                                   |
 | Boot                    |                  | GPIO0                                                  |                    | 进入启动模式                      |
 | U.FL-R-SMT1             |                  | LNA_IN                                                 |                    | UFL 天线                          |
-| CHARGE_LED              |                  | VCC_3V3                                                |                    | CHG-LED                              |
+| CHARGE_LED              |                  |                                                |                    | CHG-LED                              |
 | USER_LED                |                  | GPIO21                                                 |                    | 用户指示灯                           |
 | Digital microphone_CLK  |                  | GPIO42                                                 |                    | 麦克风 PDM 时钟引脚                |
 | Digital microphone_DATA |                  | GPIO41                                                 |                    | 麦克风 PDM 数据引脚                 |
@@ -341,9 +341,9 @@ XIAO ESP32S3 Plus 的 B2B 连接器与 [Wio-SX1262 扩展板](https://www.seeeds
 
 ### 启动引脚
 
-在每次启动或复位时，芯片需要一些初始配置参数，例如以哪种启动模式加载芯片、闪存电压等。这些参数通过启动引脚传递。复位后，启动引脚作为常规 IO 引脚运行。
+在每次启动或复位时，芯片需要一些初始配置参数，例如以哪种启动模式加载芯片、闪存电压等。这些参数通过启动引脚传递。复位后，启动引脚作为常规 IO 引脚工作。
 
-芯片复位时由给定启动引脚控制的参数如下：
+在芯片复位时由给定启动引脚控制的参数如下：
 
 - **芯片启动模式** – GPIO0 和 GPIO46
 - **VDD_SPI 电压** – GPIO45
@@ -357,7 +357,7 @@ GPIO0、GPIO45 和 GPIO46 在芯片复位时连接到芯片内部的弱上拉/�
 
 要改变位值，启动引脚应连接到外部下拉/上拉电阻。如果 ESP32-S3 被主机 MCU 用作设备，启动引脚电压电平也可以由主机 MCU 控制。
 
-所有启动引脚都有锁存器。在系统复位时，锁存器采样各自启动引脚的位值并存储它们，直到芯片断电或关闭。锁存器的状态不能以任何其他方式改变。这使得启动引脚值在整个芯片运行期间都可用，并且引脚在复位后被释放用作常规 IO 引脚。
+所有启动引脚都有锁存器。在系统复位时，锁存器采样各自启动引脚的位值并存储它们，直到芯片断电或关闭。锁存器的状态不能以任何其他方式改变。这使得启动引脚值在整个芯片操作期间可用，并且引脚在复位后被释放用作常规 IO 引脚。
 
 关于启动引脚的时序要求，有建立时间和保持时间等参数。
 
@@ -387,7 +387,7 @@ XIAO ESP32S3 Sense 出厂时预装了 WebCam 示例程序。您可以通过给 X
 
 #### 焊接排针
 
-XIAO ESP32S3 默认出厂时不带排针，您需要准备自己的排针并将其焊接到 XIAO 的相应引脚上，这样您就可以连接到扩展板或传感器。
+XIAO ESP32S3 默认出厂时不带排针，您需要准备自己的排针并将其焊接到 XIAO 的相应引脚上，以便您可以连接到扩展板或传感器。
 
 由于 XIAO ESP32S3 的微型尺寸，焊接排针时请小心，不要将不同的引脚粘在一起，也不要将焊料粘到屏蔽层或其他组件上。否则，可能导致 XIAO 短路或无法正常工作，由此造成的后果将由用户承担。
 
@@ -397,7 +397,7 @@ XIAO ESP32S3 默认出厂时不带排针，您需要准备自己的排针并将�
 
 在 XIAO ESP32S3 正面的左下角，有一个独立的"WiFi/BT 天线连接器"。为了获得更好的 WiFi/蓝牙信号，您需要取出包装内的天线并将其安装在连接器上。
 
-天线的安装有一个小技巧，如果您直接用力按下，您会发现很难按下，手指会疼！正确的天线安装方法是先将天线连接器的一侧放入连接器块中，然后在另一侧稍微按下，天线就安装好了。
+天线的安装有一个小技巧，如果您直接用力按下，您会发现很难按下，手指会疼！正确的天线安装方法是先将天线连接器的一侧放入连接器块中，然后在另一侧稍微按下，天线就会安装好。
 
 拆卸天线也是如此，不要用蛮力直接拉天线，一侧用力抬起，天线很容易取下。
 
@@ -460,7 +460,7 @@ Wiki 中关于摄像头的所有程序都兼容 OV5640、OV2640 和 OV3660 摄�
 - 在 SVGA (800x600) 模式下使用 WebCamera 测试期间：
   - XIAO ESP32S3 运行平稳。
   - 视频输出流畅。
-  - 温度显著降低，确保可靠性能，无任何丢帧或断连。
+  - 温度显著降低，确保可靠性能，无任何帧丢失或断开连接。
 
 </details>
 
@@ -469,11 +469,11 @@ Wiki 中关于摄像头的所有程序都兼容 OV5640、OV2640 和 OV3660 摄�
 - 选定的散热器（单个或双个）
 - 一个干净的 ESP32S3
 
-开始前请确保您的设备已关闭电源并从任何电源中拔出。
+开始之前，请确保您的设备已关闭电源并从任何电源中拔出。
 
 :::tip notice
 
-***购买说明：*** 购买 XIAO ESP32S3 Sense 时，需要注意的是只有**配备摄像头的型号**才包含散热器。如果您的 ESP32S3 版本不包含摄像头，您需要单独购买散热器。
+***购买说明：*** 购买 XIAO ESP32S3 Sense 时，需要注意的是，只有**配备摄像头的型号**才包含散热器。如果您的 ESP32S3 版本不包含摄像头，您需要单独购买散热器。
 
 ***安装提示：*** 优先用散热器覆盖散热垫，因为它直接位于 ESP32S3 芯片上方，这是主要的热源。正确对齐确保最佳散热，并注意尽可能保持 BAT 引脚不被遮挡。
 :::
@@ -659,9 +659,9 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 
 ### 复位
 
-当程序运行异常时，您可以在通电期间按一次 `Reset` 让 XIAO 重新执行已上传的程序。
+当程序运行异常时，您可以在上电期间按一次 `Reset` 让 XIAO 重新执行已上传的程序。
 
-当您在通电时按住 `BOOT` 键，然后按一次 `Reset` 键，也可以进入 BootLoader 模式。
+当您在上电时按住 `BOOT` 键，然后按一次 `Reset` 键，也可以进入 BootLoader 模式。
 
 ### 运行您的第一个 Blink 程序
 
@@ -717,7 +717,7 @@ XIAO ESP32S3 系列内置电源管理芯片，允许 XIAO ESP32S3 通过电池�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/104.jpg" style={{width:600, height:'auto'}}/></div>
 
-## UF2 引导加载程序
+## UF2 BootLoader
 
 我们了解到一些用户希望直接将 UF2 文件刷写到 XIAO，这将实现批量刷写程序的过程。这里我们将描述这种方法。
 
@@ -742,9 +742,9 @@ XIAO ESP32S3 系列内置电源管理芯片，允许 XIAO ESP32S3 通过电池�
 
 将 `BIN` 文件复制到您之前解压的 **xiaos3-bin2uf2** 目录中。然后，运行 **convert_uf2.bat** 脚本生成 UF2 文件，这将需要您的 `bin` 文件名。
 
-**步骤 3**：进入 UF2 引导加载程序模式
+**步骤 3**：进入 UF2 BootLoader 模式
 
-将 XIAO 连接到您的计算机并运行 **boot_uf2.bat** 脚本。XIAO 将在您的计算机上显示为 USB 驱动器，表明它已成功进入 UF2 引导加载程序模式。
+将 XIAO 连接到您的计算机并运行 **boot_uf2.bat** 脚本。XIAO 将在您的计算机上显示为 USB 驱动器，表明它已成功进入 UF2 BootLoader 模式。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/107.png" style={{width:800, height:'auto'}}/></div>
 
@@ -754,14 +754,14 @@ XIAO ESP32S3 系列内置电源管理芯片，允许 XIAO ESP32S3 通过电池�
 
 :::tip
 
-1. 确保您的程序编译并正确运行；否则，UF2 文件可能无法按预期执行。
+1. 确保您的程序已编译并正确运行；否则，UF2 文件可能无法按预期执行。
 2. **xiaos3-bin2uf2** 文件夹中提供了一个 Blink 的示例 UF2 文件。上传后，XIAO ESP32S3 上的橙色 LED 将闪烁。您可以使用此 UF2 文件进行测试。
 
 :::
 
-**步骤 5**：重新进入 UF2 引导加载程序模式
+**步骤 5**：重新进入 UF2 BootLoader 模式
 
-如果您需要重新进入 UF2 引导加载程序模式以上传另一个 UF2 文件，请快速按下 **Reset** 按钮，然后按下 **Boot** 按钮。无需再次运行 boot_uf2.bat 脚本。
+如果您需要重新进入 UF2 BootLoader 模式以上传另一个 UF2 文件，请快速按下 **Reset** 按钮，然后按下 **Boot** 按钮。无需再次运行 boot_uf2.bat 脚本。
 
 :::note
 先按 Reset，然后快速按 Boot！
@@ -773,7 +773,7 @@ XIAO ESP32S3 系列内置电源管理芯片，允许 XIAO ESP32S3 通过电池�
 
 该项目由自定义 IDF 的第二阶段引导加载程序和作为第三阶段引导加载程序的 UF2 工厂应用程序组成。
 
-**注意：** 由于 IDF 正在积极开发且变化非常频繁，它作为子模块包含在 lib/esp-idf 中，请在那里运行导出脚本以正确设置您的环境。
+**注意：** 由于 IDF 正在积极开发且变化频繁，它作为子模块包含在 lib/esp-idf 中，请在那里运行导出脚本以正确设置您的环境。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/adafruit/tinyuf2/tree/master/ports/espressif" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div>
 
@@ -784,13 +784,13 @@ XIAO ESP32S3 系列内置电源管理芯片，允许 XIAO ESP32S3 通过电池�
 
 ### Q1：如果上传程序失败/程序运行异常/找不到设备端口，我应该怎么办？
 
-如果您遇到上述问题，建议您首先尝试按下 XIAO ESP32S3 上的复位按钮，尝试让程序重新运行。如果问题仍然存在，请重新检查您的程序并阅读 **[引导加载程序模式](#bootloader-mode)** 中提供的方法来恢复设备。
+如果您遇到上述问题，建议您首先尝试按下 XIAO ESP32S3 上的复位按钮，尝试让程序重新运行。如果问题仍然存在，请重新检查您的程序并阅读 **[BootLoader 模式](#bootloader-mode)** 中提供的方法来恢复设备。
 
 ### Q2：为什么我的 XIAO 在圆角处有不齐平的问题？这是质量问题吗？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/corners.png" style={{width:500, height:'auto'}}/></div>
 
-首先，应该注意的是，这不是质量问题，不会影响 XIAO 的正常功能。
+首先，需要说明的是，这不是质量问题，不会影响 XIAO 的正常功能。
 
 XIAO ESP32S3 由于高度集成，是所有 XIAO 中最复杂的一个，PCB 需要在工厂生产中拼接在一起。由于高度集成，拼接板连接只能放置在四个圆角处，这将导致图片中圆角不平整的问题。我们将尝试改进工艺，确保在后续生产中解决这个问题。
 
@@ -896,7 +896,7 @@ XIAO ESP32S3 由于高度集成，是所有 XIAO 中最复杂的一个，PCB 需
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在此为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
