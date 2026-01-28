@@ -1226,6 +1226,7 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Bluetooth_Usage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Matter_Use',
+                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Zigbee',
               ],
             },
             {
@@ -1308,6 +1309,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_ESP-Mesh_Audio',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_HomeAssistant',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_WiFi_Throughput_tester',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32_Series_CSI_Espectre',
               ],
             },
             {
@@ -6482,6 +6484,7 @@ const sidebars = {
               items: [
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Bluetooth_Usage',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Matter_Use',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Zigbee',
               ],
             },
             {
@@ -6565,6 +6568,7 @@ const sidebars = {
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_HomeAssistant',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_WiFi_Throughput_tester',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32_Series_CSI_Espectre',
               ],
             },
             {
@@ -11631,6 +11635,7 @@ const sidebars = {
               items: [
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Bluetooth_Usage',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Matter_Use',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Zigbee',
               ],
             },
             {
@@ -11714,6 +11719,7 @@ const sidebars = {
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_HomeAssistant',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_WiFi_Throughput_tester',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32_Series_CSI_Espectre',
               ],
             },
             {
@@ -16781,6 +16787,7 @@ const sidebars = {
               items: [
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Bluetooth_Usage',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Matter_Use',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Zigbee',
               ],
             },
             {
@@ -16864,6 +16871,7 @@ const sidebars = {
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_HomeAssistant',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_WiFi_Throughput_tester',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32_Series_CSI_Espectre',
               ],
             },
             {

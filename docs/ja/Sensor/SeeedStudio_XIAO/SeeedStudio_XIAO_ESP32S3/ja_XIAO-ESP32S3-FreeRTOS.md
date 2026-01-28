@@ -13,7 +13,7 @@ last_update:
   author: Priyanshu Roy
 ---
 
-# XIAO ESP32S3（センス）とFreeRTOS
+# XIAO ESP32S3(Sense) With FreeRTOS
 
 このwikiは[Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)の[FreeRTOS](https://freertos.org/)サポートについて説明します。このガイドの支援により、ボードで利用可能な機能セットを活用できるようになります。
 
@@ -21,7 +21,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/1.png" alt="pir" width={600} height="auto" /></p>
 
-FreeRTOSは、リアルタイムカーネルと補完機能を実装するモジュラーライブラリのセットで構成されるCライブラリのコレクションです。FreeRTOSカーネルは、FreeRTOS上に構築されたアプリケーションがハードリアルタイム要件を満たすことを可能にするリアルタイムカーネル（またはリアルタイムスケジューラ）です。これにより、アプリケーションを独立した実行スレッドのコレクションとして整理することができます。
+FreeRTOSは、リアルタイムカーネルと補完的な機能を実装するモジュラーライブラリのセットで構成されるCライブラリのコレクションです。FreeRTOSカーネルは、FreeRTOS上に構築されたアプリケーションがハードリアルタイム要件を満たすことを可能にするリアルタイムカーネル（またはリアルタイムスケジューラ）です。これにより、アプリケーションを独立した実行スレッドのコレクションとして整理することができます。
 
 _参考：[**Mastering the FreeRTOS Real Time Kernel**](https://www.freertos.org/Documentation/02-Kernel/07-Books-and-manual/01-RTOS_book)_
 
@@ -46,7 +46,7 @@ FreeRTOSは、ESP-IDFにコンポーネントとして統合されたオープ�
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -55,12 +55,12 @@ FreeRTOSは、ESP-IDFにコンポーネントとして統合されたオープ�
 
 ### 追加コンポーネント
 
-- [Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2Cディスプレイ RTC & ボタン
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2Cディスプレイ RTC & ボタン
 - [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)
-- [Grove - Arduino用温度・湿度・気圧・ガスセンサー - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
-- [Seeed Studio XIAO拡張ボード用アクリルケース](https://www.seeedstudio.com/XIAO-p-4812.html)
+- [Grove - Temperature, Humidity, Pressure and Gas Sensor for Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
+- [Acrylic Case for Seeed Studio XIAO Expansion board](https://www.seeedstudio.com/XIAO-p-4812.html)
 
-## ソフトウェアの準備
+## ソフトウェア準備
 
 私はESP-IDFを使用したVisual Studio Code（Windows）を使用しています。
 
@@ -89,48 +89,48 @@ FreeRTOSは、ESP-IDFにコンポーネントとして統合されたオープ�
   </table>
 </div>
 
-## はじめに
+## 入門ガイド
 
 ### ESP-IDFのセットアップ
 
-[Visual Studio Extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md)をセットアップした後、ターミナルを開いて以下のコマンドを貼り付けて、通常のターミナル環境（VScode外）からESP-IDFコマンドラインツールにアクセスします。
+[Visual Studio Extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md)をセットアップした後、ターミナルを開き、以下のコマンドを貼り付けて、通常のターミナル環境（VScode外）からESP-IDFコマンドラインツールにアクセスします。
 
 :::note
-VS-CodeのESP-IDF拡張機能の通常のインストールは90%のユースケースに対応します。環境外でESPコマンドラインツールが必要な場合のみ、以下の手順を実行してください。
+VS-Codeの[ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html)拡張機能の通常のインストールは90%のユースケースに対応します。環境外でESPコマンドラインツールが必要な場合のみ、以下の手順を実行してください。
 :::
 
-PowerShell (Windows)
+PowerShell（Windows）
 
 ```shell
 .$HOME\esp\v5.3\esp-idf\export.ps1
 ```
 
 :::info
-".$HOME\esp\v5.3\esp-idf" はユーザーによって異なる場合があります。これはデフォルトのインストールパスです。  
+".$HOME\esp\v5.3\esp-idf"はユーザーによって異なる場合があります。これはデフォルトのインストールパスです。  
 お使いのデバイスのインストールパスに置き換えてください。
 :::
 :::tip
-セットアップの繰り返しを避けるため、管理者モードでPowerShellを起動し、以下のコマンドを入力してください
+繰り返しセットアップを避けるために、管理者モードでPowerShellを起動し、以下のコマンドを入力してください
 
 ```shell
 notepad $PSHOME\Profile.ps1
 ```
 
-メモ帳のインスタンスが開きます。エクスポートシェルコマンドをメモ帳に貼り付けて保存してください。
-PowerShellのインスタンスを開くと、以下のような出力が表示されるはずです。
+メモ帳のインスタンスが開きます。メモ帳にexportシェルコマンドを貼り付けて保存してください。
+powershellのインスタンスを開くと、以下のような出力が表示されるはずです。
 
 ```shell
 Done! You can now compile ESP-IDF projects.
 ```
 
 :::  
-すべてが適切に完了した場合、以下のコマンド：
+すべてが適切に実行されている場合、以下のコマンド：
 
 ```shell
 idf.py
 ```
 
-次の出力を表示するはずです：
+は以下の出力を表示するはずです：
 
 ```shell
 Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
@@ -139,24 +139,208 @@ Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
   system target will be made. Selected target: None
 ```
 
-## Taskとは何か？
+### XIAO ESP32S3のボード設定
 
-Taskは、プロセッサが設定のセットで実行するよう要求される小さな関数/ジョブです。Taskは小さな関数から無限ループ関数まで様々です。  
-TaskはESP-IDFアプリケーションにおける実行の基本単位です。これらは本質的に他のタスクと同時に実行される関数です。これにより効率的なマルチタスクと応答性が可能になります。
+ESP-IDFをセットアップした後、8MB FlashおよびOctal PSRAMを含むハードウェア機能を活用するために、XIAO ESP32S3ボード専用にプロジェクトを設定する必要があります。
 
-### タスクプロパティとは何か？
+#### ターゲットデバイスの設定
 
-このトピックの広大さのため、このガイドで使用するプロパティのいくつかのみをカバーします。
+ESP-IDFプロジェクトディレクトリで、ターゲットをESP32-S3に設定します：
+
+```bash
+idf.py set-target esp32s3
+```
+
+#### フルビルドオプションの有効化
+
+プロジェクトのルート`CMakeLists.txt`で、`MINIMAL_BUILD`が`OFF`に設定されていることを確認してください：
+
+```cmake
+idf_build_set_property(MINIMAL_BUILD OFF)
+```
+
+これにより、menuconfigですべての設定オプションが有効になります。
+
+#### FlashとPSRAMの設定
+
+設定メニューを開きます：
+
+```bash
+idf.py menuconfig
+```
+
+**Flashサイズ設定：**
+1. 移動先：**Serial flasher config → Flash size**
+2. 設定：**8 MB**
+
+**PSRAM設定：**
+1. 移動先：**Component config → ESP PSRAM**
+2. 有効化：**Support for external, SPI-connected RAM**
+3. **SPI RAM mode**を設定：**Octal Mode PSRAM**
+4. **SPI RAM clock**を設定：**80MHz**
+
+:::info
+XIAO ESP32S3はOctal PSRAMを使用しており、Quadモードではありません。8MB PSRAMが適切に機能するためには、正しいモードを選択することが重要です。
+:::
+
+#### メインコンポーネント依存関係の更新
+
+`/main/CMakeLists.txt`で、PSRAMとSPIフラッシュコンポーネントが含まれていることを確認してください：
+
+```cmake
+idf_component_register(
+    SRCS "main.c"
+    INCLUDE_DIRS "."
+    PRIV_REQUIRES esp_psram spi_flash
+)
+```
+
+#### ボードピン設定コンポーネントの作成
+
+コードをより読みやすく、ポータブルにするために、XIAOピン定義の再利用可能なコンポーネントを作成します：
+
+```bash
+mkdir -p ./components/board_config/include/
+```
+
+`./components/board_config/include/xiao_pins.h`を作成：
+
+```c
+// xiao_pins.h
+#pragma once
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Analog / Digital Pins
+#define XIAO_D0     1
+#define XIAO_D1     2
+#define XIAO_D2     3
+#define XIAO_D3     4
+#define XIAO_D4     5
+#define XIAO_D5     6
+#define XIAO_D6     43
+#define XIAO_D7     44
+#define XIAO_D8     7
+#define XIAO_D9     8
+#define XIAO_D10    9
+
+// Onboard User LED (Active Low)
+#define XIAO_LED    21
+
+// I2C Pins (Default)
+#define XIAO_SDA    5   // Same as D4
+#define XIAO_SCL    6   // Same as D5
+
+// SPI Pins (Default)
+#define XIAO_MISO   9   // Same as D10
+#define XIAO_MOSI   10
+#define XIAO_SCK    8   // Same as D9
+#define XIAO_SS     7   // Same as D8
+
+#ifdef __cplusplus
+}
+#endif
+```
+
+`./components/board_config/CMakeLists.txt`を作成：
+
+```cmake
+idf_component_register(INCLUDE_DIRS "include")
+```
+
+:::tip
+これらのピン定義はXIAO ESP32S3ボード上のシルクスクリーンラベルと一致しており、コードをより読みやすくします。例えば、GPIO 21をハードコーディングする代わりに`XIAO_LED`を使用してください。
+:::
+
+#### コード内でのピン定義の使用
+
+メインアプリケーションまたは任意のコンポーネントで、ヘッダーをインクルードします：
+
+```c
+#include "xiao_pins.h"
+
+void app_main(void) {
+    // Example: Configure LED pin
+    gpio_set_direction(XIAO_LED, GPIO_MODE_OUTPUT);
+    gpio_set_level(XIAO_LED, 0);  // Turn on (active low)
+}
+```
+
+#### ピンマッピングリファレンス
+
+![Xiao ESP32S3 Pinout reference picture](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg)
+
+| ラベル | GPIO | 代替機能 |
+|-------|------|--------------|
+| D0    | 1    | ADC1_CH0     |
+| D1    | 2    | ADC1_CH1     |
+| D2    | 3    | ADC1_CH2     |
+| D3    | 4    | ADC1_CH3     |
+| D4    | 5    | ADC1_CH4, SDA |
+| D5    | 6    | ADC1_CH5, SCL |
+| D6    | 43   | TX           |
+| D7    | 44   | RX           |
+| D8    | 7    | ADC1_CH6, SS |
+| D9    | 8    | ADC1_CH7, SCK |
+| D10   | 9    | ADC1_CH8, MISO |
+
+:::note
+- GPIO 19と20はUSB D-/D+に使用されており、再設定すべきではありません
+- GPIO 21のオンボードLEDはアクティブLOW（点灯するには0に設定）です
+- すべてのピンD0-D10はADC1を介してアナログ入力をサポートします
+:::
+
+#### ビルドとフラッシュ
+
+プロジェクトをビルドします：
+
+```bash
+idf.py build
+```
+
+XIAO ESP32-S3にフラッシュします：
+
+```bash
+idf.py -p /dev/ttyACM0 flash monitor
+```
+
+`/dev/ttyACM0`を実際のシリアルポートに置き換えてください（Windowsでは通常`COM3`、`COM4`など）。
+
+#### ボード設定のトラブルシューティング
+
+**PSRAMが検出されない：**
+- Octalモードが選択されていることを確認（Quadではない）
+- フラッシュサイズが8MBに設定されていることを確認
+- ESP-IDFバージョンが4.4以降であることを確認
+
+**アップロードが失敗する：**
+- USB接続中にBOOTボタンを押し続ける
+- アップロード速度を下げてみる：`idf.py -p PORT -b 115200 flash`
+
+**ピンの競合：**
+- GPIOピン19と20（USB D-とD+）の使用を避ける
+- XIAO_LED（GPIO 21）はオンボードLEDと共有されています
+
+## タスクとは？
+
+タスクは、プロセッサが設定のセットで実行を要求される小さな関数/ジョブです。タスクは小さな関数から無限ループ関数まで様々です。
+タスクは ESP-IDF アプリケーションにおける実行の基本単位です。これらは本質的に他のタスクと同時に実行される関数です。これにより効率的なマルチタスクと応答性が可能になります。
+
+### タスクプロパティとは？
+
+このトピックの広範囲性により、このガイドで使用するプロパティのいくつかのみを取り上げます。
 
 - **TaskFunction**: これはタスクの実際のロジックを含む関数です。タスクの実行のエントリーポイントです。
 - **StackSize**: これはタスクのスタックに割り当てられるメモリ量を指定します。スタックはローカル変数、関数の戻りアドレス、一時データを格納するために使用されます。
-- **TaskPriority**: これは他のタスクと比較したタスクの相対的な重要度を決定します。優先度の高いタスクは、優先度の低いタスクよりも先に実行される可能性が高くなります。
-- **TaskParameters**: これらはタスクが作成されるときにタスク関数に渡すことができるオプションの引数です。タスクに追加のコンテキストや設定を提供するために使用できます。
-- **CoreAffinity**: これはタスクが割り当てられるべきCPUコアを指定します。複数のコアを持つシステムでは、これはパフォーマンスを最適化したり、ワークロードのバランスを取るために使用できます。
+- **TaskPriority**: これは他のタスクと比較したタスクの相対的な重要度を決定します。優先度の高いタスクは優先度の低いタスクより先に実行される可能性が高くなります。
+- **TaskParameters**: これらはタスクが作成される際にタスク関数に渡すことができるオプションの引数です。タスクに追加のコンテキストや設定を提供するために使用できます。
+- **CoreAffinity**: これはタスクが割り当てられるべき CPU コアを指定します。複数のコアを持つシステムでは、これはパフォーマンスを最適化したり、ワークロードのバランスを取るために使用できます。
 
 ### タスクの作成
 
-FreeRTOSでタスクを作成するには、xTaskCreate関数を使用します。この関数は、タスク関数、タスク名、スタックサイズ、パラメータ、優先度、作成されたタスクへのハンドルを含むいくつかのパラメータを取ります。
+FreeRTOS でタスクを作成するには、xTaskCreate 関数を使用します。この関数はタスク関数、タスク名、スタックサイズ、パラメータ、優先度、作成されたタスクへのハンドルを含むいくつかのパラメータを取ります。
 
 ```c
 TaskHandle_t task;
@@ -172,7 +356,7 @@ xTaskCreate(
 
 ### コアに固定されたタスクの作成
 
-タスクを作成して特定のコアに固定するには（使用中のチップがデュアルコアの場合のみ）、xTaskCreatePinnedToCore関数を使用します。この関数はxTaskCreateと似ていますが、コアを指定するための追加パラメータが含まれています。
+タスクを作成して特定のコアに固定するには（使用中のチップがデュアルコアの場合のみ）、xTaskCreatePinnedToCore 関数を使用します。この関数は xTaskCreate と似ていますが、コアを指定するための追加パラメータが含まれています。
 
 ```c
 TaskHandle_t task;
@@ -200,7 +384,7 @@ void taskFunction(void * pvParameters) {
 
 ## タスクの可視化
 
-FreeRTOSの動作を可視化するために、4つのシンプルなタスクを作成しています。
+FreeRTOS の動作を可視化するために、4つの簡単なタスクを作成しています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/2.png" alt="pir" width={700} height="auto" /></p>
 
@@ -300,9 +484,9 @@ void app_main(void) {
 configMINIMAL_STACK_SIZE は sdkconfig で変更できます。
 :::
 
-1. 4つのタスク: コードは4つのタスクを定義しています：taskFunction1、taskFunction2、taskFunction3、taskFunction4。
+1. 4つのタスク: コードは4つのタスクを定義します：taskFunction1、taskFunction2、taskFunction3、taskFunction4。
 2. タスク優先度: すべてのタスクは tskIDLE_PRIORITY で作成されます。これは同じ優先度を持つことを意味します。
-3. タスクピニング: taskFunction1 は CPU0 にピニングされ、他の3つのタスクは CPU1 にピニングされます。
+3. タスク固定: taskFunction1 は CPU0 に固定され、他の3つのタスクは CPU1 に固定されます。
 4. タスク遅延: taskFunction1 は 1000ms の遅延を持ち、他の3つは 500ms の遅延を持ちます。
 
 ### CPU0 と CPU1 のタスクスケジュールの作成
@@ -328,12 +512,12 @@ Core: 1
 ```
 
 :::info
-これは簡略化されたスケジュールです。リアルタイムシステムにおける実際のタスクスケジューリングでは、タスクの優先度、デッドライン、リソース制約などのより複雑な要因が関わります。
+これは簡略化されたスケジュールです。リアルタイムシステムでの実際のタスクスケジューリングには、タスク優先度、デッドライン、リソース制約などのより複雑な要因が関わります。
 :::
 
 <details>
 
-<summary> Output</summary>
+<summary> 出力</summary>
 
 ```shell
 I (11412) Task1: Hello from task 1
@@ -361,9 +545,9 @@ I (14082) Task4: Hello from task 4
 
 </details>
 
-## FreeRTOSを使用したセンサーポーリング
+## FreeRTOS を使用したセンサーポーリング
 
-これには、ESP_IDF_v5.3と共にアナログセンサー[Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)を使用しています。
+これには、ESP_IDF_v5.3 と共にアナログセンサー [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html) を使用しています。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Priyanshu0901/Air_quality_Sensor_ESP-IDF.git" target="_blank" rel="noopener noreferrer">
@@ -373,7 +557,7 @@ I (14082) Task4: Hello from task 4
 
 ### ハードウェアセットアップ
 
-Xiao-S3を[Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)に接続し、[Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)をアナログコネクタに接続します。
+Xiao-S3 を [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) に取り付け、[Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html) をアナログコネクタに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/3.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -408,9 +592,9 @@ void sensor_setup()
 }
 ```
 
-- sensor_setup() 関数はセンサーのI/OピンとADCユニットを設定します。
+- sensor_setup()関数は、センサーのI/Oピンとユニットを設定します。
 - initialize_air_quality_sensor()を使用してセンサーの初期化を試行します。
-- 初期化が成功した場合、センサーはデータ収集の準備が整います。
+- 初期化が成功すると、センサーはデータ収集の準備が整います。
 
 - データ収集タスク：
 
@@ -425,11 +609,11 @@ void poll_read_air_quality_sensor(void *pvParameters)
 }
 ```
 
-- poll_read_air_quality_sensor() タスクが作成され、センサーから生データを継続的に読み取ります。
-- air_quality_sensor_slope() を呼び出して生データを処理し、空気品質の指標である傾きを計算します。
-- タスクは次のデータポイントを読み取る前に500ミリ秒間遅延します。
+- poll_read_air_quality_sensor()タスクは、センサーから生データを継続的に読み取るために作成されます。
+- air_quality_sensor_slope()を呼び出して生データを処理し、空気品質の指標である傾きを計算します。
+- タスクは次のデータポイントを読み取る前に500ミリ秒遅延します。
 
-- データ印刷タスク：
+- データ出力タスク：
 
 ```c
 
@@ -445,10 +629,10 @@ void print_read_air_quality_sensor(void *pvParameters)
 }
 ```
 
-- print_read_air_quality_sensor() タスクは、収集されたデータと計算された空気品質を定期的に印刷するために作成されます。
-- 現在の時刻、傾き、生の値、および air_quality_error_to_message() を使用した空気品質メッセージを取得します。
-- タスクはフォーマットされた方法でデータをコンソールに印刷します。
-- タスクは次のデータポイントを印刷する前に1000ミリ秒間遅延します。
+- print_read_air_quality_sensor()タスクは、収集されたデータと計算された空気品質を定期的に出力するために作成されます。
+- air_quality_error_to_message()を使用して現在の時刻、傾き、生の値、空気品質メッセージを取得します。
+- タスクはフォーマットされた形式でデータをコンソールに出力します。
+- タスクは次のデータポイントを出力する前に1000ミリ秒遅延します。
 
 ```c
 
@@ -510,9 +694,9 @@ Time : 51347    Slope : 3       Raw Value : 235
 Fresh air.
 ```
 
-## FreeRTOSでのカメラとSdCardの使用
+## FreeRTOSでのカメラとSDカードの使用
 
-これには、ESP_IDF_v5.3と共にオンボードカメラとSdCardを使用しています。
+これには、ESP_IDF_v5.3と共にオンボードカメラとSDカードを使用しています。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Priyanshu0901/Camera-and-SdCard-FreeRTOS.git" target="_blank" rel="noopener noreferrer">
@@ -522,10 +706,10 @@ Fresh air.
 
 ### ハードウェアセットアップ
 
-[microSDカードガイド](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem/)と[カメラガイド](https://wiki.seeedstudio.com/ja/xiao_esp32s3_camera_usage/)に従って、カメラとmicroSDカード拡張ボードを取り付けてください。
+[microSDカードガイド](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem/)と[カメラガイド](https://wiki.seeedstudio.com/ja/xiao_esp32s3_camera_usage/)に従って、カメラとmicroSDカード拡張ボードを取り付けます
 
-- microSDカードをフォーマットする（最大32Gbまでサポート）
-- microSDカードを拡張ボードに取り付ける
+- microSDカードをフォーマット（最大32GBまでサポート）
+- microSDカードを拡張ボードに取り付け
 
 セットアップは次のようになります：
 
@@ -548,15 +732,15 @@ gitリポジトリをプルした後、VSCodeでフォルダを開きます。Vi
 下部パネルから正しいCOMポート、チップ（ESP-S3）を選択し、ビルド、フラッシュ、モニターを実行します。
 
 :::tip
-OV3660モデルを使用している場合は、それを駆動できるようにIDFで設定する必要があります。ターミナルで **"idf.py menuconfig"** を入力してください
+OV3660モデルを使用している場合、それを駆動できるようにIDFで設定する必要があります。ターミナルで**"idf.py menuconfig"**を入力してください
 :::
 
 <div class="table-center">
   <table align="center">
     <tr>
-        <th>ステップ 1</th>
-        <th>ステップ 2</th>
-        <th>ステップ 3</th>
+        <th>ステップ1</th>
+        <th>ステップ2</th>
+        <th>ステップ3</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/36601.jpg" style={{width:300, height:'auto'}}/></div></td>
@@ -569,8 +753,8 @@ OV3660モデルを使用している場合は、それを駆動できるよう�
 ### カメラコンポーネント
 
 - カメラ設定：
-  - 様々なカメラ機能に使用されるGPIOピンを定義します（PWDN、RESET、XCLK、SIOD、SIOC、Y9-Y2、VSYNC、HREF、PCLK、LED）。
-  - カメラパラメータのデフォルト値を設定します（例：クロック周波数、フレームバッファ位置、ピクセル形式、フレームサイズ、JPEG品質、フレームバッファ数、グラブモード）。
+  - 様々なカメラ機能に使用されるGPIOピンを定義（PWDN、RESET、XCLK、SIOD、SIOC、Y9-Y2、VSYNC、HREF、PCLK、LED）。
+  - カメラパラメータのデフォルト値を設定（例：クロック周波数、フレームバッファ位置、ピクセル形式、フレームサイズ、JPEG品質、フレームバッファ数、グラブモード）。
 
 ```c
 #ifndef CAMERA_CONFIG_H
@@ -600,7 +784,7 @@ OV3660モデルを使用している場合は、それを駆動できるよう�
 ```
 
 - カメラインターフェース：  
-  関数 initialize_camera() と createCameraTask() を宣言します。
+  initialize_camera()とcreateCameraTask()関数を宣言します。
 
 - カメラ実装：
 
@@ -649,7 +833,7 @@ OV3660モデルを使用している場合は、それを駆動できるよう�
   }
   ```
 
-  - カメラパラメータを設定します（明度、コントラスト、彩度、特殊効果、ホワイトバランス、露出制御、AEC、AEレベル、AEC値、ゲイン制御、AGCゲイン、ゲイン上限、BPC、WPC、raw GMA、LENC、hmirror、vflip、DCW、colorbar）。
+  - カメラパラメータ（明度、コントラスト、彩度、特殊効果、ホワイトバランス、露出制御、AEC、AEレベル、AEC値、ゲイン制御、AGCゲイン、ゲイン上限、BPC、WPC、raw GMA、LENC、hmirror、vflip、DCW、colorbar）を設定します。
 
   ```c
   sensor_t *s = esp_camera_sensor_get();
@@ -728,7 +912,7 @@ OV3660モデルを使用している場合は、それを駆動できるよう�
 - ヘッダーファイル（camera_config.h、camera_interface.h）と実装ファイル（camera_interface.c）。
 - camera_config.hファイルはカメラ設定パラメータを定義します。
 - camera_interface.hファイルはカメラ初期化とタスク作成の関数を宣言します。
-- camera_interface.cファイルはカメラ初期化、写真撮影、タスク作成ロジックを実装します。
+- camera_interface.cファイルはカメラ初期化、写真撮影、タスク作成のロジックを実装します。
 
 ### SdCardコンポーネント
 
@@ -747,8 +931,8 @@ OV3660モデルを使用している場合は、それを駆動できるよう�
 #endif //SDCARD_CONFIG_H
 ```
 
-- SD Card Interface:  
-  initialize_sdcard()、deinitialize_sdcard()、およびsaveJpegToSdcard()関数を宣言します。
+- SDカードインターフェース：  
+  initialize_sdcard()、deinitialize_sdcard()、saveJpegToSdcard()関数を宣言します。
 
 ```c
 #ifndef SDCARD_INTERFACE_H
@@ -763,7 +947,7 @@ void saveJpegToSdcard(camera_fb_t *);
 #endif //SDCARD_INTERFACE_H
 ```
 
-- SDカード実装:
+- SDカード実装：
 
   - 定義された設定を使用してSDカードを初期化し、SDカードをFATファイルシステムとしてマウントします。
 
@@ -863,7 +1047,7 @@ void saveJpegToSdcard(camera_fb_t *);
   }
   ```
 
-  - SDカードにJPEG画像を保存する機能を提供します。
+  - JPEG画像をSDカードに保存する関数を提供します。
 
   ```c
   uint16_t lastKnownFile = 0;
@@ -893,9 +1077,9 @@ void saveJpegToSdcard(camera_fb_t *);
 コンポーネント構造：
 
 - ヘッダーファイル（sdcard_config.h、sdcard_interface.h）と実装ファイル（sdcard_interface.c）。
-- sdcard_config.hファイルはSDカードの設定パラメータを定義します。
-- sdcard_interface.hファイルはSDカードの初期化、非初期化、画像保存の関数を宣言します。
-- sdcard_interface.cファイルはSDカードの初期化、非初期化、画像保存のロジックを実装します。
+- sdcard_config.hファイルはSDカード設定パラメータを定義します。
+- sdcard_interface.hファイルはSDカード初期化、終了処理、画像保存の関数を宣言します。
+- sdcard_interface.cファイルはSDカード初期化、終了処理、画像保存のロジックを実装します。
 
 ### メイン関数
 
@@ -923,9 +1107,9 @@ void app_main(void)
 }
 ```
 
-- カメラとSDカードインターフェース用の必要なヘッダーファイルをインクルードします。
+- カメラとSDカードインターフェースに必要なヘッダーファイルをインクルードします。
 - 提供された関数を使用してSDカードとカメラの両方を初期化します。
-- 連続的に写真を撮影するためのカメラタスクを開始します
+- 継続的に写真を撮影するカメラタスクを開始します
 
 ### 出力
 
@@ -989,19 +1173,19 @@ I (34117) camera: Picture taken! Its size was: 51968 bytes
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/9.jpg" alt="pir" width={600} height="auto" /></p>
 
-## Arduino IDE用FreeRtos
+## Arduino IDE 用 FreeRtos
 
-FreeRtosはArduino-IDEベースのXIAO-S3ビルドで使用できます。ESP-IDFと同様に使用可能ですが、単一コアでのみ動作し、ESP-IDF用に最適化されていません。
+FreeRtos は Arduino IDE ベースの XIAO-S3 ビルドで使用できます。ESP-IDF と同様に使用可能ですが、単一コアでのみ動作し、ESP-IDF 向けに最適化されていません。
 
 ### ハードウェアセットアップ
 
-Xiao-S3を[Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)（OLEDディスプレイとRTC）に接続し、[Grove - Arduino用温度・湿度・圧力・ガスセンサー - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)をI2cバスに接続します。
+Xiao-S3 を [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)（OLED ディスプレイと RTC）に接続し、[Grove - Temperature, Humidity, Pressure and Gas Sensor for Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html) を I2C バスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/4.jpg" alt="pir" width={600} height="auto" /></p>
 
 ### ソフトウェアセットアップ
 
-[pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino)、[bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x)ライブラリのArduinoライブラリをインストールします。Arduinoライブラリのインストール方法については、[ライブラリのインストール方法](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)を参照してください。
+[pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino)、[bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x) ライブラリの Arduino ライブラリをインストールします。Arduino 用ライブラリのインストール方法については、[ライブラリのインストール方法](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)を参照してください。
 
 ```cpp
 #include "time.h"
@@ -1252,20 +1436,20 @@ T: 29.03 C  P: 90.86 KPa  H: 63.34 %  G: 47.85 Kohms
 
 ## Arduino FreeRtos vs ESP-IDF FreeRtos
 
-| Feature                 | Arduino FreeRTOS                                                | ESP-IDF FreeRTOS                                                                                                   |
+| 機能                    | Arduino FreeRTOS                                               | ESP-IDF FreeRTOS                                                                                                   |
 | ----------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| 抽象化レイヤー       | より高レベルな抽象化、初心者にとって簡単                  | より低レベルな抽象化、経験豊富なユーザーにより多くの制御を提供                                                        |
-| 開発環境 | Arduino IDE                                                     | ESP-IDF コマンドラインツール                                                                                         |
-| 互換性           | 主にArduinoベースのボードと互換性                  | より幅広いESP32およびESP32-S2ボードと互換性                                                         |
-| 機能                | 基本的なRTOS機能、タスク作成、スケジューリング、同期 | 包括的なRTOS機能、タスク作成、スケジューリング、同期、イベントグループ、キュー、ミューテックス、セマフォ |
-| パフォーマンス             | 抽象化レイヤーのため一般的にパフォーマンスが劣る          | ハードウェアとRTOS APIへの直接アクセスによりパフォーマンスが向上                                                     |
-| カスタマイゼーション           | 限定的なカスタマイゼーションオプション                                   | 設定ファイルとAPIを通じた広範囲なカスタマイゼーションオプション                                               |
-| 学習曲線          | 初心者にとって学習しやすい                                   | コマンドラインツールとC/C++に慣れていない人にとってより急な学習曲線                                      |
-| 使用例               | シンプルなIoTプロジェクト、プロトタイピング                                | 複雑なIoTアプリケーション、リアルタイムシステム、カスタムハードウェア                                                       |
+| 抽象化レイヤー          | 高レベル抽象化、初心者に優しい                                  | 低レベル抽象化、経験豊富なユーザーにより多くの制御を提供                                                           |
+| 開発環境                | Arduino IDE                                                     | ESP-IDF コマンドラインツール                                                                                       |
+| 互換性                  | 主に Arduino ベースのボードと互換                               | より幅広い ESP32 および ESP32-S2 ボードと互換                                                                      |
+| 機能                    | 基本的な RTOS 機能、タスク作成、スケジューリング、同期          | 包括的な RTOS 機能、タスク作成、スケジューリング、同期、イベントグループ、キュー、ミューテックス、セマフォ        |
+| パフォーマンス          | 抽象化レイヤーのため一般的にパフォーマンスが劣る                | ハードウェアと RTOS API への直接アクセスによりパフォーマンスが向上                                                 |
+| カスタマイゼーション    | 限定的なカスタマイゼーションオプション                          | 設定ファイルと API による広範なカスタマイゼーションオプション                                                      |
+| 学習曲線                | 初心者にとって学習しやすい                                      | コマンドラインツールと C/C++ に慣れていない人には急な学習曲線                                                      |
+| 使用例                  | シンプルな IoT プロジェクト、プロトタイピング                   | 複雑な IoT アプリケーション、リアルタイムシステム、カスタムハードウェア                                            |
 
 ## トラブルシューティング
 
-ハードウェア接続、ソフトウェアデバッグ、またはアップロードの過程で発生する可能性のある問題について説明します。
+ハードウェア接続、ソフトウェアデバッグ、またはアップロードの過程で問題が発生する場合があります。
 
 ## 技術サポート & 製品ディスカッション
 

@@ -76,7 +76,8 @@ reTerminal E1002 硬件包括：
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-reTerminal E 系列电子纸显示器仅支持最大 32GB 的 Fat32 格式 MicroSD 卡。
+reTerminal E 系列电子纸显示器仅支持最大 64GB 的 Fat32 格式 MicroSD 卡。  
+64GB SD 卡默认格式为 exFAT。将其格式化为 FAT32 后，可以成功挂载并用于存储图像。
 :::
 
 **步骤 3.** （可选）如需要，请安装 USB 驱动程序：
@@ -85,7 +86,7 @@ reTerminal E 系列电子纸显示器仅支持最大 32GB 的 Fat32 格式 Micro
 
 - **Mac 电脑**：从 [WCH 官方网站](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html) 下载并安装 CH34X 驱动程序
 
-- **Windows 电脑**：
+- **Windows 电脑**： 
   - Windows 11 系统通常默认包含驱动程序
   - 对于 Windows 10 及更早版本，您可能需要从 [WCH 官方网站](https://www.wch-ic.com/downloads/CH341SER_ZIP.html) 下载并安装 CH341 驱动程序
 
@@ -95,7 +96,7 @@ reTerminal E 系列电子纸显示器仅支持最大 32GB 的 Fat32 格式 Micro
 
 1. 使用 USB-C 数据线将您的 reTerminal E1002 连接到计算机
 
-2. 使用背面的电源开关打开设备
+2. 使用背面的电源开关打开设备电源
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/134.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -126,7 +127,7 @@ reTerminal E 系列电子纸显示器仅支持最大 32GB 的 Fat32 格式 Micro
 :::note
 1. 更新固件可确保最佳性能并访问最新功能。建议在首次使用设备之前执行此更新。
 
-2. 当设备处于关机或睡眠状态时，无法正确刷写固件。如果您选择了设备的正确端口但从未看到刷写固件进度，则可能需要通过按下设备顶部的绿色按钮来唤醒设备，然后重试。
+2. 当设备处于关机或睡眠状态时，无法正确刷写固件。如果您为设备选择了正确的端口但从未看到刷写固件进度，则可能需要通过按下设备顶部的绿色按钮来唤醒设备，然后重试。
 :::
 
 ### 开机
@@ -166,7 +167,7 @@ reTerminal E 系列电子纸显示器仅支持最大 32GB 的 Fat32 格式 Micro
 reTerminal E 系列电子纸显示器仅支持 2.4GHz WiFi 网络，不支持 5GHz 或其他频段。
 :::
 
-**步骤 4.** 连接成功后，设备将发出确认蜂鸣声并显示配对码屏幕。
+**步骤 4.** 成功连接后，设备将发出确认蜂鸣声并显示配对码屏幕。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/2.png" style={{width:600, height:'auto'}}/></div>
 
@@ -255,7 +256,7 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 **图库**
 
-使用图库功能将您的 reTerminal E1002 转换为数字相框。上传您喜爱的图片，平台将为电子纸显示屏优化它们。创建具有自定义过渡时间的幻灯片。
+使用图库功能将您的 reTerminal E1002 转换为数字相框。上传您最喜欢的图片，平台将为电子纸显示屏优化它们。创建具有自定义过渡时间的幻灯片。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/13.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -272,7 +273,7 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 **RSS 订阅集成**
 
-通过向您的仪表板添加 RSS 订阅，随时了解您喜爱的新闻来源、博客或网站的最新动态。RSS 功能允许您显示来自多个来源的标题、摘要或完整文章。
+通过向您的仪表板添加 RSS 订阅，随时了解您最喜欢的新闻来源、博客或网站的最新动态。RSS 功能允许您显示来自多个来源的标题、摘要或完整文章。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/15.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -284,7 +285,7 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 ### SenseCraft HMI 入门
 
-按照上一节中描述的方法将您的设备与 SenseCraft 平台配对后，您就可以创建您的第一个仪表板了。有关使用每个功能的详细说明，请参考相应的 Wiki 页面：
+按照上一节中描述的方法将您的设备与 SenseCraft 平台配对后，您就可以创建第一个仪表板了。有关使用每个功能的详细说明，请参考相应的 Wiki 页面：
 
 - [SenseCraft HMI 概述](https://sensecraft-hmi-docs.seeed.cc/en/)
 
@@ -298,13 +299,13 @@ reTerminal E1002 与 SenseCraft HMI 平台无缝集成，该平台为您的设�
 
 设备顶部的刷新按钮具有多种功能：
 
-- **单击**：手动刷新显示屏并检查来自 SenseCraft 平台的新内容。蜂鸣器将响一次以确认操作。此按钮也常用于唤醒设备。当设备进入睡眠状态且仪表板刷新命令无法立即传达到设备时，您可以使用此按钮唤醒设备。
+- **单击**：手动刷新显示屏并检查来自 SenseCraft 平台的新内容。蜂鸣器将响一声以确认操作。此按钮也常用于唤醒设备。当设备进入睡眠状态且仪表板刷新命令无法立即传达到设备时，您可以使用此按钮唤醒设备。
 
 - **长按**（未来功能）：将激活语音输入模式。
 
 ### 导航按钮
 
-左右按钮允许您在仪表板包含多个页面时在它们之间导航：
+如果您的仪表板包含多个页面，左右按钮允许您在多个页面之间导航：
 
 - **左按钮**：导航到上一页
 
@@ -427,16 +428,16 @@ reTerminal E1002 配备了一个 3D 打印支撑架配件，可让您将设备�
 
 **步骤 2.** 将支撑架放置在 reTerminal E1002 底部背面的指定安装区域，该区域有嵌入式螺母。
 
-**步骤 3.** 使用长螺丝刀将螺丝拧入 reTerminal E1002 背面的嵌入式螺母中，将支撑架固定到设备上。
+**步骤 3.** 使用长螺丝刀将支撑架固定到设备上，将螺丝拧入 reTerminal E1002 背面的嵌入式螺母中。
 
 **步骤 4.** 牢固连接后，将 reTerminal E1002 放置在平坦表面上，支撑架将支撑设备保持直立位置。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::note
-支撑架提供固定的观看角度，无法调节。这种固定定位设计旨在在大多数使用场景中提供最佳可见性。
+支撑架提供固定的观看角度，无法调节。这种固定定位设计旨在在大多数使用场景中提供最佳可视性。
 
-支撑架允许设备放置在桌子、台面或架子上，使其非常适合在各种环境中用作信息显示器、控制面板或数字相框。
+支撑架允许将设备放置在桌子、台面或架子上，使其非常适合在各种环境中用作信息显示器、控制面板或数字相框。
 :::
 
 ## 故障排除
@@ -446,7 +447,7 @@ reTerminal E1002 配备了一个 3D 打印支撑架配件，可让您将设备�
 - 确保电源开关处于 ON 位置
 - 连接 USB-C 线缆为设备充电
 - 检查红色 LED 是否常亮（表示正在充电）
-- 如果使用电池供电，确保电池正确连接且已充电
+- 如果使用电池供电，请确保电池正确连接并已充电
 
 ### Q2：无法连接到 Wi-Fi
 
@@ -460,7 +461,7 @@ reTerminal E1002 配备了一个 3D 打印支撑架配件，可让您将设备�
 - 按下刷新按钮手动触发更新
 - 验证设备是否连接到 Wi-Fi（角落没有断开连接图标）
 - 检查您的 SenseCraft 账户以确保仪表板已正确部署
-- 如果问题持续存在，尝试重启设备
+- 如果问题持续存在，请尝试重启设备
 
 ### Q4：网络连接丢失
 
