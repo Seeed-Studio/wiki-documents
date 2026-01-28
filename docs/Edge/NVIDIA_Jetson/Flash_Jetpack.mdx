@@ -482,16 +482,16 @@ export const productOptions = [
 
 ## 📚 Resources & Examples
 
-<div className="row margin-bottom--xl">
-  <div className="col col--4">
-    <div className="card height--full">
+<div className="row margin-bottom--xl" style={{display: 'flex', flexWrap: 'wrap'}}>
+  <div className="col col--4" style={{display: 'flex'}}>
+    <div className="card" style={{display: 'flex', flexDirection: 'column', height: '100%', width: '100%'}}>
       <div className="card__header">
         <h3>🚀 Getting Started</h3>
       </div>
-      <div className="card__body">
+      <div className="card__body" style={{flex: '1', display: 'flex', alignItems: 'flex-start'}}>
         <p>Complete beginner's guide to Jetson development with practical examples and tutorials.</p>
       </div>
-      <div className="card__footer">
+      <div className="card__footer" style={{marginTop: 'auto'}}>
         <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" 
            target="_blank" 
            className="button button--primary button--block"
@@ -512,15 +512,15 @@ export const productOptions = [
     </div>
   </div>
   
-  <div className="col col--4">
-    <div className="card height--full">
+  <div className="col col--4" style={{display: 'flex'}}>
+    <div className="card" style={{display: 'flex', flexDirection: 'column', height: '100%', width: '100%'}}>
       <div className="card__header">
         <h3>💡 Code Examples</h3>
       </div>
-      <div className="card__body">
+      <div className="card__body" style={{flex: '1', display: 'flex', alignItems: 'flex-start'}}>
         <p>Ready-to-use code examples for AI, computer vision, and robotics applications.</p>
       </div>
-      <div className="card__footer">
+      <div className="card__footer" style={{marginTop: 'auto'}}>
         <a href="https://github.com/Seeed-Projects/jetson-examples" 
            target="_blank" 
            className="button button--primary button--block"
@@ -541,15 +541,15 @@ export const productOptions = [
     </div>
   </div>
   
-  <div className="col col--4">
-    <div className="card height--full">
+  <div className="col col--4" style={{display: 'flex'}}>
+    <div className="card" style={{display: 'flex', flexDirection: 'column', height: '100%', width: '100%'}}>
       <div className="card__header">
         <h3>🔧 Source Code</h3>
       </div>
-      <div className="card__body">
+      <div className="card__body" style={{flex: '1', display: 'flex', alignItems: 'flex-start'}}>
         <p>Access Seeed's customized Linux for Tegra (L4T) source code and modifications.</p>
       </div>
-      <div className="card__footer">
+      <div className="card__footer" style={{marginTop: 'auto'}}>
         <a href="https://github.com/Seeed-Studio/Linux_for_Tegra" 
            target="_blank" 
            className="button button--primary button--block"
@@ -576,11 +576,11 @@ export const productOptions = [
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', margin: '2em 0', flexWrap: 'wrap'}}>
-  <a href="https://forum.seeedstudio.com/" target="_blank" style={{display: 'block', width: '400px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
-  <a href="https://www.seeedstudio.com/contacts" target="_blank" style={{display: 'block', width: '400px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support2.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
+  <a href="https://forum.seeedstudio.com/" target="_blank" style={{display: 'block', width: 'min(400px, calc(50% - 10px))', minWidth: '280px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
+  <a href="https://www.seeedstudio.com/contacts" target="_blank" style={{display: 'block', width: 'min(400px, calc(50% - 10px))', minWidth: '280px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support2.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
 </div>
 
 <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', margin: '2em 0', flexWrap: 'wrap'}}>
-  <a href="https://discord.gg/eWkprNDMU7" target="_blank" style={{display: 'block', width: '400px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support3.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" target="_blank" style={{display: 'block', width: '400px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support4.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
+  <a href="https://discord.gg/eWkprNDMU7" target="_blank" style={{display: 'block', width: 'min(400px, calc(50% - 10px))', minWidth: '280px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support3.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
+  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" target="_blank" style={{display: 'block', width: 'min(400px, calc(50% - 10px))', minWidth: '280px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support4.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
 </div>
