@@ -15,11 +15,11 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" alt="pir" width="600" height="auto"/></p>
 
-reTerminal DM は、10.1インチのオープンソース産業用HMI - データフローを統合し、現場デバイスを管理する統合デバイスマスターです。
+reTerminal DM は、10.1インチのオープンソース堅牢HMI - データフローを統合し、現場デバイスを管理する統合デバイスマスターです。
 
-Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウェイのオールインワンデバイスとして、reTerminal DM は IP65産業グレードの大型スクリーンを備えた新世代のインタラクティブセンシングハブです。
+Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウェイのオールインワンデバイスとして、reTerminal DM は IP65堅牢グレードの大画面を備えた新世代のインタラクティブセンシングハブです。
 
-豊富な拡張性とハイブリッド接続性を備え、CANバス、RS485、RS232、ギガビットイーサネットポート、その他のインターフェースをサポートし、4G、LoRa®、WiFi、BLEなどの強力なワイヤレス通信機能も備えています。
+豊富な拡張性とハイブリッド接続性を備え、CANバス、RS485、RS232、ギガビットイーサネットポート、その他のインターフェースをサポートし、4G、LoRa®、WiFi、BLEなどの強力なワイヤレス通信機能も搭載しています。
 
 > \*4GとLoRa®モジュールはreTerminal DMにデフォルトで付属していません。関連モジュールを別途ご購入ください。
 > [4Gバンドル](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
@@ -33,8 +33,8 @@ Raspberry Pi CM4をベースとし、パネルPC、HMI、PLC、IIoTゲートウ�
 ## 特徴
 
 - HMI、PLC、パネルPC、ゲートウェイが一体化：分散ハブデバイスに最適
-- イベント駆動アプリケーション用のローコードプログラミング：フローベース編集とワンクリックデプロイメント用のNode-REDをネイティブ統合、Raspberry Piで動作するすべてのソフトウェアと互換性
-- 過酷な作業環境向けの堅牢設計：IP65フロントパネル、-10~50°C動作温度
+- イベント駆動アプリケーション向けローコードプログラミング：フローベース編集とワンクリックデプロイメント用のNode-REDをネイティブ統合、Raspberry Piで動作するすべてのソフトウェアと互換性
+- 過酷な作業環境向け堅牢設計：IP65フロントパネル、-10~50°C動作温度
 - ハイブリッド接続性：4G LTE、LoRaWAN®、WiFi、BLE、RS485/RS232、CANバス、1000Mイーサネット、USB、HDMIをサポート
 - ソフトウェアとハードウェアのオープンソース設計：Raspberry Pi CM4を搭載、カスタマイズや派生製品を歓迎
 - [製品保証：2年保証](/ja/reterminal-dm-warranty)
@@ -309,13 +309,13 @@ PoE モジュールが取り付けられている場合、reTerminal DM の LAN1
 
 ### 消費電力
 
-Seeed Studio の実験室で測定された reTerminal DM の消費電力については、以下の表を参照してください。テスト方法と環境により結果に変動が生じる可能性があるため、この値は参考値としてご利用ください。
+Seeed Studio の研究室でテストされた reTerminal DM の消費電力については、以下の表を参照してください。テスト方法と環境により結果に変動が生じる可能性があるため、この値は参考値としてご利用ください。
 
 | ステータス   | 電圧 | 電流 | 消費電力 | 説明 |
 |   ---      |    ---    |   ---      |         ---          |        ---    |
 |シャットダウン  |         |  0.6mA  |                   | シャットダウンおよび電源オフ状態での静的消費電力テスト。|
 |アイドル      |24V      |  0.165A |    3.96W          | デフォルトの Seeed Studio システムを実行中、テストプログラムを実行せずに、ターミナルソケット経由で reTerminal DM デバイスに 24V 電源を供給した際の入力電流をテスト。|
-|フル負荷 |24V      |  0.37A  |    8.88W          | "stress -c 4" コマンドを使用して CPU をフル負荷で実行し、同時にビデオ再生と CAN & RS485 通信を実行。外部デバイスは接続なし。 |
+|フル負荷 |24V      |  0.37A  |    8.88W          | "stress -c 4" コマンドを使用して CPU をフル負荷で実行し、同時にビデオを再生し、CAN & RS485 通信を実行。外部デバイスは接続なし。 |
 
 ### 電源オンと電源オフ
 
@@ -480,12 +480,12 @@ reTerminal DM には、画面右下角に配置されたアクティブブザー
 |12 |I2| DI2    | デジタル入力 2 |
 |13 |I3| DI3    | デジタル入力 3 |
 |14 |I4| DI4    | デジタル入力 4 |
-|15 |GI| GND_DI | 入力グランド信号、1MΩ を介して GND に接続 |
+|15 |GI| GND_DI | 入力グランド信号、1MΩ 経由で GND に接続 |
 |16 |D1| DO1    | デジタル出力 1 |
 |17 |D2| DO2    | デジタル出力 2 |
 |18 |D3| DO3    | デジタル出力 3 |
 |19 |D4| DO4    | デジタル出力 4 |
-|20 |GO| GND_DO | 出力グランド信号、0Ω を介して GND に接続 |
+|20 |GO| GND_DO | 出力グランド信号、0Ω 経由で GND に接続 |
 
 </div>
 
@@ -607,7 +607,7 @@ raspi-gpio get 24
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/RS485.png" /></div>
 
-reTerminal DMは20ピンコネクタを通じてRS485インターフェースを搭載しており、産業および自動化アプリケーションでの安全で信頼性の高い動作を確保するため、信号と電源の両方が絶縁されています。`RS485 A`と`RS485 B`信号は容量性絶縁を使用して絶縁されており、優れたEMI耐性を提供し、RS485インターフェースの高速通信要件を満たします。
+reTerminal DMは20ピンコネクタを通じてRS485インターフェースを搭載しており、信号と電源の両方が絶縁されているため、過酷な環境や自動化アプリケーションでの安全で信頼性の高い動作を保証します。`RS485 A`と`RS485 B`信号は容量絶縁を使用して絶縁されており、優れたEMI耐性を提供し、RS485インターフェースの高速通信要件を満たします。
 
 :::note
 120Ωの終端抵抗がデフォルトでインストールされています。
@@ -776,7 +776,7 @@ except KeyboardInterrupt:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/can.png" /></div>
 
-reTerminal DMはCAN FD（Controller Area Network Flexible Data-Rate）プロトコルをサポートするCANインターフェースを搭載しています。CANインターフェースは容量性絶縁を使用して絶縁されており、優れたEMI保護を提供し、産業および自動化アプリケーションでの信頼性の高い通信を確保します。120Ωの終端抵抗がデフォルトでインストールされています。
+reTerminal DMはCAN FD（Controller Area Network Flexible Data-Rate）プロトコルをサポートするCANインターフェースを搭載しています。CANインターフェースは容量絶縁を使用して絶縁されており、優れたEMI保護を提供し、過酷な環境や自動化アプリケーションでの信頼性の高い通信を保証します。120Ωの終端抵抗がデフォルトでインストールされています。
 
 :::note
 CANインターフェースは絶縁電源を使用しているため、CANインターフェースに接続される外部デバイスのグランド信号はGND_ISOピンに接続する必要があります。
@@ -787,7 +787,7 @@ CANバスをテストしてインターフェースするには：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus-connection.png" /></div>
 
-- ステップ 1：CAN-utilsをインストールします
+- ステップ 1: CAN-utilsをインストールします
 
 ```sh
 sudo apt install can-utils
@@ -805,7 +805,7 @@ CAN-utilsは、CANインターフェースを使用した非常に有用なデ�
 
 CAN-utilsのソースは[GitHubリポジトリ](https://github.com/linux-can/can-utils)から入手できます。
 
-- ステップ 2：以下のコマンドを使用してCANインターフェースを設定します：
+- ステップ 2: 以下のコマンドを使用してCANインターフェースを設定します：
 
 ```sh
 sudo ip link set can0 up type can bitrate 500000
@@ -813,14 +813,14 @@ sudo ifconfig can0 txqueuelen 1000
 sudo ip link set can0 up
 ```
 
-- ステップ 3：gitを使用してテストコードをreTerminal DMにダウンロードします
+- ステップ 3: gitを使用してreTerminal DMにテストコードをダウンロードします
 
 ```sh
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple
 
 ```
 
-- ステップ 4：データを送信するコードをコンパイルして実行します：
+- ステップ 4: データを送信するコードをコンパイルして実行します：
 
 ```sh
 cd Seeed_reTerminal_Bridge_CAN_exmaple/
@@ -850,13 +850,13 @@ USB 2.0 Type-Aポートが2つあり、フラッシュドライブ、ウェブ�
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/usb-c.png" /></div>
 
-USB Type-Cは、ブートスイッチの位置に応じてシリアルデバッグまたはOSイメージの書き込みに使用されるUSB 2.0ポートです。OSの書き込みについては、[OSの書き込みWikiページ](/ja/reterminal-dm-flash-OS)を参照してください
+USB Type-Cは、ブートスイッチの位置に応じてシリアルデバッグまたはOSイメージの書き込みに使用されるUSB 2.0ポートです。OSの書き込みについては、[OSフラッシュWikiページ](/ja/reterminal-dm-flash-OS)を参照してください
 
 ### SIMカードスロット
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/sim-slot.png" /></div>
 
-reTerminal DMは、産業用アプリケーションで一般的に使用される標準サイズのSIMカードスロットを使用しており、25mm x 15mmの寸法の標準SIMカードが必要です。
+reTerminal DMは、堅牢なアプリケーションで一般的に使用される標準サイズのSIMカードスロットを使用しており、25mm x 15mmの寸法の標準SIMカードが必要です。
 
 :::note
 reTerminal DMの標準バージョンには4Gモジュールが付属していないことにご注意ください。4G機能が必要な場合は、追加の4Gモジュールを別途購入する必要があります。したがって、このSIMカードスロットは、4G PCIeスロットにサポートされているバージョンの4Gモジュールを配置した場合にのみ機能します。
@@ -875,7 +875,7 @@ reTerminal DMのリセット穴にミニプッシュボタンスイッチがあ�
 reTerminal DMには3.5mmヘッドフォンジャックがあり、音声出力をサポートし、外部ヘッドフォン、スピーカーなどに接続できます。
 
 :::note
-ヘッドフォンジャックは音声出力のみをサポートし、マイクロフォン録音機能はサポートしていません。
+ヘッドフォンジャックは音声出力のみをサポートし、マイク録音機能はサポートしていません。
 :::
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/audio-power.png" /></div>
@@ -884,7 +884,7 @@ reTerminal DMには3.5mmヘッドフォンジャックがあり、音声出力�
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/hdmi.png" /></div>
 
-reTerminal DMは、CM4からのネイティブHDMIインターフェースを備えており、最大4K @ 60 fpsの映像出力をサポートしています。複数のディスプレイが必要なアプリケーションに最適で、ユーザーは外部の大画面にコンテンツを出力できます。
+reTerminal DMは、CM4からのネイティブHDMIインターフェースを備えており、最大4K @ 60 fpsの映像出力をサポートします。複数のディスプレイが必要なアプリケーションに最適で、ユーザーは外部の大画面にコンテンツを出力できます。
 
 ### イーサネット RJ45
 
@@ -896,7 +896,7 @@ reTerminal DMには、10/100/1000 Mbit/sの3つの異なる速度をサポート
 
 #### 40ピンGPIO
 
-従来のRaspberry Pi 40ピンGPIO設計がreTerminal DM内部に保持されており、ピン配置はRaspberry Pi 4Bと同じです。これらのGPIOを使用するには、ユーザーは背面カバーを開く必要があります。CM4 IOのリソースが限られているため、40ピンGPIOと多くの周辺インターフェースが多重化されているため、GPIOを使用する際は競合に特に注意する必要があります。詳細なピン割り当て情報については、以下の表を参照してください。
+クラシックなRaspberry Pi 40ピンGPIO設計がreTerminal DM内部に保持されており、ピン配置はRaspberry Pi 4Bと同じです。これらのGPIOを使用するには、ユーザーは背面カバーを開く必要があります。CM4 IOのリソースが限られているため、40ピンGPIOと多くの周辺インターフェースが多重化されているため、GPIOを使用する際は競合に特に注意する必要があります。詳細なピン割り当て情報については、以下の表を参照してください。
 
 <div class="table-center">
 
@@ -1111,16 +1111,16 @@ reTerminal DM には、システムの異常クラッシュが発生した場合
 
 watchdog.conf でウォッチドッグタイムアウト時間を設定するには、以下の手順に従ってください：
 
-ステップ 1：watchdog.conf ファイルを編集用に開きます。通常は /etc/watchdog.conf にあります。
+ステップ 1：通常 /etc/watchdog.conf にある watchdog.conf ファイルを編集用に開きます。
 
 ```sh
 sudo nano /etc/watchdog.conf
 ```
 
-ステップ 2：`/etc/watchdog.conf` の下にある「watchdog-device」と「watchdog-timeout」設定オプションを探し、以下のように設定してください。
+ステップ 2：`/etc/watchdog.conf` の下にある "watchdog-device" と "watchdog-timeout" 設定オプションを探し、以下のように設定してください。
 
 :::note
-`watchdog-timeout` オプションが `60` 未満に設定されている場合、即座に再起動が発生する可能性があります。ハードウェアウォッチドッグを利用するには、`watchdog-device` を `/dev/watchdog1` として設定する必要があります。`1` なしのデフォルト設定は Broadcom ウォッチドッグデバイスを利用しています。
+`watchdog-timeout` オプションが `60` 未満に設定されている場合、即座に再起動が発生する可能性があります。ハードウェアウォッチドッグを利用するには、`watchdog-device` を `/dev/watchdog1` として設定する必要があります。`1` のないデフォルト設定は Broadcom ウォッチドッグデバイスを利用しています。
 :::
 
 ```sh
@@ -1170,7 +1170,7 @@ echo 5 > /sys/class/backlight/lcd_backlight/brightness
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/Camera.png" /></div>
 
-CSI カメラインターフェースは reTerminal DM メインボードに予約されており、カメラ機能をサポートするようにカスタマイズできます。フロントパネルのスペースが限られているため、小型のカメラのみ使用できることにご注意ください。現在厳密にテストされたソリューションは、Raspberry Pi カメラ V2.0 ドライバーボード + Seeed カスタマイズカメラ IMX219-77 を使用しています。
+CSI カメラインターフェースは reTerminal DM メインボードに予約されており、カメラ機能をサポートするようにカスタマイズできます。フロントパネルのスペースが限られているため、小型サイズのカメラのみ使用できることにご注意ください。現在厳密にテストされたソリューションは、Raspberry Pi カメラ V2.0 ドライバーボード + Seeed カスタマイズカメラ IMX219-77 を使用しています。
 
 <div class="table-center">
 
@@ -1184,7 +1184,7 @@ CSI カメラインターフェースは reTerminal DM メインボードに予�
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/camera_version.png" /></div>
 
 :::note
-reTerminal DM の標準バージョンにはフロントパネルにカメラ開口部がないため、標準製品ではカメラ機能は利用できません。カスタマイズされたカメラ要件がある場合は、odm@seeed.cc にお問い合わせください
+reTerminal DM の標準バージョンには、フロントパネルにカメラ開口部が付いていないため、標準製品ではカメラ機能は利用できません。カスタマイズされたカメラ要件がある場合は、odm@seeed.cc にお問い合わせください
 :::
 
 ### 4G モジュール
@@ -1203,9 +1203,9 @@ reTerminal DM の標準バージョンにはフロントパネルにカメラ開
 - EC25-EUX 4G モジュール x1
 - SIM カード x1
 
-**ステップ 1.** [EC25 4G モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna)ガイドを参照して、`EC25 4G モジュール`を*`4G/LTE`*シルクスクリーンが表示されている`4G/LTE PCIe スロット`に取り付け、システムの電源を入れる前に 4G 対応 SIM カードを[SIM カードスロット](/ja/reterminal-dm/#sim-card-slot)に挿入してください。
+**ステップ 1.** [EC25 4G モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna)ガイドを参照して、`EC25 4G モジュール`を *`4G/LTE`* シルクスクリーンが表示されている `4G/LTE PCIe スロット`に取り付け、システムの電源を入れる前に、4G 対応 SIM カードを [SIM カードスロット](/ja/reterminal-dm/#sim-card-slot)に挿入してください。
 
-**ステップ 2.** ```lsusb```を使用して EC25-EUX が検出されるかどうかを確認します
+**ステップ 2.** ```lsusb``` を使用して EC25-EUX が検出されるかどうかを確認します
 
 ```
 lsusb
@@ -1230,7 +1230,7 @@ sudo minicom -D /dev/ttyUSB2 -b 1152008n1
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image31.png"/></div>
 
-**ステップ 5.** 4G モジュールを 4G ネットワークに接続できるようにします
+**ステップ 5.** 4G モジュールを有効にして 4G ネットワークに接続します
 
 同じ minicom シリアルウィンドウで以下を入力してください：
 
@@ -1238,7 +1238,7 @@ sudo minicom -D /dev/ttyUSB2 -b 1152008n1
 AT+QCFG="usbnet"
 ```
 
-```+QCFG: "usbnet",0,```のような結果が返されますが、これを 1（ECM モード）に設定する必要があるため、以下のコマンドを入力してください：
+```+QCFG: "usbnet",0,``` のような結果が返されますが、これを 1（ECM モード）に設定する必要があるため、以下のコマンドを入力してください：
 
 ```sh
 AT+QCFG="usbnet",1
@@ -1278,8 +1278,8 @@ import TabItem from '@theme/TabItem';
     </a>
 </div>
 
-**ステップ 1.** [LoraWAN® モジュール ハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) ガイドを参照して、`WM1302 SPI LoraWAN® Module` を *`Lora`* シルクスクリーンが表示されている `LoraWAN® Mini PCIe スロット` に取り付けてください。
-モジュールをインストールして、必要なパッケージ build-essential（build essential パッケージは、ソースコードから DEB パッケージを作成するために必要なツールを含む Debian パッケージです）をインストールします。
+**ステップ 1.** [LoraWAN® モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna)ガイドを参照して、`WM1302 SPI LoraWAN® モジュール`を *`Lora`* シルクスクリーンが表示されている `LoraWAN® Mini PCIe スロット`に取り付けてください。
+必要なパッケージ build-essential（build essential パッケージは、ソースコードから DEB パッケージを作成するために必要なツールを含む Debian パッケージです）をモジュールをインストールしてインストールします。
 
 ```sh
 sudo apt update
@@ -1287,7 +1287,7 @@ sudo apt install git
 sudo apt-get install build-essential
 ```
 
-**ステップ 2.** コマンドラインで `sudo raspi-config` と入力して、Raspberry Pi ソフトウェア設定ツールを開きます：
+**ステップ 2.** コマンドラインで `sudo raspi-config` と入力して Raspberry Pi ソフトウェア設定ツールを開きます：
 
 - Interface Options を選択
 - SPI を選択し、**Yes** を選択して有効にします
@@ -1296,7 +1296,7 @@ sudo apt-get install build-essential
 
 この後、これらの設定が動作することを確認するために Raspberry Pi を再起動してください。
 
-**ステップ 3.** [WM1302 コード](https://github.com/Lora-net/sx1302_hal) を reTerminal にダウンロードしてコンパイルします。
+**ステップ 3.** [WM1302 コード](https://github.com/Lora-net/sx1302_hal)を reTerminal にダウンロードしてコンパイルします。
 
 ```sh
 cd ~/
@@ -1426,11 +1426,11 @@ cd ~/sx1302_hal/packet_forwarder
     </a>
 </div>
 
-**ステップ 1.** [LoraWAN® モジュール ハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna) ガイドを参照して、`WM1302 USB LoraWAN® Module` を *`4G`* シルクスクリーンが表示されている `4G Mini PCIe スロット` に取り付けてください。
+**ステップ 1.** [LoraWAN® モジュールハードウェア組み立て](/ja/reterminal-dm-hardware-guide/#assembly-4g-module-and-antenna)ガイドを参照して、`WM1302 USB LoraWAN® モジュール`を *`4G`* シルクスクリーンが表示されている `4G Mini PCIe スロット`にインストールしてください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/dmlora.png"/></div>
 
-**ステップ 2.** コマンドラインで `sudo raspi-config` と入力して、Raspberry Pi ソフトウェア設定ツールを開きます：
+**ステップ 2.** コマンドラインで `sudo raspi-config` と入力して Raspberry Pi ソフトウェア設定ツールを開きます：
 
 - Interface Options を選択
 - I2C を選択し、**Yes** を選択して有効にします
@@ -1438,7 +1438,7 @@ cd ~/sx1302_hal/packet_forwarder
 
 この後、これらの設定が動作することを確認するために Raspberry Pi を再起動してください。
 
-**ステップ 3.** [WM1302 コード](https://github.com/Lora-net/sx1302_hal) を reTerminal にダウンロードしてコンパイルします。
+**ステップ 3.** [WM1302 コード](https://github.com/Lora-net/sx1302_hal)を reTerminal にダウンロードしてコンパイルします。
 
 ```sh
 cd ~/
@@ -1465,7 +1465,7 @@ lsusb
 私の場合、WM1302 は `STMicroelectronics Virtual COM Port` を使用しているため、プロダクト ID `5740` を取得できます
 
 **ステップ 5-2.**
-次に、プロダクト ID 番号 `5740` を持つ USB デバイスを取得します。この場合、USB ポート番号 `1-1.4.1` を取得します：
+次に、プロダクト ID 番号 `5740` で USB デバイスを取得します。この場合、USB ポート番号 `1-1.4.1` を取得します：
 
 ```sh
 sudo dmesg | grep 5740
@@ -1479,7 +1479,7 @@ sudo modprobe cdc_acm
 sudo dmesg | grep 1-1.4.1
 ```
 
-私の場合、USB デバイスは `ttyACM2` です
+つまり、私の場合 USB デバイスは `ttyACM2` です
 
 それでは、sed コマンド `sed -i 's/search_string/replacement_string/g' filename` を使用して `global_conf.json.sx1250.US915.USB` 設定の USB デバイスを変更しましょう。`sed -i 's/ttyACM0/the_result_from_above' global_conf.json.sx1250.frequency_of_your_module.USB` のパターンに従ってください。`the_result_from_above` と `frequency_of_your_module` をあなたのアプリケーション用に置き換えることに注意してください：
 
@@ -1519,10 +1519,10 @@ cd ~/sx1302_hal/packet_forwarder
 
 ### PCIe 拡張カード
 
-reTerminal DM は CM4 から派生した PCIe インターフェースを備えており、PCIe 2.0 をサポートし、理論的に最大 5Gbps の伝送速度を提供します。これにより、ギガビットイーサネットや NVMe SSD などの様々な高速インターフェースの拡張が可能になります。私たちは、異なるシナリオ要件を満たすために、PCIe、USB、I2C インターフェースに基づく複数の拡張カードを開発しました。これにより、カスタマイゼーションのニーズも促進されます。
+reTerminal DM は CM4 から派生した PCIe インターフェースを備えており、PCIe 2.0 をサポートし、理論的に最大 5Gbps の伝送速度を提供します。これにより、ギガビットイーサネットや NVMe SSD などの様々な高速インターフェースの拡張が可能になります。私たちは、異なるシナリオ要件を満たすために、PCIe、USB、I2C インターフェースに基づく複数の拡張カードを開発しました。これにより、カスタマイズニーズも促進されます。
 
 :::note
-標準製品にはデフォルトで PCIe 拡張カードは含まれていないことにご注意ください。Seeed では、バッチカスタマイゼーション注文に対して組み立てサービスを提供できます。
+標準製品にはデフォルトで PCIe 拡張カードが含まれていないことにご注意ください。Seeed はバッチカスタマイズ注文に対して組み立てサービスを提供できます。
 :::
 
 ### POE
@@ -1530,12 +1530,12 @@ reTerminal DM は CM4 から派生した PCIe インターフェースを備え�
 reTerminal DM は、PoE 電源モジュールを追加することで IEEE 802.3af PD（Powered Devices）標準をサポートできます。
 
 :::note
-reTerminal DM は PoE 電源をサポートしていますが、標準製品にはデフォルトで PoE モジュールは含まれていません。Seeed では、バッチカスタマイゼーション注文に対して PoE はんだ付けと組み立てサービスを提供できます。ただし、お客様がサンプルをテストしている場合は、PoE モジュールを自分ではんだ付けして組み立てる必要があります。
+reTerminal DM は PoE 電源をサポートしていますが、標準製品にはデフォルトで PoE モジュールが含まれていません。Seeed はバッチカスタマイズ注文に対して PoE はんだ付けと組み立てサービスを提供できます。ただし、お客様がサンプルをテストしている場合は、PoE モジュールを自分ではんだ付けして組み立てる必要があります。
 :::
 
 ### SSD
 
-reTerminal DM は PCIe 拡張カードを使用して 2280 NVMe SSD をサポートします。CM4 の PCIe は gen2.0 で最大理論速度が 5Gbps であることに注意することが重要です。Gen3.0 以上の SSD を使用している場合、SSD の最大速度を達成できない可能性があります。テスト後、SSD を搭載した reTerminal DM は最大書き込み速度 210MB/s、最大読み取り速度 360MB/s を達成できます。どの SSD が互換性があるかわからない場合は、Seeed の公式ウェブサイトから 112990247、512GB NVMe M.2 PCle Gen3x4 2280 SSD を購入できます。
+reTerminal DM は PCIe 拡張カードを使用して 2280 NVMe SSD をサポートします。CM4 の PCIe は gen2.0 で最大理論速度が 5Gbps であることに注意することが重要です。Gen3.0 以上の SSD を使用している場合、SSD の最大速度を達成できない可能性があります。テスト後、SSD がインストールされた reTerminal DM は最大書き込み速度 210MB/s と最大読み取り速度 360MB/s を達成できます。どの SSD が互換性があるかわからない場合は、Seeed の公式ウェブサイトから 112990247、512GB NVMe M.2 PCle Gen3x4 2280 SSD を購入できます。
 
 :::note
 reTerminal DM の標準バージョンは SSD をサポートしておらず、この機能を有効にするには PCIe 拡張カードの購入が必要です。
