@@ -22,7 +22,7 @@ reTerminal está alimentado por un Raspberry Pi Compute Module 4 (CM4) que es un
 reTerminal consiste en una interfaz de expansión de alta velocidad y E/S rica para mayor expandibilidad. Este dispositivo tiene características de seguridad como un coprocesador criptográfico con almacenamiento de claves seguro basado en hardware. También tiene módulos integrados como un acelerómetro, sensor de luz y un RTC (Reloj de Tiempo Real). reTerminal tiene un Puerto Ethernet Gigabit para conexiones de red más rápidas y también tiene puertos USB 2.0 Tipo-A duales. El header de 40 pines en el reTerminal lo abre para una amplia gama de aplicaciones IoT.
 
 
-reTerminal se envía con Raspberry Pi OS listo para usar. Así que, todo lo que tienes que hacer es conectarlo a la alimentación y comenzar a construir tus proyectos maker, construcciones IoT y de automatización del hogar hasta experimentos DIY fuera de la red
+reTerminal se envía con Raspberry Pi OS listo para usar. ¡Así que todo lo que tienes que hacer es conectarlo a la alimentación y comenzar a construir tus aplicaciones IoT, HMI y Edge AI de inmediato!
 
 | Fecha de Lanzamiento | SO Preinstalado | Firmware STM32 Preinstalado | Versión de Placa | Información Adicional |
 |---|---|---|---|---|
@@ -230,13 +230,13 @@ reTerminal se envía con Raspberry Pi OS listo para usar. Así que, todo lo que 
 
 ## Descripción General del Hardware
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir" width="1000" height="auto"/></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal_1.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal-v1.3.jpg" alt="pir" width="1000" height="auto"/></p>
 
 ## Diagrama de Bloques
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal_2.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/reTerminal_block_diagram-v1.3.png" alt="pir" width="1000" height="auto"/></p>
 
 ## Diagrama de Pines
 
@@ -245,7 +245,7 @@ reTerminal se envía con Raspberry Pi OS listo para usar. Así que, todo lo que 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v2.jpg" alt="pir" width="1000" height="auto"/></p>
 
 :::note
-Por favor presta atención cuidadosamente a la orientación del reTerminal en el diagrama anterior. El LCD y los botones integrados están en el lado derecho mientras que la parte trasera del reTerminal está en el lado izquierdo. También todo el dispositivo está volteado boca abajo.
+Por favor presta cuidadosa atención a la orientación del reTerminal en el diagrama anterior. El LCD y los botones integrados están en el lado derecho mientras que la parte trasera del reTerminal está en el lado izquierdo. También todo el dispositivo está volteado boca abajo.
 :::
 
 ## Inicio Rápido con reTerminal
@@ -265,7 +265,7 @@ Necesitas preparar el siguiente hardware antes de comenzar con reTerminal
 
 #### Iniciar sesión en Raspberry Pi OS
 
-reTerminal viene con Raspberry Pi OS preinstalado listo para usar. ¡Así que podemos encender el reTerminal e iniciar sesión en Raspberry Pi OS directamente!
+reTerminal viene con Raspberry Pi OS preinstalado listo para usar. ¡Así que podemos encender el reTerminal e iniciar sesión en Raspberry Pi OS de inmediato!
 
 - **Paso 1.** Conecta un extremo de un cable USB Tipo-C al reTerminal y el otro extremo a un adaptador de alimentación (5V/4A)
 
@@ -303,7 +303,7 @@ reTerminal viene con Raspberry Pi OS preinstalado listo para usar. ¡Así que po
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-8-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **Paso 10.** Finalmente presiona **Done** para finalizar la configuración
+- **Paso 10.** Finalmente presiona **Done** para terminar la configuración
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-9-new.png" alt="pir" width="400" height="auto"/></p>
 
@@ -331,7 +331,7 @@ Necesitas preparar el siguiente hardware
 - Adaptador de corriente (5V/3A)
 - Cable USB Type-C
 
-### <span id="jump2">Flashear Raspberry Pi OS/ Ubuntu OS de 64 bits u Otro OS al eMMC</span>
+### <span id="jump2">Flashear Raspberry Pi OS/ Ubuntu OS de 64 bits u Otro OS a eMMC</span>
 
 Podemos flashear **Raspberry Pi OS/ Ubuntu OS de 64 bits u otro OS** en el **almacenamiento eMMC** del CM4 en el reTerminal. Una vez que los controladores necesarios estén instalados, solo tienes que conectar el puerto USB Type-C del reTerminal a tu PC, y se mostrará como una unidad externa. Comienza removiendo la carcasa trasera del reTerminal.
 
@@ -374,12 +374,12 @@ Windows ahora encontrará el hardware e instalará los controladores necesarios
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones locales** y más
+Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de localización** y más
 
 - **Paso 8.** Haz clic en **CHOOSE OS** y selecciona tu OS preferido
 
 :::note
-Si estás intentando instalar Raspbian OS, hemos realizado pruebas y encontrado que tanto las versiones de *32 bits como de 64 bits* de **Bullseye** funcionan bien con reTerminal sin encontrar ningún [**problema de pantalla negra**](https://wiki.seeedstudio.com/es/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal). Además, también hemos probado la nueva versión **Bookworm** de *64 bits*, y funciona sin problemas en reTerminal.
+Si estás intentando instalar Raspbian OS, hemos realizado pruebas y encontramos que tanto las versiones de *32 bits como de 64 bits* de **Bullseye** funcionan bien con reTerminal sin encontrar ningún [**problema de pantalla negra**](https://wiki.seeedstudio.com/es/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal). Además, también hemos probado la nueva versión **Bookworm** de *64 bits*, y funciona sin problemas en reTerminal.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
@@ -398,7 +398,7 @@ Por favor espera unos minutos hasta que el proceso de flasheo esté completo.
 
 - **Paso 11.** Voltea el **interruptor de Modo de Arranque** de vuelta a la posición original y ensambla la carcasa del reTerminal
 
-Ahora puedes saltar a **[aquí](#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)**
+Ahora puedes saltar a **[aquí](#iniciar-sesión-en-raspberry-pi-os-ubuntu-os-u-otro-os-usando-ssh-sobre-wi-fi-ethernet)**
 
 ##### Para MAC
 
@@ -450,7 +450,7 @@ sudo ./rpiboot
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones locales** y más
+Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de localización** y más
 
 - **Paso 10.** Haz clic en **CHOOSE OS** y selecciona tu OS preferido
 
@@ -470,7 +470,7 @@ Por favor espera unos minutos hasta que el proceso de flasheo esté completo.
 
 - **Paso 13.** Voltea el **interruptor de Modo de Arranque** de vuelta a la posición original y ensambla la carcasa del reTerminal
 
-Ahora puedes saltar a **[aquí](#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)**
+Ahora puedes saltar a **[aquí](#iniciar-sesión-en-raspberry-pi-os-ubuntu-os-u-otro-os-usando-ssh-sobre-wi-fi-ethernet)**
 
 ##### Para Linux
 
@@ -515,7 +515,7 @@ make
 sudo ./rpiboot
 ```
 
-- **Paso 7.** Conecta reTerminal al PC mediante cable USB Type-C
+- **Paso 7.** Conecta reTerminal a la PC mediante cable USB Type-C
 
 - **Paso 8.** Descarga el software **Raspberry Pi Imager** visitando [este enlace](https://www.raspberrypi.org/software/)
 
@@ -527,7 +527,7 @@ sudo ./rpiboot
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aquí puedes **establecer un hostname, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de idioma** y más
+Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones regionales** y más
 
 - **Paso 11.** Haz clic en **CHOOSE OS** y selecciona tu SO preferido
 
@@ -618,7 +618,7 @@ raspberry
 
 ### <span id="jump1">Instalar controladores de reTerminal después de grabar nuevo Raspberry Pi OS/ Ubuntu OS u otro SO</span>
 
-reTerminal viene con los controladores necesarios preinstalados desde fábrica, por lo que no necesitas instalar controladores adicionales. Sin embargo, si grabas un nuevo SO por ti mismo, necesitas instalar los controladores necesarios por separado. El hardware que necesita controladores incluye la **pantalla LCD de 5 pulgadas, panel táctil, acelerómetro, sensor de luz, LEDs de usuario, botones de usuario, RTC, zumbador, coprocesador criptográfico**.
+reTerminal viene con los controladores necesarios preinstalados de fábrica, por lo que no necesitas instalar controladores adicionales. Sin embargo, si grabas un nuevo SO por ti mismo, necesitas instalar los controladores necesarios por separado. El hardware que necesita controladores incluye la **pantalla LCD de 5 pulgadas, panel táctil, acelerómetro, sensor de luz, LEDs de usuario, botones de usuario, RTC, zumbador, coprocesador criptográfico**.
 
 - **Paso 1.** Clona el siguiente repositorio
 
@@ -627,7 +627,7 @@ sudo apt install git -y
 git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
-- **Paso 2.** Entra al repositorio
+- **Paso 2.** Ingresa al repositorio
 
 ```sh
 cd seeed-linux-dtoverlays
@@ -677,7 +677,7 @@ sudo reboot
 
 - **Descarga el Raspberry Pi OS visitando los enlaces a continuación**
 
-| Versión                     | Descripción      | TAG                                                     |
+| Versión                     | Descripción      | ETIQUETA                                                     |
 | --------------------------- | ---------------- | ------------------------------------------------------------ |
 | [2024-03-14-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-arm64.zip)              | 64bit Debian12(bookworm) Linux versión 6.6.20 | más reciente |
 | [2024-03-14-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-armhf.zip) |  32bit Debian12(bookworm) Linux versión 6.6.20           | más reciente |
@@ -693,8 +693,8 @@ Selecciona el SO que descargaste, debe terminar en **.img**.
 
 :::caution
 
-Si instalas la versión más reciente de bookworm de la imagen. No vayas a configurar haciendo clic en el botón de opción avanzada. No entres a esta interfaz para ninguna configuración inicial.
-¡¡¡De lo contrario, pueden ocurrir situaciones inesperadas de error de controlador!!!
+Si instalas la versión más reciente de bookworm de la imagen. No vayas a configurar haciendo clic en el botón de opción avanzada. No ingreses a esta interfaz para ninguna configuración inicial.
+¡¡¡De lo contrario, pueden ocurrir situaciones inesperadas de error del controlador!!!
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/notice.png" alt="pir" width="450" height="auto"/></p>
 

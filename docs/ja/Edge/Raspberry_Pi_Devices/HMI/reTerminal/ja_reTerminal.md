@@ -17,12 +17,12 @@ last_update:
 
 reThings ファミリーの新しいメンバー、reTerminal をご紹介します。この未来対応のヒューマンマシンインターフェース（HMI）デバイスは、IoT およびクラウドシステムと簡単かつ効率的に連携し、エッジでの無限のシナリオを実現します。
 
-reTerminal は Raspberry Pi Compute Module 4（CM4）を搭載しており、1.5GHz で動作するクアッドコア Cortex-A72 CPU と、1280 x 720 解像度の 5 インチ IPS 静電容量式マルチタッチスクリーンを備えています。マルチタスクを実行するのに十分な RAM（4GB）と、オペレーティングシステムをインストールするのに十分な eMMC ストレージ（32GB）を備え、高速起動と滑らかな全体的な体験を可能にします。デュアルバンド 2.4GHz/5GHz Wi-Fi と Bluetooth 5.0 BLE によるワイヤレス接続機能を備えています。
+reTerminal は Raspberry Pi Compute Module 4（CM4）を搭載しており、1.5GHz で動作するクアッドコア Cortex-A72 CPU と、1280 x 720 解像度の 5 インチ IPS 静電容量式マルチタッチスクリーンを備えています。マルチタスクを実行するのに十分な RAM（4GB）と、オペレーティングシステムをインストールするのに十分な eMMC ストレージ（32GB）を備えており、高速起動と滑らかな全体的な体験を可能にします。デュアルバンド 2.4GHz/5GHz Wi-Fi と Bluetooth 5.0 BLE によるワイヤレス接続機能を備えています。
 
-reTerminal は高速拡張インターフェースと豊富な I/O を備え、さらなる拡張性を提供します。このデバイスには、安全なハードウェアベースのキーストレージを備えた暗号化コプロセッサなどのセキュリティ機能があります。また、加速度計、光センサー、RTC（リアルタイムクロック）などの内蔵モジュールも備えています。reTerminal は高速ネットワーク接続のためのギガビットイーサネットポートと、デュアル USB 2.0 Type-A ポートを備えています。reTerminal の 40 ピンヘッダーは、幅広い IoT アプリケーションに対応します。
+reTerminal は高速拡張インターフェースと豊富な I/O を備え、より高い拡張性を提供します。このデバイスには、安全なハードウェアベースのキーストレージを備えた暗号化コプロセッサなどのセキュリティ機能があります。また、加速度センサー、光センサー、RTC（リアルタイムクロック）などの内蔵モジュールも備えています。reTerminal は高速ネットワーク接続のためのギガビットイーサネットポートと、デュアル USB 2.0 Type-A ポートを備えています。reTerminal の 40 ピンヘッダーは、幅広い IoT アプリケーションに対応します。
 
 
-reTerminal は Raspberry Pi OS がプリインストールされた状態で出荷されます。そのため、電源に接続するだけで、メーカープロジェクト、IoT、ホームオートメーション構築からオフグリッド DIY 実験まで、すぐに構築を開始できます。
+reTerminal は Raspberry Pi OS がプリインストールされた状態で出荷されます。そのため、電源に接続するだけで、すぐに IoT、HMI、エッジ AI アプリケーションの構築を開始できます！
 
 | リリース日 | プリインストール OS | プリインストール STM32 ファームウェア | ボードバージョン | 追加情報 |
 |---|---|---|---|---|
@@ -45,9 +45,9 @@ reTerminal は Raspberry Pi OS がプリインストールされた状態で出�
 - 4GB RAM と 32GB eMMC を搭載した Raspberry Pi Computer Module 4 を採用
 - 1280 x 720、293 PPI の 5 インチ IPS 静電容量式マルチタッチスクリーン
 - デュアルバンド 2.4GHz/5GHz Wi-Fi と Bluetooth 5.0 BLE によるワイヤレス接続
-- さらなる拡張性のための高速拡張インターフェースと豊富な I/O
+- より高い拡張性のための高速拡張インターフェースと豊富な I/O
 - 安全なハードウェアベースのキーストレージを備えた暗号化コプロセッサ
-- 加速度計、光センサー、RTC などの内蔵モジュール
+- 加速度センサー、光センサー、RTC などの内蔵モジュール
 - ギガビットイーサネットポートとデュアル USB 2.0 Type-A ポート
 - IoT アプリケーション用の 40 ピンヘッダー
 
@@ -135,7 +135,7 @@ reTerminal は Raspberry Pi OS がプリインストールされた状態で出�
       <td>低バックアップ電流；VDD = 3.0 V、温度 = 25 ℃ で標準 0.25μA</td>
     </tr>
     <tr>
-      <td rowSpan={2}>加速度計</td>
+      <td rowSpan={2}>加速度センサー</td>
       <td>STMicroelectronics LIS3DHTR</td>
     </tr>
     <tr>
@@ -230,13 +230,13 @@ reTerminal は Raspberry Pi OS がプリインストールされた状態で出�
 
 ## ハードウェア概要
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir" width="1000" height="auto"/></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal_1.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal-v1.3.jpg" alt="pir" width="1000" height="auto"/></p>
 
 ## ブロック図
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal_2.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/reTerminal_block_diagram-v1.3.png" alt="pir" width="1000" height="auto"/></p>
 
 ## ピン配置図
 
@@ -289,9 +289,9 @@ reTerminal は Raspberry Pi OS がプリインストールされた状態で出�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-5-new.png" alt="pir" width="400" height="auto"/></p>
 
-**注意：** デフォルトパスワードを **raspberry** のままにしたい場合は、この欄を空白のままにして **Next** をクリックできます
+**注意：** デフォルトパスワードを **raspberry** のままにしたい場合は、空白のままにして **Next** をクリックできます
 
-- **ステップ 7.** 以下の画面で **Next** をクリックします
+- **ステップ 7.** 以下について **Next** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-6-new.png" alt="pir" width="400" height="auto"/></p>
 
@@ -311,11 +311,11 @@ reTerminal は Raspberry Pi OS がプリインストールされた状態で出�
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/power-button-press.jpg" alt="pir" width="650" height="auto"/></p>
 
-**ヒント：** より大きな画面で Raspberry Pi OS を体験したい場合は、reTerminal の micro-HDMI ポートにディスプレイを接続し、reTerminal の USB ポートにキーボードとマウスを接続することができます。
+**ヒント：** より大きな画面で Raspberry Pi OS を体験したい場合は、reTerminal の micro-HDMI ポートにディスプレイを接続し、reTerminal の USB ポートにキーボードとマウスを接続することもできます。
 
-## reTerminal 入門ガイド（拡張版）
+## reTerminal の入門ガイド（拡張版）
 
-Raspberry Pi OS を自分でインストールしたい場合、64-bit Ubuntu などの他の OS をインストールしたい場合、WiFi 経由の SSH、Ethernet 経由の SSH、USB to Serial アダプター経由で reTerminal にログインしたい場合は、以下のガイドに従ってください！
+Raspberry Pi OS を自分でインストールしたい場合、64 ビット Ubuntu などの他の OS をインストールしたい場合、WiFi 経由の SSH、イーサネット経由の SSH、USB to Serial アダプタ経由で reTerminal にログインしたい場合は、以下のガイドに従ってください！
 
 ### 必要なハードウェア
 
@@ -325,24 +325,24 @@ Raspberry Pi OS を自分でインストールしたい場合、64-bit Ubuntu �
 - コンピュータ（Windows/Mac/Linux）
 - 8GB（以上）の micro-SD カード（オプション）
 - Micro-SD カードリーダー（オプション）
-- USB to serial コンバーター（オプション）
-- Ethernet ケーブル（オプション）
+- USB to serial コンバータ（オプション）
+- イーサネットケーブル（オプション）
 - Wi-Fi 接続（オプション）
-- 電源アダプター（5V/3A）
+- 電源アダプタ（5V/3A）
 - USB Type-C ケーブル
 
-### <span id="jump2">Raspberry Pi OS/ 64-bit Ubuntu OS またはその他の OS を eMMC にフラッシュ</span>
+### <span id="jump2">Raspberry Pi OS/ 64 ビット Ubuntu OS またはその他の OS を eMMC にフラッシュ</span>
 
-reTerminal の CM4 の **eMMC ストレージ** に **Raspberry Pi OS/ 64-bit Ubuntu OS またはその他の OS** をフラッシュできます。必要なドライバーがインストールされると、reTerminal の USB Type-C ポートを PC に接続するだけで、外部ドライブとして表示されます。まず reTerminal の背面シェルを取り外します。
+reTerminal の CM4 の **eMMC ストレージ** に **Raspberry Pi OS/ 64 ビット Ubuntu OS またはその他の OS** をフラッシュできます。必要なドライバがインストールされると、reTerminal の USB Type-C ポートを PC に接続するだけで、外部ドライブとして表示されます。まず reTerminal の背面シェルを取り外します。
 
-> **注意：** 適切なドライバーを含む Seeed がパッケージ化した最新のシステムイメージ：[pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
+> **注意：** 適切なドライバを含む Seeed がパッケージ化した最新のシステムイメージ：[pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
 
 
-- **ステップ 1.** 4つのゴムカバーを取り外し、下にある4つのネジを外して reTerminal の背面シェルを開きます
+- **ステップ 1.** 4 つのゴムカバーを取り外し、下にある 4 つのネジを外して reTerminal の背面シェルを開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width="450" height="auto"/></p>
 
-- **ステップ 2.** 2つのネジを取り外してヒートシンクを分解します
+- **ステップ 2.** 2 つのネジを取り外してヒートシンクを分解します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/remove-screw-heatsink-2.jpg" alt="pir" width="600" height="auto"/></p>
 
@@ -354,15 +354,15 @@ reTerminal の CM4 の **eMMC ストレージ** に **Raspberry Pi OS/ 64-bit Ub
 
 ##### Windows の場合
 
-- **ステップ 1.** **[このリンク](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** をクリックして **rpiboot セットアップインストーラー** をダウンロードし、必要なドライバーとブートツールをインストールします
+- **ステップ 1.** **[このリンク](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** をクリックして **rpiboot セットアップインストーラ** をダウンロードし、必要なドライバとブートツールをインストールします
 
 - **ステップ 2.** USB Type-C ケーブルで reTerminal を PC に接続します
 
-Windows がハードウェアを検出し、必要なドライバーをインストールします
+Windows がハードウェアを見つけて必要なドライバをインストールします
 
 - **ステップ 3.** 以前にインストールした **rpiboot** ツールを検索して開きます
 
-- **ステップ 4.** **ファイルエクスプローラー** を開くと、Computer Module 4 の eMMC が **USB マスストレージデバイス** として表示されます
+- **ステップ 4.** **ファイルエクスプローラ** を開くと、Computer Module 4 の eMMC が **USB マスストレージデバイス** として表示されます
 
 - **ステップ 5.** **[このリンク](https://www.raspberrypi.org/software/)** にアクセスして **Raspberry Pi Imager** ソフトウェアをダウンロードします
 
@@ -379,12 +379,12 @@ Windows がハードウェアを検出し、必要なドライバーをインス
 - **ステップ 8.** **CHOOSE OS** をクリックして希望する OS を選択します
 
 :::note
-Raspbian OS をインストールしようとしている場合、テストを実施した結果、**Bullseye** の *32-bit と 64-bit* の両方のバージョンが reTerminal で [**黒い画面の問題**](https://wiki.seeedstudio.com/ja/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal) に遭遇することなく正常に動作することがわかりました。さらに、新しい **Bookworm** *64-bit* バージョンもテストしており、reTerminal でスムーズに機能します。
+Raspbian OS をインストールしようとしている場合、テストを実施した結果、**Bullseye** の *32 ビットと 64 ビット* の両方のバージョンが reTerminal で [**黒い画面の問題**](https://wiki.seeedstudio.com/ja/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal) に遭遇することなく正常に動作することがわかりました。さらに、新しい **Bookworm** *64 ビット* バージョンもテストしており、reTerminal でスムーズに機能します。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意：** **Other general purpose OS** に移動することで **64-bit Ubuntu** などの他の OS を選択できます
+**注意：** **Other general purpose OS** に移動することで **64 ビット Ubuntu** などの他の OS を選択できます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
@@ -394,7 +394,7 @@ Raspbian OS をインストールしようとしている場合、テストを�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-フラッシュプロセスが完了するまで数分間お待ちください。
+フラッシュプロセスが完了するまで数分お待ちください。
 
 - **ステップ 11.** **ブートモードスイッチ** を元の位置に戻し、reTerminal シェルを組み立てます
 
@@ -456,7 +456,7 @@ sudo ./rpiboot
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意：** **Other general purpose OS** に移動することで **64-bit Ubuntu** などの OS を選択できます
+**注意：** **Other general purpose OS** に移動することで **64 ビット Ubuntu** などの OS を選択できます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
@@ -466,7 +466,7 @@ sudo ./rpiboot
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-フラッシュプロセスが完了するまで数分間お待ちください。
+フラッシュプロセスが完了するまで数分お待ちください。
 
 - **ステップ 13.** **ブートモードスイッチ** を元の位置に戻し、reTerminal シェルを組み立てます
 
@@ -515,7 +515,7 @@ make
 sudo ./rpiboot
 ```
 
-- **ステップ 7.** USB Type-Cケーブルを使用してreTerminalをPCに接続します
+- **ステップ 7.** USB Type-CケーブルでreTerminalをPCに接続します
 
 - **ステップ 8.** [このリンク](https://www.raspberrypi.org/software/)にアクセスして**Raspberry Pi Imager**ソフトウェアをダウンロードします
 
@@ -693,7 +693,7 @@ sudo reboot
 
 :::caution
 
-最新のbookwormバージョンのイメージをインストールする場合は、advance optionボタンをクリックして設定を行わないでください。初期設定のためにこのインターフェースに入らないでください。
+最新のbookwormバージョンのイメージをインストールする場合は、アドバンスオプションボタンをクリックして設定を行わないでください。初期設定のためにこのインターフェースに入らないでください。
 そうしないと、予期しないドライバーエラーが発生する可能性があります！！！
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/notice.png" alt="pir" width="450" height="auto"/></p>
