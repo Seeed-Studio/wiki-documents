@@ -1,5 +1,4 @@
 # **⼿把⼿教你⽤ ESP32S3 + reSpeaker 打造属于你的云端 AI Xiaozhi 语⾳助⼿**
-Languages: [English](README_english.md) | 中文 (当前文档)
 
 > **目标**：让Esp32S3与 reSpeaker XVF3800协同使用，并在其上搭载小智实现云计算大模型部署。
 > [项目源码](https://github.com/Seeed-Projects/Xiaozhi_Esp32S3_reSpeaker)
@@ -234,4 +233,5 @@ idf.py monitor
    ![登录成功](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/workbench.png)
    完成以上所有步骤后，你的 reSpeaker-Xiaozhi 设备即可正常工作。
    ![历史对话](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/history_talk.png)
+
 
