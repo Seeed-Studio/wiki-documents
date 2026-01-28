@@ -50,9 +50,9 @@ import TabItem from '@theme/TabItem';
 
 ## はじめに
 
-Seeed Studio XIAO シリーズは小型の開発ボードで、類似したハードウェア構造を共有しており、そのサイズは文字通り親指サイズです。ここでのコードネーム「XIAO」は、その半分の特徴である「Tiny」を表し、もう半分は「Puissant」となります。
+Seeed Studio XIAO シリーズは小型の開発ボードで、類似したハードウェア構造を共有しており、そのサイズは文字通り親指サイズです。コードネーム「XIAO」は、その半分の特徴である「Tiny（小さい）」を表し、もう半分は「Puissant（強力）」を表します。
 
-Seeed Studio XIAO ESP32S3 Sense は、カメラセンサー、デジタルマイクロフォン、SD カードサポートを統合しています。組み込み ML コンピューティングパワーと撮影機能を組み合わせることで、この開発ボードはインテリジェント音声およびビジョン AI を始めるための優れたツールとなります。
+Seeed Studio XIAO ESP32S3 Sense は、カメラセンサー、デジタルマイクロフォン、SD カードサポートを統合しています。組み込み ML 計算能力と撮影機能を組み合わせることで、この開発ボードはインテリジェント音声・視覚 AI を始めるための優れたツールとなります。
 
 :::tip
 **OV2640 カメラ**は製造中止となり、その後の XIAO ESP32S3 Sense では **OV3660 カメラ**モデルを使用しています。ただし、カメラ用の Wiki サンプルコードは引き続き適用されます。
@@ -89,9 +89,9 @@ Seeed Studio XIAO ESP32S3 Sense は、カメラセンサー、デジタルマイ
  </tr>
     <tr>
      <th>インターフェース</th>
-     <td>1x UART、1x IIC、1x IIS、1x SPI、11x GPIOs (PWM)、9x ADC、1x ユーザー LED、1x 充電 LED  <br></br> 1x リセットボタン、1x ブートボタン</td>
-        <td>1x UART、1x IIC、1x IIS、1x SPI、11x GPIOs (PWM)、9x ADC、1x ユーザー LED、1x 充電 LED、1x B2B コネクタ（追加 GPIO 2 個付き）、1x リセットボタン、1x ブートボタン</td>
-  <td><strong>2</strong>x UART、1x IIC、1x IIS、<strong>2</strong>x SPI、<strong>18</strong>x GPIOs (PWM)、9x ADC、1x ユーザー LED、1x 充電 LED、1x B2B コネクタ、1x リセットボタン、1x ブートボタン</td>
+     <td>1x UART、1x IIC、1x IIS、1x SPI、11x GPIO（PWM）、9x ADC、1x ユーザー LED、1x 充電 LED  <br></br> 1x リセットボタン、1x ブートボタン</td>
+        <td>1x UART、1x IIC、1x IIS、1x SPI、11x GPIO（PWM）、9x ADC、1x ユーザー LED、1x 充電 LED、1x B2B コネクタ（追加 GPIO 2 個付き）、1x リセットボタン、1x ブートボタン</td>
+  <td><strong>2</strong>x UART、1x IIC、1x IIS、<strong>2</strong>x SPI、<strong>18</strong>x GPIO（PWM）、9x ADC、1x ユーザー LED、1x 充電 LED、1x B2B コネクタ、1x リセットボタン、1x ブートボタン</td>
  </tr>
     <tr>
      <th>寸法</th>
@@ -228,10 +228,10 @@ Seeed Studio XIAO ESP32S3 Sense は、カメラセンサー、デジタルマイ
 | MTDI                    |                  | GPIO41                                                 |                    | JTAG、ADC                            |
 | MTCK                    |                  | GPIO39                                                 |                    | JTAG、ADC                            |
 | MTMS                    |                  | GPIO42                                                 |                    | JTAG、ADC                            |
-| Reset                   |                  | CHIP_EN                                                |                    | EN                                   |
+| Reset                   |                  | EN                                                |                    | EN                                   |
 | Boot                    |                  | GPIO0                                                  |                    | ブートモード開始                      |
 | U.FL-R-SMT1             |                  | LNA_IN                                                 |                    | UFL アンテナ                          |
-| CHARGE_LED              |                  | VCC_3V3                                                |                    | CHG-LED                              |
+| CHARGE_LED              |                  |                                                |                    | CHG-LED                              |
 | USER_LED                |                  | GPIO21                                                 |                    | ユーザーライト                           |
 | Digital microphone_CLK  |                  | GPIO42                                                 |                    | MIC 用 PDM クロックピン                |
 | Digital microphone_DATA |                  | GPIO41                                                 |                    | MIC 用 PDM データピン                 |
@@ -341,7 +341,7 @@ XIAO ESP32-S3はGPIO41とGPIO42をピンA11とA12に割り当てていますが�
 
 ### ストラッピングピン
 
-起動またはリセット時に、チップはいくつかの初期設定パラメータを必要とします。例えば、どのブートモードでチップをロードするか、フラッシュメモリの電圧などです。これらのパラメータはストラッピングピンを介して渡されます。リセット後、ストラッピングピンは通常のIOピンとして動作します。
+各起動時またはリセット時に、チップはいくつかの初期設定パラメータを必要とします。例えば、どのブートモードでチップをロードするか、フラッシュメモリの電圧などです。これらのパラメータはストラッピングピンを介して渡されます。リセット後、ストラッピングピンは通常のIOピンとして動作します。
 
 チップリセット時に指定されたストラッピングピンによって制御されるパラメータは以下の通りです：
 
@@ -371,13 +371,13 @@ XIAO ESP32S3をより早く使い始められるように、以下のハード�
 
 1. **XIAO ESP32S3**
 
-通常版にプリセットされている工場プログラムは、タッチピン点灯プログラムです。XIAOに電源を入れて、いくつかのピンにタッチすると、オレンジ色のユーザーインジケータが点灯します。
+通常版にプリセットされている工場プログラムは、タッチピンライトアッププログラムです。XIAOに電源を入れて、そのピンのいくつかに触れると、オレンジ色のユーザーインジケータが点灯します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/105.jpg" style={{width:600, height:'auto'}}/></div>
 
 2. **XIAO ESP32S3 Sense**
 
-XIAO ESP32S3 SenseにはWebCamサンプルプログラムがプリインストールされています。XIAOに適切なアンテナを取り付けて電源を入れることで、このプログラムを使用できます。詳細については、このプログラムに関するWikiをお読みください。
+XIAO ESP32S3 SenseにはWebCamサンプルプログラムがプリインストールされています。XIAOに適切なアンテナを取り付けて電源を入れることで、このプログラムを使用できます。詳細については、このプログラムに関するWikiを読むことができます。
 
 - [ビデオストリーミング](https://wiki.seeedstudio.com/ja/xiao_esp32s3_camera_usage#project-ii-video-streaming)
 
@@ -438,7 +438,7 @@ Wikiのカメラに関するすべてのプログラムは、OV5640、OV2640、O
 <details>
 <summary>性能比較を表示するにはクリック</summary>
 
-テストでは、元のセットアップに対するアップグレードされたヒートシンクの利点が実証されました：
+私たちのテストでは、元のセットアップに対するアップグレードされたヒートシンクの利点が実証されています：
 
 | テストサンプル           | 背面の最高温度 |
 | --------------------- | ---------------------------- |
@@ -456,8 +456,8 @@ Wikiのカメラに関するすべてのプログラムは、OV5640、OV2640、O
 
 ***主要な結果：***
 
-- ヒートシンクを装備したデバイスは1時間以上安定して動作し、性能低下なしに最高温度に達しました。
-- WebCameraをSVGA（800x600）モードでテストした際：
+- ヒートシンクを装備したデバイスは1時間以上安定した動作を維持し、性能低下なしに最高温度に達しました。
+- SVGA（800x600）モードでWebCameraをテストした際：
   - XIAO ESP32S3はスムーズに動作しました。
   - ビデオ出力は流暢でした。
   - 温度が大幅に低下し、フレームドロップや切断なしに信頼性の高い性能を確保しました。
@@ -469,13 +469,13 @@ Wikiのカメラに関するすべてのプログラムは、OV5640、OV2640、O
 - 選択したヒートシンク（シングルまたはデュアル）
 - きれいなESP32S3
 
-開始前に、デバイスの電源を切り、すべての電源から切断されていることを確認してください。
+開始前にデバイスの電源を切り、すべての電源から切断されていることを確認してください。
 
 :::tip notice
 
 ***購入に関する注意：*** XIAO ESP32S3 Senseを購入する際は、**カメラが装備されたモデル**のみにヒートシンクが含まれていることに注意することが重要です。カメラが含まれていないバージョンのESP32S3をお持ちの場合は、ヒートシンクを別途購入する必要があります。
 
-***取り付けのヒント：*** ESP32S3チップの直上にあるThermal PADをヒートシンクで覆うことを優先してください。これは主要な熱源です。適切な位置合わせにより最適な放熱が確保され、BATピンをできるだけ妨げないようにしてください。
+***取り付けのヒント：*** ESP32S3チップの直上にあるサーマルPADをヒートシンクで覆うことを優先してください。これは主要な熱源です。適切な位置合わせにより最適な放熱が確保され、BATピンをできるだけ妨げないようにしてください。
 :::
 
 それでは、取り付けプロセスを開始しましょう：
@@ -491,14 +491,14 @@ Wikiのカメラに関するすべてのプログラムは、OV5640、OV2640、O
 <Tabs>
   <TabItem value="single" label="シングルヒートシンク" default>
 
-このより小さくコンパクトなオプションは通常の使用には十分で、すべてのGPIOピンへの完全なアクセスを可能にします。
+この小型でコンパクトなオプションは通常の使用には十分で、すべてのGPIOピンへの完全なアクセスを可能にします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-single-heat-sink-install.jpg" style={{width:400, height:'auto'}}/></div>
 
   </TabItem>
   <TabItem value="dual" label="デュアルヒートシンク">
 
-より大きなオプションは優れた冷却性能を提供し、高性能タスクに理想的ですが、一部のGPIOピンへのアクセスが制限される場合があります。
+大型のオプションは優れた冷却性能を提供し、高性能タスクに理想的ですが、一部のGPIOピンへのアクセスが制限される場合があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-dual-heat-sink-install.png" style={{width:400, height:'auto'}}/></div>
 
@@ -509,9 +509,9 @@ XIAO ESP32S3 PlusのBATピンを使用したい場合、このケースのデュ
   </TabItem>
 </Tabs>
 
-***ステップ 3: 最終検査とテスト***
+***ステップ 3：最終検査とテスト***
 
-設置後、ショートサーキットのリスクがなく、すべてが適切に固定されていることを確認してください。ヒートシンクが適切に配置され、しっかりと取り付けられていることを確認してください。
+設置後、ショート回路のリスクがなく、すべてが適切に固定されていることを確認してください。ヒートシンクが適切に配置され、しっかりと取り付けられていることを確認してください。
 
 ### ソフトウェアの準備
 
@@ -552,7 +552,7 @@ XIAO ESP32S3のオンボードパッケージには、バージョン**2.0.8**�
 
 - **ステップ 4.** ボードとポートを選択します。
 
-Arduino IDEの上部で、ポートを直接選択できます。これは通常COM3以上になります（**COM1**と**COM2**は通常ハードウェアシリアルポート用に予約されています）。
+Arduino IDEの上部で、ポートを直接選択できます。これはおそらくCOM3以上になります（**COM1**と**COM2**は通常ハードウェアシリアルポート用に予約されています）。
 
 </TabItem>
 <TabItem value='Mac OS向け'>
@@ -582,7 +582,7 @@ XIAO ESP32S3のオンボードパッケージには、バージョン**2.0.8**�
 
 - **ステップ 4.** ボードとポートを選択します。
 
-Arduino IDEの上部で、ポートを直接選択できます。これは通常、名前に「usbmodem」または「usbserial」が含まれているものです。不明な場合は、プラグを抜いて再度接続し、どのポートが消えるかを確認してください。
+Arduino IDEの上部で、ポートを直接選択できます。これはおそらく名前に「usbmodem」または「usbserial」が含まれているものです。不明な場合は、プラグを抜いて再度接続し、どのポートが消えるかを確認してください。
 
 </TabItem>
 </Tabs>
@@ -665,7 +665,7 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 
 ### 最初のBlinkプログラムを実行する
 
-これまでに、XIAO ESP32S3の機能とハードウェアについて十分に理解していただけたと思います。次に、最もシンプルなBlinkプログラムを例に、XIAO ESP32S3の最初の点滅を実行してみましょう！
+ここまでで、XIAO ESP32S3の機能とハードウェアについて十分理解していただけたと思います。次に、最もシンプルなBlinkプログラムを例に、XIAO ESP32S3の最初の点滅を実行してみましょう！
 
 - **ステップ 1.** Arduinoアプリケーションを起動します。
 - **ステップ 2.** **File > Examples > 01.Basics > Blink**に移動し、プログラムを開きます。
@@ -693,14 +693,14 @@ XIAO ESP32S3のユーザーLEDピンがハイレベルに設定されている�
 
 ## バッテリー使用
 
-XIAO ESP32S3シリーズには内蔵電源管理チップがあり、バッテリーを使用してXIAO ESP32S3を独立して電源供給したり、XIAO ESP32S3のUSBポート経由でバッテリーを充電したりできます。
+XIAO ESP32S3 シリーズには内蔵電源管理チップがあり、バッテリーを使用してXIAO ESP32S3を独立して電源供給したり、XIAO ESP32S3のUSBポート経由でバッテリーを充電したりできます。
 
-XIAOにバッテリーを接続したい場合は、認定された充電式3.7Vリチウムバッテリーの購入をお勧めします。バッテリーをはんだ付けする際は、プラス端子とマイナス端子を注意深く区別してください。電源のマイナス端子はUSBポートに最も近い側で、電源のプラス端子はUSBポートから離れた側です。
+XIAOにバッテリーを接続したい場合は、認定された充電式3.7Vリチウムバッテリーの購入をお勧めします。バッテリーをはんだ付けする際は、正極と負極の端子を注意深く区別してください。電源の負極端子はUSBポートに最も近い側で、電源の正極端子はUSBポートから離れた側です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/16.jpg" style={{width:400, height:'auto'}}/></div>
 
 :::note
-XIAO ESP32S3のすべてのGPIOピンには独自の機能が割り当てられているため、バッテリーピン用に設定されたGPIOはありません。これは、GPIOの1つのアナログ値を読み取ることによって、ソフトウェアレベルでバッテリー電圧を取得できないことを意味します。必要に応じて、バッテリーのプラス端子とマイナス端子を2つのピンに接続してバッテリー電圧を測定することを検討できます。
+XIAO ESP32S3のすべてのGPIOピンには独自の機能が割り当てられているため、バッテリーピン用に設定されたGPIOはありません。これは、GPIOの1つのアナログ値を読み取ることによって、ソフトウェアレベルでバッテリー電圧を取得できないことを意味します。必要に応じて、バッテリーの正極と負極の端子を2つのピンに接続してバッテリー電圧を測定することを検討できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/17.png" style={{width:800, height:'auto'}}/></div>
 :::
@@ -754,8 +754,8 @@ XIAO ESP32S3のUSBドライブにアクセスし、変換されたUF2ファイ�
 
 :::tip
 
-1. プログラムが正しくコンパイルされ実行されていることを確認してください。そうでなければ、UF2ファイルが期待通りに実行されない可能性があります。
-2. BlinkのサンプルUF2ファイルが**xiaos3-bin2uf2**フォルダに提供されています。アップロードすると、XIAO ESP32S3のオレンジLEDが点滅します。このUF2ファイルをテストとして使用できます。
+1. プログラムが正しくコンパイルされ、実行されていることを確認してください。そうでなければ、UF2ファイルが期待通りに実行されない可能性があります。
+2. BlinkのサンプルUF2ファイルが**xiaos3-bin2uf2**フォルダに提供されています。アップロードすると、XIAO ESP32S3のオレンジ色のLEDが点滅します。このUF2ファイルをテストとして使用できます。
 
 :::
 
@@ -863,16 +863,16 @@ XIAO ESP32S3は高い統合性のため、すべてのXIAOの中で最も複雑�
 - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3Dモデル](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip)
 - 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 Sense フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-### Seeed Studio XIAO ESP32S3 Plus 用
+### Seeed Studio XIAO ESP32S3 Plus用
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Plus 回路図](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_SCH_PDF.pdf)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD ライブラリ](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library2.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCADライブラリ](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library2.zip)
 - **[DXF]** [Seeed Studio XIAO ESP32S3 Plus DXF寸法図（上面）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf)
 - **[DXF]** [Seeed Studio XIAO ESP32S3 Plus DXF寸法図（下面）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf)
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 Plus ピン配置シート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_Pinout.xlsx)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD ファイル](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1_SCH_PCB.zip)
-- **[ZIP]** [Seeed Studio XIAO Plus ベース（底面パッド引き出し付き）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
-- **[ZIP]** [Seeed Studio XIAO Plus ベース（底面パッド引き出しなし）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCADファイル](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1_SCH_PCB.zip)
+- **[ZIP]** [Seeed Studio XIAO Plus Base（底面パッド引き出し付き）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
+- **[ZIP]** [Seeed Studio XIAO Plus Base（底面パッド引き出しなし）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
 - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3Dモデル](https://grabcad.com/library/seeed-studio-xiao-esp32s3-plus-1/files)
 
 ### Seeed Studio XIAO ESP32S3 Sense カメラ用

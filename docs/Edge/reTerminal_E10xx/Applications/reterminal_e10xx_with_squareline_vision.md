@@ -30,11 +30,7 @@ With SquareLine Vision, you can go from concept to interactive embedded UI proto
 
 ### Materials Required
 
-To complete this tutorial, please prepare one of the following reTerminal E Series devices:
-
-:::note
-As of now, SquareLine Vision is only compatible with reTerminal E1002 and does not support reTerminal E1001 yet. However, the official team is already working on the necessary adaptations.
-:::
+To complete this tutorial, please prepare one of the following reTerminal E Series devices, E1001 is monochrome and E1002 is full color:
 
 <div class="table-center">
   <table align="center">
@@ -97,7 +93,7 @@ The fixed settings of this project is:
 - `LVGL version`: 9.1
 - `Theme`: Light
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
 We have supported the SenseCAP Watcher and reTerminal E1002 devices. In the future, we will also support more products from Seeed Studio.
@@ -111,16 +107,23 @@ If you already have a .slvp file, you can directly import it as a project. We ha
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Seeed Weather 7 epaper</th>
-      <th>Seeed Weather 13 epaper</th>
+      <th>Monochrome Weather</th>
+      <th>Full color Weather</th>
+      <th>Full color Weather 2</th>
     </tr>
     <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_1.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_2.png" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_3.png" style={{width:250, height:'auto'}}/></div></td>
     </tr>
     <tr>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Seeed Weather 7 epaper.slvp" target="_blank">
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+        </a>
+      </div></td>
+      <td><div align="center">
+        <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Paper_Weather.slvp" target="_blank">
         <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
         </a>
       </div></td>
@@ -252,15 +255,21 @@ If this is your first time using PlatformIO, we highly recommend you to refer to
 
 ### Reference routine
 
-We have provided two existing routines, each with a different UI interface that can display the real-time weather dashboard. They also integrate with [OpenWeather](https://openweathermap.org/)(It is a service platform that provides global weather data) to obtain real-time climate changes. All you need to do is obtain the API KEY from OpenWeather and connect to WIFI to use them normally.
+We have provided three existing templates, each with a different UI interface that can display the real-time weather dashboard. They also integrate with [OpenWeather](https://openweathermap.org/)(It is a service platform that provides global weather data) to obtain real-time climate changes. All you need to do is obtain the API KEY from OpenWeather and connect to WIFI to use them normally.
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Seeed Weather 7 epaper</th>
-      <th>Seeed Weather 13 epaper</th>
+      <th>Monochrome Weather </th>
+      <th>Full Color Weather </th>
+      <th>Full Color Weather 2</th>
     </tr>
     <tr>
+      <td><div align="center">
+        <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/res/weather_gray.zip" target="_blank">
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
+        </a>
+      </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/weather_7_fix.zip" target="_blank">
         <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to get</button></p>
@@ -296,10 +305,12 @@ We have provided two existing routines, each with a different UI interface that 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Seeed Weather 7 epaper</th>
-      <th>Seeed Weather 13 epaper</th>
+      <th>Monochrome Weather </th>
+      <th>Full Color Weather </th>
+      <th>Full Color Weather 2</th>
     </tr>
     <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/squareline_BW_template.jpeg" style={{width:350, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_4.jpg" style={{width:350, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_3.jpg" style={{width:350, height:'auto'}}/></div></td>
     </tr>
