@@ -1412,14 +1412,62 @@ export const PrepareRequirementsJ501 = ({ lang = 'en' }) => {
     <div>
       <ul>
         <li>{texts.ubuntuHost}</li>
-        <li>{lang === 'zh' ? 'reServer Industrial J501载板' : 'reServer Industrial J501 Carrier Board'}</li>
-        <li>{lang === 'zh' ? 'NVIDIA® Jetson AGX Orin™ 模块 32GB/64GB' : 'NVIDIA® Jetson AGX Orin™ Module 32GB/64GB'}</li>
-        <li>{lang === 'zh' ? 'AGX Orin主动风扇' : 'AGX Orin Active Fan'}</li>
-        <li>{lang === 'zh' ? 'NVMe M.2 2280内部SSD' : 'NVMe M.2 2280 Internal SSD'}</li>
+        <li>reServer Industrial J501 Carrier Board</li>
+        <li>NVIDIA® Jetson AGX Orin™ Module 32GB/64GB</li>
+        <li>AGX Orin Active Fan</li>
+        <li>NVMe M.2 2280 Internal SSD</li>
         <li>{texts.usbTypeC}</li>
       </ul>
 
       <HostEnvironmentNote lang={lang} />
+    </div>
+  );
+};
+
+export const PrepareRequirementsJ501Mini = ({ lang = 'en' }) => {
+  const product = useJetsonStore(state => state.product);
+  const texts = content[lang] || content.en;
+
+  const allowed = ['j501mini-agx-orin-64g', 'j501mini-agx-orin-32g'];
+  if (!allowed.includes(product)) {
+    return null;
+  }
+
+  return (
+    <div>
+      <ul>
+        <li>{texts.ubuntuHost}</li>
+        <li>reComputer Robotics J501 Mini Carrier Board</li>
+        <li>NVIDIA® Jetson AGX Orin™ Module 32GB/64GB</li>
+        <li>AGX Orin Active Fan</li>
+        <li>NVMe M.2 2280 Internal SSD</li>
+        <li>{texts.usbTypeC}</li>
+      </ul>
+
+      <HostEnvironmentNote1 lang={lang} />
+    </div>
+  );
+};
+
+export const PrepareRequirementsJ501Robotics = ({ lang = 'en' }) => {
+  const product = useJetsonStore(state => state.product);
+  const texts = content[lang] || content.en;
+
+  const allowed = ['j501-agx-orin-64g', 'j501-agx-orin-32g'];
+  if (!allowed.includes(product)) {
+    return null;
+  }
+
+  return (
+    <div>
+      <ul>
+        <li>{texts.ubuntuHost}</li>
+        <li>reComputer Robotics J501 Carrier Board</li>
+        <li>NVIDIA® Jetson AGX Orin™ Module 32GB/64GB</li>
+        <li>{texts.usbTypeC}</li>
+      </ul>
+
+      <HostEnvironmentNote1 lang={lang} />
     </div>
   );
 };
@@ -1460,7 +1508,7 @@ export const RecoveryJ501 = ({ lang = 'en' }) => {
             width="800"
             height="450"
             src="https://www.youtube.com/embed/CGMGZGqZPKM"
-            title={lang === 'zh' ? 'J501进入强制恢复模式' : 'J501 Enter Force Recovery Mode'}
+            title="J501 Enter Force Recovery Mode"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
@@ -1501,6 +1549,204 @@ export const RecoveryJ501 = ({ lang = 'en' }) => {
           <li>{texts.ensureRecoverySimple}</li>
         </ul>
       </p>
+      <p>{texts.afterRecoveryMode}</p>
+      <CodeBlock language="bash">lsusb</CodeBlock>
+
+      <p>{texts.recoveryModeIds}</p>
+      <ul>
+        <li>
+          {texts.agxOrin32gb} <code>0955:7223</code> NVidia Corp
+        </li>
+        <li>
+          {texts.agxOrin64gb} <code>0955:7023</code> NVidia Corp
+        </li>
+      </ul>
+
+      <p>{texts.imageExampleAgx}</p>
+      <div style={{ textAlign: 'center', margin: '1em 0' }}>
+        <img
+          width={800}
+          src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png"
+          alt={texts.lsusbResult}
+        />
+      </div>
+    </div>
+  );
+};
+
+export const RecoveryJ501Mini = ({ lang = 'en' }) => {
+  const product = useJetsonStore(state => state.product);
+  const texts = content[lang] || content.en;
+
+  const allowed = ['j501mini-agx-orin-64g', 'j501mini-agx-orin-32g'];
+  if (!allowed.includes(product)) {
+    return null;
+  }
+
+  return (
+    <div>
+      <div className="alert alert--info" role="alert" style={{ marginBottom: '1em' }}>
+        {texts.recoveryModeNoteNext}
+        <br />
+        {texts.recoveryModeClickStep}
+      </div>
+
+      <details style={{ marginBottom: '1em' }}>
+        <summary
+          style={{
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            backgroundColor: 'var(--ifm-background-surface-color)',
+            padding: '0.6em 1em',
+            border: '1px solid #c3dafe',
+            borderRadius: '6px',
+            fontSize: '1.05em'
+          }}
+        >
+          {texts.stepByStep}
+        </summary>
+        
+        <p>{texts.recoveryIntro}</p>
+
+        <div style={{ textAlign: 'center', margin: '1em 0' }}>
+          <img
+            width={600}
+            src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png"
+            alt={texts.switchToReset}
+          />
+        </div>
+
+        <ul>
+          <li>
+            <strong>{texts.step1}</strong> Keep pressing button to the RESET mode.
+          </li>
+          <li>
+            <strong>{texts.step2}</strong> Power up the carrier board by connecting the power cable, then release REC button.
+          </li>
+          <li>
+            <strong>{texts.step3}</strong> {texts.connectUsbc}
+          </li>
+        </ul>
+
+        <div style={{ textAlign: 'center', margin: '1em 0' }}>
+          <img
+            width={600}
+            src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png"
+            alt="Flash Port"
+          />
+        </div>
+
+        <ul>
+          <li>
+            <strong>{texts.step4}</strong> {texts.runLsusb}
+          </li>
+        </ul>
+      </details>
+      
+      <p>
+        {texts.deviceNotDetected}
+        <ul>
+          <li>{texts.reconnectUsb}</li>
+          <li>{texts.differentPort}</li>
+          <li>{texts.ensureRecoverySimple}</li>
+        </ul>
+      </p>
+      
+      <p>{texts.afterRecoveryMode}</p>
+      <CodeBlock language="bash">lsusb</CodeBlock>
+
+      <p>{texts.recoveryModeIds}</p>
+      <ul>
+        <li>
+          {texts.agxOrin32gb} <code>0955:7223</code> NVidia Corp
+        </li>
+        <li>
+          {texts.agxOrin64gb} <code>0955:7023</code> NVidia Corp
+        </li>
+      </ul>
+
+      <p>{texts.imageExampleAgx}</p>
+      <div style={{ textAlign: 'center', margin: '1em 0' }}>
+        <img
+          width={800}
+          src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/lsusb.png"
+          alt={texts.lsusbResult}
+        />
+      </div>
+    </div>
+  );
+};
+
+export const RecoveryJ501Robotics = ({ lang = 'en' }) => {
+  const product = useJetsonStore(state => state.product);
+  const texts = content[lang] || content.en;
+
+  const allowed = ['j501-agx-orin-64g', 'j501-agx-orin-32g'];
+  if (!allowed.includes(product)) {
+    return null;
+  }
+
+  return (
+    <div>
+      <div className="alert alert--info" role="alert" style={{ marginBottom: '1em' }}>
+        {texts.recoveryModeNoteNext}
+        <br />
+        {texts.recoveryModeClickStep}
+      </div>
+
+      <details style={{ marginBottom: '1em' }}>
+        <summary
+          style={{
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            backgroundColor: 'var(--ifm-background-surface-color)',
+            padding: '0.6em 1em',
+            border: '1px solid #c3dafe',
+            borderRadius: '6px',
+            fontSize: '1.05em'
+          }}
+        >
+          {texts.stepByStep}
+        </summary>
+        
+        <p>{texts.recoveryIntro}</p>
+
+        <div style={{ textAlign: 'center', margin: '1em 0' }}>
+          <img
+            width={600}
+            src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/flash_1.png"
+            alt="USB Connection"
+          />
+        </div>
+
+        <ul>
+          <li>
+            <strong>{texts.step1}</strong> Connect a USB Type-C data transmission cable between USB2.0 DEVICE port and the Ubuntu host PC.
+          </li>
+          <li>
+            <strong>{texts.step2}</strong> Use a pin and insert into the RECOVERY hole to press recovery button and while holding this.
+          </li>
+          <li>
+            <strong>{texts.step3}</strong> Connect the power supply.
+          </li>
+          <li>
+            <strong>{texts.step4}</strong> Release the recovery button.
+          </li>
+          <li>
+            <strong>{texts.step5}</strong> {texts.runLsusb}
+          </li>
+        </ul>
+      </details>
+      
+      <p>
+        {texts.deviceNotDetected}
+        <ul>
+          <li>{texts.reconnectUsb}</li>
+          <li>{texts.differentPort}</li>
+          <li>{texts.ensureRecoverySimple}</li>
+        </ul>
+      </p>
+      
       <p>{texts.afterRecoveryMode}</p>
       <CodeBlock language="bash">lsusb</CodeBlock>
 
