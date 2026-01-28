@@ -1,28 +1,38 @@
 ---
-description: Flashear Jetpack al producto seleccionado. Esta página actualmente incluye un subconjunto de los productos.
-title: Flashear Jetpack al Producto Seleccionado
+description: Flashear BSP con Jetpack al producto seleccionado. Esta página actualmente incluye un subconjunto de los productos.
+title: Flashear BSP con Jetpack a Jetson Seleccionado
 keywords:
   - jetson
   - flash
   - jetapck
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/flash/jetpack_to_selected_product
+sku: E2025032601,114110314,110110191,100020039,114110311,114110327,102111001,114993489,110110146,114110247,E24081601
 last_update:
   date: 06/25/2025
   author: robotics group
 ---
 
 import OneDriveLink from '@site/src/components/jetson/DownloadLink';
-import { VerifySHA256, ExtractFile, FlashCMD} from '@site/src/components/jetson/FlashCodeBlock'
-import { PrepareRequirementsMini,PrepareRequirementsRobotics, PrepareRequirementsIndustrial, PrepareRequirementsJ501,
-         PrepareRequirementsSuper,PrepareRequirementsClassic,PrepareRequirementsReserver,ExtractAndFlash} from '@site/src/components/jetson/FlashCodeBlock' 
-import { ProductSelect } from '@site/src/components/jetson/JetsonSelect'
-import { RecoveryRobotics, RecoveryMini, RecoverySuper, RecoveryClassic, RecoveryIndustrial, RecoveryReserver, RecoveryJ501} from '@site/src/components/jetson/FlashCodeBlock' 
+import { VerifySHA256, ExtractFile, FlashCMD} from '@site/src/components/jetson/FlashCodeBlock';
+import { PrepareRequirementsMini,PrepareRequirementsRobotics, PrepareRequirementsIndustrial, PrepareRequirementsJ501,PrepareRequirementsJ501Mini,PrepareRequirementsJ501Robotics,
+         PrepareRequirementsSuper,PrepareRequirementsClassic,PrepareRequirementsReserver,ExtractAndFlash} from '@site/src/components/jetson/FlashCodeBlock'; 
+import { ProductSelect } from '@site/src/components/jetson/JetsonSelect';
+import { RecoveryRobotics, RecoveryMini, RecoverySuper, RecoveryClassic, RecoveryIndustrial, RecoveryReserver, RecoveryJ501, RecoveryJ501Mini, RecoveryJ501Robotics} from '@site/src/components/jetson/FlashCodeBlock'; 
 
-<!--
+<style>
+{`
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+`}
+</style> 
+
+{/*
   The Jetson drop down selection
   To select the product and Jetson Linux (JetPack SDK) Version
---->
+*/}
 
 
 export const productOptions = [
@@ -221,138 +231,356 @@ export const productOptions = [
     l4t: ["36.4.3 (GMSL❌)","36.4.3 (GMSL✅)","36.3.0 (GMSL❌)","36.3.0 (GMSL✅)", "35.5.0 (GMSL❌)","35.5.0 (GMSL✅)"],
     img: 'https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991854-reserver-industrial-j501-carrier-board-for-jetson-agx-orin-45font_2.jpg',
     interfaceUsage: 'https://wiki.seeedstudio.com/es/j501_carrier_board_interfaces_usage/'
+  },
+  { 
+    value: 'j501mini-agx-orin-64g', 
+    label: 'reComputer Robotics J501 Mini AGX-Orin 64GB',
+    l4t: ["36.4.4 (GMSL✅)"],
+    img: 'https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg',
+    interfaceUsage: 'https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/'
+  },
+  { 
+    value: 'j501mini-agx-orin-32g', 
+    label: 'reComputer Robotics J501 Mini AGX-Orin 32GB',
+    l4t: ["36.4.4 (GMSL✅)"],
+    img: 'https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg',
+    interfaceUsage: 'https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/'
+  },
+  { 
+    value: 'j501-agx-orin-64g', 
+    label: 'reComputer Robotics J501 AGX-Orin 64GB',
+    l4t: ["36.4.4 (GMSL✅)"],
+    img: 'https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg',
+    interfaceUsage: 'https://wiki.seeedstudio.com/es/ai_robotics_recomputer_j501_robotics_getting_started/'
+  },
+  { 
+    value: 'j501-agx-orin-32g', 
+    label: 'reComputer Robotics J501 AGX-Orin 32GB',
+    l4t: ["36.4.4 (GMSL✅)"],
+    img: 'https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg',
+    interfaceUsage: 'https://wiki.seeedstudio.com/es/ai_robotics_recomputer_j501_robotics_getting_started/'
   }
 ]
 
-# Flash Jetson Linux
+<div className="hero hero--primary" style={{background: 'linear-gradient(135deg, #003a4a 0%, #8dc21f 100%)', margin: '0 calc(-1 * var(--ifm-spacing-horizontal))', marginBottom: '2rem'}}>
+  <div className="container">
+    <h1 className="hero__title" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap'}}>
+      <span style={{fontSize: '3.5rem', animation: 'pulse 2s infinite'}}>⚡</span>
+      Flash Jetson Linux
+    </h1>
+    <p className="hero__subtitle">
+      Proceso de flasheo optimizado para todos los dispositivos Jetson de Seeed Studio. Selecciona tu producto y sigue los pasos guiados a continuación.
+    </p>
+  </div>
+</div>
 
-Selecciona tu producto y el Jetson Linux que deseas flashear. Esta página actualmente incluye un subconjunto de los productos.
+## 🎯 Selecciona Tu Dispositivo
 
-<!--Mount the Select Components-->
-<ProductSelect options={productOptions} />
+<div className="container margin-bottom--xl">
+  <div 
+    className="text--center margin-bottom--lg" 
+    style={{
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      padding: '2rem 1rem',
+      borderRadius: '12px',
+      color: 'white',
+      boxShadow: '0 8px 32px rgba(102, 126, 234, 0.3)',
+      position: 'relative',
+      overflow: 'hidden'
+    }}
+  >
+    <div style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+      opacity: 0.3
+    }}></div>
+    <div style={{ position: 'relative', zIndex: 1 }}>
+      <h2 style={{
+        fontSize: '2.2rem',
+        fontWeight: '700',
+        margin: '0 0 0.5rem 0',
+        textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+        background: 'linear-gradient(45deg, #ffffff, #f0f8ff)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text'
+      }}>
+        🚀 Elige Tu Dispositivo Jetson
+      </h2>
+      <p style={{
+        fontSize: '1.1rem',
+        margin: 0,
+        opacity: 0.95,
+        fontWeight: '400'
+      }}>
+        Selecciona tu dispositivo y la versión de Linux que quieres flashear
+      </p>
+    </div>
+  </div>
 
-:::note
+  {/* Mount the Select Components */}
+  <ProductSelect options={productOptions} />
 
-JetPack con soporte 🚀 para configuraciones [MAXN super](https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/)
+  <div className="alert alert--info margin-top--lg" style={{
+    background: 'var(--ifm-color-emphasis-100)',
+    border: '1px solid #8dc21f',
+    '--ifm-alert-background-color': 'var(--ifm-color-emphasis-100)',
+    '--ifm-alert-border-color': '#8dc21f'
+  }}>
+    <div className="alert__heading" style={{display: 'flex', alignItems: 'center'}}>
+      <span style={{fontSize: '1.5rem', marginRight: '0.5rem'}}>🚀</span>
+      JetPack 6.2 con Modo Super MAXN
+    </div>
+    <p>Configuraciones de rendimiento mejoradas ahora disponibles para módulos Orin Nano y Orin NX. <a href="https://developer.nvidia.com/blog/nvidia-jetpack-6-2-brings-super-mode-to-nvidia-jetson-orin-nano-and-jetson-orin-nx-modules/" target="_blank">Más información</a></p>
+    <div className="text--center margin-top--md">
+      <a href="https://seeedstudio88-my.sharepoint.com/:x:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EX8k1puq5J1IgMZKYYdmuqgB_EtGjxSB7_-hRjUGjTa0dQ?e=1QSozj" 
+         target="_blank" 
+         className="button button--primary" 
+         style={{
+           background: 'linear-gradient(135deg, #8dc21f 0%, #74b281 100%)', 
+           border: 'none',
+           color: 'white',
+           fontSize: '0.85rem',
+           padding: '0.5rem 0.75rem',
+           whiteSpace: 'nowrap',
+           overflow: 'hidden',
+           textOverflow: 'ellipsis',
+           minWidth: '0'
+         }}>
+        📋 Ver Compatibilidad de Dispositivos
+      </a>
+    </div>
+  </div>
+</div>
 
-Haz clic [aquí](https://seeedstudio88-my.sharepoint.com/:x:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EX8k1puq5J1IgMZKYYdmuqgB_EtGjxSB7_-hRjUGjTa0dQ?e=1QSozj) para ver el soporte de Jetson Linux para tu dispositivo
-:::
+## 📥 Descargar
 
-### 1. Descargar
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #0ea5e9'}}>
+  <div className="card__body">
+    <OneDriveLink />
+  </div>
+</div>
 
-<OneDriveLink />
+## 🔐 Verificar SHA256 (Opcional)
 
-### (Opcional) Verificar sha256
-<VerifySHA256 />
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #f59e0b'}}>
+  <div className="card__body">
+    <VerifySHA256 />
+  </div>
+</div>
 
-### 2. Preparar requisitos
-<PrepareRequirementsMini />
-<PrepareRequirementsRobotics />
-<PrepareRequirementsSuper />
-<PrepareRequirementsClassic />
-<PrepareRequirementsIndustrial />
-<PrepareRequirementsReserver />
-<PrepareRequirementsJ501 />
+## 🛠️ Preparar Requisitos
 
-### 3. Entrar en modo Recovery
-<RecoveryRobotics />
-<RecoveryMini />
-<RecoverySuper /> 
-<RecoveryClassic />
-<RecoveryIndustrial />
-<RecoveryReserver />
-<RecoveryJ501 />
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #10b981'}}>
+  <div className="card__body">
+    <PrepareRequirementsMini />
+    <PrepareRequirementsRobotics />
+    <PrepareRequirementsSuper />
+    <PrepareRequirementsClassic />
+    <PrepareRequirementsIndustrial />
+    <PrepareRequirementsReserver />
+    <PrepareRequirementsJ501 />
+    <PrepareRequirementsJ501Mini />
+    <PrepareRequirementsJ501Robotics />
+  </div>
+</div>
 
-### 4. Instalar dependencias de flash
-Instalando las dependencias de flash en la PC Host:
-```bash
-sudo apt-get update && \
-sudo apt-get install -y abootimg \
-                        binfmt-support \
-                        binutils \
-                        cpp \
-                        device-tree-compiler \
-                        dosfstools \
-                        lbzip2 \
-                        libxml2-utils \
-                        nfs-kernel-server \
-                        python3-yaml \
-                        qemu-user-static \
-                        sshpass \
-                        udev \
-                        uuid-runtime \
-                        whois \
-                        openssl \
-                        cpio \
-                        rsync \
-                        zstd
-```
+## 🔄 Entrar en Modo de Recuperación
 
-Adicionalmente, para Ubuntu 18.04 e inferiores, instala `lz4c`
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #8b5cf6'}}>
+  <div className="card__body">
+    <RecoveryRobotics />
+    <RecoveryMini />
+    <RecoverySuper /> 
+    <RecoveryClassic />
+    <RecoveryIndustrial />
+    <RecoveryReserver />
+    <RecoveryJ501 />
+    <RecoveryJ501Mini />
+    <RecoveryJ501Robotics />
+  </div>
+</div>
 
-```bash
-sudo apt-get install -y liblz4-tool
-```
+## 📦 Instalar Dependencias
 
-Para Ubuntu 20.04 / 22.04 y superiores:
+<div className="card margin-bottom--lg" style={{borderLeft: '4px solid #f97316'}}>
+  <div className="card__body">
+    <div className="admonition admonition-info">
+      <div className="admonition-content">
+        <p><strong>Instala las dependencias de flasheo requeridas en tu PC Host:</strong></p>
+      </div>
+    </div>
 
-```bash
-sudo apt-get install -y lz4
-```
+    ```bash
+    sudo apt-get update && \
+    sudo apt-get install -y abootimg \
+                            binfmt-support \
+                            binutils \
+                            cpp \
+                            device-tree-compiler \
+                            dosfstools \
+                            lbzip2 \
+                            libxml2-utils \
+                            nfs-kernel-server \
+                            python3-yaml \
+                            qemu-user-static \
+                            sshpass \
+                            udev \
+                            uuid-runtime \
+                            whois \
+                            openssl \
+                            cpio \
+                            rsync \
+                            zstd
+    ```
 
-### 5. Extraer y Flashear
-<ExtractAndFlash /> 
+    <div className="row margin-top--md">
+      <div className="col col--6">
+        <div className="admonition admonition-tip">
+          <div className="admonition-heading">
+            <h5>Ubuntu 18.04 y anteriores</h5>
+          </div>
+          <div className="admonition-content">
+            ```bash
+            sudo apt-get install -y liblz4-tool
+            ```
+          </div>
+        </div>
+      </div>
 
+      <div className="col col--6">
+        <div className="admonition admonition-tip">
+          <div className="admonition-heading">
+            <h5>Ubuntu 20.04 / 22.04 y posteriores</h5>
+          </div>
+          <div className="admonition-content">
+            ```bash
+            sudo apt-get install -y lz4
+            ```
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-## Recursos
+## 🚀 Extraer y Flashear
 
-- [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+<div className="card margin-bottom--lg" style={{
+  borderLeft: '4px solid #8dc21f', 
+  background: 'linear-gradient(135deg, var(--ifm-card-background-color) 0%, rgba(141, 194, 31, 0.05) 100%)',
+  '--ifm-card-background-color': 'var(--ifm-background-surface-color)'
+}}>
+  <div className="card__body">
+    <ExtractAndFlash />
+  </div>
+</div> 
 
-- [jetson-examples](https://github.com/Seeed-Projects/jetson-examples)
+## 📚 Recursos y Ejemplos
 
-{/* <table>
-  <tr>
-   <td style={{ textAlign: "center" }}>
-      <img src="https://files.seeedstudio.com/wiki/DeepStream/demo-optimized.gif" width="300" />
-      <div><a href="https://wiki.seeedstudio.com/es/Traffic-Management-DeepStream-SDK/">Ejemplo DeepStream</a></div>
-    </td>
-   <td style={{ textAlign: "center" }}>
-      <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Real-Time-Whisper.gif" width="300" />
-      <div><a href="https://wiki.seeedstudio.com/es/Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/">Whisper en Jetson</a></div>
-    </td>
-    <td style={{ textAlign: "center" }}>
-      <img src="https://files.seeedstudio.com/wiki/Jetson-Nano-MaskCam/tu3.png" width="300" />
-      <div><a href="https://wiki.seeedstudio.com/es/Jetson-Nano-MaskCam/">Proyecto MaskCam</a></div>
-    </td>
-  </tr>
-  <tr>
-    <td style={{ textAlign: "center" }}>
-      <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/sound_follow/robot.jpg" width="300" />
-      <div><a href="https://wiki.seeedstudio.com/es/sound_follow_robot/">Robot Seguidor de Sonido</a></div>
-    </td>
-    <td style={{ textAlign: "center" }}>
-      <img src="https://files.seeedstudio.com/wiki/robotics/software/aloam/fig0.gif" width="300" />
-      <div><a href="https://wiki.seeedstudio.com/es/a_loam/">A-LOAM SLAM</a></div>
-    </td>
-    <td style={{ textAlign: "center" }}>
-      <img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/deepseek.png" width="300" />
-      <div><a href="https://wiki.seeedstudio.com/es/deploy_deepseek_on_jetson_with_mlc/">Demo DeepSeek</a></div>
-    </td>
-  </tr>
-</table> */}
+<div className="row margin-bottom--xl">
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🚀 Primeros Pasos</h3>
+      </div>
+      <div className="card__body">
+        <p>Guía completa para principiantes sobre desarrollo con Jetson con ejemplos prácticos y tutoriales.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners" 
+           target="_blank" 
+           className="button button--primary button--block"
+           style={{
+             background: '#8dc21f', 
+             borderColor: '#8dc21f',
+             color: 'white',
+             fontSize: '0.85rem',
+             padding: '0.5rem 0.75rem',
+             whiteSpace: 'nowrap',
+             overflow: 'hidden',
+             textOverflow: 'ellipsis',
+             minWidth: '0'
+           }}>
+          Jetson-for-Beginners →
+        </a>
+      </div>
+    </div>
+  </div>
 
-- [Código fuente del L4T de Seeed](https://github.com/Seeed-Studio/Linux_for_Tegra)
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>💡 Ejemplos de Código</h3>
+      </div>
+      <div className="card__body">
+        <p>Ejemplos de código listos para usar para aplicaciones de IA, visión por computadora y robótica.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://github.com/Seeed-Projects/jetson-examples" 
+           target="_blank" 
+           className="button button--primary button--block"
+           style={{
+             background: '#8dc21f', 
+             borderColor: '#8dc21f',
+             color: 'white',
+             fontSize: '0.85rem',
+             padding: '0.5rem 0.75rem',
+             whiteSpace: 'nowrap',
+             overflow: 'hidden',
+             textOverflow: 'ellipsis',
+             minWidth: '0'
+           }}>
+          Jetson-examples →
+        </a>
+      </div>
+    </div>
+  </div>
 
-## Soporte Técnico y Discusión de Productos
+  <div className="col col--4">
+    <div className="card height--full">
+      <div className="card__header">
+        <h3>🔧 Código Fuente</h3>
+      </div>
+      <div className="card__body">
+        <p>Accede al código fuente y modificaciones personalizadas de Linux para Tegra (L4T) de Seeed.</p>
+      </div>
+      <div className="card__footer">
+        <a href="https://github.com/Seeed-Studio/Linux_for_Tegra" 
+           target="_blank" 
+           className="button button--primary button--block"
+           style={{
+             background: '#8dc21f', 
+             borderColor: '#8dc21f',
+             color: 'white',
+             fontSize: '0.85rem',
+             padding: '0.5rem 0.75rem',
+             whiteSpace: 'nowrap',
+             overflow: 'hidden',
+             textOverflow: 'ellipsis',
+             minWidth: '0'
+           }}>
+          Código L4T de Seeed →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+## 🤝 Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+<div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', margin: '2em 0', flexWrap: 'wrap'}}>
+  <a href="https://forum.seeedstudio.com/" target="_blank" style={{display: 'block', width: '400px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support1.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
+  <a href="https://www.seeedstudio.com/contacts" target="_blank" style={{display: 'block', width: '400px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support2.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
 </div>
 
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+<div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', margin: '2em 0', flexWrap: 'wrap'}}>
+  <a href="https://discord.gg/eWkprNDMU7" target="_blank" style={{display: 'block', width: '400px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support3.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
+  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" target="_blank" style={{display: 'block', width: '400px', height: '160px', backgroundImage: "url('https://files.seeedstudio.com/wiki/wiki-platform/tech_support4.png')", backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '8px', textDecoration: 'none', transition: 'transform 0.2s ease-in-out'}} onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'} onMouseOut={(e) => e.target.style.transform = 'scale(1)'}></a>
 </div>
