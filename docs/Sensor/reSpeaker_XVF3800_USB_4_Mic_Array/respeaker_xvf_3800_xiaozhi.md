@@ -3,7 +3,12 @@ description: Build your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeak
 title: Deploy your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeaker
 keywords:
 - reSpeaker_XVF3800_USB_4_Mic_Array
+- reSpeaker
+- XIAO
+- ESP32S3
+image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
 slug: /respeaker_xvf_3800_xiaozhi
+sku: 114993702,114993700
 last_update:
   date: 1/29/2026
   author: Mingxi
@@ -257,6 +262,7 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
 
 
 
