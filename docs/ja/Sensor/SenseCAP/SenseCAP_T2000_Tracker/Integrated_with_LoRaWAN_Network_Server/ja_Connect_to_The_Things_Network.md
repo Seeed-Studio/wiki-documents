@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/sensecap_t2000_connect_to_ttn.png
 slug: /ja/sensecap_t2000_tracker_ttn
 last_update:
-  date: 1/6/2026
+  date: 1/28/2026
   author: Janet
 ---
 
@@ -48,11 +48,36 @@ Application ID、Application name を入力し、`Create application` をクリ�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_register_enddevice.png" alt="pir" width={800} height="auto" /></p>
 
-`Enter end device specifics manually input method` を選択します。以下の情報を参照して、正しく情報を入力してください。
+エンドデバイスを登録する方法は 2 つあります：
+- LoRaWAN Device Repository でエンドデバイスを選択する
+- エンドデバイスの詳細を手動で入力する
+
+#### 1. LoRaWAN Device Repository でエンドデバイスを選択する
+
+`Select the end device in the LoRaWAN Device Repository` を選択します。<br />
+`SenseCAP` を選択し、`T2000 Tracker A/B/C` モデルを選択します。<br />
+Software と Hardware のバージョンはデフォルトのままにし、デバイスのバンド設定に応じて対応する `Profile(Region)` を選択します。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_register_enddevice2.png" alt="pir" width={800} height="auto" /></p>
+
+適切な Frequency Plan を選択します。デバイスとゲートウェイは通信するために同じ周波数プランを使用する必要があります。<br />
+SenseCraft App から Device EUI / AppEUI / AppKey を貼り付け、`Register end device` をクリックします。
+
+:::note
+上記の "JoinEUI" は "AppEUI" と同様です。
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_enter_infor2.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_device_activity2.png" alt="pir" width={800} height="auto" /></p>
+
+#### 2. エンドデバイスの詳細を手動で入力する
+
+または、`Enter end device specifics manually` を選択することもできます。以下の情報を参照して、次の情報を正しく入力してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_manually.png" alt="pir" width={800} height="auto" /></p>
 
-適切な Frequency Plan を選択してください。デバイスとゲートウェイは通信するために同じ周波数プランを使用する必要があります。
+適切な Frequency Plan を選択します。デバイスとゲートウェイは通信するために同じ周波数プランを使用する必要があります。
 
 :::info
 特定のデバイスに対して LoRaWAN Version と Regional Parameters version フィールドを選択してください。<br />
@@ -64,14 +89,10 @@ SenseCraft App から Device EUI / AppEUI / AppKey を貼り付け、`Register e
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_enter_infor.png" alt="pir" width={800} height="auto" /></p>
 
-:::note
-上記の "JoinEUI" は "AppEUI" と同様です。
-:::
-
-### ステップ 3: ペイロードフォーマッターのアップロード
+次に Payload Formatter をアップロードします。
 
 Payload Formatters ページに移動し、`Custom Javascript Formatter` を選択します。
-以下のデコーダーでフォーマッターコードを入力し、変更を保存します：
+以下のデコーダーを使用して Formatter コードを入力し、変更を保存します：
 
 <details>
 
@@ -787,7 +808,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_decoder.png" alt="pir" width={800} height="auto" /></p>
 
-### ステップ 4: データの確認
+### ステップ 3: データの確認
 
 デバイスがネットワークに接続しようとすると、緑色の呼吸ライトが点滅します。デバイスがネットワークに正常に参加すると、緑色のライトが5回素早く点滅します。
 
@@ -797,6 +818,8 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 エンドデバイスをクリックし、`Live data`を確認します。
 以下のメッセージが表示されたら、デバイスがネットワークに正常に参加したことを意味します。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_device_activity2.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_join_accept.png" alt="pir" width={800} height="auto" /></p>
 
