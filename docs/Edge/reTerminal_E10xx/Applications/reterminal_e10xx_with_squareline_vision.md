@@ -96,7 +96,7 @@ The fixed settings of this project is:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-We have supported the SenseCAP Watcher and reTerminal E1002 devices. In the future, we will also support more products from Seeed Studio.
+We have supported the SenseCAP Watcher and reTerminal E1001 and E1002 devices. In the future, we will also support more products from Seeed Studio.
 :::
 
 ### Import an existing .slvp project
