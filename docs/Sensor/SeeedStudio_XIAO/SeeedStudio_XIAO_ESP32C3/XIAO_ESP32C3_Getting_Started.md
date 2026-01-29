@@ -454,7 +454,7 @@ After entering deep sleep mode, the XIAO's port will disappear and you'll need t
 In the program, we are using a **D1** low level to wake up. This means that we can connect a button to pin D1 and the XIAO will wake up when we press the button.
 
 :::caution
-The XIAO ESP32-C3 supports GPIO wake-up and timer wake-up. To prevent the loss of hardware debugging capabilities and increased difficulty in firmware flashing during low-power development, it is strongly recommended that the JTAG (MTMS, MTDI, MTCK, MTDO) pins be reserved for dedicated use and not employed as wake-up sources for deep sleep mode.
+The XIAO ESP32-C3 supports GPIO wake-up and timer wake-up, and the pins that support wake-up are D0~D3.
 :::
 
 ## Troubleshooting
