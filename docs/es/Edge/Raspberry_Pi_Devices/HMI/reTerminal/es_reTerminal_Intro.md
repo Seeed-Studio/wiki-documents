@@ -12,14 +12,14 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/New/reTerminal_new.jpg" style={{width:800, height:'auto'}}/></div>
 
-## Comenzando con reTerminal
+## Introducción a reTerminal
 
 <br />
 
 <div class="table-center">
  <table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg"><font size={"4"}>Comenzando con reTerminal</font></th>
+      <th class="table-trnobg"><font size={"4"}>Introducción a reTerminal</font></th>
       <th class="table-trnobg"><font size={"4"}>Uso de Hardware e Interfaces</font></th>
   </tr>
     <tr class="table-trnobg"></tr>
@@ -29,13 +29,13 @@ last_update:
   </tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Vamos a discutir la instalación del SO en el dispositivo reterminal, proporcionando un recorrido paso a paso, y cubriremos la instalación de controladores en esta wiki.</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Esta wiki introduce varios componentes de hardware e interfaces como GPIOs, interfaz de cámara CSI, sensores integrados, pantalla LCD, etc., en el reTerminal. Te guía sobre cómo utilizar estas características para expandir tus ideas de proyecto.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Vamos a discutir la instalación del SO en el dispositivo reTerminal, proporcionando un tutorial paso a paso, y cubriremos la instalación de controladores en esta wiki.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Esta wiki introduce varios componentes de hardware e interfaces como GPIOs, interfaz de cámara CSI, sensores integrados, pantalla LCD, etc., en el reTerminal. Te guía sobre cómo utilizar estas características para expandir las ideas de tu proyecto.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-hardware-interfaces-usage/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-hardware-interfaces-usage/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
   </tr>
  </table>
 </div>
@@ -56,12 +56,12 @@ last_update:
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> En esta wiki, discutiremos instrucciones paso a paso sobre cómo instalar Picams y configurarla. Estos pasos iniciales son cruciales para iniciar tu proyecto de detección de objetos con el dispositivo Seeed Studio reTerminal.</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> La placa de expansión reTerminal E10-1 mejora el reTerminal con funciones recargables, comunicación inalámbrica mejorada, transmisión de datos industriales y capacidades de audio. Esto hace que el reTerminal sea más robusto, adecuado para aplicaciones industriales de alta velocidad, agricultura o aplicaciones domésticas inalámbricas mejoradas. Profundicemos en la wiki para obtener detalles.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> La placa de expansión reTerminal E10-1 potencia tu reTerminal con energía recargable, conectividad inalámbrica mejorada, transmisión de datos versátil y soporte de audio. Se trata de flexibilidad, permitiéndote personalizar tu configuración para todo, desde proyectos maker y construcciones de automatización del hogar hasta experimentos DIY fuera de la red. Dirígete a la wiki para desbloquear más posibilidades.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminalBridge/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminalBridge/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
   </tr>
  </table>
 </div>
@@ -88,8 +88,8 @@ last_update:
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-Buildroot-SDK/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-Buildroot-SDK/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
   </tr>
  </table>
 </div>
@@ -114,8 +114,8 @@ last_update:
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-Yocto/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/Streampi_OBS_On_reTerminal/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-Yocto/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/Streampi_OBS_On_reTerminal/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
   </tr>
  </table>
 </div>
@@ -125,10 +125,10 @@ last_update:
 ### Aplicaciones de ML Embebido
 
 <div class="table-center">
-<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg">Primeros pasos con MediaPipe en reTerminal</th>
-      <th class="table-trnobg">Primeros pasos con TensorFlow Lite en reTerminal</th>
+      <th class="table-trnobg">Introducción a MediaPipe en reTerminal</th>
+      <th class="table-trnobg">Introducción a TensorFlow Lite en reTerminal</th>
       <th class="table-trnobg">Detección de objetos con Edge Impulse y reTerminal</th>
   </tr>
     <tr class="table-trnobg"></tr>
@@ -141,21 +141,21 @@ last_update:
     <tr class="table-trnobg">
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>En esta wiki, profundizamos en MediaPipe, un framework de código abierto de Google para construir pipelines de ML aplicado multimodal y multiplataforma, optimizado para inferencia en dispositivo. </font></td>
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>Esta wiki proporciona información sobre TFlite y varias aplicaciones. TensorFlow Lite, un conjunto de herramientas, facilita el aprendizaje automático en dispositivo, permitiendo a los desarrolladores ejecutar modelos en dispositivos móviles, embebidos e IoT. </font></td>
-      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>En esta wiki, exploramos la detección de objetos con Edge Impulse y reTerminal. Edge Impulse permite a los desarrolladores crear y optimizar soluciones de aprendizaje automático embebido usando datos del mundo real. Profundicemos en los detalles. </font></td>
+      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>En esta wiki, exploramos la detección de objetos con Edge Impulse y reTerminal. Edge Impulse empodera a los desarrolladores para crear y optimizar soluciones de aprendizaje automático embebido usando datos del mundo real. Profundicemos en los detalles. </font></td>
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_ML_MediaPipe/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_ML_TFLite/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_ML_Edgeimpulse/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_ML_MediaPipe/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_ML_TFLite/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_ML_Edgeimpulse/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
         </tr>
     </table>
-</div>
+    </div>
 
 ### Visión por Computadora
 
 <div class="table-center">
-<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">Comenzando con reTerminal y cámara Pi con OpenCV</th>
       <th class="table-trnobg">Detección de Rostros con reTerminal y cámara Pi con OpenCV</th>
@@ -175,18 +175,18 @@ last_update:
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_opencv/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_Face_detection/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_Object_detection/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_opencv/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_Face_detection/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_Object_detection/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
         </tr>
     </table>
-</div>
+    </div>
 
   <div class="table-center">
  <table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg">Detección de Color con cámara reTerminal Pi y OpenCV</th>
-      <th class="table-trnobg">Seguimiento de Objetos con cámara reTerminal Pi y OpenCV</th>
+      <th class="table-trnobg">Detección de Color con cámara Pi de reTerminal y OpenCV</th>
+      <th class="table-trnobg">Seguimiento de Objetos con cámara Pi de reTerminal y OpenCV</th>
   </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
@@ -195,13 +195,13 @@ last_update:
   </tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> La detección de color, un componente central de la visión por computadora, implica identificar y analizar colores en imágenes digitales o videos. En esta wiki, explicaremos cómo manejar colores y detectarlos.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> La detección de color, un componente central de la visión por computadora, involucra identificar y analizar colores en imágenes digitales o videos. En esta wiki, explicaremos cómo manejar colores y detectarlos.</font></td>
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Cuando la detección falla, implementa seguimiento. Explora algoritmos y comprende los beneficios del seguimiento. Seeed Studio Wiki proporciona guías completas.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_Color_detection/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Más información</font></span></strong></a></div></td>
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_Face-tracking/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Más información</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_Color_detection/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_DM_Face-tracking/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
   </tr>
  </table>
 </div>
@@ -209,7 +209,7 @@ last_update:
 ### Home Assistant
 
 <div class="table-center">
-<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
     <th class="table-trnobg">Comenzando con Home Assistant en reTerminal</th>
     <th class="table-trnobg">Cómo Personalizar Home Assistant</th>
@@ -224,22 +224,22 @@ last_update:
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>En esta wiki, te guiaremos paso a paso para transformar tu casa ordinaria en una inteligente usando un reTerminal. Al final, tendrás un hermoso panel de control en la pantalla LCD del reTerminal, permitiéndote controlar electrodomésticos y acceder a datos de sensores sin esfuerzo. ¡Comencemos! </font></td>
-      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>Esta wiki te guiará paso a paso sobre cómo construir el panel de control realizando las configuraciones necesarias y también cómo usar algunos de los complementos importantes que vienen con Home Assistant. ¡Así que comencemos!</font></td>
+      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>Esta wiki te guiará paso a paso sobre cómo construir el panel de control haciendo las configuraciones necesarias y también cómo usar algunos de los complementos importantes que vienen con Home Assistant. ¡Así que comencemos!</font></td>
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>Frigate es un NVR de código abierto diseñado para detección de objetos con IA en tiempo real. Todo el procesamiento ocurre localmente en tu hardware, asegurando que las transmisiones de tu cámara permanezcan dentro de tu hogar. Esta wiki te guía a través de la instalación del NVR y demuestra las capacidades de detección de objetos. </font></td>
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprender Más</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-Home-Assistant-Customize/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reterminal_frigate/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
         </tr>
     </table>
-</div>
+    </div>
 
-### Crear una Interfaz de Usuario Potente
+### Crear Interfaz de Usuario Potente
 
 <div class="table-center">
-<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
     <th class="table-trnobg">Qt para reTerminal con Python</th>
     <th class="table-trnobg">Flutter para reTerminal</th>
@@ -254,7 +254,7 @@ last_update:
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>Esta wiki explica cómo construir tu propia interfaz de usuario usando Qt para Python en el reTerminal. Aquí hemos usado PySide2 para el desarrollo. </font></td>
-      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>Esta wiki te guía a través de la construcción de tu propia interfaz de usuario con Flutter, un kit de desarrollo de software de interfaz de usuario de código abierto de Google. Flutter permite el desarrollo de aplicaciones multiplataforma para Android, iOS, Linux, Mac, Windows, Google Fuchsia y la web usando una sola base de código.</font></td>
+      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>Esta wiki te guía a través de la construcción de tu propia interfaz de usuario con Flutter, un kit de desarrollo de software de UI de código abierto de Google. Flutter permite el desarrollo de aplicaciones multiplataforma para Android, iOS, Linux, Mac, Windows, Google Fuchsia y la web usando una sola base de código.</font></td>
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>Esta wiki te guía a través de la construcción de tu propia interfaz de usuario usando Electron, un framework de código abierto para crear aplicaciones de escritorio nativas (Windows, Mac, Linux) con tecnologías web como HTML, CSS y JavaScript. ¡Si puedes construir un sitio web, puedes construir una aplicación de escritorio! </font></td>
     </tr>
     <tr class="table-trnobg"></tr>
@@ -264,7 +264,7 @@ last_update:
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/reTerminal-build-UI-using-Electron/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
         </tr>
     </table>
-</div>
+    </div>
     <br />
 
   <div class="table-center">
@@ -280,7 +280,7 @@ last_update:
   </tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
-      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>LVGL proporciona los elementos esenciales para crear una GUI embebida con elementos gráficos fáciles de usar, efectos visuales impresionantes y una huella de memoria mínima. Esta biblioteca gráfica está diseñada para microcontroladores con recursos limitados. En este artículo de la wiki, utilizaremos un ejemplo de simulador de PC con SDL2 y haremos ligeras modificaciones para mostrar la UI en pantalla completa en lugar de en una ventana. </font></td>
+      <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>LVGL proporciona lo esencial para crear una GUI embebida con elementos gráficos fáciles de usar, efectos visuales impresionantes y una huella de memoria mínima. Esta biblioteca gráfica está diseñada para microcontroladores con recursos limitados. En este artículo de wiki, utilizaremos un ejemplo de simulador de PC con SDL2 y haremos ligeras modificaciones para mostrar la UI en pantalla completa en lugar de en una ventana. </font></td>
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Crédito a </font><strong><font color={'8DC215'} size={"2"}>Michaelm Klementsk.</font></strong><br /><font size={"2"}> En esta wiki, usaremos un ESP32 para recopilar lecturas de temperatura, humedad y presión, enviándolas a una base de datos de series temporales InfluxDB alojada en su servidor en la nube. Finalmente, visualizaremos y analizaremos los datos usando Grafana.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
@@ -289,9 +289,9 @@ last_update:
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/weather-dashboard-with-Grafana-reTerminal/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div></td>
         </tr>
     </table>
-</div>
+    </div>
 
-## Varios
+## Misceláneos
 
 <div class="table-center">
  <table class="table-nobg">
@@ -326,21 +326,21 @@ last_update:
   </tr>
  </table>
 
-## ✨ Proyecto de Colaboradores
+## ✨ Proyecto de Colaborador
 
-- Tenemos una lista de tareas para actualizar esta página, que está categorizada bajo nuestro [proyecto de colaboradores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), ya que estamos dedicados a mejorar la experiencia del usuario y proporcionar mejor soporte a través del desarrollo de nuestra plataforma wiki.
-- [Tu contribución a esta página](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33963038) es esencial para nosotros! Realmente valoramos tu aporte y agradeceríamos mucho tu asistencia para generar ideas.
+- Tenemos una lista de tareas para actualizar esta página, que está categorizada bajo nuestro [proyecto de colaborador](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), ya que estamos dedicados a mejorar la experiencia del usuario y proporcionar mejor soporte a través del desarrollo de nuestra plataforma wiki.
+- [Tu contribución a esta página](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33963038) es esencial para nosotros! Realmente valoramos tu aporte y agradeceríamos mucho tu asistencia en la generación de ideas.
 
 ## FAQ
 
 - [Cómo solucionar el problema de pantalla negra en reTerminal](https://wiki.seeedstudio.com/es/reterminal_black_screen)
 - [Cómo flashear Raspberry Pi OS/ Ubuntu OS de 64 bits u otros OS a eMMC](https://wiki.seeedstudio.com/es/flash_different_os_to_emmc)
-- [Iniciar sesión en Raspberry Pi OS/++Ubuntu OS u otros OS usando SSH sobre Wi-Fi/ Ethernet](https://wiki.seeedstudio.com/es/log_rpios_use_ssh_over_wifi_ethernet)
+- [Iniciar sesión en Raspberry Pi OS/Ubuntu OS u otros OS usando SSH a través de Wi-Fi/ Ethernet](https://wiki.seeedstudio.com/es/log_rpios_use_ssh_over_wifi_ethernet)
 - [Descubre más](https://wiki.seeedstudio.com/es/reTerminal-new_FAQ/)
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
