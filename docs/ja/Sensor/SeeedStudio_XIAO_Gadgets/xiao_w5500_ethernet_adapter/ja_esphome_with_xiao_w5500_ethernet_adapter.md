@@ -48,7 +48,7 @@ import TabItem from '@theme/TabItem';
 
 ## [Home Assistant](https://www.home-assistant.io/) の紹介
 
-Home Assistant は、単一の統合インターフェースからスマートホームデバイスを制御・監視できる強力なオープンソースホームオートメーションプラットフォームです。スマートホームの中央ハブとして機能し、ルーチンの自動化、センサーの監視、より知的な生活空間の構築を可能にします。
+Home Assistant は、単一の統合インターフェースからスマートホームデバイスを制御・監視できる強力なオープンソースホームオートメーションプラットフォームです。スマートホームの中央ハブとして機能し、ルーチンの自動化、センサーの監視、よりインテリジェントな生活空間の構築を可能にします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:600, height:'auto'}}/></div>
 
@@ -68,25 +68,25 @@ ESPHome は ESP8266 / ESP32 デバイス専用に設計されたオープンソ�
 
 ### Bluetooth Proxy 概要
 
-Bluetooth Proxy は、Home Assistant の Bluetooth カバレッジをホストの内蔵範囲を超えて拡張する軽量な分散センシングブリッジとして機能します。空間全体に複数の **ESP32 ノード** を配置することで、家全体の Bluetooth センシングネットワークを構築し、温湿度センサー、ドア/窓センサー、照明モジュール、植物モニターなど、さまざまな BLE デバイスへの安定した接続を可能にします。
+Bluetooth Proxy は、Home Assistant の Bluetooth カバレッジをホストの内蔵範囲を超えて拡張する軽量な分散センシングブリッジとして機能します。空間全体に複数の **ESP32 ノード** を配置することで、全家庭 Bluetooth センシングネットワークを構築し、温湿度センサー、ドア/窓センサー、照明モジュール、植物モニターなど、さまざまな BLE デバイスへの安定した接続を可能にします。
 
 **主要機能：**
 
-- **拡張カバレッジ：** 分散 ESP32 プロキシノードを利用してホストの Bluetooth 範囲への依存を排除し、家全体の Bluetooth 接続を実現します。
+- **拡張カバレッジ：** 分散 ESP32 プロキシノードを利用してホームの Bluetooth 範囲への依存を排除し、全家庭 Bluetooth 接続を実現します。
 - **動作原理：**
-  - **XIAO W5500 Ethernet Adapter** が Bluetooth スキャンを有効にします
-  - 近くの BLE ブロードキャストパケット（温度計、スマートロック、ライトなど）を受信します
-  - データは **イーサネットまたは Wi-Fi** 経由で Home Assistant に転送されます
-  - Home Assistant はこれらのデバイスを **Bluetooth エンティティ** として認識します
-  - ユーザーは Home Assistant インターフェースで温度、バッテリーレベル、信号強度、その他のメトリクスを直接確認できます
+  - **XIAO W5500 Ethernet Adapter** が Bluetooth スキャンを有効化
+  - 近くの BLE ブロードキャストパケット（温度計、スマートロック、ライトなど）を受信
+  - データを **イーサネットまたは Wi-Fi** 経由で Home Assistant に転送
+  - Home Assistant がこれらのデバイスを **Bluetooth エンティティ** として認識
+  - ユーザーは Home Assistant インターフェースで温度、バッテリーレベル、信号強度、その他のメトリクスを直接確認可能
 
 ### ファームウェアのインストール
 
-Home Assistant をまだセットアップしていない場合は、このリンクをクリックして公式の Home Assistant チュートリアルに従ってセットアップを完了してください。[Home Assistant Installation](https://www.home-assistant.io/installation/)
+Home Assistant をまだセットアップしていない場合は、このリンクをクリックして公式 Home Assistant チュートリアルに従ってセットアップを完了してください。[Home Assistant Installation](https://www.home-assistant.io/installation/)
 
 **ステップ 1.** ESPhome をインストール<br/>
 
-  すでに ESPHome をインストールしている場合は、このステップをスキップできます。
+  ESPHome を既にインストールしている場合は、このステップをスキップできます。
 
 - **Settings** -> **Add-ons** に移動
 
@@ -122,10 +122,11 @@ Home Assistant をまだセットアップしていない場合は、このリ�
 <summary>yaml ファイルをコピーするにはここをクリック</summary>
 
 ```yaml
+# Only boards produced after November 1, 2025 are supported
 esphome:
-  name: seeed-esp32-s3
+  name: seeed-esp32-poe
   friendly_name: Bluetooth Proxy
-  min_version: 2025.8.0
+  min_version: 2025.11.0
   name_add_mac_suffix: true
 
 esp32:
@@ -135,10 +136,11 @@ esp32:
 
 ethernet:
   type: W5500
-  cs_pin: GPIO2
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
+  cs_pin: GPIO2
+  interrupt_pin: GPIO10
 
 api:
 logger:
@@ -147,14 +149,14 @@ ota:
   - platform: esphome
     id: ota_esphome
 
+esp32_ble:
+  max_connections: 4
+
 esp32_ble_tracker:
-  scan_parameters:
-    interval: 1100ms
-    window: 1100ms
-    active: true
 
 bluetooth_proxy:
   active: true
+  connection_slots: 4
 
 button:
   - platform: safe_mode
@@ -226,7 +228,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'120%', height:'auto'}}/></div>
 </div>
 
-しばらく待つと、以下の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
+少し待つと、次の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -235,16 +237,16 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 <TabItem value='Wi-Fi経由でインストール'>
 
 :::tip
-これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用してePaper Panelにプログラムをアップロードする必要があります。その後、wifi経由でアップロードできます。また、この方法が機能するためには、YAMLの設定に適切に設定された`ota`と`api`セクションが有効な暗号化キーと共に含まれていることを確認してください。
+これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用してePaperパネルにプログラムをアップロードする必要があります。その後、wifi経由でアップロードできます。また、この方法が機能するためには、YAMLコンフィギュレーションに適切に設定された`ota`と`api`セクションが有効な暗号化キーと共に含まれていることを確認してください。
 :::
 
-この方法では、ePaper panelを何にも接続する必要がなく、オンラインであることを確認するだけです。
+この方法では、ePaperパネルを何にも接続する必要がなく、オンラインであることを確認するだけです。
 
-オプションをクリックすると、ファームウェアが自動的にePaper panelにインストールされます。
+オプションをクリックすると、ファームウェアが自動的にePaperパネルにインストールされます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
-しばらく待つと、次の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱い可能性があります。デバイスをルーターに近づけてください。
+少し待つと、次の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱いことが原因の可能性があります。デバイスをルーターに近づけてください。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device7.png" style={{width:800, height:'auto'}}/></div>
 
@@ -264,7 +266,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/buletooth_4.png" style={{width:800, height:'auto'}}/></div>
 
   - **Address**: Bluetoothデバイスのブロードキャストアドレス（MAC形式）。これは実際の物理MACアドレスではなく、BLEプライバシーメカニズムによって生成されるランダム化されたプライベートアドレスで、定期的に変更されることに注意してください。
-  - **Name**: Bluetoothデバイスのアドバタイズされた名前。デバイスがその名前をブロードキャストする場合、このフィールドがデバイスの識別に役立ちます。
+  - **Name**: Bluetoothデバイスのアドバタイズされた名前。デバイスが名前をブロードキャストしている場合、このフィールドがデバイスの識別に役立ちます。
   - **Device**: Home Assistantで認識されたBluetoothエンティティ。デバイスがまだペアリングまたは識別されていない場合、このフィールドは空のままです。
   - **Source**: スキャンソース、つまり特定のBluetooth Proxyノード（例：**Bluetooth Proxy 8fed20**）を示します。これは複数のプロキシノードからのデータを区別するのに役立ちます。
   - **RRSI**: 受信信号強度インジケータ（dBm単位）。値が0に近いほど、信号が強くなります。
@@ -276,7 +278,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/buletooth_5.jpg" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-多くのBLEデバイスはセキュリティのためにプライバシーアドレスを使用しており、ブロードキャストされるアドレスがランダム化され、定期的に更新されることを意味します。その結果、同じ物理デバイスがHome Assistantのアドバタイズメントリストに異なるアドレスで表示される場合があります。
+多くのBLEデバイスはセキュリティのためにプライバシーアドレスを使用しており、ブロードキャストされるアドレスがランダム化され、定期的に更新されることを意味します。その結果、同じ物理デバイスがHome Assistantのアドバタイズメントリストで異なるアドレスで表示される場合があります。
 デバイスを確実に識別するには、アドバタイズされた名前やサービスUUID、信号強度パターンなどの他の特性を使用してください。
 :::
 
@@ -370,7 +372,7 @@ BTHomeプロトコルはHome Assistantへの一方向データ送信のみをサ
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
