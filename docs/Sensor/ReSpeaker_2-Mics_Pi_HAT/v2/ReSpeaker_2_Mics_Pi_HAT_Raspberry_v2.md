@@ -97,23 +97,18 @@ sudo cp overlays/rpi/respeaker-2mic-v2_0-overlay.dtbo /boot/firmware/overlays
 echo "dtoverlay=respeaker-2mic-v2_0" | sudo tee -a /boot/firmware/config.txt 
 ```
 
-- Step 2: reboot to make the setting works.
-
-```
-sudo reboot
-```
 
 > **Note:** If your kernel version is greater than 4.0, you don't need to add `dtoverlay=i2s-mmap`.
 
 ![config example](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/dtoverlays.png)
 
-- Step 3: Reboot your Pi.
+- Step 2: Reboot your Pi.
 
 ```bash
 sudo reboot
 ```
 
-- Step 4: Check if the device is detected by `aplay` / `arecord`.
+- Step 3: Check if the device is detected by `aplay` / `arecord`.
 
 The expected output for `aplay` should be:
 
