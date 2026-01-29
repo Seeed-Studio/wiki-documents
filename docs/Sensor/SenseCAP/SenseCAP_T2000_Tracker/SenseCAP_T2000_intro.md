@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t2000_tracker
 last_update:
-  date: 12/23/2025
+  date: 1/28/2026
   author: Janet
 ---
 
@@ -21,6 +21,14 @@ last_update:
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/" class="sensecap">Introduction</a>
           <a href= "https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T2000_tracker/" class="sensecap">User Guide</a>
+</div>
+
+### Integrated with LoRaWAN® Network Server
+
+<div class="all_container">
+          <a href= "https://wiki.seeedstudio.com/sensecap_t2000_tracker_ttn/" class="sensecap">The Things Network</a>
+          <a href= "https://wiki.seeedstudio.com/sensecap_t2000_tracker_helium/" class="sensecap2">Helium</a>
+          <a href= "https://wiki.seeedstudio.com/sensecap_t2000_tracker_aws/" class="sensecap2">AWS IoT Core</a>
 </div>
 
 ## Tech Support & Product Discussion
