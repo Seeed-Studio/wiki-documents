@@ -1,4 +1,14 @@
-# Hand-by-hand guide: Build your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeaker
+---
+description: Build your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeaker
+title: Deploy your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeaker
+keywords:
+- reSpeaker_XVF3800_USB_4_Mic_Array
+slug: /respeaker_xvf_3800_xiaozhi
+last_update:
+  date: 1/29/2026
+  author: Mingxi
+---
+
 
 > Goal: Make ESP32S3 work with the reSpeaker XVF3800 and run the Xiaozhi assistant leveraging cloud large-models.
 > Project source: https://github.com/Seeed-Projects/Xiaozhi_Esp32S3_reSpeaker
@@ -231,3 +241,20 @@ After flashing, the device needs network configuration and cloud binding to use 
   ![history-dialogs](image-1.png)
 
 Once completed, your reSpeaker–Xiaozhi device should be ready and operational.
+
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
