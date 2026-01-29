@@ -3,6 +3,7 @@ title: XIAO 继电器扩展模块
 description: XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制交流供电设备。
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/relay_module_for_xiao/relay_module.webp
 slug: /cn/relay_add_on_module_for_xiao
+sku: 114993555
 keywords:
   - XIAO
   - Home Assistant

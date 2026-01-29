@@ -5,6 +5,7 @@ keywords:
 - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Seeeduino_v4.2
+sku: 102010026
 last_update:
   date: 1/12/2022
   author: jianjing Huang

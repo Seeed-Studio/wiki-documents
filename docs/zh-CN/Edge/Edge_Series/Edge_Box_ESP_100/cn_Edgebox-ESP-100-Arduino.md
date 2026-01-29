@@ -7,6 +7,7 @@ keywords:
   - Control system
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Edgebox-ESP-100-Arduino
+sku: 102991558,102991559,102110771,102110772,102110773,102991734,102991735,102110779,E23010424,114993117
 last_update:
   date: 03/10/2023
   author: Peter Pan

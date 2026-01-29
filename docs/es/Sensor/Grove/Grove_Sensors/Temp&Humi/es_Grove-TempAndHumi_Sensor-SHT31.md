@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-TempAndHumi_Sensor-SHT31
+sku: 101020212
 last_update:
   date: 12/29/2025
   author: Brandy

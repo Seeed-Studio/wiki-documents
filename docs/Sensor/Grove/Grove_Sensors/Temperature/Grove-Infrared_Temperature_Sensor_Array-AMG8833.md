@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Infrared_Temperature_Sensor_Array-AMG8833
+sku: 101020557
 last_update:
   date: 1/4/2023
   author: jianjing Huang

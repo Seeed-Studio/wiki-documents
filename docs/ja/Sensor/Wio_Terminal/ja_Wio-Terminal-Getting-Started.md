@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-Getting-Started/
 slug: /ja/Wio-Terminal-Getting-Started
+sku: 102991299
 last_update:
   date: 05/15/2025
   author: gunengyu

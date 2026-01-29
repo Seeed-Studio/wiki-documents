@@ -5,7 +5,7 @@ keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/tracker-t1000-e-for-meshtastic.webp
 slug: /es/t1000_e_arduino_examples
-sidebar_position: 3
+sidebar_position: 4
 last_update:
   date: 03/24/2025
   author: Frederik Funk
@@ -50,7 +50,7 @@ Los siguientes ejemplos de Arduino están disponibles:
     </tr>
     <tr>
       <td>LoRaWAN Sensor</td>
-      <td>Unirse a través de OTAA, leer temp/lux/bat/ax/ay/az, enviar datos a LNS - Recopila y transmite varios datos de sensores vía LoRaWAN.</td>
+      <td>Unirse a través de OTAA, leer temp/lux/bat/ax/ay/az, enviar datos a LNS - Recopila y transmite varios datos de sensores a través de LoRaWAN.</td>
     </tr>
     <tr>
       <td>LoRaWAN GNSS</td>
@@ -82,7 +82,7 @@ Antes de poder comenzar a desarrollar, se requieren las siguientes herramientas 
 Consulta aquí para [Comenzar con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 
 :::tip
-La versión debe ser más reciente que v1.6.12.
+La versión debe ser más nueva que v1.6.12.
 :::
 
 ## Comenzar
@@ -91,7 +91,7 @@ La versión debe ser más reciente que v1.6.12.
 
 1. Agregar URL
 
-Navega a `Archivo` -> `Preferencias`, y agrega la siguiente URL a `URLs adicionales del Gestor de Placas`:
+Navega a `File` -> `Preferences`, y agrega la siguiente URL a `Additional Boards Manager URLs`:
 
 ```
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
@@ -101,51 +101,51 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 2. Instalar Placa
 
-Navega a `Boards Manager`, busca `seeed nrf52`, selecciona la versión más reciente e instálala.
+Navega a `Boards Manager`, busca `seeed nrf52`, selecciona la última versión e instálala.
 
-### Construyendo un Ejemplo
+### Construir un Ejemplo
 
 1. Seleccionar placa y puerto
 
-**Placa**: Seeed Tracker T1000 E <br/>
-**Puerto**: El puerto de tu dispositivo
+**Board**: Seeed Tracker T1000 E <br/>
+**Port**: El puerto de tu dispositivo
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/board-select.png" alt="pir" width={800} height="auto" /></p>
 
 2. construir ejemplo
 
-Navega a `File` -> `Examples` -> `Seeed Tracker T1000 E LoRaWAN`, Luego abre un ejemplo de tu elección (en este caso el ejemplo del acelerómetro):
+Navega a `File` -> `Examples` -> `Seeed Tracker T1000 E LoRaWAN`, luego abre un ejemplo de tu elección (en este caso el ejemplo del acelerómetro):
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/example_select.png" alt="pir" width={800} height="auto" /></p>
 
-### Subiendo al dispositivo objetivo
+### Subir al dispositivo objetivo
 
-Como el bootloader del T1000-E _solo_ soporta flasheo vía arrastrar y soltar `.uf2`, no es posible subir los ejemplos directamente vía el IDE de Arduino.
+Como el bootloader del T1000-E _solo_ soporta flasheo a través de arrastrar y soltar `.uf2`, no es posible subir los ejemplos directamente a través del IDE de Arduino.
 En su lugar, sigue estos pasos:
 
 1. Exporta el binario compilado desde el IDE de Arduino. Lo encontrarás en la misma carpeta que el sketch `.ino`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/export_binary.png" alt="pir" width={800} height="auto" /></p>
 
-2. Convierte el archivo `.hex` en un archivo `.uf2`. Esto se hace usando un script de python que puede descargarse [aquí](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/blob/1.1.9/tools/uf2conv/uf2conv.py). Descarga y ejecuta el script con los siguientes parámetros desde una terminal:  
-`python uf2conv.py -f 0xADA52840 -c -o test.uf2 <tu_archivo_hex>.hex`
+2. Convierte el archivo `.hex` en un archivo `.uf2`. Esto se hace usando un script de python que se puede descargar [aquí](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/blob/1.1.9/tools/uf2conv/uf2conv.py). Descarga y ejecuta el script con los siguientes parámetros desde una terminal:  
+`python uf2conv.py -f 0xADA52840 -c -o test.uf2 <your_hex_file>.hex`
 
-3. Pon el dispositivo en modo DFU presionando y manteniendo el botón del dispositivo, luego conecta rápidamente el cable de carga dos veces, el LED verde estará encendido fijo. Ahora deberías encontrar el T1000-E como dispositivo de almacenamiento masivo.
+3. Pon el dispositivo en modo DFU presionando y manteniendo el botón del dispositivo, luego conecta rápidamente el cable de carga dos veces, el LED verde se mantendrá encendido. Ahora deberías encontrar el T1000-E como dispositivo de almacenamiento masivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
 4. Copia el archivo `.uf2` al almacenamiento masivo. Después de que haya sido copiado, el dispositivo automáticamente comienza a ejecutarlo.
 
-## Leyendo mensajes serie
+## Leer mensajes seriales
 
-Los mensajes del dispositivo que se imprimen usando `Serial.println` y `Serial.printf` pueden leerse usando el terminal integrado del IDE de Arduino.
+Los mensajes del dispositivo que se imprimen usando `Serial.println` y `Serial.printf` se pueden leer usando la terminal integrada del IDE de Arduino.
 Asegúrate de haber habilitado y seleccionado USB-CDC:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/usb_cdc.png" alt="pir" width={800} height="auto" /></p>
 
 Luego abre el monitor serie usando `Tools -> Serial Monitor` y comienza a observar los mensajes:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/serial_monitor.png" alt="pir" width={800} height="auto" /></p>
 
-## Ejemplos LoRaWAN
+## Ejemplos de LoRaWAN
 
 Los ejemplos que incluyen mensajería LoRaWAN necesitan dos pasos adicionales.
 
@@ -185,24 +185,24 @@ Ahora, crea las credenciales para tu dispositivo. Ya sea genera un nuevo conjunt
 Para que funcione, configura las credenciales del paso anterior en el código de ejemplo. También especifica la región, por ejemplo `SMTC_MODEM_REGION_AS_923_GRP1`, `SMTC_MODEM_REGION_EU_868`, o `SMTC_MODEM_REGION_US_915`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/lorawan_credentials.png" alt="pir" width={800} height="auto" /></p>
 
-Si tu región tiene restricciones de ciclo de trabajo, asegúrate de habilitar la limitación en el manejador de reset:
+Si tu región tiene restricciones de ciclo de trabajo, asegúrate de habilitar la limitación en el manejador de reinicio:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/duty_cycle_limitation.png" alt="pir" width={800} height="auto" /></p>
 
-### Ejecutando código de ejemplo
+### Ejecutar código de ejemplo
 
-Compila y flashea el ejemplo LoRaWAN de la misma manera que se describe para los otros ejemplos (crear archivo `.uf2` y flashear vía arrastrar y soltar).
+Compila y flashea el ejemplo de LoRaWAN de la misma manera que se describe para los otros ejemplos (crear archivo `.uf2` y flashear a través de arrastrar y soltar).
 Después deberías ver mensajes entrantes en la interfaz de TTN:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/ttn_live_data.png" alt="pir" width={800} height="auto" /></p>
 
-## ✨ Proyecto de Colaboradores
+## ✨ Proyecto de Colaborador
 
-- Este proyecto está respaldado por el [Proyecto de Colaboradores](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) de Seeed Studio.
-- Un agradecimiento especial a [Frederik](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=Support+Arduino+to+our+new+open-source+LoRaWAN+device%2C+the+new+T1000-E+for+LoRaWAN&pane=issue&itemId=94352679&issue=Seeed-Studio%7Cwiki-documents%7C2144) por sus esfuerzos dedicados. Tu trabajo será [exhibido](https://wiki.seeedstudio.com/contributors/).
+- Este proyecto está respaldado por el [Proyecto de Colaborador](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) de Seeed Studio.
+- Un agradecimiento especial a [Frederik](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=Support+Arduino+to+our+new+open-source+LoRaWAN+device%2C+the+new+T1000-E+for+LoRaWAN&pane=issue&itemId=94352679&issue=Seeed-Studio%7Cwiki-documents%7C2144) por sus esfuerzos dedicados. Tu trabajo será [exhibido](https://wiki.seeedstudio.com/es/contributors/).
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>

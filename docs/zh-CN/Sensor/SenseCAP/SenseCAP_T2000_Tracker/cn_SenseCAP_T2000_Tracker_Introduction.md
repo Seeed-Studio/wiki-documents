@@ -5,13 +5,14 @@ keywords:
 - SenseCAP_T2000_tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
 slug: /cn/SenseCAP_T2000_tracker/Introduction
+sku: 100082900,100057727,100087298
 last_update:
-  date: 12/23/2025
+  date: 1/5/2026
   author: Janet
 ---
 
 
-# SenseCAP T2000 追踪器简介
+# SenseCAP T2000 Tracker 简介
 
 ## 概述
 
@@ -31,7 +32,7 @@ last_update:
 
 || [SenseCAP T2000-A](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html) | [SenseCAP T2000-B](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-B-p-6581.html) | [SenseCAP T2000-C](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-C-p-6582.html) |
 |:---|:---:|:---:|:---:|
-| **工作温度** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-20 ~ 60℃</div> |
+| **工作温度** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-20 ~ 60℃<br />(充电：0~45℃)</div> |
 | **电源供应** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>内置电池</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>内置电池</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>内置可充电电池 + 0.5W 太阳能板</div> |
 | **电池容量** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>8000mAh</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>8000mAh</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>4000mAh</div> |
 | **定位模式** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>蓝牙</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>蓝牙</li><li>WiFi</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>蓝牙</li></ul></div></div> |
@@ -42,7 +43,7 @@ last_update:
 
 ### 设备交互
 
-T2000 设计有直观的交互方式，提供出色的用户体验。
+T2000 采用直观的交互设计，提供出色的用户体验。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Device_Interaction.png" alt="pir" width={800} height="auto" /></p>
 
 <br />
@@ -55,8 +56,8 @@ T2000 系列在各种环境中提供可靠且持续的资产追踪。它支持�
 
 **户外 GNSS 定位**
 
-- 高性能 GNSS 模块，提供米级精度（5-10 米）  
-- 支持全球多星座：GPS、北斗、伽利略和 GLONASS
+- 高性能 GNSS 模块，提供米级精度（5-10 米）
+- 支持全球多星座：GPS、北斗、Galileo 和 GLONASS
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_GNSS.png" alt="pir" width={800} height="auto" /></p>
 
@@ -78,15 +79,15 @@ T2000 系列在各种环境中提供可靠且持续的资产追踪。它支持�
 
 <br />
 
-### 多年电池寿命
+### 数年电池寿命
 
 **T2000-A / T2000-B**  
-内置 8000 mAh 电池，在使用 GNSS 每小时上行链路时可运行超过一年。通过更长的上行链路间隔，电池寿命可延长至 7-9 年，为各种部署场景提供长期可靠性。
+内置 8000 mAh 电池，在使用 GNSS 每小时上行链路时可运行超过一年。通过延长上行链路间隔，电池寿命可延长至 7-9 年，为各种部署场景提供长期可靠性。
 
 **T2000-C（带太阳能板）**  
-配备 0.5 W 太阳能板和 4000 mAh 可充电电池，T2000-C 在正常阳光和适度上行链路间隔下支持多年低维护运行。
+配备 0.5 W 太阳能板和 4000 mAh 可充电电池，T2000-C 在正常阳光照射和适度上行链路间隔下支持多年低维护运行。
 
-*实际电池寿命因上行链路间隔、定位模式和部署环境而异。详情请使用[电池寿命计算器](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Trcaker_Battery_Life_Calculator_T2000.xlsx)。
+*实际电池寿命因上行链路间隔、定位模式和部署环境而异。详情请使用[电池寿命计算器](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Tracker_Battery_Life_Calculator_T2000.xlsx)。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Battery_Life.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -193,7 +194,7 @@ SenseCAP T2000 系列资产追踪器是管理户外环境中高价值动态资�
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在此为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

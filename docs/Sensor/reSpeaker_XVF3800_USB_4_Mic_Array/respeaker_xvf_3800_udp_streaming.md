@@ -10,7 +10,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
 slug: /respeaker_xvf3800_xiao_udp_audio_stream
 last_update:
-  date: 8/20/2025
+  date: 1/8/2025
   author: Kasun Thushara
 ---
 
@@ -57,12 +57,12 @@ const int udpPort      = 12345;            // Port to send audio
 #include "AudioTools.h"
 
 // WiFi credentials
-const char* ssid     = "Your-SSID";
+const char* ssid = "Your-SSID";
 const char* password = "WIFI-PASSWORD";
 
 // UDP target
-const char* udpAddress = "192.168.X.X";  // Change to PC/server IP
-const int udpPort      = 12345;            // Port to send audio
+const char* udpAddress = "192.168.x.x";
+const int udpPort = 12345;
 
 WiFiUDP udp;
 
@@ -71,13 +71,13 @@ AudioInfo info(16000, 2, 32);
 I2SStream i2s_in;
 I2SConfig i2s_config;
 
-// 5 sec of audio = 128kB/s × 5 = 640 kB
-#define PACKET_SIZE 1024
-#define NUM_PACKETS 625  // 5 seconds worth
+// Buffer for reading audio
+#define BUFFER_SIZE 1024
+uint8_t buffer[BUFFER_SIZE];
 
-// Encoded WAV output to UDP
-EncodedAudioStream out_stream(&udp, new WAVEncoder());
-StreamCopy copier(out_stream, i2s_in, PACKET_SIZE);
+// 5 seconds of audio = 16000 Hz × 2 channels × 4 bytes = 128,000 bytes/sec
+// 5 seconds = 640,000 bytes
+#define TOTAL_BYTES 640000
 
 void connectWiFi() {
   Serial.printf("Connecting to WiFi: %s\n", ssid);
@@ -87,48 +87,70 @@ void connectWiFi() {
     Serial.print(".");
   }
   Serial.println("\nConnected!");
+  Serial.printf("IP Address: %s\n", WiFi.localIP().toString().c_str());
 }
 
 void setupI2SInput() {
   i2s_config = i2s_in.defaultConfig(RX_MODE);
   i2s_config.copyFrom(info);
-
+  
   // XVF3800 pins
-  i2s_config.pin_bck = 8;     
-  i2s_config.pin_ws = 7;      
-  i2s_config.pin_data = 44;   
-  i2s_config.pin_data_rx = 43;  
-  i2s_config.is_master = true;  
-
+  i2s_config.pin_bck = 8;
+  i2s_config.pin_ws = 7;
+  i2s_config.pin_data = 44;
+  i2s_config.pin_data_rx = 43;
+  i2s_config.is_master = true;
+  
   i2s_in.begin(i2s_config);
   Serial.println("I2S input started.");
 }
 
 void setup() {
   Serial.begin(115200);
+  while(!Serial);
+  
   AudioLogger::instance().begin(Serial, AudioLogger::Info);
-
+  
   connectWiFi();
   setupI2SInput();
-
-  // Begin UDP
-  udp.begin(WiFi.localIP(), udpPort);
-  out_stream.begin(info);
-
-  // Start UDP transmission
+  
+  // Wait a bit for I2S to stabilize
+  delay(500);
+  
   Serial.printf("Sending 5 seconds of audio via UDP to %s:%d\n", udpAddress, udpPort);
-
-  udp.beginPacket(udpAddress, udpPort);
-  copier.copyN(NUM_PACKETS);   // Copy exactly 5 sec of audio
-  udp.endPacket();
-
-  Serial.println("Finished sending 5 seconds of audio!");
+  
+  size_t total_sent = 0;
+  size_t bytes_read = 0;
+  
+  // Send audio in chunks
+  while (total_sent < TOTAL_BYTES) {
+    // Read audio data
+    bytes_read = i2s_in.readBytes(buffer, BUFFER_SIZE);
+    
+    if (bytes_read > 0) {
+      // Send via UDP
+      udp.beginPacket(udpAddress, udpPort);
+      udp.write(buffer, bytes_read);
+      udp.endPacket();
+      
+      total_sent += bytes_read;
+      
+      // Progress indicator
+      if (total_sent % 64000 == 0) {
+        Serial.printf("Sent %d bytes (%.1f seconds)\n", total_sent, total_sent / 128000.0);
+      }
+    } else {
+      Serial.println("Warning: No data read from I2S");
+      delay(10);
+    }
+  }
+  
+  Serial.printf("Finished! Sent %d bytes total\n", total_sent);
 }
 
 void loop() {
-  // Nothing else, only runs once
+  // Nothing - runs once
 }
-
 ```
 
 Use Serial Monitor (115200 baud) to confirm connection and streaming status.
@@ -139,17 +161,70 @@ Use Serial Monitor (115200 baud) to confirm connection and streaming status.
 
 ```python
 import socket
+import wave
+import time
 
+# UDP settings
 udp_ip = "0.0.0.0"
 udp_port = 12345
+
+# Audio settings (must match ESP32)
+SAMPLE_RATE = 16000
+CHANNELS = 2
+SAMPLE_WIDTH = 4  # 32-bit = 4 bytes
+
+# Expected data size (5 seconds)
+EXPECTED_BYTES = 640000
+
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind((udp_ip, udp_port))
+sock.settimeout(2.0)  # 2 second timeout
 
-with open("output.wav", "wb") as f:
-    print("Listening for audio...")
+print(f"Listening for audio on {udp_ip}:{udp_port}...")
+
+audio_data = bytearray()
+last_packet_time = time.time()
+
+try:
     while True:
-        data, addr = sock.recvfrom(4096)
-        f.write(data)
+        try:
+            data, addr = sock.recvfrom(4096)
+            if data:
+                audio_data.extend(data)
+                last_packet_time = time.time()
+
+                # Progress
+                if len(audio_data) % 64000 < 4096:
+                    print(f"Received {len(audio_data)} bytes ({len(audio_data) / 128000:.1f} seconds)")
+
+        except socket.timeout:
+            # No data for 2 seconds - assume transmission complete
+            if len(audio_data) > 0:
+                print("Timeout - assuming transmission complete")
+                break
+            else:
+                print("Waiting for data...")
+                continue
+
+except KeyboardInterrupt:
+    print("\nStopped by user")
+
+# Save as WAV file
+if len(audio_data) > 0:
+    print(f"\nTotal received: {len(audio_data)} bytes")
+    print("Saving to output.wav...")
+
+    with wave.open("output.wav", "wb") as wav_file:
+        wav_file.setnchannels(CHANNELS)
+        wav_file.setsampwidth(SAMPLE_WIDTH)
+        wav_file.setframerate(SAMPLE_RATE)
+        wav_file.writeframes(bytes(audio_data))
+
+    print("Done! Audio saved to output.wav")
+else:
+    print("No data received!")
+
+sock.close()
 
 ```
 

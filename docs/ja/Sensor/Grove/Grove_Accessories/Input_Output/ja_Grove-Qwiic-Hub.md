@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Qwiic-Hub/
 slug: /ja/Grove-Qwiic-Hub
+sku: 103020292
 last_update:
   date: 05/15/2025
   author: gunengyu

@@ -5,6 +5,7 @@ keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/sensecap_t1000_e
+sku: 114993369
 sidebar_position: 2
 last_update:
   date: 12/24/2025

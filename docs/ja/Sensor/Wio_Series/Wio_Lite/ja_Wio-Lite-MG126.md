@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Lite-MG126/
 slug: /ja/Wio-Lite-MG126
+sku: 102991186
 last_update:
   date: 05/15/2025
   author: gunengyu

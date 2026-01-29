@@ -5,6 +5,7 @@ keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reComputer_J4012_Flash_Jetpack
+sku: 102110769, 102110770
 last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
@@ -316,7 +317,7 @@ reComputer J40/ J30 シリーズには、付属のNVMe SSDにJetPack 5.1がプ�
 **ステップ 4.** ジャンパーワイヤを取り外します
 
 </details>
-
+<!-- 
 ### 単一コマンドでデバイスをフラッシュする
 
 <details>
@@ -337,7 +338,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 免責事項：ワンクリックフラッシュスクリプトは jetpack フラッシュを高速化することを目的としています。現在のバージョンはベータ版であり、多くの問題がある可能性があります。ご理解をお願いいたします。フラッシュに問題がある場合は、以下の「デバイスをステップバイステップでフラッシュする」に従い、[Discord Jetson チャンネル](https://discord.com/channels/862602258452578314/930732339624026152)でフィードバックをお寄せください。迅速に修正し、近い将来この機能を改善いたします。
 :::
 
-</details>
+</details> -->
 
 ### デバイスをステップバイステップでフラッシュする
 

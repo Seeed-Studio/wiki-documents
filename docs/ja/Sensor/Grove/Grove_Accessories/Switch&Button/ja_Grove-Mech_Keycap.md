@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Mech_Keycap
+sku: 111020049
 last_update:
   date: 05/15/2025
   author: jianjing Huang

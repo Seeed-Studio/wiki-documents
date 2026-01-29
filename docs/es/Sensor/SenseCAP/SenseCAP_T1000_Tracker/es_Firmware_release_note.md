@@ -1,6 +1,6 @@
 ---
-description: Notas de lanzamiento del firmware del SenseCAP T1000-A/B Tracker
-title: Actualización de firmware y notas de lanzamiento
+description: Nota de Lanzamiento del Firmware del Rastreador SenseCAP T1000-A/B
+title: Actualización de Firmware y Nota de Lanzamiento
 keywords:
 - Tracker
 - Firmware
@@ -11,25 +11,25 @@ last_update:
   author: Jessie
 ---
 
-### Actualización de firmware
+### Actualización de Firmware
 
 Hay 2 formas de actualizar el firmware, se recomienda actualizar a través de la nube.
 
-#### Actualizar a través de la nube
+#### Actualizar a través de la Nube
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/get-updates.png" alt="pir" width={800} height="auto" /></p>
 
 #### Actualizar a través de archivo local
 
 :::tip
-Los siguientes pasos deben usarse si nuestro Equipo de Soporte Técnico se lo ha recomendado.
+Los siguientes pasos deben usarse si nuestro Equipo de Soporte Técnico te lo ha recomendado.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/up-fiele.png" alt="pir" width={800} height="auto" /></p>
 
-### v2.5 - 2024/01/02
+### v2.8 - 2025/09/05
 
-* **Optimización del algoritmo de tiempo UTC del GPS y otras mejoras**
+* **El nuevo firmware mejora la estabilidad LoRaWAN del dispositivo.**
 
 :::caution Nota
 Se recomienda a todos los usuarios actualizar sus dispositivos al firmware más reciente.

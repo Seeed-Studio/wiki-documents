@@ -29,9 +29,7 @@ const programsData = [
     id: 'contributor',
     title: 'Join Our Contributor Community',
     subtitle: 'Become a Wiki Contributor & Share Your Knowledge!',
-    description: `At Seeed Studio, we believe in the power of community. Our Contributor Program invites developers, writers, and creators to help improve our open-source Wiki and projects.
-
-Whether you’re fixing bugs, updating documentation, creating tutorials, or sharing your own IoT/AI projects, your work makes a difference. Explore our GitHub board for open assignments and start collaborating!`,
+    description: `We are excited to invite passionate makers, developers, and engineers to join Seeed Studio and collaborate with us in building and supporting innovative hardware solutions worldwide.`,
     contact: 'Explore tasks and collaborate on GitHub: ',
     contactEmail: 'https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479',
     contactLinkText: 'GitHub Project Board',
@@ -53,7 +51,7 @@ Enjoy flexible recruitment and opportunities to explore diverse experiences with
     contactEmail: 'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
     contactLinkText: 'Ranger Application Form',
     buttons: [
-      { text: 'Explore Ranger Program', link: 'https://wiki.seeedstudio.com/ranger/', primary: true },
+      { text: 'Explore Ranger Program', link: 'https://www.seeedstudio.com/ranger-program/', primary: true },
     ],
     image: 'ranger_banner.png',
   },
@@ -80,9 +78,7 @@ const COPY = {
     contributor: {
       title: '加入我们的贡献者社区',
       subtitle: '成为 Wiki 贡献者，分享你的知识！',
-      description: `在 Seeed，我们相信社区的力量。贡献者计划欢迎开发者、写作者和创作者一起改进我们的开源 Wiki 与项目。
-
-无论是修复问题、更新文档、撰写教程，还是分享你的 IoT/AI 项目，你的贡献都至关重要。前往我们的 GitHub 面板查看任务，一键参与协作！`,
+      description: `我们诚挚地邀请充满热情的创客、开发者和工程师加入 Seeed Studio，与我们携手合作，在全球范围内共同构建并支持创新型硬件解决方案。`,
       contact: '前往 GitHub 查看任务与协作：',
       contactLinkText: 'GitHub 任务看板',
       buttons: [{ text: '了解更多' }],
@@ -113,9 +109,7 @@ const COPY = {
     contributor: {
       title: 'コントリビューターコミュニティに参加しよう',
       subtitle: 'Wiki のコントリビューターになってナレッジを共有！',
-      description: `Seeed Studio はコミュニティの力を信じています。コントリビュータープログラムは、開発者・ライター・クリエイターの皆さんが、オープンソース Wiki やプロジェクトを改善することを歓迎します。
-
-バグ修正、ドキュメント更新、チュートリアル作成、IoT/AI プロジェクトの共有など、あなたの貢献は大きな価値になります。GitHub のボードでタスクをチェックして今すぐ参加！`,
+      description: `Seeed Studio では、情熱を持ったメーカー、開発者、エンジニアの皆さまをお迎えし、世界中で革新的なハードウェアソリューションの構築とサポートに共に取り組んでいただけることを楽しみにしています。`,
       contact: 'GitHub のタスク一覧：',
       contactLinkText: 'GitHub プロジェクトボード',
       buttons: [{ text: '詳しく見る' }],
@@ -146,9 +140,7 @@ const COPY = {
     contributor: {
       title: 'Únete a nuestra comunidad de colaboradores',
       subtitle: '¡Conviértete en colaborador del Wiki y comparte tu conocimiento!',
-      description: `En Seeed Studio creemos en el poder de la comunidad. Nuestro programa de colaboradores invita a desarrolladores, redactores y creadores a mejorar nuestro Wiki y proyectos de código abierto.
-
-Ya sea corrigiendo errores, actualizando documentación, creando tutoriales o compartiendo proyectos de IoT/IA, tu trabajo marca la diferencia. ¡Explora nuestro tablero de GitHub y colabora!`,
+      description: `Nos complace invitar a makers, desarrolladores e ingenieros apasionados a unirse a Seeed Studio y colaborar con nosotros en la creación y el soporte de soluciones de hardware innovadoras a nivel mundial.`,
       contact: 'Tareas en GitHub: ',
       contactLinkText: 'Tablero del proyecto en GitHub',
       buttons: [{ text: 'Saber más' }],
@@ -187,11 +179,11 @@ function isEnglishOnlyWiki(url: string) {
     const u = new URL(url);
     const hostOk = /(^|\.)wiki\.seeedstudio\.com$/i.test(u.hostname);
     const p = u.pathname.replace(/\/+$/, '/');
-    if (hostOk && (p === '/contributors/' || p === '/ranger/')) return true;
+    if (hostOk && (p === '/contributors/')) return true;
   } catch {
     // 相对地址
     const p = url.replace(/[?#].*$/, '').replace(/\/+$/, '/');
-    if (p === '/contributors/' || p === '/ranger/') return true;
+    if (p === '/contributors/') return true;
   }
   return false;
 }

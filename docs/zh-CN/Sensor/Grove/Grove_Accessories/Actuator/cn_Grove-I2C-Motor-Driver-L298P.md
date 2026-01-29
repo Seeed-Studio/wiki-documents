@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-I2C-Motor-Driver-L298P/
 slug: /cn/Grove-I2C-Motor-Driver-L298P
+sku: 105020093
 last_update:
   date: 01/09/2022
   author: gunengyu

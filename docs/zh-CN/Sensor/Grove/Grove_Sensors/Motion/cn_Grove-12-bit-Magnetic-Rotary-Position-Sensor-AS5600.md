@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600
+sku: 101020692
 last_update:
   date: 1/31/2023
   author: jianjing Huang

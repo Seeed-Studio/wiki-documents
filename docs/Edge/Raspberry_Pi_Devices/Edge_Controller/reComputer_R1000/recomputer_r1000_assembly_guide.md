@@ -7,6 +7,7 @@ keywords:
   - Assembly Guide
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_r1000_assembly_guide
+sku: 113991274,E24010521,113991334,113991375
 last_update:
   date: 06/06/2024
   author: Evelyn Chen

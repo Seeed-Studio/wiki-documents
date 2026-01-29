@@ -5,6 +5,7 @@ keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg
 slug: /XIAO-RP2040
+sku: 102010428, 100045204
 last_update:
   date: 1/11/2023
   author: shuxu hu
@@ -69,6 +70,31 @@ XIAO RP2040 currently only supports battery power supply and cannot connect to T
 
 Please pay attention to use, do not lift the shield cover.
 :::
+
+## **Pin Map**
+| XIAO Pin        | Function     | Chip Pin          | Description                          |
+| :-------------: | :---------: | :---------------: | :---------------------------------- |
+| 5V              | VBUS        |                                       | Power Input/Output                   |
+| GND             |             |                                       |                                      |
+| 3V3             | 3V3_OUT     |                                       | Power Output                         |
+| D0              | Analog      | P26                                   | GPIO, ADC                            |
+| D1              | Analog      | P27                                   | GPIO, ADC                            |
+| D2              | Analog      | P28                                   | GPIO, ADC                            |
+| D3              | Analog      | P29                                   | GPIO, ADC                            |
+| D4              | SDA         | P6                                    | GPIO, I2C Data                       |
+| D5              | SCL         | P7                                    | GPIO, I2C Clock                      |
+| D6              | TX          | P0                                    | GPIO, UART Transmit                  |
+| D7              | RX,CSn      | P1                                    | GPIO, UART Receive,CSn               |
+| D8              | SCK         | P2                                    | GPIO, SPI Clock                      |
+| D9              | MISO        | P4                                    | GPIO, SPI Data                       |
+| D10             | MOSI        | P3                                    | GPIO, SPI Data                       |
+| Reset           |             | RUN                                   | RUN                                  |
+| Boot            |             | RP2040_BOOT                           | Enter Boot Mode                      |
+| CHARGE_LED      |             | VCC_3V3                               | CHG-LED_Red                          |
+| RGB LED         |             | NEOPIX                       | RGB LED                              |
+| USER_LED_R      |             | IO17_RGB-R                           | User-controlled red RGB LED pin      |
+| USER_LED_B      |             | IO25_RGB-B                            | User-controlled blue RGB LED pin     |
+| USER_LED_G      |             | IO16_RGB-G                           | User-controlled green RGB LED pin    |
 
 ### **Enter Bootloader Mode**
 

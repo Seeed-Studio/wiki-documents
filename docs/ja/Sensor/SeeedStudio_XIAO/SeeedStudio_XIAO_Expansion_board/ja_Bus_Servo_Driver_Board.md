@@ -4,6 +4,7 @@ description: |
 title: バスサーボドライバーボード
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/9.webp
 slug: /ja/bus_servo_driver_board
+sku: 108090023,108090003,114993612,105990190,101090141,101090142,100067882
 keywords:
     - Bus Servo
     - Robotics

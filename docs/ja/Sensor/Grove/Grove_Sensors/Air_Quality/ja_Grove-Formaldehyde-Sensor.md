@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/GroveFormaldehydehardware.jpg
 slug: /ja/Grove-Formaldehyde-Sensor
+sku: 101020972
 last_update:
   date: 05/15/2025
   author: Spencer Yan

@@ -3,6 +3,7 @@ description: Este artículo describe cómo hacer que la pantalla ePaper de reTer
 title: Pantalla ePaper de reTerminal E Series funciona con ESPHome para Home Assistant
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /es/reterminal_e10xx_with_esphome
+sku: 100017057,100073581
 sidebar_position: 2
 last_update:
   date: 07/21/2025

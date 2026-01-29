@@ -1,10 +1,11 @@
 ---
-description: Primeros pasos con ReSpeaker Lite
-title: Primeros pasos con ReSpeaker Lite
+description: Introducción a ReSpeaker Lite
+title: Introducción a ReSpeaker Lite
 keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reSpeaker_usb_v3
+sku: 107990273,E24072601
 last_update:
   date: 6/28/2024
   author: Jessie
@@ -16,7 +17,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener uno ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -24,8 +25,8 @@ Impulsada por el chipset XMOS XU316 AI Sound and Audio, esta placa de desarrollo
 
 ## Características
 
-- **Matriz de Doble Micrófono para Captura de Voz de Campo Lejano**: Los 2 micrófonos digitales de alto rendimiento capturan y extraen voz y habla de campo lejano (hasta 3 metros) incluso en entornos ruidosos ya que cancela el ruido puntual usando entrada de dos micrófonos.
-- **Algoritmos ASR de IA Integrados**: Impulsado por el chip de sonido y audio XMOS XU-316 AI, el kit incluye algoritmos de Comprensión de Lenguaje Natural para Cancelación de Interferencias (IC), Cancelación de Eco Acústico, Supresión de Ruido, Relación Voz-a-Ruido (VNR) y Control Automático de Ganancia (AGC), permitiendo captura de voz de alta calidad.
+- **Matriz de Doble Micrófono para Captura de Voz de Campo Lejano**: Los 2 micrófonos digitales de alto rendimiento capturan y extraen habla y voz de campo lejano (hasta 3 metros) incluso en entornos ruidosos ya que cancela el ruido puntual usando entrada de dos micrófonos.
+- **Algoritmos ASR de IA Integrados**: Impulsado por el chip XMOS XU-316 AI sound and audio, el kit incluye algoritmos de Comprensión de Lenguaje Natural para Cancelación de Interferencias (IC), Cancelación de Eco Acústico, Supresión de Ruido, Relación Voz-a-Ruido (VNR) y Control Automático de Ganancia (AGC), permitiendo captura de voz de alta calidad.
 - **Adoptando Código Abierto**: Esta placa es compatible con plataformas de hardware populares (XIAO ESP32S3 (Sense), Adafruit QT Py) vía I2S, y compatible con Raspberry Pi, PC vía USB (Audio Class 2.0 (UAC2)).
 - **LED RGB Integrado**: la placa cuenta con un LED RGB WS2812 programable, soportando efectos personalizados y ofreciendo una interfaz visual para sus aplicaciones.
 - **Soporte de Fuente de Alimentación Externa**: esta placa soporta fuente de alimentación externa de 5V, que puede aplicarse flexiblemente en diferentes escenarios.
@@ -39,13 +40,13 @@ Impulsada por el chipset XMOS XU316 AI Sound and Audio, esta placa de desarrollo
 |**Sensibilidad**|-26 dBFS|
 |**Punto de Sobrecarga Acústica**|120 dBL|
 |**SNR**|64 dBA|
-|**Fuente de Alimentación**|USB 5V, 5V Externo|
+|**Fuente de Alimentación**|USB 5V, Externa 5V|
 |**Dimensiones**|35\*86 mm|
 |**Salida de Audio**|Conector de Altavoz / Jack de Auriculares de 3.5mm|
 |**Frecuencia de Muestreo Máxima**|16Khz|
 |**Altavoz**|Soporta Altavoces Amplificadores de 5W.|
 
-## Descripción General del Hardware
+## Descripción del Hardware
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-9.png" alt="pir" width={800} height="auto" /></p>
 
@@ -64,19 +65,19 @@ Impulsada por el chipset XMOS XU316 AI Sound and Audio, esta placa de desarrollo
 |**6**|**Botón de Silencio**|Silencia la entrada de audio cuando se presiona.|
 |**7**|[XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) **(opcional)**|Para desarrollo e integración adicional.|
 |**8**|**Procesador Principal XU316**|Responsable del procesamiento y transmisión de audio.|
-|**9**|**Almohadilla de Soldadura para Fuente de Alimentación Externa**|Soporta fuente de alimentación externa de 5V.|
-|**10**|**Puerto USB Tipo-C**|Utilizado para alimentación y transmisión de datos.|
+|**9**|**Pad de Soldadura de Fuente de Alimentación Externa**|Soporta fuente de alimentación externa de 5V.|
+|**10**|**Puerto USB Type-C**|Usado para alimentación y transmisión de datos.|
 |**11**|**Conector de Altavoz**|Para salida de audio. Soporta altavoces amplificadores de 5W.|
-|**12**|**Conector de Auriculares de 3.5mm**|Salida de audio, podemos conectar altavoces activos o auriculares a este puerto.|
-|**13**|**Almohadilla de alimentación externa 1**|Pines IO no utilizados en el XIAO ESP32.|
-|**14**|**Almohadilla de alimentación externa 2**|Pines IO no utilizados en el XU316.|
+|**12**|**Jack de auriculares de 3.5mm**|Salida de audio, Podemos conectar altavoces activos o auriculares a este puerto.|
+|**13**|**Pad de alimentación externa 1**|Pines IO no utilizados en el XIAO ESP32.|
+|**14**|**Pad de alimentación externa 2**|Pines IO no utilizados en el XU316.|
 |**15**|**JTAG**|Para depuración y programación del XU316.|
 
 ## Comenzar
 
 ### Uso Inmediato
 
-ReSpeaker Lite es una interfaz de voz modular plug-and-play, no requiere controladores, solo conéctalo a tu PC y verás un dispositivo de voz llamado 'ReSpeaker Lite'.
+ReSpeaker Lite es una interfaz de voz modular plug-and-play, no requiere controlador, solo conéctalo a tu PC, verás un dispositivo de voz llamado 'ReSpeaker Lite'.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pc.png" alt="pir" width={500} height="auto" /></p>
 
@@ -84,7 +85,7 @@ ReSpeaker Lite es una interfaz de voz modular plug-and-play, no requiere control
 
 #### [Descarga de Firmware](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
 
-:::tip note
+:::tip nota
 Hay 2 versiones para la placa ReSpeaker Lite:
 
 Para usarla como dispositivo de sonido USB, por favor flashea el firmware versión USB (firmware por defecto).
@@ -97,13 +98,13 @@ Para usarla con XIAO ESP32S3, por favor flashea el firmware versión I2S.
 
 #### Cableado
 
-Conecta la Placa ReSpeaker Lite a tu PC mediante el cable USB.
+Conecta la Placa ReSpeaker Lite a tu PC vía el cable USB.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-connect.png" alt="pir" width={500} height="auto" /></p>
 
 #### Instalar DFU Util
 
-[dfu-util](http://dfu-util.sourceforge.net/) es una herramienta de línea de comandos para Actualización de Firmware de Dispositivo vía puerto USB.
+[dfu-util](http://dfu-util.sourceforge.net/) es una herramienta de línea de comandos para Device Firmware Upgrade vía puerto USB.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -117,9 +118,9 @@ import TabItem from '@theme/TabItem';
 - Cambia el directorio al `dfu-util.exe`<br/>
   ej., D:\dfu-util-0.11-binaries\win64\(si estás usando win32, por favor cambia win64 a win32)
 
-- Añade la ruta del `dfu-util.exe` a la variable de entorno del sistema Path: `Mi PC` > `Propiedades` > `Avanzado` > `Variables de Entorno` > `Path`.
- Ten en cuenta que las rutas en la variable Path están separadas por punto y coma ;.
- Esto permitirá que dfu-util se ejecute globalmente en el símbolo del sistema.
+- Agrega la ruta del `dfu-util.exe` a la variable de entorno del sistema Path: `My Computer` > `Properties` > `Advanced` > `Environment Variables` > `Path`.
+ Por favor nota que las rutas en la variable Path están separadas por punto y coma ;.
+ Esto permitirá que dfu-util sea ejecutado globalmente en el símbolo del sistema.
 
 - Abre el menú de inicio y escribe cmd. Presiona la tecla enter. En la terminal que aparece, verifica si la ruta de dfu-util.exe está configurada con el comando dfu-util -V:
 
@@ -175,7 +176,7 @@ Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-fac.png" alt="pir" width={500} height="auto" /></p>
 
-- Después de que la instalación se complete (eso tomará unos minutos), por favor realiza un ciclo de encendido y ejecuta `dfu-util -l` nuevamente, ReSpeaker Lite debería ser detectado ahora
+- Después de que la instalación esté completada (eso tomará unos minutos), por favor haz un ciclo de alimentación y ejecuta `dfu-util -l` de nuevo, ReSpeaker Lite debería ser detectado ahora
 
 </TabItem>
 
@@ -230,7 +231,7 @@ Found DFU: [2886:0019] ver=0205, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, n
 - Conecta la placa ReSpeaker a tu PC.
 
 - Ejecuta el siguiente comando `dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin`:
-  - En Linux por favor ejecuta `sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin`
+  - En Linux ejecuta `sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin`
 
 ```
 C:\Users\yiping>dfu-util -R -e -a 1 -D D:\Downloads\respeaker_lite_i2s_dfu_firmware_v1.0.7.bin
@@ -262,10 +263,10 @@ Resetting USB to switch back to Run-Time mode
 ```
 
 :::caution
-Después de completar el flasheo, por favor reinicia la placa.
+Después de completar el flasheo, reinicia la placa.
 :::
 
-- Check the firmware version:
+- Verifica la versión del firmware:
 
 ```
 dfu-util -l
@@ -279,14 +280,13 @@ dfu-util -l
 |--|--|--|--|
 ||<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/xiao-res.png" alt="pir" width={150} height="auto" /></p>|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/mic-array2.0.png" alt="pir" width={150} height="auto" /></p>|<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/mic-pi-hat.png" alt="pir" width={150} height="auto" /></p>|
 |<p style={{textAlign: 'center'}}>Chip Principal</p>|<p style={{textAlign: 'center'}}>XMOS XU316</p>|<p style={{textAlign: 'center'}}>XMOS XVF-3000</p>|<p style={{textAlign: 'center'}}>-</p>|
-
 |<p style={{textAlign: 'center'}}>Micrófonos</p>|<p style={{textAlign: 'center'}}>Micrófonos MEMS PDM x2</p>|<p style={{textAlign: 'center'}}>Micrófonos MEMS PDM x4</p>|<p style={{textAlign: 'center'}}>Micrófonos MEMS Analógicos x2</p>
 |<p style={{textAlign: 'center'}}>Distancia de Captura de Voz</p>|<p style={{textAlign: 'center'}}>3m</p>|<p style={{textAlign: 'center'}}>5m</p>|<p style={{textAlign: 'center'}}>3m</p>|
 |<p style={{textAlign: 'center'}}>Sensibilidad</p>|<p style={{textAlign: 'center'}}>-26 dBFS</p>|<p style={{textAlign: 'center'}}>-26 dBFS</p>|<p style={{textAlign: 'center'}}>-</p>|
 |<p style={{textAlign: 'center'}}>Punto de Sobrecarga Acústica</p>|<p style={{textAlign: 'center'}}>120 dBSPL</p>|<p style={{textAlign: 'center'}}>120 dBSPL</p>|<p style={{textAlign: 'center'}}>-</p>|
 |<p style={{textAlign: 'center'}}>SNR</p>|<p style={{textAlign: 'center'}}>64 dB</p>|<p style={{textAlign: 'center'}}>63 dB</p>|<p style={{textAlign: 'center'}}>-</p>|
 |<p style={{textAlign: 'center'}}>Algoritmos de Procesamiento de Audio Integrados</p>|<ul><li>Cancelación de Eco Acústico (AEC)</li><li>Control Automático de Ganancia (AGC)</li><li>Supresión de Ruido (NS)</li><li>Cancelación de Interferencias (IC)</li><li>Relación Voz-Ruido (VNR)</li></ul>|<ul><li>Cancelación de Eco Acústico (AEC)</li><li>Control Automático de Ganancia (AGC)</li><li>Supresión de Ruido (NS)</li><li>Formación de Haz</li><li>Dirección de Llegada (DoA)</li><li>Desreverberación</li><li>Detección de Actividad de Voz (VAD)</li></ul>|<p style={{textAlign: 'center'}}>-</p>|
-|<p style={{textAlign: 'center'}}>Hardware Compatible</p>|<ul><li>XIAO ESP32S3(Sense)</li><li>Adafruit QT Py vía I2S</li><li>Raspberry Pi</li><li>Cualquier computadora o SBC ejecutando Linux, macOS y Windows vía USB</li></ul>|<ul><li>Raspberry Pi</li><li>Cualquier computadora o SBC ejecutando Linux, macOS y Windows vía USB</li></ul>|Raspberry Pi ÚNICAMENTE|
+|<p style={{textAlign: 'center'}}>Hardware Compatible</p>|<ul><li>XIAO ESP32S3(Sense)</li><li>Adafruit QT Py vía I2S</li><li>Raspberry Pi</li><li>Cualquier computadora o SBC ejecutando Linux, macOS y Windows vía USB</li></ul>|<ul><li>Raspberry Pi</li><li>Cualquier computadora o SBC ejecutando Linux, macOS y Windows vía USB</li></ul>|Solo Raspberry Pi|
 |<p style={{textAlign: 'center'}}>Perfecto para</p>|Captura de sonido direccional, ideal para configuraciones lineales o alargadas|Captura de sonido omnidireccional y localización, mejor ubicado en el centro de entornos abiertos y multidireccionales|Captura de sonido direccional, ideal para configuraciones lineales o alargadas|
 
 ### FAQ
@@ -301,11 +301,11 @@ dfu-util -l
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
- Si no es la versión USB, por favor sigue [este paso](https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/#flash-firmware) para flashear el firmware.
+ Si no es versión USB, sigue [este paso](https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/#flash-firmware) para flashear el firmware.
 
-- **¿No puedes detectar el dispositivo de sonido ReSpeaker Lite USB en Windows después de flashear el firmware USB?**
+- **¿No se puede detectar el dispositivo de sonido USB ReSpeaker Lite en Windows después de flashear el firmware USB?**
 
-- Abre el menú de inicio y escribe `Administrador de dispositivos`. Encuentra el dispositivo `ReSpeaker Lite`, haz clic derecho sobre él y selecciona `Desinstalar dispositivo`. Selecciona `Eliminar el software del controlador para este dispositivo` y haz clic en `Desinstalar`. Después de eso, reinicia el dispositivo y Windows reinstalará el controlador de tarjeta de sonido correcto para él.
+- Abre el menú de inicio y escribe "Device manager". Encuentra el dispositivo `ReSpeaker Lite`, haz clic derecho sobre él y selecciona "Uninstall device". Selecciona "Delete the driver software for this device" y haz clic en "Uninstall". Después de eso, reinicia el dispositivo y Windows reinstalará automáticamente el controlador de tarjeta de sonido correcto.
 
  <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/delete-driver.png" alt="pir" width={600} height="auto" /></p>
 
@@ -314,3 +314,5 @@ dfu-util -l
 [Firmware XMOS de ReSpeaker Lite](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
 
 [Github de ReSpeaker Lite](https://github.com/respeaker/ReSpeaker_Lite/)
+
+[Archivo 3D de ReSpeaker Lite](https://files.seeedstudio.com/wiki/respeakerv3/ReSpeakerLitev1.1.step)

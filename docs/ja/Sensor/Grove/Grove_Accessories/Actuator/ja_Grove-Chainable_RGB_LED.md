@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Chainable_RGB_LED/
 slug: /ja/Grove-Chainable_RGB_LED
+sku: 104020048, 104030006
 last_update:
   date: 05/15/2025
   author: gunengyu

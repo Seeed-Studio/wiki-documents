@@ -8,6 +8,7 @@ keywords:
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
+sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 9/26/2025
   author: LiShanghang
@@ -635,16 +636,16 @@ The teleoperate command will automatically:
 
   Red error messages can be ignored.
 
-4. Clone the Orbbec SDK into the `~/lerobot/src/cameras` directory
+4. Clone the Orbbec SDK into the `~/lerobot/src/lerobot/cameras` directory
 
   ```bash
-  cd ~/lerobot/src/cameras
+  cd ~/lerobot/src/lerobot/cameras
   git clone https://github.com/ZhuYaoHui1998/orbbec.git
   ```
 
 5. Modify utils.py and **init**.py
 
-- Find `utils.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 40:
+- Find `utils.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at about line 45:
 
 ```python
 elif cfg.type == "orbbec":
@@ -655,7 +656,7 @@ elif cfg.type == "orbbec":
 
 <div align="center">
     <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/utils.png" />
+    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/utils.png" />
 </div>
 
 - Find `__init__.py` in the `~/lerobot/src/lerobot/cameras` directory, and add the following code at line 18:

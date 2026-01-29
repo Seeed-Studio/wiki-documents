@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-6-Axis_AccelerometerAndCompass_V2.0
+sku: 101020081
 last_update:
   date: 05/15/2025
   author: shuxu hu

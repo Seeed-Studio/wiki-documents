@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Red_LED_Matrix_w_Driver
+sku: 104020089
 last_update:
   date: 05/15/2025
   author: shuxu hu

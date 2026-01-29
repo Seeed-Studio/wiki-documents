@@ -56,8 +56,6 @@ last_update:
 
 此步骤确保稳定的 USB 音频输入和与下游语音处理管道的兼容性。
 
----
-
 #### NVIDIA Jetson AGX Orin – 初始设置
 
 如果您的 Jetson AGX Orin 尚未设置，请使用适当的 JetPack 版本进行刷写。
@@ -73,8 +71,6 @@ sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
----
-
 ### CUDA 环境配置
 
 #### 检查已安装的 CUDA 版本
@@ -86,8 +82,6 @@ ls /usr/local
 ```
 
 您应该看到一个文件夹，如 `cuda`、`cuda-12.x` 或类似的。
-
----
 
 #### 永久添加 CUDA 路径
 
@@ -111,8 +105,6 @@ export LD_LIBRARY_PATH=/usr/local/cuda-(your_version)/lib64${LD_LIBRARY_PATH:+:$
 source ~/.bashrc
 ```
 
----
-
 #### 验证 CUDA 安装
 
 确认 CUDA 已正确安装并可访问：
@@ -122,8 +114,6 @@ nvcc --version
 ```
 
 如果显示了 CUDA 版本，则 GPU 支持已准备就绪。
-
----
 
 ### 安装支持 GPU 的 Whisper
 
@@ -141,8 +131,6 @@ Whisper 从源代码构建以启用 CUDA 加速。
 sudo apt-get install libsdl2-dev
 ```
 
----
-
 #### 启用 CUDA 构建 Whisper
 
 从 `whisper.cpp` 目录运行：
@@ -153,8 +141,6 @@ cmake --build build -j --config Release
 ```
 
 这将编译支持 GPU 加速和 SDL 支持的 Whisper。
-
----
 
 #### 下载 Whisper 模型
 
@@ -169,8 +155,6 @@ cmake --build build -j --config Release
 ```bash
 whisper.cpp/models/
 ```
-
----
 
 #### 运行 Whisper 服务器
 
@@ -187,8 +171,6 @@ cd whisper.cpp
 
 这将启动一个可通过网络访问的实时语音转文本服务器。
 
----
-
 ### 安装 Ollama 进行本地 LLM 推理
 
 Ollama 官方支持 NVIDIA Jetson 设备，并提供 CUDA 加速的本地 LLM 执行。
@@ -204,8 +186,6 @@ curl -fsSL https://ollama.com/install.sh | sh
 ```bash
 ollama run gemma3:4b
 ```
-
----
 
 ## 智能语音 AI 助手 – 快速入门指南
 
@@ -238,8 +218,6 @@ git clone https://github.com/KasunThushara/LocalVoiceAssistant.git
 pip install -r requirements.txt
 ```
 
----
-
 #### 下载文本转语音（TTS）模型
 
 本项目使用 **Piper TTS** 模型。以下是使用男性英语语音（Amy）的示例：
@@ -255,8 +233,6 @@ wget -O models/en_US-amy-low.onnx.json \
 
 您可以根据需要将其替换为任何兼容的 Piper 语音模型。
 
----
-
 #### 下载嵌入模型（一次性设置）
 
 嵌入模型是构建 RAG 管道使用的向量数据库所必需的。
@@ -266,8 +242,6 @@ python download_sentence_tf.py
 ```
 
 此步骤只需运行一次。
-
----
 
 #### 构建向量数据库
 
@@ -279,8 +253,6 @@ python test_scripts/rebuild_vector.py
 
 此过程索引您的文档并为快速语义搜索做准备。
 
----
-
 #### 运行应用程序
 
 启动智能语音 AI 助手：
@@ -290,8 +262,6 @@ python app.py
 ```
 
 运行后，系统将监听唤醒词并实时响应语音查询。
-
----
 
 ## 参考资料
 

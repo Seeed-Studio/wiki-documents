@@ -8,7 +8,7 @@ slug: /ja/Bluetooth_Bee_v2.0
 last_update:
   date: 05/15/2025
   author: shuxu hu
-sku: 113050013
+sku: 113050014
 type: gettingstarted
 ---
 

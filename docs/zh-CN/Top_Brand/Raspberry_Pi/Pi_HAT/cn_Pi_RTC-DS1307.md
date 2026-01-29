@@ -5,6 +5,7 @@ keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Pi_RTC-DS1307
+sku: 103030277
 last_update:
   date: 1/11/2023
   author: jianjing Huang

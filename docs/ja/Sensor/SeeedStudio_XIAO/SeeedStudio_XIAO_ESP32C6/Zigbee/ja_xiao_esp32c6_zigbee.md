@@ -3,6 +3,7 @@ description: このチュートリアルでは、XIAO ESP32C6開発ボードを�
 title: XIAO ESP32C6 Zigbee クイックスタートガイド（ESP-IDF）
 image: https://files.seeedstudio.com/wiki/xiaoc6_zigbee/3.jpg
 slug: /ja/xiao_esp32c6_zigbee
+sku: 113991254, 102010636, 101991470
 last_update:
   date: 05/30/2024
   author: Citric

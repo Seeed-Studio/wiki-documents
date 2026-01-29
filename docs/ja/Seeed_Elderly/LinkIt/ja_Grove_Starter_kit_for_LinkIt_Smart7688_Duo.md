@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove_Starter_kit_for_LinkIt_Smart7688_Duo
+sku: 110020007
 last_update:
   date: 05/15/2025
   author: shuxu hu

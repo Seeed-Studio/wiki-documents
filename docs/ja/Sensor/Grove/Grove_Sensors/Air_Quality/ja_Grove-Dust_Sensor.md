@@ -5,6 +5,7 @@ keywords:
 - Grove Grove_Sensors Air_Quality
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Dust_Sensor
+sku: 101020012
 last_update:
   date: 05/15/2025
   author: jianjing huang

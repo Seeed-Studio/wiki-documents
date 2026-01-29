@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove_NFC/
 slug: /ja/Grove_NFC
+sku: 113020006
 last_update:
   date: 05/15/2025
   author: gunengyu

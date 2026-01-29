@@ -17,11 +17,11 @@ last_update:
 
 Esta wiki cubre el soporte de [FreeRTOS](https://freertos.org/) para el [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started/). Con la ayuda de esta guía podrás utilizar el conjunto de características disponibles para la placa.
 
-## Qué es [FreeRTOS](https://www.freertos.org/index.html)
+## ¿Qué es [FreeRTOS](https://www.freertos.org/index.html)?
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/1.png" alt="pir" width={600} height="auto" /></p>
 
-FreeRTOS es una colección de librerías C compuesta por un kernel de tiempo real y un conjunto de librerías modulares que implementan funcionalidad complementaria. El kernel de FreeRTOS es un kernel de tiempo real (o planificador de tiempo real) que permite a las aplicaciones construidas sobre FreeRTOS cumplir con sus requisitos de tiempo real estricto. Permite que las aplicaciones se organicen como una colección de hilos de ejecución independientes.
+FreeRTOS es una colección de librerías C compuesta por un kernel de tiempo real y un conjunto de librerías modulares que implementan funcionalidad complementaria. El kernel de FreeRTOS es un kernel de tiempo real (o planificador de tiempo real) que permite a las aplicaciones construidas sobre FreeRTOS cumplir con sus requisitos de tiempo real estrictos. Permite que las aplicaciones se organicen como una colección de hilos de ejecución independientes.
 
 _Referencia : [**Mastering the FreeRTOS Real Time Kernel**](https://www.freertos.org/Documentation/02-Kernel/07-Books-and-manual/01-RTOS_book)_
 
@@ -33,7 +33,7 @@ Utilizaremos el puerto ESP IDF de FreeRTOS.
 
 ## Preparación del Hardware
 
-Estoy usando [Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started/) y la cámara integrada, micrófono y lector de tarjetas sd junto con la funcionalidad Wifi del ESP32S3.
+Estoy usando el [Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started/) y la cámara integrada, micrófono y lector de tarjetas SD junto con la funcionalidad WiFi del ESP32S3.
 
 <div class="table-center">
   <table align="center">
@@ -46,7 +46,7 @@ Estoy usando [Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/es/xi
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -55,10 +55,10 @@ Estoy usando [Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/es/xi
 
 ### Componentes Adicionales
 
-- [Grove - Placa de Expansión](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Pantalla I2C RTC y Botón
-- [Sensor de Calidad del Aire v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)
-- [Grove - Sensor de Temperatura, Humedad, Presión y Gas para Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
-- [Carcasa Acrílica para la placa de expansión Seeed Studio XIAO](https://www.seeedstudio.com/XIAO-p-4812.html)
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - Pantalla I2C RTC y Botón
+- [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)
+- [Grove - Temperature, Humidity, Pressure and Gas Sensor for Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
+- [Acrylic Case for Seeed Studio XIAO Expansion board](https://www.seeedstudio.com/XIAO-p-4812.html)
 
 ## Preparación del Software
 
@@ -89,14 +89,14 @@ Estoy usando Visual Studio Code (Windows) con ESP-IDF.
   </table>
 </div>
 
-## Comenzando
+## Introducción
 
-### Configurando ESP-IDF
+### Configuración de ESP-IDF
 
 Después de configurar la [Extensión de Visual Studio](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md), abre la terminal y pega el siguiente comando para acceder a las Herramientas de Línea de Comandos de ESP-IDF desde el entorno de terminal normal (fuera de VScode).
 
 :::note
-La instalación normal de la extensión [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) de VS-Code se encargará del 90% de los casos de uso, realiza los siguientes pasos solo si necesitas las herramientas de línea de comandos de ESP fuera del entorno.
+La instalación normal de la extensión [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) de VS-Code se encargará del 90% de los casos de uso. Realiza los siguientes pasos solo si necesitas las herramientas de línea de comandos ESP fuera del entorno.
 :::
 
 PowerShell (Windows)
@@ -110,13 +110,13 @@ PowerShell (Windows)
 Reemplázala con la ruta de instalación en tu dispositivo.
 :::
 :::tip
-Para evitar configuraciones repetidas, inicia PowerShell en modo administrador y escribe el siguiente comando
+Para evitar configuración repetida, inicia PowerShell en modo administrador y escribe el siguiente comando
 
 ```shell
 notepad $PSHOME\Profile.ps1
 ```
 
-Se abrirá una instancia del Bloc de notas. Pega el comando de exportación del shell en el bloc de notas y guárdalo.
+Se abrirá una instancia del Bloc de notas. Pega el comando export shell en el bloc de notas y guárdalo.
 abre una instancia de powershell y debería tener una salida similar a la siguiente.
 
 ```shell
@@ -124,7 +124,7 @@ Done! You can now compile ESP-IDF projects.
 ```
 
 :::  
-Si todo se hace correctamente, el siguiente comando :
+Si todo está hecho correctamente, el siguiente comando:
 
 ```shell
 idf.py
@@ -139,24 +139,208 @@ Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
   system target will be made. Selected target: None
 ```
 
+### Configuración de la Placa para XIAO ESP32S3
+
+Después de configurar ESP-IDF, necesitas configurar tu proyecto específicamente para la placa XIAO ESP32S3 para aprovechar sus características de hardware incluyendo 8MB de Flash y 8MB de PSRAM Octal.
+
+#### Establecer Dispositivo Objetivo
+
+En el directorio de tu proyecto ESP-IDF, establece el objetivo a ESP32-S3:
+
+```bash
+idf.py set-target esp32s3
+```
+
+#### Habilitar Opciones de Compilación Completa
+
+En el `CMakeLists.txt` raíz de tu proyecto, asegúrate de que `MINIMAL_BUILD` esté establecido en `OFF`:
+
+```cmake
+idf_build_set_property(MINIMAL_BUILD OFF)
+```
+
+Esto habilita todas las opciones de configuración en menuconfig.
+
+#### Configurar Flash y PSRAM
+
+Abre el menú de configuración:
+
+```bash
+idf.py menuconfig
+```
+
+**Configuración del Tamaño de Flash:**
+1. Navega a: **Serial flasher config → Flash size**
+2. Establece a: **8 MB**
+
+**Configuración de PSRAM:**
+1. Navega a: **Component config → ESP PSRAM**
+2. Habilita: **Support for external, SPI-connected RAM**
+3. Establece **SPI RAM mode** a: **Octal Mode PSRAM**
+4. Establece **SPI RAM clock** a: **80MHz**
+
+:::info
+El XIAO ESP32S3 usa PSRAM Octal, no modo Quad. Seleccionar el modo correcto es esencial para que los 8MB de PSRAM funcionen correctamente.
+:::
+
+#### Actualizar Dependencias del Componente Principal
+
+En `/main/CMakeLists.txt`, asegúrate de que los componentes PSRAM y SPI flash estén incluidos:
+
+```cmake
+idf_component_register(
+    SRCS "main.c"
+    INCLUDE_DIRS "."
+    PRIV_REQUIRES esp_psram spi_flash
+)
+```
+
+#### Crear Componente de Configuración de Pines de la Placa
+
+Crea un componente reutilizable para las definiciones de pines XIAO para hacer tu código más legible y portable:
+
+```bash
+mkdir -p ./components/board_config/include/
+```
+
+Crea `./components/board_config/include/xiao_pins.h`:
+
+```c
+// xiao_pins.h
+#pragma once
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Analog / Digital Pins
+#define XIAO_D0     1
+#define XIAO_D1     2
+#define XIAO_D2     3
+#define XIAO_D3     4
+#define XIAO_D4     5
+#define XIAO_D5     6
+#define XIAO_D6     43
+#define XIAO_D7     44
+#define XIAO_D8     7
+#define XIAO_D9     8
+#define XIAO_D10    9
+
+// Onboard User LED (Active Low)
+#define XIAO_LED    21
+
+// I2C Pins (Default)
+#define XIAO_SDA    5   // Same as D4
+#define XIAO_SCL    6   // Same as D5
+
+// SPI Pins (Default)
+#define XIAO_MISO   9   // Same as D10
+#define XIAO_MOSI   10
+#define XIAO_SCK    8   // Same as D9
+#define XIAO_SS     7   // Same as D8
+
+#ifdef __cplusplus
+}
+#endif
+```
+
+Crea `./components/board_config/CMakeLists.txt`:
+
+```cmake
+idf_component_register(INCLUDE_DIRS "include")
+```
+
+:::tip
+Estas definiciones de pines coinciden con las etiquetas de serigrafía en la placa XIAO ESP32S3, haciendo tu código más legible. Por ejemplo, usa `XIAO_LED` en lugar de codificar directamente GPIO 21.
+:::
+
+#### Usar Definiciones de Pines en tu Código
+
+En tu aplicación principal o cualquier componente, incluye el header:
+
+```c
+#include "xiao_pins.h"
+
+void app_main(void) {
+    // Example: Configure LED pin
+    gpio_set_direction(XIAO_LED, GPIO_MODE_OUTPUT);
+    gpio_set_level(XIAO_LED, 0);  // Turn on (active low)
+}
+```
+
+#### Referencia de Mapeo de Pines
+
+![Imagen de referencia del pinout del Xiao ESP32S3](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg)
+
+| Etiqueta | GPIO | Función Alt |
+|----------|------|-------------|
+| D0       | 1    | ADC1_CH0    |
+| D1       | 2    | ADC1_CH1    |
+| D2       | 3    | ADC1_CH2    |
+| D3       | 4    | ADC1_CH3    |
+| D4       | 5    | ADC1_CH4, SDA |
+| D5       | 6    | ADC1_CH5, SCL |
+| D6       | 43   | TX          |
+| D7       | 44   | RX          |
+| D8       | 7    | ADC1_CH6, SS |
+| D9       | 8    | ADC1_CH7, SCK |
+| D10      | 9    | ADC1_CH8, MISO |
+
+:::note
+- GPIO 19 y 20 se usan para USB D-/D+ y no deben reconfigurarse
+- El LED integrado en GPIO 21 es activo BAJO (establecer a 0 para encender)
+- Todos los pines D0-D10 soportan entrada analógica vía ADC1
+:::
+
+#### Compilación y Flasheo
+
+Compila tu proyecto:
+
+```bash
+idf.py build
+```
+
+Flashea al XIAO ESP32-S3:
+
+```bash
+idf.py -p /dev/ttyACM0 flash monitor
+```
+
+Reemplaza `/dev/ttyACM0` con tu puerto serie real (en Windows, típicamente `COM3`, `COM4`, etc.).
+
+#### Solución de Problemas de Configuración de la Placa
+
+**PSRAM No Detectada:**
+- Verifica que el modo Octal esté seleccionado (no Quad)
+- Comprueba que el tamaño de flash esté establecido a 8MB
+- Asegúrate de que la versión de ESP-IDF sea 4.4 o posterior
+
+**Falla la Carga:**
+- Mantén presionado el botón BOOT mientras conectas USB
+- Intenta reducir la velocidad de carga: `idf.py -p PORT -b 115200 flash`
+
+**Conflictos de Pines:**
+- Evita usar los pines GPIO 19 y 20 (USB D- y D+)
+- XIAO_LED (GPIO 21) se comparte con el LED integrado
+
 ## ¿Qué son las Tareas?
 
-Las tareas son pequeñas funciones/trabajos que se solicita al procesador que realice con un conjunto de configuraciones. Las tareas pueden ir desde pequeñas funciones hasta funciones de bucle infinito.  
+Las tareas son pequeñas funciones/trabajos que se solicita al procesador que realice con un conjunto de configuraciones. Las tareas pueden variar desde funciones pequeñas hasta funciones de bucle infinito.
 Las tareas son las unidades fundamentales de ejecución en una aplicación ESP-IDF. Son esencialmente funciones que se ejecutan de forma concurrente con otras tareas. Esto permite una multitarea eficiente y capacidad de respuesta.
 
-### ¿Cuáles son las propiedades de las tareas?
+### ¿Qué son las propiedades de las tareas?
 
 Debido a la vastedad de este tema, solo cubriré algunas de las propiedades que usaremos para esta guía.
 
 - **TaskFunction**: Esta es la función que contiene la lógica real de la tarea. Es el punto de entrada para la ejecución de la tarea.
 - **StackSize**: Esto especifica la cantidad de memoria asignada para la pila de la tarea. La pila se usa para almacenar variables locales, direcciones de retorno de funciones y datos temporales.
-- **TaskPriority**: Esto determina la importancia relativa de la tarea comparada con otras tareas. Las tareas de mayor prioridad tienen una mayor probabilidad de ser ejecutadas antes que las de menor prioridad.
-- **TaskParameters**: Estos son argumentos opcionales que pueden pasarse a la función de la tarea cuando se crea. Pueden usarse para proporcionar contexto adicional o configuración a la tarea.
-- **CoreAffinity**: Esto especifica a qué núcleo de CPU debe asignarse la tarea. En sistemas con múltiples núcleos, esto puede usarse para optimizar el rendimiento o equilibrar la carga de trabajo.
+- **TaskPriority**: Esto determina la importancia relativa de la tarea en comparación con otras tareas. Las tareas de mayor prioridad tienen mayor probabilidad de ejecutarse antes que las de menor prioridad.
+- **TaskParameters**: Estos son argumentos opcionales que se pueden pasar a la función de la tarea cuando se crea. Se pueden usar para proporcionar contexto adicional o configuración a la tarea.
+- **CoreAffinity**: Esto especifica a qué núcleo de CPU debe asignarse la tarea. En sistemas con múltiples núcleos, esto se puede usar para optimizar el rendimiento o equilibrar la carga de trabajo.
 
 ### Creando una tarea
 
-Para crear una tarea en FreeRTOS, se usa la función xTaskCreate. Esta función toma varios parámetros, incluyendo la función de la tarea, nombre de la tarea, tamaño de pila, parámetros, prioridad y un manejador a la tarea creada.
+Para crear una tarea en FreeRTOS, se usa la función xTaskCreate. Esta función toma varios parámetros, incluyendo la función de la tarea, nombre de la tarea, tamaño de la pila, parámetros, prioridad y un manejador para la tarea creada.
 
 ```c
 TaskHandle_t task;
@@ -172,7 +356,7 @@ xTaskCreate(
 
 ### Creando una tarea fijada a un núcleo
 
-Para crear una tarea y fijarla a un núcleo específico (solo si el chip en uso es de doble núcleo), se utiliza la función xTaskCreatePinnedToCore. Esta función es similar a xTaskCreate pero incluye un parámetro adicional para especificar el núcleo.
+Para crear una tarea y fijarla a un núcleo específico (solo si el chip en uso es de doble núcleo), se usa la función xTaskCreatePinnedToCore. Esta función es similar a xTaskCreate pero incluye un parámetro adicional para especificar el núcleo.
 
 ```c
 TaskHandle_t task;
@@ -186,7 +370,7 @@ xTaskCreatePinnedToCore(
         0);                       /* Core ID */
 ```
 
-### Llamada a la función de tarea
+### Llamada de función de tarea
 
 La función de tarea es el código real que será ejecutado por la tarea.
 
@@ -300,16 +484,16 @@ void app_main(void) {
 configMINIMAL_STACK_SIZE se puede cambiar en sdkconfig.
 :::
 
-1. Cuatro Tareas: El código define cuatro tareas: taskFunction1, taskFunction2, taskFunction3, y taskFunction4.
+1. Cuatro Tareas: El código define cuatro tareas: taskFunction1, taskFunction2, taskFunction3 y taskFunction4.
 2. Prioridades de Tareas: Todas las tareas se crean con tskIDLE_PRIORITY. Esto significa que tienen la misma prioridad.
-3. Asignación de Tareas: taskFunction1 está asignada al CPU0, mientras que las otras tres tareas están asignadas al CPU1.
+3. Fijación de Tareas: taskFunction1 está fijada a CPU0, mientras que las otras tres tareas están fijadas a CPU1.
 4. Retrasos de Tareas: taskFunction1 tiene un retraso de 1000ms, mientras que las otras tres tienen un retraso de 500ms.
 
 ### Creando la Programación de Tareas para CPU0 y CPU1
 
 He creado una programación básica de tareas para CPU0 y CPU1.
 
-#### Programación de Tareas del CPU0
+#### Programación de Tareas CPU0
 
 ```shell
 Task: taskFunction1
@@ -328,7 +512,7 @@ Core: 1
 ```
 
 :::info
-Este es un cronograma simplificado. La programación real de tareas en un sistema de tiempo real involucraría factores más complejos como prioridades de tareas, fechas límite y restricciones de recursos.
+Esta es una programación simplificada. La programación real de tareas en un sistema de tiempo real involucraría factores más complejos como prioridades de tareas, fechas límite y restricciones de recursos.
 :::
 
 <details>
@@ -361,7 +545,7 @@ I (14082) Task4: Hello from task 4
 
 </details>
 
-## Sondeo de sensor usando FreeRTOS
+## Sondeo de sensores usando FreeRTOS
 
 Para esto estoy usando un sensor analógico [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html) junto con ESP_IDF_v5.3.
 
@@ -379,8 +563,8 @@ Conecta el Xiao-S3 a la [Grove - Expansion Board](https://www.seeedstudio.com/Se
 
 ### Configuración de Software
 
-Después de descargar el repositorio git, abre la carpeta en VSCode. Ve a View->Command Palette->ESP-IDF: Add vscode Configuration Folder.
-Desde el panel inferior selecciona el puerto COM correcto, el chip (ESP-S3) y compila, flashea y monitorea.
+Después de clonar el repositorio git, abre la carpeta en VSCode. Ve a View->Command Palette->ESP-IDF: Add vscode Configuration Folder.
+Desde el panel inferior selecciona el puerto COM correcto, chip (ESP-S3) y construye, flashea y monitorea.
 
 ### Descripción del Código
 
@@ -408,11 +592,11 @@ void sensor_setup()
 }
 ```
 
-- La función sensor_setup() configura los pines de E/S del sensor y la unidad ADC.
+- La función sensor_setup() configura los pines I/O del sensor y la unidad ADC.
 - Intenta inicializar el sensor usando initialize_air_quality_sensor().
-- Si la inicialización es exitosa, el sensor está listo para la recolección de datos.
+- Si la inicialización es exitosa, el sensor está listo para la recopilación de datos.
 
-- Tarea de Recolección de Datos:
+- Tarea de Recopilación de Datos:
 
 ```c
 void poll_read_air_quality_sensor(void *pvParameters)
@@ -425,7 +609,7 @@ void poll_read_air_quality_sensor(void *pvParameters)
 }
 ```
 
-- Se crea la tarea poll_read_air_quality_sensor() para leer continuamente datos en bruto del sensor.
+- La tarea poll_read_air_quality_sensor() se crea para leer continuamente datos en bruto del sensor.
 - Llama a air_quality_sensor_slope() para procesar los datos en bruto y calcular la pendiente, que es un indicador de la calidad del aire.
 - La tarea se retrasa 500 milisegundos antes de leer el siguiente punto de datos.
 
@@ -445,8 +629,8 @@ void print_read_air_quality_sensor(void *pvParameters)
 }
 ```
 
-- Se crea la tarea print_read_air_quality_sensor() para imprimir periódicamente los datos recopilados y la calidad del aire calculada.
-- Recupera la hora actual, la pendiente, el valor sin procesar y el mensaje de calidad del aire usando air_quality_error_to_message().
+- La tarea print_read_air_quality_sensor() se crea para imprimir periódicamente los datos recopilados y la calidad del aire calculada.
+- Recupera el tiempo actual, la pendiente, el valor en bruto y el mensaje de calidad del aire usando air_quality_error_to_message().
 - La tarea imprime los datos en la consola de manera formateada.
 - La tarea se retrasa 1000 milisegundos antes de imprimir el siguiente punto de datos.
 
@@ -520,7 +704,7 @@ Para esto estoy usando la Cámara integrada y la Tarjeta SD junto con ESP_IDF_v5
     </a>
 </div>
 
-### Configuración del Hardware
+### Configuración de Hardware
 
 Sigue la [guía de tarjeta microSD](https://wiki.seeedstudio.com/es/xiao_esp32s3_sense_filesystem/) y la [guía de cámara](https://wiki.seeedstudio.com/es/xiao_esp32s3_camera_usage/) para conectar la cámara y la placa de extensión de tarjeta microSD al
 
@@ -545,7 +729,7 @@ La configuración se vería algo así:
 ### Configuración de Software
 
 Después de clonar el repositorio git, abre la carpeta en VSCode. Ve a View->Command Palette->ESP-IDF: Add vscode Configuration Folder.
-Desde el panel inferior selecciona el puerto COM correcto, el chip (ESP-S3) y construye, flashea y monitorea.
+Desde el panel inferior selecciona el puerto COM correcto, chip (ESP-S3) y construye, flashea y monitorea.
 
 :::tip
 Si estás usando el modelo OV3660, necesitas configurarlo en el IDF para poder manejarlo. ingresa **"idf.py menuconfig"** en tu terminal
@@ -570,7 +754,7 @@ Si estás usando el modelo OV3660, necesitas configurarlo en el IDF para poder m
 
 - Configuración de Cámara:
   - Define los pines GPIO utilizados para varias funciones de la cámara (PWDN, RESET, XCLK, SIOD, SIOC, Y9-Y2, VSYNC, HREF, PCLK, LED).
-  - Establece valores predeterminados para los parámetros de la cámara (por ejemplo, frecuencia de reloj, ubicación del buffer de frame, formato de píxel, tamaño de frame, calidad JPEG, cantidad de buffers de frame, modo de captura).
+  - Establece valores predeterminados para los parámetros de la cámara (por ejemplo, frecuencia de reloj, ubicación del buffer de frame, formato de píxel, tamaño de frame, calidad JPEG, conteo de buffer de frame, modo de captura).
 
 ```c
 #ifndef CAMERA_CONFIG_H
@@ -727,8 +911,8 @@ Estructura del Código:
 
 - Archivos de cabecera (camera_config.h, camera_interface.h) y archivos de implementación (camera_interface.c).
 - El archivo camera_config.h define los parámetros de configuración de la cámara.
-- El archivo camera_interface.h declara las funciones para la inicialización de la cámara y la creación de tareas.
-- El archivo camera_interface.c implementa la inicialización de la cámara, la lógica de toma de fotografías y creación de tareas.
+- El archivo camera_interface.h declara las funciones para la inicialización de la cámara y creación de tareas.
+- El archivo camera_interface.c implementa la inicialización de la cámara, captura de fotos y lógica de creación de tareas.
 
 ### Componente SdCard
 
@@ -895,7 +1079,7 @@ Estructura del Componente:
 - Archivos de cabecera (sdcard_config.h, sdcard_interface.h) y archivos de implementación (sdcard_interface.c).
 - El archivo sdcard_config.h define los parámetros de configuración de la tarjeta SD.
 - El archivo sdcard_interface.h declara las funciones para la inicialización, desinicialización y guardado de imágenes de la tarjeta SD.
-- El archivo sdcard_interface.c implementa la lógica de inicialización, desinicialización y guardado de imágenes de la tarjeta SD.
+- El archivo sdcard_interface.c implementa la inicialización, desinicialización y lógica de guardado de imágenes de la tarjeta SD.
 
 ### Función Principal
 
@@ -923,7 +1107,7 @@ void app_main(void)
 }
 ```
 
-- Incluye los archivos de cabecera necesarios para las interfaces de la cámara y la tarjeta SD.
+- Incluye los archivos de cabecera necesarios para las interfaces de cámara y tarjeta SD.
 - Inicializa tanto la tarjeta SD como la cámara usando las funciones proporcionadas.
 - Inicia la tarea de la cámara para tomar fotos continuamente
 
@@ -991,7 +1175,7 @@ I (34117) camera: Picture taken! Its size was: 51968 bytes
 
 ## FreeRtos para Arduino IDE
 
-FreeRtos puede utilizarse para compilaciones XIAO-S3 basadas en Arduino-IDE. Es similar al uso de ESP-IDF pero se ejecuta solo en un núcleo y no está optimizado para ESP-IDF.
+FreeRtos puede ser usado para compilaciones de XIAO-S3 basadas en Arduino-IDE. Es similar al uso de ESP-IDF pero se ejecuta solo en un núcleo y no está optimizado para ESP-IDF.
 
 ### Configuración de Hardware
 
@@ -1252,20 +1436,20 @@ T: 29.03 C  P: 90.86 KPa  H: 63.34 %  G: 47.85 Kohms
 
 ## Arduino FreeRtos vs ESP-IDF FreeRtos
 
-| Característica          | Arduino FreeRTOS                                            | ESP-IDF FreeRTOS                                                                                                   |
+| Característica          | Arduino FreeRTOS                                               | ESP-IDF FreeRTOS                                                                                                   |
 | ----------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Capa de Abstracción     | Abstracción de nivel superior, más fácil para principiantes     | Abstracción de nivel inferior, más control para usuarios experimentados                                            |
+| Capa de Abstracción     | Abstracción de nivel superior, más fácil para principiantes    | Abstracción de nivel inferior, más control para usuarios experimentados                                           |
 | Entorno de Desarrollo   | Arduino IDE                                                     | Herramientas de línea de comandos ESP-IDF                                                                         |
-| Compatibilidad          | Principalmente compatible con placas basadas en Arduino         | Compatible con una gama más amplia de placas ESP32 y ESP32-S2                                                     |
-| Características         | Características básicas de RTOS, creación de tareas, programación, sincronización | Características completas de RTOS, creación de tareas, programación, sincronización, grupos de eventos, colas, mutex, semáforos |
-| Rendimiento             | Generalmente menos eficiente debido a la capa de abstracción    | Más eficiente debido al acceso directo al hardware y APIs de RTOS                                                 |
-| Personalización         | Opciones de personalización limitadas                           | Opciones de personalización extensas a través de archivos de configuración y APIs                                 |
-| Curva de Aprendizaje    | Más fácil de aprender para principiantes                        | Curva de aprendizaje más pronunciada para aquellos no familiarizados con herramientas de línea de comandos y C/C++ |
+| Compatibilidad          | Principalmente compatible con placas basadas en Arduino        | Compatible con una gama más amplia de placas ESP32 y ESP32-S2                                                     |
+| Características         | Características básicas de RTOS, creación de tareas, programación, sincronización | Características completas de RTOS, creación de tareas, programación, sincronización, grupos de eventos, colas, mutexes, semáforos |
+| Rendimiento             | Generalmente menos eficiente debido a la capa de abstracción   | Más eficiente debido al acceso directo al hardware y APIs de RTOS                                                 |
+| Personalización         | Opciones de personalización limitadas                          | Opciones de personalización extensas a través de archivos de configuración y APIs                                |
+| Curva de Aprendizaje    | Más fácil de aprender para principiantes                       | Curva de aprendizaje más pronunciada para aquellos no familiarizados con herramientas de línea de comandos y C/C++ |
 | Casos de Uso            | Proyectos IoT simples, prototipado                             | Aplicaciones IoT complejas, sistemas en tiempo real, hardware personalizado                                       |
 
 ## Solución de Problemas
 
-Algunos problemas que podrían encontrarse en el proceso de conexión de hardware, depuración de software o carga.
+Algunos problemas pueden surgir en el proceso de conexión de hardware, depuración de software o carga.
 
 ## Soporte Técnico y Discusión de Productos
 

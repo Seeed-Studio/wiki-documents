@@ -1,6 +1,6 @@
 ---
 description: EE02 13.3 英寸电子墨水屏驱动板入门指南
-title: EE02 入门指南
+title: XIAO ePaper Display Board - EE02 入门指南
 keywords:
   - E-ink
   - Driver Board
@@ -25,7 +25,7 @@ last_update:
 ### 特性
 
 - **强大的控制器**：基于 ESP32-S3 构建，提供强大的处理能力和无线功能。
-- **专为大屏设计**：专门优化以驱动 13.3 英寸电子墨水屏，具有高稳定性和清晰度。
+- **专为大屏设计**：专门优化用于驱动 13.3 英寸电子墨水屏，具有高稳定性和清晰度。
 - **无线连接**：支持 Wi-Fi 和蓝牙 5.0 (LE)，实现远程数据更新和云集成。
 - **低功耗**：专为能效设计，适用于电池供电应用。
 - **易于集成**：兼容 SenseCraft HMI，支持拖拽式界面设计和远程管理。
@@ -38,7 +38,7 @@ last_update:
 | **控制器** | ESP32-S3 |
 | **支持屏幕尺寸** | 13.3 英寸电子墨水屏 |
 | **连接性** | Wi-Fi 802.11 b/g/n，蓝牙 5.0 (LE) |
-| **电源供应** | 通过 USB Type-C 提供 5V |
+| **电源供应** | 通过 USB Type-C 5V |
 | **工作电压** | 3.3V |
 | **接口** | USB Type-C，用于电子墨水屏的 FPC 连接器 |
 | **尺寸** | 80x40 mm |
@@ -80,7 +80,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/4.JPG" style={{width:300,height:'auto'}}/></div>
 
 **步骤 3. 进入网络配置模式**
-欢迎图像显示后，屏幕将自动刷新以显示网络配置界面。这表示设备已准备好连接 Wi-Fi。
+欢迎图像显示后，屏幕将自动刷新显示网络配置界面。这表示设备已准备好连接 Wi-Fi。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/5.JPG" style={{width:300,height:'auto'}}/></div>
 
@@ -92,7 +92,7 @@ last_update:
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/6.JPG" style={{width:300,height:'auto'}}/></div> -->
 
 **步骤 5. 获取配对码**
-网络配置成功后，屏幕将再次刷新并显示唯一的**配对码**（或设备 ID）。您在下一步中将需要此代码。
+网络配置成功后，屏幕将再次刷新并显示唯一的**配对码**（或设备 ID）。您在下一步中需要使用此代码。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.JPG" style={{width:300,height:'auto'}}/></div>
 
@@ -119,6 +119,67 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/11.jpg" style={{width:300, height:'auto'}}/></div>
 
+## Arduino 入门指南
+
+### 安装 Seeed GFX 库
+
+:::tip
+此库具有与 TFT 库相同的功能，但与其不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
+:::
+
+从 GitHub 下载并安装 Seeed GFX 库。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
+
+<div align="center">
+<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处下载</button></p>
+</a>
+</div>
+
+向下滚动并打开此链接。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
+
+选择您的设备类型，它将生成一些代码。复制这些代码，我们稍后会使用它们。
+
+:::tip
+如果您选择错误，屏幕将不显示任何内容。
+
+所以请确保您的设备或组件类型正确。
+:::
+
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_1.png" style={{width:800, height:'auto'}}/></div>
+
+下载库后，转到 **Sketch** -> **Include Library** -> **Add .ZIP Library** 并选择下载的库。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
+
+### 配置并烧录程序
+
+选择图中显示的示例
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_2.png" style={{width:800, height:'auto'}}/></div>
+
+创建一个新的"driver.h"文件并将这些代码粘贴到其中。代码应该如下所示：
+```cpp
+#define BOARD_SCREEN_COMBO 510 // 13.3 inch six-color ePaper Screen（T133A01）
+#define USE_XIAO_EPAPER_DISPLAY_BOARD_EE02
+```
+
+
+之后，转到 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **选择您的开发板连接的端口**。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_3.png" style={{width:1000, height:'auto'}}/></div>
+
+注意必须启用 PSAM。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_4.png" style={{width:1000, height:'auto'}}/></div>
+
+然后点击 **Upload** 上传代码。
+现在您将在电子纸屏幕上看到反馈！以下是位图示例的结果。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_5.jpg" style={{width:500, height:'auto'}}/></div>
+
 ## 故障排除
 
 **问题 1：上电后屏幕不刷新。**
@@ -135,8 +196,9 @@ last_update:
 *   如果屏幕长时间未刷新或电源供应不稳定，可能会出现这种情况。尝试通过 HMI 平台再次刷新屏幕。
 
 ## 资源
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 原理图](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[PDF]** [13.3 E6 eInk Display module Datasheet](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
 
 ## 技术支持与产品讨论
 

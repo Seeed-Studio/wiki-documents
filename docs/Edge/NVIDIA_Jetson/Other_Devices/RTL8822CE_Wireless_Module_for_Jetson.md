@@ -9,6 +9,7 @@ keywords:
   - Wireless 
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/wifi/rtl8822ce.webp
 slug: /rtl8822ce_wireless_module_for_jetson
+sku: 114993556,E24121001
 last_update:
   date: 12/3/2024
   author: Youjiang

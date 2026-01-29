@@ -3,6 +3,7 @@ description: Introducción a NEQTO Engine para Linux en reTerminal
 title: Introducción a NEQTO Engine para Linux en reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/neqto_engine_for_linux_reTerminal
+sku: 110070048
 last_update:
   date: 04/17/2024
   author: Kazuhiro Ozuchi

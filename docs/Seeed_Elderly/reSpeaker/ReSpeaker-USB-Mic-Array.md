@@ -5,12 +5,19 @@ keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker-USB-Mic-Array
+sku: 107990193
 last_update:
   date: 1/12/2023
   author: jianjing Huang
 ---
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)
+
+:::important 
+This product is now End of Life (EOL).
+If you are planning to purchase or start a new project, we strongly recommend using [**XVF3000**](https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/), the newer and supported alternative.
+It is no longer manufactured or actively maintained.
+:::
 
 An out-of-the-box voice pick-up device is the voice of the customer.
 

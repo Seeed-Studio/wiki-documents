@@ -6,6 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.webp
 sidebar_position: 1
 slug: /ja/epaper_EN04
+sku: 100003489,E25120101
 last_update:
   date: 11/25/2025
   author: Allen

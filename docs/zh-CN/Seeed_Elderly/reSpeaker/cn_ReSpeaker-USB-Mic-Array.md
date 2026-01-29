@@ -5,12 +5,19 @@ keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/ReSpeaker-USB-Mic-Array
+sku: 107990193
 last_update:
   date: 1/12/2023
   author: jianjing Huang
 ---
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)
+
+:::important
+本产品现已进入生命周期结束（EOL）状态。
+如果您计划购买或启动新项目，我们强烈建议使用更新且仍受支持的替代方案[**XVF3000**](https://wiki.seeedstudio.com/cn/respeaker_mic_array_v3.0/)。
+该产品已不再生产，也不再进行主动维护。
+:::
 
 开箱即用的语音拾取设备是客户的心声。
 

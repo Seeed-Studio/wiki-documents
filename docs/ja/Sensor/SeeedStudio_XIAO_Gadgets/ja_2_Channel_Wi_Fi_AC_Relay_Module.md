@@ -4,6 +4,7 @@ description: |
   AC 電源機器をワイヤレスで制御するために設計された Seeed Studio のスマートデバイス
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/dual_smart_relay_module_for_xiao_45font.webp
 slug: /ja/2_channel_wifi_ac_relay
+sku: 114993526
 keywords:
   - XIAO
   - Home Assistant

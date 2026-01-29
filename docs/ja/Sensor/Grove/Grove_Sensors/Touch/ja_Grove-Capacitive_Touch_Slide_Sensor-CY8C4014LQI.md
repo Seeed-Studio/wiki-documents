@@ -6,6 +6,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Capacitive_Touch_Slide_Sensor-CY8C4014LQI
+sku: 101020552
 last_update:
   date: 05/15/2025
   author: jianjing Huang

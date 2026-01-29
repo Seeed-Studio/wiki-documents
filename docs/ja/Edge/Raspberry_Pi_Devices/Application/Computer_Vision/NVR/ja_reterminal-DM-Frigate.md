@@ -8,6 +8,7 @@ keywords:
   - Home assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reterminal-DM-Frigate
+sku: 114070201,114070221,E23010420,114070262
 last_update:
   date: 8/25/2023
   author: Kasun Thushara

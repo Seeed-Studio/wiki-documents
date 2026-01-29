@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Finger-clip_Heart_Rate_Sensor
+sku: 103020024
 last_update:
   date: 05/15/2025
   author: jianjing Huang

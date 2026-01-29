@@ -5,6 +5,7 @@ keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove_Starter_kit_for_Arduino_101
+sku: 110020109
 last_update:
   date: 2/17/2023
   author: jianjing Huang

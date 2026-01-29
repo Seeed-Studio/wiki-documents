@@ -10,6 +10,7 @@ tags:
   - Hardware
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer_robotics1.webp
 slug: /cn/recomputer_jetson_robotics_j401_getting_started
+sku: 100071398, 100001302, 100010971
 last_update:
   date: 06/10/2025
   author: Zibo

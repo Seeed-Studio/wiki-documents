@@ -5,6 +5,7 @@ keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-XIAO-Expansion-Board
+sku: 103030356
 last_update:
   date: 07/18/2024
   author: Spencer
@@ -92,7 +93,7 @@ Seeed Studio XIAO SAMD21 , Seeed Studio XIAO RP2040, and Seeed Studio XIAO nRF52
 |Seeed Studio Expansion Base for XIAO  | *1 |
 
 :::note
-This product does not include Seeed Studio XIAO and battery, This expansion board does not support the XIAO nRF54L15 and XIAO MG24.Seeed Studio XIAO is constantly introducing new products. To keep up with the latest product developments in this series, visit the [XIAO series homepage](https://www.seeedstudio.com/xiao-series-page).
+This product does not include Seeed Studio XIAO and battery. Because the SWD pins are different, this expansion board does not support the XIAO nRF54L15 and XIAO MG24.Seeed Studio XIAO is constantly introducing new products. To keep up with the latest product developments in this series, visit the [XIAO series homepage](https://www.seeedstudio.com/xiao-series-page).
 
 <!-- please click this link to get [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html?gclid=Cj0KCQjwufn8BRCwARIsAKzP695mYBI8wwzrR8rXiJgv9QBK5DeTJGCU9bzXvzGUheFVZxqHcuw0SgYaAqDqEALw_wcB) -->
 
@@ -191,7 +192,7 @@ This example introduces how to use the OLED display on the Seeed Studio Expansio
 #include <U8x8lib.h>
 #include <Wire.h>
 
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE, /* clock=*/ SCL, /* data=*/ SDA );   // OLEDs without Reset of the Display
 
 void setup(void) {
   u8x8.begin();
@@ -383,7 +384,7 @@ This example uses RTC to display the clock on the OLED.
 PCF8563 pcf;
 #include <Wire.h>
 
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE, /* clock=*/ SCL, /* data=*/ SDA );   // OLEDs without Reset of the Display
 
 void setup() {
   Serial.begin(115200);

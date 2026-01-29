@@ -3,6 +3,7 @@ description: J1010 Boot From SD Card
 title: J1010 Boot From SD Card
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/J1010_Boot_From_SD_Card
+sku: 102991694
 last_update:
   date: 01/05/2023
   author: w0x7ce

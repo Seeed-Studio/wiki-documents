@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Optocoupler_Relay-M281/
 slug: /es/Grove-Optocoupler_Relay-M281
+sku: 101020603
 last_update:
   date: 01/09/2022
   author: gunengyu

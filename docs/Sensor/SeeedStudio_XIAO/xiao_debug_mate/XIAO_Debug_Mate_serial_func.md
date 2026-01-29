@@ -3,6 +3,7 @@ description: This page explains how to use the UART monitor function of the XIAO
 title: UART Monitor
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.webp
 slug: /xiao_debug_mate_serial
+sku: 109990585
 sidebar_position: 3
 last_update:
   date: 10/22/2025

@@ -5,6 +5,7 @@ keywords:
 - Skeleton_Box_10x7_10x10_17x10
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Skeleton_Box_10x7_10x10_17x10
+sku: 110990160, 110990159, 110990158
 last_update:
   date: 01/20/2023
   author: Matthew

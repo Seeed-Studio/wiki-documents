@@ -3,6 +3,7 @@ description: ODYSSEY - X86J4105
 title: Frigate
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/ODYSSEY-X86J4105-Frigate
+sku: 113020031
 last_update:
   date: 01/03/2023
   author: w0x7ce

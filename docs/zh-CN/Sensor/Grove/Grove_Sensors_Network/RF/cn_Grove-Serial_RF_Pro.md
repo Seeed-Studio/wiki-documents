@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Sensor_communication/
 slug: /cn/Grove-Serial_RF_Pro
+sku: 113020000
 last_update:
   date: 01/06/2022
   author: gunengyu

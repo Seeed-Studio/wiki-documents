@@ -3,6 +3,7 @@ description: Primeros pasos con el Módulo Wi-Fi HaLow Mini PCIe
 title: Primeros pasos con el Módulo Wi-Fi HaLow Mini PCIe
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/0.webp
 slug: /es/getting_started_with_wifi_halow_mini_pcie_module
+sku: 109990565
 last_update:
   date: 02/12/2025
   author: Citric

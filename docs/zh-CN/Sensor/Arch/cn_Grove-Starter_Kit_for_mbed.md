@@ -5,6 +5,7 @@ keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-Starter_Kit_for_mbed
+sku: 110990421
 last_update:
   date: 2/1/2023
   author: hushuxu

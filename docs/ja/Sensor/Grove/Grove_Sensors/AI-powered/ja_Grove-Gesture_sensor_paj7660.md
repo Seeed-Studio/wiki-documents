@@ -5,6 +5,7 @@ keywords:
 - ジェスチャー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/grove_gesture_paj7660
+sku: 101991067
 last_update:
   date: 05/15/2025
   author: Citric

@@ -3,6 +3,7 @@ title: Seeed Studio XIAO nRF54L15(Sense)
 description: |
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
 slug: /ja/xiao_nrf54l15_sense_getting_started
+sku: 101991421, 101991422, 114993696, 114993697, 100039813
 keywords:
   - XIAO
   - nRF54L15
@@ -46,7 +47,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## はじめに
 
-**Seeed Studio XIAO nRF54L15** は、最先端の Nordic nRF54L15 チップを搭載したコンパクトで高性能な開発ボードです。この次世代 SoC は、超低消費電力マルチプロトコル 2.4 GHz 無線機能と、**128 MHz Arm® Cortex®-M33 プロセッサ**および **128 MHz RISC-V コプロセッサ**を含む MCU を統合しています。**1.5 MB NVM および 256 KB RAM** までのスケーラブルメモリを提供し、内蔵の超低消費電力設計により電池寿命を大幅に延長します。その強力な無線機能は **Bluetooth® 6.0（Channel Sounding を含む）、Matter、Thread、Zigbee**、および最大 **4 Mbps** の高スループット 2.4 GHz プロプライエタリモードをサポートします。このボードには包括的なペリフェラルセット、統合された **128 MHz RISC-V コプロセッサ**、および **TrustZone®** 分離と暗号化エンジン保護などの高度なセキュリティ機能が含まれています。**内蔵リチウムイオン電池管理**により、XIAO nRF54L15 はスマートウェアラブル、産業用センサー、高度な HMI などのコンパクトで安全かつエネルギー効率的な IoT ソリューションに最適です。
+**Seeed Studio XIAO nRF54L15** は、最先端のNordic nRF54L15チップを搭載したコンパクトで高性能な開発ボードです。この次世代SoCは、超低消費電力マルチプロトコル2.4 GHz無線と、**128 MHz Arm® Cortex®-M33プロセッサ**および**128 MHz RISC-Vコプロセッサ**を含むMCUを統合しています。**1.5 MB NVMおよび256 KB RAM**までのスケーラブルメモリを提供し、バッテリー寿命を大幅に延長する内蔵超低消費電力設計を特徴としています。その強力な無線機能は**Bluetooth® 6.0（Channel Soundingを含む）、Matter、Thread、Zigbee**、および**最大4 Mbps**の高スループット2.4 GHz独自モードをサポートします。このボードには包括的なペリフェラルセット、統合された**128 MHz RISC-Vコプロセッサ**、および**TrustZone®**分離と暗号化エンジン保護などの高度なセキュリティ機能が含まれています。**内蔵Li-ionバッテリー管理**により、XIAO nRF54L15はスマートウェアラブル、産業用センサー、高度なHMIなどのコンパクトで安全かつエネルギー効率的なIoTソリューションに最適です。
 
 export const Highlight = ({children, color}) => (
   <span
@@ -76,22 +77,22 @@ export const Highlight = ({children, color}) => (
   <tr>
       <th>ワイヤレス接続</th>
       <td align="center">
-        Bluetooth LE 6.0（Channel Sounding を含む）<br/>
+        Bluetooth LE 6.0（Channel Soundingを含む）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        プロプライエタリ 2.4 GHz プロトコル<br/>
+        独自2.4 GHzプロトコル<br/>
       </td>
       <td align="center">
-        Bluetooth LE 6.0（Channel Sounding を含む）<br/>
+        Bluetooth LE 6.0（Channel Soundingを含む）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        プロプライエタリ 2.4 GHz プロトコル<br/>
+        独自2.4 GHzプロトコル<br/>
       </td>
   </tr>
   <tr>
@@ -102,7 +103,7 @@ export const Highlight = ({children, color}) => (
   <tr>
       <th>内蔵センサー</th>
       <td align="center">N/A</td>
-      <td align="center">6 DOF IMU(LSM6DS3TR-C)<br/>マイクロフォン (MSM261DGT006)</td>
+      <td align="center">6軸IMU(LSM6DS3TR-C)<br/>マイクロフォン (MSM261DGT006)</td>
   </tr>
   <tr>
       <th>送信電力</th>
@@ -116,20 +117,20 @@ export const Highlight = ({children, color}) => (
   </tr>
   <tr>
       <th>主要ペリフェラル</th>
-      <td align="center">14ビット ADC、グローバル RTC</td>
-      <td align="center">14ビット ADC、グローバル RTC</td>
+      <td align="center">14ビットADC、グローバルRTC</td>
+      <td align="center">14ビットADC、グローバルRTC</td>
   </tr>
   <tr>
       <th>電源</th>
       <td align="center">
-        USB Type-C インターフェース電源供給<br/>
-        内蔵 PMIC がリチウム電池電源供給をサポート<br/>
-        リチウム電池電力収集をサポート
+        USB Type-Cインターフェース電源供給<br/>
+        内蔵PMICがリチウムバッテリー電源供給をサポート<br/>
+        リチウムバッテリー電力収集をサポート
       </td>
       <td align="center">
-        USB Type-C インターフェース電源供給<br/>
-        内蔵 PMIC がリチウム電池電源供給をサポート<br/>
-        リチウム電池電力収集をサポート
+        USB Type-Cインターフェース電源供給<br/>
+        内蔵PMICがリチウムバッテリー電源供給をサポート<br/>
+        リチウムバッテリー電力収集をサポート
       </td>
   </tr>
   <tr>
@@ -143,9 +144,9 @@ export const Highlight = ({children, color}) => (
       <td align="center">3.7 to 5 V</td>
   </tr>
   <tr>
-      <th>ESB および 2.4 GHz プロプライエタリプロトコル</th>
-      <td align="center">最大 4 Mbps</td>
-      <td align="center">最大 4 Mbps</td>
+      <th>ESBおよび2.4 GHz独自プロトコル</th>
+      <td align="center">最大4 Mbps</td>
+      <td align="center">最大4 Mbps</td>
   </tr>
   <tr>
       <th>タンパー検出器</th>
@@ -153,7 +154,7 @@ export const Highlight = ({children, color}) => (
       <td align="center">YES</td>
   </tr>
   <tr>
-      <th>Bluetooth チャネルサウンディング</th>
+      <th>Bluetoothチャネルサウンディング</th>
       <td align="center">YES</td>
       <td align="center">YES</td>
   </tr>
@@ -161,12 +162,12 @@ export const Highlight = ({children, color}) => (
 
 ### 特徴
 
-- **強力な CPU**: DSP 命令と FPU 浮動小数点演算をサポートする 128 MHz Arm® Cortex®-M33 プロセッサ、32ビット RISC アーキテクチャ、および統合された 128 MHz RISC-V コプロセッサ。
-- **超低消費電力**: 優れた超低消費電力設計により、電池寿命を大幅に延長し、高度な電力管理を含みます。
-- **マルチモードワイヤレス伝送**: 統合された 2.4 GHz マルチプロトコルワイヤレストランシーバーは、Bluetooth Low Energy（Channel Sounding を含む）、802.15.4-2020、Matter、Thread、Zigbee、および 2.4 GHz プロプライエタリモード（最大 4 Mbps）をサポートします。
-- **堅牢なセキュリティ**: TrustZone® 分離、タンパー検出、および暗号化エンジン側のチャネルリーク保護を含む高度なセキュリティ機能。
-- **豊富なオンチップリソース**: 最大 1.5 MB NVM および 256 KB RAM のスケーラブルメモリ構成により、十分なストレージ容量を提供します。
-- **豊富なインターフェース**: 新しいグローバル RTC（System OFF モードで利用可能）、14ビット ADC、および高速シリアルインターフェースを含む包括的なペリフェラルセット。内蔵リチウム電池管理。
+- **強力なCPU**: DSP命令とFPU浮動小数点演算をサポートする128 MHz Arm® Cortex®-M33プロセッサ、32ビットRISCアーキテクチャ、および統合された128 MHz RISC-Vコプロセッサ。
+- **超低消費電力**: 優れた超低消費電力設計により、バッテリー寿命を大幅に延長し、高度な電力管理を含みます。
+- **マルチモードワイヤレス伝送**: 統合された2.4 GHzマルチプロトコルワイヤレストランシーバーは、Bluetooth Low Energy（Channel Soundingを含む）、802.15.4-2020、Matter、Thread、Zigbee、および2.4 GHz独自モード（最大4 Mbps）をサポートします。
+- **堅牢なセキュリティ**: TrustZone®分離、タンパー検出、暗号化エンジン側のチャネルリーク保護を含む高度なセキュリティ機能。
+- **豊富なオンチップリソース**: 最大1.5 MB NVMおよび256 KB RAMまでのスケーラブルメモリ構成により、十分なストレージスペースを提供します。
+- **豊富なインターフェース**: 新しいグローバルRTC（System OFFモードで利用可能）、14ビットADC、高速シリアルインターフェースを含む包括的なペリフェラルセット。内蔵リチウムバッテリー管理。
 
 ## ハードウェア概要
 
@@ -193,6 +194,9 @@ export const Highlight = ({children, color}) => (
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nr_definition.png" style={{width:800, height:'auto'}}/></div></td>
   </tr>
 </table>
+
+
+
 
  </TabItem>
  <TabItem value="54L15Sense" label="XIAO nRF54L15 Sense" default>
@@ -222,11 +226,50 @@ export const Highlight = ({children, color}) => (
 
 </Tabs>
 
-## nRFConnect SDK の使用
+## **ピンマップ**
+| XIAOピン                | 機能   | チップピン   | 説明                  |
+| :--------------------: | :-------: | :-------:| :-------------------------- |
+| 5V                     | VBUS       |                               | 電源入力/出力           |
+| GND                    |            |                               |                              |
+| 3V3                    | 3V3_OUT    |                              | 電源出力                 |
+| D0                     | Analog     | P1.04                        | GPIO、ADC                    |
+| D1                     | Analog     | P1.05                        | GPIO、ADC                    |
+| D2                     | Analog     | P1.06                         | GPIO、ADC                    |
+| D3                     | Analog     | P1.07                         | GPIO、ADC                    |
+| D4                     | SDA-0      | P1.10                         | GPIO、I2Cデータ               |
+| D5                     | SCL-0      | P1.11                         | GPIO、I2Cクロック              |
+| D6                     | TX         | P2.08                         | GPIO、UART送信          |
+| D7                     | RX         | P2.07                         | GPIO、UART受信           |
+| D8                     | SPI_SCK    | P2.01                         | GPIO、SPIクロック              |
+| D9                     | SPI_MISO   | P2.04                         | GPIO、SPIデータ               |
+| D10                    | SPI_MOSI   | P2.02                         | GPIO、SPIデータ               |
+| D11                    | SCL-1      | P0.03                         | GPIO、I2C                    |
+| D12                    | SDA-1      | P0.04                         | GPIO、I2C                     |
+| D13                    | GPIO       | P2.10                         | GPIO                         |
+| D14                    | GPIO       | P2.09                         | GPIO                         |
+| D15                    | GPIO       | P2.06                         | GPIO                         |
+| nRF54L15_SWCLK         |            | SWDCLK                        | JTAG                         |
+| nRF54L15_SWD-IO        |            | SWDIO                         | JTAG                         |
+| nRF54L15_RST           |            | RST                           | JTAG                         |
+| SAMD11_SWCLK           |            | PA30                          | JTAG                         |
+| SAMD11_SWDIO           |            | PA31                          | JTAG                         |
+| SAMD11_RST             |            | RST2                          | JTAG                         |
+| NFC1                   |            | P1.02                         | NRF                          |
+| NFC2                   |            | P1.03                         | NRF                          |
+| Reset                  |            | nRF54_RESET                    | EN                           |
+| USER KEY               |            | P0.00                         | ユーザーキー                     |
+| RF Switch Port Select  |            | P2.05                         | オンボードアンテナ切り替え       |
+| RF Switch Power        |            | P2.03                         | 電源                        |
+| AIN7_VBAT              |            | P1.14                         | バッテリー電圧値読み取り   |
+| CHARGE_LED             |            | charge_LED                    | CHG-LED_Red                  |
+| USER_LED               |            | P2.00                         | ユーザーライト                   |
 
-nRF Connect SDK（NCS）は、Nordic nRF52、nRF53、nRF54、nRF70、および nRF91 シリーズベースのワイヤレスデバイス向けの低消費電力ワイヤレスアプリケーション構築専用に設計された、Nordic Semiconductor の拡張可能で統一されたソフトウェア開発キットです。
 
-NCS は、開発プロセスを簡素化し、市場投入時間を短縮するために設計された、すぐに使えるサンプルアプリケーション、プロトコルスタック、ライブラリ、ハードウェアドライバーの豊富なエコシステムを提供します。そのモジュラーで設定可能な性質により、開発者はメモリ制約のあるデバイス向けにサイズ最適化されたソフトウェアを構築する柔軟性と、より高度で複雑なアプリケーション向けの強力な機能を得ることができます。NCS は GitHub でホストされているオープンソースプロジェクトであり、Visual Studio Code などの統合開発環境に対する優れたサポートを提供します。
+## nRFConnect SDK の使用方法
+
+nRF Connect SDK（NCS）は、Nordic Semiconductor が提供する拡張可能で統一されたソフトウェア開発キットで、Nordic nRF52、nRF53、nRF54、nRF70、nRF91 シリーズベースのワイヤレスデバイス向けの低消費電力ワイヤレスアプリケーションの構築に特化して設計されています。
+
+NCS は、開発プロセスを簡素化し、市場投入時間を短縮するために設計された、すぐに使えるサンプルアプリケーション、プロトコルスタック、ライブラリ、ハードウェアドライバの豊富なエコシステムを提供します。そのモジュラーで設定可能な性質により、開発者はメモリ制約のあるデバイス向けにサイズ最適化されたソフトウェアを構築する柔軟性と、より高度で複雑なアプリケーション向けの強力な機能を提供します。NCS は GitHub でホストされているオープンソースプロジェクトで、Visual Studio Code などの統合開発環境に対する優れたサポートを提供します。
 
 ### VSCode での nRF Connect SDK の使用
 
@@ -234,9 +277,9 @@ NCS は、開発プロセスを簡素化し、市場投入時間を短縮する�
 
 <summary>事前に nRF Connect SDK の知識をインストール</summary>
 
-このドキュメントでは、Windows 11 コンピューターに nRF Connect SDK 開発環境をインストールする方法を詳しく説明します。以下は、インストールが必要なツールの概要です
+このドキュメントでは、Windows 11 コンピュータに nRF Connect SDK 開発環境をインストールする方法について詳しく説明します。以下は、インストールが必要なツールの概要です
 
-- VS Studio Code をインストール
+- VS Studio Code のインストール
 
   [Visual Studio Code - Code Editing .Redefined](https://code.visualstudio.com/ )
 
@@ -271,58 +314,58 @@ west --version
 
 <Steppers>
 
-<!-- #### Installation of SEGGER J-Link v8.18
-Download the installer for your platform from https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack. Run the installer; when the "Select Optional Components" window appears during the installation process, be sure to check "Install legacy USB driver for J-Link", which is a required component for some supported development kits.
+<!-- #### SEGGER J-Link v8.18 のインストール
+https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack からお使いのプラットフォーム用のインストーラをダウンロードします。インストーラを実行し、インストールプロセス中に「Select Optional Components」ウィンドウが表示されたら、必ず「Install legacy USB driver for J-Link」をチェックしてください。これは一部のサポートされている開発キットに必要なコンポーネントです。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/jlink2.png" style={{width:600, height:'auto'}}/></div>
-#### Install the nrfutil and nrfutil device commands.
+#### nrfutil と nrfutil device コマンドのインストール
 
-- 2.1. Download a binary file compatible with your operating system from https://www.nordicsemi.com/Products/Development-tools/nRF-Util/Download?lang=en#infotabs and save it to your disk drive (e.g. Windows). For Windows, save it as C:\nordic_tools\nrfutil.exe. 
-If you are using macOS or Linux, save it in a directory that has been added to your system's PATH (e.g., /usr/bin/), and you can skip step 2.2.
+- 2.1. https://www.nordicsemi.com/Products/Development-tools/nRF-Util/Download?lang=en#infotabs からお使いのオペレーティングシステムと互換性のあるバイナリファイルをダウンロードし、ディスクドライブに保存します（例：Windows）。Windows の場合は、C:\nordic_tools\nrfutil.exe として保存します。
+macOS または Linux を使用している場合は、システムの PATH に追加されたディレクトリ（例：/usr/bin/）に保存し、ステップ 2.2 をスキップできます。
 
-- 2.2. (Windows) Update your system's PATH to include where nrfutil is stored. Open "Edit account environment variables" and add the path where the nrfutil binaries are stored (C:\nordic_tools\). 
+- 2.2. （Windows）nrfutil が保存されている場所を含むようにシステムの PATH を更新します。「アカウント環境変数の編集」を開き、nrfutil バイナリが保存されているパス（C:\nordic_tools\）を追加します。
 
-- 2.3. The nrfutil binaries you just downloaded do not contain any pre-installed commands. In this step, we will upgrade the core nrfutil and download the device commands.
+- 2.3. ダウンロードした nrfutil バイナリには、事前にインストールされたコマンドは含まれていません。このステップでは、コア nrfutil をアップグレードし、device コマンドをダウンロードします。
 
-- 2.3.1 To make sure we have the latest version of nrfutil, run the following command in a terminal (command prompt or PowerShell). It does not matter which terminal you use, as nrfutil was set globally in step 2.2.
+- 2.3.1 最新バージョンの nrfutil があることを確認するために、ターミナル（コマンドプロンプトまたは PowerShell）で以下のコマンドを実行します。ステップ 2.2 で nrfutil がグローバルに設定されているため、どのターミナルを使用しても問題ありません。
 ```cpp
 nrfutil self-upgrade
 ```
 
-- 2.3.2 Installing the nrfutil device Command 
-We need to burn the binary to the development kit using the device command.
-In your currently active terminal, type: nrfutil install device 
-You should see the following output:
+- 2.3.2 nrfutil device コマンドのインストール
+device コマンドを使用して開発キットにバイナリを書き込む必要があります。
+現在アクティブなターミナルで、次のように入力します：nrfutil install device
+以下の出力が表示されるはずです：
 ```cpp
 [00:00:02] ###### 100% [Install packages] Install packages
 ```
 -->
 
-#### VScode でボードを設定し、書き込みファイルをビルドする
+#### VScode でボードを設定し、書き込みファイルを構築
 
 VS Code を開き、プラグインセンターで nRF Connect for VS Code Extension Pack を検索します。このプラグインパックは、nRF Connect に必要な他の VS Code プラグインを自動的にインストールします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
-nRF Connect for VS Code 拡張機能により、開発者は人気の Visual Studio Code 統合開発環境（VS Code IDE）を利用して、Nordic の nRF Connect SDK（ソフトウェア開発キット）に基づく組み込みアプリケーションの開発、ビルド、デバッグ、デプロイを行うことができます。この拡張機能には、コンパイラインターフェース、リンカー、完全なビルドシステム、RTOS 対応デバッガー、nRF Connect SDK とのシームレスなインターフェース、デバイスツリー可視化エディター、統合シリアルターミナルなどの便利な開発ツールが含まれています。
+nRF Connect for VS Code 拡張機能により、開発者は人気の Visual Studio Code 統合開発環境（VS Code IDE）を利用して、Nordic の nRF Connect SDK（ソフトウェア開発キット）ベースの組み込みアプリケーションを開発、構築、デバッグ、デプロイできます。この拡張機能には、コンパイラインターフェース、リンカー、完全なビルドシステム、RTOS 対応デバッガー、nRF Connect SDK とのシームレスなインターフェース、デバイスツリー可視化エディター、統合シリアルターミナルなどの便利な開発ツールが含まれています。
 
 VS Code 用 nRF Connect 拡張パッケージには、以下のコンポーネントが含まれています：
 
-- nRF Connect for VS Code：メイン拡張機能で、ビルドシステムと nRF Connect SDK 間のインターフェース、および nRF Connect SDK バージョンとツールチェーンを管理するインターフェースが含まれています。
+- nRF Connect for VS Code：メイン拡張機能には、ビルドシステムと nRF Connect SDK 間のインターフェース、および nRF Connect SDK バージョンとツールチェーンを管理するインターフェースが含まれています。
 - nRF DeviceTree：デバイスツリー言語サポートとデバイスツリー可視化エディターを提供します。
 - nRF Kconfig：Kconfig 言語サポートを提供します。
 - nRF Terminal：シリアルおよび RTT ターミナル。
-- Microsoft C/C++：IntelliSense の機能を含む C/C++ 言語サポートを追加します。
+- Microsoft C/C++：IntelliSense の機能を含む C/C++ の言語サポートを追加します。
 - CMake：CMake 言語サポート。
 - GNU Linker Mapping Files：リンカーマッピングファイルのサポート。
-拡張機能を通じて、nRF Connect SDK とそのツールチェーンの任意の推奨バージョンをダウンロードできます。完全な nRF Connect for VS Code ドキュメントは https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html で入手できます。
+拡張機能を通じて、nRF Connect SDK とそのツールチェーンの任意の希望するバージョンをダウンロードできます。完全な nRF Connect for VS Code ドキュメントは https://docs.nordicsemi.com/bundle/nrf-connect-vscode/page/index.html で利用できます。
 
 #### ツールチェーンのインストール
 
-ツールチェーンは、アセンブラー、コンパイラー、リンカー、CMake コンポーネントを含む、nRF Connect SDK アプリケーションをビルドするために連携して動作するツールの集合です。
+ツールチェーンは、アセンブラ、コンパイラ、リンカー、CMake コンポーネントを含む、nRF Connect SDK アプリケーションを構築するために連携して動作するツールのコレクションです。
 nRF Connect for VS Code を初めて開くと、ツールチェーンのインストールを求められます。これは通常、拡張機能がコンピュータにインストールされたツールチェーンを検出しない場合に発生します。
-Install Toolchain をクリックすると、コンピュータにダウンロードしてインストールできるツールチェーンバージョンのリストが表示されます。使用予定の nRF Connect SDK のバージョンに一致するツールチェーンのバージョンを選択してください。常に nRF Connect SDK の最新のタグ付きバージョンを使用することをお勧めします。
+Install Toolchain をクリックすると、コンピュータにダウンロードしてインストールできるツールチェーンバージョンのリストが表示されます。使用予定の nRF Connect SDK のバージョンと一致するツールチェーンのバージョンを選択してください。常に nRF Connect SDK の最新のタグ付きバージョンを使用することをお勧めします。
 
-デフォルトでは、nRF Connect for VS Code はツールチェーンの Released タブ（つまり、安定版）のみを表示します。新機能を評価していて Preview タブや他のタイプのタブ（例：Customer Sampling -cs）を使用したい場合は、以下に示すように「Show all toolchain versions」をクリックしてください：
+デフォルトでは、nRF Connect for VS Code はツールチェーンの Released タブ（つまり、安定版）のみを表示します。新機能を評価していて Preview タブまたは他のタイプのタブ（例：Customer Sampling -cs）を使用したい場合は、以下に示すように「Show all toolchain versions」をクリックしてください：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/toolchain2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -332,7 +375,7 @@ Install Toolchain をクリックすると、コンピュータにダウンロ�
 
 #### nRF Connect SDK のインストール
 
-VS Code の nRF Connect 拡張機能で、Manage SDK をクリックします。Manage SDK メニューから、nRF Connect SDK バージョンをインストールまたはアンインストールできます。拡張機能を初めて使用する場合、インターフェースには 2 つのオプションのみが表示されます。
+VS Code 用 nRF Connect 拡張機能で、Manage SDK をクリックします。Manage SDK メニューから、nRF Connect SDK バージョンをインストールまたはアンインストールできます。拡張機能を初めて使用するため、インターフェースには 2 つのオプションのみが表示されます。
 
 Install SDK をクリックすると、ローカルにダウンロードしてインストールできる利用可能なすべての nRF Connect SDK バージョンがリストされます。プロジェクトの開発に必要な nRF Connect SDK のバージョンを選択してください。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/install_sdk.png" style={{width:800, height:'auto'}}/></div>
@@ -345,12 +388,12 @@ VS Code で SDK フォルダを開いている場合、Manage SDK メニュー�
 
 :::tip
 これらのオプションのいずれも表示されない場合は、最新バージョンの nRF Connect for VS Code 拡張パッケージがインストールされていることを確認してください。
-nRF Connect SDK は IDE に依存しないことに注意することが重要です。つまり、任意の IDE を選択して使用するか、まったく使用しないかを選択できます。nRF Connect SDK は https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) コマンドライン (nrfutil) コマンドラインインターフェース（CLI）を介して利用でき、nRF Connect をダウンロードしてインストールします。ただし、VS Code で nRF Connect for VS Code 拡張機能を使用することを強くお勧めします。これは、便利なグラフィカルユーザーインターフェース（GUI）と効率的なコマンドラインインターフェース（CLI）を統合するだけでなく、ファームウェア開発を大幅に簡素化する多くの機能も含んでいるためです。他の IDE を nRF Connect SDK と連携するように設定するには、このコースの範囲を超える追加の手動手順が必要です。
+nRF Connect SDK は IDE に依存しないことに注意することが重要です。つまり、任意の IDE を選択して使用するか、まったく使用しないかを選択できます。nRF Connect SDK は https://www.nordicsemi.com/Products/Development-tools/nRF-Util（nrfutil）コマンドライン（nrfutil）コマンドラインインターフェース（CLI）を介して利用でき、nRF Connect をダウンロードしてインストールします。ただし、VS Code と nRF Connect for VS Code 拡張機能の使用を強くお勧めします。これは、便利なグラフィカルユーザーインターフェース（GUI）と効率的なコマンドラインインターフェース（CLI）を統合するだけでなく、ファームウェア開発を大幅に簡素化する多くの機能も含んでいるためです。nRF Connect SDK で動作するように他の IDE を設定するには、このコースの範囲を超える追加の手動ステップが必要です。
 :::
 
 #### ユーザープログラムの作成
 
-この演習では、開発ボード上の LED の点滅を制御するために、blinky サンプルに基づいた簡単なアプリケーションを作成します。これは、サポートされているすべての NordicSemiconductor 開発ボード（nRF54、nRF53、nRF52、nRF70、または nRF91 シリーズ）に適用されます。目標は、サンプルをビルドして書き込むために必要なすべてのツールが正しく設定されていることを確認することです。焦点は、「Copy Example」テンプレートを使用してアプリケーションを作成し、ビルドして Nordic チップ開発ボードに書き込む方法を学ぶことです！
+この演習では、開発ボード上の点滅 LED を制御するために、blinky サンプルに基づいた簡単なアプリケーションを作成します。これは、サポートされているすべての NordicSemiconductor 開発ボード（nRF54、nRF53、nRF52、nRF70、または nRF91 シリーズ）に適用されます。目標は、サンプルを構築して書き込むために必要なすべてのツールが正しく設定されていることを確認することです。焦点は、「Copy Example」テンプレートを使用してアプリケーションを作成し、構築して Nordic チップ開発ボードに書き込む方法を学ぶことです！
 
 - VS Code で、nRF Connect 拡張機能アイコンをクリックします。Welcome ビューで、Create New Application をクリックします。
 
@@ -360,8 +403,8 @@ nRF Connect SDK は IDE に依存しないことに注意することが重要�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project2.png" style={{width:800, height:'auto'}}/></div>
 
-Blinky サンプルは、開発ボード上の LED1 を連続的に点滅させます。
-最初のアプリケーションは Blinky サンプルに基づきます。Blinky サンプルは nRF Connect SDK の Zephyr モールドブロックから派生しているため、サンプルパスに zephyr という名前が表示されます：zephyr\samples\basic\blinky。
+Blinky サンプルは、開発ボード上の LED1 を継続的に点滅させます。
+最初のアプリケーションは Blinky サンプルに基づいています。Blinky サンプルは nRF Connect SDK の Zephyr モールドブロックから派生しているため、サンプルパスに zephyr 名が表示されます：zephyr\samples\basic\blinky。
 
 #### XIAO nRF54L15 ボードの追加
 
@@ -371,15 +414,15 @@ Blinky サンプルは、開発ボード上の LED1 を連続的に点滅させ�
     </a>
 </div>
 
-開始するには、**GitHub リンクからリポジトリをクローン**`git clone https://github.com/Seeed-Studio/platform-seeedboards.git` して、お好みのローカルフォルダに保存してください。クローンしたら、`platform-seeedboards/zephyr/` ディレクトリに移動します。**この `zephyr` フォルダのパスを覚えておいてください**；
+開始するには、**GitHubリンクからリポジトリをクローン**`git clone https://github.com/Seeed-Studio/platform-seeedboards.git`してお好みのローカルフォルダに保存してください。クローン後、`platform-seeedboards/zephyr/`ディレクトリに移動します。**この`zephyr`フォルダのパスを覚えておいてください**；
 
-VS Code で nRF Connect 用にボードを設定するには、以下の手順に従ってください：
+VS CodeでnRF Connect用にボードを設定するには、以下の手順に従ってください：
 
-- VS Code を開き、Settings に移動します。
+- VS Codeを開き、Settingsに移動します。
 
-- 検索ボックスに nRF Connect と入力します。
+- 検索ボックスにnRF Connectと入力します。
 
-- Board Roots設定項目を見つけて、settings.jsonの編集をクリックします。
+- Board Roots設定項目を見つけ、Edit in settings.jsonをクリックします。
 
 - ダウンロードしたXIAO nRF54L15ボードファイルの`zephyr`パスをboardRoots配列に追加します。
 
@@ -405,7 +448,7 @@ WindowsではChocolateyパッケージマネージャーを使用してOpenOCD�
 **1.PowerShellを開く（管理者として実行）：**
 
 - Windows検索バーで「PowerShell」と入力します。
-- 「Windows PowerShell」を右クリックして「管理者として実行」を選択します。
+- 「Windows PowerShell」を右クリックし、「管理者として実行」を選択します。
 
 **2.PowerShell実行ポリシーを確認：**
 
@@ -420,7 +463,7 @@ WindowsではChocolateyパッケージマネージャーを使用してOpenOCD�
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-このコマンドは現在のPowerShellセッションの実行ポリシーをバイパスしてChocolateyをインストールします。インストール後、PowerShellウィンドウを閉じて再度開いてください（引き続き管理者として実行）。
+このコマンドは現在のPowerShellセッションの実行ポリシーをバイパスし、Chocolateyをインストールします。インストール後、PowerShellウィンドウを閉じて再度開いてください（引き続き管理者として実行）。
 
 **4.OpenOCDをインストール：**
 
@@ -560,15 +603,15 @@ return 0;
 **main()関数の初期化**：
 
 - **変数設定**：
-  - `int ret`：関数の戻り値を格納して操作の成功を確認します。
-  - `bool led_state = true`：LED状態を追跡します（「ON」に初期化）。
+  - `int ret`：関数の戻り値を格納し、操作の成功を確認します。
+  - `bool led_state = true`：LEDの状態を追跡します（「ON」に初期化）。
 
 - **GPIO準備確認**：
   - `if (!gpio_is_ready_dt(&led)) { return 0; }`：LEDのGPIOハードウェアが準備完了かを確認します（例：ドライバーがロードされているか）。準備ができていない場合は終了します。
 
 - **GPIO設定**：
   - `ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE)`：LEDのGPIOピンをアクティブハイ出力として設定します。
-  - 失敗時（`ret < 0`）は無効な操作を防ぐために終了します。
+  - 失敗時（`ret < 0`）は無効な操作を防ぐため終了します。
 
 **メインループ**：
 無限の`while (1)`ループで実行され、LEDを定期的に切り替えます：
@@ -597,9 +640,9 @@ nRF Connect SDKの内部原理をより深く理解したい場合は、以下�
 
 ## 工場出荷時設定の復元
 
-XIAO nRF54L15ボード用に、不良状態からボードを回復するための工場リセットスクリプトが提供されています（例：内部NVM書き込み保護によりアップロードできない場合）。このスクリプトはフラッシュの一括消去を実行し、工場出荷時ファームウェアをプログラムします。
+XIAO nRF54L15ボード用に、不良状態（例：内部NVM書き込み保護によりアップロードできない場合）からボードを回復するための工場リセットスクリプトが提供されています。このスクリプトはフラッシュの一括消去を実行し、工場出荷時ファームウェアをプログラムします。
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Jasionf/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> 工場リセット</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -626,7 +669,7 @@ bash factory_reset.sh
 
 ## ワイヤレス切り替えモード
 
-この例では、Seeed Studio XIAO nRF54L15のRFスイッチを制御してオンボード間を切り替える方法を示します
+この例では、Seeed Studio XIAO nRF54L15のRFスイッチを制御して、オンボードの
 
 :::
 以下の例はPlatformIOとnRF Connect SDKの両方で動作します。PlatformIOでは直接使用でき、SDKでは手動でファイルを追加する必要があります。この[リンク](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#battery-powered-board)を参照してください
@@ -647,7 +690,7 @@ bash factory_reset.sh
 
 - ユーザーボタン（SW0）を押してセラミックアンテナと外部アンテナを切り替えます。
 
-- ユーザーLEDが現在のアンテナ選択を示します（外部アンテナの場合はLED ON、セラミックアンテナの場合はLED OFF）。
+- ユーザーLEDが現在のアンテナ選択を示します（外部の場合はLED ON、セラミックの場合はLED OFF）。
 
 - 起動時のデフォルトアンテナはprj.confで設定できます。
 
@@ -825,7 +868,7 @@ int main(void)
 
 :::tip
 外部アンテナまたは内部アンテナを切り替えたい場合は、zephyr/prj.confファイルを変更する必要があります。
-外部アンテナを有効にするには、# CONFIG_DEFAULT_ANTENNA_EXTERNAL=yのコメントアウトを解除してください。内部アンテナを使用する場合は、その行をコメントアウトしてください。
+外部アンテナを有効にするには # CONFIG_DEFAULT_ANTENNA_EXTERNAL=y のコメントを外してください。内部アンテナを使用する場合は、その行をコメントアウトしてください。
 :::
 
 ```cpp
@@ -850,9 +893,9 @@ CONFIG_BT_DEVICE_NAME="zephyr-ble"
 
 
 
-## プログラムを書き込むためのJ-Linkピンへのアクセス
+## プログラム書き込み用J-Linkピンへのアクセス
 
-JLinkをプログラミングに使用したい場合は、以下の手順に従ってください。ただし、Seeed Studio XIAO nRF54L15ボードに内蔵されているシリアルポートをプログラミングに使用することをお勧めします。これははるかに便利です。
+プログラミングにJLinkを使用したい場合は、以下の手順に従ってください。ただし、Seeed Studio XIAO nRF54L15ボードに内蔵されているシリアルポートを使用してプログラミングすることをお勧めします。これははるかに便利です。
 
 **必要なハードウェア**
 
@@ -860,26 +903,26 @@ JLinkをプログラミングに使用したい場合は、以下の手順に従
 - [Jlink](https://www.segger.com/downloads/jlink/)
 
 :::tip
-nRF54L15モデルボードのサポートを得るには、J-Linkの最新バージョンをダウンロードする必要があります。
+nRF54L15モデルボードのサポートを受けるには、J-Linkの最新バージョンをダウンロードする必要があります。
 :::
 
 **必要なソフトウェア**
 
 ウェブサイトから[Segger](https://www.segger.com/downloads/jlink/)ソフトウェアをダウンロードする必要があります。
 
-- **ステップ1.** Jlinkを使用して以下のピンを接続します：
+- **ステップ 1.** Jlinkを使用して以下のピンを接続します：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link.png" alt="pir" width={250} height="auto" /></p>
 
-- **ステップ2.** J-Flashを起動してnRF54L15_M33を検索し、新しいプロジェクトを作成します：
+- **ステップ 2.** J-Flashを起動してnRF54L15_M33を検索し、新しいプロジェクトを作成します：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link4.jpg" alt="pir" width={700} height="auto" /></p>
 
-- **ステップ3.** "Target"をクリックして、"Connect"を選択します。
+- **ステップ 3.** "Target"をクリックして"Connect"を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link3.jpg" alt="pir" width={700} height="auto" /></p>
 
-- **ステップ4.** binまたは[hexファイル](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex)をソフトウェアにドラッグします。その後、F4とF5をその順序で押します。再フラッシュが完了します。
+- **ステップ 4.** binまたは[hexファイル](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex)をソフトウェアにドラッグします。その後、F4とF5をその順序で押します。再フラッシュが完了します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link2.jpg" alt="pir" width={700} height="auto" /></p>
 
@@ -887,42 +930,42 @@ nRF54L15モデルボードのサポートを得るには、J-Linkの最新バー
 
 XIAO nRF54L15には内蔵の電源管理チップがあり、バッテリーを使用してXIAO nRF54L15を独立して電源供給したり、XIAO nRF54L15のUSBポートを通じてバッテリーを充電したりできます。
 
-XIAOにバッテリーを接続したい場合は、認定された充電式3.7Vリチウムバッテリーの購入をお勧めします。バッテリーをはんだ付けする際は、正極と負極の端子を区別するよう注意してください。
+XIAOにバッテリーを接続したい場合は、認定された充電式3.7Vリチウムバッテリーの購入をお勧めします。バッテリーをはんだ付けする際は、プラス端子とマイナス端子を区別するよう注意してください。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/battery_connect.jpg" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:500, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>バッテリー接続回路図</em></p>
 </div>
 
-**バッテリーの使用に関する注意事項：**
+**バッテリー使用に関する注意事項：**
 
-1. 仕様に適合する認定されたバッテリーを使用してください。
-2. バッテリー使用中でも、XIAO をデータケーブルでコンピューターデバイスに接続できます。XIAO には回路保護チップが内蔵されているため、安全です。
-3. XIAO nRF54L15 はバッテリー駆動時には LED が点灯しません（特定のプログラムを書いていない限り）。LED の状態で XIAO nRF54L15 が動作しているかどうかを判断せず、プログラムによって合理的に判断してください。
+1. 仕様に適合した認定バッテリーをご使用ください。
+2. XIAOはバッテリー使用中でもデータケーブルでコンピューターデバイスに接続できます。XIAOには回路保護チップが内蔵されているため安全です。
+3. XIAO nRF54L15はバッテリー駆動時にはLEDが点灯しません（特定のプログラムを書いていない限り）。LEDの状態でXIAO nRF54L15が動作しているかどうかを判断せず、プログラムによって合理的に判断してください。
 
-同時に、バッテリー充電用の赤色インジケーターライトを設計しており、インジケーターライトの表示を通じて充電中のバッテリーの現在の状態をユーザーに知らせます。
+同時に、バッテリー充電用の赤色インジケーターライトを設計しており、インジケーターライトの表示を通じてユーザーに現在のバッテリー充電状態をお知らせします。
 
 <!-- 1. When XIAO nRF54L15 is not connected to the battery, the red light comes on when the Type-C cable is connected and goes off after 30 seconds.
 2. The red light flashes when the battery is connected and the Type-C cable is connected for charging.
 3. When connecting Type-C to charge the battery fully, the red light turns off. -->
 
 :::caution
-はんだ付け時に正極と負極を短絡させてバッテリーや機器を焼損させないよう注意してください。
+はんだ付け時に正極と負極をショートさせてバッテリーや機器を焼損させないよう十分注意してください。
 :::
 
 ### バッテリー電圧検出
 :::tip
 
-プログラムをフラッシュした後、3.7V リチウムバッテリーのみで電源供給した際に XIAO nRF54L15 の起動に失敗する状況に遭遇した場合は、以下の解決策を参照してください。
+プログラムをフラッシュした後、3.7Vリチウムバッテリーのみで電源供給した際にXIAO nRF54L15の起動に失敗する状況に遭遇した場合は、以下の解決策を参照してください。
 
-現在のハードウェアバージョン（v1.0）では、**ベンチデバッグ**（USB 接続、UART 有効）と**バッテリー展開**（スタンドアロン、UART 無効）を簡単に切り替えるために、2つのビルド構成を管理することをお勧めします。
+現在のハードウェアバージョン（v1.0）では、**ベンチデバッグ**（USB接続、UART有効）と**バッテリー展開**（スタンドアロン、UART無効）を簡単に切り替えるために、2つのビルド構成を管理することをお勧めします。
 
-**シナリオ A：USB ベンチデバッグ**
+**シナリオA：USBベンチデバッグ**
 
-**使用時期：** コードを書いて、ファームウェアをフラッシュし、**USB シリアルポート**経由でログを表示する必要がある場合。
+**使用時期：** コードを書いて、ファームウェアをフラッシュし、**USBシリアルポート**経由でログを表示する必要がある場合。
 
 **設定（`prj_uart.conf`）：**
-プロジェクトディレクトリに `prj_uart.conf` という名前の新しいファイルを作成します。このオーバーレイファイルは、デバッグ目的で一時的に UART を再有効化します。
+プロジェクトディレクトリに`prj_uart.conf`という名前の新しいファイルを作成します。このオーバーレイファイルは、デバッグ目的でUARTを一時的に再有効化します。
 
 ```properties
 # Enable UART for USB debugging
@@ -946,12 +989,12 @@ CONFIG_LOG_BACKEND_UART=y
 west build -p always -d build_uart -b xiao_nrf54l15/nrf54l15/cpuapp . -DOVERLAY_CONFIG="prj_uart.conf"
 ```
 
-**シナリオ B：バッテリー展開（デフォルト）**
+**シナリオB：バッテリー展開（デフォルト）**
 
 **使用時期：** デバッグが完了し、**バッテリーパッド**のみでボードに電源供給する予定の場合。
 
 **設定（`prj.conf`）：**
-メインの `prj.conf` ファイルを変更して、デフォルトで UART を無効にします。これにより、バッテリー駆動時にボードが正しく起動できるようになります。
+メインの`prj.conf`ファイルを変更して、デフォルトでUARTを無効にします。これにより、バッテリー駆動時にボードが正しく起動できるようになります。
 
 ```cpp
 # Disable UART to ensure successful boot on battery
@@ -977,30 +1020,30 @@ west build -p always -d build_batt -b xiao_nrf54l15/nrf54l15/cpuapp .
 
 **まとめ**
 
-- **USB 経由で接続**  **`prj_uart.conf`** オーバーレイを使用してシリアルモニターを有効にします。
-- **バッテリーで動作**  デフォルトの **`prj.conf`** を使用してデバイスが問題なく起動するようにします。
+- **USB経由で接続**  **`prj_uart.conf`**オーバーレイを使用してシリアルモニターを有効にします。
+- **バッテリーで動作**  デフォルトの**`prj.conf`**を使用してデバイスが問題なく起動するようにします。
 
 :::
 
-XIAO nRF54L15 は、TPS22916CYFPR ロードスイッチを使用してバッテリー電力測定を効率的に管理することを中心としたバッテリー電圧検出機能を統合しています。このガイドでは、バッテリー検出のソフトウェア実装の分析**（特に main.c コード）**に焦点を当て、Zephyr NCS SDK の複雑さを避けて、PlatformIO 環境でこの機能を簡単に展開・使用する方法を案内します。
+XIAO nRF54L15は、TPS22916CYFPRロードスイッチを使用してバッテリー電力測定を効率的に管理することを中心としたバッテリー電圧検出機能を統合しています。このガイドでは、バッテリー検出のソフトウェア実装**（特にmain.cコード）**の分析に焦点を当て、Zephyr NCS SDKの複雑さを避けて、PlatformIO環境でこの機能を簡単に展開・使用する方法をガイドします。
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/battery_A.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:600, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>バッテリー検出回路図</em></p>
 </div>
 
-TPS22916CYFPR チップの機能：
+TPS22916CYFPRチップの機能：
 
-- オンデマンドでバッテリー電圧のオン・オフを制御するインテリジェント電源スイッチです。バッテリー電圧を測定する必要がある場合はオンになり、バッテリーを分圧回路に接続します。測定する必要がない場合はオフになり、接続を切断します。
+- これは、必要に応じてバッテリー電圧のオン・オフを制御するインテリジェント電源スイッチです。バッテリー電圧を測定する必要がある場合はオンになり、バッテリーを分圧回路に接続します。測定する必要がない場合はオフになり、接続を切断します。
 
 - この機能は何に役立つのでしょうか？
-このオンデマンドスイッチング機構により、チップは不要な電流消費を大幅に削減し、バッテリー寿命を効果的に延長します。後続の分圧回路と nRF54L15 の ADC（アナログ-デジタル変換器）と組み合わせることで、XIAO nRF54L15 はバッテリーの残量を正確に監視でき、IoT デバイスなどのバッテリー駆動・低消費電力アプリケーションに重要な範囲最適化を提供します。
+このオンデマンドスイッチング機構により、チップは不要な電流消費を大幅に削減し、バッテリー寿命を効果的に延長します。後続の分圧回路とnRF54L15のADC（アナログ-デジタル変換器）と組み合わせることで、XIAO nRF54L15はバッテリーの残量を正確に監視でき、IoTデバイスなどのバッテリー駆動・低消費電力アプリケーションに重要な範囲最適化を提供します。
 
 :::note
-以下のサンプルコードは PlatformIO 用に設計されていますが、nRF Connect SDK とも互換性があります。
+以下のサンプルコードはPlatformIO用に設計されていますが、nRF Connect SDKとも互換性があります。
 
-PlatformIO での XIAO nRF54L15 の使用
-PlatformIO で XIAO nRF54L15 を使用したい場合は、このチュートリアルを参照して設定してください：[XIAO nRF54L15 PlatformIO 設定](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_with_platform_io/)。
+PlatformIOでXIAO nRF54L15を使用する
+PlatformIOでXIAO nRF54L15を使用したい場合は、このチュートリアルを参照して設定してください：[XIAO nRF54L15 PlatformIO設定](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_with_platform_io/)。
 
 :::
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -1009,17 +1052,17 @@ PlatformIO で XIAO nRF54L15 を使用したい場合は、このチュートリ
     </a>
 </div><br />
 
-### オーバーレイの追加と conf ファイルの変更
+### オーバーレイの追加とconfファイルの変更
 
-nRF Connect SDK でこのバッテリールーチンを使用したい場合は、app.overlay を追加し、prj.conf ファイルを変更する必要があります。
+nRF Connect SDKでこのバッテリールーチンを使用したい場合は、app.overlayを追加してprj.confファイルを変更する必要があります。
 
-- プロジェクトディレクトリの下に `app.overlay` という名前の新しいファイルを作成します。次に、以下のコードを貼り付け、最後に Ctrl + S を押して保存します。
+- プロジェクトディレクトリの下に`app.overlay`という名前の新しいファイルを作成します。次に以下のコードを貼り付け、最後にCtrl + Sを押して保存します。
 
   - オーバーレイファイルはハードウェア記述層を拡張し、デバイスツリーを通じて物理的なハードウェア接続をカスタマイズします。コードロジックを変更するのではなく、実際のハードウェアの詳細を宣言して、ドライバーが物理デバイスを正しく初期化できるようにします。
 <br />
   <details>
 
-  <summary>app.overlay コード</summary>
+  <summary>app.overlayコード</summary>
 
   ```cpp
   / {
@@ -1203,7 +1246,7 @@ nRF Connect SDK でこのバッテリールーチンを使用したい場合は�
 
 - prj.confファイルに以下の内容を追加します
 
-  - prj.confはZephyrプロジェクトの中核設定ファイルです。コンパイル時のソフトウェア機能選択のためにKconfigシステムによって管理されます。どのドライバー（ADC、ディスプレイ、Bluetoothなど）、ミドルウェア（LVGLなど）、システムサービス（ログ、メモリ管理など）をファームウェアに含めるかを決定し、それらの動作パラメータ（ログレベル、ヒープサイズなど）を設定します。最後にCtrl + Sを押して保存してください。
+  - prj.confはZephyrプロジェクトのコア設定ファイルです。コンパイル時のソフトウェア機能選択のためにKconfigシステムによって管理されます。どのドライバー（ADC、ディスプレイ、Bluetoothなど）、ミドルウェア（LVGLなど）、システムサービス（ログ、メモリ管理など）をファームウェアに含めるかを決定し、それらの動作パラメータ（ログレベル、ヒープサイズなど）を設定します。最後にCtrl + Sを押して保存します。
 <br />
   <details>
 
@@ -1425,7 +1468,7 @@ int main(void)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

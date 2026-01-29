@@ -3,6 +3,7 @@ description: ODYSSEY - X86J4105
 title: Install Operating System
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /linkstar-install-system
+sku: 102110775,102110777
 last_update:
   date: 01/03/2023
   author: w0x7ce

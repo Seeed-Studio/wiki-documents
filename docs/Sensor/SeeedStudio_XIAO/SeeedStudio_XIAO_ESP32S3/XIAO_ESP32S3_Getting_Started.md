@@ -6,7 +6,7 @@ keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_getting_started
-sku: 113991114, 113991115, 102010671
+sku: 113991114, 113991115, 114010001, 102010634, 102010635, 102010671
 type: gettingstarted
 last_update:
   date: 08/14/2024
@@ -205,6 +205,58 @@ Before everything starts, it is quite essential to have some basic parameters of
  </tr>
 </table>
 
+**Pin Map**
+| XIAO Pin                 | Function         | Chip Pin                                                | Alternate Functions | Description                          |
+| :---------------------: | :-------------: | :----------------------------------------------------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS             |                                                        |                    | Power Input/Output                   |
+| GND                     |                  |                                                        |                    |                                      |
+| 3V3                     | 3V3_OUT          |                                                        |                    | Power Output                         |
+| D0                      | Analog          | GPIO1                                                  | TOUCH1             | GPIO, ADC                            |
+| D1                      | Analog          | GPIO2                                                  | TOUCH2             | GPIO, ADC                            |
+| D2                      | Analog          | GPIO3                                                  | TOUCH3             | GPIO, ADC                            |
+| D3                      | Analog          | GPIO4                                                  | TOUCH4             | GPIO, ADC                            |
+| D4                      | Analog,SDA       | GPIO5                                                  | TOUCH5             | GPIO, I2C Data, ADC                  |
+| D5                      | Analog,SCL       | GPIO6                                                  | TOUCH6             | GPIO, I2C Clock, ADC                 |
+| D6                      | TX               | GPIO43                                                 |                    | GPIO, UART Transmit                  |
+| D7                      | RX               | GPIO44                                                 |                    | GPIO, UART Receive                   |
+| D8                      | Analog,SCK       | GPIO7                                                  | TOUCH7             | GPIO, SPI Clock, ADC                 |
+| D9                      | Analog,MISO      | GPIO8                                                  | TOUCH8             | GPIO, SPI Data, ADC                  |
+| D10                     | Analog,MOSI      | GPIO10                                                 | TOUCH9             | GPIO, SPI Data, ADC                  |
+| D11                     | Analog          | GPIO42                                                 | TOUCH12            | GPIO, ADC                            |
+| D12                     | Analog          | GPIO41                                                 | TOUCH13            | GPIO, ADC                            |
+| MTDO                    |                  | GPIO40                                                 |                    | JTAG                                 |
+| MTDI                    |                  | GPIO41                                                 |                    | JTAG, ADC                            |
+| MTCK                    |                  | GPIO39                                                 |                    | JTAG, ADC                            |
+| MTMS                    |                  | GPIO42                                                 |                    | JTAG, ADC                            |
+| Reset                   |                  | EN                                                |                    | EN                                   |
+| Boot                    |                  | GPIO0                                                  |                    | Enter Boot Mode                      |
+| U.FL-R-SMT1             |                  | LNA_IN                                                 |                    | UFL antenna                          |
+| CHARGE_LED              |                  |                                                |                    | CHG-LED                              |
+| USER_LED                |                  | GPIO21                                                 |                    | User Light                           |
+| Digital microphone_CLK  |                  | GPIO42                                                 |                    | PDM clock pin for MIC                |
+| Digital microphone_DATA |                  | GPIO41                                                 |                    | PDM data pin for MIC                 |
+| Onboard SD Card__CS     |                  | GPIO3                                                  |                    | SD card chip select pin              |
+| Onboard SD Card_SCK     |                  | GPIO7                                                  |                    | SD card clock pin                    |
+| Onboard SD Card_MISO    |                  | GPIO8                                                  |                    | SD card data input pin               |
+| Onboard SD Card Slot_MOSI |                | GPIO10                                                 |          |      SD card data output pin              |
+
+**Camera**
+| Chip Pin  | Description                          |
+| :-------: | :---------------------------------- |
+| GPIO10    | Camera-related clock pin            |
+| GPIO11    | Camera video data pin (Y8)          |
+| GPIO12    | Camera video data pin (Y7)          |
+| GPIO13    | Camera pixel clock pin              |
+| GPIO14    | Camera video data pin (Y6)          |
+| GPIO15    | Camera video data pin (Y2)          |
+| GPIO16    | Camera video data pin (Y5)          |
+| GPIO17    | Camera video data pin (Y3)          |
+| GPIO18    | Camera video data pin (Y4)          |
+| GPIO40    | I2C data pin for Camera             |
+| GPIO39    | I2C clock pin for Camera            |
+| GPIO38    | Camera vertical sync pin            |
+| GPIO47    | Camera horizontal sync pin          |
+| GPIO48    | Camera video data pin (Y9)          |
 </TabItem>
 <TabItem value="Plus" label="XIAO ESP32S3 Plus" default>
 
@@ -235,6 +287,43 @@ Before everything starts, it is quite essential to have some basic parameters of
 :::tip
 The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension board](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) but not with Plug-in camera sensor board.
 :::
+**Pin Map**
+
+| XIAO Pin                 | Function         | Chip Pin  | Alternate Functions | Description                          |
+| :---------------------: | :-------------: | :-------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS             |           |                    | Power Input/Output                   |
+| GND                     |                  |           |                    |                                      |
+| 3V3                     | 3V3_OUT          |           |                    | Power Output                         |
+| D0                      | Analog          | GPIO1     |                    | GPIO, ADC                            |
+| D1                      | Analog          | GPIO2     |                    | GPIO, ADC                            |
+| D2                      | Analog          | GPIO3     |                    | GPIO, ADC                            |
+| D3                      | Analog          | GPIO4     |                    | GPIO, ADC                            |
+| D4                      | Analog,SDA       | GPIO5     |                    | GPIO, I2C Data, ADC                  |
+| D5                      | Analog,SCL       | GPIO6     |                    | GPIO, I2C Clock, ADC                 |
+| D6                      | TX               | GPIO43    |                    | GPIO, UART Transmit                  |
+| D7                      | RX               | GPIO44    |                    | GPIO, UART Receive                   |
+| D8                      | Analog,SCK       | GPIO7     |                    | GPIO, SPI Clock, ADC                 |
+| D9                      | Analog,MISO      | GPIO8     |                    | GPIO, SPI Data, ADC                  |
+| D10                     | Analog,MOSI      | GPIO10    |                    | GPIO, SPI Data, ADC                  |
+| D11                     |                  | GPIO38    |                    | GPIO, ADC                            |
+| D12                     |                  | GPIO39    |                    | GPIO, ADC                            |
+| D13                     |                  | GPIO40    |                    |                                      |
+| D14                     |                  | GPIO41    |                    |                                      |
+| D15                     |                  | GPIO42    |                    |                                      |
+| D16                     |                  | GPIO10    |                    |                                      |
+| D17                     |                  | GPIO13    |                    |                                      |
+| D18                     |                  | GPIO12    |                    |                                      |
+| D19                     |                  | GPIO11    |                    |                                      |
+| MTDO                    |                  | GPIO40    |                    | JTAG                                 |
+| MTDI                    |                  | GPIO41    |                    | JTAG, ADC                            |
+| MTCK                    |                  | GPIO39    |                    | JTAG, ADC                            |
+| MTMS                    |                  | GPIO42    |                    | JTAG, ADC                            |
+| Reset                   |                  | CHIP_EN   |                    | EN                                   |
+| Boot                    |                  | GPIO0     |                    | Enter Boot Mode                      |
+| ADC_BAT                 |                  | GPIO10    |                    | Read the BAT voltage value           |
+| U.FL-R-SMT1             |                  | LNA_IN    |                    | UFL antenna                          |
+| CHARGE_LED              |                  | VCC_3V3   |                    | CHG-LED                              |
+| USER_LED                |                  | GPIO21    |                    | User Light                           |
 
 </TabItem>
 
@@ -291,6 +380,13 @@ The factory program preset in the regular version is the touch pin light-up prog
 The XIAO ESP32S3 Sense is shipped with the WebCam sample program pre-installed. You can use this program by giving the XIAO a good antenna installation and powering it up. For details, you can read the Wiki about this program.
 
 - [Video Streaming](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage#project-ii-video-streaming)
+
+:::note
+Starting from **June 2025**, the factory firmware of XIAO ESP32S3 Sense enables a default AP Wi‑Fi with the following credentials:
+
+- **SSID:** `XIAO_ESP32S3_Sense`
+- **Password:** `seeedstudio`
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/98.png" style={{width:900, height:'auto'}}/></div>
 

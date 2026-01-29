@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-Circular_LED
+sku: 104030013
 last_update:
   date: 1/7/2023
   author: shuxu hu

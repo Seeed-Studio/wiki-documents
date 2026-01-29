@@ -5,6 +5,7 @@ keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/ReSpeaker_Mic_Array_v2.0
+sku: 107990053
 last_update:
   date: 1/12/2023
   author: jianjing Huang

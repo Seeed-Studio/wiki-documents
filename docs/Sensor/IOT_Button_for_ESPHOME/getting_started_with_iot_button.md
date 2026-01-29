@@ -6,6 +6,7 @@ keywords:
   - ESP32-C6
 image: https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/button_buzzer.webp
 slug: /getting_started_with_seeed_iot_button
+sku: 113110044
 last_update:
   date: 04/08/2025
   author: Citric
@@ -267,13 +268,14 @@ One of the key features of the IoT Button is its flexibility. You can switch bet
 
 - (Not recommended) **To switch to ESPHome**: If your button is running Zigbee firmware and you want to use Wi-Fi, simply follow the flashing instructions in **Method 1, Step 2** to install the ESPHome firmware.
 
-- **To switch to Zigbee**: If your button is running ESPHome and you want to join a Zigbee network, you will need to compile and flash the [Zigbee firmware using Arduino IDE](https://wiki.seeedstudio.com/seeed_iot_button_with_zigbee/). After flashing, follow the pairing steps in **Method 2**.
+- **To switch to Zigbee**: If your button is running ESPHome and you want to join a Zigbee network, you will need to compile and flash the [Zigbee firmware using Arduino IDE](https://wiki.seeedstudio.com/seeed_iot_button_with_zigbee/). After flashing, follow the pairing steps in  **Method 2**.
 
 ## Resources
 
-- **[GITHUB]** [Seeed IoT Button Github Repository](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-iot-button)
-- **[PDF]** [Seeed IoT Button SCH PDF](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH.pdf)
-- **[SCH&PCB]** [Seeed IoT Button SCH & PCB](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH&PCB.zip)
+- **[GITHUB]** [Seeed Studio IoT Button V2 Github Repository](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-iot-button)
+- **[PCB Design Files]** [Seeed Studio IoT Button V2 KiCad Project](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed%20IoT%20Button-C6%20v2.0_SCH&PCB_250721.zip)
+- **[Schematic]** [Seeed Studio IoT Button V2 Schematic](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed%20IoT%20Button-C6%20v2.0_SCH_250721.pdf)
+
 
 ## Tech Support & Product Discussion
 

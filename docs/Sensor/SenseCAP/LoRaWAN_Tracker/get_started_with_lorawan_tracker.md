@@ -6,30 +6,17 @@ keywords:
 - LoRaWAN
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /get_started_with_lorawan_tracker
-sidebar_position: 1
+sku: 114993591
+sidebar_position: 2
 last_update:
-  date: 11/26/2025
+  date: 1/9/2026
   author: Janet
 ---
 
+# Get Started with LoRaWAN Tracker
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993591-t1000-e-lorawan.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-LoRaWAN-p-6408.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    </a>
-</div>
-
-T1000-E for LoRaWAN comes with fully open-source firmware. To enhance the user experience, we provide demo firmware pre-installed on factory-produced devices. Users can explore the demo firmware for an initial experience and also develop your own custom firmware. For details on custom development, please refer to the [LoRaWAN Open Source Firmware](https://wiki.seeedstudio.com/open_source_lorawan/).
-
-:::caution note
-Before flashing the firmware, please ensure you device is `T1000-E for LoRaWAN` version. Please don't flash other Meshtastic firmware to this tracker model that doesn't support Meshtastic, it may cause the device to be completely dead.
-:::
-
-**T1000 Series Version Comparison**
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image2_20.png" alt="pir" width={800} height="auto" /></p>
+This chapter shows you how to quickly set up your SenseCAP T1000-E LoRaWAN Tracker with the SenseCraft App.
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/7/-/7-114993591-t1000-e-lorawan.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## Hardware Overview
 
@@ -376,7 +363,7 @@ Navigate to `Settings` to set up the parameters.
 
 ### Device Data View
 
-#### SenseCAP Mate App
+#### SenseCraft App
 
 Check the Location on the APP.
 

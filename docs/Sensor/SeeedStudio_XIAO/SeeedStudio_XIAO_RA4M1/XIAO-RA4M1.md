@@ -4,6 +4,7 @@ description: |
   XIAO RA4M1 - Smallest Dev Borad Based on 32-bit Renesas RA4M1, Arduino IDE-Ready, 19 GPIOs, RGB LED, CAN BUS, USB 2.0
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
 slug: /getting_started_xiao_ra4m1
+sku: 102010551,102010638
 keywords:
   - XIAO
   - RA4M1
@@ -137,6 +138,37 @@ Before everything starts, it is quite essential to have some basic parameters of
     </tr>
 </table>
 
+## **Pin Map**
+| XIAO Pin        | Function         | Chip Pin  | Alternate Functions                  | Description                          |
+| :-------------: | :-------------: | :-------: | :---------------------------------: | :---------------------------------: |
+| 5V              | VBUS             |           |                                     | Power Input/Output                   |
+| GND             |                  |           |                                     |                                      |
+| 3V3             | 3V3_OUT          |           |                                     | Power Output                         |
+| D0              | Analog          | P014      | ADC09                               | GPIO, ADC                            |
+| D1              | Analog          | P000      | ADC00                               | GPIO, ADC                            |
+| D2              | Analog          | P001      | ADC01                               | GPIO, ADC                            |
+| D3              | Analog          | P002      | ADC02                               | GPIO, ADC                            |
+| D4              | Analog,SDA1      | P206      |                                     | GPIO, I2C Data, ADC                  |
+| D5              | Analog,SCL1      | P100      |                                     | GPIO, I2C Clock, ADC                 |
+| D6              | TXD2             | P302      | SDA2                                | GPIO, UART Transmit,I2C              |
+| D7              | RXD2             | P301      | SCL2                                | GPIO, UART Receive,I2C               |
+| D8              | SPI1_SCK         | P111      |                                     | GPIO, SPI Clock                      |
+| D9              | SPI1_MISO        | P110      | CRX0                                | GPIO, SPI Data,UART                  |
+| D10             | SPI1_MOSI        | P109      | CTX0                                | GPIO, SPI Data,UART                  |
+| D11             | RX9              | P408      |                                     | GPIO, UART                           |
+| D12             | TX9              | P409      |                                     | GPIO,UART                            |
+| D13             | GPIO             | P013      |                                     | GPIO                                 |
+| D14             | GPIO             | P012      |                                     | GPIO                                 |
+| D15             | TXD0             | P101      | SDA0,ADC21,SPI0_MOSI                | GPIO, UART Transmit, ADC,SPI,I2C     |
+| D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |
+| D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |
+| D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |
+| ADC_BAT         |                  | P400      |                                     | Read the BAT voltage value           |
+| Reset           |                  | RES       |                                     | RESET                                |
+| Boot            |                  | P201      |                                     | Enter Boot Mode                      |
+| RGB LED         |                  | P112      |                                     | RGB LED                              |
+| CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Red                          |
+| USER_LED        |                  | P011      |                                     | User Light（Y）|
 ## Getting Started
 
 ### Hardware Preparation

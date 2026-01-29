@@ -5,6 +5,7 @@ keywords:
 - ネットワーク
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/h68kv2_datasheet
+sku: 102110958
 last_update:
   date: 05/15/2025
   author: Parker

@@ -5,6 +5,7 @@ keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-Base_Shield_for_IOIO-OTG
+sku: 103020001
 last_update:
   date: 1/13/2023
   author: shuxu hu

@@ -5,6 +5,7 @@ keywords:
 - ネットワーク
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/H28K-install-system
+sku: 113991236,113991235
 last_update:
   date: 05/15/2025
   author: Parker

@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-I2C_FM_Receiver_v1.1/
 slug: /cn/Grove-I2C_FM_Receiver_v1.1
+sku: 107020049
 last_update:
   date: 01/06/2022
   author: gunengyu

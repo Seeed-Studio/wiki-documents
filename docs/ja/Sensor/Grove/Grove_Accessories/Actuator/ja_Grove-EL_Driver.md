@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-EL_Driver/
 slug: /ja/Grove-EL_Driver
+sku: 105020005
 last_update:
   date: 05/15/2025
   author: gunengyu

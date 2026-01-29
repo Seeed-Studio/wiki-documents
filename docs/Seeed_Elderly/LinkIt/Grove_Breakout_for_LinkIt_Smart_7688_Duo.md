@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Breakout_for_LinkIt_Smart_7688_Duo
+sku: 103030032
 last_update:
   date: 1/13/2023
   author: shuxu hu

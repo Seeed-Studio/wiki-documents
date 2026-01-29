@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Use_Socket_to_connect_to_the_forum/
 slug: /ja/Use_Socket_to_connect_to_the_forum
+sku: 102991555
 last_update:
   date: 05/15/2025
   author: gunengyu

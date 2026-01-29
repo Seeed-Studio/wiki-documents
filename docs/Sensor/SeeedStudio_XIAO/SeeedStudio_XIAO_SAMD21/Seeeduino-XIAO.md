@@ -5,6 +5,7 @@ keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-XIAO
+sku: 110010004, 102010388, 102010328
 last_update:
   date: 1/11/2023
   author: shuxu hu
@@ -85,6 +86,29 @@ It is critical to understand that the VIN and GND pads on the back of the XIAO S
 
 Please pay attention to use, do not lift the shield cover.
 :::
+
+## **Pin Map**
+| XIAO Pin        | Function      | Chip Pin  |   Description      |
+| :-------:      | :-----:        | :----------:         |       :---:     |
+|5V              |VBUS             |                                      | Power Input/Output     |
+| GND           |                 |                                      |                          |
+| 3V3           |   3V3_OUT              |                                |    Power Output           |
+|D0             |  Analog         |   PA02                                |     GPIO, ADC            |
+| D1            |   Analog        |   PA04                                |        GPIO, ADC         |
+| D2            |     Analog      | PA10                                  |    GPIO, ADC             |
+| D3            |    Analog       |  PA11                                 |     GPIO, ADC            |
+| D4            |  Analog,SDA   	| PA08		                              | GPIO, I2C Data, ADC        |
+| D5            |  Analog,SCL     |	PA09	                                |	GPIO, I2C Clock, ADC       |
+| D6            | Analog,TX       |  	PB08	                               |	GPIO, UART Transmit, ADC |  
+| D7            |Analog,RX	      |  PB09	                                |   	GPIO, UART Receive, ADC |
+|D8             | Analog,SPI_SCK  | 	PA07	                              |	GPIO, SPI Clock, ADC   |
+|D9             | Analog,SPI_MISO |  	PA05                                |		GPIO, SPI Data, ADC  |
+|D10            | Analog,SPI_MOSI |  PA06	                                | 	GPIO, SPI Data         |
+|Reset          |                 |  RES	                                |	RESET                  |
+|TX_LED         |                 |   PA19	                              |	TX_LED                 |
+|RX_LED         |                 | PA18	                                |	RX_LED                 |
+|Power_LED     |          |        VBUS	                                |       	CHG-LED_Red      |
+|USER_LED       |                 |   PA17	                              |	User Light_Yellow      |
 
 ### **Enter Bootloader Mode**
 

@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Optocoupler_Relay-M281/
 slug: /ja/Grove-Optocoupler_Relay-M281
+sku: 101020603
 last_update:
   date: 05/15/2025
   author: gunengyu

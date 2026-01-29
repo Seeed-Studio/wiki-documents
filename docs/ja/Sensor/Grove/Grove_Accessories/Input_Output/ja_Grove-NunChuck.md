@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-NunChuck/
 slug: /ja/Grove-NunChuck
+sku: 103020009
 last_update:
   date: 05/15/2025
   author: gunengyu

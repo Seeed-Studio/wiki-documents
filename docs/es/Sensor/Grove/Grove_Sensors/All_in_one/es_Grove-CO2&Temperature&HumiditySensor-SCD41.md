@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-CO2_&_Temperature_&_Humidity_Sensor-SCD41
+sku: 101020952
 last_update:
   date: 12/30/2022
   author: jianjing Huang

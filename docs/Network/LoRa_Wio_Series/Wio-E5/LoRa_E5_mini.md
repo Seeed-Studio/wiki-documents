@@ -7,9 +7,10 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /LoRa_E5_mini
+sku: 113990939, 113991156
 last_update:
-  date: 01/30/2023
-  author: hushuxu
+  date: 01/15/2026
+  author: David Du
 ---
 <!-- ![](https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/113990939_preview-07.png) -->
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/113990939_preview-07.png" alt="pir" width={600} height="auto" /></p>
@@ -400,11 +401,15 @@ Hardware:
 |LED1|PB15|None|
 |LED2|PB9|PB5|
 |LED3|PB11|None|
-|DBG1|PB12|PA0 (D0 Button)|
-|DBG2|PB13|PB10|
-|DBG3|PB14|PB3|
-|DBG4|PB10|PB4|
+|PROB1|PB12|PA0 (D0 Button)|
+|PROB2|PB13|PB10|
+|PROB3|PB14|PB3|
+|PROB4|PB10|PB4|
 |Usart|Usart2(PA2/PA3)|Usart1(PB6/PB7)|
+
+:::note
+The label `PROB` refers to the pin of Probe Line. These pins are able to set as the `CM4_EVENTOUT` additional function. As part of the CoreSight debugging components of Arm Cortex-M4 kernel, this feature enables non-intrusive debugging and hardware-level event tagging. It monitors CPU internal activities in real time without pausing the CPU or occupying communication interfaces (such as UART), converting “events” that are difficult to observe directly in software into measurable electrical signals.
+:::
 
 ### Applications
 

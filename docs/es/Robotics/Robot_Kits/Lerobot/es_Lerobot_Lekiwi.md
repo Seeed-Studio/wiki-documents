@@ -8,6 +8,7 @@ keywords:
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.webp
 slug: /es/lerobot_lekiwi
+sku: 114090065,E2025090401
 last_update:
   date: 8/8/2025
   author: LiShanghang

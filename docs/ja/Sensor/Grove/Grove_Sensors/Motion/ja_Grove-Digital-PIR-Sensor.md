@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Digital-PIR-Sensor
+sku: 101020793
 last_update:
   date: 05/15/2025
   author: shuxu hu

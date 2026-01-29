@@ -7,6 +7,7 @@ keywords:
 - MR60BHA2
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg
 slug: /es/getting_started_with_mr60bha2_mmwave_kit
+sku: 114993387
 sidebar_position: 0
 last_update:
   date: 08/19/2024

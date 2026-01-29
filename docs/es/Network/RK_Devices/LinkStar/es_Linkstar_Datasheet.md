@@ -3,6 +3,7 @@ description: ODYSSEY - X86J4105
 title: Introducción a LinkStar
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Linkstar_Datasheet
+sku: 102110775,102110777
 last_update:
   date: 01/03/2023
   author: w0x7ce

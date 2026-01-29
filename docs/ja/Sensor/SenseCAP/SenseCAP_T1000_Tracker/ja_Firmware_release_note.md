@@ -22,14 +22,14 @@ last_update:
 #### ローカルファイル経由でのアップグレード
 
 :::tip
-以下の手順は、弊社テクニカルサポートチームからアドバイスを受けた場合にのみ使用してください。
+以下の手順は、技術サポートチームからアドバイスを受けた場合にのみ使用してください。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/up-fiele.png" alt="pir" width={800} height="auto" /></p>
 
-### v2.5 - 2024/01/02
+### v2.8 - 2025/09/05
 
-* **GPS UTC時刻アルゴリズムの最適化およびその他の改善**
+* **新しいファームウェアは、デバイスのLoRaWAN安定性を向上させます。**
 
 :::caution 注意
 すべてのユーザーは、デバイスを最新のファームウェアにアップグレードすることを推奨します。

@@ -5,6 +5,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/G1_Water_Flow_Sensor/
 slug: /es/G1_Water_Flow_Sensor
+sku: 314150000
 last_update:
   date: 02/03/2022
   author: gunengyu

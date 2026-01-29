@@ -6,6 +6,7 @@ keywords:
 - FAQ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /faq_for_SenseCAP_T1000
+sku: 114993073,114993106,114993207,114993208
 last_update:
   date: 9/20/2023
   author: Jessie

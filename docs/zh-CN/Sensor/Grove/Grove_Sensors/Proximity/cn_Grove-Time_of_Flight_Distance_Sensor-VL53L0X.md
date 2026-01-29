@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-Time_of_Flight_Distance_Sensor-VL53L0X/
 slug: /cn/Grove-Time_of_Flight_Distance_Sensor-VL53L0X
+sku: 101020532
 last_update:
   date: 03/01/2023
   author: gunengyu

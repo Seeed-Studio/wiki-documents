@@ -3,6 +3,7 @@ description: Kit de Desarrollo Quantum Mini Linux
 title: Kit de Desarrollo Quantum Mini Linux
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Quantum-Mini-Linux-Development-Kit
+sku: 114992462
 last_update:
   date: 2/1/2023
   author: jianjing Huang

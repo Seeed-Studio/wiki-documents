@@ -4,6 +4,7 @@ title: Music Shield V2.2
 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Music_Shield_V2.2
+sku: 107020003
 last_update:
   date: 01/30/2023  
   author: Eico 

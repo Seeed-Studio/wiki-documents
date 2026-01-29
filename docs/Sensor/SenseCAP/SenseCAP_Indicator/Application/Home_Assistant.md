@@ -7,6 +7,7 @@ keywords:
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator-ha-thumbnail.jpg
 slug: /SenseCAP_Indicator_Application_Home_Assistant
+sku: E23010426,E24121301
 sidebar_position: 1
 last_update:
   date: 10/09/2024

@@ -1,15 +1,16 @@
 ---
-description: 本 wiki 提供了 reComputer Jetson Robotics J501-Mini 载板的硬件特性和接口使用的全面介绍。涵盖详细规格、支持的模块、设置说明，以及使用各种接口（如 M.2、以太网、USB、CAN、UART、DI/DO、I2S 和 GMSL2 相机扩展）的实用指南，帮助用户快速开始在 J501-Mini 平台上进行机器人开发。
+description: 本 wiki 提供了 reComputer Jetson Robotics J501-Mini 载板的硬件特性和接口使用的全面介绍。它涵盖了详细的规格、支持的模块、设置说明，以及使用各种接口（如 M.2、以太网、USB、CAN、UART、DI/DO、I2S 和 GMSL2 相机扩展）的实用指南，帮助用户快速开始在 J501-Mini 平台上进行机器人开发。
 title: 刷写 Jetpack && 接口使用
 tags:
-  - J501-Robotics carrier board
-  - Flash Jetpack
-  - Robotics
-  - Interfaces Usage
-  - Interfaces
-  - Hardware
+  - J501-Robotics 载板
+  - 刷写 Jetpack
+  - 机器人
+  - 接口使用
+  - 接口
+  - 硬件
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
 slug: /cn/recomputer_j501_mini_getting_started
+sku: 100020039
 last_update:
   date: 11/04/2025
   author: Dayu
@@ -17,7 +18,7 @@ last_update:
 
 # Robotics J501 载板硬件和入门指南
 
-reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，专为先进机器人设计。兼容 NVIDIA Jetson AGX Orin 模块（32GB/64GB）在 MAXN 模式下，可提供高达 275 TOPS 的 AI 性能。配备广泛的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、2 个 USB 3.2 端口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——它作为强大的机器人大脑，能够处理来自各种传感器的复杂数据。预装 JetPack 6.2.1 和 Linux BSP，确保无缝部署。
+reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，专为先进机器人设计。兼容 NVIDIA Jetson AGX Orin 模块（32GB/64GB）在 MAXN 模式下，可提供高达 275 TOPS 的 AI 性能。配备广泛的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、2 个 USB 3.2 端口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——它作为一个强大的机器人大脑，能够处理来自各种传感器的复杂数据。预装 JetPack 6.2.1 和 Linux BSP，确保无缝部署。
 
 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，reComputer Robotics J501 Mini 将大语言模型驱动的决策制定与物理机器人控制（如运动规划和传感器融合）连接起来。非常适合自主机器人的快速开发，通过即用型接口和优化的 AI 框架加速产品上市时间。
 
@@ -57,9 +58,9 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
 - 用户手册 x 1
 
 :::note
-1.在高电压电源和工作温度下，请根据热设计指南设计稳固的散热解决方案。
+1.在高电压电源和工作温度下，请根据热设计指南设计强大的散热解决方案。
 2.请为模块安装散热器以获得更好的性能。
-3.在高电压输入和高负载运行期间，请勿触摸散热器以防烫伤。
+3.在高电压输入和高负载运行期间，请不要触摸散热器以防烫伤。
 4.验证用电源适配器推荐，请使用 Seeed 官方网站推荐的电源适配器。
 
 - 19V/4.74A 5525 桶形插头电源适配器
@@ -187,7 +188,7 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
   </tbody>
 </table>
 
-## 📦 刷写 JetPack 操作系统
+## 📦 刷写 JetPack OS
 
 ### 支持的模块
 
@@ -270,7 +271,7 @@ Jetpack6 镜像文件大约 **14.2GB**，下载大约需要 60 分钟。请耐�
 :::info
 要验证下载固件的完整性，您可以比较 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 来获取下载文件的 SHA256 哈希值。如果结果哈希与 wiki 中提供的 SHA256 哈希匹配，则确认您下载的固件是完整无损的。
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 来获取下载文件的 SHA256 哈希值。如果结果哈希与 wiki 中提供的 SHA256 哈希匹配，则确认您下载的固件是完整的。
 :::
 
 ⚙️ **SEEED 的 Jetson 载板的所有 `.dts` 文件和其他源代码可以从** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra) **下载**
@@ -292,7 +293,7 @@ Jetpack6 镜像文件大约 **14.2GB**，下载大约需要 60 分钟。请耐�
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
 </div>
 
-**步骤 2.** 通过连接电源线为载板供电，然后释放 REST 按钮。
+**步骤 2.** 通过连接电源线为载板供电，然后释放 **REC** 按钮。
 
 **步骤 3.** 使用 USB Type-C 数据传输线缆将板子连接到 Ubuntu 主机 PC。
 
@@ -445,7 +446,7 @@ iperf3 -c 192.168.6.191
 
 ## 以太网
 
-Robotics j501-Mini 载板配备 2 个 1Gbps RJ45 以太网端口，提供高速有线网络连接。
+Robotics j501-Mini 载板配备一个 1Gbps 和一个 10Gbps RJ45 以太网端口，用于高速有线网络连接。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/ethernet-real.png"/>
@@ -642,7 +643,7 @@ J501 Mini 提供两个集成到 JST 4 针（GH1.25）的 CAN 接口。此外，�
 </div>
 
 ### CAN 通信
-本节将 Jetson 上的 CAN0 和 CAN1 连接起来，演示如何在 `经典 CAN 模式` 和 `CAN-FD 模式` 下在 CAN0 和 CAN1 之间发送和接收数据。
+本节将 Jetson 上的 CAN0 和 CAN1 连接起来，演示如何在 `Classic CAN 模式` 和 `CAN-FD 模式` 下在 CAN0 和 CAN1 之间发送和接收数据。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/CAN-connect.png"/>
@@ -683,14 +684,14 @@ sudo gpioset --mode=wait gpiochip1 7=1
 
 
 
-#### 经典 CAN 模式
+#### Classic CAN 模式
 
 创建 `test_can.sh` 来测试 **CAN0** 和 **CAN1** 在标准模式下的数据传输和接收：
 
 ```bash
 touch test_can.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
 `test_can.sh` 的脚本代码如下：
 
@@ -754,7 +755,7 @@ candump can0
 ```bash
 touch test_canfd.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
 `test_canfdfd.sh` 的脚本代码如下：
 
@@ -814,7 +815,7 @@ CAN0 和 CAN1 之间的数据传输和接收将完成：
 
 ### GPI
 
-Robotics J501 Mini 提供标准的 6 针 JST 接头用于 GPI。
+Robotics J501 Mini 提供标准的 6 引脚 JST 接头用于 GPI。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPI-real.png"/>
@@ -851,7 +852,7 @@ sudo gpioget 0 83  #read the input of GPI 4
 
 ### GPO
 
-Robotics J501 Mini 提供标准的 6 针 JST 接头用于 GPO。
+Robotics J501 Mini 提供标准的 6 引脚 JST 接头用于 GPO。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPO-real.png"/>
@@ -894,7 +895,7 @@ sudo gpioset --mode=wait 0 113=1  #set output of GPO 4 to low voltag
 
 ## UART
 
-Robotics J501 Mini 提供标准的 6 针 JST 接头用于 UART 串行通信。
+Robotics J501 Mini 提供标准的 6 引脚 JST 接头用于 UART 串行通信。
 UART 和 GPO 使用相同的 JST 接口。此接口默认为 GPO 功能。**如果您需要切换到 UART 功能，必须指向新的设备树并重启设备以使更改生效。**
 
 
@@ -919,7 +920,7 @@ UART 和 GPO 使用相同的 JST 接口。此接口默认为 GPO 功能。**如�
 
 
 :::warning
-UART 和 GPO 共享相同的物理接口。默认情况下，此接口作为 GPO 功能。如果您需要切换到 UART，请参考本节内容。
+UART 和 GPO 共享同一个物理接口。默认情况下，此接口作为 GPO 功能。如果您需要切换到 UART，请参考本节内容。
 :::
 
 对于不同的模块，您需要下载相应的设备树文件。
@@ -1301,7 +1302,7 @@ Opening the data stream, you can view the video from the camera.
 ```
 
 :::note
-`ser_0_ch_0` 是解码器的第一个通道，`des_ch_0` 是第一个摄像头上的串行器，其他通道同理。如果连接的摄像头具有不同的分辨率，那么这里的配置将基于摄像头的实际格式。
+`ser_0_ch_0` 是解码器的第一个通道，`des_ch_0` 是第一个摄像头上的串行器，其他通道同理。如果连接的摄像头分辨率不同，那么这里的配置将基于摄像头的实际格式。
 每次设备重启时，我们都需要为串行器和解串器设置通道格式。
 :::
 
@@ -1332,19 +1333,19 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video0 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video1 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video2 ! \
 'video/x-raw,width=1920,height=1536,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video3 ! \
 'video/x-raw,width=3840,height=2160,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 ```
 
 <div align="center">
@@ -1357,7 +1358,7 @@ Robotics J501 Mini 配备了 HDMI 接口，用于高分辨率显示输出。
 
 ## 资源
 
-- [reComputer Robotics J501-Mini 载板原理图](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/reComputer_mini_J501_datasheet.pdf)
+- [reComputer Robotics J501-Mini 载板原理图](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
 
 <!-- - [reComputer Robotics J501-Mini Carrier Board Datasheet]() -->
 

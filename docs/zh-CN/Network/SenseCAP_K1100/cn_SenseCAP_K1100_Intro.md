@@ -5,6 +5,7 @@ keywords:
 - SenseCAP 网关
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/SenseCAP_K1100_Intro
+sku: 110991748
 last_update:
   date: 08/07/2024
   author: Frank

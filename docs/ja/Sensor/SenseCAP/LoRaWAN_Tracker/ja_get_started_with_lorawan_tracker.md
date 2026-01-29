@@ -6,34 +6,21 @@ keywords:
 - LoRaWAN
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /ja/get_started_with_lorawan_tracker
-sidebar_position: 1
+sku: 114993591
+sidebar_position: 2
 last_update:
-  date: 11/26/2025
+  date: 1/9/2026
   author: Janet
 ---
 
+# LoRaWAN トラッカーの使用開始
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993591-t1000-e-lorawan.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-LoRaWAN-p-6408.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-    </a>
-</div>
-
-T1000-E for LoRaWAN は完全にオープンソースのファームウェアを搭載しています。ユーザーエクスペリエンスを向上させるため、工場出荷時のデバイスにはデモファームウェアがプリインストールされています。ユーザーは初期体験のためにデモファームウェアを探索し、独自のカスタムファームウェアを開発することもできます。カスタム開発の詳細については、[LoRaWAN オープンソースファームウェア](https://wiki.seeedstudio.com/ja/open_source_lorawan/)を参照してください。
-
-:::caution note
-ファームウェアをフラッシュする前に、お使いのデバイスが `T1000-E for LoRaWAN` バージョンであることを確認してください。Meshtastic をサポートしていないこのトラッカーモデルに他の Meshtastic ファームウェアをフラッシュしないでください。デバイスが完全に動作しなくなる可能性があります。
-:::
-
-**T1000 系列バージョン比較**
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image2_20.png" alt="pir" width={800} height="auto" /></p>
+この章では、SenseCAP T1000-E LoRaWAN トラッカーを SenseCraft アプリで素早くセットアップする方法を説明します。
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/7/-/7-114993591-t1000-e-lorawan.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## ハードウェア概要
 
-### 図表
+### 図
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/diagram.png" alt="pir" width={800} height="auto" /></p>
 
@@ -92,28 +79,28 @@ T1000-E for LoRaWAN は完全にオープンソースのファームウェアを
 
 ## デモファームウェア概要
 
-### 位置情報説明
+### 位置特定説明
 
-|**位置情報**|**説明**|
+|**位置**|**説明**|
 | - | - |
-|GNSS|経度と緯度の情報をアップロードします。<br/>（通常、屋内では GPS 信号がないため、位置情報を取得するには屋外でデバイスをテストすることをお勧めします）|
-|Wi-Fi|Wi-Fi AP の MAC アドレスと RSSI 情報をアップロードします。|
-|Bluetooth|Bluetooth ビーコンの MAC アドレスと RSSI 情報をアップロードします。|
+|GNSS|経度と緯度の情報をアップロード。<br/>（通常、屋内では GPS 信号がないため、位置を取得するには屋外でデバイスをテストすることをお勧めします）|
+|Wi-Fi|Wi-Fi AP の MAC アドレスと RSSI 情報をアップロード。|
+|Bluetooth|Bluetooth ビーコンの MAC アドレスと RSSI 情報をアップロード。|
 
 ### ボタン
 
 |**ボタン操作**|**説明**|
 | - | - |
 |3秒間長押し|電源オン/オフ|
-|ボタンを3回クリック|Bluetooth のオン/オフ切り替え|-|
+|ボタンを3回クリック|Bluetooth オン/オフ切り替え|-|
 |ダブルクリック|SOS アラートのオン/オフ切り替え|
-|1回クリック|位置情報/バッテリー/センサーデータのアップロード|
+|1回クリック|位置/バッテリー/センサーデータのアップロード|
 
 ### LED
 
 <table>
   <tr>
-    <th colspan="2" valign="top"><b>LED 状態</b></th>
+    <th colspan="2" valign="top"><b>LED ステータス</b></th>
     <th colspan="1" valign="top"><b>説明</b></th>
   </tr>
   <tr>
@@ -130,22 +117,22 @@ T1000-E for LoRaWAN は完全にオープンソースのファームウェアを
     <td colspan="1" valign="top">点灯</td>
     <td colspan="1" valign="top">
       <p>デバイスが DFU モードです。</p>
-      <p>DFU モードを終了するにはデバイスを再起動してください（ボタンを押し続け、充電ケーブルを接続した直後にボタンを離してください）</p>
+      <p>DFU モードを終了するにはデバイスを再起動してください（ボタンを押し続け、充電ケーブルを接続した直後に離してください）</p>
     </td>
   </tr>
   <tr>
     <td colspan="1" valign="top">
-      <p>500ms オン/1秒オフ</p>
+      <p>500ms オン/1s オフ</p>
     </td>
     <td colspan="1" valign="top">Bluetooth オン</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">呼吸</td>
-    <td colspan="1" valign="top">LoRaWAN ネットワークに接続中</td>
+    <td colspan="1" valign="top">LoRaWAN ネットワークに参加中</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">2秒間高速点滅後消灯</td>
-    <td colspan="1" valign="top">LoRaWAN ネットワークに正常に接続</td>
+    <td colspan="1" valign="top">LoRaWAN ネットワークへの参加成功</td>
   </tr>
 </table>
 
@@ -166,7 +153,7 @@ SenseCAP T1000 トラッカーには3つのセンサーが搭載されていま�
 
 ### バッテリー
 
-バッテリー寿命は、アップリンク間隔、センサー使用、LoRa 送信距離、動作温度などの要因によって異なります。予測されるバッテリー寿命は、典型的な作業環境（25°C）に基づいており、参考として提供されています。実際のバッテリー寿命は異なる場合があります。
+バッテリー寿命は、アップリンク間隔、センサー使用、LoRa 伝送距離、動作温度などの要因に依存します。予測されるバッテリー寿命は、典型的な作業環境（25°C）に基づいており、参考として提供されます。実際のバッテリー寿命は異なる場合があります。
 
 **EU868(1C/SF12)**
 
@@ -182,7 +169,7 @@ SenseCAP T1000 トラッカーには3つのセンサーが搭載されていま�
 
 ## 使用開始
 
-ボタンを3秒間押してデバイスの電源を入れます。上昇するメロディーがデバイスが正常に電源オンされたことを示します。
+ボタンを3秒間押してデバイスの電源を入れます。上昇メロディーがデバイスの電源が正常に入ったことを示します。
 
 ### アプリ経由で接続
 
@@ -213,7 +200,7 @@ SenseCraft アプリにログインします。
 
 #### クイック設定
 
-`SenseCAP クラウド`でのクイックスタートには、`Quick Configuration` を選択できます。
+`SenseCAP クラウド`でクイックスタートするには、`Quick Configuration` を選択できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/quick-config.png" alt="pir" width={800} height="auto" /></p>
 
@@ -227,7 +214,7 @@ SenseCraft アプリにログインします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/advan-config.png" alt="pir" width={800} height="auto" /></p>
 
-現在のデバイス情報を確認できます。これには `device EUI`、`ハードウェア/ソフトウェアバージョン`、`バッテリー` などが含まれます。
+現在のデバイス情報を確認できます。これには `device EUI`、`hardware/software version`、`battery` などが含まれます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/info-dev.png" alt="pir" width={250} height="auto" /></p>
 
@@ -247,7 +234,7 @@ SenseCraft アプリにログインします。
     <td colspan="1" rowspan="5">プラットフォーム</td>
     <td colspan="1" valign="top">SenseCAP for The Things Network（デフォルト）</td>
     <td colspan="1" valign="top">
-      <p>SenseCAP の専用 TTN サーバー。SenseCAP ゲートウェイとペアリングすることで、すぐに使用できます。</p>
+      <p>SenseCAP の専用 TTN サーバー。SenseCAP ゲートウェイとペアリングした場合、すぐに使用できます。</p>
       <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCAP 屋外ゲートウェイ</span></a><br />
       <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCAP 屋内ゲートウェイ</span></a>
     </td>
@@ -256,7 +243,7 @@ SenseCraft アプリにログインします。
     <td colspan="1" valign="top">SenseCAP for Helium</td>
     <td colspan="1" valign="top">
       <p>SenseCAP のプライベート Helium コンソール。</p>
-      <p>SenseCAP Mate App と Portal ですぐに使用できます。</p>
+      <p>SenseCAP Mate アプリとポータルですぐに使用できます。</p>
     </td>
   </tr>
   <tr>
@@ -268,13 +255,13 @@ SenseCraft アプリにログインします。
     <td colspan="1" valign="top">パブリック TTN サーバー</td>
   </tr>
   <tr>
-    <td colspan="1" valign="top">その他のプラットフォーム</td>
+    <td colspan="1" valign="top">Other Platform</td>
     <td colspan="1" valign="top">その他の LoRaWAN ネットワークサーバー</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">周波数プラン</td>
     <td colspan="1" valign="top">EU868/US915/AU915/KR920/IN865/AS923-1/AS923-2/AS923-3/AS923-4</td>
-    <td colspan="1" valign="top">デフォルトは EU868</td>
+    <td colspan="1" valign="top">デフォルトでEU868</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">パケットポリシー</td>
@@ -287,7 +274,7 @@ SenseCraft アプリにログインします。
     <td colspan="1" valign="top">デフォルトで有効</td>
   </tr>
   <tr>
-    <td colspan="1" valign="top">LoRa 設定の復元</td>
+    <td colspan="1" valign="top">LoRa設定の復元</td>
     <td colspan="1" valign="top">デフォルトで有効</td>
     <td colspan="1" valign="top">デフォルトで有効</td>
   </tr>
@@ -303,80 +290,80 @@ SenseCraft アプリにログインします。
   </tr>
   <tr>
     <td colspan="1">3軸加速度計</td>
-    <td colspan="1" valign="top">有効/無効、デフォルトは無効</td>
+    <td colspan="1" valign="top">有効/無効、デフォルトで無効</td>
     <td colspan="1" valign="top">3軸加速度計のデータをアップロード</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="2">SOS レポートモード</td>
-    <td colspan="1" valign="top">単発（デフォルト）</td>
-    <td colspan="1" valign="top">データをアップロードし、SOS イベントを一度報告。<br/>ブザーアラームが3秒間</td>
+    <td colspan="1" rowspan="2">SOSレポートモード</td>
+    <td colspan="1" valign="top">シングル（デフォルト）</td>
+    <td colspan="1" valign="top">データをアップロードし、SOSイベントを一度報告。<br/>ブザーアラームが3秒間</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">連続</td>
-    <td colspan="1" valign="top">毎分データをアップロードし、SOS イベントを報告、30回後に終了。<br/>ブザーアラームが30秒間</td>
+    <td colspan="1" valign="top">毎分データをアップロードし、SOSイベントを報告、30回後に終了。<br/>ブザーアラームが30秒間</td>
   </tr>
   <tr>
     <td colspan="1">アップリンク間隔（分）</td>
-    <td colspan="1" valign="top">1-10080分、デフォルトは60分</td>
-    <td colspan="1" valign="top">間隔でデータをアップロード。<br/>頻度が高いほど、消費電力が高くなります</td>
+    <td colspan="1" valign="top">1-10080分、デフォルトで60分</td>
+    <td colspan="1" valign="top">間隔でデータをアップロード。<br/>頻度が高いほど消費電力が高くなります</td>
   </tr>
   <tr>
     <td colspan="1" rowspan="7">位置情報戦略</td>
-    <td colspan="1" valign="top">GNSS のみ（デフォルト）</td>
-    <td colspan="1" valign="top">GPS 衛星システムのみを使用して位置を決定</td>
+    <td colspan="1" valign="top">GNSSのみ（デフォルト）</td>
+    <td colspan="1" valign="top">GPS衛星システムのみを使用して位置を決定</td>
   </tr>
   <tr>
-    <td colspan="1" valign="top">Wi-Fi のみ</td>
-    <td colspan="1" valign="top">Wi-Fi AP の MAC アドレスと RSSI 情報をアップロード</td>
+    <td colspan="1" valign="top">Wi-Fiのみ</td>
+    <td colspan="1" valign="top">Wi-Fi APのMACアドレスとRSSI情報をアップロード</td>
   </tr>
   <tr>
-    <td colspan="1" valign="top">Bluetooth のみ</td>
-    <td colspan="1" valign="top">Bluetooth ビーコンの MAC アドレスと RSSI 情報をアップロード</td>
+    <td colspan="1" valign="top">Bluetoothのみ</td>
+    <td colspan="1" valign="top">BluetoothビーコンのMACアドレスとRSSI情報をアップロード</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">GNSS + Wi-Fi</td>
-    <td colspan="1" valign="top">まず GPS 測位を使用し、GPS が失敗した場合、1つの位置情報サイクルで Wi-Fi を使用</td>
+    <td colspan="1" valign="top">最初にGPS測位を使用し、GPSが失敗した場合、1つの位置情報サイクルでWi-Fiを使用</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">Bluetooth + GNSS</td>
-    <td colspan="1" valign="top">まず Bluetooth 測位を使用し、Bluetooth が失敗した場合、1つの位置情報サイクルで GNSS を使用</td>
+    <td colspan="1" valign="top">最初にBluetooth測位を使用し、Bluetoothが失敗した場合、1つの位置情報サイクルでGNSSを使用</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">Bluetooth + Wi-Fi</td>
-    <td colspan="1" valign="top">まず Bluetooth 測位を使用し、Bluetooth が失敗した場合、1つの位置情報サイクルで Wi-Fi を使用</td>
+    <td colspan="1" valign="top">最初にBluetooth測位を使用し、Bluetoothが失敗した場合、1つの位置情報サイクルでWi-Fiを使用</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">Bluetooth + Wi-Fi + GNSS</td>
-    <td colspan="1" valign="top">Bluetooth、Wi-Fi、GNSS を順番に測位に使用（1つの測位タイプが失敗した後、次のタイプの測位に切り替え）</td>
+    <td colspan="1" valign="top">Bluetooth、Wi-Fi、GNSSを順番に測位に使用（1つの測位タイプが失敗した後、次のタイプの測位に切り替え）</td>
   </tr>
   <tr>
-    <td colspan="1" valign="top">GNSS（GPS）</td>
-    <td colspan="1" valign="top">GNSS 最大スキャン時間（秒）</td>
-    <td colspan="1" valign="top">10-120秒、デフォルトは30秒</td>
+    <td colspan="1" valign="top">GNSS(GPS)</td>
+    <td colspan="1" valign="top">GNSS最大スキャン時間（秒）</td>
+    <td colspan="1" valign="top">10-120秒、デフォルトで30秒</td>
   </tr>
   <tr>
-    <td colspan="1" rowspan="3">iBeacon スキャン</td>
-    <td colspan="1" valign="top">BLE スキャンの最大回数</td>
-    <td colspan="1" valign="top">3-5、デフォルトは3</td>
+    <td colspan="1" rowspan="3">iBeaconスキャン</td>
+    <td colspan="1" valign="top">BLEスキャンの最大回数</td>
+    <td colspan="1" valign="top">3-5、デフォルトで3</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">スキャンタイムアウト（秒）</td>
-    <td colspan="1" valign="top">3-10秒、デフォルトは3秒</td>
+    <td colspan="1" valign="top">3-10秒、デフォルトで3秒</td>
   </tr>
   <tr>
-    <td colspan="1" valign="top">グループ UUID（16進）</td>
-    <td colspan="1" valign="top">UUID フィルターを設定、最大16バイト。<br/>例えば、'01 020304' に設定すると、パターン '0102 03 04 xx xx xx ...' のビーコンをフィルタリングします</td>
+    <td colspan="1" valign="top">グループUUID（16進）</td>
+    <td colspan="1" valign="top">UUIDフィルターを設定、最大16バイト。<br/>例えば、'01 020304'に設定すると、パターン'0102 03 04 xx xx xx ...'のビーコンをフィルタリングします</td>
   </tr>
   <tr>
-    <td colspan="1" valign="top">Wi-Fi スキャン</td>
-    <td colspan="1" valign="top">Wi-Fi スキャンの最大回数</td>
-    <td colspan="1" valign="top">3-5、デフォルトは3</td>
+    <td colspan="1" valign="top">Wi-Fiスキャン</td>
+    <td colspan="1" valign="top">Wi-Fiスキャンの最大回数</td>
+    <td colspan="1" valign="top">3-5、デフォルトで3</td>
   </tr>
 </table>
 
 ### デバイスデータビュー
 
-#### SenseCAP Mate App
+#### SenseCraft App
 
 アプリで位置情報を確認します。
 
@@ -384,29 +371,29 @@ SenseCraft アプリにログインします。
 
 #### SenseCAP Portal
 
-SenseCAP Portal の主な機能は、SenseCAP デバイスを管理し、データを保存することです。Microsoft の安全で信頼性の高いクラウドサービスである Azure 上に構築されています。ユーザーはアカウントを申請し、すべてのデバイスをこのアカウントにバインドできます。SenseCAP Portal は Web ポータルと API を提供します。Web ポータルには、ダッシュボード、デバイス管理、データ管理、アクセスキー管理が含まれます。API はさらなる開発のためにユーザーに公開されています。
+SenseCAP Portalの主な機能は、SenseCAPデバイスを管理し、データを保存することです。これはMicrosoftの安全で信頼性の高いクラウドサービスであるAzure上に構築されています。ユーザーはアカウントを申請し、すべてのデバイスをこのアカウントにバインドできます。SenseCAP Portalは、WebポータルとAPIを提供します。WebポータルにはDashboard、Device Management、Data Management、Access Key Managementが含まれます。APIはユーザーのさらなる開発のために公開されています。
 
-- **ダッシュボード：** デバイス概要、お知らせ、シーンデータ、データチャートなどを含みます。
-- **デバイス管理：** SenseCAP デバイスを管理します。
-- **データ管理：** データテーブルとグラフセクションを含むデータを管理し、データを検索する方法を提供します。
-- **サブアカウントシステム：** 異なる権限を持つサブアカウントを登録します。
-- **アクセスキー管理：** アクセスキー（API サービスにアクセスするため）を管理し、キー作成、キー更新、キー確認を含みます。
+- **Dashboard：** Device Overview、Announcement、Scene Data、Data Chartなどを含みます。
+- **Device Management：** SenseCAPデバイスを管理します。
+- **Data Management：** データを管理し、Data TableとGraphセクションを含み、データを検索する方法を提供します。
+- **Subaccount System：** 異なる権限を持つサブアカウントを登録します。
+- **Access Key Management：** Access Key（APIサービスにアクセスするため）を管理し、Key Create、Key Update、Key Checkを含みます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/portal_page.png" alt="pir" width={800} height="auto" /></p>
 
 ##### デバイスデータビュー
 
-[SenseCAP Portal](http://sensecap.seeed.cc) にログインします
+[SenseCAP Portal](http://sensecap.seeed.cc)にログインします
 
 アプリでアカウントを作成している場合は、直接ログインできます。
 
-1) アカウント登録を選択し、メール情報を入力して「register」をクリックすると、登録メールがユーザーのメールボックスに送信されます
+1) register accountを選択し、メール情報を入力して"register"をクリックすると、登録メールがユーザーのメールボックスに送信されます
 
-2) 「SenseCAP…」メールを開き、ジャンプリンクをクリックし、関連情報を入力して登録を完了します
+2) "SenseCAP…"メールを開き、ジャンプリンクをクリックし、関連情報を入力して登録を完了します
 
-3) ログイン画面に戻り、ログインを完了します
+3) ログインインターフェースに戻り、ログインを完了します
 
-詳細については、[SenseCAP Portal ユーザーガイド](https://sensecap-docs.seeed.cc/quickstart.html)をご確認ください。
+詳細については、[SenseCAP Portal User Guide](https://sensecap-docs.seeed.cc/quickstart.html)を確認してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/portaldata1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -414,20 +401,20 @@ SenseCAP Portal の主な機能は、SenseCAP デバイスを管理し、デー�
 
 ## SenseCAP API
 
-SenseCAP API は、ユーザーが IoT デバイスとデータを管理するためのものです。HTTP プロトコル、MQTT プロトコル、Websocket プロトコルの3種類の API メソッドが含まれています。
+SenseCAP APIは、ユーザーがIoTデバイスとデータを管理するためのものです。HTTPプロトコル、MQTTプロトコル、WebsocketプロトコルのAPIメソッドの3つのタイプが含まれます。
 
-- HTTP API を使用すると、ユーザーは LoRa デバイスを管理し、生データや履歴データを取得できます。
-- MQTT API を使用すると、ユーザーは MQTT プロトコルを通じてセンサーのリアルタイム測定データを購読できます。
-- Websocket API を使用すると、ユーザーは Websocket プロトコルを通じてセンサーのリアルタイム測定データを取得できます。
+- HTTP APIを使用すると、ユーザーはLoRaデバイスを管理し、生データや履歴データを取得できます。
+- MQTT APIを使用すると、ユーザーはMQTTプロトコルを通じてセンサーのリアルタイム測定データを購読できます。
+- Websocket APIを使用すると、ユーザーはWebsocketプロトコルを通じてセンサーのリアルタイム測定データを取得できます。
 
-詳細については、[API ユーザーガイド](https://sensecap-docs.seeed.cc/)をご確認ください。
+詳細については、[API User Guide](https://sensecap-docs.seeed.cc/)を確認してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/api_page.png" alt="pir" width={800} height="auto" /></p>
 
 ## デコーダー
 
-- **[TTN 用デコーダー](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/TTN/SenseCAP_T1000E_TTN_Decoder.js)**
-- **[Helium 用デコーダー](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/Helium/SenseCAP_T1000E_Helium_Decoder.js)**
+- **[TTN用デコーダー](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/TTN/SenseCAP_T1000E_TTN_Decoder.js)**
+- **[Helium用デコーダー](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/Helium/SenseCAP_T1000E_Helium_Decoder.js)**
 
 ## リソース
 

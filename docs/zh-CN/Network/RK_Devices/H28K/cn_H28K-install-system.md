@@ -5,6 +5,7 @@ keywords:
 - 网络
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/H28K-install-system
+sku: 113991236,113991235
 last_update:
   date: 2023/11/24
   author: Parker

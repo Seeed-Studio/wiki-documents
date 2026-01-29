@@ -3,6 +3,7 @@ description: Seeed SOM – STM32MP157C
 title: Seeed Studio SOM STM32MP157C
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SEEED-SOM-STM32MP157C
+sku: 102110318
 last_update:
   date: 05/15/2025
   author: w0x7ce

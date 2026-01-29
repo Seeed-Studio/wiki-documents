@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-UART_Wifi/
 slug: /cn/Grove-UART_Wifi
+sku: 113020010
 last_update:
   date: 01/06/2022
   author: gunengyu

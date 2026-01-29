@@ -49,6 +49,25 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'Grove', 'Grove_Sensors', 'Temp&Humi', 'Grove-Temperature_and_Humidity_Sensor_Pro.md'), //12.29
   path.join(docsDirectory, 'Top_Brand', 'Raspberry_Pi', 'Pi_HAT', 'Grove_Base_Hat_for_Raspberry_Pi.md'), //12.29
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor', 'SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction.md'), //12.29
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Make_DIY_BSP_for_Jetson.md'), //1.4
+  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'reComputer_R1225_LoRaWAN_Gateway', 'R1225_introduction.md'), //1.4
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_LoRaWAN_Sensor', 'SenseCAP_A1102', 'SettingAI_With_A1102.md'), //12.31
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Wireless_Connection', 'XIAO_ESP32C5_WiFi_Usage.md'), //12.30
+  path.join(docsDirectory, 'Sensor', 'ePaper', 'epaper_driver_board_main_page.md'), //12.21
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Deal_the_Issue_of_UUID_error.md'), //1.8
+  path.join(docsDirectory, 'Network', 'SenseCAP_Network', 'SenseCAP_Gateway_Intro.md'), //1.8
+  path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft_APP', 'overview.md'), //1.8
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_The_Things_Network.md'), //1.6
+  path.join(docsDirectory, 'Network', 'LoRa_Wio_Series', 'Wio-E5', 'LoRa_E5_mini.md'), //1.15
+  path.join(docsDirectory, 'Sensor', 'ePaper', 'XIAO_ePaper_Display_Board_EN04', 'Application', 'OpenEpaperLink_GettingStart.md'), //1.13
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_arduino.md'), //1.9
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_homeassistant.md'), //1.9
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Zigbee', 'XIAO_ESP32C5_Zigbee_idf.md'), //1.9  
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_ESP32C5', 'Application', 'XIAO_ESP32C5_WiFi_Throughput_tester.md'), //1.16
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_SO_ARM101_DAMO.md'), //1.12
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Decoder.md'), //1.26
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_AWS_IoT_Core.md'), //1.23
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T2000_Tracker', 'Integrated_with_LoRaWAN_Network_Server', 'Connect_to_Helium.md'), //1.23  
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

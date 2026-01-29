@@ -5,6 +5,7 @@ keywords:
 - lightning
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove-lightning-sensor-as3935
+sku: 101021072
 last_update:
   date: 06/07/2023
   author: Citric

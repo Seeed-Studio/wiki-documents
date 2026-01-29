@@ -1,88 +1,93 @@
 ---
-description: Seeed Studio IoTボタンの使い方
-title: Seeed Studio IoTボタンの使い方
+description: Seeed Studio IoT Button の使用開始
+title: Seeed Studio IoT Button の使用開始
 keywords:
-  - IoTボタン
+  - IoT Button
   - ESP32-C6
 image: https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/button_buzzer.webp
 slug: /ja/getting_started_with_seeed_iot_button
+sku: 113110044
 last_update:
-  date: 05/15/2025
+  date: 04/08/2025
   author: Citric
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-IoT-Button-p-6419.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
 ## はじめに
 
-IoTボタンは、ESPHomeとZigbeeを通じてHome Assistantに統合可能な多機能スマートスイッチです。ESP32-C6を搭載し、カスタマイズ可能なRGB LEDインジケーター、プログラム可能なイベントトリガー、USB-C充電、柔軟な取り付けオプションを備えています。直感的なスマートホームコントロールに必要なすべてが揃っています。
+IoT Button は、ESPHome（Wi-Fi 経由）と Zigbee を通じて Home Assistant との二重統合を提供する多機能スマートスイッチです。ESP32-C6 を搭載し、カスタマイズ可能な RGB LED インジケーター、複数のプレスパターンに対応するプログラム可能なイベントトリガー、USB-C 充電、柔軟な取り付けオプションを備えており、直感的なスマートホーム制御に必要なすべてを提供します。
+
+このガイドでは、**V1 ハードウェア（ESPHome ファームウェアが出荷時にインストール済み）**または**V2 ハードウェア（Zigbee ファームウェアが出荷時にインストール済み）**のどちらをお持ちでも、IoT Button のセットアップ方法をご案内します。
 
 ### 特徴
 
-- Home Assistant対応
-- 1つのスイッチでカスタマイズ可能なアクション
-- 信頼性の高い電源供給
-- 簡単な取り付けソリューション
-- カスタマイズに対応
+- **Home Assistant 対応**: ESPHome または Zigbee Home Automation（ZHA）統合によるシームレスな統合。
+- **1つのスイッチ、カスタマイズ可能なアクション**: シングルプレス、ダブルプレス、ロングプレスアクションをサポートし、異なる自動化をトリガーできます。
+- **信頼性の高い電源供給**: 標準的な 18650 充電式バッテリーと便利な USB-C 充電ポートを搭載。
+- **簡単な取り付けソリューション**: どこにでも設置でき、簡単にアクセスできるよう取り付け可能なコンパクトデザイン。
+- **カスタマイズに対応**: 両方のハードウェアバージョンで ESPHome または Zigbee ファームウェアのフラッシュをサポートし、ニーズに最適なプロトコルを選択できます。
 
 ## ハードウェア概要
 
-使用を開始する前に、製品の基本的なパラメータを把握することが重要です。以下の表は、IoTボタンの特性に関する情報を提供します。
+すべてを始める前に、製品の基本的なパラメータを把握することが非常に重要です。以下の表は、IoT Button の V1 と V2 両方の特性に関する情報を提供します。
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>パラメータ</th>
-			<th>説明</th>
-		</tr>
-		<tr>
-			<td>MCU</td>
-			<td>Espressif ESP32-C6</td>
-		</tr>
-		<tr>
-			<td>フラッシュ</td>
-			<td>4MB</td>
-		</tr>
+ <table align="center">
+  <tr>
+   <th>パラメータ</th>
+   <th>説明</th>
+  </tr>
+  <tr>
+   <td>MCU</td>
+   <td>Espressif ESP32-C6</td>
+  </tr>
+  <tr>
+   <td>フラッシュ</td>
+   <td>4MB</td>
+  </tr>
         <tr>
-			<td>LED</td>
-			<td>ユーザーRGB LED: WS2812B (GPIO19 使用時にはGPIO18も有効にする必要があります)<br />充電LED: 緑<br />ユーザーLED: 青 (GPIO2)</td>
-		</tr>
+   <td>LED</td>
+   <td>ユーザー RGB LED: WS2812B（GPIO19、GPIO18 の有効化が必要）<br />充電 LED: 緑<br />ユーザー LED（青）: GPIO2（V1）/ GPIO3（V2）<br />低バッテリー LED（赤）: GPIO14（<b>V2 のみ</b>）</td>
+  </tr>
         <tr>
-			<td>無線</td>
-			<td>2.4GHz Wi-Fi<br />Zigbee</td>
-		</tr>
+   <td>ワイヤレス</td>
+   <td>2.4GHz Wi-Fi<br />Zigbee 3.0</td>
+  </tr>
         <tr>
-			<td>バッテリー</td>
-			<td>3.6V リチウムイオン18650充電式バッテリー</td>
-		</tr>
+   <td>バッテリー</td>
+   <td>3.6V Li-ion 18650 充電式バッテリー</td>
+  </tr>
         <tr>
-			<td>充電インターフェース</td>
-			<td>USB Type-C</td>
-		</tr>
+   <td>バッテリー監視</td>
+   <td>電圧読み取り用 ADC（<b>V2 のみ</b>、GPIO1）</td>
+  </tr>
         <tr>
-			<td>バッテリー保護</td>
-			<td>逆極性保護</td>
-		</tr>
+   <td>充電インターフェース</td>
+   <td>USB Type-C</td>
+  </tr>
         <tr>
-			<td>ファームウェア更新</td>
-			<td>OTA対応</td>
-		</tr>
+   <td>バッテリー保護</td>
+   <td>逆極性保護</td>
+  </tr>
         <tr>
-			<td>寸法</td>
-			<td>92x32x25 mm</td>
-		</tr>
-	</table>
+   <td>ファームウェア更新</td>
+   <td>OTA（Over-the-Air）サポート</td>
+  </tr>
+        <tr>
+   <td>寸法</td>
+   <td>92x32x25 mm</td>
+  </tr>
+ </table>
 </div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/3.png" style={{width:800, height:'auto'}}/></div>
@@ -91,180 +96,190 @@ IoTボタンは、ESPHomeとZigbeeを通じてHome Assistantに統合可能な�
 
 ## 使用開始
 
-### ステップ1: 初期設定
+### ステップ 1: 初期セットアップ
 
-IoTボタンを初めて受け取った際には、使用前に初期アクティベーションを行うことが重要です。以下の手順に従ってください：
+IoT Button を初めて受け取った際は、使用前に初期アクティベーション手順を実行することが重要です。これは **V1 と V2 両方の**ハードウェアに適用されます。
 
-1. 標準的な5V USB Type-Cデータケーブルを使用して、IoTボタンを電源に接続します。
-2. **この初回の電源接続は、内蔵バッテリーをアクティブ化するために重要です。**
-3. **このアクティベーションステップを行わないと、デバイスは正常に動作しません。**
-
-:::note
-IoTボタンには省電力スリープモードが搭載されています：
-- 未設定状態：デバイスは2分間操作がないとスリープモードに入ります。スリープ解除にはボタンを1回押す必要があります。
-- ESPHome設定後：バッテリーを節約するため、ボタンを離してから9秒後にスリープモードに入ります。操作を行う前にボタンを1回押してスリープを解除する必要があります。
-:::
-
-IoTボタンにはESPHome互換のファームウェアがプリロードされているため、アクティベーション後は以下の手順に従ってHome Assistantとの統合を進めることができます。
+1. 標準的な 5V USB Type-C データケーブルを使用して、IoT Button を電源（USB 充電器やコンピューターなど）に接続します。
+2. **この初期電源接続は、内蔵バッテリーの保護回路をアクティベートするため重要です。**
+3. **このアクティベーション手順なしでは、デバイスはバッテリー電源で正常に動作しません。**
 
 :::note
-アクティベーションプロセスには、適合した5V USB Type-Cケーブルを使用してください。非標準ケーブルを使用すると、アクティベーションが正しく行われない場合があります。
+アクティベーション処理には、準拠した 5V USB Type-C ケーブルを使用してください。非標準ケーブルを使用すると、適切にアクティベートされない場合があります。
 :::
 
-### ステップ2: Home Assistantの設定
+### ステップ 2: 接続方法の選択
 
-1. **インストール**: 最適なパフォーマンスを得るために、Raspberry Piに[Home Assistant OS](https://www.home-assistant.io/installation/)をインストールすることをお勧めします。公式のインストールガイドに従ってください。
+IoT Button は Home Assistant への接続方法を 2 つ提供しています。選択は、お持ちのハードウェアバージョンまたはお好みのプロトコルによって決まります。
 
-    :::tip Home Assistantのインストール
-    Seeed Studio製品向けにHome Assistantのインストール方法を記載したガイドもありますので、参考にしてください。
+- **IoT Button V1** には **ESPHome** ファームウェアがプリロードされています。**方法 1** に従ってください。
+- **IoT Button V2** には **Zigbee** ファームウェアがプリロードされています。**方法 2** に従ってください。
 
-    - [ODYSSEY-X86でのHome Assistantの使い方](/ja/ODYSSEY-X86-Home-Assistant)
-    - [reTerminalでのHome Assistantの使い方](/ja/reTerminal_Home_Assistant)
-    - [LinkStar H68K/reRouter CM4でのHome Assistantの使い方](/ja/h68k-ha-esphome)
-    :::
+上級ユーザーの場合、どちらのハードウェアバージョンにもどちらのファームウェアもフラッシュできます。詳細については「高度な使用方法」セクションをご覧ください。
 
-    また、以下のボタンをクリックして、Home Assistant GreenまたはHome Assistant Yellowを購入し、直接使用することもできます。
+---
 
-    <div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"3"}>Home Assistant Green</font></span></strong>
-        </a>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-selectable-CM4-p-5680.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"3"}>Home Assistant Yellow</font></span></strong>
-        </a>
-    </div><br />
+### 方法 1: ESPHome（Wi-Fi）統合
 
-2. **ESPHomeアドオンの有効化**:
-   - Home Assistantのダッシュボードにアクセスします。
-   - 「アドオン」セクションに移動し、ESPHomeアドオンを検索します。
-   - 「インストール」をクリックし、その後「開始」をクリックして有効化します。
+この方法は **V1 ハードウェア**のデフォルトで、IoT Button を Wi-Fi 経由で Home Assistant に接続したいユーザー向けです。
+
+#### 1. Home Assistant のセットアップ
+
+最適なパフォーマンスのため、Raspberry Pi や Home Assistant Green などのデバイスに [Home Assistant OS](https://www.home-assistant.io/installation/) をインストールすることをお勧めします。
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"3"}>Home Assistant Green を購入</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-selectable-CM4-p-5680.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"3"}>Home Assistant Yellow を購入</font></span></strong>
+    </a>
+</div><br />
+
+Home Assistant が動作したら、アドオンストアから **ESPHome アドオン**がインストールされ、開始されていることを確認してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/5.png" style={{width:1000, height:'auto'}}/></div>
 
-必要なコンポーネントを揃え、ESPHomeアドオンを使用してHome Assistantを設定することで、IoTボタンの統合を進める準備が整います。
+#### 2. ESPHome ファームウェアのフラッシュ/更新（必要に応じて）
 
-### ステップ3: キットの準備
-
-デフォルトでは、デバイスにはIoTボタン用のファームウェアがプリフラッシュされています。ただし、以下の2つのシナリオではファームウェアを更新する必要があります：
-
-1. **ファームウェアの再フラッシュ**: 既存のファームウェアが破損している場合や、新たに開始する必要がある場合。
-2. **ファームウェアのアップグレード**: 機能が改善された新しいバージョンのファームウェアがある場合。
-
-ファームウェアをフラッシュするには、以下の2つの簡単な方法があります：
+デバイスはプリフラッシュされています。[最新のファームウェアバージョン](https://github.com/Seeed-Studio/xiao-esphome-projects/releases)に更新したい場合や、既存のファームウェアが破損している場合にのみ、この手順を実行する必要があります。
 
 <Tabs>
-<TabItem value='Web Tool'>
+<TabItem value='Web Tool' label='Web ツール'>
 
-この[Web Tool](https://seeed-projects.github.io/Seeed_IoT_Button/)を使用すると、簡単かつ直接的にファームウェアをフラッシュできます。画面上の指示に従うだけです。
+最も簡単な方法は、[**XIAO ESPHome Projects Firmware Flasher**](https://gadgets.seeed.cc/) を使用することです。
 
-- 接続を開始するには、`CONNECT`ボタンをクリックしてください。このツールは自動的にファームウェアを更新します。
-
-問題が発生した場合は、画面上のトラブルシューティング手順に従うか、`ESPHome Web`の方法に切り替えてプロセスを完了してください。
+1. USB ケーブルで IoT Button をコンピューターに接続します。
+2. フラッシャーページで「Seeed Studio IoT Button」を見つけ、**INSTALL** をクリックします。
+3. ポップアップダイアログから正しい COM ポートを選択します。
+4. ブラウザが自動的に最新の ESPHome ファームウェアをダウンロードし、デバイスにフラッシュします。
 
 </TabItem>
-<TabItem value='ESPHome Web'>
+<TabItem value='ESPHome Web' label='ESPHome Web'>
 
-この方法では、[こちら](https://github.com/limengdu/MR60FDA2_ESPHome_external_components/releases)から`bin`ファームウェアファイルをダウンロードする必要があります（ダウンロードしたファイルを解凍してください）。
+または、公式の [ESPHome Web](https://web.esphome.io/) ツールを使用することもできます。
 
-1. IoTボタンをPCに接続します。
-2. [ESPHome Web](https://web.esphome.io/)ページにアクセスします。
-3. `*.factory.bin`というサフィックスが付いたファームウェアファイルを選択します。
-
-以下の動画で、ESPHome Webを使用したファームウェアフラッシュの詳細な手順をご覧ください：
-
-<div class="video-container">
-<iframe class="youtube-video-r" src="https://www.youtube.com/embed/J3AVeZCoLK8?si=1AeNTsdmbTvMl0Nq" title="ESPHome Webを使用したファームウェアのインストール" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+1. [GitHub Releases ページ](https://github.com/Seeed-Studio/xiao-esphome-projects/releases)から最新の `*.factory.bin` ファームウェアファイルをダウンロードします。
+2. IoT Button を PC に接続します。
+3. [ESPHome Web](https://web.esphome.io/) ページにアクセスし、**CONNECT** をクリックして正しい COM ポートを選択します。
+4. **INSTALL** をクリックし、ダウンロードした `.bin` ファイルを選択します。
 
 </TabItem>
 </Tabs>
 
-どちらの方法でも、ファームウェアが更新され、Home Assistantとの統合の準備が整います。
+#### 3. Wi-Fi と Home Assistant への接続
 
-#### キットのホットスポットに接続する
-
-ファームウェアを使用してIoTボタンの電源を入れると、`seeedstudio-iot-button`というWi-Fiアクセスポイントが表示されます。
-
-`192.168.4.1`にアクセスして、Home Assistantサーバーのローカルネットワーク設定を構成してください。
+1. フラッシュ後、IoT Button は `seeedstudio-iot-button` という名前の Wi-Fi アクセスポイントを作成します。
+2. スマートフォンまたはコンピューターからこの Wi-Fi ネットワークに接続します。
+3. キャプティブポータルが自動的に開くはずです。開かない場合は、ブラウザで `192.168.4.1` にアクセスしてください。
+4. ホーム Wi-Fi ネットワーク（SSID）を選択し、パスワードを入力します。ボタンがネットワークに接続されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2/opt-for-wifi-ap.jpg" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2/ha-enter-psw.jpg" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
+#### 4. Home Assistant でのデバイス追加
 
-### ステップ4: Home Assistantでデバイスを検出して追加する {#discovering-and-adding-the-device-in-home-assistant}
+IoT Button が Home Assistant サーバーと同じネットワークに接続されると、自動的に検出されるはずです。
 
-このセクションでは、Home Assistantアプリを使用したプロセスを説明します。このロジックはWeb版と同じです。
+1. **Settings > Devices & Services** に移動します。
+2. "Discovered" セクションで、`Seeed Studio IoT Button` が表示されるはずです。
+3. **CONFIGURE** をクリックし、次に **SUBMIT** をクリックして、デバイスをエリア（例：Living Room）に割り当てます。
 
-1. **アプリを開く**: アプリを起動したら、Home Assistantサーバーを選択します。アプリは自動的にサーバーを検出します。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/18.png" style={{width:1000, height:'auto'}}/></div>
 
-  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-server-option.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
+#### 5. ESPHome での自動化作成
 
-2. **アカウントを作成する**: アカウントをまだ作成していない場合は、作成する必要があります。その後、資格情報を使用してログインしてください。
+ESPHome ファームウェアは、異なるプレスパターンを個別のスイッチとして公開します。
 
-  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-login.JPG" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
+1. **Settings > Automations & Scenes** に移動し、**CREATE AUTOMATION** をクリックします。
+2. **Trigger** で `Device` を選択し、IoT Button を選択します。
+3. リストからトリガータイプを選択します：
+    - `Single-press action`
+    - `Double-press action`
+    - `Long-press action`
+4. **Action** で、制御したいデバイスまたはサービス（例：`light.toggle`）を選択します。
+5. 自動化を保存します。
 
-3. **統合ページに移動する**: ログイン後、Home Assistantの「統合」ページに移動します。ESPHomeアドオンをインストールしており、IoTボタンとHome Assistantサーバーが同じネットワーク上にある場合、`Seeed Studio IoT Button`というデバイスが検出されたデバイスとして表示されます。
+---
 
-4. **デバイスを追加する**: デバイスをHome Assistantのセットアップに追加するにはクリックします。
+### 方法 2: Zigbee 統合
 
-  `CONFIGURE`ボタンをクリックし、`SUBMIT`ボタンを押して確認し、デバイスを希望のエリア（例：リビングルーム）に割り当てます。その後、このデバイスはESPHome統合を通じて管理され、Home Assistantで完全な制御と監視が可能になります。
+この方法は **V2 ハードウェア**のデフォルトで、IoT Button を Zigbee メッシュネットワークに接続したいユーザー向けです。
 
-  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/18.png" style={{width:1000, height:'auto'}}/></div>
+#### 1. Home Assistant での Zigbee セットアップ
 
-  :::note
-  セットアッププロセス中にエリアを割り当てる必要がない場合は、後でHome Assistantの「統合」セクションに移動し、デバイスを選択してエリアを手動で設定できます。
-  :::
+ペアリング前に、Home Assistant インスタンスに接続された Zigbee コーディネーターが必要です。
 
-## IoTボタンを使用したオートメーションの作成
+1. **Zigbee コーディネーターのインストール**: [Home Assistant SkyConnect](https://www.seeedstudio.com/Home-Assistant-SkyConnect-p-5479.html) などのコーディネーターをサーバーに接続します。
+2. **Zigbee Home Automation（ZHA）のセットアップ**:
+    - **Settings > Devices & Services** に移動します。
+    - **Add Integration** をクリックし、**Zigbee Home Automation** を検索します。
+    - プロンプトに従って、コーディネーターで ZHA をセットアップします。
 
-IoTボタンのセットアップが完了したら、スマートホーム内のデバイスを制御するためのオートメーションを作成できます。ここでは、ボタンを押すとライトが点灯するシンプルなオートメーションを作成してみましょう。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/5.png" style={{width:1000, height:'auto'}}/></div>
 
-1. Home Assistantで、**設定** > **オートメーションとシーン** に移動します。
+#### 2. IoT Button と Home Assistant のペアリング
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/21.png" style={{width:1000, height:'auto'}}/></div>
+1. Home Assistant で、**Zigbee Home Automation** 統合ページに移動します。
+2. **Add Device** をクリックして、コーディネーターをペアリングモードにします。
 
-2. **オートメーションを作成** をクリックします。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/15.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/22.png" style={{width:1000, height:'auto'}}/></div>
+3. IoT Button のボタンを一度押して、デバイスを起動しペアリングを開始します。
+    - ペアリングしない場合、デバイスがスリープ状態になっている可能性があります。再度押してください。
+    - 強制的にペアリングするには、ボタンを **5 秒以上**長押しします。これにより工場出荷時リセットがトリガーされ、デバイスが直接ペアリングモードに入ります。RGB LED が点滅して確認されます。
+4. Home Assistant は **Seeed Studio IoT_Button** としてデバイスを検出するはずです。
+5. デバイスは複数のエンティティとして表示されます：リアルタイム状態用のバイナリセンサーと、異なるクリックアクション用の複数のスイッチ。
 
-3. オートメーションを設定します：
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/iot_button_zigbee/2.png" style={{width:1000, height:'auto'}}/></div>
 
-- **名前**: 「IoTボタン シングルプレス - ライトを点灯」など、わかりやすい名前を付けます。
-- **トリガー**: トリガータイプとして「状態」を選択
-   - エンティティ: 「Switch 1」（シングルプレス用）を選択
-   - From: 「off」
-   - To: 「on」
-- **アクション**: 制御したいデバイスを選択
-   - 例: ライトを選択し、点灯するように設定
+#### 3. Zigbee でオートメーションを作成
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/23.png" style={{width:1000, height:'auto'}}/></div>
+ペアリングが完了したら、ボタンのアクションに基づいてオートメーションを作成できます。
 
-4. **保存** をクリックしてオートメーションを作成します。
+1. **Settings > Automations & Scenes** に移動し、**CREATE AUTOMATION** をクリックします。
+2. **Trigger** で `Device` を選択し、IoT Button を見つけます。
+3. ZHA はクリックをデバイスアクションとして公開します。リストから希望するトリガーを選択します。例：
+    - `"remote_button_short_press"`
+    - `"remote_button_double_press"`
+    - `"remote_button_long_press"`
+4. 実行したい **Action** を設定します。
+5. オートメーションを保存します。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/24.png" style={{width:1000, height:'auto'}}/></div>
+**ダブルクリック**でライトを切り替える Home Assistant YAML のオートメーション例：
 
-## 高度な使用法: 異なる押下パターンで異なるデバイスを制御
+```yaml
+alias: IoT Button Double Click - Toggle Living Room Light
+description: ""
+trigger:
+  - platform: device
+    domain: zha
+    device_id: YOUR_DEVICE_ID_HERE # Replace with your button's device ID
+    type: "remote_button_double_press" # The exact type may vary, select it from the UI
+action:
+  - service: light.toggle
+    target:
+      entity_id: light.living_room
+mode: single
+```
 
-IoTボタンの設定の強力な機能の1つは、異なる押下パターンを検出できることです。以下は各パターンを活用するアイデアです：
+## 高度な使用法：ファームウェアの切り替え
 
-1. **シングルプレス（Switch 1）**:
-   - 現在の部屋のライトをオン/オフ
-   - よく使うデバイスをトグル
+IoT Button の主要な特徴の一つは、その柔軟性です。**V1 または V2 ハードウェアのいずれでも**、ESPHome と Zigbee ファームウェア間で切り替えることができます。
 
-2. **ダブルプレス（Switch 2）**:
-   - シーンをアクティブ化（例: 「ムービーナイト」でライトを暗くし、テレビをオン）
-   - 複数のデバイスを同時に制御
+- （推奨されません）**ESPHome に切り替える場合**：ボタンが Zigbee ファームウェアを実行していて Wi-Fi を使用したい場合は、**方法 1、ステップ 2** のフラッシュ手順に従って ESPHome ファームウェアをインストールするだけです。
 
-3. **長押し（Switch 3）**:
-   - セキュリティ機能をアクティブ化（アラームのオン/オフ）
-   - 緊急ルーチンをトリガー
-   - 複数のデバイスを一括でオフ
+- **Zigbee に切り替える場合**：ボタンが ESPHome を実行していて Zigbee ネットワークに参加したい場合は、[Arduino IDE を使用して Zigbee ファームウェア](https://wiki.seeedstudio.com/ja/seeed_iot_button_with_zigbee/)をコンパイルしてフラッシュする必要があります。フラッシュ後、**方法 2** のペアリング手順に従ってください。
 
-これらの高度なオートメーションを設定するには、上記の手順に従って追加のオートメーションを作成し、適切なスイッチ（Switch 1、2、または3）をトリガーとして選択し、希望するアクションを設定してください。
+## リソース
 
-## 技術サポートと製品に関するディスカッション
+- **[GITHUB]** [Seeed Studio IoT Button V2 Github リポジトリ](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-iot-button)
+- **[PCB 設計ファイル]** [Seeed Studio IoT Button V2 KiCad プロジェクト](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed%20IoT%20Button-C6%20v2.0_SCH&PCB_250721.zip)
+- **[回路図]** [Seeed Studio IoT Button V2 回路図](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed%20IoT%20Button-C6%20v2.0_SCH_250721.pdf)
 
-弊社の製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+
+## 技術サポート & 製品ディスカッション
+
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

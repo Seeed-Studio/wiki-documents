@@ -5,6 +5,7 @@ keywords:
 - oledディスプレイ
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/1-69inch_lcd_spi_display
+sku: 104990802
 last_update:
   date: 05/15/2025
   author: Citric

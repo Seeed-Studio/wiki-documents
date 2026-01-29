@@ -3,6 +3,7 @@ description: This article describes how to use the reTerminal E Series ePaper Di
 title: reTerminal E Series ePaper Display Works with TRMNL
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp
 slug: /reterminal_e10xx_trmnl
+sku: 100073581
 sidebar_position: 1
 last_update:
   date: 09/19/2025

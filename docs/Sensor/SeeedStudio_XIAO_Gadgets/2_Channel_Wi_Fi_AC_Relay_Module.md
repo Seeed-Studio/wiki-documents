@@ -4,6 +4,7 @@ description: |
   A smart device from Seeed Studio designed to control AC-powered appliances wirelessly
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/dual_smart_relay_module_for_xiao_45font.webp
 slug: /2_channel_wifi_ac_relay
+sku: 114993526
 keywords:
   - XIAO
   - Home Assistant

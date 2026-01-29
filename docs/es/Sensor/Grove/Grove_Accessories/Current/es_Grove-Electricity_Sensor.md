@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-Electricity_Sensor
+sku: 101020027
 last_update:
   date: 1/9/2023
   author: jianjing Huang

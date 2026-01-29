@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931
+sku: 101020580
 last_update:
   date: 05/15/2025
   author: jianjing Huang

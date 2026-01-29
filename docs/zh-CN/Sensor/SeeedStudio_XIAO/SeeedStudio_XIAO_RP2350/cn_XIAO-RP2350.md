@@ -4,6 +4,7 @@ description: |
   XIAO RP2350，来自 Seeed Studio 的尖端微控制器。它具有双核处理器、增加的 SRAM 和闪存以及增强的连接性。
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/RP2350-thumbnail.webp
 slug: /cn/getting-started-xiao-rp2350
+sku: 102010550,102010637
 keywords:
   - xiao
   - RP2350
@@ -31,18 +32,18 @@ import TabItem from '@theme/TabItem';
   </a>
 </div><br></br>
 
-XIAO RP2350 将 Raspberry Pi RP2350（双 Cortex-M33 内核，运行频率 150MHz，带 FPU，增强的安全性和加密功能）的强大功能封装在经典的 XIAO 外形尺寸中。尺寸仅为 21x17.8mm，它具有 19 个多功能 GPIO、一个 RGB LED 和一个电池管理系统，具有 50μA 的超低功耗、电池供电和直接电池电压测量功能。得益于 XIAO 生态系统，XIAO RP2350 兼容各种扩展模块，包括显示器、LED 矩阵、Grove 模块、CAN 总线、视觉 AI 传感器和毫米波传感器。凭借对 MicroPython、C 和 C++ 的原生支持，XIAO RP2350 非常适合各个级别的开发者创建紧凑的电池供电应用，用于智能控制、可穿戴设备、DIY 键盘等。
+XIAO RP2350 将 Raspberry Pi RP2350（双 Cortex-M33 内核，运行频率 150MHz，带 FPU，增强的安全性和加密功能）的强大功能封装在经典的 XIAO 外形尺寸中。尺寸仅为 21x17.8mm，具有 19 个多功能 GPIO、一个 RGB LED 和一个电池管理系统，超低功耗仅 50μA，支持电池供电和直接电池电压测量。得益于 XIAO 生态系统，XIAO RP2350 兼容各种扩展模块，包括显示器、LED 矩阵、Grove 模块、CAN 总线、视觉 AI 传感器和毫米波传感器。原生支持 MicroPython、C 和 C++，XIAO RP2350 非常适合各个水平的开发者创建紧凑的电池供电应用，用于智能控制、可穿戴设备、DIY 键盘等。
 
 ## 特性
 
-- **强大的 MCU 板**：配备 Raspberry Pi RP2350 芯片，具有对称双 Arm Cortex-M33 @ 150MHz 和 FPU。
-- **增强的安全特性**：内置安全启动和加密引导加载程序确保应用程序安全。
-- **软件支持**：兼容 C/C++ 和 MicroPython，确保轻松的项目开发和原型制作。
-- **丰富的板载资源**：集成 RGB LED、2MB 闪存、520kB SRAM 和 19 个多功能 GPIO（模拟、数字、I²C、UART、SPI、PWM）。
-- **扩展的 8 个新 IO**：与之前的 XIAO MCU 相比，背面增加的 8 个 IO 引脚支持更复杂的应用。
-- **高效的电源设计**：睡眠模式下仅 50μA 的超低功耗，支持电池供电。通过内部 IO 直接测量电池电压，增强电池管理系统（BMS）。
-- **紧凑的拇指大小设计**：尺寸为 21 x 17.8mm，采用 Seeed Studio 经典的 XIAO 外形尺寸，非常适合空间受限的应用。
-- **生产友好**：表面贴装器件（SMD）设计，所有组件都在正面，两侧有邮票孔，便于高效的批量生产。
+- **强大的 MCU 板：** 配备 Raspberry Pi RP2350 芯片，具有对称双 Arm Cortex-M33 @ 150MHz 和 FPU。
+- **增强的安全特性：** 内置安全启动和加密引导加载程序确保应用程序安全。
+- **软件支持：** 兼容 C/C++ 和 MicroPython，确保轻松的项目开发和原型制作。
+- **丰富的板载资源：** 集成 RGB LED、2MB 闪存、520kB SRAM 和 19 个多功能 GPIO（模拟、数字、I²C、UART、SPI、PWM）。
+- **扩展的 8 个新 IO：** 与之前的 XIAO MCU 相比，背面增加的 8 个 IO 引脚支持更复杂的应用。
+- **高效的电源设计：** 睡眠模式下超低功耗仅 50μA，支持电池供电。通过内部 IO 直接测量电池电压，增强电池管理系统（BMS）。
+- **紧凑的拇指大小设计：** 尺寸为 21 x 17.8mm，采用 Seeed Studio 经典的 XIAO 外形尺寸，非常适合空间受限的应用。
+- **生产友好：** 表面贴装器件（SMD）设计，所有组件位于正面，两侧有邮票孔，便于高效批量生产。
 
 ## 规格参数
 
@@ -78,8 +79,8 @@ XIAO RP2350 将 Raspberry Pi RP2350（双 Cortex-M33 内核，运行频率 150MH
     </tr>
     <tr>
         <td>接口</td>
-        <td>11 个引脚：4x 模拟、11x 数字、1x I²C、1x UART、1x SPI，全部 PWM</td>
-        <td><b>19 个引脚：3x 模拟、19x 数字、2x I²C、2x UART、2x SPI，全部 PWM</b></td>
+        <td>11 个引脚：4x 模拟、11x 数字、1x I²C、1x UART、1x SPI，全部支持 PWM</td>
+        <td><b>19 个引脚：3x 模拟、19x 数字、2x I²C、2x UART、2x SPI，全部支持 PWM</b></td>
     </tr>
     <tr>
         <td>按钮</td>
@@ -137,6 +138,39 @@ XIAO RP2350 将 Raspberry Pi RP2350（双 Cortex-M33 内核，运行频率 150MH
 
 需要更多引脚详细信息？请导航到下面的[资产和资源](#assets--resources)。
 
+
+## **引脚映射**
+| XIAO 引脚                 | 功能   | 芯片引脚     | 备用功能 | 描述                          |
+| :---------------------: | :-------: | :----------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS       |              |                    | 电源输入/输出                   |
+| GND                     |            |              |                    |                                      |
+| 3V3                     | 3V3_OUT    |              |                    | 电源输出                         |
+| D0                      | 模拟     | GPIO26       |                    | GPIO、ADC                            |
+| D1                      | 模拟     | GPIO27       |                    | GPIO、ADC                            |
+| D2                      | 模拟     | GPIO28       |                    | GPIO、ADC                            |
+| D3                      | SPIO_CSn   | GPIO5        |                    | GPIO、SPI                            |
+| D4                      | SDA1       | GPIO6        |                    | GPIO、I2C 数据                       |
+| D5                      | SCL1       | GPIO7        |                    | GPIO、I2C 时钟                      |
+| D6                      | TX0        | GPIO0        |                    | GPIO、UART 发送                  |
+| D7                      | RX0        | GPIO1        |                    | GPIO、UART 接收                   |
+| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO、SPI 时钟                      |
+| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO、SPI 数据                       |
+| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO、SPI 数据                       |
+| D11                     | RX1        | GPIO21       |                    | GPIO、UART 接收                   |
+| D12                     | TX1        | GPIO20       |                    | GPIO、UART 发送                  |
+| D13                     | SCL0       | GPIO17       |                    | GPIO、I2C 时钟                      |
+| D14                     | SDA0       | GPIO16       |                    | GPIO、I2C 数据                       |
+| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO、SPI 数据                       |
+| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO、SPI 数据                       |
+| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO、SPI 时钟                      |
+| D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
+| ADC_BAT                 |            | GPIO29       |                    | 读取电池电压值           |
+| Reset                   |            | RUN          |                    | RUN                                  |
+| Boot                    |            | RP2040_BOOT  |                    | 进入启动模式                      |
+| CHARGE_LED              |            | NCHG         |                    | CHG-LED_红色                          |
+| RGB LED                 |            | GPIO22       |                    | RGB LED                              |
+| USER_LED                |            | GPIO25       |                    | 用户指示灯_黄色                    |
+
 ## 支持的平台
 
 XIAO RP2350 由 RP2350 驱动，支持 MicroPython 和 Raspberry Pi 提供的 C/C++ SDK。这种灵活性允许开发者为原型制作和开发选择他们首选的编程语言和环境。
@@ -161,11 +195,7 @@ XIAO RP2350 由 RP2350 驱动，支持 MicroPython 和 Raspberry Pi 提供的 C/
 ## 入门指南▶️
 
 :::info attention
-本页面主要面向 MicroPython 用户。对于有兴趣学习 SDK 编程或高级用户，您可能想从 [Raspberry Pi Pico 系列 C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) 开始。本指南将帮助您设置环境并开始使用示例代码。此外，您可以访问 [XIAO RP2350 与 C/C++ SDK](/cn/xiao-rp2350-c-cpp-sdk) 获取与 XIAO RP2350 相关的更具体说明。
-:::
-
-:::tip
-目前，使用官方[固件](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/SEEED_XIAO_RP2350.uf2)时，ADC 功能可能无法正常工作。请先下载并使用我们修改的固件。一旦拉取请求被合并，我们将相应地更新 Wiki 上的相关内容。
+本页面主要面向 MicroPython 用户。对于有兴趣学习 SDK 编程或高级用户，您可能希望从 [Raspberry Pi Pico 系列 C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) 开始。本指南将帮助您设置环境并开始使用示例代码。此外，您可以访问 [XIAO RP2350 与 C/C++ SDK](/cn/xiao-rp2350-c-cpp-sdk) 获取与 XIAO RP2350 相关的更具体说明。
 :::
 
 ### 步骤 1：在 XIAO RP2350 上安装 MicroPython
@@ -174,11 +204,13 @@ XIAO RP2350 由 RP2350 驱动，支持 MicroPython 和 Raspberry Pi 提供的 C/
 
 **步骤 1.1. 下载 MicroPython 固件：**  
 
-- 导航到 [MicroPython 下载](https://micropython.org/download/SEEED_XIAO_RP2350/) 页面。
+- 访问 [MicroPython Downloads](https://micropython.org/download/SEEED_XIAO_RP2350/) 页面。
 - 下载与 XIAO RP2350 兼容的最新 `.uf2` 固件文件。
 
 :::tip
-默认固件适用于 ARM 架构，如果您想使用 RISC-V，请使用链接中相应的固件版本。
+1. 默认固件适用于 ARM 架构，如果您想使用 RISC-V，请使用链接中相应的固件版本。
+
+2. 请确保您使用的是最新的固件版本，因为旧版固件可能包含各种软件漏洞。
 :::
 
 **步骤 1.2 进入 BOOTSEL 模式：**  
@@ -186,32 +218,32 @@ XIAO RP2350 由 RP2350 驱动，支持 MicroPython 和 Raspberry Pi 提供的 C/
 您可以使用以下两种方法之一在 XIAO RP2350 上进入 BOOTSEL 模式：
 
 <Tabs>
-<TabItem value="method1" label="方法 1：连接计算机之前" default>
+<TabItem value="method1" label="方法 1：连接电脑前" default>
 
 1. **按住 BOOT 按钮**：  
-   当您的 XIAO RP2350 与计算机断开连接时，**按住** BOOT 按钮。
-2. **连接到您的计算机**：  
-   在按住 BOOT 按钮的同时，使用 USB 电缆将 XIAO RP2350 连接到您的计算机。
-3. **释放 BOOT 按钮**：  
-   板子连接到计算机后，您可以释放 BOOT 按钮。XIAO RP2350 现在应该处于 BOOTSEL 模式，您的计算机将识别它为可移动存储设备。
+   当您的 XIAO RP2350 与电脑断开连接时，**按住** BOOT 按钮。
+2. **连接到您的电脑**：  
+   在按住 BOOT 按钮的同时，使用 USB 线将 XIAO RP2350 连接到您的电脑。
+3. **松开 BOOT 按钮**：  
+   在开发板连接到您的电脑后，您可以松开 BOOT 按钮。XIAO RP2350 现在应该处于 BOOTSEL 模式，您的电脑将识别它为可移动存储设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/>
-<div style={{ marginTop: '-8px' }}><em>按住 Boot-> 插入电缆-> 释放 Boot</em></div>
+<div style={{ marginTop: '-8px' }}><em>按住 Boot-> 插入线缆-> 松开 Boot</em></div>
 </div>
 
 </TabItem>
 
-<TabItem value="method2" label="方法 2：连接到计算机时">
+<TabItem value="method2" label="方法 2：连接电脑时">
 
 1. **按住 BOOT 按钮**：  
-   在 XIAO RP2350 已连接到计算机的情况下，按住 BOOT 按钮。
+   在 XIAO RP2350 已连接到您的电脑时，按住 BOOT 按钮。
 2. **点击 RESET 按钮**：  
-   在仍然按住 BOOT 按钮的同时，按下并释放 RESET 按钮，该按钮在上图中标记为"B"，位于板子的右下角。
-3. **释放 BOOT 按钮**：  
-   按下 RESET 按钮后，释放 BOOT 按钮。XIAO RP2350 现在应该处于 BOOTSEL 模式，您的计算机将识别它为可移动存储设备。
+   在仍然按住 BOOT 按钮的同时，按下并松开 RESET 按钮，该按钮在上图中开发板右下角标记为 "B"。
+3. **松开 BOOT 按钮**：  
+   按下 RESET 按钮后，松开 BOOT 按钮。XIAO RP2350 现在应该处于 BOOTSEL 模式，您的电脑将识别它为可移动存储设备。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/>
-<div style={{ marginTop: '-8px' }}><em>按住 Boot-> 点击 Reset-> 释放 Boot</em></div>
+<div style={{ marginTop: '-8px' }}><em>按住 Boot-> 点击 Reset-> 松开 Boot</em></div>
 </div>
 
 </TabItem>
@@ -219,28 +251,28 @@ XIAO RP2350 由 RP2350 驱动，支持 MicroPython 和 Raspberry Pi 提供的 C/
 
 **步骤 1.3. 安装固件：**  
 
-- **拖放**下载的 `.uf2` 文件到 XIAO RP2350 的可移动存储驱动器中。
-- 文件复制后，板子将自动重启，完成固件安装。
+- **拖拽** 下载的 `.uf2` 文件到 XIAO RP2350 的可移动存储驱动器中。
+- 文件复制完成后，开发板将自动重启，完成固件安装。
 
 ### 步骤 2：安装 Thonny IDE
 
-:::tip about MicroPython
+:::tip 关于 MicroPython
 
-[MicroPython](https://micropython.org/) 是一种类似于 [Python](https://www.python.org/) 的解释型语言。然而，与 Python 不同，MicroPython 直接在硬件上运行（裸机），提供交互式提示符（REPL）来立即执行命令，以及从内置文件系统运行和导入脚本的能力。
+[MicroPython](https://micropython.org/) 是一种类似于 [Python](https://www.python.org/) 的解释型语言。然而，与 Python 不同的是，MicroPython 直接在硬件上运行（裸机），提供交互式提示符（REPL）来立即执行命令，以及从内置文件系统运行和导入脚本的能力。
 
-要连接到 XIAO RP2350 开发板并开始编写和运行 Python 代码，您可以使用任何支持串行连接的终端工具，如 minicom、PuTTY、electerm、warp 等。为了获得更*用户友好的体验*，您可以使用 **[Thonny](https://thonny.org/)**，因为它易于使用、功能集成且界面对初学者友好。这样，您就可以享受直接在设备上编写和运行 Python 代码的乐趣。
+要连接到 XIAO RP2350 开发板并开始编写和运行您的 Python 代码，您可以使用任何支持串行连接的终端工具，如 minicom、PuTTY、electerm、warp 等。为了获得更*用户友好的体验*，您可以使用 **[Thonny](https://thonny.org/)**，因为它易于使用、功能集成且界面对初学者友好。这样，您就可以享受直接在设备上编写和运行 Python 代码的乐趣。
 
 :::
 
 Thonny IDE 是一个对初学者友好的 Python 编辑器，非常适合 MicroPython 开发。以下是安装方法：
 
 1. **下载 Thonny：**  
-   - 访问 [Thonny 下载页面](https://thonny.org/)。
+   - 访问 [Thonny Download Page](https://thonny.org/)。
    - 选择适合您操作系统（Windows、macOS 或 Linux）的安装程序并下载。
 
 2. **安装 Thonny：**  
-   - **运行**下载的安装程序。
-   - **按照**屏幕上的说明完成安装过程。
+   - **运行** 下载的安装程序。
+   - **按照** 屏幕上的说明完成安装过程。
 
 3. **为 MicroPython 配置 Thonny：**  
    - **打开** Thonny IDE。
@@ -264,15 +296,15 @@ Thonny IDE 是一个对初学者友好的 Python 编辑器，非常适合 MicroP
   </TabItem>
 </Tabs>
 
-如果您的设备已经准备好使用 MicroPython，让我们从一个简单的项目开始：
+如果您的设备已准备好使用 MicroPython，让我们从一个简单的项目开始：
 
 ### 让它闪烁起来！ ✨
 
 让开发板闪烁 LED 通常是每个人运行的第一个程序。XIAO RP2350 也是如此。
 
 :::note
-根据原理图，XIAO RP2350 上的黄色 LED `USER LED` 连接到 `GPIO25/D19`。
-对于所有 XIAO 系列开发板，`USER LED` 在设置为`低电平`时会**点亮**，在设置为`高电平`时会**熄灭**。
+根据原理图，XIAO RP2350 上的 `USER LED`（黄色 LED）连接到 `GPIO25/D19`。
+对于所有 XIAO 系列开发板，`USER LED` 在设置为 `低电平` 时会**点亮**，在设置为 `高电平` 时会**熄灭**。
 :::
 
 <Tabs>
@@ -348,7 +380,7 @@ for _ in range(8 * 256):
 
 ### 玩转 RGB LED
 
-XIAO RP2350 配备了内置的 RGB LED，您可以使用 MicroPython 来控制它。以下是如何循环显示不同颜色的示例：
+XIAO RP2350 配备了内置 RGB LED，您可以使用 MicroPython 控制它。以下是如何循环显示不同颜色的示例：
 
 ```python showLineNumbers
 import array, time, random
@@ -426,11 +458,11 @@ while True:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/rp2350-mpy-rgb-led.gif" style={{width:240, height:'auto', "border-radius": '12.8px'}}/></div>
 
-### 电池和电源管理
+### 电池与电源管理
 
-是否可以在不使用额外组件的情况下读取电池电压？是的，使用 XIAO RP2350，这比以往任何时候都更容易。在之前的 XIAO 系列成员中，如 [XIAO ESP32C3](/cn/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，读取电池电压需要手动连接到 *A0* 并使用电阻。
+是否可以在不使用额外组件的情况下读取电池电压？是的，使用 XIAO RP2350，这比以往任何时候都更容易。在之前的 XIAO 系列成员中，例如 [XIAO ESP32C3](/cn/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)，读取电池电压需要手动连接到 *A0* 并使用电阻。
 
-但是使用 XIAO RP2350，这个过程得到了简化。您现在可以直接使用 `A3/GPIO29` 引脚来读取电池电压水平，简化了您的设计和开发。只需记住将 `GPIO19` 引脚设置为高电平，因为这是启用电池电量读取所必需的。
+但是使用 XIAO RP2350，这个过程得到了简化。您现在可以直接使用 `A3/GPIO29` 引脚来读取电池电压水平，简化您的设计和开发。只需记住将 `GPIO19` 引脚设置为高电平，因为这是启用电池电量读取所必需的。
 
 按照这个代码片段使用 Pico SDK 读取电池电压：
 
@@ -510,7 +542,7 @@ int main() {
 
 ## 资源与资料
 
-XIAO RP2350 利用 Raspberry Pi RP2350 的强大功能，充分利用 Raspberry Pi 社区的丰富共享资源。这为您在这块小巧的开发板上定制项目开启了无限创意的可能性。以下是帮助您入门的重要资源和资料。
+XIAO RP2350 利用了 Raspberry Pi RP2350 的强大功能，充分利用了 Raspberry Pi 社区的丰富共享资源。这为您在这块小板上定制项目开启了无限创意的可能性。以下是帮助您入门的重要资源和资料。
 
 ***数据手册和原理图***
 
@@ -537,22 +569,22 @@ XIAO RP2350 利用 Raspberry Pi RP2350 的强大功能，充分利用 Raspberry 
 作为 XIAO 家族的一员，XIAO RP2350 也是如此。当然，为了更好地利用引出的额外引脚，新的*外设和开发板*将不断推出，充分利用其创造的性能。
 
 - 🌟 **[配件扩展](/cn/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)**  
-  探索与 XIAO 家族兼容的各种附加组件和模块，从显示器和 LED 矩阵到 Grove 模块和传感器，了解它们如何增强您的项目。
+  探索与 XIAO 系列兼容的各种附加组件和模块，从显示器和 LED 矩阵到 Grove 模块和传感器，了解它们如何增强您的项目。
 
 ### 社区和学习
 
-此外，深入充满活力的 Raspberry Pi 社区，扩展您的知识并发现新的项目想法。利用社区共享的资源、论坛和教程来增强您使用 XIAO RP2350 的体验。除了 Seeed Studio Wiki，以下是一些其他推荐的学习场所：
+此外，深入活跃的 Raspberry Pi 社区，扩展您的知识并发现新的项目想法。利用社区共享的资源、论坛和教程来增强您使用 XIAO RP2350 的体验。除了 Seeed Studio Wiki 之外，这里还有一些其他推荐的学习地方：
 
 - **[Raspberry Pi 文档](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)**：获取关于 RP2350 的可靠和最新信息。
 - **[Raspberry Pi 论坛](https://www.raspberrypi.org/forums/)**：与其他爱好者互动，提问并分享您的项目。
-- **[XIAO GitHub 仓库](https://github.com/Seeed-Studio/OSHW-XIAO-Series)**：探索官方 XIAO 仓库，获取更集中的文档并与我们的团队进行更多互动，**加入我们！**
+- **[XIAO GitHub 仓库](https://github.com/Seeed-Studio/OSHW-XIAO-Series)**：探索官方 XIAO 仓库，获取更多集中的文档并与我们的团队进行更多互动，**加入我们！**
 - **[Reddit 上的 r/embedded](https://www.reddit.com/r/embedded/)**：加入嵌入式系统社区，分享见解并讨论各种话题。
 - **[GitHub 上的 Pico 话题](https://github.com/topics/pico)**：探索与 Pico 相关的仓库和讨论。
 - **[Hackster.io](https://www.hackster.io/)**：发现与各种硬件平台相关的项目和教程，包括 XIAO 和 Raspberry Pi。
-- **[Instructables](https://www.instructables.com/)**：查找使用 XIAO 和其他硬件创作的 DIY 项目和分步指南。
+- **[Instructables](https://www.instructables.com/)**：查找使用 XIAO 和其他硬件创建的 DIY 项目和分步指南。
 - **[Element14 社区](https://www.element14.com/community/)**：参与与电子和嵌入式系统相关的讨论、网络研讨会和项目。
 
-更多内容，我们始终欢迎您在我们的 [Seeed Studio Discord](https://discord.com/invite/kpY74apCWj) 和 [Seeed Studio 论坛](https://forum.seeedstudio.com/)上分享您的项目。这些平台为您提供了与其他创客联系、获得反馈和寻找灵感的绝佳机会。无论您需要帮助解决问题、想要展示您的最新作品，还是只是希望成为支持性社区的一部分，*Seeed Studio 的 Discord 和论坛*都是参与和协作的完美场所。
+更多的是，我们始终欢迎您在我们的 [Seeed Studio Discord](https://discord.com/invite/kpY74apCWj) 和 [Seeed Studio 论坛](https://forum.seeedstudio.com/)上分享您的项目。这些平台为您提供了与其他创客联系、获得反馈和寻找灵感的绝佳机会。无论您需要帮助解决问题、想要展示您的最新作品，还是只是希望成为支持性社区的一部分，*Seeed Studio 的 Discord 和论坛*都是参与和协作的完美场所。
 
 ## 技术支持与产品讨论
 

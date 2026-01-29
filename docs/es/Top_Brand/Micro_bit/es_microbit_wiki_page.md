@@ -7,6 +7,7 @@ keywords:
   - micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/microbit_wiki_page
+sku: 103100063, 103030195, 102991003, 110060762, 102990863
 last_update:
   date: 01/10/2023  
   author: Eico 

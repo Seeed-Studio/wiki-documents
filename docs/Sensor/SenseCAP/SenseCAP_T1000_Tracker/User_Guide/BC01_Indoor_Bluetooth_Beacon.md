@@ -6,6 +6,7 @@ keywords:
 - Positioning
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/BC01_Indoor_Bluetooth_Beacon.webp
 slug: /bluetooth_beacon_for_SenseCAP_Traker
+sku: E2025081201,E2025081501
 last_update:
   date: 05/29/2025
   author: Zeke

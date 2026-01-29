@@ -3,6 +3,7 @@ description: Este artículo describe cómo usar la pantalla ePaper de la serie r
 title: La pantalla ePaper de la serie reTerminal E funciona con TRMNL
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp
 slug: /es/reterminal_e10xx_trmnl
+sku: 100073581
 sidebar_position: 1
 last_update:
   date: 09/19/2025

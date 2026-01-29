@@ -7,6 +7,7 @@ keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/xiao_respeaker
+sku: 110061601
 last_update:
   date: 05/15/2025
   author: Jessie

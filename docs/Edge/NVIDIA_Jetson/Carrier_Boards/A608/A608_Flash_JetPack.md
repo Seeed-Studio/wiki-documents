@@ -6,6 +6,7 @@ keywords:
   - reComputer
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.webp
 slug: /reComputer_A608_Flash_System
+sku: 105110001
 last_update:
   date: 12/4/2024
   author: Youjiang

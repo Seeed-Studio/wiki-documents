@@ -10,7 +10,7 @@ slug: /es/setting_ai_with_a1102
 sidebar_position: 2
 # sidebar_class_name: hidden
 last_update:
-  date: 11/26/2025
+  date: 12/31/2025
   author: Twelve
 ---
 
@@ -43,7 +43,7 @@ Antes de comenzar, asegúrate de tener:
 ### Encender la cámara Vision AI
 
 :::tip
-Si necesitas modificar la configuración de la cámara AI, debes seguir los pasos a continuación para encender la cámara AI.
+Si necesitas modificar la configuración de la cámara de IA, debes seguir los pasos a continuación para encender la cámara de IA.
 
 Si solo necesitas modificar configuraciones relacionadas con la transmisión LoRaWAN, puedes omitir esta sección.
 :::
@@ -78,18 +78,22 @@ Navega a opciones de configuración adicionales haciendo clic en **Advanced Sett
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/2.png" style={{width:400, height:'auto'}}/></div>
 
-## **Despliegue de un Modelo de IA**
+Selecciona las opciones del A1102 haciendo clic en **AI Camera** nuevamente.
 
-### **Selección de un Modelo de IA**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/picture10.png" style={{width:400, height:'auto'}}/></div>
 
-Desde el menú de configuraciones, selecciona tu modelo de IA deseado para despliegue. Elige entre modelos pre-cargados o sube un modelo personalizado.
+## **Desplegando un Modelo de IA**
+
+### **Seleccionando un Modelo de IA**
+
+Desde el menú de configuraciones, selecciona tu modelo de IA deseado para despliegue. Elige entre modelos precargados o sube un modelo personalizado.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/3.png" style={{width:400, height:'auto'}}/></div>
 
-### **Configuración de Parámetros del Modelo**
+### **Configurando Parámetros del Modelo**
 
 :::warning note
-Si necesitas modificar la configuración de la cámara AI, debes seguir los pasos para encender la cámara AI.  
+Si necesitas modificar la configuración de la cámara de IA, debes seguir los pasos para encender la cámara de IA.  
 Por favor consulta [Encender la cámara Vision AI](#encender-la-cámara-vision-ai).
 :::
 
@@ -100,7 +104,7 @@ Configura parámetros como:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/5.png" style={{width:400, height:'auto'}}/></div>
 
-## **Prueba y Ejecución del Modelo**
+## **Probando y Ejecutando el Modelo**
 
 ### **Vista Previa de Captura de Cámara**
 
@@ -124,7 +128,7 @@ Ve los datos de reconocimiento y registros. Por ejemplo, establece un intervalo 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/SenseCraft_APP/11.jpg" style={{width:400, height:'auto'}}/></div>
 
-### **Acceso a la Tarjeta SD**
+### **Accediendo a la Tarjeta SD**
 
 Localiza la ranura en la unidad A1102 e inserta suavemente un destornillador. Aplica un poco de fuerza para abrirla.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/8.jpg" style={{width:400, height:'auto'}}/></div>
@@ -148,28 +152,30 @@ Equipado con 8GB de memoria, el A1102 es capaz de guardar automáticamente imág
 ### Problemas Comunes
 
 1. **Dos métodos para configurar modelos de IA**
-  - Usar la APP SenseCraft para configurar los modelos integrados de la cámara AI
-    - Conectar al puerto ESP32 inferior, que se usa para proporcionar energía al dispositivo.
-  - [Usar el sitio web SenseCraft AI](https://sensecraft.seeed.cc/ai) para configurar modelos de IA que no están pre-cargados de fábrica
-    - Conectar al puerto Himax superior, que se usa para flashear el modelo al chip Himax.
+  - Usando la APP SenseCraft para configurar los modelos integrados de la cámara de IA
+    - Conecta al puerto ESP32 inferior, que se usa para proporcionar energía al dispositivo.
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/power_up_camera.png" style={{width:400, height:'auto'}}/></div>
+  - [Usando el sitio web SenseCraft AI](https://sensecraft.seeed.cc/ai) para configurar modelos de IA que no están precargados de fábrica
+    - Conecta al puerto Himax superior, que se usa para flashear el modelo al chip Himax.
+  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/modified/picture3.png" style={{width:300, height:'auto'}}/></div>
 
-2. **La cámara AI está conectada pero la app muestra que no lo está**
+2. **La cámara de IA está conectada pero la app muestra que no lo está**
   - verifica el estado del datalogger y asegúrate de configurarlo primero en Settings antes de regresar a Information.
-  - explicación: Para ahorrar energía, el datalogger solo suministra energía a la cámara AI cuando entra a la página Settings.
+  - explicación: Para ahorrar energía, el datalogger solo suministra energía a la cámara de IA cuando entra a la página de Settings.
 
 3. **Luz respiratoria vs. luz parpadeante**
   - Un efecto de luz respiratoria indica que el dispositivo está **buscando una red**.
   - Una luz parpadeante indica que el dispositivo ha entrado al **modo de configuración Bluetooth**.
   - Si el dispositivo está en modo de luz respiratoria, presiona el botón una vez para cambiar a la luz roja, luego mantén presionado el botón para entrar al **modo de configuración Bluetooth** (luz parpadeante).
 
-4. **La cámara AI se enciende exitosamente, pero no puede ser encontrada vía configuración Bluetooth de la APP**
-  - Cuando la cámara AI está encendida, pero:
+4. **La cámara de IA se enciende exitosamente, pero no puede ser encontrada vía configuración Bluetooth de la APP**
+  - Cuando la cámara de IA está encendida, pero:
     - La APP SenseCraft no puede buscar el dispositivo.
     - Intenta buscar **Vision AI V2**, y aún no detecta el dispositivo. 
   - Esto indica que el **firmware del ESP32 puede no estar funcionando correctamente** (el ESP32 es responsable de la transmisión Bluetooth).
   - **Solución:**  
     - Conecta el cable al **puerto ESP32** y abre un monitor serial para verificar si el ESP32 está funcionando normalmente.  
-    - Si aparecen registros anormales o errores de arranque, contacta soporte técnico para instrucciones sobre **re-flashear el firmware del ESP32**.
+    - Si aparecen registros anormales o errores de arranque, contacta al soporte técnico para instrucciones sobre **re-flashear el firmware del ESP32**.
 
 ## **Soporte Técnico y Discusión de Productos**
 

@@ -5,6 +5,7 @@ keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/8-Channel_12-Bit_ADC_for_Raspberry_Pi-STM32F030
+sku: 103030280
 last_update:
   date: 1/11/2023
   author: jianjing Huang

@@ -3,6 +3,7 @@ description: 'This page is the navigation page for the XIAO 7.5" epaper panel.'
 title: Getting Started with XIAO 7.5" ePaper Panel
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.webp
 slug: /xiao_075inch_epaper_panel
+sku: 114993635
 sidebar_position: 1
 last_update:
   date: 05/19/2025

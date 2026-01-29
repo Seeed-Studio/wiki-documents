@@ -7,6 +7,7 @@ keywords:
   - reComputer JetPack™_OS_Installation
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/reComputer_J2021_J202_Flash_Jetpack
+sku: 102991695, 102991714, 110061402, 110061481
 last_update:
   date: 08/27/2024
   author: Youjiang

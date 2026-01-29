@@ -6,6 +6,7 @@ keywords:
   - Docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Speech_Recognizer/
 slug: /ja/Grove-Speech_Recognizer
+sku: 101020232
 last_update:
   date: 05/15/2025
   author: gunengyu

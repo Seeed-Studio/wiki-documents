@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Dry-Reed_Relay/
 slug: /ja/Grove-Dry-Reed_Relay
+sku: 103020014
 last_update:
   date: 05/15/2025
   author: gunengyu

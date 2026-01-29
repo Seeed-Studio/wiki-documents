@@ -7,6 +7,7 @@ keywords:
   - Gimbal
 image: https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.webp
 slug: /ja/recamera_gimbal_getting_started
+sku: 108990119,108990120,E20245041001
 sidebar_position: 1
 last_update:
   date: 04/09/2025

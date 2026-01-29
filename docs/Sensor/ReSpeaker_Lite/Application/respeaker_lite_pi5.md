@@ -7,6 +7,7 @@ keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_lite_pi5
+sku: E2024082601
 last_update:
   date: 8/12/2024
   author: ShuishengPeng

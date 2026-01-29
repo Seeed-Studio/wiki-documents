@@ -5,6 +5,7 @@ keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Arch_GPRS_V2
+sku: 113010001
 last_update:
   date: 05/15/2025
   author: hushuxu

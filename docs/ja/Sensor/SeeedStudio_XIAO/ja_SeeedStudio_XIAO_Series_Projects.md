@@ -218,7 +218,7 @@ last_update:
  <table align="center">
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/" target="_blank">入門ガイドWiki</a></th>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/ja/xiao_pin_multiplexing_esp33c6/" target="_blank">ピン使用方法</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/ja/xiao_pin_multiplexing_esp32c6/" target="_blank">ピン使用方法</a></th>
             <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/ja/xiao_wifi_usage_esp32c6/" target="_blank">Wi-Fi使用方法</a></th>
   </tr>
   <tr>

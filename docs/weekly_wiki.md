@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 12/29/2025
+  date: 01/26/2026
   author: Frank
 ---
 
@@ -17,74 +17,97 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is December 29th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is January 26th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Deploy Live VLM WebUI on reComputer Jetson](https://wiki.seeedstudio.com/deploy_live_vlm_webui_on_jetson/)
+### [Deploy local voice LLM on reComputer Mini for Reachy Mini](https://wiki.seeedstudio.com/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/)
 
 <div class="video-container">
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/GrdIRkmiXUc" title="Deploy Live LLM WebUI on reComputer Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="801" height="450" src="https://www.youtube.com/embed/broyI7PLm_g" title="Double Mini! Deploy local voice LLM on reComputer Mini for Reachy Mini!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 <div style={{ textAlign: "justify" }}>
 
-Live VLM WebUI is a universal web interface for real-time Vision Language Model interaction and benchmarking. It can stream your webcam to any VLM and get live AI-powered analysis - perfect for testing models, benchmarking performance, and exploring vision AI capabilities across multiple domains and hardware platforms. This wiki will show you how to deploy Live VLM WebUI on the reComputer Super J4012.
+Double Mini! This project will build a fully localized, low-latency, and high-privacy voice interactive robotic assistant system. Centered around the reComputer Mini J501 edge computing device, it deploys local speech recognition, large language model, and speech synthesis services. Using the open-source robotic platform Reachy Mini as the physical terminal for human-computer interaction, it achieves an embodied intelligent interactive experience that is perceptive, conversational, and actionable.
 
 </div>
 
-### [Seeed Studio XIAO MG24 Sense With MicroPython](https://wiki.seeedstudio.com/xiao_mg24_sense_micropython/)
+### [Deploy NVBlox with Orbbec Camera on Jetson AGX Orin](https://wiki.seeedstudio.com/deploy_nvblox_jetson_agx_orin/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mpy_6_1.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_nvblox/isaac_sim_nvblox_humans.gif" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document guides you through using MicroPython on the Seeed Studio XIAO MG24 Sense development board, covering hardware preparation, installing and configuring the Thonny IDE, flashing the MicroPython firmware, and running example programs such as LED blinking, PWM control, ADC readings, and UART communication, to help you quickly get started programming this compact board with built-in sensors and rich I/O support using MicroPython.
+[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) is a high-performance GPU-accelerated 3D mapping framework developed by NVIDIA for real-time robotic perception. Unlike monocular depth estimation models, NVBlox consumes true depth input from RGB-D cameras or stereo cameras to construct accurate 3D scene representations. This wiki demonstrates how to deploy Isaac ROS NVBlox on **Jetson AGX Orin** with **ROS 2** integration, using an **Orbbec RGB-D camera** and a mobile robot platform to achieve a fully on-device perception and navigation pipeline.
 
 </div>
 
-### [Seeed Studio XIAO RA4M1 With MicroPython](https://wiki.seeedstudio.com/xiao_ra4m1_micropython/)
+### [Deploy Whisper on Raspberry Pi AI box](https://wiki.seeedstudio.com/deploy_whisper_on_raspberry_pi_ai_box/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/debug_1_1.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/openai/whisper/main/approach.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document guides you through using MicroPython on the Seeed Studio XIAO RA4M1 development board, covering hardware preparation, installing and configuring the Thonny IDE, flashing the MicroPython firmware, and running example programs such as LED blinking, PWM control, ADC readings, and UART communication, to help you quickly get started programming this compact ARM Cortex-M4 board with MicroPython.
+[Whisper](https://github.com/openai/whisper) is a versatile, state-of-the-art Automatic Speech Recognition (ASR) and speech processing model developed by OpenAI. Unlike traditional speech-to-text systems, Whisper was trained on 680,000 hours of multilingual and multitask supervised data collected from the web. This massive and diverse dataset makes the model exceptionally robust to accents, background noise, and technical terminology. This guide provides a comprehensive walkthrough for the deployment and utilization of [Whisper](https://github.com/openai/whisper) on the Raspberry Pi AI Box.
 
 </div>
 
-### [Platform IO with Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/xiao_esp32c5_with_platformio/)
+### [reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_started.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document walks you through developing with the Seeed Studio XIAO ESP32-C5 using PlatformIO, including preparing your hardware and software environment, installing Visual Studio Code and the PlatformIO extension, creating and configuring a new PlatformIO project for the board, and running example programs such as an LED blink and Wi-Fi connectivity demo, to help you quickly get started using this compact and flexible development platform with Arduino-style code support.
+These two guides demonstrate how to use the **ReSpeaker XVF3800 USB Mic Array** together with the **Seeed Studio XIAO ESP32S3** to build embedded audio applications, covering both raw audio streaming and on-device voice intelligence features.
+
+- **[HTTP Audio Streaming](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_http_audio_stream/)**  
+  This guide shows how to capture audio from the XVF3800 using the XIAO ESP32S3, record 5 seconds of 16 kHz stereo 32-bit PCM audio, store it in PSRAM, and upload the audio over Wi-Fi to a Python-based Flask HTTP server as a standard WAV file.
+
+- **[DoA and VAD](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_doa_vad/)**  
+  This guide focuses on leveraging the XVF3800’s built-in **Voice Activity Detection (VAD)** and **Direction of Arrival (DoA)** capabilities. These inference results are computed internally by the XMOS XVF3800 and can be accessed by the host MCU over I2C, enabling features such as wake-on-voice, sound source localization, and direction-aware feedback without processing raw audio data on the MCU.
 
 </div>
 
-### [Seeed Studio XIAO ESP32-C5 With Micropython](https://wiki.seeedstudio.com/xiao_esp32c5_with_micropyhton/)
+### [Seeed Studio XIAO ESP32-C5 Wi-Fi Throughput Testing Tool](https://wiki.seeedstudio.com/xaio_esp32c5_wifi_throughput_tester/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/3-100010048-Seeed-Studio-XIAO-ESP32C5.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document guides you through using MicroPython on the Seeed Studio XIAO ESP32-C5 development board, covering hardware preparation, flashing the MicroPython firmware, and writing and running example programs in Thonny IDE, such as LED blinking, Wi-Fi connectivity, and BLE demos, to help you quickly get started with this compact board that supports dual-band Wi-Fi and Bluetooth.
+The Seeed Studio XIAO ESP32-C5 features the ESP32-C5 as its core processor.The ESP32-C5 is the industry's first RISC-V microcontroller to support dual-band Wi-Fi 6 (802.11ax) in both the 2.4GHz and 5GHz bands. Boasting exceptional wireless performance, it holds significant potential for applications in smart homes, the Internet of Things (IoT), and various other scenarios. Next, we will use a Wi-Fi throughput testing tool to visually demonstrate the powerful data throughput capabilities of the XIAO ESP32-C5 based on Wi-Fi 6, across both the 2.4GHz and 5GHz frequency bands!
 
 </div>
 
-## Existing Wiki Updated
+### [Deploying ESPresense on Seeed Studio XIAO ESP32-C3 with Home Assistant](https://wiki.seeedstudio.com/xiao-esp32c3-espresense/)
 
-### Added Raspberry Pi Usage Examples
+<div style={{ textAlign: "justify" }}>
 
-We have added **Raspberry Pi usage examples** to multiple product documentation pages, demonstrating how to use these products with a Raspberry Pi for quick evaluation and development.
+This document describes how to integrate the open-source Bluetooth presence detection system, **ESPresense**, with the **Seeed Studio XIAO ESP32-C3**. The presence detection node based on the XIAO ESP32-C3 can work with the [MQTT Room component](https://www.home-assistant.io/components/sensor.mqtt_room/) of Home Assistant to enable indoor positioning.
 
-The updated documents include:
+</div>
 
-- [Grove - Temperature&Humidity Sensor(DHT20)](https://wiki.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DH20/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
-- [Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor](https://wiki.seeedstudio.com/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor/#play-with-raspberry-pi)
-- [Grove - I2C Color Sensor](https://wiki.seeedstudio.com/Grove-I2C_Color_Sensor/#play-with-raspberry-pi)
-- [Grove - CO2 & Temperature & Humidity Sensor (SCD30)](https://wiki.seeedstudio.com/Grove-CO2_Temperature_Humidity_Sensor-SCD30/#play-with-raspberry-pi)
+### [Connecting SenseCAP T2000 Tracker to AWS IoT Core](https://wiki.seeedstudio.com/sensecap_t2000_tracker_aws/)
+
+<div style={{ textAlign: "justify" }}>
+
+This document describes how to connect the SenseCAP T2000 Tracker to AWS IoT Core. By following this guide, you will create and configure the required AWS IoT resources and enable secure and reliable data transmission from the SenseCAP T2000 to the AWS cloud for further data processing, storage, and visualization.
+
+</div>
+
+### [Connecting SenseCAP T2000 Tracker to Helium](https://wiki.seeedstudio.com/sensecap_t2000_tracker_helium/)
+
+<div style={{ textAlign: "justify" }}>
+
+This document explains how to connect the SenseCAP T2000 Tracker to the Helium LoRaWAN® network. By following this guide, you will configure the device and Helium network settings to enable the T2000 to join Helium and transmit tracking data over the decentralized LoRaWAN infrastructure for further processing and use.
+
+</div>
+
+<!-- ## Existing Wiki Updated
+
+### [Deploying AI Models on SenseCAP A1102 Using SenseCraft AI](https://wiki.seeedstudio.com/deploy_ai_with_a1102/)
+
+We have added a [Custom AI Model Deploying Process](https://wiki.seeedstudio.com/deploy_ai_with_a1102/#custom-ai-model-deploying-process). -->
 
 ## The Efforts of Contributor
 
@@ -200,5 +223,9 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.12.08th](/Seeed_Elderly/weekly_wiki/2025/wiki251208)
 - [weekly wiki on 2025.12.15th](/Seeed_Elderly/weekly_wiki/2025/wiki251215)
 - [weekly wiki on 2025.12.22nd](/Seeed_Elderly/weekly_wiki/2025/wiki251222)
+- [weekly wiki on 2025.12.29th](/Seeed_Elderly/weekly_wiki/2025/wiki251229)
+- [weekly wiki on 2026.1.05th](/Seeed_Elderly/weekly_wiki/2026/wiki260105)
+- [weekly wiki on 2026.1.12th](/Seeed_Elderly/weekly_wiki/2026/wiki260112)
+- [weekly wiki on 2026.1.19th](/Seeed_Elderly/weekly_wiki/2026/wiki260119)
 
 </details>

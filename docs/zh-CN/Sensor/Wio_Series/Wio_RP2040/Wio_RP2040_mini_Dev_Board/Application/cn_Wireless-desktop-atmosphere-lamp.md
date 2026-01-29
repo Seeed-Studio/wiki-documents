@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Wireless-desktop-atmosphere-lamp/
 slug: /cn/Wireless-desktop-atmosphere-lamp
+sku: 102991555
 last_update:
   date: 01/11/2022
   author: gunengyu

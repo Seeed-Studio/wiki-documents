@@ -5,6 +5,7 @@ keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reComputer_Industrial_Getting_Started
+sku: 110110190, 110110193, 110110188, 110110191, 110110189, 110110192, B802000101
 last_update:
   date: 05/16/2023
   author: Lakshantha

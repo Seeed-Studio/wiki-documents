@@ -61,7 +61,8 @@ on:
         default: 'manual'
 
 env:
-  NODE_OPTIONS: --max_old_space_size=8192
+  NODE_OPTIONS: --max-old-space-size=6144
+  DOCUSAURUS_IGNORE_SSG_WARNINGS: "true"
   
 jobs:
   test-deploy:
@@ -104,18 +105,32 @@ jobs:
           node-version: 20
           cache: yarn
 
-      # ==== 新增：观测与加 swap（放在安装依赖前） ====
-      - name: Show runner memory
-        run: node -v && free -h && df -h
-
-      - name: Add swap (6G)
+      - name: Add extra swap (6G)
         run: |
-          sudo fallocate -l 6G /swapfile
-          sudo chmod 600 /swapfile
-          sudo mkswap /swapfile
-          sudo swapon /swapfile
+          set -euxo pipefail
+
+          echo "== Before =="
+          sudo swapon --show || true
           free -h
-      # ==== 新增结束 ====
+
+          SWAP=/mnt/ci.swap
+
+          # 如果之前同名 swap 存在，先关闭并删除（保证重跑也不会炸）
+          if [ -f "$SWAP" ]; then
+            sudo swapoff "$SWAP" || true
+            sudo rm -f "$SWAP"
+          fi
+
+          # 创建 6G swap（fallocate 不可用就用 dd 兜底）
+          sudo fallocate -l 6G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
+
+          sudo chmod 600 "$SWAP"
+          sudo mkswap "$SWAP"
+          sudo swapon "$SWAP"
+
+          echo "== After =="
+          sudo swapon --show || true
+          free -h
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile

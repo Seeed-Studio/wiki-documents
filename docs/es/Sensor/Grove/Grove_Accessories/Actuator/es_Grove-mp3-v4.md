@@ -6,6 +6,7 @@ keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/grove-mp3-v4/0.webp
 slug: /es/grove_mp3_v4
+sku: 107020129
 last_update:
   date: 12/13/2024
   author: Carla

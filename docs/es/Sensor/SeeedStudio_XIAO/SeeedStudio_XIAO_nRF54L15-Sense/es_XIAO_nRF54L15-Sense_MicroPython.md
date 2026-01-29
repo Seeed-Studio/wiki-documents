@@ -1,6 +1,6 @@
 ---
 description: |
-title: MicroPython para Seeed Studio XIAO nRF54L15 Sense
+title: MicroPython para Seeed Studio XIAO nRF54L15
 keywords: 
 - nRF54L15
 - xiao
@@ -8,45 +8,61 @@ keywords:
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.webp
 slug: /es/xiao_nrf54l15_sense_micropython
 last_update:
-  date: 9/23/2025
-  author: Sherlock
+  date: 1/15/2026
+  author: Brandy
 ---
+
+
+
+### Entendiendo MicroPython
 
 Este tutorial tiene como objetivo introducir cómo usar MicroPython en Thonny basado en XIAO nRF54L15.
 
-[MicroPython](https://github.com/micropython/micropython/wiki) es un intérprete de Python con una característica de compilación de código nativo parcial. Proporciona un subconjunto de características de Python 3.5, implementado para procesadores embebidos y sistemas restringidos. Es diferente de CPython y puedes leer más sobre las diferencias [aquí](https://github.com/micropython/micropython/wiki/Differences).
+[MicroPython](https://github.com/micropython/micropython/wiki) es un intérprete de Python con una característica de compilación de código nativo parcial. Proporciona un subconjunto de características de Python 3.5, implementado para procesadores embebidos y sistemas restringidos. Es diferente de CPython y puedes leer más sobre las diferencias [aquí](https://github.com/micropython/micropython/wiki/Differences). Si necesitas más colecciones interesantes, puedes consultar [aquí](
+https://awesome-micropython.com/)
 
 <!-- ## 安装Python3
 Thonny自带Python解释器，所以不需要额外安装Python环境
 Win + R -->
 
-## Usar Thonny IDE
+## Preparar Hardware.
 
-Prepara un XIAO nRF54L15.
-
-<div class="table-center">
 <table align="center">
-<tr>
-<th>Seeed Studio XIAO nRF54L15 Sense</th>
-</tr>
-<tr>
-<th><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></th>
-</tr>
-<tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-    </a>
-   </div></td>
-</tr>
+ <tr>
+  <th>Seeed Studio XIAO nRF54L15 </th>
+        <th> Seeed Studio XIAO nRF54L15 Sense</th>
+        <th>Seeed Studio XIAO Debug Mate</th>
+ </tr>
+ <tr>
+
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/16.png" style={{width:150, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-xiao-debugger.jpg" style={{width:250, height:'auto'}}/></div></td>
+ </tr>
+    <tr>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-p-6493.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+      </a>
+  </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+      </a>
+  </div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-Debug-Mate-p-6588.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+      </a>
+  </div></td>
+ </tr>
 </table>
-</div>
 
 ### Instalar Thonny IDE
 
 [Thonny IDE](https://thonny.org/)
 
-Elige la versión apropiada para la instalación. Aquí, lo estoy instalando en un sistema Windows, así que he seleccionado la versión de Windows.
+Elige la versión apropiada para la instalación. Aquí, la estoy instalando en un sistema Windows, así que he seleccionado la versión de Windows.
 
 Sigue las instrucciones para la versión de Python deseada.
 
@@ -56,51 +72,56 @@ Luego, simplemente sigue los pasos predeterminados para la configuración.
 
 ### Descargar el repositorio
 
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
 
-Clónalo en la máquina local, y luego recuerda la ruta donde está almacenado el MicroPython de este XIAO nRF54L15. Esta ruta se usará más tarde.
+Clónalo en la máquina local, y luego recuerda la ruta donde está almacenado este MicroPython del XIAO nRF54L15. Esta ruta se usará más tarde.
 
 ```git
 git clone https://github.com/Seeed-Studio/micropython-seeed-boards.git
 ```
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/2.png" style={{width:600, height:'auto'}}/></div>
+
 ### Subir archivo de placa
 
-**Paso 1.** Flashear el firmware de MicroPython para XIAO nRF54L15
+**Paso 0.** Conecta XIAO NRF54L15 a la computadora usando un cable USB
+
+**Paso 1.** Flashea el firmware de MicroPython para XIAO nRF54L15
 
 <!-- 如果您已经刷入了对应的MircroPython固件，可以跳过这一步骤 -->
 - Descarga el paquete de firmware y extráelo en la ubicación apropiada. Luego haz clic en flash.bat, y automáticamente flasheará el firmware por ti.
 
-    **[Firmware]** [Firmware MicroPython XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao54_flash.zip)
+    **[Firmware]** [XIAO nRF54L15 MicroPython Firmware](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/xiao54_flash.zip)
 <!-- 这里的压缩包填入刷写固件的压缩包 -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/MicroPython_firmware_1.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/10.png" style={{width:600, height:'auto'}}/></div>
+El resultado es el siguiente
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/3.png" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-Este script tiene comandos de cadena de herramientas de flasheo preconfigurados. Si lo estás usando por primera vez, puede tomar un poco de tiempo.
+Este script tiene comandos de cadena de herramientas de flasheo preconfigurados. Si lo estás usando por primera vez, puede tomar un poco de tiempo. Se cerrará automáticamente después de la descarga. Si el XIAO NRF54L15 no está conectado, ocurrirá un error '200' durante el flasheo.
 :::
 
 **Paso 2.** Abre Thonny IDE, luego haz clic en la esquina inferior derecha de la interfaz para configurar las opciones del intérprete. Selecciona MicroPython (generic) y Puerto
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_1.png" style={{width:600, height:'auto'}}/></div>
 
-**Paso 3.** Subir el archivo de placas
+**Paso 3.** Sube el archivo de placas
 
-- Abre la vista, selecciona "File", y la ruta del administrador de archivos se mostrará en la barra lateral izquierda.
+- Abre "view", selecciona "File", y la ruta del administrador de archivos se mostrará en la barra lateral izquierda.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/11.png" style={{width:600, height:'auto'}}/></div>
 
 - Abre la ruta del archivo clonado o descargado, y abre `micropython-seeed-boards\examples`
-- Selecciona la carpeta "boards" y súbela al flash. Entonces, podrás ver el archivo subido en el dispositivo/flash de MicroPython.
+-Haz clic derecho en la carpeta "boards" y súbela al flash. Entonces, podrás ver el archivo subido en el dispositivo/flash de MicroPython.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/thonny_boards_3.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/12.png" style={{width:600, height:'auto'}}/></div>
+
+Cuando esté normal, aparecerá un icono en la posición '3'
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/13.png" style={{width:600, height:'auto'}}/></div>
 
 **Paso 4.** Encender el LED
 
-Copia el código y presiona `F5` para ejecutarlo.
+Abre un nuevo archivo (XX.py) o ve a la página de inicio, luego copia el código y presiona `F5` para ejecutarlo.
 
 ```py
 import time
@@ -142,7 +163,7 @@ El resultado es el siguiente:
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:500, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Relay/img/Twig-Relay.jpg" style={{width:500, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedfile2017-07bazaar501790_10402004845.jpg" style={{width:500, height:'auto'}}/></div></td>
   </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -155,8 +176,8 @@ El resultado es el siguiente:
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
     </div></td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
+        <td><div class="Grove – Chainable RGB LED V2.0" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Chainable-RGB-Led-V2-0.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -165,58 +186,37 @@ El resultado es el siguiente:
 
 ### Software
 
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/button.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
 ```py
-import time
-from boards.xiao import XiaoPin
+from machine import Pin
+from boards.xiao_nrf54l15 import xiao_nrf54l15 as xiao
 
-button = "sw"
-relay = 0      #D0
+# Define a function to get the GPIO information corresponding to pin A0
+def get_a0_pin():
+    # Get the information of pin A0 through the pin method of the xiao module
+    # According to the definition in xiao_nrf54l15.py, A0 corresponds to digital pin 0
+    pin_info = xiao.pin(0)  # Get the information of digital pin 0, the return value is a tuple, such as ("gpio1", 4)
+    return pin_info
 
-try:
-    # Initialize button and relay
-    button = XiaoPin(button, XiaoPin.IN)
-    relay = XiaoPin(relay, XiaoPin.OUT)
-    relay.value(0)
-    while True:
-        # Read button state 
-        button_state = button.value()
+# Define a function to set pin A0 to high level
+def set_a0_high():
+    # Get the GPIO information of pin A0
+    gpio_port, gpio_pin = get_a0_pin()  # Get the port and pin number
+    # Create a Pin object, specify the pin as output mode, and set it to high level
+    pin = Pin((gpio_port, gpio_pin), Pin.OUT)  # Initialize the pin as output mode
+    pin.value(1)  # Set the pin to high level
 
-        # Control relay based on button state
-        if button_state == 0:       
-            relay.value(1)         
-        else:                      
-            relay.value(0)
-except KeyboardInterrupt:
-    print("\nProgram interrupted by user")
-except Exception as e:
-    print("\nError occurred: %s" % {e})
-finally:
-    relay.off()
+# Main program
+if __name__ == "__main__":
+    set_a0_high()  # Call the function to set pin A0 to high level
+    print("Pin A0 has been set to high level")  # Output prompt information
 ```
 
 Explicación del Código:
-
-- **Importar Módulos**
-        - `time` Importa el módulo time
-        - `Xiao Pin` Importa la clase de control de pines para la placa de desarrollo Seeed Xiao desde el módulo boards.xiao, que se usa para operar los pines en la placa.
-
-- **Definir Pines**
-        - `button = "sw"` Especifica que el botón está conectado al pin "sw" de la placa de desarrollo (aquí, el pin BOOT)
-        - `relay = 0` Especifica que el relé está conectado al pin digital D0.
-
-- **Lógica Principal (bloque try)**
-        - Cuando se presiona el botón (estado es 0) → El relé se activa (salida es 1).
-        - Cuando no se presiona el botón (estado es 1) → El relé se desactiva (salida es 0).
+Este código tiene cuatro partes, como importar módulos, una función para obtener la información GPIO del pin A0, una función para establecer el pin A0 a nivel alto, y la función principal, donde en el programa principal llama a la operación para establecer el pin A0 a nivel alto.
 
 ### Resultado
 <!-- 添加对应GIF图 -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light2.gif" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/15.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## Analógico
 
@@ -260,12 +260,6 @@ Explicación del Código:
 </table>
 
 ### Software
-
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/adc.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
 
 ```py
 import time
@@ -327,326 +321,17 @@ finally:
 ```
 
 Explicación del Código:
+Este código se puede dividir en cuatro partes:
+ - importar módulos: incluyendo el módulo time para operaciones de retardo, así como los módulos XiaoADC y XiaoPWM
+ - inicializar el hardware: definir los pines ADC y PWM, e inicializar el ADC para leer el voltaje del potenciómetro, e inicializar el PWM para controlar el brillo del LED.
+ - La lógica del programa principal: en un bucle infinito, lee el voltaje del potenciómetro, lo convierte a un ciclo de trabajo PWM, y ajusta el brillo del LED según el voltaje.
+ - Manejo de excepciones y limpieza: capturar interrupciones del usuario (como presionar Ctrl+C) y otras excepciones para asegurar que el programa salga de forma segura.
 
-- **Importar Librerías Dependientes**
-        - `time`: Se utiliza para agregar retrasos y controlar el ritmo de ejecución del programa.
-        - `boards.xiao`: Importa las clases de control de hardware de la placa de desarrollo Xiao, incluyendo:
-        - `XiaoADC`: Se utiliza para leer señales analógicas (como la salida del potenciómetro).
-        - `XiaoPWM`: Se utiliza para generar señales PWM (para controlar el brillo del LED).
 
-- **Definir Pines de Hardware**
-        - `adc` corresponde al pin D0 de la placa de desarrollo (utilizado para conectar la salida del potenciómetro), y `pwm` corresponde al pin D1 (utilizado para conectar el LED).
-
-- **Inicializar Hardware (bloque try)**
-        - `XiaoADC(adc)`: Inicializa el pin D0 como modo de entrada ADC para leer la señal de voltaje del potenciómetro.
-        - `XiaoPWM(pwm)`: Inicializa el pin D1 como modo de salida PWM para controlar el LED.
-        - `Parámetros PWM`: Una frecuencia de 1000Hz significa que el período de la señal es de 1 milisegundo (1e6 nanosegundos). El ciclo de trabajo (la proporción del período que dura el nivel alto) determina el brillo del LED (cuanto mayor sea el ciclo de trabajo, más brillante será el LED).
-
-- **Bucle Principal (Lógica Central)**
-        - Leer Voltaje: Lee el voltaje de salida del potenciómetro a través del ADC (convierte la unidad a voltios).
-        - Limitación de Rango: Asegura que el voltaje esté dentro de 0~3.3V (rango de seguridad del hardware).
-        - Cálculo del Ciclo de Trabajo: Convierte linealmente el voltaje a un ciclo de trabajo de 0~1 (por ejemplo, 1.65V corresponde a un ciclo de trabajo del 50%).
-        - Manejo de Zona Muerta: Ignora fluctuaciones menores de voltaje (como ligeras vibraciones de la perilla) para prevenir cambios frecuentes en el LED.
-        - Controlar LED: Ajusta el brillo del LED a través del ciclo de trabajo PWM (cuanto mayor sea el ciclo de trabajo, más brillante será el LED).
 
 ### Resultado
 <!-- 添加对应GIF图 -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/adc.gif" style={{width:500, height:'auto'}}/></div>
-
-## UART
-
-### Hardware
-
-<div class="table-center">
- <table align="center">
-  <tr>
-   <th>Seeed Studio XIAO nRF54L15 Sense</th>
-   <th>L76K GNSS Module for Seeed Studio XIAO</th>
-  </tr>
-  <tr>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/GNSS.jpg" style={{width:250, height:'auto'}}/></div></td>
-  </tr>
-  <tr>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-    </a>
-   </div></td>
-   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-    </a>
-   </div></td>
-  </tr>
- </table>
-</div>
-
-### Software
-
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/imu.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-<details>
-
-<summary>código</summary>
-
-```py
-from boards.xiao import XiaoUART
-import time
-import math
-
-uart = "uart1"
-baudrate = 9600
-tx = 6              # D6
-rx = 7              # D7
-
-# Coordinate structure
-class Coordinates:
-    def __init__(self, Lon=0.0, Lat=0.0):
-        self.Lon = Lon
-        self.Lat = Lat
-
-# GPS data structure
-class GNRMC:
-    def __init__(self):
-        self.Lon = 0.0      # GPS Longitude
-        self.Lat = 0.0      # GPS Latitude
-        self.Lon_area = ''  # E or W
-        self.Lat_area = ''  # N or S
-        self.Time_H = 0     # Time Hour
-        self.Time_M = 0     # Time Minute
-        self.Time_S = 0     # Time Second
-        self.Status = 0     # 1: Successful positioning, 0: Positioning failed
-
-# Convert WGS-84 to GCJ-02
-def transformLat(x, y):
-    ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * math.sqrt(abs(x))
-    ret += (20.0 * math.sin(6.0 * x * pi) + 20.0 * math.sin(2.0 * x * pi)) * 2.0 / 3.0
-    ret += (20.0 * math.sin(y * pi) + 40.0 * math.sin(y / 3.0 * pi)) * 2.0 / 3.0
-    ret += (160.0 * math.sin(y / 12.0 * pi) + 320 * math.sin(y * pi / 30.0)) * 2.0 / 3.0
-    return ret
-
-# Convert WGS-84 to GCJ-02
-def transformLon(x, y):
-    ret = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * math.sqrt(abs(x))
-    ret += (20.0 * math.sin(6.0 * x * pi) + 20.0 * math.sin(2.0 * x * pi)) * 2.0 / 3.0
-    ret += (20.0 * math.sin(x * pi) + 40.0 * math.sin(x / 3.0 * pi)) * 2.0 / 3.0
-    ret += (150.0 * math.sin(x / 12.0 * pi) + 300.0 * math.sin(x / 30.0 * pi)) * 2.0 / 3.0
-    return ret
-
-# Convert GCJ-02 to BD-09
-def bd_encrypt(gg):
-    bd = Coordinates()
-    x = gg.Lon
-    y = gg.Lat
-    z = math.sqrt(x * x + y * y) + 0.00002 * math.sin(y * x_pi)
-    theta = math.atan2(y, x) + 0.000003 * math.cos(x * x_pi)
-    bd.Lon = z * math.cos(theta) + 0.0065
-    bd.Lat = z * math.sin(theta) + 0.006
-    return bd
-
-# Convert WGS-84 to GCJ-02
-def transform(gps):
-    gg = Coordinates()
-    dLat = transformLat(gps.Lon - 105.0, gps.Lat - 35.0)
-    dLon = transformLon(gps.Lon - 105.0, gps.Lat - 35.0)
-    radLat = gps.Lat / 180.0 * pi
-    magic = math.sin(radLat)
-    magic = 1 - ee * magic * magic
-    sqrtMagic = math.sqrt(magic)
-    dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * pi)
-    dLon = (dLon * 180.0) / (a / sqrtMagic * math.cos(radLat) * pi)
-    gg.Lat = gps.Lat + dLat
-    gg.Lon = gps.Lon + dLon
-    return gg
-
-# Convert to Baidu coordinates (BD-09)
-def L76X_Baidu_Coordinates(gps):
-    wgs84_coords = Coordinates(gps.Lon, gps.Lat)
-    gcj02_coords = transform(wgs84_coords)
-    bd09_coords = bd_encrypt(gcj02_coords)
-    return bd09_coords
-
-# Convert to Google coordinates (GCJ-02)
-def L76X_Google_Coordinates(gps):
-    wgs84_coords = Coordinates(gps.Lon, gps.Lat)
-    gcj02_coords = transform(wgs84_coords)
-    return gcj02_coords
-
-# Parse GNRMC NMEA sentence
-def parse_gnrmc(nmea_sentence):
-    gps = GNRMC()
-
-    if not nmea_sentence.startswith(b'$GNRMC') and not nmea_sentence.startswith(b'$PNRMC'):
-        return gps
-
-    try:
-        # Convert to string and split by commas
-        sentence_str = nmea_sentence.decode('ascii', 'ignore')
-        fields = sentence_str.split(',')
-
-        if len(fields) < 12:
-            return gps
-
-        # Parse time field (HHMMSS.sss)
-        if fields[1]:
-            time_str = fields[1]
-            if '.' in time_str:
-                time_str = time_str.split('.')[0]
-            if len(time_str) >= 6:
-                gps.Time_H = int(time_str[0:2]) + 8  # GMT+8
-                gps.Time_M = int(time_str[2:4])
-                gps.Time_S = int(time_str[4:6])
-                if gps.Time_H >= 24:
-                    gps.Time_H -= 24
-
-        # Parse status
-        gps.Status = 1 if fields[2] == 'A' else 0
-
-        if gps.Status == 1:
-            # Parse latitude (DDMM.MMMMM)
-            if fields[3] and fields[4]:
-                lat_str = fields[3]
-                if '.' in lat_str:
-                    degrees = float(lat_str[0:2])
-                    minutes = float(lat_str[2:])
-                    gps.Lat = degrees + minutes / 60.0
-                    gps.Lat_area = fields[4]
-
-            # Parse longitude (DDDMM.MMMMM)
-            if fields[5] and fields[6]:
-                lon_str = fields[5]
-                if '.' in lon_str:
-                    degrees = float(lon_str[0:3])
-                    minutes = float(lon_str[3:])
-                    gps.Lon = degrees + minutes / 60.0
-                    gps.Lon_area = fields[6]
-
-    except Exception as e:
-        print("Parse error:", e)
-
-    return gps
-
-# Print formatted GPS data
-def print_gps_data(gps):
-    print("\n--- GPS Data ---")
-    print("Time (GMT+8): {:02d}:{:02d}:{:02d}".format(gps.Time_H, gps.Time_M, gps.Time_S))
-    if gps.Status == 1:
-        print("Latitude (WGS-84): {:.6f} {}".format(gps.Lat, gps.Lat_area))
-        print("Longitude (WGS-84): {:.6f} {}".format(gps.Lon, gps.Lon_area))
-
-        # Coordinate conversion
-        baidu_coords = L76X_Baidu_Coordinates(gps)
-        google_coords = L76X_Google_Coordinates(gps)
-
-        print("Baidu Latitude: {:.6f}".format(baidu_coords.Lat))
-        print("Baidu Longitude: {:.6f}".format(baidu_coords.Lon))
-        print("Google Latitude: {:.6f}".format(google_coords.Lat))
-        print("Google Longitude: {:.6f}".format(google_coords.Lon))
-        print("GPS positioning successful.")
-    else:
-        print("GPS positioning failed or no valid data.")
-
-try:
-    uart = XiaoUART(uart, baudrate, tx, rx)
-    # Initialize UART
-    uart.init(9600, bits=8, parity=None, stop=1)
-    # Buffer to accumulate complete messages
-    buffer = bytearray()
-    # Constants for coordinate transformation
-    pi = 3.14159265358979324
-    a = 6378245.0
-    ee = 0.00669342162296594323
-    x_pi = 3.14159265358979324 * 3000.0 / 180.0
-    while True:
-        available = uart.any()
-        if available > 0:
-            # Read all available bytes
-            data = uart.read(available)
-            buffer.extend(data)
-            # Check if we have a complete line (ends with newline)
-            if b'\n' in buffer:
-                # Find the newline position
-                newline_pos = buffer.find(b'\n')
-                # Extract the complete message
-                complete_message = buffer[:newline_pos + 1]
-                # Remove the processed part from buffer
-                buffer = buffer[newline_pos + 1:]
-                # Parse GNRMC sentences
-                if complete_message.startswith(b'$GNRMC') or complete_message.startswith(b'$PNRMC'):
-                    gps_data = parse_gnrmc(complete_message)
-                    print_gps_data(gps_data)
-except KeyboardInterrupt:
-    print("\nProgram interrupted by user")
-except Exception as e:
-    print("\nError occurred: %s" % {e})
-finally:
-    uart.deinit()
-```
-
-</details>
-
-- **Importar Módulos**
-        - `XiaoUART` Importa la clase de comunicación UART para la placa de desarrollo Seeed Xiao desde el módulo `boards.xiao`, utilizada para inicializar y controlar la comunicación serie.
-        - `time` Importa el módulo de tiempo para soportar funciones relacionadas con el tiempo (aunque no se usa directamente aquí, se importa para uso futuro potencial o compatibilidad).
-        - `math` Importa funciones matemáticas (`sin`, `cos`, `sqrt`, `atan2`, etc.) requeridas para algoritmos de transformación de coordenadas.
-
-- **Definir Configuración UART**
-        - `uart = "uart1"` Especifica la instancia del controlador UART a usar — aquí, `uart1`.
-        - `baudrate = 9600` Establece la velocidad de baudios para la comunicación serie a 9600 bps.
-        - `tx = 6` Especifica que el pin de transmisión UART (TX) está conectado al pin digital D6.
-        - `rx = 7` Especifica que el pin de recepción UART (RX) está conectado al pin digital D7.
-
-- **Definir Estructuras de Datos**
-        - Clase `Coordinates`: Un contenedor simple para almacenar valores de longitud/latitud como números de punto flotante.
-        - Clase `GNRMC`: Representa datos GPS analizados de una sentencia NMEA `$GNRMC`. Contiene:
-            - Latitud/Longitud en grados decimales
-            - Indicadores de hemisferio (`N/S`, `E/W`)
-            - Tiempo (hora, minuto, segundo — ajustado a GMT+8)
-            - Bandera de estado (1 = posición válida, 0 = sin posición)
-
-- **Funciones de Transformación de Coordenadas**
-        - `transformLat(x, y)` & `transformLon(x, y)` — Funciones auxiliares que implementan parte del algoritmo de conversión WGS-84 → GCJ-02 (usado en China para ofuscación de mapas).
-        - `bd_encrypt(gg)` — Convierte coordenadas GCJ-02 al sistema de coordenadas BD-09 de Baidu aplicando desplazamiento y rotación adicionales.
-        - `transform(gps)` — Función principal que convierte coordenadas WGS-84 (GPS crudo) a GCJ-02 usando fórmulas trigonométricas complejas basadas en el modelo elíptico de la Tierra.
-        - `L76X_Baidu_Coordinates(gps)` — Envoltorio que convierte GPS crudo (WGS-84) → GCJ-02 → BD-09 (formato de Baidu Maps).
-        - `L76X_Google_Coordinates(gps)` — Envoltorio que convierte GPS crudo (WGS-84) → GCJ-02 (formato de Google Maps en China).
-
-- **Analizar Sentencia GNRMC**
-        - `parse_gnrmc(nmea_sentence)` — Analiza una cadena NMEA `$GNRMC` o `$PNRMC` cruda en un objeto `GNRMC` estructurado.
-            - Extrae tiempo (convierte de UTC a GMT+8).
-            - Verifica estado (`A` = activo/posición válida, `V` = inválido).
-            - Analiza latitud/longitud desde formato DDMM.MMMMM → grados decimales.
-            - Devuelve objeto `GNRMC` poblado o uno vacío por defecto si el análisis falla.
-
-- **Mostrar Datos GPS Formateados**
-        - `print_gps_data(gps)` — Imprime información GPS legible incluyendo:
-            - Tiempo local (GMT+8)
-            - Coordenadas WGS-84 crudas con hemisferio
-            - Coordenadas convertidas GCJ-02 (compatible con Google) y BD-09 (compatible con Baidu)
-            - Mensaje de estado indicando si el posicionamiento tuvo éxito
-
-- **Lógica Principal (bloque try)**
-        - Inicializa la interfaz UART con parámetros especificados.
-        - Define constantes globales necesarias para matemáticas de coordenadas (`pi`, `a`, `ee`, `x_pi`) — parámetros del elipsoide terrestre y factores de escala.
-        - Entra en bucle infinito para leer continuamente datos GPS entrantes vía UART.
-            - Usa `buffer` para acumular mensajes parciales hasta que se recibe una línea completa (terminando con `\n`).
-            - Cuando llega una línea completa:
-                - Verifica si comienza con `$GNRMC` o `$PNRMC`
-                - Si es así, la analiza usando `parse_gnrmc()`
-                - Muestra salida formateada vía `print_gps_data()`
-        - Maneja excepciones:
-            - `KeyboardInterrupt`: Sale elegantemente con Ctrl+C.
-            - `Exception` general: Captura e imprime cualquier error inesperado.
-        - Finalmente, llama a `uart.deinit()` para limpiar recursos UART antes de salir.
-
-### Resultado
-<!-- 添加对应GIF图 -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/UART_GPS_2.png" style={{width:800, height:'auto'}}/></div>
 
 ## I2C
 
@@ -679,15 +364,6 @@ finally:
 
 ### Software
 
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/oled.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-<details>
-
-<summary>Código</summary>
 
 ```py
 import time
@@ -887,47 +563,24 @@ ssd1306_draw_text("NRF54L15", 30, 2)
 ssd1306_draw_text("HELLO WORLD", 20, 4)
 ```
 
-</details>
-
 Explicación del Código:
 
-- **Importar Módulos**
-        - `time` Importa el módulo time para habilitar funciones relacionadas con el tiempo como retrasos.
-        - `XiaoI2C` Importa la clase de comunicación I2C para la placa de desarrollo Seeed Xiao desde el módulo `boards.xiao`, utilizada para inicializar y controlar periféricos I2C.
+Este código inicializa y controla una pantalla OLED SSD1306 a través de comunicación I2C, define los comandos y parámetros de la pantalla, e implementa funciones para limpiar la pantalla, inicialización y mostrar texto.
 
-- **Definir Configuración I2C**
-        - `sda = 4` Especifica que la línea SDA (datos) del bus I2C está conectada al pin digital D4.
-        - `scl = 5` Especifica que la línea SCL (reloj) del bus I2C está conectada al pin digital D5.
-        - `i2c = "i2c0"` Especifica la instancia del controlador I2C a usar — aquí, es `i2c0`.
-        - `frq = 400000` Establece la frecuencia del bus I2C a 400 kHz (modo rápido estándar).
-        - `i2c = XiaoI2C(i2c, sda, scl, frq)` Inicializa la interfaz I2C con los parámetros especificados.
+- Importar módulos e inicializar comunicación I2C:
+       Se importó el módulo time para operaciones de retardo, y se importó el módulo XiaoI2C para inicializar la comunicación I2C. Se definieron los pines SDA y SCL del I2C, y se estableció la frecuencia I2C. Luego, se creó un objeto XiaoI2C para comunicación con dispositivos I2C, como una pantalla OLED.
 
-- **Definir Constantes SSD1306**
-        - `SSD1306_I2C_ADDR = 0x3C` La dirección I2C predeterminada de la pantalla OLED SSD1306.
-        - Varias constantes de comando (`SSD1306_SET_CONTRAST`, `SSD1306_DISPLAY_ON`, etc.) definen comandos de control para configurar y controlar el hardware de la pantalla.
-        - `SSD1306_WIDTH = 128`, `SSD1306_HEIGHT = 64`, `SSD1306_PAGES = 8` Definen la resolución de la pantalla y la estructura de páginas (cada página tiene 8 filas de altura).
 
-- **Definir Datos de Fuente**
-        - `font_data` Un diccionario que mapea caracteres ASCII a sus representaciones de mapa de bits de píxeles de 8x8. Cada carácter se representa como una lista de 8 bytes, donde cada byte corresponde a una fila de píxeles (LSB = píxel más a la izquierda).
-
-- **Funciones Auxiliares**
-        - `ssd1306_write_command(cmd)` Envía un solo byte de comando al SSD1306 vía I2C usando el byte de control `0x00`.
-        - `ssd1306_write_commands(cmds)` Envía múltiples bytes de comando en una transacción.
-        - `ssd1306_write_data(data)` Envía bytes de datos de pantalla al SSD1306 usando el byte de control `0x40` (modo de datos).
-        - `ssd1306_clear()` Limpia toda la pantalla escribiendo bytes cero a todas las páginas y columnas.
-        - `ssd1306_init()` Inicializa la pantalla SSD1306 con configuraciones recomendadas incluyendo contraste, relación multiplex, modo de memoria, y encender la pantalla.
-        - `ssd1306_draw_text(text, x, y)` Dibuja texto comenzando en la columna `x` y página `y`. Convierte cada carácter a su mapa de bits de fuente de 8x8, lo rota 90° en sentido horario (para coincidir con la orientación de la pantalla), y escribe los datos de píxeles al búfer de la pantalla.
-
-- **Lógica Principal (Inicialización y Pantalla)**
-        - `i2c.scan()` Escanea el bus I2C para detectar dispositivos conectados.
-        - Si el SSD1306 no se encuentra en la dirección `0x3C`, se genera una excepción; de lo contrario, se imprime un mensaje de éxito.
-        - `ssd1306_init()` Inicializa el hardware de la pantalla.
-        - `ssd1306_draw_text("NRF54L15", 30, 2)` Dibuja la cadena "NRF54L15" comenzando en la columna 30, página 2 (≈ fila 16).
-        - `ssd1306_draw_text("HELLO WORLD", 20, 4)` Dibuja la cadena "HELLO WORLD" comenzando en la columna 20, página 4 (≈ fila 32).
+- Definir las instrucciones y parámetros de la pantalla SSD1306:
+       Define la dirección I2C de la pantalla SSD1306 y una serie de comandos de control (como configurar contraste, encendido/apagado de pantalla, etc.). También define los parámetros de tamaño de la pantalla (ancho, alto y número de páginas) y una biblioteca de fuentes de matriz de puntos 8x8 simple para mostrar caracteres en la pantalla.
+- Definir función auxiliar:
+        Se define una serie de funciones auxiliares para enviar comandos y datos al SSD1306.
+- Lógica del programa principal:
+      Primero, verificar si la pantalla SSD1306 está conectada al bus I2C realizando un escaneo I2C. Si se encuentra la pantalla, llamar a la función ssd1306_init para inicializar la pantalla. Luego, llamar a la función ssd1306_draw_text para mostrar las dos líneas de texto "NRF54L15" y "HELLO WORLD" en la pantalla.
 
 ### Resultado
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/i2c_result.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf54L15_micropython/14.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## SPI
 
@@ -959,16 +612,6 @@ Explicación del Código:
 </div>
 
 ### Software
-
-  <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/micropython-seeed-boards/blob/master/example/imu.py" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Librería</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-<details>
-
-<summary>Código</summary>
 
 ```py
 import time
@@ -1165,47 +808,45 @@ if __name__ == "__main__":
     main()
 ```
 
-</details>
-
 Explicación del Código:
 
-- **Importación de Módulos**
-        - `time`: Habilita funciones relacionadas con el tiempo como retrasos.
+- Importación de Módulos
+        - `time`: Habilita funciones relacionadas con el tiempo como retardos.
         - `XiaoPin y XiaoSPI`: Importados desde `boards.xiao`; XiaoPin se usa para controlar pines GPIO, mientras que XiaoSPI maneja la comunicación SPI.
 
-- **Configuración de Pines y SPI**
+- Configuración de Pines y SPI
         - Definió pines específicos: Reset (RST), Chip Select (CS), Data/Command (DC), y Busy (BUSY).
         - Configuró pines relacionados con SPI (SCK, MOSI, MISO) y el controlador SPI.
         - Inicializó el modo de trabajo (entrada/salida) para todos los pines GPIO.
         - Creó una instancia SPI con una frecuencia establecida de 20 MHz.
 
-- **Funciones Básicas de ePaper**
+- Funciones Básicas de ePaper
         - `reset()`: Ejecuta una operación de reinicio por hardware en la pantalla.
         - `send_command(cmd)`: Transmite un comando de un solo byte.
         - `send_data(data)`: Envía datos, que pueden ser un solo byte o múltiples bytes.
-        - `wait_until_idle()`: Espera a que la pantalla entre en estado inactivo (actualmente implementado con un retraso simple).
+        - `wait_until_idle()`: Espera a que la pantalla entre en estado inactivo (actualmente implementado con un retardo simple).
         - `init_display()`: Realiza procedimientos de inicialización para la pantalla.
         - `clear_screen()`: Limpia la pantalla, estableciéndola en un estado completamente blanco.
 
-- **Parámetros de Pantalla**
+- Parámetros de Pantalla
         - `WIDTH, HEIGHT = 800, 480`: Especifica la resolución de la pantalla.
         - `BYTES_PER_ROW`: Indica el número de bytes necesarios para cada fila de píxeles.
         - `linebuf`: Un búfer de línea que almacena temporalmente datos de píxeles para una sola fila.
 
-- **Sistema de Fuentes**
+- Sistema de Fuentes
         - Definió una fuente simple de píxeles 5x7, almacenada en el diccionario `G`.
         - `glyph(ch)`: Recupera los datos de píxeles correspondientes a un carácter dado.
         - `text_size()`: Calcula las dimensiones del texto cuando se muestra con una relación de escalado especificada.
-        - `text_pixel()`: Determina si un píxel debe dibujarse en una posición específica (usado en renderizado de texto).
+        - `text_pixel()`: Determina si un píxel debe dibujarse en una posición específica (usado en la renderización de texto).
 
-- **Actualización de Pantalla**
+- Actualización de Pantalla
         - **epaper_update_lines(lines)**: La función principal para actualizar la pantalla.
         - Primero, envía datos para establecer un fondo completamente blanco.
         - Luego, calcula y transmite nuevos datos de imagen fila por fila.
         - Finalmente, activa una actualización de pantalla para mostrar el nuevo contenido.
-        - Soporta visualización de texto multilínea, donde cada línea puede tener posiciones y relaciones de escalado distintas.
+        - Soporta visualización de texto multilínea, donde cada línea puede tener posiciones y relaciones de escala distintas.
 
-- **función main()**
+- función main()
         - Inicializa la pantalla.
         - Calcula la posición centrada para el texto.
         - Crea una lista de configuración para las líneas de texto.
@@ -1218,7 +859,7 @@ Explicación del Código:
 
 ## Ejecutar automáticamente el programa
 
-Si quieres que tu programa de abreviación pueda ejecutarse automáticamente, puedes seguir estos pasos:
+Si quieres que tu programa abreviado pueda ejecutarse automáticamente, puedes seguir estos pasos:
 
 **Paso 1.** Crea un nuevo archivo de programa y usa Ctrl + S para guardarlo en la memoria flash del dispositivo MicroPython, y nómbralo main.py.
 
@@ -1226,7 +867,7 @@ Tomemos el programa de parpadeo como ejemplo aquí
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_2.png" style={{width:600, height:'auto'}}/></div>
 
-Entonces se mostrará bajo la sección MicroPython device/flash.
+Entonces se mostrará bajo la sección dispositivo MicroPython/flash.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/auto_3.png" style={{width:600, height:'auto'}}/></div>
 
@@ -1244,7 +885,7 @@ efecto:
 
 ### Actualización del Bootloader
 
-Si encuentras una situación donde no puedes subir programas MicroPython usando Thonny, porque el Bootloader usado durante la producción de fábrica era de una versión anterior.
+Si encuentras una situación donde no puedes cargar programas MicroPython usando Thonny, porque el Bootloader usado durante la producción de fábrica era de una versión anterior.
 
 **Paso 1.** Cableado
 
@@ -1297,9 +938,9 @@ Tomando el sistema Windows como ejemplo. Descomprime el archivo descargado, haz 
 En sistemas Mac/Linux, necesitas cambiar **.bat** a **.sh**
 :::
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -5,6 +5,7 @@ keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
 slug: /es/get_started_with_meshtastic_wio_tracker_l1
+sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
   date: 12/24/2025

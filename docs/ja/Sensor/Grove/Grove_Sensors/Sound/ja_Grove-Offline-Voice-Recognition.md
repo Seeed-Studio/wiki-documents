@@ -5,6 +5,7 @@ keywords:
 - ジェスチャー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/Grove-Offline-Voice-Recognition
+sku: 107020149
 last_update:
   date: 05/15/2025
   author: Allen

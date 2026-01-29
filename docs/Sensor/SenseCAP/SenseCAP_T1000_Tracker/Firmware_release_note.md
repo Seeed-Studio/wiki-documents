@@ -27,9 +27,9 @@ The following steps should be used if you’ve been advised by our Technical Sup
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/up-fiele.png" alt="pir" width={800} height="auto" /></p>
 
-### v2.5 - 2024/01/02
+### v2.8 - 2025/09/05
 
-* **GPS UTC time algorithm optimization and other improvements**
+* **The new firmware improves the device’s LoRaWAN stability.**
 
 :::caution Note
 It's recommended all users to upgrade your devices to the latest firmware.

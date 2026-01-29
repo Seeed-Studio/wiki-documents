@@ -5,6 +5,7 @@ keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Train-Deploy-AI-Model-Grove-Vision-AI
+sku: 114992866
 last_update:
   date: 1/13/2023
   author: shuxu hu

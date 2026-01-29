@@ -6,9 +6,10 @@ keywords:
   - docusaurus
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /ja/WM1302_module
+sku: 114992549, 114992550, 114992629, 114992628, 113100022, 114992967, 114992969, 114992991, 100021717, 114993268
 last_update:
-  date: 4/24/2025
-  author: Leo
+  date: 12/15/2025
+  author: David Du
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
@@ -22,25 +23,29 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
 :::note
 私たちは最近、Wio-E5 モジュールをベースとした Wio-E5 シリーズをリリースしました。
 
-[こちら](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Wio-E5 Module](https://wiki.seeedstudio.com/ja/LoRa-E5_STM32WLE5JC_Module/) [Grove module](https://wiki.seeedstudio.com/ja/Grove_LoRa_E5_New_Version/)、[mini Dev boards](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/) から [Development Kit](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/) まで、LoRa-E5 ファミリーの新しいメンバーをご覧ください。
+[ここ](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=3)をクリックして、[Wio-E5 Module](https://wiki.seeedstudio.com/ja/LoRa-E5_STM32WLE5JC_Module/) [Grove module](https://wiki.seeedstudio.com/ja/Grove_LoRa_E5_New_Version/)、[mini Dev boards](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/) から [Development Kit](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/) まで、LoRa-E5 ファミリーの新しいメンバーをご覧ください。
 
-STM32WL シリーズ用 STM32Cube MCU パッケージ（SDK）を使用して LoRaWAN® エンドノードを作成し、LoRaWAN® ネットワークに参加してデータを送信する方法について詳しく学ぶには、[mini Dev boards](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/) と [Development Kit](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/) の wiki ページをご覧ください。
+STM32WL シリーズ用 STM32Cube MCU パッケージ（SDK）を使用して LoRaWAN® エンドノードを作成し、LoRaWAN® ネットワークに参加してデータを送信する方法について詳しく学ぶには、[mini Dev boards](https://wiki.seeedstudio.com/ja/LoRa_E5_mini/) と [Development Kit](https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/) の wiki ページをお読みください。
 :::
 
-WM1302 モジュールは、mini-PCIe フォームファクターを採用した新世代の LoRaWAN® ゲートウェイモジュールです。Semtech® SX1302 ベースバンド LoRaWAN® チップをベースとした WM1302 は、ゲートウェイ製品の長距離無線伝送のより大きな潜在能力を解き放ちます。従来の SX1301 および SX1308 LoRa® チップと比較して、より高い感度、より少ない消費電力、より低い動作温度を特徴としています。
+:::note
+WM1302 モジュールは 2 つの異なるインターフェースバージョンを提供しています。`SPI` バージョンが現在主流の選択肢です。`USB` バージョンをお好みの場合、ハードウェアの変更により、モジュールが正常に機能するために元の公式ファームウェアに特定の調整が必要です。詳細については、**FAQ** 部分をご参照ください。
+:::
 
-WM1302 LoRaWAN® ゲートウェイモジュールは、US915 と EU868 の両方の周波数帯域で SPI と USB バージョンを提供し、EU868、US915、AS923、AS920、AU915、KR920、IN865 を含む幅広い LoRaWAN® 周波数プランオプションから選択できます。
+WM1302 モジュールは、mini-PCIe フォームファクターを持つ新世代の LoRaWAN® ゲートウェイモジュールです。Semtech® SX1302 ベースバンド LoRaWAN® チップをベースとして、WM1302 はゲートウェイ製品の長距離無線伝送のより大きな潜在能力を解き放ちます。従来の SX1301 および SX1308 LoRa® チップよりも高い感度、低い消費電力、低い動作温度を特徴としています。
 
-WM1302 モジュールは CE、FCC、Telec 認証を取得しており、LoRaWAN® ゲートウェイデバイスの開発と認証プロセスを簡素化するのに役立ちます。
+WM1302 LoRaWAN® ゲートウェイモジュールは、US915 と EU868 の両方の周波数帯域で SPI と USB バージョンを持ち、EU868、US915、AS923、AS920、AU915、KR920、IN865 を含む幅広い LoRaWAN® 周波数プランオプションから選択できます。
+
+WM1302 モジュールは CE、FCC、Telec 認証を取得しており、LoRaWAN® ゲートウェイデバイスの開発と認証プロセスの簡素化に役立ちます。
 
 WM1302 は M2M および IoT アプリケーション向けに設計されており、LPWAN ゲートウェイ対応シナリオで広く適用できます。LoRaWAN® ゲートウェイ、ホットスポットなどの LoRa® ゲートウェイデバイスを開発する際の技術的困難と時間消費を大幅に削減するための完璧な選択肢となるでしょう。
 
 ## 特徴
 
 - **Semtech® SX1302 ベースバンド LoRa® チップを搭載**、極めて低い消費電力と高性能。
-- **標準 52 ピンゴールドフィンガーを備えた Mini-PCIe フォームファクター**、様々なゲートウェイデバイスとの統合が容易。
+- **標準 52 ピンゴールドフィンガーを持つ Mini-PCIe フォームファクター**、様々なゲートウェイデバイスとの統合が容易。
 - **超低動作温度**、追加の放熱が不要で、LoRaWAN® ゲートウェイのサイズを削減。
-- **高感度** SX1250 TX/RX フロントエンドで SF12 時 -139 dBm まで対応；TX 出力は 3.3V で最大 26 dBm。
+- **高感度** SX1250 TX/RX フロントエンドで -139 dBm @SF12 まで対応；TX 出力は @3.3V で最大 26 dBm。
 - **CE、FCC、TELEC 認証取得済み**。最終製品の認証プロセスを簡素化。
 
 ## ハードウェア概要
@@ -344,11 +349,11 @@ WM1302 は M2M および IoT アプリケーション向けに設計されてお
   </tr>
   <tr>
     <td class="tg-4onr">消費電力（SPI バージョン）</td>
-    <td class="tg-f42p" colspan="2">スタンバイ：7.5 mA<br />TX 最大出力：415 mA<br />RX：40 mA</td>
+    <td class="tg-f42p" colspan="2">スタンバイ: 7.5 mA<br />TX 最大電力: 415 mA<br />RX: 40 mA</td>
   </tr>
   <tr>
-    <td class="tg-4onr">消費電力（USB バージョン）</td>
-    <td class="tg-f42p" colspan="2">スタンバイ：20 mA<br />TX 最大出力：425 mA<br />RX：53 mA</td>
+    <td class="tg-4onr">消費電力（USB版）</td>
+    <td class="tg-f42p" colspan="2">スタンバイ: 20 mA<br />TX 最大電力: 425 mA<br />RX: 53 mA</td>
   </tr>
   <tr>
     <td class="tg-4onr">LBT（Listen Before Talk）</td>
@@ -360,11 +365,11 @@ WM1302 は M2M および IoT アプリケーション向けに設計されてお
   </tr>
   <tr>
     <td class="tg-4onr">動作温度</td>
-    <td class="tg-f42p" colspan="2">-40°C to 85°C</td>
+    <td class="tg-f42p" colspan="2">-40°C から 85°C</td>
   </tr>
   <tr>
     <td class="tg-4onr">寸法</td>
-    <td class="tg-f42p" colspan="2">30 mm (幅) × 50.95 mm (長さ)</td>
+    <td class="tg-f42p" colspan="2">30 mm（幅）× 50.95 mm（長さ）</td>
   </tr>
   <tr>
     <td class="tg-4onr">認証</td>
@@ -375,11 +380,11 @@ WM1302 は M2M および IoT アプリケーション向けに設計されてお
 
 ## アプリケーション
 
-- LPWANゲートウェイデバイス開発
+- LPWAN ゲートウェイデバイス開発
 
 - あらゆる長距離無線通信アプリケーション開発
 
-- LoRa®およびLoRaWAN®アプリケーションの学習と研究
+- LoRa® および LoRaWAN® アプリケーションの学習と研究
 
 ## 寸法
 
@@ -388,37 +393,37 @@ WM1302 は M2M および IoT アプリケーション向けに設計されてお
 
 ## 入門ガイド
 
-### SPIバージョンとUSBバージョンの違い
+### SPI版とUSB版の違い
 
-WM1302 LoRaWAN®ゲートウェイモジュールSPIバージョンでは、Semtech SX1302とSX126xチップは、異なるチップセレクト（CS）ピンを使用して同じSPIバス経由でRaspberry Piに接続されます。
+WM1302 LoRaWAN® ゲートウェイモジュール SPI版では、Semtech SX1302 と SX126x チップは、異なるチップセレクト（CS）ピンを使用して同じ SPI バス経由で Raspberry Pi に接続されます。
 
-WM1302 LoRaWAN®ゲートウェイモジュールUSBバージョンでは、Semtech SX1302とSX126xチップはSTM32L4 MCUに接続され、この工場でプログラムされたMCUはUSBデバイスとして動作し、Raspberry PiとSX1302/SX126x間のブリッジとなります。
+WM1302 LoRaWAN® ゲートウェイモジュール USB版では、Semtech SX1302 と SX126x チップは STM32L4 MCU に接続され、この工場でプログラムされた MCU は USB デバイスとして動作し、Raspberry Pi と SX1302/SX126x 間のブリッジとなります。
 
-### WM1302のクイックスタート
+### WM1302 のクイックスタート
 
 #### 必要なハードウェア
 
-- WM1302 LoRaWAN®ゲートウェイモジュール
+- WM1302 LoRaWAN® ゲートウェイモジュール
 
-- 40ピンGPIOヘッダー付きRaspberry Piボード（例：Raspberry Pi 4BまたはRaspberry 3B+）
+- 40ピン GPIO ヘッダー付き Raspberry Pi ボード（例：Raspberry Pi 4B または Raspberry 3B+）
 
-- Raspberry Pi用WM1302 Pi Hat
+- Raspberry Pi 用 WM1302 Pi Hat
 
-- Raspberry Pi用電源アダプタ
+- Raspberry Pi 用電源アダプタ
 
-- LoRa®アンテナ
+- LoRa® アンテナ
 
-- 8GB以上のSDカードとカードリーダー
+- 8GB 以上の SD カードとカードリーダー
 
-- WM1302 LoRaWAN®ゲートウェイモジュールUSBバージョンを使用する場合はType C USBケーブル
+- WM1302 LoRaWAN® ゲートウェイモジュール USB版を使用する場合は Type C USB ケーブル
 
 #### 必要なソフトウェア
 
-- [最新のRaspberry Pi OSイメージ](https://www.raspberrypi.org/software/operating-systems/)：Raspberry Pi OS Liteを推奨
+- [最新の Raspberry Pi OS イメージ](https://www.raspberrypi.org/software/operating-systems/)：Raspberry Pi OS Lite を推奨
 
-- [Balena Etcher](https://www.balena.io/etcher/)：Raspberry Pi OSイメージをSDカードに書き込むため
+- [Balena Etcher](https://www.balena.io/etcher/)：Raspberry Pi OS イメージを SD カードに書き込むため
 
-- [putty](https://www.putty.org/)：WindowsでSSH経由でRaspberry Piに接続するため
+- [putty](https://www.putty.org/)：Windows で SSH 経由で Raspberry Pi に接続するため
 
 <br />
 
@@ -428,21 +433,21 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="WM1302 SPI Version" label="WM1302 SPIバージョン">
+<TabItem value="WM1302 SPI Version" label="WM1302 SPI版">
 
-#### ステップ1. WM1302 Raspberry Pi Hatの取り付けとWM1302モジュールのインストール
+#### ステップ1. WM1302 Raspberry Pi Hat の取り付けと WM1302 モジュールのインストール
 
-まずRaspberry Piの電源を切り、以下の写真のようにWM1302モジュールをPi Hatに挿入してネジで固定します。
+まず Raspberry Pi の電源を切り、以下の写真のように WM1302 モジュールを Pi Hat に挿入してネジで固定します。
 
 <!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki1.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki1.jpg" alt="pir" width={600} height="auto" /></p>
 
 
-#### ステップ2. Raspbian I2CおよびSPIインターフェースの有効化
+#### ステップ2. Raspbian I2C および SPI インターフェースの有効化
 
-WM1302モジュールはSPIおよびI2Cインターフェース経由でRaspberry Piと通信します。しかし、これら2つのインターフェースはRaspbianではデフォルトで有効になっていないため、開発者はWM1302を使用する前にそれらを有効にする必要があります。ここでは、SPIおよびI2Cインターフェースを有効にするコマンドライン方法を紹介します。
+WM1302 モジュールは SPI および I2C インターフェース経由で Raspberry Pi と通信します。しかし、これら2つのインターフェースは Raspbian ではデフォルトで有効になっていないため、開発者は WM1302 を使用する前にそれらを有効にする必要があります。ここでは、SPI および I2C インターフェースを有効にするコマンドライン方法を紹介します。
 
-まず、SSH経由またはモニターを使用してRaspberry Piにログインし（Pi HatのGPSモジュールがPiのハードウェアUARTピンを占有するため、シリアルコンソールは使用しないでください）、コマンドラインで`sudo raspi-config`と入力してRaspberry Piソフトウェア設定ツールを開きます：
+まず、SSH 経由または モニター を使用して Raspberry Pi にログインし（Pi Hat の GPS モジュールが Pi のハードウェア UART ピンを占有するため、シリアルコンソールは使用しないでください）、コマンドラインで `sudo raspi-config` と入力して Raspberry Pi ソフトウェア設定ツールを開きます：
 
 ```shell
 sudo raspi-config
@@ -451,19 +456,19 @@ sudo raspi-config
 <!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki3.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki3.png" alt="pir" width={600} height="auto" /></p>
 
-1. `Interface Options`を選択
+1. `Interface Options` を選択
 
-2. `SPI`を選択し、`Yes`を選択して有効にする
+2. `SPI` を選択し、`Yes` を選択して有効にする
 
-3. `I2C`を選択し、`Yes`を選択して有効にする
+3. `I2C` を選択し、`Yes` を選択して有効にする
 
-4. `Serial Port`を選択し、"Would you like a login shell..."に対して`No`を選択し、"Would you like the serial port hardware..."に対して`Yes`を選択
+4. `Serial Port` を選択し、"Would you like a login shell..." に対して `No` を選択し、"Would you like the serial port hardware..." に対して `Yes` を選択
 
-5. この後、これらの設定が動作することを確認するためにRaspberry Piを再起動してください。
+5. この後、これらの設定が動作することを確認するために Raspberry Pi を再起動してください。
 
-#### ステップ3. SX1302ソースコードの取得とコンパイル
+#### ステップ3. SX1302 ソースコードの取得とコンパイル
 
-それでは`git`をインストールし、githubから`sx1302_hal`（SX1302 LoRaゲートウェイ用ライブラリとプログラム）をダウンロードしましょう：
+それでは `git` をインストールし、github から `sx1302_hal`（SX1302 LoRa ゲートウェイ用のライブラリとプログラム）をダウンロードしましょう：
 
 ```shell
 sudo apt update
@@ -472,16 +477,16 @@ cd ~
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-`sx1302_hal`フォルダに移動してすべてをコンパイルします：
+`sx1302_hal` フォルダに移動してすべてをコンパイルします：
 
 ```shell
 cd ~/sx1302_hal
 make
 ```
 
-#### ステップ4. Semtech SX1302パケットフォワーダーの実行
+#### ステップ4. Semtech SX1302 パケットフォワーダーの実行
 
-`reset_lgw.sh`を`packet_forwarder`フォルダにコピーし、テキストエディタ`nano`を使用して`reset_lgw.sh`スクリプト内のSX1302およびSX1261の`reset pin`を変更します：
+`reset_lgw.sh` を `packet_forwarder` フォルダにコピーし、テキストエディタ `nano` を使用して `reset_lgw.sh` スクリプト内の SX1302 と SX1261 の `reset pin` を変更します：
 
 ```shell
 cp tools/reset_lgw.sh packet_forwarder/
@@ -489,7 +494,7 @@ cd packet_forwarder
 nano tools/reset_lgw.sh
 ```
 
-以下のようなデフォルトの`reset pin`が表示されます：
+デフォルトの `reset pin` が以下のように表示されます：
 
 ```shell
 # GPIO mapping has to be adapted with HW
@@ -501,7 +506,82 @@ SX1261_RESET_PIN=22     # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-`SX1302_RESET_PIN`、`SX1302_POWER_EN_PIN`、`SX1261_RESET_PIN`を以下のように変更します：
+ここでは `cat /sys/kernel/debug/gpio` コマンドを使用します。これはカーネルの `debugfs` ファイルシステムによって提供されるデバッグインターフェースです。主に Raspberry Pi 上のすべての GPIO ピンのリアルタイムステータスを監視するために使用されます。
+
+`gpiochip0` が実際に興味のある部分です：WM1302 モジュールは Pi HAT の 40ピンヘッダー経由で Raspberry Pi に接続され、すべてこのコントローラーによって管理されます。
+
+```shell
+pi@raspberrypi:~/sx1302_hal/packet_forwarder $ cat /sys/kernel/debug/gpio
+gpiochip0: GPIOs 571-624, parent: platform/1f000d0000.gpio, pinctrl-rp1:
+ gpio-571 (ID_SDA              )
+ gpio-572 (ID_SCL              )
+ gpio-573 (GPIO2               )
+ gpio-574 (GPIO3               )
+ gpio-575 (GPIO4               )
+ gpio-576 (GPIO5               )
+ gpio-577 (GPIO6               )
+ gpio-578 (GPIO7               |spi0 CS1            ) out hi ACTIVE LOW
+ gpio-579 (GPIO8               |spi0 CS0            ) out hi ACTIVE LOW
+ gpio-580 (GPIO9               )
+ gpio-581 (GPIO10              )
+ gpio-582 (GPIO11              )
+ gpio-583 (GPIO12              )
+ gpio-584 (GPIO13              )
+ gpio-585 (GPIO14              )
+ gpio-586 (GPIO15              )
+ gpio-587 (GPIO16              )
+ gpio-588 (GPIO17              )
+ gpio-589 (GPIO18              )
+ gpio-590 (GPIO19              )
+ gpio-591 (GPIO20              )
+ gpio-592 (GPIO21              )
+ gpio-593 (GPIO22              )
+ gpio-594 (GPIO23              )
+ gpio-595 (GPIO24              )
+ gpio-596 (GPIO25              )
+ gpio-597 (GPIO26              )
+ gpio-598 (GPIO27              )
+ gpio-599 (PCIE_RP1_WAKE       )
+ gpio-600 (FAN_TACH            )
+ gpio-601 (HOST_SDA            )
+ gpio-602 (HOST_SCL            )
+ gpio-603 (ETH_RST_N           |phy-reset           ) out hi ACTIVE LOW
+ gpio-604 (-                   )
+ gpio-605 (CD0_IO0_MICCLK      |cam0_reg            ) out lo 
+ gpio-606 (CD0_IO0_MICDAT0     )
+ gpio-607 (RP1_PCIE_CLKREQ_N   )
+ gpio-608 (-                   )
+ gpio-609 (CD0_SDA             )
+ gpio-610 (CD0_SCL             )
+ gpio-611 (CD1_SDA             )
+ gpio-612 (CD1_SCL             )
+ gpio-613 (USB_VBUS_EN         )
+ gpio-614 (USB_OC_N            )
+ gpio-615 (RP1_STAT_LED        |PWR                 ) out hi ACTIVE LOW
+ gpio-616 (FAN_PWM             )
+ gpio-617 (CD1_IO0_MICCLK      |cam1_reg            ) out lo 
+ gpio-618 (2712_WAKE           )
+ gpio-619 (CD1_IO1_MICDAT1     )
+ gpio-620 (EN_MAX_USB_CUR      )
+ gpio-621 (-                   )
+ gpio-622 (-                   )
+ gpio-623 (-                   )
+ gpio-624 (-                   )
+```
+
+システムが debugfs を自動的にマウントしない場合は、まず手動でマウントする必要があります：
+
+```shell
+sudo mount -t debugfs none /sys/kernel/debug
+```
+
+この情報に基づいて、GPIO ピン `gpio-588, gpio-589, gpio-576` とそれに対応する物理ピンアウトインデックス `(GPIO17), (GPIO18), (GPIO5)` の関係を見つけることができます。
+
+:::note
+包括的な GPIO ピンマッピングについては、**Raspberry Pi ピンアウトマッピング**テーブルを参照してください。
+:::
+
+取得した GPIO 情報に基づいて、以下のように `SX1302_RESET_PIN`、`SX1302_POWER_EN_PIN`、`SX1261_RESET_PIN` を変更します：
 
 ```shell
 # GPIO mapping has to be adapted with HW
@@ -513,7 +593,7 @@ SX1261_RESET_PIN=576      # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-`CTRL + x`を押し、続いて`y`と`Enter`を押してテキストエディタを閉じ、これらの変更を保存します。
+`CTRL + x` を押し、続いて `y` と `Enter` を押してテキストエディタを閉じ、これらの変更を保存します。
 
 <br />
 
@@ -622,7 +702,7 @@ exit 0
 
 <br />
 
-使用しているモジュールに基づいて、対応する`global_conf.json.sx1250.xxxxx`で希望するLoRaWANネットワークサーバー`server_address`とゲートウェイEUI `gateway_ID`を選択し、`up/down port`を`1700`に変更します。その後、以下のコードを実行してコンセントレータを開始します：
+使用しているモジュールに基づいて、対応する `global_conf.json.sx1250.xxxxx` で希望する LoRaWAN ネットワークサーバー `server_address` とゲートウェイ EUI `gateway_ID` を選択し、`up/down port` を `1700` に変更します。その後、以下のコードを実行してコンセントレーターを開始します：
 
 
 ```shell
@@ -637,20 +717,20 @@ cd ~/sx1302_hal/packet_forwarder
 ```
 
 </TabItem>
-<TabItem value="WM1302 USB Version" label="WM1302 USBバージョン">
+<TabItem value="WM1302 USB Version" label="WM1302 USB バージョン">
 
-#### ステップ1. WM1302 Raspberry Pi Hatの取り付けとWM1302モジュールのインストール
+#### ステップ1. WM1302 Raspberry Pi Hat の取り付けと WM1302 モジュールのインストール
 
-まずRaspberry Piの電源を切り、以下の写真のようにWM1302モジュールをPi Hatに挿入してネジで固定します。Type CポートをType C USBケーブルでRaspberry PiのUSBポートの1つに接続します。
+まず Raspberry Pi の電源を切り、以下の写真のように WM1302 モジュールを Pi Hat に挿入してネジで固定します。Type C ケーブルを使用して、その Type C ポートを Raspberry Pi の USB ポートの一つに接続します。
 
 <!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki2.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki2.jpg" alt="pir" width={600} height="auto" /></p>
 
-#### ステップ2. Raspbian I2CおよびSPIインターフェースの有効化
+#### ステップ2. Raspbian I2C および SPI インターフェースの有効化
 
-WM1302モジュールはSPIおよびI2C経由でRaspberry Piと通信します。しかし、これら2つのインターフェースはRaspbianではデフォルトで有効になっていないため、開発者はWM1302を使用する前にそれらを有効にする必要があります。ここでは、SPIおよびI2Cインターフェースを有効にするコマンドライン方法を紹介します。
+WM1302 モジュールは SPI と I2C で Raspberry Pi と通信します。しかし、これら2つのインターフェースは Raspbian ではデフォルトで有効になっていないため、WM1302 を使用する前に開発者がそれらを有効にする必要があります。ここでは、SPI と I2C インターフェースを有効にするコマンドライン方式を紹介します。
 
-まず、SSH経由またはモニターを使用してRaspberry Piにログインし（Pi HatのGPSモジュールがPiのハードウェアUARTピンを占有するため、シリアルコンソールは使用しないでください）、コマンドラインで`sudo raspi-config`と入力してRaspberry Piソフトウェア設定ツールを開きます：
+まず、SSH 経由または モニター を使用して Raspberry Pi にログインし（Pi Hat の GPS モジュールが Pi のハードウェア UART ピンを占有するため、シリアルコンソールは使用しないでください）、コマンドラインで `sudo raspi-config` と入力して Raspberry Pi ソフトウェア設定ツールを開きます：
 
 
 ```shell
@@ -660,13 +740,13 @@ sudo raspi-config
 <!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki3.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki3.png" alt="pir" width={600} height="auto" /></p>
 
-1. `Interface Options` を選択します
+1. `Interface Options` を選択
 
-2. `SPI` を選択し、`Yes` を選択して有効にします
+2. `SPI` を選択し、`Yes` を選択して有効にする
 
-3. `I2C` を選択し、`Yes` を選択して有効にします
+3. `I2C` を選択し、`Yes` を選択して有効にする
 
-4. `Serial Port` を選択し、"Would you like a login shell..." に対して `No` を選択し、"Would you like the serial port hardware..." に対して `Yes` を選択します
+4. `Serial Port` を選択し、"Would you like a login shell..." に対して `No` を選択し、"Would you like the serial port hardware..." に対して `Yes` を選択する
 
 5. この後、これらの設定が動作することを確認するために Raspberry Pi を再起動してください。
 
@@ -764,9 +844,9 @@ cd ~/sx1302_hal/packet_forwarder
 
 ---
 
-これで、パケットフォワーダーが正常に動作できるようになりました。LoRaWAN ネットワークサーバー（TTN や ChripStack など）にデータを正常に転送するには、サーバー側でいくつかの設定を行う必要があります。
+これで、パケットフォワーダーが正常に動作できるようになりました。LoRaWAN ネットワークサーバー（TTN や ChirpStack など）にデータを正常に転送するには、サーバー側でいくつかの設定を行う必要があります。
 
-そのためには、まず構築した Raspberry Pi ゲートウェイを LoRa ネットワークサーバーに登録する必要があります。[TTN](https://www.thethingsindustries.com/docs/getting-started/) を例に取ると、[TTN コンソール](https://eu1.cloud.thethings.network/console) にログインし、左側のパネルの `Gateways` ボタンをクリックして `Register gateway` をクリックします。`Gateway EUI`、`Gateway Server address`、`Frequency plan` を入力し、他のオプションはデフォルト設定のままにします。
+そのためには、まず構築した Raspberry Pi ゲートウェイを LoRa ネットワークサーバーに登録する必要があります。[TTN](https://www.thethingsindustries.com/docs/getting-started/) を例に取ると、[TTN コンソール](https://eu1.cloud.thethings.network/console) にログインし、左側パネルの `Gateways` ボタンをクリックして `Register gateway` をクリックします。`Gateway EUI`、`Gateway Server address`、`Frequency plan` を入力し、他のオプションはデフォルト設定のままにします。
 
 - **Gateway EUI:** ゲートウェイの 64 ビット一意識別子。
 
@@ -793,12 +873,12 @@ cd ~/sx1302_hal/packet_forwarder
     ...
 ```
 
-`./lora_pkt_fwd -c global_conf.json.sx1250.xxxxx` コマンドを使用して `lora_pkt_fwd` を再起動すると、Raspberry Pi ゲートウェイが TTN に接続されていることを確認できるはずです。
+コマンド `./lora_pkt_fwd -c global_conf.json.sx1250.xxxxx` を使用して `lora_pkt_fwd` を再起動すると、Raspberry Pi ゲートウェイが TTN に接続されていることを確認できるはずです。
 
 ## FAQ
 
 <details>
-<summary>すべての設定が正しくても、デバイスがネットワークサーバーに参加できないのはなぜですか？</summary>
+<summary>すべての設定が正しくてもデバイスがネットワークサーバーに参加できないのはなぜですか？</summary>
 
 <br />
 
@@ -820,7 +900,7 @@ cd ~/sx1302_hal/packet_forwarder
 
 技術的な問題については、[フォーラム](http://forum.seeedstudio.com/) に投稿してください。
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

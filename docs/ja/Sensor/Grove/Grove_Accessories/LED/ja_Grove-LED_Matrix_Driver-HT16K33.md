@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-LED_Matrix_Driver-HT16K33
+sku: 105020074
 last_update:
   date: 05/15/2025
   author: shuxu hu

@@ -4,6 +4,7 @@ description: |
   Un dispositivo inteligente de Seeed Studio diseñado para controlar dispositivos de forma inalámbrica con voltaje DC seguro.
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/7-114993588_6_CH_Relay_Sensor_feature.webp
 slug: /es/6_channel_wifi_relay
+sku: 114993588
 keywords:
   - XIAO
   - Home Assistant

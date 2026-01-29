@@ -1,5 +1,5 @@
 ---
-description: Esta wiki proporciona una introducción completa a las características de hardware y uso de interfaces de la placa portadora reComputer Jetson Robotics J501-Mini. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como M.2, Ethernet, USB, CAN, UART, DI/DO, I2S y expansión de cámara GMSL2, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J501-Mini.
+description: Este wiki proporciona una introducción completa a las características de hardware y uso de interfaces de la placa portadora reComputer Jetson Robotics J501-Mini. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como M.2, Ethernet, USB, CAN, UART, DI/DO, I2S y expansión de cámara GMSL2, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J501-Mini.
 title: Flash Jetpack && Uso de Interfaces
 tags:
   - J501-Robotics carrier board
@@ -10,6 +10,7 @@ tags:
   - Hardware
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
 slug: /es/recomputer_j501_mini_getting_started
+sku: 100020039
 last_update:
   date: 11/04/2025
   author: Dayu
@@ -57,14 +58,14 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
 - Manual de Usuario x 1
 
 :::note
-1.Por favor diseñe una solución robusta de disipación de calor según la Guía de Diseño Térmico, cuando esté en fuente de alimentación de alto voltaje y temperatura de operación.
+1.Por favor diseñe una solución robusta de disipación de calor según la Guía de Diseño Térmico, cuando esté en suministro de alta tensión y temperatura de operación.
 2.Por favor adjunte disipador de calor para el módulo para mejor rendimiento.
-3.Durante la operación con entrada de alto voltaje y alta carga, por favor no toque el disipador de calor para prevenir quemaduras.
+3.Durante la operación con entrada de alta tensión y alta carga, por favor no toque el disipador de calor para prevenir quemaduras.
 4.Recomendación de Adaptador de Energía para Validación, por favor use el adaptador de energía recomendado en el sitio web oficial de Seeed.
 
 - Adaptador de Energía 19V/4.74A 5525 Barrel Jack
-- Asegure que se cumplan los requisitos máximos de consumo de energía.
-2.Compatibilidad de Cable de Alimentación AC
+- Asegúrese de que se cumplan los requisitos máximos de consumo de energía.
+2.Compatibilidad del Cable de Alimentación AC
 - Compre cables de alimentación AC trébol específicos de la región según su ubicación.
 3.Compatibilidad de Accesorios
 - Use solo accesorios oficialmente recomendados (ej., módulos inalámbricos, cámaras, periféricos) para rendimiento y compatibilidad óptimos.
@@ -205,8 +206,8 @@ Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1
 
 :::info
 
-Recomendamos que uses dispositivos host ubuntu físicos en lugar de máquinas virtuales.
-Por favor consulta la tabla a continuación para preparar la máquina host.
+Recomendamos que use dispositivos host ubuntu físicos en lugar de máquinas virtuales.
+Por favor consulte la tabla a continuación para preparar la máquina host.
 
 <table style={{textAlign: 'center'}}>
   <tbody>
@@ -232,7 +233,7 @@ Por favor consulta la tabla a continuación para preparar la máquina host.
 
 ### Preparar la Imagen Jetpack
 
-Aquí, necesitamos descargar la imagen del sistema a nuestra PC Ubuntu correspondiente al módulo Jetson que estamos usando:
+Aquí, necesitamos descargar la imagen del sistema a nuestro PC Ubuntu correspondiente al módulo Jetson que estamos usando:
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -264,19 +265,19 @@ Aquí, necesitamos descargar la imagen del sistema a nuestra PC Ubuntu correspon
 </div>
 
 :::danger
-El archivo de imagen Jetpack6 tiene aproximadamente **14.2GB** de tamaño y debería tomar alrededor de 60 minutos para descargar. Por favor espere pacientemente a que se complete la descarga.
+El archivo de imagen Jetpack6 tiene aproximadamente **14.2GB** de tamaño y debería tomar alrededor de 60 minutos para descargar. Por favor espere amablemente a que se complete la descarga.
 :::
 
 :::info
-Para verificar la integridad del firmware descargado, puedes comparar el valor hash SHA256.
+Para verificar la integridad del firmware descargado, puede comparar el valor hash SHA256.
 
-En una máquina host Ubuntu, abre la terminal y ejecuta el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en la wiki, confirma que el firmware que descargaste está completo e intacto.
+En una máquina host Ubuntu, abra la terminal y ejecute el comando `sha256sum <File>` para obtener el valor hash SHA256 del archivo descargado. Si el hash resultante coincide con el hash SHA256 proporcionado en el wiki, confirma que el firmware que descargó está completo e intacto.
 :::
 
 ⚙️ **Todos los archivos `.dts` y otro código fuente para las placas portadoras Jetson de SEEED pueden descargarse desde** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra)
 
 
-### Entrar al Modo Force Recovery
+### Entrar en Modo Force Recovery
 
 :::info
 Antes de que podamos continuar con los pasos de instalación, necesitamos asegurarnos de que la placa esté en modo force recovery.
@@ -286,21 +287,21 @@ Antes de que podamos continuar con los pasos de instalación, necesitamos asegur
 
 <summary> Paso a Paso </summary>
 
-**Paso 1.** Mantén presionado el botón al modo RESET.
+**Paso 1.** Mantenga presionado el botón al modo RESET.
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
 </div>
 
-**Paso 2.** Enciende la placa portadora conectando el cable de alimentación, luego suelta el botón REST.
+**Paso 2.** Encienda la placa portadora conectando el cable de alimentación, luego suelte el botón **REC**.
 
-**Paso 3.** Conecta la placa a la PC host Ubuntu con un cable de transmisión de datos USB Tipo-C.
+**Paso 3.** Conecte la placa al PC host Ubuntu con un cable de transmisión de datos USB Tipo-C.
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png" />
 </div>
 
-**Paso 4.** En la PC host Linux, abre una ventana de Terminal e ingresa el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el SoM Jetson que uses, entonces la placa está en modo force recovery.
+**Paso 4.** En el PC host Linux, abra una ventana de Terminal e ingrese el comando `lsusb`. Si el contenido devuelto tiene una de las siguientes salidas según el SoM Jetson que use, entonces la placa está en modo force recovery.
 
 - Para AGX Orin 32GB: **0955:7223 NVidia Corp**
 - Para AGX Orin 64GB: **0955:7023 NVidia Corp**
@@ -445,7 +446,7 @@ La funcionalidad Bluetooth está disponible a través del slot M.2 Key E.
 
 ## Ethernet
 
-La placa portadora Robotics j501-Mini cuenta con 2 puertos Ethernet RJ45 de 1Gbps para conectividad de red cableada de alta velocidad.
+La placa portadora Robotics j501-Mini cuenta con un puerto Ethernet RJ45 de 1Gbps y uno de 10Gbps para conectividad de red cableada de alta velocidad.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/ethernet-real.png"/>
@@ -546,7 +547,7 @@ Usando este puerto serie, a través del cable de datos USB-C, puedes monitorear 
 </div>
 
 
-En tu PC (no el Jetson), instala una herramienta de inicio de sesión por puerto serie e inicia sesión en `/dev/ttyUSB0` (también podría ser `ttyUSB1`, 2):
+En tu PC (no el Jetson), instala una herramienta de inicio de sesión de puerto serie e inicia sesión en `/dev/ttyUSB0` (también podría ser `ttyUSB1`, 2):
 
 ```bash
 sudo apt update
@@ -565,7 +566,7 @@ Luego puedes controlar la terminal del Jetson a través del puerto serie en otro
 
 El reComputer Jetson Robotics j501-Mini está equipado con: 
 
-- 1x Conector de Ventilador de 4 Pines (12V PWM): Compatible con ventiladores PWM estándar de 12V, también soporta control preciso de velocidad, haciéndolo ideal para requisitos de refrigeración de alto rendimiento.
+- 1x Conector de Ventilador de 4 Pines (12V PWM): Compatible con ventiladores PWM estándar de 12V, también soporta control de velocidad preciso, haciéndolo ideal para requisitos de refrigeración de alto rendimiento.
 
 ### Conexión de Hardware
 
@@ -615,7 +616,7 @@ Adicionalmente, podemos establecer manualmente la velocidad del ventilador usand
 
 ## CAN
 
-CAN (Controller Area Network) es un estándar robusto de bus vehicular que permite a los microcontroladores y dispositivos comunicarse entre sí sin una computadora host.  
+CAN (Controller Area Network) es un estándar robusto de bus vehicular que permite a microcontroladores y dispositivos comunicarse entre sí sin una computadora host.  
 
 El J501 Mini proporciona dos interfaces CAN integradas en el JST de 4 pines (GH1.25). Adicionalmente, ambas interfaces CAN **soportan CAN-FD**, con CAN0 y CAN1 mostrados a continuación:
 
@@ -648,7 +649,7 @@ Esta sección conecta CAN0 y CAN1 en el Jetson para demostrar cómo enviar y rec
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/CAN-connect.png"/>
 </div>
 
-Las resistencias de terminación para CAN0 y CAN1 pueden controlarse a través de dos pines: PAA.04, ubicado en gpiochip1 line4, y PAA.07, ubicado en gpiochip1 line7.
+Las resistencias de terminación para CAN0 y CAN1 pueden controlarse a través de dos pines: PAA.04, ubicado en gpiochip1 línea4, y PAA.07, ubicado en gpiochip1 línea7.
 
 El control de resistencias de terminación sigue estas reglas:
 ```
@@ -690,7 +691,7 @@ Crea `test_can.sh` para probar la transmisión y recepción de datos entre **CAN
 ```bash
 touch test_can.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
 El código del script para `test_can.sh` es el siguiente:
 
@@ -754,7 +755,7 @@ Crea `test_canfd.sh` para probar la transmisión y recepción de datos entre CAN
 ```bash
 touch test_canfd.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
 El código del script para `test_canfdfd.sh` es el siguiente:
 
@@ -946,7 +947,7 @@ sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
 sudo vim /boot/extlinux/extlinux.conf
 ```
 
-Basado en el nombre del archivo de árbol de dispositivos que estás usando, agrega una línea `FDT=/tu_ruta` en `extlinux.conf`. Tomando AGX Orin 32G como ejemplo:
+Basándote en el nombre del archivo de árbol de dispositivos que estás usando, agrega una línea `FDT=/tu_ruta` en `extlinux.conf`. Tomando AGX Orin 32G como ejemplo:
 
 ```python
 LABEL primary
@@ -1241,7 +1242,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 </div>
 
 :::note
-Hay tres archivos overlay en total, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4, y Orbbec Gemini 335Lg. Estos corresponden a la cámara 3G de SG3S, la cámara 6G de SG2 y SG8S, y la cámara de Orbbec respectivamente. Como se muestra en la Figura 3, configura el archivo io según el modelo de tu cámara.
+Hay tres archivos de superposición en total, a saber, Seeed GMSL 1X4 3G, Seeed GMSL 1X4 6G, Seeed GMSL 1X4, y Orbbec Gemini 335Lg. Estos corresponden a la cámara 3G de SG3S, la cámara 6G de SG2 y SG8S, y la cámara de Orbbec respectivamente. Como se muestra en la Figura 3, configura el archivo io según el modelo de tu cámara.
 :::
 
 **paso 2.** Instala las herramientas de configuración de interfaz de video.
@@ -1332,19 +1333,19 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video0 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video1 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video2 ! \
 'video/x-raw,width=1920,height=1536,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video3 ! \
 'video/x-raw,width=3840,height=2160,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 ```
 
 <div align="center">
@@ -1357,7 +1358,7 @@ El Robotics J501 Mini está equipado con un HDMI para salida de pantalla de alta
 
 ## Recursos
 
-- [Esquemático de la Placa Portadora reComputer Robotics J501-Mini](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/reComputer_mini_J501_datasheet.pdf)
+- [Esquemático de la Placa Portadora reComputer Robotics J501-Mini](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
 
 <!-- - [reComputer Robotics J501-Mini Carrier Board Datasheet]() -->
 

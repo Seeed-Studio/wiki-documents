@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/wio_gps_board/
 slug: /ja/wio_gps_board
+sku: 102990824
 last_update:
   date: 05/15/2025
   author: gunengyu

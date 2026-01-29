@@ -5,8 +5,9 @@ keywords:
 - SenseCAP_T2000_tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
 slug: /es/SenseCAP_T2000_tracker/Introduction
+sku: 100082900,100057727,100087298
 last_update:
-  date: 12/23/2025
+  date: 1/5/2026
   author: Janet
 ---
 
@@ -31,7 +32,7 @@ last_update:
 
 || [SenseCAP T2000-A](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html) | [SenseCAP T2000-B](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-B-p-6581.html) | [SenseCAP T2000-C](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-C-p-6582.html) |
 |:---|:---:|:---:|:---:|
-| **Temperatura de operación** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-20 ~ 60℃</div> |
+| **Temperatura de operación** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-40 ~ 85℃</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>-20 ~ 60℃<br />(Carga: 0~45℃)</div> |
 | **Fuente de Alimentación** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>Batería integrada</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>Batería integrada</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>Batería recargable integrada + Panel Solar de 0.5W</div> |
 | **Capacidad de Batería** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>8000mAh</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>8000mAh</div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}>4000mAh</div> |
 | **Modo de Posicionamiento** | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li><li>WiFi</li></ul></div></div> | <div style={{"textAlign":"center","display":"flex","alignItems":"center","justifyContent":"center","height":"100%","padding":"8px 0"}}><div style={{"textAlign":"left"}}><ul style={{"margin":"0","padding":"0 0 0 16px","listStylePosition":"outside"}}><li>GNSS</li><li>Bluetooth</li></ul></div></div> |
@@ -86,7 +87,7 @@ Construidos con una batería de 8000 mAh, permitiéndoles operar por más de un 
 **T2000-C (con Panel Solar)**  
 Equipado con un panel solar de 0.5 W y una batería recargable de 4000 mAh, el T2000-C soporta operación de múltiples años y bajo mantenimiento bajo luz solar regular e intervalos de enlace ascendente moderados.
 
-*La vida real de la batería varía con el intervalo de enlace ascendente, modo de posicionamiento y entorno de implementación. Use la [Calculadora de Vida de Batería](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Trcaker_Battery_Life_Calculator_T2000.xlsx) para detalles.
+*La vida real de la batería varía con el intervalo de enlace ascendente, modo de posicionamiento y entorno de implementación. Use la [Calculadora de Vida de Batería](https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_Tracker_Battery_Life_Calculator_T2000.xlsx) para detalles.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Battery_Life.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -94,7 +95,7 @@ Equipado con un panel solar de 0.5 W y una batería recargable de 4000 mAh, el T
 
 ### Seguridad Activa
 
-- **Alerta Anti-Manipulación**: Una vez instalado, el botón anti-manipulación trasero permanece activado. En el momento en que el dispositivo es removido, instantáneamente activa una alarma de máxima prioridad para proteger sus activos principales.
+- **Alerta Anti-Manipulación**: Una vez instalado, el botón anti-manipulación trasero permanece activado. En el momento que el dispositivo es removido, instantáneamente activa una alarma de máxima prioridad para proteger sus activos principales.
 - **Detección de Vibración y Movimiento**: Acelerómetro de 3 ejes integrado, monitoreando actividad sospechosa en tiempo real, previniendo incidentes antes de que escalen.
 - **Notificaciones Instantáneas**: Entrega alertas críticas directamente a su teléfono en segundos, permitiéndole actuar inmediatamente.
 
@@ -140,7 +141,7 @@ Los Rastreadores de Activos SenseCAP T2000 Serie son la solución ideal para ges
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/SenseCAP_T2000_Tracker_Application.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **Agricultura Inteligente**: Seguimiento y programación de maquinaria agrícola grande como tractores y cosechadoras, registro de horas de trabajo y prevención de robos; Monitoreo del rango de actividad de ganado grande como ganado vacuno y caballos.
+- **Agricultura Inteligente**: Seguimiento y programación de maquinaria agrícola grande como tractores y cosechadoras, registro de horas de trabajo y prevención de robos; Monitoreo del rango de actividad de ganado grande como vacas y caballos.
 - **Construcción e Ingeniería**: Antirrobo, seguimiento de ubicación y análisis de utilización de maquinaria pesada como excavadoras, bulldozers y grúas; Gestión de equipos de alquiler como generadores.
 - **Logística y Transporte**: Seguimiento integral y monitoreo de seguridad de contenedores de envío internacional, remolques grandes, vagones de carga ferroviaria y carga de cadena de frío.
 

@@ -6,9 +6,10 @@ keywords:
   - docusaurus
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /es/WM1302_module
+sku: 114992549, 114992550, 114992629, 114992628, 113100022, 114992967, 114992969, 114992991, 100021717, 114993268
 last_update:
-  date: 4/24/2025
-  author: Leo
+  date: 12/15/2025
+  author: David Du
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
@@ -27,13 +28,17 @@ Haz clic [aquí](https://www.seeedstudio.com/lora-c-755.html?product_list_stock=
 Para aprender más sobre la creación de un Nodo Final LoRaWAN® con el Paquete MCU STM32Cube para la serie STM32WL (SDK), para unirse y enviar datos a la Red LoRaWAN®, lee más en las páginas wiki para [placas de desarrollo mini](https://wiki.seeedstudio.com/es/LoRa_E5_mini/) y [Kit de Desarrollo](https://wiki.seeedstudio.com/es/LoRa_E5_Dev_Board/).
 :::
 
-El módulo WM1302 es una nueva generación de módulo gateway LoRaWAN® con factor de forma mini-PCIe. Basado en el chip LoRaWAN® de banda base Semtech® SX1302, el WM1302 desbloquea el mayor potencial de capacidad de transmisión inalámbrica de largo alcance para productos gateway. Presenta mayor sensibilidad, menor consumo de energía y menor temperatura de operación que los chips LoRa® anteriores SX1301 y SX1308.
+:::note
+El módulo WM1302 ofrece dos versiones de interfaz distintas. La versión `SPI` es actualmente la opción principal. Si prefieres la versión `USB`, las modificaciones de hardware requieren ciertos ajustes al firmware oficial original para que el módulo funcione correctamente. Para más detalles, consulta la sección **FAQ**.
+:::
+
+El módulo WM1302 es una nueva generación de módulo gateway LoRaWAN® con factor de forma mini-PCIe. Basado en el chip LoRaWAN® de banda base Semtech® SX1302, WM1302 desbloquea el mayor potencial de capacidad de transmisión inalámbrica de largo alcance para productos gateway. Presenta mayor sensibilidad, menor consumo de energía y menor temperatura de operación que los chips LoRa® anteriores SX1301 y SX1308.
 
 El módulo gateway LoRaWAN® WM1302 tiene versiones SPI y USB en las bandas de frecuencia US915 y EU868, permitiéndote tener una amplia gama de opciones de planes de frecuencia LoRaWAN® para elegir incluyendo EU868, US915, AS923, AS920, AU915, KR920 e IN865.
 
 El módulo WM1302 está certificado CE, FCC y Telec, lo que ayuda a simplificar el proceso de desarrollo y certificación de los dispositivos gateway LoRaWAN®.
 
-El WM1302 está diseñado para aplicaciones M2M e IoT y puede ser ampliamente aplicado en escenarios compatibles con gateway LPWAN. Sería una elección perfecta para reducir significativamente las dificultades técnicas y el tiempo de consumo al desarrollar dispositivos gateway LoRa®, incluyendo gateway LoRaWAN®, hotspots, etc.
+WM1302 está diseñado para aplicaciones M2M e IoT y puede ser ampliamente aplicado en escenarios compatibles con gateway LPWAN. Sería una elección perfecta para reducir significativamente las dificultades técnicas y el tiempo de consumo al desarrollar dispositivos gateway LoRa®, incluyendo gateway LoRaWAN®, hotspots, etc.
 
 ## Características
 
@@ -43,7 +48,7 @@ El WM1302 está diseñado para aplicaciones M2M e IoT y puede ser ampliamente ap
 - **Alta sensibilidad** hasta -139 dBm @SF12 con front-end TX/RX SX1250; potencia TX hasta 26 dBm @3.3V.
 - **Certificado con CE, FCC y TELEC**. Simplifica el proceso de certificación del producto final.
 
-## Descripción General del Hardware
+## Descripción del Hardware
 
 ### Diagrama
 
@@ -64,7 +69,7 @@ El WM1302 está diseñado para aplicaciones M2M e IoT y puede ser ampliamente ap
 <table class="tg">
 <thead>
 <tr>
-<th class="tg-4onr">Pin No. 40 (BOARD#)</th><th class="tg-ev79">Raspberry Pi GPIO(BCM#)</th><th class="tg-ev79">Pinout WM1302 Pi HAT</th>
+<th class="tg-4onr">Pin 40 No.(BOARD#)</th><th class="tg-ev79">Raspberry Pi GPIO(BCM#)</th><th class="tg-ev79">Pinout WM1302 Pi HAT</th>
 </tr>
 </thead>
 <tbody>
@@ -377,7 +382,7 @@ El WM1302 está diseñado para aplicaciones M2M e IoT y puede ser ampliamente ap
 
 - Desarrollo de dispositivos Gateway LPWAN
 
-- Desarrollo de cualquier aplicación de comunicación inalámbrica de larga distancia
+- Desarrollo de aplicaciones de comunicación inalámbrica de larga distancia
 
 - Aprendizaje e investigación de aplicaciones LoRa® y LoRaWAN®
 
@@ -404,13 +409,13 @@ Para el Módulo Gateway LoRaWAN® WM1302 versión USB, los chips Semtech SX1302 
 
 - WM1302 Pi Hat para Raspberry Pi
 
-- Adaptador de Alimentación para Raspberry Pi
+- Adaptador de Corriente para Raspberry Pi
 
 - Una antena LoRa®
 
 - Una tarjeta SD de 8G o mayor y un lector de tarjetas
 
-- Un cable USB Type C si usas el Módulo Gateway LoRaWAN® WM1302 versión USB
+- Un cable USB Tipo C si usa el Módulo Gateway LoRaWAN® WM1302 versión USB
 
 #### Software Requerido
 
@@ -428,11 +433,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="WM1302 SPI Version" label="Versión SPI WM1302">
+<TabItem value="WM1302 SPI Version" label="WM1302 Versión SPI">
 
 #### Paso1. Montaje del WM1302 Raspberry Pi Hat e instalación del módulo WM1302
 
-Apaga primero la Raspberry Pi, inserta el módulo WM1302 en el Pi Hat como se muestra en la siguiente imagen y atorníllalo.
+Apague primero la Raspberry Pi, inserte el módulo WM1302 en el Pi Hat como se muestra en la siguiente imagen y atorníllelo.
 
 <!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki1.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki1.jpg" alt="pir" width={600} height="auto" /></p>
@@ -442,7 +447,7 @@ Apaga primero la Raspberry Pi, inserta el módulo WM1302 en el Pi Hat como se mu
 
 El módulo WM1302 se comunica con Raspberry Pi a través de las interfaces SPI e I2C. Pero estas dos interfaces no están habilitadas por defecto en Raspbian, por lo que el desarrollador necesita habilitarlas antes de usar WM1302. Aquí, introducimos una forma de línea de comandos para habilitar las interfaces SPI e I2C.
 
-Primero, inicia sesión en Raspberry Pi vía SSH o usando un monitor (no uses la consola serie ya que el módulo GPS en el Pi Hat toma control de los pines UART de hardware del Pi), luego escribe `sudo raspi-config` en la línea de comandos para abrir la Herramienta de Configuración de Software de Raspberry Pi:
+Primero, inicie sesión en Raspberry Pi vía SSH o usando un monitor (no use la consola serie ya que el módulo GPS en el Pi Hat toma control de los pines UART de hardware del Pi), luego escriba `sudo raspi-config` en la línea de comandos para abrir la Herramienta de Configuración de Software de Raspberry Pi:
 
 ```shell
 sudo raspi-config
@@ -451,15 +456,15 @@ sudo raspi-config
 <!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki3.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki3.png" alt="pir" width={600} height="auto" /></p>
 
-1. Selecciona `Interface Options`
+1. Seleccione `Interface Options`
 
-2. Selecciona `SPI`, luego selecciona `Yes` para habilitarlo
+2. Seleccione `SPI`, luego seleccione `Yes` para habilitarlo
 
-3. Selecciona `I2C`, luego selecciona `Yes` para habilitarlo
+3. Seleccione `I2C`, luego seleccione `Yes` para habilitarlo
 
-4. Selecciona `Serial Port`, luego selecciona `No` para "Would you like a login shell..." y selecciona `Yes` para "Would you like the serial port hardware..."
+4. Seleccione `Serial Port`, luego seleccione `No` para "Would you like a login shell..." y seleccione `Yes` para "Would you like the serial port hardware..."
 
-5. Después de esto, por favor reinicia Raspberry Pi para asegurar que estas configuraciones funcionen.
+5. Después de esto, por favor reinicie Raspberry Pi para asegurar que estas configuraciones funcionen.
 
 #### Paso3. Obtener y compilar el código fuente SX1302
 
@@ -472,7 +477,7 @@ cd ~
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-Muévete a la carpeta `sx1302_hal` y compila todo:
+Muévase a la carpeta `sx1302_hal` y compile todo:
 
 ```shell
 cd ~/sx1302_hal
@@ -481,7 +486,7 @@ make
 
 #### Paso4. Ejecutar el reenviador de paquetes Semtech SX1302
 
-Copia `reset_lgw.sh` a la carpeta `packet_forwarder`, y modifica el `reset pin` para SX1302 y SX1261 en el script `reset_lgw.sh` con el editor de texto `nano`:
+Copie `reset_lgw.sh` a la carpeta `packet_forwarder`, y modifique el `reset pin` para SX1302 y SX1261 en el script `reset_lgw.sh` con el editor de texto `nano`:
 
 ```shell
 cp tools/reset_lgw.sh packet_forwarder/
@@ -489,7 +494,7 @@ cd packet_forwarder
 nano tools/reset_lgw.sh
 ```
 
-Verás el `reset pin` por defecto como sigue:
+Verá el `reset pin` por defecto como sigue:
 
 ```shell
 # GPIO mapping has to be adapted with HW
@@ -501,7 +506,82 @@ SX1261_RESET_PIN=22     # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-Modifica el `SX1302_RESET_PIN`, `SX1302_POWER_EN_PIN` y `SX1261_RESET_PIN` como sigue:
+Aquí usamos el comando `cat /sys/kernel/debug/gpio`, que es una interfaz de depuración proporcionada por el sistema de archivos `debugfs` del kernel. Se usa principalmente para monitorear el estado en tiempo real de todos los pines GPIO en la Raspberry Pi.
+
+`gpiochip0` es lo que realmente nos interesa: El módulo WM1302 se conecta a la Raspberry Pi a través del conector de 40 pines del Pi HAT, y todo esto es gestionado por este controlador.
+
+```shell
+pi@raspberrypi:~/sx1302_hal/packet_forwarder $ cat /sys/kernel/debug/gpio
+gpiochip0: GPIOs 571-624, parent: platform/1f000d0000.gpio, pinctrl-rp1:
+ gpio-571 (ID_SDA              )
+ gpio-572 (ID_SCL              )
+ gpio-573 (GPIO2               )
+ gpio-574 (GPIO3               )
+ gpio-575 (GPIO4               )
+ gpio-576 (GPIO5               )
+ gpio-577 (GPIO6               )
+ gpio-578 (GPIO7               |spi0 CS1            ) out hi ACTIVE LOW
+ gpio-579 (GPIO8               |spi0 CS0            ) out hi ACTIVE LOW
+ gpio-580 (GPIO9               )
+ gpio-581 (GPIO10              )
+ gpio-582 (GPIO11              )
+ gpio-583 (GPIO12              )
+ gpio-584 (GPIO13              )
+ gpio-585 (GPIO14              )
+ gpio-586 (GPIO15              )
+ gpio-587 (GPIO16              )
+ gpio-588 (GPIO17              )
+ gpio-589 (GPIO18              )
+ gpio-590 (GPIO19              )
+ gpio-591 (GPIO20              )
+ gpio-592 (GPIO21              )
+ gpio-593 (GPIO22              )
+ gpio-594 (GPIO23              )
+ gpio-595 (GPIO24              )
+ gpio-596 (GPIO25              )
+ gpio-597 (GPIO26              )
+ gpio-598 (GPIO27              )
+ gpio-599 (PCIE_RP1_WAKE       )
+ gpio-600 (FAN_TACH            )
+ gpio-601 (HOST_SDA            )
+ gpio-602 (HOST_SCL            )
+ gpio-603 (ETH_RST_N           |phy-reset           ) out hi ACTIVE LOW
+ gpio-604 (-                   )
+ gpio-605 (CD0_IO0_MICCLK      |cam0_reg            ) out lo 
+ gpio-606 (CD0_IO0_MICDAT0     )
+ gpio-607 (RP1_PCIE_CLKREQ_N   )
+ gpio-608 (-                   )
+ gpio-609 (CD0_SDA             )
+ gpio-610 (CD0_SCL             )
+ gpio-611 (CD1_SDA             )
+ gpio-612 (CD1_SCL             )
+ gpio-613 (USB_VBUS_EN         )
+ gpio-614 (USB_OC_N            )
+ gpio-615 (RP1_STAT_LED        |PWR                 ) out hi ACTIVE LOW
+ gpio-616 (FAN_PWM             )
+ gpio-617 (CD1_IO0_MICCLK      |cam1_reg            ) out lo 
+ gpio-618 (2712_WAKE           )
+ gpio-619 (CD1_IO1_MICDAT1     )
+ gpio-620 (EN_MAX_USB_CUR      )
+ gpio-621 (-                   )
+ gpio-622 (-                   )
+ gpio-623 (-                   )
+ gpio-624 (-                   )
+```
+
+Si su sistema no monta automáticamente debugfs, debe montarlo manualmente primero:
+
+```shell
+sudo mount -t debugfs none /sys/kernel/debug
+```
+
+Según la información, podemos encontrar la relación entre los pines GPIO `gpio-588, gpio-589, gpio-576` y su índice de pinout físico correspondiente `(GPIO17), (GPIO18), (GPIO5)`.
+
+:::note
+Por favor consulte la tabla **Mapeo de Pinout de Raspberry Pi** para los mapeos completos de pines GPIO.
+:::
+
+Modifique el `SX1302_RESET_PIN`, `SX1302_POWER_EN_PIN` y `SX1261_RESET_PIN` basándose en la información GPIO que obtuvimos como sigue:
 
 ```shell
 # GPIO mapping has to be adapted with HW
@@ -513,11 +593,11 @@ SX1261_RESET_PIN=576      # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-Guarda estos cambios presionando `CTRL + x`, seguido de `y` y `Enter` para cerrar el editor de texto.
+Guarde estos cambios presionando `CTRL + x`, seguido de `y` y `Enter` para cerrar el editor de texto.
 
 <br />
 
-También puedes consultar el script completo a continuación:
+También puede consultar el script completo a continuación:
 
 <details>
 <summary>reset_lgw.sh</summary>
@@ -622,7 +702,7 @@ exit 0
 
 <br />
 
-Elige tu Servidor de Red LoRaWAN preferido `server_address` y el EUI del gateway `gateway_ID` en el correspondiente `global_conf.json.sx1250.xxxxx` basado en el módulo que estés usando, y modifica el `up/down port` a `1700`. Luego ejecuta el siguiente código para iniciar el concentrador:
+Elige tu servidor de red LoRaWAN preferido `server_address` y el EUI del gateway `gateway_ID` en el correspondiente `global_conf.json.sx1250.xxxxx` basado en el módulo que estés usando, y modifica el `puerto up/down` a `1700`. Luego ejecuta el siguiente código para iniciar el concentrador:
 
 
 ```shell
@@ -639,18 +719,18 @@ cd ~/sx1302_hal/packet_forwarder
 </TabItem>
 <TabItem value="WM1302 USB Version" label="Versión USB WM1302">
 
-#### Paso1. Montaje del WM1302 Raspberry Pi Hat e instalación del módulo WM1302
+#### Paso 1. Montaje del WM1302 Raspberry Pi Hat e instalación del módulo WM1302
 
-Apaga primero la Raspberry Pi, inserta el módulo WM1302 en el Pi Hat como se muestra en la siguiente imagen y atorníllalo. Conecta su puerto Type C a uno de los puertos USB de Raspberry Pi con un cable USB Type C.
+Apaga primero la Raspberry Pi, inserta el módulo WM1302 en el Pi Hat como se muestra en la siguiente imagen y atorníllalo. Conecta su puerto Type C a uno de los puertos USB de la Raspberry Pi con un cable USB Type C.
 
 <!-- ![](https://files.seeedstudio.com/products/114992549/WM1302_Wiki2.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114992549/WM1302_Wiki2.jpg" alt="pir" width={600} height="auto" /></p>
 
-#### Paso2. Habilitar las interfaces I2C y SPI de Raspbian
+#### Paso 2. Habilitar las interfaces I2C y SPI de Raspbian
 
-El módulo WM1302 se comunica con Raspberry Pi con SPI e I2C. Pero estas dos interfaces no están habilitadas por defecto en Raspbian, por lo que el desarrollador necesita habilitarlas antes de usar WM1302. Aquí, introducimos una forma de línea de comandos para habilitar las interfaces SPI e I2C.
+El módulo WM1302 se comunica con la Raspberry Pi mediante SPI e I2C. Pero estas dos interfaces no están habilitadas por defecto en Raspbian, por lo que el desarrollador necesita habilitarlas antes de usar WM1302. Aquí, introducimos una forma de línea de comandos para habilitar las interfaces SPI e I2C.
 
-Primero, inicia sesión en Raspberry Pi vía SSH o usando un monitor (no uses la consola serie ya que el módulo GPS en el Pi Hat toma control de los pines UART de hardware del Pi), luego escribe `sudo raspi-config` en la línea de comandos para abrir la Herramienta de Configuración de Software de Raspberry Pi:
+Primero, inicia sesión en la Raspberry Pi vía SSH o usando un monitor (no uses la consola serie ya que el módulo GPS en el Pi Hat toma control de los pines UART de hardware del Pi), luego escribe `sudo raspi-config` en la línea de comandos para abrir la Herramienta de Configuración de Software de Raspberry Pi:
 
 
 ```shell
@@ -670,9 +750,9 @@ sudo raspi-config
 
 5. Después de esto, por favor reinicia la Raspberry Pi para asegurar que estas configuraciones funcionen.
 
-#### Paso 3. Obtener y compilar el código fuente de SX1302
+#### Paso 3. Obtener y compilar el código fuente SX1302
 
-Ahora instalemos `git` y descarguemos `sx1302_hal` (biblioteca y programas para SX1302 LoRa Gateway) desde github:
+Ahora vamos a instalar `git` y descargar `sx1302_hal` (biblioteca y programas para SX1302 LoRa Gateway) desde github:
 
 ```shell
 sudo apt update
@@ -681,7 +761,7 @@ cd ~
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-Ve a la carpeta `sx1302_hal` y compila todo:
+Muévete a la carpeta `sx1302_hal` y compila todo:
 
 ```shell
 cd ~/sx1302_hal
@@ -743,7 +823,7 @@ Si tu dispositivo usa otro puerto USB, podemos usar el comando `sed` `sed -i 's/
 
 <br />
 
-Elige tu servidor de red LoRaWAN preferido `server_address` y el EUI del gateway `gateway_ID` en el `global_conf.json.sx1250.xxxxx` correspondiente basado en el módulo que estés usando, y modifica el `up/down port` a `1700`. Luego ejecuta el siguiente código para iniciar el concentrador:
+Elige tu servidor de red LoRaWAN preferido `server_address` y el EUI del gateway `gateway_ID` en el correspondiente `global_conf.json.sx1250.xxxxx` basado en el módulo que estés usando, y modifica el `puerto up/down` a `1700`. Luego ejecuta el siguiente código para iniciar el concentrador:
 
 ```shell
 cd ~/sx1302_hal/packet_forwarder
@@ -764,9 +844,9 @@ cd ~/sx1302_hal/packet_forwarder
 
 ---
 
-Ahora, el reenviador de paquetes puede ejecutarse correctamente. Para reenviar exitosamente los datos a nuestro Servidor de Red LoRaWAN (por ejemplo, TTN o ChirpStack), aún necesitamos hacer algunas configuraciones en el lado del servidor.
+Ahora, el reenviador de paquetes puede ejecutarse correctamente. Para reenviar exitosamente datos a nuestro Servidor de Red LoRaWAN (por ejemplo, TTN o ChirpStack), aún necesitamos hacer algunas configuraciones en el lado del servidor.
 
-Para hacer eso, necesitamos registrar primero el Gateway de Raspberry Pi que acabamos de construir en nuestro Servidor de Red LoRa. Tomando [TTN](https://www.thethingsindustries.com/docs/getting-started/) como ejemplo, inicia sesión en la [consola TTN](https://eu1.cloud.thethings.network/console), haz clic en el botón `Gateways` en el panel del lado izquierdo y haz clic en `Register gateway`. Completa el `Gateway EUI`, `Gateway Server address` y `Frequency plan`, deja las otras opciones con la configuración predeterminada.
+Para hacer eso, necesitamos registrar el Gateway Raspberry Pi que acabamos de construir en nuestro Servidor de Red LoRa primero. Tomando [TTN](https://www.thethingsindustries.com/docs/getting-started/) como ejemplo, inicia sesión en la [consola TTN](https://eu1.cloud.thethings.network/console), haz clic en el botón `Gateways` en el panel del lado izquierdo y haz clic en `Register gateway`. Completa el `Gateway EUI`, `Gateway Server address` y `Frequency plan`, deja las otras opciones con la configuración predeterminada.
 
 - **Gateway EUI:** Un identificador único de 64 bits para tu gateway.
 
@@ -793,9 +873,9 @@ Después de registrar exitosamente el gateway, presiona `CTRL + c` para detener 
     ...
 ```
 
-Reinicia `lora_pkt_fwd` usando el comando `./lora_pkt_fwd -c global_conf.json.sx1250.xxxxx`, y deberías poder encontrar que tu Gateway de Raspberry Pi está conectado a TTN.
+Reinicia `lora_pkt_fwd` usando el comando `./lora_pkt_fwd -c global_conf.json.sx1250.xxxxx`, y deberías poder encontrar que tu Gateway Raspberry Pi está conectado a TTN.
 
-## Preguntas Frecuentes
+## FAQ
 
 <details>
 <summary>¿Por qué mis dispositivos no pueden unirse al servidor de red incluso si todas las configuraciones son correctas?</summary>

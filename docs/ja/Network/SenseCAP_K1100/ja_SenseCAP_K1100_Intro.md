@@ -5,6 +5,7 @@ keywords:
 - SenseCAP Gateway
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_K1100_Intro
+sku: 110991748
 last_update:
   date: 05/15/2025
   author: Frank

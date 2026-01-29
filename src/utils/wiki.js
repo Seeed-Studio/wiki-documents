@@ -1,122 +1,119 @@
 const docList = [
   [
     {
-      "path": "/deploy_live_vlm_webui_on_jetson",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/gptoss-running-live.webp",
-      "title": "Deploy Live VLM WebUI on reComputer Jetson",
-      "date": "12/26/2025",
-      "title_cn": "在 reComputer Jetson 上部署 Live VLM WebUI",
-      "title_ja": "reComputer Jetson に Live VLM WebUI をデプロイする",
-      "title_es": "Implementar Live VLM WebUI en reComputer Jetson"
+      "path": "/deploy_nvblox_jetson_agx_orin",
+      "image": "https://files.seeedstudio.com/wiki/other/page-nvblox.jpg",
+      "title": "Deploy NVBlox with Orbbec Camera on Jetson AGX Orin",
+      "date": "2026-01-20T00:00:00.000Z",
+      "title_cn": "在 Jetson AGX Orin 上部署 NVBlox 与 Orbbec 相机",
+      "title_ja": "Jetson AGX Orin上でOrbbecカメラとNVBloxを展開する",
+      "title_es": "Desplegar NVBlox con Cámara Orbbec en Jetson AGX Orin"
     },
     {
-      "path": "/stackforce_series",
-      "image": "https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010_homepage.webp",
-      "title": "Stackforce X Series Motors Getting Start",
-      "date": "12/25/2025",
-      "title_cn": "Stackforce系列电机入门指南",
-      "title_ja": "Stackforce X シリーズモーター入門ガイド",
-      "title_es": "Introducción a los Motores Stackforce X Serie"
+      "path": "/deploy_whisper_on_raspberry_pi_ai_box",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png",
+      "title": "Deploy Whisper on  Raspberry Pi AI box",
+      "date": "01/19/2026",
+      "title_cn": "在树莓派 AI 盒子上部署 Whisper",
+      "title_ja": "Raspberry Pi AI ボックスに Whisper をデプロイする",
+      "title_es": "Desplegar Whisper en Raspberry Pi AI box"
     }
   ],
   [
     {
-      "path": "/xiao_mg24_sense_micropython",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mpy_6_1.webp",
-      "title": "Seeed Studio XIAO MG24 Sense With MicroPython",
-      "date": "12/25/2025",
-      "title_cn": "Seeed Studio XIAO MG24 Sense 与 MicroPython",
-      "title_ja": "Seeed Studio XIAO MG24 Sense と MicroPython",
-      "title_es": "Seeed Studio XIAO MG24 Sense Con MicroPython"
+      "path": "/xiao-esp32c3-espresense",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C3_ESPresense/image132.webp",
+      "title": "Deploying ESPresense on Seeed Studio XIAO ESP32-C3 with Home Assistant",
+      "date": "01/16/2026",
+      "title_cn": "在 Seeed Studio XIAO ESP32-C3 上部署 ESPresense 与 Home Assistant",
+      "title_ja": "Seeed Studio XIAO ESP32-C3でESPresenseをHome Assistantと連携してデプロイする",
+      "title_es": "Desplegando ESPresense en Seeed Studio XIAO ESP32-C3 con Home Assistant"
     },
     {
-      "path": "/xiao_ra4m1_micropython",
-      "image": "https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/result_3.webp",
-      "title": "Seeed Studio XIAO RA4M1 With MicroPython",
-      "date": "12/25/2025",
-      "title_cn": "Seeed Studio XIAO RA4M1 与 MicroPython",
-      "title_ja": "Seeed Studio XIAO RA4M1 と MicroPython",
-      "title_es": "Seeed Studio XIAO RA4M1 Con MicroPython"
+      "path": "/xiao_nrf54l15_sense_micropython",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.webp",
+      "title": "MicroPython for Seeed Studio XIAO nRF54L15",
+      "date": "1/15/2026",
+      "title_cn": "Seeed Studio XIAO nRF54L15 的 MicroPython",
+      "title_ja": "Seeed Studio XIAO nRF54L15 用 MicroPython",
+      "title_es": "MicroPython para Seeed Studio XIAO nRF54L15"
     }
   ],
   [
     {
-      "path": "/Get_Started_with_SenseCAP_T2000_tracker",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp",
-      "title": "Get Started with SenseCAP T2000 Tracker",
-      "date": "12/23/2025",
-      "title_cn": "SenseCAP T2000 追踪器入门指南",
-      "title_ja": "SenseCAP T2000 トラッカーの使用開始",
-      "title_es": "Comenzar con SenseCAP T2000 Tracker"
+      "path": "/recomputer_rs485_loopback_test",
+      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/RS485/RS485_connection.jpg",
+      "title": "reComputer RS485 test",
+      "date": "01/14/2026",
+      "title_cn": "reComputer RS485 测试",
+      "title_ja": "reComputer RS485 テスト",
+      "title_es": "Prueba RS485 de reComputer"
     },
     {
-      "path": "/mcp_external_system_integration",
-      "image": "https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp",
-      "title": "Bring Voice AI to Your Business System (MCP)",
-      "date": "12/23/2025",
-      "title_cn": "为您的业务系统带来语音 AI（MCP）",
-      "title_ja": "ビジネスシステムに音声 AI を導入する（MCP）",
-      "title_es": "Lleva la IA de Voz a tu Sistema Empresarial (MCP)"
-    }
-  ],
-  [
-    {
-      "path": "/xiao_esp32c5_with_micropyhton",
+      "path": "/xiao_esp32c5_with_freertos",
       "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
-      "title": "Seeed Studio XIAO ESP32-C5 With Micropython",
-      "date": "12/22/2025",
-      "title_cn": "Seeed Studio XIAO ESP32-C5 与 Micropython",
-      "title_ja": "Seeed Studio XIAO ESP32-C5 と MicroPython",
-      "title_es": "Seeed Studio XIAO ESP32-C5 Con Micropython"
-    },
-    {
-      "path": "/integration_of_real-time_heat_map_with_grafana_data_dashboard",
-      "image": "https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/headmap.gif",
-      "title": "Integration of real-time heat map with Grafana data dashboard",
-      "date": "12/21/2025",
-      "title_cn": "实时热力图与 Grafana 数据仪表板的集成",
-      "title_ja": "リアルタイムヒートマップと Grafana データダッシュボードの統合",
-      "title_es": "Integración de mapa de calor en tiempo real con panel de datos de Grafana"
+      "title": "XIAO ESP32-C5 With FreeRTOS",
+      "date": "1/13/2026",
+      "title_cn": "XIAO ESP32-C5 与 FreeRTOS",
+      "title_ja": "XIAO ESP32-C5 と FreeRTOS",
+      "title_es": "XIAO ESP32-C5 Con FreeRTOS"
     }
   ],
   [
     {
-      "path": "/xiao_esp32c5_with_platformio",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_start.webp",
-      "title": "Platform IO with Seeed Studio XIAO ESP32-C5",
-      "date": "12/18/2025",
-      "title_cn": "Platform IO 与 Seeed Studio XIAO ESP32-C5",
-      "title_ja": "Seeed Studio XIAO ESP32-C5 での Platform IO",
-      "title_es": "Platform IO con Seeed Studio XIAO ESP32-C5"
+      "path": "/deploy_depth_anything_v3_jetson_agx_orin",
+      "image": "https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp",
+      "title": "Deploy Depth Anything V3 on Jetson AGX Orin",
+      "date": "2026-01-09T00:00:00.000Z",
+      "title_cn": "在 Jetson AGX Orin 上部署 Depth Anything V3",
+      "title_ja": "Jetson AGX Orin上でDepth Anything V3をデプロイ",
+      "title_es": "Desplegar Depth Anything V3 en Jetson AGX Orin"
     },
     {
-      "path": "/iot_button_v2_ha_discovery",
-      "image": "https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/button_buzzer.webp",
-      "title": "Connect IoT Button V2 to Home Assistant via Seeed HA Discovery",
-      "date": "12/17/2025",
-      "title_cn": "通过 Seeed HA Discovery 将 IoT Button V2 连接到 Home Assistant",
-      "title_ja": "Seeed HA Discovery 経由で IoT Button V2 を Home Assistant に接続",
-      "title_es": "Conectar IoT Button V2 a Home Assistant vía Seeed HA Discovery"
+      "path": "/ai_robotics_distributed_llama_cpp_rpc_jetson",
+      "image": "https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg",
+      "title": "Distributed llama.cpp on reComputer Jetson (RPC Mode)",
+      "date": "2026-01-09T00:00:00.000Z",
+      "title_cn": "在 reComputer Jetson 上的分布式 llama.cpp（RPC 模式）",
+      "title_ja": "reComputer Jetson での分散 llama.cpp（RPC モード）",
+      "title_es": "llama.cpp Distribuido en reComputer Jetson (Modo RPC)"
     }
   ],
   [
     {
-      "path": "/xiao_esp32c5_homeassistant",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
-      "title": "Connecting XIAO ESP32-C5 to Home Assistant",
-      "date": "12/17/2025",
-      "title_cn": "将 XIAO ESP32-C5 连接到 Home Assistant",
-      "title_ja": "XIAO ESP32-C5 を Home Assistant に接続",
-      "title_es": "Conectando XIAO ESP32-C5 a Home Assistant"
+      "path": "/t1000e_for_lorawan_introduction",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp",
+      "title": "T1000-E for LoRaWAN Introduction",
+      "date": "1/9/2026",
+      "title_cn": "T1000-E for LoRaWAN 介绍",
+      "title_ja": "T1000-E for LoRaWAN 紹介",
+      "title_es": "Introducción al T1000-E para LoRaWAN"
     },
     {
-      "path": "/respeaker_voice_assistant",
-      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
-      "title": "Deploying an Offline Smart Voice Assistant End-to-End",
-      "date": "12/16/2025",
-      "title_cn": "端到端部署离线智能语音助手",
-      "title_ja": "オフラインスマート音声アシスタントのエンドツーエンド展開",
-      "title_es": "Desplegando un Asistente de Voz Inteligente Offline de Extremo a Extremo"
+      "path": "/reachymini_getting_started",
+      "image": "https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp",
+      "title": "ReachyMini Getting Started",
+      "date": "1/7/2026"
+    }
+  ],
+  [
+    {
+      "path": "/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection",
+      "image": "https://files.seeedstudio.com/wiki/SenseCraft/SenseCraft_AI/Intro_image_title.webp",
+      "title": "Vibration Anomaly Detection",
+      "date": "01/06/2026",
+      "title_cn": "振动异常检测",
+      "title_ja": "振動異常検出",
+      "title_es": "Detección de Anomalías de Vibración"
+    },
+    {
+      "path": "/local_voice_llm_on_recomputer_jetson_for_reachy_mini",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/reachy_mini/world_frame.webp",
+      "title": "Deploy local voice LLM on reComputer Mini for Reachy Mini!",
+      "date": "01/06/2026",
+      "title_cn": "在 reComputer Mini 上为 Reachy Mini 部署本地语音 LLM！",
+      "title_ja": "Reachy Mini用reComputer Miniにローカル音声LLMをデプロイ！",
+      "title_es": "¡Despliega LLM de voz local en reComputer Mini para Reachy Mini!"
     }
   ]
 ];

@@ -6,6 +6,7 @@ keywords:
   - reComputer R1000
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /recomputer_r
+sku: 113991274,E24010521,113991334,113991375
 last_update:
   date: 09/15/2025
   author: Kasun Thushara
@@ -135,7 +136,7 @@ With robust IoT network communication capabilities, the R1000 series supports mu
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Supply Voltage(AC/DC)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>12~24V AC/9~36V DC</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>12\~24V AC/9\~36V DC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Overvoltage Protection</td>
@@ -376,7 +377,7 @@ The reComputer R1000 supports three power supply options: AC, DC terminal and Po
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-The reComputer R1000 is supplied with a nominal AC voltage of 12~24 V or DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1000, the ground wire can be secured to the screw located at the top left corner of the power terminal.
+The reComputer R1000 is supplied with a nominal AC voltage of 12\~24 V or DC voltage of \9~36 V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer R1000, the ground wire can be secured to the screw located at the top left corner of the power terminal.
 
 :::note
 The power solution utilizes a bridge rectifier diode for reverse polarity protection and is compatible with both AC and DC inputs. This ensures that **regardless of how the power supply's positive and negative terminals are connected**, the circuit will not be damaged. By using a bridge rectifier, the output voltage polarity remains fixed irrespective of the input DC polarity, providing effective reverse polarity protection.

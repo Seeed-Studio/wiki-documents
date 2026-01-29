@@ -5,6 +5,7 @@ tags:
   - Mini PC Jetpack Flash
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Mini_AI_Computer_T906
+sku: 114110168
 last_update:
   date: 01/05/2022
   author: w0x7ce

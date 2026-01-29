@@ -5,6 +5,7 @@ keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reComputer_J4012_Flash_Jetpack
+sku: 102110769, 102110770
 last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
@@ -316,7 +317,7 @@ La imagen de abajo es para Orin NX 16GB
 **Paso 4.** Retira el cable puente
 
 </details>
-
+<!-- 
 ### Flashear el dispositivo con un solo comando
 
 <details>
@@ -337,7 +338,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 Descargo de responsabilidad: El script de flasheo de un clic tiene como objetivo hacer el flasheo de jetpack más rápido. La versión actual es una beta y puede tener muchos problemas. Esperamos tu comprensión. Si hay problemas de flasheo, sigue el `Flashear el Dispositivo Paso a Paso` a continuación y proporciona comentarios en nuestro [canal Discord Jetson](https://discord.com/channels/862602258452578314/930732339624026152). Los solucionaremos rápidamente y mejoraremos esta función en un futuro cercano.
 :::
 
-</details>
+</details> -->
 
 ### Flashear el dispositivo paso a paso
 

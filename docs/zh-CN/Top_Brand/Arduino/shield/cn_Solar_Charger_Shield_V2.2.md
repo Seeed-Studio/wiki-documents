@@ -4,6 +4,7 @@ title: 太阳能充电扩展板 V2.2
 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Solar_Charger_Shield_V2.2
+sku: 106990020
 last_update:
   date: 01/11/2023  
   author: Eico 

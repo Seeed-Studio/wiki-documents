@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove_High_Precision_RTC/
 slug: /cn/Grove_High_Precision_RTC
+sku: 102020083
 last_update:
   date: 01/06/2022
   author: gunengyu

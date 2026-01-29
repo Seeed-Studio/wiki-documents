@@ -4,6 +4,7 @@ description: |
   XIAO RP2350, un microcontrolador de vanguardia de Seeed Studio. Cuenta con un procesador de doble núcleo, mayor SRAM y memoria flash, y conectividad mejorada.
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/RP2350-thumbnail.webp
 slug: /es/getting-started-xiao-rp2350
+sku: 102010550,102010637
 keywords:
   - xiao
   - RP2350
@@ -35,8 +36,8 @@ El XIAO RP2350 empaqueta la potencia del Raspberry Pi RP2350 (núcleos duales Co
 
 ## Características
 
-- **Placa MCU Potente:** Equipada con un chip Raspberry Pi RP2350 que cuenta con dual Arm Cortex-M33 simétrico @ 150MHz con FPU.
-- **Características de Seguridad Mejoradas:** Arranque seguro integrado y bootloader cifrado aseguran la seguridad de la aplicación.
+- **Placa MCU Potente:** Equipada con un chip Raspberry Pi RP2350 que cuenta con dual Arm Cortex-M33 @ 150MHz con FPU.
+- **Características de Seguridad Mejoradas:** Arranque seguro integrado y cargador de arranque cifrado aseguran la seguridad de la aplicación.
 - **Soporte de Software:** Compatible con C/C++ y MicroPython, asegurando desarrollo fácil de proyectos y prototipado.
 - **Recursos Integrados Ricos:** Integra un LED RGB, 2MB Flash, 520kB SRAM, y 19 GPIOs multifunción(Analógico, Digital, I²C, UART, SPI, PWM).
 - **8 Nuevos IOs Expandidos:** Comparado con MCUs XIAO anteriores, la adición de 8 pines IO en la parte trasera soporta aplicaciones más complejas.
@@ -101,7 +102,7 @@ El XIAO RP2350 empaqueta la potencia del Raspberry Pi RP2350 (núcleos duales Co
         <td>Arduino, PlatformIO, MicroPython, CircuitPython, <a href="https://wiki.seeedstudio.com/es/xiao_topic_page/">y más por venir</a></td>
     </tr>
     <tr>
-        <td>Temperatura de Funcionamiento</td>
+        <td>Temperatura de Trabajo</td>
         <td align="center" colspan="2">-20°C~70°C</td>
     </tr>
     <tr>
@@ -110,7 +111,7 @@ El XIAO RP2350 empaqueta la potencia del Raspberry Pi RP2350 (núcleos duales Co
     </tr>
 </table>
 
-## Descripción General del Hardware
+## Visión General del Hardware
 
 <div class="table-center">
 <table align="center">
@@ -137,9 +138,42 @@ El XIAO RP2350 empaqueta la potencia del Raspberry Pi RP2350 (núcleos duales Co
 
 ¿Necesitas más detalles sobre los pinouts? Navega a [Recursos y Activos](#recursos-y-activos) abajo.
 
+
+## **Mapa de Pines**
+| Pin XIAO                 | Función   | Pin del Chip     | Funciones Alternativas | Descripción                          |
+| :---------------------: | :-------: | :----------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS       |              |                    | Entrada/Salida de Energía                   |
+| GND                     |            |              |                    |                                      |
+| 3V3                     | 3V3_OUT    |              |                    | Salida de Energía                         |
+| D0                      | Analog     | GPIO26       |                    | GPIO, ADC                            |
+| D1                      | Analog     | GPIO27       |                    | GPIO, ADC                            |
+| D2                      | Analog     | GPIO28       |                    | GPIO, ADC                            |
+| D3                      | SPIO_CSn   | GPIO5        |                    | GPIO, SPI                            |
+| D4                      | SDA1       | GPIO6        |                    | GPIO, Datos I2C                       |
+| D5                      | SCL1       | GPIO7        |                    | GPIO, Reloj I2C                      |
+| D6                      | TX0        | GPIO0        |                    | GPIO, Transmisión UART                  |
+| D7                      | RX0        | GPIO1        |                    | GPIO, Recepción UART                   |
+| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO, Reloj SPI                      |
+| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO, Datos SPI                       |
+| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO, Datos SPI                       |
+| D11                     | RX1        | GPIO21       |                    | GPIO, Recepción UART                   |
+| D12                     | TX1        | GPIO20       |                    | GPIO, Transmisión UART                  |
+| D13                     | SCL0       | GPIO17       |                    | GPIO, Reloj I2C                      |
+| D14                     | SDA0       | GPIO16       |                    | GPIO, Datos I2C                       |
+| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO, Datos SPI                       |
+| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO, Datos SPI                       |
+| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO, Reloj SPI                      |
+| D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
+| ADC_BAT                 |            | GPIO29       |                    | Leer el valor de voltaje de la BAT           |
+| Reset                   |            | RUN          |                    | RUN                                  |
+| Boot                    |            | RP2040_BOOT  |                    | Entrar al Modo Boot                      |
+| CHARGE_LED              |            | NCHG         |                    | CHG-LED_Red                          |
+| RGB LED                 |            | GPIO22       |                    | RGB LED                              |
+| USER_LED                |            | GPIO25       |                    | User Light_Yellow                    |
+
 ## Plataforma Soportada
 
-El XIAO RP2350, alimentado por el RP2350, soporta MicroPython y el SDK C/C++ proporcionado por Raspberry Pi. Esta flexibilidad permite a los desarrolladores elegir su lenguaje de programación y entorno preferido para prototipado y desarrollo.
+El XIAO RP2350, alimentado por el RP2350, soporta MicroPython y el SDK de C/C++ proporcionado por Raspberry Pi. Esta flexibilidad permite a los desarrolladores elegir su lenguaje de programación y entorno preferido para prototipado y desarrollo.
 
 <div class="table-center">
   <table align="center">
@@ -164,11 +198,7 @@ El XIAO RP2350, alimentado por el RP2350, soporta MicroPython y el SDK C/C++ pro
 Esta página se enfoca principalmente en usuarios de MicroPython. Para aquellos interesados en aprender programación SDK o para usuarios avanzados, es posible que quieran comenzar con el [SDK C/C++ de la serie Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf). Esta guía te ayudará a configurar el entorno y comenzar con código de ejemplo. Adicionalmente, puedes visitar [XIAO RP2350 con SDK C/C++](/es/xiao-rp2350-c-cpp-sdk) para instrucciones más específicas relacionadas con el XIAO RP2350.
 :::
 
-:::tip
-Actualmente, la función ADC puede no funcionar correctamente cuando se usa el [firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/SEEED_XIAO_RP2350.uf2) oficial. Por favor descarga y usa nuestro firmware modificado primero. Una vez que el pull request sea fusionado, actualizaremos el contenido relevante en la Wiki en consecuencia.
-:::
-
-### Paso 1: Instalando MicroPython en XIAO RP2350
+### Paso 1: Instalación de MicroPython en XIAO RP2350
 
 Para instalar el firmware de MicroPython en el XIAO RP2350, sigue estos pasos:
 
@@ -178,22 +208,24 @@ Para instalar el firmware de MicroPython en el XIAO RP2350, sigue estos pasos:
 - Descarga el archivo de firmware `.uf2` más reciente compatible con el XIAO RP2350.
 
 :::tip
-El firmware por defecto es para arquitectura ARM, si quieres usar RISC-V, por favor usa la versión de firmware correspondiente en el enlace.
+1. El firmware predeterminado es para arquitectura ARM, si quieres usar RISC-V, por favor usa la versión de firmware correspondiente en el enlace.
+
+2. Por favor asegúrate de estar usando la versión de firmware más reciente, ya que el firmware más antiguo puede contener varias vulnerabilidades de software.
 :::
 
 **Paso 1.2 Entrar en Modo BOOTSEL:**  
 
-Puedes entrar en modo BOOTSEL en el XIAO RP2350 usando cualquiera de los dos métodos a continuación:
+Puedes entrar en modo BOOTSEL en el XIAO RP2350 usando cualquiera de los dos métodos siguientes:
 
 <Tabs>
 <TabItem value="method1" label="Método 1: Antes de Conectar a la Computadora" default>
 
 1. **Presiona y Mantén el Botón BOOT**:  
-   Mientras tu XIAO RP2350 está desconectado de tu computadora, **presiona y mantén** el botón BOOT.
+   Mientras tu XIAO RP2350 esté desconectado de tu computadora, **presiona y mantén** el botón BOOT.
 2. **Conecta a tu Computadora**:  
-   Mientras mantienes el botón BOOT, conecta el XIAO RP2350 a tu computadora usando un cable USB.
+   Mientras mantienes presionado el botón BOOT, conecta el XIAO RP2350 a tu computadora usando un cable USB.
 3. **Suelta el Botón BOOT**:  
-   Después de que la placa esté conectada a tu computadora, puedes soltar el botón BOOT. El XIAO RP2350 ahora debería estar en modo BOOTSEL, y tu computadora lo reconocerá como un dispositivo de almacenamiento removible.
+   Después de que la placa esté conectada a tu computadora, puedes soltar el botón BOOT. El XIAO RP2350 ahora debería estar en modo BOOTSEL, y tu computadora lo reconocerá como un dispositivo de almacenamiento extraíble.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/>
 <div style={{ marginTop: '-8px' }}><em>Mantener Boot-> Conectar Cable-> Soltar Boot</em></div>
@@ -206,9 +238,9 @@ Puedes entrar en modo BOOTSEL en el XIAO RP2350 usando cualquiera de los dos mé
 1. **Presiona y Mantén el Botón BOOT**:  
    Con el XIAO RP2350 ya conectado a tu computadora, presiona y mantén el botón BOOT.
 2. **Haz Clic en el Botón RESET**:  
-   Mientras aún mantienes el botón BOOT, presiona y suelta el botón RESET, que está etiquetado como "B" en la esquina inferior derecha de la placa en la imagen de arriba.
+   Mientras aún mantienes presionado el botón BOOT, presiona y suelta el botón RESET, que está etiquetado como "B" en la esquina inferior derecha de la placa en la imagen de arriba.
 3. **Suelta el Botón BOOT**:  
-   Después de presionar el botón RESET, suelta el botón BOOT. El XIAO RP2350 ahora debería estar en modo BOOTSEL, y tu computadora lo reconocerá como un dispositivo de almacenamiento removible.
+   Después de presionar el botón RESET, suelta el botón BOOT. El XIAO RP2350 ahora debería estar en modo BOOTSEL, y tu computadora lo reconocerá como un dispositivo de almacenamiento extraíble.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/>
 <div style={{ marginTop: '-8px' }}><em>Mantener Boot-> Hacer Clic en Reset-> Soltar Boot</em></div>
@@ -219,16 +251,16 @@ Puedes entrar en modo BOOTSEL en el XIAO RP2350 usando cualquiera de los dos mé
 
 **Paso 1.3. Instalar el Firmware:**  
 
-- **Arrastra y suelta** el archivo `.uf2` descargado en la unidad de almacenamiento removible del XIAO RP2350.
+- **Arrastra y suelta** el archivo `.uf2` descargado en la unidad de almacenamiento extraíble del XIAO RP2350.
 - La placa se reiniciará automáticamente después de que el archivo sea copiado, completando la instalación del firmware.
 
-### Paso 2: Instalando Thonny IDE
+### Paso 2: Instalación del IDE Thonny
 
-:::tip about MicroPython
+:::tip acerca de MicroPython
 
 [MicroPython](https://micropython.org/) es un lenguaje interpretado similar a [Python](https://www.python.org/). Sin embargo, a diferencia de Python, MicroPython se ejecuta directamente en el hardware (bare-metal), proporcionando un prompt interactivo (REPL) para ejecutar comandos inmediatamente, así como la capacidad de ejecutar e importar scripts desde el sistema de archivos integrado.
 
-Para conectarte a la placa XIAO RP2350 y comenzar a escribir y ejecutar tu código Python, puedes usar cualquier herramienta de terminal que soporte conexiones serie, como minicom, PuTTY, electerm, warp, y más. Para una *experiencia más amigable*, puedes usar **[Thonny](https://thonny.org/)** por su facilidad de uso, características integradas e interfaz amigable para principiantes. De esta manera, puedes disfrutar escribiendo y ejecutando tu código Python directamente en el dispositivo.
+Para conectarte a la placa XIAO RP2350 y comenzar a escribir y ejecutar tu código Python, puedes usar cualquier herramienta de terminal que soporte conexiones seriales, como minicom, PuTTY, electerm, warp, y más. Para una experiencia *más amigable*, puedes usar **[Thonny](https://thonny.org/)** por su facilidad de uso, características integradas e interfaz amigable para principiantes. De esta manera, puedes disfrutar escribiendo y ejecutando tu código Python directamente en el dispositivo.
 
 :::
 
@@ -272,7 +304,7 @@ Hacer que la placa parpadee un LED es a menudo el primer programa que todos ejec
 
 :::note
 El `USER LED`, el LED amarillo en el XIAO RP2350, está conectado a `GPIO25/D19` según el diagrama esquemático.
-Para todas las placas de la familia XIAO, el `USER LED` se **encenderá** cuando se establezca a `nivel bajo` y se **apagará** cuando se establezca a `nivel alto`.
+Para todas las placas de la familia XIAO, el `USER LED` se **encenderá** cuando se establezca a un `nivel bajo` y se **apagará** cuando se establezca a un `nivel alto`.
 :::
 
 <Tabs>
@@ -344,7 +376,7 @@ for _ in range(8 * 256):
   </TabItem>
 </Tabs>
 
-Una vez que hayas copiado el código en Thonny IDE, como se muestra en la imagen de abajo, simplemente haz clic en el botón `Run current script` o presiona `F5`. Esto ejecutará el fragmento de código y verás el LED en el XIAO RP2350 comenzar a parpadear.
+Una vez que hayas copiado el código en Thonny IDE, como se muestra en la imagen de abajo, simplemente haz clic en el botón `Run current script` o presiona `F5`. Esto ejecutará el fragmento de código y verás que el LED en el XIAO RP2350 comienza a parpadear.
 
 ### Jugar con LEDs RGB
 
@@ -430,7 +462,7 @@ while True:
 
 ¿Es posible leer el voltaje de la batería sin componentes adicionales? Sí, con el XIAO RP2350, es más fácil que nunca. En miembros anteriores de la familia XIAO, como el [XIAO ESP32C3](/es/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage), leer el voltaje de la batería requería conectar manualmente a *A0* con una resistencia.
 
-Pero con el XIAO RP2350, este proceso se simplifica. Ahora puedes usar directamente el pin `A3/GPIO29` para leer el nivel de voltaje de la batería, simplificando tu diseño y desarrollo. Solo recuerda establecer el pin `GPIO19` en alto, ya que es necesario para habilitar la lectura del nivel de batería.
+Pero con el XIAO RP2350, este proceso se simplifica. Ahora puedes usar directamente el pin `A3/GPIO29` para leer el nivel de voltaje de la batería, optimizando tu diseño y desarrollo. Solo recuerda configurar el pin `GPIO19` en alto, ya que es necesario para habilitar la lectura del nivel de batería.
 
 Sigue este fragmento de código para leer el voltaje de la batería usando el Pico SDK:
 
@@ -508,9 +540,9 @@ int main() {
   </TabItem>
 </Tabs>
 
-## Recursos y Activos
+## Recursos y Materiales
 
-El XIAO RP2350 aprovecha el poder del Raspberry Pi RP2350, utilizando una gran cantidad de recursos compartidos de la comunidad Raspberry Pi. Esto abre un mundo de posibilidades para que personalices tus proyectos en esta pequeña placa con creatividad ilimitada. A continuación se presentan recursos y activos esenciales para ayudarte a comenzar.
+El XIAO RP2350 aprovecha el poder del Raspberry Pi RP2350, utilizando una gran cantidad de recursos compartidos de la comunidad Raspberry Pi. Esto abre un mundo de posibilidades para que personalices tus proyectos en esta pequeña placa con creatividad ilimitada. A continuación se encuentran recursos y materiales esenciales para ayudarte a comenzar.
 
 ***Hojas de Datos y Esquemas***
 
@@ -525,23 +557,23 @@ El XIAO RP2350 aprovecha el poder del Raspberry Pi RP2350, utilizando una gran c
 
 ***Recursos Relacionados***
 
-- 📄 **[PDF]** [Introducción a la serie Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf): Una guía completa para configurar y programar placas Raspberry Pi Pico, ideal para principiantes que buscan aprender MicroPython o C/C++.
-- 📄 **[PDF]** [SDK Python de la serie Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf) el libro que documenta los tutoriales de configuración de MicroPython y las APIs
-- 📄 **[PDF]** [SDK C/C++ de la serie Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) el libro que documenta las APIs del SDK C/C++ de Pico
+- 📄 **[PDF]** [Introducción a la Serie Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf): Una guía completa para configurar y programar placas Raspberry Pi Pico, ideal para principiantes que buscan aprender MicroPython o C/C++.
+- 📄 **[PDF]** [SDK Python de la Serie Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf) el libro que documenta los tutoriales de configuración de MicroPython y las APIs
+- 📄 **[PDF]** [SDK C/C++ de la Serie Raspberry Pi Pico](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) el libro que documenta las APIs del SDK C/C++ de Pico
 - 🔗 **[Kicad]** [Huella Seeed Studio XIAO RP2350](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
 ### Expansión y Aplicaciones
 
 [La serie XIAO](/es/xiao_topic_page) tiene una amplia gama de periféricos y accesorios periféricos para que aprendas y uses, ya sea que quieras una pantalla colorida que permita una interacción perfecta, una placa integrada con luces RGB brillantes y simples, y mucho más, solo esperando a ser explorados.
 
-Como miembro de la familia XIAO, el XIAO RP2350 hace lo mismo. Por supuesto, para hacer un mejor uso de los pines adicionales disponibles, nuevos *periféricos y placas* seguirán llegando, aprovechando completamente el rendimiento para el cual fue creado.
+Como miembro de la familia XIAO, el XIAO RP2350 hace lo mismo. Por supuesto, para hacer un mejor uso de los pines adicionales extraídos, nuevos *periféricos y placas* seguirán llegando, aprovechando completamente el rendimiento para el cual fue creado.
 
 - 🌟 **[Expandiendo con Accesorios](/es/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)**  
   Descubre la amplia gama de complementos y módulos compatibles con la Familia XIAO, desde pantallas y matrices LED hasta módulos Grove y sensores, y aprende cómo pueden mejorar tus proyectos.
 
 ### Comunidad y Aprendizaje
 
-Además, sumérgete en la vibrante comunidad de Raspberry Pi para expandir tu conocimiento y descubrir nuevas ideas de proyectos. Aprovecha los recursos compartidos por la comunidad, foros y tutoriales para mejorar tu experiencia con el XIAO RP2350. Además del Wiki de Seeed Studio, aquí hay algunos otros lugares recomendados para aprender:
+Además, sumérgete en la vibrante comunidad Raspberry Pi para expandir tu conocimiento y descubrir nuevas ideas de proyectos. Aprovecha los recursos compartidos por la comunidad, foros y tutoriales para mejorar tu experiencia con el XIAO RP2350. Además del Wiki de Seeed Studio, aquí hay algunos otros lugares recomendados para aprender:
 
 - **[Documentación de Raspberry Pi](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)**: Obtén información confiable y actualizada sobre el RP2350.
 - **[Foros de Raspberry Pi](https://www.raspberrypi.org/forums/)**: Interactúa con otros entusiastas, haz preguntas y comparte tus proyectos.

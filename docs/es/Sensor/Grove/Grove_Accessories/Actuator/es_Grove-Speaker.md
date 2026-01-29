@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Speaker/
 slug: /es/Grove-Speaker
+sku: 107020001
 last_update:
   date: 01/09/2022
   author: gunengyu

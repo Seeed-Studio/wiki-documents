@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Hercules_Dual_15A_6-20V_Motor_Controller
+sku: 105010000
 last_update:
   date: 1/13/2023
   author: shuxu hu

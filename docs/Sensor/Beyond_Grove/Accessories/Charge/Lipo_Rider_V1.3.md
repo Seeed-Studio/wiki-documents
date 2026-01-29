@@ -5,6 +5,7 @@ keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Lipo_Rider_V1.3
+sku: 106990022
 last_update:
   date: 1/13/2023
   author: jianjing Huang

@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-I2C_Thermocouple_Amplifier-MCP9600
+sku: 101020594
 last_update:
   date: 1/4/2023
   author: jianjing Huang

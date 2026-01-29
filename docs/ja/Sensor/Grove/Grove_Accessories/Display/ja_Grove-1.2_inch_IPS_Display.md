@@ -6,6 +6,7 @@ keywords:
 - display
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/grove_1.2inch_ips_display
+sku: 104020268
 last_update:
   date: 05/15/2025
   author: Stephen Lo

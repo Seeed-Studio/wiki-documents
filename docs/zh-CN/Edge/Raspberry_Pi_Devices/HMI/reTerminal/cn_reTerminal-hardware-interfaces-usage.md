@@ -6,6 +6,7 @@ keywords:
   - reTerminal 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/reTerminal-hardware-interfaces-usage
+sku: 110070048,103060001
 last_update:
   date: 1/31/2023
   author: jianjing Huang

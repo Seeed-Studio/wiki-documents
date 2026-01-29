@@ -8,6 +8,7 @@ keywords:
   - robots
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini.webp
 slug: /ja/recomputer_jetson_mini_getting_started
+sku: 114993553,114993551,102111001,102110999,114993592,114993593
 last_update:
   date: 12/11/2024
   author: Youjiang
@@ -404,7 +405,7 @@ LinuxホストPCでターミナルウィンドウを開き、`lsusb`コマンド
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/3.png"/>
 </div>
-
+<!-- 
 ### 単一コマンドでJetsonにフラッシュ
 
 <details>
@@ -425,7 +426,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 免責事項：ワンクリックフラッシュスクリプトは、jetpackフラッシュをより迅速にすることを目的としています。現在のバージョンはベータ版であり、多くの問題がある可能性があります。ご理解をお願いします。フラッシュの問題がある場合は、以下の`デバイスをステップバイステップでフラッシュ`に従い、[Discord Jetsonチャンネル](https://discord.com/channels/862602258452578314/930732339624026152)でフィードバックをお寄せください。近い将来、迅速に修正し、この機能を改善します。
 :::
 
-</details>
+</details> -->
 
 ### Jetsonにステップバイステップでフラッシュ
 

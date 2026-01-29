@@ -5,6 +5,7 @@ keywords:
 - キット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi
+sku: 110060482
 last_update:
   date: 05/15/2025
   author: jianjing Huang

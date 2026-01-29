@@ -5,6 +5,7 @@ keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
+sku: 101990962
 date: 11/26/2025
 author: Twelve
 ---

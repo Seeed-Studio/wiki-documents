@@ -10,6 +10,7 @@ keywords:
   - M12
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 slug: /cn/recamera_hq_poe_getting_started
+sku: 100018917, 100041077, 100029708, 100074316
 sidebar_position: 1
 last_update:
   date: 09/25/2025

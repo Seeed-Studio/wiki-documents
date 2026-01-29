@@ -9,8 +9,8 @@ slug: /sensecraft-app/overview
 aliases:
   - /sensecraft_app
 last_update:
-  date: 7/26/2024
-  author: Jessie
+  date: 1/7/2026
+  author: Janet
 ---
 
 :::tip note
@@ -108,3 +108,65 @@ Account details and settings, app version, etc.
 Select the corresponding product for quick binding.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/configuration.png" alt="pir" width={500} height="auto" /></p>
+
+## Template
+
+The SenseCraft app provides a set of template functions, including **Add New Template, Import Template, Download Template and Apply Preset Template**, to simplify and accelerate device configuration. These functions efficiently help users reduce setup time, and streamline deployment for large-scale installations.
+
+### Add New Template
+There are two ways to add a new template.
+
+**Method 1** <br />
+1. Go to `User` → `Device Bluetooth Configuration`. <br />
+2. Tap the `Template` button in the upper-right corner. <br />
+3. Tap the `+` icon → `Add New Template`. <br />
+4. Select the Device Type. <br />
+5. Configure the template parameters according to your needs. <br />
+6. Tap `Confirm` to save the template. <br />
+7. Return to the Template page, you can see `Save successful`. <br />
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/add_new_template1.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/add_new_template2.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/add_new_template3.png" alt="pir" width={300} height="auto" /></p>
+
+**Method 2** <br />
+1. Enter Bluetooth Configuration Mode and select `Advanced Configuration`. <br />
+2. Go to the `Setting` page. <br />
+3. Tap the `Template` icon in the upper-right corner. <br />
+4. Adjust the template parameters as needed. <br />
+5. Select `Save as Template`. <br />
+6. Enter a Template Name. <br />
+7. Tap `Confirm` to save. <br />
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/add_new_template4.png" alt="pir" width={800} height="auto" /></p>
+
+### Download Template
+1. Navigate to the `Template` page, select the template you want to download. <br />
+2. Tap the three-dot menu in the upper-right corner. <br />
+3. Select `Download Template`. <br />
+4. Save the file to your mobile device storage. <br />
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/downlaod_template.png" alt="pir" width={800} height="auto" /></p>
+
+### Import Template
+1. Go to `User` → `Device Bluetooth Configuration`. <br />
+2. Tap `Template` in the upper-right corner. <br />
+3. On the Template page, tap the `+` icon. <br />
+4. Select `Import Template`. <br />
+5. Tap the `file` icon. <br />
+6. In the system file manager, select the configuration file with the `“.seeed”` extension. <br />
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/import_template.png" alt="pir" width={800} height="auto" /></p>
+
+### Apply Preset Template
+1. Enter the device’s Bluetooth Configuration mode and select `Advanced Configuration`. <br />
+2. Open the `Settings` page and tap the `Template` icon in the top-right corner. <br />
+3. Select `Choose Template`. <br />
+4. On the Preset Template page, select the desired template. <br />
+5. Return to the Settings page and tap `Send` to apply the configuration. <br />
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/apply_template.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/App_Template/apply_template2.png" alt="pir" width={600} height="auto" /></p>

@@ -5,6 +5,7 @@ tags:
   - Data Label
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/alwaysAI-Jetson-Getting-Started
+sku: 802000061,113020031
 last_update:
   date: 1/16/2023
   author: jianjing Huang

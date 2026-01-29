@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-MP3_v2.0/
 slug: /es/Grove-MP3_v2.0
+sku: 107020008
 last_update:
   date: 01/09/2022
   author: gunengyu

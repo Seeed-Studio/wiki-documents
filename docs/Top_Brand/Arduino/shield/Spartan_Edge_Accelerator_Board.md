@@ -4,6 +4,7 @@ title: Spartan Edge Accelerator Board
 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Spartan-Edge-Accelerator-Board
+sku: 102030005
 last_update:
   date: 01/30/2023  
   author: Eico 

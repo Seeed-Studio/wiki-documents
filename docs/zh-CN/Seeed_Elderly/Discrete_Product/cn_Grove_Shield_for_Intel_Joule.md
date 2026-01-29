@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove_Shield_for_Intel_Joule
+sku: 103030095
 last_update:
   date: 1/13/2023
   author: shuxu hu

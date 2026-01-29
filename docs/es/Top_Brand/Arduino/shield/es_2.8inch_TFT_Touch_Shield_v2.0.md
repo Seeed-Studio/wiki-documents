@@ -3,6 +3,7 @@ description: 2.8inch_TFT_Touch_Shield_v2.0
 title: 2.8inch TFT Touch Shield v2.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/2.8inch_TFT_Touch_Shield_v2.0
+sku: 104030004
 last_update:
   date: 01/10/2023  
   author: Eico 

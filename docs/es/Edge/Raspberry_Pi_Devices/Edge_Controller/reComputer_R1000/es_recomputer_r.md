@@ -6,6 +6,7 @@ keywords:
   - reComputer R1000
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
 slug: /es/recomputer_r
+sku: 113991274,E24010521,113991334,113991375
 last_update:
   date: 09/15/2025
   author: Kasun Thushara
@@ -31,7 +32,7 @@ tags:
 
 <br />
 
-El controlador IoT de borde reComputer R1000 está construido sobre la plataforma de alto rendimiento Raspberry Pi CM4, con un procesador quad-core A72 con soporte máximo de 8GB de RAM y 32GB de eMMC. Equipado con interfaces Ethernet duales que pueden configurarse de manera flexible, también incluye 3 canales RS485 aislados que soportan protocolos BACnet, Modbus RTU, Modbus TCP/IP.
+El controlador IoT edge reComputer R1000 está construido sobre la plataforma de alto rendimiento Raspberry Pi CM4, con un procesador quad-core A72 con soporte máximo de 8GB RAM y 32GB eMMC. Equipado con interfaces Ethernet duales que pueden configurarse de manera flexible, también incluye 3 canales RS485 aislados que soportan protocolos BACnet, Modbus RTU, Modbus TCP/IP.
 Con robustas capacidades de comunicación de red IoT, la serie R1000 soporta múltiples opciones de comunicación inalámbrica incluyendo 4G, LoRa®, Wi-Fi/BLE, permitiendo configuraciones flexibles para servir como gateways inalámbricos correspondientes. Este controlador es muy adecuado para gestión remota de dispositivos, gestión de energía y varios otros escenarios en el campo de edificios inteligentes.
 
 ## Características
@@ -41,17 +42,17 @@ Con robustas capacidades de comunicación de red IoT, la serie R1000 soporta mú
 - Múltiples canales RS485 aislados soportan comunicación de alta y baja velocidad.
 
 - Soporta protocolos BACnet, Modbus RTU y Modbus TCP/IP
-- Hasta 8GB de RAM soporta el procesamiento de miles de puntos de datos, asegurando un rendimiento eficiente
+- Hasta 8GB RAM soporta el procesamiento de miles de puntos de datos, asegurando rendimiento eficiente
 - Indicadores LED claros de doble cara ayudan a verificar el estado operacional rápidamente
 - Carcasa metálica de alta calidad, compatible con instalación en riel DIN y pared
-- Soporta Yocto y Buildroot para OS personalizado
+- Soporta Yocto y Buildroot para SO personalizado
 
 ### Rendimiento Potente
 
 - Alimentado por Raspberry Pi CM4
 
 - Broadcom BCM2711 quad-core Cortex-A72 (ARM v8) SoC de 64 bits @ 1.5GHz
-- Hasta 8GB de RAM y 32GB de eMMC
+- Hasta 8GB RAM y 32GB eMMC
 
 ### Ricas Capacidades Inalámbricas
 
@@ -69,7 +70,7 @@ Con robustas capacidades de comunicación de red IoT, la serie R1000 soporta mú
 - 1x Ethernet 10M/100M
 - 1x HDMI 2.0
 - 2x USB2.0 Tipo-A
-- 1x USB2.0 Tipo-C (consola USB para actualización de OS)
+- 1x USB2.0 Tipo-C (consola USB para actualización de SO)
 - 1x ranura para tarjeta SIM
 
 ### Seguridad y Confiabilidad
@@ -135,7 +136,7 @@ Con robustas capacidades de comunicación de red IoT, la serie R1000 soporta mú
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Voltaje de Alimentación (AC/DC)</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>12~24V AC/9~36V DC</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>12\~24V AC/9\~36V DC</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Protección contra Sobrevoltaje</td>
@@ -168,7 +169,7 @@ Con robustas capacidades de comunicación de red IoT, la serie R1000 soporta mú
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>2 x USB-A 2.0 Host</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x USB-C 2.0 (Para flashear OS)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>1 x USB-C 2.0 (Para flashear SO)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RS485</td>
@@ -265,11 +266,11 @@ Con robustas capacidades de comunicación de red IoT, la serie R1000 soporta mú
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>IP40</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Temperatura de Funcionamiento</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Temperatura de Operación</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>-30~70 °C</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Humedad de Funcionamiento</td>
+      <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Humedad de Operación</td>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>10~95% RH</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
@@ -293,7 +294,7 @@ Con robustas capacidades de comunicación de red IoT, la serie R1000 soporta mú
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} rowspan={2} style={{height: 18, width: '35.4622%'}}>Seguridad</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Chip de Cifrado TPM 2.0*</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Chip de Encriptación TPM 2.0*</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>ATECC608A</td>
@@ -376,7 +377,7 @@ El reComputer R1000 soporta tres opciones de fuente de alimentación: terminal A
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" /></div>
 
-El reComputer R1000 se suministra con un voltaje nominal AC de 12~24 V o voltaje DC de 9~36V. La fuente de alimentación se conecta a través del conector de bloque terminal de alimentación de 2 pines. Para conectar a tierra el reComputer R1000, el cable de tierra se puede asegurar al tornillo ubicado en la esquina superior izquierda del terminal de alimentación.
+El reComputer R1000 se suministra con un voltaje nominal AC de 12\~24 V o voltaje DC de 9\~36V. La fuente de alimentación se conecta a través del conector de bloque de terminales de alimentación de 2 pines. Para conectar a tierra el reComputer R1000, el cable de tierra se puede asegurar al tornillo ubicado en la esquina superior izquierda del terminal de alimentación.
 
 :::note
 La solución de alimentación utiliza un diodo rectificador de puente para protección contra polaridad inversa y es compatible con entradas tanto AC como DC. Esto asegura que **independientemente de cómo estén conectados los terminales positivo y negativo de la fuente de alimentación**, el circuito no se dañará. Al usar un rectificador de puente, la polaridad del voltaje de salida permanece fija independientemente de la polaridad de entrada DC, proporcionando protección efectiva contra polaridad inversa.
@@ -443,7 +444,7 @@ Tenga en cuenta que después del apagado, por favor espere al menos 10 segundos 
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RS485</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>3 x Bloque Terminal de 3 pines (aislado)</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>3 x Bloque de Terminales de 3 pines (aislado)</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>HDMI</td>
@@ -485,7 +486,7 @@ Tenga en cuenta que después del apagado, por favor espere al menos 10 segundos 
 </table>
 </div>
 
-Para consultar los mapeos y desplazamientos de GPIO, utilice el siguiente comando:
+Para consultar las asignaciones y desplazamientos de GPIO, utilice el siguiente comando:
 
 ```bash
 cat /sys/kernel/debug/gpio
@@ -493,7 +494,7 @@ cat /sys/kernel/debug/gpio
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/16.png" /></div>
 
-### Estado de los Indicadores LED
+### Estado del Indicador LED
 
 El reComputer R1000 cuenta con 6 indicadores LED que sirven para señalar el estado operativo de la máquina. Consulte la tabla a continuación para conocer las funciones específicas y el estado de cada LED:
 
@@ -535,7 +536,7 @@ Si el LED ACT no parpadea, entonces el código EEPROM podría estar corrupto, in
 STICKY: Is your Pi not booting? (The Boot Problems Sticky) - Raspberry Pi Forums
 Para más detalles consulte el [foro de Raspberry Pi](https://forums.raspberrypi.com//viewtopic.php?f=28&t=58151).
 
-Para controlar los LEDs de usuario, recomendamos usar sysfs, un pseudo-sistema de archivos proporcionado por el kernel de Linux que expone información sobre varios subsistemas del kernel, dispositivos de hardware y sus controladores asociados. En el ReComputer R1000, hemos abstraído la interfaz de LED de usuario en tres archivos de dispositivo (led-red, led-blue y led-green), permitiendo a los usuarios controlar las luces LED simplemente interactuando con estos archivos. Los ejemplos son los siguientes:
+Para controlar los LEDs de usuario, recomendamos usar sysfs, un pseudo-sistema de archivos proporcionado por el kernel de Linux que expone información sobre varios subsistemas del kernel, dispositivos de hardware y sus controladores asociados. En el ReComputer R1000, hemos abstraído la interfaz del LED de usuario en tres archivos de dispositivo (led-red, led-blue y led-green), permitiendo a los usuarios controlar las luces LED simplemente interactuando con estos archivos. Los ejemplos son los siguientes:
 
 1. Para encender el LED rojo, ingrese el siguiente comando en la Terminal:
 
@@ -560,7 +561,7 @@ echo 1 | sudo tee /sys/class/leds/led-green/brightness
 
 <div align="left"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig07.png" /></div>
 
-El reComputer R1000 cuenta con un zumbador activo, que puede utilizarse para diversos propósitos como alarmas y notificaciones de eventos. El zumbador se controla a través de GPIO21 al CM4 en reComputer R1000 v1.0, y GPIO20 al CM4 en reComputer R1000 1.1.
+El reComputer R1000 cuenta con un zumbador activo, que puede usarse para varios propósitos como alarmas y notificaciones de eventos. El zumbador se controla a través de GPIO21 al CM4 en reComputer R1000 v1.0, y GPIO20 al CM4 en reComputer R1000 1.1.
 
 :::note
 Para distinguir entre la revisión de hardware (v1.0 y v1.1), puede consultar [detalles de cambios del producto reComputer R1000 V1.1](https://wiki.seeedstudio.com/es/recomputer_r1000_v1_1_description/).
@@ -594,7 +595,7 @@ Por defecto, las resistencias terminales de 120Ω no están instaladas. Sin emba
 <div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position2.png" /></div>
 
 :::note
-La interfaz RS485 utiliza una fuente de alimentación aislada, lo que significa que la señal de tierra para dispositivos externos conectados a la interfaz RS485 debe conectarse al pin GND_ISO.
+La interfaz RS485 usa una fuente de alimentación aislada, lo que significa que la señal de tierra para dispositivos externos conectados a la interfaz RS485 debe conectarse al pin GND_ISO.
 
 :::
 
@@ -612,7 +613,7 @@ Estos son los pines relacionados con la interfaz 485 del reComputer para la tabl
 | RS485_2_DE/RE |                        | /dev/ttyAMA3   | GPIO17      | predeterminado Bajo   |
 | RS485_3_DE/RE |                        | /dev/ttyAMA5   | GPIO24      | predeterminado Bajo   |
 
-Por defecto, el puerto de habilitación de alimentación del puerto RS485 está en alto. Y cada interfaz RS485 está en estado de recepción. Puede hacer un experimento simple.
+Por defecto, el puerto de habilitación de alimentación del puerto RS485 está alto. Y cada interfaz RS485 está en estado de aceptación. Puede hacer un experimento simple.
 
 El puerto 485 que conecta la PC al reComputer-R.
 
@@ -730,7 +731,7 @@ Este dispositivo cuenta con dos interfaces Mini-PCIe, a saber, Ranura Mini-PCIe 
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig16.png" /></div>
 
-Hay un Mini Interruptor de Botón ubicado en el orificio de reinicio del reComputer R1000. Al presionar este botón con un objeto delgado, el CM4 puede ser reiniciado. Este pin cuando está alto señala que el CM4 ha iniciado. Poner este pin en bajo reinicia el módulo.
+Hay un Mini Interruptor de Botón ubicado en el orificio de reinicio del reComputer R1000. Al presionar este botón con un objeto delgado, el CM4 puede ser reiniciado. Este pin cuando está alto señala que el CM4 ha iniciado. Llevar este pin a bajo reinicia el módulo.
 
 ### Ethernet RJ45
 
@@ -849,7 +850,7 @@ echo "c" > /proc/sysrq-trigger
 ```
 
 :::warning
-Este comando desencadena un fallo del kernel y debería hacer que el watchdog reinicie el sistema.
+Este comando provoca un fallo del kernel y debería hacer que el watchdog reinicie el sistema.
 :::
 
 5. Monitorea el sistema para confirmar que se reinicia después del período de tiempo de espera especificado.
@@ -948,7 +949,7 @@ Aquí está la lista de accesorios y módulos opcionales:
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}> </td>
-      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>Chip de Encriptación TPM 2.0</td>
+      <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>Chip de Cifrado TPM 2.0</td>
       <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>Módulo TPM 2.0 con infineon SLB9670</td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>114993114</td>
     </tr>
@@ -979,7 +980,7 @@ Aquí está la lista de accesorios y módulos opcionales:
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}> </td>
       <td data-style="height: 18px; width: 25%;" colSpan={1} rowspan={1} style={{height: 18, width: '25%'}}>UPS</td>
-      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>Módulo SuperCAP UPS LTC3350</td>
+      <td data-style="height: 18px; width: 37.5%;" colSpan={1} style={{height: 18, width: '37.5%'}}>Módulo UPS SuperCAP LTC3350</td>
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110992004</td>
     </tr>
   </tbody>
@@ -1215,7 +1216,7 @@ Cree un script de inicio automático:
 sudo vi /opt/auto_4G.sh
 ```
 
-Ingrese el siguiente contenido. El APN debe determinarse basado en el operador de su tarjeta SIM. Aquí, `3gnet` es el APN para China Unicom.
+Ingrese el siguiente contenido. El APN debe determinarse basándose en el operador de su tarjeta SIM. Aquí, `3gnet` es el APN para China Unicom.
 
 ```sh
 #!/bin/bash
@@ -1291,7 +1292,7 @@ import TabItem from '@theme/TabItem';
 
 <br />
 
-**Paso 1.** Por favor consulta la guía de [Ensamblaje de Hardware del Módulo LoraWAN®](/es/recomputer_r1000_assembly_guide/#ensamblar-módulo-4glorazigbee-y-antena) para instalar el `Módulo LoraWAN® WM1302 SPI` en la `ranura Mini PCIe LoraWAN®` donde deberías ver la serigrafía *`Lora`*.
+**Paso 1.** Por favor consulta la guía de [Ensamblaje de Hardware del Módulo LoraWAN®](/es/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) para instalar el `Módulo LoraWAN® WM1302 SPI` en la `ranura Mini PCIe LoraWAN®` donde deberías ver la serigrafía *`Lora`*.
 
 **Paso 2.** escribe `sudo raspi-config` en la línea de comandos para abrir la Herramienta de Configuración de Software de Raspberry Pi:
 
@@ -1353,7 +1354,7 @@ Cambia `"com_path": "/dev/spidev0.0"` a `"com_path": "/dev/spidev0.1"`
 Si estás usando la versión 1.1 del reComputer R1000, por favor cambia a `"com_path": "/dev/spidev1.1"`
 :::
 
-**Paso 6.** Iniciar el Módulo LoraWAN®
+**Paso 6.** Inicia el Módulo LoraWAN®
 
 Luego ejecuta el siguiente código para iniciar el Módulo LoraWAN® según la versión de frecuencia de operación de tu WM1302.
 
@@ -1373,7 +1374,7 @@ cd ~/sx1302_hal/packet_forwarder
     </a>
 </div>
 
-**Paso 1.** Por favor consulta la guía de [Ensamblaje de Hardware del Módulo LoraWAN®](/es/recomputer_r1000_assembly_guide/#ensamblar-módulo-4glorazigbee-y-antena) para instalar el `Módulo LoraWAN® WM1302 USB` en la `ranura Mini PCIe 4G` donde deberías ver la serigrafía *`4G`*.
+**Paso 1.** Por favor consulta la guía de [Ensamblaje de Hardware del Módulo LoraWAN®](/es/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna) para instalar el `Módulo LoraWAN® WM1302 USB` en la `ranura Mini PCIe 4G` donde deberías ver la serigrafía *`4G`*.
 
 **Paso 2.** escribe `sudo raspi-config` en la línea de comandos para abrir la Herramienta de Configuración de Software de Raspberry Pi:
 
@@ -1417,7 +1418,7 @@ SX1261_RESET_PIN=579     # SX1261 reset (LBT / Spectral Scan)
 cp ./tools/reset_lgw.sh ./packet_forwarder/
 ```
 
-**Paso 5.** Cargar el módulo WM1302-USB
+**Paso 5.** Carga el módulo WM1302-USB
 
 ```bash
 # Check the device
@@ -1435,7 +1436,7 @@ sudo modprobe cdc_acm
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/load_lora_device.png" /></div>
 
-**Paso 6.** Encontrar el archivo del dispositivo
+**Paso 6.** Encuentra el archivo del dispositivo
 
 ```bash
 sudo dmesg | grep 1-1.3.3
@@ -1454,7 +1455,7 @@ Cambia `"com_path": "/dev/ttyACM0"` a `"com_path": "/dev/ttyACM4"`
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-R1000/change_file.png" /></div>
 
-**Paso 8.** Iniciar el Módulo LoraWAN®
+**Paso 8.** Inicia el Módulo LoraWAN®
 
 Luego ejecuta el siguiente código para iniciar el Módulo LoraWAN® según la versión de frecuencia de operación de tu WM1302.
 
@@ -1476,7 +1477,7 @@ Las ranuras Mini-PCIe ofrecen soporte para módulos Zigbee utilizando el protoco
 
 :::note
 Ten en cuenta que si requieres funcionalidad Zigbee, es necesario comprar el módulo Zigbee correspondiente y la antena externa.
-[Por favor haz clic aquí para las instrucciones de ensamblaje](/es/recomputer_r1000_assembly_guide/#ensamblar-módulo-4glorazigbee-y-antena).
+[Por favor haz clic aquí para las instrucciones de ensamblaje](/es/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna).
 :::
 
 #### Configurar reComputer R1000 con módulo Zigbee como Coordinador Zigbee
@@ -1534,14 +1535,14 @@ Si la formación de red es exitosa, entra en modo transparente enviando el coman
 
 **Paso 7.** Notas Adicionales:
 
-- Si la configuración del router falla, el dispositivo puede ya ser un coordinador. Abandona la red usando el comando `55 07 00 04 02 xx xx xx`.
+- Si la configuración del router falla, el dispositivo puede que ya sea un coordinador. Abandona la red usando el comando `55 07 00 04 02 xx xx xx`.
 - Prueba la potencia de transmisión usando los comandos `55 04 0D 00 00 0D` (consulta) y `55 04 0D 01 XX XX` (configurar).
 
 Luego puedes conectar dispositivos Zigbee al reComputer R1000 a través de plataformas ZHA, zigbee2mqtt, Tasmota, etc.
 
 ### PoE
 
-El reComputer R1000 funcionando como dispositivo alimentado puede soportar el estándar IEEE 802.3af agregando un módulo de alimentación PoE. Los usuarios necesitan desensamblar el dispositivo para instalar el módulo PoE para la función Ethernet PoE.
+El reComputer R1000 funciona como dispositivo alimentado y puede soportar el estándar IEEE 802.3af agregando un módulo de alimentación PoE. Los usuarios necesitan desarmar el dispositivo para instalar el módulo PoE para la función Ethernet PoE.
 
 :::note
 El reComputer R1000 soporta alimentación PoE, pero el producto estándar no incluye un módulo PoE por defecto. Seeed puede proporcionar servicios de soldadura y ensamblaje PoE para pedidos de personalización por lotes. Sin embargo, si un cliente está probando una muestra, necesitará [soldar y ensamblar el módulo PoE por sí mismo](/es/recomputer_r1000_assembly_guide/#ensamblar-módulo-ups-y-poe).
@@ -1588,9 +1589,9 @@ Hay dos usos principales para las tarjetas SSD:<br />
 Es importante notar que no todas las tarjetas SSD disponibles en el mercado soportan el segundo uso. Por lo tanto, si tienes la intención de usarla como unidad de arranque y no estás seguro sobre qué modelo comprar, recomendamos optar por nuestro **SSD de 1TB recomendado (SKU [112990267](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html))**. Este modelo ha sido probado y verificado para funcionalidad de arranque, reduciendo el riesgo de problemas de compatibilidad y minimizando los costos de prueba y error.
 :::
 
-### Chip de Encriptación TPM 2.0
+### Chip de Cifrado TPM 2.0
 
-El TPM presenta el OPTIGA™ TPM SLB9670 de Infineon que cumple con la especificación TPM 2.0 del Trusted Computing Group (TCG) y se recomienda como chip de encriptación para el reComputer R1000. El chip presenta una interfaz SPI aplicada para el puerto J13 en la placa, para habilitar una raíz de confianza para integridad de plataforma, atestación remota y servicios criptográficos.
+El TPM cuenta con el OPTIGA™ TPM SLB9670 de Infineon que cumple con la especificación TPM 2.0 del Trusted Computing Group (TCG) y se recomienda como chip de cifrado para el reComputer R1000. El chip cuenta con una interfaz SPI aplicada para el puerto J13 en la placa, para habilitar una raíz de confianza para la integridad de la plataforma, atestación remota y servicios criptográficos.
 
 :::note
 [Por favor haz clic aquí para las instrucciones de ensamblaje](/es/recomputer_r1000_assembly_guide/#ensamblar-módulo-tpm-20).
@@ -1615,7 +1616,7 @@ La duración de respaldo proporcionada por el UPS depende en gran medida de la c
 
 | Modo de Operación | Tiempo(s) | Observación                                                  |
 | ----------------- | --------- | ------------------------------------------------------------ |
-| Inactivo          | 37        | Prueba bajo condiciones inactivas con programa controlador oficial cargado |
+| Inactivo          | 37        | Prueba bajo condiciones de inactividad con programa controlador oficial cargado |
 | Carga completa de CPU | 18    | stress -c 4 -t 10m -v &                                     |
 
 :::note
@@ -1623,7 +1624,7 @@ Para la función UPS por favor contáctanos para más información, y la señal 
 [Por favor haz clic aquí para las instrucciones de ensamblaje](/es/recomputer_r1000_assembly_guide/#ensamblar-módulo-ups-y-poe).
 :::
 
-Un GPIO25 entre la CPU y la entrada de alimentación DC/AC se usa para alertar a la CPU cuando el suministro de 5V está caído. Entonces la CPU debe hacer algo urgente en un script antes del agotamiento de energía del supercapacitor y ejecutar un `$ shutdown`
+Un GPIO25 entre la CPU y la entrada de alimentación DC/AC se usa para alarmar a la CPU cuando el suministro de 5V está caído. Entonces la CPU debe hacer algo urgente en un script antes del agotamiento de energía del supercapacitor y ejecutar un `$ shutdown`
 <br />
 Otra forma de usar esta función es Iniciar un apagado cuando el pin GPIO cambia. El pin GPIO dado se configura como una tecla de entrada que genera eventos KEY_POWER. Este evento es manejado por systemd-logind iniciando un apagado.
 Usa `/boot/overlays/README` como referencia, luego modifica `/boot/config.txt`.
@@ -1639,7 +1640,7 @@ dtoverlay=gpio-shutdown,gpio_pin=25,active_low=1
 
 :::
 
-El código python a continuación es una demostración para detectar el modo de trabajo del UPS de supercapacitor a través de GPIO25, y guardar automáticamente datos y apagar cuando el sistema se apaga.
+El código Python a continuación es una demostración para detectar el modo de funcionamiento del UPS de supercapacitor a través de GPIO25, y guardar automáticamente datos y apagar cuando el sistema se apaga.
 
 ```python
 import RPi.GPIO as GPIO

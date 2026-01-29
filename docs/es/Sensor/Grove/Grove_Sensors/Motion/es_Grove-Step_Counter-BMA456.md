@@ -5,6 +5,7 @@ keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-Step_Counter-BMA456
+sku: 101020583
 last_update:
   date: 1/13/2023
   author: shuxu hu

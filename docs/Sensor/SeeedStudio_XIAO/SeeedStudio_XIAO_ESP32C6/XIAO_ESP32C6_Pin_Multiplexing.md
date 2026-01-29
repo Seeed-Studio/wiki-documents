@@ -6,7 +6,7 @@ keywords:
   - xiao
   - pin multiple
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg
-slug: /xiao_pin_multiplexing_esp33c6
+slug: /xiao_pin_multiplexing_esp32c6
 sidebar_position: 2
 last_update:
   date: 04/10/2024
@@ -146,7 +146,7 @@ So next, we will use the pins led out by the chip for serial communication.
 
 Core Function that need to be include:
 
-- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- enalbe Serial1,the function prototype : `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
+- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- enable Serial1,the function prototype : `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
   - `baud`  :baud rate
   - `config`:Configuration bit
   - `rxPin` :Receive Pin

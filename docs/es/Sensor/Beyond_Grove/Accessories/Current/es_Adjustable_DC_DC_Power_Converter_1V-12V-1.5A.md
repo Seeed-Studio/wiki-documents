@@ -5,6 +5,7 @@ keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A
+sku: 105030005
 last_update:
   date: 1/13/2023
   author: jianjing Huang

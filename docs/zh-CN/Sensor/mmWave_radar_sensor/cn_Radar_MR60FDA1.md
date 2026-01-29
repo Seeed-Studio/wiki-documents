@@ -5,6 +5,7 @@ keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Radar_MR60FDA1
+sku: 101990981
 last_update:
   date: 03/03/2023
   author: Citric

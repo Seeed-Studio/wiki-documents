@@ -5,6 +5,7 @@ keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-l1.webp
 slug: /get_started_with_meshtastic_wio_tracker_l1
+sku: 114993648,114993649,114993653,114993654
 sidebar_position: 2
 last_update:
   date: 12/24/2025
@@ -50,7 +51,7 @@ Only the 2.7 firmware support the menu bar. If you want to use the menu bar, fol
 
 #### Buzzer
 
-If you want to turn on or off the buzzer, please first `update the firmware` to `2.7` version. Because only the 2.7 virsion firmware has the menu bar. 
+If you want to turn on or off the buzzer, please first `update the firmware` to `2.7` version. Because only the 2.7 version firmware has the menu bar. 
 - Turn on the buzzer
 Setting (icon shaped like the gear) -> Notification -> Buzzer Action -> Disable
 - Turn off the buzzer

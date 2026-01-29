@@ -3,6 +3,7 @@ description: LinkStar-V2 安装操作系统
 title: 安装操作系统
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/H68KV2_install_system
+sku: 102110958
 last_update:
   date: 04/18/2024
   author: Parker

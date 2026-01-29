@@ -20,7 +20,7 @@ For instance, you can detect where the voice is coming from, perform voice activ
 
 ## Python SDK
 
-We have a comprehensive Python guide on how to communicate with the XVF3800 using the USB firmware. This Python script can be run in your favorite IDE without requiring the XVF3800 **XVF_Host**.
+We have a comprehensive Python guide on how to communicate with the XVF3800 using the USB firmware. This Python script can be run in your favorite IDE without requiring the XVF3800 **XVF_Host**. You can find more commands from this [link](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/python_control).
 
 You need to install the `pyusb` library.
 

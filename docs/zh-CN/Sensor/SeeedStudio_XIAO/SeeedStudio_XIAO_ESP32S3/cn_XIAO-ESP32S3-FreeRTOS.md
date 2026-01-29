@@ -15,19 +15,19 @@ last_update:
 
 # XIAO ESP32S3(Sense) 与 FreeRTOS
 
-本 wiki 介绍了 [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/) 对 [FreeRTOS](https://freertos.org/) 的支持。通过本指南的帮助，您将能够利用该开发板的可用功能集。
+本 wiki 涵盖了 [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/) 的 [FreeRTOS](https://freertos.org/) 支持。通过本指南的帮助，您将能够利用该开发板的可用功能集。
 
 ## 什么是 [FreeRTOS](https://www.freertos.org/index.html)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/1.png" alt="pir" width={600} height="auto" /></p>
 
-FreeRTOS 是一个 C 库集合，由实时内核和一组实现互补功能的模块化库组成。FreeRTOS 内核是一个实时内核（或实时调度器），使基于 FreeRTOS 构建的应用程序能够满足其硬实时要求。它使应用程序能够组织为独立执行线程的集合。
+FreeRTOS 是一个由 C 库组成的集合，包含一个实时内核和一组实现互补功能的模块化库。FreeRTOS 内核是一个实时内核（或实时调度器），使基于 FreeRTOS 构建的应用程序能够满足其硬实时要求。它使应用程序能够组织为独立执行线程的集合。
 
 _参考：[**掌握 FreeRTOS 实时内核**](https://www.freertos.org/Documentation/02-Kernel/07-Books-and-manual/01-RTOS_book)_
 
 ## FreeRTOS 移植
 
-FreeRTOS 是一个开源 RTOS（实时操作系统）内核，作为组件集成到 ESP-IDF 中。因此，所有 ESP-IDF 应用程序和许多 ESP-IDF 组件都是基于 FreeRTOS 编写的。FreeRTOS 内核已移植到 ESP 芯片的所有可用架构（即 Xtensa 和 RISC-V）。
+FreeRTOS 是一个开源的 RTOS（实时操作系统）内核，作为组件集成到 ESP-IDF 中。因此，所有 ESP-IDF 应用程序和许多 ESP-IDF 组件都是基于 FreeRTOS 编写的。FreeRTOS 内核已移植到 ESP 芯片的所有可用架构（即 Xtensa 和 RISC-V）。
 
 我们将使用 FreeRTOS 的 ESP IDF 移植版本。
 
@@ -46,7 +46,7 @@ FreeRTOS 是一个开源 RTOS（实时操作系统）内核，作为组件集成
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -57,12 +57,12 @@ FreeRTOS 是一个开源 RTOS（实时操作系统）内核，作为组件集成
 
 - [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C 显示屏 RTC 和按钮
 - [空气质量传感器 v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)
-- [Grove - Arduino 温度、湿度、压力和气体传感器 - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
+- [Grove - 温度、湿度、压力和气体传感器（适用于 Arduino - BME680）](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
 - [Seeed Studio XIAO 扩展板亚克力外壳](https://www.seeedstudio.com/XIAO-p-4812.html)
 
 ## 软件准备
 
-我使用的是 Visual Studio Code (Windows) 配合 ESP-IDF。
+我使用的是 Visual Studio Code（Windows）配合 ESP-IDF。
 
 1. VSCode 安装
 2. ESP-IDF 安装指南
@@ -89,17 +89,17 @@ FreeRTOS 是一个开源 RTOS（实时操作系统）内核，作为组件集成
   </table>
 </div>
 
-## 开始使用
+## 入门指南
 
 ### 设置 ESP-IDF
 
-在设置好 [Visual Studio 扩展](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md) 后，打开终端并粘贴以下命令，以便从普通终端环境（VScode 外部）访问 ESP-IDF 命令行工具。
+设置好 [Visual Studio 扩展](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md) 后，打开终端并粘贴以下命令，以便从普通终端环境（VScode 外部）访问 ESP-IDF 命令行工具。
 
 :::note
-正常安装 VS-Code 的 [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) 扩展将处理 90% 的使用情况，只有在需要在环境外部使用 ESP 命令行工具时才执行以下步骤。
+VS-Code 的 [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) 扩展的正常安装将处理 90% 的使用情况，只有在您需要在环境外部使用 ESP 命令行工具时才执行以下步骤。
 :::
 
-PowerShell (Windows)
+PowerShell（Windows）
 
 ```shell
 .$HOME\esp\v5.3\esp-idf\export.ps1
@@ -110,27 +110,27 @@ PowerShell (Windows)
 请将其替换为您设备上的安装路径。
 :::
 :::tip
-为了避免重复设置，请以管理员模式启动 PowerShell 并输入以下命令
+为了避免重复设置，以管理员模式启动 PowerShell 并输入以下命令
 
 ```shell
 notepad $PSHOME\Profile.ps1
 ```
 
-一个记事本实例将会打开。将导出的shell命令粘贴到记事本中并保存。
-打开一个PowerShell实例，它应该有接近以下的输出。
+将打开一个记事本实例。将导出 shell 命令粘贴到记事本中并保存。
+打开一个 powershell 实例，它应该有接近以下的输出。
 
 ```shell
 Done! You can now compile ESP-IDF projects.
 ```
 
 :::  
-如果一切操作正确，以下命令：
+如果一切都正确完成，以下命令：
 
 ```shell
 idf.py
 ```
 
-应显示以下输出：
+应该显示以下输出：
 
 ```shell
 Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
@@ -139,9 +139,193 @@ Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
   system target will be made. Selected target: None
 ```
 
+### XIAO ESP32S3 的开发板配置
+
+设置好 ESP-IDF 后，您需要专门为 XIAO ESP32S3 开发板配置您的项目，以利用其硬件功能，包括 8MB Flash 和 8MB Octal PSRAM。
+
+#### 设置目标设备
+
+在您的 ESP-IDF 项目目录中，将目标设置为 ESP32-S3：
+
+```bash
+idf.py set-target esp32s3
+```
+
+#### 启用完整构建选项
+
+在您项目根目录的 `CMakeLists.txt` 中，确保 `MINIMAL_BUILD` 设置为 `OFF`：
+
+```cmake
+idf_build_set_property(MINIMAL_BUILD OFF)
+```
+
+这将在 menuconfig 中启用所有配置选项。
+
+#### 配置 Flash 和 PSRAM
+
+打开配置菜单：
+
+```bash
+idf.py menuconfig
+```
+
+**Flash 大小配置：**
+1. 导航到：**Serial flasher config → Flash size**
+2. 设置为：**8 MB**
+
+**PSRAM 配置：**
+1. 导航到：**Component config → ESP PSRAM**
+2. 启用：**Support for external, SPI-connected RAM**
+3. 将 **SPI RAM mode** 设置为：**Octal Mode PSRAM**
+4. 将 **SPI RAM clock** 设置为：**80MHz**
+
+:::info
+XIAO ESP32S3 使用 Octal PSRAM，而不是 Quad 模式。选择正确的模式对于 8MB PSRAM 正常工作至关重要。
+:::
+
+#### 更新主组件依赖项
+
+在 `/main/CMakeLists.txt` 中，确保包含 PSRAM 和 SPI flash 组件：
+
+```cmake
+idf_component_register(
+    SRCS "main.c"
+    INCLUDE_DIRS "."
+    PRIV_REQUIRES esp_psram spi_flash
+)
+```
+
+#### 创建开发板引脚配置组件
+
+为 XIAO 引脚定义创建一个可重用的组件，使您的代码更具可读性和可移植性：
+
+```bash
+mkdir -p ./components/board_config/include/
+```
+
+创建 `./components/board_config/include/xiao_pins.h`：
+
+```c
+// xiao_pins.h
+#pragma once
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Analog / Digital Pins
+#define XIAO_D0     1
+#define XIAO_D1     2
+#define XIAO_D2     3
+#define XIAO_D3     4
+#define XIAO_D4     5
+#define XIAO_D5     6
+#define XIAO_D6     43
+#define XIAO_D7     44
+#define XIAO_D8     7
+#define XIAO_D9     8
+#define XIAO_D10    9
+
+// Onboard User LED (Active Low)
+#define XIAO_LED    21
+
+// I2C Pins (Default)
+#define XIAO_SDA    5   // Same as D4
+#define XIAO_SCL    6   // Same as D5
+
+// SPI Pins (Default)
+#define XIAO_MISO   9   // Same as D10
+#define XIAO_MOSI   10
+#define XIAO_SCK    8   // Same as D9
+#define XIAO_SS     7   // Same as D8
+
+#ifdef __cplusplus
+}
+#endif
+```
+
+创建 `./components/board_config/CMakeLists.txt`：
+
+```cmake
+idf_component_register(INCLUDE_DIRS "include")
+```
+
+:::tip
+这些引脚定义与 XIAO ESP32S3 开发板上的丝印标签匹配，使您的代码更具可读性。例如，使用 `XIAO_LED` 而不是硬编码 GPIO 21。
+:::
+
+#### 在代码中使用引脚定义
+
+在您的主应用程序或任何组件中，包含头文件：
+
+```c
+#include "xiao_pins.h"
+
+void app_main(void) {
+    // Example: Configure LED pin
+    gpio_set_direction(XIAO_LED, GPIO_MODE_OUTPUT);
+    gpio_set_level(XIAO_LED, 0);  // Turn on (active low)
+}
+```
+
+#### 引脚映射参考
+
+![Xiao ESP32S3 引脚图参考图片](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg)
+
+| 标签 | GPIO | 替代功能 |
+|-------|------|--------------|
+| D0    | 1    | ADC1_CH0     |
+| D1    | 2    | ADC1_CH1     |
+| D2    | 3    | ADC1_CH2     |
+| D3    | 4    | ADC1_CH3     |
+| D4    | 5    | ADC1_CH4, SDA |
+| D5    | 6    | ADC1_CH5, SCL |
+| D6    | 43   | TX           |
+| D7    | 44   | RX           |
+| D8    | 7    | ADC1_CH6, SS |
+| D9    | 8    | ADC1_CH7, SCK |
+| D10   | 9    | ADC1_CH8, MISO |
+
+:::note
+- GPIO 19 和 20 用于 USB D-/D+，不应重新配置
+- GPIO 21 上的板载 LED 是低电平有效（设置为 0 以点亮）
+- 所有引脚 D0-D10 都支持通过 ADC1 进行模拟输入
+:::
+
+#### 构建和烧录
+
+构建您的项目：
+
+```bash
+idf.py build
+```
+
+烧录到 XIAO ESP32-S3：
+
+```bash
+idf.py -p /dev/ttyACM0 flash monitor
+```
+
+将 `/dev/ttyACM0` 替换为您的实际串口（在 Windows 上，通常是 `COM3`、`COM4` 等）。
+
+#### 开发板配置故障排除
+
+**PSRAM 未检测到：**
+- 验证选择了 Octal 模式（不是 Quad）
+- 检查 flash 大小是否设置为 8MB
+- 确保 ESP-IDF 版本为 4.4 或更高
+
+**上传失败：**
+- 连接 USB 时按住 BOOT 按钮
+- 尝试降低上传速度：`idf.py -p PORT -b 115200 flash`
+
+**引脚冲突：**
+- 避免使用 GPIO 引脚 19 和 20（USB D- 和 D+）
+- XIAO_LED（GPIO 21）与板载 LED 共享
+
 ## 什么是任务？
 
-任务是处理器被请求执行的小型函数/作业，带有一组设置。任务的范围可以从小型函数到无限循环函数。  
+任务是处理器被要求执行的小功能/作业，具有一组设置。任务可以从小功能到无限循环功能。
 任务是 ESP-IDF 应用程序中执行的基本单元。它们本质上是与其他任务并发运行的函数。这允许高效的多任务处理和响应性。
 
 ### 什么是任务属性？
@@ -151,12 +335,12 @@ Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
 - **TaskFunction**：这是包含任务实际逻辑的函数。它是任务执行的入口点。
 - **StackSize**：这指定为任务堆栈分配的内存量。堆栈用于存储局部变量、函数返回地址和临时数据。
 - **TaskPriority**：这决定了任务相对于其他任务的重要性。高优先级任务比低优先级任务有更大的机会被优先执行。
-- **TaskParameters**：这些是可选参数，可以在创建任务函数时传递给它。它们可以用于为任务提供额外的上下文或配置。
+- **TaskParameters**：这些是可选参数，可以在创建任务时传递给任务函数。它们可以用于为任务提供额外的上下文或配置。
 - **CoreAffinity**：这指定任务应该分配给哪个 CPU 核心。在具有多个核心的系统中，这可以用于优化性能或平衡工作负载。
 
 ### 创建任务
 
-要在 FreeRTOS 中创建任务，使用 xTaskCreate 函数。此函数接受几个参数，包括任务函数、任务名称、堆栈大小、参数、优先级和指向创建任务的句柄。
+要在 FreeRTOS 中创建任务，使用 xTaskCreate 函数。此函数接受多个参数，包括任务函数、任务名称、堆栈大小、参数、优先级和创建任务的句柄。
 
 ```c
 TaskHandle_t task;
@@ -172,7 +356,7 @@ xTaskCreate(
 
 ### 创建固定到核心的任务
 
-要创建一个任务并将其固定到特定核心（仅当使用的芯片是双核时），需要使用 xTaskCreatePinnedToCore 函数。此函数与 xTaskCreate 类似，但包含一个用于指定核心的附加参数。
+要创建任务并将其固定到特定核心（仅当使用的芯片是双核时），使用 xTaskCreatePinnedToCore 函数。此函数类似于 xTaskCreate，但包含一个用于指定核心的附加参数。
 
 ```c
 TaskHandle_t task;
@@ -186,7 +370,7 @@ xTaskCreatePinnedToCore(
         0);                       /* Core ID */
 ```
 
-### Task function call
+### 任务函数调用
 
 任务函数是将由任务执行的实际代码。
 
@@ -218,7 +402,7 @@ taskFunction3 (500ms delay)
 taskFunction4 (500ms delay)
 ```
 
-### Code
+### 代码
 
 ```c
 #include <stdio.h>
@@ -302,12 +486,12 @@ configMINIMAL_STACK_SIZE 可以在 sdkconfig 中更改。
 
 1. 四个任务：代码定义了四个任务：taskFunction1、taskFunction2、taskFunction3 和 taskFunction4。
 2. 任务优先级：所有任务都使用 tskIDLE_PRIORITY 创建。这意味着它们具有相同的优先级。
-3. 任务绑定：taskFunction1 绑定到 CPU0，而其他三个任务绑定到 CPU1。
-4. 任务延迟：taskFunction1 的延迟为 1000ms，而其他三个任务的延迟为 500ms。
+3. 任务固定：taskFunction1 固定到 CPU0，而其他三个任务固定到 CPU1。
+4. 任务延迟：taskFunction1 有 1000ms 的延迟，而其他三个有 500ms 的延迟。
 
 ### 创建 CPU0 和 CPU1 任务调度
 
-我已经为 CPU0 和 CPU1 创建了基本的任务调度。
+我为 CPU0 和 CPU1 创建了一个基本的任务调度。
 
 #### CPU0 任务调度
 
@@ -318,7 +502,7 @@ Delay: 1000ms
 Core: 0
 ```
 
-#### CPU1 Task Schedule
+#### CPU1 任务调度
 
 ```shell
 Tasks: taskFunction2, taskFunction3, taskFunction4
@@ -328,7 +512,7 @@ Core: 1
 ```
 
 :::info
-这是一个简化的调度。实际实时系统中的任务调度会涉及更复杂的因素，如任务优先级、截止时间和资源约束。
+这是一个简化的调度。实时系统中的实际任务调度将涉及更复杂的因素，如任务优先级、截止时间和资源约束。
 :::
 
 <details>
@@ -380,7 +564,7 @@ I (14082) Task4: Hello from task 4
 ### 软件设置
 
 拉取 git 仓库后，在 VSCode 中打开文件夹。转到 View->Command Palette->ESP-IDF: Add vscode Configuration Folder。
-从底部面板选择正确的 COM 端口、芯片（ESP-S3），然后构建、烧录和监控。
+从底部面板选择正确的 COM 端口、芯片（ESP-S3）并构建、烧录和监控。
 
 ### 代码概述
 
@@ -425,9 +609,9 @@ void poll_read_air_quality_sensor(void *pvParameters)
 }
 ```
 
-- 创建了 poll_read_air_quality_sensor() 任务来持续读取传感器的原始数据。
-- 它调用 air_quality_sensor_slope() 来处理原始数据并计算斜率，这是空气质量的一个指标。
-- 该任务在读取下一个数据点之前延迟 500 毫秒。
+- poll_read_air_quality_sensor() 任务被创建来持续从传感器读取原始数据。
+- 它调用 air_quality_sensor_slope() 来处理原始数据并计算斜率，这是空气质量的指标。
+- 任务在读取下一个数据点之前延迟 500 毫秒。
 
 - 数据打印任务：
 
@@ -445,10 +629,10 @@ void print_read_air_quality_sensor(void *pvParameters)
 }
 ```
 
-- 创建 print_read_air_quality_sensor() 任务来定期打印收集的数据和计算的空气质量。
+- print_read_air_quality_sensor() 任务被创建来定期打印收集的数据和计算的空气质量。
 - 它使用 air_quality_error_to_message() 检索当前时间、斜率、原始值和空气质量消息。
-- 该任务以格式化的方式将数据打印到控制台。
-- 该任务在打印下一个数据点之前延迟 1000 毫秒。
+- 任务以格式化的方式将数据打印到控制台。
+- 任务在打印下一个数据点之前延迟 1000 毫秒。
 
 ```c
 
@@ -475,7 +659,7 @@ void app_main(void)
 }
 ```
 
-### Output
+### 输出
 
 ```shell
 Time : 37207    Slope : 3       Raw Value : 273
@@ -512,7 +696,7 @@ Fresh air.
 
 ## 在 FreeRTOS 中使用摄像头和 SD 卡
 
-在这里我使用板载摄像头和 SD 卡以及 ESP_IDF_v5.3。
+为此，我使用板载摄像头和 SD 卡以及 ESP_IDF_v5.3。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Priyanshu0901/Camera-and-SdCard-FreeRTOS.git" target="_blank" rel="noopener noreferrer">
@@ -545,10 +729,10 @@ Fresh air.
 ### 软件设置
 
 拉取 git 仓库后，在 VSCode 中打开文件夹。转到 View->Command Palette->ESP-IDF: Add vscode Configuration Folder。
-从底部面板选择正确的 COM 端口、芯片（ESP-S3），然后构建、烧录和监控。
+从底部面板选择正确的 COM 端口、芯片（ESP-S3）并构建、烧录和监控。
 
 :::tip
-如果您使用的是 OV3660 型号，您需要在 IDF 中设置它以便能够驱动它。在您的终端中输入 **"idf.py menuconfig"**
+如果您使用的是 OV3660 型号，您需要在 IDF 中设置它以便能够驱动它。在终端中输入 **"idf.py menuconfig"**
 :::
 
 <div class="table-center">
@@ -649,7 +833,7 @@ Fresh air.
   }
   ```
 
-  - 设置相机参数（亮度、对比度、饱和度、特效、白平衡、曝光控制、AEC、AE 级别、AEC 值、增益控制、AGC 增益、增益上限、BPC、WPC、原始 GMA、LENC、水平镜像、垂直翻转、DCW、彩条）。
+  - 设置摄像头参数（亮度、对比度、饱和度、特殊效果、白平衡、曝光控制、AEC、AE 级别、AEC 值、增益控制、AGC 增益、增益上限、BPC、WPC、原始 GMA、LENC、水平镜像、垂直翻转、DCW、彩条）。
 
   ```c
   sensor_t *s = esp_camera_sensor_get();
@@ -678,7 +862,7 @@ Fresh air.
     s->set_colorbar(s, 0);                   // 0 = disable , 1 = enable
   ```
 
-- 定义一个函数 takePicture() 来捕获图像并将其保存到 SD 卡中。
+  - 定义一个 takePicture() 函数来捕获图像并将其保存到 SD 卡。
 
   ```c
   void takePicture()
@@ -697,7 +881,7 @@ Fresh air.
   }
   ```
 
-- 创建一个任务 cameraTakePicture_5_sec() 以每5秒连续拍摄一张照片。
+  - 创建一个任务 cameraTakePicture_5_sec() 来每 5 秒连续拍照。
 
   ```c
   void cameraTakePicture_5_sec(void *pvParameters)
@@ -726,14 +910,14 @@ Fresh air.
 代码结构：
 
 - 头文件（camera_config.h、camera_interface.h）和实现文件（camera_interface.c）。
-- camera_config.h 文件定义了摄像头配置参数。
-- camera_interface.h 文件声明了摄像头初始化和任务创建的函数。
-- camera_interface.c 文件实现了摄像头初始化、拍照和任务创建逻辑。
+- camera_config.h 文件定义摄像头配置参数。
+- camera_interface.h 文件声明摄像头初始化和任务创建的函数。
+- camera_interface.c 文件实现摄像头初始化、拍照和任务创建逻辑。
 
-### SdCard 组件
+### SD 卡组件
 
 - SD 卡配置：  
-  定义了用于 SD 卡接口的 GPIO 引脚（MISO、MOSI、CLK、CS）。
+  定义用于 SD 卡接口的 GPIO 引脚（MISO、MOSI、CLK、CS）。
 
 ```c
 #ifndef SDCARD_CONFIG_H
@@ -747,7 +931,7 @@ Fresh air.
 #endif //SDCARD_CONFIG_H
 ```
 
-- SD 卡接口：
+- SD 卡接口：  
   声明函数 initialize_sdcard()、deinitialize_sdcard() 和 saveJpegToSdcard()。
 
 ```c
@@ -763,9 +947,9 @@ void saveJpegToSdcard(camera_fb_t *);
 #endif //SDCARD_INTERFACE_H
 ```
 
-- SD卡实现：
+- SD 卡实现：
 
-  - 使用定义的配置初始化SD卡，并将SD卡挂载为FAT文件系统。
+  - 使用定义的配置初始化 SD 卡，并将 SD 卡挂载为 FAT 文件系统。
 
   ```c
   sdmmc_card_t *card;
@@ -863,7 +1047,7 @@ void saveJpegToSdcard(camera_fb_t *);
   }
   ```
 
-  - 提供将 JPEG 图像保存到 SD 卡的功能。
+  - 提供将 JPEG 图像保存到 SD 卡的函数。
 
   ```c
   uint16_t lastKnownFile = 0;
@@ -893,9 +1077,9 @@ void saveJpegToSdcard(camera_fb_t *);
 组件结构：
 
 - 头文件（sdcard_config.h、sdcard_interface.h）和实现文件（sdcard_interface.c）。
-- sdcard_config.h 文件定义了 SD 卡配置参数。
-- sdcard_interface.h 文件声明了 SD 卡初始化、去初始化和图像保存的函数。
-- sdcard_interface.c 文件实现了 SD 卡初始化、去初始化和图像保存逻辑。
+- sdcard_config.h 文件定义 SD 卡配置参数。
+- sdcard_interface.h 文件声明 SD 卡初始化、去初始化和图像保存的函数。
+- sdcard_interface.c 文件实现 SD 卡初始化、去初始化和图像保存逻辑。
 
 ### 主函数
 
@@ -923,15 +1107,15 @@ void app_main(void)
 }
 ```
 
-- 包含摄像头和SD卡接口所需的头文件。
-- 使用提供的函数初始化SD卡和摄像头。
+- 包含摄像头和 SD 卡接口所需的头文件。
+- 使用提供的函数初始化 SD 卡和摄像头。
 - 启动摄像头任务以连续拍照
 
 ### 输出
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/8.gif" alt="pir" width={600} height="auto" /></p>
 
-#### UART输出
+#### UART 输出
 
 ```shell
 I (1119) main_task: Calling app_main()
@@ -995,13 +1179,13 @@ FreeRtos 可以用于基于 Arduino-IDE 的 XIAO-S3 构建。它类似于 ESP-ID
 
 ### 硬件设置
 
-将 Xiao-S3 连接到 [Grove 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)（OLED 显示屏和 RTC），并将 [Grove - Arduino 温度、湿度、压力和气体传感器 - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html) 连接到 I2c 总线。
+将 Xiao-S3 连接到 [Grove - 扩展板](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)（OLED 显示屏和 RTC），并将 [Grove - Arduino 温度、湿度、压力和气体传感器 - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html) 连接到 I2c 总线。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/4.jpg" alt="pir" width={600} height="auto" /></p>
 
 ### 软件设置
 
-安装 [pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino) 和 [bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x) 库的 arduino 库。参考[如何安装库](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)来为 Arduino 安装库。
+安装 [pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino) 和 [bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x) 库的 Arduino 库。参考[如何安装库](https://wiki.seeedstudio.com/cn/How_to_install_Arduino_Library/)来为 Arduino 安装库。
 
 ```cpp
 #include "time.h"
@@ -1252,16 +1436,16 @@ T: 29.03 C  P: 90.86 KPa  H: 63.34 %  G: 47.85 Kohms
 
 ## Arduino FreeRtos vs ESP-IDF FreeRtos
 
-| Feature                 | Arduino FreeRTOS                                                | ESP-IDF FreeRTOS                                                                                                   |
+| 功能                 | Arduino FreeRTOS                                                | ESP-IDF FreeRTOS                                                                                                   |
 | ----------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | 抽象层       | 更高级别的抽象，对初学者更容易                  | 更低级别的抽象，为有经验的用户提供更多控制                                                        |
 | 开发环境 | Arduino IDE                                                     | ESP-IDF 命令行工具                                                                                         |
-| 兼容性           | 主要兼容基于 Arduino 的开发板                  | 兼容更广泛的 ESP32 和 ESP32-S2 开发板                                                         |
-| 功能                | 基本的 RTOS 功能，任务创建、调度、同步 | 全面的 RTOS 功能，任务创建、调度、同步、事件组、队列、互斥锁、信号量 |
-| 性能             | 由于抽象层的存在，性能通常较低          | 由于直接访问硬件和 RTOS API，性能更高                                                     |
-| 定制化           | 定制化选项有限                                   | 通过配置文件和 API 提供广泛的定制化选项                                               |
-| 学习曲线          | 对初学者来说更容易学习                                   | 对于不熟悉命令行工具和 C/C++ 的人来说学习曲线更陡峭                                      |
-| 使用场景               | 简单的物联网项目、原型开发                                | 复杂的物联网应用、实时系统、定制硬件                                                       |
+| 兼容性           | 主要与基于 Arduino 的开发板兼容                  | 与更广泛的 ESP32 和 ESP32-S2 开发板兼容                                                         |
+| 功能                | 基本 RTOS 功能、任务创建、调度、同步 | 全面的 RTOS 功能、任务创建、调度、同步、事件组、队列、互斥锁、信号量 |
+| 性能             | 由于抽象层，性能通常较低          | 由于直接访问硬件和 RTOS API，性能更高                                                     |
+| 定制           | 定制选项有限                                   | 通过配置文件和 API 提供广泛的定制选项                                               |
+| 学习曲线          | 对初学者更容易学习                                   | 对于不熟悉命令行工具和 C/C++ 的人来说学习曲线更陡峭                                      |
+| 使用场景               | 简单的物联网项目、原型制作                                | 复杂的物联网应用、实时系统、定制硬件                                                       |
 
 ## 故障排除
 

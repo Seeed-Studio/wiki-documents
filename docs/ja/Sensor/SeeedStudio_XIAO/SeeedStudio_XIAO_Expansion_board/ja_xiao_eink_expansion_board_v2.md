@@ -3,6 +3,7 @@ title: ePaper ドライバーボード
 description: XIAO 用 eInk 拡張ボードは、ePaper スクリーンに何かを表示するために設計された Seeed Studio のスマートモジュールです。
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/titleimg.webp
 slug: /ja/xiao_eink_expansion_board_v2
+sku: 104990861,114993558
 keywords:
   - XIAO
   - epaper

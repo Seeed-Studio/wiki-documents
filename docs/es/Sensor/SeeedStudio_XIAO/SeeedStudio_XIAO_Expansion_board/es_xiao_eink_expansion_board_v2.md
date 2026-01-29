@@ -3,6 +3,7 @@ title: Placa Controladora de ePaper
 description: La placa de expansión eInk para XIAO es un módulo inteligente de Seeed Studio diseñado para mostrar contenido en una pantalla de papel electrónico.
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/titleimg.webp
 slug: /es/xiao_eink_expansion_board_v2
+sku: 104990861,114993558
 keywords:
   - XIAO
   - epaper

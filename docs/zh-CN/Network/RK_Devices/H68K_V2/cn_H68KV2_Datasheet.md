@@ -5,6 +5,7 @@ keywords:
 - 网络
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/h68kv2_datasheet
+sku: 102110958
 last_update:
   date: 04/18/2024
   author: Parker

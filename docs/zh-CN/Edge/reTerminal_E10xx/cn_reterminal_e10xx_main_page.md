@@ -3,6 +3,7 @@ description: 本文是 reTerminal E 系列的汇总页面。
 title: reTerminal E 系列
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/reterminal_e10xx_main_page
+sku: 100017057,100073581
 sidebar_position: 1
 last_update:
   date: 07/21/2025

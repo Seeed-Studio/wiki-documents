@@ -4,12 +4,13 @@ title: Flash Jetpack && インターフェース使用方法
 tags:
   - J501-Roboticsキャリアボード
   - Flash Jetpack
-  - Robotics
+  - ロボティクス
   - インターフェース使用方法
   - インターフェース
   - ハードウェア
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
 slug: /ja/recomputer_j501_mini_getting_started
+sku: 100020039
 last_update:
   date: 11/04/2025
   author: Dayu
@@ -50,7 +51,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
 - 拡張ボード用ヒートシンク x 1
 - スタッド(M3*30) x 5
 - M3六角ナット x 5
-- ネジ(CM2.5*L.4) Jetsonモジュールおよび M.2 Key M用 x3
+- ネジ(CM2.5*L.4) JetsonモジュールおよびM.2 Key M用 x3
 - ネジ(CM2*3.0) M.2 Key E用 x1
 - スタッド(M2*2.0) M.2 Key B用 x1
 - ネジ(CM3*4.0) M.2 Key B用 x1
@@ -90,7 +91,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
       <td>1x M.2 KEY M PCIe (M.2 NVMe 2280 SSD)</td>
     </tr>
     <tr>
-      <th rowSpan="2">ネットワーキング</th>
+      <th rowSpan="2">ネットワーク</th>
       <td>M.2 KEY E</td>
       <td>1x M.2 Key E WiFi/Bluetoothモジュール用</td>
     </tr>
@@ -109,23 +110,23 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2x CAN JST 4-Pinコネクタ(GH 1.25);</td>
+      <td>2x CAN JST 4ピンコネクタ(GH 1.25);</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>1x DI JST 6-Pinコネクタ(GH 1.25);<br />1x DO JST 5-Pinコネクタ(GH 1.25);</td>
+      <td>1x DI JST 6ピンコネクタ(GH 1.25);<br />1x DO JST 5ピンコネクタ(GH 1.25);</td>
     </tr>
       <tr>
       <td>I2S</td>
-      <td>1x I2S JST 6-Pinコネクタ(GH 1.25)</td>
+      <td>1x I2S JST 6ピンコネクタ(GH 1.25)</td>
     </tr>
     <tr>
       <td>RS485</td>
-      <td>1x RS-485 JST 4-Pinコネクタ(GH 1.25)</td>
+      <td>1x RS-485 JST 4ピンコネクタ(GH 1.25)</td>
     </tr>
     <tr>
       <td>UART</td>
-      <td>1x UART JST 6-Pinコネクタ（DOと多重化）</td>
+      <td>1x UART JST 6ピンコネクタ（DOと多重化）</td>
     </tr>
     <tr>
       <td>ディスプレイ</td>
@@ -133,7 +134,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
     </tr>
     <tr>
       <td>ファン</td>
-      <td>1x 4 Pinファンコネクタ(12V PWM)</td>
+      <td>1x 4ピンファンコネクタ(12V PWM)</td>
     </tr>
     <tr>
       <td>拡張ポート</td>
@@ -141,7 +142,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC 2-pin;</td>
+      <td>1x RTC 2ピン;</td>
     </tr>
     <tr>
       <td>LED</td>
@@ -174,7 +175,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
     </tr>
     <tr>
       <th rowSpan="1">動作温度</th>
-      <td colSpan="2">-20℃~60℃（25Wモード）;<br />-20℃~55℃（MAXNモード）;<br />（reComputer Roboticsヒートシンクとファン付き）</td>
+      <td colSpan="2">-20℃~60℃（25Wモード）;<br />-20℃~55℃（MAXNモード）;<br />（reComputer Roboticsヒートシンクとファン使用時）</td>
     </tr>
     <tr>
       <th rowSpan="1">保証</th>
@@ -187,7 +188,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
   </tbody>
 </table>
 
-## 📦 Flash JetPack OS
+## 📦 JetPack OSのフラッシュ
 
 ### サポートされるモジュール
 
@@ -196,7 +197,7 @@ NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワー�
 
 ### 前提条件
 
-- Ubuntu ホストPC
+- UbuntuホストPC
 - Robotics J501 Miniキャリアボード
 - NVIDIA® Jetson AGX Orinモジュール
 - Nano/NXモジュールアクティブファン
@@ -286,24 +287,24 @@ Ubuntuホストマシンで、ターミナルを開き、コマンド`sha256sum 
 
 <summary> ステップバイステップ </summary>
 
-**ステップ 1.** RESETモードのボタンを押し続けます。
+**ステップ1.** RESETモードのボタンを押し続けます。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/reset.png" />
 </div>
 
-**ステップ 2.** 電源ケーブルを接続してキャリアボードに電源を供給し、RESTボタンを離します。
+**ステップ2.** 電源ケーブルを接続してキャリアボードに電源を投入し、**REC**ボタンを離します。
 
-**ステップ 3.** USB Type-Cデータ転送ケーブルでボードをUbuntuホストPCに接続します。
+**ステップ3.** USB Type-Cデータ転送ケーブルでボードをUbuntuホストPCに接続します。
 
 <div align="center">
   <img width="{600}" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/flash-port.png" />
 </div>
 
-**ステップ 4.** LinuxホストPCで、ターミナルウィンドウを開き、コマンド`lsusb`を入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかがある場合、ボードは強制リカバリモードになっています。
+**ステップ4.** LinuxホストPCで、ターミナルウィンドウを開き、コマンド`lsusb`を入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかがある場合、ボードは強制リカバリモードになっています。
 
-- AGX Orin 32GB用: **0955:7223 NVidia Corp**
-- AGX Orin 64GB の場合: **0955:7023 NVidia Corp**
+- AGX Orin 32GB用：**0955:7223 NVidia Corp**
+- AGX Orin 64GB の場合：**0955:7023 NVidia Corp**
 
 以下の画像は AGX Orin 32GB 用です：
 
@@ -315,7 +316,7 @@ Ubuntuホストマシンで、ターミナルを開き、コマンド`sha256sum 
 
 ### Jetson へのフラッシュ
 
-**ステップ 1:** ダウンロードしたイメージファイルを展開します：
+**ステップ 1：** ダウンロードしたイメージファイルを展開します：
 
 ```bash
 cd <path-to-image>
@@ -323,7 +324,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2025-09-08.tar.gz
 ```
 
-**ステップ 2:** 以下のコマンドを実行して、jetpack システムを NVMe SSD にフラッシュします：
+**ステップ 2：** 以下のコマンドを実行して、jetpack システムを NVMe SSD にフラッシュします：
 
 ```bash
 cd mfi_xxxx
@@ -336,10 +337,10 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-フラッシュコマンドは 2-10 分間実行される場合があります。
+フラッシュコマンドは 2～10 分間実行される場合があります。
 :::
 
-**ステップ 3:** Robotics J501-Mini をディスプレイに接続します。PD to HDMI アダプターを使用して HDMI 入力をサポートするディスプレイに接続するか、PD ケーブルを使用して PD 入力をサポートするディスプレイに直接接続し、初期設定セットアップを完了します：
+**ステップ 3：** Robotics J501-Mini をディスプレイに接続します。PD to HDMI アダプターを使用して HDMI 入力をサポートするディスプレイに接続するか、PD ケーブルを使用して PD 入力をサポートするディスプレイに直接接続し、初期設定セットアップを完了します：
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/>
@@ -445,7 +446,7 @@ Bluetooth 機能は M.2 Key E スロット経由で利用できます。
 
 ## Ethernet
 
-Robotics j501-Mini キャリアボードは、高速有線ネットワーク接続用の 2 つの 1Gbps RJ45 Ethernet ポートを搭載しています。
+Robotics j501-Mini キャリアボードは、高速有線ネットワーク接続のために 1Gbps と 10Gbps の RJ45 Ethernet ポートを各 1 つ搭載しています。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/ethernet-real.png"/>
@@ -506,7 +507,7 @@ Robotics j501-Mini キャリアボードには、2 つの USB 3.2 Type-A ポー�
 
 ### USB-A 速度テスト
 
-USB デバイス速度をテストするスクリプトを作成します：
+USB デバイスの速度をテストするスクリプトを作成します：
 
 ```bash
 sudo vim test_usb
@@ -565,7 +566,7 @@ screen /dev/ttyUSB0 115200
 
 reComputer Jetson Robotics j501-Mini には以下が搭載されています：
 
-- 1x 4 ピンファンコネクタ（12V PWM）：標準的な 12V PWM ファンと互換性があり、精密な速度制御もサポートしているため、高性能冷却要件に最適です。
+- 1x 4 ピンファンコネクタ（12V PWM）：標準的な 12V PWM ファンと互換性があり、精密な速度制御もサポートしており、高性能冷却要件に最適です。
 
 ### ハードウェア接続
 
@@ -641,14 +642,14 @@ J501 Mini は JST 4 ピン（GH1.25）に統合された 2 つの CAN インタ�
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can1-ds.png"/>
 </div>
 
-### CAN通信
-このセクションでは、Jetson上のCAN0とCAN1を接続し、`Classic CANモード`と`CAN-FDモード`でCAN0とCAN1間のデータ送受信方法を実演します。
+### CAN 通信
+このセクションでは、Jetson の CAN0 と CAN1 を接続し、`Classic CAN モード` と `CAN-FD モード` で CAN0 と CAN1 間のデータ送受信方法を実演します。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/CAN-connect.png"/>
 </div>
 
-CAN0とCAN1の終端抵抗は、gpiochip1 line4にあるPAA.04とgpiochip1 line7にあるPAA.07の2つのピンで制御できます。
+CAN0 と CAN1 の終端抵抗は、gpiochip1 line4 にある PAA.04 と gpiochip1 line7 にある PAA.07 の 2 つのピンで制御できます。
 
 終端抵抗制御は以下のルールに従います：
 ```
@@ -659,7 +660,7 @@ When `PAA.07 = 1`, the 120 Ω termination resistor of CAN1 is **disconnected**;
 when `PAA.07 = 0`, the 120 Ω termination resistor of CAN1 is **connected**.
 ```
 
-gpiochip 1のピンを表示するには、以下のコマンドを入力します：
+以下のコマンドを入力して gpiochip 1 のピンを確認します：
 ```bash
 gpioinfo gpiochip1
 ```
@@ -669,13 +670,13 @@ gpioinfo gpiochip1
 </div>
 
 
-`PAA.04`と`PAA.07`を0に設定するには、以下のコマンドを参照してください：
+`PAA.04` と `PAA.07` を 0 に設定するには、以下のコマンドを参照してください：
 ```bash
 sudo gpioset --mode=wait gpiochip1 4=0
 sudo gpioset --mode=wait gpiochip1 7=0
 ```
 
-`PAA.04`と`PAA.07`を1に設定するには、以下のコマンドを参照してください：
+`PAA.04` と `PAA.07` を 1 に設定するには、以下のコマンドを参照してください：
 ```bash
 sudo gpioset --mode=wait gpiochip1 4=1
 sudo gpioset --mode=wait gpiochip1 7=1
@@ -683,16 +684,16 @@ sudo gpioset --mode=wait gpiochip1 7=1
 
 
 
-#### Classic CANモード
+#### Classic CAN モード
 
-標準モードで**CAN0**と**CAN1**間のデータ送受信をテストするために`test_can.sh`を作成します：
+標準モードで **CAN0** と **CAN1** 間のデータ送受信をテストするために `test_can.sh` を作成します：
 
 ```bash
 touch test_can.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
-`test_can.sh`のスクリプトコードは以下の通りです：
+`test_can.sh` のスクリプトコードは以下の通りです：
 
 <details>
 <summary> test_can.sh </summary>
@@ -731,16 +732,16 @@ candump can0
 
 </details>
 
-**CAN0**と**CAN1**間のデータ送受信が完了します：
+**CAN0** と **CAN1** 間のデータ送受信が完了します：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can_normal.jpg"/>
 </div>
 
 
-#### CAN-FDモード
+#### CAN-FD モード
 
-[データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)では、**CAN0/CAN1**インターフェースの配線図を以下のように確認できます：
+[データシート](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)では、以下に示すような **CAN0/CAN1** インターフェースの配線図を確認できます：
 
 
 <!-- <div align="center">
@@ -749,14 +750,14 @@ candump can0
 
 <!-- Here we will demonstrate to you how to conduct data communication using the CAN1 interface, by utilizing the [USB to CAN Analyzer Adapter](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html). -->
 
-CAN-FDモードでCAN0とCAN1間のデータ送受信をテストするために`test_canfd.sh`を作成します：
+CAN-FD モードで CAN0 と CAN1 間のデータ送受信をテストするために `test_canfd.sh` を作成します：
 
 ```bash
 touch test_canfd.sh
 chmod +x test_can.sh
-./tets_can.sh
+sudo ./tets_can.sh
 ```
-`test_canfdfd.sh`のスクリプトコードは以下の通りです：
+`test_canfdfd.sh` のスクリプトコードは以下の通りです：
 
 <details>
 <summary> test_canfd.sh </summary>
@@ -803,7 +804,7 @@ cangen can1 -f
 
 </details>
 
-CAN0とCAN1間のデータ送受信が完了します：
+CAN0 と CAN1 間のデータ送受信が完了します：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/can-fd.jpg"/>
@@ -814,32 +815,32 @@ CAN0とCAN1間のデータ送受信が完了します：
 
 ### GPI
 
-Robotics J501 MiniはGPI用の標準6ピンJSTヘッダーを提供します。
+Robotics J501 Mini は GPI 用の標準 6 ピン JST ヘッダーを提供します。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPI-real.png"/>
 </div>
 
-**GPI**データシート回路図は以下の通りです：
+**GPI** データシートの回路図は以下の通りです：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPI-jst.png"/>
 </div>
 
-**J12**のピン定義は以下の通りです：
+**J12** のピン定義は以下の通りです：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPI-ds.png"/>
 </div>
 
 
-入力状態を読み取るために**GPI 1**から**GPI 4**を有効にします：
+入力状態を読み取るために **GPI 1** から **GPI 4** を有効にします：
 ```bash
 sudo gpioset --mode=wait 0 131=0
 ```
 
 
-**GPI 1**から**GPI 4**の入力を読み取るには、以下のコマンドを参照してください：
+**GPI 1** から **GPI 4** の入力を読み取るには、以下のコマンドを参照してください：
 ```bash
 sudo gpioget 0 96  #read the input of GPI 1
 sudo gpioget 0 104 #read the input of GPI 2
@@ -847,36 +848,36 @@ sudo gpioget 0 86  #read the input of GPI 3
 sudo gpioget 0 83  #read the input of GPI 4
 ```
 
-ハイレベルが読み取られると1を返し、ローレベルが読み取られると0を返します。
+ハイレベルが読み取られると 1 を返し、ローレベルが読み取られると 0 を返します。
 
 ### GPO
 
-Robotics J501 MiniはGPO用の標準6ピンJSTヘッダーを提供します。
+Robotics J501 Mini は GPO 用の標準 6 ピン JST ヘッダーを提供します。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPO-real.png"/>
 </div>
 
 
-**GPO**データシート回路図は以下の通りです：
+**GPO** データシートの回路図は以下の通りです：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPO-jst.png"/>
 </div>
 
-**J14**のピン定義は以下の通りです：
+**J14** のピン定義は以下の通りです：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPO-ds.png"/>
 </div>
 
-出力状態のために**GPO 1**から**GPO 4**を有効にします：
+出力状態のために **GPO 1** から **GPO 4** を有効にします：
 ```bash
 sudo gpioset --mode=wait 0 79=1
 ```
 
 
-**GPO 1**から**GPO 4**の出力を設定するには、以下のコマンドを参照してください：
+**GPO 1** から **GPO 4** の出力を設定するには、以下のコマンドを参照してください：
 
 ```bash
 sudo gpioset --mode=wait 0 110=1  #set output of GPO 1 to high voltag
@@ -894,23 +895,23 @@ sudo gpioset --mode=wait 0 113=1  #set output of GPO 4 to low voltag
 
 ## UART
 
-Robotics J501 MiniはUARTシリアル通信用の標準6ピンJSTヘッダーを提供します。
-UARTとGPOは同じJSTインターフェースを使用します。このインターフェースはデフォルトでGPO機能になっています。**UART機能に切り替える必要がある場合は、新しいデバイスツリーを指定してデバイスを再起動し、変更を有効にする必要があります。**
+Robotics J501 Mini は UART シリアル通信用の標準 6 ピン JST ヘッダーを提供します。
+UART と GPO は同じ JST インターフェースを使用します。このインターフェースはデフォルトで GPO 機能になっています。**UART 機能に切り替える必要がある場合は、新しいデバイスツリーを指定してデバイスを再起動し、変更を有効にする必要があります。**
 
 
-**UART**通信については、以下の配線に従ってください。ここでは、USB to TTLツールを例として使用します。
+**UART** 通信については、以下の配線に従ってください。ここでは、USB to TTL ツールを例として使用します。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/uart-real.png"/>
 </div>
 
-**UART**データシート回路図は以下の通りです：
+**UART** データシートの回路図は以下の通りです：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPO-jst.png"/>
 </div>
 
-**J14**のピン定義は以下の通りです：
+**J14** のピン定義は以下の通りです：
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/GPO-ds.png"/>
@@ -919,15 +920,15 @@ UARTとGPOは同じJSTインターフェースを使用します。このイン�
 
 
 :::warning
-UARTとGPOは同じ物理インターフェースを共有します。デフォルトでは、このインターフェースはGPOとして機能します。UARTに切り替える必要がある場合は、このセクションの内容を参照してください。
+UART と GPO は同じ物理インターフェースを共有します。デフォルトでは、このインターフェースは GPO として機能します。UART に切り替える必要がある場合は、このセクションの内容を参照してください。
 :::
 
 異なるモジュールについては、対応するデバイスツリーファイルをダウンロードする必要があります。
 
-AGX Orin 32G用の`.dtb`ダウンロードリンク：
+AGX Orin 32G 用の `.dtb` ダウンロードリンク：
 [https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb](https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb)
 
-AGX Orin 64G用の`.dtb`ダウンロードリンク：
+AGX Orin 64G 用の `.dtb` ダウンロードリンク：
 [https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0005-recomputer-mini.dtb](https://files.seeedstudio.com/wiki/recomputer-j501-mini/tegra234-j501x-0000%2Bp3701-0005-recomputer-mini.dtb)
 
 デバイスツリーを指定されたパスにコピーします：
@@ -939,14 +940,14 @@ sudo cp tegra234-j501x-0000%2Bp3701-0004-recomputer-mini.dtb /boot/
 sudo cp tegra234-j501x-0000%2Bp3701-0005-recomputer-mini.dtb /boot/
 ```
 
-`/boot/extlinux/extlinux.conf`をバックアップして修正し、新しい`.dtb`ファイルを指す行を追加します：
+`/boot/extlinux/extlinux.conf` をバックアップして変更し、新しい `.dtb` ファイルを指す行を追加します：
 
 ```bash
 sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
 sudo vim /boot/extlinux/extlinux.conf
 ```
 
-使用しているデバイスツリーファイル名に基づいて、`extlinux.conf`に`FDT=/your_path`の行を追加します。AGX Orin 32Gを例にします：
+使用しているデバイスツリーファイル名に基づいて、`extlinux.conf` に `FDT=/your_path` の行を追加します。AGX Orin 32G を例にします：
 
 ```python
 LABEL primary
@@ -1021,7 +1022,7 @@ sudo cutecom
 
 ## I2S
 
-I2Sインターフェースは、デバイス間でステレオオーディオデータを送信するために設計されたデジタルオーディオ通信バスを提供します。Robotics J501-Miniは標準的なI2Sシグナリングをサポートし、音声対話、音源定位、リアルタイムオーディオ処理などのアプリケーション向けに高品質、低遅延のオーディオ入出力を可能にします。
+I2Sインターフェースは、デバイス間でステレオオーディオデータを送信するために設計されたデジタルオーディオ通信バスを提供します。Robotics J501-Miniは標準的なI2Sシグナリングをサポートし、音声対話、音源定位、リアルタイムオーディオ処理などのアプリケーション向けに高品質で低遅延のオーディオ入出力を可能にします。
 
 ### ハードウェア接続
 Robotics J501-Miniは **I2S** 用の1x JST 5ピンコネクタ（GH 1.25）を提供します。
@@ -1274,7 +1275,7 @@ Opening the data stream, you can view the video from the camera.
 
 ### SGxxx シリーズのカメラを使用する
 
-**ステップ 1.** シリアライザーとデシリアライザーのチャンネル形式を設定します。図中のインターフェース番号はシリアライザー/デシリアライザー番号に対応しています。
+**ステップ 1.** シリアライザーとデシリアライザーのチャンネル形式を設定します。図のインターフェース番号はシリアライザー/デシリアライザー番号に対応しています。
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/gmsl-Interface.png"/>
@@ -1332,19 +1333,19 @@ v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/vid
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video0 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video1 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video2 ! \
 'video/x-raw,width=1920,height=1536,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 
 gst-launch-1.0 v4l2src device=/dev/video3 ! \
 'video/x-raw,width=3840,height=2160,framerate=30/1,format=UYVY' ! \
-videoconvert ! xvimagesink -ev
+videoconvert ! autovideosink -ev
 ```
 
 <div align="center">
@@ -1357,7 +1358,7 @@ Robotics J501 Miniは高解像度ディスプレイ出力用のHDMIを搭載し�
 
 ## リソース
 
-- [reComputer Robotics J501-Mini キャリアボード回路図](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/reComputer_mini_J501_datasheet.pdf)
+- [reComputer Robotics J501-Mini キャリアボード回路図](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_J501_datasheet.pdf)
 
 <!-- - [reComputer Robotics J501-Mini Carrier Board Datasheet]() -->
 
@@ -1365,7 +1366,7 @@ Robotics J501 Miniは高解像度ディスプレイ出力用のHDMIを搭載し�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

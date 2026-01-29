@@ -6,9 +6,10 @@ keywords:
   - docusaurus
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
 slug: /cn/WM1302_module
+sku: 114992549, 114992550, 114992629, 114992628, 113100022, 114992967, 114992969, 114992991, 100021717, 114993268
 last_update:
-  date: 4/24/2025
-  author: Leo
+  date: 12/15/2025
+  author: David Du
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.jpeg) -->
@@ -27,20 +28,24 @@ LoRa® 标识是 Semtech Corporation 或其子公司的商标。
 要了解更多关于使用 STM32Cube MCU Package for STM32WL series(SDK) 创建 LoRaWAN® 终端节点、加入并向 LoRaWAN® 网络发送数据的信息，请阅读[迷你开发板](https://wiki.seeedstudio.com/cn/LoRa_E5_mini/)和[开发套件](https://wiki.seeedstudio.com/cn/LoRa_E5_Dev_Board/)的 wiki 页面。
 :::
 
-WM1302 模块是新一代采用 mini-PCIe 外形规格的 LoRaWAN® 网关模块。基于 Semtech® SX1302 基带 LoRaWAN® 芯片，WM1302 释放了网关产品长距离无线传输的更大潜在容量。与之前的 SX1301 和 SX1308 LoRa® 芯片相比，它具有更高的灵敏度、更低的功耗和更低的工作温度。
+:::note
+WM1302 模块提供两种不同的接口版本。`SPI` 版本是目前的主流选择。如果您偏好 `USB` 版本，硬件修改需要对原始官方固件进行某些调整才能使模块正常工作。更多详情请参考 **FAQ** 部分。
+:::
 
-WM1302 LoRaWAN® 网关模块在 US915 和 EU868 频段上都有 SPI 和 USB 版本，使您能够拥有广泛的 LoRaWAN® 频率计划选择，包括 EU868、US915、AS923、AS920、AU915、KR920 和 IN865。
+WM1302 模块是新一代 mini-PCIe 外形规格的 LoRaWAN® 网关模块。基于 Semtech® SX1302 基带 LoRaWAN® 芯片，WM1302 为网关产品释放了更大的长距离无线传输潜力。与之前的 SX1301 和 SX1308 LoRa® 芯片相比，它具有更高的灵敏度、更低的功耗和更低的工作温度。
+
+WM1302 LoRaWAN® 网关模块在 US915 和 EU868 频段上都有 SPI 和 USB 版本，让您可以选择广泛的 LoRaWAN® 频率计划选项，包括 EU868、US915、AS923、AS920、AU915、KR920 和 IN865。
 
 WM1302 模块已通过 CE、FCC 和 Telec 认证，有助于简化 LoRaWAN® 网关设备的开发和认证过程。
 
-WM1302 专为 M2M 和 IoT 应用而设计，可广泛应用于支持 LPWAN 网关的场景。它将是您显著降低开发 LoRa® 网关设备（包括 LoRaWAN® 网关、热点等）时的技术难度和时间消耗的完美选择。
+WM1302 专为 M2M 和 IoT 应用而设计，可广泛应用于支持 LPWAN 网关的场景。它将是您显著降低开发 LoRa® 网关设备（包括 LoRaWAN® 网关、热点等）的技术难度和时间消耗的完美选择。
 
 ## 特性
 
 - **采用 Semtech® SX1302 基带 LoRa® 芯片**，极低功耗和高性能。
-- **采用标准 52 针金手指的 Mini-PCIe 外形规格**，易于与各种网关设备集成。
+- **标准 52 针金手指的 Mini-PCIe 外形规格**，易于与各种网关设备集成。
 - **超低工作温度**，无需额外散热，减小 LoRaWAN® 网关的尺寸。
-- **高灵敏度**，在 SX1250 TX/RX 前端下可达 -139 dBm @SF12；TX 功率在 @3.3V 下可达 26 dBm。
+- **高灵敏度**，配合 SX1250 TX/RX 前端可达 -139 dBm @SF12；TX 功率在 @3.3V 时可达 26 dBm。
 - **通过 CE、FCC 和 TELEC 认证**。简化最终产品认证过程。
 
 ## 硬件概述
@@ -131,7 +136,7 @@ WM1302 专为 M2M 和 IoT 应用而设计，可广泛应用于支持 LPWAN 网�
 <tr>
   <td class="tg-4onr">11</td>
   <td class="tg-f42p">GPIO 17</td>
-  <td class="tg-f42p">SX1302_RESET<br />SPI version: Active HIGH<br />USB version: Active LOW</td>
+  <td class="tg-f42p">SX1302_RESET<br />SPI 版本：高电平有效<br />USB 版本：低电平有效</td>
 </tr>
 
 <tr>
@@ -442,7 +447,7 @@ import TabItem from '@theme/TabItem';
 
 WM1302 模块通过 SPI 和 I2C 接口与 Raspberry Pi 通信。但这两个接口在 Raspbian 中默认未启用，因此开发者需要在使用 WM1302 之前启用它们。这里，我们介绍一种命令行方式来启用 SPI 和 I2C 接口。
 
-首先，通过 SSH 或使用显示器登录 Raspberry Pi（不要使用串行控制台，因为 Pi Hat 上的 GPS 模块占用了 Pi 的硬件 UART 引脚），然后在命令行中输入 `sudo raspi-config` 打开 Raspberry Pi 软件配置工具：
+首先，通过 SSH 登录 Raspberry Pi 或使用显示器（不要使用串行控制台，因为 Pi Hat 上的 GPS 模块占用了 Pi 的硬件 UART 引脚），然后在命令行中输入 `sudo raspi-config` 打开 Raspberry Pi 软件配置工具：
 
 ```shell
 sudo raspi-config
@@ -501,7 +506,82 @@ SX1261_RESET_PIN=22     # SX1261 reset (LBT / Spectral Scan)
 AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 ```
 
-将 `SX1302_RESET_PIN`、`SX1302_POWER_EN_PIN` 和 `SX1261_RESET_PIN` 修改如下：
+这里我们使用 `cat /sys/kernel/debug/gpio` 命令，这是内核 `debugfs` 文件系统提供的调试接口。它主要用于监控 Raspberry Pi 上所有 GPIO 引脚的实时状态。
+
+`gpiochip0` 是我们真正感兴趣的：WM1302 模块通过 Pi HAT 的 40 针接头连接到 Raspberry Pi，所有这些都由这个控制器管理。
+
+```shell
+pi@raspberrypi:~/sx1302_hal/packet_forwarder $ cat /sys/kernel/debug/gpio
+gpiochip0: GPIOs 571-624, parent: platform/1f000d0000.gpio, pinctrl-rp1:
+ gpio-571 (ID_SDA              )
+ gpio-572 (ID_SCL              )
+ gpio-573 (GPIO2               )
+ gpio-574 (GPIO3               )
+ gpio-575 (GPIO4               )
+ gpio-576 (GPIO5               )
+ gpio-577 (GPIO6               )
+ gpio-578 (GPIO7               |spi0 CS1            ) out hi ACTIVE LOW
+ gpio-579 (GPIO8               |spi0 CS0            ) out hi ACTIVE LOW
+ gpio-580 (GPIO9               )
+ gpio-581 (GPIO10              )
+ gpio-582 (GPIO11              )
+ gpio-583 (GPIO12              )
+ gpio-584 (GPIO13              )
+ gpio-585 (GPIO14              )
+ gpio-586 (GPIO15              )
+ gpio-587 (GPIO16              )
+ gpio-588 (GPIO17              )
+ gpio-589 (GPIO18              )
+ gpio-590 (GPIO19              )
+ gpio-591 (GPIO20              )
+ gpio-592 (GPIO21              )
+ gpio-593 (GPIO22              )
+ gpio-594 (GPIO23              )
+ gpio-595 (GPIO24              )
+ gpio-596 (GPIO25              )
+ gpio-597 (GPIO26              )
+ gpio-598 (GPIO27              )
+ gpio-599 (PCIE_RP1_WAKE       )
+ gpio-600 (FAN_TACH            )
+ gpio-601 (HOST_SDA            )
+ gpio-602 (HOST_SCL            )
+ gpio-603 (ETH_RST_N           |phy-reset           ) out hi ACTIVE LOW
+ gpio-604 (-                   )
+ gpio-605 (CD0_IO0_MICCLK      |cam0_reg            ) out lo 
+ gpio-606 (CD0_IO0_MICDAT0     )
+ gpio-607 (RP1_PCIE_CLKREQ_N   )
+ gpio-608 (-                   )
+ gpio-609 (CD0_SDA             )
+ gpio-610 (CD0_SCL             )
+ gpio-611 (CD1_SDA             )
+ gpio-612 (CD1_SCL             )
+ gpio-613 (USB_VBUS_EN         )
+ gpio-614 (USB_OC_N            )
+ gpio-615 (RP1_STAT_LED        |PWR                 ) out hi ACTIVE LOW
+ gpio-616 (FAN_PWM             )
+ gpio-617 (CD1_IO0_MICCLK      |cam1_reg            ) out lo 
+ gpio-618 (2712_WAKE           )
+ gpio-619 (CD1_IO1_MICDAT1     )
+ gpio-620 (EN_MAX_USB_CUR      )
+ gpio-621 (-                   )
+ gpio-622 (-                   )
+ gpio-623 (-                   )
+ gpio-624 (-                   )
+```
+
+如果您的系统没有自动挂载 debugfs，您必须首先手动挂载它：
+
+```shell
+sudo mount -t debugfs none /sys/kernel/debug
+```
+
+根据这些信息，我们可以找出 GPIO 引脚 `gpio-588, gpio-589, gpio-576` 与其对应的物理引脚索引 `(GPIO17), (GPIO18), (GPIO5)` 之间的关系。
+
+:::note
+请参考 **Raspberry Pi 引脚映射** 表获取完整的 GPIO 引脚映射。
+:::
+
+根据我们获得的 GPIO 信息修改 `SX1302_RESET_PIN`、`SX1302_POWER_EN_PIN` 和 `SX1261_RESET_PIN`，如下所示：
 
 ```shell
 # GPIO mapping has to be adapted with HW
@@ -681,7 +761,7 @@ cd ~
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-进入 `sx1302_hal` 文件夹并编译所有内容：
+移动到 `sx1302_hal` 文件夹并编译所有内容：
 
 ```shell
 cd ~/sx1302_hal

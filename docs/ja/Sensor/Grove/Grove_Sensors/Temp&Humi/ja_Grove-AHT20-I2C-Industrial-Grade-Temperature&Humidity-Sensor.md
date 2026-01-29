@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png 
 slug: /ja/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor
+sku: 101990644
 last_update:
   date: 12/29/2025
   author: Brandy

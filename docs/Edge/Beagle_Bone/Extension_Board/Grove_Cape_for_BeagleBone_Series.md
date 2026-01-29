@@ -5,6 +5,7 @@ keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Cape_for_BeagleBone_Series
+sku: 103020015
 last_update:
   date: 1/10/2022
   author: jianjing Huang

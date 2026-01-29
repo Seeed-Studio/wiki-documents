@@ -3,6 +3,7 @@ description: reComputer J1010 | J101
 title: Placa Portadora J101
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reComputer_J1010_J101_Flash_Jetpack
+sku: 110061362,102991694,110061441,110061481
 last_update:
   date: 01/05/2023
   author: w0x7ce

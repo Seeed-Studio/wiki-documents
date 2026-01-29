@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-4-Digit_Display
+sku: 104030003
 last_update:
   date: 1/7/2023
   author: shuxu hu

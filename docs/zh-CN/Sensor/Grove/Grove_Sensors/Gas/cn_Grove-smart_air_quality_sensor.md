@@ -5,6 +5,7 @@ keywords:
 - SGP41
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/grove-smart-air-quality-sensor-sgp41
+sku: 101021092
 last_update:
   date: 5/11/2023
   author: Stephen Lo

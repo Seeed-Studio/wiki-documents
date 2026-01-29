@@ -5,6 +5,7 @@ keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/K1100-quickstart
+sku: 110991748
 last_update:
   date: 1/12/2023
   author: shuxu hu

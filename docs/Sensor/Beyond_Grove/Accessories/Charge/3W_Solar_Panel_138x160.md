@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/3W_Solar_Panel_138x160/
 slug: /3W_Solar_Panel_138x160
+sku: 313070001
 last_update:
   date: 02/03/2022
   author: gunengyu

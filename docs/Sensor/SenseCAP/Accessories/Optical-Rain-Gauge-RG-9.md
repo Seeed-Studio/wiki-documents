@@ -5,6 +5,7 @@ keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/Accessories/Optical-Rain-Gauge-RG-9
+sku: 101990760
 last_update:
   date: 10/18/2023
   author: Yvonne

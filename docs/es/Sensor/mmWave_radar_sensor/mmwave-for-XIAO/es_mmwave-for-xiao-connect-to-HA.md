@@ -17,19 +17,19 @@ last_update:
 
 ## Introducción
 
-El Sensor mmWave de 24GHz para XIAO - Presencia Estática Humana es una placa de expansión para la serie Seeed Studio XIAO. Es un sensor mmwave de alta sensibilidad con antena integrada que se basa en el principio FMCW. Combinado con el procesamiento de señales del sensor y algoritmos precisos de detección del cuerpo humano, puede identificar cuerpos humanos en estados de movimiento y estacionarios.
+El Sensor mmWave de 24GHz para XIAO - Presencia Estática Humana es una placa de expansión para la serie Seeed Studio XIAO. Es un sensor mmwave de alta sensibilidad integrado con antena que se basa en el principio FMCW. Combinado con el procesamiento de señales del sensor y algoritmos precisos de detección del cuerpo humano, puede identificar cuerpos humanos en estados de movimiento y estacionarios.
 
 Este capítulo introduce principalmente cómo el Sensor mmWave de 24GHz para XIAO se conecta al HA vía Bluetooth. Para características funcionales detalladas del Sensor mmWave de 24GHz para XIAO, puedes consultar [aquí](https://wiki.seeedstudio.com/es/mmwave_for_xiao/).
 
 :::caution
-Todos los contenidos de esta Wiki se aplican únicamente al mmWave de 24GHz para XIAO y pueden no ser utilizados en otros sensores de ondas milimétricas.
+Todos los contenidos de esta Wiki se aplican únicamente al mmWave de 24GHz para XIAO y no pueden ser utilizados en otros sensores de ondas milimétricas.
 :::
 
-## Comenzando
+## Primeros Pasos
 
 ### Preparaciones de Hardware
 
-En este artículo, usaremos mmWave para XIAO en conjunto con el XIAO ESP32C3 para conectarlo a Home Assistant por motivos de estética y facilidad de cableado. Si quieres seguir este tutorial al pie de la letra, entonces necesitarás preparar los siguientes módulos.
+En este artículo, utilizaremos mmWave para XIAO en conjunto con el XIAO ESP32C3 para conectarlo a Home Assistant por motivos de estética y facilidad de cableado. Si quieres seguir este tutorial al pie de la letra, entonces necesitarás preparar los siguientes módulos.
 
 <table align="center">
 	<tr>
@@ -79,19 +79,19 @@ Si aún no has instalado HomeAssistant, puedes consultar el tutorial oficial de 
 
 ### Paso 1. Descubrir Dispositivo
 
-En Home Assistant, haz clic en **configuración** en la esquina inferior izquierda, selecciona **Dispositivos y Servicios** en el centro.
+En Home Assistant, haz clic en **setting** en la esquina inferior izquierda, selecciona **Devices&Services** en el centro.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/1.png" style={{width:1000, height:'auto'}}/></div>
 
-En la zona Descubiertos, habrá un ícono de sensor, haz clic en **configurar**.
+En la zona Discovered, habrá un ícono de sensor, haz clic en **configure**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/2.png" style={{width:1000, height:'auto'}}/></div>
 
-Aparecerá una ventana emergente, haz clic en **enviar**.
+Aparecerá una ventana emergente, haz clic en **submit**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/3.png" style={{width:1000, height:'auto'}}/></div>
 
-Verás una ventana emergente de configuración exitosa, haz clic en **finalizar**.
+Verás una ventana emergente de configuración exitosa, haz clic en **finish**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/4.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -101,7 +101,7 @@ En la zona configurada, haz clic en **ld2410_ble**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/5.png" style={{width:1000, height:'auto'}}/></div>
 
-Una vez que estés en la página de configuración del sensor, haz clic en **1 dispositivo**.
+Una vez que estés en la página de configuración del sensor, haz clic en **1 device**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -109,96 +109,65 @@ Agrega el valor de retorno del sensor al panel de control.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/7.png" style={{width:1000, height:'auto'}}/></div>
 
-Selecciona **AGREGAR AL PANEL DE CONTROL** en la ventana emergente.
+Selecciona **ADD TO DASHBOARD** en la ventana emergente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/8.png" style={{width:1000, height:'auto'}}/></div>
 
-Finalmente, haz clic en **resumen** en la esquina superior izquierda, verás los datos del sensor mmwave-for-xiao mostrados exitosamente en el panel de control. Hasta aquí el sensor mmwave para xiao se ha conectado exitosamente al Home Assistant.
+Finalmente, haz clic en **overview** en la esquina superior izquierda, verás los datos del sensor mmwave-for-xiao mostrados exitosamente en el panel de control. Hasta aquí el sensor mmwave para xiao se ha conectado exitosamente al Home Assistant.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/HA-HiLink/9.png" style={{width:1000, height:'auto'}}/></div>
 
-¡Ahora puedes ser creativo con tu automatización!
+A continuación, ¡puedes ser creativo con tu automatización!
 
 # mmWave para XIAO a Home Assistant vía Wifi usando ESPHome
-El siguiente archivo yaml conecta un Seeed XIAO ESP32S3 Sense con módulo Radar a Home Assistant, usando el firmware ESPHome:
+El siguiente archivo yaml conecta un Seeed XIAO ESP32-C3 con módulo Radar a Home Assistant, usando el firmware ESPHome:
 
 ```
 # Configuration for ESPHome
-esphome:
-  # Name of the ESP32-S3 device
-  name: "seeed-xiao-esp32s3-cam"
-  
-  # PlatformIO build options
-  platformio_options:
-    build_flags: -DBOARD_HAS_PSRAM
-    board_build.arduino.memory_type: qio_opi
-    board_build.f_flash: 80000000L
-    board_build.flash_mode: qio 
+substitutions:
+  name: "xiao-24ghz-mmwave"
+  friendly_name: "XIAO 24GHz mmwave"
 
-# Configuration for ESP32 board
+esphome:
+  name: "${name}"
+  friendly_name: "${friendly_name}"
+  name_add_mac_suffix: True
+
 esp32:
-  board: esp32-s3-devkitc-1
+  board: esp32-c3-devkitm-1
   framework:
     type: arduino
 
 # Enable logging
 logger:
 
-# Enable Home Assistant API - use your api and password
+# Enable Home Assistant API
 api:
-  encryption:
-    key: ""
 
 ota:
   - platform: esphome
-    password: ""
 
-# Wi-Fi configuration - fill with your data
 wifi:
-  ssid: ""
-  password: ""
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Xiao-Esp32s3 Fallback Hotspot"
-    password: ""
+    ssid: "${friendly_name}"
 
-# Captive portal configuration
 captive_portal:
 
-# Configuration for the ESP32 Camera
-esp32_camera:
-  id: espcam
-  name: Xiao Cam
-  external_clock:
-    pin: GPIO10
-    frequency: 20MHz
-  i2c_pins:
-    sda: GPIO40
-    scl: GPIO39
-  data_pins: [GPIO15, GPIO17, GPIO18, GPIO16, GPIO14, GPIO12, GPIO11, GPIO48]
-  vsync_pin: GPIO38
-  href_pin: GPIO47
-  pixel_clock_pin: GPIO13
-  resolution: 800x600
-  
-# Configuration for the ESP32 Camera Web Server
-esp32_camera_web_server:
-  - port: 8080
-    mode: stream
-  - port: 8081
-    mode: snapshot
-
-# Configuration for the 24GHz mmwave XIAO Radar
-ld2410:
-  id: ld2410_radar
-  
 uart:
-  tx_pin: GPIO4
-  rx_pin: GPIO3
-  baud_rate: 256000
+  id: mmWave_uart
+  tx_pin: GPIO5  # D3
+  rx_pin: GPIO4  # D2
+  baud_rate: 9600
   parity: NONE
   stop_bits: 1
+
+ld2410:
+  id: ld2410_radar
+  uart_id: mmWave_uart
 
 number:
   - platform: ld2410
@@ -328,7 +297,7 @@ sensor:
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

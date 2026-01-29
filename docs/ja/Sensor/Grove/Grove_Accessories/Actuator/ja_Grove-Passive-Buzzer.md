@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Passive-Buzzer/
 slug: /ja/Grove-Passive-Buzzer
+sku: 107020109
 last_update:
   date: 05/15/2025
   author: gunengyu

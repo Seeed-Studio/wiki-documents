@@ -5,6 +5,7 @@ keywords:
 - Arduino シールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Wifi_Shield_Fi250_V1.1
+sku: 103030027
 last_update:
   date: 05/15/2025
   author: jianjing Huang

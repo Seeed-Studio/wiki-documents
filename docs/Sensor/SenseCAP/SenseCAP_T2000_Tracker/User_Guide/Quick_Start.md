@@ -5,8 +5,9 @@ keywords:
 - SenseCAP_T2000_tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp
 slug: /Get_Started_with_SenseCAP_T2000_tracker
+sku: 100082900,100057727,100087298
 last_update:
-  date: 12/23/2025
+  date: 1/5/2026
   author: Janet
 ---
 
@@ -20,6 +21,10 @@ This chapter shows you how to quickly set up your SenseCAP T2000 Tracker with th
 Please ensure you have coverage from a LoRaWAN network, such as Helium, TTN or other LoRaWAN networks. Without LoRaWAN networks, the device cannot send data to the cloud. The easiest way to use the trackers is with the `SenseCAP LoRaWAN Gateway` and the `SenseCraft app`.
 :::
 
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/krE6HBgWnRA?si=CRcLRApl1NZUHhqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Hardware Overview
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Hardware_Overview.png" alt="pir" width={800} height="auto" /></p>
@@ -31,6 +36,15 @@ Please ensure you have coverage from a LoRaWAN network, such as Helium, TTN or o
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000C_Tracker_Hardware.jpg" alt="pir" width={800} height="auto" /></p>
 <div align="center">T2000-C with Solar Panel Exploded View</div>  
 <br />
+
+### Operating Environment
+
+SenseCAP T2000 Tracker is designed to operate reliably within a specific temperature range to ensure stable performance and battery safety. Please make sure the device is used and charged within these temperature ranges to avoid performance degradation or battery issues.
+
+| Parameter | T2000-A / T2000-B | T2000-C with Solar Panel|
+|---------|------------------|--------|
+| Operating Temperature | -40 °C ~ 85 °C | -20 °C ~ 60 °C |
+| Charging Temperature | / | 0 °C ~ 45 °C |
 
 ## Device Functions
 
@@ -147,6 +161,12 @@ There are 2 configuration modes:
 
 ### Quick Configuration
 
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qne730YZtSo?si=jLYLlO8r6SgnYIEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<br />
+
 For Quick Configuration, you only need to setup the following parameters:
 
 - **Frequency**:it should be same as your gateway.
@@ -157,6 +177,12 @@ For Quick Configuration, you only need to setup the following parameters:
 Tracker will try to join LoRaWAN network after exiting the Bluetooth pairing mode, the green breathing light flashes when trying to join the network, and flashes 5 times quickly if the network is successfully joined.
 
 ### Advanced Configuration
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ROjXT6D8xtA?si=roC5PW9Cce4Jp1Kl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<br />
 
 - Open the APP and click `Device Bluetooth Configuration` in the `User` page. Then select  `SenseCAP Asset Tracker T2000` to enter `Setup` to config the tracker.
 - Follow the steps above to enter the Bluetooth pairing mode.
@@ -169,6 +195,14 @@ There are four configuration pages in total.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_ConfigurationPage.png" alt="pir" width={800} height="auto" /></p>
 
 Click the `Measure` in the `Information` - `Basic` page, then you will get the sensor values:
+
+1. **3-Axis Accelerometer (X / Y / Z Values)**
+
+- The device reports acceleration values along the X, Y and Z axes. These readings help users understand the device’s posture, movement or vibration status during operation or installation.
+
+2. **Tamper Button Status**
+- Pressed: the device is securely installed
+- Not Pressed: the device is not fully mounted or has been removed
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Measure.png" alt="pir" width={800} height="auto" /></p>
 
@@ -356,11 +390,18 @@ Click on the filter to choose to view location data under positioning modes such
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_DataView.png" alt="pir" width={800} height="auto" /></p>
 
+Click `History`, you can view all historical positioning data for a selected date.
+Click the positioning icon in the upper-right corner to view all `Positioning Abnormal` records. When GNSS, Wi-Fi or Bluetooth scanning times out, the related event will be shown on this page.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000C_Tracker_DataView2.png" alt="pir" width={800} height="auto" /></p>
+
 If the device triggers a Disassembly Alarm, a red alarm icon will be displayed next to each data packet during the triggering period.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm1.png" alt="pir" width={800} height="auto" /></p>
 
-The Disassembly Alarm will appear on both the `Device` and `Details` pages in the APP, along with a notification window, which helps users quickly check the device's status.
+When the disassembly alarm is trggered, a alarm notification message would be sent to your phone. Also, the disassembly alarm will appear on both the `Device` and `Details` pages in the APP, along with a notification window, which helps users quickly check the device's status.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm_Message.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm2.png" alt="pir" width={800} height="auto" /></p>
 

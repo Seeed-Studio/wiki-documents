@@ -6,30 +6,17 @@ keywords:
 - LoRaWAN
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /cn/get_started_with_lorawan_tracker
-sidebar_position: 1
+sku: 114993591
+sidebar_position: 2
 last_update:
-  date: 11/26/2025
+  date: 1/9/2026
   author: Janet
 ---
 
+# LoRaWAN 追踪器入门指南
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993591-t1000-e-lorawan.jpg" alt="pir" width={800} height="auto" /></p>
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-LoRaWAN-p-6408.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-    </a>
-</div>
-
-T1000-E for LoRaWAN 配备了完全开源的固件。为了提升用户体验，我们在出厂设备上预装了演示固件。用户可以探索演示固件以获得初步体验，也可以开发自己的定制固件。有关定制开发的详细信息，请参考 [LoRaWAN 开源固件](https://wiki.seeedstudio.com/cn/open_source_lorawan/)。
-
-:::caution note
-在刷写固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本。请不要将其他 Meshtastic 固件刷写到不支持 Meshtastic 的追踪器型号上，这可能导致设备完全损坏。
-:::
-
-**T1000 系列版本对比**
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image2_20.png" alt="pir" width={800} height="auto" /></p>
+本章节将向您展示如何使用 SenseCraft App 快速设置您的 SenseCAP T1000-E LoRaWAN 追踪器。
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/7/-/7-114993591-t1000-e-lorawan.jpg" alt="pir" width={800} height="auto" /></p>
 
 ## 硬件概述
 
@@ -54,11 +41,11 @@ T1000-E for LoRaWAN 配备了完全开源的固件。为了提升用户体验，
 |11|P0.10|NFC 输入|NC|
 |12|P0.11|数字 I/O|SPI SCK|
 |13|P0.12|数字 I/O|SPI CS|
-|14|P0.13|数字 I/O|UART1 TX 用于 AG3335|
-|15|P0.14|数字 I/O|UART1 RX 用于 AG3335|
+|14|P0.13|数字 I/O|AG3335 的 UART1 TX|
+|15|P0.14|数字 I/O|AG3335 的 UART1 RX|
 |16|P0.15|数字 I/O|AG3335 RTC 中断|
-|17|P0.16|数字 I/O|UART1 TX 用于调试|
-|18|P0.17|数字 I/O|UART1 RX 用于调试|
+|17|P0.16|数字 I/O|调试用 UART1 TX|
+|18|P0.17|数字 I/O|调试用 UART1 RX|
 |19|P0.18|复位|复位|
 |20|P0.19|数字 I/O|FLASH 的 QSPI 时钟|
 |21|P0.20|数字 I/O|FLASH 的 QSPI CS|
@@ -96,7 +83,7 @@ T1000-E for LoRaWAN 配备了完全开源的固件。为了提升用户体验，
 
 |**位置**|**描述**|
 | - | - |
-|GNSS|上传经纬度信息。<br/>（室内通常没有 GPS 信号，建议在室外测试设备以获取位置）|
+|GNSS|上传经纬度信息。<br/>（室内通常没有 GPS 信号，建议在室外测试设备以获取位置信息）|
 |Wi-Fi|上传 Wi-Fi AP 的 MAC 地址和 RSSI 信息。|
 |蓝牙|上传蓝牙信标的 MAC 地址和 RSSI 信息。|
 
@@ -160,8 +147,8 @@ SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光传感�
 
 |**传感器**|**描述**|
 | - | - |
-|温度|<p>板载独立温度传感器。</p><p>这里可能存在一些温度测量延迟，因为它与外壳分离。</p><p>范围：-20 到 60℃；精度：± 1℃（最小 0.5℃，最大 1℃）；分辨率：0.1℃</p>|
-|光照|<p>光传感器监测的不是实际的流明值，而是从暗到亮的光照百分比。主要可用于防拆监控和一些光敏监控。</p><p>范围：0 到 100%（0% 为黑暗，100% 为最亮）</p>|
+|温度|<p>板载独立温度传感器。</p><p>这里可能会有一些温度测量延迟，因为它与外壳分离。</p><p>范围：-20 到 60℃；精度：± 1℃（最小 0.5℃，最大 1℃）；分辨率：0.1℃</p>|
+|光照|<p>光传感器监测的不是实际的流明值，而是从暗到亮的光照百分比。主要可用于防拆监控和一些光敏监控。</p><p>范围：0 到 100%（0% 为暗，100% 为最亮）</p>|
 |3 轴加速度计|通过设置加速度值，触发运动事件和冲击事件。|
 
 ### 电池
@@ -184,13 +171,13 @@ SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光传感�
 
 按住按键 3 秒开机，上升的旋律表示设备已成功开机。
 
-### 通过应用连接
+### 通过 App 连接
 
-- **步骤 1：** 下载 `SenseCraft` 应用
+- **步骤 1：** 下载 `SenseCraft` App
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/app_downlaod.png" alt="pir" width={500} height="auto" /></p>
 
-登录 SenseCraft 应用。
+登录 SenseCraft APP。
 
 :::tip
 选择服务器位置为 `Global`。
@@ -213,7 +200,7 @@ SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光传感�
 
 #### 快速配置
 
-要快速开始使用 `SenseCAP 云`，您可以选择 `Quick Configuration`。
+要快速开始使用 `SenseCAP cloud`，您可以选择 `Quick Configuration`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/quick-config.png" alt="pir" width={800} height="auto" /></p>
 
@@ -231,7 +218,7 @@ SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光传感�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/info-dev.png" alt="pir" width={250} height="auto" /></p>
 
-导航到 `Settings` 设置参数。
+导航到 `Settings` 来设置参数。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/setting-page.png" alt="pir" width={600} height="auto" /></p>
 
@@ -248,8 +235,8 @@ SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光传感�
     <td colspan="1" valign="top">SenseCAP for The Things Network（默认）</td>
     <td colspan="1" valign="top">
       <p>SenseCAP 的专有 TTN 服务器。与 SenseCAP 网关配对时即可开箱即用。</p>
-      <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCAP 户外网关</span></a><br />
-      <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCAP 室内网关</span></a>
+      <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCA 户外网关</span></a><br />
+      <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCA 室内网关</span></a>
     </td>
   </tr>
   <tr>
@@ -268,7 +255,7 @@ SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光传感�
     <td colspan="1" valign="top">公共 TTN 服务器</td>
   </tr>
   <tr>
-    <td colspan="1" valign="top">其他平台</td>
+    <td colspan="1" valign="top">Other Platform</td>
     <td colspan="1" valign="top">其他 LoRaWAN 网络服务器</td>
   </tr>
   <tr>
@@ -347,7 +334,7 @@ SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光传感�
   </tr>
   <tr>
     <td colspan="1" valign="top">蓝牙 + Wi-Fi + GNSS</td>
-    <td colspan="1" valign="top">依次使用蓝牙、Wi-Fi 和 GNSS 进行定位（一种定位类型失败后切换到下一种定位类型）</td>
+    <td colspan="1" valign="top">依次使用蓝牙、Wi-Fi 和 GNSS 进行定位（一种定位方式失败后切换到下一种定位方式）</td>
   </tr>
   <tr>
     <td colspan="1" valign="top">GNSS(GPS)</td>
@@ -376,15 +363,15 @@ SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光传感�
 
 ### 设备数据查看
 
-#### SenseCAP Mate App
+#### SenseCraft 应用
 
-在 APP 上查看位置。
+在应用中查看位置。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/data_view.png" alt="pir" width={800} height="auto" /></p>
 
 #### SenseCAP Portal
 
-SenseCAP Portal 的主要功能是管理 SenseCAP 设备和存储数据。它构建在 Azure 上，这是微软提供的安全可靠的云服务。用户可以申请账户并将所有设备绑定到此账户。SenseCAP Portal 提供 Web 门户和 API。Web 门户包括仪表板、设备管理、数据管理和访问密钥管理。API 向用户开放以供进一步开发。
+SenseCAP Portal 的主要功能是管理 SenseCAP 设备和存储数据。它基于 Azure 构建，这是微软提供的安全可靠的云服务。用户可以申请账户并将所有设备绑定到此账户。SenseCAP Portal 提供网页门户和 API。网页门户包括仪表板、设备管理、数据管理和访问密钥管理。API 向用户开放以供进一步开发。
 
 - **仪表板：** 包括设备概览、公告、场景数据和数据图表等。
 - **设备管理：** 管理 SenseCAP 设备。
@@ -398,7 +385,7 @@ SenseCAP Portal 的主要功能是管理 SenseCAP 设备和存储数据。它构
 
 登录 [SenseCAP Portal](http://sensecap.seeed.cc)
 
-如果您已通过 APP 创建账户，可以直接登录。
+如果您已通过应用创建账户，可以直接登录。
 
 1) 选择注册账户，输入邮箱信息，点击 "register"，注册邮件将发送到用户邮箱
 

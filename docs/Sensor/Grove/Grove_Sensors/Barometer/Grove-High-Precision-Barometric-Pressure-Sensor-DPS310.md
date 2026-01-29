@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-High-Precision-Barometric-Pressure-Sensor-DPS310
+sku: 101020812
 last_update:
   date: 1/5/2023
   author: shuxu hu

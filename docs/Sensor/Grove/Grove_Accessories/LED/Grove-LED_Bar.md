@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-LED_Bar
+sku: 104020006, 104030002
 last_update:
   date: 1/7/2023
   author: shuxu hu

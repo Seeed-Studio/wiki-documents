@@ -3,6 +3,7 @@ description: SenseCAP Watcher
 title: Overview
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.png
 slug: /watcher
+sku: 113991315,113991275
 sidebar_position: 1
 last_update:
   date: 06/20/2024

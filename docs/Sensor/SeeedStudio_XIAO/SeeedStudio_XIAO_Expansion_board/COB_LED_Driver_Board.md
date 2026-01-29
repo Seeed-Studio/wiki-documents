@@ -3,6 +3,7 @@ description: XIAO lighting driver:Li-Po powered, 3 switches + 4 PWMs, drives 3V 
 title: COB LED Driver Board for XIAO
 image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
 slug: /getting_started_with_cob_led_dirver_board
+sku: 100079172,E25121201
 last_update:
   date: 11/27/2025
   author: Brandy
@@ -19,7 +20,22 @@ last_update:
 
 This is a 7-channel COB LED driver dock designed for Seeed Studio XIAO. This expansion board breaks GPIO power limits, offering 7 output channels, specifically tailored for ultra-narrow 1mm 3V COB LED strips. With integrated PMIC battery management, it is the ideal plug-and-play solution for building compact, high-brightness wireless lighting setups. 
 
- **Recommended Reading:**[Safety Notes](#add-board)
+ ## Safety Notes
+
+**Operation Prohibitions & Safety Rules**
+ - Do not connect any peripherals during charging. Disconnect the light bar first before plugging in the USB-C cable.
+ - When debugging the USB-C port, the battery holder must be empty (no battery installed).
+ - For full load currents >1A, ensure heat dissipation holes are drilled in the housing; otherwise, the PMIC will overheat and shut down.
+ - Never touch the PMIC area on the back of the board with bare hands: electrostatic discharge (ESD) can damage the chip, and the surface may reach scalding temperatures under full load.
+**Core Safety Reminders**
+ - Adhere to these four rules for safe operation:
+ - Single power supply when peripherals are connected
+ - Power off before wiring/disconnecting
+ - Provide adequate heat dissipation holes
+ - Do not touch the backside of the board
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/safety.png" style={{width:250, height:'auto'}}/></div>
+
 
 ## Introduction
 
@@ -769,23 +785,6 @@ We extend our special thanks to Xinyu for the valuable contribution to the 3D pr
 
 [STEP] **[Seeed Studio COB LED Driver Board 3D Model](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/cob_led_driver_board.STEP)**
 
-## Safety Notes{#add-board}
-
-
-
-**Operation Prohibitions & Safety Rules**
- - Do not connect any peripherals during charging. Disconnect the light bar first before plugging in the USB-C cable.
- - When debugging the USB-C port, the battery holder must be empty (no battery installed).
- - For full load currents >1A, ensure heat dissipation holes are drilled in the housing; otherwise, the PMIC will overheat and shut down.
- - Never touch the PMIC area on the back of the board with bare hands: electrostatic discharge (ESD) can damage the chip, and the surface may reach scalding temperatures under full load.
-**Core Safety Reminders**
- - Adhere to these four rules for safe operation:
- - Single power supply when peripherals are connected
- - Power off before wiring/disconnecting
- - Provide adequate heat dissipation holes
- - Do not touch the backside of the board
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/safety.png" style={{width:250, height:'auto'}}/></div>
 
 ## FQA
 

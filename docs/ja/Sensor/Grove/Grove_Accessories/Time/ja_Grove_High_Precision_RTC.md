@@ -6,6 +6,7 @@ keywords:
   - ドキュサウラス
 image: https://wiki.seeedstudio.com/ja/Grove_High_Precision_RTC/
 slug: /ja/Grove_High_Precision_RTC
+sku: 102020083
 last_update:
   date: 05/15/2025
   author: gunengyu

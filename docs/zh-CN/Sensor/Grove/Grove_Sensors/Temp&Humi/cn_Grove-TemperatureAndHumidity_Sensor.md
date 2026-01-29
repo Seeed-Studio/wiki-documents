@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-TemperatureAndHumidity_Sensor
+sku: 101020011
 last_update:
   date: 12/29/2025
   author: Brandy

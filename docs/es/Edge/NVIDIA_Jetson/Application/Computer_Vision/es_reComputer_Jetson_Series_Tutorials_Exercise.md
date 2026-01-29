@@ -3,6 +3,7 @@ description: Tutoriales y Ejercicios de reComputer para Jetson
 title: Tutoriales y Ejercicios de reComputer para Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reComputer_Jetson_Series_Tutorials_Exercise
+sku: E24010131
 last_update:
   date: 01/04/2023
   author: w0x7ce

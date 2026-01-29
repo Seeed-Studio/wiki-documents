@@ -3,6 +3,7 @@ description: 创建一个包含丰富内容的文档页面。
 title: XIAO IO 扩展器
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/io_expander_for_xiao
+sku: 103030415
 last_update:
   date: 09/18/2023
   author: Stephen Lo

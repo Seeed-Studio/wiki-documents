@@ -5,6 +5,7 @@ tags:
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Connect-Grove-to-Home-Assistant-ESPHome
+sku: E22011026,110992044
 last_update:
   date: 03/16/2023
   author: Lakshantha

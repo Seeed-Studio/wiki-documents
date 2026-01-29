@@ -6,6 +6,7 @@ keywords:
 - radar
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /mmwave_for_xiao
+sku: 101010001
 last_update:
   date: 11/09/2023
   author: Citric

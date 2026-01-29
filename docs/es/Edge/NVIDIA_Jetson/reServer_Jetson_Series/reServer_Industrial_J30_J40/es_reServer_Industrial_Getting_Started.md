@@ -5,6 +5,7 @@ keywords:
 - reServer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/reServer_Industrial_Getting_Started
+sku: 114110247,114110248,114110250,114110249
 last_update:
   date: 09/22/2023
   author: Lakshantha

@@ -5,6 +5,7 @@ keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Seeeduino-XIAO-Expansion-Board
+sku: 103030356
 last_update:
   date: 07/18/2024
   author: Spencer
@@ -14,7 +15,7 @@ last_update:
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" /></div>
 
-Raspberry Pi 4 の半分のサイズしかない、Seeed Studio XIAO 用の強力な機能拡張ボードです。簡単かつ迅速にプロトタイプやプロジェクトを構築できます。OLED、RTC、拡張可能メモリ、パッシブブザー、RESET/ユーザーボタン、5V サーボコネクタ、複数のデータインターフェースなどの豊富な周辺機器により、Seeed Studio XIAO の無限の可能性を探求できます。[Circuitpython](https://circuitpython.org/) もこのボードでよくサポートされています。
+Raspberry Pi 4 の半分のサイズしかない、Seeed Studio XIAO 用の強力な機能拡張ボードです。簡単で迅速にプロトタイプやプロジェクトを構築できます。OLED、RTC、拡張可能メモリ、パッシブブザー、RESET/ユーザーボタン、5V サーボコネクタ、複数のデータインターフェースなどの豊富な周辺機器により、Seeed Studio XIAO の無限の可能性を探求できます。[Circuitpython](https://circuitpython.org/) もこのボードでよくサポートされています。
 
 Seeed Studio XIAO フォームファクターとして、すべての Seeed Studio XIAO ボードは [Grove Shield for Seeed Studio XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) と [Seeed Studio Expansion Base for XIAO](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) の両方をサポートします。ピン間にわずかな違いがありますが、ピン配置を参照すれば簡単に管理できます。
 
@@ -28,12 +29,12 @@ Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040、および Seeed Studio XIA
 
 ## 特徴
 
-- **迅速なプロトタイピング：** RESET ボタンと男性ヘッダーに引き出された SWD ピンによる簡単なデバッグとリセット。
+- **迅速なプロトタイピング：** RESET ボタンと SWD ピンがメールヘッダーに引き出されており、簡単なデバッグとリセットが可能。
 <!-- 0.96"OLED, enables visual data display without PC serial monitor; Convenient plug and play Grove connectors support multiple data protocols, including IIC, Uart, Analog/Digital; No soldering needed with all pin led out. -->
 - **豊富な周辺機器：** OLED ディスプレイ、RTC、拡張可能メモリ空間、パッシブブザー、ユーザーボタン、オンボードバッテリー管理チップ。
-- **はんだ付け不要：** すべてのピンが引き出されています。便利なプラグアンドプレイ Grove コネクタは、IIC、UART、アナログ/デジタルを含む複数のデータプロトコルをサポートします。
-- **Circuit Python サポート：** Circuit Python をよくサポートします。MicroSD カードスロットによりメモリ空間の拡張が可能で、プロトタイピングやプロジェクト構築に必要なより多くのライブラリを割り当てることができます。
-- **ミニサイズ：** Raspberry Pi 4 の半分のサイズでコンパクトかつエレガント、特にミニサイズが必要なプロジェクトに適しています。
+- **はんだ付け不要：** すべてのピンが引き出されています。便利なプラグアンドプレイ Grove コネクタは、IIC、UART、アナログ/デジタルを含む複数のデータプロトコルをサポート。
+- **Circuit Python サポート：** Circuit Python をよくサポート。MicroSD カードスロットによりメモリ空間の拡張が可能で、プロトタイピングやプロジェクト構築に必要なより多くのライブラリを割り当てることができます。
+- **ミニサイズ：** Raspberry Pi 4 の半分のサイズでコンパクトでエレガント、特にミニサイズが必要なプロジェクトに適しています。
 
 ## 仕様
 
@@ -92,7 +93,7 @@ Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040、および Seeed Studio XIA
 |Seeed Studio Expansion Base for XIAO  | *1 |
 
 :::note
-この製品には Seeed Studio XIAO とバッテリーは含まれていません。この拡張ボードは XIAO nRF54L15 と XIAO MG24 をサポートしていません。Seeed Studio XIAO は常に新製品を導入しています。このシリーズの最新製品開発に追いつくには、[XIAO シリーズホームページ](https://www.seeedstudio.com/xiao-series-page)をご覧ください。
+この製品には Seeed Studio XIAO とバッテリーは含まれていません。SWD ピンが異なるため、この拡張ボードは XIAO nRF54L15 と XIAO MG24 をサポートしていません。Seeed Studio XIAO は常に新製品を導入しています。このシリーズの最新製品開発に追いつくには、[XIAO シリーズホームページ](https://www.seeedstudio.com/xiao-series-page)をご覧ください。
 
 <!-- please click this link to get [**Seeed Studio XIAO SAMD21**](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html?gclid=Cj0KCQjwufn8BRCwARIsAKzP695mYBI8wwzrR8rXiJgv9QBK5DeTJGCU9bzXvzGUheFVZxqHcuw0SgYaAqDqEALw_wcB) -->
 
@@ -131,7 +132,7 @@ Seeed Studio XIAO SAMD21 を拡張ボードに取り付けると、Seeed Studio 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/XIAO-to-board.png" /></div>
 
 :::note
-まず Seeed Studio XIAO を拡張ボードに差し込んでから、Type-C を差し込んでください。Seeed Studio XIAO を**2つの雌ヘッダーコネクタの中央**に差し込むことを忘れないでください。そうしないと、Seeed Studio XIAO と拡張ボードを損傷します。
+まず Seeed Studio XIAO を拡張ボードに差し込んでから、Type-C を差し込んでください。Seeed Studio XIAO を**2つのメスヘッダーコネクタの中央**に差し込むことを忘れないでください。そうしないと、Seeed Studio XIAO と拡張ボードを損傷します。
 :::
 
 ## バッテリーの使用
@@ -150,15 +151,15 @@ Seeed Studio Expansion Base for XIAO はバッテリーで電源供給できる�
 
 ボード上の豊富な周辺機器には以下が含まれます：
 
-- **OLED ディスプレイ：** PC に接続せずに視覚的なデータ表示が可能で、より効率的なデバッグを可能にし、センサーハブ、データ監視システムなどのアプリケーションを構築できます。
+- **OLED ディスプレイ：** PC に接続せずに視覚的なデータ表示が可能で、より効率的なデバッグを可能にし、センサーハブ、データモニターシステムなどのアプリケーションを構築できます。
 
 - **RESET ボタン：** ジャンパーワイヤーやショート回路は不要で、ワンクリックで簡単にリセットできます。
 
-- **SWD デバッグ：** SWD ピンが男性ピンヘッダーとして引き出されており、デバッガー接続とファームウェアダウンロードがより簡単になります。
+- **SWD デバッグ：** SWD ピンがメールピンヘッダーとして引き出されており、デバッガー接続とファームウェアダウンロードがより簡単になります。
 
 - **高精度 RTC：** バッテリーバックアップ付きの高精度リアルタイムクロックで、メイン電源がオフになっても正確な時刻を維持できます。
 
-- **拡張可能メモリ：** 背面に MicroSD カードスロットがあり、ライブラリを追加したり Circuit Python を使用したりする際にメモリ制限を心配する必要がありません。
+- **拡張可能メモリ：** 背面に MicroSD カードスロットがあり、ライブラリを追加したり Circuit Python を使用する際にメモリ制限を心配する必要がありません。
 
 - **ユーザーボタン：** RESET ボタンに加えて、もう一つのユーザー定義ボタンも提供されています。
 
@@ -166,9 +167,9 @@ Seeed Studio Expansion Base for XIAO はバッテリーで電源供給できる�
 
 - **Grove コネクタ：** すべてのピンが引き出され、プラグアンドプレイ Grove コネクタが一般的なデータプロトコル（Grove IIC*2、Grove UART*1、A0/D0 Grove*1）をサポートします。
 
-- **リポバッテリー充電：** JST2.0mm 標準リポバッテリーコネクタとバッテリー管理システムで、USB とリポバッテリーの両方の電源供給をサポートし、簡単なオンボードバッテリー再充電が可能です。
+- **Lipo バッテリー充電：** JST2.0mm 標準 Lipo バッテリーコネクタとバッテリー管理システムで、USB と Lipo バッテリー電源供給の両方をサポートし、簡単なオンボードバッテリー再充電が可能です。
 
-- **5V サーボコネクタ：** 5V サーボとセンサー接続用に 5V 出力が男性ヘッダーに引き出されています。
+- **5V サーボコネクタ：** 5V 出力がメールヘッダーに引き出され、5V サーボとセンサー接続用です。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/444.png" /></div>
 
@@ -191,7 +192,7 @@ Seeed Studio Expansion Base for XIAO はバッテリーで電源供給できる�
 #include <U8x8lib.h>
 #include <Wire.h>
 
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE, /* clock=*/ SCL, /* data=*/ SDA );   // OLEDs without Reset of the Display
 
 void setup(void) {
   u8x8.begin();
@@ -247,7 +248,7 @@ void loop() {
 
 ### ブザー
 
-ブザーはデフォルトでピンA3に接続されています。ブザー機能を無効にしたい場合は、下の画像に従って線を切断してください。
+ブザーはデフォルトでピンA3に接続されています。ブザー機能を削除したい場合は、下の画像に従って線を切断してください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/111123232325.png" /></div>
 
@@ -327,7 +328,7 @@ void loop() {
 **ステップ 3**. Arduino IDEを開き、コードをコピーしてArduino IDEに貼り付け、アップロードします。
 
 :::tip
-開発ボードが**XIAO ESP32 シリーズ**の場合、以下のコードを実行する前に、まず**Arduino Library Manager**でESP32Servoライブラリをインストールし、コードの```#include <Servo.h>```を```#include <ESP32Servo.h>```に変更する必要があります。
+開発ボードが**XIAO ESP32 シリーズ**の場合、以下のコードを実行する前に、まず**Arduino Library Manager**でESP32Servoライブラリをインストールし、以下のコードを```#include <Servo.h>```から```#include <ESP32Servo.h>```に変更する必要があります。
 :::
 
 ```cpp
@@ -364,7 +365,7 @@ void loop() {
 }
 ```
 
-### RTC時計表示
+### RTCクロック表示
 
 この例では、RTCを使用してOLEDに時計を表示します。
 
@@ -383,7 +384,7 @@ void loop() {
 PCF8563 pcf;
 #include <Wire.h>
 
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // OLEDs without Reset of the Display
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* reset=*/ U8X8_PIN_NONE, /* clock=*/ SCL, /* data=*/ SDA );   // OLEDs without Reset of the Display
 
 void setup() {
   Serial.begin(115200);
@@ -575,60 +576,60 @@ Seeed Studio XIAO 用 Grove シールドと比較して、Seeed Studio XIAO 用�
 
 ## 拡張ボード付き Seeed Studio XIAO SAMD21 での CircuitPython
 
-このwikiでは、[**Seeed Studio XIAO SAMD21 開発ボード**](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html)に Adafruit Industries の公式[**CircuitPython**](https://circuitpython.org/)をインストールして実行する方法を紹介します！
+このwikiでは、[**Seeed Studio XIAO SAMD21 開発ボード**](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html)にAdafruit Industries公式の[**CircuitPython**](https://circuitpython.org/)をインストールして実行する方法を紹介します！
 
-CircuitPython は、低コストのマイクロコントローラーボードでの実験とプログラミング学習を簡素化するために設計されたプログラミング言語です。事前のデスクトップダウンロードが不要で、これまで以上に簡単に始められます。ボードをセットアップしたら、任意のテキストエディタを開いてコードの編集を開始できます。詳細については、[**こちら**](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython)を参照してください。
+CircuitPythonは、低コストのマイコンボードでの実験やプログラミング学習を簡素化するために設計されたプログラミング言語です。事前のデスクトップダウンロードが不要で、これまで以上に簡単に始められます。ボードをセットアップしたら、任意のテキストエディタを開いてコードの編集を開始できます。詳細については、[**こちら**](https://learn.adafruit.com/welcome-to-circuitpython/what-is-circuitpython)を参照してください。
 
 ## CircuitPython のインストール
 
-**ステップ 1.** Seeed Studio XIAO SAMD21 を拡張ボードに取り付け、Type-C ケーブルを接続します。
+**ステップ 1.** Seeed Studio XIAO SAMD21 を拡張ボードにインストールし、Type-C ケーブルを接続します。
 
-**ステップ 2.** 公式の[**Seeed Studio XIAO SAMD21 用 CircuitPython ブートローダー**](https://circuitpython.org/board/seeeduino_xiao/)をダウンロードします。`.uf2` ファイルが PC のダウンロードフォルダに保存されます。
+**ステップ 2.** 公式の[**Seeed Studio XIAO SAMD21 用 CircuitPython ブートローダー**](https://circuitpython.org/board/seeeduino_xiao/)をダウンロードします。`.uf2`ファイルがPCのダウンロードフォルダに保存されます。
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circutpyhthon.png" /></div>
 
-**ステップ 3.** Seeed Studio XIAO 用拡張ベースのリセットボタンを素早く2回押して DFU ブートローダーモードに入ると、PC に Arduino ドライブが表示されます。
+**ステップ 3.** Seeed Studio XIAO 用拡張ベースのリセットボタンを素早く2回押してDFUブートローダーモードに入ると、PCにArduinoドライブが表示されます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/reboot_XIAO.gif" /></div>
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/arduino_boot.png" /></div>
 
-**ステップ 4.** PC に `Arduino` という名前の外部ドライブが表示されます。ダウンロードした CircuitPython uf2 ファイルを `Arduino` ドライブにドラッグします。
+**ステップ 4.** PCに`Arduino`という名前の外部ドライブが表示されます。ダウンロードしたCircuitPython uf2ファイルを`Arduino`ドライブにドラッグします。
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/python_to_arduino.png" /></div>
 
-**ステップ 5.** CircuitPython ブートローダーがロードされたら、USB Type-C を抜いて再接続します。`CIRCUITPY` という新しい外部ドライブが表示されます。
+**ステップ 5.** CircuitPythonブートローダーがロードされたら、USB Type-Cを抜いて再接続します。`CIRCUITPY`という新しい外部ドライブが表示されます。
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Circuitpy.png" /></div>
 
-**ステップ 6.** これで、CircuitPython が Seeed Studio XIAO SAMD21 にロードされました！あとは Python プログラムを書いて `main.py` という名前を付け、`CIRCUITPY` ドライブにドラッグするだけです。
+**ステップ 6.** これで、CircuitPythonがSeeed Studio XIAO SAMD21にロードされました！あとはPythonプログラムを書いて`main.py`という名前にし、`CIRCUITPY`ドライブにドラッグするだけです。
 
-### CircuitPython 点滅サンプル
+### CircuitPython Blink サンプル
 
-Seeed Studio XIAO で CircuitPython を使用する方法を紹介する簡単な例があります。
+Seeed Studio XIAOでCircuitPythonを使用する方法を紹介する簡単なサンプルです。
 
-**ステップ 1** `CIRCUITPY` ドライブに `main` という名前のテキストファイルを作成します。
+**ステップ 1** `CIRCUITPY`ドライブに`main`という名前のtxtファイルを作成します。
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main_create.png" /></div>
 <br />
 
 :::note
-`main` の名前は次のいずれかです：**code.txt**、**code.py**、**main.py**、**main.txt**。[**この動作**](https://docs.circuitpython.org/en/latest/README.html#behavior)についての詳細があります。
+`main`の名前は次のいずれかです：**code.txt**、**code.py**、**main.py**、**main.txt**。[**この動作**](https://docs.circuitpython.org/en/latest/README.html#behavior)についての詳細があります。
 :::
 
-**ステップ 2** REPL を使用してオレンジ色の LED のピンを取得します。REPL の詳細については、[Welcome to CircuitPython!](https://learn.adafruit.com/welcome-to-circuitpython/the-repl) を参照してください。REPL を使用するには、まずシリアルコンソールに接続する必要があります。接続が確立されたら、CTRL+C を2回押して編集モードに入ります。次に、以下のコードをコピーしてそれぞれ入力します。
+**ステップ 2** REPLを使用してオレンジLEDのピンを取得します。REPLの詳細については、[Welcome to CircuitPython!](https://learn.adafruit.com/welcome-to-circuitpython/the-repl)を参照してください。REPLを使用するには、まずシリアルコンソールに接続する必要があります。接続が確立されたら、CTRL+Cを2回押して編集モードに入ります。次に、以下のコードをコピーしてそれぞれ入力します。
 
 ```
 >>> import board
 >>> dir(board)
 ```
 
-コードで使用できるボード上のすべてのピンのリストが表示されます。各ボードは利用可能なピン数によって若干異なります。
+コードで使用可能なボード上のすべてのピンのリストが表示されます。各ボードは利用可能なピン数によって若干異なります。
 ![image.png](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board12.png)
 
-YELLOW_LED_INVERTED が見えますか？それがオレンジ色の LED を点滅させるために使用したピンです！
+YELLOW_LED_INVERTEDが見えますか？それがオレンジLEDを点滅させるために使用したピンです！
 
-**ステップ 3** コードを `main` ファイルに貼り付けて保存すると、Seeed Studio XIAO SAMD21 ボードでオレンジ色の LED が点滅するのが見えます。
+**ステップ 3** `main`ファイルにコードを貼り付けて保存すると、Seeed Studio XIAO SAMD21ボード上のオレンジLEDが点滅するのが見えます。
 
 **コード**
 
@@ -649,22 +650,22 @@ while True:
 
 ### CircuitPython 用 MicroSD カード
 
-Seeed Studio XIAO SAMD21 には約 40 KB のフラッシュが内蔵されていますが、大きなサイズの Python コードファイルを保存するには十分なスペースがない場合があります。幸い、Seeed Studio XIAO SAMD21 拡張ボードには保存スペースを拡張するための MicroSD カードスロットが内蔵されているので、この手順に従って MicroSD カードで CircuitPython を実行する方法を学ぶことができます。
+Seeed Studio XIAO SAMD21には約40KBのフラッシュが内蔵されていますが、大きなサイズのPythonコードファイルを保存するには十分なスペースがない場合があります。幸い、Seeed Studio XIAO SAMD21拡張ボードには保存スペースを拡張するためのMicroSDカードスロットが内蔵されているので、この手順に従ってMicroSDカード上でCircuitPythonを実行する方法を学ぶことができます。
 
 :::note
-MicroSD カードのシステム形式は FAT または exFAT です。他の MicroSD カードシステム形式を使用すると、MicroSD カードが認識されない原因となります。
+MicroSDカードのシステム形式はFATまたはexFATです。他のMicroSDカードシステム形式を使用すると、MicroSDカードが認識されない原因となります。
 :::
-**ステップ 1.** Seeed Studio XIAO SAMD21 拡張ボードに差し込むマイクロ SD カードを準備します。
+**ステップ 1.** Seeed Studio XIAO SAMD21拡張ボードに差し込むマイクロSDカードを準備します。
 
-**ステップ 2.** まだ[**CircuitPython ファイル**](https://circuitpython.org/board/seeeduino_xiao/)をダウンロードしていない場合は、[**CircuitPython のインストール**](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-Expansion-Board/#installing-circuitpython)の章を参照してください。
+**ステップ 2.** まだ[**CircuitPythonファイル**](https://circuitpython.org/board/seeeduino_xiao/)をダウンロードしていない場合は、[**CircuitPythonのインストール**](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-Expansion-Board/#installing-circuitpython)の章を参照してください。
 
-**ステップ 3.** [**lib**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/lib.zip) をダウンロードしてファイルを解凍し、`CIRCUITPY` の新しい lib と置き換えます。
+**ステップ 3.** [**lib**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/lib.zip)をダウンロードしてファイルを解凍し、`CIRCUITPY`内の新しいlibと置き換えます。
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/lib_replace.png" /></div>
 
-**ステップ 4.** [**main.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/main.py) ファイルを `CIRCUITPY` ドライブにダウンロードします。
+**ステップ 4.** [**main.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/main.py)ファイルを`CIRCUITPY`ドライブにダウンロードします。
 
-**`main.py` コード**
+**`main.py`コード**
 
 ```cpp
 import sd
@@ -672,9 +673,9 @@ f = open("/sd/hello.txt", "r")   ## read the file from SD card
 print(f.read())
 ```
 
-**ステップ 5.** [**sd.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/sd.py) ファイルを `CIRCUITPY` ドライブにダウンロードします。
+**ステップ 5.** [**sd.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/sd.py)ファイルを`CIRCUITPY`ドライブにダウンロードします。
 
-**`sd.py` コード**
+**`sd.py`コード**
 
 ```cpp
 import os
@@ -695,25 +696,25 @@ sys.path.append("/sd")
 sys.path.append("/sd/lib")  ## switch to the path to SD card
 ```
 
-**ブザーの例**
+**ブザーサンプル**
 
-この例は、MicroSD カードで `buzzer.py` を実行してブザーをテストするためのものです。
+これはMicroSDカード内の`buzzer.py`を実行してブザーをテストするサンプルです。
 
-**ステップ 1.** [**buzzer.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzer.py) を MicroSD カードに貼り付けるだけです。
+**ステップ 1.** [**buzzer.py**](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/buzzer.py)をMicroSDカードに貼り付けるだけです。
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/sd_card_store.png" /></div>
 
-**ステップ 2.** `CIRCUITPY` ドライブの `main.py` を開きます。
+**ステップ 2.** `CIRCUITPY`ドライブ内の`main.py`を開きます。
 
 <div align="center"><img width={850} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/circuit_python_pic/main.PY.png" /></div>
 
-**ステップ 3.** main.py ファイルに `import buzzer` を追加します。
+**ステップ 3.** main.pyファイルに`import buzzer`を追加します。
 <div align="center"><img width={650} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/add_buzzer.png" /></div>
 
-すべてのステップを完了すると、ブザーが動作します。MicroSD カードで他の Python ファイルを実行したい場合は、この例を参考にしてください。
+すべてのステップを完了すると、ブザーが動作します。MicroSDカード内の他のPythonファイルを実行したい場合は、このサンプルを参考にしてください。
 
 :::note
-Arduino モードに戻りたい場合は、Arduino IDE で任意のプログラムをアップロードするだけです。
+Arduinoモードに戻りたい場合は、Arduino IDEで任意のプログラムをアップロードするだけです。
 :::
 
 ## デモ
@@ -724,9 +725,9 @@ Arduino モードに戻りたい場合は、Arduino IDE で任意のプログラ
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remoteFan-g.gif" /></div>
 
-この wiki では、部屋を涼しく保つためのミニ扇風機の作り方を紹介します。
+このwikiでは、部屋を涼しく保つためのミニ扇風機の作り方を紹介します。
 
-**特徴**
+**機能**
 
 - 自動首振り扇風機
 
@@ -737,12 +738,12 @@ Arduino モードに戻りたい場合は、Arduino IDE で任意のプログラ
 - [**Seeed Studio XIAO 用拡張ベース**](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)
 
 - [**Grove ミニファン**](https://www.seeedstudio.com/Grove-Mini-Fan-v1-1.html)
-- [**Grove-サーボ**](https://www.seeedstudio.com/Grove-Servo.html)
+- [**Grove-Servo**](https://www.seeedstudio.com/Grove-Servo.html)
 - [**Grove - IR（赤外線）レシーバー**](https://www.seeedstudio.com/Grove-Infrared-Receiver.html)
 
 **ハードウェア接続**
 
-同じ色の線に従って、各センサーをボードに接続してください。ファンの Grove ケーブルを D0 に、サーボの Grove ケーブルを **I2C** に、IR の Grove ケーブルを **D7** に接続してください。
+同じ色の線に従って、各センサーをボードに接続してください。ファンのGroveケーブルをD0に、サーボのGroveケーブルを**I2C**に、IRのGroveケーブルを**D7**に接続してください。
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_fan_pic.png" /></div>
 
@@ -842,11 +843,11 @@ void loop() {
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_control_car.gif" /></div>
 
-このwikiでは、リモコンカーの作り方を紹介します。
+このウィキでは、リモコンカーの作り方を紹介します。
 
 **特徴**
 
-- 狭い道も通りやすいミニサイズのカー
+- 狭い道を簡単に通れるミニサイズのカー
 
 **必要なコンポーネント**
 
@@ -860,7 +861,7 @@ void loop() {
 
 **ハードウェア接続**
 
-同じ色の線に従って、各センサーをボードに接続してください。IRセンサーのGroveケーブルをD0に、Mini Motor DriverのGroveケーブルをI2Cに接続してください。
+同じ色の線に従って、各センサーをボードに接続してください。IR センサーの Grove ケーブルを D0 に、Mini Motor Driver の Grove ケーブルを I2C に接続してください。
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/remote_car.jpg" /></div>
 
@@ -868,7 +869,7 @@ void loop() {
 
 **ステップ 1**. 接続図に従って、すべてのセンサーをボードに接続します。
 
-**ステップ 2**. [**Arduino IDE**](https://www.arduino.cc/en/Main/software)をダウンロードします
+**ステップ 2**. [**Arduino IDE**](https://www.arduino.cc/en/Main/software) をダウンロードします。
 
 **ステップ 3**. [**Arduino-IRremote**](https://github.com/Seeed-Studio/Seeed_Arduino_IRSendRev) と [**Motor driver**](https://github.com/Seeed-Studio/Drv8830_Motor_Driver) ライブラリをインストールします。こちらが[**ライブラリのインストール方法**](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)のガイドです。
 
@@ -959,13 +960,13 @@ void delayUntil(unsigned long elapsedTime) {
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_open.gif" /></div>
 
-この箱は重要なものを保管でき、誰かがあなたの物を取ることを心配する必要がありません。この箱には指紋認証機能があり、あなたの物を保護します。指紋認証に失敗した場合、ブザーがアラームを鳴らし、LEDリングが赤色を表示します。最初にボードに登録された指紋のみが認証され、指紋認証が通ると、LEDリングが緑色を表示します。
+この箱は重要なものを保管でき、誰かがあなたのものを取ることを心配する必要がありません。この箱には指紋認証機能があり、あなたのものを保護します。指紋認証に失敗した場合、ブザーがアラームを鳴らし、LED リングが赤色を表示します。最初にボードに登録された指紋のみが認証され、指紋認証が通ると LED リングが緑色を表示します。
 
 **特徴**
 
 - 指紋の登録が簡単
-- LEDリングでロック状態を確認可能
-- OLEDスクリーンで現在の情報を表示
+- LED リングでロック状態を確認可能
+- OLED スクリーンで現在の情報を表示
 - ブザーで指紋認証の成否を通知
 
 **必要なコンポーネント**
@@ -982,11 +983,11 @@ void delayUntil(unsigned long elapsedTime) {
 
 **ハードウェア接続**
 
-図に示すように、各モジュールをボードに接続してください。指紋モジュールをXIAO拡張ボードのUARTポートに、サーボをXIAO拡張ボードのD0ポートに接続してください。
+図に示すように、各モジュールをボードに接続してください。指紋モジュールを XIAO 拡張ボードの UART ポートに、サーボを XIAO 拡張ボードの D0 ポートに接続してください。
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/finger_pinter.png" /></div>
 
-NeoPixelリングは3本の異なる色のワイヤーを通してXIAO開発ボードのピンに直接接続されることに注意してください：NeoPixelリングのDINピンを黄色のワイヤーでXIAOのD1ピンに、NeoPixelリングのVINピンを赤いワイヤーでXIAOの3V3ピンに、NeoPixelリングのGNDピンを黒いワイヤーでXIAOのGNDピンに接続してください。
+NeoPixel リングは 3 本の異なる色のワイヤーを通じて XIAO 開発ボードのピンに直接接続されることに注意してください：NeoPixel リングの DIN ピンを黄色のワイヤーで XIAO の D1 ピンに、NeoPixel リングの VIN ピンを赤いワイヤーで XIAO の 3V3 ピンに、NeoPixel リングの GND ピンを黒いワイヤーで XIAO の GND ピンに接続します。
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/zh-CN/Seeeduino-XIAO-Expansion-Board13.jpeg)
 
@@ -994,7 +995,7 @@ NeoPixelリングは3本の異なる色のワイヤーを通してXIAO開発ボ�
 
 **ステップ 1**. 接続図に従って、すべてのセンサーをボードに接続します。
 
-**ステップ 2**. [**Arduino IDE**](https://www.arduino.cc/en/Main/software)をダウンロードします
+**ステップ 2**. [**Arduino IDE**](https://www.arduino.cc/en/Main/software) をダウンロードします。
 
 **ステップ 3**. [**u8g2**](https://github.com/olikraus/U8g2_Arduino)、[**Servo**](https://github.com/arduino-libraries/Servo)、[**Seeed_Arduino_KCT202**](https://github.com/Seeed-Studio/Seeed_Arduino_KCT202)、[**Seeed_LED_Ring**](https://github.com/Seeed-Studio/Seeed_LED_Ring) ライブラリをインストールします。こちらが[**ライブラリのインストール方法**](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)のガイドです。
 
@@ -1004,13 +1005,13 @@ NeoPixelリングは3本の異なる色のワイヤーを通してXIAO開発ボ�
 
 1. 指紋の登録
 
-最初に画面に指紋記録が表示されるので、指紋デバイスに指を置くだけです。その後、プログラムが指紋を解析し、登録が完了します。
+最初に画面に指紋記録が表示されます。指紋デバイスに指を置くだけで、プログラムが指紋を分析し、登録が完了します。
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_record.gif" /></div>
 
 2. 身元認証（認証通過）
 
-画面に「Please verify」と表示されるので、指紋デバイスに指を置くと、LEDリングが緑色に変わります。
+画面に "Please verify" が表示されます。指紋デバイスに指を置くと、LED リングが緑色に変わります。
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Fingerprint_unlocks/fingerprint_open.gif" /></div>
 
@@ -1299,7 +1300,7 @@ void setup() {
   }
 ```
 
-### プロジェクト 5 - 空気品質センサーハブ - Seeed Studio Expansion Base for XIAO
+### プロジェクト 5 - 空気質センサーハブ - Seeed Studio Expansion Base for XIAO
 
 **概要**
 
@@ -1325,15 +1326,15 @@ void setup() {
 
 <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Air_Quality_Sensor_Hub/environment_detect_g.png" /></div>
 
-**Arduino手順**
+**Arduino 手順**
 
-**ステップ1**. 接続図に従って、すべてのセンサーをボードに接続してください。
+**ステップ 1**. 接続図に従って、すべてのセンサーをボードに接続してください。
 
-**ステップ2**. [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)をダウンロードしてください
+**ステップ 2**. [**Aruidno IDE**](https://www.arduino.cc/en/Main/software) をダウンロードしてください
 
-**ステップ3**. [**u8g2**](https://github.com/olikraus/U8g2_Arduino)、[**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301)、[**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30)ライブラリをインストールしてください。こちらが[**ライブラリのインストール方法**](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)のガイドです。
+**ステップ 3**. [**u8g2**](https://github.com/olikraus/U8g2_Arduino)、[**Seeed_PM2_5_sensor_HM3301**](https://github.com/Seeed-Studio/Seeed_PM2_5_sensor_HM3301)、[**Seeed_SCD30**](https://github.com/Seeed-Studio/Seeed_SCD30) ライブラリをインストールしてください。こちらが [**ライブラリのインストール方法**](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/) のガイドです。
 
-**ステップ4**. コードをコピーしてArduino IDEに貼り付け、アップロードしてください。
+**ステップ 4**. コードをコピーしてArduino IDEに貼り付け、アップロードしてください。
 
 **コード**
 
@@ -1527,14 +1528,14 @@ void loop() {
 }
 ```
 
-### プロジェクト6 - Seeed Studio Expansion Base for XIAO - 心拍数
+### プロジェクト 6 - Seeed Studio Expansion Base for XIAO - 心拍数
 
 **概要**
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Heartrate_Monitor_Watch/heartRate.gif" /></div>
 
 このシンプルで安価なプロジェクトは、Seeed Studio Expansion Base for XIAOを基に心拍数を報告します。
-使用するデバイスはI2C 2線インターフェースを持っているため、配線を最小限に抑えることができます。
+使用するデバイスはI2C 2線式インターフェースを持っているため、配線を最小限に抑えることができます。
 
 **必要なコンポーネント**
 
@@ -1550,15 +1551,15 @@ void loop() {
 
 <div align="center"><img width={450} src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Big_demo/Heartrate_Monitor_Watch/heart_detect.png" /></div>
 
-**Arduino手順**
+**Arduino 手順**
 
-**ステップ1**. 接続図に従って、すべてのセンサーをボードに接続してください。
+**ステップ 1**. 接続図に従って、すべてのセンサーをボードに接続してください。
 
-**ステップ2**. [**Aruidno IDE**](https://www.arduino.cc/en/Main/software)をダウンロードしてください
+**ステップ 2**. [**Aruidno IDE**](https://www.arduino.cc/en/Main/software) をダウンロードしてください
 
-**ステップ3**. [**u8g2**](https://github.com/olikraus/U8g2_Arduino)ライブラリをインストールしてください。こちらが[**ライブラリのインストール方法**](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/)のガイドです。
+**ステップ 3**. [**u8g2**](https://github.com/olikraus/U8g2_Arduino) ライブラリをインストールしてください。こちらが [**ライブラリのインストール方法**](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/) のガイドです。
 
-**ステップ4**. コードをコピーしてArduino IDEに貼り付け、アップロードしてください。
+**ステップ 4**. コードをコピーしてArduino IDEに貼り付け、アップロードしてください。
 
 **コード**
 

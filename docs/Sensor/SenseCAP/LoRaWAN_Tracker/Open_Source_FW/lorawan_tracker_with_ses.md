@@ -5,7 +5,7 @@ keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_opensource.webp
 slug: /open_source_lorawan
-sidebar_position: 2
+sidebar_position: 3
 last_update:
   date: 1/2/2025
   author: Jessie

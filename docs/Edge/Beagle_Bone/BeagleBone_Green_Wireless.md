@@ -5,6 +5,7 @@ keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone_Green_Wireless
+sku: 102010048
 last_update:
   date: 1/10/2023
   author: jianjing Huang

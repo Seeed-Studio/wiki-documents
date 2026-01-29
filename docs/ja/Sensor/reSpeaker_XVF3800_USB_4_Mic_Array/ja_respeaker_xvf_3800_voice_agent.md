@@ -56,8 +56,6 @@ last_update:
 
 この手順により、安定したUSBオーディオ入力と下流の音声処理パイプラインとの互換性が確保されます。
 
----
-
 #### NVIDIA Jetson AGX Orin – 初期設定
 
 Jetson AGX Orinがまだ設定されていない場合は、適切なJetPackバージョンでフラッシュしてください。
@@ -73,8 +71,6 @@ sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
----
-
 ### CUDA環境設定
 
 #### インストール済みCUDAバージョンの確認
@@ -86,8 +82,6 @@ ls /usr/local
 ```
 
 `cuda`、`cuda-12.x`などのフォルダが表示されるはずです。
-
----
 
 #### CUDAパスの永続的な追加
 
@@ -111,8 +105,6 @@ export LD_LIBRARY_PATH=/usr/local/cuda-(your_version)/lib64${LD_LIBRARY_PATH:+:$
 source ~/.bashrc
 ```
 
----
-
 #### CUDAインストールの確認
 
 CUDAが正しくインストールされ、アクセス可能であることを確認します：
@@ -122,8 +114,6 @@ nvcc --version
 ```
 
 CUDAバージョンが表示されれば、GPUサポートの準備が完了です。
-
----
 
 ### GPUサポート付きWhisperのインストール
 
@@ -141,8 +131,6 @@ WhisperはCUDAアクセラレーションを有効にするためにソースか
 sudo apt-get install libsdl2-dev
 ```
 
----
-
 #### CUDA有効化でのWhisperビルド
 
 `whisper.cpp`ディレクトリから実行します：
@@ -153,8 +141,6 @@ cmake --build build -j --config Release
 ```
 
 これによりGPUアクセラレーションとSDLサポート付きでWhisperがコンパイルされます。
-
----
 
 #### Whisperモデルのダウンロード
 
@@ -169,8 +155,6 @@ Hugging FaceからWhisperモデルをダウンロードします：
 ```bash
 whisper.cpp/models/
 ```
-
----
 
 #### Whisperサーバーの実行
 
@@ -187,8 +171,6 @@ cd whisper.cpp
 
 これによりネットワーク経由でアクセス可能なリアルタイム音声認識サーバーが起動します。
 
----
-
 ### ローカルLLM推論用Ollamaのインストール
 
 OllamaはNVIDIA Jetsonデバイスを公式にサポートし、CUDAアクセラレーション付きローカルLLM実行を提供します。
@@ -204,8 +186,6 @@ Gemma 3モデルを実行します：
 ```bash
 ollama run gemma3:4b
 ```
-
----
 
 ## スマート音声AIアシスタント – クイックスタートガイド
 
@@ -238,8 +218,6 @@ Pythonと必要なシステム依存関係がインストールされている�
 pip install -r requirements.txt
 ```
 
----
-
 #### 音声合成（TTS）モデルのダウンロード
 
 このプロジェクトは**Piper TTS**モデルを使用します。以下は男性英語音声（Amy）を使用した例です：
@@ -255,8 +233,6 @@ wget -O models/en_US-amy-low.onnx.json \
 
 必要に応じて、これを任意の互換性のあるPiper音声モデルに置き換えることができます。
 
----
-
 #### 埋め込みモデルのダウンロード（一回限りの設定）
 
 埋め込みモデルは、RAGパイプラインで使用されるベクターデータベースの構築に必要です。
@@ -266,8 +242,6 @@ python download_sentence_tf.py
 ```
 
 この手順は一度だけ実行する必要があります。
-
----
 
 #### ベクターデータベースの構築
 
@@ -279,8 +253,6 @@ python test_scripts/rebuild_vector.py
 
 このプロセスはドキュメントをインデックス化し、高速なセマンティック検索のために準備します。
 
----
-
 #### アプリケーションの実行
 
 スマート音声AIアシスタントを開始します：
@@ -290,8 +262,6 @@ python app.py
 ```
 
 実行されると、システムはウェイクワードを聞き取り、音声クエリにリアルタイムで応答します。
-
----
 
 ## 参考文献
 

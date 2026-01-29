@@ -5,6 +5,7 @@ keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_AI_HAT_for_Edge_Computing
+sku: 102991187
 last_update:
   date: 1/11/2023
   author: jianjing Huang

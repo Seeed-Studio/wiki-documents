@@ -5,6 +5,7 @@ keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/One-Stop-Model-Training-with-Edge-Impulse
+sku: 101990962
 last_update:
   date: 3/31/2023
   author: Yvonne

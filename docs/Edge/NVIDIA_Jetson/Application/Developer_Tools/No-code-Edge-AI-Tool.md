@@ -6,6 +6,7 @@ keywords:
   - reComputer Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /No-code-Edge-AI-Tool
+sku: 110061361
 last_update:
   date: 01/04/2023
   author: w0x7ce

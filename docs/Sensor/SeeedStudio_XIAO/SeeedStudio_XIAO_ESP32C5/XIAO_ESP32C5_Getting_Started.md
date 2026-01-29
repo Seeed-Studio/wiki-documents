@@ -115,7 +115,7 @@ last_update:
 - **Rich on-chip resources:** 384 KB on-chip SRAM, 320 KB of ROM
 - **Ultra small size:** As small as a thumb(21x17.8mm) XIAO series classic form-factor for wearable devices and small projects
 - **Reliable security features**: Cryptographic hardware accelerators supporting AES-128/256, SHA family hashing, HMAC, a dedicated digital signature peripheral, and Secure Boot (V2).
-- **Rich interfaces**: 1×I2C, 1×SPI, 2×UART, up to 11×GPIO (PWM-capable), 5×ADC channels, and a JTAG bonding-pad interface.
+- **Rich interfaces**: 1×I2C, 1×SPI, 2×UART, up to 11×GPIO (PWM-capable), 5×ADC channels, and a JTAG(pads on the reverse side) bonding-pad interface.
 - Single-sided components, surface mounting design
 
 ## Hardware overview
@@ -135,6 +135,34 @@ last_update:
  </tr>
 </table>
 
+ ## **Pin Map**
+| XIAO Pin                | Function   | Chip Pin  | Alternate Functions       | Description                  |
+| :--------------------: | :-------: | :-------: | :----------------------: | :-------------------------- |
+| 5V                     | VBUS       |           |                          | Power Input/Output           |
+| GND                    |            |           |                          |                              |
+| 3V3                    | 3V3_OUT    |           |                          | Power Output                 |
+| D0                     | Analog     | GPIO1     | LP_UART_DSRN, LP_GPIO1   | GPIO, ADC                    |
+| D1                     |            | GPIO0     | LP_UART_DTRN, LP_GPIO0   | GPIO                         |
+| D2                     |            | GPIO25    |                          | GPIO                         |
+| D3                     |            | GPIO7     | SDIO_DATA1               | GPIO                         |
+| D4                     | SDA        | GPIO23    |                          | GPIO, I2C Data               |
+| D5                     | SCL        | GPIO24    |                          | GPIO, I2C Clock              |
+| D6                     | TX         | GPIO11    |                          | GPIO, UART Transmit          |
+| D7                     | RX         | GPIO12    |                          | GPIO, UART Receive           |
+| D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO, SPI Clock              |
+| D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO, SPI Data               |
+| D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO, SPI Data               |
+| MTDO                   |            | GPIO5     | LP_UART_TXD, LP_GPIO5    | JTAG                         |
+| MTDI                   |            | GPIO3     | LP_I2C_SCL, LP_GPIO3     | JTAG, ADC                    |
+| MTCK                   |            | GPIO4     | LP_UART_RXD, LP_GPIO4    | JTAG, ADC                    |
+| MTMS                   |            | GPIO2     | LP_I2C_SDA, LP_GPIO2     | JTAG, ADC                    |
+| ADC_BAT                |            | GPIO6    |                          | Read the BAT voltage value   |
+| ADC_CRL                |            | GPIO26    |                          | Controls (enables/disables) the measurement circuit to save power.   |
+| Reset                  |            | CHIP_EN   |                          | EN                           |
+| Boot                   |            | GPIO28    |                          | Enter Boot Mode              |
+| U.FL-R-SMT1            |            | LNA_IN    |                          | UFL antenna                  |
+| CHARGE_LED             |            | VCC_3V3   |                          | CHG-LED_Red                  |
+| USER_LED               |            | GPIO27    |                          | User Light_Yellow            |
 ## Getting Started
 
 To enable you to get started with the XIAO ESP32-C5 faster, please read the hardware and software preparation below to prepare the XIAO.
@@ -186,7 +214,7 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
   <br></br>
 
 - **Step 2.** Launch the Arduino application.
-- **Step 3.**  Open BOARDS MANAGER -> Search **esp32** -> Install version 3.3.4 or a higher version
+- **Step 3.**  Open BOARDS MANAGER -> Search **esp32** -> Install version 3.3.5 or a higher version
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/board_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -291,7 +319,7 @@ After entering deep sleep mode, the XIAO's port will disappear and you'll need t
 :::
 
 :::caution
-Currently the XIAO ESP32-C5 only supports GPIO wake-up, and the only pins that support wake-up are D0~D1. This program may not work on other pins.
+The XIAO ESP32-C5 supports GPIO wake-up and timer wake-up. To prevent the loss of hardware debugging capabilities and increased difficulty in firmware flashing during low-power development, it is strongly recommended that the JTAG (MTMS, MTDI, MTCK, MTDO) pins be reserved for dedicated use and not employed as wake-up sources for deep sleep mode.
 :::
 
 ## Battery Usage
@@ -325,7 +353,7 @@ void setup() {
   Serial.begin(115200);
   pinMode(BAT_VOLT_PIN, INPUT);         // Configure A0 as ADC input
   pinMode(BAT_VOLT_PIN_EN , OUTPUT);
-  digitalWrite(BAT_VOLT_PIN_EN , LOW);
+  digitalWrite(BAT_VOLT_PIN_EN , HIGH);
 }
 
 void loop() {
@@ -355,15 +383,15 @@ According to the datasheet, the effective measurement range of the ESP32-C5 cove
 
 - **[PDF]** [ESP32-C5 datasheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
 
-<!-- - **[ZIP]** [Seeed Studio XIAO ESP32-C5 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5_V1.0_SCH&PCB_KiCAD.zip)
+- **[PCB Design Files]** [XIAO ESP32-C5 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
 
-- **[PDF]** [Seeed Studio XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_ESP32C5_SCH_251202.pdf)
+- **[Schematic]** [XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
 
-- **[XLSX]** [Seeed Studio XIAO ESP32-C5 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
+- **[XLSX]** [XIAO ESP32-C5 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
 
-- 🔗**[Kicad]** [Seeed Studio XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+- **[Kicad]** [XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-- **[STEP]** [Seeed Studio XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1) -->
+- **[STEP]** [XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
 
 ## Tech Support & Product Discussion
 

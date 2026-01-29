@@ -6,6 +6,7 @@ keywords:
 - TRMNL
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.webp
 slug: /cn/xiao_7_5_inch_epaper_panel_with_trmnl
+sku: 114993635
 sidebar_position: 4
 last_update:
   date: 05/19/2025

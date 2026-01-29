@@ -6,6 +6,7 @@ keywords:
   - reCamera
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 slug: /recamera_getting_started
+sku: 102991897,102991896,102991894,102991895,101991223,102991898,101991224,102991899
 sidebar_position: 1
 last_update:
   date: 02/15/2025

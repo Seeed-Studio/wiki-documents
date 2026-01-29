@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Mini_I2C_Motor_Driver_v1.0/
 slug: /ja/Grove-Mini_I2C_Motor_Driver_v1.0
+sku: 105020010
 last_update:
   date: 05/15/2025
   author: gunengyu

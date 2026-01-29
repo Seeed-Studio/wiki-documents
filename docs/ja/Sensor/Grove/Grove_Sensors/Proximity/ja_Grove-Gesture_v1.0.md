@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Gesture_v1.0/
 slug: /ja/Grove-Gesture_v1.0
+sku: 101020083
 last_update:
   date: 05/15/2025
   author: gunengyu

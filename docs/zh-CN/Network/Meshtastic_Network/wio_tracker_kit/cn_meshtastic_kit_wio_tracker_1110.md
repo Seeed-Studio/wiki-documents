@@ -6,6 +6,7 @@ keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/meshtastic_kit_wio_tracker_1110
+sku: E24070201,114993370
 last_update:
   date: 6/17/2024
   author: Jessie

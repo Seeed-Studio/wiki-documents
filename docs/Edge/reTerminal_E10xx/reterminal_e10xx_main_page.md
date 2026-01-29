@@ -3,6 +3,7 @@ description: This article is a collection page for the reTerminal E Series.
 title: reTerminal E Series
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /reterminal_e10xx_main_page
+sku: 100017057,100073581
 sidebar_position: 1
 last_update:
   date: 07/21/2025

@@ -5,6 +5,7 @@ keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi
+sku: 103030296, 103990563
 last_update:
   date: 05/15/2025
   author: jianjing Huang

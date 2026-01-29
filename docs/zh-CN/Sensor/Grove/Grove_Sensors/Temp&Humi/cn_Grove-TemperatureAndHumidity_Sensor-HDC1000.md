@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-TemperatureAndHumidity_Sensor-HDC1000
+sku: 101020087
 last_update:
   date: 1/3/2023
   author: jianjing Huang

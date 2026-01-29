@@ -253,7 +253,6 @@ Begin by placing **BLE (Bluetooth Low Energy) beacons** at strategic locations w
 <img class='img-responsive' width="360" src="https://files.seeedstudio.com/wiki/solution/smart-building/indoor-positioning-bluetooth-lorawan-tracker/10.5.png" alt="Indoor positioning 2d map"/>
 </div>
 
-
 Refer to the video below for a step-by-step guide on adding your beacon information to the system.
 You can also check the [Tips section](#tips) for additional help.
 
@@ -331,16 +330,16 @@ If you’d like to explore the interface first, you can check out the [live demo
 
 Open a terminal on your server and run the following command:
 
-
 <Tabs>
   <TabItem value="global" label="Global" default>
 
 ```shell
-docker run -p 5173:5173 -p 8022:8022 \
+docker run -p 5173:5173 \
 --name indoor-positioning \
 --restart unless-stopped \
--v $PWD/db:/app/db/ \
--v $PWD/config:/app/server/config/json \
+-v ./db:/app/db/ \
+-v ./config:/app/server/config/json \
+-v ./uploads:/app/uploads \
 -d seeedcloud/sensecraft-indoor-positioning
 ```
 
@@ -360,6 +359,7 @@ docker run -p 5173:5173 -p 8022:8022 \
 - Mounts the local directories:
   - `/app/db/` → stores databases and maps.
   - `/app/server/config/json` → stores configuration files.
+  - `/app/uploads` → stores uploaded files.
 - `-d` runs the application in the background.
 
 ---
@@ -369,6 +369,12 @@ Once the container starts successfully, open your web browser and navigate to:
 👉 `http://<your_server_ip>:5173`
 
 You should now see the SenseCraft Indoor Positioning dashboard running on your server.
+
+:::info Login Credentials
+
+- **Username:** `admin`
+- **Password:** `83EtWJUbGrPnQjdCqyKq`
+:::
 
 ### Step 3: Configure the Application
 
@@ -412,6 +418,7 @@ These options can be changed anytime (no restart required):
 - **Area Positioning** – Estimate approximate tracker location when beacon signals are weak or sparse.
 - **Tracker Access Control** – Limit which devices can be positioned (open to all or by whitelist).
 - **Webhook** – Push location data to your service via HTTP POST.
+
 #### 3b. Map and Beacon Configuration
 
 Click `Create` to create your first map.
@@ -668,6 +675,7 @@ You can filter the displayed trackers on the map by their associated beacon UUID
 Here are some useful tips to help you deploy and configure your beacons more efficiently:
 
 ### 1. Record Beacon Information
+
 It is **strongly recommended** to record each beacon’s **unique MAC address** together with its **installation location**.  
 This will be **crucial** during the [software configuration step](#3b-map-and-beacon-configuration) and will help you **easily identify and select** the correct beacon during mapping or troubleshooting.
 
@@ -678,19 +686,23 @@ This will be **crucial** during the [software configuration step](#3b-map-and-be
 | c30000564b33    | Corner Office    | 03            |
 
 ### 2. Use a Consistent UUID for All Beacons
+
 For easier management, you can use the **SenseCraft app** to assign a consistent **UUID** to all your beacons.  
 This ensures that your tracker only listens to **your own devices** and **ignores other nearby beacons**.  
 Check out [Feature 4: Filter by Beacon UUID](#feature-4-filter-by-beacon-uuid) for more details.
 
 ### 3. Choose Stable Mounting Locations
+
 Install beacons in **fixed, open, and unobstructed** areas to ensure a stable Bluetooth signal.  
 Avoid placing them near **metal surfaces**, **electrical panels**, or **Wi-Fi routers** that may cause interference.
 
 ### 4. Label and Secure Each Beacon
+
 Attach a **visible label** (e.g., Beacon-01, Beacon-02) matching the record table to avoid confusion during maintenance.  
 Ensure the device is **firmly mounted** to prevent accidental displacement.
 
 ### 5. Verify Signal Range
+
 Before finalizing placement, test the **signal coverage** using a BLE scanner app or configuration tool to ensure **consistent detection** in your target zones.
 
 ### 6. Quickly Add or Adjust Beacon Data

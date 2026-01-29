@@ -13,6 +13,7 @@ keywords:
   - Jetson
 image: https://files.seeedstudio.com/wiki/Yolo11/connection.webp
 slug: /cn/yolov11_with_depth_camera
+sku: 101090144,100071398
 last_update:
   date: 07/04/2025
   author: Zibo

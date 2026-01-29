@@ -5,8 +5,9 @@ keywords:
 - SenseCAP_T2000_tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickStart.webp
 slug: /es/Get_Started_with_SenseCAP_T2000_tracker
+sku: 100082900,100057727,100087298
 last_update:
-  date: 12/23/2025
+  date: 1/5/2026
   author: Janet
 ---
 
@@ -20,17 +21,30 @@ Este capítulo te muestra cómo configurar rápidamente tu SenseCAP T2000 Tracke
 Por favor asegúrate de tener cobertura de una red LoRaWAN, como Helium, TTN u otras redes LoRaWAN. Sin redes LoRaWAN, el dispositivo no puede enviar datos a la nube. La forma más fácil de usar los rastreadores es con el `SenseCAP LoRaWAN Gateway` y la `SenseCraft app`.
 :::
 
-## Descripción del Hardware
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/krE6HBgWnRA?si=CRcLRApl1NZUHhqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+## Descripción General del Hardware
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Hardware_Overview.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000AB_Tracker_Hardware.jpg" alt="pir" width={800} height="auto" /></p>
-<div align="center">Vista Explosiva T2000-A/B</div>  
+<div align="center">Vista Explosionada T2000-A/B</div>  
 <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000C_Tracker_Hardware.jpg" alt="pir" width={800} height="auto" /></p>
-<div align="center">Vista Explosiva T2000-C con Panel Solar</div>  
+<div align="center">Vista Explosionada T2000-C con Panel Solar</div>  
 <br />
+
+### Entorno de Funcionamiento
+
+El SenseCAP T2000 Tracker está diseñado para operar de manera confiable dentro de un rango específico de temperatura para asegurar un rendimiento estable y la seguridad de la batería. Por favor asegúrate de que el dispositivo se use y cargue dentro de estos rangos de temperatura para evitar la degradación del rendimiento o problemas con la batería.
+
+| Parámetro | T2000-A / T2000-B | T2000-C con Panel Solar|
+|---------|------------------|--------|
+| Temperatura de Funcionamiento | -40 °C ~ 85 °C | -20 °C ~ 60 °C |
+| Temperatura de Carga | / | 0 °C ~ 45 °C |
 
 ## Funciones del Dispositivo
 
@@ -49,7 +63,7 @@ Para aplicar a diferentes escenarios, hay varios modos de trabajo diferentes en 
 El SenseCAP T2000 Tracker está equipado con un Acelerómetro de 3 Ejes.
 
 - Puedes elegir habilitar o deshabilitar el sensor en la App SenseCraft (deshabilitado por defecto).
-- Puedes configurar los umbrales correspondientes para el acelerómetro de 3 ejes según las necesidades de tu aplicación, se activan eventos de movimiento/sin movimiento y eventos de choque.
+- Puedes configurar los umbrales correspondientes para el acelerómetro de 3 ejes basado en las necesidades de tu aplicación, se activan eventos de movimiento/sin movimiento y eventos de choque.
 
 ### Caché de Datos
 
@@ -74,24 +88,24 @@ Hacer clic en el botón `Clear Cache` borrará todos los datos en caché.
 | **Estado**        | **Operación** |
 |-------------------|--------------|
 | Encender          | Acerca el imán al área del sensor y toca 4 veces rápidamente. El encendido es exitoso cuando la luz verde se enciende. |
-| Apagar            | Acerca el imán al área del sensor y toca 4 veces rápidamente. El apagado es exitoso cuando la luz verde se enciende. |
-| Bluetooth Encendido | Acerca el imán al área del sensor y toca 2 veces rápidamente. El escaneo Bluetooth se habilita cuando la luz azul parpadea. |
-| Bluetooth Apagado   | Acerca el imán al área del sensor y toca 2 veces rápidamente. |
+| Apagar         | Acerca el imán al área del sensor y toca 4 veces rápidamente. El apagado es exitoso cuando la luz verde se enciende. |
+| Bluetooth Encendido      | Acerca el imán al área del sensor y toca 2 veces rápidamente. El escaneo Bluetooth se habilita cuando la luz azul parpadea. |
+| Bluetooth Apagado     | Acerca el imán al área del sensor y toca 2 veces rápidamente. |
 
 #### Indicador de Estado LED
 
-| Estado              | Color LED | Patrón del Indicador     |
+| Estado              | Color LED | Patrón del Indicador        |
 |---------------------|-----------|--------------------------|
-| Encendido           | Verde     | Encendido fijo por 1s    |
-| Apagado             | Verde     | Encendido fijo por 1s    |
-| Uniéndose a la Red  | Verde     | Luz respiratoria         |
-| Unión Exitosa       | Verde     | Parpadeo rápido 5 veces  |
-| Fallo de Unión      | Rojo      | Parpadeo rápido 5 veces  |
-| Búsqueda Bluetooth  | Azul      | Parpadeo lento continuo  |
-| Bluetooth Conectado | Azul      | Encendido fijo           |
-| Alarma de Manipulación | Rojo   | Parpadeo rápido continuo |
-| Actualizando Firmware | Verde   | Parpadeo lento continuo  |
-| Entrar Modo DFU     | Verde     | Encendido fijo           |
+| Encendido            | Verde     | Encendido fijo por 1s         |
+| Apagado           | Verde     | Encendido fijo por 1s         |
+| Uniéndose a la Red     | Verde     | Luz respiratoria          |
+| Unión Exitosa        | Verde     | Parpadeo rápido 5 veces       |
+| Fallo de Unión           | Rojo       | Parpadeo rápido 5 veces       |
+| Búsqueda Bluetooth    | Azul      | Parpadeo lento continuo    |
+| Bluetooth Conectado | Azul      | Encendido fijo                |
+| Alarma de Manipulación        | Rojo       | Parpadeo rápido continuo    |
+| Actualizando Firmware   | Verde     | Parpadeo lento continuo    |
+| Entrar Modo DFU      | Verde     | Encendido fijo                |
 
 <br />
 
@@ -100,7 +114,7 @@ Hacer clic en el botón `Clear Cache` borrará todos los datos en caché.
 <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_GreenBreathingLight.gif" alt="pir" width={400} height="auto" /></p>
-<div align="center">Después del encendido, la luz verde respiratoria</div>
+<div align="center">Después de encender, la luz verde respiratoria</div>
 <br />
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Bluetooth.gif" alt="pir" width={400} height="auto" /></p>
@@ -147,6 +161,12 @@ Hay 2 modos de configuración:
 
 ### Configuración Rápida
 
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qne730YZtSo?si=jLYLlO8r6SgnYIEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<br />
+
 Para la Configuración Rápida, solo necesitas configurar los siguientes parámetros:
 
 - **Frecuencia**: debe ser la misma que tu gateway.
@@ -154,13 +174,19 @@ Para la Configuración Rápida, solo necesitas configurar los siguientes paráme
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_QuickConfiguration.png" alt="pir" width={800} height="auto" /></p>
 
-El Tracker intentará unirse a la red LoRaWAN después de salir del modo de emparejamiento Bluetooth, la luz verde respiratoria parpadea cuando intenta unirse a la red, y parpadea 5 veces rápidamente si la red se une exitosamente.
+El Tracker intentará unirse a la red LoRaWAN después de salir del modo de emparejamiento Bluetooth, la luz verde parpadeante respira cuando intenta unirse a la red, y parpadea 5 veces rápidamente si la red se une exitosamente.
 
 ### Configuración Avanzada
 
-- Abre la APP y haz clic en `Device Bluetooth Configuration` en la página `User`. Luego selecciona `SenseCAP Asset Tracker T2000` para entrar a `Setup` para configurar el rastreador.
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ROjXT6D8xtA?si=roC5PW9Cce4Jp1Kl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+<br />
+
+- Abre la APP y haz clic en `Device Bluetooth Configuration` en la página `User`. Luego selecciona `SenseCAP Asset Tracker T2000` para entrar a `Setup` y configurar el tracker.
 - Sigue los pasos anteriores para entrar al modo de emparejamiento Bluetooth.
-- Selecciona el dispositivo por S/N (S/N está en la etiqueta del dispositivo) y elige `Advanced Configuration`. Luego, la información básica del rastreador se mostrará después de entrar.
+- Selecciona el dispositivo por S/N (S/N está en la etiqueta del dispositivo) y elige `Advanced Configuration`. Luego, la información básica del tracker se mostrará después de entrar.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_AdvancedConfiguration.png" alt="pir" width={800} height="auto" /></p>
 
@@ -169,6 +195,14 @@ Hay cuatro páginas de configuración en total.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_ConfigurationPage.png" alt="pir" width={800} height="auto" /></p>
 
 Haz clic en `Measure` en la página `Information` - `Basic`, luego obtendrás los valores del sensor:
+
+1. **Acelerómetro de 3 Ejes (Valores X / Y / Z)**
+
+- El dispositivo reporta valores de aceleración a lo largo de los ejes X, Y y Z. Estas lecturas ayudan a los usuarios a entender la postura, movimiento o estado de vibración del dispositivo durante la operación o instalación.
+
+2. **Estado del Botón de Manipulación**
+- Presionado: el dispositivo está instalado de forma segura
+- No Presionado: el dispositivo no está completamente montado o ha sido removido
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Measure.png" alt="pir" width={800} height="auto" /></p>
 
@@ -195,7 +229,7 @@ Debe usarse con SenseCAP Gateway. SenseCAP construye un servidor TTN propietario
     </tr>
         <tr>
     <td>SenseCAP for Helium</td>
-    <td>Cuando hay cobertura de la red Helium, los datos pueden subirse vía Helium. Los dispositivos funcionan en una consola privada de Helium de SenseCAP. Los usuarios no necesitan crear dispositivos en la consola de Helium, listo para usar con SenseCraft App y Portal. <br /><a href="https://explorer.helium.com/" target="_blank"><span>Cobertura de Helium</span></a></td>
+    <td>Cuando hay cobertura de la red Helium, los datos pueden subirse vía Helium. Los dispositivos funcionan en una consola privada de Helium de SenseCAP. Los usuarios no necesitan crear dispositivos en la consola de Helium, listos para usar con SenseCraft App y Portal. <br /><a href="https://explorer.helium.com/" target="_blank"><span>Cobertura Helium</span></a></td>
     </tr>
         <tr>
     <td>Helium</td>
@@ -214,7 +248,7 @@ Debe usarse con SenseCAP Gateway. SenseCAP construye un servidor TTN propietario
 
 **Plan de Frecuencia**
 
-Los rastreadores están fabricados para soportar un plan de frecuencia universal de 863MHz~928MHz. Cada dispositivo individual puede soportar 8 planes de frecuencia, incluyendo EU868, US915, AU915, AS923-1-TTN, AS923-2-TTN, IN865, KR920 y RU864.
+Los Trackers se fabrican para soportar un plan de frecuencia universal de 863MHz~928MHz. Cada dispositivo individual puede soportar 8 planes de frecuencia, incluyendo EU868, US915, AU915, AS923-1-TTN, AS923-2-TTN, IN865, KR920 y RU864.
 
 <table align="center">
   <tbody>
@@ -248,9 +282,9 @@ Los rastreadores están fabricados para soportar un plan de frecuencia universal
 
 :::info Nota
 Diferentes países y servidores de red LoRaWAN usan diferentes planes de frecuencia.<br />
-Para la red Helium, consulta: [Planes de frecuencia de Helium](https://docs.helium.com/lorawan-on-helium/frequency-plans)<br />
-Para The Things Network, consulta:[Planes de frecuencia de TTN](https://www.thethingsnetwork.org/docs/lorawan/frequency-plans/)
-Si no estás seguro de qué banda de frecuencia se requiere en tu área, consulta a nuestro equipo de soporte técnico o consulta [RP002-1.0.0 LoRaWAN® Regional Parameters](https://lora-alliance.org/wp-content/uploads/2019/11/rp_2-1.0.0_final_release.pdf) para información detallada de frecuencias regionales.
+Para la red Helium, por favor consulta: [Helium-frequency-plans](https://docs.helium.com/lorawan-on-helium/frequency-plans)<br />
+Para The Things Network, por favor consulta:[TTN-frequency-plans](https://www.thethingsnetwork.org/docs/lorawan/frequency-plans/)
+Si no estás seguro de qué banda de frecuencia se requiere en tu área, por favor consulta a nuestro equipo de soporte técnico o consulta [RP002-1.0.0 LoRaWAN® Regional Parameters](https://lora-alliance.org/wp-content/uploads/2019/11/rp_2-1.0.0_final_release.pdf) para información detallada de frecuencia regional.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_FrequencyPlan.jpg" alt="pir" width={400} height="auto" /></p>
@@ -277,19 +311,19 @@ El dispositivo usa OTAA para unirse a la red LoRaWAN por defecto. Así, puede co
 :::info Nota
 Cuando se usa la plataforma SenseCAP, el EUI, APP EUI y APP Key son fijos y son los mismos que la etiqueta del sensor.<br />
 Cuando el sensor se selecciona para usarse con una plataforma pública como Helium o TTN, el EUI no cambiará, y el sensor generará un nuevo App EUI y App Key fijos para el acceso a la red.<br />
-Para obtener información EUI en lotes, contacta a nuestro equipo de ventas.
+Para obtener información EUI en lotes, por favor contacta a nuestro equipo de ventas.
 :::
 
 <br />
 
 #### Configuración del Modo de Trabajo
 
-Configura el modo de trabajo según tus necesidades.
+Por favor configura el modo de trabajo según tus necesidades.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_WorkMode.png" alt="pir" width={800} height="auto" /></p>
 
 <table>
-<tr><th colspan="1"><b>Parámetros</b></th><th colspan="1"><b>Descripción</b></th><th colspan="1"><b>Predeterminado / Nota</b></th></tr> <tr><td colspan="1">Intervalo de Latido</td><td colspan="1">Cuando no se suben datos por el dispositivo dentro del intervalo de latido, se activará un paquete de latido. Este paquete solo contiene información de la batería.</td><td colspan="1">Predeterminado 720 minutos.</td></tr> <tr><td colspan="1">Habilitar Sensor de 3 Ejes</td><td colspan="1">Si este interruptor está activado, el sensor de 3 ejes será recolectado y subido, pero aumentará el consumo de energía.</td><td colspan="1">Desactivado por defecto.</td></tr> <tr><td colspan="1">Habilitar Alarma de Desmontaje</td><td colspan="1">Si este interruptor está activado, el dispositivo activa una alarma cuando el dispositivo es removido después de la instalación.</td><td colspan="1">Habilitado por defecto.</td></tr> <tr><td colspan="1">Duración de Alarma de Desmontaje(min)</td><td colspan="1">Este parámetro especifica cuánto tiempo el dispositivo sigue reportando después de que se activa una Alarma de Desmontaje, enviando un paquete de posición en tiempo real con el evento de alarma cada minuto.</td><td colspan="1">Esta configuración solo es visible cuando Habilitar Alarma de Desmontaje está activado. Predeterminado 3 minutos.</td></tr> <tr><td colspan="1" rowspan="3">Modo de Trabajo</td><td colspan="1"><b>Modo de Espera</b></td><td colspan="1">Sube paquetes de latido (solo nivel de batería) basado en el intervalo de latido.</td></tr> <tr><td colspan="1"><b>Modo Periódico</b></td><td colspan="1">Los datos de ubicación y sensor se suben según el intervalo de subida.</td></tr> <tr><td colspan="1"><b>Modo de Evento</b></td><td colspan="1">Establece condiciones de activación de umbral basadas en valores medidos como movimiento y choque, y ajusta el intervalo de subida cuando no se activa ningún evento.</td></tr> <tr><td colspan="1">Intervalo de Subida (min)</td> <td colspan="1"><b>Modo Periódico</b></td> <td colspan="1">Localiza periódicamente y sube datos. Predeterminado 60 minutos. Mayor frecuencia aumenta el consumo de energía.</td></tr> <tr><td colspan="1">Restaurar Todas las Configuraciones</td><td colspan="2">Restaura todos los parámetros de configuración a los ajustes de fábrica, incluyendo LoRa, Modo de Trabajo, y Geolocalización.</td></tr>
+<tr><th colspan="1"><b>Parámetros</b></th><th colspan="1"><b>Descripción</b></th><th colspan="1"><b>Predeterminado / Nota</b></th></tr> <tr><td colspan="1">Intervalo de Latido</td><td colspan="1">Cuando no se suben datos por el dispositivo dentro del intervalo de latido, se activará un paquete de latido. Este paquete solo contiene información de batería.</td><td colspan="1">Predeterminado 720 minutos.</td></tr> <tr><td colspan="1">Habilitar Sensor de 3 Ejes</td><td colspan="1">Si este interruptor está activado, el sensor de 3 ejes será recolectado y subido, pero aumentará el consumo de energía.</td><td colspan="1">Desactivado por defecto.</td></tr> <tr><td colspan="1">Habilitar Alarma de Desmontaje</td><td colspan="1">Si este interruptor está activado, el dispositivo activa una alarma cuando el dispositivo es removido después de la instalación.</td><td colspan="1">Habilitado por defecto.</td></tr> <tr><td colspan="1">Duración de Alarma de Desmontaje(min)</td><td colspan="1">Este parámetro especifica cuánto tiempo el dispositivo sigue reportando después de que se activa una Alarma de Desmontaje, enviando un paquete de posición en tiempo real con el evento de alarma cada minuto.</td><td colspan="1">Esta configuración solo es visible cuando Habilitar Alarma de Desmontaje está activado. Predeterminado 3 minutos.</td></tr> <tr><td colspan="1" rowspan="3">Modo de Trabajo</td><td colspan="1"><b>Modo de Espera</b></td><td colspan="1">Sube paquetes de latido (solo nivel de batería) basado en el intervalo de latido.</td></tr> <tr><td colspan="1"><b>Modo Periódico</b></td><td colspan="1">Los datos de ubicación y sensor se suben según el intervalo de subida.</td></tr> <tr><td colspan="1"><b>Modo de Evento</b></td><td colspan="1">Establece condiciones de activación de umbral basadas en valores medidos como movimiento y choque, y ajusta el intervalo de subida cuando no se activa ningún evento.</td></tr> <tr><td colspan="1">Intervalo de Subida (min)</td> <td colspan="1"><b>Modo Periódico</b></td> <td colspan="1">Localiza periódicamente y sube datos. Predeterminado 60 minutos. Mayor frecuencia aumenta el consumo de energía.</td></tr> <tr><td colspan="1">Restaurar Todas las Configuraciones</td><td colspan="2">Restaurar todos los parámetros de configuración a los ajustes de fábrica, incluyendo LoRa, Modo de Trabajo, y Geolocalización.</td></tr>
 </table>
 
 <br />
@@ -298,14 +332,14 @@ Para el Modo de Evento, hay tres eventos:
 
 <table>
 <tr><th><b>Modo de Evento</b></th><th colspan="2"><b>Descripción</b></th></tr>
-<tr><td>Intervalo de Subida – Sin evento (min)</td><td>Este es el intervalo de subida cuando no se activan eventos.</td><td><p>Predeterminado 60 minutos.</p><p>Rango: 1~10080 min.</p></td></tr>
-<tr><td rowspan="2">Evento de Choque</td><td>Cuando el evento de choque está habilitado, el choque del rastreador activará un reporte de datos, incluyendo el evento de choque, ubicación, y datos del sensor.</td><td>Desactivado por defecto.</td></tr>
-<tr><td>Umbral de Movimiento de 3 Ejes (mg)</td><td>Predeterminado es 300. Cuando la aceleración excede 300mg, se activa el evento de choque.</td></tr>
-<tr><td rowspan="3">Evento de Movimiento</td><td>Cuando la aceleración excede el valor establecido, el dispositivo comienza a moverse, y cuando no hay movimiento por 2 minutos, el movimiento del dispositivo se detiene. Establece el intervalo de subida según el inicio del movimiento y la detención del movimiento.</td><td>Desactivado por defecto.</td></tr>
-<tr><td>Umbral de Movimiento de 3 Ejes (mg)</td><td>Predeterminado es 30. Cuando la aceleración excede 30mg, determina que el dispositivo está en movimiento, cuando está 2 minutos por debajo de este valor, determina que el dispositivo está inmóvil.</td></tr>
-<tr><td>Intervalo de Subida en Movimiento(min)</td><td>Establece el intervalo de subida para el estado actual cuando el dispositivo está en movimiento.</td></tr>
+<tr><td>Intervalo de Enlace Ascendente – Sin evento (min)</td><td>Este es el intervalo de carga cuando no se activan eventos.</td><td><p>Por defecto 60 minutos.</p><p>Rango: 1~10080 min.</p></td></tr>
+<tr><td rowspan="2">Evento de Impacto</td><td>Cuando el evento de impacto está habilitado, el impacto del rastreador activará un reporte de datos, incluyendo el evento de impacto, ubicación y datos del sensor.</td><td>Desactivado por defecto.</td></tr>
+<tr><td>Umbral de Movimiento de 3 Ejes (mg)</td><td>Por defecto es 300. Cuando la aceleración excede 300mg, se activa el evento de impacto.</td></tr>
+<tr><td rowspan="3">Evento de Movimiento</td><td>Cuando la aceleración excede el valor establecido, el dispositivo comienza a moverse, y cuando no hay movimiento durante 2 minutos, el movimiento del dispositivo se detiene. Establece el intervalo de carga según el inicio del movimiento y la detención del movimiento.</td><td>Desactivado por defecto.</td></tr>
+<tr><td>Umbral de Movimiento de 3 Ejes (mg)</td><td>Por defecto es 30. Cuando la aceleración excede 30mg, determina que el dispositivo está en movimiento, cuando está 2 minutos por debajo de este valor, determina que el dispositivo está inmóvil.</td></tr>
+<tr><td>Intervalo de Enlace Ascendente en Movimiento(min)</td><td>Establece el intervalo de carga para el estado actual cuando el dispositivo está en movimiento.</td></tr>
 <tr><td rowspan="2">Evento de Inmovilidad</td><td colspan="2">Cuando el dispositivo está estacionario en una ubicación por más de cierta cantidad de tiempo, se activa un evento de tiempo de espera de inmovilidad. </td></tr>
-<tr><td>Tiempo de Espera de Inmovilidad(min)</td><td>Predeterminado es 360 minutos.</td></tr>
+<tr><td>Tiempo de Espera de Inmovilidad(min)</td><td>Por defecto es 360 minutos.</td></tr>
 </table>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_EventMode.png" alt="pir" width={800} height="auto" /></p>
@@ -316,32 +350,32 @@ Para el Modo de Evento, hay tres eventos:
 
 El rastreador soporta posicionamiento vía GNSS, Wi-Fi (Solo T2000-B soporta), y Bluetooth.
 
-- **GNSS**: La longitud y latitud pueden obtenerse directamente a través de GPS y otro posicionamiento satelital, luego subir datos vía LoRa.
-- **Wi-Fi**: Escaneo pasivo, sube las 5 direcciones MAC escaneadas vía LoRa.
-- **BLE**: Sube las 5 direcciones MAC escaneadas de Beacon vía LoRa.
+- **GNSS**: La longitud y latitud pueden obtenerse directamente a través de GPS y otro posicionamiento satelital, luego cargar datos vía LoRa.
+- **Wi-Fi**: Escaneo pasivo, carga las 5 direcciones MAC escaneadas vía LoRa.
+- **BLE**: Carga las 5 direcciones MAC escaneadas de Beacon vía LoRa.
 
 <table>
 <tr><th><b>Estrategia de Geolocalización</b></th><th colspan="2"><b>Descripción</b></th></tr>
-<tr><td rowspan="9"><b>Estrategia de Geolocalización</b></td><td>Solo GNSS</td><td>Uso predeterminado de GNSS. Solo se usa GNSS para posición.</td></tr>
-<tr><td>Solo Wi-Fi</td><td>Solo se utilizan escaneos Wi-Fi para la posición.</td></tr>
-<tr><td>Solo Bluetooth</td><td>Solo se utilizan escaneos Bluetooth para la posición.</td></tr>
-<tr><td>GNSS + Wi-Fi</td><td>Usar GNSS antes que Wi-Fi. Si GNSS falla, entonces usar Wi-Fi en un ciclo de geolocalización.</td></tr>
-<tr><td>GNSS + Bluetooth</td><td>Usar GNSS antes que Bluetooth. Si GNSS falla, entonces usar Bluetooth en un ciclo de geolocalización.</td></tr>
-<tr><td>Wi-Fi + GNSS</td><td>Usar Wi-Fi antes que GNSS. Si Wi-Fi falla, entonces usar GNSS en un ciclo de geolocalización.</td></tr>
-<tr><td>Bluetooth + GNSS</td><td>Usar Bluetooth antes que GNSS. Si Bluetooth falla, entonces usar GNSS en un ciclo de geolocalización.</td></tr>
-<tr><td>Bluetooth + Wi-Fi</td><td>Usar Bluetooth antes que Wi-Fi. Si Bluetooth falla, entonces usar Wi-Fi en un ciclo de geolocalización.</td></tr>
-<tr><td>Bluetooth + Wi-Fi + GNSS</td><td>Usar Bluetooth, Wi-Fi y GNSS para posicionamiento por turnos (cambiar al siguiente tipo de posicionamiento después de que un tipo de posicionamiento falle). </td></tr>
-<tr><td><b>Tiempo Máximo de Escaneo GNSS(s)</b></td><td>El tiempo máximo para esperar a que el GNSS obtenga una posición aproximada.</td><td><p>Por defecto es 60s.</p><p>No se recomienda modificar, cuanto mayor sea el tiempo, mayor será el consumo de energía.</p></td></tr>
-<tr><td><b>Tiempo de Espera de Escaneo iBeacon(s)</b></td><td>Bajo posicionamiento Bluetooth, el tiempo máximo para que el dispositivo escanee balizas Bluetooth circundantes para obtener una posición aproximada.</td><td><p>Por defecto es 3s.</p><p>Rango 1~10s.</p></td></tr>
-<tr><td><b>UUID de Grupo (Hex)</b></td><td>Permite al rastreador escanear y reportar solo balizas Bluetooth cuyos UUIDs coincidan con el patrón especificado, ayudando a filtrar balizas irrelevantes.</td><td><p>Establecer Filtro UUID, hasta 16 bytes. Por ejemplo, si se establece como '01 02 03 04' filtrará balizas con el patrón '01 02 03 04 xx xx ...'</p></td></tr>
-<tr><td><b>Caché de Datos de Ubicación</b></td><td>Cuando no puede cargar datos vía LoRa, los datos se guardan localmente (hasta 1000 registros) y se cargan cuando se recupera la cobertura LoRa.</td><td><p>Desactivado por defecto.</p></td></tr>
+<tr><td rowspan="9"><b>Estrategia de Geolocalización</b></td><td>Solo GNSS</td><td>Por defecto usa GNSS. Solo se usa GNSS para posición.</td></tr>
+<tr><td>Solo Wi-Fi</td><td>Solo se usan escaneos Wi-Fi para posición.</td></tr>
+<tr><td>Solo Bluetooth</td><td>Solo se usan escaneos Bluetooth para posición.</td></tr>
+<tr><td>GNSS + Wi-Fi</td><td>Usa GNSS antes que Wi-Fi. Si GNSS falla, entonces usa Wi-Fi en un ciclo de geolocalización.</td></tr>
+<tr><td>GNSS + Bluetooth</td><td>Usa GNSS antes que Bluetooth. Si GNSS falla, entonces usa Bluetooth en un ciclo de geolocalización.</td></tr>
+<tr><td>Wi-Fi + GNSS</td><td>Usa Wi-Fi antes que GNSS. Si Wi-Fi falla, entonces usa GNSS en un ciclo de geolocalización.</td></tr>
+<tr><td>Bluetooth + GNSS</td><td>Usa Bluetooth antes que GNSS. Si Bluetooth falla, entonces usa GNSS en un ciclo de geolocalización.</td></tr>
+<tr><td>Bluetooth + Wi-Fi</td><td>Usa Bluetooth antes que Wi-Fi. Si Bluetooth falla, entonces usa Wi-Fi en un ciclo de geolocalización.</td></tr>
+<tr><td>Bluetooth + Wi-Fi + GNSS</td><td>Usa Bluetooth, Wi-Fi y GNSS para posicionamiento por turnos (cambia al siguiente tipo de posicionamiento después de que un tipo de posicionamiento falla). </td></tr>
+<tr><td><b>Tiempo Máximo de Escaneo GNSS(s)</b></td><td>El tiempo máximo para esperar a que el GNSS obtenga una posición aproximada.</td><td><p>Por defecto es 60s.</p><p>No se recomienda modificar, mientras más tiempo, mayor consumo de energía.</p></td></tr>
+<tr><td><b>Tiempo de Espera de Escaneo iBeacon(s)</b></td><td>Bajo posicionamiento Bluetooth, el tiempo máximo para que el dispositivo escanee beacons Bluetooth circundantes para obtener una posición aproximada.</td><td><p>Por defecto es 3s.</p><p>Rango 1~10s.</p></td></tr>
+<tr><td><b>UUID de Grupo (Hex)</b></td><td>Permite al rastreador solo escanear y reportar beacons Bluetooth cuyos UUIDs coincidan con el patrón especificado, ayudando a filtrar beacons irrelevantes.</td><td><p>Establece Filtro UUID, hasta 16 bytes. Por ejemplo, si se establece como '01 02 03 04' filtrará beacons con el patrón '01 02 03 04 xx xx ...'</p></td></tr>
+<tr><td><b>Caché de Datos de Ubicación</b></td><td>Cuando no puede cargar datos vía LoRa, los datos se guardan localmente(hasta 1000 registros) y se cargan cuando se recupera la cobertura LoRa.</td><td><p>Desactivado por defecto.</p></td></tr>
 <tr><td><b>Limpiar Caché</b></td><td colspan="2">Limpiar todos los datos de caché históricos.</td></tr>
 </table>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_ScanTime.png" alt="pir" width={800} height="auto" /></p>
 
-Después de configurar todos los parámetros, haz clic en "Send".
-Si no es necesario modificar ningún parámetro, sal de la configuración Bluetooth y regresa a la página principal.
+Después de que todos los parámetros estén configurados, haz clic en "Send".
+Si no necesita modificarse ningún parámetro, sal de la configuración Bluetooth, y regresa a la página de inicio.
 En este punto, el dispositivo inicia una solicitud de acceso a la red LoRa.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_SendButton.png" alt="pir" width={400} height="auto" /></p>
@@ -351,24 +385,31 @@ En este punto, el dispositivo inicia una solicitud de acceso a la red LoRa.
 #### App SenseCraft
 
 Verifica la Ubicación en la APP.
-Después de vincular el dispositivo, ingresa a la página del dispositivo y haz clic en el botón en la esquina superior derecha para ver los datos históricos de ubicación del dispositivo.
+Después de vincular el dispositivo, entra a la página del dispositivo y haz clic en el botón en la esquina superior derecha para ver los datos de ubicación históricos del dispositivo.
 Haz clic en el filtro para elegir ver datos de ubicación bajo modos de posicionamiento como 'All/GNSS/BLE/Wi-Fi'.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_DataView.png" alt="pir" width={800} height="auto" /></p>
 
-Si el dispositivo activa una Alarma de Desmontaje, se mostrará un icono de alarma rojo junto a cada paquete de datos durante el período de activación.
+Haz clic en `History`, puedes ver todos los datos de posicionamiento históricos para una fecha seleccionada.
+Haz clic en el ícono de posicionamiento en la esquina superior derecha para ver todos los registros de `Positioning Abnormal`. Cuando GNSS, Wi-Fi o el escaneo Bluetooth agota el tiempo, el evento relacionado se mostrará en esta página.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000C_Tracker_DataView2.png" alt="pir" width={800} height="auto" /></p>
+
+Si el dispositivo activa una Alarma de Desmontaje, se mostrará un ícono de alarma rojo junto a cada paquete de datos durante el período de activación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm1.png" alt="pir" width={800} height="auto" /></p>
 
-La Alarma de Desmontaje aparecerá tanto en las páginas `Device` como `Details` en la APP, junto con una ventana de notificación, lo que ayuda a los usuarios a verificar rápidamente el estado del dispositivo.
+Cuando se activa la alarma de desmontaje, se enviaría un mensaje de notificación de alarma a tu teléfono. Además, la alarma de desmontaje aparecerá tanto en las páginas `Device` como `Details` en la APP, junto con una ventana de notificación, lo que ayuda a los usuarios a verificar rápidamente el estado del dispositivo.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm_Message.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_Alarm2.png" alt="pir" width={800} height="auto" /></p>
 
 #### Portal SenseCAP
 
-La función principal del [Portal SenseCAP](https://sensecap.seeed.cc/portal/#/dashboard) es gestionar dispositivos SenseCAP y almacenar datos. Está construido sobre Azure, un servicio en la nube seguro y confiable de Microsoft. Los usuarios pueden solicitar una cuenta y vincular todos los dispositivos a esta cuenta. El Portal SenseCAP proporciona un portal web y API. El portal web incluye Dashboard, Gestión de Dispositivos, Gestión de Datos y Gestión de Claves de Acceso. La API está abierta a los usuarios para desarrollo adicional.
+La función principal del [Portal SenseCAP](https://sensecap.seeed.cc/portal/#/dashboard) es gestionar dispositivos SenseCAP y almacenar datos. Está construido en Azure, un servicio en la nube seguro y confiable de Microsoft. Los usuarios pueden solicitar una cuenta y vincular todos los dispositivos a esta cuenta. El Portal SenseCAP proporciona un portal web y API. El portal web incluye Dashboard, Gestión de Dispositivos, Gestión de Datos y Gestión de Claves de Acceso. La API está abierta a los usuarios para desarrollo adicional.
 
-- **Dashboard:** Incluye Resumen de Dispositivos, Anuncios, Datos de Escena y Gráfico de Datos, etc.
+- **Dashboard:** Incluyendo Resumen de Dispositivos, Anuncios, Datos de Escena y Gráfico de Datos, etc.
 - **Gestión de Dispositivos:** Gestionar dispositivos SenseCAP.
 - **Gestión de Datos:** Gestionar datos, incluyendo sección de Tabla de Datos y Gráfico, proporcionando métodos para buscar datos.
 - **Sistema de Subcuentas:** Registrar subcuentas con diferentes permisos.
@@ -382,9 +423,9 @@ Inicia sesión en [Portal SenseCAP](http://sensecap.seeed.cc)
 
 Si has creado una cuenta a través de la APP, puedes iniciar sesión directamente.
 
-1) Selecciona registrar cuenta, ingresa información de email y haz clic en "register", el email de registro será enviado al buzón del usuario
+1) Selecciona registrar cuenta, ingresa información de email, y haz clic en "register", el email de registro será enviado al buzón del usuario
 
-2) Abre el Email "SenseCAP…", haz clic en el enlace de salto, completa la información relevante y completa el registro
+2) Abre el Email "SenseCAP…", haz clic en el enlace de salto, completa la información relevante, y completa el registro
 
 3) Regresa a la interfaz de inicio de sesión y completa el inicio de sesión
 
@@ -408,7 +449,7 @@ Por favor consulta [Guía de Usuario de API](https://sensecap-docs.seeed.cc/) pa
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

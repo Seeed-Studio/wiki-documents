@@ -3,6 +3,7 @@ description: Controlador de iluminación XIAO:alimentado por Li-Po, 3 interrupto
 title: Placa Controladora de LED COB para XIAO
 image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
 slug: /es/getting_started_with_cob_led_dirver_board
+sku: 100079172,E25121201
 last_update:
   date: 11/27/2025
   author: Brandy
@@ -17,9 +18,24 @@ last_update:
     </a>
 </div><br />
 
-Esta es una base controladora de LED COB de 7 canales diseñada para Seeed Studio XIAO. Esta placa de expansión supera las limitaciones de potencia GPIO, ofreciendo 7 canales de salida, específicamente adaptada para tiras LED COB ultra-estrechas de 1mm y 3V. Con gestión integrada de batería PMIC, es la solución plug-and-play ideal para construir configuraciones de iluminación inalámbrica compactas y de alto brillo.
+Esta es una base controladora de LED COB de 7 canales diseñada para Seeed Studio XIAO. Esta placa de expansión supera las limitaciones de potencia GPIO, ofreciendo 7 canales de salida, específicamente adaptada para tiras LED COB ultra-estrechas de 1mm y 3V. Con gestión de batería PMIC integrada, es la solución plug-and-play ideal para construir configuraciones de iluminación inalámbrica compactas y de alto brillo.
 
- **Lectura Recomendada:**[Notas de Seguridad](#add-board)
+ ## Notas de Seguridad
+
+**Prohibiciones de Operación y Reglas de Seguridad**
+ - No conectes ningún periférico durante la carga. Desconecta la barra de luz primero antes de enchufar el cable USB-C.
+ - Al depurar el puerto USB-C, el portabaterías debe estar vacío (sin batería instalada).
+ - Para corrientes de carga completa >1A, asegúrate de perforar agujeros de disipación de calor en la carcasa; de lo contrario, el PMIC se sobrecalentará y se apagará.
+ - Nunca toques el área del PMIC en la parte posterior de la placa con las manos desnudas: la descarga electrostática (ESD) puede dañar el chip, y la superficie puede alcanzar temperaturas abrasadoras bajo carga completa.
+**Recordatorios de Seguridad Principales**
+ - Adhiérete a estas cuatro reglas para una operación segura:
+ - Fuente de alimentación única cuando los periféricos estén conectados
+ - Apagar antes de cablear/desconectar
+ - Proporcionar agujeros de disipación de calor adecuados
+ - No tocar la parte posterior de la placa
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/safety.png" style={{width:250, height:'auto'}}/></div>
+
 
 ## Introducción
 
@@ -31,7 +47,7 @@ Esta es una base controladora de LED COB de 7 canales diseñada para Seeed Studi
 
 - **Salida Híbrida Estratégica de 7 Canales** 
 
-  Gestiona eficientemente toda tu configuración de iluminación con una sola placa. Cuenta con 3 Canales de Alta Potencia (300mA) para iluminación principal brillante y 4 Canales Regulables (80mA) para efectos delicados de respiración o desvanecimiento. Una placa lo maneja todo—mantiene tus luces principales brillantes y tus efectos dinámicos.
+  Gestiona eficientemente toda tu configuración de iluminación con una sola placa. Cuenta con 3 Canales de Alta Potencia (300mA) para iluminación principal brillante y 4 Canales Regulables (80mA) para efectos delicados de respiración o desvanecimiento. Una placa lo maneja todo—manteniendo tus luces principales brillantes y tus efectos dinámicos.
 
 - **Gestión de Batería para Proyectos Inalámbricos** 
 
@@ -90,7 +106,7 @@ Esta es una base controladora de LED COB de 7 canales diseñada para Seeed Studi
   </tbody>
 </table>
 
-### Descripción del Hardware
+### Descripción General del Hardware
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/IO.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -99,17 +115,17 @@ Esta es una base controladora de LED COB de 7 canales diseñada para Seeed Studi
 - **(3) Puerto Siempre Encendido VCC:** Un puerto VCC siempre alimentado que soporta una corriente máxima de 300mA, no está controlado por el interruptor de alimentación, siempre emite el voltaje de suministro, y puede alimentar dispositivos que requieren energía continua.
 - **(4) GND:** El puerto de tierra común del circuito, usado para conectar los cables de tierra de todos los módulos.
 - **(5) Puerto Grove I²C:** Una interfaz I²C estándar Grove (incluyendo pines VCC, GND, SDA, SCL), usada para conectar módulos Grove que soportan el protocolo I²C (como sensores, pantallas).
-- **(6) Interruptor de Alimentación:** Un interruptor de control de alimentación; cuando se cambia a "ON", suministra energía a los puertos de alta/baja potencia; cuando se cambia a "OFF", corta la alimentación (el puerto siempre encendido VCC no está controlado por este interruptor).
+- **(6) Interruptor de Alimentación:** Un interruptor de control de alimentación; cuando se cambia a "ON", suministra energía a los puertos de alta/baja potencia; cuando se cambia a "OFF", corta la energía (el puerto siempre encendido VCC no está controlado por este interruptor).
 - **(7) LED de Alimentación:** Una luz indicadora de estado de alimentación que se enciende cuando el interruptor de alimentación se cambia a "ON", indicando que el módulo está alimentado.
-- **(8) Conector de Batería:** Una interfaz de batería que soporta conexión de baterías de litio de 3.7V para alimentar el módulo.
+- **(8) Conector de Batería:** Una interfaz de batería que soporta la conexión de baterías de litio de 3.7V para alimentar el módulo.
 - **(9) Puerto de Baja Potencia D2:** Un puerto de baja potencia que soporta una corriente máxima de 80mA, soporta regulación PWM, y usa lógica LOW activa (la carga opera cuando el nivel es bajo).
 - **(10) GND:** Un puerto de tierra en el área de baja potencia, usado para conectar los cables de tierra de cargas de baja potencia.
 - **(11) Puerto de Baja Potencia D3:** Un puerto de baja potencia que soporta una corriente máxima de 80mA, soporta regulación PWM, y usa lógica LOW activa (la carga opera cuando el nivel es bajo).
 - **(12) Puerto de Baja Potencia D9:** Un puerto de baja potencia que soporta una corriente máxima de 80mA, soporta regulación PWM, y usa lógica LOW activa (la carga opera cuando el nivel es bajo).
 - **(13) Puerto de Baja Potencia D8:** Un puerto de baja potencia que soporta una corriente máxima de 80mA, soporta regulación PWM, y usa lógica LOW activa (la carga opera cuando el nivel es bajo).
 
-#### Guía de LEDs COB Compatibles
-#### Guía de LEDs Compatibles
+#### Guía de LEDs COB Soportados
+#### Guía de LEDs Soportados
 
 <div class="table-center">
  <table style={{textAlign:'center'}}>
@@ -159,13 +175,13 @@ Esta es una base controladora de LED COB de 7 canales diseñada para Seeed Studi
   </table>
 </div>
 
-## Introducción
+## Primeros Pasos
 
 Para desbloquear todo el potencial de la Placa Controladora de LED COB y disfrutar de la mejor experiencia posible, recomendamos encarecidamente emparejarla con una placa Seeed Studio XIAO y nuestras tiras LED COB compatibles.
 
 :::note
 Por seguridad:  
-- **Al cargar la batería Li-ion**, desconecta la tira LED y cualquier otro periférico.  
+- **Al cargar la batería de iones de litio**, desconecta la tira LED y cualquier otro periférico.  
 - **Al conectar USB-C 5 V para programación o depuración**, desconecta la batería.  
 
 Usar **solo** la batería **o** solo el suministro externo de 5 V es seguro. No se recomienda conectar dispositivos periféricos mientras se carga.
@@ -173,10 +189,10 @@ Usar **solo** la batería **o** solo el suministro externo de 5 V es seguro. No 
 
 ### Jugar con Arduino
 
-Necesitas configurar el entorno Arduino para el XIAO y agregar el paquete de la placa.
+Necesitas configurar el entorno Arduino para el XIAO y agregar el paquete integrado.
 
 :::tip
-Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Introducción a Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
+Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Primeros Pasos con Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
 #### Preparación del Software
@@ -191,30 +207,30 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
     </a>
 </div>
 
-**Paso 2.** Selecciona tu modelo de placa de desarrollo y agrégalo al Arduino IDE.
+**Paso 2.** Selecciona el modelo de tu placa de desarrollo y agrégala al Arduino IDE.
 
-- Si quieres usar **Seeed Studio XIAO RP2040** para las rutinas posteriores, por favor consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO-RP2040-with-Arduino/#software-setup)** para terminar de agregarlo.
+- Si quieres usar **Seeed Studio XIAO RP2040** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO-RP2040-with-Arduino/#software-setup)** para completar la adición.
 
-- Si quieres usar **Seeed Studio XIAO RP2350** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_rp2350_arduino/#setting-up-the-software)** para completar la configuración.
+- Si quieres usar **Seeed Studio XIAO RP2350** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_rp2350_arduino/#setting-up-the-software)** para completar la adición.
 
-- Si quieres usar **Seeed Studio XIAO nRF52840** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_BLE/#software-setup)** para completar la configuración.
+- Si quieres usar **Seeed Studio XIAO nRF52840** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_BLE/#software-setup)** para completar la adición.
 
-- Si quieres usar **Seeed Studio XIAO ESP32-C3** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Getting_Started#software-setup)** para completar la configuración.
+- Si quieres usar **Seeed Studio XIAO ESP32-C3** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/XIAO_ESP32C3_Getting_Started#software-setup)** para completar la adición.
 
-- Si quieres usar **Seeed Studio XIAO ESP32-C6** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_esp32c6_getting_started/#software-preparation)** para completar la configuración.
+- Si quieres usar **Seeed Studio XIAO ESP32-C6** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_esp32c6_getting_started/#software-preparation)** para completar la adición.
 
-- Si quieres usar **Seeed Studio XIAO ESP32-S3** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started#software-preparation)** para completar la configuración.
+- Si quieres usar **Seeed Studio XIAO ESP32-S3** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_esp32s3_getting_started#software-preparation)** para completar la adición.
 
-- Si quieres usar **Seeed Studio XIAO RA4M1** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/getting_started_xiao_ra4m1/#software-preparation)** para completar la configuración.
+- Si quieres usar **Seeed Studio XIAO RA4M1** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/getting_started_xiao_ra4m1/#software-preparation)** para completar la adición.
 
-- Si quieres usar **Seeed Studio XIAO MG24** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/#software-preparation)** para completar la configuración.
+- Si quieres usar **Seeed Studio XIAO MG24** para las rutinas posteriores, consulta **[este tutorial](https://wiki.seeedstudio.com/es/xiao_mg24_getting_started/#software-preparation)** para completar la adición.
 
 :::tip
 El XIAO SAMD21 y XIAO nRF54L15 solo funcionan cuando se alimentan a través de USB-C y no pueden usarse solo con batería. Además, el nRF54L15 no opera en el entorno Arduino.
 :::
 ####  Ejemplo de Controlador de Puerto de Baja Potencia
 
-Un puerto de baja potencia que soporta una corriente máxima de 80mA, admite atenuación PWM y usa lógica LOW activa (la carga opera cuando el nivel es bajo).
+Un puerto de baja potencia que soporta una corriente máxima de 80mA, soporta atenuación PWM, y usa lógica LOW activa (la carga opera cuando el nivel es bajo).
 
 **Paso 1.** Preparación del hardware
 
@@ -290,7 +306,7 @@ Sigue el enlace de la imagen, sube el programa y alimenta la Placa Controladora 
 
 #### Ejemplo de Controlador de Puerto de Alta Potencia
 
-Un puerto de alta potencia que soporta una corriente máxima de 300mA, solo permite control de encendido/apagado (no admite atenuación PWM), y se usa para conectar cargas de alta potencia.
+Un puerto de alta potencia que soporta una corriente máxima de 300mA, solo permite control de interruptor ON/OFF (no soporta atenuación PWM), y se usa para conectar cargas de alta potencia.
 
 **Paso 1.**  Preparación del hardware
 <table align="center">
@@ -359,7 +375,7 @@ Sigue el enlace de la imagen, sube el programa y alimenta la Placa Controladora 
 
 ####   Ejemplo PWM de Controlador de Puerto de Baja Potencia
 
-Un puerto de baja potencia que soporta una corriente máxima de 80mA, admite atenuación PWM y usa lógica LOW activa (la carga opera cuando el nivel es bajo).
+Un puerto de baja potencia que soporta una corriente máxima de 80mA, soporta atenuación PWM, y usa lógica LOW activa (la carga opera cuando el nivel es bajo).
 **Paso 1.**   Preparación del hardware
 
 <table align="center">
@@ -399,7 +415,7 @@ Un puerto de baja potencia que soporta una corriente máxima de 80mA, admite ate
  </tr>
 </table>
 
-**Paso 2.**  Conecta Seeed Studio XIAO ESP32-C3, COB LED Driver Board para XIAO, Single Ended COB LED Strip y Double Ended COB LED Strip como se muestra a continuación:
+**Paso 2.** Conecta Seeed Studio XIAO ESP32-C3, COB LED Driver Board para XIAO, Single Ended COB LED Strip y Double Ended COB LED Strip como se muestra a continuación:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Breath_new_ready.jpg"style={{width:700, height:'auto'}}/></div>
 
@@ -478,21 +494,21 @@ void loop() {
 ```
 
 Este es un proyecto alimentado por batería. Este es el código para el estilo de luz respiratoria, si te gusta, puedes usar este estilo en cualquier lugar donde quieras que brille
-Sube el programa y alimenta la COB LED Driver Board, si todo va bien, puedes ver algo así:
+Sube el programa y alimenta COB LED Driver Board, si todo va bien, puedes ver algo así:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/PWM.gif"style={{width:500, height:'auto'}}/></div>
 :::tip
 
-Las tiras LED con un límite de corriente nominal de 300mA o 100mA pueden conectarse de forma segura a un puerto con una salida máxima de 80mA (la corriente de salida del puerto es ≤ el límite de corriente de la tira LED, asegurando redundancia de seguridad). Sin embargo, una tira LED con un límite de corriente nominal de 100mA no puede conectarse a un puerto con una salida máxima de 300mA—ya que la corriente máxima de salida del puerto excede en gran medida el límite de corriente de la tira LED, esto puede dañar la tira debido a sobrecorriente.
+Las tiras LED con un límite de corriente nominal de 300mA o 100mA pueden conectarse de forma segura a un puerto con una salida máxima de 80mA (la corriente de salida del puerto es ≤ el límite de corriente de la tira LED, asegurando redundancia de seguridad). Sin embargo, una tira LED con un límite de corriente nominal de 100mA no puede conectarse a un puerto con una salida máxima de 300mA—ya que la corriente máxima de salida del puerto excede por mucho el límite de corriente de la tira LED, esto puede dañar la tira debido a sobrecorriente.
 :::
 :::note
 **¡La conexión en caliente está estrictamente prohibida!**
 Siempre ensambla primero el XIAO y la placa controladora, luego conecta el cable USB.
-Nunca intentes conectar el XIAO mientras aún esté conectado al cable USB. Puede causar que el PMIC se averíe.
+Nunca trates de conectar el XIAO mientras aún esté conectado al cable USB. Puede causar que el PMIC se averíe.
 :::
 
 
-### Jugar con Home Assistant a través de ESPHome
+### Jugar con Home Assistant vía ESPHome
 
 #### Preparación del Hardware
 
@@ -516,7 +532,7 @@ Nunca intentes conectar el XIAO mientras aún esté conectado al cable USB. Pued
 
 #### Preparación del Software
 
-[ESPHome](https://esphome.io/) es una herramienta que tiene como objetivo hacer que la gestión de tus placas ESP sea lo más simple posible. Lee un archivo de configuración YAML y crea firmware personalizado que instala en tu dispositivo ESP. Los dispositivos o sensores agregados en la configuración de ESPHome aparecerán automáticamente en la interfaz de usuario de Home Assistant. ESPHome puede ayudarte a conectar y enviar los datos a los dispositivos de Home Assistant.
+[ESPHome](https://esphome.io/) es una herramienta que tiene como objetivo hacer que la gestión de tus placas ESP sea lo más simple posible. Lee un archivo de configuración YAML y crea firmware personalizado que instala en tu dispositivo ESP. Los dispositivos o sensores agregados en la configuración de ESPHome aparecerán automáticamente en la interfaz de usuario de Home Assistant. ESPHome puede ayudarte a conectar y enviar los datos a dispositivos Home Assistant.
 
 :::note
 Si esta es tu primera vez usando Home Assistant y ESPHome, puedes seguir <strong>[aquí](https://www.home-assistant.io/installation/)</strong> para una guía paso a paso sobre la instalación de Home Assistant.
@@ -542,10 +558,10 @@ Verás la siguiente ventana si ESPHome se carga exitosamente
 
 **Resumen**
 
-Hagamos una demostración de una lámpara LED de anochecer a amanecer, la luz cambiará con la intensidad de la luz a lo largo del día. Si te interesa, sigue leyendo.
+Hagamos una demostración de lámpara LED de anochecer a amanecer, la luz cambiará con la intensidad de la luz a lo largo del día. Si te interesa, sigue leyendo.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/HA_demo.jpg" style={{width:500, height:'auto'}}/></div>
-**Paso 1.**   Preparación del hardware
+**Paso 1.** Preparación del hardware
 
 <table align="center" style={{textAlign:'center', overflowX: 'scroll', border: '1px solid #ccc', }}>
  <tr>
@@ -584,7 +600,7 @@ Hagamos una demostración de una lámpara LED de anochecer a amanecer, la luz ca
  </tr>
 </table>
 
-**Paso 2.** Conecta Seeed Studio XIAO ESP32-C3, COB LED Driver Board for XIAO y Single Ended COB LED Strip - White como se muestra a continuación:
+**Paso 2.** Conecta Seeed Studio XIAO ESP32-C3, COB LED Driver Board para XIAO y Single Ended COB LED Strip - White como se muestra a continuación:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/4-100061492-Single-Ended-COB-LED-Strip---White(6500K)-300mm.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -763,33 +779,16 @@ Extendemos nuestro agradecimiento especial a Xinyu por la valiosa contribución 
 
 ## Recursos
 
-[PDF] **[Esquemático de Seeed Studio COB LED Driver Board](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/SCH_Sch_V1.2_2025-11-21.pdf)**
+[PDF] **[Esquemático de la Placa Controladora COB LED de Seeed Studio](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/SCH_Sch_V1.2_2025-11-21.pdf)**
 
-[ZIP] **[PCB de Seeed Studio COB LED Driver Board](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Gerber_PCB_V1.2_2025-11-25.zip)**
+[ZIP] **[PCB de la Placa Controladora COB LED de Seeed Studio](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/Gerber_PCB_V1.2_2025-11-25.zip)**
 
-[STEP] **[Modelo 3D de Seeed Studio COB LED Driver Board](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/cob_led_driver_board.STEP)**
+[STEP] **[Modelo 3D de la Placa Controladora LED COB de Seeed Studio](https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/cob_led_driver_board.STEP)**
 
-## Notas de Seguridad{#add-board}
-
-
-
-**Prohibiciones de Operación y Reglas de Seguridad**
- - No conectes ningún periférico durante la carga. Desconecta la barra de luz primero antes de enchufar el cable USB-C.
- - Al depurar el puerto USB-C, el portabaterías debe estar vacío (sin batería instalada).
- - Para corrientes de carga completa >1A, asegúrate de que se perforen agujeros de disipación de calor en la carcasa; de lo contrario, el PMIC se sobrecalentará y se apagará.
- - Nunca toques el área del PMIC en la parte posterior de la placa con las manos desnudas: la descarga electrostática (ESD) puede dañar el chip, y la superficie puede alcanzar temperaturas abrasadoras bajo carga completa.
-**Recordatorios de Seguridad Principales**
- - Adhiérete a estas cuatro reglas para una operación segura:
- - Fuente de alimentación única cuando los periféricos están conectados
- - Apagar antes de cablear/desconectar
- - Proporcionar orificios de disipación de calor adecuados
- - No tocar la parte posterior de la placa
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/safety.png" style={{width:250, height:'auto'}}/></div>
 
 ## Preguntas Frecuentes
 
-**P1. ¿Por qué mi placa se calienta?**
+**P1. ¿Por qué se calienta mi placa?**
   - Porque hay un fenómeno de intercambio en caliente. Cuando el XIAO se conecta al USB y luego se vuelve a conectar a la placa controladora, este proceso causará un cortocircuito en el conducto de corriente de la placa de desarrollo e incluso quemaduras.
 
 

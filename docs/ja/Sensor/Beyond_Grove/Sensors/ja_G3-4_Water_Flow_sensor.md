@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/G3-4_Water_Flow_sensor/
 slug: /ja/G3-4_Water_Flow_sensor
+sku: 314150003
 last_update:
   date: 05/15/2025
   author: gunengyu

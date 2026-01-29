@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/Grove-BLE-dual_model-v1.0/
 slug: /Grove-BLE-dual_model-v1.0
+sku: 113020009
 last_update:
   date: 01/06/2022
   author: gunengyu

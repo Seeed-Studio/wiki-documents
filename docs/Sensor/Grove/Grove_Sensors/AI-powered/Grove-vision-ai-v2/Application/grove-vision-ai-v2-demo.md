@@ -6,6 +6,7 @@ keywords:
 - vision AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_demo
+sku: 101021112,E23011220,104990982
 last_update:
   date: 04/16/2024
   author: Citric

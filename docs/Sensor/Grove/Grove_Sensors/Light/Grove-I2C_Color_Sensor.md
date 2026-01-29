@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-I2C_Color_Sensor
+sku: 101020341, 101020041
 last_update:
   date: 12/29/2025
   author: Brandy

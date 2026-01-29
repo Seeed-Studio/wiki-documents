@@ -5,6 +5,7 @@ keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/reComputer_J30_40_with_Jetson_getting_start
+sku: 110110145, 110110184, 114993114, 110110144, 110110185, 110110147, 110110186, 110110146, 110110187
 last_update:
   date: 6/29/2023
   author: Lakshantha

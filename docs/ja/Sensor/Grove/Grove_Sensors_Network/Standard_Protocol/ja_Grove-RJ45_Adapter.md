@@ -6,6 +6,7 @@ keywords:
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-RJ45_Adapter/
 slug: /ja/Grove-RJ45_Adapter
+sku: 103020011
 last_update:
   date: 05/15/2025
   author: gunengyu

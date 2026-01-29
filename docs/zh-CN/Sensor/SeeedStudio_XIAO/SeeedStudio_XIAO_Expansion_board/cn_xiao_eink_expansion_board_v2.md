@@ -3,6 +3,7 @@ title: ePaper 驱动板
 description: XIAO 的 eInk 扩展板是 Seeed Studio 设计的智能模块，用于在电子纸屏幕上显示内容。
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/titleimg.webp
 slug: /cn/xiao_eink_expansion_board_v2
+sku: 104990861,114993558
 keywords:
   - XIAO
   - epaper

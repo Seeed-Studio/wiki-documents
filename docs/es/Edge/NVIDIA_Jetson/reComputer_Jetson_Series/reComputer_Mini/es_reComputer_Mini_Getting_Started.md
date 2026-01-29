@@ -8,6 +8,7 @@ keywords:
   - robots
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini.webp
 slug: /es/recomputer_jetson_mini_getting_started
+sku: 114993553,114993551,102111001,102110999,114993592,114993593
 last_update:
   date: 12/11/2024
   author: Youjiang
@@ -404,7 +405,7 @@ La imagen de abajo es para Orin Nx 16GB:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/3.png"/>
 </div>
-
+<!-- 
 ### Flashear a Jetson con un Solo Comando
 
 <details>
@@ -425,7 +426,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 Descargo de responsabilidad: El script de flasheo de un clic tiene como objetivo hacer el flasheo de jetpack más rápido. La versión actual es una beta y puede tener muchos problemas. Esperamos su comprensión. Si hay problemas de flasheo, siga el `Flashear el Dispositivo Paso a Paso` a continuación y proporcione comentarios en nuestro [canal Discord Jetson](https://discord.com/channels/862602258452578314/930732339624026152). Los solucionaremos rápidamente y mejoraremos esta función en el futuro cercano.
 :::
 
-</details>
+</details> -->
 
 ### Flashear a Jetson Paso a Paso
 

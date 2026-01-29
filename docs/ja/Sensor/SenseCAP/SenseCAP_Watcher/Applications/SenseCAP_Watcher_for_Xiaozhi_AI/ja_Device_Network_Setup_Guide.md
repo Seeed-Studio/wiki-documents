@@ -10,6 +10,7 @@ keywords:
   - WiFi Configuration
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /ja/device_network_setup
+sku: 100051523
 last_update:
   date: 10/13/2025
   author: Twelve

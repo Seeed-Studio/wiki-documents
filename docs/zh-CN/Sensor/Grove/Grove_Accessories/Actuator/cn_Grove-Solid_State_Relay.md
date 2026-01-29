@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-Solid_State_Relay/
 slug: /cn/Grove-Solid_State_Relay
+sku: 103020004
 last_update:
   date: 01/09/2022
   author: gunengyu

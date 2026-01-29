@@ -7,6 +7,7 @@ keywords:
   - Super
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /cn/recomputer_jetson_super_getting_started
+sku: E2025032601,114110314,114110312,114110313,114110311
 last_update:
   date: 06/19/2025
   author: Yaohui

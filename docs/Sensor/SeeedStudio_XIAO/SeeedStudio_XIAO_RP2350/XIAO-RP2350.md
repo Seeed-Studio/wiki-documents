@@ -4,6 +4,7 @@ description: |
   XIAO RP2350, a cutting-edge microcontroller from Seeed Studio. It features a dual-core processor, increased SRAM and flash memory, and enhanced connectivity.
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/RP2350-thumbnail.webp
 slug: /getting-started-xiao-rp2350
+sku: 102010550,102010637
 keywords:
   - xiao
   - RP2350
@@ -137,6 +138,39 @@ The XIAO RP2350 packs the power of the Raspberry Pi RP2350 (dual Cortex-M33 core
 
 Need more details on pinouts? Navigate to [Assets and Resources](#assets--resources) below.
 
+
+## **Pin Map**
+| XIAO Pin                 | Function   | Chip Pin     | Alternate Functions | Description                          |
+| :---------------------: | :-------: | :----------: | :----------------: | :---------------------------------- |
+| 5V                      | VBUS       |              |                    | Power Input/Output                   |
+| GND                     |            |              |                    |                                      |
+| 3V3                     | 3V3_OUT    |              |                    | Power Output                         |
+| D0                      | Analog     | GPIO26       |                    | GPIO, ADC                            |
+| D1                      | Analog     | GPIO27       |                    | GPIO, ADC                            |
+| D2                      | Analog     | GPIO28       |                    | GPIO, ADC                            |
+| D3                      | SPIO_CSn   | GPIO5        |                    | GPIO, SPI                            |
+| D4                      | SDA1       | GPIO6        |                    | GPIO, I2C Data                       |
+| D5                      | SCL1       | GPIO7        |                    | GPIO, I2C Clock                      |
+| D6                      | TX0        | GPIO0        |                    | GPIO, UART Transmit                  |
+| D7                      | RX0        | GPIO1        |                    | GPIO, UART Receive                   |
+| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO, SPI Clock                      |
+| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO, SPI Data                       |
+| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO, SPI Data                       |
+| D11                     | RX1        | GPIO21       |                    | GPIO, UART Receive                   |
+| D12                     | TX1        | GPIO20       |                    | GPIO, UART Transmit                  |
+| D13                     | SCL0       | GPIO17       |                    | GPIO, I2C Clock                      |
+| D14                     | SDA0       | GPIO16       |                    | GPIO, I2C Data                       |
+| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO, SPI Data                       |
+| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO, SPI Data                       |
+| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO, SPI Clock                      |
+| D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
+| ADC_BAT                 |            | GPIO29       |                    | Read the BAT voltage value           |
+| Reset                   |            | RUN          |                    | RUN                                  |
+| Boot                    |            | RP2040_BOOT  |                    | Enter Boot Mode                      |
+| CHARGE_LED              |            | NCHG         |                    | CHG-LED_Red                          |
+| RGB LED                 |            | GPIO22       |                    | RGB LED                              |
+| USER_LED                |            | GPIO25       |                    | User Light_Yellow                    |
+
 ## Platform Supported
 
 The XIAO RP2350, powered by the RP2350, supports MicroPython and the C/C++ SDK provided by Raspberry Pi. This flexibility allows developers to choose their preferred programming language and environment for prototyping and development.
@@ -164,10 +198,6 @@ The XIAO RP2350, powered by the RP2350, supports MicroPython and the C/C++ SDK p
 This page primarily focuses on MicroPython users. For those interested in learning SDK programming or for advanced users, you may want to start with the [Raspberry Pi Pico-series C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf). This guide will help you set up the environment and get started with example code. Additionally, you can visit [XIAO RP2350 with C/C++ SDK](/xiao-rp2350-c-cpp-sdk) for more specific instructions related to the XIAO RP2350.
 :::
 
-:::tip
-Currently, the ADC function may not work properly when using the official [firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/SEEED_XIAO_RP2350.uf2). Please download and use our modified firmware first. Once the pull request is merged, we will update the relevant content on the Wiki accordingly.
-:::
-
 ### Step 1: Installing MicroPython on XIAO RP2350
 
 To install the MicroPython firmware on the XIAO RP2350, follow these steps:
@@ -178,7 +208,9 @@ To install the MicroPython firmware on the XIAO RP2350, follow these steps:
 - Download the latest `.uf2` firmware file compatible with the XIAO RP2350.
 
 :::tip
-The default firmware is for ARM architecture, if you want to use RISC-V, please use the corresponding firmware version in the link.
+1. The default firmware is for ARM architecture, if you want to use RISC-V, please use the corresponding firmware version in the link.
+
+2. Please ensure you are using the latest firmware version, as older firmware may contain various software vulnerabilities.
 :::
 
 **Step 1.2 Enter BOOTSEL Mode:**  

@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio_Link/
 slug: /es/Wio_Link
+sku: 102110037
 last_update:
   date: 01/11/2022
   author: gunengyu

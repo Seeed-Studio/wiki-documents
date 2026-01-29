@@ -5,6 +5,7 @@ keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg
 slug: /cn/XIAO_BLE
+sku: 102010448, 102010469, 102010632, 102010631, 102010672, 102010694, 101991463, 101991465
 last_update:
   date: 2024-11-28T11:15:24+08:00
   author: Clara
@@ -120,13 +121,13 @@ import TabItem from '@theme/TabItem';
   </table>
 </div>
 
-作为 Seeed Studio XIAO 系列中的首款无线产品，**Seeed Studio XIAO nRF52840** 配备了强大的 **Nordic nRF52840 MCU**，集成了 **Bluetooth 5.0** 连接功能。同时，它具有**小巧精致的外形尺寸**，可用于可穿戴设备和物联网项目。**单面表面贴装设计**和板载**蓝牙天线**可以极大地促进物联网项目的快速部署。
+作为 Seeed Studio XIAO 系列中的首款无线产品，**Seeed Studio XIAO nRF52840** 配备了强大的 **Nordic nRF52840 MCU**，集成了 **Bluetooth 5.0** 连接功能。同时，它具有**小巧精致的外形**，可用于可穿戴设备和物联网项目。**单面表面贴装设计**和板载**蓝牙天线**可以极大地促进物联网项目的快速部署。
 
 此外，还有这款开发板的高级版本，**Seeed Studio XIAO nRF52840 Sense**。它集成了两个额外的板载传感器。其中一个是**脉冲密度调制（PDM）数字麦克风**。它可以实时接收音频数据，使其能够用于音频识别。另一个是**6 轴惯性测量单元（IMU）**，这个 IMU 在手势识别等 TinyML 项目中非常有用。这些板载传感器为用户提供了极大的便利，同时开发板超小型化。
 
 新升级的 **XIAO nRF52840 Plus 和 XIAO nRF52840 Sense Plus** 在功能和可用性方面提供了显著的提升。多功能引脚数量增加到 **20** 个，增加了 **I2S** 和 **SPI** 资源以支持更复杂的项目，暴露了 **NFC 引脚**以便更容易集成到物联网和智能卡应用中，**BAT 引脚**重新定位以提供更好的焊接便利性，从而带来更友好的硬件体验。
 
-与 Seeed Studio XIAO RP2040 相比，Seeed Studio XIAO nRF52840 包含**更丰富的接口**。首先要注意的是，**近场通信（NFC）接口**在开发板上是功能性的。其次，在 Type-C 接口侧面有一个小型**复位按钮**。在另一侧，有一个**三合一 LED（用户 LED）**以及一个**充电 LED**，用于在连接电池时指示充电状态。有 **11 个数字 I/O** 可用作 **PWM 引脚**和 **6 个模拟 I/O** 可用作 **ADC 引脚**。它支持所有三种常见的串行接口，如 **UART、I2C 和 SPI**。与 Seeed Studio XIAO RP2040 相同，它有一个**板载 2 MB 闪存**，这意味着它也可以使用 **Arduino、MicroPython、CircuitPython 或其他编程语言**进行编程。
+与 Seeed Studio XIAO RP2040 相比，Seeed Studio XIAO nRF52840 包含**更丰富的接口**。首先要注意的是，**近场通信（NFC）接口**在开发板上是功能性的。其次，在 Type-C 接口侧面有一个小的**复位按钮**。在另一侧，有一个**三合一 LED（用户 LED）**以及一个**充电 LED**，用于在连接电池时指示充电状态。有 **11 个数字 I/O** 可用作 **PWM 引脚**和 **6 个模拟 I/O** 可用作 **ADC 引脚**。它支持所有三种常见的串行接口，如 **UART、I2C 和 SPI**。与 Seeed Studio XIAO RP2040 相同，它有一个**板载 2 MB 闪存**，这意味着它也可以使用 **Arduino、MicroPython、CircuitPython 或其他编程语言**进行编程。
 
 Seeed Studio XIAO nRF52840 Sense 与 Seeed Studio XIAO 扩展板兼容。
 
@@ -145,7 +146,7 @@ Seeed Studio XIAO nRF52840 Sense 与 Seeed Studio XIAO 扩展板兼容。
 - 板载 2 MB 闪存
 - 板载 PDM 麦克风（仅限 Seeed Studio XIAO nRF52840 Sense）
 - 板载 6 轴 LSM6DS3TR-C IMU（仅限 Seeed Studio XIAO nRF52840 Sense）
-- 超小尺寸：21 x 17.8mm，Seeed Studio XIAO 系列经典外形尺寸，适用于可穿戴设备
+- 超小尺寸：21 x 17.8mm，Seeed Studio XIAO 系列经典外形，适用于可穿戴设备
 - 丰富的接口：XIAO nRF52840 (Sense) 具有 1xUART、1xI2C、1xSPI、1xNFC、1xSWD、11xGPIO(PWM)、6xADC；XIAO nRF52840 (Sense) Plus 具有 2xUART、1xI2C、2xSPI、1xI2S、1xNFC、1xSWD、18xGPIO(PWM)、6xADC
 - 单面元件，表面贴装设计
 
@@ -195,7 +196,7 @@ Seeed Studio XIAO nRF52840 Sense 与 Seeed Studio XIAO 扩展板兼容。
   </tr>
   <tr>
       <th>板载 LED</th>
-      <td colspan="4" align="center">三合一 LED/充电 LED</td>
+      <td colspan="4" align="center">三合一 LED/ 充电 LED</td>
   </tr>
   <tr>
       <th>电池充电芯片</th>
@@ -234,6 +235,38 @@ Seeed Studio XIAO nRF52840 Sense 与 Seeed Studio XIAO 扩展板兼容。
   </tr>
 </table>
 
+ **引脚映射**
+| XIAO 引脚               | 功能            | 芯片引脚   | 描述                                     |
+| :---------------------: | :-------------: | :-------:  | :-------------------------------------- |
+| 5V                      | VBUS             |                               | 电源输入/输出                            |
+| GND                     |                  |                               |                                          |
+| 3V3                     | 3V3_OUT          |                              | 电源输出                                 |
+| D0                      | Analog          | P0.02                        | GPIO，ADC                                |
+| D1                      | Analog          | P0.03                        | GPIO，ADC                                |
+| D2                      | Analog          | P0.28                        | GPIO，ADC                                |
+| D3                      | Analog          | P0.29                        | GPIO，ADC                                |
+| D4                      | Analog,SDA       | P0.04                         | GPIO，I2C 数据，ADC                      |
+| D5                      | Analog,SCL       | P0.05                         | GPIO，I2C 时钟，ADC                      |
+| D6                      | TX               | P1.11                         | GPIO，UART 发送                          |
+| D7                      | RX               | P1.12                         | GPIO，UART 接收                          |
+| D8                      | SPI_SCK          | P1.13                         | GPIO，SPI 时钟                           |
+| D9                      | SPI_MISO         | P1.14                         | GPIO，SPI 数据                           |
+| D10                     | SPI_MOSI         | P1.15                         | GPIO，SPI 数据                           |
+| NFC1                    |                  | P0.09                         | NFC                                      |
+| NFC2                    |                  | P0.10                         | NFC                                      |
+| Reset                   |                  | P0.18                         | 复位                                     |
+| ADC_BAT                 |                  | P0.14                         | 读取电池电压值                           |
+| 6 DOF IMU_PWR           |                  | P1.08                         | 6D 模块的电源开关                        |
+| 6 DOF IMU__INT1         |                  | P0.11                         | 6D 模块的中断信号引脚                    |
+| PDM Microphone_DATA     |                  | P0.16                         | PDM 音频数据输入引脚                     |
+| PDM Microphone_CLK      |                  | P1.00                         | PDM 音频时钟输出引脚                     |
+| RF Switch Port Select   |                  | P2.05                         | 切换板载天线                             |
+| RF Switch Power         |                  | P2.03                         | 电源                                     |
+| CHARGE_LED              |                  | P0.17                         | CHG-LED_红色                             |
+| USER_LED_R              |                  | P0.26                         | 用户控制的红色 RGB LED 引脚              |
+| USER_LED_B              |                  | P0.06                         | 用户控制的蓝色 RGB LED 引脚              |
+| USER_LED_G              |                  | P0.30                         | 用户控制的绿色 RGB LED 引脚              |
+
  </TabItem>
  <TabItem value="52840Plus" label="XIAO nRF52840 Plus/XIAO nRF52840 Sense Plus" default>
 
@@ -256,19 +289,62 @@ Seeed Studio XIAO nRF52840 Sense 与 Seeed Studio XIAO 扩展板兼容。
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/plus_pinout.png" style={{width:1000, height:'auto'}}/></div></td>
   </tr>
+
  </table>
+
+| XIAO 引脚                | 功能                 | 芯片引脚  | 备用功能           | 描述                                     |
+| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- |
+| 5V                      | VBUS                 |           |                    | 电源输入/输出                            |
+| GND                     |                      |           |                    |                                          |
+| 3V3                     | 3V3_OUT              |           |                    | 电源输出                                 |
+| D0                      | Analog              | P0.02     |                    | GPIO, ADC                                |
+| D1                      | Analog              | P0.03     |                    | GPIO, ADC                                |
+| D2                      | Analog              | P0.28     |                    | GPIO, ADC                                |
+| D3                      | Analog              | P0.29     |                    | GPIO, ADC                                |
+| D4                      | Analog,SDA           | P0.04     |                    | GPIO, I2C 数据, ADC                      |
+| D5                      | Analog,SCL           | P0.05     |                    | GPIO, I2C 时钟, ADC                      |
+| D6                      | TX                   | P1.11     |                    | GPIO, UART 发送                          |
+| D7                      | RX                   | P1.12     |                    | GPIO, UART 接收                          |
+| D8                      | SPI_SCK              | P1.13     |                    | GPIO, SPI 时钟                           |
+| D9                      | SPI_MISO             | P1.14     |                    | GPIO, SPI 数据                           |
+| D10                     | SPI_MOSI             | P1.15     |                    | GPIO, SPI 数据                           |
+| D11                     | I2S_SD               | P0.15     |                    | GPIO, I2S, ADC                           |
+| D12                     | I2S_SCK              | P0.19     |                    | GPIO,I2S, ADC                            |
+| D13                     | I2S_WS               | P1.01     |                    | GPIO, I2S  ADC                           |
+| D14                     | RX1                  | P0.09     | NFC1               | GPIO, UART 接收, ADC                     |
+| D15                     | TX1                  | P0.10     | NFC2               | GPIO, UART 发送, ADC                     |
+| D16                     | BAT                  | P0.31     |                    | GPIO                                     |
+| D17                     | SCK1                 | P1.03     |                    | GPIO, SPI                                |
+| D18                     | MISO1                | P1.05     |                    | GPIO, SPI                                |
+| D19                     | MOSI1                | P1.07     |                    | GPIO, SPI                                |
+| ADC_BAT                 |                      | P0.14     |                    | 读取电池电压值                           |
+| 6 DOF IMU_PWR           |                      | P1.08     |                    | 6D 模块的电源开关                        |
+| 6 DOF IMU__INT1         |                      | P0.11     |                    | 6D 模块的中断信号引脚                    |
+| PDM Microphone_DATA     |                      | P0.16     |                    | PDM 音频数据输入引脚                     |
+| PDM Microphone_CLK      |                      | P1.00     |                    | PDM 音频时钟输出引脚                     |
+| Reset                   |                      | P0.18     |                    | RESET                                    |
+| RF Switch Port Select   |                      | P2.05     |                    | 切换板载天线                             |
+| RF Switch Power         |                      | P2.03     |                    | 电源                                     |
+| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |
+| USER_LED_R              |                      | P0.26     |                    | 用户控制的红色 RGB LED 引脚              |
+| USER_LED_B              |                      | P0.06     |                    | 用户控制的蓝色 RGB LED 引脚              |
+| USER_LED_G              |                      | P0.30     |                    | 用户控制的绿色 RGB LED 引脚              |
 
 </TabItem>
 
 </Tabs>
 
+
+
+
+
 ## 两个 Arduino 库
 
-Seeed Studio XIAO nRF52840 在一个小小的板子上集成了许多功能，有时可能无法发挥每个功能的最佳性能。因此，Seeed 发布了两个 Arduino 库，让它能够**最大化发挥每个功能的能力**。因此：
+Seeed Studio XIAO nRF52840 在一个小巧的板子上集成了许多功能，有时可能无法发挥每个功能的最佳性能。因此，Seeed 发布了两个 Arduino 库，让它能够**最大化发挥每个功能的能力**。因此：
 
 - 如果您想要应用**蓝牙功能**和"**低功耗功能**"，建议使用 `Seeed nRF52 Boards` 库。
 - 如果您想要在**嵌入式机器学习应用**中使用它或应用"**IMU 和 PDM 高级功能**"，建议使用 `Seeed nRF52 mbed-enabled Boards` 库。
-- 在基本用法方面，两个库都支持得很好，例如 **LED、数字、模拟、串口、I2C、SPI**。
+- 当涉及基本用法时，两个库都支持得很好，例如 **LED、数字、模拟、串口、I2C、SPI**。
 
 这两个库支持的引脚定义可能略有不同，Seeed 将持续更新 wiki 直到明确为止。
 
@@ -293,7 +369,7 @@ Seeed Studio XIAO nRF52840 在一个小小的板子上集成了许多功能，�
 - 1 x USB Type-C 数据线
 
 :::tip
-有些 USB 数据线只能供电而不能传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否能传输数据，您可以查看 [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
+某些 USB 数据线只能供电而无法传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否可以传输数据，您可以查看 [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
 :::
 通过 USB Type-C 数据线将 Seeed Studio XIAO nRF52840 (Sense) 连接到您的计算机。
 
@@ -309,12 +385,12 @@ Seeed Studio XIAO nRF52840 在一个小小的板子上集成了许多功能，�
 
 - **步骤 3.** 将 Seeed Studio XIAO nRF52840 (Sense) 板包添加到您的 Arduino IDE
 
-导航到 **File > Preferences**，并在 **"Additional Boards Manager URLs"** 中填入以下网址：
+导航到 **File > Preferences**，并在 **"Additional Boards Manager URLs"** 中填入以下 URL：
     *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Boardurl.png" alt="pir" width="700" height="auto" /></p>
 
-导航到 **Tools > Board > Boards Manager...**，在搜索框中输入关键词 "**seeed nrf52**"，选择您想要的板子的最新版本并安装。您可以同时安装两个。
+导航到 **Tools > Board > Boards Manager...**，在搜索框中输入关键词 "**seeed nrf52**"，选择您想要的板子的最新版本，然后安装它。您可以同时安装两个。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528401.png" alt="pir" width={700} height="auto" /></p>
 
@@ -328,7 +404,7 @@ Seeed Studio XIAO nRF52840 在一个小小的板子上集成了许多功能，�
 
 **端口**
 
-导航到 **Tools > Port** 并选择已连接的 Seeed Studio XIAO nRF52840 (Sense) 的串口名称。这通常是 COM3 或更高（**COM1** 和 **COM2** 通常保留给硬件串口）。已连接的 Seeed Studio XIAO nRF52840 (Sense) 的串口通常包含括号，对于 **Seeed Studio XIAO nRF52840** 写着 **Seeed Studio XIAO nRF52840**，对于 **Seeed Studio XIAO nRF52840 Sense** 写着 **Seeed Studio XIAO nRF52840 Sense**。
+导航到 **Tools > Port** 并选择已连接的 Seeed Studio XIAO nRF52840 (Sense) 的串口名称。这通常是 COM3 或更高（**COM1** 和 **COM2** 通常保留给硬件串口）。已连接的 Seeed Studio XIAO nRF52840 (Sense) 的串口通常包含括号，其中写着 **Seeed Studio XIAO nRF52840**（对于 **Seeed Studio XIAO nRF52840**）或 **Seeed Studio XIAO nRF52840 Sense**（对于 **Seeed Studio XIAO nRF52840 Sense**）。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/port.png" alt="pir" width={550} height="auto" /></p>
 
@@ -336,17 +412,17 @@ Seeed Studio XIAO nRF52840 在一个小小的板子上集成了许多功能，�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={550} height="auto" /></p>
 
-- **步骤 6.** 点击 **Upload** 按钮将 Blink 示例代码上传到板子
+- **步骤 6.** 点击 **Upload** 按钮将 Blink 示例代码上传到开发板
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/upload_image.png" alt="pir" width={500} height="auto" /></p>
 
-上传完成后，您将看到内置的红色 LED 以每次闪烁间隔 1 秒的频率闪烁。这意味着连接成功，现在您可以用 Seeed Studio XIAO nRF52840 (Sense) 探索更多项目了！
+上传完成后，您将看到内置的红色 LED 以每次闪烁间隔 1 秒的频率闪烁。这意味着连接成功，现在您可以使用 Seeed Studio XIAO nRF52840 (Sense) 探索更多项目！
 
 ## 使用内置三合一 LED
 
-Seeed Studio XIAO nRF52840 (Sense) 有一个**板载三合一 LED**，用户可以编程控制。现在您将学习如何使用 Arduino 逐一控制 RGB 颜色！
+Seeed Studio XIAO nRF52840 (Sense) 具有**板载三合一 LED**，用户可编程。现在您将学习如何使用 Arduino 逐一控制 RGB 颜色！
 
-您首先必须了解，这个 LED 在代码控制下的行为与通常不同。当我们给出**低电平信号**时 **LED 点亮**，当我们给出**高电平信号**时它**熄灭**。这是因为这个 LED 由共阳极控制，只有在低电平信号下才会点亮。
+您首先必须了解，当通过代码控制时，此 LED 的行为与通常不同。当我们给出 **LOW 信号**时 **LED 点亮**，当我们给出 **HIGH 信号**时它**熄灭**。这是因为此 LED 由共阳极控制，只有在低电平信号下才会点亮。
 
 示例代码如下：
 
@@ -360,17 +436,17 @@ void loop() {
 }
 ```
 
-这里，即使使用了 **HIGH**，LED 也会**熄灭**。您需要将 **HIGH** 替换为 **LOW** 来**点亮** LED。
+在这里，即使使用了 **HIGH**，LED 也会**熄灭**。您需要将 **HIGH** 替换为 **LOW** 来**点亮** LED。
 
-参考以下 LED 的引脚映射并在您的代码中使用它们：
+请参考以下 LED 的引脚映射并在您的代码中使用它们：
 
-- 红色 LED = LED_BUILTIN 或 LED_RED
-- 蓝色 LED = LED_BLUE
-- 绿色 LED = LED_GREEN
+- Red LED = LED_BUILTIN or LED_RED
+- Blue LED = LED_BLUE
+- Green LED = LED_GREEN
 
 ## 功耗验证
 
-Seeed Studio XIAO nRF52840 具有低功耗特性，这里我们提供一种验证方法。强烈建议在这里使用 `Seeed nRF52 Boards` 库。
+Seeed Studio XIAO nRF52840 具有低功耗特性，这里我们提供一种验证方法。强烈建议在此处使用 `Seeed nRF52 Boards` 库。
 
 - **步骤 1.** 使用 **JLink** 下载器为 Seeed Studio XIAO nRF52840 (Sense) 刷写[引导加载程序固件](https://github.com/0hotpotman0/BLE_52840_Core/blob/main/bootloader/Seeed_XIAO_nRF52840_Sense/Seeed_XIAO_nRF52840_Sense_bootloader-0.6.1_s140_7.3.0.hex)。
 
@@ -378,11 +454,11 @@ Seeed Studio XIAO nRF52840 具有低功耗特性，这里我们提供一种验�
 如果您使用的是 Seeed Studio XIAO nRF52840 的出厂固件或从未对 Seeed Studio XIAO nRF52840 的固件进行过更改，您可以跳过此步骤。
 :::
 
-- **步骤 2.** 在这里使用 `Seeed nRF52 Boards` 库。
+- **步骤 2.** 在此处使用 `Seeed nRF52 Boards` 库。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528403.png" alt="pir" width={800} height="auto" /></p>
 
-- **步骤 3.** 在这里上传深度睡眠演示并使用 **Arduino** 运行它
+- **步骤 3.** 在此处上传 deep_sleep 演示并使用 **Arduino** 运行它
 
 ```cpp
 // The MIT License (MIT)
@@ -504,7 +580,7 @@ void loop() {
 
 ## 电池充电电流
 
-电池充电电流可选择为 50mA 或 100mA，您可以将 **Pin13** 设置为高电平或低电平来将其更改为 50mA 或 100mA。低电流充电电流在输入模式下设置为高电平，高电流充电电流在输出模式下设置为低电平。
+电池充电电流可选择为 50mA 或 100mA，您可以将 **Pin13** 设置为高电平或低电平来将其更改为 50mA 或 100mA。低电流充电电流在输入模式下设置为 HIGH LEVEL，高电流充电电流在输出模式下设置为 LOW LEVEL。
 
 **低充电电流**
 
@@ -528,7 +604,7 @@ digitalWrite(P0_13, LOW);
 }
 ```
 
-## 访问 SWD 引脚进行调试和重新刷写引导程序
+## 访问 SWD 引脚进行调试和重新刷写引导加载程序
 
 **所需硬件**
 
@@ -557,28 +633,28 @@ digitalWrite(P0_13, LOW);
 
 ### Q1：我的 Arduino IDE 在上传代码到开发板时卡住了
 
-您可以首先尝试通过单击一次 "Reset Button" 来**重置**开发板。如果不起作用，快速双击进入**引导程序模式**。如果这也不起作用，请断开开发板与 PC 的连接，然后重新连接开发板。
+您可以首先尝试通过点击一次 "Reset Button" 来**重置**开发板。如果这不起作用，快速点击两次进入**引导加载程序模式**。如果这也不起作用，请断开开发板与 PC 的连接，然后重新连接开发板。
 
-### Q2：我的开发板在 Arduino IDE 中没有显示为串行设备
+### Q2：我的开发板在 Arduino IDE 中没有显示为串口设备
 
-您可以首先尝试通过单击一次 "Reset Button" 来**重置**开发板。如果不起作用，快速双击进入**引导程序模式**。
+您可以首先尝试通过点击一次 "Reset Button" 来**重置**开发板。如果这不起作用，快速点击两次进入**引导加载程序模式**。
 
-### Q3：使用 XIAO nRF52840 (Sense) 进行电池充电时有哪些注意事项？
+### Q3: 使用 XIAO nRF52840 (Sense) 进行电池充电时有哪些注意事项？
 
 当 P0.14 (D14) 在 3.3V 高电平时关闭 ADC 功能时，P0.31 将处于 3.6V 的输入电压限制。存在烧毁 P0.31 引脚的风险。
 
-目前对于此问题，我们建议用户在电池充电期间不要关闭 P0.14 (D14) 的 ADC 功能或将 P0.14 (D14) 设置为高电平。
+目前针对此问题，我们建议用户在电池充电期间不要关闭 P0.14 (D14) 的 ADC 功能或将 P0.14 (D14) 设置为高电平。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/14.png" alt="pir" width={800} height="auto" /></p>
 
-### Q4：通电时绿灯如何表现？
+### Q4: 通电时绿灯如何表现？
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/nRF_RGB.png" alt="nRF52840 RGB Schematic" width="120" height="auto" /></p>
 
 `P0.17` 引脚用于控制绿色指示灯行为，指示充电状态：
 
 - 低电平：当**充电**正在进行时。
-- 高电平：当电池**未充电**或**充满电**时。
+- 高电平：当电池**未充电**或**已充满**时。
 
 当处于低电平时，`RED_CHG` LED 将点亮。
 
@@ -636,9 +712,9 @@ digitalWrite(P0_13, LOW);
 
 - **[DXF]** [Seeed Studio XIAO nRF52840 Sense DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XlA0_nRF52840_Sense_Dimension_in_DXF.dxf)
 
-- **[ZIP]** [Seeed Studio XIAO Plus 底板（带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
+- **[ZIP]** [Seeed Studio XIAO Plus 底板带底部焊盘引出](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
 
-- **[ZIP]** [Seeed Studio XIAO Plus 底板（不带底部焊盘引出）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
+- **[ZIP]** [Seeed Studio XIAO Plus 底板不带底部焊盘引出](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
 
 - **[Kicad]** [Seeed Studio XIAO nRF52840 (Sense) Plus 封装](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Plus-SMD.kicad_mod)
 

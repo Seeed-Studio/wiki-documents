@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808
+sku: 101020556
 last_update:
   date: 12/30/2022
   author: jianjing Huang

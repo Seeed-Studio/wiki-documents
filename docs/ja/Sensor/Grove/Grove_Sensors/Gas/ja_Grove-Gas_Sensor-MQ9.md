@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Grove-Gas_Sensor-MQ9
+sku: 101020045
 last_update:
   date: 05/15/2025
   author: shuxu hu

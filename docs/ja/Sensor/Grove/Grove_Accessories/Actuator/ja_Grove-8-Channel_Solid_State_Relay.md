@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-8-Channel_Solid_State_Relay/
 slug: /ja/Grove-8-Channel_Solid_State_Relay
+sku: 103020136
 last_update:
   date: 05/15/2025
   author: gunengyu

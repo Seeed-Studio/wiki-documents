@@ -1,0 +1,668 @@
+---
+title: Uso de Bluetooth
+description: Uso de Bluetooth con Seeed Studio XIAO ESP32-C5
+keywords:
+  - xiao
+  - esp32c5
+  - buletooth
+image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
+slug: /es/xiao_esp32c5_buletooth_usage
+sidebar_class_name: hidden
+last_update:
+  date: 01/06/2026
+  author: Zeller
+---
+
+# Uso de Bluetooth con Seeed Studio XIAO ESP32-C5
+
+<div class="table-center">
+ <table>
+  <tr>
+   <th>Seeed Studio XIAO ESP32-C5</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" style={{width:400, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C5-p-6609.html
+        " target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+El Seeed Studio XIAO ESP32-C5 es una placa de desarrollo potente que soporta Bluetooth 5, BLE y redes Mesh, lo que la convierte en una opción ideal para una amplia gama de aplicaciones IoT que requieren conectividad inalámbrica. Con su rendimiento RF excepcional, el XIAO ESP32-C5 puede proporcionar comunicación inalámbrica confiable y de alta velocidad a través de una variedad de distancias, convirtiéndolo en una solución versátil tanto para aplicaciones inalámbricas de corto como de largo alcance. En este tutorial, nos enfocaremos en las características básicas de las capacidades Bluetooth del XIAO ESP32-C5, como cómo escanear dispositivos Bluetooth cercanos, cómo establecer una conexión Bluetooth y cómo transmitir y recibir datos a través de una conexión Bluetooth.
+
+## Introducción
+
+### Instalación de Antena
+
+Dentro del empaque del Seeed Studio XIAO ESP32-C5, hay un **conector de antena Wi-Fi/BT** dedicado. Para una intensidad de señal WiFi/Bluetooth óptima, necesitas sacar la antena incluida en el paquete y conectarla al conector.<br/>
+:::tip
+Si quieres lograr un efecto de ganancia de señal más fuerte, puedes comprar e instalar una **Antena Externa 2.4G/5G con Conector RP-SMA Macho** — ¡proporciona una ganancia mucho mayor que la Antena FPC incorporada incluida en el paquete!
+:::
+<div class="table-center">
+ <table>
+  <tr>
+   <th>Antena Externa 2.4G/5G con Conector RP-SMA Macho</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-2.4g5g-external-antenna-with-rp-sma-male-connector-45font_1.jpg" style={{width:400, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/2-4G-5G-External-Antenna-with-RP-SMA-Male-Connector-and-1-13-Coaxial-Cable-130mm-Set-p-6316.html
+        " target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+</div>
+
+## Uso de Bluetooth Low Energy (BLE)
+
+Bluetooth Low Energy, BLE para abreviar, es una variante de Bluetooth que conserva energía. La aplicación principal de BLE es la transmisión de corta distancia de pequeñas cantidades de datos (ancho de banda bajo). A diferencia del Bluetooth que siempre está encendido, BLE permanece en modo de suspensión constantemente excepto cuando se inicia una conexión.
+
+:::tip
+ESP32-C5 solo soporta BLE y no soporta Bluetooth Classic
+:::
+
+Debido a sus propiedades, BLE es adecuado para aplicaciones que necesitan intercambiar pequeñas cantidades de datos periódicamente funcionando con una pila de botón. Por ejemplo, BLE es de gran utilidad en las industrias de salud, fitness, seguimiento, balizas, seguridad y automatización del hogar.
+
+Esto hace que consuma muy poca energía. BLE consume aproximadamente 100 veces menos energía que Bluetooth (dependiendo del caso de uso).
+
+Sobre la parte BLE del XIAO ESP32-C5, introduciremos su uso en las siguientes tres secciones.
+
+- [Algunos conceptos fundamentales](#algunos-conceptos-fundamentales) -- Primero conoceremos algunos conceptos que pueden usarse frecuentemente en BLE para ayudarnos a entender el proceso de ejecución y el pensamiento de los programas BLE.
+- [Escáner BLE](#escáner-BLE) -- Esta sección explicará cómo buscar dispositivos Bluetooth cercanos e imprimirlos en el monitor serie.
+- [Servidor/cliente BLE](#servidor-cliente-BLE) -- Esta sección explicará cómo usar XIAO ESP32-C5 como Servidor y Cliente para enviar y recibir mensajes de datos especificados. También se usará para recibir o enviar mensajes desde el teléfono a XIAO.
+
+### Algunos conceptos fundamentales
+
+#### Servidor y Cliente
+
+Con Bluetooth Low Energy, hay dos tipos de dispositivos: el servidor y el cliente. El XIAO ESP32-C5 puede actuar como cliente o como servidor.
+
+El servidor anuncia su existencia, para que pueda ser encontrado por otros dispositivos, y contiene los datos que el cliente puede leer. El cliente escanea los dispositivos cercanos, y cuando encuentra el servidor que está buscando, establece una conexión y escucha los datos entrantes. Esto se llama comunicación punto a punto.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/49.png" style={{width:800, height:'auto'}}/></div>
+
+#### Atributo
+
+Atributo es en realidad un fragmento de datos. Cada dispositivo Bluetooth se usa para proporcionar un servicio, y el servicio es una colección de datos, la colección puede llamarse una base de datos, cada entrada en la base de datos es un Atributo, así que aquí traduzco Atributo como entradas de datos. Puedes imaginar un dispositivo Bluetooth como una tabla, cada fila dentro de la tabla es un Atributo.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/52.png" style={{width:600, height:'auto'}}/></div>
+
+#### GATT
+
+Cuando dos dispositivos Bluetooth establecen una conexión, necesitan un protocolo para determinar cómo comunicarse. GATT (Generic Attribute Profile) es tal protocolo que define cómo se transmiten los datos entre dispositivos Bluetooth.
+
+En el protocolo GATT, las funciones y propiedades de un dispositivo se organizan en estructuras llamadas servicios, características y descriptores. Un servicio representa un conjunto de funciones y características relacionadas proporcionadas por un dispositivo. Cada servicio puede incluir múltiples características, que definen una cierta propiedad o comportamiento del servicio, como datos de sensores o comandos de control. Cada característica tiene un identificador único y un valor, que puede ser leído o escrito para comunicarse. Los descriptores se usan para describir metadatos de características, como formato y permiso de acceso de valores de características.
+
+Al usar el protocolo GATT, los dispositivos Bluetooth pueden comunicarse en diferentes escenarios de aplicación, como transmitir datos de sensores o controlar dispositivos remotos.
+
+#### Característica BLE
+
+ATT significa Attribute Protocol. Es el mecanismo subyacente para el intercambio de datos en BLE. ATT se basa en un conjunto de comandos, como Requests, Responses, Notifications e Indications. En la Pila de Protocolos Bluetooth, ATT es la capa responsable de transportar datos, convirtiéndolo en el enfoque principal al analizar paquetes de datos Bluetooth.
+
+Comando ATT, formalmente conocido como ATT PDU (Protocol Data Unit). Incluye 4 categorías: read, write, notify e indicate. Estos comandos pueden dividirse en dos tipos: Operaciones como **Write Request** e **Indication** requieren un reconocimiento del par, mientras que **Write Command** y **Notification** no.
+
+Service y Characteristic se definen en la capa GATT. El lado Service proporciona el Service, el Service son los datos, y los datos son el atributo, y el Service y Characteristic son la presentación lógica de los datos, o los datos que el usuario puede ver se transforman eventualmente en Service y Characteristic.
+
+Echemos un vistazo a cómo se ven el servicio y la característica desde una perspectiva móvil. nRF Connect es una aplicación que nos muestra muy visualmente cómo debería verse cada paquete.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_4.jpg" style={{width:400, height:'auto'}}/></div>
+
+Como puedes ver, en la especificación Bluetooth, cada aplicación Bluetooth específica está compuesta por múltiples Services, y cada Service está compuesto por múltiples Characteristics. Una Characteristic consiste en un UUID, Properties y un Value.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/50.png" style={{width:300, height:'auto'}}/></div>
+
+Properties se usan para describir los tipos y permisos de operaciones en una característica, como si soporta read, write, notify, etc. Esto es similar a las cuatro categorías incluidas en un ATT PDU.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/51.png" style={{width:800, height:'auto'}}/></div>
+
+#### UUID
+
+Cada servicio, característica y descriptor tienen un UUID (Universally Unique Identifier). Un UUID es un número único de 128 bits (16 bytes). Por ejemplo:
+
+```
+ea094cbd-3695-4205-b32d-70c1dea93c35
+```
+
+Hay UUIDs abreviados para todos los tipos, servicios y perfiles especificados en el [SIG (Bluetooth Special Interest Group)](https://www.bluetooth.com/specifications/gatt/services). Pero si tu aplicación necesita su propio UUID, puedes generarlo usando este [sitio web generador de UUID](https://www.uuidgenerator.net/).
+
+### Ejemplos de Uso de BLE
+
+A continuación, introduciremos cómo usar **Bluetooth Low Energy (BLE)** en el XIAO ESP32-C5 a través de varios ejemplos prácticos.<br/>
+
+Los ejemplos a continuación están implementados basados en el **Arduino IDE**. Si no has usado el Arduino IDE antes, por favor visita: [Introducción con Seeed Studio XIAO ESP32-C5](https://wiki.seeedstudio.com/es/xiao_esp32c5_getting_started/)
+
+#### Escáner BLE
+
+En **modo Escáner BLE**, el XIAO ESP32-C5 actúa como **Central** u **Observer**. En lugar de establecer una conexión, **escucha** paquetes de Advertising transmitidos por otros dispositivos en el área circundante.
+
+##### Programa
+
+- A continuación hay un fragmento de código de referencia que demuestra cómo usar el modo Escáner BLE en el XIAO ESP32-C5.
+
+```cpp
+#include <BLEDevice.h>
+#include <BLEUtils.h>
+#include <BLEScan.h>
+#include <BLEAdvertisedDevice.h>
+
+int scanTime = 5; // Scanning duration (seconds)
+BLEScan* pBLEScan;
+
+class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
+    void onResult(BLEAdvertisedDevice advertisedDevice) {
+      // Callback function when a device is discovered
+      Serial.printf("Device found: %s \n", advertisedDevice.toString().c_str());
+    }
+};
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println("Initializing BLE Scanner...");
+
+  BLEDevice::init("");
+  pBLEScan = BLEDevice::getScan(); // Create scan object
+  pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
+  pBLEScan->setActiveScan(true); // Active scan (consumes more power but gets more complete information)
+  pBLEScan->setInterval(100);
+  pBLEScan->setWindow(99);
+}
+
+void loop() {
+  Serial.println("Starting scan...");
+  // false here means do not keep duplicate device results, true to keep
+  BLEScanResults* foundDevices = pBLEScan->start(scanTime, false);
+
+  Serial.print("Scan finished, number of devices found: ");
+  Serial.println(foundDevices->getCount());
+  Serial.println("Scan completed, clearing results...");
+
+  pBLEScan->clearResults();   // Clear cache to release memory
+  delay(2000);
+}
+```
+
+##### Presentación del Efecto
+
+- Sube el código y abre el Monitor Serie; el XIAO ESP32-C5 escaneará dispositivos Bluetooth en el entorno circundante e imprimirá la información relevante.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_1.png" style={{width:800, height:'auto'}}/></div>
+
+#### Servidor/Cliente BLE
+
+En modo Servidor BLE, crea un Servicio y Característica, transmite su presencia y espera a que otros dispositivos se conecten para leer y escribir datos.<br/>
+En modo Cliente BLE, el Cliente escanea un UUID de Servicio específico, inicia una conexión después de encontrar el Servidor, y lee o escribe los valores de las características del Servidor.
+
+##### Programa Servidor BLE
+
+A continuación, se utilizará un ejemplo de código para demostrar cómo configurar un Servidor BLE en el XIAO ESP32-C5.
+
+- Código de Referencia
+
+```cpp
+#include <BLEDevice.h>
+#include <BLEUtils.h>
+#include <BLEServer.h>
+
+// Website for generating UUID: uuidgenerator.net
+#define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
+#define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
+
+class MyCallbacks: public BLECharacteristicCallbacks {
+    void onWrite(BLECharacteristic *pCharacteristic) {
+      String value = pCharacteristic->getValue();
+      if (value.length() > 0) {
+        Serial.print("Data received from Client: ");
+        for (int i = 0; i < value.length(); i++)
+          Serial.print(value[i]);
+        Serial.println();
+      }
+    }
+};
+
+void setup() {
+  Serial.begin(115200);
+
+  // 1. Initialize BLE
+  BLEDevice::init("XIAO_ESP32C5_Server");
+
+  // 2. Create Server
+  BLEServer *pServer = BLEDevice::createServer();
+
+  // 3. Create Service
+  BLEService *pService = pServer->createService(SERVICE_UUID);
+
+  // 4. Create Characteristic (set read/write permissions)
+  BLECharacteristic *pCharacteristic = pService->createCharacteristic(
+                                         CHARACTERISTIC_UUID,
+                                         BLECharacteristic::PROPERTY_READ |
+                                         BLECharacteristic::PROPERTY_WRITE
+                                       );
+
+  pCharacteristic->setCallbacks(new MyCallbacks()); // Set write callback function
+  pCharacteristic->setValue("Hello World from XIAO"); // Set initial value
+
+  // 5. Start Service
+  pService->start();
+
+  // 6. Start Advertising
+  BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
+  pAdvertising->addServiceUUID(SERVICE_UUID);
+  pAdvertising->setScanResponse(true);
+  pAdvertising->setMinPreferred(0x06); 
+  BLEDevice::startAdvertising();
+}
+
+void loop() {
+  delay(2000);
+}
+```
+
+##### Presentación del Efecto
+
+- Sube el código, luego descarga la aplicación nRF Connect, escanea y descubre el dispositivo BLE (llamado **XIAO_ESP32C5_Server** como se mencionó anteriormente), y selecciónalo para establecer una conexión.
+
+Mientras tanto, puedes buscar y descargar la aplicación **nRF Connect** en las principales tiendas de aplicaciones móviles, que permite a tu teléfono buscar y conectarse a dispositivos Bluetooth.
+
+- Android: [nRF Connect](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp&hl=en)
+- IOS: [nRF Connect](https://apps.apple.com/us/app/nrf-connect-for-mobile/id1054362403)
+
+Después de descargar el software, sigue los pasos mostrados a continuación para buscar y conectar el XIAO ESP32-C5, y verás el anuncio **Hello World from XIAO**.
+
+<table align="center">
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_1.jpg" style={{width:200, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_2.jpg" style={{width:200, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_3.jpg" style={{width:200, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_4.jpg" style={{width:200, height:'auto'}}/></div></td>
+ </tr>
+</table>
+
+##### Programa Cliente BLE
+
+A continuación, se utilizará un ejemplo de código para demostrar cómo configurar un Cliente BLE en el XIAO ESP32-C5. Para usar la funcionalidad de cliente, necesitas al menos dos dispositivos XIAO habilitados para Bluetooth: uno actuando como servidor para enviar datos, y el otro como cliente para recibir datos.
+
+<details>
+<summary>Código de Referencia</summary>
+
+```cpp
+#include <BLEDevice.h>
+#include <BLEUtils.h>
+#include <BLEScan.h>
+#include <BLEAdvertisedDevice.h>
+#include <BLEClient.h>
+
+// UUID of the Server (must be exactly the same as the Server)
+static BLEUUID serviceUUID("4fafc201-1fb5-459e-8fcc-c5c9c331914b");
+static BLEUUID charUUID("beb5483e-36e1-4688-b7f5-ea07361b26a8");
+
+// Scanning parameters
+const int scanTime = 10; // Scanning duration (seconds)
+
+// Global variables
+static BLEAddress serverAddress;        // Address of the found Server
+static bool deviceFound = false;        // Whether the target device is found
+static BLERemoteCharacteristic* pRemoteCharacteristic = nullptr;
+static BLEClient* pClient = nullptr;
+
+// Scan callback: called when a device is discovered
+class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks {
+  void onResult(BLEAdvertisedDevice advertisedDevice) {
+    // Check if it contains the service UUID we need
+    if (advertisedDevice.haveServiceUUID() && advertisedDevice.isAdvertisingService(serviceUUID)) {
+      Serial.print("Found target Server! Name: ");
+      Serial.print(advertisedDevice.getName().c_str());
+      Serial.print(", Address: ");
+      Serial.println(advertisedDevice.getAddress().toString().c_str());
+
+      serverAddress = advertisedDevice.getAddress();
+      deviceFound = true;
+
+      // Stop scanning (stop once found)
+      BLEDevice::getScan()->stop();
+    }
+  }
+};
+
+// Client connection callback (optional, used to monitor connection status)
+class MyClientCallbacks : public BLEClientCallbacks {
+  void onConnect(BLEClient* pclient) {
+    Serial.println("Connected to Server successfully!");
+  }
+
+  void onDisconnect(BLEClient* pclient) {
+    Serial.println("Disconnected from Server.");
+    deviceFound = false;  // Rescan next time
+  }
+};
+
+void setup() {
+  Serial.begin(115200);
+  while (!Serial); // Wait for serial port to open (optional)
+
+  Serial.println("Starting BLE Client...");
+
+  BLEDevice::init("XIAO_Client");  // Client device name
+
+  // Start the first scan
+  scanAndConnect();
+}
+
+void loop() {
+  // If connected successfully, read/write data every 5 seconds
+  if (pClient && pClient->isConnected() && pRemoteCharacteristic) {
+    // Read characteristic value
+    String value = pRemoteCharacteristic->readValue();
+    Serial.print("Read value from Server: ");
+    Serial.println(value.c_str());
+
+    // Write new data (with response)
+    String sendMsg = "Hello from Client @ " + String(millis() / 1000) + "s";
+    pRemoteCharacteristic->writeValue(sendMsg.c_str(), true);  // true = require response
+    Serial.println("Sent: " + sendMsg);
+
+    delay(5000);
+  } 
+  else {
+    // Not connected or disconnected → rescan
+    if (!deviceFound || (pClient && !pClient->isConnected())) {
+      Serial.println("Server not connected, rescanning...");
+      scanAndConnect();
+    }
+    delay(1000);
+  }
+}
+
+// Encapsulate scan + connect logic
+void scanAndConnect() {
+  BLEScan* pBLEScan = BLEDevice::getScan();
+  pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
+  pBLEScan->setActiveScan(true);  // Active scan to get more information
+  pBLEScan->setInterval(100);
+  pBLEScan->setWindow(99);
+
+  Serial.println("Scanning for Server...");
+  deviceFound = false;
+  pBLEScan->start(scanTime, false);  // Scan for scanTime seconds
+
+  if (!deviceFound) {
+    Serial.println("Target Server not found, will retry later.");
+    return;
+  }
+
+  // Create client and connect after finding the device
+  pClient = BLEDevice::createClient();
+  pClient->setClientCallbacks(new MyClientCallbacks());
+
+  Serial.print("Connecting to ");
+  Serial.println(serverAddress.toString().c_str());
+
+  if (!pClient->connect(serverAddress)) {
+    Serial.println("Connection failed!");
+    return;
+  }
+
+  // Get remote service
+  BLERemoteService* pRemoteService = pClient->getService(serviceUUID);
+  if (pRemoteService == nullptr) {
+    Serial.println("Failed to find service UUID");
+    pClient->disconnect();
+    return;
+  }
+  Serial.println("Service found.");
+
+  // Get remote characteristic
+  pRemoteCharacteristic = pRemoteService->getCharacteristic(charUUID);
+  if (pRemoteCharacteristic == nullptr) {
+    Serial.println("Failed to find characteristic UUID");
+    pClient->disconnect();
+    return;
+  }
+  Serial.println("Characteristic found. Ready to communicate!");
+}
+```
+
+</details>
+
+##### Presentación del Efecto
+
+- Sube el código, luego abre el Monitor Serie para observar — recibirás los datos Bluetooth enviados por el servidor.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_2.png" style={{width:800, height:'auto'}}/></div>
+
+:::tip
+Al verificar la funcionalidad del cliente, necesitas cargar el programa del servidor a otro dispositivo XIAO con anticipación; de lo contrario, la verificación fallará.
+:::
+
+#### NimBLE-Arduino
+
+La biblioteca nativa Arduino BLEDevice está basada en la pila de protocolos Bluedroid; ofrece funcionalidad completa pero consume una cantidad significativa de Flash y RAM. NimBLE es una pila de protocolos BLE completamente reescrita (derivada de Apache Mynewt), que presenta las siguientes ventajas:
+
+1. Huella de memoria extremadamente baja (uso de RAM reducido en más del 50%).
+
+2. Velocidad de conexión más rápida.
+
+3. Compatibilidad de API: Está diseñada para ser casi completamente compatible con la sintaxis de la biblioteca BLE nativa de Arduino, requiriendo solo modificaciones en archivos de cabecera y ajustes menores de tipos.
+
+Puedes visitar el repositorio GitHub del autor: [NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino/tree/master) para más detalles.<br/>
+
+A continuación, implementaremos una función de escaneo Bluetooth basada en la biblioteca NimBLE-Arduino.
+
+##### Programa
+
+- Instala la biblioteca NimBLE-Arduino.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_libaray_1.png" style={{width:800, height:'auto'}}/></div><br/>
+
+<details>
+
+<summary>Código de Referencia</summary>
+
+```CPP
+#include <Arduino.h>
+#include <NimBLEDevice.h>
+#include <NimBLEAdvertisedDevice.h>
+#include "NimBLEEddystoneTLM.h"
+#include "NimBLEBeacon.h"
+
+#define ENDIAN_CHANGE_U16(x) ((((x) & 0xFF00) >> 8) + (((x) & 0xFF) << 8))
+
+int         scanTime = 5 * 1000; // In milliseconds
+NimBLEScan* pBLEScan;
+
+class ScanCallbacks : public NimBLEScanCallbacks {
+    void onResult(const NimBLEAdvertisedDevice* advertisedDevice) override {
+        if (advertisedDevice->haveName()) {
+            Serial.print("Device name: ");
+            Serial.println(advertisedDevice->getName().c_str());
+            Serial.println("");
+        }
+
+        if (advertisedDevice->haveServiceUUID()) {
+            NimBLEUUID devUUID = advertisedDevice->getServiceUUID();
+            Serial.print("Found ServiceUUID: ");
+            Serial.println(devUUID.toString().c_str());
+            Serial.println("");
+        } else if (advertisedDevice->haveManufacturerData() == true) {
+            std::string strManufacturerData = advertisedDevice->getManufacturerData();
+            if (strManufacturerData.length() == 25 && strManufacturerData[0] == 0x4C && strManufacturerData[1] == 0x00) {
+                Serial.println("Found an iBeacon!");
+                NimBLEBeacon oBeacon = NimBLEBeacon();
+                oBeacon.setData(reinterpret_cast<const uint8_t*>(strManufacturerData.data()), strManufacturerData.length());
+                Serial.printf("iBeacon Frame\n");
+                Serial.printf("ID: %04X Major: %d Minor: %d UUID: %s Power: %d\n",
+                              oBeacon.getManufacturerId(),
+                              ENDIAN_CHANGE_U16(oBeacon.getMajor()),
+                              ENDIAN_CHANGE_U16(oBeacon.getMinor()),
+                              oBeacon.getProximityUUID().toString().c_str(),
+                              oBeacon.getSignalPower());
+            } else {
+                Serial.println("Found another manufacturers beacon!");
+                Serial.printf("strManufacturerData: %d ", strManufacturerData.length());
+                for (int i = 0; i < strManufacturerData.length(); i++) {
+                    Serial.printf("[%X]", strManufacturerData[i]);
+                }
+                Serial.printf("\n");
+            }
+            return;
+        }
+
+        NimBLEUUID eddyUUID = (uint16_t)0xfeaa;
+
+        if (advertisedDevice->getServiceUUID().equals(eddyUUID)) {
+            std::string serviceData = advertisedDevice->getServiceData(eddyUUID);
+            if (serviceData[0] == 0x20) {
+                Serial.println("Found an EddystoneTLM beacon!");
+                NimBLEEddystoneTLM foundEddyTLM = NimBLEEddystoneTLM();
+                foundEddyTLM.setData(reinterpret_cast<const uint8_t*>(serviceData.data()), serviceData.length());
+
+                Serial.printf("Reported battery voltage: %dmV\n", foundEddyTLM.getVolt());
+                Serial.printf("Reported temperature from TLM class: %.2fC\n", (double)foundEddyTLM.getTemp());
+                int   temp     = (int)serviceData[5] + (int)(serviceData[4] << 8);
+                float calcTemp = temp / 256.0f;
+                Serial.printf("Reported temperature from data: %.2fC\n", calcTemp);
+                Serial.printf("Reported advertise count: %d\n", foundEddyTLM.getCount());
+                Serial.printf("Reported time since last reboot: %ds\n", foundEddyTLM.getTime());
+                Serial.println("\n");
+                Serial.print(foundEddyTLM.toString().c_str());
+                Serial.println("\n");
+            }
+        }
+    }
+} scanCallbacks;
+
+void setup() {
+    Serial.begin(115200);
+    Serial.println("Scanning...");
+
+    NimBLEDevice::init("Beacon-scanner");
+    pBLEScan = BLEDevice::getScan();
+    pBLEScan->setScanCallbacks(&scanCallbacks);
+    pBLEScan->setActiveScan(true);
+    pBLEScan->setInterval(100);
+    pBLEScan->setWindow(100);
+}
+
+void loop() {
+    NimBLEScanResults foundDevices = pBLEScan->getResults(scanTime, false);
+    Serial.print("Devices found: ");
+    Serial.println(foundDevices.getCount());
+    Serial.println("Scan done!");
+    pBLEScan->clearResults(); // delete results scan buffer to release memory
+    delay(2000);
+}
+```
+
+</details>
+
+##### Presentación del Efecto
+
+- Sube el código y abre el Monitor Serie para observar. También implementa la función de escaneo Bluetooth, pero con una velocidad de escaneo más rápida.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_3.png" style={{width:800, height:'auto'}}/></div>
+
+#### Ejemplo: Conectando a Home Assistant
+
+En este punto, deberías haber obtenido una comprensión básica de los modos BLE del XIAO ESP32-C5.
+A continuación, podemos poner manos a la obra en un proyecto más práctico: hacer que el XIAO ESP32-C5 simule un sensor de temperatura y humedad (o un simple interruptor de botón), y transmita periódicamente datos del sensor o estado a través de BLE. Home Assistant descubrirá automáticamente este dispositivo BLE y mostrará directamente los valores actuales de temperatura y humedad (o estado del botón) en la interfaz, sin necesidad de configuraciones de integración adicionales complejas.<br/>
+Este ejemplo simple demuestra completamente el gran potencial del ESP32-C5 en los campos del Internet de las Cosas (IoT) y hogares inteligentes: su bajo consumo de energía, facilidad de desarrollo y soporte listo para usar para dispositivos BLE pasivos permiten a cualquiera construir rápidamente su propia red de sensores inteligentes.<br/>
+
+:::tip
+Si nunca has usado Home Assistant, puedes visitar: [Conectando XIAO ESP32-C5 a Home Assistant](https://wiki.seeedstudio.com/es/xiao_esp32c5_homeassistant/)
+:::
+
+- Código de Referencia
+
+```cpp
+#include <NimBLEDevice.h>
+
+// Simulated temperature value
+float temp = 20.0;
+
+void setup() {
+  Serial.begin(115200);
+
+  // 1. Initialize NimBLE
+  NimBLEDevice::init("XIAO_BTHome_Sensor");
+
+  // 2. Create advertising object
+  NimBLEAdvertising *pAdvertising = NimBLEDevice::getAdvertising();
+
+  // ==========================================
+  // Construct BTHome data packet (This is the most critical part)
+  // ==========================================
+  // Reference: https://bthome.io/format/
+
+  std::string serviceData = "";
+
+  // A. BTHome device information byte (Required)
+  // bit 0: Encryption (0=No)
+  // bit 1-2: Version (2=v2)
+  // Result: 0100 0000 -> 0x40
+  serviceData += (char)0x40; 
+
+  // B. Temperature data (16-bit, 0.01 factor)
+  // ID: 0x02 (Temperature)
+  serviceData += (char)0x02; 
+
+  // Value: Assume 25.50°C -> 2550 (0x09F6) -> Little-endian: F6 09
+  int16_t tempInt = (int16_t)(temp * 100); 
+  serviceData += (char)(tempInt & 0xFF);        // Low byte
+  serviceData += (char)((tempInt >> 8) & 0xFF); // High byte
+
+  // C. Battery level (8-bit, %) - Optional
+  // ID: 0x01 (Battery)
+  serviceData += (char)0x01;
+  serviceData += (char)85; // 85%
+
+  // ==========================================
+
+  // 3. Put the constructed data into Service Data
+  // BTHome UUID is 0xFCD2
+  NimBLEAdvertisementData oAdvertisementData = NimBLEAdvertisementData();
+  oAdvertisementData.setFlags(0x06); // General Discovery Mode
+  oAdvertisementData.setServiceData(NimBLEUUID((uint16_t)0xFCD2), serviceData);
+
+  // 4. Set advertising parameters
+  pAdvertising->setAdvertisementData(oAdvertisementData);
+
+  // 5. Start advertising (Advertise every 3 seconds, can be set longer to save power in practice)
+  pAdvertising->start();
+
+  Serial.println("BTHome advertising started...");
+}
+
+void loop() {
+  // To update data dynamically: stop advertising -> update data -> restart advertising
+  // For simple demonstration, only static advertising logic is used here
+  // In actual projects, you will read sensors here, update oAdvertisementData, then enter sleep mode
+  delay(10000);
+}
+```
+
+- Sube el código y abre la plataforma Home Assistant. Puedes encontrar el dispositivo BTHome en **Settings** -> **Devices & Services** y agregarlo al panel de control.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/ble_usage_4.png" style={{width:800, height:'auto'}}/></div>
+
+## Soporte Técnico y Discusión de Productos
+
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

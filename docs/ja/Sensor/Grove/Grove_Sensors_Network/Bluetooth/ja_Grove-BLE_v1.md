@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-BLE_v1/
 slug: /ja/Grove-BLE_v1
+sku: 113020007
 last_update:
   date: 05/15/2025
   author: gunengyu

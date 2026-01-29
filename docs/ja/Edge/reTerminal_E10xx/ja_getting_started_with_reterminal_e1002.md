@@ -1,6 +1,6 @@
 ---
-description: この記事では、reTerminal E1002を素早く始めるためのガイドを提供します。
-title: reTerminal E1002の使用開始
+description: この記事では、reTerminal E1002を素早く開始する方法をガイドします。
+title: reTerminal E1002 入門ガイド
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/getting_started_with_reterminal_e1002
 sidebar_position: 3
@@ -12,31 +12,31 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# reTerminal E1002の使用開始
+# reTerminal E1002 入門ガイド
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div><br />
 
 :::caution ファームウェア更新のヒント
-最高の体験のために、製品を受け取ったらすぐに**[製品のファームウェア更新を完了する](#preliminary)**ことをお勧めします。
+最高の体験のために、製品を受け取ったらすぐに**[製品のファームウェア更新を完了](#preliminary)**することをお勧めします。
 :::
 
 :::danger 画面寿命の警告
-1. reTerminalが長時間アイドル状態にある場合、デバイスの緑色ボタンを5秒間長押しして画面内容をクリアできます（工場出荷時ファームウェアを使用）。これにより残像を効果的に防ぎ、画面寿命を延ばすことができます。
+1. reTerminal が長時間アイドル状態の場合、デバイスの緑色ボタンを5秒間長押しして画面内容をクリアできます（工場出荷時ファームウェアを使用）。これにより残像を効果的に防ぎ、画面寿命を延ばすことができます。
 
-2. 可能な限り、長時間（1日以上）同じ画面を表示し続けないでください。残像が発生する可能性があるため、少なくとも1日に1回は画面の画像を更新することをお勧めします。デバイスを長時間使用しない場合は、デバイスの表示内容をクリアすることをお勧めします。
+2. 可能な限り、長時間（1日以上）同じ画面を表示し続けないでください。残像が発生する可能性があります。画面の画像は少なくとも1日に1回は更新することをお勧めします。デバイスを長時間使用しない場合は、デバイスの表示内容をクリアすることをお勧めします。
 
-3. プログラムの使用とデバッグ時は、できるだけ画面の更新頻度を抑えてください。長時間高速で画面を更新すると、画面の寿命が短くなる可能性があります。
+3. プログラムの使用およびデバッグ時は、できるだけ画面の更新頻度を抑えてください。長時間高速で画面を更新すると、画面の寿命が短くなる可能性があります。
 :::
 
 ## 概要
 
-reTerminal E1002は、7.3インチのオープンソースフルカラーePaperディスプレイで、優れた3ヶ月のバッテリー寿命を持ちます。ESP32-S3を搭載し、簡単なダッシュボード作成のためのSenseCraft HMIノーコードUIプラットフォームをネイティブサポートし、さらなる開発のためにHome Assistant、TRMNL E-inkダッシュボード、Arduino、ESP-IDFをサポートします。E Ink® Spectra™ 6フルカラーePaperディスプレイにより、デジタルフレームやカラフルなダッシュボード可視化に最適です。
+reTerminal E1002は、7.3インチのオープンソースフルカラーePaperディスプレイで、優れた3ヶ月のバッテリー寿命を持ちます。ESP32-S3を搭載し、簡単なダッシュボード作成のためのSenseCraft HMIノーコードUIプラットフォームをネイティブサポートし、さらなる開発のためにHome Assistant、TRMNL E-inkダッシュボード、Arduino、ESP-IDFをサポートします。E Ink® Spectra™ 6フルカラーePaperディスプレイにより、デジタルフレームやカラフルなダッシュボード表示に最適です。
 
 ### 特徴
 
@@ -62,36 +62,37 @@ reTerminal E1002のハードウェアには以下が含まれます：
 8. **USB-Cポート**：充電とファームウェア更新用
 9. **拡張ポート**：VDD、GND、I2C、GPIO接続を提供する8ピン拡張ヘッダー
 
-## 使用開始
+## 入門ガイド
 
 ### 準備
 
-**ステップ1.** reTerminal E1002を開封し、すべてのコンポーネントが含まれていることを確認してください：
+**ステップ1.** reTerminal E1002を開封し、すべてのコンポーネントが含まれていることを確認します：
 - reTerminal E1002デバイス
 - USB-Cケーブル
 - クイックスタートガイド
 
-**ステップ2.** （オプション）デバイスをデジタルフォトフレームとして使用する予定がある場合や、追加のストレージが必要な場合は、microSDカードを挿入してください。
+**ステップ2.** （オプション）デジタルフォトフレームとして使用する予定がある場合や追加ストレージが必要な場合は、microSDカードを挿入します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-reTerminal EシリーズePaperディスプレイは、Fat32形式の最大64GBまでのMicroSDカードのみをサポートします。
+reTerminal E シリーズ ePaperディスプレイは、Fat32形式の最大64GBまでのMicroSDカードのみをサポートします。  
+64GB SDカードはデフォルトでexFATとしてフォーマットされています。FAT32にフォーマットした後、正常にマウントされ、画像の保存に使用できます。
 :::
 
-**ステップ3.** （オプション）必要に応じてUSBドライバーをインストールしてください：
+**ステップ3.** （オプション）必要に応じてUSBドライバーをインストールします：
 
-お使いのオペレーティングシステムによっては、reTerminal E1002との適切な通信を確保するためにUSBドライバーをインストールする必要がある場合があります：
+オペレーティングシステムによっては、reTerminal E1002との適切な通信を確保するためにUSBドライバーをインストールする必要がある場合があります：
 
-- **Macコンピューター用**：[WCH公式ウェブサイト](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)からCH34Xドライバーをダウンロードしてインストールしてください
+- **Macコンピューター用**：[WCH公式ウェブサイト](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)からCH34Xドライバーをダウンロードしてインストールします
 
-- **Windowsコンピューター用**：
+- **Windowsコンピューター用**： 
   - Windows 11システムは通常、デフォルトでドライバーが含まれています
   - Windows 10以前のバージョンでは、[WCH公式ウェブサイト](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)からCH341ドライバーをダウンロードしてインストールする必要がある場合があります
 
 - **Linuxシステム用**：最新のLinuxディストリビューションのほとんどは、デフォルトで必要なドライバーが含まれています
 
-**ステップ4.** デバイスが最新バージョンを実行していることを確認するため、ファームウェアを更新してください：
+**ステップ4.** デバイスが最新バージョンを実行していることを確認するためにファームウェアを更新します：
 
 1. USB-Cケーブルを使用してreTerminal E1002をコンピューターに接続します
 
@@ -124,9 +125,9 @@ reTerminal EシリーズePaperディスプレイは、Fat32形式の最大64GB�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/10.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
-1. ファームウェアの更新により、最適なパフォーマンスと最新機能へのアクセスが確保されます。初回使用前にこの更新を実行することをお勧めします。
+1. ファームウェアの更新により、最適なパフォーマンスと最新機能へのアクセスが保証されます。初回使用前にこの更新を実行することをお勧めします。
 
-2. デバイスがシャットダウンまたはスリープ状態の場合、ファームウェアを適切にフラッシュすることはできません。デバイスの正しいポートを選択してもファームウェアフラッシュの進行が表示されない場合は、ユニット上部の緑色ボタンを押してデバイスを起動し、再試行する必要があります。
+2. デバイスがシャットダウンまたはスリープ状態の場合、ファームウェアを適切にフラッシュすることはできません。デバイスの正しいポートを選択してもフラッシュファームウェアの進行状況が表示されない場合は、ユニット上部の緑色ボタンを押してデバイスを起動し、再試行する必要があります。
 :::
 
 ### 電源オン
@@ -141,7 +142,7 @@ reTerminal EシリーズePaperディスプレイは、Fat32形式の最大64GB�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/17.png" style={{width:600, height:'auto'}}/></div><br />
 
 
-**ステップ3.** 緑色のユーザーLEDが約30秒間点灯し、デバイスが電源オンで初期化中であることを示します。デバイスを30秒間操作しないと、電力を確保するため、デバイスは自動的にスリープモードに入り、LEDライトは自動的に消灯します。
+**ステップ3.** 緑色のユーザーLEDが約30秒間点灯し、デバイスが電源オンで初期化中であることを示します。デバイスを30秒間操作しないと、電力を確保するためにデバイスは自動的にスリープモードに入り、LEDライトは自動的に消灯します。
 
 :::tip
 そのため、この時間内にネットワーク設定の次のステップを完了する必要があります。デバイスがスリープ状態になると、デバイスのホットスポットを見つけることができなくなります。この場合、デバイスの緑色のWakeボタンを一度クリックしてデバイスを起動できます。
@@ -150,7 +151,7 @@ reTerminal EシリーズePaperディスプレイは、Fat32形式の最大64GB�
 ### ネットワーク設定
 
 <Tabs>
-<TabItem value="Network Setup vis PC" label="PCによるネットワーク設定" default>
+<TabItem value="Network Setup vis PC" label="PC経由でのネットワーク設定" default>
 
 **ステップ1.** スマートフォンまたはコンピューターからデバイスのWi-Fiアクセスポイントに接続します。AP名は画面に表示されます（パスワード不要）。ネットワーク認証情報は`reTerminal E1002-{MACアドレス}`です。
 
@@ -163,7 +164,7 @@ reTerminal EシリーズePaperディスプレイは、Fat32形式の最大64GB�
 **ステップ3.** ローカルWi-Fiネットワークを選択してパスワードを入力し、"Connect"をクリックします。
 
 :::note
-reTerminal EシリーズePaperディスプレイは2.4GHz WiFiネットワークのみをサポートし、5GHzやその他の帯域はサポートしません。
+reTerminal E シリーズ ePaperディスプレイは2.4GHz WiFiネットワークのみをサポートし、5GHzやその他の帯域はサポートしません。
 :::
 
 **ステップ4.** 接続が成功すると、デバイスは確認音を発し、ペアリングコード画面を表示します。
@@ -189,16 +190,16 @@ reTerminal EシリーズePaperディスプレイは2.4GHz WiFiネットワーク
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ4.** ペアリングが完了すると、デバイスは最初のダッシュボードを作成するよう促すメッセージを表示します。
+**ステップ 4.** ペアリングが完了すると、デバイスに最初のダッシュボードを作成するよう促すメッセージが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/18.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+<TabItem value="Network Setup vis SenseCraft APP" label="SenseCraft APP によるネットワーク設定">
 
 この方法では、SenseCraft モバイルアプリを使用してデバイスのネットワークを設定し、Bluetooth 経由で SenseCraft アカウントに追加します。
 
-まず、SenseCraft アプリをダウンロードしてください。Google Play ストアまたは Apple App Store で「SenseCraft」を検索して見つけることができます。または、このウェブサイトからダウンロードすることもできます。
+まず、SenseCraft App をダウンロードします。Google Play Store または Apple App Store で「SenseCraft」を検索して見つけることができます。または、このウェブサイトからダウンロードすることもできます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
@@ -206,7 +207,7 @@ reTerminal EシリーズePaperディスプレイは2.4GHz WiFiネットワーク
     </a>
 </div><br />
 
-**ステップ 1.** SenseCraft アプリを開き、アカウントにサインインして、**User** タブに移動します。**Device Bluetooth Configuration** をタップしてプロセスを開始します。
+**ステップ 1.** SenseCraft App を開き、アカウントにサインインして、**User** タブに移動します。**Device Bluetooth Configuration** をタップしてプロセスを開始します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/151.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -261,7 +262,7 @@ reTerminal E1002 は SenseCraft HMI プラットフォームとシームレス�
 
 **キャンバス**
 
-キャンバスでダッシュボードを一から設計しましょう。ドラッグアンドドロップインターフェースで様々な要素を提供します：
+キャンバスでダッシュボードをゼロからデザインしましょう。ドラッグアンドドロップインターフェースで様々な要素を提供します：
 - カスタマイズ可能なフォントとサイズのテキストブロック
 - 画像プレースホルダー
 - 時刻、日付、天気のウィジェット
@@ -288,7 +289,7 @@ reTerminal E1002 は SenseCraft HMI プラットフォームとシームレス�
 
 - [SenseCraft HMI 概要](https://sensecraft-hmi-docs.seeed.cc/en/)
 
-SenseCraft プラットフォームでダッシュボードを作成・保存したら、「Deploy to Device」をクリックし、ペアリングした reTerminal E1002 を選択するだけで、カスタムコンテンツがデバイスにワイヤレスで送信されます。ePaper ディスプレイがダッシュボードを表示するように更新され、複数のページを作成した場合はナビゲーションボタンを使用してページを切り替えることができます。
+SenseCraft プラットフォームでダッシュボードを作成・保存したら、「Deploy to Device」をクリックし、ペアリングした reTerminal E1002 を選択するだけで、カスタムコンテンツがワイヤレスでデバイスに送信されます。ePaper ディスプレイがダッシュボードを表示するように更新され、複数のページを作成した場合はナビゲーションボタンを使用してページを切り替えることができます。
 
 ## デバイスの操作
 
@@ -298,7 +299,7 @@ SenseCraft プラットフォームでダッシュボードを作成・保存し
 
 デバイス上部のリフレッシュボタンには複数の機能があります：
 
-- **シングルプレス**：ディスプレイを手動でリフレッシュし、SenseCraft プラットフォームから新しいコンテンツをチェックします。ブザーが一度鳴ってアクションを確認します。このボタンはデバイスのウェイクアップにも一般的に使用されます。デバイスがスリープ状態になり、ダッシュボードリフレッシュコマンドがデバイスにすぐに利用できない場合に、このボタンを使用してデバイスをウェイクアップできます。
+- **シングルプレス**：ディスプレイを手動でリフレッシュし、SenseCraft プラットフォームから新しいコンテンツをチェックします。ブザーが一度鳴ってアクションを確認します。このボタンはデバイスのウェイクアップにもよく使用されます。デバイスがスリープ状態になり、ダッシュボードリフレッシュコマンドがすぐに利用できない場合に、このボタンを使用してデバイスをウェイクアップできます。
 
 - **長押し**（将来の機能）：音声入力モードを有効にします。
 
@@ -318,7 +319,7 @@ SenseCraft プラットフォームでダッシュボードを作成・保存し
 
 **ステップ 1.** 両方のナビゲーションボタン（左と右）を同時に 2 秒間長押しします。
 
-**ステップ 2.** デバイスが Wi-Fi 設定モードに入り、[ネットワーク設定](#ネットワーク-設定)の手順を再度実行して新しいネットワークに接続できます。
+**ステップ 2.** デバイスが Wi-Fi 設定モードに入り、[ネットワーク設定](#network-setup)の手順を再度実行して新しいネットワークに接続できます。
 
 ### LED インジケーター
 
@@ -340,7 +341,7 @@ SenseCraft プラットフォームでダッシュボードを作成・保存し
 - バッテリーレベルが 20% を下回ると、デバイスは右上角に低バッテリーアイコンを表示します
 
 :::tip
-バッテリー電圧を読み取るコードを自分で書く場合は、analogRead() 関数の前に 10ms の遅延を追加するとより正確になります。
+バッテリー電圧を読み取るコードを自分で書く場合、analogRead() 関数の前に 10ms の遅延を追加するとより正確になります。
 :::
 
 ### 拡張ピン

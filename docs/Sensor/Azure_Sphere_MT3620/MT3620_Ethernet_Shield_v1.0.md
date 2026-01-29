@@ -5,6 +5,7 @@ keywords:
 - Azure_Sphere_MT3620_Development_Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /MT3620_Ethernet_Shield_v1.0
+sku: 103990403
 last_update:
   date: 1/13/2023
   author: jianjing Huang

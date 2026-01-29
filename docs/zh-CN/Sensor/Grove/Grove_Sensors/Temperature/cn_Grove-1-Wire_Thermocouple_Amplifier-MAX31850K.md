@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K
+sku: 101020555
 last_update:
   date: 1/4/2023
   author: jianjing Huang

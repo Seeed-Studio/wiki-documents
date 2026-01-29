@@ -6,6 +6,7 @@ keywords:
 - Camera
 image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/top.webp
 slug: /getting_started_with_rs485_vision_ai_cam
+sku: 110992084
 sidebar_position: 4
 last_update:
   date: 12/26/2024

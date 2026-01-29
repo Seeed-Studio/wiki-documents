@@ -5,6 +5,7 @@ keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/RFbee_V1.1-Wireless_Arduino_compatible_node
+sku: 113050002
 last_update:
   date: 05/15/2025
   author: shuxu hu

@@ -5,6 +5,7 @@ keywords:
 - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Round_Force_Sensor_FSR402
+sku: 101020553
 last_update:
   date: 1/19/2023
   author: jianjing Huang

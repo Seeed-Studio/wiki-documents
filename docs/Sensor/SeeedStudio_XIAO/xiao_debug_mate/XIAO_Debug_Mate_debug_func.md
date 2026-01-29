@@ -3,6 +3,7 @@ description: This article explains how to use the XIAO Debug Mate’s DAPLink de
 title: DAPLink Debugger
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/15.webp
 slug: /xiao_debug_mate_debug
+sku: 109990585
 sidebar_position: 2
 last_update:
   date: 10/22/2025

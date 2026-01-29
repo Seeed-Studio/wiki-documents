@@ -7,6 +7,7 @@ keywords:
 - Positioning
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/IPS_For_SenseCAP_T1000_Traker
+sku: E2025081201,E2025081501
 last_update:
   date: 10/20/2023
   author: Jessie

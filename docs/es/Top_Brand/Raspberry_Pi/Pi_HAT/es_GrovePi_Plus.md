@@ -5,6 +5,7 @@ keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/GrovePi_Plus
+sku: 110060161, 103010002
 last_update:
   date: 1/11/2023
   author: jianjing Huang

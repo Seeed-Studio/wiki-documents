@@ -5,6 +5,7 @@ keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Raspberry_Pi_Motor_Driver_Board_v1.0
+sku: 103030031
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -5,6 +5,7 @@ keywords:
 - IOT_Button_For_AWS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SEEED-IOT-BUTTON-FOR-AWS
+sku: 102991334
 last_update:
   date: 1/13/2023
   author: jianjing Huang

@@ -5,6 +5,7 @@ keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/G1-1-4_Water_Flow_sensor
+sku: 314150004
 last_update:
   date: 05/15/2025
   author: shuxu hu

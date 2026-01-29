@@ -5,6 +5,7 @@ keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Grove-Gas_Sensor-O2-MIX8410
+sku: 101990680
 last_update:
   date: 1/3/2023
   author: shuxu hu

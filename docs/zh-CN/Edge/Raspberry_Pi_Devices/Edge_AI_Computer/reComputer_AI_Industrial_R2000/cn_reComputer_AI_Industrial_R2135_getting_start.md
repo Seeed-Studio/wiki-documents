@@ -7,6 +7,7 @@ keywords:
 - reComputer R2000
 image: https://files.seeedstudio.com/wiki/AI-box-cm5/r2135.webp
 slug: /cn/recomputer_ai_industrial_r2135_getting_start
+sku: 114993595,103990763,E2025081502,E2025081503
 last_update:
   date: 05/06/2025
   author: Jiahao Li

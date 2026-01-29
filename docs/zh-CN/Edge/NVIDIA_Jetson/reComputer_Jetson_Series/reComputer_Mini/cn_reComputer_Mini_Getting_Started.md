@@ -8,6 +8,7 @@ keywords:
   - robots
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini.webp
 slug: /cn/recomputer_jetson_mini_getting_started
+sku: 114993553,114993551,102111001,102110999,114993592,114993593
 last_update:
   date: 12/11/2024
   author: Youjiang
@@ -404,7 +405,7 @@ Jetpack6 镜像文件大小约为 **16.7GB**，下载时间约为 60 分钟。�
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/3.png"/>
 </div>
-
+<!-- 
 ### 使用单个命令刷写到 Jetson
 
 <details>
@@ -425,7 +426,7 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 免责声明：一键刷写脚本旨在使 jetpack 刷写更快。当前版本是测试版，可能存在许多问题。希望您能理解。如果出现刷写问题，请按照下面的 `逐步刷写设备` 进行操作，并在我们的 [Discord Jetson 频道](https://discord.com/channels/862602258452578314/930732339624026152) 中提供反馈。我们将及时修复这些问题，并在不久的将来改进此功能。
 :::
 
-</details>
+</details> -->
 
 ### 逐步刷写到 Jetson
 

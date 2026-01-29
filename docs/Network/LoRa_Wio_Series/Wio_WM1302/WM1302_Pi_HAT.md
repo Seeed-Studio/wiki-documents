@@ -6,6 +6,7 @@ keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /WM1302_Pi_HAT
+sku: 114992549,114992550,114992629,114992628,113100022,114992967,114992969,114992991,100021717
 last_update:
   date: 01/30/2023
   author: hushuxu
