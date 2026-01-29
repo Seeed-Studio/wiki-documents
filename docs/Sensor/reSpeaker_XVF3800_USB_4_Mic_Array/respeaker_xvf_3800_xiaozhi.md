@@ -229,16 +229,17 @@ After flashing, the device needs network configuration and cloud binding to use 
 2. Choose your 2.4GHz Wi-Fi (iPhone hotspot: enable "Max Compatibility").
 3. Enter the password and click "Connect".
 4. After "Login successful", the device will reboot in ~3 seconds.
-  ![configure-wifi](docs/images/respeaker-porting/1768962423910.png)
-  ![login-success](docs/images/respeaker-porting/1768962492814.png)
+  ![configure-wifi](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/wifilist.png)
+  ![login-success](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/wifisuccess.png)
 
 ### 4.3 Add the device to the management backend
 
 1. Get the device ID: after the device is online, wake it by saying "Hello Xiaozhi" and listen for the 6-digit verification code.
 2. Go to https://xiaozhi.me and sign up / sign in.
 3. In the "Agents" or device management section, select "Add device", enter the 6-digit device ID and submit.
-  ![login-success-2](image.png)
-  ![history-dialogs](image-1.png)
+  ![login-success-2](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/workbench.png)
+  ![history-dialogs](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/history_talk.png)
+
 
 Once completed, your reSpeaker–Xiaozhi device should be ready and operational.
 
@@ -257,4 +258,5 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
 
