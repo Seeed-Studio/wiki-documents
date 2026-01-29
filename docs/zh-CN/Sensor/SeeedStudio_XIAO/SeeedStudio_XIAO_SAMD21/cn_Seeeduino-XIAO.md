@@ -107,7 +107,7 @@ MCU 的工作电压为 3.3V。连接到通用 I/O 引脚的电压输入如果高
 |Reset          |                 |  RES	                                |	复位                  |
 |TX_LED         |                 |   PA19	                              |	TX_LED                 |
 |RX_LED         |                 | PA18	                                |	RX_LED                 |
-|CHARGE_LED     |          |        VBUS	                                |       	CHG-LED_红色      |
+|Power_LED     |          |        VBUS	                                |       	CHG-LED_红色      |
 |USER_LED       |                 |   PA17	                              |	用户指示灯_黄色      |
 
 ### **进入 Bootloader 模式**
