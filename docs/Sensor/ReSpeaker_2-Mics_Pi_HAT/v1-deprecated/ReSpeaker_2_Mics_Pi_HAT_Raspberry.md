@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.w
 slug: /ReSpeaker_2_Mics_Pi_HAT_Raspberry
 sku: 102110358
 last_update:
-  date: 1/11/2023
-  author: jianjing Huang
+  date: 1/29/2026
+  author: Mingxi
 ---
 
 :::caution
