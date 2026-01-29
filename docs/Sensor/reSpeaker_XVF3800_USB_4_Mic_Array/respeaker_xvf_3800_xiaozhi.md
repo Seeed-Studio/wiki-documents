@@ -230,7 +230,6 @@ After flashing, the device needs network configuration and cloud binding to use 
 3. Enter the password and click "Connect".
 4. After "Login successful", the device will reboot in ~3 seconds.
   ![configure-wifi](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/wifilist.png)
-  ![login-success](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/wifisuccess.png)
 
 ### 4.3 Add the device to the management backend
 
@@ -258,5 +257,6 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
 
 
