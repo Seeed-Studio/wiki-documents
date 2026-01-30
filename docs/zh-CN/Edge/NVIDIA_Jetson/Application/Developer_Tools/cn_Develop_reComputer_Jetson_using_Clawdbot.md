@@ -1,6 +1,6 @@
 ﻿---
-description: This wiki shows how to deploy and use Clawdbot on reComputer Jetson.
-title: Develop reComputer Jetson using Clawdbot
+description: 本 wiki 展示如何在 reComputer Jetson 上部署和使用 Clawdbot。
+title: 使用 Clawdbot 开发 reComputer Jetson
 keywords:
 - reComputer Super
 - Jetson
@@ -8,7 +8,7 @@ keywords:
 - Clawdbot
 - Qwen
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
-slug: /develop_recomputer_jetson_using_clawdbot
+slug: /cn/develop_recomputer_jetson_using_clawdbot
 sku: 114110314, 114090066
 last_update:
   date: 01/28/2026
@@ -16,16 +16,16 @@ last_update:
 ---
 
 
-# Develop reComputer Jetson using Clawdbot
+# 使用 Clawdbot 开发 reComputer Jetson
 
-## Introduction
+## 简介
 
 <div style={{textAlign: 'justify', textJustify: 'inter-word'}}>
 
-    Traditionally, developing on a Jetson edge device required a physical setup with a monitor, keyboard, and mouse. Even with remote SSH access, developers still depended on terminal-based workflows and additional tools for monitoring and deployment.
-    With Clawdbot, development becomes much simpler. Developers can now interact with the reComputer Jetson directly through a chat app like WhatsApp — sending messages to check device status, run commands, and debug scripts in a more convenient way.
+    传统上，在 Jetson 边缘设备上开发需要物理设置，包括显示器、键盘和鼠标。即使使用远程 SSH 访问，开发者仍然依赖于基于终端的工作流程和用于监控和部署的额外工具。
+    有了 Clawdbot，开发变得更加简单。开发者现在可以直接通过像 WhatsApp 这样的聊天应用与 reComputer Jetson 交互——发送消息来检查设备状态、运行命令，并以更便捷的方式调试脚本。
 
-    This wiki shows how to deploy and use Clawdbot on reComputer Jetson.
+    本 wiki 展示如何在 reComputer Jetson 上部署和使用 Clawdbot。
 </div>
 
 <div align="center">
@@ -33,15 +33,15 @@ last_update:
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops.png" />
 </div>
 
-## Prerequisites
+## 前提条件
 
 - reComputer Super J4012
-- USB Camera
+- USB 摄像头
 
 <table align="center">
     <tr>
         <th>reComputer Super J4012</th>
-        <th>USB Camera</th>
+        <th>USB 摄像头</th>
     </tr>
     <tr>
         <td>
@@ -59,41 +59,41 @@ last_update:
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Super-J4012-p-6443.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
         <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/X10-USB-wired-camera-p-6506.html">
-                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                    <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
                 </a>
             </div>
         </td>
     </tr>
 </table>
 
-## Hardware Connection
+## 硬件连接
 
-Connect the USB camera to a USB Type-A port on the Jetson device.
+将 USB 摄像头连接到 Jetson 设备上的 USB Type-A 端口。
 
-## Getting Started
+## 入门指南
 
-1. Install Clawdbot on the Jetson device  
-Open a terminal on the Jetson device and run:
+1. 在 Jetson 设备上安装 Clawdbot  
+在 Jetson 设备上打开终端并运行：
 
 ```bash
 curl -fsSL https://molt.bot/install.sh | bash
 ```
 
-2. Configure Clawdbot  
-After installation, the setup page opens automatically. Follow the terminal prompts and pay attention to:
+2. 配置 Clawdbot  
+安装后，设置页面会自动打开。按照终端提示操作，注意：
 
-- Selecting the LLM and entering the API Key
-- Choosing the interaction channel (WhatsApp in this example)
+- 选择 LLM 并输入 API Key
+- 选择交互渠道（本示例中使用 WhatsApp）
 
-3. Start the Clawdbot AI Agent  
-If everything is configured correctly, the agent starts automatically. Then open the WebUI in the Jetson device browser:  
+3. 启动 Clawdbot AI 代理  
+如果一切配置正确，代理会自动启动。然后在 Jetson 设备浏览器中打开 WebUI：  
 `http://127.0.0.1:18789`
 
 <div align="center">
@@ -101,19 +101,19 @@ If everything is configured correctly, the agent starts automatically. Then open
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/webui.png" />
 </div>
 
-Now you can open WhatsApp on your phone and control the reComputer Jetson by sending messages to yourself.
+现在您可以在手机上打开 WhatsApp，通过向自己发送消息来控制 reComputer Jetson。
 
-## Effect Demonstration
+## 效果演示
 
-In the demo video, we used a mobile chat application to check the status of the Jetson device and developed a camera debugging script through chat-based interaction.
+在演示视频中，我们使用移动聊天应用检查了 Jetson 设备的状态，并通过基于聊天的交互开发了一个摄像头调试脚本。
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/9bQcx7G0CiU" title="Develop reComputer Jetson using Clawdbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Tech Support & Product Discussion
+## 技术支持与产品讨论
 
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
