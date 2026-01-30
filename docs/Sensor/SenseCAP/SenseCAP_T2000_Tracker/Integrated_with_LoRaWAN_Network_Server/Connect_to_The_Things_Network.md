@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/sensecap_t2000_connect_to_ttn.png
 slug: /sensecap_t2000_tracker_ttn
 last_update:
-  date: 1/6/2026
+  date: 1/28/2026
   author: Janet
 ---
 
@@ -48,7 +48,32 @@ After the application was created, click `Register end device`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_register_enddevice.png" alt="pir" width={800} height="auto" /></p>
 
-Choose the `Enter end device specifics manually input method`. And please refer to the information below to ensure entering the following information correctly.
+There are two ways for users to register an end device:
+- Select the end device in the LoRaWAN Device Repository
+- Enter end device specifics manually
+
+#### 1. Select the end device in the LoRaWAN Device Repository
+
+Choose the `Select the end device in the LoRaWAN Device Repository`. <br />
+Select `SenseCAP` and select `T2000 Tracker A/B/C` Model. <br />
+Keep the Software and Hardware version as default, and select the corresponding `Profile(Region)` according to the band setting of the device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_register_enddevice2.png" alt="pir" width={800} height="auto" /></p>
+
+Choose an appropriate Frequency Plan. Your device and gateway must use the same frequency plan to communicate. <br />
+Paste the Device EUI / AppEUI / AppKey from the SenseCraft App, and then click `Register end device`.
+
+:::note
+The "JoinEUI" above is simliar to "AppEUI".
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_enter_infor2.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_device_activity2.png" alt="pir" width={800} height="auto" /></p>
+
+#### 2. Enter end device specifics manually
+
+Alternatively, you can choose the `Enter end device specifics manually`. And please refer to the information below to ensure entering the following information correctly.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_manually.png" alt="pir" width={800} height="auto" /></p>
 
@@ -64,11 +89,7 @@ Paste the Device EUI / AppEUI / AppKey from the SenseCraft App, and then click `
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_enter_infor.png" alt="pir" width={800} height="auto" /></p>
 
-:::note
-The "JoinEUI" above is simliar to "AppEUI".
-:::
-
-### Step 3: Upload the Payload Formatter
+Then upload the Payload Formatter.
 
 Navigate to Payload Formatters page, choose `Custom Javascript Formatter`.
 Fill in the Formatter code with the decoder below and save changes:
@@ -787,7 +808,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_decoder.png" alt="pir" width={800} height="auto" /></p>
 
-### Step 4: Check the Data
+### Step 3: Check the Data
 
 When the device tries to connect to the network, the green breathing light will flash. If the device joins the network successfully, the green light will flash 5 times quickly.
 
@@ -797,6 +818,8 @@ You can check the device's activity in the Application overview page.
 
 Click the end device, then check the `Live data`.
 When you see the message below, your device has successfully join the network.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_device_activity2.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_join_accept.png" alt="pir" width={800} height="auto" /></p>
 

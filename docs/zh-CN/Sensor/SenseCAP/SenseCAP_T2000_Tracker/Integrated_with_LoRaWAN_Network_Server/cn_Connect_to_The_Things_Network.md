@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/sensecap_t2000_connect_to_ttn.png
 slug: /cn/sensecap_t2000_tracker_ttn
 last_update:
-  date: 1/6/2026
+  date: 1/28/2026
   author: Janet
 ---
 
@@ -16,7 +16,7 @@ last_update:
 
 ## 设备配置
 
-在连接到 TTS 之前，您需要在 SenseCraft APP 上配置设备的基本参数，查看[快速入门](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T2000_tracker/)了解更多详情。
+在连接到 TTS 之前，您需要在 SenseCraft APP 上配置设备的基本参数，查看[快速开始](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T2000_tracker/)了解更多详情。
 
 将平台设置为 The Things Network，然后复制 Device EUI / AppEUI / AppKey。然后在 The Things Stack 中手动添加设备。
 
@@ -48,11 +48,36 @@ The Things Stack(TTS) 是一个企业级 LoRaWAN 网络服务器，基于开源�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_register_enddevice.png" alt="pir" width={800} height="auto" /></p>
 
-选择 `Enter end device specifics manually input method`。请参考以下信息确保正确输入以下信息。
+用户有两种方式注册终端设备：
+- 在 LoRaWAN Device Repository 中选择终端设备
+- 手动输入终端设备详细信息
+
+#### 1. 在 LoRaWAN Device Repository 中选择终端设备
+
+选择 `Select the end device in the LoRaWAN Device Repository`。<br />
+选择 `SenseCAP` 并选择 `T2000 Tracker A/B/C` 型号。<br />
+保持软件和硬件版本为默认值，并根据设备的频段设置选择相应的 `Profile(Region)`。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_register_enddevice2.png" alt="pir" width={800} height="auto" /></p>
+
+选择合适的频率计划。您的设备和网关必须使用相同的频率计划才能通信。<br />
+从 SenseCraft App 粘贴 Device EUI / AppEUI / AppKey，然后点击 `Register end device`。
+
+:::note
+上面的 "JoinEUI" 类似于 "AppEUI"。
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_enter_infor2.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_device_activity2.png" alt="pir" width={800} height="auto" /></p>
+
+#### 2. 手动输入终端设备详细信息
+
+或者，您可以选择 `Enter end device specifics manually`。请参考以下信息确保正确输入以下信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_manually.png" alt="pir" width={800} height="auto" /></p>
 
-选择合适的频率计划。您的设备和网关必须使用相同的频率计划进行通信。
+选择合适的频率计划。您的设备和网关必须使用相同的频率计划才能通信。
 
 :::info
 为您的特定设备选择 LoRaWAN Version 和 Regional Parameters version 字段。<br />
@@ -64,14 +89,10 @@ The Things Stack(TTS) 是一个企业级 LoRaWAN 网络服务器，基于开源�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_enter_infor.png" alt="pir" width={800} height="auto" /></p>
 
-:::note
-上面的 "JoinEUI" 类似于 "AppEUI"。
-:::
-
-### 步骤 3：上传载荷格式化器
+然后上传 Payload Formatter。
 
 导航到 Payload Formatters 页面，选择 `Custom Javascript Formatter`。
-使用下面的解码器填写格式化器代码并保存更改：
+使用下面的解码器填写 Formatter 代码并保存更改：
 
 <details>
 
@@ -787,20 +808,22 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_decoder.png" alt="pir" width={800} height="auto" /></p>
 
-### 步骤 4：检查数据
+### 步骤 3：检查数据
 
 当设备尝试连接网络时，绿色呼吸灯会闪烁。如果设备成功加入网络，绿灯会快速闪烁 5 次。
 
-您可以在 Application overview 页面检查设备的活动。
+您可以在 Application 概览页面查看设备的活动。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_device_activity.png" alt="pir" width={800} height="auto" /></p>
 
-点击终端设备，然后检查 `Live data`。
+点击终端设备，然后查看 `Live data`。
 当您看到下面的消息时，您的设备已成功加入网络。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_device_activity2.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_join_accept.png" alt="pir" width={800} height="auto" /></p>
 
-然后您可以在 TTS 控制台上检查数据。
+然后您可以在 TTS 控制台上查看数据。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_payload.png" alt="pir" width={800} height="auto" /></p>
 
