@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-27 10:20:09 (北京时间)
-// 多语言页面: 2125 个
+// 生成时间: 2026-01-30 10:54:13 (北京时间)
+// 多语言页面: 2130 个
 
 (function() {
   'use strict';
@@ -600,6 +600,12 @@
     "ja"
   ],
   "/yolov11_with_depth_camera": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_robotics_yolov26_dual_camera_system": [
     "cn",
     "en",
     "es",
@@ -2603,7 +2609,13 @@
     "es",
     "ja"
   ],
-  "/ai_remote_wireless_monitor_system_with_wifi_haLow": [
+  "/ai_human_detection_meshtastic_broadcast": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_remote_wireless_monitor_system": [
     "cn",
     "en",
     "es",
@@ -2832,6 +2844,12 @@
     "ja"
   ],
   "/getting_started_with_reterminal_e1002": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_reterminal_e1004": [
     "cn",
     "en",
     "es",
@@ -8397,6 +8415,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf_3800_xiaozhi": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/XIAO-Kit-Courses": [
     "cn",
     "en",
@@ -9208,6 +9232,12 @@
     "ja"
   ],
   "/xiao_nrf54l15_sense_power_consumptions": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_nrf54l15_zigbee": [
     "cn",
     "en",
     "es",
