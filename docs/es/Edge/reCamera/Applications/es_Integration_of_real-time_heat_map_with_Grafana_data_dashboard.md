@@ -1,5 +1,5 @@
 ---
-description: Usa reCamera para lograr mapa de calor en tiempo real + procesamiento de desenfoque local + integración del panel de datos de Grafana
+description: Usa reCamera para lograr mapa de calor en tiempo real + procesamiento de desenfoque local + integración con panel de datos de Grafana
 title: Integración de mapa de calor en tiempo real con panel de datos de Grafana
 keywords:
   - reCamera
@@ -96,13 +96,13 @@ Luego abre una terminal cmd e ingresa el siguiente comando para consultar la IP 
 ipconfig
 ```
 
-Luego ingresa la IP consultada en el navegador, luego agrega el puerto 8086 para ingresar a la interfaz principal de InfluxDB.
+Luego ingresa la IP consultada en el navegador, después agrega el puerto 8086 para ingresar a la interfaz principal de InfluxDB.
 
 Por ejemplo, mi IP es 192.168.7.183, entonces ingreso 192.168.7.183:8086 en el navegador
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_2.png" /></div>
 
-Luego haz clic en "Get Started" y completa tu propia información. Nota que en este paso, ¡asegúrate de recordar el nombre de usuario y contraseña que estableciste!
+Luego haz clic en "Get Started" y completa tu propia información. Nota que en este paso, ¡¡asegúrate de recordar el nombre de usuario y contraseña que estableciste!!
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_3.png" /></div>
 
@@ -162,9 +162,9 @@ Puede volverse inefectivo después de múltiples reinicios y necesita ser restab
 
 ### 2.2 Instalar programas desde las plataformas SenseCraft en reCamera
 
-Ingresa a la plataforma sensecraft-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera), encuentra la Demo llamada "**Real-time heat map local blur processing Grafa**" y despliégala en tu reCamera
+Ve a la [plataforma SenseCraft](https://sensecraft.seeed.cc/ai/home) - Application - cuadro de búsqueda e ingresa "Real-time Crowd Heatmap" para buscar, encuentra la aplicación llamada "Real-time Crowd Heatmap" y despliégala en tu reCamera.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_8.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_92.png" /></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_9.png" /></div>
 
@@ -174,7 +174,7 @@ Después de ingresar al espacio de trabajo, aparecerá esta advertencia. Esto es
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_10.png" /></div>
 
-Conecta reCamera a la red (¡asegúrate de que esté conectada a la misma red que tu computadora! Esto es muy importante más tarde)
+Conecta reCamera a la red (¡¡asegúrate de que esté conectada a la misma red que tu computadora!! Esto es muy importante más tarde)
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_11.png" /></div>
 
@@ -192,13 +192,17 @@ La instalación toma mucho tiempo, por favor espera pacientemente, después de q
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_15.png" /></div>
 
-### 2.4 Configurar el Nodo InfluxDB
+### 2.4 Configurar Nodo InfluxDB
 
 En este momento, también necesitamos agregar alguna información de configuración al nodo llamado Write Person Count para encontrar este nodo.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_16.png" /></div>
 
-Haz doble clic para abrir el panel de configuración, luego haz clic en el pequeño ícono de lápiz detrás del servidor
+Haz doble clic para abrir el panel de configuración, luego haz clic en el pequeño ícono de lápiz detrás del servidor  
+
+:::note
+Antes de esto, ¡¡¡recuerda que el contenido en las opciones "Organization" y "Bucket" debajo del pequeño lápiz es el mismo que lo que configuraste en InfluxDB!!! "Organization" es tu nombre de usuario en InfluxDB, y "Bucket" es el nombre de la base de datos que creaste.
+:::
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_17.png" /></div>
 
@@ -206,29 +210,29 @@ Después de hacer clic en el pequeño lápiz, necesitamos completar la URL y el 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_18.png" /></div>
 
-La URL aquí es para completar el enlace de la página web de InfluxDB que ingresamos en el primer paso. Por ejemplo, si tu página web es 192.168.7.183:8086, entonces puedes completar `http://192.168.7.183:8086` para la URL.
+La URL aquí es para llenar el enlace de la página web de InfluxDB que ingresamos en el primer paso. Por ejemplo, si tu página web es 192.168.7.183:8086, entonces puedes llenar `http://192.168.7.183:8086` para la URL.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_19.png" /></div>
 
-Luego completa el Token, que son los API Tokens en la página web de InfluxDB de la que hablamos al principio.
+Luego llena el Token, que es el API Tokens en la página web de InfluxDB de la que hablamos al principio.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_20.png" /></div>
 
-Hacemos clic en Copy to Clipboard y completamos el Token copiado en la configuración.
+Hacemos clic en Copy to Cilpboard y llenamos el Token copiado en la configuración.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_21.png" /></div>
 
-Después de completar, haz clic en Update en la esquina superior derecha. No cambies otras configuraciones.
+Después de llenar, haz clic en Update en la esquina superior derecha. No cambies otras configuraciones.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_22.png" /></div>
 
-Luego hacemos clic en deployment en la esquina superior derecha para que el cambio que acabamos de hacer surta efecto. Aparece una ventana emergente de advertencia que podemos cerrar.
+Luego hacemos clic en deployment en la esquina superior derecha para hacer que el cambio que acabamos de hacer tome efecto. Hay una ventana emergente de advertencia y podemos cerrarla.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_23.png" /></div>
 
 ### 2.5 Ver datos de InfluxDB
 
-En este punto podemos ingresar a la interfaz de InfluxDB para ver si aparecen los datos, si es exitoso, haz clic en Submit, verás el gráfico de líneas de datos, aquí consultamos el número de datos
+En este punto podemos entrar a la interfaz de InfluxDB para ver si aparecen los datos, si es exitoso, haz clic en Submit, verás el gráfico de líneas de datos, aquí consultamos el número de datos
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_24.png" /></div>
 
@@ -240,9 +244,13 @@ En este punto podemos ingresar a la interfaz de InfluxDB para ver si aparecen lo
 
 Ingresa al sitio web oficial de Grafana [Grafana get started | Cloud, Self-managed, Enterprise](https://grafana.com/get/) para descargar el paquete de instalación localmente. La versión que descargué aquí es 12.3.0
 
+:::note
+¡Recuerda, Grafana debe instalarse en la unidad C aquí!!! De lo contrario, no podrás modificar su archivo de configuración más tarde.
+:::
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_25.png" /></div>
 
-Después de descargar e instalar, Grafana debería ejecutarse automáticamente en segundo plano, puedes abrir los "servicios" de la computadora para ver si se está ejecutando
+Después de descargar e instalar, Grafana debería ejecutarse automáticamente en segundo plano, puedes abrir los "servicios" de la computadora para ver si está ejecutándose
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_26.png" /></div>
 
@@ -254,7 +262,7 @@ Si tu dispositivo es un dispositivo basado en AMD que ejecuta el sistema Linux, 
 
 Luego, descomprime el archivo tar.gz que has descargado.
 
-### 3.2 Modificar defaults.ini para permitir que Grafana incruste HTML
+### 3.2 Modificar defaults.ini para habilitar que Grafana incruste HTML
 
 #### 3.2.1 Sistema Windows
 
@@ -262,7 +270,7 @@ Navega al directorio "grafana/conf", localiza el archivo "defaults.ini", y haz c
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_80.png" /></div>
 
-Presiona Ctrl + F, busca "disable_sanitize_html", cambia el original "disable_sanitize_html = false" a "disable_sanitize_html = true" para permitir que Grafana incruste html. Después de hacer la modificación, guarda y sal.
+Presiona Ctrl + F, busca "disable_sanitize_html", cambia el original "disable_sanitize_html = false" a "disable_sanitize_html = true" para habilitar que Grafana incruste html. Después de hacer la modificación, guarda y sal.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_81.png" /></div>
 
@@ -272,15 +280,15 @@ Para el sistema Linux, defaults.ini también se encuentra en el directorio conf.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_82.png" /></div>
 
-Haz clic derecho y selecciona abrir con una aplicación similar al Bloc de notas. Luego, encuentra esta oración en la imagen y cambia el "false" original a "true".
+Haz clic derecho y selecciona abrir con una aplicación similar al Bloc de notas. Luego, encuentra esta oración en la imagen y cambia el original "false" a "true".
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_83.png" /></div>
 
 ### 3.3 Iniciar Grafana
 
-Para el sistema Windows, si has instalado Grafana, solo necesitas verificar en la sección "Servicios" si Grafana se está ejecutando como se describe en el Paso 3.1.1. Generalmente, Grafana se iniciará automáticamente después de la instalación.  
+Para el sistema Windows, si has instalado Grafana, solo necesitas verificar en la sección "Servicios" si Grafana está ejecutándose como se describe en el Paso 3.1.1. Generalmente, Grafana se iniciará automáticamente después de la instalación.  
 
-Para el sistema Linux, Grafana necesita iniciarse manualmente. Después de ingresar al directorio del archivo grafana descomprimido, ejecuta el siguiente comando:
+Para el sistema Linux, Grafana necesita iniciarse manualmente. Después de entrar al directorio del archivo grafana descomprimido, ejecuta el siguiente comando:
 
 ```bash
 ./bin/grafana-server
@@ -290,7 +298,7 @@ Para el sistema Linux, Grafana necesita iniciarse manualmente. Después de ingre
 
 ### 3.4 Configurar fuente de datos
 
-Después de confirmar que Grafana se está ejecutando, en este punto, puedes acceder a la interfaz local de Grafana visitando `http://localhost:3000` en el navegador para la configuración. Primero, necesitas iniciar sesión. El nombre de usuario y contraseña iniciales son ambos admin. Después de iniciar sesión, el sistema te pedirá que cambies tu nueva contraseña. Por favor recuerda tu contraseña. La cuenta seguirá siendo admin y no cambiará.
+Después de confirmar que Grafana está ejecutándose, en este punto, puedes acceder a la interfaz local de Grafana visitando `http://localhost:3000` en el navegador para la configuración. Primero, necesitas iniciar sesión. El nombre de usuario y contraseña iniciales son ambos admin. Después de iniciar sesión, el sistema te pedirá que cambies tu nueva contraseña. Por favor recuerda tu contraseña. La cuenta seguirá siendo admin y no cambiará.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_91.png" /></div>
 
@@ -304,11 +312,11 @@ Luego selecciona "InfluxDB"
 
 A continuación, necesitas hacer las siguientes seis revisiones:
 (1) "Query language" seleccionado como "Flux"
-(2) Ingresa la URL de tu página web de base de datos, que es el enlace a la página web de InfluxDB que accediste en el primer paso. Por ejemplo, si la dirección de tu página web es 192.168.7.183:8086, entonces la URL que debes completar es `http://192.168.7.183:8086`.
+(2) Ingresa la URL de tu página web de base de datos, que es el enlace a la página web de InfluxDB que accediste en el primer paso. Por ejemplo, si la dirección de tu página web es 192.168.7.183:8086, entonces la URL que debes llenar es `http://192.168.7.183:8086`.
 (3) Deshabilita la opción "Basic auth"
-(4) "Organization" debe completarse con el nombre de usuario que usaste al registrar la base de datos.
-(5) Token debe completarse con los API Tokens mencionados en la página web de InfluxDB como discutimos en el paso 2.3.
-(6) "Default Bucket" debe completarse con el nombre de la base de datos que has creado.  
+(4) "Organization" debe llenarse con el nombre de usuario que usaste al registrar la base de datos.
+(5) Token debe llenarse con los API Tokens mencionados en la página web de InfluxDB como discutimos en el paso 2.3.
+(6) "Default Bucket" debe llenarse con el nombre de la base de datos que has creado.  
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_85.png" /></div>
 
@@ -330,7 +338,7 @@ Selecciona Import dashboard
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_29.png" /></div>
 
-Por favor descarga el proyecto que subí a [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). Después de descargar y extraer, localiza la "Grafana Json File" que contiene "reCamera Heatmap-1766213863140.json" en ella. Este archivo es el que necesitamos importar a Grafana.
+Por favor descarga el proyecto que subí a [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). Después de descargar y extraer, localiza el "Grafana Json File" que contiene "reCamera Heatmap-1766213863140.json" en él. Este archivo es el que necesitamos importar a Grafana.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_30.png" /></div>
 
@@ -340,11 +348,11 @@ Después de importar, deberías poder ver el siguiente efecto (si no ves la sigu
 
 ## 4. Uso del software de calibración python
 
-Recuerda primero descargar mi proyecto en [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). Después de extraer y abrir, localiza la carpeta llamada "Heatmap area calibration", que contiene tres archivos: calibration_tool.py es el programa de calibración, R1.jpg es la imagen original capturada por reCamera, y R2.png es el plano de la habitación que dibujé.
+Recuerda primero descargar mi proyecto en [GitHub](https://github.com/xr686/reCamera-with-Heatmap.git). Después de extraer y abrir, localiza la carpeta llamada "Heatmap area calibration", que contiene tres archivos: calibration_tool.py es el programa de calibración, R1.jpg es la imagen original capturada por reCamera, y R2.png es el plano del piso de la habitación que dibujé.
 
 ### 4.1 Obtener una imagen de resolución nativa actual de la reCamera
 
-¡Obtener la imagen de resolución original es importante! Aunque los pasos serán más problemáticos, pero afecta directamente la precisión de posicionamiento del mapa de calor. ¡Por favor ten paciencia con la operación!
+¡¡Obtener la imagen de resolución original es importante!! Aunque los pasos serán más problemáticos, pero afecta directamente la precisión de posicionamiento del mapa de calor! ¡Por favor ten paciencia con la operación!
 
 #### 4.1.1 Usar reCamera para tomar fotos
 
@@ -374,7 +382,7 @@ Haz clic en Terminal e ingresa la contraseña de la cuenta de reCamera para inic
 
 Luego ingresa los siguientes dos comandos en orden:
 
-Entrar a la carpeta Images
+Ingresar a la carpeta Images
 
 ```bash
 cd / && cd userdata/Images/
@@ -386,7 +394,7 @@ Listar Archivos
 ls
 ```
 
-Entonces deberías ver que el sistema lista algunos nombres de archivos de imagen, que son las imágenes que acaba de tomar el nodo de captura.
+Entonces deberías ver que el sistema lista algunos nombres de archivos de imagen, que son las imágenes que acabas de tomar con el nodo de captura.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_37.png" /></div>
 
@@ -394,19 +402,19 @@ Regresa a la interfaz de configuración anterior y abre la conexión ssh.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_38.png" /></div>
 
-Luego presiona Win R en el teclado, ingresa cmd, y después ingresa en la terminal
+Luego presiona Win R en el teclado, ingresa cmd, y luego ingresa en la terminal
 
 ```bash
 scp -r recamera@<reCamera IP>:/userdata/Images "The folder path of the 'Heatmap area calibration' file that you downloaded from GitHub after decompression"
 ```
 
-La reCamera de estas IPs se puede encontrar en la configuración de red
+Las IPs de reCamera se pueden encontrar en la configuración de red
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_39.png" /></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_40.png" /></div>
 
-La ruta de la carpeta del archivo 'Heatmap area calibration' que descargaste de GitHub después de descomprimirlo, primero entramos a Heatmap area calibration, hacemos clic en el cuadro de ruta arriba de la carpeta, y copiamos la ruta.
+La ruta de la carpeta del archivo 'Heatmap area calibration' que descargaste de GitHub después de descomprimirlo, primero ingresamos a Heatmap area calibration, hacemos clic en el cuadro de ruta arriba de la carpeta y copiamos la ruta.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_41.png" /></div>
 
@@ -444,7 +452,7 @@ Puedes usar las herramientas de dibujo propias de Windows para dibujar y guardar
 
 ### 4.3 Uso del Procedimiento de Calibración
 
-El programa de calibración es el programa calibration_tool.py bajo la ruta Heatmap area calibration.
+El programa de calibración es el programa calibration_tool.py de Heatmap bajo la ruta area calibration.
 
 Uso Pycharm aquí por defecto. Antes de usarlo, necesito instalar la biblioteca OpenCV de Python.
 
@@ -456,7 +464,7 @@ Hay dos puntos a tener en cuenta: primero, las dos imágenes necesitan estar baj
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_48.png" /></div>
 
-Después de que el programa se ejecute, aparecerá una ventana para mostrar tu captura de pantalla de la cámara. En este momento, necesitas hacer clic en el área efectiva con el mouse. La secuencia de clics es muy importante: por favor haz clic en las cuatro esquinas del área que quieres seleccionar en la secuencia horaria de "superior izquierda-> superior derecha-> inferior derecha-> inferior izquierda". Por ejemplo, si solo quieres mostrar la superficie de la mesa, haz clic en las cuatro esquinas de la mesa. Después de 4 puntos, presiona cualquier tecla en el teclado (como espacio) para entrar al siguiente paso.
+Después de que el programa se ejecute, aparecerá una ventana para mostrar tu captura de pantalla de la cámara. En este momento, necesitas hacer clic en el área efectiva con el mouse. La secuencia de clics es muy importante: por favor haz clic en las cuatro esquinas del área que quieres seleccionar en la secuencia horaria de "superior izquierda-> superior derecha-> inferior derecha-> inferior izquierda". Por ejemplo, si solo quieres mostrar la superficie de la mesa, haz clic en las cuatro esquinas de la mesa. Después de 4 puntos, presiona cualquier tecla en el teclado (como espacio) para ingresar al siguiente paso.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_49.png" /></div>
 
@@ -514,7 +522,7 @@ REFRESH_INTERVAL se refiere al número de milisegundos para actualizar, DATA_RAN
 
 Hay dos modos que se pueden configurar:
 
-(1) "modo en tiempo real": las coordenadas térmicas se actualizarán y limpiarán las coordenadas anteriores en tiempo real sin superposición acumulativa. Para realizar el modo en tiempo real, necesitas configurar el DATA_RANGE a un tiempo corto. Por ejemplo, mi "-3s" predeterminado significa consultar los datos de coordenadas térmicas en los últimos 3s, por ejemplo, el programa ha estado ejecutándose durante 10s ahora, entonces cuando configuras el DATA_RANGE a -3s, los datos de coordenadas mostrados por el diagrama térmico son los datos del segundo 8-10, y los datos de coordenadas de los segundos 1-7 anteriores no se mostrarán;
+(1) "modo en tiempo real": las coordenadas térmicas se actualizarán y limpiarán las coordenadas anteriores en tiempo real sin superposición acumulativa. Para realizar el modo en tiempo real, necesitas configurar el DATA_RANGE a un tiempo corto. Por ejemplo, mi predeterminado "-3s" y "-3s" significa consultar los datos de coordenadas térmicas en los últimos 3s, por ejemplo, el programa ha estado ejecutándose durante 10s ahora, entonces cuando configuras el DATA_RANGE a -3s, los datos de coordenadas mostrados por el diagrama térmico son los datos del 8º-10º segundo, y los datos de coordenadas de los 1-7s anteriores no se mostrarán;
 
 (2) "Modo Acumulativo": Las coordenadas térmicas se actualizarán en tiempo real pero las coordenadas anteriores se superpondrán. Para realizar el modo acumulativo, necesitas configurar el DATA_RANGE a un tiempo más largo, por ejemplo, puedes configurar el DATA_RANGE a "-1h", entonces el diagrama térmico mostrará acumulativamente los datos en la última 1h. Después de que el programa se ejecute durante 2 horas, ahora se muestran los datos de la segunda hora, los datos de la primera hora no se muestran.
 
@@ -534,7 +542,7 @@ Este parámetro también se presenta en el paso de "4.1.1 usar reCamera para tom
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_61.png" /></div>
 
-Este es el código generado en la consola después de que el programa python se ejecute en el paso anterior "uso del programa de calibración 4.3". Reemplaza este código
+Este es el código generado en la consola después de que el programa de Python se ejecute en el paso anterior "uso del programa de calibración 4.3". reemplaza este código
 
 #### 5.1.6 Umbral Térmico
 
@@ -604,9 +612,9 @@ Este es un fenómeno normal, porque habrá interferencia de ruido, y el valor vo
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_67.png" /></div>
 
-### Qué significa "tiempo de funcionamiento continuo" en el panel de Grafana
+### Qué significa "tiempo de ejecución continua" en el panel de Grafana
 
-El "tiempo de funcionamiento continuo" aquí se refiere a cuánto tiempo ha estado funcionando la base de datos desde el primer día hasta ahora, porque establecí el tiempo de retención de datos de la base de datos reCamera en InfluxDB en 7 días, por lo que se limpiará automáticamente y reiniciará el tiempo después de siete días, aquí puedes establecer libremente el tiempo de almacenamiento de datos de cada base de datos en InfluxDB.
+El "tiempo de ejecución continua" aquí se refiere a cuánto tiempo ha estado ejecutándose la base de datos desde el primer día hasta ahora, porque establecí el tiempo de retención de datos de la base de datos reCamera en InfluxDB en 7 días, por lo que se limpiará automáticamente y reiniciará el tiempo después de siete días, aquí puedes establecer libremente el tiempo de almacenamiento de datos de cada base de datos en InfluxDB.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_68.png" /></div>
 
@@ -626,7 +634,7 @@ Sí, necesitas seleccionar los datos que necesitas en la interfaz InfluxDB Explo
 (4) La IP en el código HTML del mapa de calor
 
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
