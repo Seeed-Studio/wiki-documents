@@ -3930,6 +3930,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Develop_reComputer_Jetson_using_Clawdbot',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Gapi-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/alwaysAI-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Cochl.Sense-Jetson-Getting-Started',
