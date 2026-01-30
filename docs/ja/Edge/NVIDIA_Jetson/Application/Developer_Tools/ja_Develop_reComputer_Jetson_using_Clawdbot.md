@@ -9,6 +9,7 @@ keywords:
 - Qwen
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
 slug: /ja/develop_recomputer_jetson_using_clawdbot
+sku: 114110314, 114090066
 last_update:
   date: 01/28/2026
   author: Youjiang
@@ -28,12 +29,12 @@ last_update:
 </div>
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops.png" />
 </div>
 
-
 ## 前提条件
+
 - reComputer Super J4012
 - USBカメラ
 
@@ -87,6 +88,7 @@ curl -fsSL https://molt.bot/install.sh | bash
 
 2. Clawdbotの設定  
 インストール後、セットアップページが自動的に開きます。ターミナルのプロンプトに従い、以下に注意してください：
+
 - LLMの選択とAPIキーの入力
 - インタラクションチャンネルの選択（この例ではWhatsApp）
 
@@ -95,12 +97,11 @@ curl -fsSL https://molt.bot/install.sh | bash
 `http://127.0.0.1:18789`
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/webui.png" />
 </div>
 
 これで、スマートフォンでWhatsAppを開き、自分自身にメッセージを送信してreComputer Jetsonを制御できます。
-
 
 ## 効果のデモンストレーション
 
@@ -110,17 +111,16 @@ curl -fsSL https://molt.bot/install.sh | bash
 <iframe width="800" height="450" src="https://www.youtube.com/embed/9bQcx7G0CiU" title="Develop reComputer Jetson using Clawdbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
 ## 技術サポートと製品ディスカッション
 
 弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

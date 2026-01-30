@@ -9,6 +9,7 @@ keywords:
 - Qwen
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
 slug: /develop_recomputer_jetson_using_clawdbot
+sku: 114110314, 114090066
 last_update:
   date: 01/28/2026
   author: Youjiang
@@ -28,12 +29,12 @@ last_update:
 </div>
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops.png" />
 </div>
 
-
 ## Prerequisites
+
 - reComputer Super J4012
 - USB Camera
 
@@ -87,6 +88,7 @@ curl -fsSL https://molt.bot/install.sh | bash
 
 2. Configure Clawdbot  
 After installation, the setup page opens automatically. Follow the terminal prompts and pay attention to:
+
 - Selecting the LLM and entering the API Key
 - Choosing the interaction channel (WhatsApp in this example)
 
@@ -95,12 +97,11 @@ If everything is configured correctly, the agent starts automatically. Then open
 `http://127.0.0.1:18789`
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/webui.png" />
 </div>
 
 Now you can open WhatsApp on your phone and control the reComputer Jetson by sending messages to yourself.
-
 
 ## Effect Demonstration
 
@@ -110,17 +111,16 @@ In the demo video, we used a mobile chat application to check the status of the 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/9bQcx7G0CiU" title="Develop reComputer Jetson using Clawdbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

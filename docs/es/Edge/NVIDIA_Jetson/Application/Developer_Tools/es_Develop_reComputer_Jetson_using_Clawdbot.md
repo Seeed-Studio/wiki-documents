@@ -9,6 +9,7 @@ keywords:
 - Qwen
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
 slug: /es/develop_recomputer_jetson_using_clawdbot
+sku: 114110314, 114090066
 last_update:
   date: 01/28/2026
   author: Youjiang
@@ -28,12 +29,12 @@ last_update:
 </div>
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops.png" />
 </div>
 
-
 ## Prerrequisitos
+
 - reComputer Super J4012
 - Cámara USB
 
@@ -87,6 +88,7 @@ curl -fsSL https://molt.bot/install.sh | bash
 
 2. Configurar Clawdbot  
 Después de la instalación, la página de configuración se abre automáticamente. Sigue las indicaciones de la terminal y presta atención a:
+
 - Seleccionar el LLM e ingresar la API Key
 - Elegir el canal de interacción (WhatsApp en este ejemplo)
 
@@ -95,12 +97,11 @@ Si todo está configurado correctamente, el agente se inicia automáticamente. L
 `http://127.0.0.1:18789`
 
 <div align="center">
-    <img width={900} 
+    <img width={900}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/webui.png" />
 </div>
 
 Ahora puedes abrir WhatsApp en tu teléfono y controlar el reComputer Jetson enviándote mensajes a ti mismo.
-
 
 ## Demostración del Efecto
 
@@ -110,17 +111,16 @@ En el video de demostración, usamos una aplicación de chat móvil para verific
 <iframe width="800" height="450" src="https://www.youtube.com/embed/9bQcx7G0CiU" title="Desarrollar reComputer Jetson usando Clawdbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
 ## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

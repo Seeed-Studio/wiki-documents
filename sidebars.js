@@ -9182,6 +9182,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Develop_reComputer_Jetson_using_Clawdbot',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Gapi-Jetson-Getting-Started',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_alwaysAI-Jetson-Getting-Started',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Cochl.Sense-Jetson-Getting-Started',
@@ -14333,6 +14334,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Develop_reComputer_Jetson_using_Clawdbot',
                 'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Gapi-Jetson-Getting-Started',
                 'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_alwaysAI-Jetson-Getting-Started',
                 'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Cochl.Sense-Jetson-Getting-Started',
@@ -19485,6 +19487,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Develop_reComputer_Jetson_using_Clawdbot',
                 'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Gapi-Jetson-Getting-Started',
                 'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_alwaysAI-Jetson-Getting-Started',
                 'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Cochl.Sense-Jetson-Getting-Started',
