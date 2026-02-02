@@ -15,9 +15,9 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" alt="pir" width="600" height="auto"/></p>
 
-reTerminal DM is A 10.1" open-source rugged HMI - an Integrated Device Master to unify data flow and manage the onsite device.
+reTerminal DM is A 10.1" open-source industrial HMI - an Integrated Device Master to unify data flow and manage the onsite device.
 
-Based on Raspberry Pi CM4, and as a Panel PC, HMI, PLC, IIoT Gateway all-in-one device, reTerminal DM is a new generation of interactive sensing hub with an IP65 rugged-grade large screen.
+Based on Raspberry Pi CM4, and as a Panel PC, HMI, PLC, IIoT Gateway all-in-one device, reTerminal DM is a new generation of interactive sensing hub with an IP65 industrial-grade large screen.
 
 It is equipped with rich scalability and hybrid connectivity, supporting CAN bus, RS485, RS232, Gigabit Ethernet port, and other interfaces, as well as powerful wireless communication capabilities such as 4G, LoRa®, WiFi, and BLE.
 
@@ -607,7 +607,7 @@ raspi-gpio get 24
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/RS485.png" /></div>
 
-The reTerminal DM is equipped with an RS485 interface through its 20-pin connector, which is isolated for both signal and power to ensure safe and reliable operation in rugged and automation applications. The `RS485 A` and `RS485 B` signals are isolated using capacitive isolation, which provides excellent EMI immunity and meets the high-speed communication requirements of the RS485 interface.
+The reTerminal DM is equipped with an RS485 interface through its 20-pin connector, which is isolated for both signal and power to ensure safe and reliable operation in industrial and automation applications. The `RS485 A` and `RS485 B` signals are isolated using capacitive isolation, which provides excellent EMI immunity and meets the high-speed communication requirements of the RS485 interface.
 
 :::note
 A terminal resistor of 120Ω has been installed by default.
@@ -776,7 +776,7 @@ except KeyboardInterrupt:
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/can.png" /></div>
 
-The reTerminal DM features a CAN interface that supports the CAN FD (Controller Area Network Flexible Data-Rate) protocol. The CAN interface is isolated using capacitive isolation, which provides excellent EMI protection and ensures reliable communication in rugged and automation applications. A terminal resistor of 120Ω has been installed by default.
+The reTerminal DM features a CAN interface that supports the CAN FD (Controller Area Network Flexible Data-Rate) protocol. The CAN interface is isolated using capacitive isolation, which provides excellent EMI protection and ensures reliable communication in industrial and automation applications. A terminal resistor of 120Ω has been installed by default.
 
 :::note
 The CAN interface uses an isolated power supply, which means that the ground signal for external devices connected to the CAN interface should be connected to the GND_ISO pin
@@ -856,7 +856,7 @@ USB Type-C is a USB 2.0 port used for serial debugging or flashing OS image depe
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/sim-slot.png" /></div>
 
-The reTerminal DM uses a standard-size SIM card slot commonly found in rugged applications, which requires a standard SIM card with dimensions of 25mm x 15mm.
+The reTerminal DM uses a standard-size SIM card slot commonly found in industrial applications, which requires a standard SIM card with dimensions of 25mm x 15mm.
 
 :::note
 Please note that the standard version of reTerminal DM does not come with a 4G module. If you require 4G functionality, an additional 4G module must be purchased separately, Therefore this SIM card slot only works if you placed the supported version of 4G module in the 4G PCIe slot.

@@ -228,10 +228,10 @@ Before everything starts, it is quite essential to have some basic parameters of
 | MTDI                    |                  | GPIO41                                                 |                    | JTAG, ADC                            |
 | MTCK                    |                  | GPIO39                                                 |                    | JTAG, ADC                            |
 | MTMS                    |                  | GPIO42                                                 |                    | JTAG, ADC                            |
-| Reset                   |                  | EN                                                |                    | EN                                   |
+| Reset                   |                  | CHIP_EN                                                |                    | EN                                   |
 | Boot                    |                  | GPIO0                                                  |                    | Enter Boot Mode                      |
 | U.FL-R-SMT1             |                  | LNA_IN                                                 |                    | UFL antenna                          |
-| CHARGE_LED              |                  |                                                |                    | CHG-LED                              |
+| CHARGE_LED              |                  | VCC_3V3                                                |                    | CHG-LED                              |
 | USER_LED                |                  | GPIO21                                                 |                    | User Light                           |
 | Digital microphone_CLK  |                  | GPIO42                                                 |                    | PDM clock pin for MIC                |
 | Digital microphone_DATA |                  | GPIO41                                                 |                    | PDM data pin for MIC                 |
@@ -380,13 +380,6 @@ The factory program preset in the regular version is the touch pin light-up prog
 The XIAO ESP32S3 Sense is shipped with the WebCam sample program pre-installed. You can use this program by giving the XIAO a good antenna installation and powering it up. For details, you can read the Wiki about this program.
 
 - [Video Streaming](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage#project-ii-video-streaming)
-
-:::note
-Starting from **June 2025**, the factory firmware of XIAO ESP32S3 Sense enables a default AP Wi‑Fi with the following credentials:
-
-- **SSID:** `XIAO_ESP32S3_Sense`
-- **Password:** `seeedstudio`
-:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/98.png" style={{width:900, height:'auto'}}/></div>
 

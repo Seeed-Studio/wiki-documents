@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.webp
 slug: /respeaker_2_mics_pi_hat_raspberry_v2
 last_update:
-  date: 01/29/2026
-  author: Mingxi
+  date: 04/18/2025
+  author: Jiahao
 ---
 
 :::caution
@@ -90,25 +90,30 @@ dmesg | grep tlv320
 - Step 1: Get Device Tree Source (DTS) for the ReSpeaker 2-Mics Pi HAT (V2.0), compile it and install the device tree overlay.
 
 ```bash
-git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git  
-cd seeed-linux-dtoverlays/  
-make overlays/rpi/respeaker-2mic-v2_0-overlay.dtbo  
-sudo cp overlays/rpi/respeaker-2mic-v2_0-overlay.dtbo /boot/firmware/overlays/respeaker-2mic-v2_0.dtbo  
-echo "dtoverlay=respeaker-2mic-v2_0" | sudo tee -a /boot/firmware/config.txt 
+curl https://raw.githubusercontent.com/Seeed-Studio/seeed-linux-dtoverlays/refs/heads/master/overlays/rpi/respeaker-2mic-v2_0-overlay.dts -o respeaker-2mic-v2_0-overlay.dts
+dtc -I dts respeaker-2mic-v2_0-overlay.dts -o respeaker-2mic-v2_0-overlay.dtbo
+sudo dtoverlay respeaker-2mic-v2_0-overlay.dtbo
+sudo cp respeaker-2mic-v2_0-overlay.dtbo /boot/firmware/overlays
 ```
 
+- Step 2: Edit `/boot/firmware/config.txt` and add the following lines:
+
+```
+dtoverlay=respeaker-2mic-v2_0-overlay
+dtoverlay=i2s-mmap
+```
 
 > **Note:** If your kernel version is greater than 4.0, you don't need to add `dtoverlay=i2s-mmap`.
 
 ![config example](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/dtoverlays.png)
 
-- Step 2: Reboot your Pi.
+- Step 3: Reboot your Pi.
 
 ```bash
 sudo reboot
 ```
 
-- Step 3: Check if the device is detected by `aplay` / `arecord`.
+- Step 4: Check if the device is detected by `aplay` / `arecord`.
 
 The expected output for `aplay` should be:
 

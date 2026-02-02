@@ -1,11 +1,11 @@
 ---
-description: 使用体感功能控制地铁跑酷。
-title: 使用体感控制玩地铁跑酷
+description: 使用体感功能来控制《Subway Surfers》。
+title: 使用体感传感器来玩《Subway Surfers》
 keywords:
   - reCamera
-  - 体感控制
-  - 游戏
-image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif 
+  - Sensory control
+  - Game
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif
 slug: /cn/use_the_motion-sensing_function_of_recamera_to_play_games
 sidebar_position: 9
 last_update:
@@ -13,13 +13,13 @@ last_update:
   author: Xinrui Wu
 ---
 
-# 使用体感控制玩地铁跑酷
+# 使用体感传感器来玩《Subway Surfers》
 
 ## 简介
 
 reCamera 是一款配备强大边缘计算能力的 AI 摄像头。这个演示展示了它在设备级别实时运行 YOLO11n-Pose 模型的能力——无需依赖云端，它就能准确识别人体的关键点和姿态。通过 reCamera 捕捉玩家的动作，我们将身体转化为控制器，让我们能够用自然的体感操作"地铁跑酷"：跳跃、蹲下、左右闪避，一气呵成！
 
-以下是完成此演示后的使用效果。
+完成本示例后，效果如下所示。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_text.gif" /></div>
 
@@ -69,17 +69,19 @@ SenseCraft 入口位于 Wiki 界面的右上角，点击进入 SenseCraft
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_1.png" /></div>
 
-### 1.2 从 SenseCraft 打开应用程序
+### 1.2 进入 reCamera 工作区
 
-打开 sensecraft 应用程序部分，在左侧输入框中输入"GAME"，然后点击进入 GAME 应用程序。
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_2.png" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_19.png" /></div>
+### 1.3 找到名为 GAME 的应用程序并点击进入
 
-### 1.3 在 reCamera 上部署此应用程序
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_3.png" /></div>
 
-在页面上点击 Deploy Application，然后点击 Visit Workspace Via USB（此时，您应该将 reCamera 连接到您的电脑）
+### 1.4 在 reCamera 上部署此应用程序
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_23.png" /></div>
+滑动到页面底部，点击 Open Application，然后点击 Visit Workspace Via USB（此时您应该将 reCamera 连接到您的电脑）
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_4.png" /></div>
 
 然后您将进入工作区，Node-RED 节点将加载一段时间，请耐心等待加载完成
 
@@ -107,43 +109,23 @@ SenseCraft 入口位于 Wiki 界面的右上角，点击进入 SenseCraft
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_11.png" /></div>
 
-### 1.4 关闭电脑防火墙并更改 reCamera IP 地址
-
-#### 1.4.1 关闭电脑上的所有防火墙
-
-关闭防火墙是为了避免后续 reCamera 发送的 UDP 消息被拦截。
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_22.png" /></div>
-
-#### 1.4.2 将 reCamera 的 IP 地址设置为 192.168.42.2
-
-在您的电脑上打开控制面板 – 网络和 Internet – 网络连接，找到名为"UsbNcm Host Device"的设备，这就是您的 reCamera 设备，右键点击并选择属性进入。
-
-此步骤是为了让 reCamera 与电脑在同一网段内通信。
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_20.png" /></div>
-
-选择 IPV4 – Properties – Use the following IP address – 将 IP 地址更改为 192.168.42.2，子网掩码更改为 255.255.255.0，选择后点击 OK。
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_21.png" /></div>
-
 ### 1.5 测试上、下、左、右四个动作的触发
 
 #### 1.5.1 初始状态
 
-这是初始动作，即回到中间状态。当您固定好 reCamera，调整角度，站在 reCamera 前面，双臂自然放在两侧，控制球在中心线上并在紫线和绿色区域之间。此时，您可以执行其他动作进行测试。
+这是初始动作，即回到中间状态。当您固定好 reCamera，调整角度，站在 reCamera 前方，双臂自然放在两侧，控制球在中心线上且在紫线和绿色区域之间。此时，您可以执行其他动作进行测试。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_12.png" /></div>
 
 #### 1.5.1 左
 
-左臂向左，保持右臂不动，控制球到中心线左侧，它将显示为蓝色，此时判定为左
+左臂向左，保持右臂不动，控制球到中心线左侧，它会显示为蓝色，此时判定为左
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_13.png" /></div>
 
 #### 1.5.2 右
 
-右臂向右，保持左臂不动，控制球到中心线右侧，它将显示为黄色，此时判定为右
+右臂向右，保持左臂不动，控制球到中心线右侧，它会显示为黄色，此时判定为右
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_14.png" /></div>
 
@@ -155,7 +137,7 @@ SenseCraft 入口位于 Wiki 界面的右上角，点击进入 SenseCraft
 
 #### 1.5.4 下
 
-保持手臂回到中间，然后自然蹲下。控制球到蹲下区域。球将变成红色。此时，判定为向下。
+保持手臂回到中间，然后自然蹲下。控制球到蹲下区域。球会变成红色。此时判定为向下。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_16.png" /></div>
 
@@ -165,7 +147,7 @@ SenseCraft 入口位于 Wiki 界面的右上角，点击进入 SenseCraft
 
 ## 2. 下载相应的 python 控制程序并运行
 
-点击此 [GitHub 链接](https://github.com/xr686/Receive-the-information-from-the-reCamera-to-control-the-computer-through-body-sensing..git)
+点击这个 [GitHub 链接](https://github.com/xr686/Receive-the-information-from-the-reCamera-to-control-the-computer-through-body-sensing..git)
 
 进入后，将此项目的压缩包下载到本地
 
@@ -177,7 +159,7 @@ SenseCraft 入口位于 Wiki 界面的右上角，点击进入 SenseCraft
 pip install pynput
 ```
 
-然后您可以运行此 python 程序。此时，您应该保持 reCamera 检测画面有效，您将看到动作判定结果的输出。
+然后您可以运行这个 python 程序。此时您应该保持 reCamera 检测画面有效，您将看到动作判定结果的输出。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_18.png" /></div>
 

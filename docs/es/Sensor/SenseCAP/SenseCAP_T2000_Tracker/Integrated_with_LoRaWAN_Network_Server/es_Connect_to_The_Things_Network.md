@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/sensecap_t2000_connect_to_ttn.png
 slug: /es/sensecap_t2000_tracker_ttn
 last_update:
-  date: 1/28/2026
+  date: 1/6/2026
   author: Janet
 ---
 
@@ -18,7 +18,7 @@ last_update:
 
 Antes de conectar a TTS, necesitas configurar los parámetros básicos de tu dispositivo en la APP SenseCraft, consulta [Inicio Rápido](https://wiki.seeedstudio.com/es/Get_Started_with_SenseCAP_T2000_tracker/) para más detalles.
 
-Establece la plataforma en The Things Network, y luego copia el Device EUI / AppEUI / AppKey. Después añade dispositivos manualmente en The Things Stack.
+Establece la plataforma como The Things Network, y luego copia el Device EUI / AppEUI / AppKey. Después agrega dispositivos manualmente en The Things Stack.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/device_info.png" alt="pir" width={300} height="auto" /></p>
 
@@ -37,62 +37,41 @@ Navega a la página Applications, haz clic en `Add application`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_add_application.png" alt="pir" width={800} height="auto" /></p>
 
-Introduce un Application ID, Application name, haz clic en `Create application` para guardar los cambios.
+Ingresa un Application ID, Application name, haz clic en `Create application` para guardar los cambios.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_create_application.png" alt="pir" width={800} height="auto" /></p>
 
 
 ### Paso 2: Registrar el Dispositivo
 
-Después de crear la aplicación, haz clic en `Register end device`.
+Después de que se creó la aplicación, haz clic en `Register end device`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_register_enddevice.png" alt="pir" width={800} height="auto" /></p>
 
-Hay dos formas para que los usuarios registren un dispositivo final:
-- Seleccionar el dispositivo final en el Repositorio de Dispositivos LoRaWAN
-- Introducir las especificaciones del dispositivo final manualmente
-
-#### 1. Seleccionar el dispositivo final en el Repositorio de Dispositivos LoRaWAN
-
-Elige `Select the end device in the LoRaWAN Device Repository`. <br />
-Selecciona `SenseCAP` y selecciona el Modelo `T2000 Tracker A/B/C`. <br />
-Mantén la versión de Software y Hardware como predeterminada, y selecciona el `Profile(Region)` correspondiente según la configuración de banda del dispositivo.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_register_enddevice2.png" alt="pir" width={800} height="auto" /></p>
-
-Elige un Plan de Frecuencia apropiado. Tu dispositivo y gateway deben usar el mismo plan de frecuencia para comunicarse. <br />
-Pega el Device EUI / AppEUI / AppKey de la App SenseCraft, y luego haz clic en `Register end device`.
-
-:::note
-El "JoinEUI" anterior es similar a "AppEUI".
-:::
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_enter_infor2.png" alt="pir" width={800} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_device_activity2.png" alt="pir" width={800} height="auto" /></p>
-
-#### 2. Introducir las especificaciones del dispositivo final manualmente
-
-Alternativamente, puedes elegir `Enter end device specifics manually`. Y por favor consulta la información a continuación para asegurar que introduces la siguiente información correctamente.
+Elige el método de entrada `Enter end device specifics manually input method`. Y por favor consulta la información a continuación para asegurar que ingreses la siguiente información correctamente.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_manually.png" alt="pir" width={800} height="auto" /></p>
 
-Elige un Plan de Frecuencia apropiado. Tu dispositivo y gateway deben usar el mismo plan de frecuencia para comunicarse.
+Elige un Frequency Plan apropiado. Tu dispositivo y gateway deben usar el mismo plan de frecuencia para comunicarse.
 
 :::info
-Selecciona los campos de Versión LoRaWAN y versión de Parámetros Regionales para tu dispositivo específico. <br />
-**Versión LoRaWAN**: LoRaWAN Specification 1.0.4<br />
-**Versión de Parámetros Regionales**: RP002 Regional Parameters 1.0.3
+Selecciona los campos LoRaWAN Version y Regional Parameters version para tu dispositivo específico. <br />
+**LoRaWAN version**: LoRaWAN Specification 1.0.4<br />
+**Regional Parameters version**: RP002 Regional Parameters 1.0.3
 :::
 
 Pega el Device EUI / AppEUI / AppKey de la App SenseCraft, y luego haz clic en `Register end device`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_enter_infor.png" alt="pir" width={800} height="auto" /></p>
 
-Luego sube el Formateador de Carga Útil.
+:::note
+El "JoinEUI" anterior es similar a "AppEUI".
+:::
+
+### Paso 3: Subir el Formateador de Payload
 
 Navega a la página Payload Formatters, elige `Custom Javascript Formatter`.
-Completa el código del Formateador con el decodificador a continuación y guarda los cambios:
+Completa el código del Formatter con el decodificador a continuación y guarda los cambios:
 
 <details>
 
@@ -808,7 +787,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_decoder.png" alt="pir" width={800} height="auto" /></p>
 
-### Paso 3: Verificar los Datos
+### Paso 4: Verificar los Datos
 
 Cuando el dispositivo intenta conectarse a la red, la luz verde parpadeará de forma intermitente. Si el dispositivo se une a la red exitosamente, la luz verde parpadeará 5 veces rápidamente.
 
@@ -818,8 +797,6 @@ Puedes verificar la actividad del dispositivo en la página de resumen de la apl
 
 Haz clic en el dispositivo final, luego verifica los `Live data`.
 Cuando veas el mensaje a continuación, tu dispositivo se ha unido exitosamente a la red.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_device_activity2.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_TTN/TTN_join_accept.png" alt="pir" width={800} height="auto" /></p>
 
@@ -831,7 +808,7 @@ Luego puedes verificar los datos en la consola TTS.
 
 [Decodificador SenseCAP T2000 Tracker para TTN](https://github.com/Seeed-Solution/SenseCAP-Decoder/tree/main/T2000/TTN)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

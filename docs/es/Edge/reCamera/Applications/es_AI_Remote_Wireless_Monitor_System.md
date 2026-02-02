@@ -5,10 +5,9 @@ keywords:
     - Wifi Halow
     - reCamera
     - AI edge sensing
-slug: /es/ai_remote_wireless_monitor_system
-sku: 102991897, 110070108
+slug: /es/ai_remote_wireless_monitor_system_with_wifi_haLow
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-sidebar_position: 2
+sidebar_position: 1
 last_update:
     date: 2025-11-19
     author: John Xiang
@@ -67,7 +66,7 @@ La estructura del sistema es muy simple. Los dos módulos HaLow usan cable Ether
 
 ## Preparación de hardware
 
-Para completar este proyecto, necesitarás cualquiera de las tres reCamera - reCamera 2002 Serie, reCamera HQ PoE, reCamera Gimbal.
+Para completar este proyecto, necesitarás cualquiera de las tres reCamera - reCamera 2002 Series, reCamera HQ PoE, reCamera Gimbal.
 
 ### 📦 reCamera
 
@@ -145,7 +144,7 @@ El reTerminal aquí puede ser reemplazado por cualquier dispositivo de computaci
 
 <th>Seeed Studio reTerminal - 5'' HMI CM4108032</th>
 
-<th>Seeed Studio reTerminal E10-1 Placa de Expansión(Opcional)</th>
+<th>Seeed Studio reTerminal E10-1 Expansion Board(Opcional)</th>
 
 </tr>
 
@@ -191,7 +190,7 @@ Este es el módulo Wifi Halow que usamos en el proyecto. La banda de frecuencia 
 
 ## Preparación de herramientas
 
-- **PC**: Usado para conectar la reCamera para depuración. Las operaciones posteriores necesitan iniciar sesión en el back end de la reCamera y flashear el sistema operativo raspberry pi para el reTerminal. Al mismo tiempo, la depuración será más conveniente si hay problemas en la PC, y todas las herramientas de software están completas.
+- **PC**: Usado para conectar la reCamera para depuración. Las operaciones posteriores necesitan iniciar sesión en el backend de la reCamera y flashear el sistema operativo raspberry pi para el reTerminal. Al mismo tiempo, la depuración será más conveniente si hay problemas en la PC, y todas las herramientas de software están completas.
 
 - **3 cables USB-C**:
 
@@ -201,29 +200,29 @@ Una conexión es reCamera a la PC para suministrar energía, y los otros dos se 
 
 - **Adaptador de Energía USB-C 5V3A** Misma fuente de alimentación de Raspberry Pi 4/5 para alimentar reTerminal. Enlace de compra: [Fuente de Alimentación USB-C 5V3A](https://www.seeedstudio.com/Wall-Adapter-Power-Supply-5VDC-3A-Type-C-p-4103.html)
 
-- **(Opcional) Fuente de Alimentación DC de 12V** Utilizada para alimentar la placa de expansión del reTerminal. Enlace de compra: [Fuente de Alimentación DC de 12V (US/EU)](https://www.seeedstudio.com/Power-Adapter-12V-2A-US-p-5731.html)
+- **(Opcional)Fuente de Alimentación DC 12V** Usada para alimentar la placa de expansión reTerminal. Enlace de compra: [Fuente de Alimentación DC 12V(US/EU)](https://www.seeedstudio.com/Power-Adapter-12V-2A-US-p-5731.html)
 
-- **(Opcional) Soporte Triangular para reCamera** Enlace de Compra: [Mini Trípode](https://www.seeedstudio.com/Mini-Tripod-p-5978.html)
+- **(Opcional) Soporte Triangular reCamera** Enlace de Compra: [Mini Trípode](https://www.seeedstudio.com/Mini-Tripod-p-5978.html)
 
 :::note
 
-No tienes que luchar con la fuente de alimentación del dispositivo, la fuente de alimentación de Raspberry Pi 4/5 puede ser utilizada por reTerminal al mismo tiempo si tienes la intención de usar la placa de expansión, solo fuente de alimentación DC de 12V, ya no necesitas alimentación USB-C de 5V3A, porque el reTerminal puede obtener energía directamente de la placa de expansión.
+No tienes que luchar con la fuente de alimentación del dispositivo, la fuente de alimentación de Raspberry Pi 4/5, puede ser utilizada por reTerminal al mismo tiempo si tienes la intención de usar la placa de expansión, solo fuente de alimentación DC de 12V, ya no necesitas alimentación USB-C de 5V3A, porque el reTerminal puede obtener energía directamente de la placa de expansión.
 
 :::
 
-## Tutorial Detallado: Configuración del Módulo Wifi Halow de reCamera y Configuración del reTerminal
+## Tutorial Detallado: Configuración del Módulo Wifi Halow de reCamera y Configuración de reTerminal
 
 La idea general de todo el sistema es permitir que la reCamera forme una red con el equipo terminal a través de Wifi HaloW. Primero, configurar IP estática en el equipo terminal (reTerminal) y reCamera, porque las aplicaciones al aire libre o móviles no pueden tener routers, no hay servicio DHCP, y la IP necesita ser asignada manualmente.
 
-Después de que se asigna la IP, estos dispositivos forman una "red de área local", y pueden acceder entre sí a través de IP. En este momento, crear nodos de transmisión y nodos WebSocket en la reCamera a través de Node-RED, enviar el flujo de video en forma de transmisión push rtsp, y enviar el resultado de detección yolo vía WebSocket.
+Después de que se asigna la IP, estos dispositivos forman una "red de área local", y pueden acceder entre sí a través de IP. En este momento, crear nodos de stream y nodos WebSocket en la reCamera a través de Node-RED, enviar el flujo de video en forma de push stream rtsp, y enviar el resultado de detección yolo vía WebSocket.
 
-Finalmente, el flujo de video y los resultados de detección de IA se acceden en el dispositivo terminal, como VLC Media Player en Windows/Linux. Este tutorial demostrará cómo obtener transmisión push rtsp a través de ffplay en Linux.
+Finalmente, el flujo de video y los resultados de detección de IA se acceden en el dispositivo terminal, como VLC Media Player en Windows/Linux. Este tutorial demostrará cómo obtener push stream rtsp a través de ffplay en Linux.
 
 ### Fase 1: Configurar reCamera
 
 #### Paso 1.1 Iniciar Sesión en reCamera
 
-Conecta la reCamera a la computadora con un cable USB-C. Toma algo de tiempo iniciar el dispositivo justo después de que se enciende. Después de esperar 1-2 minutos, abre cualquier navegador web e ingresa **192.68.42.1** para entrar al sistema reCamera.
+Conecta la reCamera a la computadora con un cable USB-C. Toma algo de tiempo iniciar el dispositivo justo después de encenderse. Después de esperar 1-2 minutos, abre cualquier navegador web e ingresa **192.68.42.1** para entrar al sistema reCamera.
 
 Necesitas configurar tu propia contraseña para el primer inicio de sesión. Por favor recuerda tu contraseña y úsala más tarde. Después de entrar al sistema reCamera, deberías ver esta página:
 
@@ -253,26 +252,26 @@ Haz doble clic en el nodo de cámara para entrar a la página de configuración.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_1.png" /></div>
 
-#### Paso 1.3 Configurar el nodo de transmisión
+#### Paso 1.3 Configurar el nodo stream
 
-Como se mencionó anteriormente, necesitamos configurar transmisión push rtsp en Node-RED. En la lista de nodos a la izquierda, busca el nodo 'stream' o desliza la rueda del ratón hacia abajo hasta el final para encontrar el nodo Stream. Después del método de configuración, por favor consulta: [Configuración del Nodo Stream de Node-Red](https://wiki.seeedstudio.com/es/recamera_develop_with_node-red/#stream-node) Después de la configuración, deberías obtener los siguientes resultados:
+Como se mencionó anteriormente, necesitamos configurar la transmisión RTSP de tipo *push* en Node-RED. En la lista de nodos de la izquierda, busca el nodo "stream" o desplázate con la rueda del ratón hasta el final para encontrar el nodo Stream. Después del método de configuración, por favor consulta: [Configuración del Nodo Stream de Node-Red](https://wiki.seeedstudio.com/es/recamera_develop_with_node-red/#stream-node) Después de la configuración, deberías obtener los siguientes resultados:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_3.png" /></div>
 
-Por favor sigue completamente el tutorial de Node-RED para asegurar que tu salida sea a sscma, y el flujo de video final será enviado a: rtsp://admin:admin@192.168.xxx.xxx:554/live, donde 192.168.xxx.xxx es la dirección IP estática de la reCamera. La IP estática puede ser configurada libremente. 192.168.10.100 se usa aquí para demostración.
+Por favor sigue completamente el tutorial de Node-RED para asegurar que tu salida sea a sscma, y el flujo de video final será enviado a: rtsp://admin:admin@192.168.xxx.xxx:554/live, donde 192.168.xxx.xxx es la dirección IP estática de la reCamera. La IP estática puede configurarse libremente. 192.168.10.100 se usa aquí para demostración.
 
 #### Paso 1.4.1 Configurar el nodo WebSocket
 
-Para mostrar los resultados detectados por yolo en el equipo terminal, necesitamos enviar los resultados de detección vía WebSocket. El tipo de nodo WebSocket debe ser configurado como 'connect' en lugar de 'listen'.
+Para mostrar los resultados detectados por yolo en el equipo terminal, necesitamos enviar los resultados de detección vía WebSocket. El tipo de nodo WebSocket debe configurarse como 'connect' en lugar de 'listen'.
 
-Al configurar la URL del nodo WebSocket aquí, necesita ser configurada como ws://192.168.
+Al configurar la URL del nodo WebSocket aquí, necesita configurarse como ws://192.168.
 nnn.nnn:9000 De hecho, 192.168.nnn.nnn es la dirección IP estática del reTerminal o tu propio otro equipo terminal, no la dirección IP estática de reCamera mencionada arriba. 192.168.10.3 se usa aquí para demostración. El resultado final es el siguiente:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_5.png" /></div>
 
 #### Paso 1.5. Entrar a la página de configuración
 
-O en la página Workspace que acabas de modificar Node RED, haz clic en "Setting" en la esquina superior izquierda
+O en la página Workspace que acaba de modificar Node RED, haz clic en "Setting" en la esquina superior izquierda
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t4_1.png" /></div>
 
@@ -294,7 +293,7 @@ Después de hacer clic en Terminal, necesitas iniciar sesión nuevamente, ingres
 
 #### Paso 1.7 Configurar IP Estática de reCamera
 
-En la reCamera, necesitamos configurar la red a través del sistema de red tradicional de Linux (ifupdown). El método es muy simple. Solo necesitamos entrar al archivo de configuración de red y configurar el puerto Ethernet en la reCamera a la IP estática que desees: 192.168.xxx.xxx.xxx. Aquí configuro la IP estática
+En la reCamera, necesitamos configurar la red a través del sistema de red tradicional de Linux (ifupdown). El método es muy simple. Solo necesitamos entrar al archivo de configuración de red y configurar el puerto Ethernet en la reCamera a la IP estática que desees: 192.168.xxx.xxx. Aquí configuro la IP estática
 
 192.168.10.100 Primero entra al archivo de configuración de red a través del editor vi e ingresa el siguiente comando en el terminal de reCamera:
 
@@ -314,13 +313,13 @@ gateway 192.168.10.1
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t7_0.png" /></div>
 
-Este código establece que el puerto Ethernet de la reCamera de configuración es IP estática 192.168.10.100, la máscara de subred es 255.255.255.0, y la puerta de enlace es 192.168.10.1. Por supuesto, puedes usar 192.168.3.xxx o 192.168.42.xxx para configuración libre de IP específica. Sin embargo, por favor asegúrate de que esté en el mismo segmento de red que tu reTerminal o equipo terminal. Por ejemplo, tu reCamera es 192.168.33, entonces el reTerminal necesita ser configurado como 192.168.33.nnn. Si la IP estática del reTerminal se convierte en 192.168.32.nnn o 192.168.34.nnn, no se puede hacer comunicación.
+Este código establece que el puerto Ethernet de configuración de reCamera es IP estática 192.168.10.100, la máscara de subred es 255.255.255.0, y la puerta de enlace es 192.168.10.1. Por supuesto, puedes usar 192.168.3.xxx o 192.168.42.xxx para configuración libre de IP específica. Sin embargo, por favor asegúrate de que esté en el mismo segmento de red que tu reTerminal o equipo terminal. Por ejemplo, tu reCamera es 192.168.33, entonces el reTerminal necesita configurarse como 192.168.33.nnn. Si la IP estática del reTerminal se convierte en 192.168.32.nnn o 192.168.34.nnn, no se puede realizar comunicación.
 
 Después de agregar el código anterior, ingresa ''':wq''' para salir del editor vi y regresar al terminal de reCamera. Luego ingresa '''sudo reboot''' para reiniciar la reCamera.
 
 :::note
 
-Debe notarse que después de que se configura la IP estática, la reCamera debe estar conectada a la PC con un cable de red. Al mismo tiempo, la IP estática debe ser configurada en la PC antes de iniciar sesión en la reCamera nuevamente. La IP estática de reCamera recién configurada se usa al iniciar sesión. Windows se usa para configurar IP estática como demostración aquí. Nuevamente, para todos los dispositivos configurados con IP estática, debe asegurarse de que estén en el mismo segmento de red, como reCamera-192.168.10.100 y reTerminal-192.168.10.3, laptop (Windows)-192.168.10.2 De lo contrario, no pueden comunicarse entre sí. La configuración de referencia en Windows es la siguiente:
+Debe notarse que después de que se configura la IP estática, la reCamera debe conectarse a la PC con un cable de red. Al mismo tiempo, la IP estática debe configurarse en la PC antes de iniciar sesión en la reCamera nuevamente. La IP estática de reCamera recién configurada se usa al iniciar sesión. Windows se usa para configurar IP estática como demostración aquí. Nuevamente, para todos los dispositivos configurados con IP estática, debe asegurarse de que estén en el mismo segmento de red, como reCamera-192.168.10.100 y reTerminal-192.168.10.3, laptop (Windows)-192.168.10.2 De lo contrario, no pueden comunicarse entre sí. La configuración de referencia en Windows es la siguiente:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/tx.png" /></div>
 
@@ -348,11 +347,11 @@ Ahora presiona el botón de emparejamiento en ambos módulos al mismo tiempo:
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t9.png" /></div>
 Después de eso, el LED verde en los dos módulos parpadeará. Cuando el parpadeo se detenga y el LED verde esté siempre encendido, el emparejamiento del módulo es exitoso.
 
-¡Muy bien! Has emparejado exitosamente dos módulos Wifi Halow, ahora pueden ser vistos como ambos extremos de un cable de red, pueden ser usados para conectar reCamera y equipo terminal.
+¡Muy bien! Has emparejado exitosamente dos módulos Wifi Halow, ahora pueden verse como ambos extremos de un cable de red, pueden usarse para conectar reCamera y equipo terminal.
 
 ### Fase 3: Configurar Dispositivos Finales (reTerminal)
 
-Ahora vamos a configurar IP estática en el reTerminal. Teóricamente, hay muchos métodos, como NetworkManager. NetworkManager es un demonio de gestión de red en el sistema Linux, que automáticamente te ayuda a gestionar todas las herramientas de conexión de red como Wi-Fi/Ethernet/dirección IP/DHCP/hotspot/enrutamiento. Puedes intentar pasar por NetworkManager. Sin embargo, para reducir el costo de aprendizaje, usamos el mismo método que reCamera, configurar una dirección IP estática a través de '/etc/network/interfaces'.
+Ahora vamos a configurar IP estática en el reTerminal. Teóricamente, hay muchos métodos, como NetworkManager. NetworkManager es un daemon de gestión de red en el sistema Linux, que automáticamente te ayuda a gestionar todas las herramientas de conexión de red como Wi-Fi/Ethernet/dirección IP/DHCP/hotspot/enrutamiento. Puedes intentar pasar por NetworkManager. Sin embargo, para reducir el costo de aprendizaje, usamos el mismo método que reCamera, configurar una dirección IP estática a través de '/etc/network/interfaces'.
 
 :::note
 
@@ -367,7 +366,7 @@ El reTerminal viene de fábrica con el sistema, puedes ingresar directamente a R
 
 #### Paso 3.2 Deshabilitar el Servicio NetworkManager
 
-Conecta el teclado y el mouse al reTerminal, y presiona **Ctrl Alt T** para abrir la terminal. Debido a que NetworkManager entra en conflicto con el método anterior, necesitamos deshabilitar el servicio NetworkManager. Ejecuta en la terminal del reTerminal:
+Conecta el teclado y el ratón al reTerminal, y presiona **Ctrl Alt T** para abrir la terminal. Debido a que NetworkManager entra en conflicto con el método anterior, necesitamos deshabilitar el servicio NetworkManager. Ejecuta en la terminal del reTerminal:
 
 ```bash
 sudo systemctl stop NetworkManager
@@ -421,7 +420,7 @@ Si ves IP = **192.168.10.3** en 'eth0', significa éxito.
 
 ### Fase 4: Conectar y Jugar
 
-¿Recuerdas que configuramos el nodo de transmisión rtsp en el paso 1.2? Ya hay una transmisión de video rtsp en: '''rtsp://admin:admin@192.168.xxx.xxx:554/live''' aquí '192.168.xxx.xxx' es la **IP estática de reCamera** que configuraste manualmente en el paso 1.6, no la IP estática del reTerminal. En mi caso, la transmisión rtsp correspondiente es:
+¿Recuerdas que configuramos el nodo de transmisión rtsp en el paso 1.2? Ya hay una transmisión de video rtsp en: '''rtsp://admin:admin@192.168.xxx.xxx:554/live''' aquí '192.168.xxx.xxx' es la **IP estática de reCamera** que configuraste manualmente en el paso 1.6, no la IP estática de reTerminal. En mi caso, la transmisión rtsp correspondiente es:
 
 ```
 rtsp://admin:admin@192.168.10.100:554/live
@@ -435,7 +434,7 @@ Sin embargo, para facilidad de uso, usamos el **comando ffplay** en ffmpeg para 
 
 Tutorial de referencia: [Guía de Instalación de reTerminal E10](https://wiki.seeedstudio.com/es/reTerminal_Mount_Options/)
 
-Después de instalar la placa de expansión, puedes usar el puerto usbc en el reTerminal para suministrar energía al módulo HaLow, y los dos puertos usba pueden conectarse al mouse y teclado.
+Después de instalar la placa de expansión, puedes usar el puerto usbc en el reTerminal para suministrar energía al módulo HaLow, y los dos puertos usba pueden conectarse al ratón y teclado.
 
 #### Paso 4.2 Instalar el Módulo de Transmisión de Imagen Wifi HaLow
 
@@ -456,7 +455,7 @@ sudo apt install nmap
 
 #### Paso 4.4 Reproducir transmisión de video rtsp
 
-Ejecuta el comando ffplay para obtener la transmisión rtsp del reCamera (pertenece al comando ffmpeg):
+Ejecuta el comando ffplay para obtener la transmisión rtsp de reCamera (pertenece al comando ffmpeg):
 
 ```bash
 ffplay -rtsp_transport udp -max_delay 20000 -probesize 2M rtsp://admin:admin@192.168.10.100:554/live
@@ -464,13 +463,13 @@ ffplay -rtsp_transport udp -max_delay 20000 -probesize 2M rtsp://admin:admin@192
 
 Aquí hay una explicación de los parámetros en el comando ffplay:
 
--'-rtsp_transport udp': Especifica usar el protocolo de transporte UDP, porque el reCamera usa transmisión UDP por defecto.
+-'-rtsp_transport udp': Especifica usar el protocolo de transporte UDP, porque reCamera usa transmisión UDP por defecto.
 
 -'-max_delay 20000': Establece el retraso máximo a 20 segundos para manejar retrasos de red.
 
 -'-probesize 2M': Establece el tamaño de sondeo a 2MB para aumentar la velocidad de reproducción de la transmisión de video.
 
--'rtsp://admin:admin@192.168.10.100:554/live': Esta es la dirección de ingesta rtsp del reCamera. Reemplázala con tu propia dirección.
+-'rtsp://admin:admin@192.168.10.100:554/live': Esta es la dirección de ingesta rtsp de reCamera. Reemplázala con tu propia dirección.
 
 En este momento aparecerá una nueva ventana, la transmisión de video rtsp se mostrará dentro, haz doble clic en la ventana para reproducción en pantalla completa.
 
@@ -520,7 +519,7 @@ Listening on port 9000 (press CTRL+C to quit)
 Mantén esta terminal abierta para mostrar los resultados de detección enviados desde el reCamera.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t15.jpg" /></div>
-La imagen anterior muestra la transmisión RTSP vía GStreamer y los resultados de detección de IA en texto vía WebSocket.
+La imagen de arriba muestra la transmisión RTSP vía GStreamer y los resultados de detección de IA en texto vía WebSocket.
 
 La terminal de la izquierda demuestra los resultados de detección:
 
@@ -540,7 +539,7 @@ La terminal de la izquierda demuestra los resultados de detección:
 < counts=person:1; person(650,359,1238,704)
 ```
 
-**¡Felicitaciones! Has implementado tu propio sistema de detección de IA remoto.**
+**¡Felicidades! Has implementado tu propio sistema de detección de IA remoto.**
 
 ## Explora lo que es Posible
 
@@ -554,7 +553,7 @@ Sube un modelo de detección de osos al reCamera y despliega el dispositivo en u
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 

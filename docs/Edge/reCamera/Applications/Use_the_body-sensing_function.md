@@ -69,17 +69,19 @@ The SenseCraft entry is in the upper right corner of the Wiki interface, click t
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_1.png" /></div>
 
-### 1.2 Open the application from SenseCraft
+### 1.2 Workspace into the reCamera
 
-Open the sensecraft application section, enter "GAME" in the input box on the left, and then click into the GAME application.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_2.png" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_19.png" /></div>
+### 1.3 Find the Application named GAME and click in
 
-### 1.3 Deploy this Application on the reCamera
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_3.png" /></div>
 
-Click Deploy Application on the page, then click Visit Workspace Via USB (at this point, you should connect reCamera to your computer)
+### 1.4 Deploy this Application on the reCamera
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_23.png" /></div>
+Slide to the bottom of the page, click on the Open Application, then click on the Visit Workspace Via USB (you should connect the reCamera to your computer at this time)
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_4.png" /></div>
 
 Then you will enter the Workspace,Node-RED node will load for a while, please wait patiently for the loading to complete
 
@@ -106,26 +108,6 @@ Then open the Dashboard to see the effect
 At this point you should be able to successfully see the detection screen as follows
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_11.png" /></div>
-
-### 1.4 Close the computer firewall and change the reCamera IP address
-
-#### 1.4.1 Turn off all firewalls on the computer
-
-Turning off the firewall is to avoid the subsequent UDP messages sent by reCamera being intercepted.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_22.png" /></div>
-
-#### 1.4.2 Set the IP address of reCamera to 192.168.42.2
-
-Open the Control Panel on your computer – Network and Internet – Network Connections, Find the device named "UsbNcm Host Device," this is your reCamera device, right-click and select properties to enter.   
-
-This step is to allow reCamera to communicate with the computer in the same network segment.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_20.png" /></div>
-
-Choose IPV4 – Properties – Use the following IP address – Change the IP address to 192.168.42.2 and the subnet mask to 255.255.255.0,after selecting, click OK.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_21.png" /></div>
 
 ### 1.5 test the trigger of the four actions up, down, left and right
 

@@ -56,7 +56,7 @@ last_update:
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> In this wiki, we will discuss step-by-step instructions on how to install Picams and configure it. These initial steps are crucial for initiating your object detection project with the Seeed Studio reTerminal device.</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> The reTerminal E10-1 expansion board supercharges your reTerminal with rechargeable power, upgraded wireless connectivity, versatile data transmission, and audio support. It’s all about flexibility, letting you tailor your setup for everything from maker projects and home automation builds to off-grid DIY experiments. Head to the wiki to unlock more possibilities.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> The reTerminal E10-1 expansion board enhances the reTerminal with rechargeable functions, improved wireless communication, industrial data transmission, and audio capabilities. This makes the reTerminal more robust, suitable for high-speed industrial, agriculture, or enhanced wireless home applications. Let's dive into the wiki for details.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
   <tr class="table-trnobg">

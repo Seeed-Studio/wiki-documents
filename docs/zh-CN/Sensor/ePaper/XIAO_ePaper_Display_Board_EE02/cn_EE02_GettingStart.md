@@ -27,7 +27,7 @@ last_update:
 - **强大的控制器**：基于 ESP32-S3 构建，提供强大的处理能力和无线功能。
 - **专为大屏设计**：专门优化用于驱动 13.3 英寸电子墨水屏，具有高稳定性和清晰度。
 - **无线连接**：支持 Wi-Fi 和蓝牙 5.0 (LE)，实现远程数据更新和云集成。
-- **低功耗**：专为能效设计，适用于电池供电应用。
+- **低功耗**：专为节能设计，适用于电池供电应用。
 - **易于集成**：兼容 SenseCraft HMI，支持拖拽式界面设计和远程管理。
 - **多样化接口**：包括用于供电/编程的 Type-C 接口和用于电子墨水屏的标准连接器。
 
@@ -38,7 +38,7 @@ last_update:
 | **控制器** | ESP32-S3 |
 | **支持屏幕尺寸** | 13.3 英寸电子墨水屏 |
 | **连接性** | Wi-Fi 802.11 b/g/n，蓝牙 5.0 (LE) |
-| **电源供应** | 通过 USB Type-C 5V |
+| **电源供应** | 5V 通过 USB Type-C |
 | **工作电压** | 3.3V |
 | **接口** | USB Type-C，用于电子墨水屏的 FPC 连接器 |
 | **尺寸** | 80x40 mm |
@@ -48,7 +48,7 @@ last_update:
 
 - **数字标牌**：适用于餐厅菜单、会议室标识和零售价格标签。
 - **智能家居**：天气、日历和家庭自动化状态的信息仪表板。
-- **工业人机界面**：机械和仓库管理的低功耗状态显示。
+- **工业 HMI**：机械和仓库管理的低功耗状态显示。
 - **教育**：电子书阅读器或教室信息板。
 - **办公**：桌牌或公告板。
 
@@ -72,7 +72,7 @@ last_update:
 ### 设备安装
 
 **步骤 1. 连接屏幕和开发板**
-小心地将 13.3 英寸电子墨水屏的 FPC 线缆连接到 EE02 驱动板上的连接器。确保锁定机制牢固。
+小心地将 13.3 英寸电子墨水屏的 FPC 线缆连接到 EE02 驱动板上的连接器。确保锁定机构牢固。
 
 **步骤 2. 上电**
 使用 USB Type-C 线缆将 EE02 开发板连接到电源（计算机或 USB 适配器）。上电后，屏幕将刷新并显示欢迎图像。
@@ -99,7 +99,7 @@ last_update:
 ### 平台绑定与更新
 
 **步骤 6. 在 SenseCraft HMI 上绑定设备**
-访问 [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi/device)。登录您的账户。导航到设备管理部分并选择"Add Device"。输入电子墨水屏上显示的配对码，将设备绑定到您的账户。
+访问 [SenseCraft HMI 平台](https://sensecraft.seeed.cc/hmi/device)。登录您的账户。导航到设备管理部分并选择 "Add Device"。输入电子墨水屏上显示的配对码，将设备绑定到您的账户。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/8.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -109,7 +109,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/9.jpg" style={{width:800, height:'auto'}}/></div>
 
 **步骤 8. 应用您的图像**
-完成后，点击右上角的"Apply"按钮，然后选择您希望接收图像的设备。EE02 将接收数据并用您的新内容刷新 13.3 英寸屏幕。
+完成后，点击右上角的 "Apply" 按钮，然后选择您希望接收图像的设备。EE02 将接收数据并用您的新内容刷新 13.3 英寸屏幕。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/10.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -118,67 +118,6 @@ last_update:
 最后，EE02 将接收数据并用您的新内容刷新 13.3 英寸屏幕。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/11.jpg" style={{width:300, height:'auto'}}/></div>
-
-## Arduino 入门指南
-
-### 安装 Seeed GFX 库
-
-:::tip
-此库具有与 TFT 库相同的功能，但与其不兼容。如果您已安装 TFT 库或其他类似的显示库，请先卸载它们。
-:::
-
-从 GitHub 下载并安装 Seeed GFX 库。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
-
-<div align="center">
-<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处下载</button></p>
-</a>
-</div>
-
-向下滚动并打开此链接。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
-
-选择您的设备类型，它将生成一些代码。复制这些代码，我们稍后会使用它们。
-
-:::tip
-如果您选择错误，屏幕将不显示任何内容。
-
-所以请确保您的设备或组件类型正确。
-:::
-
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_1.png" style={{width:800, height:'auto'}}/></div>
-
-下载库后，转到 **Sketch** -> **Include Library** -> **Add .ZIP Library** 并选择下载的库。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
-
-### 配置并烧录程序
-
-选择图中显示的示例
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_2.png" style={{width:800, height:'auto'}}/></div>
-
-创建一个新的"driver.h"文件并将这些代码粘贴到其中。代码应该如下所示：
-```cpp
-#define BOARD_SCREEN_COMBO 510 // 13.3 inch six-color ePaper Screen（T133A01）
-#define USE_XIAO_EPAPER_DISPLAY_BOARD_EE02
-```
-
-
-之后，转到 **Tools** -> **Board** -> **XIAO ESP32S3 Plus** 和 **Tools** -> **Port** -> **选择您的开发板连接的端口**。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_3.png" style={{width:1000, height:'auto'}}/></div>
-
-注意必须启用 PSAM。
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_4.png" style={{width:1000, height:'auto'}}/></div>
-
-然后点击 **Upload** 上传代码。
-现在您将在电子纸屏幕上看到反馈！以下是位图示例的结果。
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_5.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## 故障排除
 

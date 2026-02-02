@@ -17,7 +17,7 @@ last_update:
 
 ## Introducción
 
-**Seeed Studio XIAO ESP32C3** es una placa de desarrollo mini IoT basada en el chip de modo dual WiFi/Bluetooth **ESP32-C3** de Espressif, que cuenta con una **CPU RISC-V de 32 bits** que ofrece un potente rendimiento de cómputo con su arquitectura eficiente. Tiene un excelente rendimiento de radiofrecuencia, soportando **WiFi IEEE 802.11 b/g/n** y protocolos **Bluetooth 5 (BLE)**. Esta placa viene incluida con una antena externa para aumentar la intensidad de señal para sus aplicaciones inalámbricas. También tiene un **factor de forma pequeño y exquisito** combinado con un **diseño de montaje superficial de un solo lado**. Está equipada con interfaces ricas y tiene **11 E/S digitales** que pueden usarse como **pines PWM** y **4 E/S analógicas** que pueden usarse como **pines ADC**. Soporta cuatro interfaces serie como **UART, I2C y SPI**. También hay un pequeño **botón de reset** y un **botón de modo bootloader** en la placa. XIAO ESP32C3 es totalmente compatible con el [Grove Shield para Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) y la [placa de expansión Seeeduino XIAO](https://wiki.seeedstudio.com/es/Seeeduino-XIAO-Expansion-Board) excepto por la placa de expansión Seeeduino XIAO, los contactos de resorte SWD en la placa no serán compatibles.
+**Seeed Studio XIAO ESP32C3** es una placa de desarrollo mini IoT basada en el chip de modo dual WiFi/Bluetooth **ESP32-C3** de Espressif, que cuenta con una **CPU RISC-V de 32 bits** que ofrece un potente rendimiento de cómputo con su arquitectura eficiente. Tiene un excelente rendimiento de radiofrecuencia, soportando **WiFi IEEE 802.11 b/g/n** y protocolos **Bluetooth 5 (BLE)**. Esta placa incluye una antena externa para aumentar la intensidad de la señal para sus aplicaciones inalámbricas. También tiene un **factor de forma pequeño y exquisito** combinado con un **diseño montable en superficie de un solo lado**. Está equipada con interfaces ricas y tiene **11 E/S digitales** que pueden usarse como **pines PWM** y **4 E/S analógicas** que pueden usarse como **pines ADC**. Soporta cuatro interfaces serie como **UART, I2C y SPI**. También hay un pequeño **botón de reset** y un **botón de modo bootloader** en la placa. XIAO ESP32C3 es totalmente compatible con el [Grove Shield para Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) y la [placa de expansión Seeeduino XIAO](https://wiki.seeedstudio.com/es/Seeeduino-XIAO-Expansion-Board) excepto por la placa de expansión Seeeduino XIAO, los contactos de resorte SWD en la placa no serán compatibles.
 
 Con respecto a las características destacadas anteriormente, XIAO ESP32C3 se posiciona como una **placa de desarrollo mini IoT de alto rendimiento, bajo consumo y costo efectivo**, adecuada para **aplicaciones IoT de bajo consumo y aplicaciones inalámbricas portátiles**.
 
@@ -101,9 +101,9 @@ Con respecto a las características destacadas anteriormente, XIAO ESP32C3 se po
             <th>LEDs Integrados</th>
             <td>LED de Carga</td>
             <td>N/A</td>
-            <td>RGB a todo color/ LED 3-en-uno</td>
-            <td>LED 3-en-uno/ LED de Carga</td>
-            <td>LED 3-en-uno/ LED de Carga</td>
+            <td>RGB a todo color/ LED 3 en 1</td>
+            <td>LED 3 en 1/ LED de Carga</td>
+            <td>LED 3 en 1/ LED de Carga</td>
         </tr>
         <tr>
             <th>Chip de Carga de Batería</th>
@@ -127,14 +127,14 @@ Con respecto a las características destacadas anteriormente, XIAO ESP32C3 se po
 - **CPU Potente:** ESP32-C3, procesador de núcleo único RISC-V de 32 bits que opera hasta 160 MHz
 - **Subsistema Wi-Fi completo:** Cumple con el protocolo IEEE 802.11b/g/n y soporta modo Station, modo SoftAP, modo SoftAP + Station, y modo promiscuo
 - **Subsistema Bluetooth LE:** Soporta características de Bluetooth 5 y Bluetooth mesh
-- **Ultra Bajo Consumo:** El consumo en modo deep sleep es de aproximadamente 43μA
+- **Ultra Bajo Consumo:** El consumo en modo de sueño profundo es de aproximadamente 43μA
 - **Mejor rendimiento RF:** Antena RF externa incluida
 - **Chip de carga de batería:** Soporta gestión de carga y descarga de batería de litio
 - **Recursos ricos en chip:** 400KB de SRAM, y 4MB de memoria flash integrada
 - **Tamaño ultra pequeño:** Tan pequeño como un pulgar (21x17.8mm) factor de forma clásico de la serie XIAO para dispositivos portátiles y proyectos pequeños
 - **Características de seguridad confiables:** Aceleradores de hardware criptográfico que soportan AES-128/256, Hash, RSA, HMAC, firma digital y arranque seguro
 - **Interfaces ricas:** 1xI2C, 1xSPI, 2xUART, 11xGPIO(PWM), 4xADC, 1xJTAG interfaz de pad de conexión
-- Componentes de un solo lado, diseño de montaje superficial
+- Componentes de un solo lado, diseño de montaje en superficie
 
 ## Descripción general del hardware
 
@@ -454,7 +454,7 @@ Si eres lo suficientemente rápido para activar el monitor serie antes de que el
 En el programa, estamos usando un nivel bajo de **D1** para despertar. Esto significa que podemos conectar un botón al pin D1 y el XIAO se despertará cuando presionemos el botón.
 
 :::caution
-El XIAO ESP32-C3 soporta despertar por GPIO y despertar por temporizador, y los pines que soportan despertar son D0~D3.
+Actualmente el XIAO ESP32C3 solo soporta despertar por GPIO, y los únicos pines que soportan despertar son D0~D3. Este programa puede no funcionar en otros pines.
 :::
 
 ## Solución de Problemas

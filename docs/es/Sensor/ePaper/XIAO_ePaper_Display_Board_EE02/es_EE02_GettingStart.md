@@ -1,10 +1,10 @@
 ---
-description: Introducción al EE02 Placa Controladora de E-ink de 13.3 pulgadas
+description: Introducción al EE02 Placa Controladora de Pantalla E-ink de 13.3 pulgadas
 title: Introducción a la Placa de Pantalla ePaper XIAO - EE02
 keywords:
   - E-ink
-  - Placa Controladora
-  - 13.3 pulgadas
+  - Driver Board
+  - 13.3 inch
   - ESP32
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
@@ -18,7 +18,7 @@ last_update:
 
 El **EE02** es una placa controladora de pantalla E-ink de alto rendimiento diseñada específicamente para pantallas de papel electrónico de **13.3 pulgadas**. Alimentado por el chip ESP32-S3, soporta conectividad Wi-Fi y Bluetooth, convirtiéndolo en una solución ideal para aplicaciones de pantalla inalámbrica.
 
-Similar a su hermano, el EE04 (diseñado para pantallas más pequeñas), el EE02 ofrece una experiencia perfecta para desarrolladores que buscan integrar pantallas E-ink de gran formato en sus proyectos IoT. Simplifica el proceso de control y soporta la plataforma SenseCraft HMI para una gestión fácil del contenido.
+Similar a su hermano, el EE04 (diseñado para pantallas más pequeñas), el EE02 ofrece una experiencia fluida para desarrolladores que buscan integrar pantallas E-ink de gran formato en sus proyectos IoT. Simplifica el proceso de control y soporta la plataforma SenseCraft HMI para una gestión fácil del contenido.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/1.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -49,7 +49,7 @@ Similar a su hermano, el EE04 (diseñado para pantallas más pequeñas), el EE02
 - **Señalización Digital**: Ideal para menús de restaurantes, letreros de salas de conferencias y etiquetas de precios minoristas.
 - **Hogar Inteligente**: Paneles de información para clima, calendario y estado de automatización del hogar.
 - **HMI Industrial**: Pantallas de estado de bajo consumo para maquinaria y gestión de almacenes.
-- **Educación**: Lectores de libros electrónicos o tableros de información de aulas.
+- **Educación**: Lectores de libros electrónicos o tableros de información para aulas.
 - **Oficina**: Placas de identificación de escritorio o tableros de anuncios.
 
 ## Descripción del Hardware
@@ -119,67 +119,6 @@ Finalmente el EE02 recibirá los datos y actualizará la pantalla de 13.3 pulgad
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/11.jpg" style={{width:300, height:'auto'}}/></div>
 
-## Introducción con Arduino
-
-### Instalar Librería Seeed GFX
-
-:::tip
-Esta librería tiene la misma función que la librería TFT y no es compatible con ella. Si has instalado la librería TFT u otras librerías de pantalla similares, por favor desinstálalas primero.
-:::
-
-Descarga e instala la librería Seeed GFX desde GitHub.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
-
-<div align="center">
-<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Haz clic aquí para descargar</button></p>
-</a>
-</div>
-
-Desplázate hacia abajo y abre este enlace.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
-
-Selecciona tu tipo de dispositivo y generará algo de código. Copia ese código y lo usaremos más tarde.
-
-:::tip
-Si haces la elección incorrecta, la pantalla no mostrará nada.
-
-Así que por favor asegúrate del tipo de tus dispositivos o componentes.
-:::
-
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_1.png" style={{width:800, height:'auto'}}/></div>
-
-Después de descargar la librería, ve a **Sketch** -> **Include Library** -> **Add .ZIP Library** y selecciona la librería descargada.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
-
-### Configurar y grabar el programa
-
-Selecciona el ejemplo mostrado en la figura
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_2.png" style={{width:800, height:'auto'}}/></div>
-
-Crea un nuevo archivo "driver.h" y pega ese código en él. El código debería ser como:
-```cpp
-#define BOARD_SCREEN_COMBO 510 // 13.3 inch six-color ePaper Screen（T133A01）
-#define USE_XIAO_EPAPER_DISPLAY_BOARD_EE02
-```
-
-
-Después de eso, ve a **Tools** -> **Board** -> **XIAO ESP32S3 Plus** y **Tools** -> **Port** -> **Selecciona el puerto al que está conectada tu placa**.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_3.png" style={{width:1000, height:'auto'}}/></div>
-
-Nota que PSAM debe estar habilitado.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_4.png" style={{width:1000, height:'auto'}}/></div>
-
-Luego haz clic en **Upload** para subir el código.
-¡Ahora verás la respuesta en tu pantalla epaper! Los siguientes son los resultados de los ejemplos de Bitmap.
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_5.jpg" style={{width:500, height:'auto'}}/></div>
-
 ## Solución de Problemas
 
 **P1: La pantalla no se actualiza después de encender.**
@@ -193,14 +132,14 @@ Luego haz clic en **Upload** para subir el código.
 *   Acércate más al router para asegurar una señal fuerte.
 
 **P3: La pantalla se ve borrosa o tiene imágenes fantasma.**
-*   Esto puede suceder si la pantalla no se ha actualizado por mucho tiempo o si el suministro de energía es inestable. Intenta actualizar la pantalla nuevamente a través de la plataforma HMI.
+*   Esto puede suceder si la pantalla no se ha actualizado por mucho tiempo o si el suministro de energía es inestable. Intenta actualizar la pantalla nuevamente vía la plataforma HMI.
 
 ## Recursos
 - **[PDF]** [Hoja de Datos del Módulo de Pantalla eInk E6 de 13.3](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
-- **[PDF]** [Esquemático de Seeed Studio XIAO ePaper Display EE02](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
-- **[ZIP]** [PCBA y SCH de Seeed Studio XIAO ePaper Display EE02](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
+- **[PDF]** [Esquemático de la Pantalla ePaper XIAO EE02 de Seeed Studio](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[ZIP]** [PCBA y SCH de la Pantalla ePaper XIAO EE02 de Seeed Studio](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

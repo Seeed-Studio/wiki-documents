@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseC
 slug: /ja/sensecap_t2000_tracker_aws
 sku: 100082900,100057727,100087298
 last_update:
-  date: 1/29/2026
+  date: 1/23/2026
   author: Janet
 ---
 
@@ -43,7 +43,7 @@ AWS アカウントをお持ちでない場合は、[こちら](https://portal.a
 
 ### ゲートウェイ証明書
 
-ゲートウェイが AWS IoT と安全に通信できるように認証するには、LoRaWAN ゲートウェイは AWS IoT Core for LoRaWAN に秘密鍵と証明書を提示する必要があります。
+ゲートウェイが AWS IoT と安全に通信できるように認証するため、LoRaWAN ゲートウェイは AWS IoT Core for LoRaWAN に秘密鍵と証明書を提示する必要があります。
 
 `Create certificate` をクリックします。
 
@@ -57,12 +57,12 @@ AWS アカウントをお持ちでない場合は、[こちら](https://portal.a
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/files.png" alt="pir" width={800} height="auto" /></p>
 
-### ゲートウェイ権限
+### ゲートウェイの権限
 
 アカウントに IoTWirelessGatewayCertManagerRole IAM ロールを作成していない場合は、ゲートウェイの追加を続行する前にロールを作成してください。
 このロールがないと、ゲートウェイは AWS IoT と通信できません。
 
-ロールを選択します：`IoT Wireless Gateway Cert Manager Role`、その後設定を送信します。
+ロールを選択します：`IoT Wireless Gateway Cert Manager Role`、次に設定を送信します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/permissions.png" alt="pir" width={800} height="auto" /></p>
 
@@ -70,14 +70,14 @@ CUPS URL をコピーします。次のステップで使用します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cups.png" alt="pir" width={800} height="auto" /></p>
 
-### ゲートウェイ設定
+### ゲートウェイの設定
 
 ゲートウェイの Luci 設定ページにログインします。詳細については [Get_Started](https://files.seeedstudio.com/products/SenseCAP%20M2/Quick%20Start%20for%20SenseCAP%20M2%20Multi-Platfrom%20Gateway%20&%20Sensors.pdf) を確認してください。
 
 `LoRa` > `LoRa Network` に移動します。
 
 `Mode`: Basic Station<br/>
-`Gateway EUI`: ゲートウェイ EUI<br/>
+`Gateway EUI`: ゲートウェイの EUI<br/>
 `Server`: CUPS Server<br/>
 `URL`: 先ほどコピーした CUPS URL<br/>
 `Authentication Mode`: TLS Server and Client Authentication
@@ -104,7 +104,7 @@ Gateway details ページの LoRaWAN specific details セクションで、接�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS11.PNG" alt="pir" width={800} height="auto" /></p>
 
-デバイスプロファイル名を入力し、デバイスとゲートウェイで使用している周波数帯域（RfRegion）を選択し、その他の設定はデフォルト値のままにしておきます。
+デバイスプロファイル名を入力し、デバイスとゲートウェイで使用している周波数帯域（RfRegion）を選択し、その他の設定はデフォルト値のままにします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/proflie2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -114,44 +114,41 @@ Gateway details ページの LoRaWAN specific details セクションで、接�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS13.PNG" alt="pir" width={800} height="auto" /></p>
 
-データ送信の RSSI や SNR などの追加のゲートウェイメタデータを各ペイロードで受信できるように、`Add gateway meta data` 設定を有効のままにしておくことをお勧めします。
+データ送信の RSSI や SNR などの追加のゲートウェイメタデータを各ペイロードで受信できるように、`AddGWMetaData` 設定を有効のままにしておくことをお勧めします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/profile4.png" alt="pir" width={800} height="auto" /></p>
 
 ### 宛先の追加
 
-`LPWAN Devices` > `Destination` に移動し、`Add destination` をクリックします。
+`Devices` > `Destination` に移動し、`Add destination` をクリックします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-destination.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS15.PNG" alt="pir" width={800} height="auto" /></p>
 
 ここで `Publish to AWS IoT Core Message Broker` を選択し、宛先の `MQTT topic` に名前を付けます
 
-**Permissions:** 既存のサービスロールを選択 > `IoT Wireless Gateway Cert Manager Role`
+権限：既存のサービスロールを選択 > `IoT Wireless Gateway Cert Manager Role`
 
 :::info
 宛先名には英数字、-（ハイフン）、_（アンダースコア）文字のみを使用でき、スペースを含めることはできません。
 :::
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-destination2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS14.png" alt="pir" width={800} height="auto" /></p>
 
 ## LoRaWAN デバイスの追加
 
 ### ワイヤレスデバイスの追加
 
-`LPWAN devices` > `LoRaWAN`> `Devices` に移動し、`Add wireless device` をクリックします。
+`LPWAN devices` > `Devices` に移動し、`Add wireless device` をクリックします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device-2.png" alt="pir" width={800} height="auto" /></p>
+`Wireless device specification`: OTAAv1.0x
 
-`Wireless device specification`: OTAA v1.0x
+`DevEUI / AppEUI / AppKey`: SenseCAP Mate APP で確認できます。詳細については [Get_Started](https://wiki.seeedstudio.com/ja/Get_Started_with_SenseCAP_T2000_tracker/) を確認してください。
 
-`DevEUI / AppEUI / AppKey`: SenseCraft APP で確認できます。詳細については [Get_Started](https://wiki.seeedstudio.com/ja/Get_Started_with_SenseCAP_T2000_tracker/#lora-parameters-setup) を確認してください。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
 
 前のステップで作成したデバイスプロファイルと宛先を選択します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device-3.png" alt="pir" width={800} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device-4.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/device-eui2.png" alt="pir" width={800} height="auto" /></p>
 
 Devices ページに移動し、先ほど追加したデバイスを選択します。
 
@@ -169,52 +166,52 @@ Wireless devices details ページの Details セクションで、受信日を�
 
 ルールに名前を付けて送信します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules2.png" alt="pir" width={800} height="auto" /></p>
 
 `SQL version`: 2016-03-23<br/>
 `SQL statement`: SELECT * FROM **"YourDestinationTopic"**
 
 ここでは [宛先の追加](#宛先の追加) に従って `t2000-raw` を入力します
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sql.png" alt="pir" width={800} height="auto" /></p>
 
 `Rule actions` セクションまでスクロールし、`Action 1` から `Lambda` を選択し、`Create a Lambda function` をクリックします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder3.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rule-action.png" alt="pir" width={800} height="auto" /></p>
 
 `Function name`: 関数に名前を付けます。<br/>
-`Runtime`: Node.js 24.x<br/>
+`Runtime`: Node.js 20.x<br/>
 `Architexture`: x86_64
 
 `Create function` ボタンをクリックして新しい関数を作成します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder4.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cre-function.png" alt="pir" width={800} height="auto" /></p>
 
 関数を作成すると、関数の設定ページに移動します。後で設定するので、ルールページに戻ります。
 
-Refreshボタンをクリックし、以前に作成したLambda関数を選択します。次に`Next`をクリックしてStep 4に進みます。
+Refresh ボタンをクリックし、先ほど作成した Lambda 関数を選択します。次に `Next` をクリックしてステップ 4 に進みます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder5.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sel-function.png" alt="pir" width={800} height="auto" /></p>
 
-ルールの詳細がすべて正しいことを確認し、`Create`をクリックしてルールを作成します。
+ルールのすべての詳細が正しいことを確認し、`Create` をクリックしてルールを作成します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder6.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules3.png" alt="pir" width={800} height="auto" /></p>
 
-### Lambda関数の設定
+### Lambda 関数の設定
 
-`Message routing`タブ → `Rules`に戻り、以前に作成したルールを選択します。
+`Message routing` タブ → `Rules` に戻り、先ほど作成したルールを選択します。
 
-`Actions`から`Lambda`をクリックし、リンクをクリックしてLambda関数設定ページに移動します。
+`Actions` から `Lambda` をクリックし、リンクをクリックして Lambda 関数設定ページに移動します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder7.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules4.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder8.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules5.png" alt="pir" width={800} height="auto" /></p>
 
-以下の関数設定ページで、`index.mjs`ファイルを`index.js`に名前を変更し、すべてのコードを削除して[Resource](#resource)のスクリプトに置き換え、`Deploy`ボタンをクリックします。
+以下の関数設定ページで、`index.mjs` ファイルを `index.js` に名前を変更し、すべてのコードを削除して [Resource](#resource) のスクリプトに置き換えてから、`Deploy` ボタンをクリックします。
 
 <details>
 
-<summary>AWS用デコーダー</summary>
+<summary>AWS 用デコーダー</summary>
 
 ```cpp
 const {IoTDataPlaneClient, PublishCommand} = require("@aws-sdk/client-iot-data-plane");
@@ -967,35 +964,37 @@ exports.handler = async (event) => {
 
 </details>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder9.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod.png" alt="pir" width={800} height="auto" /></p>
 
-デコーダーを設定した後、`Configuration` → `Permissions` → `Edit`をクリックします。
+:::tip 注意
+お使いのデバイスに応じて `region` と `device id` を置き換えてください。
+:::
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder10.png" alt="pir" width={800} height="auto" /></p>
+デコーダーを設定した後、`Configuration` → `Permissions` → `Edit` をクリックします。
 
-下部の`View the xxxxxxxxxxx`ロールをクリックします。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod-per.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder11.png" alt="pir" width={800} height="auto" /></p>
+下部の `View the xxxxxxxxxxx` ロールをクリックします。
 
-`Add permissions` → `Attach policies`をクリックします。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/existing-role.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder12.png" alt="pir" width={800} height="auto" /></p>
+`Add permissions` → `Attach policies` をクリックします。
 
-`AdministratorAccess`を検索し、左側のチェックボックスにチェックを入れ、`Add Permissions`をクリックします。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/policies.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder13.png" alt="pir" width={800} height="auto" /></p>
+`AdministratorAccess` を検索し、左側のチェックボックスにチェックを入れ、`Add Permissions` をクリックします。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/policies2.png" alt="pir" width={800} height="auto" /></p>
 
 ### データの確認
 
-`MQTT test client`ページでデータを確認し、`#`を入力して`Subscribe`ボタンをクリックすると、データが表示されます。
+`MQTT test client` ページでデータを確認し、`#` を入力して `Subscribe` ボタンをクリックすると、データが表示されます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder14.png" alt="pir" width={800} height="auto" /></p>
+T2000 Tracker の生ペイロードは `t2000-raw` から公開され、デコードされたデータは `tracker/measurement` から公開されます。
 
-T2000 Trackerの生ペイロードは`t2000-raw`から公開され、デコードされたデータは`tracker/measurement`から公開されます。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/dataview1.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/check-data.png" alt="pir" width={800} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/check-data2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/dataview2.png" alt="pir" width={800} height="auto" /></p>
 
 ## リソース
 

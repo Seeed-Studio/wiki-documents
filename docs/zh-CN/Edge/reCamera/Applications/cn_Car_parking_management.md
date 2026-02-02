@@ -1,15 +1,14 @@
 ---
 title: 使用 reCamera 的 AI 停车位监控演示
-description: 本文档介绍了使用 reCamera 的基于 AI 的停车位监控演示，展示了实时停车位可用性检测和可视化功能。
+description: 本文档介绍了一个基于 AI 的停车位监控演示，使用 reCamera 实现实时停车位可用性检测和可视化。
 keywords:
     - Parking Slot Detection
     - reCamera
     - AI Edge Vision
     - Smart Parking
 slug: /cn/ai_parking_slot_monitoring_demo_with_recamera
-sku: 100029708,102991896
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-sidebar_position: 3
+sidebar_position: 1
 last_update:
     date: 2025-12-17
     author: John Xiang
@@ -96,7 +95,7 @@ last_update:
 
 首先，请按照官方入门指南完成 reCamera 的基本配置：[reCamera 基本配置](https://wiki.seeedstudio.com/cn/recamera_getting_started/)
 
-完成初始设置后，确保设备已通电并正确连接到网络。  
+完成初始设置后，确保设备已开机并正确连接到网络。  
 然后，访问 reCamera 管理界面并进入 **Node-RED 工作流**页面。
 
 如果您能成功访问如下所示的 Node-RED 工作流界面，说明配置已成功完成。
@@ -124,12 +123,12 @@ last_update:
    摄像头持续捕获视频帧并将其发送到 AI 推理节点。
 
 2. **AI 检测**  
-   检测模型识别停车相关对象，并输出带有类别标签（`free` / `car`）和置信度分数的边界框。
+   检测模型识别停车相关对象并输出带有类别标签（`free` / `car`）和置信度分数的边界框。
 
 3. **车位关联和稳定化**  
    - 使用 **IoU（交并比）**在帧间匹配检测到的边界框。
    - 每个车位只有在连续检测到固定帧数后才进入*稳定状态*。
-   - 容忍短期遗漏以防止错误的状态变化。
+   - 容忍短期丢失以防止错误的状态变化。
 
 4. **车位池管理**  
    - 每个停车位都存储在车位池中，包含其位置、状态历史和稳定性计数器。
@@ -175,19 +174,19 @@ last_update:
   - **红色圆圈**表示被占用车位  
 
 - **车位标签和坐标**  
-  每个车位都标有标签（例如 `Slot1`、`Slot2`、`Slot3`）以及其中心坐标 `(x, y)`。  
+  每个车位都有标签（例如 `Slot1`、`Slot2`、`Slot3`）以及其中心坐标 `(x, y)`。  
   这些标签从您通过 Node-RED 提供的车位名称列表映射而来。
 
 - **状态面板（左上角）**  
   叠加面板汇总整体状态：
-  - **Monitoring Slots**：当前正在跟踪的所有车位
-  - **Free Slots**：经过多帧验证确认为空闲的车位
+  - **监控车位**：当前正在跟踪的所有车位
+  - **空闲车位**：经过多帧验证确认为空闲的车位
 
 系统使用多帧稳定化机制来避免由临时遮挡、光照变化或检测噪声引起的闪烁结果。
 :::note
 当前的停车位检测逻辑专门设计用于**三个并排相邻的停车位**。在此演示中，**reCamera 安装在停车位前方**，直接面向车辆，而不是使用俯视（鸟瞰）视角。  
 
-因此，车位关联、中心点定位和稳定性逻辑针对**前视视角**进行了优化。如果您计划使用俯视摄像头或不同的停车布局，可能需要相应调整车位映射和检测逻辑。
+因此，车位关联、中心点定位和稳定性逻辑针对**前视角度**进行了优化。如果您计划使用俯视摄像头或不同的停车布局，可能需要相应调整车位映射和检测逻辑。
 :::
 
 

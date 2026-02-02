@@ -75,8 +75,8 @@ ESPHome 是一个专为 ESP8266 / ESP32 设备设计的开源固件创建工具�
 - **扩展覆盖范围：** 通过利用分布式 ESP32 代理节点实现全屋蓝牙连接，消除对主机蓝牙范围的依赖。
 - **工作原理：**
   - **XIAO W5500 以太网适配器** 启用蓝牙扫描
-  - 它接收附近的 BLE 广播数据包（例如温度计、智能锁、灯具）
-  - 数据通过 **以太网或 Wi-Fi** 转发到 Home Assistant
+  - 接收附近的 BLE 广播数据包（例如温度计、智能锁、灯具）
+  - 通过 **以太网或 Wi-Fi** 将数据转发到 Home Assistant
   - Home Assistant 将这些设备识别为 **蓝牙实体**
   - 用户可以直接在 Home Assistant 界面中查看温度、电池电量、信号强度和其他指标
 
@@ -122,11 +122,10 @@ ESPHome 是一个专为 ESP8266 / ESP32 设备设计的开源固件创建工具�
 <summary>点击此处复制 yaml 文件</summary>
 
 ```yaml
-# Only boards produced after November 1, 2025 are supported
 esphome:
-  name: seeed-esp32-poe
+  name: seeed-esp32-s3
   friendly_name: Bluetooth Proxy
-  min_version: 2025.11.0
+  min_version: 2025.8.0
   name_add_mac_suffix: true
 
 esp32:
@@ -136,11 +135,10 @@ esp32:
 
 ethernet:
   type: W5500
+  cs_pin: GPIO2
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
-  cs_pin: GPIO2
-  interrupt_pin: GPIO10
 
 api:
 logger:
@@ -149,14 +147,14 @@ ota:
   - platform: esphome
     id: ota_esphome
 
-esp32_ble:
-  max_connections: 4
-
 esp32_ble_tracker:
+  scan_parameters:
+    interval: 1100ms
+    window: 1100ms
+    active: true
 
 bluetooth_proxy:
   active: true
-  connection_slots: 4
 
 button:
   - platform: safe_mode
@@ -284,14 +282,14 @@ button:
 
 ## 应用
 
-通过利用在 **XIAO(ESP32-S3) W5500 Ethernet Adapter** 上实现的蓝牙代理，您可以显著扩展蓝牙覆盖范围以连接蓝牙设备。具体来说，这可以基于不同的蓝牙协议来实现。下面，以 Home Assistant (HA) 的现有集成为例，我们演示针对智能家居应用场景量身定制的实现方法。
+通过利用在 **XIAO(ESP32-S3) W5500 以太网适配器**上实现的蓝牙代理，您可以显著扩展蓝牙覆盖范围以连接蓝牙设备。具体来说，这可以基于不同的蓝牙协议来实现。下面，以 Home Assistant (HA) 的现有集成为例，我们演示了针对智能家居应用场景量身定制的实现方法。
 
 ### [BTHome](https://bthome.io/)
 
 BTHome 是一种节能但灵活的 BLE 格式，供设备广播其传感器数据和按钮按压。<br/>
 以从 DHT11 温湿度传感器读取数据为例，在 Home Assistant (HA) 中添加相应的集成，通过蓝牙代理读取数据，并实现稳定的
 
-除了 XIAO(ESP32-S3) W5500 Ethernet Adapter 外，您还需要准备一个 XIAO ESP32-C3 和一个 DHT11 温湿度传感器。
+除了 XIAO(ESP32-S3) W5500 以太网适配器外，您还需要准备一个 XIAO ESP32-C3 和一个 DHT11 温湿度传感器。
 
 1. 添加 Arduino 代码
 
@@ -361,7 +359,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_2.png" style={{width:800, height:'auto'}}/></div>
 
-- 点击 MAC 地址显示该设备是由在 XIAO(ESP32-S3) W5500 Ethernet Adapter 上实现的蓝牙代理发现的。这确认了蓝牙代理按预期运行。
+- 点击 MAC 地址显示该设备是由在 XIAO(ESP32-S3) W5500 以太网适配器上实现的蓝牙代理发现的。这确认了蓝牙代理按预期运行。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_3.png" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_4.png" style={{width:800, height:'auto'}}/></div>

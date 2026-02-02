@@ -141,8 +141,8 @@ last_update:
 | 5V                     | VBUS       |           |                          | Power Input/Output           |
 | GND                    |            |           |                          |                              |
 | 3V3                    | 3V3_OUT    |           |                          | Power Output                 |
-| D0                     | Analog     | GPIO1     | LP_UART_DSRN, LP_GPIO1   | GPIO, ADC                    |
-| D1                     |            | GPIO0     | LP_UART_DTRN, LP_GPIO0   | GPIO                         |
+| D0                     | Analog     | GPIO1     | LP_UART_DSRN,LP_GPIO1    | GPIO, ADC                    |
+| D1                     |            | GPIO0     | LP_UART_DTRN,LP_GPIO0    | GPIO                         |
 | D2                     |            | GPIO25    |                          | GPIO                         |
 | D3                     |            | GPIO7     | SDIO_DATA1               | GPIO                         |
 | D4                     | SDA        | GPIO23    |                          | GPIO, I2C Data               |
@@ -152,10 +152,10 @@ last_update:
 | D8                     | SCK        | GPIO8     | TOUCH7                   | GPIO, SPI Clock              |
 | D9                     | MISO       | GPIO9     | TOUCH8                   | GPIO, SPI Data               |
 | D10                    | MOSI       | GPIO10    | TOUCH9                   | GPIO, SPI Data               |
-| MTDO                   |            | GPIO5     | LP_UART_TXD, LP_GPIO5    | JTAG                         |
-| MTDI                   |            | GPIO3     | LP_I2C_SCL, LP_GPIO3     | JTAG, ADC                    |
-| MTCK                   |            | GPIO4     | LP_UART_RXD, LP_GPIO4    | JTAG, ADC                    |
-| MTMS                   |            | GPIO2     | LP_I2C_SDA, LP_GPIO2     | JTAG, ADC                    |
+| MTDO                   |            | GPIO5     |                          | JTAG                         |
+| MTDI                   |            | GPIO3     |                          | JTAG, ADC                    |
+| MTCK                   |            | GPIO4     |                          | JTAG, ADC                    |
+| MTMS                   |            | GPIO2     |                          | JTAG, ADC                    |
 | ADC_BAT                |            | GPIO6    |                          | Read the BAT voltage value   |
 | ADC_CRL                |            | GPIO26    |                          | Controls (enables/disables) the measurement circuit to save power.   |
 | Reset                  |            | CHIP_EN   |                          | EN                           |
@@ -319,7 +319,7 @@ After entering deep sleep mode, the XIAO's port will disappear and you'll need t
 :::
 
 :::caution
-The XIAO ESP32-C5 supports GPIO wake-up and timer wake-up. To prevent the loss of hardware debugging capabilities and increased difficulty in firmware flashing during low-power development, it is strongly recommended that the JTAG (MTMS, MTDI, MTCK, MTDO) pins be reserved for dedicated use and not employed as wake-up sources for deep sleep mode.
+Currently the XIAO ESP32-C5 only supports GPIO wake-up, and the only pins that support wake-up are D0~D1. This program may not work on other pins.
 :::
 
 ## Battery Usage
@@ -382,16 +382,8 @@ According to the datasheet, the effective measurement range of the ESP32-C5 cove
 ## Resource
 
 - **[PDF]** [ESP32-C5 datasheet](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/esp32-c5_datasheet_en.pdf)
-
 - **[PCB Design Files]** [XIAO ESP32-C5 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.zip)
-
 - **[Schematic]** [XIAO ESP32-C5 Schematic](https://files.seeedstudio.com/wiki/XIAO_ESP32C5/res/Seeed_Studio_XIAO_ESP32C5.pdf)
-
-- **[XLSX]** [XIAO ESP32-C5 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
-
-- **[Kicad]** [XIAO ESP32-C5 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
-- **[STEP]** [XIAO ESP32-C5 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c5-1)
 
 ## Tech Support & Product Discussion
 

@@ -1,11 +1,11 @@
 ---
 description: Usa la función de detección corporal para controlar Subway Surfers.
-title: Jugar Subway Surfers con control de sensor corporal
+title: Juega a Subway Surfers con control mediante sensor corporal
 keywords:
   - reCamera
   - Control sensorial
   - Juego
-image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif 
+image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif
 slug: /es/use_the_motion-sensing_function_of_recamera_to_play_games
 sidebar_position: 9
 last_update:
@@ -13,13 +13,13 @@ last_update:
   author: Xinrui Wu
 ---
 
-# Jugar Subway Surfers con control de sensor corporal
+# Juega a Subway Surfers con control por sensor corporal
 
 ## Introducción
 
-La reCamera es una cámara AI equipada con potentes capacidades de computación en el borde. Esta demostración muestra su capacidad para ejecutar el modelo YOLO11n-Pose en tiempo real a nivel del dispositivo - sin depender de la nube, puede identificar con precisión los puntos clave y posturas del cuerpo humano. Al capturar los movimientos del jugador con la reCamera, transformamos nuestros cuerpos en controladores, permitiéndonos operar "Subway Run" con sensaciones corporales naturales: ¡saltar, agacharse y esquivar a izquierda y derecha, todo en un movimiento fluido!
+La reCamera es una cámara AI equipada con potentes capacidades de computación en el borde. Esta demostración muestra su capacidad para ejecutar el modelo YOLO11n-Pose en tiempo real a nivel de dispositivo - sin depender de la nube, puede identificar con precisión los puntos clave y posturas del cuerpo humano. Al capturar los movimientos del jugador con la reCamera, transformamos nuestros cuerpos en controladores, permitiéndonos operar "Subway Run" con sensaciones corporales naturales: ¡saltar, agacharse y esquivar hacia la izquierda y derecha, todo en un movimiento fluido!
 
-Aquí está el efecto de uso después de completar esta demostración.
+Aquí se muestra el efecto de uso después de completar esta demostración.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_text.gif" /></div>
 
@@ -30,7 +30,7 @@ una computadora
 
 <table align="center">
  <tr>
-  <th>reCamera 2002 Serie</th>
+  <th>reCamera 2002 系列</th>
   <th>reCamera Gimbal</th>
   <th>reCamera HQ POE</th>
  </tr>
@@ -61,7 +61,7 @@ una computadora
  </tr>
 </table>
 
-## 1. Abrir SenseCraft y encontrar la aplicación llamada "GAME"
+## 1. Abre SenseCraft y encuentra la Aplicación llamada "GAME"
 
 ### 1.1 Abrir Wiki
 
@@ -69,19 +69,21 @@ La entrada de SenseCraft está en la esquina superior derecha de la interfaz Wik
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_1.png" /></div>
 
-### 1.2 Abrir la aplicación desde SenseCraft
+### 1.2 Espacio de trabajo en la reCamera
 
-Abre la sección de aplicaciones de sensecraft, ingresa "GAME" en el cuadro de entrada de la izquierda, y luego haz clic en la aplicación GAME.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_2.png" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_19.png" /></div>
+### 1.3 Encuentra la Aplicación llamada GAME y haz clic en ella
 
-### 1.3 Desplegar esta aplicación en la reCamera
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_3.png" /></div>
 
-Haz clic en Deploy Application en la página, luego haz clic en Visit Workspace Via USB (en este punto, debes conectar la reCamera a tu computadora)
+### 1.4 Despliega esta Aplicación en la reCamera
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_23.png" /></div>
+Desliza hasta la parte inferior de la página, haz clic en Open Application, luego haz clic en Visit Workspace Via USB (debes conectar la reCamera a tu computadora en este momento)
 
-Luego ingresarás al Workspace, el nodo Node-RED se cargará por un tiempo, por favor espera pacientemente a que se complete la carga
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_4.png" /></div>
+
+Luego ingresarás al Espacio de trabajo, el nodo Node-RED se cargará por un momento, por favor espera pacientemente a que se complete la carga
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_5.png" /></div>
 
@@ -107,27 +109,7 @@ En este punto deberías poder ver exitosamente la pantalla de detección como si
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_11.png" /></div>
 
-### 1.4 Cerrar el firewall de la computadora y cambiar la dirección IP de la reCamera
-
-#### 1.4.1 Desactivar todos los firewalls en la computadora
-
-Desactivar el firewall es para evitar que los mensajes UDP posteriores enviados por la reCamera sean interceptados.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_22.png" /></div>
-
-#### 1.4.2 Establecer la dirección IP de la reCamera a 192.168.42.2
-
-Abre el Panel de Control en tu computadora – Red e Internet – Conexiones de red, Encuentra el dispositivo llamado "UsbNcm Host Device", este es tu dispositivo reCamera, haz clic derecho y selecciona propiedades para ingresar.
-
-Este paso es para permitir que la reCamera se comunique con la computadora en el mismo segmento de red.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_20.png" /></div>
-
-Elige IPV4 – Propiedades – Usar la siguiente dirección IP – Cambia la dirección IP a 192.168.42.2 y la máscara de subred a 255.255.255.0, después de seleccionar, haz clic en OK.
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_21.png" /></div>
-
-### 1.5 Probar el activador de las cuatro acciones arriba, abajo, izquierda y derecha
+### 1.5 prueba el disparador de las cuatro acciones arriba, abajo, izquierda y derecha
 
 #### 1.5.1 Estado inicial
 
@@ -160,10 +142,10 @@ Mantén el brazo de vuelta al medio y luego agáchate naturalmente. Controla la 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_16.png" /></div>
 
 :::note
-Si quieres activar un cierto conjunto de acciones seguidas, como ir a la izquierda dos veces seguidas, o ir a la izquierda y luego hacia arriba, entonces cuando hagas la primera acción izquierda, primero debes hacer que la pelota regrese al medio y luego hacer la segunda acción.
+Si quieres disparar un cierto conjunto de acciones seguidas, como ir a la izquierda dos veces seguidas, o ir a la izquierda y luego hacia arriba, entonces cuando hagas la primera acción izquierda, primero debes hacer que la pelota regrese al medio y luego hacer la segunda acción.
 :::
 
-## 2. Descargar el programa de control python correspondiente y ejecutarlo.
+## 2. Descarga el programa de control python correspondiente y ejecútalo.
 
 Haz clic en este [enlace de GitHub](https://github.com/xr686/Receive-the-information-from-the-reCamera-to-control-the-computer-through-body-sensing..git)
 
@@ -177,21 +159,21 @@ Después de la descompresión, abre scket_udp.py, y luego descarga primero una d
 pip install pynput
 ```
 
-Luego puedes ejecutar este programa python. En este momento, debes mantener la pantalla de detección de la reCamera en efecto, y verás la salida del resultado de la determinación de acción.
+Luego puedes ejecutar este programa python. En este momento, debes mantener la pantalla de detección de reCamera en efecto, y verás la salida del resultado de determinación de acción.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_18.png" /></div>
 
-## 3. Abrir el juego (tomando la versión web de subway parkour como ejemplo)
+## 3. Abre el juego (tomando la versión web de subway parkour como ejemplo)
 
-Después de asegurar que tu detección de reCamera y los programas python estén ejecutándose y la salida de las acciones de prueba no tenga problemas, abre la [página web de subway parkour](https://subway-surfers.gg/), Luego haz clic en "Start Game" ¡y puedes comenzar a jugar!
+Después de asegurar que tu detección de reCamera y programas python estén ejecutándose y la salida de las acciones de prueba no tenga problemas, abre la [página web de subway parkour](https://subway-surfers.gg/), luego haz clic en "Start Game" ¡y puedes comenzar a jugar!
 
 :::note
 Solo una persona puede aparecer en la pantalla. ¡Cuando otras personas irrumpan, llevará a un error en el juicio de acción!
 :::
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

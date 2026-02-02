@@ -18,7 +18,7 @@ last_update:
 
 ## はじめに
 
-このプロジェクトは、reCamera に内蔵された YOLO11n モデルを使用してターゲット検出を行います。人物ターゲットに対してファジー処理を実行し、ヒートマップ効果を表示します。これらはすべて reCamera 内でローカルに処理されます！そして reCamera は検出されたデータをローカルで実行されている Influxdb データベースに送信します。その後、Grafana が Influxdb データベースからデータを読み取り、リアルタイムデータダッシュボードを表示します。
+このプロジェクトは、reCamera に内蔵された YOLO11n モデルを使用してターゲット検出を行います。人物ターゲットにファジー処理を実行し、ヒートマップ効果を表示します。これらはすべて reCamera 内でローカルに処理されます！そして reCamera は検出されたデータをローカルで実行されている Influxdb データベースに送信します。その後、Grafana が Influxdb データベースからデータを読み取り、リアルタイムデータダッシュボードを表示します。
 
 このデモを完了した後の使用効果は以下の通りです。
 
@@ -66,7 +66,7 @@ reCamera 1台
 
 ### 1.1 InfluxDB2-2.1.1 をダウンロードして起動
 
-ダウンロード[リンク](https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-windows-amd64.zip)にアクセスし、ダウンロードして解凍します。Win + R を押してコマンドプロンプトを開き、ファイルが解凍されたディレクトリに入り、最後に以下を入力します：
+ダウンロード[リンク](https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-windows-amd64.zip)にアクセスし、ダウンロードして解凍します。Win + R を押してコマンドプロンプトを開き、ファイルが解凍されたディレクトリに移動し、最後に以下を入力します：
 
 ```bash
 influxd
@@ -80,7 +80,7 @@ influxd
 
 お使いのデバイスが Linux システムを実行している AMD アーキテクチャデバイスの場合、[こちら](https://dl.influxdata.com/influxdb/releases/influxdb2-2.1.1-linux-amd64.tar.gz)をクリックしてダウンロードしてください。
 
-Linux デバイスでの InfluxDB の起動も同じ手順です。解凍後のディレクトリに入り、実行します：
+Linux デバイスでの InfluxDB 起動についても、同じ手順が適用されます。解凍後のディレクトリに移動して実行します：
 
 ```bash
 ./influxd
@@ -150,31 +150,31 @@ sudo rootfs_rw on
 sudo vi /mnt/system/usb-ncm.sh
 ```
 
-次にこの行をコメントアウトします（まずキーボードの "I" キーを押して書き込みモードに入り、方向キーを使ってこの行に到達し、先頭に "#" を追加します）。/etc/run_usb.sh probe acm >> /tmp/ncm.log 2>&1
+次にこの行をコメントアウトします（まずキーボードの "I" キーを押して書き込みモードに入り、方向キーを使ってこの行に移動し、先頭に "#" を追加します）。/etc/run_usb.sh probe acm >> /tmp/ncm.log 2>&1
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_90.png" /></div>
 
 次に保存して終了します（キーボードの ESC キーを押して書き込みモードを終了し、":wq" と入力して保存して終了します）。
 
 :::note
-複数回再起動すると無効になる場合があり、リセットが必要です。
+複数回再起動すると無効になる可能性があり、リセットが必要です。
 :::
 
 ### 2.2 SenseCraft プラットフォームから reCamera にプログラムをインストール
 
-[SenseCraft プラットフォーム](https://sensecraft.seeed.cc/ai/home) - Application - 検索ボックスに移動し、"Real-time Crowd Heatmap" と入力して検索し、"Real-time Crowd Heatmap" というアプリケーションを見つけて、お使いの reCamera にデプロイします。
+sensecraft プラットフォーム-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera) に入り、"**Real-time heat map local blur processing Grafa**" という名前のデモを見つけて、あなたの reCamera にデプロイします
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_92.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_8.png" /></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_9.png" /></div>
 
-### 2.3 ネットワークに接続し、不足しているノードをインストール
+### 2.3 ネットワークに接続して不足しているノードをインストール
 
 ワークスペースに入ると、この警告がポップアップします。これは正常です。まず Close をクリックします。後で reCamera にノードをインストールする必要があります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_10.png" /></div>
 
-reCamera をネットワークに接続します（お使いのコンピュータと同じネットワークに接続されていることを確認してください！！これは後で非常に重要です）
+reCamera をネットワークに接続します（コンピュータと同じネットワークに接続されていることを確認してください！！これは後で非常に重要です）
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_11.png" /></div>
 
@@ -198,11 +198,7 @@ reCamera をネットワークに接続します（お使いのコンピュー�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_16.png" /></div>
 
-ダブルクリックして設定パネルを開き、server の後ろにある小さな鉛筆アイコンをクリックします
-
-:::note
-この前に、小さな鉛筆の下にある "Organization" と "Bucket" オプションの内容が、InfluxDB で設定したものと同じであることを覚えておいてください！！！"Organization" は InfluxDB でのユーザー名で、"Bucket" は作成したデータベースの名前です。
-:::
+ダブルクリックして設定パネルを開き、サーバーの後ろにある小さな鉛筆アイコンをクリックします
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_17.png" /></div>
 
@@ -210,11 +206,11 @@ reCamera をネットワークに接続します（お使いのコンピュー�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_18.png" /></div>
 
-ここでのURLは、最初のステップで入力したInfluxDBウェブページのリンクを入力します。例えば、ウェブページが192.168.7.183:8086の場合、URLには`http://192.168.7.183:8086`を入力できます。
+ここでの URL は、最初のステップで入力した InfluxDB ウェブページのリンクを入力します。例えば、あなたのウェブページが 192.168.7.183:8086 の場合、URL に `http://192.168.7.183:8086` と入力できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_19.png" /></div>
 
-次に、Tokenを入力します。これは最初に説明したInfluxDBウェブページのAPI Tokensです。
+次に、最初に説明したInfluxDBウェブページのAPI TokensであるTokenを入力します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_20.png" /></div>
 
@@ -232,7 +228,7 @@ Copy to Cilpboardをクリックして、コピーしたTokenを設定に入力�
 
 ### 2.5 InfluxDBデータの表示
 
-この時点でInfluxDBインターフェースに入り、データが表示されるかどうかを確認できます。成功した場合、Submitをクリックすると、データの線グラフが表示されます。ここではデータの数を照会します。
+この時点でInfluxDBインターフェースに入り、データが表示されるかどうかを確認できます。成功した場合、Submitをクリックすると、データの線グラフが表示されます。ここではデータ数をクエリします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_24.png" /></div>
 
@@ -244,13 +240,9 @@ Copy to Cilpboardをクリックして、コピーしたTokenを設定に入力�
 
 Grafanaの公式ウェブサイト[Grafana get started | Cloud, Self-managed, Enterprise](https://grafana.com/get/)にアクセスして、インストールパッケージをローカルにダウンロードします。ここでダウンロードしたバージョンは12.3.0です。
 
-:::note
-注意：ここではGrafanaを必ずCドライブにインストールしてください！！！そうしないと、後で設定ファイルを変更できません。
-:::
-
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_25.png" /></div>
 
-ダウンロードしてインストール後、Grafanaはバックグラウンドで自動的に実行されるはずです。コンピュータの「サービス」を開いて実行されているかどうかを確認できます。
+ダウンロードしてインストール後、Grafanaは自動的にバックグラウンドで実行されるはずです。コンピュータの「サービス」を開いて実行されているかどうかを確認できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_26.png" /></div>
 
@@ -288,7 +280,7 @@ Linuxシステムの場合、defaults.iniもconfディレクトリにありま�
 
 Windowsシステムの場合、Grafanaをインストールしている場合は、ステップ3.1.1で説明したように「サービス」セクションでGrafanaが実行されているかどうかを確認するだけです。一般的に、Grafanaはインストール後に自動的に開始されます。
 
-Linuxシステムの場合、Grafanaを手動で開始する必要があります。解凍したgrafanaファイルのディレクトリに入った後、次のコマンドを実行します：
+Linuxシステムの場合、Grafanaは手動で開始する必要があります。解凍したgrafanaファイルのディレクトリに入った後、次のコマンドを実行します：
 
 ```bash
 ./bin/grafana-server
@@ -298,7 +290,7 @@ Linuxシステムの場合、Grafanaを手動で開始する必要がありま�
 
 ### 3.4 データソースの設定
 
-Grafanaが実行されていることを確認した後、この時点で、ブラウザで`http://localhost:3000`にアクセスして設定用のローカルGrafanaインターフェースにアクセスできます。まず、ログインする必要があります。初期のユーザー名とパスワードは両方ともadminです。ログイン後、システムは新しいパスワードの変更を求めます。パスワードを覚えておいてください。アカウントは引き続きadminで変更されません。
+Grafanaが実行されていることを確認した後、この時点で、ブラウザで`http://localhost:3000`にアクセスして設定用のローカルGrafanaインターフェースにアクセスできます。まず、ログインする必要があります。初期のユーザー名とパスワードは両方ともadminです。ログイン後、システムは新しいパスワードの変更を促します。パスワードを覚えておいてください。アカウントは引き続きadminで変更されません。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_91.png" /></div>
 
@@ -312,7 +304,7 @@ Grafanaが実行されていることを確認した後、この時点で、ブ�
 
 次に、以下の6つの修正を行う必要があります：
 (1) "Query language" を "Flux" として選択
-(2) データベースウェブページのURLを入力します。これは最初のステップでアクセスしたInfluxDBウェブページのリンクです。例えば、ウェブページアドレスが192.168.7.183:8086の場合、入力すべきURLは`http://192.168.7.183:8086`です。
+(2) データベースウェブページのURLを入力します。これは最初のステップでアクセスしたInfluxDBウェブページへのリンクです。例えば、ウェブページアドレスが192.168.7.183:8086の場合、入力すべきURLは`http://192.168.7.183:8086`です。
 (3) "Basic auth" オプションを無効にする
 (4) "Organization" にはデータベース登録時に使用したユーザー名を入力する
 (5) Tokenには、ステップ2.3で説明したInfluxDBウェブページで言及されたAPI Tokensを入力する
@@ -348,7 +340,7 @@ Import dashboardを選択します
 
 ## 4. Pythonキャリブレーションソフトウェアの使用
 
-まず[GitHub](https://github.com/xr686/reCamera-with-Heatmap.git)で私のプロジェクトをダウンロードすることを忘れないでください。解凍して開いた後、「Heatmap area calibration」という名前のフォルダを見つけてください。このフォルダには3つのファイルが含まれています：calibration_tool.pyはキャリブレーションプログラム、R1.jpgはreCameraで撮影した元の画像、R2.pngは私が描いた部屋の平面図です。
+まず[GitHub](https://github.com/xr686/reCamera-with-Heatmap.git)で私のプロジェクトをダウンロードすることを忘れないでください。解凍して開いた後、「Heatmap area calibration」という名前のフォルダを見つけてください。これには3つのファイルが含まれています：calibration_tool.pyはキャリブレーションプログラム、R1.jpgはreCameraで撮影した元の画像、R2.pngは私が描いた部屋の平面図です。
 
 ### 4.1 reCameraから現在のネイティブ解像度画像を取得する
 
@@ -364,7 +356,7 @@ reCameraワークスペースインターフェースに戻り、まずプログ
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_33.png" /></div>
 
-次に、ダブルクリックしてcaptureノードを開き、以下の2つのオプションを変更します（このノードの機能は2秒ごとに写真を撮り、reCameraにローカルに保存することです）。その後、Finishをクリックして再デプロイし、Runをクリックします。3〜4秒間実行した後、Stop Runningをクリックします（常に実行する必要はありません。そうしないと常に写真を撮り続けます）。次に、撮影した写真をローカルコンピュータに移動します。
+次に、ダブルクリックしてcaptureノードを開き、以下の2つのオプションを変更します（このノードの機能は2秒ごとに写真を撮ってreCameraにローカル保存することです）。その後、Finishをクリックして再デプロイし、Runをクリックします。3〜4秒間実行した後、Stop Runningをクリックします（常時実行する必要はありません。そうしないと常に写真を撮り続けます）。次に、撮影した写真をローカルコンピュータに移動します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_34.png" /></div>
 
@@ -372,11 +364,11 @@ reCameraワークスペースインターフェースに戻り、まずプログ
 
 先ほど撮った写真が成功したかどうかを確認しましょう。
 
-Setting をクリック
+Settingをクリックします
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_35.png" /></div>
 
-Terminal をクリックし、reCamera アカウントのパスワードを入力してログインします。
+Terminalをクリックして、reCameraアカウントのパスワードを入力してログインします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_36.png" /></div>
 
@@ -394,7 +386,7 @@ cd / && cd userdata/Images/
 ls
 ```
 
-すると、システムがいくつかの画像ファイル名を一覧表示するのが見えるはずです。これらは capture ノードで撮影したばかりの画像です。
+すると、システムがいくつかの画像ファイル名を一覧表示するのが確認できます。これらは capture ノードで撮影したばかりの写真です。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_37.png" /></div>
 
@@ -402,13 +394,13 @@ ls
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_38.png" /></div>
 
-次に、キーボードで Win R を押し、cmd と入力し、ターミナルで次のように入力します
+次に、キーボードで Win R を押し、cmd と入力し、ターミナルで以下を入力します
 
 ```bash
 scp -r recamera@<reCamera IP>:/userdata/Images "The folder path of the 'Heatmap area calibration' file that you downloaded from GitHub after decompression"
 ```
 
-これらの IP の reCamera は、ネットワーク設定で確認できます
+これらの IP の reCamera はネットワーク設定で確認できます
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_39.png" /></div>
 
@@ -432,21 +424,21 @@ scp -r recamera@10.228.172.71:/userdata/Images "C:\Users\seeed\Desktop\热力图
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_43.png" /></div>
 
-今度は、私のプロジェクトから元の R1.jpg を削除します。
+今度は私のプロジェクトから元の R1.jpg を削除します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_44.png" /></div>
 
-最新の画像、通常は最後の画像を選択し、それを R1 にリネームします
+最新の写真、通常は最後の写真を選択し、それを R1 にリネームします
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_45.png" /></div>
 
-次に、この画像を上位ディレクトリに配置します。
+次に、この写真を上位ディレクトリに配置します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_46.png" /></div>
 
 ### 4.2 部屋の平面図を準備
 
-Windows の標準描画ツールを使用して描画し、画像として保存して Heatmap area calibration パスに保存するか、既存の部屋の平面図を直接 Heatmap area calibration パスに保存できます。この手順では、私の以前のプロジェクトから R2.png を削除し、あなたの画像を R2 にリネームしてこのパスに保存することも忘れないでください。
+Windows 標準の描画ツールを使用して描画し、画像として保存して Heatmap area calibration パスに保存するか、既存の部屋の平面図を直接 Heatmap area calibration パスに保存できます。この手順では、私の以前のプロジェクトから R2.png を削除し、あなたの画像を R2 にリネームしてこのパスに保存することも忘れないでください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_47.png" /></div>
 
@@ -468,11 +460,11 @@ pip install opencv-python
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_49.png" /></div>
 
-次に、俯瞰図 R2.png を表示する2番目のウィンドウがポップアップします。クリック順序は最初のステップに対応している必要があります：先ほどの4点の対応する位置をマップ上でクリックします。例えば、先ほどテーブルの左上角を最初にクリックした場合、今度はマップ上でテーブルの左上角をクリックします。4点をクリックした後、任意のキーを押して終了します。
+次に、俯瞰図 R2.png を表示する2番目のウィンドウがポップアップします。クリック順序は最初のステップに対応している必要があります：先ほどの4点の対応する位置を地図上でクリックします。例えば、先ほどテーブルの左上角を最初にクリックした場合、今度は地図上でテーブルの左上角をクリックします。4点をクリックした後、任意のキーを押して終了します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_50.png" /></div>
 
-次に、コマンドラインウィンドウ（CMD）に戻ると、スクリプトが自動的に JS コードを生成しているのが見えます。そのコードを直接コピーして、index.html の `const CALIBRATION = { ... };` を置き換えてください。（次のステップの「5.5 キャリブレーションされた座標データ」まで使用されませんので、今は気にしないでください）
+次に、コマンドラインウィンドウ（CMD）に戻ると、スクリプトが自動的に JS コードを生成しているのが確認できます。そのコードを直接コピーして、index.html の `const CALIBRATION = { ... };` を置き換えてください。（次のステップの「5.5 キャリブレートされた座標データ」まで使用されませんので、今は気にしないでください）
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_51.png" /></div>
 
@@ -502,11 +494,11 @@ ORG は、InfluxDB を設定する際のユーザー名です。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_55.png" /></div>
 
-BUCKET は、InfluxDB で作成したデータベースの名前です。
+BUCKET は、作成した InfluxDB データベースの名前です。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_56.png" /></div>
 
-TOKEN は、InfluxDB API Tokens です。HTML の元の 12345678 を実際の Token に置き換えてください
+TOKEN は、あなたの InfluxDB API Tokens です。HTML 内の元の 12345678 を実際の Token に置き換えてください
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_57.png" /></div>
 
@@ -516,13 +508,13 @@ TOKEN は、InfluxDB API Tokens です。HTML の元の 12345678 を実際の To
 
 ##### パラメータ説明
 
-REFRESH_INTERVAL は更新するミリ秒数を指し、DATA_RANGE は過去のデータのクエリ時間を指します。コードのデフォルトの「3000」と「-3s」では、「3000」は3000ミリ秒、つまり3秒ごとに更新されることを意味し、「-3s」は過去3秒間の熱座標データをクエリすることを意味します。
+REFRESH_INTERVAL は更新するミリ秒数を指し、DATA_RANGE は過去のデータのクエリ時間を指します。コード内のデフォルトの「3000」と「-3s」では、「3000」は3000ミリ秒、つまり3秒ごとに更新されることを意味し、「-3s」は過去3秒間の熱座標データをクエリすることを意味します。
 
 ##### モード選択
 
 設定可能な2つのモードがあります：
 
-（1）「リアルタイムモード」：熱座標はリアルタイムで更新され、累積重ね合わせなしで以前の座標をクリアします。リアルタイムモードを実現するには、DATA_RANGE を短時間に設定する必要があります。例えば、私のデフォルトの「-3s」は過去3秒間の熱座標データをクエリすることを意味します。例えば、プログラムが現在10秒間実行されている場合、DATA_RANGE を -3s に設定すると、熱図で表示される座標データは8-10秒目のデータであり、以前の1-7秒のデータは表示されません。
+（1）「リアルタイムモード」：熱座標はリアルタイムで更新され、累積重ね合わせなしで以前の座標をクリアします。リアルタイムモードを実現するには、DATA_RANGE を短時間に設定する必要があります。例えば、私のデフォルトの「-3s」は過去3秒間の熱座標データをクエリすることを意味します。例えば、プログラムが現在10秒間実行されている場合、DATA_RANGE を -3s に設定すると、熱図に表示される座標データは8-10秒目のデータであり、以前の1-7秒の座標データは表示されません。
 
 （2）「累積モード」：熱座標はリアルタイムで更新されますが、以前の座標が重ね合わされます。累積モードを実現するには、DATA_RANGE をより長い時間に設定する必要があります。例えば、DATA_RANGE を「-1h」に設定すると、熱図は過去1時間のデータを累積的に表示します。プログラムが2時間実行された後、現在2時間目のデータが表示され、1時間目のデータは表示されません。
 
@@ -534,7 +526,7 @@ REFRESH_INTERVAL は更新するミリ秒数を指し、DATA_RANGE は過去の�
 
 CAM_WIDTH / CAM_HEIGHT：カメラの実際のストリーミング解像度（例：1920x1080 または 1280x720）をここに入力する必要があります。そうしないと、透視変換が間違ってしまいます。
 
-このパラメータは「4.1.1 reCamera を使用した写真撮影」のステップでも示されています。カメラノードを capture ノードと接続する際、カメラノードの Resolution パラメータを確認できます。これが修正する必要がある解像度パラメータです。ここで 1920×1080 が選択されている場合、コードでは CAM_WIDTH を 1920 に、CAM_HEIGHT を 1080 に修正する必要があります
+このパラメータは「4.1.1 reCamera を使用した写真撮影」のステップでも示されています。カメラノードを capture ノードと接続する際、カメラノードの Resolution パラメータを確認できます。これが修正する必要がある解像度パラメータです。ここで 1920×1080 が選択されている場合、コード内で CAM_WIDTH を 1920 に、CAM_HEIGHT を 1080 に修正する必要があります
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_60.png" /></div>
 
@@ -542,7 +534,7 @@ CAM_WIDTH / CAM_HEIGHT：カメラの実際のストリーミング解像度（�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_61.png" /></div>
 
-これは前のステップ「4.3 キャリブレーションプログラムの使用」でPythonプログラムを実行した後にコンソールで生成されたコードです。このコードを置き換えてください
+これは、前のステップ「4.3 キャリブレーションプログラムの使用」で Python プログラムが実行された後にコンソールで生成されたコードです。このコードを置き換えてください
 
 #### 5.1.6 熱閾値
 
@@ -550,9 +542,9 @@ CAM_WIDTH / CAM_HEIGHT：カメラの実際のストリーミング解像度（�
 
 ##### パラメータの説明
 
-感度（最大値）：リアルタイムモード（数点のみ）の場合、maxは約2に設定します。そうでないと色が薄すぎて見えません。
+感度（最大値）：リアルタイムモード（数点のみ）の場合、最大値は約2に設定します。そうでないと色が薄すぎて見えません。
 
-1時間の蓄積（数千点）の場合、maxは150以上に設定する必要があります。そうでないとマップが瞬時に赤くなります（露出オーバー）。
+1時間の蓄積（数千点）の場合、最大値は150以上に設定する必要があります。そうでないとマップが瞬時に赤くなります（露出オーバー）。
 
 ### 5.2 ヒートマップの有効化
 
@@ -564,15 +556,15 @@ python -m http.server 8080
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_72.png" /></div>
 
-その後、ブラウザで「[InfluxDB Heatmap (Grafana Fix + 1h Accumulation)](http://localhost:8080/index.html)」のウェブページを開くことで、マップが読み込まれていることを確認できます。
+その後、ブラウザで「[InfluxDB Heatmap (Grafana Fix + 1h Accumulation)](http://localhost:8080/index.html)」のウェブページを開くと、マップが読み込まれているのが確認できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_73.png" /></div>
 
-このステップはLinuxにも適用されます。
+この手順はLinuxにも適用されます。
 
-## 6. Grafanaパネルに戻り、最終結果を確認する
+## 6. Grafanaパネルに戻り、最終結果を確認
 
-この時点で、Grafanaパネルで以下の表示を確認できるはずです。問題が発生した場合は、記事の最後にある「よくある質問」セクションを参照してください。
+この時点で、Grafanaパネルで以下の表示が確認できるはずです。問題が発生した場合は、記事の最後にある「よくある質問」セクションを参照してください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_74.png" /></div>
 
@@ -580,13 +572,13 @@ python -m http.server 8080
 
 ### Grafanaウェブページが開けない
 
-「Services」に入った後、「Grafana」を見つけて右クリックし、「Restart」を選択します。その後、単純に`http://localhost:3000`を再度開いてください。
+「Services」に入った後、「Grafana」を見つけて右クリックし、「Restart」を選択します。その後、単純に`http://localhost:3000`を再度開きます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_75.png" /></div>
 
 ### Grafanaパネルが正しく読み込まれない
 
-Grafanaでリアルタイム熱マップやreCamera リアルタイム画面が読み込まれない、または正しく表示されないことが判明した場合、問題のあるパネルをクリックして更新する必要があります。熱マップパネルを例にとります：
+Grafanaでリアルタイム熱マップやreCamera リアルタイム画面が読み込まれない、または正しく表示されないことが判明した場合、問題のあるパネルをクリックして更新する必要があります。熱マップパネルを例にします：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_63.png" /></div>
 
@@ -596,25 +588,25 @@ Grafanaでリアルタイム熱マップやreCamera リアルタイム画面が�
 
 ### 熱マップの読み込みに問題がある
 
-熱マップの読み込みに問題が発生した場合は、まずこのステップのすべての設定項目が正しいかどうかを確認してください。すべての設定項目が正しく、それでも熱マップの読み込みに問題がある場合は、[InfluxDB Heatmap (Grafana Fix 1h Accumulation)](http://localhost:8080/index.html)インターフェースでF12キーを押してウェブコンソールの出力を確認し、トラブルシューティングを行ってください。
+熱マップの読み込みに問題が発生した場合は、まずこの手順のすべての設定項目が正しいかどうかを確認してください。すべての設定項目が正しく、それでも熱マップの読み込みに問題がある場合は、[InfluxDB Heatmap (Grafana Fix 1h Accumulation)](http://localhost:8080/index.html)インターフェースでF12キーを押してウェブコンソールの出力を確認し、トラブルシューティングを行ってください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_65.png" /></div>
 
 ### reCamera のリアルタイム画像にカクつきが現れる
 
-しばらく実行した後にreCamera のリアルタイム画像がスタックし、「WebSocket:Disconnected」が表示される場合、これは正常な現象です。reCamera のリソースは限られており、メモリが満杯になります。表示が再開されるまで待ってください。
+reCamera のリアルタイム画像がしばらく実行した後にスタックし、「WebSocket:Disconnected」が表示される場合、これは正常な現象です。reCamera のリソースは限られており、メモリが満杯になります。表示が再開されるまで待ってください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_66.png" /></div>
 
-### Grafanaパネルの「Current Number」と「Number of People Today」が正しく表示されない
+### Grafanaパネルの「現在の人数」と「今日の人数」が正しく表示されない
 
-これは正常な現象です。ノイズ干渉があるため、しばらくすると値は正常に戻ります。
+これは正常な現象です。ノイズ干渉があるためで、しばらくすると値は正常に戻ります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_67.png" /></div>
 
-### Grafanaパネルの「continuous running time」とは何を意味するか
+### Grafanaパネルの「連続稼働時間」とは何を意味するか
 
-ここでの「continuous running time」とは、初日から現在まで、データベースがどのくらい実行されているかを指します。InfluxDBのreCamera データベースのデータ保持時間を7日に設定しているため、7日後に自動的にクリアされて再計時されます。ここでは、InfluxDBの各データベースのデータ保存時間を自由に設定できます。
+ここでの「連続稼働時間」とは、初日から現在まで、データベースがどのくらい稼働しているかを指します。InfluxDBでreCamera データベースのデータ保持時間を7日に設定しているため、7日後に自動的にクリアされて再計時されます。ここでは、InfluxDBの各データベースのデータ保存時間を自由に設定できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_68.png" /></div>
 

@@ -15,9 +15,9 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" alt="pir" width={600} height="auto" /></p>
 
-El Seeed Studio XIAO SAMD21, que anteriormente se llamaba Seeeduino XIAO, es el primer debut de la [familia Seeed Studio XIAO, una serie de potentes placas de desarrollo del tamaño de un pulgar compatibles con Arduino](https://www.seeedstudio.com/xiao-series-page). Lleva el potente ATSAMD21G18A-MU que es un microcontrolador de bajo consumo. Por otro lado, esta pequeña placa tiene un buen rendimiento en el procesamiento pero necesita menos energía. Está diseñada en un tamaño diminuto y puede ser utilizada para dispositivos portátiles y proyectos pequeños.
+El Seeed Studio XIAO SAMD21, que anteriormente se llamaba Seeeduino XIAO, es el primer debut de la [familia Seeed Studio XIAO, una serie de potentes placas de desarrollo del tamaño de un pulgar compatibles con Arduino](https://www.seeedstudio.com/xiao-series-page). Lleva el potente ATSAMD21G18A-MU que es un microcontrolador de bajo consumo. Por otro lado, esta pequeña placa tiene un buen rendimiento en el procesamiento pero necesita menos energía. Está diseñada en un tamaño diminuto y puede usarse para dispositivos portátiles y proyectos pequeños.
 
-Seeed Studio XIAO SAMD21 tiene 14 pines, que pueden ser utilizados para 11 interfaces digitales, 11 interfaces analógicas, 10 interfaces PWM (d1-d10), 1 pin de salida DAC D0, 1 interfaz de pad SWD, 1 interfaz I2C, 1 interfaz SPI, 1 interfaz UART, indicador de comunicación serie (T/R), luz de parpadeo (L) a través de multiplexación de pines. Los colores de los LEDs (Power, L, RX, TX) son verde, amarillo, azul y azul. Además, Seeed Studio XIAO SAMD21 tiene una interfaz Type-C que puede suministrar energía y descargar código. Hay dos botones de reset, puedes cortocircuitarlos para resetear la placa.
+Seeed Studio XIAO SAMD21 tiene 14 pines, que pueden usarse para 11 interfaces digitales, 11 interfaces analógicas, 10 interfaces PWM (d1-d10), 1 pin de salida DAC D0, 1 interfaz de pad SWD, 1 interfaz I2C, 1 interfaz SPI, 1 interfaz UART, indicador de comunicación serie (T/R), luz de parpadeo (L) a través de multiplexación de pines. Los colores de los LEDs (Power, L, RX, TX) son verde, amarillo, azul y azul. Además, Seeed Studio XIAO SAMD21 tiene una interfaz Type-C que puede suministrar energía y descargar código. Hay dos botones de reinicio, puedes cortocircuitarlos para reiniciar la placa.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
@@ -93,21 +93,21 @@ Por favor presta atención al uso, no levantes la cubierta del blindaje.
 |5V              |VBUS             |                                      | Entrada/Salida de Energía     |
 | GND           |                 |                                      |                          |
 | 3V3           |   3V3_OUT              |                                |    Salida de Energía           |
-|D0             |  Analog         |   PA02                                |     GPIO, ADC            |
-| D1            |   Analog        |   PA04                                |        GPIO, ADC         |
-| D2            |     Analog      | PA10                                  |    GPIO, ADC             |
-| D3            |    Analog       |  PA11                                 |     GPIO, ADC            |
-| D4            |  Analog,SDA   	| PA08		                              | GPIO, Datos I2C, ADC        |
-| D5            |  Analog,SCL     |	PA09	                                |	GPIO, Reloj I2C, ADC       |
-| D6            | Analog,TX       |  	PB08	                               |	GPIO, Transmisión UART, ADC |  
-| D7            |Analog,RX	      |  PB09	                                |   	GPIO, Recepción UART, ADC |
-|D8             | Analog,SPI_SCK  | 	PA07	                              |	GPIO, Reloj SPI, ADC   |
-|D9             | Analog,SPI_MISO |  	PA05                                |		GPIO, Datos SPI, ADC  |
-|D10            | Analog,SPI_MOSI |  PA06	                                | 	GPIO, Datos SPI         |
+|D0             |  Analógico         |   PA02                                |     GPIO, ADC            |
+| D1            |   Analógico        |   PA04                                |        GPIO, ADC         |
+| D2            |     Analógico      | PA10                                  |    GPIO, ADC             |
+| D3            |    Analógico       |  PA11                                 |     GPIO, ADC            |
+| D4            |  Analógico,SDA   	| PA08		                              | GPIO, Datos I2C, ADC        |
+| D5            |  Analógico,SCL     |	PA09	                                |	GPIO, Reloj I2C, ADC       |
+| D6            | Analógico,TX       |  	PB08	                               |	GPIO, Transmisión UART, ADC |  
+| D7            |Analógico,RX	      |  PB09	                                |   	GPIO, Recepción UART, ADC |
+|D8             | Analógico,SPI_SCK  | 	PA07	                              |	GPIO, Reloj SPI, ADC   |
+|D9             | Analógico,SPI_MISO |  	PA05                                |		GPIO, Datos SPI, ADC  |
+|D10            | Analógico,SPI_MOSI |  PA06	                                | 	GPIO, Datos SPI         |
 |Reset          |                 |  RES	                                |	RESET                  |
 |TX_LED         |                 |   PA19	                              |	TX_LED                 |
 |RX_LED         |                 | PA18	                                |	RX_LED                 |
-|Power_LED     |          |        VBUS	                                |       	CHG-LED_Red      |
+|CHARGE_LED     |          |        VBUS	                                |       	CHG-LED_Rojo      |
 |USER_LED       |                 |   PA17	                              |	Luz de Usuario_Amarillo      |
 
 ### **Entrar al Modo Bootloader**
@@ -116,25 +116,25 @@ A veces el puerto del Seeed Studio XIAO SAMD21 puede desaparecer cuando el proce
 
 - Conecta el Seeed Studio XIAO SAMD21 a tu computadora.
 - Usa pinzas o líneas cortas para cortocircuitar los pines RST en el diagrama dos veces.
-- Los LEDs naranjas parpadean y se encienden.
+- Las luces LED naranjas parpadean y se encienden.
 
-En este punto, el chip entra en modo Bootloader y el puerto de grabación aparece nuevamente. Debido a que el chip samd21 tiene dos particiones, una es el Bootloader y la otra es el programa del usuario. El producto grabará un código bootloader en la memoria del sistema cuando salga de fábrica. Podemos cambiar de modo realizando los pasos anteriores.
+En este punto, el chip entra al modo Bootloader y el puerto de grabación aparece nuevamente. Debido a que el chip samd21 tiene dos particiones, una es el Bootloader y la otra es el programa del usuario. El producto grabará un código bootloader en la memoria del sistema cuando salga de fábrica. Podemos cambiar de modo realizando los pasos anteriores.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO-reset.gif" alt="pir" width={600} height="auto" /></p>
 
-### **Reset**
+### **Reinicio**
 
-Si quieres resetear el Seeed Studio XIAO SAMD21, realiza los siguientes pasos:
+Si quieres reiniciar el Seeed Studio XIAO SAMD21, realiza los siguientes pasos:
 
 - Conecta el Seeed Studio XIAO SAMD21 a tu computadora.
 - Usa pinzas o líneas cortas para cortocircuitar los pines RST **solo una vez**
-- Los LEDs naranjas parpadean y se encienden.
+- Las luces LED naranjas parpadean y se encienden.
 
 Por favor nota: El comportamiento del LED incorporado es inverso al de un Arduino. En el Seeed Studio XIAO SAMD21, el pin tiene que ser puesto en bajo, mientras que en otros microcontroladores tiene que ser puesto en alto.
 
 ### **Interrupción**
 
-Todos los pines en Seeed Studio XIAO SAMD21 soportan interrupciones, pero dos pines no pueden ser usados al mismo tiempo: pin 5 y pin 7. Para más detalles sobre Interrupción por favor consulta [aquí](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp).
+Todos los pines en Seeed Studio XIAO SAMD21 soportan interrupciones, pero dos pines no pueden usarse al mismo tiempo: pin 5 y pin 7. Para más detalles sobre Interrupción por favor consulta [aquí](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/master/variants/XIAO_m0/variant.cpp).
 
 ### **Multiplexación de Pines**
 
@@ -392,13 +392,13 @@ Si el software de Arduino se carga en un idioma diferente, puedes cambiarlo en e
 
 - **Paso 2. Abrir el ejemplo Blink**  
 
-Abre el sketch de ejemplo LED blink: **File > Examples >01.Basics > Blink**.
+Abre el sketch de ejemplo de parpadeo LED: **File > Examples >01.Basics > Blink**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/select_blink.png" alt="pir" width={600} height="auto" /></p>
 
 - **Paso 3. Agregar Seeeduino a tu Arduino IDE**
 
-Haz clic en **File > Preference**, y llena Additional Boards Manager URLs con la URL de abajo:
+Haz clic en **File > Preference**, y completa Additional Boards Manager URLs con la URL de abajo:
 
 *https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json*
 
@@ -437,7 +437,7 @@ el tamaño máximo de flash es 8KB, más información en la hoja de datos ATSAMD
 
 - [Interfaz de Comunicación SPI](https://wiki.seeedstudio.com/es/XIAO-SPI-Communication-Interface)
 
-- [Cómo reparar un xiao muerto usando raspberry pi](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). Gracias John_Doe por compartir.
+- [Cómo reparar un xiao muerto usando raspberry pi](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). Gracias a John_Doe por compartir.
 
 ## Recursos
 
