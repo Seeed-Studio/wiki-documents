@@ -473,13 +473,13 @@ last_update:
       </a>
 
       <!-- Wheeled-Legged -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/English/README.md" className="course-card">
         <div className="course-cover c-legged">Wheel-Legged Robot</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">Intermediate</span> <span>⏱️ 8h</span></div>
           <h3>Stackforce Wheeled-Legged Robots Course</h3>
           <p>Balance control and LQR motion planning for hybrid robots.</p>
-          <span className="btn-plan">Planning</span>
+          <span className="btn-start">Learning</span>
         </div>
       </a>
 
