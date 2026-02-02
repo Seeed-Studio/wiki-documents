@@ -228,6 +228,7 @@ ESPHomeに移動し、**NEW DEVICE**をクリックします。
 <summary>完全なコードをプレビューするにはここをクリック</summary>
 
 ```yaml
+# ==== AUTO-SYNC START: xiao-soil-moisture-monitor/xiao-soil-moisture-monitor.yaml ====
 esphome:
   name: soil-moisture-monitor
   friendly_name: XIAO Soil Moisture Monitor
@@ -640,6 +641,7 @@ wifi:
     password: ""
 
 captive_portal:
+# ==== AUTO-SYNC END ====
 ```
 
 </details>

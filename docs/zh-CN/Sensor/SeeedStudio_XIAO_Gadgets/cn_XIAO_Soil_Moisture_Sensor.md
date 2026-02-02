@@ -228,6 +228,7 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 <summary>点击这里预览完整代码</summary>
 
 ```yaml
+# ==== AUTO-SYNC START: xiao-soil-moisture-monitor/xiao-soil-moisture-monitor.yaml ====
 esphome:
   name: soil-moisture-monitor
   friendly_name: XIAO Soil Moisture Monitor
@@ -640,6 +641,7 @@ wifi:
     password: ""
 
 captive_portal:
+# ==== AUTO-SYNC END ====
 ```
 
 </details>

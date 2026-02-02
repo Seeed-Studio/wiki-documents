@@ -227,6 +227,7 @@ Aquí tienes una configuración YAML de `ESPHome` lista para usar con Home Assis
 <summary>Haz clic aquí para previsualizar el código completo</summary>
 
 ```yaml
+# ==== AUTO-SYNC START: xiao-soil-moisture-monitor/xiao-soil-moisture-monitor.yaml ====
 esphome:
   name: soil-moisture-monitor
   friendly_name: XIAO Soil Moisture Monitor
@@ -639,6 +640,7 @@ wifi:
     password: ""
 
 captive_portal:
+# ==== AUTO-SYNC END ====
 ```
 
 </details>

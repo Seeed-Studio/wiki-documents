@@ -255,6 +255,7 @@ last_update:
 <Details>
 
 ```yaml title="seeed-ir-v1.yaml"
+# ==== AUTO-SYNC START: xiao_smart_ir_mate/xiao_smart_ir_mate.yaml ====
 substitutions:
   name: "seeed-ir"
   friendly_name: "Gree AC Controller" # You can customize a more friendly name
@@ -526,6 +527,7 @@ interval:
                   call.set_rgb(0, 0, 0); // Off
                 }
                 call.perform();
+# ==== AUTO-SYNC END ====
 ```
 
 </Details>
