@@ -9,7 +9,7 @@ keywords:
   - SenseCraft HMI
   - E Ink Spectra 6
   - Smart Home Dashboard
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.webp
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg
 slug: /getting_started_with_reterminal_e1004
 sku: 100064156
 last_update:

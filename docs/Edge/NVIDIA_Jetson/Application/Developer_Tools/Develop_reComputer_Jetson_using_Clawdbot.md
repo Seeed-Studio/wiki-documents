@@ -7,7 +7,7 @@ keywords:
 - LLM
 - Clawdbot
 - Qwen
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops_homepage.webp
 slug: /develop_recomputer_jetson_using_clawdbot
 sku: 114110314, 114090066
 last_update:

@@ -11,7 +11,7 @@ keywords:
   - Object Detection
   - Pose Estimation
   - Image Segmentation
-image: https://files.seeedstudio.com/wiki/Yolo11/connection.webp
+image: https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png
 slug: /ai_robotics_yolov26_dual_camera_system
 sku: 100090853,100076722,100060802,100032662
 last_update:
