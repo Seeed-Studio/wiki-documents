@@ -162,9 +162,9 @@ It may become ineffective after multiple restarts and needs to be reset.
 
 ### 2.2 Install programs from SenseCraft platforms in reCamera
 
-Enter the sensecraft platform-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera), find the Demo named "**Real-time heat map local blur processing Grafa**" and deploy it on your reCamera
+Go to the [SenseCraft platform](https://sensecraft.seeed.cc/ai/home) - Application - search box and enter "Real-time Crowd Heatmap" to search, find the application called "Real-time Crowd Heatmap" and deploy it to your reCamera.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_8.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_92.png" /></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_9.png" /></div>
 
@@ -198,7 +198,11 @@ At this time, we also need to add some configuration information to the node nam
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_16.png" /></div>
 
-Double click to open the configuration panel, then click on the small pencil icon behind the server
+Double click to open the configuration panel, then click on the small pencil icon behind the server  
+
+:::note
+Before this, remember that the content in the "Organization" and "Bucket" options below the small pencil is the same as what you configured in InfluxDB!!! "Organization" is your username in InfluxDB, and "Bucket" is the name of the database you created.
+:::
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_17.png" /></div>
 
@@ -239,6 +243,10 @@ At this point we can enter the InfluxDB interface to see if the data appears, if
 #### 3.1.1 Windows system
 
 Enter the Grafana's official website [Grafana get started | Cloud, Self-managed, Enterprise](https://grafana.com/get/) to download the installation package locally. The version I downloaded here is 12.3.0
+
+:::note
+Remember, Grafana must be installed on the C drive here!!! Otherwise, you cannot modify its configuration file later.
+:::
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_25.png" /></div>
 

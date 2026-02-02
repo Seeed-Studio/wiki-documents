@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseC
 slug: /es/sensecap_t2000_tracker_aws
 sku: 100082900,100057727,100087298
 last_update:
-  date: 1/23/2026
+  date: 1/29/2026
   author: Janet
 ---
 
@@ -88,7 +88,7 @@ Copia el contenido del archivo de certificado que descargamos antes (el certific
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS23.PNG" alt="pir" width={800} height="auto" /></p>
 
-Navega a la página Gateways y elige el gateway que agregaste.
+Navega a la página de Gateways y elige el gateway que has agregado.
 
 En la sección de detalles específicos de LoRaWAN de la página de detalles del Gateway, verás el estado de conexión y la fecha y hora en que se recibió el último uplink.
 
@@ -114,45 +114,48 @@ Navega a `Devices` > `Profiles`, haz clic en `Add service profile`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS13.PNG" alt="pir" width={800} height="auto" /></p>
 
-Se recomienda que dejes habilitada la configuración `AddGWMetaData` para que recibas metadatos adicionales del gateway para cada payload, como RSSI y SNR para la transmisión de datos.
+Se recomienda que dejes habilitada la configuración `Add gateway meta data` para que recibas metadatos adicionales del gateway para cada payload, como RSSI y SNR para la transmisión de datos.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/profile4.png" alt="pir" width={800} height="auto" /></p>
 
 ### Agregar Destino
 
-Navega a `Devices` > `Destination`, haz clic en `Add destination`.
+Navega a `LPWAN Devices` > `Destination`, haz clic en `Add destination`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS15.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-destination.png" alt="pir" width={800} height="auto" /></p>
 
 Aquí selecciona `Publish to AWS IoT Core Message Broker` y nombra el `MQTT topic` del destino
 
-Permisos: Selecciona un rol de servicio existente > `IoT Wireless Gateway Cert Manager Role`
+**Permisos:** Selecciona un rol de servicio existente > `IoT Wireless Gateway Cert Manager Role`
 
 :::info
 Un nombre de destino solo puede tener caracteres alfanuméricos, - (guión) y _ (guión bajo) y no puede tener espacios.
 :::
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS14.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-destination2.png" alt="pir" width={800} height="auto" /></p>
 
 ## Agregar Dispositivos LoRaWAN
 
 ### Agregar Dispositivo Inalámbrico
 
-Navega a `LPWAN devices` > `Devices`, haz clic en `Add wireless device`.
+Navega a `LPWAN devices` > `LoRaWAN`> `Devices`, haz clic en `Add wireless device`.
 
-`Wireless device specification`: OTAAv1.0x
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device-2.png" alt="pir" width={800} height="auto" /></p>
 
-`DevEUI / AppEUI / AppKey`: se pueden encontrar en la APP SenseCAP Mate, consulta [Get_Started](https://wiki.seeedstudio.com/es/Get_Started_with_SenseCAP_T2000_tracker/) para más detalles.
+`Wireless device specification`: OTAA v1.0x
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
+`DevEUI / AppEUI / AppKey`: se pueden encontrar en la APP SenseCraft, consulta [Get_Started](https://wiki.seeedstudio.com/es/Get_Started_with_SenseCAP_T2000_tracker/#lora-parameters-setup) para más detalles.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device.png" alt="pir" width={800} height="auto" /></p>
 
 Selecciona el perfil de dispositivo y destino que creaste en el paso anterior.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/device-eui2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device-3.png" alt="pir" width={800} height="auto" /></p>
 
-Navega a la página Devices y elige el dispositivo que agregaste antes.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device-4.png" alt="pir" width={800} height="auto" /></p>
 
-En la sección Details de la página de detalles de Wireless devices, verás la fecha recibida.
+Navega a la página de Dispositivos y elige el dispositivo que agregaste antes.
+
+En la sección de Detalles de la página de detalles de dispositivos inalámbricos, verás la fecha recibida.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS19.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -166,36 +169,36 @@ Navega a la pestaña `Message routing` → `Rules`, y haz clic en el botón `Cre
 
 Nombra tu regla y envíala.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder.png" alt="pir" width={800} height="auto" /></p>
 
 `SQL version`: 2016-03-23<br/>
 `SQL statement`: SELECT * FROM **"YourDestinationTopic"**
 
 Aquí llenamos `t2000-raw` según [Agregar Destino](#agregar-destino)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sql.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder2.png" alt="pir" width={800} height="auto" /></p>
 
 Desplázate hacia abajo a la sección `Rule actions`, y selecciona `Lambda` de `Action 1`, luego haz clic en `Create a Lambda function`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rule-action.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder3.png" alt="pir" width={800} height="auto" /></p>
 
 `Function name`: Nombra tu función.<br/>
-`Runtime`: Node.js 20.x<br/>
+`Runtime`: Node.js 24.x<br/>
 `Architexture`: x86_64
 
 Haz clic en el botón `Create function` para crear una nueva función.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cre-function.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder4.png" alt="pir" width={800} height="auto" /></p>
 
-Después de crear la función, va a la página de configuración de la función. La configuraremos más tarde, así que solo regresa a la página de reglas.
+Después de crear la función, va a la página de configuración de la función. La configuraremos más tarde, así que simplemente regresa a la página de reglas.
 
-Haz clic en el botón Refresh y selecciona la función Lambda que creaste antes. Luego haz clic en `Next` para ir al Paso 4.
+Haz clic en el botón Refresh y selecciona la función Lambda que creaste anteriormente. Luego haz clic en `Next` para ir al Paso 4.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sel-function.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder5.png" alt="pir" width={800} height="auto" /></p>
 
 Verifica que todos los detalles de la regla sean correctos, luego haz clic en `Create` para crear la regla.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules3.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder6.png" alt="pir" width={800} height="auto" /></p>
 
 ### Configurar la Función Lambda
 
@@ -203,11 +206,11 @@ Regresa a la pestaña `Message routing` → `Rules`, selecciona la regla que cre
 
 Haz clic en `Lambda` desde `Actions` y luego haz clic en el enlace para ir a la página de configuración de la función Lambda.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules4.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder7.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules5.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder8.png" alt="pir" width={800} height="auto" /></p>
 
-En la siguiente página de configuración de función, renombra el archivo `index.mjs` a `index.js`, elimina todo el código y reemplázalo con el script de [Recurso](#recurso), luego haz clic en el botón `Deploy`.
+En la siguiente página de configuración de función, renombra el archivo `index.mjs` a `index.js`, elimina todo el código y reemplázalo con el script de [Resource](#resource), luego haz clic en el botón `Deploy`.
 
 <details>
 
@@ -964,37 +967,35 @@ exports.handler = async (event) => {
 
 </details>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod.png" alt="pir" width={800} height="auto" /></p>
-
-:::tip Nota
-Reemplaza la `region` y el `device id` según tu dispositivo.
-:::
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder9.png" alt="pir" width={800} height="auto" /></p>
 
 Después de configurar el decodificador, haz clic en `Configuration` → `Permissions` → `Edit`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod-per.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder10.png" alt="pir" width={800} height="auto" /></p>
 
 Haz clic en `View the xxxxxxxxxxx` role en la parte inferior.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/existing-role.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder11.png" alt="pir" width={800} height="auto" /></p>
 
 Haz clic en `Add permissions` → `Attach policies`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/policies.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder12.png" alt="pir" width={800} height="auto" /></p>
 
-Busca `AdministratorAccess`, marca la casilla a la izquierda, y luego haz clic en `Add Permissions`.
+Busca `AdministratorAccess`, marca la casilla a la izquierda y luego haz clic en `Add Permissions`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/policies2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder13.png" alt="pir" width={800} height="auto" /></p>
 
 ### Verificar los datos
 
 Verifica los datos en la página `MQTT test client`, ingresa `#` y haz clic en el botón `Subscribe`, verás los datos.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder14.png" alt="pir" width={800} height="auto" /></p>
+
 La carga útil sin procesar del T2000 Tracker se publica desde `t2000-raw` y los datos decodificados se publican desde `tracker/measurement`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/dataview1.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/check-data.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/dataview2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/check-data2.png" alt="pir" width={800} height="auto" /></p>
 
 ## Recursos
 

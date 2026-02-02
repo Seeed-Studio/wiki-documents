@@ -107,7 +107,7 @@ Please pay attention to use, do not lift the shield cover.
 |Reset          |                 |  RES	                                |	RESET                  |
 |TX_LED         |                 |   PA19	                              |	TX_LED                 |
 |RX_LED         |                 | PA18	                                |	RX_LED                 |
-|CHARGE_LED     |          |        VBUS	                                |       	CHG-LED_Red      |
+|Power_LED     |          |        VBUS	                                |       	CHG-LED_Red      |
 |USER_LED       |                 |   PA17	                              |	User Light_Yellow      |
 
 ### **Enter Bootloader Mode**
