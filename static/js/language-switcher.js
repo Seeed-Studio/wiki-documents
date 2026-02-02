@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-30 10:54:13 (北京时间)
-// 多语言页面: 2130 个
+// 生成时间: 2026-02-02 14:04:16 (北京时间)
+// 多语言页面: 2131 个
 
 (function() {
   'use strict';
@@ -654,6 +654,12 @@
     "ja"
   ],
   "/DeciAI-Getting-Started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/develop_recomputer_jetson_using_clawdbot": [
     "cn",
     "en",
     "es",
