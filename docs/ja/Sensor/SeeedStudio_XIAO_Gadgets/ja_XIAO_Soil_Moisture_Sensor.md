@@ -229,14 +229,21 @@ ESPHomeに移動し、**NEW DEVICE**をクリックします。
 
 ```yaml
 # ==== AUTO-SYNC START: xiao-soil-moisture-monitor/xiao-soil-moisture-monitor.yaml ====
+
+substitutions:
+  name: "xiao-soil-moisture"
+  friendly_name: "XIAO Soil Moisture Monitor"
+
 esphome:
-  name: soil-moisture-monitor
-  friendly_name: XIAO Soil Moisture Monitor
-  platformio_options:
-    platform: https://github.com/mnowak32/platform-espressif32.git#boards/seeed_xiao_esp32c6
+  name: "${name}"
+  friendly_name: "${friendly_name}"
+  name_add_mac_suffix: true
+  project:
+    name: "xiao.soil-moisture-monitor"
+    version: "1.0"
   on_boot: 
     then:
-      # - output.turn_off: gpio_3_output
+      - output.turn_off: gpio_3_output
       - output.turn_on: gpio_14_output
       - light.turn_on:
           id: pwm_led
@@ -252,25 +259,21 @@ esphome:
       - delay: 1s
       - script.execute: check_moisture_once
 
+
 esp32:
-  board: seeed_xiao_esp32c6
-  variant: ESP32C6
-  flash_size: 4MB    
+  board: esp32-c6-devkitc-1
   framework:
     type: esp-idf
-    version: "5.2.1"
-    platform_version: 6.6.0
-    sdkconfig_options:
-      CONFIG_ESPTOOLPY_FLASHSIZE_4MB: y
 
-# LED Yellow D10 18
-# LED RED D9  20
-# LED Green D8 19
-# button D2  2
+# LED Yellow	D10 18
+# LED RED	D9  20
+# LED Green	D8 19
+# button	D2  2
 
-# Battery D0 0
-# PWM out D3 21
-# Soil sensor D1  1
+# Battery	D0 0
+# PWM out	D3 21
+# Soil sensor	D1  1
+
 
 output:
   - platform: gpio
@@ -291,9 +294,13 @@ output:
     frequency: 200kHz  # Set the frequency to 200kHz
 
   - platform: gpio
+    pin: GPIO3
+    id: gpio_3_output
+
+  - platform: gpio
     pin: GPIO14
     id: gpio_14_output
-
+    
 light:
   - platform: binary
     id: yellow_led
@@ -313,6 +320,7 @@ light:
     name: "200kHz PWM"
     internal: true
     default_transition_length: 0s
+
 
 script:
   - id: red_led_blink
@@ -385,6 +393,7 @@ script:
             - delay: 1000ms
             - light.turn_off: green_led
             - delay: 100ms
+
 
   - id: do_calibration
     then:
@@ -459,6 +468,8 @@ script:
             id(deep_sleep_control).set_sleep_duration(28800000);
           }
 
+
+
 globals:
   - id: button_press_count
     type: int
@@ -506,7 +517,16 @@ binary_sensor:
           } else {
             id(button_press_count) = 0;
           }
+      
+          
+# interval:
+#   - interval: 10s
+#     then:
+#       - script.execute: check_moisture_once
 
+            
+
+# Deep sleep configuration
 deep_sleep:
   id: deep_sleep_control
   run_duration: 120s  
@@ -522,13 +542,6 @@ external_components:
   - source: github://pr#7942
     components: [ "adc" ]
 
-  - source:
-      type: git
-      url: https://github.com/ackPeng/esphome.git
-      ref: api
-    components: [ api ]
-    refresh: 0s
-
 sensor:
   - platform: adc
     id: soil_sensor
@@ -543,12 +556,15 @@ sensor:
     pin: GPIO0
     name: "Battery measurement"
     attenuation: 12db
+    # internal: true
     filters:                     # When the battery drops below 1V, it is dead.
       - lambda: |-
-          if (x < 1.0) {
+          if (x < 1.2) {
             return 0.0;
-          } else {
-            return ((x - 1.0) / (1.5 - 1.0)) * 100.0;
+          }else if(x > 1.5){
+            return 1.0 * 100.0;
+          }else {
+            return ((x - 1.2) / (1.5 - 1.2)) * 100.0;
           } 
     unit_of_measurement: "%"
     update_interval: 5s
@@ -558,6 +574,26 @@ sensor:
     name: "wifi singnal strength"
     update_interval: 10s
     
+# text_sensor:
+#   - platform: template
+#     name: "Soil Moisture Status"   # ✅ Status displayed on the HA panel
+#     id: soil_status
+#     # internal: true
+#     lambda: |-
+#       float value = id(soil_sensor).state;
+#       float Diff = id(dry_value) - id(wet_value);
+#       if (value >= (id(dry_value) - Diff * id(ref_dry))) {
+#         //id(red_led_blink_3_times).execute();
+#         return {"Dry"};
+#       } else if (value > (id(dry_value) - Diff * id(ref_wet)) && value < (id(dry_value) - Diff * id(ref_dry))) {
+#         //id(yellow_led_blink_3_times).execute();
+#         return {"Almost Dry"};
+#       } else {
+#         //id(green_led_blink_3_times).execute();
+#         return {"Normal Moisture"};
+#       }
+#     update_interval: 5s
+
 text_sensor:
   - platform: template
     name: "Soil Moisture Status"
@@ -605,16 +641,11 @@ improv_serial:
 
 # Enable Home Assistant API
 api:
-  # encryption:
-    # key: "YVjz+1l5zHXeyXFVinhaJkqh8RnG0gUVjaWniPEzCj4="
 
 ota:
   - platform: esphome
-    password: "dcad8df988971d761bc72a30d7878a40"
 
 wifi:
-  # ssid: "my68k"
-  # password: "1143590135"
   on_connect:
     then:
       - if:
@@ -630,6 +661,7 @@ wifi:
           else:
             - logger.log: "The device has been networked"
 
+
   on_disconnect:
     then:
       - globals.set:
@@ -637,8 +669,7 @@ wifi:
           value: '0'
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Xiao-Soil-Moisture-Monitor"
-    password: ""
+    ssid: "XIAO-Soil-Moisture-Monitor"
 
 captive_portal:
 # ==== AUTO-SYNC END ====
