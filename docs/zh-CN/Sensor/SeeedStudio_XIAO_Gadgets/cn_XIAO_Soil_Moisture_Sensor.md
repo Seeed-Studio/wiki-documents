@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
     </a>
 </div>
 
-## 介绍
+## 简介
 
 XIAO 土壤湿度传感器是一款紧凑、低功耗的环境监测器，由 [XIAO ESP32-C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Pre-Soldered-p-6328.html) 驱动。仅使用一节 AA 电池运行，提供持久的工作时间和实时的土壤状况更新。它具有预校准自适应土壤湿度感应功能，可精确监测土壤。同时，它支持动态监测间隔和即时读数，提供准确、响应迅速的数据。完全兼容 Home Assistant，是智能园艺和精准农业的理想选择——高效、可靠，专为可持续植物护理而设计。
 
@@ -43,13 +43,13 @@ XIAO 土壤湿度传感器是一款紧凑、低功耗的环境监测器，由 [X
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_1.jpg" style={{width:800, height:'auto'}}/></div>
 
-**2.与 Home Assistant 即插即用**  
-预装 ESPHome — 开箱即用，与 Home Assistant 配合使用，让您直接从智能家居仪表板监控和自动化。
+**2.即插即用 Home Assistant**  
+预装 ESPHome — 开箱即用，支持 Home Assistant，让您直接从智能家居仪表板监控和自动化。
 
 **3.自适应监测和即时读数**  
 
-- 根据湿度水平自动调整检查间隔（8小时 → 1小时 → 15分钟）。  
-- 随时按一次按钮即可获得即时湿度读数。
+- 根据湿度水平自动调整检查间隔（8 小时 → 1 小时 → 15 分钟）。  
+- 按一次按钮即可随时获得即时湿度读数。
 
 **4.简单校准（可选）**  
 快速三次按下按钮即可为您的特定土壤重新校准：干燥读数 + 湿润读数 → 系统自动调整。
@@ -63,7 +63,7 @@ XIAO 土壤湿度传感器是一款紧凑、低功耗的环境监测器，由 [X
     - 两次快速绿色闪烁 → 成功。
     - 两次快速红色闪烁 → 失败（可能是由于干燥/湿润读数颠倒）。
 
-注意：在校准过程中，如果传感器未及时插入，初始读数可能不稳定。系统将进行多次采样，应用滤波，并对读数进行平均以确保可靠的校准。
+注意：在校准过程中，如果传感器未及时插入，初始读数可能不稳定。系统将进行多次采样，应用过滤，并对读数进行平均以确保可靠的校准。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_4.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -92,30 +92,30 @@ XIAO 土壤湿度传感器是一款紧凑、低功耗的环境监测器，由 [X
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，默认情况下所有数据都存储在本地。这块板子受益于蓬勃发展的 Home Assistant 生态系统，并且每月都会通过开源得到改进。
+Home Assistant Green 是自动化家居最简单、最注重隐私的方式。它提供轻松的设置，让您只需一个系统就能控制所有智能设备，默认情况下所有数据都存储在本地。该板受益于蓬勃发展的 Home Assistant 生态系统，并将通过开源每月改进。
 
 我们建议在本教程中使用 Home Assistant Green 作为 Home Assistant 主机，或者您可以使用任何带有 Supervisor 的 Home Assistant 主机。
 
 :::tip 安装 Home Assistant
-我们还为一些 Seeed Studio 产品编写了如何安装 Home Assistant 的教程，请参考它们。
+我们还编写了如何为一些 Seeed Studio 产品安装 Home Assistant 的教程，请参考它们。
 
 - **[在 ODYSSEY-X86 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/ODYSSEY-X86-Home-Assistant/)**
 - **[在 reTerminal 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/reTerminal_Home_Assistant/)**
 - **[在 LinkStar H68K/reRouter CM4 上开始使用 Home Assistant](https://wiki.seeedstudio.com/cn/h68k-ha-esphome/)**
 
-如果您没有使用 Seeed Studio 产品，您也可以在官方 Home Assistant 网站上查看并学习如何为其他产品安装 Home Assistant。
+如果您没有使用 Seeed Studio 产品，您也可以在 Home Assistant 官方网站上查看并学习如何为其他产品安装 Home Assistant。
 
 - **[Home Assistant 安装](https://www.home-assistant.io/installation/)**
 :::
@@ -133,7 +133,7 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 搜索 ESPHome 并点击它。点击 **INSTALL** 和 **START**。
 
 :::tip
-如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅[官方 ESPHome 文档](https://esphome.io/guides/getting_started_hassio)。
+如果您在附加组件商店中找不到 ESPHome，请确保您使用的是支持附加组件的 Home Assistant 安装（如 Home Assistant OS 或监督安装）。对于其他安装类型（如 Home Assistant Container），您可能需要使用 Docker 独立运行 ESPHome Device Builder。有关更多详细信息，请参阅 [官方 ESPHome 文档](https://esphome.io/guides/getting_started_hassio)。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/03.png" style={{width:800, height:'auto'}}/></div>
@@ -167,7 +167,7 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ha_new_device_discovered.png" style={{width:400, height:'auto', "border-radius": '15px'}}/></div>
 
-这样，您就可以将模块连接到您的 Home Assistant 网络并让 Home Assistant 发现它。
+这样，您可以将模块连接到您的 Home Assistant 网络并让 Home Assistant 发现它。
 
 ### 步骤 4：添加模块设备
 
@@ -176,9 +176,9 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
    - 导航到 `Settings -> Devices & Services -> Integrations` 并查找设备。
 
 2. **手动配置**：
-   - 如果没有自动发现，通过指定其 IP 地址手动添加设备。
+   - 如果未自动发现，请通过指定其 IP 地址手动添加设备。
 
-添加设备后，您将在 Home Assistant 概览页面上看到一个名为 Solid_sensor 的新传感器卡片，显示电池测量值和当前土壤湿度状态。
+添加设备后，您将在 Home Assistant 概览页面上看到一个名为 Solid_sensor 的新传感器卡，显示电池测量和当前土壤湿度状态。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/View_in_HA.png" style={{width:400, height:'auto', "border-radius": '15px'}}/></div>
 
@@ -188,11 +188,11 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
 
 ## 高级用法
 
-您可以修改原始固件逻辑，并通过 Home Assistant 直接刷写您自定义版本的土壤传感器。
+您可以修改原始固件逻辑，并直接通过 Home Assistant 刷写您的自定义版本土壤传感器。
 
 ### 步骤 1. 安装 ESPHome
 
-请参阅上述步骤 1 中的安装指南。
+请参阅上面步骤 1 中的安装指南。
 
 ### 步骤 2. 添加新设备
 
@@ -222,7 +222,7 @@ Home Assistant Green 是自动化您家庭的最简单且最注重隐私的方�
     </a>
 </div><br />
 
-这里是一个可直接使用的 `ESPHome` YAML 配置，适用于 Home Assistant：
+这里是一个可直接使用的 `ESPHome` YAML 配置文件，适用于 Home Assistant：
 <details>
 
 <summary>点击这里预览完整代码</summary>
@@ -300,7 +300,7 @@ output:
   - platform: gpio
     pin: GPIO14
     id: gpio_14_output
-    
+
 light:
   - platform: binary
     id: yellow_led
@@ -517,14 +517,14 @@ binary_sensor:
           } else {
             id(button_press_count) = 0;
           }
-      
-          
+
+
 # interval:
 #   - interval: 10s
 #     then:
 #       - script.execute: check_moisture_once
 
-            
+
 
 # Deep sleep configuration
 deep_sleep:
@@ -573,7 +573,7 @@ sensor:
   - platform: wifi_signal
     name: "wifi singnal strength"
     update_interval: 10s
-    
+
 # text_sensor:
 #   - platform: template
 #     name: "Soil Moisture Status"   # ✅ Status displayed on the HA panel
@@ -709,9 +709,9 @@ captive_portal:
 
 - **变量**：
   - `button_press_count`：跟踪按钮按压计数。
-  - `dry_value`, `wet_value`：存储校准的干燥/湿润 ADC 值。
+  - `dry_value`、`wet_value`：存储校准的干燥/湿润 ADC 值。
   - `wifi_net_status`：跟踪 Wi-Fi 连接状态。
-  - `ref_dry`, `ref_wet`：用于阈值计算的参考缩放因子。
+  - `ref_dry`、`ref_wet`：用于阈值计算的参考缩放因子。
 
 `deep_sleep` – 管理省电睡眠周期。
 
@@ -726,7 +726,7 @@ captive_portal:
 `text_sensor` – 发布人类可读的土壤湿度状态。
 
 - **输入参数**：无。
-- **操作**：在 Home Assistant 中显示"Dry"、"Almost Dry"或"Normal Moisture"。
+- **操作**：在 Home Assistant 中显示 "Dry"、"Almost Dry" 或 "Normal Moisture"。
 
 `wifi` + `api` + `ota` – 管理网络连接、Home Assistant 集成和无线固件更新。
 
@@ -741,7 +741,7 @@ captive_portal:
 <TabItem value='通过浏览器安装'>
 
 :::tip
-如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）距离您很远，我们建议使用此方法。您可以使用手头的计算机进行安装。
+如果您的 Home Assistant 主机（Raspberry PI/Green/Yellow 等）距离您很远，我们建议使用此方法。您可以使用手边的计算机进行安装。
 :::
 
 首先，您需要点击 **Manual download** 下载编译的固件。
@@ -756,7 +756,7 @@ captive_portal:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-选择 Factory 格式。
+选择 Factory format。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
@@ -768,11 +768,11 @@ captive_portal:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-点击 **INSTALL** 并选择您刚刚下载的固件。
+点击 **INSTALL** 并选择您刚下载的固件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:650, height:'auto'}}/></div>
 
-您的固件将很快被刷入～
+您的固件将很快被刷写～
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/71.png" style={{width:650, height:'auto'}}/></div>
 
@@ -786,7 +786,7 @@ captive_portal:
 
 在将代码安装到设备之前，您需要使用 USB 线缆**将此设备连接到运行 Home Assistant 的 Raspberry Pi 或 HA Green（Yellow）等**。
 
-按照图像中的选项点击将代码安装到设备。
+按照图像中的选项点击以将代码安装到设备。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
@@ -802,12 +802,12 @@ captive_portal:
 <TabItem value='通过 Wi-Fi 安装'>
 
 :::tip
-这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到 ePaper 面板。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，此方法才能工作。
+这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到 ePaper 面板。之后，您可以通过 wifi 上传。另外，确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
 :::
 
-这样，您就不需要将 ePaper 面板连接到任何设备，只需确保它在线即可。
+通过这种方式，您不需要将 ePaper 面板连接到任何设备，只需确保它在线即可。
 
-点击该选项，固件将自动安装到 ePaper 面板。
+点击选项，然后固件将自动安装到 ePaper 面板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
@@ -824,7 +824,7 @@ captive_portal:
 [https://gadgets.seeed.cc/](https://gadgets.seeed.cc/)
 
 首先将您的设备连接到计算机。  
-然后，在页面上找到 **XIAO Soil Moisture Monitor** 并点击 **Connect** 以继续重新刷写。
+然后，在页面上找到 **XIAO Soil Moisture Monitor** 并点击 **Connect** 继续重新刷写。
 
 ## 资源
 
