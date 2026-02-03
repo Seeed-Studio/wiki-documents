@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 01/19/2026
+  date: 02/02/2026
   author: Frank
 ---
 
@@ -17,66 +17,85 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is January 19th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is February 2nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Robotics J501 Hardware and Getting Started](https://wiki.seeedstudio.com/ai_robotics_recomputer_j501_robotics_getting_started/)
+### [Develop reComputer Jetson using Clawdbot](https://wiki.seeedstudio.com/develop_recomputer_jetson_using_clawdbot/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-The reComputer Robotics J501 is a high-performance edge AI carrier board designed for advanced robotics and industrial applications. Compatible with NVIDIA Jetson AGX Orin modules (32GB/64GB) in MAXN mode, it delivers up to 275 TOPS of AI performance.
-
-</div>
-
-### [reComputer R1225 LoRaWAN Gateway Overview](https://wiki.seeedstudio.com/r1225_introduction/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Appearance_Image/R1225_White_Background.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-reComputer R1225 is a powerful and flexible industry Raspberry Pi IoT LoRaWAN gateway & controller, CM4-powered, with AI capabilities. With 3*RS485, dual-ethernets, BACnet, and Modbus support, equipped with all the necessary features that a robust and reliable industrial edge IoT device needs. With compatibility with AI NPU accelerator, it's a perfect fit for remote access control, especially BMS, BAS, and iBMS.
+Traditionally, developing on a Jetson edge device required a physical setup with a monitor, keyboard, and mouse. Even with remote SSH access, developers still depended on terminal-based workflows and additional tools for monitoring and deployment. With Clawdbot, development becomes much simpler. Developers can now interact with the reComputer Jetson directly through a chat app like WhatsApp — sending messages to check device status, run commands, and debug scripts in a more convenient way. This wiki shows how to deploy and use Clawdbot on reComputer Jetson.
 
 </div>
 
-### [XIAO ESP32-C5 With FreeRTOS](https://wiki.seeedstudio.com/xiao_esp32c5_with_freertos/)
+### [Getting Started with reTerminal E1004](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-FreeRTOS is an open source RTOS kernel that is pre-integrated into the Arduino ESP32 Core (which is built upon ESP-IDF). Thus, every Arduino sketch running on an ESP32 is actually utilizing FreeRTOS in the background. The FreeRTOS kernel is ported to all ESP chip architectures, including Xtensa and RISC-V (e.g., XIAO ESP32-C5).
-Therefore, this tutorial is written based on the Arduino framework to provide a more accessible development experience.
+reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 3-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visulization.
 
 </div>
 
-### [reComputer RS485 test](https://wiki.seeedstudio.com/recomputer_rs485_loopback_test/)
+### [Deploying Espectre on Seeed Studio XIAO ESP32 Series with ESPHome](https://wiki.seeedstudio.com/xiao-esp32--series-espresense/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991274-recomputer-r1025-10-0.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32_Espectre/image1.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki applies to all reComputer devices with RS485 interfaces include reComputer R10/R11/R20/R21 and can be used to test whether the RS485 receiving and transmitting functions are working correctly.
+**ESPectre is a motion detection system based on Wi-Fi spectre analysis (CSI), with native Home Assistant integration via ESPHome.** When someone moves in a room, they "disturb" the Wi-Fi waves traveling between the router and the sensor. It's like when you move your hand in front of a flashlight and see the shadow change. The [XIAO ESP32 board](https://www.seeedstudio.com/ESP32-Series-c-2580.html) "listens" to these changes and understands if there's movement.
 
 </div>
 
-### [Distributed llama.cpp on reComputer Jetson (RPC Mode)](https://wiki.seeedstudio.com/ai_robotics_distributed_llama_cpp_rpc_jetson/)
+### [YOLOv26 Dual USB Camera Image Processing System on Jetson](https://wiki.seeedstudio.com/ai_robotics_yolov26_dual_camera_system/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RPC_on_jetson/rpc_test.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki applies to all reComputer devices with RS485 interfaces include reComputer R10/R11/R20/R21 and can be used to test whether the RS485 receiving and transmitting functions are working correctly.
+This wiki demonstrates how to build a dual USB camera image processing system based on YOLOv26 model and TensorRT acceleration from scratch.
 
 </div>
 
-<!-- ## Existing Wiki Updated
+### [Seeed Studio XIAO nRF54L15 Sense Zigbee](https://wiki.seeedstudio.com/xiao_nrf54l15_zigbee/)
 
-### [Deploying AI Models on SenseCAP A1102 Using SenseCraft AI](https://wiki.seeedstudio.com/deploy_ai_with_a1102/)
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-114993697-xiao-nrf54l15-sense_pre-soldered_.jpg" alt="pir" width={600} height="auto" /></p>
 
-We have added a [Custom AI Model Deploying Process](https://wiki.seeedstudio.com/deploy_ai_with_a1102/#custom-ai-model-deploying-process). -->
+<div style={{ textAlign: "justify" }}>
+
+This tutorial guides you through implementing [Zigbee](https://en.wikipedia.org/wiki/Zigbee) applications on the Seeed Studio **XIAO nRF54L15** development board, this board combines **Wi-Fi**, **Bluetooth Low Energy (BLE)**, and **Zigbee** connectivity, making it perfect for **IoT applications**. The examples in this guide use the NCS to bring Zigbee functionality to life.
+
+</div>
+
+### [AI Human Detection and Meshtastic Notification Demo](https://wiki.seeedstudio.com/ai_human_detection_meshtastic_broadcast/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+This demo showcases a powerful Edge AI solution integrating the reCamera with a Meshtastic LoRa mesh network. By running a local YOLO11n model, the reCamera identifies humans in real-time and triggers a GPIO signal. This physical signal prompts a XIAO ESP32S3 node to broadcast a "Human detected" alert across the decentralized network. This setup allows for autonomous, off-grid monitoring and security without relying on internet infrastructure. The guide covers hardware assembly for the PoE baseboard, C++ deployment, and Mesh node configuration to bridge AI vision with long-range communication.
+
+</div>
+
+### [Deploy your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeaker](https://wiki.seeedstudio.com/respeaker_xvf_3800_xiaozhi/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div style={{ textAlign: "justify" }}>
+
+reSpeaker XVF3800 is a professional 4-microphone circular array based on the XMOS XVF3800 chip. It provides reliable voice pickup in noisy environments with features including dual modes, 360° far-field pickup (up to 5 m), acoustic echo cancellation (AEC), automatic gain control (AGC), direction of arrival (DoA), dereverberation, beamforming and noise suppression. With its robust capture and denoising abilities, Xiaozhi gets a much better "ear".
+
+</div>
+
+## Existing Wiki Updated
+
+### [Getting Started with XIAO ePaper Display Board - EE02](https://wiki.seeedstudio.com/getting_started_with_ee02/)
+
+We have added an [example](https://wiki.seeedstudio.com/getting_started_with_ee02/#getting-started-with-arduino) demonstrating how to operate the EE02 using Arduino.
 
 ## The Efforts of Contributor
 
@@ -195,5 +214,7 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2025.12.29th](/Seeed_Elderly/weekly_wiki/2025/wiki251229)
 - [weekly wiki on 2026.1.05th](/Seeed_Elderly/weekly_wiki/2026/wiki260105)
 - [weekly wiki on 2026.1.12th](/Seeed_Elderly/weekly_wiki/2026/wiki260112)
+- [weekly wiki on 2026.1.19th](/Seeed_Elderly/weekly_wiki/2026/wiki260119)
+- [weekly wiki on 2026.1.26th](/Seeed_Elderly/weekly_wiki/2026/wiki260126)
 
 </details>

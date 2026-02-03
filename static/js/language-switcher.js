@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-20 11:27:57 (北京时间)
-// 多语言页面: 2119 个
+// 生成时间: 2026-02-02 14:04:16 (北京时间)
+// 多语言页面: 2131 个
 
 (function() {
   'use strict';
@@ -545,6 +545,12 @@
     "es",
     "ja"
   ],
+  "/deploy_nvblox_jetson_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/deploy_visual_perception_engine_recomputer": [
     "cn",
     "en",
@@ -599,6 +605,12 @@
     "es",
     "ja"
   ],
+  "/ai_robotics_yolov26_dual_camera_system": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/YOLOv5-Object-Detection-Jetson": [
     "cn",
     "en",
@@ -642,6 +654,12 @@
     "ja"
   ],
   "/DeciAI-Getting-Started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/develop_recomputer_jetson_using_clawdbot": [
     "cn",
     "en",
     "es",
@@ -900,6 +918,12 @@
     "ja"
   ],
   "/local_chatbot_recomputer_bk": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk": [
     "cn",
     "en",
     "es",
@@ -2591,7 +2615,13 @@
     "es",
     "ja"
   ],
-  "/ai_remote_wireless_monitor_system_with_wifi_haLow": [
+  "/ai_human_detection_meshtastic_broadcast": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_remote_wireless_monitor_system": [
     "cn",
     "en",
     "es",
@@ -2820,6 +2850,12 @@
     "ja"
   ],
   "/getting_started_with_reterminal_e1002": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_reterminal_e1004": [
     "cn",
     "en",
     "es",
@@ -8301,6 +8337,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_xiao_doa_vad": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_edge_impulse": [
     "cn",
     "en",
@@ -8374,6 +8416,12 @@
     "ja"
   ],
   "/respeaker_xvf3800_xiao_volume": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf_3800_xiaozhi": [
     "cn",
     "en",
     "es",
@@ -8542,6 +8590,12 @@
     "ja"
   ],
   "/xaio_esp32c5_wifi_throughput_tester": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao-esp32--series-espresense": [
     "cn",
     "en",
     "es",
@@ -9184,6 +9238,12 @@
     "ja"
   ],
   "/xiao_nrf54l15_sense_power_consumptions": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_nrf54l15_zigbee": [
     "cn",
     "en",
     "es",
@@ -10438,6 +10498,18 @@
     "ja"
   ],
   "/Tracker_WiFi_Geolocation": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_aws": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensecap_t2000_tracker_helium": [
     "cn",
     "en",
     "es",

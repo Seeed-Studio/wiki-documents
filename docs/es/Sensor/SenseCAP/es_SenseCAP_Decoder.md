@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/SenseCAP_Decoder
 last_update:
-  date: 8/24/2023
-  author: Jessie
+  date: 1/26/2026
+  author: Janet
 ---
 
 El decodificador SenseCAP se utiliza para decodificar los mensajes LoRaWAN enviados desde los dispositivos SenseCAP LoRaWAN®. Después de la decodificación, las aplicaciones de los usuarios obtendrán mensajes más amigables y legibles.
@@ -3331,11 +3331,2204 @@ exports.handler = async (event) => {
 
 </details>
 
-### Placa de Desarrollo Wio Tracker 1110
+### SenseCAP T2000 Tracker
 
-La [Placa de Desarrollo Wio Tracker 1110](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) está basada en el [Módulo Inalámbrico Wio-WM1110](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html) e integra el transceptor LoRa® [LR1110 de Semtech](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) y un front-end de radio multipropósito para geolocalización, es una plataforma de desarrollo de seguimiento basada en LoRa fácil de usar.
+#### Decodificador
 
-Con su tamaño compacto y ricas interfaces, la Placa de Desarrollo Wio Tracker 1110 está convenientemente equipada con una antena integrada para fácil despliegue. Soporta el entorno de desarrollo Arduino y la pila de protocolos LoRaWAN, haciéndola ideal para proyectos IoT relacionados con seguimiento.
+[**SenseCAP T2000 Tracker**](https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html), un rastreador de activos LoRaWAN® de grado industrial, soporta posicionamiento GNSS, Bluetooth y Wi-Fi para un seguimiento confiable en entornos interiores y exteriores. Cuenta con protección IP67, un acelerómetro de 3 ejes integrado que detecta el estado de movimiento, y un botón anti-manipulación que activa una alarma de máxima prioridad si el dispositivo es removido. El T2000-A y T2000-B soportan operación de batería de larga duración, mientras que el T2000-C alimentado por energía solar con batería recargable asegura uso continuo en exteriores, haciendo que la serie sea ideal para seguimiento de activos a largo plazo y libre de mantenimiento.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.png" alt="pir" width={800} height="auto" /></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Asset-Tracker-T2000-A-p-6580.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora </font></span></strong>
+    </a>
+</div>
+<br />
+
+<details>
+
+<summary>Para TTN(ChirpStack V4)</summary>
+
+```cpp
+function decodeUplink (input) {
+    const bytes = input['bytes']
+    const bytesString = bytes2HexString(bytes)
+    const originMessage = bytesString.toLocaleUpperCase()
+    const decoded = {
+        valid: true,
+        err: 0,
+        payload: bytesString,
+        messages: []
+    }
+    let measurement = messageAnalyzed(originMessage)
+    if (measurement.length === 0) {
+        decoded.valid = false
+        return { data: decoded }
+    }
+
+    for (let message of measurement) {
+        if (message.length === 0) {
+            continue
+        }
+        let elements = []
+        for (let element of message) {
+            if (element.errorCode) {
+                decoded.err = element.errorCode
+                decoded.errMessage = element.error
+            } else {
+                elements.push(element)
+            }
+        }
+        if (elements.length > 0) {
+            decoded.messages.push(elements)
+        }
+    }
+    return { data: decoded }
+}
+
+function messageAnalyzed (messageValue) {
+    try {
+        let frames = unpack(messageValue)
+        let measurementResultArray = []
+        for (let i = 0; i < frames.length; i++) {
+            let item = frames[i]
+            let dataId = item.dataId
+            let dataValue = item.dataValue
+            let measurementArray = deserialize(dataId, dataValue)
+            measurementResultArray.push(measurementArray)
+        }
+        return measurementResultArray
+    } catch (e) {
+        return e.toString()
+    }
+}
+
+function unpack (messageValue) {
+    let frameArray = []
+    const FIXED_LENGTH_PACKAGES = {
+        '27': 92, '28': 60, '29': 24, '2A': 12, '2B': 46, '2E': 34, '31': 30, '32': 18
+    }
+    const DYNAMIC_LENGTH_PACKAGES = {
+        '2C': {minLen: 32, scanCountPos: [30, 32], baseLen: 23, itemLen: 7},
+        '2D': {minLen: 32, scanCountPos: [30, 32], baseLen: 23, itemLen: 7},
+        '2F': {minLen: 20, scanCountPos: [18, 20], baseLen: 17, itemLen: 7},
+        '30': {minLen: 20, scanCountPos: [18, 20], baseLen: 17, itemLen: 7}
+    }
+
+    for (let i = 0; i < messageValue.length; i++) {
+        let remainMessage = messageValue
+        let dataId = remainMessage.substring(0, 2).toUpperCase()
+        let dataValue
+        let dataObj = {}
+
+        if (dataId === '0C') {
+            dataValue = ''
+            messageValue = remainMessage.substring(2)
+            dataObj = {'dataId': dataId, 'dataValue': ''}
+        } else if (dataId === '0D') {
+            dataValue = remainMessage.substring(2, 10)
+            messageValue = remainMessage.substring(10)
+            dataObj = {'dataId': dataId, 'dataValue': dataValue}
+        } else if (FIXED_LENGTH_PACKAGES[dataId]) {
+            let packageLen = FIXED_LENGTH_PACKAGES[dataId]
+            if (remainMessage.length < packageLen) {
+                return frameArray
+            }
+            dataValue = remainMessage.substring(2, packageLen)
+            messageValue = remainMessage.substring(packageLen)
+            dataObj = {'dataId': dataId, 'dataValue': dataValue}
+        } else if (DYNAMIC_LENGTH_PACKAGES[dataId]) {
+            let config = DYNAMIC_LENGTH_PACKAGES[dataId]
+            if (remainMessage.length < config.minLen) {
+                return frameArray
+            }
+            let scanCount = parseInt(remainMessage.substring(config.scanCountPos[0], config.scanCountPos[1]), 16)
+            let packageLen = (config.baseLen + (scanCount - 1) * config.itemLen) * 2
+            if (remainMessage.length < packageLen) {
+                return frameArray
+            }
+            dataValue = remainMessage.substring(2, packageLen)
+            messageValue = remainMessage.substring(packageLen)
+            dataObj = {'dataId': dataId, 'dataValue': dataValue}
+        } else {
+            return frameArray
+        }
+
+        if (dataValue.length < 2 && dataObj.dataId !== '0C') {
+            break
+        }
+        frameArray.push(dataObj)
+    }
+    return frameArray
+}
+
+function deserialize (dataId, dataValue) {
+    let measurementArray = []
+    let eventList = []
+    let timestamp = 0
+    let value = null
+    let motionId = 0
+    let scanMax = 0
+    let interval = 0
+    let workMode = 0
+    let heartbeatInterval = 0
+    let periodicInterval = 0
+    let eventInterval = 0
+    switch (dataId) {
+        case '0C':
+            measurementArray.push({type: "timeSync"})
+            break
+        case '0D':
+            let errorCode = getInt(dataValue)
+            let error = ''
+            switch (errorCode) {
+                case 1:
+                    error = 'FAILED TO OBTAIN THE UTC TIMESTAMP'
+                    break
+                case 2:
+                    error = 'ALMANAC TOO OLD'
+                    break
+                case 3:
+                    error = 'DOPPLER ERROR'
+                    break
+            }
+            measurementArray.push({errorCode, error})
+            break
+        case '27':
+            measurementArray.push(...getUpT2000(dataValue))
+            break
+        case '28':
+            interval = 0
+            workMode = getInt(dataValue.substring(0, 2))
+            heartbeatInterval = getMinsByMin(dataValue.substring(4, 8))
+            periodicInterval = getMinsByMin(dataValue.substring(8, 12))
+            eventInterval = getMinsByMin(dataValue.substring(12, 16))
+            switch (workMode) {
+                case 0:
+                    interval = heartbeatInterval
+                    break
+                case 1:
+                    interval = periodicInterval
+                    break
+                case 2:
+                    interval = eventInterval
+                    break
+            }
+            measurementArray = [
+                {
+                    measurementId: '3940', measurementValue: workMode
+                }, {
+                    measurementId: '3965', measurementValue: getPositioningStrategy(dataValue.substring(2, 4))
+                }, {
+                    measurementId: '3942', measurementValue: heartbeatInterval
+                }, {
+                    measurementId: '3943', measurementValue: periodicInterval
+                }, {
+                    measurementId: '3944', measurementValue: eventInterval
+                }, {
+                    measurementId: '3974', measurementValue: getInt(dataValue.substring(16, 18))
+                }, {
+                    measurementId: '3976', measurementValue: getInt(dataValue.substring(18, 20))
+                }, {
+                    measurementId: '3977', measurementValue: getInt(dataValue.substring(20, 22))
+                }, {
+                    measurementId: '3900', measurementValue: interval
+                }, {
+                    measurementId: '3978', measurementValue: getInt(dataValue.substring(22, 24))
+                }, {
+                    measurementId: '3979', measurementValue: dataValue.substring(26, 26 + getInt(dataValue.substring(24, 26)) * 2)
+                }
+            ]
+            // measurementArray.push(measurement)
+            break
+        case '29':
+            measurementArray.push({
+                measurementId: '3946', measurementValue: getInt(dataValue.substring(0, 2))
+            })
+            measurementArray.push({
+                measurementId: '3947', measurementValue: getSensorValue(dataValue.substring(2, 6), 1)
+            })
+            measurementArray.push({
+                measurementId: '3948', measurementValue: getMinsByMin(dataValue.substring(6, 10))
+            })
+            measurementArray.push({
+                measurementId: '3949', measurementValue: getInt(dataValue.substring(10, 12))
+            })
+            measurementArray.push({
+                measurementId: '3950', measurementValue: getMinsByMin(dataValue.substring(12, 16))
+            })
+            measurementArray.push({
+                measurementId: '3951', measurementValue: getInt(dataValue.substring(16, 18))
+            })
+            measurementArray.push({
+                measurementId: '3952', measurementValue: getInt(dataValue.substring(18, 22))
+            })
+            break
+        case '2A':
+            measurementArray.push({
+                measurementId: '3000', measurementValue: getBattery(dataValue.substring(0, 2))
+            })
+            measurementArray.push({
+                measurementId: '3940', measurementValue: getWorkingMode(dataValue.substring(2, 4))
+            })
+            measurementArray.push({
+                measurementId: '3965', measurementValue: getPositioningStrategy(dataValue.substring(4, 6))
+            })
+            measurementArray.push({
+                measurementId: '3974', measurementValue: getInt(dataValue.substring(6, 8))
+            })
+            measurementArray.push({
+                measurementId: '3976', measurementValue: getInt(dataValue.substring(8, 10))
+            })
+            break
+        case '2B':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseAccelerometerData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseLocationData(dataValue, 26, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 42, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '2C':
+        case '2D':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseAccelerometerData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 26, timestamp, motionId, measurementArray)
+            scanMax = getInt(dataValue.substring(28, 30))
+            parseScanData(scanMax, dataValue, 30, dataId === '2C' ? '5001' : '5002', timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '2E':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseLocationData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 30, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '2F':
+        case '30':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseBatteryData(dataValue, 14, timestamp, motionId, measurementArray)
+            scanMax = getInt(dataValue.substring(16, 18))
+            parseScanData(scanMax, dataValue, 18, dataId === '2F' ? '5001' : '5002', timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '31':
+            eventList = getEventStatus(dataValue.substring(2, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            measurementArray.push({
+                measurementId: '3576',
+                timestamp,
+                motionId,
+                measurementValue: getPositingStatus(dataValue.substring(0, 2))
+            })
+            parseAccelerometerData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 26, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '32':
+            eventList = getEventStatus(dataValue.substring(2, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            measurementArray.push({
+                measurementId: '3576',
+                timestamp,
+                motionId,
+                measurementValue: getPositingStatus(dataValue.substring(0, 2))
+            })
+            parseBatteryData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+    }
+    if (measurementArray.length > 0) {
+        for (let frag of measurementArray) {
+            if (frag.measurementId) {
+                frag.type = getTypeByMeasurementId(frag.measurementId)
+            }
+        }
+    }
+    return measurementArray
+}
+
+function parseAccelerometerData (dataValue, startPos, timestamp, motionId, measurementArray) {
+    const accelerometerIds = ['4210', '4211', '4212']
+    for (let i = 0; i < 3; i++) {
+        let value = getSignSensorValue(dataValue.substring(startPos + i * 4, startPos + (i + 1) * 4), 1)
+        if (value !== null) {
+            measurementArray.push({
+                measurementId: accelerometerIds[i],
+                timestamp,
+                motionId,
+                measurementValue: value
+            })
+        }
+    }
+}
+
+function parseBatteryData (dataValue, pos, timestamp, motionId, measurementArray) {
+    measurementArray.push({
+        measurementId: '3000',
+        timestamp,
+        motionId,
+        measurementValue: '' + getBattery(dataValue.substring(pos, pos + 2))
+    })
+}
+
+function parseEventData (eventList, timestamp, motionId, measurementArray) {
+    if (eventList && eventList.length > 0) {
+        measurementArray.push({
+            measurementId: '4200',
+            timestamp,
+            motionId,
+            measurementValue: eventList
+        })
+    }
+}
+
+function parseLocationData (dataValue, startPos, timestamp, motionId, measurementArray) {
+    measurementArray.push({
+        measurementId: '4197',
+        timestamp,
+        motionId,
+        measurementValue: '' + getSensorValue(dataValue.substring(startPos, startPos + 8), 1000000)
+    })
+    measurementArray.push({
+        measurementId: '4198',
+        timestamp,
+        motionId,
+        measurementValue: '' + getSensorValue(dataValue.substring(startPos + 8, startPos + 16), 1000000)
+    })
+}
+
+function parseScanData (scanMax, dataValue, startPos, measurementId, timestamp, motionId, measurementArray) {
+    if (scanMax && scanMax > 0) {
+        measurementArray.push({
+            measurementId,
+            timestamp,
+            motionId,
+            measurementValue: getMacAndRssiObj(dataValue.substring(startPos))
+        })
+    }
+}
+
+function getTypeByMeasurementId (measurementId) {
+    const TYPE_MAP = {
+        '3000': 'Battery',
+        '3502': 'Firmware Version',
+        '3001': 'Hardware Version',
+        '3940': 'Work Mode',
+        '3965': 'Positioning Strategy',
+        '3942': 'Heartbeat Interval',
+        '3943': 'Periodic Interval',
+        '3944': 'Event Interval',
+        '3974': '3X Sensor Enable',
+        '3976': 'Anti-Theft',
+        '3977': 'GNSS Scan Timeout',
+        '3900': 'Uplink Interval',
+        '3978': 'BLE Scan Timeout',
+        '3979': 'UUID Filter',
+        '3946': 'Motion Enable',
+        '3947': 'Any Motion Threshold',
+        '3948': 'Motion Start Interval',
+        '3949': 'Static Enable',
+        '3950': 'Device Static Timeout',
+        '3951': 'Shock Enable',
+        '3952': 'Shock Threshold',
+        '4210': 'AccelerometerX',
+        '4211': 'AccelerometerY',
+        '4212': 'AccelerometerZ',
+        '4197': 'Longitude',
+        '4198': 'Latitude',
+        '4200': 'Event Status',
+        '5001': 'Wi-Fi Scan',
+        '5002': 'BLE Scan',
+        '3576': 'Positioning Status'
+    }
+    return TYPE_MAP[measurementId] || ''
+}
+
+function getMotionId (str) {
+    return getInt(str)
+}
+
+function getPositingStatus (str) {
+    let status = getInt(str)
+    const STATUS_MAP = {
+        0: "locate successful.",
+        1: "The GNSS scan timed out.",
+        2: "The Wi-Fi scan timed out.",
+        3: "The Wi-Fi + GNSS scan timed out.",
+        4: "The GNSS + Wi-Fi scan timed out.",
+        5: "The Bluetooth scan timed out.",
+        6: "The Bluetooth + Wi-Fi scan timed out.",
+        7: "The Bluetooth + GNSS scan timed out.",
+        8: "The Bluetooth + Wi-Fi + GNSS scan timed out.",
+        9: "Location Server failed to parse the GNSS location.",
+        10: "Location Server failed to parse the Wi-Fi location.",
+        11: "Location Server failed to parse the Bluetooth location.",
+        12: "Failed to parse location due to the poor accuracy.",
+        13: "Time synchronization failed.",
+        14: "Failed due to the old Almanac.",
+        15: "The GNSS +Bluetooth scan timed out."
+    }
+    if (STATUS_MAP[status] !== undefined) {
+        return {id: status, statusName: STATUS_MAP[status]}
+    }
+    return getInt(str)
+}
+
+function getUpT2000 (messageValue) {
+    let interval = 0
+    let workMode = getInt(messageValue.substring(10, 12))
+    let heartbeatInterval = getMinsByMin(messageValue.substring(14, 18))
+    let periodicInterval = getMinsByMin(messageValue.substring(18, 22))
+    let eventInterval = getMinsByMin(messageValue.substring(22, 26))
+    switch (workMode) {
+        case 0:
+            interval = heartbeatInterval
+            break
+        case 1:
+            interval = periodicInterval
+            break
+        case 2:
+            interval = eventInterval
+            break
+    }
+    let data = [
+        {
+            measurementId: '3000', measurementValue: getBattery(messageValue.substring(0, 2))
+        }, {
+            measurementId: '3502', measurementValue: getSoftVersion(messageValue.substring(2, 6))
+        }, {
+            measurementId: '3001', measurementValue: getHardVersion(messageValue.substring(6, 10))
+        }, {
+            measurementId: '3940', measurementValue: workMode
+        }, {
+            measurementId: '3965', measurementValue: getPositioningStrategy(messageValue.substring(12, 14))
+        }, {
+            measurementId: '3942', measurementValue: heartbeatInterval
+        }, {
+            measurementId: '3943', measurementValue: periodicInterval
+        }, {
+            measurementId: '3944', measurementValue: eventInterval
+        }, {
+            measurementId: '3974', measurementValue: getInt(messageValue.substring(26, 28))
+        }, {
+            measurementId: '3976', measurementValue: getInt(messageValue.substring(28, 30))
+        }, {
+            measurementId: '3977', measurementValue: getInt(messageValue.substring(30, 32))
+        }, {
+            measurementId: '3900', measurementValue: interval
+        }, {
+            measurementId: '3978', measurementValue: getInt(messageValue.substring(54, 56))
+        }, {
+            measurementId: '3979', measurementValue: messageValue.substring(58, 58 + getInt(messageValue.substring(56, 58)) * 2)
+        }
+    ]
+    let motionSetting = getMotionSetting(messageValue.substring(32, 42))
+    let staticsSetting = getStaticSetting(messageValue.substring(42, 48))
+    let shockSetting = getShockSetting(messageValue.substring(48, 54))
+    data = [...data, ...motionSetting, ...staticsSetting, ...shockSetting]
+    return data
+}
+
+function getMotionSetting (str) {
+    return [
+        {measurementId: '3946', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3947', measurementValue: getSensorValue(str.substring(2, 6), 1)},
+        {measurementId: '3948', measurementValue: getMinsByMin(str.substring(6, 10))},
+    ]
+}
+
+function getStaticSetting (str) {
+    return [
+        {measurementId: '3949', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3950', measurementValue: getMinsByMin(str.substring(2, 6))}
+    ]
+}
+
+function getShockSetting (str) {
+    return [
+        {measurementId: '3951', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3952', measurementValue: getInt(str.substring(2, 6))}
+    ]
+}
+
+function getBattery (batteryStr) {
+    return loraWANV2DataFormat(batteryStr)
+}
+function getSoftVersion (softVersion) {
+    return `${loraWANV2DataFormat(softVersion.substring(0, 2))}.${loraWANV2DataFormat(softVersion.substring(2, 4))}`
+}
+function getHardVersion (hardVersion) {
+    return `${loraWANV2DataFormat(hardVersion.substring(0, 2))}.${loraWANV2DataFormat(hardVersion.substring(2, 4))}`
+}
+
+function getMinsByMin (str) {
+    return getInt(str)
+}
+
+function getSensorValue (str, dig) {
+    if (str === '8000') {
+        return null
+    } else {
+        return loraWANV2DataFormat(str, dig)
+    }
+}
+
+function isNull (str) {
+    if (str.substring(0, 1) !== '8') {
+        return false
+    }
+    for (let i = 1; i < str.length; i++) {
+        if (str.substring(i, i + 1) !== '0') {
+            return false
+        }
+    }
+    return true
+}
+
+function getSignSensorValue (str, dig = 1) {
+    if (isNull(str)) {
+        return null
+    }
+    return loraWANV2DataFormat(str, dig)
+}
+
+function bytes2HexString (arrBytes) {
+    var str = ''
+    for (var i = 0; i < arrBytes.length; i++) {
+        var tmp
+        var num = arrBytes[i]
+        if (num < 0) {
+            tmp = (255 + num + 1).toString(16)
+        } else {
+            tmp = num.toString(16)
+        }
+        if (tmp.length === 1) {
+            tmp = '0' + tmp
+        }
+        str += tmp
+    }
+    return str
+}
+function loraWANV2DataFormat (str, divisor = 1) {
+    let strReverse = bigEndianTransform(str)
+    let str2 = toBinary(strReverse)
+    if (str2.substring(0, 1) === '1') {
+        let arr = str2.split('')
+        let reverseArr = arr.map((item) => {
+            if (parseInt(item) === 1) {
+                return 0
+            } else {
+                return 1
+            }
+        })
+        str2 = parseInt(reverseArr.join(''), 2) + 1
+        return parseFloat('-' + str2 / divisor)
+    }
+    return parseInt(str2, 2) / divisor
+}
+
+function bigEndianTransform (data) {
+    let dataArray = []
+    for (let i = 0; i < data.length; i += 2) {
+        dataArray.push(data.substring(i, i + 2))
+    }
+    return dataArray
+}
+
+function toBinary (arr) {
+    let binaryData = arr.map((item) => {
+        let data = parseInt(item, 16)
+            .toString(2)
+        let dataLength = data.length
+        if (data.length !== 8) {
+            for (let i = 0; i < 8 - dataLength; i++) {
+                data = `0` + data
+            }
+        }
+        return data
+    })
+    return binaryData.toString().replace(/,/g, '')
+}
+
+function getMacAndRssiObj (pair) {
+    let pairs = []
+    if (pair.length % 14 === 0) {
+        for (let i = 0; i < pair.length; i += 14) {
+            let mac = getMacAddress(pair.substring(i, i + 12))
+            if (mac) {
+                let rssi = getInt8RSSI(pair.substring(i + 12, i + 14))
+                pairs.push({mac: mac, rssi: rssi})
+            } else {
+                continue
+            }
+        }
+    }
+    return pairs
+}
+
+function getMacAddress (str) {
+    if (str.toLowerCase() === 'ffffffffffff') {
+        return null
+    }
+    let macArr = []
+    for (let i = 1; i < str.length; i++) {
+        if (i % 2 === 1) {
+            macArr.push(str.substring(i - 1, i + 1))
+        }
+    }
+    let mac = ''
+    for (let i = 0; i < macArr.length; i++) {
+        mac = mac + macArr[i]
+        if (i < macArr.length - 1) {
+            mac = mac + ':'
+        }
+    }
+    return mac
+}
+
+function getInt8RSSI (str) {
+    return loraWANV2DataFormat(str)
+}
+
+function getInt (str) {
+    return parseInt(str, 16)
+}
+
+function getEventStatus (str) {
+    let bitStr = getByteArray(str)
+    let bitArr = []
+    for (let i = 0; i < bitStr.length; i++) {
+        bitArr[i] = bitStr.substring(i, i + 1)
+    }
+    bitArr = bitArr.reverse()
+    const EVENT_MAP = {
+        0: {id: 1, eventName: "Start moving event."},
+        1: {id: 2, eventName: "End movement event."},
+        2: {id: 3, eventName: "Motionless event."},
+        3: {id: 4, eventName: "Shock event."},
+        4: {id: 5, eventName: "Temperature event."},
+        5: {id: 6, eventName: "Light event."},
+        6: {id: 7, eventName: "SOS event."},
+        7: {id: 8, eventName: "Press once event."},
+        8: {id: 9, eventName: "disassembled event"}
+    }
+    let event = []
+    for (let i = 0; i < bitArr.length; i++) {
+        if (bitArr[i] === '1' && EVENT_MAP[i]) {
+            event.push(EVENT_MAP[i])
+        }
+    }
+    return event
+}
+
+function getByteArray (str) {
+    let bytes = []
+    for (let i = 0; i < str.length; i += 2) {
+        bytes.push(str.substring(i, i + 2))
+    }
+    return toBinary(bytes)
+}
+
+function getWorkingMode (workingMode) {
+    return getInt(workingMode)
+}
+
+function getPositioningStrategy (strategy) {
+    return getInt(strategy)
+}
+
+function getUTCTimestamp(str){
+    return parseInt(loraWANV2PositiveDataFormat(str)) * 1000
+}
+
+function loraWANV2PositiveDataFormat (str, divisor = 1) {
+    let strReverse = bigEndianTransform(str)
+    let str2 = toBinary(strReverse)
+    return parseInt(str2, 2) / divisor
+}
+```
+</details>
+
+<details>
+
+<summary>Para Helium</summary>
+
+```cpp
+function Decoder (bytes, port) {
+    const bytesString = bytes2HexString(bytes)
+    const originMessage = bytesString.toLocaleUpperCase()
+    const decoded = {
+        valid: true,
+        err: 0,
+        payload: bytesString,
+        messages: []
+    }
+
+    let measurement = messageAnalyzed(originMessage)
+    if (measurement.length === 0) {
+        decoded.valid = false
+        return { data: decoded }
+    }
+
+    for (let message of measurement) {
+        if (message.length === 0) {
+            continue
+        }
+        let elements = []
+        for (let element of message) {
+            if (element.errorCode) {
+                decoded.err = element.errorCode
+                decoded.errMessage = element.error
+            } else {
+                elements.push(element)
+            }
+        }
+        if (elements.length > 0) {
+            decoded.messages.push(elements)
+        }
+    }
+    return { data: decoded }
+}
+
+function messageAnalyzed (messageValue) {
+    try {
+        let frames = unpack(messageValue)
+        let measurementResultArray = []
+        for (let i = 0; i < frames.length; i++) {
+            let item = frames[i]
+            let dataId = item.dataId
+            let dataValue = item.dataValue
+            let measurementArray = deserialize(dataId, dataValue)
+            measurementResultArray.push(measurementArray)
+        }
+        return measurementResultArray
+    } catch (e) {
+        return e.toString()
+    }
+}
+
+function unpack (messageValue) {
+    let frameArray = []
+    const FIXED_LENGTH_PACKAGES = {
+        '27': 92, '28': 60, '29': 24, '2A': 12, '2B': 46, '2E': 34, '31': 30, '32': 18
+    }
+    const DYNAMIC_LENGTH_PACKAGES = {
+        '2C': {minLen: 32, scanCountPos: [30, 32], baseLen: 23, itemLen: 7},
+        '2D': {minLen: 32, scanCountPos: [30, 32], baseLen: 23, itemLen: 7},
+        '2F': {minLen: 20, scanCountPos: [18, 20], baseLen: 17, itemLen: 7},
+        '30': {minLen: 20, scanCountPos: [18, 20], baseLen: 17, itemLen: 7}
+    }
+
+    for (let i = 0; i < messageValue.length; i++) {
+        let remainMessage = messageValue
+        let dataId = remainMessage.substring(0, 2).toUpperCase()
+        let dataValue
+        let dataObj = {}
+
+        if (dataId === '0C') {
+            dataValue = ''
+            messageValue = remainMessage.substring(2)
+            dataObj = {'dataId': dataId, 'dataValue': ''}
+        } else if (dataId === '0D') {
+            dataValue = remainMessage.substring(2, 10)
+            messageValue = remainMessage.substring(10)
+            dataObj = {'dataId': dataId, 'dataValue': dataValue}
+        } else if (FIXED_LENGTH_PACKAGES[dataId]) {
+            let packageLen = FIXED_LENGTH_PACKAGES[dataId]
+            if (remainMessage.length < packageLen) {
+                return frameArray
+            }
+            dataValue = remainMessage.substring(2, packageLen)
+            messageValue = remainMessage.substring(packageLen)
+            dataObj = {'dataId': dataId, 'dataValue': dataValue}
+        } else if (DYNAMIC_LENGTH_PACKAGES[dataId]) {
+            let config = DYNAMIC_LENGTH_PACKAGES[dataId]
+            if (remainMessage.length < config.minLen) {
+                return frameArray
+            }
+            let scanCount = parseInt(remainMessage.substring(config.scanCountPos[0], config.scanCountPos[1]), 16)
+            let packageLen = (config.baseLen + (scanCount - 1) * config.itemLen) * 2
+            if (remainMessage.length < packageLen) {
+                return frameArray
+            }
+            dataValue = remainMessage.substring(2, packageLen)
+            messageValue = remainMessage.substring(packageLen)
+            dataObj = {'dataId': dataId, 'dataValue': dataValue}
+        } else {
+            return frameArray
+        }
+
+        if (dataValue.length < 2 && dataObj.dataId !== '0C') {
+            break
+        }
+        frameArray.push(dataObj)
+    }
+    return frameArray
+}
+
+function deserialize (dataId, dataValue) {
+    let measurementArray = []
+    let eventList = []
+    let timestamp = 0
+    let value = null
+    let motionId = 0
+    let scanMax = 0
+    let interval = 0
+    let workMode = 0
+    let heartbeatInterval = 0
+    let periodicInterval = 0
+    let eventInterval = 0
+    switch (dataId) {
+        case '0C':
+            measurementArray.push({type: "timeSync"})
+            break
+        case '0D':
+            let errorCode = getInt(dataValue)
+            let error = ''
+            switch (errorCode) {
+                case 1:
+                    error = 'FAILED TO OBTAIN THE UTC TIMESTAMP'
+                    break
+                case 2:
+                    error = 'ALMANAC TOO OLD'
+                    break
+                case 3:
+                    error = 'DOPPLER ERROR'
+                    break
+            }
+            measurementArray.push({errorCode, error})
+            break
+        case '27':
+            measurementArray.push(...getUpT2000(dataValue))
+            break
+        case '28':
+            interval = 0
+            workMode = getInt(dataValue.substring(0, 2))
+            heartbeatInterval = getMinsByMin(dataValue.substring(4, 8))
+            periodicInterval = getMinsByMin(dataValue.substring(8, 12))
+            eventInterval = getMinsByMin(dataValue.substring(12, 16))
+            switch (workMode) {
+                case 0:
+                    interval = heartbeatInterval
+                    break
+                case 1:
+                    interval = periodicInterval
+                    break
+                case 2:
+                    interval = eventInterval
+                    break
+            }
+            measurementArray = [
+                {
+                    measurementId: '3940', measurementValue: workMode
+                }, {
+                    measurementId: '3965', measurementValue: getPositioningStrategy(dataValue.substring(2, 4))
+                }, {
+                    measurementId: '3942', measurementValue: heartbeatInterval
+                }, {
+                    measurementId: '3943', measurementValue: periodicInterval
+                }, {
+                    measurementId: '3944', measurementValue: eventInterval
+                }, {
+                    measurementId: '3974', measurementValue: getInt(dataValue.substring(16, 18))
+                }, {
+                    measurementId: '3976', measurementValue: getInt(dataValue.substring(18, 20))
+                }, {
+                    measurementId: '3977', measurementValue: getInt(dataValue.substring(20, 22))
+                }, {
+                    measurementId: '3900', measurementValue: interval
+                }, {
+                    measurementId: '3978', measurementValue: getInt(dataValue.substring(22, 24))
+                }, {
+                    measurementId: '3979', measurementValue: dataValue.substring(26, 26 + getInt(dataValue.substring(24, 26)) * 2)
+                }
+            ]
+            // measurementArray.push(measurement)
+            break
+        case '29':
+            measurementArray.push({
+                measurementId: '3946', measurementValue: getInt(dataValue.substring(0, 2))
+            })
+            measurementArray.push({
+                measurementId: '3947', measurementValue: getSensorValue(dataValue.substring(2, 6), 1)
+            })
+            measurementArray.push({
+                measurementId: '3948', measurementValue: getMinsByMin(dataValue.substring(6, 10))
+            })
+            measurementArray.push({
+                measurementId: '3949', measurementValue: getInt(dataValue.substring(10, 12))
+            })
+            measurementArray.push({
+                measurementId: '3950', measurementValue: getMinsByMin(dataValue.substring(12, 16))
+            })
+            measurementArray.push({
+                measurementId: '3951', measurementValue: getInt(dataValue.substring(16, 18))
+            })
+            measurementArray.push({
+                measurementId: '3952', measurementValue: getInt(dataValue.substring(18, 22))
+            })
+            break
+        case '2A':
+            measurementArray.push({
+                measurementId: '3000', measurementValue: getBattery(dataValue.substring(0, 2))
+            })
+            measurementArray.push({
+                measurementId: '3940', measurementValue: getWorkingMode(dataValue.substring(2, 4))
+            })
+            measurementArray.push({
+                measurementId: '3965', measurementValue: getPositioningStrategy(dataValue.substring(4, 6))
+            })
+            measurementArray.push({
+                measurementId: '3974', measurementValue: getInt(dataValue.substring(6, 8))
+            })
+            measurementArray.push({
+                measurementId: '3976', measurementValue: getInt(dataValue.substring(8, 10))
+            })
+            break
+        case '2B':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseAccelerometerData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseLocationData(dataValue, 26, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 42, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '2C':
+        case '2D':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseAccelerometerData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 26, timestamp, motionId, measurementArray)
+            scanMax = getInt(dataValue.substring(28, 30))
+            parseScanData(scanMax, dataValue, 30, dataId === '2C' ? '5001' : '5002', timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '2E':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseLocationData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 30, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '2F':
+        case '30':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseBatteryData(dataValue, 14, timestamp, motionId, measurementArray)
+            scanMax = getInt(dataValue.substring(16, 18))
+            parseScanData(scanMax, dataValue, 18, dataId === '2F' ? '5001' : '5002', timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '31':
+            eventList = getEventStatus(dataValue.substring(2, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            measurementArray.push({
+                measurementId: '3576',
+                timestamp,
+                motionId,
+                measurementValue: getPositingStatus(dataValue.substring(0, 2))
+            })
+            parseAccelerometerData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 26, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '32':
+            eventList = getEventStatus(dataValue.substring(2, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            measurementArray.push({
+                measurementId: '3576',
+                timestamp,
+                motionId,
+                measurementValue: getPositingStatus(dataValue.substring(0, 2))
+            })
+            parseBatteryData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+    }
+    if (measurementArray.length > 0) {
+        for (let frag of measurementArray) {
+            if (frag.measurementId) {
+                frag.type = getTypeByMeasurementId(frag.measurementId)
+            }
+        }
+    }
+    return measurementArray
+}
+
+function parseAccelerometerData (dataValue, startPos, timestamp, motionId, measurementArray) {
+    const accelerometerIds = ['4210', '4211', '4212']
+    for (let i = 0; i < 3; i++) {
+        let value = getSignSensorValue(dataValue.substring(startPos + i * 4, startPos + (i + 1) * 4), 1)
+        if (value !== null) {
+            measurementArray.push({
+                measurementId: accelerometerIds[i],
+                timestamp,
+                motionId,
+                measurementValue: value
+            })
+        }
+    }
+}
+
+function parseBatteryData (dataValue, pos, timestamp, motionId, measurementArray) {
+    measurementArray.push({
+        measurementId: '3000',
+        timestamp,
+        motionId,
+        measurementValue: '' + getBattery(dataValue.substring(pos, pos + 2))
+    })
+}
+
+function parseEventData (eventList, timestamp, motionId, measurementArray) {
+    if (eventList && eventList.length > 0) {
+        measurementArray.push({
+            measurementId: '4200',
+            timestamp,
+            motionId,
+            measurementValue: eventList
+        })
+    }
+}
+
+function parseLocationData (dataValue, startPos, timestamp, motionId, measurementArray) {
+    measurementArray.push({
+        measurementId: '4197',
+        timestamp,
+        motionId,
+        measurementValue: '' + getSensorValue(dataValue.substring(startPos, startPos + 8), 1000000)
+    })
+    measurementArray.push({
+        measurementId: '4198',
+        timestamp,
+        motionId,
+        measurementValue: '' + getSensorValue(dataValue.substring(startPos + 8, startPos + 16), 1000000)
+    })
+}
+
+function parseScanData (scanMax, dataValue, startPos, measurementId, timestamp, motionId, measurementArray) {
+    if (scanMax && scanMax > 0) {
+        measurementArray.push({
+            measurementId,
+            timestamp,
+            motionId,
+            measurementValue: getMacAndRssiObj(dataValue.substring(startPos))
+        })
+    }
+}
+
+function getTypeByMeasurementId (measurementId) {
+    const TYPE_MAP = {
+        '3000': 'Battery',
+        '3502': 'Firmware Version',
+        '3001': 'Hardware Version',
+        '3940': 'Work Mode',
+        '3965': 'Positioning Strategy',
+        '3942': 'Heartbeat Interval',
+        '3943': 'Periodic Interval',
+        '3944': 'Event Interval',
+        '3974': '3X Sensor Enable',
+        '3976': 'Anti-Theft',
+        '3977': 'GNSS Scan Timeout',
+        '3900': 'Uplink Interval',
+        '3978': 'BLE Scan Timeout',
+        '3979': 'UUID Filter',
+        '3946': 'Motion Enable',
+        '3947': 'Any Motion Threshold',
+        '3948': 'Motion Start Interval',
+        '3949': 'Static Enable',
+        '3950': 'Device Static Timeout',
+        '3951': 'Shock Enable',
+        '3952': 'Shock Threshold',
+        '4210': 'AccelerometerX',
+        '4211': 'AccelerometerY',
+        '4212': 'AccelerometerZ',
+        '4197': 'Longitude',
+        '4198': 'Latitude',
+        '4200': 'Event Status',
+        '5001': 'Wi-Fi Scan',
+        '5002': 'BLE Scan',
+        '3576': 'Positioning Status'
+    }
+    return TYPE_MAP[measurementId] || ''
+}
+
+function getMotionId (str) {
+    return getInt(str)
+}
+
+function getPositingStatus (str) {
+    let status = getInt(str)
+    const STATUS_MAP = {
+        0: "locate successful.",
+        1: "The GNSS scan timed out.",
+        2: "The Wi-Fi scan timed out.",
+        3: "The Wi-Fi + GNSS scan timed out.",
+        4: "The GNSS + Wi-Fi scan timed out.",
+        5: "The Bluetooth scan timed out.",
+        6: "The Bluetooth + Wi-Fi scan timed out.",
+        7: "The Bluetooth + GNSS scan timed out.",
+        8: "The Bluetooth + Wi-Fi + GNSS scan timed out.",
+        9: "Location Server failed to parse the GNSS location.",
+        10: "Location Server failed to parse the Wi-Fi location.",
+        11: "Location Server failed to parse the Bluetooth location.",
+        12: "Failed to parse location due to the poor accuracy.",
+        13: "Time synchronization failed.",
+        14: "Failed due to the old Almanac.",
+        15: "The GNSS +Bluetooth scan timed out."
+    }
+    if (STATUS_MAP[status] !== undefined) {
+        return {id: status, statusName: STATUS_MAP[status]}
+    }
+    return getInt(str)
+}
+
+function getUpT2000 (messageValue) {
+    let interval = 0
+    let workMode = getInt(messageValue.substring(10, 12))
+    let heartbeatInterval = getMinsByMin(messageValue.substring(14, 18))
+    let periodicInterval = getMinsByMin(messageValue.substring(18, 22))
+    let eventInterval = getMinsByMin(messageValue.substring(22, 26))
+    switch (workMode) {
+        case 0:
+            interval = heartbeatInterval
+            break
+        case 1:
+            interval = periodicInterval
+            break
+        case 2:
+            interval = eventInterval
+            break
+    }
+    let data = [
+        {
+            measurementId: '3000', measurementValue: getBattery(messageValue.substring(0, 2))
+        }, {
+            measurementId: '3502', measurementValue: getSoftVersion(messageValue.substring(2, 6))
+        }, {
+            measurementId: '3001', measurementValue: getHardVersion(messageValue.substring(6, 10))
+        }, {
+            measurementId: '3940', measurementValue: workMode
+        }, {
+            measurementId: '3965', measurementValue: getPositioningStrategy(messageValue.substring(12, 14))
+        }, {
+            measurementId: '3942', measurementValue: heartbeatInterval
+        }, {
+            measurementId: '3943', measurementValue: periodicInterval
+        }, {
+            measurementId: '3944', measurementValue: eventInterval
+        }, {
+            measurementId: '3974', measurementValue: getInt(messageValue.substring(26, 28))
+        }, {
+            measurementId: '3976', measurementValue: getInt(messageValue.substring(28, 30))
+        }, {
+            measurementId: '3977', measurementValue: getInt(messageValue.substring(30, 32))
+        }, {
+            measurementId: '3900', measurementValue: interval
+        }, {
+            measurementId: '3978', measurementValue: getInt(messageValue.substring(54, 56))
+        }, {
+            measurementId: '3979', measurementValue: messageValue.substring(58, 58 + getInt(messageValue.substring(56, 58)) * 2)
+        }
+    ]
+    let motionSetting = getMotionSetting(messageValue.substring(32, 42))
+    let staticsSetting = getStaticSetting(messageValue.substring(42, 48))
+    let shockSetting = getShockSetting(messageValue.substring(48, 54))
+    data = [...data, ...motionSetting, ...staticsSetting, ...shockSetting]
+    return data
+}
+
+function getMotionSetting (str) {
+    return [
+        {measurementId: '3946', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3947', measurementValue: getSensorValue(str.substring(2, 6), 1)},
+        {measurementId: '3948', measurementValue: getMinsByMin(str.substring(6, 10))},
+    ]
+}
+
+function getStaticSetting (str) {
+    return [
+        {measurementId: '3949', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3950', measurementValue: getMinsByMin(str.substring(2, 6))}
+    ]
+}
+
+function getShockSetting (str) {
+    return [
+        {measurementId: '3951', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3952', measurementValue: getInt(str.substring(2, 6))}
+    ]
+}
+
+function getBattery (batteryStr) {
+    return loraWANV2DataFormat(batteryStr)
+}
+function getSoftVersion (softVersion) {
+    return `${loraWANV2DataFormat(softVersion.substring(0, 2))}.${loraWANV2DataFormat(softVersion.substring(2, 4))}`
+}
+function getHardVersion (hardVersion) {
+    return `${loraWANV2DataFormat(hardVersion.substring(0, 2))}.${loraWANV2DataFormat(hardVersion.substring(2, 4))}`
+}
+
+function getMinsByMin (str) {
+    return getInt(str)
+}
+
+function getSensorValue (str, dig) {
+    if (str === '8000') {
+        return null
+    } else {
+        return loraWANV2DataFormat(str, dig)
+    }
+}
+
+function isNull (str) {
+    if (str.substring(0, 1) !== '8') {
+        return false
+    }
+    for (let i = 1; i < str.length; i++) {
+        if (str.substring(i, i + 1) !== '0') {
+            return false
+        }
+    }
+    return true
+}
+
+function getSignSensorValue (str, dig = 1) {
+    if (isNull(str)) {
+        return null
+    }
+    return loraWANV2DataFormat(str, dig)
+}
+
+function bytes2HexString (arrBytes) {
+    var str = ''
+    for (var i = 0; i < arrBytes.length; i++) {
+        var tmp
+        var num = arrBytes[i]
+        if (num < 0) {
+            tmp = (255 + num + 1).toString(16)
+        } else {
+            tmp = num.toString(16)
+        }
+        if (tmp.length === 1) {
+            tmp = '0' + tmp
+        }
+        str += tmp
+    }
+    return str
+}
+function loraWANV2DataFormat (str, divisor = 1) {
+    let strReverse = bigEndianTransform(str)
+    let str2 = toBinary(strReverse)
+    if (str2.substring(0, 1) === '1') {
+        let arr = str2.split('')
+        let reverseArr = arr.map((item) => {
+            if (parseInt(item) === 1) {
+                return 0
+            } else {
+                return 1
+            }
+        })
+        str2 = parseInt(reverseArr.join(''), 2) + 1
+        return parseFloat('-' + str2 / divisor)
+    }
+    return parseInt(str2, 2) / divisor
+}
+
+function bigEndianTransform (data) {
+    let dataArray = []
+    for (let i = 0; i < data.length; i += 2) {
+        dataArray.push(data.substring(i, i + 2))
+    }
+    return dataArray
+}
+
+function toBinary (arr) {
+    let binaryData = arr.map((item) => {
+        let data = parseInt(item, 16)
+            .toString(2)
+        let dataLength = data.length
+        if (data.length !== 8) {
+            for (let i = 0; i < 8 - dataLength; i++) {
+                data = `0` + data
+            }
+        }
+        return data
+    })
+    return binaryData.toString().replace(/,/g, '')
+}
+
+function getMacAndRssiObj (pair) {
+    let pairs = []
+    if (pair.length % 14 === 0) {
+        for (let i = 0; i < pair.length; i += 14) {
+            let mac = getMacAddress(pair.substring(i, i + 12))
+            if (mac) {
+                let rssi = getInt8RSSI(pair.substring(i + 12, i + 14))
+                pairs.push({mac: mac, rssi: rssi})
+            } else {
+                continue
+            }
+        }
+    }
+    return pairs
+}
+
+function getMacAddress (str) {
+    if (str.toLowerCase() === 'ffffffffffff') {
+        return null
+    }
+    let macArr = []
+    for (let i = 1; i < str.length; i++) {
+        if (i % 2 === 1) {
+            macArr.push(str.substring(i - 1, i + 1))
+        }
+    }
+    let mac = ''
+    for (let i = 0; i < macArr.length; i++) {
+        mac = mac + macArr[i]
+        if (i < macArr.length - 1) {
+            mac = mac + ':'
+        }
+    }
+    return mac
+}
+
+function getInt8RSSI (str) {
+    return loraWANV2DataFormat(str)
+}
+
+function getInt (str) {
+    return parseInt(str, 16)
+}
+
+function getEventStatus (str) {
+    let bitStr = getByteArray(str)
+    let bitArr = []
+    for (let i = 0; i < bitStr.length; i++) {
+        bitArr[i] = bitStr.substring(i, i + 1)
+    }
+    bitArr = bitArr.reverse()
+    const EVENT_MAP = {
+        0: {id: 1, eventName: "Start moving event."},
+        1: {id: 2, eventName: "End movement event."},
+        2: {id: 3, eventName: "Motionless event."},
+        3: {id: 4, eventName: "Shock event."},
+        4: {id: 5, eventName: "Temperature event."},
+        5: {id: 6, eventName: "Light event."},
+        6: {id: 7, eventName: "SOS event."},
+        7: {id: 8, eventName: "Press once event."},
+        8: {id: 9, eventName: "disassembled event"}
+    }
+    let event = []
+    for (let i = 0; i < bitArr.length; i++) {
+        if (bitArr[i] === '1' && EVENT_MAP[i]) {
+            event.push(EVENT_MAP[i])
+        }
+    }
+    return event
+}
+
+function getByteArray (str) {
+    let bytes = []
+    for (let i = 0; i < str.length; i += 2) {
+        bytes.push(str.substring(i, i + 2))
+    }
+    return toBinary(bytes)
+}
+
+function getWorkingMode (workingMode) {
+    return getInt(workingMode)
+}
+
+function getPositioningStrategy (strategy) {
+    return getInt(strategy)
+}
+
+function getUTCTimestamp(str){
+    return parseInt(loraWANV2PositiveDataFormat(str)) * 1000
+}
+
+function loraWANV2PositiveDataFormat (str, divisor = 1) {
+    let strReverse = bigEndianTransform(str)
+    let str2 = toBinary(strReverse)
+    return parseInt(str2, 2) / divisor
+}
+```
+</details>
+
+<details>
+
+<summary>Para AWS</summary>
+
+```cpp
+const {IoTDataPlaneClient, PublishCommand} = require("@aws-sdk/client-iot-data-plane");
+const client = new IoTDataPlaneClient({
+//Replace the region according to your device.
+    "region": "us-east-1"
+});
+
+function decodeUplink (input) {
+    const bytes = Buffer.from(input, 'base64');
+    console.log("bytes: ", bytes)
+    const bytesString = bytes2HexString(bytes)
+    const originMessage = bytesString.toLocaleUpperCase()
+    const decoded = {
+        valid: true,
+        err: 0,
+        payload: bytesString,
+        messages: []
+    }
+    let measurement = messageAnalyzed(originMessage)
+    if (measurement.length === 0) {
+        decoded.valid = false
+        return { data: decoded }
+    }
+
+    for (let message of measurement) {
+        if (message.length === 0) {
+            continue
+        }
+        let elements = []
+        for (let element of message) {
+            if (element.errorCode) {
+                decoded.err = element.errorCode
+                decoded.errMessage = element.error
+            } else {
+                elements.push(element)
+            }
+        }
+        if (elements.length > 0) {
+            decoded.messages.push(elements)
+        }
+    }
+    return { data: decoded }
+}
+
+function messageAnalyzed (messageValue) {
+    try {
+        let frames = unpack(messageValue)
+        let measurementResultArray = []
+        for (let i = 0; i < frames.length; i++) {
+            let item = frames[i]
+            let dataId = item.dataId
+            let dataValue = item.dataValue
+            let measurementArray = deserialize(dataId, dataValue)
+            measurementResultArray.push(measurementArray)
+        }
+        return measurementResultArray
+    } catch (e) {
+        return e.toString()
+    }
+}
+
+function unpack (messageValue) {
+    let frameArray = []
+    const FIXED_LENGTH_PACKAGES = {
+        '27': 92, '28': 60, '29': 24, '2A': 12, '2B': 46, '2E': 34, '31': 30, '32': 18
+    }
+    const DYNAMIC_LENGTH_PACKAGES = {
+        '2C': {minLen: 32, scanCountPos: [30, 32], baseLen: 23, itemLen: 7},
+        '2D': {minLen: 32, scanCountPos: [30, 32], baseLen: 23, itemLen: 7},
+        '2F': {minLen: 20, scanCountPos: [18, 20], baseLen: 17, itemLen: 7},
+        '30': {minLen: 20, scanCountPos: [18, 20], baseLen: 17, itemLen: 7}
+    }
+
+    for (let i = 0; i < messageValue.length; i++) {
+        let remainMessage = messageValue
+        let dataId = remainMessage.substring(0, 2).toUpperCase()
+        let dataValue
+        let dataObj = {}
+
+        if (dataId === '0C') {
+            dataValue = ''
+            messageValue = remainMessage.substring(2)
+            dataObj = {'dataId': dataId, 'dataValue': ''}
+        } else if (dataId === '0D') {
+            dataValue = remainMessage.substring(2, 10)
+            messageValue = remainMessage.substring(10)
+            dataObj = {'dataId': dataId, 'dataValue': dataValue}
+        } else if (FIXED_LENGTH_PACKAGES[dataId]) {
+            let packageLen = FIXED_LENGTH_PACKAGES[dataId]
+            if (remainMessage.length < packageLen) {
+                return frameArray
+            }
+            dataValue = remainMessage.substring(2, packageLen)
+            messageValue = remainMessage.substring(packageLen)
+            dataObj = {'dataId': dataId, 'dataValue': dataValue}
+        } else if (DYNAMIC_LENGTH_PACKAGES[dataId]) {
+            let config = DYNAMIC_LENGTH_PACKAGES[dataId]
+            if (remainMessage.length < config.minLen) {
+                return frameArray
+            }
+            let scanCount = parseInt(remainMessage.substring(config.scanCountPos[0], config.scanCountPos[1]), 16)
+            let packageLen = (config.baseLen + (scanCount - 1) * config.itemLen) * 2
+            if (remainMessage.length < packageLen) {
+                return frameArray
+            }
+            dataValue = remainMessage.substring(2, packageLen)
+            messageValue = remainMessage.substring(packageLen)
+            dataObj = {'dataId': dataId, 'dataValue': dataValue}
+        } else {
+            return frameArray
+        }
+
+        if (dataValue.length < 2 && dataObj.dataId !== '0C') {
+            break
+        }
+        frameArray.push(dataObj)
+    }
+    return frameArray
+}
+
+function deserialize (dataId, dataValue) {
+    let measurementArray = []
+    let eventList = []
+    let timestamp = 0
+    let value = null
+    let motionId = 0
+    let scanMax = 0
+    let interval = 0
+    let workMode = 0
+    let heartbeatInterval = 0
+    let periodicInterval = 0
+    let eventInterval = 0
+    switch (dataId) {
+        case '0C':
+            measurementArray.push({type: "timeSync"})
+            break
+        case '0D':
+            let errorCode = getInt(dataValue)
+            let error = ''
+            switch (errorCode) {
+                case 1:
+                    error = 'FAILED TO OBTAIN THE UTC TIMESTAMP'
+                    break
+                case 2:
+                    error = 'ALMANAC TOO OLD'
+                    break
+                case 3:
+                    error = 'DOPPLER ERROR'
+                    break
+            }
+            measurementArray.push({errorCode, error})
+            break
+        case '27':
+            measurementArray.push(...getUpT2000(dataValue))
+            break
+        case '28':
+            interval = 0
+            workMode = getInt(dataValue.substring(0, 2))
+            heartbeatInterval = getMinsByMin(dataValue.substring(4, 8))
+            periodicInterval = getMinsByMin(dataValue.substring(8, 12))
+            eventInterval = getMinsByMin(dataValue.substring(12, 16))
+            switch (workMode) {
+                case 0:
+                    interval = heartbeatInterval
+                    break
+                case 1:
+                    interval = periodicInterval
+                    break
+                case 2:
+                    interval = eventInterval
+                    break
+            }
+            measurementArray = [
+                {
+                    measurementId: '3940', measurementValue: workMode
+                }, {
+                    measurementId: '3965', measurementValue: getPositioningStrategy(dataValue.substring(2, 4))
+                }, {
+                    measurementId: '3942', measurementValue: heartbeatInterval
+                }, {
+                    measurementId: '3943', measurementValue: periodicInterval
+                }, {
+                    measurementId: '3944', measurementValue: eventInterval
+                }, {
+                    measurementId: '3974', measurementValue: getInt(dataValue.substring(16, 18))
+                }, {
+                    measurementId: '3976', measurementValue: getInt(dataValue.substring(18, 20))
+                }, {
+                    measurementId: '3977', measurementValue: getInt(dataValue.substring(20, 22))
+                }, {
+                    measurementId: '3900', measurementValue: interval
+                }, {
+                    measurementId: '3978', measurementValue: getInt(dataValue.substring(22, 24))
+                }, {
+                    measurementId: '3979', measurementValue: dataValue.substring(26, 26 + getInt(dataValue.substring(24, 26)) * 2)
+                }
+            ]
+            // measurementArray.push(measurement)
+            break
+        case '29':
+            measurementArray.push({
+                measurementId: '3946', measurementValue: getInt(dataValue.substring(0, 2))
+            })
+            measurementArray.push({
+                measurementId: '3947', measurementValue: getSensorValue(dataValue.substring(2, 6), 1)
+            })
+            measurementArray.push({
+                measurementId: '3948', measurementValue: getMinsByMin(dataValue.substring(6, 10))
+            })
+            measurementArray.push({
+                measurementId: '3949', measurementValue: getInt(dataValue.substring(10, 12))
+            })
+            measurementArray.push({
+                measurementId: '3950', measurementValue: getMinsByMin(dataValue.substring(12, 16))
+            })
+            measurementArray.push({
+                measurementId: '3951', measurementValue: getInt(dataValue.substring(16, 18))
+            })
+            measurementArray.push({
+                measurementId: '3952', measurementValue: getInt(dataValue.substring(18, 22))
+            })
+            break
+        case '2A':
+            measurementArray.push({
+                measurementId: '3000', measurementValue: getBattery(dataValue.substring(0, 2))
+            })
+            measurementArray.push({
+                measurementId: '3940', measurementValue: getWorkingMode(dataValue.substring(2, 4))
+            })
+            measurementArray.push({
+                measurementId: '3965', measurementValue: getPositioningStrategy(dataValue.substring(4, 6))
+            })
+            measurementArray.push({
+                measurementId: '3974', measurementValue: getInt(dataValue.substring(6, 8))
+            })
+            measurementArray.push({
+                measurementId: '3976', measurementValue: getInt(dataValue.substring(8, 10))
+            })
+            break
+        case '2B':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseAccelerometerData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseLocationData(dataValue, 26, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 42, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '2C':
+        case '2D':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseAccelerometerData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 26, timestamp, motionId, measurementArray)
+            scanMax = getInt(dataValue.substring(28, 30))
+            parseScanData(scanMax, dataValue, 30, dataId === '2C' ? '5001' : '5002', timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '2E':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseLocationData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 30, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '2F':
+        case '30':
+            eventList = getEventStatus(dataValue.substring(0, 4))
+            motionId = getMotionId(dataValue.substring(4, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            parseBatteryData(dataValue, 14, timestamp, motionId, measurementArray)
+            scanMax = getInt(dataValue.substring(16, 18))
+            parseScanData(scanMax, dataValue, 18, dataId === '2F' ? '5001' : '5002', timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '31':
+            eventList = getEventStatus(dataValue.substring(2, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            measurementArray.push({
+                measurementId: '3576',
+                timestamp,
+                motionId,
+                measurementValue: getPositingStatus(dataValue.substring(0, 2))
+            })
+            parseAccelerometerData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseBatteryData(dataValue, 26, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+        case '32':
+            eventList = getEventStatus(dataValue.substring(2, 6))
+            timestamp = getUTCTimestamp(dataValue.substring(6, 14))
+            measurementArray.push({
+                measurementId: '3576',
+                timestamp,
+                motionId,
+                measurementValue: getPositingStatus(dataValue.substring(0, 2))
+            })
+            parseBatteryData(dataValue, 14, timestamp, motionId, measurementArray)
+            parseEventData(eventList, timestamp, motionId, measurementArray)
+            break
+    }
+    if (measurementArray.length > 0) {
+        for (let frag of measurementArray) {
+            if (frag.measurementId) {
+                frag.type = getTypeByMeasurementId(frag.measurementId)
+            }
+        }
+    }
+    return measurementArray
+}
+
+function parseAccelerometerData (dataValue, startPos, timestamp, motionId, measurementArray) {
+    const accelerometerIds = ['4210', '4211', '4212']
+    for (let i = 0; i < 3; i++) {
+        let value = getSignSensorValue(dataValue.substring(startPos + i * 4, startPos + (i + 1) * 4), 1)
+        if (value !== null) {
+            measurementArray.push({
+                measurementId: accelerometerIds[i],
+                timestamp,
+                motionId,
+                measurementValue: value
+            })
+        }
+    }
+}
+
+function parseBatteryData (dataValue, pos, timestamp, motionId, measurementArray) {
+    measurementArray.push({
+        measurementId: '3000',
+        timestamp,
+        motionId,
+        measurementValue: '' + getBattery(dataValue.substring(pos, pos + 2))
+    })
+}
+
+function parseEventData (eventList, timestamp, motionId, measurementArray) {
+    if (eventList && eventList.length > 0) {
+        measurementArray.push({
+            measurementId: '4200',
+            timestamp,
+            motionId,
+            measurementValue: eventList
+        })
+    }
+}
+
+function parseLocationData (dataValue, startPos, timestamp, motionId, measurementArray) {
+    measurementArray.push({
+        measurementId: '4197',
+        timestamp,
+        motionId,
+        measurementValue: '' + getSensorValue(dataValue.substring(startPos, startPos + 8), 1000000)
+    })
+    measurementArray.push({
+        measurementId: '4198',
+        timestamp,
+        motionId,
+        measurementValue: '' + getSensorValue(dataValue.substring(startPos + 8, startPos + 16), 1000000)
+    })
+}
+
+function parseScanData (scanMax, dataValue, startPos, measurementId, timestamp, motionId, measurementArray) {
+    if (scanMax && scanMax > 0) {
+        measurementArray.push({
+            measurementId,
+            timestamp,
+            motionId,
+            measurementValue: getMacAndRssiObj(dataValue.substring(startPos))
+        })
+    }
+}
+
+function getTypeByMeasurementId (measurementId) {
+    const TYPE_MAP = {
+        '3000': 'Battery',
+        '3502': 'Firmware Version',
+        '3001': 'Hardware Version',
+        '3940': 'Work Mode',
+        '3965': 'Positioning Strategy',
+        '3942': 'Heartbeat Interval',
+        '3943': 'Periodic Interval',
+        '3944': 'Event Interval',
+        '3974': '3X Sensor Enable',
+        '3976': 'Anti-Theft',
+        '3977': 'GNSS Scan Timeout',
+        '3900': 'Uplink Interval',
+        '3978': 'BLE Scan Timeout',
+        '3979': 'UUID Filter',
+        '3946': 'Motion Enable',
+        '3947': 'Any Motion Threshold',
+        '3948': 'Motion Start Interval',
+        '3949': 'Static Enable',
+        '3950': 'Device Static Timeout',
+        '3951': 'Shock Enable',
+        '3952': 'Shock Threshold',
+        '4210': 'AccelerometerX',
+        '4211': 'AccelerometerY',
+        '4212': 'AccelerometerZ',
+        '4197': 'Longitude',
+        '4198': 'Latitude',
+        '4200': 'Event Status',
+        '5001': 'Wi-Fi Scan',
+        '5002': 'BLE Scan',
+        '3576': 'Positioning Status'
+    }
+    return TYPE_MAP[measurementId] || ''
+}
+
+function getMotionId (str) {
+    return getInt(str)
+}
+
+function getPositingStatus (str) {
+    let status = getInt(str)
+    const STATUS_MAP = {
+        0: "locate successful.",
+        1: "The GNSS scan timed out.",
+        2: "The Wi-Fi scan timed out.",
+        3: "The Wi-Fi + GNSS scan timed out.",
+        4: "The GNSS + Wi-Fi scan timed out.",
+        5: "The Bluetooth scan timed out.",
+        6: "The Bluetooth + Wi-Fi scan timed out.",
+        7: "The Bluetooth + GNSS scan timed out.",
+        8: "The Bluetooth + Wi-Fi + GNSS scan timed out.",
+        9: "Location Server failed to parse the GNSS location.",
+        10: "Location Server failed to parse the Wi-Fi location.",
+        11: "Location Server failed to parse the Bluetooth location.",
+        12: "Failed to parse location due to the poor accuracy.",
+        13: "Time synchronization failed.",
+        14: "Failed due to the old Almanac.",
+        15: "The GNSS +Bluetooth scan timed out."
+    }
+    if (STATUS_MAP[status] !== undefined) {
+        return {id: status, statusName: STATUS_MAP[status]}
+    }
+    return getInt(str)
+}
+
+function getUpT2000 (messageValue) {
+    let interval = 0
+    let workMode = getInt(messageValue.substring(10, 12))
+    let heartbeatInterval = getMinsByMin(messageValue.substring(14, 18))
+    let periodicInterval = getMinsByMin(messageValue.substring(18, 22))
+    let eventInterval = getMinsByMin(messageValue.substring(22, 26))
+    switch (workMode) {
+        case 0:
+            interval = heartbeatInterval
+            break
+        case 1:
+            interval = periodicInterval
+            break
+        case 2:
+            interval = eventInterval
+            break
+    }
+    let data = [
+        {
+            measurementId: '3000', measurementValue: getBattery(messageValue.substring(0, 2))
+        }, {
+            measurementId: '3502', measurementValue: getSoftVersion(messageValue.substring(2, 6))
+        }, {
+            measurementId: '3001', measurementValue: getHardVersion(messageValue.substring(6, 10))
+        }, {
+            measurementId: '3940', measurementValue: workMode
+        }, {
+            measurementId: '3965', measurementValue: getPositioningStrategy(messageValue.substring(12, 14))
+        }, {
+            measurementId: '3942', measurementValue: heartbeatInterval
+        }, {
+            measurementId: '3943', measurementValue: periodicInterval
+        }, {
+            measurementId: '3944', measurementValue: eventInterval
+        }, {
+            measurementId: '3974', measurementValue: getInt(messageValue.substring(26, 28))
+        }, {
+            measurementId: '3976', measurementValue: getInt(messageValue.substring(28, 30))
+        }, {
+            measurementId: '3977', measurementValue: getInt(messageValue.substring(30, 32))
+        }, {
+            measurementId: '3900', measurementValue: interval
+        }, {
+            measurementId: '3978', measurementValue: getInt(messageValue.substring(54, 56))
+        }, {
+            measurementId: '3979', measurementValue: messageValue.substring(58, 58 + getInt(messageValue.substring(56, 58)) * 2)
+        }
+    ]
+    let motionSetting = getMotionSetting(messageValue.substring(32, 42))
+    let staticsSetting = getStaticSetting(messageValue.substring(42, 48))
+    let shockSetting = getShockSetting(messageValue.substring(48, 54))
+    data = [...data, ...motionSetting, ...staticsSetting, ...shockSetting]
+    return data
+}
+
+function getMotionSetting (str) {
+    return [
+        {measurementId: '3946', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3947', measurementValue: getSensorValue(str.substring(2, 6), 1)},
+        {measurementId: '3948', measurementValue: getMinsByMin(str.substring(6, 10))},
+    ]
+}
+
+function getStaticSetting (str) {
+    return [
+        {measurementId: '3949', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3950', measurementValue: getMinsByMin(str.substring(2, 6))}
+    ]
+}
+
+function getShockSetting (str) {
+    return [
+        {measurementId: '3951', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3952', measurementValue: getInt(str.substring(2, 6))}
+    ]
+}
+
+function getBattery (batteryStr) {
+    return loraWANV2DataFormat(batteryStr)
+}
+function getSoftVersion (softVersion) {
+    return `${loraWANV2DataFormat(softVersion.substring(0, 2))}.${loraWANV2DataFormat(softVersion.substring(2, 4))}`
+}
+function getHardVersion (hardVersion) {
+    return `${loraWANV2DataFormat(hardVersion.substring(0, 2))}.${loraWANV2DataFormat(hardVersion.substring(2, 4))}`
+}
+
+function getMinsByMin (str) {
+    return getInt(str)
+}
+
+function getSensorValue (str, dig) {
+    if (str === '8000') {
+        return null
+    } else {
+        return loraWANV2DataFormat(str, dig)
+    }
+}
+
+function isNull (str) {
+    if (str.substring(0, 1) !== '8') {
+        return false
+    }
+    for (let i = 1; i < str.length; i++) {
+        if (str.substring(i, i + 1) !== '0') {
+            return false
+        }
+    }
+    return true
+}
+
+function getSignSensorValue (str, dig = 1) {
+    if (isNull(str)) {
+        return null
+    }
+    return loraWANV2DataFormat(str, dig)
+}
+
+function bytes2HexString (arrBytes) {
+    var str = ''
+    for (var i = 0; i < arrBytes.length; i++) {
+        var tmp
+        var num = arrBytes[i]
+        if (num < 0) {
+            tmp = (255 + num + 1).toString(16)
+        } else {
+            tmp = num.toString(16)
+        }
+        if (tmp.length === 1) {
+            tmp = '0' + tmp
+        }
+        str += tmp
+    }
+    return str
+}
+function loraWANV2DataFormat (str, divisor = 1) {
+    let strReverse = bigEndianTransform(str)
+    let str2 = toBinary(strReverse)
+    if (str2.substring(0, 1) === '1') {
+        let arr = str2.split('')
+        let reverseArr = arr.map((item) => {
+            if (parseInt(item) === 1) {
+                return 0
+            } else {
+                return 1
+            }
+        })
+        str2 = parseInt(reverseArr.join(''), 2) + 1
+        return parseFloat('-' + str2 / divisor)
+    }
+    return parseInt(str2, 2) / divisor
+}
+
+function bigEndianTransform (data) {
+    let dataArray = []
+    for (let i = 0; i < data.length; i += 2) {
+        dataArray.push(data.substring(i, i + 2))
+    }
+    return dataArray
+}
+
+function toBinary (arr) {
+    let binaryData = arr.map((item) => {
+        let data = parseInt(item, 16)
+            .toString(2)
+        let dataLength = data.length
+        if (data.length !== 8) {
+            for (let i = 0; i < 8 - dataLength; i++) {
+                data = `0` + data
+            }
+        }
+        return data
+    })
+    return binaryData.toString().replace(/,/g, '')
+}
+
+function getMacAndRssiObj (pair) {
+    let pairs = []
+    if (pair.length % 14 === 0) {
+        for (let i = 0; i < pair.length; i += 14) {
+            let mac = getMacAddress(pair.substring(i, i + 12))
+            if (mac) {
+                let rssi = getInt8RSSI(pair.substring(i + 12, i + 14))
+                pairs.push({mac: mac, rssi: rssi})
+            } else {
+                continue
+            }
+        }
+    }
+    return pairs
+}
+
+function getMacAddress (str) {
+    if (str.toLowerCase() === 'ffffffffffff') {
+        return null
+    }
+    let macArr = []
+    for (let i = 1; i < str.length; i++) {
+        if (i % 2 === 1) {
+            macArr.push(str.substring(i - 1, i + 1))
+        }
+    }
+    let mac = ''
+    for (let i = 0; i < macArr.length; i++) {
+        mac = mac + macArr[i]
+        if (i < macArr.length - 1) {
+            mac = mac + ':'
+        }
+    }
+    return mac
+}
+
+function getInt8RSSI (str) {
+    return loraWANV2DataFormat(str)
+}
+
+function getInt (str) {
+    return parseInt(str, 16)
+}
+
+function getEventStatus (str) {
+    let bitStr = getByteArray(str)
+    let bitArr = []
+    for (let i = 0; i < bitStr.length; i++) {
+        bitArr[i] = bitStr.substring(i, i + 1)
+    }
+    bitArr = bitArr.reverse()
+    const EVENT_MAP = {
+        0: {id: 1, eventName: "Start moving event."},
+        1: {id: 2, eventName: "End movement event."},
+        2: {id: 3, eventName: "Motionless event."},
+        3: {id: 4, eventName: "Shock event."},
+        4: {id: 5, eventName: "Temperature event."},
+        5: {id: 6, eventName: "Light event."},
+        6: {id: 7, eventName: "SOS event."},
+        7: {id: 8, eventName: "Press once event."},
+        8: {id: 9, eventName: "disassembled event"}
+    }
+    let event = []
+    for (let i = 0; i < bitArr.length; i++) {
+        if (bitArr[i] === '1' && EVENT_MAP[i]) {
+            event.push(EVENT_MAP[i])
+        }
+    }
+    return event
+}
+
+function getByteArray (str) {
+    let bytes = []
+    for (let i = 0; i < str.length; i += 2) {
+        bytes.push(str.substring(i, i + 2))
+    }
+    return toBinary(bytes)
+}
+
+function getWorkingMode (workingMode) {
+    return getInt(workingMode)
+}
+
+function getPositioningStrategy (strategy) {
+    return getInt(strategy)
+}
+
+function getUTCTimestamp(str){
+    return parseInt(loraWANV2PositiveDataFormat(str)) * 1000
+}
+
+function loraWANV2PositiveDataFormat (str, divisor = 1) {
+    let strReverse = bigEndianTransform(str)
+    let str2 = toBinary(strReverse)
+    return parseInt(str2, 2) / divisor
+}
+
+exports.handler = async (event) => {
+    try {
+        const lorawan_info = event["WirelessMetadata"]["LoRaWAN"];
+        const lorawan_data = event["PayloadData"];
+        const resolved_data = decodeUplink(lorawan_data, lorawan_info["FPort"])["data"];
+        console.log("decoded message:", JSON.stringify(resolved_data))
+
+        // publish all measurement data
+        const input = { // PublishRequest
+            topic: 'tracker/measurement',
+            qos: 0,
+            retain: false,
+            payload: JSON.stringify({
+                eui: lorawan_info["DevEui"],
+                timestamp: lorawan_info["Timestamp"],
+                data: resolved_data
+            })
+        };
+        const command = new PublishCommand(input);
+        const response = await client.send(command);
+        console.log("response: " + JSON.stringify(response));
+        return {
+            statusCode: 200,
+            body: 'Message published successfully' + JSON.stringify(event)
+        };
+    } catch (error) {
+        console.error('Error publishing message:', error);
+
+        return {
+            statusCode: 500,
+            body: 'Error publishing message'
+        };
+    }
+};
+```
+</details>
+
+### Wio Tracker 1110 Dev Board
+
+La [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) está basada en el [Módulo Inalámbrico Wio-WM1110](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html) e integra el transceptor LoRa® [LR1110 de Semtech](https://www.semtech.com/products/wireless-rf/lora-edge/lr1110) y un front-end de radio multipropósito para geolocalización, es una plataforma de desarrollo de seguimiento basada en LoRa fácil de usar.
+
+Con su tamaño compacto y interfaces ricas, la Wio Tracker 1110 Dev Board está convenientemente equipada con una antena integrada para fácil despliegue. Soporta el entorno de desarrollo Arduino y la pila de protocolos LoRaWAN, haciéndola ideal para proyectos IoT relacionados con seguimiento.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio-tracker.png" alt="pir" width={700} height="auto" /></p>
 
@@ -6944,9 +9137,9 @@ exports.handler = async (event) => {
 
 </details>
 
-### Registrador de Datos SenseCAP S2100
+### SenseCAP S2100 Data Logger
 
-El [Registrador de Datos SenseCAP S2100](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) es un dispositivo versátil que puede conectarse a sensores MODBUS-RTU RS485/Analógicos/GPIO, permitiendo la transmisión fácil de datos a la red LoRaWAN. Con su diseño LoRa e IP66, este dispositivo cuenta con una estabilidad y confiabilidad impresionantes, y puede cubrir un largo rango de transmisión mientras mantiene un consumo de energía ultra bajo. Es perfecto para uso exterior, y puede ser alimentado por batería o conectado a una fuente de alimentación externa de 12V para mayor flexibilidad. Cuando se conecta a la fuente de alimentación de 12V, la batería incorporada reemplazable actúa como fuente de energía de respaldo. Además, el Registrador de Datos S2100 está optimizado para OTA con Bluetooth incorporado, haciendo que la configuración y actualizaciones sean rápidas y simples. Para completar, el convertidor S2110 permite al Registrador de Datos S2100 conectarse a Sensores Grove, convirtiéndolo en una excelente opción para sensores LoRaWAN de nivel industrial DIY y despliegue a pequeña escala.
+El [SenseCAP S2100 Data Logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html) es un dispositivo versátil que puede conectarse a sensores MODBUS-RTU RS485/Analógicos/GPIO, permitiendo la transmisión fácil de datos a la red LoRaWAN. Con su diseño LoRa e IP66, este dispositivo cuenta con una estabilidad y confiabilidad impresionantes, y puede cubrir un largo rango de transmisión mientras mantiene un consumo de energía ultra bajo. Es perfecto para uso exterior, y puede ser alimentado por batería o conectado a una fuente de alimentación externa de 12V para mayor flexibilidad. Cuando se conecta a la fuente de alimentación de 12V, la batería incorporada reemplazable actúa como fuente de energía de respaldo. Además, el S2100 Data Logger está optimizado para OTA con Bluetooth incorporado, haciendo que la configuración y actualizaciones sean rápidas y simples. Para completar, el convertidor S2110 permite al S2100 Data Logger conectarse a Sensores Grove, convirtiéndolo en una excelente opción para sensores LoRaWAN de nivel industrial DIY y despliegue a pequeña escala.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/Data_Logger/1.png"/></div>
 
@@ -9312,9 +11505,9 @@ function Decoder (bytes, port) {
 
 ---
 
-### SenseCAP A1101 - Sensor de Visión AI LoRaWAN
+### SenseCAP A1101 - Sensor de IA de Visión LoRaWAN
 
-[SenseCAP A1101 - Sensor de Visión AI LoRaWAN](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) es un sensor de imagen inteligente habilitado con TinyML Edge AI. Soporta una variedad de modelos de AI como reconocimiento de imágenes, conteo de personas, detección de objetivos, reconocimiento de medidores, etc. También soporta el entrenamiento de modelos con TensorFlow Lite.
+[SenseCAP A1101 - Sensor de IA de Visión LoRaWAN](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) es un sensor de imagen inteligente habilitado con TinyML Edge AI. Soporta una variedad de modelos de IA como reconocimiento de imágenes, conteo de personas, detección de objetivos, reconocimiento de medidores, etc. También soporta el entrenamiento de modelos con TensorFlow Lite.
 
 <div align="center"><img width ={600} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101990962-a1101-first-new-10.17.jpg"/></div>
 

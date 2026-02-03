@@ -47,7 +47,7 @@ last_update:
 ### 応用例
 
 - **デジタルサイネージ**: レストランメニュー、会議室サイン、小売価格タグに最適です。
-- **スマートホーム**: 天気、カレンダー、ホームオートメーションステータスの情報ダッシュボード。
+- **スマートホーム**: 天気、カレンダー、ホームオートメーション状態の情報ダッシュボード。
 - **産業用 HMI**: 機械や倉庫管理用の低消費電力ステータスディスプレイ。
 - **教育**: 電子書籍リーダーや教室情報ボード。
 - **オフィス**: デスクネームプレートや掲示板。
@@ -59,10 +59,10 @@ last_update:
 - **USB Type-C**: 電源供給とファームウェア書き込み用。
 - **FPC コネクタ**: 13.3インチ E-ink ディスプレイを接続するため。
 - **リセットボタン**: ボードをリセットするため。
-- **ボタン**: "ページを更新"、"前のページに切り替え"、"次のページに切り替え" です。
-- **スイッチ**: バッテリーの電源オン/オフを制御します。
-- **Boot ボタン**: ブートローダーモードに入るために使用されます。
-- **LED インジケータ**: 点滅はバッテリー接続なしを意味します。緑色点灯はバッテリー充電中を意味します。
+- **ボタン**: 「ページ更新」、「前のページに切り替え」、「次のページに切り替え」です。
+- **スイッチ**: バッテリー電源のオン/オフを制御します。
+- **Boot ボタン**: ブートローダーモードに入るために使用します。
+- **LED インジケーター**: 点滅はバッテリー接続なしを意味します。緑色点灯はバッテリー充電中を意味します。
 - **JST コネクタ**: バッテリー接続用の 2 ピン JST 2.0mm コネクタ。
 
 ## SenseCraft HMI の入門ガイド
@@ -75,12 +75,12 @@ last_update:
 13.3インチ E-ink スクリーンの FPC ケーブルを EE02 ドライバーボードのコネクタに慎重に接続します。ロック機構が確実に固定されていることを確認してください。
 
 **ステップ 2. 電源投入**
-USB Type-C ケーブルを使用して EE02 ボードを電源（コンピューターまたは USB アダプター）に接続します。電源投入時、スクリーンが更新され、ウェルカム画像が表示されます。
+USB Type-C ケーブルを使用して EE02 ボードを電源（コンピューターまたは USB アダプター）に接続します。電源投入時、スクリーンが更新されてウェルカム画像が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/4.JPG" style={{width:300,height:'auto'}}/></div>
 
 **ステップ 3. ネットワーク設定モードに入る**
-ウェルカム画像の後、スクリーンは自動的に更新されてネットワーク設定インターフェースを表示します。これはデバイスが Wi-Fi に接続する準備ができていることを示します。
+ウェルカム画像の後、スクリーンは自動的に更新されてネットワーク設定インターフェースを表示します。これはデバイスが Wi-Fi 接続の準備ができていることを示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/5.JPG" style={{width:300,height:'auto'}}/></div>
 
@@ -92,7 +92,7 @@ USB Type-C ケーブルを使用して EE02 ボードを電源（コンピュー
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/6.JPG" style={{width:300,height:'auto'}}/></div> -->
 
 **ステップ 5. ペアリングコードの取得**
-ネットワーク設定が成功すると、スクリーンが再び更新され、一意の**ペアリングコード**（またはデバイス ID）が表示されます。次のステップでこのコードが必要になります。
+ネットワーク設定が成功すると、スクリーンが再び更新され、固有の**ペアリングコード**（またはデバイス ID）が表示されます。次のステップでこのコードが必要になります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.JPG" style={{width:300,height:'auto'}}/></div>
 
@@ -119,6 +119,67 @@ SenseCraft HMI プラットフォームで、エディターを使用して新�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/11.jpg" style={{width:300, height:'auto'}}/></div>
 
+## Arduino の入門ガイド
+
+### Seeed GFX ライブラリのインストール
+
+:::tip
+このライブラリは TFT ライブラリと同じ機能を持ち、互換性がありません。TFT ライブラリまたは他の類似のディスプレイライブラリをインストールしている場合は、まずアンインストールしてください。
+:::
+
+GitHub から Seeed GFX ライブラリをダウンロードしてインストールします。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
+
+<div align="center">
+<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックしてダウンロード</button></p>
+</a>
+</div>
+
+下にスクロールしてこのリンクを開きます。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
+
+デバイスタイプを選択すると、コードが生成されます。そのコードをコピーして、後で使用します。
+
+:::tip
+間違った選択をすると、スクリーンには何も表示されません。
+
+デバイスまたはコンポーネントのタイプを確認してください。
+:::
+
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_1.png" style={{width:800, height:'auto'}}/></div>
+
+ライブラリをダウンロードした後、**Sketch** -> **Include Library** -> **Add .ZIP Library** に移動し、ダウンロードしたライブラリを選択します。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
+
+### プログラムの設定と書き込み
+
+図に示されている例を選択します
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_2.png" style={{width:800, height:'auto'}}/></div>
+
+新しい "driver.h" ファイルを作成し、そのコードを貼り付けます。コードは次のようになります：
+```cpp
+#define BOARD_SCREEN_COMBO 510 // 13.3 inch six-color ePaper Screen（T133A01）
+#define USE_XIAO_EPAPER_DISPLAY_BOARD_EE02
+```
+
+
+その後、**Tools** -> **Board** -> **XIAO ESP32S3 Plus** と **Tools** -> **Port** -> **ボードが接続されているポートを選択** に移動します。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_3.png" style={{width:1000, height:'auto'}}/></div>
+
+PSAM を有効にする必要があることに注意してください。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_4.png" style={{width:1000, height:'auto'}}/></div>
+
+次に **Upload** をクリックしてコードをアップロードします。
+これで e-paper スクリーンにフィードバックが表示されます！以下は Bitmap 例の結果です。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/ee02_5.jpg" style={{width:500, height:'auto'}}/></div>
+
 ## トラブルシューティング
 
 **Q1: 電源投入後にスクリーンが更新されません。**
@@ -136,12 +197,12 @@ SenseCraft HMI プラットフォームで、エディターを使用して新�
 
 ## リソース
 - **[PDF]** [13.3 E6 eInk Display module Datasheet](https://files.seeedstudio.com/wiki/Epaper/EE02/13_3_E6_eInk_Display_module_Datasheet.pdf)
-- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
-- **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[PDF]** [Seeed Studio XIAO ePaper Display EE02 Schematic](https://files.seeedstudio.com/wiki/Epaper/EE02/202000224_XIAO_ePaper_Display_Board_EE02_V1.pdf)
+- **[ZIP]** [Seeed Studio XIAO ePaper Display EE02 PCBA&SCH](https://files.seeedstudio.com/wiki/Epaper/EE02/XIAO_ePaper_Display_Board_EE02_V1.0_final_SCH_and_PCB_251202.zip)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">

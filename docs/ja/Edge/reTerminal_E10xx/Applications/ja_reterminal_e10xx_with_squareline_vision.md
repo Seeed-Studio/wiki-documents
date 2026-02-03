@@ -1,6 +1,6 @@
 ---
-description: この記事では、SquareLine で reTerminal E 系列の電子ペーパーディスプレイ用 UI インターフェースを作成する方法について説明します。
-title: reTerminal E 系列 ePaper ディスプレイと SquareLine Vision の連携
+description: この記事では、SquareLine で reTerminal E シリーズ ペーパーディスプレイの UI インターフェースを作成する方法について説明します。
+title: reTerminal E シリーズ ePaper ディスプレイと SquareLine Vision の連携
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
 slug: /ja/reterminal_e10xx_with_squareline_vision
 sidebar_position: 3
@@ -9,32 +9,28 @@ last_update:
   author: Zovey
 ---
 
-# reTerminal E 系列 ePaper ディスプレイと SquareLine Vision の連携
+# reTerminal E シリーズ ePaper ディスプレイと SquareLine Vision の連携
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_4.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## はじめに
 
-独自のインテリジェント端末を作成したい場合、このデバイスに魅力的でエレガントなユーザーインターフェースを持たせたいと思うでしょう。[LVGL](https://lvgl.io/) でこれを実現できます。これは、あらゆる MCU、MPU、ディスプレイタイプに対応した美しい UI を作成するための最も人気のある無料でオープンソースの組み込みグラフィックスライブラリです。このライブラリを使用すると、多数の美しい組み込みユーザーインターフェースを作成できます。特に当社の reTerminal E 系列 ePaper 製品を使用する場合、魅力的なインターフェースは不可欠な部分です。しかし、LVGL ライブラリのコードを書くことも非常に複雑な作業です。そのため、このチュートリアルでは主に、コントロールをドラッグアンドドロップするだけで UI を簡単に描画できるエディターを紹介することを目的としています。WYSIWYG（What You See Is What You Get）作成方法により、最終的なプレゼンテーション効果をより良く把握でき、UI を描画した後、LVGL の UI ファイルとしてエクスポートできるため、開発者の開発プロセスが大幅に簡素化されます。このツールの名前は SquareLine Vision で、LVGL のビジュアルフロントエンドツールです。
+独自のインテリジェント端末を作成したい場合、このデバイスに魅力的でエレガントなユーザーインターフェースを持たせたいと思うでしょう。[LVGL](https://lvgl.io/) でこれを実現できます。これは、あらゆる MCU、MPU、ディスプレイタイプに対して美しい UI を作成するための最も人気のある無料でオープンソースの組み込みグラフィックスライブラリです。このライブラリを使用すると、多数の美しい組み込みユーザーインターフェースを作成できます。特に当社の reTerminal E シリーズ ePaper 製品を使用する場合、魅力的なインターフェースは不可欠な部分です。しかし、LVGL ライブラリコードの記述も非常に複雑な作業です。そのため、このチュートリアルでは主に、コントロールをドラッグアンドドロップするだけで UI を簡単に描画できるエディターを紹介することを目的としています。WYSIWYG（What You See Is What You Get）作成方法により、最終的なプレゼンテーション効果をより良く把握でき、UI を描画した後、LVGL の UI ファイルとしてエクスポートできるため、開発者の開発プロセスが大幅に簡素化されます。このツールの名前は SquareLine Vision で、LVGL のビジュアルフロントエンドツールです。
 
 [SquareLine Vision](https://vision.squareline.io/) は、ブラウザ（Web）または Web 互換環境に基づく UI 開発環境で、組み込みシステム（画面付きデバイスなど）のユーザーインターフェース（UI）を迅速に設計することに特化しています。
-これは **設計 + コードエクスポート** ツールでもあります：プラットフォーム上でインターフェースを設計し、その設計を組み込みデバイスで実行するためのコードやリソースとしてエクスポートできます。
+これは**設計 + コードエクスポート**ツールでもあります：プラットフォーム上でインターフェースを設計し、その後、組み込みデバイスで実行するためのコードまたはリソースとして設計をエクスポートできます。
 
 ## SquareLine Vision の機能
 
 - **ビジュアル UI デザイン** – ドラッグアンドドロップエディターで美しくインタラクティブなインターフェースを視覚的に設計し、手動での LVGL コード作成の必要性を排除します。
-- **高速組み込みプロトタイピング** – デスクトップまたはターゲットハードウェア上で UI を即座にプレビューおよび検証し、設計からデバイスまでの反復時間を劇的に短縮します。
-- **LVGL ベースのエクスポート** – 設計をクリーンな LVGL ベースのソースコードにシームレスにエクスポートし、組み込みデバイス、マイクロコントローラー、またはシミュレーション環境でコンパイル可能な状態にします。
+- **高速組み込みプロトタイピング** – デスクトップまたはターゲットハードウェアで UI を即座にプレビューおよび検証し、設計からデバイスまでの反復時間を劇的に短縮します。
+- **LVGL ベースのエクスポート** – 設計をクリーンな LVGL ベースのソースコードにシームレスにエクスポートし、組み込みデバイス、マイクロコントローラー、またはシミュレーション環境でコンパイルできる状態にします。
 
 SquareLine Vision を使用すると、コンセプトからインタラクティブな組み込み UI プロトタイプまでを数分で実現できます — 設計の柔軟性、リアルタイムプレビュー、本格的な LVGL 出力を組み合わせて、製品開発サイクル全体を加速します。
 
 ### 必要な材料
 
-このチュートリアルを完了するには、以下の reTerminal E 系列デバイスのいずれかを準備してください：
-
-:::note
-現在のところ、SquareLine Vision は reTerminal E1002 のみに対応しており、reTerminal E1001 はまだサポートされていません。ただし、公式チームは既に必要な適応作業を進めています。
-:::
+このチュートリアルを完了するには、以下の reTerminal E シリーズデバイスのいずれかを準備してください。E1001 はモノクロ、E1002 はフルカラーです：
 
 <div class="table-center">
   <table align="center">
@@ -68,8 +64,8 @@ SquareLine Vision を使用すると、コンセプトからインタラクテ�
 
 ### コンポーネント紹介
 
-SquareLine Vision プラットフォーム全体は、**ランチャー** と **アプリケーションインターフェース** の 2 つの部分に分けることができます。
-**ランチャー** インターフェースでは、以下の 3 つの主要機能を確認できます：
+SquareLine Vision プラットフォーム全体は、**ランチャー**と**アプリケーションインターフェース**の 2 つの部分に分けることができます。
+**ランチャー**インターフェースでは、以下の 3 つの主要機能を確認できます：
 - プロジェクト
 - インポート処理
 - アカウント設定の制御
@@ -97,10 +93,10 @@ SquareLine Vision ランチャーインターフェースの上部で、`Create 
 - `LVGL version`: 9.1
 - `Theme`: Light
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-SenseCAP Watcher と reTerminal E1002 デバイスをサポートしています。将来的には、Seeed Studio のより多くの製品もサポートする予定です。
+SenseCAP Watcher と reTerminal E1001 および E1002 デバイスをサポートしています。将来的には、Seeed Studio のより多くの製品もサポートする予定です。
 :::
 
 ### 既存の .slvp プロジェクトのインポート
@@ -111,22 +107,29 @@ SenseCAP Watcher と reTerminal E1002 デバイスをサポートしています
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Seeed Weather 7 epaper</th>
-      <th>Seeed Weather 13 epaper</th>
+      <th>モノクロ天気</th>
+      <th>フルカラー天気</th>
+      <th>フルカラー天気 2</th>
     </tr>
     <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_1.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_2.png" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_3.png" style={{width:250, height:'auto'}}/></div></td>
     </tr>
     <tr>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Seeed Weather 7 epaper.slvp" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>こちらをクリックして入手</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックして取得</button></p>
+        </a>
+      </div></td>
+      <td><div align="center">
+        <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Paper_Weather.slvp" target="_blank">
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックして取得</button></p>
         </a>
       </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Seeed Weather 13 epaper.slvp" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>こちらをクリックして入手</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックして取得</button></p>
         </a>
       </div></td>
     </tr>
@@ -137,10 +140,10 @@ SenseCAP Watcher と reTerminal E1002 デバイスをサポートしています
 
 エンジニアリングインターフェースに入ると、4 つの主要エリアを確認できます：
 
-- エリア 1 は **階層** で、主に UI 要素の構造を管理するために使用されます。
-- エリア 2 は **シミュレーター** で、UI が表示され、各 UI のプレゼンテーション効果を表示するために使用されます。
-- エリア 3 は **インスペクター** で、現在選択されている要素の詳細なコントロールを提供します。
-- エリア 4 は **ツールバー** で、アプリケーションインターフェースの上部に位置し、多くのツールと機能に簡単にアクセスできます。
+- エリア 1 は **Hierarchy** で、主に UI 要素の構造を管理するために使用されます。
+- エリア 2 は **Simulator** で、UI が表示され、各 UI のプレゼンテーション効果を表示するために使用されます。
+- エリア 3 は **Inspector** で、現在選択されている要素の詳細なコントロールを提供します。
+- エリア 4 は **Toolbar** で、アプリケーションインターフェースの上部に位置し、多くのツールと機能に簡単にアクセスできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_2.png" style={{width:500, height:'auto'}}/></div>
 
@@ -148,13 +151,13 @@ SenseCAP Watcher と reTerminal E1002 デバイスをサポートしています
 
 UI（ユーザーインターフェース）設計は組み込み製品開発において重要で、ユーザーエクスペリエンスを直接決定します。美しく、直感的で、レスポンシブなインターフェースは、製品の使いやすさを向上させるだけでなく、全体的な魅力も高めます。
 
-SquareLine Vision では、コンポーネントをドラッグアンドドロップしてインターフェースを迅速に組み立てることができます。スタイル、フォント、ビットマップ、テーマなどのツールを活用して視覚効果を正確に制御し、プロフェッショナルで独特なユーザーエクスペリエンスを作り上げます。
+SquareLine Vision では、コンポーネントをドラッグアンドドロップしてインターフェースを迅速に組み立てることができます。Styles、Fonts、Bitmaps、Themes などのツールを活用して視覚効果を正確に制御し、プロフェッショナルで独特なユーザーエクスペリエンスを作り上げます。
 
 :::tip
-このチュートリアルでは、このプロジェクトに登場するコントロールのみを扱います。ただし、SquareLine Vision はアニメーション、イベント、異なるフォントなど、他にも多くの機能を提供しています。このツールをさらに探求したい場合は、[公式チュートリアル](https://docs.vision.squareline.io/docs/overview)を参照してください。
+このチュートリアルでは、このプロジェクトに表示されるコントロールのみを扱います。ただし、SquareLine Vision はアニメーション、イベント、異なるフォントなど、他にも多くの機能を提供しています。このツールをさらに探求したい場合は、[公式チュートリアル](https://docs.vision.squareline.io/docs/overview)を参照してください。
 :::
 
-#### 階層の紹介
+#### Hierarchy の紹介
 
 ここでは、ウィジェットを相互にネストして親子関係を作成できます。コンテナウィジェットが親となり、その内部の要素が子ウィジェットになります。この画像が様々なコンテナ、画像、テキストで構成されていることがわかります。これら 3 つのコントロールはすべてツールバーで見つけることができます。
 
@@ -162,20 +165,20 @@ SquareLine Vision では、コンポーネントをドラッグアンドドロ�
 
 #### インスペクターの紹介
 
-このパネルでは、画面、コンテナ、ウィジェット、その他の UI 要素のプロパティを表示および変更できます。さらに、ウィジェットタイプによって異なる特別な設定がある場合があります。「background img」を選択すると、インスペクターで img に関連するすべてのコンポーネントを確認できます。
+このパネルでは、画面、コンテナ、ウィジェット、その他のUI要素のプロパティを表示および変更できます。さらに、ウィジェットタイプによって異なる特別な設定がある場合があります。「background img」を選択すると、インスペクターでimgに関連するすべてのコンポーネントを確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_5.png" style={{width:500, height:'auto'}}/></div>
 
 #### ツールバーの紹介
 
-ツールバーには、プロジェクト設定、プロジェクトの保存、ヘルプへのアクセス、問題の報告、プロジェクトビューの変更、プロジェクトコードのダウンロード、SquareLine Vision内でプロジェクトを直接プレイモードで開始するためのオプションが含まれています。
+ツールバーには、プロジェクト設定、プロジェクトの保存、ヘルプへのアクセス、問題の報告、プロジェクトビューの変更、プロジェクトコードのダウンロード、SquareLine Vision内でプレイモードでプロジェクトを直接開始するためのオプションが含まれています。
 
 - **Menu**：ここから、作業の保存、プロジェクトのエクスポート、プロジェクト設定の調整、ランチャー画面への戻りの機能にアクセスできます。
 - **Project name**：現在のプロジェクトの名前を表示します。
 - **Plan**：ユーザーの現在のサブスクリプションプランを表示します。
 - **Editor / Animation mode**：2つの異なる作業環境を切り替えます
 - **Widgets**：コンポーネントを論理的にグループ化した3つのドロップダウンメニューを通じてUI要素にアクセスし、プロジェクトに適したウィジェットを簡単に見つけることができます。
-- **Undo / Redo**：デザインの変更を前後にステップすることができ、リスクなしで実験をサポートします。
+- **Undo / Redo**：デザインの変更を前後にステップできるため、リスクなしで実験をサポートします。
 - **Play mode**：プレビューを開始し、UIシミュレーションをテストします。
 - **Send bug report**：エラー報告システムへの直接アクセスを提供します。
 - **User(s)**：プロジェクト内で現在作業しているすべてのアクティブユーザーを表示し、協調的なデザイン作業をサポートします。
@@ -222,14 +225,14 @@ GUIサブシステムのメインインターフェース。以下の高レベ�
 
 - `GUI_load()`：HALとLVGLを含む完全なGUI初期化
 - `GUI_init()`：基本的なGUI初期化
-- `GUI_refresh()`：GUI状態を更新（LVGLハンドラーを呼び出し）
+- `GUI_refresh()`：GUI状態を更新（LVGLハンドラーを呼び出し
 - `GUI_initContent()`：画面とウィジェットを初期化
 - `GUI_initTheme()`：GUIテーマを設定
 - `GUI_loadFirstScreen()`：初期画面を読み込み
 
 ## プログラム書き込み
 
-E1002のメイン制御モジュールはESP32-S3です。PlatformIOを使用してreTerminal E系列の電子ペーパーディスプレイ画面をプログラムする場合、`.ini`ファイルでESP32をサポートするオプションを設定する必要があります。
+E1002のメイン制御モジュールはESP32-S3です。PlatformIOを使用してreTerminal E シリーズの電子ペーパーディスプレイ画面をプログラムする場合、`.ini`ファイルでESP32をサポートするオプションを設定する必要があります。
 
 :::tip
 PlatformIOを初めて使用する場合は、[Getting Started with PlatformIO](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32s3.html)を参照することを強くお勧めします。
@@ -252,15 +255,21 @@ PlatformIOを初めて使用する場合は、[Getting Started with PlatformIO](
 
 ### 参考ルーチン
 
-リアルタイム天気ダッシュボードを表示できる、それぞれ異なるUIインターフェースを持つ2つの既存のルーチンを提供しています。これらは[OpenWeather](https://openweathermap.org/)（グローバル天気データを提供するサービスプラットフォーム）と統合してリアルタイムの気候変化を取得します。OpenWeatherからAPI KEYを取得し、WIFIに接続するだけで正常に使用できます。
+リアルタイム天気ダッシュボードを表示できる異なるUIインターフェースを持つ3つの既存テンプレートを提供しています。これらは[OpenWeather](https://openweathermap.org/)（グローバル天気データを提供するサービスプラットフォーム）と統合してリアルタイムの気候変化を取得します。OpenWeatherからAPI KEYを取得し、WIFIに接続するだけで正常に使用できます。
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Seeed Weather 7 epaper</th>
-      <th>Seeed Weather 13 epaper</th>
+      <th>モノクロ天気 </th>
+      <th>フルカラー天気 </th>
+      <th>フルカラー天気 2</th>
     </tr>
     <tr>
+      <td><div align="center">
+        <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/res/weather_gray.zip" target="_blank">
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックして取得</button></p>
+        </a>
+      </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/weather_7_fix.zip" target="_blank">
         <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ここをクリックして取得</button></p>
@@ -296,19 +305,21 @@ PlatformIOを初めて使用する場合は、[Getting Started with PlatformIO](
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Seeed Weather 7 epaper</th>
-      <th>Seeed Weather 13 epaper</th>
+      <th>モノクロ天気予報 </th>
+      <th>フルカラー天気予報 </th>
+      <th>フルカラー天気予報 2</th>
     </tr>
     <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/squareline_BW_template.jpeg" style={{width:350, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_4.jpg" style={{width:350, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_3.jpg" style={{width:350, height:'auto'}}/></div></td>
     </tr>
   </table>
 </div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
