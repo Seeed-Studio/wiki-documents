@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-02-02 14:04:16 (北京时间)
-// 多语言页面: 2131 个
+// 生成时间: 2026-02-04 14:07:49 (北京时间)
+// 多语言页面: 2133 个
 
 (function() {
   'use strict';
@@ -912,6 +912,12 @@
     "ja"
   ],
   "/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/j501_mini_starai_viola_fruit_sorting": [
     "cn",
     "en",
     "es",
@@ -4246,6 +4252,10 @@
     "en",
     "es",
     "ja"
+  ],
+  "/reachymini_getting_started": [
+    "cn",
+    "en"
   ],
   "/stackforce_giant_bipedal_wheeled_robot": [
     "en",

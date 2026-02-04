@@ -32,8 +32,6 @@ const cmpVersions = (a, b) => {
     return 0;
   };
 
-  import Admonition from '@theme/Admonition';
-
   
   export const OneDriveLink = ({ lang = 'en' }) => {
     const product = useJetsonStore(state => state.product);
