@@ -9451,6 +9451,13 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'ReachyMini',
+          items: [
+            'zh-CN/Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_Getting_Started',
+          ]
+        },
+        {
+          type: 'category',
           label: 'Lerobot',
           // link: {
           //   type: "doc",
