@@ -1,7 +1,7 @@
 ---
 title: XIAO IR Mate スマート IR リモートの使用開始
 description: |
-  Seeed Studio のスマート IR リモート。テレビやエアコンなどの従来の家電を Home Assistant スマートホームエコシステムに統合するように設計されています。
+  Seeed Studio のスマート IR リモート。テレビやエアコンなどの従来の家電を Home Assistant スマートホームエコシステムに統合するよう設計されています。
 image: https://files.seeedstudio.com/wiki/XIAO_IR_MATE/XIAO-Smart-IR-Mate.webp
 slug: /ja/XIAO_IR_Mate_Smart_IR_Remote
 sku: 109990586
@@ -15,14 +15,14 @@ last_update:
   date: 07/17/2025
 ---
 
-# XIAO IR Mate スマート IR リモートの使用開始（Home Assistant 用）
+# XIAO IR Mate スマート IR リモートの使用開始（Home Assistant 向け）
 
 **XIAO IR Mate スマート IR リモート**へようこそ！このデバイスは Home Assistant ユーザー向けに特別に設計されており、シームレスで効率的、統合されたスマート赤外線リモートコントロールソリューションの提供を目的としています。このガイドを通じて、デバイスのセットアップ、ホームネットワークへの接続、Home Assistant への統合、そして基本的な信号学習から高度なスマートエアコン制御まで、その全ての可能性を解き放つ方法を学びます。
 
 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
   <img
     src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/6-109990586-XIAO-Smart-IR-Mate.jpg"
-    alt="製品図"
+    alt="Product diagram"
     style={{
       maxWidth: '50%',
       height: 'auto',
@@ -42,12 +42,12 @@ last_update:
   gap: '16px',
   alignItems: 'center'
 }}>
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/1-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 製品図 1" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/2-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 製品図 2" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/3-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 製品図 3" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/4-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 製品図 4" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/5-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 製品図 5" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/touch.jpg" alt="XIAO Smart IR Mate 製品図 6" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/1-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 1" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/2-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 2" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/3-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 3" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/4-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 4" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/5-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 5" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/touch.jpg" alt="XIAO Smart IR Mate Product diagram 6" />
 </div>
 
 - **Home Assistant とのシームレスな統合**
@@ -62,9 +62,9 @@ ESPHome プラットフォーム上に構築された IR Mate は、Home Assista
 
 振動モーターと LED インジケーターを搭載。短い振動でアクションを確認し、長い振動で学習モードを知らせ、LED でネットワークステータスを表示し、セットアップとトラブルシューティングを簡素化します。
 
-- **ファナティックスマート AC コントローラーにアップグレード可能**
+- **ファナティックスマート AC コントローラーへのアップグレード可能**
 
-カスタムファームウェアをフラッシュして IR Mate をスマート AC リモートに変換。Home Assistant で正確な温度、モード、ファン速度を直接設定でき、自動 IR コード生成により繰り返し学習を不要にします。
+カスタムファームウェアをフラッシュして IR Mate をスマート AC リモートに変換。Home Assistant で正確な温度、モード、ファン速度を直接設定でき、自動 IR コード生成により繰り返し学習を排除します。
 
 - **コンパクトデザイン、USB-C 電源**
 
@@ -77,17 +77,17 @@ ESPHome プラットフォーム上に構築された IR Mate は、Home Assista
 - **赤外線エミッター**: 3 つの高出力赤外線 LED（ピン D1 使用）、死角のない 360° 信号送信を保証。
 - **赤外線レシーバー**: 1 つの高精度赤外線レシーバー（ピン D2 使用）、他のリモコンからの信号学習用。
 - **タッチセンサー**: デバイスにはタッチモジュールが統合されています（ピン D3 使用）。シングルタッチで短い振動（0.5 秒）が操作フィードバックとしてトリガーされます。
-- **振動モーター**: 内蔵振動モーター（ピン D4 使用）が、振動時間を変えて明確な触覚フィードバックを提供。
+- **振動モーター**: 内蔵振動モーター（ピン D4 使用）が振動時間を変えて明確な触覚フィードバックを提供。
 - **ステータスインジケーター LED**: LED ライト（ピン D5 使用）でデバイスの異なる動作状態を表示。
-- **リセットボタン**: デバイス上の物理ボタン（ピン D0 に接続）、再起動や工場出荷時リセットに使用。
+- **リセットボタン**: デバイス上の物理ボタン（ピン D0 に接続）、再起動または工場出荷時リセット用。
 
 ## 初回使用とネットワーク設定（工場出荷時ファームウェア）
 
 デバイスを初めて入手した際は、以下の手順に従って初期セットアップを完了してください。
 
-### ステップ 1: 電源オン
+### ステップ 1: 電源投入
 
-標準の USB Type-C ケーブルを使用してデバイスに電源を供給します。起動後、デバイスは設定待機状態に入り、**白色 LED が 1Hz の周波数で点滅**するのが見えます。
+標準の USB Type-C ケーブルを使用してデバイスに電源を供給します。起動後、デバイスは設定待機状態に入り、**白色 LED が 1Hz 周波数で点滅**するのが見えます。
 
 ### ステップ 2: AP プロビジョニングモードに入る
 
@@ -160,7 +160,7 @@ ESPHome プラットフォーム上に構築された IR Mate は、Home Assista
   />
 </div>
 
-3. **デバイスダッシュボード**: 追加が成功すると、XIAO IR Mate は HA でデバイスとして表示されます。そのダッシュボードには、10 種類の異なる赤外線信号を制御するための以下のエンティティが含まれます：
+3. **デバイスダッシュボード**: 追加が成功すると、XIAO IR Mate は HA でデバイスとして表示されます。そのダッシュボードには 10 種類の異なる赤外線信号を制御するための以下のエンティティが含まれます：
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/homeassistant_07.png"
@@ -170,7 +170,7 @@ ESPHome プラットフォーム上に構築された IR Mate は、Home Assista
 
 ## コア機能詳細（工場出荷時ファームウェア）
 
-デバイスを復元したりファームウェアを更新したい場合は、下のボタンからジャンプできます。XIAO Gadget ダイレクトフラッシュファームウェア専用のページを作成しました。
+デバイスを復元またはファームウェアを更新したい場合は、下のボタンからジャンプできます。XIAO Gadget ダイレクトフラッシュファームウェア専用のページを作成しました。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://gadgets.seeed.cc/" target="_blank" rel="noopener noreferrer">
@@ -197,7 +197,7 @@ IR Mate に新しいリモコンコマンドを教える必要がある場合は
 1. **"Signal"** ドロップダウンリストで、送信したい信号スロットが選択されていることを確認します（例：**"signal_1"**）。
 2. **"Send"** ボタンを見つけて、その横の **"PRESS"** をクリックします。
 3. XIAO IR Mateは、現在選択されているスロットに保存されている信号を、3つの赤外線エミッターを通じて即座に送信します。
-4. **注意**：信号を学習したことがない信号スロットをドロップダウンリストで選択した場合、送信ボタンをクリックしても何も起こりません。
+4. **注意**：ドロップダウンリストで信号が学習されていないスロットを選択した場合、送信ボタンをクリックしても何も起こりません。
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/homeassistant_08.png"
@@ -207,7 +207,7 @@ IR Mate に新しいリモコンコマンドを教える必要がある場合は
 
 ## 物理的な操作とステータス表示
 
-HAによる制御に加えて、物理的な操作を通じてデバイスを理解し、制御することもできます。
+HAによる制御に加えて、物理的な操作を通じてデバイスを理解し制御することもできます。
 
 ### ステータス表示灯（白色LED）
 
@@ -222,13 +222,13 @@ HAによる制御に加えて、物理的な操作を通じてデバイスを理
 ### RESETボタン
 
 - **短押し（1秒以内）**：デバイスが再起動し、短い振動が伴います。デバイスが応答しなくなった場合に非常に有用です。
-- **長押し（5秒以上）**：デバイスが**工場出荷時設定にリセット**されます。この操作により、**保存されているすべてのWi-Fi認証情報と学習済みの10個の赤外線信号がすべて消去**されます。この操作が実行されると、デバイスは長い振動を発してプロンプトを出します。完了後、デバイスは再起動し、初期の設定待機状態（LED点滅）に戻ります。
+- **長押し（5秒以上）**：デバイスが**工場出荷時設定にリセット**されます。この操作により、**保存されたすべてのWi-Fi認証情報と学習された10個の赤外線信号がすべて消去**されます。この操作が実行されると、デバイスは長い振動でプロンプトを出します。完了後、デバイスは再起動し、初期の設定待機状態（LED点滅）に戻ります。
 
 ## 高度な使用法 - スマートエアコン制御
 
 工場出荷時ファームウェアが提供する基本的な「記録-再生」モードは汎用的ですが、エアコンのような複数の状態（温度、モード、ファン速度など）を持つデバイスを制御する際には扱いにくい場合があります。より細かく、よりインテリジェントなエアコン制御を実現するために、専用のESPHomeファームウェアをフラッシュして、XIAO IR Mateを「IR信号リピーター」から真の「スマートエアコンコントローラー」に変身させることができます。
 
-この章では、Greeエアコンを詳細な例として使用しますが、これが唯一の選択肢ではありません。ESPHomeの強力なエコシステムは多数のエアコンブランドをサポートしており、このガイドの概念に従い、設定コードに軽微な変更を加えることで、Midea、Daikin、Panasonicなどの他のブランドのスマート制御も簡単に実現できます。
+この章では、Greeエアコンを詳細な例として使用しますが、これが唯一の選択肢ではありません。ESPHomeの強力なエコシステムは多数のエアコンブランドをサポートしており、このガイドの概念に従い、設定コードに軽微な変更を加えることで、Midea、Daikin、Panasonicなどの他のブランドのスマート制御を簡単に実現できます。
 
 ### 主な利点
 
@@ -250,13 +250,14 @@ HAによる制御に加えて、物理的な操作を通じてデバイスを理
 2. **設定ファイルの編集**
       - 新しく作成されたデバイスカードの **EDIT** ボタンをクリックして、YAML設定エディターに入ります。
       - エディター内のすべてのデフォルトコンテンツを削除します。
-      - 以下のコードを**完全にコピーしてペースト**してください：
+      - 以下のコードを**完全にコピーして貼り付け**ます：
 
 <Details>
 
 <summary>seeed-ir-v2.yaml</summary>
 ```yaml
 # ==== AUTO-SYNC START: xiao_smart_ir_mate/xiao_smart_ir_mate.yaml ====
+
 substitutions:
   name: "xiao-smart-ir-mate"
   friendly_name: "XIAO Smart IR Mate"
@@ -383,7 +384,7 @@ remote_receiver:
               ESP_LOGI("ir", "Saved signal index: %d", id(signal_select_index));
               id(signal_nvs).save_to_nvs(id(signal_select_index), x);
               id(send_data_vector).clear();
-              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index)); 
+              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index));
               id(is_learning_mode) = false;
               // Learned the signal, turn on the switch
               id(is_learned_signal_script).execute(true);

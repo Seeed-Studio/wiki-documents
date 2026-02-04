@@ -99,7 +99,7 @@ last_update:
   style={{ display: 'block', margin: 'auto' }}
 />
 
-### 步骤 3：连接到热点并配置网络
+### 步骤 3：连接热点并配置网络
 
 1. 在您的手机或电脑上打开 Wi-Fi 设置，搜索并连接到名为 **XIAO IR Mate** 的网络。
 
@@ -184,7 +184,7 @@ last_update:
 
 1. 在 Home Assistant 设备仪表板中，首先找到名为 **"Signal"** 的下拉选择列表。
 2. 点击下拉列表并选择您要使用的信号槽，例如 **"signal_1"**。
-3. 选择后，找到 **"Learn"** 按钮并点击旁边的 **"PRESS"**。
+3. 选择后，找到 **"Learn"** 按钮并点击其旁边的 **"PRESS"**。
 4. XIAO IR Mate 现在将进入学习模式并开始**持续振动**，表示您可以开始配对。
 5. 将您的原始遥控器对准 IR Mate 的红外接收器窗口，短按您要学习的按钮。
 6. IR Mate 成功接收并记录信号后，**振动将停止**，表示学习成功。
@@ -257,6 +257,7 @@ last_update:
 <summary>seeed-ir-v2.yaml</summary>
 ```yaml
 # ==== AUTO-SYNC START: xiao_smart_ir_mate/xiao_smart_ir_mate.yaml ====
+
 substitutions:
   name: "xiao-smart-ir-mate"
   friendly_name: "XIAO Smart IR Mate"
@@ -383,7 +384,7 @@ remote_receiver:
               ESP_LOGI("ir", "Saved signal index: %d", id(signal_select_index));
               id(signal_nvs).save_to_nvs(id(signal_select_index), x);
               id(send_data_vector).clear();
-              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index)); 
+              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index));
               id(is_learning_mode) = false;
               // Learned the signal, turn on the switch
               id(is_learned_signal_script).execute(true);
@@ -601,17 +602,17 @@ interval:
       - **Wi-Fi**：如果您不使用 `!secret` 文件，请取消注释 `wifi:` 部分，并将 `Your_WiFi_SSID` 和 `Your_WiFi_Password` 替换为您自己的 Wi-Fi 信息。
       - **选择正确的空调协议**：这是最关键的步骤！示例使用 `platform: gree`。如果您的空调不是格力品牌，请将其替换为您品牌的平台。如何找到支持的品牌？请访问 [ESPHome Climate Components](https://esphome.io/components/climate/index.html) 页面，该页面列出了所有支持的品牌及其平台名称（例如 `daikin`、`midea`、`panasonic_ac` 等）。
           - 选择相应平台后，您可能还需要根据该平台的文档微调 `model` 或支持的模式等参数。
-4. **编译和烧录**
+4. **编译和刷写**
       - 保存您的 YAML 配置。
       - 通过 USB 线将您的 XIAO IR Mate 连接到运行 HA 的计算机。
       - 点击设备卡片上的 **INSTALL** 按钮。
       - 选择 **"Plug into this computer"** 选项。
-      - ESPHome 将编译固件并通过浏览器将其烧录到您的设备。按照屏幕提示完成该过程。
-      - 烧录成功后，设备将自动重启并连接到您配置的 Wi-Fi。
+      - ESPHome 将编译固件并通过浏览器将其刷写到您的设备。按照屏幕提示完成该过程。
+      - 刷写成功后，设备将自动重启并连接到您配置的 Wi-Fi。
 
 ### 在 Home Assistant 中使用
 
-烧录和重启后，您的设备将在 Home Assistant 中显示为新的 Climate 实体（例如 `climate.gree_air_conditioner`）。您可以在仪表板中添加"恒温器卡片"以获得功能齐全的空调控制面板，让您可以自由调节温度、模式、风速和摆风，就像原生智能空调一样！
+刷写和重启后，您的设备将在 Home Assistant 中显示为新的 Climate 实体（例如 `climate.gree_air_conditioner`）。您可以在仪表板中添加"恒温器卡片"以获得功能齐全的空调控制面板，让您可以自由调节温度、模式、风速和摆风，就像原生智能空调一样！
 
 ### 进一步展望：开拓您的思路
 
@@ -633,9 +634,9 @@ interval:
 
   1. **配置"监听器"固件：** 在您的 ESPHome 固件中，核心配置是 `remote_receiver` 组件。设备开机后的唯一工作就是"监听"红外信号。
 
-  2. **识别每个按钮的"密码"：** 拿起一个旧遥控器，将其指向设备并按任意按钮。在 ESPHome 日志中，您将看到该按钮的唯一红外代码（如一串 `RAW` 数据或 `NEC` 协议代码）。记下这个"密码"。
+  2. **识别每个按钮的"密码"：** 拿起一个旧遥控器，指向设备按任意按钮。在 ESPHome 日志中，您将看到按钮的唯一红外代码（如一串 `RAW` 数据或 `NEC` 协议代码）。记下这个"密码"。
 
-  3. **在 HA 中创建自动化规则：** 在 Home Assistant 中，设置一个自动化，触发条件为："当 XIAO IR Mate 检测到特定红外密码时。"
+  3. **在 HA 中创建自动化规则：** 在 Home Assistant 中，设置一个自动化，触发条件为："当 XIAO IR Mate 检测到特定的红外密码时。"
 
   4. **定义动作：** 规则的动作可以是任何事情！例如：
 
@@ -663,7 +664,7 @@ interval:
 
 - **实施步骤**
 
-  1. **让按钮只做"报告者"：** 在固件中，配置触摸按钮（单击、双击、长按）不执行任何特定任务，而只向 Home Assistant 发送"事件通知"。例如，双击时，它只向 HA 报告："嘿！我被双击了！"
+  1. **让按钮只做"报告者"：** 在固件中，配置触摸按钮（单击、双击、长按）不执行任何特定任务，只向 Home Assistant 发送"事件通知"。例如，双击时，它只向 HA 报告："嘿！我被双击了！"
 
   2. **让 HA 成为"指挥官"：** 在 Home Assistant 中，创建专门监听按钮这些各种"报告"（事件）的自动化。
 
@@ -683,7 +684,7 @@ interval:
 
   - **最直观的交互：** 为您的家人提供最简单的控制方式。具有触觉反馈的物理按钮通常比打开手机应用更方便、更优雅。
 
-简而言之，不要只将 XIAO IR Mate 视为红外工具。将其视为连接到 Wi-Fi 的迷你机器人，具有触觉和"声音"（红外发射器）。它能做什么只受您想象力的限制！
+总之，不要只将 XIAO IR Mate 视为红外工具。将其视为连接到 Wi-Fi 的迷你机器人，具有触觉和"声音"（红外发射器）。它能做什么只受您想象力的限制！
 
 ## 常见问题（FAQ）
 
@@ -696,8 +697,8 @@ interval:
 > **问：设备在 HA 中显示为离线？**
 > **答：** 请检查您的家庭 Wi-Fi 是否正常工作，以及 IR Mate 是否在 Wi-Fi 信号范围内。您可以尝试短按 RESET 按钮重启设备。
 
-> **问：烧录自定义固件后，如何恢复出厂固件？**
-> **答：** 您需要获取出厂固件的 `.bin` 文件或其 ESPHome YAML 源文件，然后通过 ESPHome 再次烧录以覆盖自定义固件。
+> **问：刷写自定义固件后，如何恢复出厂固件？**
+> **答：** 您需要获取出厂固件的 `.bin` 文件或其 ESPHome YAML 源文件，然后通过 ESPHome 再次刷写以覆盖自定义固件。
 
 > **问：如何在自动化中使用学习的信号（出厂固件）或空调控制（高级固件）？**
 > **答：** 在 HA 的自动化或脚本编辑器中，选择 "Call service"。

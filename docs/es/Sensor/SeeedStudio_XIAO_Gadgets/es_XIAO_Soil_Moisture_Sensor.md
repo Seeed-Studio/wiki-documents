@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 ## Introducción
 
-El Sensor de Humedad del Suelo XIAO es un monitor ambiental compacto y de bajo consumo alimentado por el [XIAO ESP32-C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Pre-Soldered-p-6328.html). Funcionando con una sola batería AA, ofrece operación de larga duración y actualizaciones en tiempo real de las condiciones del suelo. Cuenta con Detección Adaptativa de Humedad del Suelo Pre-Calibrada para monitoreo preciso del suelo. Además, permite intervalos de monitoreo dinámicos y lecturas instantáneas para datos precisos y responsivos. Completamente compatible con Home Assistant, es ideal para jardinería inteligente y agricultura de precisión: eficiente, confiable y diseñado para el cuidado sostenible de plantas.
+El Sensor de Humedad del Suelo XIAO es un monitor ambiental compacto y de bajo consumo alimentado por el [XIAO ESP32-C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Pre-Soldered-p-6328.html). Funcionando con una sola batería AA, ofrece operación de larga duración y actualizaciones en tiempo real de las condiciones del suelo. Cuenta con Detección Adaptativa de Humedad del Suelo Pre-Calibrada para un monitoreo preciso del suelo. Además, permite intervalos de monitoreo dinámicos y lecturas instantáneas para datos precisos y responsivos. Totalmente compatible con Home Assistant, es ideal para jardinería inteligente y agricultura de precisión: eficiente, confiable y diseñado para el cuidado sostenible de plantas.
 
 ## Características
 
@@ -109,7 +109,7 @@ Home Assistant Green es la forma más fácil y centrada en la privacidad de auto
 Recomendamos usar Home Assistant Green como el host de Home Assistant para este tutorial, o puedes usar cualquier host de Home Assistant con un Supervisor.
 
 :::tip instalar Home Assistant
-También hemos escrito cómo instalar Home Assistant para algunos productos de Seeed Studio, por favor consúltalos.
+También hemos escrito cómo instalar Home Assistant para algunos de los productos de Seeed Studio, por favor consúltalos.
 
 - **[Introducción a Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
 - **[Introducción a Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
@@ -241,7 +241,7 @@ esphome:
   project:
     name: "xiao.soil-moisture-monitor"
     version: "1.0"
-  on_boot: 
+  on_boot:
     then:
       - output.turn_off: gpio_3_output
       - output.turn_on: gpio_14_output
@@ -289,7 +289,7 @@ output:
     id: red_led_output
 
   - platform: ledc
-    pin: GPIO21  
+    pin: GPIO21
     id: pwm_output
     frequency: 200kHz  # Set the frequency to 200kHz
 
@@ -529,10 +529,10 @@ binary_sensor:
 # Deep sleep configuration
 deep_sleep:
   id: deep_sleep_control
-  run_duration: 120s  
-  sleep_duration: 180min  
-  wakeup_pin: 
-    number: GPIO2 
+  run_duration: 120s
+  sleep_duration: 180min
+  wakeup_pin:
+    number: GPIO2
     inverted: true
     allow_other_uses: true
     mode: INPUT_PULLUP
@@ -565,7 +565,7 @@ sensor:
             return 1.0 * 100.0;
           }else {
             return ((x - 1.2) / (1.5 - 1.2)) * 100.0;
-          } 
+          }
     unit_of_measurement: "%"
     update_interval: 5s
     force_update: True
@@ -632,7 +632,7 @@ interval:
             } else {
               id(deep_sleep_control).set_sleep_duration(28800000);
               return "Normal Moisture";
-            }  
+            }
 
 # Enable logging
 logger:
@@ -698,7 +698,7 @@ captive_portal:
 `check_moisture_once` – Lee y evalúa los niveles de humedad del suelo.
 
 - **Parámetros de entrada**: Ninguno.
-- **Acción**: Toma múltiples lecturas ADC, las promedia, las compara con umbrales calibrados, decide el estado de humedad, activa configuraciones de LED y sueño profundo en consecuencia.
+- **Acción**: Toma múltiples lecturas ADC, las promedia, las compara con umbrales calibrados, decide el estado de humedad, activa LED y configuraciones de sueño profundo en consecuencia.
 
 `binary_sensor (GPIO2)` – Maneja la lógica de presión del botón físico.
 
@@ -713,7 +713,7 @@ captive_portal:
   - `wifi_net_status`: Rastrea el estado de conexión Wi-Fi.
   - `ref_dry`, `ref_wet`: Factores de escala de referencia para cálculos de umbral.
 
-`deep_sleep` – Gestiona ciclos de sueño para ahorro de energía.
+`deep_sleep` – Gestiona los ciclos de sueño para ahorro de energía.
 
 - **Parámetros de entrada**: Ninguno.
 - **Acción**: Funciona durante 120 segundos, luego duerme hasta 180 minutos; se despierta con presión del botón o intervalo.
