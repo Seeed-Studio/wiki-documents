@@ -9162,6 +9162,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Voice_LLM_for_Reachy_Mini',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_J501_Mini_StarAI_Viola_Fruit_Sorting',
               ]
             },
             // Managed Services
@@ -14316,6 +14317,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Voice_LLM_for_Reachy_Mini',
                 'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+                'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_J501_Mini_StarAI_Viola_Fruit_Sorting',
               ]
             },
             // Managed Services
@@ -19471,6 +19473,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
                 'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+                'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_J501_Mini_StarAI_Viola_Fruit_Sorting',
               ]
             },
             // Managed Services
