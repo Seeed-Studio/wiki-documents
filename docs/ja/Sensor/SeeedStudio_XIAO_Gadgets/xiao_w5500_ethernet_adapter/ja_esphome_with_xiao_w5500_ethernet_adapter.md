@@ -123,9 +123,12 @@ Home Assistant をまだセットアップしていない場合は、このリ�
 
 ```yaml
 # Only boards produced after November 1, 2025 are supported
+# ==== AUTO-SYNC START: xiao-w5500-ethernet-adapter/xiao-w5500-ethernet-adapter.yaml ====
+
+# Only boards produced after November 1, 2025 are supported
 esphome:
   name: seeed-esp32-poe
-  friendly_name: Bluetooth Proxy
+  friendly_name: "XIAO W5500 Ethernet Adapter V1.2"
   min_version: 2025.11.0
   name_add_mac_suffix: true
 
@@ -166,6 +169,7 @@ button:
   - platform: factory_reset
     id: factory_reset_btn
     name: Factory reset
+# ==== AUTO-SYNC END ====
 ```
 
 </details>
