@@ -9451,7 +9451,7 @@ const sidebars = {
           type: 'category',
           label: 'ReachyMini',
           items: [
-            'zh-CN/Robotics/Robot_Kits/ReachyMini/ReachyMini_Getting_Started',
+            'zh-CN/Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_Getting_Started',
           ]
         },
         {
