@@ -8,152 +8,105 @@ keywords:
 - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/respeaker_lite_ha
+sku: 110061601,E24072601
 last_update:
-  date: 4/2/2024
-  author: Jessie
+  date: 2/3/2026
+  author: Kasun Thushara
 ---
 
-Di 'hola' al control sin esfuerzo y 'adiós' a tocar pantallas con nuestro sistema de asistente de voz.<br/>
-
-Imagínate esto: estás cómodamente en tu sofá, y con solo un simple grito al ReSpeaker Lite, puedes cambiar las luces, subir la música, o incluso preguntar sobre el clima – todo sin mover un dedo. Gracias a un pequeño pero ingenioso chip [Seeed XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html), tienes un cerebro mini pero poderoso que conecta tu voz a Home Assistant, haciendo tu hogar inteligente más inteligente y tu vida mucho más fácil.
-
-En este capítulo usaremos el [ReSpeaker Lite Voice Assistant Kit](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html) para conectar el interruptor inteligente Sonoff y realizar control por voz del interruptor de luz.
-
-<div class="video-container">
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/I9KOY2ik5nw" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
+En este tutorial, aprenderás cómo configurar tu ReSpeaker Lite para que funcione con Home Assistant. Aprenderás cómo flashear el firmware requerido y cómo compilar y subir el archivo YAML. Después de eso, podrás controlar y automatizar tus electrodomésticos usando tu voz. Solo di "Okay Nabu" y comienza a hablar con tu hogar.
 
 ## Hardware Requerido
 
-- ReSpeaker Lite Voice Assistant Kit
-- [Dispositivo Home Assistant](https://wiki.seeedstudio.com/es/home_assistant_topic/)
-- [Sonoff BASICR2](https://sonoff.tech/product/diy-smart-switches/basicr2/)
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-110991984-acrylic-speaker-diy-kit-for-respeaker-lite-feature.jpg" alt="pir" width={600} height="auto" /></p>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
+    </a>
+</div>
 
 ## Actualización del firmware XMOS
 
-Para obtener la mejor experiencia de reproducción, necesitamos actualizar el firmware XMOS a `respeaker_lite_i2s_dfu_firmware_48k_v1.0.9.bin`.
+Para obtener la mejor experiencia de reproducción, necesitamos actualizar el firmware XMOS a `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin`.
 
-Descarga el firmware desde [aquí](https://github.com/respeaker/ReSpeaker_Lite/blob/master/xmos_firmwares/respeaker_lite_i2s_dfu_firmware_48k_v1.0.9.bin). En tu computadora, conecta el ReSpeaker Lite y ejecuta el siguiente comando:
+Descarga el firmware como repositorio completo desde [aquí](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration).
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_1.png" alt="pir" width={800} height="auto" /></p>
+
+En tu computadora, conecta el ReSpeaker Lite y ejecuta el siguiente comando:
+
+si estás usando una máquina host Linux
 
 ```bash
 sudo apt install dfu-util -y
-sudo dfu-util -R -e -a 1 -D respeaker_lite_i2s_dfu_firmware_48k_v1.0.9.bin
+sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
+si estás usando una máquina host Windows
 
-## Comenzando
+```bash
+dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
+```
+para más información, consulta este [enlace](https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/#update-firmware)
 
-Navega a tu [interfaz web de Home Assistant](http://homeassistant.local:8123/).
-
-Para desbloquear todo el potencial de Home Assistant y obtener acceso a funciones avanzadas, se recomienda habilitar el `Modo avanzado` en la interfaz de usuario.
-
-Haz clic en tu perfil y habilita el `Modo avanzado`.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/advanced-mode.png" alt="pir" width={800} height="auto" /></p>
-
-### Instalar Complementos
-
-Ve a [Configuración > Complementos](https://my.home-assistant.io/redirect/supervisor).
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/add-ons.png" alt="pir" width={800} height="auto" /></p>
-
-En la sección de `complementos` oficiales, busca e instala los siguientes complementos:
-
-- `ESPHome`
-- `Whisper`
-- `Piper`
-- `openWakeWord`
-
-Habilita `Iniciar al arrancar` y `Watchdog`, y haz clic en `Iniciar`.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/start-addons.png" alt="pir" width={800} height="auto" /></p>
-
-:::tip
-Después de que el script de instalación haya terminado, reinicia Home Assistant para aplicar los cambios.
-
-Después de que este complemento esté instalado y ejecutándose, será descubierto automáticamente por la integración Wyoming.
-
-Ve a `Configuración` > `Sistema` > `Reiniciar`.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/restart.png" alt="pir" width={800} height="auto" /></p>
+:::note
+Para usar el botón de usuario y el botón de silencio, necesitas soldar el botón de usuario a D2 y el botón de silencio a D3.
 :::
 
-Navega a `Configuración` -> `Dispositivos y Servicios`, encontrarás estas integraciones bajo `Descubiertos`.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/device-page.png" alt="pir" width={800} height="auto" /></p>
+## Introducción
 
-Haz clic en `CONFIGURAR` y `ENVIAR`.
+:::note
+Estamos usando Home Assistant versión 2026.1.3 y ESPHome versión 2026.1.3 en raspberry pi 5.
+:::
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/config-success.png" alt="pir" width={800} height="auto" /></p>
+## Instalar ESPHome Builder
 
-Debería haber 3 entidades en tu `Protocolo Wyoming`.
+**Settings → Add-ons → Haz clic en Add-on Store → Instala ESPHome Device Builder** add-on.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/entities.png" alt="pir" width={800} height="auto" /></p>
+Ve a **Home Assistant > Settings > Add-ons**.
 
-### Agregar tu dispositivo inteligente
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_Settings.PNG" alt="pir" width={800} height="auto" /></p>
 
-Aquí usamos [BASICR2](https://sonoff.tech/product/diy-smart-switches/basicr2/) como ejemplo de referencia.
+Haz clic en **Add-on Store** (generalmente en la parte inferior derecha)
 
-Configura el dispositivo según el manual.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_addon.PNG" alt="pir" width={800} height="auto" /></p>
 
-Busca e instala `Sonoff LAN` en `HACS`.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/sonoff.png" alt="pir" width={600} height="auto" /></p>
+Bajo **Official add-ons**, busca e instala **ESPHome Device Builder**.
 
-Navega a `Configuración` -> `Dispositivos y servicios`, haz clic en `AGREGAR INTEGRACIÓN`, agrega `Sonoff`.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/add-sonoff.png" alt="pir" width={400} height="auto" /></p>
+Después de la instalación, haz clic en **Start** para ejecutar el add-on ESPHome.
 
-Ingresa las credenciales de tu cuenta `eWeLink`.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/credentials.png" alt="pir" width={400} height="auto" /></p>
+Habilita **Start on Boot, Watchdog, and Show in Sidebar** para un acceso más fácil.
 
-Cuando se conecte, verás una entidad.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/sonoff-id.png" alt="pir" width={800} height="auto" /></p>
+Desde la barra lateral de Home Assistant, ve a **ESPHome Builder**.
 
-### Agregar Asistente de Voz
+## Agregar dispositivo reSpeaker
 
-Navega a `Configuración` -> `Asistente de Voz`.
+Haz clic en **+ NEW DEVICE**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/voice-assistant.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_new.PNG" alt="pir" width={800} height="auto" /></p>
 
-Ingresa un nombre y selecciona:
+Selecciona `ESP32-S3`
 
-**Voz a texto**: `Whisper`
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_device.PNG" alt="pir" width={500} height="auto" /></p>
 
-**Texto a voz**: `Piper`
+Cuando se te solicite, haz clic en **SKIP** – crearemos la configuración manualmente.
 
-**Motor de palabra de activación**: `openwakeword`
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/piper-config.png" alt="pir" width={800} height="auto" /></p>
+Selecciona tu nueva entrada de dispositivo y haz clic en **EDIT**.
 
-Elige una palabra de activación que prefieras.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home_edit.png" alt="pir" width={500} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/choose-wakeword.png" alt="pir" width={800} height="auto" /></p>
-
-### Agregar XIAO ESP32S3 a ESPHome
-
-*Gracias a @formatBCE, ahora tenemos un brillante asistente de voz para home assistant. Para evitar soldaduras, hemos simplificado un poco el archivo de configuración eliminando la función del botón de usuario. Si necesitas un botón de usuario para habilitar más funciones (por ejemplo, presionar el botón para activar el asistente), consulta [github.com/formatBCE/Respeaker-Lite-ESPHome-integration](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration).*
-
-Navega a `ESPHome` y haz clic en `+ NUEVO DISPOSITIVO`.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/add-new-esphome.png" alt="pir" width={800} height="auto" /></p>
-
-Ingresa un Nombre para tu dispositivo, luego haz clic en `SIGUIENTE`.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/next11.png" alt="pir" width={500} height="auto" /></p>
-
-Selecciona `ESP32-S3`.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/choose-s3.png" alt="pir" width={800} height="auto" /></p>
-
-Haz clic en `OMITIR`, configuraremos este archivo manualmente.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/skip.png" alt="pir" width={400} height="auto" /></p>
-
-Haz clic en `Configurar` y copia el siguiente código:
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/config.png" alt="pir" width={800} height="auto" /></p>
 
 <details>
-<summary>.yaml</summary>
+<summary>Archivo Yaml</summary>
 
 ```yml
 substitutions:
@@ -180,7 +133,7 @@ esphome:
   friendly_name: respeaker-lite
   project: 
     name: seeed.Respeaker Lite 
-    version: 2025.7.0
+    version: 2026.1.3
   min_version: 2025.6.2
   on_boot:
     - priority: 375
@@ -490,7 +443,7 @@ switch:
       - script.execute: control_leds
     on_turn_off:
       - script.execute: control_leds
-      
+
 binary_sensor:
   # User Button. Used for many things (See on_multi_click)
   - platform: gpio
@@ -524,7 +477,7 @@ light:
             it[0].set_rgb(color.red * fraction, 
                              color.green * fraction, 
                              color.blue * fraction);
-            
+
             fraction += (step * (increasing ? 1 : -1));
             if (fraction > 1.0) {
               fraction = 1.0;
@@ -547,7 +500,7 @@ light:
             it[0].set_rgb(color.red * fraction, 
                              color.green * fraction, 
                              color.blue * fraction);
-            
+
             fraction += (step * (increasing ? 1 : -1));
             if (fraction > 1.0) {
               fraction = 1.0;
@@ -591,7 +544,7 @@ light:
             it[0].set_rgb(color.red * fraction, 
                              color.green * fraction, 
                              color.blue * fraction);
-            
+
             fraction += (step * (increasing ? 1 : -1));
             if (fraction > 1.0) {
               fraction = 1.0;
@@ -614,7 +567,7 @@ light:
             it[0].set_rgb(color.red * fraction, 
                              color.green * fraction, 
                              color.blue * fraction);
-            
+
             fraction += (step * (increasing ? 1 : -1));
             if (fraction > 1.0) {
               fraction = 1.0;
@@ -867,7 +820,7 @@ script:
           blue: 0.3
           id: led_internal
           effect: "Slow Pulse"
-  
+
   # Script executed when the alarm is active
   # The LED turns on dim green
   - id: control_leds_alarm_active
@@ -1075,7 +1028,7 @@ microphone:
     i2s_mode: secondary
     i2s_audio_id: i2s_input
     channel: stereo
-      
+
 speaker:
   # Hardware speaker output
   - platform: i2s_audio
@@ -1509,40 +1462,88 @@ button:
 
 debug:
   update_interval: 5s
-  ```
+
+```
 
 </details>
 
-Haz clic en `GUARDAR` y luego en `INSTALAR`.
+Una vez que tu YAML esté guardado, haz clic en **INSTALL**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/click-install.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/yaml_install.png" alt="pir" width={800} height="auto" /></p>
 
-Elige `Descarga Manual` -> `Formato Moderno`.
+Elige **Download** Manual
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/manual-download.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
 
-Conecta el XIAO ESP32S3 a tu PC mediante un cable USB Tipo-C.
+Espera a que el firmware se compile.
 
-Navega a [Web-ESPHome](https://web.esphome.io/), haz clic en `CONECTAR`, luego elige el puerto y conéctalo.
+Descarga el archivo de firmware .bin generado a tu computadora.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/connect-port.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
-Selecciona el archivo `.bin` que acabamos de descargar, y haz clic en `INSTALAR`.
+Conecta la placa ESP32-S3 a tu PC usando un cable USB Type-C.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/install.png" alt="pir" width={800} height="auto" /></p>
+Abre [Web ESPHome](https://web.esphome.io/?dashboard_wizard) en Google Chrome.
 
-Espera unos minutos para la instalación. Después de que la instalación sea exitosa, verás el siguiente mensaje.
+Haz clic en Connect y elige el puerto serie correcto de la lista.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/install-done.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/web_esphome.png" alt="pir" width={600} height="auto" /></p>
 
-Navega a `Configuración` y selecciona `Dispositivos y Servicios`, verás `ESPHome` como una integración descubierta. Haz clic en `CONFIGURAR`.
+Una vez conectado, haz clic en **INSTALL**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/configure.png" alt="pir" width={800} height="auto" /></p>
+Selecciona el archivo .bin que acabas de descargar.
 
-Haz clic en `ENVIAR`, ahora ya está todo listo, ¡intenta despertarlo con `hey jarvis` y habla con él!
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/bin_file_choose.png" alt="pir" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/esp-device.png" alt="pir" width={800} height="auto" /></p>
+Espera a que la instalación se complete (puede tomar unos minutos).
 
-### Compartir Proyecto
+Después del éxito, verás un mensaje de confirmación.
 
-- De **Smart Home Circle** - [Crear Asistente de Voz LOCAL con Home Assistant | SIN Soldadura | Palabra de Activación en Dispositivo🔥| ReSpeaker Lite](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
+
+Regresa a **Home Assistant > Settings > Devices & Services**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/device_services.png" alt="pir" width={700} height="auto" /></p>
+
+Deberías ver **ESPHome** listado como una integración descubierta.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/discover_esp_1.png" alt="pir" width={700} height="auto" /></p>
+
+Haz clic en **CONFIGURE**, luego en **Submit** para finalizar la configuración.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/discover_esp.png" alt="pir" width={700} height="auto" /></p>
+
+## Configuración del Asistente de Voz
+
+Ahora serás dirigido a la página de configuración del Asistente de Voz.
+Puedes decir "Okay Nabu", y responderá con un sonido de confirmación (sonido whoop).
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/okay_nabu.png" alt="pir" width={700} height="auto" /></p>
+
+A continuación, serás guiado para configurar tu pipeline de voz. En esta demostración, vamos a usar Nabu Cloud.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_1.png" alt="pir" width={700} height="auto" /></p>
+
+La configuración es simple, y puedes aprovechar la prueba gratuita de un mes para explorar todas sus capacidades.
+
+Puedes iniciar sesión con Nabu Cloud y configurar el Asistente de Voz porque es relativamente fácil de configurar y proporciona un rendimiento rápido.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_2.png" alt="pir" width={700} height="auto" /></p>
+
+## Agradecimientos Especiales
+Nos gustaría agradecer a FormatBCE por crear este increíble archivo YAML para el Seeed Studio reSpeaker Lite. Apóyalo en su [Github](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration)
+
+## Soporte Técnico y Discusión de Productos
+
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
