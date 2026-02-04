@@ -75,6 +75,16 @@ last_update:
       <div className="category-group">
         <div className="category-card robot-kits">
 
+
+          <h3> 🤗 Reachy</h3>
+          <div className="card-container">
+              <a href="/reachymini_getting_started" className="content-card">
+                <span className="text">Reachy Mini Getting Started</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
+
           <h3>🤗 SO-Arm</h3>
           <div className="card-container">
               <a href="/lerobot_so100m_new/" className="content-card">
