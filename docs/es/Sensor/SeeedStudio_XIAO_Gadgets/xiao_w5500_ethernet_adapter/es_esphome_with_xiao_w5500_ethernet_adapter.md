@@ -48,7 +48,7 @@ Antes de proceder con este tutorial, asegúrate de que se cumplan los siguientes
 
 ## Introducción a [Home Assistant](https://www.home-assistant.io/)
 
-Home Assistant es una poderosa plataforma de automatización del hogar de código abierto que te permite controlar y monitorear tus dispositivos domésticos inteligentes desde una interfaz única y unificada. Actúa como el centro de control de tu hogar inteligente, permitiéndote automatizar rutinas, monitorear sensores y crear un espacio de vida más inteligente.
+Home Assistant es una potente plataforma de automatización del hogar de código abierto que te permite controlar y monitorear tus dispositivos domésticos inteligentes desde una interfaz única y unificada. Actúa como el centro de control de tu hogar inteligente, permitiéndote automatizar rutinas, monitorear sensores y crear un espacio de vida más inteligente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:600, height:'auto'}}/></div>
 
@@ -58,7 +58,7 @@ Home Assistant es una poderosa plataforma de automatización del hogar de códig
 
 ### Integración con [ESPHome](https://esphome.io/)
 
-ESPHome es una herramienta de creación de firmware de código abierto específicamente diseñada para dispositivos ESP8266 / ESP32. Te permite crear firmware personalizado usando archivos de configuración YAML simples, que luego pueden ser flasheados a tu dispositivo.
+ESPHome es una herramienta de creación de firmware de código abierto diseñada específicamente para dispositivos ESP8266 / ESP32. Te permite crear firmware personalizado usando archivos de configuración YAML simples, que luego pueden ser flasheados a tu dispositivo.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://esphome.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Aprender Más 🖱️</font></span></strong></a>
@@ -68,7 +68,7 @@ ESPHome es una herramienta de creación de firmware de código abierto específi
 
 ### Descripción del Proxy Bluetooth
 
-El Proxy Bluetooth actúa como un puente de detección distribuido ligero que extiende la cobertura Bluetooth de Home Assistant más allá del rango integrado del host. Al desplegar múltiples **nodos ESP32** por todo el espacio, se puede establecer una red de detección Bluetooth de toda la casa, permitiendo conexiones estables a una variedad de dispositivos BLE como sensores de temperatura y humedad, sensores de puertas/ventanas, módulos de iluminación y monitores de plantas.
+El Proxy Bluetooth actúa como un puente de detección distribuido ligero que extiende la cobertura Bluetooth de Home Assistant más allá del rango integrado del host. Al desplegar múltiples **nodos ESP32** por todo el espacio, se puede establecer una red de detección Bluetooth para toda la casa, permitiendo conexiones estables a una variedad de dispositivos BLE como sensores de temperatura y humedad, sensores de puertas/ventanas, módulos de iluminación y monitores de plantas.
 
 **Funciones Clave:**
 
@@ -232,7 +232,7 @@ Haz clic en las opciones siguiendo la imagen para instalar el código en el disp
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'120%', height:'auto'}}/></div>
 </div>
 
-Espera un momento y verás la retroalimentación como en la siguiente imagen. Significa que el código se está ejecutando exitosamente.
+Espera un momento y verás la retroalimentación como en la siguiente imagen. Significa que el código se está ejecutando correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -265,7 +265,7 @@ Espera un momento y verás la retroalimentación como en la siguiente imagen. Si
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/buletooth_2.png" style={{width:800, height:'auto'}}/></div>
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/buletooth_3.png" style={{width:800, height:'auto'}}/></div>
 
-- Selecciona **Advertisement Monitor** para ver la información de dispositivos Bluetooth escaneados.
+- Selecciona **Advertisement Monitor** para ver la información de los dispositivos Bluetooth escaneados.
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/buletooth_4.png" style={{width:800, height:'auto'}}/></div>
 
@@ -365,7 +365,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_2.png" style={{width:800, height:'auto'}}/></div>
 
-- Hacer clic en la dirección MAC revela que el dispositivo fue descubierto por el proxy Bluetooth implementado en el Adaptador Ethernet XIAO(ESP32-S3) W5500. Esto confirma que el proxy Bluetooth está funcionando según lo previsto.
+- Al hacer clic en la dirección MAC se revela que el dispositivo fue descubierto por el proxy Bluetooth implementado en el Adaptador Ethernet XIAO(ESP32-S3) W5500. Esto confirma que el proxy Bluetooth está funcionando según lo previsto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_3.png" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_4.png" style={{width:800, height:'auto'}}/></div>

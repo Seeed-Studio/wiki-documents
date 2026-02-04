@@ -89,7 +89,7 @@ Cuando obtengas el dispositivo por primera vez, sigue estos pasos para completar
 
 Usa un cable USB Type-C estándar para alimentar el dispositivo. Después del arranque, el dispositivo entrará en un estado de espera de configuración, y verás el **LED blanco parpadeando a una frecuencia de 1Hz**.
 
-### Paso 2: Entrar al Modo de Aprovisionamiento AP
+### Paso 2: Entrar en Modo de Aprovisionamiento AP
 
 Cuando la red no está configurada, el dispositivo creará automáticamente un punto de acceso Wi-Fi (AP) llamado **XIAO IR Mate** (o **Seeed_ir**, dependiendo de lo que encuentres).
 
@@ -226,7 +226,7 @@ Además del control de HA, también puedes entender y controlar el dispositivo a
 
 ## Uso Avanzado - Control Inteligente de Aire Acondicionado
 
-El modo básico "grabar-reproducir" proporcionado por el firmware de fábrica es universal, pero puede ser torpe al controlar dispositivos con múltiples estados como aires acondicionados (temperatura, modo, velocidad del ventilador, etc.). Para lograr un control de AC más fino e inteligente, podemos flashear un firmware ESPHome especializado para transformar el XIAO IR Mate de un "repetidor de señales IR" en un verdadero "controlador inteligente de aire acondicionado".
+El modo básico de "grabar-reproducir" proporcionado por el firmware de fábrica es universal, pero puede ser torpe al controlar dispositivos con múltiples estados como aires acondicionados (temperatura, modo, velocidad del ventilador, etc.). Para lograr un control de AC más fino e inteligente, podemos flashear un firmware ESPHome especializado para transformar el XIAO IR Mate de un "repetidor de señales IR" en un verdadero "controlador inteligente de aire acondicionado".
 
 En este capítulo, usaremos un aire acondicionado Gree como ejemplo detallado, pero esto no es de ninguna manera la única opción. El poderoso ecosistema de ESPHome soporta numerosas marcas de aires acondicionados, y puedes seguir fácilmente los conceptos en esta guía, haciendo cambios menores al código de configuración, para lograr control inteligente para otras marcas como Midea, Daikin, Panasonic, y más.
 
@@ -239,7 +239,7 @@ En este capítulo, usaremos un aire acondicionado Gree como ejemplo detallado, p
 ### Prerrequisitos
 
 1. **Instalar ESPHome**: Si aún no lo has hecho, instala e inicia el complemento ESPHome desde la Tienda de Complementos de Home Assistant.
-2. **Obtener el Protocolo de Marca de tu AC**: ESPHome soporta muchos protocolos de marcas de AC (como Gree, Midea, Daikin, etc.). Necesitas conocer la marca de tu aire acondicionado para seleccionar el protocolo correcto.
+2. **Obtener el Protocolo de tu Marca de AC**: ESPHome soporta muchos protocolos de marcas de AC (como Gree, Midea, Daikin, etc.). Necesitas conocer la marca de tu aire acondicionado para seleccionar el protocolo correcto.
 
 ### Flasheando Firmware Personalizado
 
@@ -599,7 +599,7 @@ interval:
 
 3. **Personaliza Tu Configuración**
       - **Wi-Fi**: Si no usas archivos `!secret`, descomenta la sección `wifi:` y reemplaza `Your_WiFi_SSID` y `Your_WiFi_Password` con tu propia información de Wi-Fi.
-      - **Selecciona el protocolo AC correcto**: ¡Este es el paso más crítico! El ejemplo usa `platform: gree`. Si tu aire acondicionado no es un Gree, reemplázalo con la plataforma de tu marca. ¿Cómo encontrar marcas compatibles? Por favor visita la página de [Componentes Climate de ESPHome](https://esphome.io/components/climate/index.html), que lista todas las marcas compatibles y sus nombres de plataforma (ej., `daikin`, `midea`, `panasonic_ac`, etc.).
+      - **Selecciona el protocolo AC correcto**: ¡Este es el paso más crítico! El ejemplo usa `platform: gree`. Si tu aire acondicionado no es un Gree, reemplázalo con la plataforma de tu marca. ¿Cómo encontrar marcas compatibles? Por favor visita la página de [ESPHome Climate Components](https://esphome.io/components/climate/index.html), que lista todas las marcas compatibles y sus nombres de plataforma (ej., `daikin`, `midea`, `panasonic_ac`, etc.).
           - Después de seleccionar la plataforma correspondiente, también podrías necesitar ajustar parámetros como `model` o modos compatibles según la documentación de esa plataforma.
 4. **Compilar y Flashear**
       - Guarda tu configuración YAML.
@@ -623,7 +623,7 @@ Pero no te detengas ahí, ¡porque esto es solo el comienzo! La verdadera divers
 
 **Escenario de Aplicación**
 
-Mira a tu alrededor. ¿Tienes muchos controles remotos viejos sin usar por ahí? Controles de TVs viejos, DVDs o estéreos, con muchos botones y una gran sensación al tacto, ahora solo juntando polvo en un cajón. ¿No sería genial si pudieras usar los botones de estos controles para controlar tus luces inteligentes, aspiradora robot, o incluso escenas complejas de "bienvenido a casa"?
+Mira a tu alrededor. ¿Tienes muchos controles remotos viejos sin usar? Controles de TVs viejos, DVDs o estéreos, con muchos botones y una gran sensación táctil, ahora solo juntando polvo en un cajón. ¿No sería genial si pudieras usar los botones de estos controles para controlar tus luces inteligentes, aspiradora robot, o incluso escenas complejas de "bienvenido a casa"?
 
 **Cómo Funciona**
 
@@ -643,7 +643,7 @@ El núcleo de esta idea es transformar el XIAO IR Mate de un "transmisor" a un "
 
      - Cuando detecte el **botón "Play" de un Apple Remote** -> **Encender la luz del baño**.
 
-     - Cuando detecte el **botón "Rojo" del control de DVD** -> Ejecutar la escena "Modo Ausente".
+     - Cuando detecte el **botón "Red" del control de DVD** -> Ejecutar la escena "Modo Ausente".
 
 - **Ventajas de Este Enfoque**
 
@@ -699,7 +699,7 @@ En resumen, no veas el XIAO IR Mate solo como una herramienta IR. ¡Piénsalo co
 > **P: Después de flashear firmware personalizado, ¿cómo restauro el firmware de fábrica?**
 > **R:** Necesitarías obtener el archivo `.bin` del firmware de fábrica o su archivo fuente YAML de ESPHome, y luego flashearlo nuevamente vía ESPHome para sobrescribir el firmware personalizado.
 
-> **P: ¿Cómo uso las señales aprendidas (firmware de fábrica) o el control AC (firmware avanzado) en automatizaciones?**
+> **P: ¿Cómo uso las señales aprendidas (firmware de fábrica) o el control de AC (firmware avanzado) en automatizaciones?**
 > **R:** En el editor de automatización o script de HA, elige "Call service".
 
 ## Recursos
