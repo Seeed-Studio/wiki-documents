@@ -257,7 +257,6 @@ En este capítulo, usaremos un aire acondicionado Gree como ejemplo detallado, p
 <summary>seeed-ir-v2.yaml</summary>
 ```yaml
 # ==== AUTO-SYNC START: xiao_smart_ir_mate/xiao_smart_ir_mate.yaml ====
-
 substitutions:
   name: "xiao-smart-ir-mate"
   friendly_name: "XIAO Smart IR Mate"
@@ -321,6 +320,8 @@ ota:
     password: "15afb09b5aba7b3d6a6ba01180c60df5"
 
 wifi:
+ # ssid: !secret wifi_ssid
+ # password: !secret wifi_password
   on_connect:
     - globals.set:
         id: is_wifi_connected
