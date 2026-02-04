@@ -321,6 +321,8 @@ ota:
     password: "15afb09b5aba7b3d6a6ba01180c60df5"
 
 wifi:
+ # ssid: !secret wifi_ssid
+ # password: !secret wifi_password
   on_connect:
     - globals.set:
         id: is_wifi_connected
@@ -382,7 +384,7 @@ remote_receiver:
               ESP_LOGI("ir", "Saved signal index: %d", id(signal_select_index));
               id(signal_nvs).save_to_nvs(id(signal_select_index), x);
               id(send_data_vector).clear();
-              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index)); 
+              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index));
               id(is_learning_mode) = false;
               // Learned the signal, turn on the switch
               id(is_learned_signal_script).execute(true);
