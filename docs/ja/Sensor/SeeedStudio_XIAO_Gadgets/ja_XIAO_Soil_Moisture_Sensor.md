@@ -300,7 +300,7 @@ output:
   - platform: gpio
     pin: GPIO14
     id: gpio_14_output
-
+    
 light:
   - platform: binary
     id: yellow_led
@@ -517,14 +517,14 @@ binary_sensor:
           } else {
             id(button_press_count) = 0;
           }
-
-
+      
+          
 # interval:
 #   - interval: 10s
 #     then:
 #       - script.execute: check_moisture_once
 
-
+            
 
 # Deep sleep configuration
 deep_sleep:
@@ -573,7 +573,7 @@ sensor:
   - platform: wifi_signal
     name: "wifi singnal strength"
     update_interval: 10s
-
+    
 # text_sensor:
 #   - platform: template
 #     name: "Soil Moisture Status"   # ✅ Status displayed on the HA panel
