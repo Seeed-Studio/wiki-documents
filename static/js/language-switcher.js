@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-02-02 14:04:16 (北京时间)
-// 多语言页面: 2131 个
+// 生成时间: 2026-02-04 13:50:11 (北京时间)
+// 多语言页面: 2132 个
 
 (function() {
   'use strict';
@@ -816,6 +816,12 @@
     "ja"
   ],
   "/run_zero_shot_detection_on_recomputer": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/local_openclaw_on_recomputer_jetson": [
     "cn",
     "en",
     "es",
