@@ -19,9 +19,10 @@ last_update:
   author: Jiayu Zhan(Jack)
 ---
 
-# reSpeaker XVF3800（XIAO ESP32-S3）+ Agora Conversational AI Agent v2 端侧对话客户端部署指南
-
-## 目标
+> 目标：让 ESP32S3 与 reSpeaker XVF3800 协同工作，通过 **Agora RTC** 建立稳定、低延迟的双向语音链路。
+> 项目源码：https://github.com/Seeed-Projects/ESP32S3_reSpeaker_agora/tree/main
+> Seeed-Projects：https://github.com/Seeed-Projects/ESP32S3_reSpeaker_agora/tree/main
+## 介绍
 
 在本教程中，我们将指导您使用 **Seeed Studio reSpeaker XVF3800（XIAO ESP32-S3）** 作为端侧语音设备，通过 **Agora RTC** 建立稳定、低延迟的双向语音链路，并在设备端直接调用 **Agora Conversational AI Agent API v2**，完成 **ASR → LLM → TTS** 的对话闭环：设备端采集麦克风音频上行，云端 AI 生成的语音回复下行回传，设备端实时播放，从而实现“像通话一样”的语音对话体验。
 
@@ -496,7 +497,7 @@ agora_rtc_join_channel success
 - ESP-IDF v5.2.3 文档
 - ESP-ADF v2.7 文档
 - reSpeaker XVF3800 介绍与固件更新指南
-
+- [ESP32 Conversational AI Clients](https://github.com/AgoraIO-Conversational-AI/esp32-client/tree/main)
 
 
 ## 技术支持与产品讨论
