@@ -37,84 +37,35 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 
 <!-- Key Features with bullet -->
 
-- **流行的板载微控制器：** 搭载 Renesas RA4M1，32 位 ARM® Cortex®-M4 R7FA4M1AB3CNE MCU，运行频率高达 48 MHz，256 KB Flash 存储器和 32 KB SRAM。
+- **板载热门微控制器：** 搭载 Renesas RA4M1，32 位 ARM® Cortex®-M4 R7FA4M1AB3CNE MCU，工作频率高达 48 MHz，256 KB Flash 存储器和 32 KB SRAM。
 - **突出的板载资源：** 配备 14 位 ADC、12 位 DAC、CAN BUS、USB 2.0 和板载 RGB LED。
-- **扩展的 8 个新 IO：** 相比之前的 XIAO 板，在背面增加了 8 个新的 IO 引脚（总共 19 个 GPIO），支持更复杂的应用。
+- **扩展的 8 个新 IO：** 相比之前的 XIAO 开发板，在背面增加了 8 个新的 IO 引脚（总共 19 个 GPIO），支持更复杂的应用。
 - **强大的安全功能：** 内置硬件加密、安全启动、密钥存储等功能，确保应用安全。
 - **软件兼容性：** 完全兼容 Arduino IDE，实现无缝项目开发和原型制作。
 - **高效的电源设计：** 提供 4 种工作模式，深度睡眠时功耗低至 45μA，支持锂电池充电管理。
 - **紧凑的拇指大小设计：** 尺寸为 21 x 17.8mm，采用 Seeed Studio 经典的 XIAO 外形尺寸，非常适合空间受限的应用。
-- **生产友好：** 表面贴装器件（SMD）设计，所有元件位于正面，两侧有邮票孔，便于高效批量生产。
+- **生产友好：** 表面贴装器件（SMD）设计，所有元件位于正面，两侧设有邮票孔，便于高效批量生产。
 
-### 规格
+### 规格参数
 
 <!-- Technical Specifications | Table | or bullet -->
-
-<table>
-    <thead>
-        <tr>
-            <th>产品</th>
-            <th>XIAO RA4M1</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th rowspan="2">处理器</th>
-            <td><a href="https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi">Renesas RA4M1</a></td>
-        </tr>
-        <tr>
-            <td>48-MHz Arm® Cortex®-M4 内核</td>
-        </tr>
-        <tr>
-            <th>RAM</th>
-            <td>32 KB SRAM</td>
-        </tr>
-        <tr>
-            <th>Flash</th>
-            <td>256 KB</td>
-        </tr>
-        <tr>
-            <th>LED</th>
-            <td>1 个用户 LED，1 个电源 LED，1 个 RGB LED</td>
-        </tr>
-        <tr>
-            <th>接口</th>
-            <td>19 个引脚：14x 模拟，19x 数字，2x IIC，2x UART，2x SPI</td>
-        </tr>
-        <tr>
-            <th>按钮</th>
-            <td>1 个复位按钮，1 个启动按钮</td>
-        </tr>
-        <tr>
-            <th>安全</th>
-            <td>AES128/256</td>
-        </tr>
-        <tr>
-            <th>低功耗</th>
-            <td>45μA</td>
-        </tr>
-        <tr>
-            <th>软件兼容性</th>
-            <td>Arduino IDE</td>
-        </tr>
-        <tr>
-            <th>工作温度</th>
-            <td>-20°C-70°C</td>
-        </tr>
-        <tr>
-            <th>尺寸</th>
-            <td>21x17.8 mm</td>
-        </tr>
-        <tr>
-            <th>电源</th>
-            <td>Type-C: 5V<br />BAT: 3.8V</td>
-        </tr>
-    </tbody>
-</table>
+| 产品 | XIAO RA4M1 |
+|---------|-----------|
+| **处理器** | [RA4M1 - 32-bit Microcontrollers with 48MHz Arm Cortex-M4 and LCD Controller and Cap Touch for HMI - Renesas](https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi) <br/>48-MHz Arm® Cortex®-M4 Core with FPU <br/>|
+| **RAM** | 32 KB SRAM |
+| **Flash** | 256 KB |
+| **LED** | 1x 用户 LED<br/>1x 电源 LED<br/>1x RGB LED |
+| **接口** | 19 个 IO：<br/>6x 模拟<br/>19x 数字<br/>2x IIC<br/>2x UART<br/>2x SPI |
+| **按钮** | 1x RESET 按钮<br/>1x BOOT 按钮 |
+| **安全** | AES128/256 |
+| **低功耗（典型值）** | `42.6μA@3.7V` |
+| **软件兼容性** | Arduino IDE |
+| **工作温度** | -20°C~70°C |
+| **尺寸** | 21×17.8 mm |
 
 ### 硬件概述
 
-在开始之前，了解产品的一些基本参数是非常重要的。下表提供了 Seeed Studio XIAO RA4M1 特性的信息。
+在开始之前，了解产品的一些基本参数是非常重要的。下表提供了 Seeed Studio XIAO RA4M1 特性的相关信息。
 
 <!-- 硬件相关 -->
 
@@ -164,11 +115,11 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 | D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |
 | D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |
 | ADC_BAT         |                  | P400      |                                     | 读取电池电压值           |
-| Reset           |                  | RES       |                                     | 复位                                |
+| Reset           |                  | RES       |                                     | RESET                                |
 | Boot            |                  | P201      |                                     | 进入启动模式                      |
 | RGB LED         |                  | P112      |                                     | RGB LED                              |
-| CHARGE_LED      |                  | VBUS      |                                     | 充电 LED（红色）                          |
-| USER_LED        |                  | P011      |                                     | 用户指示灯（黄色）|
+| CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Red                          |
+| USER_LED        |                  | P011      |                                     | 用户指示灯（Y）|
 ## 入门指南
 
 ### 硬件准备
@@ -190,7 +141,7 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一部分，您需要完成 Arduino 的安装。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
 - **步骤 1.** 根据您的操作系统下载并安装稳定版本的 Arduino IDE。
@@ -201,7 +152,7 @@ XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一
 
 - **步骤 2.** 启动 Arduino 应用程序。
 
-- **步骤 3.** 将 RA4M1 开发板包添加到您的 Arduino IDE 中。
+- **步骤 3.** 将 RA4M1 开发板包添加到您的 Arduino IDE。
 
     导航到 **File > Preferences**，并在 **"Additional Boards Manager URLs"** 中填入以下网址：
     *https://files.seeedstudio.com/arduino/package_renesas_1.2.0_index.json*
@@ -242,7 +193,7 @@ XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink_code.png" style={{width:700, height:'auto'}}/></div>
 
-- **步骤 3.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号来上传程序。
+- **步骤 3.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号上传程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/choose_board.png" style={{width:700, height:'auto'}}/></div>
 
@@ -256,7 +207,7 @@ XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一
 
 ## 玩转 RGB LED
 
-XIAO RA4M1 配备了内置的 RGB LED，您可以控制它，以下是如何在红色、绿色和蓝色之间平滑改变 LED 颜色的示例。
+XIAO RA4M1 配备了一个内置的 RGB LED，您可以控制它，以下是如何在红色、绿色和蓝色之间平滑改变 LED 颜色的示例。
 
 - **步骤 1.** 下载 `Adafruit_NeoPixel` 库
 
@@ -303,7 +254,7 @@ void loop() {
 
 ```
 
-- **步骤 3.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号来上传程序。
+- **步骤 3.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号上传程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/rgb_led.gif" style={{width:600, height:'auto'}}/></div>
 
@@ -388,27 +339,24 @@ void loop() {
 
 ```
 
-- **步骤 4.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号来上传程序
+- **步骤 4.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号上传程序
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/voltage.png" style={{width:600, height:'auto'}}/></div>
 
 ## 资源
 
-- 📄 **[PDF]** [RA4M1 数据手册](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet)
-- 📄 **[PDF]** [Seeed Studio XIAO RA4M1 原理图](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO-RA4M1_SCH_PDF_v1.0_240719.pdf)
-- 📄 **[ZIP]** [KiCAD 库文件](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO-RA4M1_SCH%26PCB_v1.0_240719.zip)
-<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip) -->
-<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 Eagle file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO_RP2040_v1.22_SCH&PCB.zip) -->
-<!-- - 📄 **[DXF]** [Seeed Studio XIAO RA4M1 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-DXF.zip) -->
-<!-- - 📄 **[LBR]** [Seeed Studio XIAO RA4M1 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr) -->
-<!-- - 📄 **[XLSX]** [Seeed Studio XIAO RA4M1 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-pinout_sheet.xlsx) -->
-- 🔗 **[Kicad]** [Seeed Studio XIAO RA4M1 封装库](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
+**硬件设计**
+- **📄[数据手册]** [Renesas RA4M1 数据手册](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet )
+- **📄[原理图]** [XIAO RA4M1 原理图](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO%20RA4M1%20V1.01_SCH_PDF_260114%20.pdf.pdf )
+- **🗃️[PCB 设计文件]** [XIAO RA4M1 KiCad 项目](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/202003977_XIAO%20RA4M1%20v1.01_SCH&PCB_260114.zip )
+- **🗃️[PCB 设计库]** 
+  - [XIAO 系列 KiCad 封装](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO 系列 KiCad 原理图符号](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 ## 故障排除
 
 ### Q1: 焊接引脚时应该注意什么
 
-由于 XIAO RA4M1 的微型尺寸，焊接排针时请小心，不要将不同的引脚粘在一起，也不要将焊料粘到屏蔽罩或其他元件上。否则可能导致 XIAO 短路或无法正常工作，由此造成的后果将由用户承担。
+由于 XIAO RA4M1 的微型尺寸，焊接排针时请小心，不要将不同的引脚粘在一起，也不要将焊料粘到屏蔽罩或其他元件上。否则，可能会导致 XIAO 短路或无法正常工作，由此造成的后果将由用户承担。
 
 ## 技术支持与产品讨论
 
