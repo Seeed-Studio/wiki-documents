@@ -1,5 +1,5 @@
 ---
-description: SES を使用して LoRaWAN 向け SenseCAP Card Tracker T1000-E を始める
+description: SES を使用して LoRaWAN 対応 SenseCAP Card Tracker T1000-E を始める
 title: SES を使い始める
 keywords:
 - Tracker
@@ -7,12 +7,16 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_opens
 slug: /ja/open_source_lorawan
 sidebar_position: 3
 last_update:
-  date: 1/2/2025
-  author: Jessie
+  date: 2/4/2026
+  author: Janet
 ---
 
 
 ## 準備
+
+:::caution note
+ファームウェアをフラッシュする前に、お使いのデバイスが `T1000-E for LoRaWAN` バージョンであることを確認してください。このトラッカーモデルに他の Meshtastic ファームウェアをフラッシュしないでください。デバイスが完全に動作しなくなる可能性があります。
+:::
 
 ### ハードウェアの準備
 
@@ -65,7 +69,13 @@ Seeed は、開発者がより迅速に開始できるようにサンプルプ�
 
 - **ステップ 1:** DFU モードに入る
 
- USB ケーブルを PC に接続し、デバイスボタンを押し続けながら充電ケーブルを接続すると、`T1000-E` という名前のドライバが表示されるはずです。
+ USB ケーブルを PC に接続し、デバイスボタンを押し続けながら、充電ケーブルを素早く接続すると、`T1000-E` という名前のドライバが表示されるはずです。
+
+:::danger note
+ケーブル接続時にデバイスボタンを押し続けてもドライバウィンドウがポップアップしない場合は、以下の操作に示すように充電ケーブルを素早くダブルタップしてください。
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={400} height="auto" /></p>
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
@@ -109,7 +119,7 @@ python uf2conv.py filename.hex -c -f 0xADA52840 -o filename.uf2
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/convert-uf2.png" alt="pir" width={600} height="auto" /></p>
 
-#### アプリケーションファームウェアの書き込み
+#### アプリケーションファームウェアのフラッシュ
 
 - **ステップ 1:** DFU モードに入る
 
@@ -117,15 +127,15 @@ python uf2conv.py filename.hex -c -f 0xADA52840 -o filename.uf2
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ 2:** LoRaWAN アプリケーションファームウェアの書き込み
+- **ステップ 2:** LoRaWAN アプリケーションファームウェアのフラッシュ
 
- `UF2` ファイルを DFU ドライブにコピーします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアが書き込まれるはずです。
+ `UF2` ファイルを DFU ドライブにコピーします。ファイルがダウンロードされ、デバイスが再起動した後、ファームウェアがフラッシュされるはずです。
 
 ### LNS への接続
 
-このセクションでは、デバイスを LNS（ここでは TTN を例として取り上げます）に接続してデータを表示し、TTN Mapper を介して位置を確認します。
+このセクションでは、デバイスを LNS（ここでは TTN を例として使用）に接続してデータを表示し、TTN Mapper を介して位置を確認します。
 
-開始するには、The Things Industries または The Things Network でアカウントを登録してください。
+まず、The Things Industries または The Things Network でアカウントを登録してください。
 
 #### ステップ 1: アプリケーションの作成
 
@@ -145,7 +155,7 @@ Application ID を入力し、Create Application をクリックして変更を�
 
 以下のパラメータを設定します：
 
-**Frequency Plan**: 対象地域に適した Frequency plan を選択
+**Frequency Plan**: 対象地域に適した周波数プランを選択
 
 **LoRaWAN version**:LoRaWAN Specification 1.0.4
 
@@ -154,7 +164,7 @@ Application ID を入力し、Create Application をクリックして変更を�
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device1.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
-JoinEUI/DevEUI/APPEUI: 前の設定で 'lorawan_key_config.h' ファイルで定義したもの。
+JoinEUI/DevEUI/APPEUI: 前の設定で 'lorawan_key_config.h' ファイルで定義したものです。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keys-define.png" alt="pir" width={600} height="auto" /></p>
 :::
 
@@ -166,5 +176,5 @@ JoinEUI/DevEUI/APPEUI: 前の設定で 'lorawan_key_config.h' ファイルで定
 
 ### 工場出荷時ファームウェアの復元
 
-- 工場出荷時ファームウェアを使用する場合は、`t1000_e_dev_kit_11_lorawan_tracker.uf2` ファームウェアを書き込みます。
-- SenseCAP クラウドを使用する場合は、デバイスラベルの QR コードをスキャンして SenseCAP キーをインポートする必要があります。
+- 工場出荷時ファームウェアに戻すには、`t1000_e_dev_kit_11_lorawan_tracker.uf2` ファームウェアをフラッシュします。
+- SenseCAP クラウドを使用するには、デバイスラベルの QR コードをスキャンして SenseCAP キーをインポートする必要があります。
