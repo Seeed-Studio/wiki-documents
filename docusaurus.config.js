@@ -337,8 +337,8 @@ module.exports = (async () => {
               beforeDefaultRemarkPlugins: [],
               beforeDefaultRehypePlugins: [],
 
-              showLastUpdateAuthor: true,
-              showLastUpdateTime: true,
+              showLastUpdateAuthor: false,
+              showLastUpdateTime: false,
               disableVersioning: false,
               includeCurrentVersion: true,
               lastVersion: undefined,
