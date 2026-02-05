@@ -7,12 +7,16 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_opens
 slug: /open_source_lorawan
 sidebar_position: 3
 last_update:
-  date: 1/2/2025
-  author: Jessie
+  date: 2/4/2026
+  author: Janet
 ---
 
 
 ## Preparation
+
+:::caution note
+Before flashing the firmware, please ensure you device is `T1000-E for LoRaWAN` version and please don't flash other Meshtastic firmware to this tracker model, it may cause the device to be completely dead.
+:::
 
 ### Hardware Preparation
 
@@ -65,7 +69,13 @@ Before start, please check the bootloader info first.
 
 - **Step 1:** Enter DFU mode
 
- Connect the USB cable to your PC, press and hold the device button, then connect the charging cable, there should be a driver named `T1000-E` display.
+ Connect the USB cable to your PC, press and hold the device button, then quickly connect the charging cable, there should be a driver named `T1000-E` display.
+
+:::danger note
+If no driver window pops up after pressing and holding the device button when connecting the cable, please quickly double-tap the charging cable as shown in the operation below.
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={400} height="auto" /></p>
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 

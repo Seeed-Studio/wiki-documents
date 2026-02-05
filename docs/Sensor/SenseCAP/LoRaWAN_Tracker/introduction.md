@@ -9,7 +9,7 @@ slug: /t1000e_for_lorawan_introduction
 sku: 114993591
 sidebar_position: 1
 last_update:
-  date: 1/9/2026
+  date: 2/4/2026
   author: Janet
 ---
 
@@ -27,7 +27,7 @@ last_update:
 T1000-E for LoRaWAN comes with fully open-source firmware. To enhance the user experience, we provide demo firmware pre-installed on factory-produced devices. Users can explore the demo firmware for an initial experience and also develop your own custom firmware. For details on custom development, please refer to the [LoRaWAN Open Source Firmware](https://wiki.seeedstudio.com/open_source_lorawan/).
 
 :::caution note
-Before flashing the firmware, please ensure you device is `T1000-E for LoRaWAN` version. Please don't flash other Meshtastic firmware to this tracker model that doesn't support Meshtastic, it may cause the device to be completely dead.
+Before flashing the firmware, please ensure you device is `T1000-E for LoRaWAN` version and please don't flash other Meshtastic firmware to this tracker model, it may cause the device to be completely dead.
 :::
 
 **T1000 Series Version Comparison**

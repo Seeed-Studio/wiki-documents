@@ -821,6 +821,12 @@
     "es",
     "ja"
   ],
+  "/local_openclaw_on_recomputer_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/Local_RAG_based_on_Jetson_with_LlamaIndex": [
     "cn",
     "en",
