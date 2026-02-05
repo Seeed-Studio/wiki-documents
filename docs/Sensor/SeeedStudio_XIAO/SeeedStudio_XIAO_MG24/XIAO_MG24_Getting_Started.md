@@ -49,57 +49,73 @@ sidebar_position: 0
 
 ### Specification
 
-<table align="center">
- <tr>
-     <th>Item</th>
-     <th>Seeed Studio XIAO MG24</th>
-        <th>Seeed Studio XIAO MG24 Sense</th>
- </tr>
- <tr>
-     <th>Processor</th>
-     <td align="center" colspan="2">Silicon Labs EFR32MG24 <br></br>ARM Cortex-M33 @ 78MHz </td>
- </tr>
- <tr>
-     <th>Wireless</th>
-     <td align="center" colspan="2">Proprietary 2.4 GHz <br></br> Zigbee PRO/Green Power protocols <br></br> BLE: Bluetooth 5.3, Bluetooth mesh</td>
- </tr>
-    <tr>
-     <th>Built-in Sensors</th>
-     <td align="center"> - </td>
-        <td align="center">6-Axis IMU(LSM6DS3TR-C) <br></br>Analog Microphone(MSM381ACT001)</td>
- </tr>
-    <tr>
-     <th>Memory</th>
-     <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
-        <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
- </tr>
-    <tr>
-     <th>Interface</th>
-     <td>2x UART, 1x IIC, 2x SPI, 18x Analog, 18x Digital, ALL PWM, 1x User LED, 1x Charge LED <br></br> 1x Reset button, </td>
-     <td>2x UART, 1x IIC, 2x SPI, 18x Analog, 18x Digital, ALL PWM, 1x User LED, 1x Charge LED <br></br> 1x Reset button, </td>
- </tr>
-    <tr>
-     <th>Dimensions</th>
-     <td align="center">21 x 17.8mm</td>
-        <td align="center">21 x 17.8mm</td>
- </tr>
-    <tr>
-     <th rowspan="2">Power</th>
-     <td colspan="2" align="center">Input voltage (Type-C): 5V@14mA <br></br> Input voltage (BAT): 3.7V@7mA</td>
- </tr>
-    <tr>
-     <td align="center">Charging battery current: <strong>200mA</strong></td>
-  <td align="center">Charging battery current: <strong>200mA</strong></td>
- </tr>
-    <tr>
-        <th>Low Power Consumption Model</th>
-        <td>Normal: <strong>3.7V/6.71 mA</strong> <br></br> Sleep Mode: <strong>3.7V/1.91mA</strong> <br></br> Deep Sleep Mode: <strong>3.7V/1.95μA</strong></td>
-        <td>Normal: <strong>3.7V/6.71 mA</strong> <br></br> Sleep Mode: <strong>3.7V/1.91mA</strong> <br></br> Deep Sleep Mode: <strong>3.7V/1.95μA</strong></td>
-    </tr>
-    <tr>
-        <th>Working Temperature</th>
-        <td colspan="2" align="center">-20°C ~ 70°C</td>
-    </tr>
+<table>
+  <tr>
+    <th>Product</th>
+    <td>XIAO MG24</td>
+    <td><a href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html">XIAO MG24 Sense</a></td>
+  </tr>
+  <tr>
+    <th>Processor</th>
+    <td colspan="2">Silicon Labs EFR32MG24<br/>ARM Cortex-M33 @ 78MHz</td>
+  </tr>
+  <tr>
+    <th>RAM</th>
+    <td colspan="2">256kB</td>
+  </tr>
+  <tr>
+    <th>Flash</th>
+    <td colspan="2">1536KB + 4MB Onboard</td>
+  </tr>
+  <tr>
+    <th>LEDs</th>
+    <td colspan="2">1x User LED<br/>1x Power LED</td>
+  </tr>
+  <tr>
+    <th>Sensors</th>
+    <td>-</td>
+    <td>1x Onboard Analog Microphone<br/>1x Onboard 6-Axis IMU</td>
+  </tr>
+  <tr>
+    <th>Interface</th>
+    <td colspan="2">22 Pins (All PWM):<br/>19x Analog<br/>19x Digital<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
+  </tr>
+  <tr>
+    <th>Button</th>
+    <td colspan="2">1x RESET Button</td>
+  </tr>
+  <tr>
+    <th>Security</th>
+    <td colspan="2">Hardware Cryptographic Acceleration, True Random Number Generator, ARM® TrustZone®, Secure Boot, Secure Debug Unlock etc.</td>
+  </tr>
+  <tr>
+    <th>Low Power (Typ.)</th>
+    <td colspan="2">1.95μA</td>
+  </tr>
+  <tr>
+    <th>Normal (Typ.)</th>
+    <td colspan="2">6.71mA</td>
+  </tr>
+  <tr>
+    <th>Sleep (Typ.)</th>
+    <td colspan="2">1.91mA</td>
+  </tr>
+  <tr>
+    <th>Software Compatibility</th>
+    <td colspan="2">Arduino IDE</td>
+  </tr>
+  <tr>
+    <th>Supported Antenna</th>
+    <td colspan="2">MAX 2.4GHz Ceramic Antenna: 4.97dBi</td>
+  </tr>
+  <tr>
+    <th>Working Temperature</th>
+    <td colspan="2">-20°C~70°C</td>
+  </tr>
+  <tr>
+    <th>Dimensions</th>
+    <td colspan="2">21×17.8 mm</td>
+  </tr>
 </table>
 
 ### Features
@@ -650,21 +666,27 @@ The XIAO MG24 is currently the only XIAO model equipped with a serial port chip.
 
 ## Resources
 
-### For Seeed Studio XIAO MG24 Sense
-
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense datasheet](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense Wireless SoC](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
-- 🔗 **[Kicad]** [Seeed Studio XIAO MG24 Sense FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- 📄 **[ZIP]** [Seeed Studio XIAO MG24 Sense PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
-
 ### For Seeed Studio XIAO MG24
 
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 datasheet](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 Wireless SoC](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
-- 🔗 **[Kicad]** [Seeed Studio XIAO MG24 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- 📄 **[ZIP]** [Seeed Studio XIAO MG24 PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
+**Hardware Design**
+- **📄[Datasheet]** [Silicon Labs EFR32MG24 Datasheet](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
+- **📄[Reference Manual]** [Silicon Labs EFR32MG24 Reference Manual](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
+- **📄[Schematic]** [XIAO MG24 KiCad Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
+- **🗃️[PCB Design Files]** [XIAO MG24 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+
+### For Seeed Studio XIAO MG24 Sense
+
+**Hardware Design**
+- **📄[Datasheet]** [Silicon Labs EFR32MG24 Datasheet](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
+- **📄[Reference Manual]** [Silicon Labs EFR32MG24 Reference Manual](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
+- **📄[Schematic]** [XIAO MG24 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
+- **🗃️[PCB Design Files]** [XIAO MG24 Sense KiCad Project](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
 ## Tech Support & Product Discussion
 
