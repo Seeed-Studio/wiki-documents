@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 
 ## はじめに
 
-XIAO 土壌水分センサーは、[XIAO ESP32-C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Pre-Soldered-p-6328.html)を搭載したコンパクトで低消費電力の環境モニターです。単三電池1本で動作し、長時間の運用とリアルタイムの土壌状態更新を提供します。正確な土壌監視のための事前校正済み適応型土壌水分センシング機能を備えています。また、動的な監視間隔と瞬時読み取り機能により、正確で応答性の高いデータを実現します。Home Assistant と完全に互換性があり、スマートガーデニングと精密農業に最適です。効率的で信頼性が高く、持続可能な植物ケアのために作られています。
+XIAO 土壌水分センサーは、[XIAO ESP32-C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Pre-Soldered-p-6328.html)を搭載したコンパクトで低消費電力の環境モニターです。単三電池1本で動作し、長時間の運用とリアルタイムの土壌状態更新を提供します。正確な土壌監視のための事前校正済み適応型土壌水分センシング機能を備えています。また、動的な監視間隔と瞬時読み取りにより、正確で応答性の高いデータを実現します。Home Assistant と完全に互換性があり、スマートガーデニングと精密農業に最適です。効率的で信頼性が高く、持続可能な植物ケアのために作られています。
 
 ## 特徴
 
@@ -60,10 +60,10 @@ ESPHome がプリロードされており、Home Assistant ですぐに動作し
   - 緑色LEDが点滅 → 10秒以内に、センサーを完全に湿った土壌に挿入してください。
   - 緑色LEDの点滅が止まるまで待ち、その後3秒待ちます。
   - 校正結果：
-    - 緑色の素早い2回点滅 → 成功。
-    - 赤色の素早い2回点滅 → 失敗（乾燥/湿潤読み取りが入れ替わった可能性があります）。
+    - 2回の素早い緑色点滅 → 成功。
+    - 2回の素早い赤色点滅 → 失敗（乾燥/湿潤読み取りが入れ替わった可能性があります）。
 
-注意：校正中、センサーが迅速に挿入されない場合、初期読み取り値が不安定になる可能性があります。システムは複数のサンプルを取得し、フィルタリングを適用して、信頼性の高い校正のために読み取り値を平均化します。
+注意：校正中、センサーが迅速に挿入されない場合、初期読み取り値が不安定になる可能性があります。システムは複数のサンプルを取得し、フィルタリングを適用し、信頼性の高い校正のために読み取り値を平均化します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_4.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -104,7 +104,7 @@ ESPHome がプリロードされており、Home Assistant ですぐに動作し
   </table>
 </div>
 
-Home Assistant Green は、家庭を自動化する最も簡単でプライバシーに配慮した方法です。簡単なセットアップを提供し、すべてのスマートデバイスを1つのシステムで制御でき、すべてのデータはデフォルトでローカルに保存されます。このボードは繁栄する Home Assistant エコシステムの恩恵を受け、オープンソースによって毎月改善されます。
+Home Assistant Green は、ホームオートメーションの最も簡単でプライバシーに焦点を当てた方法です。簡単なセットアップを提供し、すべてのスマートデバイスを1つのシステムで制御でき、すべてのデータはデフォルトでローカルに保存されます。このボードは繁栄する Home Assistant エコシステムの恩恵を受け、オープンソースによって毎月改善されます。
 
 このチュートリアルでは Home Assistant Green を Home Assistant ホストとして使用することをお勧めしますが、Supervisor を備えた任意の Home Assistant ホストを使用することもできます。
 
@@ -158,7 +158,7 @@ ESPHome を検索してクリックします。**INSTALL** と **START** をク�
 2. **設定へのアクセス**:
    - 電話またはPCを使用してネットワークに接続します。
    - ブラウザを開いて `http://192.168.4.1` に移動します。
-   - 自宅の Wi-Fi ネットワークの SSID とパスワードを入力します。
+   - ホーム Wi-Fi ネットワークの SSID とパスワードを入力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ap_wireless_setting_page.png" style={{width:'auto', height:650, "border-radius": '15px'}}/></div>
 
@@ -241,7 +241,7 @@ esphome:
   project:
     name: "xiao.soil-moisture-monitor"
     version: "1.0"
-  on_boot: 
+  on_boot:
     then:
       - output.turn_off: gpio_3_output
       - output.turn_on: gpio_14_output
@@ -289,7 +289,7 @@ output:
     id: red_led_output
 
   - platform: ledc
-    pin: GPIO21  
+    pin: GPIO21
     id: pwm_output
     frequency: 200kHz  # Set the frequency to 200kHz
 
@@ -529,10 +529,10 @@ binary_sensor:
 # Deep sleep configuration
 deep_sleep:
   id: deep_sleep_control
-  run_duration: 120s  
-  sleep_duration: 180min  
-  wakeup_pin: 
-    number: GPIO2 
+  run_duration: 120s
+  sleep_duration: 180min
+  wakeup_pin:
+    number: GPIO2
     inverted: true
     allow_other_uses: true
     mode: INPUT_PULLUP
@@ -565,7 +565,7 @@ sensor:
             return 1.0 * 100.0;
           }else {
             return ((x - 1.2) / (1.5 - 1.2)) * 100.0;
-          } 
+          }
     unit_of_measurement: "%"
     update_interval: 5s
     force_update: True
@@ -632,7 +632,7 @@ interval:
             } else {
               id(deep_sleep_control).set_sleep_duration(28800000);
               return "Normal Moisture";
-            }  
+            }
 
 # Enable logging
 logger:

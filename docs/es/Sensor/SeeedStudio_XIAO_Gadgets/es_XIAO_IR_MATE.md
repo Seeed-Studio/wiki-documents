@@ -68,7 +68,7 @@ Flashea firmware personalizado para transformar IR Mate en un control remoto de 
 
 - **Diseño Compacto, Alimentado por USB-C**
 
-## Descripción General del Hardware
+## Descripción del Hardware
 
 Entender los componentes básicos del dispositivo te ayudará a usarlo mejor:
 
@@ -89,7 +89,7 @@ Cuando obtengas el dispositivo por primera vez, sigue estos pasos para completar
 
 Usa un cable USB Type-C estándar para alimentar el dispositivo. Después del arranque, el dispositivo entrará en un estado de espera de configuración, y verás el **LED blanco parpadeando a una frecuencia de 1Hz**.
 
-### Paso 2: Entrar en Modo de Aprovisionamiento AP
+### Paso 2: Entrar al Modo de Aprovisionamiento AP
 
 Cuando la red no está configurada, el dispositivo creará automáticamente un punto de acceso Wi-Fi (AP) llamado **XIAO IR Mate** (o **Seeed_ir**, dependiendo de lo que encuentres).
 
@@ -170,7 +170,7 @@ El firmware del dispositivo está basado en **ESPHome**, haciéndolo muy fácil 
 
 ## Detalles de Funciones Principales (Firmware de Fábrica)
 
-Si quieres restaurar tu dispositivo o actualizar su firmware, puedes saltar a través del botón de abajo. Hemos creado una página dedicada al Firmware de Flash Directo XIAO Gadget.
+Si quieres restaurar tu dispositivo o actualizar su firmware, puedes saltar a través del botón de abajo. Hemos creado una página dedicada al Flasheo Directo de Firmware XIAO Gadget.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://gadgets.seeed.cc/" target="_blank" rel="noopener noreferrer">
@@ -182,7 +182,7 @@ Si quieres restaurar tu dispositivo o actualizar su firmware, puedes saltar a tr
 
 Cuando necesites enseñar al IR Mate un nuevo comando de control remoto, sigue estos pasos. La interfaz principal del firmware de fábrica incluye una **lista de selección de ranuras de señal**, junto con botones **Learn** y **Send**.
 
-1. En el panel del dispositivo de Home Assistant, primero encuentra la lista de selección desplegable llamada **"Signal"**.
+1. En el panel del dispositivo de Home Assistant, primero encuentra la lista desplegable de selección llamada **"Signal"**.
 2. Haz clic en la lista desplegable y selecciona la ranura de señal que quieres usar, por ejemplo, **"signal_1"**.
 3. Una vez seleccionada, encuentra el botón **"Learn"** y haz clic en **"PRESS"** junto a él.
 4. El XIAO IR Mate ahora entrará en modo de aprendizaje y comenzará a **vibrar continuamente**, indicando que puedes comenzar el emparejamiento.
@@ -226,7 +226,7 @@ Además del control de HA, también puedes entender y controlar el dispositivo a
 
 ## Uso Avanzado - Control Inteligente de Aire Acondicionado
 
-El modo básico de "grabar-reproducir" proporcionado por el firmware de fábrica es universal, pero puede ser torpe al controlar dispositivos con múltiples estados como aires acondicionados (temperatura, modo, velocidad del ventilador, etc.). Para lograr un control de AC más fino e inteligente, podemos flashear un firmware ESPHome especializado para transformar el XIAO IR Mate de un "repetidor de señales IR" en un verdadero "controlador inteligente de aire acondicionado".
+El modo básico "grabar-reproducir" proporcionado por el firmware de fábrica es universal, pero puede ser torpe al controlar dispositivos con múltiples estados como aires acondicionados (temperatura, modo, velocidad del ventilador, etc.). Para lograr un control de AC más fino e inteligente, podemos flashear un firmware ESPHome especializado para transformar el XIAO IR Mate de un "repetidor de señales IR" en un verdadero "controlador inteligente de aire acondicionado".
 
 En este capítulo, usaremos un aire acondicionado Gree como ejemplo detallado, pero esto no es de ninguna manera la única opción. El poderoso ecosistema de ESPHome soporta numerosas marcas de aires acondicionados, y puedes seguir fácilmente los conceptos en esta guía, haciendo cambios menores al código de configuración, para lograr control inteligente para otras marcas como Midea, Daikin, Panasonic, y más.
 
@@ -257,6 +257,7 @@ En este capítulo, usaremos un aire acondicionado Gree como ejemplo detallado, p
 <summary>seeed-ir-v2.yaml</summary>
 ```yaml
 # ==== AUTO-SYNC START: xiao_smart_ir_mate/xiao_smart_ir_mate.yaml ====
+
 substitutions:
   name: "xiao-smart-ir-mate"
   friendly_name: "XIAO Smart IR Mate"
@@ -383,7 +384,7 @@ remote_receiver:
               ESP_LOGI("ir", "Saved signal index: %d", id(signal_select_index));
               id(signal_nvs).save_to_nvs(id(signal_select_index), x);
               id(send_data_vector).clear();
-              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index)); 
+              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index));
               id(is_learning_mode) = false;
               // Learned the signal, turn on the switch
               id(is_learned_signal_script).execute(true);
@@ -623,7 +624,7 @@ Pero no te detengas ahí, ¡porque esto es solo el comienzo! La verdadera divers
 
 **Escenario de Aplicación**
 
-Mira a tu alrededor. ¿Tienes muchos controles remotos viejos sin usar? Controles de TVs viejos, DVDs o estéreos, con muchos botones y una gran sensación táctil, ahora solo juntando polvo en un cajón. ¿No sería genial si pudieras usar los botones de estos controles para controlar tus luces inteligentes, aspiradora robot, o incluso escenas complejas de "bienvenido a casa"?
+Mira a tu alrededor. ¿Tienes muchos controles remotos viejos sin usar por ahí? Controles de TVs viejos, DVDs o estéreos, con muchos botones y una gran sensación táctil, ahora solo juntando polvo en un cajón. ¿No sería genial si pudieras usar los botones de estos controles para controlar tus luces inteligentes, aspiradora robot, o incluso escenas complejas de "bienvenido a casa"?
 
 **Cómo Funciona**
 
@@ -633,7 +634,7 @@ El núcleo de esta idea es transformar el XIAO IR Mate de un "transmisor" a un "
 
   1. **Configurar un Firmware "Oyente":** En tu firmware ESPHome, la configuración principal es el componente `remote_receiver`. El único trabajo del dispositivo después de encenderse es "escuchar" señales IR.
 
-  2. **Identificar el "Código Secreto" de Cada Botón:** Toma un control remoto viejo y presiona cualquier botón apuntándolo al dispositivo. En los logs de ESPHome, verás el código IR único del botón (como una cadena de datos `RAW` o un código de protocolo `NEC`). Anota este "código secreto".
+  2. **Identificar el "Código Secreto" de Cada Botón:** Toma un control remoto viejo y presiona cualquier botón mientras lo apuntas al dispositivo. En los logs de ESPHome, verás el código IR único del botón (como una cadena de datos `RAW` o un código de protocolo `NEC`). Anota este "código secreto".
 
   3. **Crear Reglas de Automatización en HA:** En Home Assistant, configura una automatización con la condición de activación: "Cuando XIAO IR Mate detecte un código secreto IR específico".
 
@@ -643,7 +644,7 @@ El núcleo de esta idea es transformar el XIAO IR Mate de un "transmisor" a un "
 
      - Cuando detecte el **botón "Play" de un Apple Remote** -> **Encender la luz del baño**.
 
-     - Cuando detecte el **botón "Red" del control de DVD** -> Ejecutar la escena "Modo Ausente".
+     - Cuando detecte el **botón "Rojo" del control de DVD** -> Ejecutar la escena "Modo Ausente".
 
 - **Ventajas de Este Enfoque**
 
@@ -671,13 +672,13 @@ El núcleo de esta idea es transformar el XIAO IR Mate de un "transmisor" a un "
 
      - Recibe un reporte de **"toque simple"** -> Alterna todas las **luces Zigbee** de la casa encendido/apagado.
 
-     - Recibe un reporte de **"doble toque"** -> Comanda la **aspiradora robot** para comenzar la limpieza.
+     - Recibe un reporte de **"doble toque"** -> Comanda a la **aspiradora robot** para comenzar la limpieza.
 
      - Recibe un reporte de **"presión larga"** -> Ejecuta una escena "Modo Película", cerrando las cortinas, atenuando las luces, y encendiendo el proyector y sistema de sonido.
 
 - **Ventajas de Este Enfoque**
 
-  - **Romper Límites, Posibilidades Infinitas:** Tu botón táctil ya no es solo parte de un "control remoto IR", sino un interruptor físico para toda tu casa inteligente, capaz de controlar cualquier dispositivo conectado a HA.
+  - **Romper Límites, Posibilidades Infinitas:** Tu botón táctil ya no es solo parte de un "control remoto IR", sino un interruptor físico para todo tu hogar inteligente, capaz de controlar cualquier dispositivo conectado a HA.
 
   - **Definir Flexiblemente, Cambiar por Capricho:** Hoy un doble toque inicia la aspiradora, ¿pero mañana quieres que reproduzca música? Solo edita la automatización en la interfaz de HA, sin necesidad de tocar el firmware en absoluto.
 
