@@ -804,5 +804,41 @@
         "filename": "mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz",
         "foldername": "mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1",
         "sha256": ""
+    },
+    {
+        "product": "j501mini-agx-orin-64g",
+        "l4t": "36.4.4 (GMSL✅)",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDxBYYGqIfaSZqJT3uPt0alAa47BjjqCGvXWhD5tBsKx1M?e=3SW4Jf",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-mini-agx-orin-64g-j501-6.2.1-36.4.4-2025-09-08.tar.gz",
+        "foldername": "mfi_recomputer-orin-robotics-j501",
+        "sha256": "f0efee5f265dbaef49dc14d517b269e7f6582ff9977d9193d377966f36408ec3"
+    },
+    {
+        "product": "j501mini-agx-orin-32g",
+        "l4t": "36.4.4 (GMSL✅)",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBohA1Z3GuSSJ7tFOQU8v22AYu8NNk9AS-1Cne78jOnSHw?e=dejuH9",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-mini-agx-orin-32g-j501-6.2.1-36.4.4-2025-09-08.tar.gz",
+        "foldername": "mfi_recomputer-orin-robotics-j501",
+        "sha256": "0a97cbb6d708776bd97608594c60c34208b5d5dc6efbfc5553edd9c5a95802f6"
+    },
+    {
+        "product": "j501-agx-orin-64g",
+        "l4t": "36.4.4 (GMSL✅)",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDPKrVl7UDaTYXmxi1CoTu2AcsHUPKLqNw_olmvlPBODqQ?e=gWuNzv",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-robo-agx-orin-64g-j501-6.2.1-36.4.4-2025-11-01.tar.gz",
+        "foldername": "mfi_recomputer-robo-agx-orin-j501x",
+        "sha256": "ed82745decdf554d82bd93441f1f4ad149f395a4ba5719664ce2351be8201522"
+    },
+    {
+        "product": "j501-agx-orin-32g",
+        "l4t": "36.4.4 (GMSL✅)",
+        "mainlink": "https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB3JLwYRpS8SqoqjWuXJmmmAW56Nvpdn8YnbYLW7g5_FHM?e=Gqe1XR",
+        "mirrorlink": "",
+        "filename": "mfi_recomputer-robo-agx-orin-32g-j501-6.2.1-36.4.4-2025-11-01.tar.gz",
+        "foldername": "mfi_recomputer-robo-agx-orin-j501x",
+        "sha256": "58fa8b76754449b0a49ad7d5f273eddf3e1d1f458cdb34994f6d8643da7a1249"
     }
 ]

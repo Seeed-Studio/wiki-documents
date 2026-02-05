@@ -72,13 +72,13 @@ Bluetooth Proxy は、Home Assistant の Bluetooth カバレッジをホスト�
 
 **主要機能：**
 
-- **拡張カバレッジ：** 分散 ESP32 プロキシノードを利用してホストの Bluetooth 範囲への依存を排除し、家全体の Bluetooth 接続を実現します。
+- **拡張カバレッジ：** 分散 ESP32 プロキシノードを利用してホームの Bluetooth 範囲への依存を排除し、家全体の Bluetooth 接続を実現します。
 - **動作原理：**
-  - **XIAO W5500 Ethernet Adapter** が Bluetooth スキャンを有効にします
-  - 近くの BLE ブロードキャストパケット（温度計、スマートロック、ライトなど）を受信します
-  - データは **イーサネットまたは Wi-Fi** 経由で Home Assistant に転送されます
-  - Home Assistant はこれらのデバイスを **Bluetooth エンティティ** として認識します
-  - ユーザーは Home Assistant インターフェースで温度、バッテリーレベル、信号強度、その他のメトリクスを直接確認できます
+  - **XIAO W5500 Ethernet Adapter** が Bluetooth スキャンを有効化
+  - 近くの BLE ブロードキャストパケット（温度計、スマートロック、ライトなど）を受信
+  - **イーサネットまたは Wi-Fi** 経由で Home Assistant にデータを転送
+  - Home Assistant がこれらのデバイスを **Bluetooth エンティティ** として認識
+  - ユーザーは Home Assistant インターフェースで温度、バッテリーレベル、信号強度、その他のメトリクスを直接確認可能
 
 ### ファームウェアのインストール
 
@@ -86,7 +86,7 @@ Home Assistant をまだセットアップしていない場合は、このリ�
 
 **ステップ 1.** ESPhome をインストール<br/>
 
-  すでに ESPHome をインストールしている場合は、このステップをスキップできます。
+  ESPHome を既にインストールしている場合は、このステップをスキップできます。
 
 - **Settings** -> **Add-ons** に移動
 
@@ -122,10 +122,14 @@ Home Assistant をまだセットアップしていない場合は、このリ�
 <summary>yaml ファイルをコピーするにはここをクリック</summary>
 
 ```yaml
+# Only boards produced after November 1, 2025 are supported
+# ==== AUTO-SYNC START: xiao-w5500-ethernet-adapter/xiao-w5500-ethernet-adapter.yaml ====
+
+# Only boards produced after November 1, 2025 are supported
 esphome:
-  name: seeed-esp32-s3
-  friendly_name: Bluetooth Proxy
-  min_version: 2025.8.0
+  name: seeed-esp32-poe
+  friendly_name: "XIAO W5500 Ethernet Adapter V1.2"
+  min_version: 2025.11.0
   name_add_mac_suffix: true
 
 esp32:
@@ -135,10 +139,11 @@ esp32:
 
 ethernet:
   type: W5500
-  cs_pin: GPIO2
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
+  cs_pin: GPIO2
+  interrupt_pin: GPIO10
 
 api:
 logger:
@@ -147,14 +152,14 @@ ota:
   - platform: esphome
     id: ota_esphome
 
+esp32_ble:
+  max_connections: 4
+
 esp32_ble_tracker:
-  scan_parameters:
-    interval: 1100ms
-    window: 1100ms
-    active: true
 
 bluetooth_proxy:
   active: true
+  connection_slots: 4
 
 button:
   - platform: safe_mode
@@ -164,6 +169,7 @@ button:
   - platform: factory_reset
     id: factory_reset_btn
     name: Factory reset
+# ==== AUTO-SYNC END ====
 ```
 
 </details>
@@ -185,7 +191,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が遠くにある
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-このウェブサイトを開き、XIAO(ESP32-S3) W5500 Ethernet Adapter にファームウェアをアップロードします。
+XIAO(ESP32-S3) W5500 Ethernet Adapter にファームウェアをアップロードするこのウェブサイトを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device5.png" style={{width:800, height:'auto'}}/></div>
 
@@ -226,7 +232,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'120%', height:'auto'}}/></div>
 </div>
 
-しばらく待つと、以下の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
+しばらく待つと、次の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -235,7 +241,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 <TabItem value='Wi-Fi経由でインストール'>
 
 :::tip
-これは最も簡単な方法ですが、初回プログラムインストール時には、まず左側の方法を使用してePaper Panelにプログラムをアップロードする必要があります。その後、wifi経由でアップロードできます。また、この方法が機能するためには、YAMLの設定に適切に設定された`ota`と`api`セクションが有効な暗号化キーと共に含まれていることを確認してください。
+これは最も簡単な方法ですが、初回プログラムをインストールする際は、まず左側の方法を使用してePaper Panelにプログラムをアップロードする必要があります。その後、wifi経由でアップロードできます。また、この方法が機能するためには、YAMLの設定に適切に設定された`ota`と`api`セクションが有効な暗号化キーと共に含まれていることを確認してください。
 :::
 
 この方法では、ePaper panelを何にも接続する必要がなく、オンラインであることを確認するだけです。
@@ -244,7 +250,7 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
-しばらく待つと、次の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱い可能性があります。デバイスをルーターに近づけてください。
+しばらく待つと、次の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱いことが原因の可能性があります。デバイスをルーターに近づけてください。
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device7.png" style={{width:800, height:'auto'}}/></div>
 
@@ -264,14 +270,14 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/buletooth_4.png" style={{width:800, height:'auto'}}/></div>
 
   - **Address**: Bluetoothデバイスのブロードキャストアドレス（MAC形式）。これは実際の物理MACアドレスではなく、BLEプライバシーメカニズムによって生成されるランダム化されたプライベートアドレスで、定期的に変更されることに注意してください。
-  - **Name**: Bluetoothデバイスのアドバタイズされた名前。デバイスがその名前をブロードキャストする場合、このフィールドがデバイスの識別に役立ちます。
+  - **Name**: Bluetoothデバイスのアドバタイズされた名前。デバイスがその名前をブロードキャストしている場合、このフィールドはデバイスの識別に役立ちます。
   - **Device**: Home Assistantで認識されたBluetoothエンティティ。デバイスがまだペアリングまたは識別されていない場合、このフィールドは空のままです。
   - **Source**: スキャンソース、つまり特定のBluetooth Proxyノード（例：**Bluetooth Proxy 8fed20**）を示します。これは複数のプロキシノードからのデータを区別するのに役立ちます。
   - **RRSI**: 受信信号強度インジケータ（dBm単位）。値が0に近いほど、信号が強くなります。
 
 - または、**Visualization**を選択してビューにアクセスします。
 
-    図は、Home AssistantのBluetooth Advertisement Visualizationを示しており、Bluetoothプロキシネットワークのトポロジーを説明しています。
+    図は、Home AssistantのBluetooth Advertisement Visualizationを示しており、Bluetoothプロキシネットワークのトポロジーを表しています。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/buletooth_5.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -282,12 +288,12 @@ Home Assistant ホスト（Raspberry PI/Green/Yellow など）が近くにある
 
 ## アプリケーション
 
-**XIAO(ESP32-S3) W5500 Ethernet Adapter**に実装されたBluetoothプロキシを活用することで、Bluetoothカバレッジを大幅に拡張してBluetoothデバイスを接続できます。具体的には、これは異なるBluetoothプロトコルに基づいて実現できます。以下では、Home Assistant（HA）の既存の統合を例に、スマートホームアプリケーションシナリオに合わせた実装方法を示します。
+**XIAO(ESP32-S3) W5500 Ethernet Adapter**に実装されたBluetoothプロキシを活用することで、Bluetoothカバレッジを大幅に拡張してBluetoothデバイスを接続できます。具体的には、これは異なるBluetoothプロトコルに基づいて実現できます。以下では、Home Assistant（HA）の既存の統合を例に取り、スマートホームアプリケーションシナリオに合わせた実装方法を実演します。
 
 ### [BTHome](https://bthome.io/)
 
-BTHomeは、デバイスがセンサーデータとボタン押下をブロードキャストするためのエネルギー効率的で柔軟なBLE形式です。<br/>
-DHT11温湿度センサーからデータを読み取る例として、Home Assistant（HA）に対応する統合を追加し、Bluetoothプロキシ経由でデータを読み取り、安定した
+BThomeは、デバイスがセンサーデータとボタンの押下をブロードキャストするためのエネルギー効率的で柔軟なBLE形式です。<br/>
+DHT11温湿度センサーからデータを読み取る例を取り、Home Assistant（HA）に対応する統合を追加し、Bluetoothプロキシ経由でデータを読み取り、安定した
 
 XIAO(ESP32-S3) W5500 Ethernet Adapterに加えて、XIAO ESP32-C3とDHT11温湿度センサーも準備する必要があります。
 
@@ -370,7 +376,7 @@ BTHomeプロトコルはHome Assistantへの一方向データ送信のみをサ
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -383,6 +383,13 @@ The XIAO ESP32S3 Sense is shipped with the WebCam sample program pre-installed. 
 
 - [Video Streaming](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage#project-ii-video-streaming)
 
+:::note
+Starting from **June 2025**, the factory firmware of XIAO ESP32S3 Sense enables a default AP Wi‑Fi with the following credentials:
+
+- **SSID:** `XIAO_ESP32S3_Sense`
+- **Password:** `seeedstudio`
+:::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/98.png" style={{width:900, height:'auto'}}/></div>
 
 ### Hardware Preparation

@@ -75,6 +75,14 @@ last_update:
       <div className="category-group">
         <div className="category-card robot-kits">
 
+          <h3>🤗 Reachy</h3>
+          <div className="card-container">
+              <a href="/cn/reachymini_getting_started" className="content-card">
+                <span className="text">Reachy Mini上手使用</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
           <h3>🤗 SO-Arm机械臂</h3>
           <div className="card-container">
               <a href="/cn/lerobot_so100m_new/" className="content-card">
@@ -471,13 +479,13 @@ last_update:
       </a>
 
       <!-- Wheeled-Legged -->
-      <a href="" className="course-card">
+      <a href="https://github.com/Seeed-Projects/AI_Robotics_Academy/blob/main/Seeed_Mini_Wheeled_Legged_Robot/%E4%B8%AD%E6%96%87/README.md" className="course-card">
         <div className="course-cover c-legged">轮足机器人</div>
         <div className="course-info">
           <div className="course-meta"><span className="level int">进阶</span> <span>⏱️ 8小时</span></div>
           <h3>StackForce 轮足机器人系统课程</h3>
           <p>轮足机器人的LQR平衡控制算法与运动规划。</p>
-          <span className="btn-plan">计划中</span>
+          <span className="btn-start">开始学习</span>
         </div>
       </a>
 

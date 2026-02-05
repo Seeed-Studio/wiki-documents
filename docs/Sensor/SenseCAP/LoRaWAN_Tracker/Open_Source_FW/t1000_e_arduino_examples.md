@@ -7,10 +7,14 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_ex
 slug: /t1000_e_arduino_examples
 sidebar_position: 4
 last_update:
-  date: 03/24/2025
-  author: Frederik Funk
+  date: 2/4/2026
+  author: Janet
 ---
 
+
+:::caution note
+Before flashing the firmware, please ensure you device is `T1000-E for LoRaWAN` version and please don't flash other Meshtastic firmware to this tracker model, it may cause the device to be completely dead.
+:::
 
 The following Arduino examples are available:
 
@@ -131,6 +135,12 @@ Instead, follow these steps:
 `python uf2conv.py -f 0xADA52840 -c -o test.uf2 <your_hex_file>.hex`
 
 3. Put the device into DFU mode by pressing and holding the device button, then quickly connect the charging cable twice, the green LED will be solid on. You should now find the T1000-E as mass storage device.
+
+:::danger note
+If no driver window pops up after pressing and holding the device button when connecting the cable, please quickly double-tap the charging cable as shown in the operation below.
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={400} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 

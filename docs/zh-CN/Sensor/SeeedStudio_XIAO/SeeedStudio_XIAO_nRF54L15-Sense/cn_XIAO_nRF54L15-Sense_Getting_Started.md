@@ -308,7 +308,7 @@ west --version
 - nRF Connect SDK
 - VSCode nRF Connect 插件
 
-***如果您已在计算机上预安装了这些工具，可以通过以下命令检查工具的版本号***
+***如果您的计算机上已经预装了这些工具，您可以通过以下命令检查工具的版本号***
 
 </details>
 
@@ -387,8 +387,8 @@ VS Code 的 nRF Connect 扩展包包括以下组件：
 :::
 
 :::tip
-如果您没有看到这些选项中的任何一个，请确保您已安装了最新版本的 nRF Connect for VS Code 扩展包。
-需要注意的是，nRF Connect SDK 是独立于 IDE 的，这意味着您可以选择使用任何 IDE 或完全不使用 IDE。nRF Connect SDK 可通过 https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) 命令行界面 (CLI) 下载和安装。但是，我们强烈建议将我们的 nRF Connect for VS Code 扩展与 VS Code 一起使用，因为它不仅集成了便捷的图形用户界面 (GUI) 和高效的命令行界面 (CLI)，还包括许多将大大简化固件开发的功能。配置其他 IDE 以与 nRF Connect SDK 配合使用需要额外的手动步骤，超出了本课程的范围。
+如果您没有看到这些选项中的任何一个，请确保您已安装最新版本的 nRF Connect for VS Code 扩展包。
+需要注意的是，nRF Connect SDK 是独立于 IDE 的，这意味着您可以选择使用任何 IDE 或根本不使用 IDE。nRF Connect SDK 可通过 https://www.nordicsemi.com/Products/Development-tools/nRF-Util (nrfutil) 命令行界面 (CLI) 下载和安装 nRF Connect。但是，我们强烈建议将我们的 nRF Connect for VS Code 扩展与 VS Code 一起使用，因为它不仅集成了便捷的图形用户界面 (GUI) 和高效的命令行界面 (CLI)，还包括许多将大大简化固件开发的功能。配置其他 IDE 以与 nRF Connect SDK 配合使用需要额外的手动步骤，超出了本课程的范围。
 :::
 
 #### 创建用户程序
@@ -463,7 +463,7 @@ Blinky 示例将使开发板上的 LED1 持续闪烁。
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-此命令会绕过当前 PowerShell 会话的执行策略并安装 Chocolatey。安装完成后，关闭并重新打开 PowerShell 窗口（仍以管理员身份运行）。
+此命令会绕过当前 PowerShell 会话的执行策略并安装 Chocolatey。安装完成后，关闭并重新打开 PowerShell 窗口（仍需以管理员身份运行）。
 
 **4.安装 OpenOCD：**
 
@@ -642,7 +642,7 @@ return 0;
 
 对于 XIAO nRF54L15 开发板，提供了出厂重置脚本来从错误状态中恢复开发板（例如，当由于内部 NVM 写保护而无法上传时）。此脚本将执行闪存的批量擦除并编程出厂固件。
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Jasionf/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
+    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> 出厂重置</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -943,7 +943,7 @@ XIAO nRF54L15 内置电源管理芯片，允许 XIAO nRF54L15 使用电池独立
 2. XIAO 在使用电池时可以通过数据线连接到您的计算机设备，请放心，XIAO 内置了电路保护芯片，是安全的。
 3. XIAO nRF54L15 在电池供电时不会有任何 LED 亮起（除非您编写了特定程序），请不要通过 LED 状态来判断 XIAO nRF54L15 是否正常工作，请通过您的程序合理判断。
 
-同时，我们为电池充电设计了一个红色指示灯，通过指示灯显示来告知用户电池当前的充电状态。
+同时，我们为电池充电设计了红色指示灯，通过指示灯显示来告知用户电池当前的充电状态。
 
 <!-- 1. When XIAO nRF54L15 is not connected to the battery, the red light comes on when the Type-C cable is connected and goes off after 30 seconds.
 2. The red light flashes when the battery is connected and the Type-C cable is connected for charging.
@@ -958,9 +958,9 @@ XIAO nRF54L15 内置电源管理芯片，允许 XIAO nRF54L15 使用电池独立
 
 如果您遇到 XIAO nRF54L15 在刷写程序后仅由 3.7V 锂电池供电时无法启动的情况，请参考以下解决方案。
 
-对于当前硬件版本（v1.0），我们建议管理两个构建配置，以便在 **工作台调试**（USB 连接，UART 启用）和 **电池部署**（独立运行，UART 禁用）之间轻松切换。
+对于当前硬件版本（v1.0），我们建议管理两个构建配置，以便在 **台式调试**（USB 连接，UART 启用）和 **电池部署**（独立运行，UART 禁用）之间轻松切换。
 
-**场景 A：USB 工作台调试**
+**场景 A：USB 台式调试**
 
 **何时使用：** 您正在编写代码、刷写固件，并需要通过 **USB 串口** 查看日志。
 
@@ -1021,7 +1021,7 @@ west build -p always -d build_batt -b xiao_nrf54l15/nrf54l15/cpuapp .
 **总结**
 
 - **通过 USB 连接**  使用 **`prj_uart.conf`** 覆盖来启用串口监视器。
-- **电池运行**  使用默认的 **`prj.conf`** 以确保设备正常启动。
+- **电池运行**  使用默认的 **`prj.conf`** 确保设备启动无问题。
 
 :::
 

@@ -122,10 +122,14 @@ If you have not set up Home Assistant, you can click this link and follow the of
 <summary>Click here to copy the yaml file</summary>
 
 ```yaml
+# Only boards produced after November 1, 2025 are supported
+# ==== AUTO-SYNC START: xiao-w5500-ethernet-adapter/xiao-w5500-ethernet-adapter.yaml ====
+
+# Only boards produced after November 1, 2025 are supported
 esphome:
-  name: seeed-esp32-s3
-  friendly_name: Bluetooth Proxy
-  min_version: 2025.8.0
+  name: seeed-esp32-poe
+  friendly_name: "XIAO W5500 Ethernet Adapter V1.2"
+  min_version: 2025.11.0
   name_add_mac_suffix: true
 
 esp32:
@@ -135,10 +139,11 @@ esp32:
 
 ethernet:
   type: W5500
-  cs_pin: GPIO2
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
+  cs_pin: GPIO2
+  interrupt_pin: GPIO10
 
 api:
 logger:
@@ -147,14 +152,14 @@ ota:
   - platform: esphome
     id: ota_esphome
 
+esp32_ble:
+  max_connections: 4
+
 esp32_ble_tracker:
-  scan_parameters:
-    interval: 1100ms
-    window: 1100ms
-    active: true
 
 bluetooth_proxy:
   active: true
+  connection_slots: 4
 
 button:
   - platform: safe_mode
@@ -164,6 +169,7 @@ button:
   - platform: factory_reset
     id: factory_reset_btn
     name: Factory reset
+# ==== AUTO-SYNC END ====
 ```
 
 </details>

@@ -160,11 +160,11 @@ sudo vi /mnt/system/usb-ncm.sh
 多次重启后可能会失效，需要重新设置。
 :::
 
-### 2.2 在 reCamera 中安装来自 SenseCraft 平台的程序
+### 2.2 从 SenseCraft 平台在 reCamera 中安装程序
 
-进入 sensecraft 平台-Workspace-[reCamera](https://sensecraft.seeed.cc/ai/recamera)，找到名为 "**Real-time heat map local blur processing Grafa**" 的演示并将其部署到您的 reCamera 上
+前往 [SenseCraft 平台](https://sensecraft.seeed.cc/ai/home) - Application - 搜索框并输入 "Real-time Crowd Heatmap" 进行搜索，找到名为 "Real-time Crowd Heatmap" 的应用程序并将其部署到您的 reCamera。
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_8.png" /></div>
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_92.png" /></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_9.png" /></div>
 
@@ -200,13 +200,17 @@ sudo vi /mnt/system/usb-ncm.sh
 
 双击打开配置面板，然后点击服务器后面的小铅笔图标
 
+:::note
+在此之前，请记住小铅笔下方的 "Organization" 和 "Bucket" 选项中的内容与您在 InfluxDB 中配置的内容相同！！！"Organization" 是您在 InfluxDB 中的用户名，"Bucket" 是您创建的数据库名称。
+:::
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_17.png" /></div>
 
 点击小铅笔后，我们需要填写 URL 和 Token
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_18.png" /></div>
 
-这里的 URL 是填写我们在第一步中输入的 InfluxDB 网页链接。例如，您的网页是 192.168.7.183:8086，那么您可以在 URL 中填写 `http://192.168.7.183:8086`。
+这里的 URL 是填入我们在第一步中进入的 InfluxDB 网页链接。例如，如果您的网页是 192.168.7.183:8086，那么您可以在 URL 中填入 `http://192.168.7.183:8086`。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_19.png" /></div>
 
@@ -240,6 +244,10 @@ sudo vi /mnt/system/usb-ncm.sh
 
 进入 Grafana 官方网站 [Grafana get started | Cloud, Self-managed, Enterprise](https://grafana.com/get/) 下载安装包到本地。我这里下载的版本是 12.3.0
 
+:::note
+记住，Grafana 必须安装在 C 盘！！！否则，您以后无法修改其配置文件。
+:::
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_25.png" /></div>
 
 下载并安装后，Grafana 应该会自动在后台运行，您可以打开计算机的"服务"查看它是否正在运行
@@ -248,7 +256,7 @@ sudo vi /mnt/system/usb-ncm.sh
 
 #### 3.1.2 Linux 系统
 
-如果您的设备是运行 Linux 的基于 ARM 的设备（如树莓派），那么下载链接在[这里](https://dl.grafana.com/grafana/release/12.3.0/grafana_12.3.0_19497075765_linux_arm64.tar.gz)  
+如果您的设备是运行 Linux 的基于 ARM 的设备（如树莓派），那么下载链接在[这里](https://dl.grafana.com/grafana/release/12.3.0/grafana_12.3.0_19497075765_linux_arm64.tar.gz)
 
 如果您的设备是运行 Linux 系统的基于 AMD 的设备，请下载链接[这里](https://dl.grafana.com/grafana/release/12.3.0/grafana_12.3.0_19497075765_linux_amd64.tar.gz)
 
@@ -278,7 +286,7 @@ sudo vi /mnt/system/usb-ncm.sh
 
 ### 3.3 启动 Grafana
 
-对于 Windows 系统，如果您已经安装了 Grafana，您只需要按照步骤 3.1.1 中描述的在"服务"部分检查 Grafana 是否正在运行。通常，Grafana 会在安装后自动启动。  
+对于 Windows 系统，如果您已经安装了 Grafana，您只需要按照步骤 3.1.1 中描述的在"服务"部分检查 Grafana 是否正在运行。通常，Grafana 会在安装后自动启动。
 
 对于 Linux 系统，需要手动启动 Grafana。进入解压的 grafana 文件目录后，运行以下命令：
 
@@ -308,11 +316,11 @@ sudo vi /mnt/system/usb-ncm.sh
 (3) 禁用 "Basic auth" 选项
 (4) "Organization" 应该填入您注册数据库时使用的用户名。
 (5) Token 应该填入我们在步骤 2.3 中讨论的 InfluxDB 网页中提到的 API Tokens。
-(6) "Default Bucket" 应该填入您创建的数据库名称。  
+(6) "Default Bucket" 应该填入您创建的数据库名称。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_85.png" /></div>
 
-一切准备就绪后，点击 "Save & Test"。如果测试成功，将显示 "datasource is working"。此时，您可以直接进行下一步。这些设置将自动保存。
+一切准备就绪后，点击 "Save & Test"。如果测试成功，它将显示"datasource is working"。此时，您可以直接进行下一步。这些设置将自动保存。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_79.png" /></div>
 
@@ -368,7 +376,7 @@ sudo vi /mnt/system/usb-ncm.sh
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_35.png" /></div>
 
-点击 Terminal 并输入 reCamera 账户密码登录。
+点击 Terminal 并输入 reCamera 账户密码进行登录。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_36.png" /></div>
 
@@ -386,7 +394,7 @@ cd / && cd userdata/Images/
 ls
 ```
 
-然后您应该看到系统列出了一些图片文件名，这些是刚刚由捕获节点拍摄的图片。
+然后您应该看到系统列出了一些图片文件名，这些是刚才由 capture 节点拍摄的图片。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_37.png" /></div>
 
@@ -424,7 +432,7 @@ scp -r recamera@10.228.172.71:/userdata/Images "C:\Users\seeed\Desktop\热力图
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_43.png" /></div>
 
-现在从我的项目中删除原始的 R1.jpg。
+现在从我的项目中删除原来的 R1.jpg。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_44.png" /></div>
 
@@ -456,7 +464,7 @@ pip install opencv-python
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_48.png" /></div>
 
-程序运行后，会弹出一个窗口显示您的相机截图。此时，您需要用鼠标点击有效区域。点击顺序非常重要：请按照"左上角->右上角->右下角->左下角"的顺时针顺序点击您要选择区域的四个角。例如，如果您只想显示桌面，请点击桌子的四个角。点击 4 个点后，按键盘上的任意键（如空格键）进入下一步。
+程序运行后，会弹出一个窗口显示您的相机截图。此时您需要用鼠标点击有效区域。点击顺序非常重要：请按照"左上角->右上角->右下角->左下角"的顺时针顺序点击您要选择区域的四个角。例如，如果您只想显示桌面，请点击桌子的四个角。点击 4 个点后，按键盘上的任意键（如空格键）进入下一步。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_49.png" /></div>
 
@@ -464,13 +472,13 @@ pip install opencv-python
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_50.png" /></div>
 
-然后回到命令行窗口（CMD），您会看到脚本自动生成了一段 JS 代码，直接复制该代码，替换您的 index.html 中的 `const CALIBRATION = { ... };` 即可。（直到下一步"5.5 校准的坐标数据"才会用到，暂时不用管它）
+然后回到命令行窗口（CMD），您会看到脚本自动生成了一段 JS 代码，直接复制该代码，替换您的 index.html 中的 `const CALIBRATION = { ... };` 即可。（在下一步"5.5 校准的坐标数据"之前不会用到，暂时不管它）
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_51.png" /></div>
 
 ## 5. 热力图页面的配置
 
-热力图的网页配置也可以在[我的 GitHub 项目](https://github.com/xr686/reCamera-with-Heatmap.git)中找到，具体在 heatmap-demo 文件夹中的 index.html 文件中。我们还需要修改此文件中的几个部分；否则，它将无法正常运行并接收热力图坐标数据。
+热力图的网页配置也可在[我的 GitHub 项目](https://github.com/xr686/reCamera-with-Heatmap.git)中找到，具体在 heatmap-demo 文件夹中的 index.html 文件中。我们还需要修改此文件中的几个部分；否则，它将无法正常运行并接收热力图坐标数据。
 
 ### 5.1 热力图的网页参数配置
 
@@ -508,7 +516,7 @@ TOKEN 是您的 InfluxDB API Tokens，请将 HTML 中原来的 12345678 替换�
 
 ##### 参数说明
 
-REFRESH_INTERVAL 指的是刷新的毫秒数，DATA_RANGE 指的是查询过去数据的时间。代码中默认的"3000"和"-3s"，其中"3000"表示 3000 毫秒，即每 3 秒刷新一次，而"-3s"表示查询过去 3 秒的热力坐标数据。
+REFRESH_INTERVAL 指刷新的毫秒数，DATA_RANGE 指查询过去数据的时间。代码中默认的"3000"和"-3s"，其中"3000"表示 3000 毫秒，即每 3 秒刷新一次，而"-3s"表示查询过去 3 秒的热力坐标数据。
 
 ##### 模式选择
 
@@ -526,7 +534,7 @@ REFRESH_INTERVAL 指的是刷新的毫秒数，DATA_RANGE 指的是查询过去�
 
 CAM_WIDTH / CAM_HEIGHT：相机实际流媒体的分辨率（例如 1920x1080 或 1280x720）必须在此处填写，否则透视变换将出错。
 
-此参数也在"4.1.1 使用 reCamera 拍照"步骤中提到。当我们将相机节点与捕获节点连接时，您可以查看相机节点的 Resolution 参数。这是您需要修改的分辨率参数。如果这里选择了 1920×1080，那么在代码中，您应该将 CAM_WIDTH 修改为 1920，CAM_HEIGHT 修改为 1080
+此参数也在"4.1.1 使用 reCamera 拍照"步骤中提到。当我们将相机节点与 capture 节点连接时，您可以查看相机节点的 Resolution 参数。这是您需要修改的分辨率参数。如果这里选择了 1920×1080，那么在代码中，您应该将 CAM_WIDTH 修改为 1920，CAM_HEIGHT 修改为 1080
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_60.png" /></div>
 
@@ -534,7 +542,7 @@ CAM_WIDTH / CAM_HEIGHT：相机实际流媒体的分辨率（例如 1920x1080 �
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_61.png" /></div>
 
-这是在前面步骤"4.3 校准程序的使用"中执行 python 程序后在控制台中生成的代码。替换此代码
+这是在上一步"4.3 校准程序的使用"中执行 python 程序后在控制台中生成的代码。替换此代码
 
 #### 5.1.6 热力阈值
 
@@ -542,9 +550,9 @@ CAM_WIDTH / CAM_HEIGHT：相机实际流媒体的分辨率（例如 1920x1080 �
 
 ##### 参数说明
 
-敏感度（最大值）：如果是实时模式（只有几个点），max 设置为大约 2，否则颜色太浅看不见；
+敏感度（最大值）：如果是实时模式（只有几个点），max 设置为 2 左右，否则颜色太浅看不清；
 
-如果是 1 小时累积（数千个点），max 应该设置为 150 或更高，否则地图会立即变红（过度曝光）。
+如果是 1 小时累积（数千个点），max 应该设置为 150 或更高，否则地图会瞬间变红（过曝）。
 
 ### 5.2 激活热力图
 
@@ -606,7 +614,7 @@ python -m http.server 8080
 
 ### Grafana 面板中的"连续运行时间"是什么意思
 
-这里的"连续运行时间"是指数据库从第一天到现在运行了多长时间，因为我在 InfluxDB 中设置 reCamera 数据库的数据保留时间为 7 天，所以七天后会自动清除并重新计时，这里您可以在 InfluxDB 中自由设置每个数据库的数据存储时间。
+这里的"连续运行时间"是指数据库从第一天到现在运行了多长时间，因为我在 InfluxDB 中将 reCamera 数据库的数据保留时间设置为 7 天，所以七天后会自动清除并重新计时，这里您可以在 InfluxDB 中自由设置每个数据库的数据存储时间。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Heatmap/heatmap_68.png" /></div>
 

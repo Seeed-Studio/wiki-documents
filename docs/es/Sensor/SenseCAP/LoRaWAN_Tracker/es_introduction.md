@@ -9,7 +9,7 @@ slug: /es/t1000e_for_lorawan_introduction
 sku: 114993591
 sidebar_position: 1
 last_update:
-  date: 1/9/2026
+  date: 2/4/2026
   author: Janet
 ---
 
@@ -27,7 +27,7 @@ last_update:
 El T1000-E para LoRaWAN viene con firmware completamente de código abierto. Para mejorar la experiencia del usuario, proporcionamos firmware de demostración preinstalado en dispositivos producidos en fábrica. Los usuarios pueden explorar el firmware de demostración para una experiencia inicial y también desarrollar su propio firmware personalizado. Para detalles sobre desarrollo personalizado, consulte el [Firmware de Código Abierto LoRaWAN](https://wiki.seeedstudio.com/es/open_source_lorawan/).
 
 :::caution note
-Antes de flashear el firmware, asegúrese de que su dispositivo sea la versión `T1000-E for LoRaWAN`. Por favor, no flashee otro firmware de Meshtastic a este modelo de rastreador que no soporta Meshtastic, ya que puede causar que el dispositivo quede completamente inoperativo.
+Antes de flashear el firmware, asegúrese de que su dispositivo sea la versión `T1000-E for LoRaWAN` y por favor no flashee otro firmware Meshtastic a este modelo de rastreador, puede causar que el dispositivo quede completamente inoperativo.
 :::
 
 **Comparación de Versiones de la T1000 Serie**
@@ -67,25 +67,25 @@ Antes de flashear el firmware, asegúrese de que su dispositivo sea la versión 
 
 ### Ubicación
 
-| Característica                  | Descripción                                                  |
+| Característica                  | Descripción                                                   |
 |--|--|
-| Constelación GNSS      | GPS / GLONASS / Galileo / BeiDou / QZSS                            |
-| Sensibilidad GNSS      | -145dBm arranque en frío / -160 dBm Seguimiento                    |
-| Precisión de Ubicación GNSS | ~10m CEP, GPS, -130dBm                                        |
-| Posicionamiento Wi-Fi  | Escaneo pasivo, sube las 3~5 direcciones MAC escaneadas            |
-| Posicionamiento Bluetooth | sube las 3 mejores direcciones MAC de señal de Beacon           |
+| Constelación GNSS      | GPS / GLONASS / Galileo / BeiDou / QZSS                             |
+| Sensibilidad GNSS      | -145dBm arranque en frío / -160 dBm Seguimiento                     |
+| Precisión de Ubicación GNSS | ~10m CEP, GPS, -130dBm                                         |
+| Posicionamiento Wi-Fi  | Escaneo pasivo, sube las 3~5 direcciones MAC escaneadas             |
+| Posicionamiento Bluetooth | sube las 3 mejores direcciones MAC de señal de Beacon            |
 
 
 ### Batería
 
-| Característica                   | Descripción                                                        |
+| Característica                   | Descripción                                                         |
 |--|--|
-| Capacidad de Batería             | Batería de litio recargable, 700mAh                               |
-| Estimaciones de Vida de Batería  | 3 meses con una sola carga (uplink cada 1 hora, solo datos GNSS)  |
-| Monitoreo de Vida de Batería     | Uplink periódico del nivel de batería                             |
-| Cable de Carga (Adaptador no incluido) | Cable de carga magnético USB, 1 metro                      |
-| Voltaje de Entrada de Energía    | 4.7 a 5.5V DC                                                     |
-| Temperatura de Carga             | 0 ~ +45°C                                                         |
+| Capacidad de Batería             | Batería de litio recargable, 700mAh                                 |
+| Estimaciones de Vida de Batería  | 3 meses con una sola carga (uplink cada 1 hora, solo datos GNSS)   |
+| Monitoreo de Vida de Batería     | Uplink periódico del nivel de batería                              |
+| Cable de Carga (Adaptador no incluido) | Cable de carga magnético USB, 1 metro                       |
+| Voltaje de Entrada de Energía    | 4.7 a 5.5V DC                                                      |
+| Temperatura de Carga             | 0 ~ +45°C                                                          |
 
 
 
@@ -96,7 +96,7 @@ Antes de flashear el firmware, asegúrese de que su dispositivo sea la versión 
 
 ## Aplicación
 
-- **Seguimiento de Activos**: Monitorear el estado y ubicación de activos remotamente. Transmitir datos de ubicación a la nube vía LoRaWAN. Los usuarios pueden ver la posición en tiempo real y la trayectoria en plataformas de gestión móviles o PC.
+- **Seguimiento de Activos**: Monitorear el estado y ubicación de activos remotamente. Transmitir datos de ubicación a la nube vía LoRaWAN. Los usuarios pueden ver la posición en tiempo real y trayectoria en plataformas de gestión móviles o PC.
 - **Monitoreo Ambiental**: Aprovechar los sensores térmicos integrados, fotosensibles y acelerómetro de 3 ejes. Recopilar y subir datos ambientales en tiempo real vía LoRaWAN para monitoreo remoto de parámetros.
 - **Gestión Logística**: Instalar en vehículos o paquetes. Rastrear el estado del transporte de carga (rutas, paradas, llegada a tiempo) en tiempo real, ayudando a las empresas logísticas en programación y gestión.
 

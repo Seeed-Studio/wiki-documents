@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 01/26/2026
+  date: 02/02/2026
   author: Frank
 ---
 
@@ -17,97 +17,85 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is January 26th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is February 2nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Deploy local voice LLM on reComputer Mini for Reachy Mini](https://wiki.seeedstudio.com/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk/)
+### [Develop reComputer Jetson using Clawdbot](https://wiki.seeedstudio.com/develop_recomputer_jetson_using_clawdbot/)
 
-<div class="video-container">
-  <iframe width="801" height="450" src="https://www.youtube.com/embed/broyI7PLm_g" title="Double Mini! Deploy local voice LLM on reComputer Mini for Reachy Mini!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-Double Mini! This project will build a fully localized, low-latency, and high-privacy voice interactive robotic assistant system. Centered around the reComputer Mini J501 edge computing device, it deploys local speech recognition, large language model, and speech synthesis services. Using the open-source robotic platform Reachy Mini as the physical terminal for human-computer interaction, it achieves an embodied intelligent interactive experience that is perceptive, conversational, and actionable.
+Traditionally, developing on a Jetson edge device required a physical setup with a monitor, keyboard, and mouse. Even with remote SSH access, developers still depended on terminal-based workflows and additional tools for monitoring and deployment. With Clawdbot, development becomes much simpler. Developers can now interact with the reComputer Jetson directly through a chat app like WhatsApp — sending messages to check device status, run commands, and debug scripts in a more convenient way. This wiki shows how to deploy and use Clawdbot on reComputer Jetson.
 
 </div>
 
-### [Deploy NVBlox with Orbbec Camera on Jetson AGX Orin](https://wiki.seeedstudio.com/deploy_nvblox_jetson_agx_orin/)
+### [Getting Started with reTerminal E1004](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/)
 
-<p style={{textAlign: 'center'}}><img src="https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-4.0/resources/isaac_ros_docs/repositories_and_packages/isaac_ros_nvblox/isaac_sim_nvblox_humans.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) is a high-performance GPU-accelerated 3D mapping framework developed by NVIDIA for real-time robotic perception. Unlike monocular depth estimation models, NVBlox consumes true depth input from RGB-D cameras or stereo cameras to construct accurate 3D scene representations. This wiki demonstrates how to deploy Isaac ROS NVBlox on **Jetson AGX Orin** with **ROS 2** integration, using an **Orbbec RGB-D camera** and a mobile robot platform to achieve a fully on-device perception and navigation pipeline.
+reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 3-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visulization.
 
 </div>
 
-### [Deploy Whisper on Raspberry Pi AI box](https://wiki.seeedstudio.com/deploy_whisper_on_raspberry_pi_ai_box/)
+### [Deploying Espectre on Seeed Studio XIAO ESP32 Series with ESPHome](https://wiki.seeedstudio.com/xiao-esp32--series-espresense/)
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/openai/whisper/main/approach.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32_Espectre/image1.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-[Whisper](https://github.com/openai/whisper) is a versatile, state-of-the-art Automatic Speech Recognition (ASR) and speech processing model developed by OpenAI. Unlike traditional speech-to-text systems, Whisper was trained on 680,000 hours of multilingual and multitask supervised data collected from the web. This massive and diverse dataset makes the model exceptionally robust to accents, background noise, and technical terminology. This guide provides a comprehensive walkthrough for the deployment and utilization of [Whisper](https://github.com/openai/whisper) on the Raspberry Pi AI Box.
+**ESPectre is a motion detection system based on Wi-Fi spectre analysis (CSI), with native Home Assistant integration via ESPHome.** When someone moves in a room, they "disturb" the Wi-Fi waves traveling between the router and the sensor. It's like when you move your hand in front of a flashlight and see the shadow change. The [XIAO ESP32 board](https://www.seeedstudio.com/ESP32-Series-c-2580.html) "listens" to these changes and understands if there's movement.
 
 </div>
 
-### [reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_getting_started/)
+### [YOLOv26 Dual USB Camera Image Processing System on Jetson](https://wiki.seeedstudio.com/ai_robotics_yolov26_dual_camera_system/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-These two guides demonstrate how to use the **ReSpeaker XVF3800 USB Mic Array** together with the **Seeed Studio XIAO ESP32S3** to build embedded audio applications, covering both raw audio streaming and on-device voice intelligence features.
-
-- **[HTTP Audio Streaming](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_http_audio_stream/)**  
-  This guide shows how to capture audio from the XVF3800 using the XIAO ESP32S3, record 5 seconds of 16 kHz stereo 32-bit PCM audio, store it in PSRAM, and upload the audio over Wi-Fi to a Python-based Flask HTTP server as a standard WAV file.
-
-- **[DoA and VAD](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_doa_vad/)**  
-  This guide focuses on leveraging the XVF3800’s built-in **Voice Activity Detection (VAD)** and **Direction of Arrival (DoA)** capabilities. These inference results are computed internally by the XMOS XVF3800 and can be accessed by the host MCU over I2C, enabling features such as wake-on-voice, sound source localization, and direction-aware feedback without processing raw audio data on the MCU.
+This wiki demonstrates how to build a dual USB camera image processing system based on YOLOv26 model and TensorRT acceleration from scratch.
 
 </div>
 
-### [Seeed Studio XIAO ESP32-C5 Wi-Fi Throughput Testing Tool](https://wiki.seeedstudio.com/xaio_esp32c5_wifi_throughput_tester/)
+### [Seeed Studio XIAO nRF54L15 Sense Zigbee](https://wiki.seeedstudio.com/xiao_nrf54l15_zigbee/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_Start.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-114993697-xiao-nrf54l15-sense_pre-soldered_.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-The Seeed Studio XIAO ESP32-C5 features the ESP32-C5 as its core processor.The ESP32-C5 is the industry's first RISC-V microcontroller to support dual-band Wi-Fi 6 (802.11ax) in both the 2.4GHz and 5GHz bands. Boasting exceptional wireless performance, it holds significant potential for applications in smart homes, the Internet of Things (IoT), and various other scenarios. Next, we will use a Wi-Fi throughput testing tool to visually demonstrate the powerful data throughput capabilities of the XIAO ESP32-C5 based on Wi-Fi 6, across both the 2.4GHz and 5GHz frequency bands!
+This tutorial guides you through implementing [Zigbee](https://en.wikipedia.org/wiki/Zigbee) applications on the Seeed Studio **XIAO nRF54L15** development board, this board combines **Wi-Fi**, **Bluetooth Low Energy (BLE)**, and **Zigbee** connectivity, making it perfect for **IoT applications**. The examples in this guide use the NCS to bring Zigbee functionality to life.
 
 </div>
 
-### [Deploying ESPresense on Seeed Studio XIAO ESP32-C3 with Home Assistant](https://wiki.seeedstudio.com/xiao-esp32c3-espresense/)
+### [AI Human Detection and Meshtastic Notification Demo](https://wiki.seeedstudio.com/ai_human_detection_meshtastic_broadcast/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document describes how to integrate the open-source Bluetooth presence detection system, **ESPresense**, with the **Seeed Studio XIAO ESP32-C3**. The presence detection node based on the XIAO ESP32-C3 can work with the [MQTT Room component](https://www.home-assistant.io/components/sensor.mqtt_room/) of Home Assistant to enable indoor positioning.
+This demo showcases a powerful Edge AI solution integrating the reCamera with a Meshtastic LoRa mesh network. By running a local YOLO11n model, the reCamera identifies humans in real-time and triggers a GPIO signal. This physical signal prompts a XIAO ESP32S3 node to broadcast a "Human detected" alert across the decentralized network. This setup allows for autonomous, off-grid monitoring and security without relying on internet infrastructure. The guide covers hardware assembly for the PoE baseboard, C++ deployment, and Mesh node configuration to bridge AI vision with long-range communication.
 
 </div>
 
-### [Connecting SenseCAP T2000 Tracker to AWS IoT Core](https://wiki.seeedstudio.com/sensecap_t2000_tracker_aws/)
+### [Deploy your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeaker](https://wiki.seeedstudio.com/respeaker_xvf_3800_xiaozhi/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This document describes how to connect the SenseCAP T2000 Tracker to AWS IoT Core. By following this guide, you will create and configure the required AWS IoT resources and enable secure and reliable data transmission from the SenseCAP T2000 to the AWS cloud for further data processing, storage, and visualization.
+reSpeaker XVF3800 is a professional 4-microphone circular array based on the XMOS XVF3800 chip. It provides reliable voice pickup in noisy environments with features including dual modes, 360° far-field pickup (up to 5 m), acoustic echo cancellation (AEC), automatic gain control (AGC), direction of arrival (DoA), dereverberation, beamforming and noise suppression. With its robust capture and denoising abilities, Xiaozhi gets a much better "ear".
 
 </div>
 
-### [Connecting SenseCAP T2000 Tracker to Helium](https://wiki.seeedstudio.com/sensecap_t2000_tracker_helium/)
+## Existing Wiki Updated
 
-<div style={{ textAlign: "justify" }}>
+### [Getting Started with XIAO ePaper Display Board - EE02](https://wiki.seeedstudio.com/getting_started_with_ee02/)
 
-This document explains how to connect the SenseCAP T2000 Tracker to the Helium LoRaWAN® network. By following this guide, you will configure the device and Helium network settings to enable the T2000 to join Helium and transmit tracking data over the decentralized LoRaWAN infrastructure for further processing and use.
-
-</div>
-
-<!-- ## Existing Wiki Updated
-
-### [Deploying AI Models on SenseCAP A1102 Using SenseCraft AI](https://wiki.seeedstudio.com/deploy_ai_with_a1102/)
-
-We have added a [Custom AI Model Deploying Process](https://wiki.seeedstudio.com/deploy_ai_with_a1102/#custom-ai-model-deploying-process). -->
+We have added an [example](https://wiki.seeedstudio.com/getting_started_with_ee02/#getting-started-with-arduino) demonstrating how to operate the EE02 using Arduino.
 
 ## The Efforts of Contributor
 
@@ -227,5 +215,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.1.05th](/Seeed_Elderly/weekly_wiki/2026/wiki260105)
 - [weekly wiki on 2026.1.12th](/Seeed_Elderly/weekly_wiki/2026/wiki260112)
 - [weekly wiki on 2026.1.19th](/Seeed_Elderly/weekly_wiki/2026/wiki260119)
+- [weekly wiki on 2026.1.26th](/Seeed_Elderly/weekly_wiki/2026/wiki260126)
 
 </details>

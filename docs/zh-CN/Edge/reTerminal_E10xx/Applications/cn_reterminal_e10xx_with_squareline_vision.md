@@ -26,15 +26,11 @@ last_update:
 - **快速嵌入式原型制作** – 在桌面或目标硬件上即时预览和验证您的 UI，大大减少设计到设备的迭代时间。
 - **LVGL 驱动的导出** – 无缝将您的设计导出为干净的基于 LVGL 的源代码，准备在嵌入式设备、微控制器或仿真环境中编译。
 
-使用 SquareLine Vision，您可以在几分钟内从概念到交互式嵌入式 UI 原型——结合设计灵活性、实时预览和生产就绪的 LVGL 输出，加速您的整个产品开发周期。
+使用 SquareLine Vision，您可以在几分钟内从概念到交互式嵌入式 UI 原型 — 结合设计灵活性、实时预览和生产就绪的 LVGL 输出，加速您的整个产品开发周期。
 
 ### 所需材料
 
-要完成本教程，请准备以下 reTerminal E 系列设备之一：
-
-:::note
-截至目前，SquareLine Vision 仅兼容 reTerminal E1002，尚不支持 reTerminal E1001。但是，官方团队已经在进行必要的适配工作。
-:::
+要完成本教程，请准备以下 reTerminal E 系列设备之一，E1001 是单色的，E1002 是全彩的：
 
 <div class="table-center">
   <table align="center">
@@ -81,26 +77,26 @@ last_update:
 - 各种小部件类型
 - 如何利用事件、触发器和动作
 
-当您对平台的整体组织结构和工具有清晰的了解时，这将对您个人项目的制作非常有帮助。接下来，我将基于我们的 reTerminal E1002 创建一个项目。
+当您对平台的整体组织结构和工具有清晰的了解时，这对您个人项目的制作将非常有帮助。接下来，我将基于我们的 reTerminal E1002 创建一个项目。
 
 ## 创建项目
 
 ### 启动新的 LVGL 项目
 
-在 SquareLine Vision 启动器界面的顶部，点击 `Create new` 按钮。然后，选择 `Seeed Studio` 查看我们的产品。选择 `reTerminal E1002` 来创建项目。
+在 SquareLine Vision 启动器界面的顶部，点击 `Create new` 按钮。然后，选择 `Seeed Studio` 查看我们的产品。选择 `reTerminal E1002` 创建项目。
 此项目的固定设置为：
 - `Resolution`：800x480
-- `Offset`：0(x), 0(y)
+- `Offset`：0(x)，0(y)
 - `Rotation`：0°
 - `Shape`：Rectangle
 - `Color Depth`：32 bit
 - `LVGL version`：9.1
 - `Theme`：Light
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Launcher_2.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::tip
-我们已经支持 SenseCAP Watcher 和 reTerminal E1002 设备。未来，我们还将支持更多来自 Seeed Studio 的产品。
+我们已经支持 SenseCAP Watcher 和 reTerminal E1001 和 E1002 设备。未来，我们还将支持更多来自 Seeed Studio 的产品。
 :::
 
 ### 导入现有的 .slvp 项目
@@ -111,16 +107,23 @@ last_update:
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Seeed Weather 7 epaper</th>
-      <th>Seeed Weather 13 epaper</th>
+      <th>单色天气</th>
+      <th>全彩天气</th>
+      <th>全彩天气 2</th>
     </tr>
     <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_1.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_2.png" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Import_3.png" style={{width:250, height:'auto'}}/></div></td>
     </tr>
     <tr>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Seeed Weather 7 epaper.slvp" target="_blank">
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处获取</button></p>
+        </a>
+      </div></td>
+      <td><div align="center">
+        <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/Paper_Weather.slvp" target="_blank">
         <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处获取</button></p>
         </a>
       </div></td>
@@ -146,7 +149,7 @@ last_update:
 
 ### UI 界面设计
 
-UI（用户界面）设计在嵌入式产品开发中至关重要，因为它直接决定用户体验。一个美观、直观且响应迅速的界面不仅增强了产品的可用性，还提升了其整体吸引力。
+UI（用户界面）设计在嵌入式产品开发中至关重要，因为它直接决定用户体验。一个美观、直观且响应迅速的界面不仅提高了产品的可用性，还提升了其整体吸引力。
 
 在 SquareLine Vision 中，您可以通过拖放组件快速组装界面。利用样式、字体、位图和主题等工具精确控制视觉效果，打造专业且独特的用户体验。
 
@@ -162,7 +165,7 @@ UI（用户界面）设计在嵌入式产品开发中至关重要，因为它直
 
 #### 检查器介绍
 
-此面板允许您查看和修改屏幕、容器、小部件和其他 UI 元素的属性。此外，可能还有因小部件类型而异的特殊设置。当我选择"background img"时，我可以在检查器中看到与 img 相关的所有组件。
+此面板允许您查看和修改屏幕、容器、小部件和其他 UI 元素的属性。此外，可能还有因小部件类型而异的特殊设置。当我选择"background img"时，我可以在检查器中看到与该图像相关的所有组件。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/UI_5.png" style={{width:500, height:'auto'}}/></div>
 
@@ -174,11 +177,11 @@ UI（用户界面）设计在嵌入式产品开发中至关重要，因为它直
 - **项目名称**：显示当前项目的名称。
 - **计划**：显示用户当前的订阅计划。
 - **编辑器/动画模式**：在两个不同的工作环境之间切换
-- **组件**：通过三个下拉菜单访问 UI 元素，这些菜单按逻辑分组组件，便于为您的项目找到合适的组件。
+- **小部件**：通过三个下拉菜单访问 UI 元素，这些菜单逻辑地分组组件，使您能够轻松找到适合项目的小部件。
 - **撤销/重做**：允许在设计更改中向后和向前步进，支持无风险的实验。
-- **播放模式**：启动预览和测试 UI 仿真。
+- **播放模式**：启动预览和测试 UI 模拟。
 - **发送错误报告**：提供对错误报告系统的直接访问。
-- **用户**：显示当前在您项目中工作的所有活跃用户，支持协作设计工作。
+- **用户**：显示当前在您的项目中工作的所有活跃用户，支持协作设计工作。
 - **视图选项**：您可以切换小地图显示并在专用输入字段中输入精确的缩放百分比值。
 - **版本**：显示您的项目运行的当前 SquareLine Vision 版本，确保您了解软件环境。
 
@@ -218,12 +221,12 @@ exported_project/
 
 #### 关键组件
 
-GUI 子系统的主要接口。提供以下高级功能：
+GUI 子系统的主要接口。提供高级功能：
 
 - `GUI_load()`：完整的 GUI 初始化，包括 HAL 和 LVGL
 - `GUI_init()`：基本 GUI 初始化
 - `GUI_refresh()`：更新 GUI 状态（调用 LVGL 处理程序
-- `GUI_initContent()`：初始化屏幕和组件
+- `GUI_initContent()`：初始化屏幕和小部件
 - `GUI_initTheme()`：设置 GUI 主题
 - `GUI_loadFirstScreen()`：加载初始屏幕
 
@@ -252,23 +255,29 @@ E1002 的主控模块是 ESP32-S3。如果您想使用 PlatformIO 对 reTerminal
 
 ### 参考例程
 
-我们提供了两个现有的例程，每个都有不同的 UI 界面，可以显示实时天气仪表板。它们还与 [OpenWeather](https://openweathermap.org/)（一个提供全球天气数据的服务平台）集成，以获取实时气候变化。您只需要从 OpenWeather 获取 API KEY 并连接到 WIFI 即可正常使用它们。
+我们提供了三个现有模板，每个都有不同的 UI 界面，可以显示实时天气仪表板。它们还与 [OpenWeather](https://openweathermap.org/)（这是一个提供全球天气数据的服务平台）集成，以获取实时气候变化。您只需要从 OpenWeather 获取 API KEY 并连接到 WIFI 即可正常使用它们。
 
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Seeed Weather 7 电子纸</th>
-      <th>Seeed Weather 13 电子纸</th>
+      <th>单色天气 </th>
+      <th>全彩天气 </th>
+      <th>全彩天气 2</th>
     </tr>
     <tr>
       <td><div align="center">
+        <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/res/weather_gray.zip" target="_blank">
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处获取</button></p>
+        </a>
+      </div></td>
+      <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/weather_7_fix.zip" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击这里获取</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处获取</button></p>
         </a>
       </div></td>
       <td><div align="center">
         <a href="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/weather_13_fix.zip" target="_blank">
-        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击这里获取</button></p>
+        <p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>点击此处获取</button></p>
         </a>
       </div></td>
     </tr>
@@ -296,10 +305,12 @@ E1002 的主控模块是 ESP32-S3。如果您想使用 PlatformIO 对 reTerminal
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>Seeed Weather 7 电子纸</th>
-      <th>Seeed Weather 13 电子纸</th>
+      <th>单色天气 </th>
+      <th>全彩天气 </th>
+      <th>全彩天气 2</th>
     </tr>
     <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/squareline_BW_template.jpeg" style={{width:350, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_4.jpg" style={{width:350, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_3.jpg" style={{width:350, height:'auto'}}/></div></td>
     </tr>

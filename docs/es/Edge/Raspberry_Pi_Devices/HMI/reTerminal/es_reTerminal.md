@@ -1,6 +1,6 @@
 ---
-description: Comenzando con reTerminal
-title: Comenzando con reTerminal
+description: Introducción a reTerminal
+title: Introducción a reTerminal
 keywords:
   - Edge
   - reTerminal 
@@ -11,24 +11,26 @@ last_update:
   date: 1/31/2023
   author: jianjing Huang
 ---
-# Comenzando con reTerminal
+# Introducción a reTerminal
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki_thumb.png" alt="pir" width="600" height="auto"/></p>
 
 Presentamos reTerminal, un nuevo miembro de nuestra familia reThings. Este dispositivo de Interfaz Humano-Máquina (HMI) preparado para el futuro puede trabajar fácil y eficientemente con sistemas IoT y en la nube para desbloquear escenarios infinitos en el edge.
 
-reTerminal está alimentado por un Raspberry Pi Compute Module 4 (CM4) que es un CPU Quad-Core Cortex-A72 funcionando a 1.5GHz y una pantalla capacitiva multi-táctil IPS de 5 pulgadas con una resolución de 1280 x 720. Tiene una cantidad suficiente de RAM (4GB) para realizar multitarea y también tiene una cantidad suficiente de almacenamiento eMMC (32GB) para instalar un sistema operativo, permitiendo tiempos de arranque rápidos y una experiencia general fluida. Tiene conectividad inalámbrica con Wi-Fi de banda dual 2.4GHz/5GHz y Bluetooth 5.0 BLE.
+reTerminal está alimentado por un Raspberry Pi Compute Module 4 (CM4) que es una CPU Quad-Core Cortex-A72 funcionando a 1.5GHz y una pantalla táctil capacitiva IPS de 5 pulgadas con una resolución de 1280 x 720. Tiene una cantidad suficiente de RAM (4GB) para realizar multitarea y también tiene una cantidad suficiente de almacenamiento eMMC (32GB) para instalar un sistema operativo, permitiendo tiempos de arranque rápidos y una experiencia general fluida. Tiene conectividad inalámbrica con Wi-Fi de banda dual 2.4GHz/5GHz y Bluetooth 5.0 BLE.
 
-reTerminal consiste en una interfaz de expansión de alta velocidad y E/S rica para mayor expandibilidad. Este dispositivo tiene características de seguridad como un co-procesador criptográfico con almacenamiento de claves seguro basado en hardware. También tiene módulos integrados como un acelerómetro, sensor de luz y un RTC (Reloj de Tiempo Real). reTerminal tiene un Puerto Ethernet Gigabit para conexiones de red más rápidas y también tiene puertos USB 2.0 Tipo-A duales. El header de 40 pines en el reTerminal lo abre para una amplia gama de aplicaciones IoT.
+reTerminal consiste en una interfaz de expansión de alta velocidad y E/S rica para mayor expandibilidad. Este dispositivo tiene características de seguridad como un coprocesador criptográfico con almacenamiento de claves seguro basado en hardware. También tiene módulos integrados como un acelerómetro, sensor de luz y un RTC (Reloj de Tiempo Real). reTerminal tiene un Puerto Ethernet Gigabit para conexiones de red más rápidas y también tiene puertos USB 2.0 Tipo-A duales. El header de 40 pines en el reTerminal lo abre para una amplia gama de aplicaciones IoT.
 
-reTerminal se envía con Raspberry Pi OS listo para usar. ¡Así que todo lo que tienes que hacer es conectarlo a la alimentación y comenzar a construir tus aplicaciones IoT, HMI y Edge AI de inmediato!
 
-| Fecha de Lanzamiento | SO Pre-Instalado | Firmware STM32 Pre-Instalado | Versión de Placa | Información Adicional |
+reTerminal se envía con Raspberry Pi OS listo para usar. Así que, todo lo que tienes que hacer es conectarlo a la alimentación y comenzar a construir tus proyectos maker, construcciones IoT y de automatización del hogar hasta experimentos DIY fuera de la red
+
+| Fecha de Lanzamiento | SO Preinstalado | Firmware STM32 Preinstalado | Versión de Placa | Información Adicional |
 |---|---|---|---|---|
 | 06/15/2021 | 2021-06-02-Raspbian(modificado)-32-bit | V1.0 | v1.3 | Inicial |
 | 08/03/2021 | 2021-06-02-Raspbian(modificado)-32-bit | V1.1 | v1.4 |  |
-| 09/03/2021 | 2021-06-02-Raspbian(modificado)-32-bit | V1.6 | v1.6 | Cambio de Chip de Expansión IO de MCP23008-E a PCA9554, <br />Cambio de Microchip de Encriptación de ATECC608A-SSHDA-B a ATECC608A-TNGTLSS-G [Más Información](#../reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
+| 09/03/2021 | 2021-06-02-Raspbian(modificado)-32-bit | V1.6 | v1.6 | Cambio del Chip de Expansión IO de MCP23008-E a PCA9554, <br />Cambio del Microchip de Encriptación de ATECC608A-SSHDA-B a ATECC608A-TNGTLSS-G [Más Información](#../reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
 | 11/02/2021 | 2021-09-14-Raspbian(modificado)-32-bit | V1.8 | v1.6 |  |
+
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -41,10 +43,10 @@ reTerminal se envía con Raspberry Pi OS listo para usar. ¡Así que todo lo que
 
 - Diseño modular integrado con alta estabilidad y expandibilidad
 - Alimentado por Raspberry Pi Computer Module 4 con 4GB RAM y 32GB eMMC
-- Pantalla capacitiva multi-táctil IPS de 5 pulgadas a 1280 x 720 y 293 PPI
+- Pantalla táctil capacitiva IPS de 5 pulgadas a 1280 x 720 y 293 PPI
 - Conectividad inalámbrica con Wi-Fi de banda dual 2.4GHz/5GHz y Bluetooth 5.0 BLE
 - Interfaz de expansión de alta velocidad y E/S rica para mayor expandibilidad
-- Co-procesador criptográfico con almacenamiento de claves seguro basado en hardware
+- Coprocesador criptográfico con almacenamiento de claves seguro basado en hardware
 - Módulos integrados como acelerómetro, sensor de luz y RTC
 - Puerto Ethernet Gigabit y puertos USB 2.0 Tipo-A duales
 - Header de 40 pines para aplicaciones IoT
@@ -71,7 +73,7 @@ reTerminal se envía con Raspberry Pi OS listo para usar. ¡Así que todo lo que
     </tr>
     <tr>
       <td>Frecuencia</td>
-      <td>SoC de 64 bits @ 1.5GHz</td>
+      <td>SoC de 64-bit @ 1.5GHz</td>
     </tr>
     <tr>
       <td rowSpan={2}>Memoria</td>
@@ -137,14 +139,14 @@ reTerminal se envía con Raspberry Pi OS listo para usar. ¡Así que todo lo que
       <td>STMicroelectronics LIS3DHTR</td>
     </tr>
     <tr>
-      <td>16 bits, escala completa seleccionable dinámicamente ±2g/±4g/±8g/±16g</td>
+      <td>16-bit, escala completa dinámicamente seleccionable ±2g/±4g/±8g/±16g</td>
     </tr>
     <tr>
-      <td rowSpan={2}>Cifrado</td>
+      <td rowSpan={2}>Encriptación</td>
       <td>Microchip ATECC608A</td>
     </tr>
     <tr>
-      <td>Almacenamiento Seguro de Claves Basado en Hardware, Firma Asimétrica, Verificación, Acuerdo de Claves</td>
+      <td>Almacenamiento de Claves Seguro Basado en Hardware, Firma Asimétrica, Verificación, Acuerdo de Claves</td>
     </tr>
     <tr>
       <td rowSpan={2}>Sensor de Luz</td>
@@ -189,7 +191,7 @@ reTerminal se envía con Raspberry Pi OS listo para usar. ¡Así que todo lo que
     </tr>
     <tr>
       <td rowSpan={4}>Interfaz de expansión<br />vertical</td>
-      <td>1 × PCIe Host de 1 carril, Gen 2 (5Gbps)</td>
+      <td>1 × PCIe 1-carril Host, Gen 2 (5Gbps)</td>
     </tr>
     <tr>
       <td>1 × puerto USB 2.0 (alta velocidad)</td>
@@ -211,7 +213,7 @@ reTerminal se envía con Raspberry Pi OS listo para usar. ¡Así que todo lo que
     </tr>
     <tr>
       <td>Temperatura</td>
-      <td>Temperatura de Funcionamiento</td>
+      <td>Temperatura de Operación</td>
       <td>0 - 70°C( Para la Pantalla LCD: 0 - 60°C)</td>
     </tr>
     <tr>
@@ -228,80 +230,80 @@ reTerminal se envía con Raspberry Pi OS listo para usar. ¡Así que todo lo que
 
 ## Descripción General del Hardware
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/HW_overview.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal.png" alt="pir" width="1000" height="auto"/></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/hw-overview-internal-v1.3.jpg" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal_1.png" alt="pir" width="1000" height="auto"/></p>
 
 ## Diagrama de Bloques
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/reTerminal_block_diagram-v1.3.png" alt="pir" width="1000" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal_2.png" alt="pir" width="1000" height="auto"/></p>
 
 ## Diagrama de Pines
 
-**Nota:** Asegúrese de mantener el reTerminal en la orientación como se ilustra a continuación. Aquí la LCD está mirando hacia el lado derecho y la parte posterior está mirando hacia el lado izquierdo.
+**Nota:** Por favor asegúrate de mantener el reTerminal en la orientación como se ilustra a continuación. Aquí el LCD está mirando hacia el lado derecho y la parte trasera está mirando hacia el lado izquierdo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v2.jpg" alt="pir" width="1000" height="auto"/></p>
 
 :::note
-Por favor preste cuidadosa atención a la orientación del reTerminal en el diagrama anterior. La LCD y los botones integrados están en el lado derecho mientras que la parte posterior del reTerminal está en el lado izquierdo. También todo el dispositivo está volteado boca abajo.
+Por favor presta atención cuidadosamente a la orientación del reTerminal en el diagrama anterior. El LCD y los botones integrados están en el lado derecho mientras que la parte trasera del reTerminal está en el lado izquierdo. También todo el dispositivo está volteado boca abajo.
 :::
 
 ## Inicio Rápido con reTerminal
 
-Si desea comenzar con el reTerminal de la manera más rápida y fácil, puede seguir la guía a continuación.
+Si quieres comenzar con el reTerminal de la manera más rápida y fácil, puedes seguir la guía a continuación.
 
 ### Hardware Requerido
 
-Necesita preparar el siguiente hardware antes de comenzar con reTerminal
+Necesitas preparar el siguiente hardware antes de comenzar con reTerminal
 
 - reTerminal
 - Cable Ethernet o conexión Wi-Fi
-- Adaptador de corriente (5V/3A)
-- Cable USB Type-C
+- Adaptador de alimentación (5V/3A)
+- Cable USB Tipo-C
 
 ### Configuración de Software
 
-#### Iniciar Sesión en Raspberry Pi OS
+#### Iniciar sesión en Raspberry Pi OS
 
-reTerminal viene con Raspberry Pi OS preinstalado desde la caja. ¡Así que podemos encender el reTerminal e iniciar sesión en Raspberry Pi OS de inmediato!
+reTerminal viene con Raspberry Pi OS preinstalado listo para usar. ¡Así que podemos encender el reTerminal e iniciar sesión en Raspberry Pi OS directamente!
 
-- **Paso 1.** Conecte un extremo de un cable USB Type-C al reTerminal y el otro extremo a un adaptador de corriente (5V/4A)
+- **Paso 1.** Conecta un extremo de un cable USB Tipo-C al reTerminal y el otro extremo a un adaptador de alimentación (5V/4A)
 
-- **Paso 2.** Una vez que Raspberry Pi OS haya arrancado, presione **OK** para la ventana de **Advertencia**
+- **Paso 2.** Una vez que Raspberry Pi OS haya arrancado, presiona **OK** para la ventana de **Warning**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-1-new-1.png" alt="pir" width="800" height="auto"/></p>
 
-- **Paso 3.** En la ventana **Bienvenido a Raspberry Pi**, presione **Siguiente** para comenzar con la configuración inicial
+- **Paso 3.** En la ventana **Welcome to Raspberry Pi**, presiona **Next** para comenzar con la configuración inicial
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-2-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **Paso 4.** Elija su **país, idioma, zona horaria** y presione **Siguiente**
+- **Paso 4.** Elige tu **país, idioma, zona horaria** y presiona **Next**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-3-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **Paso 5.** Para cambiar la contraseña, primero haga clic en el icono de **Raspberry Pi**, navegue a `Acceso Universal > Teclado en pantalla` para abrir el teclado en pantalla
+- **Paso 5.** Para cambiar la contraseña, primero haz clic en el icono de **Raspberry Pi**, navega a `Universal Access > Onboard` para abrir el teclado en pantalla
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-4-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **Paso 6.** Ingrese su contraseña deseada y haga clic en **Siguiente**
+- **Paso 6.** Ingresa tu contraseña deseada y haz clic en **Next**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-5-new.png" alt="pir" width="400" height="auto"/></p>
 
-**Nota:** Si desea mantener la contraseña predeterminada como **raspberry**, puede dejar esto en blanco y hacer clic en **Siguiente**
+**Nota:** Si quieres mantener la contraseña predeterminada como **raspberry**, puedes dejar esto en blanco y hacer clic en **Next**
 
-- **Paso 7.** Haga clic en **Siguiente** para lo siguiente
+- **Paso 7.** Haz clic en **Next** para lo siguiente
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-6-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **Paso 8.** Si desea conectarse a una red WiFi, puede elegir una red, conectarse a ella y presionar **Siguiente**. Sin embargo, si desea configurarlo más tarde, puede presionar **Omitir**
+- **Paso 8.** Si quieres conectarte a una red WiFi, puedes elegir una red, conectarte a ella y presionar **Next**. Sin embargo, si quieres configurarlo más tarde, puedes presionar **Skip**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-7-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **Paso 9.** **Este paso es muy importante.** Debe asegurarse de presionar **Omitir** para omitir la actualización del software. Sin embargo, si desea actualizar el software, puede seguir [esta wiki](https://wiki.seeedstudio.com/es/reTerminal-FAQ/#q3-how-to-upgrade-raspberry-pi-os-and-the-installed-packages)
+- **Paso 9.** **Este paso es muy importante.** Debes asegurarte de presionar **Skip** para omitir la actualización del software. Sin embargo, si quieres actualizar el software, puedes seguir [este wiki](https://wiki.seeedstudio.com/es/reTerminal-FAQ/#q3-how-to-upgrade-raspberry-pi-os-and-the-installed-packages)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-8-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **Paso 10.** Finalmente presione **Hecho** para finalizar la configuración
+- **Paso 10.** Finalmente presiona **Done** para finalizar la configuración
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-9-new.png" alt="pir" width="400" height="auto"/></p>
 
@@ -309,9 +311,9 @@ reTerminal viene con Raspberry Pi OS preinstalado desde la caja. ¡Así que pode
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/power-button-press.jpg" alt="pir" width="650" height="auto"/></p>
 
-**Consejo:** Si desea experimentar Raspberry Pi OS en una pantalla más grande, puede conectar una pantalla al puerto micro-HDMI del reTerminal y también conectar un teclado y un ratón a los puertos USB del reTerminal.
+**Consejo:** Si quieres experimentar el Raspberry Pi OS en una pantalla más grande, puedes conectar una pantalla al puerto micro-HDMI del reTerminal y también conectar un teclado y un ratón a los puertos USB del reTerminal.
 
-## Comenzando con reTerminal (Extendido)
+## Introducción al reTerminal (Extendido)
 
 Si quieres instalar Raspberry Pi OS por ti mismo, instalar otro OS como Ubuntu de 64 bits, iniciar sesión en reTerminal vía SSH sobre WiFi, SSH sobre Ethernet y Adaptador USB a Serial, ¡puedes seguir la guía a continuación!
 
@@ -329,7 +331,7 @@ Necesitas preparar el siguiente hardware
 - Adaptador de corriente (5V/3A)
 - Cable USB Type-C
 
-### <span id="jump2">Flashear Raspberry Pi OS/ Ubuntu OS de 64 bits u Otro OS a eMMC</span>
+### <span id="jump2">Flashear Raspberry Pi OS/ Ubuntu OS de 64 bits u Otro OS al eMMC</span>
 
 Podemos flashear **Raspberry Pi OS/ Ubuntu OS de 64 bits u otro OS** en el **almacenamiento eMMC** del CM4 en el reTerminal. Una vez que los controladores necesarios estén instalados, solo tienes que conectar el puerto USB Type-C del reTerminal a tu PC, y se mostrará como una unidad externa. Comienza removiendo la carcasa trasera del reTerminal.
 
@@ -368,11 +370,11 @@ Windows ahora encontrará el hardware e instalará los controladores necesarios
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Paso 7.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Opciones avanzadas**
+- **Paso 7.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Advanced options**
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de localización** y más
+Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones locales** y más
 
 - **Paso 8.** Haz clic en **CHOOSE OS** y selecciona tu OS preferido
 
@@ -412,49 +414,49 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Paso 2.** Instalar **libusb**
+- **Paso 2.** Instala **libusb**
 
 ```sh
 brew install libusb
 ```
 
-- **Paso 3.** Instalar **pkg-config**
+- **Paso 3.** Instala **pkg-config**
 
 ```sh
 brew install pkg-config
 ```
 
-- **Paso 4.** Construir usando make
+- **Paso 4.** Construye usando make
 
 ```sh
 make
 ```
 
-- **Paso 5.** Ejecutar el binario
+- **Paso 5.** Ejecuta el binario
 
 ```sh
 sudo ./rpiboot
 ```
 
-- **Paso 6.** Conecta reTerminal a tu computadora Mac mediante un cable USB Type-C
+- **Paso 6.** Conecta reTerminal a tu computadora Mac vía cable USB Type-C
 
-- **Paso 7.** Descarga e instala la aplicación **Raspberry Pi Imager** visitando [este enlace](https://www.raspberrypi.org/software/)
+- **Paso 7.** Descarga e Instala la Aplicación **Raspberry Pi Imager** visitando [este enlace](https://www.raspberrypi.org/software/)
 
-- **Paso 8.** Abre la aplicación **Raspberry Pi Imager**
+- **Paso 8.** Abre la Aplicación **Raspberry Pi Imager**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Paso 9.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **opciones avanzadas**
+- **Paso 9.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Advanced options**
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de idioma** y más
+Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones locales** y más
 
-- **Paso 10.** Haz clic en **CHOOSE OS** y selecciona tu SO preferido
+- **Paso 10.** Haz clic en **CHOOSE OS** y selecciona tu OS preferido
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Puedes seleccionar SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
+**NOTA:** Puedes seleccionar OS como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
@@ -464,9 +466,9 @@ Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contr
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-Por favor espera unos minutos hasta que el proceso de grabación esté completo.
+Por favor espera unos minutos hasta que el proceso de flasheo esté completo.
 
-- **Paso 13.** Cambia el **interruptor de modo de arranque** de vuelta a la posición original y ensambla la carcasa del reTerminal
+- **Paso 13.** Voltea el **interruptor de Modo de Arranque** de vuelta a la posición original y ensambla la carcasa del reTerminal
 
 Ahora puedes saltar a **[aquí](#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)**
 
@@ -494,14 +496,14 @@ sudo date MMDDhhmm
 
 **NOTA:** Donde **MM** es el mes, **DD** es la fecha, y **hh** y **mm** son horas y minutos respectivamente.
 
-- **Paso 4.** Clonar el repositorio de la herramienta **usbboot**
+- **Paso 4.** Clona el repositorio de la herramienta **usbboot**
 
 ```sh
 git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-- **Paso 5.** Compilar e instalar la herramienta usbboot
+- **Paso 5.** Construye e instala la herramienta usbboot
 
 ```sh
 make
@@ -513,7 +515,7 @@ make
 sudo ./rpiboot
 ```
 
-- **Paso 7.** Conecta reTerminal a la PC mediante cable USB Type-C
+- **Paso 7.** Conecta reTerminal al PC mediante cable USB Type-C
 
 - **Paso 8.** Descarga el software **Raspberry Pi Imager** visitando [este enlace](https://www.raspberrypi.org/software/)
 
@@ -521,17 +523,17 @@ sudo ./rpiboot
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Paso 10.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Opciones avanzadas**
+- **Paso 10.** Presiona **CTRL + SHIFT + X** en el teclado para abrir la ventana de **Advanced options**
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de idioma** y más
+Aquí puedes **establecer un hostname, habilitar SSH, establecer una contraseña, configurar wifi, establecer configuraciones de idioma** y más
 
 - **Paso 11.** Haz clic en **CHOOSE OS** y selecciona tu SO preferido
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**NOTA:** Puedes seleccionar SO como **Ubuntu de 64 bits** navegando a **Other general purpose OS**
+**NOTA:** Puedes seleccionar SO como **64-bit Ubuntu** navegando a **Other general purpose OS**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
@@ -543,23 +545,23 @@ Aquí puedes **establecer un nombre de host, habilitar SSH, establecer una contr
 
 Por favor espera unos minutos hasta que el proceso de grabación esté completo.
 
-- **Paso 14.** Cambia el **interruptor de Modo de Arranque** de vuelta a la posición original y ensambla la carcasa del reTerminal
+- **Paso 14.** Cambia el **Boot Mode switch** de vuelta a la posición original y ensambla la carcasa del reTerminal
 
-### Iniciar sesión en Raspberry Pi OS/ Ubuntu OS u Otro SO usando SSH a través de Wi-Fi/ Ethernet
+### Iniciar sesión en Raspberry Pi OS/ Ubuntu OS u otro SO usando SSH por Wi-Fi/ Ethernet
 
-Si quieres iniciar sesión en el Raspberry Pi OS usando **SSH a través de Wi-Fi/ Ethernet**, puedes seguir los pasos a continuación. Primero configura Wi-Fi/Ethernet en el reTerminal y luego SSH usando Windows/Mac/Linux.
+Si quieres iniciar sesión en Raspberry Pi OS usando **SSH por Wi-Fi/ Ethernet**, puedes seguir los pasos a continuación. Primero configura Wi-Fi/Ethernet en el reTerminal y luego SSH usando Windows/Mac/Linux.
 
 **Nota:** Si has configurado WiFi y habilitado SSH usando Raspberry Pi Imager, puedes omitir los pasos 1 - 4
 
-- **Paso 1.** Si tienes una **conexión Wi-Fi**, haz clic en el **ícono de Wi-Fi** en la esquina superior derecha del Escritorio de Raspberry Pi OS, selecciona tu red Wi-Fi e ingresa la contraseña usando el teclado virtual en pantalla
+- **Paso 1.** Si tienes una **conexión Wi-Fi**, haz clic en el **icono Wi-Fi** en la esquina superior derecha del escritorio de Raspberry Pi OS, selecciona tu red Wi-Fi e ingresa la contraseña usando el teclado virtual en pantalla
 
-**Nota:** La ubicación de la configuración de Wi-Fi podría ser diferente para otros SO
+**Nota:** La ubicación de la configuración Wi-Fi puede ser diferente para otros SO
 
 - **Paso 2.** Si no tienes una **conexión Wi-Fi**, puedes conectar un cable ethernet desde tu router al puerto ethernet del reTerminal
 
 **Nota:** Asegúrate de que el reTerminal y tu computadora estén conectados a la misma red
 
-- **Paso 3.** Toca el ícono de Raspberry Pi en la esquina superior izquierda y navega a `Preferences > Raspberry Pi Configuration` y haz clic en la pestaña **Interfaces**
+- **Paso 3.** Toca el icono de Raspberry Pi en la esquina superior izquierda y navega a `Preferences > Raspberry Pi Configuration` y haz clic en la pestaña **Interfaces**
 
 - **Paso 4.** Selecciona **Enable** que está junto a **SSH** y haz clic en **OK**
 
@@ -569,7 +571,7 @@ Ahora configuremos el software en la computadora. Por favor sigue según tu sist
 
 ##### Para Windows
 
-- **Paso 1.** Abre **Símbolo del sistema** y escribe lo siguiente
+- **Paso 1.** Abre **Command Prompt** y escribe lo siguiente
 
 ```sh
 ssh pi@raspberrypi.local
@@ -579,13 +581,13 @@ ssh pi@raspberrypi.local
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows-prompt.png" alt="pir" width="750" height="auto"/></p>
 
-- **Paso 3.** Introduce la contraseña como sigue
+- **Paso 3.** Ingresa la contraseña como sigue
 
 ```sh
 raspberry
 ```
 
-- **Paso 4.** Si has iniciado sesión exitosamente en el Raspberry Pi OS, verás la siguiente salida
+- **Paso 4.** Si has iniciado sesión exitosamente en Raspberry Pi OS, verás la siguiente salida
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"/></p>
 
@@ -597,7 +599,7 @@ raspberry
 ssh pi@raspberrypi.local
 ```
 
-- **Paso 2.** Escribe **sí** para el siguiente mensaje
+- **Paso 2.** Escribe **yes** para el siguiente mensaje
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
@@ -610,13 +612,13 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 raspberry
 ```
 
-- **Paso 4.** Si has iniciado sesión exitosamente en el Raspberry Pi OS, verás la siguiente salida
+- **Paso 4.** Si has iniciado sesión exitosamente en Raspberry Pi OS, verás la siguiente salida
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 
-### <span id="jump1">Instalar controladores de reTerminal después de flashear un nuevo Raspberry Pi OS/ Ubuntu OS u otro OS</span>
+### <span id="jump1">Instalar controladores de reTerminal después de grabar nuevo Raspberry Pi OS/ Ubuntu OS u otro SO</span>
 
-reTerminal viene con los controladores necesarios preinstalados de fábrica, por lo que no necesitas instalar controladores adicionales. Sin embargo, si flasheas un nuevo OS por ti mismo, necesitas instalar los controladores necesarios por separado. El hardware que necesita controladores incluye la **pantalla LCD de 5 pulgadas, panel táctil, acelerómetro, sensor de luz, LEDs de usuario, botones de usuario, RTC, zumbador, coprocesador criptográfico**.
+reTerminal viene con los controladores necesarios preinstalados desde fábrica, por lo que no necesitas instalar controladores adicionales. Sin embargo, si grabas un nuevo SO por ti mismo, necesitas instalar los controladores necesarios por separado. El hardware que necesita controladores incluye la **pantalla LCD de 5 pulgadas, panel táctil, acelerómetro, sensor de luz, LEDs de usuario, botones de usuario, RTC, zumbador, coprocesador criptográfico**.
 
 - **Paso 1.** Clona el siguiente repositorio
 
@@ -625,19 +627,18 @@ sudo apt install git -y
 git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
-- **Paso 2.** Ingresa al repositorio
+- **Paso 2.** Entra al repositorio
 
 ```sh
 cd seeed-linux-dtoverlays
 ```
 
 :::note
-Para **SO de 32 bits** necesitarás añadir el siguiente paso antes de ejecutar `sudo ./scripts/reTerminal.sh`. Después de completar la instalación, recuerda **reiniciar** reTerminal para que los cambios surtan efecto.
+Para **SO de 32bit** necesitarás agregar el siguiente paso antes de ejecutar `sudo ./scripts/reTerminal.sh`. Después de completar la instalación, recuerda **reiniciar** reTerminal para que los cambios surtan efecto.
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
 sudo reboot
 ```
-
 :::
 
 - **Paso 3.** Escribe lo siguiente para instalar los controladores
@@ -653,7 +654,6 @@ Escribe lo siguiente si no quieres actualizar el kernel al mismo tiempo:
 ```sh
 sudo ./scripts/reTerminal.sh --keep-kernel
 ```
-
 :::
 
 Verás la siguiente salida si has instalado exitosamente los controladores
@@ -667,34 +667,34 @@ Verás la siguiente salida si has instalado exitosamente los controladores
 sudo reboot
 ```
 
-### Flashear Raspberry Pi OS con controladores de seeed a eMMC
+### Grabar Raspberry Pi OS con controladores de seeed a eMMC
 
 - **Paso 1.** Como con los pasos normales de grabación de imagen, necesitas seleccionar primero el modelo del dispositivo:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/01.png" alt="pir" width="700" height="auto"/></p>
 
-- **Paso 2.** Al elegir un sistema operativo, necesitas descargar el sistema que necesites, descomprimirlo en la carpeta local, y luego seleccionarlo.
+- **Paso 2.** Al elegir un sistema operativo, necesitas descargar el sistema que necesitas, descomprimirlo en la carpeta local, y luego seleccionarlo.
 
 - **Descarga el Raspberry Pi OS visitando los enlaces a continuación**
 
 | Versión                     | Descripción      | TAG                                                     |
 | --------------------------- | ---------------- | ------------------------------------------------------------ |
-| [2024-03-14-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-arm64.zip)              | 64bit Debian12(bookworm) Linux versión 6.6.20 | lastest |
-| [2024-03-14-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-armhf.zip) |  32bit Debian12(bookworm) Linux versión 6.6.20           | lastest |
-| [2022-07-21-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/64bit-20220721T012743Z-001.zip)               | 64bit Debian11(Bullseye) Linux versión 5.15.32-v7+  | release |
-| [2022-07-21-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/32bit-20220721T012743Z-001.zip)                    | 32bit Debian11(Bullseye) Linux versión 5.15.32-v7+  | release |
+| [2024-03-14-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-arm64.zip)              | 64bit Debian12(bookworm) Linux versión 6.6.20 | más reciente |
+| [2024-03-14-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-armhf.zip) |  32bit Debian12(bookworm) Linux versión 6.6.20           | más reciente |
+| [2022-07-21-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/64bit-20220721T012743Z-001.zip)               | 64bit Debian11(Bullseye) Linux versión 5.15.32-v7+  | lanzamiento |
+| [2022-07-21-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/32bit-20220721T012743Z-001.zip)                    | 32bit Debian11(Bullseye) Linux versión 5.15.32-v7+  | lanzamiento |
 
 <br />
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/02.png" alt="pir" width="700" height="auto"/></p>
 
-Selecciona el SO que descargaste, debería terminar en **.img**.
+Selecciona el SO que descargaste, debe terminar en **.img**.
 <br />
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/03.png" alt="pir" width="700" height="auto"/></p>
 
 :::caution
 
-Si instalas la última versión bookworm de la imagen. No vayas a configurar haciendo clic en el botón de opción avanzada. No ingreses a esta interfaz para ninguna configuración inicial.
-¡¡¡De lo contrario, pueden ocurrir situaciones de error de controlador inesperadas!!!
+Si instalas la versión más reciente de bookworm de la imagen. No vayas a configurar haciendo clic en el botón de opción avanzada. No entres a esta interfaz para ninguna configuración inicial.
+¡¡¡De lo contrario, pueden ocurrir situaciones inesperadas de error de controlador!!!
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/notice.png" alt="pir" width="450" height="auto"/></p>
 
@@ -717,7 +717,7 @@ Por favor revisa el video a continuación sobre cómo desmontar reTerminal:
 
 ## FAQ
 
-Para Preguntas Frecuentes, [haz clic aquí](https://wiki.seeedstudio.com/es/reTerminal-FAQ) para visitar las FAQs del wiki de Uso de reTerminal
+Para Preguntas Frecuentes, [haz clic aquí](https://wiki.seeedstudio.com/es/reTerminal-FAQ) para visitar las FAQ del wiki de uso de reTerminal
 
 ## Recursos
 
@@ -737,7 +737,7 @@ Para Preguntas Frecuentes, [haz clic aquí](https://wiki.seeedstudio.com/es/reTe
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

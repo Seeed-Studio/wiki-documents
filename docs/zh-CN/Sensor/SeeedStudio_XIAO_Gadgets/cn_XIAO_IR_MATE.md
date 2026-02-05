@@ -1,7 +1,7 @@
 ---
 title: XIAO IR Mate 智能红外遥控器入门指南
 description: |
-  来自 Seeed Studio 的智能红外遥控器，专为将电视和空调等传统家电集成到您的 Home Assistant 智能家居生态系统而设计。
+  来自 Seeed Studio 的智能红外遥控器，旨在将电视和空调等传统家电集成到您的 Home Assistant 智能家居生态系统中。
 image: https://files.seeedstudio.com/wiki/XIAO_IR_MATE/XIAO-Smart-IR-Mate.webp
 slug: /cn/XIAO_IR_Mate_Smart_IR_Remote
 sku: 109990586
@@ -22,7 +22,7 @@ last_update:
 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
   <img
     src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/6-109990586-XIAO-Smart-IR-Mate.jpg"
-    alt="产品图"
+    alt="Product diagram"
     style={{
       maxWidth: '50%',
       height: 'auto',
@@ -32,7 +32,7 @@ last_update:
   />
 </div>
 
-## 介绍
+## 简介
 
 **XIAO IR Mate** 是一款基于 **Seeed Studio XIAO ESP32-C3** 的紧凑型智能红外模块。它集成了红外发射和接收、触摸感应、振动反馈和状态指示功能。通过 Wi-Fi 连接，可以完美集成到您的 Home Assistant 智能家居生态系统中。其核心使命是让所有使用红外遥控器的传统家电（如电视、空调、风扇等）变得"智能"，并允许您通过 HA 控制它们进行自动化。
 
@@ -42,12 +42,12 @@ last_update:
   gap: '16px',
   alignItems: 'center'
 }}>
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/1-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 产品图 1" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/2-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 产品图 2" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/3-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 产品图 3" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/4-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 产品图 4" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/5-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate 产品图 5" />
-  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/touch.jpg" alt="XIAO Smart IR Mate 产品图 6" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/1-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 1" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/2-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 2" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/3-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 3" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/4-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 4" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/5-109990586-XIAO-Smart-IR-Mate.jpg" alt="XIAO Smart IR Mate Product diagram 5" />
+  <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/touch.jpg" alt="XIAO Smart IR Mate Product diagram 6" />
 </div>
 
 - **与 Home Assistant 无缝集成**
@@ -56,15 +56,15 @@ last_update:
 
 - **强大的红外学习和发射功能**
 
-配备三个高功率红外发射器，实现 360° 覆盖，以及高灵敏度接收器。支持从标准遥控器学习多达 10 个红外命令（例如，控制投影仪、空调、定时器），可在 Home Assistant 中一键回放。
+配备三个高功率红外发射器，实现 360° 覆盖，以及一个高灵敏度接收器。支持从标准遥控器学习多达 10 个红外命令（例如控制投影仪、空调、定时器），可在 Home Assistant 中一键回放。
 
 - **直观的物理交互反馈**
 
-配备振动马达和 LED 指示器。短振动确认操作，长振动表示学习模式，LED 显示网络状态，简化设置和故障排除。
+配备振动马达和 LED 指示灯。短振动确认操作，长振动表示学习模式，LED 显示网络状态，简化设置和故障排除。
 
 - **可升级为狂热智能空调控制器**
 
-刷入自定义固件，将 IR Mate 转换为智能空调遥控器。直接在 Home Assistant 中设置精确的温度、模式和风扇速度，具有自动红外代码生成功能，消除重复学习。
+刷入自定义固件可将 IR Mate 转换为智能空调遥控器。在 Home Assistant 中直接设置精确的温度、模式和风扇速度，具有自动红外代码生成功能，无需重复学习。
 
 - **紧凑设计，USB-C 供电**
 
@@ -72,26 +72,26 @@ last_update:
 
 了解设备的基本组件将帮助您更好地使用它：
 
-- **主控制器**：Seeed Studio XIAO ESP32-C3，提供强大的性能和Wi-Fi连接。
-- **电源供应**：通过板载Type-C端口供电（5V）。
-- **红外发射器**：3个高功率红外LED（使用引脚D1），确保360°信号传输无盲区。
-- **红外接收器**：1个高精度红外接收器（使用引脚D2），用于学习其他遥控器的信号。
-- **触摸传感器**：设备集成了触摸模块（使用引脚D3）。单次触摸会触发短暂振动（0.5秒）作为操作反馈。
-- **振动马达**：内置振动马达（使用引脚D4）提供清晰的触觉反馈，具有不同的振动持续时间。
-- **状态指示LED**：LED灯（使用引脚D5）用于指示设备的不同工作状态。
-- **复位按钮**：设备上的物理按钮（连接到引脚D0），用于重启或恢复出厂设置。
+- **主控制器**：Seeed Studio XIAO ESP32-C3，提供强大的性能和 Wi-Fi 连接。
+- **电源供应**：通过板载 Type-C 端口供电（5V）。
+- **红外发射器**：3 个高功率红外 LED（使用引脚 D1），确保 360° 信号传输无盲点。
+- **红外接收器**：1 个高精度红外接收器（使用引脚 D2），用于学习其他遥控器的信号。
+- **触摸传感器**：设备集成了触摸模块（使用引脚 D3）。单次触摸触发短振动（0.5 秒）作为操作反馈。
+- **振动马达**：内置振动马达（使用引脚 D4）提供清晰的触觉反馈，具有不同的振动持续时间。
+- **状态指示 LED**：LED 灯（使用引脚 D5）用于指示设备的不同工作状态。
+- **复位按钮**：设备上的物理按钮（连接到引脚 D0），用于重启或恢复出厂设置。
 
 ## 首次使用和网络配置（出厂固件）
 
 当您首次获得设备时，请按照以下步骤完成初始设置。
 
-### 步骤1：开机
+### 步骤 1：开机
 
-使用标准USB Type-C线缆为设备供电。启动后，设备将进入等待配置状态，您将看到**白色LED以1Hz频率闪烁**。
+使用标准 USB Type-C 线缆为设备供电。启动后，设备将进入等待配置状态，您将看到**白色 LED 以 1Hz 频率闪烁**。
 
-### 步骤2：进入AP配网模式
+### 步骤 2：进入 AP 配网模式
 
-当网络未配置时，设备将自动创建一个名为**XIAO IR Mate**（或**Seeed_ir**，取决于您找到的名称）的Wi-Fi热点（AP）。
+当网络未配置时，设备将自动创建一个名为 **XIAO IR Mate**（或 **Seeed_ir**，取决于您找到的名称）的 Wi-Fi 热点（AP）。
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect.png"
@@ -99,17 +99,17 @@ last_update:
   style={{ display: 'block', margin: 'auto' }}
 />
 
-### 步骤3：连接热点并配置网络
+### 步骤 3：连接热点并配置网络
 
-1. 在您的手机或电脑上打开Wi-Fi设置，搜索并连接名为**XIAO IR Mate**的网络。
+1. 在您的手机或电脑上打开 Wi-Fi 设置，搜索并连接到名为 **XIAO IR Mate** 的网络。
 
 :::note
-热点的默认网络密码为'12345678'。
+热点的默认网络密码为 '12345678'。
 :::
 
-2. 连接成功后，您的设备通常会自动打开配置页面。如果没有，请手动打开浏览器并访问**[http://192.168.4.1](http://192.168.4.1)**。
-3. 在此页面上，您将看到Wi-Fi网络列表。请选择您家的**2.4GHz Wi-Fi网络（SSID）**并输入正确的密码。
-4. 点击"Connect"或"Save"。设备将尝试连接到您提供的Wi-Fi网络。
+2. 连接成功后，您的设备通常会自动打开配置页面。如果没有，请手动打开浏览器并访问 **[http://192.168.4.1](http://192.168.4.1)**。
+3. 在此页面上，您将看到 Wi-Fi 网络列表。请选择您家的 **2.4GHz Wi-Fi 网络（SSID）** 并输入正确的密码。
+4. 点击 "Connect" 或 "Save"。设备将尝试连接到您提供的 Wi-Fi 网络。
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect_02.png"
@@ -117,9 +117,9 @@ last_update:
   style={{ display: 'block', margin: 'auto' }}
 />
 
-### 步骤4：连接成功
+### 步骤 4：连接成功
 
-一旦设备成功连接到您的家庭Wi-Fi，AP热点将自动关闭，**状态指示灯将变为常亮**。网络配置现已完成。
+一旦设备成功连接到您的家庭 Wi-Fi，AP 热点将自动关闭，**状态指示灯将变为常亮**。网络配置现已完成。
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect_03.png"
@@ -127,12 +127,12 @@ last_update:
   style={{ display: 'block', margin: 'auto' }}
 />
 
-## Home Assistant集成（出厂固件）
+## Home Assistant 集成（出厂固件）
 
-设备固件基于**ESPHome**，使其非常容易集成到Home Assistant中。
+设备固件基于 **ESPHome**，使其很容易集成到 Home Assistant 中。
 
-1. **自动发现**：确保您的Home Assistant主机和XIAO IR Mate连接到同一本地网络。通常，HA会自动发现新的ESPHome设备。您将在**设置 \> 设备和服务**中看到"发现新设备"的通知。
-2. **手动添加**：如果未自动发现，您可以点击右下角的**[添加集成]**按钮，搜索**"ESPHome"**，然后输入设备的主机名（例如，**xiao-ir-mate**）或IP地址来手动添加。
+1. **自动发现**：确保您的 Home Assistant 主机和 XIAO IR Mate 连接到同一本地网络。通常，HA 会自动发现新的 ESPHome 设备。您将在 **Settings \> Devices & Services** 中看到"发现新设备"的通知。
+2. **手动添加**：如果未自动发现，您可以点击右下角的 **[Add Integration]** 按钮，搜索 **"ESPHome"**，然后输入设备的主机名（例如 **xiao-ir-mate**）或 IP 地址来手动添加。
 
 <div style={{textAlign:'center'}}>
   <img
@@ -160,7 +160,7 @@ last_update:
   />
 </div>
 
-3. **设备仪表板**：成功添加后，XIAO IR Mate将作为设备出现在HA中。其仪表板将包含以下实体，用于控制10个不同的红外信号：
+3. **设备仪表板**：成功添加后，XIAO IR Mate 将作为设备出现在 HA 中。其仪表板将包含以下实体，用于控制 10 个不同的红外信号：
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/homeassistant_07.png"
@@ -170,7 +170,7 @@ last_update:
 
 ## 核心功能详情（出厂固件）
 
-如果您想要恢复设备或更新其固件，可以通过下面的按钮跳转。我们已经创建了一个专门用于 XIAO Gadget 直接刷写固件的页面。
+如果您想恢复设备或更新其固件，可以通过下面的按钮跳转。我们创建了一个专门用于 XIAO Gadget 直接刷写固件的页面。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://gadgets.seeed.cc/" target="_blank" rel="noopener noreferrer">
@@ -180,24 +180,24 @@ last_update:
 
 ### 红外信号学习
 
-当您需要教 IR Mate 学习新的遥控器命令时，请按照以下步骤操作。出厂固件的核心界面包括一个**信号槽选择列表**，以及**学习**和**发送**按钮。
+当您需要教 IR Mate 学习新的遥控器命令时，请按照以下步骤操作。出厂固件的核心界面包括**信号槽选择列表**，以及 **Learn** 和 **Send** 按钮。
 
-1. 在 Home Assistant 设备仪表板中，首先找到名为**"Signal"**的下拉选择列表。
-2. 点击下拉列表并选择您想要使用的信号槽，例如**"signal_1"**。
-3. 选择完成后，找到**"Learn"**按钮并点击其旁边的**"PRESS"**。
+1. 在 Home Assistant 设备仪表板中，首先找到名为 **"Signal"** 的下拉选择列表。
+2. 点击下拉列表并选择您要使用的信号槽，例如 **"signal_1"**。
+3. 选择后，找到 **"Learn"** 按钮并点击其旁边的 **"PRESS"**。
 4. XIAO IR Mate 现在将进入学习模式并开始**持续振动**，表示您可以开始配对。
-5. 将您的原始遥控器对准 IR Mate 的红外接收窗口，短按您想要学习的按钮。
+5. 将您的原始遥控器对准 IR Mate 的红外接收器窗口，短按您要学习的按钮。
 6. IR Mate 成功接收并记录信号后，**振动将停止**，表示学习成功。
-7. 此时，名为**"Is Learned Signal"**的状态指示器将自动变为"ON"，表示下拉列表中当前选择的信号槽（即"signal_1"）现在已存储了信号。
+7. 此时，名为 **"Is Learned Signal"** 的状态指示器将自动变为 "ON"，表示下拉列表中当前选择的信号槽（即 "signal_1"）现在已存储了信号。
 
 ### 红外信号发送
 
 一旦信号成功学习后，您可以随时发送它。
 
-1. 在**"Signal"**下拉列表中，确保您已选择要发送的信号槽，例如**"signal_1"**。
-2. 找到**"Send"**按钮并点击其旁边的**"PRESS"**。
-3. XIAO IR Mate 将立即通过其 3 个红外发射器发送存储在当前选择槽中的信号。
-4. **注意**：如果您在下拉列表中选择了一个从未学习过信号的信号槽，点击发送按钮将不会有任何效果。
+1. 在 **"Signal"** 下拉列表中，确保您已选择要发送的信号槽，例如 **"signal_1"**。
+2. 找到 **"Send"** 按钮，点击旁边的 **"PRESS"**。
+3. XIAO IR Mate 将立即通过其 3 个红外发射器发送存储在当前选定槽中的信号。
+4. **注意**：如果您在下拉列表中选择了从未学习过信号的信号槽，点击发送按钮将不会有任何效果。
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/homeassistant_08.png"
@@ -221,14 +221,14 @@ last_update:
 
 ### RESET 按钮
 
-- **短按（1秒内）**：设备将重启，伴随短振动。如果设备无响应，这非常有用。
-- **长按（超过5秒）**：设备将**执行恢复出厂设置**。此操作将**清除所有已保存的 Wi-Fi 凭据和所有 10 个已学习的红外信号**。执行此操作时，设备将发出长振动作为提示。完成后，设备将重启并返回到初始等待配置状态（LED 闪烁）。
+- **短按（1 秒内）**：设备将重启，伴随短振动。如果设备无响应，这非常有用。
+- **长按（超过 5 秒）**：设备将**执行恢复出厂设置**。此操作将**清除所有保存的 Wi-Fi 凭据和所有 10 个学习的红外信号**。执行此操作时，设备将发出长振动作为提示。完成后，设备将重启并返回到初始等待配置状态（LED 闪烁）。
 
 ## 高级用法 - 智能空调控制
 
-出厂固件提供的基本"录制-重放"模式是通用的，但在控制像空调这样具有多种状态的设备（温度、模式、风速等）时可能会显得笨拙。为了实现更精细、更智能的空调控制，我们可以刷入专用的 ESPHome 固件，将 XIAO IR Mate 从"红外信号中继器"转变为真正的"智能空调控制器"。
+出厂固件提供的基本"录制-重放"模式是通用的，但在控制具有多种状态的设备（如空调的温度、模式、风速等）时可能显得笨拙。为了实现更精细、更智能的空调控制，我们可以刷入专用的 ESPHome 固件，将 XIAO IR Mate 从"红外信号重复器"转变为真正的"智能空调控制器"。
 
-在本章中，我们将以格力空调为详细示例，但这绝不是唯一选择。ESPHome 强大的生态系统支持众多空调品牌，您可以轻松按照本指南中的概念，对配置代码进行微小更改，来实现对美的、大金、松下等其他品牌的智能控制。
+在本章中，我们将以格力空调为详细示例，但这绝不是唯一选择。ESPHome 强大的生态系统支持众多空调品牌，您可以轻松按照本指南中的概念，对配置代码进行微小更改，实现对美的、大金、松下等其他品牌的智能控制。
 
 ### 核心优势
 
@@ -238,7 +238,7 @@ last_update:
 
 ### 前提条件
 
-1. **安装 ESPHome**：如果您还没有安装，请从 Home Assistant 插件商店安装并启动 ESPHome 插件。
+1. **安装 ESPHome**：如果您还没有安装，请从 Home Assistant Add-on Store 安装并启动 ESPHome 插件。
 2. **获取您的空调品牌协议**：ESPHome 支持许多空调品牌协议（如格力、美的、大金等）。您需要知道您的空调品牌以选择正确的协议。
 
 ### 刷入自定义固件
@@ -250,23 +250,28 @@ last_update:
 2. **编辑配置文件**
       - 点击新创建的设备卡片上的 **EDIT** 按钮进入 YAML 配置编辑器。
       - 删除编辑器中的所有默认内容。
-      - **完整复制并粘贴** 下面的代码到编辑器中：
+      - **完全复制并粘贴**下面的代码到编辑器中：
 
 <Details>
 
-```yaml title="seeed-ir-v1.yaml"
+<summary>seeed-ir-v2.yaml</summary>
+```yaml
+# ==== AUTO-SYNC START: xiao_smart_ir_mate/xiao_smart_ir_mate.yaml ====
+
 substitutions:
-  name: "seeed-ir"
-  friendly_name: "Gree AC Controller" # You can customize a more friendly name
-  version: "v1"
+  name: "xiao-smart-ir-mate"
+  friendly_name: "XIAO Smart IR Mate"
 
 esphome:
-  name: "${name}-${version}"
+  name: "${name}"
   friendly_name: "${friendly_name}"
   name_add_mac_suffix: True
+  project:
+    name: "xiao.smart-ir-mate"
+    version: "2.0"
 
 esp32:
-  board: esp32-c3-devkitm-1
+  board: seeed_xiao_esp32c3
   framework:
     type: arduino
 
@@ -274,258 +279,321 @@ globals:
   - id: is_wifi_connected
     type: bool
     initial_value: 'false'
+
   - id: reset_press_time
     type: uint32_t
     initial_value: '0'
-  - id: touch_count
-    type: int
-    restore_value: no
-    initial_value: '0'
+
   - id: touch_timer
     type: unsigned long
     restore_value: no
     initial_value: '0'
 
+  # open or close the learning mode
+  - id: is_learning_mode
+    type: bool
+    initial_value: 'false'
+
+  # signal index , you can select the signal index on ESPHome
+  - id: signal_select_index
+    type: int
+    restore_value: no
+    initial_value: '0'
+
+  # Read the signals stored in nvs and store them in this vector
+  - id: send_data_vector
+    type: std::vector<long int>
+    restore_value: no
+
+  - id: filter_size
+    type: int
+    initial_value: '10'
+
+# Enable logging
 logger:
   level: INFO
 
+# Enable Home Assistant API
 api:
 
 ota:
-  platform: esphome
-  password: "15afb09b5aba7b3d6a6ba01180c60df5"  # Change this to your desired password
+  - platform: esphome
+    password: "15afb09b5aba7b3d6a6ba01180c60df5"
 
 wifi:
-  # ssid: !secret wifi_ssid
-  # password: !secret wifi_password
+ # ssid: !secret wifi_ssid
+ # password: !secret wifi_password
   on_connect:
-    - globals.set: {id: is_wifi_connected, value: 'true'}
+    - globals.set:
+        id: is_wifi_connected
+        value: 'true'
     - light.turn_on: rgb_light
+    - lambda: |-
+        ESP_LOGI("ir", "IP address: %s", ::esphome::wifi::global_wifi_component->wifi_sta_ip_addresses()[0].str().c_str());
+
   on_disconnect:
-    - globals.set: {id: is_wifi_connected, value: 'false'}
+    - globals.set:
+        id: is_wifi_connected
+        value: 'false'
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
+    # ssid: "XIAO Smart IR Mate"
     password: "12345678"
 
 captive_portal:
 
+# Custom components
+external_components:
+  - source:
+      type: git        # git component
+      url: https://github.com/Seeed-Studio/xiao-esphome-projects  # Path where the component is github
+      ref: main   # Branch name
+    components: [Flash_comp]   # Explicitly specify the components to import
+
+# Component name
+Flash_comp:
+  id: signal_nvs  # Component id
+
 remote_transmitter:
-  id: default_ir_transmitter
+  id: my_transmitter
   pin: GPIO3
   carrier_duty_percent: 50%
-  rmt_channel: 0
 
 remote_receiver:
-  id: default_ir_receiver
-  pin:
-    number: GPIO4
-    inverted: true
-  rmt_channel: 2
-  dump: raw # Keep for learning or debugging other infrared codes
+  - id: rcvr
+    pin:
+      number: GPIO4
+      inverted: true
+    # Idle time, if the low level exceeds this time, it is considered as a new segment of the signal
+    # That is "segmentation"
+    idle: 65500us
+    # Important, this parameter is used to segment the infrared signal
+    # If a certain segment of the infrared signal is too long, it may be divided into several segments
+    # For such a case, you must send the infrared signal strictly according to the corresponding timing, otherwise it will fail
+    # If you don't want it to be segmented, you can reduce the frequency and adjust the idle parameter to make it receive as complete as possible
+    clock_resolution: "500000"
+    # Receive data: using raw data
+    # In the infrared parsing of esphome, a signal (e.g., NEC) may be parsed into multiple signals (e.g., JVC, Pronto, etc.).
+    # Here, we only retain the original signal and do not decode the protocol.
+    on_raw:
+      - switch.turn_off: vibration_switch
+      - lambda: |-
+          if (id(is_learning_mode)) {
+            if (x.size() > id(filter_size)){
+              ESP_LOGI("ir", "Saved signal index: %d", id(signal_select_index));
+              id(signal_nvs).save_to_nvs(id(signal_select_index), x);
+              id(send_data_vector).clear();
+              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index));
+              id(is_learning_mode) = false;
+              // Learned the signal, turn on the switch
+              id(is_learned_signal_script).execute(true);
+            }
+          }
 
-# Gree Climate Control
-climate:
-  - platform: gree
-    name: "Gree Air Conditioner" # The name displayed in Home Assistant
-    id: gree_ac    # Internal ID used by ESPHome, for touch button control
-    # --- Required configuration for the gree platform ---
-    model: "yan"   # [IMPORTANT] This is a required parameter. Gree has multiple infrared protocols.
-                   # You may need to try the following values to find the one that suits your air conditioner:
-                   # "generic", "yan", "yaa", "yac", "yac1fb9", "yx1ff", "yag"
-                   # "yan" is a common starting point.
-    # Optional configuration:
-    # sensor: my_temperature_sensor_id # If you have an external temperature sensor
-    supports_cool: true
-    supports_heat: true # If your Gree AC does not support heating, set to false
-    # Note: According to the documentation, the gree platform does not seem to support receiver_id to sync the state from the original remote
+button:
+  # Button in learning mode, you need to open learning mode first, and the signal will be saved
+  - platform: template
+    id: learn
+    name: "Learn"
+    on_press:
+      - switch.turn_on: vibration_switch
+      - lambda: |-
+          id(is_learning_mode) = true;
+          ESP_LOGI("ir", "Learning mode activated!");
+
+  # Button in sending mode, according to your current index, read the signal from nvs and send it
+  # Since it's using a script to send, it will always trigger a log print whether the sending is successful or not
+  # That is, it will print Sending signal index
+  # So when there is a log print but the control doesn't work, you need to write a separate receiving code to analyze the data
+  # It is recommended to use the example program in the Arduino IRremote library.
+  - platform: template
+    id: transmit
+    name: "Send"
+    on_press:
+      - lambda: |-
+          if (id(send_data_vector).size() > 0) {
+            id(send_raw).execute();
+            ESP_LOGI("ir", "Sending signal index: %d", id(signal_select_index));
+            ESP_LOGI("ir", "Sending signal size: %d", id(send_data_vector).size());
+          } else {
+            ESP_LOGI("ir", "Signal index %d not learned", id(signal_select_index));
+          }
+
+# Signal selection dropdown list
+# Provides ten signals to choose from, and records the index
+select:
+  - platform: template
+    name: signal_select
+    id: signal_select
+    options:
+      - "Signal0"
+      - "Signal1"
+      - "Signal2"
+      - "Signal3"
+      - "Signal4"
+      - "Signal5"
+      - "Signal6"
+      - "Signal7"
+      - "Signal8"
+      - "Signal9"
+    initial_option: "Signal0"
+    optimistic: true
+    on_value:
+      - lambda: |-
+          id(signal_select_index) = i;
+          ESP_LOGI("ir", "Current selected signal index: %d", i);
+          id(send_data_vector).clear();
+          id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index));
+          if (id(send_data_vector).size() > 0) {
+            id(is_learned_signal_script).execute(true);
+          } else {
+            id(is_learned_signal_script).execute(false);
+          }
+
+switch:
+  - platform: output
+    id: vibration_switch
+    name: "Vibration device"
+    output: vibration_output
+
+  - platform: factory_reset
+    id: factory_switch
+    name: "Restart with Factory Default Settings"
+
+  # Has the signal been learned?
+  # If the signal has been learned, turn on this switch.
+  # Otherwise, turn off this switch.
+  - platform: template
+    id: is_learned_signal_switch
+    name: "Is Learned Signal?"
+    optimistic: true
+
+light:
+  - platform: esp32_rmt_led_strip
+    rgb_order: GRB
+    pin: GPIO7 # D5
+    num_leds: 1
+    chipset: WS2812
+    name: "WIFI RGB Light"
+    id: rgb_light
+    rmt_symbols: 48
 
 binary_sensor:
   - platform: gpio
     id: touch_pad
     pin:
-      number: GPIO5
+      number: GPIO5 # D3
       mode: INPUT_PULLDOWN
     on_state:
       then:
-        - if:
-            condition:
-              binary_sensor.is_on: touch_pad
-            then:
-              - script.execute: vibe_short
-              - lambda: |-
-                  unsigned long current_time = millis();
-                  if (current_time - id(touch_timer) < 300) {
-                    id(touch_count)++;
-                  } else {
-                    id(touch_count) = 1;
-                  }
-                  id(touch_timer) = current_time;
-                  ESP_LOGD("touch_pad", "Touch detected. Current count: %d", id(touch_count));
-                  if (id(check_touch_actions_script).is_running()) {
-                    id(check_touch_actions_script).stop();
-                  }
-                  id(check_touch_actions_script).execute();
+        - lambda: |-
+            id(vibe).execute(100);
+            id(touch_timer) = millis();
+            if (id(check_touch_delay).is_running()) {
+              id(check_touch_delay).stop();
+              delay(10);
+            }
+            id(check_touch_delay).execute();
 
   - platform: gpio
     id: reset_button
     pin:
-      number: GPIO9 # Strapping Pin!
+      number: GPIO9 # D9
       mode: INPUT_PULLUP
     filters:
-      - invert
+      invert
+
     on_press:
       then:
-        - lambda: id(reset_press_time) = millis();
+        - lambda: |-
+            id(reset_press_time) = millis();
+
     on_release:
       then:
         - lambda: |-
             uint32_t press_duration = millis() - id(reset_press_time);
             if (press_duration < 5000) {
-              id(vibe_short).execute();
-              ESP_LOGI("reset_button", "Short press: Restarting device.");
+              id(vibe).execute(100);
+              ESP_LOGI("ir", "Restart Device");
               ESP.restart();
             } else {
-              id(vibe_long).execute();
-              ESP_LOGI("reset_button", "Long press: Activating factory reset.");
-              id(factory_reset_switch).turn_on();
+              // clear all learned signals
+              for (int i = 0; i < 10; i++) {
+                id(signal_nvs).clear_signal_by_index(i);
+              }
+              ESP_LOGI("ir", "Restart with Factory Default Settings");
+              id(vibe).execute(500);
+              id(factory_switch).turn_on();
             }
 
 output:
   - platform: gpio
     id: vibration_output
-    pin: GPIO6
-
-switch:
-  - platform: output
-    id: vibration_switch
-    name: "Vibration Motor"
-    output: vibration_output
-  - platform: factory_reset
-    id: factory_reset_switch
-    name: "Factory Reset"
-
-light:
-  - platform: esp32_rmt_led_strip
-    rgb_order: GRB
-    pin: GPIO7
-    num_leds: 1
-    rmt_channel: 1
-    chipset: ws2812
-    name: "RGB Status Light"
-    id: rgb_light
-    default_transition_length: 0s
-    on_turn_on:
-      - light.control:
-          id: rgb_light
-          red: 1.0
-          green: 1.0
-          blue: 1.0
-          brightness: 0.7
-    effects:
-      - addressable_scan:
-      - addressable_rainbow:
+    pin: GPIO6 # D4
 
 script:
-  - id: vibe_short
+  - id: vibe
+    parameters:
+      delay_ms: int
     then:
       - switch.turn_on: vibration_switch
-      - delay: 100ms
-      - switch.turn_off: vibration_switch
-  - id: vibe_long
-    then:
-      - switch.turn_on: vibration_switch
-      - delay: 500ms
+      - delay: !lambda return delay_ms;
       - switch.turn_off: vibration_switch
 
-  - id: check_touch_actions_script
-    mode: restart
+  - id: check_touch_delay
     then:
-      - delay: 350ms
-      - if: # Single-click action
-          condition:
-            lambda: 'return id(touch_count) == 1;'
-          then:
-            - logger.log: "Single Click: Toggling Gree AC Power"
-            - lambda: |-
-                // [IMPORTANT] Ensure the climate ID used below is gree_ac
-                if (id(gree_ac).mode == climate::CLIMATE_MODE_OFF) {
-                  ESP_LOGD("touch_action", "Gree AC is OFF, attempting to turn to COOL mode.");
-                  auto call = id(gree_ac).make_call();
-                  call.set_mode(climate::CLIMATE_MODE_COOL);
-                  call.set_target_temperature(25);
-                  call.perform();
-                } else {
-                  ESP_LOGD("touch_action", "Gree AC is ON, attempting to turn OFF.");
-                  auto call = id(gree_ac).make_call();
-                  call.set_mode(climate::CLIMATE_MODE_OFF);
-                  call.perform();
-                }
-          else: # If not a single click, then check for a double click
-            - if:
-                condition:
-                  lambda: 'return id(touch_count) == 2;'
-                then: # Double-click action
-                  - logger.log: "Double Click: Gree AC Temperature Up"
-                  - lambda: |-
-                      // [IMPORTANT] Ensure the climate ID used below is gree_ac
-                      if (id(gree_ac).mode != climate::CLIMATE_MODE_OFF) {
-                        float current_temp = id(gree_ac).target_temperature;
-                        float max_temp = id(gree_ac).get_traits().get_visual_max_temperature();
-                        if (current_temp < max_temp) {
-                           ESP_LOGD("touch_action", "Increasing Gree AC temp from %.1f to %.1f", current_temp, current_temp + 1.0f);
-                           auto call = id(gree_ac).make_call();
-                           call.set_target_temperature(current_temp + 1.0f);
-                           call.perform();
-                        } else {
-                          ESP_LOGD("touch_action", "Gree AC already at max temp: %.1f", max_temp);
-                        }
-                      }
-                else: # If not a double click, then check for a triple click
-                  - if:
-                      condition:
-                        lambda: 'return id(touch_count) == 3;'
-                      then: # Triple-click action
-                        - logger.log: "Triple Click: Gree AC Temperature Down"
-                        - lambda: |-
-                            // [IMPORTANT] Ensure the climate ID used below is gree_ac
-                            if (id(gree_ac).mode != climate::CLIMATE_MODE_OFF) {
-                              float current_temp = id(gree_ac).target_temperature;
-                              float min_temp = id(gree_ac).get_traits().get_visual_min_temperature();
-                              if (current_temp > min_temp) {
-                                 ESP_LOGD("touch_action", "Decreasing Gree AC temp from %.1f to %.1f", current_temp, current_temp - 1.0f);
-                                 auto call = id(gree_ac).make_call();
-                                 call.set_target_temperature(current_temp - 1.0f);
-                                 call.perform();
-                              } else {
-                                ESP_LOGD("touch_action", "Gree AC already at min temp: %.1f", min_temp);
-                              }
-                            }
-                      else: # Other click counts
-                        - logger.log:
-                            level: WARN
-                            format: "Touch Action: No specific action defined for %d clicks."
-                            args: ['id(touch_count)']
-      # Reset the touch count
-      - lambda: 'id(touch_count) = 0; ESP_LOGD("check_touch_actions", "Touch count reset to 0.");'
+      - delay: 300ms
+      - lambda: |-
+          unsigned long current_time = millis();
+          if (current_time - id(touch_timer) >= 300) {
+            ESP_LOGI("check click", "single click action");
+            id(transmit).press();
+          }
+
+  # Send infrared signal
+  # The saved signal is the original signal, we do not encode or decode, just send
+  - id: send_raw
+    then:
+      - remote_transmitter.transmit_raw:
+          code: !lambda return id(send_data_vector);
+          carrier_frequency: 38000Hz
+          repeat: 1
+
+  # Used to indicate whether the signal can be sent
+  # If there is a signal, turn on the switch
+  # Otherwise, turn off the switch
+  - id: is_learned_signal_script
+    parameters:
+      is_learned_signal: bool
+    then:
+      - lambda: |-
+          if (is_learned_signal) {
+            id(is_learned_signal_switch).turn_on();
+          } else {
+            id(is_learned_signal_switch).turn_off();
+          }
 
 interval:
-  - id: blink_rgb_interval
+  - id: blink_rgb
     interval: 500ms
     then:
-      - if:
-          condition:
-            lambda: 'return !id(is_wifi_connected);'
-          then:
-            - lambda: |-
-                static bool intervalos_led_state = false;
-                intervalos_led_state = !intervalos_led_state;
-                auto call = id(rgb_light).turn_on();
-                if (intervalos_led_state) {
-                  call.set_rgb(0, 0, 1);
-                  call.set_brightness(0.5);
-                } else {
-                  call.set_rgb(0, 0, 0); // Off
-                }
-                call.perform();
+      - lambda: |-
+          if (!id(is_wifi_connected)) {
+            static int state = 0;
+            if (state == 1) {
+              auto call = id(rgb_light).turn_on();
+              call.set_rgb(1.0, 1.0, 1.0);
+              call.set_transition_length(0);
+              call.perform();
+            } else {
+              auto call = id(rgb_light).turn_off();
+              call.set_transition_length(0);
+              call.perform();
+            }
+            state = !state;
+          }
+# ==== AUTO-SYNC END ====
 ```
 
 </Details>
@@ -566,33 +634,33 @@ interval:
 
   1. **配置"监听器"固件：** 在您的 ESPHome 固件中，核心配置是 `remote_receiver` 组件。设备开机后的唯一工作就是"监听"红外信号。
 
-  2. **识别每个按钮的"密码"：** 拿起一个旧遥控器，指向设备按任意按钮。在 ESPHome 日志中，您将看到该按钮的唯一红外代码（如一串 `RAW` 数据或 `NEC` 协议代码）。记下这个"密码"。
+  2. **识别每个按钮的"密码"：** 拿起一个旧遥控器，指向设备按任意按钮。在 ESPHome 日志中，您将看到按钮的唯一红外代码（如一串 `RAW` 数据或 `NEC` 协议代码）。记下这个"密码"。
 
-  3. **在 HA 中创建自动化规则：** 在 Home Assistant 中，设置一个自动化，触发条件为："当 XIAO IR Mate 检测到特定红外密码时。"
+  3. **在 HA 中创建自动化规则：** 在 Home Assistant 中，设置一个自动化，触发条件为："当 XIAO IR Mate 检测到特定的红外密码时。"
 
   4. **定义动作：** 规则的动作可以是任何事情！例如：
 
-     - 当检测到 **电视遥控器的"音量 +"按钮** -> **启动扫地机器人** 开始清洁。
+     - 当检测到**电视遥控器的"音量 +"按钮**时 -> **启动扫地机器人**开始清洁。
 
-     - 当检测到 **Apple Remote 的"播放"按钮** -> **打开浴室灯**。
+     - 当检测到**Apple Remote 的"播放"按钮**时 -> **打开浴室灯**。
 
-     - 当检测到 **DVD 遥控器的"红色"按钮** -> 执行"离家模式"场景。
+     - 当检测到**DVD 遥控器的"红色"按钮**时 -> 执行"离家模式"场景。
 
 - **这种方法的优势**
 
   - **升级改造和环保：** 为闲置硬件注入新生命，让电子垃圾重新发挥作用，既省钱又环保。
 
-  - **真实的触觉按钮体验：** 与触摸屏相比，具有数十个不同、手感扎实按钮的物理遥控器在许多场景中更直接、更令人满意。
+  - **真实的触觉按钮体验：** 与触摸屏相比，具有数十个不同、手感扎实按钮的物理遥控器在许多场景下更直接、更令人满意。
 
-  - **高妻子接受因子 (WAF)：** 对于不习惯手机应用或智能音箱的家庭成员（如老人或儿童），告诉他们"按这个按钮开灯"是最直观、最容易学习的交互方式。
+  - **高妻子接受因子（WAF）：** 对于不习惯手机应用或智能音箱的家庭成员（如老人或儿童），告诉他们"按这个按钮开灯"是最直观、最容易学习的交互方式。
 
-  - **不需要充电的"智能开关"：** 传统遥控器的电池通常可以使用一两年，这比许多需要频繁充电的智能设备方便得多。
+  - **不需要充电的"智能开关"：** 传统遥控器的电池通常可以使用一到两年，这比许多需要频繁充电的智能设备方便得多。
 
 #### **想法 2：创建万能"IoT 魔法按钮"**
 
 **核心概念**
 
-设备上的触摸按钮真的只能用来控制红外吗？当然不是！我们可以将其变成控制家中 **任何东西** 的魔法按钮。关键是"解耦"——完全分离"按下按钮"的物理动作和"实际发生什么"的智能动作。
+设备上的触摸按钮真的只能用于控制红外吗？当然不是！我们可以将其变成控制您家中**任何东西**的魔法按钮。关键是"解耦"——完全分离"按下按钮"的物理动作和"实际发生什么"的智能动作。
 
 - **实施步骤**
 
@@ -600,40 +668,40 @@ interval:
 
   2. **让 HA 成为"指挥官"：** 在 Home Assistant 中，创建专门监听按钮这些各种"报告"（事件）的自动化。
 
-  3. **连接一切，做任何事：** 一旦 HA 收到报告，它就可以命令家中的任何设备执行动作！
+  3. **连接一切，做任何事：** 一旦 HA 收到报告，它就可以命令您家中的任何设备执行动作！
 
-     - 收到 **"单击"** 报告 -> 切换房屋中所有 **Zigbee 灯** 的开/关状态。
+     - 收到**"单击"**报告 -> 切换房屋中所有 **Zigbee 灯**的开/关状态。
 
-     - 收到 **"双击"** 报告 -> 命令 **扫地机器人** 开始清洁。
+     - 收到**"双击"**报告 -> 命令**扫地机器人**开始清洁。
 
-- 接收到**"长按"**报告 -> 执行"电影模式"场景，关闭窗帘，调暗灯光，打开投影仪和音响系统。
+     - 收到**"长按"**报告 -> 执行"电影模式"场景，关闭窗帘、调暗灯光、打开投影仪和音响系统。
 
 - **这种方法的优势**
 
-  - **打破边界，无限可能：** 您的触摸按钮不再只是"红外遥控器"的一部分，而是整个智能家居的物理开关，能够控制连接到 HA 的任何设备。
+  - **打破界限，无限可能：** 您的触摸按钮不再只是"红外遥控器"的一部分，而是整个智能家居的物理开关，能够控制连接到 HA 的任何设备。
 
   - **灵活定义，随心改变：** 今天双击启动吸尘器，但明天您想让它播放音乐？只需在 HA 界面中编辑自动化，完全不需要触碰固件。
 
-  - **最直观的交互：** 为您的家人提供最简单的控制方式。带有触觉反馈的物理按钮通常比打开手机应用程序更方便、更优雅。
+  - **最直观的交互：** 为您的家人提供最简单的控制方式。具有触觉反馈的物理按钮通常比打开手机应用更方便、更优雅。
 
-简而言之，不要只把 XIAO IR Mate 看作红外工具。把它想象成一个连接到 Wi-Fi 的迷你机器人，具有触觉和"声音"（红外发射器）。它能做什么只受您的想象力限制！
+总之，不要只将 XIAO IR Mate 视为红外工具。将其视为连接到 Wi-Fi 的迷你机器人，具有触觉和"声音"（红外发射器）。它能做什么只受您想象力的限制！
 
-## 常见问题 (FAQ)
+## 常见问题（FAQ）
 
 > **问：为什么我在手机上找不到 XIAO IR Mate 的热点？**
-> **答：** 请确认设备通过 Type-C 正确供电。检查白色 LED 是否闪烁。如果指示灯熄灭，请尝试更换线缆或电源。如果设备之前已成功配置到网络，除非网络连接失败或通过长按 RESET 按钮恢复出厂设置，否则不会再次创建 AP 热点。
+> **答：** 请确认设备通过 Type-C 正常供电。检查白色 LED 是否闪烁。如果指示灯熄灭，请尝试更换线缆或电源。如果设备之前已成功配置到网络，除非网络连接失败或通过长按 RESET 按钮恢复出厂设置，否则不会再次创建 AP 热点。
 
-> **问：如果红外学习失败怎么办？（出厂固件）**
-> **答：** 请确保您的原始遥控器电池电量充足，并尽可能靠近 IR Mate 的接收器（通常是黑色半透明组件）。同时，避免在强光下或其他红外干扰源附近进行学习过程。
+> **问：红外学习失败怎么办？（出厂固件）**
+> **答：** 请确保您的原始遥控器电池电量充足，并尽可能靠近 IR Mate 的接收器（通常是黑色半透明组件）。另外，避免在强光下或其他红外干扰源附近进行学习过程。
 
 > **问：设备在 HA 中显示为离线？**
 > **答：** 请检查您的家庭 Wi-Fi 是否正常工作，以及 IR Mate 是否在 Wi-Fi 信号范围内。您可以尝试短按 RESET 按钮重启设备。
 
-> **问：刷入自定义固件后，如何恢复出厂固件？**
-> **答：** 您需要获取出厂固件的 `.bin` 文件或其 ESPHome YAML 源文件，然后通过 ESPHome 再次刷入以覆盖自定义固件。
+> **问：刷写自定义固件后，如何恢复出厂固件？**
+> **答：** 您需要获取出厂固件的 `.bin` 文件或其 ESPHome YAML 源文件，然后通过 ESPHome 再次刷写以覆盖自定义固件。
 
 > **问：如何在自动化中使用学习的信号（出厂固件）或空调控制（高级固件）？**
-> **答：** 在 HA 的自动化或脚本编辑器中，选择"调用服务"。
+> **答：** 在 HA 的自动化或脚本编辑器中，选择 "Call service"。
 
 ## 资源
 
