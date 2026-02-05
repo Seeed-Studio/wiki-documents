@@ -13,7 +13,7 @@ keywords:
 - ESP-IDF
 - ESP-ADF
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
-slug: /cn/respeaker_xvf3800_agora_convo_client
+slug: /respeaker_xvf3800_agora_convo_client
 last_update:
   date: 04/2/2026
   author: Jiayu Zhan(Jack)
