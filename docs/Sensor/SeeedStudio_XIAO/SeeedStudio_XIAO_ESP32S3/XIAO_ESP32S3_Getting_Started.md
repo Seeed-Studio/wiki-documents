@@ -59,90 +59,92 @@ The **OV2640 camera** has been discontinued, and the subsequent XIAO ESP32S3 Sen
 :::
 
 ### Specification
-
-<table align="center">
- <tr>
-     <th>Item</th>
-     <th style={{width:300, height:'auto'}}>Seeed Studio XIAO ESP32S3</th>
-        <th style={{width:300, height:'auto'}}>Seeed Studio XIAO ESP32S3 Sense</th>
-  <th style={{width:300, height:'auto'}}>Seeed Studio XIAO ESP32S3 Plus</th>
- </tr>
- <tr>
-     <th>Processor</th>
-     <td align="center" colspan="3">ESP32-S3R8 <br></br> Xtensa LX7 dual-core, 32-bit processor that operates at up to 240 MHz </td>
- </tr>
- <tr>
-     <th>Wireless</th>
-     <td align="center" colspan="3">Complete 2.4GHz Wi-Fi subsystem <br></br> BLE: Bluetooth 5.0, Bluetooth mesh</td>
- </tr>
-    <tr>
-     <th>Built-in Sensors</th>
-     <td align="center"> - </td>
-        <td align="center">OV2640 camera sensor for 1600 * 1200 <br></br>OV3660 camera sensor for 2048 * 1536<br></br>Digital microphone</td>
-  <td align="center"> - </td>
- </tr>
-    <tr>
-     <th>Memory</th>
-     <td align="center">On-chip 8M PSRAM & 8MB Flash</td>
-        <td align="center">On-chip 8M PSRAM & 8MB Flash <br></br> Onboard SD Card Slot, supporting 32GB FAT</td>
-  <td align="center">On-chip 8M PSRAM & <strong>16MB</strong> Flash</td>
- </tr>
-    <tr>
-     <th>Interface</th>
-     <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x User LED, 1x Charge LED  <br></br> 1x Reset button, 1x Boot button</td>
-        <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x User LED, 1x Charge LED, 1x B2B Connector (with 2 additional GPIOs), 1x Reset button, 1x Boot button</td>
-  <td><strong>2</strong>x UART, 1x IIC, 1x IIS, <strong>2</strong>x SPI, <strong>18</strong>x GPIOs (PWM), 9x ADC, 1x User LED, 1x Charge LED, 1x B2B Connector, 1x Reset button, 1x Boot button</td>
- </tr>
-    <tr>
-     <th>Dimensions</th>
-     <td align="center">21 x 17.8mm</td>
-        <td align="center">21 x 17.8 x 15mm (with expansion board)</td>
-  <td align="center">21 x 17.8mm</td>
- </tr>
-    <tr>
-     <th rowspan="5">Power</th>
-     <td colspan="3" align="center">Input voltage (Type-C): 5V <br></br> Input voltage (BAT): 4.2V</td>
- </tr>
-    <tr>
-     <td>Circuit operating Voltage  (ready to operate): <br></br> - Type-C: 5V@<strong>19mA</strong> <br></br> - BAT: 3.8V@<strong>22mA</strong></td>
-        <td>Circuit operating Voltage  (ready to operate): <br></br> - Type-C: 5V@<strong>38.3mA</strong> <br></br> - BAT: 3.8V@<strong>43.2mA</strong> (with expansion board)</td>
-  <td>Circuit operating Voltage  (ready to operate): <br></br> - Type-C: 5V@<strong>28mA</strong> <br></br> - BAT: 3.8V@<strong>35mA</strong></td>
- </tr>
- <tr>
-     <td align="center"> - </td>
-        <td align="center">Webcam Web application: <br></br> - Type-C: <br></br> - - Average power consumption: 5V/<strong>220mA</strong> <br></br> - Battery: <br></br> - - Average power consumption: 4.2V/<strong>212mA</strong></td>
-  <td align="center"> - </td>
- </tr>
- <tr>
-     <td align="center"> - </td>
-        <td align="center">Microphone recording & SD card writing:  <br></br> - Type-C: <br></br> - - Average power consumption: 5V/<strong>46.5mA</strong> <br></br> - - Peak power consumption: 5V/<strong>89.6mA</strong> <br></br> - Battery: <br></br> - - Average power consumption: 3.8V/<strong>54.4mA</strong> <br></br> - - Peak power consumption: 3.8V/<strong>108mA</strong></td>
-  <td align="center"> - </td>
- </tr>
-    <tr>
-  <td align="center" colspan="3">Charging battery current: <strong>100mA</strong></td>
- </tr>
-    <tr>
-        <th>Low Power Consumption Model</th>
-        <td>Modem-sleep Model: <strong>3.8V/25 mA</strong> <br></br> Light-sleep Model: <strong>3.8V/2 mA</strong> <br></br> Deep Sleep Model: <strong>3.8V/14 μA</strong></td>
-        <td>Without any peripherals: <br></br> - Modem-sleep Model: <strong>3.8V/25.5 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/2.4 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/63.768 μA</strong> <br></br> Connect the camera: <br></br> - Modem-sleep Model: <strong>3.8V/44.57 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/5.47 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/3.00 mA</strong> <br></br> Connecting an SD Card: <br></br> - Modem-sleep Model: <strong>3.8V/32.8 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/3.48 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/1.08 mA</strong><br></br> Simultaneously connect the camera and the SD card: <br></br> - Modem-sleep Model: <strong>3.8V/55.72 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/6.56 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/3.98 mA</strong></td>
-  <td>Modem-sleep Model: <strong>3.8V/26.5 mA</strong> <br></br> Light-sleep Model: <strong>3.8V/2.2 mA</strong> <br></br> Deep Sleep Model: <strong>3.8V/69 μA</strong></td>
-    </tr>
-    <tr>
-        <th>Wi-Fi Enabled Power Consumption</th>
-        <td align="center">Active Model: <strong>~ 100 mA</strong></td>
-        <td align="center">Active Model: <strong>~ 110 mA</strong> (with expansion board)</td>
-  <td align="center">Active Model: <strong>~ 85 mA</strong></td>
-    </tr>
-    <tr>
-        <th>BLE Enabled Power Consumption</th>
-        <td align="center">Active Model: <strong>~ 85 mA</strong></td>
-        <td align="center">Active Model: <strong>~ 102 mA</strong> (with expansion board)</td>
-  <td align="center">Active Model: <strong>~ 77 mA</strong></td>
-    </tr>
-    <tr>
-        <th>Working Temperature</th>
-        <td colspan="3" align="center">-40°C ~ 65°C</td>
-    </tr>
+<table>
+  <tr>
+    <th>Product</th>
+    <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">XIAO ESP32-S3</a></td>
+    <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">XIAO ESP32-S3 Sense</a></td>
+    <td><a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32S3-Plus-p-6361.html">XIAO ESP32-S3 Plus</a></td>
+  </tr>
+  <tr>
+    <th>Processor</th>
+    <td colspan="3">ESP32-S3R8<br/>Xtensa LX7 dual-core, 32-bit processor that operates at up to 240 MHz</td>
+  </tr>
+  <tr>
+    <th>Wireless</th>
+    <td colspan="3">Complete 2.4GHz Wi-Fi subsystem<br/>Bluetooth Low Energy 5.0 / Bluetooth Mesh</td>
+  </tr>
+  <tr>
+    <th>Built-in Sensors</th>
+    <td>/</td>
+    <td>1x OV3660 camera sensor<br/>1x Digital Microphone</td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <th>Memory</th>
+    <td>On-chip 8MB PSRAM &amp; 8MB Flash</td>
+    <td>On-chip 8MB PSRAM &amp; 8MB Flash<br/>Onboard SD Card Slot, supporting 32GB FAT</td>
+    <td>On-chip 8MB PSRAM &amp; 16MB Flash</td>
+  </tr>
+  <tr>
+    <th>Interface</th>
+    <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>9x ADC<br/>1x User LED<br/>1x Charge LED<br/>1x Reset button<br/>1x Boot button</td>
+    <td>1x UART<br/>1x IIC<br/>1x IIS<br/>1x SPI<br/>11x GPIOs (PWM)<br/>9x ADC<br/>1x User LED<br/>1x Charge LED<br/>1x B2B Connector (with 2 additional GPIOs)<br/>1x Reset button<br/>1x Boot button</td>
+    <td>2x UART<br/>1x IIC<br/>1x IIS<br/>2x SPI<br/>18x GPIOs (PWM)<br/>9x ADC<br/>1x User LED<br/>1x Charge LED<br/>1x B2B Connector<br/>1x Reset button<br/>1x Boot button</td>
+  </tr>
+  <tr>
+    <th>Dimensions</th>
+    <td>21 x 17.8mm</td>
+    <td>21 x 17.8 x 15mm (with expansion board)</td>
+    <td>21 x 17.8mm</td>
+  </tr>
+  <tr>
+    <th>Power(Typ.)</th>
+    <td colspan="3">Input voltage (Type-C): 5V<br/>Input voltage (BAT): 3.7V</td>
+  </tr>
+  <tr>
+    <th rowspan="4">Power Consumption</th>
+    <td>Circuit operating Voltage:<br/>- Type-C: 5V@19mA<br/>- BAT: 3.8V@22mA</td>
+    <td>Circuit operating Voltage:<br/>`- Type-C: 5V@38.3mA`<br/>`- BAT: 3.8V@43.2mA (with expansion board)`</td>
+    <td>Circuit operating Voltage:<br/>- Type-C: 5V@28mA<br/>- BAT: 3.8V@35mA</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Webcam Web application:<br/>- Type-C:<br/>-- Average power Consumption: 5V/~140mA<br/>-- Peak power consumption(Image Capture): 5V/~347mA<br/>- Battery:<br/>-- Average power Consumption: 3.8V/~155mA<br/>-- Peak power consumption(Image Capture): 3.8V/~366mA</td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Microphone recording &amp; SD card writing:<br/>- Type-C:<br/>-- Average power consumption: 5V/54.58mA<br/>-- Peak power consumption: 5V/86.7mA<br/>- Battery:<br/>-- Average power consumption: 3.8V/64.5mA<br/>-- Peak power consumption: 3.8V/109.3mA</td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <td>50mA(Fast) / 3.8mA(Trickle)</td>
+    <td>/</td>
+    <td>Charging current:<br/>100mA(Fast) / 0.9mA(Trickle)</td>
+  </tr>
+  <tr>
+    <th>Low Power Consumption Model(Typ.)<br/>(Supply Power: 3.8V)</th>
+    <td>Modem-sleep Mode: 27mA<br/>Light-sleep Mode: 2mA<br/>Deep Sleep Mode: 14μA</td>
+    <td>Modem-sleep Mode: 44mA<br/>Light-sleep Mode: 5mA<br/>Deep Sleep Mode: 3mA</td>
+    <td>Modem-sleep Mode: 3.8V/31.6 mA<br/>Light-sleep Mode: 3.8V/2.45 mA<br/>Deep Sleep Mode: 3.8V/33.51 μA</td>
+  </tr>
+  <tr>
+    <th>Wi-Fi Enabled Power Consumption(Typ.)</th>
+    <td>Active Mode: 100 mA</td>
+    <td>Active Mode: 110 mA (with expansion board)</td>
+    <td>Active Mode: 81 mA</td>
+  </tr>
+  <tr>
+    <th>BLE Enabled Power Consumption(Typ.)</th>
+    <td>Active Mode: 85 mA</td>
+    <td>Active Mode: 102 mA (with expansion board)</td>
+    <td>Active Mode: 101 mA</td>
+  </tr>
+  <tr>
+    <th>Working Temperature</th>
+    <td colspan="3">-20°C ~ 65°C</td>
+  </tr>
 </table>
 
 ### Features
@@ -835,52 +837,73 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 
 ## Resources
 
-[PDF] **[ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)**
-
 ### For Seeed Studio XIAO ESP32S3
 
-- **[PDF]** [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Eagle Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
-- **[DXF]** [Seeed Studio XIAO ESP32S3 Dimension in DXF](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf)
-- **[LBR]** [Seeed Studio XIAO ESP32S3 Eagle footprint](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed-Studio-XIAO-ESP32S3-footprint-eagle.lbr)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Factory firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip)
-- **[XLSX]** [Seeed Studio XIAO ESP32S3 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
-- **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip)
+**Hardware Design**
+- **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
+- **📄[Schematic]** [XIAO ESP32-S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_V1.3_SCH_260115.pdf )
+- **🗃️[PCB Design Files]** 
+  - [XIAO ESP32-S3 KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_V1.3_SCH&PCB_260115.7z )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Pinout Diagram]** [XIAO ESP32-S3 Pinout Sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx )
 
-- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**Mechanical Design**
+- **📄[2D Dimensions]** [XIAO ESP32-S3 Dimension in DXF](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_Dimensioning.dxf )
+- **🗃️[3D Model]** [XIAO ESP32-S3 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-3d_model.zip )
+
+**Software & Tools**
+- **🗃️[Factory Firmware]** [XIAO ESP32-S3 Factory Firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip )
 
 ### For Seeed Studio XIAO ESP32S3 Sense
 
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
-- **[PDF]** [Seeed Studio XIAO ESP32S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf)
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense KiCAD Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeeduino-xiao-ESP32S3-KiCAD-Library.zip)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Eagle Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH&PCB_230324.zip)
-- **[DXF]** [Seeed Studio XIAO ESP32S3 Sense Dimension in DXF (top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf)
-- **[DXF]** [Seeed Studio XIAO ESP32S3 Sense Dimension in DXF (bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_bot.dxf)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Factory firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-firmware-20240814.zip)
-- **[XLSX]** [Seeed Studio XIAO ESP32S3 Sense pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
-- **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip)
-- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 Sense FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**Hardware Design**
+- **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
+- **📄[Schematic]** [XIAO ESP32-S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_V1.3_SCH_260115.pdf )
+- **🗃️[PCB Design Files]** 
+  - [XIAO ESP32-S3 Sense KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_V1.3_SCH&PCB_260115.7z )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Pinout Diagram]** [XIAO ESP32-S3 Sense Pinout Sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx )
+
+**Mechanical Design**
+- **📄[2D Dimensions]** [XIAO ESP32-S3 Sense Dimension in DXF (Top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf )
+- **📄[2D Dimensions]** [XIAO ESP32-S3 Sense Dimension in DXF (Bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_bot.dxf )
+- **🗃️[3D Model]** [XIAO ESP32-S3 Sense 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip )
+- **📄[3D Model]** [XIAO ESP32-S3 Sense 3D Printing Purple Enclosure (Top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp )
+- **📄[3D Model]** [XIAO ESP32-S3 Sense 3D Printing Purple Enclosure (Bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp )
+
+**Software & Tools**
+- **🗃️[Factory Firmware]** [XIAO ESP32-S3 Sense Factory Firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-firmware-20240814.zip )
 
 ### For Seeed Studio XIAO ESP32S3 Plus
 
-- **[PDF]** [Seeed Studio XIAO ESP32S3 Plus Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_SCH_PDF.pdf)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library2.zip)
-- **[DXF]** [Seeed Studio XIAO ESP32S3 Plus Dimension in DXF (top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf)
-- **[DXF]** [Seeed Studio XIAO ESP32S3 Plus Dimension in DXF (bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf)
-- **[XLSX]** [Seeed Studio XIAO ESP32S3 Plus pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_Pinout.xlsx)
-- **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD file](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1_SCH_PCB.zip)
-- **[ZIP]** [Seeed Studio XIAO Plus Base with botton pad lead out](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
-- **[ZIP]** [Seeed Studio XIAO Plus Base without botton pad lead out](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
-- **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32s3-plus-1/files)
+**Hardware Design**
+- **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
+- **📄[Schematic]** [XIAO ESP32-S3 Plus Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.1_SCH_260115.pdf )
+- **🗃️[PCB Design Files]** 
+  - [XIAO ESP32-S3 Plus KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.1_KiCad_260115.zip )
+  - [XIAO Plus Base （with bottom pad lead out） KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip )
+  - [XIAO Plus Base （without bottom pad lead out） KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Pinout Diagram]** [XIAO ESP32-S3 Plus Pinout Sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_Pinout.xlsx )
+
+**Mechanical Design**
+- **📄[2D Dimensions]** [XIAO ESP32-S3 Plus Dimension in DXF (Top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/TOP.dxf )
+- **📄[2D Dimensions]** [XIAO ESP32-S3 Plus Dimension in DXF (Bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf )
+- **🔗[3D Model]** [XIAO ESP32-S3 Plus 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32s3-plus-1/files )
 
 ### For Seeed Studio XIAO ESP32S3 Sense Camera
 
-- **[PDF]** [OV3660 DataSheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf)
-- **[PDF]** [OV5640 DataSheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf)
-- **[PDF]** [OV2640 DataSheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf)
-
+**Hardware Design**
+- **📄[Datasheet]** [OV3660 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
+- **📄[Datasheet]** [OV5640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
+- **📄[Datasheet]** [OV2640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
 ## Course Resources
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>

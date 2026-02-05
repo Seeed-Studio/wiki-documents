@@ -28,100 +28,52 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 </div>
 
 ### Specifications
-
 <table>
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>Seeed Studio XIAO ESP32C3</th>
-            <th>Seeeduino XIAO</th>
-            <th>Seeed XIAO RP2040</th>
-            <th>Seeed XIAO nRF52840</th>
-            <th>Seeed XIAO nRF52840 Sense</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>Processor</th>
-            <td>ESP32-C3 32-bit RISC-V @160MHz</td>
-            <td>SAMD21 M0+@48MHz</td>
-            <td>RP2040 Dual-core M0+@133Mhz</td>
-            <td>nRF52840 M4F@64MHz</td>
-            <td>nRF52840 M4F@64MHz</td>
-        </tr>
-        <tr>
-            <th>Wireless Connectivity</th>
-            <td>WiFi and Bluetooth 5 (BLE)</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>Bluetooth 5.0/BLE/NFC</td>
-            <td>Bluetooth 5.0/BLE/NFC</td>
-        </tr>
-        <tr>
-            <th>Memory</th>
-            <td>400KB SRAM, 4MB onboard Flash</td>
-            <td>32KB SRAM 256KB FLASH</td>
-            <td>264KB SRAM 2MB onboard Flash</td>
-            <td>256KB RAM, 1MB Flash 2MB onboard Flash</td>
-            <td>256KB RAM,1MB Flash 2MB onboard Flash</td>
-        </tr>
-        <tr>
-            <th>Built-in Sensors</th>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>6 DOF IMU (LSM6DS3TR-C), PDM Microphone</td>
-        </tr>
-        <tr>
-            <th>Interfaces</th>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-        </tr>
-        <tr>
-            <th>PWM/Analog Pins</th>
-            <td>11/4</td>
-            <td>11/11</td>
-            <td>11/4</td>
-            <td>11/6</td>
-            <td>11/6</td>
-        </tr>
-        <tr>
-            <th>Onboard Buttons</th>
-            <td>Reset/ Boot Button</td>
-            <td>N/A</td>
-            <td>Reset/ Boot Button</td>
-            <td>Reset Button</td>
-            <td>Reset Button</td>
-        </tr>
-        <tr>
-            <th>Onboard LEDs</th>
-            <td>Charge LED</td>
-            <td>N/A</td>
-            <td>Full-color RGB/ 3-in-one LED</td>
-            <td>3-in-one LED/ Charge LED</td>
-            <td>3-in-one LED/ Charge LED</td>
-        </tr>
-        <tr>
-            <th>Battery Charge Chip</th>
-            <td>ETA4054S2F</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>BQ25101</td>
-            <td>BQ25101</td>
-        </tr>
-        <tr>
-            <th>Programming Languages</th>
-            <td>Arduino/ MicroPython</td>
-            <td>Arduino/ CircuitPython</td>
-            <td colspan="3" align="center">Arduino/ MicroPython/ CircuitPython</td>
-        </tr>
-    </tbody>
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Processor</td>
+    <td>ESP32-C3 SoC<br/>RISC-V single-core 32-bit chip processor with a four-stage pipeline that operates at up to 160 MHz</td>
+  </tr>
+  <tr>
+    <td>Wireless</td>
+    <td>Complete 2.4GHz Wi-Fi subsystem<br/>Bluetooth Low Energy 5.0/ Bluetooth Mesh</td>
+  </tr>
+  <tr>
+    <td>On-chip Memory</td>
+    <td>400KB SRAM &amp; 4MB Flash</td>
+  </tr>
+  <tr>
+    <td>Interface</td>
+    <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>4x ADC<br/>1x Reset button<br/>1x Boot button</td>
+  </tr>
+  <tr>
+    <td>Dimensions</td>
+    <td>21 x 17.8mm</td>
+  </tr>
+  <tr>
+    <td>Power(Typ.)</td>
+    <td>Max 3.3V Output Current: 500mA<br/>Test Condition: BAT Pin Input @ 3.8V<br/>Source Capability: 3A<br/>Charging current: 380mA(Fast) / 40mA(Trickle)<br/>Input voltage (VIN): 5V<br/>Input voltage (BAT): 3.7V</td>
+  </tr>
+  <tr>
+    <td>Deep Sleep Power Consumption</td>
+    <td>Deep Sleep Mode: 44 μA</td>
+  </tr>
+  <tr>
+    <td>Wi-Fi Enabled Power Consumption</td>
+    <td>Active Mode: 75 mA<br/>Modem-sleep Mode: 25 mA<br/>Light-sleep Mode: 4 mA</td>
+  </tr>
+  <tr>
+    <td>BLE Enabled Power Consumption</td>
+    <td>Modem-sleep Mode: 27 mA<br/>Light-sleep Mode: 10 mA</td>
+  </tr>
+  <tr>
+    <td>Working Temperature</td>
+    <td>-40°C ~ 85°C</td>
+  </tr>
 </table>
-
 ### Features
 
 - **Powerful CPU:** ESP32-C3, 32­bit RISC­-V single­core processor that operates at up to 160 MHz
@@ -513,21 +465,30 @@ You will see the following output when flashing is successful
 
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 
-- 📄**[PDF]** [ESP32C3 datasheet](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf)
-- 📄 **[PDF]** [Seeed Studio XIAO ESP32C3 Schematic](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO ESP32C3 KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-KiCAD-Library.zip)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO ESP32C3 Eagle Libraries](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-v1.2_SCH-PCB.zip)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO ESP32C3 Factory firmware](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin)
+**Hardware Design**
+- **📄[Datasheet]** [ESP32-C3 Datasheet](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf )
+- **📄[Schematic]** [XIAO ESP32-C3 Schematic](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf )
+- **🗃️[PCB Design Files]** 
+  - [XIAO ESP32-C3 KiCad Project](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_KiCad_260116.zip )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Pinout Diagram]** [XIAO ESP32-C3 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx )
 
-- 📄 **[DXF]** [Seeed Studio XIAO ESP32C3 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip)
-- 📄 **[LBR]** [Seeed Studio XIAO ESP32C3 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeed-Studio-XIAO-ESP32C3-footprint-eagle.lbr)
-- 📄 **[XLSX]** [Seeed Studio XIAO ESP32C3 pinout sheet](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx)
-- 🔗 **[STEP]** [Seeed Studio XIAO ESP32C3 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1)
-- 🔗 **[GitHub]** [Seeed Studio XIAO ESP32C3 MicroPython Library](https://github.com/IcingTomato/micropython_xiao_esp32c3)
-- 🔗 **[Link]** [Platform IO for Seeed Studio XIAO ESP32](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html)
-- 🔗 **[WiKi]** [First Look at the Seeed Studio XIAO ESP32C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html)  A great intro to the XIAO ESP32C3, covering key features and basic usage.
-- 📚 **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/) Excellent guide for mastering Arduino and TinyML on XIAO boards.
-- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32C3 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**Mechanical**
+- **📄[2D Dimensions]** [XIAO ESP32-C3 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip )
+- **🗃️[2D Dimensions]** [XIAO ESP32-C3 Bottom Pad Data](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/XIAO_ESP32C3_v1.2_Dimensioning.zip )
+- **📄[3D Model]** [XIAO ESP32-C3 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1 )
+
+**Software & Tools**
+- **🗃️[Factory Firmware]** [XIAO ESP32-C3 Factory Firmware](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin )
+- **🔗[MicroPython Library]** [XIAO ESP32-C3 MicroPython Library](https://github.com/IcingTomato/micropython_xiao_esp32c3 )
+- **🔗[Platform IO]** [PlatformIO for Seeed Studio XIAO ESP32-C3](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html )
+
+**Others**
+- **🔗[Wiki]** [First Look at the Seeed Studio XIAO ESP32-C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html )  
+  - A great intro to the XIAO ESP32C3, covering key features and basic usage.
+- **📄[Document]** [Report of XIAO ESP32-C3 Low Power Consumption](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/Low_Power_Consumption.pdf )
 
 ## Course Resources
 
