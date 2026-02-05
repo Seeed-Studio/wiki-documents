@@ -12,6 +12,9 @@ function getFrontmatterAliases() {
     const glob = require('glob');
 
     // ====== 1) 只在本地 dev server 跳过（更可靠的判断） ======
+    // Docusaurus 在 start/build/deploy 的环境变量有时会被工具链改写，
+    // 所以不要再单纯依赖 NODE_ENV/BABEL_ENV。
+    // 这里用一个更稳的策略：如果是交互式 dev server（start）才跳过扫描。
     const argv = process.argv.join(' ');
     const isStartCommand = /\bdocusaurus\b.*\bstart\b/.test(argv) || /\bstart\b/.test(argv);
     if (isStartCommand) {
@@ -26,7 +29,7 @@ function getFrontmatterAliases() {
       return [];
     }
 
-    // ====== 2) 扫描所有 md/mdx（路径列表本身占用可控） ======
+    // ====== 2) 扫描所有 md/mdx ======
     const files = glob.sync(path.join(docsDir, '**/*.{md,mdx}'), {
       windowsPathsNoEscape: true,
       dot: false,
@@ -44,7 +47,7 @@ function getFrontmatterAliases() {
     /** @param {string} p */
     const normPath = (p) => {
       if (!p) return '/';
-      let x = String(p).trim();
+      let x = p.trim();
       x = x.startsWith('/') ? x : `/${x}`;
       x = x.replace(/\/{2,}/g, '/');
       return x;
@@ -53,87 +56,27 @@ function getFrontmatterAliases() {
     /** @param {string} p */
     const withSlash = (p) => (p.endsWith('/') ? p : `${p}/`);
 
-    // ====== 4) 低内存读取：只读文件头部，不读全文 ======
-    // 64KB 通常足够覆盖 frontmatter；如果你有超长 frontmatter 可调大，比如 128KB
-    const MAX_HEAD_BYTES = 64 * 1024;
-
-    /**
-     * 读取文件头部（不读全文）
-     * @param {string} filePath
-     * @returns {string}
-     */
-    function readHeadUtf8(filePath) {
-      /** @type {number | undefined} */
-      let fd;
-      try {
-        fd = fs.openSync(filePath, 'r');
-        const stat = fs.fstatSync(fd);
-        const size = Math.min(stat.size, MAX_HEAD_BYTES);
-        const buf = Buffer.allocUnsafe(size);
-        fs.readSync(fd, buf, 0, size, 0);
-        return buf.toString('utf8');
-      } catch {
-        // ignore single file errors
-        return '';
-      } finally {
-        if (fd !== undefined) {
-          try {
-            fs.closeSync(fd);
-          } catch {
-            // ignore
-          }
-        }
-      }
-    }
-
-    /**
-     * 从头部内容提取 frontmatter 文本
-     * @param {string} head
-     * @returns {string}
-     */
-    function extractFrontmatterText(head) {
-      const m = head.match(FM_RE);
-      return m ? m[1] : '';
-    }
-
-    /**
-     * 从 frontmatter 提取 slug（若不存在返回 null）
-     * @param {string} frontmatterText
-     * @returns {string | null}
-     */
-    function extractSlug(frontmatterText) {
-      const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
-      return slugMatch ? normPath(slugMatch[1]) : null;
-    }
-
-    /**
-     * 文件路径推导 docPath（与原逻辑一致）
-     * @param {string} filePath
-     * @returns {string}
-     */
-    function pathToDocPath(filePath) {
-      const relativePath = path.relative(docsDir, filePath);
-      const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
-      return normPath(docPath);
-    }
-
-    // ====== 5) 先收集所有真实页面路径（slug 或文件路径）用于 to 校验 ======
-    // 这里原来会读全文件；现在只读头部即可
+    // ====== 4) 先收集所有真实页面路径（slug 或文件路径）用于 to 校验 ======
     const existingPaths = new Set();
-
-    // 同时缓存每个文件的头部（避免第二轮重复打开/读取造成 IO & 内存抖动）
-    /** @type {Map<string, string>} */
-    const headCache = new Map();
 
     for (const filePath of files) {
       try {
-        const head = readHeadUtf8(filePath);
-        headCache.set(filePath, head);
+        const content = fs.readFileSync(filePath, 'utf8');
+        const fm = content.match(FM_RE);
+        if (!fm) continue;
 
-        const fmText = extractFrontmatterText(head);
-        const slug = fmText ? extractSlug(fmText) : null;
+        const frontmatterText = fm[1];
+        const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
 
-        const target = slug || pathToDocPath(filePath);
+        /** @type {string} */
+        let target;
+        if (slugMatch) {
+          target = normPath(slugMatch[1]);
+        } else {
+          const relativePath = path.relative(docsDir, filePath);
+          const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
+          target = normPath(docPath);
+        }
 
         existingPaths.add(target);
         existingPaths.add(withSlash(target));
@@ -142,7 +85,7 @@ function getFrontmatterAliases() {
       }
     }
 
-    // ====== 6) 生成 redirects（from 去重 + 只生成带 / 的 from） ======
+    // ====== 5) 生成 redirects（from 去重 + 只生成带 / 的 from） ======
     /** @type {{from: string; to: string}[]} */
     const redirects = [];
     const seenFrom = new Set();
@@ -154,36 +97,22 @@ function getFrontmatterAliases() {
 
     for (const filePath of files) {
       try {
-        const head = headCache.get(filePath) || '';
+        const content = fs.readFileSync(filePath, 'utf8');
+        const fm = content.match(FM_RE);
+        if (!fm) continue;
 
-        // 快速跳过：头部没有 aliases: 就不解析（大幅减少后续正则/拆分）
-        if (!head.includes('aliases:')) continue;
-
-        const fmText = extractFrontmatterText(head);
-        if (!fmText) continue;
-
-        // 二次确认
-        if (!fmText.includes('aliases:')) continue;
+        const frontmatterText = fm[1];
+        if (!frontmatterText.includes('aliases:')) continue;
 
         aliasFrontmatterFiles++;
 
-        const slug = extractSlug(fmText);
-
-        // 目标路径（统一带 /）
-        const targetPath = slug || pathToDocPath(filePath);
-        const to = withSlash(targetPath);
-
-        // to 校验：存在任意一种就认为有效（与原逻辑一致）
-        if (!existingPaths.has(targetPath) && !existingPaths.has(to)) {
-          skippedCount++;
-          continue;
-        }
+        const slugMatch = frontmatterText.match(/slug:\s*['"]?([^'"\n\r]+)['"]?/);
 
         /** @type {string[]} */
         let aliases = [];
 
         // 形式 1：aliases: ["/a", "/b"]
-        const bracketMatch = fmText.match(/aliases:\s*\[(.*?)\]/s);
+        const bracketMatch = frontmatterText.match(/aliases:\s*\[(.*?)\]/s);
         if (bracketMatch) {
           aliases = bracketMatch[1]
             .split(',')
@@ -191,7 +120,7 @@ function getFrontmatterAliases() {
             .filter(Boolean);
         } else {
           // 形式 2：YAML list
-          const yamlMatch = fmText.match(/aliases:\s*\r?\n((?:\s*-\s*.+\r?\n?)*)/);
+          const yamlMatch = frontmatterText.match(/aliases:\s*\r?\n((?:\s*-\s*.+\r?\n?)*)/);
           if (yamlMatch) {
             aliases = yamlMatch[1]
               .split(/\r?\n/)
@@ -205,7 +134,25 @@ function getFrontmatterAliases() {
 
         if (aliases.length === 0) continue;
 
-        // from：只生成带 / 的版本（避免 trailingSlash 下落盘冲突）（与原逻辑一致）
+        // 目标路径（统一带 /）
+        /** @type {string} */
+        let targetPath;
+        if (slugMatch) {
+          targetPath = normPath(slugMatch[1]);
+        } else {
+          const relativePath = path.relative(docsDir, filePath);
+          const docPath = relativePath.replace(/\.(md|mdx)$/, '').replace(/\\/g, '/');
+          targetPath = normPath(docPath);
+        }
+        const to = withSlash(targetPath);
+
+        // to 校验：存在任意一种就认为有效
+        if (!existingPaths.has(targetPath) && !existingPaths.has(to)) {
+          skippedCount++;
+          continue;
+        }
+
+        // from：只生成带 / 的版本（避免 trailingSlash 下落盘冲突）
         for (const alias of aliases) {
           const from = withSlash(normPath(alias));
 
@@ -282,14 +229,8 @@ module.exports = (async () => {
     ],
 
     future: {
-      v4: {
-        removeLegacyPostBuildHeadAttribute: true,
-      },
-      experimental_faster: {
-        rspackBundler: true,
-        rspackPersistentCache: true, 
-        ssgWorkerThreads: true,
-      },
+      v4: true, // Enable future Docusaurus v4 features
+      experimental_faster: true, // Enable experimental faster features
     },
 
     // GitHub pages deployment config.
