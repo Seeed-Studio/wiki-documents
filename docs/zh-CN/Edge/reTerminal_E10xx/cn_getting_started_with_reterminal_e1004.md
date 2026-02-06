@@ -9,7 +9,7 @@ keywords:
   - SenseCraft HMI
   - E Ink Spectra 6
   - Smart Home Dashboard
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.webp
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg
 slug: /cn/getting_started_with_reterminal_e1004
 sku: 100064156
 last_update:
@@ -33,7 +33,7 @@ reTerminal E1004 是一款 13.3 英寸开源全彩 ePaper 显示器，电池续�
 -   **无代码 UI 开发：** 默认固件支持 SenseCraft HMI，可拖拽创建仪表板并提供 AI 辅助设计。
 -   **广泛兼容性：** 支持 Home Assistant (ESPHome)、Arduino、PlatformIO 和 ESP-IDF。
 -   **丰富连接性：** 集成 2.4GHz Wi-Fi (802.11 b/g/n) 和蓝牙 5.0。
--   **集成传感器和音频：** 内置温湿度传感器、用于警报的蜂鸣器，以及为未来语音应用预留的麦克风。
+-   **集成传感器和音频：** 内置温湿度传感器、蜂鸣器用于警报
 -   **即用存储：** 包含 16GB Micro SD 卡（支持最大 32GB）。
 
 ## 规格参数
@@ -47,7 +47,7 @@ reTerminal E1004 是一款 13.3 英寸开源全彩 ePaper 显示器，电池续�
 | **分辨率** | 1200 x 1600 像素 |
 | **无线连接** | 2.4GHz 802.11 b/g/n Wi-Fi，蓝牙 5.0 |
 | **传感器** | 温度、湿度传感器 |
-| **音频** | 蜂鸣器（声音警报），麦克风（预留） |
+| **音频** | 蜂鸣器（声音警报） |
 | **电池** | 5000mAh |
 | **电源输入** | USB-C 5V/1A |
 | **软件支持** | SenseCraft HMI（默认）、ESPHome、Arduino、PlatformIO、ESP-IDF |
@@ -56,7 +56,7 @@ reTerminal E1004 是一款 13.3 英寸开源全彩 ePaper 显示器，电池续�
 
 ## 应用场景
 
--   **低功耗电子相框：** 以纸质般的质量显示高分辨率家庭照片或艺术作品，无需担心每日充电。
+-   **低功耗电子相框：** 显示高分辨率家庭照片或艺术作品，具有纸质般的质感，无需担心每日充电。
 -   **家庭信息板：** 以时尚、常亮的格式跟踪日历、通知、天气和新闻。
 -   **家庭自动化仪表板：** 通过 Home Assistant 可视化实时智能家居数据（温度、湿度、空气质量）。
 -   **智能办公显示：** 显示会议室日程、可用性或方向指引。
@@ -81,7 +81,7 @@ reTerminal E1004 是一款 13.3 英寸开源全彩 ePaper 显示器，电池续�
 
 ## SenseCraft HMI 入门
 
-reTerminal E1004 预装了支持 **SenseCraft HMI** 的固件，这是一个无代码平台，允许您轻松设计和部署个性化仪表板。
+reTerminal E1004 预装了支持 **SenseCraft HMI** 的固件，这是一个无代码平台，让您可以轻松设计和部署个性化仪表板。
 
 ### 步骤 1. 开机和网络配置
 

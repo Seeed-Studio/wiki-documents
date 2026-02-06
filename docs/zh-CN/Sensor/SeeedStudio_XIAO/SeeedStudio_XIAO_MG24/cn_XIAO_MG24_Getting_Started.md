@@ -45,73 +45,89 @@ sidebar_position: 0
 
 ## 简介
 
-**Seeed Studio XIAO MG24** 是一款基于 Silicon Labs MG24 的迷你开发板。XIAO MG24 基于 **ARM Cortex-M33 内核**，**32 位 RISC** 架构，最高时钟频率为 78MHz，支持 DSP 指令和 FPU 浮点运算，拥有强大的计算能力，并内置 **AI/ML 硬件加速器 MVP**，能够高效处理 AI/机器学习算法。其次，它具有出色的射频性能，发射**功率高达 +19.5 dBm**，接收灵敏度**低至 -105.4 dBm**。支持多种物联网和无线传输协议，如 **Matter、Thread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh** 等。
+**Seeed Studio XIAO MG24** 是一款基于 Silicon Labs MG24 的迷你开发板。XIAO MG24 基于 **ARM Cortex-M33 内核**，**32 位 RISC** 架构，最高时钟频率为 78MHz，支持 DSP 指令和 FPU 浮点运算，具有强大的计算能力，并内置 **AI/ML 硬件加速器 MVP**，可高效处理 AI/机器学习算法。其次，它具有出色的射频性能，发射**功率高达 +19.5 dBm**，接收灵敏度**低至 -105.4 dBm**。支持多种物联网和无线传输协议，如 **Matter、Thread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh** 等。
 
 ### 规格参数
 
-<table align="center">
- <tr>
-     <th>项目</th>
-     <th>Seeed Studio XIAO MG24</th>
-        <th>Seeed Studio XIAO MG24 Sense</th>
- </tr>
- <tr>
-     <th>处理器</th>
-     <td align="center" colspan="2">Silicon Labs EFR32MG24 <br></br>ARM Cortex-M33 @ 78MHz </td>
- </tr>
- <tr>
-     <th>无线连接</th>
-     <td align="center" colspan="2">专有 2.4 GHz <br></br> Zigbee PRO/Green Power 协议 <br></br> BLE：Bluetooth 5.3、Bluetooth mesh</td>
- </tr>
-    <tr>
-     <th>内置传感器</th>
-     <td align="center"> - </td>
-        <td align="center">6 轴 IMU(LSM6DS3TR-C) <br></br>模拟麦克风(MSM381ACT001)</td>
- </tr>
-    <tr>
-     <th>存储</th>
-     <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
-        <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
- </tr>
-    <tr>
-     <th>接口</th>
-     <td>2x UART、1x IIC、2x SPI、18x 模拟、18x 数字、全部 PWM、1x 用户 LED、1x 充电 LED <br></br> 1x 复位按钮、</td>
-     <td>2x UART、1x IIC、2x SPI、18x 模拟、18x 数字、全部 PWM、1x 用户 LED、1x 充电 LED <br></br> 1x 复位按钮、</td>
- </tr>
-    <tr>
-     <th>尺寸</th>
-     <td align="center">21 x 17.8mm</td>
-        <td align="center">21 x 17.8mm</td>
- </tr>
-    <tr>
-     <th rowspan="2">电源</th>
-     <td colspan="2" align="center">输入电压 (Type-C)：5V@14mA <br></br> 输入电压 (BAT)：3.7V@7mA</td>
- </tr>
-    <tr>
-     <td align="center">充电电池电流：<strong>200mA</strong></td>
-  <td align="center">充电电池电流：<strong>200mA</strong></td>
- </tr>
-    <tr>
-        <th>低功耗模式</th>
-        <td>正常：<strong>3.7V/6.71 mA</strong> <br></br> 睡眠模式：<strong>3.7V/1.91mA</strong> <br></br> 深度睡眠模式：<strong>3.7V/1.95μA</strong></td>
-        <td>正常：<strong>3.7V/6.71 mA</strong> <br></br> 睡眠模式：<strong>3.7V/1.91mA</strong> <br></br> 深度睡眠模式：<strong>3.7V/1.95μA</strong></td>
-    </tr>
-    <tr>
-        <th>工作温度</th>
-        <td colspan="2" align="center">-20°C ~ 70°C</td>
-    </tr>
+<table>
+  <tr>
+    <th>产品</th>
+    <td>XIAO MG24</td>
+    <td><a href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html">XIAO MG24 Sense</a></td>
+  </tr>
+  <tr>
+    <th>处理器</th>
+    <td colspan="2">Silicon Labs EFR32MG24<br/>ARM Cortex-M33 @ 78MHz</td>
+  </tr>
+  <tr>
+    <th>RAM</th>
+    <td colspan="2">256kB</td>
+  </tr>
+  <tr>
+    <th>Flash</th>
+    <td colspan="2">1536KB + 4MB 板载</td>
+  </tr>
+  <tr>
+    <th>LED</th>
+    <td colspan="2">1x 用户 LED<br/>1x 电源 LED</td>
+  </tr>
+  <tr>
+    <th>传感器</th>
+    <td>-</td>
+    <td>1x 板载模拟麦克风<br/>1x 板载 6 轴 IMU</td>
+  </tr>
+  <tr>
+    <th>接口</th>
+    <td colspan="2">22 引脚（全部支持 PWM）：<br/>19x 模拟<br/>19x 数字<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
+  </tr>
+  <tr>
+    <th>按钮</th>
+    <td colspan="2">1x 复位按钮</td>
+  </tr>
+  <tr>
+    <th>安全性</th>
+    <td colspan="2">硬件加密加速、真随机数生成器、ARM® TrustZone®、安全启动、安全调试解锁等</td>
+  </tr>
+  <tr>
+    <th>低功耗（典型值）</th>
+    <td colspan="2">1.95μA</td>
+  </tr>
+  <tr>
+    <th>正常（典型值）</th>
+    <td colspan="2">6.71mA</td>
+  </tr>
+  <tr>
+    <th>睡眠（典型值）</th>
+    <td colspan="2">1.91mA</td>
+  </tr>
+  <tr>
+    <th>软件兼容性</th>
+    <td colspan="2">Arduino IDE</td>
+  </tr>
+  <tr>
+    <th>支持的天线</th>
+    <td colspan="2">最大 2.4GHz 陶瓷天线：4.97dBi</td>
+  </tr>
+  <tr>
+    <th>工作温度</th>
+    <td colspan="2">-20°C~70°C</td>
+  </tr>
+  <tr>
+    <th>尺寸</th>
+    <td colspan="2">21×17.8 mm</td>
+  </tr>
 </table>
 
 ### 特性
 
-- **强大的 CPU**：ARM Cortex-M33 内核，最高时钟频率为 78MHz，支持 DSP 指令和 FPU 浮点运算，32 位 RISC 架构。
-- **超低功耗**：RX 电流 4.6mA/TX 电流 5mA (0dBm)，多种低功耗睡眠模式
+- **强大的 CPU**：ARM Cortex-M33 内核，最高时钟频率 78MHz，支持 DSP 指令和 FPU 浮点运算，32 位 RISC 架构。
+- **超低功耗**：RX 电流 4.6mA/TX 电流 5mA（0dBm），多种低功耗睡眠模式
 - **强大的 AI**：内置 AI/ML 硬件加速器 MVP，能够高效处理 AI/机器学习算法。
-- **多样化无线传输**：集成 2.4GHz 多协议无线收发器，支持多种物联网协议，如 Matter、OpenThread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh 等。
-- **更好的射频性能**：出色的射频性能，发射功率高达 +19.5 dBm，接收灵敏度低至 -105.4 dBm (250kbps DSSS)
+- **多样化无线传输**：集成 2.4GHz 多协议无线收发器，支持 Matter、OpenThread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh 等多种物联网协议。
+- **更好的射频性能**：出色的射频性能，发射功率高达 +19.5 dBm，接收灵敏度低至 -105.4 dBm（250kbps DSSS）
 - **强大的安全性**：Secure Vault 的强大安全功能，包括安全启动、加密、随机数生成、防篡改、安全调试等。
 - **超小尺寸**：21 x 17.8mm。
-- **丰富的片上资源**：最大 1536KB Flash 和 256KB RAM，拥有充足的存储空间。
+- **丰富的片上资源**：最大 1536KB Flash 和 256KB RAM，存储空间充足。
 - **丰富的接口**：集成 12 位 1Msps ADC、温度传感器、模拟比较器、DCDC 等丰富外设，以及多达 22 个引脚、2 个 USART、2 个低功耗 UART、1 个 IIC 等接口。
 
 ## 硬件概述
@@ -151,25 +167,25 @@ sidebar_position: 0
 | 5V                      | VBUS             |           |                    | 电源输入/输出                   |
 | GND                     |                  |           |                    |                                      |
 | 3V3                     | 3V3_OUT          |           |                    | 电源输出                         |
-| D0                      | Analog          | PC00      |                    | GPIO、ADC                            |
-| D1                      | Analog          | PC01      |                    | GPIO、ADC                            |
-| D2                      | Analog          | PC02      |                    | GPIO、ADC                            |
-| D3                      | Analog          | PC03      |                    | GPIO、SPI、ADC                       |
-| D4                      | Analog,SDA       | PC04      |                    | GPIO、I2C 数据、ADC                  |
-| D5                      | Analog,SCL       | PC05      |                    | GPIO、I2C 时钟、ADC                 |
-| D6                      | Analog,TX0       | PC06      |                    | GPIO、UART 发送、ADC             |
-| D7                      | Analog,RX0       | PC07      |                    | GPIO、UART 接收、ADC              |
-| D8                      | Analog,SCK0      | PA03      |                    | GPIO、SPI 时钟、ADC                 |
-| D9                      | Analog,MISO0     | PA04      |                    | GPIO、SPI 数据、ADC                  |
-| D10                     | Analog,MOSI0     | PA05      |                    | GPIO、SPI 数据、ADC                  |
-| D11                     | Analog          | PA09      | SAMD11_TX          | GPIO、UART 接收、ADC              |
-| D12                     | Analog          | PA08      | SAMD11_RX          | GPIO、UART 发送、ADC             |
-| D13                     | Analog          | PB02      |                    | GPIO、I2C 时钟、ADC                 |
-| D14                     | Analog          | PB03      |                    | GPIO、I2C 数据、ADC                  |
-| D15                     | Analog,MOSI1     | PB00      |                    | GPIO、SPI 数据、ADC                  |
-| D16                     | Analog,MISO1     | PB01      |                    | GPIO、SPI 数据、ADC                  |
-| D17                     | Analog,SCK1      | PA00      |                    | GPIO、SPI 时钟、ADC                 |
-| D18                     | Analog,CS        | PD02      | Csn                | GPIO、Csn、ADC               |
+| D0                      | Analog          | PC00      |                    | GPIO, ADC                            |
+| D1                      | Analog          | PC01      |                    | GPIO, ADC                            |
+| D2                      | Analog          | PC02      |                    | GPIO, ADC                            |
+| D3                      | Analog          | PC03      |                    | GPIO, SPI, ADC                       |
+| D4                      | Analog,SDA       | PC04      |                    | GPIO, I2C Data, ADC                  |
+| D5                      | Analog,SCL       | PC05      |                    | GPIO, I2C Clock, ADC                 |
+| D6                      | Analog,TX0       | PC06      |                    | GPIO, UART Transmit, ADC             |
+| D7                      | Analog,RX0       | PC07      |                    | GPIO, UART Receive, ADC              |
+| D8                      | Analog,SCK0      | PA03      |                    | GPIO, SPI Clock, ADC                 |
+| D9                      | Analog,MISO0     | PA04      |                    | GPIO, SPI Data, ADC                  |
+| D10                     | Analog,MOSI0     | PA05      |                    | GPIO, SPI Data, ADC                  |
+| D11                     | Analog          | PA09      | SAMD11_TX          | GPIO, UART Receive, ADC              |
+| D12                     | Analog          | PA08      | SAMD11_RX          | GPIO, UART Transmit, ADC             |
+| D13                     | Analog          | PB02      |                    | GPIO, I2C Clock, ADC                 |
+| D14                     | Analog          | PB03      |                    | GPIO, I2C Data, ADC                  |
+| D15                     | Analog,MOSI1     | PB00      |                    | GPIO, SPI Data, ADC                  |
+| D16                     | Analog,MISO1     | PB01      |                    | GPIO, SPI Data, ADC                  |
+| D17                     | Analog,SCK1      | PA00      |                    | GPIO, SPI Clock, ADC                 |
+| D18                     | Analog,CS        | PD02      | Csn                | GPIO, Csn, ADC               |
 | ADC_BAT                 |                  | PD04      |                    | 读取电池电压值           |
 | RF Switch Port Select   |                  | PB04      |                    | 切换板载天线和 UFL 天线 |
 | RF Switch Power         |                  | PB05      |                    | RF 电源                             |
@@ -180,7 +196,7 @@ sidebar_position: 0
 
 ## 入门指南
 
-为了让您能够更快地开始使用 XIAO MG24，请阅读下面的硬件和软件准备，以准备好 XIAO。
+为了让您更快地开始使用 XIAO MG24，请阅读下面的硬件和软件准备来准备 XIAO。
 
 ### 出厂程序
 
@@ -207,7 +223,7 @@ sidebar_position: 0
 - 1 x USB Type-C 数据线
 
 :::tip
-一些 USB 数据线只能供电而无法传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否可以传输数据，您可以查看 [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
+某些 USB 数据线只能供电而无法传输数据。如果您没有 USB 数据线或不知道您的 USB 数据线是否可以传输数据，您可以查看 [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)。
 :::
 
 ### 软件准备
@@ -294,7 +310,7 @@ XIAO MG24 内置电源管理芯片，允许 XIAO MG24 使用电池独立供电�
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/4444.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-焊接时请注意不要短路正负极，烧坏电池和设备。
+焊接时请注意不要短路正负极，以免烧坏电池和设备。
 :::
 
 **电池使用说明：**
@@ -527,17 +543,17 @@ void loop()
 
 ### 防止 XIAO MG24 在深度睡眠期间变砖
 
-**XIAO MG24** 是 Seeed Studio 推出的一款功能强大的微控制器开发板，但用户反映设备在进入深度睡眠模式后会变得无响应（"变砖"）。本教程解释了问题的原因，提供了详细的恢复方法，并提供了预防措施以避免 XIAO MG24 变砖。
+**XIAO MG24** 是 Seeed Studio 推出的一款功能强大的微控制器开发板，但用户反映设备在进入深度睡眠模式后会变得无响应（"变砖"）。本教程解释了问题的原因，提供了详细的恢复方法，并提供了预防措施以避免您的 XIAO MG24 变砖。
 
 XIAO MG24 进入**深度睡眠模式**（EM4）以节省电力，但在某些情况下，它无法正常唤醒，从而阻止上传新的程序。与其他 XIAO 开发板不同，MG24 没有专用的 **BOOT 按钮**或记录的进入引导模式的方法，这使得恢复变得困难。
 
 #### 预防措施
 
-为了避免在使用深度睡眠模式时 XIAO MG24 变砖，请遵循以下步骤：
+为了避免在使用深度睡眠模式时让您的 XIAO MG24 变砖，请遵循以下步骤：
 
 1. 使用逃逸引脚（PC1）
 
-XIAO MG24 具有内置的**逃逸机制**来防止变砖。如果在复位期间 **PC1** 被拉**低**，设备将进入无限循环，允许您上传新的程序。
+XIAO MG24 具有内置的**逃逸机制**来防止变砖。如果在复位期间将 **PC1** 拉**低**，设备将进入无限循环，允许您上传新的程序。
 
 - 在复位设备之前将 **PC1** 连接到 **GND**。
 - 复位后，在设备处于循环状态时上传您的程序。
@@ -566,7 +582,7 @@ void setup() {
 
 3. 避免不必要的闪存睡眠
 
-确保您的程序不会将闪存进入睡眠模式（`Deep Power Down`），除非绝对必要。这可以防止上传新程序时出现问题。
+确保您的程序不会将闪存置于睡眠模式（`Deep Power Down`），除非绝对必要。这可以防止上传新程序时出现问题。
 
 #### 致谢
 
@@ -577,7 +593,7 @@ void setup() {
 
 ## 解砖
 
-XIAO MG24 是目前唯一配备串口芯片的 XIAO 型号。与其他 XIAO 型号不同，它没有 BOOT 按钮或 BOOT 恢复方法。这种设计疏忽可能会在设备进入睡眠模式或遇到软件异常时造成问题，使得无法通过串口上传程序。为了解决这个问题，我们提供了一种唤醒串口并恢复功能的方法。
+XIAO MG24 目前是唯一配备串口芯片的 XIAO 型号。与其他 XIAO 型号不同，它没有 BOOT 按钮或 BOOT 恢复方法。这种设计疏忽可能会在设备进入睡眠模式或遇到软件异常时造成问题，使得无法通过串口上传程序。为了解决这个问题，我们提供了一种唤醒串口并恢复功能的方法。
 
 ### Windows 解决方案
 
@@ -589,7 +605,7 @@ XIAO MG24 是目前唯一配备串口芯片的 XIAO 型号。与其他 XIAO 型�
             <strong><span><font color={'FFFFFF'} size={"4"}> 下载 ZIP 文件 🖱️</font></span></strong>
     </a>
 </div><br />
-   - 将内容解压到计算机上的文件夹中。
+   - 将内容解压到您计算机上的文件夹中。
 
 2. **连接 XIAO MG24**
    - 使用 USB 线将无响应的 XIAO MG24 连接到您的计算机。
@@ -612,15 +628,15 @@ XIAO MG24 是目前唯一配备串口芯片的 XIAO 型号。与其他 XIAO 型�
             <strong><span><font color={'FFFFFF'} size={"4"}> 下载 ZIP 文件 🖱️</font></span></strong>
     </a>
 </div><br />
-   - 将内容解压到计算机上的文件夹中。
+   - 将内容解压到您计算机上的文件夹中。
 
 2. **连接 XIAO MG24**
    - 使用 USB 线将无响应的 XIAO MG24 连接到您的计算机。
 
 3. **允许终端访问**
    - 打开 **System Preferences** > **Security & Privacy** > **Privacy**。
-   - 在 **Accessibility** 下，确保 **Terminal** 被允许控制您的计算机。
-   - 如果 Terminal 未列出，点击 **+** 按钮手动添加它。
+   - 在 **Accessibility** 下，确保允许 **Terminal** 控制您的计算机。
+   - 如果 Terminal 未列出，请点击 **+** 按钮手动添加。
 
 4. **运行脚本**
    - 打开 **Terminal**。
@@ -650,21 +666,27 @@ XIAO MG24 是目前唯一配备串口芯片的 XIAO 型号。与其他 XIAO 型�
 
 ## 资源
 
-### Seeed Studio XIAO MG24 Sense
-
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense 数据手册](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense 原理图](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense 无线 SoC](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
-- 🔗 **[Kicad]** [Seeed Studio XIAO MG24 Sense 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- 📄 **[ZIP]** [Seeed Studio XIAO MG24 Sense PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
-
 ### Seeed Studio XIAO MG24
 
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 数据手册](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 原理图](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
-- 📄 **[PDF]** [Seeed Studio XIAO MG24 无线 SoC](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
-- 🔗 **[Kicad]** [Seeed Studio XIAO MG24 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- 📄 **[ZIP]** [Seeed Studio XIAO MG24 PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
+**硬件设计**
+- **📄[数据手册]** [Silicon Labs EFR32MG24 数据手册](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
+- **📄[参考手册]** [Silicon Labs EFR32MG24 参考手册](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
+- **📄[原理图]** [XIAO MG24 KiCad 原理图](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
+- **🗃️[PCB 设计文件]** [XIAO MG24 KiCad 项目](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
+- **🗃️[PCB 设计库]**
+  - [XIAO 系列 KiCad 封装](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO 系列 KiCad 原理图符号](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+
+### Seeed Studio XIAO MG24 Sense
+
+**硬件设计**
+- **📄[数据手册]** [Silicon Labs EFR32MG24 数据手册](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
+- **📄[参考手册]** [Silicon Labs EFR32MG24 参考手册](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
+- **📄[原理图]** [XIAO MG24 Sense 原理图](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
+- **🗃️[PCB 设计文件]** [XIAO MG24 Sense KiCad 项目](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
+- **🗃️[PCB 设计库]**
+  - [XIAO 系列 KiCad 封装](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO 系列 KiCad 原理图符号](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
 ## 技术支持与产品讨论
 

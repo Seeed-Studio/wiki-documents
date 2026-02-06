@@ -45,74 +45,90 @@ sidebar_position: 0
 
 ## Introducción
 
-**Seeed Studio XIAO MG24** es una placa de desarrollo mini basada en el MG24 de Silicon Labs. XIAO MG24 está basado en el **núcleo ARM Cortex-M33**, arquitectura **RISC de 32 bits** con una velocidad de reloj máxima de 78MHz, soportando instrucciones DSP y operaciones de punto flotante FPU, poseyendo un potente poder de cómputo, y con **acelerador de hardware AL/ML MVP** integrado, que puede procesar eficientemente algoritmos de IA/aprendizaje automático. En segundo lugar, tiene un excelente rendimiento RF, con una **potencia de transmisión de hasta +19.5 dBm** y una sensibilidad de recepción tan **baja como -105.4 dBm**. Soporta múltiples protocolos IoT y de transmisión inalámbrica como **Matter, Thread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh** etc.
+**Seeed Studio XIAO MG24** es una placa de desarrollo mini basada en el MG24 de Silicon Labs. XIAO MG24 está basado en el **núcleo ARM Cortex-M33**, arquitectura **RISC de 32 bits** con una velocidad de reloj máxima de 78MHz, soporta instrucciones DSP y operaciones de punto flotante FPU, posee potente capacidad de cómputo, y tiene incorporado un **acelerador de hardware AL/ML MVP**, que puede procesar eficientemente algoritmos de IA/aprendizaje automático. En segundo lugar, tiene excelente rendimiento RF, con una **potencia de transmisión de hasta +19.5 dBm** y una sensibilidad de recepción tan **baja como -105.4 dBm**. Soporta múltiples protocolos IoT y de transmisión inalámbrica como **Matter, Thread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh** etc.
 
 ### Especificaciones
 
-<table align="center">
- <tr>
-     <th>Elemento</th>
-     <th>Seeed Studio XIAO MG24</th>
-        <th>Seeed Studio XIAO MG24 Sense</th>
- </tr>
- <tr>
-     <th>Procesador</th>
-     <td align="center" colspan="2">Silicon Labs EFR32MG24 <br></br>ARM Cortex-M33 @ 78MHz </td>
- </tr>
- <tr>
-     <th>Inalámbrico</th>
-     <td align="center" colspan="2">Propietario 2.4 GHz <br></br> Protocolos Zigbee PRO/Green Power <br></br> BLE: Bluetooth 5.3, Bluetooth mesh</td>
- </tr>
-    <tr>
-     <th>Sensores Integrados</th>
-     <td align="center"> - </td>
-        <td align="center">IMU de 6 Ejes(LSM6DS3TR-C) <br></br>Micrófono Analógico(MSM381ACT001)</td>
- </tr>
-    <tr>
-     <th>Memoria</th>
-     <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
-        <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
- </tr>
-    <tr>
-     <th>Interfaz</th>
-     <td>2x UART, 1x IIC, 2x SPI, 18x Analógico, 18x Digital, TODO PWM, 1x LED de Usuario, 1x LED de Carga <br></br> 1x Botón de Reset, </td>
-     <td>2x UART, 1x IIC, 2x SPI, 18x Analógico, 18x Digital, TODO PWM, 1x LED de Usuario, 1x LED de Carga <br></br> 1x Botón de Reset, </td>
- </tr>
-    <tr>
-     <th>Dimensiones</th>
-     <td align="center">21 x 17.8mm</td>
-        <td align="center">21 x 17.8mm</td>
- </tr>
-    <tr>
-     <th rowspan="2">Alimentación</th>
-     <td colspan="2" align="center">Voltaje de entrada (Type-C): 5V@14mA <br></br> Voltaje de entrada (BAT): 3.7V@7mA</td>
- </tr>
-    <tr>
-     <td align="center">Corriente de carga de batería: <strong>200mA</strong></td>
-  <td align="center">Corriente de carga de batería: <strong>200mA</strong></td>
- </tr>
-    <tr>
-        <th>Modelo de Bajo Consumo</th>
-        <td>Normal: <strong>3.7V/6.71 mA</strong> <br></br> Modo Sleep: <strong>3.7V/1.91mA</strong> <br></br> Modo Deep Sleep: <strong>3.7V/1.95μA</strong></td>
-        <td>Normal: <strong>3.7V/6.71 mA</strong> <br></br> Modo Sleep: <strong>3.7V/1.91mA</strong> <br></br> Modo Deep Sleep: <strong>3.7V/1.95μA</strong></td>
-    </tr>
-    <tr>
-        <th>Temperatura de Funcionamiento</th>
-        <td colspan="2" align="center">-20°C ~ 70°C</td>
-    </tr>
+<table>
+  <tr>
+    <th>Producto</th>
+    <td>XIAO MG24</td>
+    <td><a href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html">XIAO MG24 Sense</a></td>
+  </tr>
+  <tr>
+    <th>Procesador</th>
+    <td colspan="2">Silicon Labs EFR32MG24<br/>ARM Cortex-M33 @ 78MHz</td>
+  </tr>
+  <tr>
+    <th>RAM</th>
+    <td colspan="2">256kB</td>
+  </tr>
+  <tr>
+    <th>Flash</th>
+    <td colspan="2">1536KB + 4MB Integrado</td>
+  </tr>
+  <tr>
+    <th>LEDs</th>
+    <td colspan="2">1x LED de Usuario<br/>1x LED de Alimentación</td>
+  </tr>
+  <tr>
+    <th>Sensores</th>
+    <td>-</td>
+    <td>1x Micrófono Analógico Integrado<br/>1x IMU de 6 Ejes Integrado</td>
+  </tr>
+  <tr>
+    <th>Interfaz</th>
+    <td colspan="2">22 Pines (Todos PWM):<br/>19x Analógico<br/>19x Digital<br/>1x I²C<br/>2x UART<br/>2x SPI</td>
+  </tr>
+  <tr>
+    <th>Botón</th>
+    <td colspan="2">1x Botón RESET</td>
+  </tr>
+  <tr>
+    <th>Seguridad</th>
+    <td colspan="2">Aceleración Criptográfica por Hardware, Generador de Números Aleatorios Verdaderos, ARM® TrustZone®, Arranque Seguro, Desbloqueo de Depuración Segura etc.</td>
+  </tr>
+  <tr>
+    <th>Bajo Consumo (Típ.)</th>
+    <td colspan="2">1.95μA</td>
+  </tr>
+  <tr>
+    <th>Normal (Típ.)</th>
+    <td colspan="2">6.71mA</td>
+  </tr>
+  <tr>
+    <th>Suspensión (Típ.)</th>
+    <td colspan="2">1.91mA</td>
+  </tr>
+  <tr>
+    <th>Compatibilidad de Software</th>
+    <td colspan="2">Arduino IDE</td>
+  </tr>
+  <tr>
+    <th>Antena Soportada</th>
+    <td colspan="2">Antena Cerámica 2.4GHz MÁX: 4.97dBi</td>
+  </tr>
+  <tr>
+    <th>Temperatura de Funcionamiento</th>
+    <td colspan="2">-20°C~70°C</td>
+  </tr>
+  <tr>
+    <th>Dimensiones</th>
+    <td colspan="2">21×17.8 mm</td>
+  </tr>
 </table>
 
 ### Características
 
-- **CPU Potente**: Núcleo ARM Cortex-M33, con una velocidad de reloj máxima de 78MHz, soportando instrucciones DSP y operaciones de punto flotante FPU, arquitectura RISC de 32 bits.
-- **Ultra Bajo Consumo**: Corriente RX 4.6mA/Corriente TX 5mA (0dBm), múltiples modos de sleep de bajo consumo
-- **IA Potente**: Acelerador de hardware AI/ML MVP integrado, capaz de procesar eficientemente algoritmos de IA/aprendizaje automático.
-- **Transmisión inalámbrica multi estilo**: Transceptor inalámbrico multi protocolo de 2.4GHz integrado, soportando múltiples protocolos IoT como Matter, OpenThread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh, etc.
+- **CPU Potente**: Núcleo ARM Cortex-M33, con una velocidad de reloj máxima de 78MHz, soporta instrucciones DSP y operaciones de punto flotante FPU, arquitectura RISC de 32 bits.
+- **Ultra Bajo Consumo**: Corriente RX 4.6mA/Corriente TX 5mA (0dBm), múltiples modos de suspensión de bajo consumo
+- **IA Potente**: Acelerador de hardware AI/ML MVP incorporado, capaz de procesar eficientemente algoritmos de IA/aprendizaje automático.
+- **Transmisión inalámbrica multiestilo**: Transceptor inalámbrico multiprotocolo de 2.4GHz integrado, soporta múltiples protocolos IoT como Matter, OpenThread, Zigbee, Bluetooth LE 5.3, Bluetooth mesh, etc.
 - **Mejor Rendimiento RF**: Excelente rendimiento RF, con una potencia de transmisión de hasta +19.5 dBm y una sensibilidad de recepción tan baja como -105.4 dBm (250kbps DSSS)
-- **Seguridad Potente**: Características de seguridad potentes de Secure Vault, incluyendo arranque seguro, encriptación, generación de números aleatorios, a prueba de manipulación, depuración segura, etc.
+- **Seguridad potente**: Características de seguridad potentes de Secure Vault, incluyendo arranque seguro, cifrado, generación de números aleatorios, a prueba de manipulación, depuración segura, etc.
 - **Tamaño ultra pequeño**: 21 x 17.8mm.
-- **Recursos on-chip abundantes**: Máximo 1536KB Flash y 256KB RAM, con amplio espacio de almacenamiento.
-- **Interfaces abundantes**: Integrado con ADC de 12 bit 1Msps, sensor de temperatura, comparador analógico, DCDC y otros periféricos abundantes, y hasta 22 Pin, 2 USART, 2 UART de bajo consumo, 1 IIC y otras interfaces.
+- **Recursos en chip abundantes**: Máximo 1536KB Flash y 256KB RAM, con amplio espacio de almacenamiento.
+- **Interfaces abundantes**: Integrado con ADC de 12 bits 1Msps, sensor de temperatura, comparador analógico, DCDC y otros periféricos abundantes, y hasta 22 Pines, 2 USART, 2 UART de bajo consumo, 1 IIC y otras interfaces.
 
 ## Descripción general del hardware
 
@@ -142,7 +158,7 @@ sidebar_position: 0
 :::
 
 - 5V - Esta es la salida de 5v del puerto USB. También puedes usar esto como entrada de voltaje pero debes tener algún tipo de diodo (schottky, señal, potencia) entre tu fuente de alimentación externa y este pin con ánodo a batería, cátodo al pin 5V.
-- 3V3 - Esta es la salida regulada del regulador a bordo.
+- 3V3 - Esta es la salida regulada del regulador integrado.
 - GND - Tierra de alimentación/datos/señal
 
 ## **Mapa de Pines**
@@ -170,15 +186,15 @@ sidebar_position: 0
 | D16                     | Analógico,MISO1     | PB01      |                    | GPIO, Datos SPI, ADC                  |
 | D17                     | Analógico,SCK1      | PA00      |                    | GPIO, Reloj SPI, ADC                 |
 | D18                     | Analógico,CS        | PD02      | Csn                | GPIO, Csn, ADC               |
-| ADC_BAT                 |                  | PD04      |                    | Leer el valor de voltaje BAT           |
-| Puerto de Selección de Conmutador RF   |                  | PB04      |                    | Conmutar antena a bordo y la antena UFL |
-| Alimentación de Conmutador RF         |                  | PB05      |                    | Alimentación RF                             |
+| ADC_BAT                 |                  | PD04      |                    | Leer el valor de voltaje de la batería           |
+| Selección de Puerto del Conmutador RF   |                  | PB04      |                    | Conmutar entre antena integrada y antena UFL |
+| Alimentación del Conmutador RF         |                  | PB05      |                    | Alimentación RF                             |
 | Reset                   |                  | RESET     |                    | RESET                                |
 | CHARGE_LED              |                  | VBUS      |                    | CHG-LED_Rojo                          |
 | USER_LED                |                  | PA07      |                    | Luz de Usuario_Amarillo                    |
 
 
-## Introducción
+## Primeros pasos
 
 Para permitirte comenzar con el XIAO MG24 más rápido, por favor lee la preparación de hardware y software a continuación para preparar el XIAO.
 
@@ -188,17 +204,17 @@ Preprogramamos cada nuevo XIAO MG24 y XIAO MG24 Sense con un programa de fábric
 
 1. **XIAO MG24**
 
-El programa de fábrica preestablecido en la versión regular es Blink Light. Cuando enciendas el XIAO, el indicador de usuario naranja se encenderá.
+El programa de fábrica preestablecido en la versión regular es Blink Light. Cuando enciendas el XIAO, el indicador naranja del usuario se encenderá.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/00.gif" style={{width:500, height:'auto'}}/></div>
 
 2. **XIAO MG24 Sense**
 
-El programa de fábrica preestablecido en la versión regular es: Mientras más fuerte grites, más brillante será la luz.
+El programa de fábrica preestablecido en la versión regular es: Cuanto más fuerte grites, más brillante será la luz.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/99.gif" style={{width:500, height:'auto'}}/></div>
 
-### Preparación de Hardware
+### Preparación del Hardware
 
 Necesitas preparar lo siguiente:
 
@@ -207,10 +223,10 @@ Necesitas preparar lo siguiente:
 - 1 x Cable USB Type-C
 
 :::tip
-Algunos cables USB solo pueden suministrar energía y no pueden transferir datos. Si no tienes un cable USB o no sabes si tu cable USB puede transmitir datos, puedes verificar [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+Algunos cables USB solo pueden suministrar energía y no pueden transferir datos. Si no tienes un cable USB o no sabes si tu cable USB puede transmitir datos, puedes consultar [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 :::
 
-### Preparación de Software
+### Preparación del Software
 
 La herramienta de programación recomendada para el XIAO MG24 es el Arduino IDE, por lo que necesitas completar la instalación de Arduino como parte de la preparación del software.
 
@@ -229,10 +245,10 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
 <br></br>
 
 - **Paso 2.** Inicia la aplicación Arduino.
-- **[Paso 3](#add-board).** Agrega el paquete de placa XIAO MG24 al Arduino IDE y haz clic en `OK`.
+- **[Paso 3](#agregar-placa).** Agrega el paquete de placa XIAO MG24 al Arduino IDE y haz clic en `OK`.
 - **Paso 4.** Cierra el Arduino IDE y ábrelo nuevamente.
 
-#### Agregar la Placa XIAO MG24 {#add-board}
+#### Agregar la Placa XIAO MG24 {#agregar-placa}
 
 Para instalar la placa XIAO MG24, sigue estos pasos:
 
@@ -240,7 +256,7 @@ Para instalar la placa XIAO MG24, sigue estos pasos:
 https://siliconlabs.github.io/arduino/package_arduinosilabs_index.json 
 ```
 
-1. Agrega la URL del administrador de placas anterior a las preferencias de tu Arduino IDE.
+1. Agrega la URL del gestor de placas anterior a las preferencias de tu Arduino IDE.
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/13(1).png" style={{width: 'auto', height: 'auto'}}/></div>
 
@@ -289,12 +305,12 @@ Una vez que el programa se haya cargado exitosamente, verás el siguiente mensaj
 
 El XIAO MG24 tiene un chip de gestión de energía integrado que permite al XIAO MG24 ser alimentado independientemente usando una batería o cargar la batería a través del puerto USB del XIAO MG24.
 
-Si quieres conectar la batería para XIAO, te recomendamos que compres una batería de litio recargable de 3.7V calificada. Al soldar la batería, por favor ten cuidado de distinguir entre los terminales positivo y negativo. El terminal negativo de la fuente de alimentación debe estar en el lado más cercano al puerto USB, y el terminal positivo de la fuente de alimentación está en el lado alejado del puerto USB.
+Si quieres conectar la batería para XIAO, te recomendamos que compres una batería de litio recargable de 3.7V calificada. Al soldar la batería, ten cuidado de distinguir entre los terminales positivo y negativo. El terminal negativo de la fuente de alimentación debe estar en el lado más cercano al puerto USB, y el terminal positivo de la fuente de alimentación está en el lado alejado del puerto USB.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/4444.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-Por favor ten cuidado de no hacer cortocircuito en los terminales positivo y negativo y quemar la batería y el equipo al soldar.
+Ten cuidado de no cortocircuitar los terminales positivo y negativo y quemar la batería y el equipo al soldar.
 :::
 
 **Instrucciones sobre el uso de baterías:**
@@ -566,7 +582,7 @@ void setup() {
 
 3. Evitar el Sueño Innecesario de la Flash
 
-Asegúrate de que tu sketch no ponga la memoria flash en modo de sueño (`Deep Power Down`) a menos que sea absolutamente necesario. Esto puede prevenir problemas al subir nuevos sketches.
+Asegúrate de que tu sketch no ponga la memoria flash en modo de sueño (`Deep Power Down`) a menos que sea absolutamente necesario. Esto puede prevenir problemas con la subida de nuevos sketches.
 
 #### Agradecimientos
 
@@ -577,7 +593,7 @@ Para más detalles y discusiones, visita el hilo original del foro:
 
 ## Desbloqueo
 
-El XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto serie. A diferencia de otros modelos XIAO, no tiene un botón BOOT o un método de recuperación BOOT. Este descuido de diseño puede causar problemas cuando el dispositivo entra en modo de sueño o encuentra anomalías de software, haciendo imposible subir un programa a través del puerto serie. Para abordar esto, hemos proporcionado un método para despertar el puerto serie y restaurar la funcionalidad.
+El XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto serie. A diferencia de otros modelos XIAO, no tiene un botón BOOT o un método de recuperación BOOT. Esta omisión de diseño puede causar problemas cuando el dispositivo entra en modo de sueño o encuentra anomalías de software, haciendo imposible subir un programa a través del puerto serie. Para abordar esto, hemos proporcionado un método para despertar el puerto serie y restaurar la funcionalidad.
 
 ### Solución para Windows
 
@@ -644,31 +660,37 @@ El XIAO MG24 es actualmente el único modelo XIAO equipado con un chip de puerto
 :::note
 
 - Si macOS falla en reconocer OpenOCD, asegúrate de que OpenOCD esté instalado y que se use la ruta correcta en el script.  
-- Los scripts proporcionados están diseñados específicamente para el XIAO MG24 y no deben usarse con otros modelos XIAO.  
+- Los scripts proporcionados están diseñados específicamente para el XIAO MG24 y no deberían usarse con otros modelos XIAO.  
 
 :::
 
 ## Recursos
 
-### Para Seeed Studio XIAO MG24 Sense
-
-- 📄 **[PDF]** [Hoja de datos del Seeed Studio XIAO MG24 Sense](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
-- 📄 **[PDF]** [Esquemático del Seeed Studio XIAO MG24 Sense](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
-- 📄 **[PDF]** [SoC Inalámbrico del Seeed Studio XIAO MG24 Sense](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
-- 🔗 **[Kicad]** [Huella del Seeed Studio XIAO MG24 Sense](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- 📄 **[ZIP]** [PCB y Esquemático del Seeed Studio XIAO MG24 Sense](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
-
 ### Para Seeed Studio XIAO MG24
 
-- 📄 **[PDF]** [Hoja de datos del Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
-- 📄 **[PDF]** [Esquemático del Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
-- 📄 **[PDF]** [SoC Inalámbrico del Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
-- 🔗 **[Kicad]** [Huella del Seeed Studio XIAO MG24](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- 📄 **[ZIP]** [PCB y Esquemático del Seeed Studio XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
+**Diseño de Hardware**
+- **📄[Hoja de Datos]** [Hoja de Datos Silicon Labs EFR32MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
+- **📄[Manual de Referencia]** [Manual de Referencia Silicon Labs EFR32MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
+- **📄[Esquemático]** [Esquemático KiCad XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
+- **🗃️[Archivos de Diseño PCB]** [Proyecto KiCad XIAO MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
+- **🗃️[Librerías de Diseño PCB]** 
+  - [Footprints KiCad Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [Símbolos SCH KiCad Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+
+### Para Seeed Studio XIAO MG24 Sense
+
+**Diseño de Hardware**
+- **📄[Hoja de Datos]** [Hoja de Datos Silicon Labs EFR32MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF )
+- **📄[Manual de Referencia]** [Manual de Referencia Silicon Labs EFR32MG24](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf )
+- **📄[Esquemático]** [Esquemático XIAO MG24 Sense](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf )
+- **🗃️[Archivos de Diseño PCB]** [Proyecto KiCad XIAO MG24 Sense](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MG24_v1.0_KiCad_260114.zip )
+- **🗃️[Librerías de Diseño PCB]** 
+  - [Footprints KiCad Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [Símbolos SCH KiCad Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

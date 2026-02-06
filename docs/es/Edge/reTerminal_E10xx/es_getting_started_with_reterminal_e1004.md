@@ -1,5 +1,5 @@
 ---
-description: reTerminal E1004 es una pantalla ePaper a todo color de código abierto de 13.3 pulgadas alimentada por ESP32-S3, que cuenta con tecnología E Ink® Spectra™ 6 y soporte para SenseCraft HMI.
+description: reTerminal E1004 es una pantalla ePaper a todo color de código abierto de 13.3 pulgadas alimentada por ESP32-S3, con tecnología E Ink® Spectra™ 6 y soporte para SenseCraft HMI.
 title: Introducción a reTerminal E1004
 sidebar_position: 4
 keywords:
@@ -9,7 +9,7 @@ keywords:
   - SenseCraft HMI
   - E Ink Spectra 6
   - Smart Home Dashboard
-image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.webp
+image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg
 slug: /es/getting_started_with_reterminal_e1004
 sku: 100064156
 last_update:
@@ -27,13 +27,13 @@ reTerminal E1004 es una pantalla ePaper a todo color de código abierto de 13.3 
 
 ### Características
 
--   **Pantalla a Color de Alta Definición:** Pantalla ePaper a todo color E Ink® Spectra™ 6 de 13.3 pulgadas con una alta resolución de 1200x1600 píxeles.
+-   **Pantalla a Color de Alta Definición:** Pantalla ePaper a Todo Color E Ink® Spectra™ 6 de 13.3 pulgadas con una alta resolución de 1200x1600 píxeles.
 -   **Procesamiento Potente:** Alimentado por ESP32-S3 con 8MB PSRAM y 32MB Flash para un rendimiento robusto.
 -   **Consumo de Energía Ultra Bajo:** Batería integrada de 5000mAh soporta hasta 3 meses de uso con una sola carga (modo de sueño profundo).
 -   **Desarrollo de Interfaz Sin Código:** El firmware predeterminado soporta SenseCraft HMI para creación de paneles de control por arrastrar y soltar y diseño asistido por IA.
 -   **Amplia Compatibilidad:** Soporta Home Assistant (ESPHome), Arduino, PlatformIO y ESP-IDF.
 -   **Conectividad Rica:** Wi-Fi integrado de 2.4GHz (802.11 b/g/n) y Bluetooth 5.0.
--   **Sensores y Audio Integrados:** Sensores de temperatura y humedad integrados, un zumbador para alertas y un micrófono reservado para futuras aplicaciones de voz.
+-   **Sensores y Audio Integrados:** Sensores de temperatura y humedad integrados, un zumbador para alertas
 -   **Almacenamiento Listo para Usar:** Incluye una tarjeta Micro SD de 16GB (soporta hasta 32GB).
 
 ## Especificaciones
@@ -47,7 +47,7 @@ reTerminal E1004 es una pantalla ePaper a todo color de código abierto de 13.3 
 | **Resolución** | 1200 x 1600 Píxeles |
 | **Conectividad Inalámbrica** | Wi-Fi 2.4GHz 802.11 b/g/n, Bluetooth 5.0 |
 | **Sensores** | Sensores de Temperatura, Humedad |
-| **Audio** | Zumbador (Alerta sonora), Micrófono (Reservado) |
+| **Audio** | Zumbador (Alerta sonora) |
 | **Batería** | 5000mAh |
 | **Entrada de Energía** | USB-C 5V/1A |
 | **Soporte de Software** | SenseCraft HMI (Predeterminado), ESPHome, Arduino, PlatformIO, ESP-IDF |
@@ -115,7 +115,7 @@ El reTerminal E1004 viene precargado con firmware que soporta **SenseCraft HMI**
 1.  Una vez que tu diseño esté listo, haz clic en el botón **Preview** para verificar cómo se ve.
 2.  Haz clic en el botón **Save** o **deploy**.
 3.  Selecciona tu reTerminal E1004 vinculado de la lista.
-4.  La plataforma enviará los datos a tu dispositivo a través de Wi-Fi. La pantalla ePaper se actualizará para mostrar tu nuevo panel de control.
+4.  La plataforma enviará los datos a tu dispositivo vía Wi-Fi. La pantalla ePaper se actualizará para mostrar tu nuevo panel de control.
 
 :::note
 Debido a la naturaleza de la tecnología E Ink, la actualización de la pantalla puede tomar unos segundos para actualizar completamente la imagen y eliminar cualquier imagen fantasma.
@@ -125,7 +125,7 @@ Debido a la naturaleza de la tecnología E Ink, la actualización de la pantalla
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">

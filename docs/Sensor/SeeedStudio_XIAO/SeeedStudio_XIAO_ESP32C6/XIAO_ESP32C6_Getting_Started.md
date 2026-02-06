@@ -55,103 +55,68 @@ export const Highlight = ({children, color}) => (
 );
 
 ### Specifications
-
-<table class="sp-table-c6">
-    <thead>
-        <tr>
-            <th colspan="2">Products</th>
-            <th><Highlight color="#92c52a">XIAO ESP32C6</Highlight></th>
-            <th>XIAO ESP32C3</th>
-            <th>XIAO ESP32S3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th colspan="2" rowspan="2">Processor</th>
-            <td>Espressif ESP32-C6 SoC</td>
-            <td>Espressif ESP32-C3 SoC</td>
-            <td>Espressif ESP32-S3R8</td>
-        </tr>
-        <tr>
-            <td>Two 32-bit RISC-V processors, with the high-performance one running up to 160 MHz, and the low-power one clocking up to 20 MHz</td>
-            <td>RISC-V single-core 32-bit chip processor with a four-stage pipeline that operates at up to 160 MHz</td>
-            <td>Xtensa LX7 dual-core, 32-bit processor running up to 240 MHz</td>
-        </tr>
-        <tr>
-            <th colspan="2" rowspan="3">Wireless</th>
-            <td>Complete 2.4GHz <strong>Wi-Fi 6</strong> subsystem</td>
-            <td colspan="2">Complete 2.4GHz Wi-Fi subsystem</td>
-        </tr>
-        <tr>
-            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
-            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
-            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
-        </tr>
-        <tr>
-            <td><strong>Zigbee,Thread,IEEE 802.15.4</strong></td>
-            <td>/</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <th colspan="2" rowspan="1" >On-chip Memory</th>
-            <td>512KB SRAM &amp; 4MB Flash</td>
-            <td>400KB SRAM &amp; 4MB Flash</td>
-            <td>8M PSRAM &amp; 8MB Flash</td>
-        </tr>
-        <tr>
-            <th colspan="2" rowspan="2" >Interface</th>
-            <td>1x UART,1x LP_UART, 1x IIC, 1x LP_IIC, 1x SPI,11x GPIO(PWM), 7x ADC, 1xSDIO 2.0 Slave</td>
-            <td>1x UART, 1x IIC, 1x SPI,11x GPIO(PWM), 4x ADC</td>
-            <td>1x UART, 1x IIC, 1x IIS, 1x SPI,11x GPIO(PWM), 9x ADC, 1x User LED, 1x Charge LED</td>
-        </tr>
-        <tr>
-            <td colspan="3">1x Reset button, 1x Boot button</td>
-        </tr>
-        <tr>
-            <th colspan="2" rowspan="1">Dimensions</th>
-            <td colspan="3">21 x 17.8 mm</td>
-        </tr>
-        <tr>
-            <th colspan="1" rowspan="3">Power</th>
-            <th colspan="1">Input voltage</th>
-            <td colspan="3">Type-C: 5V<br></br>BAT: 4.2V</td>
-        </tr>
-        <tr>
-            <th>Circuit operating Voltage (ready to operate)</th>
-            <td colspan="2">USB:5V@9mA<br></br>BAT:3.8V@9mA</td>
-            <td>Type-C: 5V@19mA<br></br>BAT: 3.8V@22mA</td>
-        </tr>
-        <tr>
-            <th>Charging battery current</th>
-            <td>100mA</td>
-            <td>350mA</td>
-            <td>100mA</td>
-        </tr>
-        <tr>
-            <th colspan="1" rowspan="3">Power Consumption Model(Supply Power: 3.8V)</th>
-            <th>Modem-sleep Model</th>
-            <td>~ 30 mA</td>
-            <td>~ 24 mA</td>
-            <td>~ 25 mA</td>
-        </tr>
-        <tr>
-            <th> Light-sleep Model</th>
-            <td>~ 2.5 mA</td>
-            <td>~ 3 mA</td>
-            <td>~ 2 mA</td>
-        </tr>
-        <tr>
-            <th> Deep Sleep Model</th>
-            <td>~ 15 μA</td>
-            <td>~ 44 μA</td>
-            <td>~ 14 μA</td>
-        </tr>
-        <tr>
-            <th colspan="2">Working Temperature</th>
-            <td colspan="2">-40°C ~ 85°C</td>
-            <td>-40°C ~ 65°C</td>
-        </tr>
-    </tbody>
+<table>
+  <tr>
+    <th>Product</th>
+    <td>XIAO ESP32-C6</td>
+    <td><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html ">XIAO ESP32-C3</a></td>
+    <td><a href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html ">XIAO ESP32-S3</a></td>
+  </tr>
+  <tr>
+    <th>Processor</th>
+    <td>Espressif ESP32-C6 SoC<br/>two 32-bit RISC-V processors, with the high-performance one running up to 160 MHz, and the low-power one clocking up to 20 MHz</td>
+    <td>Espressif ESP32-C3 SoC<br/>RISC-V single-core 32-bit chip processor with a four-stage pipeline that operates at up to 160 MHz</td>
+    <td>Espressif ESP32-S3R8 SoC<br/>Xtensa LX7 dual-core, 32-bit processor running up to 240 MHz</td>
+  </tr>
+  <tr>
+    <th rowspan="3">Wireless</th>
+    <td>Complete 2.4GHz Wi-Fi 6 subsystem</td>
+    <td>Complete 2.4GHz Wi-Fi subsystem</td>
+    <td>Complete 2.4GHz Wi-Fi subsystem</td>
+  </tr>
+  <tr>
+    <td colspan="3">Bluetooth Low Energy 5.0</td>
+  </tr>
+  <tr>
+    <td>Zigbee, Thread, IEEE 802.15.4</td>
+    <td>/</td>
+    <td>/</td>
+  </tr>
+  <tr>
+    <th>On-chip Memory</th>
+    <td>512KB SRAM &amp; 4MB Flash</td>
+    <td>400KB SRAM &amp; 4MB Flash</td>
+    <td>8MB PSRAM &amp; 8MB Flash</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Interface</th>
+    <td>1x UART<br/>1x LP_UART<br/>1x IIC<br/>1x LP_IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>7x ADC<br/>1x SDIO</td>
+    <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>4x ADC</td>
+    <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>9x ADC<br/>1x User LED<br/>1x Charge LED</td>
+  </tr>
+  <tr>
+    <td colspan="3">1x Reset button<br/>1x Boot button</td>
+  </tr>
+  <tr>
+    <th>Dimensions</th>
+    <td colspan="3">21 x 17.8mm</td>
+  </tr>
+  <tr>
+    <th>Power</th>
+    <td colspan="3">Input voltage (Type-C): 5V<br/>Input voltage (BAT): 3.7V</td>
+  </tr>
+  <tr>
+    <th>Power Consumption Model (Typ.)<br/>(Supply Power: 3.8V)</th>
+    <td>Modem-sleep Model: 30 mA<br/>Light-sleep Model: 3.1 mA<br/>Deep Sleep Model: 15 μA</td>
+    <td>Modem-sleep Model: 24 mA<br/>Light-sleep Model: 3 mA<br/>Deep Sleep Model: 44 μA</td>
+    <td>Modem-sleep Model: 27 mA<br/>Light-sleep Model: 2 mA<br/>Deep Sleep Model: 14 μA</td>
+  </tr>
+  <tr>
+    <th>Working Temperature</th>
+    <td>-40°C ~ 85°C</td>
+    <td>-40°C ~ 85°C</td>
+    <td>-40°C ~ 65°C</td>
+  </tr>
 </table>
 
 > [XIAO ESP32-S3 vs ESP32-C3 vs ESP32-C6: Which One Is Best for Your Project?](https://www.seeedstudio.com/blog/2026/01/14/xiao-esp32-s3-c3-c6-comparison/)
@@ -580,17 +545,17 @@ If you want to learn to use more of the deep sleep mode and wake-up functions, y
 
 ## Resources
 
-- **[PDF]** [ESP32C6 datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf)
+**Hardware Design**
+- **📄[Datasheet]** [Espressif ESP32-C6 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf )
+- **📄[Schematic]** [XIAO ESP32-C6 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH_260114.pdf )
+- **🗃️[PCB Design Files]** [XIAO ESP32-C6 KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO_ESP32_C6_v1.0_SCH&PCB_260114.zip )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Pinout Diagram]** [XIAO ESP32-C6 Pinout Sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx )
 
-- **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
-
-- **[PDF]** [Seeed Studio XIAO ESP32C6 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
-
-- **[XLSX]** [Seeed Studio XIAO ESP32C6 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
-
-- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32C6 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
-- **[STEP]** [Seeed Studio XIAO ESP32C6 Step file](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1)
+**Mechanical Design**
+- **📄[3D Model]** [XIAO ESP32-C6 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1 )
 
 ## Course Resources
 

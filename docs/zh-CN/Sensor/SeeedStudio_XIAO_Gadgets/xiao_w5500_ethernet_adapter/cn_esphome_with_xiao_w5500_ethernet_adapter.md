@@ -75,8 +75,8 @@ ESPHome 是一个专为 ESP8266 / ESP32 设备设计的开源固件创建工具�
 - **扩展覆盖范围：** 通过利用分布式 ESP32 代理节点实现全屋蓝牙连接，消除对主机蓝牙范围的依赖。
 - **工作原理：**
   - **XIAO W5500 以太网适配器** 启用蓝牙扫描
-  - 它接收附近的 BLE 广播数据包（例如温度计、智能锁、灯具）
-  - 数据通过 **以太网或 Wi-Fi** 转发到 Home Assistant
+  - 接收附近的 BLE 广播数据包（例如温度计、智能锁、灯具）
+  - 通过 **以太网或 Wi-Fi** 将数据转发到 Home Assistant
   - Home Assistant 将这些设备识别为 **蓝牙实体**
   - 用户可以直接在 Home Assistant 界面中查看温度、电池电量、信号强度和其他指标
 
@@ -123,9 +123,12 @@ ESPHome 是一个专为 ESP8266 / ESP32 设备设计的开源固件创建工具�
 
 ```yaml
 # Only boards produced after November 1, 2025 are supported
+# ==== AUTO-SYNC START: xiao-w5500-ethernet-adapter/xiao-w5500-ethernet-adapter.yaml ====
+
+# Only boards produced after November 1, 2025 are supported
 esphome:
   name: seeed-esp32-poe
-  friendly_name: Bluetooth Proxy
+  friendly_name: "XIAO W5500 Ethernet Adapter V1.2"
   min_version: 2025.11.0
   name_add_mac_suffix: true
 
@@ -166,6 +169,7 @@ button:
   - platform: factory_reset
     id: factory_reset_btn
     name: Factory reset
+# ==== AUTO-SYNC END ====
 ```
 
 </details>
@@ -228,7 +232,7 @@ button:
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'120%', height:'auto'}}/></div>
 </div>
 
-稍等片刻，您将看到如下图所示的反馈。这意味着代码正在成功运行。
+稍等片刻，您将看到如下图所示的反馈。这表示代码正在成功运行。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -237,12 +241,12 @@ button:
 <TabItem value='通过 Wi-Fi 安装'>
 
 :::tip
-这是最简单的方法，但前提是在第一次安装程序时，您应该首先使用左侧的方法将程序上传到 ePaper Panel。之后，您可以通过 wifi 上传。另外，请确保您的 YAML 配置包含正确配置的 `ota` 和 `api` 部分以及有效的加密密钥，以便此方法正常工作。
+这是最简单的方法，但前提是在首次安装程序时，您应该先使用左侧的方法将程序上传到 ePaper 面板。之后，您可以通过 wifi 上传。另外，请确保您的 YAML 配置包含正确配置的`ota`和`api`部分以及有效的加密密钥，以便此方法正常工作。
 :::
 
-通过这种方式，您无需将 ePaper panel 连接到任何设备，只需确保它在线即可。
+通过这种方式，您无需将 ePaper 面板连接到任何设备，只需确保它在线即可。
 
-点击选项，然后固件将自动安装到 ePaper panel。
+点击选项，然后固件将自动安装到 ePaper 面板。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
@@ -278,20 +282,20 @@ button:
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/buletooth_5.jpg" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-许多 BLE 设备出于安全考虑使用隐私地址，这意味着它们的广播地址是随机化的并定期更新。因此，同一物理设备可能在 Home Assistant 的广播列表中以不同的地址出现。
+许多 BLE 设备出于安全考虑使用隐私地址，这意味着它们的广播地址是随机化的并定期更新。因此，同一物理设备可能在 Home Assistant 的广播列表中以不同地址出现。
 要可靠地识别设备，请使用其广播名称或其他特征，如服务 UUID 或信号强度模式。
 :::
 
 ## 应用
 
-通过利用在 **XIAO(ESP32-S3) W5500 Ethernet Adapter** 上实现的蓝牙代理，您可以显著扩展蓝牙覆盖范围以连接蓝牙设备。具体来说，这可以基于不同的蓝牙协议来实现。下面，以 Home Assistant (HA) 的现有集成为例，我们演示针对智能家居应用场景量身定制的实现方法。
+通过利用在**XIAO(ESP32-S3) W5500 以太网适配器**上实现的蓝牙代理，您可以显著扩展蓝牙覆盖范围以连接蓝牙设备。具体来说，这可以基于不同的蓝牙协议来实现。下面，以 Home Assistant (HA)的现有集成为例，我们演示针对智能家居应用场景量身定制的实现方法。
 
 ### [BTHome](https://bthome.io/)
 
 BTHome 是一种节能但灵活的 BLE 格式，供设备广播其传感器数据和按钮按压。<br/>
-以从 DHT11 温湿度传感器读取数据为例，在 Home Assistant (HA) 中添加相应的集成，通过蓝牙代理读取数据，并实现稳定的
+以从 DHT11 温湿度传感器读取数据为例，在 Home Assistant (HA)中添加相应的集成，通过蓝牙代理读取数据，并实现稳定的
 
-除了 XIAO(ESP32-S3) W5500 Ethernet Adapter 外，您还需要准备一个 XIAO ESP32-C3 和一个 DHT11 温湿度传感器。
+除了 XIAO(ESP32-S3) W5500 以太网适配器外，您还需要准备一个 XIAO ESP32-C3 和一个 DHT11 温湿度传感器。
 
 1. 添加 Arduino 代码
 
@@ -357,17 +361,17 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_1.png" style={{width:800, height:'auto'}}/></div>
 
-- 提交后，您将被重定向到一个页面，在那里您可以查看传输的温度和湿度数据以及蓝牙 MAC 地址。您还可以选择 **Add to dashboard**。
+- 提交后，您将被重定向到一个页面，在那里您可以查看传输的温湿度数据以及蓝牙 MAC 地址。您还可以选择 **Add to dashboard**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_2.png" style={{width:800, height:'auto'}}/></div>
 
-- 点击 MAC 地址显示该设备是由在 XIAO(ESP32-S3) W5500 Ethernet Adapter 上实现的蓝牙代理发现的。这确认了蓝牙代理按预期运行。
+- 点击 MAC 地址显示该设备是由在 XIAO(ESP32-S3) W5500 以太网适配器上实现的蓝牙代理发现的。这确认了蓝牙代理按预期运行。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_3.png" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_4.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-BTHome 协议仅支持向 Home Assistant 的单向数据传输，每个传输的数据对应一个唯一的 ID。如果您希望添加更多设备，请参考 [BThome Format](https://bthome.io/format/)
+BTHome 协议仅支持向 Home Assistant 的单向数据传输，每个传输的数据对应一个唯一 ID。如果您希望添加更多设备，请参考[BThome Format](https://bthome.io/format/)
 :::
 
 ## 技术支持与产品讨论
