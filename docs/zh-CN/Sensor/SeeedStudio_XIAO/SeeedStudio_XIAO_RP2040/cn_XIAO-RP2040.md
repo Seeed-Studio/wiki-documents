@@ -15,7 +15,7 @@ last_update:
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" alt="pir" width={600} height="auto" /></p>
 
-Seeed Studio XIAO RP2040 与 Seeed Studio XIAO SAMD21 一样小巧，但功能更强大。一方面，它搭载了强大的双核 RP2040 处理器，可灵活运行高达 133 MHz 的时钟频率，是一款低功耗微控制器。Seeed Studio XIAO RP2040 还配备了 264KB 的 SRAM 和 2MB 的板载闪存，可提供更多程序存储和运行空间。另一方面，这块小板子在处理性能方面表现出色，但功耗更低。
+Seeed Studio XIAO RP2040 与 Seeed Studio XIAO SAMD21 一样小巧，但功能更强大。一方面，它搭载了强大的双核 RP2040 处理器，可灵活运行高达 133 MHz 的时钟频率，是一款低功耗微控制器。Seeed Studio XIAO RP2040 还配备了 264KB SRAM 和 2MB 板载闪存，可提供更多程序存储和运行空间。另一方面，这块小板在处理性能方面表现出色，但功耗更低。
 总而言之，它采用拇指大小的紧凑设计（21x17.8mm），可用于可穿戴设备和小型项目。
 
 Seeed Studio XIAO RP2040 有 14 个 GPIO 引脚，其中包括 11 个数字引脚、4 个模拟引脚、11 个 PWM 引脚、1 个 I2C 接口、1 个 UART 接口、1 个 SPI 接口、1 个 SWD 焊盘接口。
@@ -39,20 +39,21 @@ Seeed Studio XIAO RP2040 与 Seeed Studio XIAO 扩展板兼容。
 
 ## **规格参数**
 
-|项目|值|
-|---|---|
-|CPU|双核 ARM Cortex M0+ 处理器，最高 133MHz|
-|闪存|2MB|
-|SRAM|264KB|
-|数字 I/O 引脚|11|
-|模拟 I/O 引脚|4|
-|PWM 引脚|11|
-|I2C 接口|1|
-|SPI 接口|1|
-|UART 接口|1|
-|电源供应和下载接口| Type-C|
-|电源|3.3V/5V DC|
-|尺寸|21×17.8×3.5mm|
+| 产品名称 | Seeed Studio XIAO RP2040 |
+|-------------|-------------------------|
+| **芯片组** | [Silicon - Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/microcontrollers/silicon.html#rp2040) |
+| **处理器** | 双核 Cortex M0+ 处理器，运行频率高达 133 MHz |
+| **RAM** | 264KB SRAM |
+| **闪存** | 2MB 板载闪存 |
+| **接口** | GPIO 引脚 x14<br/>数字引脚 x11<br/>模拟引脚 x4<br/>I2C x1<br/>UART x1<br/>SPI x1<br/>PWM x11 |
+| **板载** | 用户 LED（3 色）x1<br/>电源 LED x1<br/>RGB LED x1<br/>复位按钮 x1<br/>启动按钮 x1 |
+| **无线连接** | / |
+| **电源** | 输入电压（Type-C）：5V<br/>输入电压（BAT）：5V |
+| **低功耗模式（典型值）** | / |
+| **软件兼容性** | Arduino、PlatformIO、MicroPython、CircuitPython、tinyGo、Rust、Zephyr、[Exhibition for XIAO Series \| Seeed Studio Wiki](https://wiki.seeedstudio.com/cn/xiao_topic_page/) |
+| **工作温度** | -20°C-70°C |
+| **尺寸** | 21x17.8mm |
+| **变体** | [Seeed Studio XIAO RP2040 3PCS Pack \| Save 10% for tiny Mic...](https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-3PCS-p-5942.html)<br/>[Seeed Studio XIAO RP2040 Pre-Soldered \| Plug-and-Play mini ...](https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-Pre-Soldered-p-6333.html) |
 
 ## **硬件概述**
 
@@ -63,7 +64,7 @@ Seeed Studio XIAO RP2040 与 Seeed Studio XIAO 扩展板兼容。
 对于通用 I/O 引脚：
 MCU 的工作电压为 3.3V。连接到通用 I/O 引脚的电压输入如果高于 3.3V 可能会导致芯片损坏。
 
-对于电源供应引脚：
+对于电源引脚：
 内置的 DC-DC 转换器电路能够将 5V 电压转换为 3.3V，允许通过 VIN-PIN 和 5V-PIN 使用 5V 电源为设备供电。
 
 XIAO RP2040 目前仅支持电池供电，在连接电池时不能连接 Type-C，因为这可能存在安全风险。
@@ -77,17 +78,17 @@ XIAO RP2040 目前仅支持电池供电，在连接电池时不能连接 Type-C�
 | 5V              | VBUS        |                                       | 电源输入/输出                   |
 | GND             |             |                                       |                                      |
 | 3V3             | 3V3_OUT     |                                       | 电源输出                         |
-| D0              | Analog      | P26                                   | GPIO, ADC                            |
-| D1              | Analog      | P27                                   | GPIO, ADC                            |
-| D2              | Analog      | P28                                   | GPIO, ADC                            |
-| D3              | Analog      | P29                                   | GPIO, ADC                            |
-| D4              | SDA         | P6                                    | GPIO, I2C 数据                       |
-| D5              | SCL         | P7                                    | GPIO, I2C 时钟                      |
-| D6              | TX          | P0                                    | GPIO, UART 发送                  |
-| D7              | RX,CSn      | P1                                    | GPIO, UART 接收,CSn               |
-| D8              | SCK         | P2                                    | GPIO, SPI 时钟                      |
-| D9              | MISO        | P4                                    | GPIO, SPI 数据                       |
-| D10             | MOSI        | P3                                    | GPIO, SPI 数据                       |
+| D0              | Analog      | P26                                   | GPIO、ADC                            |
+| D1              | Analog      | P27                                   | GPIO、ADC                            |
+| D2              | Analog      | P28                                   | GPIO、ADC                            |
+| D3              | Analog      | P29                                   | GPIO、ADC                            |
+| D4              | SDA         | P6                                    | GPIO、I2C 数据                       |
+| D5              | SCL         | P7                                    | GPIO、I2C 时钟                      |
+| D6              | TX          | P0                                    | GPIO、UART 发送                  |
+| D7              | RX,CSn      | P1                                    | GPIO、UART 接收、CSn               |
+| D8              | SCK         | P2                                    | GPIO、SPI 时钟                      |
+| D9              | MISO        | P4                                    | GPIO、SPI 数据                       |
+| D10             | MOSI        | P3                                    | GPIO、SPI 数据                       |
 | Reset           |             | RUN                                   | RUN                                  |
 | Boot            |             | RP2040_BOOT                           | 进入启动模式                      |
 | CHARGE_LED      |             | VCC_3V3                               | CHG-LED_Red                          |
@@ -96,7 +97,7 @@ XIAO RP2040 目前仅支持电池供电，在连接电池时不能连接 Type-C�
 | USER_LED_B      |             | IO25_RGB-B                            | 用户控制的蓝色 RGB LED 引脚     |
 | USER_LED_G      |             | IO16_RGB-G                           | 用户控制的绿色 RGB LED 引脚    |
 
-### **进入引导加载程序模式**
+### **进入 Bootloader 模式**
 
 有时当用户编程过程失败时，Seeed Studio XIAO RP2040 端口可能会消失。我们可以通过以下操作解决这个问题：
 
@@ -104,7 +105,7 @@ XIAO RP2040 目前仅支持电池供电，在连接电池时不能连接 Type-C�
 - 将 Seeed Studio XIAO PR2040 连接到您的计算机。
 - 计算机将出现一个磁盘驱动器。
 
-此时，芯片进入引导加载程序模式，烧录端口再次出现。因为 RP2040 芯片有两个分区，一个是引导加载程序，另一个是用户程序。产品出厂时会在系统内存中烧录引导加载程序代码。我们可以通过执行上述步骤来切换模式。
+此时，芯片进入 Bootloader 模式，烧录端口再次出现。因为 RP2040 芯片有两个分区，一个是 Bootloader，另一个是用户程序。产品出厂时会在系统内存中烧录一个 bootloader 代码。我们可以通过执行上述步骤来切换模式。
 
 ### **复位**
 
@@ -118,33 +119,27 @@ XIAO RP2040 目前仅支持电池供电，在连接电池时不能连接 Type-C�
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinfront.jpg" alt="pir" width={600} height="auto" /></p>
 
-## 在线原理图查看器
+## 原理图在线查看器
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 ## 资源
 
-- **[PDF]** [RP2040 数据手册](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf)
+**硬件设计**
+- **📄[数据手册]** [Raspberry Pi RP2040 Datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf )
+- **📄[原理图]** [XIAO RP2040 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf )
+- **🗃️[PCB 设计文件]** 
+  - [ XIAO RP2040 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip )
+  - [XIAO RP2040 Eagle Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip )
+- **🗃️[PCB 设计库]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[引脚图]** [XIAO RP2040 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx )
 
-- **[PDF]** [Seeed Studio XIAO RP2040 原理图](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf)
-
-<!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
-- **[电子书]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
-
-- **[ZIP]** [Seeed Studio XIAO RP2040 KiCAD 文件](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip)
-
-- **[ZIP]** [Seeed Studio XIAO RP2040 Eagle 文件](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip)
-
-- **[DXF]** [Seeed Studio XIAO RP2040 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip)
-
-- **[LBR]** [Seeed Studio XIAO RP2040 Eagle 封装](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr)
-
-- **[XLSX]** [Seeed Studio XIAO RP2040 引脚图表](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx)
-
-- **[STEP]** [Seeed Studio XIAO RP2040 3D 模型](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip)
-
-- 🔗 **[Kicad]** [Seeed Studio XIAO RP2040 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**机械设计**
+- **📄[2D 尺寸]** [XIAO RP2040 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
+- **📄[3D 模型]** [ XIAO RP2040 3D Model](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip )
 
 ## 课程资源
 

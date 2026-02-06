@@ -125,12 +125,12 @@ export const Highlight = ({children, color}) => (
       <td align="center">
         Alimentación por interfaz USB Type-C<br/>
         PMIC interno soporta alimentación por batería de litio<br/>
-        Soporta recolección de energía de batería de litio
+        Soporte para recolección de energía de batería de litio
       </td>
       <td align="center">
         Alimentación por interfaz USB Type-C<br/>
         PMIC interno soporta alimentación por batería de litio<br/>
-        Soporta recolección de energía de batería de litio
+        Soporte para recolección de energía de batería de litio
       </td>
   </tr>
   <tr>
@@ -265,9 +265,9 @@ export const Highlight = ({children, color}) => (
 | USER_LED               |            | P2.00                         | Luz de Usuario                   |
 
 
-## Uso del nRFConnect SDK
+## Uso del nRF Connect SDK
 
-El nRF Connect SDK (NCS) es un kit de desarrollo de software extensible y unificado de Nordic Semiconductor diseñado específicamente para construir aplicaciones inalámbricas de bajo consumo para dispositivos inalámbricos basados en las series Nordic nRF52, nRF53, nRF54, nRF70 y nRF91.
+El nRF Connect SDK (NCS) es un kit de desarrollo de software extensible y unificado de Nordic Semiconductor diseñado específicamente para construir aplicaciones inalámbricas de bajo consumo para dispositivos inalámbricos basados en las series nRF52, nRF53, nRF54, nRF70 y nRF91 de Nordic.
 
 NCS proporciona un rico ecosistema de aplicaciones de muestra listas para usar, pilas de protocolos, bibliotecas y controladores de hardware diseñados para simplificar el proceso de desarrollo y acelerar el tiempo de comercialización. Su naturaleza modular y configurable brinda a los desarrolladores la flexibilidad para construir software optimizado en tamaño para dispositivos con restricciones de memoria, así como funcionalidad potente para aplicaciones más avanzadas y complejas. NCS es un proyecto de código abierto alojado en GitHub y ofrece excelente soporte para entornos de desarrollo integrados como Visual Studio Code.
 
@@ -275,7 +275,7 @@ NCS proporciona un rico ecosistema de aplicaciones de muestra listas para usar, 
 
 <details>
 
-<summary>Instalar conocimiento del nRF Connect SDK con anticipación</summary>
+<summary>Instalar conocimientos del nRF Connect SDK con anticipación</summary>
 
 Este documento detalla cómo instalar el entorno de desarrollo del nRF Connect SDK en una computadora con Windows 11. Lo siguiente es una descripción general de las herramientas que necesitan ser instaladas
 
@@ -346,7 +346,7 @@ Abre VS Code y busca nRF Connect for VS Code Extension Pack en el Centro de Plug
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Learn8.png" style={{width:600, height:'auto'}}/></div>
 <br />
-La extensión nRF Connect for VS Code permite a los desarrolladores utilizar el popular Entorno de Desarrollo Integrado de Visual Studio Code (VS Code IDE) para desarrollar, construir, depurar e implementar aplicaciones embebidas basadas en el nRF Connect SDK (Kit de Desarrollo de Software) de Nordic. La extensión incluye herramientas de desarrollo útiles como una interfaz de compilador, enlazador, sistema de construcción completo, depurador habilitado para RTOS, interfaz perfecta con el nRF Connect SDK, editor de visualización del árbol de dispositivos y un terminal serie integrado.
+La extensión nRF Connect for VS Code permite a los desarrolladores utilizar el popular Entorno de Desarrollo Integrado Visual Studio Code (VS Code IDE) para desarrollar, construir, depurar e implementar aplicaciones embebidas basadas en el nRF Connect SDK (Kit de Desarrollo de Software) de Nordic. La extensión incluye herramientas de desarrollo útiles como una interfaz de compilador, enlazador, sistema de construcción completo, depurador habilitado para RTOS, interfaz perfecta con el nRF Connect SDK, editor de visualización del árbol de dispositivos y un terminal serie integrado.
 
 El paquete de extensión nRF Connect para VS Code incluye los siguientes componentes:
 
@@ -395,7 +395,7 @@ Es importante notar que el nRF Connect SDK es independiente del IDE, lo que sign
 
 En este ejercicio escribiremos una aplicación simple basada en el ejemplo blinky para controlar LEDs parpadeantes en una placa de desarrollo. Lo mismo se aplica a todas las placas de desarrollo de NordicSemiconductor compatibles (series nRF54, nRF53, nRF52, nRF70 o nRF91). El objetivo es asegurarse de que todas las herramientas necesarias para construir y grabar el ejemplo estén configuradas correctamente. El enfoque está en aprender cómo crear una aplicación, construirla y grabarla en una placa de desarrollo de chip Nordic usando la plantilla "Copy Example"!
 
-- En VS Code, haz clic en el icono de la extensión nRF Connect. En la vista Welcome, haz clic en Create New Application.
+- En VS Code, haz clic en el ícono de la extensión nRF Connect. En la vista Welcome, haz clic en Create New Application.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/create_project1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -439,7 +439,7 @@ Para configurar tu placa para nRF Connect en VS Code, puedes seguir estos pasos:
 #### Descargar Plugin de Grabación
 
 <Tabs>
-<TabItem  value="window" label="Window" default>
+<TabItem  value="window" label="Windows" default>
 
 **Plugins Adicionales:**
 
@@ -538,7 +538,7 @@ Si ocurre el error west flash, significa que hay un conflicto con el plugin CMak
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/error.jpg" style={{width:800, height:'auto'}}/></div>
 :::
 
-Cuando hayamos grabado exitosamente el programa en el Seeed Studio XIAO nRF54L15 Sense, puedes ver la placa con el indicador de usuario parpadeando continuamente en luz verde. Si tu placa también muestra el mismo efecto, ¡significa que lo has logrado exitosamente!🎊
+Cuando hayamos grabado exitosamente el programa en el Seeed Studio XIAO nRF54L15 Sense, puedes ver la placa con el indicador de usuario parpadeando continuamente en luz verde. Si tu placa también tiene el mismo efecto visual, ¡significa que lo has logrado exitosamente!🎊
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light3.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -652,7 +652,7 @@ Los scripts están ubicados en el directorio scripts/factory_reset/.
 **Uso**
 El script creará y gestionará automáticamente un entorno virtual local de Python para instalar las herramientas necesarias, por lo que puede ejecutarse directamente.
 
-### Window
+### Windows
 
 - Para Windows: Navega al directorio scripts/factory_reset y ejecuta:
 
@@ -672,7 +672,7 @@ bash factory_reset.sh
 Este ejemplo demuestra cómo controlar el conmutador RF en el Seeed Studio XIAO nRF54L15 para alternar entre la antena integrada
 
 :::
-El siguiente ejemplo funciona tanto para PlatformIO como para nRF Connect SDK. Se puede usar directamente en PlatformIO, mientras que el SDK requiere agregar archivos manualmente. Consulta este [enlace](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#placa-alimentada-por-batería)
+El siguiente ejemplo funciona tanto para PlatformIO como para nRF Connect SDK. Se puede usar directamente en PlatformIO, mientras que el SDK requiere agregar archivos manualmente. Consulta este [enlace](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/#battery-powered-board)
 :::
 
 <div style={{textAlign:'center'}}>
@@ -910,7 +910,7 @@ Necesitas descargar la versión más reciente de J-Link para tener soporte para 
 
 Es necesario descargar el software [Segger](https://www.segger.com/downloads/jlink/) desde el sitio web.
 
-- **Paso 1.** Usa Jlink para conectar los pines siguientes:
+- **Paso 1.** Usa Jlink para conectar los pines a continuación:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link.png" alt="pir" width={250} height="auto" /></p>
 
@@ -1448,25 +1448,36 @@ int main(void)
 
 ### Seeed Studio XIAO nRF54L15
 
-- **[PDF]** [Esquemático del Seeed Studio XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf)
+**Diseño de Hardware**
+- **📄[Hoja de Datos]** [Hoja de Datos Nordic nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
+- **📄[Esquemático]** [Esquemático XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf )
+- **🗃️[Archivos de Diseño PCB]** [Proyecto KiCad XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip )
+- **🗃️[Librerías de Diseño PCB]** 
+  - [Footprints KiCad Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [Símbolos SCH KiCad Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Diagrama de Pines]** [Hoja de Pines XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
 
-- **[ZIP]** [Librerías KiCAD del Seeed Studio XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip)
-
-- **[DXF]** [Dimensiones del Seeed Studio XIAO nRF54L15 en DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
-
-- **[XLSX]** [Hoja de pines del Seeed Studio XIAO nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx)
+**Mecánico**
+- **🗃️[Dimensiones 2D]** [Dimensiones XIAO nRF54L15 en DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
 
 ### Seeed Studio XIAO nRF54L15 Sense
 
-- **[PDF]** [Esquemático del Seeed Studio XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf)
+**Diseño de Hardware**
+- **📄[Hoja de Datos]** [Hoja de Datos Nordic nRF54L15](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
+- **📄[Esquemático]** [Esquemático XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf )
+- **🗃️[Archivos de Diseño PCB]** 
+  - [Proyecto KiCad XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip )
+  - [Proyecto Flux.ai XIAO nRF54L15 Sense](https://www.flux.ai/seeedstudio/seeed-studio-xiao-nrf54l15-sense )
+- **🗃️[Librerías de Diseño PCB]** 
+  - [Footprints KiCad Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [Símbolos SCH KiCad Serie XIAO](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **🗃️[Diagrama de Pines]** [Hoja de Pines XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
 
-- **[ZIP]** [Librerías KiCAD del Seeed Studio XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip)
+**Mecánico**
+- **📄[Dimensiones 2D]** [Dimensiones XIAO nRF54L15 Sense en DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
+- **🗃️[Dimensiones 3D]** [Dimensiones 3D XIAO nRF54L15 Sense](https://grabcad.com/library/seeed-studio-xiao-nrf54l15-sense-1 )
 
-- **[DXF]** [Dimensiones del Seeed Studio XIAO nRF54L15 Sense en DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
-
-- **[XLSX]** [Hoja de pines del Seeed Studio XIAO nRF54L15 Sense](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx)
-
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

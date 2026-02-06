@@ -28,106 +28,58 @@ last_update:
 </div>
 
 ### 仕様
-
 <table>
-    <thead>
-        <tr>
-            <th>項目</th>
-            <th>Seeed Studio XIAO ESP32C3</th>
-            <th>Seeeduino XIAO</th>
-            <th>Seeed XIAO RP2040</th>
-            <th>Seeed XIAO nRF52840</th>
-            <th>Seeed XIAO nRF52840 Sense</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>プロセッサ</th>
-            <td>ESP32-C3 32-bit RISC-V @160MHz</td>
-            <td>SAMD21 M0+@48MHz</td>
-            <td>RP2040 Dual-core M0+@133Mhz</td>
-            <td>nRF52840 M4F@64MHz</td>
-            <td>nRF52840 M4F@64MHz</td>
-        </tr>
-        <tr>
-            <th>ワイヤレス接続</th>
-            <td>WiFi and Bluetooth 5 (BLE)</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>Bluetooth 5.0/BLE/NFC</td>
-            <td>Bluetooth 5.0/BLE/NFC</td>
-        </tr>
-        <tr>
-            <th>メモリ</th>
-            <td>400KB SRAM, 4MB onboard Flash</td>
-            <td>32KB SRAM 256KB FLASH</td>
-            <td>264KB SRAM 2MB onboard Flash</td>
-            <td>256KB RAM, 1MB Flash 2MB onboard Flash</td>
-            <td>256KB RAM,1MB Flash 2MB onboard Flash</td>
-        </tr>
-        <tr>
-            <th>内蔵センサー</th>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>6 DOF IMU (LSM6DS3TR-C), PDM Microphone</td>
-        </tr>
-        <tr>
-            <th>インターフェース</th>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-        </tr>
-        <tr>
-            <th>PWM/アナログピン</th>
-            <td>11/4</td>
-            <td>11/11</td>
-            <td>11/4</td>
-            <td>11/6</td>
-            <td>11/6</td>
-        </tr>
-        <tr>
-            <th>オンボードボタン</th>
-            <td>Reset/ Boot Button</td>
-            <td>N/A</td>
-            <td>Reset/ Boot Button</td>
-            <td>Reset Button</td>
-            <td>Reset Button</td>
-        </tr>
-        <tr>
-            <th>オンボード LED</th>
-            <td>Charge LED</td>
-            <td>N/A</td>
-            <td>Full-color RGB/ 3-in-one LED</td>
-            <td>3-in-one LED/ Charge LED</td>
-            <td>3-in-one LED/ Charge LED</td>
-        </tr>
-        <tr>
-            <th>バッテリー充電チップ</th>
-            <td>ETA4054S2F</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>BQ25101</td>
-            <td>BQ25101</td>
-        </tr>
-        <tr>
-            <th>プログラミング言語</th>
-            <td>Arduino/ MicroPython</td>
-            <td>Arduino/ CircuitPython</td>
-            <td colspan="3" align="center">Arduino/ MicroPython/ CircuitPython</td>
-        </tr>
-    </tbody>
+  <tr>
+    <th>パラメータ</th>
+    <th>説明</th>
+  </tr>
+  <tr>
+    <td>プロセッサ</td>
+    <td>ESP32-C3 SoC<br/>最大 160 MHz で動作する 4 段パイプラインを持つ RISC-V シングルコア 32 ビットチッププロセッサ</td>
+  </tr>
+  <tr>
+    <td>ワイヤレス</td>
+    <td>完全な 2.4GHz Wi-Fi サブシステム<br/>Bluetooth Low Energy 5.0/ Bluetooth Mesh</td>
+  </tr>
+  <tr>
+    <td>オンチップメモリ</td>
+    <td>400KB SRAM &amp; 4MB Flash</td>
+  </tr>
+  <tr>
+    <td>インターフェース</td>
+    <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>4x ADC<br/>1x リセットボタン<br/>1x ブートボタン</td>
+  </tr>
+  <tr>
+    <td>寸法</td>
+    <td>21 x 17.8mm</td>
+  </tr>
+  <tr>
+    <td>電源（標準）</td>
+    <td>最大 3.3V 出力電流：500mA<br/>テスト条件：BAT ピン入力 @ 3.8V<br/>供給能力：3A<br/>充電電流：380mA（高速）/ 40mA（トリクル）<br/>入力電圧（VIN）：5V<br/>入力電圧（BAT）：3.7V</td>
+  </tr>
+  <tr>
+    <td>ディープスリープ消費電力</td>
+    <td>ディープスリープモード：44 μA</td>
+  </tr>
+  <tr>
+    <td>Wi-Fi 有効時消費電力</td>
+    <td>アクティブモード：75 mA<br/>モデムスリープモード：25 mA<br/>ライトスリープモード：4 mA</td>
+  </tr>
+  <tr>
+    <td>BLE 有効時消費電力</td>
+    <td>モデムスリープモード：27 mA<br/>ライトスリープモード：10 mA</td>
+  </tr>
+  <tr>
+    <td>動作温度</td>
+    <td>-40°C ~ 85°C</td>
+  </tr>
 </table>
-
 ### 特徴
 
 - **強力な CPU：** ESP32-C3、最大 160 MHz で動作する 32 ビット RISC-V シングルコアプロセッサ
 - **完全な Wi-Fi サブシステム：** IEEE 802.11b/g/n プロトコルに準拠し、Station モード、SoftAP モード、SoftAP + Station モード、プロミスキャスモードをサポート
 - **Bluetooth LE サブシステム：** Bluetooth 5 および Bluetooth mesh の機能をサポート
-- **超低消費電力：** ディープスリープ時の消費電力は約 43μA
+- **超低消費電力：** ディープスリープ消費電力は約 43μA
 - **優れた RF 性能：** 外部 RF アンテナ付属
 - **バッテリー充電チップ：** リチウムバッテリーの充放電管理をサポート
 - **豊富なオンチップリソース：** 400KB の SRAM と 4MB のオンボードフラッシュメモリ
@@ -138,7 +90,7 @@ last_update:
 
 ## ハードウェア概要
 
-> *A3（GP105）- ADC2 を使用しており、偽のサンプリング信号により動作しなくなる可能性があります。信頼性の高いアナログ読み取りには、代わりに ADC1（A0/A1/A2）を使用してください。ESP32-C3 データシートを参照してください。
+> *A3（GP105）- ADC2 を使用しており、偽のサンプリング信号により動作不能になる可能性があります。信頼性の高いアナログ読み取りには、代わりに ADC1（A0/A1/A2）を使用してください。ESP32-C3 データシートを参照してください。
 
 <table align="center">
  <tr>
@@ -210,24 +162,24 @@ last_update:
 | 5V              | VBUS      |           |                                     | 電源入力/出力   |
 | GND             |           |           |                                     |                      |
 | 3V3             | 3V3_OUT   |           |                                     | 電源出力         |
-| D0              | Analog    | GPIO2     | ADC1_CH2,                           | GPIO, ADC            |
-| D1              | Analog    | GPIO3     | ADC1_CH3                            | GPIO, ADC            |
-| D2              | Analog    | GPIO4     | ADC1_CH4, FSPIHD, MTMS              | GPIO, ADC            |
-| D3              | Analog    | GPIO5     | ADC2_CH0, FSPIWP, MTDI              | GPIO, ADC            |
-| D4              | SDA       | GPIO6     | FSPICLK, MTCK                       | GPIO, I2C Data       |
-| D5              | SCL       | GPIO7     | FSPID, MTDO                         | GPIO, I2C Clock      |
-| D6              | TX        | GPIO21    | U0TXD                               | GPIO, UART Transmit  |
-| D7              | RX        | GPIO20    | U0RXD                               | GPIO, UART Receive   |
-| D8              | SCK       | GPIO8     |                                     | GPIO, SPI Clock      |
-| D9              | MISO      | GPIO9     |                                     | GPIO, SPI Data       |
-| D10             | MOSI      | GPIO10    | FSPICS0                             | GPIO, SPI Data       |
+| D0              | Analog    | GPIO2     | ADC1_CH2,                           | GPIO、ADC            |
+| D1              | Analog    | GPIO3     | ADC1_CH3                            | GPIO、ADC            |
+| D2              | Analog    | GPIO4     | ADC1_CH4, FSPIHD, MTMS              | GPIO、ADC            |
+| D3              | Analog    | GPIO5     | ADC2_CH0, FSPIWP, MTDI              | GPIO、ADC            |
+| D4              | SDA       | GPIO6     | FSPICLK, MTCK                       | GPIO、I2C データ       |
+| D5              | SCL       | GPIO7     | FSPID, MTDO                         | GPIO、I2C クロック      |
+| D6              | TX        | GPIO21    | U0TXD                               | GPIO、UART 送信  |
+| D7              | RX        | GPIO20    | U0RXD                               | GPIO、UART 受信   |
+| D8              | SCK       | GPIO8     |                                     | GPIO、SPI クロック      |
+| D9              | MISO      | GPIO9     |                                     | GPIO、SPI データ       |
+| D10             | MOSI      | GPIO10    | FSPICS0                             | GPIO、SPI データ       |
 | MTDO            |           | GPIO7     |                             |            JTAG              |
-| MTDI            |           | GPIO5     |                        |        JTAG, ADC                  |
-| MTCK            |           | GPIO6     |                           |        JTAG, ADC               |
-| MTMS            |           | GPIO4     |                            |               JTAG, ADC       |
+| MTDI            |           | GPIO5     |                        |        JTAG、ADC                  |
+| MTCK            |           | GPIO6     |                           |        JTAG、ADC               |
+| MTMS            |           | GPIO4     |                            |               JTAG、ADC       |
 | Reset           |           | CHIP_EN   |                                     | EN                   |
-| Boot            |           | GPIO9     |                                     | Enter Boot Mode      |
-| U.FL-R-SMT1     |           | LNA_IN    |                                     | UFL antenna          |
+| Boot            |           | GPIO9     |                                     | ブートモード入力      |
+| U.FL-R-SMT1     |           | LNA_IN    |                                     | UFL アンテナ          |
 | Light           |           | VCC_3V3   |                                     | CHG-LED              |
 ### 電源ピン
 
@@ -271,7 +223,7 @@ ESP32C3のチップマニュアルによると、チップ内の**GPIO2**、**GP
 
 ### ソフトウェアの準備
 
-- **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDEの最新バージョンをダウンロードしてインストールします
+- **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDEの最新版をダウンロードしてインストールします
 
 <p style={{textAlign:'center'}}><a href="https://www.arduino.cc/en/software" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" /></a></p>
 
@@ -284,7 +236,7 @@ ESP32C3のチップマニュアルによると、チップ内の**GPIO2**、**GP
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_board.png" style={{width:550, height:'auto'}}/></div>
 
-**Tools > Board > Boards Manager...**に移動し、検索ボックスにキーワード"**esp32**"を入力し、**esp32**の最新バージョンを選択してインストールします。
+**Tools > Board > Boards Manager...**に移動し、検索ボックスにキーワード"**esp32**"を入力し、**esp32**の最新版を選択してインストールします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_esp32c3.png" style={{width:550, height:'auto'}}/></div>
 
@@ -345,25 +297,25 @@ XIAO ESP32C3は3.7Vリチウムバッテリーを電源入力として使用す�
 1. 仕様に適合した適格なバッテリーを使用してください。
 2. XIAOはバッテリー使用中でもデータケーブルでコンピュータデバイスに接続できます。XIAOには回路保護チップが内蔵されているため安全です。
 3. XIAO ESP32C3はバッテリー駆動時にはLEDが点灯しません（特定のプログラムを書いていない限り）。LEDの状態でXIAO ESP32C3が動作しているかどうかを判断せず、プログラムによって合理的に判断してください。
-4. 申し訳ございませんが、現在ソフトウェアを通じてバッテリー残量を確認する方法はありません（利用可能なチップピンがないため）。定期的にバッテリーを充電するか、マルチメーターでバッテリーレベルを確認する必要があります。
+4. 申し訳ございませんが、現在ソフトウェアを通じてバッテリー残量を確認する方法はありません（利用可能なチップピンがないため）。定期的にバッテリーを充電するか、マルチメータでバッテリーレベルを確認する必要があります。
 
 ### バッテリー電圧の確認
 
-ESP32C3のピン数の制限により、XIAO ESP32C3が他のXIAO シリーズと同じ数のGPIOを持つことを保証するため、エンジニアはバッテリーの電圧測定に割り当てる追加のピンがありませんでした。
+ESP32C3のピン数の制限により、XIAO ESP32C3が他のXIAO シリーズと同じ数のGPIOを確保するため、エンジニアはバッテリーの電圧測定用に追加のピンを割り当てることができませんでした。
 
 しかし、バッテリー電圧測定用に別のピンを使用したい場合は、[msfujino](https://forum.seeedstudio.com/u/msfujino)の天才的な操作を参考にできます。XIAO ESP32C3のために共有されたすべての経験と努力について、[msfujino](https://forum.seeedstudio.com/u/msfujino)に特別な感謝を表したいと思います。
 
-基本的な動作アイデアは：バッテリー電圧を200kで1/2に分圧してA0ポートに接続し、電圧を監視できるようにすることです。
+基本的な動作原理は：バッテリー電圧を200kで1/2に分圧してA0ポートに接続し、電圧を監視できるようにすることです。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/3.png" alt="pir" width="300" height="auto"/></div>
 
-データシートでは公称2500mVフルスケールAD変換とありますが、チップごとに大きなばらつきがあり、実際には±10%です。私のチップは2700mVフルスケールでした。
+データシートでは公称2500mVフルスケールAD変換とされていますが、チップごとに大きなばらつきがあり、実際には±10%です。私のチップは2700mVフルスケールでした。
 
 幸い、各チップの校正済み補正値がヒューズ領域に書き込まれており、`analogReadMilliVolts()`関数を使用することで、特別な処理をすることなく補正された電圧値を読み取ることができます。
 
-AD変換の結果とマルチメーターで測定した電圧は、約5mVの誤差でよく一致しており、実用上問題ありません。
+AD変換の結果とマルチメータで測定した電圧は、約5mVの誤差でよく一致しており、実用上問題ありません。
 
-また、特に通信中にスパイク状のエラーが発生したため、これを除去するために16回平均化する必要がありました。
+また、特に通信中にスパイク状のエラーが発生するため、これを除去するために16回平均化する必要がありました。
 
 以下はバッテリー電圧をテストする手順です。
 
@@ -385,9 +337,9 @@ void loop() {
 ```
 
 :::tip
-上記はSeeed Studioフォーラムユーザー**msfujino**からのもので、元の投稿は：
-[https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535](https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535)です。
-上記に基づいてバッテリー電圧測定を試みる前に、優れた実践スキルとより良いはんだ付けスキルを持つことをお勧めし、バッテリーの短絡などの危険な行為には注意してください。
+上記はSeeed Studioフォーラムユーザー**msfujino**からの情報で、元の投稿は以下にあります：
+[https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535](https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535)。
+上記に基づいてバッテリー電圧測定を試みる前に、優れた実践スキルとより良いはんだ付けスキルを身につけることをお勧めします。また、バッテリーの短絡などの危険な行為には注意してください。
 :::
 
 ## ディープスリープモードとウェイクアップ
@@ -459,9 +411,9 @@ XIAO ESP32-C3はGPIOウェイクアップとタイマーウェイクアップを
 
 ## トラブルシューティング
 
-### Q1: Arduino IDEでボードにコードをアップロードする際にスタックする
+### Q1: Arduino IDEでボードにコードをアップロードする際にフリーズする
 
-まず、ボードがPCに接続されている状態で**RESETボタン**を一度クリックしてボードをリセットしてみてください。それでも解決しない場合は、**BOOTボタン**を押し続けながらボードをPCに接続し、その後ボタンを離して**ブートローダーモード**に入ってください。
+まず、ボードがPCに接続されている状態で**RESETボタン**を一度クリックしてボードをリセットしてみてください。それでも解決しない場合は、**BOOTボタン**を押し続けながらボードをPCに接続し、その後**BOOT**ボタンを離して**ブートローダーモード**に入ってください。
 
 ### Q2: Arduino IDEでボードがシリアルデバイスとして表示されない
 
@@ -513,31 +465,40 @@ XIAO ESP32-C3はGPIOウェイクアップとタイマーウェイクアップを
 
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 
-- 📄**[PDF]** [ESP32C3 データシート](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf)
-- 📄 **[PDF]** [Seeed Studio XIAO ESP32C3 回路図](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO ESP32C3 KiCADライブラリ](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-KiCAD-Library.zip)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO ESP32C3 Eagleライブラリ](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-v1.2_SCH-PCB.zip)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO ESP32C3 工場出荷時ファームウェア](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin)
+**ハードウェア設計**
+- **📄[データシート]** [ESP32-C3 データシート](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf )
+- **📄[回路図]** [XIAO ESP32-C3 回路図](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf )
+- **🗃️[PCB設計ファイル]** 
+  - [XIAO ESP32-C3 KiCadプロジェクト](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_KiCad_260116.zip )
+- **🗃️[PCB設計ライブラリ]** 
+  - [XIAO シリーズ KiCadフットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCHシンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[ピン配置図]** [XIAO ESP32-C3 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx )
 
-- 📄 **[DXF]** [Seeed Studio XIAO ESP32C3 DXF寸法図](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip)
-- 📄 **[LBR]** [Seeed Studio XIAO ESP32C3 Eagleフットプリント](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeed-Studio-XIAO-ESP32C3-footprint-eagle.lbr)
-- 📄 **[XLSX]** [Seeed Studio XIAO ESP32C3 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx)
-- 🔗 **[STEP]** [Seeed Studio XIAO ESP32C3 3Dモデル](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1)
-- 🔗 **[GitHub]** [Seeed Studio XIAO ESP32C3 MicroPythonライブラリ](https://github.com/IcingTomato/micropython_xiao_esp32c3)
-- 🔗 **[Link]** [Platform IO for Seeed Studio XIAO ESP32](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html)
-- 🔗 **[WiKi]** [First Look at the Seeed Studio XIAO ESP32C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html)  XIAO ESP32C3の優れた入門ガイドで、主要機能と基本的な使用方法をカバーしています。
-- 📚 **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/) XIAOボードでArduinoとTinyMLをマスターするための優れたガイドです。
-- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32C3 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**機械的仕様**
+- **📄[2D寸法]** [XIAO ESP32-C3 DXF寸法](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip )
+- **🗃️[2D寸法]** [XIAO ESP32-C3 ボトムパッドデータ](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/XIAO_ESP32C3_v1.2_Dimensioning.zip )
+- **📄[3Dモデル]** [XIAO ESP32-C3 3Dモデル](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1 )
+
+**ソフトウェア・ツール**
+- **🗃️[工場出荷時ファームウェア]** [XIAO ESP32-C3 工場出荷時ファームウェア](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin )
+- **🔗[MicroPythonライブラリ]** [XIAO ESP32-C3 MicroPythonライブラリ](https://github.com/IcingTomato/micropython_xiao_esp32c3 )
+- **🔗[Platform IO]** [PlatformIO for Seeed Studio XIAO ESP32-C3](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html )
+
+**その他**
+- **🔗[Wiki]** [First Look at the Seeed Studio XIAO ESP32-C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html )  
+  - XIAO ESP32C3の優れた入門ガイドで、主要機能と基本的な使用方法をカバーしています。
+- **📄[ドキュメント]** [XIAO ESP32-C3低消費電力レポート](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/Low_Power_Consumption.pdf )
 
 ## コースリソース
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- 📚 **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- 📚 **[電子書籍]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
-## 技術サポート & 製品ディスカッション
+## 技術サポート・製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験を可能な限りスムーズにするため、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

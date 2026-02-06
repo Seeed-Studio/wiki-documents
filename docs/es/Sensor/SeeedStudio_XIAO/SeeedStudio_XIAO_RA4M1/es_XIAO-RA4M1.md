@@ -37,7 +37,7 @@ El XIAO RA4M1 integra el chip RA4M1 de Renesas (MCU ARM® Cortex®-M4 de 32 bits
 
 <!-- Key Features with bullet -->
 
-- **Microcontrolador Popular Integrado:** Alimentado por Renesas RA4M1, un MCU ARM® Cortex®-M4 R7FA4M1AB3CNE de 32 bits que opera hasta 48 MHz, 256 KB de memoria Flash y 32 KB de SRAM.
+- **Microcontrolador Popular Integrado:** Alimentado por Renesas RA4M1, un MCU ARM® Cortex®-M4 R7FA4M1AB3CNE de 32 bits operando hasta 48 MHz, 256 KB de memoria Flash y 32 KB de SRAM.
 - **Recursos Integrados Destacados:** Equipado con un ADC de 14 bits, DAC de 12 bits, CAN BUS, USB 2.0 y un LED RGB integrado.
 - **8 Nuevos IOs Expandidos:** Añade 8 nuevos pines IO en la parte posterior comparado con placas XIAO anteriores (19 GPIOs en total), permitiendo aplicaciones más complejas.
 - **Características de Seguridad Potentes:** Cifrado de hardware integrado, arranque seguro, almacenamiento de claves y otras funciones para garantizar la seguridad de la aplicación.
@@ -49,70 +49,21 @@ El XIAO RA4M1 integra el chip RA4M1 de Renesas (MCU ARM® Cortex®-M4 de 32 bits
 ### Especificaciones
 
 <!-- Technical Specifications | Table | or bullet -->
+| Producto | XIAO RA4M1 |
+|---------|-----------|
+| **Procesador** | [RA4M1 - Microcontroladores de 32 bits con Arm Cortex-M4 de 48MHz y Controlador LCD y Touch Capacitivo para HMI - Renesas](https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi) <br/>Núcleo Arm® Cortex®-M4 de 48-MHz con FPU <br/>|
+| **RAM** | 32 KB SRAM |
+| **Flash** | 256 KB |
+| **LEDs** | 1x LED de Usuario<br/>1x LED de Alimentación<br/>1x LED RGB |
+| **Interfaces** | 19 IOs:<br/>6x Analógico<br/>19x Digital<br/>2x IIC<br/>2x UART<br/>2x SPI |
+| **Botones** | 1x Botón RESET<br/>1x Botón BOOT |
+| **Seguridad** | AES128/256 |
+| **Bajo Consumo (Típ.)** | `42.6μA@3.7V` |
+| **Compatibilidad de Software** | Arduino IDE |
+| **Temperatura de Trabajo** | -20°C~70°C |
+| **Dimensiones** | 21×17.8 mm |
 
-<table>
-    <thead>
-        <tr>
-            <th>Producto</th>
-            <th>XIAO RA4M1</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th rowspan="2">Procesador</th>
-            <td><a href="https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi">Renesas RA4M1</a></td>
-        </tr>
-        <tr>
-            <td>Núcleo Arm® Cortex®-M4 de 48-MHz</td>
-        </tr>
-        <tr>
-            <th>RAM</th>
-            <td>32 KB SRAM</td>
-        </tr>
-        <tr>
-            <th>Flash</th>
-            <td>256 KB</td>
-        </tr>
-        <tr>
-            <th>LEDs</th>
-            <td>1 LED de Usuario, 1 LED de Alimentación, 1 LED RGB</td>
-        </tr>
-        <tr>
-            <th>Interfaces</th>
-            <td>19 Pines:14x Analógico,19x Digital, 2x IIC, 2x UART, 2x SPI</td>
-        </tr>
-        <tr>
-            <th>Botones</th>
-            <td>1 Botón RESET, 1 Botón BOOT</td>
-        </tr>
-        <tr>
-            <th>Seguridad</th>
-            <td>AES128/256</td>
-        </tr>
-        <tr>
-            <th>Bajo Consumo</th>
-            <td>45μA</td>
-        </tr>
-        <tr>
-            <th>Compatibilidad de Software</th>
-            <td>Arduino IDE</td>
-        </tr>
-        <tr>
-            <th>Temperatura de Funcionamiento</th>
-            <td>-20°C-70°C</td>
-        </tr>
-        <tr>
-            <th>Dimensiones</th>
-            <td>21x17.8 mm</td>
-        </tr>
-        <tr>
-            <th>Alimentación</th>
-            <td>Type-C: 5V<br />BAT: 3.8V</td>
-        </tr>
-    </tbody>
-</table>
-
-### Descripción del Hardware
+### Descripción General del Hardware
 
 Antes de que todo comience, es bastante esencial tener algunos parámetros básicos del producto. La siguiente tabla proporciona información sobre las características del Seeed Studio XIAO RA4M1.
 
@@ -163,12 +114,12 @@ Antes de que todo comience, es bastante esencial tener algunos parámetros bási
 | D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |
 | D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |
 | D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |
-| ADC_BAT         |                  | P400      |                                     | Leer el valor de voltaje de BAT           |
+| ADC_BAT         |                  | P400      |                                     | Leer el valor de voltaje de la batería           |
 | Reset           |                  | RES       |                                     | RESET                                |
 | Boot            |                  | P201      |                                     | Entrar en Modo Boot                      |
 | RGB LED         |                  | P112      |                                     | LED RGB                              |
 | CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Rojo                          |
-| USER_LED        |                  | P011      |                                     | Luz de Usuario（Y）|
+| USER_LED        |                  | P011      |                                     | Luz de Usuario（A）|
 ## Introducción
 
 ### Preparación del Hardware
@@ -182,38 +133,38 @@ Necesitas preparar lo siguiente:
 <br></br>
 
 :::tip
-Algunos cables USB solo pueden suministrar energía y no pueden transferir datos. Si no tienes un cable USB o no sabes si tu cable USB puede transmitir datos, puedes verificar [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
+Algunos cables USB solo pueden suministrar energía y no pueden transferir datos. Si no tienes un cable USB o no sabes si tu cable USB puede transmitir datos, puedes consultar [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
 :::
 
 ### Preparación del Software
 
-La herramienta de programación recomendada para el XIAO RA4M1 es el Arduino IDE, por lo que como parte de la preparación del software, necesitarás completar la instalación de Arduino.
+La herramienta de programación recomendada para el XIAO RA4M1 es Arduino IDE, por lo que como parte de la preparación del software, necesitarás completar la instalación de Arduino.
 
 :::tip
 Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-- **Paso 1.** Descarga e Instala la versión estable de Arduino IDE según tu sistema operativo.
+- **Paso 1.** Descarga e instala la versión estable de Arduino IDE según tu sistema operativo.
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong></a>
 </div>
 
-- **Paso 2.** Ejecuta la aplicación Arduino.
+- **Paso 2.** Inicia la aplicación Arduino.
 
 - **Paso 3.** Añade el paquete de placa RA4M1 a tu Arduino IDE.
 
-    Navega a **File > Preferences**, y rellena **"Additional Boards Manager URLs"** con la url de abajo:
+    Navega a **File > Preferences**, y completa **"Additional Boards Manager URLs"** con la url de abajo:
     *https://files.seeedstudio.com/arduino/package_renesas_1.2.0_index.json*
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/arduino_preference.png" style={{width:800, height:'auto'}}/></div>
 
-    Navega a **Tools > Board > Boards Manager...**, escribe la palabra clave **RA4M1** en el cuadro de búsqueda, selecciona la última versión de **Seeed Renesas Board**, e instálala.
+    Navega a **Tools > Board > Boards Manager...**, escribe la palabra clave **RA4M1** en el cuadro de búsqueda, selecciona la última versión de **Seeed Renesas Board** e instálala.
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/board_manager.png" style={{width:600, height:'auto'}}/></div>
 - **Paso 4.** Selecciona tu placa y puerto.
 
-    En la parte superior del Arduino IDE, puedes buscar **xiao** en la placa de desarrollo de la izquierda, seleccionar XIAO_RA4M1, y seleccionar el puerto directamente.
+    En la parte superior del IDE de Arduino, puedes buscar **xiao** en la placa de desarrollo de la izquierda, seleccionar XIAO_RA4M1 y seleccionar el puerto directamente.
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/select_port.png" style={{width:800, height:'auto'}}/></div>
 
 ## Modo BootLoader
@@ -221,28 +172,28 @@ Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que co
 A veces, usar el programa incorrecto puede hacer que el XIAO pierda su puerto o no funcione correctamente. Los problemas comunes incluyen:
 
 - El XIAO está conectado a la computadora, pero no se encuentra ningún número de puerto.
-- El XIAO está conectado, y aparece un número de puerto, pero la carga del programa falla.
+- El XIAO está conectado y aparece un número de puerto, pero la carga del programa falla.
 
-Cuando encuentres las dos situaciones anteriores, puedes intentar poner el XIAO en modo BootLoader, que puede resolver la mayoría de los problemas de dispositivos no reconocidos y cargas fallidas. El método específico es:
+Cuando encuentres las dos situaciones anteriores, puedes intentar poner el XIAO en modo BootLoader, lo cual puede resolver la mayoría de los problemas de dispositivos no reconocidos y cargas fallidas. El método específico es:
 
 - **Método 1.** Mantén presionado el botón `BOOT` en el XIAO RA4M1 sin soltarlo.
 - **Método 2.** Mantén presionado el botón `BOOT` y luego conéctalo a la computadora a través del cable de datos. Suelta el botón BOOT después de conectar a la computadora.
 
-## Reinicio
+## Reset
 
-Cuando el programa funciona de manera anormal, puedes presionar `Reset` una vez durante el encendido para que el XIAO vuelva a ejecutar el programa cargado.
+Cuando el programa funcione de manera anormal, puedes presionar `Reset` una vez durante el encendido para que el XIAO vuelva a ejecutar el programa cargado.
 Cuando mantienes presionado el botón `BOOT` durante el encendido y luego presionas el botón `Reset` una vez, también puedes entrar al modo BootLoader.
 
 ## Ejecuta tu primer programa Blink
 
 A estas alturas, creo que tienes una buena comprensión de las características y hardware del XIAO RA4M1. A continuación, tomemos el programa Blink más simple como ejemplo y realicemos el primer parpadeo para tu XIAO RA4M1!
 
-- **Paso 1.** Ejecuta la aplicación Arduino.
+- **Paso 1.** Inicia la aplicación Arduino.
 - **Paso 2.** Navega a **File > Examples > 01.Basics > Blink**, abre el programa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink_code.png" style={{width:700, height:'auto'}}/></div>
 
-- **Paso 3.** Selecciona el modelo de placa como **XIAO RA4M1**, y selecciona el número de puerto correcto para cargar el programa.
+- **Paso 3.** Selecciona el modelo de placa como **XIAO RA4M1** y selecciona el número de puerto correcto para cargar el programa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/choose_board.png" style={{width:700, height:'auto'}}/></div>
 
@@ -251,7 +202,7 @@ Una vez que el programa se haya cargado exitosamente, verás el siguiente mensaj
 
 ¡Felicidades, has aprendido cómo escribir y cargar programas para el XIAO RA4M1!
 :::note
-El LED solo se apagará cuando el pin LED del usuario en el XIAO RA4M1 se establezca en un nivel alto, y solo se encenderá cuando el pin se establezca en un nivel bajo.
+El LED solo se apagará cuando el pin del LED de usuario en el XIAO RA4M1 se establezca en un nivel alto, y solo se encenderá cuando el pin se establezca en un nivel bajo.
 :::
 
 ## Jugar con LEDs RGB
@@ -260,7 +211,7 @@ El XIAO RA4M1 viene con un LED RGB integrado que puedes controlar, a continuaci�
 
 - **Paso 1.** Descarga la librería `Adafruit_NeoPixel`
 
-Navega a **Sketch > Include Liarbry > Manage Libraries...**, y busca **Adafruit_NeoPixel**, instala la última versión.
+Navega a **Sketch > Include Liarbry > Manage Libraries...** y busca **Adafruit_NeoPixel**, instala la última versión.
 
 - **Paso 2.** Copia el siguiente código a un nuevo sketch:
 
@@ -303,7 +254,7 @@ void loop() {
 
 ```
 
-- **Paso 3.** Selecciona el modelo de placa como **XIAO RA4M1**, y selecciona el número de puerto correcto para cargar el programa.
+- **Paso 3.** Selecciona el modelo de placa como **XIAO RA4M1** y selecciona el número de puerto correcto para cargar el programa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/rgb_led.gif" style={{width:600, height:'auto'}}/></div>
 
@@ -338,7 +289,7 @@ Pero con el XIAO RA4M1, este proceso se simplifica. Ahora puedes usar directamen
  </tr>
 </table>
 
-La pantalla OLED en la placa de expansión XIAO usa el protocolo I2C y está conectada a la interfaz I2C del XIAO a través del circuito I2C en la placa. Por lo tanto, podemos conectar directamente el XIAO a la placa de expansión y programarlo para mostrar contenido en la pantalla.
+La pantalla OLED en la placa de expansión XIAO utiliza el protocolo I2C y está conectada a la interfaz I2C del XIAO a través del circuito I2C en la placa. Por lo tanto, podemos conectar directamente el XIAO a la placa de expansión y programarlo para mostrar contenido en la pantalla.
 
 - **Paso 2.** Instala la librería u8g2.
 
@@ -348,7 +299,7 @@ La pantalla OLED en la placa de expansión XIAO usa el protocolo I2C y está con
     </a>
 </div>
 
-- **Paso 3.** Copia el código y pégalo en el Arduino IDE.
+- **Paso 3.** Copia el código y pégalo en el IDE de Arduino.
 
 ```cpp
 #include <Arduino.h>
@@ -388,22 +339,19 @@ void loop() {
 
 ```
 
-- **Paso 4.** Selecciona el modelo de placa como **XIAO RA4M1**, y selecciona el número de puerto correcto para cargar el programa
+- **Paso 4.** Selecciona el modelo de placa como **XIAO RA4M1** y selecciona el número de puerto correcto para cargar el programa
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/voltage.png" style={{width:600, height:'auto'}}/></div>
 
 ## Recursos
 
-- 📄 **[PDF]** [Hoja de datos RA4M1](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet)
-- 📄 **[PDF]** [Esquemático Seeed Studio XIAO RA4M1](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO-RA4M1_SCH_PDF_v1.0_240719.pdf)
-- 📄 **[ZIP]** [Librerías KiCAD](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO-RA4M1_SCH%26PCB_v1.0_240719.zip)
-<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip) -->
-<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 Eagle file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO_RP2040_v1.22_SCH&PCB.zip) -->
-<!-- - 📄 **[DXF]** [Seeed Studio XIAO RA4M1 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-DXF.zip) -->
-<!-- - 📄 **[LBR]** [Seeed Studio XIAO RA4M1 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr) -->
-<!-- - 📄 **[XLSX]** [Seeed Studio XIAO RA4M1 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-pinout_sheet.xlsx) -->
-- 🔗 **[Kicad]** [Huella Seeed Studio XIAO RA4M1](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
+**Diseño de Hardware**
+- **📄[Hoja de Datos]** [Hoja de Datos Renesas RA4M1](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet )
+- **📄[Esquemático]** [Esquemático XIAO RA4M1](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO%20RA4M1%20V1.01_SCH_PDF_260114%20.pdf.pdf )
+- **🗃️[Archivos de Diseño PCB]** [Proyecto KiCad XIAO RA4M1](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/202003977_XIAO%20RA4M1%20v1.01_SCH&PCB_260114.zip )
+- **🗃️[Librerías de Diseño PCB]** 
+  - [Footprints KiCad XIAO Serie](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [Símbolos SCH KiCad XIAO Serie](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 ## Solución de Problemas
 
 ### P1: ¿Qué debo tener en cuenta al soldar pines?
