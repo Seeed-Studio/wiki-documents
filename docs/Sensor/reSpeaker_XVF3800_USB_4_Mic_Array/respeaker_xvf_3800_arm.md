@@ -75,8 +75,8 @@ Select one of the following USB firmwares based on your needs (the 2-channel ver
 
 | Firmware | Channels | Description |
 |------|--------|------|
-| `respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin` | 2 | Processed dual-channel output<br>Channel 0: Conference<br>Channel 1: ASR |
-| `respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin` | 6 | Channel 0: Processed audio (Conference)<br>Channel 1: Processed audio (ASR)<br>Channels 2-5: Raw data for Microphones 0-3 |
+| `respeaker_xvf3800_usb_dfu_firmware_v2.0.x.bin` | 2 | Processed dual-channel output<br />Channel 0: Conference<br />Channel 1: ASR |
+| `respeaker_xvf3800_usb_dfu_firmware_6chl_v2.0.x.bin` | 6 | Channel 0: Processed audio (Conference)<br />Channel 1: Processed audio (ASR)<br />Channels 2-5: Raw data for Microphones 0-3 |
 
 ### 1.2 Connect and Enter DFU Mode
 
@@ -211,7 +211,7 @@ After entering the execution interface, you will see four control buttons:
 | Function | Operation Instructions |
 |------|----------|
 | **Execute Command** | Enter a command in the text box and click the button to execute it |
-| **Run Dialogue** | Similar to a recording function:<br>• First click: Start recording<br>• Second click: End recording<br>The recording will be sent to the LLM for processing, the results will be displayed on the interface, and the robotic arm will perform actions based on the instructions |
+| **Run Dialogue** | Similar to a recording function:<br />• First click: Start recording<br />• Second click: End recording<br />The recording will be sent to the LLM for processing, the results will be displayed on the interface, and the robotic arm will perform actions based on the instructions |
 | **Enable Dialogue Mode** | The robotic arm enters a continuous listening state. After saying the wake word **"Mark"**, subsequent speech will be recognized as a command and executed |
 
 ---
