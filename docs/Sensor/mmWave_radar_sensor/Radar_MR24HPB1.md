@@ -18,7 +18,7 @@ last_update:
     <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Human-Static-Presence-Module-p-5267.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
-## Intrdocution
+## Introduction
 
 The Human Static Presence Radar Sensor is a self-contained, privacy-protectively, safety mmWave module operating at 24GHz. With the enhanced Infineon Doppler radar and the standard algorithm, the module is an ideal solution for individual applications like smart home, smart hotel and danger alarm.
 
