@@ -12,9 +12,7 @@ last_update:
 
 MicroPython es una implementación ligera y eficiente del lenguaje de programación Python 3 que incluye un pequeño subconjunto de la biblioteca estándar de Python y está optimizada para ejecutarse en microcontroladores y en entornos restringidos.
 
-Desde su primer lanzamiento en 2014, micropython ha soportado muchos microcontroladores, incluyendo la serie ESP32, pero actualmente no soporta oficialmente el chip ESP32C6. Este firmware está autocompilado, y el firmware oficial ya está en camino. Por favor, ten paciencia.
-
-En esta página, te guiaremos sobre cómo usar la capacidad del XIAO ESP32C6 utilizando la sintaxis simple y fácil de micropython.
+En esta página, te guiaremos sobre cómo usar las capacidades del XIAO ESP32C6 utilizando la sintaxis simple y fácil de micropython.
 
 ## Preparación del Hardware
 
@@ -31,7 +29,7 @@ Estoy usando la placa Seeed Studio XIAO ESP32C6 aquí.
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -65,15 +63,15 @@ En esta guía estaré usando **windows 10** junto con Thonny IDE y esptool. Para
 
 ### 👍 Muchas Gracias
 
-<strong><font color={'8DC215'} size={"3"}>El firmware diseñado para la placa XIAO ESP32C6, utilizado en este wiki, fue creado por nuestro amigo: Zhishuo Song, a quien estamos realmente agradecidos.</font></strong>
+<strong><font color={'8DC215'} size={"3"}>El firmware diseñado para la placa XIAO ESP32C6, usado en esta wiki, fue hecho por nuestro amigo: Zhishuo Song, a quien estamos realmente agradecidos.</font></strong>
 
-## Comenzando
+## Introducción
 
-El firmware está diseñado únicamente para la programación MicroPython de XIAO ESP32C6. Primero flashearemos el firmware y luego usaremos el ejemplo en él.
+El firmware está diseñado solo para la programación MicroPython del XIAO ESP32C6. Primero flashearemos el firmware y luego usaremos el ejemplo en él.
 
-### Paso 1. Flasheando el firmware
+### Paso 1. Flashear el firmware
 
-Localiza la dirección del puerto serie USB abriendo el administrador de dispositivos
+Localiza la dirección del puerto USB a serie abriendo el administrador de dispositivos
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/device_manager.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -81,7 +79,7 @@ Extrae el archivo zip descargado y navega a la carpeta.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205037972.png" alt="pir" width={600} height="auto" /></p>
 
-haz clic en la caja de ruta, luego escribe "CMD" y presiona enter
+haz clic en la caja de ruta luego escribe "CMD" y presiona enter
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205105289.png" alt="pir" width={600} height="auto" /></p>
 
@@ -91,26 +89,35 @@ Serás dirigido a la terminal cmd.
 
 Instala esptool usando el comando pip (asegúrate de que python 3 ya esté instalado)
 
-```cpp
+```bash
 pip install esptool
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/esptool_install.jpg" alt="pir" width={600} height="auto" /></p>
 
-Borra la memoria flash del XIAO ESP32C6 usando este comando
+:::caution Pon la placa en modo Bootloader
+Antes de flashear, **debes** poner el XIAO ESP32C6 en modo bootloader (descarga). Para hacer esto:
+1. Presiona y **mantén** el botón **BOOT**.
+2. Mientras mantienes BOOT, presiona y suelta el botón **RESET**.
+3. Suelta el botón **BOOT**.
 
-```cpp
-esptool.py --port COMXX --chip esp32c6 erase_flash
+Si la placa no está en modo bootloader, el flasheo fallará con un error de **"Write timeout"** y puede dañar el módulo.
+:::
+
+Borra la memoria flash en el XIAO ESP32C6 usando este comando
+
+```bash
+esptool --port COMXX --chip esp32c6 erase-flash
 ```
 
 Ahora procede a instalar el firmware de micropython usando este comando
 
-```cpp
-esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset --chip esp32c6  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 ESP32C6_MicroPython.bin
+```bash
+esptool --port COMXX --baud 460800 --before default-reset --after hard-reset --chip esp32c6 write-flash --flash-mode dio --flash-size detect --flash-freq 80m 0x0 ESP32C6_MicroPython.bin
 ```
 
 :::tip
-cambia COMXX con el número de puerto COM en tu PC
+Cambia el COMXX con el número de puerto COM en tu PC. Si el flasheo falla con un error de timeout, intenta reducir la velocidad de baudios a `115200`.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205457866.png" alt="pir" width={600} height="auto" /></p>
@@ -119,21 +126,21 @@ cambia COMXX con el número de puerto COM en tu PC
 
 Ahora subiremos el código de ejemplo a la memoria flash interna del XIAO ESP32C6.
 
-Para esta parte estoy usando el IDE thonny, primero configuro el puerto
+Para esta parte estoy usando thonny IDE primero configuro el puerto
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205437800.png" alt="pir" width={600} height="auto" /></p>
 
-ejecutar el programa de ejemplo `blinker.py`
+ejecuta el programa de ejemplo `blinker.py`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022220104960.png" alt="pir" width={600} height="auto" /></p>
 
 ## NTP obtener hora actual desde wifi
 
-### paso1: Abrir el archivo `wifi_Ntp.py` en Thonny
+### paso1: Abre el archivo `wifi_Ntp.py` en Thonny
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022220645986.png" alt="pir" width={600} height="auto" /></p>
 
-### paso2: cambiar el ssid y contraseña de tu router wifi en la línea 8
+### paso2: cambia el ssid y contraseña de tu router wifi en la línea 8
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022220714175.png" alt="pir" width={600} height="auto" /></p>
 
@@ -143,16 +150,18 @@ Al ejecutar el programa, puedes ver en la ventana del shell que el XIAO se conec
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022220808948.png" alt="pir" width={600} height="auto" /></p>
 
-## Solución de problemas
+## Solución de Problemas
 
-Si el programa no se puede grabar, por favor intenta usar el botón BOOT y el botón RST para configurar la placa en modo de descarga de arranque
+- **Error "Write timeout" o excepción serial**: Asegúrate de que la placa esté en **modo bootloader** antes de flashear. Mantén el botón **BOOT**, presiona y suelta **RESET**, luego suelta **BOOT**. También deberías intentar reducir la velocidad de baudios (por ejemplo, usa `--baud 115200` en lugar de `460800`).
+- **Comando no encontrado (`esptool.py`)**: Usa `esptool` (sin `.py`) cuando se instale vía `pip install esptool`. En algunos sistemas, puede que necesites usar `python -m esptool` en su lugar.
+- **Módulo dañado**: Si el módulo parece dañado, intenta entrar en modo bootloader y borrar la flash con `esptool --port COMXX --chip esp32c6 erase-flash`, luego vuelve a flashear el firmware.
 
-## ✨ Proyecto de Colaborador
+## ✨ Proyecto Colaborador
 
-- Este proyecto está respaldado por el [Proyecto de Colaborador](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) de Seeed Studio.
-- Gracias a [los esfuerzos de Hendra y shariltumin](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=c6&pane=issue&itemId=59874459&issue=Seeed-Studio%7Cwiki-documents%7C1117) y tu trabajo será [exhibido](https://wiki.seeedstudio.com/contributors/).
+- Este proyecto está respaldado por el [Proyecto Colaborador](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) de Seeed Studio.
+- Gracias a los [esfuerzos de Hendra y shariltumin](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=c6&pane=issue&itemId=59874459&issue=Seeed-Studio%7Cwiki-documents%7C1117) y su trabajo será [exhibido](https://wiki.seeedstudio.com/es/contributors/).
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
