@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_topic_page
 last_update:
-  date: 07/04/2023
-  author: Citric
+  date: 02/04/2026
+  author: Carla Guo
 ---
 
 # Seeed Studio XIAO EXHIBITION
@@ -36,6 +36,8 @@ We can't do it without the love, contribution that we get from the community, an
   <li><a href="#xiao_rp2350"><strong>XIAO RP2350</strong></a></li>
   <li><a href="#xiao_ra4m1"><strong>XIAO RA4M1</strong></a></li>
   <li><a href="#xiao_mg24_(sense)"><strong>XIAO MG24 (Sense)</strong></a></li>
+  <li><a href="#xiao_nrf54l15_(sense)"><strong>XIAO NRF54L15 (Sense)</strong></a></li>
+  <li><a href="#xiao_esp32c5"><strong>XIAO ESP32C5</strong></a></li>
   </ul>
   <li><a href="#supported_languages/platforms"><strong>Supported Languages/Platforms</strong></a></li>
   <ul>
@@ -152,7 +154,7 @@ We can't do it without the love, contribution that we get from the community, an
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAO_BLE/" target="_blank">Getting Started Wiki</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAO-BLE-Sense-Pin-Multiplexing/" target="_blank">Pin Usage</a></th>
-            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAO-BLE-Sense-IMU-Usage/" target="_blank">6-Axis IMU Usage</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAO-BLE-Sense-IMU-Usage/" target="_blank">6-Axis IMU Usage</a></th>
   </tr>
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAO-BLE-Sense-PDM-Usage/" target="_blank">PDM Usage</a></th>
@@ -265,8 +267,53 @@ We can't do it without the love, contribution that we get from the community, an
  <table align="center">
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_mg24_getting_started/" target="_blank">Getting Started Wiki</a></th>
-   <th style={{width:333, height:'auto'}}><a href="" target="_blank">Pin Usage</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_mg24_pin_multiplexing/" target="_blank">Pin Usage</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_mg24_bluetooth/" target="_blank">Bluetooth Usage</a></th>
+  </tr>
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_mg24_sense_built_in_sensor/" target="_blank"></a>IMU & Microphone Usage</th>
+   <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
             <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+  </tr>
+ </table>
+</div>
+
+
+<br></br>
+
+<span id="xiao_nr54l15_(sense)"><strong><font  size={"4"}>XIAO nRF54L15 (Sense)</font></strong></span>
+
+<div class="table-center">
+ <table align="center">
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started" target="_blank">Getting Started Wiki</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_sense_pin_multiplexing/" target="_blank">Pin Usage</a></th>
+    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_sense_bluetooth_usage/" target="_blank">Bluetooth Usage</a></th>
+  </tr>
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_sense_power_consumptions" target="_blank">Power Consumptions</a></th>
+   <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+   <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+  </tr>
+ </table>
+</div>
+
+<br></br>
+
+
+<span id="xiao_esp32c5"><strong><font  size={"4"}>XIAO ESP32C5</font></strong></span>
+
+<div class="table-center">
+ <table align="center">
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_getting_started XIAO" target="_blank">Getting Started Wiki</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_pin_multiplexing XIAO" target="_blank">Pin Usage</a></th>
+            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_buletooth_usage" target="_blank">Bluetooth Usage</a></th>
+  </tr>
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_wifi_usage" target="_blank">WiFi Usage</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xaio_esp32c5_wifi_throughput_tester" target="_blank">WiFi throughput tester</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_esp-mesh_audio" target="_blank">ESP-WIFI-MESH</a></th>
   </tr>
  </table>
 </div>
@@ -297,6 +344,11 @@ We can't do it without the love, contribution that we get from the community, an
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_mg24_with_platform_io/" target="_blank"> XIAO MG24 (Sense)</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_ra4m1_with_platform_io/" target="_blank">XIAO RA4M1</a></th>
   </tr>
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_with_platform_io" target="_blank">XIAO nRF54L15 (Sense)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_with_platformio" target="_blank">XIAO ESP32C5</a></th>
+   <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+  </tr>
  </table>
 </div>
 
@@ -317,12 +369,17 @@ We can't do it without the love, contribution that we get from the community, an
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32s3_with_micropython/" target="_blank">XIAO ESP32S3 (Sense)</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAO_ESP32S3_Micropython/" target="_blank">XIAO ESP32S3 Sense Only (Camera, Wi-Fi)</a></th>
-            <th style={{width:333, height:'auto'}}><a href="https://micropython.org/download/SEEED_XIAO_NRF52/" target="_blank">XIAO nRF52840 Sense</a></th>
+    <th style={{width:333, height:'auto'}}><a href="https://micropython.org/download/SEEED_XIAO_NRF52/" target="_blank">XIAO nRF52840 Sense</a></th>
   </tr>
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c6_micropython/" target="_blank">XIAO ESP32C6</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://micropython.org/download/SEEED_XIAO_RP2350/" target="_blank">XIAO RP2350</a></th>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_sense_micropython/" target="_blank">XIAO nRF54L15</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_sense_micropython/" target="_blank">XIAO nRF54L15(Sense)</a></th>
+  </tr>
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_mg24_sense_micropython" target="_blank">XIAO MG24</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_ra4m1_micropython" target="_blank">XIAO RA4M1</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_with_micropyhton" target="_blank">XIAO ESP32C5</a></th>
   </tr>
  </table>
 </div>
@@ -387,8 +444,8 @@ We can't do it without the love, contribution that we get from the community, an
   </tr>
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/matter_development_framework/" target="_blank">Matter Development 3</a></th>
-   <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
-            <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_mg24_matter" target="_blank">XIAO MG24</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_sense_matter" target="_blank">XIAO nRF54L15 (Sense)</a></th>
   </tr>
  </table>
 </div>
@@ -494,7 +551,12 @@ We can't do it without the love, contribution that we get from the community, an
   <tr>
    <th style={{width:333, height:'auto'}}>XIAO SAMD21</th>
    <th style={{width:333, height:'auto'}}>XIAO nRF52840</th>
-            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao-esp32s3-freertos/" target="_blank">XIAO ESP32S3 (Sense)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao-esp32s3-freertos/" target="_blank">XIAO ESP32S3 (Sense)</a></th>
+  </tr>
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_with_freertos/" target="_blank">XIAO ESP32C5</a></th>
+   <th style={{width:333, height:'auto'}}></th>
+   <th style={{width:333, height:'auto'}}></th>
   </tr>
  </table>
 </div>
@@ -574,7 +636,12 @@ We can't do it without the love, contribution that we get from the community, an
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c6_zigbee_arduino/" target="_blank">XIAO ESP32C6（Arduino）</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c6_zigbee/" target="_blank">XIAO ESP32C6（IDF）</a></th>
-            <th style={{width:333, height:'auto'}}><a href=""></a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_zigbee_arduino" target="_blank">XIAO ESP32C5 (Arduino)</a></th>
+  </tr>
+  <tr>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_zigbee_idf" target="_blank">XIAO ESP32C5 (IDF)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_nrf54l15_zigbee" target="_blank">XIAO nRF54L15 (Sense)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com" target="_blank"></a></th>
   </tr>
  </table>
 </div>
@@ -695,11 +762,12 @@ We can't do it without the love, contribution that we get from the community, an
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/Seeeduino-XIAO-TinyML/" target="_blank">XIAO SAMD21</a></th>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAO-RP2040-EI/" target="_blank">XIAO RP2040</a></th>
-            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAOEI/" target="_blank">XIAO nRF52840 (Sense)-Motion Recognition</a></th>
+    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAOEI/" target="_blank">XIAO nRF52840 (Sense)-Motion Recognition</a></th>
   </tr>
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/tinyml_course_Key_Word_Spotting/" target="_blank">XIAO ESP32S3 Sense (Key Word Spotting)</a></th>
-            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/tinyml_course_Image_classification_project/" target="_blank">XIAO ESP32S3 Sense (Image Classification)</a></th>
+    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/tinyml_course_Image_classification_project/" target="_blank">XIAO ESP32S3 Sense (Image Classification)</a></th>
+    <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
   </tr>
  </table>
 </div>
@@ -718,13 +786,13 @@ We can't do it without the love, contribution that we get from the community, an
  <table align="center">
   <tr>
    <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/XIAO_ESP32S3_esphome/" target="_blank">XIAO ESP32S3 Sense</a></th>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/#grove-compatibility-list-with-esphome" target="_blank">Connect XIAO ESP32 + Grove Sensors to HA via ESPHome</a></th>
-            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao-esp32c3-esphome/" target="_blank">XIAO ESP32C3 + mmWave to HA</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/#grove-compatibility-list-with-esphome" target="_blank">Grove Sensors</a></th>
+            <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao-esp32c3-esphome/" target="_blank">XIAO ESP32C3</a></th>
   </tr>
   <tr>
-   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/" target="_blank">Add XIAO ESP32C3 to ESPHome</a></th>
-   <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
-            <th style={{width:333, height:'auto'}}><a href="" target="_blank"></a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiaoc6_zigbee_led_ha" target="_blank">XIAO ESP32C6 (zigbee)</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_esp32c5_homeassistant" target="_blank">XIAO ESP32C5</a></th>
+   <th style={{width:333, height:'auto'}}><a href="https://wiki.seeedstudio.com/xiao_mg24_ha_openthread/" target="_blank">XIAO MG24</a></th>
   </tr>
  </table>
 </div>
