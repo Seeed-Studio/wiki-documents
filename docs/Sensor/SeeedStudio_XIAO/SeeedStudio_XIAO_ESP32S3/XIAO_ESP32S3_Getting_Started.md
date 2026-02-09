@@ -844,7 +844,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 
 ## Resources
 
-### For Seeed Studio XIAO ESP32S3
+### For Seeed Studio XIAO ESP32-S3
 
 **Hardware Design**
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
@@ -863,7 +863,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 **Software & Tools**
 - **🗃️[Factory Firmware]** [XIAO ESP32-S3 Factory Firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip )
 
-### For Seeed Studio XIAO ESP32S3 Sense
+### For Seeed Studio XIAO ESP32-S3 Sense
 
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 **Hardware Design**
@@ -886,7 +886,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 **Software & Tools**
 - **🗃️[Factory Firmware]** [XIAO ESP32-S3 Sense Factory Firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-firmware-20240814.zip )
 
-### For Seeed Studio XIAO ESP32S3 Plus
+### For Seeed Studio XIAO ESP32-S3 Plus
 
 **Hardware Design**
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
@@ -905,10 +905,10 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 - **📄[2D Dimensions]** [XIAO ESP32-S3 Plus Dimension in DXF (Bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf )
 - **🔗[3D Model]** [XIAO ESP32-S3 Plus 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32s3-plus-1/files )
 
-### For Seeed Studio XIAO ESP32S3 Sense Camera
+### For Seeed Studio XIAO ESP32-S3 Sense Camera
 
 **Hardware Design**
-- **📄[Datasheet]** [OV3660 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
+- **📄[Datasheet]** [OV3660 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf )
 - **📄[Datasheet]** [OV5640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
 - **📄[Datasheet]** [OV2640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
 ## Course Resources
