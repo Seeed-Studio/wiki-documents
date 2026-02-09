@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
-  date: 2/3/2026
+  date: 2/6/2026
   author: Kasun Thushara
 ---
 
@@ -34,7 +34,9 @@ Download the firmware as complete repository from [here](https://github.com/form
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
-On your computer, plug in the ReSpeaker Lite and run the following command:
+On your computer, plug in the ReSpeaker Lite on USB interface (near to 3.5mm jack) and run the following command:
+
+
 
 if you are using Linux host machine 
 
@@ -47,6 +49,9 @@ if you are using Windows host Machine
 ```bash
 dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_flashing.gif" alt="pir" width={800} height="auto" /></p>
+
 for more information please refer this [link](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#update-firmware)
 
 :::note
@@ -1481,7 +1486,7 @@ Download the generated .bin firmware file to your computer.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
-Connect the ESP32-S3 board to your PC using a USB Type-C cable.
+Connect the ESP32-S3 board's USB Type-C port to your PC using a USB Type-C cable.
 
 Open [Web ESPHome](https://web.esphome.io/?dashboard_wizard) in Google Chrome.
 
@@ -1500,6 +1505,8 @@ Wait for the installation to complete (may take a few minutes).
 After success, you’ll see a confirmation message.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/burn_flash_bin.gif" alt="pir" width={700} height="auto" /></p>
 
 Return to **Home Assistant > Settings > Devices & Services**.
 
@@ -1531,8 +1538,21 @@ You can sign in with Nabu Cloud and configure the Voice Assistant because it is 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_2.png" alt="pir" width={700} height="auto" /></p>
 
+## FAQ
+
+### How to view reSpeaker Logs?
+
+To view log files and debug procedures—such as verifying wake word detection and STT functionality—you can use the ESP web application mentioned earlier.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/log_view.gif" alt="pir" width={700} height="auto" /></p>
+
 ## Special Thanks
 We would like to thank FormatBCE for creating this awesome YAML file for the Seeed Studio reSpeaker Lite. Support him on his [Github](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration)
+
+
+
+## Project Sharing
+- From **Smart Home Circle** : [Create Local Voice Assistant](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
 
 ## Tech Support & Product Discussion
 
