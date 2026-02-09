@@ -1,6 +1,6 @@
 ---
 description: 本项目演示如何使用 Seeed Studio reSpeaker XVF3800（XIAO ESP32-S3）作为端侧语音设备，通过 Agora 建立实时双向语音链路，并直接对接 Agora Conversational AI Agent API v2（LLM/ASR/TTS），实现低延迟的实时语音对话。
-title: reSpeaker XVF3800（XIAO ESP32-S3）+ Agora Conversational AI Agent v2 端侧对话客户端部署指南
+title: ReSpeaker XVF3800 + Agora Conversational AI Agent v2端侧对话客户端部署指南
 keywords:
 - reSpeaker
 - XVF3800
