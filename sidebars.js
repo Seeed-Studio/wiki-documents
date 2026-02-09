@@ -3157,6 +3157,22 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_assembly_guide'
               ]
             },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R22xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_getting_start'
+              },
+              items: [
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_getting_start',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_flash_os',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_configure_system',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_assembly_guide'
+              ]
+            },
           ]
         },
         {

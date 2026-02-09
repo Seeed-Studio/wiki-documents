@@ -233,7 +233,7 @@ The reComputer Industrial R21xx series is ideal for use in industrial AI applica
         <td colspan="2">Surge: EN61000-4-5, Level 2</td>
       </tr>
       <tr>
-        <td rowspan="3">Certification</td>
+        <td rowspan="4">Certification</td>
         <td colspan="2">CE, FCC</td>
       </tr>
       <tr>
