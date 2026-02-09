@@ -1,6 +1,6 @@
 ---
-description: 24GHz mmWave Human Static Presence
-title: 24GHz mmWave Human Static Presence
+description: Presencia Estática Humana mmWave de 24GHz
+title: Presencia Estática Humana mmWave de 24GHz
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -20,7 +20,7 @@ last_update:
 
 ## Introducción
 
-El Sensor Radar de Presencia Estática Humana es un módulo mmWave autónomo, protector de privacidad y seguro que opera a 24GHz. Con el radar Doppler mejorado de Infineon y el algoritmo estándar, el módulo es una solución ideal para aplicaciones individuales como hogar inteligente, hotel inteligente y alarma de peligro.
+El Sensor de Radar de Presencia Estática Humana es un módulo mmWave autónomo, protector de privacidad y seguro que opera a 24GHz. Con el radar Doppler mejorado de Infineon y el algoritmo estándar, el módulo es una solución ideal para aplicaciones individuales como hogar inteligente, hotel inteligente y alarma de peligro.
 
 ### Aplicación
 
@@ -30,13 +30,13 @@ El Sensor Radar de Presencia Estática Humana es un módulo mmWave autónomo, pr
 
 - Tecnología confiable: Radar industrial FMCW mmWave de Infineon
 - Teoría habilitada: Aplica tecnología de radar Doppler con Sensor de Distancia Cercana (NDS) operando a 24GHz
-- Algoritmo estándar: Distingue condiciones ocupado/desocupado e identifica actividades humanas en el entorno de auto-adaptación
+- Algoritmo estándar: Distingue condiciones ocupadas/desocupadas e identifica actividades humanas en el entorno de auto-adaptación
 - Protección perfecta de privacidad: Proporciona capacidades de vigilancia sin identificación
 - Ubicación de instalación flexible: Opera correctamente independientemente de los bloques de refugio
 - Estado de trabajo inofensivo: Salida de 10 dBm de potencia de energía inofensiva
-- Alta precisión: Disminuye la interferencia de objetos no vivos y los resultados de salida alcanzan más del 95% de precisión
+- Alta precisión: Disminuye la interferencia de objetos no vivos y los resultados de salida logran más del 95% de precisión
 - Alta robustez: Mantiene el funcionamiento adecuado en un entorno complejo que contiene diferentes temperaturas, humedad, ruido, corrientes de aire, polvo, luz, etc.
-- Antena de alto rendimiento: Detecta incluso micromovimiento en un patrón de haz de abanico donde Horizontal 90°/ Vertical 60°
+- Antena de alto rendimiento: Detecta incluso micromovimiento en un patrón de haz en abanico donde Horizontal 90°/ Vertical 60°
 - Distancia de medición:
   - Distancia máxima de percepción de movimiento: hasta 12 metros
   - Distancia máxima de percepción de micromovimiento: hasta 5 metros
@@ -52,8 +52,7 @@ El Sensor Radar de Presencia Estática Humana es un módulo mmWave autónomo, pr
 
 1. Salida S1: nivel alto - ocupado, nivel bajo - desocupado.
 2. Salida S2: nivel alto - activo, nivel bajo - estacionario
-3. GP1 a GP4 son controles de selección de parámetros, que pueden ser redefinidos
-según los requisitos del usuario.
+3. GP1 a GP4 son controles de selección de parámetros, que pueden ser redefinidos según los requisitos del usuario.
 4. Las señales de salida de esta interfaz están todas a nivel de 3.3V.
 
 :::caution  
@@ -82,14 +81,14 @@ Antes de comenzar a desarrollar un sketch, veamos las funciones disponibles de l
 **Parámetros de entrada:** Ninguno
 **Valor de retorno:** Ninguno
 
-- `void Bodysign_judgment(byte inf[], float Move_min, float Move_max)` —— Los datos devueltos por el radar contienen una gran cantidad de datos físicos. El usuario tiene la flexibilidad de ajustar la información de movimiento detectada basándose en los datos de señal y el algoritmo de decodificación proporcionado por la función. El contenido del juicio será enviado a través del puerto serie.
+- `void Bodysign_judgment(byte inf[], float Move_min, float Move_max)` —— Los datos devueltos por el radar contienen una gran cantidad de datos físicos. El usuario tiene la flexibilidad de ajustar la información de movimiento detectada basada en los datos de señal y el algoritmo de decodificación proporcionado por la función. El contenido del juicio será enviado a través del puerto serie.
 **Parámetros de entrada:**
   - `byte inf[]` —— Marcos de datos enviados por el radar.
   - `float Move_min` —— Determina el umbral del usuario estando en un estado estacionario o desocupado.
   - `float Move_max` —— Determina el valor umbral para que el usuario esté en un estado estacionario o un estado donde alguien está en movimiento.
 
     **Valor de retorno:** Ninguno
-    Acerca de la descripción de los parámetros de señal: Teóricamente, los valores calculados de los parámetros de señal van de **0 a 100**. Cuando el valor calculado es **0**, significa que **no se detecta a nadie** en el entorno circundante. Cuando el valor calculado es **1**, significa que se detecta que el entorno está ocupado y en un **estado estacionario**. Un valor calculado de **2 a 100** indica que se detecta que los alrededores están ocupados y **activos**.
+    Acerca de la descripción de los parámetros de señal: Teóricamente, los valores calculados de los parámetros de señal van de **0 a 100**. Cuando el valor calculado es **0**, significa que **nadie** es detectado en el entorno circundante. Cuando el valor calculado es **1**, significa que se detecta que el entorno está ocupado y en un **estado estacionario**. Un valor calculado de **2 a 100** indica que se detecta que los alrededores están ocupados y **activos**.
 
 - `void Situation_judgment(byte inf[])` —— Esta función detecta si el cuerpo humano se está acercando o alejando de la ubicación donde se encuentra el radar y determina el movimiento del cuerpo humano, según el algoritmo dentro del radar. Esta información será enviada a través del puerto serie.
 **Parámetros de entrada:**
@@ -108,7 +107,7 @@ Antes de comenzar a desarrollar un sketch, veamos las funciones disponibles de l
   - `unsigned char *lpuc_Frame` —— El marco de datos que deseas enviar al radar (sin incluir el marco de suma de verificación final de 2 Bytes).
   - `unsigned short int lus_Len` —— La longitud del marco de datos que deseas enviar al radar.
 
-**Valor de retorno:** Dígito de verificación de tipo entero de 2 bytes.
+    **Valor de retorno:** Dígito de verificación de tipo entero de 2 Bytes.
 
     **Valor de retorno:** Ninguno
 
@@ -118,7 +117,7 @@ Antes de comenzar a desarrollar un sketch, veamos las funciones disponibles de l
 
 ### Instalación
 
-**Paso 1.** Necesitas instalar un software de Arduino.
+**Paso 1.** Necesitas instalar un Software de Arduino.
 
 <p style={{textAlign: 'center'}}><a href="https://www.arduino.cc/en/Main/Software" target="_blank"><div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" /></div></a></p>
 
@@ -126,21 +125,21 @@ Antes de comenzar a desarrollar un sketch, veamos las funciones disponibles de l
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg"/></div>
 
-**Paso 3.** Selecciona tu modelo de placa de desarrollo y añádelo al IDE de Arduino.
+**Paso 3.** Selecciona tu modelo de placa de desarrollo y agrégalo al IDE de Arduino.
 
-- Si quieres usar **Seeeduino V4.2** para las rutinas posteriores, por favor consulta [este tutorial](https://wiki.seeedstudio.com/es/Seeed_Arduino_Boards/) para terminar de añadirlo.
+- Si quieres usar **Seeeduino V4.2** para las rutinas posteriores, por favor consulta [este tutorial](https://wiki.seeedstudio.com/es/Seeed_Arduino_Boards/) para terminar de agregarlo.
 
-- Si quieres usar **Seeeduino XIAO** para las rutinas posteriores, por favor consulta [este tutorial](https://wiki.seeedstudio.com/es/Seeeduino-XIAO/#software) para terminar de añadirlo.
+- Si quieres usar **Seeeduino XIAO** para las rutinas posteriores, por favor consulta [este tutorial](https://wiki.seeedstudio.com/es/Seeeduino-XIAO/#software) para terminar de agregarlo.
 
-- Si quieres usar **XIAO RP2040** para las rutinas posteriores, por favor consulta [este tutorial](https://wiki.seeedstudio.com/es/XIAO-RP2040-with-Arduino/#software-setup) para terminar de añadirlo.
+- Si quieres usar **XIAO RP2040** para las rutinas posteriores, por favor consulta [este tutorial](https://wiki.seeedstudio.com/es/XIAO-RP2040-with-Arduino/#software-setup) para terminar de agregarlo.
 
-- Si quieres usar **XIAO BLE** para las rutinas posteriores, por favor consulta [este tutorial](https://wiki.seeedstudio.com/es/XIAO_BLE/#software-setup) para terminar de añadirlo.
+- Si quieres usar **XIAO BLE** para las rutinas posteriores, por favor consulta [este tutorial](https://wiki.seeedstudio.com/es/XIAO_BLE/#software-setup) para terminar de agregarlo.
 
-**Paso 4.** Instala la biblioteca de código de Arduino.
+**Paso 4.** Instala la librería de código de Arduino.
 
-Comienza obteniendo la base de código desde [GitHub](https://github.com/limengdu/Seeed_24GHz_mmWave_Radar_Sensor) y descargándola a tu computadora local.
+Comienza obteniendo la base de código de [GitHub](https://github.com/limengdu/Seeed_24GHz_mmWave_Radar_Sensor) y descargándola a tu computadora local.
 
-Dado que has descargado la biblioteca zip, abre tu IDE de Arduino, haz clic en **Sketch > Include Library > Add .ZIP Library**. Elige el archivo zip que acabas de descargar, y si la biblioteca se instala correctamente, verás **Library added to your libraries** en la ventana de notificación. Lo que significa que la biblioteca se instaló exitosamente.
+Dado que has descargado la Librería zip, abre tu IDE de Arduino, haz clic en **Sketch > Include Library > Add .ZIP Library**. Elige el archivo zip que acabas de descargar, y si la librería se instala correctamente, verás **Library added to your libraries** en la ventana de notificación. Lo que significa que la librería se instaló exitosamente.
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png"/></div>
 
@@ -153,7 +152,7 @@ Antes de completar los siguientes ejemplos, necesitarás preparar los siguientes
 |<div align="center"><img width ="{210}" src="https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg"/></div>| <div align="center"><img width ="{210}" src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg"/></div>| <div align="center"><img width ="{150}" src="https://files.seeedstudio.com/wiki/60GHzradar/dupont.jpg"/></div>|
 |[**Sensor de Radar mmWave de 24GHz**](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Human-Static-Presence-Module-p-5267.html)|[**Seeed XIAO BLE nRF52840 Sense**](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)|**Cable de Cinta de 2mm a 2.54mm de Paso**|
 
-**Paso 1.** Conecta el dispositivo a la computadora a través de la placa principal. El diagrama de cableado se muestra en la tabla a continuación.
+**Paso 1.** Conecta el dispositivo a la computadora a través de la placa principal. El diagrama de cableado se muestra en la tabla de abajo.
 
 <table align="center">
   <tbody><tr>
@@ -186,7 +185,7 @@ Antes de completar los siguientes ejemplos, necesitarás preparar los siguientes
     </tr>
   </tbody></table>
 
-**Paso 2.** En la barra de menú en la esquina superior izquierda del IDE de Arduino, selecciona **herramientas**, elige el tipo de placa de desarrollo que estás usando y selecciona el puerto serie correspondiente.
+**Paso 2.** En la barra de menú en la esquina superior izquierda del IDE de Arduino, selecciona **tool**, elige el tipo de placa de desarrollo que estás usando y selecciona el puerto serie correspondiente.
 
 :::tip
 Si estás usando **MacOS**, el nombre del puerto serie del dispositivo a menudo comenzará con **/dev/cu.usbmodem xxx**, terminando con el nombre del dispositivo. Si estás usando **Windows**, el nombre del puerto serie del dispositivo a menudo comenzará con **COM**, nuevamente terminando con el nombre del dispositivo.
@@ -198,7 +197,7 @@ En este ejemplo, demostraremos cómo funciona el radar con nuestro producto popu
 
 ### Demo1 Obtención de movimiento humano usando análisis de parámetros característicos
 
-Entre la gran cantidad de datos devueltos por el radar, la información sobre datos físicos constituye la mayoría de la información. A veces, la dependencia excesiva de los propios algoritmos del radar puede producir resultados menos que satisfactorios en algunos escenarios. Entonces, podemos elegir usar la información devuelta por el radar para hacer ajustes adecuados según los escenarios de aplicación reales.
+Entre la gran cantidad de datos devueltos por el radar, la información sobre datos físicos constituye la mayoría de la información. A veces, la dependencia excesiva de los algoritmos propios del radar puede producir resultados menos que satisfactorios en algunos escenarios. Entonces, podemos elegir usar la información devuelta por el radar para hacer ajustes adecuados según los escenarios de aplicación reales.
 
 El código en este ejemplo es el siguiente.
 
@@ -227,7 +226,7 @@ void loop()
     dataMsg[0] = 0x55;                         //Add the header frame as the first element of the array
     for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  //Frame-by-frame transfer
     radar.newData = false;                     //A complete set of data frames is saved
-    
+
     //radar.ShowData(dataMsg);                 //Serial port prints a set of received data frames
     radar.Bodysign_judgment(dataMsg, 1, 15); //Output of human movement using sign parameters
   }
@@ -238,18 +237,18 @@ void loop()
 radar.Bodysign_judgment(dataMsg, 1, 15);
 ```
 
-Una vez que se obtiene el array dataMsg, podemos pasar los datos de este array como el primer argumento a la función `Bodysign_judgment()`, que analiza los parámetros de signos vitales.
+Una vez que se obtiene el array dataMsg, podemos pasar los datos de este array como el primer argumento a la función `Bodysign_judgment()`, que analiza los parámetros de signos.
 
 El segundo y tercer parámetros de la función `Bodysign_judgment()` son los valores críticos para juzgar el desocupado y el cuerpo humano en reposo, los valores críticos para el cuerpo humano en reposo y en movimiento, respectivamente.
 
-(1, 15) significa que cuando el valor calculado del signo vital es menor que 1, se muestra que no hay nadie en el entorno. Cuando el valor somático es mayor o igual a 1 y menor que 15, la salida es que el entorno actual está ocupado por alguien en estado estacionario. Cuando el valor del signo vital es mayor o igual a 35, muestra que hay alguien moviéndose en el entorno.
+(1, 15) significa que cuando el valor calculado del signo corporal es menor que 1, se muestra que no hay nadie en el ambiente. Cuando el valor somático es mayor o igual a 1 y menor que 15, la salida es que el ambiente actual está ocupado por alguien en estado estacionario. Cuando el valor del signo corporal es mayor o igual a 35, muestra que hay alguien moviéndose en el ambiente.
 
-Sube el programa. Abrir tu monitor serie a una velocidad de baudios de 9600 debería mostrar el resultado. La salida debería verse algo como la imagen de abajo.
+Sube el programa. Abriendo tu monitor serie a una velocidad de baudios de 9600 debería mostrar el resultado. La salida debería verse algo como la imagen de abajo.
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/2.png"/></div>
 
 :::tip
-Los valores que siguen al marco de datos de salida representan los valores de signos vitales calculados.
+Los valores que siguen al marco de datos de salida representan los valores de signos calculados.
 :::
 
 ### Demo 2 Enviando datos al radar
@@ -264,7 +263,7 @@ En este ejemplo, asumiendo que quieres consultar el ID del dispositivo radar, de
 
 <div align="center"><img width ="{500}" src="https://files.seeedstudio.com/wiki/60GHzradar/11.png"/></div>
 
-**Paso 2.** Abre el código de ejemplo en Arduino IDE.
+**Paso 2.** Abre el código de ejemplo en el IDE de Arduino.
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/9.png"/></div>
 
@@ -290,7 +289,7 @@ void loop()
 {
   //Please fill in the data frame you want to set according to the datasheet(Excluding 2 Byte checksum frames)
   unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
-  
+
   unsigned int length = sizeof(data)/sizeof(unsigned char);
   unsigned char datas[length + 2];
   for (int n = 0; n < length; n++)datas[n] = data[n];
@@ -319,16 +318,16 @@ Lo que necesitamos modificar es el array `data[]` en el bucle.
 unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
 ```
 
-Los lugares que necesitamos modificar son el segundo elemento, del cuarto al último elemento. La trama de cabecera 0x55 es fija y no necesita ser modificada. La segunda trama es la trama de longitud, por favor modifícala según la longitud de los datos que envíes. La tercera trama es fija a 0x00. La cuarta trama es el código de función, la quinta trama es el código de dirección 1, y así sucesivamente.
+Los lugares que necesitamos modificar son el segundo elemento, del cuarto al último elemento. El marco de cabecera 0x55 es fijo y no necesita ser modificado. El segundo marco es el marco de longitud, por favor modifícalo según la longitud de los datos que envías. El tercer marco es fijo a 0x00. El cuarto marco es el código de función, el quinto marco es el código de dirección 1, y así sucesivamente.
 
 :::tip
-Acerca del método de cálculo de la trama de longitud:<br />
-Longitud = Longitud de Datos + Código de Función + Código de Dirección 1 + Código de Dirección 2 + Datos + Suma de Verificación. (Las tramas de cabecera no se cuentan)
+Sobre el método de cálculo del marco de longitud:<br />
+Longitud = Longitud de Datos + Código de Función + Código de Dirección 1 + Código de Dirección 2 + Datos + Suma de Verificación. (Los marcos de cabecera no se cuentan)
 
-Consulta el Capítulo 8 del [manual de usuario](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf) para más información sobre formatos y reglas de tramas.
+Consulta el Capítulo 8 del [manual del usuario](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf) para más información sobre formatos de marcos y reglas.
 :::
 
-Sube el programa. Abrir tu monitor serie a una velocidad de baudios de 9600 debería mostrar el resultado. La salida debería verse algo como la imagen de abajo.
+Sube el programa. Abriendo tu monitor serie a una velocidad de baudios de 9600 debería mostrar el resultado. La salida debería verse algo como la imagen de abajo.
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/10.png"/></div>
 
@@ -336,7 +335,7 @@ Los datos completos que necesitan ser enviados al radar se mostrarán en el moni
 
 **Otras formas**
 
-Si no quieres usar ningún maestro para generar tramas de datos completas, también puedes pegar este código de abajo en un editor que pueda ejecutar programas C. Sigue el procedimiento anterior y llena los datos del array con el contenido de tus tramas.
+Si no quieres usar ningún maestro para generar marcos de datos completos, también puedes pegar este código de abajo en un editor que pueda ejecutar programas C. Sigue el procedimiento anterior y llena los datos del array con el contenido de tus marcos.
 
 ```c
 #include <stdio.h>
@@ -425,11 +424,11 @@ int main() {
 }
 ```
 
-Después de la ejecución del editor, también es posible generar los marcos de datos completos que necesitan ser enviados al radar.
+Después de la ejecución del editor, también es posible generar las tramas de datos completas que necesitan ser enviadas al radar.
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/8.png"/></div>
 
-**Paso 4.** Enviar marcos de datos al radar.
+**Paso 4.** Enviar tramas de datos al radar.
 
 Conecta el radar directamente al puerto USB de la computadora a través de un [**dispositivo UART a USB**](https://www.seeedstudio.com/USB-To-Uart-5V-p-1833.html?queryID=588a892811a774ad3005ea0d31427532&objectID=1111&indexName=bazaar_retailer_products). El cableado se muestra en la tabla a continuación.
 
@@ -464,12 +463,12 @@ Conecta el radar directamente al puerto USB de la computadora a través de un [*
     </tr>
   </tbody></table>
 
-Utiliza un software como asistente de depuración serial para seleccionar el puerto serie donde se encuentra el radar.
+Usa un software como asistente de depuración serial para seleccionar el puerto serie donde se encuentra el radar.
 
 <div align="center"><img width ="{300}" src="https://files.seeedstudio.com/wiki/60GHzradar/17.png"/></div>
 
 :::caution
-El radar de 24GHz necesita una fuente de alimentación de 5V, de lo contrario el radar puede no funcionar correctamente.
+El radar de 24GHz necesita alimentación de 5V, de lo contrario el radar puede no funcionar correctamente.
 :::
 
 Después de una conexión exitosa, verás el radar enviando un flujo constante de mensajes.
@@ -486,11 +485,11 @@ Puedes buscar un conjunto de datos devueltos con el tercer elemento siendo 0x03.
 Si eliges **ASCII** como formato para enviar datos, cada conjunto de datos necesita tener el prefijo **0x**. Si eliges **HEX**, entonces cada conjunto de datos no necesita tener el prefijo **0x**.
 :::
 
-## Solución de problemas
+## Solución de Problemas
 
 **FAQ1: ¿Cómo aplicar el código a Seeeduino (o Arduino)?**
 
-> Debido al diferente diseño de hardware, el puerto serie de la serie XIAO o Wio Terminal se llama Serial1, mientras que Seeeduino o Arduino necesitan usar puerto serie suave. Si quieres usar el radar para Seeeduino, puedes cambiar el puerto serie suave o usar los pines 2 (RX) y 3 (TX).
+> Debido al diseño de hardware diferente, el puerto serie de la serie XIAO o Wio Terminal se llama Serial1, mientras que Seeeduino o Arduino necesitan usar puerto serie suave. Si quieres usar el radar para Seeeduino, puedes cambiar el puerto serie suave o usar los pines 2 (RX) y 3 (TX).
 > <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/19.png"/></div>
 
 **FAQ2: ¿Qué debo hacer si XIAO BLE y el Radar recopilan datos durante mucho tiempo y no pueden cargar el código?**
@@ -505,15 +504,14 @@ Si eliges **ASCII** como formato para enviar datos, cada conjunto de datos neces
 
 ## Soporte Técnico y Discusión de Productos
 
-
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
