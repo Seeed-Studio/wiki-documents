@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 02/02/2026
+  date: 02/09/2026
   author: Frank
 ---
 
@@ -17,7 +17,7 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is February 2nd, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is February 9th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
@@ -216,5 +216,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.1.12th](/Seeed_Elderly/weekly_wiki/2026/wiki260112)
 - [weekly wiki on 2026.1.19th](/Seeed_Elderly/weekly_wiki/2026/wiki260119)
 - [weekly wiki on 2026.1.26th](/Seeed_Elderly/weekly_wiki/2026/wiki260126)
+- [weekly wiki on 2026.2.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki260202)
 
 </details>
