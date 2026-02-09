@@ -1,18 +1,22 @@
 ---
-description: Introducción a SenseCAP Card Tracker T1000-E para LoRaWAN a través de SES
-title: Introducción a SES 
+description: Comenzar con SenseCAP Card Tracker T1000-E para LoRaWAN a través de SES
+title: Comenzar con SES 
 keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_opensource.webp
 slug: /es/open_source_lorawan
 sidebar_position: 3
 last_update:
-  date: 1/2/2025
-  author: Jessie
+  date: 2/4/2026
+  author: Janet
 ---
 
 
 ## Preparación
+
+:::caution note
+Antes de flashear el firmware, asegúrese de que su dispositivo sea la versión `T1000-E for LoRaWAN` y por favor no flashee otro firmware Meshtastic a este modelo de tracker, puede causar que el dispositivo quede completamente inoperativo.
+:::
 
 ### Preparación de Hardware
 
@@ -54,7 +58,7 @@ Seeed proporciona un proyecto de ejemplo para que los desarrolladores puedan com
 
 **Agregar archivo de Ejemplo de Seeed al nRF5 SDK**
 
-Copia el `archivo de Ejemplo de Seeed T1000-E` a la siguiente ruta del nRF5 SDK:
+Copia el `archivo de Ejemplo Seeed T1000-E` a la siguiente ruta del nRF5 SDK:
 `.../nRF5_SDK_17.1.0_ddde560/examples/ble_peripheral/`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/file-path.png" alt="pir" width={600} height="auto" /></p>
@@ -65,7 +69,13 @@ Antes de comenzar, por favor verifica primero la información del bootloader.
 
 - **Paso 1:** Entrar al modo DFU
 
- Conecta el cable USB a tu PC, mantén presionado el botón del dispositivo, luego conecta el cable de carga, debería aparecer un controlador llamado `T1000-E`.
+ Conecta el cable USB a tu PC, mantén presionado el botón del dispositivo, luego conecta rápidamente el cable de carga, debería aparecer un controlador llamado `T1000-E`.
+
+:::danger note
+Si no aparece una ventana de controlador después de mantener presionado el botón del dispositivo al conectar el cable, por favor toca rápidamente dos veces el cable de carga como se muestra en la operación a continuación.
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={400} height="auto" /></p>
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
@@ -166,5 +176,5 @@ JoinEUI/DevEUI/APPEUI: Los cuales definiste en el archivo 'lorawan_key_config.h'
 
 ### Restaurar el Firmware de Fábrica
 
-- Usa el firmware de fábrica de vuelta, flashea el firmware `t1000_e_dev_kit_11_lorawan_tracker.uf2`.
-- Usa la nube SenseCAP, necesitas importar las claves SenseCAP escaneando el código QR en la etiqueta del dispositivo.
+- Usar el firmware de fábrica de vuelta, flashea el firmware `t1000_e_dev_kit_11_lorawan_tracker.uf2`.
+- Usar la nube SenseCAP, necesita importar las claves SenseCAP escaneando el código QR en la etiqueta del dispositivo.

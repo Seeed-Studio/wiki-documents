@@ -125,7 +125,7 @@ Seeed Studio XIAO ファミリーの最初のワイヤレス製品として、**
 
 さらに、このボードの上位版である **Seeed Studio XIAO nRF52840 Sense** があります。これには 2 つの追加オンボードセンサーが統合されています。そのうちの 1 つは **パルス密度変調（PDM）デジタルマイクロフォン**です。リアルタイムでオーディオデータを受信でき、音声認識に使用できます。もう 1 つは **6 軸慣性測定ユニット（IMU）**で、この IMU はジェスチャー認識などの TinyML プロジェクトで非常に有用です。これらのオンボードセンサーは、ボードが超小型でありながらユーザーに大きな利便性を提供します。
 
-新しくアップグレードされた **XIAO nRF52840 Plus と XIAO nRF52840 Sense Plus** は、機能性と使いやすさの大幅な向上を提供します。多機能ピンの数が **20** に増加し、**I2S** と **SPI** リソースが追加されてより複雑なプロジェクトをサポートし、**NFC ピン**が露出して IoT とスマートカードアプリケーションへの統合が容易になり、**BAT ピン**がはんだ付けの利便性向上のために再配置され、よりユーザーフレンドリーなハードウェア体験を実現しています。
+新しくアップグレードされた **XIAO nRF52840 Plus と XIAO nRF52840 Sense Plus** は、機能性と使いやすさの大幅な向上を提供します。多機能ピンの数が **20** に増加し、**I2S** と **SPI** リソースが追加されてより複雑なプロジェクトをサポートし、**NFC ピン**が露出して IoT とスマートカードアプリケーションへの統合が容易になり、**BAT ピン**がはんだ付けの利便性を向上させるために再配置され、よりユーザーフレンドリーなハードウェア体験を実現しています。
 
 Seeed Studio XIAO RP2040 と比較して、Seeed Studio XIAO nRF52840 は**より豊富なインターフェース**を含んでいます。まず注目すべきは、ボード上で**近距離無線通信（NFC）インターフェース**が機能することです。次に、Type-C インターフェースの側面に小さな**リセットボタン**があります。反対側には、バッテリーが接続されたときの充電状態を示す**充電 LED** とともに **3-in-one LED（ユーザー LED）**があります。**PWM ピン**として使用できる **11 のデジタル I/O** と **ADC ピン**として使用できる **6 のアナログ I/O** があります。**UART、I2C、SPI** などの 3 つの一般的なシリアルインターフェースすべてをサポートしています。Seeed Studio XIAO RP2040 と同様に、**オンボード 2 MB フラッシュ**を持っているため、**Arduino、MicroPython、CircuitPython、またはその他のプログラミング言語**を使用してプログラムすることもできます。
 
@@ -148,7 +148,7 @@ Seeed Studio XIAO nRF52840 Sense は Seeed Studio XIAO 拡張ボードと互換�
 - オンボード 6 軸 LSM6DS3TR-C IMU（Seeed Studio XIAO nRF52840 Sense のみ）
 - 超小型サイズ：21 x 17.8mm、ウェアラブルデバイス向け Seeed Studio XIAO シリーズクラシックフォームファクター
 - 豊富なインターフェース：XIAO nRF52840（Sense）では 1xUART、1xI2C、1xSPI、1xNFC、1xSWD、11xGPIO（PWM）、6xADC；XIAO nRF52840（Sense）Plus では 2xUART、1xI2C、2xSPI、1xI2S、1xNFC、1xSWD、18xGPIO（PWM）、6xADC
-- 片面コンポーネント、表面実装設計
+- 片面部品、表面実装設計
 
 ## 仕様比較
 
@@ -167,7 +167,8 @@ Seeed Studio XIAO nRF52840 Sense は Seeed Studio XIAO 拡張ボードと互換�
   </tr>
   <tr>
       <th>ワイヤレス接続</th>
-      <td colspan="4" align="center">Bluetooth LE 5.2/NFC</td>
+      <td colspan="4" align="center">Bluetooth Low Energy 5.4/
+Bluetooth Mesh/NFC</td>
   </tr>
   <tr>
       <th>メモリ</th>
@@ -186,7 +187,7 @@ Seeed Studio XIAO nRF52840 Sense は Seeed Studio XIAO 拡張ボードと互換�
       <td colspan="2" align="center">1xI2C、2xUART、2xSPI、1xI2S</td>
   </tr>
   <tr>
-      <th>PWM/アナログピン</th>
+      <th>PWM/アナログピン </th>
       <td colspan="2" align="center">11/6</td>
       <td colspan="2" align="center">20/6</td>
   </tr>
@@ -216,13 +217,13 @@ Seeed Studio XIAO nRF52840 Sense は Seeed Studio XIAO 拡張ボードと互換�
 
 <table align="center">
   <tr>
-    <th>XIAO nRF52840/XIAO nRF52840 Sense 前面図</th>
+    <th>XIAO nRF52840/XIAO nRF52840 Sense 前面表示図</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/front-pinout-4.jpg" style={{width:700, height:'auto'}}/></div></td>
   </tr>
   <tr>
-    <th>XIAO nRF52840/XIAO nRF52840 Sense 背面図</th>
+    <th>XIAO nRF52840/XIAO nRF52840 Sense 背面表示図</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/back-pinout-5.jpg" style={{width:700, height:'auto'}}/></div></td>
@@ -272,13 +273,13 @@ Seeed Studio XIAO nRF52840 Sense は Seeed Studio XIAO 拡張ボードと互換�
 
  <table align="center">
   <tr>
-    <th>XIAO nRF52840 Plus 前面表示図</th>
+    <th>XIAO nRF52840 Plus フロント表示図</th>
   </tr>
   <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/plus_front.png" style={{width:700, height:'auto'}}/></div></td>
   </tr>
   <tr>
-    <th>XIAO nRF52840 Plus 背面表示図</th>
+    <th>XIAO nRF52840 Plus バック表示図</th>
   </tr>
     <tr>
     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/plus_back.png" style={{width:700, height:'auto'}}/></div></td>
@@ -342,9 +343,9 @@ Seeed Studio XIAO nRF52840 Sense は Seeed Studio XIAO 拡張ボードと互換�
 
 Seeed Studio XIAO nRF52840 は多くの機能を1つの小さなボードに組み込んでおり、時にはそれらの最高のパフォーマンスを発揮できない場合があります。そのため、Seeed は**各機能の力を最大化**するために2つの Arduino ライブラリを公開しています。したがって：
 
-- **Bluetooth 機能**と「**低エネルギーコスト機能**」を適用したい場合は、`Seeed nRF52 Boards` ライブラリの使用を推奨します。
-- **組み込み機械学習アプリケーション**で使用したい場合や「**IMU & PDM 高度機能**」を適用したい場合は、`Seeed nRF52 mbed-enabled Boards` ライブラリの使用を推奨します。
-- 両方のライブラリは、**LED、デジタル、アナログ、シリアル、I2C、SPI** などの基本的な使用において非常によくサポートしています。
+- **Bluetooth 機能**と「**低エネルギーコスト機能**」を適用したい場合は、`Seeed nRF52 Boards` ライブラリの使用をお勧めします。
+- **組み込み機械学習アプリケーション**で使用したり、「**IMU & PDM 高度機能**」を適用したい場合は、`Seeed nRF52 mbed-enabled Boards` ライブラリの使用をお勧めします。
+- 両方のライブラリは、**LED、デジタル、アナログ、シリアル、I2C、SPI** などの基本的な使用に関しては非常によくサポートしています。
 
 これら2つのライブラリでサポートされるピン定義は少し異なる場合があり、Seeed は明確になるまで wiki を更新し続けます。
 
@@ -369,7 +370,7 @@ Seeed Studio XIAO nRF52840 は多くの機能を1つの小さなボードに組�
 - 1 x USB Type-C ケーブル
 
 :::tip
-一部の USB ケーブルは電源供給のみ可能で、データ転送ができません。USB ケーブルをお持ちでない場合や、お使いの USB ケーブルがデータ転送可能かどうかわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) をご確認ください。
+一部の USB ケーブルは電源供給のみ可能で、データ転送はできません。USB ケーブルをお持ちでない場合、またはお使いの USB ケーブルがデータ転送可能かどうかわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) をご確認ください。
 :::
 USB Type-C ケーブルを使用して、Seeed Studio XIAO nRF52840 (Sense) をコンピュータに接続します。
 
@@ -398,7 +399,7 @@ USB Type-C ケーブルを使用して、Seeed Studio XIAO nRF52840 (Sense) を�
 
 **ボード**
 
-ボードパッケージをインストールした後、**Tools > Board** に移動し、使用したいボードを選択し、続いて「**Seeed XIAO nRF52840 Sense**」を選択します。これで Arduino IDE 用の Seeed Studio XIAO nRF52840 (Sense) のセットアップが完了しました。
+ボードパッケージをインストールした後、**Tools > Board** に移動し、使用したいボードを選択し、続けて「**Seeed XIAO nRF52840 Sense**」を選択します。これで Arduino IDE 用の Seeed Studio XIAO nRF52840 (Sense) のセットアップが完了しました。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528402.png" alt="pir" width={700} height="auto" /></p>
 
@@ -623,7 +624,7 @@ digitalWrite(P0_13, LOW);
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD2.png" alt="pir" width={500} height="auto" /></p>
 
-- **ステップ 3.** "Target"をクリックし、"Connect"を選択します。
+- **ステップ 3.** "Target" をクリックし、"Connect" を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/SWD3.png" alt="pir" width={500} height="auto" /></p>
 
@@ -633,17 +634,17 @@ digitalWrite(P0_13, LOW);
 
 ### Q1: ボードにコードをアップロードする際にArduino IDEがフリーズします
 
-まず"Reset Button"を一度クリックしてボードを**リセット**してみてください。それでもうまくいかない場合は、素早く2回クリックして**ブートローダーモード**に入ってください。それでもうまくいかない場合は、ボードをPCから切断し、再度ボードを接続してください。
+まず「Reset Button」を一度クリックしてボードを**リセット**してみてください。それでもうまくいかない場合は、素早く2回クリックして**ブートローダーモード**に入ってください。それでもうまくいかない場合は、ボードをPCから切断し、再度ボードを接続してください。
 
 ### Q2: Arduino IDEでボードがシリアルデバイスとして表示されません
 
-まず"Reset Button"を一度クリックしてボードを**リセット**してみてください。それでもうまくいかない場合は、素早く2回クリックして**ブートローダーモード**に入ってください。
+まず「Reset Button」を一度クリックしてボードを**リセット**してみてください。それでもうまくいかない場合は、素早く2回クリックして**ブートローダーモード**に入ってください。
 
 ### Q3: XIAO nRF52840 (Sense) をバッテリー充電に使用する際の注意点は何ですか？
 
 P0.14 (D14) が 3.3V の高レベルで ADC 機能をオフにすると、P0.31 は 3.6V の入力電圧制限に達します。P0.31 ピンが焼損するリスクがあります。
 
-現在この問題に対して、バッテリー充電中は P0.14 (D14) の ADC 機能をオフにしない、または P0.14 (D14) を高レベルに設定しないことをユーザーに推奨しています。
+現在この問題に対して、バッテリー充電中は P0.14 (D14) の ADC 機能をオフにしないか、P0.14 (D14) を高レベルに設定しないことをユーザーに推奨しています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/14.png" alt="pir" width={800} height="auto" /></p>
 
@@ -658,77 +659,77 @@ P0.14 (D14) が 3.3V の高レベルで ADC 機能をオフにすると、P0.31 
 
 低レベルの場合、`RED_CHG` LED が点灯します。
 
-詳細については、PMIC データシート：[BQ25100](https://www.ti.com/lit/ds/symlink/bq25100a.pdf) および [XIAO nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf) をご確認ください。
+詳細については、PMIC データシートをご確認ください：[BQ25100](https://www.ti.com/lit/ds/symlink/bq25100a.pdf) および [XIAO nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf)。
 
 ## リソース
 
 ### Seeed Studio XIAO nRF52840
 
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+**ハードウェア設計**
+- **📄[データシート]** [Nordic nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
+- **📄[データシート]** [Flash P25Q16H-UXH-IR データシート](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
+- **📄[回路図]** [XIAO nRF52840 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
+- **🗃️[PCB 設計ファイル]** 
+  - [XIAO nRF52840 KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
+- **🗃️[PCB 設計ライブラリ]** 
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[ピン配置図]** [XIAO nRF52840 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx )
 
-- **[PDF]** [nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf)
-
-- **[PDF]** [Seeed Studio XIAO nRF52840 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
-
-- **[ZIP]** [Seeed Studio XIAO nRF52840 KiCAD ファイル](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)
-
-- **[ZIP]** [Seeed Studio XIAO nRF52840 Eagle ファイル](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_KiCAD.zip)
-
-- **[DXF]** [Seeed Studio XIAO nRF52840 DXF 寸法図](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip)
-
-- **[LBR]** [Seeed Studio XIAO nRF52840 Eagle フットプリント](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-footprint-eagle.lbr)
-
-- **[XLSX]** [Seeed Studio XIAO nRF52840 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
-
-- 🔗 **[Kicad]** [Seeed Studio XIAO nRF52840 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**機械設計**
+- **📄[2D 寸法]** [XIAO nRF52840 DXF 寸法](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip )
+- **📄[2D 寸法]** [XIAO nRF52840 底面パッドデータ](https://files.seeedstudio.com/wiki/XIAO-BLE/Bottom-pad-positioning.zip )
 
 ### Seeed Studio XIAO nRF52840 Sense
 
-- **[PDF]** [nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf)
+**ハードウェア設計**
+- **📄[データシート]** [Nordic nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
+- **📄[データシート]** [Flash-P25Q16H-UXH-IR データシート](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
+- **📄[データシート]** [充電 IC-BQ25101 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/BQ25101.pdf )
+- **📄[データシート]** [IMU-LSM6DS3TR データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/ST_LSM6DS3TR_Datasheet.pdf )
+- **📄[データシート]** [マイク-MSM261D3526H1CPM データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/mic-MSM261D3526H1CPM-ENG.pdf )
+- **📄[回路図]** [XIAO nRF52840 Sense 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_PDF.pdf )
+- **🗃️[PCB 設計ファイル]** 
+  - [XIAO nRF52840 Sense KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840V1.1-KiCad-Project-260105.zip )
+- **🗃️[PCB 設計ライブラリ]** 
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[ピン配置図]** [XIAO nRF52840 Sense ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Senese-pinout_sheet.xlsx )
 
-- **[PDF]** [Seeed Studio XIAO nRF52840 Sense 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
+**機械設計**
+- **📄[2D 寸法]** [XIAO nRF52840 Sense DXF 寸法](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
+- **📄[2D 寸法]** [XIAO nRF52840 底面パッドデータ](https://files.seeedstudio.com/wiki/XIAO-BLE/Bottom-pad-positioning.zip )
+- **📄[3D モデル]** [XIAO nRF52840 Sense 3D モデル](https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip )
 
-- **[ZIP]** [Seeed Studio XIAO nRF52840 KiCAD ファイル](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_KiCAD.zip)
-
-- **[ZIP]** [Seeed Studio XIAO nRF52840 Eagle ファイル](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)
-
-- **[DXF]** [Seeed Studio XIAO nRF52840 Sense DXF 寸法図](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip)
-
-- **[LBR]** [Seeed Studio XIAO nRF52840 Sense Eagle フットプリント](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-footprint-eagle.lbr)
-
-- **[XLSX]** [Seeed Studio XIAO nRF52840 Sense ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Senese-pinout_sheet.xlsx)
-
-- **[STEP]** [Seeed Studio XIAO nRF52840 Sense 3D モデル](https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip)
-
-- 🔗 **[Kicad]** [Seeed Studio XIAO nRF52840 Sense フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**その他**
+- **📄[ドキュメント]** [XIAO nRF52840 Sense BLE 通信距離テストレポート](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_XIAO_BLE_nRF52840_BLE_Communication_Distance_Test_Report.pdf )
 
 ### Seeed Studio XIAO nRF52840 (Sense) Plus
 
-- **[PDF]** [nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus_PDF.pdf)
+**ハードウェア設計**
+- **📄[データシート]** [Nordic nRF52840 データシート](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf )
+- **📄[データシート]** [Flash-P25Q16H-UXH-IR データシート](https://files.seeedstudio.com/wiki/github_weiruanexample/Flash_P25Q16H-UXH-IR_Datasheet.pdf )
+- **🗃️[回路図]** [XIAO nRF52840 (Sense) Plus 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus_SCH_PCB_v1.1.zip )
+- **🗃️[PCB 設計ファイル]** 
+  - [XIAO nRF52840 (Sense) Plus KiCad プロジェクト](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus.zip )
+  - [XIAO Plus ベース（底面パッド引き出し付き）KiCad プロジェクト](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip )
+  - [XIAO Plus ベース（底面パッド引き出しなし）KiCad プロジェクト](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip )
+- **🗃️[PCB 設計ライブラリ]** 
+  - [XIAO シリーズ KiCad フットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCH シンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 
-- **[ZIP]** [Seeed Studio XIAO nRF52840 (Sense) Plus 回路図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus_SCH_PCB_v1.1.zip)
-
-- **[ZIP]** [Seeed Studio XIAO nRF52840 (Sense) Plus KiCAD ファイル](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus.zip)
-
-- **[DXF]** [Seeed Studio XIAO nRF52840 Sense DXF 寸法図](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XlA0_nRF52840_Sense_Dimension_in_DXF.dxf)
-
-- **[ZIP]** [Seeed Studio XIAO Plus Base with botton pad lead out](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_with_botton_pad_lead_out_V1.0.zip)
-
-- **[ZIP]** [Seeed Studio XIAO Plus Base without botton pad lead out](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
-
-- **[Kicad]** [Seeed Studio XIAO nRF52840 (Sense) Plus フットプリント](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Plus-SMD.kicad_mod)
-
-- **[Kicad]** [Seeed Studio XIAO nRF52840 (Sense) Plus シンボル](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_Series.kicad_sym)
+**機械設計**
+- **🗃️[2D 寸法]** [XIAO nRF52840 Sense DXF 寸法](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip )
 
 ## コースリソース
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[電子書籍]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

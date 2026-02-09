@@ -9,7 +9,7 @@ slug: /cn/t1000e_for_lorawan_introduction
 sku: 114993591
 sidebar_position: 1
 last_update:
-  date: 1/9/2026
+  date: 2/4/2026
   author: Janet
 ---
 
@@ -27,7 +27,7 @@ last_update:
 T1000-E for LoRaWAN 配备完全开源的固件。为了提升用户体验，我们在出厂设备上预装了演示固件。用户可以探索演示固件以获得初步体验，也可以开发自己的定制固件。有关定制开发的详细信息，请参考 [LoRaWAN 开源固件](https://wiki.seeedstudio.com/cn/open_source_lorawan/)。
 
 :::caution note
-在刷写固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本。请不要将其他 Meshtastic 固件刷写到这个不支持 Meshtastic 的追踪器型号上，这可能会导致设备完全损坏。
+在刷写固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本，请不要将其他 Meshtastic 固件刷写到此追踪器型号，这可能导致设备完全损坏。
 :::
 
 **T1000 系列版本对比**
@@ -50,10 +50,10 @@ T1000-E for LoRaWAN 配备完全开源的固件。为了提升用户体验，我
 | 回传方式               | LoRaWAN® (v1.0.4 Class A)                                            |
 | 蓝牙              | Bluetooth v5.1，通过 SenseCraft App 设置                           |
 | LoRaWAN 信道计划   | IN865 / EU868 / US915 / AU915 / AS923 / KR920 / RU864                |
-| 温度            | 范围：-20 到 60°C；精度：±1°C；分辨率：0.1°C              |
+| 温度            | 范围：-20 到 60°C；Δ 精度：±1°C；分辨率：0.1°C              |
 | 光照                  | 0 到 100%（0 为黑暗，100% 为最亮）                            |
-| 3 轴加速度计   | 3 轴加速度计用于检测运动                              |
-| LED 和蜂鸣器         | LED 和蜂鸣器用于指示状态                                    |
+| 3 轴加速度计   | 3 轴加速度计检测运动                              |
+| LED 和蜂鸣器         | LED 和蜂鸣器指示状态                                    |
 | 按钮                 | 1 个按钮用于操作和触发事件（SOS）                          |
 | 天线                | 内置（GNSS/LoRa/Wi-Fi/BLE）                                       |
 | 通信距离 | 2 到 5km（取决于网关天线、安装和环境） |

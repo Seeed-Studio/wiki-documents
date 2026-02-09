@@ -50,20 +50,21 @@ There are two documents on the usage of **Seeed Studio XIAO SAMD21** which focus
 
 ## **Specification**
 
-|Item|Value|
-|---|---|
-|CPU|ARM Cortex-M0+ CPU(SAMD21G18) running at up to 48MHz|
-|Flash Memory|256KB|
-|SRAM|32KB|
-|Digital I/O Pins|11|
-|Analog I/O Pins|11|
-|I2C interface|1|
-|SPI interface|1|
-|QTouch|7 (A0,A1,A6,A7,A8,A9,A10)|
-|UART interface|1|
-|Power supply and downloading interface| Type-C|
-|Power|3.3V/5V DC|
-|Dimensions|21×17.8×3.5mm|
+| Product Name | Seeed Studio XIAO SAMD21 |
+|-------------|-------------------------|
+| **Chipset** | [Microchip SAMD21G18](https://www.microchip.com/en-us/product/atsamd21g18 ) |
+| **Processor** | ARM Cortex-M0+ processor running at up to 48 MHz |
+| **RAM** | 32KB SRAM |
+| **Flash** | 256KB Flash |
+| **Interface** | GPIO Pin x14<br/>Digital Pin x11<br/>Analog Pin x11<br/>DAC x1<br/>I2C x1<br/>UART x1<br/>SPI x1 |
+| **Onboard** | User LED x1<br/>Power LED x1<br/>Status LEDs for Serial Communication (TX/RX Indicators) x2 |
+| **Wireless Connectivity** | / |
+| **Power** | Input voltage (Type-C): 5V<br/>Input voltage (BAT): 5V |
+| **Max Output** | 5V@500mA<br/>3.3V@200mA |
+| **Software Compatibility** | Arduino, PlatformIO, MicroPython, CircuitPython, Zephyr<br/>[Exhibition for XIAO Series - Seeed Studio Wiki](https://wiki.seeedstudio.com/xiao_topic_page/ ) |
+| **Working Temperature** | -40 to 85°C |
+| **Dimensions** | 21×17.8mm |
+| **Variants** | [Seeed Studio XIAO SAMD21 (Pre-Soldered) - Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-Pre-Soldered-p-4747.html  )<br/>[Seeed Studio XIAO SAMD21 - Arduino Microcontroller - SAMD21 Cortex M0+ (3 PCs） - Seeed Studio](https://www.seeedstudio.com/Seeeduino-XIAO-3Pcs-p-4546.html  ) |
 
 ## **Hardware Overview**
 
@@ -439,29 +440,25 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 
 - [How to unbrick a dead xiao using raspberry pi](https://forum.seeedstudio.com/t/how-to-unbrick-a-dead-xiao-using-raspberry-pi-guide-openocd/253990). Thanks John_Doe for sharing.
 
-## Resourses
+## **Resources**
 
-- **[PDF]** [ATSAMD218A-MU datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
+**Hardware Design**
+- **📄[Datasheet]** [Atmel SAMD21G18 Datasheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/ATSAMD21G18A-MU-Datasheet.pdf)
+- **📄[Schematic]** [XIAO SAMD21 Schematic](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
+- **🗃️[PCB Design Files]** 
+  - [XIAO SAMD21 KiCad Project](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-KICAD.zip)  
+  - [XIAO SAMD21 Eagle Project](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Pinout Sheet]** [XIAO SAMD21 Pinout Sheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-pinout_sheet.xlsx )
 
-- **[PDF]** [Seeed Studio XIAO SAMD21 Schematic](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0-SCH-191112.pdf)
+**Mechanical Design**
+- **📄[2D Dimensions]** [XIAO Dimension in DXF](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar )
+- **📄[3D Model]** [XIAO SAMD21 3D Model](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip )
 
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
-
-- **[ZIP]** [Seeed Studio XIAO SAMD21 KiCAD file](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-KICAD.zip)
-
-- **[ZIP]** [Seeed Studio XIAO SAMD21 Eagle file](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-v1.0.zip)
-
-- **[DXF]** [Seeed Studio XIAO SAMD21 Dimension in DXF](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_Dimension.rar)
-
-- **[LBR]** [Seeed Studio XIAO SAMD21 Eagle footprint](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-footprint-eagle.lbr)
-
-- **[ZIP]** [Seeed Studio XIAO SAMD21 Factory firmware](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip)
-
-- **[XLSX]** [Seeed Studio XIAO SAMD21 pinout sheet](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/XIAO-SAMD21-pinout_sheet.xlsx)
-
-- **[STEP]** [Seeed Studio XIAO SAMD21 3D Model](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip)
-
-- 🔗 **[Kicad]** [Seeed Studio XIAO SAMD21 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**Software & Tools**
+- **📄[Factory Firmware]** [XIAO SAMD21 Factory Firmware](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/102010328_Seeeduino_XIAO_final_firmware.zip )
 
 ## Course Resources
 
