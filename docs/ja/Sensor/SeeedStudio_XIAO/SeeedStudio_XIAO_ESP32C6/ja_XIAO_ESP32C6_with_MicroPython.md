@@ -12,9 +12,7 @@ last_update:
 
 MicroPython は、Python 3 プログラミング言語の軽量で効率的な実装であり、Python 標準ライブラリの小さなサブセットを含み、マイクロコントローラーや制約のある環境で動作するように最適化されています。
 
-2014年の初回リリース以来、micropython は ESP32 シリーズを含む多くのマイクロコントローラーをサポートしてきましたが、現在のところ ESP32C6 チップを公式にはサポートしていません。このファームウェアは自己コンパイルされたものであり、公式ファームウェアは既に開発中です。しばらくお待ちください。
-
-このページでは、micropython のシンプルで使いやすい構文を使用して XIAO ESP32C6 の機能を使用する方法をガイドします。
+このページでは、micropython のシンプルで簡単な構文を使用して XIAO ESP32C6 の機能を使用する方法をガイドします。
 
 ## ハードウェアの準備
 
@@ -31,7 +29,7 @@ MicroPython は、Python 3 プログラミング言語の軽量で効率的な�
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -40,7 +38,7 @@ MicroPython は、Python 3 プログラミング言語の軽量で効率的な�
 
 ## ソフトウェアの準備
 
-このガイドでは、**Windows 10** と Thonny IDE および esptool を使用します。esptool を使用するために、Windows OS に Python 3 環境をインストールしてください。開始する前に、ファームウェアをダウンロードし、Thonny をインストールしてください。
+このガイドでは、**Windows 10** と Thonny IDE および esptool を使用します。esptool を使用するには、Windows OS に Python 3 環境をインストールしてください。開始する前に、ファームウェアをダウンロードし、Thonny をインストールしてください。
 
 <div class="table-center">
   <table align="center">
@@ -63,98 +61,109 @@ MicroPython は、Python 3 プログラミング言語の軽量で効率的な�
   </table>
 </div>
 
-### 👍 大変感謝いたします
+### 👍 心より感謝
 
-<strong><font color={'8DC215'} size={"3"}>このwikiで使用されているXIAO ESP32C6 ボード用に設計されたファームウェアは、私たちの友人であるZhishuo Songによって作成されました。彼に心から感謝しています。</font></strong>
+<strong><font color={'8DC215'} size={"3"}>この wiki で使用されている XIAO ESP32C6 ボード用に設計されたファームウェアは、私たちの友人である Zhishuo Song によって作成されました。彼には本当に感謝しています。</font></strong>
 
-## はじめに
+## 入門ガイド
 
-このファームウェアはXIAO ESP32C6 MicroPython プログラミング専用に設計されています。まずファームウェアをフラッシュし、その後例を使用します。
+このファームウェアは XIAO ESP32C6 MicroPython プログラミング専用に設計されています。まずファームウェアをフラッシュし、その後例を使用します。
 
-### ステップ1. ファームウェアのフラッシュ
+### ステップ 1. ファームウェアのフラッシュ
 
-デバイスマネージャーを開いてUSBシリアルポートアドレスを確認します
+デバイスマネージャーを開いて USB シリアルポートアドレスを確認します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/device_manager.jpg" alt="pir" width={600} height="auto" /></p>
 
-ダウンロードしたzipファイルを展開し、フォルダに移動します。
+ダウンロードした zip ファイルを展開し、フォルダに移動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205037972.png" alt="pir" width={600} height="auto" /></p>
 
-パスボックスをクリックして「CMD」と入力し、Enterキーを押します
+パスボックスをクリックして「CMD」と入力し、Enter を押します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205105289.png" alt="pir" width={600} height="auto" /></p>
 
-cmdターミナルに移動します。
+cmd ターミナルに移動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022204711119.png" alt="pir" width={600} height="auto" /></p>
 
-pipコマンドを使用してesptoolをインストールします（Python 3が既にインストールされていることを確認してください）
+pip コマンドを使用して esptool をインストールします（Python 3 が既にインストールされていることを確認してください）
 
-```cpp
+```bash
 pip install esptool
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/esptool_install.jpg" alt="pir" width={600} height="auto" /></p>
 
-このコマンドを使用してXIAO ESP32C6のフラッシュメモリを消去します
+:::caution ボードをブートローダーモードにする
+フラッシュする前に、XIAO ESP32C6 をブートローダー（ダウンロード）モードにする**必要があります**。これを行うには：
+1. **BOOT** ボタンを押し続けます。
+2. BOOT を押し続けながら、**RESET** ボタンを押して離します。
+3. **BOOT** ボタンを離します。
 
-```cpp
-esptool.py --port COMXX --chip esp32c6 erase_flash
+ボードがブートローダーモードでない場合、フラッシュは **"Write timeout"** エラーで失敗し、モジュールが破損する可能性があります。
+:::
+
+このコマンドを使用して XIAO ESP32C6 のフラッシュメモリを消去します
+
+```bash
+esptool --port COMXX --chip esp32c6 erase-flash
 ```
 
-次のコマンドを使用してmicropythonファームウェアのインストールを進めてください
+次に、このコマンドを使用して micropython ファームウェアをインストールします
 
-```cpp
-esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset --chip esp32c6  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 ESP32C6_MicroPython.bin
+```bash
+esptool --port COMXX --baud 460800 --before default-reset --after hard-reset --chip esp32c6 write-flash --flash-mode dio --flash-size detect --flash-freq 80m 0x0 ESP32C6_MicroPython.bin
 ```
 
 :::tip
-PCのCOMポート番号でCOMXXを変更してください
+COMXX を PC の COM ポート番号に変更してください。タイムアウトエラーでフラッシュが失敗する場合は、ボーレートを `115200` に下げてみてください。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205457866.png" alt="pir" width={600} height="auto" /></p>
 
-### ステップ2. サンプルコードをアップロードする
+### ステップ 2. サンプルコードのアップロード
 
-次に、サンプルコードをXIAO ESP32C6の内蔵フラッシュメモリにアップロードします。
+次に、サンプルコードを XIAO ESP32C6 の内部フラッシュメモリにアップロードします。
 
-この部分では、thonny IDEを使用して、まずポートを設定します
+この部分では、Thonny IDE を使用して、まずポートを設定します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205437800.png" alt="pir" width={600} height="auto" /></p>
 
-`blinker.py`サンプルプログラムを実行します
+`blinker.py` サンプルプログラムを実行します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022220104960.png" alt="pir" width={600} height="auto" /></p>
 
-## WiFiからNTPで現在時刻を取得する
+## WiFi から NTP で現在時刻を取得
 
-### ステップ1: ThonnyでNTP get now time from wifi`wifi_Ntp.py`ファイルを開く
+### ステップ1: Thonny で `wifi_Ntp.py` ファイルを開く
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022220645986.png" alt="pir" width={600} height="auto" /></p>
 
-### ステップ2: 8行目でWiFiルーターのSSIDとパスワードを変更する
+### ステップ2: 8行目で WiFi ルーターの SSID とパスワードを変更する
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022220714175.png" alt="pir" width={600} height="auto" /></p>
 
 ### ステップ3: コードを実行する
 
-プログラムを実行すると、シェルウィンドウでXIAOが指定されたWiFiに接続され、NTPネットワーク時刻を取得していることが確認できます。
+プログラムを実行すると、シェルウィンドウで XIAO が指定された WiFi に接続され、NTP ネットワーク時刻を取得することが確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022220808948.png" alt="pir" width={600} height="auto" /></p>
 
 ## トラブルシューティング
 
-プログラムが書き込めない場合は、BOOTボタンとRSTボタンを使用してボードをブートダウンロードモードに設定してみてください
+- **"Write timeout" またはシリアル例外エラー**: フラッシュする前にボードが**ブートローダーモード**であることを確認してください。**BOOT** ボタンを押し続け、**RESET** を押して離し、その後 **BOOT** を離します。また、ボーレートを下げてみてください（例：`460800` の代わりに `--baud 115200` を使用）。
+- **コマンドが見つからない（`esptool.py`）**: `pip install esptool` でインストールした場合は、`esptool`（`.py` なし）を使用してください。一部のシステムでは、代わりに `python -m esptool` を使用する必要がある場合があります。
+- **モジュールの破損**: モジュールが破損したように見える場合は、ブートローダーモードに入り、`esptool --port COMXX --chip esp32c6 erase-flash` でフラッシュを消去してから、ファームウェアを再フラッシュしてみてください。
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトはSeeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
-- [HendraとshariltuMinの努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=c6&pane=issue&itemId=59874459&issue=Seeed-Studio%7Cwiki-documents%7C1117)に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/contributors/)されます。
+- このプロジェクトは Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
+- [Hendra と shariltumin の努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=c6&pane=issue&itemId=59874459&issue=Seeed-Studio%7Cwiki-documents%7C1117) に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/ja/contributors/)されます。
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+私たちの製品をお選びいただきありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
