@@ -31,20 +31,20 @@ import TabItem from '@theme/TabItem';
 
 ## 简介
 
-XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 48 MHz）集成到经典的 XIAO 外形尺寸中。这款开发板提供 256KB Flash、32KB SRAM、8KB EEPROM、USB 2.0 连接器、复位和启动按钮、3 个 LED、14 位 A/D 转换器、12 位 D/A 转换器和 CAN BUS 接口。凭借板载充电电路和低功耗模式（低至 45μA），它非常适合电池供电的应用。与 Arduino Uno R4 共享相同的 32 位 R7FA4M1AB3CNE 微控制器，原生兼容 Arduino IDE 和丰富的 XIAO 配件，使其成为电子项目的完美起点。
+XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 48 MHz）集成到经典的 XIAO 外形中。这款开发板提供 256KB Flash、32KB SRAM、8KB EEPROM、USB 2.0 连接器、复位和启动按钮、3 个 LED、14 位 A/D 转换器、12 位 D/A 转换器和 CAN BUS 接口。凭借板载充电电路和低功耗模式（低至 45μA），它非常适合电池供电的应用。与 Arduino Uno R4 共享相同的 32 位 R7FA4M1AB3CNE 微控制器，原生兼容 Arduino IDE 和丰富的 XIAO 配件，是电子项目的完美起点。
 
 ### 特性
 
 <!-- Key Features with bullet -->
 
-- **板载热门微控制器：** 搭载 Renesas RA4M1，32 位 ARM® Cortex®-M4 R7FA4M1AB3CNE MCU，工作频率高达 48 MHz，256 KB Flash 存储器和 32 KB SRAM。
+- **流行的板载微控制器：** 采用 Renesas RA4M1，32 位 ARM® Cortex®-M4 R7FA4M1AB3CNE MCU，工作频率高达 48 MHz，256 KB Flash 存储器和 32 KB SRAM。
 - **突出的板载资源：** 配备 14 位 ADC、12 位 DAC、CAN BUS、USB 2.0 和板载 RGB LED。
-- **扩展的 8 个新 IO：** 相比之前的 XIAO 开发板，在背面增加了 8 个新的 IO 引脚（总共 19 个 GPIO），支持更复杂的应用。
+- **扩展的 8 个新 IO：** 与之前的 XIAO 开发板相比，在背面增加了 8 个新的 IO 引脚（总共 19 个 GPIO），支持更复杂的应用。
 - **强大的安全功能：** 内置硬件加密、安全启动、密钥存储等功能，确保应用安全。
 - **软件兼容性：** 完全兼容 Arduino IDE，实现无缝项目开发和原型制作。
 - **高效的电源设计：** 提供 4 种工作模式，深度睡眠时功耗低至 45μA，支持锂电池充电管理。
-- **紧凑的拇指大小设计：** 尺寸为 21 x 17.8mm，采用 Seeed Studio 经典的 XIAO 外形尺寸，非常适合空间受限的应用。
-- **生产友好：** 表面贴装器件（SMD）设计，所有元件位于正面，两侧设有邮票孔，便于高效批量生产。
+- **紧凑的拇指大小设计：** 尺寸为 21 x 17.8mm，采用 Seeed Studio 经典的 XIAO 外形，非常适合空间受限的应用。
+- **生产友好：** 表面贴装器件（SMD）设计，所有元件位于正面，两侧有邮票孔，便于高效批量生产。
 
 ### 规格参数
 
@@ -65,7 +65,7 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 
 ### 硬件概述
 
-在开始之前，了解产品的一些基本参数是非常重要的。下表提供了 Seeed Studio XIAO RA4M1 特性的相关信息。
+在开始之前，了解产品的一些基本参数是非常重要的。下表提供了 Seeed Studio XIAO RA4M1 特性的信息。
 
 <!-- 硬件相关 -->
 
@@ -90,36 +90,37 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 </table>
 
 ## **引脚映射**
-| XIAO 引脚        | 功能         | 芯片引脚  | 备用功能                  | 描述                          |
-| :-------------: | :-------------: | :-------: | :---------------------------------: | :---------------------------------: |
-| 5V              | VBUS             |           |                                     | 电源输入/输出                   |
-| GND             |                  |           |                                     |                                      |
-| 3V3             | 3V3_OUT          |           |                                     | 电源输出                         |
-| D0              | Analog          | P014      | ADC09                               | GPIO, ADC                            |
-| D1              | Analog          | P000      | ADC00                               | GPIO, ADC                            |
-| D2              | Analog          | P001      | ADC01                               | GPIO, ADC                            |
-| D3              | Analog          | P002      | ADC02                               | GPIO, ADC                            |
-| D4              | Analog,SDA1      | P206      |                                     | GPIO, I2C 数据, ADC                  |
-| D5              | Analog,SCL1      | P100      |                                     | GPIO, I2C 时钟, ADC                 |
-| D6              | TXD2             | P302      | SDA2                                | GPIO, UART 发送,I2C              |
-| D7              | RXD2             | P301      | SCL2                                | GPIO, UART 接收,I2C               |
-| D8              | SPI1_SCK         | P111      |                                     | GPIO, SPI 时钟                      |
-| D9              | SPI1_MISO        | P110      | CRX0                                | GPIO, SPI 数据,UART                  |
-| D10             | SPI1_MOSI        | P109      | CTX0                                | GPIO, SPI 数据,UART                  |
-| D11             | RX9              | P408      |                                     | GPIO, UART                           |
-| D12             | TX9              | P409      |                                     | GPIO,UART                            |
-| D13             | GPIO             | P013      |                                     | GPIO                                 |
-| D14             | GPIO             | P012      |                                     | GPIO                                 |
-| D15             | TXD0             | P101      | SDA0,ADC21,SPI0_MOSI                | GPIO, UART 发送, ADC,SPI,I2C     |
-| D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |
-| D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |
-| D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |
-| ADC_BAT         |                  | P400      |                                     | 读取电池电压值           |
-| Reset           |                  | RES       |                                     | RESET                                |
-| Boot            |                  | P201      |                                     | 进入启动模式                      |
-| RGB LED         |                  | P112      |                                     | RGB LED                              |
-| CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Red                          |
-| USER_LED        |                  | P011      |                                     | 用户指示灯（Y）|
+| XIAO 引脚        | 功能         | 芯片引脚  | 备用功能                  | 描述                          | Arduino 名称 |
+| :-------------: | :-------------: | :-------: | :---------------------------------: | :---------------------------------: | :----------: |
+| 5V              | VBUS             |           |                                     | 电源输入/输出                   |             |
+| GND             |                  |           |                                     |                                      |              |
+| 3V3             | 3V3_OUT          |           |                                     | 电源输出                         |              |
+| D0              | Analog          | P014      | ADC09                               | GPIO, ADC                            |       0   |
+| D1              | Analog          | P000      | ADC00                               | GPIO, ADC                            |          1     |
+| D2              | Analog          | P001      | ADC01                               | GPIO, ADC                            |        2       |
+| D3              | Analog          | P002      | ADC02                               | GPIO, ADC                            |        3   |
+| D4              | SDA1      | P206      |                                            | GPIO, I2C 数据             |               4   |
+| D5              | Analog,SCL1      | P100      |                                     | GPIO, I2C 时钟, ADC                 |     5    |
+| D6              | TXD2             | P302      | SDA2                                | GPIO, UART 发送,I2C              |    6     |
+| D7              | RXD2             | P301      | SCL2                                | GPIO, UART 接收,I2C               |       7  |
+| D8              | SPI1_SCK         | P111      |                                     | GPIO, SPI 时钟                      |   8      |
+| D9              | SPI1_MISO        | P110      | CRX0                                | GPIO, SPI 数据,UART                  |   9      |
+| D10             | SPI1_MOSI        | P109      | CTX0                                | GPIO, SPI 数据,UART                  |    10    |
+| D11             | RX9              | P408      |                                     | GPIO, UART                           |        |
+| D12             | TX9              | P409      |                                     | GPIO,UART                            |        |
+| D13             | GPIO             | P013      |                                     | GPIO                                 |        |
+| D14             | GPIO             | P012      |                                     | GPIO                                 |        |
+| D15             | TXD0             | P101      | SDA0,ADC21,SPI0_MOSI                | GPIO, UART 发送, ADC,SPI,I2C     |       |
+| D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |       |
+| D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |       |
+| D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |       |
+| ADC_BAT         |                  | P400      |                                     | 读取电池电压值           |       |
+| Reset           |                  | RES       |                                     | 复位                                |       |
+| Boot            |                  | P201      |                                     | 进入启动模式                      |       |
+| RGB LED         |                  | P112      |                                     | RGB LED                              |    20   |
+| RGB LED         |                  | P500      |                                     | RGB LED   EN                            |    21   |
+| CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Red                          |       |
+| USER_LED        |                  | P011      |                                     | 用户指示灯（Y）                      |    19    |
 ## 入门指南
 
 ### 硬件准备
@@ -141,7 +142,7 @@ XIAO RA4M1 将 Renesas 的 RA4M1 芯片（32 位 ARM® Cortex®-M4 MCU，最高 
 XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一部分，您需要完成 Arduino 的安装。
 
 :::tip
-如果这是您第一次使用 Arduino，我们强烈建议您参考 [Getting Started with Arduino](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+如果这是您第一次使用 Arduino，我们强烈建议您参考 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 :::
 
 - **步骤 1.** 根据您的操作系统下载并安装稳定版本的 Arduino IDE。
@@ -152,7 +153,7 @@ XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一
 
 - **步骤 2.** 启动 Arduino 应用程序。
 
-- **步骤 3.** 将 RA4M1 开发板包添加到您的 Arduino IDE。
+- **步骤 3.** 将 RA4M1 开发板包添加到您的 Arduino IDE 中。
 
     导航到 **File > Preferences**，并在 **"Additional Boards Manager URLs"** 中填入以下网址：
     *https://files.seeedstudio.com/arduino/package_renesas_1.2.0_index.json*
@@ -171,7 +172,7 @@ XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一
 
 有时，使用错误的程序可能会导致 XIAO 失去端口或无法正常工作。常见问题包括：
 
-- XIAO 连接到计算机，但找不到端口号。
+- XIAO 已连接到计算机，但找不到端口号。
 - XIAO 已连接，出现端口号，但程序上传失败。
 
 当您遇到上述两种情况时，可以尝试将 XIAO 置于 BootLoader 模式，这可以解决大多数设备无法识别和上传失败的问题。具体方法是：
@@ -181,7 +182,7 @@ XIAO RA4M1 推荐的编程工具是 Arduino IDE，因此作为软件准备的一
 
 ## 复位
 
-当程序运行异常时，您可以在上电期间按一次 `Reset` 让 XIAO 重新执行上传的程序。
+当程序运行异常时，您可以在上电时按一次 `Reset` 让 XIAO 重新执行已上传的程序。
 当您在上电时按住 `BOOT` 键，然后按一次 `Reset` 键，也可以进入 BootLoader 模式。
 
 ## 运行您的第一个 Blink 程序
@@ -269,7 +270,7 @@ void loop() {
 <table align="center">
  <tr>
      <th>Seeed Studio XIAO RA4M1</th>
-        <th>Seeed Studio XIAO 扩展底板配 Grove OLED</th>
+        <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
@@ -339,7 +340,7 @@ void loop() {
 
 ```
 
-- **步骤 4.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号上传程序
+- **步骤 4.** 选择开发板型号为 **XIAO RA4M1**，并选择正确的端口号来上传程序
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/voltage.png" style={{width:600, height:'auto'}}/></div>
 

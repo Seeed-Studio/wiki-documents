@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
-  date: 2/6/2026
+  date: 2/3/2026
   author: Kasun Thushara
 ---
 
@@ -26,7 +26,7 @@ En este tutorial, aprenderás cómo configurar tu ReSpeaker Lite para que funcio
     </a>
 </div>
 
-## Actualización del Firmware XMOS
+## Actualización del firmware XMOS
 
 Para obtener la mejor experiencia de reproducción, necesitamos actualizar el firmware XMOS a `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin`.
 
@@ -34,9 +34,7 @@ Descarga el firmware como repositorio completo desde [aquí](https://github.com/
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
-En tu computadora, conecta el ReSpeaker Lite en la interfaz USB (cerca del conector de 3.5mm) y ejecuta el siguiente comando:
-
-
+En tu computadora, conecta el ReSpeaker Lite y ejecuta el siguiente comando:
 
 si estás usando una máquina host Linux
 
@@ -49,9 +47,6 @@ si estás usando una máquina host Windows
 ```bash
 dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_flashing.gif" alt="pir" width={800} height="auto" /></p>
-
 para más información, consulta este [enlace](https://wiki.seeedstudio.com/es/reSpeaker_usb_v3/#update-firmware)
 
 :::note
@@ -91,7 +86,7 @@ Habilita **Start on Boot, Watchdog, and Show in Sidebar** para un acceso más f�
 
 Desde la barra lateral de Home Assistant, ve a **ESPHome Builder**.
 
-## Agregar Dispositivo reSpeaker
+## Agregar dispositivo reSpeaker
 
 Haz clic en **+ NEW DEVICE**.
 
@@ -1486,7 +1481,7 @@ Descarga el archivo de firmware .bin generado a tu computadora.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
-Conecta el puerto USB Type-C de la placa ESP32-S3 a tu PC usando un cable USB Type-C.
+Conecta la placa ESP32-S3 a tu PC usando un cable USB Type-C.
 
 Abre [Web ESPHome](https://web.esphome.io/?dashboard_wizard) en Google Chrome.
 
@@ -1505,8 +1500,6 @@ Espera a que la instalación se complete (puede tomar unos minutos).
 Después del éxito, verás un mensaje de confirmación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/burn_flash_bin.gif" alt="pir" width={700} height="auto" /></p>
 
 Regresa a **Home Assistant > Settings > Devices & Services**.
 
@@ -1538,21 +1531,8 @@ Puedes iniciar sesión con Nabu Cloud y configurar el Asistente de Voz porque es
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_2.png" alt="pir" width={700} height="auto" /></p>
 
-## FAQ
-
-### ¿Cómo ver los registros de reSpeaker?
-
-Para ver archivos de registro y procedimientos de depuración—como verificar la detección de palabras de activación y la funcionalidad STT—puedes usar la aplicación web ESP mencionada anteriormente.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/log_view.gif" alt="pir" width={700} height="auto" /></p>
-
 ## Agradecimientos Especiales
 Nos gustaría agradecer a FormatBCE por crear este increíble archivo YAML para el Seeed Studio reSpeaker Lite. Apóyalo en su [Github](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration)
-
-
-
-## Compartir Proyecto
-- De **Smart Home Circle** : [Create Local Voice Assistant](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
 
 ## Soporte Técnico y Discusión de Productos
 

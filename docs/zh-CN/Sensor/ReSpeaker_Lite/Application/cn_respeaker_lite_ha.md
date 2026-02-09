@@ -10,11 +10,11 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
-  date: 2/6/2026
+  date: 2/3/2026
   author: Kasun Thushara
 ---
 
-在本教程中，您将学习如何配置您的 ReSpeaker Lite 以与 Home Assistant 配合使用。您将学习如何刷写所需的固件以及如何编译和上传 YAML 文件。之后，您将能够使用语音控制和自动化您的家用电器。只需说"Okay Nabu"并开始与您的家对话。
+在本教程中，您将学习如何配置您的 ReSpeaker Lite 以与 Home Assistant 配合使用。您将学习如何刷写所需的固件以及如何编译和上传 YAML 文件。之后，您将能够使用语音控制和自动化您的家用电器。只需说"Okay Nabu"并开始与您的家交谈。
 
 ## 所需硬件
 
@@ -34,9 +34,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
-在您的计算机上，将 ReSpeaker Lite 插入 USB 接口（靠近 3.5mm 插孔），然后运行以下命令：
-
-
+在您的计算机上，插入 ReSpeaker Lite 并运行以下命令：
 
 如果您使用的是 Linux 主机
 
@@ -49,9 +47,6 @@ sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```bash
 dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ```
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_flashing.gif" alt="pir" width={800} height="auto" /></p>
-
 更多信息请参考此[链接](https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/#update-firmware)
 
 :::note
@@ -63,7 +58,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ## 入门指南
 
 :::note
-我们在树莓派 5 上使用 Home Assistant 版本 2026.1.3 和 ESPHome 版本 2026.1.3。
+我们使用的是在树莓派 5 上运行的 Home Assistant 版本 2026.1.3 和 ESPHome 版本 2026.1.3。
 :::
 
 ## 安装 ESPHome Builder
@@ -1472,7 +1467,7 @@ debug:
 
 </details>
 
-保存 YAML 后，点击 **INSTALL**。
+保存 YAML 文件后，点击 **INSTALL**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/yaml_install.png" alt="pir" width={800} height="auto" /></p>
 
@@ -1486,7 +1481,7 @@ debug:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
 
-使用 USB Type-C 线缆将 ESP32-S3 开发板的 USB Type-C 端口连接到您的 PC。
+使用 USB Type-C 线缆将 ESP32-S3 开发板连接到您的 PC。
 
 在 Google Chrome 中打开 [Web ESPHome](https://web.esphome.io/?dashboard_wizard)。
 
@@ -1494,7 +1489,7 @@ debug:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/web_esphome.png" alt="pir" width={600} height="auto" /></p>
 
-连接后，点击 **INSTALL**
+连接成功后，点击 **INSTALL**
 
 选择您刚刚下载的 .bin 文件。
 
@@ -1505,8 +1500,6 @@ debug:
 成功后，您将看到确认消息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_congrats.PNG" alt="pir" width={500} height="auto" /></p>
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/burn_flash_bin.gif" alt="pir" width={700} height="auto" /></p>
 
 返回 **Home Assistant > Settings > Devices & Services**。
 
@@ -1538,21 +1531,8 @@ debug:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_2.png" alt="pir" width={700} height="auto" /></p>
 
-## 常见问题
-
-### 如何查看 reSpeaker 日志？
-
-要查看日志文件和调试程序（例如验证唤醒词检测和 STT 功能），您可以使用前面提到的 ESP Web 应用程序。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/log_view.gif" alt="pir" width={700} height="auto" /></p>
-
 ## 特别感谢
 我们要感谢 FormatBCE 为 Seeed Studio reSpeaker Lite 创建了这个出色的 YAML 文件。在他的 [Github](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration) 上支持他
-
-
-
-## 项目分享
-- 来自 **Smart Home Circle**：[Create Local Voice Assistant](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
 
 ## 技术支持与产品讨论
 
