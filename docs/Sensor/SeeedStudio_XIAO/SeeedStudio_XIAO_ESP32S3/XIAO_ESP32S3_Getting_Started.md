@@ -223,7 +223,7 @@ Before everything starts, it is quite essential to have some basic parameters of
 | D7                      | RX               | GPIO44                                                 |                    | GPIO, UART Receive                   |
 | D8                      | Analog,SCK       | GPIO7                                                  | TOUCH7             | GPIO, SPI Clock, ADC                 |
 | D9                      | Analog,MISO      | GPIO8                                                  | TOUCH8             | GPIO, SPI Data, ADC                  |
-| D10                     | Analog,MOSI      | GPIO10                                                 | TOUCH9             | GPIO, SPI Data, ADC                  |
+| D10                     | Analog,MOSI      | GPIO09                                                 | TOUCH9             | GPIO, SPI Data, ADC                  |
 | D11                     | Analog          | GPIO42                                                 | TOUCH12            | GPIO, ADC                            |
 | D12                     | Analog          | GPIO41                                                 | TOUCH13            | GPIO, ADC                            |
 | MTDO                    |                  | GPIO40                                                 |                    | JTAG                                 |
@@ -306,7 +306,7 @@ The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension 
 | D7                      | RX               | GPIO44    |                    | GPIO, UART Receive                   |
 | D8                      | Analog,SCK       | GPIO7     |                    | GPIO, SPI Clock, ADC                 |
 | D9                      | Analog,MISO      | GPIO8     |                    | GPIO, SPI Data, ADC                  |
-| D10                     | Analog,MOSI      | GPIO10    |                    | GPIO, SPI Data, ADC                  |
+| D10                     | Analog,MOSI      | GPIO09    |                    | GPIO, SPI Data, ADC                  |
 | D11                     |                  | GPIO38    |                    | GPIO, ADC                            |
 | D12                     |                  | GPIO39    |                    | GPIO, ADC                            |
 | D13                     |                  | GPIO40    |                    |                                      |
@@ -868,7 +868,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 **Hardware Design**
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
-- **📄[Schematic]** [XIAO ESP32-S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_V1.3_SCH_260115.pdf )
+- **📄[Schematic]** [XIAO ESP32-S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf )
 - **🗃️[PCB Design Files]** 
   - [XIAO ESP32-S3 Sense KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_V1.3_SCH&PCB_260115.7z )
 - **🗃️[PCB Design Libraries]** 
