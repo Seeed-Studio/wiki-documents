@@ -91,7 +91,7 @@ The module comes with a high-performance active GNSS antenna intended to cover G
 
 Before we start, we can refer to the following pictures to understand the pin design of the L76K GNSS Module for SeeedStudio XIAO to facilitate our understanding of the function of the module.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/gnss-xiao-pinout.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/L76K_GNSS_Module_for_XIAO_Pinout_V1.1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Getting Started
 
