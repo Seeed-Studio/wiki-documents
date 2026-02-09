@@ -21,81 +21,43 @@ Today is February 9th, and a brand new week has begun! Check out what Seeed Stud
 
 ## Latest Wiki Launched
 
-### [Develop reComputer Jetson using Clawdbot](https://wiki.seeedstudio.com/develop_recomputer_jetson_using_clawdbot/)
+### [Fruit Sorting with J501 Mini and StarAI Viola Arm](https://wiki.seeedstudio.com/j501_mini_starai_viola_fruit_sorting/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-Traditionally, developing on a Jetson edge device required a physical setup with a monitor, keyboard, and mouse. Even with remote SSH access, developers still depended on terminal-based workflows and additional tools for monitoring and deployment. With Clawdbot, development becomes much simpler. Developers can now interact with the reComputer Jetson directly through a chat app like WhatsApp — sending messages to check device status, run commands, and debug scripts in a more convenient way. This wiki shows how to deploy and use Clawdbot on reComputer Jetson.
-
-</div>
-
-### [Getting Started with reTerminal E1004](https://wiki.seeedstudio.com/getting_started_with_reterminal_e1004/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 3-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visulization.
+This wiki demonstrates how to use the **J501 Mini (Jetson AGX Orin)** with the **StarAI Viola robotic arm** to perform fruit sorting tasks using the **LeRobot framework**. The project showcases an end-to-end workflow from data collection to deployment, enabling the robot to intelligently grasp and organize fruits.
 
 </div>
 
-### [Deploying Espectre on Seeed Studio XIAO ESP32 Series with ESPHome](https://wiki.seeedstudio.com/xiao-esp32--series-espresense/)
+### [Local OpenClaw(Clawdbot) on reComputer Jetson with Ollama](https://wiki.seeedstudio.com/local_openclaw_on_recomputer_jetson/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32_Espectre/image1.png" alt="pir" width={600} height="auto" /></p>
+<div class="video-container">
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/kZbWuK7YFuc" title="Local OpenClaw(Clawdbot) on reComputer Jetson with Ollama" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 <div style={{ textAlign: "justify" }}>
 
-**ESPectre is a motion detection system based on Wi-Fi spectre analysis (CSI), with native Home Assistant integration via ESPHome.** When someone moves in a room, they "disturb" the Wi-Fi waves traveling between the router and the sensor. It's like when you move your hand in front of a flashlight and see the shadow change. The [XIAO ESP32 board](https://www.seeedstudio.com/ESP32-Series-c-2580.html) "listens" to these changes and understands if there's movement.
+OpenClaw supports both cloud and local LLMs. Cloud is easy to start and scale but adds token costs and external dependencies. Local runs offline, keeps data on-device, and avoids API fees, though it requires setup and must fit device limits. This wiki shows how to run OpenClaw on reComputer Jetson with Ollama as a self-contained AI hub.
 
 </div>
 
-### [YOLOv26 Dual USB Camera Image Processing System on Jetson](https://wiki.seeedstudio.com/ai_robotics_yolov26_dual_camera_system/)
+### [reSpeaker XVF3800 (XIAO ESP32-S3) + Agora Conversational AI Agent v2 Edge Conversational Client Deployment Guide](https://wiki.seeedstudio.com/respeaker_xvf3800_agora_convo_client/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-This wiki demonstrates how to build a dual USB camera image processing system based on YOLOv26 model and TensorRT acceleration from scratch.
+In this tutorial, we will guide you to use **Seeed Studio reSpeaker XVF3800 (XIAO ESP32-S3)** as an edge voice device to establish a stable, low-latency, bidirectional audio link via **Agora RTC**, and directly call **Agora Conversational AI Agent API v2** on the device to complete the conversational loop of **ASR → LLM → TTS**: the device captures microphone audio and sends it uplink; the cloud AI generates spoken replies and sends them downlink; the device plays them back in real time—delivering a “phone-call-like” voice conversation experience.
 
 </div>
 
-### [Seeed Studio XIAO nRF54L15 Sense Zigbee](https://wiki.seeedstudio.com/xiao_nrf54l15_zigbee/)
-
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-114993697-xiao-nrf54l15-sense_pre-soldered_.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This tutorial guides you through implementing [Zigbee](https://en.wikipedia.org/wiki/Zigbee) applications on the Seeed Studio **XIAO nRF54L15** development board, this board combines **Wi-Fi**, **Bluetooth Low Energy (BLE)**, and **Zigbee** connectivity, making it perfect for **IoT applications**. The examples in this guide use the NCS to bring Zigbee functionality to life.
-
-</div>
-
-### [AI Human Detection and Meshtastic Notification Demo](https://wiki.seeedstudio.com/ai_human_detection_meshtastic_broadcast/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This demo showcases a powerful Edge AI solution integrating the reCamera with a Meshtastic LoRa mesh network. By running a local YOLO11n model, the reCamera identifies humans in real-time and triggers a GPIO signal. This physical signal prompts a XIAO ESP32S3 node to broadcast a "Human detected" alert across the decentralized network. This setup allows for autonomous, off-grid monitoring and security without relying on internet infrastructure. The guide covers hardware assembly for the PoE baseboard, C++ deployment, and Mesh node configuration to bridge AI vision with long-range communication.
-
-</div>
-
-### [Deploy your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeaker](https://wiki.seeedstudio.com/respeaker_xvf_3800_xiaozhi/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-reSpeaker XVF3800 is a professional 4-microphone circular array based on the XMOS XVF3800 chip. It provides reliable voice pickup in noisy environments with features including dual modes, 360° far-field pickup (up to 5 m), acoustic echo cancellation (AEC), automatic gain control (AGC), direction of arrival (DoA), dereverberation, beamforming and noise suppression. With its robust capture and denoising abilities, Xiaozhi gets a much better "ear".
-
-</div>
-
-## Existing Wiki Updated
+<!-- ## Existing Wiki Updated
 
 ### [Getting Started with XIAO ePaper Display Board - EE02](https://wiki.seeedstudio.com/getting_started_with_ee02/)
 
-We have added an [example](https://wiki.seeedstudio.com/getting_started_with_ee02/#getting-started-with-arduino) demonstrating how to operate the EE02 using Arduino.
+We have added an [example](https://wiki.seeedstudio.com/getting_started_with_ee02/#getting-started-with-arduino) demonstrating how to operate the EE02 using Arduino. -->
 
 ## The Efforts of Contributor
 
