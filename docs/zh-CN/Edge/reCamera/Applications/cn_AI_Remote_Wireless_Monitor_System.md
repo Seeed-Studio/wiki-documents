@@ -5,9 +5,10 @@ keywords:
     - Wifi Halow
     - reCamera
     - AI edge sensing
-slug: /cn/ai_remote_wireless_monitor_system_with_wifi_haLow
+slug: /cn/ai_remote_wireless_monitor_system
+sku: 102991897, 110070108
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-sidebar_position: 1
+sidebar_position: 2
 last_update:
     date: 2025-11-19
     author: John Xiang
@@ -17,7 +18,7 @@ last_update:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/6.gif" /></div>
 
-如果您是户外爱好者，是否经常为野外缺乏网络、传统 WiFi 覆盖范围有限、摄像头无法远距离实时传输图像而困扰？通过这个 Wiki，您可以实现自己的**AI 远程无线监控系统**，基于 **reCamera 系列**和 **Wifi Halow** 图传模块。当然，您可以有更多想象，包括但不限于以下场景：
+如果您是户外爱好者，是否经常为野外缺乏网络、传统 WiFi 覆盖范围有限、摄像头无法远距离实时传输图像而困扰？通过本 Wiki，您可以实现自己的**AI 远程无线监控系统**，基于 **reCamera 系列**和 **Wifi Halow** 图传模块。当然，您可以有更多想象，包括但不限于以下内容：
 
 - 您希望对整个物业进行无线监控，但不需要布线或路由器，并通过板载 AI 检测可疑活动。
 
@@ -32,7 +33,7 @@ last_update:
 这是 Node-RED 开发的一个示例：只需简单拖拽 3 个节点即可构建 AI 视觉工作流：
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1_1.png" /></div>
 
-在 Wi-Fi HaLow 方面，它是一种专为物联网设计的低频无线技术，具有远距离、低功耗和高带宽的优势。在 902–928 MHz 频段内，在 8 MHz 带宽下可实现约 16 Mbps 的最大传输速率，通信距离可达 1 公里。
+在 Wi-Fi HaLow 方面，它是一种专为物联网设计的低频无线技术，具有远距离、低功耗和高带宽的优势。在 902–928 MHz 频段内，它可以在 8 MHz 带宽下实现约 16 Mbps 的最大传输速率，通信距离可达 1 公里。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1_2.png" /></div>
 
@@ -60,13 +61,13 @@ last_update:
 
 ## 整体架构
 
-系统结构非常简单。两个 HaLow 模块分别使用网线连接 reCamera 和 reTerminal。之后，两个设备通过 Wifi HaLow 进行无线传输。
+系统结构非常简单。两个 HaLow 模块使用网线分别连接 reCamera 和 reTerminal。之后，两个设备通过 Wifi HaLow 进行无线传输。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t1.png" /></div>
 
 ## 硬件准备
 
-要完成这个项目，您需要三款 reCamera 中的任意一款 - reCamera 2002 系列、reCamera HQ PoE、reCamera Gimbal。
+要完成此项目，您需要三款 reCamera 中的任意一款 - reCamera 2002 系列、reCamera HQ PoE、reCamera Gimbal。
 
 ### 📦 reCamera
 
@@ -108,7 +109,7 @@ last_update:
 
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002-HQ-PoE-64GB-p-6557.html" target="_blank">
 
-<strong><span><font color={'FFFFFF'} size={"4"}> 了解更多🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
 
 </a>
 
@@ -118,7 +119,7 @@ last_update:
 
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank" rel="noopener noreferrer">
 
-<strong><span><font color={'FFFFFF'} size={"4"}> 了解更多🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
 
 </a>
 
@@ -134,7 +135,7 @@ last_update:
 
 :::note
 
-这里的 reTerminal 可以被任何具有网络端口和屏幕的边缘计算设备替代。包括但不限于笔记本电脑、台式机、开发板等。我们鼓励您尝试更多选择。本教程中只是使用 reTerminal 进行演示，reTerminal 是一个具有网络端口等多个接口的树莓派 CM4 终端设备。
+这里的 reTerminal 可以被任何具有网络端口和屏幕的边缘计算设备替代。包括但不限于笔记本电脑、台式机、开发板等。我们鼓励您尝试更多。本教程只是使用 reTerminal 进行演示，reTerminal 是一个具有网络端口等多个接口的树莓派 CM4 终端设备。
 
 :::
 
@@ -172,7 +173,7 @@ last_update:
 
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html" target="_blank" rel="noopener noreferrer">
 
-<strong><span><font color={'FFFFFF'} size={"4"}> 了解更多🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 查看更多🖱️</font></span></strong>
 
 </a>
 
@@ -190,7 +191,7 @@ last_update:
 
 ## 工具准备
 
-- **PC**：用于连接 reCamera 进行调试。后续操作需要登录 reCamera 后台并为 reTerminal 刷写树莓派操作系统。同时，如果出现问题，在 PC 上调试会更方便，各种软件工具也很齐全。
+- **PC**：用于连接 reCamera 进行调试。后续操作需要登录 reCamera 的后台，并为 reTerminal 刷写树莓派操作系统。同时，如果出现问题，在 PC 上调试会更方便，各种软件工具也很齐全。
 
 - **3 根 USB-C 线缆**：
 
@@ -198,15 +199,15 @@ last_update:
 
 - **键盘/鼠标**：连接 reTerminal 进行调试。
 
-- **5V3A USB-C 电源适配器** 与树莓派 4/5 相同的电源供应，用于为 reTerminal 供电。购买链接：[5V3A USB-C 电源](https://www.seeedstudio.com/Wall-Adapter-Power-Supply-5VDC-3A-Type-C-p-4103.html)
+- **5V3A USB-C 电源适配器** 与树莓派 4/5 相同的电源为 reTerminal 供电。购买链接：[5V3A USB-C 电源](https://www.seeedstudio.com/Wall-Adapter-Power-Supply-5VDC-3A-Type-C-p-4103.html)
 
-- **（可选）12V DC 电源** 用于为 reTerminal 扩展板供电。购买链接：[12V DC 电源（美规/欧规）](https://www.seeedstudio.com/Power-Adapter-12V-2A-US-p-5731.html)
+- **（可选）12V 直流电源** 用于为 reTerminal 扩展板供电。购买链接：[12V 直流电源（美国/欧盟）](https://www.seeedstudio.com/Power-Adapter-12V-2A-US-p-5731.html)
 
 - **（可选）reCamera 三角支架** 购买链接：[迷你三脚架](https://www.seeedstudio.com/Mini-Tripod-p-5978.html)
 
 :::note
 
-您无需为设备的电源供应而烦恼，Raspberry Pi 4/5 电源适配器可以与 reTerminal 同时使用，如果您打算使用扩展板，只需要 12V 直流电源，不再需要 5V3A USB-C 电源，因为 reTerminal 可以直接从扩展板获得电力。
+您无需为设备的电源供应而烦恼，如果您打算使用扩展板，Raspberry Pi 4/5 电源可以同时为 reTerminal 使用，只需要 12V 直流电源，不再需要 5V3A USB-C 电源，因为 reTerminal 可以直接从扩展板获得电力。
 
 :::
 
@@ -232,7 +233,7 @@ last_update:
 
 如果您没有看到此页面，请刷新浏览器。
 
-如果您的设备之前已被使用或配置过，可能会直接跳转到 Workspace。此时网站地址为：'http://192.168.42.1/#/workspace' 请跳转到下一步。无论如何，只要进入 Workspace 即可。
+如果您的设备之前已被使用或配置过，可能会直接跳转到 Workspace。此时，网站地址为：'http://192.168.42.1/#/workspace' 请跳转到下一步。无论如何，只要进入 Workspace 即可。
 
 如果刷新仍无法解决，请重置设备或联系技术支持解决。
 
@@ -254,11 +255,11 @@ Workspace 页面显示
 
 #### 步骤 1.3 配置流节点
 
-如上所述，我们需要在 Node-RED 中配置 RTSP 推流。在左侧的节点列表中，搜索 “stream” 节点，或者向下滚动鼠标滚轮到列表底部，找到 Stream 节点。配置方法请参考：[Node-Red Stream 节点配置](https://wiki.seeedstudio.com/cn/recamera_develop_with_node-red/#stream-node)配置后，您应该得到以下结果：
+如上所述，我们需要在 Node-RED 上配置 rtsp 推流。在左侧的节点列表中，搜索 'stream' 节点或向下滚动鼠标滚轮到底部找到 Stream 节点。配置方法请参考：[Node-Red Stream 节点配置](https://wiki.seeedstudio.com/cn/recamera_develop_with_node-red/#stream-node)配置后，您应该得到以下结果：
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t3_3.png" /></div>
 
-请完全按照 Node-RED 教程确保您的输出是到 sscma，最终视频流将输出到：rtsp://admin:admin@192.168.xxx.xxx:554/live，其中 192.168.xxx.xxx 是 reCamera 的静态 IP 地址。静态 IP 可以自由配置。这里使用 192.168.10.100 进行演示。
+请完全按照 Node-RED 教程操作，确保您的输出是到 sscma，最终视频流将输出到：rtsp://admin:admin@192.168.xxx.xxx:554/live，其中 192.168.xxx.xxx 是 reCamera 的静态 IP 地址。静态 IP 可以自由配置。这里使用 192.168.10.100 进行演示。
 
 #### 步骤 1.4.1 配置 WebSocket 节点
 
@@ -283,13 +284,13 @@ nnn.nnn:9000 实际上，192.168.nnn.nnn 是 reTerminal 或您自己的其他终
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t5.png" /></div>
 
-> 图 5：设置页面 Terminal 框架
+> 图 5：设置页面终端框架
 
 点击 Terminal 后，您需要重新登录，输入用户名：'recamera'，然后输入设置的密码来使用 Terminal。效果如下。如果您忘记了密码，请参考以下教程重置设备：[reCamera 恢复出厂设置](https://wiki.seeedstudio.com/cn/recamera_getting_started/#factory-reset)
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t6.png" /></div>
 
-> 图 6：登录后 Terminal 页面效果
+> 图 6：登录后终端页面效果
 
 #### 步骤 1.7 配置 reCamera 静态 IP
 
@@ -313,13 +314,13 @@ gateway 192.168.10.1
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t7_0.png" /></div>
 
-这些代码将 reCamera 的以太网端口配置为静态 IP 192.168.10.100，子网掩码为 255.255.255.0，网关为 192.168.10.1。当然，您可以使用 192.168.3.xxx 或 192.168.42.xxx 进行具体 IP 的自由配置。但是，请确保它与您的 reTerminal 或终端设备在同一网段。例如，您的 reCamera 是 192.168.33，那么 reTerminal 需要配置为 192.168.33.nnn。如果 reTerminal 的静态 IP 变为 192.168.32.nnn 或 192.168.34.nnn，则无法进行通信。
+这些代码将 reCamera 的以太网端口配置为静态 IP 192.168.10.100，子网掩码为 255.255.255.0，网关为 192.168.10.1。当然，您可以使用 192.168.3.xxx 或 192.168.42.xxx 进行具体 IP 的自由配置。但是，请确保它与您的 reTerminal 或终端设备在同一网段内。例如，您的 reCamera 是 192.168.33，那么 reTerminal 需要配置为 192.168.33.nnn。如果 reTerminal 的静态 IP 变为 192.168.32.nnn 或 192.168.34.nnn，则无法进行通信。
 
 添加上述代码后，输入 ''':wq''' 退出 vi 编辑器并返回 reCamera 终端。然后输入 '''sudo reboot ''' 重启 reCamera。
 
 :::note
 
-需要注意的是，配置静态 IP 后，必须用网线将 reCamera 连接到 PC。同时，必须在 PC 上配置静态 IP 才能再次登录 reCamera。登录时使用新配置的 reCamera 静态 IP。这里使用 Window 配置静态 IP 作为演示。再次强调，对于所有配置静态 IP 的设备，必须确保它们在同一网段，例如 reCamera-192.168.10.100 和 reTerminal-192.168.10.3，笔记本电脑（Windows）-192.168.10.2 否则它们无法相互通信。Windows 上的参考配置如下：
+需要注意的是，配置静态 IP 后，必须用网线将 reCamera 连接到 PC。同时，必须在 PC 上配置静态 IP 才能再次登录 reCamera。登录时使用新配置的 reCamera 静态 IP。这里使用 Window 配置静态 IP 作为演示。再次强调，对于所有配置静态 IP 的设备，必须确保它们在同一网段内，例如 reCamera-192.168.10.100 和 reTerminal-192.168.10.3，笔记本电脑（Windows）-192.168.10.2 否则，它们无法相互通信。Windows 上的参考配置如下：
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/tx.png" /></div>
 
@@ -361,7 +362,7 @@ gateway 192.168.10.1
 
 #### 步骤 3.1 启动 reTerminal
 
-reTerminal 出厂时已预装系统，理论上可以直接进入 Raspbian。但是，如果开机后左下角的绿色 LED 亮起/闪烁但屏幕黑屏，请参考以下教程重新烧录系统。此步骤需要外接显示器进行调试。[reTerminal 初始化教程](https://wiki.seeedstudio.com/cn/reTerminal/#flash-raspberry-pi-os-with-drivers-from-seeed-to-emmc)
+reTerminal 出厂时自带系统，理论上您可以直接进入 Raspbian。但是，如果开机后左下角的绿色 LED 亮起/闪烁但屏幕是黑色的，请参考以下教程重新烧录系统。此步骤需要外部显示器调试。[reTerminal 初始化教程](https://wiki.seeedstudio.com/cn/reTerminal/#flash-raspberry-pi-os-with-drivers-from-seeed-to-emmc)
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t10.jpg" /></div>
 
 #### 步骤 3.2 禁用 NetworkManager 服务
@@ -381,7 +382,7 @@ sudo systemctl disable NetworkManager
 sudo nano /etc/network/interfaces
 ```
 
-进入网络配置文件，在文件末尾添加以下内容。这里将 reTerminal 静态 IP 设置为 **192.168.10.3**：
+进入网络配置文件并在文件末尾添加以下内容。这里将 reTerminal 静态 IP 设置为 **192.168.10.3**：
 
 ```bash
 auto eth0
@@ -414,13 +415,13 @@ sudo systemctl restart NetworkManager
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t12.png" /></div>
 
-如果在 'eth0' 中看到 IP = **192.168.10.3**，则表示成功。
+如果您在 'eth0' 中看到 IP = **192.168.10.3**，则表示成功。
 
 完美！所有设备都已设置完成，现在您可以进入下一阶段 :)
 
 ### 阶段 4：连接和使用
 
-您还记得我们在步骤 1.2 中配置的 rtsp 推流节点吗？在：'''rtsp://admin:admin@192.168.xxx.xxx:554/live''' 中已经有一个 rtsp 视频流，这里的 '192.168.xxx.xxx' 是您在步骤 1.6 中手动配置的 **reCamera 静态 IP**，而不是 reTerminal 静态 IP。在我的情况下，对应的 rtsp 推流是：
+您还记得我们在步骤 1.2 中配置的 rtsp 推流节点吗？在：'''rtsp:// admin:admin@192.168.xxx.xxx:554/live''' 中已经有一个 rtsp 视频流，这里的 '192.168.xxx.xxx' 是您在步骤 1.6 中手动配置的 **reCamera 静态 IP**，而不是 reTerminal 静态 IP。在我的情况下，对应的 rtsp 推流是：
 
 ```
 rtsp://admin:admin@192.168.10.100:554/live
@@ -469,7 +470,7 @@ ffplay -rtsp_transport udp -max_delay 20000 -probesize 2M rtsp://admin:admin@192
 
 -'-probesize 2M'：设置探测大小为 2MB，以提高视频流的播放速度。
 
--'rtsp://admin:admin@192.168.10.100:554/live'：这是 reCamera rtsp 接收地址。请替换为您自己的地址。
+-'rtsp:// admin:admin@192.168.10.100:554/live'：这是 reCamera rtsp 接收地址。请替换为您自己的地址。
 
 此时会弹出一个新窗口，rtsp 视频流将在其中显示，双击窗口可以全屏播放。
 
@@ -521,7 +522,7 @@ Listening on port 9000 (press CTRL+C to quit)
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/t15.jpg" /></div>
 上图显示了通过 GStreamer 的 RTSP 流和通过 WebSocket 的文本 AI 检测结果。
 
-左侧的终端显示检测结果：
+左侧的终端演示了检测结果：
 
 ```bash
 < counts=person:1; person(682,359,1175,704)
@@ -545,9 +546,9 @@ Listening on port 9000 (press CTRL+C to quit)
 
 如开头所述，这个项目只是远程 AI 检测的一个简单示例。您可以将其扩展到更复杂的场景。我们将在这里介绍一些示例。所有这些示例稍后都会更新到 Github。
 
-### 案例 1：野外露营熊警报系统
+### 案例 1：野外露营熊警告系统
 
-将熊检测模型上传到 reCamera，并将设备部署在森林露营地的固定位置以检测潜在的熊入侵。您可以通过 reTerminal 或其他设备从远处监控该区域，帮助您避免过于接近野生动物并降低危险风险。
+将熊检测模型上传到 reCamera 并将设备部署在森林露营地的固定位置，以检测潜在的熊入侵。您可以通过 reTerminal 或其他设备从远处监控该区域，帮助您避免过于接近野生动物并降低危险风险。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Wifi_HaLow/ta_1.jpg" /></div>
 

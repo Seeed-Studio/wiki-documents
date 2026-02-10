@@ -1226,6 +1226,7 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Bluetooth_Usage',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Matter_Use',
+                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/XIAO_nRF54L15-Sense_Zigbee',
               ],
             },
             {
@@ -1308,6 +1309,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_ESP-Mesh_Audio',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_HomeAssistant',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32C5_WiFi_Throughput_tester',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/XIAO_ESP32_Series_CSI_Espectre',
               ],
             },
             {
@@ -1983,6 +1985,7 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_tflm',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_voice_agent',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_xiaozhi',
                   ],
                 },
               ],
@@ -3851,6 +3854,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/AI-NVR_with_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/Deploy_NVBLOX_ON_Jetson_AGX_Orin',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv26_Dual_USB_Camera_Image_Processing_System on_Jetson',
               ]
             },
             // Generative AI
@@ -3928,6 +3932,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Develop_reComputer_Jetson_using_Clawdbot',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Gapi-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/alwaysAI-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Cochl.Sense-Jetson-Getting-Started',
@@ -6482,6 +6487,7 @@ const sidebars = {
               items: [
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Bluetooth_Usage',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Matter_Use',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/cn_XIAO_nRF54L15-Sense_Zigbee',
               ],
             },
             {
@@ -6565,6 +6571,7 @@ const sidebars = {
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_HomeAssistant',
                 'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32C5_WiFi_Throughput_tester',
+                'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/cn_XIAO_ESP32_Series_CSI_Espectre',
               ],
             },
             {
@@ -7239,6 +7246,7 @@ const sidebars = {
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_tflm',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_voice_agent',
+                    'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_xiaozhi',
                   ],
                 },
               ],
@@ -9100,6 +9108,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_AI-NVR_with_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Computer_Vision/cn_YOLOv26_Dual_USB_Camera_Image_Processing_System on_Jetson',
               ]
             },
             // Generative AI
@@ -9177,6 +9186,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Develop_reComputer_Jetson_using_Clawdbot',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Gapi-Jetson-Getting-Started',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_alwaysAI-Jetson-Getting-Started',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Developer_Tools/cn_Cochl.Sense-Jetson-Getting-Started',
@@ -11631,6 +11641,7 @@ const sidebars = {
               items: [
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Bluetooth_Usage',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Matter_Use',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/es_XIAO_nRF54L15-Sense_Zigbee',
               ],
             },
             {
@@ -11714,6 +11725,7 @@ const sidebars = {
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_HomeAssistant',
                 'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32C5_WiFi_Throughput_tester',
+                'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/es_XIAO_ESP32_Series_CSI_Espectre',
               ],
             },
             {
@@ -12388,6 +12400,7 @@ const sidebars = {
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_tflm',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_ros2',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_voice_agent',
+                    'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_xiaozhi',
                   ],
                 },
               ],
@@ -14249,6 +14262,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_AI-NVR_with_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
+                'es/Edge/NVIDIA_Jetson/Application/Computer_Vision/es_YOLOv26_Dual_USB_Camera_Image_Processing_System on_Jetson',
               ]
             },
             // Generative AI
@@ -14326,6 +14340,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Develop_reComputer_Jetson_using_Clawdbot',
                 'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Gapi-Jetson-Getting-Started',
                 'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_alwaysAI-Jetson-Getting-Started',
                 'es/Edge/NVIDIA_Jetson/Application/Developer_Tools/es_Cochl.Sense-Jetson-Getting-Started',
@@ -16781,6 +16796,7 @@ const sidebars = {
               items: [
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Bluetooth_Usage',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Matter_Use',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF54L15-Sense/ja_XIAO_nRF54L15-Sense_Zigbee',
               ],
             },
             {
@@ -16864,6 +16880,7 @@ const sidebars = {
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_ESP-Mesh_Audio',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_HomeAssistant',
                 'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32C5_WiFi_Throughput_tester',
+                'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C5/Application/ja_XIAO_ESP32_Series_CSI_Espectre',
               ],
             },
             {
@@ -17538,6 +17555,7 @@ const sidebars = {
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_tflm',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_voice_agent',
+                    'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_xiaozhi',
                   ],
                 },
               ],
@@ -19399,6 +19417,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_AI-NVR_with_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_Depth_Anything_V3_ON_Jetson_AGX_Orin',
                 'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_Deploy_NVBLOX_ON_Jetson_AGX_Orin',
+                'ja/Edge/NVIDIA_Jetson/Application/Computer_Vision/ja_YOLOv26_Dual_USB_Camera_Image_Processing_System on_Jetson',
               ]
             },
             // Generative AI
@@ -19476,6 +19495,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Developer_Tools',
               // },
               items: [
+                'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Develop_reComputer_Jetson_using_Clawdbot',
                 'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Gapi-Jetson-Getting-Started',
                 'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_alwaysAI-Jetson-Getting-Started',
                 'ja/Edge/NVIDIA_Jetson/Application/Developer_Tools/ja_Cochl.Sense-Jetson-Getting-Started',

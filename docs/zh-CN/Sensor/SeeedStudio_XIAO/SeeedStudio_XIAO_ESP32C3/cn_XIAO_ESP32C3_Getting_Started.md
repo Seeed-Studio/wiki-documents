@@ -17,9 +17,9 @@ last_update:
 
 ## 简介
 
-**Seeed Studio XIAO ESP32C3** 是一款基于 Espressif **ESP32-C3** WiFi/蓝牙双模芯片的物联网迷你开发板，搭载 **32 位 RISC-V CPU**，凭借其高效架构提供强大的计算性能。它具有出色的射频性能，支持 **IEEE 802.11 b/g/n WiFi** 和 **蓝牙 5 (BLE)** 协议。该开发板配备外置天线，可增强无线应用的信号强度。它还具有**小巧精致的外形**和**单面表贴设计**。配备丰富的接口，拥有 **11 个数字 I/O** 引脚可用作 **PWM 引脚**，以及 **4 个模拟 I/O** 引脚可用作 **ADC 引脚**。支持四种串行接口，如 **UART、I2C 和 SPI**。板上还有一个小型**复位按钮**和一个**引导模式按钮**。XIAO ESP32C3 完全兼容 [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board)，但对于 Seeeduino XIAO 扩展板，板上的 SWD 弹簧触点将不兼容。
+**Seeed Studio XIAO ESP32C3** 是一款基于乐鑫 **ESP32-C3** WiFi/蓝牙双模芯片的物联网迷你开发板，采用 **32 位 RISC-V CPU**，凭借其高效的架构提供强大的计算性能。它具有出色的射频性能，支持 **IEEE 802.11 b/g/n WiFi** 和 **蓝牙 5 (BLE)** 协议。该开发板配备外置天线，可增强无线应用的信号强度。它还具有 **小巧精致的外形** 和 **单面表贴设计**。它配备了丰富的接口，拥有 **11 个数字 I/O** 引脚（可用作 **PWM 引脚**）和 **4 个模拟 I/O** 引脚（可用作 **ADC 引脚**）。它支持四种串行接口，如 **UART、I2C 和 SPI**。开发板上还有一个小型 **复位按钮** 和一个 **引导模式按钮**。XIAO ESP32C3 完全兼容 [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board)，但对于 Seeeduino XIAO Expansion board，开发板上的 SWD 弹簧触点将不兼容。
 
-基于上述突出特性，XIAO ESP32C3 定位为**高性能、低功耗、高性价比的物联网迷你开发板**，适用于**低功耗物联网应用和无线可穿戴应用**。
+基于上述突出的特性，XIAO ESP32C3 定位为 **高性能、低功耗、高性价比的物联网迷你开发板**，适用于 **低功耗物联网应用和无线可穿戴应用**。
 
 本 wiki 将向您展示如何快速开始使用 XIAO ESP32C3！
 
@@ -454,18 +454,18 @@ void loop(){
 在程序中，我们使用 **D1** 低电平来唤醒。这意味着我们可以将按钮连接到引脚 D1，当我们按下按钮时 XIAO 将被唤醒。
 
 :::caution
-目前 XIAO ESP32C3 仅支持 GPIO 唤醒，支持唤醒的引脚只有 D0~D3。此程序可能无法在其他引脚上工作。
+XIAO ESP32-C3 支持 GPIO 唤醒和定时器唤醒，支持唤醒的引脚为 D0~D3。
 :::
 
 ## 故障排除
 
 ### Q1：我的 Arduino IDE 在上传代码到开发板时卡住了
 
-您可以首先尝试在开发板连接到 PC 时点击一次 **RESET BUTTON** 来重置开发板。如果这不起作用，请按住 **BOOT BUTTON**，在按住 **BOOT** 按钮的同时将开发板连接到 PC，然后释放它以进入 **bootloader mode**。
+您可以首先尝试在开发板连接到 PC 时单击一次 **RESET BUTTON** 来重置开发板。如果这不起作用，请按住 **BOOT BUTTON**，在按住 **BOOT** 按钮的同时将开发板连接到 PC，然后释放它以进入 **bootloader mode**。
 
 ### Q2：我的开发板在 Arduino IDE 中没有显示为串行设备
 
-请按照上述 **Q1** 的相同答案操作。
+请按照上面 **Q1** 的相同答案操作。
 
 ### Q3：我想用出厂固件重新刷写引导加载程序
 
@@ -524,16 +524,16 @@ void loop(){
 - 📄 **[XLSX]** [Seeed Studio XIAO ESP32C3 引脚图表](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx)
 - 🔗 **[STEP]** [Seeed Studio XIAO ESP32C3 3D 模型](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1)
 - 🔗 **[GitHub]** [Seeed Studio XIAO ESP32C3 MicroPython 库](https://github.com/IcingTomato/micropython_xiao_esp32c3)
-- 🔗 **[链接]** [Platform IO for Seeed Studio XIAO ESP32](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html)
+- 🔗 **[Link]** [Platform IO for Seeed Studio XIAO ESP32](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html)
 - 🔗 **[WiKi]** [First Look at the Seeed Studio XIAO ESP32C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html)  XIAO ESP32C3 的精彩介绍，涵盖关键特性和基本用法。
-- 📚 **[电子书]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/) 掌握 XIAO 开发板上 Arduino 和 TinyML 的优秀指南。
+- 📚 **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/) 掌握 XIAO 开发板上 Arduino 和 TinyML 的优秀指南。
 - 🔗 **[Kicad]** [Seeed Studio XIAO ESP32C3 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
 ## 课程资源
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
 
-- 📚 **[电子书]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- 📚 **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 ## 技术支持与产品讨论
 
