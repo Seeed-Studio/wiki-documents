@@ -43,7 +43,7 @@ last_update:
 | オプション | 最適な用途 | サーバー必要 | リンク |
 |---|---|---:|---|
 | **Agora Conversational AI Agent v2（クラウド、直接）** | 最速セットアップ / 最小インフラ | いいえ | ここにいます ✅ |
-| **TEN Framework（セルフホスト、プラガブルASR/LLM/TTS）** | カスタムパイプライン / プロバイダー切り替え / 高度な機能 | はい（Docker） | 👉 [TEN Frameworkバージョンへ](./respeaker_xvf_3800_agora_ten_framework.md) |
+| **TEN Framework（セルフホスト、プラガブルASR/LLM/TTS）** | カスタムパイプライン / プロバイダー切り替え / 高度な機能 | はい（Docker） | 👉 [TEN Frameworkバージョンへ](/ja/respeaker_xvf3800_agora_ten_framework_client) |
 
 ## 目次
 

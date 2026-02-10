@@ -42,7 +42,7 @@ last_update:
 
 | 选项 | 最适合 | 需要服务器 | 链接 |
 |---|---|---:|---|
-| **Agora 对话式 AI Agent v2（云端，直接）** | 最快设置 / 最少基础设施 | 否 | 👉 [前往 Agent v2 版本](./respeaker_xvf_3800_agora.md) |
+| **Agora 对话式 AI Agent v2（云端，直接）** | 最快设置 / 最少基础设施 | 否 | 👉 [前往 Agent v2 版本](/cn/respeaker_xvf3800_agora_convo_client) |
 | **TEN Framework（自托管，可插拔 ASR/LLM/TTS）** | 自定义管道 / 提供商切换 / 高级功能 | 是（Docker） | 您在这里 ✅ |
 
 

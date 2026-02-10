@@ -43,7 +43,7 @@ Esta guía proporciona **dos opciones de backend**. Elige la que se adapte a tu 
 | Opción | Mejor para | Servidor Necesario | Enlace |
 |---|---|---:|---|
 | **Agora Conversational AI Agent v2 (Nube, directo)** | Configuración más rápida / infraestructura mínima | No | Estás aquí ✅ |
-| **TEN Framework (Auto-hospedado, ASR/LLM/TTS conectables)** | Pipeline personalizado / cambio de proveedores / características avanzadas | Sí (Docker) | 👉 [Ir a la versión TEN Framework](./respeaker_xvf_3800_agora_ten_framework.md) |
+| **TEN Framework (Auto-hospedado, ASR/LLM/TTS conectables)** | Pipeline personalizado / cambio de proveedores / características avanzadas | Sí (Docker) | 👉 [Ir a la versión TEN Framework](/es/respeaker_xvf3800_agora_ten_framework_client) |
 
 ## Tabla de Contenidos
 
