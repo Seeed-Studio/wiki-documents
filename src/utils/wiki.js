@@ -1,6 +1,26 @@
 const docList = [
   [
     {
+      "path": "/respeaker_xvf3800_agora_convo_client",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
+      "title": "reSpeaker XVF3800 (XIAO ESP32-S3) + Agora Conversational AI Agent v2 Edge Conversational Client Deployment Guide",
+      "date": "04/2/2026",
+      "title_cn": "reSpeaker XVF3800（XIAO ESP32-S3）+ Agora Conversational AI Agent v2 端侧对话客户端部署指南",
+      "title_ja": "reSpeaker XVF3800（XIAO ESP32-S3）+ Agora Conversational AI Agent v2 エッジ会話クライアント展開ガイド",
+      "title_es": "Guía de Implementación del Cliente Conversacional Edge reSpeaker XVF3800 (XIAO ESP32-S3) + Agora Conversational AI Agent v2"
+    },
+    {
+      "path": "/j501_mini_starai_viola_fruit_sorting",
+      "image": "https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png",
+      "title": "🍎 Fruit Sorting with J501 Mini and StarAI Viola Arm",
+      "date": "2026-2-2",
+      "title_cn": "🍎 使用 J501 Mini 和 StarAI Viola 机械臂进行水果分拣",
+      "title_ja": "🍎 J501 MiniとStarAI Violaアームによるフルーツ仕分け",
+      "title_es": "🍎 Clasificación de Frutas con J501 Mini y Brazo StarAI Viola"
+    }
+  ],
+  [
+    {
       "path": "/respeaker_xvf_3800_xiaozhi",
       "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp",
       "title": "Deploy your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeaker",
@@ -97,26 +117,6 @@ const docList = [
       "title_cn": "Seeed Studio XIAO nRF54L15 的 MicroPython",
       "title_ja": "Seeed Studio XIAO nRF54L15 用 MicroPython",
       "title_es": "MicroPython para Seeed Studio XIAO nRF54L15"
-    }
-  ],
-  [
-    {
-      "path": "/recomputer_rs485_loopback_test",
-      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/RS485/RS485_connection.jpg",
-      "title": "reComputer RS485 test",
-      "date": "01/14/2026",
-      "title_cn": "reComputer RS485 测试",
-      "title_ja": "reComputer RS485 テスト",
-      "title_es": "Prueba RS485 de reComputer"
-    },
-    {
-      "path": "/xiao_esp32c5_with_freertos",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
-      "title": "XIAO ESP32-C5 With FreeRTOS",
-      "date": "1/13/2026",
-      "title_cn": "XIAO ESP32-C5 与 FreeRTOS",
-      "title_ja": "XIAO ESP32-C5 と FreeRTOS",
-      "title_es": "XIAO ESP32-C5 Con FreeRTOS"
     }
   ]
 ];
