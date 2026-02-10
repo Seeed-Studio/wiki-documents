@@ -27,7 +27,7 @@ Ejecutar modelos de lenguaje grandes (LLMs) en dispositivos edge como NVIDIA Jet
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J501-p-6537.html" target="_blank">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
 </a></div>
 

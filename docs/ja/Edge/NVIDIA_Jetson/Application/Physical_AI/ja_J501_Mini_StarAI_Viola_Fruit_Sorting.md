@@ -22,7 +22,7 @@ last_update:
 
 ## 🚀 はじめに
 
-このwikiでは、**J501 Mini（Jetson AGX Orin）**と**StarAI Violaロボットアーム**を使用して、**LeRobotフレームワーク**を用いたフルーツ仕分けタスクを実行する方法を説明します。このプロジェクトでは、データ収集から展開までのエンドツーエンドワークフローを紹介し、ロボットが知的にフルーツを掴んで整理できるようにします。
+このwikiでは、**J501 Mini（Jetson AGX Orin）**と**StarAI Violaロボットアーム**を使用して、**LeRobotフレームワーク**でフルーツ仕分けタスクを実行する方法を説明します。このプロジェクトでは、データ収集から展開までのエンドツーエンドワークフローを紹介し、ロボットが知的にフルーツを掴んで整理できるようにします。
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png"/>
@@ -55,7 +55,7 @@ last_update:
 - 💻 **Jetson AGX Orin**での**LeRobot**ソフトウェア環境設定
 - 🎯 フルーツ仕分けタスクのデータ収集とテレオペレーション
 - 🤖 ACTポリシーモデルの訓練
-- 🚀 自律的なフルーツ仕分けのための訓練済みモデルの展開
+- 🚀 自律フルーツ仕分けのための訓練済みモデルの展開
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/other/catch-fruit.png"/>
@@ -63,7 +63,7 @@ last_update:
 
 <p></p>
 
-**📚 このチュートリアルでは、知的なフルーツ仕分けシステムをゼロから構築するためのステップバイステップの手順を提供します。**
+**📚 このチュートリアルでは、知的フルーツ仕分けシステムをゼロから構築するためのステップバイステップの手順を提供します。**
 
 :::warning
 このwikiはJetPack 6.2.1に基づいており、Jetson AGX Orinモジュールを使用しています。
@@ -73,12 +73,12 @@ last_update:
 
 ### 必要なコンポーネント
 
-- **J501 Mini** Jetson AGX Orinモジュール付き
-- **StarAI Viola** フォロワーアーム（6+1 DoF）
-- **StarAI Violin** リーダーアーム（6+1 DoF）テレオペレーション用
-- **USBカメラ 2台**（640x480 @ 30fps推奨）
-  - 手首取り付けカメラ 1台
-  - 第三者視点カメラ 1台
+- **J501 Mini**（Jetson AGX Orinモジュール付き）
+- **StarAI Viola**フォロワーアーム（6+1自由度）
+- **StarAI Violin**リーダーアーム（6+1自由度、テレオペレーション用）
+- **USBカメラ2台**（640x480 @ 30fps推奨）
+  - 手首取り付けカメラ1台
+  - 三人称視点カメラ1台
 - **UC-01デバッグボード**（2台、アームに付属）
 - **12V電源**（ロボットアーム用）
 - **USBケーブル**（アーム通信用）
@@ -89,8 +89,8 @@ last_update:
 | コンポーネント | 仕様 |
 |-----------|--------------|
 | **J501 Mini** | Jetson AGX Orin、JetPack 6.2.1 |
-| **Viola フォロワー** | 6+1 DoF、470mmリーチ、300gペイロード |
-| **Violin リーダー** | 6+1 DoF、470mmリーチ、テレオペレーション |
+| **Violaフォロワー** | 6+1自由度、470mmリーチ、300gペイロード |
+| **Violinリーダー** | 6+1自由度、470mmリーチ、テレオペレーション |
 | **カメラ** | USB、640x480 @ 30fps、MJPG形式 |
 | **電源** | 各アーム12V 10A |
 
@@ -98,7 +98,7 @@ last_update:
 
 ### 前提条件
 
-- Ubuntu 22.04（J501 Mini上でJetPack 6.2.1）
+- Ubuntu 22.04（JetPack 6.2.1搭載のJ501 Mini）
 - Python 3.10
 - CUDA 12+
 - PyTorch 2.6+（GPU版）
@@ -126,26 +126,27 @@ cd ~/lerobot
 conda install ffmpeg -c conda-forge
 ```
 
-### PyTorchと依存関係のインストール
+### Jetson用PyTorchとTorchvisionのインストール
 
-Jetsonデバイスの場合、まずPyTorchとTorchvisionをインストールします：
+Jetsonデバイスでは、LeRobotをインストールする前にGPU版のPyTorchとTorchvisionをインストールする必要があります。PyTorch-gpuとTorchvisionをインストールするには、[このJetson PyTorchインストールチュートリアル](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)に従ってください。
+
+### LeRobotと依存関係のインストール
+
+PyTorch-gpuとTorchvisionをインストールした後、LeRobotをインストールします：
 
 ```bash
-# Install PyTorch for Jetson (refer to official Jetson PyTorch installation guide)
-# Example:
-pip3 install torch torchvision torchaudio
-
-# Install LeRobot
 cd ~/lerobot && pip install -e .
+```
 
-# Install additional dependencies for Jetson
-conda install -y -c conda-forge "opencv>=4.10.0.84"
-conda remove opencv
-pip3 install opencv-python==4.10.0.84
-pip3 install numpy==1.26.0
+Jetson JetPack 6.0+デバイスの場合、追加の依存関係をインストールします：
 
-# Remove brltty if it causes USB port conflicts
-sudo apt remove brltty
+```bash
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
+conda remove opencv   # Uninstall OpenCV
+pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
 ### StarAIモーター依存関係のインストール
@@ -155,11 +156,20 @@ pip install lerobot_teleoperator_bimanual_leader
 pip install lerobot_robot_bimanual_follower
 ```
 
-### インストールの確認
+### PyTorchとTorchvisionの確認
+
+pipを介してLeRobot環境をインストールすると、元のPyTorchとTorchvisionがアンインストールされ、CPU版がインストールされるため、Pythonで確認を行う必要があります：
 
 ```python
 import torch
 print(torch.cuda.is_available())  # Should print True
+```
+
+印刷結果が`False`の場合、[このJetsonチュートリアル](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)に従ってPyTorchとTorchvisionを再インストールする必要があります。
+
+```bash
+# Remove brltty if it causes USB port conflicts
+sudo apt remove brltty
 ```
 
 ## 🔧 ハードウェアセットアップとキャリブレーション
@@ -177,7 +187,7 @@ lerobot-find-port
 - リーダーアーム：`/dev/ttyUSB0`
 - フォロワーアーム：`/dev/ttyUSB1`
 
-USBポートアクセス権限を付与：
+USBポートアクセスを許可します：
 
 ```bash
 sudo chmod 666 /dev/ttyUSB*
@@ -187,7 +197,7 @@ sudo chmod 666 /dev/ttyUSB*
 
 キャリブレーション前に、両方のアームを初期位置に移動します：
 
-| **Violin リーダーアーム** | **Viola フォロワーアーム** |
+| **Violinリーダーアーム** | **Violaフォロワーアーム** |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_init.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_init.png) |
 
@@ -200,7 +210,7 @@ lerobot-calibrate \
     --teleop.id=my_violin_leader
 ```
 
-各関節を最大位置と最小位置に手動で移動します。すべての関節をキャリブレーション後、Enterキーを押して保存します。
+各関節を手動で最大位置と最小位置に移動します。すべての関節をキャリブレーションした後、Enterキーを押して保存します。
 
 ### フォロワーアームのキャリブレーション
 
@@ -230,8 +240,8 @@ Camera #1: /dev/video4 (front camera)
 ```
 
 カメラを取り付けます：
-- **手首カメラ**：グリッパーに取り付けてクローズアップビュー用
-- **フロントカメラ**：デスクトップに配置して第三者視点用
+- **手首カメラ**：クローズアップビュー用にグリッパーに取り付け
+- **フロントカメラ**：三人称視点用にデスクトップに配置
 
 ## 🎮 テレオペレーションテスト
 
@@ -257,7 +267,7 @@ ACTモデル訓練では、カメラ名は`wrist`と`front`である必要があ
 
 ### Hugging Faceへのログイン（オプション）
 
-Hugging Face Hubにデータセットをアップロードしたい場合：
+データセットをHugging Face Hubにアップロードしたい場合：
 
 ```bash
 huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
@@ -304,7 +314,7 @@ lerobot-record \
 - **ESC**：記録を停止してデータセットを保存
 
 :::tip
-キーボード操作が機能しない場合は、`pip install pynput==1.6.8`を試してください
+キーボード制御が動作しない場合は、`pip install pynput==1.6.8` を試してください
 :::
 
 ### エピソードの再生
@@ -320,7 +330,7 @@ lerobot-replay \
     --dataset.episode=0
 ```
 
-## 🎓 ACTポリシーの訓練
+## 🎓 ACT ポリシーの訓練
 
 ### 訓練設定
 
@@ -346,25 +356,25 @@ lerobot-train \
 
 | パラメータ | 説明 |
 |-----------|-------------|
-| `--policy.type` | モデルタイプ（act） |
-| `--steps` | 総訓練ステップ数（100,000） |
-| `--batch_size` | 訓練バッチサイズ（8） |
-| `--eval_freq` | 評価頻度（5000ステップごと） |
-| `--wandb.enable` | Weights & Biasesログ記録を有効化 |
+| `--policy.type` | モデルタイプ (act) |
+| `--steps` | 総訓練ステップ数 (100,000) |
+| `--batch_size` | 訓練バッチサイズ (8) |
+| `--eval_freq` | 評価頻度 (5000ステップごと) |
+| `--wandb.enable` | Weights & Biases ログ記録を有効化 |
 
-### トレーニング時間
+### 訓練時間
 
-J501 Mini（AGX Orin）での場合：
+J501 Mini (AGX Orin) での場合：
 - 50エピソード：約8-10時間
 - 100エピソード：約16-20時間
 
 :::tip
-`--wandb.enable=true`を有効にして、Weights & Biasesでトレーニングの進行状況を監視できます。まず`wandb login`を実行してください。
+`--wandb.enable=true` を有効にして、Weights & Biases で訓練の進捗を監視できます。まず `wandb login` を実行してください。
 :::
 
-### トレーニングの再開
+### 訓練の再開
 
-トレーニングが中断された場合、最後のチェックポイントから再開します：
+訓練が中断された場合、最後のチェックポイントから再開します：
 
 ```bash
 lerobot-train \
@@ -375,9 +385,9 @@ lerobot-train \
 
 ## 🚀 デプロイメントと評価
 
-### トレーニング済みモデルの評価
+### 訓練済みモデルの評価
 
-評価エピソードを実行して、トレーニング済みポリシーをテストします：
+評価エピソードを実行して訓練済みポリシーをテストします：
 
 ```bash
 lerobot-record \
@@ -394,7 +404,7 @@ lerobot-record \
 
 ### 自律動作
 
-トレーニングが完了すると、ロボットは自律的にフルーツを分類できます。以下の動画は、J501 MiniとStarAI Violaアームを使用してトレーニング済みACTポリシーによる完全なフルーツ分類ワークフローを実演しています：
+訓練が完了すると、ロボットは自律的にフルーツを仕分けできます。以下の動画は、J501 Mini と StarAI Viola アームを使用して訓練済みACTポリシーによる完全なフルーツ仕分けワークフローを実演しています：
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/Tk6jazbZZy0" title="Fruit Sorting Demo with J501 Mini and StarAI Viola" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -403,48 +413,48 @@ lerobot-record \
 **デモのハイライト：**
 - ロボットが自律的に異なるフルーツを識別し把持
 - テレオペレーションデモンストレーションから学習したスムーズで正確な動き
-- 指定されたコンテナにフルーツを正常に分類
-- J501 MiniでトレーニングされたACTポリシーの有効性を実証
+- 指定されたコンテナへのフルーツ仕分けに成功
+- J501 Mini で訓練されたACTポリシーの有効性を実証
 
-自律フルーツ分類を実行するには：
+自律フルーツ仕分けを実行するには：
 
 1. ワークスペースにフルーツを配置
 2. 上記の評価コマンドを実行
-3. ロボットが学習した行動を実行してフルーツを把持し分類
+3. ロボットが学習した行動を実行してフルーツを把持・仕分け
 
-## 🎯 パフォーマンス向上のためのヒント
+## 🎯 性能向上のためのヒント
 
 ### データ収集のベストプラクティス
 
 1. **一貫した環境**
    - 照明条件を安定に保つ
    - 背景の変化を最小限に抑える
-   - 一貫したフルーツの配置を使用
+   - 一貫したフルーツ配置を使用
 
 2. **量より質**
    - スムーズで意図的なデモンストレーションを収集
    - ぎくしゃくした動きを避ける
-   - トレーニングデータで成功した把持を確保
+   - 訓練データで成功した把持を確保
 
-3. **カメラの位置決め**
+3. **カメラ位置**
    - カメラアングルを一貫して保つ
    - フルーツとグリッパーの良好な視認性を確保
-   - 記録中のカメラの動きを避ける
+   - 記録中のカメラ移動を避ける
 
-### トレーニングの最適化
+### 訓練の最適化
 
 1. **データセットサイズ**
    - 50エピソードから開始
-   - パフォーマンスが不十分な場合はデータを追加
+   - 性能が不十分な場合はデータを追加
    - 単純なタスクには通常100-200エピソードで十分
 
-2. **ハイパーパラメータチューニング**
+2. **ハイパーパラメータ調整**
    - GPUメモリに基づいてバッチサイズを調整
-   - より良い収束のためにトレーニングステップを増加
+   - より良い収束のために訓練ステップを増加
    - 評価メトリクスを監視
 
 3. **環境の一貫性**
-   - トレーニングと同様の条件でデプロイ
+   - 訓練と同様の条件でデプロイ
    - 一貫した照明を維持
    - 同様のフルーツタイプとコンテナを使用
 
@@ -468,30 +478,30 @@ sudo chmod 777 /dev/ttyUSB*
 **カメラが動作しない**
 - USBハブ経由でカメラを接続しない
 - 直接USB接続を使用
-- `lerobot-find-cameras opencv`でカメラインデックスを確認
+- `lerobot-find-cameras opencv` でカメラインデックスを確認
 
-**トレーニングでメモリ不足**
+**訓練でメモリ不足**
 - バッチサイズを削減：`--batch_size=4`
 - 画像解像度を削減
 - 他のアプリケーションを閉じる
 
-**推論パフォーマンスが悪い**
-- より多くのトレーニングデータを収集
+**推論性能が悪い**
+- より多くの訓練データを収集
 - 一貫した環境を確保
-- カメラの位置を確認
-- キャリブレーションの精度を検証
+- カメラ位置を確認
+- キャリブレーション精度を検証
 
 ## 📚 参考資料
 
-- 🔗 [LeRobotドキュメント](https://github.com/huggingface/lerobot)
+- 🔗 [LeRobot ドキュメント](https://github.com/huggingface/lerobot)
 - 🔗 [StarAI Arm Wiki](https://wiki.seeedstudio.com/ja/lerobot_starai_arm/)
-- 🔗 [J501 Miniドキュメント](https://wiki.seeedstudio.com/ja/recomputer_j501_mini_getting_started/)
-- 🔗 [ACT論文](https://tonyzhaozh.github.io/aloha/)
+- 🔗 [J501 Mini ドキュメント](https://wiki.seeedstudio.com/ja/recomputer_j501_mini_getting_started/)
+- 🔗 [ACT 論文](https://tonyzhaozh.github.io/aloha/)
 - 🔗 [JetPack SDK](https://developer.nvidia.com/embedded/jetpack)
 
 ## 🤝 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

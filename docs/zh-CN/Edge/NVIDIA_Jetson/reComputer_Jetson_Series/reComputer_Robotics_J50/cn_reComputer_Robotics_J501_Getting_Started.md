@@ -1,5 +1,5 @@
 ---
-description: 本 wiki 提供了 reComputer Jetson Robotics J501 载板的硬件特性和接口使用的全面介绍。涵盖详细规格、支持的模块、设置说明，以及使用各种接口的实用指南，如双 M.2 Key M 插槽、10GbE + 4x 1GbE 以太网、USB 3.0、四个 CAN 接口（2 个原生 + 2 个 SPI-to-CAN）、UART、DI/DO、I2S 和 GMSL2 摄像头扩展，帮助用户快速开始在 J501 平台上进行机器人开发。
+description: 本 wiki 提供了 reComputer Jetson Robotics J501 载板的硬件特性和接口使用的全面介绍。涵盖详细规格、支持的模块、设置说明，以及使用各种接口的实用指南，如双 M.2 Key M 插槽、10GbE + 4x 1GbE 以太网、USB 3.0、四个 CAN 接口（2 个原生 + 2 个 SPI-to-CAN）、UART、DI/DO、I2S 和 GMSL2 相机扩展，帮助用户快速开始在 J501 平台上进行机器人开发。
 title: 刷写 Jetpack && 接口使用
 tags:
   - reComputer Robotics J501
@@ -18,9 +18,9 @@ last_update:
 
 # Robotics J501 硬件和入门指南
 
-reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机器人和工业应用而设计。兼容 NVIDIA Jetson AGX Orin 模块（32GB/64GB）的 MAXN 模式，可提供高达 275 TOPS 的 AI 性能。
+reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机器人和工业应用而设计。兼容 NVIDIA Jetson AGX Orin 模块（32GB/64GB）在 MAXN 模式下，可提供高达 275 TOPS 的 AI 性能。
 
-配备丰富的连接选项——包括 1x 10GbE 和 4x 1GbE 以太网端口、双 M.2 Key M 插槽用于 NVMe SSD、M.2 插槽用于 5G 和 Wi-Fi/BT 模块、多个 USB 3.0 端口、四个 CAN 接口（2 个原生 + 2 个 SPI-to-CAN）、GMSL2 摄像头扩展，以及包括 DI/DO、I2S、UART 和 RS485 在内的全面 I/O——它作为复杂多传感器融合和实时 AI 处理的强大机器人大脑。
+配备丰富的连接选项——包括 1x 10GbE 和 4x 1GbE 以太网端口、双 M.2 Key M 插槽用于 NVMe SSD、M.2 插槽用于 5G 和 Wi-Fi/BT 模块、多个 USB 3.0 端口、四个 CAN 接口（2 个原生 + 2 个 SPI-to-CAN）、GMSL2 相机扩展，以及包括 DI/DO、I2S、UART 和 RS485 在内的全面 I/O——它作为强大的机器人大脑，用于复杂的多传感器融合和实时 AI 处理。
 
 预装 JetPack 6.2.1 和 Linux BSP，确保无缝部署。支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，J501 将大语言模型驱动的决策制定与物理机器人控制相结合，通过即用型接口和优化的 AI 框架加速自主机器人的开发。
 
@@ -29,7 +29,7 @@ reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J401-Carrier-Board-optional-accessories.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱</font></span></strong>
     </a>
 </div>
@@ -39,7 +39,7 @@ reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机
 - **高性能 AI**：搭配 Jetson AGX Orin 32/64GB 模块可达 275 TOPS，配备 Ampere GPU 和 DLA 引擎
 - **丰富连接性**：双 M.2 Key M（NVMe）；Key E（WiFi/BT）+ Key B（5G）；1x 10GbE + 4x 1GbE；3x USB 3.0；2x USB-C
 - **四路 CAN-FD**：2x 原生 + 2x SPI-to-CAN 接口，具有电气隔离
-- **GMSL2 视觉**：单个 GMSL2 接口（1x）用于高速摄像头连接
+- **GMSL2 视觉**：单个 GMSL2 接口（1x）用于高速相机连接
 - **工业设计**：19-48V DC 输入；-10~60°C 工作温度；隔离接口；预装 JetPack 6.2.1
 - **机器人就绪**：ROS 2/1、Isaac ROS 支持；DI/DO、I2S、UART、RS485；AMR 和自动化优化
 
@@ -92,8 +92,8 @@ reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机
       <td>1x 8K30 / 3x 4K60 / 7x 4K30 / 11x 1080p60 / 22x 1080p30 (H.265)</td>
     </tr>
     <tr>
-      <td>CSI 摄像头</td>
-      <td colSpan={2}>最多 6 个摄像头（通过虚拟通道可达 16 个）<br/>16 通道 MIPI CSI-2<br/>D-PHY 2.1（最高 40Gbps）/ C-PHY 2.0（最高 164Gbps）</td>
+      <td>CSI 相机</td>
+      <td colSpan={2}>最多 6 个相机（通过虚拟通道可达 16 个）<br/>16 通道 MIPI CSI-2<br/>D-PHY 2.1（最高 40Gbps）/ C-PHY 2.0（最高 164Gbps）</td>
     </tr>
     <tr>
       <td>机械规格</td>
@@ -112,7 +112,7 @@ reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机
     </tr>
     <tr>
       <th>USB</th>
-      <td colSpan={2}>3x USB 3.0 Type-A<br/>1x USB 3.0 Type-C（Recovery）<br/>1x USB 2.0 Type-C（Debug UART）</td>
+      <td colSpan={2}>3x USB 3.0 Type-A<br/>1x USB 3.0 Type-C（恢复）<br/>1x USB 2.0 Type-C（调试 UART）</td>
     </tr>
     <tr>
       <th>DI/DO/CAN</th>
@@ -120,7 +120,7 @@ reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机
     </tr>
     <tr>
       <th>GMSL</th>
-      <td colSpan={2}>2x Mini-Fakra 连接器（用于 8x GMSL2 摄像头）（可选）</td>
+      <td colSpan={2}>2x Mini-Fakra 连接器（用于 8x GMSL2 相机）（可选）</td>
     </tr>
     <tr>
       <th>串口</th>
@@ -136,7 +136,7 @@ reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机
     </tr>
     <tr>
       <th>按钮</th>
-      <td colSpan={2}>1x Recovery + 1x Reset</td>
+      <td colSpan={2}>1x 恢复 + 1x 重置</td>
     </tr>
     <tr>
       <th>LED</th>
@@ -194,7 +194,7 @@ reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机
     </tr>
     <tr>
       <th>GMSL 输入</th>
-      <td>最多 8x GMSL2 摄像头</td>
+      <td>最多 8x GMSL2 相机</td>
     </tr>
     <tr>
       <th>连接方式</th>
@@ -264,7 +264,7 @@ reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机
 
 ### 准备 Jetpack 镜像
 
-在这里，我们需要将对应我们使用的 Jetson 模块的系统镜像下载到 Ubuntu PC：
+在这里，我们需要将对应我们使用的 Jetson 模块的系统镜像下载到我们的 Ubuntu PC：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -282,13 +282,13 @@ reComputer Robotics J501 是一款高性能边缘 AI 载板，专为先进的机
       <td rowSpan={4}>6.2.1</td>
       <td> AGX Orin 64GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDPKrVl7UDaTYXmxi1CoTu2AcsHUPKLqNw_olmvlPBODqQ?e=gWuNzv">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQDPKrVl7UDaTYXmxi1CoTu2AcsHUPKLqNw_olmvlPBODqQ?e=gWuNzv">下载</a></td>
       <td>ed82745decdf554d82bd93441f1f4ad<br/>149f395a4ba5719664ce2351be8201522  </td>
     </tr>
     <tr>
       <td>AGX Orin 32GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB3JLwYRpS8SqoqjWuXJmmmAW56Nvpdn8YnbYLW7g5_FHM?e=Gqe1XR">Download</a></td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB3JLwYRpS8SqoqjWuXJmmmAW56Nvpdn8YnbYLW7g5_FHM?e=Gqe1XR">下载</a></td>
       <td>58fa8b76754449b0a49ad7d5f273edd<br/>f3e1d1f458cdb34994f6d8643da7a1249 </td>
     </tr>
   </tbody>
@@ -302,7 +302,7 @@ Jetpack6 镜像文件大约 **14.2GB**，下载大约需要 60 分钟。请耐�
 :::info
 为了验证下载固件的完整性，您可以比较 SHA256 哈希值。
 
-在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 来获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值匹配，则确认您下载的固件是完整且未损坏的。
+在 Ubuntu 主机上，打开终端并运行命令 `sha256sum <File>` 来获取下载文件的 SHA256 哈希值。如果得到的哈希值与 wiki 中提供的 SHA256 哈希值匹配，则确认您下载的固件是完整且完好的。
 :::
 
 ⚙️ **SEEED Jetson 载板的所有 `.dts` 文件和其他源代码可从** [Linux_for_Tegra](https://github.com/Seeed-Studio/Linux_for_Tegra) **下载**
@@ -624,7 +624,7 @@ J501 具有多个状态 LED：
 
 ### 使用说明
 
-以下演示如何控制 USER LED 显示绿色、红色或蓝色。
+以下演示如何控制用户 LED 显示绿色、红色或蓝色。
 
 ```bash
 #change to red
@@ -758,7 +758,7 @@ Robotics J501 提供两个 4 针 PWM 风扇连接器，设计用于冷却 Jetson
 - **12V 风扇**：2.54 mm 连接器，最大 1.5A，适用于高性能冷却
 - **5V 风扇**：1.25 mm JST 连接器，最大 1.5A，适用于低功耗静音冷却
 
-PWM 控制允许基于系统温度进行动态和精确的速度调节，实现高效冷却的同时最大限度地减少噪音和功耗。
+PWM 控制允许基于系统温度进行动态和精确的速度调节，实现高效冷却的同时最小化噪音和功耗。
 
 **12V 风扇引脚定义：**
 
@@ -783,7 +783,7 @@ echo 200 > /sys/bus/platform/devices/pwm-fan/hwmon/hwmon1/pwm1
 </div>
 
 :::note
-默认热策略已在 `/etc/nvpmodel.conf` 中预配置。对于自定义配置文件，请参考 [NVIDIA Jetson Linux Developer Guide](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)。
+默认热策略已在 `/etc/nvpmodel.conf` 中预配置。对于自定义配置文件，请参考 [NVIDIA Jetson Linux 开发者指南](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)。
 :::
 
 此外，我们可以使用 `jtop` 工具手动设置风扇速度。
@@ -828,15 +828,15 @@ reComputer Robotics J501 配备了 4 个独立的 CAN 接口（CAN 0、CAN 1、C
 本节演示在 Jetson 上连接 CAN0↔CAN1 和 CAN2↔CAN3，并展示如何在经典 CAN 模式和 CAN‑FD 模式下在这些对之间发送和接收数据。
 
 | 通道名称 | 接口类型 | 引脚名称 | GPIO 芯片 | GPIO 编号 | 终端电阻控制 |
-|--------------|----------------|----------|-----------|-------------|------------------------------|
-| CAN0         | 原生         | PAA.04   | gpiochip1 | 4           | gpiochip1 line4 (PAA.04)    |
-| CAN1         | 原生         | PAA.07   | gpiochip1 | 7           | gpiochip1 line7 (PAA.07)    |
-| CAN2         | SPI-to-CAN     | -        | gpiochip2 | 10          | gpiochip2 line10             |
-| CAN3         | SPI-to-CAN     | -        | gpiochip2 | 12          | gpiochip2 line12             |
+|----------|----------|----------|-----------|-----------|--------------|
+| CAN0     | 原生     | PAA.04   | gpiochip1 | 4         | gpiochip1 line4 (PAA.04) |
+| CAN1     | 原生     | PAA.07   | gpiochip1 | 7         | gpiochip1 line7 (PAA.07) |
+| CAN2     | SPI-to-CAN | -      | gpiochip2 | 10        | gpiochip2 line10 |
+| CAN3     | SPI-to-CAN | -      | gpiochip2 | 12        | gpiochip2 line12 |
 
-CAN0 和 CAN1 的终端电阻可以通过两个引脚控制：PAA.04（位于 gpiochip1 line4）和 PAA.07（位于 gpiochip1 line7）。  
+CAN0 和 CAN1 的终端电阻可以通过两个引脚控制：PAA.04（位于 gpiochip1 line4）和 PAA.07（位于 gpiochip1 line7）。
 
-终端电阻控制遵循以下规则：  
+终端电阻控制遵循以下规则：
 
 ```
 When `PAA.04 = 1`, the 120 Ω termination resistor of CAN0 is **disconnected**;  
@@ -1301,7 +1301,7 @@ sudo ./spidev_test -v -D /dev/spidev2.0 -s 100000
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/spi_out.png"/>
 </div>
 
-> 关键判断标准：TX（发送）数据与 RX（接收）数据一致，表明 SPI 环回测试成功，SPI 接口功能正常。
+> 关键判断标准：TX（发送）数据与 RX（接收）数据一致，表明 SPI 回环测试成功，SPI 接口功能正常。
 
 ## UART
 
@@ -1320,13 +1320,13 @@ reComputer Robotics J501 配备了 2 个独立的 UART 接口（UART1 和 UART2�
 
 每个 DB9 引脚的功能因通信模式而异。请参考下表进行准确接线（引脚编号遵循标准 DB9 公头连接器规范）：
 
-| DB9 引脚编号 | RS232 模式功能 | RS422 模式功能 | RS485 模式功能 |
+| DB9 引脚号 | RS232 模式功能 | RS422 模式功能 | RS485 模式功能 |
 |----------------|---------------------|---------------------|---------------------|
 | 1              | -                   | TXD-（发送数据-） | Data-（差分数据-） |
 | 2              | RXD（接收数据）  | TXD+（发送数据+） | Data+（差分数据+） |
 | 3              | TXD（发送数据） | RXD+（接收数据+） | -                   |
 | 4              | -                   | RXD-（接收数据-） | -                   |
-| 5              | GND（接地）        | GND（接地）        | GND（接地）        |
+| 5              | GND（地线）        | GND（地线）        | GND（地线）        |
 | 6              | -                   | -                   | -                   |
 | 7              | RTS（请求发送） | -                   | -                   |
 | 8              | CTS（清除发送） | -                   | -                   |
@@ -1495,7 +1495,7 @@ RTC 2 针接头提供了连接外部电源到 RTC 的替代方式。
 
 **步骤 2.** 打开 reComputer Robotics J501。
 
-**步骤 3.** 在 Ubuntu 桌面上，点击右上角的下拉菜单，导航到 `Settings > Date & Time`，通过以太网线连接到网络并选择 **Automatic Date & Time** 自动获取日期/时间。
+**步骤 3.** 在 Ubuntu 桌面上，点击右上角的下拉菜单，导航到 `Settings > Date & Time`，通过以太网电缆连接到网络并选择 **Automatic Date & Time** 以自动获取日期/时间。
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rtc_1.png"/>
@@ -1511,7 +1511,7 @@ RTC 2 针接头提供了连接外部电源到 RTC 的替代方式。
 cat /sys/devices/platform/bpmp/bpmp\:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
 ```
 
-**步骤 5.** 断开网络连接并重启设备。您会发现系统时间已断电但仍正常运行。
+**步骤 5.** 断开网络连接并重启设备。您会发现系统时间已断电但仍能正常工作。
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rtc_2.png"/>
 </div>
@@ -1616,7 +1616,7 @@ v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0 -d /dev/vide
 :::note
 `trig_mode = 1` 启用帧同步，而 `trig_mode = 0` 禁用帧同步。默认设置是禁用帧同步。
 
-`--set-fmt-video` 后跟根据连接的摄像头选择的分辨率。目前有三个 sensor_mode 选项，每个对应不同的分辨率。
+`--set-fmt-video` 后跟的分辨率是根据连接的摄像头选择的。目前有三个 sensor_mode 选项，每个对应不同的分辨率。
 
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080

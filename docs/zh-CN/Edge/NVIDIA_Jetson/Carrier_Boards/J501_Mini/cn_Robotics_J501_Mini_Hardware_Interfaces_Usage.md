@@ -1,6 +1,6 @@
 ---
-description: 本 wiki 提供了 reComputer Jetson Robotics J501-Mini 载板的硬件特性和接口使用的全面介绍。它涵盖了详细的规格、支持的模块、设置说明，以及使用各种接口（如 M.2、以太网、USB、CAN、UART、DI/DO、I2S 和 GMSL2 相机扩展）的实用指南，帮助用户快速开始在 J501-Mini 平台上进行机器人开发。
-title: 刷写 Jetpack && 接口使用
+description: 本 wiki 提供了 Jetson Robotics J501-Mini 载板的硬件特性和接口使用的全面介绍。它涵盖了详细的规格、支持的模块、设置说明，以及使用各种接口（如 M.2、以太网、USB、CAN、UART、DI/DO、I2S 和 GMSL2 相机扩展）的实用指南，帮助用户快速开始在 J501-Mini 平台上进行机器人开发。
+title: 刷写 Jetpack 和接口使用
 tags:
   - J501-Robotics 载板
   - 刷写 Jetpack
@@ -18,9 +18,9 @@ last_update:
 
 # Robotics J501 载板硬件和入门指南
 
-reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，专为先进机器人设计。兼容 NVIDIA Jetson AGX Orin 模块（32GB/64GB）在 MAXN 模式下，可提供高达 275 TOPS 的 AI 性能。配备广泛的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、2 个 USB 3.2 端口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——它作为一个强大的机器人大脑，能够处理来自各种传感器的复杂数据。预装 JetPack 6.2.1 和 Linux BSP，确保无缝部署。
+Robotics J501 Mini 载板是一款紧凑、高性能的边缘 AI 载板，专为先进机器人设计。兼容 NVIDIA Jetson AGX Orin 模块（32GB/64GB）在 MAXN 模式下，可提供高达 275 TOPS 的 AI 性能。配备广泛的连接选项——包括双千兆以太网端口、用于 5G 和 Wi-Fi/BT 模块的 M.2 插槽、2 个 USB 3.2 端口、CAN、GMSL2（通过可选扩展）、I2C 和 UART——它作为一个强大的机器人大脑，能够处理来自各种传感器的复杂数据。预装 JetPack 6.2.1 和 Linux BSP，确保无缝部署。
 
-支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，reComputer Robotics J501 Mini 将大语言模型驱动的决策制定与物理机器人控制（如运动规划和传感器融合）连接起来。非常适合自主机器人的快速开发，通过即用型接口和优化的 AI 框架加速产品上市时间。
+支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 ROS 2/1 等框架，Robotics J501 Mini 将大语言模型驱动的决策制定与物理机器人控制（如运动规划和传感器融合）连接起来。非常适合自主机器人的快速开发，通过即用型接口和优化的 AI 框架加速产品上市时间。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg"/>
@@ -44,7 +44,7 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
 
 ## 📝 零件清单
 
-- reComputer Robotics J501-Mini 载板 x 1
+- Robotics J501-Mini 载板 x 1
 - 电源和 JST 扩展板 x 1
 - XT30 转 DC 线缆 x 1
 - USB 线缆，Type A 转 Type C x 1
@@ -60,7 +60,7 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
 :::note
 1.在高电压电源和工作温度下，请根据热设计指南设计强大的散热解决方案。
 2.请为模块安装散热器以获得更好的性能。
-3.在高电压输入和高负载运行期间，请不要触摸散热器以防烫伤。
+3.在高电压输入和高负载运行期间，请勿触摸散热器以防烫伤。
 4.验证用电源适配器推荐，请使用 Seeed 官方网站推荐的电源适配器。
 
 - 19V/4.74A 5525 桶形插头电源适配器
@@ -102,19 +102,19 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
     <tr>
       <th rowSpan="13">I/O</th>
       <td>USB</td>
-      <td>2x USB 3.2 Type-A (10Gbps);<br />1x USB 2.0 Type C (Debug);<br />1x USB 3.0 Type C (Recovery/Debug)</td>
+      <td>2x USB 3.2 Type-A (10Gbps);<br />1x USB 2.0 Type C (调试);<br />1x USB 3.0 Type C (恢复/调试)</td>
     </tr>
     <tr>
       <td>相机</td>
-      <td>2x 4 合 1 GMSL2 Mini-Fakra 连接器（可选）；</td>
+      <td>2x 4 合 1 GMSL2 Mini-Fakra 连接器（可选）;</td>
     </tr>
     <tr>
       <td>CAN</td>
-      <td>2x CAN JST 4 针连接器(GH 1.25)；</td>
+      <td>2x CAN JST 4 针连接器(GH 1.25);</td>
     </tr>
     <tr>
       <td>DI/DO</td>
-      <td>1x DI JST 6 针连接器(GH 1.25)；<br />1x DO JST 5 针连接器(GH 1.25)；</td>
+      <td>1x DI JST 6 针连接器(GH 1.25);<br />1x DO JST 5 针连接器(GH 1.25);</td>
     </tr>
       <tr>
       <td>I2S</td>
@@ -142,15 +142,15 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
     </tr>
     <tr>
       <td>RTC</td>
-      <td>1x RTC 2 针；</td>
+      <td>1x RTC 2 针;</td>
     </tr>
     <tr>
       <td>LED</td>
-      <td>1x PWR LED，绿色；<br />1x SSD LED，绿色；<br />1x USR LED，RGB</td>
+      <td>1x PWR LED，绿色;<br />1x SSD LED，绿色;<br />1x USR LED，RGB</td>
     </tr>
     <tr>
       <td>按钮</td>
-      <td>1x Recovery 按钮；<br />1x RESET 按钮</td>
+      <td>1x 恢复按钮;<br />1x 复位按钮</td>
     </tr>
     <tr>
       <th rowSpan="1">电源</th>
@@ -175,7 +175,7 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
     </tr>
     <tr>
       <th rowSpan="1">工作温度</th>
-      <td colSpan="2">-20℃~60℃（25W 模式）；<br />-20℃~55℃（MAXN 模式）；<br />（配备 reComputer Robotics 散热器和风扇）</td>
+      <td colSpan="2">-20℃~60℃（25W 模式）;<br />-20℃~55℃（MAXN 模式）;<br />（配备 reComputer Robotics 散热器和风扇）</td>
     </tr>
     <tr>
       <th rowSpan="1">保修</th>
@@ -188,14 +188,14 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
   </tbody>
 </table>
 
-## 📦 刷写 JetPack OS
+## 📦 刷写 JetPack 操作系统
 
 ### 支持的模块
 
 - [NVIDIA® Jetson AGX Orin™ 模块 64GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-64GB-p-5957.html)
 - [NVIDIA® Jetson AGX Orin™ 模块 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5956.html)
 
-### 前提条件
+### 先决条件
 
 - Ubuntu 主机 PC
 - Robotics J501 Mini 载板
@@ -233,7 +233,7 @@ reComputer Robotics J501 Mini 是一款紧凑、高性能的边缘 AI 载板，�
 
 ### 准备 Jetpack 镜像
 
-在这里，我们需要将对应我们使用的 Jetson 模块的系统镜像下载到我们的 Ubuntu PC：
+在这里，我们需要将对应于我们使用的 Jetson 模块的系统镜像下载到我们的 Ubuntu PC：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -920,7 +920,7 @@ UART 和 GPO 使用相同的 JST 接口。此接口默认为 GPO 功能。**如�
 
 
 :::warning
-UART 和 GPO 共享同一个物理接口。默认情况下，此接口作为 GPO 功能。如果您需要切换到 UART，请参考本节内容。
+UART 和 GPO 共享相同的物理接口。默认情况下，此接口作为 GPO 功能。如果您需要切换到 UART，请参考本节内容。
 :::
 
 对于不同的模块，您需要下载相应的设备树文件。
@@ -1302,7 +1302,7 @@ Opening the data stream, you can view the video from the camera.
 ```
 
 :::note
-`ser_0_ch_0` 是解码器的第一个通道，`des_ch_0` 是第一个摄像头上的串行器，其他通道同理。如果连接的摄像头分辨率不同，那么这里的配置将基于摄像头的实际格式。
+`ser_0_ch_0` 是解码器的第一个通道，`des_ch_0` 是第一个摄像头上的串行器，其他通道同理。如果连接的摄像头具有不同的分辨率，那么这里的配置将基于摄像头的实际格式。
 每次设备重启时，我们都需要为串行器和解串器设置通道格式。
 :::
 
