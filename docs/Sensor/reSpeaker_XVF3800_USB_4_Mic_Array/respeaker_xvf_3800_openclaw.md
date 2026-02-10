@@ -14,8 +14,7 @@ last_update:
 
 
 > ---
-> Want to give your robot voice interaction capabilities? Try Seeed Studio's ReSpeaker series!
-> **reSpeaker XVF3800** is a professional-grade 4-microphone circular array based on the XMOS XVF3800 chip, capable of clearly picking up target speech even in noisy environments. It features 360° far-field voice pickup (up to 5 meters), Automatic Echo Cancellation (AEC), Automatic Gain Control (AGC), Sound Source Localization (DoA), dereverberation, beamforming, and noise suppression. Combined with the Feishu OpenClaw robot, you can build a complete office assistant solution with voice wake-up + AI intelligent reply.
+> Want to give your robot voice interaction capabilities? Try Seeed Studio's ReSpeaker series! The target of this project is to integrate the reSpeaker XVF3800 USB 4-Mic Array with OpenClaw, enabling voice-controlled AI agent operation. With reSpeaker's powerful audio capture and noise reduction capabilities, combined with OpenClaw's flexible AI agent framework, you can easily create a voice-controlled smart assistant that can understand and respond to your commands. This demo demonstrates how to use reSpeaker to control Openclaw, enabling it to automatically locate Lark groups and send interactive meeting invitation cards.
 > [Project Source Code Repository](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
 > [reSpeaker Product Source Code](https://github.com/respeaker)
 > [reSpeaker 4-Mic Array | Seeed Studio Purchase Link](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)
@@ -29,9 +28,8 @@ Below is a demonstration of the actual operation of this project:
 
 ### Demo Video
 
-<video src="https://files.seeedstudio.com/wiki/reSpeaker-openclaw/video.mp4" controls width="100%"></video>
+<video src="https://files.seeedstudio.com/wiki/reSpeaker-openclaw/DemoVideo.mp4" controls width="100%"></video>
 
-![Result](https://files.seeedstudio.com/wiki/reSpeaker-openclaw/result.png)
 
 ### Function Demonstration Description
 
@@ -48,7 +46,7 @@ The video demonstrates a complete voice interaction workflow:
 
 After successful execution, the Feishu group will receive an interactive card as follows:
 
-![Effect Showcase](https://files.seeedstudio.com/wiki/reSpeaker-openclaw/result1.png)
+![Effect Showcase](https://files.seeedstudio.com/wiki/reSpeaker-openclaw/result.png)
 
 
 ---
@@ -523,24 +521,7 @@ except Exception as e:
 
 ## Debugging and Troubleshooting
 
-### 1. Common Issues
-
-**Issue 1**: Skill not recognized
-- Check if the directory structure is correct.
-- Confirm `__init__.py` file exists.
-- View OpenClaw logs.
-
-**Issue 2**: Authentication failed
-- Check Feishu application configuration.
-- Confirm authentication info is correct.
-- Verify application permissions.
-
-**Issue 3**: Card sending failed
-- Check if the group ID is correct.
-- Verify card JSON format.
-- Check internet connection.
-
-### 2. Debugging Tips
+### 1. Debugging Tips
 
 ```bash
 # Enable debug mode
@@ -553,7 +534,7 @@ tail -f ~/.openclaw/logs/gateway.log
 python3 -c "import json; print(json.dumps(card_content, indent=2))"
 ```
 
-### 3. Verification Steps
+### 2. Verification Steps
 
 1. **Skill Recognition Verification**
    ```bash
