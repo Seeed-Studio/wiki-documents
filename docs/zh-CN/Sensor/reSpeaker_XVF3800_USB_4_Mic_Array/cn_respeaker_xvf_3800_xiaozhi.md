@@ -19,7 +19,7 @@ last_update:
 > 项目源码：https://github.com/Seeed-Projects/Xiaozhi_Esp32S3_reSpeaker
 > Seeed-Projects：https://github.com/Seeed-Projects
 
-reSpeaker XVF3800 是一款基于 XMOS XVF3800 芯片的专业 4 麦克风圆形阵列。它在嘈杂环境中提供可靠的语音拾取，具有双模式、360° 远场拾取（最远 5 米）、声学回声消除（AEC）、自动增益控制（AGC）、到达方向（DoA）、去混响、波束成形和噪声抑制等功能。凭借其强大的捕获和降噪能力，小智获得了更好的"耳朵"。
+reSpeaker XVF3800 是一款基于 XMOS XVF3800 芯片的专业 4 麦克风圆形阵列。它在嘈杂环境中提供可靠的语音拾取，具有双模式、360° 远场拾取（最远 5 米）、声学回声消除 (AEC)、自动增益控制 (AGC)、到达方向 (DoA)、去混响、波束成形和噪声抑制等功能。凭借其强大的捕获和降噪能力，小智获得了更好的"耳朵"。
 
 ![reSpeaker banner](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg)
 
@@ -81,7 +81,7 @@ sudo dfu-util -l
 
 #### 进入安全模式（推荐）
 
-适用情况：当前固件是 I2S 但您想要 USB、固件损坏或刷入了错误固件。
+适用情况：当前固件是 I2S 但您想要 USB、固件损坏或刷入了错误的固件。
 
 1. 完全断开电源。
 2. 按住板载"Mute"按钮。
@@ -110,23 +110,23 @@ sudo dfu-util -R -e -a 1 -D /path/to/respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.b
 dfu-util -R -e -a 1 -D /path/to/respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin
 ```
 
-参数说明：`-R`（重置/重启），`-e`（擦除），`-a 1`（写入 Upgrade alt），`-D`（固件文件）。
+参数：`-R`（重置/重启）、`-e`（擦除）、`-a 1`（写入 Upgrade alt）、`-D`（固件文件）。
 
-### 1.4 验证与故障排除
+### 1.4 验证和故障排除
 
 #### 验证固件
 
-刷入后，设备将自动重启，I2S 固件应该处于活动状态。您可以通过使用 ESP32S3 作为 I2S 主机从设备读取音频数据来验证。
+刷入后，设备将自动重启，I2S 固件应该激活。您可以通过使用 ESP32S3 作为 I2S 主机从设备读取音频数据来验证。
 
 #### 常见问题
 
-- 问：`dfu-util -l` 没有显示设备？
+- 问：`dfu-util -l` 不显示设备？
   - 检查 USB 线缆和端口（必须使用 XMOS 侧连接器）。
   - 如果设备当前运行 I2S 固件，请在刷入前进入安全模式。
-  - Windows 用户：通过 Zadig 确保使用 WinUSB 驱动程序。
+  - Windows 用户：通过 Zadig 确保 WinUSB 驱动程序。
 - 问：刷入过程中出错？
   - 尝试不同的 USB 线缆或主机端口，并在安全模式下重试。
-- 问：刷入后没有音频？
+- 问：刷入后无音频？
   - 验证 I2S 主机配置（采样率、通道数）是否与固件设置匹配。
 
 ---
@@ -141,7 +141,7 @@ dfu-util -R -e -a 1 -D /path/to/respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin
 
 1. 添加了共享 I2C 总线包装器，集中管理 I2C 主机并避免冲突。
 2. 在启动期间添加硬件探测：在应用程序启动前通过 I2C 探测 XVF3800。
-3. 解耦板级配置：使用 `config.h` 宏定义引脚和地址，便于移植。
+3. 解耦板级配置：使用 `config.h` 宏定义引脚和地址以便于移植。
 4. 构建更新：在构建中包含新的 BSP 源文件。
 
 ### 2.2 关键代码更改位置
@@ -155,33 +155,33 @@ B. 新增：reSpeaker 音频硬件初始化
 
 - 文件：`main/audio_bsp.c`
 - 函数：`audio_hardware_init()`
-- 逻辑：获取共享 I2C 总线，调用 `i2c_master_probe()` 检测 `XVF3800_I2C_ADDR`（0x2C）并打印探测日志。
+- 逻辑：获取共享 I2C 总线，调用 `i2c_master_probe()` 检测 `XVF3800_I2C_ADDR` (0x2C) 并打印探测日志。
 
 C. 更改：启动顺序
 
 - 文件：`main/main.cc`
 - 更改：在 `Application::GetInstance().Start()` 之前调用 `audio_hardware_init()`。
 
-D. 更改：构建和板级配置
+D. 更改：构建和板配置
 
 - `CMakeLists.txt`：将 `audio_bsp.c` 和 `shared_i2c_bus.c` 添加到构建源文件。
 - `boards/xiao-esp32s3-sense/config.h`：
-  - 添加 `I2C_SDA_PIN`（5）、`I2C_SCL_PIN`（6）。
-  - 添加 `XVF3800_I2C_ADDR`（0x2C）。
+  - 添加 `I2C_SDA_PIN` (5)、`I2C_SCL_PIN` (6)。
+  - 添加 `XVF3800_I2C_ADDR` (0x2C)。
   - 完善 I2S 引脚和位宽设置。
 
 ---
 
 ## 第三部分：构建、刷入和部署
 
-本节指导编译适配后的固件并将其刷入 ESP32S3。
+本节指导编译适配的固件并将其刷入 ESP32S3。
 
 ### 3.1 确认硬件连接
 
 确保 ESP32S3 和 reSpeaker XVF3800 之间的连接：
 
 - I2S 音频线正确连接。
-- I2C 控制线连接：ESP32S3 GPIO5（SDA）/ GPIO6（SCL）连接到 XVF3800。
+- I2C 控制线连接：ESP32S3 GPIO5 (SDA) / GPIO6 (SCL) 到 XVF3800。
 
 ### 3.2 选择构建目标
 
@@ -238,18 +238,19 @@ idf.py monitor
 
 ### 4.3 将设备添加到管理后台
 
-1. 获取设备 ID：设备上线后，说"Hello Xiaozhi"唤醒它，并听取 6 位数验证码。
+1. 获取设备 ID：设备上线后，说"Hello Xiaozhi"唤醒它，并听取 6 位验证码。
 2. 访问 https://xiaozhi.me 并注册/登录。
-3. 在"Agents"或设备管理部分，选择"Add device"，输入 6 位数设备 ID 并提交。
+3. 在"Agents"或设备管理部分，选择"Add device"，输入 6 位设备 ID 并提交。
   ![login-success-2](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/workbench.png)
   ![history-dialogs](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/history_talk.png)
 
 
-完成后，您的 reSpeaker–小智设备应该已准备就绪并可正常运行。
+完成后，您的 reSpeaker–小智设备应该准备就绪并可正常运行。
+另外，别忘了在设置中将输出语言更改为您的首选语言！
+![language](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/xiaozhi_language.png)
 
 
-
-## 技术支持与产品讨论
+## 技术支持和产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 

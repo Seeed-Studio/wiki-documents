@@ -31,9 +31,9 @@ reSpeaker XVF3800 は、XMOS XVF3800 チップをベースとした専門的な 
 
 > 注意：I2S ファームウェアは I2C DFU を使用します（USB DFU ではありません）。デバイスが既に I2S ファームウェアを持っているが異常な動作をする場合は、まず「セーフモード」に入ってから USB DFU を使用してファームウェアを復旧または切り替えてください。セーフモードは USB DFU と I2C DFU の両方をサポートします。
 > 公式リファレンスを参照：
-> - [reSpeaker XVF3800 Getting Started](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_getting_started/)
-> - [reSpeaker XVF3800 firmware repo](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares)
-> - [reSpeaker code repo](https://github.com/respeaker)
+> - [reSpeaker XVF3800 入門ガイド](https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_getting_started/)
+> - [reSpeaker XVF3800 ファームウェアリポジトリ](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares)
+> - [reSpeaker コードリポジトリ](https://github.com/respeaker)
 
 ### 1.1 準備
 
@@ -81,7 +81,7 @@ sudo dfu-util -l
 
 #### セーフモードに入る（推奨）
 
-次の場合に使用：現在のファームウェアが I2S だが USB が必要、ファームウェアが破損している、または間違ったファームウェアがフラッシュされた場合。
+次の場合に使用：現在のファームウェアが I2S だが USB に変更したい場合、ファームウェアが破損している場合、または間違ったファームウェアがフラッシュされた場合。
 
 1. 電源を完全に取り外します。
 2. オンボードの "Mute" ボタンを押し続けます。
@@ -121,7 +121,7 @@ dfu-util -R -e -a 1 -D /path/to/respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin
 #### FAQ
 
 - Q：`dfu-util -l` でデバイスが表示されない？
-  - USB ケーブルとポートを確認してください（XMOS 側コネクタを使用する必要があります）。
+  - USB ケーブルとポートを確認してください（XMOS 側のコネクタを使用する必要があります）。
   - デバイスが現在 I2S ファームウェアを実行している場合は、フラッシュ前にセーフモードに入ってください。
   - Windows ユーザー：Zadig 経由で WinUSB ドライバを確認してください。
 - Q：フラッシュ中にエラーが発生？
@@ -164,7 +164,7 @@ C. 変更：起動順序
 
 D. 変更：ビルドとボード設定
 
-- `CMakeLists.txt`：`audio_bsp.c` と `shared_i2c_bus.c` をビルドソースに追加。
+- `CMakeLists.txt`：ビルドソースに `audio_bsp.c` と `shared_i2c_bus.c` を追加。
 - `boards/xiao-esp32s3-sense/config.h`：
   - `I2C_SDA_PIN`（5）、`I2C_SCL_PIN`（6）を追加。
   - `XVF3800_I2C_ADDR`（0x2C）を追加。
@@ -246,7 +246,8 @@ idf.py monitor
 
 
 完了すると、reSpeaker–Xiaozhi デバイスが準備完了し、動作可能になります。
-
+そして、設定で出力言語をお好みに変更することをお忘れなく！
+![language](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/xiaozhi_language.png)
 
 
 ## 技術サポートと製品ディスカッション
