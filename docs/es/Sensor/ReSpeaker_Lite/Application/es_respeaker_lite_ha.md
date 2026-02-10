@@ -16,6 +16,17 @@ last_update:
 
 En este tutorial, aprenderás cómo configurar tu ReSpeaker Lite para que funcione con Home Assistant. Aprenderás cómo flashear el firmware requerido y cómo compilar y subir el archivo YAML. Después de eso, podrás controlar y automatizar tus electrodomésticos usando tu voz. Solo di "Okay Nabu" y comienza a hablar con tu hogar.
 
+<div class="video-container">
+  <iframe width="800" height="400"
+          src="https://www.youtube.com/embed/RBt2VAVpsBw"
+          title="ReSpeaker Lite with XIAO ESP32S3 Home Assistant"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+  </iframe>
+</div>
+
 ## Hardware Requerido
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-110991984-acrylic-speaker-diy-kit-for-respeaker-lite-feature.jpg" alt="pir" width={600} height="auto" /></p>
