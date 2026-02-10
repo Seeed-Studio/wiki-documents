@@ -326,7 +326,15 @@ import TabItem from '@theme/TabItem';
 <TabItem value="SO101" label="SO101">
 
 
-SO101的舵机校准初始化与SO100方法和代码一致的，这里只是需要注意SO101的Leader机械臂的前三个关节减速比与SO100不同，所以需要仔细区分并校准。建议方便起见，在每个电机上做好标记，注明是 Follower（用 F 表示）还是 Leader（用 L 表示），以及对应的编号从 1 到 6（例如 F1...F6 和 L1...L6）。后续我们用F1-F6来代表Follower机械臂的1到6的关节舵机，L1-L6来代表Leader机械臂从1到6的关节舵机,对应的舵机型号关节及减速比信息如下。
+SO101 的舵机校准初始化与 SO100 方法和代码一致，只是需要注意：SO101 的 Leader 机械臂前三个关节减速比与 SO100 不同，因此需要仔细区分并校准。
+
+为便于校准与后续排查，建议在舵机校准前对每个电机做好标记：
+
+- 标注该舵机属于 Follower（用 **F** 表示）还是 Leader（用 **L** 表示）
+- 标注编号从 1 到 6（例如 **F1...F6**、**L1...L6**）
+- 编号规则：从底座开始为 **1 号**，向上依次为 **2、3...**，直到夹爪为 **6 号**
+
+后续我们用 F1–F6 表示 Follower 机械臂的 1–6 号关节舵机，用 L1–L6 表示 Leader 机械臂的 1–6 号关节舵机。对应的舵机型号、关节与减速比信息如下。
 
 | 舵机型号 | 减速比 | 对应机械臂关节 |
 |--|--|--|
@@ -417,7 +425,7 @@ lerobot-setup-motors \
 Connect the controller board to the 'gripper' motor only and press enter.
 ```
 
-依照指示，连接夹爪的舵机。请确保它是唯一连接到舵机驱动板的舵机，并且该舵机尚未与其他任何舵机进行连接。当您按下 **[Enter]** 键后，脚本将自动设置该舵机的 ID 和波特率。
+依照指示，将驱动板单独连接夹爪舵机（即 **6 号舵机**）。请确保它现在是唯一连接到舵机驱动板的舵机：**电脑 → USB 线 → 驱动板 → 三针线 → 6 号舵机**，并且舵机本身没有连接到任何其他舵机。当您按下 **[Enter]** 键后，脚本将自动设置该舵机的 ID 和波特率。
 
 之后，您应该会看到以下信息：
 
@@ -528,7 +536,7 @@ SO100 和 SO101 的代码是兼容的。SO100 用户可以直接使用 SO101 的
 若购买 **SO101 Arm Kit 标准版**，所有电源均为5V。若购买 **SO101 Arm Kit Pro 版**，Leader机械臂的校准及每一步骤均使用5V电源，Follower机械臂的校准及每一步骤均使用12V电源。  
 :::
 
-接下来，你需要对你的 SO-10x 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 SO-10x 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
+接下来，你需要对你的 SO-10x 机器人接上电源和数据线进行校准，以确保在相同的物理位置时，Leader 臂和 Follower 臂的位置信息一致。这个校准过程至关重要，因为它可以让在一个 SO-10x 机器人上训练的神经网络在另一个机器人上也能正常工作。如果需要重新校准机械臂，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否则会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
 请通过 3 针接口连接 6 个机器人舵机的接口，并将底盘舵机连接到舵机驱动板，然后运行以下命令或 API 示例来校准机械臂：
 
@@ -548,7 +556,7 @@ sudo chmod 666 /dev/ttyACM*
 
 接下来，通过运行以下 Python 命令来校准从动臂：
 
-```python
+```bash
 lerobot-calibrate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
@@ -558,11 +566,11 @@ lerobot-calibrate \
 下面的视频演示了如何执行校准。首先，您需要将机器人移动到所有关节都位于其活动范围中间的位置。然后，按下回车键后，您必须将每个关节在其完整的运动范围内移动。
 
 
-###  校准领导臂
+### 校准领导臂
 
 对主机械臂进行校准的步骤与上述相同，请运行以下命令或 API 示例：
 
-```python
+```bash
 lerobot-calibrate \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
@@ -572,6 +580,60 @@ lerobot-calibrate \
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115607819322806&bvid=BV1w6UUBcEGR&cid=34229387906&p=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+### 使用 Seeed Studio SoARM 系列快捷校准工具进行中位校准（可选）
+
+当校准或运行过程中出现类似报错：
+
+`Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)`
+
+通常表示某个舵机的当前位置/零点偏移异常，导致读到的角度值超出正常范围。此时可以使用 Seeed Studio 提供的 SoARM 快捷工具对舵机进行**中位校准**（将当前位置设为中位值 **2048**），然后再重新进行整臂校准。
+
+#### 1）从 GitHub 拉取工具并安装依赖
+
+```bash
+git clone https://github.com/Seeed-Projects/Seeed_RoboController.git
+cd Seeed_RoboController
+pip install -r requirements.txt
+```
+
+#### 2）中位校准与验证
+
+工具脚本位置：
+
+- `src/tools/servo_middle_calibration.py`：舵机中位校准（将当前位置写为中位 **2048**）
+- `src/tools/servo_disable.py`：关闭舵机力矩（便于手动旋转关节）
+- `src/tools/servo_center_test.py`：移动到 **2048** 以验证校准效果
+
+按顺序执行（命令会交互式让你选择端口）：
+
+1.（可选）关闭力矩，便于手动调整关节：
+
+```bash
+python -m src.tools.servo_disable
+```
+
+2.执行中位校准（将当前位置设为 2048）：
+
+```bash
+python -m src.tools.servo_middle_calibration
+```
+
+3.验证：将舵机移动到 2048，检查是否回到预期中位：
+
+```bash
+python -m src.tools.servo_center_test
+```
+
+**测试流程：**
+
+1. 扫描舵机
+2. 读取当前位置
+3. 启动力矩
+4. 移动到中位（2048）
+5. 显示位移结果
+
+完成中位校准后，请回到本节上方的 `lerobot-calibrate` 流程重新进行机械臂整臂校准。
 
 
 ## 遥控操作
@@ -697,7 +759,7 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+    --robot.cameras='{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]} }' \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -715,7 +777,7 @@ lerobot-teleoperate \
 后续采集数据、训练及评估任务与常规RGB命令一样，只需要把:
 
 ```bash
-  --robot.cameras="{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]}}" \
+  --robot.cameras='{ up: {type: orbbec, width: 640, height: 880, fps: 30, focus_area:[60,300]} }' \
 ```
 
 替换到常规rgb命令中即可，你也可以再后面添加额外的单目RGB相机。
@@ -738,7 +800,7 @@ lerobot-teleoperate \
 
 要查找连接到您系统的摄像头的**摄像头索引**，请运行以下脚本：
 
-```python
+```bash
 lerobot-find-cameras opencv # or realsense for Intel Realsense cameras
 ```
 
@@ -773,7 +835,7 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -781,7 +843,7 @@ lerobot-teleoperate \
 ```
 
 :::tip
-`fourcc: "MJPG"`格式图像是经过压缩后的图像，你可以尝试更高分辨率，当然你可以尝试`YUYV`格式图像，但是这会导致图像的分辨率和FPS降低导致机械臂运行卡顿。目前`MJPG`格式下可支持`3`个摄像头`1920*1080`分辨率并且保持`30FPS`, 但是依然不推荐2个摄像头通过同一个USB HUB接入电脑
+`fourcc: "MJPG"`格式图像是经过压缩后的图像，你可以尝试更高分辨率，当然你可以尝试`YUYV`格式图像，但是这会导致图像的分辨率和FPS降低导致机械臂运行卡顿。目前`MJPG`格式下可支持`3`个摄像头`1920*1080`分辨率并且保持`30FPS`, 但是依然不推荐2个摄像头通过同一个USB HUB接入电脑。同时，如果摄像头接在 USB2.0 的接口，也可能会出现无法读取的问题，建议优先使用 USB3.0 接口并尽量直连设备。
 :::
 
 如果您有更多摄像头，可以通过更改 `--robot.cameras` 参数来添加。您应该注意`index_or_path` 的格式，它由 `python -m lerobot.find_cameras opencv` 命令输出的摄像头 ID 的最后一位数字决定。
@@ -792,7 +854,7 @@ lerobot-teleoperate \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -800,7 +862,7 @@ lerobot-teleoperate \
 ```
 
 :::tip
-`fourcc: "MJPG"`格式图像是经过压缩后的图像，你可以尝试更高分辨率，当然你可以尝试`YUYV`格式图像，但是这会导致图像的分辨率和FPS降低导致机械臂运行卡顿。目前`MJPG`格式下可支持`3`个摄像头`1920*1080`分辨率并且保持`30FPS`, 但是依然不推荐2个摄像头通过同一个USB HUB接入电脑
+`fourcc: "MJPG"`格式图像是经过压缩后的图像，你可以尝试更高分辨率，当然你可以尝试`YUYV`格式图像，但是这会导致图像的分辨率和FPS降低导致机械臂运行卡顿。目前`MJPG`格式下可支持`3`个摄像头`1920*1080`分辨率并且保持`30FPS`, 但是依然不推荐2个摄像头通过同一个USB HUB接入电脑。同时，如果摄像头接在 USB2.0 的接口，也可能会出现无法读取的问题，建议优先使用 USB3.0 接口并尽量直连设备。
 :::
 
 
@@ -820,7 +882,7 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -855,7 +917,7 @@ lerobot-record \
     --robot.type=so101_follower \
     --robot.port=/dev/ttyACM0 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"}}" \
+    --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM1 \
     --teleop.id=my_awesome_leader_arm \
@@ -916,6 +978,17 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 ```bash
 pip install pynput==1.6.8
 ```
+:::
+
+:::tip
+假设你正在执行“将红色方块抓取并放入盒子”的任务：
+
+- 如果在操作过程中不慎将方块弄掉，或出现任何可能导致该剧集数据质量较差的情况，可以先将机械臂操控至休息状态（即弯曲并折叠回初始位置），然后按下左箭头键。此时系统将返回到环境准备阶段，刚刚录制的动作数据会被直接舍弃。
+- 如果本次任务完成得较快，机械臂已经成功完成操作并回到休息状态，而你不希望等待剩余时间结束，也可以按下左箭头键，以跳过剩余等待时间，直接进入下一个剧集前的环境准备阶段。
+
+在录制过程中合理使用方向键，有助于避免失败动作污染数据集，并有效提升整体录制效率。
+
+如果你想要了解如何删除或者改动已录制数据集，请参阅[数据集工具]()。
 :::
 
 **数据收集技巧**
@@ -1036,10 +1109,144 @@ lerobot-train \
 命令解释
 
 * **数据集指定**：我们通过 `--dataset.repo_id=${HF_USER}/so101_test` 参数提供了数据集。
-* **训练步数**：我们通过 `--steps=300000` 修改训练步数，算法默认为800000，根据自己的任务难易程度，观察训练时候的loss来进行调整。
+* **训练步数**：我们通过 `--steps=300000` 修改训练步数，算法默认为800000，根据自己的任务难易程度，来进行调整，如果不确定，可以调高一些，因为训练过程中会生成检查点，评估可以从检查点开始。
 * **策略类型**：我们使用 `policy.type=act` 提供了策略，同样你可以更换[act,diffusion,pi0,pi0fast,pi0fast,sac,smolvla]等策略，这将从 `configuration_act.py` 加载配置。重要的是，这个策略会自动适应您机器人（例如 `laptop` 和 `phone`）的电机状态、电机动作和摄像头数量，这些信息已保存在您的数据集中。
 * **设备选择**：我们提供了 `policy.device=cuda`，因为我们正在 Nvidia GPU 上进行训练，但您可以使用 `policy.device=mps` 在 Apple Silicon 上进行训练。
 * **可视化工具**：我们提供了 `wandb.enable=true` 来使用 [Weights and Biases](https://docs.wandb.ai/quickstart) 可视化训练图表。这是可选的，但如果您使用它，请确保您已通过运行 `wandb login` 登录。
+
+**（可选）在训练时使用多 GPU（Accelerate）**
+
+LeRobot 的 `lerobot-train` 可以通过 Hugging Face Accelerate 启动多 GPU 训练。Accelerate 的作用是**负责分布式启动与进程管理**；训练逻辑仍然由 `lerobot-train` 本身完成。
+
+### 方式一：命令行启动（推荐）
+
+先安装 Accelerate：
+
+```bash
+pip install accelerate
+```
+
+用 2 张 GPU 启动训练（把 `--num_processes` 改成你的 GPU 数量）：
+
+```bash
+accelerate launch \
+  --multi_gpu \
+  --num_processes=2 \
+  $(which lerobot-train) \
+  --dataset.repo_id=${HF_USER}/my_dataset \
+  --policy.type=act \
+  --policy.repo_id=${HF_USER}/my_trained_policy \
+  --output_dir=outputs/train/act_multi_gpu \
+  --job_name=act_multi_gpu \
+  --wandb.enable=true
+```
+
+Accelerate 常用参数说明：
+
+- `--multi_gpu`：启用多 GPU 训练。
+- `--num_processes=2`：进程数，通常等于 GPU 张数。
+- `--mixed_precision=fp16`：启用混合精度（也可用 `bf16`，但需要硬件支持）。
+
+混合精度硬件支持参考：
+
+| 精度类型 | 硬件支持情况 |
+|--|--|
+| fp16 | 几乎所有 NVIDIA GPU 均支持 |
+| bf16 | 仅部分较新的 GPU 支持（如 Ampere 及更新架构） |
+
+如果 GPU 不支持 bf16，请在 `accelerate launch` 中显式指定 fp16（可选）：
+
+```bash
+accelerate launch \
+  --multi_gpu \
+  --num_processes=2 \
+  --mixed_precision=fp16 \
+  $(which lerobot-train) \
+  --dataset.repo_id=${HF_USER}/my_dataset \
+  --policy.type=act \
+  --policy.repo_id=${HF_USER}/my_trained_policy \
+  --output_dir=outputs/train/act_multi_gpu \
+  --job_name=act_multi_gpu \
+  --wandb.enable=true
+```
+
+### 方式二：使用 accelerate 配置文件（可选）
+
+如果经常进行多 GPU 训练，可以先用交互式向导保存一次配置，后续无需重复填写 GPU/精度等信息。此步骤不改变 LeRobot 的训练逻辑，仅用于减少重复输入。
+
+运行：
+
+```bash
+accelerate config
+```
+
+单机多 GPU 的常见选择示例：
+
+- Compute environment：This machine
+- Number of machines：1
+- Number of processes：使用的 GPU 数量（通常等于 GPU 张数）
+- GPU ids to use：直接回车（表示使用所有 GPU）
+- Mixed precision：优先选择 fp16；若确认 GPU 支持 bf16，也可选择 bf16
+
+完成配置后，训练命令可以简化为：
+
+```bash
+accelerate launch \
+  $(which lerobot-train) \
+  --dataset.repo_id=${HF_USER}/my_dataset \
+  --policy.type=act \
+  --policy.repo_id=${HF_USER}/my_trained_policy \
+  --output_dir=outputs/train/act_multi_gpu \
+  --job_name=act_multi_gpu \
+  --wandb.enable=true
+```
+
+### 多 GPU 训练时的超参数调整建议
+
+LeRobot 不会根据 GPU 数量自动调整学习率或训练步数，以避免在不知情的情况下改变训练行为。如果希望在多 GPU 下保持与单卡接近的训练“节奏”，可参考以下常见经验做法（不是强制规则）：
+
+**1）步数 `--steps`**
+
+多 GPU 会增大有效 batch size（`batch_size × num_gpus`）。若其它参数不变，为了让模型“看到”的样本总量接近单卡，通常可以按 GPU 数量缩放步数：
+
+- 1 张卡：`steps = S`
+- N 张卡：`steps ≈ S / N`
+
+示例（2 张卡，把步数减半）：
+
+```bash
+accelerate launch \
+  --multi_gpu \
+  --num_processes=2 \
+  $(which lerobot-train) \
+  --batch_size=8 \
+  --steps=50000 \
+  --dataset.repo_id=lerobot/pusht \
+  --policy.type=act
+```
+
+**2）学习率 `--optimizer.lr`**
+
+每一步使用的样本更多时，如果希望“学习速度”接近单卡，常见做法是按 GPU 数量等比例放大学习率：
+
+- 新学习率 ≈ 单卡学习率 × GPU 数量
+
+示例（2 张卡，把学习率从 `1e-4` 调到 `2e-4`）：
+
+```bash
+accelerate launch \
+  --multi_gpu \
+  --num_processes=2 \
+  $(which lerobot-train) \
+  --optimizer.lr=2e-4 \
+  --dataset.repo_id=lerobot/pusht \
+  --policy.type=act
+```
+
+相关文档：
+
+- [Accelerate](https://huggingface.co/docs/accelerate/index)
+- [Ultrascale Playbook](https://huggingface.co/docs/accelerate/main/en/concept_guides/training_tpu#ultrascale-playbook)（大规模训练的通用建议，供参考）
 
 
 **评估**
@@ -1052,7 +1259,7 @@ lerobot-train \
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
+  --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
   --dataset.repo_id=seeed/eval_test123 \
@@ -1073,16 +1280,37 @@ lerobot-record \
 <details>
 <summary>[SmolVLA](https://huggingface.co/docs/lerobot/smolvla) </summary>
 
-参考官方教程[SmolVLA](https://huggingface.co/docs/lerobot/smolvla)
+参考官方教程 [SmolVLA](https://huggingface.co/docs/lerobot/smolvla)。
+
+SmolVLA 是 Hugging Face 提供的**轻量级机器人基础模型**（foundation model）。它的设计目标是：让你把自己录制的 LeRobot 数据集拿来**快速微调（fine-tune）**，更快在真实机器人上跑出效果。
+
+简单理解它的输入/输出：
+
+- 输入：多路相机画面 + 机器人当前状态（传感器/关节等）+ 一句自然语言任务指令
+- 输出：一段连续的动作（action chunk），用来驱动机械臂执行任务
 
 ```bash
 pip install -e ".[smolvla]"
 ```
 
+**收集数据集（建议）**
+
+SmolVLA 是“底座模型”，要在你的桌面、你的相机、你的夹爪/物体上表现好，通常需要用你自己的数据做微调。
+
+- 建议从 ~50 个 episode 开始（太少容易学不会/泛化差）。
+- 如果你的任务有“变化项”（例如方块在桌面上的不同位置），请确保每一种变化都有足够示范：
+  - 例：5 个位置 × 每个位置 10 个 episode = 50 个 episode
+- 经验：只录 25 个 episode 往往不够，数据质量和数量都很关键。
+
 **训练**
+
+使用 `smolvla_base`（预训练的 450M 模型）作为起点，在你的数据集上微调。官方示例是训练 20k steps；在一张 A100 上大约需要 4 小时（仅供参考，实际会因硬件而变）。
+
+如果你没有可用的 GPU，可以考虑用 Colab 的 notebook 方式训练（见官方教程）。
+
 ```bash
 lerobot-train \
-  --policy.path=lerobot/smolvla_base \ # <- Use pretrained fine-tuned model
+  --policy.path=lerobot/smolvla_base \
   --dataset.repo_id=${HF_USER}/mydataset \
   --batch_size=64 \
   --steps=20000 \
@@ -1092,23 +1320,45 @@ lerobot-train \
   --wandb.enable=true
 ```
 
+提示：
+
+- 显存不够就先把 `--batch_size` 调小；能跑通后再慢慢加大。
+- 想快速了解可用参数：`lerobot-train --help`
+
 **验证**
+
+评估阶段会加载你微调后的模型，让机器人执行任务，并把评估过程录成一个新数据集（便于回看视频、复盘效果）。
 
 ```bash
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.id=my_blue_follower_arm \ # <- Use your robot id
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
-  --dataset.single_task="Put lego brick into the transparent box" \
-  --dataset.repo_id=seeed/eval_test123 \ 
+  --robot.id=my_blue_follower_arm \
+  --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
+  --dataset.single_task="Grasp a lego block and put it in the bin." \
+  --dataset.repo_id=${HF_USER}/eval_DATASET_NAME_test \
   --dataset.episode_time_s=50 \
   --dataset.num_episodes=10 \
-  # <- Teleop optional if you want to teleoperate in between episodes \
-  # --teleop.type=so100_leader \
-  # --teleop.port=/dev/ttyACM0 \
-  # --teleop.id=my_red_leader_arm \
-  --policy.path=HF_USER/FINETUNE_MODEL_NAME # <- Use your fine-tuned model
+  --policy.path=${HF_USER}/FINETUNE_MODEL_NAME
+```
+
+参数怎么填：
+
+- `--robot.port`：改成你自己机器上识别到的串口（常见是 `/dev/ttyACM0` 或 `/dev/ttyUSB0`）。
+- `--robot.id`：你的机器人 ID（要和你校准/录制时使用的保持一致）。
+- `--robot.cameras`：改成你真实相机的 `index_or_path`，并确保相机键名（比如 `front`、`side`）和你录制数据集时完全一致。
+- `--dataset.single_task`：建议与录制数据集时的任务描述一致。
+- `--dataset.repo_id`：评估输出的数据集名；如果你登录了 Hugging Face，它会被创建/上传到你的账号下。
+- `--policy.path`：
+  - 如果模型在本地：填训练输出目录下的权重路径（例如 `outputs/train/my_smolvla/checkpoints/last/pretrained_model`）
+  - 如果模型在 Hub：填 `${HF_USER}/FINETUNE_MODEL_NAME`
+
+可选：如果你想在评估的 episode 之间“手动遥操调整一下”，可以加入 teleop（按你的设备与配置填写）：
+
+```bash
+--teleop.type=so100_leader \
+--teleop.port=/dev/ttyACM0 \
+--teleop.id=my_red_leader_arm \
 ```
 
 
@@ -1118,28 +1368,51 @@ lerobot-record \
 <details>
 <summary>[Pi0](https://huggingface.co/docs/lerobot/pi0) </summary>
 
-参考官方教程[Pi0](https://huggingface.co/docs/lerobot/pi0) 
+参考官方教程 [Pi0](https://huggingface.co/docs/lerobot/pi0)。
+
+π₀（Pi0）是 Physical Intelligence 提出的 **Vision-Language-Action（视觉-语言-动作）** 模型，用于更“通用”的机器人控制。你可以把它理解为：它既能看相机画面，也能读懂一句自然语言指令，然后输出控制机械臂的动作。
+
+在 LeRobot 里使用它很简单：训练时把策略类型设为 `--policy.type=pi0` 即可（不重复赘述 ACT 里讲过的通用训练/评估概念）。
 
 ```bash
 pip install -e ".[pi]"
 ```
 
+:::tip
+如果你使用的是较旧的 LeRobot 版本（例如 0.4.0），安装 `pi` 依赖时可能需要从 GitHub 源安装（官方说明后续补丁会修复）：
+
+```bash
+pip install "lerobot[pi]@git+https://github.com/huggingface/lerobot.git"
+```
+:::
+
 **训练**
 ```bash
 lerobot-train \
   --policy.type=pi0 \
-  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.repo_id=${HF_USER}/my_dataset \
   --job_name=pi0_training \
   --output_dir=outputs/pi0_training \
   --policy.pretrained_path=lerobot/pi0_base \
+  --policy.repo_id=${HF_USER}/my_pi0_policy \
   --policy.compile_model=true \
   --policy.gradient_checkpointing=true \
   --policy.dtype=bfloat16 \
-  --steps=20000 \
+  --policy.freeze_vision_encoder=false \
+  --policy.train_expert_only=false \
+  --steps=3000 \
   --policy.device=cuda \
   --batch_size=32 \
   --wandb.enable=false 
 ```
+
+常用参数（只挑 Pi0 特有/最常调的）：
+
+- `--policy.pretrained_path=lerobot/pi0_base`：基础模型。官方也提供 `lerobot/pi0_libero`（更偏 Libero 数据集的版本），你可以按任务尝试切换。
+- `--policy.compile_model=true`：启用编译优化，训练可能更快（首次编译会慢一点）。
+- `--policy.gradient_checkpointing=true`：显著省显存，适合显存吃紧时开启。
+- `--policy.dtype=bfloat16`：混合精度，速度/显存更友好（硬件支持时推荐）。
+- `--policy.train_expert_only=true`（省显存技巧）：冻结大模型（VLM）部分，只训练“动作专家”和投影层；更省显存，但可训练能力会更受限，适合先跑通或小数据快速试验。
 
 **验证**
 
@@ -1147,11 +1420,13 @@ lerobot-train \
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
+  --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
-  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.repo_id=${HF_USER}/eval_my_pi0_test \
   --dataset.single_task="Put lego brick into the transparent box" \
+  --dataset.episode_time_s=50 \
+  --dataset.num_episodes=10 \
   --policy.path=outputs/pi0_training/checkpoints/last/pretrained_model
 ```
 
@@ -1162,28 +1437,57 @@ lerobot-record \
 <details>
 <summary>[Pi0.5](https://huggingface.co/docs/lerobot/pi05) </summary>
 
-参考官方教程[Pi0.5](https://huggingface.co/docs/lerobot/pi05) 
+参考官方教程 [Pi0.5](https://huggingface.co/docs/lerobot/pi05)。
+
+π₀.₅（Pi0.5）同样是 Physical Intelligence 提出的 **Vision-Language-Action（视觉-语言-动作）** 模型，可以理解为 π₀ 的“升级版”，重点增强了**开放世界泛化**能力：不只在训练时见过的固定场景里表现好，还要能在新的房间、新的物体、新的摆放方式下更稳地完成任务。
+
+它要解决的“泛化”大致分三层（举例帮助理解）：
+
+- **物理层**：没见过的勺子/盘子，也能知道该怎么抓（把手/边缘），并在杂乱环境中操作。
+- **语义层**：理解“该放哪里/用什么工具”，例如鞋子应该进鞋柜、衣服进洗衣篮。
+- **环境层**：适应更真实的“乱糟糟”场景，例如家庭、办公室、医院等。
+
+在 LeRobot 里使用它：把策略类型设为 `--policy.type=pi05` 即可（ACT 里讲过的通用概念不再重复）。
 
 ```bash
 pip install -e ".[pi]"
 ```
 
+:::tip
+如果你使用的是较旧的 LeRobot 版本（例如 0.4.0），安装 `pi` 依赖时可能需要从 GitHub 源安装（官方说明后续补丁会修复）：
+
+```bash
+pip install "lerobot[pi]@git+https://github.com/huggingface/lerobot.git"
+```
+:::
+
 **训练**
 ```bash
 lerobot-train \
-    --dataset.repo_id=seeed/eval_test123 \
-    --policy.type=pi05 \
-    --output_dir=outputs/pi05_training \
-    --job_name=pi05_training \
-    --policy.pretrained_path=lerobot/pi05_base \
-    --policy.compile_model=true \
-    --policy.gradient_checkpointing=true \
-    --wandb.enable=false \
-    --policy.dtype=bfloat16 \
-    --steps=3000 \
-    --policy.device=cuda \
-    --batch_size=32
+  --dataset.repo_id=${HF_USER}/my_dataset \
+  --policy.type=pi05 \
+  --output_dir=outputs/pi05_training \
+  --job_name=pi05_training \
+  --policy.repo_id=${HF_USER}/my_pi05_policy \
+  --policy.pretrained_path=lerobot/pi05_base \
+  --policy.compile_model=true \
+  --policy.gradient_checkpointing=true \
+  --policy.dtype=bfloat16 \
+  --policy.freeze_vision_encoder=false \
+  --policy.train_expert_only=false \
+  --steps=3000 \
+  --policy.device=cuda \
+  --batch_size=32 \
+  --wandb.enable=false
 ```
+
+常用参数（Pi0.5 相关）：
+
+- `--policy.pretrained_path=lerobot/pi05_base`：基础模型。官方也提供 `lerobot/pi05_libero`（更偏 Libero 数据集的版本），你可以按任务尝试切换。
+- `--policy.train_expert_only=true`（省显存技巧）：冻结大模型（VLM）部分，只训练“动作专家”和投影层；更省显存，适合先跑通或小数据试验。
+- `--policy.normalization_mapping=...`：如果你的数据集归一化统计不匹配/缺失，可以用该映射强制指定归一化方式（见官方教程示例）。
+
+如果你的数据集没有 quantile 统计（某些版本/格式需要），官方也提供了转换脚本思路：把数据集补齐/转换统计后再训练（具体以官方文档为准）。
 
 **验证**
 
@@ -1191,11 +1495,13 @@ lerobot-train \
 lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/ttyACM0 \
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30,fourcc: "MJPG"}}" \
+  --robot.cameras='{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30, fourcc: "MJPG"}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30, fourcc: "MJPG"} }' \
   --robot.id=my_awesome_follower_arm \
   --display_data=false \
-  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.repo_id=${HF_USER}/eval_my_pi05_test \
   --dataset.single_task="Put lego brick into the transparent box" \
+  --dataset.episode_time_s=50 \
+  --dataset.num_episodes=10 \
   --policy.path=outputs/pi05_training/checkpoints/last/pretrained_model
 ```
 
@@ -1207,7 +1513,99 @@ lerobot-record \
 <details>
 <summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
 
-请参考官方教程[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) 
+请参考官方教程 [GR00T N1.5](https://huggingface.co/docs/lerobot/groot)。
+
+GR00T N1.5 是 NVIDIA 提供的一个开放基础模型（foundation model），面向更通用的机器人推理与技能学习。它是跨机体（cross-embodiment）模型：可以同时接收**语言**与**图像**等多模态输入，在不同环境里执行操作任务。
+
+在 LeRobot 中使用它的关键点是把策略类型设为 `--policy.type=groot`。不过需要注意：目前 GR00T N1.5 对环境要求更高（依赖 FlashAttention，且需要 CUDA GPU），建议先把 ACT / Pi0 跑通，再来尝试。
+
+**安装（重要）**
+
+截至官方文档目前的说明，GR00T N1.5 需要 **flash-attn** 才能工作，并且只能在**支持 CUDA 的设备**上使用。
+
+建议步骤（按顺序执行）：
+
+1. 按安装指南先把基础环境准备好（Python、CUDA、驱动等），**这一步先不要安装 `lerobot`**。
+2. 安装 PyTorch（版本范围以官方为准；下面是示例写法）：
+
+```bash
+# 不同 CUDA 版本对应不同 index-url，请按你的系统参考 PyTorch 安装页
+pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
+```
+
+3. 安装 flash-attn 依赖与 flash-attn 本体：
+
+```bash
+pip install ninja "packaging>=24.2,<26.0"
+pip install "flash-attn>=2.5.9,<3.0.0" --no-build-isolation
+python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} imported successfully')"
+```
+
+4. 安装 LeRobot 的 groot 依赖：
+
+```bash
+pip install "lerobot[groot]"
+```
+
+:::tip
+如果 flash-attn 安装失败，通常与（1）PyTorch/CUDA 版本不匹配、（2）编译依赖缺失或（3）环境过新/过旧有关。遇到这种情况优先对照官方 GR00T 文档与 PyTorch 安装说明排查。
+:::
+
+**训练（微调）**
+
+官方给了多 GPU 的训练示例（`accelerate launch --multi_gpu ...`）。如果你只有一张 GPU，也可以先用单进程方式跑通（是否支持/参数细节以官方文档为准）。
+
+多 GPU（官方风格，变量需要你自己替换）：
+
+```bash
+accelerate launch \
+  --multi_gpu \
+  --num_processes=$NUM_GPUS \
+  $(which lerobot-train) \
+  --output_dir=$OUTPUT_DIR \
+  --save_checkpoint=true \
+  --batch_size=$BATCH_SIZE \
+  --steps=$NUM_STEPS \
+  --save_freq=$SAVE_FREQ \
+  --log_freq=$LOG_FREQ \
+  --policy.push_to_hub=true \
+  --policy.type=groot \
+  --policy.repo_id=$REPO_ID \
+  --policy.tune_diffusion_model=false \
+  --dataset.repo_id=$DATASET_ID \
+  --wandb.enable=true \
+  --wandb.disable_artifact=true \
+  --job_name=$JOB_NAME
+```
+
+参数说明（最常需要修改的几项）：
+
+- `--dataset.repo_id`：你的训练数据集（Hub 上的 `用户名/数据集名` 或本地缓存对应的 `repo_id`）。
+- `--output_dir`：训练输出目录（权重/检查点会放在这里）。
+- `--steps`、`--batch_size`：训练步数与 batch，大模型对显存很敏感，跑不动就先减小 `batch_size`。
+- `--policy.repo_id`：如果你要把模型推到 Hub，填你希望创建的模型仓库名。
+
+**验证（上机运行/评估）**
+
+训练完成后可以像其它策略一样用 `lerobot-record` 做评估/录制回放。下面是官方给的“双臂”示例（仅供参考；SO101 单臂用户不需要 `left_arm_port/right_arm_port` 这类参数）：
+
+```bash
+lerobot-record \
+  --robot.type=bi_so_follower \
+  --robot.left_arm_port=/dev/ttyACM1 \
+  --robot.right_arm_port=/dev/ttyACM0 \
+  --robot.id=bimanual_follower \
+  --robot.cameras='{ right: {"type": "opencv", "index_or_path": 0, "width": 640, "height": 480, "fps": 30}, left: {"type": "opencv", "index_or_path": 2, "width": 640, "height": 480, "fps": 30}, top: {"type": "opencv", "index_or_path": 4, "width": 640, "height": 480, "fps": 30} }' \
+  --display_data=true \
+  --dataset.repo_id=${HF_USER}/eval_groot_bimanual \
+  --dataset.num_episodes=10 \
+  --dataset.single_task="Grab and handover the red cube to the other arm" \
+  --policy.path=${HF_USER}/groot-bimanual \
+  --dataset.episode_time_s=30 \
+  --dataset.reset_time_s=10
+```
+
+License：该模型遵循 Apache 2.0 许可证（与原始 GR00T 仓库一致）。
 
 
 </details>
@@ -1283,7 +1681,7 @@ lerobot-train \
   ```bash
   Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)
   ```
-  对机械臂进行重新断电和上电，再次尝试校准机械臂加准，如果在校准过程中遇到MAX角度达到上万的值也可以使用这个方法，如果不行则需要对相应舵机进行重新舵机校准，即中位校准和ID写入。
+  对机械臂进行重新断电和上电，再次尝试校准机械臂。如果在校准过程中遇到 MAX 角度达到上万的值也可以使用这个方法；如果仍然无效，则需要对相应舵机重新进行舵机校准（中位校准和 ID 写入）。
 
 - 如果评估阶段遇到
   ```bash
@@ -1297,7 +1695,7 @@ lerobot-train \
   ```
   请注意--robot.cameras这个参数中的front和side等关键词必须和采集数据集的时候保持严格一致。
 
-- 如果你维修或者更换过机械臂零件，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否者会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
+- 如果你维修或者更换过机械臂零件，请完全删除`~/.cache/huggingface/lerobot/calibration/robots`或者`~/.cache/huggingface/lerobot/calibration/teleoperators`下的文件并重新校准机械臂，否则会出现报错提示，校准的机械臂信息会存储该目录下的json文件中。
 
 - 在3060的8G笔记本上训练ACT的50组数据的时间大概为6小时，在4090和A100的电脑上训练50组数据时间大概为2~3小时。
 
@@ -1345,10 +1743,3 @@ Dnsty: [Jetson Containers](https://github.com/dusty-nv/jetson-containers/tree/ma
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
