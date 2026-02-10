@@ -16,6 +16,17 @@ last_update:
 
 このチュートリアルでは、ReSpeaker Lite を Home Assistant と連携させる方法を学習します。必要なファームウェアのフラッシュ方法と YAML ファイルのコンパイル・アップロード方法を学習します。その後、音声を使用して家電製品を制御・自動化できるようになります。「Okay Nabu」と言って、あなたの家と会話を始めましょう。
 
+<div class="video-container">
+  <iframe width="800" height="400"
+          src="https://www.youtube.com/embed/RBt2VAVpsBw"
+          title="ReSpeaker Lite with XIAO ESP32S3 Home Assistant"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+  </iframe>
+</div>
+
 ## 必要なハードウェア
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-110991984-acrylic-speaker-diy-kit-for-respeaker-lite-feature.jpg" alt="pir" width={600} height="auto" /></p>
