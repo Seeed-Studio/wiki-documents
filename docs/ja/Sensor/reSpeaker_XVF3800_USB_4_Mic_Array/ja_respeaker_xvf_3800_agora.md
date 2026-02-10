@@ -1,6 +1,6 @@
 ---
 description: このプロジェクトは、Seeed Studio reSpeaker XVF3800（XIAO ESP32-S3）をエッジ音声デバイスとして使用する方法を実演します。Agora経由でリアルタイムの双方向音声リンクを確立し、Agora Conversational AI Agent API v2（LLM/ASR/TTS）に直接接続して、低遅延のリアルタイム音声会話を可能にします。
-title: reSpeaker XVF3800（XIAO ESP32-S3）+ Agora Conversational AI Agent v2 エッジ会話クライアント展開ガイド
+title: ReSpeaker XVF3800 + Agora Conversational AI Agent v2 エッジ会話クライアント展開ガイド
 keywords:
 - reSpeaker
 - XVF3800
@@ -14,6 +14,7 @@ keywords:
 - ESP-ADF
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /ja/respeaker_xvf3800_agora_convo_client
+sku: 114993702,114993700
 last_update:
   date: 04/2/2026
   author: Jiayu Zhan(Jack)
@@ -35,16 +36,25 @@ last_update:
     </a>
 </div>
 
+## バックエンドの選択
+
+このガイドでは**2つのバックエンドオプション**を提供します。あなたのシナリオに適したものを選択してください：
+
+| オプション | 最適な用途 | サーバー必要 | リンク |
+|---|---|---:|---|
+| **Agora Conversational AI Agent v2（クラウド、直接）** | 最速セットアップ / 最小インフラ | いいえ | ここにいます ✅ |
+| **TEN Framework（セルフホスト、プラガブルASR/LLM/TTS）** | カスタムパイプライン / プロバイダー切り替え / 高度な機能 | はい（Docker） | 👉 [TEN Frameworkバージョンへ](/ja/respeaker_xvf3800_agora_ten_framework_client) |
+
 ## 目次
 
-1. [主な機能](#主な機能)
+1. [主要機能](#主要機能)
 2. [システムアーキテクチャ](#システムアーキテクチャ)
 3. [前提条件](#前提条件)
 4. [ファームウェアとハードウェアの注意事項](#ファームウェアとハードウェアの注意事項)
 5. [ESP32展開](#ESP32展開)
    - [開発環境セットアップ](#開発環境セットアップ)
    - [Agora IoT SDKダウンロード](#Agora-IoT-SDKダウンロード)
-   - [ESP-ADFボードピン設定（重要）](#ESP-ADFボードピン設定-重要)
+   - [ESP-ADFボードピン設定（重要）](#ESP-ADFボードピン設定重要)
    - [プロジェクトパラメータ設定](#プロジェクトパラメータ設定)
    - [ビルドとフラッシュ](#ビルドとフラッシュ)
 6. [検証とテスト](#検証とテスト)
@@ -54,12 +64,12 @@ last_update:
 
 
 
-## 主な機能
+## 主要機能
 
 - **リアルタイム音声会話**：Agora RTCベースの低遅延双方向音声リンク  
 - **直接AI Agent v2統合**：デバイスがAgora Conversational AI Agent API v2に直接接続  
 - **XVF3800ボタン制御**：ボタンのI2Cポーリングによる会話開始/停止  
-- **音響エコーキャンセレーション（AEC）**：デバイス音声パイプラインに統合されたAECで会話品質を向上  
+- **音響エコーキャンセレーション（AEC）**：会話品質向上のためデバイス音声パイプラインにAECを統合  
 - **G.711 μ-lawコーデック**：組み込み音声シナリオ向けの効率的なコーデック/デコーダー  
 - **設定可能なAIバックエンド**：サンプルはOpenAI / Azure OpenAIなどをサポート  
 - **8 kHzサンプルレート**：音声会話シナリオ向けに最適化  
@@ -126,7 +136,7 @@ Speaker (3.5mm / AIC3104)
 | **USB-Cデータケーブル** | ファームウェアフラッシュと電源供給用 |
 
 :::tip 注意
-このプロジェクトでは、音声コーデック/デコードはXVF3800とAIC3104が連携して処理します。ESP32-S3はI2S経由で音声データを転送し、I2C経由でコーデック/ボタンを制御します。
+このプロジェクトでは、音声コーデック/デコードはXVF3800とAIC3104によって処理されます。ESP32-S3はI2S経由で音声データを転送し、I2C経由でコーデック/ボタンを制御します。
 :::
 
 ### ソフトウェア要件
@@ -153,12 +163,12 @@ Speaker (3.5mm / AIC3104)
   - **App Certificate**（サーバーサイドトークン生成用）
   - **RTCトークン（一時的またはサーバー生成）**（RTC参加テスト用）
 
-### 1）Agoraサインアップ/ログイン（概要）
+### 1) Agoraへのサインアップ/ログイン（概要）
 
 - メール/電話登録とサードパーティログインをサポート。
 - 登録後、**Agoraコンソール**にログイン；通常はプロジェクト作成にガイドされます。
 
-### 2）Agoraプロジェクトの作成（概要）
+### 2) Agoraプロジェクトの作成（概要）
 
 Agoraコンソールの**Projects**ページで：
 
@@ -173,23 +183,23 @@ Agoraコンソールの**Projects**ページで：
 本番環境でより安全で、Conversational AI / RTC統合の公式推奨認証フローとより良く整合します。
 :::
 
-### 3）App IDの取得
+### 3) App IDの取得
 
-**Projects**リストで、プロジェクトを見つけて**App ID**をコピーします。
+**Projects**リストで、あなたのプロジェクトを見つけて**App ID**をコピーします。
 ![Get App ID](https://files.seeedstudio.com/wiki/Respeaker_agora/2.png  )
 
-### 4）App Certificateの取得（サーバーサイドトークン生成用）
+### 4) App Certificateの取得（サーバーサイドトークン生成用）
 
-1. **Projects**リストで、プロジェクトの右側にある✏️（編集/設定）アイコンをクリック。
+1. **Projects**リストで、プロジェクトの右側にある✏️（編集/設定）アイコンをクリックします。
 ![Get App Certificate](https://files.seeedstudio.com/wiki/Respeaker_agora/3.png )
-2. プロジェクト設定ページで、**Primary Certificate**セクションから**App Certificate**をコピー。
+2. プロジェクト設定ページで、**Primary Certificate**セクションから**App Certificate**をコピーします。
 ![Get App Certificate](https://files.seeedstudio.com/wiki/Respeaker_agora/4.png )
 
 :::caution 重要
 App Certificateは機密情報です。パブリックリポジトリにコミットしたり、パブリックログに出力したりしないでください。
 :::
 
-### 5）RTCトークンの生成（クイックテスト用）
+### 5) RTCトークンの生成（クイックテスト用）
 
 2つの一般的な方法：
 
@@ -201,14 +211,14 @@ App Certificateは機密情報です。パブリックリポジトリにコミ�
 - **Agora Token Builder（ウェブ）を使用**
   - App ID / App Certificate、チャンネル名、UIDなどを入力してトークンを生成（サーバーサイドトークン生成を実装する前のクイック検証に便利）
 
-### 6）Enable Conversational AIをオンにする（重要）
+### 6) Enable Conversational AIをオンにする（重要）
 
 Conversational AI Engineを使用する前に、アプリのコンソールで有効にする必要があります：
 
-1. **Projects**に移動し、対象プロジェクトを見つけて✏️をクリックして設定に入る。
+1. **Projects**に移動し、対象プロジェクトを見つけて✏️をクリックして設定に入ります。
 ![Enable Conversational AI](https://files.seeedstudio.com/wiki/Respeaker_agora/5.png )
-2. **All features**で、**Conversational AI > Configurations**を見つける
-3. **Enable Conversational AI**トグルをオンにする。
+2. **All features**で、**Conversational AI > Configurations**を見つけます
+3. **Enable Conversational AI**トグルをオンにします。
 ![Enable Conversational AI](https://files.seeedstudio.com/wiki/Respeaker_agora/6.png )
 
 :::tip 旧コンソール vs 新コンソール
@@ -228,11 +238,11 @@ Conversational AI Engineを使用する前に、アプリのコンソールで�
 | **電源** | 電源/フラッシュ | USB-C（XIAO ESP32-S3） |
 
 :::caution 重要
-デフォルトのESP-ADFボード設定は通常Korvo-2-V3用に準備されています。そのピンマッピングはXVF3800と異なります。このガイドに従って設定しない場合、一般的な症状には**I2C経由でコーデックが検出されない / I2Sで音声が出ない**などがあります。
+デフォルトのESP-ADFボード設定は通常Korvo-2-V3用に準備されています。そのピンマッピングはXVF3800とは異なります。このガイドに従って設定しない場合、**I2C経由でコーデックが検出されない / I2Sでオーディオが出力されない**などの一般的な症状が発生します。
 :::
 
 
-## ESP32展開
+## ESP32デプロイメント
 
 ### このリポジトリをクローン
 ```bash
@@ -241,7 +251,7 @@ git clone https://github.com/AgoraIO-Conversational-AI/esp32-client/tree/main/es
 
 ### 開発環境のセットアップ
 
-#### ステップ 1: ESP-IDF v5.2.3 をインストール
+#### ステップ1：ESP-IDF v5.2.3をインストール
 
 ```bash
 mkdir -p ~/esp
@@ -255,7 +265,7 @@ cd esp-idf
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 ```
 
-#### ステップ 2: ESP-ADF v2.7 をインストール
+#### ステップ2：ESP-ADF v2.7をインストール
 
 ```bash
 cd ~/esp
@@ -265,7 +275,7 @@ export ADF_PATH=~/esp/esp-adf
 echo 'export ADF_PATH=~/esp/esp-adf' >> ~/.bashrc  # or ~/.zshrc
 ```
 
-#### ステップ 3: IDF パッチを適用（ESP-ADF で必要）
+#### ステップ3：IDFパッチを適用（ESP-ADFで必要）
 
 ```bash
 cd ~/esp/esp-idf
@@ -273,9 +283,9 @@ git apply $ADF_PATH/idf_patches/idf_v5.2_freertos.patch
 ```
 
 
-### Agora IoT SDK をダウンロード
+### Agora IoT SDKをダウンロード
 
-Agora IoT SDK をプロジェクトの `components/` ディレクトリに展開します（プロジェクトルートを例として）：
+Agora IoT SDKをプロジェクトの`components/`ディレクトリに展開します（プロジェクトルートを例として使用）：
 
 ```bash
 cd /path/to/esp32-client-Respeaker-convo/components
@@ -297,11 +307,11 @@ components/agora_iot_sdk/
     └── librtsa.a
 ```
 
-### ESP-ADF ボードピンの設定（重要）
+### ESP-ADFボードピンの設定（重要）
 
-このプロジェクトは ESP-ADF Korvo-2-V3 ボードをベースとして使用しますが、そのピンマッピングを XVF3800 設定に置き換える必要があります。
+このプロジェクトはESP-ADF Korvo-2-V3ボードをベースとして使用していますが、そのピンマッピングをXVF3800設定に置き換える必要があります。
 
-**方法 A（推奨）: board_pins_config.c を直接上書き**
+**方法A（推奨）：board_pins_config.cを直接上書き**
 
 ```bash
 cp board_configs/board_pins_config_respeaker.c    $ADF_PATH/components/audio_board/esp32_s3_korvo2_v3/board_pins_config.c
@@ -319,14 +329,14 @@ grep "TAG =" $ADF_PATH/components/audio_board/esp32_s3_korvo2_v3/board_pins_conf
 static const char *TAG = "RESPEAKER_XVF3800";
 ```
 
-:::tip なぜこの変更が必要？
-コーデック（AIC3104）制御と I2S キャプチャ/再生は、正しい I2C/I2S ピンマッピングに依存しているためです。ピンが間違っていると、**I2C タイムアウト / 0x18 を検出できない / 音が出ない**などの問題が発生します。
+:::tip なぜこれを変更するのか？
+コーデック（AIC3104）制御とI2Sキャプチャ/再生は正しいI2C/I2Sピンマッピングに依存しているためです。ピンが間違っていると、**I2Cタイムアウト / 0x18を検出できない / 音が出ない**などの問題が発生します。
 :::
 
 
-### プロジェクトパラメータの設定
+### プロジェクトパラメータ設定
 
-`main/app_config.h` を編集して、以下を設定します：
+`main/app_config.h`を編集して以下を設定します：
 
 #### 1) WiFi
 
@@ -335,7 +345,7 @@ static const char *TAG = "RESPEAKER_XVF3800";
 #define WIFI_PASSWORD            "Your_WiFi_Password"
 ```
 
-#### 2) Agora アカウント情報
+#### 2) Agoraアカウント情報
 
 ```c
 #define AGORA_APP_ID             "your_agora_app_id"
@@ -343,7 +353,7 @@ static const char *TAG = "RESPEAKER_XVF3800";
 #define AGORA_API_SECRET         "your_agora_api_secret"
 ```
 
-#### 3) RTC チャンネルと UID
+#### 3) RTCチャンネルとUID
 
 ```c
 #define CONVO_CHANNEL_NAME       "your_unique_channel"
@@ -352,7 +362,7 @@ static const char *TAG = "RESPEAKER_XVF3800";
 #define CONVO_REMOTE_RTC_UID     1000
 ```
 
-#### 4) LLM 設定（例：OpenAI / Azure OpenAI）
+#### 4) LLM設定（例：OpenAI / Azure OpenAI）
 
 ```c
 #define LLM_URL                  "https://api.openai.com/v1/chat/completions"
@@ -367,7 +377,7 @@ static const char *TAG = "RESPEAKER_XVF3800";
 #define LLM_MODEL                "gpt-4"
 ```
 
-#### 5) TTS 設定（例：Azure TTS）
+#### 5) TTS設定（例：Azure TTS）
 
 ```c
 #define TTS_VENDOR               "azure"
@@ -376,7 +386,7 @@ static const char *TAG = "RESPEAKER_XVF3800";
 #define TTS_VOICE_NAME           "en-US-JennyNeural"
 ```
 
-#### 6) ASR 設定
+#### 6) ASR設定
 
 ```c
 #define ASR_LANGUAGE             "en-US"
@@ -385,7 +395,7 @@ static const char *TAG = "RESPEAKER_XVF3800";
 
 ### ビルドとフラッシュ
 
-#### ステップ 1: ESP-IDF 環境を読み込み
+#### ステップ1：ESP-IDF環境をロード
 
 ```bash
 get_idf
@@ -393,20 +403,20 @@ get_idf
 . $HOME/esp/esp-idf/export.sh
 ```
 
-#### ステップ 2: プロジェクトディレクトリに入り、ターゲットを設定
+#### ステップ2：プロジェクトディレクトリに入りターゲットを設定
 
 ```bash
 cd /path/to/esp32-client-Respeaker-convo
 idf.py set-target esp32s3
 ```
 
-#### ステップ 3: ビルド
+#### ステップ3：ビルド
 
 ```bash
 idf.py build
 ```
 
-#### ステップ 4: フラッシュとモニター
+#### ステップ4：フラッシュとモニター
 
 ```bash
 # Linux
@@ -419,7 +429,7 @@ idf.py -p /dev/cu.usbmodem* flash monitor
 idf.py -p COM3 flash monitor
 ```
 
-:::tip Linux シリアル権限
+:::tip Linuxシリアル権限
 「permission denied」が表示される場合は、以下を実行してください：
 ```bash
 sudo usermod -aG dialout $USER
@@ -433,12 +443,12 @@ sudo usermod -aG dialout $USER
 
 ### 起動ログチェックリスト
 
-正常に起動すると、シリアルログには通常以下が含まれます：
+正常に起動した場合、シリアルログには通常以下が含まれます：
 
-- WiFi 接続と IP 取得
-- AIC3104 検出（I2C アドレスは通常 `0x18`）
+- WiFi接続とIP取得
+- AIC3104検出（I2Cアドレスは通常`0x18`）
 - オーディオパイプライン正常開始
-- Agora RTC 正常参加（または準備完了）
+- Agora RTC正常参加（または準備完了）
 
 例（参考のみ）：
 
@@ -452,41 +462,41 @@ agora_rtc_join_channel success
 
 ### 会話を開始（ボタン制御）
 
-1. 電源を入れ、デバイスが準備完了になるまで待機  
-2. **SET ボタンを一度押す**：会話を開始/参加（エージェントが RTC チャンネルに参加）  
-3. マイクに向かって話し、スピーカーから AI の返答が再生されるのを待つ  
-4. **SET** を再度押す（または **MUTE** を押す）と会話を停止  
+1. 電源を入れ、デバイスが準備完了になるまで待つ  
+2. **SETボタンを一度押す**：会話を開始/参加（エージェントがRTCチャンネルに参加）  
+3. マイクに向かって話し、スピーカーからAIの返答が再生されるのを待つ  
+4. 再度**SET**を押す（または**MUTE**を押す）と会話を停止  
 
 
 ## FAQ
 
-### Q1: I2C タイムアウト / AIC3104 (0x18) が見つからない
+### Q1：I2Cタイムアウト / AIC3104（0x18）が見つからない
 
 **考えられる原因：**
-- ESP-ADF の `board_pins_config.c` がこのガイドの説明通りに置き換えられていない
-- 間違った I2C ピンマッピング（SDA=GPIO5、SCL=GPIO6 であるべき）
-- ハードウェア接続の問題（XIAO と XVF3800 が正しく接続されていない）
+- ESP-ADFの`board_pins_config.c`がこのガイドの説明通りに置き換えられていない
+- 間違ったI2Cピンマッピング（SDA=GPIO5、SCL=GPIO6であるべき）
+- ハードウェア接続の問題（XIAOとXVF3800が正しく接続されていない）
 
 **推奨チェック：**
-- 「ESP-ADF ボードピンの設定」ステップを繰り返し、`idf.py fullclean` を実行して再ビルド
-- 起動ログで `0x18` が検出されるかチェック
+- 「ESP-ADFボードピンの設定」ステップを繰り返し、`idf.py fullclean`を実行して再ビルド
+- 起動ログで`0x18`が検出されるかどうかを確認
 
-### Q2: 録音/アップリンクは動作するが、スピーカー出力がない
+### Q2：録音/アップリンクは動作するが、スピーカー出力がない
 
 **一般的な原因：**
-- I2S DIN/DOUT 方向の設定ミス（DIN=GPIO43、DOUT=GPIO44）
-- スピーカーが 3.5mm ジャックに接続されていない、または音量が低すぎる
+- I2S DIN/DOUT方向の設定ミス（DIN=GPIO43、DOUT=GPIO44）
+- スピーカーが3.5mmジャックに接続されていない、または音量が低すぎる
 - AEC/オーディオパイプラインが正しく開始されていない
 
-### Q3: ビルドエラーまたは依存関係の不足
+### Q3：ビルドエラーまたは依存関係の不足
 
 **提案：**
-- ESP-IDF / ESP-ADF のバージョンがこのガイドと一致することを確認
+- ESP-IDF / ESP-ADFのバージョンがこのガイドと一致することを確認
 - サブモジュールを再初期化（プロジェクトがサブモジュールを使用している場合）：
   ```bash
   git submodule update --init --recursive
   ```
-- フルクリーンを実行：
+- 完全クリーンを実行：
   ```bash
   idf.py fullclean
   ```
@@ -495,11 +505,11 @@ agora_rtc_join_channel success
 
 ## 参考資料
 
-- Agora Console（App ID / API Key）
-- Agora RTC ドキュメントと IoT SDK ドキュメント
-- ESP-IDF v5.2.3 ドキュメント
-- ESP-ADF v2.7 ドキュメント
-- reSpeaker XVF3800 紹介とファームウェア更新ガイド
+- Agoraコンソール（App ID / API Key）
+- Agora RTCドキュメントとIoT SDKドキュメント
+- ESP-IDF v5.2.3ドキュメント
+- ESP-ADF v2.7ドキュメント
+- reSpeaker XVF3800紹介とファームウェア更新ガイド
 - [ESP32 Conversational AI Clients](https://github.com/AgoraIO-Conversational-AI/esp32-client/tree/main)
 
 
