@@ -1,34 +1,36 @@
 ---
-description: reComputer Industrial R21xx Flash OS
-title: reComputer Industrial R21xx Flash OS
+description: The reComputer Industrial R22xx is an industrial-grade AI-powered NVR built on Raspberry Pi CM5 equipped with a Hailo-8 AI accelerator delivering up to 26 TOPS. Featuring 4 Gigabit Ethernet ports with PoE PSE support plus an additional Gigabit Ethernet port, it enables high-bandwidth video streaming and simplified PoE deployment for IP cameras. Offers rich industrial I/O, flexible wireless connectivity, fanless thermal design, and a wide operating temperature range from –20 °C to 50 °C, ensuring reliable AI video analytics and continuous, stable operation in demanding scenarios.
 keywords:
+- Edge Controller
 - Raspberry pi
 - Edge Controller
-- reComputer Industrial R21xx
-- Flash OS
-image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
-slug: /recomputer_industrial_r21xx_flash_os
+- reComputer Industrial R22xx
+image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg
+slug: /recomputer_industrial_r22xx_flash_os
+sku: 100077451,100079040
 last_update:
-  date: 09/28/2025
+  date: 02/09/2026
   author: Nolan Chen
 ---
-# reComputer Industrial R21xx Flash OS
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
+
+# reComputer Industrial R22xx Flash OS
+
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
-reComputer Industrial R21xx series is powered by Raspberry Pi CM5 and Hailo-8 AI accelerator, this compact edge AI system delivers 26 TOPS for real-time multi-channel vision processing. With a quad-core Cortex-A76 CPU, up to 16GB RAM, 64GB eMMC, and a versatile interface, it ensures seamless integration into industrial AI applications.
+reComputer Industrial R22xx series is powered by Raspberry Pi CM5 and Hailo-8 AI accelerator, this compact edge AI system delivers 26 TOPS for real-time multi-channel vision processing. With a quad-core Cortex-A76 CPU, up to 16GB RAM, 64GB eMMC, and a versatile interface, it ensures seamless integration into industrial AI applications.
 
 ## Hardware Requirements
 
 You need to prepare the following hardware
 
-- reComputer Industrial R21xx x 1
+- reComputer Industrial R22xx x 1
 - Host Computer (Windows/Mac/Linux) x 1
 - Ethernet cable x 1
 - Power adapter (12V-24V) BYO
@@ -45,23 +47,39 @@ You need to prepare the following hardware
 - **Step 1.** Click the link below to download the device [image file](https://github.com/Seeed-Studio/pi-gen-expand/tree/main?tab=readme-ov-file)
 Select the last one and click the date link to download:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.1-1.png" style={{width:800, height:'auto'}}/></div>
 
 - **Step 2.** Download **Raspberry Pi Imager** software from **[here](https://www.raspberrypi.org/software/)**
 
 - **Step 3.** Open Raspberry Pi Imager software
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="800" height="auto"/></p>
+- a.Download the rpiboot setup installer by click here to install the necessary drivers and the boot tool.
+- b.Connect reComputer R2200 the PC via USB Type-C cable.
+- c.Windows will now find the hardware and install the necessary drivers.
+- d.Search for rpiboot tool that we installed before and open it.
+- e.Open file explorer and you will see the eMMC of the Computer Module 5 shown as a USB mass storage device.
+- f.Download Raspberry Pi Imager software from https://www.raspberrypi.org/software/ .
+- g.Open Raspberry Pi Imager software.
 
-- **Step 4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.1-2.png" alt="pir" width="800" height="auto"/></p>
 
-- **Step 5.** Click **CHOOSE OS** and Select the downloaded image file.
+- **Step 4.** Select the downloaded image file.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/3.1_flashing_image_5.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.1-3.png" alt="pir" width="800" height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.1-4.png" alt="pir" width="800" height="auto"/></p>
+
+- **Step 5.** In the Storage tab, select the storage device to write the image to. Select Next.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.1-5.png" alt="pir" width="800" height="auto"/></p>
+
+- **Step 6.** Raspberry Pi OS and some third-party operating systems support customisation. If you’re installing one of these operating systems, you can use the next set of steps in Imager to customise it. These steps are optional and can be skipped by choosing Skip customisation.For further configuration instructions, please refer to **[here](https://www.raspberrypi.com/documentation/computers/getting-started.html#advanced-options)**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.1-6.png" alt="pir" width="800" height="auto"/></p>
 
 Continue burning the image until it succeeds.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/3.1-7.png" alt="pir" width="800" height="auto"/></p>
 
 Unplug the USB-C port, press the boot button again, and power on/off. If you can log in to the system normally, the image has been burned successfully and can be used normally.
 
@@ -226,7 +244,6 @@ Configuration will be confirmed. Press Enter:
 You will be asked whether you want to reboot now. Click `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="800" height="auto" /></div>
-
 
 
 ## Tech Support & Product Discussion

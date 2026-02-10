@@ -1,34 +1,35 @@
 ---
-description: reComputer Industrial R21xx Assembly Guide
-title: reComputer Industrial R21xx Assembly Guide
+description: The reComputer Industrial R22xx is an industrial-grade AI-powered NVR built on Raspberry Pi CM5 equipped with a Hailo-8 AI accelerator delivering up to 26 TOPS. Featuring 4 Gigabit Ethernet ports with PoE PSE support plus an additional Gigabit Ethernet port, it enables high-bandwidth video streaming and simplified PoE deployment for IP cameras. Offers rich industrial I/O, flexible wireless connectivity, fanless thermal design, and a wide operating temperature range from –20 °C to 50 °C, ensuring reliable AI video analytics and continuous, stable operation in demanding scenarios.
 keywords:
+- Edge Controller
 - Raspberry pi
 - Edge Controller
-- reComputer Industrial R21xx
+- reComputer Industrial R22xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
-slug: /recomputer_industrial_R21xx_assembly_guide
+slug: /recomputer_industrial_r22xx_assembly_guide
+sku: 100077451,100079040
 last_update:
-  date: 09/28/2025
+  date: 02/09/2026
   author: Nolan Chen
 ---
 
-<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2135-12-p-6547.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-R2235-12-p-6654.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
-The reComputer Industrial R21xx supports a variety of IoT wireless communications, including 4G, 5G, LoRa®, Wi-Fi/BLE, and Zigbee. It supports expansion via an M.2 slot for SSD storage or AI capabilities via an NPU accelerator. If you choose to include the AI ​​accelerator directly in your purchase, you'll gain an additional 26TOPS of computing power. Furthermore, our hardware engineering services include logo customization, package branding, labeling, firmware flashing, and imaging services, providing comprehensive support tailored to your specific needs.
+The reComputer Industrial R22xx supports a variety of IoT wireless communications, including 4G, 5G, LoRa®, Wi-Fi/BLE, and Zigbee. It supports expansion via an M.2 slot for SSD storage or AI capabilities via an NPU accelerator. If you choose to include the AI ​​accelerator directly in your purchase, you'll gain an additional 26TOPS of computing power. Furthermore, our hardware engineering services include logo customization, package branding, labeling, firmware flashing, and imaging services, providing comprehensive support tailored to your specific needs.
 
-This Wiki will show you how to Assemble and Disassemble the unit to install peripherals components, as well as the option for mounting
+This Wiki will show you how to Assemble and Disassemble the unit to install peripherals components, as well as the option for mounting.
 
 ## Hardware Prerequisites
 
 You need to prepare the following hardware
 
-- reComputer Industrial R21xx x 1
+- reComputer Industrial R22xx x 1
 - Accessories
 - Screw Driver set
   - Phillips + 3.5 bit
@@ -46,15 +47,17 @@ Following these steps should help you disassemble the device without any issues.
 
 **Step 2:**  Unscrew the side antenna connector nuts and remove the Floor Panel.
 
-**Step 3:** Remove the four screws that secure the PCB in place
+**Step 3:**  Remove the expansion board.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.1_disassembly_guide_1.png" style={{width:800, height:'auto'}}/></div>
+**Step 4:** Remove the four screws that secure the PCB in place
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.1-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Installing a Nano SIM Card
 
 **Step 1:** Load the Nano SIM Card into the SIM slot.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.2_assemble_nano_sim_card_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.2-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Installing an SSD  
 
@@ -62,7 +65,15 @@ Following these steps should help you disassemble the device without any issues.
 
 **Step 2:** Load the SSD into the M.2 socket and lock the screws.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.3_assemble_ssd_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.3-1.png" style={{width:800, height:'auto'}}/></div>
+
+## Assemble M.2 AI Accelerator
+
+**Step 1:** Disassemble the entire device following section 4.1 "Disassembly Guide".
+**Step 2:** Load the AI Accelerator into the M.2 socket and lock the screws.
+
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.4-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Assembling 5G/4G/LoRa®/Zigbee Module and Antenna
 
@@ -72,7 +83,8 @@ Following these steps should help you disassemble the device without any issues.
 
 **Step 3:** Install the feeder into the antenna base of the corresponding module.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.5_assemble_5g4glora_zigbee_module_and_antenna_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.5-1.png" style={{width:800, height:'auto'}}/></div>
+
 
 ## Assembling the TPM 2.0 Module
 
@@ -80,7 +92,7 @@ Following these steps should help you disassemble the device without any issues.
 
 **Step 2:** Load the TPM 2.0 module into the J26 socket.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.6_assemble_tpm_2.0_module_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.6-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Assembling the UPS and PoE Module
 
@@ -96,7 +108,7 @@ Following these steps should help you disassemble the device without any issues.
 - Align the **PoE module** with the **designated slot** on the board.  
 - Carefully **solder the PoE module** onto the board, ensuring precision to prevent damage to nearby components.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/4.7_assemble_ups_module_1.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.7-1.png" style={{width:800, height:'auto'}}/></div>
 
 ## Mounting Guide
 
@@ -244,14 +256,31 @@ Vertical mounting method is also suitable for reComputer Industrial R2000, howev
       <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>112990226</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={2} style={{height: 18, width: '20%'}}>Power Adapter</td>
-      <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={2} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/58.png" /></td>
-      <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-US-p-5731.html" target="_blank" rel="noopener noreferrer">Power Adapter-American</a></td>
-      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061505</td>
+      <td data-style="height: 18px; width: 20%;" colSpan={1} rowspan={6} style={{height: 18, width: '20%'}}>Power Adapter</td>
+      <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={1} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.8.2-table-23.png" /></td>
+      <td><a href="https://www.seeedstudio.com/Power-Adapter-3P-Black-19V-4-74A-AC-p-6377.html" target="_blank" rel="noopener noreferrer">Power Adapter 3P-Black-19V-4.74A/7.4*5mm</a></td>
+      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>313080684</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
-      <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-EU-p-5732.html" target="_blank" rel="noopener noreferrer">Power Adapter-European</a></td>
-      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>110061506</td>
+      <td data-style="height: 18px; width: 30%;" colSpan={1} rowspan={5} style={{height: 18, width: '30%'}}><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2200/4.8.2-table-24.png" /></td>
+      <td><a href="https://www.seeedstudio.com/Power-Adapter-12V-2A-EU-p-5732.html" target="_blank" rel="noopener noreferrer">AC Cloverleaf Power Cord - US</a></td>
+      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>313990332</td>
+    </tr>
+    <tr data-style="height: 18px;" style={{height: 18}}>
+      <td><a href="https://www.seeedstudio.com/AC-UK-p-5124.html" target="_blank" rel="noopener noreferrer">AC Cloverleaf Power Cord - UK</a></td>
+      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>313990328</td>
+    </tr>
+    <tr data-style="height: 18px;" style={{height: 18}}>
+      <td><a href="https://www.seeedstudio.com/Power-Cord-JP-0-5m-p-6386.html" target="_blank" rel="noopener noreferrer">AC Cloverleaf Power Cord - JP</a></td>
+      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>106990469</td>
+    </tr>
+    <tr data-style="height: 18px;" style={{height: 18}}>
+      <td><a href="https://www.seeedstudio.com/Power-Cord-EU-0-5m-p-6385.html" target="_blank" rel="noopener noreferrer">AC Cloverleaf Power Cord - EU</a></td>
+      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>106990468</td>
+    </tr>
+    <tr data-style="height: 18px;" style={{height: 18}}>
+      <td><a href="https://www.seeedstudio.com/Power-Cord-CN-0-5m-p-6387.html" target="_blank" rel="noopener noreferrer">AC Cloverleaf Power Cord - CN</a></td>
+      <td data-style="height: 18px; width: 12.5%;" colSpan={1} style={{height: 18, width: '12.5%'}}>106990470</td>
     </tr>
   </tbody>
 </table>
