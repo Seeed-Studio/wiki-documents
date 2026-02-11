@@ -16,29 +16,20 @@ sku:
 translation:
   skip: [zh-CN,ja,es]
 last_update:
-  date: 1/7/2026
-  author: TienjuiWong
-
+  date: 02/11/2026
+  author: Tienjui Wong
 ---
 
-<div style={{maxWidth: '800px', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'}}>
-  <video
-    width="100%"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    style={{display: 'block'}}
-    ref={(video) => { if (video) video.play().catch(() => {}); }}>
-    <source src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.mp4" type="video/mp4"/>
+<div style={{maxWidth: "800px", margin: "0 auto", borderRadius: "12px", overflow: "hidden", boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)"}}>
+  <video width="100%" autoPlay muted loop playsInline preload="auto" style={{display: "block"}}>
+    <source src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<div class="get_one_now_container" style={{textAlign: "center"}}>
 <a class="get_one_now_item" href="https://www.pollen-robotics.com/reachy-mini/#order" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🤖</font></span></strong>
+            <strong><span style={{color: "#FFFFFF", fontSize: "18px"}}> Get One Now 🤖</span></strong>
 </a>
 </div>
 
@@ -84,18 +75,18 @@ Reachy Mini packs impressive capabilities into a compact, desktop-sized package.
 - **Width:** 16 cm / 6.3 inches
 - **Weight:** 1.5 kg / 3.3 lbs
 
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', margin: '24px 0'}}>
+<div style={{display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", margin: "24px 0"}}>
   <div align="center">
-    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachy_mini_dimensions.png" alt="Reachy Mini Dimensions"/>
-    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>Physical Dimensions</p>
+    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachy_mini_dimensions.png" alt="Reachy Mini Dimensions" />
+    <p style={{fontSize: "0.85em", color: "#666", marginTop: "8px"}}>Physical Dimensions</p>
   </div>
   <div align="center">
-    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/dof_table.png" alt="Degrees of Freedom Table"/>
-    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>DOF Specifications</p>
+    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/dof_table.png" alt="Degrees of Freedom Table" />
+    <p style={{fontSize: "0.85em", color: "#666", marginTop: "8px"}}>DOF Specifications</p>
   </div>
   <div align="center">
-    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/degrees_of_freedom.png" alt="Degrees of Freedom Diagram"/>
-    <p style={{fontSize: '0.85em', color: '#666', marginTop: '8px'}}>Motion Range</p>
+    <img width="100%" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/degrees_of_freedom.png" alt="Degrees of Freedom Diagram" />
+    <p style={{fontSize: "0.85em", color: "#666", marginTop: "8px"}}>Motion Range</p>
   </div>
 </div>
 
@@ -118,37 +109,37 @@ Reachy Mini is specifically engineered for expressive, engaging human-robot inte
 - **Python SDK:** Intuitive programming interface with JavaScript and Scratch support coming soon
 - **Hugging Face Integration:** Direct access to state-of-the-art AI models for speech, vision, and more
 
-<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', margin: '24px 0', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto'}}>
-  <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px'}}>
+<div style={{display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", margin: "24px 0", maxWidth: "800px", marginLeft: "auto", marginRight: "auto"}}>
+  <div style={{position: "relative", paddingBottom: "56.25%", height: "0", overflow: "hidden", borderRadius: "8px"}}>
     <iframe
-      style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none'}}
+      style={{position: "absolute", top: "0", left: "0", width: "100%", height: "100%", border: "none"}}
       src="https://www.youtube.com/embed/wLftEz-QF1E"
       title="Reachy Mini Demo 1"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
-  <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px'}}>
+  <div style={{position: "relative", paddingBottom: "56.25%", height: "0", overflow: "hidden", borderRadius: "8px"}}>
     <iframe
-      style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none'}}
+      style={{position: "absolute", top: "0", left: "0", width: "100%", height: "100%", border: "none"}}
       src="https://www.youtube.com/embed/JvdBJZ-qR18"
       title="Reachy Mini Demo 2"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
-  <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px'}}>
+  <div style={{position: "relative", paddingBottom: "56.25%", height: "0", overflow: "hidden", borderRadius: "8px"}}>
     <iframe
-      style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none'}}
+      style={{position: "absolute", top: "0", left: "0", width: "100%", height: "100%", border: "none"}}
       src="https://www.youtube.com/embed/vRh8G46Nc5k"
       title="Reachy Mini Demo 3"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
-  <div style={{position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '8px'}}>
+  <div style={{position: "relative", paddingBottom: "56.25%", height: "0", overflow: "hidden", borderRadius: "8px"}}>
     <iframe
-      style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none'}}
+      style={{position: "absolute", top: "0", left: "0", width: "100%", height: "100%", border: "none"}}
       src="https://www.youtube.com/embed/dMpLCGvE2A0"
       title="Reachy Mini Demo 4"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -159,8 +150,8 @@ Reachy Mini is specifically engineered for expressive, engaging human-robot inte
 
 ## Hardware Versions
 
-<div style={{float: 'right', marginLeft: '24px', marginBottom: '16px'}}>
-  <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/plumber.png" alt="Reachy Mini Plumber" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
+<div style={{float: "right", marginLeft: "24px", marginBottom: "16px"}}>
+ <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/plumber.png" alt="Reachy Mini Plumber" style={{borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)"}} />
 </div>
 
 ### Reachy Mini Lite ($299)
@@ -230,8 +221,8 @@ Depending on your version, you'll need:
 
 ### Quick Start Installation
 
-<div style={{float: 'right', marginLeft: '24px', marginBottom: '16px', clear: 'both'}}>
-  <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/cowboy.png" alt="Reachy Mini Cowboy" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
+<div style={{float: "right", marginLeft: "24px", marginBottom: "16px", clear: "both"}}>
+  <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/cowboy.png" alt="Reachy Mini Cowboy" style={{borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)"}} />
 </div>
 
 Install the Reachy Mini SDK with the following command:
@@ -272,7 +263,7 @@ A web-based dashboard provides an intuitive interface for testing and controllin
 Download the dashboard from the [official repository](https://github.com/pollen-robotics/reachy_mini) or access it directly from your Reachy Mini Full's local network.
 
 <div align="center">
-  <img width="600" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini_webui.png"/>
+  <img width="600" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/reachymini_webui.png" />
 </div>
 
 ## Hugging Face Apps Ecosystem
@@ -286,8 +277,8 @@ Reachy Mini features a growing ecosystem of ready-to-use applications powered by
 - Voice recognition and speech synthesis
 - Customizable personality and knowledge base
 
-<div style={{float: 'left', marginRight: '24px', marginBottom: '16px', clear: 'both'}}>
-  <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/reachy-hand-tracking-app.jpg" alt="Reachy Mini Hand Tracking" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
+<div style={{float: "left", marginRight: "24px", marginBottom: "16px", clear: "both"}}>
+  <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/reachy-hand-tracking-app.jpg" alt="Reachy Mini Hand Tracking" style={{borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)"}} />
 </div>
 
 **Hand Tracker**
@@ -304,15 +295,15 @@ Reachy Mini features a growing ecosystem of ready-to-use applications powered by
 Browse the complete app collection on [Hugging Face Spaces](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini)
 
 <div align="center">
-    <img width="600" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/apps.png" alt="Reachy Mini Apps Ecosystem"/>
+    <img width="600" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/apps.png" alt="Reachy Mini Apps Ecosystem" />
 </div>
 
 ## Building Custom Applications
 
 ### Python SDK
 
-<div style={{float: 'right', marginLeft: '24px', marginBottom: '16px', clear: 'both'}}>
-  <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/reachy-conversation-app.jpg" alt="Reachy Mini Conversation" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
+<div style={{float: "right", marginLeft: "24px", marginBottom: "16px", clear: "both"}}>
+  <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/reachy-conversation-app.jpg" alt="Reachy Mini Conversation" style={{borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)"}} />
 </div>
 
 The Python SDK provides comprehensive control over all Reachy Mini systems:
@@ -400,8 +391,8 @@ Test your code, iterate quickly, and deploy to hardware when ready.
 
 ## Privacy & Security
 
-<div style={{float: 'left', marginRight: '24px', marginBottom: '16px', clear: 'both'}}>
-  <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/astronaut.png" alt="Reachy Mini Astronaut" style={{borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'}}/>
+<div style={{float: "left", marginRight: "24px", marginBottom: "16px", clear: "both"}}>
+  <img width="200" src="https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/astronaut.png" alt="Reachy Mini Astronaut" style={{borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)"}} />
 </div>
 
 Reachy Mini is designed with privacy in mind:
@@ -421,18 +412,17 @@ Reachy Mini does not send any data to Pollen Robotics or Hugging Face. All proce
 - **GitHub:** [Report issues and contribute](https://github.com/pollen-robotics/reachy_mini)
 - **Official Website:** [https://www.pollen-robotics.com/reachy-mini/](https://www.pollen-robotics.com/reachy-mini/)
 
-### Documentation & Learning Resources
-
-- **[Official Development Guide](https://github.com/pollen-robotics/reachy_mini/blob/develop/README.md):** Complete official documentation and development resources
-- **[SDK Installation](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/installation.md):** 5 minutes to set up your computer
-- **[Quickstart Guide](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/quickstart.md):** Run your first behavior on Reachy Mini
-- **[Python SDK](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/python-sdk.md):** Learn to move, see, speak, and hear
-- **[AI Integrations](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/integration.md):** Connect LLMs, build Apps, and publish to Hugging Face
-- **[Core Concepts](https://github.com/pollen-robotics/reachy_mini/blob/develop/docs/SDK/core-concept.md):** Architecture, coordinate systems, and safety limits
-- **[Secondary Development](https://github.com/Seeed-Projects/reachy-mini-starter):** Seeed's starter guide for custom application development
-- **[Assembly Guide](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide):** Step-by-step assembly instructions
+<!-- ### Documentation & Learning Resources
+- **[Official Development Guide](../../SDK/readme): Complete official documentation and development resources
+- **[SDK Installation](../../SDK/installation): 5 minutes to set up your computer
+- **[Quickstart Guide](../../SDK/quickstart): Run your first behavior on Reachy Mini
+- **[Python SDK](../../SDK/python-sdk): Learn to move, see, speak, and hear
+- **[AI Integrations](../../SDK/integration): Connect LLMs, build Apps, and publish to Hugging Face
+- **[Core Concepts](../../SDK/core-concept): Architecture, coordinate systems, and safety limits
+- **[Secondary Development](https://github.com/Seeed-Projects/reachy-mini-starter): Seeed's starter guide for custom application development
+- **[Assembly Guide](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Assembly_Guide): Step-by-step assembly instructions
 - 🤗[**Share your app with the community**](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)
-
+-->
 
 ## What's Next?
 
