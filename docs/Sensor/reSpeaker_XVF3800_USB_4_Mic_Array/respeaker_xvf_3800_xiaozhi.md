@@ -246,7 +246,8 @@ After flashing, the device needs network configuration and cloud binding to use 
 
 
 Once completed, your reSpeaker–Xiaozhi device should be ready and operational.
-
+And, don't forget to change the output language to your preference in the settings!
+![language](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/xiaozhi_language.png)
 
 
 ## Tech Support & Product Discussion

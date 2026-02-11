@@ -1,6 +1,6 @@
 ---
-description: 24GHz mmWave Human Static Presence
-title: 24GHz mmWave Human Static Presence
+description: 24GHz mmWave 人体静的存在
+title: 24GHz mmWave 人体静的存在
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -10,17 +10,17 @@ last_update:
   author: jianjing Huang
 ---
 
-# 24GHz mmWave センサー - 人体静的存在検知モジュール (MR24HPB1)
+# 24GHz mmWave センサー - 人体静的存在モジュール (MR24HPB1)
 
 ![](https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Human-Static-Presence-Module-p-5267.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Human-Static-Presence-Module-p-5267.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong></a>
 </div>
 
-## 概要
+## はじめに
 
-Human Static Presence Radar Sensorは、24GHzで動作する自己完結型、プライバシー保護、安全なmmWaveモジュールです。強化されたInfineon Dopplerレーダーと標準アルゴリズムにより、このモジュールはスマートホーム、スマートホテル、危険警報などの個別アプリケーションに理想的なソリューションです。
+人体静的存在レーダーセンサーは、24GHzで動作する自己完結型、プライバシー保護、安全なmmWaveモジュールです。強化されたInfineonドップラーレーダーと標準アルゴリズムにより、このモジュールはスマートホーム、スマートホテル、危険警報などの個別アプリケーションに理想的なソリューションです。
 
 ### アプリケーション
 
@@ -29,13 +29,13 @@ Human Static Presence Radar Sensorは、24GHzで動作する自己完結型、�
 ### **特徴**
 
 - 信頼性の高い技術：Infineon mmWave FMCW産業用レーダー
-- 有効化理論：24GHzで動作するNear Distance Sensor（NDS）を使用したDopplerレーダー技術を適用
+- 有効な理論：24GHzで動作する近距離センサー（NDS）を使用したドップラーレーダー技術を適用
 - 標準アルゴリズム：自己適応環境において占有/非占有状態を区別し、人間の活動を識別
-- 完全なプライバシー保護：識別なしで監視機能を提供
+- 完璧なプライバシー保護：識別なしで監視機能を提供
 - 柔軟な設置場所：遮蔽物に関係なく適切に動作
 - 無害な動作状態：10 dBmの無害なエネルギー出力
 - 高精度：非生物オブジェクトの干渉を減少させ、出力結果は95%以上の精度を達成
-- 高い堅牢性：異なる温度、湿度、ノイズ、気流、塵、光などを含む複雑な環境で適切な機能を維持
+- 高い堅牢性：異なる温度、湿度、ノイズ、気流、ほこり、光などを含む複雑な環境で適切な機能を維持
 - 高性能アンテナ：水平90°/垂直60°のファンビームパターンで微細な動きも感知
 - 測定距離：
   - 動作感知最大距離：最大12メートル
@@ -52,8 +52,8 @@ Human Static Presence Radar Sensorは、24GHzで動作する自己完結型、�
 
 1. S1出力：高レベル - 占有、低レベル - 非占有。
 2. S2出力：高レベル - アクティブ、低レベル - 静止
-3. GP1からGP4はパラメータ選択制御で、ユーザー要件に応じて再定義可能
-4. このインターフェースの出力信号はすべて3.3Vレベル。
+3. GP1からGP4はパラメータ選択制御で、ユーザー要件に応じて再定義可能です。
+4. このインターフェースの出力信号はすべて3.3Vレベルです。
 
 :::caution  
 製品の消費電力は500mWで、長期間の電源供給には適していません。
@@ -63,7 +63,7 @@ Human Static Presence Radar Sensorは、24GHzで動作する自己完結型、�
 
 ![](https://files.seeedstudio.com/wiki/mmWave-radar/radar1.png)
 
-## はじめに
+## 入門ガイド
 
 ### Arduinoライブラリ概要
 
@@ -78,42 +78,42 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 スケッチの開発を始める前に、ライブラリの利用可能な関数を見てみましょう。
 
 - `void recvRadarBytes()` —— この関数は、レーダーから返される現在のフレームの長さを取得します。フレームはその長さに応じて配列に格納されます。
-**入力パラメータ:** なし
-**戻り値:** なし
+**入力パラメータ：** なし
+**戻り値：** なし
 
-- `void Bodysign_judgment(byte inf[], float Move_min, float Move_max)` —— レーダーから返されるデータには大量の物理データが含まれています。ユーザーは、サインデータと関数が提供するデコードアルゴリズムに基づいて、検出された動作情報を柔軟に調整できます。判定の内容はシリアルポート経由で出力されます。
-**入力パラメータ:**
+- `void Bodysign_judgment(byte inf[], float Move_min, float Move_max)` —— レーダーから返されるデータには大量の物理データが含まれています。ユーザーは、この関数によって提供される符号データとデコードアルゴリズムに基づいて、検出された動作情報を柔軟に調整できます。判定の内容はシリアルポート経由で出力されます。
+**入力パラメータ：**
   - `byte inf[]` —— レーダーから送信されるデータフレーム。
-  - `float Move_min` —— ユーザーが静止状態または非占有状態にあることを判定する閾値。
+  - `float Move_min` —— ユーザーが静止または非占有状態にあることを判定する閾値。
   - `float Move_max` —— ユーザーが静止状態または誰かが動いている状態にあることを判定する閾値。
 
-    **戻り値:** なし
-    サインパラメータの説明について：理論的には、サインパラメータの計算値は**0から100**の範囲です。計算値が**0**の場合、周囲の環境で**誰も**検出されていないことを意味します。計算値が**1**の場合、環境が占有されており**静止状態**にあることが検出されたことを意味します。計算値が**2から100**の場合、周囲が占有されており**アクティブ**であることが検出されたことを示します。
+    **戻り値：** なし
+    符号パラメータの説明について：理論的には、符号パラメータの計算値は**0から100**の範囲です。計算値が**0**の場合、周囲の環境で**誰も**検出されていないことを意味します。計算値が**1**の場合、環境が占有されており**静止状態**にあることが検出されたことを意味します。計算値が**2から100**の場合、周囲が占有されており**アクティブ**であることが検出されたことを示します。
 
-- `void Situation_judgment(byte inf[])` —— この関数は、レーダー内部のアルゴリズムに従って、人体がレーダーが設置されている場所に近づいているか遠ざかっているかを検出し、人体の動きを判定します。この情報はシリアルポート経由で出力されます。
-**入力パラメータ:**
+- `void Situation_judgment(byte inf[])` —— この関数は、レーダー内部のアルゴリズムに従って、人体がレーダーの設置場所に近づいているか遠ざかっているかを検出し、人体の動きを判定します。この情報はシリアルポート経由で出力されます。
+**入力パラメータ：**
   - `byte inf[]` —— レーダーから送信されるデータフレーム。
 
-    **戻り値:** なし
+    **戻り値：** なし
 
-- `void Fall_inf(byte inf[])` —— この関数は、レーダーから返される転倒検出情報のデコードを完了し、シリアルポート経由でレーダー検出の結果を出力します。
-**入力パラメータ:**
+- `void Fall_inf(byte inf[])` —— この関数は、レーダーから返される転倒検出情報のデコードを完了し、シリアルポート経由でレーダー検出の結果を印刷します。
+**入力パラメータ：**
   - `byte inf[]` —— レーダーから送信されるデータフレーム。
 
-    **戻り値:** なし
+    **戻り値：** なし
 
 - `unsigned short int us_CalculateCrc16(unsigned char *lpuc_Frame, unsigned short int lus_Len)` —— この関数はCRC16チェックサムを生成するために使用されます。
-**入力パラメータ:**
+**入力パラメータ：**
   - `unsigned char *lpuc_Frame` —— レーダーに送信したいデータフレーム（最終的な2バイトのチェックサムフレームは含まない）。
   - `unsigned short int lus_Len` —— レーダーに送信したいデータフレームの長さ。
 
-**戻り値:** 2バイト整数型チェックディジット。
+    **戻り値：** 2バイト整数型チェックディジット。
 
-    **戻り値:** なし
+    **戻り値：** なし
 
 - `void SerialInit()` —— レーダーシリアルポートのボーレートを9600に設定します。Seeeduinoボードの場合、ソフトシリアルポートをRX: 2、TX: 3に設定します。
-**入力パラメータ:** なし
-**戻り値:** なし
+**入力パラメータ：** なし
+**戻り値：** なし
 
 ### インストール
 
@@ -137,7 +137,7 @@ Arduinoを初めて使用する場合は、[Getting Started with Arduino](https:
 
 **ステップ4.** Arduinoコードライブラリをインストールします。
 
-まず[GitHub](https://github.com/limengdu/Seeed_24GHz_mmWave_Radar_Sensor)からコードベースを取得し、ローカルコンピュータにダウンロードします。
+まず[GitHub](https://github.com/limengdu/Seeed_24GHz_mmWave_Radar_Sensor)からコードベースを取得し、ローカルコンピューターにダウンロードします。
 
 zipライブラリをダウンロードしたので、Arduino IDEを開き、**Sketch > Include Library > Add .ZIP Library**をクリックします。ダウンロードしたzipファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウに**Library added to your libraries**と表示されます。これはライブラリが正常にインストールされたことを意味します。
 
@@ -150,18 +150,18 @@ zipライブラリをダウンロードしたので、Arduino IDEを開き、**S
 |              |              |              |
 |:--------------:|:--------------:|:--------------:|
 |<div align="center"><img width ="{210}" src="https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg"/></div>| <div align="center"><img width ="{210}" src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg"/></div>| <div align="center"><img width ="{150}" src="https://files.seeedstudio.com/wiki/60GHzradar/dupont.jpg"/></div>|
-|[**24GHz mmWave Radar Sensor**](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Human-Static-Presence-Module-p-5267.html)|[**Seeed XIAO BLE nRF52840 Sense**](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)|**2mmから2.54mmピッチリボンケーブル**|
+|[**24GHz mmWave レーダーセンサー**](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Human-Static-Presence-Module-p-5267.html)|[**Seeed XIAO BLE nRF52840 Sense**](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)|**2mmから2.54mmピッチリボンケーブル**|
 
-**ステップ1.** メインボードを通してデバイスをコンピュータに接続します。配線図は以下の表に示されています。
+**ステップ1.** メインボードを通してデバイスをコンピューターに接続します。配線図を下の表に示します。
 
 <table align="center">
   <tbody><tr>
       <td colSpan={4}><div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/mmWave-radar/radarconnect.png" /></div></td>
     </tr>
     <tr>
-      <td align="center">Radar Sensor</td>
+      <td align="center">レーダーセンサー</td>
       <td align="center" />
-      <td align="center">Main Board</td>
+      <td align="center">メインボード</td>
     </tr>
     <tr>
       <td align="center">5V</td>
@@ -185,19 +185,19 @@ zipライブラリをダウンロードしたので、Arduino IDEを開き、**S
     </tr>
   </tbody></table>
 
-**ステップ 2.** Arduino IDEの左上のメニューバーで、**tool**を選択し、使用している開発ボードのタイプを選択して、対応するシリアルポートを選択します。
+**ステップ 2.** Arduino IDE の左上のメニューバーで **tool** を選択し、使用している開発ボードの種類を選択し、対応するシリアルポートを選択します。
 
 :::tip
-**MacOS**を使用している場合、デバイスのシリアルポート名は多くの場合**/dev/cu.usbmodem xxx**で始まり、デバイス名で終わります。**Windows**を使用している場合、デバイスのシリアルポート名は多くの場合**COM**で始まり、同様にデバイス名で終わります。
+**MacOS** を使用している場合、デバイスのシリアルポート名は多くの場合 **/dev/cu.usbmodem xxx** で始まり、デバイス名で終わります。**Windows** を使用している場合、デバイスのシリアルポート名は多くの場合 **COM** で始まり、同様にデバイス名で終わります。
 :::
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/3.png"/></div>
 
-この例では、レーダーが人気製品のXIAO BLEとどのように動作するかを実演します。
+この例では、レーダーが人気製品 XIAO BLE とどのように動作するかを実演します。
 
-### Demo1 特徴パラメータ解析を使用した人間の動作の取得
+### デモ1 特徴パラメータ解析を使用した人体動作の取得
 
-レーダーから返される大量のデータの中で、物理データに関する情報が情報の大部分を占めています。時には、レーダー自体のアルゴリズムに過度に依存すると、一部のシナリオで満足のいく結果が得られない場合があります。その場合、レーダーから返される情報を使用して、実際のアプリケーションシナリオに応じて適切な調整を行うことを選択できます。
+レーダーから返される大量のデータの中で、物理データの情報が情報の大部分を占めています。時には、レーダー自身のアルゴリズムに過度に依存すると、一部のシナリオで満足のいく結果が得られない場合があります。その場合、レーダーから返される情報を使用して、実際のアプリケーションシナリオに応じて適切な調整を行うことを選択できます。
 
 この例のコードは以下の通りです。
 
@@ -226,7 +226,7 @@ void loop()
     dataMsg[0] = 0x55;                         //Add the header frame as the first element of the array
     for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  //Frame-by-frame transfer
     radar.newData = false;                     //A complete set of data frames is saved
-    
+
     //radar.ShowData(dataMsg);                 //Serial port prints a set of received data frames
     radar.Bodysign_judgment(dataMsg, 1, 15); //Output of human movement using sign parameters
   }
@@ -237,25 +237,25 @@ void loop()
 radar.Bodysign_judgment(dataMsg, 1, 15);
 ```
 
-dataMsg配列を取得したら、この配列のデータを`Bodysign_judgment()`関数の最初の引数として渡すことができます。この関数はサインパラメータを解析します。
+dataMsg 配列が取得されたら、この配列のデータを `Bodysign_judgment()` 関数の最初の引数として渡すことができます。この関数は符号パラメータを解析します。
 
-`Bodysign_judgment()`関数の2番目と3番目のパラメータは、それぞれ無人状態と静止状態の人体を判定するための閾値、静止状態と動作状態の人体を判定するための閾値です。
+関数 `Bodysign_judgment()` の2番目と3番目のパラメータは、それぞれ無人状態と静止している人体を判定する臨界値、静止している人体と動いている人体を判定する臨界値です。
 
-(1, 15)は、体徴の計算値が1未満の場合、環境に誰もいないことを出力することを意味します。体徴値が1以上15未満の場合、現在の環境に静止状態の人がいることを出力します。体徴値が35以上の場合、環境に動いている人がいることを出力します。
+(1, 15) は、体徴の計算値が1未満の場合、環境に誰もいないことを出力することを意味します。体徴値が1以上15未満の場合、現在の環境に静止状態の人がいることを出力します。体徴値が35以上の場合、環境に動いている人がいることを出力します。
 
-プログラムをアップロードします。シリアルモニターを9600ボーレートで開くと、結果が表示されるはずです。出力は以下の画像のようになるはずです。
+プログラムをアップロードします。シリアルモニターをボーレート9600で開くと結果が表示されるはずです。出力は以下の画像のようになるはずです。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/2.png"/></div>
 
 :::tip
-出力データフレームに続く値は、計算されたサイン値を表します。
+出力データフレームに続く値は、計算された符号値を表します。
 :::
 
-### デモ2 レーダーへのデータ送信
+### デモ 2 レーダーへのデータ送信
 
-レーダーは、情報を取得したり、レーダーの感度やシーンを設定したりするための非常に多くのインターフェースを開放しています。このルーチンでは、ユーザーマニュアルを使用してレーダーにデータメッセージを送信し、レーダーのパラメータを調整したり、必要なデータ情報を取得したりする方法をユーザーに指示します。
+レーダーは、情報を取得し、レーダーの感度やシーンを設定するための非常に多くのインターフェースを開いています。このルーチンでは、ユーザーマニュアルを使用してレーダーにデータメッセージを送信し、レーダーのパラメータを調整したり、必要なデータ情報を取得したりする方法をユーザーに指示します。
 
-**ステップ1.** 必要なクエリに基づいてデータフレームを取得します。
+**ステップ 1.** 必要なクエリに基づいてデータフレームを取得します。
 
 リソースエリアから[ユーザーマニュアル](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf)をダウンロードし、**第8.2章**で、クエリまたは設定する必要があるフレームの内容を見つけて整理します。
 
@@ -263,7 +263,7 @@ dataMsg配列を取得したら、この配列のデータを`Bodysign_judgment(
 
 <div align="center"><img width ="{500}" src="https://files.seeedstudio.com/wiki/60GHzradar/11.png"/></div>
 
-**ステップ2.** Arduino IDEでサンプルコードを開きます。
+**ステップ 2.** Arduino IDE でサンプルコードを開きます。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/9.png"/></div>
 
@@ -289,7 +289,7 @@ void loop()
 {
   //Please fill in the data frame you want to set according to the datasheet(Excluding 2 Byte checksum frames)
   unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
-  
+
   unsigned int length = sizeof(data)/sizeof(unsigned char);
   unsigned char datas[length + 2];
   for (int n = 0; n < length; n++)datas[n] = data[n];
@@ -309,7 +309,7 @@ void loop()
 }
 ```
 
-**ステップ3.** データフレームの内容を変更して、レーダーに送信する完全なデータフレームを生成します。
+**ステップ 3.** データフレームの内容を変更して、レーダーに送信する完全なデータフレームを生成します。
 
 変更する必要があるのは、ループ内の `data[]` 配列です。
 
@@ -318,16 +318,16 @@ void loop()
 unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
 ```
 
-修正が必要な箇所は、2番目の要素と最後から4番目の要素です。ヘッダーフレーム0x55は固定されており、修正する必要はありません。2番目のフレームは長さフレームです。送信するデータの長さに応じて修正してください。3番目のフレームは0x00に固定されています。4番目のフレームは機能コード、5番目のフレームはアドレスコード1、以下同様です。
+変更する必要がある場所は、2番目の要素、4番目から最後の要素です。ヘッダーフレーム0x55は固定で、変更する必要はありません。2番目のフレームは長さフレームです。送信するデータの長さに応じて変更してください。3番目のフレームは0x00に固定されています。4番目のフレームは機能コード、5番目のフレームはアドレスコード1、以下同様です。
 
 :::tip
 長さフレームの計算方法について：<br />
-長さ = データ長 + 機能コード + アドレスコード1 + アドレスコード2 + データ + チェックサム。（ヘッダーフレームはカウントしません）
+長さ = データ長 + 機能コード + アドレスコード1 + アドレスコード2 + データ + チェックサム。（ヘッダーフレームは含まれません）
 
 フレーム形式とルールの詳細については、[ユーザーマニュアル](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf)の第8章を参照してください。
 :::
 
-プログラムをアップロードします。シリアルモニターをボーレート9600で開くと、結果が表示されるはずです。出力は以下の画像のようになるはずです。
+プログラムをアップロードします。シリアルモニターをボーレート9600で開くと結果が表示されるはずです。出力は以下の画像のようになるはずです。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/10.png"/></div>
 
@@ -424,11 +424,11 @@ int main() {
 }
 ```
 
-エディタ実行後、レーダーに送信する必要がある完全なデータフレームを出力することも可能です。
+エディタの実行後、レーダーに送信する必要がある完全なデータフレームを出力することも可能です。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/8.png"/></div>
 
-**ステップ 4.** データフレームをレーダーに送信します。
+**ステップ 4.** レーダーにデータフレームを送信します。
 
 [**UART to USB** デバイス](https://www.seeedstudio.com/USB-To-Uart-5V-p-1833.html?queryID=588a892811a774ad3005ea0d31427532&objectID=1111&indexName=bazaar_retailer_products)を介してレーダーを直接コンピュータのUSBポートに接続します。配線は以下の表に示されています。
 
@@ -468,10 +468,10 @@ int main() {
 <div align="center"><img width ="{300}" src="https://files.seeedstudio.com/wiki/60GHzradar/17.png"/></div>
 
 :::caution
-24GHzレーダーは5V電源が必要です。そうでなければ、レーダーが正常に動作しない可能性があります。
+24GHzレーダーには5V電源が必要です。そうでなければレーダーが正常に動作しない可能性があります。
 :::
 
-接続が成功すると、レーダーが安定したメッセージストリームを送信しているのが確認できます。
+接続が成功すると、レーダーが継続的にメッセージを送信しているのが確認できます。
 
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/60GHzradar/16.png"/></div>
 
@@ -479,22 +479,22 @@ int main() {
 
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/60GHzradar/18.png"/></div>
 
-3番目の要素が0x03である一連のデータが返されることを確認できます。この一連のデータは、クエリ後に取得された情報です。レーダーのパラメータを調整するデータを送信した場合も、同様の情報が返されます。
+3番目の要素が0x03であるデータセットが返されることを確認してください。このデータセットは、クエリ後に取得された情報です。レーダーのパラメータを調整するデータを送信した場合も、同様の情報が返されます。
 
 :::caution
-データ送信の形式として**ASCII**を選択した場合、各データセットには**0x**のプレフィックスが必要です。**HEX**を選択した場合、各データセットには**0x**のプレフィックスは不要です。
+データ送信形式として**ASCII**を選択した場合、各データセットには**0x**のプレフィックスが必要です。**HEX**を選択した場合、各データセットに**0x**のプレフィックスは不要です。
 :::
 
 ## トラブルシューティング
 
-**FAQ1: コードをSeeeduino（またはArduino）に適用するにはどうすればよいですか？**
+**FAQ1: Seeeduino（またはArduino）にコードを適用するにはどうすればよいですか？**
 
-> ハードウェア設計の違いにより、XIAOシリーズやWio Terminalのシリアルポートは「Serial1」と名付けられていますが、SeedduinoやArduinoではソフトシリアルポートを使用する必要があります。Seedduino用にレーダーを使用したい場合は、ソフトシリアルポートを変更するか、ピン2（RX）と3（TX）を使用できます。
+> ハードウェア設計の違いにより、XIAO シリーズやWio TerminalのシリアルポートはSerial1と名付けられていますが、SeeeduinoやArduinoではソフトシリアルポートを使用する必要があります。Seeeduino用にレーダーを使用したい場合は、ソフトシリアルポートを変更するか、ピン2（RX）と3（TX）を使用してください。
 > <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/19.png"/></div>
 
 **FAQ2: XIAO BLEとレーダーが長時間データを収集してコードをアップロードできない場合はどうすればよいですか？**
 
-> この場合、指でXIAO BLE上部のリセットボタンを軽く押して、プログラムを再アップロードして実行できます。
+> この場合、XIAO BLE上部のリセットボタンを指で軽く押して、プログラムを再アップロードして実行してください。
 
 ## リソース
 
@@ -504,7 +504,7 @@ int main() {
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
