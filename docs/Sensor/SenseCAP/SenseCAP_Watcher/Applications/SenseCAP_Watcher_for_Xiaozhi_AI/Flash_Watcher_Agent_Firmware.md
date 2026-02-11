@@ -13,6 +13,8 @@ slug: /flash_watcher_agent_firmware
 last_update:
   date: 12/04/2025
   author: Twelve
+unlisted: true
+draft: true
 translation:
   skip: [ zh-CN ]
 ---
