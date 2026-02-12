@@ -1,6 +1,6 @@
 ---
 description: This project demonstrates how to use the Seeed Studio reSpeaker XVF3800 (XIAO ESP32-S3) as an edge voice device, establish a real-time bidirectional voice link via Agora, and connect to an Agora ten-framework backend (LLM/ASR/TTS) to achieve low-latency real-time voice conversations.
-title: ReSpeaker XVF3800 + Agora ten-framework Edge Conversational Client Deployment Guide
+title: reSpeaker XVF3800 + Agora ten-framework Edge Conversational Client Deployment Guide
 keywords:
 - reSpeaker
 - XVF3800
