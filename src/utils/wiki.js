@@ -3,11 +3,11 @@ const docList = [
     {
       "path": "/respeaker_xvf3800_agora_convo_client",
       "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
-      "title": "reSpeaker XVF3800 (XIAO ESP32-S3) + Agora Conversational AI Agent v2 Edge Conversational Client Deployment Guide",
-      "date": "04/2/2026",
-      "title_cn": "reSpeaker XVF3800（XIAO ESP32-S3）+ Agora Conversational AI Agent v2 端侧对话客户端部署指南",
-      "title_ja": "reSpeaker XVF3800（XIAO ESP32-S3）+ Agora Conversational AI Agent v2 エッジ会話クライアント展開ガイド",
-      "title_es": "Guía de Implementación del Cliente Conversacional Edge reSpeaker XVF3800 (XIAO ESP32-S3) + Agora Conversational AI Agent v2"
+      "title": "ReSpeaker XVF3800 + Agora Conversational AI Agent v2 Edge Conversational Client Deployment Guide",
+      "date": "2/04/2026",
+      "title_cn": "ReSpeaker XVF3800 + Agora 对话式 AI 代理 v2 边缘对话客户端部署指南",
+      "title_ja": "ReSpeaker XVF3800 + Agora Conversational AI Agent v2 エッジ会話クライアント展開ガイド",
+      "title_es": "Guía de Implementación del Cliente Conversacional Edge ReSpeaker XVF3800 + Agora Conversational AI Agent v2"
     },
     {
       "path": "/j501_mini_starai_viola_fruit_sorting",
