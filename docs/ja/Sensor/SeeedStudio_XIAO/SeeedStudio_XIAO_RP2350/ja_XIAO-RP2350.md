@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO RP2350 入門ガイド（MicroPython）
+title: Seeed Studio XIAO RP2350(MicroPython)入門ガイド
 description: |
   XIAO RP2350は、Seeed Studioの最先端マイクロコントローラーです。デュアルコアプロセッサ、増強されたSRAMとフラッシュメモリ、強化された接続性を特徴としています。
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/RP2350-thumbnail.webp
@@ -32,14 +32,14 @@ import TabItem from '@theme/TabItem';
   </a>
 </div><br></br>
 
-XIAO RP2350は、Raspberry Pi RP2350（150MHzで動作するFPU付きデュアルCortex-M33コア、強化されたセキュリティと暗号化機能）の力を、クラシックなXIAOフォームファクターに詰め込んでいます。わずか21x17.8mmのサイズで、19個の多機能GPIO、RGB LED、そして50μAの超低消費電力、バッテリー電源供給、直接バッテリー電圧測定機能を備えたバッテリー管理システムを特徴としています。XIAOエコシステムのおかげで、XIAO RP2350は、ディスプレイ、LEDマトリックス、Groveモジュール、CAN Bus、Vision AIセンサー、mmWaveセンサーなど、幅広いアドオンと互換性があります。MicroPython、C、C++のネイティブサポートにより、XIAO RP2350は、スマート制御、ウェアラブル、DIYキーボードなどのコンパクトでバッテリー駆動のアプリケーションを作成したいあらゆるレベルの開発者に最適です。
+XIAO RP2350は、Raspberry Pi RP2350（FPU搭載の150MHzで動作するデュアルCortex-M33コア、強化されたセキュリティと暗号化機能）の力を、クラシックなXIAOフォームファクターに詰め込んでいます。わずか21x17.8mmのサイズで、19個の多機能GPIO、RGB LED、50μAの超低消費電力、バッテリー電源供給、直接バッテリー電圧測定機能を備えたバッテリー管理システムを特徴としています。XIAOエコシステムのおかげで、XIAO RP2350は、ディスプレイ、LEDマトリックス、Groveモジュール、CAN Bus、Vision AIセンサー、mmWaveセンサーなど、幅広いアドオンと互換性があります。MicroPython、C、C++のネイティブサポートにより、XIAO RP2350は、スマート制御、ウェアラブル、DIYキーボードなどのコンパクトでバッテリー駆動のアプリケーションを作成したいあらゆるレベルの開発者に最適です。
 
 ## 特徴
 
-- **強力なMCUボード：** FPU付きの対称デュアルArm Cortex-M33 @ 150MHzを搭載したRaspberry Pi RP2350チップを装備。
+- **強力なMCUボード：** FPU搭載の150MHzで動作する対称デュアルArm Cortex-M33を特徴とするRaspberry Pi RP2350チップを搭載。
 - **強化されたセキュリティ機能：** 内蔵のセキュアブートと暗号化ブートローダーがアプリケーションのセキュリティを確保。
 - **ソフトウェアサポート：** C/C++とMicroPythonに対応し、簡単なプロジェクト開発とプロトタイピングを実現。
-- **豊富なオンボードリソース：** RGB LED、2MBフラッシュ、520kB SRAM、19個の多機能GPIO（アナログ、デジタル、I²C、UART、SPI、PWM）を統合。
+- **豊富なオンボードリソース：** RGB LED、2MB Flash、520kB SRAM、19個の多機能GPIO（アナログ、デジタル、I²C、UART、SPI、PWM）を統合。
 - **拡張された8つの新しいIO：** 従来のXIAO MCUと比較して、背面に8つのIOピンを追加し、より複雑なアプリケーションをサポート。
 - **効率的な電源設計：** スリープモードでわずか50μAの超低消費電力により、バッテリー電源供給を可能にします。内部IOを介した直接バッテリー電圧測定により、バッテリー管理システム（BMS）を強化。
 - **コンパクトな親指サイズ設計：** 21 x 17.8mmのサイズで、Seeed StudioのクラシックなXIAOフォームファクターを採用し、スペースを重視するアプリケーションに最適。
@@ -47,68 +47,62 @@ XIAO RP2350は、Raspberry Pi RP2350（150MHzで動作するFPU付きデュア�
 
 ## 仕様
 
-<table align="center">
-    <tr>
-        <td>製品</td>
-        <td>XIAO RP2040</td>
-        <td><b>XIAO RP2350</b></td>
-    </tr>
-    <tr>
-        <td rowspan="2">プロセッサ</td>
-        <td>Raspberry Pi RP2040</td>
-        <td>Raspberry Pi RP2350</td>
-    </tr>
-    <tr>
-        <td>デュアルCortex-M0+ @ 133MHz</td>
-        <td>デュアルCortex-M33 @ 150MHz、FPU</td>
-    </tr>
-    <tr>
-        <td>RAM</td>
-        <td>264kB SRAM</td>
-        <td>520kB SRAM</td>
-    </tr>
-    <tr>
-        <td>フラッシュ</td>
-        <td>2MBオンボード</td>
-        <td>2MBフラッシュ</td>
-    </tr>
-    <tr>
-        <td>LED</td>
-        <td>1ユーザーLED（3色）、1電源LED、1RGB LED</td>
-        <td>1ユーザーLED、1充電LED（バッテリー充電インジケーター）、1RGB LED</td>
-    </tr>
-    <tr>
-        <td>インターフェース</td>
-        <td>11ピン：4xアナログ、11xデジタル、1x I²C、1x UART、1x SPI、全PWM</td>
-        <td><b>19ピン：3xアナログ、19xデジタル、2x I²C、2x UART、2x SPI、全PWM</b></td>
-    </tr>
-    <tr>
-        <td>ボタン</td>
-        <td align="center" colspan="2">1リセットボタン、1ブートボタン</td>
-    </tr>
-    <tr>
-        <td>セキュリティ</td>
-       <td align="center"> - </td>
-        <td>OTP、セキュアブート、Arm TrustZone</td>
-    </tr>
-    <tr>
-        <td>低消費電力</td>
-       <td align="center"> - </td>
-        <td>4.2V/50uA</td>
-    </tr>
-    <tr>
-        <td>ソフトウェア互換性</td>
-        <td>Arduino、PlatformIO、MicroPython、CircuitPython、Zephyr、<a href="https://wiki.seeedstudio.com/ja/xiao_topic_page/">その他多数</a></td>
-        <td>Arduino、PlatformIO、MicroPython、CircuitPython、<a href="https://wiki.seeedstudio.com/ja/xiao_topic_page/">その他多数</a></td>
-    </tr>
-    <tr>
-        <td>動作温度</td>
-        <td align="center" colspan="2">-20°C~70°C</td>
-    </tr>
-    <tr>
-        <td>寸法</td>
-        <td align="center" colspan="2">21x17.8 mm</td>
-    </tr>
+<table>
+  <tr>
+    <th>製品</th>
+    <td>XIAO RP2040</td>
+    <td>XIAO RP2350</td>
+  </tr>
+  <tr>
+    <th>プロセッサ</th>
+    <td>Raspberry Pi RP2040<br/>デュアルCortex-M0+ @ 133MHz</td>
+    <td>Raspberry Pi RP2350<br/>デュアルCortex-M33 @ 150MHz、FPU</td>
+  </tr>
+  <tr>
+    <th>RAM</th>
+    <td>264kB SRAM</td>
+    <td>520kB SRAM</td>
+  </tr>
+  <tr>
+    <th>Flash</th>
+    <td>2MB オンボード</td>
+    <td>2MB Flash</td>
+  </tr>
+  <tr>
+    <th>LED</th>
+    <td>1x ユーザーLED<br/>1x 電源LED<br/>1x RGB LED</td>
+    <td>1x ユーザーLED<br/>1x 電源LED<br/>1x RGB LED</td>
+  </tr>
+  <tr>
+    <th>インターフェース</th>
+    <td>11ピン（すべてPWM）：<br/>4x アナログ<br/>11x デジタル<br/>1x I²C<br/>1x UART<br/>1x SPI</td>
+    <td>19ピン（すべてPWM）：<br/>3x アナログ<br/>19x デジタル<br/>2x I²C<br/>2x UART<br/>2x SPI</td>
+  </tr>
+  <tr>
+    <th>ボタン</th>
+    <td>1x RESETボタン<br/>1x BOOTボタン</td>
+    <td>1x RESETボタン<br/>1x BOOTボタン</td>
+  </tr>
+  <tr>
+    <th>セキュリティ</th>
+    <td>-</td>
+    <td>OTP、セキュアブート、Arm TrustZone</td>
+  </tr>
+  <tr>
+    <th>ソフトウェア互換性</th>
+    <td>Micropython / Arduino / CircuitPythonをサポート</td>
+    <td>Micropython / Arduino / C、C++をサポート</td>
+  </tr>
+  <tr>
+    <th>動作温度</th>
+    <td>-20°C-70°C</td>
+    <td>-20°C-70°C</td>
+  </tr>
+  <tr>
+    <th>寸法</th>
+    <td>21x17.8 mm</td>
+    <td>21x17.8 mm</td>
+  </tr>
 </table>
 
 ## ハードウェア概要
@@ -116,13 +110,13 @@ XIAO RP2350は、Raspberry Pi RP2350（150MHzで動作するFPU付きデュア�
 <div class="table-center">
 <table align="center">
  <tr>
-     <th>XIAO RP2350 前面ピン配置</th>
+     <th>XIAO RP2350 フロントピンアウト</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-front.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Front Pinout" /></div></td>
  </tr>
     <tr>
-     <th>XIAO RP2350 背面ピン配置</th>
+     <th>XIAO RP2350 バックピンアウト</th>
  </tr>
     <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/XIAO-RP2350-back.png" style={{width:680, height:'auto'}} alt="XIAO RP2350 Back Pinout" /></div></td>
@@ -136,38 +130,38 @@ XIAO RP2350は、Raspberry Pi RP2350（150MHzで動作するFPU付きデュア�
 </table>
 </div>
 
-ピン配置の詳細が必要ですか？下記の[アセットとリソース](#アセットとリソース)をご覧ください。
+ピンアウトの詳細が必要ですか？下記の[アセットとリソース](#アセットとリソース)をご覧ください。
 
 
 ## **ピンマップ**
-| XIAOピン                 | 機能   | チップピン     | 代替機能 | 説明                          |
+| XIAOピン                 | 機能       | チップピン   | 代替機能           | 説明                                 |
 | :---------------------: | :-------: | :----------: | :----------------: | :---------------------------------- |
-| 5V                      | VBUS       |              |                    | 電源入力/出力                   |
+| 5V                      | VBUS       |              |                    | 電源入力/出力                        |
 | GND                     |            |              |                    |                                      |
-| 3V3                     | 3V3_OUT    |              |                    | 電源出力                         |
-| D0                      | アナログ     | GPIO26       |                    | GPIO、ADC                            |
-| D1                      | アナログ     | GPIO27       |                    | GPIO、ADC                            |
-| D2                      | アナログ     | GPIO28       |                    | GPIO、ADC                            |
+| 3V3                     | 3V3_OUT    |              |                    | 電源出力                             |
+| D0                      | アナログ   | GPIO26       |                    | GPIO、ADC                            |
+| D1                      | アナログ   | GPIO27       |                    | GPIO、ADC                            |
+| D2                      | アナログ   | GPIO28       |                    | GPIO、ADC                            |
 | D3                      | SPIO_CSn   | GPIO5        |                    | GPIO、SPI                            |
-| D4                      | SDA1       | GPIO6        |                    | GPIO、I2Cデータ                       |
-| D5                      | SCL1       | GPIO7        |                    | GPIO、I2Cクロック                      |
-| D6                      | TX0        | GPIO0        |                    | GPIO、UART送信                  |
-| D7                      | RX0        | GPIO1        |                    | GPIO、UART受信                   |
-| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO、SPIクロック                      |
-| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO、SPIデータ                       |
-| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO、SPIデータ                       |
-| D11                     | RX1        | GPIO21       |                    | GPIO、UART受信                   |
-| D12                     | TX1        | GPIO20       |                    | GPIO、UART送信                  |
-| D13                     | SCL0       | GPIO17       |                    | GPIO、I2Cクロック                      |
-| D14                     | SDA0       | GPIO16       |                    | GPIO、I2Cデータ                       |
-| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO、SPIデータ                       |
-| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO、SPIデータ                       |
-| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO、SPIクロック                      |
+| D4                      | SDA1       | GPIO6        |                    | GPIO、I2Cデータ                      |
+| D5                      | SCL1       | GPIO7        |                    | GPIO、I2Cクロック                    |
+| D6                      | TX0        | GPIO0        |                    | GPIO、UART送信                       |
+| D7                      | RX0        | GPIO1        |                    | GPIO、UART受信                       |
+| D8                      | SPIO_SCK   | GPIO2        |                    | GPIO、SPIクロック                    |
+| D9                      | SPIO_MISO  | GPIO4        |                    | GPIO、SPIデータ                      |
+| D10                     | SPIO_MOSI  | GPIO3        |                    | GPIO、SPIデータ                      |
+| D11                     | RX1        | GPIO21       |                    | GPIO、UART受信                       |
+| D12                     | TX1        | GPIO20       |                    | GPIO、UART送信                       |
+| D13                     | SCL0       | GPIO17       |                    | GPIO、I2Cクロック                    |
+| D14                     | SDA0       | GPIO16       |                    | GPIO、I2Cデータ                      |
+| D15                     | SPI1_MOSI  | GPIO11       |                    | GPIO、SPIデータ                      |
+| D16                     | SPI1_MISO  | GPIO12       |                    | GPIO、SPIデータ                      |
+| D17                     | SPI1_SCK   | GPIO10       |                    | GPIO、SPIクロック                    |
 | D18                     | SPI1_Csn   | GPIO9        | Csn                |                                      |
-| ADC_BAT                 |            | GPIO29       |                    | BAT電圧値を読み取り           |
+| ADC_BAT                 |            | GPIO29       |                    | BAT電圧値を読み取り                  |
 | Reset                   |            | RUN          |                    | RUN                                  |
-| Boot                    |            | RP2040_BOOT  |                    | ブートモードに入る                      |
-| CHARGE_LED              |            | NCHG         |                    | CHG-LED_赤                          |
+| Boot                    |            | RP2040_BOOT  |                    | ブートモードに入る                   |
+| CHARGE_LED              |            | NCHG         |                    | CHG-LED_赤                           |
 | RGB LED                 |            | GPIO22       |                    | RGB LED                              |
 | USER_LED                |            | GPIO25       |                    | ユーザーライト_黄                    |
 
@@ -198,9 +192,9 @@ RP2350を搭載したXIAO RP2350は、MicroPythonとRaspberry Piが提供するC
 このページは主にMicroPythonユーザーに焦点を当てています。SDKプログラミングの学習に興味がある方や上級ユーザーの方は、[Raspberry Pi Pico-series C/C++ SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf)から始めることをお勧めします。このガイドは環境のセットアップとサンプルコードの開始に役立ちます。さらに、XIAO RP2350に関するより具体的な手順については、[XIAO RP2350 with C/C++ SDK](/ja/xiao-rp2350-c-cpp-sdk)をご覧ください。
 :::
 
-### ステップ 1: XIAO RP2350 への MicroPython のインストール
+### ステップ1：XIAO RP2350にMicroPythonをインストール
 
-XIAO RP2350 に MicroPython ファームウェアをインストールするには、以下の手順に従ってください：
+XIAO RP2350にMicroPythonファームウェアをインストールするには、以下の手順に従ってください：
 
 **ステップ 1.1. MicroPython ファームウェアのダウンロード：**  
 
@@ -210,18 +204,18 @@ XIAO RP2350 に MicroPython ファームウェアをインストールするに�
 :::tip
 1. デフォルトのファームウェアは ARM アーキテクチャ用です。RISC-V を使用したい場合は、リンク内の対応するファームウェアバージョンを使用してください。
 
-2. 古いファームウェアには様々なソフトウェアの脆弱性が含まれている可能性があるため、最新のファームウェアバージョンを使用していることを確認してください。
+2. 最新のファームウェアバージョンを使用していることを確認してください。古いファームウェアには様々なソフトウェアの脆弱性が含まれている可能性があります。
 :::
 
 **ステップ 1.2 BOOTSEL モードに入る：**  
 
-以下の 2 つの方法のいずれかを使用して、XIAO RP2350 を BOOTSEL モードに入れることができます：
+以下の2つの方法のいずれかを使用して、XIAO RP2350 を BOOTSEL モードに入れることができます：
 
 <Tabs>
-<TabItem value="method1" label="方法 1: コンピュータに接続する前" default>
+<TabItem value="method1" label="方法 1：コンピュータに接続する前" default>
 
 1. **BOOT ボタンを押し続ける**：  
-   XIAO RP2350 がコンピュータから切断されている状態で、**BOOT ボタンを押し続けます**。
+   XIAO RP2350 がコンピュータから切断されている状態で、BOOT ボタンを**押し続けます**。
 2. **コンピュータに接続する**：  
    BOOT ボタンを押し続けながら、USB ケーブルを使用して XIAO RP2350 をコンピュータに接続します。
 3. **BOOT ボタンを離す**：  
@@ -233,10 +227,10 @@ XIAO RP2350 に MicroPython ファームウェアをインストールするに�
 
 </TabItem>
 
-<TabItem value="method2" label="方法 2: コンピュータに接続されている間">
+<TabItem value="method2" label="方法 2：コンピュータに接続されている間">
 
 1. **BOOT ボタンを押し続ける**：  
-   XIAO RP2350 が既にコンピュータに接続されている状態で、BOOT ボタンを押し続けます。
+   XIAO RP2350 がすでにコンピュータに接続されている状態で、BOOT ボタンを押し続けます。
 2. **RESET ボタンをクリックする**：  
    BOOT ボタンを押し続けながら、上の画像でボードの右下角に「B」とラベル付けされた RESET ボタンを押して離します。
 3. **BOOT ボタンを離す**：  
@@ -254,17 +248,17 @@ XIAO RP2350 に MicroPython ファームウェアをインストールするに�
 - ダウンロードした `.uf2` ファイルを XIAO RP2350 のリムーバブルストレージドライブに**ドラッグアンドドロップ**します。
 - ファイルがコピーされた後、ボードは自動的に再起動し、ファームウェアのインストールが完了します。
 
-### ステップ 2: Thonny IDE のインストール
+### ステップ 2：Thonny IDE のインストール
 
 :::tip MicroPython について
 
 [MicroPython](https://micropython.org/) は [Python](https://www.python.org/) に似たインタープリター言語です。ただし、Python とは異なり、MicroPython はハードウェア上で直接実行され（ベアメタル）、コマンドを即座に実行するためのインタラクティブプロンプト（REPL）と、内蔵ファイルシステムからスクリプトを実行およびインポートする機能を提供します。
 
-XIAO RP2350 ボードに接続して Python コードの記述と実行を開始するには、minicom、PuTTY、electerm、warp などのシリアル接続をサポートする任意のターミナルツールを使用できます。より*ユーザーフレンドリーな体験*のために、使いやすさ、統合機能、初心者向けのインターフェースを備えた **[Thonny](https://thonny.org/)** を使用できます。これにより、デバイス上で直接 Python コードを記述して実行することを楽しむことができます。
+XIAO RP2350 ボードに接続して Python コードの記述と実行を開始するには、minicom、PuTTY、electerm、warp などのシリアル接続をサポートする任意のターミナルツールを使用できます。より*ユーザーフレンドリーな体験*のために、使いやすさ、統合機能、初心者向けのインターフェースを備えた **[Thonny](https://thonny.org/)** を使用できます。これにより、デバイス上で直接 Python コードを記述して実行することを楽しめます。
 
 :::
 
-Thonny IDE は MicroPython 開発に優れた初心者向けの Python エディタです。インストール方法は以下の通りです：
+Thonny IDE は、MicroPython 開発に優れた初心者向けの Python エディタです。インストール方法は以下の通りです：
 
 1. **Thonny のダウンロード：**  
    - [Thonny Download Page](https://thonny.org/) にアクセスします。
@@ -376,11 +370,11 @@ for _ in range(8 * 256):
   </TabItem>
 </Tabs>
 
-下の画像に示すように、コードを Thonny IDE にコピーしたら、`Run current script` ボタンをクリックするか `F5` を押すだけです。これによりコードスニペットが実行され、XIAO RP2350 の LED が点滅し始めるのを確認できます。
+下の画像に示すように、Thonny IDE にコードをコピーしたら、`Run current script` ボタンをクリックするか `F5` を押すだけです。これによりコードスニペットが実行され、XIAO RP2350 の LED が点滅し始めるのを確認できます。
 
 ### RGB LED で遊ぶ
 
-XIAO RP2350 には、MicroPython を使用して制御できる内蔵 RGB LED が付属しています。以下は異なる色を循環させる例です：
+XIAO RP2350 には、MicroPython を使用して制御できる内蔵 RGB LED が付属しています。以下は、異なる色を循環させる方法の例です：
 
 ```python showLineNumbers
 import array, time, random
@@ -544,51 +538,56 @@ int main() {
 
 XIAO RP2350は、Raspberry Pi RP2350の力を活用し、Raspberry Piコミュニティからの豊富な共有リソースを活用しています。これにより、この小さなボードで無限の創造性を持ってプロジェクトをカスタマイズする可能性の世界が開かれます。以下は、開始に役立つ重要なリソースとアセットです。
 
-***データシートと回路図***
+**ハードウェア設計**
+- **📄[データシート]** [Raspberry Pi RP2350 データシート](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )
+- **📄[回路図]** [XIAO RP2350 回路図](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
+- **🗃️[PCB設計ファイル]** [XIAO RP2350 KiCadプロジェクト](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
+- **🗃️[PCB設計ライブラリ]** 
+  - [XIAO シリーズ KiCadフットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCHシンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[ピン配置図]** [XIAO RP2350 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
 
-- 📄 **[PDF]** [RP2350 データシート](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf)
-- 📄 **[PDF]** [Seeed Studio XIAO RP2350 回路図](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
-- 📄 **[XLSX]** [Seeed Studio XIAO RP2350 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx)
-- 📄 **[DXF]** [Seeed Studio XIAO RP2350 DXF寸法図](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf)
-- 🔗 **[Link]** [Seeed Studio XIAO RP2350 3D STEPファイル](https://grabcad.com/library/seeed-studio-xiao-rp2350-2)
-- 📄 **[ZIP]** [Seeed Studio XIAO RP2350 v1.0 SCH&PCB](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip)
+**機械設計**
+- **📄[2D寸法]** [XIAO RP2350 DXF寸法](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
+- **🔗[3Dモデル]** [XIAO RP2350 3Dモデル](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
 
-- 📄 **[UF2]** [低消費電力テストファームウェア](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2)
+**ソフトウェアとツール**
+- **📄[テストファームウェア]** [XIAO RP2350 低消費電力テストファームウェア](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
 
-***関連リソース***
-
-- 📄 **[PDF]** [Raspberry Pi Pico シリーズ入門](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf)：Raspberry Pi Picoボードのセットアップとプログラミングに関する包括的なガイドで、MicroPythonやC/C++を学びたい初心者に最適です。
-- 📄 **[PDF]** [Raspberry Pi Pico シリーズ Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf) MicroPythonセットアップチュートリアルとAPIを文書化した書籍
-- 📄 **[PDF]** [Raspberry Pi Pico シリーズ C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) Pico C/C++ SDK APIを文書化した書籍
-- 🔗 **[Kicad]** [Seeed Studio XIAO RP2350 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
+**その他**
+- **📄[ドキュメント]** [Raspberry Pi Picoシリーズ入門](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf )  
+  - Raspberry Pi Picoボードのセットアップとプログラミングに関する包括的なガイドで、MicroPythonやC/C++を学びたい初心者に最適です。
+- **📄[ドキュメント]** [Raspberry Pi PicoシリーズPython SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf )  
+  - MicroPythonセットアップチュートリアルとAPIを文書化した書籍
+- **📄[ドキュメント]** [Raspberry Pi PicoシリーズC/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
+  - Pico C/C++ SDK APIを文書化した書籍
 ### 拡張とアプリケーション
 
-[XIAO シリーズ](/ja/xiao_topic_page)には、学習と使用のための膨大な範囲の周辺機器と周辺アクセサリがあります。完璧なインタラクションを可能にするカラフルなスクリーン、明るくシンプルなRGBライトを備えた統合ボードなど、チェックアウトを待っているものがあります。
+[XIAOシリーズ](/ja/xiao_topic_page)には、学習と使用のための膨大な範囲の周辺機器と周辺アクセサリがあります。完璧なインタラクションを可能にするカラフルなスクリーン、明るくシンプルなRGBライトを備えた統合ボードなど、チェックアウトを待っているものがあります。
 
-XIAOファミリーのメンバーとして、XIAO RP2350も同様です。もちろん、引き出された追加のピンをより有効活用するために、新しい*周辺機器とボード*が続々と登場し、作成された性能を最大限に活用します。
+XIAOファミリーのメンバーとして、XIAO RP2350も同様です。もちろん、引き出された追加のピンをより良く活用するために、新しい*周辺機器とボード*が継続的に登場し、作成された性能を完全に活用します。
 
 - 🌟 **[アクセサリで拡張](/ja/SeeedStudio_XIAO_Series_Introduction/#seeed-studio-xiao-series-compatible-accessories)**  
-  ディスプレイやLEDマトリックスからGroveモジュールやセンサーまで、XIAOファミリーと互換性のある幅広いアドオンとモジュールを発見し、それらがプロジェクトをどのように強化できるかを学びます。
+  ディスプレイやLEDマトリックスからGroveモジュールやセンサーまで、XIAOファミリーと互換性のあるアドオンとモジュールの幅広い範囲を発見し、それらがプロジェクトをどのように強化できるかを学びます。
 
 ### コミュニティと学習
 
-さらに、活気あるRaspberry Piコミュニティに飛び込んで知識を広げ、新しいプロジェクトアイデアを発見してください。コミュニティ共有のリソース、フォーラム、チュートリアルを活用して、XIAO RP2350での体験を向上させましょう。Seeed Studio Wikiに加えて、学習におすすめの他の場所をいくつか紹介します：
+さらに、活気あるRaspberry Piコミュニティに飛び込んで知識を広げ、新しいプロジェクトアイデアを発見してください。コミュニティ共有のリソース、フォーラム、チュートリアルを活用して、XIAO RP2350での体験を向上させてください。Seeed Studio Wikiに加えて、学習におすすめの他の場所をいくつか紹介します：
 
-- **[Raspberry Pi ドキュメント](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)**：RP2350に関する信頼性の高い最新情報を入手できます。
-- **[Raspberry Pi フォーラム](https://www.raspberrypi.org/forums/)**：他の愛好家と交流し、質問をし、プロジェクトを共有しましょう。
-- **[XIAO GitHub リポジトリ](https://github.com/Seeed-Studio/OSHW-XIAO-Series)**：より集中化されたドキュメントと私たちのチームとのより多くのインタラクションのために、公式XIAOリポジトリを探索してください。**参加してください！**
-- **[Reddit の r/embedded](https://www.reddit.com/r/embedded/)**：組み込みシステムコミュニティに参加し、洞察を共有し、さまざまなトピックについて議論しましょう。
-- **[GitHub の Pico トピック](https://github.com/topics/pico)**：Picoに関連するリポジトリと議論を探索しましょう。
-- **[Hackster.io](https://www.hackster.io/)**：XIAOやRaspberry Piを含むさまざまなハードウェアプラットフォームに関連するプロジェクトとチュートリアルを発見しましょう。
-- **[Instructables](https://www.instructables.com/)**：XIAOや他のハードウェアでの作成のためのDIYプロジェクトとステップバイステップガイドを見つけましょう。
-- **[Element14 コミュニティ](https://www.element14.com/community/)**：電子工学と組み込みシステムに関連する議論、ウェビナー、プロジェクトに参加しましょう。
+- **[Raspberry Piドキュメント](https://www.raspberrypi.com/documentation/microcontrollers/rp2040.html)**：RP2350に関する信頼性の高い最新情報を入手してください。
+- **[Raspberry Piフォーラム](https://www.raspberrypi.org/forums/)**：他の愛好家と交流し、質問をし、プロジェクトを共有してください。
+- **[XIAO GitHubリポジトリ](https://github.com/Seeed-Studio/OSHW-XIAO-Series)**：より集中化されたドキュメントと私たちのチームとのより多くのインタラクションのために、公式XIAOリポジトリを探索してください。**参加してください！**
+- **[Reddit上のr/embedded](https://www.reddit.com/r/embedded/)**：組み込みシステムコミュニティに参加し、洞察を共有し、さまざまなトピックについて議論してください。
+- **[GitHub上のPicoトピック](https://github.com/topics/pico)**：Picoに関連するリポジトリと議論を探索してください。
+- **[Hackster.io](https://www.hackster.io/)**：XIAOやRaspberry Piを含むさまざまなハードウェアプラットフォームに関連するプロジェクトとチュートリアルを発見してください。
+- **[Instructables](https://www.instructables.com/)**：XIAOや他のハードウェアでの作成のためのDIYプロジェクトとステップバイステップガイドを見つけてください。
+- **[Element14コミュニティ](https://www.element14.com/community/)**：電子工学と組み込みシステムに関連する議論、ウェビナー、プロジェクトに参加してください。
 
-さらに、私たちの[Seeed Studio Discord](https://discord.com/invite/kpY74apCWj)と[Seeed Studio フォーラム](https://forum.seeedstudio.com/)でプロジェクトを共有することをいつでも歓迎します。これらのプラットフォームは、他のメーカーとつながり、フィードバックを得て、インスピレーションを見つける絶好の機会を提供します。問題のトラブルシューティングでヘルプが必要な場合、最新の作品を披露したい場合、または単にサポートコミュニティの一員になりたい場合、*Seeed StudioのDiscordとフォーラム*は関わり合い、協力するのに最適な場所です。
+さらに、私たちの[Seeed Studio Discord](https://discord.com/invite/kpY74apCWj)と[Seeed Studio Forum](https://forum.seeedstudio.com/)でプロジェクトを共有することをいつでも歓迎します。これらのプラットフォームは、他のメーカーとつながり、フィードバックを得て、インスピレーションを見つける絶好の機会を提供します。問題のトラブルシューティングでヘルプが必要な場合、最新の作品を披露したい場合、または単にサポートコミュニティの一員になりたい場合、*Seeed StudioのDiscordとForum*は関与し協力するのに最適な場所です。
 
 ## 技術サポートと製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供するためにここにいます。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

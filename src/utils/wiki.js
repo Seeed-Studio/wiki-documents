@@ -1,6 +1,86 @@
 const docList = [
   [
     {
+      "path": "/respeaker_xvf3800_agora_convo_client",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
+      "title": "reSpeaker XVF3800 (XIAO ESP32-S3) + Agora Conversational AI Agent v2 Edge Conversational Client Deployment Guide",
+      "date": "04/2/2026",
+      "title_cn": "reSpeaker XVF3800（XIAO ESP32-S3）+ Agora Conversational AI Agent v2 端侧对话客户端部署指南",
+      "title_ja": "reSpeaker XVF3800（XIAO ESP32-S3）+ Agora Conversational AI Agent v2 エッジ会話クライアント展開ガイド",
+      "title_es": "Guía de Implementación del Cliente Conversacional Edge reSpeaker XVF3800 (XIAO ESP32-S3) + Agora Conversational AI Agent v2"
+    },
+    {
+      "path": "/j501_mini_starai_viola_fruit_sorting",
+      "image": "https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png",
+      "title": "🍎 Fruit Sorting with J501 Mini and StarAI Viola Arm",
+      "date": "2026-2-2",
+      "title_cn": "🍎 使用 J501 Mini 和 StarAI Viola 机械臂进行水果分拣",
+      "title_ja": "🍎 J501 MiniとStarAI Violaアームによるフルーツ仕分け",
+      "title_es": "🍎 Clasificación de Frutas con J501 Mini y Brazo StarAI Viola"
+    }
+  ],
+  [
+    {
+      "path": "/respeaker_xvf_3800_xiaozhi",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp",
+      "title": "Deploy your cloud AI Xiaozhi voice assistant using ESP32S3 + reSpeaker",
+      "date": "1/29/2026",
+      "title_cn": "使用 ESP32S3 + reSpeaker 部署您的云端 AI 小智语音助手",
+      "title_ja": "ESP32S3 + reSpeaker を使用してクラウド AI Xiaozhi 音声アシスタントをデプロイする",
+      "title_es": "Despliega tu asistente de voz Xiaozhi con IA en la nube usando ESP32S3 + reSpeaker"
+    },
+    {
+      "path": "/ai_human_detection_meshtastic_broadcast",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
+      "title": "AI Human Detection and Meshtastic Notification Demo",
+      "date": "2026-01-28T00:00:00.000Z",
+      "title_cn": "AI 人体检测与 Meshtastic 通知演示",
+      "title_ja": "AI人体検出とMeshtastic通知デモ",
+      "title_es": "Demo de Detección Humana con IA y Notificación Meshtastic"
+    }
+  ],
+  [
+    {
+      "path": "/ai_robotics_yolov26_dual_camera_system",
+      "image": "https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png",
+      "title": "YOLOv26 Dual USB Camera Image Processing System on Jetson",
+      "date": "01/28/2026",
+      "title_cn": "Jetson 上的 YOLOv26 双 USB 摄像头图像处理系统",
+      "title_ja": "Jetson上のYOLOv26デュアルUSBカメラ画像処理システム",
+      "title_es": "Sistema de Procesamiento de Imágenes con Cámara USB Dual YOLOv26 en Jetson"
+    },
+    {
+      "path": "/develop_recomputer_jetson_using_clawdbot",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops_homepage.webp",
+      "title": "Develop reComputer Jetson using Clawdbot",
+      "date": "01/28/2026",
+      "title_cn": "使用 Clawdbot 开发 reComputer Jetson",
+      "title_ja": "Clawdbotを使用したreComputer Jetsonの開発",
+      "title_es": "Desarrollar reComputer Jetson usando Clawdbot"
+    }
+  ],
+  [
+    {
+      "path": "/getting_started_with_reterminal_e1004",
+      "image": "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg",
+      "title": "Getting Started with reTerminal E1004",
+      "date": "1/28/2026",
+      "title_cn": "reTerminal E1004 入门指南",
+      "title_ja": "reTerminal E1004の入門ガイド",
+      "title_es": "Introducción a reTerminal E1004"
+    },
+    {
+      "path": "/xiao-esp32--series-espresense",
+      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32_Espectre/image1.webp",
+      "title": "Deploying Espectre on Seeed Studio XIAO ESP32 Series with ESPHome",
+      "date": "01/26/2026",
+      "title_cn": "在 Seeed Studio XIAO ESP32 系列上使用 ESPHome 部署 Espectre",
+      "title_ja": "ESPHome を使用した Seeed Studio XIAO ESP32 シリーズでの Espectre デプロイ",
+      "title_es": "Desplegando Espectre en Seeed Studio XIAO ESP32 Serie con ESPHome"
+    }
+  ],
+  [
+    {
       "path": "/deploy_nvblox_jetson_agx_orin",
       "image": "https://files.seeedstudio.com/wiki/other/page-nvblox.jpg",
       "title": "Deploy NVBlox with Orbbec Camera on Jetson AGX Orin",
@@ -37,83 +117,6 @@ const docList = [
       "title_cn": "Seeed Studio XIAO nRF54L15 的 MicroPython",
       "title_ja": "Seeed Studio XIAO nRF54L15 用 MicroPython",
       "title_es": "MicroPython para Seeed Studio XIAO nRF54L15"
-    }
-  ],
-  [
-    {
-      "path": "/recomputer_rs485_loopback_test",
-      "image": "https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/RS485/RS485_connection.jpg",
-      "title": "reComputer RS485 test",
-      "date": "01/14/2026",
-      "title_cn": "reComputer RS485 测试",
-      "title_ja": "reComputer RS485 テスト",
-      "title_es": "Prueba RS485 de reComputer"
-    },
-    {
-      "path": "/xiao_esp32c5_with_freertos",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp",
-      "title": "XIAO ESP32-C5 With FreeRTOS",
-      "date": "1/13/2026",
-      "title_cn": "XIAO ESP32-C5 与 FreeRTOS",
-      "title_ja": "XIAO ESP32-C5 と FreeRTOS",
-      "title_es": "XIAO ESP32-C5 Con FreeRTOS"
-    }
-  ],
-  [
-    {
-      "path": "/deploy_depth_anything_v3_jetson_agx_orin",
-      "image": "https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp",
-      "title": "Deploy Depth Anything V3 on Jetson AGX Orin",
-      "date": "2026-01-09T00:00:00.000Z",
-      "title_cn": "在 Jetson AGX Orin 上部署 Depth Anything V3",
-      "title_ja": "Jetson AGX Orin上でDepth Anything V3をデプロイ",
-      "title_es": "Desplegar Depth Anything V3 en Jetson AGX Orin"
-    },
-    {
-      "path": "/ai_robotics_distributed_llama_cpp_rpc_jetson",
-      "image": "https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg",
-      "title": "Distributed llama.cpp on reComputer Jetson (RPC Mode)",
-      "date": "2026-01-09T00:00:00.000Z",
-      "title_cn": "在 reComputer Jetson 上的分布式 llama.cpp（RPC 模式）",
-      "title_ja": "reComputer Jetson での分散 llama.cpp（RPC モード）",
-      "title_es": "llama.cpp Distribuido en reComputer Jetson (Modo RPC)"
-    }
-  ],
-  [
-    {
-      "path": "/t1000e_for_lorawan_introduction",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp",
-      "title": "T1000-E for LoRaWAN Introduction",
-      "date": "1/9/2026",
-      "title_cn": "T1000-E for LoRaWAN 介绍",
-      "title_ja": "T1000-E for LoRaWAN 紹介",
-      "title_es": "Introducción al T1000-E para LoRaWAN"
-    },
-    {
-      "path": "/reachymini_getting_started",
-      "image": "https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp",
-      "title": "ReachyMini Getting Started",
-      "date": "1/7/2026"
-    }
-  ],
-  [
-    {
-      "path": "/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection",
-      "image": "https://files.seeedstudio.com/wiki/SenseCraft/SenseCraft_AI/Intro_image_title.webp",
-      "title": "Vibration Anomaly Detection",
-      "date": "01/06/2026",
-      "title_cn": "振动异常检测",
-      "title_ja": "振動異常検出",
-      "title_es": "Detección de Anomalías de Vibración"
-    },
-    {
-      "path": "/local_voice_llm_on_recomputer_jetson_for_reachy_mini",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/reachy_mini/world_frame.webp",
-      "title": "Deploy local voice LLM on reComputer Mini for Reachy Mini!",
-      "date": "01/06/2026",
-      "title_cn": "在 reComputer Mini 上为 Reachy Mini 部署本地语音 LLM！",
-      "title_ja": "Reachy Mini用reComputer Miniにローカル音声LLMをデプロイ！",
-      "title_es": "¡Despliega LLM de voz local en reComputer Mini para Reachy Mini!"
     }
   ]
 ];

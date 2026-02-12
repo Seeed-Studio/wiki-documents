@@ -47,7 +47,7 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## はじめに
 
-**Seeed Studio XIAO nRF54L15** は、最先端のNordic nRF54L15チップを搭載したコンパクトで高性能な開発ボードです。この次世代SoCは、超低消費電力マルチプロトコル2.4 GHz無線と、**128 MHz Arm® Cortex®-M33プロセッサ**および**128 MHz RISC-Vコプロセッサ**を含むMCUを統合しています。**1.5 MB NVMおよび256 KB RAM**までのスケーラブルメモリを提供し、バッテリー寿命を大幅に延長する内蔵超低消費電力設計を特徴としています。その強力な無線機能は**Bluetooth® 6.0（Channel Soundingを含む）、Matter、Thread、Zigbee**、および**最大4 Mbps**の高スループット2.4 GHz独自モードをサポートします。このボードには包括的なペリフェラルセット、統合された**128 MHz RISC-Vコプロセッサ**、および**TrustZone®**分離と暗号化エンジン保護などの高度なセキュリティ機能が含まれています。**内蔵Li-ionバッテリー管理**により、XIAO nRF54L15はスマートウェアラブル、産業用センサー、高度なHMIなどのコンパクトで安全かつエネルギー効率的なIoTソリューションに最適です。
+**Seeed Studio XIAO nRF54L15** は、最先端の Nordic nRF54L15 チップを搭載したコンパクトで高性能な開発ボードです。この次世代 SoC は、超低消費電力マルチプロトコル 2.4 GHz 無線と、**128 MHz Arm® Cortex®-M33 プロセッサ**および **128 MHz RISC-V コプロセッサ**を含む MCU を統合しています。**1.5 MB NVM および 256 KB RAM** までのスケーラブルメモリを提供し、内蔵の超低消費電力設計により電池寿命を大幅に延長します。その強力な無線機能は **Bluetooth® 6.0（Channel Sounding を含む）、Matter、Thread、Zigbee**、および最大 **4 Mbps** の高スループット 2.4 GHz プロプライエタリモードをサポートします。このボードには包括的なペリフェラルセット、統合された **128 MHz RISC-V コプロセッサ**、および **TrustZone®** 分離と暗号化エンジン保護などの高度なセキュリティ機能が含まれています。**内蔵リチウムイオン電池管理**により、XIAO nRF54L15 はスマートウェアラブル、産業用センサー、高度な HMI などのコンパクトで安全かつエネルギー効率的な IoT ソリューションに最適です。
 
 export const Highlight = ({children, color}) => (
   <span
@@ -75,24 +75,24 @@ export const Highlight = ({children, color}) => (
       <td align="center">Arm Cortex-M33 128 MHz<br/>RISC-V コプロセッサ 128 MHz FLPR</td>
   </tr>
   <tr>
-      <th>ワイヤレス接続</th>
+      <th>無線接続</th>
       <td align="center">
-        Bluetooth LE 6.0（Channel Soundingを含む）<br/>
+        Bluetooth LE 6.0（Channel Sounding を含む）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        独自2.4 GHzプロトコル<br/>
+        プロプライエタリ 2.4 GHz プロトコル<br/>
       </td>
       <td align="center">
-        Bluetooth LE 6.0（Channel Soundingを含む）<br/>
+        Bluetooth LE 6.0（Channel Sounding を含む）<br/>
         NFC<br/>
         Thread<br/>
         Zigbee<br/>
         Matter<br/>
         Amazon Sidewalk<br/>
-        独自2.4 GHzプロトコル<br/>
+        プロプライエタリ 2.4 GHz プロトコル<br/>
       </td>
   </tr>
   <tr>
@@ -103,7 +103,7 @@ export const Highlight = ({children, color}) => (
   <tr>
       <th>内蔵センサー</th>
       <td align="center">N/A</td>
-      <td align="center">6軸IMU(LSM6DS3TR-C)<br/>マイクロフォン (MSM261DGT006)</td>
+      <td align="center">6 DOF IMU(LSM6DS3TR-C)<br/>マイクロフォン (MSM261DGT006)</td>
   </tr>
   <tr>
       <th>送信電力</th>
@@ -117,20 +117,20 @@ export const Highlight = ({children, color}) => (
   </tr>
   <tr>
       <th>主要ペリフェラル</th>
-      <td align="center">14ビットADC、グローバルRTC</td>
-      <td align="center">14ビットADC、グローバルRTC</td>
+      <td align="center">14ビット ADC、グローバル RTC</td>
+      <td align="center">14ビット ADC、グローバル RTC</td>
   </tr>
   <tr>
       <th>電源</th>
       <td align="center">
-        USB Type-Cインターフェース電源供給<br/>
-        内蔵PMICがリチウムバッテリー電源供給をサポート<br/>
-        リチウムバッテリー電力収集をサポート
+        USB Type-C インターフェース電源供給<br/>
+        内蔵 PMIC がリチウム電池電源供給をサポート<br/>
+        リチウム電池電力収集をサポート
       </td>
       <td align="center">
-        USB Type-Cインターフェース電源供給<br/>
-        内蔵PMICがリチウムバッテリー電源供給をサポート<br/>
-        リチウムバッテリー電力収集をサポート
+        USB Type-C インターフェース電源供給<br/>
+        内蔵 PMIC がリチウム電池電源供給をサポート<br/>
+        リチウム電池電力収集をサポート
       </td>
   </tr>
   <tr>
@@ -144,9 +144,9 @@ export const Highlight = ({children, color}) => (
       <td align="center">3.7 to 5 V</td>
   </tr>
   <tr>
-      <th>ESBおよび2.4 GHz独自プロトコル</th>
-      <td align="center">最大4 Mbps</td>
-      <td align="center">最大4 Mbps</td>
+      <th>ESB および 2.4 GHz プロプライエタリプロトコル</th>
+      <td align="center">最大 4 Mbps</td>
+      <td align="center">最大 4 Mbps</td>
   </tr>
   <tr>
       <th>タンパー検出器</th>
@@ -154,7 +154,7 @@ export const Highlight = ({children, color}) => (
       <td align="center">YES</td>
   </tr>
   <tr>
-      <th>Bluetoothチャネルサウンディング</th>
+      <th>Bluetooth チャネルサウンディング</th>
       <td align="center">YES</td>
       <td align="center">YES</td>
   </tr>
@@ -162,12 +162,12 @@ export const Highlight = ({children, color}) => (
 
 ### 特徴
 
-- **強力なCPU**: DSP命令とFPU浮動小数点演算をサポートする128 MHz Arm® Cortex®-M33プロセッサ、32ビットRISCアーキテクチャ、および統合された128 MHz RISC-Vコプロセッサ。
-- **超低消費電力**: 優れた超低消費電力設計により、バッテリー寿命を大幅に延長し、高度な電力管理を含みます。
-- **マルチモードワイヤレス伝送**: 統合された2.4 GHzマルチプロトコルワイヤレストランシーバーは、Bluetooth Low Energy（Channel Soundingを含む）、802.15.4-2020、Matter、Thread、Zigbee、および2.4 GHz独自モード（最大4 Mbps）をサポートします。
-- **堅牢なセキュリティ**: TrustZone®分離、タンパー検出、暗号化エンジン側のチャネルリーク保護を含む高度なセキュリティ機能。
-- **豊富なオンチップリソース**: 最大1.5 MB NVMおよび256 KB RAMまでのスケーラブルメモリ構成により、十分なストレージスペースを提供します。
-- **豊富なインターフェース**: 新しいグローバルRTC（System OFFモードで利用可能）、14ビットADC、高速シリアルインターフェースを含む包括的なペリフェラルセット。内蔵リチウムバッテリー管理。
+- **強力な CPU**: DSP 命令と FPU 浮動小数点演算をサポートする 128 MHz Arm® Cortex®-M33 プロセッサ、32 ビット RISC アーキテクチャ、および統合された 128 MHz RISC-V コプロセッサ。
+- **超低消費電力**: 優れた超低消費電力設計により、電池寿命を大幅に延長し、高度な電力管理を含みます。
+- **マルチモード無線伝送**: 統合された 2.4 GHz マルチプロトコル無線トランシーバは、Bluetooth Low Energy（Channel Sounding を含む）、802.15.4-2020、Matter、Thread、Zigbee、および 2.4 GHz プロプライエタリモード（最大 4 Mbps）をサポートします。
+- **堅牢なセキュリティ**: TrustZone® 分離、タンパー検出、および暗号化エンジン側のチャネルリーク保護を含む高度なセキュリティ機能。
+- **豊富なオンチップリソース**: 最大 1.5 MB NVM および 256 KB RAM のスケーラブルメモリ構成により、十分なストレージ容量を提供します。
+- **豊富なインターフェース**: 新しいグローバル RTC（System OFF モードで利用可能）、14 ビット ADC、および高速シリアルインターフェースを含む包括的なペリフェラルセット。内蔵リチウム電池管理。
 
 ## ハードウェア概要
 
@@ -227,7 +227,7 @@ export const Highlight = ({children, color}) => (
 </Tabs>
 
 ## **ピンマップ**
-| XIAOピン                | 機能   | チップピン   | 説明                  |
+| XIAO ピン                | 機能   | チップピン   | 説明                  |
 | :--------------------: | :-------: | :-------:| :-------------------------- |
 | 5V                     | VBUS       |                               | 電源入力/出力           |
 | GND                    |            |                               |                              |
@@ -236,13 +236,13 @@ export const Highlight = ({children, color}) => (
 | D1                     | Analog     | P1.05                        | GPIO、ADC                    |
 | D2                     | Analog     | P1.06                         | GPIO、ADC                    |
 | D3                     | Analog     | P1.07                         | GPIO、ADC                    |
-| D4                     | SDA-0      | P1.10                         | GPIO、I2Cデータ               |
-| D5                     | SCL-0      | P1.11                         | GPIO、I2Cクロック              |
-| D6                     | TX         | P2.08                         | GPIO、UART送信          |
-| D7                     | RX         | P2.07                         | GPIO、UART受信           |
-| D8                     | SPI_SCK    | P2.01                         | GPIO、SPIクロック              |
-| D9                     | SPI_MISO   | P2.04                         | GPIO、SPIデータ               |
-| D10                    | SPI_MOSI   | P2.02                         | GPIO、SPIデータ               |
+| D4                     | SDA-0      | P1.10                         | GPIO、I2C データ               |
+| D5                     | SCL-0      | P1.11                         | GPIO、I2C クロック              |
+| D6                     | TX         | P2.08                         | GPIO、UART 送信          |
+| D7                     | RX         | P2.07                         | GPIO、UART 受信           |
+| D8                     | SPI_SCK    | P2.01                         | GPIO、SPI クロック              |
+| D9                     | SPI_MISO   | P2.04                         | GPIO、SPI データ               |
+| D10                    | SPI_MOSI   | P2.02                         | GPIO、SPI データ               |
 | D11                    | SCL-1      | P0.03                         | GPIO、I2C                    |
 | D12                    | SDA-1      | P0.04                         | GPIO、I2C                     |
 | D13                    | GPIO       | P2.10                         | GPIO                         |
@@ -260,7 +260,7 @@ export const Highlight = ({children, color}) => (
 | USER KEY               |            | P0.00                         | ユーザーキー                     |
 | RF Switch Port Select  |            | P2.05                         | オンボードアンテナ切り替え       |
 | RF Switch Power        |            | P2.03                         | 電源                        |
-| AIN7_VBAT              |            | P1.14                         | バッテリー電圧値読み取り   |
+| AIN7_VBAT              |            | P1.14                         | BAT 電圧値を読み取り   |
 | CHARGE_LED             |            | charge_LED                    | CHG-LED_Red                  |
 | USER_LED               |            | P2.00                         | ユーザーライト                   |
 
@@ -611,7 +611,7 @@ return 0;
 
 - **GPIO設定**：
   - `ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE)`：LEDのGPIOピンをアクティブハイ出力として設定します。
-  - 失敗時（`ret < 0`）は無効な操作を防ぐため終了します。
+  - 失敗時（`ret < 0`）は終了し、無効な操作を防ぎます。
 
 **メインループ**：
 無限の`while (1)`ループで実行され、LEDを定期的に切り替えます：
@@ -640,7 +640,7 @@ nRF Connect SDKの内部原理をより深く理解したい場合は、以下�
 
 ## 工場出荷時設定の復元
 
-XIAO nRF54L15ボード用に、不良状態（例：内部NVM書き込み保護によりアップロードできない場合）からボードを回復するための工場リセットスクリプトが提供されています。このスクリプトはフラッシュの一括消去を実行し、工場出荷時ファームウェアをプログラムします。
+XIAO nRF54L15ボード用に、不良状態からボードを回復するための工場リセットスクリプトが提供されています（例：内部NVM書き込み保護によりアップロードできない場合）。このスクリプトはフラッシュの一括消去を実行し、工場出荷時ファームウェアをプログラムします。
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/scripts/factory_reset" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> 工場リセット</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
@@ -654,14 +654,14 @@ XIAO nRF54L15ボード用に、不良状態（例：内部NVM書き込み保護�
 
 ### Window
 
-- Windows用：scripts/factory_resetディレクトリに移動して実行：
+- Windows用：scripts/factory_resetディレクトリに移動し、以下を実行します：
 
 ```cpp
 .\factory_reset.bat
 ```
 
 ### Linux-MacOS
-- LinuxとmacOS用：scripts/factory_resetディレクトリに移動して実行：
+- LinuxとmacOS用：scripts/factory_resetディレクトリに移動し、以下を実行します：
 
 ```cpp
 bash factory_reset.sh
@@ -672,7 +672,7 @@ bash factory_reset.sh
 この例では、Seeed Studio XIAO nRF54L15のRFスイッチを制御して、オンボードの
 
 :::
-以下の例はPlatformIOとnRF Connect SDKの両方で動作します。PlatformIOでは直接使用でき、SDKでは手動でファイルを追加する必要があります。この[リンク](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#battery-powered-board)を参照してください
+以下の例はPlatformIOとnRF Connect SDKの両方で動作します。PlatformIOでは直接使用でき、SDKでは手動でファイルを追加する必要があります。この[リンク](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_getting_started/#バッテリー駆動ボード)を参照してください
 :::
 
 <div style={{textAlign:'center'}}>
@@ -903,26 +903,26 @@ CONFIG_BT_DEVICE_NAME="zephyr-ble"
 - [Jlink](https://www.segger.com/downloads/jlink/)
 
 :::tip
-nRF54L15モデルボードのサポートを受けるには、J-Linkの最新バージョンをダウンロードする必要があります。
+nRF54L15モデルボードのサポートを受けるには、最新バージョンのJ-Linkをダウンロードする必要があります。
 :::
 
 **必要なソフトウェア**
 
 ウェブサイトから[Segger](https://www.segger.com/downloads/jlink/)ソフトウェアをダウンロードする必要があります。
 
-- **ステップ 1.** Jlinkを使用して以下のピンを接続します：
+- **ステップ1.** Jlinkを使用して以下のピンを接続します：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link.png" alt="pir" width={250} height="auto" /></p>
 
-- **ステップ 2.** J-Flashを起動してnRF54L15_M33を検索し、新しいプロジェクトを作成します：
+- **ステップ2.** J-Flashを起動してnRF54L15_M33を検索し、新しいプロジェクトを作成します：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link4.jpg" alt="pir" width={700} height="auto" /></p>
 
-- **ステップ 3.** "Target"をクリックして"Connect"を選択します。
+- **ステップ3.** "Target"をクリックして"Connect"を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link3.jpg" alt="pir" width={700} height="auto" /></p>
 
-- **ステップ 4.** binまたは[hexファイル](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex)をソフトウェアにドラッグします。その後、F4とF5をその順序で押します。再フラッシュが完了します。
+- **ステップ4.** binまたは[hexファイル](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/zephyr.hex)をソフトウェアにドラッグします。その後、F4とF5をその順序で押します。再フラッシュが完了します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link2.jpg" alt="pir" width={700} height="auto" /></p>
 
@@ -1034,7 +1034,7 @@ XIAO nRF54L15は、TPS22916CYFPRロードスイッチを使用してバッテリ
 
 TPS22916CYFPRチップの機能：
 
-- これは、必要に応じてバッテリー電圧のオン・オフを制御するインテリジェント電源スイッチです。バッテリー電圧を測定する必要がある場合はオンになり、バッテリーを分圧回路に接続します。測定する必要がない場合はオフになり、接続を切断します。
+- オンデマンドでバッテリー電圧のオン・オフを制御するインテリジェント電源スイッチです。バッテリー電圧を測定する必要がある場合はオンになり、バッテリーを分圧回路に接続します。測定する必要がない場合はオフになり、接続を切断します。
 
 - この機能は何に役立つのでしょうか？
 このオンデマンドスイッチング機構により、チップは不要な電流消費を大幅に削減し、バッテリー寿命を効果的に延長します。後続の分圧回路とnRF54L15のADC（アナログ-デジタル変換器）と組み合わせることで、XIAO nRF54L15はバッテリーの残量を正確に監視でき、IoTデバイスなどのバッテリー駆動・低消費電力アプリケーションに重要な範囲最適化を提供します。
@@ -1246,7 +1246,7 @@ nRF Connect SDKでこのバッテリールーチンを使用したい場合は�
 
 - prj.confファイルに以下の内容を追加します
 
-  - prj.confはZephyrプロジェクトのコア設定ファイルです。コンパイル時のソフトウェア機能選択のためにKconfigシステムによって管理されます。どのドライバー（ADC、ディスプレイ、Bluetoothなど）、ミドルウェア（LVGLなど）、システムサービス（ログ、メモリ管理など）をファームウェアに含めるかを決定し、それらの動作パラメータ（ログレベル、ヒープサイズなど）を設定します。最後にCtrl + Sを押して保存します。
+  - prj.confはZephyrプロジェクトの中核設定ファイルです。コンパイル時のソフトウェア機能選択のためにKconfigシステムによって管理されます。どのドライバー（ADC、ディスプレイ、Bluetoothなど）、ミドルウェア（LVGLなど）、システムサービス（ログ、メモリ管理など）をファームウェアに含めるかを決定し、それらの動作パラメータ（ログレベル、ヒープサイズなど）を設定します。最後にCtrl + Sを押して保存してください。
 <br />
   <details>
 
@@ -1448,27 +1448,38 @@ int main(void)
 
 ### Seeed Studio XIAO nRF54L15
 
-- **[PDF]** [Seeed Studio XIAO nRF54L15 回路図](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf)
+**ハードウェア設計**
+- **📄[データシート]** [Nordic nRF54L15 データシート](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
+- **📄[回路図]** [XIAO nRF54L15 回路図](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf )
+- **🗃️[PCB設計ファイル]** [XIAO nRF54L15 KiCadプロジェクト](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip )
+- **🗃️[PCB設計ライブラリ]** 
+  - [XIAO シリーズ KiCadフットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCHシンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[ピン配置図]** [XIAO nRF54L15 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
 
-- **[ZIP]** [Seeed Studio XIAO nRF54L15 KiCADライブラリ](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_KICAD.zip)
-
-- **[DXF]** [Seeed Studio XIAO nRF54L15 DXF寸法図](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
-
-- **[XLSX]** [Seeed Studio XIAO nRF54L15 ピン配置シート](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx)
+**機械的仕様**
+- **🗃️[2D寸法]** [XIAO nRF54L15 DXF寸法](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
 
 ### Seeed Studio XIAO nRF54L15 Sense
 
-- **[PDF]** [Seeed Studio XIAO nRF54L15 Sense 回路図](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf)
+**ハードウェア設計**
+- **📄[データシート]** [Nordic nRF54L15 データシート](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/Nordic_nRF54L15_Datasheet_v1.0.pdf )
+- **📄[回路図]** [XIAO nRF54L15 Sense 回路図](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf )
+- **🗃️[PCB設計ファイル]** 
+  - [XIAO nRF54L15 Sense KiCadプロジェクト](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip )
+  - [XIAO nRF54L15 Sense Flux.aiプロジェクト](https://www.flux.ai/seeedstudio/seeed-studio-xiao-nrf54l15-sense )
+- **🗃️[PCB設計ライブラリ]** 
+  - [XIAO シリーズ KiCadフットプリント](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO シリーズ KiCad SCHシンボル](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **🗃️[ピン配置図]** [XIAO nRF54L15 Sense ピン配置シート](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx )
 
-- **[ZIP]** [Seeed Studio XIAO nRF54L15 Sense KiCADライブラリ](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_KICAD.zip)
-
-- **[DXF]** [Seeed Studio XIAO nRF54L15 Sense DXF寸法図](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
-
-- **[XLSX]** [Seeed Studio XIAO nRF54L15 Sense ピン配置シート](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx)
+**機械的仕様**
+- **📄[2D寸法]** [XIAO nRF54L15 Sense DXF寸法](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip )
+- **🗃️[3D寸法]** [XIAO nRF54L15 Sense 3D寸法](https://grabcad.com/library/seeed-studio-xiao-nrf54l15-sense-1 )
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

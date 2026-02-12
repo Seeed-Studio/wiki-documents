@@ -1,11 +1,11 @@
 ---
-description: Primeros Pasos con el Sensor de Humedad del Suelo XIAO
-title: Primeros Pasos con el Sensor de Humedad del Suelo XIAO
+description: Introducción al Sensor de Humedad del Suelo XIAO
+title: Introducción al Sensor de Humedad del Suelo XIAO
 keywords:
   - XIAO
-  - Sensor de Humedad del Suelo
+  - Soil Moisture Sensor
   - ESP32-C6
-  - Humedad
+  - Moisture
 image: https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/1.webp
 slug: /es/xiao_soil_moisture_sensor
 last_update:
@@ -20,7 +20,7 @@ import TabItem from '@theme/TabItem';
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-Soil-Sensor-p-6452.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -71,7 +71,7 @@ Nota: Durante la calibración, las lecturas iniciales pueden ser inestables si e
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/hardware.jpg" style={{width:800, height:'auto'}}/></div>
 
-## Primeros Pasos
+## Introducción
 
 Esta sección te guiará a través de la configuración de tu Sensor de Humedad del Suelo XIAO por primera vez.
 
@@ -92,12 +92,12 @@ Antes de que comience el contenido del tutorial de este artículo, es posible qu
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo Ahora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo Ahora 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
@@ -109,11 +109,11 @@ Home Assistant Green es la forma más fácil y centrada en la privacidad de auto
 Recomendamos usar Home Assistant Green como el host de Home Assistant para este tutorial, o puedes usar cualquier host de Home Assistant con un Supervisor.
 
 :::tip instalar Home Assistant
-También hemos escrito cómo instalar Home Assistant para algunos productos de Seeed Studio, por favor consúltalos.
+También hemos escrito cómo instalar Home Assistant para algunos de los productos de Seeed Studio, por favor consúltalos.
 
-- **[Primeros Pasos con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
-- **[Primeros Pasos con Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
-- **[Primeros Pasos con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
+- **[Introducción a Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
+- **[Introducción a Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
+- **[Introducción a Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
 
 Si no estás usando un producto de Seeed Studio, también puedes verificar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
 
@@ -124,16 +124,16 @@ Si no estás usando un producto de Seeed Studio, también puedes verificar y apr
 
 Si ya has instalado ESPHome, puedes omitir este paso.
 
-Ve a **Configuración** -> **Complementos** -> **TIENDA DE COMPLEMENTOS**
+Ve a **Settings** -> **Add-ons** -> **ADD-ON STORE**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/01.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/02.png" style={{width:800, height:'auto'}}/></div>
 
-Busca ESPHome y haz clic en él. Haz clic en **INSTALAR** e **INICIAR**.
+Busca ESPHome y haz clic en él. Haz clic en **INSTALL** y **START**.
 
 :::tip
-Si no puedes encontrar ESPHome en la tienda de complementos, asegúrate de estar usando una instalación de Home Assistant que soporte complementos (como Home Assistant OS o instalaciones supervisadas). Para otros tipos de instalación (como Home Assistant Container), es posible que necesites ejecutar el Constructor de Dispositivos ESPHome independientemente usando Docker. Consulta la [documentación oficial de ESPHome](https://esphome.io/guides/getting_started_hassio) para más detalles.
+Si no puedes encontrar ESPHome en la tienda de complementos, asegúrate de estar usando una instalación de Home Assistant que soporte complementos (como Home Assistant OS o instalaciones supervisadas). Para otros tipos de instalación (como Home Assistant Container), es posible que necesites ejecutar el ESPHome Device Builder independientemente usando Docker. Consulta la [documentación oficial de ESPHome](https://esphome.io/guides/getting_started_hassio) para más detalles.
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/03.png" style={{width:800, height:'auto'}}/></div>
@@ -153,17 +153,17 @@ Para asegurar lecturas precisas, simplemente realiza una calibración rápida de
 ### Paso 3: Configuración de Red
 
 1. **Habilitar Punto de Acceso**:
-   - Al encender por primera vez, el módulo creará una red Wi-Fi (SSID: `Xiao-Soil-Moisture-Monitor`).
+   - Al encenderse por primera vez, el módulo creará una red Wi-Fi (SSID: `Xiao-Soil-Moisture-Monitor`).
 
 2. **Acceder a la Configuración**:
    - Conéctate a la red usando un teléfono o PC.
    - Abre un navegador y navega a `http://192.168.4.1`.
-   - Ingresa el SSID y la contraseña de tu red Wi-Fi doméstica.
+   - Ingresa el SSID y contraseña de tu red Wi-Fi doméstica.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ap_wireless_setting_page.png" style={{width:'auto', height:650, "border-radius": '15px'}}/></div>
 
 3. **Integración con Home Assistant**:
-   - Una vez conectado a la red doméstica, el módulo será descubrible en Home Assistant bajo `Configuración -> Dispositivos y Servicios`.
+   - Una vez conectado a la red doméstica, el módulo será descubrible en Home Assistant bajo `Settings -> Devices & Services`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ha_new_device_discovered.png" style={{width:400, height:'auto', "border-radius": '15px'}}/></div>
 
@@ -173,7 +173,7 @@ De esta manera, puedes conectar el módulo a tu red de Home Assistant y permitir
 
 1. **Descubrimiento Automático**:
    - Asegúrate de que **ESPHome** esté instalado en Home Assistant.
-   - Navega a `Configuración -> Dispositivos y Servicios -> Integraciones` y busca el dispositivo.
+   - Navega a `Settings -> Devices & Services -> Integrations` y busca el dispositivo.
 
 2. **Configuración Manual**:
    - Si no se descubre automáticamente, agrega manualmente el dispositivo especificando su dirección IP.
@@ -189,17 +189,18 @@ Ahora que tu sensor de suelo está funcionando, ¡adelante y diviértete monitor
 ## Uso Avanzado
 
 Puedes modificar la lógica del firmware original y flashear tu versión personalizada del sensor de suelo directamente a través de Home Assistant.
+
 ### Paso 1. Instalar ESPHome
 
 Consulta la guía de instalación en el Paso 1 anterior.
 
 ### Paso 2. Agregar un nuevo dispositivo
 
-Ve a ESPHome y haz clic en **NUEVO DISPOSITIVO**.
+Ve a ESPHome y haz clic en **NEW DEVICE**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/06.png" style={{width:800, height:'auto'}}/></div>
 
-Dale al dispositivo un nombre que te guste y haz clic en **SIGUIENTE**.
+Dale al dispositivo un nombre que te guste y haz clic en **NEXT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -208,13 +209,13 @@ Dale al dispositivo un nombre que te guste y haz clic en **SIGUIENTE**.
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-Después de crear un nuevo dispositivo, haz clic en **EDITAR**.
+Después de crear un nuevo dispositivo, haz clic en **EDIT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/4.png" style={{width:800, height:'auto'}}/></div>
 
 ### Paso 3. Instalar firmware
 
-Aquí está el firmware de fábrica：
+Aquí está el firmware de fábrica:
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/xiao-soil-moisture-monitor" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Descargar la Biblioteca</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
@@ -227,14 +228,22 @@ Aquí tienes una configuración YAML de `ESPHome` lista para usar con Home Assis
 <summary>Haz clic aquí para previsualizar el código completo</summary>
 
 ```yaml
+# ==== AUTO-SYNC START: xiao-soil-moisture-monitor/xiao-soil-moisture-monitor.yaml ====
+
+substitutions:
+  name: "xiao-soil-moisture"
+  friendly_name: "XIAO Soil Moisture Monitor"
+
 esphome:
-  name: soil-moisture-monitor
-  friendly_name: XIAO Soil Moisture Monitor
-  platformio_options:
-    platform: https://github.com/mnowak32/platform-espressif32.git#boards/seeed_xiao_esp32c6
-  on_boot: 
+  name: "${name}"
+  friendly_name: "${friendly_name}"
+  name_add_mac_suffix: true
+  project:
+    name: "xiao.soil-moisture-monitor"
+    version: "1.0"
+  on_boot:
     then:
-      # - output.turn_off: gpio_3_output
+      - output.turn_off: gpio_3_output
       - output.turn_on: gpio_14_output
       - light.turn_on:
           id: pwm_led
@@ -250,25 +259,21 @@ esphome:
       - delay: 1s
       - script.execute: check_moisture_once
 
+
 esp32:
-  board: seeed_xiao_esp32c6
-  variant: ESP32C6
-  flash_size: 4MB    
+  board: esp32-c6-devkitc-1
   framework:
     type: esp-idf
-    version: "5.2.1"
-    platform_version: 6.6.0
-    sdkconfig_options:
-      CONFIG_ESPTOOLPY_FLASHSIZE_4MB: y
 
-# LED Yellow D10 18
-# LED RED D9  20
-# LED Green D8 19
-# button D2  2
+# LED Yellow	D10 18
+# LED RED	D9  20
+# LED Green	D8 19
+# button	D2  2
 
-# Battery D0 0
-# PWM out D3 21
-# Soil sensor D1  1
+# Battery	D0 0
+# PWM out	D3 21
+# Soil sensor	D1  1
+
 
 output:
   - platform: gpio
@@ -284,9 +289,13 @@ output:
     id: red_led_output
 
   - platform: ledc
-    pin: GPIO21  
+    pin: GPIO21
     id: pwm_output
     frequency: 200kHz  # Set the frequency to 200kHz
+
+  - platform: gpio
+    pin: GPIO3
+    id: gpio_3_output
 
   - platform: gpio
     pin: GPIO14
@@ -311,6 +320,7 @@ light:
     name: "200kHz PWM"
     internal: true
     default_transition_length: 0s
+
 
 script:
   - id: red_led_blink
@@ -383,6 +393,7 @@ script:
             - delay: 1000ms
             - light.turn_off: green_led
             - delay: 100ms
+
 
   - id: do_calibration
     then:
@@ -457,6 +468,8 @@ script:
             id(deep_sleep_control).set_sleep_duration(28800000);
           }
 
+
+
 globals:
   - id: button_press_count
     type: int
@@ -505,12 +518,21 @@ binary_sensor:
             id(button_press_count) = 0;
           }
 
+
+# interval:
+#   - interval: 10s
+#     then:
+#       - script.execute: check_moisture_once
+
+
+
+# Deep sleep configuration
 deep_sleep:
   id: deep_sleep_control
-  run_duration: 120s  
-  sleep_duration: 180min  
-  wakeup_pin: 
-    number: GPIO2 
+  run_duration: 120s
+  sleep_duration: 180min
+  wakeup_pin:
+    number: GPIO2
     inverted: true
     allow_other_uses: true
     mode: INPUT_PULLUP
@@ -519,13 +541,6 @@ deep_sleep:
 external_components:
   - source: github://pr#7942
     components: [ "adc" ]
-
-  - source:
-      type: git
-      url: https://github.com/ackPeng/esphome.git
-      ref: api
-    components: [ api ]
-    refresh: 0s
 
 sensor:
   - platform: adc
@@ -541,13 +556,16 @@ sensor:
     pin: GPIO0
     name: "Battery measurement"
     attenuation: 12db
+    # internal: true
     filters:                     # When the battery drops below 1V, it is dead.
       - lambda: |-
-          if (x < 1.0) {
+          if (x < 1.2) {
             return 0.0;
-          } else {
-            return ((x - 1.0) / (1.5 - 1.0)) * 100.0;
-          } 
+          }else if(x > 1.5){
+            return 1.0 * 100.0;
+          }else {
+            return ((x - 1.2) / (1.5 - 1.2)) * 100.0;
+          }
     unit_of_measurement: "%"
     update_interval: 5s
     force_update: True
@@ -555,6 +573,26 @@ sensor:
   - platform: wifi_signal
     name: "wifi singnal strength"
     update_interval: 10s
+
+# text_sensor:
+#   - platform: template
+#     name: "Soil Moisture Status"   # ✅ Status displayed on the HA panel
+#     id: soil_status
+#     # internal: true
+#     lambda: |-
+#       float value = id(soil_sensor).state;
+#       float Diff = id(dry_value) - id(wet_value);
+#       if (value >= (id(dry_value) - Diff * id(ref_dry))) {
+#         //id(red_led_blink_3_times).execute();
+#         return {"Dry"};
+#       } else if (value > (id(dry_value) - Diff * id(ref_wet)) && value < (id(dry_value) - Diff * id(ref_dry))) {
+#         //id(yellow_led_blink_3_times).execute();
+#         return {"Almost Dry"};
+#       } else {
+#         //id(green_led_blink_3_times).execute();
+#         return {"Normal Moisture"};
+#       }
+#     update_interval: 5s
 
 text_sensor:
   - platform: template
@@ -594,7 +632,7 @@ interval:
             } else {
               id(deep_sleep_control).set_sleep_duration(28800000);
               return "Normal Moisture";
-            }  
+            }
 
 # Enable logging
 logger:
@@ -603,16 +641,11 @@ improv_serial:
 
 # Enable Home Assistant API
 api:
-  # encryption:
-    # key: "YVjz+1l5zHXeyXFVinhaJkqh8RnG0gUVjaWniPEzCj4="
 
 ota:
   - platform: esphome
-    password: "dcad8df988971d761bc72a30d7878a40"
 
 wifi:
-  # ssid: "my68k"
-  # password: "1143590135"
   on_connect:
     then:
       - if:
@@ -628,6 +661,7 @@ wifi:
           else:
             - logger.log: "The device has been networked"
 
+
   on_disconnect:
     then:
       - globals.set:
@@ -635,10 +669,10 @@ wifi:
           value: '0'
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Xiao-Soil-Moisture-Monitor"
-    password: ""
+    ssid: "XIAO-Soil-Moisture-Monitor"
 
 captive_portal:
+# ==== AUTO-SYNC END ====
 ```
 
 </details>
@@ -646,7 +680,7 @@ captive_portal:
 <details>
 <summary>Aquí tienes una descripción general de las funciones clave y la lógica utilizada en la configuración YAML.</summary>
 
-`on_boot` – Define lo que sucede cuando el dispositivo se inicia.
+`on_boot` – Define qué sucede cuando el dispositivo se inicia.
 
 - **Parámetros de entrada**: Ninguno.
 - **Acción**: Enciende GPIO 14, establece el brillo del LED PWM, verifica el estado del Wi-Fi y activa la primera verificación de humedad.
@@ -692,7 +726,7 @@ captive_portal:
 `text_sensor` – Publica el estado de humedad del suelo legible para humanos.
 
 - **Parámetros de entrada**: Ninguno.
-- **Acción**: Muestra "Seco", "Casi Seco", o "Humedad Normal" en Home Assistant.
+- **Acción**: Muestra "Dry", "Almost Dry", o "Normal Moisture" en Home Assistant.
 
 `wifi` + `api` + `ota` – Gestiona la conexión de red, integración con Home Assistant y actualizaciones de firmware por aire.
 
@@ -704,7 +738,7 @@ captive_portal:
 Haz clic en **INSTALL** para instalar el código en el dispositivo y verás la siguiente imagen.
 
 <Tabs>
-<TabItem value='Install through browser'>
+<TabItem value='Instalar a través del navegador'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está lejos de ti, recomendamos usar este método. Puedes instalarlo con la computadora que tengas a mano.
@@ -744,7 +778,7 @@ Tu firmware se flasheará en breve ～
 
 </TabItem>
 
-<TabItem value='Install through host'>
+<TabItem value='Instalar a través del host'>
 
 :::tip
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más simple.
@@ -765,7 +799,7 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Signi
 
 </TabItem>
 
-<TabItem value='Install through Wi-Fi'>
+<TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
 Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de encriptación válidas para que este método funcione.

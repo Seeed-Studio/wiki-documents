@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-01-27 10:20:09 (北京时间)
-// 多语言页面: 2125 个
+// 生成时间: 2026-02-10 15:03:51 (北京时间)
+// 多语言页面: 2138 个
 
 (function() {
   'use strict';
@@ -605,6 +605,12 @@
     "es",
     "ja"
   ],
+  "/ai_robotics_yolov26_dual_camera_system": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/YOLOv5-Object-Detection-Jetson": [
     "cn",
     "en",
@@ -648,6 +654,12 @@
     "ja"
   ],
   "/DeciAI-Getting-Started": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/develop_recomputer_jetson_using_clawdbot": [
     "cn",
     "en",
     "es",
@@ -809,6 +821,12 @@
     "es",
     "ja"
   ],
+  "/local_openclaw_on_recomputer_jetson": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/Local_RAG_based_on_Jetson_with_LlamaIndex": [
     "cn",
     "en",
@@ -900,6 +918,12 @@
     "ja"
   ],
   "/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/j501_mini_starai_viola_fruit_sorting": [
     "cn",
     "en",
     "es",
@@ -2603,7 +2627,13 @@
     "es",
     "ja"
   ],
-  "/ai_remote_wireless_monitor_system_with_wifi_haLow": [
+  "/ai_human_detection_meshtastic_broadcast": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_remote_wireless_monitor_system": [
     "cn",
     "en",
     "es",
@@ -2832,6 +2862,12 @@
     "ja"
   ],
   "/getting_started_with_reterminal_e1002": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_reterminal_e1004": [
     "cn",
     "en",
     "es",
@@ -4222,6 +4258,10 @@
     "en",
     "es",
     "ja"
+  ],
+  "/reachymini_getting_started": [
+    "cn",
+    "en"
   ],
   "/stackforce_giant_bipedal_wheeled_robot": [
     "en",
@@ -8313,6 +8353,24 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_agora_convo_client": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf3800_agora_ten_framework_client": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf_3800_arm": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf3800_xiao_doa_vad": [
     "cn",
     "en",
@@ -8344,6 +8402,12 @@
     "ja"
   ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf_3800_openclaw": [
     "cn",
     "en",
     "es",
@@ -8392,6 +8456,12 @@
     "ja"
   ],
   "/respeaker_xvf3800_xiao_volume": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf_3800_xiaozhi": [
     "cn",
     "en",
     "es",
@@ -9208,6 +9278,12 @@
     "ja"
   ],
   "/xiao_nrf54l15_sense_power_consumptions": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_nrf54l15_zigbee": [
     "cn",
     "en",
     "es",

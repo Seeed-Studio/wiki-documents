@@ -7,10 +7,14 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_ex
 slug: /cn/t1000_e_arduino_examples
 sidebar_position: 4
 last_update:
-  date: 03/24/2025
-  author: Frederik Funk
+  date: 2/4/2026
+  author: Janet
 ---
 
+
+:::caution note
+在刷写固件之前，请确保您的设备是 `T1000-E for LoRaWAN` 版本，请不要将其他 Meshtastic 固件刷写到此追踪器型号，这可能导致设备完全损坏。
+:::
 
 以下 Arduino 示例可供使用：
 
@@ -79,7 +83,7 @@ last_update:
 
 在开始开发之前，需要以下软件工具。
 
-请查看这里了解如何 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+请查看此处了解如何 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
 
 :::tip
 版本需要新于 v1.6.12。
@@ -114,35 +118,41 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 2. 构建示例
 
-导航到 `File` -> `Examples` -> `Seeed Tracker T1000 E LoRaWAN`，然后打开您选择的示例（在这种情况下是加速度计示例）：
+导航到 `File` -> `Examples` -> `Seeed Tracker T1000 E LoRaWAN`，然后打开您选择的示例（在此例中为加速度计示例）：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/example_select.png" alt="pir" width={800} height="auto" /></p>
 
 ### 上传到目标设备
 
-由于 T1000-E 引导加载程序_仅_支持通过 `.uf2` 拖放方式刷写，因此无法直接通过 Arduino IDE 上传示例。
+由于 T1000-E 引导加载程序 _仅_ 支持通过 `.uf2` 拖放方式刷写，因此无法直接通过 Arduino IDE 上传示例。
 请按照以下步骤操作：
 
 1. 从 Arduino IDE 导出编译后的二进制文件。您将在与 `.ino` 草图相同的文件夹中找到它。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/export_binary.png" alt="pir" width={800} height="auto" /></p>
 
-2. 将 `.hex` 文件转换为 `.uf2` 文件。这是使用 Python 脚本完成的，可以从[这里](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/blob/1.1.9/tools/uf2conv/uf2conv.py)下载。下载并从终端使用以下参数运行脚本：  
+2. 将 `.hex` 文件转换为 `.uf2` 文件。这是使用 Python 脚本完成的，可以从[这里](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/blob/1.1.9/tools/uf2conv/uf2conv.py)下载。下载并在终端中使用以下参数运行脚本：  
 `python uf2conv.py -f 0xADA52840 -c -o test.uf2 <your_hex_file>.hex`
 
-3. 通过按住设备按钮将设备置于 DFU 模式，然后快速连接充电线两次，绿色 LED 将常亮。您现在应该能找到 T1000-E 作为大容量存储设备。
+3. 通过按住设备按钮将设备置于 DFU 模式，然后快速连接充电线缆两次，绿色 LED 将常亮。您现在应该能找到 T1000-E 作为大容量存储设备。
+
+:::danger note
+如果在连接线缆时按住设备按钮后没有弹出驱动程序窗口，请按照下面的操作快速双击充电线缆。
+:::
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={400} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
 4. 将 `.uf2` 文件复制到大容量存储设备。复制完成后，设备会自动开始运行。
 
-## 读取串口消息
+## 读取串行消息
 
 使用 `Serial.println` 和 `Serial.printf` 从设备打印的消息可以使用 Arduino IDE 的集成终端读取。
 确保您已启用并选择了 USB-CDC：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/usb_cdc.png" alt="pir" width={800} height="auto" /></p>
 
-然后使用 `Tools -> Serial Monitor` 打开串口监视器并开始观察消息：
+然后使用 `Tools -> Serial Monitor` 打开串行监视器并开始观察消息：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/serial_monitor.png" alt="pir" width={800} height="auto" /></p>
 
 ## LoRaWAN 示例
@@ -151,8 +161,8 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ### 设置 LNS
 
-您需要一个 LoRaWAN 网络服务器（LNS），您的跟踪器可以连接到该服务器。在此示例中，我们使用 The Things Network（TTN），但任何其他服务器都应该可以正常工作。
-为了与 TTN 配合使用，您需要拥有 The Things Industries 或 The Things Network 的账户，并能够访问网关（如果没有可用的公共网关，则需要您自己的网关）。
+您需要一个 LoRaWAN 网络服务器（LNS），您的追踪器可以连接到该服务器。在此示例中，我们使用 The Things Network（TTN），但任何其他服务器都应该可以正常工作。
+为了与 TTN 配合使用，您需要拥有 The Things Industries 或 The Things Network 的账户，并能够访问网关（公共网关或您自己的网关，如果没有可用的话）。
 
 #### 步骤 1：创建应用程序
 
@@ -177,12 +187,12 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device1.png" alt="pir" width={800} height="auto" /></p>
 
-现在，为您的设备创建凭据。生成新的一组或输入现有的凭据。
+现在，为您的设备创建凭据。生成新的凭据集或输入现有的凭据。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device5.png" alt="pir" width={800} height="auto" /></p>
 
 ### 调整示例代码
 
-为了使其工作，请在示例代码中设置上一步的凭据。还要指定区域，例如 `SMTC_MODEM_REGION_AS_923_GRP1`、`SMTC_MODEM_REGION_EU_868` 或 `SMTC_MODEM_REGION_US_915`。
+为了使其工作，请在示例代码中设置上一步的凭据。同时指定区域，例如 `SMTC_MODEM_REGION_AS_923_GRP1`、`SMTC_MODEM_REGION_EU_868` 或 `SMTC_MODEM_REGION_US_915`。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/lorawan_credentials.png" alt="pir" width={800} height="auto" /></p>
 
 如果您的区域有占空比限制，请确保在重置处理程序中启用限制：

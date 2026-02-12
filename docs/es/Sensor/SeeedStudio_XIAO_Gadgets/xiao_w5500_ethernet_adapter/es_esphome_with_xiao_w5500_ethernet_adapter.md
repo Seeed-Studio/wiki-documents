@@ -1,6 +1,6 @@
 ---
 description: ESPHome en XIAO W5500 para Home Assistant
-title: ESPHome en XIAO(ESP32-S3) W5500 Adaptador Ethernet para Home Assistant
+title: ESPHome en XIAO(ESP32-S3) W5500 Ethernet Adapter para Home Assistant
 keywords:
   - esphome
   - ethernet
@@ -18,19 +18,19 @@ import TabItem from '@theme/TabItem';
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113100042-xiao-w5500-ethernet-adapter.jpg" style={{width:800, height:'auto'}}/></div>
 
-Este tutorial demuestra cómo implementar un **Proxy Bluetooth** usando el **Adaptador Ethernet XIAO W5500**, con integración y validación en **Home Assistant**.
+Este tutorial demuestra cómo implementar un **Proxy Bluetooth** usando el **XIAO W5500 Ethernet Adapter**, con integración y validación en **Home Assistant**.
 
 Antes de proceder con este tutorial, asegúrate de que se cumplan los siguientes requisitos previos:
 
 1. Un dispositivo host capaz de ejecutar [Home Assistant](https://www.home-assistant.io/).
 2. Una conexión Ethernet o Wi-Fi estable.
 3. (Recomendado) Capacidad PoE (Power over Ethernet) o una fuente de alimentación externa de 5 V.
-4. [Adaptador Ethernet XIAO(ESP32-S3) W5500](https://www.seeedstudio.com/XIAO-W5500-Ethernet-Adapter-p-6472.html)
+4. [XIAO(ESP32-S3) W5500 Ethernet Adapter](https://www.seeedstudio.com/XIAO-W5500-Ethernet-Adapter-p-6472.html)
 
 <div class="table-center">
  <table>
   <tr>
-   <th>Adaptador Ethernet XIAO(ESP32-S3) W5500</th>
+   <th>XIAO(ESP32-S3) W5500 Ethernet Adapter</th>
   </tr>
   <tr>
    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113100042-xiao-w5500-ethernet-adapter.jpg" style={{width:400, height:'auto'}}/></div></td>
@@ -68,13 +68,13 @@ ESPHome es una herramienta de creación de firmware de código abierto diseñada
 
 ### Descripción del Proxy Bluetooth
 
-El Proxy Bluetooth actúa como un puente de detección distribuido ligero que extiende la cobertura Bluetooth de Home Assistant más allá del rango incorporado del host. Al desplegar múltiples **nodos ESP32** por todo el espacio, se puede establecer una red de detección Bluetooth de toda la casa, permitiendo conexiones estables a una variedad de dispositivos BLE como sensores de temperatura y humedad, sensores de puertas/ventanas, módulos de iluminación y monitores de plantas.
+El Proxy Bluetooth actúa como un puente de detección distribuido ligero que extiende la cobertura Bluetooth de Home Assistant más allá del rango integrado del host. Al desplegar múltiples **nodos ESP32** por todo el espacio, se puede establecer una red de detección Bluetooth para toda la casa, permitiendo conexiones estables a una variedad de dispositivos BLE como sensores de temperatura y humedad, sensores de puertas/ventanas, módulos de iluminación y monitores de plantas.
 
 **Funciones Clave:**
 
 - **Cobertura Extendida:** Elimina la dependencia del rango Bluetooth del host utilizando nodos proxy ESP32 distribuidos para lograr conectividad Bluetooth en toda la casa.
 - **Cómo Funciona:**
-  - El **Adaptador Ethernet XIAO W5500** habilita el escaneo Bluetooth
+  - El **XIAO W5500 Ethernet Adapter** habilita el escaneo Bluetooth
   - Recibe paquetes de transmisión BLE cercanos (ej., termómetros, cerraduras inteligentes, luces)
   - Los datos se reenvían a Home Assistant vía **Ethernet o Wi-Fi**
   - Home Assistant reconoce estos dispositivos como **entidades Bluetooth**
@@ -122,10 +122,14 @@ Si no has configurado Home Assistant, puedes hacer clic en este enlace y seguir 
 <summary>Haz clic aquí para copiar el archivo yaml</summary>
 
 ```yaml
+# Only boards produced after November 1, 2025 are supported
+# ==== AUTO-SYNC START: xiao-w5500-ethernet-adapter/xiao-w5500-ethernet-adapter.yaml ====
+
+# Only boards produced after November 1, 2025 are supported
 esphome:
-  name: seeed-esp32-s3
-  friendly_name: Bluetooth Proxy
-  min_version: 2025.8.0
+  name: seeed-esp32-poe
+  friendly_name: "XIAO W5500 Ethernet Adapter V1.2"
+  min_version: 2025.11.0
   name_add_mac_suffix: true
 
 esp32:
@@ -135,10 +139,11 @@ esp32:
 
 ethernet:
   type: W5500
-  cs_pin: GPIO2
   clk_pin: GPIO7
   mosi_pin: GPIO9
   miso_pin: GPIO8
+  cs_pin: GPIO2
+  interrupt_pin: GPIO10
 
 api:
 logger:
@@ -147,14 +152,14 @@ ota:
   - platform: esphome
     id: ota_esphome
 
+esp32_ble:
+  max_connections: 4
+
 esp32_ble_tracker:
-  scan_parameters:
-    interval: 1100ms
-    window: 1100ms
-    active: true
 
 bluetooth_proxy:
   active: true
+  connection_slots: 4
 
 button:
   - platform: safe_mode
@@ -164,6 +169,7 @@ button:
   - platform: factory_reset
     id: factory_reset_btn
     name: Factory reset
+# ==== AUTO-SYNC END ====
 ```
 
 </details>
@@ -185,7 +191,7 @@ Primero, necesitas hacer clic en **Manual download** para descargar el firmware 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-Abre este sitio web donde subiremos el firmware al Adaptador Ethernet XIAO(ESP32-S3) W5500.
+Abre este sitio web donde subiremos el firmware al XIAO(ESP32-S3) W5500 Ethernet Adapter.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device5.png" style={{width:800, height:'auto'}}/></div>
 
@@ -226,7 +232,7 @@ Haz clic en las opciones siguiendo la imagen para instalar el código en el disp
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'120%', height:'auto'}}/></div>
 </div>
 
-Espera un momento y verás la retroalimentación como la siguiente imagen. Significa que el código se está ejecutando exitosamente.
+Espera un momento y verás la retroalimentación como en la siguiente imagen. Significa que el código se está ejecutando correctamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/add_new_device6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -235,7 +241,7 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Signi
 <TabItem value='Instalar a través de Wi-Fi'>
 
 :::tip
-Esta es la forma más sencilla, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. Además, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. Además, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de cifrado válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el panel ePaper a nada, solo asegúrate de que esté en línea.
@@ -266,7 +272,7 @@ Espera un momento y verás la retroalimentación como en la siguiente imagen. Si
   - **Addresss**: La dirección de difusión del dispositivo Bluetooth (en formato similar a MAC). Ten en cuenta que esta no es la dirección MAC física real — es una dirección privada aleatoria generada por el mecanismo de privacidad BLE, que cambia periódicamente.
   - **Name**: El nombre anunciado del dispositivo Bluetooth. Si el dispositivo difunde su nombre, este campo ayuda a identificarlo.
   - **Device**: La entidad Bluetooth reconocida en Home Assistant. Si el dispositivo aún no ha sido emparejado o identificado, este campo permanece vacío.
-  - **Source**: Indica la fuente de escaneo, es decir, el nodo específico del Bluetooth Proxy (por ejemplo, **Bluetooth Proxy 8fed20**). Esto ayuda a distinguir datos de múltiples nodos proxy.
+  - **Source**: Indica la fuente de escaneo, es decir, el nodo específico de Bluetooth Proxy (por ejemplo, **Bluetooth Proxy 8fed20**). Esto ayuda a distinguir datos de múltiples nodos proxy.
   - **RRSI**: Indicador de Intensidad de Señal Recibida (en dBm). Cuanto más cerca esté el valor de 0, más fuerte será la señal.
 
 - Alternativamente, selecciona **Visualization** para acceder a la vista.
@@ -355,7 +361,7 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_1.png" style={{width:800, height:'auto'}}/></div>
 
-- Después del envío, serás redirigido a una página donde puedes ver los datos de temperatura y humedad transmitidos, así como la dirección MAC Bluetooth. También puedes seleccionar **Add to dashboard**.
+- Después del envío, serás redirigido a una página donde puedes ver los datos de temperatura y humedad transmitidos así como la dirección MAC Bluetooth. También puedes seleccionar **Add to dashboard**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -365,7 +371,7 @@ void loop() {
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/bthome_4.png" style={{width:800, height:'auto'}}/></div>
 
 :::tip
-El protocolo BTHome solo admite transmisión de datos unidireccional a Home Assistant, y cada pieza de datos transmitidos corresponde a un ID único. Si deseas agregar más dispositivos, consulta [BThome Format](https://bthome.io/format/)
+El protocolo BTHome solo soporta transmisión de datos unidireccional a Home Assistant, y cada pieza de datos transmitidos corresponde a un ID único. Si deseas agregar más dispositivos, por favor consulta [BThome Format](https://bthome.io/format/)
 :::
 
 ## Soporte Técnico y Discusión de Productos

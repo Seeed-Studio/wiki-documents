@@ -17,9 +17,9 @@ last_update:
 
 ## 简介
 
-**Seeed Studio XIAO ESP32C3** 是一款基于 Espressif **ESP32-C3** WiFi/蓝牙双模芯片的物联网迷你开发板，搭载 **32 位 RISC-V CPU**，凭借其高效架构提供强大的计算性能。它具有出色的射频性能，支持 **IEEE 802.11 b/g/n WiFi** 和 **蓝牙 5 (BLE)** 协议。该开发板配备外置天线，可增强无线应用的信号强度。它还具有**小巧精致的外形**和**单面表贴设计**。配备丰富的接口，拥有 **11 个数字 I/O** 引脚可用作 **PWM 引脚**，以及 **4 个模拟 I/O** 引脚可用作 **ADC 引脚**。支持四种串行接口，如 **UART、I2C 和 SPI**。板上还有一个小型**复位按钮**和一个**引导模式按钮**。XIAO ESP32C3 完全兼容 [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board)，但对于 Seeeduino XIAO 扩展板，板上的 SWD 弹簧触点将不兼容。
+**Seeed Studio XIAO ESP32C3** 是一款基于乐鑫 **ESP32-C3** WiFi/蓝牙双模芯片的物联网迷你开发板，搭载 **32 位 RISC-V CPU**，凭借其高效架构提供强大的计算性能。它具有出色的射频性能，支持 **IEEE 802.11 b/g/n WiFi** 和 **蓝牙 5 (BLE)** 协议。该开发板配备外置天线，可增强无线应用的信号强度。它还具有 **小巧精致的外形** 和 **单面贴装设计**。配备丰富的接口，拥有 **11 个数字 I/O**（可用作 **PWM 引脚**）和 **4 个模拟 I/O**（可用作 **ADC 引脚**）。支持四种串行接口，如 **UART、I2C 和 SPI**。板上还有一个小型 **复位按钮** 和一个 **引导模式按钮**。XIAO ESP32C3 完全兼容 [Grove Shield for Seeeduino XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) 和 [Seeeduino XIAO Expansion board](https://wiki.seeedstudio.com/cn/Seeeduino-XIAO-Expansion-Board)，但对于 Seeeduino XIAO 扩展板，板上的 SWD 弹簧触点将不兼容。
 
-基于上述突出特性，XIAO ESP32C3 定位为**高性能、低功耗、高性价比的物联网迷你开发板**，适用于**低功耗物联网应用和无线可穿戴应用**。
+基于上述突出特性，XIAO ESP32C3 定位为 **高性能、低功耗、高性价比的物联网迷你开发板**，适用于 **低功耗物联网应用和无线可穿戴应用**。
 
 本 wiki 将向您展示如何快速开始使用 XIAO ESP32C3！
 
@@ -28,103 +28,55 @@ last_update:
 </div>
 
 ### 规格参数
-
 <table>
-    <thead>
-        <tr>
-            <th>项目</th>
-            <th>Seeed Studio XIAO ESP32C3</th>
-            <th>Seeeduino XIAO</th>
-            <th>Seeed XIAO RP2040</th>
-            <th>Seeed XIAO nRF52840</th>
-            <th>Seeed XIAO nRF52840 Sense</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>处理器</th>
-            <td>ESP32-C3 32-bit RISC-V @160MHz</td>
-            <td>SAMD21 M0+@48MHz</td>
-            <td>RP2040 Dual-core M0+@133Mhz</td>
-            <td>nRF52840 M4F@64MHz</td>
-            <td>nRF52840 M4F@64MHz</td>
-        </tr>
-        <tr>
-            <th>无线连接</th>
-            <td>WiFi and Bluetooth 5 (BLE)</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>Bluetooth 5.0/BLE/NFC</td>
-            <td>Bluetooth 5.0/BLE/NFC</td>
-        </tr>
-        <tr>
-            <th>内存</th>
-            <td>400KB SRAM, 4MB onboard Flash</td>
-            <td>32KB SRAM 256KB FLASH</td>
-            <td>264KB SRAM 2MB onboard Flash</td>
-            <td>256KB RAM, 1MB Flash 2MB onboard Flash</td>
-            <td>256KB RAM,1MB Flash 2MB onboard Flash</td>
-        </tr>
-        <tr>
-            <th>内置传感器</th>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>6 DOF IMU (LSM6DS3TR-C), PDM Microphone</td>
-        </tr>
-        <tr>
-            <th>接口</th>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-            <td>I2C/UART/SPI</td>
-        </tr>
-        <tr>
-            <th>PWM/模拟引脚</th>
-            <td>11/4</td>
-            <td>11/11</td>
-            <td>11/4</td>
-            <td>11/6</td>
-            <td>11/6</td>
-        </tr>
-        <tr>
-            <th>板载按钮</th>
-            <td>Reset/ Boot Button</td>
-            <td>N/A</td>
-            <td>Reset/ Boot Button</td>
-            <td>Reset Button</td>
-            <td>Reset Button</td>
-        </tr>
-        <tr>
-            <th>板载 LED</th>
-            <td>Charge LED</td>
-            <td>N/A</td>
-            <td>Full-color RGB/ 3-in-one LED</td>
-            <td>3-in-one LED/ Charge LED</td>
-            <td>3-in-one LED/ Charge LED</td>
-        </tr>
-        <tr>
-            <th>电池充电芯片</th>
-            <td>ETA4054S2F</td>
-            <td>N/A</td>
-            <td>N/A</td>
-            <td>BQ25101</td>
-            <td>BQ25101</td>
-        </tr>
-        <tr>
-            <th>编程语言</th>
-            <td>Arduino/ MicroPython</td>
-            <td>Arduino/ CircuitPython</td>
-            <td colspan="3" align="center">Arduino/ MicroPython/ CircuitPython</td>
-        </tr>
-    </tbody>
+  <tr>
+    <th>参数</th>
+    <th>描述</th>
+  </tr>
+  <tr>
+    <td>处理器</td>
+    <td>ESP32-C3 SoC<br/>RISC-V 单核 32 位芯片处理器，具有四级流水线，运行频率高达 160 MHz</td>
+  </tr>
+  <tr>
+    <td>无线</td>
+    <td>完整的 2.4GHz Wi-Fi 子系统<br/>蓝牙低功耗 5.0/ 蓝牙 Mesh</td>
+  </tr>
+  <tr>
+    <td>片上存储</td>
+    <td>400KB SRAM &amp; 4MB Flash</td>
+  </tr>
+  <tr>
+    <td>接口</td>
+    <td>1x UART<br/>1x IIC<br/>1x SPI<br/>11x GPIO(PWM)<br/>4x ADC<br/>1x 复位按钮<br/>1x 启动按钮</td>
+  </tr>
+  <tr>
+    <td>尺寸</td>
+    <td>21 x 17.8mm</td>
+  </tr>
+  <tr>
+    <td>功率（典型值）</td>
+    <td>最大 3.3V 输出电流：500mA<br/>测试条件：BAT 引脚输入 @ 3.8V<br/>源能力：3A<br/>充电电流：380mA（快充）/ 40mA（涓流）<br/>输入电压（VIN）：5V<br/>输入电压（BAT）：3.7V</td>
+  </tr>
+  <tr>
+    <td>深度睡眠功耗</td>
+    <td>深度睡眠模式：44 μA</td>
+  </tr>
+  <tr>
+    <td>Wi-Fi 启用功耗</td>
+    <td>活动模式：75 mA<br/>调制解调器睡眠模式：25 mA<br/>轻度睡眠模式：4 mA</td>
+  </tr>
+  <tr>
+    <td>BLE 启用功耗</td>
+    <td>调制解调器睡眠模式：27 mA<br/>轻度睡眠模式：10 mA</td>
+  </tr>
+  <tr>
+    <td>工作温度</td>
+    <td>-40°C ~ 85°C</td>
+  </tr>
 </table>
-
 ### 特性
 
-- **强大的 CPU：** ESP32-C3，32 位 RISC-V 单核处理器，工作频率高达 160 MHz
+- **强大的 CPU：** ESP32-C3，32 位 RISC-V 单核处理器，运行频率高达 160 MHz
 - **完整的 Wi-Fi 子系统：** 符合 IEEE 802.11b/g/n 协议，支持 Station 模式、SoftAP 模式、SoftAP + Station 模式和混杂模式
 - **蓝牙 LE 子系统：** 支持蓝牙 5 和蓝牙 mesh 功能
 - **超低功耗：** 深度睡眠功耗约 43μA
@@ -134,7 +86,7 @@ last_update:
 - **超小尺寸：** 拇指大小（21x17.8mm）XIAO 系列经典外形，适用于可穿戴设备和小型项目
 - **可靠的安全功能：** 支持 AES-128/256、Hash、RSA、HMAC、数字签名和安全启动的加密硬件加速器
 - **丰富的接口：** 1xI2C、1xSPI、2xUART、11xGPIO(PWM)、4xADC、1xJTAG 焊盘接口
-- 单面元件，表贴设计
+- 单面元件，表面贴装设计
 
 ## 硬件概述
 
@@ -142,13 +94,13 @@ last_update:
 
 <table align="center">
  <tr>
-     <th>XIAO ESP32C3 正面示意图</th>
+     <th>XIAO ESP32C3 正面指示图</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/front-label-3.png" style={{width:700, height:'auto'}}/></div></td>
  </tr>
     <tr>
-     <th>XIAO ESP32C3 背面示意图</th>
+     <th>XIAO ESP32C3 背面指示图</th>
  </tr>
     <tr>
      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/back-label-6.png" style={{width:700, height:'auto'}}/></div></td>
@@ -226,7 +178,7 @@ last_update:
 | MTCK            |           | GPIO6     |                           |        JTAG, ADC               |
 | MTMS            |           | GPIO4     |                            |               JTAG, ADC       |
 | Reset           |           | CHIP_EN   |                                     | EN                   |
-| Boot            |           | GPIO9     |                                     | 进入引导模式        |
+| Boot            |           | GPIO9     |                                     | 进入启动模式        |
 | U.FL-R-SMT1     |           | LNA_IN    |                                     | UFL 天线            |
 | Light           |           | VCC_3V3   |                                     | CHG-LED              |
 ### 电源引脚
@@ -235,9 +187,9 @@ last_update:
 - 3V3 - 这是板载稳压器的稳压输出。您可以获得 700mA 电流
 - GND - 电源/数据/信号地
 
-### 引导引脚
+### 启动引脚
 
-根据 ESP32C3 的芯片手册，芯片中的 **GPIO2**、**GPIO8** 和 **GPIO9** 是引导引脚，这些引脚的高低电平配置可能会让芯片进入不同的启动模式，在使用这些引脚时请注意这一点，否则可能会导致您的 XIAO 无法上传或执行程序。
+根据 ESP32C3 的芯片手册，芯片中的 **GPIO2**、**GPIO8** 和 **GPIO9** 是启动引脚，这些引脚的高低电平配置可能会让芯片进入不同的启动模式，在使用这些引脚时请注意这一点，否则可能会导致您的 XIAO 无法上传或执行程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/20.png" style={{width:800, height:'auto'}}/></div>
 
@@ -284,7 +236,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_board.png" style={{width:550, height:'auto'}}/></div>
 
-导航到 **Tools > Board > Boards Manager...**，在搜索框中输入关键词 "**esp32**"，选择最新版本的 **esp32**，并安装它。
+导航到 **Tools > Board > Boards Manager...**，在搜索框中输入关键词 "**esp32**"，选择最新版本的 **esp32**，然后安装。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_esp32c3.png" style={{width:550, height:'auto'}}/></div>
 
@@ -332,7 +284,7 @@ void loop() {
 
 ## 电池使用
 
-XIAO ESP32C3 能够使用 3.7V 锂电池作为电源输入。您可以参考以下图表了解接线方法。
+XIAO ESP32C3 能够使用 3.7V 锂电池作为电源输入。您可以参考以下接线图进行连接。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/battery_connect.png" alt="pir" width="600" height="auto"/></div>
 
@@ -353,17 +305,17 @@ XIAO ESP32C3 能够使用 3.7V 锂电池作为电源输入。您可以参考以�
 
 但如果您希望使用单独的引脚进行电池电压测量，您可以参考 [msfujino](https://forum.seeedstudio.com/u/msfujino) 的巧妙操作。我们也要特别感谢 [msfujino](https://forum.seeedstudio.com/u/msfujino) 为 XIAO ESP32C3 分享的所有经验和努力。
 
-基本操作思路是：电池电压通过 200k 电阻分压 1/2 并连接到 A0 端口，这样就可以监控电压。
+基本操作思路是：电池电压通过 200k 电阻分压 1/2 并连接到 A0 端口，这样就可以监测电压。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/3.png" alt="pir" width="300" height="auto"/></div>
 
-数据手册说标称 2500mV 满量程 AD 转换，但芯片之间存在很大差异，实际上是 ±10%。我的芯片是 2700mV 满量程。
+数据手册显示标称 2500mV 满量程 AD 转换，但芯片之间存在很大差异，实际上为 ±10%。我的芯片是 2700mV 满量程。
 
 幸运的是，每个芯片的校准修正值都写在熔丝区域，通过使用 `analogReadMilliVolts()` 函数，我可以读取修正后的电压值，无需做任何特殊处理。
 
 AD 转换的结果与万用表测量的电压非常吻合，误差约为 5 mV，在实际使用中没有问题。
 
-此外，在通信过程中特别是会出现尖峰状错误，必须平均 16 次才能消除它们。
+此外，在通信过程中特别是会出现尖峰状错误，必须平均 16 次才能消除。
 
 以下是测试电池电压的程序。
 
@@ -443,7 +395,7 @@ void loop(){
 }
 ```
 
-如果您能够在 XIAO 进入深度睡眠之前及时打开串口监视器，那么您可以看到如下所示的消息输出。这意味着 XIAO 现在处于"睡眠"状态。
+如果您能够在 XIAO 进入深度睡眠之前快速打开串口监视器，那么您可以看到如下所示的消息输出。这意味着 XIAO 现在处于"睡眠"状态。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/15.png" style={{width:700, height:'auto'}}/></div>
 
@@ -454,18 +406,18 @@ void loop(){
 在程序中，我们使用 **D1** 低电平来唤醒。这意味着我们可以将按钮连接到引脚 D1，当我们按下按钮时 XIAO 将被唤醒。
 
 :::caution
-目前 XIAO ESP32C3 仅支持 GPIO 唤醒，支持唤醒的引脚只有 D0~D3。此程序可能无法在其他引脚上工作。
+XIAO ESP32-C3 支持 GPIO 唤醒和定时器唤醒，支持唤醒的引脚为 D0~D3。
 :::
 
 ## 故障排除
 
 ### Q1：我的 Arduino IDE 在上传代码到开发板时卡住了
 
-您可以首先尝试在开发板连接到 PC 时点击一次 **RESET BUTTON** 来重置开发板。如果这不起作用，请按住 **BOOT BUTTON**，在按住 **BOOT** 按钮的同时将开发板连接到 PC，然后释放它以进入 **bootloader mode**。
+您可以首先尝试在开发板连接到 PC 时单击一次 **RESET BUTTON** 来重置开发板。如果这不起作用，请按住 **BOOT BUTTON**，在按住 **BOOT** 按钮的同时将开发板连接到 PC，然后释放它以进入 **bootloader mode**。
 
 ### Q2：我的开发板在 Arduino IDE 中没有显示为串行设备
 
-请按照上述 **Q1** 的相同答案操作。
+请按照上面 **Q1** 的相同答案操作。
 
 ### Q3：我想用出厂固件重新刷写引导加载程序
 
@@ -513,21 +465,30 @@ void loop(){
 
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 
-- 📄**[PDF]** [ESP32C3 数据手册](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf)
-- 📄 **[PDF]** [Seeed Studio XIAO ESP32C3 原理图](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO ESP32C3 KiCAD 库](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-KiCAD-Library.zip)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO ESP32C3 Eagle 库](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-v1.2_SCH-PCB.zip)
-- 🗃️ **[ZIP]** [Seeed Studio XIAO ESP32C3 出厂固件](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin)
+**硬件设计**
+- **📄[数据手册]** [ESP32-C3 数据手册](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/esp32-c3_datasheet.pdf )
+- **📄[原理图]** [XIAO ESP32-C3 原理图](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_SCH_260116.pdf )
+- **🗃️[PCB 设计文件]** 
+  - [XIAO ESP32-C3 KiCad 项目](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO_ESP32C3_v1.3_KiCad_260116.zip )
+- **🗃️[PCB 设计库]** 
+  - [XIAO 系列 KiCad 封装](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO 系列 KiCad 原理图符号](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[引脚图]** [XIAO ESP32-C3 引脚图表](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx )
 
-- 📄 **[DXF]** [Seeed Studio XIAO ESP32C3 DXF 尺寸图](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip)
-- 📄 **[LBR]** [Seeed Studio XIAO ESP32C3 Eagle 封装](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeed-Studio-XIAO-ESP32C3-footprint-eagle.lbr)
-- 📄 **[XLSX]** [Seeed Studio XIAO ESP32C3 引脚图表](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-pinout_sheet.xlsx)
-- 🔗 **[STEP]** [Seeed Studio XIAO ESP32C3 3D 模型](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1)
-- 🔗 **[GitHub]** [Seeed Studio XIAO ESP32C3 MicroPython 库](https://github.com/IcingTomato/micropython_xiao_esp32c3)
-- 🔗 **[链接]** [Platform IO for Seeed Studio XIAO ESP32](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html)
-- 🔗 **[WiKi]** [First Look at the Seeed Studio XIAO ESP32C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html)  XIAO ESP32C3 的精彩介绍，涵盖关键特性和基本用法。
-- 📚 **[电子书]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/) 掌握 XIAO 开发板上 Arduino 和 TinyML 的优秀指南。
-- 🔗 **[Kicad]** [Seeed Studio XIAO ESP32C3 封装](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**机械**
+- **📄[2D 尺寸]** [XIAO ESP32-C3 DXF 尺寸](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/XIAO-ESP32C3-DXF.zip )
+- **🗃️[2D 尺寸]** [XIAO ESP32-C3 底部焊盘数据](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/XIAO_ESP32C3_v1.2_Dimensioning.zip )
+- **📄[3D 模型]** [XIAO ESP32-C3 3D 模型](https://grabcad.com/library/seeed-studio-xiao-esp32-c3-1 )
+
+**软件和工具**
+- **🗃️[出厂固件]** [XIAO ESP32-C3 出厂固件](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/ESP32-C3_RFTest_108_2b9b157_20211014.bin )
+- **🔗[MicroPython 库]** [XIAO ESP32-C3 MicroPython 库](https://github.com/IcingTomato/micropython_xiao_esp32c3 )
+- **🔗[Platform IO]** [PlatformIO for Seeed Studio XIAO ESP32-C3](https://docs.platformio.org/en/latest/boards/espressif32/seeed_xiao_esp32c3.html )
+
+**其他**
+- **🔗[Wiki]** [First Look at the Seeed Studio XIAO ESP32-C3](https://sigmdel.ca/michel/ha/xiao/xiao_esp32c3_intro_en.html )  
+  - 对 XIAO ESP32C3 的精彩介绍，涵盖了关键特性和基本用法。
+- **📄[文档]** [XIAO ESP32-C3 低功耗报告](https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/Low_Power_Consumption.pdf )
 
 ## 课程资源
 
@@ -535,7 +496,7 @@ void loop(){
 
 - 📚 **[电子书]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
-## 技术支持与产品讨论
+## 技术支持和产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 

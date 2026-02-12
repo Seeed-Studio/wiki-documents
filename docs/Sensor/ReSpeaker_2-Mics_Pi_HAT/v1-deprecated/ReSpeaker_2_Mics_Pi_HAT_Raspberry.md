@@ -7,8 +7,8 @@ image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.w
 slug: /ReSpeaker_2_Mics_Pi_HAT_Raspberry
 sku: 102110358
 last_update:
-  date: 1/11/2023
-  author: jianjing Huang
+  date: 1/29/2026
+  author: Mingxi
 ---
 
 :::caution
@@ -33,13 +33,21 @@ Raspberry Pi Zero Connection
 
 Make sure that you are running [the latest Raspberry Pi OS](https://www.raspberrypi.org/downloads/raspbian/) on your Pi. *(updated at 2021.05.01)*
 
-- Step 1. Get the Seeed voice card source code, install and reboot.
+- Step 1: Get Device Tree Source (DTS) for the ReSpeaker 2-Mics Pi HAT (V1.0), compile it and install the device tree overlay.
 
 ```bash
-git clone https://github.com/HinTak/seeed-voicecard.git
-cd seeed-voicecard
-sudo ./install.sh
-sudo reboot now
+git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git  
+cd seeed-linux-dtoverlays/  
+make overlays/rpi/respeaker-2mic-v1_0-overlay.dtbo  
+sudo cp overlays/rpi/respeaker-2mic-v1_0-overlay.dtbo /boot/firmware/overlays/respeaker-2mic-v1_0.dtbo  
+echo "dtoverlay=respeaker-2mic-v1_0" | sudo tee -a /boot/firmware/config.txt  
+```
+
+
+- Step 2: Reboot your Pi.
+
+```bash
+sudo reboot
 ```
 
 
@@ -60,7 +68,7 @@ sudo reboot now
 :::
 -->
 
-- Step 2. Check that the sound card name matches the source code seeed-voicecard by command ```aplay -l``` and ```arecord -l```.
+- Step 3. Check that the sound card name matches the source code seeed-voicecard by command ```aplay -l``` and ```arecord -l```.
 
 ```shell
 pi@raspberrypi:~/Desktop/mic_hat $ aplay -l
@@ -92,7 +100,7 @@ card 3: seeed2micvoicec [seeed-2mic-voicecard], device 0: bcm2835-i2s-wm8960-hif
   Subdevice #0: subdevice #0
 ```
 
-- Step 3. Test, you will hear what you say to the microphones(don't forget to plug in an earphone or a speaker):
+- Step 4. Test, you will hear what you say to the microphones(don't forget to plug in an earphone or a speaker):
 
 ```bash
 arecord -D "plughw:3,0" -f S16_LE -r 16000 -d 5 -t wav test.wav

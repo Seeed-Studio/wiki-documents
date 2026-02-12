@@ -12,8 +12,6 @@ last_update:
 
 MicroPython is a lean and efficient implementation of the Python 3 programming language that includes a small subset of the Python standard library and is optimised to run on microcontrollers and in constrained environments.
 
-Since its first launch in 2014, micropython has supported many microcontrollers, including the ESP32 series, but currently does not officially support the ESP32C6 chip. This firmware is self compiled, and the official firmware is already on its way. Please be patient.
-
 In this page, we will guide on how to use the the XIAO ESP32C6 capability using the simple and easy syntax from micropython.
 
 ## Hardware Preparation
@@ -91,26 +89,35 @@ You will be directed to cmd terminal.
 
 Install esptool using pip command (make sure python 3 is already installed)
 
-```cpp
+```bash
 pip install esptool
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/esptool_install.jpg" alt="pir" width={600} height="auto" /></p>
 
+:::caution Put the board into Bootloader mode
+Before flashing, you **must** put the XIAO ESP32C6 into bootloader (download) mode. To do this:
+1. Press and **hold** the **BOOT** button.
+2. While holding BOOT, press and release the **RESET** button.
+3. Release the **BOOT** button.
+
+If the board is not in bootloader mode, flashing will fail with a **"Write timeout"** error and may brick the module.
+:::
+
 Erase the flash memory on the XIAO ESP32C6 using this command
 
-```cpp
-esptool.py --port COMXX --chip esp32c6 erase_flash
+```bash
+esptool --port COMXX --chip esp32c6 erase-flash
 ```
 
 Now proceed to install the micropython firmware using this command
 
-```cpp
-esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset --chip esp32c6  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 ESP32C6_MicroPython.bin
+```bash
+esptool --port COMXX --baud 460800 --before default-reset --after hard-reset --chip esp32c6 write-flash --flash-mode dio --flash-size detect --flash-freq 80m 0x0 ESP32C6_MicroPython.bin
 ```
 
 :::tip
-change the COMXX with port COM number on your PC
+Change the COMXX with the port COM number on your PC. If flashing fails with a timeout error, try lowering the baud rate to `115200`.
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205457866.png" alt="pir" width={600} height="auto" /></p>
@@ -145,7 +152,9 @@ When running the program, you can see in the shell window that the XIAO is conne
 
 ## Troubleshooting
 
-If the program cannot be burned, please try using the BOOT button and RST button to set the board to boot download mode
+- **"Write timeout" or serial exception error**: Make sure the board is in **bootloader mode** before flashing. Hold the **BOOT** button, press and release **RESET**, then release **BOOT**. You should also try lowering the baud rate (e.g., use `--baud 115200` instead of `460800`).
+- **Command not found (`esptool.py`)**: Use `esptool` (without `.py`) when installed via `pip install esptool`. On some systems, you may need to use `python -m esptool` instead.
+- **Bricked module**: If the module appears bricked, try entering bootloader mode and erasing the flash with `esptool --port COMXX --chip esp32c6 erase-flash`, then re-flash the firmware.
 
 ## ✨ Contributor Project
 

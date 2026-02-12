@@ -8,7 +8,7 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseC
 slug: /cn/sensecap_t2000_tracker_aws
 sku: 100082900,100057727,100087298
 last_update:
-  date: 1/23/2026
+  date: 1/29/2026
   author: Janet
 ---
 
@@ -35,7 +35,7 @@ last_update:
 `Gateway's EUI`：您网关的 EUI，您可以在设备标签上找到它。<br/>
 `Frequency`：网关的频段。<br/>
 `Name`：为您的网关命名（可选）<br/>
-`SubBand`：可选地，您还可以指定 LoRaWAN 配置数据，例如您想要使用的子频段和可以控制流量流动的过滤器。更多信息，请参见[使用 AWS IoT Core for LoRaWAN 配置无线资源位置](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-configure-location.html)。
+`SubBand`：可选地，您还可以指定 LoRaWAN 配置数据，例如您想要使用的子频段和可以控制流量流动的过滤器。更多信息，请参阅[使用 AWS IoT Core for LoRaWAN 配置无线资源位置](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-configure-location.html)。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/gateway-eui.png" alt="pir" width={800} height="auto" /></p>
 
@@ -59,7 +59,7 @@ last_update:
 
 ### 网关权限
 
-如果您还没有为您的账户创建 IoTWirelessGatewayCertManagerRole IAM 角色，请在继续添加网关之前创建该角色。
+如果您尚未为您的账户创建 IoTWirelessGatewayCertManagerRole IAM 角色，请在继续添加网关之前创建该角色。
 没有此角色，您的网关将无法与 AWS IoT 通信。
 
 选择角色：`IoT Wireless Gateway Cert Manager Role`，然后提交配置。
@@ -88,7 +88,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS23.PNG" alt="pir" width={800} height="auto" /></p>
 
-导航到网关页面并选择您之前添加的网关。
+导航到网关页面并选择您添加的网关。
 
 在网关详情页面的 LoRaWAN 特定详情部分，您将看到连接状态以及接收到最后一次上行链路的日期和时间。
 
@@ -114,41 +114,44 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS13.PNG" alt="pir" width={800} height="auto" /></p>
 
-建议您保持 `AddGWMetaData` 设置启用，这样您将为每个有效载荷接收额外的网关元数据，例如数据传输的 RSSI 和 SNR。
+建议您保持 `Add gateway meta data` 设置启用，这样您将为每个有效载荷接收额外的网关元数据，例如数据传输的 RSSI 和 SNR。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/profile4.png" alt="pir" width={800} height="auto" /></p>
 
 ### 添加目标
 
-导航到 `Devices` > `Destination`，点击 `Add destination`。
+导航到 `LPWAN Devices` > `Destination`，点击 `Add destination`。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS15.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-destination.png" alt="pir" width={800} height="auto" /></p>
 
 这里选择 `Publish to AWS IoT Core Message Broker` 并为目标的 `MQTT topic` 命名
 
-权限：选择现有服务角色 > `IoT Wireless Gateway Cert Manager Role`
+**权限：** 选择现有服务角色 > `IoT Wireless Gateway Cert Manager Role`
 
 :::info
 目标名称只能包含字母数字、-（连字符）和 _（下划线）字符，不能包含任何空格。
 :::
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS14.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-destination2.png" alt="pir" width={800} height="auto" /></p>
 
 ## 添加 LoRaWAN 设备
 
 ### 添加无线设备
 
-导航到 `LPWAN devices` > `Devices`，点击 `Add wireless device`。
+导航到 `LPWAN devices` > `LoRaWAN`> `Devices`，点击 `Add wireless device`。
 
-`Wireless device specification`：OTAAv1.0x
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device-2.png" alt="pir" width={800} height="auto" /></p>
 
-`DevEUI / AppEUI / AppKey`：可以在 SenseCAP Mate APP 中找到，查看[入门指南](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T2000_tracker/)了解更多详情。
+`Wireless device specification`：OTAA v1.0x
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
+`DevEUI / AppEUI / AppKey`：可以在 SenseCraft APP 中找到，查看[入门指南](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T2000_tracker/#lora-parameters-setup)了解更多详情。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device.png" alt="pir" width={800} height="auto" /></p>
 
 选择您在上一步中创建的设备配置文件和目标。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/device-eui2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device-3.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/add-device-4.png" alt="pir" width={800} height="auto" /></p>
 
 导航到设备页面并选择您之前添加的设备。
 
@@ -166,36 +169,36 @@ last_update:
 
 为您的规则命名并提交。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder.png" alt="pir" width={800} height="auto" /></p>
 
 `SQL version`：2016-03-23<br/>
 `SQL statement`：SELECT * FROM **"YourDestinationTopic"**
 
 这里我们根据[添加目标](#添加目标)填入 `t2000-raw`
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sql.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder2.png" alt="pir" width={800} height="auto" /></p>
 
 向下滚动到 `Rule actions` 部分，从 `Action 1` 中选择 `Lambda`，然后点击 `Create a Lambda function`。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rule-action.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder3.png" alt="pir" width={800} height="auto" /></p>
 
 `Function name`：为您的函数命名。<br/>
-`Runtime`：Node.js 20.x<br/>
+`Runtime`：Node.js 24.x<br/>
 `Architexture`：x86_64
 
 点击 `Create function` 按钮创建新函数。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cre-function.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder4.png" alt="pir" width={800} height="auto" /></p>
 
 创建函数后，它会转到函数的配置页面。我们稍后会配置它，所以现在只需返回规则页面。
 
-点击刷新按钮并选择您之前创建的 Lambda 函数。然后点击 `Next` 进入第 4 步。
+点击 Refresh 按钮并选择您之前创建的 Lambda 函数。然后点击 `Next` 进入步骤 4。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sel-function.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder5.png" alt="pir" width={800} height="auto" /></p>
 
-检查规则的所有详情是否正确，然后点击 `Create` 创建规则。
+检查规则的所有详细信息是否正确，然后点击 `Create` 创建规则。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules3.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder6.png" alt="pir" width={800} height="auto" /></p>
 
 ### 配置 Lambda 函数
 
@@ -203,9 +206,9 @@ last_update:
 
 从 `Actions` 中点击 `Lambda`，然后点击链接进入 Lambda 函数配置页面。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules4.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder7.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules5.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder8.png" alt="pir" width={800} height="auto" /></p>
 
 在以下函数配置页面中，将 `index.mjs` 文件重命名为 `index.js`，删除所有代码并替换为来自[资源](#resource)的脚本，然后点击 `Deploy` 按钮。
 
@@ -964,37 +967,35 @@ exports.handler = async (event) => {
 
 </details>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod.png" alt="pir" width={800} height="auto" /></p>
-
-:::tip 注意
-根据您的设备替换 `region` 和 `device id`。
-:::
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder9.png" alt="pir" width={800} height="auto" /></p>
 
 配置解码器后，点击 `Configuration` → `Permissions` → `Edit`。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod-per.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder10.png" alt="pir" width={800} height="auto" /></p>
 
 点击底部的 `View the xxxxxxxxxxx` 角色。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/existing-role.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder11.png" alt="pir" width={800} height="auto" /></p>
 
 点击 `Add permissions` → `Attach policies`。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/policies.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder12.png" alt="pir" width={800} height="auto" /></p>
 
 搜索 `AdministratorAccess`，勾选左侧的复选框，然后点击 `Add Permissions`。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/policies2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder13.png" alt="pir" width={800} height="auto" /></p>
 
 ### 检查数据
 
 在 `MQTT test client` 页面检查数据，输入 `#` 并点击 `Subscribe` 按钮，您将看到数据。
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/create-decoder14.png" alt="pir" width={800} height="auto" /></p>
+
 T2000 Tracker 的原始载荷从 `t2000-raw` 发布，解码后的数据从 `tracker/measurement` 发布。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/dataview1.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/check-data.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/dataview2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/T2000_Tracker/Connect_to_AWS/check-data2.png" alt="pir" width={800} height="auto" /></p>
 
 ## 资源
 
