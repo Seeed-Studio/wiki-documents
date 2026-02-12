@@ -1,5 +1,5 @@
 ---
-description: Este wiki proporciona una introducción completa a las características de hardware y uso de interfaces de la placa portadora reComputer Jetson Robotics J501. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como ranuras duales M.2 Key M, 10GbE + 4x 1GbE Ethernet, USB 3.0, cuatro interfaces CAN (2 nativas + 2 SPI-to-CAN), UART, DI/DO, I2S y expansión de cámara GMSL2, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J501.
+description: Este wiki proporciona una introducción completa a las características de hardware y uso de interfaces de la placa portadora reComputer Jetson Robotics J501. Cubre especificaciones detalladas, módulos compatibles, instrucciones de configuración y guías prácticas para usar varias interfaces como ranuras duales M.2 Key M, 10GbE + 4x 1GbE Ethernet, USB 3.0, cuatro interfaces CAN (2 nativas + 2 SPI-a-CAN), UART, DI/DO, I2S y expansión de cámara GMSL2, ayudando a los usuarios a comenzar rápidamente con el desarrollo de robótica en la plataforma J501.
 title: Flash Jetpack && Uso de Interfaces
 tags:
   - reComputer Robotics J501
@@ -16,11 +16,11 @@ last_update:
   author: Lorraine
 ---
 
-# Hardware Robotics J501 y Primeros Pasos
+# Hardware y Primeros Pasos del Robotics J501
 
 El reComputer Robotics J501 es una placa portadora de IA de borde de alto rendimiento diseñada para aplicaciones avanzadas de robótica e industriales. Compatible con módulos NVIDIA Jetson AGX Orin (32GB/64GB) en modo MAXN, ofrece hasta 275 TOPS de rendimiento de IA.
 
-Equipado con amplias opciones de conectividad—incluyendo 1x 10GbE y 4x 1GbE puertos Ethernet, ranuras duales M.2 Key M para SSDs NVMe, ranuras M.2 para módulos 5G y Wi-Fi/BT, múltiples puertos USB 3.0, cuatro interfaces CAN (2 nativas + 2 SPI-to-CAN), expansión de cámara GMSL2, y E/S integral incluyendo DI/DO, I2S, UART y RS485—sirve como un cerebro robótico poderoso para fusión compleja de múltiples sensores y procesamiento de IA en tiempo real.
+Equipado con amplias opciones de conectividad—incluyendo 1x 10GbE y 4x 1GbE puertos Ethernet, ranuras duales M.2 Key M para SSDs NVMe, ranuras M.2 para módulos 5G y Wi-Fi/BT, múltiples puertos USB 3.0, cuatro interfaces CAN (2 nativas + 2 SPI-a-CAN), expansión de cámara GMSL2, y E/S integral incluyendo DI/DO, I2S, UART y RS485—sirve como un cerebro robótico poderoso para fusión compleja de múltiples sensores y procesamiento de IA en tiempo real.
 
 Preinstalado con JetPack 6.2.1 y Linux BSP, asegura un despliegue sin problemas. Compatible con frameworks como NVIDIA Isaac ROS, Hugging Face, PyTorch y ROS 2/1, el J501 conecta la toma de decisiones impulsada por modelos de lenguaje grandes con el control físico de robótica, acelerando el desarrollo de robots autónomos con interfaces listas para usar y frameworks de IA optimizados.
 
@@ -29,16 +29,16 @@ Preinstalado con JetPack 6.2.1 y Linux BSP, asegura un despliegue sin problemas.
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J401-Carrier-Board-optional-accessories.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱</font></span></strong>
     </a>
 </div>
 
 ## Características Clave  
 
-- **IA de alto rendimiento**: Hasta 275 TOPS con módulos Jetson AGX Orin 32/64GB, GPU Ampere y motores DLA
-- **Conectividad rica**: M.2 Key M dual (NVMe); Key E (WiFi/BT) + Key B (5G); 1x 10GbE + 4x 1GbE; 3x USB 3.0; 2x USB-C
-- **CAN-FD cuádruple**: 2x nativas + 2x interfaces SPI-to-CAN con aislamiento eléctrico
+- **IA de alto rendimiento**: Hasta 275 TOPS con módulos Jetson AGX Orin 32/64GB, motores GPU Ampere y DLA
+- **Conectividad rica**: Dual M.2 Key M (NVMe); Key E (WiFi/BT) + Key B (5G); 1x 10GbE + 4x 1GbE; 3x USB 3.0; 2x USB-C
+- **Quad CAN-FD**: 2x nativas + 2x interfaces SPI-a-CAN con aislamiento eléctrico
 - **Visión GMSL2**: Interfaz GMSL2 única (1x) para conexión de cámara de alta velocidad
 - **Diseño industrial**: Entrada DC 19-48V; operación -10~60°C; interfaces aisladas; JetPack 6.2.1 preinstalado
 - **Listo para robótica**: Soporte ROS 2/1, Isaac ROS; DI/DO, I2S, UART, RS485; optimizado para AMR y automatización
@@ -68,13 +68,13 @@ Preinstalado con JetPack 6.2.1 y Linux BSP, asegura un despliegue sin problemas.
     </tr>
     <tr>
       <td>GPU</td>
-      <td>1792-core NVIDIA Ampere @ 930 MHz</td>
-      <td>2048-core NVIDIA Ampere @ 1.3 GHz</td>
+      <td>1792-núcleos NVIDIA Ampere @ 930 MHz</td>
+      <td>2048-núcleos NVIDIA Ampere @ 1.3 GHz</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td>8-core Arm Cortex-A78AE @ 2.0 GHz</td>
-      <td>12-core Arm Cortex-A78AE @ 2.2 GHz</td>
+      <td>8-núcleos Arm Cortex-A78AE @ 2.0 GHz</td>
+      <td>12-núcleos Arm Cortex-A78AE @ 2.2 GHz</td>
     </tr>
     <tr>
       <td>Memoria</td>
@@ -112,11 +112,11 @@ Preinstalado con JetPack 6.2.1 y Linux BSP, asegura un despliegue sin problemas.
     </tr>
     <tr>
       <th>USB</th>
-      <td colSpan={2}>3x USB 3.0 Type-A<br/>1x USB 3.0 Type-C (Recovery)<br/>1x USB 2.0 Type-C (Debug UART)</td>
+      <td colSpan={2}>3x USB 3.0 Tipo-A<br/>1x USB 3.0 Tipo-C (Recuperación)<br/>1x USB 2.0 Tipo-C (Debug UART)</td>
     </tr>
     <tr>
       <th>DI/DO/CAN</th>
-      <td colSpan={2}>1x 2x10P 3.81mm Bloque Terminal - 4x DI @12V + 4x DO @40V + 4x CAN (CAN-FD compatible, eléctricamente aislado)</td>
+      <td colSpan={2}>1x Bloque Terminal 2x10P 3.81mm - 4x DI @12V + 4x DO @40V + 4x CAN (CAN-FD compatible, eléctricamente aislado)</td>
     </tr>
     <tr>
       <th>GMSL</th>
@@ -136,19 +136,19 @@ Preinstalado con JetPack 6.2.1 y Linux BSP, asegura un despliegue sin problemas.
     </tr>
     <tr>
       <th>Botón</th>
-      <td colSpan={2}>1x Recovery + 1x Reset</td>
+      <td colSpan={2}>1x Recuperación + 1x Reinicio</td>
     </tr>
     <tr>
       <th>LED</th>
-      <td colSpan={2}>3x LED (PWR, SSD, y LED de Usuario)</td>
+      <td colSpan={2}>3x LED (PWR, SSD y LED de Usuario)</td>
     </tr>
     <tr>
       <th>RTC</th>
-      <td colSpan={2}>1x Soporte de Batería CR1220, 1x Header RTC de 2 Pines</td>
+      <td colSpan={2}>1x Soporte de Batería CR1220, 1x Conector RTC de 2 Pines</td>
     </tr>
     <tr>
       <th>Entrada de Alimentación</th>
-      <td colSpan={2}>19-48V DC vía Bloque Terminal de 5.08mm (Adaptador de corriente no incluido)</td>
+      <td colSpan={2}>19-48V DC vía Bloque Terminal 5.08mm (Adaptador de corriente no incluido)</td>
     </tr>
     <tr>
       <th>Consumo de Energía</th>
@@ -233,7 +233,7 @@ Preinstalado con JetPack 6.2.1 y Linux BSP, asegura un despliegue sin problemas.
 
 - PC host Ubuntu
 - reComputer Robotics J501
-- Cable de transmisión de datos USB Type-C
+- Cable de transmisión de datos USB Tipo-C
 
 :::info
 
@@ -375,7 +375,7 @@ El comando de flasheo puede ejecutarse durante 2-10 minutos.
 </div>
 
 :::info
-Por favor completa la **Configuración del Sistema** según tus necesidades.
+Por favor completa la **System Configuration** según tus necesidades.
 :::
 
 ## 🔌 Uso de Interfaces
@@ -388,11 +388,11 @@ El J501 incluye ranuras duales M.2 Key M que soportan SSD NVMe PCIe Gen4x4 para 
 
 ### Los SSD soportados son los siguientes
 
-- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
-- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
-- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
-- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
-- [SSD Interno NVMe M.2 PCle Gen3x4 2280 de 2TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-5768.html)
+- [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
+- [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
+- [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
+- [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [2TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-5768.html)
 
 ### Conexión de Hardware
 
@@ -528,7 +528,7 @@ sudo apt install modemmanager
 sudo systemctl restart ModemManager 
 ```
 
-El comando apt install se usa para instalar el paquete ModemManager, mientras que systemctl restart reinicia el servicio ModemManager para asegurar que las nuevas configuraciones tomen efecto.
+El comando apt install se usa para instalar el paquete ModemManager, mientras que systemctl restart reinicia el servicio ModemManager para asegurar que la nueva configuración tome efecto.
 
 **Paso 4.** Verificar Identificación del Módulo
 Podemos usar el comando mmcli -L para verificar si el ModemManager puede identificar correctamente el módulo 5G.
@@ -543,16 +543,16 @@ Si el módulo 5G es reconocido, se mostrará una salida similar a /org/freedeskt
 </div>
 
 **Paso 5.** Configurar el APN
-APN (Access Point Name) es crucial para conectar un dispositivo móvil a la red. Usaremos el comando nmcli para crear un perfil de portador. Tomando China Mobile como ejemplo, podemos crear un archivo de configuración con los siguientes comandos:
+APN (Access Point Name) es crucial para conectar un dispositivo móvil a la red. Usaremos el comando nmcli para crear un perfil bearer. Tomando China Mobile como ejemplo, podemos crear un archivo de configuración con los siguientes comandos:
 
 ```bash
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
 ```
 
-Este comando agrega una nueva conexión tipo GSM (Global System for Mobile Communications), especificando el APN como "CMNET" y usando configuración automática IPv4.
+Este comando agrega una nueva conexión tipo GSM (Global System for Mobile Communications), especificando el APN como "CMNET" y usando configuración IPv4 automática.
 
 **Paso 6.** Activar la Conexión
-Después de crear el perfil de portador, necesitamos activar la conexión.
+Después de crear el perfil bearer, necesitamos activar la conexión.
 
 ```bash
 sudo nmcli con up "gsm" 
@@ -758,7 +758,7 @@ El Robotics J501 proporciona dos conectores de ventilador PWM de 4 pines diseña
 - **Ventilador 12V**: Conector de 2.54 mm, máx. 1.5A, adecuado para refrigeración de alto rendimiento
 - **Ventilador 5V**: Conector JST de 1.25 mm, máx. 1.5A, ideal para refrigeración silenciosa de bajo consumo
 
-El control PWM permite ajuste dinámico y preciso de la velocidad basado en la temperatura del sistema, habilitando refrigeración eficiente mientras minimiza el ruido y el consumo de energía.
+El control PWM permite un ajuste dinámico y preciso de la velocidad basado en la temperatura del sistema, habilitando una refrigeración eficiente mientras minimiza el ruido y el consumo de energía.
 
 **Pinout del Ventilador 12V:**
 
@@ -831,8 +831,8 @@ Esta sección demuestra la conexión CAN0↔CAN1 y CAN2↔CAN3 en el Jetson y mu
 |------------------|------------------|----------------|-----------|-------------|-------------------------------------|
 | CAN0             | Nativo           | PAA.04         | gpiochip1 | 4           | gpiochip1 line4 (PAA.04)           |
 | CAN1             | Nativo           | PAA.07         | gpiochip1 | 7           | gpiochip1 line7 (PAA.07)           |
-| CAN2             | SPI-a-CAN        | -              | gpiochip2 | 10          | gpiochip2 line10                   |
-| CAN3             | SPI-a-CAN        | -              | gpiochip2 | 12          | gpiochip2 line12                   |
+| CAN2             | SPI-to-CAN       | -              | gpiochip2 | 10          | gpiochip2 line10                   |
+| CAN3             | SPI-to-CAN       | -              | gpiochip2 | 12          | gpiochip2 line12                   |
 
 Los resistores de terminación para CAN0 y CAN1 pueden ser controlados a través de dos pines: PAA.04, ubicado en gpiochip1 line4, y PAA.07, ubicado en gpiochip1 line7.
 
@@ -1130,10 +1130,10 @@ Las interfaces DI/DO del reComputer Robotics J501 están integradas en el conect
 
 | Nombre del Canal | Características de Voltaje | Etiqueta GPIO | Nombre del Pin | Chip GPIO | Número GPIO |
 |------------------|----------------------------|---------------|----------------|-----------|-------------|
-| DI_12V_1         | Adaptativo a entrada 12V   | DI_1_GPIO17   | PP.04          | gpiochip0 | 96          |
-| DI_12V_2         | Adaptativo a entrada 12V   | DI_1_GPIO18   | PQ.04          | gpiochip0 | 104         |
-| DI_12V_3         | Adaptativo a entrada 12V   | DI_1_GPIO19   | PN.02          | gpiochip0 | 86          |
-| DI_12V_4         | Adaptativo a entrada 12V   | DI_1_GPIO33   | PM.07          | gpiochip0 | 83          |
+| DI_12V_1         | Adaptativo a entrada de 12V | DI_1_GPIO17   | PP.04          | gpiochip0 | 96          |
+| DI_12V_2         | Adaptativo a entrada de 12V | DI_1_GPIO18   | PQ.04          | gpiochip0 | 104         |
+| DI_12V_3         | Adaptativo a entrada de 12V | DI_1_GPIO19   | PN.02          | gpiochip0 | 86          |
+| DI_12V_4         | Adaptativo a entrada de 12V | DI_1_GPIO33   | PM.07          | gpiochip0 | 83          |
 
 #### Canales de Salida Digital (DO)
 
@@ -1148,15 +1148,15 @@ Las definiciones clave de pines para las interfaces DI/DO en el conector J25 son
 
 | Número de Pin | Etiqueta de Función | Descripción |
 |---------------|---------------------|-------------|
-| 1             | DI_12V_1            | Canal 1 de Entrada Digital 12V |
-| 3             | DI_12V_2            | Canal 2 de Entrada Digital 12V |
-| 5             | DI_12V_3            | Canal 3 de Entrada Digital 12V |
-| 7             | DI_12V_4            | Canal 4 de Entrada Digital 12V |
+| 1             | DI_12V_1            | Canal 1 de Entrada Digital de 12V |
+| 3             | DI_12V_2            | Canal 2 de Entrada Digital de 12V |
+| 5             | DI_12V_3            | Canal 3 de Entrada Digital de 12V |
+| 7             | DI_12V_4            | Canal 4 de Entrada Digital de 12V |
 | 9             | GND_DI              | Tierra para Canales de Entrada Digital |
-| 2             | DO_40V_1            | Canal 1 de Salida Digital 40V |
-| 4             | DO_40V_2            | Canal 2 de Salida Digital 40V |
-| 6             | DO_40V_3            | Canal 3 de Salida Digital 40V |
-| 8             | DO_40V_4            | Canal 4 de Salida Digital 40V |
+| 2             | DO_40V_1            | Canal 1 de Salida Digital de 40V |
+| 4             | DO_40V_2            | Canal 2 de Salida Digital de 40V |
+| 6             | DO_40V_3            | Canal 3 de Salida Digital de 40V |
+| 8             | DO_40V_4            | Canal 4 de Salida Digital de 40V |
 | 10            | GND_DO              | Tierra para Canales de Salida Digital |
 
 :::note
@@ -1169,7 +1169,7 @@ Para el pinout completo (incluyendo interfaces CAN), consulta la documentación 
 
 Las interfaces DO adoptan salida de drenaje abierto. Puedes establecer el nivel de salida (alto/bajo) mediante comandos para controlar periféricos como relés y LEDs.
 
-Ejecuta el siguiente comando para habilitar el canal DO (salida 12V, alimentado por la resistencia pull-up externa y fuente de alimentación de 12V):
+Ejecuta el siguiente comando para habilitar el canal DO (salida de 12V, alimentado por la resistencia pull-up externa y la fuente de alimentación de 12V):
 
 ```
 # Enable DO_40V_1 (gpiochip1 4)
@@ -1215,7 +1215,7 @@ sudo gpioset --mode=wait 1 8=0
 
 **Operación de Entrada Digital (DI)**
 
-Usa el comando `gpioget` para leer el nivel de entrada del canal DI (valor de retorno `1` = nivel alto, `0` = nivel bajo) y obtener el estado de dispositivos periféricos.
+Usa el comando `gpioget` para leer el nivel de entrada del canal DI (valor de retorno `1` = nivel alto, `0` = nivel bajo) y obtener el estado de los dispositivos periféricos.
 
 El comando para leer el Nivel del Canal DI es el siguiente:
 
@@ -1311,10 +1311,10 @@ El reComputer Robotics J501 está equipado con 2 interfaces UART independientes 
 
 #### Canales de Interfaz UART
 
-| Nombre del Canal | Nodo del Dispositivo | Modos Soportados | Velocidad de Baudios por Defecto | Comando de Habilitación GPIO | Método de Cambio de Modo |
-|------------------|----------------------|------------------|----------------------------------|------------------------------|--------------------------|
-| UART1 (DB9-1) | /dev/ttyTHS1 | RS232, RS422, RS485 | RS232: 115200 bps; RS422/RS485: 9600 bps | `gpioset --mode=wait gpiochip0 2=0` | Interruptor dip SW3 (DIP de 8 pines) |
-| UART2 (DB9-2) | /dev/ttyTHS4 | RS232 (por defecto) | 115200 bps | `gpioset --mode=wait gpiochip2 15=0` | RS232 fijo (sin interruptor) |
+| Nombre del Canal | Nodo del Dispositivo | Modos Soportados | Velocidad de Baudios Predeterminada | Comando de Habilitación GPIO | Método de Cambio de Modo |
+|------------------|----------------------|------------------|-------------------------------------|------------------------------|--------------------------|
+| UART1 (DB9-1) | /dev/ttyTHS1 | RS232, RS422, RS485 | RS232: 115200 bps; RS422/RS485: 9600 bps | `gpioset --mode=wait gpiochip0 2=0` | Interruptor DIP SW3 (DIP de 8 pines) |
+| UART2 (DB9-2) | /dev/ttyTHS4 | RS232 (predeterminado) | 115200 bps | `gpioset --mode=wait gpiochip2 15=0` | RS232 fijo (sin interruptor) |
 
 **Definición de Pines (Conector DB9)**
 
@@ -1332,9 +1332,9 @@ La función de cada pin DB9 varía según el modo de comunicación. Consulta la 
 | 8              | CTS (Listo para Enviar) | -                   | -                   |
 | 9              | -                   | -                   | -                   |
 
-**Configuración de Modo (Interruptor Dip SW3)**
+**Configuración de Modo (Interruptor DIP SW3)**
 
-Solo UART1 (DB9-1) soporta cambio de modo a través del interruptor dip SW3 (UART2 está fijo a RS232). El interruptor es de tipo DIP de 8 pines, con pines de configuración principales etiquetados como MODE_0, MODE_1 y MODE_2 en el esquemático.
+Solo UART1 (DB9-1) soporta cambio de modo a través del interruptor DIP SW3 (UART2 está fijo a RS232). El interruptor es de tipo DIP de 8 pines, con pines de configuración principales etiquetados como MODE_0, MODE_1 y MODE_2 en el esquemático.
 
 La interfaz se muestra en la figura a continuación:
 <div align="center">
@@ -1343,8 +1343,8 @@ La interfaz se muestra en la figura a continuación:
 
 **Reglas de Configuración**
 
-| Modo de Trabajo | Combinación de Interruptor Dip (MODE_2, MODE_1, MODE_0) | Operación de Estado del Interruptor |
-|-----------------|----------------------------------------------------------|-------------------------------------|
+| Modo de Trabajo | Combinación de Interruptor DIP (MODE_2, MODE_1, MODE_0) | Operación de Estado del Interruptor |
+|-----------------|--------------------------------------------------------|-------------------------------------|
 | RS232        | 0 (OFF), 0 (OFF), 1 (ON)                       | MODE_0: Cambiar a ON; MODE_1/MODE_2: Mantener OFF |
 | RS422        | 0 (OFF), 0 (OFF), 0 (OFF) o 1 (ON), 0 (OFF), 0 (OFF) | MODE_0/MODE_1: Mantener OFF; MODE_2: Opcional (ON/OFF) |
 | RS485        | 0 (OFF), 1 (ON), 0 (OFF) o 1 (ON), 1 (ON), 0 (OFF) | MODE_1: Cambiar a ON; MODE_0/MODE_2: Opcional (ON/OFF) |

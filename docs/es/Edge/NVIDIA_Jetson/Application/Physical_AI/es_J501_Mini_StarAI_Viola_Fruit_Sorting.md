@@ -22,7 +22,7 @@ last_update:
 
 ## 🚀 Introducción
 
-Este wiki demuestra cómo usar el **J501 Mini (Jetson AGX Orin)** con el **brazo robótico StarAI Viola** para realizar tareas de clasificación de frutas usando el **framework LeRobot**. El proyecto muestra un flujo de trabajo completo desde la recolección de datos hasta el despliegue, permitiendo al robot agarrar y organizar frutas de manera inteligente.
+Este wiki demuestra cómo usar el **J501 Mini (Jetson AGX Orin)** con el **brazo robótico StarAI Viola** para realizar tareas de clasificación de frutas usando el **framework LeRobot**. El proyecto muestra un flujo de trabajo de extremo a extremo desde la recolección de datos hasta el despliegue, permitiendo que el robot agarre y organice frutas de manera inteligente.
 
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png"/>
@@ -126,26 +126,27 @@ cd ~/lerobot
 conda install ffmpeg -c conda-forge
 ```
 
-### Instalar PyTorch y Dependencias
+### Instalar PyTorch y Torchvision para Jetson
 
-Para dispositivos Jetson, instala PyTorch y Torchvision primero:
+Para dispositivos Jetson, necesitas instalar la versión GPU de PyTorch y Torchvision antes de instalar LeRobot. Sigue [este tutorial de instalación de PyTorch para Jetson](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) para instalar PyTorch-gpu y Torchvision.
+
+### Instalar LeRobot y Dependencias
+
+Después de instalar PyTorch-gpu y Torchvision, instala LeRobot:
 
 ```bash
-# Install PyTorch for Jetson (refer to official Jetson PyTorch installation guide)
-# Example:
-pip3 install torch torchvision torchaudio
-
-# Install LeRobot
 cd ~/lerobot && pip install -e .
+```
 
-# Install additional dependencies for Jetson
-conda install -y -c conda-forge "opencv>=4.10.0.84"
-conda remove opencv
-pip3 install opencv-python==4.10.0.84
-pip3 install numpy==1.26.0
+Para dispositivos Jetson JetPack 6.0+, instala dependencias adicionales:
 
-# Remove brltty if it causes USB port conflicts
-sudo apt remove brltty
+```bash
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
+conda remove opencv   # Uninstall OpenCV
+pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
 ### Instalar Dependencias del Motor StarAI
@@ -155,11 +156,20 @@ pip install lerobot_teleoperator_bimanual_leader
 pip install lerobot_robot_bimanual_follower
 ```
 
-### Verificar Instalación
+### Verificar PyTorch y Torchvision
+
+Dado que instalar el entorno LeRobot vía pip desinstalará el PyTorch y Torchvision originales e instalará las versiones CPU, necesitas realizar una verificación en Python:
 
 ```python
 import torch
 print(torch.cuda.is_available())  # Should print True
+```
+
+Si el resultado impreso es `False`, necesitas reinstalar PyTorch y Torchvision según [este tutorial de Jetson](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
+
+```bash
+# Remove brltty if it causes USB port conflicts
+sudo apt remove brltty
 ```
 
 ## 🔧 Configuración y Calibración de Hardware
@@ -217,7 +227,7 @@ Los archivos de calibración se guardan en `~/.cache/huggingface/lerobot/calibra
 
 ### Configurar Cámaras
 
-Encuentra los puertos de tu cámara:
+Encuentra los puertos de tus cámaras:
 
 ```bash
 lerobot-find-cameras opencv
@@ -304,7 +314,7 @@ lerobot-record \
 - **ESC**: Detener grabación y guardar conjunto de datos
 
 :::tip
-Si los controles de teclado no funcionan, prueba: `pip install pynput==1.6.8`
+Si los controles del teclado no funcionan, prueba: `pip install pynput==1.6.8`
 :::
 
 ### Reproducir un Episodio
@@ -324,7 +334,7 @@ lerobot-replay \
 
 ### Configuración de Entrenamiento
 
-Entrena el modelo ACT en tu conjunto de datos recolectado:
+Entrena el modelo ACT con tu conjunto de datos recopilado:
 
 ```bash
 lerobot-train \
@@ -348,7 +358,7 @@ lerobot-train \
 |-----------|-------------|
 | `--policy.type` | Tipo de modelo (act) |
 | `--steps` | Pasos totales de entrenamiento (100,000) |
-| `--batch_size` | Tamaño de lote de entrenamiento (8) |
+| `--batch_size` | Tamaño del lote de entrenamiento (8) |
 | `--eval_freq` | Frecuencia de evaluación (cada 5000 pasos) |
 | `--wandb.enable` | Habilitar registro de Weights & Biases |
 
@@ -364,7 +374,7 @@ Puedes habilitar `--wandb.enable=true` para monitorear el progreso del entrenami
 
 ### Reanudar Entrenamiento
 
-Si el entrenamiento se interrumpe, reanuda desde el último checkpoint:
+Si el entrenamiento se interrumpe, reanuda desde el último punto de control:
 
 ```bash
 lerobot-train \
@@ -408,32 +418,32 @@ Una vez entrenado, el robot puede clasificar frutas de forma autónoma. El video
 
 Para ejecutar la clasificación autónoma de frutas:
 
-1. Coloca las frutas en el espacio de trabajo
+1. Coloca las frutas en el área de trabajo
 2. Ejecuta el comando de evaluación mostrado arriba
 3. El robot ejecutará el comportamiento aprendido para agarrar y clasificar frutas
 
 ## 🎯 Consejos para Mejor Rendimiento
 
-### Mejores Prácticas para Recolección de Datos
+### Mejores Prácticas de Recopilación de Datos
 
 1. **Entorno Consistente**
    - Mantén las condiciones de iluminación estables
-   - Minimiza los cambios en el fondo
+   - Minimiza los cambios de fondo
    - Usa colocación consistente de frutas
 
 2. **Calidad Sobre Cantidad**
-   - Recolecta demostraciones suaves y deliberadas
+   - Recopila demostraciones suaves y deliberadas
    - Evita movimientos bruscos
    - Asegura agarres exitosos en los datos de entrenamiento
 
 3. **Posicionamiento de Cámara**
    - Mantén los ángulos de cámara consistentes
    - Asegura buena visibilidad de frutas y pinza
-   - Evita el movimiento de cámara durante la grabación
+   - Evita el movimiento de la cámara durante la grabación
 
-### Optimización del Entrenamiento
+### Optimización de Entrenamiento
 
-1. **Tamaño del Dataset**
+1. **Tamaño del Conjunto de Datos**
    - Comienza con 50 episodios
    - Agrega más datos si el rendimiento es insuficiente
    - 100-200 episodios típicamente suficientes para tareas simples
@@ -468,7 +478,7 @@ sudo chmod 777 /dev/ttyUSB*
 **Cámara No Funciona**
 - No conectes cámaras a través de hub USB
 - Usa conexión USB directa
-- Verifica el índice de cámara con `lerobot-find-cameras opencv`
+- Verifica el índice de la cámara con `lerobot-find-cameras opencv`
 
 **Entrenamiento Sin Memoria**
 - Reduce el tamaño del lote: `--batch_size=4`
@@ -476,7 +486,7 @@ sudo chmod 777 /dev/ttyUSB*
 - Cierra otras aplicaciones
 
 **Rendimiento de Inferencia Pobre**
-- Recolecta más datos de entrenamiento
+- Recopila más datos de entrenamiento
 - Asegura entorno consistente
 - Verifica el posicionamiento de la cámara
 - Verifica la precisión de calibración
@@ -486,7 +496,7 @@ sudo chmod 777 /dev/ttyUSB*
 - 🔗 [Documentación de LeRobot](https://github.com/huggingface/lerobot)
 - 🔗 [Wiki del Brazo StarAI](https://wiki.seeedstudio.com/es/lerobot_starai_arm/)
 - 🔗 [Documentación de J501 Mini](https://wiki.seeedstudio.com/es/recomputer_j501_mini_getting_started/)
-- 🔗 [Paper ACT](https://tonyzhaozh.github.io/aloha/)
+- 🔗 [Artículo ACT](https://tonyzhaozh.github.io/aloha/)
 - 🔗 [JetPack SDK](https://developer.nvidia.com/embedded/jetpack)
 
 ## 🤝 Soporte Técnico y Discusión de Productos

@@ -20,7 +20,7 @@ last_update:
 
 reComputer Robotics J501は、高度なロボティクスと産業用アプリケーション向けに設計された高性能エッジAIキャリアボードです。MAXNモードでNVIDIA Jetson AGX Orinモジュール（32GB/64GB）と互換性があり、最大275 TOPSのAI性能を提供します。
 
-豊富な接続オプションを装備—1x 10GbEと4x 1GbEイーサネットポート、NVMe SSD用デュアルM.2 Key Mスロット、5GとWi-Fi/BTモジュール用M.2スロット、複数のUSB 3.0ポート、4つのCANインターフェース（2つのネイティブ + 2つのSPI-to-CAN）、GMSL2カメラ拡張、DI/DO、I2S、UART、RS485を含む包括的なI/Oを含み、複雑なマルチセンサー融合とリアルタイムAI処理のための強力なロボティクスブレインとして機能します。
+豊富な接続オプション（1x 10GbEと4x 1GbEイーサネットポート、NVMe SSD用デュアルM.2 Key Mスロット、5GとWi-Fi/BTモジュール用M.2スロット、複数のUSB 3.0ポート、4つのCANインターフェース（2つのネイティブ + 2つのSPI-to-CAN）、GMSL2カメラ拡張、DI/DO、I2S、UART、RS485を含む包括的なI/O）を装備し、複雑なマルチセンサー融合とリアルタイムAI処理のための強力なロボティクスブレインとして機能します。
 
 JetPack 6.2.1とLinux BSPがプリインストールされており、シームレスな展開を保証します。NVIDIA Isaac ROS、Hugging Face、PyTorch、ROS 2/1などのフレームワークをサポートし、J501は大規模言語モデル駆動の意思決定と物理的ロボティクス制御を橋渡しし、すぐに使用できるインターフェースと最適化されたAIフレームワークで自律ロボットの開発を加速します。
 
@@ -29,19 +29,19 @@ JetPack 6.2.1とLinux BSPがプリインストールされており、シーム�
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J401-Carrier-Board-optional-accessories.html" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱</font></span></strong>
     </a>
 </div>
 
-## 主な機能  
+## 主な特徴  
 
 - **高性能AI**: Jetson AGX Orin 32/64GBモジュール、AmpereGPUとDLAエンジンで最大275 TOPS
-- **豊富な接続性**: デュアルM.2 Key M（NVMe）; Key E（WiFi/BT）+ Key B（5G）; 1x 10GbE + 4x 1GbE; 3x USB 3.0; 2x USB-C
+- **豊富な接続性**: デュアルM.2 Key M（NVMe）；Key E（WiFi/BT）+ Key B（5G）；1x 10GbE + 4x 1GbE；3x USB 3.0；2x USB-C
 - **クアッドCAN-FD**: 2つのネイティブ + 2つのSPI-to-CANインターフェース（電気的絶縁付き）
 - **GMSL2ビジョン**: 高速カメラ接続用の単一GMSL2インターフェース（1x）
-- **産業用設計**: 19-48V DC入力; -10~60°C動作; 絶縁インターフェース; JetPack 6.2.1プリインストール
-- **ロボティクス対応**: ROS 2/1、Isaac ROSサポート; DI/DO、I2S、UART、RS485; AMRと自動化最適化
+- **産業用設計**: 19-48V DC入力；-10~60°C動作；絶縁インターフェース；JetPack 6.2.1プリインストール
+- **ロボティクス対応**: ROS 2/1、Isaac ROSサポート；DI/DO、I2S、UART、RS485；AMRと自動化最適化
 
 ## 仕様
 
@@ -152,7 +152,7 @@ JetPack 6.2.1とLinux BSPがプリインストールされており、シーム�
     </tr>
     <tr>
       <th>消費電力</th>
-      <td colSpan={2}>Jetson AGX Orinモジュール: 最大60W（MAXNモード）<br/>システム全体のピーク: 75W（周辺機器を含む）</td>
+      <td colSpan={2}>Jetson AGX Orinモジュール：最大60W（MAXNモード）<br/>システム全体のピーク：75W（周辺機器を含む）</td>
     </tr>
     <tr>
       <th>ソフトウェア</th>
@@ -161,10 +161,10 @@ JetPack 6.2.1とLinux BSPがプリインストールされており、シーム�
     <tr>
       <th>機械的仕様</th>
       <td colSpan={2}>
-        寸法: 210mm x 180mm x 87mm（スタンド付き）<br/>
-        重量: 200g<br/>
-        取り付け: デスク / 壁 / DINレール（DINブラケットはアクセサリに含まれます）<br/>
-        動作温度: -10℃~60℃（25W）/ -10℃~55℃（MAXN）
+        寸法：210mm x 180mm x 87mm（スタンド付き）<br/>
+        重量：200g<br/>
+        取り付け：デスク / 壁 / DINレール（DINブラケットはアクセサリに含まれます）<br/>
+        動作温度：-10℃~60℃（25W）/ -10℃~55℃（MAXN）
       </td>
     </tr>
     <tr>
@@ -329,7 +329,7 @@ Ubuntuホストマシンで、ターミナルを開いて`sha256sum <File>`コ�
 
 **ステップ4.** リカバリボタンを離します。
 
-**ステップ5.** LinuxホストPCでターミナルウィンドウを開き、`lsusb`コマンドを入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかがある場合、ボードは強制リカバリモードになっています。
+**ステップ5.** LinuxホストPCでターミナルウィンドウを開き、`lsusb`コマンドを入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかが含まれている場合、ボードは強制リカバリモードになっています。
 
 - AGX Orin 32GBの場合：**0955:7223 NVidia Corp**
 - AGX Orin 64GBの場合：**0955:7023 NVidia Corp**
@@ -501,7 +501,7 @@ M.2 Key Bスロットは、Nano SIMカードホルダー付きの4G/5Gセルラ�
 lsusb 
 ```
 
-このコマンドは、システムに接続されているすべてのUSBデバイスのリストを、メーカー（ID）、タイプ、その他の情報と共に表示します。例えば、出力にQuectel Wireless Solutions Co., Ltd. EM12-Gのデバイスが表示される場合、5Gモジュールが存在することを示しています。
+このコマンドは、システムに接続されているすべてのUSBデバイスのリストを、製造元（ID）、タイプ、その他の情報と共に表示します。例えば、出力にQuectel Wireless Solutions Co., Ltd. EM12-Gのデバイスが表示される場合、5Gモジュールが存在することを示しています。
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/key_b_1.png"/>
@@ -577,7 +577,7 @@ mmcli -L
 mmcli -m 0 
 ```
 
-このコマンドは、メーカー、モデル、サポートされている現在のネットワーク技術、デバイスステータス、接続されているネットワークオペレーターなど、5Gモジュールに関する包括的な詳細を提供します。
+このコマンドは、製造元、モデル、サポートされている現在のネットワーク技術、デバイスステータス、接続されているネットワークオペレーターなど、5Gモジュールに関する包括的な詳細を提供します。
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/key_b_5.png"/>
 </div>
@@ -648,7 +648,7 @@ LED 制御効果は下図に示されています：
 
 ## USB
 
-Robotics J501 は、4x USB 3.2 Type-A ポート（内部 USB 3.1 Gen1 ハブ経由、高速周辺機器、ストレージデバイス、またはカメラの接続用に最大 5Gbps のデータレートをサポート）と 1x USB 2.0 Type-C デバッグポート（システムログへのアクセス、ブート問題のデバッグ、ファームウェア更新を行うためのシリアルコンソールとして機能）を提供します。
+Robotics J501 は、4つの USB 3.2 Type-A ポート（内部 USB 3.1 Gen1 ハブ経由、高速周辺機器、ストレージデバイス、またはカメラの接続用に最大 5Gbps のデータレートをサポート）と 1つの USB 2.0 Type-C デバッグポート（システムログへのアクセス、ブート問題のデバッグ、ファームウェア更新を行うためのシリアルコンソールとして機能）を提供します。
 
 ### USB-A 速度テスト
 
@@ -753,7 +753,7 @@ sudo chmod +x test_usb.sh
 
 ## ファン
 
-Robotics J501 は、Jetson モジュールとキャリアボードコンポーネントの両方を冷却するために設計された 2 つの 4 ピン PWM ファンコネクタを提供します：
+Robotics J501 は、Jetson モジュールとキャリアボードコンポーネントの両方を冷却するために設計された 2つの 4ピン PWM ファンコネクタを提供します：
 
 - **12V ファン**: 2.54 mm コネクタ、最大 1.5A、高性能冷却に適している
 - **5V ファン**: 1.25 mm JST コネクタ、最大 1.5A、低電力静音冷却に最適
@@ -814,7 +814,7 @@ jtop
 
 ## CAN
 
-reComputer Robotics J501 は、DI/DO インターフェースと J25 2x10P コネクタを共有する 4 つの独立した CAN インターフェース（CAN 0、CAN 1、CAN 2、CAN 3）を搭載しています。これらのインターフェースは Classic CAN と CAN FD 通信プロトコルの両方をサポートし、高い抗干渉性能とリアルタイムデータ伝送を特徴とし、自動車電子機器、産業オートメーション、ロボティクスなどの産業制御シナリオに適しています。
+reComputer Robotics J501 は、DI/DO インターフェースと J25 2x10P コネクタを共有する 4つの独立した CAN インターフェース（CAN 0、CAN 1、CAN 2、CAN 3）を搭載しています。これらのインターフェースは Classic CAN と CAN FD 通信プロトコルの両方をサポートし、高い抗干渉性能とリアルタイムデータ伝送を特徴とし、自動車電子機器、産業オートメーション、ロボティクスなどの産業制御シナリオに適しています。
 
 ### 使用方法
 
@@ -834,7 +834,7 @@ reComputer Robotics J501 は、DI/DO インターフェースと J25 2x10P コ�
 | CAN2         | SPI-to-CAN     | -        | gpiochip2 | 10          | gpiochip2 line10             |
 | CAN3         | SPI-to-CAN     | -        | gpiochip2 | 12          | gpiochip2 line12             |
 
-CAN0 と CAN1 の終端抵抗は、gpiochip1 line4 にある PAA.04 と gpiochip1 line7 にある PAA.07 の 2 つのピンで制御できます。
+CAN0 と CAN1 の終端抵抗は、gpiochip1 line4 にある PAA.04 と gpiochip1 line7 にある PAA.07 の 2つのピンで制御できます。
 
 終端抵抗制御は以下のルールに従います：
 
@@ -1003,7 +1003,7 @@ CANテストスクリプトでは、PWを自分のJetsonパスワードに置き
 
 #### CAN-FDモード
 
-CAN FDはより高いデータ伝送レートとより大きなデータフレーム長をサポートします。以下のスクリプトはCAN FDループバックテストを実装します。
+CAN FDはより高いデータ伝送速度とより大きなデータフレーム長をサポートします。以下のスクリプトはCAN FDループバックテストを実装します。
 
 CAN-FDモードで**CAN0↔CAN1**と**CAN2↔CAN3**間のデータ送受信をテストするために`test_canfd.sh`を作成します：
 
@@ -1267,7 +1267,7 @@ sudo modprobe spidev
 ```
 
 :::note
-コマンドがエラープロンプトなしで実行された場合、モジュールが正常に読み込まれたことを意味します；モジュールが既に読み込まれている場合、コマンドは何も返さず、これは正常な現象です。
+コマンドがエラープロンプトなしで実行された場合、モジュールが正常に読み込まれたことを意味します；モジュールが既に読み込まれている場合、コマンドは何も情報を返しませんが、これは正常な現象です。
 :::
 
 **ステップ2：SPIデバイスノードの確認**
@@ -1466,14 +1466,14 @@ sudo gpioset --mode=wait gpiochip2 15=0
 
 ## RTC
 
-reComputer Robotics J501には、正確な時刻管理のためのバッテリーバックアップ付きハードウェアRTCが含まれています。RTCにバックアップ電源を供給する方法は2つあります：
+reComputer Robotics J501には、正確な時刻管理のためのバッテリーバックアップ付きハードウェアRTCが搭載されています。RTCにバックアップ電源を供給する方法は2つあります：
 
 1. CR1220コイン電池ホルダー（J14）を使用
-2. 外部電源接続用のRTC 2ピンヘッダー - J4を使用
+2. RTC 2ピンヘッダー - J4を使用した外部電源接続
 
 ### ハードウェア接続
 
-**方法1：CR1220コイン電池ホルダーを使用**
+**方法1：CR1220コイン電池ホルダーの使用**
 
 以下に示すように、3V CR1220コイン電池をボード上のRTCソケットに接続します。電池の正極（+）側が上向きになるようにしてください。
 
@@ -1481,7 +1481,7 @@ reComputer Robotics J501には、正確な時刻管理のためのバッテリ�
   <img width="300" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/rtc_0.png"/>
 </div>
 
-**方法2：RTC 2ピンヘッダーを使用**
+**方法2：RTC 2ピンヘッダーの使用**
 
 RTC 2ピンヘッダーは、RTCに外部電源を接続する代替方法を提供します。
 
@@ -1522,11 +1522,11 @@ Robotics J501 は高解像度ディスプレイ出力用の HDMI を搭載して
 
 ## 拡張ポート
 
-Robotics J501 キャリアボードには、GMSL 拡張ボード用のカメラ拡張ヘッダーが搭載されています。4台の GMSL カメラを同時に接続して動作させることができます。
+Robotics J501 キャリアボードは GMSL 拡張ボード用のカメラ拡張ヘッダーを備えています。4台の GMSL カメラを同時に接続して動作させることができます。
 
 ### ハードウェア接続
 
-以下は Robotics J501 キャリアボードの GMSL カメラ拡張ボード接続スロットです（事前に拡張ボードを準備する必要があります）：
+以下は Robotics J501 キャリアボード GMSL カメラ拡張ボード接続スロットです（事前に拡張ボードを準備する必要があります）：
 
 <div style={{display: 'flex', justifyContent: 'center', gap: '20px'}}>
   <div>
@@ -1574,7 +1574,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 </div>
 
 :::note
-合計3つのオーバーレイファイルがあります。それぞれ Seeed GMSL 1X4 3G、Seeed GMSL 1X4 6G、Seeed GMSL 1X4、および Orbbec Gemini 335Lg です。これらはそれぞれ SG3S の 3G カメラ、SG2 と SG8S の 6G カメラ、および Orbbec のカメラに対応しています。図3に示すように、お使いのカメラのモデルに応じて io ファイルを設定してください。
+オーバーレイファイルは合計3つあり、それぞれ Seeed GMSL 1X4 3G、Seeed GMSL 1X4 6G、Seeed GMSL 1X4、および Orbbec Gemini 335Lg です。これらはそれぞれ SG3S の 3G カメラ、SG2 と SG8S の 6G カメラ、および Orbbec のカメラに対応しています。図3に示すように、お使いのカメラのモデルに応じて io ファイルを設定してください。
 :::
 
 **ステップ 2.** ビデオインターフェース設定ツールをインストールします。
@@ -1674,7 +1674,7 @@ gst-launch-1.0 \
 <!-- - [Mechanical Document-reComputer Robotics PCBA](https://files.seeedstudio.com/products/NVIDIA-Jetson/Mechanical_reComputer_Robotics_PCBA.dxf) -->
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -16,7 +16,7 @@ image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf380
 slug: /cn/respeaker_xvf3800_agora_convo_client
 sku: 114993702,114993700
 last_update:
-  date: 04/2/2026
+  date: 2/04/2026
   author: Jiayu Zhan(Jack)
 ---
 

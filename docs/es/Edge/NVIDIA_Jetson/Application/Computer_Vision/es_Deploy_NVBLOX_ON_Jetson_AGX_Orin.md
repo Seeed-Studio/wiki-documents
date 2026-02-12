@@ -30,23 +30,23 @@ last_update:
 ## Introducción
 
 <div style={{ textAlign: "justify" }}>
-[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) es un marco de mapeo 3D de alto rendimiento acelerado por GPU desarrollado por NVIDIA para percepción robótica en tiempo real. A diferencia de los modelos de estimación de profundidad monocular, NVBlox consume entrada de profundidad real de cámaras RGB-D o cámaras estéreo para construir representaciones 3D precisas de la escena.
+[Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) es un framework de mapeo 3D de alto rendimiento acelerado por GPU desarrollado por NVIDIA para percepción robótica en tiempo real. A diferencia de los modelos de estimación de profundidad monocular, NVBlox consume entrada de profundidad real de cámaras RGB-D o cámaras estéreo para construir representaciones 3D precisas de la escena.
 
 Construye mapas densos TSDF (Campo de Distancia Firmado Truncado) y ESDF (Campo de Distancia Firmado Euclidiano) en tiempo real, permitiendo reconstrucción 3D de alta calidad, navegación consciente de obstáculos y verificación de colisiones. NVBlox también puede generar mallas, mapas de costos basados en vóxeles y representaciones de ocupación 3D adecuadas para robots móviles autónomos (AMR).
 
-Esto lo hace particularmente valioso para aplicaciones de Edge AI donde las limitaciones de hardware y la eficiencia computacional son consideraciones críticas. Este wiki demuestra cómo desplegar Isaac ROS NVBlox en **Jetson AGX Orin** con integración de **ROS 2**, usando una **cámara RGB-D Orbbec** y una plataforma de robot móvil para lograr un pipeline de percepción y navegación completamente en el dispositivo. 🚀
+Esto lo hace particularmente valioso para aplicaciones de Edge AI donde las limitaciones de hardware y la eficiencia computacional son consideraciones críticas. Este wiki demuestra cómo desplegar Isaac ROS NVBlox en **Jetson AGX Orin** con integración de **ROS 2**, usando una **cámara RGB-D Orbbec** y una plataforma de robot móvil para lograr un pipeline completo de percepción y navegación en el dispositivo. 🚀
 
 </div>
 
 <div align="center">
-    <img width={700}
-     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg" />
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg"/>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-for-Jetson-AGX-Orin-p-6606.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
-</a></div>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱</font></span></strong>
+    </a>
+</div>
 
 ## Prerrequisitos
 
@@ -168,7 +168,7 @@ cd ${ISAAC_ROS_WS}/src
 git clone -b release-3.2 https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common.git
 ```
 
-Descargar la imagen oficial de Isaac Common Docker y entrar a Docker:
+Descargar imagen oficial Isaac Common Docker y entrar a Docker:
 
 ```bash
 cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
@@ -329,7 +329,7 @@ Aquí hay algunos parámetros `<camera_name>` soportados:
 - gemini_330_series
 
 :::warning
-Nota que NO debes iniciar el script de Orbbec dentro del contenedor Docker. Asegúrate de haber instalado el controlador de Orbbec siguiendo el tutorial anterior. ⚠️
+Ten en cuenta que NO debes iniciar el script de Orbbec dentro del contenedor Docker. Asegúrate de haber instalado el controlador de Orbbec siguiendo el tutorial anterior. ⚠️
 :::
 
 El contenedor Isaac ROS se conecta con ROS2 publicado localmente por defecto. En el contenedor Docker, ingresa:
@@ -338,7 +338,7 @@ El contenedor Isaac ROS se conecta con ROS2 publicado localmente por defecto. En
 ros2 topic list
 ```
 
-Normalmente, deberías ver los siguientes temas de datos publicados por la cámara Orbbec en el contenedor Docker:
+Normalmente, deberías ver los siguientes tópicos de datos publicados por la cámara Orbbec en el contenedor Docker:
 
 ```yaml
 /camera/accel/imu_info
@@ -355,7 +355,7 @@ Normalmente, deberías ver los siguientes temas de datos publicados por la cáma
 /camera/ir/image_raw
 ```
 
-Asegúrate de poder leer los temas de datos de la cámara Orbbec. Luego inicia el script de ejemplo NVBlox en el contenedor Isaac ROS:
+Asegúrate de poder leer los tópicos de datos de la cámara Orbbec. Luego inicia el script de ejemplo NVBlox en el contenedor Isaac ROS:
 
 ```bash
 cd ~/workspaces/isaac_ros-dev
@@ -369,7 +369,7 @@ Puedes ver la salida de NVBlox de cuadrículas de ocupación 3D y mallas en RViz
   <img width="1000" src="https://files.seeedstudio.com/wiki/other/rviz.jpg"/>
 </div>
 
-RViz puede configurarse como se muestra a continuación. Habilita los resultados de visualización que desees y selecciona los nombres de temas disponibles:
+RViz se puede configurar como se muestra a continuación. Habilita los resultados de visualización que desees y selecciona los nombres de tópicos disponibles:
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/other/rviz-lan.jpg"/>
 </div>
@@ -380,7 +380,7 @@ Finalmente, montando el AGX Orin y la cámara Orbbec en un AGV móvil, puedes lo
   <iframe width="1029" height="579" src="https://www.youtube.com/embed/_TKNGejfGIo" title="Deploy NVBlox on reComputer Mini J501" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-Esto puede usarse para detección de obstáculos y construcción de mapas de malla 3D de escenas para robots móviles. 🤖
+Esto se puede usar para detección de obstáculos y construcción de mapas de malla 3D de escenas para robots móviles. 🤖
 
 ## Referencias
 

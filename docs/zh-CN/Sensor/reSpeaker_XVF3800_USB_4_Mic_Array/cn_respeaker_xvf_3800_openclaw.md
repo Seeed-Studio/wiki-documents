@@ -1,65 +1,67 @@
 ---
-description: "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
-title: "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
+description: "ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送"
+title: "ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送"
 keywords:
 - reSpeaker_XVF3800_USB_4_Mic_Array
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
-slug: /respeaker_xvf_3800_openclaw
+slug: /cn/respeaker_xvf_3800_openclaw
 sku: 114993702,114993700
 last_update:
   date: 2/10/2026
   author: Mingxi
 ---
 
-# ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push
+# ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送
 
-> Want to give your robot voice interaction capabilities? Try Seeed Studio's ReSpeaker series! The target of this project is to integrate the reSpeaker XVF3800 USB 4-Mic Array with OpenClaw, enabling voice-controlled AI agent operation. With reSpeaker's powerful audio capture and noise reduction capabilities, combined with OpenClaw's flexible AI agent framework, you can easily create a voice-controlled smart assistant that can understand and respond to your commands. This demo demonstrates how to use reSpeaker to control Openclaw, enabling it to automatically locate Lark groups and send interactive meeting invitation cards.
-> [Project Source Code Repository](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
-> [reSpeaker Product Source Code](https://github.com/respeaker)
-> [reSpeaker 4-Mic Array | Seeed Studio Purchase Link](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)
->
+> 想要给你的机器人赋予语音交互能力？试试 Seeed Studio 的 ReSpeaker 系列！本项目的目标是将 reSpeaker XVF3800 USB 4-Mic Array 与 OpenClaw 集成，实现语音控制的 AI 智能体操作。通过 reSpeaker 强大的音频采集和降噪能力，结合 OpenClaw 灵活的 AI 智能体框架，你可以轻松创建一个能够理解并响应你指令的语音控制智能助手。本演示展示了如何使用 reSpeaker 控制 Openclaw，使其能够自动定位飞书群组并发送互动会议邀请卡片。
+> [项目源码仓库](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
+> [reSpeaker 产品源码](https://github.com/respeaker)
+> [reSpeaker 4-Mic Array | Seeed Studio 购买链接](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)
+> 
 > ![reSpeaker XVF3800](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg)
 >
 
-## Result Showcase
+## 效果展示
 
-Below is a demonstration of the actual operation of this project:
+以下是本项目实际运行的演示：
 
-### Demo Video
+### 演示视频
 
 <video src="https://files.seeedstudio.com/wiki/reSpeaker-openclaw/DemoVideo.mp4" controls width="100%"></video>
 
-### Function Demonstration Description
 
-The video demonstrates a complete voice interaction workflow:
+### 功能演示说明
 
-1. **Voice Wake-up** - Using reSpeaker microphone array for voice pickup.
-2. **Speech Recognition** - Whisper model recognizes voice commands in real-time.
-3. **Information Extraction** - Automatically parses meeting topic, time, location, and participants.
-4. **Card Generation** - Creates a beautiful Feishu interactive meeting card.
-5. **One-click Send** - Card is sent to a specified Feishu group chat.
-6. **Calendar Event Creation** - Click the card button to directly create an event in Feishu calendar.
+视频展示了完整的语音交互工作流程：
 
-### Actual Effect Screenshot
+1. **语音唤醒** - 使用 reSpeaker 麦克风阵列进行语音拾取。
+2. **语音识别** - Whisper 模型实时识别语音指令。
+3. **信息提取** - 自动解析会议主题、时间、地点和参与人员。
+4. **卡片生成** - 创建精美的飞书互动会议卡片。
+5. **一键发送** - 卡片发送到指定的飞书群聊。
+6. **日历事件创建** - 点击卡片按钮直接在飞书日历中创建事件。
 
-After successful execution, the Feishu group will receive an interactive card as follows:
+### 实际效果截图
 
-![Effect Showcase](https://files.seeedstudio.com/wiki/reSpeaker-openclaw/result.png)
+执行成功后，飞书群组将收到如下互动卡片：
+
+![效果展示](https://files.seeedstudio.com/wiki/reSpeaker-openclaw/result.png)
+
 
 ---
 
-## Project Background
+## 项目背景
 
-While developing voice assistant projects, I found the need to create a Skill capable of sending Feishu interactive meeting cards. Unlike plain text messages, interactive cards require a specific JSON structure and Feishu API support, which prompted me to dive deeper into OpenClaw's Skill development mechanism.
+在开发语音助手项目的过程中，我发现需要创建一个能够发送飞书互动会议卡片的 Skill。与普通文本消息不同，互动卡片需要特定的 JSON 结构和飞书 API 支持，这促使我深入研究 OpenClaw 的 Skill 开发机制。
 
-This project combines speech recognition, natural language processing, and the Feishu API to implement the function of automatically creating and sending interactive meeting invitation cards to Feishu groups via **voice input**.
+本项目结合了语音识别、自然语言处理和飞书 API，实现了通过**语音输入**自动创建并发送互动会议邀请卡片到飞书群组的功能。
 
-## Voice Input Feature
+## 语音输入功能
 
-This project supports creating meeting cards via voice commands. Below is the complete voice input solution:
+本项目支持通过语音指令创建会议卡片。以下是完整的语音输入解决方案：
 
-### Voice Input Processing Workflow
+### 语音输入处理工作流程
 
 ```python
 # Example voice input
@@ -76,15 +78,14 @@ This project supports creating meeting cards via voice commands. Below is the co
 }
 ```
 
-### Voice Recognition Configuration
+### 语音识别配置
 
-#### 1. Hardware Requirements
+#### 1. 硬件要求
+- **reSpeaker 4-Mic Array** - 4 麦克风圆形阵列
+- 2GB+ 内存
+- 互联网连接
 
-- **reSpeaker 4-Mic Array** - 4-microphone circular array
-- 2GB+ RAM
-- Internet connection
-
-#### 2. Install Speech Recognition Model
+#### 2. 安装语音识别模型
 
 ```bash
 # Download Whisper model
@@ -97,29 +98,27 @@ wget https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/tiny.en-
 wget https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/tiny.en-tokens.txt
 ```
 
-#### 3. Voice Command Examples
+#### 3. 语音指令示例
 
-**English Commands:**
-
+**英文指令：**
 - `"Schedule a meeting with Tom tomorrow at 3pm"`
 - `"Book a review meeting today at 2pm in Room 1"`
 - `"Create a discussion next Monday at 10am"`
 
-**Chinese Commands:**
+**中文指令：**
+- `"明天下午 3 点，和 Tom 开会"`
+- `"今天下午 2 点，在 1 号会议室创建评审会议"`
+- `"下周一上午 10 点，创建讨论会议"`
 
-- `"Tomorrow at 3pm, have a meeting with Tom"`
-- `"Today at 2pm, create a review meeting in Room 1"`
-- `"Next Monday 10am, create a discussion meeting"`
+### 语音输入工作流程
 
-### Voice Input Workflow
+1. **语音识别** - 5 秒录音，Whisper 模型识别。
+2. **信息解析** - 提取时间、人员、地点等信息。
+3. **卡片生成** - 创建飞书互动会议卡片。
+4. **群组发送** - 发送到配置的飞书群组。
+5. **结果反馈** - 显示发送状态和卡片 ID。
 
-1. **Speech Recognition** - 5 seconds recording, Whisper model recognition.
-2. **Information Parsing** - Extracting time, person, location, etc.
-3. **Card Generation** - Creating a Feishu interactive meeting card.
-4. **Group Sending** - Sending to the configured Feishu group.
-5. **Result Feedback** - Displaying sending status and Card ID.
-
-### Start Voice Input Program
+### 启动语音输入程序
 
 ```bash
 cd ~/feishu_card
@@ -128,39 +127,36 @@ python3 Demo.py
 
 ---
 
-## Skill Development Complete Process
+## Skill 开发完整流程
 
-### Step 1: Understand OpenClaw Skill Architecture
+### 步骤 1：理解 OpenClaw Skill 架构
 
-OpenClaw's Skill system is based on a modular design. Each Skill is an independent Python module that interacts with the OpenClaw core system through specific interfaces.
+OpenClaw 的 Skill 系统基于模块化设计。每个 Skill 都是一个独立的 Python 模块，通过特定的接口与 OpenClaw 核心系统交互。
 
-**Key Concepts:**
+**关键概念：**
+- **Skill 目录**：`~/.openclaw/skills/[skill_name]/`
+- **入口文件**：`__init__.py` 或指定的 Python 文件。
+- **工具注册**：通过 `@tool` 装饰器注册。
+- **配置文件**：`SKILL.md` 提供使用说明。
 
-- **Skill Directory**: `~/.openclaw/skills/[skill_name]/`
-- **Entry File**: `__init__.py` or a specified Python file.
-- **Tool Registration**: Registered via the `@tool` decorator.
-- **Configuration File**: `SKILL.md` provides usage instructions.
+### 步骤 2：创建 Skill 基本结构
 
-### Step 2: Create Skill Basic Structure
-
-#### 1. Create Skill Directory
-
+#### 1. 创建 Skill 目录
 ```bash
 mkdir -p ~/.openclaw/skills/feishu_meeting
 cd ~/.openclaw/skills/feishu_meeting
 ```
 
-#### 2. Create Core Files
-
+#### 2. 创建核心文件
 ```bash
 touch __init__.py
 touch send_meeting_card.py
 touch SKILL.md
 ```
 
-### Step 3: Write Core Function Code
+### 步骤 3：编写核心功能代码
 
-#### 1. Main Function File: `send_meeting_card.py`
+#### 1. 主功能文件：`send_meeting_card.py`
 
 ```python
 #!/usr/bin/env python3
@@ -176,7 +172,7 @@ from typing import Dict, Any, Optional
 
 def create_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
     """Create Feishu interactive meeting card"""
-    
+
     # Parameter extraction and default value processing
     topic = params.get("topic", "Meeting")
     date = params.get("date", datetime.now().strftime("%Y-%m-%d"))
@@ -184,10 +180,10 @@ def create_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
     attendees = params.get("attendees", [])
     location = params.get("location", "TBD")
     duration = params.get("duration", 60)
-    
+
     # Construct attendees string
     attendees_str = ", ".join(attendees) if attendees else "TBD"
-    
+
     # Create Feishu interactive card structure
     card_content = {
         "msg_type": "interactive",
@@ -255,22 +251,22 @@ def create_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
             ]
         }
     }
-    
+
     return card_content
 
 def send_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
     """Send meeting card to Feishu group"""
-    
+
     try:
         # Create card content
         card_content = create_meeting_card(params)
-        
+
         # Get group ID (can be specified in params or use default)
         group_chat_id = params.get("group_chat_id", "oc_837f7a564514f")
-        
+
         # Send using OpenClaw message tool
         result = send_feishu_message(group_chat_id, card_content)
-        
+
         if result.get("success"):
             return {
                 "success": True,
@@ -282,7 +278,7 @@ def send_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
                 "success": False,
                 "error": result.get("error", "Failed to send")
             }
-            
+
     except Exception as e:
         return {
             "success": False,
@@ -294,21 +290,21 @@ def send_feishu_message(target: str, content: Dict[str, Any]) -> Dict[str, Any]:
     try:
         # Import OpenClaw message tool
         from tools import message
-        
+
         # Send message
         response = message.send(
             channel="feishu",
             target=target,
             message=json.dumps(content, ensure_ascii=False)
         )
-        
+
         return {"success": True, "message_id": response.get("message_id")}
-        
+
     except ImportError:
         # Standby plan if running independently
         import subprocess
         import json
-        
+
         try:
             cmd = [
                 "openclaw", "message", "send",
@@ -316,14 +312,14 @@ def send_feishu_message(target: str, content: Dict[str, Any]) -> Dict[str, Any]:
                 "--target", target,
                 "--message", json.dumps(content, ensure_ascii=False)
             ]
-            
+
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-            
+
             if result.returncode == 0:
                 return {"success": True, "message_id": "sent_via_cli"}
             else:
                 return {"success": False, "error": result.stderr}
-                
+
         except Exception as e:
             return {"success": False, "error": str(e)}
     except Exception as e:
@@ -335,7 +331,7 @@ def main():
         if sys.argv[1] == "--help":
             print("Usage: python3 send_meeting_card.py '{\"topic\": \"Meeting\", \"time\": \"15:00\"}'")
             return
-            
+
         try:
             params = json.loads(sys.argv[1])
         except json.JSONDecodeError:
@@ -350,7 +346,7 @@ def main():
             "attendees": ["Zhang San", "Li Si"],
             "location": "Meeting Room A"
         }
-    
+
     result = send_meeting_card(params)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
@@ -358,7 +354,7 @@ if __name__ == "__main__":
     main()
 ```
 
-#### 2. Initialization File: `__init__.py`
+#### 2. 初始化文件：`__init__.py`
 
 ```python
 """
@@ -371,7 +367,7 @@ from .send_meeting_card import send_meeting_card, create_meeting_card
 __all__ = ['send_meeting_card', 'create_meeting_card']
 ```
 
-#### 3. Documentation File: `SKILL.md`
+#### 3. 文档文件：`SKILL.md`
 
 ```markdown
 # Feishu Meeting Skill
@@ -409,7 +405,6 @@ feishu_meeting.create(
 ```
 
 ### Parameter Description
-
 - `topic`: Meeting topic
 - `date`: Meeting date (YYYY-MM-DD)
 - `time`: Meeting time (HH:MM)
@@ -419,30 +414,29 @@ feishu_meeting.create(
 - `group_name`: Group name
 
 ### Command Line Usage
-
 ```bash
 python3 send_meeting_card.py '{"topic": "Weekly Meeting", "time": "14:00"}'
 ```
-
 ```
 
-### Step 4: Integrate into OpenClaw System
+### 步骤 4：集成到 OpenClaw 系统
 
-#### The Most Important Solution: Let OpenClaw debug itself
-We are using an AI. In my experiments, I encountered situations where I had written skills but OpenClaw did not recognize them. Later, I let OpenClaw debug itself, and it performed some black-box operations to automatically complete the recognition. This method has remained effective in my subsequent projects.
+#### 最重要的解决方案：让 OpenClaw 自己调试自己
+我们使用的是 AI。在我的实验中，遇到过我写了技能但 OpenClaw 不识别的情况，后来我让 OpenClaw 自己调试自己，它进行了一些黑盒操作，自动完成了识别。这个方法在我后续的项目中一直有效。
 
 ```bash
 # Open the OpenClaw dashboard for self-debugging, tell OpenClaw where your completed skills are, and let it perform registration and configuration.
 openclaw dashboard
 ```
 
-#### 1. Tool Registration
 
-To let OpenClaw recognize this Skill, it needs to be registered in the appropriate configuration file. Usually, OpenClaw will automatically scan the `~/.openclaw/skills/` directory for Skills.
+#### 1. 工具注册
 
-#### 2. Configure Authentication Info
+要让 OpenClaw 识别这个 Skill，需要在相应的配置文件中注册。通常 OpenClaw 会自动扫描 `~/.openclaw/skills/` 目录下的 Skills。
 
-Ensure the Feishu application authentication info is configured in OpenClaw:
+#### 2. 配置认证信息
+
+确保在 OpenClaw 中配置了飞书应用的认证信息：
 
 ```json
 // ~/.openclaw/agents/main/agent/auth-profiles.json
@@ -456,7 +450,7 @@ Ensure the Feishu application authentication info is configured in OpenClaw:
 }
 ```
 
-#### 3. Test Skill Functionality
+#### 3. 测试 Skill 功能
 
 ```bash
 # Enter Skill directory
@@ -469,11 +463,11 @@ python3 send_meeting_card.py
 python3 send_meeting_card.py '{"topic": "Test Meeting", "time": "16:00", "attendees": ["Test User"]}'
 ```
 
-### Step 5: Use Skill in OpenClaw
+### 步骤 5：在 OpenClaw 中使用 Skill
 
-#### 1. Calling via Agent
+#### 1. 通过 Agent 调用
 
-When a user says: "Schedule a meeting", OpenClaw should automatically invoke this Skill:
+当用户说："安排一个会议"时，OpenClaw 应该自动调用这个 Skill：
 
 ```python
 # In Agent's processing logic
@@ -489,24 +483,23 @@ feishu_meeting.create(
 )
 ```
 
-#### 2. Direct Command Line Call
+#### 2. 直接命令行调用
 
 ```bash
 openclaw message send --channel feishu --target [group_id] --message '[Card Content]'
 ```
 
-## Key Technical Points
+## 关键技术要点
 
-### 1. Feishu Card Format
+### 1. 飞书卡片格式
 
-Feishu interactive cards require a specific JSON structure:
+飞书交互式卡片需要特定的 JSON 结构：
+- `msg_type`：必须为 "interactive"
+- `card`：包含完整的卡片定义
+- `elements`：定义卡片的各种组件
+- `actions`：定义交互按钮
 
-- `msg_type`: Must be "interactive"
-- `card`: Contains the full card definition
-- `elements`: Defines various components of the card
-- `actions`: Defines interactive buttons
-
-### 2. Error Handling Mechanism
+### 2. 错误处理机制
 
 ```python
 try:
@@ -520,15 +513,15 @@ except Exception as e:
     return {"success": False, "error": f"Exception: {str(e)}"}
 ```
 
-### 3. Compatibility Considerations
+### 3. 兼容性考虑
 
-- **OpenClaw Integration Mode**: Via `from tools import message`
-- **Independent Execution Mode**: Calling openclaw commands via subprocess
-- **Command Line Mode**: Directly processing JSON parameters
+- **OpenClaw 集成模式**：通过 `from tools import message`
+- **独立执行模式**：通过 subprocess 调用 openclaw 命令
+- **命令行模式**：直接处理 JSON 参数
 
-## Debugging and Troubleshooting
+## 调试和故障排除
 
-### 1. Debugging Tips
+### 1. 调试技巧
 
 ```bash
 # Enable debug mode
@@ -541,23 +534,20 @@ tail -f ~/.openclaw/logs/gateway.log
 python3 -c "import json; print(json.dumps(card_content, indent=2))"
 ```
 
-### 2. Verification Steps
+### 2. 验证步骤
 
-1. **Skill Recognition Verification**
-
+1. **Skill 识别验证**
    ```bash
    openclaw skills list
    ```
 
-2. **Authentication Verification**
-
+2. **认证验证**
    ```bash
    # Test Feishu API connection
    python3 -c "from tools import message; print('OK')"
    ```
 
-3. **Function Verification**
-
+3. **功能验证**
    ```bash
    # Test card creation
    python3 send_meeting_card.py
@@ -565,9 +555,9 @@ python3 -c "import json; print(json.dumps(card_content, indent=2))"
 
 ---
 
-## Technical Support and Product Discussion
+## 技术支持和产品讨论
 
-Thank you for choosing our product! We provide multiple communication channels to ensure you have a smooth product experience.
+感谢您选择我们的产品！我们提供多种沟通渠道，确保您拥有顺畅的产品体验。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

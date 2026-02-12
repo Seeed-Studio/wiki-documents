@@ -1,65 +1,67 @@
 ---
-description: "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
-title: "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
+description: "ReSpeaker + OpenClaw: Localización Inteligente de Grupos Lark y Envío de Tarjetas de Reunión Interactivas"
+title: "ReSpeaker + OpenClaw: Localización Inteligente de Grupos Lark y Envío de Tarjetas de Reunión Interactivas"
 keywords:
 - reSpeaker_XVF3800_USB_4_Mic_Array
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
-slug: /respeaker_xvf_3800_openclaw
+slug: /es/respeaker_xvf_3800_openclaw
 sku: 114993702,114993700
 last_update:
   date: 2/10/2026
   author: Mingxi
 ---
 
-# ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push
+# ReSpeaker + OpenClaw: Localización Inteligente de Grupos Lark y Envío de Tarjetas de Reunión Interactivas
 
-> Want to give your robot voice interaction capabilities? Try Seeed Studio's ReSpeaker series! The target of this project is to integrate the reSpeaker XVF3800 USB 4-Mic Array with OpenClaw, enabling voice-controlled AI agent operation. With reSpeaker's powerful audio capture and noise reduction capabilities, combined with OpenClaw's flexible AI agent framework, you can easily create a voice-controlled smart assistant that can understand and respond to your commands. This demo demonstrates how to use reSpeaker to control Openclaw, enabling it to automatically locate Lark groups and send interactive meeting invitation cards.
-> [Project Source Code Repository](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
-> [reSpeaker Product Source Code](https://github.com/respeaker)
-> [reSpeaker 4-Mic Array | Seeed Studio Purchase Link](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)
->
+> ¿Quieres darle capacidades de interacción por voz a tu robot? ¡Prueba la serie ReSpeaker de Seeed Studio! El objetivo de este proyecto es integrar el reSpeaker XVF3800 USB 4-Mic Array con OpenClaw, habilitando la operación de agentes de IA controlados por voz. Con las poderosas capacidades de captura de audio y reducción de ruido de reSpeaker, combinadas con el marco flexible de agentes de IA de OpenClaw, puedes crear fácilmente un asistente inteligente controlado por voz que puede entender y responder a tus comandos. Esta demostración muestra cómo usar reSpeaker para controlar Openclaw, permitiéndole localizar automáticamente grupos Lark y enviar tarjetas de invitación de reunión interactivas.
+> [Repositorio de Código Fuente del Proyecto](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
+> [Código Fuente del Producto reSpeaker](https://github.com/respeaker)
+> [reSpeaker 4-Mic Array | Enlace de Compra Seeed Studio](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)
+> 
 > ![reSpeaker XVF3800](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg)
 >
 
-## Result Showcase
+## Demostración de Resultados
 
-Below is a demonstration of the actual operation of this project:
+A continuación se muestra una demostración de la operación real de este proyecto:
 
-### Demo Video
+### Video de Demostración
 
 <video src="https://files.seeedstudio.com/wiki/reSpeaker-openclaw/DemoVideo.mp4" controls width="100%"></video>
 
-### Function Demonstration Description
 
-The video demonstrates a complete voice interaction workflow:
+### Descripción de la Demostración de Funciones
 
-1. **Voice Wake-up** - Using reSpeaker microphone array for voice pickup.
-2. **Speech Recognition** - Whisper model recognizes voice commands in real-time.
-3. **Information Extraction** - Automatically parses meeting topic, time, location, and participants.
-4. **Card Generation** - Creates a beautiful Feishu interactive meeting card.
-5. **One-click Send** - Card is sent to a specified Feishu group chat.
-6. **Calendar Event Creation** - Click the card button to directly create an event in Feishu calendar.
+El video demuestra un flujo de trabajo completo de interacción por voz:
 
-### Actual Effect Screenshot
+1. **Activación por Voz** - Usando el arreglo de micrófonos reSpeaker para captura de voz.
+2. **Reconocimiento de Voz** - El modelo Whisper reconoce comandos de voz en tiempo real.
+3. **Extracción de Información** - Analiza automáticamente el tema de la reunión, hora, ubicación y participantes.
+4. **Generación de Tarjeta** - Crea una hermosa tarjeta de reunión interactiva de Feishu.
+5. **Envío con Un Clic** - La tarjeta se envía a un chat de grupo Feishu especificado.
+6. **Creación de Evento de Calendario** - Haz clic en el botón de la tarjeta para crear directamente un evento en el calendario de Feishu.
 
-After successful execution, the Feishu group will receive an interactive card as follows:
+### Captura de Pantalla del Efecto Real
 
-![Effect Showcase](https://files.seeedstudio.com/wiki/reSpeaker-openclaw/result.png)
+Después de la ejecución exitosa, el grupo Feishu recibirá una tarjeta interactiva como la siguiente:
+
+![Demostración de Efecto](https://files.seeedstudio.com/wiki/reSpeaker-openclaw/result.png)
+
 
 ---
 
-## Project Background
+## Antecedentes del Proyecto
 
-While developing voice assistant projects, I found the need to create a Skill capable of sending Feishu interactive meeting cards. Unlike plain text messages, interactive cards require a specific JSON structure and Feishu API support, which prompted me to dive deeper into OpenClaw's Skill development mechanism.
+Mientras desarrollaba proyectos de asistente de voz, encontré la necesidad de crear una Skill capaz de enviar tarjetas de reunión interactivas de Feishu. A diferencia de los mensajes de texto plano, las tarjetas interactivas requieren una estructura JSON específica y soporte de la API de Feishu, lo que me motivó a profundizar en el mecanismo de desarrollo de Skills de OpenClaw.
 
-This project combines speech recognition, natural language processing, and the Feishu API to implement the function of automatically creating and sending interactive meeting invitation cards to Feishu groups via **voice input**.
+Este proyecto combina reconocimiento de voz, procesamiento de lenguaje natural y la API de Feishu para implementar la función de crear y enviar automáticamente tarjetas de invitación de reunión interactivas a grupos Feishu mediante **entrada de voz**.
 
-## Voice Input Feature
+## Función de Entrada de Voz
 
-This project supports creating meeting cards via voice commands. Below is the complete voice input solution:
+Este proyecto soporta la creación de tarjetas de reunión mediante comandos de voz. A continuación se presenta la solución completa de entrada de voz:
 
-### Voice Input Processing Workflow
+### Flujo de Trabajo de Procesamiento de Entrada de Voz
 
 ```python
 # Example voice input
@@ -76,15 +78,14 @@ This project supports creating meeting cards via voice commands. Below is the co
 }
 ```
 
-### Voice Recognition Configuration
+### Configuración de Reconocimiento de Voz
 
-#### 1. Hardware Requirements
-
-- **reSpeaker 4-Mic Array** - 4-microphone circular array
+#### 1. Requisitos de Hardware
+- **reSpeaker 4-Mic Array** - Arreglo circular de 4 micrófonos
 - 2GB+ RAM
-- Internet connection
+- Conexión a Internet
 
-#### 2. Install Speech Recognition Model
+#### 2. Instalar Modelo de Reconocimiento de Voz
 
 ```bash
 # Download Whisper model
@@ -97,29 +98,27 @@ wget https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/tiny.en-
 wget https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/tiny.en-tokens.txt
 ```
 
-#### 3. Voice Command Examples
+#### 3. Ejemplos de Comandos de Voz
 
-**English Commands:**
-
+**Comandos en Inglés:**
 - `"Schedule a meeting with Tom tomorrow at 3pm"`
 - `"Book a review meeting today at 2pm in Room 1"`
 - `"Create a discussion next Monday at 10am"`
 
-**Chinese Commands:**
-
+**Comandos en Chino:**
 - `"Tomorrow at 3pm, have a meeting with Tom"`
 - `"Today at 2pm, create a review meeting in Room 1"`
 - `"Next Monday 10am, create a discussion meeting"`
 
-### Voice Input Workflow
+### Flujo de Trabajo de Entrada de Voz
 
-1. **Speech Recognition** - 5 seconds recording, Whisper model recognition.
-2. **Information Parsing** - Extracting time, person, location, etc.
-3. **Card Generation** - Creating a Feishu interactive meeting card.
-4. **Group Sending** - Sending to the configured Feishu group.
-5. **Result Feedback** - Displaying sending status and Card ID.
+1. **Reconocimiento de Voz** - Grabación de 5 segundos, reconocimiento del modelo Whisper.
+2. **Análisis de Información** - Extrayendo hora, persona, ubicación, etc.
+3. **Generación de Tarjeta** - Creando una tarjeta de reunión interactiva de Feishu.
+4. **Envío a Grupo** - Enviando al grupo Feishu configurado.
+5. **Retroalimentación de Resultado** - Mostrando estado de envío e ID de Tarjeta.
 
-### Start Voice Input Program
+### Iniciar Programa de Entrada de Voz
 
 ```bash
 cd ~/feishu_card
@@ -128,39 +127,36 @@ python3 Demo.py
 
 ---
 
-## Skill Development Complete Process
+## Proceso Completo de Desarrollo de Skill
 
-### Step 1: Understand OpenClaw Skill Architecture
+### Paso 1: Entender la Arquitectura de Skill de OpenClaw
 
-OpenClaw's Skill system is based on a modular design. Each Skill is an independent Python module that interacts with the OpenClaw core system through specific interfaces.
+El sistema de Skills de OpenClaw está basado en un diseño modular. Cada Skill es un módulo Python independiente que interactúa con el sistema central de OpenClaw a través de interfaces específicas.
 
-**Key Concepts:**
+**Conceptos Clave:**
+- **Directorio de Skill**: `~/.openclaw/skills/[skill_name]/`
+- **Archivo de Entrada**: `__init__.py` o un archivo Python especificado.
+- **Registro de Herramienta**: Registrado mediante el decorador `@tool`.
+- **Archivo de Configuración**: `SKILL.md` proporciona instrucciones de uso.
 
-- **Skill Directory**: `~/.openclaw/skills/[skill_name]/`
-- **Entry File**: `__init__.py` or a specified Python file.
-- **Tool Registration**: Registered via the `@tool` decorator.
-- **Configuration File**: `SKILL.md` provides usage instructions.
+### Paso 2: Crear Estructura Básica de Skill
 
-### Step 2: Create Skill Basic Structure
-
-#### 1. Create Skill Directory
-
+#### 1. Crear Directorio de Skill
 ```bash
 mkdir -p ~/.openclaw/skills/feishu_meeting
 cd ~/.openclaw/skills/feishu_meeting
 ```
 
-#### 2. Create Core Files
-
+#### 2. Crear Archivos Principales
 ```bash
 touch __init__.py
 touch send_meeting_card.py
 touch SKILL.md
 ```
 
-### Step 3: Write Core Function Code
+### Paso 3: Escribir Código de Función Principal
 
-#### 1. Main Function File: `send_meeting_card.py`
+#### 1. Archivo de Función Principal: `send_meeting_card.py`
 
 ```python
 #!/usr/bin/env python3
@@ -176,7 +172,7 @@ from typing import Dict, Any, Optional
 
 def create_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
     """Create Feishu interactive meeting card"""
-    
+
     # Parameter extraction and default value processing
     topic = params.get("topic", "Meeting")
     date = params.get("date", datetime.now().strftime("%Y-%m-%d"))
@@ -184,10 +180,10 @@ def create_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
     attendees = params.get("attendees", [])
     location = params.get("location", "TBD")
     duration = params.get("duration", 60)
-    
+
     # Construct attendees string
     attendees_str = ", ".join(attendees) if attendees else "TBD"
-    
+
     # Create Feishu interactive card structure
     card_content = {
         "msg_type": "interactive",
@@ -255,22 +251,22 @@ def create_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
             ]
         }
     }
-    
+
     return card_content
 
 def send_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
     """Send meeting card to Feishu group"""
-    
+
     try:
         # Create card content
         card_content = create_meeting_card(params)
-        
+
         # Get group ID (can be specified in params or use default)
         group_chat_id = params.get("group_chat_id", "oc_837f7a564514f")
-        
+
         # Send using OpenClaw message tool
         result = send_feishu_message(group_chat_id, card_content)
-        
+
         if result.get("success"):
             return {
                 "success": True,
@@ -282,7 +278,7 @@ def send_meeting_card(params: Dict[str, Any]) -> Dict[str, Any]:
                 "success": False,
                 "error": result.get("error", "Failed to send")
             }
-            
+
     except Exception as e:
         return {
             "success": False,
@@ -294,21 +290,21 @@ def send_feishu_message(target: str, content: Dict[str, Any]) -> Dict[str, Any]:
     try:
         # Import OpenClaw message tool
         from tools import message
-        
+
         # Send message
         response = message.send(
             channel="feishu",
             target=target,
             message=json.dumps(content, ensure_ascii=False)
         )
-        
+
         return {"success": True, "message_id": response.get("message_id")}
-        
+
     except ImportError:
         # Standby plan if running independently
         import subprocess
         import json
-        
+
         try:
             cmd = [
                 "openclaw", "message", "send",
@@ -316,14 +312,14 @@ def send_feishu_message(target: str, content: Dict[str, Any]) -> Dict[str, Any]:
                 "--target", target,
                 "--message", json.dumps(content, ensure_ascii=False)
             ]
-            
+
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
-            
+
             if result.returncode == 0:
                 return {"success": True, "message_id": "sent_via_cli"}
             else:
                 return {"success": False, "error": result.stderr}
-                
+
         except Exception as e:
             return {"success": False, "error": str(e)}
     except Exception as e:
@@ -335,7 +331,7 @@ def main():
         if sys.argv[1] == "--help":
             print("Usage: python3 send_meeting_card.py '{\"topic\": \"Meeting\", \"time\": \"15:00\"}'")
             return
-            
+
         try:
             params = json.loads(sys.argv[1])
         except json.JSONDecodeError:
@@ -350,7 +346,7 @@ def main():
             "attendees": ["Zhang San", "Li Si"],
             "location": "Meeting Room A"
         }
-    
+
     result = send_meeting_card(params)
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
@@ -358,7 +354,7 @@ if __name__ == "__main__":
     main()
 ```
 
-#### 2. Initialization File: `__init__.py`
+#### 2. Archivo de Inicialización: `__init__.py`
 
 ```python
 """
@@ -371,7 +367,7 @@ from .send_meeting_card import send_meeting_card, create_meeting_card
 __all__ = ['send_meeting_card', 'create_meeting_card']
 ```
 
-#### 3. Documentation File: `SKILL.md`
+#### 3. Archivo de Documentación: `SKILL.md`
 
 ```markdown
 # Feishu Meeting Skill
@@ -409,7 +405,6 @@ feishu_meeting.create(
 ```
 
 ### Parameter Description
-
 - `topic`: Meeting topic
 - `date`: Meeting date (YYYY-MM-DD)
 - `time`: Meeting time (HH:MM)
@@ -419,30 +414,29 @@ feishu_meeting.create(
 - `group_name`: Group name
 
 ### Command Line Usage
-
 ```bash
 python3 send_meeting_card.py '{"topic": "Weekly Meeting", "time": "14:00"}'
 ```
-
 ```
 
-### Step 4: Integrate into OpenClaw System
+### Paso 4: Integrar en el Sistema OpenClaw
 
-#### The Most Important Solution: Let OpenClaw debug itself
-We are using an AI. In my experiments, I encountered situations where I had written skills but OpenClaw did not recognize them. Later, I let OpenClaw debug itself, and it performed some black-box operations to automatically complete the recognition. This method has remained effective in my subsequent projects.
+#### La Solución Más Importante: Dejar que OpenClaw se depure a sí mismo
+Estamos usando una IA. En mis experimentos, encontré situaciones donde había escrito habilidades pero OpenClaw no las reconocía. Más tarde, dejé que OpenClaw se depurara a sí mismo, y realizó algunas operaciones de caja negra para completar automáticamente el reconocimiento. Este método ha seguido siendo efectivo en mis proyectos posteriores.
 
 ```bash
 # Open the OpenClaw dashboard for self-debugging, tell OpenClaw where your completed skills are, and let it perform registration and configuration.
 openclaw dashboard
 ```
 
-#### 1. Tool Registration
 
-To let OpenClaw recognize this Skill, it needs to be registered in the appropriate configuration file. Usually, OpenClaw will automatically scan the `~/.openclaw/skills/` directory for Skills.
+#### 1. Registro de Herramientas
 
-#### 2. Configure Authentication Info
+Para que OpenClaw reconozca esta Habilidad, necesita ser registrada en el archivo de configuración apropiado. Usualmente, OpenClaw escaneará automáticamente el directorio `~/.openclaw/skills/` en busca de Habilidades.
 
-Ensure the Feishu application authentication info is configured in OpenClaw:
+#### 2. Configurar Información de Autenticación
+
+Asegúrate de que la información de autenticación de la aplicación Feishu esté configurada en OpenClaw:
 
 ```json
 // ~/.openclaw/agents/main/agent/auth-profiles.json
@@ -456,7 +450,7 @@ Ensure the Feishu application authentication info is configured in OpenClaw:
 }
 ```
 
-#### 3. Test Skill Functionality
+#### 3. Probar Funcionalidad de la Habilidad
 
 ```bash
 # Enter Skill directory
@@ -469,11 +463,11 @@ python3 send_meeting_card.py
 python3 send_meeting_card.py '{"topic": "Test Meeting", "time": "16:00", "attendees": ["Test User"]}'
 ```
 
-### Step 5: Use Skill in OpenClaw
+### Paso 5: Usar la Habilidad en OpenClaw
 
-#### 1. Calling via Agent
+#### 1. Llamada a través del Agente
 
-When a user says: "Schedule a meeting", OpenClaw should automatically invoke this Skill:
+Cuando un usuario dice: "Programar una reunión", OpenClaw debería invocar automáticamente esta Habilidad:
 
 ```python
 # In Agent's processing logic
@@ -489,24 +483,23 @@ feishu_meeting.create(
 )
 ```
 
-#### 2. Direct Command Line Call
+#### 2. Llamada Directa por Línea de Comandos
 
 ```bash
 openclaw message send --channel feishu --target [group_id] --message '[Card Content]'
 ```
 
-## Key Technical Points
+## Puntos Técnicos Clave
 
-### 1. Feishu Card Format
+### 1. Formato de Tarjeta Feishu
 
-Feishu interactive cards require a specific JSON structure:
+Las tarjetas interactivas de Feishu requieren una estructura JSON específica:
+- `msg_type`: Debe ser "interactive"
+- `card`: Contiene la definición completa de la tarjeta
+- `elements`: Define varios componentes de la tarjeta
+- `actions`: Define botones interactivos
 
-- `msg_type`: Must be "interactive"
-- `card`: Contains the full card definition
-- `elements`: Defines various components of the card
-- `actions`: Defines interactive buttons
-
-### 2. Error Handling Mechanism
+### 2. Mecanismo de Manejo de Errores
 
 ```python
 try:
@@ -520,15 +513,15 @@ except Exception as e:
     return {"success": False, "error": f"Exception: {str(e)}"}
 ```
 
-### 3. Compatibility Considerations
+### 3. Consideraciones de Compatibilidad
 
-- **OpenClaw Integration Mode**: Via `from tools import message`
-- **Independent Execution Mode**: Calling openclaw commands via subprocess
-- **Command Line Mode**: Directly processing JSON parameters
+- **Modo de Integración OpenClaw**: A través de `from tools import message`
+- **Modo de Ejecución Independiente**: Llamando comandos openclaw a través de subprocess
+- **Modo de Línea de Comandos**: Procesando directamente parámetros JSON
 
-## Debugging and Troubleshooting
+## Depuración y Solución de Problemas
 
-### 1. Debugging Tips
+### 1. Consejos de Depuración
 
 ```bash
 # Enable debug mode
@@ -541,23 +534,20 @@ tail -f ~/.openclaw/logs/gateway.log
 python3 -c "import json; print(json.dumps(card_content, indent=2))"
 ```
 
-### 2. Verification Steps
+### 2. Pasos de Verificación
 
-1. **Skill Recognition Verification**
-
+1. **Verificación de Reconocimiento de Habilidad**
    ```bash
    openclaw skills list
    ```
 
-2. **Authentication Verification**
-
+2. **Verificación de Autenticación**
    ```bash
    # Test Feishu API connection
    python3 -c "from tools import message; print('OK')"
    ```
 
-3. **Function Verification**
-
+3. **Verificación de Función**
    ```bash
    # Test card creation
    python3 send_meeting_card.py
@@ -565,9 +555,9 @@ python3 -c "import json; print(json.dumps(card_content, indent=2))"
 
 ---
 
-## Technical Support and Product Discussion
+## Soporte Técnico y Discusión del Producto
 
-Thank you for choosing our product! We provide multiple communication channels to ensure you have a smooth product experience.
+¡Gracias por elegir nuestro producto! Proporcionamos múltiples canales de comunicación para asegurar que tengas una experiencia fluida con el producto.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
