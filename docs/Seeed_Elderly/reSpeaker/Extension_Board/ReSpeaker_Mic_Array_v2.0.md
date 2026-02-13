@@ -1,6 +1,6 @@
 ---
 description: ReSpeaker Mic Array v2.0
-title: ReSpeaker Mic Array v2.0
+title: reSpeaker USB 4-Mic Array XVF3000 v2.0
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
