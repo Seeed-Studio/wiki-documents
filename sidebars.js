@@ -210,6 +210,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Hall_Sensor',
               ],
             },
             {
@@ -5493,6 +5494,7 @@ const sidebars = {
                 'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-80cm_Infrared_Proximity_Sensor',
                 'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Gesture_v1.0',
                 'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Adjustable_PIR_Motion_Sensor',
+                'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Hall_Sensor',
               ],
             },
             {
@@ -10660,6 +10662,7 @@ const sidebars = {
                 'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-80cm_Infrared_Proximity_Sensor',
                 'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-Gesture_v1.0',
                 'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-Adjustable_PIR_Motion_Sensor',
+                'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-Hall_Sensor',
               ],
             },
             {
@@ -15821,6 +15824,7 @@ const sidebars = {
                 'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-80cm_Infrared_Proximity_Sensor',
                 'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-Gesture_v1.0',
                 'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-Adjustable_PIR_Motion_Sensor',
+                'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-Hall_Sensor',
               ],
             },
             {
