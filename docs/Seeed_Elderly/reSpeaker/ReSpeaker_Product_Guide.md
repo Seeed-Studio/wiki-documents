@@ -1,6 +1,6 @@
 ---
 description: ReSpeaker Product Guide
-title: ReSpeaker Product Guide
+title: reSpeaker Product Guide
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

@@ -1,6 +1,6 @@
 ---
 description: Getting Started with ReSpeaker Lite
-title: Getting Started with ReSpeaker Lite
+title: Getting Started with reSpeaker Lite
 keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
