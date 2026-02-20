@@ -75,6 +75,14 @@ last_update:
       <div className="category-group">
         <div className="category-card robot-kits">
 
+          <h3>🤗 Reachy</h3>
+          <div className="card-container">
+              <a href="/cn/reachymini_getting_started" className="content-card">
+                <span className="text">Reachy Mini上手使用</span>
+                <span className="tag recommended">New</span>
+              </a>
+          </div>
+
           <h3>🤗 SO-Arm机械臂</h3>
           <div className="card-container">
               <a href="/cn/lerobot_so100m_new/" className="content-card">

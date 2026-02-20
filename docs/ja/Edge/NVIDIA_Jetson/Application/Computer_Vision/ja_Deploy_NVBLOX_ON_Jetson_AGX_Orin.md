@@ -1,6 +1,6 @@
 ---
-description: このwikiは、Jetson AGX Orinデバイス上でOrbbec RGB-DカメラとNVBloxを展開するための包括的なステップバイステップガイドを提供します。環境設定、依存関係のインストール、Isaac ROS統合、ロボティクスアプリケーション向けのリアルタイム3Dマッピングデモンストレーションをカバーしています。
-title: Jetson AGX Orin上でOrbbecカメラとNVBloxを展開する
+description: このwikiは、Jetson AGX OrinデバイスでOrbbec RGB-DカメラとNVBloxを展開するための包括的なステップバイステップガイドを提供します。環境設定、依存関係のインストール、Isaac ROS統合、ロボティクスアプリケーション向けのリアルタイム3Dマッピングデモンストレーションをカバーしています。
+title: Jetson AGX OrinでOrbbecカメラを使用したNVBloxの展開
 keywords:
 - NVBlox
 - Jetson AGX Orin
@@ -34,19 +34,19 @@ last_update:
 
 リアルタイムで密なTSDF（Truncated Signed Distance Field）およびESDF（Euclidean Signed Distance Field）マップを構築し、高品質な3D再構成、障害物認識ナビゲーション、衝突チェックを可能にします。NVBloxは、自律移動ロボット（AMR）に適したメッシュ、ボクセルベースのコストマップ、3D占有表現も生成できます。
 
-これにより、ハードウェア制約と計算効率が重要な考慮事項であるエッジAIアプリケーションにとって特に価値があります。このwikiでは、**Jetson AGX Orin**上で**ROS 2**統合を使用し、**Orbbec RGB-Dカメラ**とモバイルロボットプラットフォームを使用して、完全にオンデバイスの知覚とナビゲーションパイプラインを実現するIsaac ROS NVBloxの展開方法を実演します。🚀
+これにより、ハードウェア制約と計算効率が重要な考慮事項であるエッジAIアプリケーションにとって特に価値があります。このwikiでは、**Jetson AGX Orin**で**ROS 2**統合を使用し、**Orbbec RGB-Dカメラ**とモバイルロボットプラットフォームを使用して、完全にオンデバイスの知覚とナビゲーションパイプラインを実現するIsaac ROS NVBloxの展開方法を実演します。🚀
 
 </div>
 
 <div align="center">
-    <img width={700}
-     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg" />
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg"/>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-for-Jetson-AGX-Orin-p-6606.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
-</a></div>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱</font></span></strong>
+    </a>
+</div>
 
 ## 前提条件
 
@@ -63,15 +63,15 @@ last_update:
 
 ## 技術的ハイライト
 
-- **リアルタイム3Dマッピング**: NVBloxはGPU加速を使用してリアルタイムで密なTSDFおよびESDFマップを生成し、ロボティクスアプリケーション向けの高品質3Dシーン再構成を可能にします。
+- **リアルタイム3Dマッピング**：NVBloxはGPU加速を使用してリアルタイムで密なTSDFおよびESDFマップを生成し、ロボティクスアプリケーション向けの高品質3Dシーン再構成を可能にします。
 
-- **RGB-Dカメラ統合**: Orbbec RGB-Dカメラからの真の深度情報を活用して、単眼深度推定に依存することなく正確な3D表現を作成します。
+- **RGB-Dカメラ統合**：Orbbec RGB-Dカメラからの真の深度情報を活用して、単眼深度推定に依存することなく正確な3D表現を作成します。
 
-- **エッジ展開に最適化**: Jetson AGX Orinなどのエッジデバイスでの効率的な推論のために特別に設計され、最大性能のためのCUDA最適化を備えています。
+- **エッジ展開向けに最適化**：Jetson AGX Orinなどのエッジデバイスでの効率的な推論のために特別に設計され、最大性能のためのCUDA最適化を備えています。
 
-- **ナビゲーション対応出力**: 自律ナビゲーションと衝突回避に適したメッシュ、ボクセルベースのコストマップ、3D占有グリッドを生成します。
+- **ナビゲーション対応出力**：自律ナビゲーションと衝突回避に適したメッシュ、ボクセルベースのコストマップ、3D占有グリッドを生成します。
 
-- **ROS2ネイティブサポート**: 既存のロボットシステムへの簡単な統合のために、標準的なロボティクスメッセージタイプでシームレスなROS2 Humble統合を提供します。
+- **ROS2ネイティブサポート**：既存のロボットシステムへの簡単な統合のために、標準的なロボティクスメッセージタイプでシームレスなROS2 Humble統合を提供します。
 
 ## 環境設定
 
@@ -213,7 +213,7 @@ cd ~/ros2_ws
 colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
-OrbbecカメラがLinux上で正しく認識されるようにするため、udevルールをインストールします。
+OrbbecカメラがLinux上で正しく認識されるようにするには、udevルールをインストールします。
 
 ソースコード作業ディレクトリに入り、スクリプトを実行：
 
@@ -262,7 +262,7 @@ docker: Error response from daemon: failed to create task for container: failed 
 sudo nvidia-ctk cdi generate --mode=csv --output=/etc/cdi/nvidia.yaml
 ```
 
-コンテナが正常に開始された後、以下のような表示が見えるはずです：
+コンテナが正常に開始された後、以下のような画面が表示されるはずです：
 <div align="center">
   <img width="800" src="https://files.seeedstudio.com/wiki/other/isaac-ros.jpg"/>
 </div>
@@ -295,7 +295,7 @@ sudo mkdir -p /opt/ros/humble/include/foxglove_msgs
 sudo ln -sfn /opt/ros/humble/include/foxglove_msgs/foxglove_msgs/msg /opt/ros/humble/include/foxglove_msgs/msg
 ```
 
-`/workspaces/isaac_ros-dev`でワークスペースをビルドし、初期化：
+`/workspaces/isaac_ros-dev`でワークスペースをビルドして初期化：
 
 ```bash
 colcon build --symlink-install --cmake-args -DBUILD_TESTING=OFF
@@ -329,10 +329,10 @@ ros2 launch orbbec_camera <camera_name>.launch.py
 - gemini_330_series
 
 :::warning
-Docker コンテナ内で Orbbec スクリプトを開始しないでください。前のチュートリアルに従って Orbbec ドライバをインストールしていることを確認してください。⚠️
+Dockerコンテナ内でOrbbecスクリプトを開始してはいけないことに注意してください。前のチュートリアルに従ってOrbbecドライバーをインストールしていることを確認してください。⚠️
 :::
 
-Isaac ROS コンテナはデフォルトでローカルに公開された ROS2 とブリッジします。Docker コンテナ内で、次のように入力します：
+Isaac ROS コンテナは、デフォルトでローカルに公開された ROS2 とブリッジします。Docker コンテナ内で、次のように入力します：
 
 ```bash
 ros2 topic list
@@ -355,7 +355,7 @@ ros2 topic list
 /camera/ir/image_raw
 ```
 
-Orbbec カメラのデータトピックを読み取れることを確認してください。次に、Isaac ROS コンテナで NVBlox サンプルスクリプトを開始します：
+Orbbec カメラのデータトピックが読み取れることを確認してください。次に、Isaac ROS コンテナで NVBlox サンプルスクリプトを開始します：
 
 ```bash
 cd ~/workspaces/isaac_ros-dev
@@ -380,15 +380,15 @@ RViz は以下のように設定できます。必要な可視化結果を有効
   <iframe width="1029" height="579" src="https://www.youtube.com/embed/_TKNGejfGIo" title="Deploy NVBlox on reComputer Mini J501" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-これは、モバイルロボットの障害物検出とシーンの 3D メッシュマップ構築に使用できます。🤖
+これは、モバイルロボットの障害物検出やシーンの 3D メッシュマップ構築に使用できます。🤖
 
-## 参考文献
+## 参考資料
 
-- [Isaac ROS Common GitHub Repository](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common)
-- [Isaac ROS NVBlox GitHub Repository](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox.git)
-- [Isaac NVBlox Orbbec GitHub Repository](https://github.com/jjjadand/isaac-NVblox-Orbbec#)
-- [ROS2 Humble Documentation](https://docs.ros.org/en/humble/)
-- [Orbbec SDK ROS2 Documentation](https://github.com/orbbec/OrbbecSDK_ROS2)
+- [Isaac ROS Common GitHub リポジトリ](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common)
+- [Isaac ROS NVBlox GitHub リポジトリ](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox.git)
+- [Isaac NVBlox Orbbec GitHub リポジトリ](https://github.com/jjjadand/isaac-NVblox-Orbbec#)
+- [ROS2 Humble ドキュメント](https://docs.ros.org/en/humble/)
+- [Orbbec SDK ROS2 ドキュメント](https://github.com/orbbec/OrbbecSDK_ROS2)
 
 ## 技術サポート & 製品ディスカッション
 

@@ -68,7 +68,7 @@ Flashea firmware personalizado para transformar IR Mate en un control remoto de 
 
 - **Diseño Compacto, Alimentado por USB-C**
 
-## Descripción General del Hardware
+## Descripción del Hardware
 
 Entender los componentes básicos del dispositivo te ayudará a usarlo mejor:
 
@@ -170,7 +170,7 @@ El firmware del dispositivo está basado en **ESPHome**, haciéndolo muy fácil 
 
 ## Detalles de Funciones Principales (Firmware de Fábrica)
 
-Si quieres restaurar tu dispositivo o actualizar su firmware, puedes saltar a través del botón de abajo. Hemos creado una página dedicada al Firmware de Flash Directo XIAO Gadget.
+Si quieres restaurar tu dispositivo o actualizar su firmware, puedes saltar a través del botón de abajo. Hemos creado una página dedicada al Flasheo Directo de Firmware XIAO Gadget.
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://gadgets.seeed.cc/" target="_blank" rel="noopener noreferrer">
@@ -182,7 +182,7 @@ Si quieres restaurar tu dispositivo o actualizar su firmware, puedes saltar a tr
 
 Cuando necesites enseñar al IR Mate un nuevo comando de control remoto, sigue estos pasos. La interfaz principal del firmware de fábrica incluye una **lista de selección de ranuras de señal**, junto con botones **Learn** y **Send**.
 
-1. En el panel del dispositivo de Home Assistant, primero encuentra la lista de selección desplegable llamada **"Signal"**.
+1. En el panel del dispositivo de Home Assistant, primero encuentra la lista desplegable de selección llamada **"Signal"**.
 2. Haz clic en la lista desplegable y selecciona la ranura de señal que quieres usar, por ejemplo, **"signal_1"**.
 3. Una vez seleccionada, encuentra el botón **"Learn"** y haz clic en **"PRESS"** junto a él.
 4. El XIAO IR Mate ahora entrará en modo de aprendizaje y comenzará a **vibrar continuamente**, indicando que puedes comenzar el emparejamiento.
@@ -239,7 +239,7 @@ En este capítulo, usaremos un aire acondicionado Gree como ejemplo detallado, p
 ### Prerrequisitos
 
 1. **Instalar ESPHome**: Si aún no lo has hecho, instala e inicia el complemento ESPHome desde la Tienda de Complementos de Home Assistant.
-2. **Obtener el Protocolo de Marca de tu AC**: ESPHome soporta muchos protocolos de marcas de AC (como Gree, Midea, Daikin, etc.). Necesitas conocer la marca de tu aire acondicionado para seleccionar el protocolo correcto.
+2. **Obtener el Protocolo de tu Marca de AC**: ESPHome soporta muchos protocolos de marcas de AC (como Gree, Midea, Daikin, etc.). Necesitas conocer la marca de tu aire acondicionado para seleccionar el protocolo correcto.
 
 ### Flasheando Firmware Personalizado
 
@@ -257,6 +257,7 @@ En este capítulo, usaremos un aire acondicionado Gree como ejemplo detallado, p
 <summary>seeed-ir-v2.yaml</summary>
 ```yaml
 # ==== AUTO-SYNC START: xiao_smart_ir_mate/xiao_smart_ir_mate.yaml ====
+
 substitutions:
   name: "xiao-smart-ir-mate"
   friendly_name: "XIAO Smart IR Mate"
@@ -383,7 +384,7 @@ remote_receiver:
               ESP_LOGI("ir", "Saved signal index: %d", id(signal_select_index));
               id(signal_nvs).save_to_nvs(id(signal_select_index), x);
               id(send_data_vector).clear();
-              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index)); 
+              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index));
               id(is_learning_mode) = false;
               // Learned the signal, turn on the switch
               id(is_learned_signal_script).execute(true);
@@ -599,7 +600,7 @@ interval:
 
 3. **Personaliza Tu Configuración**
       - **Wi-Fi**: Si no usas archivos `!secret`, descomenta la sección `wifi:` y reemplaza `Your_WiFi_SSID` y `Your_WiFi_Password` con tu propia información de Wi-Fi.
-      - **Selecciona el protocolo AC correcto**: ¡Este es el paso más crítico! El ejemplo usa `platform: gree`. Si tu aire acondicionado no es un Gree, reemplázalo con la plataforma de tu marca. ¿Cómo encontrar marcas compatibles? Por favor visita la página de [Componentes Climate de ESPHome](https://esphome.io/components/climate/index.html), que lista todas las marcas compatibles y sus nombres de plataforma (ej., `daikin`, `midea`, `panasonic_ac`, etc.).
+      - **Selecciona el protocolo AC correcto**: ¡Este es el paso más crítico! El ejemplo usa `platform: gree`. Si tu aire acondicionado no es un Gree, reemplázalo con la plataforma de tu marca. ¿Cómo encontrar marcas compatibles? Por favor visita la página de [ESPHome Climate Components](https://esphome.io/components/climate/index.html), que lista todas las marcas compatibles y sus nombres de plataforma (ej., `daikin`, `midea`, `panasonic_ac`, etc.).
           - Después de seleccionar la plataforma correspondiente, también podrías necesitar ajustar parámetros como `model` o modos compatibles según la documentación de esa plataforma.
 4. **Compilar y Flashear**
       - Guarda tu configuración YAML.
@@ -623,7 +624,7 @@ Pero no te detengas ahí, ¡porque esto es solo el comienzo! La verdadera divers
 
 **Escenario de Aplicación**
 
-Mira a tu alrededor. ¿Tienes muchos controles remotos viejos sin usar por ahí? Controles de TVs viejos, DVDs o estéreos, con muchos botones y una gran sensación al tacto, ahora solo juntando polvo en un cajón. ¿No sería genial si pudieras usar los botones de estos controles para controlar tus luces inteligentes, aspiradora robot, o incluso escenas complejas de "bienvenido a casa"?
+Mira a tu alrededor. ¿Tienes muchos controles remotos viejos sin usar por ahí? Controles de TVs viejos, DVDs o estéreos, con muchos botones y una gran sensación táctil, ahora solo juntando polvo en un cajón. ¿No sería genial si pudieras usar los botones de estos controles para controlar tus luces inteligentes, aspiradora robot, o incluso escenas complejas de "bienvenido a casa"?
 
 **Cómo Funciona**
 
@@ -633,7 +634,7 @@ El núcleo de esta idea es transformar el XIAO IR Mate de un "transmisor" a un "
 
   1. **Configurar un Firmware "Oyente":** En tu firmware ESPHome, la configuración principal es el componente `remote_receiver`. El único trabajo del dispositivo después de encenderse es "escuchar" señales IR.
 
-  2. **Identificar el "Código Secreto" de Cada Botón:** Toma un control remoto viejo y presiona cualquier botón apuntándolo al dispositivo. En los logs de ESPHome, verás el código IR único del botón (como una cadena de datos `RAW` o un código de protocolo `NEC`). Anota este "código secreto".
+  2. **Identificar el "Código Secreto" de Cada Botón:** Toma un control remoto viejo y presiona cualquier botón mientras lo apuntas al dispositivo. En los logs de ESPHome, verás el código IR único del botón (como una cadena de datos `RAW` o un código de protocolo `NEC`). Anota este "código secreto".
 
   3. **Crear Reglas de Automatización en HA:** En Home Assistant, configura una automatización con la condición de activación: "Cuando XIAO IR Mate detecte un código secreto IR específico".
 
@@ -671,13 +672,13 @@ El núcleo de esta idea es transformar el XIAO IR Mate de un "transmisor" a un "
 
      - Recibe un reporte de **"toque simple"** -> Alterna todas las **luces Zigbee** de la casa encendido/apagado.
 
-     - Recibe un reporte de **"doble toque"** -> Comanda la **aspiradora robot** para comenzar la limpieza.
+     - Recibe un reporte de **"doble toque"** -> Comanda a la **aspiradora robot** para comenzar la limpieza.
 
      - Recibe un reporte de **"presión larga"** -> Ejecuta una escena "Modo Película", cerrando las cortinas, atenuando las luces, y encendiendo el proyector y sistema de sonido.
 
 - **Ventajas de Este Enfoque**
 
-  - **Romper Límites, Posibilidades Infinitas:** Tu botón táctil ya no es solo parte de un "control remoto IR", sino un interruptor físico para toda tu casa inteligente, capaz de controlar cualquier dispositivo conectado a HA.
+  - **Romper Límites, Posibilidades Infinitas:** Tu botón táctil ya no es solo parte de un "control remoto IR", sino un interruptor físico para todo tu hogar inteligente, capaz de controlar cualquier dispositivo conectado a HA.
 
   - **Definir Flexiblemente, Cambiar por Capricho:** Hoy un doble toque inicia la aspiradora, ¿pero mañana quieres que reproduzca música? Solo edita la automatización en la interfaz de HA, sin necesidad de tocar el firmware en absoluto.
 
@@ -699,7 +700,7 @@ En resumen, no veas el XIAO IR Mate solo como una herramienta IR. ¡Piénsalo co
 > **P: Después de flashear firmware personalizado, ¿cómo restauro el firmware de fábrica?**
 > **R:** Necesitarías obtener el archivo `.bin` del firmware de fábrica o su archivo fuente YAML de ESPHome, y luego flashearlo nuevamente vía ESPHome para sobrescribir el firmware personalizado.
 
-> **P: ¿Cómo uso las señales aprendidas (firmware de fábrica) o el control AC (firmware avanzado) en automatizaciones?**
+> **P: ¿Cómo uso las señales aprendidas (firmware de fábrica) o el control de AC (firmware avanzado) en automatizaciones?**
 > **R:** En el editor de automatización o script de HA, elige "Call service".
 
 ## Recursos

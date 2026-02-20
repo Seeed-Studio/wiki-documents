@@ -241,7 +241,7 @@ esphome:
   project:
     name: "xiao.soil-moisture-monitor"
     version: "1.0"
-  on_boot: 
+  on_boot:
     then:
       - output.turn_off: gpio_3_output
       - output.turn_on: gpio_14_output
@@ -289,7 +289,7 @@ output:
     id: red_led_output
 
   - platform: ledc
-    pin: GPIO21  
+    pin: GPIO21
     id: pwm_output
     frequency: 200kHz  # Set the frequency to 200kHz
 
@@ -300,7 +300,7 @@ output:
   - platform: gpio
     pin: GPIO14
     id: gpio_14_output
-    
+
 light:
   - platform: binary
     id: yellow_led
@@ -517,22 +517,22 @@ binary_sensor:
           } else {
             id(button_press_count) = 0;
           }
-      
-          
+
+
 # interval:
 #   - interval: 10s
 #     then:
 #       - script.execute: check_moisture_once
 
-            
+
 
 # Deep sleep configuration
 deep_sleep:
   id: deep_sleep_control
-  run_duration: 120s  
-  sleep_duration: 180min  
-  wakeup_pin: 
-    number: GPIO2 
+  run_duration: 120s
+  sleep_duration: 180min
+  wakeup_pin:
+    number: GPIO2
     inverted: true
     allow_other_uses: true
     mode: INPUT_PULLUP
@@ -565,7 +565,7 @@ sensor:
             return 1.0 * 100.0;
           }else {
             return ((x - 1.2) / (1.5 - 1.2)) * 100.0;
-          } 
+          }
     unit_of_measurement: "%"
     update_interval: 5s
     force_update: True
@@ -573,7 +573,7 @@ sensor:
   - platform: wifi_signal
     name: "wifi singnal strength"
     update_interval: 10s
-    
+
 # text_sensor:
 #   - platform: template
 #     name: "Soil Moisture Status"   # ✅ Status displayed on the HA panel
@@ -632,7 +632,7 @@ interval:
             } else {
               id(deep_sleep_control).set_sleep_duration(28800000);
               return "Normal Moisture";
-            }  
+            }
 
 # Enable logging
 logger:

@@ -71,8 +71,15 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'ReSpeaker_2-Mics_Pi_HAT', 'v1-deprecated', 'ReSpeaker_2_Mics_Pi_HAT_Raspberry.md'), //1.29
   path.join(docsDirectory, 'Sensor', 'ReSpeaker_2-Mics_Pi_HAT', 'v2', 'ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2.md'), //1.29
   path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_nRF54L15-Sense', 'XIAO_nRF54L15-Sense_Zigbee.md'), //1.27
-  
-  
+  path.join(docsDirectory, 'Sensor', 'ReSpeaker_Lite', 'Application', 'respeaker_lite_ha.md'), //2.6
+  path.join(docsDirectory, 'Sensor', 'SeeedStudio_XIAO', 'SeeedStudio_XIAO_Series_Projects.md'), //2.4
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'introduction.md'), //2.4
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'Open_Source_FW', 'lorawan_tracker_with_ses.md'), //2.4
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'Open_Source_FW', 't1000_e_arduino_examples.md'), //2.4
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Generative_AI', 'Local_OpenClaw(Clawdbot)_on_reComputer_Jetson.md'), //2.3
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_agora_ten_framework.md'), //2.9
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_openclaw.md'), //2.10
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_arm.md'), //2.6
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

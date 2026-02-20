@@ -210,6 +210,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Hall_Sensor',
               ],
             },
             {
@@ -568,7 +569,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
-                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Voltage_Divider',
               ],
             },
@@ -1938,7 +1938,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'ReSpeaker',
+      label: 'reSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -1948,7 +1948,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3800',
+          label: 'reSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -1959,7 +1959,7 @@ const sidebars = {
             
             {
               type: 'category',
-              label: 'ReSpeaker XVF 3800 with XIAO Intro',
+              label: 'reSpeaker XVF 3800 with XIAO Intro',
               collapsed: true,
               collapsible: true,
               link: {
@@ -1986,6 +1986,10 @@ const sidebars = {
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ros2',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_voice_agent',
                     'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_xiaozhi',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_arm',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_agora_ten_framework',
+                    'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_openclaw',
                   ],
                 },
               ],
@@ -1995,7 +1999,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker Lite',
+          label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -2005,7 +2009,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker Lite with XIAO ESP32S3',
+              label: 'reSpeaker Lite with XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
@@ -2044,7 +2048,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'ReSpeaker 2-Mics Pi HAT',
+          label: 'reSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
@@ -2071,7 +2075,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
@@ -3153,6 +3157,22 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_flash_os',
                 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_configure_system',
                 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/reComputer_Industrial_R21xx_assembly_guide'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R22xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_getting_start'
+              },
+              items: [
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_getting_start',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_flash_os',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_configure_system',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/reComputer_Industrial_R22xx_assembly_guide'
               ]
             },
           ]
@@ -5473,6 +5493,7 @@ const sidebars = {
                 'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-80cm_Infrared_Proximity_Sensor',
                 'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Gesture_v1.0',
                 'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Adjustable_PIR_Motion_Sensor',
+                'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Hall_Sensor',
               ],
             },
             {
@@ -5831,7 +5852,6 @@ const sidebars = {
                 'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-Water_Atomization',
                 'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-16-Channel_PWM_Driver-PCA9685',
                 'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-I2C_Motor_Driver-TB6612FNG',
-                'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-Hall_Sensor',
                 'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-Voltage_Divider',
               ],
             },
@@ -7249,6 +7269,10 @@ const sidebars = {
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_ros2',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_voice_agent',
                     'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_xiaozhi',
+                    'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora',
+                    'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_arm',
+                    'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_agora_ten_framework',
+                    'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf_3800_openclaw',
                   ],
                 },
               ],
@@ -9132,6 +9156,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_How_to_run_VLM_on_reComputer',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Local_OpenClaw(Clawdbot)_on_reComputer_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Deploy_Riva_and_Llama2_on_reComputer',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Generative_AI/cn_Real_Time_Subtitle_Recoder_on_Jetson',
@@ -9162,6 +9187,7 @@ const sidebars = {
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Local_Voice_LLM_for_Reachy_Mini',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+                'zh-CN/Edge/NVIDIA_Jetson/Application/Physical_AI/cn_J501_Mini_StarAI_Viola_Fruit_Sorting',
               ]
             },
             // Managed Services
@@ -9448,6 +9474,13 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
+        {
+          type: 'category',
+          label: 'ReachyMini',
+          items: [
+            'zh-CN/Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_Getting_Started',
+          ]
+        },
         {
           type: 'category',
           label: 'Lerobot',
@@ -10627,6 +10660,7 @@ const sidebars = {
                 'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-80cm_Infrared_Proximity_Sensor',
                 'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-Gesture_v1.0',
                 'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-Adjustable_PIR_Motion_Sensor',
+                'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-Hall_Sensor',
               ],
             },
             {
@@ -10985,7 +11019,6 @@ const sidebars = {
                 'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-Water_Atomization',
                 'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-16-Channel_PWM_Driver-PCA9685',
                 'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-I2C_Motor_Driver-TB6612FNG',
-                'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-Hall_Sensor',
                 'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-Voltage_Divider',
               ],
             },
@@ -12403,6 +12436,10 @@ const sidebars = {
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_ros2',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_voice_agent',
                     'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_xiaozhi',
+                    'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_agora',
+                    'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_arm',
+                    'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_agora_ten_framework',
+                    'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf_3800_openclaw',
                   ],
                 },
               ],
@@ -14286,6 +14323,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_How_to_run_VLM_on_reComputer',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Local_OpenClaw(Clawdbot)_on_reComputer_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Deploy_Riva_and_Llama2_on_reComputer',
                 'es/Edge/NVIDIA_Jetson/Application/Generative_AI/es_Real_Time_Subtitle_Recoder_on_Jetson',
@@ -14316,6 +14354,7 @@ const sidebars = {
                 'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Local_Voice_LLM_for_Reachy_Mini',
                 'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+                'es/Edge/NVIDIA_Jetson/Application/Physical_AI/es_J501_Mini_StarAI_Viola_Fruit_Sorting',
               ]
             },
             // Managed Services
@@ -15782,6 +15821,7 @@ const sidebars = {
                 'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-80cm_Infrared_Proximity_Sensor',
                 'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-Gesture_v1.0',
                 'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-Adjustable_PIR_Motion_Sensor',
+                'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-Hall_Sensor',
               ],
             },
             {
@@ -16140,7 +16180,6 @@ const sidebars = {
                 'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-Water_Atomization',
                 'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-16-Channel_PWM_Driver-PCA9685',
                 'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-I2C_Motor_Driver-TB6612FNG',
-                'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-Hall_Sensor',
                 'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-Voltage_Divider',
               ],
             },
@@ -17558,6 +17597,10 @@ const sidebars = {
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_ros2',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_voice_agent',
                     'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_xiaozhi',
+                    'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora',
+                    'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_arm',
+                    'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_agora_ten_framework',
+                    'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf_3800_openclaw',
                   ],
                 },
               ],
@@ -19441,6 +19484,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_run_VLM_on_reComputer',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson',
                 // Projects
+                'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Local_OpenClaw(Clawdbot)_on_reComputer_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Live_VLM_WebUI_on_reComputer_Jetson',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Deploy_Riva_and_Llama2_on_reComputer',
                 'ja/Edge/NVIDIA_Jetson/Application/Generative_AI/ja_Real_Time_Subtitle_Recoder_on_Jetson',
@@ -19471,6 +19515,7 @@ const sidebars = {
                 'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Local_Voice_LLM_for_Reachy_Mini',
                 'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.5_for_LeRobot_SO_Arm_and_Deploy_on_Jetson_Thor',
                 'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_Fine_tune_GR00T_N1.6_for_LeRobot_SO_Arm_and_Deploy_on_AGX_Orin',
+                'ja/Edge/NVIDIA_Jetson/Application/Physical_AI/ja_J501_Mini_StarAI_Viola_Fruit_Sorting',
               ]
             },
             // Managed Services

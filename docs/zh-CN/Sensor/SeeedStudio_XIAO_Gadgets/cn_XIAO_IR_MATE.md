@@ -89,7 +89,7 @@ last_update:
 
 使用标准 USB Type-C 线缆为设备供电。启动后，设备将进入等待配置状态，您将看到**白色 LED 以 1Hz 频率闪烁**。
 
-### 步骤 2：进入 AP 配置模式
+### 步骤 2：进入 AP 配网模式
 
 当网络未配置时，设备将自动创建一个名为 **XIAO IR Mate**（或 **Seeed_ir**，取决于您找到的名称）的 Wi-Fi 热点（AP）。
 
@@ -99,7 +99,7 @@ last_update:
   style={{ display: 'block', margin: 'auto' }}
 />
 
-### 步骤 3：连接到热点并配置网络
+### 步骤 3：连接热点并配置网络
 
 1. 在您的手机或电脑上打开 Wi-Fi 设置，搜索并连接到名为 **XIAO IR Mate** 的网络。
 
@@ -226,7 +226,7 @@ last_update:
 
 ## 高级用法 - 智能空调控制
 
-出厂固件提供的基本"录制-重放"模式是通用的，但在控制具有多种状态的设备（如空调的温度、模式、风速等）时可能会显得笨拙。为了实现更精细、更智能的空调控制，我们可以刷入专用的 ESPHome 固件，将 XIAO IR Mate 从"红外信号重复器"转变为真正的"智能空调控制器"。
+出厂固件提供的基本"录制-重放"模式是通用的，但在控制具有多种状态的设备（如空调的温度、模式、风速等）时可能显得笨拙。为了实现更精细、更智能的空调控制，我们可以刷入专用的 ESPHome 固件，将 XIAO IR Mate 从"红外信号重复器"转变为真正的"智能空调控制器"。
 
 在本章中，我们将以格力空调为详细示例，但这绝不是唯一选择。ESPHome 强大的生态系统支持众多空调品牌，您可以轻松按照本指南中的概念，对配置代码进行微小更改，实现对美的、大金、松下等其他品牌的智能控制。
 
@@ -250,13 +250,14 @@ last_update:
 2. **编辑配置文件**
       - 点击新创建的设备卡片上的 **EDIT** 按钮进入 YAML 配置编辑器。
       - 删除编辑器中的所有默认内容。
-      - **完整复制并粘贴**下面的代码到编辑器中：
+      - **完全复制并粘贴**下面的代码到编辑器中：
 
 <Details>
 
 <summary>seeed-ir-v2.yaml</summary>
 ```yaml
 # ==== AUTO-SYNC START: xiao_smart_ir_mate/xiao_smart_ir_mate.yaml ====
+
 substitutions:
   name: "xiao-smart-ir-mate"
   friendly_name: "XIAO Smart IR Mate"
@@ -383,7 +384,7 @@ remote_receiver:
               ESP_LOGI("ir", "Saved signal index: %d", id(signal_select_index));
               id(signal_nvs).save_to_nvs(id(signal_select_index), x);
               id(send_data_vector).clear();
-              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index)); 
+              id(send_data_vector) = id(signal_nvs).load_from_nvs<long int>(id(signal_select_index));
               id(is_learning_mode) = false;
               // Learned the signal, turn on the switch
               id(is_learned_signal_script).execute(true);
@@ -635,11 +636,11 @@ interval:
 
   2. **识别每个按钮的"密码"：** 拿起一个旧遥控器，指向设备按任意按钮。在 ESPHome 日志中，您将看到按钮的唯一红外代码（如一串 `RAW` 数据或 `NEC` 协议代码）。记下这个"密码"。
 
-  3. **在 HA 中创建自动化规则：** 在 Home Assistant 中，设置一个自动化，触发条件为："当 XIAO IR Mate 检测到特定红外密码时。"
+  3. **在 HA 中创建自动化规则：** 在 Home Assistant 中，设置一个自动化，触发条件为："当 XIAO IR Mate 检测到特定的红外密码时。"
 
   4. **定义动作：** 规则的动作可以是任何事情！例如：
 
-     - 当检测到**电视遥控器的"音量+"按钮**时 -> **启动扫地机器人**开始清洁。
+     - 当检测到**电视遥控器的"音量 +"按钮**时 -> **启动扫地机器人**开始清洁。
 
      - 当检测到**Apple Remote 的"播放"按钮**时 -> **打开浴室灯**。
 

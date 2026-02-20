@@ -39,20 +39,21 @@ Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
 
 ## **Specification**
 
-|Item|Value|
-|---|---|
-|CPU|Dual-core ARM Cortex M0+ processor up to 133MHz|
-|Flash Memory|2MB|
-|SRAM|264KB|
-|Digital I/O Pins|11|
-|Analog I/O Pins|4|
-|PWM Pins|11|
-|I2C interface|1|
-|SPI interface|1|
-|UART interface|1|
-|Power supply and downloading interface| Type-C|
-|Power|3.3V/5V DC|
-|Dimensions|21×17.8×3.5mm|
+| Product Name | Seeed Studio XIAO RP2040 |
+|-------------|-------------------------|
+| **Chipset** | [Silicon - Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/microcontrollers/silicon.html#rp2040) |
+| **Processor** | Dual Cortex M0+ processor running at up to 133 MHz |
+| **RAM** | 264KB SRAM |
+| **Flash** | 2MB Onboard Flash |
+| **Interface** | GPIO Pin x14<br/>Digital Pin x11<br/>Analog Pin x4<br/>I2C x1<br/>UART x1<br/>SPI x1<br/>PWM x11 |
+| **Onboard** | User LED (3 Colors) x1<br/>Power LED x1<br/>RGB LED x1<br/>Reset Button x1<br/>Boot Button x1 |
+| **Wireless Connectivity** | / |
+| **Power** | Input Voltage (Type-C): 5V<br/>Input Voltage (BAT): 5V |
+| **Low Power Mode(Typ.)** | / |
+| **Software Compatibility** | Arduino, PlatformIO, MicroPython, CircuitPython, tinyGo, Rust, Zephyr, [Exhibition for XIAO Series \| Seeed Studio Wiki](https://wiki.seeedstudio.com/xiao_topic_page/) |
+| **Working Temperature** | -20°C-70°C |
+| **Dimensions** | 21x17.8mm |
+| **Varients** | [Seeed Studio XIAO RP2040 3PCS Pack \| Save 10% for tiny Mic...](https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-3PCS-p-5942.html)<br/>[Seeed Studio XIAO RP2040 Pre-Soldered \| Plug-and-Play mini ...](https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2040-Pre-Soldered-p-6333.html) |
 
 ## **Hardware Overview**
 
@@ -125,26 +126,20 @@ Please note: The behavior of the built-in programmable Single-colour LEDs (They 
 
 ## Resources
 
-- **[PDF]** [RP2040 datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf)
+**Hardware Design**
+- **📄[Datasheet]** [Raspberry Pi RP2040 Datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf )
+- **📄[Schematic]** [XIAO RP2040 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf )
+- **🗃️[PCB Design Files]** 
+  - [ XIAO RP2040 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip )
+  - [XIAO RP2040 Eagle Project](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Pinout Diagram]** [XIAO RP2040 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx )
 
-- **[PDF]** [Seeed Studio XIAO RP2040 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-v1.3.pdf)
-
-<!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
-
-- **[ZIP]** [Seeed Studio XIAO RP2040 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip)
-
-- **[ZIP]** [Seeed Studio XIAO RP2040 Eagle file](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip)
-
-- **[DXF]** [Seeed Studio XIAO RP2040 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip)
-
-- **[LBR]** [Seeed Studio XIAO RP2040 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr)
-
-- **[XLSX]** [Seeed Studio XIAO RP2040 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-pinout_sheet.xlsx)
-
-- **[STEP]** [Seeed Studio XIAO RP2040 3D Model](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip)
-
-- 🔗 **[Kicad]** [Seeed Studio XIAO RP2040 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
+**Mechanical Design**
+- **📄[2D Dimensions]** [XIAO RP2040 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO-RP2040-DXF.zip )
+- **📄[3D Model]** [ XIAO RP2040 3D Model](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip )
 
 ## Course Resources
 

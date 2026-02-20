@@ -49,70 +49,21 @@ El XIAO RA4M1 integra el chip RA4M1 de Renesas (MCU ARM® Cortex®-M4 de 32 bits
 ### Especificaciones
 
 <!-- Technical Specifications | Table | or bullet -->
+| Producto | XIAO RA4M1 |
+|---------|-----------|
+| **Procesador** | [RA4M1 - Microcontroladores de 32 bits con Arm Cortex-M4 de 48MHz y Controlador LCD y Touch Capacitivo para HMI - Renesas](https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi) <br/>Núcleo Arm® Cortex®-M4 de 48-MHz con FPU <br/>|
+| **RAM** | 32 KB SRAM |
+| **Flash** | 256 KB |
+| **LEDs** | 1x LED de Usuario<br/>1x LED de Alimentación<br/>1x LED RGB |
+| **Interfaces** | 19 IOs:<br/>6x Analógico<br/>19x Digital<br/>2x IIC<br/>2x UART<br/>2x SPI |
+| **Botones** | 1x Botón RESET<br/>1x Botón BOOT |
+| **Seguridad** | AES128/256 |
+| **Bajo Consumo (Típ.)** | `42.6μA@3.7V` |
+| **Compatibilidad de Software** | Arduino IDE |
+| **Temperatura de Trabajo** | -20°C~70°C |
+| **Dimensiones** | 21×17.8 mm |
 
-<table>
-    <thead>
-        <tr>
-            <th>Producto</th>
-            <th>XIAO RA4M1</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th rowspan="2">Procesador</th>
-            <td><a href="https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi">Renesas RA4M1</a></td>
-        </tr>
-        <tr>
-            <td>Núcleo Arm® Cortex®-M4 de 48-MHz</td>
-        </tr>
-        <tr>
-            <th>RAM</th>
-            <td>32 KB SRAM</td>
-        </tr>
-        <tr>
-            <th>Flash</th>
-            <td>256 KB</td>
-        </tr>
-        <tr>
-            <th>LEDs</th>
-            <td>1 LED de Usuario, 1 LED de Alimentación, 1 LED RGB</td>
-        </tr>
-        <tr>
-            <th>Interfaces</th>
-            <td>19 Pines:14x Analógico,19x Digital, 2x IIC, 2x UART, 2x SPI</td>
-        </tr>
-        <tr>
-            <th>Botones</th>
-            <td>1 Botón RESET, 1 Botón BOOT</td>
-        </tr>
-        <tr>
-            <th>Seguridad</th>
-            <td>AES128/256</td>
-        </tr>
-        <tr>
-            <th>Bajo Consumo</th>
-            <td>45μA</td>
-        </tr>
-        <tr>
-            <th>Compatibilidad de Software</th>
-            <td>Arduino IDE</td>
-        </tr>
-        <tr>
-            <th>Temperatura de Funcionamiento</th>
-            <td>-20°C-70°C</td>
-        </tr>
-        <tr>
-            <th>Dimensiones</th>
-            <td>21x17.8 mm</td>
-        </tr>
-        <tr>
-            <th>Alimentación</th>
-            <td>Type-C: 5V<br />BAT: 3.8V</td>
-        </tr>
-    </tbody>
-</table>
-
-### Descripción del Hardware
+### Descripción General del Hardware
 
 Antes de que todo comience, es bastante esencial tener algunos parámetros básicos del producto. La siguiente tabla proporciona información sobre las características del Seeed Studio XIAO RA4M1.
 
@@ -139,36 +90,37 @@ Antes de que todo comience, es bastante esencial tener algunos parámetros bási
 </table>
 
 ## **Mapa de Pines**
-| Pin XIAO        | Función         | Pin del Chip  | Funciones Alternativas                  | Descripción                          |
-| :-------------: | :-------------: | :-------: | :---------------------------------: | :---------------------------------: |
-| 5V              | VBUS             |           |                                     | Entrada/Salida de Alimentación                   |
-| GND             |                  |           |                                     |                                      |
-| 3V3             | 3V3_OUT          |           |                                     | Salida de Alimentación                         |
-| D0              | Analógico          | P014      | ADC09                               | GPIO, ADC                            |
-| D1              | Analógico          | P000      | ADC00                               | GPIO, ADC                            |
-| D2              | Analógico          | P001      | ADC01                               | GPIO, ADC                            |
-| D3              | Analógico          | P002      | ADC02                               | GPIO, ADC                            |
-| D4              | Analógico,SDA1      | P206      |                                     | GPIO, Datos I2C, ADC                  |
-| D5              | Analógico,SCL1      | P100      |                                     | GPIO, Reloj I2C, ADC                 |
-| D6              | TXD2             | P302      | SDA2                                | GPIO, Transmisión UART,I2C              |
-| D7              | RXD2             | P301      | SCL2                                | GPIO, Recepción UART,I2C               |
-| D8              | SPI1_SCK         | P111      |                                     | GPIO, Reloj SPI                      |
-| D9              | SPI1_MISO        | P110      | CRX0                                | GPIO, Datos SPI,UART                  |
-| D10             | SPI1_MOSI        | P109      | CTX0                                | GPIO, Datos SPI,UART                  |
-| D11             | RX9              | P408      |                                     | GPIO, UART                           |
-| D12             | TX9              | P409      |                                     | GPIO,UART                            |
-| D13             | GPIO             | P013      |                                     | GPIO                                 |
-| D14             | GPIO             | P012      |                                     | GPIO                                 |
-| D15             | TXD0             | P101      | SDA0,ADC21,SPI0_MOSI                | GPIO, Transmisión UART, ADC,SPI,I2C     |
-| D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |
-| D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |
-| D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |
-| ADC_BAT         |                  | P400      |                                     | Leer el valor de voltaje de BAT           |
-| Reset           |                  | RES       |                                     | RESET                                |
-| Boot            |                  | P201      |                                     | Entrar en Modo Boot                      |
-| RGB LED         |                  | P112      |                                     | LED RGB                              |
-| CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Rojo                          |
-| USER_LED        |                  | P011      |                                     | Luz de Usuario（Y）|
+| Pin XIAO        | Función         | Pin del Chip  | Funciones Alternativas                  | Descripción                          | Nombre Arduino |
+| :-------------: | :-------------: | :-------: | :---------------------------------: | :---------------------------------: | :----------: |
+| 5V              | VBUS             |           |                                     | Entrada/Salida de Alimentación                   |             |
+| GND             |                  |           |                                     |                                      |              |
+| 3V3             | 3V3_OUT          |           |                                     | Salida de Alimentación                         |              |
+| D0              | Analógico          | P014      | ADC09                               | GPIO, ADC                            |       0   |
+| D1              | Analógico          | P000      | ADC00                               | GPIO, ADC                            |          1     |
+| D2              | Analógico          | P001      | ADC01                               | GPIO, ADC                            |        2       |
+| D3              | Analógico          | P002      | ADC02                               | GPIO, ADC                            |        3   |
+| D4              | SDA1      | P206      |                                            | GPIO, Datos I2C             |               4   |
+| D5              | Analógico,SCL1      | P100      |                                     | GPIO, Reloj I2C, ADC                 |     5    |
+| D6              | TXD2             | P302      | SDA2                                | GPIO, Transmisión UART,I2C              |    6     |
+| D7              | RXD2             | P301      | SCL2                                | GPIO, Recepción UART,I2C               |       7  |
+| D8              | SPI1_SCK         | P111      |                                     | GPIO, Reloj SPI                      |   8      |
+| D9              | SPI1_MISO        | P110      | CRX0                                | GPIO, Datos SPI,UART                  |   9      |
+| D10             | SPI1_MOSI        | P109      | CTX0                                | GPIO, Datos SPI,UART                  |    10    |
+| D11             | RX9              | P408      |                                     | GPIO, UART                           |        |
+| D12             | TX9              | P409      |                                     | GPIO,UART                            |        |
+| D13             | GPIO             | P013      |                                     | GPIO                                 |        |
+| D14             | GPIO             | P012      |                                     | GPIO                                 |        |
+| D15             | TXD0             | P101      | SDA0,ADC21,SPI0_MOSI                | GPIO, Transmisión UART, ADC,SPI,I2C     |       |
+| D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |       |
+| D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |       |
+| D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |       |
+| ADC_BAT         |                  | P400      |                                     | Leer el valor de voltaje de la batería           |       |
+| Reset           |                  | RES       |                                     | RESET                                |       |
+| Boot            |                  | P201      |                                     | Entrar en Modo Boot                      |       |
+| RGB LED         |                  | P112      |                                     | LED RGB                              |    20   |
+| RGB LED         |                  | P500      |                                     | LED RGB   EN                            |    21   |
+| CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Rojo                          |       |
+| USER_LED        |                  | P011      |                                     | Luz de Usuario（Y）                      |    19    |
 ## Introducción
 
 ### Preparación del Hardware
@@ -187,23 +139,23 @@ Algunos cables USB solo pueden suministrar energía y no pueden transferir datos
 
 ### Preparación del Software
 
-La herramienta de programación recomendada para el XIAO RA4M1 es el Arduino IDE, por lo que como parte de la preparación del software, necesitarás completar la instalación de Arduino.
+La herramienta de programación recomendada para el XIAO RA4M1 es Arduino IDE, por lo que como parte de la preparación del software, necesitarás completar la instalación de Arduino.
 
 :::tip
 Si esta es tu primera vez usando Arduino, te recomendamos encarecidamente que consultes [Getting Started with Arduino](https://wiki.seeedstudio.com/es/Getting_Started_with_Arduino/).
 :::
 
-- **Paso 1.** Descarga e Instala la versión estable de Arduino IDE según tu sistema operativo.
+- **Paso 1.** Descarga e instala la versión estable de Arduino IDE según tu sistema operativo.
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Descargar Arduino IDE</font></span></strong></a>
 </div>
 
-- **Paso 2.** Ejecuta la aplicación Arduino.
+- **Paso 2.** Inicia la aplicación Arduino.
 
-- **Paso 3.** Añade el paquete de placa RA4M1 a tu Arduino IDE.
+- **Paso 3.** Agrega el paquete de placa RA4M1 a tu Arduino IDE.
 
-    Navega a **File > Preferences**, y rellena **"Additional Boards Manager URLs"** con la url de abajo:
+    Navega a **File > Preferences**, y completa **"Additional Boards Manager URLs"** con la URL de abajo:
     *https://files.seeedstudio.com/arduino/package_renesas_1.2.0_index.json*
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/arduino_preference.png" style={{width:800, height:'auto'}}/></div>
@@ -225,28 +177,28 @@ A veces, usar el programa incorrecto puede hacer que el XIAO pierda su puerto o 
 
 Cuando encuentres las dos situaciones anteriores, puedes intentar poner el XIAO en modo BootLoader, que puede resolver la mayoría de los problemas de dispositivos no reconocidos y cargas fallidas. El método específico es:
 
-- **Método 1.** Mantén presionado el botón `BOOT` en el XIAO RA4M1 sin soltarlo.
+- **Método 1.** Presiona y mantén presionado el botón `BOOT` en el XIAO RA4M1 sin soltarlo.
 - **Método 2.** Mantén presionado el botón `BOOT` y luego conéctalo a la computadora a través del cable de datos. Suelta el botón BOOT después de conectar a la computadora.
 
-## Reinicio
+## Reset
 
 Cuando el programa funciona de manera anormal, puedes presionar `Reset` una vez durante el encendido para que el XIAO vuelva a ejecutar el programa cargado.
-Cuando mantienes presionado el botón `BOOT` durante el encendido y luego presionas el botón `Reset` una vez, también puedes entrar al modo BootLoader.
+Cuando presionas y mantienes presionada la tecla `BOOT` mientras enciendes y luego presionas la tecla `Reset` una vez, también puedes entrar al modo BootLoader.
 
 ## Ejecuta tu primer programa Blink
 
 A estas alturas, creo que tienes una buena comprensión de las características y hardware del XIAO RA4M1. A continuación, tomemos el programa Blink más simple como ejemplo y realicemos el primer parpadeo para tu XIAO RA4M1!
 
-- **Paso 1.** Ejecuta la aplicación Arduino.
+- **Paso 1.** Inicia la aplicación Arduino.
 - **Paso 2.** Navega a **File > Examples > 01.Basics > Blink**, abre el programa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink_code.png" style={{width:700, height:'auto'}}/></div>
 
-- **Paso 3.** Selecciona el modelo de placa como **XIAO RA4M1**, y selecciona el número de puerto correcto para cargar el programa.
+- **Paso 3.** Selecciona el modelo de placa a **XIAO RA4M1**, y selecciona el número de puerto correcto para cargar el programa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/choose_board.png" style={{width:700, height:'auto'}}/></div>
 
-Una vez que el programa se haya cargado exitosamente, verás el siguiente mensaje de salida y podrás observar que el LED naranja en el lado derecho del XIAO RA4M1 está parpadeando.
+Una vez que el programa se cargue exitosamente, verás el siguiente mensaje de salida y podrás observar que el LED naranja en el lado derecho del XIAO RA4M1 está parpadeando.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/blink.gif" style={{width:700, height:'auto'}}/></div>
 
 ¡Felicidades, has aprendido cómo escribir y cargar programas para el XIAO RA4M1!
@@ -254,7 +206,7 @@ Una vez que el programa se haya cargado exitosamente, verás el siguiente mensaj
 El LED solo se apagará cuando el pin LED del usuario en el XIAO RA4M1 se establezca en un nivel alto, y solo se encenderá cuando el pin se establezca en un nivel bajo.
 :::
 
-## Jugar con LEDs RGB
+## Juega con LEDs RGB
 
 El XIAO RA4M1 viene con un LED RGB integrado que puedes controlar, a continuación hay un ejemplo de cómo cambiar suavemente el color del LED entre rojo, verde y azul.
 
@@ -303,7 +255,7 @@ void loop() {
 
 ```
 
-- **Paso 3.** Selecciona el modelo de placa como **XIAO RA4M1**, y selecciona el número de puerto correcto para cargar el programa.
+- **Paso 3.** Selecciona el modelo de placa a **XIAO RA4M1**, y selecciona el número de puerto correcto para cargar el programa.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/rgb_led.gif" style={{width:600, height:'auto'}}/></div>
 
@@ -394,16 +346,13 @@ void loop() {
 
 ## Recursos
 
-- 📄 **[PDF]** [Hoja de datos RA4M1](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet)
-- 📄 **[PDF]** [Esquemático Seeed Studio XIAO RA4M1](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO-RA4M1_SCH_PDF_v1.0_240719.pdf)
-- 📄 **[ZIP]** [Librerías KiCAD](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO-RA4M1_SCH%26PCB_v1.0_240719.zip)
-<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip) -->
-<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 Eagle file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO_RP2040_v1.22_SCH&PCB.zip) -->
-<!-- - 📄 **[DXF]** [Seeed Studio XIAO RA4M1 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-DXF.zip) -->
-<!-- - 📄 **[LBR]** [Seeed Studio XIAO RA4M1 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr) -->
-<!-- - 📄 **[XLSX]** [Seeed Studio XIAO RA4M1 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-pinout_sheet.xlsx) -->
-- 🔗 **[Kicad]** [Huella Seeed Studio XIAO RA4M1](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
+**Diseño de Hardware**
+- **📄[Hoja de Datos]** [Hoja de Datos Renesas RA4M1](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet )
+- **📄[Esquemático]** [Esquemático XIAO RA4M1](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO%20RA4M1%20V1.01_SCH_PDF_260114%20.pdf.pdf )
+- **🗃️[Archivos de Diseño PCB]** [Proyecto KiCad XIAO RA4M1](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/202003977_XIAO%20RA4M1%20v1.01_SCH&PCB_260114.zip )
+- **🗃️[Librerías de Diseño PCB]** 
+  - [Footprints KiCad XIAO Serie](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [Símbolos SCH KiCad XIAO Serie](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 ## Solución de Problemas
 
 ### P1: ¿Qué debo tener en cuenta al soldar pines?

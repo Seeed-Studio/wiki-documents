@@ -49,68 +49,19 @@ The XIAO RA4M1 integrates Renesas' RA4M1 chip (32-bit ARM® Cortex®-M4 MCU up t
 ### Specification
 
 <!-- Technical Specifications | Table | or bullet -->
-
-<table>
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>XIAO RA4M1</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th rowspan="2">Processor</th>
-            <td><a href="https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi">Renesas RA4M1</a></td>
-        </tr>
-        <tr>
-            <td>48-MHz Arm® Cortex®-M4 Core</td>
-        </tr>
-        <tr>
-            <th>RAM</th>
-            <td>32 KB SRAM</td>
-        </tr>
-        <tr>
-            <th>Flash</th>
-            <td>256 KB</td>
-        </tr>
-        <tr>
-            <th>LEDs</th>
-            <td>1 User LED, 1 Power LED, 1 RGB LED</td>
-        </tr>
-        <tr>
-            <th>Interfaces</th>
-            <td>19 Pins:14x Analog,19x Digital, 2x IIC, 2x UART, 2x SPI</td>
-        </tr>
-        <tr>
-            <th>Buttons</th>
-            <td>1 RESET Button, 1 BOOT Button</td>
-        </tr>
-        <tr>
-            <th>Security</th>
-            <td>AES128/256</td>
-        </tr>
-        <tr>
-            <th>Low Power</th>
-            <td>45μA</td>
-        </tr>
-        <tr>
-            <th>Software Compatibility</th>
-            <td>Arduino IDE</td>
-        </tr>
-        <tr>
-            <th>Working Temperature</th>
-            <td>-20°C-70°C</td>
-        </tr>
-        <tr>
-            <th>Dimensions</th>
-            <td>21x17.8 mm</td>
-        </tr>
-        <tr>
-            <th>Power</th>
-            <td>Type-C: 5V<br />BAT: 3.8V</td>
-        </tr>
-    </tbody>
-</table>
+| Product | XIAO RA4M1 |
+|---------|-----------|
+| **Processor** | [RA4M1 - 32-bit Microcontrollers with 48MHz Arm Cortex-M4 and LCD Controller and Cap Touch for HMI - Renesas](https://www.renesas.com/us/en/products/microcontrollers-microprocessors/ra-cortex-m-mcus/ra4m1-32-bit-microcontrollers-48mhz-arm-cortex-m4-and-lcd-controller-and-cap-touch-hmi) <br/>48-MHz Arm® Cortex®-M4 Core with FPU <br/>|
+| **RAM** | 32 KB SRAM |
+| **Flash** | 256 KB |
+| **LEDs** | 1x User LED<br/>1x Power LED<br/>1x RGB LED |
+| **Interfaces** | 19 IOs:<br/>6x Analog<br/>19x Digital<br/>2x IIC<br/>2x UART<br/>2x SPI |
+| **Buttons** | 1x RESET Button<br/>1x BOOT Button |
+| **Security** | AES128/256 |
+| **Low Power (Typ.)** | `42.6μA@3.7V` |
+| **Software Compatibility** | Arduino IDE |
+| **Working Temperature** | -20°C~70°C |
+| **Dimensions** | 21×17.8 mm |
 
 ### Hardware Overview
 
@@ -139,36 +90,37 @@ Before everything starts, it is quite essential to have some basic parameters of
 </table>
 
 ## **Pin Map**
-| XIAO Pin        | Function         | Chip Pin  | Alternate Functions                  | Description                          |
-| :-------------: | :-------------: | :-------: | :---------------------------------: | :---------------------------------: |
-| 5V              | VBUS             |           |                                     | Power Input/Output                   |
-| GND             |                  |           |                                     |                                      |
-| 3V3             | 3V3_OUT          |           |                                     | Power Output                         |
-| D0              | Analog          | P014      | ADC09                               | GPIO, ADC                            |
-| D1              | Analog          | P000      | ADC00                               | GPIO, ADC                            |
-| D2              | Analog          | P001      | ADC01                               | GPIO, ADC                            |
-| D3              | Analog          | P002      | ADC02                               | GPIO, ADC                            |
-| D4              | Analog,SDA1      | P206      |                                     | GPIO, I2C Data, ADC                  |
-| D5              | Analog,SCL1      | P100      |                                     | GPIO, I2C Clock, ADC                 |
-| D6              | TXD2             | P302      | SDA2                                | GPIO, UART Transmit,I2C              |
-| D7              | RXD2             | P301      | SCL2                                | GPIO, UART Receive,I2C               |
-| D8              | SPI1_SCK         | P111      |                                     | GPIO, SPI Clock                      |
-| D9              | SPI1_MISO        | P110      | CRX0                                | GPIO, SPI Data,UART                  |
-| D10             | SPI1_MOSI        | P109      | CTX0                                | GPIO, SPI Data,UART                  |
-| D11             | RX9              | P408      |                                     | GPIO, UART                           |
-| D12             | TX9              | P409      |                                     | GPIO,UART                            |
-| D13             | GPIO             | P013      |                                     | GPIO                                 |
-| D14             | GPIO             | P012      |                                     | GPIO                                 |
-| D15             | TXD0             | P101      | SDA0,ADC21,SPI0_MOSI                | GPIO, UART Transmit, ADC,SPI,I2C     |
-| D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |
-| D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |
-| D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |
-| ADC_BAT         |                  | P400      |                                     | Read the BAT voltage value           |
-| Reset           |                  | RES       |                                     | RESET                                |
-| Boot            |                  | P201      |                                     | Enter Boot Mode                      |
-| RGB LED         |                  | P112      |                                     | RGB LED                              |
-| CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Red                          |
-| USER_LED        |                  | P011      |                                     | User Light（Y）|
+| XIAO Pin        | Function         | Chip Pin  | Alternate Functions                  | Description                          | Arduino Name |
+| :-------------: | :-------------: | :-------: | :---------------------------------: | :---------------------------------: | :----------: |
+| 5V              | VBUS             |           |                                     | Power Input/Output                   |             |
+| GND             |                  |           |                                     |                                      |              |
+| 3V3             | 3V3_OUT          |           |                                     | Power Output                         |              |
+| D0              | Analog          | P014      | ADC09                               | GPIO, ADC                            |       0   |
+| D1              | Analog          | P000      | ADC00                               | GPIO, ADC                            |          1     |
+| D2              | Analog          | P001      | ADC01                               | GPIO, ADC                            |        2       |
+| D3              | Analog          | P002      | ADC02                               | GPIO, ADC                            |        3   |
+| D4              | SDA1      | P206      |                                            | GPIO, I2C Data             |               4   |
+| D5              | Analog,SCL1      | P100      |                                     | GPIO, I2C Clock, ADC                 |     5    |
+| D6              | TXD2             | P302      | SDA2                                | GPIO, UART Transmit,I2C              |    6     |
+| D7              | RXD2             | P301      | SCL2                                | GPIO, UART Receive,I2C               |       7  |
+| D8              | SPI1_SCK         | P111      |                                     | GPIO, SPI Clock                      |   8      |
+| D9              | SPI1_MISO        | P110      | CRX0                                | GPIO, SPI Data,UART                  |   9      |
+| D10             | SPI1_MOSI        | P109      | CTX0                                | GPIO, SPI Data,UART                  |    10    |
+| D11             | RX9              | P408      |                                     | GPIO, UART                           |        |
+| D12             | TX9              | P409      |                                     | GPIO,UART                            |        |
+| D13             | GPIO             | P013      |                                     | GPIO                                 |        |
+| D14             | GPIO             | P012      |                                     | GPIO                                 |        |
+| D15             | TXD0             | P101      | SDA0,ADC21,SPI0_MOSI                | GPIO, UART Transmit, ADC,SPI,I2C     |       |
+| D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |       |
+| D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |       |
+| D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |       |
+| ADC_BAT         |                  | P400      |                                     | Read the BAT voltage value           |       |
+| Reset           |                  | RES       |                                     | RESET                                |       |
+| Boot            |                  | P201      |                                     | Enter Boot Mode                      |       |
+| RGB LED         |                  | P112      |                                     | RGB LED                              |    20   |
+| RGB LED         |                  | P500      |                                     | RGB LED   EN                            |    21   |
+| CHARGE_LED      |                  | VBUS      |                                     | CHG-LED_Red                          |       |
+| USER_LED        |                  | P011      |                                     | User Light（Y）                      |    19    |
 ## Getting Started
 
 ### Hardware Preparation
@@ -394,16 +346,13 @@ void loop() {
 
 ## Resources
 
-- 📄 **[PDF]** [RA4M1 datasheet](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet)
-- 📄 **[PDF]** [Seeed Studio XIAO RA4M1 Schematic](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO-RA4M1_SCH_PDF_v1.0_240719.pdf)
-- 📄 **[ZIP]** [KiCAD Libraries](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO-RA4M1_SCH%26PCB_v1.0_240719.zip)
-<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeeduino-xiao-rp2040-KiCAD-Library.zip) -->
-<!-- - 🗃️ **[ZIP]** [Seeed Studio XIAO RA4M1 Eagle file](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO_RP2040_v1.22_SCH&PCB.zip) -->
-<!-- - 📄 **[DXF]** [Seeed Studio XIAO RA4M1 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-DXF.zip) -->
-<!-- - 📄 **[LBR]** [Seeed Studio XIAO RA4M1 Eagle footprint](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/Seeed-Studio-XIAO-RP2040-footprint-eagle.lbr) -->
-<!-- - 📄 **[XLSX]** [Seeed Studio XIAO RA4M1 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-RA4M1/res/XIAO-RP2040-pinout_sheet.xlsx) -->
-- 🔗 **[Kicad]** [Seeed Studio XIAO RA4M1 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
+**Hardware Design**
+- **📄[Datasheet]** [Renesas RA4M1 Datasheet](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet )
+- **📄[Schematic]** [XIAO RA4M1 Schematic](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/XIAO%20RA4M1%20V1.01_SCH_PDF_260114%20.pdf.pdf )
+- **🗃️[PCB Design Files]** [XIAO RA4M1 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-R4AM1/res/202003977_XIAO%20RA4M1%20v1.01_SCH&PCB_260114.zip )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
 ## Troubleshooting
 
 ### Q1: What should I look for when soldering pins

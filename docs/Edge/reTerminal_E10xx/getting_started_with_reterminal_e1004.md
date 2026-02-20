@@ -33,7 +33,7 @@ reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to
 -   **No-Code UI Development:** Default firmware supports SenseCraft HMI for drag-and-drop dashboard creation and AI-assisted design.
 -   **Wide Compatibility:** Supports Home Assistant (ESPHome), Arduino, PlatformIO, and ESP-IDF.
 -   **Rich Connectivity:** Integrated 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5.0.
--   **Integrated Sensors & Audio:** Built-in temperature and humidity sensors, a buzzer for alerts, and a reserved microphone for future voice applications.
+-   **Integrated Sensors & Audio:** Built-in temperature and humidity sensors, a buzzer for alerts
 -   **Ready-to-Use Storage:** Includes a 16GB Micro SD card (supports up to 32GB).
 
 ## Specification
@@ -47,7 +47,7 @@ reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to
 | **Resolution** | 1200 x 1600 Pixels |
 | **Wireless Connectivity** | 2.4GHz 802.11 b/g/n Wi-Fi, Bluetooth 5.0 |
 | **Sensors** | Temperature, Humidity sensors |
-| **Audio** | Buzzer (Sound alert), Microphone (Reserved) |
+| **Audio** | Buzzer (Sound alert) |
 | **Battery** | 5000mAh |
 | **Power Input** | USB-C 5V/1A |
 | **Software Support** | SenseCraft HMI (Default), ESPHome, Arduino, PlatformIO, ESP-IDF |

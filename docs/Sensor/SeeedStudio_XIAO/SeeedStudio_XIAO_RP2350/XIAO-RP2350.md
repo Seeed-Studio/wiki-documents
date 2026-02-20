@@ -47,68 +47,62 @@ The XIAO RP2350 packs the power of the Raspberry Pi RP2350 (dual Cortex-M33 core
 
 ## Specification
 
-<table align="center">
-    <tr>
-        <td>Product</td>
-        <td>XIAO RP2040</td>
-        <td><b>XIAO RP2350</b></td>
-    </tr>
-    <tr>
-        <td rowspan="2">Processor</td>
-        <td>Raspberry Pi RP2040</td>
-        <td>Raspberry Pi RP2350</td>
-    </tr>
-    <tr>
-        <td>Dual Cortex-M0+ @ 133MHz</td>
-        <td>Dual Cortex-M33 @ 150MHz, FPU</td>
-    </tr>
-    <tr>
-        <td>RAM</td>
-        <td>264kB SRAM</td>
-        <td>520kB SRAM</td>
-    </tr>
-    <tr>
-        <td>Flash</td>
-        <td>2MB Onboard</td>
-        <td>2MB Flash</td>
-    </tr>
-    <tr>
-        <td>LEDs</td>
-        <td>1 user LED(3 colors), 1 power LED, 1 RGB LED</td>
-        <td>1 user LED, 1 charge LED(Battery Charging Indicator)，1 RGB LED</td>
-    </tr>
-    <tr>
-        <td>Interface</td>
-        <td>11 Pins:4x Analog,11x Digital, 1x I²C, 1x UART, 1x SPI, All PWM</td>
-        <td><b>19 Pins:3x Analog,19x Digital, 2x I²C, 2x UART, 2x SPI, All PWM</b></td>
-    </tr>
-    <tr>
-        <td>Button</td>
-        <td align="center" colspan="2">1 RESET button, 1 BOOT button</td>
-    </tr>
-    <tr>
-        <td>Security</td>
-       <td align="center"> - </td>
-        <td>OTP, Secure Boot, Arm TrustZone</td>
-    </tr>
-    <tr>
-        <td>Low power</td>
-       <td align="center"> - </td>
-        <td>4.2V/50uA</td>
-    </tr>
-    <tr>
-        <td>Software compatibility</td>
-        <td>Arduino, PlatformIO, MicroPython, CircuitPython, Zephyr, <a href="https://wiki.seeedstudio.com/xiao_topic_page/">and more to come</a></td>
-        <td>Arduino, PlatformIO, MicroPython, CircuitPython, <a href="https://wiki.seeedstudio.com/xiao_topic_page/">and more to come</a></td>
-    </tr>
-    <tr>
-        <td>Working Temperature</td>
-        <td align="center" colspan="2">-20°C~70°C</td>
-    </tr>
-    <tr>
-        <td>Dimensions</td>
-        <td align="center" colspan="2">21x17.8 mm</td>
-    </tr>
+<table>
+  <tr>
+    <th>Product</th>
+    <td>XIAO RP2040</td>
+    <td>XIAO RP2350</td>
+  </tr>
+  <tr>
+    <th>Processor</th>
+    <td>Raspberry Pi RP2040<br/>Dual Cortex-M0+ @ 133MHz</td>
+    <td>Raspberry Pi RP2350<br/>Dual Cortex-M33 @ 150MHz, FPU</td>
+  </tr>
+  <tr>
+    <th>RAM</th>
+    <td>264kB SRAM</td>
+    <td>520kB SRAM</td>
+  </tr>
+  <tr>
+    <th>Flash</th>
+    <td>2MB Onboard</td>
+    <td>2MB Flash</td>
+  </tr>
+  <tr>
+    <th>LEDs</th>
+    <td>1x user LED<br/>1x power LED<br/>1x RGB LED</td>
+    <td>1x user LED<br/>1x power LED<br/>1x RGB LED</td>
+  </tr>
+  <tr>
+    <th>Interface</th>
+    <td>11 Pins (All PWM):<br/>4x Analog<br/>11x Digital<br/>1x I²C<br/>1x UART<br/>1x SPI</td>
+    <td>19 Pins (All PWM):<br/>3x Analog<br/>19x Digital<br/>2x I²C<br/>2x UART<br/>2x SPI</td>
+  </tr>
+  <tr>
+    <th>Button</th>
+    <td>1x RESET button<br/>1x BOOT button</td>
+    <td>1x RESET button<br/>1x BOOT button</td>
+  </tr>
+  <tr>
+    <th>Security</th>
+    <td>-</td>
+    <td>OTP, Secure Boot, Arm TrustZone</td>
+  </tr>
+  <tr>
+    <th>Software compatibility</th>
+    <td>Support Micropython / Arduino / CircuitPython</td>
+    <td>Support Micropython / Arduino / C,C++</td>
+  </tr>
+  <tr>
+    <th>Working Temperature</th>
+    <td>-20°C-70°C</td>
+    <td>-20°C-70°C</td>
+  </tr>
+  <tr>
+    <th>Dimensions</th>
+    <td>21x17.8 mm</td>
+    <td>21x17.8 mm</td>
+  </tr>
 </table>
 
 ## Hardware Overview
@@ -544,24 +538,29 @@ int main() {
 
 The XIAO RP2350 harnesses the power of the Raspberry Pi RP2350, leveraging a wealth of shared resources from the Raspberry Pi community. This opens up a world of possibilities for you to tailor your projects on this tiny board with boundless creativity. Below are essential resources and assets to help you get started.
 
-***Datasheets and Schematics***
+**Hardware Design**
+- **📄[Datasheet]** [Raspberry Pi RP2350 Datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf )
+- **📄[Schematic]** [XIAO RP2350 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf )
+- **🗃️[PCB Design Files]** [XIAO RP2350 KiCad Project](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip )
+- **🗃️[PCB Design Libraries]** 
+  - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
+  - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
+- **📄[Pinout Diagram]** [XIAO RP2350 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx )
 
-- 📄 **[PDF]** [RP2350 Datasheet](https://datasheets.raspberrypi.com/rp2350/rp2350-datasheet.pdf)
-- 📄 **[PDF]** [Seeed Studio XIAO RP2350 Schematic](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/Seeed-Studio-XIAO-RP2350-v1.0.pdf)
-- 📄 **[XLSX]** [Seeed Studio XIAO RP2350 Pinout Sheet](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-pinout-sheet.xlsx)
-- 📄 **[DXF]** [Seeed Studio XIAO RP2350 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf)
-- 🔗 **[Link]** [Seeed Studio XIAO RP2350 3D STEP File](https://grabcad.com/library/seeed-studio-xiao-rp2350-2)
-- 📄 **[ZIP]** [Seeed Studio XIAO RP2350 v1.0 SCH&PCB](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO_RP2350_v1.0_SCH&PCB_240626.zip)
+**Mechanical Design**
+- **📄[2D Dimensions]** [XIAO RP2350 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/XIAO-RP2350-dimension-v1.0.dxf )
+- **🔗[3D Model]** [XIAO RP2350 3D Model](https://grabcad.com/library/seeed-studio-xiao-rp2350-2 )
 
-- 📄 **[UF2]** [Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2)
+**Software & Tools**
+- **📄[Test Firmware]** [XIAO RP2350 Low Power Test Firmware](https://files.seeedstudio.com/wiki/XIAO-RP2350/res/powman_timer-56.uf2 )
 
-***Related Resources***
-
-- 📄 **[PDF]** [Getting Started with Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf): A comprehensive guide to setting up and programming Raspberry Pi Pico boards, ideal for beginners looking to learn MicroPython or C/C++.
-- 📄 **[PDF]** [Raspberry Pi Pico-series Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf) the book which documents the MicroPython setup tutorials and APIs
-- 📄 **[PDF]** [Raspberry Pi Pico-series C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf) the book which documents the Pico C/C++ SDK APIs
-- 🔗 **[Kicad]** [Seeed Studio XIAO RP2350 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
+**Others**
+- **📄[Document]** [Getting Started with Raspberry Pi Pico-series](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf )  
+  - A comprehensive guide to setting up and programming Raspberry Pi Pico boards, ideal for beginners looking to learn MicroPython or C/C++.
+- **📄[Document]** [Raspberry Pi Pico-series Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf )  
+  - The book which documents the MicroPython setup tutorials and APIs
+- **📄[Document]** [Raspberry Pi Pico-series C/C++SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf )  
+  - The book which documents the Pico C/C++ SDK APIs
 ### Expansion and Applications
 
 [The XIAO series](/xiao_topic_page) has a huge range of peripherals and peripheral accessories for you to learn and use, whether you want a colorful screen that allows for perfect interaction, an integrated board with bright and simple RGB lights, and so on, just waiting to be checked out.

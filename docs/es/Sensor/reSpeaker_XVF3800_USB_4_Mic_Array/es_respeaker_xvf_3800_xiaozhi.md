@@ -27,9 +27,9 @@ reSpeaker XVF3800 es un arreglo circular profesional de 4 micrófonos basado en 
 
 ## Parte 1: Preparación del firmware de hardware reSpeaker
 
-Esta sección se enfoca en el hardware reSpeaker XVF3800 en sí. El firmware USB predeterminado no admite salida I2S, por lo que debes flashear un firmware I2S dedicado para usarlo con hosts como XIAO ESP32S3.
+Esta sección se enfoca en el hardware reSpeaker XVF3800 en sí. El firmware USB predeterminado no soporta salida I2S, por lo que debes flashear un firmware I2S dedicado para usarlo con hosts como XIAO ESP32S3.
 
-> Nota: El firmware I2S usa I2C DFU (no USB DFU). Si el dispositivo ya tiene firmware I2S pero se comporta de manera anormal, ingresa primero al "modo seguro" y luego usa USB DFU para recuperar o cambiar el firmware. El modo seguro admite tanto USB DFU como I2C DFU.
+> Nota: El firmware I2S usa I2C DFU (no USB DFU). Si el dispositivo ya tiene firmware I2S pero se comporta de manera anormal, entra primero en "modo seguro" y luego usa USB DFU para recuperar o cambiar el firmware. El modo seguro soporta tanto USB DFU como I2C DFU.
 > Ver referencias oficiales:
 > - [reSpeaker XVF3800 Getting Started](https://wiki.seeedstudio.com/es/respeaker_xvf3800_xiao_getting_started/)
 > - [reSpeaker XVF3800 firmware repo](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares)
@@ -73,20 +73,20 @@ sudo dfu-util -l
 - Visitar el repositorio de firmware: https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares
 - Descargar un archivo `.bin` con un nombre que comience con `i2s` (ej. `respeaker_xvf3800_i2s_dfu_firmware_v1.0.x.bin`).
 
-### 1.2 Conectar e ingresar al modo DFU
+### 1.2 Conectar y entrar en modo DFU
 
 #### Nota de cableado
 
 - Usar el puerto USB-C cerca del conector de auriculares de 3.5mm (el lado XMOS) al conectar a tu computadora; NO usar el puerto del lado XIAO.
 
-#### Ingresar al modo seguro (recomendado)
+#### Entrar en modo seguro (recomendado)
 
 Usar esto cuando: el firmware actual es I2S pero quieres USB, el firmware está corrupto, o se flasheó firmware incorrecto.
 
 1. Remover completamente la alimentación.
 2. Mantener presionado el botón "Mute" de la placa.
 3. Mientras lo mantienes presionado, reconectar la alimentación.
-4. Cuando el LED rojo comience a parpadear, soltar el botón — el dispositivo ahora está en modo seguro.
+4. Cuando el LED rojo comience a parpadear, soltar el botón — el dispositivo está ahora en modo seguro.
 
 ### 1.3 Flashear el firmware I2S usando dfu-util
 
@@ -122,12 +122,12 @@ Después del flasheo, el dispositivo se reiniciará automáticamente y el firmwa
 
 - P: ¿`dfu-util -l` no muestra el dispositivo?
   - Verificar cable USB y puerto (debe usar el conector del lado XMOS).
-  - Si el dispositivo actualmente ejecuta firmware I2S, ingresar al modo seguro antes del flasheo.
+  - Si el dispositivo actualmente ejecuta firmware I2S, entrar en modo seguro antes de flashear.
   - Usuarios de Windows: asegurar controlador WinUSB vía Zadig.
 - P: ¿Error durante el flasheo?
   - Probar un cable USB diferente o puerto host, y reintentar en modo seguro.
 - P: ¿Sin audio después del flasheo?
-  - Verificar que la configuración del host I2S (frecuencia de muestreo, canales) coincida con la configuración del firmware.
+  - Verificar configuración del host I2S (frecuencia de muestreo, canales) coincida con la configuración del firmware.
 
 ---
 
@@ -140,7 +140,7 @@ Esta sección aborda los cambios de código para hacer que el proyecto Xiaozhi s
 Cambios principales:
 
 1. Agregado un wrapper de bus I2C compartido para gestionar centralmente el maestro I2C y evitar conflictos.
-2. Agregado sondeo de hardware durante el inicio: sondear XVF3800 sobre I2C antes del inicio de la aplicación.
+2. Agregada sonda de hardware durante el inicio: sondear XVF3800 sobre I2C antes del inicio de la aplicación.
 3. Configuración a nivel de placa desacoplada: usar macros `config.h` para pines y direcciones para facilitar el portado.
 4. Actualizaciones de compilación: incluir los nuevos archivos fuente BSP en la compilación.
 
@@ -155,14 +155,14 @@ B. Nuevo: inicialización de hardware de audio reSpeaker
 
 - Archivo: `main/audio_bsp.c`
 - Función: `audio_hardware_init()`
-- Lógica: Adquirir bus I2C compartido, llamar `i2c_master_probe()` para detectar `XVF3800_I2C_ADDR` (0x2C) e imprimir logs de sondeo.
+- Lógica: Adquirir bus I2C compartido, llamar `i2c_master_probe()` para detectar `XVF3800_I2C_ADDR` (0x2C) e imprimir logs de sonda.
 
 C. Cambio: orden de inicio
 
 - Archivo: `main/main.cc`
 - Cambio: Llamar `audio_hardware_init()` antes de `Application::GetInstance().Start()`.
 
-D. Cambio: configuración de compilación y placa
+D. Cambio: compilación y configuración de placa
 
 - `CMakeLists.txt`: agregar `audio_bsp.c` y `shared_i2c_bus.c` a las fuentes de compilación.
 - `boards/xiao-esp32s3-sense/config.h`:
@@ -246,10 +246,11 @@ Después del flasheo, el dispositivo necesita configuración de red y vinculaci�
 
 
 Una vez completado, tu dispositivo reSpeaker–Xiaozhi debería estar listo y operativo.
+¡Y no olvides cambiar el idioma de salida a tu preferencia en la configuración!
+![language](https://files.seeedstudio.com/wiki/ReSpeaker-Xiaozhi/xiaozhi_language.png)
 
 
-
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 

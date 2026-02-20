@@ -39,14 +39,14 @@ This makes it particularly valuable for edge AI applications where hardware cons
 </div>
 
 <div align="center">
-    <img width={700}
-     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg" />
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg"/>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-for-Jetson-AGX-Orin-p-6606.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
+    </a>
+</div>
 
 ## Prerequisites
 
