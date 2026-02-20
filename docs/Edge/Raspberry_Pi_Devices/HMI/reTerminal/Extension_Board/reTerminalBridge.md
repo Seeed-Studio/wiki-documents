@@ -1237,11 +1237,6 @@ These two ports can be used simultaneously without affecting each other.
 
 You can only use either RS232 or RS485 at one time.
 
-## Resource
-
-- [DSN format schematic file](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge.DSN)
-- [PCB Board Design file](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge.brd)
-- [schematic PDF version](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge_SCH.pdf)
 
 ## Tech Support & Product Discussion
 
