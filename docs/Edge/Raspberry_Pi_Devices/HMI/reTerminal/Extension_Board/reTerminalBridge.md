@@ -1202,8 +1202,6 @@ sudo aplay -Dhw:0 test.wav
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image39.jpg"/></div>
 
-## Resources
-
 ## FAQ
 
 1. What type of 18650 batteries are compatible?
