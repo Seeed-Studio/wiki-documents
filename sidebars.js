@@ -2508,8 +2508,8 @@ const sidebars = {
               label: 'Linklt ONE',
               items: [
                 'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE',
-                'docs/Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Analog_Interface',
-                'docs/Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Colorful_World',
+                'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Analog_Interface',
+                'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Colorful_World',
                 'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage',
                 'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Hello_World',
                 'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Light-Sensor',
@@ -7223,7 +7223,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'reSpeaker',
+      label: 'ReSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -7233,7 +7233,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'reSpeaker XVF 3800',
+          label: 'ReSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -7243,7 +7243,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'reSpeaker XVF 3800 with XIAO 介绍',
+              label: 'ReSpeaker XVF 3800 with XIAO 介绍',
               collapsed: true,
               collapsible: true,
               link: {
@@ -7283,7 +7283,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker Lite',
+          label: 'ReSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -7293,7 +7293,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'reSpeaker Lite with XIAO ESP32S3',
+              label: 'ReSpeaker Lite with XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'zh-CN/Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_xiao_respeaker',
@@ -7332,7 +7332,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'reSpeaker 2-Mics Pi HAT',
+          label: 'ReSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'zh-CN/Sensor/ReSpeaker_2-Mics_Pi_HAT/cn_ReSpeaker_2_Mics_Pi_HAT',
@@ -7359,7 +7359,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker XVF 3000',
+          label: 'ReSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
@@ -12390,7 +12390,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'reSpeaker',
+      label: 'ReSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -12400,7 +12400,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'reSpeaker XVF 3800',
+          label: 'ReSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -12410,7 +12410,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'reSpeaker XVF 3800 con XIAO Introducción',
+              label: 'ReSpeaker XVF 3800 con XIAO Introducción',
               collapsed: true,
               collapsible: true,
               link: {
@@ -12450,7 +12450,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker Lite',
+          label: 'ReSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -12460,7 +12460,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'reSpeaker Lite con XIAO ESP32S3',
+              label: 'ReSpeaker Lite con XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'es/Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/es_xiao_respeaker',
@@ -12499,7 +12499,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'reSpeaker 2-Mics Pi HAT',
+          label: 'ReSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'es/Sensor/ReSpeaker_2-Mics_Pi_HAT/es_ReSpeaker_2_Mics_Pi_HAT',
@@ -12526,7 +12526,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker XVF 3000',
+          label: 'ReSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
@@ -17551,7 +17551,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'reSpeaker',
+      label: 'ReSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -17561,7 +17561,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'reSpeaker XVF 3800',
+          label: 'ReSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -17571,7 +17571,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'reSpeaker XVF 3800 with XIAO 紹介',
+              label: 'ReSpeaker XVF 3800 with XIAO 紹介',
               collapsed: true,
               collapsible: true,
               link: {
@@ -17611,7 +17611,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker Lite',
+          label: 'ReSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -17621,7 +17621,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'reSpeaker Lite with XIAO ESP32S3',
+              label: 'ReSpeaker Lite with XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'ja/Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_xiao_respeaker',
@@ -17660,7 +17660,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'reSpeaker 2-Mics Pi HAT',
+          label: 'ReSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'ja/Sensor/ReSpeaker_2-Mics_Pi_HAT/ja_ReSpeaker_2_Mics_Pi_HAT',
@@ -17687,7 +17687,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'reSpeaker XVF 3000',
+          label: 'ReSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
