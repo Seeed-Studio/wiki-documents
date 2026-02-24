@@ -1507,6 +1507,7 @@ const sidebars = {
                   label: 'Applications',
                   items: [
                     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/SeeedStudio_Round_Display_Christmas_ball',
+                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/SeeedStudio_Round_Display_Animation_Workshop',
                   ],
                 },
               ],
