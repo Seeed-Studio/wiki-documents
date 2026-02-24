@@ -1,6 +1,6 @@
 ---
 description: ReSpeaker Core
-title: ReSpeaker Core
+title: reSpeaker Core
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

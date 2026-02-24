@@ -1507,6 +1507,7 @@ const sidebars = {
                   label: 'Applications',
                   items: [
                     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/SeeedStudio_Round_Display_Christmas_ball',
+                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/SeeedStudio_Round_Display_Animation_Workshop',
                   ],
                 },
               ],
@@ -1938,7 +1939,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'ReSpeaker',
+      label: 'reSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -1948,7 +1949,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3800',
+          label: 'reSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -1959,7 +1960,7 @@ const sidebars = {
             
             {
               type: 'category',
-              label: 'ReSpeaker XVF 3800 with XIAO Intro',
+              label: 'reSpeaker XVF 3800 with XIAO Intro',
               collapsed: true,
               collapsible: true,
               link: {
@@ -1999,7 +2000,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker Lite',
+          label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -2009,7 +2010,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker Lite with XIAO ESP32S3',
+              label: 'reSpeaker Lite with XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
@@ -2048,7 +2049,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'ReSpeaker 2-Mics Pi HAT',
+          label: 'reSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
@@ -2075,7 +2076,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [

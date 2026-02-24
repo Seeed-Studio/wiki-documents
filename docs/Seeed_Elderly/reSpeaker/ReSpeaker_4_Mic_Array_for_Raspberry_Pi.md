@@ -1,6 +1,6 @@
 ---
 description: ReSpeaker 4-Mic Array for Raspberry Pi
-title: ReSpeaker 4-Mic Array for Raspberry Pi
+title: reSpeaker 4-Mic Array for Raspberry Pi
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
