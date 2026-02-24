@@ -1943,7 +1943,7 @@ const sidebars = {
       collapsible: true,
       link: {
         type: 'doc',
-        id: 'Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/ReSpeaker',
+        id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ReSpeaker',
       },
       items: [
         {
@@ -1953,7 +1953,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_usb_4_mic_array',
+            id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_usb_4_mic_array',
           },
           items: [
             
@@ -1964,7 +1964,7 @@ const sidebars = {
               collapsible: true,
               link: {
                 type: 'doc',
-                id: 'Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro',
+                id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro',
               },
               items: [
                 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_i2s_test',
@@ -2507,8 +2507,8 @@ const sidebars = {
               label: 'Linklt ONE',
               items: [
                 'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE',
-                'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Analog_Interface',
-                'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Colorful_World',
+                'docs/Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Analog_Interface',
+                'docs/Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Colorful_World',
                 'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage',
                 'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Hello_World',
                 'Seeed_Elderly/LinkIt/Linklt_ONE/LinkIt_ONE_Tutorial-Light-Sensor',
@@ -7227,7 +7227,7 @@ const sidebars = {
       collapsible: true,
       link: {
         type: 'doc',
-        id: 'zh-CN/Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/cn_ReSpeaker',
+        id: 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_ReSpeaker',
       },
       items: [
         {
@@ -7237,7 +7237,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'zh-CN/Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf3800_usb_4_mic_array',
+            id: 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf3800_usb_4_mic_array',
           },
           items: [
             {
@@ -7247,7 +7247,7 @@ const sidebars = {
               collapsible: true,
               link: {
                 type: 'doc',
-                id: 'zh-CN/Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf3800_with_xiao_intro',
+                id: 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf3800_with_xiao_intro',
               },
               items: [
                 'zh-CN/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/cn_respeaker_xvf3800_i2s_test',
@@ -12394,7 +12394,7 @@ const sidebars = {
       collapsible: true,
       link: {
         type: 'doc',
-        id: 'es/Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/es_ReSpeaker',
+        id: 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_ReSpeaker',
       },
       items: [
         {
@@ -12404,7 +12404,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'es/Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf3800_usb_4_mic_array',
+            id: 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf3800_usb_4_mic_array',
           },
           items: [
             {
@@ -12414,7 +12414,7 @@ const sidebars = {
               collapsible: true,
               link: {
                 type: 'doc',
-                id: 'es/Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf3800_with_xiao_intro',
+                id: 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf3800_with_xiao_intro',
               },
               items: [
                 'es/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/es_respeaker_xvf3800_i2s_test',
@@ -17555,7 +17555,7 @@ const sidebars = {
       collapsible: true,
       link: {
         type: 'doc',
-        id: 'ja/Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/ja_ReSpeaker',
+        id: 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_ReSpeaker',
       },
       items: [
         {
@@ -17565,7 +17565,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'ja/Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_usb_4_mic_array',
+            id: 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_usb_4_mic_array',
           },
           items: [
             {
@@ -17575,7 +17575,7 @@ const sidebars = {
               collapsible: true,
               link: {
                 type: 'doc',
-                id: 'ja/Sensor/ReSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_with_xiao_intro',
+                id: 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_with_xiao_intro',
               },
               items: [
                 'ja/Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ja_respeaker_xvf3800_i2s_test',
