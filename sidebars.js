@@ -2004,7 +2004,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'Sensor/ReSpeaker_Lite/ReSpeaker_lite_introduction',
+            id: 'Sensor/ReSpeaker_Lite/reSpeaker_lite_introduction',
           },
           items: [
             {
@@ -7287,7 +7287,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'zh-CN/Sensor/ReSpeaker_Lite/cn_ReSpeaker_lite_introduction',
+            id: 'zh-CN/Sensor/ReSpeaker_Lite/cn_reSpeaker_lite_introduction',
           },
           items: [
             {
@@ -12454,7 +12454,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'es/Sensor/ReSpeaker_Lite/es_ReSpeaker_lite_introduction',
+            id: 'es/Sensor/ReSpeaker_Lite/es_reSpeaker_lite_introduction',
           },
           items: [
             {
@@ -17615,7 +17615,7 @@ const sidebars = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'ja/Sensor/ReSpeaker_Lite/ja_ReSpeaker_lite_introduction',
+            id: 'ja/Sensor/ReSpeaker_Lite/ja_reSpeaker_lite_introduction',
           },
           items: [
             {
