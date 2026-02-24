@@ -1,5 +1,5 @@
 ---
-description: このガイドでは、複数の reComputer Jetson デバイス上で llama.cpp の RPC バックエンドを使用して分散 LLM 推論を実行するための手順を詳しく説明します。
+description: このガイドでは、複数の reComputer Jetson デバイス上で llama.cpp の RPC バックエンドを使用して分散 LLM 推論を実行するための段階的な手順を提供します。
 title: reComputer Jetson での分散 llama.cpp（RPC モード）
 keywords:
 - reComputer Jetson
@@ -27,7 +27,7 @@ NVIDIA Jetson のようなエッジデバイスで大規模言語モデル（LLM
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J501-p-6537.html" target="_blank">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
 </a></div>
 
@@ -207,7 +207,7 @@ CUDA_VISIBLE_DEVICES=0 ./build/bin/rpc-server -p 50052
 | 推論速度の低下 | モデルが小さすぎる、ネットワーク遅延 > 計算利益；より大きなモデルまたは Unix ソケットモードを試す |
 | メモリ不足エラー | `-ngl` 値を減らして GPU にオフロードするレイヤーを少なくするか、一部のレイヤーを CPU に保持 |
 
-この設定により、llama.cpp の RPC バックエンドを使用して複数の Jetson デバイス間で LLM 推論の「水平スケーリング」を実現できます。より高いスループットを得るには、RPC ノードを追加するか、モデルを `q4_0` や `q5_k_m` などの形式にさらに量子化することができます。
+この設定により、llama.cpp の RPC バックエンドを使用して複数の Jetson デバイス間で LLM 推論の「水平スケーリング」を実現できます。より高いスループットを得るには、より多くの RPC ノードを追加するか、モデルを `q4_0` や `q5_k_m` などの形式にさらに量子化することができます。
 
 ## 技術サポート & 製品ディスカッション
 

@@ -10,11 +10,22 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
-  date: 2/6/2026
+  date: 2/11/2026
   author: Kasun Thushara
 ---
 
-在本教程中，您将学习如何配置您的 ReSpeaker Lite 以与 Home Assistant 配合使用。您将学习如何刷写所需的固件以及如何编译和上传 YAML 文件。之后，您将能够使用语音控制和自动化您的家用电器。只需说"Okay Nabu"并开始与您的家对话。
+在本教程中，您将学习如何配置您的 ReSpeaker Lite 与 Home Assistant 配合使用。您将学习如何刷写所需的固件以及如何编译和上传 YAML 文件。之后，您将能够使用语音控制和自动化您的家用电器。只需说"Okay Nabu"并开始与您的家对话。
+
+<div class="video-container">
+  <iframe width="800" height="400"
+          src="https://www.youtube.com/embed/RBt2VAVpsBw"
+          title="ReSpeaker Lite with XIAO ESP32S3 Home Assistant"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+  </iframe>
+</div>
 
 ## 所需硬件
 
@@ -63,7 +74,7 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ## 入门指南
 
 :::note
-我们在树莓派 5 上使用 Home Assistant 版本 2026.1.3 和 ESPHome 版本 2026.1.3。
+我们使用的是在树莓派 5 上运行的 Home Assistant 版本 2026.1.3 和 ESPHome 版本 2026.1.3。
 :::
 
 ## 安装 ESPHome Builder
@@ -95,7 +106,14 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 点击 **+ NEW DEVICE**。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_new.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_add.png" alt="pir" width={800} height="auto" /></p>
+
+点击 **Continue → New Device Setup，然后为设备提供一个合适的名称**。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_1.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_name.png" alt="pir" width={500} height="auto" /></p>
+
 
 选择 `ESP32-S3`
 
@@ -103,11 +121,14 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 
 当提示时，点击 **SKIP** – 我们将手动创建配置。
 
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
 
-选择您的新设备条目并点击 **EDIT**。
+**如何添加设备的 GIF 演示**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home_edit.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device.gif" alt="pir" width={800} height="auto" /></p>
+
+选择您的新设备条目并点击 **EDIT**。
 
 
 <details>
@@ -1472,7 +1493,7 @@ debug:
 
 </details>
 
-保存 YAML 后，点击 **INSTALL**。
+保存 YAML 文件后，点击 **INSTALL**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/yaml_install.png" alt="pir" width={800} height="auto" /></p>
 
@@ -1480,21 +1501,29 @@ debug:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
 
+**编译 YAML 文件：GIF 演示**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/compile_yml.gif" alt="pir" width={800} height="auto" /></p>
+
 等待固件编译完成。
 
-将生成的 .bin 固件文件下载到您的计算机。
+从 Factory Format 下载生成的 .bin 固件文件到您的计算机。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
+
+**下载编译的 Bin 文件：GIF 演示**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.gif" alt="pir" width={800} height="auto" /></p>
 
 使用 USB Type-C 线缆将 ESP32-S3 开发板的 USB Type-C 端口连接到您的 PC。
 
 在 Google Chrome 中打开 [Web ESPHome](https://web.esphome.io/?dashboard_wizard)。
 
-点击 Connect 并从列表中选择正确的串口。
+点击 Connect 并从列表中选择正确的串行端口。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/web_esphome.png" alt="pir" width={600} height="auto" /></p>
 
-连接后，点击 **INSTALL**
+连接成功后，点击 **INSTALL**
 
 选择您刚刚下载的 .bin 文件。
 
@@ -1512,7 +1541,7 @@ debug:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/device_services.png" alt="pir" width={700} height="auto" /></p>
 
-您应该看到 **ESPHome** 作为已发现的集成列出。
+您应该看到 **ESPHome** 被列为已发现的集成。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/discover_esp_1.png" alt="pir" width={700} height="auto" /></p>
@@ -1542,7 +1571,7 @@ debug:
 
 ### 如何查看 reSpeaker 日志？
 
-要查看日志文件和调试程序（例如验证唤醒词检测和 STT 功能），您可以使用前面提到的 ESP Web 应用程序。
+要查看日志文件和调试程序——例如验证唤醒词检测和 STT 功能——您可以使用前面提到的 ESP Web 应用程序。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/log_view.gif" alt="pir" width={700} height="auto" /></p>
 

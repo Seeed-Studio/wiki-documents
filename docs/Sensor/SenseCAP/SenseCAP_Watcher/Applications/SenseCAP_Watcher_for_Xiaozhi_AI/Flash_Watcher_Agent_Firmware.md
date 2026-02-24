@@ -1,7 +1,7 @@
 ---
 description: Guide for flashing firmware to your SenseCAP Watcher Agent
-title: Flash Watcher Agent Firmware
-sidebar_position: 1
+title: Please ignore this wiki
+sidebar_position: 10
 keywords:
 - SenseCAP
 - Watcher
@@ -17,7 +17,11 @@ translation:
   skip: [ zh-CN ]
 ---
 
-# Flash Watcher Agent Firmware
+# Beta version. Please ignore this wiki.
+
+```tips
+Please don't follow this wiki, otherwise your watcher will get stuck.
+```
 
 ## Overview
 

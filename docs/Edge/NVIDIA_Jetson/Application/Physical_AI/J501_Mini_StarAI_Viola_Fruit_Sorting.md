@@ -126,26 +126,27 @@ cd ~/lerobot
 conda install ffmpeg -c conda-forge
 ```
 
-### Install PyTorch and Dependencies
+### Install PyTorch and Torchvision for Jetson
 
-For Jetson devices, install PyTorch and Torchvision first:
+For Jetson devices, you need to install the GPU version of PyTorch and Torchvision before installing LeRobot. Follow [this Jetson PyTorch installation tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch) to install PyTorch-gpu and Torchvision.
+
+### Install LeRobot and Dependencies
+
+After installing PyTorch-gpu and Torchvision, install LeRobot:
 
 ```bash
-# Install PyTorch for Jetson (refer to official Jetson PyTorch installation guide)
-# Example:
-pip3 install torch torchvision torchaudio
-
-# Install LeRobot
 cd ~/lerobot && pip install -e .
+```
 
-# Install additional dependencies for Jetson
-conda install -y -c conda-forge "opencv>=4.10.0.84"
-conda remove opencv
-pip3 install opencv-python==4.10.0.84
-pip3 install numpy==1.26.0
+For Jetson JetPack 6.0+ devices, install additional dependencies:
 
-# Remove brltty if it causes USB port conflicts
-sudo apt remove brltty
+```bash
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
+conda remove opencv   # Uninstall OpenCV
+pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
 ### Install StarAI Motor Dependencies
@@ -155,11 +156,20 @@ pip install lerobot_teleoperator_bimanual_leader
 pip install lerobot_robot_bimanual_follower
 ```
 
-### Verify Installation
+### Check PyTorch and Torchvision
+
+Since installing the LeRobot environment via pip will uninstall the original PyTorch and Torchvision and install the CPU versions, you need to perform a check in Python:
 
 ```python
 import torch
 print(torch.cuda.is_available())  # Should print True
+```
+
+If the printed result is `False`, you need to reinstall PyTorch and Torchvision according to [this Jetson tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
+
+```bash
+# Remove brltty if it causes USB port conflicts
+sudo apt remove brltty
 ```
 
 ## 🔧 Hardware Setup and Calibration
