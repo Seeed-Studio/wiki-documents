@@ -13,6 +13,14 @@ last_update:
 
 ![](https://files.seeedstudio.com/products/107990053/01.png)
 
+We are excited to formally introduce the **reSpeaker XVF3800** — a comprehensive upgrade to the reSpeaker XVF 3000. Building upon its predecessor's foundation of 4-microphone array architecture, universal compatibility (Windows / macOS / Linux), and dual-firmware (I2S / USB) plug-and-play convenience, the XVF3800 delivers a significant leap in both audio fidelity and algorithmic performance.
+**Key Upgrade Highlights**
+**AI-Powered Audio Algorithms**: Integrated suite featuring AEC (Acoustic Echo Cancellation), AGC (Automatic Gain Control), DoA (Direction of Arrival) detection, beamforming, VAD (Voice Activity Detection), noise suppression, and dereverberation — laying robust groundwork for advanced voice applications.
+**360° Far-Field Voice Capture**: Precision voice pickup within a 5-meter radius, effortlessly accommodating conferencing systems, intelligent interaction, and voice-controlled scenarios.
+**Dual Operating Modes**: Flexible USB/I2S firmware switching to meet diverse development and deployment requirements.
+**Product Details & Specifications**: [ReSpeaker XVF3800 4-Mic Array Store Page](https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html)
+**Quick Start & Wiki Guide**: [reSpeaker XVF3800 Getting Started Guide | Seeed Studio Wiki](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/)
+
 ReSpeaker Mic Array v3.0 is the next evolution of Seeed Studio’s USB microphone arrays, following the ReSpeaker Mic Array v2.0. While the v2.0 was built on XMOS’s XVF-3000 chipset and designed as a major upgrade from v1.0, the v3.0 focuses on refining audio quality and algorithm performance, even with a smaller physical microphone count.
 
 Compared with the v2.0’s 4-mic array, the v3.0 also uses 4 microphones but integrates improved built-in audio processing algorithms, offering clearer far-field voice capture and better noise handling than its predecessor. The v3.0 replaces the WM8960 codec in v2.0 with a  TLV320AIC3104  codec, contributing to higher fidelity sound capture.
