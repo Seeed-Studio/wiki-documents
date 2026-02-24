@@ -1,6 +1,6 @@
 ---
-description: 本 wiki 提供了在 Jetson AGX Orin 设备上部署 NVBlox 与 Orbbec RGB-D 相机的全面分步指南。涵盖环境设置、依赖安装、Isaac ROS 集成以及机器人应用的实时 3D 建图演示。
-title: 在 Jetson AGX Orin 上部署 NVBlox 与 Orbbec 相机
+description: 本 wiki 提供了在 Jetson AGX Orin 设备上使用 Orbbec RGB-D 相机部署 NVBlox 的全面分步指南。涵盖环境设置、依赖安装、Isaac ROS 集成以及机器人应用的实时 3D 建图演示。
+title: 在 Jetson AGX Orin 上使用 Orbbec 相机部署 NVBlox
 keywords:
 - NVBlox
 - Jetson AGX Orin
@@ -32,21 +32,21 @@ last_update:
 <div style={{ textAlign: "justify" }}>
 [Isaac ROS NVBlox](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox) 是 NVIDIA 开发的高性能 GPU 加速 3D 建图框架，用于实时机器人感知。与单目深度估计模型不同，NVBlox 使用来自 RGB-D 相机或立体相机的真实深度输入来构建精确的 3D 场景表示。
 
-它实时构建密集的 TSDF（截断符号距离场）和 ESDF（欧几里得符号距离场）地图，实现高质量的 3D 重建、障碍物感知导航和碰撞检测。NVBlox 还可以生成网格、基于体素的代价地图以及适用于自主移动机器人（AMR）的 3D 占用表示。
+它实时构建密集的 TSDF（截断有符号距离场）和 ESDF（欧几里得有符号距离场）地图，实现高质量的 3D 重建、障碍物感知导航和碰撞检测。NVBlox 还可以生成网格、基于体素的代价地图以及适用于自主移动机器人（AMR）的 3D 占用表示。
 
 这使其在边缘 AI 应用中特别有价值，在这些应用中硬件约束和计算效率是关键考虑因素。本 wiki 演示了如何在 **Jetson AGX Orin** 上部署 Isaac ROS NVBlox，集成 **ROS 2**，使用 **Orbbec RGB-D 相机** 和移动机器人平台来实现完全的设备端感知和导航管道。🚀
 
 </div>
 
 <div align="center">
-    <img width={700}
-     src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/-/5-100020039-recomputer-mini-j501---carrier-board-for-jetson-agx-orin.jpg" />
+  <img width="600" src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg"/>
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-J501-Carrier-Board-for-Jetson-AGX-Orin-p-6606.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
-</a></div>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱</font></span></strong>
+    </a>
+</div>
 
 ## 先决条件
 
@@ -63,7 +63,7 @@ last_update:
 
 ## 技术亮点
 
-- **实时 3D 建图**：NVBlox 使用 GPU 加速实时生成密集的 TSDF 和 ESDF 地图，为机器人应用提供高质量的 3D 场景重建。
+- **实时 3D 建图**：NVBlox 使用 GPU 加速实时生成密集的 TSDF 和 ESDF 地图，为机器人应用实现高质量的 3D 场景重建。
 
 - **RGB-D 相机集成**：利用 Orbbec RGB-D 相机的真实深度信息创建精确的 3D 表示，无需依赖单目深度估计。
 
@@ -183,7 +183,7 @@ cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
 
 ### 安装 Orbbec SDK ROS2
 
-使用 Orbbec RGB-D 相机需要安装 SDK 驱动。本指南使用从源码构建的方法。
+使用 Orbbec RGB-D 相机需要安装 SDK 驱动程序。本指南使用从源码构建的方法。
 
 安装依赖：
 
@@ -213,7 +213,7 @@ cd ~/ros2_ws
 colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
-为了让 Orbbec 相机在 Linux 上被正确识别，需要安装 udev 规则。
+为了让 Orbbec 相机在 Linux 上被正确识别，请安装 udev 规则。
 
 进入源码工作目录并运行脚本：
 
@@ -329,16 +329,16 @@ ros2 launch orbbec_camera <camera_name>.launch.py
 - gemini_330_series
 
 :::warning
-注意，您不应该在 Docker 容器内启动 Orbbec 脚本。请确保您已按照之前的教程安装了 Orbbec 驱动程序。⚠️
+注意，您不应该在 Docker 容器内启动 Orbbec 脚本。确保您已按照之前的教程安装了 Orbbec 驱动程序。⚠️
 :::
 
-Isaac ROS 容器默认与本地发布的 ROS2 桥接。在 Docker 容器中，输入：
+Isaac ROS 容器默认与本地发布的 ROS2 进行桥接。在 Docker 容器中，输入：
 
 ```bash
 ros2 topic list
 ```
 
-通常，您应该在 Docker 容器中看到 Orbbec 相机发布的以下数据主题：
+通常，您应该能在 Docker 容器中看到 Orbbec 相机发布的以下数据话题：
 
 ```yaml
 /camera/accel/imu_info
@@ -355,7 +355,7 @@ ros2 topic list
 /camera/ir/image_raw
 ```
 
-确保您可以读取 Orbbec 相机数据主题。然后在 Isaac ROS 容器中启动 NVBlox 示例脚本：
+确保您能够读取 Orbbec 相机数据话题。然后在 Isaac ROS 容器中启动 NVBlox 示例脚本：
 
 ```bash
 cd ~/workspaces/isaac_ros-dev
@@ -369,7 +369,7 @@ ros2 launch nvblox_examples_bringup orbbec_example.launch.py
   <img width="1000" src="https://files.seeedstudio.com/wiki/other/rviz.jpg"/>
 </div>
 
-RViz 可以按如下所示进行配置。启用您想要的可视化结果并选择可用的主题名称：
+RViz 可以按如下所示进行配置。启用您想要的可视化结果并选择可用的话题名称：
 <div align="center">
   <img width="400" src="https://files.seeedstudio.com/wiki/other/rviz-lan.jpg"/>
 </div>

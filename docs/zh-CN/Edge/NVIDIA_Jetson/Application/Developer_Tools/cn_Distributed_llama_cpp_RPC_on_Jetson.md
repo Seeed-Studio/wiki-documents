@@ -23,11 +23,11 @@ last_update:
 </div>
 
 <div style={{ textAlign: "justify" }}>
-在 NVIDIA Jetson 等边缘设备上运行大型语言模型（LLM）可能因内存和计算限制而具有挑战性。本指南演示了如何使用 llama.cpp 的 RPC 后端在多个 reComputer Jetson 设备上分布 LLM 推理，为更苛刻的工作负载实现水平扩展。
+在 NVIDIA Jetson 等边缘设备上运行大型语言模型（LLM）可能因内存和计算限制而具有挑战性。本指南演示了如何使用 llama.cpp 的 RPC 后端在多个 reComputer Jetson 设备上分布 LLM 推理，从而为更苛刻的工作负载实现水平扩展。
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J501-p-6537.html" target="_blank">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5012-with-GMSL-extension-board-p-6682.html" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 </a></div>
 

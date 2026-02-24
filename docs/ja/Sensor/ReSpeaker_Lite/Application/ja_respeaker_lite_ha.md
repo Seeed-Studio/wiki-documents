@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
-  date: 2/6/2026
+  date: 2/11/2026
   author: Kasun Thushara
 ---
 
@@ -37,11 +37,11 @@ last_update:
     </a>
 </div>
 
-## XMOS ファームウェア更新
+## XMOS ファームウェアアップデート
 
-最高の再生体験を得るために、XMOS ファームウェアを `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin` に更新する必要があります。
+最高の再生体験を得るために、XMOS ファームウェアを `respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin` にアップデートする必要があります。
 
-完全なリポジトリとしてファームウェアを[こちら](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration)からダウンロードしてください。
+ファームウェアを完全なリポジトリとして[こちら](https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration)からダウンロードしてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/firmware_1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -74,12 +74,12 @@ dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin
 ## 入門ガイド
 
 :::note
-Raspberry Pi 5 上で Home Assistant バージョン 2026.1.3 と ESPHome バージョン 2026.1.3 を使用しています。
+Raspberry Pi 5 で Home Assistant バージョン 2026.1.3 と ESPHome バージョン 2026.1.3 を使用しています。
 :::
 
 ## ESPHome Builder のインストール
 
-**Settings → Add-ons → Click on Add-on Store → Install ESPHome Device Builder** アドオンをインストールします。
+**Settings → Add-ons → Add-on Store をクリック → ESPHome Device Builder** アドオンをインストールします。
 
 **Home Assistant > Settings > Add-ons** に移動します。
 
@@ -97,7 +97,7 @@ Raspberry Pi 5 上で Home Assistant バージョン 2026.1.3 と ESPHome バー
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home.png" alt="pir" width={800} height="auto" /></p>
 
-簡単にアクセスできるように、**Start on Boot, Watchdog, and Show in Sidebar** を有効にします。
+簡単にアクセスできるように、**Start on Boot、Watchdog、Show in Sidebar** を有効にします。
 
 
 Home Assistant サイドバーから、**ESPHome Builder** に移動します。
@@ -106,7 +106,14 @@ Home Assistant サイドバーから、**ESPHome Builder** に移動します。
 
 **+ NEW DEVICE** をクリックします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_new.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_add.png" alt="pir" width={800} height="auto" /></p>
+
+**Continue → New Device Setup** をクリックし、**デバイスに適切な名前を付けます**。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_1.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_name.png" alt="pir" width={500} height="auto" /></p>
+
 
 `ESP32-S3` を選択します
 
@@ -114,11 +121,14 @@ Home Assistant サイドバーから、**ESPHome Builder** に移動します。
 
 プロンプトが表示されたら、**SKIP** をクリックします – 設定を手動で作成します。
 
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
 
-新しいデバイスエントリを選択し、**EDIT** をクリックします。
+**デバイス追加方法の GIF 説明**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home_edit.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device.gif" alt="pir" width={800} height="auto" /></p>
+
+新しいデバイスエントリを選択し、**EDIT** をクリックします。
 
 
 <details>
@@ -1491,11 +1501,19 @@ Manual **Download**を選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
 
+**YAMLファイルのコンパイル：GIFイラスト**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/compile_yml.gif" alt="pir" width={800} height="auto" /></p>
+
 ファームウェアのコンパイルが完了するまで待ちます。
 
-生成された.binファームウェアファイルをコンピュータにダウンロードします。
+Factory Formatから生成された.binファームウェアファイルをコンピュータにダウンロードします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
+
+**コンパイル済みBinファイルのダウンロード：GIFイラスト**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.gif" alt="pir" width={800} height="auto" /></p>
 
 USB Type-CケーブルでESP32-S3ボードのUSB Type-CポートをPCに接続します。
 
@@ -1523,7 +1541,7 @@ Connectをクリックし、リストから正しいシリアルポートを選�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/device_services.png" alt="pir" width={700} height="auto" /></p>
 
-**ESPHome**が検出された統合として表示されるはずです。
+**ESPHome**が検出された統合として表示されているはずです。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/discover_esp_1.png" alt="pir" width={700} height="auto" /></p>
@@ -1539,13 +1557,13 @@ Connectをクリックし、リストから正しいシリアルポートを選�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/okay_nabu.png" alt="pir" width={700} height="auto" /></p>
 
-次に、音声パイプラインの設定を案内されます。このデモでは、Nabu Cloudを使用します。
+次に、音声パイプラインの設定をガイドされます。このデモでは、Nabu Cloudを使用します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_1.png" alt="pir" width={700} height="auto" /></p>
 
 セットアップは簡単で、1ヶ月の無料トライアルを利用してその全機能を探索できます。
 
-Nabu Cloudでサインインして音声アシスタントを設定できます。セットアップが比較的簡単で、高速なパフォーマンスを提供するためです。
+Nabu Cloudでサインインして音声アシスタントを設定できます。比較的簡単にセットアップでき、高速なパフォーマンスを提供するためです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/voice_assistant_2.png" alt="pir" width={700} height="auto" /></p>
 
@@ -1567,7 +1585,7 @@ Seeed Studio reSpeaker Lite用のこの素晴らしいYAMLファイルを作成�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

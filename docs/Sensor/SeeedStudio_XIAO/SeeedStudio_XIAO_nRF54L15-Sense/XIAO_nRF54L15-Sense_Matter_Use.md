@@ -34,7 +34,7 @@ To begin developing a Matter application on the XIAO nRF54L15, ensure that the f
 ### Hadware
 
 - Seeed Studio XIAO nRF54L15 board.
-- Supported Matter Hub (e.g., [A`mazon - Echo Dot](https://www.amazon.com/Amazon-vibrant-helpful-routines-Charcoal/dp/B09B8V1LZ3?th=1)) to connect to the Matter network.
+- Supported Matter Hub (e.g., [Amazon - Echo Dot](https://www.amazon.com/Amazon-vibrant-helpful-routines-Charcoal/dp/B09B8V1LZ3?th=1)) to connect to the Matter network.
 - Matter Controller (e.g., Amazon Alexa App) to manage and interact with your Matter-enabled device
 
 <div class="table-center">

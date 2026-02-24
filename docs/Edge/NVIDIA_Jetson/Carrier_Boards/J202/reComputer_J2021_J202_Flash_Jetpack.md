@@ -610,8 +610,6 @@ If more storage space is needed, we can use SD card to expand the capacity, or b
 
 [reComputer J202x datasheet](https://files.seeedstudio.com/wiki/reComputer/reComputer-J202x-datasheet.pdf)
 
-[reComptuer J202x Carrier Boards Schematic](https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer%20J202_V1.0_SCH_PDF_240822.pdf)
-
 [reComputer J202x 3D file](https://files.seeedstudio.com/products/NVIDIA-Jetson/J2021-Xavier-NX.stp)
 
 [Seeed Jetson Serials Catalog](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)

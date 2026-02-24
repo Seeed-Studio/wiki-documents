@@ -12,6 +12,7 @@ last_update:
   author: Mingxi
 ---
 
+# ReSpeaker + OpenClaw：飞书群组智能定位与互动会议卡片推送
 
 > 想要给你的机器人赋予语音交互能力？试试 Seeed Studio 的 ReSpeaker 系列！本项目的目标是将 reSpeaker XVF3800 USB 4-Mic Array 与 OpenClaw 集成，实现语音控制的 AI 智能体操作。通过 reSpeaker 强大的音频采集和降噪能力，结合 OpenClaw 灵活的 AI 智能体框架，你可以轻松创建一个能够理解并响应你指令的语音控制智能助手。本演示展示了如何使用 reSpeaker 控制 Openclaw，使其能够自动定位飞书群组并发送互动会议邀请卡片。
 > [项目源码仓库](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
@@ -19,7 +20,7 @@ last_update:
 > [reSpeaker 4-Mic Array | Seeed Studio 购买链接](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)
 > 
 > ![reSpeaker XVF3800](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg)
-> ---
+>
 
 ## 效果展示
 

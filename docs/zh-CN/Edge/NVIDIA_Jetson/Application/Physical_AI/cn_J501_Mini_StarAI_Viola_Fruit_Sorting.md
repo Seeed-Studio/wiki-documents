@@ -71,7 +71,7 @@ last_update:
 
 ## 🛠️ 硬件要求
 
-### 所需组件
+### 必需组件
 
 - 配备 Jetson AGX Orin 模块的 **J501 Mini**
 - **StarAI Viola** 从动机械臂（6+1 自由度）
@@ -126,26 +126,27 @@ cd ~/lerobot
 conda install ffmpeg -c conda-forge
 ```
 
-### 安装 PyTorch 和依赖项
+### 为 Jetson 安装 PyTorch 和 Torchvision
 
-对于 Jetson 设备，首先安装 PyTorch 和 Torchvision：
+对于 Jetson 设备，您需要在安装 LeRobot 之前安装 GPU 版本的 PyTorch 和 Torchvision。请按照[此 Jetson PyTorch 安装教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.5-Pytorch)安装 PyTorch-gpu 和 Torchvision。
+
+### 安装 LeRobot 和依赖项
+
+安装 PyTorch-gpu 和 Torchvision 后，安装 LeRobot：
 
 ```bash
-# Install PyTorch for Jetson (refer to official Jetson PyTorch installation guide)
-# Example:
-pip3 install torch torchvision torchaudio
-
-# Install LeRobot
 cd ~/lerobot && pip install -e .
+```
 
-# Install additional dependencies for Jetson
-conda install -y -c conda-forge "opencv>=4.10.0.84"
-conda remove opencv
-pip3 install opencv-python==4.10.0.84
-pip3 install numpy==1.26.0
+对于 Jetson JetPack 6.0+ 设备，安装额外的依赖项：
 
-# Remove brltty if it causes USB port conflicts
-sudo apt remove brltty
+```bash
+conda install -y -c conda-forge "opencv>=4.10.0.84"  # Install OpenCV and other dependencies through conda, this step is only for Jetson Jetpack 6.0+
+conda remove opencv   # Uninstall OpenCV
+pip3 install opencv-python==4.10.0.84  # Then install opencv-python via pip3
+conda install -y -c conda-forge ffmpeg
+conda uninstall numpy
+pip3 install numpy==1.26.0  # This should match torchvision
 ```
 
 ### 安装 StarAI 电机依赖项
@@ -155,11 +156,20 @@ pip install lerobot_teleoperator_bimanual_leader
 pip install lerobot_robot_bimanual_follower
 ```
 
-### 验证安装
+### 检查 PyTorch 和 Torchvision
+
+由于通过 pip 安装 LeRobot 环境会卸载原有的 PyTorch 和 Torchvision 并安装 CPU 版本，您需要在 Python 中进行检查：
 
 ```python
 import torch
 print(torch.cuda.is_available())  # Should print True
+```
+
+如果打印结果为 `False`，您需要根据[此 Jetson 教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)重新安装 PyTorch 和 Torchvision。
+
+```bash
+# Remove brltty if it causes USB port conflicts
+sudo apt remove brltty
 ```
 
 ## 🔧 硬件设置和校准
@@ -174,8 +184,8 @@ lerobot-find-port
 ```
 
 您应该看到类似以下的输出：
-- 主动臂：`/dev/ttyUSB0`
-- 从动臂：`/dev/ttyUSB1`
+- 主动机械臂：`/dev/ttyUSB0`
+- 从动机械臂：`/dev/ttyUSB1`
 
 授予 USB 端口访问权限：
 
@@ -187,11 +197,11 @@ sudo chmod 666 /dev/ttyUSB*
 
 在校准之前，将两个机械臂移动到初始位置：
 
-| **Violin 主动臂** | **Viola 从动臂** |
+| **Violin 主动机械臂** | **Viola 从动机械臂** |
 |:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin_init.png) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola_init.png) |
 
-### 校准主动臂
+### 校准主动机械臂
 
 ```bash
 lerobot-calibrate \
@@ -202,7 +212,7 @@ lerobot-calibrate \
 
 手动将每个关节移动到其最大和最小位置。校准完所有关节后按 Enter 键保存。
 
-### 校准从动臂
+### 校准从动机械臂
 
 ```bash
 lerobot-calibrate \
@@ -235,7 +245,7 @@ Camera #1: /dev/video4 (front camera)
 
 ## 🎮 远程操作测试
 
-在数据收集之前，通过远程操作测试设置：
+在数据收集之前通过远程操作测试设置：
 
 ```bash
 lerobot-teleoperate \
@@ -250,7 +260,7 @@ lerobot-teleoperate \
 ```
 
 :::warning
-对于 ACT 模型训练，摄像头名称必须是 `wrist` 和 `front`。使用不同名称需要修改源代码。
+对于 ACT 模型训练，摄像头名称必须是 `wrist` 和 `front`。使用不同的名称需要修改源代码。
 :::
 
 ## 📊 水果分拣数据收集
@@ -307,9 +317,9 @@ lerobot-record \
 如果键盘控制不起作用，请尝试：`pip install pynput==1.6.8`
 :::
 
-### 回放片段
+### 重播一个回合
 
-通过回放片段测试记录的数据：
+通过重播一个回合来测试录制的数据：
 
 ```bash
 lerobot-replay \
@@ -346,10 +356,10 @@ lerobot-train \
 
 | 参数 | 描述 |
 |-----------|-------------|
-| `--policy.type` | 模型类型（act） |
-| `--steps` | 总训练步数（100,000） |
-| `--batch_size` | 训练批次大小（8） |
-| `--eval_freq` | 评估频率（每 5000 步） |
+| `--policy.type` | 模型类型 (act) |
+| `--steps` | 总训练步数 (100,000) |
+| `--batch_size` | 训练批次大小 (8) |
+| `--eval_freq` | 评估频率 (每 5000 步) |
 | `--wandb.enable` | 启用 Weights & Biases 日志记录 |
 
 ### 训练时间
@@ -364,7 +374,7 @@ lerobot-train \
 
 ### 恢复训练
 
-如果训练被中断，可以从最后一个检查点恢复：
+如果训练被中断，从最后一个检查点恢复：
 
 ```bash
 lerobot-train \
@@ -394,14 +404,14 @@ lerobot-record \
 
 ### 自主操作
 
-训练完成后，机器人可以自主分拣水果。下面的视频演示了在 J501 Mini 配合 StarAI Viola 机械臂上使用训练好的 ACT 策略完成水果分拣的完整工作流程：
+训练完成后，机器人可以自主分拣水果。下面的视频演示了在 J501 Mini 配合 StarAI Viola 机械臂上使用训练好的 ACT 策略的完整水果分拣工作流程：
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/Tk6jazbZZy0" title="Fruit Sorting Demo with J501 Mini and StarAI Viola" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 **演示亮点：**
-- 机器人自主识别并抓取不同的水果
+- 机器人自主识别和抓取不同的水果
 - 从远程操作演示中学习到的流畅精确动作
 - 成功将水果分拣到指定容器中
 - 展示了在 J501 Mini 上训练的 ACT 策略的有效性
@@ -419,17 +429,17 @@ lerobot-record \
 1. **一致的环境**
    - 保持光照条件稳定
    - 最小化背景变化
-   - 使用一致的水果摆放
+   - 使用一致的水果放置方式
 
 2. **质量胜过数量**
-   - 收集流畅、有意识的演示
+   - 收集流畅、有意的演示
    - 避免急促的动作
    - 确保训练数据中的抓取成功
 
 3. **相机定位**
    - 保持相机角度一致
    - 确保水果和夹爪的良好可见性
-   - 避免录制过程中相机移动
+   - 录制期间避免相机移动
 
 ### 训练优化
 
@@ -465,7 +475,7 @@ sudo dmesg | grep ttyUSB
 sudo chmod 777 /dev/ttyUSB*
 ```
 
-**相机无法工作**
+**相机不工作**
 - 不要通过 USB 集线器连接相机
 - 使用直接 USB 连接
 - 使用 `lerobot-find-cameras opencv` 检查相机索引

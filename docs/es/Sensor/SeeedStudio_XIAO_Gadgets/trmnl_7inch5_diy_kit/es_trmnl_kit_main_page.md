@@ -20,13 +20,16 @@ last_update:
 </div>
 
 ## Introducción
+
 ### Descripción del Producto
+
 El Kit DIY TRMNL 7.5" (OG), co-desarrollado por Seeed Studio y TRMNL, es una solución de desarrollo e-ink versátil. Combina una pantalla e-ink monocromática de 7.5 pulgadas 800×480, placa controladora XIAO ESP32-S3 PLUS, batería recargable de 2000 mAh, y cable de extensión FPC de 10cm. Completamente compatible con el ecosistema TRMNL BYOD, este kit permite la construcción de paneles de control sin código con más de 375 plugins y 8 diseños, ideal para entusiastas del DIY, interfaces de hogar inteligente, y señalización digital creativa.
 
 ### Características
-:::tip
+
+<!-- :::tip
 Para celebrar la colaboración, el Equipo TRMNL ofrece 30% de descuento en el acceso al firmware TRMNL BYOD (35 dólares, usualmente 50 dólares). Usa el código **trmnl-seeed-diy** al finalizar la compra (primeros 200 clientes, 1 por cliente). ¡Por orden de llegada!
-:::
+::: -->
 
 - **Compatibilidad TRMNL BYOD**: Kit oficial para construir dispositivo TRMNL 7.5'' OG con 375+ plugins y 8 diseños sin código (ej., Calendar, Shopify, GitHub)
 - **Pantalla E-Ink de 7.5"**: Pantalla monocromática 800×480 con actualización parcial (0.34s) y actualización completa (3.5s)
@@ -35,6 +38,7 @@ Para celebrar la colaboración, el Equipo TRMNL ofrece 30% de descuento en el ac
 - **Carcasas de Código Abierto**: Disponibles en Printables y Thingiverse para fácil personalización
 
 ### Especificaciones
+
 | Parámetro | Descripción |
 | --- | --- |
 | MCU | Placa de Desarrollo XIAO ePaper Display con XIAO ESP32-S3 Plus integrado |
@@ -46,11 +50,13 @@ Para celebrar la colaboración, el Equipo TRMNL ofrece 30% de descuento en el ac
 | Carcasa | No incluida (diseños de código abierto en Printables y Thingiverse) |
 
 ## Descripción General del Hardware
+
 ### Diagrama de Componentes
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/overview.png" style={{width:600, height:'auto'}}/></div>
 
 ### Lista de Partes
+
 | Producto | Cantidad |
 | --- | --- |
 | Placa de Desarrollo XIAO ePaper Display (XIAO ESP32-S3 Plus) | 1 |
@@ -59,9 +65,10 @@ Para celebrar la colaboración, el Equipo TRMNL ofrece 30% de descuento en el ac
 | Conector FPC | 1 |
 | Batería Li-ion Recargable de 2000mAh | 1 |
 
-
 ## Primeros Pasos
+
 ### Instalación del Equipo
+
 **Paso 1. Conectar la Pantalla a la Placa Controladora**  
 Alinea el cable FPC con el conector en la Placa XIAO ePaper Display, luego asegura el pestillo para garantizar una conexión firme.  
 
@@ -125,6 +132,7 @@ Si tu kit TRMNL está lejos de tu router, puedes mover la antena fuera de la car
 :::
 
 ## Centro Wiki
+
 ### Explora Guías Detalladas
 
 #### 1. [Tutorial del Ecosistema TRMNL BYOD](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_trmnl/)
@@ -140,7 +148,8 @@ Aprende cómo configurar tu kit TRMNL con Home Assistant a través de ESPHome, i
 Domina el control del kit TRMNL con Arduino, incluyendo mecanismos de actualización, renderizado de gráficos y gestión de energía.
 
 ## <span id="resource">Recursos</span>
-- **[Firmware]** [Biblioteca TRMNL ePaper (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)   
+
+- **[Firmware]** [Biblioteca TRMNL ePaper (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
 - **[Hardware]** [Esquemático de la Placa Controladora](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
 - **[Imprimible]** [base triangular](https://www.printables.com/model/1354873)  
 - **[Imprimible]** [base triangular protegida](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
@@ -152,17 +161,16 @@ Domina el control del kit TRMNL con Arduino, incluyendo mecanismos de actualizac
 - **[Makerworld]** [base triangular protegida](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [base en forma de L](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
-
 ## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Ofrecemos múltiples canales de soporte:
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

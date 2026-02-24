@@ -1,6 +1,6 @@
 ---
 description: ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi
-title: ReSpeaker 6-Mic Circular Array Kit for Raspberry Pi
+title: reSpeaker 6-Mic Circular Array Kit for Raspberry Pi
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
