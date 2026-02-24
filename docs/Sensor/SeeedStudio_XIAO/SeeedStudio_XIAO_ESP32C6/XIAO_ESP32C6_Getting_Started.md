@@ -187,9 +187,9 @@ void setup() {
 | D5                      | SCL       | GPIO23    | SDIO_DATA3         | GPIO, I2C Clock                      |
 | D6                      | TX        | GPIO16    |                    | GPIO, UART Transmit                  |
 | D7                      | RX        | GPIO17    |                    | GPIO, UART Receive                   |
-| D8                      | SCK       | GPIO19    | SDIO_CLK           | GPIO, SPI Clock                      |
-| D9                      | MISO      | GPIO20    | SDIO_DATA0         | GPIO, SPI Data                       |
-| D10                     | MOSI      | GPIO18    | SDIO_CMD           | GPIO, SPI Data                       |
+| D8                      | SCK       | GPIO19    | SPI_CLK           | GPIO, SPI Clock                      |
+| D9                      | MISO      | GPIO20    | SPI_MISO          | GPIO, SPI Data                       |
+| D10                     | MOSI      | GPIO18    | SPI_MOSI           | GPIO, SPI Data                       |
 | MTDO                    |           | GPIO7     |                    | JTAG                                 |
 | MTDI                    |           | GPIO5     |                    | JTAG, ADC                            |
 | MTCK                    |           | GPIO6     |                    | JTAG, ADC                            |

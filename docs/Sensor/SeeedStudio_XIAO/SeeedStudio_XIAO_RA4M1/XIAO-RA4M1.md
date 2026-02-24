@@ -95,10 +95,10 @@ Before everything starts, it is quite essential to have some basic parameters of
 | 5V              | VBUS             |           |                                     | Power Input/Output                   |             |
 | GND             |                  |           |                                     |                                      |              |
 | 3V3             | 3V3_OUT          |           |                                     | Power Output                         |              |
-| D0              | Analog          | P014      | ADC09                               | GPIO, ADC                            |       0   |
-| D1              | Analog          | P000      | ADC00                               | GPIO, ADC                            |          1     |
-| D2              | Analog          | P001      | ADC01                               | GPIO, ADC                            |        2       |
-| D3              | Analog          | P002      | ADC02                               | GPIO, ADC                            |        3   |
+| D0              | Analog          | P014      | AN009                               | GPIO, ADC                            |       0   |
+| D1              | Analog          | P000      | AN000                               | GPIO, ADC                            |          1     |
+| D2              | Analog          | P001      | AN001                               | GPIO, ADC                            |        2       |
+| D3              | Analog          | P002      | AN002                              | GPIO, ADC                            |        3   |
 | D4              | SDA1      | P206      |                                            | GPIO, I2C Data             |               4   |
 | D5              | Analog,SCL1      | P100      |                                     | GPIO, I2C Clock, ADC                 |     5    |
 | D6              | TXD2             | P302      | SDA2                                | GPIO, UART Transmit,I2C              |    6     |
@@ -110,10 +110,10 @@ Before everything starts, it is quite essential to have some basic parameters of
 | D12             | TX9              | P409      |                                     | GPIO,UART                            |        |
 | D13             | GPIO             | P013      |                                     | GPIO                                 |        |
 | D14             | GPIO             | P012      |                                     | GPIO                                 |        |
-| D15             | TXD0             | P101      | SDA0,ADC21,SPI0_MOSI                | GPIO, UART Transmit, ADC,SPI,I2C     |       |
+| D15             | TXD0             | P101      | SDA0,AN021,SPI0_MOSI                | GPIO, UART Transmit, ADC,SPI,I2C     |       |
 | D16             | RXD0             | P104      | SCL0,SPI0_MISO                      | GPIO,UART, SPI,I2C                   |       |
-| D17             | CRX0             | P102      | ADC20,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |       |
-| D18             | CTX0             | P103      | ADC19                               | GPIO, SPI ,ADC,UART                  |       |
+| D17             | CRX0             | P102      | AN020,SPI0_SCK                      | GPIO, UART , ADC,SPI                 |       |
+| D18             | CTX0             | P103      | AN019                               | GPIO, SPI ,ADC,UART                  |       |
 | ADC_BAT         |                  | P400      |                                     | Read the BAT voltage value           |       |
 | Reset           |                  | RES       |                                     | RESET                                |       |
 | Boot            |                  | P201      |                                     | Enter Boot Mode                      |       |

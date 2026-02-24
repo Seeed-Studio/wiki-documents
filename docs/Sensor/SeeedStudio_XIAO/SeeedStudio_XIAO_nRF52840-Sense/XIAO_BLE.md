@@ -237,36 +237,36 @@ Bluetooth Mesh/NFC</td>
 </table>
 
  **Pin Map**
-| XIAO Pin                 | Function         | Chip Pin   | Description                              |
-| :---------------------: | :-------------: | :-------:  | :-------------------------------------- |
-| 5V                      | VBUS             |                               | Power Input/Output                       |
-| GND                     |                  |                               |                                          |
-| 3V3                     | 3V3_OUT          |                              | Power Output                             |
-| D0                      | Analog          | P0.02                        | GPIO, ADC                                |
-| D1                      | Analog          | P0.03                        | GPIO, ADC                                |
-| D2                      | Analog          | P0.28                        | GPIO, ADC                                |
-| D3                      | Analog          | P0.29                        | GPIO, ADC                                |
-| D4                      | Analog,SDA       | P0.04                         | GPIO, I2C Data, ADC                      |
-| D5                      | Analog,SCL       | P0.05                         | GPIO, I2C Clock, ADC                     |
-| D6                      | TX               | P1.11                         | GPIO, UART Transmit                      |
-| D7                      | RX               | P1.12                         | GPIO, UART Receive                       |
-| D8                      | SPI_SCK          | P1.13                         | GPIO, SPI Clock                          |
-| D9                      | SPI_MISO         | P1.14                         | GPIO, SPI Data                           |
-| D10                     | SPI_MOSI         | P1.15                         | GPIO, SPI Data                           |
-| NFC1                    |                  | P0.09                         | NFC                                      |
-| NFC2                    |                  | P0.10                         | NFC                                      |
-| Reset                   |                  | P0.18                         | RESET                                    |
-| ADC_BAT                 |                  | P0.14                         | Read the BAT voltage value               |
-| 6 DOF IMU_PWR           |                  | P1.08                         | power switch of the 6D module            |
-| 6 DOF IMU__INT1         |                  | P0.11                         | Interrupt signal pin of the 6D module    |
-| PDM Microphone_DATA     |                  | P0.16                         | PDM audio data input pin                 |
-| PDM Microphone_CLK      |                  | P1.00                         | PDM audio clock output pin               |
-| RF Switch Port Select   |                  | P2.05                         | Switch onboard antenna                   |
-| RF Switch Power         |                  | P2.03                         | Power                                    |
-| CHARGE_LED              |                  | P0.17                         | CHG-LED_Red                              |
-| USER_LED_R              |                  | P0.26                         | User-controlled red RGB LED pin          |
-| USER_LED_B              |                  | P0.06                         | User-controlled blue RGB LED pin         |
-| USER_LED_G              |                  | P0.30                         | User-controlled green RGB LED pin        |
+| XIAO Pin                 | Function         | Chip Pin                          | Description                          |Arduino Name |     
+| :---------------------: | :-------------: | :-------:                      | :-------------------------------------- | :-------:   |
+| 5V                      | VBUS             |                               | Power Input/Output                       |           |
+| GND                     |                  |                               |                                          |           |
+| 3V3                     | 3V3_OUT          |                              | Power Output                             |            |
+| D0                      | Analog          | P0.02                        | GPIO, AIN0                                |       0      |
+| D1                      | Analog          | P0.03                        | GPIO, AIN1                               |       1       |
+| D2                      | Analog          | P0.28                        | GPIO, AIN4                                |        2     |
+| D3                      | Analog          | P0.29                        | GPIO, AIN5                               |       3     |
+| D4                      | Analog,SDA       | P0.04                         | GPIO, I2C Data, AIN2                      |     4      |
+| D5                      | Analog,SCL       | P0.05                         | GPIO, I2C Clock, AIN3                     |     5       |
+| D6                      | TX               | P1.11                         | GPIO, UART Transmit                      |     7/6        |
+| D7                      | RX               | P1.12                         | GPIO, UART Receive                       |     8/7       |
+| D8                      | SPI_SCK          | P1.13                         | GPIO, SPI Clock                          |      9/8    |
+| D9                      | SPI_MISO         | P1.14                         | GPIO, SPI Data                           |     10/9     |
+| D10                     | SPI_MOSI         | P1.15                         | GPIO, SPI Data                           |       11/10   |
+| NFC1                    |                  | P0.09                         | NFC                                      |          |
+| NFC2                    |                  | P0.10                         | NFC                                      |          |
+| Reset                   |                  | P0.18                         | RESET                                    |          |
+| ADC_BAT                 |                  | P0.14                         | Read the BAT voltage value               |          |
+| 6 DOF IMU_PWR           |                  | P1.08                         | power switch of the 6D module            |          |
+| 6 DOF IMU__INT1         |                  | P0.11                         | Interrupt signal pin of the 6D module    |          |
+| PDM Microphone_DATA     |                  | P0.16                         | PDM audio data input pin                 |          |
+| PDM Microphone_CLK      |                  | P1.00                         | PDM audio clock output pin               |          |
+| RF Switch Port Select   |                  | P2.05                         | Switch onboard antenna                   |          |
+| RF Switch Power         |                  | P2.03                         | Power                                    |          |
+| CHARGE_LED              |                  | P0.17                         | CHG-LED_Red                              |          |
+| USER_LED_R              |                  | P0.26                         | User-controlled red RGB LED pin          |     11     |
+| USER_LED_B              |                  | P0.06                         | User-controlled blue RGB LED pin         |     13/12     |
+| USER_LED_G              |                  | P0.30                         | User-controlled green RGB LED pin        |      12/13    |
 
  </TabItem>
  <TabItem value="52840Plus" label="XIAO nRF52840 Plus/XIAO nRF52840 Sense Plus" default>
@@ -293,43 +293,43 @@ Bluetooth Mesh/NFC</td>
   
  </table>
 
-| XIAO Pin                 | Function             | Chip Pin  | Alternate Functions | Description                              |
-| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- |
-| 5V                      | VBUS                 |           |                    | Power Input/Output                       |
-| GND                     |                      |           |                    |                                          |
-| 3V3                     | 3V3_OUT              |           |                    | Power Output                             |
-| D0                      | Analog              | P0.02     |                    | GPIO, ADC                                |
-| D1                      | Analog              | P0.03     |                    | GPIO, ADC                                |
-| D2                      | Analog              | P0.28     |                    | GPIO, ADC                                |
-| D3                      | Analog              | P0.29     |                    | GPIO, ADC                                |
-| D4                      | Analog,SDA           | P0.04     |                    | GPIO, I2C Data, ADC                      |
-| D5                      | Analog,SCL           | P0.05     |                    | GPIO, I2C Clock, ADC                     |
-| D6                      | TX                   | P1.11     |                    | GPIO, UART Transmit                      |
-| D7                      | RX                   | P1.12     |                    | GPIO, UART Receive                       |
-| D8                      | SPI_SCK              | P1.13     |                    | GPIO, SPI Clock                          |
-| D9                      | SPI_MISO             | P1.14     |                    | GPIO, SPI Data                           |
-| D10                     | SPI_MOSI             | P1.15     |                    | GPIO, SPI Data                           |
-| D11                     | I2S_SD               | P0.15     |                    | GPIO, I2S, ADC                           |
-| D12                     | I2S_SCK              | P0.19     |                    | GPIO,I2S, ADC                            |
-| D13                     | I2S_WS               | P1.01     |                    | GPIO, I2S  ADC                           |
-| D14                     | RX1                  | P0.09     | NFC1               | GPIO, UART Receive, ADC                  |
-| D15                     | TX1                  | P0.10     | NFC2               | GPIO, UART Transmit, ADC                 |
-| D16                     | BAT                  | P0.31     |                    | GPIO                                     |
-| D17                     | SCK1                 | P1.03     |                    | GPIO, SPI                                |
-| D18                     | MISO1                | P1.05     |                    | GPIO, SPI                                |
-| D19                     | MOSI1                | P1.07     |                    | GPIO, SPI                                |
-| ADC_BAT                 |                      | P0.14     |                    | Read the BAT voltage value               |
-| 6 DOF IMU_PWR           |                      | P1.08     |                    | power switch of the 6D module            |
-| 6 DOF IMU__INT1         |                      | P0.11     |                    | Interrupt signal pin of the 6D module    |
-| PDM Microphone_DATA     |                      | P0.16     |                    | PDM audio data input pin                 |
-| PDM Microphone_CLK      |                      | P1.00     |                    | PDM audio clock output pin               |
-| Reset                   |                      | P0.18     |                    | RESET                                    |
-| RF Switch Port Select   |                      | P2.05     |                    | Switch onboard antenna                   |
-| RF Switch Power         |                      | P2.03     |                    | Power                                    |
-| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |
-| USER_LED_R              |                      | P0.26     |                    | User-controlled red RGB LED pin          |
-| USER_LED_B              |                      | P0.06     |                    | User-controlled blue RGB LED pin         |
-| USER_LED_G              |                      | P0.30     |                    | User-controlled green RGB LED pin        |
+| XIAO Pin                 | Function             | Chip Pin  | Alternate Functions | Description                              |Arduino Name |   
+| :---------------------: | :-----------------: | :-------: | :----------------: | :-------------------------------------- |:-------:   |
+| 5V                      | VBUS                 |           |                    | Power Input/Output                       |       |
+| GND                     |                      |           |                    |                                          |       |
+| 3V3                     | 3V3_OUT              |           |                    | Power Output                             |       |
+| D0                      | Analog              | P0.02     |                    | GPIO, ADC                                |    0      |
+| D1                      | Analog              | P0.03     |                    | GPIO, ADC                                |    1      |
+| D2                      | Analog              | P0.28     |                    | GPIO, ADC                                |    2      |
+| D3                      | Analog              | P0.29     |                    | GPIO, ADC                                |    3      |
+| D4                      | Analog,SDA           | P0.04     |                    | GPIO, I2C Data, ADC                      |    4      |
+| D5                      | Analog,SCL           | P0.05     |                    | GPIO, I2C Clock, ADC                     |    5      |
+| D6                      | TX                   | P1.11     |                    | GPIO, UART Transmit                      | 7/6        |
+| D7                      | RX                   | P1.12     |                    | GPIO, UART Receive                       | 8/7       |
+| D8                      | SPI_SCK              | P1.13     |                    | GPIO, SPI Clock                          |  9/8    |
+| D9                      | SPI_MISO             | P1.14     |                    | GPIO, SPI Data                           | 10/9     |
+| D10                     | SPI_MOSI             | P1.15     |                    | GPIO, SPI Data                           | 11/10   |
+| D11                     | I2S_SD               | P0.15     |                    | GPIO, I2S, ADC                           |      |
+| D12                     | I2S_SCK              | P0.19     |                    | GPIO,I2S, ADC                            |      |
+| D13                     | I2S_WS               | P1.01     |                    | GPIO, I2S  ADC                           |      |
+| D14                     | RX1                  | P0.09     | NFC1               | GPIO, UART Receive, ADC                  |      |
+| D15                     | TX1                  | P0.10     | NFC2               | GPIO, UART Transmit, ADC                 |      |
+| D16                     | BAT                  | P0.31     |                    | GPIO                                     |      |
+| D17                     | SCK1                 | P1.03     |                    | GPIO, SPI                                |      |
+| D18                     | MISO1                | P1.05     |                    | GPIO, SPI                                |      |
+| D19                     | MOSI1                | P1.07     |                    | GPIO, SPI                                |      |
+| ADC_BAT                 |                      | P0.14     |                    | Read the BAT voltage value               |      |
+| 6 DOF IMU_PWR           |                      | P1.08     |                    | power switch of the 6D module            |      |
+| 6 DOF IMU__INT1         |                      | P0.11     |                    | Interrupt signal pin of the 6D module    |      |
+| PDM Microphone_DATA     |                      | P0.16     |                    | PDM audio data input pin                 |      |
+| PDM Microphone_CLK      |                      | P1.00     |                    | PDM audio clock output pin               |      |
+| Reset                   |                      | P0.18     |                    | RESET                                    |      |
+| RF Switch Port Select   |                      | P2.05     |                    | Switch onboard antenna                   |      |
+| RF Switch Power         |                      | P2.03     |                    | Power                                    |      |
+| CHARGE_LED              |                      | P0.17     |                    | CHG-LED_Red                              |      |
+| USER_LED_R              |                      | P0.26     |                    | User-controlled red RGB LED pin          | 11     |
+| USER_LED_B              |                      | P0.06     |                    | User-controlled blue RGB LED pin         | 13/12     |
+| USER_LED_G              |                      | P0.30     |                    | User-controlled green RGB LED pin        |  12/13    |
 
 </TabItem>
 
