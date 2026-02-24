@@ -78,24 +78,24 @@ Please pay attention to use, do not lift the shield cover.
 | 5V              | VBUS        |                                       | Power Input/Output                   |
 | GND             |             |                                       |                                      |
 | 3V3             | 3V3_OUT     |                                       | Power Output                         |
-| D0              | Analog      | P26                                   | GPIO, ADC                            |
-| D1              | Analog      | P27                                   | GPIO, ADC                            |
-| D2              | Analog      | P28                                   | GPIO, ADC                            |
-| D3              | Analog      | P29                                   | GPIO, ADC                            |
-| D4              | SDA         | P6                                    | GPIO, I2C Data                       |
-| D5              | SCL         | P7                                    | GPIO, I2C Clock                      |
-| D6              | TX          | P0                                    | GPIO, UART Transmit                  |
-| D7              | RX,CSn      | P1                                    | GPIO, UART Receive,CSn               |
-| D8              | SCK         | P2                                    | GPIO, SPI Clock                      |
-| D9              | MISO        | P4                                    | GPIO, SPI Data                       |
-| D10             | MOSI        | P3                                    | GPIO, SPI Data                       |
+| D0              | Analog      | GPIO26                                   | GPIO, ADC                            |
+| D1              | Analog      | GPIO27                                   | GPIO, ADC                            |
+| D2              | Analog      | GPIO28                                   | GPIO, ADC                            |
+| D3              | Analog      | GPIO29                                   | GPIO, ADC                            |
+| D4              | SDA         | GPIO6                                    | GPIO, I2C Data                       |
+| D5              | SCL         | GPIO7                                    | GPIO, I2C Clock                      |
+| D6              | TX          | GPIO0                                    | GPIO, UART Transmit                  |
+| D7              | RX,CSn      | GPIO1                                    | GPIO, UART Receive,CSn               |
+| D8              | SCK         | GPIO2                                    | GPIO, SPI Clock                      |
+| D9              | MISO        |GPIO4                                    | GPIO, SPI Data                       |
+| D10             | MOSI        | GPIO3                                    | GPIO, SPI Data                       |
 | Reset           |             | RUN                                   | RUN                                  |
 | Boot            |             | RP2040_BOOT                           | Enter Boot Mode                      |
 | CHARGE_LED      |             | VCC_3V3                               | CHG-LED_Red                          |
-| RGB LED         |             | NEOPIX                       | RGB LED                              |
-| USER_LED_R      |             | IO17_RGB-R                           | User-controlled red RGB LED pin      |
-| USER_LED_B      |             | IO25_RGB-B                            | User-controlled blue RGB LED pin     |
-| USER_LED_G      |             | IO16_RGB-G                           | User-controlled green RGB LED pin    |
+| RGB LED         |             | GPIO12                       | RGB LED                              |
+| USER_LED_R      |             | GPIO17                           | User-controlled red RGB LED pin      |
+| USER_LED_B      |             | GPIO25                            | User-controlled blue RGB LED pin     |
+| USER_LED_G      |             | GPIO16                          | User-controlled green RGB LED pin    |
 
 ### **Enter Bootloader Mode**
 
