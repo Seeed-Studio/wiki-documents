@@ -102,7 +102,7 @@ last_update:
 有时您可能会遇到 AT 端口无响应的情况。在这种情况下，请使用 DM 端口代替。
 :::
 
-  <div style={{ textAlign: 'center' }}>
+<div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mbimcommand.PNG"
     style={{ width: 600}}
@@ -116,12 +116,11 @@ last_update:
 - Windows 应检测到一个 **蜂窝网络接口**。
 - 您现在可以直接在 Windows 的 **网络和 Internet 设置** 中管理并连接网络。
 
-   <div style={{ textAlign: 'center' }}>
+<div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/windows.PNG"
     style={{ width: 600}}
   />
-
 </div>
 
 ## 验证网络配置
@@ -137,8 +136,7 @@ last_update:
 
    您应在“移动宽带连接”或“蜂窝”下看到一个带有 IP 地址的接口。
 
-   <div style={{ textAlign: 'center' }}>
-
+<div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mbimcmd.PNG"
     style={{ width: 600}}

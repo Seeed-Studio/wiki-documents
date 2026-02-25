@@ -102,7 +102,7 @@ Para cambiar el módulo al modo MBIM, necesitará la **herramienta QCOM**.
 En ocasiones puede que el puerto AT no responda. En esos casos, utilice el puerto DM en su lugar.
 :::
 
-  <div style={{ textAlign: 'center' }}>
+<div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mbimcommand.PNG"
     style={{ width: 600}}
@@ -116,12 +116,11 @@ Una vez configurado en modo MBIM:
 - Windows debería detectar una **Interfaz de red celular**.
 - Ahora puede administrar y conectarse a redes directamente desde **Configuración de Red e Internet** de Windows.
 
-   <div style={{ textAlign: 'center' }}>
+<div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/windows.PNG"
     style={{ width: 600}}
   />
-
 </div>
 
 ## Verificar la configuración de red
@@ -137,8 +136,7 @@ Para verificar si su PC ha obtenido una conexión de red mediante MBIM:
 
    Debería ver una interfaz con una dirección IP bajo "Conexión de banda ancha móvil" o "Celular".
 
-   <div style={{ textAlign: 'center' }}>
-
+<div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mbimcmd.PNG"
     style={{ width: 600}}

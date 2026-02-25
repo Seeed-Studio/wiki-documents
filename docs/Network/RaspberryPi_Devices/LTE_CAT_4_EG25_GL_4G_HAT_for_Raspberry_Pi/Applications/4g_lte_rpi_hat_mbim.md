@@ -102,7 +102,7 @@ To switch the module to MBIM mode, you will need the **QCOM Tool**.
 Sometimes you may experience the AT port not responding. In such cases, use the DM port instead.
 :::
 
-  <div style={{ textAlign: 'center' }}>
+<div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mbimcommand.PNG"
     style={{ width: 600}}
@@ -116,12 +116,11 @@ Once configured in MBIM mode:
 - Windows should detect a **Cellular Network Interface**.
 - You can now manage and connect to networks directly from the Windows **Network & Internet Settings**.
 
-   <div style={{ textAlign: 'center' }}>
+<div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/windows.PNG"
     style={{ width: 600}}
   />
-
 </div>
 
 ## Verify Network Configuration
@@ -137,8 +136,7 @@ To verify if your PC has acquired a network connection via MBIM:
 
    You should see an interface with an IP address under "Mobile Broadband Connection" or "Cellular".
 
-   <div style={{ textAlign: 'center' }}>
-
+<div style={{ textAlign: 'center' }}>
   <img
     src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mbimcmd.PNG"
     style={{ width: 600}}
