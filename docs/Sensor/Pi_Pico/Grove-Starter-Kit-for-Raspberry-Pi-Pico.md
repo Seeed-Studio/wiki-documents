@@ -196,7 +196,7 @@ Now, rotate the **Grove Rotary Angle Sensor**, and you will hear different sound
 
 **Step 2.** Connect the Grove OLED Display 0.96" to port I2C1 of the Grove Shield.
 
-**Step 3.** Connect the Grove Temperature Humidity Sensor (DHT11) to port I2C0 of the Grove Shield.
+**Step 3.** Connect the Grove Temperature Humidity Sensor (DHT11) to port D18 of the Grove Shield.
 
 **Step 4.** Plug the Grove Shield into the Pi Pico.
 
