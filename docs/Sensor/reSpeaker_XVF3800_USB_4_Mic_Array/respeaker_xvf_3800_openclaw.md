@@ -1,6 +1,6 @@
 ---
 description: "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
-title: "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
+title: "reSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
 keywords:
 - reSpeaker_XVF3800_USB_4_Mic_Array
 - reSpeaker

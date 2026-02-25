@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_SenseCAP_T1000_tracker
 last_update:
-  date: 12/24/2025
+  date: 2/14/2026
   author: Janet
 ---
 
@@ -74,6 +74,9 @@ The device can cache data, which can be enabled through Bluetooth configuration 
 <tr><td colspan="1" rowspan="3">Press twice continuously</td><td colspan="1">If the SOS is set to single-shot mode, double-clicking the button will activate the single-shot SOS mode and upload the location/sensor data and SOS events once.</td><td colspan="1">Twinkle with the sound</td><td colspan="1">3 seconds of alarm sound</td></tr>
 <tr><td colspan="1">If the SOS is set to continuous mode, double-click the button to activate the continuous SOS mode. The location, sensor data, and SOS events will be uploaded once every minute, and the mode will automatically end after 30 times.</td><td colspan="1">Twinkle with the sound</td><td colspan="1">A constant alarm sound</td></tr>
 <tr><td colspan="1">Double-click twice to exit SOS mode</td><td colspan="1">None</td><td colspan="1">None</td></tr>
+<tr><td colspan="1">Enter DFU Mode</td><td colspan="1">After a firmware upgrade failure, the device may enter DFU mode. You can see the device name `SENSECAP_GR_DFU_XXXX` in the SenseCraft app. <br />
+In DFU mode, the device will automatically exit after 3 minutes of inactivity.
+If you wish to exit immediately, you can press and hold the button for 3 seconds, and the device will reboot and return to normal operation.</td><td colspan="1">The LED lights continue to flash</td><td colspan="1">None</td></tr>
 </table>
 
 :::info Note
