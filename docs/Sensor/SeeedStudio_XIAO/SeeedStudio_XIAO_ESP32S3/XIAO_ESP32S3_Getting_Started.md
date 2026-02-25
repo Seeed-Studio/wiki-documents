@@ -286,9 +286,7 @@ Before everything starts, it is quite essential to have some basic parameters of
  </tr>
 </table>
 
-:::tip
-The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension board](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) but not with Plug-in camera sensor board.
-:::
+
 **Pin Map**
 
 | XIAO Pin                 | Function         | Chip Pin  | Alternate Functions | Description                          |
@@ -332,7 +330,9 @@ The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension 
 </Tabs>
 
 :::caution
-Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+- Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+
+- The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension board](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) but not with Plug-in camera sensor board.
 :::
 
 ### Power Pins
