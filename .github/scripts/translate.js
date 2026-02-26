@@ -714,7 +714,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
       try {
         const response = await openai.chat.completions.create({
           model: 'gpt-5.1-2025-11-13',
-          max_tokens: 20000,
+          max_completion_tokens: 20000,
           temperature: 0,
           messages: [
             { role: 'system', content: systemPrompt },
@@ -742,7 +742,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
       const response = await openai.chat.completions.create({
         model: 'gpt-5.1-2025-11-13',
-        max_tokens: 20000,
+        max_completion_tokens: 20000,
         temperature: 0,
         messages: [
           { role: 'system', content: systemPrompt },
