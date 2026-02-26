@@ -223,14 +223,14 @@ Before everything starts, it is quite essential to have some basic parameters of
 | D7                      | RX               | GPIO44                                                 |                    | GPIO, UART Receive                   |
 | D8                      | Analog,SCK       | GPIO7                                                  | TOUCH7             | GPIO, SPI Clock, ADC                 |
 | D9                      | Analog,MISO      | GPIO8                                                  | TOUCH8             | GPIO, SPI Data, ADC                  |
-| D10                     | Analog,MOSI      | GPIO10                                                 | TOUCH9             | GPIO, SPI Data, ADC                  |
+| D10                     | Analog,MOSI      | GPIO9                                                 | TOUCH9             | GPIO, SPI Data, ADC                  |
 | D11                     | Analog          | GPIO42                                                 | TOUCH12            | GPIO, ADC                            |
 | D12                     | Analog          | GPIO41                                                 | TOUCH13            | GPIO, ADC                            |
 | MTDO                    |                  | GPIO40                                                 |                    | JTAG                                 |
 | MTDI                    |                  | GPIO41                                                 |                    | JTAG, ADC                            |
 | MTCK                    |                  | GPIO39                                                 |                    | JTAG, ADC                            |
 | MTMS                    |                  | GPIO42                                                 |                    | JTAG, ADC                            |
-| Reset                   |                  | EN                                                |                    | EN                                   |
+| Reset                   |                  | CHIP_PU                                                |                    |                                    |
 | Boot                    |                  | GPIO0                                                  |                    | Enter Boot Mode                      |
 | U.FL-R-SMT1             |                  | LNA_IN                                                 |                    | UFL antenna                          |
 | CHARGE_LED              |                  |                                                |                    | CHG-LED                              |
@@ -286,9 +286,7 @@ Before everything starts, it is quite essential to have some basic parameters of
  </tr>
 </table>
 
-:::tip
-The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension board](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) but not with Plug-in camera sensor board.
-:::
+
 **Pin Map**
 
 | XIAO Pin                 | Function         | Chip Pin  | Alternate Functions | Description                          |
@@ -306,7 +304,7 @@ The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension 
 | D7                      | RX               | GPIO44    |                    | GPIO, UART Receive                   |
 | D8                      | Analog,SCK       | GPIO7     |                    | GPIO, SPI Clock, ADC                 |
 | D9                      | Analog,MISO      | GPIO8     |                    | GPIO, SPI Data, ADC                  |
-| D10                     | Analog,MOSI      | GPIO10    |                    | GPIO, SPI Data, ADC                  |
+| D10                     | Analog,MOSI      | GPIO9    |                    | GPIO, SPI Data, ADC                  |
 | D11                     |                  | GPIO38    |                    | GPIO, ADC                            |
 | D12                     |                  | GPIO39    |                    | GPIO, ADC                            |
 | D13                     |                  | GPIO40    |                    |                                      |
@@ -320,7 +318,7 @@ The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension 
 | MTDI                    |                  | GPIO41    |                    | JTAG, ADC                            |
 | MTCK                    |                  | GPIO39    |                    | JTAG, ADC                            |
 | MTMS                    |                  | GPIO42    |                    | JTAG, ADC                            |
-| Reset                   |                  | CHIP_EN   |                    | EN                                   |
+| Reset                   |                  | CHIP_PU   |                    |                                    |
 | Boot                    |                  | GPIO0     |                    | Enter Boot Mode                      |
 | ADC_BAT                 |                  | GPIO10    |                    | Read the BAT voltage value           |
 | U.FL-R-SMT1             |                  | LNA_IN    |                    | UFL antenna                          |
@@ -332,7 +330,9 @@ The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension 
 </Tabs>
 
 :::caution
-Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+- Although the XIAO ESP32-S3 assigns GPIO41 and GPIO42 to pins A11 and A12, due to the nature of the ESP32-S3 chip, pins A11 and A12 do not support ADC functionality. Please be sure to distinguish and differentiate between them.
+
+- The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension board](https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html) but not with Plug-in camera sensor board.
 :::
 
 ### Power Pins
@@ -844,7 +844,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 
 ## Resources
 
-### For Seeed Studio XIAO ESP32S3
+### For Seeed Studio XIAO ESP32-S3
 
 **Hardware Design**
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
@@ -863,14 +863,14 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 **Software & Tools**
 - **🗃️[Factory Firmware]** [XIAO ESP32-S3 Factory Firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-firmware-20240814.zip )
 
-### For Seeed Studio XIAO ESP32S3 Sense
+### For Seeed Studio XIAO ESP32-S3 Sense
 
 <!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
 **Hardware Design**
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
-- **📄[Schematic]** [XIAO ESP32-S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_V1.3_SCH_260115.pdf )
+- **📄[Schematic]** [XIAO ESP32-S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/new-XIAO%20ESP32S3%20Sense_v1.3_SCH_260210(1).pdf)
 - **🗃️[PCB Design Files]** 
-  - [XIAO ESP32-S3 Sense KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_V1.3_SCH&PCB_260115.7z )
+  - [XIAO ESP32-S3 Sense KiCad Project](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/new-XIAO%20ESP32S3%20Sense_v1.3_SCH&PCB_260210(1).zip )
 - **🗃️[PCB Design Libraries]** 
   - [XIAO Series KiCad Footprints](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_Footprints.zip )
   - [XIAO Series KiCad SCH Symbols](https://files.seeedstudio.com/wiki/XIAO-KiCad-Library/XIAO_Series_SCH_Symbols.zip )
@@ -886,7 +886,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 **Software & Tools**
 - **🗃️[Factory Firmware]** [XIAO ESP32-S3 Sense Factory Firmware](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-firmware-20240814.zip )
 
-### For Seeed Studio XIAO ESP32S3 Plus
+### For Seeed Studio XIAO ESP32-S3 Plus
 
 **Hardware Design**
 - **📄[Datasheet]** [Espressif ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
@@ -905,10 +905,10 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 - **📄[2D Dimensions]** [XIAO ESP32-S3 Plus Dimension in DXF (Bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/BOTTOM.dxf )
 - **🔗[3D Model]** [XIAO ESP32-S3 Plus 3D Model](https://grabcad.com/library/seeed-studio-xiao-esp32s3-plus-1/files )
 
-### For Seeed Studio XIAO ESP32S3 Sense Camera
+### For Seeed Studio XIAO ESP32-S3 Sense Camera
 
 **Hardware Design**
-- **📄[Datasheet]** [OV3660 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf )
+- **📄[Datasheet]** [OV3660 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf )
 - **📄[Datasheet]** [OV5640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
 - **📄[Datasheet]** [OV2640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
 ## Course Resources

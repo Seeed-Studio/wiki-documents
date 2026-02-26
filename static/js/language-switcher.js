@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-02-09 18:06:03 (北京时间)
-// 多语言页面: 2136 个
+// 生成时间: 2026-02-10 15:03:51 (北京时间)
+// 多语言页面: 2138 个
 
 (function() {
   'use strict';
@@ -8359,6 +8359,12 @@
     "es",
     "ja"
   ],
+  "/respeaker_xvf3800_agora_ten_framework_client": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/respeaker_xvf_3800_arm": [
     "cn",
     "en",
@@ -8396,6 +8402,12 @@
     "ja"
   ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/respeaker_xvf_3800_openclaw": [
     "cn",
     "en",
     "es",

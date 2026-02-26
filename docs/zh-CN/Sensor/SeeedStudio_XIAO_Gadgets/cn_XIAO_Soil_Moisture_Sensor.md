@@ -537,11 +537,6 @@ deep_sleep:
     allow_other_uses: true
     mode: INPUT_PULLUP
 
-
-external_components:
-  - source: github://pr#7942
-    components: [ "adc" ]
-
 sensor:
   - platform: adc
     id: soil_sensor

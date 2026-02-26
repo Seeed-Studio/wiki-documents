@@ -1,6 +1,6 @@
 ---
 description: Este proyecto demuestra cómo usar el Seeed Studio reSpeaker XVF3800 (XIAO ESP32-S3) como un dispositivo de voz edge. Establece un enlace de audio bidireccional en tiempo real a través de Agora, y se conecta directamente a la API v2 del Agente de IA Conversacional de Agora (LLM/ASR/TTS) para habilitar conversaciones de voz en tiempo real con baja latencia.
-title: Guía de Implementación del Cliente Conversacional Edge reSpeaker XVF3800 (XIAO ESP32-S3) + Agora Conversational AI Agent v2
+title: Guía de Implementación del Cliente Conversacional Edge ReSpeaker XVF3800 + Agora Conversational AI Agent v2
 keywords:
 - reSpeaker
 - XVF3800
@@ -14,8 +14,9 @@ keywords:
 - ESP-ADF
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /es/respeaker_xvf3800_agora_convo_client
+sku: 114993702,114993700
 last_update:
-  date: 04/2/2026
+  date: 2/04/2026
   author: Jiayu Zhan(Jack)
 ---
 
@@ -34,6 +35,15 @@ En este tutorial, te guiaremos para usar **Seeed Studio reSpeaker XVF3800 (XIAO 
             <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
+
+## Elige Tu Backend
+
+Esta guía proporciona **dos opciones de backend**. Elige la que se adapte a tu escenario:
+
+| Opción | Mejor para | Servidor Necesario | Enlace |
+|---|---|---:|---|
+| **Agora Conversational AI Agent v2 (Nube, directo)** | Configuración más rápida / infraestructura mínima | No | Estás aquí ✅ |
+| **TEN Framework (Auto-hospedado, ASR/LLM/TTS conectables)** | Pipeline personalizado / cambio de proveedores / características avanzadas | Sí (Docker) | 👉 [Ir a la versión TEN Framework](/es/respeaker_xvf3800_agora_ten_framework_client) |
 
 ## Tabla de Contenidos
 
@@ -156,14 +166,14 @@ Esta sección asegura que tu **proyecto Agora** tenga el interruptor **Enable Co
 ### 1) Registrarse / Iniciar sesión en Agora (Visión General)
 
 - Soporta registro por email/teléfono e inicio de sesión de terceros.
-- Después del registro, inicia sesión en **Agora Console**; usualmente eres guiado para crear un proyecto.
+- Después del registro, inicia sesión en **Agora Console**; usualmente se te guía para crear un proyecto.
 
 ### 2) Crear un Proyecto Agora (Visión General)
 
 En la página **Projects** en Agora Console:
 
 1. Haz clic en **Create New**
-2. Completa el nombre del proyecto / Caso de uso
+2. Completa el nombre del proyecto / caso de uso
 3. Método de autenticación: **APP ID + Token** (recomendado)
 4. Envía para crear
 
@@ -196,7 +206,7 @@ Dos métodos comunes:
 - **Generar un token temporal en la Consola (Temp Token)**
   1. Ve a la página de configuración del proyecto
   2. Haz clic en **Generate Temp Token** en el panel Security
-  3. Ingresa el nombre del Canal → Generar → copia el Token
+  3. Ingresa el nombre del canal → Generar → copia el Token
 
 - **Usar Agora Token Builder (web)**
   - Completa App ID / App Certificate, nombre del canal, UID, etc. para generar un Token (útil para validación rápida antes de implementar generación de tokens del lado del servidor)
@@ -225,14 +235,14 @@ Si estás viendo la UI antigua, cambia primero a la nueva Consola (la página t�
 |------|------|---------------|
 | **I2C** | Control de códec + botones | SDA=GPIO5, SCL=GPIO6 |
 | **I2S** | Datos de audio | BCLK=GPIO8, WS=GPIO7, DOUT=GPIO44, DIN=GPIO43 |
-| **Energía** | Energía/Flasheo | USB-C (XIAO ESP32-S3) |
+| **Power** | Energía/Flasheo | USB-C (XIAO ESP32-S3) |
 
 :::caution Importante
-La configuración de placa ESP-ADF por defecto usualmente está preparada para Korvo-2-V3. Su mapeo de pines es diferente del XVF3800. Si no configuras según esta guía, los síntomas comunes incluyen **códec no detectado sobre I2C / sin audio en I2S**.
+La configuración predeterminada de la placa ESP-ADF generalmente está preparada para Korvo-2-V3. Su mapeo de pines es diferente al de XVF3800. Si no configuras según esta guía, los síntomas comunes incluyen **codec no detectado por I2C / sin audio en I2S**.
 :::
 
 
-## Implementación ESP32
+## Despliegue ESP32
 
 ### Clonar este repositorio
 ```bash
@@ -454,7 +464,7 @@ agora_rtc_join_channel success
 
 1. Enciende y espera hasta que el dispositivo esté listo  
 2. **Presiona el botón SET una vez**: iniciar/unirse a la conversación (el Agente se une al canal RTC)  
-3. Habla al micrófono y espera a que el altavoz reproduzca la respuesta de IA  
+3. Habla al micrófono y espera a que el altavoz reproduzca la respuesta de la IA  
 4. Presiona **SET** nuevamente (o presiona **MUTE**) para detener la conversación  
 
 
@@ -471,7 +481,7 @@ agora_rtc_join_channel success
 - Repite el paso "Configurar Pines de Placa ESP-ADF", luego ejecuta `idf.py fullclean` y recompila
 - Verifica si el log de inicio puede detectar `0x18`
 
-### P2: La grabación/enlace ascendente funciona, pero no hay salida de altavoz
+### P2: La grabación/enlace ascendente funciona, pero no hay salida del altavoz
 
 **Causas comunes:**
 - La dirección I2S DIN/DOUT está mal configurada (DIN=GPIO43, DOUT=GPIO44)
@@ -481,7 +491,7 @@ agora_rtc_join_channel success
 ### P3: Errores de compilación o dependencias faltantes
 
 **Sugerencias:**
-- Confirma que las versiones de ESP-IDF / ESP-ADF coincidan con esta guía
+- Confirma que las versiones ESP-IDF / ESP-ADF coincidan con esta guía
 - Re-inicializa submódulos (si el proyecto usa submódulos):
   ```bash
   git submodule update --init --recursive
@@ -496,10 +506,10 @@ agora_rtc_join_channel success
 ## Referencias
 
 - Consola Agora (App ID / API Key)
-- Documentación de Agora RTC y documentación del IoT SDK
-- Documentación de ESP-IDF v5.2.3
-- Documentación de ESP-ADF v2.7
-- Introducción al reSpeaker XVF3800 y guía de actualización de firmware
+- Documentación Agora RTC y documentación IoT SDK
+- Documentación ESP-IDF v5.2.3
+- Documentación ESP-ADF v2.7
+- Introducción reSpeaker XVF3800 y guía de actualización de firmware
 - [Clientes de IA Conversacional ESP32](https://github.com/AgoraIO-Conversational-AI/esp32-client/tree/main)
 
 
