@@ -14,6 +14,15 @@ last_update:
 
 ![](https://files.seeedstudio.com/products/107990053/01.png)
 
+We are excited to formally introduce the **reSpeaker XVF3800** — a comprehensive upgrade to the reSpeaker XVF 3000. Building upon its predecessor's foundation of 4-microphone array architecture, universal compatibility (Windows / macOS / Linux), and dual-firmware (I2S / USB) plug-and-play convenience, the XVF3800 delivers a significant leap in both **audio fidelity and algorithmic performance**.
+
+**Key Upgrade Highlights**
+- **AI-Powered Audio Algorithms**: Integrated suite featuring AEC (Acoustic Echo Cancellation), AGC (Automatic Gain Control), DoA (Direction of Arrival) detection, beamforming, VAD (Voice Activity Detection), noise suppression, and dereverberation — laying robust groundwork for advanced voice applications.  
+- **360° Far-Field Voice Capture**: Precision voice pickup within a 5-meter radius, effortlessly accommodating conferencing systems, intelligent interaction, and voice-controlled scenarios.  
+- **Dual Operating Modes**: Flexible USB/I2S firmware switching to meet diverse development and deployment requirements.
+- **Product Details & Specifications**: [ReSpeaker XVF3800 4-Mic Array Store Page](https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html)
+- **Quick Start & Wiki Guide**: [reSpeaker XVF3800 Getting Started Guide | Seeed Studio Wiki](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/)
+
 The ReSpeaker Mic Array v2.0 is an upgrade to the original [ReSpeaker Mic Array v1.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-Far-field-w%2F-7-PDM-Microphones--p-2719.html). This upgraded version is based on XMOS’s XVF-3000, a significantly higher performing chipset than the previously used XVSM-2000. This new chipset includes many voice recognition algorithms to assist in performance. The array can be stacked (connected) right onto the top of the original ReSpeaker Core to significantly improve the voice interaction performance.The microphones have also been improved in this version allowing significant performance improvements over the first generation mic array with only 4 microphones.
 
 The ReSpeaker Mic Array v2.0 supports USB Audio Class 1.0 (UAC 1.0) directly. All major Operating System, including Windows,macOS, and Linux are compatible with UAC 1.0, allowing the mic array to function as a sound card without the ReSpeaker Core,while also retaining voice algorithms, such as DoA, BF, and AEC on those systems.

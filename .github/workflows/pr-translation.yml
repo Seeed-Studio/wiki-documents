@@ -372,14 +372,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-npm-anthropic-sdk-v1
+          key: ${{ runner.os }}-npm-openai-sdk-v1
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Install dependencies
         if: steps.check-permissions.outputs.has_permission == 'true'
         run: |
           echo "📦 安装翻译依赖..."
-          npm install @anthropic-ai/sdk --no-save --legacy-peer-deps
+          npm install openai --no-save --legacy-peer-deps
 
       - name: Run translation
         if: steps.check-permissions.outputs.has_permission == 'true'
