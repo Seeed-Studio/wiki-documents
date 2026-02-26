@@ -128,7 +128,7 @@ If activation fails, please confirm the verification code is correct and the dev
 2.  A major firmware update was performed without backing up authentication information.
 3.  A completely new firmware was flashed.
 
-If reactivation is needed, please send the device's STA Mac address (can be obtained from serial logs) to sensecap@seeed.cc for assistance. Please refer to: [Flashing Authentication Info](/flash_watcher_agent_firmware/#flashing-authentication-info).
+<!-- If reactivation is needed, please send the device's STA Mac address (can be obtained from serial logs) to sensecap@seeed.cc for assistance. Please refer to: [Flashing Authentication Info](/flash_watcher_agent_firmware/#flashing-authentication-info). -->
 :::
 
 You can watch a detailed tutorial in the video below:
