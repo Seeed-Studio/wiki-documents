@@ -422,7 +422,7 @@ jobs:
             echo "❌ 缺少可写凭据"
             exit 1
           fi
-          REMOTE_URL="https://${TOKEN}@github.com/${BASE_REPO}.git"
+          REMOTE_URL="https://x-access-token:${TOKEN}@github.com/${BASE_REPO}.git"
 
           git config --global init.defaultBranch main
           git clone --depth=1 "$REMOTE_URL" "$WORKDIR/repo"
