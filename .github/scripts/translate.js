@@ -1,4 +1,4 @@
-const Anthropic = require('@anthropic-ai/sdk');
+const OpenAI = require('openai');
 const fs = require('fs').promises;
 const path = require('path');
 const { execSync } = require('child_process');
@@ -11,7 +11,7 @@ try {
   console.log('ℹ️ 未安装 js-yaml，将使用简易解析回退逻辑');
 }
 
-const anthropic = new Anthropic({
+const openai = new OpenAI({
   apiKey: process.env.TRANSLATION_API_KEY
 });
 
@@ -712,18 +712,18 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
 
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
-        const response = await anthropic.messages.create({
-          model: 'claude-sonnet-4-20250514',
+        const response = await openai.chat.completions.create({
+          model: 'gpt-5.1-2025-11-13',
           max_tokens: 20000,
           temperature: 0,
-          system: systemPrompt,
           messages: [
+            { role: 'system', content: systemPrompt },
             { role: 'user', content: text }
           ]
         });
 
         // 为了保持调用点一致，这里也返回对象
-        return { text: response.content[0].text, endsInsideCodeBlock: false };
+        return { text: response.choices[0].message.content, endsInsideCodeBlock: false };
       } catch (error) {
         console.error(`❌ Category翻译失败 (尝试 ${attempt}/${maxRetries}): ${error.message}`);
         if (attempt === maxRetries) throw error;
@@ -740,17 +740,17 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
     try {
       console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})...`);
 
-      const response = await anthropic.messages.create({
-        model: 'claude-sonnet-4-20250514',
+      const response = await openai.chat.completions.create({
+        model: 'gpt-5.1-2025-11-13',
         max_tokens: 20000,
         temperature: 0,
-        system: systemPrompt,
         messages: [
+          { role: 'system', content: systemPrompt },
           { role: 'user', content: processed }
         ]
       });
 
-      let translatedContent = response.content[0].text;
+      let translatedContent = response.choices[0].message.content;
 
       // 先做链接/排版修复（此时代码块仍是占位符，不会被改动）
       translatedContent = fixAnchorLinks(translatedContent);

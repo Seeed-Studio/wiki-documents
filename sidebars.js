@@ -210,6 +210,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Hall_Sensor',
               ],
             },
             {
@@ -568,7 +569,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
-                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Voltage_Divider',
               ],
             },
@@ -1507,6 +1507,7 @@ const sidebars = {
                   label: 'Applications',
                   items: [
                     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/SeeedStudio_Round_Display_Christmas_ball',
+                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/SeeedStudio_Round_Display_Animation_Workshop',
                   ],
                 },
               ],
@@ -1938,7 +1939,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'ReSpeaker',
+      label: 'reSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -1948,7 +1949,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3800',
+          label: 'reSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -1959,7 +1960,7 @@ const sidebars = {
             
             {
               type: 'category',
-              label: 'ReSpeaker XVF 3800 with XIAO Intro',
+              label: 'reSpeaker XVF 3800 with XIAO Intro',
               collapsed: true,
               collapsible: true,
               link: {
@@ -1999,7 +2000,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker Lite',
+          label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -2009,7 +2010,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker Lite with XIAO ESP32S3',
+              label: 'reSpeaker Lite with XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
@@ -2048,7 +2049,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'ReSpeaker 2-Mics Pi HAT',
+          label: 'reSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
@@ -2075,7 +2076,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
@@ -5493,6 +5494,7 @@ const sidebars = {
                 'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-80cm_Infrared_Proximity_Sensor',
                 'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Gesture_v1.0',
                 'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Adjustable_PIR_Motion_Sensor',
+                'zh-CN/Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Hall_Sensor',
               ],
             },
             {
@@ -5851,7 +5853,6 @@ const sidebars = {
                 'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-Water_Atomization',
                 'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-16-Channel_PWM_Driver-PCA9685',
                 'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-I2C_Motor_Driver-TB6612FNG',
-                'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-Hall_Sensor',
                 'zh-CN/Sensor/Grove/Grove_Accessories/Actuator/cn_Grove-Voltage_Divider',
               ],
             },
@@ -10660,6 +10661,7 @@ const sidebars = {
                 'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-80cm_Infrared_Proximity_Sensor',
                 'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-Gesture_v1.0',
                 'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-Adjustable_PIR_Motion_Sensor',
+                'es/Sensor/Grove/Grove_Sensors/Proximity/es_Grove-Hall_Sensor',
               ],
             },
             {
@@ -11018,7 +11020,6 @@ const sidebars = {
                 'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-Water_Atomization',
                 'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-16-Channel_PWM_Driver-PCA9685',
                 'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-I2C_Motor_Driver-TB6612FNG',
-                'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-Hall_Sensor',
                 'es/Sensor/Grove/Grove_Accessories/Actuator/es_Grove-Voltage_Divider',
               ],
             },
@@ -15821,6 +15822,7 @@ const sidebars = {
                 'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-80cm_Infrared_Proximity_Sensor',
                 'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-Gesture_v1.0',
                 'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-Adjustable_PIR_Motion_Sensor',
+                'ja/Sensor/Grove/Grove_Sensors/Proximity/ja_Grove-Hall_Sensor',
               ],
             },
             {
@@ -16179,7 +16181,6 @@ const sidebars = {
                 'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-Water_Atomization',
                 'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-16-Channel_PWM_Driver-PCA9685',
                 'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-I2C_Motor_Driver-TB6612FNG',
-                'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-Hall_Sensor',
                 'ja/Sensor/Grove/Grove_Accessories/Actuator/ja_Grove-Voltage_Divider',
               ],
             },
