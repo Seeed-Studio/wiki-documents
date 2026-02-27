@@ -9257,6 +9257,7 @@ const sidebars = {
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_How_to_Establish_the_Ethercat_on_Jetson',
             'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_for_Jetson',
+            'zh-CN/Edge/NVIDIA_Jetson/FAQs/cn_Flash_JetPack_with_WSL2',
           ]
         }
       ],
@@ -14424,6 +14425,7 @@ const sidebars = {
             'es/Edge/NVIDIA_Jetson/FAQs/es_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'es/Edge/NVIDIA_Jetson/FAQs/es_How_to_Establish_the_Ethercat_on_Jetson',
             'es/Edge/NVIDIA_Jetson/FAQs/es_Make_DIY_BSP_for_Jetson',
+            'es/Edge/NVIDIA_Jetson/FAQs/es_Flash_JetPack_with_WSL2',
           ]
         }
       ],
@@ -19585,6 +19587,7 @@ const sidebars = {
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_How_to_Establish_the_Ethercat_on_Jetson',
             'ja/Edge/NVIDIA_Jetson/FAQs/ja_Make_DIY_BSP_for_Jetson',
+            'ja/Edge/NVIDIA_Jetson/FAQs/ja_Flash_JetPack_with_WSL2',
           ]
         }
       ],
