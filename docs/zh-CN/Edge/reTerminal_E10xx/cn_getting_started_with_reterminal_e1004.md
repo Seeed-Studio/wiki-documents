@@ -27,14 +27,14 @@ reTerminal E1004 是一款 13.3 英寸开源全彩电子纸显示屏，电池续
 
 ### 特性
 
--   **高清彩色显示：** 13.3 英寸 E Ink® Spectra™ 6 全彩电子纸显示屏，分辨率高达 1200x1600 像素。
--   **强大处理能力：** 由 ESP32-S3 驱动，配备 8MB PSRAM 和 32MB Flash，性能强劲。
--   **超低功耗：** 内置 5000mAh 电池，在单次充电情况下（深度睡眠模式）可支持最长 3 个月使用。
--   **零代码 UI 开发：** 默认固件支持 SenseCraft HMI，可通过拖拽方式创建仪表盘，并支持 AI 辅助设计。
--   **广泛兼容性：** 支持 Home Assistant (ESPHome)、Arduino、PlatformIO 和 ESP-IDF。
--   **丰富连接性：** 集成 2.4GHz Wi-Fi（802.11 b/g/n）和 Bluetooth 5.0。
--   **集成传感器与音频：** 内置温湿度传感器和用于告警的蜂鸣器。
--   **开箱即用的存储：** 随机附带 16GB Micro SD 卡（最高支持 32GB）。
+- **高清彩色显示：** 13.3 英寸 E Ink® Spectra™ 6 全彩电子纸显示屏，分辨率高达 1200x1600 像素。
+- **强大处理能力：** 由 ESP32-S3 驱动，配备 8MB PSRAM 和 32MB Flash，性能强劲。
+- **超低功耗：** 内置 5000mAh 电池，在单次充电情况下（深度睡眠模式）可支持最长 3 个月使用。
+- **零代码 UI 开发：** 默认固件支持 SenseCraft HMI，可通过拖拽方式创建仪表盘，并支持 AI 辅助设计。
+- **广泛兼容性：** 支持 Home Assistant (ESPHome)、Arduino、PlatformIO 和 ESP-IDF。
+- **丰富连接性：** 集成 2.4GHz Wi-Fi（802.11 b/g/n）和 Bluetooth 5.0。
+- **集成传感器与音频：** 内置温湿度传感器和用于告警的蜂鸣器。
+- **开箱即用的存储：** 随机附带 16GB Micro SD 卡（最高支持 32GB）。
 
 ## 规格参数
 
@@ -56,12 +56,12 @@ reTerminal E1004 是一款 13.3 英寸开源全彩电子纸显示屏，电池续
 
 ## 应用场景
 
--   **低功耗电子相框：** 以纸张般的显示效果呈现高分辨率家庭照片或艺术作品，无需担心每天充电。
--   **家庭信息看板：** 以时尚、常显的形式展示日历、通知、天气和新闻等信息。
--   **家庭自动化仪表盘：** 通过 Home Assistant 可视化实时智能家居数据（温度、湿度、空气质量等）。
--   **智能办公显示：** 显示会议室日程、使用状态或指引信息。
--   **零售与公共标牌：** 用于菜单、时刻表或占用状态指示的节能显示方案。
--   **教育与原型开发：** 学习物联网、嵌入式系统和 UI 设计的理想平台。
+- **低功耗电子相框：** 以纸张般的显示效果呈现高分辨率家庭照片或艺术作品，无需担心每天充电。
+- **家庭信息看板：** 以时尚、常显的形式展示日历、通知、天气和新闻等信息。
+- **家庭自动化仪表盘：** 通过 Home Assistant 可视化实时智能家居数据（温度、湿度、空气质量等）。
+- **智能办公显示：** 显示会议室日程、使用状态或指引信息。
+- **零售与公共标牌：** 用于菜单、时刻表或占用状态指示的节能显示方案。
+- **教育与原型开发：** 学习物联网、嵌入式系统和 UI 设计的理想平台。
 
 ## 硬件概览
 
@@ -85,10 +85,10 @@ reTerminal E1004 预装了支持 **SenseCraft HMI** 的固件，这是一个零�
 
 ### 步骤 1. 开机与网络配置
 
-1.  打开 **Power Button** 以启动 reTerminal E1004。
-2.  使用你的智能手机连接到设备的热点（AP 模式），以配置 Wi-Fi 凭据。
-3.  屏幕会显示一个 "Network Configuration" 二维码，或者在浏览器中打开 192.168.4.1 页面。
-4.  连接到互联网后，设备会显示 **Device Code** 或 **Binding QR Code**。
+1. 打开 **Power Button** 以启动 reTerminal E1004。
+2. 使用你的智能手机连接到设备的热点（AP 模式），以配置 Wi-Fi 凭据。
+3. 屏幕会显示一个 "Network Configuration" 二维码，或者在浏览器中打开 192.168.4.1 页面。
+4. 连接到互联网后，设备会显示 **Device Code** 或 **Binding QR Code**。
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
   <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/4.jpg" style={{ width: '49%', height: 'auto' }} />
@@ -96,26 +96,26 @@ reTerminal E1004 预装了支持 **SenseCraft HMI** 的固件，这是一个零�
 </div>
 ### 步骤 2. 绑定设备
 
-1.  在电脑浏览器中访问 [SenseCraft HMI Platform](https://sensecraft.seeed.cc/)。
-2.  登录你的账号（如果还没有账号，请先创建一个）。
-3.  进入 **Device Management** 部分并点击 **Add Device**。
-4.  输入显示在 reTerminal E1004 屏幕上的 **Device Code** 以完成绑定流程。
+1. 在电脑浏览器中访问 [SenseCraft HMI Platform](https://sensecraft.seeed.cc/)。
+2. 登录你的账号（如果还没有账号，请先创建一个）。
+3. 进入 **Device Management** 部分并点击 **Add Device**。
+4. 输入显示在 reTerminal E1004 屏幕上的 **Device Code** 以完成绑定流程。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/12.jpg" style={{width:1000, height:'auto'}}/></div>
 
 ### 步骤 3. 在平台上创建内容
 
-1.  前往 **Home Page** 选择你想要的模板，或进入 **Wrokspace** 从零开始创建你的作品。
-2.  [如果你在使用 HMI Platform 时有疑问，请点击此链接了解如何使用。](https://sensecraft-hmi-docs.seeed.cc/en/)
+1. 前往 **Home Page** 选择你想要的模板，或进入 **Wrokspace** 从零开始创建你的作品。
+2. [如果你在使用 HMI Platform 时有疑问，请点击此链接了解如何使用。](https://sensecraft-hmi-docs.seeed.cc/en/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2.jpg" style={{width:1000, height:'auto'}}/></div>
 
 ### 步骤 4. 将内容部署到设备
 
-1.  当你的设计准备就绪后，点击 **Preview** 按钮预览效果。
-2.  点击 **Save** 或 **deploy** 按钮。
-3.  从列表中选择你已绑定的 reTerminal E1004。
-4.  平台会通过 Wi-Fi 将数据发送到你的设备，电子纸屏幕会刷新以显示你的新仪表盘。
+1. 当你的设计准备就绪后，点击 **Preview** 按钮预览效果。
+2. 点击 **Save** 或 **deploy** 按钮。
+3. 从列表中选择你已绑定的 reTerminal E1004。
+4. 平台会通过 Wi-Fi 将数据发送到你的设备，电子纸屏幕会刷新以显示你的新仪表盘。
 
 :::note
 由于 E Ink 技术的特性，屏幕刷新可能需要几秒钟才能完全更新图像并清除残影。
@@ -123,35 +123,20 @@ reTerminal E1004 预装了支持 **SenseCraft HMI** 的固件，这是一个零�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/10.jpg" style={{width:1000, height:'auto'}}/></div>
 
-## 技术支持与产品讨论
-
-感谢你选择我们的产品！我们将通过多种支持方式，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
-
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
-
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
-</div>
-
 ## 资源
 
 - [reTerminal E1004 原理图 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004523_reTerminal%20E1004_V1.0_SCH_260105.pdf)
+
 ## 技术支持与产品讨论
 
 感谢你选择我们的产品！我们将通过多种支持方式，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

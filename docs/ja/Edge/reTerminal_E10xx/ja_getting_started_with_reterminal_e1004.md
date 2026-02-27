@@ -27,14 +27,14 @@ reTerminal E1004 は、最大 3 か月のバッテリー駆動が可能な 13.3 
 
 ### 特長
 
--   **高精細カラーディスプレイ:** 13.3 インチ E Ink® Spectra™ 6 フルカラー電子ペーパーディスプレイ、1200x1600 ピクセルの高解像度。
--   **高性能プロセッシング:** ESP32-S3（8MB PSRAM、32MB Flash 搭載）による高い処理性能。
--   **超低消費電力:** 内蔵 5000mAh バッテリーにより、1 回の充電で最大 3 か月使用可能（ディープスリープモード時）。
--   **ノーコード UI 開発:** 既定のファームウェアで SenseCraft HMI をサポートし、ドラッグ＆ドロップでのダッシュボード作成や AI 支援デザインが可能。
--   **高い互換性:** Home Assistant (ESPHome)、Arduino、PlatformIO、ESP-IDF をサポート。
--   **豊富な接続性:** 2.4GHz Wi-Fi (802.11 b/g/n) と Bluetooth 5.0 を内蔵。
--   **センサー & オーディオ内蔵:** 温度・湿度センサーおよびアラート用ブザーを内蔵。
--   **すぐに使えるストレージ:** 16GB Micro SD カードを同梱（最大 32GB まで対応）。
+- **高精細カラーディスプレイ:** 13.3 インチ E Ink® Spectra™ 6 フルカラー電子ペーパーディスプレイ、1200x1600 ピクセルの高解像度。
+- **高性能プロセッシング:** ESP32-S3（8MB PSRAM、32MB Flash 搭載）による高い処理性能。
+- **超低消費電力:** 内蔵 5000mAh バッテリーにより、1 回の充電で最大 3 か月使用可能（ディープスリープモード時）。
+- **ノーコード UI 開発:** 既定のファームウェアで SenseCraft HMI をサポートし、ドラッグ＆ドロップでのダッシュボード作成や AI 支援デザインが可能。
+- **高い互換性:** Home Assistant (ESPHome)、Arduino、PlatformIO、ESP-IDF をサポート。
+- **豊富な接続性:** 2.4GHz Wi-Fi (802.11 b/g/n) と Bluetooth 5.0 を内蔵。
+- **センサー & オーディオ内蔵:** 温度・湿度センサーおよびアラート用ブザーを内蔵。
+- **すぐに使えるストレージ:** 16GB Micro SD カードを同梱（最大 32GB まで対応）。
 
 ## 仕様
 
@@ -56,12 +56,12 @@ reTerminal E1004 は、最大 3 か月のバッテリー駆動が可能な 13.3 
 
 ## アプリケーション
 
--   **低消費電力電子フォトフレーム:** 高解像度の家族写真やアートを、紙のような表示品質で、毎日の充電を気にせず表示できます。
--   **ファミリーインフォメーションボード:** カレンダー、通知、天気、ニュースを、スタイリッシュで常時表示の形式で確認できます。
--   **ホームオートメーションダッシュボード:** Home Assistant を通じて、温度・湿度・空気質などのスマートホームデータをリアルタイムに可視化します。
--   **スマートオフィスディスプレイ:** 会議室のスケジュール、空き状況、案内表示などに利用できます。
--   **小売・公共サイネージ:** 省エネなメニュー表示、時刻表、混雑状況インジケーターなどに最適です。
--   **教育・プロトタイピング:** IoT、組み込みシステム、UI デザイン学習に理想的なプラットフォームです。
+- **低消費電力電子フォトフレーム:** 高解像度の家族写真やアートを、紙のような表示品質で、毎日の充電を気にせず表示できます。
+- **ファミリーインフォメーションボード:** カレンダー、通知、天気、ニュースを、スタイリッシュで常時表示の形式で確認できます。
+- **ホームオートメーションダッシュボード:** Home Assistant を通じて、温度・湿度・空気質などのスマートホームデータをリアルタイムに可視化します。
+- **スマートオフィスディスプレイ:** 会議室のスケジュール、空き状況、案内表示などに利用できます。
+- **小売・公共サイネージ:** 省エネなメニュー表示、時刻表、混雑状況インジケーターなどに最適です。
+- **教育・プロトタイピング:** IoT、組み込みシステム、UI デザイン学習に理想的なプラットフォームです。
 
 ## ハードウェア概要
 
@@ -85,10 +85,10 @@ reTerminal E1004 には、ノーコードプラットフォームである **Sen
 
 ### ステップ 1. 電源オンとネットワーク設定
 
-1.  **Power Button** をオンにして reTerminal E1004 の電源を入れます。
-2.  スマートフォンを使用してデバイスのホットスポット（AP モード）に接続し、Wi-Fi の認証情報を設定します。
-3.  画面に「Network Configuration」QR コードが表示されるか、ブラウザで 192.168.4.1 ページを開きます。
-4.  インターネットに接続されると、デバイスに **Device Code** または **Binding QR Code** が表示されます。
+1. **Power Button** をオンにして reTerminal E1004 の電源を入れます。
+2. スマートフォンを使用してデバイスのホットスポット（AP モード）に接続し、Wi-Fi の認証情報を設定します。
+3. 画面に「Network Configuration」QR コードが表示されるか、ブラウザで 192.168.4.1 ページを開きます。
+4. インターネットに接続されると、デバイスに **Device Code** または **Binding QR Code** が表示されます。
 
 <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
   <img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/4.jpg" style={{ width: '49%', height: 'auto' }} />
@@ -96,26 +96,26 @@ reTerminal E1004 には、ノーコードプラットフォームである **Sen
 </div>
 ### ステップ 2. デバイスをバインドする
 
-1.  パソコンのブラウザで [SenseCraft HMI Platform](https://sensecraft.seeed.cc/) にアクセスします。
-2.  アカウントにログインします（未作成の場合は新規作成します）。
-3.  **Device Management** セクションに移動し、**Add Device** をクリックします。
-4.  reTerminal E1004 の画面に表示されている **Device Code** を入力して、バインドを完了します。
+1. パソコンのブラウザで [SenseCraft HMI Platform](https://sensecraft.seeed.cc/) にアクセスします。
+2. アカウントにログインします（未作成の場合は新規作成します）。
+3. **Device Management** セクションに移動し、**Add Device** をクリックします。
+4. reTerminal E1004 の画面に表示されている **Device Code** を入力して、バインドを完了します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/12.jpg" style={{width:1000, height:'auto'}}/></div>
 
 ### ステップ 3. プラットフォーム上でコンテンツを作成する
 
-1.  **Home Page** で使用したいテンプレートを選択するか、**Wrokspace** で一から作品を作成します。
-2.  [使い方に不明点がある場合は、このリンクをクリックして HMI Platform の使用方法を学んでください。](https://sensecraft-hmi-docs.seeed.cc/en/)
+1. **Home Page** で使用したいテンプレートを選択するか、**Wrokspace** で一から作品を作成します。
+2. [使い方に不明点がある場合は、このリンクをクリックして HMI Platform の使用方法を学んでください。](https://sensecraft-hmi-docs.seeed.cc/en/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2.jpg" style={{width:1000, height:'auto'}}/></div>
 
 ### ステップ 4. コンテンツをデバイスにデプロイする
 
-1.  デザインが完成したら、**Preview** ボタンをクリックして表示を確認します。
-2.  **Save** または **deploy** ボタンをクリックします。
-3.  リストからバインド済みの reTerminal E1004 を選択します。
-4.  プラットフォームが Wi-Fi 経由でデータをデバイスに送信します。電子ペーパースクリーンがリフレッシュされ、新しいダッシュボードが表示されます。
+1. デザインが完成したら、**Preview** ボタンをクリックして表示を確認します。
+2. **Save** または **deploy** ボタンをクリックします。
+3. リストからバインド済みの reTerminal E1004 を選択します。
+4. プラットフォームが Wi-Fi 経由でデータをデバイスに送信します。電子ペーパースクリーンがリフレッシュされ、新しいダッシュボードが表示されます。
 
 :::note
 E Ink テクノロジーの特性上、画像が完全に更新されゴーストが消えるまで、画面のリフレッシュに数秒かかる場合があります。
@@ -123,35 +123,20 @@ E Ink テクノロジーの特性上、画像が完全に更新されゴース�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/10.jpg" style={{width:1000, height:'auto'}}/></div>
 
-## 技術サポートと製品ディスカッション
-
-当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
-
-<div class="table-center">
-  <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
-  <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-  </div>
-
-  <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
-  <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-  </div>
-</div>
-
 ## リソース
 
 - [reTerminal E1004 回路図 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004523_reTerminal%20E1004_V1.0_SCH_260105.pdf)
+
 ## 技術サポートと製品ディスカッション
 
 当社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただけるよう、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
