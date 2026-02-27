@@ -6792,6 +6792,7 @@ const sidebars = {
                   label: '应用',
                   items: [
                     'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/cn_SeeedStudio_Round_Display_Christmas_ball',
+                    'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/cn_SeeedStudio_Round_Display_Animation_Workshop',
                   ],
                 },
               ],
@@ -7223,7 +7224,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'ReSpeaker',
+      label: 'reSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -7233,7 +7234,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3800',
+          label: 'reSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -7243,7 +7244,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker XVF 3800 with XIAO 介绍',
+              label: 'reSpeaker XVF 3800 with XIAO 介绍',
               collapsed: true,
               collapsible: true,
               link: {
@@ -7283,7 +7284,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker Lite',
+          label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -7293,7 +7294,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker Lite with XIAO ESP32S3',
+              label: 'reSpeaker Lite with XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'zh-CN/Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_xiao_respeaker',
@@ -7332,7 +7333,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'ReSpeaker 2-Mics Pi HAT',
+          label: 'reSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'zh-CN/Sensor/ReSpeaker_2-Mics_Pi_HAT/cn_ReSpeaker_2_Mics_Pi_HAT',
@@ -7359,7 +7360,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
@@ -8441,6 +8442,22 @@ const sidebars = {
                 'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/cn_reComputer_Industrial_R21xx_flash_os',
                 'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/cn_reComputer_Industrial_R21xx_configure_system',
                 'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/cn_reComputer_Industrial_R21xx_assembly_guide'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R22xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_getting_start'
+              },
+              items: [
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_getting_start',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_flash_os',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_configure_system',
+                'zh-CN/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_assembly_guide'
               ]
             },
           ]
@@ -11959,6 +11976,7 @@ const sidebars = {
                   label: 'Aplicaciones',
                   items: [
                     'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/es_SeeedStudio_Round_Display_Christmas_ball',
+                    'es/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/es_SeeedStudio_Round_Display_Animation_Workshop',
                   ],
                 },
               ],
@@ -12390,7 +12408,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'ReSpeaker',
+      label: 'reSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -12400,7 +12418,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3800',
+          label: 'reSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -12410,7 +12428,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker XVF 3800 con XIAO Introducción',
+              label: 'reSpeaker XVF 3800 con XIAO Introducción',
               collapsed: true,
               collapsible: true,
               link: {
@@ -12450,7 +12468,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker Lite',
+          label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -12460,7 +12478,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker Lite con XIAO ESP32S3',
+              label: 'reSpeaker Lite con XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'es/Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/es_xiao_respeaker',
@@ -12499,7 +12517,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'ReSpeaker 2-Mics Pi HAT',
+          label: 'reSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'es/Sensor/ReSpeaker_2-Mics_Pi_HAT/es_ReSpeaker_2_Mics_Pi_HAT',
@@ -12526,7 +12544,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
@@ -13608,6 +13626,22 @@ const sidebars = {
                 'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/es_reComputer_Industrial_R21xx_flash_os',
                 'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/es_reComputer_Industrial_R21xx_configure_system',
                 'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/es_reComputer_Industrial_R21xx_assembly_guide'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R22xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/es_reComputer_Industrial_R22xx_getting_start'
+              },
+              items: [
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/es_reComputer_Industrial_R22xx_getting_start',
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/es_reComputer_Industrial_R22xx_flash_os',
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/es_reComputer_Industrial_R22xx_configure_system',
+                'es/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/es_reComputer_Industrial_R22xx_assembly_guide'
               ]
             },
           ]
@@ -17120,6 +17154,7 @@ const sidebars = {
                   label: 'アプリケーション',
                   items: [
                     'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/ja_SeeedStudio_Round_Display_Christmas_ball',
+                    'ja/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/ja_SeeedStudio_Round_Display_Animation_Workshop',
                   ],
                 },
               ],
@@ -17551,7 +17586,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'ReSpeaker',
+      label: 'reSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -17561,7 +17596,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3800',
+          label: 'reSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -17571,7 +17606,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker XVF 3800 with XIAO 紹介',
+              label: 'reSpeaker XVF 3800 with XIAO 紹介',
               collapsed: true,
               collapsible: true,
               link: {
@@ -17611,7 +17646,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker Lite',
+          label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -17621,7 +17656,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker Lite with XIAO ESP32S3',
+              label: 'reSpeaker Lite with XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'ja/Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/ja_xiao_respeaker',
@@ -17660,7 +17695,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'ReSpeaker 2-Mics Pi HAT',
+          label: 'reSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'ja/Sensor/ReSpeaker_2-Mics_Pi_HAT/ja_ReSpeaker_2_Mics_Pi_HAT',
@@ -17687,7 +17722,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
@@ -18769,6 +18804,22 @@ const sidebars = {
                 'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/ja_reComputer_Industrial_R21xx_flash_os',
                 'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/ja_reComputer_Industrial_R21xx_configure_system',
                 'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/ja_reComputer_Industrial_R21xx_assembly_guide'
+              ]
+            },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R22xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/ja_reComputer_Industrial_R22xx_getting_start'
+              },
+              items: [
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/ja_reComputer_Industrial_R22xx_getting_start',
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/ja_reComputer_Industrial_R22xx_flash_os',
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/ja_reComputer_Industrial_R22xx_configure_system',
+                'ja/Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/ja_reComputer_Industrial_R22xx_assembly_guide'
               ]
             },
           ]
