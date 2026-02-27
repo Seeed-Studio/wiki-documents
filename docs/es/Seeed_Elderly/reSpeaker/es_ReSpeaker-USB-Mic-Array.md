@@ -1,6 +1,6 @@
 ---
-description: ReSpeaker USB Mic Array
-title: ReSpeaker USB Mic Array
+description: Matriz de micrófonos USB ReSpeaker
+title: reSpeaker USB Mic Array
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,112 +13,112 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/ReSpeaker-USB-Mics-box-preview.jpg)
 
-:::important
+:::important 
 Este producto ha llegado al final de su vida útil (EOL).
-Si planea realizar una nueva compra o iniciar un nuevo proyecto, recomendamos encarecidamente utilizar la alternativa más reciente y compatible, [**XVF3000**](https://wiki.seeedstudio.com/es/respeaker_mic_array_v3.0/)。
-Este producto ya no se fabrica ni se mantiene activamente.
+Si estás planeando comprarlo o iniciar un nuevo proyecto, recomendamos encarecidamente usar [**XVF3000**](https://wiki.seeedstudio.com/es/respeaker_mic_array_v3.0/), la alternativa más nueva y con soporte.
+Ya no se fabrica ni se mantiene activamente.
 :::
 
-Un dispositivo de captación de voz listo para usar es la voz del cliente.
+Un dispositivo de captura de voz listo para usar es la voz del cliente.
 
-Durante el año pasado, [Respeaker Mic Array V2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2-0.html) se ha vendido más de 10K unidades en formato de placa de desarrollo. Los clientes siguen solicitando un dispositivo completo con carcasa, lo cual es desafiante para ellos diseñar, considerando los principios acústicos.
+Durante el último año, [Respeaker Mic Array V2.0](https://www.seeedstudio.com/ReSpeaker-Mic-Array-v2-0.html) se ha vendido en más de 10K unidades en formato de placa de desarrollo. Los clientes siguen solicitando un dispositivo completo con carcasa, lo cual es un reto para ellos diseñar, teniendo en cuenta los principios acústicos.
 
-Y aquí Seeed proporciona la respuesta con ReSpeaker USB Mic Array:
+Y aquí Seeed ofrece la respuesta con ReSpeaker USB Mic Array:
 
-- Un dispositivo listo para usar con una estructura acústica bien diseñada brinda la flexibilidad para que el cliente construya su solución.
-- Carcasa moldeada por inyección disponible, ahorra el tiempo de ir al mercado y el costo del molde.
+- Un dispositivo listo para usar con una estructura acústica bien diseñada que aporta flexibilidad al cliente para integrarlo en su solución.
+- Carcasa moldeada por inyección disponible, ahorra tiempo para salir al mercado y el coste del molde.
 
 La diferencia entre la PCBA dentro de ReSpeaker USB Mic Array y Respeaker Mic Array V2.0:
 
 - Circuito de alimentación optimizado
-- Mover el conector de audio y el puerto micro USB al lado posterior.
+- Mover el conector de audio y el puerto micro USB a la parte trasera.
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Características
 
-- Captación de voz de campo lejano
-- Soporte para USB Audio Class 1.0 (UAC 1.0)
-- Array de cuatro micrófonos
+- Captura de voz de campo lejano
+- Compatible con USB Audio Class 1.0 (UAC 1.0)
+- Matriz de cuatro micrófonos
 - 12 indicadores LED RGB programables
-- Algoritmos y características de voz
-  - Detección de Actividad de Voz
-  - Dirección de Llegada
-  - Formación de Haz
-  - Supresión de Ruido
-  - Des-reverberación
-  - Cancelación de Eco Acústico
+- Algoritmos y funciones de voz
+  - Detección de actividad de voz
+  - Dirección de llegada
+  - Formación de haz
+  - Supresión de ruido
+  - Desreverberación
+  - Cancelación de eco acústico
 
-## Especificaciones
+## Especificación
 
 - XVF-3000 de XMOS
 - 4 micrófonos digitales de alto rendimiento
-- Soporta Captación de Voz de Campo Lejano
-- Algoritmo de voz en chip
+- Compatible con captura de voz de campo lejano
+- Algoritmo de voz en el chip
 - 12 indicadores LED RGB programables  
 - Micrófonos: ST MP34DT01TR-M  
 - Sensibilidad: -26 dBFS (Omnidireccional)  
 - Punto de sobrecarga acústica: 120 dBSPL  
 - SNR: 61 dB  
-- Fuente de Alimentación: 5V DC desde Micro USB
-- Dimensiones: 70mm (Diámetro)  
-- Conector de salida de audio jack de 3.5mm
-- Consumo de energía: 5V, 180mA con led encendido y 170mA con led apagado
-- Frecuencia de Muestreo Máxima: 16Khz
+- Alimentación: 5V CC desde Micro USB
+- Dimensiones: 70mm (diámetro)  
+- Toma de salida de audio de 3,5mm
+- Consumo de energía: 5V, 180mA con LED encendido y 170mA con LED apagado
+- Frecuencia de muestreo máxima: 16Khz
 
-## Descripción General del Hardware
+## Descripción general del hardware
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-Mic-Array-v2.1/img/hardware_overview.jpg)
 
 - **<font face="" size="3" font color="ff0000">①</font> XMOS XVF-3000:**
-Integra algoritmos DSP avanzados que incluyen Cancelación de Eco Acústico (AEC), formación de haz, des-reverberación, supresión de ruido y control de ganancia.
+Integra algoritmos DSP avanzados que incluyen Cancelación de Eco Acústico (AEC), formación de haz, desreverberación, supresión de ruido y control de ganancia.
 
-- **<font face="" size="3" font color="ff0000">②</font> Micrófono Digital:**
-El MP34DT01-M es un micrófono digital MEMS ultra-compacto, de bajo consumo, omnidireccional, construido con un elemento sensor capacitivo y una interfaz IC.
+- **<font face="" size="3" font color="ff0000">②</font> Micrófono digital:**
+El MP34DT01-M es un micrófono digital MEMS omnidireccional, de ultra-compacto y bajo consumo, construido con un elemento de detección capacitivo y una interfaz IC.
 
 - **<font face="" size="3" font color="ff0000">③</font> LED RGB:**
 LED RGB de tres colores.
 
 - **<font face="" size="3" font color="ff0000">④</font> Puerto USB:**
-Proporciona la alimentación y controla el array de micrófonos.
+Proporciona la alimentación y controla la matriz de micrófonos.
 
-- **<font face="" size="3" font color="ff0000">⑤</font> Conector de auriculares de 3.5mm:**
-Salida de audio, Podemos conectar altavoces activos o auriculares a este puerto.
+- **<font face="" size="3" font color="ff0000">⑤</font> Conector de auriculares de 3,5mm:**
+Salida de audio. Podemos conectar altavoces activos o auriculares a este puerto.
 
 - **<font face="" size="3" font color="ff0000">⑥</font> WM8960:**
-El WM8960 es un códec estéreo de bajo consumo que cuenta con controladores de altavoz Clase D para proporcionar 1 W por canal en cargas de 8 W.
+El WM8960 es un códec estéreo de bajo consumo que incorpora controladores de altavoz de Clase D para proporcionar 1 W por canal en cargas de 8 W.
 
-**Diagrama del Sistema**
+**Diagrama del sistema**
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/system_diag.png)
 
 ## Aplicaciones
 
-- Captura de Voz USB
-- Altavoz Inteligente
-- Sistemas de Asistente de Voz Inteligente
-- Grabadoras de Voz
-- Sistema de Conferencias de Voz
-- Equipos de Comunicación para Reuniones
-- Robot de Interacción por Voz
-- Asistente de Voz para Automóvil
-- Otros Escenarios de Interfaz de Voz
+- Captura de voz por USB
+- Altavoz inteligente
+- Sistemas de asistente de voz inteligente
+- Grabadoras de voz
+- Sistema de conferencias de voz
+- Equipos de comunicación para reuniones
+- Robot de interacción por voz
+- Asistente de voz para automóvil
+- Otros escenarios de interfaz de voz
 
-## Primeros Pasos
+## Primeros pasos
 
 :::note
-ReSpeaker USB Mic Array es compatible con sistemas Windows, Mac, Linux y Android. Los siguientes scripts están probados en Python2.7.
+ReSpeaker USB Mic Array es compatible con sistemas Windows, Mac, Linux y andriod. Los siguientes scripts se han probado en Python2.7.
 :::
 
-### Actualizar Firmware
+### Actualizar firmware
 
 Aquí está la tabla con las diferencias.
 
 | Firmware                           | Canales | Nota                                                                                          |
-|------------------------------------|---------|-----------------------------------------------------------------------------------------------|
-| 1_channel_firmware.bin             | 1       | audio procesado para ASR                                                                     |
-| 6_channels_firmware.bin            | 6       | canal 0: audio procesado para ASR, canal 1-4: datos en bruto de 4 micrófonos, canal 5: reproducción（firmware de fábrica） |
+|------------------------------------|----------|-----------------------------------------------------------------------------------------------|
+| 1_channel_firmware.bin             | 1        | audio procesado para ASR                                                                      |
+| 6_channels_firmware.bin            | 6        | canal 0: audio procesado para ASR, canal 1-4: datos en bruto de 4 micrófonos, canal 5: reproducción（firmware de fábrica） |
 
-**Para Linux:** El array de micrófonos soporta USB DFU. Desarrollamos un script de python dfu.py para actualizar el firmware a través de USB.
+**Para Linux:** La matriz de micrófonos es compatible con USB DFU. Hemos desarrollado un script en python dfu.py para actualizar el firmware a través de USB.
 
 ```python
 sudo apt-get update
@@ -136,58 +136,58 @@ sudo python dfu.py --download 1_channel_firmware.bin
 Aquí está el resultado de la descarga del firmware.
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/Download_firmware.png)
 
-**Para Windows/Mac:** No sugerimos usar Windows/Mac y máquina virtual Linux para actualizar el firmware.
+**Para Windows/Mac:** No recomendamos usar Windows/Mac y máquina virtual Linux para actualizar el firmware.
 
-### Demostración Lista para Usar
+### Demostración lista para usar
 
 Aquí está el ejemplo de Cancelación de Eco Acústico con firmware de 6 canales.
 
-- Paso 1. Conecta el cable USB a la PC y el conector de audio al altavoz.
+- Paso 1. Conecta el cable USB al PC y el conector de audio al altavoz.
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/img/Bazaar/_DAS5930.jpg)
 
-- Paso 2. Selecciona el arreglo de micrófonos v2.1 como dispositivo de salida en el lado de la PC.
+- Paso 2. Selecciona la mic array v2.1 como dispositivo de salida en el PC.
 - Paso 3. Inicia audacity para grabar.
-- Paso 4. Reproduce música en el lado de la PC primero y luego hablamos.
-- Paso 5. Veremos la pantalla de audacity como se muestra a continuación, Por favor haz clic en **Solo** para escuchar el audio de cada canal.
+- Paso 4. Reproduce música primero en el PC y luego hablamos.
+- Paso 5. Veremos la pantalla de audacity como se muestra a continuación. Haz clic en **Solo** para escuchar el audio de cada canal.
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/Audacity.png)
 
-Audio del Canal0 (procesado por algoritmos):
+Canal0 Audio(procesado por algoritmos):
 
 <audio controls="controls">
   <source type="audio/wav" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel0_asr.wav"></source>
   <source type="audio/ogg" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel0_asr.ogg"></source>
 </audio>
 
-Audio del Canal1 (datos en bruto del Mic1):
+Canal1 Audio(datos en bruto de Mic1):
 
 <audio controls="controls">
   <source type="audio/wav" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel1_raw.wav"></source>
   <source type="audio/ogg" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel1_raw.ogg"></source>
 </audio>
 
-Audio del Canal5 (datos de reproducción):
+Canal5 Audio(datos de reproducción):
 
 <audio controls="controls">
   <source type="audio/wav" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel5_playback.wav"></source>
   <source type="audio/ogg" src="https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/channel5_playback.ogg"></source>
 </audio>
 
-Aquí está el video sobre DOA y AEC.
+Aquí está el vídeo sobre el DOA y AEC.
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/gGVQ-9f7azs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-### Instalar Controlador DFU y Control de LED  
+### Instalar el controlador DFU y de control de LED  
 
-- **Windows:** La grabación y reproducción de audio funciona bien por defecto. El controlador Libusb-win32 solo es requerido para controlar LEDs y parámetros DSP en Windows. Usamos [una herramienta práctica - Zadig](http://zadig.akeo.ie/) para instalar el controlador libusb-win32 para tanto `SEEED DFU` como `SEEED Control` (ReSpeaker Mic Array tiene 2 dispositivos en el Administrador de Dispositivos de Windows).
+- **Windows:** La grabación y reproducción de audio funciona bien por defecto. El controlador libusb-win32 solo es necesario para controlar los LEDs y los parámetros DSP en Windows. Usamos [una herramienta práctica - Zadig](http://zadig.akeo.ie/) para instalar el controlador libusb-win32 tanto para `SEEED DFU` como para `SEEED Control` (ReSpeaker Mic Array tiene 2 dispositivos en el Administrador de dispositivos de Windows).
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/usb_4mic_array_driver.png)
 
 :::caution
-    Por favor asegúrate de que libusb-win32 esté seleccionado, no WinUSB o libusbK.
+    Asegúrate de que esté seleccionado libusb-win32, no WinUSB ni libusbK.
 :::
 
 - **MAC:** No se requiere controlador.
@@ -197,7 +197,7 @@ Aquí está el video sobre DOA y AEC.
 
 **Para Linux/Mac/Windows:** Podemos configurar algunos parámetros de los algoritmos integrados.
 
-- Obtén la lista completa de parámetros, para más información, por favor consulta las FAQ.
+- Obtén la lista completa de parámetros; para más información, consulta las FAQ.
 
 ```
 git clone https://github.com/respeaker/usb_4_mic_array.git
@@ -211,7 +211,7 @@ python tuning.py -p
 sudo python tuning.py AGCONOFF 0
 ```
 
-- Ejemplo#2, Podemos verificar el ángulo DOA.
+- Ejemplo#2, podemos comprobar el ángulo DOA.
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE
@@ -220,9 +220,9 @@ DOAANGLE: 180
 
 ### Controlar los LEDs
 
-Podemos controlar los LEDs del ReSpeaker USB Mic Array a través de USB. El dispositivo USB tiene una Interfaz de Clase Específica del Proveedor que puede usarse para enviar datos a través de Transferencia de Control USB. Nos referimos a la [librería de python pyusb](https://github.com/pyusb/pyusb) y desarrollamos la [librería de python usb_pixel_ring](https://github.com/respeaker/pixel_ring/blob/master/pixel_ring/usb_pixel_ring_v2.py).
+Podemos controlar los LEDs de ReSpeaker USB Mic Array a través de USB. El dispositivo USB tiene una interfaz de clase específica del proveedor que puede utilizarse para enviar datos mediante USB Control Transfer. Nos basamos en la [biblioteca de python pyusb](https://github.com/pyusb/pyusb) y desarrollamos la [biblioteca de python usb_pixel_ring](https://github.com/respeaker/pixel_ring/blob/master/pixel_ring/usb_pixel_ring_v2.py).
 
-El comando de control de LED se envía mediante usb.core.Device.ctrl_transfer() de pyusb, sus parámetros son los siguientes:
+El comando de control de LED se envía mediante usb.core.Device.ctrl_transfer() de pyusb; sus parámetros son los siguientes：
 
 ```
 ctrl_transfer(usb.util.CTRL_OUT | usb.util.CTRL_TYPE_VENDOR | usb.util.CTRL_RECIPIENT_DEVICE, 0, command, 0x1C, data, TIMEOUT)
@@ -233,20 +233,20 @@ Aquí están las APIs de usb_pixel_ring.
 
 | Comando | Datos                          | API                            | Nota                                                                                                              |
 |---------|--------------------------------|--------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| 0       | [0]                            | pixel_ring.trace()             | modo trace, los LEDs cambian dependiendo de VAD*y DOA*                                                          |
-| 1       | [red, green, blue, 0]          | pixel_ring.mono()              | modo mono, establece todos los LEDs RGB a un solo color, por ejemplo Rojo(0xFF0000), Verde(0x00FF00), Azul(0x0000FF) |
-| 2       | [0]                            | pixel_ring.listen()            | modo listen, similar al modo trace, pero no apaga los LEDs                                                       |
-| 3       | [0]                            | pixel_ring.speak()             | modo wait                                                                                                         |
+| 0       | [0]                            | pixel_ring.trace()             | modo trace, los LEDs cambian dependiendo de VAD*y DOA*                                                            |
+| 1       | [red, green, blue, 0]          | pixel_ring.mono()              | modo mono, establece todos los LED RGB en un solo color, por ejemplo Red(0xFF0000), Green(0x00FF00)， Blue(0x0000FF) |
+| 2       | [0]                            | pixel_ring.listen()            | modo listen, similar al modo trace, pero no apaga los LEDs                                                        |
+| 3       | [0]                            | pixel_ring.speak()             | modo de espera                                                                                                    |
 | 4       | [0]                            | pixel_ring.think()             | modo speak                                                                                                        |
 | 5       | [0]                            | pixel_ring.spin()              | modo spin                                                                                                         |
-| 6       | [r, g, b, 0] * 12              | pixel_ring.customize()         | modo personalizado, establece cada LED a su propio color                                                         |
-| 0x20    | [brightness]                   | pixel_ring.set_brightness()    | establecer brillo, rango: 0x00~0x1F                                                                              |
-| 0x21    | [r1, g1, b1, 0, r2, g2, b2, 0] | pixel_ring.set_color_palette() | establecer paleta de colores, por ejemplo, pixel_ring.set_color_palette(0xff0000, 0x00ff00) junto con pixel_ring.think() |
-| 0x22    | [vad_led]                      | pixel_ring.set_vad_led()       | establecer LED central: 0 - apagado, 1 - encendido, otro - depende de VAD                                       |
-| 0x23    | [volume]                       | pixel_ring.set_volume()        | mostrar volumen, rango: 0 ~ 12                                                                                   |
-| 0x24    | [pattern]                      | pixel_ring.change_pattern()    | establecer patrón, 0 - patrón Google Home, otros - patrón Echo                                                   |
+| 6       | [r, g, b, 0] * 12              | pixel_ring.customize()         | modo personalizado, establece cada LED en su propio color                                                         |
+| 0x20    | [brightness]                   | pixel_ring.set_brightness()    | establece el brillo, rango: 0x00~0x1F                                                                             |
+| 0x21    | [r1, g1, b1, 0, r2, g2, b2, 0] | pixel_ring.set_color_palette() | establece la paleta de colores, por ejemplo, pixel_ring.set_color_palette(0xff0000, 0x00ff00) junto con pixel_ring.think() |
+| 0x22    | [vad_led]                      | pixel_ring.set_vad_led()       | establece el LED central: 0 - apagado, 1 - encendido, otro valor - depende de VAD                                 |
+| 0x23    | [volume]                       | pixel_ring.set_volume()        | muestra el volumen, rango: 0 ~ 12                                                                                 |
+| 0x24    | [pattern]                      | pixel_ring.change_pattern()    | establece el patrón, 0 - patrón Google Home, otros - patrón Echo                                                  |
 
-**Para Linux:** Aquí está el ejemplo para controlar los leds. Por favor sigue los comandos a continuación para ejecutar la demo.
+**Para Linux:** Aquí está el ejemplo para controlar los LEDs. Sigue los siguientes comandos para ejecutar la demostración.
 
 ```python
 git clone https://github.com/respeaker/pixel_ring.git
@@ -255,7 +255,7 @@ sudo python setup.py install
 sudo python examples/usb_mic_array.py
 ```
 
-Aquí está el código del usb_mic_array.py.
+Aquí está el código de usb_mic_array.py.
 
 ```python
 import time
@@ -283,16 +283,16 @@ if __name__ == '__main__':
 
 ```
 
-**Para Windows/Mac:** Aquí está el ejemplo para controlar los leds.
+**Para Windows/Mac:** Aquí está el ejemplo para controlar los LEDs.
 
-- Paso 1. Descargar pixel_ring.
+- Paso 1. Descarga pixel_ring.
 
 ```python
 git clone https://github.com/respeaker/pixel_ring.git
 cd pixel_ring/pixel_ring
 ```
 
-- Paso 2. Crea un [led_control.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/led_control.py) con el código de abajo y ejecuta 'python led_control.py'
+- Paso 2. Crea un [led_control.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/led_control.py) con el siguiente código y ejecuta 'python led_control.py'
 
 ```python
 from usb_pixel_ring_v2 import PixelRing
@@ -324,21 +324,21 @@ if dev:
 ```
 
 :::note
-    Si ves "None" impreso en pantalla, por favor reinstala el controlador libusb-win32.
+    Si ves "None" impreso en la pantalla, vuelve a instalar el controlador libusb-win32.
 :::
 
 ### DOA (Direction of Arrival)
 
-**Para Windows/Mac/Linux:** Aquí está el ejemplo para ver el DOA. El LED Verde es el indicador de la dirección de la voz. Para el ángulo, por favor consulta la descripción general del hardware.
+**Para Windows/Mac/Linux:** Aquí está el ejemplo para ver el DOA. El LED verde es el indicador de la dirección de la voz. Para el ángulo, consulta la descripción general del hardware.  
 
-- Paso 1. Descarga el usb_4_mic_array.
+- Paso 1. Descarga usb_4_mic_array.
 
 ```python
 git clone https://github.com/respeaker/usb_4_mic_array.git
 cd usb_4_mic_array
 ```
 
-- Paso 2. Crea un archivo [DOA.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/DOA.py) con el código de abajo en la carpeta usb_4_mic_array y ejecuta 'sudo python DOA.py'
+- Paso 2. Crea un [DOA.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/DOA.py) con el siguiente código dentro de la carpeta usb_4_mic_array y ejecuta 'sudo python DOA.py'
 
 ```
 from tuning import Tuning
@@ -372,18 +372,18 @@ pi@raspberrypi:~/usb_4_mic_array $ sudo python doa.py
 103
 ```
 
-### VAD (Detección de Actividad de Voz)
+### VAD (Voice Activity Detection)
 
-**Para Windows/Mac/Linux:** Aquí está el ejemplo para ver el VAD. El LED Rojo es el indicador del VAD.
+**Para Windows/Mac/Linux:** Aquí está el ejemplo para ver el VAD. El LED rojo es el indicador del VAD.
 
-- Paso 1. Descarga el usb_4_mic_array.
+- Paso 1. Descarga usb_4_mic_array.
 
 ```python
 git clone https://github.com/respeaker/usb_4_mic_array.git
 cd usb_4_mic_array
 ```
 
-- Paso 2. Crea un [VAD.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/VAD.py) con el código de abajo en la carpeta usb_4_mic_array y ejecuta 'sudo python VAD.py'
+- Paso 2. Crea un [VAD.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/VAD.py) con el siguiente código dentro de la carpeta usb_4_mic_array y ejecuta 'sudo python VAD.py'
 
 ```
 from tuning import Tuning
@@ -418,14 +418,14 @@ pi@raspberrypi:~/usb_4_mic_array $ sudo python VAD.py
 ```
 
 :::note
-Para el umbral de VAD, también podemos usar GAMMAVAD_SR para configurarlo. Consulte [Tuning](https://wiki.seeedstudio.com/es/ReSpeaker_Mic_Array_v2.0/#tuning) para más detalles.
+Para el umbral de VAD, también podemos usar GAMMAVAD_SR para configurarlo. Consulta [Tuning](https://wiki.seeedstudio.com/es/ReSpeaker_Mic_Array_v2.0/#ajuste) para más detalles.
 :::
 
-### Extraer Voz
+### Extraer voz
 
 Usamos la [biblioteca de Python PyAudio](https://people.csail.mit.edu/hubert/pyaudio/) para extraer voz a través de USB.
 
-**Para Linux:** Podemos usar los siguientes comandos para grabar o reproducir la voz.
+**Para Linux:**  Podemos usar los siguientes comandos para grabar o reproducir la voz.
 
 ```python
 arecord -D plughw:1,0 -f cd test.wav # record, please use the arecord -l to check the card and hardware first
@@ -433,9 +433,9 @@ aplay -D plughw:1,0 -f cd test.wav # play, please use the aplay -l to check the 
 arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the same time
 ```
 
-También podemos usar un script de Python para extraer la voz.
+También podemos usar un script de Python para extraer voz.
 
-- Paso 1, Necesitamos ejecutar el siguiente script para obtener el número de índice del dispositivo del Mic Array:
+- Paso 1, necesitamos ejecutar el siguiente script para obtener el número de índice de dispositivo de Mic Array:
 
 ```python
 sudo pip install pyaudio
@@ -443,7 +443,7 @@ cd ~
 nano get_index.py
 ```
 
-- Paso 2, copia el código de abajo y pégalo en [get_index.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/get_index.py).
+- Paso 2, copia el siguiente código y pégalo en [get_index.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/get_index.py).
 
 ```python
 import pyaudio
@@ -465,7 +465,7 @@ for i in range(0, numdevices):
 Input Device id  2  -  ReSpeaker 4 Mic Array (UAC1.0): USB Audio (hw:1,0)
 ```
 
-- Paso 5, cambia `RESPEAKER_INDEX = 2` al número de índice. Ejecuta el script de python [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) para grabar un discurso.
+- Paso 5, cambia `RESPEAKER_INDEX = 2` al número de índice. Ejecuta el script de Python [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) para grabar un discurso.
 
 ```python
 import pyaudio
@@ -511,7 +511,7 @@ wf.writeframes(b''.join(frames))
 wf.close()
 ```
 
-- Paso 6. Si deseas extraer datos del canal 0 de 6 canales, sigue el código a continuación. Para otro canal X, cambia [0::6] a [X::6].
+- Paso 6. Si quieres extraer los datos del canal 0 de 6 canales, sigue el siguiente código. Para otro canal X, cambia [0::6] a [X::6].
 
 ```
 import pyaudio
@@ -577,7 +577,7 @@ Input Device id  1  -  ReSpeaker 4 Mic Array (UAC1.0)
 Input Device id  2  -  Internal Microphone (Conexant I)
 ```
 
-- Paso 3. Modifica el índice del dispositivo y los canales de [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) y luego extrae la voz.
+- Paso 3. Modifica el índice de dispositivo y los canales de [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) y luego extrae la voz.
 
 ```
 C:\Users\XXX\Desktop>python record.py
@@ -586,7 +586,7 @@ C:\Users\XXX\Desktop>python record.py
 ```
 
 :::caution
-    Si vemos "Error: %1 is not a valid Win32 application.", por favor instala la versión Win32 de Python.
+    Si vemos "Error: %1 is not a valid Win32 application.", instala la versión Win32 de Python.
 :::
 
 **Para MAC:**
@@ -605,7 +605,7 @@ Input Device id  0  -  Built-in Microphone
 Input Device id  2  -  ReSpeaker 4 Mic Array (UAC1.0)
 ```
 
-- Paso 3. Modifica el índice del dispositivo y los canales de [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) y luego extrae la voz.
+- Paso 3. Modifica el índice de dispositivo y los canales de [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) y luego extrae la voz.
 
 ```
 MacBook-Air:Desktop XXX$ python record.py 
@@ -614,13 +614,13 @@ MacBook-Air:Desktop XXX$ python record.py
 * done recording
 ```
 
-### Localización y Seguimiento de Fuente de Sonido en Tiempo Real
+### Localización y seguimiento en tiempo real de la fuente de sonido
 
-[ODAS](https://github.com/introlab/odas) significa Open embeddeD Audition System. Esta es una biblioteca dedicada a realizar localización de fuente de sonido, seguimiento, separación y post-filtrado. Divirtámonos con ella.
+[ODAS](https://github.com/introlab/odas) significa Open embeddeD Audition System. Es una biblioteca dedicada a realizar localización, seguimiento, separación y postfiltrado de fuentes de sonido. Vamos a divertirnos con ella.
 
 **Para Linux:**
 
-- Paso 1. Obtener ODAS y compilarlo.
+- Paso 1. Obtén ODAS y compílalo.
 
 ```
 sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev libgconf-2-4
@@ -635,15 +635,15 @@ make
 
 - Paso 3. El odascore estará en **odas/bin/odaslive**, el **archivo de configuración** es [odas.cfg](https://raw.githubusercontent.com/respeaker/usb_4_mic_array/master/odas.cfg).
 
-- Paso 4. Actualiza el arreglo de micrófonos con 6_channels_firmware.bin que incluye datos de audio sin procesar de 4 canales.
+- Paso 4. Actualiza la matriz de micrófonos con 6_channels_firmware.bin que incluye datos de audio sin procesar de 4 canales.
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/K5gZabfaaPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>
 
-## FAQ
+## Preguntas frecuentes
 
-**P1: Parámetros de algoritmos integrados**
+**P1: Parámetros de los algoritmos integrados**
 
 ```
 pi@raspberrypi:~/usb_4_mic_array $ python tuning.py -p
@@ -766,21 +766,21 @@ pi@raspberrypi:~/usb_4_mic_array $ sudo python tuning.py DOAANGLE
 DOAANGLE: 180
 ```
 
-**P3: ¿Tienes el ejemplo para la aplicación alexa de Raspberry?**
+**P3: ¿Tienen el ejemplo para la aplicación de Raspberry alexa?**
 
-R3: Sí, podemos conectar el arreglo de micrófonos v2.0 al puerto USB de raspberry y seguir la [Guía de Inicio Rápido de Raspberry Pi con Script](https://github.com/alexa/avs-device-sdk/wiki/Raspberry-Pi-Quick-Start-Guide-with-Script) para hacer la interacción de voz con alexa.
+R3: Sí, podemos conectar la matriz de micrófonos v2.0 al puerto usb de Raspberry y seguir [Raspberry Pi Quick Start Guide with Script](https://github.com/alexa/avs-device-sdk/wiki/Raspberry-Pi-Quick-Start-Guide-with-Script) para realizar la interacción por voz con alexa.
 
-**P4: ¿Tienes el ejemplo para el arreglo de micrófonos v2.1 con sistema ROS?**
+**P4: ¿Tienen el ejemplo para Mic array v2.1 con sistema ROS?**
 
-R4: Sí, gracias a Yuki por compartir el paquete para integrar [ReSpeaker USB Mic Array con ROS (Robot Operating System) Middleware](https://github.com/furushchev/respeaker_ros).
+R4: Sí, gracias a Yuki por compartir el paquete para integrar [ReSpeaker USB Mic Array with ROS (Robot Operating System) Middleware](https://github.com/furushchev/respeaker_ros).
 
-**P5: ¿Cómo habilitar el puerto de audio de 3.5mm para recibir la señal así como el puerto usb?**
+**P5: ¿Cómo habilitar el puerto de audio de 3,5 mm para recibir la señal así como el puerto usb?**
 
-R5: Por favor descarga el [nuevo firmware](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/i2s_i1o2.bin) y graba el XMOS siguiendo [Cómo actualizar firmware](https://wiki.seeedstudio.com/es/ReSpeaker_Mic_Array_v2.0/#update-firmware).
+R5: Descarga el [nuevo firmware](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/i2s_i1o2.bin) y graba el XMOS siguiendo [How to update firmware](https://wiki.seeedstudio.com/es/ReSpeaker_Mic_Array_v2.0/#update-firmware).
 
-**P6: Error #include "portaudio.h" cuando ejecuto "sudo pip install pyaudio".**
+**P6: #include "portaudio.h" Error al ejecutar "sudo pip install pyaudio".**
 
-R6: Por favor ejecuta el siguiente comando para resolver el problema.
+A6: Ejecuta el siguiente comando para resolver el problema.
 
 ```
 sudo apt-get install portaudio19-dev
@@ -788,14 +788,14 @@ sudo apt-get install portaudio19-dev
 
 ## Recursos
 
-- **[PDF]** [Dimensiones del ReSpeaker USB Mic Array](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/res/dimension.pdf)
-- **[DWG]** [Modelo 3D de la Carcasa del ReSpeaker USB Mic Array](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/res/case.dwg)
-- **[PDF]** [Resumen del Producto XVF3000](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/XVF3000-3100-product-brief_1.4.pdf)
-- **[PDF]** [Hoja de Datos del XVF3000](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/XVF3000-3100-TQ128-Datasheet_1.0.pdf)
+- **[PDF]** [Dimensiones de ReSpeaker USB Mic Array](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/res/dimension.pdf)
+- **[DWG]** [Modelo 3D de la carcasa de ReSpeaker USB Mic Array](https://files.seeedstudio.com/wiki/ReSpeaker-USB-Mics/res/case.dwg)
+- **[PDF]** [Resumen del producto XVF3000](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/XVF3000-3100-product-brief_1.4.pdf)
+- **[PDF]** [Hoja de datos de XVF3000](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/XVF3000-3100-TQ128-Datasheet_1.0.pdf)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

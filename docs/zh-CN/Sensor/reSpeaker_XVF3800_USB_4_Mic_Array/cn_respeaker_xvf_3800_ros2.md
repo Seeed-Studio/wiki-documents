@@ -1,6 +1,6 @@
 ---
-description: 学习如何将 ReSpeaker XVF3800 与 ROS2 集成用于机器人应用。本教程涵盖使用 Turtlesim 模拟 DOA 和语音检测，提供机器人控制和 PID 控制的基础理解。
-title: ReSpeaker XVF3800 上的 ROS2
+description: 学习如何将 ReSpeaker XVF3800 与 ROS2 集成用于机器人应用。本教程涵盖使用 Turtlesim 模拟 DOA 和语音检测，帮助你建立对机器人控制和 PID 控制的基础理解。
+title: 在 reSpeaker XVF3800 上使用 ROS2
 keywords:
 - reSpeaker
 - Robotics
@@ -16,27 +16,27 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/ros/RoS2reSpeakerXVF3800.gif" alt="pir" width={800} height="auto" /></p>
 
-本项目演示了 ReSpeaker XVF3800 与 ROS2 在机器人应用中的集成，重点关注语音检测和到达方向（DOA）估计。使用 Turtlesim 节点，我们基于语音输入模拟机器人控制，通过 PID 控制实现精确移动。本教程涵盖 ROS2 环境的设置、ReSpeaker XVF3800 的配置，以及如何应用语音命令来控制机器人。最终，用户将了解如何将语音接口与机器人技术连接，并使用基本控制算法进行导航。
+本项目演示了如何将 ReSpeaker XVF3800 与 ROS2 集成用于机器人应用，重点关注语音检测和声源到达方向（DOA）估计。通过使用 Turtlesim 节点，我们基于语音输入模拟机器人控制，并通过 PID 控制实现精确运动。本教程涵盖 ROS2 环境搭建、ReSpeaker XVF3800 配置，以及如何应用语音指令来控制机器人。完成学习后，你将了解如何将语音接口与机器人连接，并使用基础控制算法进行导航。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
-## 如何在主机上安装 ROS 2
+## 如何在主机电脑上安装 ROS 2
 
-对于本项目，我们使用 **ROS 2 Humble** 作为中间件。如果您是第一次安装 ROS 2，请按照官方安装指南的详细步骤进行：
+在本项目中，我们使用 **ROS 2 Humble** 作为中间件。如果你是第一次安装 ROS 2，请按照官方安装指南获取详细步骤：
 
 [ROS 2 Humble 安装指南（Ubuntu）](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 
-## 设置 ReSpeaker USB 麦克风阵列
+## 设置 ReSpeaker USB Mic Array
 
-如果您在机器人或语音应用中使用 **ReSpeaker USB 麦克风阵列**，请按照以下步骤在 Ubuntu 系统上配置它。
+如果你在机器人或语音应用中使用 **ReSpeaker USB Mic Array**，请按照以下步骤在 Ubuntu 系统上进行配置。
 
-### 查找设备的供应商和产品 ID
+### 查找设备的 Vendor 和 Product ID
 
 要查找设备的 ID，请运行：
 
@@ -44,17 +44,17 @@ last_update:
 lsusb
 ```
 
-查找 ReSpeaker 设备（例如，`vendor 0x2886, product 0x001A`）。
+查找 ReSpeaker 设备（例如 `vendor 0x2886, product 0x001A`）。
 
 ### 为设备创建 udev 规则
 
-创建新的 udev 规则以确保 ReSpeaker 麦克风阵列的正确权限：
+创建一个新的 udev 规则，以确保 ReSpeaker Mic Array 拥有正确的权限：
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
 ```
 
-将以下行添加到文件中：
+在文件中添加以下内容：
 
 ```bash
 # ReSpeaker USB Mic Array
@@ -64,7 +64,7 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", 
 
 ### 重新加载 udev 规则并重启服务
 
-重新加载 udev 规则并重启服务以使更改生效：
+重新加载 udev 规则并重启服务，使更改生效：
 
 ```bash
 sudo udevadm control --reload-rules
@@ -72,17 +72,17 @@ sudo udevadm trigger
 sudo service udev restart
 ```
 
-拔出并重新插入您的 ReSpeaker USB 麦克风阵列以应用新规则。
+拔下并重新插入你的 ReSpeaker USB Mic Array 以应用新规则。
 
 ## 设置 ROS2 工作空间并使用 ROS2 控制机器人
 
-本指南将引导您完成设置 ROS2 工作空间、创建自定义 ROS2 包、使用 Python 控制机器人以及配置 ReSpeaker USB 麦克风阵列在 ROS2 项目中使用的过程。
+本指南将带你完成设置 ROS2 工作空间、创建自定义 ROS2 包、使用 Python 控制机器人，以及在 ROS2 项目中配置 ReSpeaker USB Mic Array 的全过程。
 
-### 安装所需依赖项
+### 安装所需依赖
 
 **安装 Python Colcon 扩展**
 
-首先，确保安装了构建 ROS2 包所需的 Python 扩展：
+首先，确保已安装用于构建 ROS2 包所需的 Python 扩展：
 
 ```bash
 sudo apt install python3-colcon-common-extensions
@@ -90,7 +90,7 @@ sudo apt install python3-colcon-common-extensions
 
 ### 配置 Colcon 自动补全（可选）
 
-如果您需要为 colcon 设置自动补全：
+如果你需要为 colcon 设置自动补全：
 
 ```bash
 cd /usr/share/colcon_argcomplete/hook/
@@ -99,7 +99,7 @@ gedit ~/.bashrc
 clear
 ```
 
-然后，添加 `source ~/.bashrc` 来重新加载环境：
+然后，添加 `source ~/.bashrc` 以重新加载环境：
 
 ```bash
 source ~/.bashrc
@@ -107,7 +107,7 @@ source ~/.bashrc
 
 ### 创建 ROS2 工作空间
 
-创建新的 ROS2 工作空间并准备环境：
+创建一个新的 ROS2 工作空间并准备环境：
 
 ```bash
 mkdir ros2_ws
@@ -116,15 +116,15 @@ mkdir src
 colcon build
 ```
 
-### 源化 ROS2 工作空间
+### Source ROS2 工作空间
 
-构建工作空间后，源化它以设置环境变量：
+构建工作空间后，对其进行 source 以设置环境变量：
 
 ```bash
 source ~/ros2_ws/install/setup.bash
 ```
 
-您可以将此行添加到 `~/.bashrc` 中，以便每次打开新终端时自动源化工作空间：
+你可以将这一行添加到 `~/.bashrc` 中，这样每次打开新终端时都会自动 source 工作空间：
 
 ```bash
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
@@ -133,16 +133,16 @@ source ~/.bashrc
 
 ### 创建新的 ROS2 包
 
-现在，让我们为您的机器人控制器创建一个新的 ROS2 包。此包将使用 `ament_python` 进行构建，并将 `rclpy` 作为依赖项：
+现在，让我们为你的机器人控制器创建一个新的 ROS2 包。该包将使用 `ament_python` 进行构建，并将 `rclpy` 作为依赖：
 
 ```bash
 cd ~/ros2_ws/src
 ros2 pkg create my_robot_controller --build-type ament_python --dependencies rclpy
 ```
 
-### 添加机器人控制的 Python 脚本
+### 添加用于机器人控制的 Python 脚本
 
-导航到您新创建的包中，并创建一个 Python 脚本（例如，`rotate_doa.py`）来控制机器人：
+进入新创建的包，并创建一个 Python 脚本（例如 `rotate_doa.py`）用于控制机器人：
 
 ```bash
 cd my_robot_controller/
@@ -150,7 +150,7 @@ touch rotate_doa.py
 chmod +x rotate_doa.py
 ```
 
-使用您所需的控制逻辑编辑脚本（例如，使用 VS Code 等编辑器）：
+使用你期望的控制逻辑编辑该脚本（例如使用 VS Code 等编辑器）：
 
 ```bash
 cd ..
@@ -315,7 +315,7 @@ if __name__ == '__main__':
 
 </details>
 
-将这些依赖项添加到 package.xml
+将这些依赖添加到 package.xml 中
 
 ```bash
   <depend>rclpy</depend>
@@ -324,7 +324,7 @@ if __name__ == '__main__':
   <depend>std_msgs</depend>
 ```
 
-将此端点添加到 package.xml
+将此 endpoint 添加到 package.xml 中
 
 ```python
 
@@ -336,22 +336,22 @@ entry_points={
 
 ```
 
-### 构建并运行包
+### 构建并运行该包
 
-编辑 Python 脚本后，构建包：
+编辑完 Python 脚本后，构建该包：
 
 ```bash
 colcon build
 source ~/ros2_ws/install/setup.bash
 ```
 
-最后，运行包：
+最后，通过以下命令运行该包：
 
 ```bash
 ros2 run my_robot_controller rotate_doa
 ```
 
-在另一个终端中，您还可以运行基本的 ROS2 节点（例如，用于测试的 `turtlesim`）：
+在另一个终端中，你也可以运行一个基础 ROS2 节点（例如用于测试的 `turtlesim`）：
 
 ```bash
 ros2 run turtlesim turtlesim_node
@@ -359,7 +359,7 @@ ros2 run turtlesim turtlesim_node
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
