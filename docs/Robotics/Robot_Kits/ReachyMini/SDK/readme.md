@@ -48,11 +48,11 @@ with ReachyMini() as mini:
 Follow these guides in order:
 :::
 
-* **[Installation](installation)**: 5 minutes to set up your computer
-* **[Quickstart Guide](quickstart)**: Run your first behavior on Reachy Mini
-* **[Python SDK](python-sdk)**: Learn to move, see, speak, and hear.
-* **[AI Integrations](integration)**: Connect LLMs, build Apps, and publish to Hugging Face.
-* **[Core Concepts](core-concept)**: Architecture, coordinate systems, and safety limits.
+* **[Installation](https://wiki.seeedstudio.com/reachymini_sdk_installation)**: 5 minutes to set up your computer
+* **[Quickstart Guide](https://wiki.seeedstudio.com/reachymini_sdk_quickstart)**: Run your first behavior on Reachy Mini
+* **[Python SDK](https://wiki.seeedstudio.com/reachymini_sdk_python-sdk)**: Learn to move, see, speak, and hear.
+* **[AI Integrations](https://wiki.seeedstudio.com/reachymini_sdk_integration)**: Connect LLMs, build Apps, and publish to Hugging Face.
+* **[Core Concepts](https://wiki.seeedstudio.com/reachymini_sdk_core-concept)**: Architecture, coordinate systems, and safety limits.
 
 ## 📂 Code Examples
 
@@ -74,7 +74,7 @@ This [**AGENTS.md**](../AGENTS.md) guide gives AI agents everything they need: S
 
 ## ❓ Troubleshooting
 
-Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](../troubleshooting)**
+Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](https://wiki.seeedstudio.com/reachymini_troubleshooting)**
 
 ## 💬 Community
 
