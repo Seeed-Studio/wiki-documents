@@ -553,23 +553,23 @@ sudo apt install nvidia-jetpack -y
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWzTx7AJjbtFksz5DSwvW1sBjUa1RgnSlk-prR0kK_ymWw?e=dq9zIb" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <th>436017DA6FBA2EF910F5F6C5D80749FB53029EC5108A461101CA3A69C1F8CEC3</th>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQByoedqLYEuT4Y1TWtbQeYfAaYErd1Nzu46JpYpF6Ok4EE?e=uEK4OQ" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>f34512b24a07469f6014add6b88df060002f02c53705c91181ee380d73146b5e</th>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQwbQHuBbGhDpLP_Prr6NgkBMtu41jENXa_zTRoQ2pYCBQ?e=tNeW4d" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <th>B8FFB1C7BF5B5436CCA6BA0E32E9A71752B25C1494527EC25129895A2FBC7D93</th>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQCggS3uTiIzQqidauGapvXtAS8tiOaWRZtusAN1S6SXsTs?e=LLjnrY" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>9c590665723aa8847898f976070ecc120b936474262b360459627342c4c0c6f1</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdhYh3cLibBPloeruCn9_TwBwyxtn8XycXp0jTqS5UlMaA?e=efwpWa" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <th>484CB81F399301B8A6FF61429E974AE790365B9498FB8B20DF02C603656CF6D0</th>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAx3qELD5fvTKvYA8Bi-TwAAV5SJdxC6ok_lnwjqiw3Prg?e=MIcJng" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>fe3fe9b275156ddd9cde2b4fcf628122bf4a66e1ff1184cf6769be81ba6e4942</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EeC0UJ66ZKFHi71CnyHPS5gBxEXQE9yVVB9-Kt6P_flA0A?e=Pxid2b" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <th>A238C5229219CCF1F6AC2B2E4D93A914E6B2E471F56C975990CC03BEEFC5F9DD</th>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBiL7sGB2_7RZs5FNIf2bikAXzJxCr6z1XA8fIkgqpzluA?e=dZYPSh" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>75de6440ca1c04f08b4356fee0d8e4a4ba1cb858f9fabb5bbc0eebd3c387c81d</th>
     </tr>
         <tr>
       <td>reComputer Industrial J2012</td>
@@ -775,10 +775,9 @@ Please complete the **System Configuration** according to your needs.
 
 <TabItem value="Jetpack 6.2" label="Jetpack6.2">
 
-
 :::danger
 If you are using an **Orin NX 16GB/8GB** module, **do not enable MAXN SUPER mode**.
-The cooling capacity of the reComputer industrial J4011/J4012 is insufficient to support it, and forcing this mode may result in permanent damage to the module.
+The cooling capacity of J4011/J4012 is insufficient to support it, and forcing this mode may result in permanent damage to the module.
 :::
 
 - **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using
@@ -795,23 +794,18 @@ The cooling capacity of the reComputer industrial J4011/J4012 is insufficient to
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EaUtjH4gdPFGkQX86xzbLyEB6sckcd09RxxGJAlH2Qs4yg?e=a1KYbF" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <th>2c06ad9dbdb85f604905ce81403e9089<br />204d77292427985a0ab6786d7eabc211</th>
-    </tr>
-    <tr>
-      <td>reComputer Industrial J4011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWw6iP0DHf5Cl3YI2z3sHDoBl0JPabJHzEMjCItaHiOKVQ?e=fmpMfC" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <th>530f68c2a0bfda15b1e8211acb3905e<br />55f28d041bb531dcfa278e7f9bbd4118e</th>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQB2G7x8LjMaTZ_JSm8QTKebAfjjE1zNMkx9967kemKxPdw?e=hdGqgd" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>adf524fa3c77f32da9a12bb875ec4b24<br />8da9dad4e4cce9c51641e1cabca4ab88</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdypjC_kT7RAqqBHytE_KLwBLU6fEpoQ5Rv_MWYk-lMszQ?e=VV0U9A" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <th>7273143FCC46E2F7441BCF5FE6B4043C<br />A6428E126C50373462EC3091959CE0AA</th>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQAj4lhkKh6xTIe49xxjoViRAdXQciVaQMQmvpeAuo_ng6k?e=nGj5c7" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>38c8a5cbf2df922725824503e76605d4<br />43111e7ffec1db9eb3de4fccc7d54c21</th>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EXRpfNGzXmdCi36MrQYtzvABYW0gWcLGshzVhBiodVtPWQ?e=pO824v" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <th>0C07EC7C852DD72A7E8034965A274193<br />9B2DDA9C88AB9C6E4CB41E6264B95BDC</th>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBUOqMK6XUtQL30glQY9r0jAeyJSw9AMIaGOzh5jsgSrAc?e=iRMDpG" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <th>2bd6ebb246f5b967a64b0fb10a4e85ac<br />4de9e40951d1fdde9fc69025525d8d5a</th>
     </tr>
   </tbody>
   </table>
@@ -828,7 +822,7 @@ The source code for the above images can be found [here](https://github.com/Seee
 :::
 
 :::note
-Please note that due to the increased power consumption and heat generation after enabling `super mode`, the [reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) and [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) cannot operate stably in the highest mode. Therefore, this update does not include these two products.
+Please note that due to the increased power consumption and heat generation after enabling `super mode`, the [reComputer Industrial J4011](https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html) and [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) cannot operate stably in the highest mode with JetPack 6.2. Therefore, only J4012 (Orin NX 16GB) is available for JetPack 6.2, while J4011 (Orin NX 8GB) is not recommended.
 We are currently designing a new version of reComputer. Stay tuned!
 :::
 
@@ -848,6 +842,14 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
+
+- **Step 4:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
+
+:::info
+Please complete the **System Configuration** according to your needs.
+:::
 
 - **Step 4:** Connect the J401 to a display using the HDMI connector on the board and finish the initial configuration setup:
 
