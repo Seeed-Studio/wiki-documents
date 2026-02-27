@@ -1,6 +1,6 @@
 ---
-title: AI 人体检测与 Meshtastic 通知演示
-description: 本 wiki 演示了一个 AI 驱动的人体检测系统，使用 AI 摄像头和 XIAO ESP32S3 & Wio SX1262 Meshtastic 网络来广播实时警报。
+title: AI 人体检测与 Meshtastic 通知
+description: 本维基演示了一个由 AI 驱动的人体检测系统，使用 AI 相机与 XIAO ESP32S3 和 Wio SX1262 Meshtastic 网络，实现实时告警广播。
 keywords:
     - AI Human Detection
     - XIAO ESP32S3
@@ -16,15 +16,15 @@ last_update:
     author: John Xiang
 ---
 
-## 简介
-本演示展示了一个强大的边缘 AI 解决方案，将 reCamera 与 Meshtastic LoRa 网状网络集成。通过运行本地 YOLO11n 模型，reCamera 实时识别人体并触发 GPIO 信号。这个物理信号促使 XIAO ESP32S3 节点在去中心化网络中广播"检测到人体"警报。此设置允许自主的离网监控和安全，无需依赖互联网基础设施。本指南涵盖了 PoE 底板的硬件组装、C++ 部署和网状节点配置，以连接 AI 视觉与长距离通信。
+## 介绍
+本演示展示了一个边缘 AI 远程监控解决方案，将 reCamera 与 Meshtastic LoRa Mesh 网络集成。通过利用 reCamera 的端侧推理能力，本地 YOLO11n 模型可以识别人类目标并直接触发 GPIO 信号。该物理信号会促使一个 XIAO ESP32S3 节点在 Meshtastic 网络中广播一条 “Human detected” 告警。该架构支持集成多台 reCamera 和多个 Meshtastic 节点，以实现大范围覆盖。 
 
 ## 硬件准备
 <table align="center">
 <tbody><tr>
 <th>Seeed Studio reCamera HQ PoE 8GB/64GB</th>
 <th>XIAO ESP32S3 & Wio-SX1262 Kit for Meshtastic & LoRa</th>
-<th>Wio Tracker L1 Pro</th>
+<th>Wio Tracker L1(Pro)</th>
 </tr>
 <tr>
 <td><div align="center"><img src="https://files.seeedstudio.com/wiki/reCamera/reCamera_hq_poe/1-100029708-reCamera-2002-HQ-PoE-8GB.jpg" style={{width:210, height:'auto'}}/></div></td>
@@ -50,123 +50,161 @@ last_update:
 </tr>
 </tbody></table>
 
-## 设置演示
-为了实现这个演示，我们需要对 reCamera 和两个网状节点进行不同的配置。首先，在 reCamera 上运行一个 C++ 程序，当检测到人体时会触发 GPIO 信号。随后，我们需要将 Meshtastic 固件刷入第一个网状节点，使该网状节点能够监控 GPIO 信号，并在信号被触发时向 Meshtastic 网络发送消息。广播的消息将被第二个网状节点接收；最后，通过蓝牙将手机连接到第二个网状节点，可以在手机上查看发送的消息。
+## 搭建演示
+为了实现本演示，我们需要分别配置 reCamera 和两个 Mesh 节点。首先，在 reCamera 上运行一个 C++ 程序，当检测到人时会触发 GPIO 信号。随后，我们需要将 Meshtastic 固件烧录到第一个 Mesh 节点上，使其能够监测该 GPIO 信号，并在信号被触发时向 Meshtastic 网络发送消息。广播的消息会被第二个 Mesh 节点接收；最后，将手机通过蓝牙连接到第二个 Mesh 节点，即可在手机上查看发送的消息。
 
 ### reCamera 配置
 :::warning
-请确保您拥有的 reCamera 底板是 PoE 版本，因为只有 PoE 版本的 reCamera 具有 GPIO 接口。关于 reCamera 标准版本和 PoE 版本之间的差异，请参考[reCamera 2002(w) 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/cn/recamera_hardware_and_specs/)和[reCamera HQ PoE 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/cn/recamera_hq_poe_hardware/)。
+请确保你所拥有的 reCamera 底板是 PoE 版本，因为只有 PoE 版本的 reCamera 才具备 GPIO 接口。关于 reCamera 标准版与 PoE 版之间的差异，请参考 [reCamera 2002(w) 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/cn/recamera_hardware_and_specs/) 和 [reCamera HQ PoE 8GB/64GB Hardware Specification](https://wiki.seeedstudio.com/cn/recamera_hq_poe_hardware/)。
 
-如果您购买了 PoE 版本的 reCamera[reCamera HQ PoE 8GB/64GB](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html)，您可以直接使用它来重现此演示。
+如果你购买的是 reCamera 的 PoE 版本 - [reCamera HQ PoE 8GB/64GB](https://www.seeedstudio.com/reCamera-2002-HQ-PoE-8GB-p-6558.html)，可以直接使用它来复现本演示。
 
-如果您购买了标准版本的 reCamera[reCamera 2002(w) 8GB/64GB](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)，您需要额外购买一个 PoE 底板[reCamera Base Board PoE](https://www.seeedstudio.com/reCamera-2002-Base-Board-PoE-p-6559.html)并将其安装在 reCamera 上，替换标准底板。
+如果你购买的是 reCamera 标准版 - [reCamera 2002(w) 8GB/64GB](https://www.seeedstudio.com/reCamera-2002-8GB-p-6251.html)，则需要额外购买一块 PoE 底板 - [reCamera Base Board PoE](https://www.seeedstudio.com/reCamera-2002-Base-Board-PoE-p-6559.html)，并将其安装到 reCamera 上，以替换原有的标准底板。
 :::
 
-以下配置的目的是在 **reCamera** 上部署一个**目标检测**应用程序。通过停止默认的 Node-RED 服务，我们释放必要的硬件资源来运行一个名为 `model_detector` 的专用 C++ 可执行文件。
+下面的配置目的是在 **reCamera** 上部署一个**目标检测**应用。通过停止默认的 Node-RED 服务，使 reCamera 能够运行一个名为 `model_detector` 的专用 C++ 可执行程序。 
 
-此设置利用 YOLO11n 模型（在 COCO 数据集上训练）执行实时边缘计算。最终目标是使 reCamera 能够自主检测特定对象（在本例中为人体）。一旦发生检测，系统将通过将 **GPIO 490** 拉至**高**电平来触发硬件信号。此硬件触发器作为与 **XIAO ESP32S3 + Wio SX1262** Meshtastic 节点通信的桥梁。
+该配置使用 **YOLO11n** 模型（基于 COCO 数据集训练）来执行实时边缘计算。 
+
+最终目标是让 reCamera 能够自主检测特定目标（本例中为人）。一旦检测到目标，系统会通过将 **GPIO 490** 拉高到 **High** 电平来触发硬件信号。该硬件触发信号作为与 **XIAO ESP32S3 + Wio SX1262** Meshtastic 节点通信的桥梁。
 
 #### 暴露 GPIO 引脚
-要暴露 reCamera PoE 底板上的 GPIO 引脚，我们需要拧下底板的螺丝并取下盖子。然后，使用六角扳手取下盖子。您会在底板上找到一个连接器，它有 6 个引脚。我们将使用此连接器的 GPIO 490。有关底板接口的更多信息，请参考[reCamera Base Board with PoE Hardware Specification](https://wiki.seeedstudio.com/cn/recamera_hq_poe_hardware/#b3_poe)。
+为了暴露 reCamera PoE 底板上的 GPIO 引脚，我们需要拧下底板的螺丝并取下外壳。然后，你会在底板上看到一个 6 针连接器。我们将使用该连接器上的 GPIO 490 和 GND。关于底板上此类 6 针连接器等接口的更多信息，请参考 [reCamera Base Board with PoE Hardware Specification](https://wiki.seeedstudio.com/cn/recamera_hq_poe_hardware/#b3_poe)。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_1_1.jpg" /></div>
 
-接下来，从 reCamera PoE 包装或 reCamera Base Board with PoE 包装中取出 MX1.25-Dupont,6P,6Color:Red-Black-Yellow-Green-Blue-White 线缆。
+接下来，从 reCamera 包装中取出下图所示的延长线。这根线为 **MX1.25-Dupont,6P,6Color:Red-Black-Yellow-Green-Blue-White wire**。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_1_2.jpg" /></div>
 
-将线缆连接到底板上的 GPIO 490 接口。最终连接应如下图所示。GPIO 490 连接到绿色线缆。
+将该线连接到底板上。最终连接效果应如图所示。GPIO 490 连接到绿色线，而 GND 连接到黑色线。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_1_3.jpg" /></div>
 
 #### 登录 reCamera
-首先，按照此教程将您的 reCamera 升级到最新版本 0.2.2。如果您的版本已经是 0.2.2，可以跳过此步骤。[reCamera OS UPgrade Tutorial](https://wiki.seeedstudio.com/cn/recamera_os_version_control/)
+首先，按照本教程将 reCamera 升级到最新的 0.2.2 版本：[reCamera OS UPgrade Tutorial](https://wiki.seeedstudio.com/cn/recamera_os_version_control/) 如果你的版本已经是 0.2.2，则可以跳过此步骤。
 
 :::note
-由于 reCamera 的摄像头资源是独占的，默认运行的 Node-RED 和相关 AI 服务会长时间占用底层图像驱动程序。如果在这些服务运行时直接启动 C++ 目标检测程序，会导致多个进程之间的冲突，使 C++ 程序因无法正常访问摄像头而启动失败。因此，我们需要通过 SSH 访问 reCamera，以确保在关闭 Web 服务后设备仍可远程控制；随后通过 SSH 在 reCamera 终端中执行命令来停止 Node-RED 等后台进程，从而释放对摄像头的锁定并为 model_detector 程序清除必要的硬件访问路径。
+由于 reCamera 的摄像头资源是独占的，默认运行的 Node-RED 及相关 AI 服务会长时间占用底层图像驱动。如果在这些服务运行时直接启动 C++ 目标检测程序，会导致多个进程之间发生冲突，从而使 C++ 程序因无法正常访问摄像头而启动失败。 
+
+因此，我们需要通过 SSH 访问 reCamera，以确保在关闭 Web 服务后仍然可以远程控制设备；随后，通过 SSH 在 reCamera 终端中执行命令，停止 Node-RED 等后台进程，从而释放摄像头的占用，并为 model_detector 程序清理必要的硬件访问路径。
 :::
 
 #### 建立 SSH 连接
 使用 **MobaXTerm** 等工具通过 SSH 登录 **reCamera**。默认 IP：通常为 `192.168.42.1`
-* 登录后，建议切换到 `/userdata/` 目录，因为它通常用于存储用户数据和模型。
+* 登录后，建议切换到 `/userdata/` 目录，因为该目录通常用于存放用户数据和模型。
 
 #### 停止 Node-RED 相关服务
-由于 reCamera 上默认运行的 Node-RED 服务消耗大量系统资源，您必须在运行 C++ 演示之前执行以下三个命令来停止它：
+由于 reCamera 上默认运行的 Node-RED 服务会占用大量系统资源，在运行 C++ 演示程序之前，必须执行以下三条命令来停止它：
 
 ```bash
 sudo /etc/init.d/S03node-red stop
 sudo /etc/init.d/S91sscma-node stop
 sudo /etc/init.d/S93sscma-supervisor stop
 ```
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_2_1.jpg" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_2_1n.jpg" /></div>
 
-#### 上传模型和固件
+#### 上传模型与固件
 
-使用 **MobaXTerm 的文件传输功能**（左侧文件面板中的上传图标）将以下文件上传到 `/userdata/` 目录。
+使用 **MobaXTerm 的文件传输功能**（左侧文件面板中的上传图标），将以下文件上传到 `/home/recamera/` 目录。
 
-**编译的固件**：例如 `model_detector`
+**已编译固件**：例如 `model_detector`
 **量化模型**：例如 `yolo11n_cv181x_int8.cvimodel`
 
-这里的 `model_detector` 是一个可执行文件。它是通过配置 **reCamera SDK** 和**交叉编译** C++ 源代码生成的。该程序的逻辑如下：它使用上传的 `yolo.cvimodel` 来检测帧中是否存在人体。如果检测到人体，reCamera PoE 底板上的 **GPIO 490** 将被设置为**高电平**；否则，它将保持**低电平**。
+这里的 `model_detector` 是一个可执行文件。它是通过配置 **reCamera SDK** 并对 C++ 源码进行**交叉编译**生成的。该程序的逻辑如下：使用上传的 `yolo.cvimodel` 检测画面中是否存在人。如果检测到人，reCamera PoE 底板上的 **GPIO 490** 将被设置为 **High**；否则保持 **Low**。
 
-由于设置交叉编译环境可能很复杂，我们为您提供了预编译的可执行文件。您可以直接下载并上传到您的 reCamera。[Compiled C++ Model Detector Code](https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/model_detector)
+由于搭建交叉编译环境相对复杂，我们已为你提供预编译好的可执行文件。你只需下载并上传到 reCamera 即可使用。[Compiled C++ Model Detector Code](https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/model_detector)
 
-关于模型文件，它是基于 **COCO 数据集**训练的 YOLO11n 检测模型。它包含 80 个类别，可以识别常见的日常物体，如人体和车辆。同样，我们提供下载链接，因此您无需自己训练或转换模型。下载后，您可以直接上传到您的 reCamera。[reCamera Yolo Models](https://wiki.seeedstudio.com/cn/recamera_on_device_models/)
+关于模型文件，它是一个基于 **COCO 数据集**训练的 YOLO11n 检测模型，包含 80 个类别，可识别人、车辆等常见日常物体。同样地，我们提供了下载链接，你无需自行训练或转换模型。下载后可直接上传到 reCamera。[reCamera Yolo Models](https://wiki.seeedstudio.com/cn/recamera_on_device_models/)
 
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_2_2.jpg" /></div>
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_2_2n.jpg" /></div>
 
 :::note
-建议有嵌入式系统经验的人员修改源代码并执行交叉编译。如果您有兴趣进一步探索，请参考文档。
+建议具备嵌入式系统经验的用户修改源码并进行交叉编译。如果你有兴趣进一步探索，请参考相关文档。
 :::
 
-#### 授予权限并运行
-在终端中，首先访问您上传编译固件和量化模型的文件夹。然后为固件添加执行权限并启动检测程序。
+#### 授权并运行
+在终端中，首先进入你上传已编译固件和量化模型的文件夹。然后为固件添加执行权限并启动检测程序。
 ```bash
 chmod +x model_detector
 ```
-执行以下命令（使用 `0.5`(50%) 作为置信度阈值示例）：
 
-```bash
-sudo ./model_detector yolo11n_cv181x_int8.cvimodel 0.5
-```
-
-成功执行后，您将在终端中看到实时检测到的类别信息（例如 `Class 0`）及其坐标。
-
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_3_1.jpg" /></div>
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_3_2.jpg" /></div>
-
-### XIAO ESP32S3 + Wio-SX1262（Meshtastic 节点）配置
-现在，我们将配置**第一个 Mesh 节点**。该节点负责接收来自 reCamera 的 IO 输出并广播文本消息：**"Human detected"**。
-
-#### 固件烧录
-必须向设备烧录特定的 Mesh 固件。由于 Mesh 网络独特的通道管理机制，标准固件中 **DetectionSensor** 模块输出到 **Channel 0** 的信息通常会被丢弃。这种设计是有意为之，以防止高频检测数据阻塞 Mesh 网络通道。请按照以下步骤操作：
+为了便于可视化展示，model_detector 程序集成了 UDP 视频流功能。只要 reCamera 与电脑处于同一局域网（LAN）中，就可以在 reCamera 上运行该程序的同时，在电脑上执行 udp_receiver.py 脚本，实现实时预览。
 
 :::note
-烧录前，请暂时从 XIAO 上移除 **Wio SX1262 扩展板**。虽然扩展板本身不会干扰烧录过程，但它会物理阻挡 XIAO ESP32S3 上的 **BOOT** 按钮。
+该 UDP 流仅用于本地监控和演示（一个“额外”功能）。由于 LoRa 技术在物理带宽上的限制，Meshtastic 网络不支持也无法实现视频流传输。实际在 Mesh 网络中传输的数据仅限于诸如 “Human detected” 之类的轻量级文本告警。
+:::
+
+执行以下命令，以 `0.5`（50%）作为置信度阈值示例来运行 model_detector 程序：
+
+```bash
+sudo ./model_detector [model_name] [confidence_threshold] [PC_IP_address] [udp_port]
+```
+其中：
+* `[model_name]`：量化模型文件的名称。本示例中为 `yolo11n_cv181x_int8.cvimodel`。
+* `[confidence_threshold]`：用于目标检测的置信度阈值，范围为 0.0 到 1.0。值越高，检测结果越少，但准确率越高。本示例中为 `0.5`。
+* `[PC_IP_address]`：运行 `udp_receiver.py` 脚本的电脑的 IP 地址。本示例中为 `10.0.0.228`。**请务必记住要使用你自己电脑的 IP 地址，而不是我的。**
+* `[udp_port]`：用于视频流传输的 UDP 端口号。本示例中为 `5000`。
+
+下面是完整的示例命令：
+```bash
+sudo ./model_detector yolo11n_cv181x_int8.cvimodel 0.5 10.0.0.228 5000
+```
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_3_1n.jpg" /></div>
+
+现在，我们将在你的电脑上配置 `udp_receiver.py` 脚本。请确保你的电脑已安装 Python、**OpenCV** 和 **NumPy** 库。然后，从链接 [udp_receiver.py](https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/udp_receiver.py) 下载 `udp_receiver.py` 脚本，并在你的电脑上执行它。本示例中是在 Windows Powershell 上运行：
+
+```bash
+python .\udp_receiver.py --port [udp_port] --scale [scale_factor]
+```
+其中：
+* `[udp_port]`：从 reCamera 进行视频流传输所使用的 UDP 端口号。本示例中为 `5000`。
+* `[scale_factor]`：用于调整视频帧大小的缩放系数。本示例中为 `1.5`。
+
+下面是完整的示例命令：
+```bash
+python .\udp_receiver.py --port 5000 --scale 1.5
+```
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_3_3n.jpg" /></div>
+
+最后，你将在终端中看到实时检测到的类别信息（例如 `Class 0`）及其坐标。
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_3_2n.jpg" /></div>
+
+同时，你的电脑上会显示实时视频流：
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/1_3_4n.jpg" /></div>
+
+### XIAO ESP32S3 + Wio-SX1262（Meshtastic 节点）配置
+现在，我们将配置**第一个 Mesh 节点**。该节点负责接收来自 reCamera 的 IO 输出，并广播一条文本消息：**"Human detected"**。
+
+#### 固件烧录
+设备必须烧录特定的 Mesh 固件。由于 Mesh 网络独特的信道管理机制，在标准固件中，**DetectionSensor** 模块输出到 **Channel 0** 的信息通常会被丢弃。这样设计是为了防止高频检测数据堵塞 Mesh 网络信道。请按照以下步骤操作：
+
+:::note
+在烧录之前，请暂时将 **Wio SX1262 扩展板** 从 XIAO 上取下。虽然扩展板本身不会影响烧录过程，但它会在物理上挡住 XIAO ESP32S3 上的 **BOOT** 按钮。
 :::
 
 1.  首先，下载预编译的 Mesh 固件 [Custom Meshtastic Firmware](https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/firmware-seeed-xiao-s3-2.7.17.63aadba52.factory.bin)。
-2.  通过 USB 线将 XIAO ESP32S3 连接到计算机并**进入 Bootloader 模式**。您可以参考此指南 [XIAO S3 bootloader guide](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/#bootloader-mode)
-3.  使用基于网页的烧录工具 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) 选择 **Seeed XIAO esp32s3** 设备，然后选择您刚下载的固件，最后点击 **Flash** 按钮将固件烧录到 XIAO ESP32S3。
-有视频教程可供参考，但请记住烧录下载的固件而不是 Meshtastic 官方固件 [Flash Firmware Video](https://wiki.seeedstudio.com/cn/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic/#flash-firmware)。
-4.  烧录完成且无错误报告后，拔掉 XIAO ESP32S3 以关闭电源。重新安装 Wio SX1262 扩展板，然后重新连接 USB 线到计算机。设备现在将使用新固件启动。
+2.  通过 USB 线将 XIAO ESP32S3 连接到电脑，并**进入 Bootloader 模式**。你可以参考此指南 [XIAO S3 bootloader guide](https://wiki.seeedstudio.com/cn/xiao_esp32s3_getting_started/#bootloader-mode)
+3.  使用基于网页的烧录工具 [Meshtastic Web Flasher](https://flasher.meshtastic.org/)，选择 **Seeed XIAO esp32s3** 设备，然后选择你刚刚下载的固件，最后点击 **Flash** 按钮将固件烧录到 XIAO ESP32S3 上。
+有一个视频教程可供参考，但请记得烧录你下载的固件，而不是 Meshtastic 官方固件 [Flash Firmware Video](https://wiki.seeedstudio.com/cn/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic/#flash-firmware)。
+4.  当烧录完成且未报告错误后，拔下 XIAO ESP32S3 以关闭电源。重新安装 Wio SX1262 扩展板，然后重新连接 USB 线到电脑。设备现在将使用新固件启动。
 
 #### 配置 Mesh 节点
-有两种方式配置 Mesh 节点。首先，用 USB 线将设备连接到计算机，然后您可以：1：使用另一个 Mesh 网页工具：[Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) 通过串口访问 mesh 节点；2：下载 Meshtastic 移动应用程序，通过手机上的蓝牙访问 Mesh 节点。这里我们演示使用 PC 上的 [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) 来配置 esp32s3 和 Wio Tracker。
+配置 Mesh 节点有两种方式。首先，用 USB 线将设备连接到电脑，然后你可以：1：使用另一个 Mesh 网页工具 [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) 通过串口访问 Mesh 节点；2：在手机上下载 Meshtastic 移动应用，通过蓝牙访问 Mesh 节点。这里我们演示在电脑上使用 [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) 来配置 esp32s3 和 Wio Tracker。
 
 :::note
-iOS 和 Android 上的 Mesh 应用程序的 UI，以及 meshtastic web client 工具的 UI 可能有所不同，但特定配置（如配置 LoRa 频段）都可以在其相应的配置选项中找到。因此，如果您没有 iOS，无需担心；其他平台上的应用程序肯定会有相应的配置选项。
+iOS 和 Android 上 Mesh 应用的 UI，以及 meshtastic web client 工具的 UI 可能有所不同，但具体配置（例如配置 LoRa 频段）都可以在其对应的配置选项中找到。因此，如果你没有 iOS 设备，也不必担心；其他平台上的应用肯定也会有相应的配置选项。
 :::
 
 :::note
-[Meshtastic Web Flasher](https://flasher.meshtastic.org/) 和 [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) 是 Meshtastic 提供的两个官方网页工具。它们分别用于配置 Mesh 节点和烧录 Mesh 固件。请不要将它们混淆。
+[Meshtastic Web Flasher](https://flasher.meshtastic.org/) 和 [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0) 是 Meshtastic 提供的两个官方网页工具，分别用于配置 Mesh 节点和烧录 Mesh 固件。请不要将它们混淆。
 :::
 
-1.确保您的 XIAO esp32s3 Mesh 节点通过 USB 线连接到计算机。打开 [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0)，您将看到初始页面。现在点击 "+ New Connection"。
+1.确保你的 XIAO esp32s3 Mesh 节点已通过 USB 线连接到电脑。打开 [Meshtastic Web Client](https://client.meshtastic.org/messages/broadcast/0)，你会看到初始页面。现在点击 "+ New Connection"。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_1.png" /></div>
 
-2.点击 "Serial"，然后点击 "New Device"，并选择您的 Mesh 节点的端口。
+2.点击 "Serial"，然后点击 "New Device"，并选择你的 Mesh 节点所对应的端口。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_2.png" /></div>
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_3.png" /></div>
@@ -181,17 +219,17 @@ iOS 和 Android 上的 Mesh 应用程序的 UI，以及 meshtastic web client �
 
 5.将 'Region' 和 'Modem Preset' 分别设置为 'US' 和 'Short Turbo'：
 :::note
-实际上，Region 和 Modem Preset 配置没有严格限制，但您必须确保您拥有的两个 Mesh 节点设备的 Region 和 Modem Preset 设置一致。在本文档中，我们以 'US' 和 'Short Turbo' 为例。
+实际上，对 Region 和 Modem Preset 的配置并没有严格限制，但你必须确保你所拥有的两个 Mesh 节点设备的 Region 和 Modem Preset 设置保持一致。在本文档中，我们以 'US' 和 'Short Turbo' 为示例。
 :::
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_6.png" /></div>
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_7.png" /></div>
 
-6.现在，让我们转到 'Module Config' 并选择 'DetectionSensor'。
+6.现在，让我们进入 'Module Config' 并选择 'DetectionSensor'。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_11.png" /></div>
 
-7.启用此模块，然后将传输间隔设置为 15 秒。
+7.启用此模块，然后将发送间隔设置为 15 秒。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_12.png" /></div>
 
@@ -199,42 +237,42 @@ iOS 和 Android 上的 Mesh 应用程序的 UI，以及 meshtastic web client �
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_13.png" /></div>
 
-9.现在，让我们转到 'Channel Config' 并选择 'Ch1'。
+9.现在，让我们进入 'Channel Config' 并选择 'Ch1'。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_8.png" /></div>
 
-10.将 'Role' 设置为 'SECONDARY'，并为 Pre-Shared Key format 选择 '128 bit'。然后点击 'Generate' 生成随机的 128 位 Pre-Shared Key。**记住这个密钥，并将其保存到文本文件中以备后用。** 同时，将 Name 设置为 'reCamera'。
+10.将 'Role' 设置为 'SECONDARY'，并选择 '128 bit' 作为 Pre-Shared Key 格式。然后点击 'Generate' 生成一个随机的 128 位 Pre-Shared Key。**记住这个 Key，并将其保存到一个文本文件中以备后用。** 同时，将 Name 设置为 'reCamera'。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_9.png" /></div>
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_10.png" /></div>
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_15.png" /></div>
 
-11.最后，点击 'Save' 保存配置。等待设备保存配置然后重启。
+11.最后，点击 'Save' 保存配置。等待设备保存配置并重新启动。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/2_2_14.png" /></div>
 
 SjVzNWwzNTEwQWZUWlo0Yg==
 
 ### Wio Tracker L1（Meshtastic 节点）配置
-Wio Tracker 的配置类似，我们仍然使用 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) 选择 'Wio Tracker L1' 并烧录 **官方 Meshtastic 固件** 而不是您之前下载的自定义固件。请参考 [Wio Tracker L1 Firmware Flashing Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)
+Wio Tracker 的配置与上面类似，我们仍然使用 [Meshtastic Web Flasher](https://flasher.meshtastic.org/) 选择 'Wio Tracker L1'，并烧录 **Official Meshtastic Firmware**，而不是你上面下载的自定义固件。请参考 [Wio Tracker L1 Firmware Flashing Tutorial](https://wiki.seeedstudio.com/cn/get_started_with_meshtastic_wio_tracker_l1/#part-2-firmware-flashing)
 
-与上述相同，我们将 Wio Tracker L1 的 Region 和 Modem Preset 设置为 'US' 和 'Short Turbo'。然后，启用其 Channel1 并将 Pre-Shared Key 设置为您上面生成的 128 位密钥。
+与上面相同，我们将 Wio Tracker L1 的 Region 和 Modem Preset 设置为 'US' 和 'Short Turbo'。然后，启用其 Channel1，并将 Pre-Shared Key 设置为你上面生成的 128 位 Key。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/3_1_1.png" /></div>
 
 ### 组装
-与上述相同，我们将 reCamera 上的 GPIO490（绿线）连接到 XIAO esp32s3 上的 D2。然后，系统将运行。
+与上面相同，我们将 reCamera 上的 GPIO490（绿色线）连接到 XIAO esp32s3 上的 D2，将 GND 连接到 GND 引脚。然后，系统就会开始运行。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/4_1_1.jpg" /></div>
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/4_1_2.jpg" /></div>
 
-当连接建立时，您将听到来自 Wio Tracker L1 的声音，Wio Tracker L1 上的显示屏将显示 'Human detected' 文本。
+当连接建立后，你会听到 Wio Tracker L1 发出声音，并且 Wio Tracker L1 的显示屏上会显示“Human detected”文本。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reCamera/Applications/Meshtastic/4_1_3.jpg" /></div>
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！如果您需要特定定制目标的指导或想要进一步扩展工作流程，请随时联系我们。我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！如果你在特定定制目标方面需要指导，或希望进一步扩展工作流程，欢迎随时联系我们。我们会为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -1,9 +1,9 @@
 ---
-description: ReSpeaker XVF3800をROS2と統合してロボットアプリケーションに活用する方法を学びます。このチュートリアルでは、TurtlesimでDOAと音声検出をシミュレートし、ロボット制御とPID制御の基本的な理解を提供します。
-title: ReSpeaker XVF3800でのROS2
+description: ReSpeaker XVF3800 を ROS2 と統合してロボットアプリケーションに活用する方法を学びます。本チュートリアルでは、Turtlesim を用いた DOA と音声検出のシミュレーションを通して、ロボット制御と PID 制御の基礎的な理解を提供します。
+title: reSpeaker XVF3800 上の ROS2
 keywords:
 - reSpeaker
-- Robotics
+- ロボティクス
 - ROS2
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /ja/respeaker_xvf3800_ros2
@@ -16,45 +16,45 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/ros/RoS2reSpeakerXVF3800.gif" alt="pir" width={800} height="auto" /></p>
 
-このプロジェクトでは、ReSpeaker XVF3800をROS2と統合してロボットアプリケーションに活用し、音声検出と到来方向（DOA）推定に焦点を当てます。Turtlesimノードを使用して、音声入力に基づくロボット制御をシミュレートし、PID制御による精密な移動を可能にします。このチュートリアルでは、ROS2環境のセットアップ、ReSpeaker XVF3800の設定、およびロボット制御のための音声コマンドの適用方法について説明します。最終的に、ユーザーは音声インターフェースとロボティクスの接続方法と、ナビゲーションのための基本的な制御アルゴリズムの使用方法を理解できるようになります。
+このプロジェクトでは、音声検出と到来方向 (DOA) 推定に焦点を当てながら、ReSpeaker XVF3800 を ROS2 と統合してロボットアプリケーションに利用する方法を示します。Turtlesim ノードを使用して音声入力に基づくロボット制御をシミュレートし、PID 制御による精密な動作を実現します。本チュートリアルでは、ROS2 環境のセットアップ、ReSpeaker XVF3800 の設定、およびロボット制御に音声コマンドを適用する方法を取り上げます。最後まで進めることで、音声インターフェースをロボティクスに接続し、ナビゲーションのための基本的な制御アルゴリズムを使用する方法を理解できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
-## ホストコンピュータにROS 2をインストールする方法
+## ホストコンピュータへの ROS 2 のインストール方法
 
-このプロジェクトでは、ミドルウェアとして**ROS 2 Humble**を使用します。ROS 2を初めてインストールする場合は、詳細な手順について公式インストールガイドに従ってください：
+このプロジェクトでは、ミドルウェアとして **ROS 2 Humble** を使用します。ROS 2 を初めてインストールする場合は、公式インストールガイドに従って詳細な手順を確認してください。
 
-[ROS 2 Humble インストールガイド（Ubuntu）](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
+[ROS 2 Humble インストールガイド (Ubuntu)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 
-## ReSpeaker USB マイクアレイのセットアップ
+## ReSpeaker USB Mic Array のセットアップ
 
-ロボットや音声アプリケーションで**ReSpeaker USB マイクアレイ**を使用している場合は、以下の手順に従ってUbuntuシステムで設定してください。
+ロボットや音声アプリケーションに **ReSpeaker USB Mic Array** を使用する場合は、Ubuntu システム上で次の手順に従って設定してください。
 
-### デバイスのベンダーIDとプロダクトIDを見つける
+### デバイスの Vendor ID と Product ID を確認する
 
-デバイスのIDを見つけるには、以下を実行します：
+デバイスの ID を確認するには、次を実行します。
 
 ```bash
 lsusb
 ```
 
-ReSpeakerデバイス（例：`vendor 0x2886, product 0x001A`）を探してください。
+ReSpeaker デバイス（例: `vendor 0x2886, product 0x001A`）を探します。
 
-### デバイス用のudevルールを作成する
+### デバイス用の udev ルールを作成する
 
-ReSpeaker マイクアレイの適切な権限を確保するために、新しいudevルールを作成します：
+ReSpeaker Mic Array に適切なパーミッションを付与するため、新しい udev ルールを作成します。
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
 ```
 
-ファイルに以下の行を追加します：
+ファイルに次の行を追加します。
 
 ```bash
 # ReSpeaker USB Mic Array
@@ -62,9 +62,9 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="0018", MODE="0666", 
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", GROUP="plugdev"
 ```
 
-### udevルールをリロードしてサービスを再起動する
+### udev ルールを再読み込みしてサービスを再起動する
 
-変更を有効にするために、udevルールをリロードしてサービスを再起動します：
+変更を反映させるために、udev ルールを再読み込みし、サービスを再起動します。
 
 ```bash
 sudo udevadm control --reload-rules
@@ -72,25 +72,25 @@ sudo udevadm trigger
 sudo service udev restart
 ```
 
-新しいルールを適用するために、ReSpeaker USB マイクアレイを抜き差ししてください。
+新しいルールを適用するために、ReSpeaker USB Mic Array を一度抜き差ししてください。
 
-## ROS2ワークスペースのセットアップとROS2でのロボット制御
+## ROS2 ワークスペースのセットアップと ROS2 によるロボット制御
 
-このガイドでは、ROS2ワークスペースのセットアップ、カスタムROS2パッケージの作成、Pythonを使用したロボット制御、およびROS2プロジェクトで使用するためのReSpeaker USB マイクアレイの設定プロセスについて説明します。
+このガイドでは、ROS2 ワークスペースのセットアップ、カスタム ROS2 パッケージの作成、Python を用いたロボット制御、そして ROS2 プロジェクトで使用するための ReSpeaker USB Mic Array の設定手順を順を追って説明します。
 
-### 必要な依存関係をインストールする
+### 必要な依存関係のインストール
 
-**Python Colcon拡張機能をインストールする**
+**Python Colcon 拡張機能のインストール**
 
-まず、ROS2パッケージをビルドするために必要なPython拡張機能がインストールされていることを確認します：
+まず、ROS2 パッケージをビルドするために必要な Python 拡張機能がインストールされていることを確認します。
 
 ```bash
 sudo apt install python3-colcon-common-extensions
 ```
 
-### Colcon自動補完の設定（オプション）
+### Colcon の自動補完を設定する（オプション）
 
-colconの自動補完を設定する必要がある場合：
+colcon の自動補完を設定する必要がある場合は、次を実行します。
 
 ```bash
 cd /usr/share/colcon_argcomplete/hook/
@@ -99,15 +99,15 @@ gedit ~/.bashrc
 clear
 ```
 
-次に、環境をリロードするために`source ~/.bashrc`を追加します：
+その後、環境を再読み込みするために `source ~/.bashrc` を追加します。
 
 ```bash
 source ~/.bashrc
 ```
 
-### ROS2ワークスペースを作成する
+### ROS2 ワークスペースを作成する
 
-新しいROS2ワークスペースを作成し、環境を準備します：
+新しい ROS2 ワークスペースを作成し、環境を準備します。
 
 ```bash
 mkdir ros2_ws
@@ -116,33 +116,33 @@ mkdir src
 colcon build
 ```
 
-### ROS2ワークスペースをソースする
+### ROS2 ワークスペースを source する
 
-ワークスペースをビルドした後、環境変数を設定するためにソースします：
+ワークスペースをビルドしたら、環境変数を設定するために source します。
 
 ```bash
 source ~/ros2_ws/install/setup.bash
 ```
 
-新しいターミナルを開くたびに自動的にワークスペースをソースするために、この行を`~/.bashrc`に追加できます：
+新しいターミナルを開くたびに自動的にワークスペースを source するには、この行を `~/.bashrc` に追加できます。
 
 ```bash
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### 新しいROS2パッケージを作成する
+### 新しい ROS2 パッケージを作成する
 
-次に、ロボットコントローラー用の新しいROS2パッケージを作成しましょう。このパッケージは、ビルドに`ament_python`を使用し、依存関係として`rclpy`を使用します：
+それでは、ロボットコントローラ用の新しい ROS2 パッケージを作成しましょう。このパッケージはビルドに `ament_python` を使用し、依存関係として `rclpy` を利用します。
 
 ```bash
 cd ~/ros2_ws/src
 ros2 pkg create my_robot_controller --build-type ament_python --dependencies rclpy
 ```
 
-### ロボット制御用のPythonスクリプトを追加する
+### ロボット制御用の Python スクリプトを追加する
 
-新しく作成したパッケージに移動し、ロボットを制御するためのPythonスクリプト（例：`rotate_doa.py`）を作成します：
+新しく作成したパッケージに移動し、ロボットを制御するための Python スクリプト（例: `rotate_doa.py`）を作成します。
 
 ```bash
 cd my_robot_controller/
@@ -150,7 +150,7 @@ touch rotate_doa.py
 chmod +x rotate_doa.py
 ```
 
-希望する制御ロジックでスクリプトを編集します（例：VS Codeなどのエディターを使用）：
+VS Code などのエディタを使用して、任意の制御ロジックでスクリプトを編集します。
 
 ```bash
 cd ..
@@ -315,7 +315,7 @@ if __name__ == '__main__':
 
 </details>
 
-package.xmlにこれらの依存関係を追加します
+これらの依存関係を package.xml に追加します
 
 ```bash
   <depend>rclpy</depend>
@@ -324,7 +324,7 @@ package.xmlにこれらの依存関係を追加します
   <depend>std_msgs</depend>
 ```
 
-package.xmlにこのエンドポイントを追加します
+このエンドポイントを package.xml に追加します
 
 ```python
 
@@ -338,20 +338,20 @@ entry_points={
 
 ### パッケージをビルドして実行する
 
-Pythonスクリプトを編集した後、パッケージをビルドします：
+Python スクリプトを編集したら、パッケージをビルドします。
 
 ```bash
 colcon build
 source ~/ros2_ws/install/setup.bash
 ```
 
-最後に、以下でパッケージを実行します：
+最後に、次のコマンドでパッケージを実行します。
 
 ```bash
 ros2 run my_robot_controller rotate_doa
 ```
 
-別のターミナルで、基本的なROS2ノード（例：テスト用の`turtlesim`）も実行できます：
+別のターミナルでは、基本的な ROS2 ノード（テスト用に `turtlesim` など）を実行することもできます。
 
 ```bash
 ros2 run turtlesim turtlesim_node
@@ -359,7 +359,7 @@ ros2 run turtlesim turtlesim_node
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じてお選びいただける複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

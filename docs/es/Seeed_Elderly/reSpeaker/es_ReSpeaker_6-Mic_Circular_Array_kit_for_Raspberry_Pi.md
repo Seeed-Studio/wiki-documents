@@ -1,6 +1,6 @@
 ---
-description: ReSpeaker 6-Mic Circular Array Kit para Raspberry Pi
-title: ReSpeaker 6-Mic Circular Array Kit para Raspberry Pi
+description: Kit de matriz circular ReSpeaker de 6 micrófonos para Raspberry Pi
+title: reSpeaker Kit de matriz circular de 6 micrófonos para Raspberry Pi
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,29 +13,11 @@ last_update:
 
 ![enter image description here](https://files.seeedstudio.com/products/107990055/01.png)
 
-El ReSpeaker 6-Mic Circular Array Kit de Seeed
-es una placa de extensión, también conocida como HAT diseñada para
-Raspberry Pi. Es un kit de matriz circular de micrófonos,
-que viene con seis micrófonos y
-está diseñado para aplicaciones de IA y voz. Esto
-significa que puedes construir un producto de voz más potente y
-flexible con Raspberry Pi
-que puede integrar Amazon Alexa Voice
-Service, Google Assistant, y más.
+El Kit de matriz circular ReSpeaker de 6 micrófonos de Seeed es una placa de expansión, también conocida como HAT, diseñada para Raspberry Pi. Es un kit de matriz de micrófonos circular, viene con seis micrófonos y está diseñado para aplicaciones de IA y voz. Esto significa que puedes construir un producto de voz más potente y flexible con Raspberry Pi que pueda integrar Amazon Alexa Voice Service, Google Assistant, etc.
 
-El ReSpeaker 6-Mic Circular Array Kit para
-Raspberry Pi consta de dos placas, una es
-el HAT accesorio de voz, la otra es la matriz circular de seis
-micrófonos.
+El Kit de matriz circular ReSpeaker de 6 micrófonos para Raspberry Pi consta de dos placas, una es el HAT de accesorio de voz y la otra es la matriz circular de seis micrófonos.
 
-El ReSpeaker 6-Mic Circular Array Kit para
-Raspberry Pi soporta 8 canales de entrada y 8 de salida
-en el sistema Raspbian. Los primeros 6
-canales de entrada son para grabación de micrófono,
-el resto de 2 canales de entrada son canales de eco de
-reproducción. Los primeros 2 canales de salida son para
-reproducir, el resto de 6 canales de salida son
-ficticios.
+El Kit de matriz circular ReSpeaker de 6 micrófonos para Raspberry Pi admite 8 canales de entrada y 8 canales de salida en el sistema Raspbian. Los primeros 6 canales de entrada son para la grabación de micrófono, los 2 canales de entrada restantes son canales de eco de la reproducción. Los primeros 2 canales de salida son para reproducción, los 6 canales de salida restantes son ficticios.
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -46,21 +28,21 @@ ficticios.
 ## Características
 
 - 2 chips ADC y 1 chip DAC
-- 8 canales de entrada y 8 de salida
+- 8 canales de entrada y 8 canales de salida
 - Matriz de seis micrófonos
-- Soporte Grove
+- Compatibilidad con Grove
 - Compatible con Raspberry Pi (Soporta Raspberry Pi Zero y Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ y Raspberry Pi 4)
 - Salida de voz para auriculares y altavoz
 
-## Especificaciones
+## Especificación
 
 - 2 x X-Power AC108 ADC
 - 6 x micrófonos de alto rendimiento
 - 1 x X-Power AC101 DAC
 - Salida de voz:
-  - Conector de audio para auriculares de 3.5mm
+  - Conector de audio para auriculares de 3,5 mm
   - Conector para altavoz
-- Compatible con conectores de 40 pines de Raspberry Pi
+- Compatible con cabeceras de 40 pines de Raspberry Pi
 - Micrófonos: MSM321A3729H9CP
 - Sensibilidad: -22 dBFS (Omnidireccional)
 - SNR: 59 dB
@@ -72,14 +54,14 @@ ficticios.
 - Sistemas de asistente de voz inteligente
 - Grabadoras de voz
 - Sistema de conferencias de voz
-- Equipo de comunicación para reuniones
+- Equipos de comunicación para reuniones
 - Robot de interacción por voz
 - Asistente de voz para automóvil
-- Otros escenarios que necesiten comando de voz
+- Otros escenarios que necesitan comandos de voz
 
-## Descripción del Hardware
+## Descripción general del hardware
 
-**Diagrama del Sistema**
+**Diagrama del sistema**
 
 <a href="https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/voice_hat_acc.png" target="_blank"><img src="https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/voice_hat_acc.png"/></a>
 
@@ -91,65 +73,65 @@ ficticios.
 Después de conectar, asegúrate de usar un multímetro para determinar si la conducción del circuito es como se indica en la figura anterior.
 :::
 
-## Dibujo de Ensamblaje
+## Dibujo de ensamblaje
 
 ![](https://files.seeedstudio.com/wiki/Bazaar_file/107990055/img/ab.png)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bazaar_file/107990055/img/6-mic_array_assemble.gif" /></p>
 
-## Primeros Pasos
+## Introducción
 
 ### Hardware
 
-**Prerrequisitos**
+**Requisitos previos**
 
 ReSpeaker 6-Mic Circular Array    x1
 
 [Raspberry Pi 3B o 3B+](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B%2B-p-3037.html?utm_source=homepage&utm_medium=homepagebanner&utm_campaign=hp_0605)              x1
 
-[Cable Micro-USB](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)                     x1
+[Micro-USB Cable](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html)                     x1
 
 PC                                  x1
 
-Auriculares o Altavoz               x1
+Auriculares o altavoz                 x1
 
 :::tip
-En realidad el ReSpeaker 6-Mic Circular Array es compatible con Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 model B+, Raspberry Pi 3 A+ y Raspberry Pi 4. En este wiki estamos usando Raspberry Pi 3.
+En realidad, el ReSpeaker 6-Mic Circular Array es compatible con Raspberry Pi Zero, Raspberry Pi 1 B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 modelo B+, Raspberry Pi 3 A+ y Raspberry Pi 4; en este wiki estamos usando Raspberry Pi 3.
 :::
 
 **Conexión**
 
-**Paso 1.**  Conecta el *ReSpeaker Voice Accessory HAT* con el *ReSpeaker 6-Mic circular Array* a través del Cable de Cinta
+**Paso 1.**  Conecta el *ReSpeaker Voice Accessory HAT* con el *ReSpeaker 6-Mic circular Array* mediante el cable de cinta
 
-**Paso 2.**  Conecta el *ReSpeaker Voice Accessory HAT* al *Raspberry Pi* a través del conector de 40 pines GPIO
+**Paso 2.**  Inserta el *ReSpeaker Voice Accessory HAT* en la *Raspberry Pi* a través del GPIO de 40 pines
 
-**Paso 3.**  Conecta los *auriculares* al *conector de audio de 3.5mm* o conecta el *altavoz* al *conector JST 2.0 para altavoz*
+**Paso 3.**  Conecta los *auriculares* al *conector de audio para auriculares de 3,5 mm* o conecta el *altavoz* al *conector para altavoz JST 2.0*
 
-**Paso 4.**  Conecta el *Raspberry Pi* con la *PC* a través del cable micro-USB
+**Paso 4.**  Conecta la *Raspberry Pi* con el *PC* mediante el cable micro-USB
 
 ![Pics here](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/img/6-mic.jpg)
 
 ### Software
 
-**Prerrequisitos**
+**Requisitos previos**
 
 *Plan A*
 
 [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-Necesitas usar *Putty* u otras herramientas *ssh* para conectarte con tu raspberry pi. Antes de comenzar, asegúrate de que:
+Necesitas usar *Putty* u otras herramientas *ssh* para conectarte con tu Raspberry Pi. Antes de empezar, asegúrate de lo siguiente:
 
-1- Abrir la función *ssh* de tu pi para permitir el acceso de putty. Si no sabes cómo abrir *ssh*, por favor busca en google `how to setup ssh raspberry pi`
+1- Abre la función *ssh* de tu Pi para permitir la conexión de Putty. Si no sabes cómo abrir *ssh*, por favor busca en Google `how to setup ssh raspberry pi`
 
-2- Tu raspberry pi y tu PC están trabajando en la misma red WiFi. Si no sabes cómo configurar WiFi, por favor busca en google `how to setup wifi raspberry pi`
+2- Tu Raspberry Pi y tu PC están trabajando en la misma red WiFi. Si no sabes cómo configurar WiFi, por favor busca en Google `how to setup wifi raspberry pi`
 
-3- Obtener la dirección ip de tu raspberry pi, si no sabes cómo obtener la dirección ip por favor consulta la [documentación oficial de raspberry](https://www.raspberrypi.org/documentation/remote-access/ip-address.md)
+3- Obtén la dirección IP de tu Raspberry Pi; si no sabes cómo obtener la dirección IP, consulta la [documentación oficial de Raspberry](https://www.raspberrypi.org/documentation/remote-access/ip-address.md)
 
-4- Usar la dirección ip para conectar el raspberry pi con tu PC a través del servicio ssh de putty.
+4- Usa la dirección IP para conectar la Raspberry Pi con tu PC mediante el servicio ssh de Putty.
 
 ![pic](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/img/putty.png)
 
-Luego por favor ingresa el nombre de host y la contraseña. El ID predeterminado es `pi` y la contraseña es `raspberry`.
+Luego introduce el nombre de host y la contraseña. El ID predeterminado es `pi` y la contraseña es `raspberry`.
 
 ```
 login as: pi
@@ -157,21 +139,21 @@ pi@192.168.43.210's password:raspberry
 
 ```
 
-Ahora estás dentro, y puedes escribir el comando en putty y jugar con tu raspberry.
+Ahora ya estás dentro, y puedes introducir comandos en Putty y jugar con tu Raspberry.
 
 [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
 
-Para hacer que este kit funcione con alexa o dueros, necesitas abrir un sitio web para obtener la autorización. Así que necesitas usar *VNC Viewer* para iniciar sesión en tu cuenta de amazon o baidu. Por favor, asegúrate de haber abierto el servicio *VNC* de tu raspberry.
+Para hacer que este kit funcione con alexa o dueros, necesitas abrir un sitio web para obtener la autorización. Así que necesitas usar *VNC Viewer* para iniciar sesión en tu cuenta de amazon o baidu. Por favor asegúrate de haber activado el servicio *VNC* de tu Raspberry.
 
-O puedes simplemente considerar el plan B.
+O simplemente puedes considerar el plan B.
 
 *Plan B*
 
-Si estás cansado de todo lo anterior, puedes simplemente usar un Monitor HDMI y conectar el Teclado USB y el ratón USB a tu raspberry, también funciona, simple y fácil.
+Si estás cansado de todo lo anterior, simplemente puedes usar un monitor HDMI y conectar el teclado USB y el ratón USB a tu Raspberry; también funciona, es simple y fácil.
 
 **Paso 1. Instalar seeed-voicecard**
 
-Obtén el código fuente de seeed voice card. e instala todos los controladores del kernel de linux.
+Obtén el código fuente de la tarjeta de voz de Seeed e instala todos los controladores del kernel de Linux.
 
 ```
 sudo apt-get update
@@ -183,15 +165,15 @@ sudo reboot
 
 ```
 
-**Paso 2. Verificar la Tarjeta de Sonido**
+**Paso 2. Comprobar la tarjeta de sonido**
 
-Ejecuta el comando a continuación para verificar el dispositivo de grabación.
+Introduce el siguiente comando para comprobar el dispositivo de grabación.
 
 ```
 pi@raspberrypi:~ $ arecord -L
 ```
 
-Debería ser así:
+Debería ser algo como:
 
 ```
 pi@raspberrypi:~ $ arecord -L
@@ -218,13 +200,13 @@ plughw:CARD=seeed8micvoicec,DEV=0
     Hardware device with all software conversions 
 ```
 
-Usa el siguiente comando para verificar el dispositivo de reproducción.
+Usa el siguiente comando para comprobar el dispositivo de reproducción.
 
 ```
 pi@raspberrypi:~ $ aplay -L
 ```
 
-Debería ser así:
+Debería ser algo como:
 
 ```
 pi@raspberrypi:~ $ aplay -L
@@ -279,7 +261,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 ```
 
-**Paso 3. Grabar y Reproducir**
+**Paso 3. Grabar y reproducir**
 
 Puedes grabar y luego reproducir, o puedes grabar y reproducir al mismo tiempo.
 
@@ -300,19 +282,19 @@ aplay -D plughw:1,0 -r 16000 mono_to_play.wav
 ```
 
 :::note
-Límite para desarrolladores que usan el Kit de Array Circular de 6 Micrófonos (o Kit de Array Lineal de 4 Micrófonos) haciendo captura y reproducción al mismo tiempo:
+Límites para desarrolladores que usan el 6-Mic Circular Array Kit (o 4-Mics Linear Array Kit) para capturar y reproducir al mismo tiempo:
 
--1. la captura debe iniciarse primero, o de lo contrario los canales de captura posiblemente estarán desordenados.
+-1. La captura debe iniciarse primero, de lo contrario los canales de captura posiblemente estarán desordenados.
 
--2. los canales de salida de reproducción deben llenarse con datos de 8 canales iguales o datos de 4 canales estéreo iguales, o de lo contrario el altavoz o auriculares posiblemente no producirán salida.
+-2. Los canales de salida de reproducción deben rellenarse con datos de 8 canales iguales o datos de 4 canales estéreo iguales, de lo contrario es posible que el altavoz o los auriculares no emitan nada.
 
--3. Si quieres reproducir y grabar al mismo tiempo, el archivo de música aplay debe ser mono, o no podrás usar este comando para reproducir.
+-3. Si quieres reproducir y grabar al mismo tiempo, el archivo de música de aplay debe ser mono, o no podrás usar este comando para reproducir.
 :::
 
 También puedes reproducir y grabar con Audacity.
 
 :::tip
-Debes abrir Audacity a través de VNC o simplemente puedes usar un monitor para abrirlo
+Debes abrir Audacity mediante VNC o simplemente puedes usar un monitor para abrirlo
 :::
 
 ```
@@ -324,9 +306,9 @@ audacity                      // run audacity
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_V2/img/audacity.png)
 
-### Jugar con los LEDs
+### Jugar con los LED
 
-Hay 12 LEDs GRB en el arreglo circular de 6 micrófonos, puedes configurar los LEDs tú mismo, ahora veamos cómo encenderlos.
+Hay 12 LED GRB en la matriz circular de 6 micrófonos; puedes configurar los LED tú mismo, ahora veamos cómo encenderlos.
 
 ```
 git clone --depth 1 https://github.com/respeaker/pixel_ring.git
@@ -336,11 +318,11 @@ python examples/respeaker_4mic_array.py
 
 ```
 
-Verás que los LEDs se encienden y funcionan. Y puedes consultar el archivo `python examples/respeaker_4mic_array.py` para crear tus propios efectos.
+Verás que los LED se encienden y se mueven. Y puedes consultar el archivo `python examples/respeaker_4mic_array.py` para crear tus propios efectos.
 
-## Localización y Seguimiento de Fuente de Sonido en Tiempo Real
+## Localización y seguimiento de la fuente de sonido en tiempo real
 
-[ODAS](https://github.com/introlab/odas) significa Open embeddeD Audition System. Esta es una biblioteca dedicada a realizar localización de fuente de sonido, seguimiento, separación y post-filtrado. Divirtámonos con ella.
+[ODAS](https://github.com/introlab/odas) significa Open embeddeD Audition System. Es una biblioteca dedicada a realizar localización, seguimiento, separación y posfiltrado de fuentes de sonido. Vamos a divertirnos con ella.
 
 - Paso 1. Obtén ODAS y compílalo.
 
@@ -360,11 +342,11 @@ make
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/img/odas.png)
 
-## Extraer Voz
+## Extraer voz
 
-Usamos la [biblioteca de Python PyAudio](https://people.csail.mit.edu/hubert/pyaudio/) para extraer voz.
+Usamos la [biblioteca PyAudio de python](https://people.csail.mit.edu/hubert/pyaudio/) para extraer voz.
 
-- Paso 1, Necesitamos ejecutar el siguiente script para obtener el número de índice del dispositivo del sombrero pi de 6 micrófonos:
+- Paso 1, necesitamos ejecutar el siguiente script para obtener el número de índice de dispositivo del 6 Mic pi hat:
 
 ```python
 sudo pip install pyaudio
@@ -372,7 +354,7 @@ cd ~
 nano get_index.py
 ```
 
-- Paso 2, copia el código de abajo y pégalo en get_index.py.
+- Paso 2, copia el siguiente código y pégalo en get_index.py.
 
 ```python
 import pyaudio
@@ -386,7 +368,7 @@ for i in range(0, numdevices):
             print "Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i).get('name')
 ```
 
-- Paso 3, presiona Ctrl + X para salir y presiona Y para guardar.
+- Paso 3, pulsa Ctrl + X para salir y pulsa Y para guardar.
 
 - Paso 4, ejecuta 'sudo python get_index.py' y veremos el ID del dispositivo como se muestra a continuación.
 
@@ -440,7 +422,7 @@ wf.writeframes(b''.join(frames))
 wf.close()
 ```
 
-- Paso 6. Si deseas extraer datos del canal 0 de 8 canales, sigue el código a continuación. Para otro canal X, cambia [0::8] a [X::8].
+- Paso 6. Si quieres extraer los datos del canal 0 de 8 canales, sigue el código siguiente. Para otro canal X, cambia [0::8] por [X::8].
 
 ```python
 import pyaudio
@@ -491,7 +473,7 @@ wf.close()
 
 ## DOA
 
-### DOA con Palabras Clave
+### DOA con palabras clave
 
 **Requisitos**
 
@@ -501,7 +483,7 @@ wf.close()
 
 **Instalación**
 
-Instala pyaudio, numpy y snowboy, usa virtualenv un entorno virtual de python.
+Instala pyaudio, numpy y snowboy, usa virtualenv como entorno virtual de python.
 
 ```shell
 sudo apt install python-pyaudio python-numpy python-virtualenv
@@ -521,14 +503,14 @@ pip install dist/*.whl
 
 **Digamos snowboy**
 
-- Paso 1. Ejecutar el kws_doa.py
+- Paso 1. Ejecuta kws_doa.py
 
 ```shell
 cd ~/voice-engine/examples/respeaker_6mic_array_for_pi/
 python kws_doa.py
 ```
 
-Aquí está el código del kws_doa.py
+Aquí está el código de kws_doa.py
 
 ```python
 """
@@ -597,7 +579,7 @@ detected 1 at direction 283.32811392
 
 ## Botón
 
-Si quieres verificar que tu respeaker_6-Mic está instalado correctamente en raspberry. El Botón es una buena idea. Podemos usar el código de abajo para verificar.
+si quieres comprobar que tu respeaker_6-Mic está instalado correctamente en la Raspberry, el botón es una buena idea. Podemos usar el siguiente código para comprobarlo.
 
 ```python
 
@@ -618,30 +600,30 @@ while True:
     time.sleep(1)
 ```
 
-## FAQ
+## Preguntas frecuentes
 
-**P1: Solo hay 6 micrófonos en el Array de Micrófonos, ¿cómo puede tener 8 canales?**
+**P1: Solo hay 6 micrófonos en la matriz de micrófonos, ¿cómo puede haber 8 canales?**
 
-R1: Hay 2 AC108 en este array, y cada chip AC108 tiene salida de 4 canales. Así que viene un total de 8 canales aquí, 6 de los cuales son para el micrófono, y los 2 restantes son los canales de reproducción.
+R1: Hay 2 AC108 en esta matriz, y cada chip AC108 tiene salida de 4 canales. Así que en total hay 8 canales aquí, 6 de los cuales son para el micrófono, y los otros 2 son los canales de reproducción.
 
-**P2: ¿Si Raspberry puede detectar ReSpeaker 2-mics hat, pero no puede detectar ReSpeaker 6-mics Circular array?**
+**P2: Si Raspberry puede detectar ReSpeaker 2-mics hat, pero no puede detectar ReSpeaker 6-mics Circular array?**
 
-R2: Por favor haz clic en raspberry -> Preferences -> Raspberry Pi Configuration, luego selecciona la pestaña Interfaces, asegúrate de que 1-Wire esté Deshabilitado.
+A2: Haz clic en raspberry -> Preferences -> Raspberry Pi Configuration, luego selecciona la pestaña Interfaces y asegúrate de que 1-Wire esté en Disabled.
 
 ## Recursos
 
-- **[PDF]** [Hoja de datos AC101](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf)
-- **[PDF]** [Hoja de datos AC108](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC108_Datasheet_V1.2.pdf)
-- **[Dxf]** [Archivo de carcasa ReSpeaker Circular Array for Voice Accessory HAT with 6 Microphones](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/ReSpeaker%20Circular%20Array%20for%20Voice%20Accessory%20HAT%20with%206%20Microphones.dxf)
-- **[Dxf]** [Archivo 2D ReSpeaker Circular Array for Voice Accessory HAT with 6 Microphone](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/2d.zip)
-- **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
-- **[Algoritmos]** [Algoritmos incluye DOA, VAD, NS](https://github.com/respeaker/mic_array)
-- **[Voice Engine** [Proyecto Voice Engine, proporciona bloques de construcción para crear objetos habilitados por voz](https://github.com/voice-engine/voice-engine)
-- **[Algoritmos]** [AEC](https://github.com/voice-engine/ec)
+- **[PDF]** [Hoja de datos de AC101](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf)
+- **[PDF]** [Hoja de datos de AC108](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC108_Datasheet_V1.2.pdf)
+- **[Dxf]** [Archivo de carcasa de ReSpeaker Circular Array for Voice Accessory HAT with 6 Microphones](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/ReSpeaker%20Circular%20Array%20for%20Voice%20Accessory%20HAT%20with%206%20Microphones.dxf)
+- **[Dxf]** [Archivo 2D de ReSpeaker Circular Array for Voice Accessory HAT with 6 Microphone](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/2d.zip)
+- **[Driver]** [Controlador Seeed-Voice](https://github.com/respeaker/seeed-voicecard)
+- **[Algorithms]** [Algoritmos que incluyen DOA, VAD, NS](https://github.com/respeaker/mic_array)
+- **[Voice Engine]** [Proyecto Voice Engine, proporciona bloques de construcción para crear objetos habilitados por voz](https://github.com/voice-engine/voice-engine)
+- **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
