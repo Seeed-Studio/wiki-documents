@@ -1,6 +1,6 @@
 ---
-description: ReSpeaker 4-Mic Linear Array Kit
-title: ReSpeaker 4-Mic Linear Array Kit
+description: Kit lineal ReSpeaker 4-Mic
+title: reSpeaker 4-Mic Linear Array Kit
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,54 +13,36 @@ last_update:
 
 ![enter image description here](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/main_wiki.jpg)
 
-El ReSpeaker 4-Mic Linear Array Kit de Seeed es
-una placa de extensión, también conocida como HAT diseñada para Raspberry Pi. Es un kit de matriz de micrófonos lineal
-que viene con cuatro micrófonos y
-está diseñado para aplicaciones de IA y voz. Esto
-significa que puedes construir un producto de voz más potente y
-flexible con Raspberry Pi
-que puede integrar Amazon Alexa Voice
-Service, Google Assistant, y más.
+El kit lineal ReSpeaker 4-Mic de Seeed es una placa de expansión, también conocida como HAT, diseñada para Raspberry Pi. Es un kit de matriz lineal de micrófonos, viene con cuatro micrófonos y está diseñado para aplicaciones de IA y voz. Esto significa que puedes construir un producto de voz más potente y flexible con Raspberry Pi que pueda integrar Amazon Alexa Voice Service, Google Assistant, etc.
 
-El ReSpeaker 4-Mic Linear Array Kit para
-Raspberry Pi consta de dos placas, una es
-el HAT accesorio de voz, la otra es la matriz lineal de cuatro
-micrófonos.
+ReSpeaker 4-Mic Linear Array Kit para Raspberry Pi consta de dos placas, una es el HAT de accesorio de voz y la otra es la matriz lineal de cuatro micrófonos.
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-El ReSpeaker 4-Mic Linear Array Kit para
-Raspberry Pi soporta 8 canales de entrada y 8 de salida
-en Raspberry Pi OS. Los primeros 6
-canales de entrada para grabación de micrófono
-(solo los primeros 4 canales de entrada son
-datos de captura válidos), el resto de 2 canales de entrada
-son canal de eco de reproducción. Los primeros 2
-canales de salida son para salida de sonido, el resto de 6 canales de salida
-son ficticios.
+ReSpeaker 4-Mic Linear Array Kit para Raspberry Pi admite 8 canales de entrada y 8 canales de salida en Raspberry Pi OS. Los primeros 6 canales de entrada son para la grabación del micrófono (solo los primeros 4 canales de entrada capturan datos válidos), los otros 2 canales de entrada son canales de eco de la reproducción. Los primeros 2 canales de salida son para la salida de sonido, los otros 6 canales de salida son ficticios.
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Linear-Array-Kit-p-3066.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Características
 
 - 2 chips ADC y 1 chip DAC
-- 8 canales de entrada y 8 de salida
+- 8 canales de entrada y 8 canales de salida
 - Matriz de cuatro micrófonos
-- Soporte Grove
-- Compatible con Raspberry Pi (Soporta Raspberry Pi Zero y Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ y Raspberry Pi 4)
-- Salida de voz por auriculares y altavoz
+- Compatibilidad con Grove
+- Compatible con Raspberry Pi (compatible con Raspberry Pi Zero y Zero W, Raspberry Pi B+, Raspberry Pi 2 B, Raspberry Pi 3 B, Raspberry Pi 3 B+, Raspberry Pi 3 A+ y Raspberry Pi 4)
+- Salida de voz para auriculares y altavoz
 
-## Especificaciones
+## Especificación
 
 - 2 x X-Power AC108 ADC
 - 4 x micrófonos analógicos de alto rendimiento
 - 1 x X-Power AC101 DAC
 - Salida de voz:
-  - Jack de audio para auriculares de 3.5mm
-  - Jack para altavoz
-- Compatible con conectores de 40 pines de Raspberry Pi
+  - Conector de audio para auriculares de 3,5 mm
+  - Conector para altavoz
+- Compatible con cabeceras de 40 pines de Raspberry Pi
 - Micrófonos: MSM321A3729H9BP
 - Sensibilidad: -22 dBFS (Omnidireccional)
 - SNR: 59 dB
@@ -72,10 +54,10 @@ son ficticios.
 - Sistemas de asistente de voz inteligente
 - Grabadoras de voz
 - Sistema de conferencias de voz
-- Equipo de comunicación para reuniones
+- Equipos de comunicación para reuniones
 - Robot de interacción por voz
 - Asistente de voz para automóvil
-- Otros escenarios que necesiten comando de voz
+- Otros escenarios que necesitan comandos de voz
 
 ## Descripción general del hardware
 
@@ -91,7 +73,7 @@ son ficticios.
 Después de conectar, asegúrate de usar un multímetro para determinar si la conducción del circuito es como se indica en la figura anterior.
 :::
 
-## Diagrama de ensamblaje  
+## Dibujo de ensamblaje  
 
 ![](https://files.seeedstudio.com/wiki/Bazaar_file/107990055/img/ab.png)
 
@@ -99,13 +81,13 @@ Después de conectar, asegúrate de usar un multímetro para determinar si la co
 
 **Conectar ReSpeaker 4-Mic Array a Raspberry Pi**
 
-**Paso 1.**  Conecta el *ReSpeaker Voice Accessory HAT* con el *ReSpeaker 4-Mic linear Array* mediante el Cable de Cinta
+**Paso 1.**  Conecta el *ReSpeaker Voice Accessory HAT* con el *ReSpeaker 4-Mic linear Array* mediante el cable plano
 
-**Paso 2.**  Conecta el *ReSpeaker Voice Accessory HAT* al *Raspberry Pi* mediante el conector de 40 pines GPIO
+**Paso 2.**  Inserta el *ReSpeaker Voice Accessory HAT* en la *Raspberry Pi* a través del GPIO de 40 pines
 
-**Paso 3.**  Conecta los *auriculares* al *conector de audio de 3.5mm* o conecta el *altavoz* al *conector JST 2.0 para altavoz*
+**Paso 3.**  Conecta los *auriculares* al *conector de audio para auriculares de 3,5 mm* o conecta el *altavoz* al *conector para altavoz JST 2.0*
 
-**Paso 4.**  Conecta el *Raspberry Pi* con la *PC* mediante el cable micro-USB
+**Paso 4.**  Conecta la *Raspberry Pi* con el *PC* mediante el cable micro-USB
 
 ![Pics here](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/4-mic.jpg)
 
@@ -113,7 +95,7 @@ Después de conectar, asegúrate de usar un multímetro para determinar si la co
 
 **Paso 1. Instalar seeed-voicecard**
 
-Obtén el código fuente de seeed voice card e instala todos los controladores del kernel de linux.
+Obtén el código fuente de la tarjeta de voz de Seeed e instala todos los controladores del kernel de Linux.
 
 ```
 sudo apt-get update
@@ -124,15 +106,15 @@ sudo reboot
 
 ```
 
-**Paso 2. Verificar la Tarjeta de Sonido**
+**Paso 2. Comprobar la tarjeta de sonido**
 
-Toca el comando a continuación para verificar el dispositivo de grabación.
+Escribe el siguiente comando para comprobar el dispositivo de grabación.
 
 ```
 pi@raspberrypi:~ $ arecord -L
 ```
 
-Debería ser así:
+Debería ser algo como:
 
 ```
 pi@raspberrypi:~ $ arecord -L
@@ -160,13 +142,13 @@ plughw:CARD=seeed8micvoicec,DEV=0
     Hardware device with all software conversions
 ```
 
-Usa el siguiente comando para verificar el dispositivo de reproducción.
+Usa el siguiente comando para comprobar el dispositivo de reproducción.
 
 ```
 pi@raspberrypi:~ $ aplay -L
 ```
 
-Debería ser así:
+Debería ser algo como:
 
 ```
 pi@raspberrypi:~ $ aplay -L
@@ -222,7 +204,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 ```
 
-**Paso 3. Grabar y Reproducir**
+**Paso 3. Grabar y reproducir**
 
 Puedes grabar y luego reproducir, o puedes grabar y reproducir al mismo tiempo.
 
@@ -238,19 +220,19 @@ aplay -D ac101 a.wav
 ```
 
 :::note
-Límite para desarrolladores que usan el Kit de Array Lineal de 4 Micrófonos haciendo captura y reproducción al mismo tiempo:
+Límite para desarrolladores que usan el 4-Mic Linear Array Kit para capturar y reproducir al mismo tiempo:
 
--1. la captura debe iniciarse primero, o de lo contrario los canales de captura posiblemente estarán desordenados.
+-1. la captura debe iniciarse primero, de lo contrario los canales de captura posiblemente estarán desordenados.
 
--2. los canales de salida de reproducción deben llenarse con datos de 8 canales iguales o datos de 4 canales estéreo iguales, o de lo contrario el altavoz o los auriculares posiblemente no producirán salida.
+-2. los canales de salida de reproducción deben rellenarse con datos de 8 canales iguales o datos de 4 canales estéreo iguales, de lo contrario es posible que el altavoz o los auriculares no emitan nada.
 
--3. Si quieres reproducir y grabar al mismo tiempo, el archivo de música aplay debe ser mono, o no podrás usar este comando para reproducir.
+-3. Si quieres reproducir y grabar al mismo tiempo, el archivo de música de aplay debe ser mono, o no podrás usar este comando para reproducir.
 :::
 
 También puedes reproducir y grabar con Audacity.
 
 :::tip
-        Debes abrir Audacity a través de VNC o simplemente puedes usar un monitor para abrirlo
+        Debes abrir Audacity mediante VNC o simplemente puedes usar un monitor para abrirlo
 :::
 
 ```
@@ -262,7 +244,7 @@ audacity                      // run audacity
 
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/audacity.png)
 
-## Resumen de uso
+## Descripción general de uso
 
 Para ejecutar los siguientes ejemplos, clona el repositorio [4mics_hat repository](https://github.com/respeaker/4mics_hat.git) en tu Raspberry Pi
 
@@ -281,7 +263,7 @@ pip3 install -r requirements.txt
 
 Usamos la [biblioteca de Python PyAudio](https://people.csail.mit.edu/hubert/pyaudio/) para grabar sonido con Python.
 
-Primero, ejecuta el siguiente script para obtener el número de índice del dispositivo del 2 Mic pi hat:
+Primero, ejecuta el siguiente script para obtener el número de índice de dispositivo de 2 Mic pi hat:
 
 ```
 python3 recording_examples/get_device_index.py
@@ -293,13 +275,13 @@ Verás el ID del dispositivo como se muestra a continuación.
 Input Device id  2  -  seeed-8mic-voicecard: - (hw:1,0)
 ```
 
-Para grabar el sonido, abre el archivo ```recording_examples/record.py``` con nano u otro editor de texto y cambia `RESPEAKER_INDEX = 2` al número de índice del ReSpeaker en tu sistema. Luego ejecuta el script de python record.py para hacer una grabación:
+Para grabar el sonido, abre el archivo ```recording_examples/record.py``` con nano u otro editor de texto y cambia `RESPEAKER_INDEX = 2` al número de índice de ReSpeaker en tu sistema. Luego ejecuta el script de Python record.py para hacer una grabación:
 
 ```
 python3 recording_examples/record.py
 ```
 
-- Paso 6. Si quieres extraer datos del canal 0 de 8 canales, echa un vistazo al contenido de ```record_one_channel.py```. Para otro canal X, por favor cambia [0::8] a [X::8].
+- Paso 6. Si quieres extraer los datos del canal 0 de los 8 canales, echa un vistazo al contenido de ```record_one_channel.py```. Para otro canal X, cambia [0::8] a [X::8].
 
 ```
 python3 recording_examples/record_one_channel.py
@@ -312,33 +294,33 @@ aplay -f cd -Dhw:0 output.wav #for Stereo sound
 aplay -D plughw:0,0 output_one_channel.wav #for Mono sound from one channel
 ```
 
-## FAQ
+## Preguntas frecuentes
 
-**P1: Solo hay 4 micrófonos en el Array de Micrófonos, ¿cómo puede tener 8 canales?**
+**P1: Solo hay 4 micrófonos en la matriz de micrófonos, ¿cómo puede haber 8 canales?**
 
-R1: Hay 2 AC108 en este array, y cada chip AC108 tiene 4 canales de salida. Así que viene un total de 8 canales aquí, 4 de los cuales son para el micrófono, dos canales para la reproducción y los 2 canales restantes no se usan.
+R1: Hay 2 AC108 en esta matriz, y cada chip AC108 tiene 4 canales de salida. Así que en total hay 8 canales aquí, 4 de los cuales son para el micrófono, dos canales para la reproducción y los otros 2 canales no se usan.
 
-**P2: ¿Si Raspberry puede detectar ReSpeaker 2-mics hat, pero no puede detectar ReSpeaker 4-mics linear array?**
+**P2: Si Raspberry puede detectar ReSpeaker 2-mics hat, pero no puede detectar ReSpeaker 4-mics linear array?**
 
-R2: Por favor haz clic en raspberry -> Preferences -> Raspberry Pi Configuration, luego selecciona la pestaña Interfaces, asegúrate de que 1-Wire esté Deshabilitado.
+R2: Haz clic en raspberry -> Preferences -> Raspberry Pi Configuration, luego selecciona la pestaña Interfaces y asegúrate de que 1-Wire esté en Disabled.
 
 ## Recursos
 
 - **[PDF]** [Hoja de datos AC101](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf)
 - **[PDF]** [Hoja de datos AC108](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC108_Datasheet_V1.2.pdf)
-- **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
-- **[Algoritmos]** [Algoritmos incluye DOA, VAD, NS](https://github.com/respeaker/mic_array)
-- **[Motor de Voz]** [Proyecto Voice Engine, proporciona bloques de construcción para crear objetos habilitados por voz](https://github.com/voice-engine/voice-engine)
-- **[Algoritmos]** [AEC](https://github.com/voice-engine/ec)
-- **[Dibujo Mecánico]** [Dibujo 2D](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/res/2d.zip)
+- **[Driver]** [Controlador Seeed-Voice](https://github.com/respeaker/seeed-voicecard)
+- **[Algorithms]** [Algoritmos que incluyen DOA, VAD, NS](https://github.com/respeaker/mic_array)
+- **[Voice Engine]** [Proyecto Voice Engine, proporciona bloques de construcción para crear objetos habilitados para voz](https://github.com/voice-engine/voice-engine)
+- **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
+- **[Mechanical Drawing]** [Dibujo 2D](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/res/2d.zip)
 
 ## Proyectos
 
-[Mojing Mojing - ¡Un Espejo Inteligente con ReSpeaker!](https://www.hackster.io/SeeedStudio/mojing-mojing-a-smart-mirror-with-respeaker-e1ae20): Un espejo inteligente con control de interfaz de voz a través de ReSpeaker. ¡También nos conectamos con Wio Link para controlar otros objetos! Basado en Raspberry Pi.
+[Mojing Mojing - A Smart Mirror with ReSpeaker!](https://www.hackster.io/SeeedStudio/mojing-mojing-a-smart-mirror-with-respeaker-e1ae20): Un espejo inteligente con control mediante interfaz de voz a través de ReSpeaker. También lo conectamos con Wio Link para controlar otros objetos. Basado en Raspberry Pi.
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
