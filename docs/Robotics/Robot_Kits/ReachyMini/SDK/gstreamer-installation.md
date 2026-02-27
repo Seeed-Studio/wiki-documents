@@ -1,6 +1,7 @@
 ---
 description: Comprehensive GStreamer installation guide for Reachy Mini on Linux, macOS, and Windows, including WebRTC plugin setup for video and audio streaming.
 title: GStreamer Installation
+slug: /reachymini_sdk_gstreamer-installation
 keywords:
 - gstreamer
 - installation

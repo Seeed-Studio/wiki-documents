@@ -1,6 +1,7 @@
 ---
 description: Setup guide for Reachy Mini Lite including assembly instructions, USB connection, and desktop app download for Windows, macOS, and Linux.
 title: Reachy Mini Lite Setup Guide
+slug: /reachymini_platforms_reachy_mini_lite_get_started
 keywords:
 - lite
 - setup

@@ -1,6 +1,7 @@
 ---
 description: Step-by-step tutorial for replacing a damaged FPC cable in Reachy Mini's microphone assembly.
 title: Change Microphone FPC Cable
+slug: /reachymini_troubleshooting_change_mic_fpc_cable
 keywords:
 - fpc cable
 - microphone

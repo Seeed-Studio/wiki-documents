@@ -1,6 +1,7 @@
 ---
 description: Complete API reference for Reachy Mini utils including interpolation functions, hardware configuration, rerun visualization, and core utilities.
 title: Utils API Reference
+slug: /reachymini_api_utils
 keywords:
 - api
 - utils

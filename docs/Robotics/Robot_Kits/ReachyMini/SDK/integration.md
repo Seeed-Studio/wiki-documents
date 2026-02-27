@@ -1,6 +1,7 @@
 ---
 description: Guide to building and publishing Reachy Mini apps, integrating LLMs, using JavaScript web apps, and accessing the HTTP/WebSocket API.
 title: Integrations & Apps
+slug: /reachymini_sdk_integration
 keywords:
 - integration
 - apps

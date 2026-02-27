@@ -1,6 +1,7 @@
 ---
 description: Example demonstrating audio recording from Reachy Mini's microphone array and saving to WAV file with configurable duration.
 title: Sound Recording
+slug: /reachymini_examples_sound_record
 keywords:
 - audio recording
 - microphone

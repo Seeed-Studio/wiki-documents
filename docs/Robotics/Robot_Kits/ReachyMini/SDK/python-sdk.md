@@ -1,6 +1,7 @@
 ---
 description: Complete Python SDK reference for Reachy Mini covering movement control, camera, IMU, audio recording and playback, and media backend options.
 title: Python SDK Reference
+slug: /reachymini_sdk_python-sdk
 keywords:
 - python
 - sdk

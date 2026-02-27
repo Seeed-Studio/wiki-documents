@@ -1,6 +1,7 @@
 ---
 description: Example demonstrating different interpolation methods (linear, minjerk, ease_in_out, cartoon) for moving Reachy Mini's head and antennas to a target pose.
 title: Goto Interpolation Playground
+slug: /reachymini_examples_goto_interpolation_playground
 keywords:
 - interpolation
 - motion methods

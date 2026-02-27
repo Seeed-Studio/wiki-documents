@@ -1,6 +1,7 @@
 ---
 description: Reachy Mini SDK overview with quick start guide, code examples, and links to installation, Python SDK documentation, and community resources.
 title: Reachy Mini SDK
+slug: /reachymini_sdk_readme
 keywords:
 - sdk
 - quick start

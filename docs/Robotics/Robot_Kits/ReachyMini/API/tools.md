@@ -1,6 +1,7 @@
 ---
 description: Complete API reference for Reachy Mini tools including motor setup tools, scanning tools, and reflashing tools.
 title: Tools API Reference
+slug: /reachymini_api_tools
 keywords:
 - api
 - tools

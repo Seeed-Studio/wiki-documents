@@ -1,6 +1,7 @@
 ---
 description: Interactive GUI example using Tkinter to control Reachy Mini's head position and orientation with sliders for roll, pitch, yaw, X, Y, Z, and body yaw.
 title: Head Position GUI
+slug: /reachymini_examples_mini_head_position_gui
 keywords:
 - gui
 - tkinter

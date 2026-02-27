@@ -1,6 +1,7 @@
 ---
 description: Complete API reference for Reachy Mini media manager including audio, camera, utils, and constants for video and audio streaming.
 title: Media API Reference
+slug: /reachymini_api_media
 keywords:
 - api
 - media

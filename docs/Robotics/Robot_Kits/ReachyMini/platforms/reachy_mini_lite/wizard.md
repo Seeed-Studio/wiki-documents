@@ -1,6 +1,7 @@
 ---
 description: Guide for reading motor parameters using Dynamixel Wizard 2.0 software to diagnose and configure Reachy Mini Lite motors.
 title: Reading Motor Parameters with Dynamixel Wizard
+slug: /reachymini_platforms_reachy_mini_lite_wizard
 keywords:
 - dynamixel wizard
 - motor parameters

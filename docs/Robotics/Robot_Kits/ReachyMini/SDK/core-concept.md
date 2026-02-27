@@ -1,6 +1,7 @@
 ---
 description: Understanding Reachy Mini's core concepts and architecture including client-server design, coordinate systems, safety limits, and motor modes for robust application development.
 title: Core Concepts & Architecture
+slug: /reachymini_sdk_core-concept
 keywords:
 - architecture
 - coordinate systems

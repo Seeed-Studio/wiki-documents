@@ -1,6 +1,7 @@
 ---
 description: Guide for developers to install Reachy Mini daemon from a specific GitHub branch for testing new features and bug fixes.
 title: Install Daemon from Specific Branch
+slug: /reachymini_platforms_reachy_mini_install_daemon_from_branch
 keywords:
 - daemon
 - branch

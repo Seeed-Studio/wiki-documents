@@ -1,6 +1,7 @@
 ---
 description: Quickstart guide to get Reachy Mini up and running on real hardware or in simulation, covering prerequisites, daemon setup, and your first script.
 title: Quickstart Guide
+slug: /reachymini_sdk_quickstart
 keywords:
 - quickstart
 - getting started

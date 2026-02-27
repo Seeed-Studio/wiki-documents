@@ -1,6 +1,7 @@
 ---
 description: Comprehensive troubleshooting guide and FAQ for Reachy Mini covering frequent issues, assembly, connection, hardware, SDK, and error messages.
 title: Troubleshooting & FAQ
+slug: /reachymini_troubleshooting
 keywords:
 - troubleshooting
 - faq

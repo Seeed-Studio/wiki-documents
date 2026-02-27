@@ -1,6 +1,7 @@
 ---
 description: Example showcasing different movements on Reachy Mini demonstrating various motion patterns and sequences.
 title: Sequence Demo
+slug: /reachymini_examples_sequence
 keywords:
 - sequence
 - movements

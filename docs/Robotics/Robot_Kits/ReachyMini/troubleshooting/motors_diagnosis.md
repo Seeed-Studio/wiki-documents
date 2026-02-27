@@ -1,6 +1,7 @@
 ---
 description: Comprehensive motors diagnosis and troubleshooting guide for Reachy Mini using the Testbench app to detect and fix motor issues.
 title: Motors Diagnosis and Troubleshooting
+slug: /reachymini_troubleshooting_motors_diagnosis
 keywords:
 - motors
 - diagnosis

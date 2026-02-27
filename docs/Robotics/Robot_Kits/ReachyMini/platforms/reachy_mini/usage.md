@@ -1,6 +1,7 @@
 ---
 description: Usage guide for Reachy Mini covering the Dashboard web interface, app management, and Python SDK quickstart.
 title: Using Reachy Mini
+slug: /reachymini_platforms_reachy_mini_usage
 keywords:
 - usage
 - dashboard

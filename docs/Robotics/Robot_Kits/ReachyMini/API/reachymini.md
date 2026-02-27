@@ -1,6 +1,7 @@
 ---
 description: Complete API reference for ReachyMini main class including methods for motor control, movement, and state management.
 title: ReachyMini API Reference
+slug: /reachymini_api_reachymini
 keywords:
 - api
 - reachymini

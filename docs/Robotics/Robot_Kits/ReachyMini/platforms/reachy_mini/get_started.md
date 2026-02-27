@@ -1,6 +1,7 @@
 ---
 description: Setup guide for Reachy Mini Wireless including assembly instructions, first boot, Wi-Fi configuration, system update, and SSH access.
 title: Reachy Mini Wireless Setup Guide
+slug: /reachymini_platforms_reachy_mini_get_started
 keywords:
 - wireless
 - setup

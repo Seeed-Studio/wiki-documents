@@ -1,6 +1,7 @@
 ---
 description: Example demonstrating how to play recorded moves from datasets including dances, emotions, or custom datasets for Reachy Mini.
 title: Recorded Moves
+slug: /reachymini_examples_recorded_moves
 keywords:
 - recorded moves
 - dataset

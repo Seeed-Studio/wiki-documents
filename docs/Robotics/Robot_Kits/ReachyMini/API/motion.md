@@ -1,6 +1,7 @@
 ---
 description: Complete API reference for Reachy Mini motion including base classes, goto moves, and recorded moves.
 title: Motion API Reference
+slug: /reachymini_api_motion
 keywords:
 - api
 - motion

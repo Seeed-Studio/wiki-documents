@@ -1,6 +1,7 @@
 ---
 description: Complete API reference for Reachy Mini apps including core app classes, app management, app information, app assistant, and app sources.
 title: Apps API Reference
+slug: /reachymini_api_apps
 keywords:
 - api
 - apps

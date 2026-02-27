@@ -1,6 +1,7 @@
 ---
 description: Example demonstrating how to display video stream from Reachy Mini and make the robot look where you click on the frame.
 title: Look at Image
+slug: /reachymini_examples_look_at
 keywords:
 - camera
 - video stream

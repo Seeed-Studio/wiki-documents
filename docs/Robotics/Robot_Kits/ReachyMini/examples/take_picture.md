@@ -1,6 +1,7 @@
 ---
 description: Example demonstrating how to capture a single frame from Reachy Mini's camera and save it as an image file.
 title: Take Picture
+slug: /reachymini_examples_take_picture
 keywords:
 - camera
 - capture
