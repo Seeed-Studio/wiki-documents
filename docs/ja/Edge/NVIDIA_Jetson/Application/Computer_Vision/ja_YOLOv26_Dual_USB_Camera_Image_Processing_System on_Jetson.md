@@ -1,237 +1,222 @@
 ---
-description: このガイドでは、YOLOv26モデルとTensorRTアクセラレーションに基づくデュアルUSBカメラ画像処理システムをJetsonプラットフォーム上で構築する方法を説明します。Dockerまたはローカル環境のセットアップ、YOLOv26モデル（物体検出、姿勢推定、セグメンテーション）のダウンロードと準備、システムの設定、デュアルカメラ処理のデプロイについて説明します。このシステムは、TensorRTアクセラレーション、Webインターフェースプレビュー、安定性向上のためのMJPEG圧縮を備えた、2台のUSBカメラの同時リアルタイム映像ストリーム処理を特徴としています。
-title: Jetson上のYOLOv26デュアルUSBカメラ画像処理システム
+description: このガイドでは、Jetson プラットフォーム上で YOLOv26 モデルと TensorRT アクセラレーションに基づくデュアル GMSL カメラ画像処理システムの構築方法を説明します。特に reComputer J4012/AGX Orin 上の Sensing SG3S-ISX031C-GMSL2F カメラを対象とし、1920x1536@30fps の性能を実現します。
+title: Jetson 上の YOLOv26 デュアル GMSL カメラ画像処理システム
 keywords:
-  - reComputer
+  - re
   - YOLOv26
-  - Dual Camera
+  - Dual GMSL Camera
   - TensorRT
+  - SG3S-ISX031C-GMSL2F
   - Computer Vision
   - Jetson
   - Object Detection
   - Pose Estimation
   - Image Segmentation
-image: https://files.seeedstudio.com/wiki/Yolo11/connection.webp
-slug: /ja/ai_robotics_yolov26_dual_camera_system
+image: https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png
+slug: /ja/ai_roboticsyolov26_dual_camera_system
 sku: 100090853,100076722,100060802,100032662
 last_update:
-  date: 01/28/2026
+  date: 02/10/2026
   author: Lorraine
 ---
+## はじめに
 
-<div style={{ textAlign: "justify" }}>
-このwikiでは、YOLOv26モデルとTensorRTアクセラレーションに基づくデュアルUSBカメラ画像処理システムをゼロから構築する方法を実演します。このシステムには以下の機能が含まれています：
+人工知能とエッジコンピューティング技術の急速な発展に伴い、産業用ビジョンシステムはより高いインテリジェンスとリアルタイム処理能力へと進化しています。ディープラーニングモデルを搭載したデュアルカメラ画像処理システムにより、複数視点からの同時解析、物体検出、ポーズ推定、インスタンスセグメンテーションが可能になります。これにより、産業検査、ロボティクス、自動監視アプリケーションの効率と精度が向上します。本ガイドでは、NVIDIA Jetson プラットフォーム上で YOLOv26 と TensorRT アクセラレーションを用いて、高性能なデュアル GMSL カメラ画像処理システムを構築する方法を紹介します。
+
+<div align="center">
+    <img width={1000}
+     src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/detect.png" />
 </div>
 
-- **デュアルカメラ並列処理**：2台のUSBカメラの同時リアルタイム映像ストリーム処理
-- **マルチタスク視覚解析**：物体検出、姿勢推定、画像セグメンテーション（SAMモデル）
-- **TensorRTアクセラレーション**：NVIDIA TensorRTエンジンを使用して推論速度を大幅に向上
-- **Webインターフェースプレビュー**：ブラウザを通じて処理結果をリアルタイムで表示
-- **MJPEG圧縮**：USB帯域幅使用量を削減し、システムの安定性を向上
+この wiki では、**reComputer Robotics J5011** 上で **TensorRT** によって最適化された **YOLOv26** モデルをデプロイし、リアルタイムのマルチタスクビジョン解析を実現します。このシステムは、高帯域幅かつ低レイテンシのビデオ伝送を可能にする GMSL (Gigabit Multimedia Serial Link) カメラを利用しており、過酷な環境下での産業用途に最適です。物体検出、ポーズ推定、インスタンスセグメンテーションという 3 種類の YOLOv26 モデルを同時に実行し、すべて TensorRT によってアクセラレーションすることで、Jetson Orin の強力な GPU 上で最大限のスループットを引き出します。
+
+**デュアル GMSL カメラ画像処理システムとは？**
+
+デュアル GMSL カメラ画像処理システムは、高解像度カメラ 2 台とディープラーニング推論機能を統合したエッジ AI ソリューションです。従来の単眼カメラビジョンシステムとは異なり、デュアルカメラ構成には次のような利点があります：
+- **ステレオビジョン**：奥行き認識と 3D シーン再構成を実現
+- **広い視野角**：重なり合う視点でより広いエリアをカバー
+- **冗長性**：一方のカメラが故障しても連続稼働を確保
+- **多角的解析**：異なる視点から物体を捉え、認識精度を向上
+
+このシステムは、シールドケーブルを用いた最長 15 メートルの長距離でも信頼性の高いビデオ伝送を可能にする GMSL インターフェースを活用しており、電磁干渉のある産業環境に適しています。
+
+**なぜ Jetson 上で YOLOv26 を使うのか？**
+
+[Ultralytics Jetson Guide](https://docs.ultralytics.com/guides/nvidia-jetson/) では、組み込み向けデプロイにおける YOLOv26 の利点がいくつか挙げられています：
+
+1. **ARM64 上での高効率**：モデルアーキテクチャは Jetson デバイスの ARM64 プロセッサ向けに最適化されており、低消費電力を維持しつつ高いスループットを実現します。
+2. **Tensor Core アクセラレーション**：**TensorRT** にエクスポートすると、YOLOv26 は Jetson Orin の Ampere GPU アーキテクチャに搭載された専用 Tensor Core を利用します。これにより次のことが可能になります：
+    -   **低レイテンシ**：リアルタイム産業検査にとって重要です。
+    -   **高スループット**：複数の高解像度ストリームを同時に処理可能。
+3. **統一フレームワーク**：単一のアーキテクチャで（Detection、Segmentation、Pose）といった複数タスクをサポートし、リソースに制約のあるエッジデバイスへのデプロイを簡素化します。
+
+<div align="center">
+    <img width={600}
+    src="https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg" />
+</div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html" target="_blank">
+<strong><span><font color={'FFFFFF'} size={'4'}> 今すぐ入手 🖱️</font></span></strong>
+</a></div>
+
+## 主な特長
+
+- **高解像度 GMSL キャプチャ**：デュアル [Sensing SG3S-ISX031C-GMSL2F](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html) カメラを **1920x1536** 解像度でサポート。
+- **TensorRT のみの推論**：純粋な TensorRT エンジンを使用することで PyTorch ランタイムのオーバーヘッドを排除し、最大スループットを実現。
+- **マルチタスクビジョン解析**：物体検出、ポーズ推定、インスタンスセグメンテーションを同時実行。
+- **産業用途向け最適化**：
+    - **入力**：1920x1536 @ 30fps（Raw YUY2）
+    - **レイテンシ**：DMA バッファとマルチスレッドパイプラインにより最小化
+
+## YOLOv26 モデル概要
+
+このシステムは、リアルタイムコンピュータビジョンのために **YOLOv26** アーキテクチャを使用します。NVIDIA Jetson Orin のようなエッジ AI デバイスで良好に動作する **Nano (n)** シリーズモデルをデプロイします。
+
+**デプロイするモデル**
+
+3 種類のモデルバリアントを同時に実行します：
+
+<div align="center"><img width ="300" src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/file2.png"/></div>
+
+1.  **物体検出 (`yolov26n`)**：
+    -   **タスク**：バウンディングボックスによる検出と分類。
+    -   **クラス**：80 個の標準 COCO クラス（Person、Vehicle など）。
+    -   **利点**：主要な物体位置特定のための非常に高速な推論。
+
+2.  **ポーズ推定 (`yolov26n-pose`)**：
+    -   **タスク**：人体骨格キーポイント検出（17 キーポイント）。
+    -   **利点**：外部の重量級ポーズライブラリを用いずにリアルタイム行動解析が可能。
+
+3.  **インスタンスセグメンテーション (`yolov26n-seg`)**：
+    -   **タスク**：ピクセルレベルでの物体マスキング。
+    -   **利点**：バウンディングボックスだけでは不十分な欠陥検出に有用な、精密な物体輪郭を提供。
+
+**最適化戦略**：すべてのモデルは **FP16 精度**の **TensorRT Engine 形式 (.engine)** にエクスポートされます。これにより PyTorch ランタイムのオーバーヘッドを排除し、Orin の 100+ TOPS（Tera Operations Per Second）の AI 性能を最大限に活用します。
 
 ## 前提条件
 
-- [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) または reComputer シリーズの他の製品
-- 2台のUSBカメラ
-- USB Type-Cデータ伝送ケーブル（カメラ接続用）
+**ハードウェア**
+
+- **[reComputer Robotics J5011](https://www.seeedstudio.com/reComputer-Robotics-J5011-with-GMSL-extension-board-p-6681.html)**
+- **2x [Sensing SG3S-ISX031C-GMSL2F Camera](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)**
+- **GMSL デシリアライザボード**：Jetson Orin と互換性のあるもの（ドライバがインストールされていること）
+- **ケーブル**：高品質な Fakra ケーブル
+
+**ソフトウェア**
+- **JetPack 6.x**（L4T 36.x）
+- **GStreamer**（NVIDIA アクセラレーションプラグイン付き、`nvv4l2camerasrc` または `io-mode=dmabuf` を指定した標準 `v4l2src`）
+- **Python 3.10+**
+- **Ultralytics YOLOv26**
 
 ---
 
-## GitHubからダウンロード
+## インストールとセットアップ
 
-### 方法1：リポジトリ全体をクローン（推奨）
+**ステップ 0：カメラパラメータの確認**
 
-これは全ファイルを一度に取得する最も簡単な方法です：
+まず、v4l2-ctl を使用してカメラがサポートするフォーマットとフレームレートを確認します：
 
 ```bash
-# 1. Navigate to your home directory
-# ！！Replace this with your own username
-cd /home/seeed
+v4l2-ctl -d /dev/video0 --list-formats-ext
+v4l2-ctl -d /dev/video1 --list-formats-ext
+```
 
-# 2. Clone the repository
+このコマンドにより、解像度ごとのカメラの最大フレームレートが表示されます。SG3S-ISX031C-GMSL2F カメラを例にすると、出力は次のようになります：
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/dp.png"/></div>
+
+:::note
+<mark>1920x1536 解像度での 30fps 制限は、AGX Orin の性能上限ではなく、カメラハードウェアの制約です。</mark> AGX Orin は、より低い解像度や軽量なモデルであれば、はるかに高いフレームレートを処理することが可能です。別のカメラモデルを使用している場合は、対象解像度での最大フレームレートについて、そのカメラのデータシートを参照してください。
+:::
+
+**ステップ 1：リポジトリのクローン**
+
+```bash
+cd /home/seeed
 git clone https://github.com/bleaaach/yolov26_jetson.git
-
-# 3. Navigate to the project directory
 cd yolov26_jetson
-
-# 4. View downloaded files
-ls -la
 ```
-<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/file.png"/></div>
+<div align="center"><img width ="300" src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/file.png"/></div>
 
-以下のファイルが表示されるはずです：
-- `run_dual_camera_docker.sh` - Dockerデプロイメントスクリプト
-- `run_dual_camera_local.sh` - ローカルデプロイメントスクリプト
-- `README.md` - このドキュメントファイル
+**詳細なインストール手順**
 
-### 方法2：個別ファイルのダウンロード
+環境をゼロからセットアップするには、次の手順に従ってください。
 
-特定のスクリプトファイルのみが必要な場合は、wgetを使用して個別にダウンロードできます：
+**ステップ 1：パッケージリストの更新と pip のインストール**
 
 ```bash
-# 1. Navigate to your home directory
-cd /home/seeed
-
-# 2. Create project directory
-mkdir -p yolov26_jetson
-cd yolov26_jetson
-
-# 3. Download Docker script
-wget https://raw.githubusercontent.com/bleaaach/yolov26_jetson/main/run_dual_camera_docker.sh
-
-# 4. Download Local script
-wget https://raw.githubusercontent.com/bleaaach/yolov26_jetson/main/run_dual_camera_local.sh
-
-# 5. Download README documentation
-wget https://raw.githubusercontent.com/bleaaach/yolov26_jetson/main/README.md
-
-# 6. View downloaded files
-ls -la
-```
-
-### ダウンロードしたファイルの確認
-
-ダウンロード後、ファイルが存在することを確認します：
-
-```bash
-# View file list
-ls -la
-
-# Check file permissions
-```
-
-スクリプトに実行権限がない場合は、追加します：
-
-```bash
-# Add execute permissions
-chmod +x run_dual_camera_docker.sh
-chmod +x run_dual_camera_local.sh
-
-# Check again
-ls -la
-```
-
-### 2つのデプロイメント方法の比較
-
-| 機能 | Docker方法 | ローカル方法 |
-|---------|---------------|--------------|
-| **環境分離** | ✅ 完全に分離、ホスト環境を汚染しない | ❌ ホストに直接インストール |
-| **デプロイメント速度** | ✅ 高速、ワンクリック起動 | ❌ 多くの依存関係の手動インストールが必要 |
-| **ハードウェアアクセス** | ⚠️ デバイスマッピング設定が必要 | ✅ 全ハードウェアへの直接アクセス |
-| **パフォーマンス** | ⚠️ コンテナオーバーヘッドあり | ✅ より良いパフォーマンス |
-| **ストレージ容量** | ⚠️ 約2GBのDockerイメージが必要 | ✅ ストレージ使用量が少ない |
-| **推奨使用ケース** | クイックテスト、マルチデバイスデプロイメント | 本番環境、最高のパフォーマンス |
-
----
-
-## （オプション1）ローカル環境セットアップ
-
-**ステップ1.** パッケージリストの更新とpipのインストール
-
-```bash
-# Update package list
 sudo apt update
-
-# Install pip
 sudo apt install python3-pip -y
-
-# Upgrade pip
 pip install -U pip
 ```
 
-システムにpipがプリインストールされていない場合は、以下のコマンドを使用してインストールします：
+システムに pip がプリインストールされていない場合は、次のコマンドでインストールします：
 
 ```bash
-# Download get-pip.py
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-
-# Install pip
 python3 get-pip.py --user
 ```
 
-**ステップ2.** Ultralyticsパッケージのインストール
-
-Ultralyticsとそのオプション依存関係（モデルエクスポート用）をインストールします：
+**ステップ 2：Ultralytics パッケージのインストール**
 
 ```bash
-# Install Ultralytics
 ~/.local/bin/pip install ultralytics[export]
 ```
 
-**ステップ3.** PyTorchとTorchvisionのインストール
+**ステップ 3：PyTorch と Torchvision のインストール**
 
-**重要**：pip経由でインストールされるPyTorchとTorchvisionは、JetsonのARM64アーキテクチャと互換性がありません。Jetson専用にビルドされたバージョンを手動でインストールする必要があります。
+pip でインストールした PyTorch と Torchvision は、Jetson の ARM64 アーキテクチャとは互換性がありません。Jetson 向けにビルドされたバージョンを手動でインストールする必要があります。
 
-まず互換性のないバージョンをアンインストールします：
+まず、互換性のないバージョンをアンインストールします：
 
 ```bash
-# Uninstall incompatible versions
 ~/.local/bin/pip uninstall torch torchvision -y
 ```
 
-次にJetPack 6.1互換バージョンをインストールします：
+次に、JetPack 6.1 と互換性のあるバージョンをインストールします：
 
 ```bash
-# Install PyTorch 2.5.0
 ~/.local/bin/pip install https://github.com/ultralytics/assets/releases/download/v0.0.0/torch-2.5.0a0+872d972e41.nv24.08-cp310-cp310-linux_aarch64.whl
-
-# Install Torchvision 0.20
 ~/.local/bin/pip install https://github.com/ultralytics/assets/releases/download/v0.0.0/torchvision-0.20.0a0+afc54f7-cp310-cp310-linux_aarch64.whl
 ```
 
-GitHubのダウンロードが遅い場合は、アクセラレーションプロキシを使用できます：
+GitHub からのダウンロードが遅い場合は、加速プロキシを使用できます：
 
 ```bash
-# Use gh proxy to download PyTorch
 ~/.local/bin/pip install https://gh-proxy.com/https://github.com/ultralytics/assets/releases/download/v0.0.0/torch-2.5.0a0+872d972e41.nv24.08-cp310-cp310-linux_aarch64.whl
-
-# Use gh proxy to download Torchvision
 ~/.local/bin/pip install https://gh-proxy.com/https://github.com/ultralytics/assets/releases/download/v0.0.0/torchvision-0.20.0a0+afc54f7-cp310-cp310-linux_aarch64.whl
 ```
 
-**ステップ4.** cuSPARSELtのインストール
-
-cuSPARSELtはPyTorch 2.5.0の依存関係であり、別途インストールする必要があります：
+**ステップ 4：cuSPARSELt のインストール**
 
 ```bash
-# Install cuSPARSELt
 sudo apt-get install -y libcusparselt0
 ```
 
-**ステップ5.** onnxruntime-gpuのインストール
+**ステップ 5：onnxruntime-gpu のインストール**
 
-onnxruntime-gpuは一部のモデルエクスポート機能に使用されます。PyPI上のパッケージにはJetson用のaarch64バイナリが含まれていないため、手動インストールが必要です：
+onnxruntime-gpu は一部のモデルエクスポート機能に使用されます。PyPI 上のパッケージには Jetson 向けの aarch64 バイナリが含まれていないため、手動インストールが必要です：
 
 ```bash
-# Install onnxruntime-gpu 1.23.0
 ~/.local/bin/pip install https://gh-proxy.com/https://github.com/ultralytics/assets/releases/download/v0.0.0/onnxruntime_gpu-1.23.0-cp310-cp310-linux_aarch64.whl
 ```
 
-またはバージョン1.20.0を使用：
+または、バージョン 1.20.0 を使用します：
 
 ```bash
-# Install onnxruntime-gpu 1.20.0
 ~/.local/bin/pip install https://gh-proxy.com/https://github.com/ultralytics/assets/releases/download/v0.0.0/onnxruntime_gpu-1.20.0-cp310-cp310-linux_aarch64.whl
 ```
 
-**ステップ6.** PATH環境変数の設定
-
-ユーザーインストールモードを使用しているため、pipでインストールされた実行ファイルは`~/.local/bin/`ディレクトリに配置されます。このディレクトリをPATH環境変数に追加することを推奨します：
+**ステップ 6：PATH 環境変数の設定**
 
 ```bash
-# Add to .bashrc
 echo 'export PATH=$PATH:~/.local/bin' >> ~/.bashrc
-
-# Reload .bashrc
 source ~/.bashrc
 ```
 
-**ステップ7.** インストールの確認
-
-インストールされたパッケージのバージョンを確認します：
+**ステップ 7：インストールの検証**
 
 ```bash
-# Check versions
 python3 -c "import ultralytics; import torch; import torchvision; import onnxruntime; print('ultralytics version:', ultralytics.__version__); print('torch version:', torch.__version__); print('torchvision version:', torchvision.__version__); print('onnxruntime version:', onnxruntime.__version__)"
 ```
 
@@ -244,27 +229,23 @@ torchvision version: 0.20.0a0+afc54f7
 onnxruntime version: 1.23.0
 ```
 
-**ステップ8.** YOLOv26推論機能のテスト
+**ステップ 8：YOLOv26 推論機能をテストする**
 
 ```python
 from ultralytics import YOLO
 import torch
 
-# Check if CUDA is available
 print(f"CUDA available: {torch.cuda.is_available()}")
 if torch.cuda.is_available():
     print(f"CUDA device count: {torch.cuda.device_count()}")
     print(f"CUDA device name: {torch.cuda.get_device_name(0)}")
 
-# Load YOLOv26n model
-model = YOLO('yolo26v26n.pt')
+model = YOLO('yolov26n.pt')
 print(f"Model loaded successfully!")
 
-# Perform inference test
 results = model('https://ultralytics.com/images/bus.jpg')
 print(f"Inference successful! Detected {len(results[0].boxes)} objects")
 
-# Display detection results
 for i, box in enumerate(results[0].boxes):
     cls_id = int(box.cls[0])
     conf = float(box.conf[0])
@@ -272,193 +253,81 @@ for i, box in enumerate(results[0].boxes):
     print(f"  Object {i+1}: {cls_name} (confidence: {conf:.2f})")
 ```
 
-**ステップ9.** モデルファイルの準備
-
-モデルファイルが正しい場所にダウンロードされていることを確認します：
+**ステップ 9：モデルファイルを準備する**
 
 ```bash
-# Check model directory
 ls -la /home/seeed/ultralytics_data/
-
-# Create directory if it doesn't exist
 mkdir -p /home/seeed/ultralytics_data
 ```
 
-モデルファイルが存在しない場合は、まずダウンロードします：
+モデルファイルが存在しない場合は、先にダウンロードしてください：
 
 ```bash
-# Navigate to model directory
 cd /home/seeed/ultralytics_data
-
-# Download object detection model
-yolo export model=yolov26n.pt format=engine device=0
-
-# Download pose estimation model
-yolo export model=yolov26n-pose.pt format=engine device=0
-
-# Download segmentation model
-yolo export model=yolov26n-seg.pt format=engine device=0
-
-# Verify model files
+yolo export model=yolov26n.pt format=engine device=0 half=True
+yolo export model=yolov26n-pose.pt format=engine device=0 half=True
+yolo export model=yolov26n-seg.pt format=engine device=0 half=True
 ls -la
 ```
 
-以下のファイルが表示されるはずです：
-- `yolo26n.engine`
-- `yolo26n-pose.engine`
-- `yolo26n-seg.engine`
+次のファイルが表示されるはずです：
+- `yolov26n.engine`
+- `yolov26n-pose.engine`
+- `yolov26n-seg.engine`
 
-**ステップ10.** ローカルスクリプトの実行
-
-これでローカルスクリプトを実行できます：
+**ステップ 10：ローカルスクリプトを実行する**
 
 ```bash
-# 1. Navigate to project directory
 cd /home/seeed/yolov26_jetson
-
-# 2. Ensure script has execute permissions
-chmod +x run_dual_camera_local.sh
-
-# 3. Run Local script
-./run_dual_camera_local.sh
+chmod +x run_dual_gmsl_local.sh
+./run_dual_gmsl_local.sh
 ```
-
-<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png"/></div>
 
 ---
 
-## （オプション2）Docker環境セットアップ
+## 設定と実行
 
-**ステップ1.** Dockerがインストールされていることを確認
+このシステムは、SG3S-ISX031C カメラ向けに事前設定された `run_dual_gmsl_local.sh` を使用します。
 
-まずDockerがインストールされているかを確認します：
+**カメラ設定の詳細**
 
-```bash
-# Check Docker version
-docker --version
-```
+| パラメータ | 値 | 備考 |
+|-----------|-------|------|
+| **カメラモデル** | SG3S-ISX031C-GMSL2F | Sensing GMSL2 カメラ |
+| **キャプチャ解像度** | **1920 x 1536** | センサーのフル解像度 |
+| **キャプチャ FPS** | **30 FPS** | ネイティブフレームレート |
+| **処理解像度** | 640 x 480 | 推論用にハードウェア（VIC）でダウンスケール |
+| **ピクセルフォーマット** | YUY2 | ハードウェアで BGR に変換 |
 
-Dockerがインストールされていない場合は、まずインストールします：
-
-```bash
-# Update package list
-sudo apt update
-
-# Install Docker
-sudo apt install docker.io -y
-
-# Start Docker service
-sudo systemctl start docker
-
-# Add current user to docker group
-sudo usermod -aG docker $USER
-
-# Re-login to apply changes
-newgrp docker
-```
-
-Docker環境の設定の詳細については、このGitHubリポジトリを参照してください：https://github.com/zibochen6/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.7-Docker/
-
-**ステップ2.** Dockerサービスが実行されていることを確認
+**システムの実行**
 
 ```bash
-# Check Docker service status
-sudo systemctl status docker
-```
-
-Dockerが実行されていない場合は、開始します：
-
-```bash
-# Start Docker service
-sudo systemctl start docker
-```
-
-**ステップ3.** モデルファイルの準備
-
-モデルファイルが正しい場所にダウンロードされていることを確認してください：
-
-```bash
-# Check model directory
-ls -la /home/seeed/ultralytics_data/
-
-# Create directory if it doesn't exist
-mkdir -p /home/seeed/ultralytics_data
-```
-
-モデルファイルが存在しない場合は、まずダウンロードしてください：
-
-```bash
-# Navigate to model directory
-cd /home/seeed/ultralytics_data
-
-# Download object detection model
-yolo export model=yolov26n.pt format=engine device=0
-
-# Download pose estimation model
-yolo export model=yolov26n-pose.pt format=engine device=0
-
-# Download segmentation model
-yolo export model=yolov26n-seg.pt format=engine device=0
-
-# Verify model files
-ls -la
-```
-
-以下のファイルが表示されるはずです：
-- `yolo26n.engine`
-- `yolo26n-pose.engine`
-- `yolo26n-seg.engine`
-
-<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/export.png"/></div>
-
-**ステップ 4.** Docker スクリプトの実行
-
-これで Docker スクリプトを実行できます：
-
-```bash
-# 1. Navigate to project directory
 cd /home/seeed/yolov26_jetson
-
-# 2. Ensure script has execute permissions
-chmod +x run_dual_camera_docker.sh
-
-# 3. Run Docker script
-./run_dual_camera_docker.sh
+chmod +x run_dual_gmsl_local.sh
+./run_dual_gmsl_local.sh
 ```
 
-**ステップ 5.** Web インターフェースへのアクセス
-
-ブラウザで以下のアドレスを開いてください：
-
-```
-http://localhost:5000
-```
-
-この時点で、ブラウザには両方のカメラからのリアルタイムフィードが「左カメラフィード | 右カメラフィード」のように並んで表示されます。実際のフレームレートと解像度は、ハードウェアの性能によって異なります。
+<video src="https://files.seeedstudio.com/wiki/yolov26_on_jetson/test.mp4" controls width="800"></video>
 
 :::note
-システムを再起動する必要がある場合：
-
-```bash
-# 1. Stop and remove existing container
-docker rm -f dual-camera-system
-
-# 2. Re-run script
-cd /home/seeed/yolov26_jetson
-./run_dual_camera_docker.sh
-```
-
+SG3S-ISX031C-G-GMSL2F カメラは、フル解像度（1920x1536）で最大 30fps の表示フレームレートに制限されています。これはカメラハードウェアの制約であり、AGX Orin の性能上限ではありません。AGX Orin は、より低い解像度や軽量なモデルであれば、はるかに高いフレームレートを処理することが可能です。AGX Orin の一般的な推論性能については、[Ultralytics Jetson Guide](https://docs.ultralytics.com/guides/nvidia-jetson/#nvidia-jetson-agx-orin-developer-kit-64gb) を参照してください。
 :::
----
+
+## トラブルシューティング
+
+- **FPS が低い？**: `.pt` ではなく `.engine` モデルを使用していることを確認してください。スクリプトは `.engine` の使用を前提としています。
+- **ビデオが表示されない？**: GMSL 接続を確認し、`/dev/video*` デバイスが存在することを確認してください。`v4l2-ctl --list-devices` でドライバを検証します。
 
 ## リソース
 
-- [クイックスタートガイド：NVIDIA Jetson と Ultralytics YOLO26](https://docs.ultralytics.com/guides/nvidia-jetson/)
-- [Docker のインストール](https://github.com/zibochen6/reComputer-Jetson-for-Beginners/tree/main/3-Basic-Tools-and-Getting-Started/3.7-Docker/)
+- [Sensing SG3S-ISX031C-GMSL2F 製品ページ](https://www.seeedstudio.com/SG3S-ISX031C-GMSL2F-p-6245.html)
+- [NVIDIA Jetson ダウンロードセンター](https://developer.nvidia.com/embedded/downloads)
+- [Ultralytics YOLOv26 on NVIDIA Jetson ガイド](https://docs.ultralytics.com/guides/nvidia-jetson/)
+
 
 ## 技術サポートと製品ディスカッション
 
-Seeed Studio 製品をお選びいただき、ありがとうございます！技術サポートと製品ディスカッションについては、以下のチャンネルをご利用ください：
+Seeed Studio の製品をお選びいただきありがとうございます。技術サポートおよび製品に関するディスカッションには、以下のチャネルをご利用ください：
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

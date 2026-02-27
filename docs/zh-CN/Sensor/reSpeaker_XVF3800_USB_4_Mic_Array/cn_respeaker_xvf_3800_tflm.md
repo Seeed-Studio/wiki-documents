@@ -1,7 +1,7 @@
 ---
-description: 学习如何在配备 XVF3800 ReSpeaker 的 Seeed XIAO ESP32 上训练和部署 TensorFlow Lite Micro (TFLM)语音模型，实现实时语音识别。本教程涵盖模型训练、TFLite 转换为十六进制代码，以及刷写以在微控制器上实现准确的关键词识别。
+description: 了解如何在搭载 XVF3800 ReSpeaker 的 Seeed XIAO ESP32 上训练和部署 TensorFlow Lite Micro (TFLM) 语音模型，实现实时语音识别。本教程涵盖模型训练、将 TFLite 转换为十六进制代码以及烧录流程，从而在微控制器上实现高精度的关键词唤醒。
 
-title: ReSpeaker XVF3800 上的 TensorFlow Lite
+title: 在 reSpeaker XVF3800 上使用 TensorFlow Lite
 
 keywords:
 - reSpeaker
@@ -15,41 +15,41 @@ last_update:
   author: Kasun Thushara
 ---
 
-## 介绍
+## 介绍 
 
-在本教程中，我们将指导您使用 TensorFlow Lite Micro (TFLM)在配备 XVF3800 ReSpeaker 的 Seeed XIAO ESP32 上创建自定义语音识别系统。您将学习如何收集和标记音频数据，对其进行预处理以用于训练，并将其分为训练集和验证集。接下来，我们训练一个针对您的数据集定制的关键词识别模型，将其转换为 TFLite 格式，最后将其作为十六进制文件部署到 ESP32 上进行实时语音命令识别。最终，您将拥有一个功能完整的基于微控制器的系统，能够准确分类语音命令。
+在本教程中，我们将指导你使用 TensorFlow Lite Micro (TFLM)，在搭载 XVF3800 ReSpeaker 的 Seeed XIAO ESP32 上创建一个自定义语音识别系统。你将学习如何采集和标注音频数据，对其进行预处理，并划分为训练集和验证集。接着，我们会基于你的数据集训练一个自定义关键词识别模型，将其转换为 TFLite 格式，最后以十六进制文件的形式部署到 ESP32 上，实现实时语音指令识别。完成后，你将拥有一个基于微控制器、能够准确分类口语指令的完整系统。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 
 
-## 依赖项
+## 依赖
 
-要跟随本教程，您需要安装以下 Arduino 库：
+要跟随本教程操作，你需要安装以下 Arduino 库：
 
 * [TFLite Micro Arduino Examples](https://github.com/pschatzmann/tflite-micro-arduino-examples)
 * [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools)
 
-确保在您的 Arduino IDE 中安装这些库。每个 GitHub 仓库都包含如何正确安装和配置库的指南。
+请确保在 Arduino IDE 中安装这些库。每个 GitHub 仓库中都包含如何正确安装和配置库的指南。
 
 
-## 收集数据
+## 采集数据
 
-我们将录制短语音样本（每个 10 秒），并将其分割为 1 秒的片段。要使用 XVF3800 ReSpeaker，您可能需要先安装 USB 固件。
+我们将录制短语音样本（每段 10 秒），并将其拆分为 1 秒的音频片段。要使用 XVF3800 ReSpeaker，你可能需要先安装 USB 固件。
 
 **固件指南：**
-[Seeed Studio XVF3800 固件刷写](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#flash-firmware)
+[Seeed Studio XVF3800 Firmware Flash](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#flash-firmware)
 
 ---
 
 ### 步骤 1：查找设备 ID
 
-使用以下 Python 脚本列出连接到您 PC 的所有音频设备，并找到 ReSpeaker 的正确设备索引：
+使用以下 Python 脚本列出连接到你电脑的所有音频设备，并找到 ReSpeaker 对应的设备索引：
 
 ```python
 import sounddevice as sd
@@ -62,12 +62,12 @@ for i, device in enumerate(devices):
     print(f"Device {i}: {device['name']} (input channels: {device['max_input_channels']})")
 ```
 
-> 注意：根据打印的 ReSpeaker 设备编号在下一个脚本中更新`DEVICE_INDEX`。
+> 注意：在下一个脚本中，根据 ReSpeaker 打印出的设备编号更新 `DEVICE_INDEX`。
 
 
-### 步骤 2：收集音频样本
+### 步骤 2：采集音频样本
 
-这个 Python 脚本根据人名和标签收集音频样本。将为每个人创建一个文件夹，WAV 文件将保存在相应的标签下。
+此 Python 脚本会根据人员姓名和标签采集音频样本。每个人会创建一个文件夹，WAV 文件会保存在对应标签的子目录下。
 
 ```python
 import os
@@ -141,13 +141,13 @@ if __name__ == "__main__":
 **工作原理：**
 
 * 为每个人创建一个文件夹。
-* 提示输入标签（例如"yes"、"no"）并保存相应的音频文件。
-* 录制 10 秒音频片段，稍后可以分割为 1 秒片段用于训练。
+* 提示输入标签（例如 "yes"、"no"），并保存对应的音频文件。
+* 录制 10 秒的音频片段，之后可以将其拆分为 1 秒的片段用于训练。
 
 
 ## 数据预处理
 
-收集完 10 秒音频样本后，下一步是将它们分割为 1 秒片段用于训练。我使用**Edge Impulse**来轻松可视化和分割录音。
+在采集完 10 秒的音频样本后，下一步是将其拆分为 1 秒的片段用于训练。我使用 **Edge Impulse** 来方便地可视化并拆分录音。
 
 ### 音频文件格式
 
@@ -155,35 +155,35 @@ if __name__ == "__main__":
 
 * **格式：** WAV (.wav)
 * **采样率：** 16 kHz
-* **声道：** 单声道（1 声道）
-* **位深度：** 16 位 PCM
-* **时长：** 1 秒（1000 毫秒）
+* **声道数：** 单声道（1 声道）
+* **位深：** 16-bit PCM
+* **时长：** 1 秒（1000 ms）
 
-> 注意：Edge Impulse 可以帮助自动将较长的录音分割为这些 1 秒片段。
+> 注意：Edge Impulse 可以帮助自动将更长的录音拆分为这些 1 秒的片段。
 
 ### 目标标签
 
-* 每个**文件夹名称**被视为一个**类别标签**。
+* 每个**文件夹名称**都会被视为一个**类别标签**。
 * 示例：
 
-  * `hi_speaker` → 模型识别"hi speaker"
-  * `seeed` → 模型识别"seeed"
-* 您可以根据需要添加更多类别，但文件夹名称**必须与训练期间使用的`WANTED_WORDS`列表匹配**。
+  * `hi_speaker` → 模型识别“hi speaker”
+  * `seeed` → 模型识别“seeed”
+* 你可以根据需要添加更多类别，但文件夹名称**必须与训练时使用的 `WANTED_WORDS` 列表一致**。
 
-### 未知/其他
+### Unknown / Other
 
-* `other/`文件夹应包含**不在您目标列表中的随机单词**。这有助于模型正确分类未知单词。
+* `other/` 文件夹应包含**不在目标列表中的随机单词**。这有助于模型正确分类未知词语。
 
-### 静音/噪音
+### Silence / Noise
 
-* `_background_noise_/`文件夹应包含环境声音，例如：
+* `_background_noise_/` 文件夹应包含环境声音，例如：
 
-  * 办公室噪音
-  * 街道噪音
-  * 键盘打字声
-  * 静音录音（麦克风开启但无说话）
+  * 办公室噪声
+  * 街道噪声
+  * 键盘敲击声
+  * 静音录音（麦克风开启但无人说话）
 
-> 适当的预处理确保模型学会区分目标命令、未知单词和背景噪音。
+> 适当的预处理可以确保模型学会区分目标指令、未知词语和背景噪声。
 
 ```sql
 dataset_dir/
@@ -211,7 +211,7 @@ dataset_dir/
 ```
 ## 数据训练
 
-要训练您的自定义语音识别模型，建议使用配备**Ubuntu x86**的 PC。您还需要`xxd`工具，可以通过以下方式安装：
+要训练你的自定义语音识别模型，建议使用运行 **Ubuntu x86** 的电脑。你还需要 `xxd` 工具，可以通过以下命令安装：
 
 ```bash
 sudo apt-get install xxd
@@ -219,12 +219,12 @@ sudo apt-get install xxd
 
 ### 步骤 1：安装 Anaconda
 
-* 下载并安装[**Anaconda Navigator**](https://www.anaconda.com/products/navigator)
-* 在 Anaconda 中为此项目创建一个新环境。
+* 下载并安装 [**Anaconda Navigator**](https://www.anaconda.com/products/navigator)
+* 在 Anaconda 中为本项目创建一个新的环境。
 
-### 步骤 2：设置环境
+### 步骤 2：配置环境
 
-在环境中安装所需的包：
+在该环境中安装所需的软件包：
 
 :::info
 
@@ -232,23 +232,23 @@ sudo apt-get install xxd
 * **编程语言：** Python 3.7
 :::
 
-> 此设置确保与用于微控制器部署的 TensorFlow Lite Micro 兼容。
+> 此配置可确保与用于微控制器部署的 TensorFlow Lite Micro 兼容。
 
-### 步骤 3：运行训练笔记本
+### 步骤 3：运行训练 Notebook
 
-* 下载 Jupyter 笔记本：
+* 下载 Jupyter notebook：
   [train\_micro\_speech\_model.ipynb](https://github.com/KasunThushara/TFLM_voice_module/blob/main/train_micro_speech_model.ipynb)
-* 在 Jupyter 中打开笔记本并按照说明操作。
-* 完成后，笔记本将生成一个名为`model.cc`的**十六进制模型文件**，准备部署到 ESP32。
+* 在 Jupyter 中打开该 notebook，并按照说明操作。
+* 完成后，notebook 会生成一个名为 `model.cc` 的**十六进制模型文件**，可直接部署到 ESP32。
 
-> `model.cc`文件然后可以包含在您的 Arduino 项目中，在配备 XVF3800 ReSpeaker 的 XIAO ESP32 上运行实时关键词识别。
-
-
+> 然后可以在 Arduino 项目中包含 `model.cc` 文件，在搭载 XVF3800 ReSpeaker 的 XIAO ESP32 上运行实时关键词识别。
 
 
-## 在配备 XVF3800 的 XIAO ESP32 上进行推理
 
-一旦您的`model.cc`文件准备就绪，您可以将其部署在 XIAO ESP32 上进行实时语音命令识别。由于 XVF3800 输出**32 位音频样本**，我们需要**将其转换为 16 位**以用于 TensorFlow Lite Micro。我们还配置 I2S 引脚、采样率和声道以匹配模型要求。
+
+## 在搭载 XVF3800 的 XIAO ESP32 上进行推理
+
+当 `model.cc` 文件准备好后，你就可以将其部署到 XIAO ESP32 上，实现实时语音指令识别。由于 XVF3800 输出的是**32 位音频样本**，我们需要将其**转换为 16 位**以适配 TensorFlow Lite Micro。同时，我们还需要配置 I2S 引脚、采样率和声道数，以匹配模型的要求。
 
 
 
@@ -325,23 +325,23 @@ void loop() {
 }
 ```
 
-#### 关键注意事项
+#### 关键说明
 
-* 确保**将 `g_model` 替换**为您生成的 `model.cc` 文件的名称。
+* 请务必将 **`g_model` 替换** 为你生成的 `model.cc` 文件名。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/tflm/image1.png" alt="pir" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/tflm/image2.png" alt="pir" width={800} height="auto" /></p>
 
-* XVF3800 默认输出**32 位立体声**；我们将其转换为**16 位单声道**以匹配模型。
-* TensorFlow Lite Micro 持续读取音频数据，并在检测到识别的命令时触发 `respondToCommand()`。
+* XVF3800 默认输出 **32-bit 立体声**；我们将其转换为 **16-bit 单声道** 以匹配模型。
+* TensorFlow Lite Micro 会持续读取音频数据，并在检测到识别命令时触发 `respondToCommand()`。
 
-> 通过这种设置，您的 XIAO ESP32 现在可以使用 XVF3800 麦克风阵列实时识别自定义语音命令。
+> 通过此配置，你的 XIAO ESP32 现在可以使用 XVF3800 麦克风阵列实时识别自定义语音指令。
 
 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，确保你在使用我们产品的过程中尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

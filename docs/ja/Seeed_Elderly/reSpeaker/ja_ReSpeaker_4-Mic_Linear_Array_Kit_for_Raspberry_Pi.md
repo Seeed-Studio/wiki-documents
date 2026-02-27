@@ -1,6 +1,6 @@
 ---
 description: ReSpeaker 4-Mic Linear Array Kit
-title: ReSpeaker 4-Mic Linear Array Kit
+title: reSpeaker 4-Mic Linear Array Kit
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -13,51 +13,51 @@ last_update:
 
 ![enter image description here](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/main_wiki.jpg)
 
-SeeedのReSpeaker 4-Mic Linear Array Kitは、Raspberry Pi用に設計された拡張ボード（HAT）です。これは4つのマイクロフォンを搭載したリニアマイクロフォンアレイキットで、AIと音声アプリケーション向けに設計されています。つまり、Amazon Alexa Voice Service、Google Assistantなどを統合できる、より強力で柔軟な音声製品をRaspberry Piで構築できます。
+Seeed の ReSpeaker 4-Mic Linear Array Kit は、Raspberry Pi 用に設計された拡張ボード（HAT）です。これは 4 つのマイクを備えたリニアマイクアレイキットで、AI や音声アプリケーション向けに設計されています。つまり、Amazon Alexa Voice Service や Google Assistant などを統合できる Raspberry Pi を使って、より強力で柔軟な音声プロダクトを構築できます。
 
-Raspberry Pi用ReSpeaker 4-Mic Linear Array Kitは2つのボードで構成されています。1つは音声アクセサリHAT、もう1つは4つのマイクロフォンのリニアアレイです。
+ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi は 2 枚のボードで構成されており、1 枚は Voice Accessory HAT、もう 1 枚は 4 マイクのリニアアレイです。
 
 <div class="video-container">
 <iframe width="800" height="450" src="https://www.youtube.com/embed/NxZx9nz67Bc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-Raspberry Pi用ReSpeaker 4-Mic Linear Array Kitは、Raspberry Pi OSで8入力・8出力チャンネルをサポートします。最初の6つの入力チャンネルはマイクロフォン録音用（最初の4つの入力チャンネルのみが有効なキャプチャデータ）で、残りの2つの入力チャンネルは再生のエコーチャンネルです。最初の2つの出力チャンネルは音声出力用で、残りの6つの出力チャンネルはダミーです。
+ReSpeaker 4-Mic Linear Array Kit for Raspberry Pi は、Raspberry Pi OS で 8 チャンネル入力と 8 チャンネル出力をサポートします。最初の 6 つの入力チャンネルはマイク録音用です（最初の 4 つの入力チャンネルのみが有効なキャプチャデータです）。残り 2 つの入力チャンネルは再生のエコーチャンネルです。最初の 2 つの出力チャンネルはサウンド出力用で、残りの 6 つの出力チャンネルはダミーです。
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/ReSpeaker-4-Mic-Linear-Array-Kit-p-3066.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## 特徴
 
-- 2つのADCチップと1つのDACチップ
-- 8入力・8出力チャンネル
-- 4つのマイクロフォンアレイ
-- Groveサポート
-- Raspberry Pi互換（Raspberry Pi ZeroとZero W、Raspberry Pi B+、Raspberry Pi 2 B、Raspberry Pi 3 B、Raspberry Pi 3 B+、Raspberry Pi 3 A+、Raspberry Pi 4をサポート）
-- ヘッドセットとスピーカー音声出力
+- 2 つの ADC チップと 1 つの DAC チップ
+- 8 チャンネル入力および 8 チャンネル出力
+- 4 マイクアレイ
+- Grove 対応
+- Raspberry Pi 互換（Raspberry Pi Zero および Zero W、Raspberry Pi B+、Raspberry Pi 2 B、Raspberry Pi 3 B、Raspberry Pi 3 B+、Raspberry Pi 3 A+、Raspberry Pi 4 をサポート）
+- ヘッドセットおよびスピーカー音声出力
 
 ## 仕様
 
 - 2 x X-Power AC108 ADC
-- 4 x 高性能アナログマイクロフォン
+- 4 x 高性能アナログマイク
 - 1 x X-Power AC101 DAC
-- 音声出力：
-  - 3.5mmヘッドセットオーディオジャック
+- 音声出力:
+  - 3.5mm ヘッドセットオーディオジャック
   - スピーカージャック
-- Raspberry Pi 40ピンヘッダー互換
-- マイクロフォン：MSM321A3729H9BP
-- 感度：-22 dBFS（無指向性）
-- SNR：59 dB
-- 最大サンプルレート：48Khz
+- Raspberry Pi 40 ピンヘッダ互換
+- マイク: MSM321A3729H9BP
+- 感度: -22 dBFS（無指向性）
+- SNR: 59 dB
+- 最大サンプリングレート: 48Khz
 
-## アプリケーションアイデア
+## 応用アイデア
 
 - スマートスピーカー
 - インテリジェント音声アシスタントシステム
 - ボイスレコーダー
 - 音声会議システム
-- 会議通信機器
+- 会議通話機器
 - 音声対話ロボット
 - 車載音声アシスタント
-- その他音声コマンドが必要なシナリオ
+- 音声コマンドが必要なその他のシナリオ
 
 ## ハードウェア概要
 
@@ -70,10 +70,10 @@ Raspberry Pi用ReSpeaker 4-Mic Linear Array Kitは、Raspberry Pi OSで8入力�
 ![](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/Hardware.jpg)
 
 :::note
-接続後は、必ずマルチメーターを使用して、回路の導通が上図に示されている通りかどうかを確認してください。
+接続後、必ずマルチメータを使用して、回路の導通が上図のようになっているかどうかを確認してください。
 :::
 
-## 組み立て図
+## 組立図  
 
 ![](https://files.seeedstudio.com/wiki/Bazaar_file/107990055/img/ab.png)
 
@@ -83,11 +83,11 @@ Raspberry Pi用ReSpeaker 4-Mic Linear Array Kitは、Raspberry Pi OSで8入力�
 
 **ステップ 1.**  *ReSpeaker Voice Accessory HAT* と *ReSpeaker 4-Mic linear Array* をリボンケーブルで接続します
 
-**ステップ 2.**  *ReSpeaker Voice Accessory HAT* を 40 ピン GPIO 経由で *Raspberry Pi* に接続します
+**ステップ 2.**  *ReSpeaker Voice Accessory HAT* を 40 ピン GPIO を介して *Raspberry Pi* に挿し込みます
 
-**ステップ 3.**  *イヤホン* を *3.5mm ヘッドセットオーディオジャック* に接続するか、*スピーカー* を *JST 2.0 スピーカージャック* に接続します
+**ステップ 3.**  *earphone* を *3.5mm headset audio jack* に挿し込むか、*speaker* を *JST 2.0 speaker jack* に挿し込みます
 
-**ステップ 4.**  *Raspberry Pi* を micro-USB ケーブルで *PC* に接続します
+**ステップ 4.**  micro-USB ケーブルで *Raspberry Pi* を *PC* に接続します
 
 ![Pics here](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/img/4-mic.jpg)
 
@@ -95,7 +95,7 @@ Raspberry Pi用ReSpeaker 4-Mic Linear Array Kitは、Raspberry Pi OSで8入力�
 
 **ステップ 1. seeed-voicecard をインストールする**
 
-seeed voice card のソースコードを取得し、すべての linux カーネルドライバーをインストールします。
+seeed voice card のソースコードを取得し、すべての Linux カーネルドライバをインストールします。
 
 ```
 sudo apt-get update
@@ -106,15 +106,15 @@ sudo reboot
 
 ```
 
-**ステップ2. サウンドカードの確認**
+**ステップ 2. サウンドカードを確認する**
 
-以下のコマンドを実行して録音デバイスを確認します。
+以下のコマンドを入力して録音デバイスを確認します。
 
 ```
 pi@raspberrypi:~ $ arecord -L
 ```
 
-以下のようになるはずです：
+次のように表示されるはずです:
 
 ```
 pi@raspberrypi:~ $ arecord -L
@@ -142,13 +142,13 @@ plughw:CARD=seeed8micvoicec,DEV=0
     Hardware device with all software conversions
 ```
 
-以下のコマンドを使用して再生デバイスを確認してください。
+次のコマンドを使用して再生デバイスを確認します。
 
 ```
 pi@raspberrypi:~ $ aplay -L
 ```
 
-以下のようになるはずです：
+次のように表示されるはずです:
 
 ```
 pi@raspberrypi:~ $ aplay -L
@@ -204,7 +204,7 @@ plughw:CARD=seeed8micvoicec,DEV=0
 
 ```
 
-**ステップ3. 録音と再生**
+**ステップ 3. 録音と再生**
 
 録音してから再生することも、録音と再生を同時に行うこともできます。
 
@@ -220,19 +220,19 @@ aplay -D ac101 a.wav
 ```
 
 :::note
-4-Mic Linear Array Kitを使用して同時にキャプチャと再生を行う開発者向けの制限事項：
+4-Mic Linear Array Kit を使用してキャプチャと再生を同時に行う開発者向けの制限事項:
 
--1. キャプチャを最初に開始する必要があります。そうしないと、キャプチャチャンネルが乱れる可能性があります。
+-1. キャプチャを必ず先に開始してください。そうしないと、キャプチャチャンネルが乱れる可能性があります。
 
--2. 再生出力チャンネルは8つの同じチャンネルデータまたは4つの同じステレオチャンネルデータで満たす必要があります。そうしないと、スピーカーまたはヘッドフォンから何も出力されない可能性があります。
+-2. 再生出力チャンネルには、8 チャンネルすべて同じデータ、または 4 つの同一ステレオチャンネルデータを入力する必要があります。そうしないと、スピーカーやヘッドホンから音が出ない可能性があります。
 
--3. 同時に再生と録音を行いたい場合、aplayの音楽ファイルはモノラルである必要があります。そうでなければ、このコマンドを使用して再生することはできません。
+-3. 再生と録音を同時に行いたい場合、aplay する音楽ファイルはモノラルでなければなりません。そうでない場合、このコマンドを使って再生することはできません。
 :::
 
-また、Audacityを使用して再生と録音を行うこともできます。
+また、Audacity を使って再生および録音することもできます。
 
 :::tip
-        VNC経由でAudacityを開くか、モニターを使用して開く必要があります
+        Audacity は VNC 経由で開くか、モニタを接続して開いてください
 :::
 
 ```
@@ -246,48 +246,48 @@ audacity                      // run audacity
 
 ## 使用概要
 
-以下の例を実行するには、[4mics_hat repository](https://github.com/respeaker/4mics_hat.git) リポジトリをRaspberry Piにクローンしてください
+以下のサンプルを実行するには、[4mics_hat repository](https://github.com/respeaker/4mics_hat.git) リポジトリを Raspberry Pi にクローンします
 
 ```
 git clone https://github.com/respeaker/4mics_hat.git
 ```
 
-以下の例で言及されているすべてのPythonスクリプトは、このリポジトリ内で見つけることができます。必要な依存関係をインストールするには、mic_hatリポジトリフォルダから以下を実行してください
+以下のサンプルで言及されているすべての Python スクリプトは、このリポジトリ内にあります。必要な依存関係をインストールするには、mic_hat リポジトリフォルダから次を実行します
 
 ```
 sudo apt-get install portaudio19-dev libatlas-base-dev
 pip3 install -r requirements.txt
 ```
 
-### Pythonで音声を録音する
+### Python で音声を録音する
 
-[PyAudio pythonライブラリ](https://people.csail.mit.edu/hubert/pyaudio/)を使用してPythonで音声を録音します。
+Python で音声を録音するために、[PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) を使用します。
 
-まず、以下のスクリプトを実行して2 Mic pi hatのデバイスインデックス番号を取得します：
+まず、次のスクリプトを実行して 2 Mic pi hat のデバイスインデックス番号を取得します:
 
 ```
 python3 recording_examples/get_device_index.py
 ```
 
-以下のようにデバイスIDが表示されます。
+次のようにデバイス ID が表示されます。
 
 ```
 Input Device id  2  -  seeed-8mic-voicecard: - (hw:1,0)
 ```
 
-音声を録音するには、```recording_examples/record.py``` ファイルをnanoまたは他のテキストエディタで開き、`RESPEAKER_INDEX = 2` をお使いのシステムのReSpeakerのインデックス番号に変更してください。その後、Pythonスクリプトrecord.pyを実行して録音を行います：
+音声を録音するには、```recording_examples/record.py``` ファイルを nano などのテキストエディタで開き、`RESPEAKER_INDEX = 2` をお使いのシステム上の ReSpeaker のインデックス番号に変更します。その後、Python スクリプト record.py を実行して録音します:
 
 ```
 python3 recording_examples/record.py
 ```
 
-- ステップ 6. 8チャンネルからチャンネル0のデータを抽出したい場合は、```record_one_channel.py```の内容を確認してください。他のチャンネルXについては、[0::8]を[X::8]に変更してください。
+- ステップ 6. 8 チャンネルからチャンネル 0 のデータを抽出したい場合は、```record_one_channel.py``` の内容を確認してください。その他のチャンネル X の場合は、[0::8] を [X::8] に変更してください。
 
 ```
 python3 recording_examples/record_one_channel.py
 ```
 
-録音されたサンプルを再生するには、aplayシステムユーティリティを使用できます。例えば
+録音したサンプルを再生するには、例えば aplay システムユーティリティを使用できます
 
 ```bash
 aplay -f cd -Dhw:0 output.wav #for Stereo sound
@@ -296,31 +296,31 @@ aplay -D plughw:0,0 output_one_channel.wav #for Mono sound from one channel
 
 ## FAQ
 
-**Q1: Mic Arrayには4つのMicしかないのに、なぜ8チャンネルになるのですか？**
+**Q1: Mic Array には 4 つのマイクしかないのに、なぜ 8 チャンネルなのですか？**
 
-A1: このアレイには2つのAC108があり、各AC108チップは4チャンネル出力を持っています。そのため合計8チャンネルになり、そのうち4チャンネルがマイクロフォン用、2チャンネルが再生用、残りの2チャンネルは使用されていません。
+A1: このアレイには 2 つの AC108 があり、各 AC108 チップは 4 チャンネル出力を持っています。そのため合計 8 チャンネルとなり、そのうち 4 チャンネルがマイク用、2 チャンネルが再生用で、残り 2 チャンネルは使用されていません。
 
-**Q2: RaspberryがReSpeaker 2-mics hatを検出できるのに、ReSpeaker 4-mics linear arrayを検出できない場合は？**
+**Q2: Raspberry が ReSpeaker 2-mics hat は検出できるのに、ReSpeaker 4-mics linear array を検出できない場合は？**
 
-A2: raspberry -> Preferences -> Raspberry Pi Configurationをクリックし、Interfacesタブを選択して、1-WireがDisabledになっていることを確認してください。
+A2: raspberry -> Preferences -> Raspberry Pi Configuration をクリックし、Interfaces タブを選択して、1-Wire が Disabled になっていることを確認してください。
 
-## Resources
+## リソース
 
-- **[PDF]** [AC101 Datasheet](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf)
-- **[PDF]** [AC108 Datesheet](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC108_Datasheet_V1.2.pdf)
-- **[Driver]** [Seeed-Voice Driver](https://github.com/respeaker/seeed-voicecard)
-- **[Algorithms]** [DOA、VAD、NSを含むアルゴリズム](https://github.com/respeaker/mic_array)
-- **[Voice Engine]** [Voice Engineプロジェクト、音声対応オブジェクトを作成するためのビルディングブロックを提供](https://github.com/voice-engine/voice-engine)
+- **[PDF]** [AC101 データシート](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC101_User_Manual_v1.1.pdf)
+- **[PDF]** [AC108 データシート](https://files.seeedstudio.com/wiki/ReSpeaker_6-Mics_Circular_Array_kit_for_Raspberry_Pi/reg/AC108_Datasheet_V1.2.pdf)
+- **[Driver]** [Seeed-Voice ドライバ](https://github.com/respeaker/seeed-voicecard)
+- **[Algorithms]** [DOA、VAD、NS を含むアルゴリズム](https://github.com/respeaker/mic_array)
+- **[Voice Engine]** [音声対応オブジェクトを作成するためのビルディングブロックを提供する Voice Engine プロジェクト](https://github.com/voice-engine/voice-engine)
 - **[Algorithms]** [AEC](https://github.com/voice-engine/ec)
-- **[Mechanical Drawing]** [2D Drawing](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/res/2d.zip)
+- **[Mechanical Drawing]** [2D 図面](https://files.seeedstudio.com/wiki/ReSpeaker_4-Mics_Linear_Array_Kit/res/2d.zip)
 
-## Projects
+## プロジェクト
 
-[Mojing Mojing - A Smart Mirror with ReSpeaker!](https://www.hackster.io/SeeedStudio/mojing-mojing-a-smart-mirror-with-respeaker-e1ae20): ReSpeakerによる音声インターフェース制御を備えたスマートミラー。Wio Linkと接続して他のオブジェクトも制御できます！Raspberry Piベース。
+[Mojing Mojing - A Smart Mirror with ReSpeaker!](https://www.hackster.io/SeeedStudio/mojing-mojing-a-smart-mirror-with-respeaker-e1ae20)：ReSpeaker を介した音声インターフェース制御を備えたスマートミラーです。さらに Wio Link と接続して、他のオブジェクトも制御します！Raspberry Pi をベースにしています。
 
-## 技術サポート・製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
+弊社製品をお選びいただきありがとうございます。私たちは、製品をできるだけスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お好みやニーズに応じて選べる、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

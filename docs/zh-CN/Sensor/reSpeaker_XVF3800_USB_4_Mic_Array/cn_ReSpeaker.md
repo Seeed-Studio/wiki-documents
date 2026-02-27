@@ -53,7 +53,7 @@ reSpeaker XMOS XVF3800 系列专为在嘈杂、真实环境中也需要极致清
                         >
                             <strong>
                                 <span>
-                                    <font color="#FFFFFF" size="3">📚 入门指南页面</font>
+                                    <font color="#FFFFFF" size="3">📚 入门页面</font>
                                 </span>
                             </strong>
                         </a>
@@ -98,7 +98,7 @@ reSpeaker Lite 系列是你轻松构建高性能、高音质语音项目的理�
                         >
                             <strong>
                                 <span>
-                                    <font color="#FFFFFF" size="3">📚 入门指南页面</font>
+                                    <font color="#FFFFFF" size="3">📚 入门页面</font>
                                 </span>
                             </strong>
                         </a>
@@ -143,7 +143,7 @@ reSpeaker 2-Mics Pi HAT V2.0 可以将你的 Raspberry Pi 打造成强大的语�
                         >
                             <strong>
                                 <span>
-                                    <font color="#FFFFFF" size="3">📚 入门指南页面</font>
+                                    <font color="#FFFFFF" size="3">📚 入门页面</font>
                                 </span>
                             </strong>
                         </a>
