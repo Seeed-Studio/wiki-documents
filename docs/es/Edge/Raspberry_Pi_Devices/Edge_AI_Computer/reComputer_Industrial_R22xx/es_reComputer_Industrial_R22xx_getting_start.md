@@ -132,7 +132,7 @@ La serie reComputer Industrial R22xx es ideal para su uso en aplicaciones indust
       </tr>
       <tr>
         <td colspan="2"> 1 x USB-C 2.0 (para flashear SO y depuración) </td>
-      </tr]
+      </tr>
       <tr>
         <td> RS485 </td>
         <td colspan="2"> 2x RS485 (aislados) </td>

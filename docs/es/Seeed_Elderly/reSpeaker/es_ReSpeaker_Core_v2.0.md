@@ -81,7 +81,7 @@ ReSpeaker Core v2.0 está diseñado como una placa de desarrollo rica en funcion
     </tr>
     <tr>
       <td className="tg-dc35">80 pines en el módulo</td>
-    </tr]
+    </tr>
     <tr>
       <td className="tg-us36">PMU en el módulo</td>
     </tr>

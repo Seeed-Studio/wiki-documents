@@ -105,7 +105,7 @@ ReSpeaker Core v2.0 は、企業が評価するための多機能な開発ボー
     <tr>
       <td className="tg-dc35">Audio</td>
       <td className="tg-dc35">Max Sample Rate: 96Khz;<br />6 Microphone Array;<br />3.5mm Audio Jack;<br />JST2.0 Audio output connector</td>
-    </tr]
+    </tr>
     <tr>
       <td className="tg-us36">Storage</td>
       <td className="tg-us36">4GB eMMC on-board;<br />SD slot</td>
