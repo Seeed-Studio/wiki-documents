@@ -25,21 +25,21 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 :::info 想象一下
-你走进书房，桌上的 SenseCAP Watcher 瞬间感知到你的存在。屏幕亮起，它微笑着向你问好，并显示今天的待办事项——无需你说一句话，甚至不用动一根手指。
+你走进书房，桌上的 SenseCAP Watcher 立刻感知到你的存在。屏幕亮起，它微笑着向你问好，并显示出你当天的待办事项——你无需说话，甚至不必抬手操作。
 :::
 
 SenseCAP Watcher 正在重新定义人与设备的交互方式。
 
-它拥有独特的"无摩擦触发"对话能力，在你接近时主动发起交互。这不仅仅是技术升级，更是交互逻辑的根本性转变：**首次实现了主动权从人转向机器，完成了从"人适应机器"到"机器主动适应人"的体验跃迁。**
+它具备独特的「无摩擦触发」对话能力，当你靠近时会主动发起交互。这不仅是一次技术升级，更是交互逻辑的根本变革：**人机交互史上首次，将主动权从人转移到机器，实现从「人适应机器」到「机器主动适应人」的体验飞跃。**
 
-Watcher 的"敏锐之眼"由强大的**本地 AI 视觉芯片（Himax）**驱动，实现快速本地处理的物体识别和目标跟踪。结合可扩展的助手固件，它不仅仅是一台摄像头——而是一个不断进化、理解你需求的专属 AI 助手。
+Watcher 的「敏锐之眼」由强大的 **本地 AI 视觉芯片（Himax）** 驱动，实现快速的本地目标识别与目标追踪。配合可扩展的助手固件，它不仅是一台摄像头，更是一位会进化、懂你的专属 AI 助手。
 
 ## 核心优势
 
 <div class="info-section">
   <div class="section-header">
       <h2><a href="https://www.seeedstudio.com/SenseCAP-Watcher-XIAOZHI-EN-p-6532.html?utm=wiki&utm=hello_watcher_llms">SenseCAP Watcher</a></h2>
-      <p>一款集成本地 AI 视觉和灵活开发环境的智能设备，旨在帮助您轻松构建和部署个性化 AI 应用。</p>
+      <p>一款集成本地 AI 视觉与灵活开发环境的智能设备，帮助你轻松构建和部署个性化 AI 应用。</p>
   </div>
 	<ul class="info-list">
 		<li class="info-item">
@@ -50,8 +50,8 @@ Watcher 的"敏锐之眼"由强大的**本地 AI 视觉芯片（Himax）**驱动
 				</svg>
 			</div>
 			<div class="info-content">
-				<h3>离线"敏锐之眼"：高效的本地视觉处理</h3>
-				<p>配备高性能 AI 视觉芯片（Himax），所有图像处理均在设备本地完成。享受快速响应和增强的隐私保护——您的数据无需上传到云端。</p>
+				<h3>离线「敏锐之眼」：高效本地视觉处理</h3>
+				<p>内置高性能 AI 视觉芯片（Himax），所有图像处理均在本地完成。响应迅速，同时大幅提升隐私保护——你的数据无需上传云端。</p>
 			</div>
 		</li>
 		<li class="info-item">
@@ -62,8 +62,8 @@ Watcher 的"敏锐之眼"由强大的**本地 AI 视觉芯片（Himax）**驱动
 				</svg>
 			</div>
 			<div class="info-content">
-				<h3>零代码构建 AI 应用，如乐高般简单</h3>
-				<p>利用 SenseCraft AI 平台部署 AI 模型，只需几次点击即可快速构建特定场景的应用。部署 AI 模型变得像图片编辑一样简单，完全不需要编程背景。</p>
+				<h3>零代码搭建 AI 应用，像拼乐高一样简单</h3>
+				<p>借助 SenseCraft AI 平台，一键部署 AI 模型，并通过几次点击即可快速构建特定场景应用。部署 AI 模型就像修图一样简单，完全不需要编程基础。</p>
 			</div>
 		</li>
 		<li class="info-item">
@@ -74,8 +74,8 @@ Watcher 的"敏锐之眼"由强大的**本地 AI 视觉芯片（Himax）**驱动
 				</svg>
 			</div>
 			<div class="info-content">
-				<h3>灵活的集成平台和工具</h3>
-				<p>基于其灵活的 MCP 架构，您可以自由定义新的 AI 工具并快速集成本地或云服务，无缝融入现有的智能系统。</p>
+				<h3>灵活的集成平台与工具</h3>
+				<p>基于灵活的 MCP 架构，你可以自由定义新的 AI 工具，并快速集成本地或云端服务，轻松融入现有智能系统。</p>
 			</div>
 		</li>
 		<li class="info-item">
@@ -86,8 +86,8 @@ Watcher 的"敏锐之眼"由强大的**本地 AI 视觉芯片（Himax）**驱动
 				</svg>
 			</div>
 			<div class="info-content">
-				<h3>硬件可扩展性：额外接口支持</h3>
-				<p>具备 GPIO 扩展接口，可轻松连接各种传感器和执行器，实现深度定制并支持更多创意实现。</p>
+				<h3>硬件可扩展性：更多接口支持</h3>
+				<p>提供 GPIO 扩展接口，可轻松连接各类传感器与执行器，支持深度定制，释放更多创意玩法。</p>
 			</div>
 		</li>
 	</ul>
@@ -95,17 +95,17 @@ Watcher 的"敏锐之眼"由强大的**本地 AI 视觉芯片（Himax）**驱动
 
 ## 工作原理
 
-SenseCAP Watcher 可以被视为一个"模块化"的智能机器人，其核心运作依赖于三个主要组件的协作：
+你可以将 SenseCAP Watcher 理解为一台「模块化」智能机器人，其核心运行依赖于三个主要组件的协同工作：
 
-1.  **硬件核心（ESP32S3）**：驱动底层硬件，处理摄像头数据，并维持与云服务的稳定连接。
-2.  **视觉神经（Himax AI 芯片）**：强大的本地 AI 视觉处理单元，赋予设备实时环境感知能力。
-3.  **云端大脑（后端服务）**：负责 AI 角色配置、MCP 工具调度和统一设备管理。
+1.  **硬件核心（ESP32S3）**：驱动底层硬件，处理摄像头数据，并维持与云端服务的稳定连接。
+2.  **视觉神经（Himax AI 芯片）**：强大的本地 AI 视觉处理单元，为设备赋予实时环境感知能力。
+3.  **云端大脑（后端服务）**：负责 AI 角色配置、MCP 工具调度以及统一设备管理。
 
-该过程可以简化为：
+整体流程可以简化为：
 
-Watcher 的"眼睛"（摄像头）捕获图像 → "视觉神经"（Himax 芯片）执行识别并唤醒助手 → "大脑"（后端 AI、MCP 服务）理解上下文并响应。
+Watcher 的「眼睛」（摄像头）采集画面 → 「视觉神经」（Himax 芯片）进行识别并唤醒助手 → 「大脑」（后端 AI、MCP 服务）理解上下文并做出响应。
 
-这种模块化设计提供了高度的灵活性和可扩展性。
+这种模块化设计带来了极高的灵活性与可扩展性。
 
 <div align="center">
   <img class='img-responsive' width="680" src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/watcher-chatbot-diagram.png" alt="watcher-chatbot-diagram"/>
@@ -113,43 +113,43 @@ Watcher 的"眼睛"（摄像头）捕获图像 → "视觉神经"（Himax 芯片
 
 ## 入门指南
 
-### 三步快速开始
+### 三步快速上手
 
-只需三步即可激活您的 Watcher：
+只需三步即可激活你的 Watcher：
 
-1.  **设备上电**：通过 Type-C 数据线供电；如使用电池，请长按侧面按钮开机。
-2.  **连接网络**：启动后，设备将生成 Wi-Fi 热点。将您的手机或电脑连接到此热点。| 「[Watcher 网络设置](/cn/device_network_setup)」
-3.  **配置和激活**：在浏览器中访问 `192.168.4.1` 为 Watcher 配置 Wi-Fi，并按照 SenseCraft AI 平台上的说明完成激活。| 「[Watcher Web 控制面板](/cn/watcher_web_control_panel/)」
+1.  **设备上电**：通过 Type-C 数据线供电；如果使用电池，长按侧边按键开机。
+2.  **连接网络**：开机后，设备会生成一个 Wi-Fi 热点。将手机或电脑连接到该热点。| 「[Watcher Network Setup](/cn/device_network_setup)」
+3.  **配置并激活**：在浏览器中访问 `192.168.4.1`，为 Watcher 配置 Wi-Fi，并按照 SenseCraft AI 平台上的指引完成激活。| 「[Watcher Web Control Panel](/cn/watcher_web_control_panel/)」
 
-:::info[激活提示]
-如果激活失败，请确认验证码正确且设备认证信息未丢失。以下操作通常会导致认证信息丢失：
+:::info[激活小贴士]
+如果激活失败，请确认验证码是否正确，以及设备认证信息是否丢失。以下操作通常会导致认证信息丢失：
 
 1.  固件被其他程序覆盖。
-2.  执行了重大固件更新而未备份认证信息。
+2.  在未备份认证信息的情况下进行了重大固件升级。
 3.  刷入了全新的固件。
 
-如需重新激活，请将设备的 STA Mac 地址（可从串口日志获取）发送至 sensecap@seeed.cc 寻求帮助。请参考：[刷入认证信息](/cn/flash_watcher_agent_firmware/#刷入认证信息)。
+<!-- If reactivation is needed, please send the device's STA Mac address (can be obtained from serial logs) to sensecap@seeed.cc for assistance. Please refer to: [Flashing Authentication Info](/cn/flash_watcher_agent_firmware/#flashing-authentication-info). -->
 :::
 
-您可以观看下面视频中的详细教程：
+你也可以观看下方视频中的详细教程：
 
 <div class="video-container">
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/6UDVsv953Tw?si=6OYFfx4orpC5p90d" title="SenseCAP Watcher for Xiaozhi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-## 模型和固件更新：定制专属技能
+## 模型与固件更新：定制专属技能
 
-开发者或高级用户可以刷入不同的模型或固件，为 Watcher 赋予更强大、更专属的能力。
+开发者或高级用户可以刷入不同的模型或固件，为 Watcher 赋予更强大、更加专属的能力。
 
-详细说明请参考我们综合指南中的相关章节：
-- **[AI 模型刷入流程](/cn/visual_trigger_and_ai_flash#AI-模型刷入流程)**
-- **[固件刷入流程](/cn/visual_trigger_and_ai_flash#固件刷入流程)**
+详细操作说明请参考我们完整指南中的相关章节：
+- **[AI Model Flashing Process](/cn/visual_trigger_and_ai_flash#AI-模型刷写流程)**
+- **[Firmware Flashing Process](/cn/visual_trigger_and_ai_flash#固件刷写流程)**
 
 ## 开始对话
 
-现在您已经对 SenseCAP Watcher 有了基本了解，可以探索其对话和工具调用能力，例如使用摄像头功能或设置基于时间的主动交互策略。
+在对 SenseCAP Watcher 有了基本了解之后，你可以开始探索它的对话与工具调用能力，例如使用摄像头功能，或设置基于时间的策略来实现主动交互。
 
-例如，如果我的代理角色名称设置为 `Watcher`，设置将如下所示：
+例如，如果我的 Agent 角色名称设置为 `Watcher`，配置大致如下所示：
 
 <div align="center">
 <img class='img-responsive' width="800" src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/watcher-agent-role.png" alt="watcher-agent-role"/>
@@ -157,10 +157,10 @@ Watcher 的"眼睛"（摄像头）捕获图像 → "视觉神经"（Himax 芯片
 
 ### 唤醒设备
 
-设备在未被唤醒时保持待机状态，意味着它不会监听周围的对话。一旦被唤醒，它开始监听并可以根据用户指令进行对话或执行操作。
+设备在未被唤醒时会保持待机状态，此时不会监听周围的对话。一旦被唤醒，就会开始监听，并可根据用户指令进行对话或执行操作。
 
 <Tabs>
-<TabItem value="vision" label="视觉唤醒" default>
+<TabItem value="vision" label="Visual Wake-Up" default>
 
 <div style={{ textAlign: 'center' }}>
 <video width="auto" height="480" controls>
@@ -169,20 +169,20 @@ Watcher 的"眼睛"（摄像头）捕获图像 → "视觉神经"（Himax 芯片
 </video>
 </div>
 
-:::info[如何启用视觉唤醒]
-默认情况下，视觉唤醒功能是禁用的。要开启它，您可以在 Watcher 被唤醒时对它说：
+:::info[如何开启视觉唤醒]
+默认情况下，视觉唤醒功能是关闭的。要开启它，你可以在 Watcher 被唤醒时对它说：
 
 **"Hey Watcher, turn on model inference."**
 :::
 
-当前的视觉唤醒功能提供以下配置选项：
+当前视觉唤醒功能提供以下配置选项：
 
-- **目标 ID**（`target`）：指定要检测的目标 ID。此 ID 取决于使用的视觉模型；默认值为 0。
-- **检测持续时间**（`duration`）：单位为秒，用于调整视觉唤醒的敏感度。默认为 1 秒（此默认值不包括 1 秒的防抖处理）。
-- **置信度阈值**（`threshold`）：视觉模型识别物体的最低置信度限制，用于调整检测敏感度。以百分比表示，默认为 75%。
-- **冷却期** (`interval`)：单位为秒，表示一次对话结束后再次触发前所需的等待时间，用于避免同一对象频繁打断。默认为 8 秒。
+- **目标 ID**（`target`）：指定要检测的目标 ID。该 ID 取决于所使用的视觉模型；默认值为 0。
+- **检测持续时间**（`duration`）：单位为秒，用于调节视觉唤醒的灵敏度。默认值为 1 秒（该默认值不包含 1 秒的消抖处理时间）。
+- **置信度阈值**（`threshold`）：视觉模型识别目标时的最低置信度，用于调节检测灵敏度。以百分比表示，默认值为 75%。
+- **冷却时间**（`interval`）：单位为秒，表示一次对话结束后再次触发前所需的等待时间，用于避免同一对象频繁打断。默认值为 8 秒。
 
-例如，您可以通过修改 `threshold` 参数来调整模型的敏感度。如果您发现当前阈值过于严格，只需对 Watcher 说："请将置信度阈值设置为 60%"。
+例如，你可以通过修改 `threshold` 参数来调整模型的灵敏度。如果你觉得当前阈值过于严格，只需对 Watcher 说：“Please set the confidence threshold to 60%”。
 
 </TabItem>
 
@@ -191,17 +191,17 @@ Watcher 的"眼睛"（摄像头）捕获图像 → "视觉神经"（Himax 芯片
 <div style={{ textAlign: 'center' }}>
 <video width="auto" height="480" controls>
   <source src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/voice-trigger-watcher.mov" type="video/mp4" />
-  Your browser does not support the video tag.
+  您的浏览器不支持 video 标签。
 </video>
 </div>
 
 </TabItem>
 
-<TabItem value="button" label="按钮唤醒">
+<TabItem value="button" label="按键唤醒">
   <div style={{ textAlign: 'center' }}>
   <video width="auto" height="320" controls>
     <source src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/click-trigger-watcher.mov" type="video/mp4" />
-    Your browser does not support the video tag.
+    您的浏览器不支持 video 标签。
   </video>
   </div>
 </TabItem>
@@ -218,15 +218,15 @@ Watcher 的"眼睛"（摄像头）捕获图像 → "视觉神经"（Himax 芯片
 <div style={{ textAlign: 'center' }}>
 <video width="auto" height="320" controls>
   <source src="https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/watcher-activate-camera.mov" type="video/mp4" />
-  Your browser does not support the video tag.
+  您的浏览器不支持 video 标签。
 </video>
 </div>
 
 ## 资源
 
-以下是一些高级资源，帮助您根据需求进一步扩展 SenseCAP Watcher 的应用边界，无论是本地部署、隐私保护还是构建个性化知识库：
+以下是一些进阶资源，可帮助你根据自身需求进一步拓展 SenseCAP Watcher 的应用边界，无论是本地部署、隐私保护，还是构建个性化知识库：
 
-- [AI 对话驱动的智能家居](/cn/ha_dify_watcher_llms) - 通过 SenseCAP Watcher 直接语音控制智能家居设备，如灯光、空调和窗帘，告别手动操作。
+- [AI Conversation-Driven Smart Home](/cn/ha_dify_watcher_llms) - 通过 SenseCAP Watcher 直接用语音控制灯光、空调、窗帘等智能家居设备，告别手动操作。
 <!--- [Knowledge Based chatbots](/cn/knowledge_watcher_llms) - Transform SenseCAP Watcher into a virtual exhibition secretary, automatically explaining products and solutions for businesses, with the ability to intelligently identify customer points of interest.-->
 
 ## 参考资料
