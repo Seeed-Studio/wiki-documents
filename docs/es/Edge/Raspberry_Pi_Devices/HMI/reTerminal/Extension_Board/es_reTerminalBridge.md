@@ -13,30 +13,30 @@ last_update:
 
 # **Primeros pasos con reTerminal E10-1**
 
-### **Materiales requeridos**
+### **Materiales necesarios**
 
 | reTerminal | reTerminal E10-1 |
 |--------------|--------------|
 |<div align="center"><img width={210} src="https://files.seeedstudio.com/wiki/ReTerminal/wiki_thumb.png" /></div>|<div align="center"><img width={210} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reterminale10overviewnew.jpeg" /></div>
-|[**Obtener UNO ahora**](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html)|[**Obtener UNO ahora**](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html)|
+|[**Obtener Uno Ahora**](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html)|[**Obtener Uno Ahora**](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html)|
 
 ### **Preparación preliminar**
 
 #### **Conexión**
 
-Observe la orientación y coloque el reTerminal en el reTerminal E10-1, y fuércelos para que encajen perfectamente. Si el reTerminal E10-1 se enciende en este momento, reTerminal se activará y arrancará en el sistema. Si desea saber más sobre reTerminal, haga clic en [**reTerminal**](https://wiki.seeedstudio.com/es/reTerminal/).
+Tenga en cuenta la orientación y coloque el reTerminal sobre el reTerminal E10-1, y presione para que encajen firmemente. Si el reTerminal E10-1 está encendido en este momento, reTerminal se activará e iniciará el sistema. Si desea saber más sobre reTerminal, haga clic en [**reTerminal**](https://wiki.seeedstudio.com/es/reTerminal/).
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image3.png"/></div>
 
 #### **Instalación y extracción**
 
-En el proceso de usar el reTerminal E10-1, puede ser necesario quitar su carcasa para agregar periféricos.
+Durante el proceso de uso del reTerminal E10-1, puede ser necesario retirar su carcasa para añadir periféricos.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image002.png"/></div>
 
 #### **Instalación del controlador**
 
-Si desea que reTerminal use las funciones de reTerminal E10-1, necesita instalar el controlador para reTerminal antes de comenzar. Siga los comandos en la ventana de terminal de reTerminal.
+Si desea que reTerminal utilice las funciones de reTerminal E10-1, debe instalar el controlador para reTerminal antes de comenzar. Siga los comandos en la ventana de terminal de reTerminal.
 
 ```sh
 git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git
@@ -45,7 +45,7 @@ sudo ./scripts/reTerminal.sh
 ```
 
 :::note
-Para **SO de 32 bits** necesitarás añadir el siguiente paso antes de ejecutar `sudo ./scripts/reTerminal.sh`
+Para **32bit OS** deberá añadir el siguiente paso antes de ejecutar `sudo ./scripts/reTerminal.sh`
 
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
@@ -53,7 +53,7 @@ echo arm_64bit=0 | sudo tee -a /boot/config.txt
 
 :::
 
-Después de que se complete la instalación, por favor reinicia la máquina. Luego usa el siguiente comando para verificar si el archivo `reTerminal-bridge.dtbo` existe para asegurar que la instalación del controlador esté completa.
+Una vez finalizada la instalación, reinicie la máquina. Luego use el siguiente comando para comprobar si existe el archivo `reTerminal-bridge.dtbo` y asegurarse de que la instalación del controlador se haya completado.
 
 ```sh
 ls /boot/overlays/reTerminal-bridge.dtbo
@@ -61,9 +61,9 @@ ls /boot/overlays/reTerminal-bridge.dtbo
 
 <div align="center"><img width={900} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image1.jpg"/></div>
 
-#### **Instalar Librerías**
+#### **Instalar bibliotecas**
 
-Instala la librería de python3.
+Instale la biblioteca de python3.
 
 ```sh
 sudo apt-get update
@@ -72,51 +72,51 @@ sudo pip3 install RPi.GPIO
 sudo apt-get install python3-serial
 ```
 
-Instala la biblioteca git.
+Instale la biblioteca de git.
 
 ```sh
 sudo apt install -y git
 ```
 
-### **Fuente de Alimentación**
+### **Alimentación**
 
-Hay tres métodos para suministrar energía que se muestran a continuación:
+Hay tres métodos para suministrar energía como se muestra a continuación:
 
 - Conector DC
 - PoE
 - UPS - batería 18650
 
-La batería para este dispositivo es una batería Li-ion recargable NCR18650B. Tenga en cuenta que no se incluye batería en el paquete, mientras que la batería está disponible en tiendas de conveniencia regulares y el cliente necesita prepararla por sí mismo. Y lo que proponemos es Panasonic NCR18650B 3.6V 3400mAh.
+La batería para este dispositivo es una batería recargable de ion-litio NCR18650B. Tenga en cuenta que no hay batería en el paquete, aunque la batería está disponible en tiendas de conveniencia habituales y el cliente debe prepararla por su cuenta. Y lo que proponemos es Panasonic NCR18650B 3.6V 3400mAh.
 
 #### **Conector DC**
 
-Suministra energía al reTerminal, la placa de expansión y la batería en DC 12V @4A
+Suministre energía al reTerminal, a la placa de expansión y a la batería con DC 12V @4A
 
 #### **PoE**
 
-La entrada de alimentación PoE es RJ45 y soporta un máximo de 25W de entrada de energía.
+La entrada de alimentación PoE es RJ45 y admite una potencia máxima de entrada de 25W.
 
 #### **UPS - batería 18650**
 
-2 x portabaterías con pin fijo.
+Portabaterías para 2 baterías con pin de fijación.
 
 ### **Ventilador**
 
-**Materiales requeridos**
+**Materiales necesarios**
 
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) x1
 - [reTerminal E10-1](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html) x1
-- Ventilador(incluido) x1
+- Ventilador (incluido) x1
 
-Para mantener el reTerminal y reTerminal E10-1 a un nivel de temperatura normal bajo carga pesada. Hay un ventilador de 3 pines dentro del reTerminal E10-1.
+Para mantener el reTerminal y el reTerminal E10-1 a un nivel de temperatura normal bajo carga pesada, hay un ventilador de 3 pines dentro del reTerminal E10-1.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image29.jpg"/></div>
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image031.jpg"/></div>
 
-Este ejemplo introduce cómo controlar el ventilador en reTerminal E10-1.
+Este ejemplo presenta cómo controlar el ventilador en el reTerminal E10-1.
 
-**Paso 1.** Podemos controlar directamente el interruptor del ventilador mediante el siguiente comando.
+**Paso 1.** Podemos controlar directamente el interruptor del ventilador con el siguiente comando.
 
 ```sh
 #Toggle fan on
@@ -126,7 +126,7 @@ raspi-gpio set 23 op pn dh
 raspi-gpio set 23 op pn dl
 ```
 
-**Paso 2.** También podemos habilitar y deshabilitar el ventilador detectando la temperatura de la CPU. Por favor, sigue los pasos a continuación para descargar y ejecutar el programa.
+**Paso 2.** También podemos habilitar y deshabilitar el ventilador detectando la temperatura de la CPU. Siga los pasos a continuación para descargar y ejecutar el programa.
 
 ```sh
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_Fan_control.git
@@ -134,7 +134,7 @@ cd Seeed_reTerminal_Bridge_Fan_control/
 sudo python3 fan.py
 ```
 
-Aquí está el código **fan.py** para referencia.
+Aquí está el código **fan.py** como referencia.
 
 ```python
 import sys 
@@ -146,15 +146,15 @@ except RuntimeError:
 
 MAX_TEMP = 40.0
 MIN_TEMP = 20.0
- 
+
 def cpu_temp():
  f = open("/sys/class/thermal/thermal_zone0/temp",'r') 
  return float(f.read())/1000
- 
+
 def main():
  channel = 23
  GPIO.setmode(GPIO.BCM)
- 
+
  # init 23 off
  GPIO.setup(channel,GPIO.OUT,initial=GPIO.LOW)
  is_close = True
@@ -170,18 +170,18 @@ def main():
     is_close = True
   time.sleep(2.0)
   GPIO.setwarnings(False) 
- 
+
 if __name__ == '__main__':
  main() 
 ```
 
-Después de que el código se ejecute exitosamente, cuando se detecte que la temperatura de la CPU es superior a 40°C, el ventilador se encenderá. Cuando la temperatura sea inferior a 20°C, el ventilador se apagará.
+Después de que el código se ejecute correctamente, cuando se detecte que la temperatura de la CPU es superior a 40°C, el ventilador se encenderá. Cuando la temperatura sea inferior a 20°C, el ventilador se apagará.
 
 ### **Comunicación CAN**
 
-Una Red de Área de Controlador (CAN) es un estándar robusto de bus vehicular diseñado para permitir que los microcontroladores y dispositivos se comuniquen con las aplicaciones de otros sin una computadora anfitriona.
+Una Controller Area Network (CAN) es un estándar de bus de vehículos robusto diseñado para permitir que microcontroladores y dispositivos se comuniquen entre sí en sus aplicaciones sin un ordenador host.
 
-**Materiales requeridos**
+**Materiales necesarios**
 
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) x2
 - [reTerminal E10-1](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html) x2
@@ -197,7 +197,7 @@ GND -> GND
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/can.jpg"/></div>
 
-**Paso 2.** Instale las **CAN-utils** por separado para los dos reTerminals.
+**Paso 2.** Instale **CAN-utils** por separado en los dos reTerminal.
 
 ```sh
 sudo apt install can-utils
@@ -207,18 +207,18 @@ sudo apt install can-utils
 
 CAN-utils es una colección de herramientas de depuración extremadamente útiles que utilizan la interfaz CAN. Incluye aplicaciones como:
 
-- candump – Volcar paquetes CAN – mostrar, filtrar y registrar en disco.
-- canplayer – Reproducir archivos de registro CAN.
-- cansend – Enviar una sola trama.
-- cangen – Generar tráfico aleatorio.
-- canbusload – mostrar la utilización actual del bus CAN.
+- candump – Vuelca paquetes CAN – muestra, filtra y registra en disco.
+- canplayer – Reproduce archivos de registro CAN.
+- cansend – Envía una sola trama.
+- cangen – Genera tráfico aleatorio.
+- canbusload – muestra la utilización actual del bus CAN.
 
-El código fuente de CAN-utils se puede obtener del [repositorio de GitHub](https://github.com/linux-can/can-utils).
+El código fuente de CAN-utils se puede obtener desde el [repositorio de GitHub](https://github.com/linux-can/can-utils).
 
-**Paso 3.** Agregar información de configuración para dos reTerminals. Abrir el archivo **/boot/config.txt** con un editor y guardarlo después de agregar `dtoverlay=seeed-can-fd-hat-v2` al final, luego reiniciar reTerminal.
+**Paso 3.** Añada información de configuración para los dos reTerminal. Abra el archivo **/boot/config.txt** con un editor y guárdelo después de añadir `dtoverlay=seeed-can-fd-hat-v2` al final, luego reinicie reTerminal.
 
 :::note
-Sin un EEPROM de ID en el 'hat' que especifique el hardware, el kernel de Linux no descubrirá automáticamente el Controlador CAN en la interfaz SPI. Para cargar el controlador apropiado, debe especificar la configuración de superposición del árbol de dispositivos al arrancar.
+Sin una EEPROM de ID en el “hat” que especifique el hardware, el kernel de Linux no detectará automáticamente el controlador CAN en la interfaz SPI. Para cargar el controlador apropiado, debe especificar la configuración del device tree overlay en el arranque.
 :::
 
 ```sh
@@ -227,34 +227,34 @@ sudo nano /boot/config.txt
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image5.jpg"/></div>
 
-**Paso 4.** La interfaz CAN se comporta como una interfaz de red. Deberías poder obtener varias estadísticas usando ```ifconfig -a``` (configuración de interfaz).
+**Paso 4.** La interfaz CAN se comporta igual que una interfaz de red. Debería poder obtener varias estadísticas usando ```ifconfig -a``` (configuración de interfaz).
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image6.jpg"/></div>
 
-Usa el comando `cangen can0 -v` para enviar datos aleatorios y probar si la comunicación CAN funciona bien.
+Use el comando `cangen can0 -v` para enviar datos aleatorios y comprobar si la comunicación CAN funciona bien.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image7.jpg"/></div>
 
-**Paso 5.** Puedes activar manualmente la interfaz CAN usando:
+**Paso 5.** Puede activar manualmente la interfaz CAN usando:
 
 ```sh
 sudo ip link set can0 up type can bitrate 500000
 ```
 
-**Paso 6.** Descarga el [código](https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple) al reTerminal.
+**Paso 6.** Descargue el [code](https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple) a reTerminal.
 
 ```sh
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple
 ```
 
-Uno de los reTerminals compila y ejecuta el código que envía los datos.
+Uno de los reTerminal compila y ejecuta el código que envía los datos.
 
 ```sh
 cd Seeed_reTerminal_Bridge_CAN_exmaple/
 gcc cantransmit.c -o cantransmit
 ```
 
-Aquí está el código **cantransmit.c** para referencia.
+Aquí está el código **cantransmit.c** como referencia.
 
 ```c
 #include <stdio.h>
@@ -313,13 +313,13 @@ int main(int argc, char **argv)
 }
 ```
 
-Otra reTerminal compila y ejecuta el código que recibe los datos.
+Otro reTerminal compila y ejecuta el código que recibe los datos.
 
 ```sh
 gcc canreceive.c -o canreceive
 ```
 
-Aquí está el código **canreceive.c** para referencia.
+Aquí está el código **canreceive.c** como referencia.
 
 ```c
 #include <stdio.h>
@@ -384,17 +384,17 @@ int main(int argc, char **argv)
 }
 ```
 
-Puedes ver que los dos reTerminals envían y reciben datos exitosamente a través de la interfaz CAN.
+Puedes ver que los dos reTerminals envían y reciben datos correctamente a través de la interfaz CAN.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image8.jpg"/></div>
 
-Además de leer, es posible que quieras filtrar las tramas CAN que no son relevantes. Esto ocurre a nivel del controlador y puede ser más eficiente que leer cada trama en una aplicación de modo usuario.
+Además de la lectura, es posible que quieras filtrar las tramas CAN que no sean relevantes. Esto ocurre a nivel de controlador y puede ser más eficiente que leer cada trama en una aplicación en modo usuario.
 
 ```sh
 gcc canfilter.c -o canfilter
 ```
 
-Aquí está el código **canfilter.c** para referencia.
+Aquí tienes el código **canfilter.c** como referencia.
 
 ```c
 
@@ -475,38 +475,38 @@ int main(int argc, char **argv)
 ```
 
 :::note
-La mayoría de controladores CAN tienen filtros de aceptación y máscaras incluidos en silicio (hardware). Desafortunadamente, la arquitectura actual realiza el filtrado en el kernel y no es tan óptima, pero aún es mejor que pasar todas las tramas hasta la aplicación en modo usuario.
+La mayoría de los controladores CAN tienen filtros de aceptación y máscaras incluidos en el silicio (hardware). Desafortunadamente, la arquitectura actual realiza el filtrado en el kernel y no es tan óptima, pero sigue siendo mejor que pasar todas las tramas a la aplicación en modo usuario.
 :::
 
 ### **Comunicación RS485**
 
-RS485, también conocido como TIA-485(-A) o EIA-485, es un estándar que define las características eléctricas de drivers y receptores para uso en sistemas de comunicaciones serie. La señalización eléctrica es balanceada, y se soportan sistemas multipunto. Las redes de comunicaciones digitales que implementan el estándar pueden usarse efectivamente a largas distancias y en entornos eléctricamente ruidosos. Múltiples receptores pueden conectarse a dicha red en un bus lineal multidrop.
+RS485, también conocido como TIA-485(-A) o EIA-485, es un estándar que define las características eléctricas de los controladores y receptores para su uso en sistemas de comunicaciones serie. La señalización eléctrica es balanceada y se admiten sistemas multipunto. Las redes de comunicaciones digitales que implementan el estándar pueden utilizarse de forma eficaz a largas distancias y en entornos con ruido eléctrico. Se pueden conectar múltiples receptores a dicha red en un bus lineal multipunto.
 
-**Materiales Requeridos**
+**Materiales requeridos**
 
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) x1
 - [reTerminal E10-1](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html) x1
-- [Convertidor Industrial Aislado USB a RS485](https://www.seeedstudio.com/USB-TO-RS232--RS485--TTL-Industrial-Isolated-Converter-p-3231.html) y cable
+- [USB To RS485 Industrial Isolated Converter](https://www.seeedstudio.com/USB-TO-RS232--RS485--TTL-Industrial-Isolated-Converter-p-3231.html) y cable
 
 Este ejemplo introduce cómo usar el RS485 en el reTerminal E10-1.
 
-**Paso 1.** Dado que la función RS485 usa ttyS0, es necesario cerrar la función de interacción del sistema ttyS0 antes de comenzar.
+**Paso 1.** Dado que la función RS485 utiliza ttyS0, es necesario cerrar la función de interacción del sistema ttyS0 antes de comenzar.
 
 ```sh
 sudo raspi-config
 ```
 
-Selecciona **Interface Options**, **Serial port** en orden.
+Selecciona **Interface Options**, **Serial port** sucesivamente.
 
-En la siguiente pantalla se te preguntará si quieres que el shell de inicio de sesión sea accesible a través del puerto serie, selecciona **No**.
+En la siguiente pantalla se te preguntará si quieres que el login shell sea accesible por serial, selecciona **No**.
 
-Luego en "Do you want to use serial port hardware", asegúrate de que **Yes** esté seleccionado.
+Luego, en “Do you want to use serial port hardware”, asegúrate de que **Yes** esté seleccionado.
 
-Después de que reTerminal haya realizado los cambios, verás el siguiente texto aparecer en la pantalla.
+Después de que reTerminal haya realizado los cambios, verás que aparece el siguiente texto en la pantalla.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image9.jpg"/></div>
 
-**Paso 2.** Usa un cable para conectar el reTerminal E10-1 a la computadora a través de la interfaz RS485.
+**Paso 2.** Usa un cable para conectar el reTerminal E10-1 al ordenador a través de la interfaz RS485.
 
 A -> A
 B -> B
@@ -514,24 +514,24 @@ GND -> GND
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/rs485.jpg"/></div>
 
-**Paso 3.** Usa el comando `dmesg | grep tty` para ver el nombre del puerto serie. Determina el nombre del puerto serie para la comunicación RS485 con la computadora. Esto puede variar de computadora a computadora. En general, es **ttyS0**.
+**Paso 3.** Usa el comando `dmesg | grep tty` para ver el nombre del puerto serie. Determina el nombre del puerto serie para la comunicación RS485 con el ordenador. Esto puede variar de un ordenador a otro. En general, es **ttyS0**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image10.png"/></div>
 
-**Paso 4.** Descarga el [código](https://github.com/limengdu/Seeed_reTerminal_Bridge_RS485_exmaple) al reTerminal.
+**Paso 4.** Descarga el [code](https://github.com/limengdu/Seeed_reTerminal_Bridge_RS485_exmaple) en reTerminal.
 
 ```sh
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_RS485_exmaple
 cd Seeed_reTerminal_Bridge_RS485_exmaple/
 ```
 
-Abre el software del puerto serie en la computadora. Ejecuta el comando `sudo python3 rs485.py` para obtener los siguientes efectos.
+Abre el software de puerto serie en el ordenador. Ejecuta el comando `sudo python3 rs485.py` para obtener los siguientes efectos.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image11.png"/></div>
 
-Al mismo tiempo, también puedes enviar datos de 16 bytes al reTerminal a través del asistente de puerto serie dentro de los 5 segundos posteriores a recibir el mensaje.
+Al mismo tiempo, también puedes enviar datos de 16 bytes a reTerminal a través del asistente de puerto serie dentro de los 5 segundos posteriores a la recepción del mensaje.
 
-Aquí está el código **rs485.py** para referencia.
+Aquí tienes el código **rs485.py** como referencia.
 
 ```c
 import serial, time
@@ -593,41 +593,41 @@ else:
 
 ### **Comunicación RS232**
 
-RS-232 o Estándar Recomendado 232 es un estándar introducido originalmente en 1960 para la transmisión de comunicación serie de datos. Define formalmente las señales que conectan entre un DTE y un DCE. Comparado con interfaces posteriores como RS-422, RS-485 y Ethernet, RS-232 tiene menor velocidad de transmisión, longitud máxima de cable más corta, mayor oscilación de voltaje, conectores estándar más grandes, sin capacidad multipunto y capacidad multidrop limitada.
+RS-232 o Recommended Standard 232 es un estándar introducido originalmente en 1960 para la transmisión de datos por comunicación serie. Define formalmente las señales que conectan un DTE y un DCE. En comparación con interfaces posteriores como RS-422, RS-485 y Ethernet, RS-232 tiene menor velocidad de transmisión, menor longitud máxima de cable, mayor oscilación de voltaje, conectores estándar más grandes, sin capacidad multipunto y capacidad multidrop limitada.
 
-**Materiales Requeridos**
+**Materiales requeridos**
 
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) x1
 - [reTerminal E10-1](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html) x1
-- [Convertidor Industrial Aislado USB a RS232](https://www.seeedstudio.com/USB-TO-RS232--RS485--TTL-Industrial-Isolated-Converter-p-3231.html) y cable
+- [USB To RS232 Industrial Isolated Converter](https://www.seeedstudio.com/USB-TO-RS232--RS485--TTL-Industrial-Isolated-Converter-p-3231.html) y cable
 
 Este ejemplo introduce cómo usar el RS232 en el reTerminal E10-1.
 
-**Paso 1.** Dado que la función RS485 usa ttyS0, es necesario cerrar la función de interacción del sistema ttyS0 antes de comenzar.
+**Paso 1.** Dado que la función RS485 utiliza ttyS0, es necesario cerrar la función de interacción del sistema ttyS0 antes de comenzar.
 
 ```sh
 sudo raspi-config
 ```
 
-Selecciona **Interface Options**, **Serial port** en orden.
+Selecciona **Interface Options**, **Serial port** sucesivamente.
 
-En la siguiente pantalla se te preguntará si quieres que el shell de inicio de sesión sea accesible a través del puerto serie, selecciona **No**.
+En la siguiente pantalla se te preguntará si quieres que el login shell sea accesible por serial, selecciona **No**.
 
-Luego en "Do you want to use serial port hardware", asegúrate de que **Yes** esté seleccionado.
+Luego, en “Do you want to use serial port hardware”, asegúrate de que **Yes** esté seleccionado.
 
-Después de que reTerminal haya realizado los cambios, verás el siguiente texto aparecer en la pantalla.
+Después de que reTerminal haya realizado los cambios, verás que aparece el siguiente texto en la pantalla.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image9.jpg"/></div>
 
-**Paso 2.** Usa un cable para conectar el reTerminal E10-1 a la computadora a través de la interfaz RS232.
+**Paso 2.** Usa un cable para conectar el reTerminal E10-1 al ordenador a través de la interfaz RS232.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/rs232.jpg"/></div>
 
-**Paso 3.** Usa el comando `dmesg | grep tty` para ver el nombre del puerto serie. Determina el nombre del puerto serie para la comunicación RS232 con la computadora. Esto puede variar de computadora a computadora. En general, es **ttyS0**.
+**Paso 3.** Usa el comando `dmesg | grep tty` para ver el nombre del puerto serie. Determina el nombre del puerto serie para la comunicación RS232 con el ordenador. Esto puede variar de un ordenador a otro. En general, es **ttyS0**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image12.jpg"/></div>
 
-**Paso 4.** Descarga el [código](https://github.com/limengdu/Seeed_reTerminal_Bridge_RS232_exmaple) al reTerminal.
+**Paso 4.** Descarga el [code](https://github.com/limengdu/Seeed_reTerminal_Bridge_RS232_exmaple) en reTerminal.
 
 ```sh
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_RS232_exmaple
@@ -642,7 +642,7 @@ sudo python3 rs232_send.py
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image13.jpg"/></div>
 
-Aquí está el código **rs232_send.py** para referencia.
+Aquí tienes el código **rs232_send.py** como referencia.
 
 ```python
 #!/usr/bin/env python
@@ -669,7 +669,7 @@ except KeyboardInterrupt:
     exit()
 ```
 
-Otra reTerminal compila y ejecuta el código que recibe los datos.
+Otro reTerminal compila y ejecuta el código que recibe los datos.
 
 ```sh
 sudo python3 rs232_receive.py
@@ -677,7 +677,7 @@ sudo python3 rs232_receive.py
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image14.jpg"/></div>
 
-Aquí está el código **rs232_receive.py** para referencia.
+Aquí está el código **rs232_receive.py** como referencia.
 
 ```python
 #!/usr/bin/env python
@@ -704,14 +704,14 @@ except KeyboardInterrupt:
 
 ### **Ethernet**
 
-**Materiales Requeridos**
+**Materiales requeridos**
 
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) x1
 - [reTerminal E10-1](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html) x1
 
-Este ejemplo presenta cómo probar la conexión ethernet en reTerminal E10-1.
+Este ejemplo introduce cómo probar la conexión ethernet en reTerminal E10-1.
 
-**Paso 1.** Descarga el **iperf3** para reTerminal y computadora.
+**Paso 1.** Descarga **iperf3** para reTerminal y ordenador.
 
 ```sh
 git clone https://github.com/esnet/iperf.git
@@ -726,13 +726,13 @@ sudo make
 sudo make install
 ```
 
-**Paso 3.** Usar reTerminal como servidor.
+**Paso 3.** Usa reTerminal como servidor.
 
 ```sh
 iperf3 -s
 ```
 
-Usa una computadora para probar la velocidad de red conectada al reTerminal. En este momento, mantén la computadora y el reTerminal en la misma red de área local.
+Usa un ordenador para probar la velocidad de red conectada a reTerminal. En este momento, mantén el ordenador y el reTerminal en la misma red de área local.
 
 ```sh
 iperf3 -c 192.168.xxx.xxx
@@ -740,7 +740,7 @@ iperf3 -c 192.168.xxx.xxx
 
 *La dirección "192.168.xxx.xxx" anterior es la dirección del reTerminal.*
 
-Por ejemplo, en mi configuración la dirección ip del reTerminal es ```192.168.31.187```:
+Por ejemplo, en mi configuración la dirección IP de reTerminal es ```192.168.31.187```:
 
 ```sh
 iperf3 -c 192.168.31.187
@@ -752,7 +752,7 @@ Si necesitas completar más funciones de prueba de red, puedes consultar el uso 
 
 ### **WM1302 (USB/SPI) LoRaWAN Gateway**
 
-**Materiales Requeridos**
+**Materiales requeridos**
 
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) x1
 - [reTerminal E10-1](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html) x1
@@ -762,9 +762,9 @@ La diferencia entre el módulo USB y SPI se muestra a continuación:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa.png"/></div>
 
-Este ejemplo presenta cómo usar WM1302 LoRaWAN Gateway en reTerminal E10-1.
+Este ejemplo introduce cómo usar WM1302 LoRaWAN Gateway en reTerminal E10-1.
 
-**Paso 1.** Instala el módulo WM1302 en el reTerminal E10-1, y luego fíjalo con tornillos.
+**Paso 1.** Instala el módulo WM1302 en el reTerminal E10-1 y luego fíjalo con tornillos.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/039.jpg"/></div>
 
@@ -774,16 +774,16 @@ Luego gira el botón junto al ventilador a PCIE.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/045.jpg"/></div>
 
-**Paso 2.** escribe `sudo raspi-config` en la línea de comandos para abrir la Herramienta de Configuración de Software de Raspberry Pi:
+**Paso 2.** escribe `sudo raspi-config` en la línea de comandos para abrir la herramienta Rasberry Pi Software Configuration:
 
 - Selecciona Interface Options
 - Selecciona SPI, luego selecciona **Yes** para habilitarlo
 - Selecciona I2C, luego selecciona **Yes** para habilitarlo
 - Selecciona Serial Port, luego selecciona **No** para "Would you like a login shell..." y selecciona **Yes** para "Would you like the serial port hardware..."
 
-Después de esto, por favor reinicia Raspberry Pi para asegurar que estas configuraciones funcionen.
+Después de esto, reinicia Raspberry Pi para asegurarte de que estos ajustes funcionen.
 
-**Paso 3.** Descarga el [código WM1302](https://github.com/Lora-net/sx1302_hal) al reTerminal y compílalo.
+**Paso 3.** Descarga el [código WM1302](https://github.com/Lora-net/sx1302_hal) en reTerminal y compílalo.
 
 ```sh
 git clone https://github.com/Lora-net/sx1302_hal
@@ -791,14 +791,14 @@ cd sx1302_hal
 sudo make
 ```
 
-**Paso 4.** Configura el script de reinicio. Primero descarga el archivo a **sx1302_hal/packet_forwarder** usando el comando
+**Paso 4.** Configura el script de reinicio. Primero descarga el archivo en **sx1302_hal/packet_forwarder** usando el comando
 
 ```
 cd sx1302_hal/packet_forwarder
 wget https://files.seeedstudio.com/wiki/reTerminal_Bridge/reset_lgw.sh
 ```
 
-Luego ejecuta la siguiente prueba de código según tu versión de WM1302.
+Luego ejecuta la siguiente prueba de código de acuerdo con tu versión de WM1302.
 
 ```sh
 USB version
@@ -816,7 +816,7 @@ $ ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image20.jpg"/></div>
 
-**Paso 5.** Regístrate en el [sitio web de TTN](https://www.thethingsnetwork.org/) e inicia sesión en tu cuenta. Si no tienes una, por favor regístrate. Luego ingresa a la interfaz de Gateway y haz clic en "Get Starting"
+**Paso 5.** Regístrate en el [sitio web de TTN](https://www.thethingsnetwork.org/) e inicia sesión en tu cuenta. Si no tienes una, por favor regístrate. Luego entra en la interfaz Gateway y haz clic en "Get Starting"
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa1.png"/></div>
 
@@ -828,11 +828,11 @@ Elige "Go to gateways"
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/reTerminalLoRa3.png"/></div>
 
-Haz clic en **Add gateway** para agregar el dispositivo:
+Haz clic en **Add gateway** para añadir el dispositivo:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image22.jpg"/></div>
 
-Entre ellos, el valor de **Gateway EUI** se mostrará en el registro cuando se ejecute la prueba en el **paso 4**. El plan de frecuencia en las opciones de Lora (tomando la versión europea como ejemplo) selecciona **Europe 863-870 MHz (SF9 for RX2 - recommended)**. Luego haz clic en **Create gateway**.
+Entre ellos, el valor de **Gateway EUI** se mostrará en el registro cuando se ejecute la prueba en el **paso 4**. El Frequency plan en las opciones de Lora (tomando la versión europea como ejemplo) selecciona **Europe 863-870 MHz (SF9 for RX2 - recommended)**. Luego haz clic en **Create gateway**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image23.jpg"/></div>
 
@@ -843,7 +843,7 @@ Si es la versión USB, edita **global_conf.json.sx1250.EU868.USB** en **sx1302_h
 
 Busca **gateway_conf** en el archivo correspondiente.
 
-- Luego cambia el **gateway_ID** por el **Gateway EUI** completado en la página web.
+- Luego cambia el **gateway_ID** posterior al **Gateway EUI** rellenado en la página web.
 
 - **server_address** se modifica a la **Gateway Server address** en la página web.
 
@@ -851,7 +851,7 @@ Busca **gateway_conf** en el archivo correspondiente.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image24.jpg"/></div>
 
-**Paso 7.** Ejecuta el comando del **paso 4** nuevamente, y podrás ver la información de conexión del dispositivo en la página web más tarde.
+**Paso 7.** Ejecuta de nuevo el comando en el **paso 4** y luego podrás ver la información de conexión del dispositivo en la página web.
 
 ```sh
 USB version
@@ -866,20 +866,20 @@ $ ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 <div align="center"><img width={900} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image25.jpg"/></div>
 
 :::note
-El tutorial anterior está basado en la versión europea del WM1302. Si estás usando la versión estadounidense del WM1302, los pasos son generalmente los mismos, pero los archivos a modificar y ejecutar en el tutorial serán diferentes. El nombre del archivo se refiere a la versión que compraste y las [siguientes páginas](https://github.com/Lora-net/sx1302_hal/tree/master/packet_forwarder).
+El tutorial anterior se basa en la versión europea de WM1302. Si estás utilizando la versión estadounidense del WM1302, los pasos son en general los mismos, pero los archivos a modificar y ejecutar en el tutorial serán diferentes. El nombre del archivo se refiere a la versión que compraste y a las [siguientes páginas](https://github.com/Lora-net/sx1302_hal/tree/master/packet_forwarder).
 :::
 
-### **Expansión de Disco Duro**
+### **Ampliación de disco duro**
 
-**Materiales Requeridos**
+**Materiales requeridos**
 
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) x1
 - [reTerminal E10-1](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html) x1
 - Conector M.2 B key x1
 
-Este ejemplo introduce cómo instalar y verificar el funcionamiento del disco duro en reTerminal E10-1.
+Este ejemplo introduce cómo instalar y comprobar el funcionamiento del disco duro en reTerminal E10-1.
 
-**Paso 1.** Abre la cubierta trasera del reTerminal E10-1, inserta el SSD M.2 en el Conector Mini-PCIe y fíjalo con tornillos. Cierra la cubierta trasera, conecta el reTerminal y enciéndelo.
+**Paso 1.** Abre la tapa trasera del reTerminal E10-1, inserta el M.2 SSD en el Mini-PCIe Connector y fíjalo con tornillos. Cierra la tapa trasera, conecta el reTerminal y enciéndelo.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/040.jpg"/></div>
 
@@ -889,7 +889,7 @@ Luego gira el botón junto al ventilador a M.2.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/046.jpg"/></div>
 
-**Paso 2.** Ingresa el comando para ver si el dispositivo de almacenamiento SSD es detectado.
+**Paso 2.** Introduce el comando para ver si se detecta el dispositivo de almacenamiento SSD.
 
 ```sh
 sudo fdisk -l
@@ -912,20 +912,20 @@ $ sudo dd if=/dev/zero of=/dev/sda3 bs=512k count=500
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/28.jpg"/></div>
 
 :::note
-Asegúrate de estar usando M.2 B key.
+Asegúrate de que estás usando M.2 B key.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/add_pic_1.png"/></div>
 :::
 
-#### Formatear Disco Duro
+#### Formatear disco duro
 
 :::caution
-El siguiente paso borrará todos tus datos del SSD que has conectado al reTerminal E10-1, también si has seleccionado el medio de unidad incorrecto, así que por favor asegúrate de haber seguido los pasos a continuación cuidadosamente y asegúrate de entender el propósito de cada uno de los pasos.
+El siguiente paso borrará todos tus datos del SSD que has conectado al reTerminal E10-1; además, si has seleccionado el medio de unidad equivocado, así que asegúrate de haber seguido cuidadosamente los pasos a continuación y de comprender el propósito de cada uno de ellos.
 :::
 
-- **Herramientas de Software utilizadas**: ```lsblk```, ```fdisk```, ```mkfs```, ```mount```, ```umount```
+- **Herramientas de software utilizadas**: ```lsblk```, ```fdisk```, ```mkfs```, ```mount```, ```umount```
 
-**Paso 1.** Encuentra el Nombre de tu dispositivo SSD
-una vez que hayas conectado tu SSD en el reTerminal E10-1 y lo hayas conectado al reTerminal, abre la terminal una vez que el sistema se haya encendido, luego escribe el siguiente comando:
+**Paso 1.** Encuentra el nombre de tu dispositivo SSD
+una vez que hayas conectado tu SSD en el reTerminal E10-1 y lo hayas conectado al reTerminal, abre la terminal una vez que el sistema se haya encendido y luego escribe el siguiente comando:
 
 ```sh
 lsblk
@@ -938,10 +938,10 @@ deberías ver algo similar:
 **Paso 2.** Usar fdisk para particionar tu SSD
 
 :::caution
-Perderás los datos en el SSD que has conectado al reTerminal E10-1, después de seguir este paso.
+Perderás los datos en el SSD que has conectado al reTerminal E10-1 después de seguir este paso.
 :::
 
-Siguiendo los pasos anteriores, escribe el siguiente comando en la terminal, nota el /dev/**sdX** donde la **X** es el **Nombre del dispositivo SSD** que has elegido para formatear, asegúrate de que no haya otras unidades USB conectadas al reTerminal, a menos que estés seguro del nombre correcto del dispositivo.
+Siguiendo los pasos anteriores, escribe el siguiente comando en la terminal, ten en cuenta el /dev/**sdX** donde la **X** es el **nombre del dispositivo SSD** que has elegido para formatear; asegúrate de que no haya otras unidades USB conectadas al reTerminal, a menos que estés seguro del nombre de dispositivo correcto.
 
 ```sh
 sudo fdisk /dev/sdX
@@ -957,7 +957,7 @@ deberías ver algo similar a lo que se muestra a continuación:
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/fdisk.png"/></div>
 
-En el prompt de fdisk:
+En el indicador de fdisk:
 
 ```bash
 Welcome to fdisk (util-linux 2.36.1).
@@ -970,7 +970,7 @@ Command (m for help):
 
 Primero escribe **```d```** para eliminar las particiones en el dispositivo SSD.
 
-Luego seguido de escribir **```n```** para crear una nueva partición en el dispositivo SSD.
+Luego escribe **```n```** para crear una nueva partición en el dispositivo SSD.
 
 Después de eso deberías ver el siguiente mensaje:
 
@@ -980,33 +980,33 @@ Partition type
    e   extended (container for logical partitions)
 ```
 
-Escribe **```p```** para crear una partición primaria, luego seguido de **```1```**.
+Escribe **```p```** para crear una partición primaria, y luego **```1```**.
 
-Luego para el primer sector, puedes presionar **ENTER** para usar por defecto el sector inicial de la unidad, o podrías especificar dónde iniciar la partición 1 en tu SSD en una ubicación de sector específica. En mi caso simplemente presioné Enter para el valor por defecto.
+Luego, para el primer sector, puedes presionar **ENTER** para usar por defecto el sector inicial de la unidad, o puedes especificar dónde empezar la partición 1 en tu SSD en una ubicación de sector específica. En mi caso, simplemente presioné Enter para el valor predeterminado.
 
-Luego seguido de seleccionar el último sector para la partición 1, si quieres utilizar todo el espacio de la unidad para la partición 1 simplemente presiona **ENTER**, o puedes escribir la ubicación de sector específica para el final de la partición 1, esto también significa el tamaño de almacenamiento de la partición 1 que estás creando.
+Después selecciona el último sector para la partición 1; si quieres utilizar todo el espacio de la unidad para la partición 1 simplemente presiona **ENTER**, o puedes escribir la ubicación de sector específica para el final de la partición 1, esto también significa el tamaño de almacenamiento de la partición 1 que estás creando.
 
 Luego presiona **```Y```** para eliminar la firma.
 
-Luego seguido de **```w```** para escribir los cambios y luego salir del prompt de fdisk.
+Después escribe **```w```** para guardar los cambios y salir del indicador de fdisk.
 
 Aquí hay un ejemplo del proceso:
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/fdisk_sample.png"/></div>
 
-**Paso 3.** Formatear tu partición SSD al formato ext4
-Ahora deberías crear una partición/es para tu SSD, necesitas formatear la partición/es al formato ext4 para poder montarla y usarla. Para hacerlo usando mkfs.ext4:
+**Paso 3.** Formatea tu partición SSD al formato ext4
+Ahora que ya has creado una o varias particiones en tu SSD, necesitas formatear la(s) partición(es) al formato ext4 para poder montarla(s) y usarla(s). Para hacerlo usando mkfs.ext4:
 
 ```bash
 sudo mkfs.ext4 /dev/sdXX
 ```
 
-de manera similar donde ```sdXX``` es el nombre del dispositivo de tu SSD, en mi caso uso ```/dev/sda1``` como:
+de forma similar, donde ```sdXX``` es el nombre de dispositivo de tu SSD, en mi caso uso ```/dev/sda1``` así:
 
 ```bash
 sudo mkfs.ext4 /dev/sda1
 ```
 
-y en el ```Proceed anyway? (y,N)``` escribe **```y```** y **```ENTER```**, luego espera un par de segundos hasta que el proceso termine.
+y en ```Proceed anyway? (y,N)``` escribe **```y```** y **```ENTER```**, luego espera un par de segundos hasta que el proceso termine.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/mkfs.png"/></div>
 
@@ -1019,9 +1019,9 @@ sudo mkdir /media/"YOUR USER NAME"/"THE NAME YOU WANT TO MOUNT THE DRIVE"
 sudo mount /dev/sdXX /media/"YOUR USER NAME"/"THE NAME YOU WANT TO MOUNT THE DRIVE"
 ```
 
-donde **"YOUR USER NAME"** es el nombre de usuario de tu sistema reTerminal y **"THE NAME YOU WANT TO MOUNT THE DRIVE"** es el nombre que creas para montar tu unidad, el **/dev/sdXX** es el nombre del dispositivo de la partición SSD que quieres montar.
+donde **"YOUR USER NAME"** es el nombre de usuario de tu sistema reTerminal y **"THE NAME YOU WANT TO MOUNT THE DRIVE"** es el nombre que creas para montar tu unidad, **/dev/sdXX** es el nombre de dispositivo de la partición SSD que quieres montar.
 
-por ejemplo en mi caso:
+por ejemplo, en mi caso:
 
 ```bash
 sudo mkdir /media/seeed/SSD
@@ -1029,7 +1029,7 @@ sudo mkdir /media/seeed/SSD
 sudo mount /dev/sda1 /media/seeed/SSD/
 ```
 
-Para verificar si el SSD se montó exitosamente mediante:
+Para comprobar si el SSD se ha montado correctamente:
 
 ```bash
 lsblk
@@ -1041,14 +1041,14 @@ deberías ver una salida similar a la mía, donde **```/dev/sda1```** está mont
 
 ### **Módulo 4G EC25-EUX**
 
-**Materiales Requeridos**
+**Materiales requeridos**
 
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) x1
 - [reTerminal E10-1](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html) x1
 - Módulo 4G EC25-EUX x1
 - Tarjeta SIM x1
 
-**Paso 1.** Abre la cubierta trasera del reTerminal E10-1, luego instala el EC25-EUX y la tarjeta SIM en el reTerminal E10-1.
+**Paso 1.** Abre la tapa trasera del reTerminal E10-1 y luego instala el EC25-EUX y la tarjeta SIM en el reTerminal E10-1.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/039.jpg"/></div>
 
@@ -1056,11 +1056,11 @@ deberías ver una salida similar a la mía, donde **```/dev/sda1```** está mont
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/042.jpg"/></div>
 
-Luego gira el botón junto al ventilador a PCIE.
+Luego gira el interruptor junto al ventilador a PCIE.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/045.jpg"/></div>
 
-**Paso 2.** Verifica si el EC25-EUX es detectado usando ```lsusb```
+**Paso 2.** Comprueba si el EC25-EUX es detectado usando ```lsusb```
 
 ```
 lsusb
@@ -1081,50 +1081,50 @@ sudo apt install minicom
 sudo minicom -D /dev/ttyUSB2 -b 1152008n1
 ```
 
-una vez que se abra la conexión serie, escriba AT y presione 'Enter', y debería ver OK.
+una vez que se abra la conexión serie, escribe AT y presiona 'Enter', y deberías ver OK.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image31.png"/></div>
 
 **Paso 5.** Habilitar el módulo 4G para conectarse a la red 4G
 
-Por favor inserte la tarjeta SIM habilitada para 4G en la ranura de la tarjeta SIM en el soporte de la batería Li-Po, donde la ranura de la tarjeta SIM soporta tarjetas micro SIM, así que si tiene una tarjeta nano SIM necesita encontrar un adaptador de tarjeta micro SIM para convertir a tarjeta micro SIM.
+Por favor, coloca la tarjeta SIM habilitada para 4G en la ranura de la tarjeta SIM en el soporte de la batería Li-Po, donde la ranura de la tarjeta SIM admite tarjeta micro SIM, así que si tienes una tarjeta nano SIM necesitas encontrar un adaptador de tarjeta micro SIM para convertirla a micro SIM.  
 
-En la misma ventana serie de minicom por favor escriba:
+En la misma ventana serie de minicom escribe:
 
 ```sh
 AT+QCFG="usbnet"
 ```
 
-Devolverá algo como ```+QCFG: "usbnet",0,``` pero necesitamos que esté configurado en 1 (modo ECM), así que ingresa el siguiente comando:
+Devolverá algo como ```+QCFG: "usbnet",0,``` pero necesitamos que esté configurado a 1 (modo ECM), así que introduce el siguiente comando:
 
 ```sh
 AT+QCFG="usbnet",1
 ```
 
-Luego ingresa el siguiente comando para forzar el reinicio del módem:
+Luego introduce el siguiente comando para forzar el reinicio del módem:
 
 ```sh
 AT+CFUN=1,1
 ```
 
-Luego podrías reiniciar o esperar un tiempo para que el módulo obtenga internet de tu operador de tarjeta SIM.
+Después puedes reiniciar o esperar un rato para que el módulo obtenga internet de tu operador de tarjeta SIM.
 
-También puedes usar el comando `ifconfig` para consultar el estado de red del reTerminal.
+También puedes usar el comando `ifconfig` para consultar el estado de red de reTerminal.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image33.png"/></div>
 
 ### **Audio**
 
-Para satisfacer las necesidades multimedia de diferentes usuarios, se instalan un módulo de altavoz y dos módulos de micrófono dentro del reTermnal E10-1 para lograr las necesidades de reproducir sonido y grabar.
+Con el fin de satisfacer las necesidades multimedia de diferentes usuarios, se instala un módulo de altavoz y dos módulos de micrófono dentro del reTermnal E10-1 para lograr las funciones de reproducción de sonido y grabación.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/028.jpg"/></div>
 
-**Materiales Requeridos**
+**Materiales requeridos**
 
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) x1
 - [reTerminal E10-1](https://www.seeedstudio.com/reTerminal-E10-1-p-5376.html) x1
 
-**Paso 1.** Descargar e instalar el controlador.
+**Paso 1.** Descarga e instala el controlador.
 
 ```sh
 git clone https://github.com/Seeed-Projects/seeed-voicecard.git
@@ -1132,13 +1132,13 @@ cd seeed-voicecard
 sudo ./install.sh
 ```
 
-**Paso 2.** Añadir elementos de configuración. Añadir `dtoverlay=seeed-2mic-voicecard` al `/boot/config.txt`. Luego reiniciar el dispositivo.
+**Paso 2.** Añade elementos de configuración. Añade `dtoverlay=seeed-2mic-voicecard` a `/boot/config.txt`. Luego reinicia el dispositivo.
 
 ```sh
 sudo sed -i '$s/$/\ndtoverlay=seeed-2mic-voicecard/'  /boot/config.txt
 ```
 
-para verificar si has modificado `/boot/config.txt` puedes usar el editor de texto `nano` para abrir el archivo y desplazarte hasta la última línea para verificar:
+para comprobar si has modificado `/boot/config.txt` puedes usar el editor de texto `nano` para abrir el archivo y desplazarte hasta la última línea para comprobarlo:
 
 ```bash
 nano /boot/config.txt
@@ -1146,13 +1146,13 @@ nano /boot/config.txt
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image35.jpg"/></div>
 
-Una vez que se haya añadido al `/boot/config.txt` puedes reiniciar ahora:
+Una vez que se haya añadido a `/boot/config.txt` puedes reiniciar ahora:
 
 ```bash
 sudo reboot
 ```
 
-Después de esperar el reinicio, usa el comando `arecord -l` para ver el dispositivo de grabación.
+Después de esperar al reinicio, usa el comando `arecord -l` para ver el dispositivo de grabación.
 
 ```bash
 arecord -L
@@ -1169,18 +1169,18 @@ arecord -Dhw:0,0 -d 10 -f cd -r 44100 -c 2 -t wav test.wav
 ```
 
 :::note
-**Análisis de Parámetros**
+**Análisis de parámetros**
 
-- **-D** especifica el dispositivo de grabación, 0,0 significa tarjeta 0 dispositivo 0, que es bcm2835-i2s-wm8960-hifi wm8960-hifi-0.
+- **-D** especifica el dispositivo de grabación, 0,0 significa card 0 device 0, que es bcm2835-i2s-wm8960-hifi wm8960-hifi-0.
 - **-d** especifica la duración de la grabación, en segundos.
-- **-f** especifica el formato de grabación, solo soporta cd, cdr, dat.
+- **-f** especifica el formato de grabación, solo admite cd, cdr, dat.
 - **-r** especifica la frecuencia de muestreo en Hz.
 - **-c** especifica el número de canales.
 - **-t** especifica el formato de archivo generado.
 
 :::
 
-**Paso 4.** Verificar el dispositivo de reproducción.
+**Paso 4.** Comprueba el dispositivo de reproducción.
 
 ```sh
 aplay -l
@@ -1188,7 +1188,7 @@ aplay -l
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/031.png"/></div>
 
-**Paso 5.** Ajusta el volumen apropiado para reproducir el sonido.
+**Paso 5.** Ajusta el volumen adecuado para reproducir el sonido.
 
 ```sh
 sudo alsamixer
@@ -1202,50 +1202,43 @@ sudo aplay -Dhw:0 test.wav
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image39.jpg"/></div>
 
-## Recursos
-
-## Preguntas Frecuentes
+## Preguntas frecuentes
 
 1. ¿Qué tipo de baterías 18650 son compatibles?
 
 Respuesta: Se recomienda Panasonic NCR18650B 3.6V 3400mAh.
 
-2. ¿Las baterías necesitan tener su propia protección contra sobrecorriente/subtensión/sobretensión?
+2. ¿Las baterías necesitan tener su propia protección de sobrecorriente/subtensión/sobretensión?
 
-Respuesta: No, porque reTerminal E10-1 tiene circuito de protección de batería
+Respuesta: No, porque reTerminal E10-1 tiene un circuito de protección de batería.
 
 3. ¿Qué modelo de controlador CAN y RS485 utiliza?
 
 Respuesta:
 
-- Controlador 485：TP485E
-- Controlador CAN：MCP2518FDT-E/QBB
+- Controlador 485: TP485E
+- Controlador CAN: MCP2518FDT-E/QBB
 
-4. Instalé E10 ayer, ¿la información de la batería (nivel de carga) es correcta? la muestra en rojo (0%) incluso si acabo de sacarlas del cargador.
+4. Instalé el E10 ayer, ¿es correcta la información de la batería (nivel de carga)? La muestra en rojo (0%) incluso si acabo de sacarlas del cargador.
 
 ```
 Kernel: 5.10.103-v8+ aarch64 bits: 64 Console: tty 0 Distro: Debian GNU/Linux 10
 ```
 
-Función de visualización de energía: aún no desarrollada, pero hemos recibido tu sugerencia y programaremos el desarrollo de esta función
+Función de visualización de energía: aún no desarrollada, pero hemos escuchado tu opinión y programaremos el desarrollo de esta función.
 
-5. ¿La extensión reterminal proporciona otro puerto ethernet (separado) --> así tenemos dos puertos ethernet?
+5. ¿La extensión reTerminal proporciona otro puerto Ethernet (separado) --> de modo que tengamos dos puertos Ethernet?
 
 Estos dos puertos se pueden usar simultáneamente sin afectarse entre sí.
 
-6. ¿El RS232 y RS485 son independientes/separados (a veces, en algunos hardware, solo puedes usar uno...)
+6. ¿El RS232 y el RS485 son independientes/separados (a veces, en cierto hardware, solo puedes usar uno ...)?
 
-Solo puedes usar RS232 o RS485 a la vez.
+Solo puedes usar RS232 o RS485 en un momento dado.
 
-## Recursos
 
-- [Archivo esquemático formato DSN](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge.DSN)
-- [Archivo de diseño de placa PCB](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge.brd)
-- [Versión PDF del esquemático](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge_SCH.pdf)
+## Soporte técnico y debate sobre el producto
 
-## Soporte Técnico y Discusión de Productos
-
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

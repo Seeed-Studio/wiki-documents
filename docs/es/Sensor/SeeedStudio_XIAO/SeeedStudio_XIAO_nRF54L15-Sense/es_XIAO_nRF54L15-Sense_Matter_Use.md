@@ -20,22 +20,22 @@ import Steppers from '@site/src/components/utils/Stepper';
 
 ## Introducción
 
-El nRF54L15 de Nordic Semiconductor es un SoC inalámbrico de ultra bajo consumo de próxima generación diseñado para el Internet de las Cosas. Soporta múltiples protocolos, incluyendo Matter, Thread, Zigbee, Bluetooth LE y NFC, permitiendo a los desarrolladores construir dispositivos domésticos inteligentes interoperables y preparados para el futuro.
+El nRF54L15 de Nordic Semiconductor es un SoC inalámbrico de ultra bajo consumo de nueva generación diseñado para el Internet de las Cosas. Es compatible con múltiples protocolos, incluidos Matter, Thread, Zigbee, Bluetooth LE y NFC, lo que permite a los desarrolladores crear dispositivos de hogar inteligente interoperables y preparados para el futuro.
 
-Con el auge de Matter como estándar de conectividad unificado promovido por la Connectivity Standards Alliance (CSA), el nRF54L15 proporciona una plataforma de desarrollo robusta para explorar y validar aplicaciones Matter. Su alto rendimiento, bajo consumo de energía y radio multiprotocolo integrado lo hacen muy adecuado tanto para productos domésticos inteligentes de consumo como para dispositivos IoT industriales.
+Con el auge de Matter como un estándar de conectividad unificado promovido por la Connectivity Standards Alliance (CSA), el nRF54L15 proporciona una plataforma de desarrollo sólida para explorar y validar aplicaciones Matter. Su alto rendimiento, bajo consumo de energía y radio multiprotocolo integrada lo hacen muy adecuado tanto para productos de hogar inteligente de consumo como para dispositivos IoT industriales.
 
-En esta documentación, recorreremos las aplicaciones de ejemplo de Matter disponibles en el Nordic SDK para el nRF54L15. Estos ejemplos demuestran características clave como la incorporación de dispositivos, comunicación segura e interacción con ecosistemas comunes como Apple HomeKit, Google Home y Amazon Alexa.
+En esta documentación, recorreremos los ejemplos de aplicaciones Matter disponibles en el SDK de Nordic para el nRF54L15. Estos ejemplos demuestran funciones clave como la incorporación del dispositivo, la comunicación segura y la interacción con ecosistemas comunes como Apple HomeKit, Google Home y Amazon Alexa.
 
 
-## Prerrequisitos
+## Requisitos previos
 
-Para comenzar a desarrollar una aplicación Matter en el XIAO nRF54L15, asegúrese de que los siguientes componentes de hardware y software estén preparados y listos.
+Para comenzar a desarrollar una aplicación Matter en la XIAO nRF54L15, asegúrate de que los siguientes componentes de hardware y software estén preparados y listos.
 
 ### Hardware
 
 - Placa Seeed Studio XIAO nRF54L15.
-- Hub Matter compatible (ej., [Amazon - Echo Dot](https://www.amazon.com/Amazon-vibrant-helpful-routines-Charcoal/dp/B09B8V1LZ3?th=1)) para conectar a la red Matter.
-- Controlador Matter (ej., Amazon Alexa App) para gestionar e interactuar con su dispositivo habilitado para Matter
+- Matter Hub compatible (por ejemplo, [Amazon - Echo Dot](https://www.amazon.com/Amazon-vibrant-helpful-routines-Charcoal/dp/B09B8V1LZ3?th=1)) para conectarse a la red Matter.
+- Matter Controller (por ejemplo, Amazon Alexa App) para gestionar e interactuar con tu dispositivo compatible con Matter
 
 <div class="table-center">
  <table align="center">
@@ -65,24 +65,24 @@ Para comenzar a desarrollar una aplicación Matter en el XIAO nRF54L15, asegúre
 ### Software
 
 :::tip
-Antes de ejecutar el ejemplo, asegúrese de que el XIAO nRF54L15 haya sido configurado en el nRF Connect SDK. Si no se ha completado, consulte esta guía [Wiki](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/).
+Antes de ejecutar el ejemplo, asegúrate de que la XIAO nRF54L15 haya sido configurada en el nRF Connect SDK. Si aún no lo has hecho, consulta esta guía de [Wiki](https://wiki.seeedstudio.com/es/xiao_nrf54l15_sense_getting_started/).
 :::
 
-## Inicio Rápido con Ejemplo Matter
+## Inicio rápido con el ejemplo Matter
 
 ### Crear una rutina Matter
-En la extensión nRF Connect para VSCode, seleccione: Create New Application → Copy Example → Ingrese "matter" → Seleccione Matter Thermostat
+En la extensión nRF Connect para VSCode, selecciona: Create New Application → Copy Example → introduce “matter” → selecciona Matter Thermostat
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/matter_54l15.png" style={{width:900, height:'auto'}}/></div>
 
 
-Cuando se programa, la muestra inicia automáticamente la publicidad Bluetooth® LE y prepara el dispositivo Matter para la puesta en servicio en una red Thread habilitada para Matter. La muestra usa un LED para mostrar el estado de la conexión.
+Cuando se programa, el ejemplo inicia automáticamente la publicidad Bluetooth® LE y prepara el dispositivo Matter para su puesta en servicio en una red Thread habilitada para Matter. El ejemplo utiliza un LED para mostrar el estado de la conexión.
 
-La muestra puede operar en uno de los siguientes modos:
+El ejemplo puede funcionar en uno de los siguientes modos:
 
-- Modo de sensor de temperatura simulado - En este modo, la muestra del termostato genera mediciones de temperatura simuladas y las imprime en el terminal. Este es el modo predeterminado, en el cual la muestra proporciona valores de temperatura simulados.**（Aquí usamos por defecto）**
+- Modo de sensor de temperatura simulado: en este modo, el ejemplo de termostato genera mediciones de temperatura simuladas y las imprime en el terminal. Este es el modo predeterminado, en el que el ejemplo proporciona valores de temperatura simulados.**（Here we default to using）**
 
-- Modo de sensor de temperatura real - En este modo, la muestra del termostato está vinculada a un sensor de temperatura Matter remoto, que proporciona mediciones de temperatura reales. Este modo requiere integración de sensor externo.
+- Modo de sensor de temperatura real: en este modo, el ejemplo de termostato se vincula a un sensor de temperatura Matter remoto, que proporciona mediciones de temperatura reales. Este modo requiere la integración de un sensor externo.
 
 
 
@@ -91,20 +91,20 @@ La muestra puede operar en uno de los siguientes modos:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/2.png" style={{width:1000, height:'auto'}}/></div>
 <br></br>
 :::tip
-- Tenga en cuenta que su versión del SDK debe ser 3.0.2. Las versiones inferiores a esta pueden causar errores.
+- Ten en cuenta que tu versión del SDK debe ser 3.0.2. Las versiones inferiores pueden causar errores.
 
-- Actualmente, solo se admiten dos rutinas (Matter Thermostat y Matter Light Bulb). Se agregarán gradualmente rutinas adicionales en el futuro.
+- Actualmente, solo se admiten dos rutinas (Matter Thermostat y Matter Light Bulb). Se irán añadiendo rutinas adicionales gradualmente en el futuro.
 :::
 
 ### Configurar la placa de desarrollo
 
-Cree los siguientes dos archivos bajo el directorio board, nombrándolos respectivamente
+Crea los siguientes dos archivos en el directorio de la placa, nombrándolos respectivamente
 
 - [xiao_nrf54l15_nrf54l15_cpuapp.conf](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/xiao_nrf54l15_nrf54l15_cpuapp.conf)
 - [xiao_nrf54l15_nrf54l15_cpuapp.overlay](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/xiao_nrf54l15_nrf54l15_cpuapp.overlay)
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/3.png" style={{width:600, height:'auto'}}/></div>
 
-Navegue al directorio `sysbuild/mcuboot/boards` y agregue los siguientes dos archivos:
+Navega al directorio `sysbuild/mcuboot/boards` y añade los siguientes dos archivos:
 
 - [xiao_nrf54l15_nrf54l15_cpuapp.conf](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/mcuboot/xiao_nrf54l15_nrf54l15_cpuapp.conf)
 - [xiao_nrf54l15_nrf54l15_cpuapp.overlay](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/mcuboot/xiao_nrf54l15_nrf54l15_cpuapp.overlay)
@@ -113,62 +113,62 @@ Navegue al directorio `sysbuild/mcuboot/boards` y agregue los siguientes dos arc
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/4.png" style={{width:600, height:'auto'}}/></div>
 
-### Habilitar Partición y DFU
+###  Habilitar partición y DFU
 - [pm_static_xiao_nrf54l15_nrf54l15_cpuapp.yml](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/pm_static_xiao_nrf54l15_nrf54l15_cpuapp.yml)
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/5.png" style={{width:600, height:'auto'}}/></div>
 
 
-### Configuración Sysbuild
+### Configuración de Sysbuild
 
 - [sysbuild.conf](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/sysbuild.conf)
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/00000.png" style={{width:600, height:'auto'}}/></div>
 
 
-### Construir Proyecto
-- Abra la ventana Add Build Configuration.
-- En el campo SDK, seleccione la versión requerida (ej., nRF Connect SDK v3.0.2).
-- En el campo Toolchain, seleccione la versión correspondiente.
+### Compilar el proyecto
+- Abre la ventana Add Build Configuration.
+- En el campo SDK, selecciona la versión requerida (por ejemplo, nRF Connect SDK v3.0.2).
+- En el campo Toolchain, selecciona la versión correspondiente.
 - Para Board target:`xiao_nrf54l15/nrf54l15/cpuapp`
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/16.png" style={{width:600, height:'auto'}}/></div>
 
 
 ### Programa de grabación West Flash
-- Abra el terminal nRF
-- Simplemente ingrese el comando west flash. Para grabar su dispositivo, simplemente ingrese el comando west flash. La ruta resaltada en rojo indica la ubicación de su archivo .elf compilado. Puede usar esta misma ruta para encontrar el archivo .hex correspondiente, que es adecuado para programar con un depurador J-Link.
+- Abre el terminal nRF
+- Solo tienes que introducir el comando west flash. Para programar tu dispositivo, simplemente introduce el comando west flash. La ruta resaltada en rojo indica la ubicación de tu archivo .elf compilado. Puedes usar esta misma ruta para encontrar el archivo .hex correspondiente, que es adecuado para programar con un depurador J-Link.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/30.png" style={{width:900, height:'auto'}}/></div>
 
 
-### Agregar dispositivo Matter
-Después de compilar y grabar el firmware en el XIAO nRF54L15, puede usar la herramienta nRF Serial Terminal para ver los registros de depuración y recuperar el código QR de puesta en servicio del dispositivo.
+### Añadir dispositivo Matter
+Después de compilar y grabar el firmware en la XIAO nRF54L15, puedes usar la herramienta nRF Serial Terminal para ver los registros de depuración y obtener el código QR de puesta en servicio del dispositivo.
 
-**Paso 1.** Abra Manager Toolchains y lance las Terminal Tools.
+**Paso 1.** Abre Manager Toolchains y lanza las Terminal Tools.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/10.png" style={{width:900, height:'auto'}}/></div>
 
-**Paso 2.** En la barra de herramientas lateral, seleccione nRF Serial Terminal para acceder al puerto serie.
+**Paso 2.** En la barra lateral de herramientas, selecciona nRF Serial Terminal para acceder al puerto serie.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/11.png" style={{width:900, height:'auto'}}/></div>
 
-**Paso 3.** Del menú emergente, elija el puerto serie que corresponde a su XIAO nRF54L15.
+**Paso 3.** En el menú emergente, elige el puerto serie que corresponde a tu XIAO nRF54L15.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/12.png" style={{width:900, height:'auto'}}/></div>
 
-**Paso 4.** Una vez que el terminal esté abierto, verá un enlace de código QR de puesta en servicio impreso en el registro. Copie este enlace y ábralo en su navegador para generar el código QR del dispositivo Matter.
+**Paso 4.** Una vez que el terminal esté abierto, verás un enlace de código QR de puesta en servicio impreso en el registro. Copia este enlace y ábrelo en tu navegador para generar el código QR del dispositivo Matter.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/13.png" style={{width:900, height:'auto'}}/></div>
 
-**Paso 5.** Escanee este código QR con una plataforma compatible con Matter para agregar su dispositivo.
+**Paso 5.** Escanea este código QR con una plataforma compatible con Matter para añadir tu dispositivo.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/14.png" style={{width:900, height:'auto'}}/></div>
 
 
-## Configuración del Hub Matter
+## Configuración del Matter Hub
 
-### Descargar la App Alexa
+### Descargar Alexa App
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/app.png" style={{width:900, height:'auto'}}/></div>
 
-### Agregar un Dispositivo Matter en la App Alexa
+### Añadir un dispositivo Matter en la Alexa App
 
-- Ir a Home：Abra la App Alexa y toque el botón "+" en la esquina superior derecha.
-- Add Device：Del menú, seleccione "Device".
-- Choose Device Type：En la lista de dispositivos, seleccione "Matter".
-- Scan QR Code：En la pantalla de configuración de Matter, toque "Scan QR Code" y escanee el código QR en su dispositivo (o elija ingresar el código numérico en su lugar).
+- Ir a Home: abre la Alexa App y toca el botón “+” en la esquina superior derecha.
+- Add Device: en el menú, selecciona “Device”.
+- Elegir tipo de dispositivo: en la lista de dispositivos, selecciona “Matter”.
+- Escanear código QR: en la pantalla de configuración de Matter, toca “Scan QR Code” y escanea el código QR de tu dispositivo (o elige introducir el código numérico en su lugar).
 <table align="center">
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/matter7.png" style={{width:250, height:'auto'}}/></div></td>
@@ -178,9 +178,9 @@ Después de compilar y grabar el firmware en el XIAO nRF54L15, puede usar la her
     </tr>
 </table>
 
-- Renombrar Dispositivo: Después de la configuración, dale un nombre a tu dispositivo, como "Thermostat", luego toca Update Name.
-- El Dispositivo Aparece en la Lista: Una vez agregado, verás el nuevo Thermostat en la lista de Devices.
-- Controlar Dispositivo: Abre la página de control del Thermostat para ajustar la temperatura (ej., Cool a 79°F, Heat a 68°F) y establecer el modo (ej., Auto).
+- Renombrar dispositivo: Después de la configuración, asigna un nombre a tu dispositivo, como “Thermostat”, y luego toca Update Name.
+- El dispositivo aparece en la lista: Una vez añadido, verás el nuevo Thermostat en la lista Devices.
+- Controlar dispositivo: Abre la página de control de Thermostat para ajustar la temperatura (por ejemplo, Cool a 79°F, Heat a 68°F) y establecer el modo (por ejemplo, Auto).
 
 <table align="center">
     <tr>
@@ -191,70 +191,70 @@ Después de compilar y grabar el firmware en el XIAO nRF54L15, puede usar la her
 </table>
 
 
-## Descripción General del Directorio del Proyecto
+## Descripción general del directorio del proyecto
 
 ### default_zap/
 - thermostat.zap
-  - Archivo de configuración ZAP que define la configuración de clúster y atributos para la aplicación de termostato Matter.
+  - Archivo de configuración ZAP que define la configuración de clústeres y atributos para la aplicación de termostato Matter.
 - zap-generated/
-  - Archivos fuente generados automáticamente desde la herramienta ZAP basados en la configuración .zap.
+  - Archivos fuente autogenerados por la herramienta ZAP basados en la configuración .zap.
 
 
 ### temperature_measurement/
 
 - `sensor.cpp` / `sensor.h`
   - Abstracción de controlador de bajo nivel para el sensor de temperatura.
-  - Maneja la lectura de valores de temperatura en bruto.
+  - Gestiona la lectura de valores de temperatura en bruto.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/code1.png" style={{width:900, height:'auto'}}/></div>
 
 
 - `temp_sensor_manager.cpp` / `temp_sensor_manager.h`
-  - Gestiona la recolección de datos del sensor.
+  - Gestiona la recopilación de datos del sensor.
   - Proporciona valores de temperatura procesados para componentes de nivel superior.
   - temperature_manager.cpp / temperature_manager.h
   - Supervisa la lógica de control de temperatura.
-  - Interfaz con atributos Matter (ej., temperatura actual, puntos de ajuste).
+  - Interactúa con los atributos Matter (por ejemplo, temperatura actual, puntos de consigna).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/code3.png" style={{width:900, height:'auto'}}/></div>
 
 
-### Capa de Aplicación
+### Capa de aplicación
 
 - `app_task.cpp` / `app_task.h`
-  - Define el bucle principal de la tarea de aplicación.
-  - Coordina la inicialización, manejo de eventos y comunicación con la pila Matter.
+  - Define el bucle principal de tareas de la aplicación.
+  - Coordina la inicialización, el manejo de eventos y la comunicación con la pila Matter.
 - main.cpp
   - Punto de entrada de la aplicación.
-  - Inicializa el hardware, la pila Matter y comienza la tarea de aplicación.
+  - Inicializa el hardware, la pila Matter y arranca la tarea de la aplicación.
   - chip_project_config.h
   - Configuración específica del proyecto para la pila Matter.
-  - Incluye definiciones de clúster, tamaño de almacenamiento de atributos y alternadores de características.
+  - Incluye definiciones de clústeres, tamaño de almacenamiento de atributos y conmutadores de funciones.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/code2.png" style={{width:900, height:'auto'}}/></div>
 
-### Integración Matter
+### Integración con Matter
 
 - `thermostat.matter`
-  - Archivo de definición de dispositivo Matter que describe clústeres, atributos y puntos finales para el termostato.
+  - Archivo de definición de dispositivo Matter que describe clústeres, atributos y endpoints para el termostato.
 - `zcl_callbacks.cpp`
-  - Implementa funciones de callback para la Biblioteca de Clúster Zigbee (ZCL).
-  - Maneja cambios de atributos, comandos (ej., actualización de punto de ajuste) y reportes.
+  - Implementa funciones de devolución de llamada para Zigbee Cluster Library (ZCL).
+  - Gestiona cambios de atributos, comandos (por ejemplo, actualización de punto de consigna) e informes.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Matter/code5.png" style={{width:900, height:'auto'}}/></div>
 
-## Referencia y Recursos
+## Referencias y recursos
 
-Si eres nuevo en Matter, los siguientes recursos proporcionan conocimiento fundamental y soporte de desarrollo para trabajar dentro del ecosistema Matter:
+Si eres nuevo en Matter, los siguientes recursos proporcionan conocimientos fundamentales y soporte de desarrollo para trabajar dentro del ecosistema Matter:
 
-- **[Guías de Inicio Rápido](https://docs.silabs.com/matter/2.2.0/matter-fundamentals/)**: Un punto de partida ideal para aprender los fundamentos de Matter, cubriendo conceptos esenciales y componentes del ecosistema.
-- **[Viaje del Desarrollador Matter](https://www.silabs.com/wireless/matter/matter-developer-journey)**: Una guía completa a través del proceso de desarrollo Matter, incluyendo herramientas necesarias, recursos y mejores prácticas para una implementación efectiva.
-- **[Especificaciones Matter](https://csa-iot.org/developer-resource/specifications-download-request/)**: Especificaciones técnicas para el protocolo Matter y sus componentes. Este es el recurso principal para entender las capacidades del protocolo y detalles operacionales.
-- **[El Modelo de Datos del Dispositivo - Google Home Developers](https://developers.home.google.com/matter/primer/device-data-model)**: Una explicación detallada del modelo de datos del dispositivo, que estandariza cómo las características y capacidades del dispositivo se representan en el ecosistema Matter.
+- **[Quick-Start Guides](https://docs.silabs.com/matter/2.2.0/matter-fundamentals/)**: Un punto de partida ideal para aprender los fundamentos de Matter, que cubre conceptos esenciales y componentes del ecosistema.
+- **[Matter Developer Journey](https://www.silabs.com/wireless/matter/matter-developer-journey)**: Una guía completa a través del proceso de desarrollo con Matter, que incluye las herramientas necesarias, recursos y buenas prácticas para una implementación eficaz.
+- **[Matter Specifications](https://csa-iot.org/developer-resource/specifications-download-request/)**: Especificaciones técnicas para el protocolo Matter y sus componentes. Este es el recurso principal para comprender las capacidades del protocolo y los detalles de su funcionamiento.
+- **[The Device Data Model - Google Home Developers](https://developers.home.google.com/matter/primer/device-data-model)**: Una explicación detallada del modelo de datos del dispositivo, que estandariza cómo se representan las funciones y capacidades del dispositivo en el ecosistema Matter.
 
-## Soporte Técnico y Discusión del Producto
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

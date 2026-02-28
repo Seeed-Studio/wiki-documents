@@ -1,6 +1,6 @@
 ---
-description: 本项目演示如何使用 Seeed Studio reSpeaker XVF3800（XIAO ESP32-S3）作为边缘语音设备，通过 Agora 建立实时双向语音链接，并连接到 Agora ten-framework 后端（LLM/ASR/TTS）以实现低延迟实时语音对话。
-title: ReSpeaker XVF3800 + Agora ten-framework 边缘对话客户端部署指南
+description: 本项目演示如何使用 Seeed Studio reSpeaker XVF3800（XIAO ESP32-S3）作为边缘语音设备，通过 Agora 建立实时双向语音链路，并连接到 Agora ten-framework 后端（LLM/ASR/TTS），以实现低延迟的实时语音对话。
+title: reSpeaker XVF3800 + Agora ten-framework 边缘对话客户端部署指南
 keywords:
 - reSpeaker
 - XVF3800
@@ -20,13 +20,13 @@ last_update:
   author: Jiayu Zhan(Jack)
 ---
 
-> 目标：让 ESP32S3 与 reSpeaker XVF3800 协同工作，通过 **Agora RTC** 构建稳定、低延迟的双向语音链接。
+> 目标：让 ESP32S3 与 reSpeaker XVF3800 协同工作，并通过 **Agora RTC** 构建稳定、低延迟的双向语音链路。
 > 源代码：https://github.com/Seeed-Projects/seeed-respeaker-agora-tenframework
 > Seeed-Projects：https://github.com/Seeed-Projects/seeed-respeaker-agora-tenframework
 
-## 简介
+## 介绍
 
-在本教程中，我们将指导您使用 Seeed XIAO ESP32-S3 与 reSpeaker XVF3800 进行音频采集和播放，并使用 Agora RTC 完成设备与后端之间的实时音频连接。后端作为 AI Agent 运行。该项目提供标准化的配置方法（`.env` / `property.json`），支持一键 Docker 部署、动态令牌认证和可插拔的提供商（ASR/LLM/TTS 可根据需要替换）。它自动完成 **ASR → LLM → TTS** 的完整循环，并将合成的语音流式传输回设备进行播放——提供低延迟的"说一句，得一答"对话体验。
+在本教程中，我们将指导你使用 Seeed XIAO ESP32-S3 搭配 reSpeaker XVF3800 进行音频采集与播放，并使用 Agora RTC 完成设备与后端之间的实时音频连接。后端以 AI Agent 的形式运行。该项目提供标准化的配置方式（`.env` / `property.json`），支持一键 Docker 部署、动态 Token 鉴权以及可插拔的服务提供商（ASR/LLM/TTS 可按需替换）。系统会自动完成 **ASR → LLM → TTS** 的完整闭环，并将合成语音流式回传到设备进行播放，从而实现低延迟的“说一句，回一句”对话体验。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -36,41 +36,41 @@ last_update:
     </a>
 </div>
 
-## 选择您的后端
+## 选择你的后端
 
-本指南提供**两种后端选项**。选择适合您场景的一种：
+本指南提供了**两种后端选项**，请选择适合你场景的方案：
 
-| 选项 | 最适合 | 需要服务器 | 链接 |
+| 选项 | 最适合的场景 | 是否需要服务器 | 链接 |
 |---|---|---:|---|
-| **Agora 对话式 AI Agent v2（云端，直接）** | 最快设置 / 最少基础设施 | 否 | 👉 [前往 Agent v2 版本](/cn/respeaker_xvf3800_agora_convo_client) |
-| **TEN Framework（自托管，可插拔 ASR/LLM/TTS）** | 自定义管道 / 提供商切换 / 高级功能 | 是（Docker） | 您在这里 ✅ |
+| **Agora Conversational AI Agent v2（云端，直连）** | 最快上手 / 最少基础设施 | 否 | 👉 [前往 Agent v2 版本](/cn/respeaker_xvf3800_agora_convo_client) |
+| **TEN Framework（自托管，可插拔 ASR/LLM/TTS）** | 自定义处理链路 / 服务商切换 / 高级特性 | 是（Docker） | 当前页面 ✅ |
 
 
 ## 目录
 
-1. [Agora 助手 – 快速入门指南](#Agora-助手--快速入门指南)
+1. [Agora Assistant – 快速开始指南](#agora-assistant--快速开始指南)
 2. [系统架构](#系统架构)
-3. [先决条件](#先决条件)
+3. [前置条件](#前置条件)
 4. [固件更新](#固件更新)
-5. [服务器端部署](#服务器端部署)
-   - [Windows 部署](#Windows-部署推荐)
-   - [Linux/Mac 部署](#LinuxMac-部署)
-6. [ESP32 端部署](#ESP32-端部署)
-   - [开发环境设置](#开发环境设置)
-   - [构建和烧录](#构建和烧录)
-7. [验证和测试](#验证和测试)
-8. [常见问题](#常见问题)
+5. [服务端部署](#服务端部署)
+   - [Windows 部署](#windows-部署-recommended)
+   - [Linux/Mac 部署](#linuxmac-部署)
+6. [ESP32 端部署](#esp32-端部署)
+   - [开发环境搭建](#开发环境搭建)
+   - [编译与烧录](#编译--烧录)
+7. [验证与测试](#验证与测试)
+8. [FAQ](#faq)
 9. [参考资料](#参考资料)
 
 
-## Agora 助手 – 快速入门指南
+## Agora Assistant – 快速开始指南
 
-### 架构概述
+### 架构概览
 
-1. **唤醒词检测** – 持续监听预定义的激活短语。
+1. **唤醒词检测** – 持续监听预设的激活短语。
 2. **语音转文本（STT）** – 使用语音识别引擎将用户语音转换为文本。
-3. **RAG 驱动的 LLM** – 从向量数据库检索相关上下文，并使用 LLM 生成智能响应。
-4. **文本转语音（TTS）** – 将生成的响应转换为自然语音。
+3. **基于 RAG 的 LLM** – 从向量数据库中检索相关上下文，并使用 LLM 生成智能回复。
+4. **文本转语音（TTS）** – 将生成的回复转换为自然语音。
 
 
 ### 核心目录结构
@@ -114,84 +114,84 @@ Workflow:
 
 
 
-## 先决条件
+## 前置条件
 
-### 硬件要求
+### 硬件需求
 
 | 硬件 | 说明 |
 |------|------|
-| **Seeed Studio XIAO ESP32-S3** | 主控制器板 |
+| **Seeed Studio XIAO ESP32-S3** | 主控板 |
 | **ReSpeaker XVF3800** | 音频扩展板（麦克风阵列 + 扬声器接口） |
-| **扬声器** | 至少一个扬声器用于播放 AI 响应 |
+| **扬声器** | 至少一个扬声器，用于播放 AI 回复 |
 | **USB-C 数据线** | 用于烧录固件和为设备供电 |
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp" alt="ReSpeaker XVF3800" width={500} height="auto" /></p>
 
-### 账户和 API 密钥
+### 账号与 API Key
 
-在部署之前，您需要注册并获取以下服务的 API 密钥：
+在部署之前，你需要注册并获取以下服务的 API Key：
 
 #### 🔹 Agora – 必需
 
 1. 访问 https://console.agora.io/
-2. 注册免费账户
-3. 创建新项目
+2. 注册一个免费账号
+3. 创建一个新项目
 4. 复制 **App ID** 和 **App Certificate**
 
 #### 🔹 Deepgram（ASR）– 必需
 
 1. 访问 https://console.deepgram.com/
-2. 注册免费账户（有免费配额）
+2. 注册一个免费账号（提供免费额度）
 3. 前往 API Keys 页面
-4. 创建新的 API 密钥
+4. 创建一个新的 API Key
 
 #### 🔹 OpenAI（LLM）– 必需
 
 1. 访问 https://platform.openai.com/
-2. 注册并添加付款方式
+2. 注册并添加支付方式
 3. 前往 API Keys 页面
-4. 创建新的密钥
+4. 创建一个新的 secret key
 
 #### 🔹 Cartesia（TTS）– 必需
 
 1. 访问 https://cartesia.ai/sonic
-2. 注册免费账户（有免费配额）
+2. 注册一个免费账号（提供免费额度）
 3. 前往 API Key → New API Key
-4. 复制 API 密钥
+4. 复制该 API Key
 
-### 软件要求
+### 软件需求
 
 | 软件 | 版本 | 用途 |
 |------|----------|------|
-| **Docker Desktop** | 最新版 | 容器化服务器部署 |
-| **Git** | 最新版 | 克隆仓库 |
+| **Docker Desktop** | 最新版 | 容器化服务端部署 |
+| **Git** | 最新版 | 克隆代码仓库 |
 | **ESP-IDF** | v5.2.3 | ESP32 开发框架 |
 | **ESP-ADF** | v2.7 | ESP32 音频开发框架 |
 
 ## 固件更新
 
-为了获得最佳的播放体验，我们建议将 XMOS 固件更新到最新版本。
+为了获得最佳播放体验，我们建议将 XMOS 固件更新到最新版本。
 
 ### 下载固件
 
-您可以从[这里](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)下载固件。
+你可以从[这里](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)下载固件。
 
 ### 更新步骤
 
-在您的计算机上，插入 **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** 并运行固件更新工具，然后选择固件。
+在电脑上插入 **ReSpeaker XMOS XVF3800 with XIAO ESP32S3**，运行固件升级工具，然后选择固件文件。
 
-详细指南请参考[此页面](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)。
+详细步骤请参考[此页面](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)。
 
-:::tip 重要提示
-固件更新是必需步骤，强烈建议进行更新以获得最佳音频体验和稳定性。
+:::tip 重要
+固件更新是必做步骤，强烈建议执行，以获得最佳的音频体验和稳定性。
 :::
 
 
-## 服务器端部署
+## 服务端部署
 
 ### Windows 部署（推荐）
 
-#### 步骤 A：安装和配置 Docker Desktop（仅首次）
+#### 步骤 A：安装并配置 Docker Desktop（仅首次）
 
 1. **下载并安装 Docker Desktop**
 
@@ -201,38 +201,38 @@ Workflow:
    - 勾选 **Use WSL 2 instead of Hyper-V**（如果可用）
 
 3. **验证安装**
-   - 安装后打开 Docker Desktop
-   - 等待直到托盘图标显示 **Docker is running**
+   - 安装完成后打开 Docker Desktop
+   - 等待托盘图标显示 **Docker is running**
 
 4. **（推荐）启用 WSL 集成**
    - Docker Desktop → `Settings` → `Resources` → `WSL Integration`
-   - 启用您常用的 WSL 发行版（例如 Ubuntu）
+   - 启用你常用的 WSL 发行版（例如 Ubuntu）
 
 #### 步骤 B：克隆仓库并配置环境变量
 
 1. **打开 PowerShell 或 Windows Terminal**
 
-2. **克隆仓库**
+2. **克隆代码仓库**
    ```bash
    git clone https://github.com/Seeed-Projects/seeed-respeaker-agora-tenframework.git
    cd esp32-client-agora/ai_agents
    ```
 
-3. **复制环境模板**
+3. **复制环境变量模板**
 
-   PowerShell：
+   PowerShell:
    ```powershell
    Copy-Item .env.example .env
    ```
 
-   CMD：
+   CMD:
    ```cmd
    copy .env.example .env
    ```
 
-4. **编辑 `.env` 文件并填入您的 API 密钥**
+4. **编辑 `.env` 文件并填入你的 API Key**
 
-   使用记事本或 VS Code 打开 `.env` 并更新关键字段：
+   使用记事本或 VS Code 打开 `.env`，并更新关键字段：
 
    ```env
    # ==============================
@@ -279,7 +279,7 @@ docker compose up -d
 docker compose ps
 ```
 
-您应该看到类似以下的输出：
+你应该会看到类似如下的输出：
 ```
 NAME            STATUS    PORTS
 ten_agent_dev   running   0.0.0.0:3000->3000/tcp, 0.0.0.0:49483->49483/tcp
@@ -301,7 +301,7 @@ ten_agent_dev   running   0.0.0.0:3000->3000/tcp, 0.0.0.0:49483->49483/tcp
 
 3. **等待服务启动**
 
-   当您看到如下日志时，服务正在运行：
+   当你看到如下日志时，说明服务已在运行：
    ```
    [INFO] Server started on port 8080
    [INFO] Waiting for connections...
@@ -309,9 +309,9 @@ ten_agent_dev   running   0.0.0.0:3000->3000/tcp, 0.0.0.0:49483->49483/tcp
 
 #### 步骤 E：验证服务
 
-- **API 服务器**：http://localhost:8080
-- **前端 UI**：http://localhost:3000
-- **TMAN Designer**：http://localhost:49483
+- **API server**: http://localhost:8080
+- **Frontend UI**: http://localhost:3000
+- **TMAN Designer**: http://localhost:49483
 
 #### 常用命令
 
@@ -351,7 +351,7 @@ brew install --cask docker
 # Then launch the Docker Desktop app
 ```
 
-#### 步骤 2：克隆和配置
+#### 步骤 2：克隆并配置
 
 ```bash
 git clone https://github.com/zhannn668/esp32-client-agora.git
@@ -367,7 +367,7 @@ nano .env
 vim .env
 ```
 
-填入您的 API 密钥（参考上面的 Windows 部分）。
+填写你的 API 密钥（参考上面的 Windows 部分）。
 
 #### 步骤 4：启动服务
 
@@ -382,23 +382,23 @@ task run
 
 ## ESP32 端部署
 
-### 开发环境设置
+### 开发环境搭建
 
 #### 安装 ESP-IDF（v5.2.3）
 
 ##### Windows
 
-1. **下载 ESP-IDF v5.2.3 离线安装程序**
+1. **下载 ESP-IDF v5.2.3 离线安装包**
 
    https://docs.espressif.com/projects/esp-idf/zh_CN/v5.2.3/esp32/get-started/windows-setup.html
 
 2. **运行安装程序**
-   - 选择安装路径（推荐默认：`C:\Espressif`）
-   - 安装完成后，开始菜单中会出现快捷方式 "ESP-IDF 5.2 PowerShell"
+   - 选择安装路径（推荐默认：`C:\Espressif`)
+   - 安装完成后，开始菜单中会出现快捷方式 “ESP-IDF 5.2 PowerShell”
 
 3. **验证安装**
 
-   打开 "ESP-IDF 5.2 PowerShell" 并运行：
+   打开 “ESP-IDF 5.2 PowerShell” 并运行：
    ```bash
    idf.py --version
    ```
@@ -440,15 +440,15 @@ source ~/.bashrc
 2. **设置 ADF_PATH 环境变量**
 
    选项 1：系统设置
-   - 打开 "System Properties" → "Advanced" → "Environment Variables"
-   - 创建新的用户变量：`ADF_PATH` = `C:\Espressif\frameworks\esp-adf`
+   - 打开 “System Properties” → “Advanced” → “Environment Variables”
+   - 新建用户变量：`ADF_PATH` = `C:\Espressif\frameworks\esp-adf`
 
    选项 2：命令行
    ```powershell
    setx ADF_PATH "C:\Espressif\frameworks\esp-adf"
    ```
 
-   **重要**：设置后重启 ESP-IDF PowerShell。
+   **重要**：设置完成后请重启 ESP-IDF PowerShell。
 
 ##### Linux
 
@@ -466,28 +466,28 @@ source ~/.bashrc
 
 #### 应用 IDF 补丁
 
-ESP-ADF 需要对 ESP-IDF 应用 FreeRTOS 补丁：
+ESP-ADF 需要对 ESP-IDF 应用一个 FreeRTOS 补丁：
 
 ```bash
 cd $IDF_PATH
 git apply $ADF_PATH/idf_patches/idf_v5.2_freertos.patch
 ```
 
-#### 修改 ESP-ADF 开发板引脚配置（关键！）
+#### 修改 ESP-ADF 板级引脚配置（关键！）
 
-由于 ReSpeaker XVF3800 的引脚配置与默认的 Korvo-2 V3 不同，您必须修改框架的开发板配置：
+由于 ReSpeaker XVF3800 的引脚分配与默认的 Korvo-2 V3 不同，你必须修改框架中的板级配置：
 
 **文件位置：**
-- Windows：`C:\Espressif\frameworks\esp-adf\components\audio_board\esp32_s3_korvo2_v3\board_pins_config.c`
-- Linux/Mac：`$ADF_PATH/components/audio_board/esp32_s3_korvo2_v3/board_pins_config.c`
+- Windows: `C:\Espressif\frameworks\esp-adf\components\audio_board\esp32_s3_korvo2_v3\board_pins_config.c`
+- Linux/Mac: `$ADF_PATH/components/audio_board/esp32_s3_korvo2_v3/board_pins_config.c`
 
 :::caution 重要
-- 此文件位于 ESP-ADF 框架目录中，而不是您的项目目录中。
-- 更改将影响使用此开发板配置的所有项目。
+- 该文件位于 ESP-ADF 框架目录中，而不是你的项目目录。
+- 修改将影响所有使用此板级配置的项目。
 - 建议先备份原始文件：`cp board_pins_config.c board_pins_config.c.backup`
 :::
 
-**更新 I2C 引脚** – 找到 `get_i2c_pins()` 并将其更改为：
+**更新 I2C 引脚** – 找到 `get_i2c_pins()` 并修改为：
 
 ```c
 esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
@@ -499,7 +499,7 @@ esp_err_t get_i2c_pins(i2c_port_t port, i2c_config_t *i2c_config)
 }
 ```
 
-**更新 I2S 引脚** – 找到 `get_i2s_pins()` 并将其更改为：
+**更新 I2S 引脚** – 找到 `get_i2s_pins()` 并修改为：
 
 ```c
 esp_err_t get_i2s_pins(int port, board_i2s_pin_t *i2s_config)
@@ -534,11 +534,11 @@ git submodule update --init --recursive
 ```
 
 
-### 构建和烧录
+### 编译与烧录
 
-#### 配置 AI 代理参数
+#### 配置 AI Agent 参数
 
-编辑 `ai_agents/esp32-client/main/app_config.h`。如果您使用局域网 IP，请确保 ESP32 和服务器在同一局域网中；如果您使用公网 IP，可以忽略此要求。
+编辑 `ai_agents/esp32-client/main/app_config.h`。如果你使用局域网 IP，请确保 ESP32 与服务器在同一局域网内；如果你使用公网 IP，则可以忽略这一点。
 
 ```c
 #pragma once
@@ -588,11 +588,11 @@ git submodule update --init --recursive
 #define AGORA_APP_ID "your_agora_app_id"
 ```
 
-#### 构建固件
+#### 编译固件
 
 1. **打开 ESP-IDF 终端**
-   - Windows："ESP-IDF 5.2 PowerShell"
-   - Linux/Mac：运行 `get_idf`
+   - Windows: “ESP-IDF 5.2 PowerShell”
+   - Linux/Mac: 运行 `get_idf`
 
 2. **进入项目目录**
    ```bash
@@ -618,7 +618,7 @@ git submodule update --init --recursive
          (your WiFi password) WiFi Password
      ```
 
-   - **启用 FreeRTOS 向后兼容性**：
+   - **启用 FreeRTOS 向后兼容**：
      ```
      Component config --->
          FreeRTOS --->
@@ -626,12 +626,12 @@ git submodule update --init --recursive
                  [*] configENABLE_BACKWARD_COMPATIBILITY
      ```
 
-5. **构建**
+5. **编译**
    ```bash
    idf.py build
    ```
 
-   成功时您将看到：
+   编译成功后你会看到：
    ```
    Project build complete. To flash, run:
    idf.py flash
@@ -640,14 +640,14 @@ git submodule update --init --recursive
 #### 烧录固件
 
 1. **连接开发板**
-   - 通过 USB-C 线缆将 XIAO ESP32-S3 连接到您的计算机
+   - 使用 USB-C 线将 XIAO ESP32-S3 连接到电脑
 
-2. **识别串口**
-   - Windows：设备管理器 → 端口，找到 COM 端口（例如 COM3）
-   - Linux：通常是 `/dev/ttyUSB0` 或 `/dev/ttyACM0`
-   - macOS：通常是 `/dev/cu.usbmodem*`
+2. **确认串口号**
+   - Windows: 打开 Device Manager → Ports，找到 COM 端口（例如 COM3）
+   - Linux: 通常为 `/dev/ttyUSB0` 或 `/dev/ttyACM0`
+   - macOS: 通常为 `/dev/cu.usbmodem*`
 
-3. **烧录和监控**
+3. **烧录并监视**
    ```bash
    # Windows
    idf.py -p COM3 flash monitor
@@ -656,7 +656,7 @@ git submodule update --init --recursive
    idf.py -p /dev/ttyUSB0 flash monitor
    ```
 
-   **Linux 权限问题**：如果您看到权限被拒绝，运行：
+   **Linux 权限问题**：如果看到权限拒绝，请运行：
    ```bash
    sudo usermod -aG dialout $USER
    # then log out and log back in
@@ -664,18 +664,18 @@ git submodule update --init --recursive
 
 4. **烧录成功指示**
 
-   看到如下日志表示成功：
+   看到类似如下的日志表示烧录成功：
    ```
    Hard resetting via RTS pin...
    Connecting...
    ```
 
 
-## 验证和测试
+## 验证与测试
 
 ### 检查 ESP32 启动日志
 
-当它成功启动时，串口输出应包含这些关键日志：
+启动成功后，串口输出应包含以下关键日志：
 
 ```
 I (xxxx) wifi: connected with YourWiFi, aid = 1
@@ -696,75 +696,75 @@ Agora: Press [SET] key to join the Ai Agent ...
 | 项目 | 含义 |
 |------|------|
 |  `WiFi connected` | Wi-Fi 连接成功 |
-|  `got ip: xxx.xxx.xxx.xxx` | 获取 IP 地址 |
+|  `got ip: xxx.xxx.xxx.xxx` | 已获取 IP 地址 |
 |  `Found device at address 0x18` | 检测到 AIC3104 |
 |  `AIC3104 Codec initialized successfully` | 编解码器初始化成功 |
-|  `agora_rtc_join_channel success` | RTC 频道加入成功 |
+|  `agora_rtc_join_channel success` | 成功加入 RTC 通道 |
 
 ### 运行语音对话测试
 
-1. 按下开发板上的 **SET** 按钮启动 AI Agent
+1. 按下板上的 **SET** 按钮以启动 AI Agent
 2. 对着麦克风说话
-3. 观察串口日志；您应该能看到音频发送/接收日志
-4. 扬声器播放 AI 回复
+3. 观察串口日志；你应该能看到音频发送/接收日志
+4. 扬声器会播放 AI 的回复
 
 
 ## 常见问题
 
 ### 服务器端问题
 
-#### Q1：Docker 容器启动失败
+#### Q1: Docker 容器无法启动
 
-**A：** 检查以下内容：
+**A：** 请检查以下内容：
 1. 确保 Docker Desktop 正在运行
 2. 检查端口是否已被占用：`netstat -an | grep 8080`
 3. 查看详细日志：`docker compose logs`
 
-#### Q：进入容器后找不到 `task` 命令
+#### Q: 进入容器后找不到 `task` 命令
 
-**A：** 确保您使用的是正确的镜像。运行 `docker compose pull` 更新镜像。
+**A：** 确保你使用的是正确的镜像。运行 `docker compose pull` 来更新镜像。
 
 
 
 ### ESP32 端问题
 
-#### Q2：构建错误 `i2c driver install error`
+#### Q2: 编译错误 `i2c driver install error`
 
-**A：** I2C 驱动冲突。确保代码使用旧版 I2C API（`driver/i2c.h`）而不是新版（`driver/i2c_master.h`）。
+**A：** I2C 驱动冲突。请确保代码使用的是旧版 I2C API（`driver/i2c.h`），而不是新版（`driver/i2c_master.h`）。
 
-#### Q：运行时 I2C 超时 `ESP_ERR_TIMEOUT`
+#### Q: 运行时 I2C 超时 `ESP_ERR_TIMEOUT`
 
-**A：** 可能的原因：
-1. 硬件接线问题 – 检查 I2C 线路/电缆
-2. 引脚配置错误 – 验证 `board_pins_config.c` 是否正确更新
-3. I2C 地址错误 – 检查日志中扫描到的地址
+**A：** 可能原因：
+1. 硬件连线问题——检查 I2C 线路/线缆
+2. 引脚配置错误——确认 `board_pins_config.c` 已正确更新
+3. I2C 地址错误——检查日志中扫描到的地址
 
 调试日志：
 ```
 W (xxxx) AIC3104_NG: Scanning I2C bus...
 W (xxxx) AIC3104_NG: Found device at address 0x??
 ```
-如果地址不是 `0x18`，您需要在 `aic3104_ng.h` 中更改 `AIC3104_ADDR`。
+如果地址不是 `0x18`，你需要在 `aic3104_ng.h` 中修改 `AIC3104_ADDR`。
 
-#### Q：无音频输出
+#### Q: 没有音频输出
 
-**A：** 检查：
-1. AIC3104 是否成功初始化（检查串口日志）
+**A：** 请检查：
+1. AIC3104 是否初始化成功（查看串口日志）
 2. I2S 引脚是否配置正确
 3. 扬声器是否连接正确
 
-#### Q：网络缓冲区错误 `Not enough space`
+#### Q: 网络缓冲区错误 `Not enough space`
 
 **A：** 这是运行时网络问题，通常可以暂时忽略：
 1. 检查网络质量
-2. 降低音频比特率
-3. 增加网络缓冲区大小
+2. 降低音频码率
+3. 增大网络缓冲区大小
 
-#### Q：修改 `board_pins_config.c` 后仍有错误
+#### Q: 修改 `board_pins_config.c` 后仍然报错
 
 **A：**
-1. 确认您编辑了正确的文件路径
-2. 运行 `idf.py fullclean` 进行完全清理
+1. 确认你编辑的是正确的文件路径
+2. 运行 `idf.py fullclean` 进行完整清理
 3. 使用 `idf.py build` 重新构建
 
 
@@ -806,7 +806,7 @@ W (xxxx) AIC3104_NG: Found device at address 0x??
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里提供支持，让您的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供支持，尽可能让你的使用体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

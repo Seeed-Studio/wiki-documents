@@ -1,71 +1,28 @@
 ---
-description: ReSpeaker by Seeed Studio 是一个开源模块化语音接口平台，用于创建智能语音交互产品。它具有先进的麦克风阵列，支持远场识别、噪声抑制和音频处理算法，即使在嘈杂环境中也能提供清晰的语音捕获。兼容多个平台和语言，提供灵活的开发、开源设计和强大的社区支持。
+description: reSpeaker 是由 Seeed Studio 推出的开源模块化语音接口平台，用于打造智能语音交互产品。其配备具备远场识别、噪声抑制和音频处理算法的先进麦克风阵列，即使在嘈杂环境中也能实现清晰的语音采集。兼容多种平台和语言，提供灵活的开发方式、开源设计以及强大的社区支持。
 
-title: ReSpeaker 介绍
+title: reSpeaker 介绍
 keywords:
 - reSpeaker
 - Voice AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/respeaker
+sku: 114993702,114993700,110061601,107100001,107990273
 last_update:
-  date: 8/12/2023
+  date: 2/26/2026
   author: Kasun Thushara
 ---
 
 
-## 什么是 ReSpeaker？
+## 什么是 reSpeaker？
 
-ReSpeaker 是由 Seeed Studio 开发的开源模块化语音接口平台，专为创客、开发者和企业设计，用于创建智能语音交互产品。它集成了麦克风阵列、音频处理器和各种连接选项，使您能够轻松地为项目添加语音识别和交互功能。
+reSpeaker 是由 Seeed Studio 开发的开源模块化语音接口平台，面向创客、开发者和企业，用于打造智能语音交互产品。它集成了麦克风阵列、音频处理器以及多种连接方式，使你可以轻松为项目添加语音识别和交互能力。
 
 ## 产品系列
 
-### ReSpeaker Lite
+### reSpeaker XVF3800
 
-ReSpeaker Lite 系列是您轻松构建强大、高质量语音项目的入门之选。它采用 XMOS XU316 AI 音频芯片组和精密双麦克风阵列，提供清晰的远场语音捕获（最远 3 米）、先进的噪声抑制和回声消除功能——非常适合语音识别、智能助手和交互设备。选择多个版本以满足您的需求：**ReSpeaker Lite 2-Mic Array Voice Kit** 预焊接了 ESPHome 就绪的 XIAO ESP32S3，可即时设置，或者选择 **ReSpeaker Lite Voice Assistant Kit**，配有亚克力外壳和扬声器，提供完整的即用型解决方案。无论您是创客、开发者还是创新者，ReSpeaker Lite 都能为您提供性能、灵活性和开源自由，让您的语音项目成为现实。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeakerlite.png" alt="pir" width={600} height="auto" /></p>
-
-<div className="table-center">
-    <table className="table-nobg">
-        <tbody>
-            <tr className="table-trnobg">
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html"
-                            style={{ marginRight: '150px' }}
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="4">🖱️ 立即购买</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-                <td className="table-trnobg">
-                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
-                        <a
-                            className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/"
-                        >
-                            <strong>
-                                <span>
-                                    <font color="#FFFFFF" size="3">📚 入门指南页面</font>
-                                </span>
-                            </strong>
-                        </a>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-### ReSpeaker XVF3800
-
-ReSpeaker XMOS XVF3800 系列专为需要在嘈杂的真实环境中实现清晰语音捕获的创客、开发者和产品设计师而打造。它采用先进的 XVF3800 AI 音频处理器和精密的 4 麦克风圆形阵列，提供 360° 远场拾音、强大的波束成形以及工业级噪声和回声消除功能，有效距离可达 5 米。选择多样化的选项来适配您的项目——**预焊接 XIAO ESP32S3 的 ReSpeaker XVF3800** 可即时集成 ESPHome 或嵌入式应用，或者选择**ReSpeaker XVF3800 封装式 AI 语音解决方案**获得精致的即用型语音接口。无论是用于智能助手、机器人还是交互式信息亭，XVF3800 系列都能在紧凑、创客友好的外形中提供专业级的语音性能。
+reSpeaker XMOS XVF3800 系列专为在嘈杂、真实环境中也需要极致清晰语音采集的创客、开发者和产品设计师打造。其搭载先进的 XVF3800 AI 音频处理器和高精度 4 麦克风环形阵列，可实现 360° 远场拾音、强大的波束成形，以及最长 5 米范围内的行业级噪声与回声消除。你可以根据项目需求灵活选择：搭载预焊接 XIAO ESP32S3、可立即进行 ESPHome 或嵌入式集成的 **reSpeaker XVF3800 with pre-soldered XIAO ESP32S3**，或是外观精致、开箱即用的 **reSpeaker XVF3800 enclosed AI voice solution** 语音接口方案。无论是智能助手、机器人还是交互式自助终端，XVF3800 系列都能在小巧、适合创客的形态中提供专业级语音性能。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xvf3800.png" alt="pir" width={600} height="auto" /></p>
 
@@ -96,7 +53,7 @@ ReSpeaker XMOS XVF3800 系列专为需要在嘈杂的真实环境中实现清晰
                         >
                             <strong>
                                 <span>
-                                    <font color="#FFFFFF" size="3">📚 入门指南页面</font>
+                                    <font color="#FFFFFF" size="3">📚 入门页面</font>
                                 </span>
                             </strong>
                         </a>
@@ -107,9 +64,55 @@ ReSpeaker XMOS XVF3800 系列专为需要在嘈杂的真实环境中实现清晰
     </table>
 </div>
 
-### ReSpeaker 2-Mics Pi HAT
 
-ReSpeaker 2-Mics Pi HAT V2.0 将您的 Raspberry Pi 转变为强大的语音启用平台，非常适合构建智能助手、语音控制设备和交互式 AI 项目。配备 TLV320AIC3104 音频编解码器、双模拟麦克风和内置的 VAD、DOA 和 KWS NLU 算法，它提供清晰准确的语音捕获，实现响应式交互。其可编程 RGB LED、用户按钮和简单的即插即用设计使其易于原型制作和定制，无论您是集成 Alexa、Google Assistant 还是自己的语音界面。
+### reSpeaker Lite
+
+reSpeaker Lite 系列是你轻松构建高性能、高音质语音项目的理想入口。其搭载 XMOS XU316 AI 音频芯片组和高精度双麦克风阵列，可实现清晰的远场语音采集（最远 3 米）、先进的噪声抑制和回声消除——非常适合语音识别、智能助手和交互式设备。你可以根据需求选择不同版本：预焊接、支持 ESPHome 即插即用的 XIAO ESP32S3 的 **reSpeaker Lite 2-Mic Array Voice Kit**，或配备亚克力外壳和扬声器、开箱即用的 **reSpeaker Lite Voice Assistant Kit** 完整方案。无论你是创客、开发者还是创新者，reSpeaker Lite 都能以高性能、强灵活性和开源自由度，助你将语音项目变为现实。
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeakerlite.png" alt="pir" width={600} height="auto" /></p>
+
+<div className="table-center">
+    <table className="table-nobg">
+        <tbody>
+            <tr className="table-trnobg">
+                <td className="table-trnobg">
+                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+                        <a
+                            className="get_one_now_item"
+                            href="https://www.seeedstudio.com/ReSpeaker-Lite-p-5928.html"
+                            style={{ marginRight: '150px' }}
+                        >
+                            <strong>
+                                <span>
+                                    <font color="#FFFFFF" size="4">🖱️ 立即购买</font>
+                                </span>
+                            </strong>
+                        </a>
+                    </div>
+                </td>
+                <td className="table-trnobg">
+                    <div className="get_one_now_container" style={{ textAlign: 'center' }}>
+                        <a
+                            className="get_one_now_item"
+                            href="https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/"
+                        >
+                            <strong>
+                                <span>
+                                    <font color="#FFFFFF" size="3">📚 入门页面</font>
+                                </span>
+                            </strong>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+### reSpeaker 2-Mics Pi HAT
+
+reSpeaker 2-Mics Pi HAT V2.0 可以将你的 Raspberry Pi 打造成强大的语音平台，非常适合构建智能助手、语音控制设备和交互式 AI 项目。它集成 TLV320AIC3104 音频编解码器、双模拟麦克风，以及用于 VAD、DOA 和 KWS 的内置 NLU 算法，可实现清晰、准确的语音采集，带来灵敏的交互体验。其可编程 RGB LED、用户按键以及即插即用的设计，使原型开发和自定义变得十分简单，无论你是集成 Alexa、Google Assistant，还是自研语音接口都能轻松上手。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/hat.png" alt="pir" width={600} height="auto" /></p>
 
@@ -140,7 +143,7 @@ ReSpeaker 2-Mics Pi HAT V2.0 将您的 Raspberry Pi 转变为强大的语音启�
                         >
                             <strong>
                                 <span>
-                                    <font color="#FFFFFF" size="3">📚 入门指南页面</font>
+                                    <font color="#FFFFFF" size="3">📚 入门页面</font>
                                 </span>
                             </strong>
                         </a>
@@ -151,9 +154,9 @@ ReSpeaker 2-Mics Pi HAT V2.0 将您的 Raspberry Pi 转变为强大的语音启�
     </table>
 </div>
 
-### ReSpeaker XVF3000
+### reSpeaker XVF3000
 
-ReSpeaker XVF3000 USB 麦克风阵列是一个即用型、即插即用的远场语音捕获解决方案，专为即时集成到您的应用程序中而设计——无需裸露的开发板或复杂的设置。它配备 4 麦克风阵列、USB Audio Class 1.0 兼容性和 12 个可编程 RGB LED，非常适合构建智能助手、会议系统和交互式语音项目。内置语音算法包括 VAD、DOA、波束成形、噪声抑制、去混响和声学回声消除，即使在具有挑战性的环境中也能提供清晰的语音拾取。为了获得精致的、可部署的设置，您还可以选择带有时尚保护外壳的版本，使其既适合原型制作也适合生产。
+reSpeaker XVF3000 USB Mic Array 是一款开箱即用、即插即用的远场语音采集解决方案，可立即集成到你的应用中——无需裸开发板或复杂配置。它配备 4 麦克风阵列、兼容 USB Audio Class 1.0，以及 12 颗可编程 RGB LED，非常适合构建智能助手、会议系统和交互式语音项目。内置 VAD、DOA、波束成形、噪声抑制、去混响和声学回声消除等语音算法，即使在复杂环境中也能实现极其清晰的语音拾取。若你需要更精致、可直接部署的形态，还可以选择带有时尚保护外壳的版本，非常适合用于原型开发和量产部署。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xvf3000.png" alt="pir" width={600} height="auto" /></p>
 
@@ -180,11 +183,11 @@ ReSpeaker XVF3000 USB 麦克风阵列是一个即用型、即插即用的远场�
                     <div className="get_one_now_container" style={{ textAlign: 'center' }}>
                         <a
                             className="get_one_now_item"
-                            href="https://wiki.seeedstudio.com/cn/ReSpeaker_Mic_Array_v2.0/#version"
+                            href="https://wiki.seeedstudio.com/cn/ReSpeaker_Mic_Array_v2.0/#版本"
                         >
                             <strong>
                                 <span>
-                                    <font color="#FFFFFF" size="3">📚 入门指南页面</font>
+                                    <font color="#FFFFFF" size="3">📚 入门页面</font>
                                 </span>
                             </strong>
                         </a>
@@ -199,19 +202,19 @@ ReSpeaker XVF3000 USB 麦克风阵列是一个即用型、即插即用的远场�
 
 **先进的麦克风阵列技术**
 
-采用圆形或线性阵列，配备2-4个MEMS麦克风，支持远场语音识别、声源定位和噪声抑制。即使在嘈杂环境中也能准确捕获5米范围内的语音指令。
+提供环形或线性阵列，配备 2-4 个 MEMS 麦克风，支持远场语音识别、声源定位和噪声抑制。即使在嘈杂环境中，也能在 5 米范围内精准捕捉语音指令。
 
 **强大的音频处理能力**
 
-内置专业音频处理算法，包括声学回声消除（AEC）、噪声抑制（NS）、语音活动检测（VAD）和波束成形技术，确保清晰的语音信号质量。
+内置专业音频处理算法，包括 Acoustic Echo Cancellation (AEC)、Noise Suppression (NS)、Voice Activity Detection (VAD) 和波束成形技术，确保清晰的语音信号质量。
 
 **灵活的开发选项**
 
-支持多种开发平台和编程语言，包括Python、JavaScript和C/C++。兼容Raspberry Pi、Arduino和各种Linux开发板，提供完整的SDK和API接口。
+支持包括 Python、JavaScript 和 C/C++ 在内的多种开发平台和编程语言。兼容 Raspberry Pi、Arduino 以及多种 Linux 开发板，并提供完善的 SDK 和 API 接口。
 
 **开源生态系统**
 
-完全开源的硬件设计和软件栈，拥有活跃的开发者社区提供持续的技术支持。可自由定制和扩展功能以满足特定应用需求。
+完全开源的硬件设计和软件栈，并拥有活跃的开发者社区持续提供技术支持。可自由定制和扩展功能，以满足特定应用需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
