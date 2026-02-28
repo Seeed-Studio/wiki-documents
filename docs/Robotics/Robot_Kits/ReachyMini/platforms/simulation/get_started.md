@@ -26,7 +26,7 @@ You don't need a physical robot to start building! The Reachy Mini simulation ru
 ## 1. Installation
 
 :::danger Prerequisites
-Before setting up the simulation, you must first complete the basic installation and virtual environment setup by following the **[Installation Guide](../../SDK/installation.md)**. This guide assumes you already have the Reachy Mini SDK installed and your virtual environment activated.
+Before setting up the simulation, you must first complete the basic installation and virtual environment setup by following the **[Installation Guide](/reachymini_sdk_installation)**. This guide assumes you already have the Reachy Mini SDK installed and your virtual environment activated.
 :::
 
 The simulation requires the `mujoco` python bindings. You can install them alongside the Reachy Mini software with the extra tag `[mujoco]`.
@@ -127,11 +127,11 @@ with ReachyMini() as mini:
 ## Next Steps
 
 :::info Continue learning
-* **[Python SDK](../../SDK/python-sdk.md)**: Learn to move, see, speak, and hear.
-* **[AI Integrations](../../SDK/integration.md)**: Connect LLMs, build Apps, and publish to Hugging Face.
-* **[Core Concepts](../../SDK/core-concept.md)**: Architecture, coordinate systems, and safety limits.
+* **[Python SDK](/reachymini_sdk_python-sdk)**: Learn to move, see, speak, and hear.
+* **[AI Integrations](/reachymini_sdk_integration)**: Connect LLMs, build Apps, and publish to Hugging Face.
+* **[Core Concepts](/reachymini_sdk_core-concept)**: Architecture, coordinate systems, and safety limits.
 :::
 
 ## ❓ Troubleshooting
 
-Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](../../troubleshooting.md)**
+Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymini_troubleshooting)**

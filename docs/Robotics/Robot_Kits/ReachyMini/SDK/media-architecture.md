@@ -34,7 +34,7 @@ The streams are managed by the Daemon so that multiple applications can access t
 
 ![Reachy Mini Media Client](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachymini_media_client.png)
 
-Thanks to webrtc, the audio and video streams can also be accessed directly from a web browser. For instance the [desktop application](../platforms/reachy_mini_lite/get_started.md#3--download-reachy-mini-control) uses this feature.
+Thanks to webrtc, the audio and video streams can also be accessed directly from a web browser. For instance the [desktop application](/reachymini_platforms_reachy_mini_lite_get_started#3--download-reachy-mini-control) uses this feature.
 
 ![Reachy Mini Media Web](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachymini_media_web.png)
 
@@ -48,10 +48,10 @@ In the case of Reachy Mini Lite, the Daemon doesn't manage the camera, microphon
 
 Two backends are available. The default one relies on the combination of OpenCV for the camera and sounddevice for the audio card.
 
-An experimental GStreamer backend is also available. While it is mostly tuned for Linux systems, it should work on other platforms. It requires more manual installation at the moment (see [gstreamer-installation](gstreamer-installation.md))
+An experimental GStreamer backend is also available. While it is mostly tuned for Linux systems, it should work on other platforms. It requires more manual installation at the moment (see [gstreamer-installation](/reachymini_sdk_gstreamer-installation))
 
 ![Reachy Mini Lite Media Client](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachyminilite_media_client.png)
 
 ## Advanced Controls
 
-Please refer to the dedicated pages to fine-tune camera and microphone parameters for [Reachy Mini](../platforms/reachy_mini/media_advanced_controls.md) and [Reachy Mini Lite](../platforms/reachy_mini_lite/media_advanced_controls.md).
+Please refer to the dedicated pages to fine-tune camera and microphone parameters for [Reachy Mini](/reachymini_platforms_reachy_mini_media_advanced_controls) and [Reachy Mini Lite](/reachymini_platforms_reachy_mini_lite_media_advanced_controls).

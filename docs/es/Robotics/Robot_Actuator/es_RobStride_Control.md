@@ -1,21 +1,23 @@
 ---
-description: Esta wiki proporciona una Guía Completa de Control de Motor RobStride
+description: Este wiki proporciona la Guía Completa de Control de Motor RobStride
 title: Guía Completa de Control de Motor RobStride
 keywords:
-- actuator
+- actuador
 - motor
-- arm
-- robotics
+- brazo
+- robótica
 image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /es/robstride_control
 last_update:
   date: 11/19/2025
   author: Tienjuiwong
+translation:
+    skip: [zh-CN]
 ---
 
 # Biblioteca de Control RobStride - Documentación Técnica Completa
 
-> Control de motor RobStride de alto rendimiento con implementaciones en Python, C++, Rust y Arduino
+> Línea base de control de motor RobStride de alto rendimiento con implementaciones en Python, C++, Rust y Arduino
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20ESP32-lightgrey.svg)
@@ -23,48 +25,48 @@ last_update:
 
 ## 📋 Tabla de Contenidos
 
-- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Descripción General del Proyecto](#descripción-general-del-proyecto)
 - [Modelos de Motor Compatibles](#modelos-de-motor-compatibles)
 - [Arquitectura Técnica](#arquitectura-técnica)
 - [Inicio Rápido](#inicio-rápido)
-- [Implementación Python](#implementación-python)
-- [Implementación C++](#implementación-c)
-- [Implementación Rust](#implementación-rust)
-- [Implementación Arduino](#implementación-arduino)
+- [Implementación en Python](#implementación-en-python)
+- [Implementación en C++](#implementación-en-c)
+- [Implementación en Rust](#implementación-en-rust)
+- [Implementación en Arduino](#implementación-en-arduino)
 - [Detalles del Protocolo](#detalles-del-protocolo)
-- [Optimización de Rendimiento](#optimización-de-rendimiento)
+- [Optimización del Rendimiento](#optimización-del-rendimiento)
 - [Solución de Problemas](#solución-de-problemas)
 - [Guía de Desarrollo](#guía-de-desarrollo)
 
 ---
 
-## 🎯 Descripción del Proyecto
+## 🎯 Descripción General del Proyecto
 
-La Biblioteca de Control RobStride es una biblioteca de control de motor de alto rendimiento diseñada específicamente para motores de la serie RobStride. Este proyecto proporciona una solución completa de control de motor que soporta múltiples lenguajes de programación y plataformas de hardware, adecuada para robótica, control de automatización, posicionamiento de precisión y varios otros escenarios de aplicación.
+La Biblioteca de Control RobStride es una biblioteca de control de motores de alto rendimiento diseñada específicamente para los motores de la serie RobStride. Este proyecto proporciona una solución completa de control de motores que admite múltiples lenguajes de programación y plataformas de hardware, adecuada para robótica, control de automatización, posicionamiento de precisión y diversos otros escenarios de aplicación.
 
-### Características Principales
+### Funciones Principales
 
-- ✅ **Soporte Multi-lenguaje**: Implementaciones en Python, C++, Rust y Arduino
-- ✅ **Múltiples Modos de Control**: Modo MIT, Modo Posición, Modo Velocidad
-- ✅ **Rendimiento en Tiempo Real**: Frecuencia de control de 50-200Hz con baja latencia
-- ✅ **Estabilidad de Grado Industrial**: Soporta operación continua a largo plazo
-- ✅ **Compatibilidad Multiplataforma**: Sistemas Linux, ESP32 y otras plataformas embebidas
-- ✅ **Interfaz Estandarizada**: Diseño de API unificado para fácil cambio de lenguaje
+- ✅ **Compatibilidad con múltiples lenguajes**: Implementaciones en Python, C++, Rust y Arduino
+- ✅ **Múltiples modos de control**: MIT Mode, Position Mode, Speed Mode
+- ✅ **Rendimiento en tiempo real**: Frecuencia de control de 50-200Hz con baja latencia
+- ✅ **Estabilidad de grado industrial**: Admite funcionamiento continuo a largo plazo
+- ✅ **Compatibilidad multiplataforma**: Sistemas Linux, ESP32 y otras plataformas embebidas
+- ✅ **Interfaz estandarizada**: Diseño de API unificada para facilitar el cambio de lenguaje
 
 ### Ventajas Técnicas
 
-- **Alto Rendimiento**: Comunicación SocketCAN directa sin sobrecarga de middleware
-- **Seguridad de Memoria**: La implementación Rust proporciona garantías de seguridad de memoria
-- **Control en Tiempo Real**: La implementación C++ logra frecuencia de control de 200Hz
-- **Facilidad de Uso**: La implementación Python proporciona interfaz interactiva amigable
-- **Amigable para Embebidos**: La implementación Arduino es adecuada para entornos con recursos limitados
+- **Alto rendimiento**: Comunicación directa SocketCAN sin sobrecarga de middleware
+- **Seguridad de memoria**: La implementación en Rust proporciona garantías de seguridad de memoria
+- **Control en tiempo real**: La implementación en C++ alcanza una frecuencia de control de 200Hz
+- **Facilidad de uso**: La implementación en Python proporciona una interfaz interactiva amigable
+- **Amigable para sistemas embebidos**: La implementación en Arduino es adecuada para entornos con recursos limitados
 
 ---
 
 ## Modelos de Motor Compatibles
 
-| Modelo | Torque Máx | Velocidad Máx | Rango KP | Rango KD |
-|--------|------------|---------------|----------|----------|
+| Modelo | Par Máximo | Velocidad Máxima | Rango KP | Rango KD |
+|--------|------------|------------------|----------|----------|
 | RS-00 | 17 Nm | 50 rad/s | 500.0 | 5.0 |
 | RS-01 | 17 Nm | 44 rad/s | 500.0 | 5.0 |
 | RS-02 | 17 Nm | 44 rad/s | 500.0 | 5.0 |
@@ -98,27 +100,27 @@ graph TB
 
 ### Protocolo de Comunicación
 
-- **Capa Física**: Estándar CAN 2.0B
-- **Capa de Enlace de Datos**: Formato de Trama Extendida (ID de 29 bits)
-- **Capa de Aplicación**: Protocolo RobStride Personalizado
-- **Velocidad de Transmisión**: 1 Mbps
+- **Capa física**: Estándar CAN 2.0B
+- **Capa de enlace de datos**: Formato de trama extendida (ID de 29 bits)
+- **Capa de aplicación**: Protocolo personalizado RobStride
+- **Velocidad de transmisión**: 1 Mbps
 
-### Detalles de Modos de Control
+### Detalles de los Modos de Control
 
-#### 1. Modo MIT (Modo 0)
-- **Características**: Control directo de torque con alta velocidad de respuesta
-- **Casos de Uso**: Aplicaciones que requieren respuesta rápida
-- **Parámetros de Control**: P, D, T, Posición, Velocidad
+#### 1. MIT Mode (Mode 0)
+- **Características**: Control directo de par con alta velocidad de respuesta
+- **Casos de uso**: Aplicaciones que requieren respuesta rápida
+- **Parámetros de control**: P, D, T, Posición, Velocidad
 
-#### 2. Modo Posición (Modo 1)
+#### 2. Position Mode (Mode 1)
 - **Características**: Control de lazo cerrado de posición con posicionamiento preciso
-- **Casos de Uso**: Posicionamiento de precisión, control de articulaciones de robot
-- **Parámetros de Control**: Posición, Velocidad, Torque Máximo
+- **Casos de uso**: Posicionamiento de precisión, control de articulaciones de robots
+- **Parámetros de control**: Posición, Velocidad, Par Máximo
 
-#### 3. Modo Velocidad (Modo 2)
+#### 3. Speed Mode (Mode 2)
 - **Características**: Control de lazo cerrado de velocidad con regulación estable de velocidad
-- **Casos de Uso**: Aplicaciones que requieren velocidad constante
-- **Parámetros de Control**: Velocidad, Torque Máximo
+- **Casos de uso**: Aplicaciones que requieren velocidad constante
+- **Parámetros de control**: Velocidad, Par Máximo
 
 ---
 
@@ -142,25 +144,25 @@ sudo ip link set can0 type can bitrate 1000000
 sudo ip link set up can0
 ```
 
-### Clonar Proyecto
+### Clonar el Proyecto
 
 ```bash
 git clone https://github.com/Seeed-Projects/RobStride_Control.git
 cd RobStride_Control
 ```
 
-### Elige Tu Implementación de Lenguaje
+### Elige la Implementación en tu Lenguaje
 
 | Lenguaje | Frecuencia de Control | Uso de Memoria | Casos de Uso |
-|----------|----------------------|----------------|--------------|
+|----------|------------------------|----------------|-------------|
 | Python | 50-100Hz | ~50MB | Prototipado rápido, validación de algoritmos |
 | C++ | 200Hz | ~10MB | Aplicaciones de alto rendimiento, control en tiempo real |
-| Rust | 150Hz | ~8MB | Crítico para seguridad, requisitos de seguridad de memoria |
-| Arduino | 100Hz | ~2KB | Embebido, entornos con recursos limitados |
+| Rust | 150Hz | ~8MB | Crítico para la seguridad, requisitos de seguridad de memoria |
+| Arduino | 100Hz | ~2KB | Sistemas embebidos, entornos con recursos limitados |
 
 ---
 
-## Implementación Python
+## Implementación en Python
 
 ### Instalar Dependencias
 
@@ -226,7 +228,7 @@ tor 5.0     # Set feed-forward torque
 quit        # Exit program
 ```
 
-### Características Avanzadas
+### Funciones Avanzadas
 
 ```python
 # Multi-motor synchronous control
@@ -246,9 +248,9 @@ while True:
 
 ---
 
-## Implementación C++
+## Implementación en C++
 
-### Compilar
+### Compilación
 
 ```bash
 cd cpp
@@ -296,7 +298,7 @@ public:
 };
 ```
 
-### Optimización de Rendimiento
+### Optimización del Rendimiento
 
 ```cpp
 // High-performance configuration
@@ -319,7 +321,7 @@ void control_loop() {
 }
 ```
 
-### Ejecutar
+### Ejecución
 
 ```bash
 # Requires administrator privileges
@@ -328,9 +330,9 @@ sudo ./build/robstride-mit-position 1
 
 ---
 
-## Implementación Rust
+## Implementación en Rust
 
-### Compilar
+### Compilación
 
 ```bash
 cd rust
@@ -389,7 +391,7 @@ impl RobStrideController {
 }
 ```
 
-### Características de Seguridad de Memoria
+### Funciones de Seguridad de Memoria
 
 ```rust
 // Multi-thread safe shared CAN interface
@@ -425,7 +427,7 @@ cargo run --release -- 1
 
 ## Implementación en Arduino
 
-### Configuración de Hardware
+### Configuración de hardware
 
 ```
 ESP32           CAN Transceiver      RobStride Motor
@@ -435,7 +437,7 @@ GPIO4   <--->   RX                    CAN L
 GND     <--->   GND                   Ground
 ```
 
-### Código Básico
+### Código básico
 
 ```cpp
 #include <ESP32-TWAI-CAN.h>
@@ -484,7 +486,7 @@ public:
 };
 ```
 
-### Ejemplo de Control con Arduino
+### Ejemplo de control con Arduino
 
 ```cpp
 RobStrideMotor motor(1);
@@ -517,18 +519,18 @@ void loop() {
 
 ---
 
-## Detalles del Protocolo
+## Detalles del protocolo
 
-### Formato de Trama CAN
+### Formato de trama CAN
 
 | Campo | Tamaño | Descripción |
-|-------|--------|-------------|
+|-------|------|-------------|
 | ID | 29 bits | Identificador de trama extendida |
-| DLC | 4 bits | Longitud de datos (fijo a 8) |
-| Datos | 8 bytes | Datos de control |
-| CRC | 16 bits | Verificación de redundancia cíclica |
+| DLC | 4 bits | Longitud de datos (fijada en 8) |
+| Data | 8 bytes | Datos de control |
+| CRC | 16 bits | Comprobación de redundancia cíclica |
 
-### Reglas de Asignación de ID
+### Reglas de asignación de ID
 
 - **0x200 + ID**: Comandos de control en modo MIT
 - **0x300 + ID**: Comandos de control en modo posición
@@ -536,9 +538,9 @@ void loop() {
 - **0x500 + ID**: Consultas de estado del sistema
 - **0x600 + ID**: Comandos de configuración del sistema
 
-### Formato de Paquete de Datos
+### Formato del paquete de datos
 
-#### Comando de Control en Modo MIT (8 bytes)
+#### Comando de control en modo MIT (8 bytes)
 
 ```c
 struct mit_command_t {
@@ -550,7 +552,7 @@ struct mit_command_t {
 };
 ```
 
-#### Retroalimentación de Estado del Motor (8 bytes)
+#### Retroalimentación de estado del motor (8 bytes)
 
 ```c
 struct motor_status_t {
@@ -562,7 +564,7 @@ struct motor_status_t {
 };
 ```
 
-### Temporización de Comunicación
+### Temporización de comunicación
 
 ```mermaid
 sequenceDiagram
@@ -583,11 +585,11 @@ sequenceDiagram
 
 ---
 
-## Optimización de Rendimiento
+## Optimización del rendimiento
 
-### Ajuste del Sistema
+### Ajuste del sistema
 
-#### 1. Optimización de Parámetros del Kernel de Linux
+#### 1. Optimización de parámetros del kernel de Linux
 
 ```bash
 # Real-time priority setting
@@ -600,7 +602,7 @@ sudo taskset -cp 0-3 $(pgrep robstride-control)
 sudo sysctl -w vm.swappiness=1
 ```
 
-#### 2. Programación en Tiempo Real
+#### 2. Planificación en tiempo real
 
 ```cpp
 #include <sched.h>
@@ -613,18 +615,18 @@ sched_setscheduler(0, SCHED_FIFO, &param);
 mlockall(MCL_CURRENT | MCL_FUTURE);
 ```
 
-### Benchmarks de Rendimiento
+### Pruebas de rendimiento
 
-| Lenguaje | Frecuencia de Control | Uso de CPU | Latencia | Uso de Memoria |
-|----------|----------------------|------------|----------|----------------|
+| Lenguaje | Frecuencia de control | Uso de CPU | Latencia | Uso de memoria |
+|----------|-------------------|-----------|---------|--------------|
 | Python | 50-100Hz | 15-20% | 2-5ms | ~50MB |
 | C++ | 200Hz | 5-8% | 0.5-1ms | ~10MB |
 | Rust | 150Hz | 8-12% | 1-2ms | ~8MB |
 | Arduino | 100Hz | 40-60% | 1-3ms | ~2KB |
 
-### Consejos de Optimización
+### Consejos de optimización
 
-#### Optimización de Python
+#### Optimización en Python
 
 ```python
 # Use C extensions for acceleration
@@ -642,7 +644,7 @@ async def control_loop():
         await asyncio.sleep(0.01)
 ```
 
-#### Optimización de C++
+#### Optimización en C++
 
 ```cpp
 // Zero-copy optimization
@@ -658,7 +660,7 @@ public:
 };
 ```
 
-#### Optimización de Rust
+#### Optimización en Rust
 
 ```rust
 // Pre-allocate capacity
@@ -677,11 +679,11 @@ struct MotorCommand {
 
 ---
 
-## Solución de Problemas
+## Solución de problemas
 
-### Problemas Comunes
+### Problemas comunes
 
-#### 1. Fallo de Comunicación CAN
+#### 1. Fallo de comunicación CAN
 
 ```bash
 # Check CAN interface status
@@ -695,7 +697,7 @@ sudo ip link set can0 down
 sudo ip link set can0 up type can bitrate 1000000
 ```
 
-#### 2. Motor Sin Respuesta
+#### 2. El motor no responde
 
 ```bash
 # Scan devices on bus
@@ -707,7 +709,7 @@ print(f'Found motors: {motors}')
 "
 ```
 
-#### 3. Problemas de Rendimiento
+#### 3. Problemas de rendimiento
 
 ```bash
 # Check CPU usage
@@ -717,17 +719,17 @@ top -p $(pgrep robstride-control)
 sudo chrt -f 99 $(pgrep robstride-control)
 ```
 
-### Códigos de Error
+### Códigos de error
 
 | Código | Descripción | Solución |
-|--------|-------------|----------|
-| 0x01 | Tiempo de espera de comunicación agotado | Verificar conexión CAN |
-| 0x02 | Parámetro fuera de rango | Verificar rangos de parámetros de control |
-| 0x03 | Sobrecorriente del motor | Verificar carga y límites de torque |
-| 0x04 | Desbordamiento de posición | Verificar límites y posición objetivo |
-| 0x05 | Temperatura demasiado alta | Verificar refrigeración y carga |
+|------|-------------|----------|
+| 0x01 | Tiempo de espera de comunicación | Comprueba la conexión CAN |
+| 0x02 | Parámetro fuera de rango | Comprueba los rangos de parámetros de control |
+| 0x03 | Sobrecorriente del motor | Comprueba la carga y los límites de par |
+| 0x04 | Desbordamiento de posición | Comprueba los límites y la posición objetivo |
+| 0x05 | Temperatura demasiado alta | Comprueba la refrigeración y la carga |
 
-### Herramientas de Depuración
+### Herramientas de depuración
 
 ```bash
 # Real-time CAN bus monitoring
@@ -745,9 +747,9 @@ cangen can0 -I 211 -D r
 
 ---
 
-## Guía de Desarrollo
+## Guía de desarrollo
 
-### Estructura del Proyecto
+### Estructura del proyecto
 
 ```
 RobStride_Control/
@@ -771,15 +773,15 @@ RobStride_Control/
 └── tools/               # Helper tools
 ```
 
-### Pautas de Contribución
+### Guía para contribuir
 
-1. **Estilo de Código**
-   - Python: Seguir PEP 8
-   - C++: Seguir la Guía de Estilo de C++ de Google
-   - Rust: Usar rustfmt
-   - Arduino: Seguir la Guía de Estilo de Arduino
+1. **Estilo de código**
+   - Python: Sigue PEP 8
+   - C++: Sigue Google C++ Style Guide
+   - Rust: Usa rustfmt
+   - Arduino: Sigue Arduino Style Guide
 
-2. **Convención de Commits**
+2. **Convención de commits**
    ```
    feat: Add new feature
    fix: Bug fix
@@ -790,7 +792,7 @@ RobStride_Control/
    chore: Build process or auxiliary tool changes
    ```
 
-3. **Requisitos de Pruebas**
+3. **Requisitos de pruebas**
    ```bash
    # Run all tests
    python3 -m pytest python/tests/
@@ -798,7 +800,7 @@ RobStride_Control/
    cd rust && cargo test
    ```
 
-### Scripts de Construcción
+### Scripts de compilación
 
 ```bash
 #!/bin/bash
@@ -830,7 +832,7 @@ echo "Open arduino/mi_motor_control/mi_motor_control.ino"
 echo "Build completed!"
 ```
 
-### Guía de Despliegue
+### Guía de despliegue
 
 #### Ubuntu/Debian
 
@@ -872,16 +874,16 @@ CMD ["./cpp/build/robstride-mit-position", "1"]
 
 ## Recursos
 
-- **URL del Proyecto**: https://github.com/Seeed-Projects/RobStride_Control
-- **Reporte de Problemas**: https://github.com/Seeed-Projects/RobStride_Control/issues
-- **Mantenedor**: @tianrking
+- **URL del proyecto**: https://github.com/Seeed-Projects/RobStride_Control
+- **Reporte de incidencias**: https://github.com/Seeed-Projects/RobStride_Control/issues
+- **Responsable**: @tianrking
 
 
 ---
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y discusión de productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -127,7 +127,7 @@ If you encounter issues with the branch installation, you can restore the factor
 :::info Rolling Back
 **Step 1:** Trigger the SOFTWARE_RESET command** via Bluetooth to reinstall the original factory daemon
 
-**Step 2:** Refer to the [Reset Guide](./reset.md) for detailed step-by-step instructions
+**Step 2:** Refer to the [Reset Guide](/reachymini_platforms_reachy_mini_reset) for detailed step-by-step instructions
 :::
 
 ## Important Notes
