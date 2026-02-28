@@ -133,7 +133,7 @@ Con JetPack 6.2.1 y Linux BSP preinstalados, garantiza un despliegue sin inconve
     <tr>
       <th>Ventilador</th>
       <td colSpan={2}>1×12 V (2.54 mm), 1×5 V (1.25 mm JST)</td>
-    </tr]
+    </tr>
     <tr>
       <th>Botón</th>
       <td colSpan={2}>1x Recovery + 1x Reset</td>

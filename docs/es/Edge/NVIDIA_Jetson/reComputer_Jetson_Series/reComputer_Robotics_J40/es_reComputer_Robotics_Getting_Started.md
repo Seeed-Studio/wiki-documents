@@ -113,7 +113,7 @@ La reComputer Robotics J401 es una placa portadora de IA de borde compacta y de 
     <tr>
       <td>Botón de orificio</td>
       <td>1x PWR;<br />1x RESET</td>
-    </tr]
+    </tr>
     <tr>
       <td>Interruptor DIP</td>
       <td>1x REC</td>

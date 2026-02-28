@@ -151,7 +151,7 @@ reComputer industrial dispone de 2 puertos RJ45 GbE, uno de los cuales es un pue
       <td rowSpan={7}>Expansión</td>
       <td>Mini PCIe</td>
       <td colSpan={6}>Mini PCIe para 4G/LoRaWAN®&nbsp;&nbsp;(módulo opcional) <br /></td>
-    </tr]
+    </tr>
     <tr>
       <td>Wi-Fi</td>
       <td colSpan={6}>Compatible con SMD Wi-Fi/Bluetooth (módulo opcional) </td>

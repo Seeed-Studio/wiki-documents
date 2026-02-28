@@ -163,7 +163,7 @@ reComputer Robotics J401 支持 NVIDIA Isaac ROS、Hugging Face、PyTorch 和 RO
     <tr>
       <th rowSpan="1">Jetpack 版本</th>
       <td colSpan="2">Jetpack 6</td>
-    </tr]
+    </tr>
     <tr>
       <th rowSpan="3">机械特性</th>
       <td>尺寸 (W x D x H)</td>

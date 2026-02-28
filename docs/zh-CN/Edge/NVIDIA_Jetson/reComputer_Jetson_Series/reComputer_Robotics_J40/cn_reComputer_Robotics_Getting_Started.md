@@ -97,7 +97,7 @@ reComputer Robotics J401 是一款紧凑型高性能边缘 AI 载板，专为高
     <tr>
       <td>Fan</td>
       <td>1x 4-Pin 风扇连接器（5V PWM）；<br />1x 4-Pin 风扇连接器（12V PWM）</td>
-    </tr]
+    </tr>
     <tr>
       <td>Extension Port</td>
       <td>1x 摄像头扩展排针（用于 GMSL2 板）</td>
