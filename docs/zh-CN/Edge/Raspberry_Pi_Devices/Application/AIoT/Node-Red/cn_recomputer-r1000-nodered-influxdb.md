@@ -1,6 +1,5 @@
 ---
 description: 在 reComputer R1000 上部署 InfluxDB，用于在物联网应用中进行高效的时间序列数据收集和分析。本指南涵盖安装、配置和使用，以在您的 Raspberry Pi 驱动的边缘控制器上充分利用 InfluxDB 的强大功能。直接在网络边缘实现实时洞察和强大的监控能力。
-
 title: reComputer R1000 与 Node Red 和 InfluxDB
 keywords:
   - Edge Controller

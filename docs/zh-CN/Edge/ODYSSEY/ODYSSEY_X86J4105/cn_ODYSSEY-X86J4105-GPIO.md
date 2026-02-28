@@ -1,14 +1,12 @@
 ---
 description: ODYSSEY - X86J41x5
 title: 访问 40 针 GPIO
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/ODYSSEY-X86J4105-GPIO
 sku: 102110399,102110398,102110397,110991412,110991465,102110477,102110478,102110479
 last_update:
   date: 03/16/2023
   author: Lakshantha
-
 ---
 
 # 访问和控制 ODYSSEY - X86J41x5 的 40 针 GPIO

@@ -11,7 +11,6 @@ slug: /cn/pose_based_light_control_with_nodered_and_rpi_with_aikit
 last_update:
   date: 07/26/2024
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

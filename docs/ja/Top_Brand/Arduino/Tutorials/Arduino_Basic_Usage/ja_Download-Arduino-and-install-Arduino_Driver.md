@@ -1,15 +1,12 @@
 ---
 description: Arduino をダウンロードして Arduino ドライバーをインストールする
 title: Arduino をダウンロードして Arduino ドライバーをインストールする
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Download-Arduino-and-install-Arduino_Driver
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 no_comments: false # Disqus 用
-
 ---
 
 

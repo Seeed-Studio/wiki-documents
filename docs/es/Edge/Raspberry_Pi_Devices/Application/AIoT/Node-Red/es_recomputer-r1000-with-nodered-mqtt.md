@@ -1,6 +1,5 @@
 ---
 description: Aprende cómo instalar MQTT en el reComputer R1000 y probarlo con Node-RED. MQTT es un protocolo de mensajería ligero ideal para aplicaciones IoT, que permite un intercambio de datos eficiente y en tiempo real incluso sobre redes poco confiables. Con la integración de Node-RED, los dispositivos edge y servidores centrales logran conectividad perfecta, optimizando la transmisión y procesamiento de datos directamente en el edge.
-
 title: reComputer R1000 con Node Red y MQTT
 keywords:
   - Edge Controller

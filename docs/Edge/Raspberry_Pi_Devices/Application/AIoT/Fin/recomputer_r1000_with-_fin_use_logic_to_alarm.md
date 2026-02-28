@@ -1,6 +1,5 @@
 ---
 description: This article will show you how to use the Logic Builder of FIN Framwork
-
 title: reComputer R1000 with FIN Logic Builder
 keywords:
   - Edge Controller

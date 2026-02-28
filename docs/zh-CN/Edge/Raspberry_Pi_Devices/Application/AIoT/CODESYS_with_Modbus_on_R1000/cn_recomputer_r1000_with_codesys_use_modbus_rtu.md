@@ -1,6 +1,5 @@
 ---
 description: 本文主要介绍如何基于 CODESYS 使用 reComputer R1000 的 modbus rtu 功能
-
 title: 如何使用 CODESYS 配置 R1000 的 Modbus rtu 功能
 keywords:
   - Edge Controller

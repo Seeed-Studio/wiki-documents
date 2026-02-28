@@ -1,16 +1,13 @@
 ---
 description: Grove-Mega_Shield
 title: Grove-Mega Shield
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Grove-Mega_Shield
 sku: 103020027
 last_update:
   date: 01/30/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Mega_Shield/img/500px-Megashieldn1_03.jpg" alt="pir" width={600} height="auto" /></p>
 

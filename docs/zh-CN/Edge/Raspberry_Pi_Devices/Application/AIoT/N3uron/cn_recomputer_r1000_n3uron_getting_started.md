@@ -1,6 +1,5 @@
 ---
 description: N3uron 是一个完整的工业边缘平台，用于 IIoT 和 DataOps，能够在工业车间和第三方应用程序之间实现无缝集成，无论是本地部署还是云端部署。与 Computer R1000 配对使用，它增强了边缘控制能力，并提供强大的云集成功能，确保数据在整个组织中的无缝可用性。
-
 title: reComputer R1000 与 N3uron
 keywords:
   - Edge

@@ -1,6 +1,5 @@
 ---
 description: Este artículo presenta principalmente cómo usar la función modbus rtu del reComputer R1000 basado en CODESYS
-
 title: Cómo usar UPS para leer voltaje de entrada en reComputer r1000
 keywords:
   - Edge Controller

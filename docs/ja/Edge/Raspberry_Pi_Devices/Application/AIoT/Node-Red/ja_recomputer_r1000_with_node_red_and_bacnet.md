@@ -1,6 +1,5 @@
 ---
 description: このwikiは、Raspberry Pi 4をベースとした産業用IoTエッジコントローラーであるreComputer R1000の操作に関する包括的なガイドを提供します。Node-REDのセットアップ、YABEを使用した室温シミュレーション、効率的なビル管理システム（BMS）統合のためのBACnet IPデバイスパラメータの発見と読み取りの手順が含まれています。
-
 title: reComputer R1000とNode-RedおよびBACnet IP
 keywords:
   - Edge Controller

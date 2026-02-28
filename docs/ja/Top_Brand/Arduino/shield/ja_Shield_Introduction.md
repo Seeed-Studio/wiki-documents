@@ -1,15 +1,12 @@
 ---
 description: Shield_Introduction
 title: シールド紹介
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Shield_Introduction
 last_update:
   date: 05/15/2025
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 

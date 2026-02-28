@@ -12,9 +12,7 @@ slug: /ja/Local_RAG_based_on_Jetson_with_LlamaIndex
 last_update:
   date: 05/15/2024
   author: Jiahao
-
 no_comments: false # for Disqus
-
 ---
 
 # Jetson上でLlamaIndexを使用したローカルRAG

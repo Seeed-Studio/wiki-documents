@@ -1,6 +1,5 @@
 ---
 description: Aprende cómo usar ThingsBoard en el dispositivo reComputer con esta guía paso a paso. Descubre cómo agregar dispositivos, configurar nodos MQTT y crear paneles interactivos usando características populares para un monitoreo eficiente de datos.
-
 title: Crear Paneles IoT Dinámicos con ThingsBoard y reComputer R1000
 keywords:
   - reComputer-R1000

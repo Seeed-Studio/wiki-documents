@@ -1,8 +1,6 @@
 ---
 description: Raspberry Pi搭載のreComputer R11でChirpStackを使用してLoRaWANゲートウェイを構築する方法を学びます。R1X00ゲートウェイ、Packet Forwarder、SenseCAP S2101センサーを設定してMQTT経由でIoTデータをストリーミングします。世界中のどこからでもLoRaデバイスとアプリケーションに安全にアクセスできます。
-
 title: ChirpStack R1XゲートウェイとSenseCAP S2101の統合
-
 keywords:
 - ChripStack
 - LoRa-WAN

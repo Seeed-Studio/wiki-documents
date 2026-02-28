@@ -1,6 +1,5 @@
 ---
 description: Raspberry Pi 4G HAT のための TCP の力を解き放ちましょう。TCP がどのように信頼性の高いデータ交換を保証するかを探り、IoT アプリケーションやリモートモニタリングなどに不可欠な役割を果たします。
-
 title: Raspberry Pi 用 4G LTE HAT - TCP/IP ネットワーキングの解説
 keywords:
   - Raspberry Pi Hat

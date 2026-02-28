@@ -18,7 +18,6 @@ translation:
 last_update:
   date: 1/7/2026
   author: TienjuiWong
-
 ---
 
 <div style={{maxWidth: '800px', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)'}}>

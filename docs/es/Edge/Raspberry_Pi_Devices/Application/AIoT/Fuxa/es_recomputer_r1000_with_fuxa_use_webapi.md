@@ -1,6 +1,5 @@
 ---
 description: Este artículo presenta principalmente cómo usar fuxa para comunicación WebAPI.
-
 title: reComputer R1000 con fuxa para usar WebAPI
 keywords:
   - Edge Controller

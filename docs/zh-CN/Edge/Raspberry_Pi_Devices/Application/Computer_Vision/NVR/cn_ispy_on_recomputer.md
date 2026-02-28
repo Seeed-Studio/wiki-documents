@@ -10,7 +10,6 @@ slug: /cn/ispy_on_recomputer
 last_update:
   date: 11/10/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

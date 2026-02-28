@@ -2,7 +2,6 @@
 sidebar_position: 6
 title: License
 slug: /License
-
 ---
 
 ## **IMPORTANT NOTICE AND DISCLAIMER**

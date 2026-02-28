@@ -1,15 +1,12 @@
 ---
 description: A Comparison of Different Grove Temperature Sensors
 title: A Comparison of Different Grove Temperature Sensors
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /A_Comparison_of_Different_Grove_Temperature_Sensors
 last_update:
   date: 02/02/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 

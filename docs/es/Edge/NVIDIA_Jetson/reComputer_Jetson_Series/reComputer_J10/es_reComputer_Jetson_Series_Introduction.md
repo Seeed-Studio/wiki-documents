@@ -7,7 +7,6 @@ sku: 114992562,114110047,114110049,114110048,103110043,110991666,110061363,11006
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 # Introducción a la Serie reComputer for Jetson

@@ -1,6 +1,5 @@
 ---
 description: この記事では、Equip Graphic の作成方法を説明します
-
 title: reComputer R1000 と FIN を使用した Equip Graphic の作成
 keywords:
   - Edge Controller

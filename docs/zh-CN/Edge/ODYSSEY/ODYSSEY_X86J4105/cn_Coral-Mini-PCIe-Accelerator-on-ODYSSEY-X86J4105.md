@@ -6,7 +6,6 @@ slug: /cn/Coral-Mini-PCIe-Accelerator-x86
 last_update:
   date: 03/16/2023
   author: Lakshantha
-
 ---
 
 <!-- ---

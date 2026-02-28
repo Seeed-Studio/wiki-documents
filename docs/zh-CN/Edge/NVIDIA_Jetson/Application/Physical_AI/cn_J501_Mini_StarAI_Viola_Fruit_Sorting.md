@@ -1,7 +1,6 @@
 ---
 description: 本 wiki 演示如何使用 J501 Mini 与 StarAI Viola 机械臂，通过 LeRobot 框架和 ACT 模型执行水果分拣任务。
 title: 使用 J501 Mini 和 StarAI Viola 机械臂进行水果分拣
-
 keywords:
 - J501 mini
 - Robotics

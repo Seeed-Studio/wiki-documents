@@ -10,7 +10,6 @@ slug: /ja/use_uv_to_build_package_on_recomputer
 last_update:
   date: 08/21/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

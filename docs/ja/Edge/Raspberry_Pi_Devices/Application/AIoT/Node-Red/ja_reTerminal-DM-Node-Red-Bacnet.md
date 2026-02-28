@@ -1,6 +1,5 @@
 ---
 description: このwikiは、Raspberry Pi 4ベースの産業用IoTエッジHMIであるreTerminal DMの操作に関する包括的なガイドを提供します。Node-REDのセットアップ、YABEを使用した室温シミュレーション、効率的なビル管理システム（BMS）統合のためのBACnet IPデバイスパラメータの検出と読み取りの手順が含まれています。
-
 title: reTerminal DMとNode Red、BACnet TCP
 keywords:
   - BMS

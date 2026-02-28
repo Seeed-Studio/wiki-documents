@@ -1,6 +1,5 @@
 ---
 description: Raspberry Pi 用 4G LTE HAT と MQTT プロトコルを活用して、IoT および IIoT アプリケーション向けの効率的でリアルタイムな通信を実現する方法を紹介します。AT コマンドを使用してリモート接続を簡素化し、スケーラブルで高速なデータ伝送とリモート管理を可能にします。
-
 title: MQTT を使用した IIoT 向け 4G LTE 接続の設定
 keywords:
   - Raspberry Pi Hat

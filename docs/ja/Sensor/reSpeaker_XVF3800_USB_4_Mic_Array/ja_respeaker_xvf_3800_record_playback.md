@@ -1,8 +1,6 @@
 ---
 description: ReSpeaker XVF3800 USB 4-Mic Arrayは、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご体験ください。
-
 title: reSpeaker XVF3800 I2Sを使用した音声録音・再生
-
 keywords:
 - reSpeaker
 - XIAO

@@ -1,6 +1,5 @@
 ---
 description: Learn how to use ThingsBoard on the reComputer device with this step-by-step guide. Discover how to add devices, configure MQTT nodes, and create interactive dashboards using popular features for efficient data monitoring.
-
 title: Create Dynamic IoT Dashboards with ThingsBoard and reComputer R1000
 keywords:
   - reComputer-R1000

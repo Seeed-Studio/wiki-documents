@@ -1,6 +1,5 @@
 ---
 description: 开始使用 ReSpeaker XVF3800 USB 4-Mic Array——一款高性能语音接口模块，具有语音捕获功能，通过 USB 或 I2C 支持跨平台。
-
 title: ReSpeaker XVF3800 USB 麦克风阵列入门指南
 keywords:
 - reSpeaker

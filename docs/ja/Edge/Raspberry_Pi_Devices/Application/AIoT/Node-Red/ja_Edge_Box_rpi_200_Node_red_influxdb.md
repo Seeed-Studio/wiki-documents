@@ -1,6 +1,5 @@
 ---
 description: IoTアプリケーションにおける効率的な時系列データ収集と分析のために、Edgebox RPi 200にInfluxDBをデプロイします。このガイドでは、Raspberry Piベースのエッジコントローラー上でInfluxDBの力を活用するためのインストール、設定、使用方法について説明します。ネットワークのエッジで直接リアルタイムインサイトと堅牢な監視機能を実現します。
-
 title: Edge Box RPi 200 with Node Red and InfluxDB
 keywords:
   - Edge Controller

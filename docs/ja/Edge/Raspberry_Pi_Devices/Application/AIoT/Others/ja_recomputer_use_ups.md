@@ -1,6 +1,5 @@
 ---
 description: この記事では主に、CODESYS ベースの reComputer R1000 の modbus rtu 機能の使用方法を紹介します
-
 title: reComputer r1000 で UPS を使用して入力電圧を読み取る方法
 keywords:
   - Edge Controller

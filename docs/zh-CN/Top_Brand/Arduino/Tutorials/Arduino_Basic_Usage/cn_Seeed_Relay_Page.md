@@ -1,15 +1,12 @@
 ---
 description: Seeed 继电器选择指南
 title: Seeed 继电器选择指南
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Seeed_Relay_Page
 last_update:
   date: 02/02/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 ![](https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/back.jpg)

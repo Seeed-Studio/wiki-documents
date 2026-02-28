@@ -1,6 +1,5 @@
 ---
 description: Configure RNDIS on Windows to connect Raspberry Pi 4G LTE HAT via USB, enabling seamless internet and network access.
-
 title: RNDIS on 4G LTE Raspberry pi HAT Windows
 keywords:
   - Raspberry Pi Hat
@@ -8,7 +7,6 @@ keywords:
   - IIoT
   - RNDIS
   - 4G LTE
-  
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/1-114993408-LTE-CAT-4-EG25-GL-4G-HAT-for-Raspberry-Pi.webp
 slug: /raspberry_pi_4g_lte_hat_rndis
 last_update:

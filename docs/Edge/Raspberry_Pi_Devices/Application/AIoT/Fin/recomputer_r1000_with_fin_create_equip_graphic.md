@@ -1,6 +1,5 @@
 ---
 description: This article will show you how to create a Equip Graphic
-
 title: reComputer R1000 with FIN to create a Equip Graphic
 keywords:
   - Edge Controller

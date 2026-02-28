@@ -1,14 +1,12 @@
 ---
 description: Este wiki proporciona una guía paso a paso para configurar un servidor OPC UA usando Node-RED en un reComputer R1000 alimentado por Raspberry Pi. Incluye instrucciones detalladas sobre la instalación y configuración del nodo servidor OPC UA, la conexión de dispositivos Modbus TCP y RTU, y el monitoreo de datos usando el cliente OPC UaExpert. Perfecto para aquellos que buscan integrar y visualizar datos industriales con facilidad.
 title: reComputer R1000 actúa como servidor OPC UA con Node-RED
-
 keywords:
   - Edge Controller
   - reComputer R1000
   - Node-Red
   - Modbus
   - OPC UA
-  
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /es/recomputer_r1000_nodered_opcua_server
 last_update:

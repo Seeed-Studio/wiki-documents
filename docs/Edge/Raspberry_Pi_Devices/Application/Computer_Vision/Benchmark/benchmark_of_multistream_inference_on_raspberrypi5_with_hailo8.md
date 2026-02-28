@@ -10,7 +10,6 @@ slug: /benchmark_of_multistream_inference_on_raspberrypi5_with_hailo8
 last_update:
   date: 11/21/2024
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

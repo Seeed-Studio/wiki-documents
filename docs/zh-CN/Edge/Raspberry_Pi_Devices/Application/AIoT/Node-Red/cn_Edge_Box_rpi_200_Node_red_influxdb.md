@@ -1,6 +1,5 @@
 ---
 description: 在 Edgebox RPi 200 上部署 InfluxDB，用于 IoT 应用中高效的时间序列数据收集和分析。本指南涵盖安装、配置和使用，以在您的树莓派驱动的边缘控制器上发挥 InfluxDB 的强大功能。直接在网络边缘实现实时洞察和强大的监控能力。
-
 title: Edge Box RPi 200 与 Node Red 和 InfluxDB
 keywords:
   - Edge Controller

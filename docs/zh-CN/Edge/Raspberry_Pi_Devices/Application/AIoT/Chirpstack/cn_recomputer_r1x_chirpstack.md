@@ -1,8 +1,6 @@
 ---
 description: 学习如何在基于 Raspberry Pi 的 reComputer R11 上使用 ChirpStack 构建 LoRaWAN 网关。配置 R1X00 网关、数据包转发器和 SenseCAP S2101 传感器，通过 MQTT 流式传输物联网数据。从世界任何地方安全访问您的 LoRa 设备和应用程序。
-
 title: ChirpStack R1X 网关与 SenseCAP S2101 集成
-
 keywords:
 - ChripStack
 - LoRa-WAN

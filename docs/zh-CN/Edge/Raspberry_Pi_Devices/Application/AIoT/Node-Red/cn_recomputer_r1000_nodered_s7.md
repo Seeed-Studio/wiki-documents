@@ -1,7 +1,6 @@
 ---
 description: 学习如何使用 S7 协议配置西门子 PLC，并将其与运行在基于树莓派的 reComputer 上的 Node-RED 集成，实现高效的边缘计算。了解设置 S7 节点、创建流程和监控 PLC 变量的分步指导。
 title: 使用 S7 协议连接西门子 PLC 与 reComputer R1000
-
 keywords:
   - Edge Controller
   - reComputer R1000
@@ -9,7 +8,6 @@ keywords:
   - Siemens
   - S7
   - PLC
-  
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /cn/recomputer_r1000_nodered_s7
 last_update:

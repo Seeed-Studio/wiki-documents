@@ -1,8 +1,6 @@
 ---
 description: Explora el mundo del modo ECM y 4G LTE en Raspberry Pi. Esta guía proporciona instrucciones paso a paso para configurar la conectividad celular usando ECM (Modelo de Control Ethernet), habilitando acceso a internet sin interrupciones para tus proyectos.
-
 title: Internet Móvil para tu Pi - Configuración ECM
-
 keywords:
   - Raspberry Pi Hat
   - Getting started

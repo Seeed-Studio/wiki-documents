@@ -11,7 +11,6 @@ slug: /es/yolov8_on_ai_box_for_fall_climbing_tracking
 last_update:
   date: 07/29/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

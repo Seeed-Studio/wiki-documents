@@ -7,9 +7,7 @@ sku: 103030215
 last_update:
   date: 01/10/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/shiyitu1.png" /></div>

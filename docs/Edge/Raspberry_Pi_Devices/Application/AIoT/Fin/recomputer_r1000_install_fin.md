@@ -1,6 +1,5 @@
 ---
 description: This article mainly introduces how to install fin for reComputer R1000
-
 title: reComputer R1000 install FIN
 keywords:
   - Edge Controller

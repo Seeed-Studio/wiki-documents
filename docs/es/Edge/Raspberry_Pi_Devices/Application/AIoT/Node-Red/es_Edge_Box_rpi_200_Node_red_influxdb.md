@@ -1,6 +1,5 @@
 ---
 description: Despliega InfluxDB en un Edgebox RPi 200 para la recopilación y análisis eficiente de datos de series temporales en aplicaciones IoT. Esta guía cubre la instalación, configuración y uso para aprovechar el poder de InfluxDB en tu controlador edge alimentado por Raspberry Pi. Logra información en tiempo real y capacidades de monitoreo robustas directamente en el borde de tu red.
-
 title: Edge Box RPi 200 con Node Red e InfluxDB
 keywords:
   - Edge Controller

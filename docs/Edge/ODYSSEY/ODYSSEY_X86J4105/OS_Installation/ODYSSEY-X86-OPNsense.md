@@ -6,7 +6,6 @@ slug: /ODYSSEY-X86-OPNsense
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 description: この記事では、フロアグラフィックの作成方法を説明します
-
 title: reComputer R1000とFINを使用したフロアグラフィックの作成
 keywords:
   - Edge Controller
