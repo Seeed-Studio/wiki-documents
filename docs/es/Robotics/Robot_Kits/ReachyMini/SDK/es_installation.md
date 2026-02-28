@@ -302,7 +302,7 @@ Los usuarios de Linux tienen pasos adicionales que seguir:
 
 <div align="center">
 
-[![Guía de instalación de GStreamer](https://img.shields.io/badge/📖-GStreamer%20Installation%20Guide-blue?style=for-the-badge)](gstreamer-installation.md)
+[![Guía de instalación de GStreamer](https://img.shields.io/badge/📖-GStreamer%20Installation%20Guide-blue?style=for-the-badge)](/es/reachymini_sdk_gstreamer-installation)
 
 </div>
 

@@ -302,7 +302,7 @@ Linux ユーザーは、追加の手順に従う必要があります：
 
 <div align="center">
 
-[![GStreamer Installation Guide](https://img.shields.io/badge/📖-GStreamer%20Installation%20Guide-blue?style=for-the-badge)](gstreamer-installation.md)
+[![GStreamer Installation Guide](https://img.shields.io/badge/📖-GStreamer%20Installation%20Guide-blue?style=for-the-badge)](/ja/reachymini_sdk_gstreamer-installation)
 
 </div>
 
