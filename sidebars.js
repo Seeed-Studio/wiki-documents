@@ -4252,9 +4252,203 @@ const sidebars = {
         {
           type: 'category',
           label: 'ReachyMini',
+          collapsible: true,
+          collapsed: false,
           items: [
-            'Robotics/Robot_Kits/ReachyMini/ReachyMini_Getting_Started',
-          ]
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/intro',
+              label: 'Introduction',
+            },
+            {
+              type: 'category',
+              label: 'Reachy Mini (Wireless)',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/get_started',
+                  label: 'Getting Started',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/usage',
+                  label: 'Usage',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/hardware',
+                  label: 'Hardware',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/media_advanced_controls',
+                  label: 'Media Advanced Controls',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/reset',
+                  label: 'Reset',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/install_daemon_from_branch',
+                  label: 'Install Daemon from Branch',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/development_workflow',
+                  label: 'Development Workflow',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/reflash_the_rpi_ISO',
+                  label: 'Reflash the ISO',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Reachy Mini Lite',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/get_started',
+                  label: 'Getting Started',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/usage',
+                  label: 'Usage',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/hardware',
+                  label: 'Hardware',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/media_advanced_controls',
+                  label: 'Media Advanced Controls',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/wizard',
+                  label: 'Wizard',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Simulation',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/simulation/get_started',
+                  label: 'Getting Started',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SDK Guide',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/readme',
+                  label: 'SDK Overview',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/installation',
+                  label: 'Installation',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/quickstart',
+                  label: 'Quickstart',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/python-sdk',
+                  label: 'Python SDK',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/javascript-sdk',
+                  label: 'JavaScript SDK',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/integration',
+                  label: 'AI Integrations',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/core-concept',
+                  label: 'Core Concepts',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/media-architecture',
+                  label: 'Media Architecture',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/gstreamer-installation',
+                  label: 'GStreamer Installation',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Help & Troubleshooting',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting',
+                  label: 'Troubleshooting',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/motors_diagnosis',
+                  label: 'Motors Diagnosis',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/change_mic_fpc_cable',
+                  label: 'Change Mic FPC Cable',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Examples',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/examples' },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'API Reference',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/API' },
+              ],
+            },
+          ],
         },
         {
           type: 'category',
@@ -9494,13 +9688,6 @@ const sidebars = {
       collapsed: true,
       collapsible: true,
       items: [
-        {
-          type: 'category',
-          label: 'ReachyMini',
-          items: [
-            'zh-CN/Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_Getting_Started',
-          ]
-        },
         {
           type: 'category',
           label: 'Lerobot',
