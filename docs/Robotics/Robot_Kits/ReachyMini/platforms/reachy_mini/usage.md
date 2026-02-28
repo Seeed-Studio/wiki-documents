@@ -61,8 +61,8 @@ When an App is running, it takes control of the robot. You cannot run Python scr
 Ready to write your own logic? Reachy Mini is controlled via a simple Python SDK.
 :::
 
-👉 **[Go to the SDK documentation](../../SDK/readme.md)** for a complete overview.
+👉 **[Go to the SDK documentation](/reachymini_sdk_readme)** for a complete overview.
 
 ## ❓ Troubleshooting
 
-Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](../../troubleshooting.md)**
+Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymini_troubleshooting)**

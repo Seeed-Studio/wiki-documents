@@ -129,4 +129,4 @@ The default OpenCV backend is also available for Linux.
 
 ## Microphones and Speakers
 
-Refer to the [Reachy Mini documentation](../reachy_mini/media_advanced_controls.md#microphones-and-speakers). The hardware is exactly the same for the Lite version.
+Refer to the [Reachy Mini documentation](/reachymini_platforms_reachy_mini_media_advanced_controls#microphones-and-speakers). The hardware is exactly the same for the Lite version.

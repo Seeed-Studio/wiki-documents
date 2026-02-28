@@ -57,7 +57,7 @@ Connect the USB cable from the robot to your computer.
 * **Windows users:** The Reachy Mini Control app for Windows is currently being finalized and will be available in a few days.
 * **ARM64 systems (DGX, Jetson, etc.) and unusual Linux distributions:** The desktop app may not work on your system.
 
-**Alternative:** If the desktop app doesn't work on your setup, you can install and use the [Python SDK](../../SDK/readme.md) directly - it's a fully supported and valid way to control your robot!
+**Alternative:** If the desktop app doesn't work on your setup, you can install and use the [Python SDK](/reachymini_sdk_readme) directly - it's a fully supported and valid way to control your robot!
 :::
 
 The **Reachy Mini Control** desktop app is the command center for your robot. It includes the dashboard, visualization tools, and app launcher—no command line required.
@@ -81,11 +81,11 @@ Once installed, simply open the app. It will automatically check for and install
 
 Now that everything is connected and installed, you are ready to play!
 
-👉 **[Go to the Usage Guide](usage.md)** to learn how to:
+👉 **[Go to the Usage Guide](/reachymini_platforms_reachy_mini_lite_usage)** to learn how to:
 * Use the **Desktop App** features.
 * Install and run **Community Apps** (Conversation, Games, etc.).
 * Program your Reachy with **Python**.
 
 ## ❓ Troubleshooting
 
-Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](../../troubleshooting.md)**
+Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymini_troubleshooting)**
