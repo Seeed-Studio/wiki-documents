@@ -210,5 +210,5 @@ If you mount the whole repo over site-packages, Python will not find your code. 
 
 ## See Also
 
-- [Install Daemon from Branch](./install_daemon_from_branch.md) - For testing unreleased daemon versions
-- [Troubleshooting](../../troubleshooting.md) - Common issues and fixes
+- [Install Daemon from Branch](/reachymini_platforms_reachy_mini_install_daemon_from_branch) - For testing unreleased daemon versions
+- [Troubleshooting](/reachymini_troubleshooting) - Common issues and fixes

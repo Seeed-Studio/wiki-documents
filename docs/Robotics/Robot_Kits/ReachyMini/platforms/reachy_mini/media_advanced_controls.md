@@ -129,4 +129,4 @@ python src/reachy_mini/media/audio_control_utils.py DOA_VALUE_RADIANS
 # Output
 # DOA_VALUE_RADIANS: (0.5410520434379578, 1.0)
 ```
-This feature is also directly available from [the SDK](../../SDK/python-sdk.md#sensors--media).
+This feature is also directly available from [the SDK](/reachymini_sdk_python-sdk#sensors--media).
