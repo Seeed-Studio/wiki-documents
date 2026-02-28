@@ -1,15 +1,12 @@
 ---
 description: WireLess_Gate_Shield_V1.0
 title: WireLess Gate Shield V1.0
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/WireLess_Gate_Shield_V1.0
 last_update:
   date: 05/15/2025
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 

@@ -7,9 +7,7 @@ sku: 113030019
 last_update:
   date: 01/11/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bluetooth_Shield_V2/img/Bluetooth_Shiled_v2.JPG" alt="pir" width={600} height="auto" /></p>
 

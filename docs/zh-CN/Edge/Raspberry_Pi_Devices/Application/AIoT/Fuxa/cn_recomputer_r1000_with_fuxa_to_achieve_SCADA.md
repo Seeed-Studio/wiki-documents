@@ -1,6 +1,5 @@
 ---
 description: 本文主要介绍如何使用 fuxa 实现 SCADA。
-
 title: reComputer R1000 使用 fuxa 实现 SCADA
 keywords:
   - Edge Controller

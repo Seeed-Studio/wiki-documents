@@ -1,6 +1,5 @@
 ---
 description: Deploy InfluxDB on an reTerminal DM for efficient time-series data collection and analysis in IoT applications. This guide covers installation, configuration, and usage to leverage the power of InfluxDB on your Raspberry Pi-powered HMI. Achieve real-time insights and robust monitoring capabilities directly at the edge of your network.
-
 title: reTerminal DM with Node Red and InfluxDB
 keywords:
   - Raspberry Pi

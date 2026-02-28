@@ -1,16 +1,13 @@
 ---
 description: Protoshield_Kit_for_Arduino
 title: Kit Protoshield para Arduino
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Protoshield_Kit_for_Arduino
 sku: 103060000
 last_update:
   date: 01/30/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Protoshield_Kit_for_Arduino/img/ProtoShield.jpg" alt="pir" width={600} height="auto" /></p>

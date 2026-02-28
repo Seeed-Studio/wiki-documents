@@ -11,9 +11,7 @@ sku: 103100063, 103030195, 110060762
 last_update:
   date: 01/05/2022 
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/zoro_im_kitbox.jpg" alt="pir" width={600} height="auto" /></p>

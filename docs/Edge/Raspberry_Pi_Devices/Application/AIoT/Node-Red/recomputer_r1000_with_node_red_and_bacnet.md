@@ -1,6 +1,5 @@
 ---
 description: This wiki provides a comprehensive guide to working with the reComputer R1000, an industrial IoT edge controller based on the Raspberry Pi 4. It includes instructions for setting up Node-RED, simulating room temperatures with YABE, and discovering and reading BACnet IP device parameters for efficient Building Management System (BMS) integration.
-
 title: reComputer R1000 with Node-Red and BACnet IP
 keywords:
   - Edge Controller

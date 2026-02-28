@@ -11,9 +11,7 @@ sku: 103100063, 103030195, 102991003, 110060762, 102990863
 last_update:
   date: 05/15/2025
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 

@@ -7,7 +7,6 @@ sku: 102110319
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 # ODYSSEY – STM32MP157C

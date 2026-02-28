@@ -1,6 +1,5 @@
 ---
 description: This wiki provides a comprehensive guide to working with the reTerminal DM an industrial IoT edge HMI based on the Raspberry Pi 4. It includes instructions for setting up Node-RED, simulating room temperatures with YABE, and discovering and reading BACnet IP device parameters for efficient Building Management System (BMS) integration.
-
 title: reTerminal DM with Node Red and BACnet TCP
 keywords:
   - BMS

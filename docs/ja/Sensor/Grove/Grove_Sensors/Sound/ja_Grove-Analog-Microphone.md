@@ -1,6 +1,5 @@
 ---
 title: Grove - アナログマイク
-
 nointro:
 keywords:
   - ドキュメント

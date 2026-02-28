@@ -9,7 +9,6 @@ sku: E22011026
 last_update:
   date: 03/16/2023
   author: Lakshantha
-
 ---
 # Primeros pasos con Home Assistant en ODYSSEY-X86
 

@@ -6,9 +6,7 @@ slug: /reComputer_Jetson_Memory_Expansion
 last_update:
   date: 01/05/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 # reComputer for Jetson Memory Expansion

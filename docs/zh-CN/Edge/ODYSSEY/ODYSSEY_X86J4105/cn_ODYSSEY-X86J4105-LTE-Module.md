@@ -7,7 +7,6 @@ sku: 113990854,113990855,113990856,110991412,110991465,102110477,102110478,10211
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 本指南将引导您在 Windows 和 Linux 操作系统上使用 ODYSSEY-X86 的 LTE 模块。在本示例中，LTE 模块为 [Quectel EM06-E LTE Cat 6 M.2 模块](https://www.seeedstudio.com/Quectel-EM06-E-LTE-Cat6-Module-p-4567.html)，其采用 M.2 形式。

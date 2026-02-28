@@ -8,7 +8,6 @@ slug: /ja/popularplatforms
 last_update:
   date: 05/15/2025
   author: Yaohao
-
 ---
 
 

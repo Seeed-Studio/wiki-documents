@@ -1,16 +1,13 @@
 ---
 description: Seeed 気圧センサー選定ガイド
 title: Seeed 気圧センサー選定ガイド
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Barometer-Selection-Guide
 sku: 101020193,101020192,101020068,101020032,101020812
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 no_comments: false # Disqus 用
-
 ---
 
 

@@ -1,15 +1,12 @@
 ---
 description: 指のタッチを検出する方法
 title: 指のタッチを検出する方法
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/How_to_detect_finger_touch
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 

@@ -1,15 +1,12 @@
 ---
 description: 上传代码
 title: 上传代码
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Upload_Code
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 **上传代码的具体步骤：**

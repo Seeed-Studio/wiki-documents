@@ -1,15 +1,12 @@
 ---
 description: Cómo instalar una biblioteca de Arduino
 title: Cómo instalar una biblioteca de Arduino
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/How_to_install_Arduino_Library
 last_update:
   date: 02/02/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 

@@ -11,7 +11,6 @@ slug: /facial_recognition_on_the_recomputer
 last_update:
   date: 11/18/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

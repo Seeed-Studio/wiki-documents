@@ -4,7 +4,6 @@ title: Introducción al Sensor de Radar mmWave
 keywords:
 - Grove
 - mmWave Radar Sensor
-
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp
 slug: /es/mmwave_radar_Intro
 last_update:

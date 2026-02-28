@@ -9,9 +9,7 @@ slug: /cn/reComputer_Jetson_Series_GPIO_Grove
 last_update:
   date: 11/21/2022
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 # reComputer Jetson 的 GPIO 和 Grove

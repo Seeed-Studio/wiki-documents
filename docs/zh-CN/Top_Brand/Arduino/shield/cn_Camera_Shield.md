@@ -7,9 +7,7 @@ sku: 103990057
 last_update:
   date: 01/10/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Camera_Shield/img/CameraShield.jpg" alt="pir" width={600} height="auto" /></p>
 

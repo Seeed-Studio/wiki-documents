@@ -1,15 +1,12 @@
 ---
 description: Sidekick 高级套件的示例代码集
 title: Sidekick 高级套件的示例代码集
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Sketchbook_of_Sidekick_Advanced_Kit
 last_update:
   date: 02/02/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 Sidekick 高级套件包含一套基础元件以及大量传感器和其他模块。

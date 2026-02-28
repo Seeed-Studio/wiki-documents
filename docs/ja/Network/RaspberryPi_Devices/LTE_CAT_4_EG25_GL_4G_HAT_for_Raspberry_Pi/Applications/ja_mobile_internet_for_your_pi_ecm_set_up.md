@@ -1,8 +1,6 @@
 ---
 description: Raspberry PiでECMモードと4G LTEの世界を探求しましょう。このガイドでは、ECM（Ethernet Control Model）を使用してセルラー接続を構成し、プロジェクトにシームレスなインターネットアクセスを提供する手順を説明します。
-
 title: Raspberry Piでモバイルインターネット - ECMセットアップ
-
 keywords:
   - Raspberry Pi Hat
   - 初めてのセットアップ

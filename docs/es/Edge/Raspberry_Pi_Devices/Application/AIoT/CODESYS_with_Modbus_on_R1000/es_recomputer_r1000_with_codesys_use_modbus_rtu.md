@@ -1,6 +1,5 @@
 ---
 description: Este artículo presenta principalmente cómo usar la función modbus rtu del reComputer R1000 basado en CODESYS
-
 title: Cómo usar CODESYS para configurar la función Modbus rtu del R1000
 keywords:
   - Edge Controller

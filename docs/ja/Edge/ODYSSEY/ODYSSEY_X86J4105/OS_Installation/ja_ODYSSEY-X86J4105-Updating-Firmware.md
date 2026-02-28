@@ -6,7 +6,6 @@ slug: /ja/ODYSSEY-X86J4105-Updating-Firmware
 last_update:
   date: 05/15/2025
   author: Lakshantha
-
 ---
 
 

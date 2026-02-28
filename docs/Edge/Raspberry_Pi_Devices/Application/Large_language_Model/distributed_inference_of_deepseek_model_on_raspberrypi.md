@@ -10,7 +10,6 @@ slug: /distributed_inference_of_deepseek_model_on_raspberrypi
 last_update:
   date: 03/17/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

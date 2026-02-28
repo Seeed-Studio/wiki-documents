@@ -1,6 +1,5 @@
 ---
 description: この記事では主にfuxaを使用してWebAPI通信を行う方法について紹介します。
-
 title: reComputer R1000でfuxaを使用してWebAPIを利用する
 keywords:
   - Edge Controller

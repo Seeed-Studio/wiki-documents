@@ -1,16 +1,13 @@
 ---
 description: 4A_Motor_Shield
 title: 4A モーターシールド
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/4A_Motor_Shield
 sku: 105030004
 last_update:
   date: 05/15/2025
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 

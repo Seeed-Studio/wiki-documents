@@ -11,9 +11,7 @@ sku: 102991695, 102991714, 110061402, 110061481
 last_update:
   date: 08/27/2024
   author: Youjiang
-
 no_comments: false # for Disqus
-
 ---
 
 # reComputer J202 入門ガイド

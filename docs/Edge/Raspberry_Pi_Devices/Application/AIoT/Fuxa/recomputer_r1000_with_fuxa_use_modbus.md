@@ -1,6 +1,5 @@
 ---
 description: This article mainly introduces how to use fuxa for ModbusRTU/TCP communication.
-
 title: reComputer R1000 with fuxa to use modbus RTU/TCP
 keywords:
   - Edge Controller

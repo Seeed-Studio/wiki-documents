@@ -1,6 +1,5 @@
 ---
 description: 本文将向您展示如何使用 FIN 框架的逻辑构建器
-
 title: reComputer R1000 与 FIN 逻辑构建器
 keywords:
   - Edge Controller

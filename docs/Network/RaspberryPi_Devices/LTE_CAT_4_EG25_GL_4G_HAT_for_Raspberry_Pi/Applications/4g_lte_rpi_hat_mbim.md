@@ -1,6 +1,5 @@
 ---
 description: Guide to setting up Quectel 4G Raspberry Pi HAT on Windows using MBIM mode for stable cellular internet connection.
-
 title: 4G Raspberry Pi HAT - MBIM Mode Setup on Windows
 keywords:
   - Raspberry Pi Hat
@@ -8,7 +7,6 @@ keywords:
   - IIoT
   - MBIM
   - 4G LTE
-  
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mbimcmd.webp
 slug: /raspberry_pi_4g_lte_hat_mbim
 last_update:

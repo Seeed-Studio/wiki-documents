@@ -1,6 +1,5 @@
 ---
 description: Aprende cómo integrar la aplicación N3uron en el reComputer R1000 con capacidades de edge computing e interactuar con AWS IoT Core. En este tutorial, cubriremos los pasos para suscribirse a datos de resultado de manera eficiente.
-
 title: reComputer R1000 Conectar AWS IoT Core con N3uron
 keywords:
   - reComputer-R1000
