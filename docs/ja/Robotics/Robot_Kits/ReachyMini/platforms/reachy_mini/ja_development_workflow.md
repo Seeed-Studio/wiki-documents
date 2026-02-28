@@ -210,5 +210,5 @@ your_app/
 
 ## 関連情報
 
-- [Install Daemon from Branch](./install_daemon_from_branch.md) - 未リリースの daemon バージョンをテストするため
-- [Troubleshooting](../../troubleshooting.md) - よくある問題とその解決策
+- [Install Daemon from Branch](/ja/reachymini_platforms_reachy_mini_install_daemon_from_branch) - 未リリースの daemon バージョンをテストするため
+- [Troubleshooting](/ja/reachymini_troubleshooting) - よくある問題とその解決策

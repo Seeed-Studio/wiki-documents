@@ -69,6 +69,6 @@ Reachy Mini には自己干渉や損傷を防ぐための物理的およびソ�
 
 
 ## 次のステップ
-* **[クイックスタートガイド](quickstart.md)**: Reachy Mini で最初の振る舞いを実行する
-* **[Python SDK](python-sdk.md)**: 動かす・見る・話す・聞く方法を学びます。
-* **[AI 連携](integration.md)**: LLM を接続し、アプリを構築して Hugging Face に公開します。
+* **[クイックスタートガイド](/ja/reachymini_sdk_quickstart)**: Reachy Mini で最初の振る舞いを実行する
+* **[Python SDK](/ja/reachymini_sdk_python-sdk)**: 動かす・見る・話す・聞く方法を学びます。
+* **[AI 連携](/ja/reachymini_sdk_integration)**: LLM を接続し、アプリを構築して Hugging Face に公開します。

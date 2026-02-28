@@ -76,7 +76,7 @@ Antes de continuar, se recomienda encarecidamente actualizar tu robot a la últi
 
 Ahora que tu robot está en línea y actualizado, ¡puedes empezar a controlarlo!
 
-👉 **[Ve a la Guía de Uso](usage.md)** para aprender cómo:
+👉 **[Ve a la Guía de Uso](/es/reachymini_platforms_reachy_mini_usage)** para aprender cómo:
 * Acceder al **Dashboard**.
 * Instalar y ejecutar **Apps** (como Conversation o Games).
 * Programar tu Reachy con **Python**.
@@ -100,7 +100,7 @@ reachyminios_check
 
 ## ❓ Resolución de Problemas
 
-¿Tienes algún problema? 👉 **[Consulta la Guía de Resolución de Problemas y FAQ](../../troubleshooting.md)**
+¿Tienes algún problema? 👉 **[Consulta la Guía de Resolución de Problemas y FAQ](/es/reachymini_troubleshooting)**
 
 ## Modo Experto
 

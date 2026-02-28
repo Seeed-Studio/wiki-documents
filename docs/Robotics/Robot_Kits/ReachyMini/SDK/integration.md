@@ -29,7 +29,7 @@ We provide a CLI tool to generate, check and publish a standard App structure (c
 *See our blog post tutorial: [Make and Publish Reachy Mini Apps](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)*
 
 ## JavaScript Web Apps
-Want a zero-install, cross-platform app that runs in the browser? Check out the [JavaScript SDK & Web Apps](javascript-sdk.md) guide — build static Hugging Face Spaces that control your robot over WebRTC from any device, including your phone.
+Want a zero-install, cross-platform app that runs in the browser? Check out the [JavaScript SDK & Web Apps](/reachymini_sdk_javascript-sdk) guide — build static Hugging Face Spaces that control your robot over WebRTC from any device, including your phone.
 
 ## HTTP & WebSocket API
 Building a dashboard or a non-Python controller? The Daemon exposes full control via REST.

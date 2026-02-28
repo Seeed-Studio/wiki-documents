@@ -50,7 +50,7 @@ Para reiniciar tu robot, pulsa OFF, espera 5 segundos y luego pulsa ON. Este sen
   * En la última versión etiquetada, o
   * Al día con la rama `develop` (`git pull`).
 
-**Reachy Mini Wireless**: ejecuta `reachyminios_check` para asegurarte de que todo está bien (consulta [Get Started](./platforms/reachy_mini/get_started.md))
+**Reachy Mini Wireless**: ejecuta `reachyminios_check` para asegurarte de que todo está bien (consulta [Get Started](/es/reachymini_platforms_reachy_mini_get_started))
 
 ### Problemas relacionados con los motores
 
@@ -60,7 +60,7 @@ Esto se refiere a problemas como:
 * Motores ausentes: "No motor found on port", "Missing motor", etc.
 
 :::info Diagnóstico de motores
-Si tienes alguno de los siguientes síntomas, consulta la [guía de diagnóstico y resolución de problemas de motores](./troubleshooting/motors_diagnosis.md) para seguir pasos detallados para diagnosticar y solucionar problemas relacionados con los motores.
+Si tienes alguno de los siguientes síntomas, consulta la [guía de diagnóstico y resolución de problemas de motores](/es/reachymini_troubleshooting_motors_diagnosis) para seguir pasos detallados para diagnosticar y solucionar problemas relacionados con los motores.
 
 Usar la app Reachy Mini Testbench te ayudará a identificar y resolver estos problemas de forma eficaz.
 :::
@@ -91,14 +91,14 @@ Si tienes uno de los siguientes síntomas:
 ![mic_cable](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/black_fpc_cable.png)
 :::
 
-Si tu cable está conectado correctamente y sigues teniendo problemas, es probable que el cable FPC del micrófono esté dañado. Consulta el tutorial [How to change the FPC cable of the microphone of Reachy Mini?](./troubleshooting/change_mic_fpc_cable.md) para solucionar este problema.
+Si tu cable está conectado correctamente y sigues teniendo problemas, es probable que el cable FPC del micrófono esté dañado. Consulta el tutorial [How to change the FPC cable of the microphone of Reachy Mini?](/es/reachymini_troubleshooting_change_mic_fpc_cable) para solucionar este problema.
 
 ### Volumen de audio bajo
 
 :::tip
 * Actualiza tu robot a la versión 1.2.3 o posterior
 
-Para más detalles, consulta la documentación: [Getting Started](./platforms/reachy_mini/get_started.md)
+Para más detalles, consulta la documentación: [Getting Started](/es/reachymini_platforms_reachy_mini_get_started)
 :::
 
 ### Errores de permisos
@@ -196,7 +196,7 @@ Por favor, comprueba que el interruptor está en la posición "**debug**" y no e
 ![switch_position](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/wireless_switch.png)
 :::
 
-Si este interruptor está en la posición correcta y aún así no puedes ver el AP, puede que necesites volver a grabar la iso de la Raspberry Pi siguiendo el tutorial [reflash the RPI Iso tutorial](./platforms/reachy_mini/reflash_the_rpi_ISO.md).
+Si este interruptor está en la posición correcta y aún así no puedes ver el AP, puede que necesites volver a grabar la iso de la Raspberry Pi siguiendo el tutorial [reflash the RPI Iso tutorial](/es/reachymini_platforms_reachy_mini_reflash_the_rpi_iso).
 
 ## 🚀 Primeros pasos y montaje
 
@@ -236,19 +236,19 @@ No necesitas instalarlos.
 
 :::success NO
 * Con Reachy Mini (Wireless), el daemon ya se está ejecutando en la Raspberry Pi integrada.
-* Con Reachy Mini Lite, puedes usar [the desktop app](./platforms/reachy_mini_lite/get_started.md).
-* Si la desktop app no funciona en tu sistema (por ejemplo, ARM64, distribuciones poco habituales), puedes [instalar y usar directamente el Python SDK](./SDK/installation.md), ¡es una alternativa totalmente soportada!
+* Con Reachy Mini Lite, puedes usar [the desktop app](/es/reachymini_platforms_reachy_mini_lite_get_started).
+* Si la desktop app no funciona en tu sistema (por ejemplo, ARM64, distribuciones poco habituales), puedes [instalar y usar directamente el Python SDK](/es/reachymini_sdk_installation), ¡es una alternativa totalmente soportada!
 :::
 
 ## 🔌 Conexión y Panel de control
 
 ### ¿Cómo conecto el robot al Wi‑Fi?
 
-Consulta la [guía inalámbrica de Reachy Mini](./platforms/reachy_mini/get_started.md) para obtener instrucciones detalladas sobre cómo conectarte a Wi‑Fi.
+Consulta la [guía inalámbrica de Reachy Mini](/es/reachymini_platforms_reachy_mini_get_started) para obtener instrucciones detalladas sobre cómo conectarte a Wi‑Fi.
 
 ### ¿Cómo restablezco el punto de acceso Wi‑Fi?
 
-Si necesitas restablecer el punto de acceso Wi‑Fi del robot (por ejemplo, si no puedes conectarte o quieres cambiar de red), sigue las instrucciones de la [Guía de restablecimiento de Wi‑Fi](./platforms/reachy_mini/reset.md).
+Si necesitas restablecer el punto de acceso Wi‑Fi del robot (por ejemplo, si no puedes conectarte o quieres cambiar de red), sigue las instrucciones de la [Guía de restablecimiento de Wi‑Fi](/es/reachymini_platforms_reachy_mini_reset).
 
 ### El panel en http://localhost:8000 no funciona.
 
@@ -322,7 +322,7 @@ Ayuda a evitar conflictos de paquetes durante la instalación del SDK.
 
 ### ¿Dónde puedo encontrar más información sobre el hardware?
 
-Consulta la [página de hardware de Reachy Mini](./platforms/reachy_mini/hardware.md) para obtener información detallada sobre los componentes de hardware del robot.
+Consulta la [página de hardware de Reachy Mini](/es/reachymini_platforms_reachy_mini_hardware) para obtener información detallada sobre los componentes de hardware del robot.
 
 ### ¿Cuáles son los límites de seguridad (Cabeza y Cuerpo)?
 
@@ -381,7 +381,7 @@ Trying baudrate: 1000000
 Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 ```
 
-2. Lite: También puedes usar Dynamixel Wizard para leer los parámetros de los motores. Sigue la guía [aquí](./platforms/reachy_mini_lite/wizard.md).
+2. Lite: También puedes usar Dynamixel Wizard para leer los parámetros de los motores. Sigue la guía [aquí](/es/reachymini_platforms_reachy_mini_lite_wizard).
 
 ### Los motores dejan de responder después de un tiempo.
 

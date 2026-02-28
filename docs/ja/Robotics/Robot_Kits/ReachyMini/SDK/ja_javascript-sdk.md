@@ -263,7 +263,7 @@ matrixToRpy(matrix)            // 4×4 matrix → { roll, pitch, yaw } in degree
 ## 前提条件
 
 - ロボットはワイヤレスファームウェアを実行し、中央のシグナリングサーバーに接続されている必要があります。
-- ロボットには有効な Hugging Face トークンが設定されている必要があります（[Usage](../platforms/reachy_mini/usage.md) を参照）。
+- ロボットには有効な Hugging Face トークンが設定されている必要があります（[Usage](/ja/reachymini_platforms_reachy_mini_usage) を参照）。
 - 現在は **ワイヤレスバージョン** のみサポートされています。
 
 ## 例

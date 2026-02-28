@@ -51,7 +51,7 @@ Omite la interpolación. Úsalo para control de alta frecuencia (por ejemplo, se
 
 ## Sensores y medios
 
-La arquitectura de medios se describe en detalle en la sección [Media Architecture](media-architecture.md). Aunque acceder al audio y al vídeo desde el SDK es similar entre las versiones de Reachy Mini, la implementación subyacente es diferente.
+La arquitectura de medios se describe en detalle en la sección [Media Architecture](/es/reachymini_sdk_media-architecture). Aunque acceder al audio y al vídeo desde el SDK es similar entre las versiones de Reachy Mini, la implementación subyacente es diferente.
 
 ### Cámara 📷
 
@@ -129,7 +129,7 @@ Elige el backend de medios apropiado según tu versión de Reachy Mini y tus req
 
 **Reachy Mini Lite:**
 - `media_backend="default"` - Usa OpenCV para la cámara y Sounddevice para el audio (recomendado para la mayoría de usuarios)
-- `media_backend="gstreamer"` - Usa GStreamer tanto para la cámara como para el audio ([installation required](gstreamer-installation.md))
+- `media_backend="gstreamer"` - Usa GStreamer tanto para la cámara como para el audio ([installation required](/es/reachymini_sdk_gstreamer-installation))
 
 **Reachy Mini Wireless:**
 - **Ejecución local** (ejecutando en el robot con SSH): Usa automáticamente `"gstreamer"`
@@ -137,7 +137,7 @@ Elige el backend de medios apropiado según tu versión de Reachy Mini y tus req
 
 > **💡 Consejo:** Para configuraciones inalámbricas, el backend se selecciona automáticamente según si estás ejecutando localmente o de forma remota. No es necesario especificar el valor de `media_backend`.
 
-> **💡 Consejo:** Para configuraciones inalámbricas, el backend WebRTC requiere una instalación específica, consulta [gstreamer-installation.md](gstreamer-installation.md). Por ahora solo se admite la plataforma Linux como cliente. Otras plataformas (Windows, macOS) serán compatibles en [future releases](https://github.com/pollen-robotics/reachy_mini/issues/572).
+> **💡 Consejo:** Para configuraciones inalámbricas, el backend WebRTC requiere una instalación específica, consulta [gstreamer-installation.md](/es/reachymini_sdk_gstreamer-installation). Por ahora solo se admite la plataforma Linux como cliente. Otras plataformas (Windows, macOS) serán compatibles en [future releases](https://github.com/pollen-robotics/reachy_mini/issues/572).
 
 ## Grabación de movimientos
 Puedes grabar un movimiento moviendo el robot (modo compliant) o enviando comandos, y guardarlo para reproducirlo más tarde.
@@ -152,9 +152,9 @@ with ReachyMini() as mini:
 
 ## Próximos pasos
 * **[Explora la carpeta de ejemplos](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)**
-* **[Integraciones de IA](integration.md)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
-* **[Conceptos básicos](core-concept.md)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
+* **[Integraciones de IA](/es/reachymini_sdk_integration)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
+* **[Conceptos básicos](/es/reachymini_sdk_core-concept)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
 
 ## ❓ Resolución de problemas
 
-¿Tienes algún problema? 👉 **[Consulta la guía de resolución de problemas y preguntas frecuentes](../troubleshooting.md)**
+¿Tienes algún problema? 👉 **[Consulta la guía de resolución de problemas y preguntas frecuentes](/es/reachymini_troubleshooting)**

@@ -61,8 +61,8 @@ Cuando una App está en ejecución, toma el control del robot. No puedes ejecuta
 ¿Listo para escribir tu propia lógica? Reachy Mini se controla mediante un sencillo SDK de Python.
 :::
 
-👉 **[Ir a la documentación del SDK](../../SDK/readme.md)** para una visión general completa.
+👉 **[Ir a la documentación del SDK](/es/reachymini_sdk_readme)** para una visión general completa.
 
 ## ❓ Resolución de problemas
 
-¿Tienes algún problema? 👉 **[Consulta la Guía de resolución de problemas y FAQ](../../troubleshooting.md)**
+¿Tienes algún problema? 👉 **[Consulta la Guía de resolución de problemas y FAQ](/es/reachymini_troubleshooting)**

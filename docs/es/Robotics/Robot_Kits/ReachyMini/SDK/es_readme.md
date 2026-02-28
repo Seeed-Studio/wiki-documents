@@ -70,7 +70,7 @@ Proporcionamos una colección de scripts listos para ejecutar que te ayudarán a
 
 > *I'd like to create a Reachy Mini app. Start by reading https://github.com/pollen-robotics/reachy_mini/blob/develop/AGENTS.md*
 
-Esta guía [**AGENTS.md**](../AGENTS.md) proporciona a los agentes de IA todo lo que necesitan: patrones del SDK, buenas prácticas, aplicaciones de ejemplo y habilidades paso a paso.
+Esta guía [**AGENTS.md**](/es/reachymini_agents) proporciona a los agentes de IA todo lo que necesitan: patrones del SDK, buenas prácticas, aplicaciones de ejemplo y habilidades paso a paso.
 
 ## ❓ Resolución de problemas
 

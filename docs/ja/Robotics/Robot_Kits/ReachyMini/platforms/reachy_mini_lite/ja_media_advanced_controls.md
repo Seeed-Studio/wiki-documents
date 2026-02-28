@@ -129,4 +129,4 @@ self.pipeline.add(camsrc)
 
 ## マイクとスピーカー
 
-ハードウェアは Lite 版でもまったく同じなので、[Reachy Mini ドキュメント](../reachy_mini/media_advanced_controls.md#microphones-and-speakers)を参照してください。
+ハードウェアは Lite 版でもまったく同じなので、[Reachy Mini ドキュメント](/ja/reachymini_platforms_reachy_mini_media_advanced_controls#microphones-and-speakers)を参照してください。

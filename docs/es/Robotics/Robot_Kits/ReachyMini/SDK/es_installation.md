@@ -312,11 +312,11 @@ Los usuarios de Linux tienen pasos adicionales que seguir:
 
 ## ❓ Resolución de problemas
 
-¿Te has encontrado con algún problema? 👉 **[Consulta la guía de resolución de problemas y FAQ](../troubleshooting.md)**
+¿Te has encontrado con algún problema? 👉 **[Consulta la guía de resolución de problemas y FAQ](/es/reachymini_troubleshooting)**
 
 ## Próximos pasos
 
-* **[Guía de inicio rápido](quickstart.md)**: Ejecuta tu primer comportamiento en Reachy Mini
-* **[Python SDK](python-sdk.md)**: Aprende a moverte, ver, hablar y escuchar.
-* **[Integraciones de IA](integration.md)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
-* **[Conceptos clave](core-concept.md)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
+* **[Guía de inicio rápido](/es/reachymini_sdk_quickstart)**: Ejecuta tu primer comportamiento en Reachy Mini
+* **[Python SDK](/es/reachymini_sdk_python-sdk)**: Aprende a moverte, ver, hablar y escuchar.
+* **[Integraciones de IA](/es/reachymini_sdk_integration)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
+* **[Conceptos clave](/es/reachymini_sdk_core-concept)**: Arquitectura, sistemas de coordenadas y límites de seguridad.

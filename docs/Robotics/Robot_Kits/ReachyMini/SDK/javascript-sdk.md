@@ -263,7 +263,7 @@ matrixToRpy(matrix)            // 4×4 matrix → { roll, pitch, yaw } in degree
 ## Prerequisites
 
 - Your robot must be running the wireless firmware and connected to the central signaling server.
-- The robot must have a valid Hugging Face token configured (see [Usage](../platforms/reachy_mini/usage.md)).
+- The robot must have a valid Hugging Face token configured (see [Usage](/reachymini_platforms_reachy_mini_usage)).
 - Currently supported on **wireless versions** only.
 
 ## Example

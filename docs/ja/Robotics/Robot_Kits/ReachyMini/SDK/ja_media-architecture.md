@@ -34,7 +34,7 @@ Reachy Mini のメディアアーキテクチャを理解することは、そ�
 
 ![Reachy Mini Media Client](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachymini_media_client.png)
 
-webrtc により、音声および映像ストリームには Web ブラウザから直接アクセスすることもできます。たとえば、[desktop application](../platforms/reachy_mini_lite/get_started.md#3--download-reachy-mini-control) はこの機能を利用しています。
+webrtc により、音声および映像ストリームには Web ブラウザから直接アクセスすることもできます。たとえば、[desktop application](/ja/reachymini_platforms_reachy_mini_lite_get_started#3--download-reachy-mini-control) はこの機能を利用しています。
 
 ![Reachy Mini Media Web](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachymini_media_web.png)
 
@@ -48,10 +48,10 @@ Reachy Mini Lite の場合、Daemon はカメラ、マイク、スピーカー�
 
 2 つのバックエンドが利用可能です。デフォルトのバックエンドは、カメラ用の OpenCV とオーディオカード用の sounddevice を組み合わせて動作します。
 
-実験的な GStreamer バックエンドも利用可能です。主に Linux システム向けに調整されていますが、他のプラットフォームでも動作するはずです。現時点では、より手動でのインストール作業が必要です（[gstreamer-installation](gstreamer-installation.md) を参照してください）。
+実験的な GStreamer バックエンドも利用可能です。主に Linux システム向けに調整されていますが、他のプラットフォームでも動作するはずです。現時点では、より手動でのインストール作業が必要です（[gstreamer-installation](/ja/reachymini_sdk_gstreamer-installation) を参照してください）。
 
 ![Reachy Mini Lite Media Client](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachyminilite_media_client.png)
 
 ## 高度な制御
 
-[Reachy Mini](../platforms/reachy_mini/media_advanced_controls.md) および [Reachy Mini Lite](../platforms/reachy_mini_lite/media_advanced_controls.md) のカメラとマイクのパラメータを細かく調整するには、専用ページを参照してください。
+[Reachy Mini](/ja/reachymini_platforms_reachy_mini_media_advanced_controls) および [Reachy Mini Lite](/ja/reachymini_platforms_reachy_mini_lite_media_advanced_controls) のカメラとマイクのパラメータを細かく調整するには、専用ページを参照してください。

@@ -127,7 +127,7 @@ pip show reachy-mini | grep Version
 :::info ロールバック
 **ステップ 1:** 元の工場出荷時デーモンを再インストールするために、Bluetooth 経由で **SOFTWARE_RESET コマンド** をトリガーします
 
-**ステップ 2:** 詳細な手順については、[リセットガイド](./reset.md) を参照してください
+**ステップ 2:** 詳細な手順については、[リセットガイド](/ja/reachymini_platforms_reachy_mini_reset) を参照してください
 :::
 
 ## 重要な注意事項

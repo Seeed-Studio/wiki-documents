@@ -210,5 +210,5 @@ Si montas todo el repositorio sobre site-packages, Python no encontrará tu cód
 
 ## Ver También
 
-- [Install Daemon from Branch](./install_daemon_from_branch.md) - Para probar versiones de daemon no publicadas
-- [Troubleshooting](../../troubleshooting.md) - Problemas comunes y soluciones
+- [Install Daemon from Branch](/es/reachymini_platforms_reachy_mini_install_daemon_from_branch) - Para probar versiones de daemon no publicadas
+- [Troubleshooting](/es/reachymini_troubleshooting) - Problemas comunes y soluciones

@@ -34,7 +34,7 @@ Los flujos son gestionados por el Daemon para que varias aplicaciones puedan acc
 
 ![Reachy Mini Media Client](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachymini_media_client.png)
 
-Gracias a webrtc, los flujos de audio y vídeo también pueden accederse directamente desde un navegador web. Por ejemplo, la [desktop application](../platforms/reachy_mini_lite/get_started.md#3--download-reachy-mini-control) utiliza esta función.
+Gracias a webrtc, los flujos de audio y vídeo también pueden accederse directamente desde un navegador web. Por ejemplo, la [desktop application](/es/reachymini_platforms_reachy_mini_lite_get_started#3--download-reachy-mini-control) utiliza esta función.
 
 ![Reachy Mini Media Web](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachymini_media_web.png)
 
@@ -48,10 +48,10 @@ En el caso de Reachy Mini Lite, el Daemon no gestiona la cámara, el micrófono 
 
 Hay dos backends disponibles. El predeterminado se basa en la combinación de OpenCV para la cámara y sounddevice para la tarjeta de audio.
 
-También hay disponible un backend experimental de GStreamer. Aunque está principalmente ajustado para sistemas Linux, debería funcionar en otras plataformas. Por el momento requiere una instalación más manual (consulta [gstreamer-installation](gstreamer-installation.md))
+También hay disponible un backend experimental de GStreamer. Aunque está principalmente ajustado para sistemas Linux, debería funcionar en otras plataformas. Por el momento requiere una instalación más manual (consulta [gstreamer-installation](/es/reachymini_sdk_gstreamer-installation))
 
 ![Reachy Mini Lite Media Client](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/reachyminilite_media_client.png)
 
 ## Controles avanzados
 
-Consulta las páginas dedicadas para ajustar con precisión los parámetros de la cámara y el micrófono de [Reachy Mini](../platforms/reachy_mini/media_advanced_controls.md) y [Reachy Mini Lite](../platforms/reachy_mini_lite/media_advanced_controls.md).
+Consulta las páginas dedicadas para ajustar con precisión los parámetros de la cámara y el micrófono de [Reachy Mini](/es/reachymini_platforms_reachy_mini_media_advanced_controls) y [Reachy Mini Lite](/es/reachymini_platforms_reachy_mini_lite_media_advanced_controls).

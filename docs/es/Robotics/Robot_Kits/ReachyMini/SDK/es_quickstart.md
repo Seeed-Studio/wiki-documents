@@ -23,7 +23,7 @@ Sigue esta guía para poner tu Reachy Mini en funcionamiento, ya sea en hardware
 ## 1. Requisitos previos
 
 :::danger Importante
-Asegúrate de haber instalado Reachy Mini en tu ordenador siguiendo nuestra [guía de instalación](installation.md).
+Asegúrate de haber instalado Reachy Mini en tu ordenador siguiendo nuestra [guía de instalación](/es/reachymini_sdk_installation).
 :::
 
 :::tip Entorno virtual
@@ -157,7 +157,7 @@ python hello.py
 
 ## ❓ Resolución de problemas
 
-¿Te has encontrado con algún problema? 👉 **[Consulta la Guía de resolución de problemas y FAQ](../troubleshooting.md)**
+¿Te has encontrado con algún problema? 👉 **[Consulta la Guía de resolución de problemas y FAQ](/es/reachymini_troubleshooting)**
 
 ## ¿Usas un agente de programación con IA?
 
@@ -171,7 +171,7 @@ Esta guía proporciona a tu agente de IA todo lo que necesita saber sobre el SDK
 
 ## Próximos pasos
 
-* **[Python SDK](python-sdk.md)**: Aprende a mover, ver, hablar y oír.
+* **[Python SDK](/es/reachymini_sdk_python-sdk)**: Aprende a mover, ver, hablar y oír.
 * **[Explora la carpeta de ejemplos](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)**
-* **[Integraciones de IA](integration.md)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
-* **[Conceptos clave](core-concept.md)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
+* **[Integraciones de IA](/es/reachymini_sdk_integration)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
+* **[Conceptos clave](/es/reachymini_sdk_core-concept)**: Arquitectura, sistemas de coordenadas y límites de seguridad.

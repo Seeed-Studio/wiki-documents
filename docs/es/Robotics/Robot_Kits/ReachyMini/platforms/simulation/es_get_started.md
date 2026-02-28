@@ -26,7 +26,7 @@ translation:
 ## 1. Instalación
 
 :::danger Requisitos previos
-Antes de configurar la simulación, primero debes completar la instalación básica y la configuración del entorno virtual siguiendo la **[Guía de instalación](../../SDK/installation.md)**. Esta guía asume que ya tienes el SDK de Reachy Mini instalado y tu entorno virtual activado.
+Antes de configurar la simulación, primero debes completar la instalación básica y la configuración del entorno virtual siguiendo la **[Guía de instalación](/es/reachymini_sdk_installation)**. Esta guía asume que ya tienes el SDK de Reachy Mini instalado y tu entorno virtual activado.
 :::
 
 La simulación requiere los bindings de Python `mujoco`. Puedes instalarlos junto con el software de Reachy Mini usando la etiqueta extra `[mujoco]`.
@@ -127,11 +127,11 @@ with ReachyMini() as mini:
 ## Próximos pasos
 
 :::info Sigue aprendiendo
-* **[Python SDK](../../SDK/python-sdk.md)**: Aprende a mover, ver, hablar y escuchar.
-* **[AI Integrations](../../SDK/integration.md)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
-* **[Core Concepts](../../SDK/core-concept.md)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
+* **[Python SDK](/es/reachymini_sdk_python-sdk)**: Aprende a mover, ver, hablar y escuchar.
+* **[AI Integrations](/es/reachymini_sdk_integration)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
+* **[Core Concepts](/es/reachymini_sdk_core-concept)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
 :::
 
 ## ❓ Resolución de problemas
 
-¿Tienes algún problema? 👉 **[Consulta la guía de resolución de problemas y FAQ](../../troubleshooting.md)**
+¿Tienes algún problema? 👉 **[Consulta la guía de resolución de problemas y FAQ](/es/reachymini_troubleshooting)**

@@ -21,7 +21,7 @@ translation:
 
 # 📡 GStreamer のインストール
 
-> このガイドでは、Reachy Mini からのビデオおよびオーディオストリームを受信するための [GStreamer](https://gstreamer.freedesktop.org) のインストール方法を説明します。設定に応じてストリームへローカルまたはリモートでどのようにアクセスするかを理解するには、[media architecture](media-architecture.md) を参照してください。
+> このガイドでは、Reachy Mini からのビデオおよびオーディオストリームを受信するための [GStreamer](https://gstreamer.freedesktop.org) のインストール方法を説明します。設定に応じてストリームへローカルまたはリモートでどのようにアクセスするかを理解するには、[media architecture](/ja/reachymini_sdk_media-architecture) を参照してください。
 
 Windows と macOS プラットフォーム向けには Python wheel が用意されており、プロジェクトの依存関係に含まれています。基本的にはそのまま動作します。Linux ユーザーは手動インストールが必要です。
 

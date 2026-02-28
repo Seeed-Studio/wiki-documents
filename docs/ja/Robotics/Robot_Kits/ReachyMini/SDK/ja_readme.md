@@ -70,7 +70,7 @@ AI コーディングエージェント（Claude Code、Codex、Copilot など�
 
 > *I'd like to create a Reachy Mini app. Start by reading https://github.com/pollen-robotics/reachy_mini/blob/develop/AGENTS.md*
 
-この [**AGENTS.md**](../AGENTS.md) ガイドには、AI エージェントに必要な情報がすべて含まれています：SDK パターン、ベストプラクティス、サンプルアプリ、ステップバイステップのスキル解説などです。
+この [**AGENTS.md**](/ja/reachymini_agents) ガイドには、AI エージェントに必要な情報がすべて含まれています：SDK パターン、ベストプラクティス、サンプルアプリ、ステップバイステップのスキル解説などです。
 
 ## ❓ トラブルシューティング
 

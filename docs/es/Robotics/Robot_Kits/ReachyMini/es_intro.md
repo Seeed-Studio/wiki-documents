@@ -34,7 +34,7 @@ translation:
 | **🤖 Reachy Mini (Wireless)** | **🔌 Reachy Mini Lite** | **💻 Simulation** |
 | :---: | :---: | :---: |
 | La experiencia autónoma completa.<br/>Raspberry Pi 4 + batería + WiFi. | La versión para desarrolladores.<br/>Conexión USB a tu ordenador. | No se requiere hardware.<br/>Prototipa en MuJoCo. |
-| 👉 [**Ir a la guía Wireless**](platforms/reachy_mini/get_started.md) | 👉 [**Ir a la guía Lite**](platforms/reachy_mini_lite/get_started.md) | 👉 [**Ir a Simulation**](platforms/simulation/get_started.md) |
+| 👉 [**Ir a la guía Wireless**](/es/reachymini_platforms_reachy_mini_get_started) | 👉 [**Ir a la guía Lite**](/es/reachymini_platforms_reachy_mini_lite_get_started) | 👉 [**Ir a Simulation**](/es/reachymini_platforms_simulation_get_started) |
 
 :::tip Pro tip
 Instala [uv](https://docs.astral.sh/uv/getting-started/installation/) para instalaciones de apps 10-100 veces más rápidas (se detecta automáticamente y, si no, usa `pip`).
@@ -76,11 +76,11 @@ with ReachyMini() as mini:
 ```
 
 ### Guías de usuario
-* **[Installation](SDK/installation.md)**: 5 minutos para configurar tu ordenador
-* **[Quickstart Guide](SDK/quickstart.md)**: Ejecuta tu primer comportamiento en Reachy Mini
-* **[Python SDK](SDK/python-sdk.md)**: Aprende a mover, ver, hablar y escuchar.
-* **[AI Integrations](SDK/integration.md)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
-* **[Core Concepts](SDK/core-concept.md)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
+* **[Installation](/es/reachymini_sdk_installation)**: 5 minutos para configurar tu ordenador
+* **[Quickstart Guide](/es/reachymini_sdk_quickstart)**: Ejecuta tu primer comportamiento en Reachy Mini
+* **[Python SDK](/es/reachymini_sdk_python-sdk)**: Aprende a mover, ver, hablar y escuchar.
+* **[AI Integrations](/es/reachymini_sdk_integration)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
+* **[Core Concepts](/es/reachymini_sdk_core-concept)**: Arquitectura, sistemas de coordenadas y límites de seguridad.
 * 🤗[**Comparte tu app con la comunidad**](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)
 * 📂 [**Explora la carpeta de ejemplos**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
@@ -88,12 +88,12 @@ with ReachyMini() as mini:
 
 Los robots Reachy Mini se venden en forma de kits y generalmente tardan **de 2 a 3 horas** en montarse. Hay guías detalladas paso a paso disponibles en las carpetas específicas de cada plataforma enlazadas arriba.
 
-* **Reachy Mini (Wireless):** Se ejecuta a bordo (RPi 4), es autónomo e incluye IMU. [Ver especificaciones](platforms/reachy_mini/hardware.md).
-* **Reachy Mini Lite:** Se ejecuta en tu PC, alimentado desde una toma de corriente. [Ver especificaciones](platforms/reachy_mini_lite/hardware.md).
+* **Reachy Mini (Wireless):** Se ejecuta a bordo (RPi 4), es autónomo e incluye IMU. [Ver especificaciones](/es/reachymini_platforms_reachy_mini_hardware).
+* **Reachy Mini Lite:** Se ejecuta en tu PC, alimentado desde una toma de corriente. [Ver especificaciones](/es/reachymini_platforms_reachy_mini_lite_hardware).
 
 ## ❓ Resolución de problemas
 
-¿Tienes algún problema? 👉 **[Consulta la guía de resolución de problemas y FAQ](troubleshooting.md)**
+¿Tienes algún problema? 👉 **[Consulta la guía de resolución de problemas y FAQ](/es/reachymini_troubleshooting)**
 
 ## 🤝 Comunidad y contribuciones
 

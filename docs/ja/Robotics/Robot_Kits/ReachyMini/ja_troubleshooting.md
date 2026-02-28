@@ -50,7 +50,7 @@ Reachy Mini サポートページへようこそ。よくある質問とその�
   * 最新のタグ付きリリースを使用している
   * `develop` ブランチが最新である（`git pull`）。
 
-**Wireless Reachy Mini** の場合：`reachyminios_check` を実行して、すべてが正常であることを確認してください（[Get Started](./platforms/reachy_mini/get_started.md) を参照）。
+**Wireless Reachy Mini** の場合：`reachyminios_check` を実行して、すべてが正常であることを確認してください（[Get Started](/ja/reachymini_platforms_reachy_mini_get_started) を参照）。
 
 ### モーター関連の問題
 
@@ -60,7 +60,7 @@ Reachy Mini サポートページへようこそ。よくある質問とその�
 * モーターが見つからない："No motor found on port"、"Missing motor" など。
 
 :::info モーター診断
-上記のいずれかの症状がある場合は、モーター関連の問題を診断・修正するための詳細な手順について、[Motors diagnosis and troubleshooting guide](./troubleshooting/motors_diagnosis.md) を参照してください。
+上記のいずれかの症状がある場合は、モーター関連の問題を診断・修正するための詳細な手順について、[Motors diagnosis and troubleshooting guide](/ja/reachymini_troubleshooting_motors_diagnosis) を参照してください。
 
 Reachy Mini Testbench アプリを使用すると、これらの問題を効果的に特定して解決するのに役立ちます。
 :::
@@ -91,14 +91,14 @@ Dynamixel モーターで Electrical shock error が発生するのは、電源�
 ![mic_cable](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/black_fpc_cable.png)
 :::
 
-ケーブルが正しく接続されているにもかかわらず問題が続く場合、マイクの FPC ケーブルが損傷している可能性が高いです。この問題を解決するには、チュートリアル [How to change the FPC cable of the microphone of Reachy Mini?](./troubleshooting/change_mic_fpc_cable.md) を参照してください。
+ケーブルが正しく接続されているにもかかわらず問題が続く場合、マイクの FPC ケーブルが損傷している可能性が高いです。この問題を解決するには、チュートリアル [How to change the FPC cable of the microphone of Reachy Mini?](/ja/reachymini_troubleshooting_change_mic_fpc_cable) を参照してください。
 
 ### 音量が小さい
 
 :::tip
 * ロボットをバージョン 1.2.3 以降にアップデートしてください
 
-詳細については、ドキュメント [Getting Started](./platforms/reachy_mini/get_started.md) を参照してください。
+詳細については、ドキュメント [Getting Started](/ja/reachymini_platforms_reachy_mini_get_started) を参照してください。
 :::
 
 ### Permission errors
@@ -196,7 +196,7 @@ Wireless ユニットは、Lite バージョンのように USB 経由でロボ�
 ![switch_position](https://github.com/pollen-robotics/reachy_mini/raw/develop/docs/assets/wireless_switch.png)
 :::
 
-このスイッチが正しい位置にあるにもかかわらず AP がまだ見えない場合は、[reflash the RPI Iso tutorial](./platforms/reachy_mini/reflash_the_rpi_ISO.md) に従って Raspberry Pi の iso を再フラッシュする必要があるかもしれません。
+このスイッチが正しい位置にあるにもかかわらず AP がまだ見えない場合は、[reflash the RPI Iso tutorial](/ja/reachymini_platforms_reachy_mini_reflash_the_rpi_iso) に従って Raspberry Pi の iso を再フラッシュする必要があるかもしれません。
 
 ## 🚀 はじめに & 組み立て
 
@@ -236,19 +236,19 @@ Reachy Mini [BETA](https://huggingface.co/spaces/pollen-robotics/Reachy_Mini_Ass
 
 :::success NO
 * Reachy Mini (Wireless) では、デーモンは組み込み Raspberry Pi 上ですでに動作しています。
-* Reachy Mini Lite では、[the desktop app](./platforms/reachy_mini_lite/get_started.md) を使用できます。
-* デスクトップアプリが（ARM64 や特殊なディストリビューションなど）お使いのシステムで動作しない場合は、[install and use the Python SDK](./SDK/installation.md) を直接利用できます。これは完全にサポートされている代替手段です！
+* Reachy Mini Lite では、[the desktop app](/ja/reachymini_platforms_reachy_mini_lite_get_started) を使用できます。
+* デスクトップアプリが（ARM64 や特殊なディストリビューションなど）お使いのシステムで動作しない場合は、[install and use the Python SDK](/ja/reachymini_sdk_installation) を直接利用できます。これは完全にサポートされている代替手段です！
 :::
 
 ## 🔌 接続とダッシュボード
 
 ### ロボットを Wi‑Fi に接続するには？
 
-Wi‑Fi への接続手順の詳細については、[Reachy Mini Wireless ガイド](./platforms/reachy_mini/get_started.md)を参照してください。
+Wi‑Fi への接続手順の詳細については、[Reachy Mini Wireless ガイド](/ja/reachymini_platforms_reachy_mini_get_started)を参照してください。
 
 ### Wi‑Fi ホットスポットをリセットするには？
 
-ロボットの Wi‑Fi ホットスポットをリセットする必要がある場合（接続できない、ネットワークを変更したい、など）、[Wi‑Fi Reset Guide](./platforms/reachy_mini/reset.md)の手順に従ってください。
+ロボットの Wi‑Fi ホットスポットをリセットする必要がある場合（接続できない、ネットワークを変更したい、など）、[Wi‑Fi Reset Guide](/ja/reachymini_platforms_reachy_mini_reset)の手順に従ってください。
 
 ### http://localhost:8000 のダッシュボードが動作しません。
 
@@ -322,7 +322,7 @@ SDK のインストール時にパッケージの競合を防ぐのに役立ち�
 
 ### ハードウェアについての詳細情報はどこで確認できますか？
 
-ロボットのハードウェア構成の詳細については、[Reachy Mini Hardware ページ](./platforms/reachy_mini/hardware.md)を参照してください。
+ロボットのハードウェア構成の詳細については、[Reachy Mini Hardware ページ](/ja/reachymini_platforms_reachy_mini_hardware)を参照してください。
 
 ### 安全リミット（頭部 & ボディ）はどうなっていますか？
 
@@ -381,7 +381,7 @@ Trying baudrate: 1000000
 Found motors at baudrate 1000000: [10, 11,12,13, 14, 15, 16, 17, 18]
 ```
 
-2. Lite: Dynamixel Wizard を使ってモーターのパラメータを読み取ることもできます。ガイドは[こちら](./platforms/reachy_mini_lite/wizard.md)を参照してください。
+2. Lite: Dynamixel Wizard を使ってモーターのパラメータを読み取ることもできます。ガイドは[こちら](/ja/reachymini_platforms_reachy_mini_lite_wizard)を参照してください。
 
 ### モーターがしばらくすると反応しなくなります。
 

@@ -69,6 +69,6 @@ Puedes cambiar cómo se comportan los motores:
 
 
 ## Próximos Pasos
-* **[Guía de Inicio Rápido](quickstart.md)**: Ejecuta tu primer comportamiento en Reachy Mini
-* **[SDK de Python](python-sdk.md)**: Aprende a mover, ver, hablar y escuchar.
-* **[Integraciones de IA](integration.md)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.
+* **[Guía de Inicio Rápido](/es/reachymini_sdk_quickstart)**: Ejecuta tu primer comportamiento en Reachy Mini
+* **[SDK de Python](/es/reachymini_sdk_python-sdk)**: Aprende a mover, ver, hablar y escuchar.
+* **[Integraciones de IA](/es/reachymini_sdk_integration)**: Conecta LLMs, crea Apps y publícalas en Hugging Face.

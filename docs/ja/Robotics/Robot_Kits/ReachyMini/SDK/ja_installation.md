@@ -312,11 +312,11 @@ Reachy Mini のインストールが完了しました！ロボットを動か�
 
 ## ❓ トラブルシューティング
 
-問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認してください](../troubleshooting.md)**
+問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認してください](/ja/reachymini_troubleshooting)**
 
 ## 次のステップ
 
-* **[クイックスタートガイド](quickstart.md)**: Reachy Mini で最初の挙動を実行する
-* **[Python SDK](python-sdk.md)**: 動かす・見る・話す・聞く方法を学ぶ
-* **[AI 連携](integration.md)**: LLM を接続し、アプリを構築して Hugging Face に公開する
-* **[コアコンセプト](core-concept.md)**: アーキテクチャ、座標系、安全制限について
+* **[クイックスタートガイド](/ja/reachymini_sdk_quickstart)**: Reachy Mini で最初の挙動を実行する
+* **[Python SDK](/ja/reachymini_sdk_python-sdk)**: 動かす・見る・話す・聞く方法を学ぶ
+* **[AI 連携](/ja/reachymini_sdk_integration)**: LLM を接続し、アプリを構築して Hugging Face に公開する
+* **[コアコンセプト](/ja/reachymini_sdk_core-concept)**: アーキテクチャ、座標系、安全制限について

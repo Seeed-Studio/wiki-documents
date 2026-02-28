@@ -127,7 +127,7 @@ Si encuentras problemas con la instalación de la rama, puedes restaurar el daem
 :::info Volver Atrás
 **Paso 1:** Lanza el comando SOFTWARE_RESET** vía Bluetooth para reinstalar el daemon original de fábrica
 
-**Paso 2:** Consulta la [Guía de Restablecimiento](./reset.md) para obtener instrucciones detalladas paso a paso
+**Paso 2:** Consulta la [Guía de Restablecimiento](/es/reachymini_platforms_reachy_mini_reset) para obtener instrucciones detalladas paso a paso
 :::
 
 ## Notas Importantes

@@ -29,7 +29,7 @@ Proporcionamos una herramienta CLI para generar, comprobar y publicar una estruc
 *Consulta nuestro tutorial en el blog: [Make and Publish Reachy Mini Apps](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)*
 
 ## Aplicaciones Web en JavaScript
-¿Quieres una app multiplataforma sin instalación que se ejecute en el navegador? Consulta la guía [JavaScript SDK & Web Apps](javascript-sdk.md): crea Hugging Face Spaces estáticos que controlen tu robot mediante WebRTC desde cualquier dispositivo, incluido tu teléfono.
+¿Quieres una app multiplataforma sin instalación que se ejecute en el navegador? Consulta la guía [JavaScript SDK & Web Apps](/es/reachymini_sdk_javascript-sdk): crea Hugging Face Spaces estáticos que controlen tu robot mediante WebRTC desde cualquier dispositivo, incluido tu teléfono.
 
 ## API HTTP y WebSocket
 ¿Estás creando un panel de control o un controlador que no use Python? El Daemon expone control completo mediante REST.

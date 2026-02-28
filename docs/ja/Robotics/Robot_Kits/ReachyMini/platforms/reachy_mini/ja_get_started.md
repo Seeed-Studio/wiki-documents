@@ -76,7 +76,7 @@ Reachy Mini の電源を入れます。
 
 ロボットがオンラインになり最新状態になったら、操作を開始できます。
 
-👉 **[Usage Guide へ進む](usage.md)** と、次の内容を学べます：
+👉 **[Usage Guide へ進む](/ja/reachymini_platforms_reachy_mini_usage)** と、次の内容を学べます：
 * **Dashboard** にアクセスする。
 * Conversation や Games などの **Apps** をインストールして実行する。
 * **Python** を使って Reachy をプログラムする。
@@ -100,7 +100,7 @@ reachyminios_check
 
 ## ❓ トラブルシューティング
 
-問題が発生しましたか？ 👉 **[Troubleshooting & FAQ ガイドを確認してください](../../troubleshooting.md)**
+問題が発生しましたか？ 👉 **[Troubleshooting & FAQ ガイドを確認してください](/ja/reachymini_troubleshooting)**
 
 ## エキスパートモード
 

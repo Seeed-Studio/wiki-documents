@@ -23,7 +23,7 @@ translation:
 ## 1. 前提条件
 
 :::danger 重要
-[installation guide](installation.md) に従って、Reachy Mini をお使いのコンピュータにインストールしていることを確認してください。
+[installation guide](/ja/reachymini_sdk_installation) に従って、Reachy Mini をお使いのコンピュータにインストールしていることを確認してください。
 :::
 
 :::tip 仮想環境
@@ -157,7 +157,7 @@ python hello.py
 
 ## ❓ トラブルシューティング
 
-問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認してください](../troubleshooting.md)**
+問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認してください](/ja/reachymini_troubleshooting)**
 
 ## AI コーディングエージェントを使用していますか？
 
@@ -171,7 +171,7 @@ python hello.py
 
 ## 次のステップ
 
-* **[Python SDK](python-sdk.md)**: 動かす・見る・話す・聞くことを学びましょう。
+* **[Python SDK](/ja/reachymini_sdk_python-sdk)**: 動かす・見る・話す・聞くことを学びましょう。
 * **[サンプルフォルダを参照](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)**
-* **[AI 連携](integration.md)**: LLM を接続し、アプリを構築して Hugging Face に公開します。
-* **[コアコンセプト](core-concept.md)**: アーキテクチャ、座標系、安全制限について。
+* **[AI 連携](/ja/reachymini_sdk_integration)**: LLM を接続し、アプリを構築して Hugging Face に公開します。
+* **[コアコンセプト](/ja/reachymini_sdk_core-concept)**: アーキテクチャ、座標系、安全制限について。

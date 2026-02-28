@@ -23,7 +23,7 @@ translation:
 La versión Lite depende de tu ordenador para ejecutar su inteligencia. El centro de control para esto es la aplicación **Reachy Mini Control**.
 
 :::info
-Consulta [esta guía](./get_started.md) si aún no la has instalado.
+Consulta [esta guía](/es/reachymini_platforms_reachy_mini_lite_get_started) si aún no la has instalado.
 :::
 
 ## 1. Reachy Mini Control (Panel de control) 🖥️
@@ -69,8 +69,8 @@ Cuando una App se está ejecutando, controla el robot. Detén la app antes de in
 ¿Listo para escribir tu propia lógica? Reachy Mini se controla mediante un sencillo SDK de Python.
 :::
 
-👉 **[Ir a la documentación del SDK](../../SDK/readme.md)** para una visión general completa.
+👉 **[Ir a la documentación del SDK](/es/reachymini_sdk_readme)** para una visión general completa.
 
 ## ❓ Resolución de problemas
 
-¿Tienes algún problema? 👉 **[Consulta la Guía de resolución de problemas y FAQ](../../troubleshooting.md)**
+¿Tienes algún problema? 👉 **[Consulta la Guía de resolución de problemas y FAQ](/es/reachymini_troubleshooting)**

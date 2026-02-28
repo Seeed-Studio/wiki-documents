@@ -29,7 +29,7 @@ Reachy Mini は AI ビルダー向けに設計されています。ここでは�
 *ブログ記事チュートリアルも参照してください: [Make and Publish Reachy Mini Apps](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)*
 
 ## JavaScript Web アプリ
-インストール不要でクロスプラットフォーム、ブラウザ上で動作するアプリが欲しいですか？[JavaScript SDK & Web Apps](javascript-sdk.md) ガイドを参照してください — 任意のデバイス（スマートフォンを含む）から WebRTC 経由でロボットを制御する静的な Hugging Face Spaces を構築できます。
+インストール不要でクロスプラットフォーム、ブラウザ上で動作するアプリが欲しいですか？[JavaScript SDK & Web Apps](/ja/reachymini_sdk_javascript-sdk) ガイドを参照してください — 任意のデバイス（スマートフォンを含む）から WebRTC 経由でロボットを制御する静的な Hugging Face Spaces を構築できます。
 
 ## HTTP & WebSocket API
 ダッシュボードや Python 以外のコントローラを構築したい場合、Daemon は REST を通じて完全な制御機能を公開しています。

@@ -34,7 +34,7 @@ translation:
 | **🤖 Reachy Mini (Wireless)** | **🔌 Reachy Mini Lite** | **💻 Simulation** |
 | :---: | :---: | :---: |
 | 完全自律型の体験。<br/>Raspberry Pi 4 + バッテリー + WiFi。 | 開発者向けバージョン。<br/>PC と USB 接続。 | ハードウェア不要。<br/>MuJoCo でプロトタイピング。 |
-| 👉 [**Wireless ガイドへ**](platforms/reachy_mini/get_started.md) | 👉 [**Lite ガイドへ**](platforms/reachy_mini_lite/get_started.md) | 👉 [**シミュレーションへ**](platforms/simulation/get_started.md) |
+| 👉 [**Wireless ガイドへ**](/ja/reachymini_platforms_reachy_mini_get_started) | 👉 [**Lite ガイドへ**](/ja/reachymini_platforms_reachy_mini_lite_get_started) | 👉 [**シミュレーションへ**](/ja/reachymini_platforms_simulation_get_started) |
 
 :::tip Pro tip
 [uv](https://docs.astral.sh/uv/getting-started/installation/) をインストールすると、アプリのインストールが 10〜100 倍高速になります（自動検出され、`pip` にフォールバックします）。
@@ -76,11 +76,11 @@ with ReachyMini() as mini:
 ```
 
 ### ユーザーガイド
-* **[Installation](SDK/installation.md)**: PC のセットアップに 5 分
-* **[Quickstart Guide](SDK/quickstart.md)**: Reachy Mini で最初の挙動を実行
-* **[Python SDK](SDK/python-sdk.md)**: 動かす・見る・話す・聞くことを学びます。
-* **[AI Integrations](SDK/integration.md)**: LLM を接続し、アプリを構築して Hugging Face に公開します。
-* **[Core Concepts](SDK/core-concept.md)**: アーキテクチャ、座標系、安全制限について。
+* **[Installation](/ja/reachymini_sdk_installation)**: PC のセットアップに 5 分
+* **[Quickstart Guide](/ja/reachymini_sdk_quickstart)**: Reachy Mini で最初の挙動を実行
+* **[Python SDK](/ja/reachymini_sdk_python-sdk)**: 動かす・見る・話す・聞くことを学びます。
+* **[AI Integrations](/ja/reachymini_sdk_integration)**: LLM を接続し、アプリを構築して Hugging Face に公開します。
+* **[Core Concepts](/ja/reachymini_sdk_core-concept)**: アーキテクチャ、座標系、安全制限について。
 * 🤗[**自分のアプリをコミュニティと共有する**](https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps)
 * 📂 [**サンプルフォルダを閲覧**](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)
 
@@ -88,12 +88,12 @@ with ReachyMini() as mini:
 
 Reachy Mini ロボットはキットとして販売されており、組み立てには通常 **2〜3 時間**かかります。詳細なステップバイステップガイドは、上記でリンクされているプラットフォーム別フォルダに用意されています。
 
-* **Reachy Mini (Wireless)：** オンボード（RPi 4）で動作し、自律型で IMU を搭載。[仕様を見る](platforms/reachy_mini/hardware.md)。
-* **Reachy Mini Lite：** PC 上で動作し、コンセントから給電。[仕様を見る](platforms/reachy_mini_lite/hardware.md)。
+* **Reachy Mini (Wireless)：** オンボード（RPi 4）で動作し、自律型で IMU を搭載。[仕様を見る](/ja/reachymini_platforms_reachy_mini_hardware)。
+* **Reachy Mini Lite：** PC 上で動作し、コンセントから給電。[仕様を見る](/ja/reachymini_platforms_reachy_mini_lite_hardware)。
 
 ## ❓ トラブルシューティング
 
-問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認](troubleshooting.md)**
+問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認](/ja/reachymini_troubleshooting)**
 
 ## 🤝 コミュニティ & コントリビュート
 

@@ -61,8 +61,8 @@ App が実行中の間は、その App がロボットを制御します。App �
 独自のロジックを書いてみますか？Reachy Mini はシンプルな Python SDK を通して制御できます。
 :::
 
-👉 **[SDK ドキュメントはこちら](../../SDK/readme.md)** で、全体像を確認できます。
+👉 **[SDK ドキュメントはこちら](/ja/reachymini_sdk_readme)** で、全体像を確認できます。
 
 ## ❓ トラブルシューティング
 
-問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認してください](../../troubleshooting.md)**
+問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認してください](/ja/reachymini_troubleshooting)**

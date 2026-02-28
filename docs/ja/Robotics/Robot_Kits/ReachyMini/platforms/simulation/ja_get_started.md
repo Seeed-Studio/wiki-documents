@@ -26,7 +26,7 @@ translation:
 ## 1. インストール
 
 :::danger 前提条件
-シミュレーションをセットアップする前に、まず **[Installation Guide](../../SDK/installation.md)** に従って基本的なインストールと仮想環境のセットアップを完了しておく必要があります。このガイドでは、すでに Reachy Mini SDK がインストールされ、仮想環境が有効化されていることを前提としています。
+シミュレーションをセットアップする前に、まず **[Installation Guide](/ja/reachymini_sdk_installation)** に従って基本的なインストールと仮想環境のセットアップを完了しておく必要があります。このガイドでは、すでに Reachy Mini SDK がインストールされ、仮想環境が有効化されていることを前提としています。
 :::
 
 シミュレーションには `mujoco` の Python バインディングが必要です。Reachy Mini ソフトウェアと一緒に、追加タグ `[mujoco]` を付けてインストールできます。
@@ -127,11 +127,11 @@ with ReachyMini() as mini:
 ## 次のステップ
 
 :::info 学習を続ける
-* **[Python SDK](../../SDK/python-sdk.md)**: 動かす・見る・話す・聞くことを学びます。
-* **[AI Integrations](../../SDK/integration.md)**: LLM を接続し、Apps を構築し、Hugging Face に公開します。
-* **[Core Concepts](../../SDK/core-concept.md)**: アーキテクチャ、座標系、安全制限について説明します。
+* **[Python SDK](/ja/reachymini_sdk_python-sdk)**: 動かす・見る・話す・聞くことを学びます。
+* **[AI Integrations](/ja/reachymini_sdk_integration)**: LLM を接続し、Apps を構築し、Hugging Face に公開します。
+* **[Core Concepts](/ja/reachymini_sdk_core-concept)**: アーキテクチャ、座標系、安全制限について説明します。
 :::
 
 ## ❓ トラブルシューティング
 
-問題が発生しましたか？ 👉 **[Troubleshooting & FAQ Guide を確認してください](../../troubleshooting.md)**
+問題が発生しましたか？ 👉 **[Troubleshooting & FAQ Guide を確認してください](/ja/reachymini_troubleshooting)**

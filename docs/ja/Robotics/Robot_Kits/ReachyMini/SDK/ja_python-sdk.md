@@ -51,7 +51,7 @@ with ReachyMini() as mini:
 
 ## センサー & メディア
 
-メディアアーキテクチャの詳細は、[Media Architecture](media-architecture.md) セクションで説明しています。SDK からの音声および映像へのアクセス方法は Reachy Mini の各バージョンでほぼ共通ですが、内部実装は異なります。
+メディアアーキテクチャの詳細は、[Media Architecture](/ja/reachymini_sdk_media-architecture) セクションで説明しています。SDK からの音声および映像へのアクセス方法は Reachy Mini の各バージョンでほぼ共通ですが、内部実装は異なります。
 
 ### カメラ 📷
 
@@ -129,7 +129,7 @@ Reachy Mini のバージョンと要件に応じて、適切なメディアバ�
 
 **Reachy Mini Lite:**
 - `media_backend="default"` - カメラに OpenCV、オーディオに Sounddevice を使用します（ほとんどのユーザーに推奨）
-- `media_backend="gstreamer"` - カメラとオーディオの両方に GStreamer を使用します（[インストールが必要](gstreamer-installation.md)）
+- `media_backend="gstreamer"` - カメラとオーディオの両方に GStreamer を使用します（[インストールが必要](/ja/reachymini_sdk_gstreamer-installation)）
 
 **Reachy Mini Wireless:**
 - **ローカル実行**（SSH でロボット上で実行）: 自動的に `"gstreamer"` を使用します
@@ -137,7 +137,7 @@ Reachy Mini のバージョンと要件に応じて、適切なメディアバ�
 
 > **💡 Tip:** ワイヤレス構成では、ローカル実行かリモート実行かに基づいてバックエンドが自動的に選択されます。`media_backend` の値を指定する必要はありません。
 
-> **💡 Tip:** ワイヤレス構成で WebRTC バックエンドを使用するには、特別なインストールが必要です。詳しくは [gstreamer-installation.md](gstreamer-installation.md) を参照してください。現在のところ、クライアントとしてサポートされているのは Linux プラットフォームのみです。他のプラットフォーム（Windows、macOS）は[今後のリリース](https://github.com/pollen-robotics/reachy_mini/issues/572)でサポートされる予定です。
+> **💡 Tip:** ワイヤレス構成で WebRTC バックエンドを使用するには、特別なインストールが必要です。詳しくは [gstreamer-installation.md](/ja/reachymini_sdk_gstreamer-installation) を参照してください。現在のところ、クライアントとしてサポートされているのは Linux プラットフォームのみです。他のプラットフォーム（Windows、macOS）は[今後のリリース](https://github.com/pollen-robotics/reachy_mini/issues/572)でサポートされる予定です。
 
 ## モーションの記録
 ロボットを動かす（コンプライアントモード）かコマンドを送信することで動作を記録し、後で再生するために保存できます。
@@ -152,9 +152,9 @@ with ReachyMini() as mini:
 
 ## 次のステップ
 * **[サンプルフォルダを参照](https://github.com/pollen-robotics/reachy_mini/tree/main/examples)**
-* **[AI Integrations](integration.md)**: LLM を接続し、アプリを構築して Hugging Face に公開します。
-* **[Core Concepts](core-concept.md)**: アーキテクチャ、座標系、安全制限について説明します。
+* **[AI Integrations](/ja/reachymini_sdk_integration)**: LLM を接続し、アプリを構築して Hugging Face に公開します。
+* **[Core Concepts](/ja/reachymini_sdk_core-concept)**: アーキテクチャ、座標系、安全制限について説明します。
 
 ## ❓ トラブルシューティング
 
-問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認](../troubleshooting.md)**
+問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認](/ja/reachymini_troubleshooting)**

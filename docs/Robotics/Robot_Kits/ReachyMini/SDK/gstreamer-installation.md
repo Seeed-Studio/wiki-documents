@@ -21,7 +21,7 @@ translation:
 
 # 📡 GStreamer Installation
 
-> This guide will help you install [GStreamer](https://gstreamer.freedesktop.org) for receiving video and audio streams from your Reachy Mini. See the [media architecture](media-architecture.md) to understand how streams are accessed locally or remotely depending on the configuration.
+> This guide will help you install [GStreamer](https://gstreamer.freedesktop.org) for receiving video and audio streams from your Reachy Mini. See the [media architecture](/reachymini_sdk_media-architecture) to understand how streams are accessed locally or remotely depending on the configuration.
 
 Python wheels are available for the Windows and macOS platforms and are included in the project dependencies. Everything should work out of the box. For Linux users, a manual installation is required.
 

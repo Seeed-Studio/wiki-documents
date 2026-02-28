@@ -23,7 +23,7 @@ translation:
 Lite バージョンは、インテリジェンスを実行するためにお使いのコンピュータに依存します。その中核となるハブが **Reachy Mini Control** アプリケーションです。
 
 :::info
-まだインストールしていない場合は、[このガイド](./get_started.md)を確認してください。
+まだインストールしていない場合は、[このガイド](/ja/reachymini_platforms_reachy_mini_lite_get_started)を確認してください。
 :::
 
 ## 1. Reachy Mini Control（ダッシュボード）🖥️
@@ -69,8 +69,8 @@ Lite バージョンは、インテリジェンスを実行するためにお使
 独自のロジックを書いてみませんか？Reachy Mini はシンプルな Python SDK を通じて制御できます。
 :::
 
-👉 **[SDK ドキュメントに移動](../../SDK/readme.md)** して、全体像を確認してください。
+👉 **[SDK ドキュメントに移動](/ja/reachymini_sdk_readme)** して、全体像を確認してください。
 
 ## ❓ トラブルシューティング
 
-問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認](../../troubleshooting.md)**
+問題が発生しましたか？ 👉 **[トラブルシューティング & FAQ ガイドを確認](/ja/reachymini_troubleshooting)**
