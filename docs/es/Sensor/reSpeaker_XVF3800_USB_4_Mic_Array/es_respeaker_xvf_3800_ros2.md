@@ -1,9 +1,9 @@
 ---
-description: Aprende a integrar el ReSpeaker XVF3800 con ROS2 para aplicaciones robóticas. Este tutorial cubre la simulación de DOA y detección de voz con Turtlesim, proporcionando una comprensión básica del control robótico y control PID.
-title: ROS2 en ReSpeaker XVF3800
+description: Aprende a integrar el ReSpeaker XVF3800 con ROS2 para aplicaciones robóticas. Este tutorial cubre la simulación de DOA y detección de voz con Turtlesim, proporcionando una comprensión básica del control robótico y el control PID.
+title: ROS2 en reSpeaker XVF3800
 keywords:
 - reSpeaker
-- Robotics
+- Robótica
 - ROS2
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /es/respeaker_xvf3800_ros2
@@ -16,7 +16,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/ros/RoS2reSpeakerXVF3800.gif" alt="pir" width={800} height="auto" /></p>
 
-Este proyecto demuestra la integración del ReSpeaker XVF3800 con ROS2 para aplicaciones robóticas, enfocándose en la detección de voz y estimación de Dirección de Llegada (DOA). Usando el nodo Turtlesim, simulamos el control robótico basado en entrada de voz, habilitando movimiento preciso a través de control PID. El tutorial cubre la configuración del entorno ROS2, configuración del ReSpeaker XVF3800, y cómo aplicar comandos de voz para controlar un robot. Al final, los usuarios entenderán cómo conectar interfaces de voz con robótica y usar algoritmos de control básicos para navegación.
+Este proyecto demuestra la integración del ReSpeaker XVF3800 con ROS2 para aplicaciones robóticas, centrándose en la detección de voz y la estimación de la Dirección de Llegada (DOA). Usando el nodo Turtlesim, simulamos el control robótico basado en la entrada de voz, permitiendo un movimiento preciso mediante control PID. El tutorial cubre la configuración del entorno ROS2, la configuración del ReSpeaker XVF3800 y cómo aplicar comandos de voz para controlar un robot. Al final, los usuarios comprenderán cómo conectar interfaces de voz con robótica y utilizar algoritmos de control básicos para la navegación.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -26,17 +26,17 @@ Este proyecto demuestra la integración del ReSpeaker XVF3800 con ROS2 para apli
     </a>
 </div>
 
-## Cómo Instalar ROS 2 en la Computadora Host
+## Cómo instalar ROS 2 en el ordenador host
 
-Para este proyecto, usamos **ROS 2 Humble** como middleware. Si estás instalando ROS 2 por primera vez, por favor sigue la guía de instalación oficial para pasos detallados:
+Para este proyecto, utilizamos **ROS 2 Humble** como middleware. Si estás instalando ROS 2 por primera vez, sigue la guía de instalación oficial para ver los pasos detallados:
 
-[Guía de Instalación de ROS 2 Humble (Ubuntu)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
+[Guía de instalación de ROS 2 Humble (Ubuntu)](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
 
-## Configurar el Array de Micrófono USB ReSpeaker
+## Configurar ReSpeaker USB Mic Array
 
-Si estás usando el **Array de Micrófono USB ReSpeaker** para tu robot o aplicaciones de voz, sigue estos pasos para configurarlo en tu sistema Ubuntu.
+Si estás utilizando el **ReSpeaker USB Mic Array** para tu robot o aplicaciones de voz, sigue estos pasos para configurarlo en tu sistema Ubuntu.
 
-### Encontrar los IDs de Proveedor y Producto de tu Dispositivo
+### Encontrar los IDs de proveedor y producto de tu dispositivo
 
 Para encontrar los IDs de tu dispositivo, ejecuta:
 
@@ -44,17 +44,17 @@ Para encontrar los IDs de tu dispositivo, ejecuta:
 lsusb
 ```
 
-Busca el dispositivo ReSpeaker (ej., `vendor 0x2886, product 0x001A`).
+Busca el dispositivo ReSpeaker (por ejemplo, `vendor 0x2886, product 0x001A`).
 
-### Crear una Regla udev para el Dispositivo
+### Crear una regla udev para el dispositivo
 
-Crea una nueva regla udev para asegurar permisos apropiados para el Array de Micrófono ReSpeaker:
+Crea una nueva regla udev para garantizar los permisos adecuados para el ReSpeaker Mic Array:
 
 ```bash
 sudo nano /etc/udev/rules.d/50-respeaker.rules
 ```
 
-Agrega las siguientes líneas al archivo:
+Añade las siguientes líneas al archivo:
 
 ```bash
 # ReSpeaker USB Mic Array
@@ -62,9 +62,9 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="0018", MODE="0666", 
 SUBSYSTEM=="usb", ATTR{idVendor}=="2886", ATTR{idProduct}=="001a", MODE="0666", GROUP="plugdev"
 ```
 
-### Recargar Reglas udev y Reiniciar el Servicio
+### Recargar las reglas udev y reiniciar el servicio
 
-Recarga las reglas udev y reinicia el servicio para que los cambios tomen efecto:
+Recarga las reglas udev y reinicia el servicio para que los cambios surtan efecto:
 
 ```bash
 sudo udevadm control --reload-rules
@@ -72,25 +72,25 @@ sudo udevadm trigger
 sudo service udev restart
 ```
 
-Desconecta y vuelve a conectar tu Array de Micrófono USB ReSpeaker para aplicar las nuevas reglas.
+Desconecta y vuelve a conectar tu ReSpeaker USB Mic Array para aplicar las nuevas reglas.
 
-## Configurando el Espacio de Trabajo ROS2 y Controlando tu Robot con ROS2
+## Configuración del espacio de trabajo ROS2 y control de tu robot con ROS2
 
-Esta guía te lleva a través del proceso de configurar un espacio de trabajo ROS2, crear un paquete ROS2 personalizado, controlar un robot usando Python, y configurar el Array de Micrófono USB ReSpeaker para uso en tu proyecto ROS2.
+Esta guía te acompaña en el proceso de configurar un espacio de trabajo ROS2, crear un paquete ROS2 personalizado, controlar un robot usando Python y configurar el ReSpeaker USB Mic Array para usarlo en tu proyecto ROS2.
 
-### Instalar Dependencias Requeridas
+### Instalar las dependencias necesarias
 
-**Instalar Extensión Python Colcon**
+**Instalar la extensión Colcon para Python**
 
-Primero, asegúrate de que las extensiones Python necesarias para construir paquetes ROS2 estén instaladas:
+Primero, asegúrate de que las extensiones de Python necesarias para compilar paquetes ROS2 estén instaladas:
 
 ```bash
 sudo apt install python3-colcon-common-extensions
 ```
 
-### Configurar Auto-completado de Colcon (Opcional)
+### Configurar la autocompletación de Colcon (opcional)
 
-Si necesitas configurar auto-completado para colcon:
+Si necesitas configurar la autocompletación para colcon:
 
 ```bash
 cd /usr/share/colcon_argcomplete/hook/
@@ -99,13 +99,13 @@ gedit ~/.bashrc
 clear
 ```
 
-Luego, agrega `source ~/.bashrc` para recargar el entorno:
+Luego, añade `source ~/.bashrc` para recargar el entorno:
 
 ```bash
 source ~/.bashrc
 ```
 
-### Crear un Espacio de Trabajo ROS2
+### Crear un espacio de trabajo ROS2
 
 Crea un nuevo espacio de trabajo ROS2 y prepara el entorno:
 
@@ -116,33 +116,33 @@ mkdir src
 colcon build
 ```
 
-### Cargar el Espacio de Trabajo ROS2
+### Cargar el espacio de trabajo ROS2
 
-Después de construir el espacio de trabajo, cárgalo para configurar las variables de entorno:
+Después de compilar el espacio de trabajo, cárgalo para configurar las variables de entorno:
 
 ```bash
 source ~/ros2_ws/install/setup.bash
 ```
 
-Puedes agregar esta línea a tu `~/.bashrc` para cargar el espacio de trabajo automáticamente cada vez que abras una nueva terminal:
+Puedes añadir esta línea a tu `~/.bashrc` para cargar el espacio de trabajo automáticamente cada vez que abras una nueva terminal:
 
 ```bash
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-### Crear un Nuevo Paquete ROS2
+### Crear un nuevo paquete ROS2
 
-Ahora, vamos a crear un nuevo paquete ROS2 para tu controlador de robot. Este paquete usará `ament_python` para construcción y `rclpy` como dependencia:
+Ahora, vamos a crear un nuevo paquete ROS2 para tu controlador de robot. Este paquete utilizará `ament_python` para la compilación y `rclpy` como dependencia:
 
 ```bash
 cd ~/ros2_ws/src
 ros2 pkg create my_robot_controller --build-type ament_python --dependencies rclpy
 ```
 
-### Agregar Script Python para Control de Robot
+### Añadir un script de Python para el control del robot
 
-Navega dentro de tu paquete recién creado, y crea un script Python (ej., `rotate_doa.py`) para controlar el robot:
+Navega dentro de tu paquete recién creado y crea un script de Python (por ejemplo, `rotate_doa.py`) para controlar el robot:
 
 ```bash
 cd my_robot_controller/
@@ -150,7 +150,7 @@ touch rotate_doa.py
 chmod +x rotate_doa.py
 ```
 
-Edita el script con tu lógica de control deseada (ej., usando un editor como VS Code):
+Edita el script con la lógica de control que desees (por ejemplo, usando un editor como VS Code):
 
 ```bash
 cd ..
@@ -315,7 +315,7 @@ if __name__ == '__main__':
 
 </details>
 
-Agrega estas dependencias a package.xml
+Añade estas dependencias a package.xml
 
 ```bash
   <depend>rclpy</depend>
@@ -324,7 +324,7 @@ Agrega estas dependencias a package.xml
   <depend>std_msgs</depend>
 ```
 
-Agrega este endpoint a package.xml
+Añade este endpoint a package.xml
 
 ```python
 
@@ -336,9 +336,9 @@ entry_points={
 
 ```
 
-### Construir y Ejecutar el Paquete
+### Compilar y ejecutar el paquete
 
-Después de editar tu script Python, construye el paquete:
+Después de editar tu script de Python, compila el paquete:
 
 ```bash
 colcon build
@@ -351,15 +351,15 @@ Finalmente, ejecuta el paquete con:
 ros2 run my_robot_controller rotate_doa
 ```
 
-En otra terminal, también puedes ejecutar un nodo ROS2 básico (ej., `turtlesim` para pruebas):
+En otra terminal, también puedes ejecutar un nodo ROS2 básico (por ejemplo, `turtlesim` para pruebas):
 
 ```bash
 ros2 run turtlesim turtlesim_node
 ```
 
-## Soporte Técnico y Discusión del Producto
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para proporcionarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

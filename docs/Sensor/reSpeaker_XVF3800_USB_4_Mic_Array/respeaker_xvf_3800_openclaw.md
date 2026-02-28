@@ -1,6 +1,6 @@
 ---
 description: "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
-title: "ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
+title: "reSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push"
 keywords:
 - reSpeaker_XVF3800_USB_4_Mic_Array
 - reSpeaker
@@ -12,14 +12,15 @@ last_update:
   author: Mingxi
 ---
 
+# ReSpeaker + OpenClaw: Lark Group Smart Location and Interactive Meeting Card Push
 
 > Want to give your robot voice interaction capabilities? Try Seeed Studio's ReSpeaker series! The target of this project is to integrate the reSpeaker XVF3800 USB 4-Mic Array with OpenClaw, enabling voice-controlled AI agent operation. With reSpeaker's powerful audio capture and noise reduction capabilities, combined with OpenClaw's flexible AI agent framework, you can easily create a voice-controlled smart assistant that can understand and respond to your commands. This demo demonstrates how to use reSpeaker to control Openclaw, enabling it to automatically locate Lark groups and send interactive meeting invitation cards.
 > [Project Source Code Repository](https://github.com/DengMingXi777GZ/openclaw-feishu-InteractMeetingCard)
 > [reSpeaker Product Source Code](https://github.com/respeaker)
 > [reSpeaker 4-Mic Array | Seeed Studio Purchase Link](https://www.seeedstudio.com/ReSpeaker-4-Mic-Array-for-Raspberry-Pi-p-2906.html)
-> 
+>
 > ![reSpeaker XVF3800](https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-banner.jpg)
-> ---
+>
 
 ## Result Showcase
 
@@ -28,7 +29,6 @@ Below is a demonstration of the actual operation of this project:
 ### Demo Video
 
 <video src="https://files.seeedstudio.com/wiki/reSpeaker-openclaw/DemoVideo.mp4" controls width="100%"></video>
-
 
 ### Function Demonstration Description
 
@@ -46,7 +46,6 @@ The video demonstrates a complete voice interaction workflow:
 After successful execution, the Feishu group will receive an interactive card as follows:
 
 ![Effect Showcase](https://files.seeedstudio.com/wiki/reSpeaker-openclaw/result.png)
-
 
 ---
 
@@ -80,6 +79,7 @@ This project supports creating meeting cards via voice commands. Below is the co
 ### Voice Recognition Configuration
 
 #### 1. Hardware Requirements
+
 - **reSpeaker 4-Mic Array** - 4-microphone circular array
 - 2GB+ RAM
 - Internet connection
@@ -100,11 +100,13 @@ wget https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/tiny.en-
 #### 3. Voice Command Examples
 
 **English Commands:**
+
 - `"Schedule a meeting with Tom tomorrow at 3pm"`
 - `"Book a review meeting today at 2pm in Room 1"`
 - `"Create a discussion next Monday at 10am"`
 
 **Chinese Commands:**
+
 - `"Tomorrow at 3pm, have a meeting with Tom"`
 - `"Today at 2pm, create a review meeting in Room 1"`
 - `"Next Monday 10am, create a discussion meeting"`
@@ -133,6 +135,7 @@ python3 Demo.py
 OpenClaw's Skill system is based on a modular design. Each Skill is an independent Python module that interacts with the OpenClaw core system through specific interfaces.
 
 **Key Concepts:**
+
 - **Skill Directory**: `~/.openclaw/skills/[skill_name]/`
 - **Entry File**: `__init__.py` or a specified Python file.
 - **Tool Registration**: Registered via the `@tool` decorator.
@@ -141,12 +144,14 @@ OpenClaw's Skill system is based on a modular design. Each Skill is an independe
 ### Step 2: Create Skill Basic Structure
 
 #### 1. Create Skill Directory
+
 ```bash
 mkdir -p ~/.openclaw/skills/feishu_meeting
 cd ~/.openclaw/skills/feishu_meeting
 ```
 
 #### 2. Create Core Files
+
 ```bash
 touch __init__.py
 touch send_meeting_card.py
@@ -404,6 +409,7 @@ feishu_meeting.create(
 ```
 
 ### Parameter Description
+
 - `topic`: Meeting topic
 - `date`: Meeting date (YYYY-MM-DD)
 - `time`: Meeting time (HH:MM)
@@ -413,9 +419,11 @@ feishu_meeting.create(
 - `group_name`: Group name
 
 ### Command Line Usage
+
 ```bash
 python3 send_meeting_card.py '{"topic": "Weekly Meeting", "time": "14:00"}'
 ```
+
 ```
 
 ### Step 4: Integrate into OpenClaw System
@@ -427,7 +435,6 @@ We are using an AI. In my experiments, I encountered situations where I had writ
 # Open the OpenClaw dashboard for self-debugging, tell OpenClaw where your completed skills are, and let it perform registration and configuration.
 openclaw dashboard
 ```
-
 
 #### 1. Tool Registration
 
@@ -493,6 +500,7 @@ openclaw message send --channel feishu --target [group_id] --message '[Card Cont
 ### 1. Feishu Card Format
 
 Feishu interactive cards require a specific JSON structure:
+
 - `msg_type`: Must be "interactive"
 - `card`: Contains the full card definition
 - `elements`: Defines various components of the card
@@ -536,17 +544,20 @@ python3 -c "import json; print(json.dumps(card_content, indent=2))"
 ### 2. Verification Steps
 
 1. **Skill Recognition Verification**
+
    ```bash
    openclaw skills list
    ```
 
 2. **Authentication Verification**
+
    ```bash
    # Test Feishu API connection
    python3 -c "from tools import message; print('OK')"
    ```
 
 3. **Function Verification**
+
    ```bash
    # Test card creation
    python3 send_meeting_card.py
