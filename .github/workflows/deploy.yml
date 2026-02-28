@@ -11,7 +11,7 @@ env:
   DOCUSAURUS_IGNORE_SSG_WARNINGS: "true"
 
 permissions:
-  contents: read
+  contents: write
   statuses: write
 
 jobs:
@@ -56,7 +56,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Test build website
-        run: yarn docusaurus build
+        run: yarn build
       - name: Report status to PR
         if: always()
         continue-on-error: true
