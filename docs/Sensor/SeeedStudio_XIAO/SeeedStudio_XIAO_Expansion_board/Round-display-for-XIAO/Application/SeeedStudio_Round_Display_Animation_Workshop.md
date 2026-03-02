@@ -6,6 +6,7 @@ keywords:
 - Round Display
 - LVGL
 - Animation
+image: https://files.seeedstudio.com/wiki/round_display_animation_workshop/hb_screen.jpg
 slug: /round_display_animation_workshop
 last_update:
  date: 02/23/2026
