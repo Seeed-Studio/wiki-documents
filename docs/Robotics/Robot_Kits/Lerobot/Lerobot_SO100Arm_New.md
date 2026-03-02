@@ -10,8 +10,8 @@ image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m_new
 sku: 114993666,114993667,114993668,101090144
 last_update:
-  date: 9/26/2025
-  author: LiShanghang
+  date: 3/2/2026
+  author: ZhangJiaQuan
 translation:
   skip: [ zh-CN ]
 ---
@@ -524,6 +524,10 @@ If you purchased the **SO101 Arm Kit Standard Edition**, all power supplies are 
 
 Next, you need to connect the power supply and data cable to your SO-10x robot for calibration to ensure that the leader and follower arms have the same position values when they are in the same physical position. This calibration is essential because it allows a neural network trained on one SO-10x robot to work on another. If you need to recalibrate the robotic arm, delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, an error prompt will appear. The calibration information for the robotic arm will be stored in the JSON files under this directory.
 
+:::tip
+On PC (Linux) and Jetson devices, the first USB device you plug in typically maps to `ttyACM0`, and the second maps to `ttyACM1`. Double-check which port is mapped to the leader and follower before running commands.
+:::
+
 **Manual calibration of follower arm**
 
 Please connect the interfaces of the 6 robot servos via a 3-pin cable and connect the chassis servo to the servo drive plate, then run the following command or API example to calibrate the robot arm:
@@ -559,6 +563,52 @@ lerobot-calibrate \
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+### (Optional) Middle-position calibration with the Seeed Studio SoARM quick tool
+
+When calibrating or running the robot, if you see errors like:
+
+`Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)`
+
+This usually means the current position / zero-offset of a servo is abnormal, causing the read angle to exceed the expected range. In that case, you can use Seeed Studio’s SoARM tool to do a **middle-position calibration** (write the current position to the middle value **2048**), and then redo the full-arm calibration.
+
+#### 1) Clone the tool from GitHub and install dependencies
+
+```bash
+git clone https://github.com/Seeed-Projects/Seeed_RoboController.git
+cd Seeed_RoboController
+pip install -r requirements.txt
+```
+
+#### 2) Middle-position calibration and verification
+
+Script locations:
+
+- `src/tools/servo_middle_calibration.py`: middle-position calibration (write current position as **2048**)
+- `src/tools/servo_disable.py`: disable servo torque (easier to rotate joints by hand)
+- `src/tools/servo_center_test.py`: move to **2048** to verify the calibration result
+
+Run in order (the commands will interactively ask you to select a port):
+
+1. (Optional) Disable torque to adjust joints manually:
+
+```bash
+python -m src.tools.servo_disable
+```
+
+2. Do middle-position calibration (set current position to 2048):
+
+```bash
+python -m src.tools.servo_middle_calibration
+```
+
+3. Verify: move the servo to 2048 and check if it returns to the expected middle position:
+
+```bash
+python -m src.tools.servo_center_test
+```
+
+After the middle-position calibration, return to the `lerobot-calibrate` steps above and redo the full-arm calibration.
 
 ## Teleoperate
 
@@ -1327,8 +1377,305 @@ lerobot-record \
 <details>
 <summary>[GR00T N1.5](https://huggingface.co/docs/lerobot/groot) </summary>
 
-Refet to [GR00T N1.5](https://huggingface.co/docs/lerobot/groot) 
+Refer to the official documentation: [GR00T N1.5](https://huggingface.co/docs/lerobot/groot).
 
+GR00T N1.5 is an open foundation model from NVIDIA for more general robot reasoning and skill learning. It is a **cross-embodiment** model: it can take multimodal inputs such as **language** and **images**, and execute manipulation tasks across different environments.
+
+In LeRobot, the key is to set the policy type to `--policy.type=groot`. Note that GR00T N1.5 has higher environment requirements (it depends on FlashAttention and requires a CUDA GPU). It is recommended to first get ACT / Pi0 running end-to-end, and then try GR00T.
+
+**Installation (important)**
+
+According to the current official docs, GR00T N1.5 requires `flash-attn` and can only be used on CUDA-capable hardware.
+
+Recommended order:
+
+1. Prepare your base environment first (Python, CUDA, drivers, etc.). Do **not** install `lerobot` yet.
+2. Install PyTorch for your CUDA version (different CUDA versions may require a different `--index-url`; follow the PyTorch install page).
+
+```bash
+pip install "torch>=2.2.1,<2.8.0" "torchvision>=0.21.0,<0.23.0"
+```
+
+3. Install the build dependencies for `flash-attn`, then install `flash-attn` itself.
+
+```bash
+pip install ninja "packaging>=24.2,<26.0"
+pip install "flash-attn>=2.5.9,<3.0.0" --no-build-isolation
+python -c "import flash_attn; print(f'Flash Attention {flash_attn.__version__} imported successfully')"
+```
+
+4. Install LeRobot with the `groot` optional dependencies (`lerobot[groot]`).
+
+```bash
+pip install "lerobot[groot]"
+```
+
+:::tip
+If `flash-attn` installation fails, it is usually due to (1) a PyTorch/CUDA mismatch, (2) missing build dependencies, or (3) an environment that is too new/too old. Cross-check the official GR00T docs and the PyTorch install instructions first.
+:::
+
+**Training (fine-tuning)**
+
+The official docs provide a multi-GPU example with `accelerate launch --multi_gpu ...`. If you only have a single GPU, you can still start by getting a single-process run working first (exact support/arguments depend on the official docs).
+
+```bash
+accelerate launch \
+  --multi_gpu \
+  --num_processes=$NUM_GPUS \
+  $(which lerobot-train) \
+  --output_dir=$OUTPUT_DIR \
+  --save_checkpoint=true \
+  --batch_size=$BATCH_SIZE \
+  --steps=$NUM_STEPS \
+  --save_freq=$SAVE_FREQ \
+  --log_freq=$LOG_FREQ \
+  --policy.push_to_hub=true \
+  --policy.type=groot \
+  --policy.repo_id=$REPO_ID \
+  --policy.tune_diffusion_model=false \
+  --dataset.repo_id=$DATASET_ID \
+  --wandb.enable=true \
+  --wandb.disable_artifact=true \
+  --job_name=$JOB_NAME
+```
+
+**On-robot validation (evaluation)**
+
+After training, you can evaluate and record replays with `lerobot-record` like other policies. The official docs include a bimanual example; SO101 single-arm users do not need `left_arm_port/right_arm_port`-style arguments.
+
+```bash
+lerobot-record \
+  --robot.type=bi_so_follower \
+  --robot.left_arm_port=/dev/ttyACM1 \
+  --robot.right_arm_port=/dev/ttyACM0 \
+  --robot.id=bimanual_follower \
+  --robot.cameras='{ right: {"type": "opencv", "index_or_path": 0, "width": 640, "height": 480, "fps": 30}, left: {"type": "opencv", "index_or_path": 2, "width": 640, "height": 480, "fps": 30}, top: {"type": "opencv", "index_or_path": 4, "width": 640, "height": 480, "fps": 30} }' \
+  --display_data=true \
+  --dataset.repo_id=${HF_USER}/eval_groot_bimanual \
+  --dataset.num_episodes=10 \
+  --dataset.single_task="Grab and handover the red cube to the other arm" \
+  --policy.path=${HF_USER}/groot-bimanual \
+  --dataset.episode_time_s=30 \
+  --dataset.reset_time_s=10
+```
+
+License: Apache 2.0 (same as the original GR00T repository).
+
+</details>
+
+<details>
+<summary>(Optional) Parameter-Efficient Fine-Tuning (PEFT)</summary>
+
+PEFT (Parameter-Efficient Fine-Tuning) is a family of methods and tools that help a large pretrained model adapt to new tasks **without updating all parameters**. For pretrained LeRobot policies (e.g., SmolVLA, Pi0), you can often train only a small set of “adapter” parameters (e.g., LoRA) to reduce VRAM usage and training cost, while still achieving performance close to full fine-tuning.
+
+**Install**
+
+After installing LeRobot with the optional `peft` dependencies, you can use PEFT-related arguments in training.
+
+```bash
+pip install -e ".[peft]"
+```
+
+```bash
+pip install "lerobot[peft]"
+```
+
+More concepts and methods: [🤗 PEFT documentation](https://huggingface.co/docs/peft/index).
+
+**Example: Fine-tune SmolVLA with LoRA (LIBERO `libero_spatial` sub-task)**
+
+This example fine-tunes `lerobot/smolvla_base` with LoRA on the `HuggingFaceVLA/libero` dataset. Argument names depend on the LeRobot version; it’s recommended to also check `lerobot-train --help`.
+
+```bash
+lerobot-train \
+  --policy.path=lerobot/smolvla_base \
+  --policy.repo_id=${HF_USER}/my_libero_smolvla_peft \
+  --dataset.repo_id=HuggingFaceVLA/libero \
+  --env.type=libero \
+  --env.task=libero_spatial \
+  --output_dir=outputs/train/my_libero_smolvla_peft \
+  --job_name=my_libero_smolvla_peft \
+  --policy.device=cuda \
+  --steps=10000 \
+  --batch_size=32 \
+  --optimizer.lr=1e-3 \
+  --peft.method_type=LORA \
+  --peft.r=64
+```
+
+**Key PEFT arguments**
+
+- `--peft.method_type`: Select the PEFT method. LoRA (Low-Rank Adapter) is one of the most common options.
+- `--peft.r`: LoRA rank. Higher rank usually increases capacity, but also increases parameter count and VRAM usage.
+
+**Choose which layers/modules to inject LoRA into (optional)**
+
+By default, PEFT usually injects LoRA into the most important projection layers (e.g., attention `q_proj`, `v_proj`), and may also cover state/action projections. If you want to customize, use `--peft.target_modules`.
+
+Common patterns:
+
+1) Provide a list of module-name suffixes (example):
+
+```bash
+--peft.target_modules="['q_proj', 'v_proj']"
+```
+
+2) Provide a regex (example; adjust to the actual module names in the model):
+
+```bash
+--peft.target_modules='(model\\.vlm_with_expert\\.lm_expert\\..*\\.(down|gate|up)_proj|.*\\.(state_proj|action_in_proj|action_out_proj|action_time_mlp_in|action_time_mlp_out))'
+```
+
+**Fully train some modules (optional)**
+
+If you want some modules to be fully trained (instead of only injecting LoRA), use `--peft.full_training_modules`. For example, only fully train `state_proj`:
+
+```bash
+--peft.full_training_modules="['state_proj']"
+```
+
+**Learning rate suggestion (rule of thumb)**
+
+LoRA learning rates are often ~10× higher than full fine-tuning. For example, if full fine-tuning commonly uses `1e-4`, LoRA can start from `1e-3`. If you use a learning-rate scheduler, the final learning rate is often around `1e-4` as a reference.
+
+</details>
+
+<details>
+<summary>(Optional) Multi-GPU training with Accelerate</summary>
+
+**Training steps**
+
+Method 1: Use CLI flags.
+
+1. Install `accelerate` in your `lerobot` environment.
+
+```bash
+
+pip install accelerate
+
+```
+
+2. Launch multi-GPU training with `accelerate launch` and the `--multi_gpu` and `--num_processes` flags.
+
+```bash
+
+accelerate launch \
+
+--multi_gpu \
+
+--num_processes=2 \
+
+$(which lerobot-train) \
+
+--dataset.repo_id=${HF_USER}/my_dataset \
+
+--policy.type=act \
+
+--policy.repo_id=${HF_USER}/my_trained_policy \
+
+--output_dir=outputs/train/act_multi_gpu \
+
+--job_name=act_multi_gpu \
+
+--wandb.enable=true
+
+```
+
+Key `accelerate` flags:
+
+- `--multi_gpu`: Enable multi-GPU training.
+- `--num_processes`: Number of GPUs to use (usually equals the number of available GPUs on the machine).
+- `--mixed_precision=fp16`: Use fp16 mixed precision (if your hardware supports it, you can also use bf16).
+
+Please note: **bf16 requires hardware support** and is not available on all GPUs.
+
+| Precision | Hardware support |
+|--|--|
+| fp16 | Supported by almost all NVIDIA GPUs |
+| bf16 | Only supported by some newer GPUs (Ampere and later) |
+
+If your GPU does not support bf16, choose fp16 in the Accelerate configuration, or specify fp16 explicitly.
+
+Method 2: Use an `accelerate` config file (optional).
+
+If you train on multiple GPUs frequently, you can save the configuration to avoid repeatedly typing the same flags.
+
+`accelerate config` saves your hardware configuration (number of GPUs, mixed precision, etc.) into a config file, so you don’t have to re-enter those options when running `accelerate launch` later. It does not change LeRobot’s training logic; it only reduces repeated CLI inputs.
+
+If you only use multi-GPU occasionally (or this is your first time), skipping this is completely fine.
+
+In the interactive configuration, for the common “single machine + multiple GPUs” scenario, typical choices are:
+
+- Compute environment: This machine
+- Number of machines: 1
+- Number of processes: Number of GPUs you want to use
+- GPU ids to use: press Enter (use all GPUs)
+- Mixed precision: prefer fp16; choose bf16 only if you know your GPU supports it
+
+```bash
+
+accelerate config
+
+```
+
+```bash
+
+accelerate launch $(which lerobot-train) \
+
+--dataset.repo_id=${HF_USER}/my_dataset \
+
+--policy.type=act \
+
+--policy.repo_id=${HF_USER}/my_trained_policy \
+
+--output_dir=outputs/train/act_multi_gpu \
+
+--job_name=act_multi_gpu \
+
+--wandb.enable=true
+
+```
+
+**How multi-GPU affects hyperparameters (and how to adjust)**
+
+LeRobot does not automatically adjust learning rate or training steps based on the number of GPUs, to avoid silently changing training behavior. This differs from some other distributed training frameworks.
+
+If you want to adjust hyperparameters for multi-GPU, a common approach is:
+
+- **Steps**: effective batch size increases (batch_size × num_gpus), so you can reduce steps roughly proportional to `1 / num_gpus` to keep a similar total number of samples seen.
+
+```bash
+
+accelerate launch --num_processes=2 $(which lerobot-train) \
+
+--batch_size=8 \
+
+--steps=50000 \
+
+--dataset.repo_id=lerobot/pusht \
+
+--policy=act
+
+```
+
+- **Learning rate**: since each step uses more samples, you can often scale the learning rate linearly with the number of GPUs:
+  new_lr = single_gpu_lr × num_gpus
+
+```bash
+
+accelerate launch --num_processes=2 $(which lerobot-train) \
+
+--optimizer.lr=2e-4 \
+
+--dataset.repo_id=lerobot/pusht \
+
+--policy=act
+
+```
+
+These are not strict rules; they are common heuristics. If you’re unsure, you can also keep the learning rate and steps unchanged as long as training remains stable.
+
+For advanced configuration and troubleshooting, see the Accelerate documentation: [Accelerate](https://huggingface.co/docs/accelerate/index).
 
 </details>
 
@@ -1463,7 +1810,7 @@ If you encounter software issues or environment dependency problems that cannot 
 
 ## Citation
 
-[中文文档](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/)
+[Chinese Document](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/)
 
 TheRobotStudio Project: [SO-ARM10x](https://github.com/TheRobotStudio/SO-ARM100)
 
