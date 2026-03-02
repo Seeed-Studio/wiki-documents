@@ -2085,6 +2085,23 @@ const sidebars = {
             'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
           ],
         },
+
+{
+  type: 'category',
+  label: 'Sound Event Detection Module',
+  collapsed: true,
+  collapsible: true,
+  link: {
+    type: 'doc',
+    id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
+  },
+  items: [
+    // add sub-docs here later
+    // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+    // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+  ],
+},
+
       ],
     },
     {
