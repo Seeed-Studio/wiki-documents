@@ -7,9 +7,7 @@ sku: 102991694
 last_update:
   date: 01/05/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 # J1010 从 SD 卡启动

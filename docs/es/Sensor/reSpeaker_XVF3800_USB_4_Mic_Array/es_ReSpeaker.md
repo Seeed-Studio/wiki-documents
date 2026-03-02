@@ -1,6 +1,5 @@
 ---
 description: reSpeaker de Seeed Studio es una plataforma modular de interfaz de voz de código abierto para crear productos de interacción de voz inteligente. Con matrices de micrófonos avanzadas con reconocimiento de campo lejano, supresión de ruido y algoritmos de procesamiento de audio, ofrece una captura de voz clara incluso en entornos ruidosos. Compatible con múltiples plataformas e idiomas, ofrece desarrollo flexible, diseños de código abierto y un sólido soporte de la comunidad.
-
 title: Introducción a reSpeaker
 keywords:
 - reSpeaker

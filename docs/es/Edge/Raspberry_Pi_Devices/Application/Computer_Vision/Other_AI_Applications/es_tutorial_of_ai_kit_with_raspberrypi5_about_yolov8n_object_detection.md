@@ -11,7 +11,6 @@ slug: /es/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection
 last_update:
   date: 08/6/2024
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

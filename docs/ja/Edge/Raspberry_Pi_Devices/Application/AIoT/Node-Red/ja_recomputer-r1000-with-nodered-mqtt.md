@@ -1,6 +1,5 @@
 ---
 description: reComputer R1000にMQTTをインストールし、Node-REDでテストする方法を学びます。MQTTは、IoTアプリケーションに最適な軽量メッセージングプロトコルで、信頼性の低いネットワークでも効率的なリアルタイムデータ交換を可能にします。Node-RED統合により、エッジデバイスと中央サーバーがシームレスな接続を実現し、エッジで直接データ送信と処理を最適化します。
-
 title: reComputer R1000 with Node Red and MQTT
 keywords:
   - Edge Controller

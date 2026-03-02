@@ -1,6 +1,5 @@
 ---
 description: This article mainly introduces how to use fuxa for OPC-UA communication.
-
 title: reComputer R1000 with fuxa to use OPC-UA
 keywords:
   - Edge Controller

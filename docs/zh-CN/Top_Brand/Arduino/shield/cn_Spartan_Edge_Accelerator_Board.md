@@ -1,16 +1,13 @@
 ---
 description: Spartan_Edge_Accelerator_Board
 title: Spartan Edge 加速器开发板
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Spartan-Edge-Accelerator-Board
 sku: 102030005
 last_update:
   date: 01/30/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Spartan-Edge-Accelerator-Board/img/Spartan-Edge-Accelerater-Board-v1.0-wiki.jpg" alt="pir" width={600} height="auto" /></p>

@@ -10,7 +10,6 @@ slug: /yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l
 last_update:
   date: 06/26/2024
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

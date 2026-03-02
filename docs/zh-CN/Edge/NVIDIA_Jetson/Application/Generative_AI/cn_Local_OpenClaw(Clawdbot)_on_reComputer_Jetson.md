@@ -1,4 +1,4 @@
-﻿---
+---
 description: 本 wiki 展示如何在 reComputer Jetson 上部署和使用 Clawdbot。
 title: 在 reComputer Jetson 上使用 Ollama 运行本地 OpenClaw（Clawdbot）
 keywords:

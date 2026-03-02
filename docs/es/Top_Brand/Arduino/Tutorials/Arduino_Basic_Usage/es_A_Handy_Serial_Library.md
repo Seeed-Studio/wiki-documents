@@ -1,15 +1,12 @@
 ---
 description: Una Biblioteca Serial Práctica
 title: Una Biblioteca Serial Práctica
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/A_Handy_Serial_Library
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 Arduino no tenía función de depuración, tal vez esta sea la primera impresión de algunos ingenieros de software. De hecho, a menudo solo usamos Arduino para hacer alguna aplicación simple, incluso si no hay depuración, no importa. Si quieres usar Arduino para hacer alguna aplicación compleja, como reconocimiento facial, entonces tal vez tengas que reconsiderar si habías elegido la plataforma incorrecta.

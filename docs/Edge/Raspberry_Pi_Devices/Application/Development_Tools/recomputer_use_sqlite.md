@@ -10,7 +10,6 @@ slug: /use_sqlite_on_recomputer
 last_update:
   date: 09/25/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

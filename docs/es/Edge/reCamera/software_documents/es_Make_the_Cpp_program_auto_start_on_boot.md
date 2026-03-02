@@ -10,9 +10,7 @@ slug: /es/make_the_cpp_program_auto_start_on_boot
 last_update:
   date: 07/26/2025
   author: Liangyuxin
-
 no_comments: false 
-
 ---
 
 # Hacer que el programa C++ se inicie automáticamente al arrancar

@@ -7,9 +7,7 @@ sku: 113030001
 last_update:
   date: 01/30/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 <table align="center">

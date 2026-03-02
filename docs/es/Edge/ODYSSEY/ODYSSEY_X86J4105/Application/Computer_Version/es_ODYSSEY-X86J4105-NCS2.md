@@ -7,7 +7,6 @@ sku: 102110399,102110398,102110397,110991412,110991465,102110477,102110478,10211
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 # Comenzar con Intel® Neural Compute Stick 2 con ODYSSEY - X86J41x5

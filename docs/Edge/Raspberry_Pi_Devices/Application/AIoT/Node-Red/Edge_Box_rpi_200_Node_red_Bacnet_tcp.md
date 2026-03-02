@@ -1,6 +1,5 @@
 ---
 description: This wiki provides a comprehensive guide to working with the Edge Box RPi 200, an industrial IoT edge controller based on the Raspberry Pi 4. It includes instructions for setting up Node-RED, simulating room temperatures with YABE, and discovering and reading BACnet IP device parameters for efficient Building Management System (BMS) integration.
-
 title: Edge Box RPi 200 with Node Red and BACnet TCP
 keywords:
   - Edge Controller

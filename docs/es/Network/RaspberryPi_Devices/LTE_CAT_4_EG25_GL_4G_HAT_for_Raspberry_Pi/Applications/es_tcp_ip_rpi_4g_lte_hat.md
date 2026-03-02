@@ -1,6 +1,5 @@
 ---
 description: Libera el poder de TCP para tu Raspberry Pi 4G HAT. Explora cómo TCP asegura un intercambio de datos confiable, esencial para aplicaciones IoT, monitoreo remoto y más.
-
 title: 4G LTE HAT en Raspberry Pi- Redes TCP/IP Explicadas
 keywords:
   - Raspberry Pi Hat

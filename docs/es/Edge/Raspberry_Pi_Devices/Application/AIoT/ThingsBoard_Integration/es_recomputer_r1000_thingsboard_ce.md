@@ -1,6 +1,5 @@
 ---
 description: La Guía de Instalación de ThingsBoard para reComputer proporciona instrucciones paso a paso para configurar ThingsBoard v3.8 y PostgreSQL en un dispositivo reComputer. Cubre la instalación de Java 17, configuración del servicio ThingsBoard, configuración de PostgreSQL y consejos de solución de problemas para una gestión fluida de datos IoT.
-
 title: Primeros Pasos con ThingsBoard en reComputer R1000
 keywords:
   - reComputer-R1000

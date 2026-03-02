@@ -8,7 +8,6 @@ slug: /popularplatforms
 last_update:
   date: 05/29/2024
   author: Yaohao
-
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>

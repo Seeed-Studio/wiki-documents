@@ -1,7 +1,5 @@
 ---
 title: Grove - 模拟麦克风
-
-
 nointro:
 keywords:
   - docs

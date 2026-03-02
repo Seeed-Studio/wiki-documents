@@ -10,9 +10,7 @@ slug: /cn/Real Time Subtitle Recoder on Nvidia Jetson
 last_update:
   date: 02/23/2024
   author: Jiahao
-
 no_comments: false # for Disqus
-
 ---
 
 # 在 Nvidia Jetson 上的语音字幕生成

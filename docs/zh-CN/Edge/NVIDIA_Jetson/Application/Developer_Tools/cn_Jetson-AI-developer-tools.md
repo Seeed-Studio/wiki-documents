@@ -6,9 +6,7 @@ slug: /cn/Jetson-AI-developer-tools
 last_update:
   date: 05/11/2023
   author: Lakshantha
-
 no_comments: false # for Disqus
-
 ---
 
 # Jetson AI 开发者工具

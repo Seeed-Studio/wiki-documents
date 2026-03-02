@@ -1,6 +1,5 @@
 ---
 description: reSpeaker 是由 Seeed Studio 推出的开源模块化语音接口平台，用于打造智能语音交互产品。其配备具备远场识别、噪声抑制和音频处理算法的先进麦克风阵列，即使在嘈杂环境中也能实现清晰的语音采集。兼容多种平台和语言，提供灵活的开发方式、开源设计以及强大的社区支持。
-
 title: reSpeaker 介绍
 keywords:
 - reSpeaker

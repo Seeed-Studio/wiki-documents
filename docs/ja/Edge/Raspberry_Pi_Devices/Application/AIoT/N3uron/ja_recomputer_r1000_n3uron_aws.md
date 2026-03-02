@@ -1,6 +1,5 @@
 ---
 description: エッジコンピューティング機能を持つreComputer R1000上のN3uronアプリケーションをAWS IoT Coreと統合する方法を学びます。このチュートリアルでは、結果データを効率的にサブスクライブする手順を説明します。
-
 title: reComputer R1000をN3uronでAWS IoT Coreに接続
 keywords:
   - reComputer-R1000

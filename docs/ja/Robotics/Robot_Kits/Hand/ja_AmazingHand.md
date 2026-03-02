@@ -16,7 +16,6 @@ sku: 100062181,100063642
 last_update:
   date: 9/10/2025
   author: TienjuiWong
-
 ---
 
 <div align="center">

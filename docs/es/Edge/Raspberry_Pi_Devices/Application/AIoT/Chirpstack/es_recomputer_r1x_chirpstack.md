@@ -1,8 +1,6 @@
 ---
 description: Aprende cómo construir un gateway LoRaWAN usando ChirpStack en reComputer R11 con Raspberry Pi. Configura el gateway R1X00, Packet Forwarder y sensores SenseCAP S2101 para transmitir datos IoT vía MQTT. Accede a tus dispositivos LoRa y aplicaciones de forma segura desde cualquier lugar del mundo.
-
 title: Integración de Gateway ChirpStack R1X con SenseCAP S2101
-
 keywords:
 - ChripStack
 - LoRa-WAN

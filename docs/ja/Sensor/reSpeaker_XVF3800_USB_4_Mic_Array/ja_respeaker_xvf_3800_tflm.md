@@ -1,8 +1,6 @@
 ---
 description: TensorFlow Lite Micro (TFLM) 音声モデルを Seeed XIAO ESP32 と XVF3800 ReSpeaker 上で学習・デプロイして、リアルタイム音声認識を行う方法を学びます。本チュートリアルでは、モデルの学習、TFLite から hex コードへの変換、およびマイコン上で高精度なキーワードスポッティングを実現するための書き込み手順を解説します。
-
 title: reSpeaker XVF3800 上の TensorFlow Lite
-
 keywords:
 - reSpeaker
 - XIAO

@@ -1,7 +1,6 @@
 ---
 description: S7プロトコルを使用してSiemens PLCを設定し、効率的なエッジコンピューティングのためにRaspberry Piベースのrecomputerでnode-REDと統合する方法を学びます。S7ノードの設定、フローの作成、PLC変数の監視に関するステップバイステップのガイダンスをご覧ください。
 title: reComputer R1000でS7プロトコルを使用してSiemens PLCを接続する
-
 keywords:
   - Edge Controller
   - reComputer R1000
@@ -9,7 +8,6 @@ keywords:
   - Siemens
   - S7
   - PLC
-  
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /ja/recomputer_r1000_nodered_s7
 last_update:

@@ -1,16 +1,13 @@
 ---
 description: Solar Charger Shield V2.2
 title: Solar Charger Shield V2.2
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Solar_Charger_Shield_V2.2
 sku: 106990020
 last_update:
   date: 05/15/2025
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 

@@ -11,7 +11,6 @@ sku: 113991274,E24010521
 last_update:
   date: 06/26/2024
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

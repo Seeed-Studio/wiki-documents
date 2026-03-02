@@ -1,15 +1,12 @@
 ---
 description: 下载 Arduino 并安装 Arduino 驱动程序
 title: 下载 Arduino 并安装 Arduino 驱动程序
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Download-Arduino-and-install-Arduino_Driver
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 ![](https://files.seeedstudio.com/wiki/Download_Arduino_and_install_Arduino_driver/img/Arduino_quickstart.jpg)

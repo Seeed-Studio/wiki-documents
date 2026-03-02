@@ -7,7 +7,6 @@ sku: 102110318
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 ![](https://files.seeedstudio.com/wiki/STM32_SoM.png/SoM_thumb.png)

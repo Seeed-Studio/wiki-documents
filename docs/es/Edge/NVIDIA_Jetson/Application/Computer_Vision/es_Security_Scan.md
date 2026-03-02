@@ -10,9 +10,7 @@ sku: 110991666, 110061363, 110061401, 110061361, 110061481
 last_update:
   date: 01/04/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 # Detección de Cuchillos: Un Modelo de Detección de Objetos desplegado en Triton Inference Server basado en reComputer

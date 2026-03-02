@@ -6,9 +6,7 @@ slug: /cn/J101_Enable_SD_Card
 last_update:
   date: 01/05/2022
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 <!-- # Boot NVIDIA JetPack OS from SD card for J101 Carrier Board -->

@@ -1,15 +1,12 @@
 ---
 description: Guide to use demos downloaded from Seeed's Github
 title: Use Demos from Seeed Studio's Github
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Guide_to_use_demos_downloaded_from_Seeed-s_Github
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 It is necessary to use demos from Seeeduino Github frequently and there some slight difficult for a novice to run the demo well.

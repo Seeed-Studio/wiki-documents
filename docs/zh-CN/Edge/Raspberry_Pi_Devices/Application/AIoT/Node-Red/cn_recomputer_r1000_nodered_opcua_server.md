@@ -1,14 +1,12 @@
 ---
 description: 本wiki提供了在基于树莓派的reComputer R1000上使用Node-RED设置OPC UA服务器的分步指南。它包含安装和配置OPC UA服务器节点、连接Modbus TCP和RTU设备以及使用UaExpert OPC客户端监控数据的详细说明。非常适合那些希望轻松集成和可视化工业数据的用户。
 title: reComputer R1000作为OPC UA服务器与Node-RED
-
 keywords:
   - Edge Controller
   - reComputer R1000
   - Node-Red
   - Modbus
   - OPC UA
-  
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /cn/recomputer_r1000_nodered_opcua_server
 last_update:

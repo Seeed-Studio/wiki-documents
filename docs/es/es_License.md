@@ -2,7 +2,6 @@
 sidebar_position: 6
 title: Licencia
 slug: /es/License
-
 ---
 
 ## **AVISO IMPORTANTE Y DESCARGO DE RESPONSABILIDAD**

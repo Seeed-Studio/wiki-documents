@@ -6,9 +6,7 @@ slug: /es/Jetson-AI-developer-tools
 last_update:
   date: 05/11/2023
   author: Lakshantha
-
 no_comments: false # for Disqus
-
 ---
 
 # Herramientas de Desarrollo de IA para Jetson

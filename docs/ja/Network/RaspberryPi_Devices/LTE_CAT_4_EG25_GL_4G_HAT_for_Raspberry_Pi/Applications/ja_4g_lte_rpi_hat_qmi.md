@@ -1,6 +1,5 @@
 ---
 description: Quectel EG25モジュールを搭載した4G HATを使用して、Raspberry PiでQMIモードで信頼性の高いLTEインターネット接続を設定する方法を学びます。Raspberry Piでのquectel-CMの設定、コンパイル、およびダイヤルの手順をステップバイステップで解説します。
-
 title: 4G Raspberry Pi HAT - Raspberry Pi OSでのQMIモード設定
 keywords:
   - Raspberry Pi Hat
@@ -8,7 +7,6 @@ keywords:
   - IIoT
   - QMI
   - 4G LTE
-  
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/Raspberry-Pi-4G-LTE-CAT4-HAT.webp
 slug: /ja/raspberry_pi_4g_lte_hat_qmi
 last_update:

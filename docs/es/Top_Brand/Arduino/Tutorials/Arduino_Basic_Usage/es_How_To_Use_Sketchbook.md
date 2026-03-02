@@ -1,15 +1,12 @@
 ---
 description: Cómo Usar Sketchbook
 title: Cómo Usar Sketchbook
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/How_To_Use_Sketchbook
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 En otro documento, hemos hecho una introducción detallada sobre Library, sabemos que Library es realmente muy fácil de usar! Descarga una Library, ponla en el directorio de librerías de Arduino, abre el ejemplo y funciona.

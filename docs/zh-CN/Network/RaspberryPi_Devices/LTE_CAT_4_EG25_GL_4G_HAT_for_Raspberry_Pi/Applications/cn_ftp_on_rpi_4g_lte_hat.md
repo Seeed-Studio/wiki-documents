@@ -1,6 +1,5 @@
 ---
 description: 提升您的物联网项目，结合 FTP 和 4G 技术。学习如何使用 Raspberry Pi 4G HAT 安全传输文件、自动化任务以及监控远程设备。
-
 title: 连接与传输 - 在 Raspberry Pi 4G LTE HAT 上使用 FTP
 keywords:
   - Raspberry Pi Hat

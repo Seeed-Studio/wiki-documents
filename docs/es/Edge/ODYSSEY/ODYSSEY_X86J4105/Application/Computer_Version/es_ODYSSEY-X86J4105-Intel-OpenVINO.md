@@ -7,7 +7,6 @@ sku: 102110399,102110398,102110397,110991412,110991465,102110477,102110478,10211
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 # Instalación del kit de herramientas Intel® Distribution of OpenVINO™ para ODYSSEY - X86J4105

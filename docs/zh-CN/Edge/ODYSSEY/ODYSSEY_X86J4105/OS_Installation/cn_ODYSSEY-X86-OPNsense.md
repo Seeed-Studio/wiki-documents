@@ -6,7 +6,6 @@ slug: /cn/ODYSSEY-X86-OPNsense
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OPNsense/1.png" alt="pir" width={1000} height="auto" /></p>

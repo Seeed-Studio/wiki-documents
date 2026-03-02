@@ -9,9 +9,7 @@ slug: /cn/DashCamNet-with-Jetson-Xavier-NX-Multicamera
 last_update:
   date: 01/04/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 # 使用 Jetson Xavier NX 多摄像头的 DashCamNet 和 PeopleNet

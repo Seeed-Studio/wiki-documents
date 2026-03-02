@@ -1,15 +1,12 @@
 ---
 description: GPS-Modules-Selection-Guide
 title: GPS 模块选择指南
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/GPS-Modules-Selection-Guide
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 我们在近年来发布了各种类型的 GPS 模块。让我们仔细了解它们，找出哪一款最适合您！

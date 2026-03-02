@@ -5,7 +5,6 @@ keywords:
   - Flow Fuse
   - reComputer R1000
   - Node-Red
-  
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /recomputer_r1000_flow_fuse
 last_update:

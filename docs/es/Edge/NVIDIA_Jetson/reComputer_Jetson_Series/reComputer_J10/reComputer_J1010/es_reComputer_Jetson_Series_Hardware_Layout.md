@@ -9,7 +9,6 @@ slug: /es/reComputer_Jetson_Series_Hardware_Layout
 last_update:
   date: 01/03/2023
   author: w0x7ce
-
 ---
 
 # Diseño de Hardware para reComputer

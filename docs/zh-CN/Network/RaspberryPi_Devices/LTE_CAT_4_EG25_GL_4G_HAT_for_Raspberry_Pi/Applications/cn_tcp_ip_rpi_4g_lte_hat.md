@@ -1,6 +1,5 @@
 ---
 description: 发掘 TCP 在 Raspberry Pi 4G HAT 上的强大功能。了解 TCP 如何确保可靠的数据交换，这对物联网应用、远程监控等至关重要。
-
 title: Raspberry Pi 上的 4G LTE HAT - TCP/IP 网络详解
 keywords:
   - Raspberry Pi HAT

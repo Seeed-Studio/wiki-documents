@@ -1,6 +1,5 @@
 ---
 description: Raspberry Pi 4G LTEおよびGNSS HATモジュールを使用して、IoTアプリケーションを強化しましょう。この統合ソリューションは、堅牢なセルラー接続と正確なリアルタイム位置情報を提供し、資産追跡、遠隔環境の監視、フィールド業務の最適化に最適です。
-
 title: Raspberry Pi 4G HAT GNSS機能の使い方
 keywords:
   - Raspberry Pi Hat

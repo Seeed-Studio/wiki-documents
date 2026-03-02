@@ -1,6 +1,5 @@
 ---
 description: Este artículo te mostrará cómo crear un Gráfico de Equipo
-
 title: reComputer R1000 con FIN para crear un Gráfico de Equipo
 keywords:
   - Edge Controller

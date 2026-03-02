@@ -10,9 +10,7 @@ slug: /cn/make_the_cpp_program_auto_start_on_boot
 last_update:
   date: 07/26/2025
   author: Liangyuxin
-
 no_comments: false 
-
 ---
 
 # 使C++程序在启动时自动启动

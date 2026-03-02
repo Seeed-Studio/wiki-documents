@@ -1,6 +1,5 @@
 ---
 description: 使用 Raspberry Pi 5、OpenWrt 和 4G LTE HAT，随时随地享受可靠的互联网接入。学习如何创建一个高性能的便携式热点，适用于家庭、旅行和偏远地区。
-
 title: 在 Raspberry Pi 5 上使用 4G LTE 模块设置 OpenWrt
 keywords:
   - Raspberry Pi Hat

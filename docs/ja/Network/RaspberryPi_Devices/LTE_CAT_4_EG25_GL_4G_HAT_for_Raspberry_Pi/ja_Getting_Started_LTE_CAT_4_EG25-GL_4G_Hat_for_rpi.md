@@ -1,6 +1,5 @@
 ---
 description: Quectel EG25-GLを搭載した4G LTE Raspberry Pi HATは、高速接続と正確なGNSS測位を提供し、IoTやM2Mアプリケーションに最適です。Raspberry PiやPCと互換性があり、グローバル周波数帯域、リアルタイム追跡、信頼性の高い通信をサポートし、さまざまな業界での用途に対応します。
-
 title: Raspberry Pi 4G LTE HATの使い方
 keywords:
   - Raspberry Pi Hat
