@@ -1,5 +1,6 @@
 ---
 description: El reComputer Industrial R22xx es un NVR industrial con IA basado en Raspberry Pi CM5, equipado con un acelerador de IA Hailo-8 que ofrece hasta 26 TOPS. Con 4 puertos Ethernet Gigabit con soporte PoE PSE más un puerto Ethernet Gigabit adicional, permite transmisión de video de gran ancho de banda y un despliegue PoE simplificado para cámaras IP. Ofrece abundantes E/S industriales, conectividad inalámbrica flexible, diseño térmico sin ventilador y un amplio rango de temperatura de funcionamiento de –20 °C a 50 °C, garantizando análisis de video con IA fiables y un funcionamiento continuo y estable en escenarios exigentes.
+title: Guía de ensamblaje de reComputer Industrial R22xx
 keywords:
 - Edge Controller
 - Raspberry pi
