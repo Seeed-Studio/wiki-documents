@@ -23,13 +23,13 @@ last_update:
 
 ## Introduction
 
-reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 3-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visulization.
+reTerminal E1004 is a 13.3 inch open-source full color ePaper display with up to 6-month battery life. Powered by ESP32-S3, it natively supports our SenseCraft HMI no-code UI platform for effortless dashboard creation, while supporting Home Assistant, Arduino and ESP-IDF for further development. With the E Ink® Spectra™ 6 full-color ePaper Display, it's perfect for digital frame, colorful dashboard visulization.
 
 ### Features
 
 - **High-Definition Color Display:** 13.3-inch E Ink® Spectra™ 6 Full Color ePaper Display with a high resolution of 1200x1600 pixels.
 - **Powerful Processing:** Powered by ESP32-S3 with 8MB PSRAM and 32MB Flash for robust performance.
-- **Ultra-Low Power Consumption:** Built-in 5000mAh battery supports up to 3 months of usage on a single charge (Deep sleep mode).
+- **Ultra-Low Power Consumption:** Built-in 5000mAh battery supports up to 6 months of usage on a single charge (refresh every 6 hours).
 - **No-Code UI Development:** Default firmware supports SenseCraft HMI for drag-and-drop dashboard creation and AI-assisted design.
 - **Wide Compatibility:** Supports Home Assistant (ESPHome), Arduino, PlatformIO, and ESP-IDF.
 - **Rich Connectivity:** Integrated 2.4GHz Wi-Fi (802.11 b/g/n) and Bluetooth 5.0.

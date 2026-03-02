@@ -1,13 +1,53 @@
 const docList = [
   [
     {
+      "path": "/ai_robotics_flash_jetpack_with_wsl2",
+      "image": "https://files.seeedstudio.com/wiki/Flash_JetPack_with_WSL2/check_custom_kernel.png",
+      "title": "Flash JetPack with WSL2",
+      "date": "02/24/2026",
+      "title_cn": "使用 WSL2 刷写 JetPack",
+      "title_ja": "WSL2 で JetPack をフラッシュする",
+      "title_es": "Flashear JetPack con WSL2"
+    },
+    {
+      "path": "/round_display_animation_workshop",
+      "image": "https://files.seeedstudio.com/wiki/round_display_animation_workshop/hb_screen.jpg",
+      "title": "Animation workshop: XIAO ESP32-S3 and LVGL optimization guide",
+      "date": "02/23/2026",
+      "title_cn": "动画工作坊：XIAO ESP32-S3 与 LVGL 优化指南",
+      "title_ja": "アニメーションワークショップ: XIAO ESP32-S3 と LVGL 最適化ガイド",
+      "title_es": "Taller de animación: guía de optimización de XIAO ESP32-S3 y LVGL"
+    }
+  ],
+  [
+    {
+      "path": "/ai_roboticsyolov26_dual_camera_system",
+      "image": "https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png",
+      "title": "YOLOv26 Dual GMSL Camera Image Processing System on Jetson",
+      "date": "02/10/2026",
+      "title_cn": "基于 Jetson 的 YOLOv26 双 GMSL 摄像头图像处理系统",
+      "title_ja": "Jetson 上の YOLOv26 デュアル GMSL カメラ画像処理システム",
+      "title_es": "Sistema de Procesamiento de Imágenes con Cámara GMSL Dual YOLOv26 en Jetson"
+    },
+    {
+      "path": "/recomputer_industrial_r22xx_getting_start",
+      "image": "https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrial-r2200_2.jpg",
+      "title": "reComputer Industrial R22xx Getting Started",
+      "date": "02/09/2026",
+      "title_cn": "reComputer Industrial R22xx 入门指南",
+      "title_ja": "reComputer Industrial R22xx 入門ガイド",
+      "title_es": "Introducción al reComputer Industrial R22xx"
+    }
+  ],
+  [
+    {
       "path": "/respeaker_xvf3800_agora_convo_client",
       "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
-      "title": "ReSpeaker XVF3800 + Agora Conversational AI Agent v2 Edge Conversational Client Deployment Guide",
+      "title": "reSpeaker XVF3800 + Agora Conversational AI Agent v2 Edge Conversational Client Deployment Guide",
       "date": "2/04/2026",
-      "title_cn": "ReSpeaker XVF3800 + Agora 对话式 AI 代理 v2 边缘对话客户端部署指南",
-      "title_ja": "ReSpeaker XVF3800 + Agora Conversational AI Agent v2 エッジ会話クライアント展開ガイド",
-      "title_es": "Guía de Implementación del Cliente Conversacional Edge ReSpeaker XVF3800 + Agora Conversational AI Agent v2"
+      "title_cn": "reSpeaker XVF3800 + Agora Conversational AI Agent v2 边缘对话客户端部署指南",
+      "title_ja": "reSpeaker XVF3800 + Agora Conversational AI Agent v2 エッジ音声対話クライアント デプロイガイド",
+      "title_es": "Guía de Despliegue del Cliente Conversacional en el Borde reSpeaker XVF3800 + Agora Conversational AI Agent v2"
     },
     {
       "path": "/j501_mini_starai_viola_fruit_sorting",
@@ -32,23 +72,14 @@ const docList = [
     {
       "path": "/ai_human_detection_meshtastic_broadcast",
       "image": "https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp",
-      "title": "AI Human Detection and Meshtastic Notification Demo",
+      "title": "AI Human Detection and Meshtastic Notification",
       "date": "2026-01-28T00:00:00.000Z",
-      "title_cn": "AI 人体检测与 Meshtastic 通知演示",
-      "title_ja": "AI人体検出とMeshtastic通知デモ",
-      "title_es": "Demo de Detección Humana con IA y Notificación Meshtastic"
+      "title_cn": "AI 人体检测与 Meshtastic 通知",
+      "title_ja": "AI 人体検知と Meshtastic 通知",
+      "title_es": "Detección Humana con IA y Notificación vía Meshtastic"
     }
   ],
   [
-    {
-      "path": "/ai_robotics_yolov26_dual_camera_system",
-      "image": "https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png",
-      "title": "YOLOv26 Dual USB Camera Image Processing System on Jetson",
-      "date": "01/28/2026",
-      "title_cn": "Jetson 上的 YOLOv26 双 USB 摄像头图像处理系统",
-      "title_ja": "Jetson上のYOLOv26デュアルUSBカメラ画像処理システム",
-      "title_es": "Sistema de Procesamiento de Imágenes con Cámara USB Dual YOLOv26 en Jetson"
-    },
     {
       "path": "/develop_recomputer_jetson_using_clawdbot",
       "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops_homepage.webp",
@@ -57,18 +88,18 @@ const docList = [
       "title_cn": "使用 Clawdbot 开发 reComputer Jetson",
       "title_ja": "Clawdbotを使用したreComputer Jetsonの開発",
       "title_es": "Desarrollar reComputer Jetson usando Clawdbot"
-    }
-  ],
-  [
+    },
     {
       "path": "/getting_started_with_reterminal_e1004",
       "image": "https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg",
       "title": "Getting Started with reTerminal E1004",
       "date": "1/28/2026",
       "title_cn": "reTerminal E1004 入门指南",
-      "title_ja": "reTerminal E1004の入門ガイド",
+      "title_ja": "reTerminal E1004 入門ガイド",
       "title_es": "Introducción a reTerminal E1004"
-    },
+    }
+  ],
+  [
     {
       "path": "/xiao-esp32--series-espresense",
       "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32_Espectre/image1.webp",
@@ -77,46 +108,15 @@ const docList = [
       "title_cn": "在 Seeed Studio XIAO ESP32 系列上使用 ESPHome 部署 Espectre",
       "title_ja": "ESPHome を使用した Seeed Studio XIAO ESP32 シリーズでの Espectre デプロイ",
       "title_es": "Desplegando Espectre en Seeed Studio XIAO ESP32 Serie con ESPHome"
-    }
-  ],
-  [
+    },
     {
       "path": "/deploy_nvblox_jetson_agx_orin",
       "image": "https://files.seeedstudio.com/wiki/other/page-nvblox.jpg",
       "title": "Deploy NVBlox with Orbbec Camera on Jetson AGX Orin",
       "date": "2026-01-20T00:00:00.000Z",
-      "title_cn": "在 Jetson AGX Orin 上部署 NVBlox 与 Orbbec 相机",
-      "title_ja": "Jetson AGX Orin上でOrbbecカメラとNVBloxを展開する",
+      "title_cn": "在 Jetson AGX Orin 上使用 Orbbec 相机部署 NVBlox",
+      "title_ja": "Jetson AGX OrinでOrbbecカメラを使用したNVBloxの展開",
       "title_es": "Desplegar NVBlox con Cámara Orbbec en Jetson AGX Orin"
-    },
-    {
-      "path": "/deploy_whisper_on_raspberry_pi_ai_box",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png",
-      "title": "Deploy Whisper on  Raspberry Pi AI box",
-      "date": "01/19/2026",
-      "title_cn": "在树莓派 AI 盒子上部署 Whisper",
-      "title_ja": "Raspberry Pi AI ボックスに Whisper をデプロイする",
-      "title_es": "Desplegar Whisper en Raspberry Pi AI box"
-    }
-  ],
-  [
-    {
-      "path": "/xiao-esp32c3-espresense",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_ESP32C3_ESPresense/image132.webp",
-      "title": "Deploying ESPresense on Seeed Studio XIAO ESP32-C3 with Home Assistant",
-      "date": "01/16/2026",
-      "title_cn": "在 Seeed Studio XIAO ESP32-C3 上部署 ESPresense 与 Home Assistant",
-      "title_ja": "Seeed Studio XIAO ESP32-C3でESPresenseをHome Assistantと連携してデプロイする",
-      "title_es": "Desplegando ESPresense en Seeed Studio XIAO ESP32-C3 con Home Assistant"
-    },
-    {
-      "path": "/xiao_nrf54l15_sense_micropython",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.webp",
-      "title": "MicroPython for Seeed Studio XIAO nRF54L15",
-      "date": "1/15/2026",
-      "title_cn": "Seeed Studio XIAO nRF54L15 的 MicroPython",
-      "title_ja": "Seeed Studio XIAO nRF54L15 用 MicroPython",
-      "title_es": "MicroPython para Seeed Studio XIAO nRF54L15"
     }
   ]
 ];

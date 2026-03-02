@@ -9,6 +9,7 @@ keywords:
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 slug: /getting_started_with_ee02
+sku: 100067144
 last_update:
   date: 2025-12-20
   author: Allen
