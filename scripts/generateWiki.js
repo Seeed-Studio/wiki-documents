@@ -77,6 +77,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'Open_Source_FW', 'lorawan_tracker_with_ses.md'), //2.4
   path.join(docsDirectory, 'Sensor', 'SenseCAP', 'LoRaWAN_Tracker', 'Open_Source_FW', 't1000_e_arduino_examples.md'), //2.4
   path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'Application', 'Generative_AI', 'Local_OpenClaw(Clawdbot)_on_reComputer_Jetson.md'), //2.3
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_agora_ten_framework.md'), //2.9
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_openclaw.md'), //2.10
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_arm.md'), //2.6
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

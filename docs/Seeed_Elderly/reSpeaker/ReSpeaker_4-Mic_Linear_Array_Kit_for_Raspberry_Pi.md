@@ -1,6 +1,6 @@
 ---
 description: ReSpeaker 4-Mic Linear Array Kit
-title: ReSpeaker 4-Mic Linear Array Kit
+title: reSpeaker 4-Mic Linear Array Kit
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png

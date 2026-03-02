@@ -11,6 +11,8 @@ slug: /robstride_control
 last_update:
   date: 11/19/2025
   author: Tienjuiwong
+translation:
+    skip: [zh-CN]
 ---
 
 # RobStride Control Library - Complete Technical Documentation

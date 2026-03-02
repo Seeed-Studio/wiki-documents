@@ -10,7 +10,7 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
-  date: 2/6/2026
+  date: 2/11/2026
   author: Kasun Thushara
 ---
 
@@ -74,7 +74,7 @@ Para usar el botón de usuario y el botón de silencio, necesitas soldar el bot�
 ## Introducción
 
 :::note
-Estamos usando Home Assistant versión 2026.1.3 y ESPHome versión 2026.1.3 en raspberry pi 5.
+Estamos usando Home Assistant versión 2026.1.3 y ESPHome versión 2026.1.3. en raspberry pi 5.
 :::
 
 ## Instalar ESPHome Builder
@@ -106,7 +106,14 @@ Desde la barra lateral de Home Assistant, ve a **ESPHome Builder**.
 
 Haz clic en **+ NEW DEVICE**.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_add_new.PNG" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_add.png" alt="pir" width={800} height="auto" /></p>
+
+Haz clic en **Continue → New Device Setup, luego proporciona un nombre apropiado para el dispositivo**.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_1.png" alt="pir" width={800} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device_name.png" alt="pir" width={500} height="auto" /></p>
+
 
 Selecciona `ESP32-S3`
 
@@ -114,11 +121,14 @@ Selecciona `ESP32-S3`
 
 Cuando se te solicite, haz clic en **SKIP** – crearemos la configuración manualmente.
 
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_skip.PNG" alt="pir" width={500} height="auto" /></p>
 
-Selecciona tu nueva entrada de dispositivo y haz clic en **EDIT**.
+**Cómo Agregar un dispositivo en ilustración GIF**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/esp_home_edit.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/new_device.gif" alt="pir" width={800} height="auto" /></p>
+
+Selecciona tu nueva entrada de dispositivo y haz clic en **EDIT**.
 
 
 <details>
@@ -1491,11 +1501,19 @@ Elige **Download** Manual
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_manual.PNG" alt="pir" width={800} height="auto" /></p>
 
+**Compilando archivo YAML: Ilustración GIF**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/compile_yml.gif" alt="pir" width={800} height="auto" /></p>
+
 Espera a que el firmware se compile.
 
-Descarga el archivo de firmware .bin generado a tu computadora.
+Descarga el archivo de firmware .bin generado a tu computadora desde Factory Format.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.png" alt="pir" width={500} height="auto" /></p>
+
+**Descargando archivo Bin compilado: Ilustración GIF**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/HA_2026/factory_format.gif" alt="pir" width={800} height="auto" /></p>
 
 Conecta el puerto USB Type-C de la placa ESP32-S3 a tu PC usando un cable USB Type-C.
 

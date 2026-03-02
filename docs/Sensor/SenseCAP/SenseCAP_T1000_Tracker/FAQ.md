@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /faq_for_SenseCAP_T1000
 sku: 114993073,114993106,114993207,114993208
 last_update:
-  date: 9/20/2023
-  author: Jessie
+  date: 2/14/2026
+  author: Janet
 ---
 
 
@@ -159,6 +159,28 @@ If you want to share your template to others, you can choose `Copy Link to Share
 Other users can choose to use your template by copying the shared URL or importing the template file.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/import-temp.png" alt="pir" width={600} height="auto" /></p>
+
+## How to exit DFU mode
+
+After a firmware upgrade failure, the device may enter DFU mode. You can see the device name `SENSECAP_GR_DFU_XXXX` in the SenseCraft app and the LED lights continue to flash.
+
+- In DFU mode, the device will automatically exit after 3 minutes of inactivity.
+
+- If you wish to exit immediately, you can press and hold the button for 3 seconds, and the device will reboot and return to normal operation.
+
+If you find that the device cannot exit DFU mode despite pressing once, pressing and holding for 3 seconds, or pressing and holding for 10 seconds, please follow these steps:
+
+**Step 1: Connect the Device in the SenseCraft APP**
+
+Follow the previous steps to access the Bluetooth configuration page on the T1000, connect the device then you can see the page below:
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/t1000-dfu-mode.png" alt="pir" width={200} height="auto" /></p>
+
+**Step 2: Upload Firmware File**
+
+Click `Upload Firmware File`, choose the bin file to flash the firmware.
+
+For the lastest firmware file, please contact **techsupport@seeed.io**
 
 ## Timestamp error
 
