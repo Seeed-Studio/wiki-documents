@@ -4,7 +4,6 @@ title: mmWave レーダーセンサー紹介
 keywords:
 - Grove
 - mmWave Radar Sensor
-
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp
 slug: /ja/mmwave_radar_Intro
 last_update:

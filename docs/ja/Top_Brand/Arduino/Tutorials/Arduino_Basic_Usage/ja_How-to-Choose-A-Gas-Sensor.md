@@ -1,15 +1,12 @@
 ---
 description: ガスセンサーの選び方
 title: ガスセンサーの選び方
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/How-to-Choose-A-Gas-Sensor
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 no_comments: false # Disqus用
-
 ---
 
 

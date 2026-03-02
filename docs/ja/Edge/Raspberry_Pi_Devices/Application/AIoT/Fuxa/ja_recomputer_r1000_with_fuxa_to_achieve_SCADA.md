@@ -1,6 +1,5 @@
 ---
 description: この記事では主にfuxaを使用してSCADAを実現する方法を紹介します。
-
 title: reComputer R1000でfuxaを使用してSCADAを実現
 keywords:
   - Edge Controller

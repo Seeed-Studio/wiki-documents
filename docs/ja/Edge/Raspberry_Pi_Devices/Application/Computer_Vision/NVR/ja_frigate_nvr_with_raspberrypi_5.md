@@ -10,7 +10,6 @@ slug: /ja/frigate_nvr_with_raspberrypi_5
 last_update:
   date: 04/03/2025
   author: Joshua Lee
-
 no_comments: false # for Disqus
 ---
 

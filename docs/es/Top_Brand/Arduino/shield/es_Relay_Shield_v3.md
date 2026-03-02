@@ -1,16 +1,13 @@
 ---
 description: Relay_Shield_v3
 title: Relay Shield v3
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Relay_Shield_v3
 sku: 103030009
 last_update:
   date: 01/11/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Relay_Shield_v3.0/img/Relay_Shield_L_v3.0.jpg" alt="pir" width={600} height="auto" /></p>

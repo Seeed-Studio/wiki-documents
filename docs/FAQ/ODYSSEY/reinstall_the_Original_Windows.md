@@ -2,7 +2,6 @@
 description: ODYSSEY-FAQ
 title: Re-Installing the Original Windows
 #keywords:
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /reinstall_the_Original_Windows
 last_update:

@@ -1,15 +1,12 @@
 ---
 description: Errores Comunes de Arduino
 title: Errores Comunes de Arduino
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Arduino_Common_Error
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 Para un principiante, a veces nos encontraremos con algunos errores de compilación o carga. Aquí resumimos algunos errores comunes y soluciones, esperamos que esto pueda ayudar.

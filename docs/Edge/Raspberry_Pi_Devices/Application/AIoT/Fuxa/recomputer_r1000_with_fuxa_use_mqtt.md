@@ -1,6 +1,5 @@
 ---
 description: This article mainly introduces how to use fuxa for MQTT communication.
-
 title: reComputer R1000 with fuxa to use mqtt client
 keywords:
   - Edge Controller

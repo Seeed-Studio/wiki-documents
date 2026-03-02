@@ -1,15 +1,12 @@
 ---
 description: GPS-Modules-Selection-Guide
 title: GPSモジュール選定ガイド
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/GPS-Modules-Selection-Guide
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 

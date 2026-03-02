@@ -1,6 +1,5 @@
 ---
 description: Comienza con el ReSpeaker XVF3800 USB 4-Mic Array—un módulo de interfaz de voz de alto rendimiento que cuenta con captura de voz y soporte multiplataforma a través de USB o I2C.
-
 title: Introducción al reSpeaker XVF3800 USB Mic Array
 keywords:
 - reSpeaker

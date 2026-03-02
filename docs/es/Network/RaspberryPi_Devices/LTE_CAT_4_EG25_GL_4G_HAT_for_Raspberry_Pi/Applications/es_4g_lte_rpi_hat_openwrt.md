@@ -1,6 +1,5 @@
 ---
 description: Disfruta de acceso confiable a internet en cualquier lugar con una Raspberry Pi 5, OpenWrt y un HAT 4G LTE. Aprende cómo crear un hotspot portátil de alto rendimiento para el hogar, viajes y ubicaciones remotas.
-
 title: Configuración de OpenWrt en Raspberry Pi 5 con un Módulo 4G LTE
 keywords:
   - Raspberry Pi Hat

@@ -1,6 +1,5 @@
 ---
 description: reComputer 的 ThingsBoard 安装指南提供了在 reComputer 设备上设置 ThingsBoard v3.8 和 PostgreSQL 的分步说明。它涵盖了 Java 17 安装、ThingsBoard 服务配置、PostgreSQL 设置以及无缝 IoT 数据管理的故障排除技巧。
-
 title: 在 reComputer R1000 上开始使用 ThingsBoard
 keywords:
   - reComputer-R1000

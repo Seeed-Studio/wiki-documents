@@ -1,15 +1,12 @@
 ---
 description: 如何安装 Arduino 库
 title: 如何安装 Arduino 库
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/How_to_install_Arduino_Library
 last_update:
   date: 02/02/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 

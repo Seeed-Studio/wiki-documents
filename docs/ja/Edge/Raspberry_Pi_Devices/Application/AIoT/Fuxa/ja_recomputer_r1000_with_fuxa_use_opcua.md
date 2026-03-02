@@ -1,6 +1,5 @@
 ---
 description: この記事では主にfuxaを使用してOPC-UA通信を行う方法について紹介します。
-
 title: reComputer R1000でfuxaを使用してOPC-UAを利用する
 keywords:
   - Edge Controller

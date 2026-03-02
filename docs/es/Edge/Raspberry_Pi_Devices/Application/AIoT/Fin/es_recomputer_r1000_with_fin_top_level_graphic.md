@@ -1,6 +1,5 @@
 ---
 description: Este artículo te mostrará cómo crear un Gráfico de Nivel Superior
-
 title: reComputer R1000 con FIN para crear un Gráfico de Nivel Superior
 keywords:
   - Edge Controller

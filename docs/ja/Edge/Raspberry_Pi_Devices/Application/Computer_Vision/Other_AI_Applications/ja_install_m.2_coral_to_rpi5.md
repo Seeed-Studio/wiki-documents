@@ -10,7 +10,6 @@ slug: /ja/install_m2_coral_to_rpi5
 last_update:
   date: 07/19/2024
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

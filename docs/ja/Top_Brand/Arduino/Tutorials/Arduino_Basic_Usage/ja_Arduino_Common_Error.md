@@ -1,15 +1,12 @@
 ---
 description: Arduinoの一般的なエラー
 title: Arduinoの一般的なエラー
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Arduino_Common_Error
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 no_comments: false # Disqus用
-
 ---
 
 

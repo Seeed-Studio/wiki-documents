@@ -1,15 +1,12 @@
 ---
 description: Guía de Selección de Relés Seeed
 title: Guía de Selección de Relés Seeed
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Seeed_Relay_Page
 last_update:
   date: 02/02/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 ![](https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/back.jpg)

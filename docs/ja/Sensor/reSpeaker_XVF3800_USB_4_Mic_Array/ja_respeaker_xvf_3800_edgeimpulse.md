@@ -1,8 +1,6 @@
 ---
 description: ReSpeaker XVF3800 USB 4-Mic ArrayとXIAO ESP32S3で強力な音声制御を実現。360°音声キャプチャ、ノイズ抑制、Edge Impulse経由のTinyML起動ワード検出機能を搭載—スマートデバイス、ロボティクス、IoTプロジェクトに最適。
-
 title: TinyML音声認識とEdge Impulse
-
 keywords:
 - reSpeaker
 - XIAO

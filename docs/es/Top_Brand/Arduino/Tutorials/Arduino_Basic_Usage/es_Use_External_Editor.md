@@ -1,15 +1,12 @@
 ---
 description: Usar Editor Externo
 title: Usar Editor Externo
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Use_External_Editor
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 <!-- ---

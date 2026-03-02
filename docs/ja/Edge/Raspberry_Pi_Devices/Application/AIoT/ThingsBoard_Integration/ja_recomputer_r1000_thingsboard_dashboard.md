@@ -1,6 +1,5 @@
 ---
 description: reComputerデバイスでThingsBoardを使用する方法をステップバイステップガイドで学習します。デバイスの追加、MQTTノードの設定、効率的なデータ監視のための人気機能を使用したインタラクティブダッシュボードの作成方法を発見してください。
-
 title: ThingsBoardとreComputer R1000で動的IoTダッシュボードを作成する
 keywords:
   - reComputer-R1000

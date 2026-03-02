@@ -1,7 +1,6 @@
 ---
 description: このwikiでは、NVIDIA Jetson Thorの使い方を紹介し、Thor上でAIとロボティクスプロジェクトをデプロイするためのワークフロー例を提供します。詳細なステップバイステップの手順とリファレンスドキュメントも提供されています。
 title: LeRobot SO-101 アーム用 Isaac GR00T N1.5 のファインチューニングと Jetson Thor へのデプロイ
-
 keywords:
 - Thor
 - Robotics

@@ -11,7 +11,6 @@ slug: /es/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer
 last_update:
   date: 12/16/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

@@ -1,6 +1,5 @@
 ---
 description: WindowsでQuectel 4G Raspberry Pi HATをMBIMモードで設定し、安定したセルラーインターネット接続を実現するためのガイド。
-
 title: 4G Raspberry Pi HAT - WindowsでのMBIMモード設定
 keywords:
   - Raspberry Pi Hat
@@ -8,7 +7,6 @@ keywords:
   - IIoT
   - MBIM
   - 4G LTE
-  
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mbimcmd.webp
 slug: /ja/raspberry_pi_4g_lte_hat_mbim
 last_update:

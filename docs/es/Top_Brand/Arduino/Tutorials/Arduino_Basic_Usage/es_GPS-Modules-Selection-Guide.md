@@ -1,15 +1,12 @@
 ---
 description: GPS-Modules-Selection-Guide
 title: Guía de Selección de Módulos GPS
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/GPS-Modules-Selection-Guide
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 Hemos lanzado varios tipos de Módulos GPS en los últimos años. ¡Echemos un vistazo detallado a ellos y descubramos cuál es el más adecuado para ti!

@@ -76,7 +76,7 @@ Before going further, it is highly recommended to update your robot to the lates
 
 Now that your robot is online and up to date, you can start controlling it!
 
-👉 **[Go to the Usage Guide](usage.md)** to learn how to:
+👉 **[Go to the Usage Guide](/reachymini_platforms_reachy_mini_usage)** to learn how to:
 * Access the **Dashboard**.
 * Install and run **Apps** (like Conversation or Games).
 * Program your Reachy with **Python**.
@@ -100,7 +100,7 @@ reachyminios_check
 
 ## ❓ Troubleshooting
 
-Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](../../troubleshooting.md)**
+Encountering an issue? 👉 **[Check the Troubleshooting & FAQ Guide](/reachymini_troubleshooting)**
 
 ## Expert Mode
 

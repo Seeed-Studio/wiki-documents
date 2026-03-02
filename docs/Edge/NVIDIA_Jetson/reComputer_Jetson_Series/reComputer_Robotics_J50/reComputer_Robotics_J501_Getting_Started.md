@@ -349,7 +349,7 @@ The below image is for AGX Orin 32GB:
 ```bash
 cd <path-to-image>
 sudo tar xpf mfi_xxxx.tar.gz
-# For example: sudo tar xpf mfi_recomputer-robo-agx-orin-32g-j501-6.2.1-36.4.4-2025-11-01.tar.gz
+# For example: sudo tar xpf mfi_recomputer-robo-agx-orin-32g-j501-6.2.1-36.4.4-2026-02-11.tar.gz
 ```
 
 **Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:

@@ -1,8 +1,6 @@
 ---
 description: El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo de micrófonos circular profesional con AEC, formación de haz, supresión de ruido y captura de voz de 360°. Emparejado con el XIAO ESP32S3, permite control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre la integración perfecta y flexibilidad de modo dual.
-
 title: Controlando GPIO del reSpeaker XVF3800 a través del XIAO ESP32-S3
-
 keywords:
 - reSpeaker
 - XIAO

@@ -1,6 +1,5 @@
 ---
 description: 探索使用 Quectel 4G HAT 在 IT 系统中发送和接收 SMS 的关键作用。了解 SMS 如何确保可靠通信、增强系统警报、实现远程控制，并支持无缝集成和可扩展的 IoT 应用。适合 IT 专业人士和 IoT 爱好者。
-
 title: 使用 Quectel 4G Raspberry Pi HAT 发送和接收 SMS 消息
 keywords:
   - Raspberry Pi HAT

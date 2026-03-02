@@ -1,16 +1,13 @@
 ---
 description: Seeed 气压计传感器选择指南
 title: Seeed 气压计传感器选择指南
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Barometer-Selection-Guide
 sku: 101020193,101020192,101020068,101020032,101020812
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 # Seeed 气压计选择指南

@@ -1,6 +1,5 @@
 ---
 description: Mejora tus aplicaciones IoT con nuestro módulo HAT 4G LTE y GNSS para Raspberry Pi. Esta solución integrada ofrece conectividad celular robusta y posicionamiento preciso en tiempo real, ideal para rastreo de activos, monitoreo de entornos remotos y optimización de operaciones de campo.
-
 title: Primeros Pasos con las Funcionalidades GNSS del HAT 4G para Raspberry Pi
 keywords:
   - Raspberry Pi Hat

@@ -9,9 +9,7 @@ slug: /DashCamNet-with-Jetson-Xavier-NX-Multicamera
 last_update:
   date: 01/04/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 # DashCamNet and PeopleNet with Jetson Xavier NX Multicamera

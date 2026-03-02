@@ -1,15 +1,12 @@
 ---
 description: Upload Code
 title: Upload Code
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Upload_Code
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 **The specific steps for uploading the code:**

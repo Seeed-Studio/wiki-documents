@@ -1,6 +1,5 @@
 ---
 description: この記事では、`FIN Framework` の `Modbus Connector` の使用方法を紹介します。
-
 title: reComputer R1000 と FIN を使用した Modbus TCP/RTU の利用
 keywords:
   - Edge Controller

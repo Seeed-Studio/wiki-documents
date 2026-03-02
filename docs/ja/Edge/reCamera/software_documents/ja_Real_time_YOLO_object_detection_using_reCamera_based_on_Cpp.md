@@ -12,7 +12,6 @@ slug: /ja/real_time_yolo_object_detection_using_recamera_based_on_cpp
 last_update:
   date: 06/26/2025
   author: Liangyuxin
-
 no_comments: false # for Disqus
 ---
 

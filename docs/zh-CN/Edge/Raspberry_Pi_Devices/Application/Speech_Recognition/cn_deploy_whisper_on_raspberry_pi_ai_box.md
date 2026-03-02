@@ -11,7 +11,6 @@ sku: 114993627, 100061305, 100097052, 114993595, 100077451, 100080766, 100020831
 last_update:
   date: 01/19/2026
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

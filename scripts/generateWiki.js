@@ -13,6 +13,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'ja'), // 排除日文文档的目录
   path.join(docsDirectory, 'es'), // 排除西班牙语文档的目录
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
 
 
   // 排除指定文档
@@ -80,6 +81,11 @@ const excludedPaths = [
   path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_agora_ten_framework.md'), //2.9
   path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_openclaw.md'), //2.10
   path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'respeaker_xvf_3800_arm.md'), //2.6
+  path.join(docsDirectory, 'Sensor', 'reSpeaker_XVF3800_USB_4_Mic_Array', 'ReSpeaker.md'), //2.26
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_T1000_Tracker', 'FAQ.md'), //2.14
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R22xx', 'reComputer_Industrial_R22xx_assembly_guide.md'), //2.9
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R22xx', 'reComputer_Industrial_R22xx_configure_system.md'), //2.9
+  path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R22xx', 'reComputer_Industrial_R22xx_flash_os.md'), //2.9
 ];
 
 // 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）

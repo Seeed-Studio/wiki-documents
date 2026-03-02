@@ -1,6 +1,5 @@
 ---
 description: この記事では主にMQTT通信でfuxaを使用する方法を紹介します。
-
 title: reComputer R1000でfuxaを使用してmqttクライアントを利用する
 keywords:
   - Edge Controller

@@ -12,7 +12,6 @@ slug: /ja/convert_model_to_edge_tpu_tflite_format_for_google_coral
 last_update:
   date: 07/23/2024
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

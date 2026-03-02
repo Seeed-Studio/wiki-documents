@@ -7,9 +7,7 @@ sku: 106030000
 last_update:
   date: 01/11/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Energy_Shield/img/Energy_Shield.jpg" alt="pir" width={600} height="auto" /></p>
 

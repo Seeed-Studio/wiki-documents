@@ -1,8 +1,6 @@
 ---
 description: 体验 ReSpeaker XVF3800 USB 4-Mic Array 的强大功能——这是一款先进的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与紧凑的 XIAO ESP32S3 配对，为智能设备、机器人和物联网应用提供高性能语音控制。加入我们，演示与 Home Assistant 的无缝集成，使用语音命令控制设备。
-
 title: 使用 Home Assistant 的智能家居语音控制
-
 keywords:
 - reSpeaker
 - XIAO

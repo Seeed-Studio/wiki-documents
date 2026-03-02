@@ -1,15 +1,12 @@
 ---
 description: Cómo detectar el toque de dedo
 title: Cómo detectar el toque de dedo
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/How_to_detect_finger_touch
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 <!-- ---
 name: How to detect finger touch

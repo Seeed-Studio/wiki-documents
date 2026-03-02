@@ -1,16 +1,13 @@
 ---
 description: RS232_Shield
 title: RS232 Shield
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/RS232_Shield
 sku: 113030016
 last_update:
   date: 01/30/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RS232_Shield/img/RS232_Shield_Photo.jpg" alt="pir" width={600} height="auto" /></p>
