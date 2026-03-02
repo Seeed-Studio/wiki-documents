@@ -1,6 +1,5 @@
 ---
 description: Raspberry Pi 5、OpenWrt、および4G LTE HATを使用して、どこでも信頼性の高いインターネットアクセスを楽しみましょう。家庭、旅行、リモートロケーション向けの高性能なポータブルホットスポットを作成する方法を学びます。
-
 title: Raspberry Pi 5と4G LTEモジュールでOpenWrtを設定する
 keywords:
   - Raspberry Pi Hat

@@ -1,6 +1,5 @@
 ---
 description: Este artículo te mostrará cómo usar el Logic Builder del FIN Framework
-
 title: reComputer R1000 con FIN Logic Builder
 keywords:
   - Edge Controller

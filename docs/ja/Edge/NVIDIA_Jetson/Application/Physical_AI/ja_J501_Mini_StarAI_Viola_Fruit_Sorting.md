@@ -1,7 +1,6 @@
 ---
 description: このwikiでは、LeRobotフレームワークとACTモデルを使用して、J501 MiniとStarAI Violaロボットアームでフルーツ仕分けタスクを実行する方法を説明します。
 title: J501 MiniとStarAI Violaアームによるフルーツ仕分け
-
 keywords:
 - J501 mini
 - Robotics

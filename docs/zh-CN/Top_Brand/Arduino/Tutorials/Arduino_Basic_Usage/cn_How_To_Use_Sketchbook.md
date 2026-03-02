@@ -1,15 +1,12 @@
 ---
 description: 如何使用 Sketchbook
 title: 如何使用 Sketchbook
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/How_To_Use_Sketchbook
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 在另一个文档中，我们详细介绍了库的使用，我们知道库真的很容易使用！下载一个库，将其放到 Arduino 库目录中，打开示例就可以工作了。

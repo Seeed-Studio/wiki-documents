@@ -1,6 +1,5 @@
 ---
 description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
-
 title: reSpeaker XVF3800 Control with Python
 keywords:
 - reSpeaker

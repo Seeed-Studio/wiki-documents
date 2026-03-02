@@ -12,7 +12,6 @@ slug: /cn/recamera_connects_to_xiao_via_http
 last_update:
   date: 07/11/2025
   author: Liangyuxin
-
 no_comments: false # for Disqus
 ---
 

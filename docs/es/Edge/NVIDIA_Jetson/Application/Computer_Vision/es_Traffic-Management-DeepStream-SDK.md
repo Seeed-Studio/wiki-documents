@@ -9,9 +9,7 @@ slug: /es/Traffic-Management-DeepStream-SDK
 last_update:
   date: 01/04/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 # Sistema Inteligente de Gestión de Tráfico usando SDK DeepStream

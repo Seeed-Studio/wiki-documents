@@ -15,20 +15,20 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki_thumb.png" alt="pir" width="600" height="auto"/></p>
 
-介绍 reTerminal，我们 reThings 系列的新成员。这款面向未来的人机界面（HMI）设备可以轻松高效地与物联网和云系统协作，在边缘端解锁无限场景。
+向大家介绍 reTerminal，这是我们 reThings 家族的新成员。这个面向未来的人机界面（HMI）设备可以轻松高效地与 IoT 和云系统协同工作，在边缘侧解锁无限应用场景。
 
-reTerminal 由 Raspberry Pi Compute Module 4 (CM4) 驱动，配备四核 Cortex-A72 CPU，运行频率为 1.5GHz，以及一块 5 英寸 IPS 电容式多点触控屏，分辨率为 1280 x 720。它拥有充足的 RAM（4GB）来执行多任务处理，还有充足的 eMMC 存储空间（32GB）来安装操作系统，实现快速启动和流畅的整体体验。它具有无线连接功能，支持双频 2.4GHz/5GHz Wi-Fi 和 Bluetooth 5.0 BLE。
+reTerminal 由 Raspberry Pi Compute Module 4 (CM4) 提供算力，搭载四核 Cortex-A72 CPU，主频 1.5GHz，并配备一块 5 英寸 IPS 电容式多点触控屏，分辨率为 1280 x 720。它拥有足够的 RAM（4GB）以胜任多任务处理，同时还具备足够的 eMMC 存储空间（32GB）用于安装操作系统，从而实现快速启动和流畅的整体体验。它通过双频 2.4GHz/5GHz Wi-Fi 和 Bluetooth 5.0 BLE 提供无线连接能力。
 
-reTerminal 配备高速扩展接口和丰富的 I/O，具有更强的可扩展性。该设备具有安全功能，如带有安全硬件密钥存储的加密协处理器。它还内置了加速度计、光传感器和 RTC（实时时钟）等模块。reTerminal 配有千兆以太网端口，可实现更快的网络连接，还有双 USB 2.0 Type-A 端口。reTerminal 上的 40 针接头为广泛的物联网应用打开了大门。
+reTerminal 由高速扩展接口和丰富的 I/O 组成，具备更强的可扩展性。该设备具备安全特性，例如带有安全硬件密钥存储的加密协处理器。它还内置了加速度计、光线传感器和 RTC（实时时钟）等模块。reTerminal 配备千兆以太网接口以实现更快的网络连接，并拥有双 USB 2.0 Type-A 接口。reTerminal 上的 40 针排针为其打开了广泛的 IoT 应用空间。
 
 
-reTerminal 出厂预装 Raspberry Pi OS。因此，您只需将其连接到电源，就可以开始构建您的创客项目、物联网和家庭自动化构建，以及离网 DIY 实验
+reTerminal 出厂即预装 Raspberry Pi OS。你只需接上电源，就可以开始构建你的创客项目、IoT 和家庭自动化项目，甚至是离网 DIY 实验。
 
-| 发布日期 | 预装操作系统 | 预装 STM32 固件 | 板卡版本 | 附加信息 |
+| 发布日期 | 预装操作系统 | 预装 STM32 固件 | 板卡版本 | 其他信息 |
 |---|---|---|---|---|
 | 06/15/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.0 | v1.3 | 初始版本 |
 | 08/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.1 | v1.4 |  |
-| 09/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.6 | v1.6 | IO 扩展芯片从 MCP23008-E 更改为 PCA9554，<br />加密芯片从 ATECC608A-SSHDA-B 更改为 ATECC608A-TNGTLSS-G [更多信息](#../reTerminal-FAQ#q13-how-to-check-if-the-encryption-chip-is-atecc608a-sshda-b-or-atecc608a-tngtlss-g) |
+| 09/03/2021 | 2021-06-02-Raspbian(modified)-32-bit | V1.6 | v1.6 | 将 IO 扩展芯片从 MCP23008-E 更换为 PCA9554，<br />将加密 Microchip 从 ATECC608A-SSHDA-B 更换为 ATECC608A-TNGTLSS-G [更多信息](#../reTerminal-FAQ#q13-如何检查加密芯片是-atecc608a-sshda-b-还是-atecc608a-tngtlss-g) |
 | 11/02/2021 | 2021-09-14-Raspbian(modified)-32-bit | V1.8 | v1.6 |  |
 
 
@@ -41,15 +41,15 @@ reTerminal 出厂预装 Raspberry Pi OS。因此，您只需将其连接到电�
 
 ## 特性
 
-- 集成模块化设计，具有高稳定性和可扩展性
-- 由 Raspberry Pi Computer Module 4 驱动，配备 4GB RAM 和 32GB eMMC
+- 集成式模块化设计，具备高稳定性和高可扩展性
+- 由 Raspberry Pi Computer Module 4 提供算力，配备 4GB RAM 和 32GB eMMC
 - 5 英寸 IPS 电容式多点触控屏，分辨率 1280 x 720，293 PPI
-- 无线连接，支持双频 2.4GHz/5GHz Wi-Fi 和 Bluetooth 5.0 BLE
-- 高速扩展接口和丰富的 I/O，具有更强的可扩展性
-- 带有安全硬件密钥存储的加密协处理器
-- 内置模块，如加速度计、光传感器和 RTC
-- 千兆以太网端口和双 USB 2.0 Type-A 端口
-- 40 针接头，适用于物联网应用
+- 通过双频 2.4GHz/5GHz Wi-Fi 和 Bluetooth 5.0 BLE 提供无线连接
+- 高速扩展接口和丰富 I/O，带来更强扩展能力
+- 具备安全硬件密钥存储的加密协处理器
+- 内置加速度计、光线传感器和 RTC 等模块
+- 千兆以太网接口和双 USB 2.0 Type-A 接口
+- 面向 IoT 应用的 40 针排针
 
 ## 规格参数
 
@@ -228,44 +228,44 @@ reTerminal 出厂预装 Raspberry Pi OS。因此，您只需将其连接到电�
   </tbody>
 </table>
 
-## 硬件概述
+## 硬件总览
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal.png" alt="pir" width="1000" height="auto"/></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal_1.png" alt="pir" width="1000" height="auto"/></p>
 
-## 框图
+## 方框图
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Fix/reTerminal_2.png" alt="pir" width="1000" height="auto"/></p>
 
 ## 引脚图
 
-**注意：** 请确保将 reTerminal 保持在如下图所示的方向。这里 LCD 面向右侧，背面面向左侧。
+**注意：** 请确保保持 reTerminal 与下图所示方向一致。此时 LCD 朝向右侧，背面朝向左侧。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/pinout-v2.jpg" alt="pir" width="1000" height="auto"/></p>
 
 :::note
-请仔细注意上图中 reTerminal 的方向。LCD 和板载按钮在右侧，而 reTerminal 的背面在左侧。同时整个设备是倒置的。
+请务必仔细注意上图中 reTerminal 的放置方向。LCD 和板载按键位于右侧，而 reTerminal 的背面位于左侧。同时整个设备是倒置放置的。
 :::
 
-## reTerminal 快速入门
+## reTerminal 快速上手
 
-如果您想以最快最简单的方式开始使用 reTerminal，可以按照以下指南操作。
+如果你想用最快、最简单的方式开始使用 reTerminal，可以按照下面的指南进行操作。
 
 ### 所需硬件
 
-在开始使用 reTerminal 之前，您需要准备以下硬件
+在开始使用 reTerminal 之前，你需要准备以下硬件
 
 - reTerminal
 - 以太网线或 Wi-Fi 连接
 - 电源适配器（5V/3A）
-- USB Type-C 线
+- USB Type-C 线缆
 
 ### 软件设置
 
-#### 登录到 Raspberry Pi OS
+#### 登录 Raspberry Pi OS
 
-reTerminal 出厂预装 Raspberry Pi OS。因此我们可以打开 reTerminal 并直接登录到 Raspberry Pi OS！
+reTerminal 出厂时已预装 Raspberry Pi OS。因此我们可以直接打开 reTerminal 并立即登录 Raspberry Pi OS！
 
 - **步骤 1.** 将 USB Type-C 线的一端连接到 reTerminal，另一端连接到电源适配器（5V/4A）
 
@@ -289,40 +289,40 @@ reTerminal 出厂预装 Raspberry Pi OS。因此我们可以打开 reTerminal �
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-5-new.png" alt="pir" width="400" height="auto"/></p>
 
-**注意：** 如果您想保持默认密码为 **raspberry**，可以将此处留空并点击 **Next**
+**注意：** 如果你想保持默认密码为 **raspberry**，可以将此处留空并点击 **Next**
 
-- **步骤 7.** 对于以下内容点击 **Next**
+- **步骤 7.** 对下面的内容点击 **Next**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-6-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **步骤 8.** 如果您想连接到 WiFi 网络，可以选择一个网络，连接到它并按 **Next**。但是，如果您想稍后设置，可以按 **Skip**
+- **步骤 8.** 如果你想连接到 WiFi 网络，可以选择一个网络，连接后按 **Next**。但是，如果你想稍后再设置，可以按 **Skip**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-7-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **步骤 9.** **这一步非常重要。** 您应该确保按 **Skip** 跳过软件更新。但是，如果您想更新软件，可以按照[此 wiki](https://wiki.seeedstudio.com/cn/reTerminal-FAQ/#q3-how-to-upgrade-raspberry-pi-os-and-the-installed-packages)
+- **步骤 9.** **这一步非常重要。** 你需要确保按下 **Skip** 来跳过软件更新。但是，如果你想更新软件，可以参考 [this wiki](https://wiki.seeedstudio.com/cn/reTerminal-FAQ/#q3-how-to-upgrade-raspberry-pi-os-and-the-installed-packages)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-8-new.png" alt="pir" width="400" height="auto"/></p>
 
-- **步骤 10.** 最后按 **Done** 完成设置
+- **步骤 10.** 最后按下 **Done** 完成设置
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/setup-9-new.png" alt="pir" width="400" height="auto"/></p>
 
-**注意：** 左上角的按钮可用于在使用软件关机后重新开启 reTerminal
+**注意：** 左上角的按钮可以在通过软件关机后用于重新开启 reTerminal
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/power-button-press.jpg" alt="pir" width="650" height="auto"/></p>
 
-**提示：** 如果您想在更大的屏幕上体验 Raspberry Pi OS，可以将显示器连接到 reTerminal 的 micro-HDMI 端口，同时将键盘和鼠标连接到 reTerminal 的 USB 端口。
+**提示：** 如果你想在更大的屏幕上体验 Raspberry Pi OS，可以将显示器连接到 reTerminal 的 micro-HDMI 接口，并将键盘和鼠标连接到 reTerminal 的 USB 接口。
 
-## reTerminal 入门指南（扩展版）
+## reTerminal 入门指南（扩展）
 
-如果您想自己安装 Raspberry Pi OS，安装其他操作系统（如 64 位 Ubuntu），通过 WiFi SSH、以太网 SSH 和 USB 转串口适配器登录到 reTerminal，您可以按照下面的指南操作！
+如果你想自行安装 Raspberry Pi OS、安装其他操作系统（例如 64-bit Ubuntu）、通过 WiFi 上的 SSH、以太网上的 SSH 或 USB 转串口适配器登录 reTerminal，可以按照下面的指南进行操作！
 
 ### 所需硬件
 
-您需要准备以下硬件
+你需要准备以下硬件
 
 - reTerminal
-- 计算机（Windows/Mac/Linux）
+- 电脑（Windows/Mac/Linux）
 - 8GB（或更大）micro-SD 卡（可选）
 - Micro-SD 读卡器（可选）
 - USB 转串口转换器（可选）
@@ -331,80 +331,80 @@ reTerminal 出厂预装 Raspberry Pi OS。因此我们可以打开 reTerminal �
 - 电源适配器（5V/3A）
 - USB Type-C 线缆
 
-### <span id="jump2">将 Raspberry Pi OS/ 64 位 Ubuntu OS 或其他 OS 刷写到 eMMC</span>
+### <span id="jump2">将 Raspberry Pi OS/ 64-bit Ubuntu OS 或其他 OS 烧录到 eMMC</span>
 
-我们可以将 **Raspberry Pi OS/ 64 位 Ubuntu OS 或其他 OS** 刷写到 reTerminal 上 CM4 的 **eMMC 存储器**中。安装必要的驱动程序后，您只需将 reTerminal 的 USB Type-C 端口连接到您的 PC，它就会显示为外部驱动器。首先移除 reTerminal 的后壳。
+我们可以将 **Raspberry Pi OS/ 64-bit Ubuntu OS 或其他 OS** 烧录到 reTerminal 上 CM4 的 **eMMC 存储** 中。一旦安装好必要的驱动，只需将 reTerminal 的 USB Type-C 接口连接到你的电脑，它就会显示为一个外部驱动器。首先取下 reTerminal 的后壳。
 
-> **注意：** Seeed 打包的最新系统镜像，包含适当的驱动程序：[pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
+> **注意：** Seeed 打包的最新系统镜像包含了合适的驱动程序：[pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
 
 
-- **步骤 1.** 移除 4 个橡胶盖并拧下下面的 4 个螺丝以打开 reTerminal 后壳
+- **步骤 1.** 取下 4 个橡胶盖，并拧下下面的 4 颗螺丝打开 reTerminal 后壳
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remove-screw-1.png" alt="pir" width="450" height="auto"/></p>
 
-- **步骤 2.** 移除 2 个螺丝以拆卸散热器
+- **步骤 2.** 拆下 2 颗螺丝以卸下散热片
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/remove-screw-heatsink-2.jpg" alt="pir" width="600" height="auto"/></p>
 
-- **步骤 3.** 根据下图将**启动模式开关**向下拨动
+- **步骤 3.** 按照下图将 **boot mode switch** 向下拨动
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/boot-switch-2.jpg" alt="pir" width="600" height="auto"/></p>
 
-现在让我们继续进行软件设置。根据您所需的操作系统按照步骤操作
+现在我们继续进行软件设置。根据你想要的操作系统，按照以下步骤操作
 
-##### Windows 系统
+##### 适用于 Windows
 
-- **步骤 1.** 点击**[此链接](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)**下载 **rpiboot 安装程序**以安装必要的驱动程序和启动工具
+- **步骤 1.** 通过点击 **[this link](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** 下载 **rpiboot setup installer**，以安装必要的驱动和启动工具
 
-- **步骤 2.** 通过 USB Type-C 线缆将 reTerminal 连接到 PC
+- **步骤 2.** 通过 USB Type-C 线缆将 reTerminal 连接到电脑
 
-Windows 现在将找到硬件并安装必要的驱动程序
+Windows 现在会发现该硬件并安装必要的驱动
 
-- **步骤 3.** 搜索我们之前安装的 **rpiboot** 工具并打开它
+- **步骤 3.** 搜索之前安装的 **rpiboot** 工具并打开它
 
-- **步骤 4.** 打开**文件资源管理器**，您将看到计算模块 4 的 eMMC 显示为 **USB 大容量存储设备**
+- **步骤 4.** 打开 **file explorer**，你会看到 Compute Module 4 的 eMMC 显示为一个 **USB mass storage device**
 
-- **步骤 5.** 访问**[此链接](https://www.raspberrypi.org/software/)**下载 **Raspberry Pi Imager** 软件
+- **步骤 5.** 访问 **[this link](https://www.raspberrypi.org/software/)** 下载 **Raspberry Pi Imager** 软件
 
 - **步骤 6.** 打开 Raspberry Pi Imager 软件
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **步骤 7.** 在键盘上按 **CTRL + SHIFT + X** 打开**高级选项**窗口
+- **步骤 7.** 在键盘上按 **CTRL + SHIFT + X** 打开 **Advanced options** 窗口
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-在这里您可以**设置主机名、启用 SSH、设置密码、配置 wifi、设置区域设置**等
+在这里你可以 **set a hostname, enable SSH, set a password, configure wifi, set locale settings** 等
 
-- **步骤 8.** 点击 **CHOOSE OS** 并选择您首选的操作系统
+- **步骤 8.** 点击 **CHOOSE OS** 并选择你偏好的 OS
 
 :::note
-如果您尝试安装 Raspbian OS，我们已经进行了测试，发现 **Bullseye** 的 *32 位和 64 位*版本都能在 reTerminal 上正常工作，不会遇到任何[**黑屏问题**](https://wiki.seeedstudio.com/cn/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)。此外，我们还测试了新的 **Bookworm** *64 位*版本，它在 reTerminal 上运行顺畅。
+如果你正在尝试安装 Raspbian OS，我们已经进行了测试，发现 **Bullseye** 的 *32-bit 和 64-bit* 版本在 reTerminal 上都能很好地运行，不会遇到任何[**黑屏问题**](https://wiki.seeedstudio.com/cn/reterminal_black_screen/#flash-raspberry-pi-os-which-is-originally-shipped-with-reterminal)。此外，我们也测试了新的 **Bookworm** *64-bit* 版本，它在 reTerminal 上运行同样流畅。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意：** 您可以通过导航到**其他通用操作系统**来选择其他操作系统，如 **64 位 Ubuntu**
+**注意：** 你可以通过进入 **Other general purpose OS** 来选择其他 OS，例如 **64-bit Ubuntu**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
-- **步骤 9.** 点击 **CHOOSE STORAGE** 并选择连接的 eMMC 驱动器
+- **步骤 9.** 点击 **CHOOSE STORAGE** 并选择已连接的 eMMC 驱动器
 
-- **步骤 10.** 最后，点击 **WRITE**
+- **步骤 10.** 最后点击 **WRITE**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-请等待几分钟直到刷写过程完成。
+请等待几分钟，直到烧录过程完成。
 
-- **步骤 11.** 将**启动模式开关**拨回原位并组装 reTerminal 外壳
+- **步骤 11.** 将 **Boot Mode switch** 拨回原来的位置，并重新装回 reTerminal 外壳
 
-现在您可以跳转到**[这里](#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)**
+现在你可以跳转到 **[here](#登录到-raspberry-pi-os-ubuntu-os-或其他-os-使用-ssh-通过-wi-fi-以太网)** 部分
 
-##### Mac 系统
+##### 适用于 MAC
 
 :::caution
-**在执行以下步骤之前，您需要安装 [homebrew](https://brew.sh/)。**
-请打开终端并输入 ```brew -V``` 检查您是否已正确设置 homebrew 环境，您应该看到已安装的 homebrew 环境版本。
+**在进行以下步骤之前，你需要先安装 [homebrew](https://brew.sh/)。**
+请打开终端并输入 ```brew -V``` 来检查是否已经正确配置 homebrew 环境，你应该能看到已安装的 homebrew 环境的版本信息。
 :::
 
 - **步骤 1.** 克隆 **usbboot** 仓库
@@ -426,7 +426,7 @@ brew install libusb
 brew install pkg-config
 ```
 
-- **步骤 4.** 使用 make 构建
+- **步骤 4.** 使用 make 进行构建
 
 ```sh
 make
@@ -438,45 +438,45 @@ make
 sudo ./rpiboot
 ```
 
-- **步骤 6.** 通过 USB Type-C 线缆将 reTerminal 连接到您的 Mac 计算机
+- **步骤 6.** 通过 USB Type-C 线缆将 reTerminal 连接到你的 Mac 电脑
 
-- **步骤 7.** 访问[此链接](https://www.raspberrypi.org/software/)下载并安装 **Raspberry Pi Imager** 应用程序
+- **步骤 7.** 访问 [this link](https://www.raspberrypi.org/software/) 下载并安装 **Raspberry Pi Imager** 应用
 
-- **步骤 8.** 打开 **Raspberry Pi Imager** 应用程序
+- **步骤 8.** 打开 **Raspberry Pi Imager** 应用
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **步骤 9.** 在键盘上按 **CTRL + SHIFT + X** 打开**高级选项**窗口
+- **步骤 9.** 在键盘上按 **CTRL + SHIFT + X** 打开 **Advanced options** 窗口
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-在这里您可以**设置主机名、启用 SSH、设置密码、配置 wifi、设置区域设置**等
+在这里你可以 **set a hostname, enable SSH, set a password, configure wifi, set locale settings** 等
 
 - **步骤 10.** 点击 **CHOOSE OS** 并选择您首选的操作系统
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意：** 您可以通过导航到**其他通用操作系统**来选择操作系统，如 **64 位 Ubuntu**
+**注意：** 你可以通过进入 **Other general purpose OS** 来选择 OS，例如 **64-bit Ubuntu**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
-- **步骤 11.** 点击 **CHOOSE STORAGE** 并选择连接的 eMMC 驱动器
+- **步骤 11.** 点击 **CHOOSE STORAGE** 并选择已连接的 eMMC 驱动器
 
-- **步骤 12.** 最后，点击 **WRITE**
+- **步骤 12.** 最后点击 **WRITE**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-请等待几分钟直到刷写过程完成。
+请等待几分钟，直到烧录过程完成。
 
-- **步骤 13.** 将**启动模式开关**拨回原位并组装 reTerminal 外壳
+- **步骤 13.** 将 **Boot Mode switch** 拨回原来的位置，并重新装回 reTerminal 外壳
 
-现在您可以跳转到**[这里](#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)**
+现在你可以跳转到 **[here](#登录到-raspberry-pi-os-ubuntu-os-或其他-os-使用-ssh-通过-wi-fi-以太网)** 部分
 
-##### Linux 系统
+##### 适用于 Linux
 
 我们将使用 Git 获取 **rpiboot** 源代码，因此请确保已安装 Git
 
-- **步骤 1.** 打开**终端**窗口并输入以下命令更新**软件包列表**
+- **步骤 1.** 打开一个 **Terminal** 窗口并输入以下命令来更新 **packages list**
 
 ```sh
 sudo apt-get update
@@ -488,13 +488,13 @@ sudo apt-get update
 sudo apt install git pkg-config make gcc libusb-1.0-0-dev
 ```
 
-- **步骤 3.** 如果日期设置不正确，Git 可能会产生错误。输入以下命令来纠正此问题
+- **步骤 3.** 如果日期设置不正确，Git 可能会报错。输入以下命令来修正
 
 ```sh
 sudo date MMDDhhmm
 ```
 
-**注意：** 其中 **MM** 是月份，**DD** 是日期，**hh** 和 **mm** 分别是小时和分钟。
+**注意：** 其中 **MM** 表示月份，**DD** 表示日期，**hh** 和 **mm** 分别表示小时和分钟。
 
 - **步骤 4.** 克隆 **usbboot** 工具仓库
 
@@ -515,25 +515,25 @@ make
 sudo ./rpiboot
 ```
 
-- **步骤 7.** 通过 USB Type-C 线缆将 reTerminal 连接到 PC
+- **步骤 7.** 通过 USB Type-C 线将 reTerminal 连接到电脑
 
-- **步骤 8.** 访问[此链接](https://www.raspberrypi.org/software/)下载 **Raspberry Pi Imager** 软件
+- **步骤 8.** 访问 [this link](https://www.raspberrypi.org/software/) 下载 **Raspberry Pi Imager** 软件
 
 - **步骤 9.** 打开 Raspberry Pi Imager 软件
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **步骤 10.** 按键盘上的 **CTRL + SHIFT + X** 打开 **Advanced options** 窗口
+- **步骤 10.** 在键盘上按下 **CTRL + SHIFT + X** 打开 **Advanced options** 窗口
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-在这里您可以**设置主机名、启用 SSH、设置密码、配置 wifi、设置区域设置**等
+在这里你可以**设置主机名、启用 SSH、设置密码、配置 Wi-Fi、设置区域设置**等
 
-- **步骤 11.** 点击 **CHOOSE OS** 并选择您首选的操作系统
+- **步骤 11.** 点击 **CHOOSE OS** 并选择你偏好的操作系统
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
-**注意：** 您可以通过导航到 **Other general purpose OS** 来选择操作系统，如 **64-bit Ubuntu**
+**注意：** 你可以通过进入 **Other general purpose OS** 来选择诸如 **64-bit Ubuntu** 等操作系统
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Ubuntu-select.jpg" alt="pir" width="1000" height="auto"/></p>
 
@@ -543,33 +543,33 @@ sudo ./rpiboot
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-请等待几分钟，直到刷写过程完成。
+请等待几分钟，直到烧录过程完成。
 
-- **步骤 14.** 将 **Boot Mode switch** 切换回原始位置并组装 reTerminal 外壳
+- **步骤 14.** 将 **Boot Mode switch** 拨回原来的位置，并组装好 reTerminal 外壳
 
-### 通过 Wi-Fi/以太网使用 SSH 登录 Raspberry Pi OS/Ubuntu OS 或其他操作系统
+### 通过 Wi-Fi/ 以太网使用 SSH 登录 Raspberry Pi OS/ Ubuntu OS 或其他操作系统
 
-如果您想使用 **SSH 通过 Wi-Fi/以太网**登录 Raspberry Pi OS，可以按照以下步骤操作。首先在 reTerminal 上设置 Wi-Fi/以太网，然后使用 Windows/Mac/Linux 进行 SSH 连接。
+如果你想通过 **SSH over Wi-Fi/ Ethernet** 登录 Raspberry Pi OS，可以按照以下步骤操作。首先在 reTerminal 上设置 Wi-Fi/以太网，然后在 Windows/Mac/Linux 上通过 SSH 连接。
 
-**注意：** 如果您已使用 Raspberry Pi Imager 配置了 WiFi 并启用了 SSH，可以跳过步骤 1 - 4
+**注意：** 如果你已经使用 Raspberry Pi Imager 配置了 WiFi 并启用了 SSH，可以跳过步骤 1 - 4
 
-- **步骤 1.** 如果您有 **Wi-Fi 连接**，点击 Raspberry Pi OS 桌面右上角的 **Wi-Fi 图标**，选择您的 Wi-Fi 网络并使用屏幕虚拟键盘输入密码
+- **步骤 1.** 如果你有 **Wi-Fi 连接**，点击 Raspberry Pi OS 桌面右上角的 **Wi-Fi icon**，选择你的 Wi-Fi 网络，并使用屏幕上的虚拟键盘输入密码
 
-**注意：** 其他操作系统的 Wi-Fi 设置位置可能不同
+**注意：** 对于其他操作系统，Wi-Fi 设置的位置可能不同
 
-- **步骤 2.** 如果您没有 **Wi-Fi 连接**，可以将以太网线从路由器连接到 reTerminal 的以太网端口
+- **步骤 2.** 如果你没有 **Wi-Fi 连接**，可以将一根以太网线从路由器连接到 reTerminal 的以太网端口
 
-**注意：** 确保 reTerminal 和您的计算机连接到同一网络
+**注意：** 请确保 reTerminal 和你的电脑连接到同一网络
 
-- **步骤 3.** 触摸左上角的 Raspberry Pi 图标，导航到 `Preferences > Raspberry Pi Configuration` 并点击 **Interfaces** 选项卡
+- **步骤 3.** 触摸左上角的 Raspberry Pi 图标，导航到 `Preferences > Raspberry Pi Configuration`，并点击 **Interfaces** 选项卡
 
-- **步骤 4.** 选择 **SSH** 旁边的 **Enable** 并点击 **OK**
+- **步骤 4.** 选择 **Enable**（位于 **SSH** 旁边）并点击 **OK**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/ssh-select-2.jpg" alt="pir" width="1000" height="auto"/></p>
 
-现在让我们配置计算机上的软件。请根据您的操作系统进行操作
+现在我们来配置电脑上的软件。请根据你的操作系统进行操作
 
-##### Windows 系统
+##### 适用于 Windows
 
 - **步骤 1.** 打开 **Command Prompt** 并输入以下内容
 
@@ -577,48 +577,48 @@ sudo ./rpiboot
 ssh pi@raspberrypi.local
 ```
 
-- **步骤 2.** 对于提示输入 **yes**
+- **步骤 2.** 在提示时输入 **yes**
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows-prompt.png" alt="pir" width="750" height="auto"/></p>
 
-- **步骤 3.** 输入密码如下
+- **步骤 3.** 按如下方式输入密码
 
 ```sh
 raspberry
 ```
 
-- **步骤 4.** 如果您已成功登录 Raspberry Pi OS，将看到以下输出
+- **步骤 4.** 如果你已经成功登录到 Raspberry Pi OS，你将看到如下输出
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/ssh-windows.png" alt="pir" width="1000" height="auto"/></p>
 
-##### Mac/Linux 系统
+##### 适用于 Mac/Linux
 
-- **步骤 1.** 在计算机上打开 **Terminal** 并输入以下内容
+- **步骤 1.** 在电脑上打开 **Terminal** 并输入以下内容
 
 ```sh
 ssh pi@raspberrypi.local
 ```
 
-- **步骤 2.** 对于以下消息输入 **yes**
+- **步骤 2.** 对于以下信息输入 **yes**
 
 ```sh
 ECDSA key fingerprint is SHA256:XXXXXXX.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
-- **步骤 3.** 当要求输入密码时，输入以下内容
+- **步骤 3.** 当它要求输入密码时，输入以下内容
 
 ```sh
 raspberry
 ```
 
-- **步骤 4.** 如果您已成功登录 Raspberry Pi OS，将看到以下输出
+- **步骤 4.** 如果你已经成功登录到 Raspberry Pi OS，你将看到如下输出
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/SSH_WiFi_Linux.png" alt="pir" width="900" height="auto"/></p>
 
-### <span id="jump1">刷写新的 Raspberry Pi OS/Ubuntu OS 或其他操作系统后安装 reTerminal 驱动程序</span>
+### <span id="jump1">在刷入新的 Raspberry Pi OS/ Ubuntu OS 或其他操作系统后安装 reTerminal 驱动</span>
 
-reTerminal 开箱即用地预装了必要的驱动程序，因此您无需安装任何额外的驱动程序。但是，如果您自己刷写新的操作系统，则需要单独安装必要的驱动程序。需要驱动程序的硬件包括 **5 英寸 LCD、触摸面板、加速度计、光传感器、用户 LED、用户按钮、RTC、蜂鸣器、加密协处理器**。
+reTerminal 出厂时已预装必要的驱动程序，因此你无需额外安装驱动程序。但是，如果你自己刷入新的操作系统，则需要单独安装必要的驱动。需要驱动的硬件包括 **5 英寸 LCD、触摸面板、加速度计、光线传感器、用户 LED、用户按键、RTC、蜂鸣器、加密协处理器**。
 
 - **步骤 1.** 克隆以下仓库
 
@@ -627,21 +627,21 @@ sudo apt install git -y
 git clone --depth 1 https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 ```
 
-- **步骤 2.** 进入仓库
+- **步骤 2.** 进入该仓库
 
 ```sh
 cd seeed-linux-dtoverlays
 ```
 
 :::note
-对于 **32 位操作系统**，您需要在执行 `sudo ./scripts/reTerminal.sh` 之前添加以下步骤。完成安装后，记得**重启** reTerminal 以使更改生效。
+对于 **32bit OS**，在执行 `sudo ./scripts/reTerminal.sh` 之前，你需要添加以下步骤。完成安装后，记得**重启** reTerminal 以使更改生效。
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
 sudo reboot
 ```
 :::
 
-- **步骤 3.** 输入以下内容来安装驱动程序
+- **步骤 3.** 输入以下内容以安装驱动
 
 ```sh
 sudo ./scripts/reTerminal.sh
@@ -649,14 +649,14 @@ sudo ./scripts/reTerminal.sh
 
 :::note
 
-如果您不想同时升级内核，请输入以下内容：
+如果你不想同时升级内核，请输入以下内容：
 
 ```sh
 sudo ./scripts/reTerminal.sh --keep-kernel
 ```
 :::
 
-如果您已成功安装驱动程序，将看到以下输出
+如果你已经成功安装驱动，将会看到如下输出
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/driver-success.png" alt="pir" width="1000" height="auto"/></p>
 
@@ -667,49 +667,49 @@ sudo ./scripts/reTerminal.sh --keep-kernel
 sudo reboot
 ```
 
-### 将带有 seeed 驱动程序的 Raspberry Pi OS 刷写到 eMMC
+### 将带有 seeed 驱动的 Raspberry Pi OS 刷写到 eMMC
 
-- **步骤 1.** 与正常的镜像烧录步骤一样，您需要首先选择设备型号：
+- **步骤 1.** 与普通镜像烧录步骤一样，你需要先选择设备型号：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/01.png" alt="pir" width="700" height="auto"/></p>
 
-- **步骤 2.** 选择操作系统时，您需要下载所需的系统，在本地文件夹中解压，然后选择它。
+- **步骤 2.** 在选择操作系统时，你需要下载所需的系统，在本地文件夹中解压，然后进行选择。
 
-- **访问以下链接下载 Raspberry Pi OS**
+- **通过访问以下链接下载 Raspberry Pi OS**
 
-| 版本                     | 描述      | 标签                                                     |
+| 版本                     | 描述      | TAG                                                     |
 | --------------------------- | ---------------- | ------------------------------------------------------------ |
-| [2024-03-14-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-arm64.zip)              | 64 位 Debian12(bookworm) Linux 版本 6.6.20 | 最新 |
-| [2024-03-14-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-armhf.zip) |  32 位 Debian12(bookworm) Linux 版本 6.6.20           | 最新 |
-| [2022-07-21-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/64bit-20220721T012743Z-001.zip)               | 64 位 Debian11(Bullseye) Linux 版本 5.15.32-v7+  | 发布版 |
-| [2022-07-21-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/32bit-20220721T012743Z-001.zip)                    | 32 位 Debian11(Bullseye) Linux 版本 5.15.32-v7+  | 发布版 |
+| [2024-03-14-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-arm64.zip)              | 64bit Debian12(bookworm) Linux version 6.6.20 | lastest |
+| [2024-03-14-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2024-03-14-Raspbian-reTerminal/2024-03-14-Raspbian-reTerminal-armhf.zip) |  32bit Debian12(bookworm) Linux version 6.6.20           | lastest |
+| [2022-07-21-Raspbian-reTerminal-arm64](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/64bit-20220721T012743Z-001.zip)               | 64bit Debian11(Bullseye) Linux version 5.15.32-v7+  | release |
+| [2022-07-21-Raspbian-reTerminal-armhf](https://files.seeedstudio.com/wiki/ReTerminal/RPiOS_Images/2022-07-21-Raspbian-reTerminal-arm64/32bit-20220721T012743Z-001.zip)                    | 32bit Debian11(Bullseye) Linux version 5.15.32-v7+  | release |
 
 <br />
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/02.png" alt="pir" width="700" height="auto"/></p>
 
-选择您下载的操作系统，它应该以 **.img** 结尾。
+选择你下载的操作系统，它的结尾应为 **.img**。
 <br />
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/03.png" alt="pir" width="700" height="auto"/></p>
 
 :::caution
 
-如果您安装最新的 bookworm 版本镜像。请不要点击高级选项按钮进行配置。不要进入此界面进行任何初始配置。
-否则，可能会出现意外的驱动程序错误情况！！！
+如果你安装的是最新 bookworm 版本的镜像，请不要通过点击 advance option 按钮进行配置。不要进入此界面进行任何初始配置。
+否则，可能会出现意外的驱动错误情况！！！
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/notice.png" alt="pir" width="450" height="auto"/></p>
 
-如果您意外进行了高级配置并出现屏幕翻转错误，您需要[重新安装驱动程序](#jump1)来解决问题。
+如果你不小心进行了高级配置并出现屏幕翻转错误，你需要[重新安装驱动](#jump1)来解决问题。
 
 :::
 
 - **步骤 3.** 其他操作请参考[前面的步骤](#jump2)。
-安装镜像后，您无需安装驱动程序即可使用。（我们提供的镜像包含驱动程序文件）
+镜像安装完成后，你无需再安装驱动即可使用。（我们提供的镜像已包含驱动文件）
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/wiki1/04.png" alt="pir" width="700" height="auto"/></p>
 
 ### reTerminal 拆解指南
 
-请查看以下视频了解如何拆解 reTerminal：
+请查看下面的视频，了解如何拆解 reTerminal：
 
 <div class="video-container">
 <iframe width="800" height="500" src="https://www.youtube.com/embed/hAfdb603emw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -717,27 +717,19 @@ sudo reboot
 
 ## 常见问题
 
-有关常见问题，[点击此处](https://wiki.seeedstudio.com/cn/reTerminal-FAQ)访问 reTerminal 使用常见问题 wiki
+关于常见问题，请[点击这里](https://wiki.seeedstudio.com/cn/reTerminal-FAQ)访问 reTerminal 使用常见问题解答页面
 
 ## 资源
-
-- **[PDF]** [reTerminal 原理图 v1.6](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.6_SCH.pdf)
-
-- **[ZIP]** [reTerminal 原理图 v1.6](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.6_SCH.zip)
-
-- **[PDF]** [reTerminal 原理图 v1.3](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.pdf)
-
-- **[ZIP]** [reTerminal 原理图 v1.3](https://files.seeedstudio.com/wiki/ReTerminal/reTerminal-v1.3_SCH.zip)
 
 - **[STP]** [reTerminal 3D 模型](https://files.seeedstudio.com/wiki/ReTerminal/resources/reTerminal-3d-model.stp)
 
 - **[PDF]** [Raspberry Pi Compute Module 4 数据手册](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 
-- **[网页]** [Raspberry Pi 官方文档](https://www.raspberrypi.org/documentation/)
+- **[Web Page]** [Raspberry Pi 官方文档](https://www.raspberrypi.org/documentation/)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢你选择我们的产品！我们将为你提供多种支持，以确保你在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

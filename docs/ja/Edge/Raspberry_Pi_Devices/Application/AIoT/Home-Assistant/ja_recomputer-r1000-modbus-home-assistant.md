@@ -7,7 +7,6 @@ keywords:
   - Home Automation
   - BMS
   - Modbus
-  
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /ja/recomputer_r1000_home_assistant_modbus
 last_update:

@@ -1,15 +1,12 @@
 ---
 description: Cómo Elegir un Sensor de Gas
 title: Cómo Elegir un Sensor de Gas
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/How-to-Choose-A-Gas-Sensor
 last_update:
   date: 02/02/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 Si buscas "sensor de gas" en [www.seeedstudio.com](https://www.seeedstudio.com), puedes encontrar muchos sensores de gas. Sabemos que los componentes del aire son diversos, y un determinado sensor de gas puede detectar uno o más componentes del aire, por lo que diseñamos una serie de sensores de gas.

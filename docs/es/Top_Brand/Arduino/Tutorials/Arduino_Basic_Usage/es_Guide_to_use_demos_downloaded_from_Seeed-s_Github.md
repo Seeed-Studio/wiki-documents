@@ -1,15 +1,12 @@
 ---
 description: Guía para usar demos descargadas del Github de Seeed
 title: Usar Demos del Github de Seeed Studio
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /es/Guide_to_use_demos_downloaded_from_Seeed-s_Github
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 Es necesario usar demos del Github de Seeeduino frecuentemente y hay cierta dificultad para un novato para ejecutar bien la demo.

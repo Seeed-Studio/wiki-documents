@@ -11,7 +11,6 @@ sku: 103990663
 last_update:
   date: 07/17/2024
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

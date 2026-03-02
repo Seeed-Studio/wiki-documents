@@ -1,15 +1,12 @@
 ---
 description: 使用外部编辑器
 title: 使用外部编辑器
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Use_External_Editor
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 <!-- ---

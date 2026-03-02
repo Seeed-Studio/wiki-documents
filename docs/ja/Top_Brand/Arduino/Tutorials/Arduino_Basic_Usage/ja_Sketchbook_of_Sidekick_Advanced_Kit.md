@@ -1,15 +1,12 @@
 ---
 description: Sidekick Advanced Kit のスケッチブック
 title: Sidekick Advanced Kit のスケッチブック
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Sketchbook_of_Sidekick_Advanced_Kit
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 

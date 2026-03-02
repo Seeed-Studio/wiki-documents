@@ -1,15 +1,12 @@
 ---
 description: How to detect finger touch
 title: How to detect finger touch
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /How_to_detect_finger_touch
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 <!-- ---
 name: How to detect finger touch

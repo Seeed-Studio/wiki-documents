@@ -1,15 +1,12 @@
 ---
 description: コードのアップロード
 title: コードのアップロード
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Upload_Code
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 

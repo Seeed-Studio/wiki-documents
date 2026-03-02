@@ -12,7 +12,6 @@ slug: /es/gun_detection_with_frigate_nvr_on_r2000
 last_update:
   date: 08/12/2025
   author: Nolan Chen
-
 no_comments: false # for Disqus
 ---
 

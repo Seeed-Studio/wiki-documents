@@ -1,6 +1,5 @@
 ---
 description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对，可为智能设备、机器人和物联网应用提供先进的语音控制。探索无缝集成和双模式灵活性。
-
 title: 使用 Python 控制 reSpeaker XVF3800
 keywords:
 - reSpeaker

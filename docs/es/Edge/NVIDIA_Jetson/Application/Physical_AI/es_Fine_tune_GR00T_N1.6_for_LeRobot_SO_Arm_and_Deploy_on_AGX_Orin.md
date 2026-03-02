@@ -1,7 +1,6 @@
 ---
 description: Este wiki introduce flujos de trabajo de ejemplo para desplegar proyectos de IA y robótica en J501 Mini (AGX Orin). También se proporcionan instrucciones detalladas paso a paso y documentación de referencia.
 title: Ajustar Isaac GR00T N1.6 para el Brazo LeRobot SO-101 y Desplegar en AGX Orin
-
 keywords:
 - J501 mini
 - Robotics

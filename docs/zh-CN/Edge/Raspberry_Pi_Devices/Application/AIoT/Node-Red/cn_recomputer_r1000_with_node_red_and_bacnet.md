@@ -1,6 +1,5 @@
 ---
 description: 本wiki提供了使用reComputer R1000的全面指南，这是一款基于Raspberry Pi 4的工业物联网边缘控制器。它包括设置Node-RED、使用YABE模拟房间温度以及发现和读取BACnet IP设备参数的说明，以实现高效的楼宇管理系统(BMS)集成。
-
 title: reComputer R1000与Node-Red和BACnet IP
 keywords:
   - Edge Controller

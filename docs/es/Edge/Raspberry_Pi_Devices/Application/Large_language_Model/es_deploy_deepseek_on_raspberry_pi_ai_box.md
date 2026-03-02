@@ -11,7 +11,6 @@ slug: /es/deploy_deepseek_on_raspberry_pi_ai_box
 last_update:
   date: 03/11/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

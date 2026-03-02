@@ -6,7 +6,6 @@ keywords:
   - reComputer R1000
   - Home Automation
   - Bookworm
-  
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /es/recomputer_r1000_home_automation
 last_update:

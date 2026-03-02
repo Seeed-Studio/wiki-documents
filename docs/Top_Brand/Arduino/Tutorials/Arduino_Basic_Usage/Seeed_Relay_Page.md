@@ -1,15 +1,12 @@
 ---
 description: Seeed Relay Selection Guide
 title: Seeed Relay Selection Guide
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Relay_Page
 last_update:
   date: 02/02/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 ![](https://files.seeedstudio.com/wiki/Seeed_Relay_Page/img/back.jpg)

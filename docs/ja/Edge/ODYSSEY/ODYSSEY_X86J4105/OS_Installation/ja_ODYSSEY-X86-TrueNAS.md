@@ -6,7 +6,6 @@ slug: /ja/ODYSSEY-X86-TrueNAS
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 ---
 
 

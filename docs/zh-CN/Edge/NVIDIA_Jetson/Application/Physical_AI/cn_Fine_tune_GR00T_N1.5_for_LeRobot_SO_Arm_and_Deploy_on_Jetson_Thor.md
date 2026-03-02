@@ -1,7 +1,6 @@
 ---
 description: 本 wiki 介绍如何开始使用 NVIDIA Jetson Thor，并提供在 Thor 上部署 AI 和机器人项目的示例工作流程。还提供了详细的分步说明和参考文档。
 title: 为 LeRobot SO-101 机械臂微调 Isaac GR00T N1.5 并在 Jetson Thor 上部署
-
 keywords:
 - Thor
 - Robotics

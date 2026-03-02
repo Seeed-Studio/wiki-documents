@@ -1,6 +1,5 @@
 ---
 description: このwikiは、Raspberry Pi 4をベースとした産業用IoTエッジコントローラーであるEdge Box RPi 200の操作に関する包括的なガイドを提供します。Node-REDのセットアップ、YABEを使用した室温シミュレーション、効率的なビル管理システム（BMS）統合のためのBACnet IPデバイスパラメータの検出と読み取りの手順が含まれています。
-
 title: Edge Box RPi 200とNode RedおよびBACnet TCP
 keywords:
   - Edge Controller

@@ -1,6 +1,5 @@
 ---
 description: reComputer用ThingsBoardインストールガイドは、reComputerデバイスにThingsBoard v3.8とPostgreSQLをセットアップするためのステップバイステップの手順を提供します。Java 17のインストール、ThingsBoardサービス設定、PostgreSQLセットアップ、およびシームレスなIoTデータ管理のためのトラブルシューティングのヒントをカバーしています。
-
 title: reComputer R1000でThingsBoardを始める
 keywords:
   - reComputer-R1000

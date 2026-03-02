@@ -6,7 +6,6 @@ slug: /ja/Jellyfin-on-Docker-Ubuntu-X86
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 ---
 
 

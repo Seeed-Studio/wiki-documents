@@ -1,6 +1,5 @@
 ---
 description: この記事では、トップレベルグラフィックの作成方法を説明します
-
 title: reComputer R1000 と FIN を使用したトップレベルグラフィックの作成
 keywords:
   - Edge Controller

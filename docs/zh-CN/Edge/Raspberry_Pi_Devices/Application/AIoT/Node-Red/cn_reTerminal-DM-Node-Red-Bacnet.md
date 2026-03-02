@@ -1,6 +1,5 @@
 ---
 description: 本wiki提供了使用基于Raspberry Pi 4的工业物联网边缘HMI设备reTerminal DM的综合指南。包括设置Node-RED、使用YABE模拟房间温度，以及发现和读取BACnet IP设备参数以实现高效楼宇管理系统(BMS)集成的说明。
-
 title: reTerminal DM与Node Red和BACnet TCP
 keywords:
   - BMS

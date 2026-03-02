@@ -10,7 +10,6 @@ slug: /clip_application_on_rpi5_with_ai_kit
 last_update:
   date: 09/27/2024
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

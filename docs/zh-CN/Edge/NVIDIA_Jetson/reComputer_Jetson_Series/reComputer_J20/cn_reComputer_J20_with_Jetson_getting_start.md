@@ -16,19 +16,19 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Jetson-20-1-H2-p-5329.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 </a></div>
 
 ## 介绍
-基于 Jetson Xavier NX 构建的 reComputer J20 系列是一款功能强大且紧凑的智能边缘盒子，可为边缘带来高达 21TOPS 的现代 AI 性能。同时结合了 NVIDIA Ampere™ GPU 架构和 64 位操作能力。
+基于 Jetson Xavier NX 构建的 reComputer J20 系列是一款强大且紧凑的智能边缘盒子，可为边缘侧带来高达 21TOPS 的现代 AI 性能。同时结合了 NVIDIA Ampere™ GPU 架构与 64 位操作能力。
 
-完整系统包括一个 NVIDIA Jetson Xavier NX 生产模块、一个散热器和一个电源适配器。reComputer J20 预装了 Jetpack 4.6，简化了开发过程，适合为在智慧城市、安防、工业自动化、智能工厂等行业中从事目标检测、自然语言处理、医学成像和机器人技术的边缘 AI 解决方案提供商进行部署。
+整机系统包括一块 NVIDIA Jetson Xavier NX 量产模组、一个散热片以及一个电源适配器。reComputer J20 预装 Jetpack 4.6，简化开发流程，适用于从事目标检测、自然语言处理、医学影像和机器人等领域的边缘 AI 解决方案提供商，可部署在智慧城市、安全、工业自动化、智能工厂等各类行业中。
 
 ## 特性
 
-- **出色的生产级 AI 性能：** 设备端处理，AI 性能高达 21 TOPS，功耗低、延迟低
-- **手掌大小的边缘 AI 设备：** 紧凑尺寸为 130mm x120mm x 58.5mm，包括 NVIDIA Jetson Xavier NX 生产模块、散热器和电源适配器。支持桌面、壁挂安装，适合任何地方
-- **全面的认证：** FCC、CE、RoHS、UKCA
+- **面向量产的卓越 AI 性能：** 设备端处理可提供高达 21 TOPS 的 AI 性能，同时具备低功耗和低延迟
+- **掌上尺寸的边缘 AI 设备：** 紧凑尺寸为 130mm x120mm x 58.5mm，包含 NVIDIA Jetson Xavier NX 量产模组、散热片和电源适配器。支持桌面放置、壁挂安装，可适配任意场景
+- **完备认证：** FCC、CE、RoHS、UKCA
 
 ## 规格参数
 
@@ -44,7 +44,7 @@ last_update:
   </thead>
   <tbody>
     <tr>
-      <td>模块</td>
+      <td>模组</td>
       <td>Jetson Xavier NX 16GB</td>
       <td>Jetson Xavier NX 8GB</td>
       <td>Jetson Xavier NX 16GB</td>
@@ -56,18 +56,18 @@ last_update:
     </tr>
     <tr>
       <td>GPU</td>
-      <td colspan='4' align='center'>384核 NVIDIA Volta™ GPU</td>
+      <td colspan='4' align='center'>384-core NVIDIA Volta™ GPU</td>
     </tr>
     <tr>
       <td>CPU</td>
-      <td colSpan='4'>6核 NVIDIA Carmel ARM®v8.2 64位 CPU 6 MB L2 + 4 MB L3</td>
+      <td colSpan='4'>6-core NVIDIA Carmel ARM®v8.2 64-bit CPU 6 MB L2 + 4 MB L3</td>
     </tr>
     <tr>
       <td>内存</td>
-      <td>16 GB 128位 LPDDR4x 59.7GB/s</td>
-      <td>8 GB 128位 LPDDR4x @ 59.7GB/s</td>
-      <td>16 GB 128位 LPDDR4x 59.7GB/s</td>
-      <td>8 GB 128位 LPDDR4x @ 59.7GB/s</td>
+      <td>16 GB 128-bit LPDDR4x 59.7GB/s</td>
+      <td>8 GB 128-bit LPDDR4x @ 59.7GB/s</td>
+      <td>16 GB 128-bit LPDDR4x 59.7GB/s</td>
+      <td>8 GB 128-bit LPDDR4x @ 59.7GB/s</td>
     </tr>
     <tr>
       <td>存储</td>
@@ -89,18 +89,18 @@ last_update:
     </tr>
     <tr>
       <td>CSI 摄像头</td>
-      <td colSpan='4' align='center'>2*CSI 摄像头 (15 pos, 1mm pitch, MIPI CSI-2 )</td>
+      <td colSpan='4' align='center'>2*CSI Camera (15 pos, 1mm pitch, MIPI CSI-2 )</td>
     </tr>
     <tr>
       <td>网络</td>
-      <td colSpan='4' align='center'>1* 千兆以太网 (10/100/1000M)</td>
+      <td colSpan='4' align='center'>1* Gigabit Ethernet (10/100/1000M)</td>
     </tr>
     <tr>
       <td>USB</td>
-      <td colSpan='2' align='center'>4 * USB 3.1 Type A 连接器；
-1* USB Type-C (设备模式)</td>
-      <td colSpan='2' align='center'>4 * USB 3.0 Type A 连接器；
-1 * Micro-USB 端口用于设备模式</td>
+      <td colSpan='2' align='center'>4 * USB 3.1 Type A Connector；
+1* USB Type-C (Device mode)</td>
+      <td colSpan='2' align='center'>4 * USB 3.0 Type A Connector；
+1 * Micro-USB port for Device mode</td>
     </tr>
     <tr>
       <td>M.2 Key M</td>
@@ -112,7 +112,7 @@ last_update:
     </tr>
     <tr>
       <td>风扇</td>
-      <td colSpan='4' align='center'>1* 风扇(5V PWM)</td>
+      <td colSpan='4' align='center'>1* FAN(5V PWM)</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -120,13 +120,13 @@ last_update:
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan='2' align='center'>RTC 2针RTC插座</td>
-      <td colSpan='2' align='center'>1*RTC 插座</td>
+      <td colSpan='2' align='center'>RTC 2-pinRTC socket</td>
+      <td colSpan='2' align='center'>1*RTC Socket</td>
     </tr>
     <tr>
       <td>电源</td>
-      <td colSpan='2' align='center'>12V/5A(桶形插头 5.5/2.5mm)</td>
-      <td colSpan='2' align='center'>DC 插头 19V 4.75A (最大 90W)</td>
+      <td colSpan='2' align='center'>12V/5A(Barrel Jack 5.5/2.5mm)</td>
+      <td colSpan='2' align='center'>DC Jack 19V 4.75A (MAX 90W)</td>
     </tr>
     <tr>
       <td>机械尺寸</td>
@@ -138,22 +138,20 @@ last_update:
 ## 刷写 JetPack
 
 :::info
-reComputer J20 由 J202 载板提供支持。
-请参考此 [wiki 页面](/cn/reComputer_J2021_J202_Flash_Jetpack) 获取更多关于刷写 jetpack 的信息。
+reComputer J20 由 J202 载板供电。
+有关刷写 jetpack 的更多信息，请参考此 [wiki 页面](/cn/reComputer_J2021_J202_Flash_Jetpack)。
 :::
 
 ## 接口使用
 
 :::info
-reComputer J20 由 J202 载板提供支持。该接口使用与 J30/J40 相同的设计。
-请参考此 [wiki 页面](/cn/J401_carrierboard_Hardware_Interfaces_Usage) 获取更多关于接口使用的信息。
+reComputer J20 由 J202 载板供电。接口设计与 J30/J40 相同。
+有关接口使用的更多信息，请参考此 [wiki 页面](/cn/J401_carrierboard_Hardware_Interfaces_Usage)。
 :::
 
 
 ## 资源
 [reComputer J202x 数据手册](https://files.seeedstudio.com/wiki/reComputer/reComputer-J202x-datasheet.pdf)
-
-[reComptuer J202x 载板原理图](https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer%20J202_V1.0_SCH_PDF_240822.pdf)
 
 [reComputer J202x 3D 文件](https://files.seeedstudio.com/products/NVIDIA-Jetson/J2021-Xavier-NX.stp)
 
@@ -163,12 +161,12 @@ reComputer J20 由 J202 载板提供支持。该接口使用与 J30/J40 相同�
 
 [Seeed Jetson 系列对比](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 
-[Seeed Jetson 设备单页介绍](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+[Seeed Jetson 设备一览](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们为您提供多种支持方式，以确保您在使用我们产品的过程中尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

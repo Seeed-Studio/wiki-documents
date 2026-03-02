@@ -1,6 +1,5 @@
 ---
 description: IoTアプリケーションにおける効率的な時系列データ収集と分析のために、reTerminal DMにInfluxDBをデプロイします。このガイドでは、Raspberry Pi搭載HMIでInfluxDBの力を活用するためのインストール、設定、使用方法について説明します。ネットワークのエッジで直接リアルタイムインサイトと堅牢な監視機能を実現します。
-
 title: reTerminal DM with Node Red and InfluxDB
 keywords:
   - Raspberry Pi

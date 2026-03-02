@@ -6,9 +6,7 @@ slug: /ja/Brushless_Motor_Shield_TB6605FTG
 last_update:
   date: 05/15/2025
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 

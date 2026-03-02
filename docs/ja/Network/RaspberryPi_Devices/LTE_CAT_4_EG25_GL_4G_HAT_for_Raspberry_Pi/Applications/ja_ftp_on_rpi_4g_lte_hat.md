@@ -1,6 +1,5 @@
 ---
 description: IoTプロジェクトをFTPと4Gで強化しましょう。Raspberry Pi 4G HATを使用して、ファイルを安全に転送し、タスクを自動化し、リモートデバイスを監視する方法を学びます。
-
 title: 接続と転送 - Raspberry Pi 4G LTE HATでのFTP
 keywords:
   - Raspberry Pi Hat

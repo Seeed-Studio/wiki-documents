@@ -1,15 +1,12 @@
 ---
 description: Arduino 常见错误
 title: Arduino 常见错误
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Arduino_Common_Error
 last_update:
   date: 02/01/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 对于初学者来说，有时我们会遇到一些编译或上传错误。这里我们总结了一些常见错误和解决方案，希望能有所帮助。

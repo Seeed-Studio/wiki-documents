@@ -1,6 +1,5 @@
 ---
 description: 学习如何使用 Edge Box RPi 200 和 Node-RED 设置和配置 Modbus RTU 通信。本指南涵盖安装 Modbus 节点、配置 Modbus getter 和服务器，以及使用功能块提取温度和湿度数据。按照分步说明，将 Modbus RTU 设备无缝集成到您的工业物联网设置中。轻松实现对流程的高效监控和控制。
-
 title: Edge Box RPi 200 与 Node Red 和 Modbus RS485
 keywords:
   - Edge Controller

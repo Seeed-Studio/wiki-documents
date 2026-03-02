@@ -11,7 +11,6 @@ sku: 103110064,103110063,E2024082901,103110065
 last_update:
   date: 12/24/2024
   author: Jiahaoli
-
 ---
 
 ## Introducción

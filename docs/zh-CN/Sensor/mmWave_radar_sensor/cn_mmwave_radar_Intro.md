@@ -4,7 +4,6 @@ title: 毫米波雷达传感器介绍
 keywords:
 - Grove
 - mmWave Radar Sensor
-
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp
 slug: /cn/mmwave_radar_Intro
 last_update:

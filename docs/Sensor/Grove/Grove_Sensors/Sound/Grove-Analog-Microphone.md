@@ -1,7 +1,5 @@
 ---
 title: Grove - Analog Microphone
-
-
 nointro:
 keywords:
   - docs

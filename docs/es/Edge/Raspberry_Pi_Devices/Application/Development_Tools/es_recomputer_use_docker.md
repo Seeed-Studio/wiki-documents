@@ -10,7 +10,6 @@ slug: /es/use_docekr_on_recomputer
 last_update:
   date: 08/25/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

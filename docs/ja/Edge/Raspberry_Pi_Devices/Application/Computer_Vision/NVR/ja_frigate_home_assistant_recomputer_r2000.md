@@ -1,8 +1,6 @@
 ---
 description: Frigate NVR と Hailo AI アクセラレータを使用した reComputer R2000 での DIY AI 搭載ホーム監視システム。Home Assistant とシームレスに統合し、リアルタイムスマートアラート、物体検出、エッジでの効率的なローカル動画処理を実現します。
-
 title: reComputer R2000 での Frigate NVR と Hailo の Home Assistant 連携
-
 keywords:
 - Raspberry pi
 - Edge AI Computer

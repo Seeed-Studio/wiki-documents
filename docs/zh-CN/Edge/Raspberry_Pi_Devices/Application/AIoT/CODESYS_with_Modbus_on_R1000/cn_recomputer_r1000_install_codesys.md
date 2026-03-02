@@ -1,6 +1,5 @@
 ---
 description: 本文主要介绍如何安装 CODESYS 以及如何在 R1000 中部署新项目
-
 title: 如何为 reComputer R1000 安装 CODESYS
 keywords:
   - Edge Controller

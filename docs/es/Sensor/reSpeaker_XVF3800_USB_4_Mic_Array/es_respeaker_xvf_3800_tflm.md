@@ -1,8 +1,6 @@
 ---
-description: Aprende cómo entrenar e implementar modelos de voz TensorFlow Lite Micro (TFLM) en el Seeed XIAO ESP32 con XVF3800 ReSpeaker para reconocimiento de voz en tiempo real. Este tutorial cubre el entrenamiento del modelo, conversión de TFLite a código hex, y flasheo para lograr detección precisa de palabras clave en microcontroladores.
-
-title: TensorFlow Lite en ReSpeaker XVF3800
-
+description: Aprende cómo entrenar y desplegar modelos de voz de TensorFlow Lite Micro (TFLM) en el Seeed XIAO ESP32 con XVF3800 ReSpeaker para reconocimiento de voz en tiempo real. Este tutorial cubre el entrenamiento del modelo, la conversión de TFLite a código hex y la grabación en la placa para lograr una detección precisa de palabras clave en microcontroladores.
+title: TensorFlow Lite en reSpeaker XVF3800
 keywords:
 - reSpeaker
 - XIAO
@@ -17,13 +15,13 @@ last_update:
 
 ## Introducción 
 
-En este tutorial, te guiamos a través de la creación de un sistema personalizado de reconocimiento de voz usando TensorFlow Lite Micro (TFLM) en el Seeed XIAO ESP32 con el XVF3800 ReSpeaker. Aprenderás cómo recopilar y etiquetar datos de audio, preprocesarlos para el entrenamiento, y dividirlos en conjuntos de entrenamiento y validación. A continuación, entrenamos un modelo personalizado de detección de palabras clave adaptado a tu conjunto de datos, lo convertimos al formato TFLite, y finalmente lo implementamos como un archivo hex en el ESP32 para reconocimiento de comandos de voz en tiempo real. Al final, tendrás un sistema completamente funcional basado en microcontrolador capaz de clasificar con precisión comandos hablados.
+En este tutorial, te guiamos para crear un sistema de reconocimiento de voz personalizado usando TensorFlow Lite Micro (TFLM) en el Seeed XIAO ESP32 con el XVF3800 ReSpeaker. Aprenderás cómo recopilar y etiquetar datos de audio, preprocesarlos para el entrenamiento y dividirlos en conjuntos de entrenamiento y validación. A continuación, entrenamos un modelo personalizado de detección de palabras clave adaptado a tu conjunto de datos, lo convertimos a formato TFLite y finalmente lo desplegamos como un archivo hex en el ESP32 para el reconocimiento de comandos de voz en tiempo real. Al final, tendrás un sistema totalmente funcional basado en microcontrolador capaz de clasificar comandos hablados con precisión.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Uno Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -35,21 +33,21 @@ Para seguir este tutorial, necesitas instalar las siguientes librerías de Ardui
 * [TFLite Micro Arduino Examples](https://github.com/pschatzmann/tflite-micro-arduino-examples)
 * [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools)
 
-Asegúrate de instalar estas librerías en tu Arduino IDE. Cada repositorio de GitHub contiene una guía sobre cómo instalar y configurar las librerías correctamente.
+Asegúrate de instalar estas librerías en tu Arduino IDE. Cada repositorio de GitHub contiene una guía sobre cómo instalar y configurar correctamente las librerías.
 
 
-## Recopilar los Datos
+## Recopilar los datos
 
-Grabaremos muestras de voz cortas (10 segundos cada una) y las dividiremos en clips de 1 segundo. Para usar el XVF3800 ReSpeaker, es posible que necesites instalar primero el firmware USB.
+Grabaremos muestras de voz cortas (10 segundos cada una) y las dividiremos en clips de 1 segundo. Para usar el XVF3800 ReSpeaker, puede que primero tengas que instalar el firmware USB.
 
-**Guía de Firmware:**
+**Guía de firmware:**
 [Seeed Studio XVF3800 Firmware Flash](https://wiki.seeedstudio.com/es/respeaker_xvf3800_introduction/#flash-firmware)
 
 ---
 
-### Paso 1: Encontrar el ID del Dispositivo
+### Paso 1:Encontrar el ID del dispositivo
 
-Usa el siguiente script de Python para listar todos los dispositivos de audio conectados a tu PC y encontrar el índice correcto del dispositivo para el ReSpeaker:
+Utiliza el siguiente script de Python para listar todos los dispositivos de audio conectados a tu PC y encontrar el índice de dispositivo correcto para el ReSpeaker:
 
 ```python
 import sounddevice as sd
@@ -62,12 +60,12 @@ for i, device in enumerate(devices):
     print(f"Device {i}: {device['name']} (input channels: {device['max_input_channels']})")
 ```
 
-> Nota: Actualiza `DEVICE_INDEX` en el siguiente script según el número de dispositivo impreso para el ReSpeaker.
+> Nota: Actualiza `DEVICE_INDEX` en el siguiente script de acuerdo con el número de dispositivo impreso para el ReSpeaker.
 
 
-### Paso 2: Recopilar Muestras de Audio
+### Paso 2:Recopilar muestras de audio
 
-Este script de Python recopila muestras de audio basadas en el nombre de la persona y la etiqueta. Se creará una carpeta para cada persona, y los archivos WAV se guardarán bajo las etiquetas correspondientes.
+Este script de Python recopila muestras de audio según el nombre de la persona y la etiqueta. Se creará una carpeta para cada persona y los archivos WAV se guardarán bajo las etiquetas correspondientes.
 
 ```python
 import os
@@ -141,49 +139,49 @@ if __name__ == "__main__":
 **Cómo funciona:**
 
 * Crea una carpeta para cada persona.
-* Solicita etiquetas (ej., "yes", "no") y guarda los archivos de audio correspondientes.
+* Solicita etiquetas (por ejemplo, "yes", "no") y guarda los archivos de audio correspondientes.
 * Graba clips de audio de 10 segundos que luego pueden dividirse en segmentos de 1 segundo para el entrenamiento.
 
 
-## Preprocesamiento de Datos
+## Preprocesamiento de datos
 
-Después de recopilar tus muestras de audio de 10 segundos, el siguiente paso es dividirlas en clips de 1 segundo para el entrenamiento. Usé **Edge Impulse** para visualizar y dividir las grabaciones fácilmente.
+Después de recopilar tus muestras de audio de 10 segundos, el siguiente paso es dividirlas en clips de 1 segundo para el entrenamiento. Yo utilicé **Edge Impulse** para visualizar y dividir fácilmente las grabaciones.
 
-### Formato de Archivo de Audio
+### Formato de archivo de audio
 
-Todos los archivos de audio deben cumplir con los siguientes requisitos:
+Todos los archivos de audio deben cumplir los siguientes requisitos:
 
 * **Formato:** WAV (.wav)
-* **Frecuencia de Muestreo:** 16 kHz
+* **Frecuencia de muestreo:** 16 kHz
 * **Canales:** Mono (1 canal)
-* **Profundidad de Bits:** 16-bit PCM
+* **Profundidad de bits:** PCM de 16 bits
 * **Duración:** 1 segundo (1000 ms)
 
 > Nota: Edge Impulse puede ayudar a dividir automáticamente grabaciones más largas en estos segmentos de 1 segundo.
 
-### Etiquetas Objetivo
+### Etiquetas objetivo
 
 * Cada **nombre de carpeta** se trata como una **etiqueta de clase**.
 * Ejemplos:
 
-  * `hi_speaker` → El modelo reconoce "hi speaker"
-  * `seeed` → El modelo reconoce "seeed"
-* Puedes agregar más clases según sea necesario, pero los nombres de carpeta **deben coincidir con la lista `WANTED_WORDS`** usada durante el entrenamiento.
+  * `hi_speaker` → El modelo reconoce “hi speaker”
+  * `seeed` → El modelo reconoce “seeed”
+* Puedes añadir más clases según sea necesario, pero los nombres de las carpetas **deben coincidir con la lista `WANTED_WORDS`** utilizada durante el entrenamiento.
 
-### Desconocido / Otro
+### Desconocido / Otros
 
-* La carpeta `other/` debe contener **palabras aleatorias que no estén en tu lista objetivo**. Esto ayuda al modelo a clasificar correctamente palabras desconocidas.
+* La carpeta `other/` debe contener **palabras aleatorias que no estén en tu lista objetivo**. Esto ayuda al modelo a clasificar correctamente las palabras desconocidas.
 
 ### Silencio / Ruido
 
 * La carpeta `_background_noise_/` debe incluir sonidos ambientales como:
 
   * Ruido de oficina
-  * Ruido de calle
+  * Ruido de la calle
   * Tecleo de teclado
   * Grabaciones de silencio (micrófono encendido pero sin hablar)
 
-> Un preprocesamiento adecuado asegura que el modelo aprenda a distinguir entre comandos objetivo, palabras desconocidas y ruido de fondo.
+> Un preprocesamiento adecuado garantiza que el modelo aprenda a distinguir entre comandos objetivo, palabras desconocidas y ruido de fondo.
 
 ```sql
 dataset_dir/
@@ -209,50 +207,50 @@ dataset_dir/
     └── ...
 
 ```
-## Entrenamiento de Datos
+## Entrenamiento de datos
 
-Para entrenar tu modelo personalizado de reconocimiento de voz, se recomienda usar una PC con **Ubuntu x86**. También necesitarás la herramienta `xxd`, que se puede instalar mediante:
+Para entrenar tu modelo de reconocimiento de voz personalizado, se recomienda usar un PC con **Ubuntu x86**. También necesitarás la herramienta `xxd`, que se puede instalar mediante:
 
 ```bash
 sudo apt-get install xxd
 ```
 
-### Paso 1: Instalar Anaconda
+### Paso 1:Instalar Anaconda
 
 * Descarga e instala [**Anaconda Navigator**](https://www.anaconda.com/products/navigator)
 * Crea un nuevo entorno en Anaconda para este proyecto.
 
-### Paso 2: Configurar el Entorno
+### Paso 2:Configurar el entorno
 
-Instala los paquetes requeridos en el entorno:
+Instala los paquetes necesarios en el entorno:
 
 :::info
 
 * **Framework de Deep Learning:** TensorFlow 1.5
-* **Lenguaje de Programación:** Python 3.7
+* **Lenguaje de programación:** Python 3.7
 :::
 
-> Esta configuración asegura compatibilidad con TensorFlow Lite Micro para implementación en microcontroladores.
+> Esta configuración garantiza la compatibilidad con TensorFlow Lite Micro para el despliegue en microcontroladores.
 
-### Paso 3: Ejecutar el Notebook de Entrenamiento
+### Paso 3:Ejecutar el cuaderno de entrenamiento
 
-* Descarga el notebook de Jupyter:
+* Descarga el cuaderno de Jupyter:
   [train\_micro\_speech\_model.ipynb](https://github.com/KasunThushara/TFLM_voice_module/blob/main/train_micro_speech_model.ipynb)
-* Abre el notebook en Jupyter y sigue las instrucciones.
-* Una vez completado, el notebook generará un **archivo de modelo hexadecimal** llamado `model.cc` listo para implementación en el ESP32.
+* Abre el cuaderno en Jupyter y sigue las instrucciones.
+* Una vez completado, el cuaderno generará un **archivo de modelo hexadecimal** llamado `model.cc` listo para desplegar en el ESP32.
 
-> El archivo `model.cc` puede entonces incluirse en tu proyecto de Arduino para ejecutar detección de palabras clave en tiempo real en el XIAO ESP32 con el XVF3800 ReSpeaker.
+> El archivo `model.cc` puede incluirse después en tu proyecto de Arduino para ejecutar la detección de palabras clave en tiempo real en el XIAO ESP32 con el XVF3800 ReSpeaker.
 
 
 
 
 ## Inferencia en XIAO ESP32 con XVF3800
 
-Una vez que tu archivo `model.cc` esté listo, puedes implementarlo en el XIAO ESP32 para reconocimiento de comandos de voz en tiempo real. Debido a que el XVF3800 produce **muestras de audio de 32 bits**, necesitamos **convertirlas a 16 bits** para TensorFlow Lite Micro. También configuramos los pines I2S, frecuencia de muestreo y canales para coincidir con los requisitos del modelo.
+Una vez que tu archivo `model.cc` esté listo, puedes desplegarlo en el XIAO ESP32 para el reconocimiento de comandos de voz en tiempo real. Debido a que el XVF3800 genera **muestras de audio de 32 bits**, necesitamos **convertirlas a 16 bits** para TensorFlow Lite Micro. También configuramos los pines I2S, la frecuencia de muestreo y los canales para que coincidan con los requisitos del modelo.
 
 
 
-### Ejemplo de Código Arduino
+### Ejemplo de código Arduino
 
 ```cpp
 #include "AudioTools.h"
@@ -325,23 +323,23 @@ void loop() {
 }
 ```
 
-#### Notas Clave
+#### Notas clave
 
 * Asegúrate de **reemplazar `g_model`** con el nombre de tu archivo `model.cc` generado.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/tflm/image1.png" alt="pir" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/tflm/image2.png" alt="pir" width={800} height="auto" /></p>
 
-* XVF3800 produce **estéreo de 32 bits** por defecto; lo convertimos a **mono de 16 bits** para coincidir con el modelo.
-* TensorFlow Lite Micro lee los datos de audio continuamente y activa `respondToCommand()` cada vez que se detecta un comando reconocido.
+* XVF3800 genera **estéreo de 32 bits** de forma predeterminada; lo convertimos a **mono de 16 bits** para que coincida con el modelo.
+* TensorFlow Lite Micro lee los datos de audio de forma continua y activa `respondToCommand()` siempre que se detecta un comando reconocido.
 
-> Con esta configuración, tu XIAO ESP32 ahora puede reconocer comandos de voz personalizados en tiempo real usando el arreglo de micrófonos XVF3800.
+> Con esta configuración, tu XIAO ESP32 ahora puede reconocer comandos de voz personalizados en tiempo real usando la matriz de micrófonos XVF3800.
 
 
 
-## Soporte Técnico y Discusión de Productos
+## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

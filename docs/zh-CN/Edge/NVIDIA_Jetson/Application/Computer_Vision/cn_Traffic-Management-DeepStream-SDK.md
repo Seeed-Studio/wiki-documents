@@ -9,9 +9,7 @@ slug: /cn/Traffic-Management-DeepStream-SDK
 last_update:
   date: 01/04/2023
   author: w0x7ce
-
 no_comments: false # for Disqus
-
 ---
 
 # 使用 DeepStream SDK 的智能交通管理系统

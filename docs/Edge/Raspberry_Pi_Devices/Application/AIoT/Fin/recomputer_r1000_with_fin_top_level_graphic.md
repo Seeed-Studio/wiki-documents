@@ -1,6 +1,5 @@
 ---
 description: This article will show you how to create a Top Level Graphic
-
 title: reComputer R1000 with FIN to create a Top Level Graphic
 keywords:
   - Edge Controller

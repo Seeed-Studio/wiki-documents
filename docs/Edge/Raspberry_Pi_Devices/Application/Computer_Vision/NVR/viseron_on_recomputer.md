@@ -10,7 +10,6 @@ slug: /viseron_on_recomputer
 last_update:
   date: 12/07/2025
   author: Jiahao
-
 no_comments: false # for Disqus
 ---
 

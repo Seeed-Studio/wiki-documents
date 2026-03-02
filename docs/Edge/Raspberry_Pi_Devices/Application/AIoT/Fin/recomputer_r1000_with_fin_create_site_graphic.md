@@ -1,6 +1,5 @@
 ---
 description: This article will show you how to create a Site Graphic
-
 title: reComputer R1000 with FIN to create a Site Graphic
 keywords:
   - Edge Controller

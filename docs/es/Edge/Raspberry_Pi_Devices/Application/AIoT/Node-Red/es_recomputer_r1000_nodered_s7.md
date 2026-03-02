@@ -1,7 +1,6 @@
 ---
 description: Aprende cómo configurar PLCs de Siemens usando el protocolo S7 e integrarlos con Node-RED en un reComputer alimentado por Raspberry Pi para computación de borde eficiente. Descubre orientación paso a paso sobre configuración de nodos S7, creación de flujos y monitoreo de variables de PLC.
 title: Conectando PLCs de Siemens Usando el Protocolo S7 con reComputer R1000
-
 keywords:
   - Edge Controller
   - reComputer R1000
@@ -9,7 +8,6 @@ keywords:
   - Siemens
   - S7
   - PLC
-  
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /es/recomputer_r1000_nodered_s7
 last_update:

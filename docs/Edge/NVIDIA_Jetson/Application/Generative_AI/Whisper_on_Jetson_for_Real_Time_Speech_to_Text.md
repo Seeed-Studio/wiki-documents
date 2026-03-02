@@ -8,13 +8,10 @@ keywords:
   - whisper
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Whisper_on_Jetson_for_Real_Time_Speech_to_Text
-
 last_update:
   date: 03/14/2024
   author: Jiahao
-
 no_comments: false # for Disqus
-
 ---
 
 # Deploy Whisper on NVIDIA Jetson Orin for Real time Speech to Text

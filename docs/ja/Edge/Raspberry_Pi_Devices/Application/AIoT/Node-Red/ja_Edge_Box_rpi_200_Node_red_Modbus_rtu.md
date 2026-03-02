@@ -1,6 +1,5 @@
 ---
 description: Edge Box RPi 200とNode-REDを使用してModbus RTU通信を設定・構成する方法を学びます。このガイドでは、Modbusノードのインストール、Modbusゲッターとサーバーの構成、温度・湿度データを抽出するためのファンクションブロックの使用について説明します。ステップバイステップの手順に従って、Modbus RTUデバイスを産業用IoTセットアップとシームレスに統合できます。プロセスの効率的な監視と制御を簡単に実現します。
-
 title: Edge Box RPi 200とNode RedおよびModbus RS485
 keywords:
   - Edge Controller

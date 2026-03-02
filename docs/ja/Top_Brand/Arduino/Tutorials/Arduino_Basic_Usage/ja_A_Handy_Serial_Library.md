@@ -1,15 +1,12 @@
 ---
 description: 便利なシリアルライブラリ
 title: 便利なシリアルライブラリ
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/A_Handy_Serial_Library
 last_update:
   date: 05/15/2025
   author: w0x7ce
-
 no_comments: false # Disqus用
-
 ---
 
 

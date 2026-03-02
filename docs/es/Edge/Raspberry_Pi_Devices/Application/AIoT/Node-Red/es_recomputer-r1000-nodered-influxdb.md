@@ -1,6 +1,5 @@
 ---
 description: Despliega InfluxDB en un reComputer R1000 para la recopilación y análisis eficiente de datos de series temporales en aplicaciones IoT. Esta guía cubre la instalación, configuración y uso para aprovechar el poder de InfluxDB en tu controlador edge basado en Raspberry Pi. Logra información en tiempo real y capacidades de monitoreo robustas directamente en el borde de tu red.
-
 title: reComputer R1000 con Node Red e InfluxDB
 keywords:
   - Edge Controller

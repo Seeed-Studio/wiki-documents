@@ -12,9 +12,7 @@ slug: /cn/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson
 last_update:
   date: 04/1/2024
   author: Jiahao
-
 no_comments: false # for Disqus
-
 ---
 
 # 在 Jetson 上使用 MLC LLM 量化 Llama2-7B

@@ -1,16 +1,13 @@
 ---
 description: SD_Card_shield_V4.0
 title: SD Card shield V4.0
-
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SD_Card_shield_V4.0
 sku: 103030005
 last_update:
   date: 01/30/2023  
   author: Eico 
-
 no_comments: false # for Disqus
-
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SD_Card_shield_V4.0/img/SD_Card_Shield-v4.jpg" alt="pir" width={600} height="auto" /></p>

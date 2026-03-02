@@ -1,6 +1,5 @@
 ---
 description: 通过这个分步指南学习如何在 reComputer 设备上使用 ThingsBoard。了解如何添加设备、配置 MQTT 节点，并使用流行功能创建交互式仪表板以实现高效的数据监控。
-
 title: 使用 ThingsBoard 和 reComputer R1000 创建动态物联网仪表板
 keywords:
   - reComputer-R1000

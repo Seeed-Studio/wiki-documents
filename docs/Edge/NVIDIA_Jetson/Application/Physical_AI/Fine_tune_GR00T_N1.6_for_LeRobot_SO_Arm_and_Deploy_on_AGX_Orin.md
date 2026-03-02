@@ -1,7 +1,6 @@
 ---
 description: This wiki introduces provides example workflows for deploying AI and robotics projects on J501 Mini (AGX Orin). Detailed step-by-step instructions and reference documentation are also provided.
 title: Fine-tune Isaac GR00T N1.6 for LeRobot SO-101 Arm and Deploy on AGX Orin
-
 keywords:
 - J501 mini
 - Robotics
