@@ -9,8 +9,9 @@ keywords:
   - SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE03/3-XIAO-ePaper-Display-Board-EE03-kit.jpg
 slug: /getting_started_with_ee03
+sku: 100080566
 last_update:
-  date: 2026-02-28
+  date: 2026-03-1
   author: Jackson.Li
 ---
 
