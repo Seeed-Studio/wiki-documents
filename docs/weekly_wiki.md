@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 02/09/2026
+  date: 03/02/2026
   author: Frank
 ---
 
@@ -17,39 +17,25 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is February 9th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is March 2nd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Fruit Sorting with J501 Mini and StarAI Viola Arm](https://wiki.seeedstudio.com/j501_mini_starai_viola_fruit_sorting/)
+### [Animation workshop: XIAO ESP32-S3 and LVGL optimization guide](https://wiki.seeedstudio.com/round_display_animation_workshop/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png" alt="pir" width={600} height="auto" /></p>
-
-<div style={{ textAlign: "justify" }}>
-
-This wiki demonstrates how to use the **J501 Mini (Jetson AGX Orin)** with the **StarAI Viola robotic arm** to perform fruit sorting tasks using the **LeRobot framework**. The project showcases an end-to-end workflow from data collection to deployment, enabling the robot to intelligently grasp and organize fruits.
-
-</div>
-
-### [Local OpenClaw(Clawdbot) on reComputer Jetson with Ollama](https://wiki.seeedstudio.com/local_openclaw_on_recomputer_jetson/)
-
-<div class="video-container">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/kZbWuK7YFuc" title="Local OpenClaw(Clawdbot) on reComputer Jetson with Ollama" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_animation_workshop/hb_screen.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div style={{ textAlign: "justify" }}>
 
-OpenClaw supports both cloud and local LLMs. Cloud is easy to start and scale but adds token costs and external dependencies. Local runs offline, keeps data on-device, and avoids API fees, though it requires setup and must fit device limits. This wiki shows how to run OpenClaw on reComputer Jetson with Ollama as a self-contained AI hub.
+In this workshop, you will implement an application that renders and animates three vector assets: a **Hummingbird**, a **Raccoon**, and a **Whale**. You'll learn how to handle complex SVG rendering on resource-constrained hardware by navigating through progressive optimization phases. This tutorial will walk you through the process of taking basic SVG animations and optimizing them for the ESP32-S3. The optimizations will walk you through five phases that show improvements from a stuttering 7-9 FPS to a fluid 30 FPS.
 
 </div>
 
-### [reSpeaker XVF3800 (XIAO ESP32-S3) + Agora Conversational AI Agent v2 Edge Conversational Client Deployment Guide](https://wiki.seeedstudio.com/respeaker_xvf3800_agora_convo_client/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
+### [Flash JetPack with WSL2](https://wiki.seeedstudio.com/ai_robotics_flash_jetpack_with_wsl2/)
 
 <div style={{ textAlign: "justify" }}>
 
-In this tutorial, we will guide you to use **Seeed Studio reSpeaker XVF3800 (XIAO ESP32-S3)** as an edge voice device to establish a stable, low-latency, bidirectional audio link via **Agora RTC**, and directly call **Agora Conversational AI Agent API v2** on the device to complete the conversational loop of **ASR → LLM → TTS**: the device captures microphone audio and sends it uplink; the cloud AI generates spoken replies and sends them downlink; the device plays them back in real time—delivering a “phone-call-like” voice conversation experience.
+This tutorial demonstrates how to flash JetPack on Jetson devices using Windows Subsystem for Linux 2 (WSL2). This method allows Windows users to flash JetPack without setting up a dedicated Ubuntu machine.
 
 </div>
 
@@ -179,5 +165,6 @@ By combining **Speech-to-Text (STT)**, **Text-to-Speech (TTS)**, and **Local Lar
 - [weekly wiki on 2026.1.19th](/Seeed_Elderly/weekly_wiki/2026/wiki260119)
 - [weekly wiki on 2026.1.26th](/Seeed_Elderly/weekly_wiki/2026/wiki260126)
 - [weekly wiki on 2026.2.02nd](/Seeed_Elderly/weekly_wiki/2026/wiki260202)
+- [weekly wiki on 2026.2.09th](/Seeed_Elderly/weekly_wiki/2026/wiki260209)
 
 </details>

@@ -1,5 +1,5 @@
 ---
-description: reTerminal E1004 es una pantalla de papel electrónico a color de 13,3 pulgadas, de código abierto, impulsada por ESP32-S3, que incorpora la tecnología E Ink® Spectra™ 6 y compatibilidad con SenseCraft HMI.
+description: reTerminal E1004 es una pantalla de tinta electrónica a color de 13,3 pulgadas, de código abierto, impulsada por ESP32-S3, que incorpora la tecnología E Ink® Spectra™ 6 y compatibilidad con SenseCraft HMI.
 title: Introducción a reTerminal E1004
 sidebar_position: 4
 keywords:
@@ -23,14 +23,14 @@ last_update:
 
 ## Introducción
 
-reTerminal E1004 es una pantalla de papel electrónico a color de 13,3 pulgadas y código abierto, con una duración de batería de hasta 3 meses. Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz sin código SenseCraft HMI para una creación de paneles de control sencilla, y además es compatible con Home Assistant, Arduino y ESP-IDF para desarrollos adicionales. Con la pantalla de papel electrónico a todo color E Ink® Spectra™ 6, es perfecta para marcos digitales y visualización de paneles de control a color.
+reTerminal E1004 es una pantalla de tinta electrónica a color de 13,3 pulgadas y código abierto, con una duración de batería de hasta 6 meses. Impulsada por ESP32-S3, es compatible de forma nativa con nuestra plataforma de interfaz sin código SenseCraft HMI para crear paneles de control fácilmente, y además es compatible con Home Assistant, Arduino y ESP-IDF para desarrollos adicionales. Con la pantalla de tinta electrónica a todo color E Ink® Spectra™ 6, es perfecta como marco digital y para la visualización de paneles de control a color.
 
 ### Características
 
-- **Pantalla a color de alta definición:** Pantalla de papel electrónico a todo color E Ink® Spectra™ 6 de 13,3 pulgadas con una alta resolución de 1200x1600 píxeles.
+- **Pantalla a color de alta definición:** Pantalla de tinta electrónica a todo color E Ink® Spectra™ 6 de 13,3 pulgadas con una alta resolución de 1200x1600 píxeles.
 - **Procesamiento potente:** Impulsada por ESP32-S3 con 8MB de PSRAM y 32MB de Flash para un rendimiento robusto.
-- **Consumo de energía ultrabajo:** Batería integrada de 5000mAh que admite hasta 3 meses de uso con una sola carga (modo de suspensión profunda).
-- **Desarrollo de interfaz sin código:** El firmware predeterminado es compatible con SenseCraft HMI para la creación de paneles de control mediante arrastrar y soltar y diseño asistido por IA.
+- **Consumo de energía ultrabajo:** Batería integrada de 5000mAh que admite hasta 6 meses de uso con una sola carga (actualización cada 6 horas).
+- **Desarrollo de interfaz sin código:** El firmware predeterminado es compatible con SenseCraft HMI para crear paneles de control mediante arrastrar y soltar y diseño asistido por IA.
 - **Amplia compatibilidad:** Compatible con Home Assistant (ESPHome), Arduino, PlatformIO y ESP-IDF.
 - **Conectividad rica:** Wi-Fi de 2,4GHz (802.11 b/g/n) y Bluetooth 5.0 integrados.
 - **Sensores y audio integrados:** Sensores de temperatura y humedad integrados, y un zumbador para alertas.
@@ -42,16 +42,16 @@ reTerminal E1004 es una pantalla de papel electrónico a color de 13,3 pulgadas 
 | :--- | :--- |
 | **Nombre del producto** | reTerminal E1004 |
 | **Procesador** | ESP32-S3 con 8MB PSRAM |
-| **Almacenamiento** | 32MB Flash, compatible con tarjeta Micro SD (hasta 32GB, 16GB incluida) |
+| **Almacenamiento** | 32MB Flash, compatible con tarjeta Micro SD (hasta 32GB, incluye 16GB) |
 | **Pantalla** | 13.3" Spectra™ 6 Full Color ePaper |
 | **Resolución** | 1200 x 1600 píxeles |
-| **Conectividad inalámbrica** | 2.4GHz 802.11 b/g/n Wi-Fi, Bluetooth 5.0 |
+| **Conectividad inalámbrica** | Wi-Fi 2.4GHz 802.11 b/g/n, Bluetooth 5.0 |
 | **Sensores** | Sensores de temperatura y humedad |
 | **Audio** | Zumbador (alerta sonora) |
 | **Batería** | 5000mAh |
 | **Entrada de alimentación** | USB-C 5V/1A |
 | **Compatibilidad de software** | SenseCraft HMI (predeterminado), ESPHome, Arduino, PlatformIO, ESP-IDF |
-| **Temperatura de trabajo** | 0-40°C |
+| **Temperatura de funcionamiento** | 0-40°C |
 | **Dimensiones** | 376mm x 311mm x 40mm |
 
 ## Aplicaciones
@@ -59,7 +59,7 @@ reTerminal E1004 es una pantalla de papel electrónico a color de 13,3 pulgadas 
 - **Marco de fotos electrónico de bajo consumo:** Muestra fotos familiares o arte en alta resolución con una calidad similar al papel sin preocuparte por la carga diaria.
 - **Tablón de información familiar:** Mantén al día calendarios, notificaciones, clima y noticias en un formato elegante y siempre visible.
 - **Panel de control para automatización del hogar:** Visualiza datos en tiempo real del hogar inteligente (temperatura, humedad, calidad del aire) mediante Home Assistant.
-- **Pantalla inteligente para oficina:** Muestra horarios de salas de reuniones, disponibilidad o indicaciones de dirección.
+- **Pantalla inteligente para oficina:** Muestra horarios de salas de reuniones, disponibilidad o señalización direccional.
 - **Cartelería para comercios y espacios públicos:** Menús, horarios o indicadores de ocupación de bajo consumo energético.
 - **Educación y prototipado:** Una plataforma ideal para aprender IoT, sistemas embebidos y diseño de interfaces.
 
@@ -99,14 +99,14 @@ El reTerminal E1004 viene preinstalado con firmware que es compatible con **Sens
 1. Visita la [plataforma SenseCraft HMI](https://sensecraft.seeed.cc/) en el navegador de tu ordenador.
 2. Inicia sesión en tu cuenta (o crea una si aún no la tienes).
 3. Ve a la sección **Device Management** y haz clic en **Add Device**.
-4. Introduce el **Device Code** que se muestra en la pantalla de tu reTerminal E1004 para completar el proceso de vinculación.
+4. Introduce el **Device Code** que aparece en la pantalla de tu reTerminal E1004 para completar el proceso de vinculación.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/12.jpg" style={{width:1000, height:'auto'}}/></div>
 
 ### Paso 3. Crear contenido en la plataforma
 
 1. Ve a la **Home Page**, selecciona una plantilla que desees o **Wrokspace** para crear tu trabajo desde cero.
-2. [Haz clic en este enlace para aprender a usar la HMI Platform si tienes alguna pregunta.](https://sensecraft-hmi-docs.seeed.cc/en/)
+2. [Haz clic en este enlace para aprender a usar la plataforma HMI si tienes alguna pregunta.](https://sensecraft-hmi-docs.seeed.cc/en/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/2.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -115,7 +115,7 @@ El reTerminal E1004 viene preinstalado con firmware que es compatible con **Sens
 1. Cuando tu diseño esté listo, haz clic en el botón **Preview** para comprobar su apariencia.
 2. Haz clic en el botón **Save** o **deploy**.
 3. Selecciona tu reTerminal E1004 vinculado de la lista.
-4. La plataforma enviará los datos a tu dispositivo a través de Wi-Fi. La pantalla de papel electrónico se actualizará para mostrar tu nuevo panel de control.
+4. La plataforma enviará los datos a tu dispositivo a través de Wi-Fi. La pantalla de tinta electrónica se actualizará para mostrar tu nuevo panel de control.
 
 :::note
 Debido a la naturaleza de la tecnología E Ink, la actualización de la pantalla puede tardar unos segundos en completar la imagen y eliminar cualquier efecto fantasma.
@@ -129,7 +129,7 @@ Debido a la naturaleza de la tecnología E Ink, la actualización de la pantalla
 
 ## Soporte técnico y debate sobre el producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
+Gracias por elegir nuestros productos. Estamos aquí para ofrecerte diferentes tipos de soporte y garantizar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
