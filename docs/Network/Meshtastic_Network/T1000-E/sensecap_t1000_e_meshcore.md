@@ -1,5 +1,5 @@
 ---
-description: Get Started with SenseCAP Card Tracker T1000-E for Meshcore
+description: Guide to flashing MeshCore firmware on the T1000-E via Web USB or drag-and-drop, along with app configuration for LoRa region, GPS, and sending messages.
 title: Get Started with Meshhcore
 keywords:
 - Tracker

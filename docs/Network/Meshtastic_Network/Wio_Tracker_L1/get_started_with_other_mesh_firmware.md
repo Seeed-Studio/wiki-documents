@@ -1,5 +1,5 @@
 ---
-description: Get Started with Wio Tracker L1 Series for Meshcore
+description: Guide to flashing MeshCore firmware on the Wio Tracker L1 Pro via Web USB or drag-and-drop, along with app configuration for LoRa region, GPS, and sending messages.
 title:  Get Started with Meshcore
 keywords:
 - Meshcore

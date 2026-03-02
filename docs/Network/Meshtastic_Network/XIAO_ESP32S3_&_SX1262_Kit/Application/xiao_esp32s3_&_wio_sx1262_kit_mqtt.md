@@ -1,28 +1,14 @@
 ---
-description: Meshtastic MQTT Gateway Setting Tutorial based on XIAO ESP32S3 & Wio-SX1262 Kit
+description: Guide to setting up a Meshtastic MQTT gateway using the XIAO ESP32S3 and Wio-SX1262, bridging LoRa mesh networks to the internet for global message exchange.
 title: Setting up MQTT Gateway
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
-slug: /xiao_esp32s3_&_wio_SX1262_kit_mqtt
+slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
 sku: 102010611,113110064
 sidebar_position: 1
 last_update:
   date: 3/2/2026
   author: Michelle Huang
 ---
-
----
-description: Get Started with SenseCAP Card Tracker T1000-E for Meshcore
-title: Get Started with Meshhcore
-keywords:
-- Tracker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /sensecap_t1000_e_meshcore
-sku: 114993369
-sidebar_position: 3
-last_update:
-  date: 2/28/2026
-  author: Michelle Huang
----  
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
