@@ -98,7 +98,7 @@ USB Type-C ケーブルを使用して、EE03 ボードを電源（コンピュ�
 
 **Step 6. SenseCraft HMI 上でデバイスをバインドする**
 [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi/device) にアクセスします。アカウントにログインし、デバイス管理セクションに移動して "Add Device" を選択します。E-ink スクリーンに表示されている Pairing Code を入力します。
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_4.jpg" style={{width:800, height:'auto'}}/></div]
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_4.jpg" style={{width:800, height:'auto'}}/></div>
 **Step 7. 新しいインターフェースを作成してプッシュする**     
 SenseCraft HMI プラットフォーム上で、10.3インチスクリーンに適したテンプレートを選択して新しいインターフェースを作成するか、画像をアップロードします。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_8.jpg" style={{width:800, height:'auto'}}/></div>
