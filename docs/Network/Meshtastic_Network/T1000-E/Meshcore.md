@@ -1,5 +1,5 @@
 ---
-description: Get Started with SenseCAP Card Tracker T1000-E for Meshtastic
+description: Get Started with SenseCAP Card Tracker T1000-E for Meshcore
 title: Get Started with Meshhcore
 keywords:
 - Tracker
@@ -8,7 +8,7 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 2/28/2026
+  date: 3/2/2026
   author: Michelle Huang
 ---  
 

@@ -1,5 +1,5 @@
 ---
-description: Get Started with Wio Tracker L1 Series
+description: Get Started with Wio Tracker L1 Series for Meshcore
 title:  Get Started with Meshcore
 keywords:
 - Meshcore
@@ -8,7 +8,7 @@ slug: /get_started_with_other_mesh_firmware
 sku: 114993648,114993649,114993653,114993654
 sidebar_position: 3
 last_update:
-  date: 2/28/2026
+  date: 3/2/2026
   author: Michelle Huang
 ---       
 
@@ -235,7 +235,7 @@ Connect the device to your PC, double-press the `Reset` button. The yellow LED w
 
 ### Exiting DFU Mode
 
-Press the `Reset` button once to exit DFU mode.
+Press the `User` button once to exit DFU mode.
 
  ### Device automatically turns off
 
