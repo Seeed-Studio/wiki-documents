@@ -181,6 +181,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-80cm_Infrared_Proximity_Sensor',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Gesture_v1.0',
                 'Sensor/Grove/Grove_Sensors/Proximity/Grove-Adjustable_PIR_Motion_Sensor',
+                'Sensor/Grove/Grove_Sensors/Proximity/Grove-Hall_Sensor',
               ],
             },
             {
@@ -539,7 +540,6 @@ const sidebars = {
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Water_Atomization',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-16-Channel_PWM_Driver-PCA9685',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-I2C_Motor_Driver-TB6612FNG',
-                'Sensor/Grove/Grove_Accessories/Actuator/Grove-Hall_Sensor',
                 'Sensor/Grove/Grove_Accessories/Actuator/Grove-Voltage_Divider',
               ],
             },
@@ -1478,6 +1478,7 @@ const sidebars = {
                   label: 'Applications',
                   items: [
                     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/SeeedStudio_Round_Display_Christmas_ball',
+                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/SeeedStudio_Round_Display_Animation_Workshop',
                   ],
                 },
               ],
@@ -1909,7 +1910,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'ReSpeaker',
+      label: 'reSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -1919,7 +1920,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3800',
+          label: 'reSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -1930,7 +1931,7 @@ const sidebars = {
             
             {
               type: 'category',
-              label: 'ReSpeaker XVF 3800 with XIAO Intro',
+              label: 'reSpeaker XVF 3800 with XIAO Intro',
               collapsed: true,
               collapsible: true,
               link: {
@@ -1970,7 +1971,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker Lite',
+          label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -1980,7 +1981,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker Lite with XIAO ESP32S3',
+              label: 'reSpeaker Lite with XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
@@ -2019,7 +2020,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'ReSpeaker 2-Mics Pi HAT',
+          label: 'reSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
@@ -2046,13 +2047,28 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
             'Seeed_Elderly/reSpeaker/Extension_Board/ReSpeaker_Mic_Array_v3.0',
             'Seeed_Elderly/reSpeaker/Extension_Board/ReSpeaker_Mic_Array_v2.0',
             'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Sound Event Detection Module',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
+          },
+          items: [
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
       ],
@@ -3966,6 +3982,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/Flash_JetPack_with_WSL2',
           ]
         }
       ],
@@ -4199,6 +4216,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm_New',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO_ARM101_DAMO',
+            'Robotics/Robot_Kits/Lerobot/Lerobot_Dataset_Tool',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'Robotics/Robot_Kits/Lerobot/Lerobot_Lekiwi',
             'Robotics/Robot_Kits/Lerobot/Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
@@ -4221,9 +4239,203 @@ const sidebars = {
         {
           type: 'category',
           label: 'ReachyMini',
+          collapsible: true,
+          collapsed: false,
           items: [
-            'Robotics/Robot_Kits/ReachyMini/ReachyMini_Getting_Started',
-          ]
+            {
+              type: 'doc',
+              id: 'Robotics/Robot_Kits/ReachyMini/intro',
+              label: 'Introduction',
+            },
+            {
+              type: 'category',
+              label: 'Reachy Mini (Wireless)',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/get_started',
+                  label: 'Getting Started',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/usage',
+                  label: 'Usage',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/hardware',
+                  label: 'Hardware',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/media_advanced_controls',
+                  label: 'Media Advanced Controls',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/reset',
+                  label: 'Reset',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/install_daemon_from_branch',
+                  label: 'Install Daemon from Branch',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/development_workflow',
+                  label: 'Development Workflow',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini/reflash_the_rpi_ISO',
+                  label: 'Reflash the ISO',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Reachy Mini Lite',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/get_started',
+                  label: 'Getting Started',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/usage',
+                  label: 'Usage',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/hardware',
+                  label: 'Hardware',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/media_advanced_controls',
+                  label: 'Media Advanced Controls',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/reachy_mini_lite/wizard',
+                  label: 'Wizard',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Simulation',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/platforms/simulation/get_started',
+                  label: 'Getting Started',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'SDK Guide',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/readme',
+                  label: 'SDK Overview',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/installation',
+                  label: 'Installation',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/quickstart',
+                  label: 'Quickstart',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/python-sdk',
+                  label: 'Python SDK',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/javascript-sdk',
+                  label: 'JavaScript SDK',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/integration',
+                  label: 'AI Integrations',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/core-concept',
+                  label: 'Core Concepts',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/media-architecture',
+                  label: 'Media Architecture',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/SDK/gstreamer-installation',
+                  label: 'GStreamer Installation',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Help & Troubleshooting',
+              collapsible: true,
+              collapsed: false,
+              items: [
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting',
+                  label: 'Troubleshooting',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/motors_diagnosis',
+                  label: 'Motors Diagnosis',
+                },
+                {
+                  type: 'doc',
+                  id: 'Robotics/Robot_Kits/ReachyMini/troubleshooting/change_mic_fpc_cable',
+                  label: 'Change Mic FPC Cable',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Examples',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/examples' },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'API Reference',
+              collapsible: true,
+              collapsed: true,
+              items: [
+                { type: 'autogenerated', dirName: 'Robotics/Robot_Kits/ReachyMini/API' },
+              ],
+            },
+          ],
         },
         {
           type: 'category',

@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-02-10 15:03:51 (北京时间)
-// 多语言页面: 2138 个
+// 生成时间: 2026-03-02 11:20:28 (北京时间)
+// 多语言页面: 2194 个
 
 (function() {
   'use strict';
@@ -605,10 +605,9 @@
     "es",
     "ja"
   ],
-  "/ai_robotics_yolov26_dual_camera_system": [
+  "/ai_roboticsyolov26_dual_camera_system": [
     "cn",
     "en",
-    "es",
     "ja"
   ],
   "/YOLOv5-Object-Detection-Jetson": [
@@ -1050,6 +1049,12 @@
     "ja"
   ],
   "/enable_spi_interface_on_jetsonnano": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/ai_robotics_flash_jetpack_with_wsl2": [
     "cn",
     "en",
     "es",
@@ -2375,6 +2380,30 @@
     "es",
     "ja"
   ],
+  "/recomputer_industrial_r22xx_assembly_guide": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r22xx_configure_system": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r22xx_flash_os": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/recomputer_industrial_r22xx_getting_start": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/Edgebox-rpi-200-AWS": [
     "cn",
     "en",
@@ -3455,6 +3484,12 @@
     "es",
     "ja"
   ],
+  "/raspberry_pi_4g_lte_hat_mbim": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/4g_lte_hat_and_raspberry_pi_router_with_openwrt": [
     "cn",
     "en",
@@ -4259,9 +4294,254 @@
     "es",
     "ja"
   ],
+  "/reachymini_agents": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_api_apps": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_api_daemon": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_api_media": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_api_motion": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_api_reachymini": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_api_tools": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_api_utils": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_goto_interpolation_playground": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_imu": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_joy_controller": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_look_at": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_minimal_demo": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_mini_head_position_gui": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_reachy_compliant_demo": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_recorded_moves": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_rerun_viewer": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_sequence": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_sound_doa": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_sound_play": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_sound_record": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_examples_take_picture": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_intro": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_development_workflow": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_get_started": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_hardware": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_install_daemon_from_branch": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_media_advanced_controls": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_reflash_the_rpi_iso": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_reset": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_usage": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_lite_get_started": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_lite_hardware": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_lite_media_advanced_controls": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_lite_usage": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_reachy_mini_lite_wizard": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_platforms_simulation_get_started": [
+    "en",
+    "es",
+    "ja"
+  ],
   "/reachymini_getting_started": [
     "cn",
     "en"
+  ],
+  "/reachymini_sdk_core-concept": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_sdk_gstreamer-installation": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_sdk_installation": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_sdk_integration": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_sdk_javascript-sdk": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_sdk_media-architecture": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_sdk_python-sdk": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_sdk_quickstart": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_sdk_readme": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_troubleshooting_change_mic_fpc_cable": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_troubleshooting_motors_diagnosis": [
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reachymini_troubleshooting": [
+    "en",
+    "es",
+    "ja"
   ],
   "/stackforce_giant_bipedal_wheeled_robot": [
     "en",
@@ -6200,12 +6480,6 @@
     "es",
     "ja"
   ],
-  "/Grove-Hall_Sensor": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/Grove-Haptic_Motor": [
     "cn",
     "en",
@@ -7586,6 +7860,12 @@
     "ja"
   ],
   "/Grove-Gesture_v1.0": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/Grove-Hall_Sensor": [
     "cn",
     "en",
     "es",
@@ -9019,6 +9299,12 @@
     "es",
     "ja"
   ],
+  "/round_display_animation_workshop": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/round_display_christmas_ball": [
     "cn",
     "en",
@@ -9391,6 +9677,12 @@
     "es",
     "ja"
   ],
+  "/getting-started-xiao-rp2350": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/xiao_rp2350_nuttx": [
     "cn",
     "en",
@@ -9404,12 +9696,6 @@
     "ja"
   ],
   "/xiao-rp2350-c-cpp-sdk": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/getting-started-xiao-rp2350": [
     "cn",
     "en",
     "es",
@@ -10603,12 +10889,6 @@
     "es",
     "ja"
   ],
-  "/flash_watcher_agent_firmware": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/mcp_endpoint": [
     "cn",
     "en",
@@ -10622,6 +10902,12 @@
     "ja"
   ],
   "/watcher_web_control_panel": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/flash_watcher_agent_firmware": [
     "cn",
     "en",
     "es",

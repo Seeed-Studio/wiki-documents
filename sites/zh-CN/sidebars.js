@@ -175,6 +175,7 @@ const sidebars = {
                 'Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-80cm_Infrared_Proximity_Sensor',
                 'Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Gesture_v1.0',
                 'Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Adjustable_PIR_Motion_Sensor',
+                'Sensor/Grove/Grove_Sensors/Proximity/cn_Grove-Hall_Sensor',
               ],
             },
             {
@@ -1472,6 +1473,7 @@ const sidebars = {
                   label: '应用',
                   items: [
                     'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/cn_SeeedStudio_Round_Display_Christmas_ball',
+                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_Expansion_board/Round-display-for-XIAO/Application/cn_SeeedStudio_Round_Display_Animation_Workshop',
                   ],
                 },
               ],
@@ -1903,7 +1905,7 @@ const sidebars = {
     // },
     {
       type: 'category',
-      label: 'ReSpeaker',
+      label: 'reSpeaker',
       collapsed: true,
       collapsible: true,
       link: {
@@ -1913,7 +1915,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3800',
+          label: 'reSpeaker XVF 3800',
           collapsed: true,
           collapsible: true,
           link: {
@@ -1923,7 +1925,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker XVF 3800 with XIAO 介绍',
+              label: 'reSpeaker XVF 3800 with XIAO 介绍',
               collapsed: true,
               collapsible: true,
               link: {
@@ -1963,7 +1965,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker Lite',
+          label: 'reSpeaker Lite',
           collapsed: true,
           collapsible: true,
           link: {
@@ -1973,7 +1975,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'ReSpeaker Lite with XIAO ESP32S3',
+              label: 'reSpeaker Lite with XIAO ESP32S3',
               link: {
                 type: 'doc',
                 id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/cn_xiao_respeaker',
@@ -2012,7 +2014,7 @@ const sidebars = {
           type: 'category',
           collapsed: true,
           collapsible: true,
-          label: 'ReSpeaker 2-Mics Pi HAT',
+          label: 'reSpeaker 2-Mics Pi HAT',
           link: {
             type: 'doc',
             id: 'Sensor/ReSpeaker_2-Mics_Pi_HAT/cn_ReSpeaker_2_Mics_Pi_HAT',
@@ -2039,13 +2041,28 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'ReSpeaker XVF 3000',
+          label: 'reSpeaker XVF 3000',
           collapsed: true,
           collapsible: true,
           items: [
             'Seeed_Elderly/reSpeaker/Extension_Board/cn_ReSpeaker_Mic_Array_v3.0',
             'Seeed_Elderly/reSpeaker/Extension_Board/cn_ReSpeaker_Mic_Array_v2.0',
             'Seeed_Elderly/reSpeaker/cn_ReSpeaker-USB-Mic-Array',
+          ],
+        },
+        {
+          type: 'category',
+          label: '声音事件检测模块',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/Sound_event_sensor/cn_sound_event_sensor_intro',
+          },
+          items: [
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
       ],
@@ -3123,6 +3140,22 @@ const sidebars = {
                 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R21xx/cn_reComputer_Industrial_R21xx_assembly_guide'
               ]
             },
+            {
+              type: 'category',
+              label: 'reComputer-Industrial-R22xx',
+              collapsed: true,
+              collapsible: true,
+              link: {
+                type: "doc",
+                id: 'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_getting_start'
+              },
+              items: [
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_getting_start',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_flash_os',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_configure_system',
+                'Edge/Raspberry_Pi_Devices/Edge_AI_Computer/reComputer_Industrial_R22xx/cn_reComputer_Industrial_R22xx_assembly_guide'
+              ]
+            },
           ]
         },
         {
@@ -3936,6 +3969,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/FAQs/cn_Overview_of_the_Relationship_Between_JetPack_and_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/cn_How_to_Establish_the_Ethercat_on_Jetson',
             'Edge/NVIDIA_Jetson/FAQs/cn_Make_DIY_BSP_for_Jetson',
+            'Edge/NVIDIA_Jetson/FAQs/cn_Flash_JetPack_with_WSL2',
           ]
         }
       ],
@@ -4157,13 +4191,6 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'ReachyMini',
-          items: [
-            'Robotics/Robot_Kits/ReachyMini/cn_ReachyMini_Getting_Started',
-          ]
-        },
-        {
-          type: 'category',
           label: 'Lerobot',
           // link: {
           //   type: "doc",
@@ -4176,6 +4203,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/cn_Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/cn_Lerobot_SO100Arm_New',
             'Robotics/Robot_Kits/Lerobot/cn_Lerobot_SO_ARM101_DAMO',
+            'Robotics/Robot_Kits/Lerobot/cn_Lerobot_Dataset_Tool',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'Robotics/Robot_Kits/Lerobot/cn_Lerobot_Lekiwi',
             'Robotics/Robot_Kits/Lerobot/cn_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',

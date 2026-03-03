@@ -1,5 +1,0 @@
-position: 3 # float position is supported
-label: 'Training'
-collapsible: true # make the category collapsible
-collapsed: true # keep the category open by default
-className: sensecraft_ai_Tutorials_Training
