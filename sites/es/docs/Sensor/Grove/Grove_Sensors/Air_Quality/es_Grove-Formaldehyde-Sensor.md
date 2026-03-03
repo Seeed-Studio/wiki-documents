@@ -4,7 +4,7 @@ title: Grove - Sensor de formaldehído
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/GroveFormaldehydehardware.jpg
-slug: /es/Grove-Formaldehyde-Sensor
+slug: /Grove-Formaldehyde-Sensor
 sku: 101020972
 last_update:
   date: 3/7/2024

@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio_Link_Deluxe_Kit/
-slug: /es/Wio_Link_Deluxe_Kit
+slug: /Wio_Link_Deluxe_Kit
 sku: 110020052
 last_update:
   date: 01/11/2022

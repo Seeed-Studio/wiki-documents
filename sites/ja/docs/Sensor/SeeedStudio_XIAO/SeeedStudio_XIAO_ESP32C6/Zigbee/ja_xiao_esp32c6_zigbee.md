@@ -2,7 +2,7 @@
 description: このチュートリアルでは、XIAO ESP32C6開発ボードを使用してZigbeeアプリケーション開発を探求する旅に出ます。XIAO ESP32C6は、統合Wi-FiとBluetooth Low Energy（BLE）接続を提供するESP32-C6チップを搭載したコンパクトでありながら強力なボードです。ESP Zigbee SDKを活用することで、XIAO ESP32C6の全ポテンシャルを活用し、Zigbee機能を含むようにその機能を拡張できます。
 title: XIAO ESP32C6 Zigbee クイックスタートガイド（ESP-IDF）
 image: https://files.seeedstudio.com/wiki/xiaoc6_zigbee/3.jpg
-slug: /ja/xiao_esp32c6_zigbee
+slug: /xiao_esp32c6_zigbee
 sku: 113991254, 102010636, 101991470
 last_update:
   date: 05/30/2024

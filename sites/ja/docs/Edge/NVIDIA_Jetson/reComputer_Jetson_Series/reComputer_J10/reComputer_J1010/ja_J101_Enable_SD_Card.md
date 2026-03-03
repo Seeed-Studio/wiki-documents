@@ -2,7 +2,7 @@
 description: J101 SD カードの有効化
 title: J101 SD カードの有効化
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/J101_Enable_SD_Card
+slug: /J101_Enable_SD_Card
 last_update:
   date: 01/05/2022
   author: w0x7ce

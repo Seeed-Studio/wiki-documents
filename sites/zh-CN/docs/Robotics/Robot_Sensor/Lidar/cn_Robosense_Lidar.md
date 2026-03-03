@@ -9,7 +9,7 @@ keywords:
 - 速腾聚创3D雷达
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/robosense_lidar
+slug: /robosense_lidar
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui

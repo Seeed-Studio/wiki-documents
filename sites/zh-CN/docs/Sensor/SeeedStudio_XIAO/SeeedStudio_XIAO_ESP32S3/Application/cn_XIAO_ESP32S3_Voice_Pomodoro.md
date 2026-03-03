@@ -4,7 +4,7 @@ title: 使用 XIAO ESP32S3 和 CircuitPython 构建语音激活番茄钟计时�
 keywords:
   - XIAO
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/xiao_esp32s3_voice_pomodoro
+slug: /xiao_esp32s3_voice_pomodoro
 last_update:
   date: 04/17/2025
   author: Peter Machona

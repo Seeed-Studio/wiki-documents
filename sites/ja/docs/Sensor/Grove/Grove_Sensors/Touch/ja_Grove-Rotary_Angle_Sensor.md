@@ -4,7 +4,7 @@ title: Grove - Rotary Angle Sensor
 keywords:
 - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Rotary_Angle_Sensor
+slug: /Grove-Rotary_Angle_Sensor
 sku: 101020048, 101020017
 last_update:
   date: 05/15/2025

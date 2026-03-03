@@ -4,7 +4,7 @@ title: Grove - Brújula Digital de 3 Ejes v2.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-3-Axis_Digitial_Compass_v2.0
+slug: /Grove-3-Axis_Digitial_Compass_v2.0
 sku: 101020492
 last_update:
   date: 1/5/2023

@@ -2,7 +2,7 @@
 description: Conexión LNS Chirpstack basada en Wio SX1262 con módulo XIAO esp32s3
 title: Conectar a Chirpstack
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/51_1.png
-slug: /es/wio_sx1262_xiao_esp32s3_LNS_Chirpstack
+slug: /wio_sx1262_xiao_esp32s3_LNS_Chirpstack
 sidebar_position: 2
 last_update:
   date: 10/17/2024

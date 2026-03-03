@@ -4,7 +4,7 @@ title: Grove - LED灯串
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-LED_String_Light
+slug: /Grove-LED_String_Light
 sku: 104020005
 last_update:
   date: 1/7/2023

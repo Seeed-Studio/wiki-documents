@@ -6,7 +6,7 @@ keywords:
   - reComputer 
   - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reComputer_Intro
+slug: /reComputer_Intro
 last_update:
   date: 12/19/2023
   author: Youjiang

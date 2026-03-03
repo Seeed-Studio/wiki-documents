@@ -1,7 +1,7 @@
 ---
 description: Raspberry Pi 4 を搭載した Reachy Mini Wireless のセットアップガイドです。組み立て、初回起動、Wi-Fi 設定、システム更新、SSH アクセスについて説明します。
 title: Reachy Mini Wireless セットアップガイド
-slug: /ja/reachymini_platforms_reachy_mini_get_started
+slug: /reachymini_platforms_reachy_mini_get_started
 keywords:
 - wireless
 - setup

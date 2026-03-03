@@ -2,7 +2,7 @@
 description: 基于 Wio SX1262 与 XIAO esp32s3 模块的 TTN LNS 连接
 title: 连接到 TTN
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/40.png
-slug: /cn/wio_sx1262_xiao_esp32s3_LNS_TTN
+slug: /wio_sx1262_xiao_esp32s3_LNS_TTN
 sidebar_position: 1
 last_update:
   date: 10/17/2024

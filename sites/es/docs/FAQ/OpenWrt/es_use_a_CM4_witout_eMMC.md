@@ -2,7 +2,7 @@
 description: OpenWrt-FAQ
 title: Cómo usar un CM4 sin eMMC en la Placa Portadora Dual Gigabit Ethernet
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/use_a_CM4_witout_eMMC
+slug: /use_a_CM4_witout_eMMC
 last_update:
   date: 6/21/2023
   author: Seraphina

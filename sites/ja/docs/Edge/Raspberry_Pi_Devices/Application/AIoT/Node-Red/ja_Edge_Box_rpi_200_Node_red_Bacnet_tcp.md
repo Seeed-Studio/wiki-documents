@@ -7,7 +7,7 @@ keywords:
   - Node-Red
   - Bacnet
 image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
-slug: /ja/edge_box_rpi_200_node_red_bacnet_tcp
+slug: /edge_box_rpi_200_node_red_bacnet_tcp
 last_update:
   date: 06/05/2024
   author: Kasun Thushara

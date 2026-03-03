@@ -7,7 +7,7 @@ keywords:
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 sidebar_class_name: hidden
-slug: /es/sensecraft-ai/xiao-esp32s3-workspace
+slug: /sensecraft-ai/xiao-esp32s3-workspace
 last_update:
   date: 08/22/2024
   author: Frank

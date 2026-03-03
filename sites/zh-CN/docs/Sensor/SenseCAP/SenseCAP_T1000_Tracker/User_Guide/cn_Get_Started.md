@@ -4,7 +4,7 @@ title: 快速入门
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Get_Started_with_SenseCAP_T1000_tracker
+slug: /Get_Started_with_SenseCAP_T1000_tracker
 last_update:
   date: 2/14/2026
   author: Janet

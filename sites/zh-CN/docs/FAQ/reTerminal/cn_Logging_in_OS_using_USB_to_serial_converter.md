@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 如何使用 USB 转串口转换器登录到 Raspberry Pi OS/ Ubuntu OS 或其他操作系统
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Logging_in_OS_using_USB_to_serial_converter
+slug: /Logging_in_OS_using_USB_to_serial_converter
 last_update:
   date: 2023/6/21
   author: Seraphina

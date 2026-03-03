@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Cómo flashear el SO si reemplazo el CM4 con una versión sin eMMC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/flashing_os_on_non-eMMC_CM4_replacement
+slug: /flashing_os_on_non-eMMC_CM4_replacement
 last_update:
   date: 6/21/2023
   author: Seraphina

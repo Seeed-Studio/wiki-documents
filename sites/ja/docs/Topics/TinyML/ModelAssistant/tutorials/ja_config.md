@@ -4,7 +4,7 @@ title: 設定
 keywords:
 - sscma モデルアシスタント ai tinyml 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ModelAssistant_Tutorials_Config
+slug: /ModelAssistant_Tutorials_Config
 last_update:
   date: 05/15/2025
   author: LynnL4

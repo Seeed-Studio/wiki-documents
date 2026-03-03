@@ -7,7 +7,7 @@ keywords:
 - lvgl
 - draw dials
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/using_lvgl_and_tft_on_round_display
+slug: /using_lvgl_and_tft_on_round_display
 sku: 104030087
 last_update:
   date: 09/12/2024

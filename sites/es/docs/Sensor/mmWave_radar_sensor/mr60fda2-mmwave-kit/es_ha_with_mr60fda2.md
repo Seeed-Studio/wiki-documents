@@ -6,7 +6,7 @@ keywords:
 - radar
 - MR60FDA2
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
-slug: /es/ha_with_mr60fda2
+slug: /ha_with_mr60fda2
 sidebar_position: 1
 last_update:
   date: 10/15/2024

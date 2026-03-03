@@ -2,7 +2,7 @@
 description: OpenWrt-FAQ
 title: OpenWrtでデフォルトゲートウェイIPを変更する方法は？
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/change_default_gateway_IP
+slug: /change_default_gateway_IP
 last_update:
   date: 6/21/2023
   author: Seraphina

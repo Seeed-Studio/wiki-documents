@@ -4,7 +4,7 @@ title: ジェスチャーで音楽を制御
 keywords:
 - ジェスチャー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/gesture_control_music_application
+slug: /gesture_control_music_application
 last_update:
   date: 05/15/2025
   author: Allen

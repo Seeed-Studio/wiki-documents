@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: wio_tracker_1110_dev_board
 link:
   type: generated-index
-  slug: cn/wio_tracker_1110_dev_board_class
+  slug: wio_tracker_1110_dev_board_class
   title: Wio Tracker 1110 开发板
   description: Wio Tracker 1110 开发板产品文档

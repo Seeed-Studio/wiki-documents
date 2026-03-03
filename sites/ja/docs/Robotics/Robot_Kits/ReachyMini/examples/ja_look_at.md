@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini からのビデオストリームを表示し、フレーム上でクリックした場所を見るようにロボットを動かす方法を示すサンプルです。
 title: 画像を見る
-slug: /ja/reachymini_examples_look_at
+slug: /reachymini_examples_look_at
 keywords:
 - カメラ
 - ビデオストリーム

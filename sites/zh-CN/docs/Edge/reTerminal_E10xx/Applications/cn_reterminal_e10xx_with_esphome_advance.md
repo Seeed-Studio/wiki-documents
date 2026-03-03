@@ -2,7 +2,7 @@
 description: 本文介绍如何在 ESPHome 中利用 reTerminal E 系列 ePaper 显示屏的硬件功能。
 title: reTerminal E 系列 ePaper 显示屏在 Home Assistant 中的高级 ESPHome 用法
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
-slug: /cn/reterminal_e10xx_with_esphome_advanced
+slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 3
 last_update:
   date: 07/24/2025

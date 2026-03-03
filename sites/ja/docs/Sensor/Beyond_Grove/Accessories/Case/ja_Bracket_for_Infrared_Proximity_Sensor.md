@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - Docusaurus
 image: https://wiki.seeedstudio.com/ja/Bracket_for_Infrared_Proximity_Sensor/
-slug: /ja/Bracket_for_Infrared_Proximity_Sensor
+slug: /Bracket_for_Infrared_Proximity_Sensor
 last_update:
   date: 05/15/2025
   author: gunengyu

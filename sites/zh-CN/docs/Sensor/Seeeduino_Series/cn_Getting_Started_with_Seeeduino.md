@@ -4,7 +4,7 @@ title: Seeeduino 入门指南
 keywords:
 - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Getting_Started_with_Seeeduino
+slug: /Getting_Started_with_Seeeduino
 last_update:
   date: 1/12/2022
   author: hushuxu

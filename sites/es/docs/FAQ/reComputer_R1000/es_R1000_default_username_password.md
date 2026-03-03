@@ -2,7 +2,7 @@
 description: reComputer R1000-FAQ
 title: ¿Cuál es la contraseña del usuario predeterminado "recomputer"?
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/R1000_default_username_password
+slug: /R1000_default_username_password
 last_update: 
   date: 6/21/2024
   author: Harrison Xu

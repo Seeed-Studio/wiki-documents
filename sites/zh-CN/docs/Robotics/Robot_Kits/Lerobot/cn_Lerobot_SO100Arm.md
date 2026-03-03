@@ -7,7 +7,7 @@ keywords:
 - 机械臂
 - 机器人
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
-slug: /cn/lerobot_so100m
+slug: /lerobot_so100m
 sku: E24122002, 114993609, 114993608, 108090023, 108090003, 101090141, 101090142
 last_update:
   date: 2024-12-24

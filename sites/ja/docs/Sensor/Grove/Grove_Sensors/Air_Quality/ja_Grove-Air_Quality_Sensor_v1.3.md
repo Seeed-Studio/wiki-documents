@@ -4,7 +4,7 @@ title: Grove - Air Quality Sensor v1.3
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove_Air_Quality_Sensor_v1.3/img/Grove-Air_Quality_Sensor_v1.3.webp
-slug: /ja/Grove-Air_Quality_Sensor_v1.3
+slug: /Grove-Air_Quality_Sensor_v1.3
 sku: 101020078
 last_update:
   date: 05/15/2025

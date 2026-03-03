@@ -2,7 +2,7 @@
 description: Cómo Usar Sketchbook
 title: Cómo Usar Sketchbook
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/How_To_Use_Sketchbook
+slug: /How_To_Use_Sketchbook
 last_update:
   date: 02/01/2023
   author: w0x7ce

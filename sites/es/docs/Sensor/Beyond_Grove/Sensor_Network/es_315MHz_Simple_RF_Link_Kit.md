@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/315MHz_Simple_RF_Link_Kit/
-slug: /es/315MHz_Simple_RF_Link_Kit
+slug: /315MHz_Simple_RF_Link_Kit
 last_update:
   date: 02/03/2022
   author: gunengyu

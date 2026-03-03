@@ -4,7 +4,7 @@ title: Grove - 6轴加速度计和陀螺仪
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-6-Axis_AccelerometerAndGyroscope
+slug: /Grove-6-Axis_AccelerometerAndGyroscope
 sku: 105020012
 last_update:
   date: 1/6/2023

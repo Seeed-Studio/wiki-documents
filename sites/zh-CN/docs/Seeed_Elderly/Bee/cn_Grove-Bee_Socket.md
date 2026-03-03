@@ -4,7 +4,7 @@ title: Grove - Bee Socket
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Bee_Socket
+slug: /Grove-Bee_Socket
 sku: 103020002
 last_update:
   date: 1/13/2023

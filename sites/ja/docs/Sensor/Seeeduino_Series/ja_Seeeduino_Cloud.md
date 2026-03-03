@@ -4,7 +4,7 @@ title: Seeeduino Cloud
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeeduino_Cloud
+slug: /Seeeduino_Cloud
 sku: 102010021
 last_update:
   date: 05/15/2025

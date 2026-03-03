@@ -7,7 +7,7 @@ keywords:
   - Home Assistant
   - reComputer
 image: https://files.seeedstudio.com/wiki/reCamera/wechat_bot.png
-slug: /cn/getting_started_in_Wechat_work_with_recamera
+slug: /getting_started_in_Wechat_work_with_recamera
 sidebar_position: 8
 last_update:
   date: 11/19/2025

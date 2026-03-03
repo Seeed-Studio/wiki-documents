@@ -4,7 +4,7 @@ title: Grove 网络模块指南
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_network_module_intro
+slug: /Grove_network_module_intro
 last_update:
   date: 07/19/2023
   author: Matthew

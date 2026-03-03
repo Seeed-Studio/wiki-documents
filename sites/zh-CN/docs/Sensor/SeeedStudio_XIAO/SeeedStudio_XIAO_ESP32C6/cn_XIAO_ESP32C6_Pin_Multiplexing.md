@@ -6,7 +6,7 @@ keywords:
   - xiao
   - pin multiple
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg
-slug: /cn/xiao_pin_multiplexing_esp32c6
+slug: /xiao_pin_multiplexing_esp32c6
 sidebar_position: 2
 last_update:
   date: 04/10/2024

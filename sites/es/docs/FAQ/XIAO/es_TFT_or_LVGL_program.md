@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display for XIAO-FAQ
 title: He seguido el tutorial y aún no puedo compilar correctamente el programa TFT o LVGL, ¿qué debo hacer?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/TFT_or_LVGL_program
+slug: /TFT_or_LVGL_program
 last_update:
   date: 6/30/2023
   author: cheng.tang

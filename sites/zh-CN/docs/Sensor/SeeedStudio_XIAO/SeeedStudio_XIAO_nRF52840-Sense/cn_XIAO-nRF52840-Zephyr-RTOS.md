@@ -4,7 +4,7 @@ title:  XIAO nRF52840(sense) 与 Zephyr(RTOS)
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/XIAO-nRF52840-Zephyr-RTOS
+slug: /XIAO-nRF52840-Zephyr-RTOS
 last_update:
   date: 06/07/2024
   author: Tim

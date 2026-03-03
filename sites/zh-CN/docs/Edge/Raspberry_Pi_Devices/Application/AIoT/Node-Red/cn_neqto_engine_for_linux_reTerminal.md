@@ -2,7 +2,7 @@
 description: 在 reTerminal 上开始使用 NEQTO Engine for Linux
 title: 在 reTerminal 上开始使用 NEQTO Engine for Linux
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/neqto_engine_for_linux_reTerminal
+slug: /neqto_engine_for_linux_reTerminal
 sku: 110070048
 last_update:
   date: 04/17/2024

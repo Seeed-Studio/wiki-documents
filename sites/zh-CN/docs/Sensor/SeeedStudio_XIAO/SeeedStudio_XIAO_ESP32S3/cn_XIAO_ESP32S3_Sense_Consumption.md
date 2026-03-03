@@ -4,7 +4,7 @@ title: XIAO ESP32S3 Sense 睡眠模式
 keywords:
 - Sleep_Modes
 image: https://files.seeedstudio.com//wiki/ESP32S3_Sense_SleepMode/1.png
-slug: /cn/XIAO_ESP32S3_Consumption
+slug: /XIAO_ESP32S3_Consumption
 last_update:
   date: 08/27/2024
   author: Jason

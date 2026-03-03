@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Doppler-Radar/
-slug: /es/Grove-Doppler-Radar
+slug: /Grove-Doppler-Radar
 sku: 109020021
 last_update:
   date: 01/04/2022

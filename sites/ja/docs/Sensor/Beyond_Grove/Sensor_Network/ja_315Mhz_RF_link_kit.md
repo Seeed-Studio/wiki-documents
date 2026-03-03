@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/315Mhz_RF_link_kit/
-slug: /ja/315Mhz_RF_link_kit
+slug: /315Mhz_RF_link_kit
 sku: 113990017
 last_update:
   date: 05/15/2025

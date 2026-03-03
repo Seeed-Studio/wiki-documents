@@ -4,7 +4,7 @@ title: SenseCAP センサープローブ製品カタログ
 keywords:
 - SenseCAP_Sensor_Probes
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_Sensor_Probes_Product_Catalogue
+slug: /SenseCAP_Sensor_Probes_Product_Catalogue
 last_update:
   date: 10/13/2023
   author: Yvonne

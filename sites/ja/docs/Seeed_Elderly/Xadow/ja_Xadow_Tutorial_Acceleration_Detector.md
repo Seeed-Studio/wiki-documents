@@ -4,7 +4,7 @@ title: Xadow チュートリアル - 加速度検出器
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Tutorial_Acceleration_Detector
+slug: /Xadow_Tutorial_Acceleration_Detector
 last_update:
   date: 05/15/2025
   author: shuxu hu

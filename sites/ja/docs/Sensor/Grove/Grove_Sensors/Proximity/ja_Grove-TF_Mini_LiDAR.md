@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-TF_Mini_LiDAR/
-slug: /ja/Grove-TF_Mini_LiDAR
+slug: /Grove-TF_Mini_LiDAR
 sku: 114991434, 101990656, 101990620, 101990388
 last_update:
   date: 05/15/2025

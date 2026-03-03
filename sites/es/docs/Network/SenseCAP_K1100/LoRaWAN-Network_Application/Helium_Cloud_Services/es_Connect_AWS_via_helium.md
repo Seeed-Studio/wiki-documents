@@ -4,7 +4,7 @@ title: Plataforma IoT AWS Integrada
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Connect_AWS_via_helium
+slug: /Connect_AWS_via_helium
 last_update:
   date: 1/13/2023
   author: shuxu hu

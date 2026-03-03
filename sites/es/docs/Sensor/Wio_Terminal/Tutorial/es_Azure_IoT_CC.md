@@ -4,7 +4,7 @@ nointro:
 keywords:
   - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/Azure_IoT_CC
+slug: /Azure_IoT_CC
 last_update:
   date: 01/11/2022
   author: gunengyu

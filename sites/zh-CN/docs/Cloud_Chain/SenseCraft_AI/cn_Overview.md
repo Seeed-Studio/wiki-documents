@@ -3,7 +3,7 @@
 description: 本文是对 SenseCraft AI 主页的简要介绍。
 title: 概述
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
-slug: /cn/sensecraft-ai/overview
+slug: /sensecraft-ai/overview
 aliases:
   - /cn/sensecraft_ai_overview
 sidebar_position: 1

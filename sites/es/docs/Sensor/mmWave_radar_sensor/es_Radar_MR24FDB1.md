@@ -4,7 +4,7 @@ title: Detección de Caídas Humanas mmWave de 24GHz
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Radar_MR24FDB1
+slug: /Radar_MR24FDB1
 sku: 101990884
 last_update:
   date: 1/12/2023

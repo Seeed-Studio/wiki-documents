@@ -4,7 +4,7 @@ title: AWS IoT 平台集成
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Connect_AWS_via_helium
+slug: /Connect_AWS_via_helium
 last_update:
   date: 2023/1/13
   author: shuxu hu

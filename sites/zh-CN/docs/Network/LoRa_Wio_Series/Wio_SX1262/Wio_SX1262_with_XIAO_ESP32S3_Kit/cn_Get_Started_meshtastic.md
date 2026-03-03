@@ -2,7 +2,7 @@
 description: 基于 Wio-SX1262 和 XIAO esp32s3 模块的 Meshtastic
 title: Meshtastic 入门指南
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
-slug: /cn/wio_sx1262_xiao_esp32s3_for_meshtastic
+slug: /wio_sx1262_xiao_esp32s3_for_meshtastic
 sku: 102010611,113110064
 sidebar_position: 2
 last_update:

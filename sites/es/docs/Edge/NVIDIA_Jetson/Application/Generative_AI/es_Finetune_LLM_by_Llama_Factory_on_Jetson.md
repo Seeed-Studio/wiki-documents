@@ -7,7 +7,7 @@ keywords:
 - Chatbot
 - Finetune
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Finetune_LLM_on_Jetson
+slug: /Finetune_LLM_on_Jetson
 last_update:
   date: 07/03/2024
   author: Youjiang

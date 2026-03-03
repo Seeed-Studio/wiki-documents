@@ -6,7 +6,7 @@ keywords:
 - esp32s3
 - camera
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/xiao_esp32s3_camera_usage
+slug: /xiao_esp32s3_camera_usage
 last_update:
   date: 04/17/2023
   author: Citric

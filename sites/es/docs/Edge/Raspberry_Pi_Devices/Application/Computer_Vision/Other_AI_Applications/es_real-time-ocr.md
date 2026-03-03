@@ -7,7 +7,7 @@ keywords:
   - reComputer R2100
   - yolov5
 image: https://files.seeedstudio.com/wiki/Edge_Box/ocr.webp
-slug: /es/real-time-ocr
+slug: /real-time-ocr
 last_update:
   date: 6/16/2025
   author: Jiahao Li

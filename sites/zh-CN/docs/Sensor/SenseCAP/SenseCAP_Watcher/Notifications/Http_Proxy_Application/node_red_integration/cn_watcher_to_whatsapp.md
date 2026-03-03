@@ -6,7 +6,7 @@ keywords:
 - WhatsApp
 - Node-RED
 image: https://files.seeedstudio.com/wiki/Watcher_WhatsApp/watcher_whatsapp.png
-slug: /cn/watcher_node_red_to_whatsapp
+slug: /watcher_node_red_to_whatsapp
 last_update:
   date: 07/25/2024
   author: Vincent

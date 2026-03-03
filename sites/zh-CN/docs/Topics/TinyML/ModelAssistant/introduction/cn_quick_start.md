@@ -4,7 +4,7 @@ title: 快速入门
 keywords:
 - sscma model assistant ai tinyml 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ModelAssistant_Introduce_Quick_Start
+slug: /ModelAssistant_Introduce_Quick_Start
 last_update:
   date: 01/11/2024
   author: LynnL4

@@ -5,7 +5,7 @@ title: ダッシュボード登録
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecraft-blockchain/blockchain-dashboard/dashboard-registration
+slug: /sensecraft-blockchain/blockchain-dashboard/dashboard-registration
 aliases:
   - /ja/Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration
 last_update:

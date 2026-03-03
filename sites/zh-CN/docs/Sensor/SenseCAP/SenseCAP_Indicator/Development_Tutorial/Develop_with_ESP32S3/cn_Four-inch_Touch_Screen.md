@@ -4,7 +4,7 @@ title: 4英寸触摸屏
 keywords:
 - SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/SenseCAP_Indicator_ESP32_4_inch_Touch_Screen
+slug: /SenseCAP_Indicator_ESP32_4_inch_Touch_Screen
 last_update:
   date: 5/23/2023
   author: Thomas

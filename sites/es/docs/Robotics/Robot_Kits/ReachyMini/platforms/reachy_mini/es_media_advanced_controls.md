@@ -1,7 +1,7 @@
 ---
 description: Configuraciones avanzadas para ajustar con precisión la cámara y la matriz de micrófonos de Reachy Mini, incluyendo controles de libcamerasrc, configuración de GStreamer y parámetros de audio XMOS XVF3800.
 title: Controles avanzados de medios
-slug: /es/reachymini_platforms_reachy_mini_media_advanced_controls
+slug: /reachymini_platforms_reachy_mini_media_advanced_controls
 keywords:
 - media
 - camera

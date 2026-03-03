@@ -4,7 +4,7 @@ title: Jetpack をフラッシュする
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reComputer_J4012_Flash_Jetpack
+slug: /reComputer_J4012_Flash_Jetpack
 sku: 102110769, 102110770
 last_update:
   date: 6/12/2024

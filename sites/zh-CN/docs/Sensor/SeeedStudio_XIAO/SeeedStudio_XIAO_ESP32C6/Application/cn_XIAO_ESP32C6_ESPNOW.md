@@ -4,7 +4,7 @@ title: XIAO ESP32 系列上的 ESP-NOW 协议
 keywords:
 - ESPNOW
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/126.png
-slug: /cn/xiao_esp32c6_espnow
+slug: /xiao_esp32c6_espnow
 last_update:
   date: 07/24/2024
   author: Jason

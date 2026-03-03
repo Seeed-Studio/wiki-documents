@@ -4,7 +4,7 @@ title: Inicio rápido
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Get_Started_with_SenseCAP_T1000_tracker
+slug: /Get_Started_with_SenseCAP_T1000_tracker
 last_update:
   date: 2/14/2026
   author: Janet

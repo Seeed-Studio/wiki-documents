@@ -4,7 +4,7 @@ title: Grove - RS232
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-RS232
+slug: /Grove-RS232
 sku: 103020192
 last_update:
   date: 2/22/2023

@@ -4,7 +4,7 @@ title: Grove - 6軸加速度計＆ジャイロスコープ
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-6-Axis_AccelerometerAndGyroscope
+slug: /Grove-6-Axis_AccelerometerAndGyroscope
 sku: 105020012
 last_update:
   date: 05/15/2025

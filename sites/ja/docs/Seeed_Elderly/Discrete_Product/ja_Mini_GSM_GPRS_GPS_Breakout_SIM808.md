@@ -4,7 +4,7 @@ title: Mini GSM/GPRS GPS Breakout SIM808
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Mini_GSM_GPRS_GPS_Breakout_SIM808
+slug: /Mini_GSM_GPRS_GPS_Breakout_SIM808
 last_update:
   date: 05/15/2025
   author: shuxu hu

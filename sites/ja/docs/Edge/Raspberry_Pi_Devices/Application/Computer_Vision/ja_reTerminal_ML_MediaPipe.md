@@ -6,7 +6,7 @@ keywords:
   - reTerminal Application
   - Embedded_ML
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal_ML_MediaPipe
+slug: /reTerminal_ML_MediaPipe
 sku: 102110638
 last_update:
   date: 1/10/2024

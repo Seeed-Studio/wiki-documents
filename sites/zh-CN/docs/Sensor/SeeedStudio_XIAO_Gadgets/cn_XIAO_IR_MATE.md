@@ -3,7 +3,7 @@ title: XIAO IR Mate 智能红外遥控器入门指南
 description: |
   来自 Seeed Studio 的智能红外遥控器，旨在将电视和空调等传统家电集成到您的 Home Assistant 智能家居生态系统中。
 image: https://files.seeedstudio.com/wiki/XIAO_IR_MATE/XIAO-Smart-IR-Mate.webp
-slug: /cn/XIAO_IR_Mate_Smart_IR_Remote
+slug: /XIAO_IR_Mate_Smart_IR_Remote
 sku: 109990586
 keywords:
   - XIAO

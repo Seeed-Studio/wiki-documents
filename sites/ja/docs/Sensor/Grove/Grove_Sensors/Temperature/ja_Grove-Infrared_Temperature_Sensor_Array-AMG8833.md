@@ -4,7 +4,7 @@ title: Grove - 赤外線温度センサーアレイ(AMG8833)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Infrared_Temperature_Sensor_Array-AMG8833
+slug: /Grove-Infrared_Temperature_Sensor_Array-AMG8833
 sku: 101020557
 last_update:
   date: 05/15/2025

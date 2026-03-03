@@ -4,7 +4,7 @@ title: Mapeo de pines IO de Xadow
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Xadow_IO_pin_mapping
+slug: /Xadow_IO_pin_mapping
 last_update:
   date: 1/16/2023
   author: jianjing Huang

@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-I2C-Motor-Driver-L298P/
-slug: /ja/Grove-I2C-Motor-Driver-L298P
+slug: /Grove-I2C-Motor-Driver-L298P
 sku: 105020093
 last_update:
   date: 05/15/2025

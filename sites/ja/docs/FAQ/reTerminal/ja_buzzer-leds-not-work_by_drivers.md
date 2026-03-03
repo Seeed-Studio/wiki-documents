@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: reTerminalドライバーインストール後にブザーやLEDが動作しない問題の解決方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/buzzer-leds-not-work_by_drivers
+slug: /buzzer-leds-not-work_by_drivers
 last_update:
   date: 6/21/2023
   author: Seraphina

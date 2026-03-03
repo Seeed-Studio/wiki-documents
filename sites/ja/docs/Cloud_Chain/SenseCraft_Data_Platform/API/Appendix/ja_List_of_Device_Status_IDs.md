@@ -5,7 +5,7 @@ title: デバイスステータスIDリスト
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /ja/sensecraft-data-platform-api/appendix/list_of_device_status_ids
+slug: /sensecraft-data-platform-api/appendix/list_of_device_status_ids
 aliases:
   - /ja/Cloud_Chain/SenseCAP_API/Appendix/List_of_Device_Status_IDs
 last_update:

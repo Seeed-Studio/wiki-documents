@@ -4,7 +4,7 @@ title: 下载应用程序
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-blockchain/sensecraft-hotspot-app/download-app
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/download-app
 aliases:
   - /cn/Cloud_Chain/cloud/sensecraft-data/sensecraft-hotspot/sensecraft-hotspot-app/download-app
 last_update:

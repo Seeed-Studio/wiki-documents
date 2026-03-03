@@ -11,7 +11,7 @@ keywords:
 - Humanoid Robot
 - Arduino
 - Python
-slug: /es/hand_amazinghand
+slug: /hand_amazinghand
 sku: 100062181,100063642
 last_update:
   date: 9/10/2025

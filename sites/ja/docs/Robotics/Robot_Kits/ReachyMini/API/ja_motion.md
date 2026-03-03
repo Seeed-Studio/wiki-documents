@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini のモーションに関する完全な API リファレンス。基底クラス、goto モーション、および録画モーションを含みます。
 title: モーション API リファレンス
-slug: /ja/reachymini_api_motion
+slug: /reachymini_api_motion
 keywords:
 - api
 - motion

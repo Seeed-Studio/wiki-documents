@@ -7,7 +7,7 @@ keywords:
 - arm
 - robotics
 image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
-slug: /es/hightorque_getting_started
+slug: /hightorque_getting_started
 last_update:
   date: 12/04/2025
   author: Tienjuiwong

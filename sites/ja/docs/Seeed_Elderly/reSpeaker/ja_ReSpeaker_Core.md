@@ -4,7 +4,7 @@ title: reSpeaker Core
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ReSpeaker_Core
+slug: /ReSpeaker_Core
 sku: 102010088
 last_update:
   date: 1/11/2023

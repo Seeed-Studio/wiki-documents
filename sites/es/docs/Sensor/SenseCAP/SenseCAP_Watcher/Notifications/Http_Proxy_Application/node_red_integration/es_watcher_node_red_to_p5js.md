@@ -5,7 +5,7 @@ keywords:
 - watcher
 - p5js
 image: https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/headpic.png
-slug: /es/watcher_node_red_to_p5js
+slug: /watcher_node_red_to_p5js
 last_update:
   date: 08/12/2024
   author: Allen

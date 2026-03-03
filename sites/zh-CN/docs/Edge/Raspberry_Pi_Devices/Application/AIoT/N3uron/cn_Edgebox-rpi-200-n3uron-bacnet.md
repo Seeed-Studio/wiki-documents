@@ -9,7 +9,7 @@ keywords:
   - N3uron
   - BACnet
 image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
-slug: /cn/edgebox_rpi_200_n3uron_bacnet
+slug: /edgebox_rpi_200_n3uron_bacnet
 last_update:
   date: 6/20/2024
   author: Kasun Thushara

@@ -6,7 +6,7 @@ keywords:
 - xiao
 - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/xiao_esp32s3_edgelab
+slug: /xiao_esp32s3_edgelab
 last_update:
   date: 10/04/2023
   author: LynnL4

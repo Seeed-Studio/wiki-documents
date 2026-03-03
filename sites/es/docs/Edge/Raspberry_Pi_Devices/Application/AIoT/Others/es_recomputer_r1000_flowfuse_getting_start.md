@@ -6,7 +6,7 @@ keywords:
   - reComputer R1000
   - Node-Red
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /es/recomputer_r1000_flow_fuse
+slug: /recomputer_r1000_flow_fuse
 last_update:
   date: 07/30/2024
   author: Kasun Thushara

@@ -7,7 +7,7 @@ keywords:
 - Retired Products
 - Obselete Products
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/discontinuedproducts
+slug: /discontinuedproducts
 toc_max_heading_level: 5
 last_update:
   date: 05/29/2024

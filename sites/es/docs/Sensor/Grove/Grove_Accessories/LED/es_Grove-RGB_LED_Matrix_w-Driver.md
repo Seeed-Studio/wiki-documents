@@ -4,7 +4,7 @@ title: Grove - Matriz LED RGB con Controlador
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-RGB_LED_Matrix_w-Driver
+slug: /Grove-RGB_LED_Matrix_w-Driver
 sku: 105020073
 last_update:
   date: 1/9/2023

@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/jetson-docker-getting-started
+slug: /jetson-docker-getting-started
 last_update:
   date: 01/04/2023
   author: w0x7ce

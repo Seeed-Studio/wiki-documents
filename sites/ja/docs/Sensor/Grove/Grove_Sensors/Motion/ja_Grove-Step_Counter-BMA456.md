@@ -4,7 +4,7 @@ title: Grove - Step Counter(BMA456)
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Step_Counter-BMA456
+slug: /Grove-Step_Counter-BMA456
 sku: 101020583
 last_update:
   date: 05/15/2025

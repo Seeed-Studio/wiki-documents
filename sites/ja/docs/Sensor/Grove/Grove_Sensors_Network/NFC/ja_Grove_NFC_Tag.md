@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove_NFC_Tag/
-slug: /ja/Grove_NFC_Tag
+slug: /Grove_NFC_Tag
 last_update:
   date: 05/15/2025
   author: gunengyu

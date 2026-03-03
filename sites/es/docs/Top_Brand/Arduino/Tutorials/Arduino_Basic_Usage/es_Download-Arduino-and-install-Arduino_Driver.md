@@ -2,7 +2,7 @@
 description: Descargar Arduino e instalar el controlador de Arduino
 title: Descargar Arduino e instalar el controlador de Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Download-Arduino-and-install-Arduino_Driver
+slug: /Download-Arduino-and-install-Arduino_Driver
 last_update:
   date: 02/01/2023
   author: w0x7ce

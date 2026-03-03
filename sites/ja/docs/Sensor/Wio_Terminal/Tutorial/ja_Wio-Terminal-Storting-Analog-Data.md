@@ -4,7 +4,7 @@ title: Wio Terminal データの保存
 keywords:
 - Wio_terminal チュートリアル
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Storting-Analog-Data
+slug: /Wio-Terminal-Storting-Analog-Data
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio-Terminal-LCD-Histogram/
-slug: /es/Wio-Terminal-LCD-Histogram
+slug: /Wio-Terminal-LCD-Histogram
 last_update:
   date: 01/11/2022
   author: gunengyu

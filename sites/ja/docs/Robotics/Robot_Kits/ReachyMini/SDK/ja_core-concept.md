@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini のクライアント・サーバー設計、座標系、安全リミット、モーターモードなどのコアコンセプトとアーキテクチャを理解し、堅牢なアプリケーションを開発できるようにします。
 title: コアコンセプトとアーキテクチャ
-slug: /ja/reachymini_sdk_core-concept
+slug: /reachymini_sdk_core-concept
 keywords:
 - architecture
 - coordinate systems

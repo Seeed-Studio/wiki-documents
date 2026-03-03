@@ -4,7 +4,7 @@ title: Cómo personalizar Home Assistant
 tags:
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ODYSSEY-Home-Assistant-Customize
+slug: /ODYSSEY-Home-Assistant-Customize
 last_update:
   date: 01/03/2023
   author: w0x7ce

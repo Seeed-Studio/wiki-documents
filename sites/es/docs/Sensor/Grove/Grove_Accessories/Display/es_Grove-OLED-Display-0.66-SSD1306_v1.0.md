@@ -4,7 +4,7 @@ title: Grove - Pantalla OLED 0.66" (SSD1306)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-OLED-Display-0.66-SSD1306_v1.0
+slug: /Grove-OLED-Display-0.66-SSD1306_v1.0
 sku: 104020248
 last_update:
   date: 1/7/2023

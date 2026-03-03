@@ -2,7 +2,7 @@
 description: reTerminal && reTerminal DM-FAQ
 title: 如何解决屏幕刷新率过低的问题
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/screen_refresh_rate_low
+slug: /screen_refresh_rate_low
 last_update:
   date: 7/2/2024
   author: Parker

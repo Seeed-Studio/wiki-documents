@@ -6,7 +6,7 @@ keywords:
   - RasberryPi 5
   - Docker
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/recomputer_use_docker.webp
-slug: /es/use_docekr_on_recomputer
+slug: /use_docekr_on_recomputer
 last_update:
   date: 08/25/2025
   author: Jiahao

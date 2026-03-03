@@ -4,7 +4,7 @@ title: リレーシールド V1.0
 keywords:
 - Arduino シールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Relay_Shield_V1
+slug: /Relay_Shield_V1
 last_update:
   date: 05/15/2025
   author: jianjing Huang

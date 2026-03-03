@@ -10,7 +10,7 @@ keywords:
   - application
   - Jetson Agx Orin
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/yolo1.webp
-slug: /cn/multiple_cameras_with_jetson
+slug: /multiple_cameras_with_jetson
 sku: 101090101, 102991855, 102991854, E24081601, 206001693, 206001694
 last_update:
   date: 06/30/2025

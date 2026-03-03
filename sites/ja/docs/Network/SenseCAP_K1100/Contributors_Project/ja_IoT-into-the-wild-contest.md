@@ -4,7 +4,7 @@ title: 持続可能な地球のための IoT Into the Wild コンテスト 2022
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/IoT-into-the-wild-contest
+slug: /IoT-into-the-wild-contest
 last_update:
   date: 05/15/2025
   author: shuxu hu

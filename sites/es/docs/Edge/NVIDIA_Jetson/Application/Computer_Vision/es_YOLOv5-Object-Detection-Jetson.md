@@ -7,7 +7,7 @@ tags:
   - AI model deploy
   - Roboflow
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/YOLOv5-Object-Detection-Jetson
+slug: /YOLOv5-Object-Detection-Jetson
 last_update:
   date: 01/04/2023
   author: w0x7ce

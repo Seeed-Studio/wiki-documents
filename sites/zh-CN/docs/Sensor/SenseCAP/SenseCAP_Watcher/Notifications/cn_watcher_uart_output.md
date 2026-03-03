@@ -2,7 +2,7 @@
 description: 用户将学习如何将 Watcher 与 Grove 系统集成，使他们能够扩展其功能并连接各种传感器和外设。
 title: UART 输出
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg
-slug: /cn/uart_output
+slug: /uart_output
 sidebar_position: 1
 last_update:
   date: 07/10/2024

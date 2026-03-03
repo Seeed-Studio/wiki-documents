@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Water_Atomization/
-slug: /es/Grove-Water_Atomization
+slug: /Grove-Water_Atomization
 sku: 101020090
 last_update:
   date: 01/09/2022

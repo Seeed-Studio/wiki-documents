@@ -4,7 +4,7 @@ title: Grove - 环形 LED
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Circular_LED
+slug: /Grove-Circular_LED
 sku: 104030013
 last_update:
   date: 1/7/2023

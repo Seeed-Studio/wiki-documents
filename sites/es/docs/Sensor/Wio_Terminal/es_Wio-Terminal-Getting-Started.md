@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio-Terminal-Getting-Started/
-slug: /es/Wio-Terminal-Getting-Started
+slug: /Wio-Terminal-Getting-Started
 sku: 102991299
 last_update:
   date: 01/11/2022

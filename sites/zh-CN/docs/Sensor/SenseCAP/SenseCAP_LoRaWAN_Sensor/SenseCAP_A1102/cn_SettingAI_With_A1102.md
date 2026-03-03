@@ -6,7 +6,7 @@ keywords:
 - SenseCAP A1102
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/20.webp
-slug: /cn/setting_ai_with_a1102
+slug: /setting_ai_with_a1102
 sidebar_position: 2
 # sidebar_class_name: hidden
 last_update:

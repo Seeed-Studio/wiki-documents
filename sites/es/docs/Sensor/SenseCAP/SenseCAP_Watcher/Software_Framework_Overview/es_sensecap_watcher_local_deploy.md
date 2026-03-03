@@ -2,7 +2,7 @@
 description: Este tutorial te guiará sobre cómo desplegar el servicio de IA de Watcher localmente fuera del servicio SenseCraft para usar Watcher.
 title: Desplegar las capacidades de IA de Watcher localmente
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.png
-slug: /es/watcher_local_deploy
+slug: /watcher_local_deploy
 sidebar_position: 3
 last_update:
   date: 9/11/2025

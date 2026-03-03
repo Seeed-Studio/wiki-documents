@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 为什么 CM4 芯片周围有黑色胶水
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/black_glue_around_CM4
+slug: /black_glue_around_CM4
 last_update:
   date: 2023/6/21
   author: Seraphina

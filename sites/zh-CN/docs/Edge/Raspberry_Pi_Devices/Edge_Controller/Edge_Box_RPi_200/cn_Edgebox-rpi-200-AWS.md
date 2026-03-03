@@ -6,7 +6,7 @@ keywords:
 - AWS
 - Getting Start
 - Cloud
-slug: /cn/Edgebox-rpi-200-AWS
+slug: /Edgebox-rpi-200-AWS
 last_update:
   date: 3/11/2024
   author: Kasun Thushara

@@ -4,7 +4,7 @@ title:  Wio Terminal レトロゲームファームウェア
 keywords:
 - Wio_terminal チュートリアル
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Firmware
+slug: /Wio-Terminal-Firmware
 last_update:
   date: 05/15/2025
   author: jianjing Huang

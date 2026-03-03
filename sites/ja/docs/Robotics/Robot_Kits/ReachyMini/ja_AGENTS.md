@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini アプリケーションを構築するユーザーを支援する AI エージェント向けの包括的な開発ガイド。SDK の基本、REST API、プラットフォーム互換性、ベストプラクティスを網羅します。
 title: AI エージェント向け Reachy Mini 開発ガイド
-slug: /ja/reachymini_agents
+slug: /reachymini_agents
 keywords:
 - ai agents
 - development guide

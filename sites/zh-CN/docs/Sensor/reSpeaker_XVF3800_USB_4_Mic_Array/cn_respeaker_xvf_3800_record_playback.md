@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.jpg
-slug: /cn/respeaker_xvf3800_xiao_record_playback
+slug: /respeaker_xvf3800_xiao_record_playback
 last_update:
   date: 7/16/2025
   author: Kasun Thushara

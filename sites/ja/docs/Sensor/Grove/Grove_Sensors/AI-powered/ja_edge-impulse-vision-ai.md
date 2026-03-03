@@ -4,7 +4,7 @@ title: Edge Impulseを使用して独自のAIモデルをトレーニングお�
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/edge-impulse-vision-ai
+slug: /edge-impulse-vision-ai
 last_update:
   date: 05/15/2025
   author: jianjing Huang

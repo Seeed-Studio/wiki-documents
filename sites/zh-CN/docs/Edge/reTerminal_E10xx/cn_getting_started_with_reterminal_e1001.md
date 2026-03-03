@@ -2,7 +2,7 @@
 description: 本文将指导您快速开始使用 reTerminal E1001。
 title: reTerminal E1001 入门指南
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/getting_started_with_reterminal_e1001
+slug: /getting_started_with_reterminal_e1001
 sidebar_position: 2
 last_update:
   date: 07/21/2025

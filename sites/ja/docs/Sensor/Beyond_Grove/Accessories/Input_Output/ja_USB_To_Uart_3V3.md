@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Scream_out_loud-110dBA_fixed_tone_Siren/
-slug: /ja/USB_To_Uart_3V3
+slug: /USB_To_Uart_3V3
 last_update:
   date: 05/15/2025
   author: jianjing Huang

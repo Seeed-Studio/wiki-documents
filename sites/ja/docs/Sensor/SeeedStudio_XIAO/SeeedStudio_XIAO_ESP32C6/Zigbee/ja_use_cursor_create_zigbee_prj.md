@@ -2,7 +2,7 @@
 description: XIAO ESP32C6とセンサーを使用してZigbeeアプリケーションを開発するためのCursorのAI搭載チャットの使用方法を学ぶ
 title: CursorでXIAO ESP32C6を使ったZigbeeプロジェクトを作成する
 image: https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/13.webp
-slug: /ja/use_cursor_create_zigbee_prj
+slug: /use_cursor_create_zigbee_prj
 last_update:
   date: 03/04/2025
   author: Citric

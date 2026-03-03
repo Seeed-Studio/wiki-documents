@@ -2,7 +2,7 @@
 description: Jetson LLM Interface Controllerは、NVIDIA Jetsonデバイス上で完全にローカルで動作する、音声およびテキスト駆動のAIアシスタントです。ローカル大規模言語モデル（Ollama経由）とオプションの音声認識・音声合成（NVIDIA Riva）を組み合わせて、自然な人間のコマンドを構造化された安全なハードウェアアクションに変換します。このシステムは、オンボードインターフェース（GPIO、I2C、PWMなど）のプライベートで低遅延な制御を可能にし、スマート環境、ロボティクス、ビジョン対応エージェントなどのエッジAIアプリケーションのモジュラー基盤として機能します—クラウドに依存することなく。
 title: 安全なハードウェアインターフェース制御のためのJetson上のローカルLLMエージェント
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/llm_interface_control_jetson
+slug: /llm_interface_control_jetson
 last_update:
   date: 01/29/2025
   author: kourosh

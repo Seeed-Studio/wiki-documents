@@ -4,7 +4,7 @@ title: Descripción general
 keywords:
 - Wio_terminal USB_Host
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-USBH-Overview
+slug: /Wio-Terminal-USBH-Overview
 sku: 102991299
 last_update:
   date: 1/17/2023

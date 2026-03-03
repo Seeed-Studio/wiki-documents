@@ -4,7 +4,7 @@ title: 使用 Wio Terminal 为 Raspberry Pi 构建 HMI 显示器
 keywords:
 - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-HMI
+slug: /Wio-Terminal-HMI
 last_update:
   date: 1/17/2023
   author: jianjing Huang

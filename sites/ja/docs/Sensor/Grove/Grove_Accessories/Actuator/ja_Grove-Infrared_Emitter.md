@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Infrared_Emitter/
-slug: /ja/Grove-Infrared_Emitter
+slug: /Grove-Infrared_Emitter
 sku: 101020026
 last_update:
   date: 05/15/2025

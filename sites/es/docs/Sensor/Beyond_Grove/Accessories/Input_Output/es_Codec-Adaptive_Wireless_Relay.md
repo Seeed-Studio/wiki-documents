@@ -4,7 +4,7 @@ title: Relé Inalámbrico Adaptativo de Códec
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Codec-Adaptive_Wireless_Relay
+slug: /Codec-Adaptive_Wireless_Relay
 last_update:
   date: 1/13/2023
   author: shuxu hu

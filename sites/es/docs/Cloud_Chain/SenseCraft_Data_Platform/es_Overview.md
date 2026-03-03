@@ -5,7 +5,7 @@ description: Guía de inicio rápido para la Plataforma de Datos SenseCraft — 
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /es/cloud/sensecraft-data/sensecraft-data-platform/overview
+slug: /cloud/sensecraft-data/sensecraft-data-platform/overview
 aliases:
   - /es/Cloud_Chain/SenseCAP_Portal/QuickStart
 last_update:

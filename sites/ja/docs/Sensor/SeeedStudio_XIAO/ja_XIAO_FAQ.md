@@ -2,7 +2,7 @@
 description: XIAO-FAQ PAGE
 title: XIAOシリーズのFAQ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAO_FAQ
+slug: /XIAO_FAQ
 last_update:
   date: 7/6/2023
   author: Seraphina

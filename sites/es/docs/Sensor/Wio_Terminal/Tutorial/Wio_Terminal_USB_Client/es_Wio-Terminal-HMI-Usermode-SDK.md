@@ -4,7 +4,7 @@ title: Construye una pantalla HMI para Windows/MacOS usando Wio Terminal
 keywords:
 - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-HMI-Usermode-SDK
+slug: /Wio-Terminal-HMI-Usermode-SDK
 last_update:
   date: 1/17/2023
   author: jianjing Huang

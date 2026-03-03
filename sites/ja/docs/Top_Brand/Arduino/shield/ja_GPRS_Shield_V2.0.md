@@ -4,7 +4,7 @@ title: GPRS Shield V2.0
 keywords:
 - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/GPRS_Shield_V2.0
+slug: /GPRS_Shield_V2.0
 last_update:
   date: 05/15/2025
   author: jianjing Huang

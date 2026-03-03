@@ -4,7 +4,7 @@ title: Grove Arduino 初学者套件 Upverter 指南
 keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Beginner-Kit-for-Arduino-Upverter-Guide
+slug: /Grove-Beginner-Kit-for-Arduino-Upverter-Guide
 last_update:
   date: 2/14/2023
   author: hushuxu

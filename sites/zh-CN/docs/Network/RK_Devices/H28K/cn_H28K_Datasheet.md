@@ -4,7 +4,7 @@ title: H28K 简介
 keywords:
 - 网络
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/H28K_Datasheet
+slug: /H28K_Datasheet
 last_update:
   date: 12/07/2023
   author: Parker

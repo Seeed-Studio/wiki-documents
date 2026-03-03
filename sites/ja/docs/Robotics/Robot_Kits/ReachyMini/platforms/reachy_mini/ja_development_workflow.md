@@ -1,7 +1,7 @@
 ---
 description: Wireless Reachy Mini 向けの開発ワークフローガイド。SSH アクセス、クロスプラットフォームの選択肢、リモート編集、効率的なコードテスト方法を扱います。
 title: Wireless Reachy Mini 向け開発ワークフロー
-slug: /ja/reachymini_platforms_reachy_mini_development_workflow
+slug: /reachymini_platforms_reachy_mini_development_workflow
 keywords:
 - development
 - workflow

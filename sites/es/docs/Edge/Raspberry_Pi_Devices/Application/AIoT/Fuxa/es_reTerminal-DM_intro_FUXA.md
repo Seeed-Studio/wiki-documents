@@ -8,7 +8,7 @@ keywords:
   - Industrial 
   - FUXA
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reTerminal-DM_intro_FUXA
+slug: /reTerminal-DM_intro_FUXA
 last_update:
   date: 1/27/2024
   author: Kasun Thushara

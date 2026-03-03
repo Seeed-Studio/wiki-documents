@@ -7,7 +7,7 @@ keywords:
   - opereating system
   - OS
 image: https://files.seeedstudio.com/wiki/reCamera/recam_OS_structure.webp
-slug: /es/recamera_os_structure
+slug: /recamera_os_structure
 sidebar_position: 2
 last_update:
   date: 02/15/2025

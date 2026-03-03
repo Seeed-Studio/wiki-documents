@@ -4,7 +4,7 @@ title: 使用 Stable Diffusion 进行文本转图像
 keywords:
 - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/How_to_run_local_llm_text_to_image_on_reComputer
+slug: /How_to_run_local_llm_text_to_image_on_reComputer
 last_update:
   date: 04/01/2024
   author: Bruno

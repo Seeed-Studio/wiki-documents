@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: eMMC非搭載版CM4に交換した場合のOS書き込み方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/flashing_os_on_non-eMMC_CM4_replacement
+slug: /flashing_os_on_non-eMMC_CM4_replacement
 last_update:
   date: 6/21/2023
   author: Seraphina

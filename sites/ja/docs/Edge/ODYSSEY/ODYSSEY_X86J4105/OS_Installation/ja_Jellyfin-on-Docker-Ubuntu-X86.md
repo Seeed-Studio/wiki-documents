@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J41x5
 title: Jellyfin メディアサーバーのインストール
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Jellyfin-on-Docker-Ubuntu-X86
+slug: /Jellyfin-on-Docker-Ubuntu-X86
 last_update:
   date: 05/15/2025
   author: w0x7ce

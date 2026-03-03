@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Jetson-Nano-MaskCam
+slug: /Jetson-Nano-MaskCam
 sku: 102110483, 102110484, 114110049, 102110637, 110061363, 110061401, 110061361, 110061404, B110061361, 110061481
 last_update:
   date: 01/04/2023

@@ -1,7 +1,7 @@
 ---
 description: Hoja de datos de hardware de Reachy Mini Lite que incluye dimensiones, grados de libertad, especificaciones de los motores, cámara, matriz de micrófonos y componentes electrónicos.
 title: Hoja de Datos de Hardware de Reachy Mini Lite
-slug: /es/reachymini_platforms_reachy_mini_lite_hardware
+slug: /reachymini_platforms_reachy_mini_lite_hardware
 keywords:
 - hardware
 - datasheet

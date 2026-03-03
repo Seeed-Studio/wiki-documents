@@ -4,7 +4,7 @@ title:  Xadow - Pantalla Táctil de 1.54 pulgadas
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Xadow_1.54_inch_Touchscreen
+slug: /Xadow_1.54_inch_Touchscreen
 last_update:
   date: 1/13/2023
   author: shuxu hu

@@ -6,7 +6,7 @@ keywords:
 - encrypt
 - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
-slug: /cn/how_to_encrypt_the_disk_for_jetson
+slug: /how_to_encrypt_the_disk_for_jetson
 last_update:
   date: 10/11/2025
   author: Dayu

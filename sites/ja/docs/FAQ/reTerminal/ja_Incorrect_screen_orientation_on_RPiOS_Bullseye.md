@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Raspberry Pi OSインストール後に画面の向きが正しくない
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Incorrect_screen_orientation_on_RPiOS_Bullseye
+slug: /Incorrect_screen_orientation_on_RPiOS_Bullseye
 last_update:
   date: 11/24/2023
   author: Seraphina

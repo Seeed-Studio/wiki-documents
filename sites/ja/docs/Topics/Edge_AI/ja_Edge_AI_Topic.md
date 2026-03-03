@@ -4,7 +4,7 @@ title: Edge AI
 keywords:
 - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/edge_ai_topic
+slug: /edge_ai_topic
 last_update:
   date: 05/15/2025
   author: Matthew

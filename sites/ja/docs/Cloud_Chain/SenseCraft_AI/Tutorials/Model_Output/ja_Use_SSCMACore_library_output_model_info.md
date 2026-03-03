@@ -3,7 +3,7 @@ sidebar_position: 11
 description: この記事では、XIAO で SSCMACore ライブラリを使用する方法について説明します。
 title: SSCMACore ライブラリを使用してモデル情報を出力する
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/76.webp
-slug: /ja/sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library
+slug: /sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library
 aliases:
   - /ja/sensecraft_ai_sscmacore_library
 last_update:

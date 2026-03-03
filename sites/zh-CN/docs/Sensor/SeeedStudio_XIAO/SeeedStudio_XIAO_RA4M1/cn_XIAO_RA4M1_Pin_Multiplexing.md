@@ -7,7 +7,7 @@ keywords:
 - pin multiple
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
 sidebar_position: 1
-slug: /cn/xiao_ra4m1_pin_multiplexing
+slug: /xiao_ra4m1_pin_multiplexing
 last_update:
   date: 08/15/2024
   author: Jason

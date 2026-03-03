@@ -3,7 +3,7 @@ description: ファンが起動しない
 title: ファンが起動しない
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /ja/Turn_on_the_Fan
+slug: /Turn_on_the_Fan
 last_update:
   date: 2023.6.25   
   author: cheng.tang

@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Cómo solucionar el problema de pantalla negra en reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reterminal_black_screen
+slug: /reterminal_black_screen
 last_update:
   date: 11/15/2023
   author: Kasun Thushara

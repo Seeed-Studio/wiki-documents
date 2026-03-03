@@ -4,7 +4,7 @@ title: IA de Visión con Modelos Personalizables
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Vision_AI_with_Customizable_Models
+slug: /Vision_AI_with_Customizable_Models
 last_update:
   date: 2/2/2023
   author: shuxu hu

@@ -2,7 +2,7 @@
 description: Este artículo proporciona instrucciones sobre cómo crear la interfaz de usuario para la pantalla de papel de la serie reTerminal E en SquareLine.
 title: Pantalla ePaper de la Serie reTerminal E Trabajando con SquareLine Vision
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
-slug: /es/reterminal_e10xx_with_squareline_vision
+slug: /reterminal_e10xx_with_squareline_vision
 sidebar_position: 3
 last_update:
   date: 10/29/2025

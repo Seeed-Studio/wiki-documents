@@ -7,7 +7,7 @@ keywords:
   - Embedded_ML
   - yolov5
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal-DM-Yolo5
+slug: /reTerminal-DM-Yolo5
 sku: 114070201,114070221,E23010420,114070262
 last_update:
   date: 9/7/2023

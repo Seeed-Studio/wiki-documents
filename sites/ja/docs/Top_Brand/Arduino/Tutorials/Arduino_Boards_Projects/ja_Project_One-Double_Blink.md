@@ -5,7 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Project_One-Double_Blink
+slug: /Project_One-Double_Blink
 last_update:
   date: 05/15/2025
   author: jianjing Huang

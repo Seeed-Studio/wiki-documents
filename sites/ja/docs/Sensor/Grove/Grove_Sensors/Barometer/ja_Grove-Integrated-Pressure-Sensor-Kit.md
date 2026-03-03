@@ -4,7 +4,7 @@ title: Grove - 統合型圧力センサーキット
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Integrated-Pressure-Sensor-Kit
+slug: /Grove-Integrated-Pressure-Sensor-Kit
 sku: 110020248
 last_update:
   date: 05/15/2025

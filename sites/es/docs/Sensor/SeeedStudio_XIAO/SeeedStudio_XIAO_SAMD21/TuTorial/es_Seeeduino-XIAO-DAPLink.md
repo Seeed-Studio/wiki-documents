@@ -4,7 +4,7 @@ title: Construir un dispositivo DAPLink usando Seeed Studio XIAO SAMD21
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Seeeduino-XIAO-DAPLink
+slug: /Seeeduino-XIAO-DAPLink
 last_update:
   date: 1/11/2023
   author: shuxu hu

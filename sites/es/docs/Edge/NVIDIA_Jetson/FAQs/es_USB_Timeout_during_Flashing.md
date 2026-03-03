@@ -4,7 +4,7 @@ title: Problema de Tiempo de Espera durante el Flasheo de Jetpack
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/usb_timeout_during_flash
+slug: /usb_timeout_during_flash
 last_update:
   date: 1/22/2025
   author: Youjiang

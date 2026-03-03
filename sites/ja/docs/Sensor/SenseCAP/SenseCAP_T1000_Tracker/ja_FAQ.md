@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - FAQ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/faq_for_SenseCAP_T1000
+slug: /faq_for_SenseCAP_T1000
 sku: 114993073,114993106,114993207,114993208
 last_update:
   date: 2/14/2026

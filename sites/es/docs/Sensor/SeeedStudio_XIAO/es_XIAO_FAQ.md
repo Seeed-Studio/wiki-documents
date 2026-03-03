@@ -2,7 +2,7 @@
 description: PÁGINA DE PREGUNTAS FRECUENTES XIAO
 title: Preguntas Frecuentes para la Serie XIAO
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO_FAQ
+slug: /XIAO_FAQ
 last_update:
   date: 7/6/2023
   author: Seraphina

@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: application
 link:
   type: generated-index
-  slug: es/application
+  slug: application
   title: Aplicación
   description: Documentación de aplicaciones de la serie reCamera 2002 incluyendo la integración de reCamera con plataformas de software y hardware externas

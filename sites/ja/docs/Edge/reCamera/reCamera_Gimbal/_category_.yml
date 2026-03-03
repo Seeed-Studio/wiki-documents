@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: recamera_gimbal
 link:
   type: generated-index
-  slug: ja/recamera_gimbal
+  slug: recamera_gimbal
   title: reCamera ジンバル
   description: reCamera ジンバルのドキュメント

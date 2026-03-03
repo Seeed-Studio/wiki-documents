@@ -5,7 +5,7 @@ keywords:
   - Edge
   - EdgeBox-RPi-200
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Edgebox-rpi-200-balena-OS-setup
+slug: /Edgebox-rpi-200-balena-OS-setup
 last_update:
   date: 07/20/2023
   author: Marc Pous & Peter Pan

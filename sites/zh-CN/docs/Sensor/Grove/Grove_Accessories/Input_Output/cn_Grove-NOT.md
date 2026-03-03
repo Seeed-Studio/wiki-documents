@@ -4,7 +4,7 @@ title: Grove - 非门
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-NOT
+slug: /Grove-NOT
 last_update:
   date: 1/13/2023
   author: shuxu hu

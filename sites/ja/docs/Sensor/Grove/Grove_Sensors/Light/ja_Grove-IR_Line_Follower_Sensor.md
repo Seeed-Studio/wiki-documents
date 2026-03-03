@@ -4,7 +4,7 @@ title: Grove-IR Line Follower Sensor V3.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove_Line_Finder/images/top.jpg
-slug: /ja/grove_line_follower
+slug: /grove_line_follower
 last_update:
   date: 05/15/2025
   author: Jason

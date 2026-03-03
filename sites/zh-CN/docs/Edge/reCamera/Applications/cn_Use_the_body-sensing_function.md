@@ -6,7 +6,7 @@ keywords:
   - 体感控制
   - 游戏
 image: https://files.seeedstudio.com/wiki/reCamera/Applications/Game/game_title.gif 
-slug: /cn/use_the_motion-sensing_function_of_recamera_to_play_games
+slug: /use_the_motion-sensing_function_of_recamera_to_play_games
 sidebar_position: 9
 last_update:
   date: 11/27/2025

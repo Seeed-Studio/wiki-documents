@@ -2,7 +2,7 @@
 description: 您将获得对 Watcher 可以执行的不同类型任务以及它们在 SenseCraft 生态系统中如何组织的扎实理解。
 title: 任务分配指南
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/85_1.webp
-slug: /cn/getting_started_with_watcher_task
+slug: /getting_started_with_watcher_task
 sidebar_position: 3
 last_update:
   date: 10/18/2024

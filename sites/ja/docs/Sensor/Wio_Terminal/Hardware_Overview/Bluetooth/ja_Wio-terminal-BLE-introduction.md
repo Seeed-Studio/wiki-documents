@@ -4,7 +4,7 @@ title: クライアントとサーバーの紹介
 keywords:
 - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-terminal-BLE-introduction
+slug: /Wio-terminal-BLE-introduction
 last_update:
   date: 05/15/2025
   author: jianjing Huang

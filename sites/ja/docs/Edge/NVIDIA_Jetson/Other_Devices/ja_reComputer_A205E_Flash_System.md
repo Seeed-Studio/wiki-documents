@@ -4,7 +4,7 @@ title: A205E Mini PC
 tags:
   - Mini PC Jetpack Flash
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reComputer_A205E_Flash_System
+slug: /reComputer_A205E_Flash_System
 sku: 114110048
 last_update:
   date: 01/05/2023

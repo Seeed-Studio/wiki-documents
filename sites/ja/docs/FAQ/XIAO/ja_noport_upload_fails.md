@@ -2,7 +2,7 @@
 description: XIAO-FAQ
 title: アップロードが失敗する/プログラムが異常に動作する/デバイスポートが見つからない場合の対処法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/noport_upload_fails
+slug: /noport_upload_fails
 last_update:
   date: 6/21/2023
   author: Seraphina

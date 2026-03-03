@@ -4,7 +4,7 @@ title: Grove-Encoder
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Encoder
+slug: /Grove-Encoder
 sku: 111020001
 last_update:
   date: 05/15/2025

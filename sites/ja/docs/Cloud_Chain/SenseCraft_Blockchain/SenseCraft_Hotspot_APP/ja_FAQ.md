@@ -4,7 +4,7 @@ title: APP FAQ
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecraft-blockchain/sensecraft-hotspot-app/faq
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/faq
 aliases:
   - /ja/Cloud_Chain/SenseCAP_Hotspot_APP/FAQ
 last_update:

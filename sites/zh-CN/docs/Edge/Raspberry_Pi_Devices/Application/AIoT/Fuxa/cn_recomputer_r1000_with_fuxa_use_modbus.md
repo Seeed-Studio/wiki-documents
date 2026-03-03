@@ -7,7 +7,7 @@ keywords:
   - fuxa
   - ModbusRTU/TCP
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /cn/reComputer_r1000_fuxa_modbus_rtu_and_tcp
+slug: /reComputer_r1000_fuxa_modbus_rtu_and_tcp
 sku: 113991274,E24010521
 last_update:
   date: 10/8/2024

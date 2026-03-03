@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J41x5
 title: Android-x86 インストール
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ODYSSEY-X86J4105-Installing-Android
+slug: /ODYSSEY-X86J4105-Installing-Android
 last_update:
   date: 05/15/2025
   author: w0x7ce

@@ -4,7 +4,7 @@ title: Incorporación de Hotspot
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-onboarding
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/hotspot-onboarding
 aliases:
   - /es/Cloud_Chain/cloud/sensecraft-data/sensecraft-hotspot/sensecraft-hotspot-app/hotspot_management/hotspot_onboarding
 last_update:

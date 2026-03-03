@@ -7,7 +7,7 @@ keywords:
 - ESP32S3
 - TensorFlow
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
-slug: /ja/respeaker_xvf3800_xiao_tensorflow
+slug: /respeaker_xvf3800_xiao_tensorflow
 last_update:
   date: 9/19/2025
   author: Kasun Thushara

@@ -2,7 +2,7 @@
 description: 上传代码
 title: 上传代码
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Upload_Code
+slug: /Upload_Code
 last_update:
   date: 02/01/2023
   author: w0x7ce

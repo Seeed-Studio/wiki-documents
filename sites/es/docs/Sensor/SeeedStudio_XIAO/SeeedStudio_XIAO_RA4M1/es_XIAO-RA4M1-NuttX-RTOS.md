@@ -4,7 +4,7 @@ title: XIAO RA4M1 Con NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
-slug: /es/xiao_ra4m1_nuttx
+slug: /xiao_ra4m1_nuttx
 sidebar_position: 2
 last_update:
     date: 03/11/2025

@@ -4,7 +4,7 @@ title: BitMaker Lite
 keywords:
 - Micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/BitMaker_lite
+slug: /BitMaker_lite
 last_update:
   date: 05/15/2025
   author: Seraphina

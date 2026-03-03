@@ -1,7 +1,7 @@
 ---
 description: Ejemplo que demuestra cómo capturar un solo fotograma de la cámara de Reachy Mini y guardarlo como un archivo de imagen.
 title: Tomar foto
-slug: /es/reachymini_examples_take_picture
+slug: /reachymini_examples_take_picture
 keywords:
 - cámara
 - captura

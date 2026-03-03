@@ -5,7 +5,7 @@ keywords:
 - Round display
 - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/seeedstudio_round_display_usage
+slug: /seeedstudio_round_display_usage
 last_update:
   date: 04/27/2023
   author: Citric

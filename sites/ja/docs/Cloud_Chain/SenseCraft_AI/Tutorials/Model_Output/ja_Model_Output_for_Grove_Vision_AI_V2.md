@@ -3,7 +3,7 @@ sidebar_position: 7
 description: この記事では、Grove Vision AI V2とSenseCraft AIを使用して出力を取得する方法について説明します。
 title: Grove Vision AI V2のモデル出力
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/54.webp
-slug: /ja/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai
+slug: /sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai
 aliases:
   - /ja/sensecraft_ai_output_grove_visionai
 last_update:

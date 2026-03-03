@@ -4,7 +4,7 @@ title: BLE Bee
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/BLE_Bee
+slug: /BLE_Bee
 last_update:
   date: 1/13/2023
   author: shuxu hu

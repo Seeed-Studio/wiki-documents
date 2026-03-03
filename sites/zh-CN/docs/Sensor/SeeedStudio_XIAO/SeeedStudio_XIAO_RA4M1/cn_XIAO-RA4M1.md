@@ -3,7 +3,7 @@ title: Seeed Studio XIAO RA4M1 入门指南
 description: |
   XIAO RA4M1 - 基于 32 位 Renesas RA4M1 的最小开发板，支持 Arduino IDE，19 个 GPIO，RGB LED，CAN BUS，USB 2.0
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
-slug: /cn/getting_started_xiao_ra4m1
+slug: /getting_started_xiao_ra4m1
 sku: 102010551,102010638
 keywords:
   - XIAO

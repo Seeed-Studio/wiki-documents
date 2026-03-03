@@ -2,7 +2,7 @@
 description: SenseCAP Watcherソフトウェアフレームワークの紹介。
 title: Watcherソフトウェアフレームワーク
 image: https://files.seeedstudio.com/wiki/watcher_software_framework/architecture_1.webp
-slug: /ja/watcher_software_framework
+slug: /watcher_software_framework
 sidebar_position: 2
 last_update:
   date: 11/5/2024

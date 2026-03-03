@@ -2,7 +2,7 @@
 description: ArduPy LCD
 title: ArduPy LCD
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/ArduPy-LCD
+slug: /ArduPy-LCD
 last_update:
   date: 11/20/2022
   author: Matthew

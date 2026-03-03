@@ -4,7 +4,7 @@ title: Grove - 4チャンネル16ビットADC(ADS1115)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-16-bit-ADC-ADS1115
+slug: /Grove-16-bit-ADC-ADS1115
 sku: 109020041
 last_update:
   date: 05/15/2025

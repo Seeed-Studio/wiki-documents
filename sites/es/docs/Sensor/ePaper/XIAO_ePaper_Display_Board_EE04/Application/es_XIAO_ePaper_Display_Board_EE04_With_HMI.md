@@ -2,7 +2,7 @@
 description: Habilita el diseño de interfaz visual para la Pantalla ePaper XIAO EE04 usando la plataforma SenseCraft HMI.
 title: Placa de Pantalla ePaper XIAO EE04 con SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.webp
-slug: /es/EE04_with_hmi
+slug: /EE04_with_hmi
 sidebar_position: 2
 last_update:
   date: 10/30/2025

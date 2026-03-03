@@ -4,7 +4,7 @@ title: Plataformas Populares
 keywords:
 - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/popularplatforms
+slug: /popularplatforms
 last_update:
   date: 05/29/2024
   author: Yaohao

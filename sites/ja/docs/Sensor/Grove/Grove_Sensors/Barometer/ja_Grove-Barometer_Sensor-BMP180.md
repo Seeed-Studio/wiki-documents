@@ -4,7 +4,7 @@ title: Grove - 気圧センサー (BMP180)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Barometer_Sensor-BMP180
+slug: /Grove-Barometer_Sensor-BMP180
 sku: 101020072
 last_update:
   date: 05/15/2025

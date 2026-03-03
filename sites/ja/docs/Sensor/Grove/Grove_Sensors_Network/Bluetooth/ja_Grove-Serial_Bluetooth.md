@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image:  https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /ja/Grove-Serial_Bluetooth
+slug: /Grove-Serial_Bluetooth
 last_update:
   date: 05/15/2025
   author: jianjing Huang

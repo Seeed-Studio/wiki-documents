@@ -4,7 +4,7 @@ title: DAP Linkを使用してArduinoブートローダーをフラッシュす�
 keywords:
 - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Flashing-Arduino-Bootloader-DAPLink
+slug: /Flashing-Arduino-Bootloader-DAPLink
 last_update:
   date: 05/15/2025
   author: jianjing Huang

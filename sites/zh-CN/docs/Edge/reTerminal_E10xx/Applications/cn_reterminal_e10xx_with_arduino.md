@@ -2,7 +2,7 @@
 description: 本文介绍如何让 reTerminal E 系列 ePaper 显示屏与 Arduino 配合工作。
 title: reTerminal E 系列 ePaper 显示屏与 Arduino 配合使用
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
-slug: /cn/reterminal_e10xx_with_arduino
+slug: /reterminal_e10xx_with_arduino
 sidebar_position: 4
 last_update:
   date: 08/21/2025

@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F_P/
-slug: /cn/Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F
+slug: /Grove-Digital_Distance_Interrupter_0.5_to_5cm-GP2Y0D805Z0F
 sku: 101020533
 last_update:
   date: 01/04/2022

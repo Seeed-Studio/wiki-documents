@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Sound_Recorder/
-slug: /es/Grove-Sound_Recorder
+slug: /Grove-Sound_Recorder
 last_update:
   date: 01/06/2022
   author: gunengyu

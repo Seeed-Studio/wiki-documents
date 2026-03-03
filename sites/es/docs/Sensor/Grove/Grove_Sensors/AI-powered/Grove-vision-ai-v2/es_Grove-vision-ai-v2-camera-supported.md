@@ -4,7 +4,7 @@ title: Cámara externa compatible
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/Grove-vision-ai-v2-camera-supported
+slug: /Grove-vision-ai-v2-camera-supported
 last_update:
   date: 12/12/2023
   author: Citric

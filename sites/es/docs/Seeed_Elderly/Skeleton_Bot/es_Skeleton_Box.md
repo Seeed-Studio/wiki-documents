@@ -4,7 +4,7 @@ title: Caja Esqueleto
 keywords:
 - Skeleton_Box
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Skeleton_Box
+slug: /Skeleton_Box
 last_update:
   date: 01/20/2023
   author: Matthew

@@ -4,7 +4,7 @@ title: 土壌水分・温度・EC センサー
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor
+slug: /Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-EC-Sensor
 sku: 101990667,314990621
 last_update:
   date: 1/16/2023

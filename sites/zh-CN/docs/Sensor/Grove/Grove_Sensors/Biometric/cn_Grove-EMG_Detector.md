@@ -4,7 +4,7 @@ title: Grove - EMG 检测器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-EMG_Detector
+slug: /Grove-EMG_Detector
 sku: 101020058
 last_update:
   date: 1/6/2023

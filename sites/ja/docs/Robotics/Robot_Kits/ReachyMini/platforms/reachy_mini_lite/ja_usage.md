@@ -1,7 +1,7 @@
 ---
 description: デスクトップアプリケーションのダッシュボード、クイックアクションデモ、アプリのインストール、および Python SDK クイックスタートを網羅した Reachy Mini Lite の使用ガイド。
 title: Reachy Mini Lite を使う
-slug: /ja/reachymini_platforms_reachy_mini_lite_usage
+slug: /reachymini_platforms_reachy_mini_lite_usage
 keywords:
 - usage
 - dashboard

@@ -5,7 +5,7 @@ keywords:
   - xiao
   - esp32c5
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
-slug: /cn/xiao_esp32c5_homeassistant
+slug: /xiao_esp32c5_homeassistant
 last_update:
   date: 12/17/2025
   author: Zeller

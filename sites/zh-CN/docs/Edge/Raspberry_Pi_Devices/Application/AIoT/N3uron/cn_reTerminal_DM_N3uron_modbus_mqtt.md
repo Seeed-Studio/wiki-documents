@@ -9,7 +9,7 @@ keywords:
   - N3uron
   - Modbus
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reTerminalDM_N3uron_modbus_mqtt
+slug: /reTerminalDM_N3uron_modbus_mqtt
 last_update:
   date: 5/6/2024
   author: Kasun Thushara and Xabier Fernández

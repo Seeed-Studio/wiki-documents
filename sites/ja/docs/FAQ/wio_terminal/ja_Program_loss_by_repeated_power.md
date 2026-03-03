@@ -2,7 +2,7 @@
 description: Wio Terminal - FAQ
 title: Wio Terminal を複数回再起動した後のプログラム消失を回避する方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Program_loss_by_repeated_power
+slug: /Program_loss_by_repeated_power
 date: 1/31/2024
 author: Seraphina
 ---

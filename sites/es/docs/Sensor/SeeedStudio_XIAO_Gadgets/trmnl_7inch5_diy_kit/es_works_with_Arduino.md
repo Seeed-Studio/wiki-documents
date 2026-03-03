@@ -5,7 +5,7 @@ keywords:
 - ePaper display
 - TRMNL
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp
-slug: /es/ogdiy_kit_works_with_arduino
+slug: /ogdiy_kit_works_with_arduino
 sidebar_position: 4
 last_update:
   date: 06/29/2025

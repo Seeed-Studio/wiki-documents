@@ -6,7 +6,7 @@ keywords:
   - インターフェース使用方法
   - Jetson
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
-slug: /ja/recomputer_jetson_super_hardware_interfaces_usage
+slug: /recomputer_jetson_super_hardware_interfaces_usage
 last_update:
   date: 05/26/2025
   author: Zibo

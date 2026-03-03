@@ -2,7 +2,7 @@
 description: Quantum Mini Linux 开发套件
 title: Quantum Mini Linux 开发套件
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Quantum-Mini-Linux-Development-Kit
+slug: /Quantum-Mini-Linux-Development-Kit
 sku: 114992462
 last_update:
   date: 2/1/2023

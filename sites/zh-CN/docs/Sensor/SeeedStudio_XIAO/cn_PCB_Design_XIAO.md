@@ -2,7 +2,7 @@
 description: XIAO 的 PCB 设计
 title: XIAO 的 PCB 设计
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/PCB_Design_XIAO
+slug: /PCB_Design_XIAO
 last_update:
   date: 11/07/2023
   author: Matthew

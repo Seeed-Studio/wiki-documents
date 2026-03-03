@@ -2,7 +2,7 @@
 description: MicroBlocksでXIAO RP2350を使用する。
 title: XIAO RP2350とMicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
-slug: /ja/xiao_rp2350_microblocks
+slug: /xiao_rp2350_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks

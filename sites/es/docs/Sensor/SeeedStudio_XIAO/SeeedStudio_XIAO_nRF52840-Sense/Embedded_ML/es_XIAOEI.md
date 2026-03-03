@@ -4,7 +4,7 @@ title: Reconocimiento de Movimiento basado en Edge Impulse
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAOEI
+slug: /XIAOEI
 sku: 102010469,102010490,102010632
 last_update:
   date: 04/11/2023

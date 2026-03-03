@@ -4,7 +4,7 @@ title:  Xadow - 1.54インチタッチスクリーン
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_1.54_inch_Touchscreen
+slug: /Xadow_1.54_inch_Touchscreen
 last_update:
   date: 05/15/2025
   author: shuxu hu

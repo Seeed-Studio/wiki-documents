@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/2.8inch-TFT_Touch_Shield_V1.0/
-slug: /cn/2.8inch-TFT_Touch_Shield_V1.0
+slug: /2.8inch-TFT_Touch_Shield_V1.0
 last_update:
   date: 02/03/2022
   author: gunengyu

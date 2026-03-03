@@ -4,7 +4,7 @@ title: 用于 RePhone 的 JavaScript
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/JavaScript_for_RePhone
+slug: /JavaScript_for_RePhone
 last_update:
   date: 1/13/2023
   author: shuxu hu

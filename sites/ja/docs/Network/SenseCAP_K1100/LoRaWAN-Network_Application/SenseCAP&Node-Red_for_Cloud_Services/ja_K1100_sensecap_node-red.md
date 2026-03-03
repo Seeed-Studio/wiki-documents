@@ -4,7 +4,7 @@ title: SenseCAP と Node-RED の使用方法
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/K1100_sensecap_node-red
+slug: /K1100_sensecap_node-red
 last_update:
   date: 05/15/2025
   author: shuxu hu

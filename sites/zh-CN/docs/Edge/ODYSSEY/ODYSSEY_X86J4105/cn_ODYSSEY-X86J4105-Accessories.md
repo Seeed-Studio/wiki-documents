@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J41x5
 title: 添加配件
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ODYSSEY-X86J4105-Accessories
+slug: /ODYSSEY-X86J4105-Accessories
 last_update:
   date: 01/03/2023
   author: w0x7ce

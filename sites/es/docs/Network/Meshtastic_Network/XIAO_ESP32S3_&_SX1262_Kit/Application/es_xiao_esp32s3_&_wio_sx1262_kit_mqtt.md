@@ -2,7 +2,7 @@
 description: Guía para configurar una pasarela MQTT de Meshtastic usando XIAO ESP32S3 y Wio-SX1262, conectando redes malladas LoRa a internet para el intercambio global de mensajes.
 title: Configuración de la pasarela MQTT
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
-slug: /es/xiao_esp32s3_&_wio_sx1262_kit_mqtt
+slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
 sku: 102010611,113110064
 sidebar_position: 1
 last_update:

@@ -4,7 +4,7 @@ title: CircuitPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Seeeduino-XIAO-CircuitPython
+slug: /Seeeduino-XIAO-CircuitPython
 last_update:
   date: 1/11/2023
   author: shuxu hu

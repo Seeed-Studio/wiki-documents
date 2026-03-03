@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - App
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
-slug: /cn/tracker_at_command
+slug: /tracker_at_command
 sidebar_position: 5
 last_update:
   date: 4/15/2025

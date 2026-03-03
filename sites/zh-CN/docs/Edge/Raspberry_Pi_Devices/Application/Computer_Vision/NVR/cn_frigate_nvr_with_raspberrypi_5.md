@@ -6,7 +6,7 @@ keywords:
   - reComputer r1000
   - Object detecton
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/frigate.webp
-slug: /cn/frigate_nvr_with_raspberrypi_5
+slug: /frigate_nvr_with_raspberrypi_5
 last_update:
   date: 04/03/2025
   author: Joshua Lee

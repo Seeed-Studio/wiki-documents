@@ -6,7 +6,7 @@ keywords:
   - esp32c5
   - pin_multiplexing
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
-slug: /ja/xiao_esp32c5_pin_multiplexing
+slug: /xiao_esp32c5_pin_multiplexing
 last_update:
   date: 12/30/2025
   author: Zeller

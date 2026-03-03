@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/DC_framework_solenoid_HCNE1-0520/
-slug: /cn/DC_framework_solenoid_HCNE1-0520
+slug: /DC_framework_solenoid_HCNE1-0520
 last_update:
   date: 02/03/2022
   author: gunengyu

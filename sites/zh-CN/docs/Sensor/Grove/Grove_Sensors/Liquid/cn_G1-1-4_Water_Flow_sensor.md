@@ -4,7 +4,7 @@ title: G5/4 英寸水流传感器
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/G1-1-4_Water_Flow_sensor
+slug: /G1-1-4_Water_Flow_sensor
 sku: 314150004
 last_update:
   date: 1/13/2023

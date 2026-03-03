@@ -4,7 +4,7 @@ title: reSpeaker 4-Mic 线性阵列套件
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi
+slug: /ReSpeaker_4-Mic_Linear_Array_Kit_for_Raspberry_Pi
 sku: 107990056
 last_update:
   date: 1/11/2023

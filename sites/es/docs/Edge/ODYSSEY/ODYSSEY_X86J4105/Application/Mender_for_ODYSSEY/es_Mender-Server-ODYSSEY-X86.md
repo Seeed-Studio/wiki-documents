@@ -4,7 +4,7 @@ title: Mender Server on ODYSSEY - X86
 keywords:
 - Sorftware Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Mender-Server-ODYSSEY-X86
+slug: /Mender-Server-ODYSSEY-X86
 last_update:
   date: 03/16/2023
   author: Lakshantha

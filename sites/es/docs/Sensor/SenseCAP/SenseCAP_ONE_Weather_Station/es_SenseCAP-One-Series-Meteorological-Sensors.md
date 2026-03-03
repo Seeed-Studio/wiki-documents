@@ -4,7 +4,7 @@ title: SenseCAP ONE Estación Meteorológica Compacta
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors
+slug: /Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/SenseCAP-One-Series-Meteorological-Sensors
 sku: 101990787, 101991141, 101990961, 101991102, 101991050, 101991232, 101990693, 101990784, 101990902, 101991022, 101991021, 101991023, 101991024, 101991044
 last_update:
   date: 1/16/2023

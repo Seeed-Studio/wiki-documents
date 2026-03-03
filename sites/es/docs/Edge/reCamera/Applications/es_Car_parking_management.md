@@ -6,7 +6,7 @@ keywords:
     - reCamera
     - Visión IA Edge
     - Estacionamiento Inteligente
-slug: /es/ai_parking_slot_monitoring_demo_with_recamera
+slug: /ai_parking_slot_monitoring_demo_with_recamera
 sku: 100029708,102991896
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 3

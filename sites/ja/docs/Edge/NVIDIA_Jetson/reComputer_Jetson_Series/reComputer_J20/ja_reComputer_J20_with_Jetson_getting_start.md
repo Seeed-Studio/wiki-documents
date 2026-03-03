@@ -4,7 +4,7 @@ title: reComputer J20 の使用を開始する
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/recomputer_j20_with_jetson_getting_start
+slug: /recomputer_j20_with_jetson_getting_start
 sku: 110061402, 110061483, 110061482, 110061481
 last_update:
   date: 9/3/2024

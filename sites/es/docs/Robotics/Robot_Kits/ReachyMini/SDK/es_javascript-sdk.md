@@ -1,7 +1,7 @@
 ---
 description: Guía completa del SDK de JavaScript y aplicaciones web para Reachy Mini, que permite el control del robot desde el navegador sin instalación mediante WebRTC y Hugging Face Spaces.
 title: SDK de JavaScript y Aplicaciones Web
-slug: /es/reachymini_sdk_javascript-sdk
+slug: /reachymini_sdk_javascript-sdk
 keywords:
 - javascript
 - web apps

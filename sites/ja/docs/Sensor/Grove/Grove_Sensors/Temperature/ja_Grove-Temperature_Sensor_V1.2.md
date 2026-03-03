@@ -4,7 +4,7 @@ title: Grove - 温度センサー V1.2
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Temperature_Sensor_V1.2
+slug: /Grove-Temperature_Sensor_V1.2
 sku: 101020015
 last_update:
   date: 05/15/2025

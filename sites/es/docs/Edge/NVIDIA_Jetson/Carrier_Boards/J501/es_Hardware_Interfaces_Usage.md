@@ -6,7 +6,7 @@ tags:
   - Jetson
   - Interface
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/j501_carrier_board_interfaces_usage
+slug: /j501_carrier_board_interfaces_usage
 last_update:
   date: 08/20/2024
   author: Youjiang

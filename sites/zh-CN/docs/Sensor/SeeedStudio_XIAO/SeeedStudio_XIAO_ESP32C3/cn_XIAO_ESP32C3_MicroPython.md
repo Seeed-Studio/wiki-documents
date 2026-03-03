@@ -2,7 +2,7 @@
 description: 适用于 ESP32C3 的 MicroPython
 title: 适用于 ESP32C3 的 MicroPython
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/XIAO_ESP32C3_MicroPython
+slug: /XIAO_ESP32C3_MicroPython
 last_update:
   date: 08/14/2023
   author: Matthew and Zachay

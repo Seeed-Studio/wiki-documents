@@ -4,7 +4,7 @@ title: XIAO ESP32C3 と MicroPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/esp32c3_micropython/title.png
-slug: /ja/xiao_esp32c3_with_micropython
+slug: /xiao_esp32c3_with_micropython
 last_update:
   date: 08/14/2024
   author: Evelyn Chen

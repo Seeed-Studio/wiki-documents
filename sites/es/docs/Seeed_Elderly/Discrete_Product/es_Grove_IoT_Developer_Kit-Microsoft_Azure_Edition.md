@@ -4,7 +4,7 @@ title: Grove IoT Developer Kit Microsoft Azure Edition
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition
+slug: /Grove_IoT_Developer_Kit-Microsoft_Azure_Edition
 sku: 110060422
 last_update:
   date: 1/13/2023

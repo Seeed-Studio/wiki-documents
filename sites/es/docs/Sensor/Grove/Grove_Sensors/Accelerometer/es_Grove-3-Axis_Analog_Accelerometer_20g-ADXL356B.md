@@ -4,7 +4,7 @@ title: Grove - Acelerómetro Analógico de 3 Ejes 20g (ADXL356B)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-3-Axis_Analog_Accelerometer_20g-ADXL356B
+slug: /Grove-3-Axis_Analog_Accelerometer_20g-ADXL356B
 sku: 101020637
 last_update:
   date: 1/5/2023

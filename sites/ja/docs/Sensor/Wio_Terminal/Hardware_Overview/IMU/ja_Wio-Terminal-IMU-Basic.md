@@ -4,7 +4,7 @@ title: 加速度計の使い方
 keywords:
 - Wio_terminal IMU
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-IMU-Basic
+slug: /Wio-Terminal-IMU-Basic
 last_update:
   date: 05/15/2025
   author: jianjing Huang

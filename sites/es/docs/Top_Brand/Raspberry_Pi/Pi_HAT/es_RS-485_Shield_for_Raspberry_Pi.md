@@ -4,7 +4,7 @@ title: Shield RS-485 para Raspberry Pi
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/RS-485_Shield_for_Raspberry_Pi
+slug: /RS-485_Shield_for_Raspberry_Pi
 sku: 103030295
 last_update:
   date: 1/11/2023

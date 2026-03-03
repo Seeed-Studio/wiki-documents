@@ -9,7 +9,7 @@ keywords:
 - Firmware
 - Flash
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
-slug: /ja/flash_watcher_agent_firmware
+slug: /flash_watcher_agent_firmware
 last_update:
   date: 12/04/2025
   author: Twelve

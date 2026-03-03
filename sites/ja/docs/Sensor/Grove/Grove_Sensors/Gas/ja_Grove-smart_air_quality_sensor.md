@@ -4,7 +4,7 @@ title: Grove - スマート空気質センサー (SGP41)
 keywords:
 - SGP41
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/grove-smart-air-quality-sensor-sgp41
+slug: /grove-smart-air-quality-sensor-sgp41
 sku: 101021092
 last_update:
   date: 05/15/2025

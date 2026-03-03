@@ -2,7 +2,7 @@
 description: SeeedのGithubからダウンロードしたデモを使用するためのガイド
 title: Seeed StudioのGithubからデモを使用する方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Guide_to_use_demos_downloaded_from_Seeed-s_Github
+slug: /Guide_to_use_demos_downloaded_from_Seeed-s_Github
 last_update:
   date: 05/15/2025
   author: w0x7ce

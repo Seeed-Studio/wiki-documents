@@ -4,7 +4,7 @@ title: Integración con Ubidots (vía TTS)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP_T1000_tracker_Ubidots_TTS
+slug: /SenseCAP_T1000_tracker_Ubidots_TTS
 last_update:
   date: 8/16/2023
   author: Jessie

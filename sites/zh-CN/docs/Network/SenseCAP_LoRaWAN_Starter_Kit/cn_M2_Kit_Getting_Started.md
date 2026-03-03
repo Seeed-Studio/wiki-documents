@@ -2,7 +2,7 @@
 description: 使用 SenseCAP LoRaWAN 入门套件快速上手
 title: 使用 SenseCAP LoRaWAN 入门套件快速上手
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/M2_Kit_Getting_Started
+slug: /M2_Kit_Getting_Started
 sidebar_position: 0
 last_update:
   date: 2023/1/26

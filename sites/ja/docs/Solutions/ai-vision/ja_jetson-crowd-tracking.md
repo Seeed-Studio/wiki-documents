@@ -2,7 +2,7 @@
 description: Jetsonの群衆追跡AIデモを紹介します
 title: 群衆追跡・カウント
 image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/crowd%20tracking.webp
-slug: /ja/solutions/jetson-crowd-tracking
+slug: /solutions/jetson-crowd-tracking
 last_update:
   date: 08/15/2025
   author: lian

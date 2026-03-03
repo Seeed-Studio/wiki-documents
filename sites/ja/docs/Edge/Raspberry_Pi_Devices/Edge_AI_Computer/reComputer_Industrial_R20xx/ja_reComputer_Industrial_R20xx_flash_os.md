@@ -7,7 +7,7 @@ keywords:
 - reComputer Industrial R20xx
 - Flash OS
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
-slug: /ja/recomputer_industrial_r2000_flash_os
+slug: /recomputer_industrial_r2000_flash_os
 last_update:
   date: 09/28/2025
   author: Nolan Chen

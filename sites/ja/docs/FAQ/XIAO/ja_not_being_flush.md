@@ -2,7 +2,7 @@
 description: XIAO-ESP32S3-FAQ
 title: なぜ私のXIAOは角の丸い部分が平らでない問題があるのですか
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/not_being_flush
+slug: /not_being_flush
 last_update:
   date: 6/30/2023
   author: cheng.tang

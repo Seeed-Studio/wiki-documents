@@ -2,7 +2,7 @@
 description: ODYSSEY-FAQ
 title: Solución de Problemas Relacionados con BIOS (WiFi/Bluetooth/Ventilador/Encendido Automático/Boot Guard/GPIO)
 #keywords:
-slug: /es/Troubleshooting_BIOS-Related_Issues
+slug: /Troubleshooting_BIOS-Related_Issues
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 6/26/2023

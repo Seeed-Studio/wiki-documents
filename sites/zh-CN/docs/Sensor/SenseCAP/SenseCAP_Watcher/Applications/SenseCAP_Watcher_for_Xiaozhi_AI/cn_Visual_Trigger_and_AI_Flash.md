@@ -11,7 +11,7 @@ keywords:
 - Visual
 - Activate
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
-slug: /cn/visual_trigger_and_ai_flash
+slug: /visual_trigger_and_ai_flash
 last_update:
   date: 12/04/2025
   author: Twelve

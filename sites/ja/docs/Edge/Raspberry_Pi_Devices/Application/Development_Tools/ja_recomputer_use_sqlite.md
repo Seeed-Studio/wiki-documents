@@ -6,7 +6,7 @@ keywords:
   - RasberryPi 5
   - SQlite
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/recomputer_use_docker.webp
-slug: /ja/use_sqlite_on_recomputer
+slug: /use_sqlite_on_recomputer
 last_update:
   date: 09/25/2025
   author: Jiahao

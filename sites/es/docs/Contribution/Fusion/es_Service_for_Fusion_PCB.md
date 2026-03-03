@@ -4,7 +4,7 @@ title: Servicio para Fusion PCB
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Service_for_Fusion_PCB
+slug: /Service_for_Fusion_PCB
 last_update:
   date: 1/13/2023
   author: shuxu hu

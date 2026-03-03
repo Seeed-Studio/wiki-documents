@@ -4,7 +4,7 @@ title: Grove - 赤外線受信モジュール
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Infrared_Receiver
+slug: /Grove-Infrared_Receiver
 sku: 101020016
 last_update:
   date: 05/15/2025

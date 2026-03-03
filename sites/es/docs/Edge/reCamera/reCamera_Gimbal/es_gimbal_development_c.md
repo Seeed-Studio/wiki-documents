@@ -8,7 +8,7 @@ keywords:
   - linux command
   - linux
 image: https://files.seeedstudio.com/wiki/reCamera/OS_upgrade/image-4.png
-slug: /es/gimbal_development_c
+slug: /gimbal_development_c
 sidebar_position: 4
 last_update:
   date: 4/15/2025

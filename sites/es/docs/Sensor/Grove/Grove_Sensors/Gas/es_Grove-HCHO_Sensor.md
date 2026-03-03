@@ -4,7 +4,7 @@ title: Grove - Sensor HCHO
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-HCHO_Sensor
+slug: /Grove-HCHO_Sensor
 sku: 101020001
 last_update:
   date: 1/5/2023

@@ -4,7 +4,7 @@ title: reRouterキャリアボード
 keywords:
 - デバイス
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4
+slug: /Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4
 sku: 102110497,110110090,110110110
 last_update:
   date: 05/15/2025

@@ -7,7 +7,7 @@ keywords:
   - Node-Red
   - InfluxDB
 image: https://files.seeedstudio.com/wiki/reTerminalDM/nodered/reterminal-influx.png
-slug: /es/reterminal_dm_200_node_red_influxdb
+slug: /reterminal_dm_200_node_red_influxdb
 last_update:
   date: 06/28/2024
   author: Kasun Thushara

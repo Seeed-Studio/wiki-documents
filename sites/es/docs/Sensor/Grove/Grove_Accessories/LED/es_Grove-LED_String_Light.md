@@ -4,7 +4,7 @@ title: Grove - Tira de Luces LED
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-LED_String_Light
+slug: /Grove-LED_String_Light
 sku: 104020005
 last_update:
   date: 1/7/2023

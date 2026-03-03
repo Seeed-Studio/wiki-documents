@@ -4,7 +4,7 @@ title: Microsoft Azure IoT Central の使い方を始める
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Connect-Wio-Terminal-to-Azure-IoT-Central
+slug: /Connect-Wio-Terminal-to-Azure-IoT-Central
 last_update:
   date: 05/15/2025
   author: shuxu hu

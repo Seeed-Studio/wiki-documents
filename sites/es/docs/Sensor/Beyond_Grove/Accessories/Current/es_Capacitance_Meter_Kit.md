@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Capacitance_Meter_Kit/
-slug: /es/Capacitance_Meter_Kit
+slug: /Capacitance_Meter_Kit
 last_update:
   date: 02/03/2022
   author: gunengyu

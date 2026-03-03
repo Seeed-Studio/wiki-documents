@@ -4,7 +4,7 @@ title: XIAO nRF52840 Sense での PDM 使用方法
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAO-BLE-Sense-PDM-Usage
+slug: /XIAO-BLE-Sense-PDM-Usage
 last_update:
   date: 06/25/2024
   author: Spencer

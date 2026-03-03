@@ -2,7 +2,7 @@
 description: MicroPython para ESP32C3
 title: MicroPython para ESP32C3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO_ESP32C3_MicroPython
+slug: /XIAO_ESP32C3_MicroPython
 last_update:
   date: 08/14/2023
   author: Matthew and Zachay

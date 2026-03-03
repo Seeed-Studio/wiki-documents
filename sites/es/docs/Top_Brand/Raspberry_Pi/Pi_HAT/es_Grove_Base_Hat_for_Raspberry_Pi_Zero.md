@@ -4,7 +4,7 @@ title: Grove Base Hat para Raspberry Pi Zero
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_Base_Hat_for_Raspberry_Pi_Zero
+slug: /Grove_Base_Hat_for_Raspberry_Pi_Zero
 sku: 103030276
 last_update:
   date: 1/11/2023

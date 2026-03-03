@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Wio_RP2040_Module_Build-in_Wireless_2.4G/
-slug: /cn/Wio-Terminal-IO-Overview
+slug: /Wio-Terminal-IO-Overview
 last_update:
   date: 01/11/2022
   author: gunengyu

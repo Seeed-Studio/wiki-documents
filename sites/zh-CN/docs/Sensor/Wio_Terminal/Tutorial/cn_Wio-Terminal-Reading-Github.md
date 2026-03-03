@@ -4,7 +4,7 @@ title: 使用 Wio Terminal 访问 GitHub
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Reading-Github
+slug: /Wio-Terminal-Reading-Github
 last_update:
   date: 1/31/2023
   author: jianjing Huang

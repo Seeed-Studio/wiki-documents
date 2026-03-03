@@ -4,7 +4,7 @@ title: Detección de Objetos - SWIFT-YOLO
 keywords:
 - sscma model assistant ai tinyml 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ModelAssistant_Tutorials_Training_YOLO
+slug: /ModelAssistant_Tutorials_Training_YOLO
 last_update:
   date: 01/11/2024
   author: LynnL4

@@ -2,7 +2,7 @@
 description: Este proyecto combina el XIAO ESP32S3 y Grove Vision AI V2 para crear un dispositivo compacto de detección de personas. El módulo V2, equipado con un modelo de detección de personas, identifica la presencia humana y envía los resultados al ESP32S3. El microcontrolador luego procesa la información y reenvía las alertas de detección a una cuenta de Telegram designada, proporcionando notificaciones en tiempo real cada vez que se detecta una persona en el área monitoreada.
 title: Despliega Grove Vision AI V2 Para Notificarte Vía Telegram
 image: https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/headimage2.png
-slug: /es/grove_vision_ai_v2_telegram
+slug: /grove_vision_ai_v2_telegram
 last_update:
   date: 05/27/2024
   author: Allen

@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Vibration_Motor/
-slug: /ja/Grove-Vibration_Motor
+slug: /Grove-Vibration_Motor
 sku: 103020027, 105020003
 last_update:
   date: 05/15/2025

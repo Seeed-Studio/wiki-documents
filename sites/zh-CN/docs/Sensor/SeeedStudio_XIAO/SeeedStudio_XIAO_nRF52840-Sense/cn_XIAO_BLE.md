@@ -4,7 +4,7 @@ title: Seeed Studio XIAO nRF52840 系列入门指南
 keywords:
   - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg
-slug: /cn/XIAO_BLE
+slug: /XIAO_BLE
 sku: 102010448, 102010469, 102010632, 102010631, 102010672, 102010694, 101991463, 101991465
 last_update:
   date: 2024-11-28T11:15:24+08:00

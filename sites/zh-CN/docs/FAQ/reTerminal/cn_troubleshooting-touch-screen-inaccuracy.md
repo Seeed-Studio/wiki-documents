@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 触摸屏不准确问题的故障排除
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/troubleshooting-touch-screen-inaccuracy
+slug: /troubleshooting-touch-screen-inaccuracy
 last_update:
   date: 6/21/2023
   author: Seraphina

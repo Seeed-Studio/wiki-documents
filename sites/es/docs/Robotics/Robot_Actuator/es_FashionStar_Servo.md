@@ -7,7 +7,7 @@ keywords:
 - arm
 - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp
-slug: /es/fashionstar_servo
+slug: /fashionstar_servo
 last_update:
   date: 11/24/2025
   author: Li Shanghang

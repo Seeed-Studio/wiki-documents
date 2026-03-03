@@ -2,7 +2,7 @@
 description: 介绍 Jetson 人群跟踪的 AI 演示
 title: 人群跟踪与计数
 image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/crowd%20tracking.webp
-slug: /cn/solutions/jetson-crowd-tracking
+slug: /solutions/jetson-crowd-tracking
 last_update:
   date: 08/15/2025
   author: lian

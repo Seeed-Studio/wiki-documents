@@ -4,7 +4,7 @@ title: Primeros pasos con el Switch de 5 direcciones
 keywords:
 - Wio_terminal five_Way_Switch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-Switch
+slug: /Wio-Terminal-Switch
 last_update:
   date: 1/17/2023
   author: jianjing Huang

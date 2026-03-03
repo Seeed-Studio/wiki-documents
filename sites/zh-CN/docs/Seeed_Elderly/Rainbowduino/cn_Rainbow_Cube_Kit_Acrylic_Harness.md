@@ -4,7 +4,7 @@ title: 彩虹立方套件亚克力外壳
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness
+slug: /Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness
 sllug: /Rainbow_Cube_Kit_Acrylic_Harness
 last_update:
   date: 1/13/2023

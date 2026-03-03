@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display for XIAO-FAQ
 title: XIAO RP2040でRound DisplayのHardwareTestコードを使用する際に、非常に奇妙なC++エラーが発生するのはなぜですか？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/error_when_using_the_code
+slug: /error_when_using_the_code
 last_update:
   date: 6/30/2023
   author: cheng.tang

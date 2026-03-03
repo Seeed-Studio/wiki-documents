@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_Wio_E5_Helium_tinyML_Demo
+slug: /Grove_Wio_E5_Helium_tinyML_Demo
 last_update:
   date: 09/19/2023
   author: Salman 

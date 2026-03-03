@@ -8,7 +8,7 @@ keywords:
 - Clawdbot
 - Qwen
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
-slug: /es/develop_recomputer_jetson_using_clawdbot
+slug: /develop_recomputer_jetson_using_clawdbot
 sku: 114110314, 114090066
 last_update:
   date: 01/28/2026

@@ -4,7 +4,7 @@ title: SeeedStudio BeagleBone® Green Gateway
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/BeagleBone-Green-Gateway
+slug: /BeagleBone-Green-Gateway
 sku: 102110381
 last_update:
   date: 05/15/2025

@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Sensor_sound/
-slug: /ja/Sensor_sound
+slug: /Sensor_sound
 last_update:
   date: 05/15/2025
   author: gunengyu

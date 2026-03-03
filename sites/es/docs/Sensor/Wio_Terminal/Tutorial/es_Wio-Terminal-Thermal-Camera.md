@@ -4,7 +4,7 @@ title: Construye una Cámara de Imagen Térmica IR usando Wio Terminal
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-Thermal-Camera
+slug: /Wio-Terminal-Thermal-Camera
 last_update:
   date: 1/31/2023
   author: jianjing Huang

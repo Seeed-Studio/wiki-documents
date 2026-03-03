@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/DC_framework_miniature_solenoid_VL-0063/
-slug: /es/DC_framework_miniature_solenoid_VL-0063
+slug: /DC_framework_miniature_solenoid_VL-0063
 last_update:
   date: 02/03/2022
   author: gunengyu

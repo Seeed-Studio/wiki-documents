@@ -2,7 +2,7 @@
 description: Watcher機能ブロックの開発方法について説明します。
 title: Watcher機能モジュール開発ガイド
 image: https://files.seeedstudio.com/wiki/watcher_software_framework/watcher_function_module.webp
-slug: /ja/watcher_function_module_development_guide
+slug: /watcher_function_module_development_guide
 sidebar_position: 3
 last_update:
   date: 11/5/2024

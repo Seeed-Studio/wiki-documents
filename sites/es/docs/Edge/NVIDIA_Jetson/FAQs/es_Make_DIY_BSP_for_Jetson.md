@@ -9,7 +9,7 @@ keywords:
 - JetPack
 - custom image
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/make_diy_bsp_for_jetson
+slug: /make_diy_bsp_for_jetson
 last_update:
   date: 01/04/2026
   author: Dayu

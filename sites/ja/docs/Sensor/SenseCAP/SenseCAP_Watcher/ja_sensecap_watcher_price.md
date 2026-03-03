@@ -2,7 +2,7 @@
 description: この記事では、SenseCraft AIを使用するWatcherの料金プランについて説明します。
 title: 価格と特典
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler_1.webp
-slug: /ja/watcher_price
+slug: /watcher_price
 sidebar_position: 3
 last_update:
   date: 10/18/2024

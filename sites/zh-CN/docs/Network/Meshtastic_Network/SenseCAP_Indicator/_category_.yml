@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: sensecap_indicator 
 link:
   type: generated-index
-  slug: cn/sensecap_indicator_meshtastic_main_page
+  slug: sensecap_indicator_meshtastic_main_page
   title: SenseCAP 指示器
   description: SenseCAP 指示器 Meshtastic 应用程序。

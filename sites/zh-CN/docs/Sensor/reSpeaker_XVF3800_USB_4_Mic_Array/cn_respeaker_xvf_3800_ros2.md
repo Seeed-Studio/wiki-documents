@@ -6,7 +6,7 @@ keywords:
 - Robotics
 - ROS2
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
-slug: /cn/respeaker_xvf3800_ros2
+slug: /respeaker_xvf3800_ros2
 last_update:
   date: 9/26/2025
   author: Kasun Thushara

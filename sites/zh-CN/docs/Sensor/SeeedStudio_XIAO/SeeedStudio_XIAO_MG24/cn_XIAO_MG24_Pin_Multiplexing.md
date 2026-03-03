@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO MG24 引脚复用
 description: Seeed Studio XIAO MG24(Sense) 引脚复用。
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/2.webp
-slug: /cn/xiao_mg24_pin_multiplexing
+slug: /xiao_mg24_pin_multiplexing
 keywords:
   - XIAO
   - MG24

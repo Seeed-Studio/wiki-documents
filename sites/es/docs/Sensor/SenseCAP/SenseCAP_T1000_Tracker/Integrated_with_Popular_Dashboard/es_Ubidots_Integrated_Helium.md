@@ -4,7 +4,7 @@ title:  Integración con Ubidots (vía Helium)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP_T1000_tracker_Ubidots_Helium
+slug: /SenseCAP_T1000_tracker_Ubidots_Helium
 last_update:
   date: 8/16/2023
   author: Jessie

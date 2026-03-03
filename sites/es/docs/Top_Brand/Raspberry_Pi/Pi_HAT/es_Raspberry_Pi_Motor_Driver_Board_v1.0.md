@@ -4,7 +4,7 @@ title: Raspberry Pi Motor Driver Board v1.0
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Raspberry_Pi_Motor_Driver_Board_v1.0
+slug: /Raspberry_Pi_Motor_Driver_Board_v1.0
 sku: 103030031
 last_update:
   date: 1/11/2023

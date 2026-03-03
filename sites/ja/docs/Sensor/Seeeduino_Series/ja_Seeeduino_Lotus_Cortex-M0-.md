@@ -4,7 +4,7 @@ title: Seeeduino Lotus Cortex-M0+
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeeduino_Lotus_Cortex-M0-
+slug: /Seeeduino_Lotus_Cortex-M0-
 sku: 102010228
 last_update:
   date: 05/15/2025

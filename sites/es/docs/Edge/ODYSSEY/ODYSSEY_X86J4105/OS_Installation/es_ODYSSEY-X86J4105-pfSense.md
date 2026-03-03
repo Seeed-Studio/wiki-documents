@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J41x5
 title: Instalación de pfSense
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ODYSSEY-X86J4105-pfSense
+slug: /ODYSSEY-X86J4105-pfSense
 last_update:
   date: 01/03/2023
   author: w0x7ce

@@ -4,7 +4,7 @@ title: Grove - 3軸デジタル加速度センサー (LIS3DHTR)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR
+slug: /Grove-3-Axis-Digital-Accelerometer-LIS3DHTR
 sku: 114020121
 last_update:
   date: 05/15/2025

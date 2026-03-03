@@ -5,7 +5,7 @@ keywords:
   - ESP-IDF
   - XIAO
 image: https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/8.webp
-slug: /es/xiao-c3-ibeacon
+slug: /xiao-c3-ibeacon
 last_update:
   date: 04/14/2025
   author: Priyanshu Roy

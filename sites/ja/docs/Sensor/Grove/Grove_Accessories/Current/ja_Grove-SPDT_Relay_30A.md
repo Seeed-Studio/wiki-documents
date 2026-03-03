@@ -4,7 +4,7 @@ title: Grove - SPDTリレー(30A)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-SPDT_Relay_30A
+slug: /Grove-SPDT_Relay_30A
 sku: 103020012
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/DSO_Quad-Calibration/
-slug: /es/DSO_Quad-Calibration
+slug: /DSO_Quad-Calibration
 last_update:
   date: 02/03/2022
   author: gunengyu

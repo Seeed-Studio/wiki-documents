@@ -6,7 +6,7 @@ keywords:
 - Edge Controller
 - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/recomputer3.jpg
-slug: /ja/recomputer_r1100_assembly_guide
+slug: /recomputer_r1100_assembly_guide
 last_update:
   date: 2/27/2024
   author: Kasun Thushara

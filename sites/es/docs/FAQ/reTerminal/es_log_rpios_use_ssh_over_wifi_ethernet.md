@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Iniciar sesión en Raspberry Pi OS/ Ubuntu OS u otros OS usando SSH a través de Wi-Fi/ Ethernet
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/log_rpios_use_ssh_over_wifi_ethernet
+slug: /log_rpios_use_ssh_over_wifi_ethernet
 last_update:
   date: 6/21/2023
   author: Seraphina

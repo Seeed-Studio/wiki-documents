@@ -2,7 +2,7 @@
 description: ODYSSEY, STM32MP135D
 title: Primeros pasos con ODYSSEY – STM32MP135D 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ODYSSEY-STM32MP135D
+slug: /ODYSSEY-STM32MP135D
 sku: 102110701,102110859
 last_update:
   date: 10/13/2023

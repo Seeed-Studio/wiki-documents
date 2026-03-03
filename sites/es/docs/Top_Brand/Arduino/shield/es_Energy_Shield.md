@@ -2,7 +2,7 @@
 description: Energy_Shield
 title: Energy Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Energy_Shield
+slug: /Energy_Shield
 sku: 106030000
 last_update:
   date: 01/11/2023  

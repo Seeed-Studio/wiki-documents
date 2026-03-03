@@ -6,7 +6,7 @@ keywords:
   - 入门指南
   - WordPress
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/wordpress_linkstar
+slug: /wordpress_linkstar
 last_update:
   date: 2023/6/8
   author: Kasun Thushara

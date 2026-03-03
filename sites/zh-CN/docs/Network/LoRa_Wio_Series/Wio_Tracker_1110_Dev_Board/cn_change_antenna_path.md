@@ -5,7 +5,7 @@ keywords:
 - Antenna
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/change_antenna_path
+slug: /change_antenna_path
 sidebar_position: 6
 last_update:
   date: 7/8/2024

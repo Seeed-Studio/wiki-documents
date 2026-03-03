@@ -4,7 +4,7 @@ title: 贡献指南
 keywords:
 - 贡献者
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Contribution-Guide
+slug: /Contribution-Guide
 last_update:
   date: 03/01/2023
   author: Matthew

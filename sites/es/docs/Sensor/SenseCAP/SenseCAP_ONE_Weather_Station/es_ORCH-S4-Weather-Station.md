@@ -4,7 +4,7 @@ title: Estación Meteorológica ORCH S4
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station
+slug: /Sensor/SenseCAP/SenseCAP_ONE_Weather_Station/ORCH-S4-Weather-Station
 last_update:
   date: 1/16/2023
   author: jianjing Huang

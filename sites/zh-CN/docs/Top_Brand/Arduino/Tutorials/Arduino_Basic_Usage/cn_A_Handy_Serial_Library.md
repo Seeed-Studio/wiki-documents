@@ -2,7 +2,7 @@
 description: 一个便捷的串口库
 title: 一个便捷的串口库
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/A_Handy_Serial_Library
+slug: /A_Handy_Serial_Library
 last_update:
   date: 02/01/2023
   author: w0x7ce

@@ -2,7 +2,7 @@
 description: 本文提供了在三种不同处理部署流程中配置 Watcher 设备的详细设置指南，包括云端高效处理流程、混合智能处理流程和本地安全处理流程。它概述了 Watcher 软件服务框架，展示了用户、SenseCraft Mate 应用程序和 Watcher 设备之间的交互。
 title: Watcher 软件服务介绍
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/50.jpg
-slug: /cn/watcher_software_service_framework
+slug: /watcher_software_service_framework
 sidebar_position: 2
 last_update:
   date: 10/09/2024

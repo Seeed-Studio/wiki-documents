@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: 'product_overview_with_watcher'
 link:
   type: generated-index
-  slug: ja/product_overview_with_watcher
+  slug: product_overview_with_watcher
   title: Watcher製品概要
   description: Watcher製品概要では、SenseCAP Watcherのハードウェアおよびソフトウェアコンポーネント、機能、相互作用について詳しく説明します。

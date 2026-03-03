@@ -7,7 +7,7 @@ keywords:
 - 引退製品
 - 廃止製品
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/discontinuedproducts
+slug: /discontinuedproducts
 toc_max_heading_level: 5
 last_update:
   date: 05/15/2025

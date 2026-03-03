@@ -2,7 +2,7 @@
 description: Seeed Studio 圆形显示屏适用于 XIAO-常见问题解答
 title: 为什么在使用 XIAO nRF52840 (Sense) 时会出现错误？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/error_when_use_XIAOnRF52840
+slug: /error_when_use_XIAOnRF52840
 last_update:
   date: 6/30/2023
   author: cheng.tang

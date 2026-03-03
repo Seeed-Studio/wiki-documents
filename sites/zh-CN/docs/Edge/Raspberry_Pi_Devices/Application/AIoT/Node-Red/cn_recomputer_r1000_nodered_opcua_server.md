@@ -8,7 +8,7 @@ keywords:
   - Modbus
   - OPC UA
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /cn/recomputer_r1000_nodered_opcua_server
+slug: /recomputer_r1000_nodered_opcua_server
 last_update:
   date: 08/14/2024
   author: Kasun Thushara

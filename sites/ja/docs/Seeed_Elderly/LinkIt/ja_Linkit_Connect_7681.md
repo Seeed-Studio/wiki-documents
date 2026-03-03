@@ -4,7 +4,7 @@ title: Linkit Connect 7681
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Linkit_Connect_7681
+slug: /Linkit_Connect_7681
 last_update:
   date: 05/15/2025
   author: shuxu hu

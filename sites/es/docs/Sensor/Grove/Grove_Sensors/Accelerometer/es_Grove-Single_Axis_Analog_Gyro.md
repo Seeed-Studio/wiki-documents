@@ -4,7 +4,7 @@ title: Grove-Single Axis Analog Gyro
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Single_Axis_Analog_Gyro
+slug: /Grove-Single_Axis_Analog_Gyro
 last_update:
   date: 1/29/2023
   author: jianjing Huang

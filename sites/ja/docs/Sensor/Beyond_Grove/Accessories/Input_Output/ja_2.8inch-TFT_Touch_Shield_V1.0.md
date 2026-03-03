@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/2.8inch-TFT_Touch_Shield_V1.0/
-slug: /ja/2.8inch-TFT_Touch_Shield_V1.0
+slug: /2.8inch-TFT_Touch_Shield_V1.0
 last_update:
   date: 05/15/2025
   author: gunengyu

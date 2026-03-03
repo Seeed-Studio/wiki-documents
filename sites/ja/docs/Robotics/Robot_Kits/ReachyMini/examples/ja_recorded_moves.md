@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini 用のダンス、感情、またはカスタムデータセットを含むデータセットから、記録された動きを再生する方法を示すサンプルです。
 title: 記録された動き
-slug: /ja/reachymini_examples_recorded_moves
+slug: /reachymini_examples_recorded_moves
 keywords:
 - recorded moves
 - dataset

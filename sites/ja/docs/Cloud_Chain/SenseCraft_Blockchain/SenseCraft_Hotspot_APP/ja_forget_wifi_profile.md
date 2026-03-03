@@ -4,7 +4,7 @@ title: Wi-Fiプロファイルを削除する
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecraft-blockchain/sensecraft-hotspot-app/forget-wifi-profile
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/forget-wifi-profile
 aliases:
   - /ja/Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile
 last_update:

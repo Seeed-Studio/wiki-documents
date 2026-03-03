@@ -10,7 +10,7 @@ keywords:
   - Modbus
   - AWS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/recomputer_r1000_n3uron_modbus_mqtt_aws
+slug: /recomputer_r1000_n3uron_modbus_mqtt_aws
 last_update:
   date: 7/12/2024
   author: Kasun Thushara

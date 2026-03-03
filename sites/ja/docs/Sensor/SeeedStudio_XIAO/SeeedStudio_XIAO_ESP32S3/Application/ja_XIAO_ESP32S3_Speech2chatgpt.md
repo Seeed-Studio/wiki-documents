@@ -6,7 +6,7 @@ keywords:
 - chatGPT
 - 音声からテキストへ
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/xiao_esp32s3_speech2chatgpt
+slug: /xiao_esp32s3_speech2chatgpt
 last_update:
   date: 05/15/2025
   author: Citric

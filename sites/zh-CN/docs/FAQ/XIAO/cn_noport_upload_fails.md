@@ -2,7 +2,7 @@
 description: XIAO-常见问题解答
 title: 上传失败/程序运行异常/设备端口未找到时该怎么办？
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/noport_upload_fails
+slug: /noport_upload_fails
 last_update:
   date: 2023/6/21
   author: Seraphina

@@ -2,7 +2,7 @@
 description: メモリ拡張
 title: メモリ拡張
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reComputer_Jetson_Memory_Expansion
+slug: /reComputer_Jetson_Memory_Expansion
 last_update:
   date: 01/05/2023
   author: w0x7ce

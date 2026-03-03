@@ -1,7 +1,7 @@
 ---
 description: Linux、macOS、Windows 向けの Reachy Mini Python SDK とデーモンの包括的なインストールガイドです。前提条件、仮想環境のセットアップ、トラブルシューティングを網羅しています。
 title: インストールガイド
-slug: /ja/reachymini_sdk_installation
+slug: /reachymini_sdk_installation
 keywords:
 - installation
 - setup

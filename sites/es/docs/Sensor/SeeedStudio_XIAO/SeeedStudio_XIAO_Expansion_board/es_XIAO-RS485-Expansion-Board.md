@@ -4,7 +4,7 @@ title: Placa de Expansión RS485 para XIAO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/top.webp
-slug: /es/XIAO-RS485-Expansion-Board
+slug: /XIAO-RS485-Expansion-Board
 sku: 113991354
 last_update:
   date: 11/20/2024

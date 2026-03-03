@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: reTerminal使用に関するFAQ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal-FAQ
+slug: /reTerminal-FAQ
 last_update:
   date: 1/31/2023
   author: jianjing Huang

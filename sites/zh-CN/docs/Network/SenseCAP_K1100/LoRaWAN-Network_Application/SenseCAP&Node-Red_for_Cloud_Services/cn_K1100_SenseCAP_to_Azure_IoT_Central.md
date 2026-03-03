@@ -4,7 +4,7 @@ title: SenseCAP & Node-RED 连接到 Microsoft Azure IoT Central
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/K1100_SenseCAP_to_Azure_IoT_Central
+slug: /K1100_SenseCAP_to_Azure_IoT_Central
 last_update:
   date: 1/12/2023
   author: shuxu hu

@@ -4,7 +4,7 @@ title: Grove - Switch(P)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Switch-P
+slug: /Grove-Switch-P
 sku: 101020004
 last_update:
   date: 1/31/2023

@@ -4,7 +4,7 @@ title: Entrena y Despliega Tu Propio Modelo de IA
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/train_and_deploy_model
+slug: /train_and_deploy_model
 last_update:
   date: 09/24/2024
   author: Frank

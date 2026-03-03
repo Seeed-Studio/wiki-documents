@@ -4,7 +4,7 @@ title: Kit GPS Bee
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/GPS_Bee_kit
+slug: /GPS_Bee_kit
 sku: 113050003
 last_update:
   date: 1/13/2023

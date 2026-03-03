@@ -5,7 +5,7 @@ title: Lista de Tipos de Sensores
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /es/sensecraft-data-platform/api/appendix/list_of_sensor_types
+slug: /sensecraft-data-platform/api/appendix/list_of_sensor_types
 aliases:
   - /es/Cloud_Chain/SenseCAP_API/Appendix/List_of_Sensor_Types
 last_update:

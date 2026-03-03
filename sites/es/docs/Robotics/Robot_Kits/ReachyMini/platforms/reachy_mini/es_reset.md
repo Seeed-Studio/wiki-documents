@@ -1,7 +1,7 @@
 ---
 description: Guía para restablecer la conexión inalámbrica de Reachy Mini usando la app nRF Connect o un navegador con Bluetooth Web API para restablecer el punto de acceso Wi‑Fi o el daemon.
 title: Restablecer Reachy Mini vía Bluetooth
-slug: /es/reachymini_platforms_reachy_mini_reset
+slug: /reachymini_platforms_reachy_mini_reset
 keywords:
 - reset
 - bluetooth

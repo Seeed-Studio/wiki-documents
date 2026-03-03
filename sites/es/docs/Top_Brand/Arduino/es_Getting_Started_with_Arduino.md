@@ -4,7 +4,7 @@ title: Comenzar con Arduino
 keywords:
 - Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Getting_Started_with_Arduino
+slug: /Getting_Started_with_Arduino
 last_update:
   date: 2/14/2023
   author: jianjing Huang

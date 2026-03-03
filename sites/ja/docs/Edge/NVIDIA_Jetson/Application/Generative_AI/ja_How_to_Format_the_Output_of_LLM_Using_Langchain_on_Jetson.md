@@ -6,7 +6,7 @@ keywords:
 - LLM
 - Langchain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson
+slug: /How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson
 last_update:
   date: 4/1/2024
   author: Youjiang

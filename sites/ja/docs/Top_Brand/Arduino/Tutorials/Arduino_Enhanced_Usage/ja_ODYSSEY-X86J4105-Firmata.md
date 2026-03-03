@@ -4,7 +4,7 @@ title: Arduino互換ボード用のFirmata
 keywords:
 - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ODYSSEY-X86J4105-Firmata
+slug: /ODYSSEY-X86J4105-Firmata
 sku: 102110399,102110398,102110397
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: Qubitro統合（TTS経由）
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_T1000_tracker_Qubitro_TTS
+slug: /SenseCAP_T1000_tracker_Qubitro_TTS
 last_update:
   date: 8/15/2023
   author: Jessie

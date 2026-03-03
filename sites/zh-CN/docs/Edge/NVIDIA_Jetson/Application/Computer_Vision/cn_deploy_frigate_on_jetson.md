@@ -2,7 +2,7 @@
 description: Frigate 是一个开源的 NVR（网络视频录像机），具有针对 IP 摄像头的实时对象检测功能。在本指南中，我们将逐步介绍如何在 NVIDIA Jetson 设备上部署 Frigate。
 title: 在 Jetson 上部署 Frigate
 image: https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/3.png
-slug: /cn/deploy_frigate_on_jetson
+slug: /deploy_frigate_on_jetson
 last_update:
   date: 08/29/2024
   author: kourosh

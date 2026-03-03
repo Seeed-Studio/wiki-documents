@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-MP3_v2.0/
-slug: /ja/Grove-MP3_v2.0
+slug: /Grove-MP3_v2.0
 sku: 107020008
 last_update:
   date: 05/15/2025

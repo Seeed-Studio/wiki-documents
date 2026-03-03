@@ -2,7 +2,7 @@
 description: Brushless_Motor_Shield_TB6605FTG
 title: ブラシレスモーターシールド TB6605FTG
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Brushless_Motor_Shield_TB6605FTG
+slug: /Brushless_Motor_Shield_TB6605FTG
 last_update:
   date: 05/15/2025
   author: Eico 

@@ -7,7 +7,7 @@ keywords:
   - zigbee
   - ncs
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/zigbee_0_1.webp
-slug: /ja/xiao_nrf54l15_zigbee
+slug: /xiao_nrf54l15_zigbee
 sku: 101991422
 last_update:
   date: 1/27/2026

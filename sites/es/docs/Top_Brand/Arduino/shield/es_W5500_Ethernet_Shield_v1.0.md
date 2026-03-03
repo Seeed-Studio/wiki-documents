@@ -2,7 +2,7 @@
 description: W5500_Ethernet_Shield_v1.0
 title: W5500 Ethernet Shield v1.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/W5500_Ethernet_Shield_v1.0
+slug: /W5500_Ethernet_Shield_v1.0
 sku: 103030021
 last_update:
   date: 01/30/2023  

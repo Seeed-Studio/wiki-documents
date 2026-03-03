@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-IO-Digital/
-slug: /ja/Wio-Terminal-IO-Digital
+slug: /Wio-Terminal-IO-Digital
 last_update:
   date: 05/15/2025
   author: gunengyu

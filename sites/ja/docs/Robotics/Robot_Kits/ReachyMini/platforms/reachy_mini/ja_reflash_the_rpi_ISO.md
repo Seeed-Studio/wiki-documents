@@ -1,7 +1,7 @@
 ---
 description: Linux、macOS、Windows 上で rpiboot と bmaptool を使用して、Reachy Mini の CM4 に ReachyMiniOS イメージを書き込み直すためのエキスパート向けガイド。
 title: Raspberry Pi OS イメージを書き込み直す
-slug: /ja/reachymini_platforms_reachy_mini_reflash_the_rpi_iso
+slug: /reachymini_platforms_reachy_mini_reflash_the_rpi_iso
 keywords:
 - reflash
 - factory reset

@@ -4,7 +4,7 @@ title: BeagleBone® 解决方案
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/BeagleBone_Solutions
+slug: /BeagleBone_Solutions
 last_update:
   date: 1/10/2022
   author: jianjing Huang

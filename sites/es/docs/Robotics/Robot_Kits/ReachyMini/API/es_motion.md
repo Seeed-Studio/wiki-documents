@@ -1,7 +1,7 @@
 ---
 description: Referencia completa de la API para el movimiento de Reachy Mini, incluidas las clases base, movimientos goto y movimientos grabados.
 title: Referencia de la API de Movimiento
-slug: /es/reachymini_api_motion
+slug: /reachymini_api_motion
 keywords:
 - api
 - motion

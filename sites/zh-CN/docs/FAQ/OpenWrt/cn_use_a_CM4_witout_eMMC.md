@@ -2,7 +2,7 @@
 description: OpenWrt-常见问题
 title: 如何在双千兆以太网载板上使用无eMMC的CM4
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/use_a_CM4_witout_eMMC
+slug: /use_a_CM4_witout_eMMC
 last_update:
   date: 6/21/2023
   author: Seraphina

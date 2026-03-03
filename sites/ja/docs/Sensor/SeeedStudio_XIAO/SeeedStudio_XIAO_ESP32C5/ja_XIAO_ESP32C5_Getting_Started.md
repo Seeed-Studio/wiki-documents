@@ -5,7 +5,7 @@ keywords:
   - xiao
   - esp32c5
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
-slug: /ja/xiao_esp32c5_getting_started
+slug: /xiao_esp32c5_getting_started
 last_update:
   date: 11/26/2025
   author: Zeller

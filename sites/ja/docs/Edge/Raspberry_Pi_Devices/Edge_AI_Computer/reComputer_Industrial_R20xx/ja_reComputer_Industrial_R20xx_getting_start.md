@@ -7,7 +7,7 @@ keywords:
 - Edge Controller
 - reComputer Industrial R20xx
 image: https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/R2000/recomputer-industrail-r2000.webp
-slug: /ja/recomputer_industrial_r20xx_getting_start
+slug: /recomputer_industrial_r20xx_getting_start
 sku: 100020831,100045506,100080766,100026042,E2025091901
 last_update:
   date: 09/28/2025

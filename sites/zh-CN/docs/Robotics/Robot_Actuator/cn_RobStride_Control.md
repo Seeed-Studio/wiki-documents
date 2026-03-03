@@ -7,7 +7,7 @@ keywords:
 - arm
 - robotics
 image:   https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
-slug: /cn/robstride_control
+slug: /robstride_control
 last_update:
   date: 11/19/2025
   author: Tienjuiwong

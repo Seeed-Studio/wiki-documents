@@ -5,7 +5,7 @@ keywords:
 - reSpeaker_XVF3800_USB_4_Mic_Array
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
-slug: /ja/respeaker_xvf_3800_openclaw
+slug: /respeaker_xvf_3800_openclaw
 sku: 114993702,114993700
 last_update:
   date: 2/10/2026

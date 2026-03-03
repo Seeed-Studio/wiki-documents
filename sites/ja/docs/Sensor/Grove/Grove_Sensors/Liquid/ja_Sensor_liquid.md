@@ -4,7 +4,7 @@ title: センサー - 液体（概要）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sensor_liquid
+slug: /Sensor_liquid
 last_update:
   date: 05/15/2025
   author: shuxu hu

@@ -6,7 +6,7 @@ keywords:
   - RasberryPi 5
   - Object detecton
 image: https://files.seeedstudio.com/wiki/multistream_benchmark_hailo8/raspberry_pi_ai_hat.webp
-slug: /ja/benchmark_of_multistream_inference_on_raspberrypi5_with_hailo8
+slug: /benchmark_of_multistream_inference_on_raspberrypi5_with_hailo8
 last_update:
   date: 11/21/2024
   author: Jiahao

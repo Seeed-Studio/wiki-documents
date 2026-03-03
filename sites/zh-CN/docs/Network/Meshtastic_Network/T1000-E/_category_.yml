@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: t1000_e_tracker
 link:
   type: generated-index
-  slug: cn/t1000_e_tracker_meshtastic
+  slug: t1000_e_tracker_meshtastic
   title: T1000-E 追踪器
   description: T1000-E 追踪器 Meshtastic 应用程序。

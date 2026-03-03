@@ -4,7 +4,7 @@ title: Grove 土壤湿度传感器
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/K1100-Soil-Moisture-Sensor-Grove-LoRa-E5
+slug: /K1100-Soil-Moisture-Sensor-Grove-LoRa-E5
 last_update:
   date: 1/13/2023
   author: shuxu hu

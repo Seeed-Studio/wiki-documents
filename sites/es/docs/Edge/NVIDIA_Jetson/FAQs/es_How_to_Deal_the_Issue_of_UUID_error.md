@@ -5,7 +5,7 @@ keywords:
 - reComputer
 - jetpack
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/deal_the_issue_of_UUID
+slug: /deal_the_issue_of_UUID
 sku: 100001302,E2025021103
 last_update:
   date: 01/08/2026

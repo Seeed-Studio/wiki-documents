@@ -7,7 +7,7 @@ keywords:
   - sd
   - camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/xiao-esp32s3-freertos
+slug: /xiao-esp32s3-freertos
 last_update:
   date: 09/14/2024
   author: Priyanshu Roy

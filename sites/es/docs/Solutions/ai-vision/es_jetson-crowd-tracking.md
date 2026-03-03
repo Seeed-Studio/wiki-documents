@@ -2,7 +2,7 @@
 description: Presenta una demostración de IA de seguimiento de multitudes con Jetson
 title: Seguimiento y Conteo de Multitudes
 image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/crowd%20tracking.webp
-slug: /es/solutions/jetson-crowd-tracking
+slug: /solutions/jetson-crowd-tracking
 last_update:
   date: 08/15/2025
   author: lian

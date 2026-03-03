@@ -6,7 +6,7 @@ keywords:
 - NVStreamer
 - RTSP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/getting_started_with_nvstreamer
+slug: /getting_started_with_nvstreamer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui

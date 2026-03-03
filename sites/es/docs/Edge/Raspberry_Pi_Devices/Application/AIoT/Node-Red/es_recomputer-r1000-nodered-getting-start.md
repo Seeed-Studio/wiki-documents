@@ -7,7 +7,7 @@ keywords:
   - IoT
   - Node-Red
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /es/recomputer_r1000_getting_started_node_red
+slug: /recomputer_r1000_getting_started_node_red
 sku: 113991274,E24010521
 last_update:
   date: 07/01/2024

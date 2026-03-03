@@ -5,7 +5,7 @@ keywords:
 - sensecap mate
 - grove vision ai v2
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/connect_vision_ai_v2_to_sensecap_mate
+slug: /connect_vision_ai_v2_to_sensecap_mate
 sku: 101021112,E23011220,104990982
 last_update:
   date: 01/19/2024

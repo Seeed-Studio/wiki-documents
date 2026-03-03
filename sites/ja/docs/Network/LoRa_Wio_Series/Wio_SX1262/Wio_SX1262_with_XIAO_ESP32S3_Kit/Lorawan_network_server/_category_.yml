@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: lorawan_network_server
 link:
   type: generated-index
-  slug: ja/lorawan_network_server_class
+  slug: lorawan_network_server_class
   title: LoRaWAN ネットワークサーバー
   description: LoRaWAN ネットワークサーバーのドキュメント。

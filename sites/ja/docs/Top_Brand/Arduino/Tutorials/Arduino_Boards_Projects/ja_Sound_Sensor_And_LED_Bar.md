@@ -5,7 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sound_Sensor_And_LED_Bar
+slug: /Sound_Sensor_And_LED_Bar
 last_update:
   date: 05/15/2025
   author: jianjing Huang

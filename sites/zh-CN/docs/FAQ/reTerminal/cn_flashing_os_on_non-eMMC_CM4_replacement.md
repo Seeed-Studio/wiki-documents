@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 如果我将CM4替换为非eMMC版本，如何刷写操作系统
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/flashing_os_on_non-eMMC_CM4_replacement
+slug: /flashing_os_on_non-eMMC_CM4_replacement
 last_update:
   date: 2023/6/21
   author: Seraphina

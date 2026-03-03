@@ -4,7 +4,7 @@ title: Cliente Mender en ODYSSEY - X86
 keywords:
 - Sorftware Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Mender-Client-ODYSSEY-X86
+slug: /Mender-Client-ODYSSEY-X86
 last_update:
   date: 1/13/2023
   author: jianjing Huang

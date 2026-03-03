@@ -2,7 +2,7 @@
 description: Arduinoライブラリのインストール方法
 title: Arduinoライブラリのインストール方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/How_to_install_Arduino_Library
+slug: /How_to_install_Arduino_Library
 last_update:
   date: 05/15/2025
   author: w0x7ce

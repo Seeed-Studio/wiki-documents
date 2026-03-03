@@ -7,7 +7,7 @@ keywords:
 - 机器人
 - Seeed
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/xiaopi
+slug: /xiaopi
 last_update:
   date: 2025-4-23
   author: Youjiang

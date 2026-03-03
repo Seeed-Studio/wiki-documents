@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウラス
 image: https://wiki.seeedstudio.com/ja/2.5W_Solar_Panel_116x160/
-slug: /ja/2.5W_Solar_Panel_116x160
+slug: /2.5W_Solar_Panel_116x160
 last_update:
   date: 05/15/2025
   author: gunengyu

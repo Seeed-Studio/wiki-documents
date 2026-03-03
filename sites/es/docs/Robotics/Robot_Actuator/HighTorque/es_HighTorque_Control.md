@@ -7,7 +7,7 @@ keywords:
 - arm
 - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech-ST3215-Servo.webp
-slug: /es/hightorque_control
+slug: /hightorque_control
 last_update:
   date: 11/19/2025
   author: Tienjuiwong

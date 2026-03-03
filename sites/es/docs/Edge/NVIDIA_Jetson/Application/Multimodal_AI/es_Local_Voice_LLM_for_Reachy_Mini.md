@@ -2,7 +2,7 @@
 description: Este wiki detalla cómo desplegar y operar un asistente robótico interactivo por voz completamente local utilizando la combinación de hardware de reComputer Mini J501 y Reachy Mini Lite. La guía recorre la instalación del servidor Ollama, la configuración de modelos de voz locales y aplicaciones de conversación, logrando finalmente un sistema de conversación por voz sin conexión y de baja latencia que no requiere conexión a internet. Presenta un proyecto completo de extremo a extremo, cubriendo la configuración de hardware, el despliegue de software y una demostración final del sistema funcionando.
 title: ¡Despliega LLM de voz local en reComputer Mini para Reachy Mini!
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/local_voice_llm_on_recomputer_jetson_for_reachy_mini
+slug: /local_voice_llm_on_recomputer_jetson_for_reachy_mini
 last_update:
   date: 01/06/2026
   author: youjiang

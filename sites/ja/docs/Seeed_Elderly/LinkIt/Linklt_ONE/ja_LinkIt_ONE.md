@@ -4,7 +4,7 @@ title: LinkIt ONE
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/LinkIt_ONE
+slug: /LinkIt_ONE
 sku: 102030002
 last_update:
   date: 05/15/2025

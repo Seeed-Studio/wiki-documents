@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: 'watcher_software_framework_overview'
 link:
   type: generated-index
-  slug: es/watcher_software_framework_overview
+  slug: watcher_software_framework_overview
   title: Descripción General del Framework de Software de Watcher
   description: Esta sección se enfoca en el framework de software de Watcher, incluyendo cómo desplegar los servicios de IA de Watcher localmente, flujo de tareas, y más.

@@ -5,7 +5,7 @@ title: HTTP API クイックスタート
 keywords:
 - HTTP API 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecraft-data-platform/api/http-api/quick-start
+slug: /sensecraft-data-platform/api/http-api/quick-start
 aliases:
   - /ja/Cloud_Chain/SenseCAP_API/HTTP_API/Quick_Start
 last_update:

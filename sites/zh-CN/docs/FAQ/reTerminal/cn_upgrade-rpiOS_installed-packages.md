@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 如何升级 Raspberry Pi OS 和已安装的软件包
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/upgrade-rpiOS_installed-packages
+slug: /upgrade-rpiOS_installed-packages
 last_update:
   date: 6/21/2023
   author: cheng.tang

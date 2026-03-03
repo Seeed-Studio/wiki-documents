@@ -2,7 +2,7 @@
 description: XIAO-FAQ
 title: ¿Qué hacer cuando falla la carga/el programa funciona de forma anormal/no se encuentra el puerto del dispositivo?
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/noport_upload_fails
+slug: /noport_upload_fails
 last_update:
   date: 6/21/2023
   author: Seraphina

@@ -1,7 +1,7 @@
 ---
 description: モーターセットアップツール、スキャニングツール、リフラッシュツールを含む Reachy Mini ツールの完全な API リファレンス。
 title: ツール API リファレンス
-slug: /ja/reachymini_api_tools
+slug: /reachymini_api_tools
 keywords:
 - api
 - tools

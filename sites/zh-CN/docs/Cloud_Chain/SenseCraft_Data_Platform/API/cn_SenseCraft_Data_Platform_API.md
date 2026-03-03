@@ -5,7 +5,7 @@ title: SenseCraft 数据平台 API 介绍
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api
+slug: /sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api
 aliases:
   - /cn/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction
 last_update:

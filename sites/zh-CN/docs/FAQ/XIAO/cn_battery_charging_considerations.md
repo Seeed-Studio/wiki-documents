@@ -2,7 +2,7 @@
 description: XIAO nRF52840(Sense)-常见问题解答
 title: 使用 XIAO nRF52840 (Sense) 进行电池充电时需要注意哪些事项？
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/battery_charging_considerations
+slug: /battery_charging_considerations
 last_update:
   date: 6/28/2023
   author: cheng.tang

@@ -5,7 +5,7 @@ keywords:
 - Grove
 - vibration
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/grove-d7s-vibration-sensor
+slug: /grove-d7s-vibration-sensor
 sku: 101021096
 last_update:
   date: 6/6/2023

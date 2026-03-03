@@ -9,7 +9,7 @@ keywords:
 - Qwen
 - Ollama
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/clawdbot/chatops_homepage.webp
-slug: /es/local_openclaw_on_recomputer_jetson
+slug: /local_openclaw_on_recomputer_jetson
 sku: 114110314, 114090066
 last_update:
   date: 02/3/2026

@@ -8,7 +8,7 @@ keywords:
 - 机器人
 - 机器人操作系统
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/installing_ros1
+slug: /installing_ros1
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui

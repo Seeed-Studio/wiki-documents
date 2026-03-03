@@ -6,7 +6,7 @@ keywords:
   - reTerminal-DM
   - Hardware Guide
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reterminal-dm-hardware-guide
+slug: /reterminal-dm-hardware-guide
 last_update:
   date: 05/19/2023
   author: Peter Pan

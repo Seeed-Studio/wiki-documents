@@ -3,7 +3,7 @@ description: ODYSSEY-FAQ
 title: ファンピン配置
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /ja/Fan_Pinout
+slug: /Fan_Pinout
 last_update:
   date: 2023/6/25
   author: cheng.tang

@@ -2,7 +2,7 @@
 description: Componentes de hardware del SenseCAP Watcher.
 title: Descripción General del Hardware
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/hardware_overview_1.webp
-slug: /es/watcher_hardware_overview
+slug: /watcher_hardware_overview
 sidebar_position: 1
 last_update:
   date: 10/18/2024

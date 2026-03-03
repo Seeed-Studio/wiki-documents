@@ -4,7 +4,7 @@ title: J401B接口使用
 tags:
   - J401载板
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/j401b_interfaces.webp
-slug: /cn/recomputer_j401b_interfaces_usage
+slug: /recomputer_j401b_interfaces_usage
 sku: 114993486,114993487,114993489,114993488,E2025031201
 last_update:
   date: 4/27/2025

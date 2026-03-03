@@ -4,7 +4,7 @@ title: 以太网扩展板
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Ethernet_Shield
+slug: /Ethernet_Shield
 last_update:
   date: 2/16/2023
   author: jianjing Huang

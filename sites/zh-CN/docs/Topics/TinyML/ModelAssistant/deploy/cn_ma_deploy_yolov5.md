@@ -6,7 +6,7 @@ keywords:
 - we2 
 - object detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ma_deploy_yolov5
+slug: /ma_deploy_yolov5
 last_update:
   date: 04/02/2024
   author: Jack Mu

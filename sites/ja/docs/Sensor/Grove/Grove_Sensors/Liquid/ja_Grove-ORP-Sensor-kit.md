@@ -4,7 +4,7 @@ title: Grove - ORPセンサーキット (501Z)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-ORP-Sensor-kit
+slug: /Grove-ORP-Sensor-kit
 sku: 110020293
 last_update:
   date: 05/15/2025

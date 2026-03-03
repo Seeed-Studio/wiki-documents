@@ -9,7 +9,7 @@ tags:
   - reComputer Robotics
   - Hardware and Interfaces Usage
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/image-_J4011-3.webp
-slug: /ja/recomputer_robotics_j401_hardware_interfaces_usage
+slug: /recomputer_robotics_j401_hardware_interfaces_usage
 sku: 100071398
 last_update:
   date: 08/06/2025

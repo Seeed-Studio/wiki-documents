@@ -4,7 +4,7 @@ title: Comenzar con Wio Terminal y Wappsto IoT
 keywords:
 - Wio_terminal Easy_IoT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Get-Started-with-Wio-Terminal-and-Wappsto-IoT
+slug: /Get-Started-with-Wio-Terminal-and-Wappsto-IoT
 last_update:
   date: 1/30/2023
   author: jianjing Huang

@@ -4,7 +4,7 @@ title: Desplegar la Plataforma Wiki Localmente
 keywords:
 - Contribution
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Deploy_Page_Locally
+slug: /Deploy_Page_Locally
 last_update:
   date: 3/14/2023
   author: Matthew

@@ -4,7 +4,7 @@ title: BeagleBone® Green用Groveスターターキット
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove_Starter_Kit_for_BeagleBone_Green
+slug: /Grove_Starter_Kit_for_BeagleBone_Green
 sku: 110060131
 last_update:
   date: 05/15/2025

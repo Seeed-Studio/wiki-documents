@@ -2,7 +2,7 @@
 description: OpenWrt-FAQ
 title: 如何通过 Web UI 设置 Rclone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/set_up_Rclone_from_web_UI
+slug: /set_up_Rclone_from_web_UI
 last_update:
   date: 6/21/2023
   author: Seraphina

@@ -2,7 +2,7 @@
 description: Frigate-on-JetsonとNode-REDに基づくエッジAI銃器検出システム、JetsonとreComputer R2000（Hailo）プラットフォームをサポート。
 title: リアルタイムエッジアラート用AI銃器検出ソリューション
 image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/scene_3.webp
-slug: /ja/solutions/frigate-on-jetson-nodered-gun-alerts
+slug: /solutions/frigate-on-jetson-nodered-gun-alerts
 sidebar_position: 1
 last_update:
   date: 10/22/2025

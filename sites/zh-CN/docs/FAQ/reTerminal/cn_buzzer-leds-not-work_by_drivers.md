@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 如何解决安装reTerminal驱动后蜂鸣器和LED灯无法工作的问题
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/buzzer-leds-not-work_by_drivers
+slug: /buzzer-leds-not-work_by_drivers
 last_update:
   date: 6/21/2023
   author: Seraphina

@@ -4,7 +4,7 @@ title: Wio-WM1110 开发套件入门指南
 keywords:
 - Wio-WM1110 Dev Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Get_Started_with_Wio-WM1110_Dev_Kit
+slug: /Get_Started_with_Wio-WM1110_Dev_Kit
 sidebar_position: 2
 last_update:
   date: 8/7/2023

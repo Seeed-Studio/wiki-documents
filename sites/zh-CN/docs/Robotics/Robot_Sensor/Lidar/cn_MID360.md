@@ -8,7 +8,7 @@ keywords:
 - Lidar
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/mid360
+slug: /mid360
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui

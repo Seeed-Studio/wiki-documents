@@ -5,7 +5,7 @@ keywords:
 - Grove
 - mmWave Radar Sensor
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.webp
-slug: /cn/mmwave_radar_Intro
+slug: /mmwave_radar_Intro
 last_update:
   date: 03/28/2025
   author: Hugo

@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/setup_toolchain_for_wio_tracker
+slug: /setup_toolchain_for_wio_tracker
 last_update:
   date: 9/19/2023
   author: Jessie

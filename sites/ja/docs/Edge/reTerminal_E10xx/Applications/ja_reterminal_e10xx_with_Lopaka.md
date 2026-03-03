@@ -2,7 +2,7 @@
 description: この記事では主に、Lopakaウェブサイトを使用して精巧なユーザーインターフェースを作成し、reTerminal Eシリーズに適用する方法について説明します。
 title: reTerminal EシリーズePaperディスプレイとLopakaの連携
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
-slug: /ja/reterminal_e10xx_with_lopaka
+slug: /reterminal_e10xx_with_lopaka
 sidebar_position: 2
 last_update:
   date: 9/12/2025

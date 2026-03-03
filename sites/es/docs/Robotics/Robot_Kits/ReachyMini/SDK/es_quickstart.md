@@ -1,7 +1,7 @@
 ---
 description: Guía de inicio rápido para poner Reachy Mini en funcionamiento en hardware real o en simulación, cubriendo requisitos previos, configuración del daemon y tu primer script.
 title: Guía de inicio rápido
-slug: /es/reachymini_sdk_quickstart
+slug: /reachymini_sdk_quickstart
 keywords:
 - quickstart
 - getting started

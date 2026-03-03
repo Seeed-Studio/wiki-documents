@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Cómo instalar Ubuntu en reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/install-ubuntu-on-reterminal
+slug: /install-ubuntu-on-reterminal
 last_update:
   date: 6/21/2023
   author: Seraphina

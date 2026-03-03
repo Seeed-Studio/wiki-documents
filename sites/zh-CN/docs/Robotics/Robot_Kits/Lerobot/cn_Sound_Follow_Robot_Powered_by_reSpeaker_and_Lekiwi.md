@@ -10,7 +10,7 @@ keywords:
 - Lekiwi
 - reComputer
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.webp
-slug: /cn/sound_follow_robot
+slug: /sound_follow_robot
 last_update:
   date: 8/4/2025
   author: LiShanghang

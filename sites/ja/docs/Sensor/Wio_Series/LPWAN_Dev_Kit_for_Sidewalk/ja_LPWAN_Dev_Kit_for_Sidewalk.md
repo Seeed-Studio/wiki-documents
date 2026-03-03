@@ -6,7 +6,7 @@ keywords:
 - サイドウォーク
 - Amazon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/wio_tracker_for_sidewalk
+slug: /wio_tracker_for_sidewalk
 last_update:
   date: 05/15/2025
   author: Jessie

@@ -6,7 +6,7 @@ keywords:
   - XIAO
   - nRF54L15
   - docusaurus
-slug: /cn/semtech_lr2021_evk_getting_started
+slug: /semtech_lr2021_evk_getting_started
 last_update:
   date: 12/30/2025
   author: David Du

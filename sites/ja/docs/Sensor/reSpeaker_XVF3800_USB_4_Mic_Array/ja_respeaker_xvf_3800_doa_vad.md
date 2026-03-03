@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
-slug: /ja/respeaker_xvf3800_xiao_doa_vad
+slug: /respeaker_xvf3800_xiao_doa_vad
 sku: 114993702,114993700
 last_update:
   date: 1/23/2025

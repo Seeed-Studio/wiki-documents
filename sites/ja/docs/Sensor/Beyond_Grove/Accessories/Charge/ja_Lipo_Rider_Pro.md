@@ -4,7 +4,7 @@ title: Lipo Rider Pro
 keywords:
 - アクセサリー充電
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Lipo_Rider_Pro
+slug: /Lipo_Rider_Pro
 sku: 106990008
 last_update:
   date: 05/15/2025

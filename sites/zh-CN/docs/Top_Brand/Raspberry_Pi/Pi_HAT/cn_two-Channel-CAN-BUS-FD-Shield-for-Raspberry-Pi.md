@@ -4,7 +4,7 @@ title: 树莓派双通道 CAN BUS FD 扩展板
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi
+slug: /2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi
 sku: 103030296, 103990563
 last_update:
   date: 1/11/2023

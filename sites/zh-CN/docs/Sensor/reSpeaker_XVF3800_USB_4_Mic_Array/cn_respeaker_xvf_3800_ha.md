@@ -7,7 +7,7 @@ keywords:
 - ESP32S3
 - Home Assistant
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
-slug: /cn/respeaker_xvf3800_xiao_home_assistant
+slug: /respeaker_xvf3800_xiao_home_assistant
 last_update:
   date: 9/17/2025
   author: Kasun Thushara

@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J41x5
 title: Primeros Pasos con ODYSSEY - X86J41x5
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ODYSSEY-X86J4105
+slug: /ODYSSEY-X86J4105
 sku: 102110399,102110398,102110397,110991412,110991465,102110477,102110478,102110479,110991565,102110539,110991564,110991824,110991825
 last_update:
   date: 03/16/2023

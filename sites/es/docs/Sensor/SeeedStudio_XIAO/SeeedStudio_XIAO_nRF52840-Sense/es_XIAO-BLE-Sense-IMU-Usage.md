@@ -4,7 +4,7 @@ title: Uso del IMU para XIAO nRF52840 Sense
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO-BLE-Sense-IMU-Usage
+slug: /XIAO-BLE-Sense-IMU-Usage
 last_update:
   date: 1/11/2023
   author: shuxu hu

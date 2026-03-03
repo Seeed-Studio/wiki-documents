@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-I2C_Motor_Driver/
-slug: /cn/Grove-I2C_Motor_Driver
+slug: /Grove-I2C_Motor_Driver
 last_update:
   date: 01/09/2022
   author: gunengyu

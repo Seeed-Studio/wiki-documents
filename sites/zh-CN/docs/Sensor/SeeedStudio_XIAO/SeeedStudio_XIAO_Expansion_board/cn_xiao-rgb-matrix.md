@@ -4,7 +4,7 @@ title: XIAO 6x10 RGB 矩阵入门指南
 keywords:
 - XIAO RGB
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/rgb_matrix_for_xiao
+slug: /rgb_matrix_for_xiao
 sku: 104030107
 last_update:
   date: 08/11/2023

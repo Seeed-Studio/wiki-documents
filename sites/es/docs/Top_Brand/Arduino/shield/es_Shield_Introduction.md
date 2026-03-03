@@ -2,7 +2,7 @@
 description: Shield_Introduction
 title: Introducción a Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Shield_Introduction
+slug: /Shield_Introduction
 last_update:
   date: 01/10/2023  
   author: Eico 

@@ -6,7 +6,7 @@ keywords:
   - reComputer r1000
   - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l
+slug: /yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l
 last_update:
   date: 06/26/2024
   author: Jiahao

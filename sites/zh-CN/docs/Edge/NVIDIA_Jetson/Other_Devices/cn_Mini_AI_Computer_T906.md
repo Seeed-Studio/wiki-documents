@@ -4,7 +4,7 @@ title: T906 迷你电脑
 tags:
   - Mini PC Jetpack Flash
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Mini_AI_Computer_T906
+slug: /Mini_AI_Computer_T906
 sku: 114110168
 last_update:
   date: 01/05/2022

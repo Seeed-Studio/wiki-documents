@@ -5,7 +5,7 @@ keywords:
 - Raspberry_Pi
 - Official_Raspberry_Pi_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/remote_connect
+slug: /remote_connect
 last_update:
   date: 05/15/2025
   author: jianjing Huang

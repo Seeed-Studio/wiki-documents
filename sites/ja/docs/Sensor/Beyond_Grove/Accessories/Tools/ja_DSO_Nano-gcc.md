@@ -4,7 +4,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/DSO_Nano-gcc/
-slug: /ja/DSO_Nano-gcc
+slug: /DSO_Nano-gcc
 last_update:
   date: 05/15/2025
   author: gunengyu

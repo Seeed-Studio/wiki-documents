@@ -4,7 +4,7 @@ title: Stable Diffusionを使ったText2Image
 keywords:
 - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/How_to_run_local_llm_text_to_image_on_reComputer
+slug: /How_to_run_local_llm_text_to_image_on_reComputer
 last_update:
   date: 04/01/2024
   author: Bruno

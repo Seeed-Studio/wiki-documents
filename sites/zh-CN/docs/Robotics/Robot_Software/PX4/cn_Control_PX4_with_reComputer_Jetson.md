@@ -6,7 +6,7 @@ keywords:
 - PX4
 - ROS
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.webp
-slug: /cn/control_px4_with_recomputer_jetson
+slug: /control_px4_with_recomputer_jetson
 last_update:
   date: 7/21/2025
   author: TienjuiWong

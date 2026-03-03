@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/5V-3.3V_Breadboard_Power_Supply_v1.1/
-slug: /cn/5V-3.3V_Breadboard_Power_Supply_v1.1
+slug: /5V-3.3V_Breadboard_Power_Supply_v1.1
 sku: 106100000
 last_update:
   date: 02/03/2022

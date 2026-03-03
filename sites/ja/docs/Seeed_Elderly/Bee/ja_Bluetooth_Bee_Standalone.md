@@ -4,7 +4,7 @@ title: Bluetooth Bee
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Bluetooth_Bee_Standalone
+slug: /Bluetooth_Bee_Standalone
 last_update:
   date: 05/15/2025
   author: shuxu hu

@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J4105
 title: Primeros Pasos con ODYSSEY
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ODYSSEY_Getting_Started
+slug: /ODYSSEY_Getting_Started
 last_update:
   date: 01/03/2023
   author: w0x7ce

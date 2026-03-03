@@ -9,7 +9,7 @@ keywords:
 - Qwen
 - Function Calling
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
-slug: /cn/control_motor_by_voice_llm_on_jetson
+slug: /control_motor_by_voice_llm_on_jetson
 last_update:
   date: 08/19/2025
   author: Youjiang

@@ -5,7 +5,7 @@ keywords:
 - Meshtastic
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/flash_meshtastic_kit
+slug: /flash_meshtastic_kit
 last_update:
   date: 12/3/2025
   author: Michelle Huang

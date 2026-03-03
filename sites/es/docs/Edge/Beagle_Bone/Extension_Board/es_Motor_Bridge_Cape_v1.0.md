@@ -4,7 +4,7 @@ title: Motor Bridge Cape v1.0
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Motor_Bridge_Cape_v1.0
+slug: /Motor_Bridge_Cape_v1.0
 sku: 105030006
 last_update:
   date: 1/10/2022

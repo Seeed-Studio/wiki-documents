@@ -2,7 +2,7 @@
 description: XIAOESP32C3-FAQ
 title: バッテリー電圧の確認方法
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/check_battery_voltage
+slug: /check_battery_voltage
 last_update:
   date: 6/28/2023
   author: cheng.tang

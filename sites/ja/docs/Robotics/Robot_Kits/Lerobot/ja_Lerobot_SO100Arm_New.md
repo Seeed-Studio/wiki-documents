@@ -7,7 +7,7 @@ keywords:
 - Arm
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
-slug: /ja/lerobot_so100m_new
+slug: /lerobot_so100m_new
 sku: 114993666,114993667,114993668,101090144
 last_update:
   date: 3/2/2026

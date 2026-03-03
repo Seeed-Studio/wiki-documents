@@ -5,7 +5,7 @@ title: Hotspot Registration
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecraft-blockchain/blockchain-dashboard/hotspot-registration
+slug: /sensecraft-blockchain/blockchain-dashboard/hotspot-registration
 aliases:
   - /ja/sensecraft-blockchain/sensecap-mx-dashboard/hotspot-registration
 last_update:

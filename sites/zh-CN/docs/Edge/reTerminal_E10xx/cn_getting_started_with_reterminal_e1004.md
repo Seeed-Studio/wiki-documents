@@ -10,7 +10,7 @@ keywords:
   - E Ink Spectra 6
   - 智能家居仪表盘
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/e1004/mainpic2.jpeg
-slug: /cn/getting_started_with_reterminal_e1004
+slug: /getting_started_with_reterminal_e1004
 sku: 100064156
 last_update:
   date: 1/28/2026

@@ -2,7 +2,7 @@
 description: XIAO ESP32S3 & Wio-SX1262 キット、XIAO拡張ボード、groveセンサー、L76K GNSSモジュールとアクリルケースを使用したDIY meshtasticキット。
 title: Meshtastic用4層サンドイッチキット
 image: https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/202003261_preview-08.jpg
-slug: /ja/4_layer_sandwich_for_meshtastic
+slug: /4_layer_sandwich_for_meshtastic
 sidebar_position: 6
 last_update:
   date: 12/13/2024

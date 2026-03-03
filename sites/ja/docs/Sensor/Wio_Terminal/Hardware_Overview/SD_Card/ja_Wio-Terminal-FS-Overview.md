@@ -4,7 +4,7 @@ title: 概要
 keywords:
 - Wio_terminal ファイルシステム
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-FS-Overview
+slug: /Wio-Terminal-FS-Overview
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: semtech_lr2021_evk
 link:
   type: generated-index
-  slug: ja/semtech_lr2021_evk_class
+  slug: semtech_lr2021_evk_class
   title: Semtech LR2021 EVK
   description: Semtech LR2021 EVK製品ドキュメント。

@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: reterminal_e10xx_applications
 link:
   type: generated-index
-  slug: es/reterminal_e10xx_applications
+  slug: reterminal_e10xx_applications
   title: Aplicaciones reTerminal E10xx
   description: Este artículo es una página de colección para la aplicación reTerminal E10xx.

@@ -4,7 +4,7 @@ title: Introducción al Ecosistema Grove
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_System
+slug: /Grove_System
 last_update:
   date: 03/13/2023
   author: Matthew

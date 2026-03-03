@@ -4,7 +4,7 @@ title: Cómo usar Wio Terminal como placa de desarrollo RTL8720DN
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-8720-dev
+slug: /Wio-Terminal-8720-dev
 last_update:
   date: 1/31/2023
   author: jianjing Huang

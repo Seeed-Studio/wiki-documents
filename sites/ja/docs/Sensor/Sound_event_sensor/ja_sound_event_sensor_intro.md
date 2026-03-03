@@ -7,7 +7,7 @@ keywords:
 - Sound IoT
 
 image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
-slug: /ja/sound_event_detection_module
+slug: /sound_event_detection_module
 sku: 100049596
 last_update:
   date: 3/2/2026

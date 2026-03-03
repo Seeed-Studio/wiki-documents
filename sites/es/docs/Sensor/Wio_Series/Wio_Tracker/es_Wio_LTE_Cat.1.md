@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio_LTE_Cat.1/
-slug: /es/Wio_LTE_Cat.1
+slug: /Wio_LTE_Cat.1
 sku: 102991022, 102991024, 102990925, 102990924, 102990923, 102990837, 102991023, 102991021
 last_update:
   date: 01/11/2022

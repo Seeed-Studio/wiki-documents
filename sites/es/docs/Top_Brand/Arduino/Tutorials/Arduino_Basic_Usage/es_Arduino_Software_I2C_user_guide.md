@@ -4,7 +4,7 @@ title: Guía de Usuario I2C para Placas Arduino
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Arduino_Software_I2C_user_guide
+slug: /Arduino_Software_I2C_user_guide
 last_update:
   date: 1/16/2023
   author: jianjing Huang

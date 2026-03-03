@@ -6,7 +6,7 @@ keywords:
   - w5500
 image: https://files.seeedstudio.com/wiki/xiao_w5500_poe/0.webp
 sidebar_position: 9
-slug: /es/xiao_w5500_ethernet_adapter
+slug: /xiao_w5500_ethernet_adapter
 sku: 113100042
 last_update:
   date: 06/04/2025

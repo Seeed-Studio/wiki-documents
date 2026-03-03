@@ -4,7 +4,7 @@ title: RTC 概要
 keywords:
 - Wio_terminal RTC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-RTC
+slug: /Wio-Terminal-RTC
 last_update:
   date: 05/15/2025
   author: jianjing Huang

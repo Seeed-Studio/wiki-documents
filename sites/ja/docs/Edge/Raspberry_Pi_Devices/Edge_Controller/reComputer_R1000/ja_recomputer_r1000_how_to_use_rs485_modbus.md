@@ -7,7 +7,7 @@ keywords:
   - Modbus RTU
   - rs485
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/r1000_connection_1.webp
-slug: /ja/recomputer_r1000_use_rs485_modbus_rtu
+slug: /recomputer_r1000_use_rs485_modbus_rtu
 last_update:
   date: 12/20/2024
   author: Jiahao Li

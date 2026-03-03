@@ -4,7 +4,7 @@ title: Grove - Sensor de Turbidez para Arduino V1.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0
+slug: /Grove-Turbidity-Sensor-Meter-for-Arduino-V1.0
 sku: 101020752
 last_update:
   date: 1/6/2023

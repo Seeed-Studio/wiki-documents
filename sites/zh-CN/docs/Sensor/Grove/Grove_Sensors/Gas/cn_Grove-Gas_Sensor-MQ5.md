@@ -4,7 +4,7 @@ title: Grove - 气体传感器(MQ5)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Gas_Sensor-MQ5
+slug: /Grove-Gas_Sensor-MQ5
 sku: 101020056
 last_update:
   date: 1/3/2023

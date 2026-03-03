@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - AWS
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/t1000.webp
-slug: /es/SenseCAP_T1000_Tracker_AWS
+slug: /SenseCAP_T1000_Tracker_AWS
 last_update:
   date: 12/4/2024
   author: Leo

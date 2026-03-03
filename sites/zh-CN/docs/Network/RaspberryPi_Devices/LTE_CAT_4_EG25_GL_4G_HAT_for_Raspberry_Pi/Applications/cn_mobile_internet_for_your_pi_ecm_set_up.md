@@ -8,7 +8,7 @@ keywords:
   - ECM
   - 移动数据
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/power2.webp
-slug: /cn/raspberry_pi_4g_hat_ecm_mobile_internet
+slug: /raspberry_pi_4g_hat_ecm_mobile_internet
 last_update:
   date: 2024/3/14
   author: Kasun Thushara

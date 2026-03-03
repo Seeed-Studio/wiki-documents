@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO MG24でのピン多重化
 description: Seeed Studio XIAO MG24(Sense)でのピン多重化。
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/2.webp
-slug: /ja/xiao_mg24_pin_multiplexing
+slug: /xiao_mg24_pin_multiplexing
 keywords:
   - XIAO
   - MG24

@@ -2,7 +2,7 @@
 description: Describe cómo conectar Watcher a Home Assistant localmente.
 title: Integrar Watcher a Home Assistant
 image: https://files.seeedstudio.com/wiki/watcher_ha/10.png
-slug: /es/integrate_watcher_to_ha
+slug: /integrate_watcher_to_ha
 sidebar_position: 1
 last_update:
   date: 10/11/2025

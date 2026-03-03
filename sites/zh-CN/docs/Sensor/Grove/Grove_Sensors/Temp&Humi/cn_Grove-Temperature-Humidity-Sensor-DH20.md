@@ -4,7 +4,7 @@ title: Grove - 温湿度传感器(DHT20)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Temperature-Humidity-Sensor-DH20
+slug: /Grove-Temperature-Humidity-Sensor-DH20
 sku: 101020932
 last_update:
   date: 12/29/2025

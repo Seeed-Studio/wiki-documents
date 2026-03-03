@@ -2,7 +2,7 @@
 description: 外部エディタを使用する
 title: 外部エディタを使用する
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Use_External_Editor
+slug: /Use_External_Editor
 last_update:
   date: 05/15/2025
   author: w0x7ce

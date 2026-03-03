@@ -4,7 +4,7 @@ title: Grove - 电容式指纹扫描仪/传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Capacitive-Fingerprint-Sensor
+slug: /Grove-Capacitive-Fingerprint-Sensor
 sku: 101020713
 last_update:
   date: 1/6/2023

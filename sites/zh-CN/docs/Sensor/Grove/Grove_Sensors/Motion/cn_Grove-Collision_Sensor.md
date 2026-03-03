@@ -4,7 +4,7 @@ title: Grove - 碰撞传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Collision_Sensor
+slug: /Grove-Collision_Sensor
 sku: 101020005
 last_update:
   date: 1/6/2023

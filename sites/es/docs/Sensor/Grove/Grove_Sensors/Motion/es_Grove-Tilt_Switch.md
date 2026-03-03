@@ -4,7 +4,7 @@ title: Grove - Interruptor de Inclinación
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Tilt_Switch
+slug: /Grove-Tilt_Switch
 sku: 101020025
 last_update:
   date: 1/6/2023

@@ -4,7 +4,7 @@ title: 内置传感器与 Edge Impulse
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/K1111-Edge-Impulse
+slug: /K1111-Edge-Impulse
 last_update:
   date: 2023/1/13
   author: shuxu hu

@@ -4,7 +4,7 @@ title: Galileo Gen2 一体式外壳
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Unibody_box_for_Galileo_Gen2
+slug: /Unibody_box_for_Galileo_Gen2
 last_update:
   date: 1/13/2023
   author: shuxu hu

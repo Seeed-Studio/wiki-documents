@@ -4,7 +4,7 @@ title: CircuitPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAO-RP2040-with-CircuitPython
+slug: /XIAO-RP2040-with-CircuitPython
 last_update:
   date: 1/11/2023
   author: shuxu hu

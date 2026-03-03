@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini の状態を、重力補償付きのコンプライアントモードでリアルタイムに可視化およびログ取得するための Rerun ユーティリティを示す例です。
 title: Rerun ビューア
-slug: /ja/reachymini_examples_rerun_viewer
+slug: /reachymini_examples_rerun_viewer
 keywords:
 - rerun
 - visualization

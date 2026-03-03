@@ -1,7 +1,7 @@
 ---
 description: MuJoCo を使用した Reachy Mini シミュレーションのセットアップガイドです。物理ハードウェアなしで、アプリケーションのプロトタイピングとテストができるリアルな物理環境を提供します。
 title: Reachy Mini シミュレーションセットアップ
-slug: /ja/reachymini_platforms_simulation_get_started
+slug: /reachymini_platforms_simulation_get_started
 keywords:
 - simulation
 - mujoco

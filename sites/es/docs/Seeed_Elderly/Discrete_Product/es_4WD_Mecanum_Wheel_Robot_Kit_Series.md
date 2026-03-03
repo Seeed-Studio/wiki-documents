@@ -4,7 +4,7 @@ title: Kit de Robot con Ruedas Mecanum 4WD Series
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/4WD_Mecanum_Wheel_Robot_Kit_Series
+slug: /4WD_Mecanum_Wheel_Robot_Kit_Series
 sku: 110070012
 last_update:
   date: 1/13/2023

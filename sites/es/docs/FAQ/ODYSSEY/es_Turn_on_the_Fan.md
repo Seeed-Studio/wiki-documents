@@ -3,7 +3,7 @@ description: El ventilador no se enciende
 title: El ventilador no se enciende
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /es/Turn_on_the_Fan
+slug: /Turn_on_the_Fan
 last_update:
   date: 2023.6.25   
   author: cheng.tang

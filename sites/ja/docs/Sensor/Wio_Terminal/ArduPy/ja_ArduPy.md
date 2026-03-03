@@ -4,7 +4,7 @@ title:  ArduPy と Wio Terminal
 keywords:
 - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ArduPy
+slug: /ArduPy
 last_update:
   date: 05/15/2025
   author: cessarr

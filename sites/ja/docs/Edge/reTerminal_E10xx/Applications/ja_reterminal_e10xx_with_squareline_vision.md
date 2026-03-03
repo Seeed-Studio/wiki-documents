@@ -2,7 +2,7 @@
 description: この記事では、SquareLine で reTerminal E シリーズ ペーパーディスプレイの UI インターフェースを作成する方法について説明します。
 title: reTerminal E シリーズ ePaper ディスプレイと SquareLine Vision の連携
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
-slug: /ja/reterminal_e10xx_with_squareline_vision
+slug: /reterminal_e10xx_with_squareline_vision
 sidebar_position: 3
 last_update:
   date: 10/29/2025

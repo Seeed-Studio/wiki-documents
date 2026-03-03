@@ -2,7 +2,7 @@
 description: Página de preguntas frecuentes del reComputer R1000
 title: Preguntas frecuentes para la serie reComputer R1000
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reComputer_R1000_FAQ
+slug: /reComputer_R1000_FAQ
 last_update:
   date: 6/21/2024
   author: Harrison Xu

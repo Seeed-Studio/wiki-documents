@@ -2,7 +2,7 @@
 title: Sensor integrado del Seeed Studio XIAO nRF54L15 Sense
 description: Este artículo describe cómo usar el micrófono en el XIAO MG24 Sense.
 image: https://files.seeedstudio.com/wiki/mg24_mic/mg24.jpg
-slug: /es/xiao_nrf54l15_sense_built_in_sensor
+slug: /xiao_nrf54l15_sense_built_in_sensor
 keywords:
   - XIAO
   - MG24

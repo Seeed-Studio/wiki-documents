@@ -4,7 +4,7 @@ title: Grove Lightning Sensor AS3935
 keywords:
 - lightning
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/grove-lightning-sensor-as3935
+slug: /grove-lightning-sensor-as3935
 sku: 101021072
 last_update:
   date: 05/15/2025

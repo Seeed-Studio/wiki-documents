@@ -2,7 +2,7 @@
 description: 本文是 ePaper 驱动板的汇总页面。
 title: ePaper 驱动板概述
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
-slug: /cn/xiao_epaper_display_board_overview
+slug: /xiao_epaper_display_board_overview
 sidebar_position: 1
 last_update:
   date: 12/21/2025

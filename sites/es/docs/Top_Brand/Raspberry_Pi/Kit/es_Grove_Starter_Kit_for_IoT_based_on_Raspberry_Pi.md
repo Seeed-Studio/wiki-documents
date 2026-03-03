@@ -4,7 +4,7 @@ title: Grove Starter Kit para IoT basado en Raspberry Pi
 keywords:
 - Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi
+slug: /Grove_Starter_Kit_for_IoT_based_on_Raspberry_Pi
 sku: 110060482
 last_update:
   date: 2/15/2023

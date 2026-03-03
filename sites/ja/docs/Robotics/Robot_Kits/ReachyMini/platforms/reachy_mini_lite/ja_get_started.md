@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini Lite のセットアップガイド。組み立て手順、USB 接続、Windows・macOS・Linux 向けデスクトップアプリのダウンロードについて説明します。
 title: Reachy Mini Lite セットアップガイド
-slug: /ja/reachymini_platforms_reachy_mini_lite_get_started
+slug: /reachymini_platforms_reachy_mini_lite_get_started
 keywords:
 - lite
 - setup

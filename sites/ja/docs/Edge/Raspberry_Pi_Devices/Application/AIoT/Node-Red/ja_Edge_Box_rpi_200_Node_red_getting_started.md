@@ -6,7 +6,7 @@ keywords:
   - Edge-Box
   - Node-Red
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Edge-Box-Getting-Started-with-Node-Red
+slug: /Edge-Box-Getting-Started-with-Node-Red
 last_update:
   date: 05/14/2024
   author: Kasun Thushara

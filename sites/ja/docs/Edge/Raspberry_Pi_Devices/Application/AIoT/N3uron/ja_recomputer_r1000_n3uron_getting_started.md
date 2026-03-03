@@ -6,7 +6,7 @@ keywords:
   - reComputer R1000
   - N3uron
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /ja/recomputer_r1000_n3uron
+slug: /recomputer_r1000_n3uron
 last_update:
   date: 07/08/2023
   author: Kasun Thushara

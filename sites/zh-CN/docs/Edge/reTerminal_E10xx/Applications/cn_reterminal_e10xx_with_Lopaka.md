@@ -2,7 +2,7 @@
 description: 本文主要介绍如何使用 Lopaka 网站创建精美的用户界面并将其应用于 reTerminal E 系列。
 title: reTerminal E 系列 ePaper 显示屏与 Lopaka 配合使用
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/first_s1.webp
-slug: /cn/reterminal_e10xx_with_lopaka
+slug: /reterminal_e10xx_with_lopaka
 sidebar_position: 2
 last_update:
   date: 9/12/2025

@@ -4,7 +4,7 @@ title: 软件支持
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/grove_vision_ai_v2_software_support
+slug: /grove_vision_ai_v2_software_support
 last_update:
   date: 12/12/2023
   author: Citric

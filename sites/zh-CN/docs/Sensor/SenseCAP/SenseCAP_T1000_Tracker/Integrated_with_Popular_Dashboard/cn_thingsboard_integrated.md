@@ -5,7 +5,7 @@ keywords:
 - ThingsBoard
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/thingsboard_integrated
+slug: /thingsboard_integrated
 last_update:
   date: 8/20/2024
   author: Jessie

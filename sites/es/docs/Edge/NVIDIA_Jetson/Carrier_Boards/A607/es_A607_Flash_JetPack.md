@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reComputer_A607_Flash_System
+slug: /reComputer_A607_Flash_System
 sku: 102110841
 last_update:
   date: 04/17/2023

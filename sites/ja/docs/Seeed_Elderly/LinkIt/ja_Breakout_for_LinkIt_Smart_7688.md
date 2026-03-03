@@ -4,7 +4,7 @@ title:  LinkIt Smart 7688用ブレイクアウトボード
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Breakout_for_LinkIt_Smart_7688
+slug: /Breakout_for_LinkIt_Smart_7688
 sku: 103100002
 last_update:
   date: 05/15/2025

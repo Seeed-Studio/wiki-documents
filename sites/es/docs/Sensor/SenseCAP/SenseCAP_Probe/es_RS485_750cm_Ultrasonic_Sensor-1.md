@@ -4,7 +4,7 @@ title: RS485 Sensor de Nivel Ultrasónico de 750cm
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/RS485_750cm_Ultrasonic_Sensor-1
+slug: /RS485_750cm_Ultrasonic_Sensor-1
 sku: 101991041, 101991042
 last_update:
   date: 4/14/2023

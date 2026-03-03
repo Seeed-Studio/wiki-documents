@@ -4,7 +4,7 @@ title: RePhoneの紹介
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/RePhone
+slug: /RePhone
 sku: 113060004, 110040002
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: 图像分类
 keywords:
   - tinyml course
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/image_classification.webp
-slug: /cn/tinyml_course_Image_classification_project
+slug: /tinyml_course_Image_classification_project
 last_update:
   date: 11/29/2024
   author: Salman

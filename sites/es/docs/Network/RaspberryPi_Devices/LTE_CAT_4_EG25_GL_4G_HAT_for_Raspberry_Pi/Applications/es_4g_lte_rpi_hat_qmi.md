@@ -8,7 +8,7 @@ keywords:
   - QMI
   - 4G LTE
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/Raspberry-Pi-4G-LTE-CAT4-HAT.webp
-slug: /es/raspberry_pi_4g_lte_hat_qmi
+slug: /raspberry_pi_4g_lte_hat_qmi
 last_update:
   date: 3/20/2025
   author: Kasun Thushara

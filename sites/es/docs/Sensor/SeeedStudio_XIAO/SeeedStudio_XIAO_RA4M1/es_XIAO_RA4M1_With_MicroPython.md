@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO RA4M1 Con MicroPython
 description: Multiplexación de pines con Seeed Studio XIAO RA4M1
 image: https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-RA4M1.webp
-slug: /es/xiao_ra4m1_micropython
+slug: /xiao_ra4m1_micropython
 keywords:
   - XIAO
   - RAM41

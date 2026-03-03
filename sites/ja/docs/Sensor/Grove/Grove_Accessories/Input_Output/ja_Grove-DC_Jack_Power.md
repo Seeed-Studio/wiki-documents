@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-DC_Jack_Power/
-slug: /ja/Grove-DC_Jack_Power
+slug: /Grove-DC_Jack_Power
 last_update:
   date: 05/15/2025
   author: gunengyu

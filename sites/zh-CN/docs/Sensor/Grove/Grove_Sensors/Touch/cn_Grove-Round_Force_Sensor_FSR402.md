@@ -4,7 +4,7 @@ title: Grove - 圆形力传感器 FSR402
 keywords:
 - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Round_Force_Sensor_FSR402
+slug: /Grove-Round_Force_Sensor_FSR402
 sku: 101020553
 last_update:
   date: 1/19/2023

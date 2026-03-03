@@ -9,7 +9,7 @@ keywords:
   - 4G LTE
   - 边缘计算
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/1-114993408-LTE-CAT-4-EG25-GL-4G-HAT-for-Raspberry-Pi.webp
-slug: /cn/ftp_with_raspberry_pi_4g_lte_hat
+slug: /ftp_with_raspberry_pi_4g_lte_hat
 last_update:
   date: 2024/12/17
   author: Kasun Thushara

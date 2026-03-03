@@ -6,7 +6,7 @@ keywords:
   - reTerminal-DM
   - SenseCraft Edge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reterminal-dm-sensecraft-edge-os-intro
+slug: /reterminal-dm-sensecraft-edge-os-intro
 last_update:
   date: 04/23/2023
   author: Peter Pan

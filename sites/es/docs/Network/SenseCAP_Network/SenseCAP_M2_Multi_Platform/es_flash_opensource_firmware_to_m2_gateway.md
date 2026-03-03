@@ -2,7 +2,7 @@
 description: Esta wiki te guiará sobre cómo flashear firmware LoRaWAN® de código abierto para tu gateway M2. Basado en el firmware LoRaWAN® de código abierto, puedes personalizar profundamente tu gateway M2.
 title: Flashear Firmware de Código Abierto al Gateway M2
 image: https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/m2-white.webp
-slug: /es/flash_opensource_firmware_to_m2_gateway
+slug: /flash_opensource_firmware_to_m2_gateway
 last_update:
   date: 4/22/2025
   author: Leo

@@ -4,7 +4,7 @@ title: Grove - Pantalla OLED Amarilla y Azul 0.96(SSD1315) - SPI/IIC -3.3V/5V
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0
+slug: /Grove-OLED-Yellow&Blue-Display-0.96-SSD1315_V1.0
 sku: 104020249
 last_update:
   date: 1/9/2023

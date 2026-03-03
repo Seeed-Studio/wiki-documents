@@ -4,7 +4,7 @@ title: GrovePi Plus
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/GrovePi_Plus
+slug: /GrovePi_Plus
 sku: 110060161, 103010002
 last_update:
   date: 1/11/2023

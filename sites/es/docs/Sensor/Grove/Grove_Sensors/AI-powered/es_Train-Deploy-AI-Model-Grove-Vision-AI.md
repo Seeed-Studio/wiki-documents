@@ -4,7 +4,7 @@ title: Entrena y Despliega Tu Propio Modelo de IA con Roboflow, YOLOv5, TensorFl
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Train-Deploy-AI-Model-Grove-Vision-AI
+slug: /Train-Deploy-AI-Model-Grove-Vision-AI
 sku: 114992866
 last_update:
   date: 1/13/2023

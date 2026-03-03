@@ -4,7 +4,7 @@ title:  SenseCAP ONE 紧凑型气象站介绍
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/SenseCAP-ONE-Compact-Weather-Station-Introduction
+slug: /SenseCAP-ONE-Compact-Weather-Station-Introduction
 sku: 101990787, 101990693, 101990784, 101990902, 101991022, 101991021, 101991023, 101991024, 101991044, 101990961, 101991102, 101991050, 101991232, 101991141
 last_update:
   date: 12/11/2025

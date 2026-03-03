@@ -2,7 +2,7 @@
 description: Proyectos de la Comunidad Jetson
 title: Proyectos de la Comunidad Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reComputer_Jetson_Series_Projects
+slug: /reComputer_Jetson_Series_Projects
 last_update:
   date: 01/04/2023
   author: w0x7ce

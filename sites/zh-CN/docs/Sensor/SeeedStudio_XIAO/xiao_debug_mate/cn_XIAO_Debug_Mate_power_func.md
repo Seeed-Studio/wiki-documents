@@ -2,7 +2,7 @@
 description: 学习如何使用 XIAO Debug Mate 的功率计功能进行精确的电压、电流和功率监测。
 title: 功率计
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/32.webp
-slug: /cn/xiao_debug_mate_power
+slug: /xiao_debug_mate_power
 sku: 109990585
 sidebar_position: 4
 last_update:

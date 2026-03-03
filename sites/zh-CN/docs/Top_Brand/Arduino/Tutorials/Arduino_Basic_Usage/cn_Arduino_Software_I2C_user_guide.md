@@ -4,7 +4,7 @@ title: Arduino 开发板 I2C 用户指南
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Arduino_Software_I2C_user_guide
+slug: /Arduino_Software_I2C_user_guide
 last_update:
   date: 1/16/2023
   author: jianjing Huang

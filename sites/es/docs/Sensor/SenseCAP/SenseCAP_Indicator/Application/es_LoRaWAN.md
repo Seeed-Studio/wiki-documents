@@ -6,7 +6,7 @@ keywords:
 - Touch
 - Screen
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/lorawan_landing_page.png
-slug: /es/SenseCAP_Indicator_Application_LoRaWAN
+slug: /SenseCAP_Indicator_Application_LoRaWAN
 toc_max_heading_level: 4
 sidebar_position: 4
 last_update:

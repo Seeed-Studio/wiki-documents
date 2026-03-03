@@ -4,7 +4,7 @@ title: Grove - 三轴数字加速度计 (LIS3DHTR)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-3-Axis-Digital-Accelerometer-LIS3DHTR
+slug: /Grove-3-Axis-Digital-Accelerometer-LIS3DHTR
 sku: 114020121
 last_update:
   date: 1/5/2023

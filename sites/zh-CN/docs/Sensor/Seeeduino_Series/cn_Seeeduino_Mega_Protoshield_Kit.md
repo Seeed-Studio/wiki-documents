@@ -4,7 +4,7 @@ title: Seeeduino Mega 原型扩展板套件
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeeduino_Mega_Protoshield_Kit
+slug: /Seeeduino_Mega_Protoshield_Kit
 sku: 110060001
 last_update:
   date: 1/31/2023

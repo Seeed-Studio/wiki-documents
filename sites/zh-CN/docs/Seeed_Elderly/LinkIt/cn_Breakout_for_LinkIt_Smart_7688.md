@@ -4,7 +4,7 @@ title: LinkIt Smart 7688 的扩展板
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Breakout_for_LinkIt_Smart_7688
+slug: /Breakout_for_LinkIt_Smart_7688
 sku: 103100002
 last_update:
   date: 1/13/2023

@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-Servo/
-slug: /cn/Grove-Servo
+slug: /Grove-Servo
 sku: 316010005
 last_update:
   date: 01/09/2022

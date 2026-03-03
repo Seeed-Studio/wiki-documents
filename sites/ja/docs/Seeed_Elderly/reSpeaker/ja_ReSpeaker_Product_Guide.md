@@ -4,7 +4,7 @@ title: reSpeaker 製品ガイド
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ReSpeaker_Product_Guide
+slug: /ReSpeaker_Product_Guide
 last_update:
   date: 1/11/2023
   author: jianjing Huang

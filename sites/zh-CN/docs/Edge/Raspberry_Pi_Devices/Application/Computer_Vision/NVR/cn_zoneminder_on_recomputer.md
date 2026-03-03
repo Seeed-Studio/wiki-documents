@@ -7,7 +7,7 @@ keywords:
   - Zoneminder
   - video surveillance system
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/zoneminder/zone_m.webp
-slug: /cn/zoneminder_on_recomputer
+slug: /zoneminder_on_recomputer
 last_update:
   date: 09/05/2025
   author: Jiahao

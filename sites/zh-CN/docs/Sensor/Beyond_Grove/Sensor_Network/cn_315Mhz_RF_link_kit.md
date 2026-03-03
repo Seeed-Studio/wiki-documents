@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/315Mhz_RF_link_kit/
-slug: /cn/315Mhz_RF_link_kit
+slug: /315Mhz_RF_link_kit
 sku: 113990017
 last_update:
   date: 02/03/2022

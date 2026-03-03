@@ -5,7 +5,7 @@ keywords:
 - Home assistant
 - Wio tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/wio_tracker_home_assistant
+slug: /wio_tracker_home_assistant
 sidebar_position: 5
 last_update:
   date: 1/25/2024

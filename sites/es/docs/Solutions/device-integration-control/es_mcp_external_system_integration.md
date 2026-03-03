@@ -14,7 +14,7 @@ keywords:
 - Qwen
 - OA
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/mcp-system-integration/xiaozhi_stock_in.webp
-slug: /es/mcp_external_system_integration
+slug: /mcp_external_system_integration
 last_update:
   date: 12/23/2025
   author: Spencer

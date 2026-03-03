@@ -2,7 +2,7 @@
 description: 传感器原型套件介绍
 title: 传感器原型套件介绍
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/K1100-Getting-Started
+slug: /K1100-Getting-Started
 sku: 110991748
 last_update:
   date: 11/30/2022

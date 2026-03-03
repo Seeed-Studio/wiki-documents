@@ -6,7 +6,7 @@ keywords:
 - Isaac GR00T
 - Robotic Arm
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gr00t/dataset.webp
-slug: /cn/control_robotic_arm_via_gr00t
+slug: /control_robotic_arm_via_gr00t
 last_update:
   date: 6/16/2025
   author: Youjiang

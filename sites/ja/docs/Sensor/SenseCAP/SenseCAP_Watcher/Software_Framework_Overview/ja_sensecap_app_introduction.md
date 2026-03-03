@@ -2,7 +2,7 @@
 description: Watcherの外観カスタマイズオプションについて詳しく説明し、SenseCraftプラットフォームが提供する様々なツールを探求します。
 title: SenseCraft APP Introduction
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/sensecraft_app.webp
-slug: /ja/sensecap_app_introduction
+slug: /sensecap_app_introduction
 sidebar_position: 1
 last_update:
   date: 10/18/2024

@@ -4,7 +4,7 @@ title: Edge Impulseに基づくモーション認識
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAOEI
+slug: /XIAOEI
 sku: 102010469,102010490,102010632
 last_update:
   date: 04/11/2023

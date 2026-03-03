@@ -9,7 +9,7 @@ keywords:
   - S7
   - PLC
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /ja/recomputer_r1000_nodered_s7
+slug: /recomputer_r1000_nodered_s7
 last_update:
   date: 08/30/2024
   author: Kasun Thushara

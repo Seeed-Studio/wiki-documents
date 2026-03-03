@@ -2,7 +2,7 @@
 description: J101 启用 SD 卡
 title: J101 启用 SD 卡
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/J101_Enable_SD_Card
+slug: /J101_Enable_SD_Card
 last_update:
   date: 01/05/2022
   author: w0x7ce

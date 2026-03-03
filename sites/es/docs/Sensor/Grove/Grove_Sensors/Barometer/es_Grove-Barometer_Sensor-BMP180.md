@@ -4,7 +4,7 @@ title: Grove - Sensor Barómetro (BMP180)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Barometer_Sensor-BMP180
+slug: /Grove-Barometer_Sensor-BMP180
 sku: 101020072
 last_update:
   date: 1/4/2023

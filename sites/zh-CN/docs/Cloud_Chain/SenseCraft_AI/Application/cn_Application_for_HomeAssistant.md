@@ -5,7 +5,7 @@ keywords:
 - vision AI
 - home assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/sensecraft-ai/application/application-for-homeassistant
+slug: /sensecraft-ai/application/application-for-homeassistant
 aliases:
   - /cn/connect_vision_ai_v2_to_ha
 sidebar_position: 1

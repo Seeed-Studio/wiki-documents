@@ -4,7 +4,7 @@ title: Grove - DS1307 RTC (Reloj de Tiempo Real) para Arduino
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-RTC
+slug: /Grove-RTC
 sku: 101020013
 last_update:
   date: 1/9/2023

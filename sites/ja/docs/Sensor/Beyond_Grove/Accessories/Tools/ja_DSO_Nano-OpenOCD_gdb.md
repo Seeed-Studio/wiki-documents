@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/DSO_Nano-OpenOCD_gdb/
-slug: /ja/DSO_Nano-OpenOCD_gdb
+slug: /DSO_Nano-OpenOCD_gdb
 last_update:
   date: 05/15/2025
   author: gunengyu

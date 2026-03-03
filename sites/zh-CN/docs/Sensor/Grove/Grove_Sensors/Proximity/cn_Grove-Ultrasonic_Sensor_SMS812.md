@@ -5,7 +5,7 @@ keywords:
 - ultrasonic
 - sms812
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/grove_ultrasonic_sensor_sms812
+slug: /grove_ultrasonic_sensor_sms812
 sku: 101021097
 last_update:
   date: 08/16/2023

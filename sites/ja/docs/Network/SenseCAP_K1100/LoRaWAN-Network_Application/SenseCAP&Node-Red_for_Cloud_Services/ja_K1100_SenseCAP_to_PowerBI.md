@@ -4,7 +4,7 @@ title: SenseCAP & Node-RED を使用して Power BI に接続
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/K1100_SenseCAP_to_PowerBI
+slug: /K1100_SenseCAP_to_PowerBI
 last_update:
   date: 05/15/2025
   author: shuxu hu

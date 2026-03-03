@@ -2,7 +2,7 @@
 description: 如何使用和编写库
 title: 如何使用和编写库
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/How_to_use_and_write_a_library
+slug: /How_to_use_and_write_a_library
 last_update:
   date: 02/01/2023
   author: w0x7ce

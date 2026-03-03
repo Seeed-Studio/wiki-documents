@@ -9,7 +9,7 @@ keywords:
   - synthesizer
 sidebar_position: 7
 image: https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/1.webp
-slug: /es/xiao_midi_synthesizer
+slug: /xiao_midi_synthesizer
 sku: 107990333
 last_update:
   date: 05/15/2025

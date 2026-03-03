@@ -4,7 +4,7 @@ title: Grove - Kit de Juguetes
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Toy_Kit
+slug: /Grove-Toy_Kit
 last_update:
   date: 1/13/2023
   author: shuxu hu

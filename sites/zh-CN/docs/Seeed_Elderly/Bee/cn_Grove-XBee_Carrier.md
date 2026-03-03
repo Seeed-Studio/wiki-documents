@@ -4,7 +4,7 @@ title: Grove - XBee 承载板
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-XBee_Carrier
+slug: /Grove-XBee_Carrier
 sku: 113020004
 last_update:
   date: 2/15/2023

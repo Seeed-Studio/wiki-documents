@@ -4,7 +4,7 @@ title: Grove - 振動センサー(SW-420)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Vibration_Sensor_SW-420
+slug: /Grove-Vibration_Sensor_SW-420
 sku: 101020586
 last_update:
   date: 05/15/2025

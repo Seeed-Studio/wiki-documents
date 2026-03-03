@@ -8,7 +8,7 @@ keywords:
   - Dash board
   - SCADA
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/grafana/grafana2.gif
-slug: /es/recomputer_r1000_grafana
+slug: /recomputer_r1000_grafana
 last_update:
   date: 6/24/2024
   author: Kasun Thushara

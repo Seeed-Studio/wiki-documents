@@ -6,7 +6,7 @@ keywords:
 - xiao
 - pin multiple
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/xiao_esp32s3_pin_multiplexing
+slug: /xiao_esp32s3_pin_multiplexing
 sku: 113991114, 113991115
 type: project
 last_update:

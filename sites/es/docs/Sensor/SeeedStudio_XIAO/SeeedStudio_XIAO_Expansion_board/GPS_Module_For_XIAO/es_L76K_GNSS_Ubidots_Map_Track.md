@@ -7,7 +7,7 @@ keywords:
   - GPS Module for XIAO
   - L76K Path Tracking on Ubidots
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/L76K_Path_Tracking_on_Ubidots
+slug: /L76K_Path_Tracking_on_Ubidots
 sku: 109100021
 last_update: 
   date: 03/07/2024

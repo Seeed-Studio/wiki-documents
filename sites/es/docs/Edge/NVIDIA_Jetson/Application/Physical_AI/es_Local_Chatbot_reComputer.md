@@ -2,7 +2,7 @@
 description: Un asistente de IA completamente local e interactivo por voz que combina Speech-to-Text (STT), Text-to-Speech (TTS) y Modelos de Lenguaje Grande (LLMs) locales usando Ollama y NVIDIA Riva. Funciona completamente en dispositivos edge como NVIDIA Jetson — permitiendo conversaciones de voz privadas, en tiempo real y naturales sin depender de la nube.
 title: Chatbot en Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/local_chatbot_recomputer_bk
+slug: /local_chatbot_recomputer_bk
 last_update:
   date: 01/29/2025
   author: kourosh

@@ -8,7 +8,7 @@ keywords:
   - OpenCV
   - Color-Detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reTerminal_DM_Color_detection
+slug: /reTerminal_DM_Color_detection
 last_update:
   date: 11/28/2023
   author: Kasun Thushara

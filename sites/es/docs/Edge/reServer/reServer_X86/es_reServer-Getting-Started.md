@@ -2,7 +2,7 @@
 description: reServer X86
 title: Introducción al reServer X86
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reServer-Getting-Started
+slug: /reServer-Getting-Started
 sku: 102110559, 102110560, B102110559
 last_update:
   date: 01/03/2023

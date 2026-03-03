@@ -1,7 +1,7 @@
 ---
 description: Ejemplo que demuestra la grabación de audio desde la matriz de micrófonos de Reachy Mini y el guardado en un archivo WAV con duración configurable.
 title: Grabación de sonido
-slug: /es/reachymini_examples_sound_record
+slug: /reachymini_examples_sound_record
 keywords:
 - audio recording
 - microphone

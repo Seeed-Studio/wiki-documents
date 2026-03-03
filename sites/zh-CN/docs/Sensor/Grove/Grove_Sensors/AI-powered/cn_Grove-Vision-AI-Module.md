@@ -4,7 +4,7 @@ title: Grove 视觉 AI 模块
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Vision-AI-Module
+slug: /Grove-Vision-AI-Module
 sku: 114992866
 last_update:
   date: 3/22/2023

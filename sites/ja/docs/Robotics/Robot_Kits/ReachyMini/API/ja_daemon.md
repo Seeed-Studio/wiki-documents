@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini デーモンの完全な API リファレンス。コアデーモンクラス、バックエンドクラス、デーモンユーティリティ、アプリモデル、およびアプリルーターを含みます。
 title: デーモン API リファレンス
-slug: /ja/reachymini_api_daemon
+slug: /reachymini_api_daemon
 keywords:
 - api
 - daemon

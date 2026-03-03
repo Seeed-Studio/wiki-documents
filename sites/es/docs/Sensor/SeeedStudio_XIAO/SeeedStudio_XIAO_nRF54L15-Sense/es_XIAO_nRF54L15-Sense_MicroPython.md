@@ -6,7 +6,7 @@ keywords:
 - xiao
 - MicroPython
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_1.webp
-slug: /es/xiao_nrf54l15_sense_micropython
+slug: /xiao_nrf54l15_sense_micropython
 last_update:
   date: 1/15/2026
   author: Brandy

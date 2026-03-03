@@ -4,7 +4,7 @@ title: Grove - 赤色 LED マトリックス（ドライバ付き）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Red_LED_Matrix_w_Driver
+slug: /Grove-Red_LED_Matrix_w_Driver
 sku: 104020089
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: Grove - 三轴模拟加速度计
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-3-Axis_Analog_Accelerometer
+slug: /Grove-3-Axis_Analog_Accelerometer
 sku: 101020051
 last_update:
   date: 1/5/2023

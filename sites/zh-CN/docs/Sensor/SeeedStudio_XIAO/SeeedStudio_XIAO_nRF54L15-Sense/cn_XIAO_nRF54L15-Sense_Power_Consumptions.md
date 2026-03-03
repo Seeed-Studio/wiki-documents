@@ -2,7 +2,7 @@
 title: XIAO nRF54L15 功耗示例 (PlatformIO)
 description: |
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
-slug: /cn/xiao_nrf54l15_sense_power_consumptions
+slug: /xiao_nrf54l15_sense_power_consumptions
 sidebar_position: 2
 keywords:
   - XIAO

@@ -4,7 +4,7 @@ title: Placa de Desarrollo WiFi Air602
 keywords:
 - Air602_WiFi_Development_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Air602_WiFi_Development_Board
+slug: /Air602_WiFi_Development_Board
 sku: 113990577, 113990576
 last_update:
   date: 01/20/2023

@@ -4,7 +4,7 @@ title: MT3620 Mini 开发板
 keywords:
 - Azure_Sphere_MT3620_Development_Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/MT3620_Mini_Dev_Board
+slug: /MT3620_Mini_Dev_Board
 sku: 103990049,102110267
 last_update:
   date: 1/13/2023

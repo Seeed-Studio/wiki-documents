@@ -4,7 +4,7 @@ title: Integración con InfluxDB (vía TTS)
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP_T1000_tracker_InfluxDB_TTS
+slug: /SenseCAP_T1000_tracker_InfluxDB_TTS
 last_update:
   date: 8/18/2023
   author: Jessie

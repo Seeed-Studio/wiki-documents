@@ -4,7 +4,7 @@ title: 彩虹杜诺
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Rainbowduino
+slug: /Rainbowduino
 last_update:
   date: 1/13/2023
   author: shuxu hu

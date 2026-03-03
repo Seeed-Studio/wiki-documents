@@ -4,7 +4,7 @@ title: Sense 版本的麦克风使用
 keywords:
 - Template
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/xiao_esp32s3_sense_mic
+slug: /xiao_esp32s3_sense_mic
 last_update:
   date: 04/14/2023
   author: Citric

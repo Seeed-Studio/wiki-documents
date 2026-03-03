@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: ライセンス
-slug: /ja/License
+slug: /License
 ---
 ## **重要なお知らせおよび免責事項**
 

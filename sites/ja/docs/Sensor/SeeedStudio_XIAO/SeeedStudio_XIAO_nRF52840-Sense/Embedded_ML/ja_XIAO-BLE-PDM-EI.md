@@ -2,7 +2,7 @@
 description: Edge Impulseに基づく音声認識
 title: Edge Impulseに基づく音声認識
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAO-BLE-PDM-EI
+slug: /XIAO-BLE-PDM-EI
 last_update:
   date: 10/12/2023
   author: Bruno Santos (Feiticeir0)

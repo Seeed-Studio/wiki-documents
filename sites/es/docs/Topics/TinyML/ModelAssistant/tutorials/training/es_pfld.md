@@ -4,7 +4,7 @@ title: Detección de Puntos Clave - PFLD
 keywords:
 - sscma model assistant ai tinyml
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ModelAssistant_Tutorials_Training_PFLD
+slug: /ModelAssistant_Tutorials_Training_PFLD
 last_update:
   date: 01/11/2024
   author: LynnL4

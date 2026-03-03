@@ -4,7 +4,7 @@ title: reComputer Industrial J40、J30 ハードウェアとインターフェ�
 tags:
   - reComputer Industrial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage
+slug: /reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage
 last_update:
   date: 05/16/2023
   author: Lakshantha

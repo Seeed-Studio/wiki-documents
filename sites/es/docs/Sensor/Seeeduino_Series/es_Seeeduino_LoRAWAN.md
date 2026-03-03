@@ -4,7 +4,7 @@ title: Seeeduino LoRaWAN
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Seeeduino_LoRAWAN
+slug: /Seeeduino_LoRAWAN
 sku: 102010129, 102010128
 last_update:
   date: 1/31/2023

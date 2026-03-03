@@ -4,7 +4,7 @@ title:  Wio Terminal ジャイロの表示
 keywords:
 - Wio_terminal チュートリアル
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Displaying-Gyro
+slug: /Wio-Terminal-Displaying-Gyro
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -4,7 +4,7 @@ title: 心音传感器
 keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Heart-Sound_Sensor
+slug: /Heart-Sound_Sensor
 last_update:
   date: 2/1/2023
   author: hushuxu

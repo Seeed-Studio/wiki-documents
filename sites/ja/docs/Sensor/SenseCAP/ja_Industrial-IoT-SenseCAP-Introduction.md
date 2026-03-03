@@ -4,7 +4,7 @@ title: SenseCAP エコシステム紹介
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_introduction
+slug: /SenseCAP_introduction
 last_update:
   date: 7/23/2024
   author: Frank

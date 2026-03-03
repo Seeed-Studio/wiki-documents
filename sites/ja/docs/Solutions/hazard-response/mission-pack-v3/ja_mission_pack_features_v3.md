@@ -4,7 +4,7 @@ title: 機能
 keywords:
     - mission-pack
 # image: 
-slug: /ja/mission_pack_features_v3
+slug: /mission_pack_features_v3
 sidebar_position: 1
 last_update:
     date: 07/08/2025

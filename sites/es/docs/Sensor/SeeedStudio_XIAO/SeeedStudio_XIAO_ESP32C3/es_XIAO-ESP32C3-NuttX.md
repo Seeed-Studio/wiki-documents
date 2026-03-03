@@ -4,7 +4,7 @@ title: XIAO ESP32C3 Con NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-ESP32C3-NuttX/nuttx.webp
-slug: /es/xiao_esp32c3_nuttx
+slug: /xiao_esp32c3_nuttx
 last_update:
     date: 04/28/2025
     author: rcsim

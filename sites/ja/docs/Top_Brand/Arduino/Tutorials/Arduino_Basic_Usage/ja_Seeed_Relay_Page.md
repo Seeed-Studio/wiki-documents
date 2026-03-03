@@ -2,7 +2,7 @@
 description: Seeed リレー選択ガイド
 title: Seeed リレー選択ガイド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeed_Relay_Page
+slug: /Seeed_Relay_Page
 last_update:
   date: 05/15/2025
   author: w0x7ce

@@ -4,7 +4,7 @@ title: Grove - Starter Kit Plus
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_Starter_Kit_Plus
+slug: /Grove_Starter_Kit_Plus
 last_update:
   date: 1/13/2023
   author: shuxu hu

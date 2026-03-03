@@ -4,7 +4,7 @@ title: Grove - MOSFET
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-MOSFET
+slug: /Grove-MOSFET
 sku: 103020008
 last_update:
   date: 05/15/2025

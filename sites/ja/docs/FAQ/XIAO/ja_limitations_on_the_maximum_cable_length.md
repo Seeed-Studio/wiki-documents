@@ -2,7 +2,7 @@
 description: XIAO CAN Bus拡張ボード-FAQ
 title: CANバス接続の最大ケーブル長に制限はありますか？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/limitations_on_the_maximum_cable_length
+slug: /limitations_on_the_maximum_cable_length
 last_update:
   date: 6/30/2023
   author: cheng.tang

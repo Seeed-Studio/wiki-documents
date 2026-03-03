@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove_Recorder/
-slug: /ja/Grove_Recorder
+slug: /Grove_Recorder
 sku: 103020018
 last_update:
   date: 05/15/2025

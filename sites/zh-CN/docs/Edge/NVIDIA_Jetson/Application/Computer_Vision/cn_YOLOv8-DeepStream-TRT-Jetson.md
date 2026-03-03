@@ -7,7 +7,7 @@ tags:
   - AI model deploy
   - Yolov8
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/YOLOv8-DeepStream-TRT-Jetson
+slug: /YOLOv8-DeepStream-TRT-Jetson
 last_update:
   date: 04/21/2023
   author: Lakshantha

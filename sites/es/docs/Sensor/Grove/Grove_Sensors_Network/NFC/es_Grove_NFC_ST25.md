@@ -5,7 +5,7 @@ keywords:
 - NFC
 - ST25DV64
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/grove-nfc-st25dv64
+slug: /grove-nfc-st25dv64
 sku: 101021093
 last_update:
   date: 5/16/2023

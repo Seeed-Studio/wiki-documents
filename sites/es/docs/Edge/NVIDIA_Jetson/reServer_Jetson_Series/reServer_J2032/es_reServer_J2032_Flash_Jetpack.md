@@ -2,7 +2,7 @@
 description: reServer J2032
 title: reServer J2032 Flash NVIDIA JetPack™ OS 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reServer_J2032_Flash_Jetpack
+slug: /reServer_J2032_Flash_Jetpack
 last_update:
   date: 01/03/2023
   author: w0x7ce

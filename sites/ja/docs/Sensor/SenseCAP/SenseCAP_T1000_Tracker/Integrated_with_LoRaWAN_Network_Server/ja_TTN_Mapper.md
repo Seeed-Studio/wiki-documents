@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - TTN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ttn_mapper_for_SenseCAP_T1000
+slug: /ttn_mapper_for_SenseCAP_T1000
 last_update:
   date: 10/13/2023
   author: Jessie

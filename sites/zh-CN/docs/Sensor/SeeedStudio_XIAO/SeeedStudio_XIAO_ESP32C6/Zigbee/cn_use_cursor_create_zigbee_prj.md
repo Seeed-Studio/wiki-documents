@@ -2,7 +2,7 @@
 description: 学习如何使用 Cursor 的 AI 驱动聊天功能，结合 XIAO ESP32C6 和传感器开发 Zigbee 应用程序
 title: 使用 Cursor 创建 XIAO ESP32C6 的 Zigbee 项目
 image: https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/13.webp
-slug: /cn/use_cursor_create_zigbee_prj
+slug: /use_cursor_create_zigbee_prj
 last_update:
   date: 03/04/2025
   author: Citric

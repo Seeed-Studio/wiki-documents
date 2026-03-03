@@ -4,7 +4,7 @@ title: 简介
 keywords:
 - SenseCAP_T2000_tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
-slug: /cn/SenseCAP_T2000_tracker/Introduction
+slug: /SenseCAP_T2000_tracker/Introduction
 sku: 100082900,100057727,100087298
 last_update:
   date: 1/5/2026

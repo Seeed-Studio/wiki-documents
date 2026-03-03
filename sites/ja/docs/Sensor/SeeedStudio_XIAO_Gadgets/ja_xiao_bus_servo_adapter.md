@@ -5,7 +5,7 @@ keywords:
   - servo
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/10.webp
 sidebar_position: 8
-slug: /ja/xiao_bus_servo_adapter
+slug: /xiao_bus_servo_adapter
 last_update:
   date: 05/26/2025
   author: Citric

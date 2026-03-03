@@ -4,7 +4,7 @@ title: Music Shield
 keywords:
 - Arduino シールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Music_Shield
+slug: /Music_Shield
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/LCD_8-2_Characters-Blue_back_light/
-slug: /ja/LCD_16-2_Characters-Green_Yellow_back_light
+slug: /LCD_16-2_Characters-Green_Yellow_back_light
 last_update:
   date: 05/15/2025
   author: matthew

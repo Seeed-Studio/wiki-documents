@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Cómo flashear Raspberry Pi OS/ Ubuntu OS de 64 bits u otros OS a eMMC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/flash_different_os_to_emmc
+slug: /flash_different_os_to_emmc
 last_update:
   date: 6/21/2023
   author: Seraphina

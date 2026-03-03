@@ -4,7 +4,7 @@ title: ペイロード形式
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/T1000_payload
+slug: /T1000_payload
 last_update:
   date: 2/21/2023
   author: Jessie

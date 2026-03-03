@@ -1,7 +1,7 @@
 ---
 description: Descripción general del SDK de Reachy Mini con guía de inicio rápido, ejemplos de código y enlaces a la instalación, documentación del SDK de Python y recursos de la comunidad.
 title: Reachy Mini SDK
-slug: /es/reachymini_sdk_readme
+slug: /reachymini_sdk_readme
 keywords:
 - sdk
 - quick start

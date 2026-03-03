@@ -2,7 +2,7 @@
 description: reComputer R1000 常见问题页面
 title: reComputer R1000 系列常见问题
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reComputer_R1000_FAQ
+slug: /reComputer_R1000_FAQ
 last_update:
   date: 6/21/2024
   author: Harrison Xu

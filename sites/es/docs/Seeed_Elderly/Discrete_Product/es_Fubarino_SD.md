@@ -4,7 +4,7 @@ title: Fubarino SD
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Fubarino_SD
+slug: /Fubarino_SD
 sku: 102990019
 last_update:
   date: 1/13/2023

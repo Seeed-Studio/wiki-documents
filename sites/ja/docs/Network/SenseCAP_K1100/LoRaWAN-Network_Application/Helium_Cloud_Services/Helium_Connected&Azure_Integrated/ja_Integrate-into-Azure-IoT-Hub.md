@@ -4,7 +4,7 @@ title: Azure IoT Hub への統合
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Integrate-into-Azure-IoT-Hub
+slug: /Integrate-into-Azure-IoT-Hub
 last_update:
   date: 05/15/2025
   author: shuxu hu

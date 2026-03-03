@@ -6,7 +6,7 @@ keywords:
 - Isaac ROS
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/isaac_ros_apriltag
+slug: /isaac_ros_apriltag
 last_update:
   date: 2025/5/28
   author: ZhuYaoHui

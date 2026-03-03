@@ -2,7 +2,7 @@
 description: reTerminal && reTerminal DM-FAQ
 title: Cómo resolver la tasa de refresco de pantalla demasiado baja
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/screen_refresh_rate_low
+slug: /screen_refresh_rate_low
 last_update:
   date: 7/2/2024
   author: Parker

@@ -1,7 +1,7 @@
 ---
 description: Guía de instalación completa para el SDK de Python y el daemon de Reachy Mini en Linux, macOS y Windows, que cubre requisitos previos, configuración de entornos virtuales y resolución de problemas.
 title: Guía de instalación
-slug: /es/reachymini_sdk_installation
+slug: /reachymini_sdk_installation
 keywords:
 - installation
 - setup

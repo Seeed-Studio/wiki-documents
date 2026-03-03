@@ -2,7 +2,7 @@
 description: 本文介绍如何使用 XIAO Debug Mate 的 DAPLink 调试功能。
 title: DAPLink 调试器
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/15.webp
-slug: /cn/xiao_debug_mate_debug
+slug: /xiao_debug_mate_debug
 sku: 109990585
 sidebar_position: 2
 last_update:

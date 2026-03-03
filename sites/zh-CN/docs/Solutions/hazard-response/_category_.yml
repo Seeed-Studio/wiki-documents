@@ -5,6 +5,6 @@ collapsed: true
 className: _hazard-response
 link:
   type: generated-index
-  slug: cn/hazard-response
+  slug: hazard-response
   title: 危险响应
   description: 用于检测和响应危险的解决方案。

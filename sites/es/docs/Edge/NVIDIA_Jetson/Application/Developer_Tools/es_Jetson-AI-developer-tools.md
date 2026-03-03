@@ -2,7 +2,7 @@
 description: Herramientas de Desarrollo de IA para Jetson
 title: Herramientas de Desarrollo de IA para Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Jetson-AI-developer-tools
+slug: /Jetson-AI-developer-tools
 last_update:
   date: 05/11/2023
   author: Lakshantha

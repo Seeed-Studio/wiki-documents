@@ -2,7 +2,7 @@
 description: XIAO ESP32C3-FAQ
 title: Cómo volver a flashear el bootloader con firmware de fábrica
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reflash_the_bootloader
+slug: /reflash_the_bootloader
 last_update:
   date: 6/30/2023
   author: cheng.tang

@@ -4,7 +4,7 @@ title: Grove - Escáner/Sensor de Huellas Dactilares Capacitivo
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Capacitive-Fingerprint-Sensor
+slug: /Grove-Capacitive-Fingerprint-Sensor
 sku: 101020713
 last_update:
   date: 1/6/2023

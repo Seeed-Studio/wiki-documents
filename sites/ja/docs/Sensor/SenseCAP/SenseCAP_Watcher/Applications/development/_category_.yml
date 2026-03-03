@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: development
 link:
   type: generated-index
-  slug: ja/development
+  slug: development
   title: 開発
   description: この部分では、ウォッチャー機能を使用して開発を支援する方法に焦点を当てています。

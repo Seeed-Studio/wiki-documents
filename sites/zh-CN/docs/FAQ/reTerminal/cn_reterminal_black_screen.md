@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 如何解决 reTerminal 黑屏问题
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reterminal_black_screen
+slug: /reterminal_black_screen
 last_update:
   date: 11/15/2023
   author: Kasun Thushara

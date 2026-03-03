@@ -4,7 +4,7 @@ title: Grove - 滑动电位器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Slide_Potentiometer
+slug: /Grove-Slide_Potentiometer
 sku: 101020036
 last_update:
   date: 1/6/2023

@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 如何在 reTerminal 上禁用屏幕旋转
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/disable_screen_rotation_on_reTerminal
+slug: /disable_screen_rotation_on_reTerminal
 last_update:
   date: 6/21/2023
   author: Seraphina

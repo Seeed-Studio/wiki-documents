@@ -4,7 +4,7 @@ title: Kit Básico Sidekick para LinkIt ONE
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Sidekick_Basic_Kit_for_LinkIt_ONE
+slug: /Sidekick_Basic_Kit_for_LinkIt_ONE
 sku: 110060038
 last_update:
   date: 1/13/2023

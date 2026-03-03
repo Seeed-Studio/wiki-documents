@@ -2,7 +2,7 @@
 description: reComputer J30 での NEQTO Engine for Linux の開始方法
 title: reComputer J30 での NEQTO Engine for Linux の開始方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/neqto_engine_for_linux_recomputer
+slug: /neqto_engine_for_linux_recomputer
 last_update:
   date: 03/14/2024
   author: Kazuhiro Ozuchi

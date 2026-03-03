@@ -6,7 +6,7 @@ keywords:
   - reComputer 
   - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Generative_AI_Intro
+slug: /Generative_AI_Intro
 last_update:
   date: 08/06/2024
   author: Youjiang

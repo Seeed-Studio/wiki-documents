@@ -4,7 +4,7 @@ title: Grove - Pantalla Alfanumérica Cuádruple Roja de 0.54 pulgadas
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-0.54_inch_Red_Quad_Alphanumeric_Display
+slug: /Grove-0.54_inch_Red_Quad_Alphanumeric_Display
 sku: 104020133
 last_update:
   date: 1/7/2023

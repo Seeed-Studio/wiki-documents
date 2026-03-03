@@ -4,7 +4,7 @@ title: Wio Tracker L1 Meshtastic 节点
 keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wio-tracker-L1.webp
-slug: /cn/wio_tracker_l1_node
+slug: /wio_tracker_l1_node
 sidebar_position: 1
 last_update:
   date: 12/18/2025

@@ -2,7 +2,7 @@
 description: 本文提供了如何在 SquareLine 上为 reTerminal E 系列纸质显示屏创建 UI 界面的说明。
 title: reTerminal E 系列 ePaper 显示屏与 SquareLine Vision 配合使用
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/sample_5.webp
-slug: /cn/reterminal_e10xx_with_squareline_vision
+slug: /reterminal_e10xx_with_squareline_vision
 sidebar_position: 3
 last_update:
   date: 10/29/2025

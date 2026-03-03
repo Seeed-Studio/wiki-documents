@@ -7,7 +7,7 @@ keywords:
   - Node-Red
   - InfluxDB
 image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
-slug: /es/edge_box_rpi_200_node_red_influxdb
+slug: /edge_box_rpi_200_node_red_influxdb
 last_update:
   date: 06/13/2024
   author: Kasun Thushara

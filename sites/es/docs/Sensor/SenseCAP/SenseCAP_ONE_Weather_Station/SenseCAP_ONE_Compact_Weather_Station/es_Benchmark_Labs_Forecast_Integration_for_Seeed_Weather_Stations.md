@@ -4,7 +4,7 @@ title: Integración de Pronósticos de Benchmark Labs para Estaciones Meteoroló
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image62.webp
-slug: /es/benchmark_labs_forecast_integration_for_seeed_weather_stations
+slug: /benchmark_labs_forecast_integration_for_seeed_weather_stations
 last_update:
   date: 6/3/2025
   author: Zeno

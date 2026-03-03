@@ -4,7 +4,7 @@ title: Scailable 入门指南
 tags:
   - AI model deploy
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Scailable-Jetson-Getting-Started
+slug: /Scailable-Jetson-Getting-Started
 last_update:
   date: 03/10/2023
   author: Lakshantha

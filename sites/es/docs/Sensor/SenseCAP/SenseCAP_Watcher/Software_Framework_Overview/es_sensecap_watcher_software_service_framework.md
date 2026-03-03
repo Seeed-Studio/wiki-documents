@@ -2,7 +2,7 @@
 description: Este artículo proporciona una guía de configuración detallada para configurar el dispositivo Watcher en tres flujos de implementación de procesamiento diferentes, incluyendo Flujo de Procesamiento Eficiente en la Nube, Flujo de Procesamiento Inteligente Híbrido y Flujo de Procesamiento Seguro Local. Ofrece una visión general del marco de servicios de software de Watcher, ilustrando las interacciones entre el usuario, la aplicación SenseCraft Mate y el dispositivo Watcher.
 title: Introducción al Servicio de Software de Watcher
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/50.jpg
-slug: /es/watcher_software_service_framework
+slug: /watcher_software_service_framework
 sidebar_position: 2
 last_update:
   date: 10/09/2024

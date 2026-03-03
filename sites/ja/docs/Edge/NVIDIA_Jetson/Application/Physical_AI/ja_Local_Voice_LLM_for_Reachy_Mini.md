@@ -2,7 +2,7 @@
 description: このwikiでは、reComputer Mini J501とReachy Mini Liteのハードウェア組み合わせを使用して、完全にローカルな音声対話型ロボットアシスタントをデプロイし、操作する方法を詳しく説明します。このガイドでは、Ollamaサーバーのインストール、ローカル音声モデルと会話アプリケーションの設定を通じて、最終的にインターネット接続を必要としないオフライン、低遅延の音声会話システムを実現します。ハードウェアセットアップ、ソフトウェアデプロイメント、および動作システムの最終デモンストレーションをカバーする完全なエンドツーエンドプロジェクトを提示します。
 title: Reachy Mini用reComputer Miniにローカル音声LLMをデプロイ！
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reachy_mini/world_frame.webp
-slug: /ja/local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk
+slug: /local_voice_llm_on_recomputer_jetson_for_reachy_mini_bk
 sku: E2025123101
 last_update:
   date: 01/06/2026

@@ -4,7 +4,7 @@ title: Google 使用方法
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Connect-Wio-Terminal-to-Google-Cloud
+slug: /Connect-Wio-Terminal-to-Google-Cloud
 last_update:
   date: 05/15/2025
   author: shuxu hu

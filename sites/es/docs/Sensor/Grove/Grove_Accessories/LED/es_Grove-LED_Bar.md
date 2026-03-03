@@ -4,7 +4,7 @@ title: Grove - Barra LED
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-LED_Bar
+slug: /Grove-LED_Bar
 sku: 104020006, 104030002
 last_update:
   date: 1/7/2023

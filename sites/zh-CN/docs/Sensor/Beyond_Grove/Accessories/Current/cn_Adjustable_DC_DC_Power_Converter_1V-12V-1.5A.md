@@ -4,7 +4,7 @@ title: 可调直流 - 直流电源转换器（1V - 12V1.5A）
 keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A
+slug: /Adjustable_DC_DC_Power_Converter_1V-12V-1.5A
 sku: 105030005
 last_update:
   date: 1/13/2023

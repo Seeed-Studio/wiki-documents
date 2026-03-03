@@ -4,7 +4,7 @@ title: SenseCAP Decoder
 keywords:
 - SenseCAP_Decoder
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP_Decoder
+slug: /SenseCAP_Decoder
 last_update:
   date: 1/26/2026
   author: Janet

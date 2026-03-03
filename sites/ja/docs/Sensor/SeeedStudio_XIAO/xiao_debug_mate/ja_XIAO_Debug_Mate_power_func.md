@@ -2,7 +2,7 @@
 description: 正確な電圧、電流、電力監視のためのXIAO Debug MateのPower Meter機能の使用方法を学びます。
 title: Power Meter
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/32.webp
-slug: /ja/xiao_debug_mate_power
+slug: /xiao_debug_mate_power
 sku: 109990585
 sidebar_position: 4
 last_update:

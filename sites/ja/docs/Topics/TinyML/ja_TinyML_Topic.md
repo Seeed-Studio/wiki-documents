@@ -4,7 +4,7 @@ title: TinyML
 keywords:
 - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/tinyml_topic
+slug: /tinyml_topic
 last_update:
   date: 05/15/2025
   author: Yaohao

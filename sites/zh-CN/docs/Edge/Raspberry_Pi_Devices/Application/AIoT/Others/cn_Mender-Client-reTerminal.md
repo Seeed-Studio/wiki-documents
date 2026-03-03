@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reTerminal Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Mender-Client-reTerminal
+slug: /Mender-Client-reTerminal
 last_update:
   date: 1/31/2023
   author: jianjing Huang

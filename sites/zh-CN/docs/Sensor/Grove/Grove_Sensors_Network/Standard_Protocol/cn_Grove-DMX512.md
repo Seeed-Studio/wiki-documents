@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Sensor_communication/
-slug: /cn/Grove-DMX512
+slug: /Grove-DMX512
 sku: 103020000
 last_update:
   date: 01/06/2022

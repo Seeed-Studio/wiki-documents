@@ -4,7 +4,7 @@ title: Grove - 2.5A DC電流センサー(ACS70331)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-2.5A-DC-Current-Sensor-ACS70331
+slug: /Grove-2.5A-DC-Current-Sensor-ACS70331
 sku: 101020652
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Dfu-util/
-slug: /es/Dfu-util
+slug: /Dfu-util
 last_update:
   date: 02/03/2022
   author: gunengyu

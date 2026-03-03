@@ -4,7 +4,7 @@ title: Grove - トリプルカラー E-Ink ディスプレイ 2.13"
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Triple_Color_E-Ink_Display_2_13
+slug: /Grove-Triple_Color_E-Ink_Display_2_13
 sku: 104020130
 last_update:
   date: 05/15/2025

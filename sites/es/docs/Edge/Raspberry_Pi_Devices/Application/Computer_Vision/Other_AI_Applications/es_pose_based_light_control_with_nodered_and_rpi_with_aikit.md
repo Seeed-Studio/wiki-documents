@@ -7,7 +7,7 @@ keywords:
   - Object detecton
   - AI kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/pose_based_light_control_with_nodered_and_rpi_with_aikit
+slug: /pose_based_light_control_with_nodered_and_rpi_with_aikit
 last_update:
   date: 07/26/2024
   author: Jiahao

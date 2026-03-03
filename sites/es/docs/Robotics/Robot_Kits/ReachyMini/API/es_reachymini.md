@@ -1,7 +1,7 @@
 ---
 description: Referencia completa de la API para la clase principal ReachyMini, incluidos métodos para control de motores, movimiento y gestión de estado.
 title: Referencia de la API de ReachyMini
-slug: /es/reachymini_api_reachymini
+slug: /reachymini_api_reachymini
 keywords:
 - api
 - reachymini

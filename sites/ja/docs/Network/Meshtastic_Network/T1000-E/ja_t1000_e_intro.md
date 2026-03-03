@@ -4,7 +4,7 @@ title: T1000-E Tracker 紹介
 keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/t1000_e_intro
+slug: /t1000_e_intro
 sidebar_position: 1
 last_update:
   date: 7/1/2024

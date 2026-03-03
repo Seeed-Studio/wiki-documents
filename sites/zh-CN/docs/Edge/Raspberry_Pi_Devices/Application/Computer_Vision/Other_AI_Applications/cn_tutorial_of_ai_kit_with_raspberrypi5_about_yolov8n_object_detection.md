@@ -7,7 +7,7 @@ keywords:
   - Ai kit
   - YOLO
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection 
+slug: /tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection
 last_update:
   date: 08/6/2024
   author: Jiahao

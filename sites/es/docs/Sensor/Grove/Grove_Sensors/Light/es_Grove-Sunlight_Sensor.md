@@ -4,7 +4,7 @@ title: Grove - Sensor de Luz Solar
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Sunlight_Sensor
+slug: /Grove-Sunlight_Sensor
 sku: 101020089
 last_update:
   date: 1/5/2023

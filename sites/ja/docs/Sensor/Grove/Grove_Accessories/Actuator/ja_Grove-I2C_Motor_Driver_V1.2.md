@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-I2C_Motor_Driver_V1.2/
-slug: /ja/Grove-I2C_Motor_Driver_V1.2
+slug: /Grove-I2C_Motor_Driver_V1.2
 last_update:
   date: 05/15/2025
   author: gunengyu

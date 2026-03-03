@@ -4,7 +4,7 @@ title: Pluviómetro Óptico RG-15
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15
+slug: /Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15
 sku: 114992321
 last_update:
   date: 10/18/2023

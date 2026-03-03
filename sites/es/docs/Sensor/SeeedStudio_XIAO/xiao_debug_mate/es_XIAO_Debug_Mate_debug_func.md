@@ -2,7 +2,7 @@
 description: Este artículo explica cómo usar la función de depuración DAPLink del XIAO Debug Mate.
 title: Depurador DAPLink
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/15.webp
-slug: /es/xiao_debug_mate_debug
+slug: /xiao_debug_mate_debug
 sku: 109990585
 sidebar_position: 2
 last_update:

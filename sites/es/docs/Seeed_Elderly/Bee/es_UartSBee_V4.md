@@ -4,7 +4,7 @@ title: UartSBee V4
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/UartSBee_V4
+slug: /UartSBee_V4
 sku: 103990023
 last_update:
   date: 1/13/2023

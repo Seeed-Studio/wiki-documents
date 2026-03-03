@@ -2,7 +2,7 @@
 description: SenseCAP Watcher 是一个 AI 监控器，帮助您监控空间内的异常情况并采取行动。只需对 Watcher 说话来发出命令，当事件发生时它将执行您所需的任务。
 title: 快速入门指南
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg
-slug: /cn/getting_started_with_watcher
+slug: /getting_started_with_watcher
 sidebar_position: 2
 last_update:
   date: 10/17/2024

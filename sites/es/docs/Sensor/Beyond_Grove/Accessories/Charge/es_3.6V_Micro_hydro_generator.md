@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/3.6V_Micro_hydro_generator/
-slug: /es/3.6V_Micro_hydro_generator
+slug: /3.6V_Micro_hydro_generator
 last_update:
   date: 02/03/2022
   author: gunengyu

@@ -4,7 +4,7 @@ title: Entrena y Despliega Tu Propio Modelo de IA con Edge Impulse
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/edge-impulse-vision-ai
+slug: /edge-impulse-vision-ai
 last_update:
   date: 1/31/2023
   author: jianjing Huang

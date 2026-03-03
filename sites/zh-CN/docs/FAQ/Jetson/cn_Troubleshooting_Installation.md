@@ -3,7 +3,7 @@ description: reComputer-常见问题解答
 title: 安装故障排除
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /cn/Troubleshooting_Installation
+slug: /Troubleshooting_Installation
 last_update:
   date: 2023/6/30
   author: Seraphina

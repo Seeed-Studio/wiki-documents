@@ -9,7 +9,7 @@ keywords:
 - learning
 - reinforcement learning
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/robotics_page
+slug: /robotics_page
 last_update:
   date: 05/29/2025
   author: ZhuYaohui

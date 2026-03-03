@@ -4,7 +4,7 @@ title: SenseCAP LoRaWAN S210X シリーズセンサー紹介
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor
+slug: /Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor
 sku: 114992867,114992868,114992869,114992870,114992871,101070001,101070021
 last_update:
   date: 3/30/2023

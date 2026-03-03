@@ -4,7 +4,7 @@ title: Entrenar Modelo de Reconocimiento de Dígitos de Medidor de Agua con Sens
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
+slug: /Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
 sku: 101990962
 date: 11/26/2025
 author: Twelve

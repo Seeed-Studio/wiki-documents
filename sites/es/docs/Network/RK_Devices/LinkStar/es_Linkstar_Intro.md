@@ -4,7 +4,7 @@ title: Guía de Linkstar
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Linkstar_Intro
+slug: /Linkstar_Intro
 last_update:
   date: 07/19/2023
   author: Matthew

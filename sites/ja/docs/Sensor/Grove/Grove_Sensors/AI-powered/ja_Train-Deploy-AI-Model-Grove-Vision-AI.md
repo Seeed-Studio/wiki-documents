@@ -4,7 +4,7 @@ title: Roboflow、YOLOv5、TensorFlow Liteを使用して独自のAIモデルを
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Train-Deploy-AI-Model-Grove-Vision-AI
+slug: /Train-Deploy-AI-Model-Grove-Vision-AI
 sku: 114992866
 last_update:
   date: 05/15/2025

@@ -2,7 +2,7 @@
 description: Aprende cómo usar el chat con IA de Cursor para desarrollar aplicaciones Zigbee con XIAO ESP32C6 y sensores
 title: Usando Cursor para Crear Proyectos Zigbee con XIAO ESP32C6
 image: https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/13.webp
-slug: /es/use_cursor_create_zigbee_prj
+slug: /use_cursor_create_zigbee_prj
 last_update:
   date: 03/04/2025
   author: Citric

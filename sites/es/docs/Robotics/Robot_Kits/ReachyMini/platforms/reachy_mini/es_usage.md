@@ -1,7 +1,7 @@
 ---
 description: Guía de uso de Reachy Mini que cubre la interfaz web Dashboard, la gestión de apps y el inicio rápido del SDK de Python.
 title: Uso de Reachy Mini
-slug: /es/reachymini_platforms_reachy_mini_usage
+slug: /reachymini_platforms_reachy_mini_usage
 keywords:
 - usage
 - dashboard

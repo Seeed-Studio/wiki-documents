@@ -1,7 +1,7 @@
 ---
 description: Guía de configuración de Reachy Mini Lite que incluye instrucciones de montaje, conexión USB y descarga de la app de escritorio para Windows, macOS y Linux.
 title: Guía de Configuración de Reachy Mini Lite
-slug: /es/reachymini_platforms_reachy_mini_lite_get_started
+slug: /reachymini_platforms_reachy_mini_lite_get_started
 keywords:
 - lite
 - setup

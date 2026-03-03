@@ -4,7 +4,7 @@ title: 键盘
 keywords:
 - Wio_terminal USB_Host
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-USBH-Keyboard
+slug: /Wio-Terminal-USBH-Keyboard
 last_update:
   date: 1/17/2023
   author: jianjing Huang

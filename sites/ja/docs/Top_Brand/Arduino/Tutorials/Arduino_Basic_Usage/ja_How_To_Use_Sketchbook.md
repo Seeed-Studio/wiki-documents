@@ -2,7 +2,7 @@
 description: スケッチブックの使い方
 title: スケッチブックの使い方
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/How_To_Use_Sketchbook
+slug: /How_To_Use_Sketchbook
 last_update:
   date: 05/15/2025
   author: w0x7ce

@@ -6,7 +6,7 @@ keywords:
 - AWS
 - Getting Start
 - Cloud
-slug: /es/recomputer_r1000_aws
+slug: /recomputer_r1000_aws
 last_update:
   date: 7/10/2024
   author: Kasun Thushara

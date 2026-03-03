@@ -5,7 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Relay_Control_LED
+slug: /Relay_Control_LED
 last_update:
   date: 05/15/2025
   author: jianjing Huang

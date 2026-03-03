@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-I2C_FM_Receiver_v1.1/
-slug: /ja/Grove-I2C_FM_Receiver_v1.1
+slug: /Grove-I2C_FM_Receiver_v1.1
 sku: 107020049
 last_update:
   date: 05/15/2025

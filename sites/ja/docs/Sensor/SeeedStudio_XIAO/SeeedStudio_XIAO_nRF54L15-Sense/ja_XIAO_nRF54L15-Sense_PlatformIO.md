@@ -4,7 +4,7 @@ title: XIAO nRF54L15 with PlatformIO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/mg24_platform/top_mg24_platform02.webp
-slug: /ja/xiao_nrf54l15_with_platform_io
+slug: /xiao_nrf54l15_with_platform_io
 last_update:
   date: 7/4/2025
   author: Jason

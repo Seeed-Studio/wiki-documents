@@ -6,7 +6,7 @@ keywords:
 - ESPHome
 - Home Assistant
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover.webp
-slug: /ja/xiao_075inch_epaper_panel_esphome
+slug: /xiao_075inch_epaper_panel_esphome
 sidebar_position: 2
 last_update:
   date: 03/12/2025

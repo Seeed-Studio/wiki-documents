@@ -4,7 +4,7 @@ title: Rephone Core 2G-Atmel32u4
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/RePhone_core_2G-Atmel32u4
+slug: /RePhone_core_2G-Atmel32u4
 sku: 102040006
 last_update:
   date: 1/13/2023

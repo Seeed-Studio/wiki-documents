@@ -4,7 +4,7 @@ title: 使用 Seeed Studio Fusion 扩展您的创作
 keywords:
 - 贡献者
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Scale-up-Your-Creation-with-Fusion
+slug: /Scale-up-Your-Creation-with-Fusion
 last_update:
   date: 03/01/2023
   author: Matthew

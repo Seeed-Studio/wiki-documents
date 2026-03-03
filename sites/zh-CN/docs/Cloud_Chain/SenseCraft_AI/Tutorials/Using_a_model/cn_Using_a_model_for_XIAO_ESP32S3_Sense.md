@@ -3,7 +3,7 @@ sidebar_position: 1
 description: 如何为 XIAO ESP32S3 Sense 使用模型
 title: 为 XIAO ESP32S3 Sense 使用模型
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/14.webp
-slug: /cn/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-xiao
+slug: /sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-xiao
 aliases:
   - /cn/sensecraft_ai_pretrained_models_for_xiao
 last_update:

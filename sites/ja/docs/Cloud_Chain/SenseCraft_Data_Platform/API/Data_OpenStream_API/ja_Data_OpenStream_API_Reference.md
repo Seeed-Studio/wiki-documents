@@ -4,7 +4,7 @@ title: Data OpenStream API リファレンス
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /ja/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_reference
+slug: /sensecraft-data-platform/api/data-openstream-api/data_openstream_api_reference
 aliases:
   - /ja/Cloud_Chain/SenseCAP_API/Data_OpenStream_API/Data_OpenStream_API_Reference
 last_update:

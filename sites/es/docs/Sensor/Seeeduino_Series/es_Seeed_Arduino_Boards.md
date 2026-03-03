@@ -4,7 +4,7 @@ title: Cómo agregar placas Seeed al IDE de Arduino
 keywords:
   - Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Seeed_Arduino_Boards
+slug: /Seeed_Arduino_Boards
 last_update:
   date: 02/02/2023
   author: w0x7ce

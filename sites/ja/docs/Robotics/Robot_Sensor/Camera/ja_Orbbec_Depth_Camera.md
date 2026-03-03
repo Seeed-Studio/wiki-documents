@@ -8,7 +8,7 @@ keywords:
 - Depth Camera
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/orbbec_depth_camera_on_ros
+slug: /orbbec_depth_camera_on_ros
 sku: 101090144,100010971
 last_update:
   date: 10/10/2024

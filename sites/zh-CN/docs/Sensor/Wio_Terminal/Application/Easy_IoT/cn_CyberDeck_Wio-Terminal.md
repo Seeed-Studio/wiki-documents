@@ -1,7 +1,7 @@
 ---
 title: 使用 Platform IO 在 Wio Terminal 上构建 Cyber Desk，由 Cursor AI 驱动
 image: https://files.seeedstudio.com/wiki/CyberDesk_Wio-Terminal/CyberDesk_Wio-Terminal_1.gif
-slug: /cn/CyberDeck_Wio-Terminal
+slug: /CyberDeck_Wio-Terminal
 last_update:
   date: 12/09/2024
   author: Eric Pan

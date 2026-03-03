@@ -4,7 +4,7 @@ title: XIAO RP2040 con PlatformIO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/rp2040_with_platformio.webp
-slug: /es/xiao_rp2040_with_platform_io
+slug: /xiao_rp2040_with_platform_io
 last_update:
   date: 04/08/2025
   author: Hugo

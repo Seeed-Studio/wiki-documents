@@ -4,7 +4,7 @@ title: Xadow - モータードライバー
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Motor_Driver
+slug: /Xadow_Motor_Driver
 last_update:
   date: 05/15/2025
   author: shuxu hu

@@ -4,7 +4,7 @@ title: Xadow - メタルフレーム
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Metal_Frame
+slug: /Xadow_Metal_Frame
 last_update:
   date: 05/15/2025
   author: shuxu hu

@@ -4,7 +4,7 @@ title: Seeeduino v3.0
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeeduino_v3.0
+slug: /Seeeduino_v3.0
 last_update:
   date: 05/15/2025
   author: shuxu hu

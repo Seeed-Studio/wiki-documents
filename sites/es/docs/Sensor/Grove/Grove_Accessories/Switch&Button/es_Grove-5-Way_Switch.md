@@ -4,7 +4,7 @@ title: Grove - Interruptor de 5 Vías
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-5-Way_Switch
+slug: /Grove-5-Way_Switch
 last_update:
   date: 2/22/2023
   author: jianjing Huang

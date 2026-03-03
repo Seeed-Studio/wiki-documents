@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: SenseCAP_Watcher_for_Xiaozhi_AI
 link:
   type: generated-index
-  slug: ja/sensecap_watcher_for_xiaozhi_ai
+  slug: sensecap_watcher_for_xiaozhi_ai
   title: Xiaozhi AI 向け SenseCAP Watcher
   description: スマート監視と自動化のためのSenseCAP WatcherとXiaozhi AIの設定と使用方法を学びます。

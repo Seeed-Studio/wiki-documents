@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Photo_Reflective_Sensor/
-slug: /es/Photo_Reflective_Sensor
+slug: /Photo_Reflective_Sensor
 last_update:
   date: 02/03/2022
   author: gunengyu

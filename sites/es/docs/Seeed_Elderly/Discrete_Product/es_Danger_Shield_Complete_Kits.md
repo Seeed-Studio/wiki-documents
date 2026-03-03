@@ -4,7 +4,7 @@ title: Kits Completos Danger Shield
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Danger_Shield_Complete_Kits
+slug: /Danger_Shield_Complete_Kits
 sku: 103990021
 last_update:
   date: 1/13/2023

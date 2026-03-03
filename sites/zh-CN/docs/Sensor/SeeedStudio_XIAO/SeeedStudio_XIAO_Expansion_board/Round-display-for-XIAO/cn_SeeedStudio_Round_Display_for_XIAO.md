@@ -5,7 +5,7 @@ keywords:
 - XIAO
 - Round Dislay
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/get_start_round_display
+slug: /get_start_round_display
 sku: 104030087
 last_update:
   date: 07/11/2024

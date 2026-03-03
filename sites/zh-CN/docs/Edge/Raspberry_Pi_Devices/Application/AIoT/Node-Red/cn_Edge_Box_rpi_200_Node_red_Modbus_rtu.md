@@ -8,7 +8,7 @@ keywords:
   - Modbus RTU
   - RS 485
 image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
-slug: /cn/edge_box_rpi_200_node_red_modbus_rs485
+slug: /edge_box_rpi_200_node_red_modbus_rs485
 last_update:
   date: 06/07/2024
   author: Kasun Thushara

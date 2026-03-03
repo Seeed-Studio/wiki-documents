@@ -4,7 +4,7 @@ title: Grove - Sensor de Proximidad, Color, Gesto y Luz (TMG39931)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931
+slug: /Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931
 sku: 101020580
 last_update:
   date: 1/5/2023

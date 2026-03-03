@@ -4,7 +4,7 @@ title: Comenzar con SES
 keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_opensource.webp
-slug: /es/open_source_lorawan
+slug: /open_source_lorawan
 sidebar_position: 3
 last_update:
   date: 2/4/2026

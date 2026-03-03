@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Photo_interrupter_OS25B10/
-slug: /ja/Photo_interrupter_OS25B10
+slug: /Photo_interrupter_OS25B10
 last_update:
   date: 05/15/2025
   author: gunengyu

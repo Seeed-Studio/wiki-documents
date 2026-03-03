@@ -6,7 +6,7 @@ keywords:
   - C++
   - Auto-start
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/make_the_cpp_program_auto_start_on_boot
+slug: /make_the_cpp_program_auto_start_on_boot
 last_update:
   date: 07/26/2025
   author: Liangyuxin

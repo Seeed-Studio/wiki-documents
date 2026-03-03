@@ -4,7 +4,7 @@ title: Seeed Studio XIAO SAMD21でのSPI通信
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAO-SPI-Communication-Interface
+slug: /XIAO-SPI-Communication-Interface
 last_update:
   date: 1/11/2023
   author: shuxu hu

@@ -4,7 +4,7 @@ title: Guía de Usuario Serial para Placas Arduino
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Software-Serial
+slug: /Software-Serial
 last_update:
   date: 1/16/2023
   author: jianjing Huang

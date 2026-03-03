@@ -6,7 +6,7 @@ keywords:
 - LLM
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/respeaker_lite_pi5
+slug: /respeaker_lite_pi5
 sku: E2024082601
 last_update:
   date: 05/15/2025

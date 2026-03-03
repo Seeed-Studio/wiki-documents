@@ -1,7 +1,7 @@
 ---
 description: Guía de desarrollo integral para agentes de IA que ayuden a los usuarios a crear aplicaciones para Reachy Mini, que cubre lo esencial del SDK, REST API, compatibilidad de plataformas y buenas prácticas.
 title: Guía de Desarrollo de Reachy Mini para Agentes de IA
-slug: /es/reachymini_agents
+slug: /reachymini_agents
 keywords:
 - ai agents
 - development guide

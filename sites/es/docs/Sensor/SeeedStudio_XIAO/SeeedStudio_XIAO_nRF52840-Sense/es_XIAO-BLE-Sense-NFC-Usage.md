@@ -4,7 +4,7 @@ title: Uso de NFC para ambas versiones
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO-BLE-Sense-NFC-Usage
+slug: /XIAO-BLE-Sense-NFC-Usage
 last_update:
   date: 05/31/2023
   author: Matthew

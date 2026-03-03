@@ -3,7 +3,7 @@ title: MR60BHA2 呼吸心拍センサーとHome Assistant
 description: | 
   MR60BHA2 心拍mmWaveセンサーとHome Assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/ha_with_mr60bha2
+slug: /ha_with_mr60bha2
 keywords:
   - ESPHome
 sidebar_position: 1

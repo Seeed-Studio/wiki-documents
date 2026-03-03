@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Mini_Fan/
-slug: /es/Grove-Mini_Fan
+slug: /Grove-Mini_Fan
 sku: 108020021, 105020004, 101020084
 last_update:
   date: 01/09/2022

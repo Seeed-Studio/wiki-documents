@@ -4,7 +4,7 @@ title: UartSBee V3.1
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/UartSBee_V3.1
+slug: /UartSBee_V3.1
 last_update:
   date: 05/15/2025
   author: shuxu hu

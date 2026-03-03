@@ -4,7 +4,7 @@ title: LinkIt ONE 教程 - 微型舵机
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/LinkIt-ONE-Tutorial---Mini-Servo
+slug: /LinkIt-ONE-Tutorial---Mini-Servo
 last_update:
   date: 1/13/2023
   author: shuxu hu

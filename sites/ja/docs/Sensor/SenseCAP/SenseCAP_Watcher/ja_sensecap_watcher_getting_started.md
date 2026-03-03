@@ -2,7 +2,7 @@
 description: SenseCAP Watcher は、空間内の異常を監視し、その後アクションを実行するのに役立つ AI ウォッチャーです。Watcher に話しかけてコマンドを与えるだけで、イベントが発生したときに希望するタスクを実行します。
 title: クイックスタートガイド
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg
-slug: /ja/getting_started_with_watcher
+slug: /getting_started_with_watcher
 sidebar_position: 2
 last_update:
   date: 10/17/2024

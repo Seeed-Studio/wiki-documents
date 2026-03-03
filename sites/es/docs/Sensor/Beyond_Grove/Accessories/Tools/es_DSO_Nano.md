@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/DSO_Nano/
-slug: /es/DSO_Nano
+slug: /DSO_Nano
 sku: 109990028
 last_update:
   date: 02/03/2022

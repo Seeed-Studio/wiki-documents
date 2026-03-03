@@ -5,7 +5,7 @@ title: 仪表板基础
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-blockchain/blockchain-dashboard/dashboard-basics
+slug: /sensecraft-blockchain/blockchain-dashboard/dashboard-basics
 aliases:
   - /cn/Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics
 last_update:

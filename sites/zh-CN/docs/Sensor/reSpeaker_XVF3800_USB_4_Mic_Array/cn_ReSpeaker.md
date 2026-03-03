@@ -5,7 +5,7 @@ keywords:
 - reSpeaker
 - Voice AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/respeaker
+slug: /respeaker
 sku: 114993702,114993700,110061601,107100001,107990273
 last_update:
   date: 2/26/2026

@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Wi-Fi/イーサネット経由でSSHを使用してRaspberry Pi OS/Ubuntu OSまたはその他のOSにログインする
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/log_rpios_use_ssh_over_wifi_ethernet
+slug: /log_rpios_use_ssh_over_wifi_ethernet
 last_update:
   date: 6/21/2023
   author: Seraphina

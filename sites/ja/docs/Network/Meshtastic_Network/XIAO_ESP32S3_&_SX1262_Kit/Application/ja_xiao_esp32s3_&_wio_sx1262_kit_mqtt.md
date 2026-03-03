@@ -2,7 +2,7 @@
 description: XIAO ESP32S3 と Wio-SX1262 を使用して Meshtastic MQTT ゲートウェイを構築し、LoRa メッシュネットワークをインターネットにブリッジしてグローバルなメッセージ交換を行うためのガイドです。
 title: MQTT ゲートウェイのセットアップ
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
-slug: /ja/xiao_esp32s3_&_wio_sx1262_kit_mqtt
+slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
 sku: 102010611,113110064
 sidebar_position: 1
 last_update:

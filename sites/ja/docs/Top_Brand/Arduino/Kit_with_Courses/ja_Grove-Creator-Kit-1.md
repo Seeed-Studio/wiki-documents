@@ -4,7 +4,7 @@ title: Grove Creator Kit
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Creator-Kit-1
+slug: /Grove-Creator-Kit-1
 last_update:
   date: 05/15/2025
   author: shuxu hu

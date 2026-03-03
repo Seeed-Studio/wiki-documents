@@ -4,7 +4,7 @@ title: Xadow - 気圧計 BMP180
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Barometer_BMP180
+slug: /Xadow_Barometer_BMP180
 last_update:
   date: 05/15/2025
   author: shuxu hu

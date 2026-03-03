@@ -4,7 +4,7 @@ title: Grove - Sensor de Frecuencia Cardíaca con Clip para Oreja
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Ear-clip_Heart_Rate_Sensor
+slug: /Grove-Ear-clip_Heart_Rate_Sensor
 sku: 101020033
 last_update:
   date: 1/6/2023

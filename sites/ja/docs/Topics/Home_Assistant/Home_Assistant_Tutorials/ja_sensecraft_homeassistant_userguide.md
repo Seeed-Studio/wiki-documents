@@ -3,7 +3,7 @@ description: これは SenseCraft-HomeAssistant ユーザーマニュアルで�
 title: SenseCraft-HomeAssistant ユーザーマニュアル
 keywords:
 - home assistant 
-slug: /ja/sensecraft_homeassistant_userguide
+slug: /sensecraft_homeassistant_userguide
 sku: E2025081502,E2025081503
 last_update:
   date: 05/15/2025

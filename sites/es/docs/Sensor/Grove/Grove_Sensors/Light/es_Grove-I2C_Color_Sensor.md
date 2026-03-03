@@ -4,7 +4,7 @@ title: Grove - Sensor de Color I2C
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-I2C_Color_Sensor
+slug: /Grove-I2C_Color_Sensor
 sku: 101020341, 101020041
 last_update:
   date: 12/29/2025

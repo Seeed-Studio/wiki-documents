@@ -4,7 +4,7 @@ title: 蓝牙使用
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/XIAO_ESP32C3_Bluetooth_Usage
+slug: /XIAO_ESP32C3_Bluetooth_Usage
 last_update:
   date: 1/11/2023
   author: shuxu hu

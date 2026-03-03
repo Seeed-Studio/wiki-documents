@@ -4,7 +4,7 @@ title: Lectura de datos en vivo del Coronavirus usando Wio Terminal
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-Reading-COVID19
+slug: /Wio-Terminal-Reading-COVID19
 last_update:
   date: 1/31/2023
   author: jianjing Huang

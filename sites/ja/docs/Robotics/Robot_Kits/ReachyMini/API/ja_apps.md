@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini アプリ向けの完全な API リファレンス。コアアプリクラス、アプリ管理、アプリ情報、アプリアシスタント、およびアプリソースを含みます。
 title: アプリ API リファレンス
-slug: /ja/reachymini_api_apps
+slug: /reachymini_api_apps
 keywords:
 - api
 - apps

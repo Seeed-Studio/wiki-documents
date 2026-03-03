@@ -2,7 +2,7 @@
 description: Speech-to-Text（STT）、Text-to-Speech（TTS）、およびOllamaとNVIDIA Rivaを使用したローカル大規模言語モデル（LLM）を組み合わせた、完全にローカルで動作する音声対話型AIアシスタント。NVIDIA Jetsonなどのエッジデバイス上で完全に動作し、クラウドに依存することなく、プライベートでリアルタイムな自然な音声会話を可能にします。
 title: Jetson上のチャットボット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/local_chatbot_recomputer
+slug: /local_chatbot_recomputer
 last_update:
   date: 01/29/2025
   author: kourosh

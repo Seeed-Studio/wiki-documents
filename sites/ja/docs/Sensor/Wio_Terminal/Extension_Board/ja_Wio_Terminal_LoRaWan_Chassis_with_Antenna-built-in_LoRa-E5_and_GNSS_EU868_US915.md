@@ -4,7 +4,7 @@ title: Wio Terminal LoRaWan シャーシ（アンテナ内蔵 LoRa-E5 および 
 keywords:
 - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915
+slug: /Wio_Terminal_LoRaWan_Chassis_with_Antenna-built-in_LoRa-E5_and_GNSS_EU868_US915
 last_update:
   date: 05/15/2025
   author: jianjing Huang

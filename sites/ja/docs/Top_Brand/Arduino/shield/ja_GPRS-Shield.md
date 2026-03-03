@@ -4,7 +4,7 @@ title: GPRSシールド
 keywords:
 - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/GPRS-Shield
+slug: /GPRS-Shield
 last_update:
   date: 05/15/2025
   author: jianjing Huang

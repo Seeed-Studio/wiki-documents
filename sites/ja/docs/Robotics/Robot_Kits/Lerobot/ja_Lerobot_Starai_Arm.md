@@ -7,7 +7,7 @@ keywords:
 - Arm
 - Robotics 
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
-slug: /ja/lerobot_starai_arm
+slug: /lerobot_starai_arm
 sku: 114090081,114090080,100049805,100038899,100028196
 last_update:
   date: 10/13/2025

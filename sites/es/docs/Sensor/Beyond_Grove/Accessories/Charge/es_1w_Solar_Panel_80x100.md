@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/1w_Solar_Panel_80x100/
-slug: /es/1w_Solar_Panel_80x100
+slug: /1w_Solar_Panel_80x100
 last_update:
   date: 02/03/2022
   author: gunengyu

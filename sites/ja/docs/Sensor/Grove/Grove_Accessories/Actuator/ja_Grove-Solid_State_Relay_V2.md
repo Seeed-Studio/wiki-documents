@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Solid_State_Relay_V2/
-slug: /ja/Grove-Solid_State_Relay_V2
+slug: /Grove-Solid_State_Relay_V2
 sku: 103020137
 last_update:
   date: 05/15/2025

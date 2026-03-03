@@ -4,7 +4,7 @@ title: Grove - I2C 热电偶放大器 (MCP9600)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-I2C_Thermocouple_Amplifier-MCP9600
+slug: /Grove-I2C_Thermocouple_Amplifier-MCP9600
 sku: 101020594
 last_update:
   date: 1/4/2023

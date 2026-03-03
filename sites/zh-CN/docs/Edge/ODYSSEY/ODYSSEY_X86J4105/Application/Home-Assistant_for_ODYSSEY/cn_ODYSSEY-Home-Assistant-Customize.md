@@ -4,7 +4,7 @@ title: 如何自定义 Home Assistant
 tags:
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ODYSSEY-Home-Assistant-Customize
+slug: /ODYSSEY-Home-Assistant-Customize
 last_update:
   date: 01/03/2023
   author: w0x7ce

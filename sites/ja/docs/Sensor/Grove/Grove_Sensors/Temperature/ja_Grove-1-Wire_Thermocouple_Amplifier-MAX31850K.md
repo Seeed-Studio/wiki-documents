@@ -4,7 +4,7 @@ title: Grove - 1-Wire Thermocouple Amplifier(MAX31850K)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-1-Wire_Thermocouple_Amplifier-MAX31850K
+slug: /Grove-1-Wire_Thermocouple_Amplifier-MAX31850K
 sku: 101020555
 last_update:
   date: 05/15/2025

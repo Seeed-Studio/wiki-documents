@@ -9,7 +9,7 @@ keywords:
   - N3uron
   - AWS
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /ja/recomputer_r1000_n3uron_aws
+slug: /recomputer_r1000_n3uron_aws
 last_update:
   date: 7/11/2024
   author: Kasun Thushara

@@ -6,7 +6,7 @@ keywords:
   - reComputer R1000
   - balena
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reComputer_r1000_balena
+slug: /reComputer_r1000_balena
 last_update:
   date: 06/17/2024
   author: ShuishengPeng and Kasun Thushara

@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: reTerminalで画面回転を無効にする方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/disable_screen_rotation_on_reTerminal
+slug: /disable_screen_rotation_on_reTerminal
 last_update:
   date: 6/21/2023
   author: Seraphina

@@ -4,7 +4,7 @@ title: 蜂鸣器入门指南
 keywords:
 - Wio_terminal Buzzer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Buzzer
+slug: /Wio-Terminal-Buzzer
 last_update:
   date: 1/17/2023
   author: jianjing Huang

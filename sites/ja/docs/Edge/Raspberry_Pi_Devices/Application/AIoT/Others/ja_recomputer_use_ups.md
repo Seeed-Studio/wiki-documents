@@ -7,7 +7,7 @@ keywords:
   - reComputer R1100
   - I2C
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/ups/ups_model.webp
-slug: /ja/recomputer_use_ups
+slug: /recomputer_use_ups
 last_update:
   date: 05/21/2025
   author: Jiahao Li

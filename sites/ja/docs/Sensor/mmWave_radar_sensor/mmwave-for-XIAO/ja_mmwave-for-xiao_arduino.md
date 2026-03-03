@@ -5,7 +5,7 @@ keywords:
 - mmwave
 - radar
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/mmwave_for_xiao_arduino
+slug: /mmwave_for_xiao_arduino
 last_update:
   date: 11/13/2023
   author: Citric

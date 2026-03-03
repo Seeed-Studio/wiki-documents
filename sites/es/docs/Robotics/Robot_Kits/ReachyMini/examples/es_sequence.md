@@ -1,7 +1,7 @@
 ---
 description: Ejemplo que muestra diferentes movimientos en Reachy Mini demostrando varios patrones y secuencias de movimiento.
 title: Demostración de Secuencia
-slug: /es/reachymini_examples_sequence
+slug: /reachymini_examples_sequence
 keywords:
 - sequence
 - movements

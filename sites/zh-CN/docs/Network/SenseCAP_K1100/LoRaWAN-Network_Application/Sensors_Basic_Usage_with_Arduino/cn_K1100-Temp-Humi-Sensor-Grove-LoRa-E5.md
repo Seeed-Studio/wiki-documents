@@ -4,7 +4,7 @@ title: Grove 温湿度传感器 (SHT40)
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/K1100-Temp-Humi-Sensor-Grove-LoRa-E5
+slug: /K1100-Temp-Humi-Sensor-Grove-LoRa-E5
 last_update:
   date: 2023/1/13
   author: shuxu hu

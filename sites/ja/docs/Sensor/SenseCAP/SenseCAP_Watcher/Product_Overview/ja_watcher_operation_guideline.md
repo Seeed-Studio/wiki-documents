@@ -2,7 +2,7 @@
 description: SenseCAP Watcherの操作ガイドライン。
 title: 操作ガイドライン
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/0_1.webp
-slug: /ja/watcher_operation_guideline
+slug: /watcher_operation_guideline
 sidebar_position: 2
 last_update:
   date: 10/18/2024

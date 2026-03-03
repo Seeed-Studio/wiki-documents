@@ -4,7 +4,7 @@ title: Grove - Acelerómetro Analógico de 3 Ejes
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-3-Axis_Analog_Accelerometer
+slug: /Grove-3-Axis_Analog_Accelerometer
 sku: 101020051
 last_update:
   date: 1/5/2023

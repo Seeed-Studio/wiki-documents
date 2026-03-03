@@ -3,7 +3,7 @@ description: ODYSSEY-FAQ
 title: Reinstalación del Windows Original
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /es/reinstall_the_Original_Windows
+slug: /reinstall_the_Original_Windows
 last_update:
   date: 2023.6.25
   author: cheng.tang

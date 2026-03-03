@@ -2,7 +2,7 @@
 description: Página de Preguntas Frecuentes de OpenWrt
 title: Preguntas Frecuentes sobre OpenWrt
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/FAQs_For_openWrt
+slug: /FAQs_For_openWrt
 last_update:
   date: 7/26/2023
   author: yulu Ji

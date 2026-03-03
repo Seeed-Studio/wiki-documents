@@ -4,7 +4,7 @@ title: Grove - Sensor de Frecuencia Cardíaca con Clip para Dedo con Carcasa
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Finger-clip_Heart_Rate_Sensor_with_shell
+slug: /Grove-Finger-clip_Heart_Rate_Sensor_with_shell
 sku: 101020082
 last_update:
   date: 1/6/2023

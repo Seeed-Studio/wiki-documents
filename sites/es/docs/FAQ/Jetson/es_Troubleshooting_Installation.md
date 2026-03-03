@@ -3,7 +3,7 @@ description: reComputer-FAQ
 title: Solución de Problemas de Instalación
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /es/Troubleshooting_Installation
+slug: /Troubleshooting_Installation
 last_update:
   date: 2023/6/30
   author: Seraphina

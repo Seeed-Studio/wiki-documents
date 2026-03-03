@@ -5,7 +5,7 @@ description: SenseCraft 数据平台快速入门指南 — 管理您的 SenseCAP
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /cn/cloud/sensecraft-data/sensecraft-data-platform/overview
+slug: /cloud/sensecraft-data/sensecraft-data-platform/overview
 aliases:
   - /cn/Cloud_Chain/SenseCAP_Portal/QuickStart
 last_update:

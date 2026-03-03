@@ -6,7 +6,7 @@ keywords:
 - matter
 - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/xiao_esp32_matter_env
+slug: /xiao_esp32_matter_env
 sku: 113991254,102010636,101991470
 last_update:
   date: 05/15/2024

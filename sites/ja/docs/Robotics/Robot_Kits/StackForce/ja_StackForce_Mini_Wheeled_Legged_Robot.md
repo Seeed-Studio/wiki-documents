@@ -5,7 +5,7 @@ keywords:
 - StackForce
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
-slug: /ja/stackforce_mini_wheeled_legged_robot
+slug: /stackforce_mini_wheeled_legged_robot
 last_update:
   date: 12/8/2025
   author: LiShanghang

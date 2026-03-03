@@ -1,7 +1,7 @@
 ---
 description: Demostración que muestra el Reachy Mini en modo compliant con compensación de gravedad, lo que permite que el robot siga empujes suaves y se mantenga en su lugar cuando se suelta.
 title: Demostración de Modo Compliant
-slug: /es/reachymini_examples_reachy_compliant_demo
+slug: /reachymini_examples_reachy_compliant_demo
 keywords:
 - compliant mode
 - gravity compensation

@@ -2,7 +2,7 @@
 description: Este artículo describe cómo hacer funcionar la pantalla ePaper de la serie reTerminal E con Arduino.
 title: Pantalla ePaper de la serie reTerminal E funcionando con Arduino
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
-slug: /es/reterminal_e10xx_with_arduino
+slug: /reterminal_e10xx_with_arduino
 sidebar_position: 4
 last_update:
   date: 08/21/2025

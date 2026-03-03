@@ -4,7 +4,7 @@ title: SenseCAP 与 Node-RED 到 InfluxDB
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/K1100_SenseCAP_to_influxdb
+slug: /K1100_SenseCAP_to_influxdb
 last_update:
   date: 1/13/2023
   author: shuxu hu

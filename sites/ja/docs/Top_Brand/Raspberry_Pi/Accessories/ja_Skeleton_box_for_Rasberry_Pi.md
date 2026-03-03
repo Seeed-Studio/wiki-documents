@@ -4,7 +4,7 @@ title: Raspberry Pi用スケルトンボックス
 keywords:
 - アクセサリ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Skeleton_box_for_Rasberry_Pi
+slug: /Skeleton_box_for_Rasberry_Pi
 last_update:
   date: 05/15/2025
   author: jianjing Huang

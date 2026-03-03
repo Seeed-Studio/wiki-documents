@@ -2,7 +2,7 @@
 description: 在 MicroBlocks 上使用 XIAO nRF52840。
 title: MicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
-slug: /cn/xiao_ble_microblocks
+slug: /xiao_ble_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks

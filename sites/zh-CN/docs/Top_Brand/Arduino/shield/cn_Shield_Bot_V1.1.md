@@ -4,7 +4,7 @@ title: Shield Bot V1.1
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Shield_Bot_V1.1
+slug: /Shield_Bot_V1.1
 sku: 110060010
 last_update:
   date: 2/16/2023

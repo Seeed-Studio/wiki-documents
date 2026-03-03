@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO MG24 Sense 与 MicroPython
 description: 使用 Seeed Studio XIAO MG24(Sense) 进行引脚复用。
 image: https://files.seeedstudio.com/wiki/XIAO_MG24_Sense.webp
-slug: /cn/xiao_mg24_sense_micropython
+slug: /xiao_mg24_sense_micropython
 keywords:
   - XIAO
   - MG24

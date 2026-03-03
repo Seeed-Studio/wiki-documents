@@ -5,7 +5,7 @@ keywords:
   - LinkStar
   - 初めてのセットアップ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/h68k-ha-esphome
+slug: /h68k-ha-esphome
 sku: 113991054,102110777,101991030,102010633
 last_update:
   date: 05/15/2025

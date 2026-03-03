@@ -4,7 +4,7 @@ title: RePhone Geo Kit
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/RePhone_Geo_Kit
+slug: /RePhone_Geo_Kit
 sku: 113060003
 last_update:
   date: 05/15/2025

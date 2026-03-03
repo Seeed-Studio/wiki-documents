@@ -4,7 +4,7 @@ title: オープンソース
 keywords:
 - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/open_source_topic
+slug: /open_source_topic
 last_update:
   date: 05/15/2025
   author: Matthew

@@ -4,7 +4,7 @@ title: Arduino教育用パック「Grove Beginner Kit」
 keywords:
 - コース付きキット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Beginner-Kit-for-Arduino-education-pack
+slug: /Grove-Beginner-Kit-for-Arduino-education-pack
 sku: 110020328
 last_update:
   date: 05/15/2025

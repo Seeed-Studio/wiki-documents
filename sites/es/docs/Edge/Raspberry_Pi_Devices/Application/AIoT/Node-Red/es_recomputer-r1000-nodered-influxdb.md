@@ -7,7 +7,7 @@ keywords:
   - Node-Red
   - InfluxDB
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /es/recomputer_r1000_node_red_influxdb
+slug: /recomputer_r1000_node_red_influxdb
 last_update:
   date: 07/03/2024
   author: Kasun Thushara

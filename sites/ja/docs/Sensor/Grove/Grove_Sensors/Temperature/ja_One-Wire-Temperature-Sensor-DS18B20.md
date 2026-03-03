@@ -4,7 +4,7 @@ title: ワイヤー温度センサー DS18B20
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/One-Wire-Temperature-Sensor-DS18B20
+slug: /One-Wire-Temperature-Sensor-DS18B20
 sku: 101990019
 last_update:
   date: 05/15/2025

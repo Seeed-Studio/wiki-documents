@@ -6,7 +6,7 @@ keywords:
 - ESP-IDF
 - Squareline
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecap_indicator_project
+slug: /sensecap_indicator_project
 sidebar_position: 4
 last_update:
   date: 04/12/2024

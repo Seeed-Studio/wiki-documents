@@ -4,7 +4,7 @@ title: Grove Breakout for LinkIt Smart 7688 Duo
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove_Breakout_for_LinkIt_Smart_7688_Duo
+slug: /Grove_Breakout_for_LinkIt_Smart_7688_Duo
 sku: 103030032
 last_update:
   date: 05/15/2025

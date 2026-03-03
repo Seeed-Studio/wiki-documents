@@ -1,7 +1,7 @@
 ---
 description: WAV ファイル、または push_audio_sample API を用いた連続ライブオーディオによって、Reachy Mini のスピーカーから音声を再生する例です。
 title: サウンド再生
-slug: /ja/reachymini_examples_sound_play
+slug: /reachymini_examples_sound_play
 keywords:
 - audio
 - sound

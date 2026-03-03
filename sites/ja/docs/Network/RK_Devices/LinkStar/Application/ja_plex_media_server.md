@@ -6,7 +6,7 @@ keywords:
   - 初めての設定
   - plexメディアサーバー
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/plex_media_server
+slug: /plex_media_server
 last_update:
   date: 05/15/2025
   author: Kasun Thushara

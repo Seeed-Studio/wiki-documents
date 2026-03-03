@@ -4,7 +4,7 @@ title: SPI Arduino 开发板用户指南
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Software-SPI
+slug: /Software-SPI
 last_update:
   date: 1/16/2023
   author: jianjing Huang

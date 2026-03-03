@@ -4,7 +4,7 @@ title: RePhone Kit 用 Arduino IDE
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Arduino_IDE_for_RePhone_Kit
+slug: /Arduino_IDE_for_RePhone_Kit
 last_update:
   date: 05/15/2025
   author: shuxu hu

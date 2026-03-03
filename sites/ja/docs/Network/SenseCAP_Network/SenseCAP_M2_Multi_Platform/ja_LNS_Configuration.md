@@ -4,7 +4,7 @@ title: LNS設定
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_m2_LNS_config
+slug: /SenseCAP_m2_LNS_config
 last_update:
   date: 08/29/2023
   author: Jessie

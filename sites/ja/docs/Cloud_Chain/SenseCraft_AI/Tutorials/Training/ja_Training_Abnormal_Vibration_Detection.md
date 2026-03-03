@@ -2,7 +2,7 @@
 description: 異常振動検出の使用方法を紹介します。
 title: 異常振動検出
 image: https://files.seeedstudio.com/wiki/SenseCraft/SenseCraft_AI/Intro_image_title.webp
-slug: /ja/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection
+slug: /sensecraft-ai/tutorials/workspace/abnormal-vibration-detection
 sidebar_position: 1
 last_update:
   date: 01/06/2026

@@ -4,7 +4,7 @@ title: Sensor de reconocimiento de voz sin conexión Grove
 keywords:
 - gesture
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/Grove-Offline-Voice-Recognition
+slug: /Grove-Offline-Voice-Recognition
 sku: 107020149
 last_update:
   date: 01/02/2024

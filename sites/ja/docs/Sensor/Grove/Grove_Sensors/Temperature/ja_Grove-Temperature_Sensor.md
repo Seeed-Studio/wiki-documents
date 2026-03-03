@@ -4,7 +4,7 @@ title: Grove - 温度センサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Temperature_Sensor
+slug: /Grove-Temperature_Sensor
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -4,7 +4,7 @@ title: Aplicación de Probador de Comandos AT
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/AT_Command_Tester_Application
+slug: /AT_Command_Tester_Application
 last_update:
   date: 1/13/2023
   author: shuxu hu

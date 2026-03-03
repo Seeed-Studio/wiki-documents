@@ -6,7 +6,7 @@ keywords:
 - LoRa-WAN
 - Raspberry-Pi 
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
-slug: /cn/chirpstack_lora_gateway_r1x00
+slug: /chirpstack_lora_gateway_r1x00
 last_update:
   date: 9/18/2025
   author: Kasun Thushara

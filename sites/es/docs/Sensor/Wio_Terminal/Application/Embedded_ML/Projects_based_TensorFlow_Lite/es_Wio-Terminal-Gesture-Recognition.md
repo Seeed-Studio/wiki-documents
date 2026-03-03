@@ -6,7 +6,7 @@ keywords:
 - Embedded_ML 
 - Projects_based_TensorFlow_Lite
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-Gesture-Recognition
+slug: /Wio-Terminal-Gesture-Recognition
 last_update:
   date: 1/30/2023
   author: jianjing Huang

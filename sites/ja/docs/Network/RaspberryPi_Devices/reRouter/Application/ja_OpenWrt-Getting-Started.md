@@ -4,7 +4,7 @@ title: OpenWRTの使い方
 keywords:
 - ソフトウェア OpenWrt
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/OpenWrt-Getting-Started
+slug: /OpenWrt-Getting-Started
 sku: 102110497,110110090,110110110
 last_update:
   date: 05/15/2025

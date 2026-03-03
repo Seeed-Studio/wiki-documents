@@ -2,7 +2,7 @@
 description: SenseCAP S2110 传感器构建器概述
 title: SenseCAP S2110 传感器构建器
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger
+slug: /Build-LoRaWAN-Sensors-SenseCAP-XIAO-Controller-Data-Logger
 sku: 114992986
 last_update:
   date: 11/20/2023

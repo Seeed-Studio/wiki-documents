@@ -7,7 +7,7 @@ keywords:
 - Arm
 - Robotics 
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
-slug: /es/starai_arm_ros_moveit
+slug: /starai_arm_ros_moveit
 last_update:
   date: 8/1/2025
   author: LiShanghang

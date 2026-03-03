@@ -3,7 +3,7 @@ title: DSO Nano/Desarrollo
 keywords:
   - docusaurus
 image: https://wiki.seeedstudio.com/es/DSO_Nano-Development/
-slug: /es/DSO_Nano-Development
+slug: /DSO_Nano-Development
 last_update:
   date: 02/03/2022
   author: gunengyu

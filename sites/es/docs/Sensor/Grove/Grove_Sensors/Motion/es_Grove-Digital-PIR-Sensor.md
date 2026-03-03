@@ -4,7 +4,7 @@ title: Grove - Sensor PIR Digital
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Digital-PIR-Sensor
+slug: /Grove-Digital-PIR-Sensor
 sku: 101020793
 last_update:
   date: 1/6/2023

@@ -5,7 +5,7 @@ keywords:
 - SenseCAP_T2000_tracker
 - Helium
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
-slug: /cn/sensecap_t2000_tracker_helium
+slug: /sensecap_t2000_tracker_helium
 sku: 100082900,100057727,100087298
 last_update:
   date: 1/23/2026

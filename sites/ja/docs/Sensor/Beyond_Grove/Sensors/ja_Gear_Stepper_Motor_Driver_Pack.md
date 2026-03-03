@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウラス
 image: https://wiki.seeedstudio.com/ja/Gear_Stepper_Motor_Driver_Pack/
-slug: /ja/Gear_Stepper_Motor_Driver_Pack
+slug: /Gear_Stepper_Motor_Driver_Pack
 sku: 105990072, 105990028
 last_update:
   date: 05/15/2025

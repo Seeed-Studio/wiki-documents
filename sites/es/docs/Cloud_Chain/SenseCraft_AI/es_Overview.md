@@ -3,7 +3,7 @@
 description: Este artículo es una breve introducción a la página principal de SenseCraft AI.
 title: Descripción General
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
-slug: /es/sensecraft-ai/overview
+slug: /sensecraft-ai/overview
 aliases:
   - /es/sensecraft_ai_overview
 sidebar_position: 1

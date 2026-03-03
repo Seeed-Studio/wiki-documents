@@ -7,7 +7,7 @@ keywords:
   - Grove
 description: Grove LoRa-E5は、Seeed Studioによる強力で多用途なLoRaモジュールです。その機能、データシート、認証、および関連SDKを探索してください。
 image: https://files.seeedstudio.com/wiki/Grove-Wio-E5/1.jpg
-slug: /ja/Grove_LoRa_E5_New_Version
+slug: /Grove_LoRa_E5_New_Version
 sku: 113020091
 last_update:
   date: 05/15/2025

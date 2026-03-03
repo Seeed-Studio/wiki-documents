@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/WiFi_Serial_Transceiver_Module/
-slug: /cn/WiFi_Serial_Transceiver_Module
+slug: /WiFi_Serial_Transceiver_Module
 last_update:
   date: 02/03/2022
   author: gunengyu

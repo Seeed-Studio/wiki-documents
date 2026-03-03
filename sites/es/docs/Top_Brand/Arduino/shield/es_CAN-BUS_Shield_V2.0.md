@@ -2,7 +2,7 @@
 description: CAN-BUS_Shield_V2.0
 title: CAN-BUS Shield V2.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/CAN-BUS_Shield_V2.0
+slug: /CAN-BUS_Shield_V2.0
 sku: 103030215
 last_update:
   date: 01/10/2023  

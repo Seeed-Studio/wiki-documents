@@ -4,7 +4,7 @@ title: Rephone Core 2G-AtmelSAMD21
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Rephone_core_2G-AtmelSAMD21
+slug: /Rephone_core_2G-AtmelSAMD21
 sku: 102040046
 last_update:
   date: 05/15/2025

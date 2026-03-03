@@ -4,7 +4,7 @@ title: Grove Base Shield para Photon
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_Base_Shield_for_Photon
+slug: /Grove_Base_Shield_for_Photon
 sku: 103020031
 last_update:
   date: 1/13/2023

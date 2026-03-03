@@ -4,7 +4,7 @@ title:  FreeRTOS con Wio Terminal
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Software-FreeRTOS
+slug: /Software-FreeRTOS
 last_update:
   date: 1/16/2023
   author: jianjing Huang

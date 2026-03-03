@@ -7,7 +7,7 @@ keywords:
   - Bookstack
   - Grocy
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/grocy-bookstack-linkstar
+slug: /grocy-bookstack-linkstar
 last_update:
   date: 05/15/2025
   author: Kasun Thushara

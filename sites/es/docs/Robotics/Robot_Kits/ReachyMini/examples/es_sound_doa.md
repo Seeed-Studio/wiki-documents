@@ -1,7 +1,7 @@
 ---
 description: Ejemplo que demuestra la detección de Dirección de Llegada (DoA) usando la matriz de micrófonos de Reachy Mini para mirar automáticamente hacia el hablante.
 title: Dirección de Llegada del Sonido
-slug: /es/reachymini_examples_sound_doa
+slug: /reachymini_examples_sound_doa
 keywords:
 - doa
 - direction of arrival

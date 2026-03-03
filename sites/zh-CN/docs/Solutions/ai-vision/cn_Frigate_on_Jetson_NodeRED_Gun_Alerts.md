@@ -2,7 +2,7 @@
 description: 基于 Frigate-on-Jetson 和 Node-RED 的边缘 AI 枪支检测系统，支持 Jetson 和 reComputer R2000 (Hailo) 平台。
 title: 实时边缘告警的 AI 枪支检测解决方案
 image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/scene_3.webp
-slug: /cn/solutions/frigate-on-jetson-nodered-gun-alerts
+slug: /solutions/frigate-on-jetson-nodered-gun-alerts
 sidebar_position: 1
 last_update:
   date: 10/22/2025

@@ -4,7 +4,7 @@ title: Grove - Line Finder V1.1
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Line_Finder
+slug: /Grove-Line_Finder
 sku: 101020172,10102000
 last_update:
   date: 1/5/2023

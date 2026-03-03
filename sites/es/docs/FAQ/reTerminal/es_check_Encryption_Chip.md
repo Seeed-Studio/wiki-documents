@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Cómo verificar si el Chip de Cifrado es ATECC608A-SSHDA-B o ATECC608A-TNGTLSS-G
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/check_Encryption_Chip
+slug: /check_Encryption_Chip
 last_update:
   date: 6/21/2023
   author: Seraphina

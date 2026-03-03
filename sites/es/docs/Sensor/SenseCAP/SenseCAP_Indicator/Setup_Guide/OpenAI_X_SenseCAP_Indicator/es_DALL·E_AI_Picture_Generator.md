@@ -4,7 +4,7 @@ title: Generador de Imágenes AI DALL·E
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP_Indicator_DALL-E
+slug: /SenseCAP_Indicator_DALL-E
 sidebar_position: 3
 last_update:
   date: 5/31/2023

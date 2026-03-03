@@ -4,7 +4,7 @@ title: Grove 入门级传感器指南
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_Sensor_Intro
+slug: /Grove_Sensor_Intro
 last_update:
   date: 07/19/2023
   author: Matthew

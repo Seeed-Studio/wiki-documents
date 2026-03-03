@@ -4,7 +4,7 @@ title: 训练和部署您自己的AI模型
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/train_and_deploy_model
+slug: /train_and_deploy_model
 last_update:
   date: 09/24/2024
   author: Frank

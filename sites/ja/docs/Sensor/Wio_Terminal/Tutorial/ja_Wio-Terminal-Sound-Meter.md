@@ -4,7 +4,7 @@ title:  Wio Terminalを使用して騒音レベルを測定する方法
 keywords:
 - Wio_terminal チュートリアル
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Sound-Meter
+slug: /Wio-Terminal-Sound-Meter
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -4,7 +4,7 @@ title: Controlador para Seeeduino
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Driver_for_Seeeduino
+slug: /Driver_for_Seeeduino
 last_update:
   date: 1/31/2023
   author: shuxu hu

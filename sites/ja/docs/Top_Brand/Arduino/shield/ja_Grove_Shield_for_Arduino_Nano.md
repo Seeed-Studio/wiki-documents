@@ -2,7 +2,7 @@
 description: Grove_Shield_for_Arduino_Nano
 title: Arduino Nano用Groveシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove_Shield_for_Arduino_Nano
+slug: /Grove_Shield_for_Arduino_Nano
 sku: 103100124
 last_update:
   date: 05/15/2025

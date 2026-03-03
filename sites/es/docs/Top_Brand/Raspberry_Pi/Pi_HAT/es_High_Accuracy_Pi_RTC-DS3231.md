@@ -4,7 +4,7 @@ title: DS3231 RTC de Alta Precisión (Reloj de Tiempo Real) para Raspberry Pi
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/High_Accuracy_Pi_RTC-DS3231
+slug: /High_Accuracy_Pi_RTC-DS3231
 sku: 103030278
 last_update:
   date: 1/11/2023

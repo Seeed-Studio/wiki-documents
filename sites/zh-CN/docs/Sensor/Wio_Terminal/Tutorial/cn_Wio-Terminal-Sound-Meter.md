@@ -4,7 +4,7 @@ title:  如何使用Wio终端测量噪音水平
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Sound-Meter
+slug: /Wio-Terminal-Sound-Meter
 last_update:
   date: 3/07/2024
   author: jessie

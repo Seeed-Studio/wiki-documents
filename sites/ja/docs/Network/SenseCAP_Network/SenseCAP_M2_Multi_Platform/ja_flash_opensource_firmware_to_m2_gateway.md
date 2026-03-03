@@ -2,7 +2,7 @@
 description: このwikiでは、M2ゲートウェイにオープンソースLoRaWAN®ファームウェアをフラッシュする方法をガイドします。オープンソースLoRaWAN®ファームウェアに基づいて、M2ゲートウェイを深くカスタマイズできます。
 title: M2ゲートウェイにオープンソースファームウェアをフラッシュ
 image: https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/m2-white.webp
-slug: /ja/flash_opensource_firmware_to_m2_gateway
+slug: /flash_opensource_firmware_to_m2_gateway
 last_update:
   date: 4/22/2025
   author: Leo

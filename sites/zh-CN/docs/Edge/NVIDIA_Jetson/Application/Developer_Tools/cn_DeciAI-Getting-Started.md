@@ -4,7 +4,7 @@ title: Deci 入门指南
 tags:
   - AI model optimize
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/DeciAI-Getting-Started
+slug: /DeciAI-Getting-Started
 last_update:
   date: 01/04/2023
   author: w0x7ce

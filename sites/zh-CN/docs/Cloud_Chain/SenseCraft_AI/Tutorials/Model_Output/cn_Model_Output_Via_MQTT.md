@@ -3,7 +3,7 @@ sidebar_position: 9
 description: 本文介绍如何通过 MQTT 发送模型的识别结果。
 title: 通过 MQTT 输出模型结果
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/headimage.webp
-slug: /cn/sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao
+slug: /sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao
 aliases:
   - /cn/sensecraft_ai_output_mqtt_xiao
 last_update:

@@ -4,7 +4,7 @@ title: Conectar Broker Mosquitto MQTT a AWS IoT con Placas Arduino
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Arduino-AWS-IOT-Bridge
+slug: /Arduino-AWS-IOT-Bridge
 last_update:
   date: 1/16/2023
   author: jianjing Huang

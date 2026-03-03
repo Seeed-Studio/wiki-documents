@@ -2,7 +2,7 @@
 description: 介绍 SenseCAP Watcher 软件框架。
 title: Watcher 软件框架
 image: https://files.seeedstudio.com/wiki/watcher_software_framework/architecture_1.webp
-slug: /cn/watcher_software_framework
+slug: /watcher_software_framework
 sidebar_position: 2
 last_update:
   date: 11/5/2024

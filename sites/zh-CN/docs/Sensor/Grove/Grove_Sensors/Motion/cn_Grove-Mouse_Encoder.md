@@ -4,7 +4,7 @@ title: Grove - 鼠标编码器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Mouse_Encoder
+slug: /Grove-Mouse_Encoder
 sku: 103020030
 last_update:
   date: 1/7/2023

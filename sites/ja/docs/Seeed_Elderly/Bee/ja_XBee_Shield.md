@@ -4,7 +4,7 @@ title: XBee シールド
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XBee_Shield
+slug: /XBee_Shield
 sku: 113050006
 last_update:
   date: 05/15/2025

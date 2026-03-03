@@ -4,7 +4,7 @@ title: XBee 扩展板
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/XBee_Shield
+slug: /XBee_Shield
 sku: 113050006
 last_update:
   date: 1/13/2023

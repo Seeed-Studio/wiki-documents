@@ -4,7 +4,7 @@ title: 技術トピック
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/topicintroduction
+slug: /topicintroduction
 last_update:
   date: 05/15/2025
   author: Yaohao

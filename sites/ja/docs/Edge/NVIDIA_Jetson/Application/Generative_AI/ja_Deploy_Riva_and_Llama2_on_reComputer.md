@@ -6,7 +6,7 @@ keywords:
 - LLM
 - Chatbot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Local_Voice_Chatbot
+slug: /Local_Voice_Chatbot
 last_update:
   date: 01/14/2024
   author: Youjiang

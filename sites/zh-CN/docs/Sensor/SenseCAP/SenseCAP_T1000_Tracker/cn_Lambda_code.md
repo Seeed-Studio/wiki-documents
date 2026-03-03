@@ -4,7 +4,7 @@ keywords:
 - Tracker
 - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/location_lambda_code
+slug: /location_lambda_code
 last_update:
   date: 11/24/2023
   author: Jessie

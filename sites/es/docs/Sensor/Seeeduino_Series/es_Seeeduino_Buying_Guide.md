@@ -4,7 +4,7 @@ title: Guía de Compra de Seeeduino
 keywords:
 - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Seeeduino_Buying_Guide
+slug: /Seeeduino_Buying_Guide
 last_update:
   date: 1/12/2022
   author: hushuxu

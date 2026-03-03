@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 使用 SSH 通过 Wi-Fi/以太网登录到 Raspberry Pi OS/Ubuntu OS 或其他操作系统
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/log_rpios_use_ssh_over_wifi_ethernet
+slug: /log_rpios_use_ssh_over_wifi_ethernet
 last_update:
   date: 2023/6/21
   author: Seraphina

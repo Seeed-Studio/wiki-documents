@@ -4,7 +4,7 @@ title: Temas Tecnológicos
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/topicintroduction
+slug: /topicintroduction
 last_update:
   date: 05/29/2024
   author: Yaohao

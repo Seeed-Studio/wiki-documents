@@ -4,7 +4,7 @@ title: 使用 Wio Terminal 读取树莓派信息
 keywords:
 - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Reading-Raspberry-Pi
+slug: /Wio-Terminal-Reading-Raspberry-Pi
 last_update:
   date: 1/31/2023
   author: jianjing Huang

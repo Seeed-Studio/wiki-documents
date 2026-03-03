@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini SDK の概要、クイックスタートガイド、コード例、インストール、Python SDK ドキュメント、コミュニティリソースへのリンクをまとめています。
 title: Reachy Mini SDK
-slug: /ja/reachymini_sdk_readme
+slug: /reachymini_sdk_readme
 keywords:
 - sdk
 - quick start

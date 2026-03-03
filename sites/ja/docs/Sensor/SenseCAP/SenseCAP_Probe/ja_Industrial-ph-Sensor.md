@@ -4,7 +4,7 @@ title: pHセンサー
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor
+slug: /Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor
 sku: 101990666,314990622
 last_update:
   date: 1/16/2023

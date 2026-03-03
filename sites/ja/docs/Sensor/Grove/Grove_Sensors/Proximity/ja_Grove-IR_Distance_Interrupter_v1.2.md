@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-IR_Distance_Interrupter_v1.2/
-slug: /ja/Grove-IR_Distance_Interrupter_v1.2
+slug: /Grove-IR_Distance_Interrupter_v1.2
 sku: 101020175, 101020040
 last_update:
   date: 05/15/2025

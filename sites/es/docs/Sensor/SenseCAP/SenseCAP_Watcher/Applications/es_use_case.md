@@ -2,7 +2,7 @@
 description: Proporciona una visión en profundidad de las diversas aplicaciones y casos de uso para Watcher, mostrando su versatilidad y potencial en diferentes escenarios de monitoreo.
 title: Caso de Uso
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/50.jpg
-slug: /es/use_case
+slug: /use_case
 sidebar_position: 1
 last_update:
   date: 07/08/2024

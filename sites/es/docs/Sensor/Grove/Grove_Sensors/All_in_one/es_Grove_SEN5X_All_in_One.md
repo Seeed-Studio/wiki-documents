@@ -4,7 +4,7 @@ title: Grove SEN5X Todo en Uno
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_SEN5X_All_in_One
+slug: /Grove_SEN5X_All_in_One
 sku: 101021014,101021013
 last_update:
   date: 1/29/2023

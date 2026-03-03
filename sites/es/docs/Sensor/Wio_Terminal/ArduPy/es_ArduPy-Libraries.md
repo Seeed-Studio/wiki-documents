@@ -2,7 +2,7 @@
 description: Cómo escribir una biblioteca ArduPy
 title: Cómo escribir una biblioteca ArduPy
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/ArduPy-Libraries
+slug: /ArduPy-Libraries
 last_update:
   date: 11/20/2022
   author: Matthew

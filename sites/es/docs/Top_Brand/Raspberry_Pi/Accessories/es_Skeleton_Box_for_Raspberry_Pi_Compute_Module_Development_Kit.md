@@ -4,7 +4,7 @@ title: Caja Esqueleto para Kit de Desarrollo de Módulo de Computación Raspberr
 keywords:
 - Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit
+slug: /Skeleton_Box_for_Raspberry_Pi_Compute_Module_Development_Kit
 sku: 110070008, 110070000
 last_update:
   date: 1/11/2023

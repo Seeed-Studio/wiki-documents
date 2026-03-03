@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: http_proxy_notification
 link:
   type: generated-index
-  slug: cn/http_proxy_notification
+  slug: http_proxy_notification
   title: HTTP 代理通知
   description: 本部分重点介绍如何使用 Node-RED 向不同平台发送消息。

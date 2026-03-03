@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - Docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio_Tracker/
-slug: /ja/Wio_Tracker
+slug: /Wio_Tracker
 last_update:
   date: 05/15/2025
   author: gunengyu

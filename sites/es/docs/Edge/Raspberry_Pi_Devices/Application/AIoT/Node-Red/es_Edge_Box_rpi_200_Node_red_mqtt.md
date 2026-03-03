@@ -7,7 +7,7 @@ keywords:
   - Node-Red
   - MQTT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Edge-Box-Node-Red-MQTT
+slug: /Edge-Box-Node-Red-MQTT
 last_update:
   date: 05/16/2024
   author: Kasun Thushara

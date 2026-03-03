@@ -4,7 +4,7 @@ title: 可定制模型的视觉AI
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Vision_AI_with_Customizable_Models
+slug: /Vision_AI_with_Customizable_Models
 last_update:
   date: 2/2/2023
   author: shuxu hu

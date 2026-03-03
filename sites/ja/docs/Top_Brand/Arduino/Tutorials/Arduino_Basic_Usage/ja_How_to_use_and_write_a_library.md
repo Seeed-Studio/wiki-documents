@@ -2,7 +2,7 @@
 description: ライブラリの使用方法と作成方法
 title: ライブラリの使用方法と作成方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/How_to_use_and_write_a_library
+slug: /How_to_use_and_write_a_library
 last_update:
   date: 05/15/2025
   author: w0x7ce

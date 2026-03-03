@@ -6,7 +6,7 @@ keywords:
   - reComputer r1000
   - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit
+slug: /benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit
 sku: 103990663
 last_update:
   date: 07/17/2024

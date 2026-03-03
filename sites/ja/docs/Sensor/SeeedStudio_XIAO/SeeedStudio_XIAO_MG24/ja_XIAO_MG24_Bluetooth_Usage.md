@@ -7,7 +7,7 @@ keywords:
 - ble
 - bluetooth
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/ble-cover.webp
-slug: /ja/xiao_mg24_bluetooth
+slug: /xiao_mg24_bluetooth
 last_update:
   date: 02/8/2025
   author: Hugo

@@ -4,7 +4,7 @@ title: Seeeduino v4.0
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeeduino_v4.0
+slug: /Seeeduino_v4.0
 sku: 102010004
 last_update:
   date: 1/11/2023

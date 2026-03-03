@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/315Mhz_Wireless_car_key_fob_with_key_chain/
-slug: /cn/315Mhz_Wireless_car_key_fob_with_key_chain
+slug: /315Mhz_Wireless_car_key_fob_with_key_chain
 last_update:
   date: 02/03/2022
   author: gunengyu

@@ -11,7 +11,7 @@ keywords:
 - 人形机器人
 - Python
 image: https://files.seeedstudio.com/wiki/robotics/Reachymini/funny/Reachy-mini-wake-up-companion.webp
-slug: /cn/reachymini_getting_started
+slug: /reachymini_getting_started
 sku:
 translation:
   skip: [zh-CN,ja,es]

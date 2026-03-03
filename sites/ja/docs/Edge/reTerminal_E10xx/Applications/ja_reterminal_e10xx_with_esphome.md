@@ -2,7 +2,7 @@
 description: この記事では、reTerminal E シリーズ ePaper ディスプレイを Home Assistant と ESPHome で動作させる方法について説明します。
 title: reTerminal E シリーズ ePaper ディスプレイを Home Assistant 用 ESPHome で動作させる
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
-slug: /ja/reterminal_e10xx_with_esphome
+slug: /reterminal_e10xx_with_esphome
 sku: 100017057,100073581
 sidebar_position: 2
 last_update:

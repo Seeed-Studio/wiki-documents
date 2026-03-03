@@ -14,7 +14,7 @@ keywords:
 - MCP
 - Server
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
-slug: /cn/mcp_endpoint
+slug: /mcp_endpoint
 last_update:
   date: 12/04/2025
   author: Twelve

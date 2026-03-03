@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Cómo resolver el problema de que el zumbador y los LEDs no funcionen después de instalar los controladores de reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/buzzer-leds-not-work_by_drivers
+slug: /buzzer-leds-not-work_by_drivers
 last_update:
   date: 6/21/2023
   author: Seraphina

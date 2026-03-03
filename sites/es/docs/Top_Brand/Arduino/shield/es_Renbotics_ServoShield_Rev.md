@@ -2,7 +2,7 @@
 description: Renbotics_ServoShield_Rev
 title: Renbotics Servo Shield Rev
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Renbotics_ServoShield_Rev
+slug: /Renbotics_ServoShield_Rev
 last_update:
   date: 02/02/2023  
   author: Eico 

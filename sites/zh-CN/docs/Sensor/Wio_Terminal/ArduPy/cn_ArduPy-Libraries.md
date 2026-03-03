@@ -2,7 +2,7 @@
 description: 如何编写 ArduPy 库
 title: 如何编写 ArduPy 库
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/ArduPy-Libraries
+slug: /ArduPy-Libraries
 last_update:
   date: 11/20/2022
   author: Matthew

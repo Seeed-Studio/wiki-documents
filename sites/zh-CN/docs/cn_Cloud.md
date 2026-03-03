@@ -11,7 +11,7 @@ keywords:
 - Device management
 - Real-Time Operations
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Cloud
+slug: /Cloud
 last_update:
   date: 06/06/2025
   author: Jancee

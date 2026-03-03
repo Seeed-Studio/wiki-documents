@@ -4,7 +4,7 @@ title: Reconocimiento de Movimiento basado en Edge Impulse
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO-RP2040-EI
+slug: /XIAO-RP2040-EI
 last_update:
   date: 04/17/2023
   author: Citric

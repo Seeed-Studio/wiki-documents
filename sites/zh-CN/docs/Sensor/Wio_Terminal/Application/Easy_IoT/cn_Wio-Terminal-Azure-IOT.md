@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Wio-Terminal-Azure-IOT/
-slug: /cn/Wio-Terminal-Azure-IOT
+slug: /Wio-Terminal-Azure-IOT
 last_update:
   date: 01/11/2022
   author: gunengyu

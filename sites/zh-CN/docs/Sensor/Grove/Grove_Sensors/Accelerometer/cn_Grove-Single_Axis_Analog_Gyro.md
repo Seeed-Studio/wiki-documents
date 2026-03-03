@@ -4,7 +4,7 @@ title: Grove-单轴模拟陀螺仪
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Single_Axis_Analog_Gyro
+slug: /Grove-Single_Axis_Analog_Gyro
 last_update:
   date: 1/29/2023
   author: jianjing Huang

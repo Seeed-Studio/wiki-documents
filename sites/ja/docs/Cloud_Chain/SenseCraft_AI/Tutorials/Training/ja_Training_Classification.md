@@ -3,7 +3,7 @@ sidebar_position: 5
 description: Training(Classification)の使用方法
 title: Training - Classification
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/34.webp
-slug: /ja/sensecraft-ai/tutorials/sensecraft-ai-training-classification
+slug: /sensecraft-ai/tutorials/sensecraft-ai-training-classification
 aliases:
   - /ja/sensecraft_ai_training_classification
 last_update:

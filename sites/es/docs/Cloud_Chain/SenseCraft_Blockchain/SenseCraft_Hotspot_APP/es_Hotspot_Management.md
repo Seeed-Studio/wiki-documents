@@ -4,7 +4,7 @@ title: Gestión de Hotspot
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-management
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/hotspot-management
 aliases:
   - /es/Cloud_Chain/cloud/sensecraft-data/sensecraft-hotspot/sensecraft-hotspot-app/hotspot_management
 last_update:

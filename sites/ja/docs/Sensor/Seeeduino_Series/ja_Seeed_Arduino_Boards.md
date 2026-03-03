@@ -4,7 +4,7 @@ title: Arduino IDEにSeeedボードを追加する方法
 keywords:
   - チュートリアル
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeed_Arduino_Boards
+slug: /Seeed_Arduino_Boards
 last_update:
   date: 05/15/2025
   author: w0x7ce

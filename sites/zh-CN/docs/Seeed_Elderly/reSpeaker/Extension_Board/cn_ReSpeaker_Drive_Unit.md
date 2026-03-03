@@ -4,7 +4,7 @@ title: ReSpeaker 驱动单元
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ReSpeaker_Drive_Unit
+slug: /ReSpeaker_Drive_Unit
 last_update:
   date: 1/12/2023
   author: jianjing Huang

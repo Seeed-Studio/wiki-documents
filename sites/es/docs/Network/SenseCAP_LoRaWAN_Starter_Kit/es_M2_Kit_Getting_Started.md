@@ -2,7 +2,7 @@
 description: Comenzar con el Kit de Inicio SenseCAP LoRaWAN
 title: Comenzar con el Kit de Inicio SenseCAP LoRaWAN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/M2_Kit_Getting_Started
+slug: /M2_Kit_Getting_Started
 sidebar_position: 0
 last_update:
   date: 1/26/2023

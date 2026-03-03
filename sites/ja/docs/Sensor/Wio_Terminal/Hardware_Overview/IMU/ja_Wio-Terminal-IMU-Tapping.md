@@ -4,7 +4,7 @@ title: タッピング
 keywords:
 - Wio_terminal IMU
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-IMU-Tapping
+slug: /Wio-Terminal-IMU-Tapping
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -10,7 +10,7 @@ keywords:
 - SOEM
 - Robotics control
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics_2.webp
-slug: /cn/recomputer_ethercat_communication
+slug: /recomputer_ethercat_communication
 last_update:
   date: 2025-09-05
   author: Zibo

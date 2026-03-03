@@ -4,7 +4,7 @@ title: Grove - タッチセンサー
 keywords:
 - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Touch_Sensor
+slug: /Grove-Touch_Sensor
 sku: 101020037
 last_update:
   date: 05/15/2025

@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-LCD-Overview/
-slug: /ja/Wio-Terminal-LCD-Overview
+slug: /Wio-Terminal-LCD-Overview
 last_update:
   date: 05/15/2025
   author: gunengyu

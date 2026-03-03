@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Ultrasonic_Ranger/
-slug: /es/Grove-Ultrasonic_Ranger
+slug: /Grove-Ultrasonic_Ranger
 sku: 101020010
 last_update:
   date: 03/01/2023

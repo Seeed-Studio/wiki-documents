@@ -1,7 +1,7 @@
 ---
 description: Ejemplo mínimo que muestra cómo mover la cabeza y las antenas de Reachy Mini en un patrón oscilante sencillo.
 title: Demo mínima
-slug: /es/reachymini_examples_minimal_demo
+slug: /reachymini_examples_minimal_demo
 keywords:
 - minimal
 - demo

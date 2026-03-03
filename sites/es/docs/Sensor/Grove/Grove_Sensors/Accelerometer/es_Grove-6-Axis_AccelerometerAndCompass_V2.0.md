@@ -4,7 +4,7 @@ title: Grove - Acelerómetro y Brújula de 6 Ejes V2.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-6-Axis_AccelerometerAndCompass_V2.0
+slug: /Grove-6-Axis_AccelerometerAndCompass_V2.0
 sku: 101020081
 last_update:
   date: 1/6/2023

@@ -2,7 +2,7 @@
 description: XIAO CAN Bus Expansion Board-FAQ
 title: ¿Cómo puedo solucionar problemas de comunicación del bus CAN?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/troubleshoot_CAN_communication_issues
+slug: /troubleshoot_CAN_communication_issues
 last_update:
   date: 6/30/2023
   author: cheng.tang

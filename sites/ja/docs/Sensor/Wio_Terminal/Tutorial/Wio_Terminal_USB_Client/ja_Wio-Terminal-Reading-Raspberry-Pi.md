@@ -4,7 +4,7 @@ title: Wio Terminal を使用して Raspberry Pi の情報を読み取る
 keywords:
 - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Reading-Raspberry-Pi
+slug: /Wio-Terminal-Reading-Raspberry-Pi
 last_update:
   date: 05/15/2025
   author: jianjing Huang

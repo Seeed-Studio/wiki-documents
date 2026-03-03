@@ -4,7 +4,7 @@ title: Grove - Anillo LED RGB (20 - WS2813 Mini)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-LED_ring
+slug: /Grove-LED_ring
 sku: 104020128,104020171,104020168,104020173
 last_update:
   date: 1/7/2023

@@ -4,7 +4,7 @@ title: 更新天线
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-blockchain/sensecraft-hotspot-app/update_antenna
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/update_antenna
 aliases:
   - /cn/Cloud_Chain/SenseCAP_Hotspot_APP/Update_antenna
 last_update:

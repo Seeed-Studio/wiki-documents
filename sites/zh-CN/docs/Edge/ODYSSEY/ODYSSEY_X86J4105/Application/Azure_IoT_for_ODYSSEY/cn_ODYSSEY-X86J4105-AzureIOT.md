@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J41x5
 title: Azure IoT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ODYSSEY-X86J4105-AzureIOT
+slug: /ODYSSEY-X86J4105-AzureIOT
 sku: 102110399,102110398,102110397,110991412,110991465,102110477,102110478,102110479
 last_update:
   date: 03/16/2023

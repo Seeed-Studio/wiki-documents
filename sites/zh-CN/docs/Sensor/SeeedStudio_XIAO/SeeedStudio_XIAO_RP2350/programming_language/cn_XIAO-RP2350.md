@@ -3,7 +3,7 @@ title:  Seeed Studio XIAO RP2350 与 MicroPython
 description: |
   XIAO RP2350，是 Seeed Studio 推出的前沿微控制器。它配备双核处理器、更大的 SRAM 和闪存，以及增强的连接能力。
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/RP2350-thumbnail.webp
-slug: /cn/getting-started-xiao-rp2350
+slug: /getting-started-xiao-rp2350
 sku: 102010550,102010637
 keywords:
   - xiao

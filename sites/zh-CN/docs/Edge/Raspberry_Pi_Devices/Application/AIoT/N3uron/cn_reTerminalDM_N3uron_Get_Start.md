@@ -8,7 +8,7 @@ keywords:
   - Industrial 
   - N3uron
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reTerminalDM_N3uron_Get_Start
+slug: /reTerminalDM_N3uron_Get_Start
 last_update:
   date: 2/27/2024
   author: Xabier Fernández and Kasun Thushara

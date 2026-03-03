@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: application
 link:
   type: generated-index
-  slug: ja/application
+  slug: application
   title: アプリケーション
   description: 外部ソフトウェアやハードウェアプラットフォームとのreCamera統合を含む、reCamera 2002シリーズアプリケーションドキュメント

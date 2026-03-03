@@ -4,7 +4,7 @@ title: Edison_4WD_Auto_Robotic_Platform
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Edison_4WD_Auto_Robotic_Platform
+slug: /Edison_4WD_Auto_Robotic_Platform
 last_update:
   date: 05/15/2025
   author: shuxu hu

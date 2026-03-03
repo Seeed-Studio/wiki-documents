@@ -7,7 +7,7 @@ keywords:
   - piCamera
   - OpenCV
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal_DM_opencv
+slug: /reTerminal_DM_opencv
 sku: 110070048
 last_update:
   date: 11/7/2023

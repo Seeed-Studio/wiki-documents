@@ -5,7 +5,7 @@ keywords:
 - ePaper display
 - TRMNL
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp
-slug: /cn/ogdiy_kit_works_with_trmnl
+slug: /ogdiy_kit_works_with_trmnl
 sku: 104991005
 sidebar_position: 2
 last_update:

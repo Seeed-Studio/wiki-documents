@@ -4,7 +4,7 @@ title: 麦克风入门指南
 keywords:
 - Wio_terminal Microphone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Mic
+slug: /Wio-Terminal-Mic
 last_update:
   date: 1/17/2023
   author: jianjing Huang

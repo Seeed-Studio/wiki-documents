@@ -5,7 +5,7 @@ keywords:
 - コミュニティ
 - プロジェクト
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/quick_pull_request
+slug: /quick_pull_request
 last_update:
   date: 05/15/2025
   author: Matthew

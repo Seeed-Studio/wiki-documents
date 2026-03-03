@@ -4,7 +4,7 @@ title: Pebble用RePhoneストラップキット
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/RePhone_Strap_Kit_for_Pebble
+slug: /RePhone_Strap_Kit_for_Pebble
 sku: 113060005
 last_update:
   date: 05/15/2025

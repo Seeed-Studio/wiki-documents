@@ -4,7 +4,7 @@ title: Seeeduino Lotus
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Seeeduino_Lotus
+slug: /Seeeduino_Lotus
 sku: 102010168, 102020001
 last_update:
   date: 1/31/2023

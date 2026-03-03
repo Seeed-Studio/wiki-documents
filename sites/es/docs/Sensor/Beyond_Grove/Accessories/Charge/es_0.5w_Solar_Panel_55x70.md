@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/0.5w_Solar_Panel_55x70/
-slug: /es/0.5w_Solar_Panel_55x70
+slug: /0.5w_Solar_Panel_55x70
 sku: 313070004
 last_update:
   date: 02/03/2022

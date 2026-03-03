@@ -7,7 +7,7 @@ keywords:
 - SenseCraft AI
 - Custom AI model
 image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/20.webp
-slug: /ja/deploy_ai_with_a1102
+slug: /deploy_ai_with_a1102
 sidebar_position: 3
 # sidebar_class_name: hidden
 last_update:

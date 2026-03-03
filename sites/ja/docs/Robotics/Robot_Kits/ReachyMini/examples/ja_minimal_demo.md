@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini の頭部とアンテナを単純な往復運動パターンで動かす方法を示す最小限のサンプルです。
 title: 最小限デモ
-slug: /ja/reachymini_examples_minimal_demo
+slug: /reachymini_examples_minimal_demo
 keywords:
 - minimal
 - demo

@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/xiao_respeaker
+slug: /xiao_respeaker
 sku: 110061601
 last_update:
   date: 7/1/2024

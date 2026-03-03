@@ -2,7 +2,7 @@
 description: reTerminal && reTerminal DM-FAQ
 title: 画面のリフレッシュレートが低すぎる問題の解決方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/screen_refresh_rate_low
+slug: /screen_refresh_rate_low
 last_update:
   date: 7/2/2024
   author: Parker

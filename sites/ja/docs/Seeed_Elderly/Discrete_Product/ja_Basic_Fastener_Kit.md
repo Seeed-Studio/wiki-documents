@@ -4,7 +4,7 @@ title: 基本ファスナーキット
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Basic_Fastener_Kit
+slug: /Basic_Fastener_Kit
 sku: 110990086
 last_update:
   date: 05/15/2025

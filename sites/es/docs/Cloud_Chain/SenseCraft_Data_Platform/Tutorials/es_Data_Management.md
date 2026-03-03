@@ -5,7 +5,7 @@ title: Gestión de Datos
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /es/sensecraft-data-platform/tutorials/data-management
+slug: /sensecraft-data-platform/tutorials/data-management
 aliases:
   - /es/Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Data_Management
 last_update:

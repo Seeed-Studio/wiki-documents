@@ -2,7 +2,7 @@
 description: Azure IoT Edge Runtime on reTerminal DM
 title: Azure IoT Edge Runtime on reTerminal DM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reTerminal-DM_Azure_IoT
+slug: /reTerminal-DM_Azure_IoT
 last_update:
   date: 11/6/2023
   author: Takashi

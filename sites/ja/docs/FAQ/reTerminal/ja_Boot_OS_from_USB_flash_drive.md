@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: USBフラッシュドライブからOSを起動する方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Boot_OS_from_USB_flash_drive
+slug: /Boot_OS_from_USB_flash_drive
 last_update:
   date: 6/21/2023
   author: Seraphina

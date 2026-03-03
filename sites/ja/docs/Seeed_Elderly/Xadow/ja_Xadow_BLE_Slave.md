@@ -4,7 +4,7 @@ title: Xadow - BLE スレーブ
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_BLE_Slave
+slug: /Xadow_BLE_Slave
 last_update:
   date: 05/15/2025
   author: shuxu hu

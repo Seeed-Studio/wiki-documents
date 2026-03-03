@@ -4,7 +4,7 @@ title: Rainbow Cube Kit アクリルハーネス
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness
+slug: /Seeed_Elderly/Rainbowduino/Rainbow_Cube_Kit_Acrylic_Harness
 sllug: /Rainbow_Cube_Kit_Acrylic_Harness
 last_update:
   date: 05/15/2025

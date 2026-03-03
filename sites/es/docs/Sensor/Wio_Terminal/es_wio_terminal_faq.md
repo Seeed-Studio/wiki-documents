@@ -2,7 +2,7 @@
 description: Página de preguntas frecuentes de Wio terminal
 title: Preguntas frecuentes sobre Wio Terminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/wio_terminal_faq
+slug: /wio_terminal_faq
 date: 1/31/2024
 author: Seraphina
 ---

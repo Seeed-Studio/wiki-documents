@@ -4,7 +4,7 @@ title: BeagleBone® Green Wireless
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/BeagleBone_Green_Wireless
+slug: /BeagleBone_Green_Wireless
 sku: 102010048
 last_update:
   date: 1/10/2023

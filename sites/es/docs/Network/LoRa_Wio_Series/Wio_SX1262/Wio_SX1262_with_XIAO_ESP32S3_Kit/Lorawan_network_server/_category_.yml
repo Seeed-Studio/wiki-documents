@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: lorawan_network_server
 link:
   type: generated-index
-  slug: es/lorawan_network_server_class
+  slug: lorawan_network_server_class
   title: Servidor de Red LoRaWAN
   description: Documentación del Servidor de Red LoRaWAN.

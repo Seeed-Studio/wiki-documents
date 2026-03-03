@@ -5,7 +5,7 @@ keywords:
 - location
 - tracker
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/geolocation_tracker_with_XIAO_ESP32S3
+slug: /geolocation_tracker_with_XIAO_ESP32S3
 last_update:
   date: 06/14/2023
   author: Citric

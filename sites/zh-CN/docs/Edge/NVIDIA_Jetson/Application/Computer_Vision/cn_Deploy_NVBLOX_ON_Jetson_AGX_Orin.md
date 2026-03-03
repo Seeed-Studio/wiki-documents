@@ -15,7 +15,7 @@ keywords:
 - ESDF
 - 3D Mapping
 image: https://files.seeedstudio.com/wiki/other/page-nvblox.jpg
-slug: /cn/deploy_nvblox_jetson_agx_orin
+slug: /deploy_nvblox_jetson_agx_orin
 sku: 101090144,100020039
 last_update:
   date: 2026-01-20

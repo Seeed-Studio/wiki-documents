@@ -2,7 +2,7 @@
 description: SenseCAP Watcher es un observador de IA para ayudarte a monitorear anomalías dentro de un espacio y luego tomar acciones. Simplemente habla con Watcher para dar comandos, y ejecutará las tareas deseadas cuando ocurra el evento.
 title: Guía de Inicio Rápido
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg
-slug: /es/getting_started_with_watcher
+slug: /getting_started_with_watcher
 sidebar_position: 2
 last_update:
   date: 10/17/2024

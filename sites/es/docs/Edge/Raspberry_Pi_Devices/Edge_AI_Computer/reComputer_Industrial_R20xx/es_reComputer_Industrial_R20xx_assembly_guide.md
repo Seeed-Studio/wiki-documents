@@ -6,7 +6,7 @@ keywords:
 - Controlador de borde
 - reComputer Industrial R20xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-recomputer-industrail-r2000_1.jpg
-slug: /es/recomputer_industrial_r20xx_assembly_guide
+slug: /recomputer_industrial_r20xx_assembly_guide
 last_update:
   date: 09/28/2025
   author: Nolan Chen

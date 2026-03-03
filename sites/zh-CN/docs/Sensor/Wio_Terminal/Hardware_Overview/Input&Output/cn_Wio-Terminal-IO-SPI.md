@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Wio-Terminal-IO-SPI/
-slug: /cn/Wio-Terminal-IO-SPI
+slug: /Wio-Terminal-IO-SPI
 last_update:
   date: 01/11/2022
   author: gunengyu

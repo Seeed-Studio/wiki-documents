@@ -5,7 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Light_Sensor_and_LED_Bar
+slug: /Light_Sensor_and_LED_Bar
 last_update:
   date: 2/15/2023
   author: jianjing Huang

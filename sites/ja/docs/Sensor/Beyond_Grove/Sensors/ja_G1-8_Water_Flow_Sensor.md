@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/G1-8_Water_Flow_Sensor/
-slug: /ja/G1-8_Water_Flow_Sensor
+slug: /G1-8_Water_Flow_Sensor
 sku: 314150001
 last_update:
   date: 05/15/2025

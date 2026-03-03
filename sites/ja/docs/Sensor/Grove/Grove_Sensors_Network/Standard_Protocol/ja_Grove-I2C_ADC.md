@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-I2C_ADC/
-slug: /ja/Grove-I2C_ADC
+slug: /Grove-I2C_ADC
 sku: 103020013
 last_update:
   date: 05/15/2025

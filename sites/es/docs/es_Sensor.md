@@ -4,7 +4,7 @@ title: Sensores y Detección
 keywords:
 - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Sensor_Network
+slug: /Sensor_Network
 last_update:
   date: 05/23/2024
   author: Matthew

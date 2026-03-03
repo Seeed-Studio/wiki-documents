@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/AVR_USB_Programmer/
-slug: /ja/AVR_USB_Programmer
+slug: /AVR_USB_Programmer
 last_update:
   date: 05/15/2025
   author: gunengyu

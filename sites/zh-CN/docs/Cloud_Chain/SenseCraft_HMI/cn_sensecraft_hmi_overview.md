@@ -2,7 +2,7 @@
 description: 介绍 SenseCraft HMI，专为 reTerminal 系列构建的人机交互页面平台。
 title: SenseCraft HMI 概述
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/sensecraft_hmi_overview
+slug: /sensecraft_hmi_overview
 sidebar_position: 1
 last_update:
   date: 07/21/2025

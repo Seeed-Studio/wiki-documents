@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini 向けの完全な Python SDK リファレンス。モーション制御、カメラ、IMU、音声の録音と再生、およびメディアバックエンドオプションを網羅します。
 title: Python SDK リファレンス
-slug: /ja/reachymini_sdk_python-sdk
+slug: /reachymini_sdk_python-sdk
 keywords:
 - python
 - sdk

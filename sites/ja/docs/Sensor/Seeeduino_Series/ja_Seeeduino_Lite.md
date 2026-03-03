@@ -4,7 +4,7 @@ title: Seeeduino Lite
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeeduino_Lite
+slug: /Seeeduino_Lite
 sku: 102010008
 last_update:
   date: 05/15/2025

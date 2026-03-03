@@ -4,7 +4,7 @@ title: Windows/MacOSでWio Terminalを使用してHMIディスプレイを構築
 keywords:
 - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-HMI-Usermode-SDK
+slug: /Wio-Terminal-HMI-Usermode-SDK
 last_update:
   date: 05/15/2025
   author: jianjing Huang

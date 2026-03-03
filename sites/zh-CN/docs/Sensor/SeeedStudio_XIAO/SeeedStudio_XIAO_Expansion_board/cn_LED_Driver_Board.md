@@ -6,7 +6,7 @@ keywords:
 - light
 - LED
 image: https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/LED_Driver_Board_for_Seeed_Studio_XIAO.webp
-slug: /cn/led_driver_board
+slug: /led_driver_board
 sku: 105100021
 last_update: 
   date: 05/21/2025

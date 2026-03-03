@@ -4,7 +4,7 @@ title: Seeeduino Arch
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeeduino_Arch
+slug: /Seeeduino_Arch
 last_update:
   date: 1/31/2023
   author: shuxu hu

@@ -4,7 +4,7 @@ title: Grove - LED ストリップ ドライバー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-LED_Strip_Driver
+slug: /Grove-LED_Strip_Driver
 sku: 105020002
 last_update:
   date: 05/15/2025

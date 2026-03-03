@@ -2,7 +2,7 @@
 description: SenseCraft HMI プラットフォームを使用して XIAO EE04 ePaper ディスプレイの視覚的インターフェース設計を可能にします。
 title: XIAO ePaper Display Board EE04 と SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/hmi61.webp
-slug: /ja/EE04_with_hmi
+slug: /EE04_with_hmi
 sidebar_position: 2
 last_update:
   date: 10/30/2025

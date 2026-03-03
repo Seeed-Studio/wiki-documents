@@ -6,7 +6,7 @@ tags:
 keywords:
   - micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove_Inventor_Kit_for_microbit
+slug: /Grove_Inventor_Kit_for_microbit
 sku: 103100063, 103030195, 110060762
 last_update:
   date: 05/15/2025

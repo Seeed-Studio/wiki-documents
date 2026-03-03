@@ -9,7 +9,7 @@ keywords:
 - AnythingLLM
 - llama
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/local_ai_ssistant
+slug: /local_ai_ssistant
 last_update:
   date: 07/30/2024
   author: Youjiang

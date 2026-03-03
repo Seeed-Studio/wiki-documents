@@ -4,7 +4,7 @@ title: Xadow - 振动马达
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Xadow_Vibrator_Motor
+slug: /Xadow_Vibrator_Motor
 last_update:
   date: 1/13/2023
   author: shuxu hu

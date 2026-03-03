@@ -4,7 +4,7 @@ title: 赤外線エミッターの使い方
 keywords:
 - Wio_terminal 赤外線エミッター
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Infrared-Emitter
+slug: /Wio-Terminal-Infrared-Emitter
 last_update:
   date: 05/15/2025
   author: jianjing Huang

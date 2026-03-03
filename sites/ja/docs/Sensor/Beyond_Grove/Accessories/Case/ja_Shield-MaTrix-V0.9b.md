@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Shield-MaTrix-V0.9b/
-slug: /ja/Shield-MaTrix-V0.9b
+slug: /Shield-MaTrix-V0.9b
 last_update:
   date: 05/15/2025
   author: gunengyu

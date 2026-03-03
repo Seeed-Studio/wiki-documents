@@ -4,7 +4,7 @@ title: Shield Grove para XIAO con chip de gestión de batería
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip
+slug: /Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip
 sku: 103020312
 last_update:
   date: 1/10/2023

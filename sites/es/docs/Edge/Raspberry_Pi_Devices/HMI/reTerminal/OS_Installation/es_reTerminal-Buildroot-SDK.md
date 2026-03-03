@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reTerminal OS_Installation
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reTerminal-Buildroot-SDK
+slug: /reTerminal-Buildroot-SDK
 sku: 102110638
 last_update:
   date: 2/1/2023

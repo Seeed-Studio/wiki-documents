@@ -4,7 +4,7 @@ title: Grove - 10A DC電流センサー (ACS725)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-10A_DC_Current_Sensor-ACS725
+slug: /Grove-10A_DC_Current_Sensor-ACS725
 sku: 101020616
 last_update:
   date: 05/15/2025

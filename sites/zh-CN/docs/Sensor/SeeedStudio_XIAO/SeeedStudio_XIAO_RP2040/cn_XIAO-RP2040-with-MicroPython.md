@@ -4,7 +4,7 @@ title: MicroPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/XIAO-RP2040-with-MicroPython
+slug: /XIAO-RP2040-with-MicroPython
 last_update:
   date: 1/11/2023
   author: shuxu hu

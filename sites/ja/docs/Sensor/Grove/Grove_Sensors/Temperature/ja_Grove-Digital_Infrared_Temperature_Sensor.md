@@ -4,7 +4,7 @@ title: Grove - デジタル赤外線温度センサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Digital_Infrared_Temperature_Sensor
+slug: /Grove-Digital_Infrared_Temperature_Sensor
 sku: 101020077
 last_update:
   date: 05/15/2025

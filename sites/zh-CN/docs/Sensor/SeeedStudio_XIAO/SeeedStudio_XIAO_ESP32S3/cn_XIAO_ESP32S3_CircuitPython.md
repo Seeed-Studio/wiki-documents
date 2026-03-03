@@ -2,7 +2,7 @@
 description: XIAO ESP32S3 的 CircuitPython
 title: XIAO ESP32S3 项目 CircuitPython
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/xiao_esp32s3_project_circuitpython
+slug: /xiao_esp32s3_project_circuitpython
 last_update:
   date: 08/18/2024
   author: Isaac, Djair Guilherme

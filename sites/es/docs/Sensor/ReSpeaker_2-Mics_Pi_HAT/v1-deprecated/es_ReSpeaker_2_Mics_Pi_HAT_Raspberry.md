@@ -4,7 +4,7 @@ title: Introducción a Raspberry Pi
 keywords:
 - ReSpeaker_2-Mics_Pi_HAT
 image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.webp
-slug: /es/ReSpeaker_2_Mics_Pi_HAT_Raspberry
+slug: /ReSpeaker_2_Mics_Pi_HAT_Raspberry
 sku: 102110358
 last_update:
   date: 1/29/2026

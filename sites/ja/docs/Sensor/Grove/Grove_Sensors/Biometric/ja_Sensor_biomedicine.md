@@ -4,7 +4,7 @@ title: センサー - バイオメディスン（概要）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sensor_biomedicine
+slug: /Sensor_biomedicine
 last_update:
   date: 05/15/2025
   author: jianjing Huang

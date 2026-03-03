@@ -6,7 +6,7 @@ keywords:
   - reComputer r1000
   - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/clip_application_on_rpi5_with_ai_kit
+slug: /clip_application_on_rpi5_with_ai_kit
 last_update:
   date: 09/27/2024
   author: Jiahao

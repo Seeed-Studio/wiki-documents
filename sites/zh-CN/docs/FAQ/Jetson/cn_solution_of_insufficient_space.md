@@ -3,7 +3,7 @@ description: reComputer-常见问题解答
 title: 收到的reComputer中eMMC剩余空间仅约2GB，如何解决空间不足问题？
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /cn/solution_of_insufficient_space
+slug: /solution_of_insufficient_space
 last_update:
   date: 2023/6/30
   author: Seraphina

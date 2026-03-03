@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio_Node/
-slug: /es/Wio_Node
+slug: /Wio_Node
 sku: 102110057
 last_update:
   date: 01/11/2022

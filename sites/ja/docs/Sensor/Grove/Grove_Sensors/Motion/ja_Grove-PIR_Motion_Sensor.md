@@ -4,7 +4,7 @@ title: Grove - PIR モーションセンサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-PIR_Motion_Sensor
+slug: /Grove-PIR_Motion_Sensor
 sku: 101020020
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: Grove - Wio-E5 与 XIAO ESP32S3 使用演示
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_Wio_E5_SenseCAP_XIAO_ESP32S3
+slug: /Grove_Wio_E5_SenseCAP_XIAO_ESP32S3
 last_update:
   date: 2/2/2024
   author: Yvonne

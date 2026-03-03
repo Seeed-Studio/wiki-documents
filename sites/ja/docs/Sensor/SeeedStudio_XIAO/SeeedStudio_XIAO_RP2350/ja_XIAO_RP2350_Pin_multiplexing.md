@@ -4,7 +4,7 @@ title: ピン多重化 (Arduino)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/2350image.png
-slug: /ja/XIAO_RP2350_Pin_Multiplexing
+slug: /XIAO_RP2350_Pin_Multiplexing
 sidebar_position: 2
 last_update:
   date: 11/02/2024

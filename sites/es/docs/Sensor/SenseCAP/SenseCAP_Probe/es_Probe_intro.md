@@ -4,7 +4,7 @@ title: Sondas SenseCAP
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP_probes_intro
+slug: /SenseCAP_probes_intro
 last_update:
   date: 02/28/204
   author: Jessie

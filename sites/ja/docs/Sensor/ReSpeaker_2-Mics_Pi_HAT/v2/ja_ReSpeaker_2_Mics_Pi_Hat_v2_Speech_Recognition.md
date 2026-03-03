@@ -6,7 +6,7 @@ keywords:
   - キーワードスポッティング
   - TensorFlow_Lite
 image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.webp
-slug: /ja/respeaker_2_mics_pi_hat_v2_speech_recognition
+slug: /respeaker_2_mics_pi_hat_v2_speech_recognition
 last_update:
   date: 05/15/2025
   author: Joshua Lee

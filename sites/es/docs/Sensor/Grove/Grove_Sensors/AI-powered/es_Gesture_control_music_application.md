@@ -4,7 +4,7 @@ title: Gestos para controlar música
 keywords:
 - gesture
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/gesture_control_music_application
+slug: /gesture_control_music_application
 last_update:
   date: 12/27/2023
   author: Allen

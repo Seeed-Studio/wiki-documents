@@ -5,7 +5,7 @@ title: SenseCraft Data Platform API Introduction
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api
+slug: /sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api
 aliases:
   - /ja/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction
 last_update:

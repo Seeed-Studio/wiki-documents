@@ -4,7 +4,7 @@ title: Xadow - NFC
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Xadow_NFC
+slug: /Xadow_NFC
 sku: 113040000
 last_update:
   date: 1/13/2023

@@ -4,7 +4,7 @@ title: Grove - Sensor Reflectivo Infrarrojo
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Infrared_Reflective_Sensor
+slug: /Grove-Infrared_Reflective_Sensor
 sku: 101020174, 101020029
 last_update:
   date: 1/5/2023

@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - Loriot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_T1000_Tracker_Loriot
+slug: /SenseCAP_T1000_Tracker_Loriot
 last_update:
   date: 12/12/2023
   author: KeweiLee

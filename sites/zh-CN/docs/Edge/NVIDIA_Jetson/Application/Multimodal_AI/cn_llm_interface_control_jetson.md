@@ -2,7 +2,7 @@
 description: Jetson LLM Interface Controller 是一个完全本地化的、语音和文本驱动的 AI 助手，完全运行在 NVIDIA Jetson 设备上。它将本地大语言模型（通过 Ollama）与可选的语音转文本和文本转语音（NVIDIA Riva）相结合，将自然的人类命令转换为结构化、安全的硬件操作。该系统实现了对板载接口（GPIO、I2C、PWM 等）的私有、低延迟控制，并作为边缘 AI 应用（如智能环境、机器人和视觉代理）的模块化基础——无需依赖云端。
 title: Jetson 上的本地 LLM 代理用于安全硬件接口控制
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/llm_interface_control_jetson
+slug: /llm_interface_control_jetson
 last_update:
   date: 01/29/2025
   author: kourosh

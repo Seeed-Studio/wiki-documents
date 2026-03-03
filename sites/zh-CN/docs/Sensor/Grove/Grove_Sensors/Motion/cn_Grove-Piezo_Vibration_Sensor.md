@@ -4,7 +4,7 @@ title: Grove - 压电振动传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Piezo_Vibration_Sensor
+slug: /Grove-Piezo_Vibration_Sensor
 sku: 101020031
 last_update:
   date: 1/7/2023

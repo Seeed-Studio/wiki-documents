@@ -2,7 +2,7 @@
 description: XIAO RP2040をMicroBlocksで使用する。
 title: MicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
-slug: /ja/xiao_rp2040_microblocks
+slug: /xiao_rp2040_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks

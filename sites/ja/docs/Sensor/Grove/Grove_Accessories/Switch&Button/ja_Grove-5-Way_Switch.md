@@ -4,7 +4,7 @@ title: Grove - 5-Way Switch
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-5-Way_Switch
+slug: /Grove-5-Way_Switch
 last_update:
   date: 05/15/2025
   author: jianjing Huang

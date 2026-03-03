@@ -4,7 +4,7 @@ title: Techbox Tricks
 keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Techbox_Tricks
+slug: /Techbox_Tricks
 sku: 110020006
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: Arduino
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg
-slug: /es/XIAO-RP2040-with-Arduino
+slug: /XIAO-RP2040-with-Arduino
 last_update:
   date: 1/24/2023
   author: Spencer

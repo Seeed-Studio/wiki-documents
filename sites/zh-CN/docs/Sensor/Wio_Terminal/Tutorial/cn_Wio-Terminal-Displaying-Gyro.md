@@ -4,7 +4,7 @@ title: Wio Terminal 显示陀螺仪
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Displaying-Gyro
+slug: /Wio-Terminal-Displaying-Gyro
 last_update:
   date: 1/31/2023
   author: jianjing Huang

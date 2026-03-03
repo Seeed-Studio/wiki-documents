@@ -7,7 +7,7 @@ keywords:
 - Home Assistant
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/home_assistant_with_sensecap_lorawan_sensors
+slug: /home_assistant_with_sensecap_lorawan_sensors
 last_update:
   date: 9/14/2023
   author: Jessie

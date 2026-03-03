@@ -4,7 +4,7 @@ title: reSpeaker USB Mic Array
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ReSpeaker-USB-Mic-Array
+slug: /ReSpeaker-USB-Mic-Array
 sku: 107990193
 last_update:
   date: 1/12/2023

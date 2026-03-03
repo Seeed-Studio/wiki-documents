@@ -4,7 +4,7 @@ title: Grove - Kit de Socket LED
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-LED_Socket_Kit
+slug: /Grove-LED_Socket_Kit
 sku: 104030009, 104030010
 last_update:
   date: 1/7/2023

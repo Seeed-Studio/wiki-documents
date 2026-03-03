@@ -4,7 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/DSO_Nano-gcc/
-slug: /es/DSO_Nano-gcc
+slug: /DSO_Nano-gcc
 last_update:
   date: 02/03/2022
   author: gunengyu

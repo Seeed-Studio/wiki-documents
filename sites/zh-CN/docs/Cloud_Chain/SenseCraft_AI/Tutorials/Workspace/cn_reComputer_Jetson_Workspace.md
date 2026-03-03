@@ -7,7 +7,7 @@ keywords:
 - SenseCraft
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-ai/tutorials/nvidia-jetson-workspace
+slug: /sensecraft-ai/tutorials/nvidia-jetson-workspace
 aliases:
   - /cn/nvidia_jetson_workspace
 last_update:

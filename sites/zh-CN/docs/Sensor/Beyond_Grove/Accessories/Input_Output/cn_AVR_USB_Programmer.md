@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/AVR_USB_Programmer/
-slug: /cn/AVR_USB_Programmer
+slug: /AVR_USB_Programmer
 last_update:
   date: 02/03/2022
   author: gunengyu

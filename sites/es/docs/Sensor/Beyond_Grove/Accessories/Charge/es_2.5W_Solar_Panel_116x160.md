@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/2.5W_Solar_Panel_116x160/
-slug: /es/2.5W_Solar_Panel_116x160
+slug: /2.5W_Solar_Panel_116x160
 last_update:
   date: 02/03/2022
   author: gunengyu

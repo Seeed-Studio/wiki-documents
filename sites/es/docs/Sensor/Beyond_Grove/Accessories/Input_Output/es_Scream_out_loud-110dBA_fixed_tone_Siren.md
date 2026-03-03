@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Scream_out_loud-110dBA_fixed_tone_Siren/
-slug: /es/Scream_out_loud-110dBA_fixed_tone_Siren
+slug: /Scream_out_loud-110dBA_fixed_tone_Siren
 last_update:
   date: 02/03/2022
   author: gunengyu

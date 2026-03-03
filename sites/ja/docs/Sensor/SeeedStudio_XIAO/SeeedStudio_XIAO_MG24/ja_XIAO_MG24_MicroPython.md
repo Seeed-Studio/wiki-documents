@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO MG24 Sense と MicroPython
 description: Seeed Studio XIAO MG24(Sense) でのピン多重化。
 image: https://files.seeedstudio.com/wiki/XIAO_MG24_Sense.webp
-slug: /ja/xiao_mg24_sense_micropython
+slug: /xiao_mg24_sense_micropython
 keywords:
   - XIAO
   - MG24

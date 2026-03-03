@@ -6,7 +6,7 @@ keywords:
 - we2 
 - 物体検出
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ma_deploy_yolov5
+slug: /ma_deploy_yolov5
 last_update:
   date: 05/15/2025
   author: Jack Mu

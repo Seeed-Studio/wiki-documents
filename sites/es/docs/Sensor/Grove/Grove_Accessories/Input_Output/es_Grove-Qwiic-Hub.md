@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Qwiic-Hub/
-slug: /es/Grove-Qwiic-Hub
+slug: /Grove-Qwiic-Hub
 sku: 103020292
 last_update:
   date: 01/09/2022

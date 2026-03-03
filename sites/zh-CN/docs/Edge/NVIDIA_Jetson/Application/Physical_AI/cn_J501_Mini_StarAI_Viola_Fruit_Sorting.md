@@ -10,7 +10,7 @@ keywords:
 - ACT
 - Fruit Sorting
 image: https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png
-slug: /cn/j501_mini_starai_viola_fruit_sorting
+slug: /j501_mini_starai_viola_fruit_sorting
 sku: 100020039,114090080
 last_update:
   date: 2026-2-2

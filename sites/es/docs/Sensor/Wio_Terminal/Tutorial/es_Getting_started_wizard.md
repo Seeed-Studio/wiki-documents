@@ -4,7 +4,7 @@ title: Asistente de introducción
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Getting_started_wizard
+slug: /Getting_started_wizard
 last_update:
   date: 1/31/2023
   author: jianjing Huang

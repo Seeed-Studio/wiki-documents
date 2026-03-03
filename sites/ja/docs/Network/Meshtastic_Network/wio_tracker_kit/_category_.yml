@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: wio_tracker_kit
 link:
   type: generated-index
-  slug: ja/wio_tracker_kit_meshtastic
+  slug: wio_tracker_kit_meshtastic
   title: Wio-Tracker キット
   description: Wio-Tracker キット Meshtastic アプリケーション。

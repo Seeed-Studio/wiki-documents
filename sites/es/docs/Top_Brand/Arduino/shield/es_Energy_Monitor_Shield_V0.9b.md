@@ -4,7 +4,7 @@ title: Energy Monitor Shield V0.9b
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Energy_Monitor_Shield_V0.9b
+slug: /Energy_Monitor_Shield_V0.9b
 last_update:
   date: 2/16/2023
   author: jianjing Huang

@@ -6,7 +6,7 @@ keywords:
 - jetpack
 - L4T
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg
-slug: /es/how_to_establish_the_ethercat_on_jetson
+slug: /how_to_establish_the_ethercat_on_jetson
 last_update:
   date: 11/14/2025
   author: Dayu

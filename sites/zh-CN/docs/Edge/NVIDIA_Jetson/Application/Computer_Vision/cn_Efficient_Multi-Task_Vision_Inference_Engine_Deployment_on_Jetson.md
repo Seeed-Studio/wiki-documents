@@ -13,7 +13,7 @@ keywords:
 - ROS2
 - Robotics
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video.webp
-slug: /cn/deploy_visual_perception_engine_recomputer
+slug: /deploy_visual_perception_engine_recomputer
 sku: 101090101, 114110310, 100071398, 100026552
 last_update:
   date: 2025-10-13

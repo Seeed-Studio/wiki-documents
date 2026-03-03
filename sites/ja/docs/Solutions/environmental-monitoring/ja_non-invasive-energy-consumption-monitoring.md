@@ -5,7 +5,7 @@ keywords:
     - CT
     - energy consumption monitoring
     - Home Assistant
-slug: /ja/non_invasive_ct_energy_consumption
+slug: /non_invasive_ct_energy_consumption
 sidebar_position: 2
 last_update:
     date: 08/18/2025

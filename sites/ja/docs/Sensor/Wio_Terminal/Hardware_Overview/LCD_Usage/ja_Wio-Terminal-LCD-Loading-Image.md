@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - Docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-LCD-Loading-Image/
-slug: /ja/Wio-Terminal-LCD-Loading-Image
+slug: /Wio-Terminal-LCD-Loading-Image
 last_update:
   date: 05/15/2025
   author: gunengyu

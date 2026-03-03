@@ -6,7 +6,7 @@ keywords:
 - AI NVR
 - Jetpack6.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ai_nvr_with_jetson
+slug: /ai_nvr_with_jetson
 last_update:
   date: 08/12/2024
   author: Youjiang

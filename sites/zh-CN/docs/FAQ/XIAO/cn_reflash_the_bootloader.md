@@ -2,7 +2,7 @@
 description: XIAO ESP32C3-常见问题
 title: 如何使用出厂固件重新烧录引导程序
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reflash_the_bootloader
+slug: /reflash_the_bootloader
 last_update:
   date: 2023/6/30
   author: cheng.tang

@@ -4,7 +4,7 @@ title: 编解码自适应无线继电器
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Codec-Adaptive_Wireless_Relay
+slug: /Codec-Adaptive_Wireless_Relay
 last_update:
   date: 1/13/2023
   author: shuxu hu

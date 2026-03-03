@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: スリープ後にreTerminal LCDを復帰させる方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wakeup_reTerminal_LCD_after_sleep
+slug: /Wakeup_reTerminal_LCD_after_sleep
 last_update:
   date: 12/16/2024
   author: Joshua Lee

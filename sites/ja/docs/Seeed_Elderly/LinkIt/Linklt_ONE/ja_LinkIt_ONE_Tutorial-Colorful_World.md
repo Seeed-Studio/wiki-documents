@@ -4,7 +4,7 @@ title: LinkIt ONE チュートリアル - カラフルな世界
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/LinkIt_ONE_Tutorial-Colorful_World
+slug: /LinkIt_ONE_Tutorial-Colorful_World
 last_update:
   date: 05/15/2025
   author: shuxu hu

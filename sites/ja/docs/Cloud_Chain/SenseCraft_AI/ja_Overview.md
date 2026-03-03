@@ -3,7 +3,7 @@
 description: この記事は、SenseCraft AI のメインページの簡単な紹介です。
 title: 概要
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
-slug: /ja/sensecraft-ai/overview
+slug: /sensecraft-ai/overview
 aliases:
   - /ja/sensecraft_ai_overview
 sidebar_position: 1

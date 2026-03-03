@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini メディアマネージャの完全な API リファレンス。音声、カメラ、ユーティリティ、およびビデオ／オーディオストリーミング用の定数を含みます。
 title: メディア API リファレンス
-slug: /ja/reachymini_api_media
+slug: /reachymini_api_media
 keywords:
 - api
 - media

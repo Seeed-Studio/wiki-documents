@@ -3,7 +3,7 @@ sidebar_position: 7
 description: Este artículo describe cómo obtener salidas usando Grove Vision AI V2 y SenseCraft AI.
 title: Salida del Modelo para Grove Vision AI V2
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/54.webp
-slug: /es/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai
+slug: /sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai
 aliases:
   - /es/sensecraft_ai_output_grove_visionai
 last_update:

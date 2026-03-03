@@ -9,7 +9,7 @@ keywords:
   - 4G LTE
   - エッジコンピューティング
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/1-114993408-LTE-CAT-4-EG25-GL-4G-HAT-for-Raspberry-Pi.webp
-slug: /ja/ftp_with_raspberry_pi_4g_lte_hat
+slug: /ftp_with_raspberry_pi_4g_lte_hat
 last_update:
   date: 05/15/2025
   author: Kasun Thushara

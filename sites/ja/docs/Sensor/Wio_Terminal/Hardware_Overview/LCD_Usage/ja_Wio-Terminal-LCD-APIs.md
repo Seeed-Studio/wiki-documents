@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-LCD-APIs/
-slug: /ja/Wio-Terminal-LCD-APIs
+slug: /Wio-Terminal-LCD-APIs
 last_update:
   date: 05/15/2025
   author: gunengyu

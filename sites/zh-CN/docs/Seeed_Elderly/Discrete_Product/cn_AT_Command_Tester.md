@@ -4,7 +4,7 @@ title: AT指令测试工具
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/AT_Command_Tester
+slug: /AT_Command_Tester
 last_update:
   date: 1/13/2023
   author: shuxu hu

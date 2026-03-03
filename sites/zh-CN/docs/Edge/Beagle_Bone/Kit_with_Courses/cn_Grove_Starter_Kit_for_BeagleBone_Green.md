@@ -4,7 +4,7 @@ title: Grove BeagleBone® Green 入门套件
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_Starter_Kit_for_BeagleBone_Green
+slug: /Grove_Starter_Kit_for_BeagleBone_Green
 sku: 110060131
 last_update:
   date: 2022/1/10

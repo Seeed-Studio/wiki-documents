@@ -6,7 +6,7 @@ keywords:
   - reTerminal-DM
   - Ignition Edge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal-DM-Getting-Started-with-Ignition-Edge
+slug: /reTerminal-DM-Getting-Started-with-Ignition-Edge
 last_update:
   date: 09/29/2023
   author: Corey Thompson

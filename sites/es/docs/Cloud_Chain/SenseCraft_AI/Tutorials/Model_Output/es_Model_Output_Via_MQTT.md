@@ -3,7 +3,7 @@ sidebar_position: 9
 description: Este artículo describe cómo enviar los resultados de reconocimiento de un modelo a través de MQTT.
 title: Salida del Modelo Vía MQTT
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/headimage.webp
-slug: /es/sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao
+slug: /sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao
 aliases:
   - /es/sensecraft_ai_output_mqtt_xiao
 last_update:

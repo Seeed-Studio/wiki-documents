@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: lorawan_tracker_open_source_fw
 link:
   type: generated-index
-  slug: es/lorawan_tracker_open_source_fw
+  slug: lorawan_tracker_open_source_fw
   title: Instrucciones de Firmware de Código Abierto del Rastreador LoRaWAN
   description: Rastreador LoRaWAN (Software de código abierto)

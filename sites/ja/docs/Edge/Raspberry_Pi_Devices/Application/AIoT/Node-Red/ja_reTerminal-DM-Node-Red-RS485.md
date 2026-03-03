@@ -6,7 +6,7 @@ keywords:
   - reTerminal-DM
   - Node-Red
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal-DM-Node-Red-RS485
+slug: /reTerminal-DM-Node-Red-RS485
 last_update:
   date: 04/04/2023
   author: Peter Pan

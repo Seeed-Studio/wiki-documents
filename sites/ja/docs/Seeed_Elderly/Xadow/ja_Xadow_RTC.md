@@ -4,7 +4,7 @@ title: Xadow - RTC（リアルタイムクロック）
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_RTC
+slug: /Xadow_RTC
 last_update:
   date: 05/15/2025
   author: shuxu hu

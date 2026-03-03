@@ -5,7 +5,7 @@ keywords:
 - ESP-IDF
 - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/xiao_idf
+slug: /xiao_idf
 last_update:
   date: 05/09/2024
   author: Citric

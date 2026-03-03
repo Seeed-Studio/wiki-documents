@@ -2,7 +2,7 @@
 description: Cómo usar y escribir una biblioteca
 title: Cómo usar y escribir una biblioteca
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/How_to_use_and_write_a_library
+slug: /How_to_use_and_write_a_library
 last_update:
   date: 02/01/2023
   author: w0x7ce

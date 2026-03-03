@@ -4,7 +4,7 @@ title: XIAO ESP32C3 accede a Home Assistant a través del servicio ESPHome
 keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/xiao-esp32c3-esphome
+slug: /xiao-esp32c3-esphome
 sku: 113991054,101991030,102010633
 last_update:
   date: 03/03/2023

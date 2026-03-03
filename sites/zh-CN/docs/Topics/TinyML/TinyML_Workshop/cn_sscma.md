@@ -4,7 +4,7 @@ title: AI "Blink"
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/sscma
+slug: /sscma
 last_update:
   date: 08/26/2024
   author: Matthew

@@ -5,7 +5,7 @@ keywords:
 - reServer
 - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reserver_j501_getting_started
+slug: /reserver_j501_getting_started
 sku: 102991854,E24081601
 last_update:
   date: 08/19/2024

@@ -2,7 +2,7 @@
 description: Arduino 常见错误
 title: Arduino 常见错误
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Arduino_Common_Error
+slug: /Arduino_Common_Error
 last_update:
   date: 02/01/2023
   author: w0x7ce

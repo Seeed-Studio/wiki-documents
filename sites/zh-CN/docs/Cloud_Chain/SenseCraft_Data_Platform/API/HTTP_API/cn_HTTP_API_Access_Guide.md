@@ -5,7 +5,7 @@ title: HTTP API 访问指南
 keywords:
 - HTTP API 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-data-platform/api/http-api/http-api-access-guide
+slug: /sensecraft-data-platform/api/http-api/http-api-access-guide
 aliases:
   - /cn/Cloud_Chain/SenseCAP_API/HTTP_API/HTTP_API_Access_Guide
 last_update:

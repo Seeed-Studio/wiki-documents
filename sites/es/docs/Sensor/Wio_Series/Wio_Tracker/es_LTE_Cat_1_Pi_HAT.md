@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/LTE_Cat_1_Pi_HAT/
-slug: /es/LTE_Cat_1_Pi_HAT
+slug: /LTE_Cat_1_Pi_HAT
 sku: 113990454, 113990496, 102991015
 last_update:
   date: 01/11/2022

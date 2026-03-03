@@ -4,7 +4,7 @@ title: SenseCraft AI モデルアシスタント概要
 keywords:
 - sscma モデルアシスタント ai tinyml 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ModelAssistant_Introduce_Overview
+slug: /ModelAssistant_Introduce_Overview
 last_update:
   date: 05/15/2025
   author: LynnL4

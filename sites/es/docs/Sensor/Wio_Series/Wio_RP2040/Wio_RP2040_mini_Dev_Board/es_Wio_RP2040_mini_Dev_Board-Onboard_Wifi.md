@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio_RP2040_mini_Dev_Board-Onboard_Wifi/
-slug: /es/Wio_RP2040_mini_Dev_Board-Onboard_Wifi
+slug: /Wio_RP2040_mini_Dev_Board-Onboard_Wifi
 sku: 102991555
 last_update:
   date: 01/11/2022

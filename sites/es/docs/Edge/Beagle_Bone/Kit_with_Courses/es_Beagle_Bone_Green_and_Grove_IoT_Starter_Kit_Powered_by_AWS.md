@@ -5,7 +5,7 @@ keywords:
  - Beagle_Bone
  - Kit_with_Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS
+slug: /Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 2/1/2023
   author: jianjing Huang

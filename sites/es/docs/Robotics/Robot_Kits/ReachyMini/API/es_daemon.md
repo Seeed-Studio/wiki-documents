@@ -1,7 +1,7 @@
 ---
 description: Referencia completa de la API para el daemon de Reachy Mini, incluyendo las clases principales del daemon, clases de backend, utilidades del daemon, modelos de la app y routers de la app.
 title: Referencia de la API del Daemon
-slug: /es/reachymini_api_daemon
+slug: /reachymini_api_daemon
 keywords:
 - api
 - daemon

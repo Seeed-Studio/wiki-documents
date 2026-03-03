@@ -4,7 +4,7 @@ title: Kit de Ambiente Interior Grove para Edison
 keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_Indoor_Environment_Kit_for_Edison
+slug: /Grove_Indoor_Environment_Kit_for_Edison
 sku: 110060064
 last_update:
   date: 2/17/2023

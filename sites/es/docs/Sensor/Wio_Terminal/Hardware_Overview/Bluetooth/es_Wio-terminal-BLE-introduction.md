@@ -4,7 +4,7 @@ title: Introducción a Cliente y Servidor
 keywords:
 - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-terminal-BLE-introduction
+slug: /Wio-terminal-BLE-introduction
 last_update:
   date: 1/16/2023
   author: jianjing Huang

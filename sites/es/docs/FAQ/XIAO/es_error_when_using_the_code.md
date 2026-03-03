@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display para XIAO-FAQ
 title: ¿Por qué mi XIAO RP2040 obtiene un error de C++ muy extraño al usar el código para HardwareTest con Round Display?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/error_when_using_the_code
+slug: /error_when_using_the_code
 last_update:
   date: 6/30/2023
   author: cheng.tang

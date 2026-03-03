@@ -4,7 +4,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/DSO_Quad_Manual_by_the_community/
-slug: /ja/DSO_Quad_Manual_by_the_community
+slug: /DSO_Quad_Manual_by_the_community
 last_update:
   date: 05/15/2025
   author: gunengyu

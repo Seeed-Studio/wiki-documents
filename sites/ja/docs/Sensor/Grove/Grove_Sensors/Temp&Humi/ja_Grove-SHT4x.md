@@ -4,7 +4,7 @@ title: Grove - 温度・湿度センサー(SHT4x)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-SHT4x
+slug: /Grove-SHT4x
 sku: 101021033,101021032
 last_update:
   date: 05/15/2025

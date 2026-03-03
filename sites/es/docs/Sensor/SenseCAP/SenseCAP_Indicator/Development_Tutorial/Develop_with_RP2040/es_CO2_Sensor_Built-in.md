@@ -4,7 +4,7 @@ title: Sensor de CO2 Integrado
 keywords:
 - SenseCAP Indicator RP2040 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP_Indicator_RP2040_CO2
+slug: /SenseCAP_Indicator_RP2040_CO2
 last_update:
   date: 5/23/2023
   author: Thomas

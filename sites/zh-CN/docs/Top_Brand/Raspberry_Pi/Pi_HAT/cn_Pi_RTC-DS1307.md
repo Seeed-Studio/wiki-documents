@@ -4,7 +4,7 @@ title: 适用于树莓派的 DS1307 RTC（实时时钟）
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Pi_RTC-DS1307
+slug: /Pi_RTC-DS1307
 sku: 103030277
 last_update:
   date: 1/11/2023

@@ -4,7 +4,7 @@ title: ブザーの使い方
 keywords:
 - Wio_terminal ブザー
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Buzzer
+slug: /Wio-Terminal-Buzzer
 last_update:
   date: 05/15/2025
   author: jianjing Huang

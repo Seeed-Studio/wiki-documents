@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/DC_framework_solenoid_HCNE1-0630/
-slug: /cn/Essentials
+slug: /Essentials
 last_update:
   date: 02/03/2022
   author: jianjing Huang

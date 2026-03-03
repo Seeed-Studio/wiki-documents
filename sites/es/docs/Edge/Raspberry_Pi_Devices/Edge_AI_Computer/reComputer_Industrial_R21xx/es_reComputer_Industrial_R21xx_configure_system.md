@@ -6,7 +6,7 @@ keywords:
 - Edge Controller
 - reComputer Industrial R21xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
-slug: /es/recomputer_industrial_R21xx_configure_system
+slug: /recomputer_industrial_R21xx_configure_system
 last_update:
   date: 09/28/2025
   author: Nolan Chen

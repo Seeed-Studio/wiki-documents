@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display for XIAO-FAQ
 title: Seeed Studio XIAO ESP32S3 Senseをこの拡張画面に接続したい場合、2つのTFカードスロットで競合が発生しますか？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/two_TF_card
+slug: /two_TF_card
 last_update:
   date: 6/30/2023
   author: cheng.tang

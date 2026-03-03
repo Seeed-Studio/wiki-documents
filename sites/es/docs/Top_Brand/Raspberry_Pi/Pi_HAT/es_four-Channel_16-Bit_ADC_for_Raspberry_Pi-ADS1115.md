@@ -4,7 +4,7 @@ title: ADC de 16 bits y 4 canales para Raspberry Pi (ADS1115)
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115
+slug: /4-Channel_16-Bit_ADC_for_Raspberry_Pi-ADS1115
 sku: 103030279
 last_update:
   date: 1/11/2023

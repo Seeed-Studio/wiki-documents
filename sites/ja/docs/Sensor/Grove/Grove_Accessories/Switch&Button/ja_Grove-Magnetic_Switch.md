@@ -4,7 +4,7 @@ title: Grove - マグネットスイッチ
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Magnetic_Switch
+slug: /Grove-Magnetic_Switch
 sku: 101020038
 last_update:
   date: 05/15/2025

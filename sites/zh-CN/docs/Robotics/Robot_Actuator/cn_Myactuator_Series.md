@@ -7,7 +7,7 @@ keywords:
 - 机械臂
 - 机器人
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/myactuator_series
+slug: /myactuator_series
 sku: 114090068,114090069
 last_update:
   date: 2025/05/29

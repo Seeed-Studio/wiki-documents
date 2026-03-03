@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central/
-slug: /ja/Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central
+slug: /Connect-Wio-Terminal-to-Microsoft-Azure-IoT-Central
 last_update:
   date: 05/15/2025
   author: gunengyu

@@ -4,7 +4,7 @@ title: 如何将 Seeed 开发板添加到 Arduino IDE
 keywords:
   - Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeed_Arduino_Boards
+slug: /Seeed_Arduino_Boards
 last_update:
   date: 02/02/2023
   author: w0x7ce

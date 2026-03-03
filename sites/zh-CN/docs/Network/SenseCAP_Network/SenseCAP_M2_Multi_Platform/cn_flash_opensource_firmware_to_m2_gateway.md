@@ -2,7 +2,7 @@
 description: 本 wiki 将指导您如何为 M2 网关刷写开源 LoRaWAN® 固件。基于开源 LoRaWAN® 固件，您可以深度定制您的 M2 网关。
 title: 为 M2 网关刷写开源固件
 image: https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/m2-white.webp
-slug: /cn/flash_opensource_firmware_to_m2_gateway
+slug: /flash_opensource_firmware_to_m2_gateway
 last_update:
   date: 4/22/2025
   author: Leo

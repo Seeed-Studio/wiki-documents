@@ -6,7 +6,7 @@ keywords:
   - Jetson Orin
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reComputer_A603_Flash_System
+slug: /reComputer_A603_Flash_System
 sku: 102110840
 last_update:
   date: 04/19/2023

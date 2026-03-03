@@ -4,7 +4,7 @@ title: Galileo ケース
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Galileo_Case
+slug: /Galileo_Case
 sku: 110990417
 last_update:
   date: 1/13/2023

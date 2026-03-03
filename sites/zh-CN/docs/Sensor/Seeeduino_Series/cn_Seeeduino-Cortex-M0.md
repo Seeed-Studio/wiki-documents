@@ -4,7 +4,7 @@ title: Seeeduino Cortex M0
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeeduino-Cortex-M0
+slug: /Seeeduino-Cortex-M0
 sku: 102010248
 last_update:
   date: 1/31/2023

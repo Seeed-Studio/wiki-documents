@@ -4,7 +4,7 @@ title: Applications Kit ML101 with Prof. Vijay Course
 keywords:
 - Wio_terminal Kit_with_Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-TinyML-Kit-Course
+slug: /Wio-Terminal-TinyML-Kit-Course
 last_update:
   date: 1/31/2023
   author: jianjing Huang

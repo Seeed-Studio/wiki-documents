@@ -4,7 +4,7 @@ title: Grove - アルコールセンサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Alcohol_Sensor
+slug: /Grove-Alcohol_Sensor
 sku: 101020044
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: XIAO SAMD21 with PlatformIO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/samd21_with_platformio.webp
-slug: /ja/xiao_samd21_with_platform_io
+slug: /xiao_samd21_with_platform_io
 sidebar_class_name: hidden
 last_update:
   date: 04/07/2025

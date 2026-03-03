@@ -4,7 +4,7 @@ title: TTN 介绍
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/TTN-Introduction
+slug: /TTN-Introduction
 last_update:
   date: 1/13/2023
   author: shuxu hu

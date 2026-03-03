@@ -4,7 +4,7 @@ title: Grove - Giroscopio Digital de 3 Ejes
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-3-Axis_Digital_Gyro
+slug: /Grove-3-Axis_Digital_Gyro
 sku: 101020050
 last_update:
   date: 1/6/2023

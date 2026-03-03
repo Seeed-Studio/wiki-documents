@@ -4,7 +4,7 @@ title: Guía de instalación del Kit de Refrigeración por Agua
 keywords:
 - Raspberry_Pi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Cooler_Device
+slug: /Cooler_Device
 sku: 110070128,114070261
 last_update:
   date: 1/24/2024

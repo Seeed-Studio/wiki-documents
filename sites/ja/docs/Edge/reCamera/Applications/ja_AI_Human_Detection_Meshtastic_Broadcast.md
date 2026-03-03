@@ -7,7 +7,7 @@ keywords:
     - ESP-Mesh
     - エッジ AI
     - GPIO トリガ
-slug: /ja/ai_human_detection_meshtastic_broadcast
+slug: /ai_human_detection_meshtastic_broadcast
 sku: 100029708,102010611,114993649
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 1

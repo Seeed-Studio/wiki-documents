@@ -4,7 +4,7 @@ title: Grove - Kit de Sensor de PH (E-201C-Blue)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-PH-Sensor-kit
+slug: /Grove-PH-Sensor-kit
 sku: 110020291
 last_update:
   date: 1/6/2023

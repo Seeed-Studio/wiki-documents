@@ -6,7 +6,7 @@ keywords:
   - 入门指南
   - plex 媒体服务器
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/plex_media_server
+slug: /plex_media_server
 last_update:
   date: 2023/6/14
   author: Kasun Thushara

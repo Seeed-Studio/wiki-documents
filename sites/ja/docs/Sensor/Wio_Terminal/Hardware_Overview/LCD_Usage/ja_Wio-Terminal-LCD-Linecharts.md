@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - Docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-LCD-Linecharts/
-slug: /ja/Wio-Terminal-LCD-Linecharts
+slug: /Wio-Terminal-LCD-Linecharts
 last_update:
   date: 05/15/2025
   author: gunengyu

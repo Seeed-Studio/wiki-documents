@@ -4,7 +4,7 @@ title: XIAO RP2040 与 NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/xiao-rp2040-with-nuttx
+slug: /xiao-rp2040-with-nuttx
 last_update:
     date: 8/18/2024
     author: halyssonJr

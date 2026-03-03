@@ -4,7 +4,7 @@ title: Solución de problemas de SenseCAP M1
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting
+slug: /Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Troubleshooting
 last_update:
   date: 02/14/2023
   author: Matthew

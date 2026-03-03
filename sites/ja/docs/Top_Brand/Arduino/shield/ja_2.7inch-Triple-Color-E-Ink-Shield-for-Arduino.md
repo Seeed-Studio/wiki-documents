@@ -4,7 +4,7 @@ title:  Arduino用2.7インチトリプルカラーEリンクシールド
 keywords:
 - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/2.7inch-Triple-Color-E-Ink-Shield-for-Arduino
+slug: /2.7inch-Triple-Color-E-Ink-Shield-for-Arduino
 last_update:
   date: 05/15/2025
   author: jianjing Huang

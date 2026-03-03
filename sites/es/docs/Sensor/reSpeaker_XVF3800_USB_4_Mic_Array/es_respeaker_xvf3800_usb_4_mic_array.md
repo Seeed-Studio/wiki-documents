@@ -4,7 +4,7 @@ title: Introducción al reSpeaker XVF3800 USB Mic Array
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
-slug: /es/respeaker_xvf3800_introduction
+slug: /respeaker_xvf3800_introduction
 sku: 101991441,114993701
 last_update:
   date: 11/10/2025

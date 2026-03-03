@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove_Wio_E5_Helium_tinyML_Demo
+slug: /Grove_Wio_E5_Helium_tinyML_Demo
 last_update:
   date: 05/15/2025
   author: Salman

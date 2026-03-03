@@ -4,7 +4,7 @@ title: Jetpackフラッシュ中のタイムアウト問題
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/usb_timeout_during_flash
+slug: /usb_timeout_during_flash
 last_update:
   date: 1/22/2025
   author: Youjiang

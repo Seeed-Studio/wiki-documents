@@ -4,7 +4,7 @@ title: Uso de Interfaces
 tags:
   - J401 carrier board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/J401_carrierboard_Hardware_Interfaces_Usage
+slug: /J401_carrierboard_Hardware_Interfaces_Usage
 last_update:
   date: 04/29/2024
   author: Jiahao

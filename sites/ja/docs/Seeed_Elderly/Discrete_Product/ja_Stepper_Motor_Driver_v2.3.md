@@ -4,7 +4,7 @@ title: ステッピングモータードライバ v2.3
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Stepper_Motor_Driver_v2.3
+slug: /Stepper_Motor_Driver_v2.3
 last_update:
   date: 05/15/2025
   author: shuxu hu

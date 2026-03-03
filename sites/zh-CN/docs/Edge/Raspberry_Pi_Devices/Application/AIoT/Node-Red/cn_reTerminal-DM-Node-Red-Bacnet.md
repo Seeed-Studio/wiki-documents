@@ -8,7 +8,7 @@ keywords:
   - Node-Red
   - Bacnet
 image: https://files.seeedstudio.com/wiki/reTerminalDM/nodered/bacnet-reterminaldm.png
-slug: /cn/reterminal_dm_rpi_200_node_red_bacnet_tcp
+slug: /reterminal_dm_rpi_200_node_red_bacnet_tcp
 last_update:
   date: 06/26/2024
   author: Kasun Thushara

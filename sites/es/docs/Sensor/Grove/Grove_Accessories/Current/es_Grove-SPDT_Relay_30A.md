@@ -4,7 +4,7 @@ title: Grove - Relé SPDT(30A)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-SPDT_Relay_30A
+slug: /Grove-SPDT_Relay_30A
 sku: 103020012
 last_update:
   date: 1/10/2023

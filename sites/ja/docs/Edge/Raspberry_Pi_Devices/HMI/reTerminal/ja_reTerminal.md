@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reTerminal 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal
+slug: /reTerminal
 sku: 110070048,102110638,103060001,E2025081502,E2025081503
 last_update:
   date: 1/31/2023

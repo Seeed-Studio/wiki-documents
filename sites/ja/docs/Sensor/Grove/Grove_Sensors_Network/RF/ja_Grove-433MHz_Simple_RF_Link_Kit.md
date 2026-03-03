@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-433MHz_Simple_RF_Link_Kit/
-slug: /ja/Grove-433MHz_Simple_RF_Link_Kit
+slug: /Grove-433MHz_Simple_RF_Link_Kit
 sku: 113060000
 last_update:
   date: 05/15/2025

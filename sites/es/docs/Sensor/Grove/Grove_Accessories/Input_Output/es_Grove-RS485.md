@@ -4,7 +4,7 @@ title: Grove - RS485
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-RS485
+slug: /Grove-RS485
 sku: 103020193
 last_update:
   date: 2/22/2023

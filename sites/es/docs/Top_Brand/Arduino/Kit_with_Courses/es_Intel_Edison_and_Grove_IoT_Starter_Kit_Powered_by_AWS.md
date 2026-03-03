@@ -4,7 +4,7 @@ title: Kit de Inicio IoT Intel® Edison y Grove Impulsado por AWS
 keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS
+slug: /Intel_Edison_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 2/17/2023
   author: jianjing Huang

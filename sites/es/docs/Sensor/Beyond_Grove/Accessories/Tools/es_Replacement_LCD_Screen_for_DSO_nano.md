@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Replacement_LCD_Screen_for_DSO_nano/
-slug: /es/Replacement_LCD_Screen_for_DSO_nano
+slug: /Replacement_LCD_Screen_for_DSO_nano
 last_update:
   date: 02/03/2022
   author: gunengyu

@@ -5,7 +5,7 @@ title: ダッシュボードの基本
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecraft-blockchain/blockchain-dashboard/dashboard-basics
+slug: /sensecraft-blockchain/blockchain-dashboard/dashboard-basics
 aliases:
   - /ja/Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics
 last_update:

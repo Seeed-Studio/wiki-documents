@@ -4,7 +4,7 @@ title: 传感器 - 运动（介绍）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Sensor_motion
+slug: /Sensor_motion
 last_update:
   date: 1/6/2023
   author: shuxu hu

@@ -4,7 +4,7 @@ title: BeagleBone® Blue
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/BeagleBone_Blue
+slug: /BeagleBone_Blue
 sku: 102990827
 last_update:
   date: 1/10/2023

@@ -4,7 +4,7 @@ title: RFbee V1.1 - 无线 Arduino 兼容节点
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/RFbee_V1.1-Wireless_Arduino_compatible_node
+slug: /RFbee_V1.1-Wireless_Arduino_compatible_node
 sku: 113050002
 last_update:
   date: 1/13/2023

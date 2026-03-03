@@ -5,7 +5,7 @@ keywords:
 - ePaper display
 - arduino
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover2.webp
-slug: /ja/xiao_075inch_epaper_panel_arduino
+slug: /xiao_075inch_epaper_panel_arduino
 sidebar_position: 3
 last_update:
   date: 03/26/2025

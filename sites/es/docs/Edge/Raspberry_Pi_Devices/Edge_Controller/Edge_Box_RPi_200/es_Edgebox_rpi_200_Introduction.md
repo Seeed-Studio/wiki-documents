@@ -5,7 +5,7 @@ keywords:
 - Raspberry pi
 - Edge Controller
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Edge_Box_introduction
+slug: /Edge_Box_introduction
 sku: 114110227
 last_update:
   date: 2/29/2024

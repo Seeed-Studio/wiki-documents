@@ -2,7 +2,7 @@
 description: Libro de bocetos del Kit Avanzado Sidekick
 title: Libro de bocetos del Kit Avanzado Sidekick
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Sketchbook_of_Sidekick_Advanced_Kit
+slug: /Sketchbook_of_Sidekick_Advanced_Kit
 last_update:
   date: 02/02/2023
   author: w0x7ce

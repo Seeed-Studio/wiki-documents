@@ -2,7 +2,7 @@
 description: Jetson LLM Interface Controller es un asistente de IA completamente local, controlado por voz y texto, que funciona completamente en dispositivos NVIDIA Jetson. Combina Modelos de Lenguaje Grande locales (a través de Ollama) con Speech-to-Text y Text-to-Speech opcionales (NVIDIA Riva) para traducir comandos humanos naturales en acciones de hardware estructuradas y seguras. El sistema permite control privado y de baja latencia de interfaces integradas (GPIO, I2C, PWM, etc.) y sirve como una base modular para aplicaciones de IA en el borde como entornos inteligentes, robótica y agentes habilitados por visión—sin depender de la nube.
 title: Agente LLM Local en Jetson para Control Seguro de Interfaces de Hardware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/llm_interface_control_jetson
+slug: /llm_interface_control_jetson
 last_update:
   date: 01/29/2025
   author: kourosh

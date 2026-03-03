@@ -4,7 +4,7 @@ title: Seeeduino Stalker V3 - Kit Solar Impermeable
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Seeeduino_Stalker_V3-Waterproof_Solar_Kit
+slug: /Seeeduino_Stalker_V3-Waterproof_Solar_Kit
 last_update:
   date: 1/31/2023
   author: shuxu hu

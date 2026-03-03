@@ -4,7 +4,7 @@ title: LinkIt ONE 的 Sidekick 基础套件
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Sidekick_Basic_Kit_for_LinkIt_ONE
+slug: /Sidekick_Basic_Kit_for_LinkIt_ONE
 sku: 110060038
 last_update:
   date: 1/13/2023

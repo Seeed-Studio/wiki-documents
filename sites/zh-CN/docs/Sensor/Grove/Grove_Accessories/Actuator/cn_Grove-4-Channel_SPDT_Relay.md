@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-4-Channel_SPDT_Relay/
-slug: /cn/Grove-4-Channel_SPDT_Relay
+slug: /Grove-4-Channel_SPDT_Relay
 sku: 103020133
 last_update:
   date: 01/09/2022

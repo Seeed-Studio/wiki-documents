@@ -4,7 +4,7 @@ title: ODYSSEY - X86 上の Mender クライアント
 keywords:
 - ソフトウェア Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Mender-Client-ODYSSEY-X86
+slug: /Mender-Client-ODYSSEY-X86
 last_update:
   date: 05/15/2025
   author: jianjing Huang

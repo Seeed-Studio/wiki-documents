@@ -4,7 +4,7 @@ title: reSpeaker Kit de matriz circular de 6 micrófonos para Raspberry Pi
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi
+slug: /ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi
 sku: 107990055
 last_update:
   date: 1/11/2023

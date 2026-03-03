@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - Docusaurus
 image: https://wiki.seeedstudio.com/ja/Sensor_distance/
-slug: /ja/Sensor_distance
+slug: /Sensor_distance
 last_update:
   date: 05/15/2025
   author: gunengyu

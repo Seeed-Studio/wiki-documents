@@ -4,7 +4,7 @@ title: Comenzando con Gapi
 tags:
   - AI model optimize
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/gapi_getting_started-with_jetson
+slug: /gapi_getting_started-with_jetson
 last_update:
   date: 09/20/2024
   author: Youjiang

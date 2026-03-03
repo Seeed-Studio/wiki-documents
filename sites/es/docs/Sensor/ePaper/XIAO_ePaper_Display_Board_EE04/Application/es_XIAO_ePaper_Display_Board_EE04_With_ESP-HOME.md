@@ -2,7 +2,7 @@
 description: Este artículo explica cómo utilizar las características de hardware de la XIAO ePaper Display Board EE04 en ESPHome e integrarla con Home Assistant.
 title: XIAO ePaper Display Board(ESP32-S3) con ESPHome
 image: https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.webp
-slug: /es/EE04_with_esphome_advanced
+slug: /EE04_with_esphome_advanced
 sidebar_position: 2
 last_update:
   date: 10/07/2025

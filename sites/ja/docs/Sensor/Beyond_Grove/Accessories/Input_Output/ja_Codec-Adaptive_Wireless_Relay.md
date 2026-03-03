@@ -4,7 +4,7 @@ title: コーデック適応型ワイヤレスリレー
 keywords:
 - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Codec-Adaptive_Wireless_Relay
+slug: /Codec-Adaptive_Wireless_Relay
 last_update:
   date: 05/15/2025
   author: shuxu hu

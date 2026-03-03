@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: 许可证
-slug: /cn/License
+slug: /License
 ---
 
 ## **重要声明和免责条款**

@@ -2,7 +2,7 @@
 description: XIAO ESP32C6 用 MicroPython
 title: XIAO ESP32C6 と MicroPython
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/xiao_esp32c6_micropython
+slug: /xiao_esp32c6_micropython
 last_update:
   date: 08/30/2023
   author: Hendra

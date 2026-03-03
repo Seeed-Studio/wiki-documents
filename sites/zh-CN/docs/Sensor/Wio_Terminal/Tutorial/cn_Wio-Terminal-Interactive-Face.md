@@ -4,7 +4,7 @@ title: Wio Terminal 交互式表情演示
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Interactive-Face
+slug: /Wio-Terminal-Interactive-Face
 last_update:
   date: 1/31/2023
   author: jianjing Huang

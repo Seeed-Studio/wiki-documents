@@ -9,7 +9,7 @@ keywords:
 - Agent Configuration
 - Device Management
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
-slug: /cn/watcher_web_control_panel
+slug: /watcher_web_control_panel
 last_update:
   date: 10/13/2025
   author: Twelve

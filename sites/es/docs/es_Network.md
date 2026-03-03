@@ -4,7 +4,7 @@ title: Conectividad de Red
 keywords:
 - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Network
+slug: /Network
 last_update:
   date: 05/23/2024
   author: Matthew

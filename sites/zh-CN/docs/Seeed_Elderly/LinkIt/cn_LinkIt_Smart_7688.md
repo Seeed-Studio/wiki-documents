@@ -4,7 +4,7 @@ title: LinkIt Smart 7688
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/LinkIt_Smart_7688
+slug: /LinkIt_Smart_7688
 sku: 102110018
 last_update:
   date: 1/13/2023

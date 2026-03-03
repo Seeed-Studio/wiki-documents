@@ -8,7 +8,7 @@ keywords:
   - YOLO
   - C++
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
-slug: /cn/recamera_connects_to_xiao_via_http
+slug: /recamera_connects_to_xiao_via_http
 last_update:
   date: 07/11/2025
   author: Liangyuxin

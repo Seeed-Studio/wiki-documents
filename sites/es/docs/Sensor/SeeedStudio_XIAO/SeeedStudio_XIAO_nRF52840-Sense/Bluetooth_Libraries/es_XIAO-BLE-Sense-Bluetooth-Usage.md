@@ -4,7 +4,7 @@ title: Para Placas Habilitadas para mbed nRF52 de Seeed
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO-BLE-Sense-Bluetooth-Usage
+slug: /XIAO-BLE-Sense-Bluetooth-Usage
 sku: 101990885
 last_update:
   date: 1/11/2023

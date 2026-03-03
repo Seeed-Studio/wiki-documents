@@ -5,7 +5,7 @@ keywords:
 - SenseCAP_T1000_tracker
 - Helium
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker.webp
-slug: /ja/SenseCAP_T1000_tracker_Helium
+slug: /SenseCAP_T1000_tracker_Helium
 last_update:
   date: 11/22/2024
   author: Jessie

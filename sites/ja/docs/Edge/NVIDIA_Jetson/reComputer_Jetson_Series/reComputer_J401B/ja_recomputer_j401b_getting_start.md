@@ -4,7 +4,7 @@ title: reComputer J401B 入門ガイド
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.webp
-slug: /ja/recomputer_j401b_getting_start
+slug: /recomputer_j401b_getting_start
 sku: 114993486,114993487,114993489,114993488,E2025031201
 last_update:
   date: 4/27/2025

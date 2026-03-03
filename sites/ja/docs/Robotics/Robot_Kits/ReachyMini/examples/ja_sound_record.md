@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini のマイクアレイから音声を録音し、継続時間を設定して WAV ファイルとして保存する例です。
 title: サウンド録音
-slug: /ja/reachymini_examples_sound_record
+slug: /reachymini_examples_sound_record
 keywords:
 - audio recording
 - microphone

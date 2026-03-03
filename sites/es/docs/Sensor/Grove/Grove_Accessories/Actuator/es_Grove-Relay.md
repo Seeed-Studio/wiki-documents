@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-Relay/
-slug: /es/Grove-Relay
+slug: /Grove-Relay
 sku: 103020005
 last_update:
   date: 01/09/2022

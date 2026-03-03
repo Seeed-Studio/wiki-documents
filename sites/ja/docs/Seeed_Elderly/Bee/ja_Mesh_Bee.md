@@ -4,7 +4,7 @@ title: Mesh Bee
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Mesh_Bee
+slug: /Mesh_Bee
 sku: 114990002
 last_update:
   date: 05/15/2025

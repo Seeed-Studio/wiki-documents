@@ -1,7 +1,7 @@
 ---
 description: Guía de uso de Reachy Mini Lite que cubre el panel de la aplicación de escritorio, demostraciones de acciones rápidas, instalación de apps y guía rápida del SDK de Python.
 title: Uso de Reachy Mini Lite
-slug: /es/reachymini_platforms_reachy_mini_lite_usage
+slug: /reachymini_platforms_reachy_mini_lite_usage
 keywords:
 - usage
 - dashboard

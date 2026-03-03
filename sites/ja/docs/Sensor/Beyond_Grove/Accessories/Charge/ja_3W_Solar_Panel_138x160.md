@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウラス
 image: https://wiki.seeedstudio.com/ja/3W_Solar_Panel_138x160/
-slug: /ja/3W_Solar_Panel_138x160
+slug: /3W_Solar_Panel_138x160
 sku: 313070001
 last_update:
   date: 05/15/2025

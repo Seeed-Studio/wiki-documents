@@ -4,7 +4,7 @@ title:  Kit Wearable Xadow Para Edison
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Xadow_Wearable_Kit_For_Edison
+slug: /Xadow_Wearable_Kit_For_Edison
 last_update:
   date: 1/13/2023
   author: shuxu hu

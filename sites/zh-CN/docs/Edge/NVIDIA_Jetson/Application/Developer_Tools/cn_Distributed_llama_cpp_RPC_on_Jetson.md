@@ -10,7 +10,7 @@ keywords:
 - LLM
 - GPU 加速
 image: https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg
-slug: /cn/ai_robotics_distributed_llama_cpp_rpc_jetson
+slug: /ai_robotics_distributed_llama_cpp_rpc_jetson
 sku: 100090853,100076722,100060802,100032662
 last_update:
   date: 2026-01-09

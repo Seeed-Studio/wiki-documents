@@ -13,7 +13,7 @@ keywords:
 - Depth Camera
 - Visual SLAM
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/ac1/ac1.webp 
-slug: /cn/ac1
+slug: /ac1
 last_update:
   date: 2025-09-18
   author: Youjiang

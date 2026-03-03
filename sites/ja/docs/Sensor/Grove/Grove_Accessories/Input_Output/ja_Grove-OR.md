@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-OR/
-slug: /ja/Grove-OR
+slug: /Grove-OR
 last_update:
   date: 05/15/2025
   author: gunengyu

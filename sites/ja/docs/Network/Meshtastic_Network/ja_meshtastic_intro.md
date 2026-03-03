@@ -4,7 +4,7 @@ title:  Meshtastic® ネットワーク入門
 keywords:
 - Meshtastic
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/meshtastic_introduction
+slug: /meshtastic_introduction
 sidebar_position: 1
 last_update:
   date: 12/11/2025

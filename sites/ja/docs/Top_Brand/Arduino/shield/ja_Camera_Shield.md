@@ -2,7 +2,7 @@
 description: Camera_Shield
 title: Camera Shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Camera_Shield
+slug: /Camera_Shield
 sku: 103990057
 last_update:
   date: 05/15/2025

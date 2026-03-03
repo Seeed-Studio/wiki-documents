@@ -4,7 +4,7 @@ title: Xadow 教程 - 通过 BLE 通信
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Xadow_Tutorial_Communicate_via_BLE
+slug: /Xadow_Tutorial_Communicate_via_BLE
 last_update:
   date: 1/13/2023
   author: shuxu hu

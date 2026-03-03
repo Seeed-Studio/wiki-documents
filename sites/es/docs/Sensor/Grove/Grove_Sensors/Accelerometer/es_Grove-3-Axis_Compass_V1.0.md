@@ -4,7 +4,7 @@ title: Grove - Brújula de 3 Ejes V1.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-3-Axis_Compass_V1.0
+slug: /Grove-3-Axis_Compass_V1.0
 sku: 101020034
 last_update:
   date: 1/5/2023

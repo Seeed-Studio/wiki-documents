@@ -4,7 +4,7 @@ title: Xadow - Q Touch Sensor
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Q_Touch_Sensor
+slug: /Xadow_Q_Touch_Sensor
 last_update:
   date: 05/15/2025
   author: shuxu hu

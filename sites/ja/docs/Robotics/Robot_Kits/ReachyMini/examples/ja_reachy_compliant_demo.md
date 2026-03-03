@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini をコンプライアンスモードにし、重力補償を有効にして、ロボットが軽い押しに追従し、手を離すとその場に留まるデモです。
 title: コンプライアンスモード デモ
-slug: /ja/reachymini_examples_reachy_compliant_demo
+slug: /reachymini_examples_reachy_compliant_demo
 keywords:
 - compliant mode
 - gravity compensation

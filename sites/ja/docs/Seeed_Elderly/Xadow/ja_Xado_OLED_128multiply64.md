@@ -4,7 +4,7 @@ title:  Xadow - OLED 128*64
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xado_OLED_128multiply64
+slug: /Xado_OLED_128multiply64
 last_update:
   date: 05/15/2025
   author: shuxu hu

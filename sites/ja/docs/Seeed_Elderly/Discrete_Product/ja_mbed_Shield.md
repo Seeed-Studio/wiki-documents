@@ -4,7 +4,7 @@ title: Mbed Shield
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/mbed_Shield
+slug: /mbed_Shield
 sku: 103030002
 last_update:
   date: 05/15/2025

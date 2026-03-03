@@ -4,7 +4,7 @@ title: Formato de Payload
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/T1000_payload
+slug: /T1000_payload
 last_update:
   date: 2/21/2023
   author: Jessie

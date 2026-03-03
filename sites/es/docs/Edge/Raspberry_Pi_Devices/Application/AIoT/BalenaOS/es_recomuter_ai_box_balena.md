@@ -6,7 +6,7 @@ keywords:
   - reComputer R2140
   - balena
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/balena/recomputer_ai_box/recomputer_ai_r2140.webp
-slug: /es/recomputer_ai_r2140_balena
+slug: /recomputer_ai_r2140_balena
 sku: 114993560,114993627
 last_update:
   date: 11/4/2025

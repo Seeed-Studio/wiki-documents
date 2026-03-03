@@ -4,7 +4,7 @@ title: XIAO nRF52840-Sense 与 PlatformIO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/nRF52840_PlatformIO/1.png
-slug: /cn/xiao_nrf52840_with_platform_io
+slug: /xiao_nrf52840_with_platform_io
 last_update:
   date: 08/14/2024
   author: Jason

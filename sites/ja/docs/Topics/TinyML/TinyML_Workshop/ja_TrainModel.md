@@ -4,7 +4,7 @@ title: 独自のAIモデルをトレーニングしてデプロイする
 keywords:
 - tinyml コース
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/train_and_deploy_model
+slug: /train_and_deploy_model
 last_update:
   date: 05/15/2025
   author: Frank

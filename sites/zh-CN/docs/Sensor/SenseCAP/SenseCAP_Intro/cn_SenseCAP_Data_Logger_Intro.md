@@ -4,7 +4,7 @@ title: SenseCAP 数据记录器
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/SenseCAP_Data_Logger_Intro
+slug: /SenseCAP_Data_Logger_Intro
 last_update:
   date: 07/24/2024
   author: Frank

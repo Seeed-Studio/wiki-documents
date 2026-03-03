@@ -3,7 +3,7 @@ title: XIAO IR Mate スマート IR リモートの使用開始
 description: |
   Seeed Studio のスマート IR リモート。テレビやエアコンなどの従来の家電を Home Assistant スマートホームエコシステムに統合するよう設計されています。
 image: https://files.seeedstudio.com/wiki/XIAO_IR_MATE/XIAO-Smart-IR-Mate.webp
-slug: /ja/XIAO_IR_Mate_Smart_IR_Remote
+slug: /XIAO_IR_Mate_Smart_IR_Remote
 sku: 109990586
 keywords:
   - XIAO

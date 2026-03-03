@@ -4,7 +4,7 @@ title: Actualizar Paquetes de Software para Jetson
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/upgrade_software_packages_for_jetson
+slug: /upgrade_software_packages_for_jetson
 last_update:
   date: 2/11/2025
   author: Youjiang

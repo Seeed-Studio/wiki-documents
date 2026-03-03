@@ -6,7 +6,7 @@ tags:
   - WSL2
   - Windows
 image: https://files.seeedstudio.com/wiki/Flash_JetPack_with_WSL2/check_custom_kernel.png
-slug: /es/ai_robotics_flash_jetpack_with_wsl2
+slug: /ai_robotics_flash_jetpack_with_wsl2
 sku: 110110145
 last_update:
   date: 02/24/2026

@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display para XIAO-FAQ
 title: Si quiero conectar el Seeed Studio XIAO ESP32S3 Sense a esta pantalla de extensión, ¿habrá un conflicto con dos ranuras de tarjeta TF?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/two_TF_card
+slug: /two_TF_card
 last_update:
   date: 6/30/2023
   author: cheng.tang

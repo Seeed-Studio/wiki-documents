@@ -5,7 +5,7 @@ keywords:
   - reComputer Super
   - Thermal Conductive Paste
 image: https://files.seeedstudio.com/wiki/replace_the_thermal_conductive_paste_for_recomputer/replace_the_thermal_conductive_paste_for_recomputer.webp
-slug: /cn/replace_the_thermal_conductive_paste_for_recomputer
+slug: /replace_the_thermal_conductive_paste_for_recomputer
 last_update:
   date: 07/18/2025
   author: Youjiang

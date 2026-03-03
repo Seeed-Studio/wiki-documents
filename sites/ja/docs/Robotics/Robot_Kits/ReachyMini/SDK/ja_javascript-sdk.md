@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini 向けの JavaScript SDK と Web アプリの完全ガイド。WebRTC と Hugging Face Spaces を用いて、インストール不要のブラウザベースなロボット制御を実現します。
 title: JavaScript SDK と Web アプリ
-slug: /ja/reachymini_sdk_javascript-sdk
+slug: /reachymini_sdk_javascript-sdk
 keywords:
 - javascript
 - web apps

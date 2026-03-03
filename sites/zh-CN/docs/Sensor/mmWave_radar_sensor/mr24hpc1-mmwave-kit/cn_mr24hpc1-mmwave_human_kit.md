@@ -5,7 +5,7 @@ keywords:
 - radar
 - mmwave kit
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/mmwave_human_detection_kit
+slug: /mmwave_human_detection_kit
 sku: E23010426,110061541,E24121301
 sidebar_position: 0
 last_update:

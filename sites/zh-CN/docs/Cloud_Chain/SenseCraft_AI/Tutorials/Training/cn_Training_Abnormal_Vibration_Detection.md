@@ -2,7 +2,7 @@
 description: 介绍异常振动检测的使用方法。
 title: 异常振动检测
 image: https://files.seeedstudio.com/wiki/SenseCraft/SenseCraft_AI/Intro_image_title.webp
-slug: /cn/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection
+slug: /sensecraft-ai/tutorials/workspace/abnormal-vibration-detection
 sidebar_position: 1
 last_update:
   date: 01/06/2026

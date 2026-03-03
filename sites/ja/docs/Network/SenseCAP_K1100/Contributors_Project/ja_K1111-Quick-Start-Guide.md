@@ -4,7 +4,7 @@ title: 土壌水分モニタリングアラームシステム
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/K1111-Quick-Start-Guide
+slug: /K1111-Quick-Start-Guide
 last_update:
   date: 05/15/2025
   author: shuxu hu

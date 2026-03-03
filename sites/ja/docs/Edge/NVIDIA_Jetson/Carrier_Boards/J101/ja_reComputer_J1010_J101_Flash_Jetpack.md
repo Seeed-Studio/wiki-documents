@@ -2,7 +2,7 @@
 description: reComputer J1010 | J101
 title: J101 キャリアボード
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reComputer_J1010_J101_Flash_Jetpack
+slug: /reComputer_J1010_J101_Flash_Jetpack
 sku: 110061362,102991694,110061441,110061481
 last_update:
   date: 01/05/2023

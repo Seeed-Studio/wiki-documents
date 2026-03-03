@@ -2,7 +2,7 @@
 description: 本页面介绍如何使用 XIAO Debug Mate 的 UART 监视器功能。
 title: UART 监视器
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.webp
-slug: /cn/xiao_debug_mate_serial
+slug: /xiao_debug_mate_serial
 sku: 109990585
 sidebar_position: 3
 last_update:

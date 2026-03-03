@@ -3,7 +3,7 @@ sidebar_position: 3
 description: 如何使用训练（目标检测）
 title: 训练 - 目标检测
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/1.9.webp
-slug: /cn/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection
+slug: /sensecraft-ai/tutorials/sensecraft-ai-training-object-detection
 aliases:
   - /cn/sensecraft_ai_training_object_detection
 last_update:

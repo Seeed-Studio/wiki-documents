@@ -4,7 +4,7 @@ title: ChatGPT 指示器
 keywords:
 - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/SenseCAP_Indicator_ChatGPT
+slug: /SenseCAP_Indicator_ChatGPT
 sidebar_position: 2
 last_update:
   date: 5/31/2023

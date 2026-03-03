@@ -4,7 +4,7 @@ title: Edge Series Guide
 keywords:
 - Edge Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Edge_series_Intro
+slug: /Edge_series_Intro
 last_update:
   date: 10/24/2023
   author: Kasun Thushara

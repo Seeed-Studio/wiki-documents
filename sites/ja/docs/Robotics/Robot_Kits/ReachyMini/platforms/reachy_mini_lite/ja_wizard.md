@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini Lite モーターの診断と設定を行うために、Dynamixel Wizard 2.0 ソフトウェアを使用してモーターのパラメータを読み取るためのガイドです。
 title: Dynamixel Wizard を使用したモーターパラメータの読み取り
-slug: /ja/reachymini_platforms_reachy_mini_lite_wizard
+slug: /reachymini_platforms_reachy_mini_lite_wizard
 keywords:
 - dynamixel wizard
 - motor parameters

@@ -4,7 +4,7 @@ title: LoRa/LoRaWAN 网关套件
 keywords:
 - Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/LoRa_LoRaWan_Gateway_Kit
+slug: /LoRa_LoRaWan_Gateway_Kit
 sku: 110060622, 110060623
 last_update:
   date: 2/15/2023

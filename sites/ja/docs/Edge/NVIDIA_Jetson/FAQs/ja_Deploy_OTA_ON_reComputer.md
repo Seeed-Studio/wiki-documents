@@ -8,7 +8,7 @@ keywords:
 - reComputer
 - BSP
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop2.webp
-slug: /ja/deploy_ota_on_recomputer
+slug: /deploy_ota_on_recomputer
 last_update:
   date: 12/05/2025
   author: Zibo

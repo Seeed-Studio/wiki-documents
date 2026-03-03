@@ -4,7 +4,7 @@ title: Grove 初学者套件 for Arduino(EOL)
 keywords:
 - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_Beginner_Kit_for_Arduino
+slug: /Grove_Beginner_Kit_for_Arduino
 sku: 110020171
 last_update:
   date: 2/14/2023

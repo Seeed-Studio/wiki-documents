@@ -9,7 +9,7 @@ keywords:
   - N3uron
   - AWS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reTerminalDM_N3uron_AWS
+slug: /reTerminalDM_N3uron_AWS
 last_update:
   date: 3/20/2024
   author: Kasun Thushara

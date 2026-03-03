@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/LTE_Cat_1_Pi_HAT/
-slug: /ja/LTE_Cat_1_Pi_HAT
+slug: /LTE_Cat_1_Pi_HAT
 sku: 113990454, 113990496, 102991015
 last_update:
   date: 05/15/2025

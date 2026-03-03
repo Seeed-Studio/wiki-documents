@@ -4,7 +4,7 @@ title: モーターシールド V1.0
 keywords:
 - Arduino シールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Motor_Shield_V1.0
+slug: /Motor_Shield_V1.0
 last_update:
   date: 05/15/2025
   author: jianjing Huang

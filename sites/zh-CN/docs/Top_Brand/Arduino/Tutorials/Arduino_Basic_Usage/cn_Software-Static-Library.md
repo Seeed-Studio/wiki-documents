@@ -4,7 +4,7 @@ title: 预编译 Arduino 库的使用方法
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Software-Static-Library
+slug: /Software-Static-Library
 last_update:
   date: 1/16/2023
   author: jianjing Huang

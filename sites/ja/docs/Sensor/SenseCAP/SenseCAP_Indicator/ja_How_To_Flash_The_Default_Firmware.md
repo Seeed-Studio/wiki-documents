@@ -4,7 +4,7 @@ title: ファームウェアの更新とフラッシュ
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
+slug: /SenseCAP_Indicator_How_To_Flash_The_Default_Firmware
 toc_max_heading_level: 4
 sidebar_position: 3
 last_update:

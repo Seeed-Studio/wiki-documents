@@ -8,7 +8,7 @@ keywords:
   - Swappable Gripper
   - Robotics 
 image: https://files.seeedstudio.com/wiki/robotics/projects/end_effectors/dm_gripper/1-100094243--Seeed-Gripper-01.webp
-slug: /es/dm_gripper
+slug: /dm_gripper
 sku: 100094243,100007512
 last_update:
   date: 9/17/2025

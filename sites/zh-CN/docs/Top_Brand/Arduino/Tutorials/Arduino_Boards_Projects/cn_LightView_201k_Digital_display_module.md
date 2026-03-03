@@ -5,7 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/LightView_201k_Digital_display_module
+slug: /LightView_201k_Digital_display_module
 last_update:
   date: 2/15/2023
   author: jianjing Huang

@@ -5,7 +5,7 @@ keywords:
   - Edge
   - EdgeBox-RPi-200
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/EdgeBox-RPi-200-boot-from-external-media
+slug: /EdgeBox-RPi-200-boot-from-external-media
 last_update:
   date: 6/14/2023
   author: Peter Pan

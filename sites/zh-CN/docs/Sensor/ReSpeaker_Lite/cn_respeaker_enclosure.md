@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/respeaker_enclosure
+slug: /respeaker_enclosure
 last_update:
   date: 10/14/2024
   author: Jessie

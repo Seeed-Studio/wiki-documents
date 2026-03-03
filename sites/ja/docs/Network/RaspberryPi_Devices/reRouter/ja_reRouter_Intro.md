@@ -4,7 +4,7 @@ title: reRouter ガイド
 keywords:
 - reRouter
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reRouter_Intro
+slug: /reRouter_Intro
 last_update:
   date: 05/15/2025
   author: Kasun Thushara

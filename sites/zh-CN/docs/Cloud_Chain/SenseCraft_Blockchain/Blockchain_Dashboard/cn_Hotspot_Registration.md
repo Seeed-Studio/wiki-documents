@@ -5,7 +5,7 @@ title: 热点注册
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-blockchain/blockchain-dashboard/hotspot-registration
+slug: /sensecraft-blockchain/blockchain-dashboard/hotspot-registration
 aliases:
   - /cn/sensecraft-blockchain/sensecap-mx-dashboard/hotspot-registration
 last_update:

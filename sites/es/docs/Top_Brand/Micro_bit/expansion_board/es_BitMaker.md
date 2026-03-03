@@ -4,7 +4,7 @@ title: BitMaker
 keywords:
 - Micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/BitMaker
+slug: /BitMaker
 last_update:
   date: 12/29/2023
   author: Seraphina

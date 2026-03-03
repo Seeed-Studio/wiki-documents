@@ -4,7 +4,7 @@ title: Grove - Piezo Vibration Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Piezo_Vibration_Sensor
+slug: /Grove-Piezo_Vibration_Sensor
 sku: 101020031
 last_update:
   date: 05/15/2025

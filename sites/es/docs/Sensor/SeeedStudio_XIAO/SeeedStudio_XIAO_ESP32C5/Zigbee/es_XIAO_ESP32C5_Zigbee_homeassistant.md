@@ -6,7 +6,7 @@ keywords:
   - zigbee
   - idf
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/zigbee_0_1.webp
-slug: /es/xiao_esp32c5_zigbee_homeassistant
+slug: /xiao_esp32c5_zigbee_homeassistant
 sku: 100010048
 last_update:
   date: 1/9/2026

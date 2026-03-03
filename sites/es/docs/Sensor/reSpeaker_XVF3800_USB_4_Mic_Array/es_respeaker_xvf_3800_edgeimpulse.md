@@ -9,7 +9,7 @@ keywords:
 - TinyML
 - Speech Recognition
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
-slug: /es/respeaker_xvf3800_xiao_edge_impulse
+slug: /respeaker_xvf3800_xiao_edge_impulse
 last_update:
   date: 8/7/2025
   author: Kasun Thushara

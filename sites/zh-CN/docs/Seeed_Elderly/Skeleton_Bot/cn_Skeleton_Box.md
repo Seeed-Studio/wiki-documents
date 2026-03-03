@@ -4,7 +4,7 @@ title: 骨架盒
 keywords:
 - Skeleton_Box
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Skeleton_Box
+slug: /Skeleton_Box
 last_update:
   date: 01/20/2023
   author: Matthew

@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-IO-I2C/
-slug: /ja/Wio-Terminal-IO-I2C
+slug: /Wio-Terminal-IO-I2C
 last_update:
   date: 05/15/2025
   author: gunengyu

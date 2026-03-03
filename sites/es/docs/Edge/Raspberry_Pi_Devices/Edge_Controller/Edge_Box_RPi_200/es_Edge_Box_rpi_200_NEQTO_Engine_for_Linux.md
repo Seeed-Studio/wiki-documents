@@ -2,7 +2,7 @@
 description: Comenzando con NEQTO Engine para Linux en EdgeBox-RPI-200
 title: Comenzando con NEQTO Engine para Linux en EdgeBox-RPI-200
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/NEQTO_Engine_for_Linux_EdgeBox-RPI-200
+slug: /NEQTO_Engine_for_Linux_EdgeBox-RPI-200
 last_update:
   date: 04/25/2024
   author: Kazuhiro Ozuchi

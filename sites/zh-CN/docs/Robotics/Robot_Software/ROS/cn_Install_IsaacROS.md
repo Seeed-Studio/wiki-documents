@@ -6,7 +6,7 @@ keywords:
 - Isaac ROS
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/install_isaacros
+slug: /install_isaacros
 last_update:
   date: 2025/5/28
   author: zhuyaohui

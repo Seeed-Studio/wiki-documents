@@ -4,7 +4,7 @@ title: 使用 Arduino 开发双芯片
 keywords:
   - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.webp
-slug: /cn/SenseCAP_Indicator_ESP32_Arduino
+slug: /SenseCAP_Indicator_ESP32_Arduino
 last_update:
   date: 2/28/2025
   author: Hendra, LongDirtyAnimAlf

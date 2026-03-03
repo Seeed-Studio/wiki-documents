@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: solar_node
 link:
   type: generated-index
-  slug: ja/solar_node
+  slug: solar_node
   title: ソーラーノード
   description: Meshtastic用SenseCAPソーラーノード

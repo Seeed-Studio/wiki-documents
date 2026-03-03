@@ -4,7 +4,7 @@ title: Grove BlinkM
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-BlinkM
+slug: /Grove-BlinkM
 last_update:
   date: 05/15/2025
   author: jianjing Huang

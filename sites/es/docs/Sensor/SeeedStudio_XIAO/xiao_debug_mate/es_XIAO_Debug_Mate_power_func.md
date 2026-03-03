@@ -2,7 +2,7 @@
 description: Aprende a usar la función de Medidor de Potencia del XIAO Debug Mate para monitoreo preciso de voltaje, corriente y potencia.
 title: Medidor de Potencia
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/32.webp
-slug: /es/xiao_debug_mate_power
+slug: /xiao_debug_mate_power
 sku: 109990585
 sidebar_position: 4
 last_update:

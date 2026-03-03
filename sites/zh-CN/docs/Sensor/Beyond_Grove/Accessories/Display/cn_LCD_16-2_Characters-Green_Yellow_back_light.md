@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/LCD_8-2_Characters-Blue_back_light/
-slug: /cn/LCD_16-2_Characters-Green_Yellow_back_light
+slug: /LCD_16-2_Characters-Green_Yellow_back_light
 last_update:
   date: 02/03/2022
   author: matthew

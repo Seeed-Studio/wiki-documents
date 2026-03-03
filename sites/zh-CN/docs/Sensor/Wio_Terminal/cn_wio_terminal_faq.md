@@ -2,7 +2,7 @@
 description: Wio terminal-常见问题页面
 title: Wio Terminal 常见问题
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/wio_terminal_faq
+slug: /wio_terminal_faq
 date: 1/31/2024
 author: Seraphina
 ---

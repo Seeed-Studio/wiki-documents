@@ -4,7 +4,7 @@ title: Ajuste de Volumen
 keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/respeaker_volume
+slug: /respeaker_volume
 last_update:
   date: 9/27/2024
   author: Jessie

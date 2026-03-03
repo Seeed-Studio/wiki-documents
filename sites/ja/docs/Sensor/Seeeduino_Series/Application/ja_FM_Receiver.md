@@ -4,7 +4,7 @@ title: FM受信機
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/FM_Receiver
+slug: /FM_Receiver
 last_update:
   date: 05/15/2025
   author: shuxu hu

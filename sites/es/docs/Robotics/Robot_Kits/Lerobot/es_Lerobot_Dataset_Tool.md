@@ -7,7 +7,7 @@ keywords:
 - Arm
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
-slug: /es/lerobot_dataset_tool
+slug: /lerobot_dataset_tool
 sku: E24122002, 114993609, 114993608, 108090023, 108090003, 101090141, 101090142, 114090081,114090080,100049805,100038899,100028196
 last_update:
   date: 2/11/2026

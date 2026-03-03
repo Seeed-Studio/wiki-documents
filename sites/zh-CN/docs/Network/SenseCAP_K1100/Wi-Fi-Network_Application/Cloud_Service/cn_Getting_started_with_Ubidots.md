@@ -4,7 +4,7 @@ title: Ubidots 使用指南
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Getting_started_with_Ubidots
+slug: /Getting_started_with_Ubidots
 last_update:
   date: 2023/1/13
   author: shuxu hu

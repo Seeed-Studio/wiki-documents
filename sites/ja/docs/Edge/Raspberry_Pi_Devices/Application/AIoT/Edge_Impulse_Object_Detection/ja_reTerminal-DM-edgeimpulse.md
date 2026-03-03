@@ -6,7 +6,7 @@ keywords:
   - reTerminalDM Application
   - Embedded_ML
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal-DM-edgeimpulse
+slug: /reTerminal-DM-edgeimpulse
 last_update:
   date: 9/21/2023
   author: Kasun Thushara

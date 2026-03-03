@@ -4,7 +4,7 @@ title: Grove - ±5A DC/AC 电流传感器 (ACS70331)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-5A_DC_AC_Current_Sensor-ACS70331
+slug: /Grove-5A_DC_AC_Current_Sensor-ACS70331
 sku: 101020615
 last_update:
   date: 1/9/2023

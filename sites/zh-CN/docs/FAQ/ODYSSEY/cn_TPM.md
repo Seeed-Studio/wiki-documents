@@ -3,7 +3,7 @@ description: ODYSSEY-常见问题解答
 title: ODYSSEY-X86J41x5 是否具有 TPM？
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /cn/TPM
+slug: /TPM
 last_update:
   date: 2023.6.25   
   author: cheng.tang

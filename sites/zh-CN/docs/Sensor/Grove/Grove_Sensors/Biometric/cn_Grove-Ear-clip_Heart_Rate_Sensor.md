@@ -4,7 +4,7 @@ title: Grove - 耳夹式心率传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Ear-clip_Heart_Rate_Sensor
+slug: /Grove-Ear-clip_Heart_Rate_Sensor
 sku: 101020033
 last_update:
   date: 1/6/2023

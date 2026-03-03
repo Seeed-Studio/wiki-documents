@@ -4,7 +4,7 @@ title: NFC Shield V1.0
 keywords:
 - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/NFC_Shield_V1.0
+slug: /NFC_Shield_V1.0
 last_update:
   date: 05/15/2025
   author: jianjing Huang

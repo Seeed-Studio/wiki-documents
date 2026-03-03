@@ -4,7 +4,7 @@ title: Grove - Temperature Sensor
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Temperature_Sensor
+slug: /Grove-Temperature_Sensor
 last_update:
   date: 1/3/2023
   author: jianjing Huang

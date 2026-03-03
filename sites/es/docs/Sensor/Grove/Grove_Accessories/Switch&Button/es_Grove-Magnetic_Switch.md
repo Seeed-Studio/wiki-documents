@@ -4,7 +4,7 @@ title: Grove - Interruptor Magnético
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Magnetic_Switch
+slug: /Grove-Magnetic_Switch
 sku: 101020038
 last_update:
   date: 2/22/2023

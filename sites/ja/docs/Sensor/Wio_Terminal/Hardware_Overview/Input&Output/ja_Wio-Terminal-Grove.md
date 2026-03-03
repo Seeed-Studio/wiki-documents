@@ -5,7 +5,7 @@ keywords:
 - Wio_terminal Hardware_Overview
 - Input&Output
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Grove
+slug: /Wio-Terminal-Grove
 last_update:
   date: 05/15/2025
   author: jianjing Huang

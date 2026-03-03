@@ -4,7 +4,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Dfu-util/
-slug: /ja/Dfu-util
+slug: /Dfu-util
 last_update:
   date: 05/15/2025
   author: gunengyu

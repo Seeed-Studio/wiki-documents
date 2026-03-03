@@ -4,7 +4,7 @@ title: T1000-E 追踪器入门指南
 keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecap_t1000_e
+slug: /sensecap_t1000_e
 sku: 114993369
 sidebar_position: 2
 last_update:

@@ -3,7 +3,7 @@ sidebar_position: 2
 description: Cómo usar un modelo para Grove Vision AI V2
 title: Usando un modelo para Grove Vision AI V2
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/23.webp
-slug: /es/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-grove-vision-ai-v2
+slug: /sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-grove-vision-ai-v2
 aliases:
   - /es/sensecraft_ai_pretrained_models_for_grove_visionai_v2
 last_update:

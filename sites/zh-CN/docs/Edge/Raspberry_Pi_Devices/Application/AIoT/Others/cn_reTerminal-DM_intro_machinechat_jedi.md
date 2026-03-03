@@ -8,7 +8,7 @@ keywords:
   - Industrial 
   - Jedi MachineChat
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reTerminalDM_Introduction_Jedi_MachineChat
+slug: /reTerminalDM_Introduction_Jedi_MachineChat
 last_update:
   date: 3/28/2024
   author: Kasun Thushara

@@ -4,7 +4,7 @@ title: Grove - 红外接收器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Infrared_Receiver
+slug: /Grove-Infrared_Receiver
 sku: 101020016
 last_update:
   date: 1/5/2023

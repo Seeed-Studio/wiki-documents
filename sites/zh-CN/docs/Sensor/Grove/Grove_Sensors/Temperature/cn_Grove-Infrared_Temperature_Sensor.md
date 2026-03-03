@@ -4,7 +4,7 @@ title: Grove - 红外温度传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Infrared_Temperature_Sensor
+slug: /Grove-Infrared_Temperature_Sensor
 sku: 101020062
 last_update:
   date: 1/4/2023

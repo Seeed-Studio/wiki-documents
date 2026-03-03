@@ -4,7 +4,7 @@ title: Arduino V2 用 Sidekick Basic Kit
 keywords:
 - コース付きキット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sidekick_Basic_Kit_for_Arduino_V2
+slug: /Sidekick_Basic_Kit_for_Arduino_V2
 sku: 110060025
 last_update:
   date: 05/15/2025

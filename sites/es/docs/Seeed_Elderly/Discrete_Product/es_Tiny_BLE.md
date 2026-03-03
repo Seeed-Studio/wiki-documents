@@ -4,7 +4,7 @@ title:  Tiny BLE
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Tiny_BLE
+slug: /Tiny_BLE
 sku: 102080005
 last_update:
   date: 1/13/2023

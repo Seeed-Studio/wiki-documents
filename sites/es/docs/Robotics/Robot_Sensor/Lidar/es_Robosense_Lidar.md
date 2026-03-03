@@ -8,7 +8,7 @@ keywords:
 - Lidar
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/robosense_lidar
+slug: /robosense_lidar
 last_update:
   date: 05/7/2024
   author: ZhuYaoHui

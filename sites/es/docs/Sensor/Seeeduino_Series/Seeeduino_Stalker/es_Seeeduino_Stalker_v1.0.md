@@ -4,7 +4,7 @@ title: Seeeduino Stalker v1.0
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Seeeduino_Stalker_v1.0
+slug: /Seeeduino_Stalker_v1.0
 last_update:
   date: 1/31/2023
   author: shuxu hu

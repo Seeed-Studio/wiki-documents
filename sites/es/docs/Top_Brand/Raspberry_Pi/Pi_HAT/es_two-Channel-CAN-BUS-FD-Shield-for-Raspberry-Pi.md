@@ -4,7 +4,7 @@ title: Shield CAN BUS FD de 2 Canales para Raspberry Pi
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi
+slug: /2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi
 sku: 103030296, 103990563
 last_update:
   date: 1/11/2023

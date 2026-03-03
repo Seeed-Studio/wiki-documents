@@ -2,7 +2,7 @@
 description: ODYSSEY-常见问题解答
 title: Arduino IDE 无法识别 ODYSSEY - X86J4105/X86J4125 上的板载微控制器
 #keywords:
-slug: /cn/not_recognize-onboard-microcontroller
+slug: /not_recognize-onboard-microcontroller
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 2023/6/26

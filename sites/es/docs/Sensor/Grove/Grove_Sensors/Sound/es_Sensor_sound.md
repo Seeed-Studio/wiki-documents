@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Sensor_sound/
-slug: /es/Sensor_sound
+slug: /Sensor_sound
 last_update:
   date: 01/06/2022
   author: gunengyu

@@ -6,7 +6,7 @@ keywords:
   - reTerminal-DM
   - Node-Red
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal-DM-Node-Red-canbus
+slug: /reTerminal-DM-Node-Red-canbus
 last_update:
   date: 04/28/2023
   author: Peter Pan

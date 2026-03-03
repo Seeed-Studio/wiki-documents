@@ -4,7 +4,7 @@ title: センサー - モーション（概要）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sensor_motion
+slug: /Sensor_motion
 last_update:
   date: 05/15/2025
   author: shuxu hu

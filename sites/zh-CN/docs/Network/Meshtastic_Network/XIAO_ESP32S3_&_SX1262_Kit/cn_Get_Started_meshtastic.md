@@ -2,7 +2,7 @@
 description: 基于 XIAO ESP32S3 和 Wio-SX1262 套件的 Meshtastic
 title: XIAO ESP32-S3&Wio SX1262 套件
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
-slug: /cn/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
+slug: /xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
 last_update:
   date: 12/11/2025
   author: Michelle Huang

@@ -3,7 +3,7 @@ description: |
   来自Seeed Studio的多功能驱动板，专为控制机器人应用中的串行总线舵机而设计。它具有一个关键的跳线设置，必须根据连接方式（USB或直接UART）进行调整。
 title: 总线舵机驱动板
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/9.webp
-slug: /cn/bus_servo_driver_board
+slug: /bus_servo_driver_board
 sku: 108090023,108090003,114993612,105990190,101090141,101090142,100067882
 keywords:
     - Bus Servo

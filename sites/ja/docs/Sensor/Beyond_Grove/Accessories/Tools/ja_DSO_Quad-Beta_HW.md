@@ -4,7 +4,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/DSO_Quad-Beta_HW
+slug: /DSO_Quad-Beta_HW
 last_update:
   date: 05/15/2025
   author: gunengyu

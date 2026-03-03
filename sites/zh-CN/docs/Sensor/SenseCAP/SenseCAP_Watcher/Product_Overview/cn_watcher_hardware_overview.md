@@ -2,7 +2,7 @@
 description: SenseCAP Watcher 的硬件组件。
 title: 硬件概述
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/hardware_overview_1.webp
-slug: /cn/watcher_hardware_overview
+slug: /watcher_hardware_overview
 sidebar_position: 1
 last_update:
   date: 10/18/2024

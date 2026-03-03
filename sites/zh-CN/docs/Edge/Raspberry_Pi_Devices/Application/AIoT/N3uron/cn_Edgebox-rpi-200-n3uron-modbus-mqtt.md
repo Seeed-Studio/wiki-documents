@@ -10,7 +10,7 @@ keywords:
   - Modbus
   - AWS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Edgebox_rpi_200_N3uron_modbus_mqtt_aws
+slug: /Edgebox_rpi_200_N3uron_modbus_mqtt_aws
 last_update:
   date: 5/10/2024
   author: Kasun Thushara and Xabier Fernández

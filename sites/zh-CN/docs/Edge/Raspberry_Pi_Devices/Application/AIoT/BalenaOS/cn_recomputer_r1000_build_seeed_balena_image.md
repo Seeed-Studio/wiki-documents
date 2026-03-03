@@ -6,7 +6,7 @@ keywords:
   - reComputer R1000
   - balena
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/build_balenaOS_for_reComputer_r1000
+slug: /build_balenaOS_for_reComputer_r1000
 last_update:
   date: 10/8/2024
   author: ShuishengPeng

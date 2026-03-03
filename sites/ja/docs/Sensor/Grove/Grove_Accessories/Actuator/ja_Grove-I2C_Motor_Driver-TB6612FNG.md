@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-I2C_Motor_Driver-TB6612FNG/
-slug: /ja/Grove-I2C_Motor_Driver-TB6612FNG
+slug: /Grove-I2C_Motor_Driver-TB6612FNG
 sku: 108020103
 last_update:
   date: 05/15/2025

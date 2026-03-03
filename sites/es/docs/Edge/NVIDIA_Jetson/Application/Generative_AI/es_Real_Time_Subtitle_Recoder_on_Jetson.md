@@ -6,7 +6,7 @@ keywords:
   - reComputer
   - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Real Time Subtitle Recoder on Nvidia Jetson
+slug: /Real Time Subtitle Recoder on Nvidia Jetson
 last_update:
   date: 02/23/2024
   author: Jiahao

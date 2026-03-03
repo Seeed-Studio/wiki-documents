@@ -3,7 +3,7 @@ title: Primeros pasos con Seeed Studio XIAO RA4M1
 description: |
   XIAO RA4M1 - La placa de desarrollo más pequeña basada en Renesas RA4M1 de 32 bits, lista para Arduino IDE, 19 GPIO, LED RGB, CAN BUS, USB 2.0
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
-slug: /es/getting_started_xiao_ra4m1
+slug: /getting_started_xiao_ra4m1
 sku: 102010551,102010638
 keywords:
   - XIAO

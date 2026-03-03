@@ -4,7 +4,7 @@ title: NFCシールド
 keywords:
 - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/NFC_Shield
+slug: /NFC_Shield
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -1,7 +1,7 @@
 ---
 description: Ejemplo que demuestra cómo acceder a los datos del sensor IMU, incluidos acelerómetro, giroscopio, orientación de cuaternión y temperatura desde un Reachy Mini inalámbrico.
 title: Ejemplo de IMU
-slug: /es/reachymini_examples_imu
+slug: /reachymini_examples_imu
 keywords:
 - imu
 - accelerometer

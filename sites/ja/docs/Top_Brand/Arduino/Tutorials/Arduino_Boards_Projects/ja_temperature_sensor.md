@@ -5,7 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/temperature_sensor
+slug: /temperature_sensor
 last_update:
   date: 05/15/2025
   author: jianjing Huang

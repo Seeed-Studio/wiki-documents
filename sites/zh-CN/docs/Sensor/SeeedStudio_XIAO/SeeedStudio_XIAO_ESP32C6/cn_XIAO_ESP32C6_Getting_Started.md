@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ESP32C6
 - Seeeduino
-slug: /cn/xiao_esp32c6_getting_started
+slug: /xiao_esp32c6_getting_started
 sku: 113991254,102010636,101991470
 toc_max_heading_level: 4
 sidebar_position: 1

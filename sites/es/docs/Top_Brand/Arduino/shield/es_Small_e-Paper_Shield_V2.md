@@ -4,7 +4,7 @@ title: Small e-Paper Shield V2
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Small_e-Paper_Shield_V2
+slug: /Small_e-Paper_Shield_V2
 sku: 104030019
 last_update:
   date: 2/16/2023

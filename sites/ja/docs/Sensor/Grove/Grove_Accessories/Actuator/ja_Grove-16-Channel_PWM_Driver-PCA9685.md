@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-16-Channel_PWM_Driver-PCA9685/
-slug: /ja/Grove-16-Channel_PWM_Driver-PCA9685
+slug: /Grove-16-Channel_PWM_Driver-PCA9685
 sku: 108020102
 last_update:
   date: 05/15/2025

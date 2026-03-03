@@ -4,7 +4,7 @@ title: IoT高速プロトタイピングキット S5D9
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/IoT_Fast_Prototyping_Kit S5D9
+slug: /IoT_Fast_Prototyping_Kit S5D9
 last_update:
   date: 05/15/2025
   author: shuxu hu

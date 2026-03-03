@@ -6,7 +6,7 @@ keywords:
 - Round Display
 - LVGL
 - Animation
-slug: /es/round_display_animation_workshop
+slug: /round_display_animation_workshop
 last_update:
  date: 02/23/2026
  author: Sunil Pedapudi

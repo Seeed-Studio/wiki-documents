@@ -8,7 +8,7 @@ keywords:
 - GPT-OSS
 - llamacpp
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/gptoss-running-live.webp
-slug: /es/deploy_gptoss_on_jetson
+slug: /deploy_gptoss_on_jetson
 last_update:
   date: 08/14/2025
   author: Youjiang

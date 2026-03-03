@@ -7,7 +7,7 @@ keywords:
 - xiao
 - AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/sensecraft-data-platform/applications/planting-advice
+slug: /sensecraft-data-platform/applications/planting-advice
 aliases:
   - /cn/xiao_esp32c3_sensecapai
 last_update:

@@ -5,7 +5,7 @@ keywords:
 - NVIDIA
 - Isaac Lab
 image: https://files.seeedstudio.com/wiki/robotics/isaac_lab/1.webp
-slug: /es/install_isaaclab
+slug: /install_isaaclab
 last_update:
   date: 5/28/2025
   author: ZhuYaoHui

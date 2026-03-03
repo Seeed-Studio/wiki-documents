@@ -4,7 +4,7 @@ title: 60GHz 毫米波静态呼吸和心跳检测
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Radar_MR60BHA1
+slug: /Radar_MR60BHA1
 sku: 101990886
 last_update:
   date: 03/03/2023

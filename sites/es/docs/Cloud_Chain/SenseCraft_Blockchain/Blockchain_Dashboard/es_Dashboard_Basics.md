@@ -5,7 +5,7 @@ title: Conceptos Básicos del Dashboard
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/sensecraft-blockchain/blockchain-dashboard/dashboard-basics
+slug: /sensecraft-blockchain/blockchain-dashboard/dashboard-basics
 aliases:
   - /es/Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics
 last_update:

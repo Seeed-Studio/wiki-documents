@@ -6,7 +6,7 @@ keywords:
 - Isaac ROS
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/install_ros2_humble
+slug: /install_ros2_humble
 last_update:
   date: 5/28/2025
   author: ZhuYaoHui

@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reTerminal 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal-hardware-interfaces-usage
+slug: /reTerminal-hardware-interfaces-usage
 sku: 110070048,103060001
 last_update:
   date: 1/31/2023

@@ -4,7 +4,7 @@ title: CAN-BUS Shield V1.2
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/CAN-BUS_Shield_V1.2
+slug: /CAN-BUS_Shield_V1.2
 sku: 113030021
 last_update:
   date: 2/16/2023

@@ -2,7 +2,7 @@
 description: Seeed Studio 圆形显示屏适用于 XIAO-常见问题解答
 title: 当为 XIAO RP2040 上传程序时，出现错误：在可执行段中检测到未对齐的操作码？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/uploading_while_an_error-rp2040
+slug: /uploading_while_an_error-rp2040
 last_update:
   date: 6/30/2023
   author: cheng.tang

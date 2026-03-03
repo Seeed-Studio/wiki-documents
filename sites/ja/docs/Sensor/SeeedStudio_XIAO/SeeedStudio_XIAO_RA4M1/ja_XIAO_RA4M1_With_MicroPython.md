@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO RA4M1 と MicroPython
 description: Seeed Studio XIAO RA4M1 でのピン多重化
 image: https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-RA4M1.webp
-slug: /ja/xiao_ra4m1_micropython
+slug: /xiao_ra4m1_micropython
 keywords:
   - XIAO
   - RAM41

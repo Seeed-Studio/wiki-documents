@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-80cm_Infrared_Proximity_Sensor/
-slug: /ja/Grove-80cm_Infrared_Proximity_Sensor
+slug: /Grove-80cm_Infrared_Proximity_Sensor
 sku: 101020042
 last_update:
   date: 05/15/2025

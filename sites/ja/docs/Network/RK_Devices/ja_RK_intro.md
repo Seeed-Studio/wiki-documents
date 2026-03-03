@@ -6,7 +6,7 @@ keywords:
 - ルーター
 - Rockchip
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Rockchip_network_solutions
+slug: /Rockchip_network_solutions
 last_update:
   date: 05/15/2025
   author: Kasun Thushara

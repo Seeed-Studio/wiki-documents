@@ -4,7 +4,7 @@ title:  ArduPy 与 Wio Terminal
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ArduPy
+slug: /ArduPy
 last_update:
   date: 8/7/2023
   author: cessarr

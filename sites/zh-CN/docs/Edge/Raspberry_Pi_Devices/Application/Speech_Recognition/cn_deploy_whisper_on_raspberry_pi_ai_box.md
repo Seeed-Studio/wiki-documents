@@ -6,7 +6,7 @@ keywords:
   - Hailo8
   - Speech Recognition
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /cn/deploy_whisper_on_raspberry_pi_ai_box
+slug: /deploy_whisper_on_raspberry_pi_ai_box
 sku: 114993627, 100061305, 100097052, 114993595, 100077451, 100080766, 100020831
 last_update:
   date: 01/19/2026

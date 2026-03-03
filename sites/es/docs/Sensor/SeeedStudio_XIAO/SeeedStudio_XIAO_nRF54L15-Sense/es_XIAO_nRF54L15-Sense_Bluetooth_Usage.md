@@ -3,7 +3,7 @@ title: Uso de BLE del Seeed Studio XIAO nRF54L15 Sense
 description: |
   Guía completa para usar Bluetooth Low Energy (BLE) con XIAO nRF54L15 Sense, incluyendo publicidad, conexiones, servicios GATT y optimización de energía.
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
-slug: /es/xiao_nrf54l15_sense_bluetooth_usage
+slug: /xiao_nrf54l15_sense_bluetooth_usage
 keywords:
   - XIAO
   - nRF54L15

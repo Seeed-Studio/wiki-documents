@@ -2,7 +2,7 @@
 description: XIAOESP32C3-常见问题解答
 title: 如何检测电池电压
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/check_battery_voltage
+slug: /check_battery_voltage
 last_update:
   date: 6/28/2023
   author: cheng.tang

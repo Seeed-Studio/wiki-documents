@@ -7,7 +7,7 @@ keywords:
   - ESPHome
   - WiFi
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32_Espectre/image1.webp
-slug: /cn/xiao-esp32--series-espresense
+slug: /xiao-esp32--series-espresense
 sku: 100010048,113991254,113991114, 113991054
 last_update:
   date: 01/26/2026

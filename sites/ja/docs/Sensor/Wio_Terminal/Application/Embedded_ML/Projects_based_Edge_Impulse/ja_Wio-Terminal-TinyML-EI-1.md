@@ -6,7 +6,7 @@ keywords:
 - Embedded_ML 
 - Projects_based_Edge_Impulse
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-TinyML-EI-1
+slug: /Wio-Terminal-TinyML-EI-1
 sku: 102991299
 last_update:
   date: 05/15/2025

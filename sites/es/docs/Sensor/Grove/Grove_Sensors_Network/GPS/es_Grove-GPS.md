@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-GPS/
-slug: /es/Grove-GPS
+slug: /Grove-GPS
 sku: 113020003
 last_update:
   date: 01/06/2022

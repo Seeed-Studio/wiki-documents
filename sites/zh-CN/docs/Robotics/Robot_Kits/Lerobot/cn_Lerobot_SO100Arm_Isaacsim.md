@@ -7,7 +7,7 @@ keywords:
 - Arm
 - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Isaac_sim_import_success.webp
-slug: /cn/lerobot_so100m_isaacsim
+slug: /lerobot_so100m_isaacsim
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui

@@ -3,7 +3,7 @@ sidebar_position: 9
 description: この記事では、モデルの認識結果をMQTTで送信する方法について説明します。
 title: MQTTによるモデル出力
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/headimage.webp
-slug: /ja/sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao
+slug: /sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao
 aliases:
   - /ja/sensecraft_ai_output_mqtt_xiao
 last_update:

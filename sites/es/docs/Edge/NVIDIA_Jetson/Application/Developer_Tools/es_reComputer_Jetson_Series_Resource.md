@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reComputer_Jetson_Series_Resource
+slug: /reComputer_Jetson_Series_Resource
 last_update:
   date: 01/04/2023
   author: w0x7ce

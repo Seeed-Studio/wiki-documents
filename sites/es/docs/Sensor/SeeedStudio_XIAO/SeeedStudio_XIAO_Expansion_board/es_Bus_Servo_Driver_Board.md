@@ -3,7 +3,7 @@ description: |
   Una placa controladora versátil de Seeed Studio diseñada para controlar servos de bus serie para aplicaciones robóticas. Cuenta con una configuración de puente crítica que debe ajustarse dependiendo del método de conexión (USB o UART directo).
 title: Placa Controladora de Servo de Bus
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/9.webp
-slug: /es/bus_servo_driver_board
+slug: /bus_servo_driver_board
 sku: 108090023,108090003,114993612,105990190,101090141,101090142,100067882
 keywords:
     - Bus Servo

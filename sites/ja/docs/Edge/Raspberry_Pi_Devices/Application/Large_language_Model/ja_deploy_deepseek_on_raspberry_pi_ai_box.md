@@ -7,7 +7,7 @@ keywords:
   - Deepseek
   - Ollama
 image: https://files.seeedstudio.com/wiki/AI_box_deepseek/install_deepseek.webp
-slug: /ja/deploy_deepseek_on_raspberry_pi_ai_box
+slug: /deploy_deepseek_on_raspberry_pi_ai_box
 last_update:
   date: 03/11/2025
   author: Jiahao

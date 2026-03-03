@@ -1,7 +1,7 @@
 ---
 description: Referencia completa de la API para el gestor de medios de Reachy Mini, incluyendo audio, cámara, utilidades y constantes para transmisión de video y audio.
 title: Referencia de la API de Medios
-slug: /es/reachymini_api_media
+slug: /reachymini_api_media
 keywords:
 - api
 - media

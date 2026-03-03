@@ -2,7 +2,7 @@
 description: 在你的 XIAO RP2350 开发板上使用 Arduino
 title: Seeed Studio XIAO RP2350(Arduino) 入门指南
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550_XIAO_RP2350-45font_1.webp
-slug: /cn/xiao_rp2350_arduino
+slug: /xiao_rp2350_arduino
 sidebar_position: 1
 last_update:
   date: 2024-10-30T01:39:16.136Z

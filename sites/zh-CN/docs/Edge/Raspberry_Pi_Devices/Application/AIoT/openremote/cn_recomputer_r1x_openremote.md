@@ -6,7 +6,7 @@ keywords:
 - OpenRemote
 - Raspberry-Pi 
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/113991274-2_3.webp
-slug: /cn/openremote_r1x00
+slug: /openremote_r1x00
 last_update:
   date: 9/30/2025
   author: Kasun Thushara

@@ -4,7 +4,7 @@ title: フルステッププルリクエスト
 keywords:
 - コントリビューター
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/full_steps_pull_request
+slug: /full_steps_pull_request
 last_update:
   date: 05/15/2025
   author: Matthew

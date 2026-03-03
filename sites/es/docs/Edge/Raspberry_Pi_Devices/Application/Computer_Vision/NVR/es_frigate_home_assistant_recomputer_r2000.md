@@ -8,7 +8,7 @@ keywords:
 - Frigate
 - Home Assistant
 image: https://files.seeedstudio.com/wiki/recomputer-r2000-getting-start/1_24_1.webp
-slug: /es/r2000_series_frigate_and_home_assistant
+slug: /r2000_series_frigate_and_home_assistant
 last_update:
   date: 6/18/2025
   author: Kasun Thushara

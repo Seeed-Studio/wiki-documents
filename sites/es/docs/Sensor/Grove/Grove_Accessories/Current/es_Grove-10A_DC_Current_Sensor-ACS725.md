@@ -4,7 +4,7 @@ title: Grove - Sensor de Corriente DC de 10A (ACS725)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-10A_DC_Current_Sensor-ACS725
+slug: /Grove-10A_DC_Current_Sensor-ACS725
 sku: 101020616
 last_update:
   date: 1/9/2023

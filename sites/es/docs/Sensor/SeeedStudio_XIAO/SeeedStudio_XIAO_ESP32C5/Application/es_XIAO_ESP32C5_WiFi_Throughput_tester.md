@@ -5,7 +5,7 @@ keywords:
   - xiao
   - esp32c5
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
-slug: /es/xaio_esp32c5_wifi_throughput_tester
+slug: /xaio_esp32c5_wifi_throughput_tester
 last_update:
   date: 1/16/2026
   author: Zeller

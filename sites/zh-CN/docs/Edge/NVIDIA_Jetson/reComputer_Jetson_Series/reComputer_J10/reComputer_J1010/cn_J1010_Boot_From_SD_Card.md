@@ -2,7 +2,7 @@
 description: J1010 从 SD 卡启动
 title: J1010 从 SD 卡启动
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/J1010_Boot_From_SD_Card
+slug: /J1010_Boot_From_SD_Card
 sku: 102991694
 last_update:
   date: 01/05/2023

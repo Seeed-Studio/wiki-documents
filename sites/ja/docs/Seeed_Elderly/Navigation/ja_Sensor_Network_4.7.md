@@ -4,7 +4,7 @@ title: センサーネットワーク
 keywords:
 - センサーネットワーク
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeed_Elderly/Navigation/Sensor_Network_4.7
+slug: /Seeed_Elderly/Navigation/Sensor_Network_4.7
 last_update:
   date: 05/15/2025
   author: Matthew

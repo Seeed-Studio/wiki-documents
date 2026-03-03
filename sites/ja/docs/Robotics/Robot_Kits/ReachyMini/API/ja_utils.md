@@ -1,7 +1,7 @@
 ---
 description: 補間関数、ハードウェア構成、Rerun による可視化、およびコアユーティリティを含む Reachy Mini utils の完全な API リファレンス。
 title: Utils API リファレンス
-slug: /ja/reachymini_api_utils
+slug: /reachymini_api_utils
 keywords:
 - api
 - utils

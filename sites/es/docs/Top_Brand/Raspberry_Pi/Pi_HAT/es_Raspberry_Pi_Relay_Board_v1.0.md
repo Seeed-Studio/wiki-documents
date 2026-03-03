@@ -4,7 +4,7 @@ title: HAT de Relé SPDT de 4 Canales para Raspberry Pi
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Raspberry_Pi_Relay_Board_v1.0
+slug: /Raspberry_Pi_Relay_Board_v1.0
 sku: 103030029,114992543
 last_update:
   date: 1/11/2023

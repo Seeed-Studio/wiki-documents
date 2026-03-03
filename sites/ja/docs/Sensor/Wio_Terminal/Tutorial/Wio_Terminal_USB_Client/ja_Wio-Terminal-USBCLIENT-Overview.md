@@ -4,7 +4,7 @@ title: 概要
 keywords:
 - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-USBCLIENT-Overview
+slug: /Wio-Terminal-USBCLIENT-Overview
 last_update:
   date: 05/15/2025
   author: jianjing Huang

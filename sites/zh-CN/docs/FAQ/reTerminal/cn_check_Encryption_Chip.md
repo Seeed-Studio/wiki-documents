@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 如何检查加密芯片是 ATECC608A-SSHDA-B 还是 ATECC608A-TNGTLSS-G
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/check_Encryption_Chip
+slug: /check_Encryption_Chip
 last_update:
   date: 2023/6/21
   author: Seraphina

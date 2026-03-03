@@ -6,7 +6,7 @@ keywords:
 - we2 
 - pose detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ma_deploy_yolov8_pose
+slug: /ma_deploy_yolov8_pose
 last_update:
   date: 04/02/2024
   author: Jack Mu

@@ -2,7 +2,7 @@
 description: Frigate es un NVR (Grabador de Video en Red) de código abierto con Detección de Objetos en Tiempo Real para cámaras IP. En esta guía, recorreremos los pasos para desplegar Frigate en un dispositivo NVIDIA Jetson.
 title: Desplegar Frigate en Jetson 
 image: https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/3.png
-slug: /es/deploy_frigate_on_jetson
+slug: /deploy_frigate_on_jetson
 last_update:
   date: 08/29/2024
   author: kourosh

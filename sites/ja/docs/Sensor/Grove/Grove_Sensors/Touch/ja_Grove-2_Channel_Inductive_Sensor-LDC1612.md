@@ -4,7 +4,7 @@ title: Grove - 2-Channel Inductive Sensor(LDC1612)
 keywords:
 - Grove Grove_Sensors Touch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-2_Channel_Inductive_Sensor-LDC1612
+slug: /Grove-2_Channel_Inductive_Sensor-LDC1612
 sku: 101020599
 last_update:
   date: 05/15/2025

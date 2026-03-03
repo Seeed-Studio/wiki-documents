@@ -2,7 +2,7 @@
 description: XIAOESP32C3-FAQ
 title: Nota sobre la asignación de E/S del XIAO ESP32C3
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/exp32c3_d9_d6_d8
+slug: /exp32c3_d9_d6_d8
 last_update:
   date: 6/28/2023
   author: cheng.tang

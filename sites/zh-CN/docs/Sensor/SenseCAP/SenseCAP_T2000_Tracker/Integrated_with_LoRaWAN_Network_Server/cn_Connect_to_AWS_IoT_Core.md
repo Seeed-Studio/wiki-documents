@@ -5,7 +5,7 @@ keywords:
 - SenseCAP_T2000_tracker
 - AWS
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
-slug: /cn/sensecap_t2000_tracker_aws
+slug: /sensecap_t2000_tracker_aws
 sku: 100082900,100057727,100087298
 last_update:
   date: 1/29/2026

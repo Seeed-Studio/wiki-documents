@@ -4,7 +4,7 @@ title: DM_Gripper - 装配指南与演示
 keywords:
 - Gripper
 - Robotics 
-slug: /cn/dm_gripper
+slug: /dm_gripper
 sku: 100094243,100007512
 last_update:
   date: 9/17/2025

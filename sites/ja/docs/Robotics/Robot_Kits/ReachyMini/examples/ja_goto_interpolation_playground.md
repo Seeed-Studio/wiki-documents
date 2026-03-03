@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini の頭部およびアンテナを目標ポーズへ動かす際の、さまざまな補間方法（linear、minjerk、ease_in_out、cartoon）を示す例です。
 title: Goto 補間プレイグラウンド
-slug: /ja/reachymini_examples_goto_interpolation_playground
+slug: /reachymini_examples_goto_interpolation_playground
 keywords:
 - 補間
 - モーション手法

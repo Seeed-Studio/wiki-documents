@@ -4,7 +4,7 @@ title: SDカードシールド
 keywords:
 - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SD_Card_Shield
+slug: /SD_Card_Shield
 last_update:
   date: 05/15/2025
   author: jianjing Huang

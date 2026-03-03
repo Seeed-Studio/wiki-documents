@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Wireless Sensor Node - Solar Kit/
-slug: /ja/Wireless_Sensor_Node-Solar_Kit
+slug: /Wireless_Sensor_Node-Solar_Kit
 sku: 110060005
 last_update:
   date: 05/15/2025

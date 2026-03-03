@@ -9,7 +9,7 @@ keywords:
   - N3uron
   - BACnet
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /cn/recomputer_r1000_n3uron_bacnet
+slug: /recomputer_r1000_n3uron_bacnet
 last_update:
   date: 7/11/2024
   author: Kasun Thushara

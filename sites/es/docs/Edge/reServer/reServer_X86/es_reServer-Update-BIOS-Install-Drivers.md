@@ -2,7 +2,7 @@
 description: reServer X86
 title: Actualización del BIOS e Instalación de Controladores
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reServer-Update-BIOS-Install-Drivers
+slug: /reServer-Update-BIOS-Install-Drivers
 last_update:
   date: 01/03/2023
   author: w0x7ce

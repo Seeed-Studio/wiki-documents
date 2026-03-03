@@ -4,7 +4,7 @@ title: Arduino ライブラリの事前コンパイル済みライブラリの�
 keywords:
 - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Software-Static-Library
+slug: /Software-Static-Library
 last_update:
   date: 05/15/2025
   author: jianjing Huang

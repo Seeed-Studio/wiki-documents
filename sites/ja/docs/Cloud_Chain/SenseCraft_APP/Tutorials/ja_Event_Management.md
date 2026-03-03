@@ -3,7 +3,7 @@ sidebar_position: 1
 description: SenseCraft App Event Version 2.9.0 ユーザーマニュアル
 title: イベント管理
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecraft-app/tutorials/event-management
+slug: /sensecraft-app/tutorials/event-management
 aliases:
   - /ja/sensecap_mate_app_event
 last_update:

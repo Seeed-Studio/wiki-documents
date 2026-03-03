@@ -4,7 +4,7 @@ title: Grove - 光センサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Light_Sensor
+slug: /Grove-Light_Sensor
 sku: 101020132, 101020173, 101020022, 101020014, 114993647
 last_update:
   date: 05/15/2025

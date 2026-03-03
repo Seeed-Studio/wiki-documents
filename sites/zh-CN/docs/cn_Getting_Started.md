@@ -2,7 +2,7 @@
 description: 作为自2008年以来值得信赖的物联网(IOT)硬件合作伙伴，Seeed Studio致力于实现我们物理世界的交互式数字副本。本网站是一个开源平台，收集了Seeed Studio目前发布的所有wiki，每周更新以展示我们的产品范围和研究，包括自然环境的数字化。
 title: Seeed Studio Wiki平台入门指南
 image: https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg
-slug: /cn/Getting_Started
+slug: /Getting_Started
 last_update:
   date: 08/30/2024
   author: Matthew

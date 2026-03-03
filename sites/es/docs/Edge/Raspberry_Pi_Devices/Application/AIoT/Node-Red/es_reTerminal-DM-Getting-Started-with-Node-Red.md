@@ -6,7 +6,7 @@ keywords:
   - reTerminal-DM
   - Node-Red
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reTerminal-DM-Getting-Started-with-Node-Red
+slug: /reTerminal-DM-Getting-Started-with-Node-Red
 last_update:
   date: 04/04/2023
   author: Peter Pan

@@ -2,7 +2,7 @@
 description: 4A电机扩展板
 title: 4A电机扩展板
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/4A_Motor_Shield
+slug: /4A_Motor_Shield
 sku: 105030004
 last_update:
   date: 01/11/2023  

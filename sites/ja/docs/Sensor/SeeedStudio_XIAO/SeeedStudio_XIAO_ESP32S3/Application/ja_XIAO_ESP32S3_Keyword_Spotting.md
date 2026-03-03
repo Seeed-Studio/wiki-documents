@@ -5,7 +5,7 @@ keywords:
 - speech
 - keywords
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/xiao_esp32s3_keyword_spotting
+slug: /xiao_esp32s3_keyword_spotting
 last_update:
   date: 07/20/2023
   author: Citric

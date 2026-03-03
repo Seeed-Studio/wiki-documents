@@ -4,7 +4,7 @@ title: Guía de Sensores Grove de Nivel Básico
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_Sensor_Intro
+slug: /Grove_Sensor_Intro
 last_update:
   date: 07/19/2023
   author: Matthew

@@ -4,7 +4,7 @@ title: Guía de Módulos de Red Grove
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_network_module_intro
+slug: /Grove_network_module_intro
 last_update:
   date: 07/19/2023
   author: Matthew

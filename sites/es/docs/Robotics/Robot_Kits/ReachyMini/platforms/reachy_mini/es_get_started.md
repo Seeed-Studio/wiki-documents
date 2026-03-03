@@ -1,7 +1,7 @@
 ---
 description: Guía de configuración de Reachy Mini Wireless que incluye instrucciones de montaje, primer arranque, configuración de Wi‑Fi, actualización del sistema y acceso SSH.
 title: Guía de Configuración de Reachy Mini Wireless
-slug: /es/reachymini_platforms_reachy_mini_get_started
+slug: /reachymini_platforms_reachy_mini_get_started
 keywords:
 - wireless
 - setup

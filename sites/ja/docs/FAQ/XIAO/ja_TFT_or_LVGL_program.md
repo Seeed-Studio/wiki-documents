@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display for XIAO-FAQ
 title: チュートリアルに従ったにも関わらず、TFTやLVGLプログラムが正常にコンパイルできません。どうすればよいでしょうか？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/TFT_or_LVGL_program
+slug: /TFT_or_LVGL_program
 last_update:
   date: 6/30/2023
   author: cheng.tang

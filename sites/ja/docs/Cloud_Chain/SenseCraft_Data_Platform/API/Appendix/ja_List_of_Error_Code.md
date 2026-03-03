@@ -5,7 +5,7 @@ title: エラーコード一覧
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /ja/sensecraft-data-platform/api/appendix/list_of_error_code
+slug: /sensecraft-data-platform/api/appendix/list_of_error_code
 aliases:
   - /ja/Cloud_Chain/SenseCAP_API/Appendix/List_of_Error_Code
 last_update:

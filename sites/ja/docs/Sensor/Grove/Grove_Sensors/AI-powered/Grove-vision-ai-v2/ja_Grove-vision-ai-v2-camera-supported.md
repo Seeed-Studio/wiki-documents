@@ -4,7 +4,7 @@ title: 外部カメラ対応
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/Grove-vision-ai-v2-camera-supported
+slug: /Grove-vision-ai-v2-camera-supported
 last_update:
   date: 05/15/2025
   author: Citric

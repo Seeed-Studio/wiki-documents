@@ -8,7 +8,7 @@ keywords:
 - 摄像头
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/csi_camera_on_ros
+slug: /csi_camera_on_ros
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui

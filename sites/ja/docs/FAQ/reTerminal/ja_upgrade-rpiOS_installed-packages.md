@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Raspberry Pi OSとインストール済みパッケージをアップグレードする方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/upgrade-rpiOS_installed-packages
+slug: /upgrade-rpiOS_installed-packages
 last_update:
   date: 6/21/2023
   author: cheng.tang

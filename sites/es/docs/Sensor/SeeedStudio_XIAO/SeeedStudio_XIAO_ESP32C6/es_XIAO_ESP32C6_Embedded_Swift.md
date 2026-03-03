@@ -2,7 +2,7 @@
 description: utilizar Embedded Swift para trabajar con XIAO ESP32C6
 title: XIAO ESP32C6 con (Embedded) Swift
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/swift-xiao-esp32.png
-slug: /es/xiao-esp32-swift
+slug: /xiao-esp32-swift
 sku: 113991254, 102010636, 101991470
 last_update:
   date: 2024-07-12T02:50:00.462Z

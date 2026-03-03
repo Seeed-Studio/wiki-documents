@@ -5,7 +5,7 @@ keywords:
 - Wio_Series 
 - Wio_Lite
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_Base_Shield_for_NodeMCU_V1.0
+slug: /Grove_Base_Shield_for_NodeMCU_V1.0
 sku: 105020008
 last_update:
   date: 2/15/2023

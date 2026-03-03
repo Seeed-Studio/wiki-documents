@@ -4,7 +4,7 @@ title: Wio Terminal インタラクティブ顔デモ
 keywords:
 - Wio_terminal チュートリアル
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Interactive-Face
+slug: /Wio-Terminal-Interactive-Face
 last_update:
   date: 05/15/2025
   author: jianjing Huang

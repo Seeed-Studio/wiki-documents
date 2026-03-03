@@ -3,7 +3,7 @@ title: 6通道Wi-Fi继电器模块在Home Assistant中的应用
 description: |
   来自Seeed Studio的智能设备，专为在安全直流电压下无线控制设备而设计。
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/7-114993588_6_CH_Relay_Sensor_feature.webp
-slug: /cn/6_channel_wifi_relay
+slug: /6_channel_wifi_relay
 sku: 114993588
 keywords:
   - XIAO

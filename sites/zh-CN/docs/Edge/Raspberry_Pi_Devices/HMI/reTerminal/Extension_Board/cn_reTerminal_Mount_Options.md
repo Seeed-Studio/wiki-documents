@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reTerminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reTerminal_Mount_Options
+slug: /reTerminal_Mount_Options
 last_update:
   date: 2/1/2023
   author: jianjing Huang

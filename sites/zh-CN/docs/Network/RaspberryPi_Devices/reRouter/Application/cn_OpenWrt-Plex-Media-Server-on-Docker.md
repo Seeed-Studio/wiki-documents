@@ -4,7 +4,7 @@ title: Plex媒体服务器
 keywords:
 - 软件 OpenWrt
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/OpenWrt-Plex-Media-Server-on-Docker
+slug: /OpenWrt-Plex-Media-Server-on-Docker
 last_update:
   date: 2023/1/13
   author: jianjing Huang

@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - Docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-LCD-Fonts/
-slug: /ja/Wio-Terminal-LCD-Fonts
+slug: /Wio-Terminal-LCD-Fonts
 last_update:
   date: 05/15/2025
   author: gunengyu

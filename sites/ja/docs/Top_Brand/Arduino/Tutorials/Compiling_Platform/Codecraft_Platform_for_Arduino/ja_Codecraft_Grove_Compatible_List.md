@@ -6,7 +6,7 @@ keywords:
 - チュートリアル
 - Codecraft_Platform_for_Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Codecraft_Grove_Compatible_List
+slug: /Codecraft_Grove_Compatible_List
 last_update:
   date: 05/15/2025
   author: jianjing Huang

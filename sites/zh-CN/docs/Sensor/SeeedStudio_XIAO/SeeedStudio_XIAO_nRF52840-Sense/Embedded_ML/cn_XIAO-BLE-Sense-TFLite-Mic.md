@@ -4,7 +4,7 @@ title: 语音识别
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/XIAO-BLE-Sense-TFLite-Mic
+slug: /XIAO-BLE-Sense-TFLite-Mic
 last_update:
   date: 1/11/2023
   author: shuxu hu

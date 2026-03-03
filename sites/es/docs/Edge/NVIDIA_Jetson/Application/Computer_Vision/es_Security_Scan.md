@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Security_Scan
+slug: /Security_Scan
 sku: 110991666, 110061363, 110061401, 110061361, 110061481
 last_update:
   date: 01/04/2023

@@ -4,7 +4,7 @@ title: 边缘 AI
 keywords:
 - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/edge_ai_topic
+slug: /edge_ai_topic
 last_update:
   date: 12/18/2023
   author: Matthew

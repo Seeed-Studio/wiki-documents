@@ -6,7 +6,7 @@ keywords:
   - RasberryPi 5
   - python
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/recomputer_r2145.webp
-slug: /ja/use_uv_to_build_package_on_recomputer
+slug: /use_uv_to_build_package_on_recomputer
 last_update:
   date: 08/21/2025
   author: Jiahao

@@ -4,7 +4,7 @@ title: BLE Micro
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/BLE_Micro
+slug: /BLE_Micro
 sku: 113050012
 last_update:
   date: 1/13/2023

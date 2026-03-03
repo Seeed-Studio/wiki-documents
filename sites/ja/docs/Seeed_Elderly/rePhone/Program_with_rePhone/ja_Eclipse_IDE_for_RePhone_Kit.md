@@ -4,7 +4,7 @@ title: Eclipse IDE for RePhone Kit
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Eclipse_IDE_for_RePhone_Kit
+slug: /Eclipse_IDE_for_RePhone_Kit
 last_update:
   date: 05/15/2025
   author: shuxu hu

@@ -2,7 +2,7 @@
 description: この記事では、Cloud Efficient Processing Flow、Hybrid Smart Processing Flow、Local Secure Processing Flowの3つの異なる処理デプロイメントフローでWatcherデバイスを設定するための詳細なセットアップガイドを提供します。Watcherソフトウェアサービスフレームワークの概要を提供し、ユーザー、SenseCraft Mateアプリ、Watcherデバイス間の相互作用を説明します。
 title: Watcherソフトウェアサービス紹介
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/50.jpg
-slug: /ja/watcher_software_service_framework
+slug: /watcher_software_service_framework
 sidebar_position: 2
 last_update:
   date: 10/09/2024

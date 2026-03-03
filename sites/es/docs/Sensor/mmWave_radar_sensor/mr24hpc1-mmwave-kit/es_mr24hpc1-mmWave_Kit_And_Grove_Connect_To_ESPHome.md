@@ -4,7 +4,7 @@ title: Kit mmWave y Grove se conectan a ESPHome
 keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/mmWave_Kit_And_Grove_Connect_To_ESPHome
+slug: /mmWave_Kit_And_Grove_Connect_To_ESPHome
 sidebar_position: 1
 last_update:
   date: 12/09/2023

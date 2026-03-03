@@ -1,7 +1,7 @@
 ---
 description: ワイヤレス Reachy Mini から加速度計、ジャイロスコープ、クォータニオン姿勢、温度を含む IMU センサーデータへアクセスする方法を示すサンプルです。
 title: IMU サンプル
-slug: /ja/reachymini_examples_imu
+slug: /reachymini_examples_imu
 keywords:
 - imu
 - accelerometer

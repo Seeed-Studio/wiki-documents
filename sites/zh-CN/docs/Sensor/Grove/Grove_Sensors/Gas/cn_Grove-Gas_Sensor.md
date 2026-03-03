@@ -4,7 +4,7 @@ title: Grove - 气体传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Gas_Sensor
+slug: /Grove-Gas_Sensor
 last_update:
   date: 12/30/2022
   author: shuxu hu

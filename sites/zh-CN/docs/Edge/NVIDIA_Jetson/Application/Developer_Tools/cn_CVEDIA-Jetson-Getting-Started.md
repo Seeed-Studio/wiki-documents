@@ -4,7 +4,7 @@ title: CVEDIA-RT 入门指南
 tags:
   - AI model deploy
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/CVEDIA-Jetson-Getting-Started
+slug: /CVEDIA-Jetson-Getting-Started
 sku: 110110144,110110146,110110184,110110185,110110186,110110187
 last_update:
   date: 03/10/2023

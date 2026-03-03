@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Mini_Soldering_Iron/
-slug: /cn/Mini_Soldering_Iron
+slug: /Mini_Soldering_Iron
 last_update:
   date: 02/03/2022
   author: gunengyu

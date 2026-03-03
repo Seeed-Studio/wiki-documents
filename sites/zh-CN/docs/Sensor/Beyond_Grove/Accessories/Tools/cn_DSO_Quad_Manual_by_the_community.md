@@ -4,7 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/DSO_Quad_Manual_by_the_community/
-slug: /cn/DSO_Quad_Manual_by_the_community
+slug: /DSO_Quad_Manual_by_the_community
 last_update:
   date: 02/03/2022
   author: gunengyu

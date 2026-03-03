@@ -4,7 +4,7 @@ title: MicroPython para Placas Compatibles con Arduino
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Compiling_MicroPython_for_embedded_devices
+slug: /Compiling_MicroPython_for_embedded_devices
 last_update:
   date: 1/16/2023
   author: jianjing Huang

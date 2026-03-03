@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/development_tutorial_for_Wio-trakcer
+slug: /development_tutorial_for_Wio-trakcer
 sidebar_position: 2
 sidebar_class_name: hidden
 last_update:

@@ -5,7 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Project_Two-Digital_Input_v1.0b
+slug: /Project_Two-Digital_Input_v1.0b
 last_update:
   date: 05/15/2025
   author: jianjing Huang

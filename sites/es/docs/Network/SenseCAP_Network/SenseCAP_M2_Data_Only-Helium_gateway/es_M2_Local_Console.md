@@ -4,7 +4,7 @@ title: SenseCAP M2 Data Only Local Console
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console
+slug: /Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console
 last_update:
   date: 02/14/2023
   author: Matthew

@@ -2,7 +2,7 @@
 description: Wio-SX1262の紹介
 title: Wio-SX1262 紹介
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/34.png
-slug: /ja/wio_sx1262
+slug: /wio_sx1262
 sku: 114993390,113991436
 sidebar_position: 1
 last_update:

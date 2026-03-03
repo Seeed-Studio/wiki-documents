@@ -5,7 +5,7 @@ keywords:
 - xiao
 - vision AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/grove_vision_ai_v2_demo
+slug: /grove_vision_ai_v2_demo
 sku: 101021112,E23011220,104990982
 last_update:
   date: 05/15/2025

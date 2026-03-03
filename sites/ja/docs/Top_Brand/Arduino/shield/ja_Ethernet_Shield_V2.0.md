@@ -4,7 +4,7 @@ title: Ethernet Shield V2.0
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Ethernet_Shield_V2.0
+slug: /Ethernet_Shield_V2.0
 last_update:
   date: 05/15/2025
   author: jianjing Huang

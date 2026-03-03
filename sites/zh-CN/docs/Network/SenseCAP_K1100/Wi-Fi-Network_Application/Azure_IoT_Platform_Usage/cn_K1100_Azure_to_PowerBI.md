@@ -4,7 +4,7 @@ title: 使用 Power BI 进行数据可视化
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/K1100_Azure_to_PowerBI
+slug: /K1100_Azure_to_PowerBI
 last_update:
   date: 2023/1/13
   author: shuxu hu

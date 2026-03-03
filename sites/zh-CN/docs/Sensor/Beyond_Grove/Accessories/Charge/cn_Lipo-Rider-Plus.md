@@ -4,7 +4,7 @@ title: Lipo Rider Plus（充电器/升压器）- 5V/2.4A USB Type C
 keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Lipo-Rider-Plus
+slug: /Lipo-Rider-Plus
 last_update:
   date: 1/13/2023
   author: jianjing Huang

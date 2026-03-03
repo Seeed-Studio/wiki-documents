@@ -8,7 +8,7 @@ keywords:
   - PID
   - Motor
 image: https://files.seeedstudio.com/wiki/reCamera/Gimbal/PID_nodered.webp
-slug: /es/recamera_pid_adjustment
+slug: /recamera_pid_adjustment
 sidebar_position: 5
 last_update:
   date: 04/08/2025

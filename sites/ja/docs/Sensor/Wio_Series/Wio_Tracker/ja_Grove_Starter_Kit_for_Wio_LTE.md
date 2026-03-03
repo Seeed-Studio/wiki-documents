@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove_Starter_Kit_for_Wio_LTE/
-slug: /ja/Grove_Starter_Kit_for_Wio_LTE
+slug: /Grove_Starter_Kit_for_Wio_LTE
 last_update:
   date: 05/15/2025
   author: gunengyu

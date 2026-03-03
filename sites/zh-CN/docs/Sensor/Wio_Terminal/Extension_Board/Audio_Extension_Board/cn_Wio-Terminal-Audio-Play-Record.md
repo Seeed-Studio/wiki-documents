@@ -4,7 +4,7 @@ title: 播放和录音
 keywords:
 - Wio_terminal Audio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Audio-Play-Record
+slug: /Wio-Terminal-Audio-Play-Record
 last_update:
   date: 1/16/2023
   author: jianjing Huang

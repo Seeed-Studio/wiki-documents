@@ -2,7 +2,7 @@
 description: ESP32C3用MicroPython
 title: ESP32C3用MicroPython
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAO_ESP32C3_MicroPython
+slug: /XIAO_ESP32C3_MicroPython
 last_update:
   date: 08/14/2023
   author: Matthew and Zachay

@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini を実機またはシミュレーション上で動作させるためのクイックスタートガイドです。前提条件、デーモンのセットアップ、最初のスクリプトまでをカバーします。
 title: クイックスタートガイド
-slug: /ja/reachymini_sdk_quickstart
+slug: /reachymini_sdk_quickstart
 keywords:
 - quickstart
 - getting started

@@ -2,7 +2,7 @@
 description: Obtendrás una base sólida para comprender los diferentes tipos de tareas que Watcher puede realizar y cómo se organizan dentro del ecosistema SenseCraft.
 title: Guía de Asignación de Tareas
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/85_1.webp
-slug: /es/getting_started_with_watcher_task
+slug: /getting_started_with_watcher_task
 sidebar_position: 3
 last_update:
   date: 10/18/2024

@@ -4,7 +4,7 @@ title: 传感器网络
 keywords:
 - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeed_Elderly/Navigation/Sensor_Network_4.7
+slug: /Seeed_Elderly/Navigation/Sensor_Network_4.7
 last_update:
   date: 01/20/2023
   author: Matthew

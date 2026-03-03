@@ -5,7 +5,7 @@ title: HTTP API 快速入门
 keywords:
 - HTTP API 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-data-platform/api/http-api/quick-start
+slug: /sensecraft-data-platform/api/http-api/quick-start
 aliases:
   - /cn/Cloud_Chain/SenseCAP_API/HTTP_API/Quick_Start
 last_update:

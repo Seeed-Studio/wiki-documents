@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: solar_node
 link:
   type: generated-index
-  slug: cn/solar_node
+  slug: solar_node
   title: 太阳能节点
   description: 用于 Meshtastic 的 SenseCAP 太阳能节点

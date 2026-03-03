@@ -4,7 +4,7 @@ title: XIAO RP2350 与 PlatformIO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/rp2350_with_platformio.webp
-slug: /cn/xiao_rp2350_with_platform_io
+slug: /xiao_rp2350_with_platform_io
 last_update:
   date: 04/07/2025
   author: Hugo

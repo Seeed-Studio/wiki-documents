@@ -4,7 +4,7 @@ title: Raspberry Pi の使用開始
 keywords:
 - ReSpeaker_2-Mics_Pi_HAT
 image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.webp
-slug: /ja/respeaker_2_mics_pi_hat_raspberry_v2
+slug: /respeaker_2_mics_pi_hat_raspberry_v2
 last_update:
   date: 01/29/2026
   author: Mingxi

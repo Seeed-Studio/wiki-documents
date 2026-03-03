@@ -13,7 +13,7 @@ keywords:
 - USBカメラ
 - エッジAI
 image: https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp
-slug: /ja/deploy_depth_anything_v3_jetson_agx_orin
+slug: /deploy_depth_anything_v3_jetson_agx_orin
 last_update:
   date: 2026-01-09
   author: Zibo

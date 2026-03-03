@@ -4,7 +4,7 @@ title: 在 Wio Terminal 上使用 FreeRTOS
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Software-FreeRTOS
+slug: /Software-FreeRTOS
 last_update:
   date: 1/16/2023
   author: jianjing Huang

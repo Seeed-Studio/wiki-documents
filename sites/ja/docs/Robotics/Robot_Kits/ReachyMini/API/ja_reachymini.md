@@ -1,7 +1,7 @@
 ---
 description: モーター制御、動作、状態管理のメソッドを含む ReachyMini メインクラスの完全な API リファレンス。
 title: ReachyMini API リファレンス
-slug: /ja/reachymini_api_reachymini
+slug: /reachymini_api_reachymini
 keywords:
 - api
 - reachymini

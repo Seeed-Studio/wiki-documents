@@ -5,6 +5,6 @@ collapsed: true
 className: _ai-sound
 link:
   type: generated-index
-  slug: es/ai-sound
+  slug: ai-sound
   title: Sonido AI
   description: Soluciones de percepción de sonido.

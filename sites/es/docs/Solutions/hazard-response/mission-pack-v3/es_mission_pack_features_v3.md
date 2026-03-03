@@ -4,7 +4,7 @@ title: Características
 keywords:
     - paquete-de-misión
 # image: 
-slug: /es/mission_pack_features_v3
+slug: /mission_pack_features_v3
 sidebar_position: 1
 last_update:
     date: 07/08/2025

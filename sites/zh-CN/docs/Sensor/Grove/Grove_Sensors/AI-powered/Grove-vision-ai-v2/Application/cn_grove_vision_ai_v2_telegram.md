@@ -2,7 +2,7 @@
 description: 本项目结合了 XIAO ESP32S3 和 Grove Vision AI V2，创建了一个紧凑型人员检测设备。V2 模块配备了人员检测模型，可识别人的存在并将结果发送到 ESP32S3。微控制器随后处理信息并将检测警报转发到指定的 Telegram 账户，提供实时通知，提醒监控区域内是否有人。
 title: 部署 Grove Vision AI V2，通过 Telegram 通知您
 image: https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/headimage2.png
-slug: /cn/grove_vision_ai_v2_telegram
+slug: /grove_vision_ai_v2_telegram
 last_update:
   date: 05/27/2024
   author: Allen

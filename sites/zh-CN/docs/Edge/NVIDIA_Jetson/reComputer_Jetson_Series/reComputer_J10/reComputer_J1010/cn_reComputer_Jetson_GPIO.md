@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reComputer_Jetson_GPIO
+slug: /reComputer_Jetson_GPIO
 last_update:
   date: 04/12/2023
   author: Lakshantha

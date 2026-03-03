@@ -4,7 +4,7 @@ title: Lipo Rider V1.3
 keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Lipo_Rider_V1.3
+slug: /Lipo_Rider_V1.3
 sku: 106990022
 last_update:
   date: 1/13/2023

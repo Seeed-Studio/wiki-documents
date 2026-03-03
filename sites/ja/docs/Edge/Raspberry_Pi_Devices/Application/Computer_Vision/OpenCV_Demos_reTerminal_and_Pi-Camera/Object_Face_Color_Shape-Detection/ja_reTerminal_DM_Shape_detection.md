@@ -8,7 +8,7 @@ keywords:
   - OpenCV
   - Shape-Detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal_DM_Shape_detection
+slug: /reTerminal_DM_Shape_detection
 last_update:
   date: 2/5/2023
   author: Kasun Thushara

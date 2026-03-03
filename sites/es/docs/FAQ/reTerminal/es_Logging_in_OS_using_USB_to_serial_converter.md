@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Cómo iniciar sesión en Raspberry Pi OS/ Ubuntu OS u otros OS usando un convertidor USB a serie
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Logging_in_OS_using_USB_to_serial_converter
+slug: /Logging_in_OS_using_USB_to_serial_converter
 last_update:
   date: 6/21/2023
   author: Seraphina

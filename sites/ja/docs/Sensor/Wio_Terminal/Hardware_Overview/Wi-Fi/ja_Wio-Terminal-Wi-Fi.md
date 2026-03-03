@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-Wi-Fi/
-slug: /ja/Wio-Terminal-Wi-Fi
+slug: /Wio-Terminal-Wi-Fi
 last_update:
   date: 05/15/2025
   author: gunengyu

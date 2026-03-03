@@ -4,7 +4,7 @@ title: ReSpeaker Mic Array
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ReSpeaker_Mic_Array
+slug: /ReSpeaker_Mic_Array
 sku: 107010001
 last_update:
   date: 1/12/2023

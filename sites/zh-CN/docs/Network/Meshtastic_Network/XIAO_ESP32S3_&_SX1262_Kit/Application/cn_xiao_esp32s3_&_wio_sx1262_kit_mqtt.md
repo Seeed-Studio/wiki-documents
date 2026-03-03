@@ -2,7 +2,7 @@
 description: 使用 XIAO ESP32S3 和 Wio-SX1262 搭建 Meshtastic MQTT 网关的指南，将 LoRa 自组网桥接到互联网，实现全球消息互通。
 title: 搭建 MQTT 网关
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
-slug: /cn/xiao_esp32s3_&_wio_sx1262_kit_mqtt
+slug: /xiao_esp32s3_&_wio_sx1262_kit_mqtt
 sku: 102010611,113110064
 sidebar_position: 1
 last_update:

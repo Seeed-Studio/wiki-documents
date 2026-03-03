@@ -2,7 +2,7 @@
 description: 基于 Wio-SX1262 和 XIAO esp32s3 模块的 Lorawan 传感器节点
 title: LoRaWAN 传感器节点
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/67_1.webp
-slug: /cn/wio_sx1262_xiao_esp32s3_for_lora_sensor_node
+slug: /wio_sx1262_xiao_esp32s3_for_lora_sensor_node
 sku: 102010611
 sidebar_position: 4
 last_update:

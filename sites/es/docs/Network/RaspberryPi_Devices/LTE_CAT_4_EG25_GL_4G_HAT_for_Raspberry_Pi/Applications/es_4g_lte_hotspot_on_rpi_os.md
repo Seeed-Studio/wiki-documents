@@ -9,7 +9,7 @@ keywords:
   - 4G LTE
   - Edge Computing
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/1-114993408-LTE-CAT-4-EG25-GL-4G-HAT-for-Raspberry-Pi.webp
-slug: /es/4g_lte_hotspot_on_raspberry_pi_os
+slug: /4g_lte_hotspot_on_raspberry_pi_os
 last_update:
   date: 12/24/2024
   author: Kasun Thushara

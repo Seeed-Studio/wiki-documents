@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Capacitance_Meter_Kit/
-slug: /ja/Capacitance_Meter_Kit
+slug: /Capacitance_Meter_Kit
 last_update:
   date: 05/15/2025
   author: gunengyu

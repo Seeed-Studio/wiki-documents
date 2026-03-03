@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/respeaker_player_spiffs
+slug: /respeaker_player_spiffs
 last_update:
   date: 05/15/2025
   author: Jessie

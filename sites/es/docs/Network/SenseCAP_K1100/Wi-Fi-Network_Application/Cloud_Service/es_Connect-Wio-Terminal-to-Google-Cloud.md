@@ -4,7 +4,7 @@ title: Uso de Google
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Connect-Wio-Terminal-to-Google-Cloud
+slug: /Connect-Wio-Terminal-to-Google-Cloud
 last_update:
   date: 1/13/2023
   author: shuxu hu

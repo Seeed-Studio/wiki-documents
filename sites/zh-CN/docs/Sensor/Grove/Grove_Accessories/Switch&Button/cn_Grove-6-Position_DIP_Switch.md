@@ -4,7 +4,7 @@ title: Grove - 6位拨码开关
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-6-Position_DIP_Switch
+slug: /Grove-6-Position_DIP_Switch
 sku: 111020043
 last_update:
   date: 1/10/2023

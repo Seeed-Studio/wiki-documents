@@ -1,7 +1,7 @@
 ---
 description: Guía completa de resolución de problemas y FAQ para Reachy Mini que cubre incidencias frecuentes, montaje, conexión, hardware, SDK y mensajes de error.
 title: Resolución de problemas y FAQ
-slug: /es/reachymini_troubleshooting
+slug: /reachymini_troubleshooting
 keywords:
 - troubleshooting
 - faq

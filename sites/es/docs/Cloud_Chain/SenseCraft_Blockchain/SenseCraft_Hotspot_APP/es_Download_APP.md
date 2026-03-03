@@ -4,7 +4,7 @@ title: Descargar APP
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/sensecraft-blockchain/sensecraft-hotspot-app/download-app
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/download-app
 aliases:
   - /es/Cloud_Chain/cloud/sensecraft-data/sensecraft-hotspot/sensecraft-hotspot-app/download-app
 last_update:

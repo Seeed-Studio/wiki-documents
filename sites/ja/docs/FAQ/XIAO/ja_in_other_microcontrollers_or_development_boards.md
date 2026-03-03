@@ -2,7 +2,7 @@
 description: XIAO CAN Bus拡張ボード-FAQ
 title: XIAO CAN Bus拡張ボードを他のマイクロコントローラーや開発ボードで使用できますか？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/in_other_microcontrollers_or_development_boards
+slug: /in_other_microcontrollers_or_development_boards
 last_update:
   date: 6/30/2023
   author: cheng.tang

@@ -2,7 +2,7 @@
 description: SquareLine Studio と LVGL を使用して、Watcher 用の独自の UI セットを開発する方法を紹介します。
 title: Watcher UI 統合ガイド
 image: https://files.seeedstudio.com/wiki/watcher_software_framework/ui_framework.webp
-slug: /ja/watcher_ui_integration_guide
+slug: /watcher_ui_integration_guide
 sidebar_position: 4
 last_update:
   date: 11/5/2024

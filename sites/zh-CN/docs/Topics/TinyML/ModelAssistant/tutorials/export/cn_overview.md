@@ -4,7 +4,7 @@ title: 导出
 keywords:
 - sscma model assistant ai tinyml 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ModelAssistant_Tutorials_Export_Overview
+slug: /ModelAssistant_Tutorials_Export_Overview
 last_update:
   date: 01/11/2024
   author: LynnL4

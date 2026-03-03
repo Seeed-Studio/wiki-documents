@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini Lite のハードウェアデータシート。寸法、自由度、モータ仕様、カメラ、マイクアレイ、および電子部品を含みます。
 title: Reachy Mini Lite ハードウェアデータシート
-slug: /ja/reachymini_platforms_reachy_mini_lite_hardware
+slug: /reachymini_platforms_reachy_mini_lite_hardware
 keywords:
 - hardware
 - datasheet

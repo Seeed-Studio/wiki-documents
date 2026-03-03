@@ -5,7 +5,7 @@ keywords:
 - Meshtastic
 - Indicator
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.webp
-slug: /ja/sensecap_indicator_meshtastic
+slug: /sensecap_indicator_meshtastic
 sku: 114993532
 last_update:
   date: 12/3/2024

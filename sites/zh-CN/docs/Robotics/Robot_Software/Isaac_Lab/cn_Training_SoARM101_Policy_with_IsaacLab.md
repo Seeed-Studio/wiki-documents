@@ -7,7 +7,7 @@ keywords:
 - 机械臂
 - SOARM100
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/isaaclab_rl/cube_play.webp
-slug: /cn/training_soarm101_policy_with_isaacLab
+slug: /training_soarm101_policy_with_isaacLab
 last_update:
   date: 2025/9/4
   author: Youjiang

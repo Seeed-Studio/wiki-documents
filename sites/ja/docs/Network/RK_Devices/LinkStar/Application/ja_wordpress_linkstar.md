@@ -6,7 +6,7 @@ keywords:
   - 初めての手順
   - WordPress
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/wordpress_linkstar
+slug: /wordpress_linkstar
 last_update:
   date: 05/15/2025
   author: Kasun Thushara

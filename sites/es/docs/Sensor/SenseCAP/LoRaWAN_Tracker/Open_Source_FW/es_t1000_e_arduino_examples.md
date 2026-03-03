@@ -4,7 +4,7 @@ title: Comenzar con Arduino
 keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/tracker-t1000-e-for-meshtastic.webp
-slug: /es/t1000_e_arduino_examples
+slug: /t1000_e_arduino_examples
 sidebar_position: 4
 last_update:
   date: 2/4/2026

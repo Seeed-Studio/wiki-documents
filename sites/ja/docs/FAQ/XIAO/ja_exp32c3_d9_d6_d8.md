@@ -2,7 +2,7 @@
 description: XIAOESP32C3-FAQ
 title: XIAO ESP32C3 IO割り当てに関する注意事項
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/exp32c3_d9_d6_d8
+slug: /exp32c3_d9_d6_d8
 last_update:
   date: 6/28/2023
   author: cheng.tang

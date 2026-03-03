@@ -8,7 +8,7 @@ keywords:
 - Jetson nano
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/a_loam
+slug: /a_loam
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui

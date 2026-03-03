@@ -4,7 +4,7 @@ title: XIAO ESP32S3とCircuitPythonで音声起動ポモドーロタイマーを
 keywords:
   - XIAO
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/xiao_esp32s3_voice_pomodoro
+slug: /xiao_esp32s3_voice_pomodoro
 last_update:
   date: 04/17/2025
   author: Peter Machona

@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: USB to シリアルコンバーターを使用してRaspberry Pi OS/ Ubuntu OSまたは他のOSにログインする方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Logging_in_OS_using_USB_to_serial_converter
+slug: /Logging_in_OS_using_USB_to_serial_converter
 last_update:
   date: 6/21/2023
   author: Seraphina

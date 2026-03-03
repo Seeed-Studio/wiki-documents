@@ -6,7 +6,7 @@ keywords:
 - motor
 - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010_homepage.webp
-slug: /es/stackforce_series
+slug: /stackforce_series
 last_update:
   date: 12/25/2025
   author: Li Shanghang

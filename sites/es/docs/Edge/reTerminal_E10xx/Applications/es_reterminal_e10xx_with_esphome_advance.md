@@ -2,7 +2,7 @@
 description: Este artículo describe cómo utilizar las capacidades de hardware de la pantalla ePaper de reTerminal E Series en ESPHome.
 title: Uso Avanzado de ESPHome de la Pantalla ePaper de reTerminal E Series en Home Assistant
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
-slug: /es/reterminal_e10xx_with_esphome_advanced
+slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 3
 last_update:
   date: 07/24/2025

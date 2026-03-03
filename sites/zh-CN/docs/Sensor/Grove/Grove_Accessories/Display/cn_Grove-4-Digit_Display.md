@@ -4,7 +4,7 @@ title: Grove - 4位数码显示模块
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-4-Digit_Display
+slug: /Grove-4-Digit_Display
 sku: 104030003
 last_update:
   date: 1/7/2023

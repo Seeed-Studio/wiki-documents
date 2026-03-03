@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-I2C_Motor_Driver-TB6612FNG/
-slug: /cn/Grove-I2C_Motor_Driver-TB6612FNG
+slug: /Grove-I2C_Motor_Driver-TB6612FNG
 sku: 108020103
 last_update:
   date: 01/09/2022

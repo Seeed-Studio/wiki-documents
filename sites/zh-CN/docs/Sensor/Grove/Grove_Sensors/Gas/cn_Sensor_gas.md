@@ -4,7 +4,7 @@ title: 传感器 - 气体
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeed_Gas_Sensor_Selection_Guide
+slug: /Seeed_Gas_Sensor_Selection_Guide
 last_update:
   date: 1/4/2023
   author: shuxu hu

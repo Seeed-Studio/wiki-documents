@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Serial_MP3_Player/
-slug: /ja/Grove-Serial_MP3_Player
+slug: /Grove-Serial_MP3_Player
 last_update:
   date: 05/15/2025
   author: gunengyu

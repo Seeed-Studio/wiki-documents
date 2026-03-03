@@ -4,7 +4,7 @@ title: 将 Seeed Studio XIAO SAMD21 连接到您的树莓派
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI
+slug: /How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI
 last_update:
   date: 1/11/2023
   author: shuxu hu

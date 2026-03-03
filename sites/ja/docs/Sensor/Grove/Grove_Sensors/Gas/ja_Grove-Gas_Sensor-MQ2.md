@@ -4,7 +4,7 @@ title: Grove - ガスセンサー(MQ2)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Gas_Sensor-MQ2
+slug: /Grove-Gas_Sensor-MQ2
 sku: 101020055
 last_update:
   date: 05/15/2025

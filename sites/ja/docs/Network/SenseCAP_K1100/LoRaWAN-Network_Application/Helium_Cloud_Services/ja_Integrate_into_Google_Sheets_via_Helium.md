@@ -4,7 +4,7 @@ title: Google Sheets 統合
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Integrate_into_Google_Sheets_via_Helium
+slug: /Integrate_into_Google_Sheets_via_Helium
 last_update:
   date: 05/15/2025
   author: shuxu hu

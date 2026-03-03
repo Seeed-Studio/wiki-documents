@@ -4,7 +4,7 @@ title: Grove - Sensor de Gas(O₂)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Gas_Sensor-O2
+slug: /Grove-Gas_Sensor-O2
 sku: 101020002
 last_update:
   date: 1/3/2023

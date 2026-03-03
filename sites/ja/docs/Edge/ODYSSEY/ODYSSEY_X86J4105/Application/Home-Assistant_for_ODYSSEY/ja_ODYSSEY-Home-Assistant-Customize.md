@@ -4,7 +4,7 @@ title: Home Assistantのカスタマイズ方法
 tags:
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ODYSSEY-Home-Assistant-Customize
+slug: /ODYSSEY-Home-Assistant-Customize
 last_update:
   date: 05/15/2025
   author: w0x7ce

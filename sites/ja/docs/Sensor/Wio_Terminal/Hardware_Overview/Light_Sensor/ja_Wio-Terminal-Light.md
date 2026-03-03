@@ -4,7 +4,7 @@ title: 光センサーの使い方
 keywords:
 - Wio_terminal 光センサー
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Light
+slug: /Wio-Terminal-Light
 last_update:
   date: 05/15/2025
   author: jianjing Huang

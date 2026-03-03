@@ -4,7 +4,7 @@ title: Seeed 产品的 I2C 和 I2C 地址
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/I2C_And_I2C_Address_of_Seeed_Product
+slug: /I2C_And_I2C_Address_of_Seeed_Product
 last_update:
   date: 1/16/2023
   author: hushuxu

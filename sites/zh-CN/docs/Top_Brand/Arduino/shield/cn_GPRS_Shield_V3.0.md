@@ -4,7 +4,7 @@ title: GPRS Shield V3.0
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/GPRS_Shield_V3.0
+slug: /GPRS_Shield_V3.0
 sku: 113030009
 last_update:
   date: 2/16/2023

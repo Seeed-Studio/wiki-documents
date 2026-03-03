@@ -6,7 +6,7 @@ keywords:
   - Keyword_Spotting
   - TensorFlow_Lite
 image: https://files.seeedstudio.com/wiki/ReSpeaker_2_Mics_Pi_HAT/social-image.webp
-slug: /es/respeaker_2_mics_pi_hat_v2_speech_recognition
+slug: /respeaker_2_mics_pi_hat_v2_speech_recognition
 last_update:
   date: 12/23/2024
   author: Joshua Lee

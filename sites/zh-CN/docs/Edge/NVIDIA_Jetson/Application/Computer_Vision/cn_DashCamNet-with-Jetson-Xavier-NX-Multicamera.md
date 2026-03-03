@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/DashCamNet-with-Jetson-Xavier-NX-Multicamera
+slug: /DashCamNet-with-Jetson-Xavier-NX-Multicamera
 last_update:
   date: 01/04/2023
   author: w0x7ce

@@ -3,7 +3,7 @@ title: XIAO 2チャンネル Wi-Fi AC エネルギーメーター In Home Assist
 description: |
   AC電源機器の電力使用量を検出するために設計されたSeeed Studioのスマートデバイス。
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/energy_meter_appearance.webp
-slug: /ja/2_channel_wifi_ac_energy_meter
+slug: /2_channel_wifi_ac_energy_meter
 sku: 114993611,E2025042701
 keywords:
   - XIAO

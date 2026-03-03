@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/connect_wio_tracker_to_TTN
+slug: /connect_wio_tracker_to_TTN
 sidebar_position: 3
 last_update:
   date: 10/23/2023

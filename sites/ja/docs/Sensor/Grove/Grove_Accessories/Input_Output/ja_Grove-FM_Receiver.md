@@ -4,7 +4,7 @@ title: Grove - FM レシーバー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-FM_Receiver
+slug: /Grove-FM_Receiver
 sku: 107020005
 last_update:
   date: 05/15/2025

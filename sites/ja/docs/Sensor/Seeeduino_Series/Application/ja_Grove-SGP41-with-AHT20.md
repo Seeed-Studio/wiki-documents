@@ -2,7 +2,7 @@
 description: この記事は Grove SGP41 センサーの使用に焦点を当てています。
 title: 湿度と温度に依存する SGP41（生データ）測定の補正
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/grove-sgp41-with-aht20
+slug: /grove-sgp41-with-aht20
 last_update:
   date: 05/15/2025
   author: Hans Bausewein

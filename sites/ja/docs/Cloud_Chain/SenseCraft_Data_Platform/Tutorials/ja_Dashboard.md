@@ -5,7 +5,7 @@ title: Dashboard
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /ja/sensecraft-data-platform/tutorials/dashboard
+slug: /sensecraft-data-platform/tutorials/dashboard
 aliases:
   - /ja/Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Dashboard
 last_update:

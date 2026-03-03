@@ -9,7 +9,7 @@ keywords:
   - MQTT
   - エッジコンピューティング
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_ex.webp
-slug: /ja/mqtt_raspberry_pi_4g_lte_hat
+slug: /mqtt_raspberry_pi_4g_lte_hat
 last_update:
   date: 05/15/2025
   author: Kasun Thushara

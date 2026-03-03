@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Get_Started_with_Wio-Trakcer_1110
+slug: /Get_Started_with_Wio-Trakcer_1110
 sku: 114993186
 sidebar_position: 2
 last_update:

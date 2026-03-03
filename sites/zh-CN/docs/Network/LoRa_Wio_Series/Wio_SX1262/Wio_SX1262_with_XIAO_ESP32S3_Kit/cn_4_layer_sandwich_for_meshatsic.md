@@ -2,7 +2,7 @@
 description: 基于 XIAO ESP32S3 & Wio-SX1262 套件、XIAO 扩展板、grove 传感器和 L76K GNSS 模块的 DIY meshtastic 套件，配有亚克力外壳。
 title: Meshtastic 4层三明治套件
 image: https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/202003261_preview-08.jpg
-slug: /cn/4_layer_sandwich_for_meshtastic
+slug: /4_layer_sandwich_for_meshtastic
 sidebar_position: 6
 last_update:
   date: 12/13/2024

@@ -7,7 +7,7 @@ keywords:
   - fuxa
   - fin
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /es/reComputer_r1000_install_fin
+slug: /reComputer_r1000_install_fin
 last_update:
   date: 07/4/2024
   author: ShuishengPeng

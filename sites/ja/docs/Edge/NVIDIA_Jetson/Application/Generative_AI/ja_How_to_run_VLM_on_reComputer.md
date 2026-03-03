@@ -5,7 +5,7 @@ keywords:
 - reComputer
 - VLM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/run_vlm_on_recomputer
+slug: /run_vlm_on_recomputer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui

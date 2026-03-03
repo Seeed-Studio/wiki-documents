@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini の Dashboard Web インターフェース、アプリ管理、および Python SDK クイックスタートを網羅した使用ガイド。
 title: Reachy Mini の使用方法
-slug: /ja/reachymini_platforms_reachy_mini_usage
+slug: /reachymini_platforms_reachy_mini_usage
 keywords:
 - usage
 - dashboard

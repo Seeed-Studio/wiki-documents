@@ -4,7 +4,7 @@ title: Grove - Interruptor DIP de 6 Posiciones
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-6-Position_DIP_Switch
+slug: /Grove-6-Position_DIP_Switch
 sku: 111020043
 last_update:
   date: 1/10/2023

@@ -7,7 +7,7 @@ keywords:
 - arm
 - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/all.webp
-slug: /es/myactuator_series
+slug: /myactuator_series
 sku: 114090068,114090069
 last_update:
   date: 05/29/2025

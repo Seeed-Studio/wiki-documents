@@ -4,7 +4,7 @@ title: 树莓派作为 NAS
 keywords:
 - Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Raspberry_Pi_as_a_NAS
+slug: /Raspberry_Pi_as_a_NAS
 last_update:
   date: 8/5/2024
   author: Frank

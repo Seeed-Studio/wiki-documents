@@ -2,7 +2,7 @@
 description: Arduino 原型扩展板套件
 title: Arduino 原型扩展板套件
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Protoshield_Kit_for_Arduino
+slug: /Protoshield_Kit_for_Arduino
 sku: 103060000
 last_update:
   date: 01/30/2023  

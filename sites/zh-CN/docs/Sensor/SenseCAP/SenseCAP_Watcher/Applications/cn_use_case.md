@@ -2,7 +2,7 @@
 description: 深入了解 Watcher 的各种应用和用例，展示其在不同监控场景中的多功能性和潜力。
 title: 用例
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/50.jpg
-slug: /cn/use_case
+slug: /use_case
 sidebar_position: 1
 last_update:
   date: 07/08/2024

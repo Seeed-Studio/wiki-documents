@@ -4,7 +4,7 @@ title: CircuitPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/XIAO-BLE_CircutPython
+slug: /XIAO-BLE_CircutPython
 last_update:
   date: 1/11/2023
   author: shuxu hu

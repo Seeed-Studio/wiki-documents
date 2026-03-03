@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Wio/
-slug: /es/Wio
+slug: /Wio
 last_update:
   date: 01/11/2022
   author: gunengyu

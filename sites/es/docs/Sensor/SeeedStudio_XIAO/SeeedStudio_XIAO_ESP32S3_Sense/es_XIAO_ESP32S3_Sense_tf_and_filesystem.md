@@ -8,7 +8,7 @@ keywords:
   - sd
   - file
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/xiao_esp32s3_sense_filesystem
+slug: /xiao_esp32s3_sense_filesystem
 last_update:
   date: 09/15/2024
   author: Priyanshu Roy

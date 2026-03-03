@@ -9,7 +9,7 @@ keywords:
   - Seguimiento de Activos
   - SOS
   - Seguridad del Campus
-slug: /es/solutions/indoor-positioning-bluetooth-lorawan-tracker
+slug: /solutions/indoor-positioning-bluetooth-lorawan-tracker
 sidebar_position: 1
 last_update:
   date: 09/10/2025

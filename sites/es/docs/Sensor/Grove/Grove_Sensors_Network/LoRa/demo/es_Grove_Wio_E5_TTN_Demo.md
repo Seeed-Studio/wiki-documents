@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_Wio_E5_TTN_Demo
+slug: /Grove_Wio_E5_TTN_Demo
 last_update:
   date: 08/28/2023
   author: Salman 

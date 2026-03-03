@@ -6,7 +6,7 @@ keywords:
 - python
 - sdk
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
-slug: /cn/respeaker_xvf3800_python_sdk
+slug: /respeaker_xvf3800_python_sdk
 last_update:
   date: 11/14/2025
   author: Kasun Thushara

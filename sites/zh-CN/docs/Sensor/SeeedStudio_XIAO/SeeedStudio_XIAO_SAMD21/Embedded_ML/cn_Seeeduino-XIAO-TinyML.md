@@ -4,7 +4,7 @@ title: Seeed Studio XIAO SAMD21 上的 TinyML
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeeduino-XIAO-TinyML
+slug: /Seeeduino-XIAO-TinyML
 last_update:
   date: 1/11/2023
   author: shuxu hu

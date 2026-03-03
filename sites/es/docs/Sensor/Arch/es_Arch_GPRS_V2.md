@@ -4,7 +4,7 @@ title: Arch GPRS V2
 keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Arch_GPRS_V2
+slug: /Arch_GPRS_V2
 sku: 113010001
 last_update:
   date: 2/1/2023

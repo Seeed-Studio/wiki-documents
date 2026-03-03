@@ -4,7 +4,7 @@ title: Grove - Kit de Cámara Serial
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Serial_Camera_Kit
+slug: /Grove-Serial_Camera_Kit
 last_update:
   date: 2/22/2023
   author: jianjing Huang

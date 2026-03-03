@@ -4,7 +4,7 @@ title: Raspberry Pi RS232 Board v1.0
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Raspberry_Pi_R232_Board_v1.0
+slug: /Raspberry_Pi_R232_Board_v1.0
 sku: 103030028
 last_update:
   date: 05/15/2025

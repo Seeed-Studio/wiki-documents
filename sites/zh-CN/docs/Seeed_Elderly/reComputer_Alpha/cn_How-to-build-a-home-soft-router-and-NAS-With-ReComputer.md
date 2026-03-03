@@ -4,7 +4,7 @@ title: 如何使用 ReComputer 构建家庭软路由和 NAS
 keywords:
 - ReComputer_Alpha
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/How-to-build-a-home-soft-router-and-NAS-With-ReComputer
+slug: /How-to-build-a-home-soft-router-and-NAS-With-ReComputer
 last_update:
   date: 01/20/2023
   author: jianjing Huang

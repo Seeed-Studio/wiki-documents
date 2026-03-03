@@ -4,7 +4,7 @@ title: Primeros pasos con el Emisor de Infrarrojos
 keywords:
 - Wio_terminal Infrared_Emitter
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-Infrared-Emitter
+slug: /Wio-Terminal-Infrared-Emitter
 last_update:
   date: 1/17/2023
   author: jianjing Huang

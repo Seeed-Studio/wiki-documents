@@ -4,7 +4,7 @@ title: Xadow - 3軸加速度センサー
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_3_Aixs_Accelerometer
+slug: /Xadow_3_Aixs_Accelerometer
 last_update:
   date: 05/15/2025
   author: shuxu hu

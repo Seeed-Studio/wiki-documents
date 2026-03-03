@@ -2,7 +2,7 @@
 description: 深入探讨 Watcher 外观的自定义选项，并探索 SenseCraft 平台提供的各种工具。
 title: SenseCraft APP 介绍
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/sensecraft_app.webp
-slug: /cn/sensecap_app_introduction
+slug: /sensecap_app_introduction
 sidebar_position: 1
 last_update:
   date: 10/18/2024

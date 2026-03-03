@@ -4,7 +4,7 @@ title: 概要
 keywords:
 - sscma model assistant ai tinyml 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ModelAssistant_Tutorials_Training_Overview
+slug: /ModelAssistant_Tutorials_Training_Overview
 last_update:
   date: 05/15/2025
   author: LynnL4

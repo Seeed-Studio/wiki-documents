@@ -7,7 +7,7 @@ keywords:
 - ble
 - bluetooth
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/xiao_esp32c6_bluetooth
+slug: /xiao_esp32c6_bluetooth
 last_update:
   date: 04/11/2024
   author: Citric

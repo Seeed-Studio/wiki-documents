@@ -6,7 +6,7 @@ keywords:
   - reComputer R1100
   - Flash OS
 image: https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.webp
-slug: /ja/recomputer_r1100_flash_os
+slug: /recomputer_r1100_flash_os
 last_update:
   date: 3/3/2025
   author: Kasun Thushara

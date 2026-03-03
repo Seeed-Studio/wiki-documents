@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO MG24 Sense Con MicroPython
 description: Multiplexación de pines con Seeed Studio XIAO MG24(Sense).
 image: https://files.seeedstudio.com/wiki/XIAO_MG24_Sense.webp
-slug: /es/xiao_mg24_sense_micropython
+slug: /xiao_mg24_sense_micropython
 keywords:
   - XIAO
   - MG24

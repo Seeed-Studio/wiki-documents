@@ -8,7 +8,7 @@ keywords:
 - Robótica Avanzada
 - Inteligencia Artificial
 - Navegación Autónoma
-slug: /es/stackforce_giant_bipedal_wheeled_robot
+slug: /stackforce_giant_bipedal_wheeled_robot
 last_update:
   date: 12/12/2025
   author: TienjuiWong

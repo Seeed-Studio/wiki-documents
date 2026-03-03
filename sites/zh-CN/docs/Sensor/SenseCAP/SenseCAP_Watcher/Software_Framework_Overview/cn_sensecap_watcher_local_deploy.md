@@ -2,7 +2,7 @@
 description: 本教程将指导您如何在本地部署 Watcher 的 AI 服务，脱离 SenseCraft 服务来使用 Watcher。
 title: 在本地部署 Watcher 的 AI 功能
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.png
-slug: /cn/watcher_local_deploy
+slug: /watcher_local_deploy
 sidebar_position: 3
 last_update:
   date: 9/11/2025

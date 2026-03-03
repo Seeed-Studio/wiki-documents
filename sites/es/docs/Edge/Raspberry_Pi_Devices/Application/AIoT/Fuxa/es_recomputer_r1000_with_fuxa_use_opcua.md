@@ -7,7 +7,7 @@ keywords:
   - fuxa
   - OPC-UA
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /es/reComputer_r1000_fuxa_opc_ua
+slug: /reComputer_r1000_fuxa_opc_ua
 last_update:
   date: 10/8/2024
   author: ShuishengPeng

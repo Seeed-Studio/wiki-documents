@@ -6,7 +6,7 @@ keywords:
   - FreeRTOS
   - idf
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
-slug: /ja/xiao_esp32c5_with_freertos
+slug: /xiao_esp32c5_with_freertos
 sku: 100010048
 last_update:
   date: 1/13/2026

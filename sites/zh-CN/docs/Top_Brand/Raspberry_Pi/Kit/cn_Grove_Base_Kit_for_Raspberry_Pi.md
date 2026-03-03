@@ -4,7 +4,7 @@ title: Grove 树莓派基础套件
 keywords:
 - Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_Base_Kit_for_Raspberry_Pi
+slug: /Grove_Base_Kit_for_Raspberry_Pi
 sku: 110020169
 last_update:
   date: 1/11/2023

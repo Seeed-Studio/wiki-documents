@@ -4,7 +4,7 @@ title: Exhibición para la Serie XIAO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/xiao_topic_page
+slug: /xiao_topic_page
 last_update:
   date: 02/04/2026
   author: Carla Guo

@@ -4,7 +4,7 @@ title: Firmware Nativo
 keywords:
 - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP_Indicator_Native_Firmware
+slug: /SenseCAP_Indicator_Native_Firmware
 sidebar_position: 1
 last_update:
   date: 11/16/2023

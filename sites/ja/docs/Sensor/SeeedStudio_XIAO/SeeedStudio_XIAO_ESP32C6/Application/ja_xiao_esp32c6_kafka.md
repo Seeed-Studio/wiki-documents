@@ -4,7 +4,7 @@ title: Apache Kafkaを活用したリアルタイムIoTデータ処理ノード
 keywords:
 - xiao esp32c6
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/xiao_esp32c6_kafka
+slug: /xiao_esp32c6_kafka
 last_update:
   date: 05/21/2024
   author: Allen

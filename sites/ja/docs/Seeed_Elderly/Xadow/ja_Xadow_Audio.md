@@ -4,7 +4,7 @@ title: Xadow - Audio
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Audio
+slug: /Xadow_Audio
 sku: 107040001
 last_update:
   date: 05/15/2025

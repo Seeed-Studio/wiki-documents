@@ -4,7 +4,7 @@ title: 使用 Home Assistant 快速入门
 tags:
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ODYSSEY-X86-Home-Assistant
+slug: /ODYSSEY-X86-Home-Assistant
 sku: E22011026
 last_update:
   date: 03/16/2023

@@ -4,7 +4,7 @@ title: Arch Link
 keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Arch_Link
+slug: /Arch_Link
 sku: 110080001, 102080006
 last_update:
   date: 2/1/2023

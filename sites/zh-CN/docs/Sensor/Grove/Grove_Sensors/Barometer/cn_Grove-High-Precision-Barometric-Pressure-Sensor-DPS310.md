@@ -4,7 +4,7 @@ title: Grove - 高精度气压传感器 DPS310
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-High-Precision-Barometric-Pressure-Sensor-DPS310
+slug: /Grove-High-Precision-Barometric-Pressure-Sensor-DPS310
 sku: 101020812
 last_update:
   date: 1/5/2023

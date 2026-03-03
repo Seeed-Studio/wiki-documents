@@ -7,7 +7,7 @@ keywords:
 - clokc
 image: https://files.seeedstudio.com/wiki/RA4M1_Application/top.webp
 side_position: 2
-slug: /es/xiao_ra4m1_clock
+slug: /xiao_ra4m1_clock
 sidebar_class_name: hidden 
 last_update:
   date: 11/12/2024

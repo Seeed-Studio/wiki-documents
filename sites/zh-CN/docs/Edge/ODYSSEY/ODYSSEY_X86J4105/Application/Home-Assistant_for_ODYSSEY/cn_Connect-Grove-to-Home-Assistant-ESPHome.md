@@ -4,7 +4,7 @@ title: 使用 ESPHome 将 Grove 模块连接到 Home Assistant
 tags:
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Connect-Grove-to-Home-Assistant-ESPHome
+slug: /Connect-Grove-to-Home-Assistant-ESPHome
 sku: E22011026,110992044
 last_update:
   date: 03/16/2023

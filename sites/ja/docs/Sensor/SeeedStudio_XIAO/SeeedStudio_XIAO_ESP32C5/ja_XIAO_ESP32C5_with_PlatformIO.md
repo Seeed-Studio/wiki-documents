@@ -6,7 +6,7 @@ keywords:
   - esp32c5
   - platformio
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/pio_start.webp
-slug: /ja/xiao_esp32c5_with_platformio
+slug: /xiao_esp32c5_with_platformio
 last_update:
   date: 12/18/2025
   author: Zeller

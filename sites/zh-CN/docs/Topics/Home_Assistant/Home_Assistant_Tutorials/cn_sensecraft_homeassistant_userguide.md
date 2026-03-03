@@ -3,7 +3,7 @@ description: 这是 SenseCraft-HomeAssistant 用户手册
 title: SenseCraft-HomeAssistant 用户手册
 keywords:
 - home assistant 
-slug: /cn/sensecraft_homeassistant_userguide
+slug: /sensecraft_homeassistant_userguide
 sku: E2025081502,E2025081503
 last_update:
   date: 04/12/2024

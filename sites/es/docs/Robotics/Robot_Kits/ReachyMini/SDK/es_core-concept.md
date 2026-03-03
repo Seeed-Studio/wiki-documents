@@ -1,7 +1,7 @@
 ---
 description: Comprende los conceptos y la arquitectura fundamentales de Reachy Mini, incluyendo el diseño cliente-servidor, sistemas de coordenadas, límites de seguridad y modos de motor para un desarrollo de aplicaciones robusto.
 title: Conceptos Fundamentales y Arquitectura
-slug: /es/reachymini_sdk_core-concept
+slug: /reachymini_sdk_core-concept
 keywords:
 - architecture
 - coordinate systems

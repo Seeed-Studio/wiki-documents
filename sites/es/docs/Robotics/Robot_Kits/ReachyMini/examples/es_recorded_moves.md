@@ -1,7 +1,7 @@
 ---
 description: Ejemplo que demuestra cómo reproducir movimientos grabados desde conjuntos de datos que incluyen bailes, emociones o conjuntos de datos personalizados para Reachy Mini.
 title: Movimientos Grabados
-slug: /es/reachymini_examples_recorded_moves
+slug: /reachymini_examples_recorded_moves
 keywords:
 - recorded moves
 - dataset

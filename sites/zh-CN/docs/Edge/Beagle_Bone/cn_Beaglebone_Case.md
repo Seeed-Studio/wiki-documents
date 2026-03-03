@@ -4,7 +4,7 @@ title: BeagleBone® 外壳
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Beaglebone_Case
+slug: /Beaglebone_Case
 sku: 113070001
 last_update:
   date: 1/10/2023

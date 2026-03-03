@@ -2,7 +2,7 @@
 description: 如何选择合适的线缆
 title: 如何选择合适的线缆
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/How_To_Choose_The_Right_Cable
+slug: /How_To_Choose_The_Right_Cable
 last_update:
   date: 02/01/2023
   author: w0x7ce

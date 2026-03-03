@@ -2,7 +2,7 @@
 description: XIAO 照明驱动器：锂电池供电，3 个开关 + 4 个 PWM，驱动 3V COB 灯丝——点亮微缩模型、立体模型、可穿戴设备。
 title: XIAO COB LED 驱动板
 image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
-slug: /cn/getting_started_with_cob_led_dirver_board
+slug: /getting_started_with_cob_led_dirver_board
 sku: 100079172,E25121201
 last_update:
   date: 11/27/2025

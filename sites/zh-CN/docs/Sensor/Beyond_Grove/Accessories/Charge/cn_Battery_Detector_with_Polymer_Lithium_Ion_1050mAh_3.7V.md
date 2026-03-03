@@ -4,7 +4,7 @@ title: 带有1050mAh 3.7V聚合物锂离子电池的电池检测器
 keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V
+slug: /Battery_Detector_with_Polymer_Lithium_Ion_1050mAh_3.7V
 sku: 114990576
 last_update:
   date: 1/13/2023

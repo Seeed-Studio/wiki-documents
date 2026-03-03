@@ -4,7 +4,7 @@ title: Grove - 3軸デジタル加速度センサー(±1.5g)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-3-Axis_Digital_Accelerometer-1.5g
+slug: /Grove-3-Axis_Digital_Accelerometer-1.5g
 sku: 101020039
 last_update:
   date: 05/15/2025

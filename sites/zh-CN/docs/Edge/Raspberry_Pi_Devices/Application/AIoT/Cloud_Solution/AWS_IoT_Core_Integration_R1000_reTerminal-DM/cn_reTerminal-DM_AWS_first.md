@@ -6,7 +6,7 @@ keywords:
 - AWS
 - Getting Start
 - Cloud
-slug: /cn/reTerminal-DM_AWS_first
+slug: /reTerminal-DM_AWS_first
 last_update:
   date: 11/22/2023
   author: Kasun Thushara

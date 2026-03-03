@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO RA4M1 与 MicroPython
 description: 使用 Seeed Studio XIAO RA4M1 进行引脚复用
 image: https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-RA4M1.webp
-slug: /cn/xiao_ra4m1_micropython
+slug: /xiao_ra4m1_micropython
 keywords:
   - XIAO
   - RAM41

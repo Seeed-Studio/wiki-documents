@@ -4,7 +4,7 @@ title: Edge Impulse Tuner
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Edge-Impulse-Tuner
+slug: /Edge-Impulse-Tuner
 last_update:
   date: 1/31/2023
   author: jianjing Huang

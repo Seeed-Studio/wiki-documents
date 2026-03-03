@@ -2,7 +2,7 @@
 description: '本页面是 TRMNL 7.5英寸(OG) DIY 套件的导航页面。'
 title: TRMNL 7.5英寸(OG) DIY 套件入门指南
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/head.webp
-slug: /cn/trmnl_7inch5_diy_kit_main_page
+slug: /trmnl_7inch5_diy_kit_main_page
 sidebar_position: 1
 last_update:
   date: 06/29/2025

@@ -2,7 +2,7 @@
 description: OpenWrt-常见问题解答
 title: 如何在 OpenWrt 中更改默认网关 IP？
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/change_default_gateway_IP
+slug: /change_default_gateway_IP
 last_update:
   date: 2023/6/21
   author: Seraphina

@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J4105
 title: TrueNAS インストール
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ODYSSEY-X86-TrueNAS
+slug: /ODYSSEY-X86-TrueNAS
 last_update:
   date: 05/15/2025
   author: w0x7ce

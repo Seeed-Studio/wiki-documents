@@ -4,7 +4,7 @@ title: Grove - 3軸デジタル加速度計 40g (ADXL357)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-3-Axis_Digital_Accelerometer_40g-ADXL357
+slug: /Grove-3-Axis_Digital_Accelerometer_40g-ADXL357
 sku: 101020639
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: Home Assistantの始め方
 tags:
   - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ODYSSEY-X86-Home-Assistant
+slug: /ODYSSEY-X86-Home-Assistant
 sku: E22011026
 last_update:
   date: 05/15/2025

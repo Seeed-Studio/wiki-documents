@@ -5,7 +5,7 @@ keywords:
   - Edge
   - EdgeBox-RPi-200
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/EdgeBox-rpi-200-with-LoRaWAN-module
+slug: /EdgeBox-rpi-200-with-LoRaWAN-module
 last_update:
   date: 7/14/2023
   author: Peter Pan

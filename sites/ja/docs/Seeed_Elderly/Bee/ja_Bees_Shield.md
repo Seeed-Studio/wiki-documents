@@ -4,7 +4,7 @@ title: Bees Shield
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Bees_Shield
+slug: /Bees_Shield
 last_update:
   date: 05/15/2025
   author: shuxu hu

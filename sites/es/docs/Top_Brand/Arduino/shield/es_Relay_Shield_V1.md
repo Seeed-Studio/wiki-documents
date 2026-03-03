@@ -4,7 +4,7 @@ title: Relay Shield V1.0
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Relay_Shield_V1
+slug: /Relay_Shield_V1
 last_update:
   date: 2/16/2023
   author: jianjing Huang

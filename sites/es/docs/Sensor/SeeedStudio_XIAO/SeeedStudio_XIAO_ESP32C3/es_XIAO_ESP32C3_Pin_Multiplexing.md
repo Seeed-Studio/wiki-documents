@@ -4,7 +4,7 @@ title: Multiplexación de Pines
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO_ESP32C3_Pin_Multiplexing
+slug: /XIAO_ESP32C3_Pin_Multiplexing
 last_update:
   date: 07/25/2024
   author: Spencer

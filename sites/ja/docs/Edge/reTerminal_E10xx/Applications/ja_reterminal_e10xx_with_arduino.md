@@ -2,7 +2,7 @@
 description: この記事では、reTerminal E シリーズの ePaper ディスプレイを Arduino で動作させる方法について説明します。
 title: reTerminal E シリーズ ePaper ディスプレイを Arduino で動作させる
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
-slug: /ja/reterminal_e10xx_with_arduino
+slug: /reterminal_e10xx_with_arduino
 sidebar_position: 4
 last_update:
   date: 08/21/2025

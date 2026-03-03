@@ -4,7 +4,7 @@ title: Grove Serial LCD V1.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Serial_LCD_V1.0
+slug: /Grove-Serial_LCD_V1.0
 last_update:
   date: 05/15/2025
   author: jianjing Huang

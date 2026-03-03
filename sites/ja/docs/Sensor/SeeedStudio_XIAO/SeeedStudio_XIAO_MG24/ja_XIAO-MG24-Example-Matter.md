@@ -2,7 +2,7 @@
 description: XIAO MG24 例 - Matter
 title: Seeed Studio XIAO MG24 例 - Matter
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
-slug: /ja/xiao_mg24_matter
+slug: /xiao_mg24_matter
 sidebar_position: 2
 last_update:
   date: 11/07/2024

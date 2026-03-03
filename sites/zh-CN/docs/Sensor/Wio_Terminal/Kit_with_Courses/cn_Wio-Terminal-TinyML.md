@@ -4,7 +4,7 @@ title: 什么是 TinyML
 keywords:
 - Wio_terminal Kit_with_Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-TinyML
+slug: /Wio-Terminal-TinyML
 sku: 114992774
 last_update:
   date: 1/31/2023

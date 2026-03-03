@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Photo_interrupter_OS25B10/
-slug: /es/Photo_interrupter_OS25B10
+slug: /Photo_interrupter_OS25B10
 last_update:
   date: 02/03/2022
   author: gunengyu

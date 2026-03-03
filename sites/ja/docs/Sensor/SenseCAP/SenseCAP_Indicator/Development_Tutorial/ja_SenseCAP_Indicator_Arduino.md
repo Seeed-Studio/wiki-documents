@@ -4,7 +4,7 @@ title: Arduino で両チップを開発する
 keywords:
   - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.webp
-slug: /ja/SenseCAP_Indicator_ESP32_Arduino
+slug: /SenseCAP_Indicator_ESP32_Arduino
 last_update:
   date: 2/28/2025
   author: Hendra, LongDirtyAnimAlf

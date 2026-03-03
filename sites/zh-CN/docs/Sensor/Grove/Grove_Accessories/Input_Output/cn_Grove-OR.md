@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-OR/
-slug: /cn/Grove-OR
+slug: /Grove-OR
 last_update:
   date: 01/09/2022
   author: gunengyu

@@ -2,7 +2,7 @@
 description: reComputer for Jetson 教程和练习
 title: reComputer for Jetson 教程和练习
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reComputer_Jetson_Series_Tutorials_Exercise
+slug: /reComputer_Jetson_Series_Tutorials_Exercise
 sku: E24010131
 last_update:
   date: 01/04/2023

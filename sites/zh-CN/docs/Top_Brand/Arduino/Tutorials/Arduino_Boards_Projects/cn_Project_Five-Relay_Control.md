@@ -5,7 +5,7 @@ keywords:
 - Arduino
 - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Project_Five-Relay_Control
+slug: /Project_Five-Relay_Control
 last_update:
   date: 2/15/2023
   author: jianjing Huang

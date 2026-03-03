@@ -2,7 +2,7 @@
 description: reTerminalシリーズ専用に構築されたヒューマンコンピュータインタラクションページプラットフォーム、SenseCraft HMIをご紹介します。
 title: SenseCraft HMI 概要
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/sensecraft_hmi_overview
+slug: /sensecraft_hmi_overview
 sidebar_position: 1
 last_update:
   date: 07/21/2025

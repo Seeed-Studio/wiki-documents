@@ -6,7 +6,7 @@ keywords:
   - 接口使用
   - Jetson
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
-slug: /cn/recomputer_jetson_super_hardware_interfaces_usage
+slug: /recomputer_jetson_super_hardware_interfaces_usage
 last_update:
   date: 05/26/2025
   author: Zibo

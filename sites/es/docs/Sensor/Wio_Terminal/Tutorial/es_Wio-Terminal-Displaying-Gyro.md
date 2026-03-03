@@ -4,7 +4,7 @@ title: Wio Terminal Mostrando Giroscopio
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-Displaying-Gyro
+slug: /Wio-Terminal-Displaying-Gyro
 last_update:
   date: 1/31/2023
   author: jianjing Huang

@@ -6,7 +6,7 @@ keywords:
   - Edgebox RPI 200
   - Ignition Edge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Edgebox-rpi-200-ignition-edge
+slug: /Edgebox-rpi-200-ignition-edge
 last_update:
   date: 10/13/2023
   author: Corey Thompson

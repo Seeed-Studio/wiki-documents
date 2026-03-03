@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/sensecap_t2000_tracker
+slug: /sensecap_t2000_tracker
 last_update:
   date: 1/28/2026
   author: Janet

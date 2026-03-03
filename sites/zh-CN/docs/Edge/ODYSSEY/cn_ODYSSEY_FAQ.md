@@ -2,7 +2,7 @@
 description: ODYSSEY-常见问题解答
 title: ODYSSEY 使用常见问题解答
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ODYSSEY_FAQ
+slug: /ODYSSEY_FAQ
 last_update:
   date: 7/5/2023
   author: Seraphina

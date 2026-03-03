@@ -2,7 +2,7 @@
 description: Este artículo es una página de colección para las Placas Controladoras de ePaper.
 title: Resumen de Placas Controladoras de ePaper
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
-slug: /es/xiao_epaper_display_board_overview
+slug: /xiao_epaper_display_board_overview
 sidebar_position: 1
 last_update:
   date: 12/21/2025

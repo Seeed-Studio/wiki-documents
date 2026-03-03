@@ -3,7 +3,7 @@ description: ODYSSEY-FAQ
 title: 元のWindowsの再インストール
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /ja/reinstall_the_Original_Windows
+slug: /reinstall_the_Original_Windows
 last_update:
   date: 2023.6.25
   author: cheng.tang

@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reComputer_Jetson_Series_Hardware_Layout
+slug: /reComputer_Jetson_Series_Hardware_Layout
 last_update:
   date: 01/03/2023
   author: w0x7ce

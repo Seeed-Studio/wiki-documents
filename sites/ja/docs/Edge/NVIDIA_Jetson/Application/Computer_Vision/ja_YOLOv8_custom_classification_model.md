@@ -6,7 +6,7 @@ keywords:
   - custom classification model
   - classification model
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/train_and_deploy_a_custom_classification_model_with_yolov8
+slug: /train_and_deploy_a_custom_classification_model_with_yolov8
 last_update:
   date: 06/11/2024
   author: Bruno

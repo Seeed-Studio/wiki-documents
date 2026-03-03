@@ -4,7 +4,7 @@ title: Introducción a BeagleBone®
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/BeagleBone
+slug: /BeagleBone
 last_update:
   date: 08/08/2024
   author: Frank

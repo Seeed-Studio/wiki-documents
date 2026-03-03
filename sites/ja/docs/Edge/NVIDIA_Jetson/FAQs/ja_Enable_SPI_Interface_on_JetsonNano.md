@@ -6,7 +6,7 @@ keywords:
 - Jetson-nano
 - BSP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/enable_spi_interface_on_jetsonnano
+slug: /enable_spi_interface_on_jetsonnano
 last_update:
   date: 07/02/2025
   author: Dayu

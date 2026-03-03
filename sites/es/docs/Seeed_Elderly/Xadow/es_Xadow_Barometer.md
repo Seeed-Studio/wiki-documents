@@ -4,7 +4,7 @@ title: Xadow - Barómetro
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Xadow_Barometer
+slug: /Xadow_Barometer
 sku: 103040001
 last_update:
   date: 1/13/2023

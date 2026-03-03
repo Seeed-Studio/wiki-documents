@@ -8,7 +8,7 @@ keywords:
   - OpenCV
   - Object Detection 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminal_DM_Object_detection
+slug: /reTerminal_DM_Object_detection
 last_update:
   date: 12/7/2023
   author: Kasun Thushara

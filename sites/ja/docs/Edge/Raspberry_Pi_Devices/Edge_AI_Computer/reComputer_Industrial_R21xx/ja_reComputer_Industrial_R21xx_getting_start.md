@@ -7,7 +7,7 @@ keywords:
 - Edge Controller
 - reComputer Industrial R21xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
-slug: /ja/recomputer_industrial_R21xx_getting_start
+slug: /recomputer_industrial_R21xx_getting_start
 sku: 100099044,100061305,100091962,100097052,E2025091902
 last_update:
   date: 09/28/2025

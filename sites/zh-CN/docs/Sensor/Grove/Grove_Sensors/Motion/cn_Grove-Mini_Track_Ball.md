@@ -4,7 +4,7 @@ title: Grove - 迷你轨迹球
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Mini_Track_Ball
+slug: /Grove-Mini_Track_Ball
 sku: 101020091
 last_update:
   date: 1/7/2023

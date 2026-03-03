@@ -4,7 +4,7 @@ title: El "Parpadeo" de IA
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/sscma
+slug: /sscma
 last_update:
   date: 08/26/2024
   author: Matthew

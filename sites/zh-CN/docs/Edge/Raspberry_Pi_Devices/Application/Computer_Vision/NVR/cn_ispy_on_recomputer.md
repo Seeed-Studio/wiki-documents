@@ -6,7 +6,7 @@ keywords:
   - iSpy
   - NVR
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/ispy/config_5.webp
-slug: /cn/ispy_on_recomputer
+slug: /ispy_on_recomputer
 last_update:
   date: 11/10/2025
   author: Jiahao

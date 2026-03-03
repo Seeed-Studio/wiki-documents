@@ -4,7 +4,7 @@ title: Grove - 水位传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Water-Level-Sensor
+slug: /Grove-Water-Level-Sensor
 sku: 101020635
 last_update:
   date: 1/6/2023

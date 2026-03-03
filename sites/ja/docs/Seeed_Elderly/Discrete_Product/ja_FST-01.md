@@ -4,7 +4,7 @@ title: FST-01
 keywords:  
 - grove  
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png  
-slug: /ja/FST-01
+slug: /FST-01
 last_update:  
   date: 05/15/2025
   author: shuxu hu  

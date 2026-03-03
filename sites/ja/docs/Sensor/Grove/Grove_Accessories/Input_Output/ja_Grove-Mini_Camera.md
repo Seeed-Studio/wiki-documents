@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Mini_Camera/
-slug: /ja/Grove-Mini_Camera
+slug: /Grove-Mini_Camera
 last_update:
   date: 05/15/2025
   author: gunengyu

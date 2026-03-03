@@ -4,7 +4,7 @@ title: Grove SEN5X 一体化环境传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_SEN5X_All_in_One
+slug: /Grove_SEN5X_All_in_One
 sku: 101021014,101021013
 last_update:
   date: 1/29/2023

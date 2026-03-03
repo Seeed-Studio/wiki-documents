@@ -6,7 +6,7 @@ keywords:
   - esp32c5
   - wifi_usage
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
-slug: /es/xiao_esp32c5_wifi_usage
+slug: /xiao_esp32c5_wifi_usage
 sidebar_class_name: hidden
 last_update:
   date: 01/06/2026

@@ -2,7 +2,7 @@
 description: Watcherのオープンソースリポジトリをダウンロードし、IDF環境を構築する方法を紹介します。
 title: Watcher開発環境の構築
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/64.webp
-slug: /ja/build_watcher_development_environment
+slug: /build_watcher_development_environment
 sidebar_position: 1
 last_update:
   date: 11/5/2024

@@ -1,7 +1,7 @@
 ---
 description: Guía experta para volver a grabar la imagen ReachyMiniOS en el CM4 de Reachy Mini usando rpiboot y bmaptool en Linux, macOS y Windows.
 title: Volver a grabar la imagen de Raspberry Pi OS
-slug: /es/reachymini_platforms_reachy_mini_reflash_the_rpi_iso
+slug: /reachymini_platforms_reachy_mini_reflash_the_rpi_iso
 keywords:
 - reflash
 - factory reset

@@ -5,7 +5,7 @@ keywords:
 - reComputer
 - Train YOLOv8
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/How_to_Train_and_Deploy_YOLOv8_on_reComputer
+slug: /How_to_Train_and_Deploy_YOLOv8_on_reComputer
 last_update:
   date: 12/6/2023
   author: Youjiang

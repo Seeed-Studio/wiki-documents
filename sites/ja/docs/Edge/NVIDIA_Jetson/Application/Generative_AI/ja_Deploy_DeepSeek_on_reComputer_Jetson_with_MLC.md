@@ -8,7 +8,7 @@ keywords:
 - MLC
 - deepseek
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/deploy_deepseek.webp
-slug: /ja/deploy_deepseek_on_jetson_with_mlc
+slug: /deploy_deepseek_on_jetson_with_mlc
 last_update:
   date: 02/13/2025
   author: Youjiang

@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Por qué hay pegamento negro alrededor de los chips en el CM4
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/black_glue_around_CM4
+slug: /black_glue_around_CM4
 last_update:
   date: 6/21/2023
   author: Seraphina

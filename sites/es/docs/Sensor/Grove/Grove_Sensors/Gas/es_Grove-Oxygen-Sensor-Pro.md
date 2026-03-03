@@ -4,7 +4,7 @@ title: Grove - Sensor de Oxígeno Pro(GGC2330-O2)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Oxygen-Sensor-Pro
+slug: /Grove-Oxygen-Sensor-Pro
 sku: 101020912
 last_update:
   date: 1/4/2023

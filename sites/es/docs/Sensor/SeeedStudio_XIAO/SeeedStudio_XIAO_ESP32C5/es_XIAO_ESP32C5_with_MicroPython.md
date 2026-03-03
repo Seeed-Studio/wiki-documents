@@ -6,7 +6,7 @@ keywords:
   - esp32c5
   - micropython
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
-slug: /es/xiao_esp32c5_with_micropyhton
+slug: /xiao_esp32c5_with_micropyhton
 last_update:
   date: 12/22/2025
   author: Zeller

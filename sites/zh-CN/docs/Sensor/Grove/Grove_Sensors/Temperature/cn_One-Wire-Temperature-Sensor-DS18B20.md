@@ -4,7 +4,7 @@ title: 单总线温度传感器 DS18B20
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/One-Wire-Temperature-Sensor-DS18B20
+slug: /One-Wire-Temperature-Sensor-DS18B20
 sku: 101990019
 last_update:
   date: 1/4/2023

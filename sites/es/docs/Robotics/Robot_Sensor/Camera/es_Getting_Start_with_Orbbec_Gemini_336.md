@@ -13,7 +13,7 @@ keywords:
 - Depth Camera
 - Visual SLAM
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_336/orbbec336.webp
-slug: /es/orbbec_gemini336
+slug: /orbbec_gemini336
 last_update:
   date: 2025-08-22
   author: Zibo

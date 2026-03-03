@@ -4,7 +4,7 @@ title: T1000-E トラッカーの使用開始
 keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecap_t1000_e
+slug: /sensecap_t1000_e
 sku: 114993369
 sidebar_position: 2
 last_update:

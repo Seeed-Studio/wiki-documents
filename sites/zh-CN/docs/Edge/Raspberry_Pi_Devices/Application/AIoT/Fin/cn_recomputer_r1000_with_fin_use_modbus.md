@@ -7,7 +7,7 @@ keywords:
   - FIN
   - ModbusTCP/RTU
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /cn/reComputer_r1000_fin_modbus_tcp_and_rtu
+slug: /reComputer_r1000_fin_modbus_tcp_and_rtu
 last_update:
   date: 07/15/2024
   author: ShuishengPeng

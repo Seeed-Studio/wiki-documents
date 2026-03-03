@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Speaker/
-slug: /ja/Grove-Speaker
+slug: /Grove-Speaker
 sku: 107020001
 last_update:
   date: 05/15/2025

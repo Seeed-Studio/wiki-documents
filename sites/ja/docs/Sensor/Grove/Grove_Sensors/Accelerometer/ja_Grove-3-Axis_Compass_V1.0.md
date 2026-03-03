@@ -4,7 +4,7 @@ title: Grove - 3軸コンパス V1.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-3-Axis_Compass_V1.0
+slug: /Grove-3-Axis_Compass_V1.0
 sku: 101020034
 last_update:
   date: 05/15/2025

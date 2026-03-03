@@ -15,7 +15,7 @@ keywords:
 - MCP
 - reComputer
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
-slug: /es/face_regonition_with_mcp
+slug: /face_regonition_with_mcp
 last_update:
   date: 11/25/2025
   author: Twelve

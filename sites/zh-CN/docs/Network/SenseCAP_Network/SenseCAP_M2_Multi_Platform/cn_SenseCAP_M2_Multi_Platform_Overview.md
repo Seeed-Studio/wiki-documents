@@ -4,7 +4,7 @@ title: SenseCAP M2 多平台网关概述
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview
+slug: /Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview
 sku: 114992981,114992982,114992983,114993080,114993079,114993088
 last_update:
   date: 08/28/2023

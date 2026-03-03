@@ -2,7 +2,7 @@
 description: ArduPyライブラリの書き方
 title: ArduPyライブラリの書き方
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/ArduPy-Libraries
+slug: /ArduPy-Libraries
 last_update:
   date: 05/15/2025
   author: Matthew

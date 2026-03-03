@@ -4,7 +4,7 @@ title: Grove - 0.54インチ 赤色デュアル英数字ディスプレイ
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-0.54_inch_Red_Dual_Alphanumeric_Display
+slug: /Grove-0.54_inch_Red_Dual_Alphanumeric_Display
 sku: 104020132
 last_update:
   date: 05/15/2025

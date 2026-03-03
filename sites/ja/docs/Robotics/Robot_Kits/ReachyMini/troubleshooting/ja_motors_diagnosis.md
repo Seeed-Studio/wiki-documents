@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini のモーターに関する問題を検出して修復するために、Testbench アプリを使用した包括的なモーター診断およびトラブルシューティングガイドです。
 title: モーターの診断とトラブルシューティング
-slug: /ja/reachymini_troubleshooting_motors_diagnosis
+slug: /reachymini_troubleshooting_motors_diagnosis
 keywords:
 - motors
 - diagnosis

@@ -2,7 +2,7 @@
 description: XIAO CAN Bus 扩展板-常见问题解答
 title: 如何排查 CAN 总线通信问题？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/troubleshoot_CAN_communication_issues
+slug: /troubleshoot_CAN_communication_issues
 last_update:
   date: 2023/6/30
   author: cheng.tang

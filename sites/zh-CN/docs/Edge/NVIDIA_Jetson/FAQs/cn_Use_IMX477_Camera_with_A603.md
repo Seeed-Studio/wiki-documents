@@ -6,7 +6,7 @@ keywords:
 - IMX477 Camera
 - A603
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Use_IMX477_Camera_with_A603_Jetson_Carrier_Board
+slug: /Use_IMX477_Camera_with_A603_Jetson_Carrier_Board
 last_update:
   date: 05/22/2024
   author: Youjiang

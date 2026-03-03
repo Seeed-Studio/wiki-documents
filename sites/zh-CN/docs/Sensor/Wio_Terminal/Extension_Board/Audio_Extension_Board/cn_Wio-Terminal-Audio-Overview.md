@@ -4,7 +4,7 @@ title: Wio Terminal 音频库概述
 keywords:
 - Wio_terminal Audio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Audio-Overview
+slug: /Wio-Terminal-Audio-Overview
 sku: A1716470
 last_update:
   date: 1/16/2023

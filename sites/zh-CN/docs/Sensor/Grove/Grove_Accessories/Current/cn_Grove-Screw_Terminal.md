@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-Screw_Terminal/
-slug: /cn/Grove-Screw_Terminal
+slug: /Grove-Screw_Terminal
 sku: 103020007
 last_update:
   date: 01/06/2022

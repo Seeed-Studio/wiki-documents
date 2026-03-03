@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Water-Flow-Sensor/
-slug: /ja/Water-Flow-Sensor
+slug: /Water-Flow-Sensor
 last_update:
   date: 05/15/2025
   author: gunengyu

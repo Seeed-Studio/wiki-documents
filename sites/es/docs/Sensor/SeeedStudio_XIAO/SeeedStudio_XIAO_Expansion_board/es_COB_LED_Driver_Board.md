@@ -2,7 +2,7 @@
 description: Controlador de iluminación XIAO:alimentado por Li-Po, 3 interruptores + 4 PWMs, controla filamentos COB de 3V—ilumina miniaturas, dioramas, wearables.
 title: Placa Controladora de LED COB para XIAO
 image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
-slug: /es/getting_started_with_cob_led_dirver_board
+slug: /getting_started_with_cob_led_dirver_board
 sku: 100079172,E25121201
 last_update:
   date: 11/27/2025

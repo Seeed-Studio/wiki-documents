@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reTerminal-DM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reterminal-dm-warranty
+slug: /reterminal-dm-warranty
 last_update:
   date: 04/23/2023
   author: Peter Pan

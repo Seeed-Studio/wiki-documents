@@ -7,7 +7,7 @@ keywords:
 - Brazo Robótico
 - SOARM100
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/lerobot/so_arm_100.webp
-slug: /es/training_soarm101_policy_with_isaacLab
+slug: /training_soarm101_policy_with_isaacLab
 last_update:
   date: 9/4/2025
   author: Youjiang

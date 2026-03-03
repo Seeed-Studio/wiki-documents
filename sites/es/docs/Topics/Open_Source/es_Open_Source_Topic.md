@@ -4,7 +4,7 @@ title: Código Abierto
 keywords:
 - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/open_source_topic
+slug: /open_source_topic
 last_update:
   date: 12/18/2023
   author: Matthew

@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/FSM-55/
-slug: /ja/FSM-55
+slug: /FSM-55
 last_update:
   date: 05/15/2025
   author: gunengyu

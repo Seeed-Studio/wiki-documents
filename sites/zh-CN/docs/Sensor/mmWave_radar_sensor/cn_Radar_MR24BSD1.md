@@ -4,7 +4,7 @@ title: 24GHz 毫米波睡眠呼吸监测
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Radar_MR24BSD1
+slug: /Radar_MR24BSD1
 sku: 101990885
 last_update:
   date: 1/12/2023

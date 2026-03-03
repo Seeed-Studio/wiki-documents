@@ -4,7 +4,7 @@ title: Grove - Sensor de Luz Digital
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Digital_Light_Sensor
+slug: /Grove-Digital_Light_Sensor
 sku: 101020030
 last_update:
   date: 1/5/2023

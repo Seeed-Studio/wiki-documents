@@ -4,7 +4,7 @@ title: reSpeaker Lite のはじめに
 keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reSpeaker_usb_v3
+slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
 last_update:
   date: 6/28/2024

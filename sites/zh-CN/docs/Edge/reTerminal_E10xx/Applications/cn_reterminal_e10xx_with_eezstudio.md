@@ -2,7 +2,7 @@
 description: 使用 EEZStudio 并部署到 Arduino 用于应用目的
 title: reTerminal E 系列 ePaper 显示屏与 EEZ Studio 配合使用
 image: https://files.seeedstudio.com/wiki/EEZStudio/eez.webp
-slug: /cn/reterminal_e10xx_with_eezstudio
+slug: /reterminal_e10xx_with_eezstudio
 sidebar_position: 6
 last_update:
   date: 09/11/2025

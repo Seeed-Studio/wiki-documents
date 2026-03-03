@@ -2,7 +2,7 @@
 description: 在 Seeed Studio XIAO nRF52840 Sense 上使用 BTHome 协议连接 Home Assistant
 title: 使用 XIAO nRF52840 Sense 的 BTHome 协议（CircuitPython）
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/XIAO_BLE_HA
+slug: /XIAO_BLE_HA
 last_update:
   date: 09/18/2023
   author: Bruno Santos (Feiticeir0)

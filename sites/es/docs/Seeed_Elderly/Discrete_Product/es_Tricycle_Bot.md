@@ -4,7 +4,7 @@ title: Robot Triciclo
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Tricycle_Bot
+slug: /Tricycle_Bot
 sku: 110070028
 last_update:
   date: 1/13/2023

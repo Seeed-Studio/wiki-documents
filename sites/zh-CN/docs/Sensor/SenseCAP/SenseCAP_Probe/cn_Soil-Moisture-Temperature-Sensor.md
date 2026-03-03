@@ -4,7 +4,7 @@ title: 土壤湿度和温度传感器
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor
+slug: /Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor
 sku: 101990668,314990620
 last_update:
   date: 1/16/2023

@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp
-slug: /ja/respeaker_xvf3800_xiao_udp_audio_stream
+slug: /respeaker_xvf3800_xiao_udp_audio_stream
 last_update:
   date: 8/20/2025
   author: Kasun Thushara

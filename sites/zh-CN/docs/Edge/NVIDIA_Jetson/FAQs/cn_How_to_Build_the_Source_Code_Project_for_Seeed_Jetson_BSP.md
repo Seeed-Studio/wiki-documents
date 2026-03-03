@@ -6,7 +6,7 @@ keywords:
 - jetpack
 - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
-slug: /cn/how_to_build_the_source_code_project_for_seeed_jetson_bsp
+slug: /how_to_build_the_source_code_project_for_seeed_jetson_bsp
 last_update:
   date: 08/04/2025
   author: Dayu

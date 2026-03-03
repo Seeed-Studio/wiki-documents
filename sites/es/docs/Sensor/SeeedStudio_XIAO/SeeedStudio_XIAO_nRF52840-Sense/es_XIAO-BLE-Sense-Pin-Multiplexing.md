@@ -4,7 +4,7 @@ title: Multiplexación de Pines para ambas versiones
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO-BLE-Sense-Pin-Multiplexing
+slug: /XIAO-BLE-Sense-Pin-Multiplexing
 last_update:
   date: 1/11/2023
   author: shuxu hu

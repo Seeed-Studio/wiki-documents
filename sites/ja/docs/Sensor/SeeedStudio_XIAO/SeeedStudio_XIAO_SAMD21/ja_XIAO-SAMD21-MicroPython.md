@@ -4,7 +4,7 @@ title: MicroPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAO-SAMD21-MicroPython
+slug: /XIAO-SAMD21-MicroPython
 last_update:
   date: 1/11/2023
   author: shuxu hu

@@ -4,7 +4,7 @@ title: Módulo Grove Vision AI V2
 keywords:
 - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/grove_vision_ai_v2
+slug: /grove_vision_ai_v2
 sku: 101021112,E23011220,104990982
 last_update:
   date: 12/12/2023

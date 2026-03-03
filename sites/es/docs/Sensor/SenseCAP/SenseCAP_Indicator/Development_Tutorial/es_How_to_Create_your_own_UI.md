@@ -4,7 +4,7 @@ title: Cómo Crear tu propia Interfaz de Usuario
 keywords:
 - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP_Indicator_How_to_Create_your_own_UI
+slug: /SenseCAP_Indicator_How_to_Create_your_own_UI
 sidebar_position: 4
 last_update:
   date: 5/31/2023

@@ -6,7 +6,7 @@ keywords:
   - Deepseek
   - Distributed inference
 image: https://files.seeedstudio.com/wiki/distributed-inference/model_install.webp
-slug: /es/distributed_inference_of_deepseek_model_on_raspberrypi
+slug: /distributed_inference_of_deepseek_model_on_raspberrypi
 last_update:
   date: 03/17/2025
   author: Jiahao

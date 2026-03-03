@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - OEPL Config Builder
 image: https://files.seeedstudio.com/wiki/eInk/xiao-expansion/OEPL_Config_img.webp
-slug: /es/epaper_breakout_board_with_oepl
+slug: /epaper_breakout_board_with_oepl
 sidebar_position: 2
 last_update:
   date: 10/23/2025

@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove_Starter_Kit_for_Wio_LTE/
-slug: /cn/Grove_Starter_Kit_for_Wio_LTE
+slug: /Grove_Starter_Kit_for_Wio_LTE
 last_update:
   date: 01/11/2022
   author: gunengyu

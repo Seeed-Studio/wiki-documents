@@ -4,7 +4,7 @@ title: Seeed Studio Fusionであなたの創造を拡大
 keywords:
 - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Scale-up-Your-Creation-with-Fusion
+slug: /Scale-up-Your-Creation-with-Fusion
 last_update:
   date: 05/15/2025
   author: Matthew

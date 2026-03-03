@@ -4,7 +4,7 @@ title: Cursos del Kit Seeed Studio XIAO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO-Kit-Courses
+slug: /XIAO-Kit-Courses
 sku: 110010044
 last_update:
   date: 1/11/2023

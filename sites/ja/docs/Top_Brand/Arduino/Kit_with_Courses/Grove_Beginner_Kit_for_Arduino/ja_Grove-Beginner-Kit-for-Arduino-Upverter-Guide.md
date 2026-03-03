@@ -4,7 +4,7 @@ title: Arduino用Grove Beginner KitのUpverterガイド
 keywords:
 - コース付きキット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Beginner-Kit-for-Arduino-Upverter-Guide
+slug: /Grove-Beginner-Kit-for-Arduino-Upverter-Guide
 last_update:
   date: 05/15/2025
   author: hushuxu

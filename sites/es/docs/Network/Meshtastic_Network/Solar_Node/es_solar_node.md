@@ -5,7 +5,7 @@ keywords:
 - Meshtastic
 - Solar
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
-slug: /es/meshtastic_solar_node
+slug: /meshtastic_solar_node
 sidebar_position: 1
 last_update:
   date: 12/16/2025

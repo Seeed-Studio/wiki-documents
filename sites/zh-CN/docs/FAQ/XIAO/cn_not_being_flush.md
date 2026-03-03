@@ -2,7 +2,7 @@
 description: XIAO-ESP32S3-常见问题解答
 title: 为什么我的 XIAO 在圆角处不平整？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/not_being_flush
+slug: /not_being_flush
 last_update:
   date: 2023/6/30
   author: cheng.tang

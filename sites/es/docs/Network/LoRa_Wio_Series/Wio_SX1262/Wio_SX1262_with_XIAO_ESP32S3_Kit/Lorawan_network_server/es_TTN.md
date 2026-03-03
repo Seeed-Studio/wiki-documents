@@ -2,7 +2,7 @@
 description: Conexión LNS de TTN basada en Wio SX1262 con módulo XIAO esp32s3 
 title: Conectar a TTN
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/40.png
-slug: /es/wio_sx1262_xiao_esp32s3_LNS_TTN
+slug: /wio_sx1262_xiao_esp32s3_LNS_TTN
 sidebar_position: 1
 last_update:
   date: 10/17/2024

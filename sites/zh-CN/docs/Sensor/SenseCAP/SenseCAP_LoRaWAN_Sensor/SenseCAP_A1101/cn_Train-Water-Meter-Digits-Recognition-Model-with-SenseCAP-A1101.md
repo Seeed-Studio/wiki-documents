@@ -4,7 +4,7 @@ title: 使用 SenseCAP A1101 训练水表数字识别模型
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
+slug: /Train-Water-Meter-Digits-Recognition-Model-with-SenseCAP-A1101
 sku: 101990962
 date: 11/26/2025
 author: Twelve

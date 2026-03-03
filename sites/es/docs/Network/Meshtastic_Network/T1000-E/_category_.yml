@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: t1000_e_tracker
 link:
   type: generated-index
-  slug: es/t1000_e_tracker_meshtastic
+  slug: t1000_e_tracker_meshtastic
   title: Rastreador T1000-E
   description: Aplicación Meshtastic del Rastreador T1000-E.

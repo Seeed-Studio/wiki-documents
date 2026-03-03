@@ -4,7 +4,7 @@ title: SenseCAP Industrial Sensors ガイド
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_Sensor_Intro
+slug: /SenseCAP_Sensor_Intro
 last_update:
   date: 7/24/2024
   author: Frank

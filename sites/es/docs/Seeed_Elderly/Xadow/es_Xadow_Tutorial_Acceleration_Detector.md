@@ -4,7 +4,7 @@ title: Tutorial de Xadow - Detector de Aceleración
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Xadow_Tutorial_Acceleration_Detector
+slug: /Xadow_Tutorial_Acceleration_Detector
 last_update:
   date: 1/13/2023
   author: shuxu hu

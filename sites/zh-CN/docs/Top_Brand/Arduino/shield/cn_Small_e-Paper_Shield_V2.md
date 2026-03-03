@@ -4,7 +4,7 @@ title: 小型电子纸扩展板 V2
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Small_e-Paper_Shield_V2
+slug: /Small_e-Paper_Shield_V2
 sku: 104030019
 last_update:
   date: 2/16/2023

@@ -3,7 +3,7 @@ sidebar_position: 3
 description: Cómo usar Entrenamiento (Detección de Objetos)
 title: Entrenamiento - Detección de Objetos
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/1.9.webp
-slug: /es/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection
+slug: /sensecraft-ai/tutorials/sensecraft-ai-training-object-detection
 aliases:
   - /es/sensecraft_ai_training_object_detection
 last_update:

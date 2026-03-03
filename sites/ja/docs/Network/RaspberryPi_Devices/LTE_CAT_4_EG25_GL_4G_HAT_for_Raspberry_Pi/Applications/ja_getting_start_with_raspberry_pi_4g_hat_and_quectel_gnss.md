@@ -8,7 +8,7 @@ keywords:
   - GNSS
   - エッジコンピューティング
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/gnss_setup.webp
-slug: /ja/raspberry_pi_4g_hat_gnss_functionlities
+slug: /raspberry_pi_4g_hat_gnss_functionlities
 last_update:
   date: 05/15/2025
   author: Kasun Thushara

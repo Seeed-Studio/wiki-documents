@@ -7,7 +7,7 @@ keywords:
   - Node-Red
   - Bacnet
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /cn/reComputer_r1000_node_red_bacnet_ip
+slug: /reComputer_r1000_node_red_bacnet_ip
 last_update:
   date: 06/20/2024
   author: ShuishengPeng

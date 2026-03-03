@@ -2,7 +2,7 @@
 description: Presenta cómo descargar el repositorio de código abierto de Watcher y construir un entorno IDF.
 title: Construir el Entorno de Desarrollo de Watcher
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/64.webp
-slug: /es/build_watcher_development_environment
+slug: /build_watcher_development_environment
 sidebar_position: 1
 last_update:
   date: 11/5/2024

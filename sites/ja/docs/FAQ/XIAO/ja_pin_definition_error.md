@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display for XIAO-FAQ
 title: XIAO SAMD21用の円形画面プログラムをコンパイルする際にピン定義エラーが発生するのはなぜですか？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/pin_definition_error
+slug: /pin_definition_error
 last_update:
   date: 6/30/2023
   author: cheng.tang

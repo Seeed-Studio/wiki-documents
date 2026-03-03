@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Bicycle_Dynamo_With_Bracket-6V_3W/
-slug: /es/Bicycle_Dynamo_With_Bracket-6V_3W
+slug: /Bicycle_Dynamo_With_Bracket-6V_3W
 last_update:
   date: 02/03/2022
   author: gunengyu

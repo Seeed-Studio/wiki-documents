@@ -13,7 +13,7 @@ keywords:
   - Smart Store Assistant
   - Conversational AI in Retail
 image: https://files.seeedstudio.com/wiki/solution/ai-sound/respeaker-rerouter-in-smart-retail.webp
-slug: /es/solutions/smart-retail-voice-ai-solution-1
+slug: /solutions/smart-retail-voice-ai-solution-1
 sidebar_position: 2
 last_update:
   date: 12/04/2025

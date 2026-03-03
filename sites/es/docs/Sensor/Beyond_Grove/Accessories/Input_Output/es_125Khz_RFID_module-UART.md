@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/125Khz RFID module - UART/
-slug: /es/125Khz_RFID_module-UART
+slug: /125Khz_RFID_module-UART
 sku: 113990014
 last_update:
   date: 02/03/2022

@@ -4,7 +4,7 @@ title: Grove - Sensor de Gas Multicanal
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Multichannel_Gas_Sensor
+slug: /Grove-Multichannel_Gas_Sensor
 sku: 101020088
 last_update:
   date: 1/4/2023

@@ -1,7 +1,7 @@
 ---
 description: Referencia completa de la API para las aplicaciones de Reachy Mini, incluyendo clases principales de aplicaciones, gestión de aplicaciones, información de aplicaciones, asistente de aplicaciones y orígenes de aplicaciones.
 title: Referencia de la API de Apps
-slug: /es/reachymini_api_apps
+slug: /reachymini_api_apps
 keywords:
 - api
 - apps

@@ -4,7 +4,7 @@ title: SenseCAP Vision AI V2の使用開始
 keywords:
 - SenseCAP A1102 - LoRaWAN® Vision AI Sensor
 image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/top.webp
-slug: /ja/sensecap_a1102
+slug: /sensecap_a1102
 sidebar_position: 1
 last_update:
   date: 3/12/2025

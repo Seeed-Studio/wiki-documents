@@ -7,7 +7,7 @@ keywords:
 - 机器人
 - 机械臂
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
-slug: /cn/hightorque_series
+slug: /hightorque_series
 sku: 114090071,114090072
 last_update:
   date: 06/24/2025

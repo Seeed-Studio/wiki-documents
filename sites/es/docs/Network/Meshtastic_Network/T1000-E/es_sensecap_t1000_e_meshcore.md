@@ -4,7 +4,7 @@ title: Primeros pasos con Meshhcore
 keywords:
 - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/sensecap_t1000_e_meshcore
+slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:

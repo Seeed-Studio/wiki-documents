@@ -6,7 +6,7 @@ keywords:
 - Isaac ROS
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/isaac_ros_visual_slam
+slug: /isaac_ros_visual_slam
 last_update:
   date: 5/28/2025
   author: ZhuYaoHui

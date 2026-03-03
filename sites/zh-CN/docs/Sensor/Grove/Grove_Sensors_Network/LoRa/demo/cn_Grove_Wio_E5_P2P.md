@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_Wio_E5_P2P
+slug: /Grove_Wio_E5_P2P
 last_update:
   date: 08/28/2023
   author: Matthew

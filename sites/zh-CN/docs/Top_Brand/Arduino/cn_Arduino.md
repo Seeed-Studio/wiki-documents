@@ -4,7 +4,7 @@ title: Arduino 介绍
 keywords:
 - Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Arduino
+slug: /Arduino
 last_update:
   date: 7/19/2023
   author: Matthew

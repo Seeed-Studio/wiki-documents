@@ -4,7 +4,7 @@ title: 如何通过Wi-Fi获取位置信息
 keywords:
 - SenseCAP_T1000_tracker
 # image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /cn/Tracker_WiFi_Geolocation
+slug: /Tracker_WiFi_Geolocation
 last_update:
   date: 10/19/2023
   author: JoJang

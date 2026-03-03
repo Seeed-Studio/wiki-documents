@@ -4,7 +4,7 @@ title: Soporte de ESPHome en Seeed Studio XIAO ESP32S3
 keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/XIAO_ESP32S3_esphome
+slug: /XIAO_ESP32S3_esphome
 last_update:
   date: 12/25/2023
   author: Zachay-NAU

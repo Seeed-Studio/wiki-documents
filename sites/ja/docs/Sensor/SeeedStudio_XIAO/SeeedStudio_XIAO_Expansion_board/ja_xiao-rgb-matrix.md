@@ -4,7 +4,7 @@ title: XIAO用6x10 RGBマトリックスの使用開始
 keywords:
 - XIAO RGB
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/rgb_matrix_for_xiao
+slug: /rgb_matrix_for_xiao
 sku: 104030107
 last_update:
   date: 08/11/2023

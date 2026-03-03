@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-I2C_Hub/
-slug: /ja/Grove-I2C_Hub
+slug: /Grove-I2C_Hub
 sku: 103020006
 last_update:
   date: 05/15/2025

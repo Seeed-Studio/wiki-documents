@@ -2,7 +2,7 @@
 description: Frigateは、IPカメラ用のリアルタイム物体検出機能を備えたオープンソースのNVR（ネットワークビデオレコーダー）です。このガイドでは、NVIDIA Jetsonデバイス上にFrigateをデプロイする手順を説明します。
 title: Jetson上にFrigateをデプロイする
 image: https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/3.png
-slug: /ja/deploy_frigate_on_jetson
+slug: /deploy_frigate_on_jetson
 last_update:
   date: 08/29/2024
   author: kourosh

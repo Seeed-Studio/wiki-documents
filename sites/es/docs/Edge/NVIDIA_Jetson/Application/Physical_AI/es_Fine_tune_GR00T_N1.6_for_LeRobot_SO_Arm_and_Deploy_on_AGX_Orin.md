@@ -7,7 +7,7 @@ keywords:
 - AGX Orin
 - gr00t n1.6
 image: https://files.seeedstudio.com/wiki/other/cover1.png
-slug: /es/fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin
+slug: /fine_tune_gr00t_n1.6_for_lerobot_so_arm_and_deploy_on_agx_orin
 sku: E2025123101,114993668
 last_update:
   date: 2026-1-6

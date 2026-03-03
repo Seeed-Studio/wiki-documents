@@ -6,7 +6,7 @@ keywords:
     - grove
     - platformio
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/4.jpg
-slug: /ja/platformio_wio_e5
+slug: /platformio_wio_e5
 toc_max_heading_level: 4
 sidebar_position: 1
 last_update:

@@ -11,7 +11,7 @@ keywords:
   - Precision Agriculture
   - Smart Farming
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-data-platform/applications/ai-advisor
+slug: /sensecraft-data-platform/applications/ai-advisor
 aliases:
   - /cn/how_to_use_sensecap_data_platform_ai_advisor_on_the_web_and_sensecraft_app
 tags:

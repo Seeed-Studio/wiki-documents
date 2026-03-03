@@ -3,7 +3,7 @@ title: XIAO 2通道Wi-Fi交流电能表在Home Assistant中的应用
 description: |
   来自Seeed Studio的智能设备，专为检测交流供电设备的用电量而设计。
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/energy_meter_appearance.webp
-slug: /cn/2_channel_wifi_ac_energy_meter
+slug: /2_channel_wifi_ac_energy_meter
 sku: 114993611,E2025042701
 keywords:
   - XIAO

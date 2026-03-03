@@ -5,7 +5,7 @@ keywords:
   - wio 
   - docusaurus
 image: https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp
-slug: /es/WM1302_module
+slug: /WM1302_module
 sku: 114992549, 114992550, 114992629, 114992628, 113100022, 114992967, 114992969, 114992991, 100021717, 114993268
 last_update:
   date: 12/15/2025

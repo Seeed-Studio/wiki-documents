@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-DC_Jack_Power/
-slug: /es/Grove-DC_Jack_Power
+slug: /Grove-DC_Jack_Power
 last_update:
   date: 01/09/2022
   author: gunengyu

@@ -4,7 +4,7 @@ title: 使用 DAP Link 刷写 Arduino 引导程序
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Flashing-Arduino-Bootloader-DAPLink
+slug: /Flashing-Arduino-Bootloader-DAPLink
 last_update:
   date: 1/16/2023
   author: jianjing Huang

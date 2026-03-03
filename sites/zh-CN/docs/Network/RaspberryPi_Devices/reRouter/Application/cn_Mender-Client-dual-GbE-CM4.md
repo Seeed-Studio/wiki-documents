@@ -4,7 +4,7 @@ title: Mender 使用指南
 keywords:
 - 软件 Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Mender-Client-dual-GbE-CM4
+slug: /Mender-Client-dual-GbE-CM4
 last_update:
   date: 2023/1/13
   author: jianjing Huang

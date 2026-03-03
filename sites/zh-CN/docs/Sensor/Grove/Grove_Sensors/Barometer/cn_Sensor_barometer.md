@@ -4,7 +4,7 @@ title: 传感器 - 气压计
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Sensor_barometer
+slug: /Sensor_barometer
 last_update:
   date: 1/5/2023
   author: shuxu hu

@@ -2,7 +2,7 @@
 description: このページでは、XIAO Debug MateのUARTモニター機能の使用方法について説明します。
 title: UARTモニター
 image: https://files.seeedstudio.com/wiki/xiao_debug_mate/main_uart.webp
-slug: /ja/xiao_debug_mate_serial
+slug: /xiao_debug_mate_serial
 sku: 109990585
 sidebar_position: 3
 last_update:

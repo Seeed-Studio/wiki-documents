@@ -5,7 +5,7 @@ keywords:
     - Wifi Halow
     - reCamera
     - AI edge sensing
-slug: /ja/ai_remote_wireless_monitor_system
+slug: /ai_remote_wireless_monitor_system
 sku: 102991897, 110070108
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 2

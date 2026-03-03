@@ -5,7 +5,7 @@ title: Gestión de Dispositivos
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /es/sensecraft-data-platform/tutorials/device-management
+slug: /sensecraft-data-platform/tutorials/device-management
 aliases:
   - /es/Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management
 last_update:

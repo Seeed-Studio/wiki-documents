@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: wio_sx1262
 link:
   type: generated-index
-  slug: es/wio_sx1262_class
+  slug: wio_sx1262_class
   title: Wio-SX1262
   description: Documentación del producto Wio-SX1262.

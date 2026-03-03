@@ -4,7 +4,7 @@ title: バッテリー管理チップ内蔵XIAO用Groveシールド
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip
+slug: /Grove-Shield-for-Seeeduino-XIAO-embedded-battery-management-chip
 sku: 103020312
 last_update:
   date: 1/10/2023

@@ -4,7 +4,7 @@ title: Lipo Rider Pro
 keywords:
 - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Lipo_Rider_Pro
+slug: /Lipo_Rider_Pro
 sku: 106990008
 last_update:
   date: 1/13/2023

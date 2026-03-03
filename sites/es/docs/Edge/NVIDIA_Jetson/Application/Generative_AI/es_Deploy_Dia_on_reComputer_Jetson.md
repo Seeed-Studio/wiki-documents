@@ -8,7 +8,7 @@ keywords:
 - Dia
 - Audio
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/deploy_deepseek.webp
-slug: /es/deploy_dia_on_jetson
+slug: /deploy_dia_on_jetson
 last_update:
   date: 05/16/2025
   author: Youjiang

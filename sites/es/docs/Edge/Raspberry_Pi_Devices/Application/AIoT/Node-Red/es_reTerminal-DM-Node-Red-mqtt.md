@@ -6,7 +6,7 @@ keywords:
   - reTerminal-DM
   - Node-Red
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reTerminal-DM-Node-Red-mqtt
+slug: /reTerminal-DM-Node-Red-mqtt
 last_update:
   date: 04/27/2023
   author: Peter Pan

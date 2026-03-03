@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: recamera_hq_poe
 link:
   type: generated-index
-  slug: es/recamera_hq_poe
+  slug: recamera_hq_poe
   title: reCamera HQ POE
   description: Documentación de reCamera HQ POE

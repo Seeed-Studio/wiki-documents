@@ -7,7 +7,7 @@ keywords:
 - RS485
 - VLM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/vlm
+slug: /vlm
 last_update:
   date: 10/10/2025
   author: Jiahao Li

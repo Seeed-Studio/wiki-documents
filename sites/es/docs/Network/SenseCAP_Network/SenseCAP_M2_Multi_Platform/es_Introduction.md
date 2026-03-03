@@ -4,7 +4,7 @@ title: Introducción
 keywords:
 - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction
+slug: /Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Introduction
 last_update:
   date: 08/28/2023
   author: Jessie

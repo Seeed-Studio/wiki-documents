@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Cómo deshabilitar la rotación de pantalla en reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/disable_screen_rotation_on_reTerminal
+slug: /disable_screen_rotation_on_reTerminal
 last_update:
   date: 6/21/2023
   author: Seraphina

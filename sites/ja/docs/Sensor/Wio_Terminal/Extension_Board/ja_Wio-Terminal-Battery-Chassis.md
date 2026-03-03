@@ -4,7 +4,7 @@ title: Wio Terminal バッテリーチャーシス
 keywords:
 - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Battery-Chassis
+slug: /Wio-Terminal-Battery-Chassis
 last_update:
   date: 05/15/2025
   author: jianjing Huang

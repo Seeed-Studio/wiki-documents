@@ -7,7 +7,7 @@ keywords:
 - Sidewalk
 - LoRaWAN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/wio_tracker_dual_stack
+slug: /wio_tracker_dual_stack
 sidebar_position: 8
 sidebar_class_name: hidden
 last_update:

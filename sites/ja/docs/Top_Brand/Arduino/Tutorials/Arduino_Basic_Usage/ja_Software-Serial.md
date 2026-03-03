@@ -4,7 +4,7 @@ title: Arduinoボード向けシリアルユーザーガイド
 keywords:
 - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Software-Serial
+slug: /Software-Serial
 last_update:
   date: 05/15/2025
   author: jianjing Huang

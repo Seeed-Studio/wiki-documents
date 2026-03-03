@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/1.5W_Solar_Panel_81x137/
-slug: /cn/1.5W_Solar_Panel_81x137
+slug: /1.5W_Solar_Panel_81x137
 last_update:
   date: 02/03/2022
   author: gunengyu

@@ -4,7 +4,7 @@ title: Seeed Arduino シリアル
 keywords:
 - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeed_Arduino_Serial
+slug: /Seeed_Arduino_Serial
 last_update:
   date: 05/15/2025
   author: hushuxu

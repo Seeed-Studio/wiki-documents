@@ -4,7 +4,7 @@ title: Wio Terminal Chassis Battery(650mAh)
 keywords:
 - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Chassis-Battery_650mAh
+slug: /Wio-Terminal-Chassis-Battery_650mAh
 sku: 103990463, 103990564
 last_update:
   date: 1/30/2023

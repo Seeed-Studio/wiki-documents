@@ -1,7 +1,7 @@
 ---
 description: Ejemplo que demuestra cómo mostrar la transmisión de video desde Reachy Mini y hacer que el robot mire donde haces clic en el fotograma.
 title: Mirar la imagen
-slug: /es/reachymini_examples_look_at
+slug: /reachymini_examples_look_at
 keywords:
 - cámara
 - transmisión de video

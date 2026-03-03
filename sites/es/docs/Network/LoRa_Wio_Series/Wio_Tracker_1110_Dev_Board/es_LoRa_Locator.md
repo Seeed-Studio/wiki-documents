@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/connect_wio_tracker_to_locator
+slug: /connect_wio_tracker_to_locator
 sidebar_position: 4
 last_update:
   date: 10/23/2023

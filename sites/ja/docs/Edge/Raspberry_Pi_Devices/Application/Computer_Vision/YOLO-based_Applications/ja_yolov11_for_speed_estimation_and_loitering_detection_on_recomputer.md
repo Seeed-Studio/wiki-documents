@@ -7,7 +7,7 @@ keywords:
   - YOLOv11
   - hailo
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/yolov11_for_speed_estimation_and_loitering_detection_on_recomputer
+slug: /yolov11_for_speed_estimation_and_loitering_detection_on_recomputer
 last_update:
   date: 12/16/2025
   author: Jiahao

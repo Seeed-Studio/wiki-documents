@@ -4,7 +4,7 @@ title: Uso Avanzado de WiFi
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-Advanced-WiFi
+slug: /Wio-Terminal-Advanced-WiFi
 last_update:
   date: 1/13/2023
   author: shuxu hu

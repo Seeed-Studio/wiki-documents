@@ -9,7 +9,7 @@ tags:
   - Jetson
   - AI
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/recomputer-super_robotics_2.webp
-slug: /cn/recomputer_jetson_super_performance
+slug: /recomputer_jetson_super_performance
 last_update:
   date: 06/04/2025
   author: Zibo

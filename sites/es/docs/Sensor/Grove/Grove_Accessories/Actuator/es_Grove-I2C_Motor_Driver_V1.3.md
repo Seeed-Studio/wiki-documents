@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Grove-I2C_Motor_Driver_V1.3/
-slug: /es/Grove-I2C_Motor_Driver_V1.3
+slug: /Grove-I2C_Motor_Driver_V1.3
 sku: 105020001
 last_update:
   date: 01/09/2022

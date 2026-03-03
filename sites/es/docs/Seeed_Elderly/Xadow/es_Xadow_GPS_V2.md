@@ -4,7 +4,7 @@ title: Xadow - GPS V2
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Xadow_GPS_V2
+slug: /Xadow_GPS_V2
 sku: 113040009
 last_update:
   date: 1/13/2023

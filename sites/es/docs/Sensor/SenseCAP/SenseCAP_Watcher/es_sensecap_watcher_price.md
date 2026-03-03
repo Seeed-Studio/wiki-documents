@@ -2,7 +2,7 @@
 description: Este artículo describe el plan de tarifas de Watcher para usar SenseCraft AI.
 title: Precio y Beneficios
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler_1.webp
-slug: /es/watcher_price
+slug: /watcher_price
 sidebar_position: 3
 last_update:
   date: 10/18/2024

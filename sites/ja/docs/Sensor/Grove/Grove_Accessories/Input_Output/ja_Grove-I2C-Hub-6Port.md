@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-I2C-Hub-6Port/
-slug: /ja/Grove-I2C-Hub-6Port
+slug: /Grove-I2C-Hub-6Port
 last_update:
   date: 05/15/2025
   author: gunengyu

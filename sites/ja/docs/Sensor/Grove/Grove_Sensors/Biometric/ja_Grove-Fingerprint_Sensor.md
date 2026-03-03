@@ -4,7 +4,7 @@ title: Grove - 指紋センサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Fingerprint_Sensor
+slug: /Grove-Fingerprint_Sensor
 sku: 101020057
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: XIAO ESP32シリーズでのESP-NOW
 keywords:
 - ESPNOW
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/126.png
-slug: /ja/xiao_espnow
+slug: /xiao_espnow
 last_update:
   date: 07/24/2024
   author: Jason

@@ -2,7 +2,7 @@
 description: Introducción a NEQTO Engine para Linux en reComputer J30
 title: Introducción a NEQTO Engine para Linux en reComputer J30
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/neqto_engine_for_linux_recomputer
+slug: /neqto_engine_for_linux_recomputer
 last_update:
   date: 03/14/2024
   author: Kazuhiro Ozuchi

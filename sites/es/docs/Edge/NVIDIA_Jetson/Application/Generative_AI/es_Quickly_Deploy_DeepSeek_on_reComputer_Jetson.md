@@ -7,7 +7,7 @@ keywords:
 - ollama
 - deepseek
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/deepseek.webp
-slug: /es/deploy_deepseek_on_jetson
+slug: /deploy_deepseek_on_jetson
 last_update:
   date: 02/08/2025
   author: Youjiang

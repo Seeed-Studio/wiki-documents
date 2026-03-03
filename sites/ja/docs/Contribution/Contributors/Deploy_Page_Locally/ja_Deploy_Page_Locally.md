@@ -4,7 +4,7 @@ title: ローカルでWikiプラットフォームをデプロイする
 keywords:
 - 貢献
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Deploy_Page_Locally
+slug: /Deploy_Page_Locally
 last_update:
   date: 05/15/2025
   author: Matthew

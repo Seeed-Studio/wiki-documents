@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Solución de Problemas de Inexactitud de la Pantalla Táctil
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/troubleshooting-touch-screen-inaccuracy
+slug: /troubleshooting-touch-screen-inaccuracy
 last_update:
   date: 6/21/2023
   author: Seraphina

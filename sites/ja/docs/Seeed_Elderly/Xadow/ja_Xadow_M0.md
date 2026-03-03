@@ -4,7 +4,7 @@ title: Xadow - M0
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_M0
+slug: /Xadow_M0
 last_update:
   date: 05/15/2025
   author: shuxu hu

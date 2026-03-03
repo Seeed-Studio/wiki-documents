@@ -4,7 +4,7 @@ title: Primeros pasos con Cochl.Sense
 tags:
   - AI model deploy
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Cochl.Sense-Jetson-Getting-Started
+slug: /Cochl.Sense-Jetson-Getting-Started
 last_update:
   date: 03/27/2023
   author: Lakshantha

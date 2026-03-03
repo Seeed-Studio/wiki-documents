@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - Akenza
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_T1000_Tracker_Akenza
+slug: /SenseCAP_T1000_Tracker_Akenza
 last_update:
   date: 8/25/2023
   author: Jessie

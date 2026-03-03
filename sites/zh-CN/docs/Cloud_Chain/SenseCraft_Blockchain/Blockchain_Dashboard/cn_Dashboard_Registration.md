@@ -5,7 +5,7 @@ title: 仪表板注册
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-blockchain/blockchain-dashboard/dashboard-registration
+slug: /sensecraft-blockchain/blockchain-dashboard/dashboard-registration
 aliases:
   - /cn/Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration
 last_update:

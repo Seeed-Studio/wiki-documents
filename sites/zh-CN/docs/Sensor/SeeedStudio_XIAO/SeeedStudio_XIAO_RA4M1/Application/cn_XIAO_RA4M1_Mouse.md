@@ -7,7 +7,7 @@ keywords:
 - mouse
 image: https://files.seeedstudio.com/wiki/xiao_ra4m1_mouse_image/3.png
 side_position: 2
-slug: /cn/xiao_ra4m1_mouse
+slug: /xiao_ra4m1_mouse
 last_update:
   date: 09/05/2024
   author: Allen

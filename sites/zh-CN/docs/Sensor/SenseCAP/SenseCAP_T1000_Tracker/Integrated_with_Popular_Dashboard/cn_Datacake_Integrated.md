@@ -5,7 +5,7 @@ keywords:
 - SenseCAP
 - tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/SenseCAP_T1000_tracker_Datacake_TTS
+slug: /SenseCAP_T1000_tracker_Datacake_TTS
 last_update:
   date: 8/15/2023
   author: Jessie

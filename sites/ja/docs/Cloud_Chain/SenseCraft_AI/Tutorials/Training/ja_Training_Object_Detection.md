@@ -3,7 +3,7 @@ sidebar_position: 3
 description: Training（物体検出）の使用方法
 title: Training - 物体検出
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/1.9.webp
-slug: /ja/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection
+slug: /sensecraft-ai/tutorials/sensecraft-ai-training-object-detection
 aliases:
   - /ja/sensecraft_ai_training_object_detection
 last_update:

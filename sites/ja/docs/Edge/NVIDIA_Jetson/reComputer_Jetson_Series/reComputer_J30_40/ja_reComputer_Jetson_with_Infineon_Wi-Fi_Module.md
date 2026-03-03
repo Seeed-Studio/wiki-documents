@@ -5,7 +5,7 @@ keywords:
 - reComputer
 - Wifi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Use_Infineon_Wifi_Module_on_reComputer
+slug: /Use_Infineon_Wifi_Module_on_reComputer
 last_update:
   date: 01/10/2024
   author: Youjiang

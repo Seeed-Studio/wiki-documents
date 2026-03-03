@@ -2,7 +2,7 @@
 description: AI Assistant 入门指南。
 title: AI Assistant 入门指南
 image: https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/Top_Pic.webp
-slug: /cn/ai_assistant_getting_started
+slug: /ai_assistant_getting_started
 sku: 114993645
 # sidebar_position: 2
 last_update:

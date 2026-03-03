@@ -4,7 +4,7 @@ title: Wio Terminal を使用した気圧センサー
 keywords:
 - Wio_terminal チュートリアル
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Barometric-Pressure-sensor-using-the-Wio-terminal
+slug: /Barometric-Pressure-sensor-using-the-Wio-terminal
 last_update:
   date: 05/15/2025
   author: jianjing Huang

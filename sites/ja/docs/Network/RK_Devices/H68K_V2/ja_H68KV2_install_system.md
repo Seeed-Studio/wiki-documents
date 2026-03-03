@@ -2,7 +2,7 @@
 description: LinkStar-V2 オペレーティングシステムのインストール
 title: オペレーティングシステムのインストール
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/H68KV2_install_system
+slug: /H68KV2_install_system
 sku: 102110958
 last_update:
   date: 05/15/2025

@@ -6,7 +6,7 @@ keywords:
   - reCamera
   - Hardware overview
 image: https://files.seeedstudio.com/wiki/reCamera/image.webp
-slug: /ja/recamera_hardware_and_specs
+slug: /recamera_hardware_and_specs
 sidebar_position: 2
 last_update:
   date: 02/18/2025

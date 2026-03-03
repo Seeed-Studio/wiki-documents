@@ -2,7 +2,7 @@
 description: 適切なケーブルの選び方
 title: 適切なケーブルの選び方
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/How_To_Choose_The_Right_Cable
+slug: /How_To_Choose_The_Right_Cable
 last_update:
   date: 05/15/2025
   author: w0x7ce

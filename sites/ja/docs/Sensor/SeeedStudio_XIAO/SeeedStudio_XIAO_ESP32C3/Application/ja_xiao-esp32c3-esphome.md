@@ -4,7 +4,7 @@ title: XIAO ESP32C3 が ESPHome サービス経由で Home Assistant にアク�
 keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/xiao-esp32c3-esphome
+slug: /xiao-esp32c3-esphome
 sku: 113991054,101991030,102010633
 last_update:
   date: 03/03/2023

@@ -2,7 +2,7 @@
 description: SenseCraftからWatcher用のAIモデルをデプロイする
 title: Watcher用モデルのトレーニング
 image: "https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png"
-slug: /ja/training_model_for_watcher
+slug: /training_model_for_watcher
 sidebar_position: 2
 last_update:
   date: 10/9/2024

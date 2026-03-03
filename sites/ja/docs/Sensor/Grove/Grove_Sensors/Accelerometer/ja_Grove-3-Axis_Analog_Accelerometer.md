@@ -4,7 +4,7 @@ title: Grove - 3軸アナログ加速度センサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-3-Axis_Analog_Accelerometer
+slug: /Grove-3-Axis_Analog_Accelerometer
 sku: 101020051
 last_update:
   date: 05/15/2025

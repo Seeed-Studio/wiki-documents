@@ -2,7 +2,7 @@
 description: Una Biblioteca Serial Práctica
 title: Una Biblioteca Serial Práctica
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/A_Handy_Serial_Library
+slug: /A_Handy_Serial_Library
 last_update:
   date: 02/01/2023
   author: w0x7ce

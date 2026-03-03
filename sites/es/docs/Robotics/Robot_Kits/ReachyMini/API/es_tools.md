@@ -1,7 +1,7 @@
 ---
 description: Referencia completa de la API para las herramientas de Reachy Mini, incluidas herramientas de configuración de motores, herramientas de escaneo y herramientas de reprogramación.
 title: Referencia de la API de herramientas
-slug: /es/reachymini_api_tools
+slug: /reachymini_api_tools
 keywords:
 - api
 - tools

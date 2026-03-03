@@ -4,7 +4,7 @@ title: Grove - 電流センサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Electricity_Sensor
+slug: /Grove-Electricity_Sensor
 sku: 101020027
 last_update:
   date: 05/15/2025

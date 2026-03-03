@@ -4,7 +4,7 @@ title: 概要
 keywords:
 - ReSpeaker_2-Mics_Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ReSpeaker_2_Mics_Pi_HAT
+slug: /ReSpeaker_2_Mics_Pi_HAT
 sku: 107100001
 last_update:
   date: 1/11/2023

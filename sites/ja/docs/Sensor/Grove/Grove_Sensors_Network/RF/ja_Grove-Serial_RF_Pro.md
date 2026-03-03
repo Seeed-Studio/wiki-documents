@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Sensor_communication/
-slug: /ja/Grove-Serial_RF_Pro
+slug: /Grove-Serial_RF_Pro
 sku: 113020000
 last_update:
   date: 05/15/2025

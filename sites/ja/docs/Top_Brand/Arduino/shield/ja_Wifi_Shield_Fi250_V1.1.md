@@ -4,7 +4,7 @@ title: Wifi Shield (Fi250) V1.1
 keywords:
 - Arduino シールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wifi_Shield_Fi250_V1.1
+slug: /Wifi_Shield_Fi250_V1.1
 sku: 103030027
 last_update:
   date: 05/15/2025

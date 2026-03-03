@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Preguntas Frecuentes sobre el Uso de reTerminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reTerminal-new_FAQ
+slug: /reTerminal-new_FAQ
 last_update:
   date: 7/5/2023
   author: Seraphina

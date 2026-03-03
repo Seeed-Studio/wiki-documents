@@ -4,7 +4,7 @@ title: Grove - Sensor de Temperatura y Humedad (DHT11)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-TemperatureAndHumidity_Sensor
+slug: /Grove-TemperatureAndHumidity_Sensor
 sku: 101020011
 last_update:
   date: 12/29/2025

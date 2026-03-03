@@ -5,7 +5,7 @@ keywords:
 - IMU
 - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/wheeltec/wheeltec_imu.jpg
-slug: /es/wheeltec_imu
+slug: /wheeltec_imu
 last_update:
   date: 01/12/2025
   author: ZhuYaoHui

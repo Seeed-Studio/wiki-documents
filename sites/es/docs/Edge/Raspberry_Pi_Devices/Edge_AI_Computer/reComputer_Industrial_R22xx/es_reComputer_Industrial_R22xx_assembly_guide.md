@@ -7,7 +7,7 @@ keywords:
 - Edge Controller
 - reComputer Industrial R22xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
-slug: /es/recomputer_industrial_r22xx_assembly_guide
+slug: /recomputer_industrial_r22xx_assembly_guide
 sku: 100077451,100079040
 last_update:
   date: 02/09/2026

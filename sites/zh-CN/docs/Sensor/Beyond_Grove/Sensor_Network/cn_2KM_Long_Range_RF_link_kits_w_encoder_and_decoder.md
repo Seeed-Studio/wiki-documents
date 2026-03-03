@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder/
-slug: /cn/2KM_Long_Range_RF_link_kits_w_encoder_and_decoder
+slug: /2KM_Long_Range_RF_link_kits_w_encoder_and_decoder
 sku: 113990018
 last_update:
   date: 02/03/2022

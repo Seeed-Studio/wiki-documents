@@ -4,7 +4,7 @@ title: Grove - Differential Amplifier v1.0
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Differential_Amplifier_v1.0
+slug: /Grove-Differential_Amplifier_v1.0
 last_update:
   date: 05/15/2025
   author: jianjing Huang

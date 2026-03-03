@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 如何从USB闪存驱动器启动操作系统
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Boot_OS_from_USB_flash_drive
+slug: /Boot_OS_from_USB_flash_drive
 last_update:
   date: 6/21/2023
   author: Seraphina

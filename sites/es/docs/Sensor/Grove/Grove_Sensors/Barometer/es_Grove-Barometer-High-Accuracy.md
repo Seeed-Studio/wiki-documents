@@ -4,7 +4,7 @@ title: Grove - Barómetro (Alta Precisión)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/main.webp
-slug: /es/Grove-Barometer-High-Accuracy
+slug: /Grove-Barometer-High-Accuracy
 sku: 101020068
 last_update:
   date: 4/22/2025

@@ -4,7 +4,7 @@ title: 基于 Apache Kafka 的实时物联网数据处理节点
 keywords:
 - xiao esp32c6
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/xiao_esp32c6_kafka
+slug: /xiao_esp32c6_kafka
 last_update:
   date: 05/21/2024
   author: Allen

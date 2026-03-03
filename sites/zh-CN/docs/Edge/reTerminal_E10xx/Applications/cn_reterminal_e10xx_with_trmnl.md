@@ -2,7 +2,7 @@
 description: 本文介绍如何将 reTerminal E 系列 ePaper 显示器与 TRMNL 配合使用。
 title: reTerminal E 系列 ePaper 显示器与 TRMNL 配合使用
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.webp
-slug: /cn/reterminal_e10xx_trmnl
+slug: /reterminal_e10xx_trmnl
 sku: 100073581
 sidebar_position: 1
 last_update:

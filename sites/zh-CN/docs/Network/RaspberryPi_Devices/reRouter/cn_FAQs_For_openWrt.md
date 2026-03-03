@@ -2,7 +2,7 @@
 description: OpenWrt-FAQs 页面
 title: OpenWrt 常见问题解答
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/FAQs_For_openWrt
+slug: /FAQs_For_openWrt
 last_update:
   date: 2023/7/26
   author: yulu Ji

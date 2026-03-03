@@ -6,7 +6,7 @@ keywords:
   - Getting started
   - plex media server
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/plex_media_server
+slug: /plex_media_server
 last_update:
   date: 6/14/2023
   author: Kasun Thushara

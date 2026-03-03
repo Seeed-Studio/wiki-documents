@@ -4,7 +4,7 @@ title: reRouter 承载板
 keywords:
 - 设备
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4
+slug: /Dual-Gigabit-Ethernet-Carrier-Board-for-Raspberry-Pi-CM4
 sku: 102110497,110110090,110110110
 last_update:
   date: 2022/1/10

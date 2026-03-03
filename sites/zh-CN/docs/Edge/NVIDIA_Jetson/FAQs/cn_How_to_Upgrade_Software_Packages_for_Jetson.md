@@ -4,7 +4,7 @@ title: 为Jetson升级软件包
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/upgrade_software_packages_for_jetson
+slug: /upgrade_software_packages_for_jetson
 last_update:
   date: 2/11/2025
   author: Youjiang

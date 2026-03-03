@@ -4,7 +4,7 @@ title: Grove - 赤色LED
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Red_LED
+slug: /Grove-Red_LED
 sku: 104030007, 104020002, 104030005, 104020228, 104030014
 last_update:
   date: 05/15/2025

@@ -3,7 +3,7 @@ description: SenseCraft AI 文档目录
 title: 概述
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png
 sidebar_class_name: hidden
-slug: /cn/sensecraft-ai/sensecraft-ai-main
+slug: /sensecraft-ai/sensecraft-ai-main
 aliases:
   - /cn/sensecraft_ai_main
 sidebar_position: 1

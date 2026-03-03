@@ -4,7 +4,7 @@ title: Xiao ESP32C3 ESPHome Smart ThermoStat
 keywords:
 - Contribution
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/esp32c3_smart_thermostat
+slug: /esp32c3_smart_thermostat
 last_update:
   date: 12/1/2023
   author: Chris (Echo7394)

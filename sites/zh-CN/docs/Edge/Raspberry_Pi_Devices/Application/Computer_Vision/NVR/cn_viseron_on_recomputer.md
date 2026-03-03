@@ -6,7 +6,7 @@ keywords:
   - viseron
   - NVR
 image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/go2rtc/go2rtc.gif
-slug: /cn/viseron_on_recomputer
+slug: /viseron_on_recomputer
 last_update:
   date: 12/07/2025
   author: Jiahao

@@ -2,7 +2,7 @@
 description: La guía de introducción y ensamblaje del kit Wio-SX1262 y XIAO ESP32S3 con carcasa impresa en 3D
 title: Kit XIAO ESP32S3 y Wio-SX1262 con carcasa 3D
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/113110064/12.jpg
-slug: /es/wio_sx1262_and_xiao_esp32s3_kit_with_3dprinted_enclosure_introduction_and_assembly_guide
+slug: /wio_sx1262_and_xiao_esp32s3_kit_with_3dprinted_enclosure_introduction_and_assembly_guide
 sidebar_position: 3
 last_update:
   date: 11/21/2024

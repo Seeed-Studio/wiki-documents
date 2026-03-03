@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Relay/
-slug: /ja/Grove-Relay
+slug: /Grove-Relay
 sku: 103020005
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: Grove - 三轴模拟加速度计 40g (ADXL356C)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-3-Axis_Analog_Accelerometer_40g-ADXL356C
+slug: /Grove-3-Axis_Analog_Accelerometer_40g-ADXL356C
 sku: 101020638
 last_update:
   date: 1/6/2023

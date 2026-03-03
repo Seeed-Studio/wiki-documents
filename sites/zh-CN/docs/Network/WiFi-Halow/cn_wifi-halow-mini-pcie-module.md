@@ -2,7 +2,7 @@
 description: Wi-Fi HaLow Mini PCIe 模块入门指南
 title: Wi-Fi HaLow Mini PCIe 模块入门指南
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/0.webp
-slug: /cn/getting_started_with_wifi_halow_mini_pcie_module
+slug: /getting_started_with_wifi_halow_mini_pcie_module
 sku: 109990565
 last_update:
   date: 02/12/2025

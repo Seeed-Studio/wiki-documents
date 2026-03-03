@@ -4,7 +4,7 @@ title: RGB 测试
 keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/respeaker_rgb_test
+slug: /respeaker_rgb_test
 last_update:
   date: 9/27/2024
   author: Jessie

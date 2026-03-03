@@ -2,7 +2,7 @@
 description: 一个完全本地化的语音交互式 AI 助手，结合了语音转文本（STT）、文本转语音（TTS）和使用 Ollama 和 NVIDIA Riva 的本地大语言模型（LLMs）。它完全运行在 NVIDIA Jetson 等边缘设备上——实现私密、实时和自然的语音对话，无需依赖云端。
 title: Jetson 上的聊天机器人
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/local_chatbot_recomputer_bk
+slug: /local_chatbot_recomputer_bk
 last_update:
   date: 01/29/2025
   author: kourosh

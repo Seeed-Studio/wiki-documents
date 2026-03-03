@@ -4,7 +4,7 @@ title: ポリマーリチウムイオン 5100mAh 3.8V バッテリーデテク�
 keywords:
 - アクセサリー 充電
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V
+slug: /Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V
 last_update:
   date: 05/15/2025
   author: jianjing Huang

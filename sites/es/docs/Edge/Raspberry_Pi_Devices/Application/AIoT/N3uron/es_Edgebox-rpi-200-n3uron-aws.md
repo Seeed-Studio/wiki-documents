@@ -9,7 +9,7 @@ keywords:
   - N3uron
   - AWS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Edgebox-Rpi-200_N3uron_AWS
+slug: /Edgebox-Rpi-200_N3uron_AWS
 last_update:
   date: 5/2/2024
   author: Kasun Thushara

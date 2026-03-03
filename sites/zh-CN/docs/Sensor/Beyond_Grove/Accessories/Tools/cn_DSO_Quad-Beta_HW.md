@@ -4,7 +4,7 @@ keywords:
   - docs
   - docusaurus
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/DSO_Quad-Beta_HW
+slug: /DSO_Quad-Beta_HW
 last_update:
   date: 02/03/2022
   author: gunengyu

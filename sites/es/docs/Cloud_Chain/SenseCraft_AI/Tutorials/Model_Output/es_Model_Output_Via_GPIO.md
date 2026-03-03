@@ -3,7 +3,7 @@ sidebar_position: 8
 description: Este artículo describe cómo enviar los resultados de reconocimiento de un modelo a través de GPIO.
 title: Salida del Modelo Vía GPIO
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/xiaoesp32s3sense.webp
-slug: /es/sensecraft-ai/tutorials/sensecraft-ai-output-gpio-xiao
+slug: /sensecraft-ai/tutorials/sensecraft-ai-output-gpio-xiao
 aliases:
   - /es/sensecraft_ai_output_gpio_xiao
 last_update:

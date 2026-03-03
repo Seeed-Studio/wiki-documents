@@ -4,7 +4,7 @@ title: Introducción a Helium
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Helium-Introduction
+slug: /Helium-Introduction
 last_update:
   date: 1/13/2023
   author: shuxu hu

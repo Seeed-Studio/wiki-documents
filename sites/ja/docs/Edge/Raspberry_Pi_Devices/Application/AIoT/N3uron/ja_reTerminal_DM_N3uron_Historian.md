@@ -10,7 +10,7 @@ keywords:
   - Historian
   - MangoDB
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reTerminalDM_N3uron_Historian
+slug: /reTerminalDM_N3uron_Historian
 last_update:
   date: 4/4/2024
   author: Xabier Fernández and Kasun Thushara

@@ -4,7 +4,7 @@ title: 両バージョンのピン多重化
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAO-BLE-Sense-Pin-Multiplexing
+slug: /XIAO-BLE-Sense-Pin-Multiplexing
 last_update:
   date: 1/11/2023
   author: shuxu hu

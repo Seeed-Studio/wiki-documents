@@ -6,7 +6,7 @@ keywords:
 - Edge Controller
 - reComputer R1000
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/recomputer_r1000_intro
+slug: /recomputer_r1000_intro
 last_update:
   date: 10/08/2024
   author: Kasun Thushara

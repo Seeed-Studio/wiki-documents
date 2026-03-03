@@ -2,7 +2,7 @@
 description: Reconocimiento de voz basado en Edge Impulse
 title: Reconocimiento de voz basado en Edge Impulse
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO-BLE-PDM-EI
+slug: /XIAO-BLE-PDM-EI
 last_update:
   date: 10/12/2023
   author: Bruno Santos (Feiticeir0)

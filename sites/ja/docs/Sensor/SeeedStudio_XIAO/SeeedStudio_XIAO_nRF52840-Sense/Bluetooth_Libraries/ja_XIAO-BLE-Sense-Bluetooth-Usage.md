@@ -4,7 +4,7 @@ title: Seeed nRF52 mbed対応ボード用
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/XIAO-BLE-Sense-Bluetooth-Usage
+slug: /XIAO-BLE-Sense-Bluetooth-Usage
 sku: 101990885
 last_update:
   date: 1/11/2023

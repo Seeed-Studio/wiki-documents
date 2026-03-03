@@ -4,7 +4,7 @@ title: Grove - 3軸アナログ加速度センサー 20g (ADXL356B)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-3-Axis_Analog_Accelerometer_20g-ADXL356B
+slug: /Grove-3-Axis_Analog_Accelerometer_20g-ADXL356B
 sku: 101020637
 last_update:
   date: 05/15/2025

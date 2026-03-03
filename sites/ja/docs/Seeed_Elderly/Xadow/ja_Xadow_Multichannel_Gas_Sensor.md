@@ -4,7 +4,7 @@ title: Xadow - マルチチャンネルガスセンサー
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Multichannel_Gas_Sensor
+slug: /Xadow_Multichannel_Gas_Sensor
 last_update:
   date: 05/15/2025
   author: shuxu hu

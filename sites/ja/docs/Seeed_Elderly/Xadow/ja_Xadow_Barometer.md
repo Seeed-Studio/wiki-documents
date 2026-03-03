@@ -4,7 +4,7 @@ title: Xadow - 気圧計
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Barometer
+slug: /Xadow_Barometer
 sku: 103040001
 last_update:
   date: 05/15/2025

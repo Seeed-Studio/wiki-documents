@@ -3,7 +3,7 @@ sidebar_position: 3
 description: Cómo usar un modelo para SenseCAP Watcher
 title: Usando un modelo para SenseCAP Watcher
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/32.webp
-slug: /es/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-watcher
+slug: /sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-watcher
 aliases:
   - /es/sensecraft_ai_pretrained_models_for_watcher
 last_update:

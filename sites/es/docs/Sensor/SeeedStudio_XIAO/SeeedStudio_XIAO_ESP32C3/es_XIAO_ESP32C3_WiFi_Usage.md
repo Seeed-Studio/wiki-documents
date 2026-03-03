@@ -4,7 +4,7 @@ title: Uso de WiFi
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/XIAO_ESP32C3_WiFi_Usage
+slug: /XIAO_ESP32C3_WiFi_Usage
 last_update:
   date: 07/26/2024
   author: Spencer

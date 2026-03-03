@@ -4,7 +4,7 @@ title: Primeros pasos con SenseCAP Vision AI
 keywords:
 - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/SenseCAP-Vision-AI-Get-Started
+slug: /SenseCAP-Vision-AI-Get-Started
 last_update:
   date: 1/31/2023
   author: Kewei Li

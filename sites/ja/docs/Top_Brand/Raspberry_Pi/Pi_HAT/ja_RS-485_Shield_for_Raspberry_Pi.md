@@ -4,7 +4,7 @@ title: Raspberry Pi用RS-485シールド
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/RS-485_Shield_for_Raspberry_Pi
+slug: /RS-485_Shield_for_Raspberry_Pi
 sku: 103030295
 last_update:
   date: 05/15/2025

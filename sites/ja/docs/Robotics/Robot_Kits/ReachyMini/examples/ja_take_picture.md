@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini のカメラから単一フレームをキャプチャし、画像ファイルとして保存する方法を示すサンプルです。
 title: 写真を撮る
-slug: /ja/reachymini_examples_take_picture
+slug: /reachymini_examples_take_picture
 keywords:
 - camera
 - capture

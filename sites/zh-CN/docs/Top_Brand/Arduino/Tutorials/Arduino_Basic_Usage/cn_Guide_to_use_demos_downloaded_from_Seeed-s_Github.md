@@ -2,7 +2,7 @@
 description: 使用从 Seeed Studio Github 下载的演示程序指南
 title: 使用 Seeed Studio Github 的演示程序
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Guide_to_use_demos_downloaded_from_Seeed-s_Github
+slug: /Guide_to_use_demos_downloaded_from_Seeed-s_Github
 last_update:
   date: 02/01/2023
   author: w0x7ce

@@ -4,7 +4,7 @@ title: reRouterの紹介
 keywords:
 - デバイス
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Raspberry-OpenWrt-Getting-Started
+slug: /Raspberry-OpenWrt-Getting-Started
 sku: 110110110
 last_update:
   date: 05/15/2025

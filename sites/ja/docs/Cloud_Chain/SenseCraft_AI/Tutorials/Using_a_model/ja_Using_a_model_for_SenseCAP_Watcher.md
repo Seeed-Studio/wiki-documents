@@ -3,7 +3,7 @@ sidebar_position: 3
 description: SenseCAP Watcherでモデルを使用する方法
 title: SenseCAP Watcherでモデルを使用する
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/32.webp
-slug: /ja/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-watcher
+slug: /sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-watcher
 aliases:
   - /ja/sensecraft_ai_pretrained_models_for_watcher
 last_update:

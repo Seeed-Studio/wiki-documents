@@ -4,7 +4,7 @@ title: センサー - 気圧計
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sensor_barometer
+slug: /Sensor_barometer
 last_update:
   date: 05/15/2025
   author: shuxu hu

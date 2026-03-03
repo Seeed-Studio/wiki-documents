@@ -6,7 +6,7 @@ keywords:
 - BSP
 - L4T
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/differences_of_l4t_between_seeed_and_nvidia
+slug: /differences_of_l4t_between_seeed_and_nvidia
 last_update:
   date: 04/05/2025
   author: Dayu

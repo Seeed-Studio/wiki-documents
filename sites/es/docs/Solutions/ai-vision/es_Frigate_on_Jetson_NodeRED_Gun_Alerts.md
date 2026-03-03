@@ -2,7 +2,7 @@
 description: Sistema de detección de armas con IA en el borde basado en Frigate-on-Jetson y Node-RED, compatible con plataformas Jetson y reComputer R2000 (Hailo).
 title: Solución de Detección de Armas con IA para Alertas en Tiempo Real en el Borde
 image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/scene_3.webp
-slug: /es/solutions/frigate-on-jetson-nodered-gun-alerts
+slug: /solutions/frigate-on-jetson-nodered-gun-alerts
 sidebar_position: 1
 last_update:
   date: 10/22/2025

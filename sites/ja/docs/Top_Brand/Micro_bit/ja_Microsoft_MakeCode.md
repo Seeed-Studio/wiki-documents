@@ -4,7 +4,7 @@ title: Microsoft MakeCode
 keywords:
 - Micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Microsoft_MakeCode
+slug: /Microsoft_MakeCode
 last_update:
   date: 05/15/2025
   author: Seraphina

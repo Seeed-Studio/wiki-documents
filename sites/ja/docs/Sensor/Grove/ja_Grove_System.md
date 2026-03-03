@@ -4,7 +4,7 @@ title: Groveエコシステムの紹介
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove_System
+slug: /Grove_System
 last_update:
   date: 05/15/2025
   author: Matthew

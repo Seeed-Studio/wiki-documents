@@ -1,7 +1,7 @@
 ---
 description: nRF Connect アプリまたは Bluetooth Web API 対応ブラウザを使用して Reachy Mini wireless をリセットし、Wi-Fi ホットスポットまたはデーモンをリセットするためのガイドです。
 title: Bluetooth 経由で Reachy Mini をリセットする
-slug: /ja/reachymini_platforms_reachy_mini_reset
+slug: /reachymini_platforms_reachy_mini_reset
 keywords:
 - reset
 - bluetooth

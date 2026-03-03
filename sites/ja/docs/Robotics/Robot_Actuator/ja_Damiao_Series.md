@@ -7,7 +7,7 @@ keywords:
 - arm
 - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
-slug: /ja/damiao_series
+slug: /damiao_series
 sku: 100094243,100007512
 last_update:
   date: 06/1/2025

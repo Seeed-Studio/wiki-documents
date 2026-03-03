@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reCamera
 image: https://files.seeedstudio.com/wiki/reCamera/013.jpg
-slug: /es/recamera_model_conversion
+slug: /recamera_model_conversion
 last_update:
   date: 10/18/2024
   author: Dayu Li

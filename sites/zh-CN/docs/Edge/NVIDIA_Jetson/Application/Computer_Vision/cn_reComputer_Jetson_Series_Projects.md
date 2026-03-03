@@ -2,7 +2,7 @@
 description: Jetson 社区项目
 title: Jetson 社区项目
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reComputer_Jetson_Series_Projects
+slug: /reComputer_Jetson_Series_Projects
 last_update:
   date: 01/04/2023
   author: w0x7ce

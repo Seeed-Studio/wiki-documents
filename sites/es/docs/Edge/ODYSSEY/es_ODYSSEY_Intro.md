@@ -4,7 +4,7 @@ title: Guía ODYSSEY
 keywords:
 - ODYSSEY
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ODYSSEY_Intro
+slug: /ODYSSEY_Intro
 last_update:
   date: 08/09/2024
   author: Frank

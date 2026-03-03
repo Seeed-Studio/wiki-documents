@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Wio-Terminal-Advanced-Wi-Fi/
-slug: /cn/Wio-Terminal-Advanced-Wi-Fi
+slug: /Wio-Terminal-Advanced-Wi-Fi
 last_update:
   date: 01/11/2022
   author: gunengyu

@@ -9,7 +9,7 @@ keywords:
   - TCP/IP
   - Edge Computing
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/tcp_python.webp
-slug: /es/tcp_ip_raspberry_pi_4g_lte_hat
+slug: /tcp_ip_raspberry_pi_4g_lte_hat
 last_update:
   date: 12/20/2024
   author: Kasun Thushara

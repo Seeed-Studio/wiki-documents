@@ -4,7 +4,7 @@ title: RePhone Lumi Kit
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/RePhone_Lumi_Kit
+slug: /RePhone_Lumi_Kit
 sku: 113060002
 last_update:
   date: 1/13/2023

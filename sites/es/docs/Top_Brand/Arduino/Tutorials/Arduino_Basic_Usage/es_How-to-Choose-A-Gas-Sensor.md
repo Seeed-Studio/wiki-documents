@@ -2,7 +2,7 @@
 description: Cómo Elegir un Sensor de Gas
 title: Cómo Elegir un Sensor de Gas
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/How-to-Choose-A-Gas-Sensor
+slug: /How-to-Choose-A-Gas-Sensor
 last_update:
   date: 02/02/2023
   author: w0x7ce

@@ -4,7 +4,7 @@ title: Wio Terminal を使用して赤外線サーマルイメージングカメ
 keywords:
 - Wio_terminal チュートリアル
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Thermal-Camera
+slug: /Wio-Terminal-Thermal-Camera
 last_update:
   date: 05/15/2025
   author: jianjing Huang

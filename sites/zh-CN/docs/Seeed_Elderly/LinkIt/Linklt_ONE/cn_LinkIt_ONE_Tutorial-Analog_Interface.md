@@ -4,7 +4,7 @@ title: LinkIt ONE 教程 - 模拟接口
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/LinkIt_ONE_Tutorial-Analog_Interface
+slug: /LinkIt_ONE_Tutorial-Analog_Interface
 last_update:
   date: 1/13/2023
   author: shuxu hu

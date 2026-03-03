@@ -4,7 +4,7 @@ title: 紹介
 keywords:
 - Wio-WM1110 Dev Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-WM1110_Dev_Kit/Introduction
+slug: /Wio-WM1110_Dev_Kit/Introduction
 sku: 114993082
 sidebar_position: 1
 last_update:

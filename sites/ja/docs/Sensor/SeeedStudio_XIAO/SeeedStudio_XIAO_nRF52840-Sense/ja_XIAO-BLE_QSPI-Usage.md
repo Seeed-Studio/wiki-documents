@@ -4,7 +4,7 @@ title: XIAO nRF52840 Sense の QSPI Flash
 keywords:
 - QSPI Flash
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/xiao-ble-qspi-flash-usage
+slug: /xiao-ble-qspi-flash-usage
 last_update:
   date: 05/12/2023
   author: Citric

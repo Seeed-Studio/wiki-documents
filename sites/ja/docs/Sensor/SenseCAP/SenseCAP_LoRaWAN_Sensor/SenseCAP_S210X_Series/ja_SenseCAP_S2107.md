@@ -4,7 +4,7 @@ title: SenseCAP S2107
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_S2107
+slug: /SenseCAP_S2107
 sku: 114993078
 last_update:
   date: 9/25/2023

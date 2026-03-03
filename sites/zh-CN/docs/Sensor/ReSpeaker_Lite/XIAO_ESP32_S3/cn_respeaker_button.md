@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/respeaker_button
+slug: /respeaker_button
 last_update:
   date: 8/16/2024
   author: Jessie

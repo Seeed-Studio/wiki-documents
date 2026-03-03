@@ -8,7 +8,7 @@ keywords:
   - ModbusTCP
   - LOGIC
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /cn/reComputer_r1000_fin_logic_builder
+slug: /reComputer_r1000_fin_logic_builder
 last_update:
   date: 07/16/2024
   author: ShuishengPeng

@@ -6,7 +6,7 @@ keywords:
 - router
 - Rockchip
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Rockchip_network_solutions
+slug: /Rockchip_network_solutions
 last_update:
   date: 12/14/2023
   author: Kasun Thushara

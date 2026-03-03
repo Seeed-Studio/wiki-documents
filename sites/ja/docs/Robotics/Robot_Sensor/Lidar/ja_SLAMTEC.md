@@ -8,7 +8,7 @@ keywords:
 - SLAM
 - Lidar
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/slamtec
+slug: /slamtec
 last_update:
   date: 2025/06/18
   author: ZhuYaohui

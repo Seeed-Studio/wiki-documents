@@ -4,7 +4,7 @@ title: Seeeduino Mega
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Seeeduino_Mega
+slug: /Seeeduino_Mega
 sku: 102010007
 last_update:
   date: 1/31/2023

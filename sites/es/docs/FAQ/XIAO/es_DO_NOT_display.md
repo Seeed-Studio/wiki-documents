@@ -2,7 +2,7 @@
 description: Seeed Studio Round Display para XIAO-FAQ
 title: ¿Por qué la pantalla no muestra nada después de cargar el programa?
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/DO_NOT_display
+slug: /DO_NOT_display
 last_update:
   date: 6/30/2023
   author: cheng.tang

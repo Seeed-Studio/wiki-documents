@@ -4,7 +4,7 @@ title: Leer y Escribir
 keywords:
 - Wio_terminal File_System
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-FS-ReadWrite
+slug: /Wio-Terminal-FS-ReadWrite
 last_update:
   date: 1/17/2023
   author: jianjing Huang

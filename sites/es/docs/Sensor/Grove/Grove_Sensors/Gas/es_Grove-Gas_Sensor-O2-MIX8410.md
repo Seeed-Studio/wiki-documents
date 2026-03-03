@@ -4,7 +4,7 @@ title: Grove - Sensor de Gas O₂ (MIX8410)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Gas_Sensor-O2-MIX8410
+slug: /Grove-Gas_Sensor-O2-MIX8410
 sku: 101990680
 last_update:
   date: 1/3/2023

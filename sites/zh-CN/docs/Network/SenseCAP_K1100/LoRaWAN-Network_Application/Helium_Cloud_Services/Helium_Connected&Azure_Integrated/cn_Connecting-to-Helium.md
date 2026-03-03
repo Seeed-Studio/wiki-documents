@@ -4,7 +4,7 @@ title: 连接到 Helium
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Connecting-to-Helium
+slug: /Connecting-to-Helium
 last_update:
   date: 2023/1/13
   author: shuxu hu

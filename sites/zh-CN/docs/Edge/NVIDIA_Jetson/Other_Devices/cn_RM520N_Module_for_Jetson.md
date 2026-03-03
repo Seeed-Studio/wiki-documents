@@ -7,7 +7,7 @@ keywords:
   - Jetson
   - 4G/5G
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/5G/RM520N.webp
-slug: /cn/rm520n_module_for_jetson
+slug: /rm520n_module_for_jetson
 last_update:
   date: 11/25/2025
   author: Youjiang

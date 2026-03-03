@@ -4,7 +4,7 @@ title: Shield Bot V1.2
 keywords:
 - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Shield_Bot_V1.2
+slug: /Shield_Bot_V1.2
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -4,7 +4,7 @@ title: Grove - 温度湿度压力气体传感器(BME680)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Pressure-Gas-Sensor_BME680/img/main.webp
-slug: /cn/Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680
+slug: /Grove-Temperature_Humidity_Pressure_Gas_Sensor_BME680
 sku: 101020513
 last_update:
   date: 4/14/2025

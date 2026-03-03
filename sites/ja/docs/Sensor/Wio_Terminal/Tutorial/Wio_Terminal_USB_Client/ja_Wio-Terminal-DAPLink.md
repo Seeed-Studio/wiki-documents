@@ -4,7 +4,7 @@ title: Wio Terminal を使用して DAPLink デバイスを構築する
 keywords:
 - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-DAPLink
+slug: /Wio-Terminal-DAPLink
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -4,7 +4,7 @@ title: 完整步骤提交 Pull Request
 keywords:
 - 贡献者
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/full_steps_pull_request
+slug: /full_steps_pull_request
 last_update:
   date: 09/01/2024
   author: Matthew

@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J4105
 title: 安装操作系统
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/linkstar-install-system
+slug: /linkstar-install-system
 sku: 102110775,102110777
 last_update:
   date: 01/03/2023

@@ -2,7 +2,7 @@
 description: 2008年以来、信頼されるIoT（Internet of Things）ハードウェアパートナーとして、Seeed Studioは物理的な世界のインタラクティブなデジタルレプリカの実現に尽力しています。このウェブサイトは、Seeed Studioが現在公開しているすべてのWikiを収集したオープンソースプラットフォームであり、毎週更新され、製品ラインナップや研究成果を紹介しています。その内容には自然環境のデジタル化も含まれます。
 title: Seeed Studio Wikiプラットフォームの使い方
 image: https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg
-slug: /ja/Getting_Started
+slug: /Getting_Started
 last_update:
   date: 05/15/2025
   author: Matthew

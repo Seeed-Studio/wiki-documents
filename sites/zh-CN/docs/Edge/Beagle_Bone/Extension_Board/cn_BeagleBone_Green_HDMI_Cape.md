@@ -4,7 +4,7 @@ title: BeagleBone® Green HDMI 扩展板
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/BeagleBone_Green_HDMI_Cape
+slug: /BeagleBone_Green_HDMI_Cape
 sku: 103030034
 last_update:
   date: 1/10/2022

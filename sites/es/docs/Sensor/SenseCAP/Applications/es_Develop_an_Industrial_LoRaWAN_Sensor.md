@@ -6,7 +6,7 @@ keywords:
 - Sensor
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/develop_an_industrial_lorawan_sensor
+slug: /develop_an_industrial_lorawan_sensor
 last_update:
   date: 9/15/2023
   author: Jessie

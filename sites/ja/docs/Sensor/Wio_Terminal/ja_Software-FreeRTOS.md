@@ -4,7 +4,7 @@ title:  FreeRTOS を Wio Terminal で使用する
 keywords:
 - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Software-FreeRTOS
+slug: /Software-FreeRTOS
 last_update:
   date: 05/15/2025
   author: jianjing Huang

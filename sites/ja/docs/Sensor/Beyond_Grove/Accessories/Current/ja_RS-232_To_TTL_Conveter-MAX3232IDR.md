@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/RS-232_To_TTL_Conveter-MAX3232IDR/
-slug: /ja/RS-232_To_TTL_Conveter-MAX3232IDR
+slug: /RS-232_To_TTL_Conveter-MAX3232IDR
 sku: 103990363
 last_update:
   date: 05/15/2025

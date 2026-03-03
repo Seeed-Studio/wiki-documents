@@ -4,7 +4,7 @@ title: Grove 基础套件（适用于 Raspberry Pi Pico）
 keywords:
 - Pi_Pico
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Starter-Kit-for-Raspberry-Pi-Pico
+slug: /Grove-Starter-Kit-for-Raspberry-Pi-Pico
 sku: 102110537, 110061282, 102110545, 103100142, 110061283
 last_update:
   date: 1/11/2023

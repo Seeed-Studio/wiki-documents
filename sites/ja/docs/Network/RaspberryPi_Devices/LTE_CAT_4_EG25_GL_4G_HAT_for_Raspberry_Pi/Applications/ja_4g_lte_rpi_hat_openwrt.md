@@ -9,7 +9,7 @@ keywords:
   - 4G LTE
   - OpenWRT
 image: https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mobile-cop.webp
-slug: /ja/4g_lte_hat_and_raspberry_pi_router_with_openwrt
+slug: /4g_lte_hat_and_raspberry_pi_router_with_openwrt
 last_update:
   date: 05/15/2025
   author: Kasun Thushara

@@ -6,7 +6,7 @@ keywords:
 - Home Assistant
 - XIAO ESP32
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ha_xiao_esp32
+slug: /ha_xiao_esp32
 last_update:
   date: 05/15/2025
   author: Jessie

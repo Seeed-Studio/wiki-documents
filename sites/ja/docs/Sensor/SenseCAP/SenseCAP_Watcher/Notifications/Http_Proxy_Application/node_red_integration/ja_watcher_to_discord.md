@@ -6,7 +6,7 @@ keywords:
 - Discord
 - Node-RED
 image: https://files.seeedstudio.com/wiki/Watcher_Discord_Node_Red/Watcher_Discord_Cover.png
-slug: /ja/watcher_node_red_to_discord
+slug: /watcher_node_red_to_discord
 last_update:
   date: 08/02/2024
   author: Vincent

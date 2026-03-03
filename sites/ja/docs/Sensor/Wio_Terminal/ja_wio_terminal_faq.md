@@ -2,7 +2,7 @@
 description: Wio terminal-FAQページ
 title: Wio Terminalに関するFAQ
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/wio_terminal_faq
+slug: /wio_terminal_faq
 date: 2024年1月31日
 author: Seraphina
 ---

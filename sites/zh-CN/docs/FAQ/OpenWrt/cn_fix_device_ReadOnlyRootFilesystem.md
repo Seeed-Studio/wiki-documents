@@ -2,7 +2,7 @@
 description: OpenWrt-FAQ
 title: 如何修复设备出现“只读根文件系统”问题
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/fix_device_ReadOnlyRootFilesystem
+slug: /fix_device_ReadOnlyRootFilesystem
 last_update:
   date: 2023/6/21
   author: Seraphina

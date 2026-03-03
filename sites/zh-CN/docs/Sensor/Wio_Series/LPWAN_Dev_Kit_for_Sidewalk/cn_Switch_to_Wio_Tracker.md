@@ -6,7 +6,7 @@ keywords:
 - sidewalk
 - Amazon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/flash_to_wio_tracker
+slug: /flash_to_wio_tracker
 last_update:
   date: 12/22/2023
   author: Jessie

@@ -6,7 +6,7 @@ keywords:
 - Round Dislay
 - Christmas
 image: https://files.seeedstudio.com/wiki/Christmas_round_display/Christmas_ball_1.gif
-slug: /es/round_display_christmas_ball
+slug: /round_display_christmas_ball
 last_update:
   date: 12/08/2024
   author: Bruno Santos

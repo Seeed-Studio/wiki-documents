@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Sound_Recorder/
-slug: /ja/Grove-Sound_Recorder
+slug: /Grove-Sound_Recorder
 last_update:
   date: 05/15/2025
   author: gunengyu

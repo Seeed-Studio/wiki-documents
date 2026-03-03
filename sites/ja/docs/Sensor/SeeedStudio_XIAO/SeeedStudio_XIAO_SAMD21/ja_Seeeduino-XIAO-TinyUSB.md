@@ -4,7 +4,7 @@ title: Seeed Studio XIAO SAMD21 with TinyUSB
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeeduino-XIAO-TinyUSB
+slug: /Seeeduino-XIAO-TinyUSB
 last_update:
   date: 1/11/2023
   author: shuxu hu

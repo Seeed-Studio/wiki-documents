@@ -2,7 +2,7 @@
 description: J101 Habilitar Tarjeta SD
 title: J101 Habilitar Tarjeta SD
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/J101_Enable_SD_Card
+slug: /J101_Enable_SD_Card
 last_update:
   date: 01/05/2022
   author: w0x7ce

@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Water-Flow-Sensor/
-slug: /es/Water-Flow-Sensor
+slug: /Water-Flow-Sensor
 last_update:
   date: 02/03/2022
   author: gunengyu

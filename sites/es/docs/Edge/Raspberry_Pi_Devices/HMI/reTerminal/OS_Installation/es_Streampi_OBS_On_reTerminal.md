@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reTerminal OS_Installation
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Streampi_OBS_On_reTerminal
+slug: /Streampi_OBS_On_reTerminal
 last_update:
   date: 2/1/2023
   author: jianjing Huang

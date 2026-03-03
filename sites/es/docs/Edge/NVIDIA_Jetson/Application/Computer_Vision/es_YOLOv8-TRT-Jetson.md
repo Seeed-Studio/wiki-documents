@@ -7,7 +7,7 @@ tags:
   - AI model deploy
   - Yolov8
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/YOLOv8-TRT-Jetson
+slug: /YOLOv8-TRT-Jetson
 last_update:
   date: 07/17/2023
   author: Lakshantha

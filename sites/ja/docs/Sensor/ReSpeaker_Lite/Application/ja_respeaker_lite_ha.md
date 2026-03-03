@@ -7,7 +7,7 @@ keywords:
 - reSpeaker
 - Home Assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/respeaker_lite_ha
+slug: /respeaker_lite_ha
 sku: 110061601,E24072601
 last_update:
   date: 2/11/2026

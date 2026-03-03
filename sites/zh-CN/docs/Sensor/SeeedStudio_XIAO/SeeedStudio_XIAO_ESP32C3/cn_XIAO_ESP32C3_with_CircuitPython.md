@@ -6,7 +6,7 @@ keywords:
 - esp32c3
 - circuitpython
 image: https://files.seeedstudio.com/wiki/esp32c3_circuitpython/title.png
-slug: /cn/xiao_esp32c3_with_circuitpython
+slug: /xiao_esp32c3_with_circuitpython
 last_update:
   date: 08/14/2024
   author: Evelyn Chen

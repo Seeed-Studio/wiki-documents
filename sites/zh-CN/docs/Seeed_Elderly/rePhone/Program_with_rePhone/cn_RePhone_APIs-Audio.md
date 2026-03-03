@@ -4,7 +4,7 @@ title: RePhone APIs - 音频
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/RePhone_APIs-Audio
+slug: /RePhone_APIs-Audio
 last_update:
   date: 1/13/2023
   author: shuxu hu

@@ -4,7 +4,7 @@ title: tVOC 传感器内置
 keywords:
 - Indicator Development Tutorial RP2040
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/SenseCAP_Indicator_RP2040_tVOC
+slug: /SenseCAP_Indicator_RP2040_tVOC
 last_update:
   date: 5/23/2023
   author: Thomas

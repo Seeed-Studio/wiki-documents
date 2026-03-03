@@ -8,7 +8,7 @@ keywords:
   - AT
   - SSCMA
 image: https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg
-slug: /es/grove_vision_ai_v2_at
+slug: /grove_vision_ai_v2_at
 last_update:
   date: 04/22/2024
   author: Spencer

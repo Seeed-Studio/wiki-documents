@@ -2,7 +2,7 @@
 description: SenseCAP Watcherのハードウェアコンポーネント。
 title: ハードウェア概要
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/hardware_overview_1.webp
-slug: /ja/watcher_hardware_overview
+slug: /watcher_hardware_overview
 sidebar_position: 1
 last_update:
   date: 10/18/2024

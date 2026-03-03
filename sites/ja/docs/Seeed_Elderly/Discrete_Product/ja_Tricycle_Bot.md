@@ -4,7 +4,7 @@ title: 三輪ロボット
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Tricycle_Bot
+slug: /Tricycle_Bot
 sku: 110070028
 last_update:
   date: 05/15/2025

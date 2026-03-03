@@ -7,7 +7,7 @@ keywords:
 - SenseCraft
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /cn/sensecraft-ai/tutorials/sensecraft-deploy-model-to-jetson
+slug: /sensecraft-ai/tutorials/sensecraft-deploy-model-to-jetson
 aliases:
   - /cn/sensecraft_deploy_model_to_jetson
 last_update:

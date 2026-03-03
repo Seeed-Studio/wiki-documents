@@ -3,7 +3,7 @@ sidebar_position: 11
 description: 本文介绍如何在 XIAO 上使用 SSCMACore 库。
 title: 使用 SSCMACore 库输出模型信息
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/76.webp
-slug: /cn/sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library
+slug: /sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library
 aliases:
   - /cn/sensecraft_ai_sscmacore_library
 last_update:

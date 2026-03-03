@@ -7,7 +7,7 @@ keywords:
   - Hailo
   - YOLO
 image: https://files.seeedstudio.com/wiki/YOLOv8_AI_Box/recompuer_ai_box.webp
-slug: /cn/yolov8_on_ai_box_for_fall_climbing_tracking
+slug: /yolov8_on_ai_box_for_fall_climbing_tracking
 last_update:
   date: 07/29/2025
   author: Jiahao

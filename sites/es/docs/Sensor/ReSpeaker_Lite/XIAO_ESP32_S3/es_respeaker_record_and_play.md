@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/respeaker_record_and_play
+slug: /respeaker_record_and_play
 last_update:
   date: 7/1/2024
   author: Jessie

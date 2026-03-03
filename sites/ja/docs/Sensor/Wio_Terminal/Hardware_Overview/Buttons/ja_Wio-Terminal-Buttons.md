@@ -4,7 +4,7 @@ title: 設定可能なボタンの使い方
 keywords:
 - Wio_terminal Configurable_Buttons
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-Buttons
+slug: /Wio-Terminal-Buttons
 last_update:
   date: 05/15/2025
   author: jianjing Huang

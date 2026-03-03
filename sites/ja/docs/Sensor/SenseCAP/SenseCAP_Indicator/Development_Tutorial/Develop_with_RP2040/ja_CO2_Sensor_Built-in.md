@@ -4,7 +4,7 @@ title: CO2 Sensor Built-in
 keywords:
 - SenseCAP Indicator RP2040 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_Indicator_RP2040_CO2
+slug: /SenseCAP_Indicator_RP2040_CO2
 last_update:
   date: 5/23/2023
   author: Thomas

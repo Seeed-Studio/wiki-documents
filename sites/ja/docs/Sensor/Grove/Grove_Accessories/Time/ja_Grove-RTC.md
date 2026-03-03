@@ -4,7 +4,7 @@ title: Grove - DS1307 RTC（リアルタイムクロック）Arduino用
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-RTC
+slug: /Grove-RTC
 sku: 101020013
 last_update:
   date: 05/15/2025

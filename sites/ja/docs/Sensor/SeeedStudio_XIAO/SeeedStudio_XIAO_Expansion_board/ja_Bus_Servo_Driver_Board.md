@@ -3,7 +3,7 @@ description: |
   ロボット用途向けにシリアルバスサーボを制御するために設計された、Seeed Studio の多用途ドライバーボード。接続方法（USB または直接 UART）に応じて調整が必要な重要なジャンパー設定を備えています。
 title: バスサーボドライバーボード
 image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/9.webp
-slug: /ja/bus_servo_driver_board
+slug: /bus_servo_driver_board
 sku: 108090023,108090003,114993612,105990190,101090141,101090142,100067882
 keywords:
     - Bus Servo

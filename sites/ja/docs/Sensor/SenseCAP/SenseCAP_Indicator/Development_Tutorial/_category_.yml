@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: indicator_dev
 link:
   type: generated-index
-  slug: ja/Develop_with_SenseCAP_Indicator
+  slug: Develop_with_SenseCAP_Indicator
   title: SenseCAP Indicatorでの開発
   description: このチュートリアルでは、SenseCAP Indicatorを使用した開発プロセスをガイドします。

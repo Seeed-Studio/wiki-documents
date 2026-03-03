@@ -4,7 +4,7 @@ title: Arch Max
 keywords:
 - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Arch_Max
+slug: /Arch_Max
 last_update:
   date: 2/1/2023
   author: hushuxu

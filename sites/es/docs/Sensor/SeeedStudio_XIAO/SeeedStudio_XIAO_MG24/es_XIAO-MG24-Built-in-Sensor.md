@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO MG24 Sense sensor integrado
 description: Este artículo describe cómo usar el micrófono en el XIAO MG24 Sense.
 image: https://files.seeedstudio.com/wiki/mg24_mic/mg24.jpg
-slug: /es/xiao_mg24_sense_built_in_sensor
+slug: /xiao_mg24_sense_built_in_sensor
 keywords:
   - XIAO
   - MG24

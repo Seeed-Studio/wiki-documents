@@ -5,7 +5,7 @@ keywords:
 - reComputer
 - Zero-Shot Detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/run_zero_shot_detection_on_recomputer
+slug: /run_zero_shot_detection_on_recomputer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui

@@ -4,7 +4,7 @@ title: 加速度計概要
 keywords:
 - Wio_terminal IMU
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-IMU-Overview
+slug: /Wio-Terminal-IMU-Overview
 last_update:
   date: 05/15/2025
   author: jianjing Huang

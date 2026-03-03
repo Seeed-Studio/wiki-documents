@@ -2,7 +2,7 @@
 description: この記事は ePaper ドライバーボードのコレクションページです。
 title: ePaper ドライバーボード概要
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
-slug: /ja/xiao_epaper_display_board_overview
+slug: /xiao_epaper_display_board_overview
 sidebar_position: 1
 last_update:
   date: 12/21/2025

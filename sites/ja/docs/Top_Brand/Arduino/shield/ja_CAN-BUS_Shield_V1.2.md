@@ -4,7 +4,7 @@ title: CAN-BUSシールド V1.2
 keywords:
 - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/CAN-BUS_Shield_V1.2
+slug: /CAN-BUS_Shield_V1.2
 sku: 113030021
 last_update:
   date: 05/15/2025

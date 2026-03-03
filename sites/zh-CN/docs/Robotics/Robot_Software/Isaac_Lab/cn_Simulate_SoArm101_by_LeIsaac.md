@@ -5,7 +5,7 @@ keywords:
 - NVIDIA
 - Isaac Lab
 image: https://files.seeedstudio.com/wiki/robotics/isaac_lab/simulate_soarm101_by_leisaac.webp
-slug: /cn/simulate_soarm101_by_leisaac 
+slug: /simulate_soarm101_by_leisaac
 last_update:
   date: 8/4/2025
   author: LiShanghang

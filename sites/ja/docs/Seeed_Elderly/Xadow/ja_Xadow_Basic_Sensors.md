@@ -4,7 +4,7 @@ title: Xadow - 基本センサー
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Basic_Sensors
+slug: /Xadow_Basic_Sensors
 sku: 101040006
 last_update:
   date: 05/15/2025

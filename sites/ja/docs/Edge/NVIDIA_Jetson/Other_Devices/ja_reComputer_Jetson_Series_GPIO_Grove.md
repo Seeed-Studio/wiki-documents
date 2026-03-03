@@ -5,7 +5,7 @@ keywords:
   - Edge
   - reComputer 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/reComputer_Jetson_Series_GPIO_Grove
+slug: /reComputer_Jetson_Series_GPIO_Grove
 last_update:
   date: 11/21/2022
   author: w0x7ce

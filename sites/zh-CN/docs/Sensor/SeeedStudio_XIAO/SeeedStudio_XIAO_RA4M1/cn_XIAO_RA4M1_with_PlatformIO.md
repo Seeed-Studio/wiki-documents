@@ -4,7 +4,7 @@ title: XIAO RA4M1 与 PlatformIO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/ra4m1_with_platformio.webp
-slug: /cn/xiao_ra4m1_with_platform_io
+slug: /xiao_ra4m1_with_platform_io
 last_update:
   date: 04/07/2025
   author: Hugo

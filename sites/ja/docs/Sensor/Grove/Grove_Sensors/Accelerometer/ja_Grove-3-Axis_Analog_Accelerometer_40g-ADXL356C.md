@@ -4,7 +4,7 @@ title: Grove - 3軸アナログ加速度センサー 40g (ADXL356C)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-3-Axis_Analog_Accelerometer_40g-ADXL356C
+slug: /Grove-3-Axis_Analog_Accelerometer_40g-ADXL356C
 sku: 101020638
 last_update:
   date: 05/15/2025

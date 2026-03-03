@@ -6,7 +6,7 @@ keywords:
 - XIAO
 - light
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/matter_development_framework
+slug: /matter_development_framework
 last_update:
   date: 05/15/2024
   author: Citric

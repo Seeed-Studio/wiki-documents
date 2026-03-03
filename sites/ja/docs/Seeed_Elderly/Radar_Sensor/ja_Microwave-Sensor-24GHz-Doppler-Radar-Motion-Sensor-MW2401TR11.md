@@ -4,7 +4,7 @@ title: 24GHz ドップラー レーダー
 keywords:
 - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11
+slug: /Microwave-Sensor-24GHz-Doppler-Radar-Motion-Sensor-MW2401TR11
 sku: 102110464
 last_update:
   date: 05/15/2025

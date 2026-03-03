@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO nRF54L15 Sense 引脚复用
 description: |
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
-slug: /cn/xiao_nrf54l15_sense_pin_multiplexing
+slug: /xiao_nrf54l15_sense_pin_multiplexing
 sidebar_position: 2
 keywords:
   - XIAO

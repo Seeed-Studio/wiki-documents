@@ -4,7 +4,7 @@ title: 扩展板介绍
 keywords:
 - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Shield
+slug: /Shield
 last_update:
   date: 2/16/2023
   author: jianjing Huang

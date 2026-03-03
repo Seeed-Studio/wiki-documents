@@ -4,7 +4,7 @@ title: Descripción general de Bluetooth
 keywords:
 - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-Bluetooth-Overview
+slug: /Wio-Terminal-Bluetooth-Overview
 last_update:
   date: 1/16/2023
   author: jianjing Huang

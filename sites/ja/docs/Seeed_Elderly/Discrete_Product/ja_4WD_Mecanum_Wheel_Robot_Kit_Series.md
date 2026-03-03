@@ -4,7 +4,7 @@ title: 4WD メカナムホイールロボットキットシリーズ
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/4WD_Mecanum_Wheel_Robot_Kit_Series
+slug: /4WD_Mecanum_Wheel_Robot_Kit_Series
 sku: 110070012
 last_update:
   date: 05/15/2025

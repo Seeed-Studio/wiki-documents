@@ -3,7 +3,7 @@ title: Introducción al Control Remoto IR Inteligente XIAO IR Mate
 description: |
   Un control remoto IR inteligente de Seeed Studio, diseñado para integrar electrodomésticos tradicionales como televisores y aires acondicionados en tu ecosistema de hogar inteligente Home Assistant.
 image: https://files.seeedstudio.com/wiki/XIAO_IR_MATE/XIAO-Smart-IR-Mate.webp
-slug: /es/XIAO_IR_Mate_Smart_IR_Remote
+slug: /XIAO_IR_Mate_Smart_IR_Remote
 sku: 109990586
 keywords:
   - XIAO

@@ -4,7 +4,7 @@ title: 更新热点位置
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-blockchain/sensecraft-hotspot-app/update_hotspot_location
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/update_hotspot_location
 aliases:
   - /cn/Cloud_Chain/SenseCAP_Hotspot_APP/Update_Hotspot_Location
 last_update:

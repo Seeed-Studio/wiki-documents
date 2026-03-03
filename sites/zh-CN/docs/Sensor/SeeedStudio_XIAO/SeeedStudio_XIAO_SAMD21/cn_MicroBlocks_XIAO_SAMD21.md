@@ -2,7 +2,7 @@
 description: 在 MicroBlocks 上使用 XIAO SAMD21。
 title: MicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
-slug: /cn/xiao_samd21_microblocks
+slug: /xiao_samd21_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks

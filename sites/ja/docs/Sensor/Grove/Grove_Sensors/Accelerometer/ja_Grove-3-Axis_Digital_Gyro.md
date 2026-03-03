@@ -4,7 +4,7 @@ title: Grove - 3軸デジタルジャイロ
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-3-Axis_Digital_Gyro
+slug: /Grove-3-Axis_Digital_Gyro
 sku: 101020050
 last_update:
   date: 05/15/2025

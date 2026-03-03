@@ -2,7 +2,7 @@
 description: 'このページはXIAO 7.5インチ電子ペーパーパネルのナビゲーションページです。'
 title: XIAO 7.5インチ電子ペーパーパネルの使用開始
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.webp
-slug: /ja/xiao_075inch_epaper_panel
+slug: /xiao_075inch_epaper_panel
 sku: 114993635
 sidebar_position: 1
 last_update:

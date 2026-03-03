@@ -2,7 +2,7 @@
 description: 基于 Edge Impulse 的语音识别
 title: 基于 Edge Impulse 的语音识别
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/XIAO-BLE-PDM-EI
+slug: /XIAO-BLE-PDM-EI
 last_update:
   date: 10/12/2023
   author: Bruno Santos (Feiticeir0)

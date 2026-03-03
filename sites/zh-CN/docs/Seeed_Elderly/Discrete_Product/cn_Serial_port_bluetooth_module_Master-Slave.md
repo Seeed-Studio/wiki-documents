@@ -4,7 +4,7 @@ title: 串口蓝牙模块（主/从）
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Serial_port_bluetooth_module_Master-Slave
+slug: /Serial_port_bluetooth_module_Master-Slave
 last_update:
   date: 1/13/2023
   author: shuxu hu

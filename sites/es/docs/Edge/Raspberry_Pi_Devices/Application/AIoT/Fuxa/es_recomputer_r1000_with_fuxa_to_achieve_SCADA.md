@@ -7,7 +7,7 @@ keywords:
   - fuxa
   - SCADA
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /es/reComputer_r1000_fuxa_achieve_scada
+slug: /reComputer_r1000_fuxa_achieve_scada
 last_update:
   date: 10/8/2024
   author: ShuishengPeng

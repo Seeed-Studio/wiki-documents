@@ -4,7 +4,7 @@ title: Grove - 気圧計（高精度）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/main.webp
-slug: /ja/Grove-Barometer-High-Accuracy
+slug: /Grove-Barometer-High-Accuracy
 sku: 101020068
 last_update:
   date: 05/15/2025

@@ -14,7 +14,7 @@ keywords:
 - Assistant
 - MCP
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
-slug: /cn/solutions/hello_watcher_llms
+slug: /solutions/hello_watcher_llms
 sidebar_position: 1
 last_update:
   date: 09/16/2025

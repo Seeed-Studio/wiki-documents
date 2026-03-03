@@ -5,7 +5,7 @@ keywords:
 - Grove
 - SGP40
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/grove_voc_gas_sensor_sgp40
+slug: /grove_voc_gas_sensor_sgp40
 last_update:
   date: 05/15/2025
   author: Stephen Lo

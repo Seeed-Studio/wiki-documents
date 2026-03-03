@@ -4,7 +4,7 @@ title: クイックスタート
 keywords:
 - sscma model assistant ai tinyml 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ModelAssistant_Introduce_Quick_Start
+slug: /ModelAssistant_Introduce_Quick_Start
 last_update:
   date: 05/15/2025
   author: LynnL4

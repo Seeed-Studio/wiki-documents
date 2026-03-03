@@ -5,7 +5,7 @@ keywords:
 - Tracker
 - Firmware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/fm_release_for_SenseCAP_T1000
+slug: /fm_release_for_SenseCAP_T1000
 last_update:
   date: 1/1/2023
   author: Jessie

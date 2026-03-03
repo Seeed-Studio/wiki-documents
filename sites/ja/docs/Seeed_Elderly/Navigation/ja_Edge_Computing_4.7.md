@@ -4,7 +4,7 @@ title: エッジコンピューティング
 keywords:
 - エッジコンピューティング
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeed_Elderly/Navigation/Edge_Computing_4.7
+slug: /Seeed_Elderly/Navigation/Edge_Computing_4.7
 last_update:
   date: 05/15/2025
   author: Matthew

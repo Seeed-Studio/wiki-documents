@@ -2,7 +2,7 @@
 description: XIAO ESP32C6のZigbee機能の使用方法を紹介し、ZigbeeとZBT-1を介してHome Assistantに接続する方法を説明します。
 title: XIAO ESP32C6のZigbeeを介してHome Assistantに接続する
 image: https://files.seeedstudio.com/wiki/xiaoc6_zigbee_ha/0.webp
-slug: /ja/xiaoc6_zigbee_led_ha
+slug: /xiaoc6_zigbee_led_ha
 last_update:
   date: 01/21/2025
   author: Citric

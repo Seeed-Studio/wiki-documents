@@ -4,7 +4,7 @@ title: シールドの紹介
 keywords:
 - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Shield
+slug: /Shield
 last_update:
   date: 05/15/2025
   author: jianjing Huang

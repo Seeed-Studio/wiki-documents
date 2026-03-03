@@ -2,7 +2,7 @@
 description: 2.8inch_TFT_Touch_Shield_v2.0
 title: 2.8英寸 TFT 触摸屏扩展板 v2.0
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/2.8inch_TFT_Touch_Shield_v2.0
+slug: /2.8inch_TFT_Touch_Shield_v2.0
 sku: 104030004
 last_update:
   date: 01/10/2023  

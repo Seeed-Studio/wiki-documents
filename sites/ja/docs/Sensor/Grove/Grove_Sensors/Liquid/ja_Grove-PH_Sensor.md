@@ -4,7 +4,7 @@ title: Grove - PHセンサー
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-PH_Sensor
+slug: /Grove-PH_Sensor
 last_update:
   date: 05/15/2025
   author: jianjing Huang

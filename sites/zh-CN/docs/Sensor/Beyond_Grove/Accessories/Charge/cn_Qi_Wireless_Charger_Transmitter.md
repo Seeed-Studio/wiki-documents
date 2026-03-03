@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Qi_Wireless_Charger_Transmitter/
-slug: /cn/Qi_Wireless_Charger_Transmitter
+slug: /Qi_Wireless_Charger_Transmitter
 sku: 113030020
 last_update:
   date: 02/03/2022

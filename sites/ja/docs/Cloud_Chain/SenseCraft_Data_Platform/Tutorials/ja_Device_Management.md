@@ -5,7 +5,7 @@ title: デバイス管理
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /ja/sensecraft-data-platform/tutorials/device-management
+slug: /sensecraft-data-platform/tutorials/device-management
 aliases:
   - /ja/Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management
 last_update:

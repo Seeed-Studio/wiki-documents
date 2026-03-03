@@ -2,7 +2,7 @@
 title: Seeed Studio XIAO nRF54L15 Matter
 description: |
 image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
-slug: /es/xiao_nrf54l15_sense_matter
+slug: /xiao_nrf54l15_sense_matter
 keywords:
   - XIAO
   - nRF54L15

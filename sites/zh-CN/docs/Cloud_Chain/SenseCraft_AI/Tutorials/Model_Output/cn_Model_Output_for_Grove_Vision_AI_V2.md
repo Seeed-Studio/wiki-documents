@@ -3,7 +3,7 @@ sidebar_position: 7
 description: 本文介绍如何使用 Grove Vision AI V2 和 SenseCraft AI 获取输出。
 title: Grove Vision AI V2 的模型输出
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/54.webp
-slug: /cn/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai
+slug: /sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai
 aliases:
   - /cn/sensecraft_ai_output_grove_visionai
 last_update:

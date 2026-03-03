@@ -4,7 +4,7 @@ title: 如何将 Wio Terminal 用作 RTL8720DN 开发板
 keywords:
 - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-8720-dev
+slug: /Wio-Terminal-8720-dev
 last_update:
   date: 1/31/2023
   author: jianjing Huang

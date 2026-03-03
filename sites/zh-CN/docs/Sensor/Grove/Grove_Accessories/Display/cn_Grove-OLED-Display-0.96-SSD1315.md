@@ -4,7 +4,7 @@ title: Grove - OLED 显示屏 0.96" (SSD1315)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-OLED-Display-0.96-SSD1315
+slug: /Grove-OLED-Display-0.96-SSD1315
 sku: 104020208
 last_update:
   date: 1/9/2023

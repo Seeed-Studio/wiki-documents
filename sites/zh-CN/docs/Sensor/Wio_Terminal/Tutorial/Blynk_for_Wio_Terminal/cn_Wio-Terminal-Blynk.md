@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Wio-Terminal-Blynk/
-slug: /cn/Wio-Terminal-Blynk
+slug: /Wio-Terminal-Blynk
 last_update:
   date: 01/11/2022
   author: gunengyu

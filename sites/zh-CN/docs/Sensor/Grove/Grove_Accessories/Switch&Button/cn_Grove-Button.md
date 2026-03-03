@@ -4,7 +4,7 @@ title: Grove - 按钮
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Button
+slug: /Grove-Button
 sku: 111020000,101020003
 last_update:
   date: 1/10/2023

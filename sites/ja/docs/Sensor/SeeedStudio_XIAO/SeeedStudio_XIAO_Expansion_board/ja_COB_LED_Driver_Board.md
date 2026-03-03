@@ -2,7 +2,7 @@
 description: XIAO照明ドライバー：Li-Po電源、3スイッチ + 4PWM、3V COBフィラメント駆動—ミニチュア、ジオラマ、ウェアラブルを照らします。
 title: XIAO用COB LEDドライバーボード
 image: https://files.seeedstudio.com/wiki/COBLED_Driver_Board_for_XIAO/first_COB-LED-Driver-Board-for-Seeed-Studio-XIAO.webp
-slug: /ja/getting_started_with_cob_led_dirver_board
+slug: /getting_started_with_cob_led_dirver_board
 sku: 100079172,E25121201
 last_update:
   date: 11/27/2025

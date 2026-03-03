@@ -1,7 +1,7 @@
 ---
 description: Guía para crear y publicar apps de Reachy Mini, integrar LLMs, usar aplicaciones web en JavaScript y acceder a la API HTTP/WebSocket.
 title: Integraciones y Apps
-slug: /es/reachymini_sdk_integration
+slug: /reachymini_sdk_integration
 keywords:
 - integration
 - apps

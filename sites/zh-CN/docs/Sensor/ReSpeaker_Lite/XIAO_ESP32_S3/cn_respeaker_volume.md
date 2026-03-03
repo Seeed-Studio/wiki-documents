@@ -4,7 +4,7 @@ title: 音量调节
 keywords:
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/respeaker_volume
+slug: /respeaker_volume
 last_update:
   date: 9/27/2024
   author: Jessie

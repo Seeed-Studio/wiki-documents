@@ -2,7 +2,7 @@
 description: Wio Terminal - 常见问题解答
 title: 如何避免 Wio Terminal 在多次重启后程序丢失
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Program_loss_by_repeated_power
+slug: /Program_loss_by_repeated_power
 date: 1/31/2024
 author: Seraphina
 ---

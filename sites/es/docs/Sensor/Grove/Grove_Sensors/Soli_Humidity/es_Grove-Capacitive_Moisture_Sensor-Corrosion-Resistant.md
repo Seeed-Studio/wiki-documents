@@ -4,7 +4,7 @@ title: Grove - Sensor de Humedad Capacitivo (Resistente a la Corrosión)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant
+slug: /Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant
 last_update:
   date: 1/9/2023
   author: jianjing Huang

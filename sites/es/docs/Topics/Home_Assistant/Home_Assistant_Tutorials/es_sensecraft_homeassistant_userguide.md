@@ -3,7 +3,7 @@ description: Este es el Manual de Usuario de SenseCraft-HomeAssistant
 title: Manual de Usuario de SenseCraft-HomeAssistant
 keywords:
 - home assistant 
-slug: /es/sensecraft_homeassistant_userguide
+slug: /sensecraft_homeassistant_userguide
 sku: E2025081502,E2025081503
 last_update:
   date: 04/12/2024

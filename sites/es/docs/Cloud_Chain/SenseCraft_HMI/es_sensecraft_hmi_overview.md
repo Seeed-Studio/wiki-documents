@@ -2,7 +2,7 @@
 description: Presentamos SenseCraft HMI, la plataforma de páginas de interacción humano-computadora construida específicamente para la serie reTerminal.
 title: Descripción General de SenseCraft HMI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/sensecraft_hmi_overview
+slug: /sensecraft_hmi_overview
 sidebar_position: 1
 last_update:
   date: 07/21/2025

@@ -1,7 +1,7 @@
 ---
 description: OpenCV と GStreamer v4l2src を使用したカメラ設定に加え、マイクとスピーカーの設定を含む Reachy Mini Lite 向けの高度なメディアコントロール。
 title: 高度なメディアコントロール
-slug: /ja/reachymini_platforms_reachy_mini_lite_media_advanced_controls
+slug: /reachymini_platforms_reachy_mini_lite_media_advanced_controls
 keywords:
 - media
 - camera

@@ -2,7 +2,7 @@
 description: Seeed Studio XIAO ESP32C3 入门指南
 title: Seeed Studio XIAO ESP32C3 入门指南
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/XIAO_ESP32C3_Getting_Started
+slug: /XIAO_ESP32C3_Getting_Started
 sku: 113991054,102010633,101991467
 type: gettingstarted
 last_update:

@@ -5,7 +5,7 @@ keywords:
 - Raspberry_Pi
 - Official_Raspberry_Pi_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Raspberry_Pi_3_Model_B
+slug: /Raspberry_Pi_3_Model_B
 sku: 110060867
 last_update:
   date: 05/15/2025

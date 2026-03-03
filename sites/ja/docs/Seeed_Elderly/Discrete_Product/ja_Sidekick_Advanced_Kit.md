@@ -4,7 +4,7 @@ title: Sidekick Advanced Kit
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Sidekick_Advanced_Kit
+slug: /Sidekick_Advanced_Kit
 last_update:
   date: 05/15/2025
   author: shuxu hu

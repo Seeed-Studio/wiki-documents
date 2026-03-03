@@ -2,7 +2,7 @@
 description: SenseCAP LoRaWAN スターターキットで始める
 title: SenseCAP LoRaWAN スターターキットで始める
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/M2_Kit_Getting_Started
+slug: /M2_Kit_Getting_Started
 sidebar_position: 0
 last_update:
   date: 05/15/2025

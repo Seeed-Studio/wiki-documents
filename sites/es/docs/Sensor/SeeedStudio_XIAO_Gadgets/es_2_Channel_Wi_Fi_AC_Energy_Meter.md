@@ -3,7 +3,7 @@ title: XIAO 2-Channel Wi-Fi AC Energy Meter En Home Assistant
 description: |
   Un dispositivo inteligente de Seeed Studio diseñado para detectar el uso de electricidad de electrodomésticos alimentados por CA.
 image: https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_wifi_ac_energy_meter/energy_meter_appearance.webp
-slug: /es/2_channel_wifi_ac_energy_meter
+slug: /2_channel_wifi_ac_energy_meter
 sku: 114993611,E2025042701
 keywords:
   - XIAO

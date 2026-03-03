@@ -7,7 +7,7 @@ keywords:
   - ESP32-C6
   - Moisture
 image: https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/1.webp
-slug: /cn/xiao_soil_moisture_sensor
+slug: /xiao_soil_moisture_sensor
 last_update:
   date: 05/26/2025
   author: Robben

@@ -8,7 +8,7 @@ keywords:
   - Dash board
   - SCADA
 image: https://files.seeedstudio.com/wiki/reTerminalDM/grafana/reterminal-grafana.png
-slug: /ja/reterminal_dm_grafana
+slug: /reterminal_dm_grafana
 last_update:
   date: 6/27/2024
   author: Kasun Thushara

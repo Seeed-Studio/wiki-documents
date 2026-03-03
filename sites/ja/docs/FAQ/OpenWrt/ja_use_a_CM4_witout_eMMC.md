@@ -2,7 +2,7 @@
 description: OpenWrt-FAQ
 title: Dual Gigabit Ethernet Carrier Board で eMMC なしの CM4 を使用する方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/use_a_CM4_witout_eMMC
+slug: /use_a_CM4_witout_eMMC
 last_update:
   date: 6/21/2023
   author: Seraphina

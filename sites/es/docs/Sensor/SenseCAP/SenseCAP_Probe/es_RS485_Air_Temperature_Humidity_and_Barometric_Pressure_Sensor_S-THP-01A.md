@@ -4,7 +4,7 @@ title: RS485 Sensor de Temperatura del Aire, Humedad y Presión Barométrica(S-T
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor
+slug: /RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor
 last_update:
   date: 10/14/2023
   author: Yvonne

@@ -4,7 +4,7 @@ title: 适用于Arduino支持开发板的PlatformIO
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Software-PlatformIO
+slug: /Software-PlatformIO
 sku: 102991299
 last_update:
   date: 1/16/2023

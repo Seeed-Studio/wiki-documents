@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini のよくある問題、組み立て、接続、ハードウェア、SDK、エラーメッセージを網羅した包括的なトラブルシューティングガイドと FAQ です。
 title: トラブルシューティング & FAQ
-slug: /ja/reachymini_troubleshooting
+slug: /reachymini_troubleshooting
 keywords:
 - troubleshooting
 - faq

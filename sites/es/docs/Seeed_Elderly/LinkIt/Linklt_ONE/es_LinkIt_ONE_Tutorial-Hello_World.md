@@ -4,7 +4,7 @@ title: Tutorial de LinkIt ONE - Hola Mundo
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/LinkIt_ONE_Tutorial-Hello_World
+slug: /LinkIt_ONE_Tutorial-Hello_World
 last_update:
   date: 1/13/2023
   author: shuxu hu

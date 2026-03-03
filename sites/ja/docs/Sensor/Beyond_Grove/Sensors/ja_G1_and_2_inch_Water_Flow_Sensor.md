@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/G1_and_2_inch_Water_Flow_Sensor/
-slug: /ja/G1_and_2_inch_Water_Flow_Sensor
+slug: /G1_and_2_inch_Water_Flow_Sensor
 sku: 314150005
 last_update:
   date: 05/15/2025

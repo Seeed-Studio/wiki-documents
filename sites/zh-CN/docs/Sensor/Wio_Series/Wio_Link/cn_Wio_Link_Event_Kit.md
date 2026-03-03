@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Wio_Link_Event_Kit/
-slug: /cn/Wio_Link_Event_Kit
+slug: /Wio_Link_Event_Kit
 sku: 110020048
 last_update:
   date: 01/11/2022

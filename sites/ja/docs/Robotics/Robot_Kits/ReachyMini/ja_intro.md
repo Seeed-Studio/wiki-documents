@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini は、ハッカーや AI ビルダーのために作られた、オープンソースで表情豊かなロボットです。アプリストア、Python SDK、複数のプラットフォームオプションを備えています。
 title: Reachy Mini
-slug: /ja/reachymini_intro
+slug: /reachymini_intro
 keywords:
 - reachy mini
 - robotics

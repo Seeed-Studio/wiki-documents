@@ -4,7 +4,7 @@ title: Grove - 节点
 keywords:
 - Grove_Sensors_Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Node
+slug: /Grove-Node
 last_update:
   date: 1/20/2023
   author: jianjing Huang

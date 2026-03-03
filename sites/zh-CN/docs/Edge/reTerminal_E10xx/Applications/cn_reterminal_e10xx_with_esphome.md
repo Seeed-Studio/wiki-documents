@@ -2,7 +2,7 @@
 description: 本文介绍如何让 reTerminal E 系列 ePaper 显示屏与 Home Assistant 和 ESPHome 配合工作。
 title: reTerminal E 系列 ePaper 显示屏与 ESPHome 配合 Home Assistant 使用
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
-slug: /cn/reterminal_e10xx_with_esphome
+slug: /reterminal_e10xx_with_esphome
 sku: 100017057,100073581
 sidebar_position: 2
 last_update:

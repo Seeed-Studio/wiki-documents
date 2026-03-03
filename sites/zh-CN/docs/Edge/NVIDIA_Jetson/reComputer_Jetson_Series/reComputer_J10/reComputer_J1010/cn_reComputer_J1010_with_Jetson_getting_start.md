@@ -4,7 +4,7 @@ title: reComputer J1010 入门指南
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/reComputer_J1010_with_Jetson_getting_start
+slug: /reComputer_J1010_with_Jetson_getting_start
 last_update:
   date: 6/29/2023
   author: Lakshantha

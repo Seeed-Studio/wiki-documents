@@ -7,7 +7,7 @@ keywords:
   - Node-Red
   - MQTT
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/recomputer-mqtt.png
-slug: /ja/recomputer_r1000_nodered_mqtt
+slug: /recomputer_r1000_nodered_mqtt
 last_update:
   date: 07/02/2024
   author: Kasun Thushara

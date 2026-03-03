@@ -2,7 +2,7 @@
 description: GPS-Modules-Selection-Guide
 title: GPS 模块选择指南
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/GPS-Modules-Selection-Guide
+slug: /GPS-Modules-Selection-Guide
 last_update:
   date: 02/01/2023
   author: w0x7ce

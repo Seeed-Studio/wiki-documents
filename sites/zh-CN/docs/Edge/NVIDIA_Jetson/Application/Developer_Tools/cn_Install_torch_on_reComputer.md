@@ -11,7 +11,7 @@ keywords:
   - AI
   - CUDA
 image: https://files.seeedstudio.com/wiki/Yolo11/connection.webp
-slug: /cn/install_torch_on_recomputer
+slug: /install_torch_on_recomputer
 last_update:
   date: 07/25/2025
   author: Zibo

@@ -4,7 +4,7 @@ title: 5向开关入门指南
 keywords:
 - Wio_terminal five_Way_Switch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-Switch
+slug: /Wio-Terminal-Switch
 last_update:
   date: 1/17/2023
   author: jianjing Huang

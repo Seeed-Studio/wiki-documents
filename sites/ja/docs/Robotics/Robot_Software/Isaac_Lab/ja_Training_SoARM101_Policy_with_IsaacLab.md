@@ -7,7 +7,7 @@ keywords:
 - Robotic Arm
 - SOARM100
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/isaaclab_rl/cube_play.webp
-slug: /ja/training_soarm101_policy_with_isaacLab
+slug: /training_soarm101_policy_with_isaacLab
 last_update:
   date: 9/4/2025
   author: Youjiang

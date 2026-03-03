@@ -4,7 +4,7 @@ title: Cómo Depurar Placas Arduino usando Interfaz SWD
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Software-SWD
+slug: /Software-SWD
 last_update:
   date: 1/16/2023
   author: jianjing Huang

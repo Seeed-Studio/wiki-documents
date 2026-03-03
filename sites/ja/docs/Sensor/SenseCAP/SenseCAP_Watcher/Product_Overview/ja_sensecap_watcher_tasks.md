@@ -2,7 +2,7 @@
 description: Watcherが実行できるさまざまなタイプのタスクと、それらがSenseCraftエコシステム内でどのように組織化されているかについて、しっかりとした基盤を得ることができます。
 title: タスク割り当てガイドライン
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/85_1.webp
-slug: /ja/getting_started_with_watcher_task
+slug: /getting_started_with_watcher_task
 sidebar_position: 3
 last_update:
   date: 10/18/2024

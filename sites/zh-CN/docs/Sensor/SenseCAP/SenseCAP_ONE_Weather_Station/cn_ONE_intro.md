@@ -4,7 +4,7 @@ title: SenseCAP ONE 气象传感器
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/SenseCAP_ONE_weather_sensor
+slug: /SenseCAP_ONE_weather_sensor
 last_update:
   date: 02/28/204
   author: Jessie

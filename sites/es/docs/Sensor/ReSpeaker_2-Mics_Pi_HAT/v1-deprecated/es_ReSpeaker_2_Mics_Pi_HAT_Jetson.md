@@ -4,7 +4,7 @@ title: Comenzando con Nvidia Jetson
 keywords:
 - ReSpeaker_2-Mics_Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ReSpeaker_2_Mics_Pi_HAT_Jetson
+slug: /ReSpeaker_2_Mics_Pi_HAT_Jetson
 last_update:
   date: 1/11/2023
   author: jianjing Huang

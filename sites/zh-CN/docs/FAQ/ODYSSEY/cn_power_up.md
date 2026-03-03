@@ -3,7 +3,7 @@ description: ODYSSEY-常见问题解答
 title: ODYSSEY - X86J41x5 无法启动
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /cn/power_up
+slug: /power_up
 last_update:
   date: 2023.6.25   
   author: cheng.tang

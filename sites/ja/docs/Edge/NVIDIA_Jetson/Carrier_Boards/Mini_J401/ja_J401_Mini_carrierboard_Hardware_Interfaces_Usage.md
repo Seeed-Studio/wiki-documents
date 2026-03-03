@@ -4,7 +4,7 @@ title: インターフェース使用方法
 tags:
   - J401 Mini carrier board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/j401_mini_carrierboard_hardware_interfaces_usage
+slug: /j401_mini_carrierboard_hardware_interfaces_usage
 last_update:
   date: 03/28/2025
   author: Dayu

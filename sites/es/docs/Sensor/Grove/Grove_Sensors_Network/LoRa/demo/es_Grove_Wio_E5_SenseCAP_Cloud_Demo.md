@@ -6,7 +6,7 @@ keywords:
 - Home Assistant
 - Arduino UNO R4
 - Wio E5
-slug: /es/Grove_Wio_E5_SenseCAP_Cloud_Demo
+slug: /Grove_Wio_E5_SenseCAP_Cloud_Demo
 last_update:
   date: 2/02/2024
   author: JoJang

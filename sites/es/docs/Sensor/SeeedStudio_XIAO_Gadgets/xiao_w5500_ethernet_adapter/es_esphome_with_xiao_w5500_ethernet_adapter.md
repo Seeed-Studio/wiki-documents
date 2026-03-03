@@ -7,7 +7,7 @@ keywords:
   - w5500
 image: https://files.seeedstudio.com/wiki/xiao_w5500_poe/0.webp
 sidebar_position: 2
-slug: /es/esphome_xiao_w5500_ethernet_adapter
+slug: /esphome_xiao_w5500_ethernet_adapter
 last_update:
   date: 12/08/2025
   author: Zeller

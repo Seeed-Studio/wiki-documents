@@ -4,7 +4,7 @@ title: BLE (dual) Bee v1.0
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/BLE_dual_Bee_v1.0
+slug: /BLE_dual_Bee_v1.0
 sku: 113050013
 last_update:
   date: 1/13/2023

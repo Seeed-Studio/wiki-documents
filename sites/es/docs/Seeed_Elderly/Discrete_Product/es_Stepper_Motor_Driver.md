@@ -4,7 +4,7 @@ title: Controlador de Motor Paso a Paso
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Stepper_Motor_Driver
+slug: /Stepper_Motor_Driver
 last_update:
   date: 1/13/2023
   author: shuxu hu

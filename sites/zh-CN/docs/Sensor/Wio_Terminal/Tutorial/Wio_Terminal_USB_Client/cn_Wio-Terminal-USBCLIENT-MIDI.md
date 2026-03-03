@@ -4,7 +4,7 @@ title: MIDI
 keywords:
 - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-USBCLIENT-MIDI
+slug: /Wio-Terminal-USBCLIENT-MIDI
 last_update:
   date: 1/17/2023
   author: jianjing Huang

@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini アプリの構築と公開、LLM の統合、JavaScript Web アプリの利用、および HTTP/WebSocket API へのアクセスに関するガイド。
 title: 連携とアプリ
-slug: /ja/reachymini_sdk_integration
+slug: /reachymini_sdk_integration
 keywords:
 - integration
 - apps

@@ -13,7 +13,7 @@ keywords:
   - Pose Estimation
   - Image Segmentation
 image: https://files.seeedstudio.com/wiki/yolov26_on_jetson/local.png
-slug: /cn/ai_roboticsyolov26_dual_camera_system
+slug: /ai_roboticsyolov26_dual_camera_system
 sku: 100090853,100076722,100060802,100032662
 last_update:
   date: 02/10/2026

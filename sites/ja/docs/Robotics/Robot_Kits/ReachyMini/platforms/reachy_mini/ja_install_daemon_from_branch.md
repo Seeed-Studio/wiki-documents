@@ -1,7 +1,7 @@
 ---
 description: 新機能やバグ修正をテストするために、特定の GitHub ブランチから Reachy Mini デーモンをインストールする開発者向けガイドです。
 title: 特定ブランチから Daemon をインストールする
-slug: /ja/reachymini_platforms_reachy_mini_install_daemon_from_branch
+slug: /reachymini_platforms_reachy_mini_install_daemon_from_branch
 keywords:
 - daemon
 - branch

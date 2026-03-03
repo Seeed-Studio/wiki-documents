@@ -7,7 +7,7 @@ keywords:
 - SenseCraft
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /es/sensecraft-ai/tutorials/sensecraft-ai-jetson
+slug: /sensecraft-ai/tutorials/sensecraft-ai-jetson
 aliases:
   - /es/sensecraft_ai_jetson
 last_update:

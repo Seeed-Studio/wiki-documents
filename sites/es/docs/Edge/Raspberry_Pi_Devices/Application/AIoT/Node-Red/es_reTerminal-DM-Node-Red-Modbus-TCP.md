@@ -8,7 +8,7 @@ keywords:
   - Modbus
   - Raspberry
 image: https://files.seeedstudio.com/wiki/reTerminalDM/nodered/modbus-reterminal.png
-slug: /es/reterminal_dm_node_red_modbus_tcp
+slug: /reterminal_dm_node_red_modbus_tcp
 last_update:
   date: 05/27/2024
   author: Kasun Thushara

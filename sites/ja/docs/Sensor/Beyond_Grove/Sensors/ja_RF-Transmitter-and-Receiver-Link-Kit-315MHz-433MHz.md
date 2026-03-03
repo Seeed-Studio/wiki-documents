@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz/
-slug: /ja/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz
+slug: /RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz
 sku: 114992732
 last_update:
   date: 05/15/2025

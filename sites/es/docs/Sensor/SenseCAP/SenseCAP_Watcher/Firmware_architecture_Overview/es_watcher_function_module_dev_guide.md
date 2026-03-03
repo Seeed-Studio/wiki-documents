@@ -2,7 +2,7 @@
 description: Describe cómo desarrollar un bloque de función Watcher.
 title: Guía de Desarrollo de Módulo de Función Watcher
 image: https://files.seeedstudio.com/wiki/watcher_software_framework/watcher_function_module.webp
-slug: /es/watcher_function_module_development_guide
+slug: /watcher_function_module_development_guide
 sidebar_position: 3
 last_update:
   date: 11/5/2024

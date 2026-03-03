@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/cn/Grove-Passive-Buzzer/
-slug: /cn/Grove-Passive-Buzzer
+slug: /Grove-Passive-Buzzer
 sku: 107020109
 last_update:
   date: 01/09/2022

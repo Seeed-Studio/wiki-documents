@@ -1,7 +1,7 @@
 ---
 description: Ejemplo que demuestra la utilidad Rerun para la visualización en tiempo real y el registro del estado de Reachy Mini en modo compliant con compensación de gravedad.
 title: Visor Rerun
-slug: /es/reachymini_examples_rerun_viewer
+slug: /reachymini_examples_rerun_viewer
 keywords:
 - rerun
 - visualization

@@ -4,7 +4,7 @@ title: SenseCAP & Node-RED 到 Power BI
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/K1100_SenseCAP_to_PowerBI
+slug: /K1100_SenseCAP_to_PowerBI
 last_update:
   date: 1/13/2023
   author: shuxu hu

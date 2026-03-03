@@ -4,7 +4,7 @@ title: Wio Terminal 与 CircuitPython
 keywords:
 - Wio_terminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Wio-Terminal-CircuitPython
+slug: /Wio-Terminal-CircuitPython
 last_update:
   date: 1/31/2023
   author: jianjing Huang

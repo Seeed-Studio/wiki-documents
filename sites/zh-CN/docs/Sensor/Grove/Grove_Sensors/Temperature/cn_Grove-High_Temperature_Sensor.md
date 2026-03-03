@@ -4,7 +4,7 @@ title: Grove - 高温传感器
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-High_Temperature_Sensor
+slug: /Grove-High_Temperature_Sensor
 sku: 111020002
 last_update:
   date: 1/4/2023

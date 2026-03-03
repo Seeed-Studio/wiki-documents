@@ -4,7 +4,7 @@ title: SeeedStudio BeagleBone® Green
 keywords:
 - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/BeagleBone_Green
+slug: /BeagleBone_Green
 sku: 102010027
 last_update:
   date: 1/10/2023

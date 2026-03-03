@@ -7,7 +7,7 @@ keywords:
   - network
   - network troubleshoot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/recamera_network_connection
+slug: /recamera_network_connection
 sidebar_position: 6
 last_update:
   date: 04/08/2025

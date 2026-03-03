@@ -4,7 +4,7 @@ title: ESP32 ブレイクアウトキット
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ESP32_Breakout_Kit
+slug: /ESP32_Breakout_Kit
 sku: 110060576
 last_update:
   date: 05/15/2025

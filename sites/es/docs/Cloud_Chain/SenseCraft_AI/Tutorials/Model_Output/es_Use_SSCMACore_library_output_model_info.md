@@ -3,7 +3,7 @@ sidebar_position: 11
 description: Este artículo describe cómo usar las librerías SSCMACore en XIAO.
 title: Usar la librería SSCMACore para obtener información del modelo
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/76.webp
-slug: /es/sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library
+slug: /sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library
 aliases:
   - /es/sensecraft_ai_sscmacore_library
 last_update:

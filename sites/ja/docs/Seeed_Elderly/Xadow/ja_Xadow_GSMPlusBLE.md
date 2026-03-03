@@ -4,7 +4,7 @@ title: Xadow - GSM&#43;BLE
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_GSMPlusBLE
+slug: /Xadow_GSMPlusBLE
 sku: 102040005
 last_update:
   date: 05/15/2025

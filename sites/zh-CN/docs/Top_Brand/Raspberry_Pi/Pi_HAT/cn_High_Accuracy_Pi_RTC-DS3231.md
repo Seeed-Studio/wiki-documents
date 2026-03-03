@@ -4,7 +4,7 @@ title: 适用于树莓派的 DS3231 高精度 RTC（实时时钟）
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/High_Accuracy_Pi_RTC-DS3231
+slug: /High_Accuracy_Pi_RTC-DS3231
 sku: 103030278
 last_update:
   date: 1/11/2023

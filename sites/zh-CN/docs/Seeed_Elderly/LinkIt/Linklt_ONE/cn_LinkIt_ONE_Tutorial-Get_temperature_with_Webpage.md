@@ -4,7 +4,7 @@ title: LinkIt ONE 教程 - 使用网页获取温度
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/LinkIt_ONE_Tutorial-Get_temperature_with_Webpage
+slug: /LinkIt_ONE_Tutorial-Get_temperature_with_Webpage
 last_update:
   date: 1/13/2023
   author: shuxu hu

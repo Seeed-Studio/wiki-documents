@@ -2,7 +2,7 @@
 description: Este artículo se centra en el uso del sensor Grove SGP41.
 title: Corrección para medición SGP41(raw) dependiente de humedad y temperatura
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/grove-sgp41-with-aht20
+slug: /grove-sgp41-with-aht20
 last_update:
   date: 10/16/2023
   author: Hans Bausewein

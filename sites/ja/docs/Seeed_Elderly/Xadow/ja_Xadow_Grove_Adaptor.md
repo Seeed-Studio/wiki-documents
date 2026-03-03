@@ -4,7 +4,7 @@ title: Xadow - Grove アダプタ
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Grove_Adaptor
+slug: /Xadow_Grove_Adaptor
 last_update:
   date: 05/15/2025
   author: shuxu hu

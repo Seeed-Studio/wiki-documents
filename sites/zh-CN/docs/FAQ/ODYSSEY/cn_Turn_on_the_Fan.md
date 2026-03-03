@@ -3,7 +3,7 @@ description: 风扇未启动
 title: 风扇未启动
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /cn/Turn_on_the_Fan
+slug: /Turn_on_the_Fan
 last_update:
   date: 2023.6.25   
   author: cheng.tang

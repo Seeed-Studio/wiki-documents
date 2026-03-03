@@ -9,7 +9,7 @@ keywords:
   - blushless motor
   - Hardware overview
 image: https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.webp
-slug: /cn/recamera_gimbal_hardware_and_specs
+slug: /recamera_gimbal_hardware_and_specs
 sku: 108990119,108990120,E20245041001
 sidebar_position: 2
 last_update:

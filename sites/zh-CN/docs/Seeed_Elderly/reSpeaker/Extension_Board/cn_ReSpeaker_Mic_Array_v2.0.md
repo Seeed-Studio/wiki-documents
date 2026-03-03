@@ -4,7 +4,7 @@ title: reSpeaker USB 4-Mic Array XVF3000 v2.0
 keywords:
 - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/ReSpeaker_Mic_Array_v2.0
+slug: /ReSpeaker_Mic_Array_v2.0
 sku: 107990053
 last_update:
   date: 1/12/2023

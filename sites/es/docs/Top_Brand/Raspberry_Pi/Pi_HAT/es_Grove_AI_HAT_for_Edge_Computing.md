@@ -4,7 +4,7 @@ title: Grove AI HAT para Computación en el Borde
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_AI_HAT_for_Edge_Computing
+slug: /Grove_AI_HAT_for_Edge_Computing
 sku: 102991187
 last_update:
   date: 1/11/2023

@@ -4,7 +4,7 @@ title: TagoIO統合（TTS経由）
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_T1000_tracker_TagoIO_TTS
+slug: /SenseCAP_T1000_tracker_TagoIO_TTS
 last_update:
   date: 8/18/2023
   author: Jessie

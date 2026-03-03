@@ -2,7 +2,7 @@
 description: Jetson-FAQ
 title: Jetson 使用に関するよくある質問
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Jetson_FAQ
+slug: /Jetson_FAQ
 last_update:
   date: 7/5/2023
   author: Seraphina

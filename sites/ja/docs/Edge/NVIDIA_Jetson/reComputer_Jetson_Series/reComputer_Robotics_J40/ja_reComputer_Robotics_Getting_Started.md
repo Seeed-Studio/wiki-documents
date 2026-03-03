@@ -8,7 +8,7 @@ tags:
   - reComputer
   - reComputer Robotics
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics_2.webp
-slug: /ja/recomputer_robotics_j401_getting_started
+slug: /recomputer_robotics_j401_getting_started
 sku: 100071398, 114110310, 100026552
 last_update:
   date: 08/06/2025

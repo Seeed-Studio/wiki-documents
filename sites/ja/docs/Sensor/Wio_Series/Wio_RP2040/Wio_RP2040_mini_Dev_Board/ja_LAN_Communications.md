@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/LAN_Communications/
-slug: /ja/LAN_Communications
+slug: /LAN_Communications
 sku: 102991555
 last_update:
   date: 05/15/2025

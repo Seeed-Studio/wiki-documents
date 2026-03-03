@@ -4,7 +4,7 @@ title: マウス
 keywords:
 - Wio_terminal USB_Host
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Wio-Terminal-USBH-Mouse
+slug: /Wio-Terminal-USBH-Mouse
 last_update:
   date: 05/15/2025
   author: jianjing Huang

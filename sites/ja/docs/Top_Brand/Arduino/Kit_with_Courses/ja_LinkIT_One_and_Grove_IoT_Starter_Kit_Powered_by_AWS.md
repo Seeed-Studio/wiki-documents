@@ -4,7 +4,7 @@ title: LinkIT OneとGrove IoTスターターキット（AWS対応）
 keywords:
 - コース付きキット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS
+slug: /LinkIT_One_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -4,7 +4,7 @@ title: Grove - Grabadora v2.0
 keywords:
   - Grove Grove_Sensors Sound
 image: https://wiki.seeedstudio.com/es/Grove-Loudness_Sensor/
-slug: /es/Grove-Recorder_v2.0
+slug: /Grove-Recorder_v2.0
 sku: 107020007
 last_update:
   date: 01/20/2023

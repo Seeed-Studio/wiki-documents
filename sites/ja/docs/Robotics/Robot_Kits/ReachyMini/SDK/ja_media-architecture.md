@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini のメディアアーキテクチャについて、GStreamer と WebRTC を用いた、さまざまなロボットモデルにおける音声および映像ストリーミング機能を詳しく解説します。
 title: メディアアーキテクチャ
-slug: /ja/reachymini_sdk_media-architecture
+slug: /reachymini_sdk_media-architecture
 keywords:
 - media
 - audio

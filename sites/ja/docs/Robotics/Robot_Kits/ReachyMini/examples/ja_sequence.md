@@ -1,7 +1,7 @@
 ---
 description: Reachy Mini 上でさまざまな動作パターンとシーケンスを実演する例です。
 title: シーケンスデモ
-slug: /ja/reachymini_examples_sequence
+slug: /reachymini_examples_sequence
 keywords:
 - sequence
 - movements

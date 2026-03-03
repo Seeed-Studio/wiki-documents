@@ -4,7 +4,7 @@ title: XIAO 用拡張ボードベース
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeeduino-XIAO-Expansion-Board
+slug: /Seeeduino-XIAO-Expansion-Board
 sku: 103030356
 last_update:
   date: 07/18/2024

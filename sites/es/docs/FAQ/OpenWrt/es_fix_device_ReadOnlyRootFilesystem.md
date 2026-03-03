@@ -2,7 +2,7 @@
 description: OpenWrt-FAQ
 title: Cómo reparar el dispositivo cuando aparece "Read Only Root filesystem"
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/fix_device_ReadOnlyRootFilesystem
+slug: /fix_device_ReadOnlyRootFilesystem
 last_update:
   date: 6/21/2023
   author: Seraphina

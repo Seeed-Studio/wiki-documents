@@ -2,7 +2,7 @@
 description: Base_Shield_V2
 title: Base Shield V2
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Base_Shield_V2
+slug: /Base_Shield_V2
 sku: 103030000
 last_update:
   date: 01/11/2023  

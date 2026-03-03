@@ -2,7 +2,7 @@
 description: Wio Terminal - FAQ
 title: Cómo evitar la pérdida del programa después de reiniciar Wio Terminal múltiples veces
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Program_loss_by_repeated_power
+slug: /Program_loss_by_repeated_power
 date: 1/31/2024
 author: Seraphina
 ---

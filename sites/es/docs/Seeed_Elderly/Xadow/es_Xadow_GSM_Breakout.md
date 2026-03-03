@@ -4,7 +4,7 @@ title: Xadow - GSM Breakout
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Xadow_GSM_Breakout
+slug: /Xadow_GSM_Breakout
 sku: 104040003
 last_update:
   date: 1/13/2023

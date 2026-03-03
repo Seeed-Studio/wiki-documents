@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: Raspberry Pi OS/ 64-bit Ubuntu OS またはその他のOSをeMMCにフラッシュする方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/flash_different_os_to_emmc
+slug: /flash_different_os_to_emmc
 last_update:
   date: 6/21/2023
   author: Seraphina

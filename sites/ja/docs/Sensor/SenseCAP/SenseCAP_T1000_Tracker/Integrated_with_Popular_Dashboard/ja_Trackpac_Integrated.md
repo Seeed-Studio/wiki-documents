@@ -4,7 +4,7 @@ title: Trackpac統合
 keywords:
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_T1000_tracker_trackpac
+slug: /SenseCAP_T1000_tracker_trackpac
 last_update:
   date: 10/26/2023
   author: Jessie

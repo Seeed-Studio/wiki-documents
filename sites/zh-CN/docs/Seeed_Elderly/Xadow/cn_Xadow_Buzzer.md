@@ -4,7 +4,7 @@ title: Xadow - 蜂鸣器
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Xadow_Buzzer
+slug: /Xadow_Buzzer
 last_update:
   date: 1/13/2023
   author: shuxu hu

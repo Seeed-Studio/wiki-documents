@@ -4,7 +4,7 @@ title: Wio Terminal Sensor IMU
 keywords:
 - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/K1100-IMU-Sensor-Grove-LoRa-E5
+slug: /K1100-IMU-Sensor-Grove-LoRa-E5
 last_update:
   date: 1/12/2023
   author: shuxu hu

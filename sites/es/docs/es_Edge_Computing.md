@@ -4,7 +4,7 @@ title: Computación en el Borde
 keywords:
 - edge computing
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Edge_Computing
+slug: /Edge_Computing
 last_update:
   date: 05/24/2024
   author: Matthew

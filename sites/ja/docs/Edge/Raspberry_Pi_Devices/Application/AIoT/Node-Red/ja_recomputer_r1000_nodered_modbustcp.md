@@ -7,7 +7,7 @@ keywords:
   - Node-Red
   - Modbus
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /ja/recomputer_r1000_node_red_modbus_tcp
+slug: /recomputer_r1000_node_red_modbus_tcp
 last_update:
   date: 07/04/2024
   author: Kasun Thushara

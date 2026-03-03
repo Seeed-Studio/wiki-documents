@@ -6,7 +6,7 @@ keywords:
   - xiao
   - arduino
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /es/xiao_wifi_usage_esp32c6
+slug: /xiao_wifi_usage_esp32c6
 sidebar_position: 3
 last_update:
   date: 04/11/2024

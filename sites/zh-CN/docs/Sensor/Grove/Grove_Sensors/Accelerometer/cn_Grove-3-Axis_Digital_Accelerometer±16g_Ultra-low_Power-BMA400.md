@@ -4,7 +4,7 @@ title: Grove - 三轴数字加速度计±16g超低功耗 (BMA400)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400
+slug: /Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400
 last_update:
   date: 1/5/2023
   author: shuxu hu

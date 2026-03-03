@@ -4,7 +4,7 @@ title: Grove Base Hat for Raspberry Pi
 keywords:
 - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove_Base_Hat_for_Raspberry_Pi
+slug: /Grove_Base_Hat_for_Raspberry_Pi
 sku: 103030275
 last_update:
   date: 12/29/2025

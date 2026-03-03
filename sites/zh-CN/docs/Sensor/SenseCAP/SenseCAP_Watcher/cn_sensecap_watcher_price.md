@@ -2,7 +2,7 @@
 description: 本文介绍了 Watcher 在使用 SenseCraft AI 时的收费计划。
 title: 价格和权益
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler_1.webp
-slug: /cn/watcher_price
+slug: /watcher_price
 sidebar_position: 3
 last_update:
   date: 10/18/2024

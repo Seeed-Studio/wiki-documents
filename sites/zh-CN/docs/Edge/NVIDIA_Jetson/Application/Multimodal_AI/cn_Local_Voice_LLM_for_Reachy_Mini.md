@@ -2,7 +2,7 @@
 description: 本 wiki 详细介绍了如何使用 reComputer Mini J501 和 Reachy Mini Lite 的硬件组合部署和操作一个完全本地化的语音交互机器人助手。该指南涵盖了安装 Ollama 服务器、配置本地语音模型和对话应用程序，最终实现一个无需互联网连接的离线、低延迟语音对话系统。它展示了一个完整的端到端项目，涵盖硬件设置、软件部署和工作系统的最终演示。
 title: 在 reComputer Mini 上为 Reachy Mini 部署本地语音 LLM！
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/local_voice_llm_on_recomputer_jetson_for_reachy_mini
+slug: /local_voice_llm_on_recomputer_jetson_for_reachy_mini
 last_update:
   date: 01/06/2026
   author: youjiang

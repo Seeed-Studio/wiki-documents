@@ -7,7 +7,7 @@ keywords:
 - VLM
 - Live VLM WebUI
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/gptoss-running-live.webp
-slug: /ja/deploy_live_vlm_webui_on_jetson
+slug: /deploy_live_vlm_webui_on_jetson
 last_update:
   date: 12/26/2025
   author: Youjiang

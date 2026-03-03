@@ -4,7 +4,7 @@ title: Grove - クーロンカウンター 3.3V to 5V (LTC2941)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Coulomb_Counter_3.3V_to_5V-LTC2941
+slug: /Grove-Coulomb_Counter_3.3V_to_5V-LTC2941
 sku: 101020593
 last_update:
   date: 05/15/2025

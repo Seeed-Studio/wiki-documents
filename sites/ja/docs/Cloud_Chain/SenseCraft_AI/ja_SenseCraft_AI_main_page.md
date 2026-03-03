@@ -3,7 +3,7 @@ description: SenseCraft AI ドキュメントのカタログ
 title: 概要
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png
 sidebar_class_name: hidden
-slug: /ja/sensecraft-ai/sensecraft-ai-main
+slug: /sensecraft-ai/sensecraft-ai-main
 aliases:
   - /ja/sensecraft_ai_main
 sidebar_position: 1

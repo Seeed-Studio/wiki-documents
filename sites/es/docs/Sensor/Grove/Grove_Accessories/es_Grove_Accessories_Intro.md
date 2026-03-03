@@ -4,7 +4,7 @@ title: Guía de Accesorios Grove
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove_Accessories_Intro
+slug: /Grove_Accessories_Intro
 last_update:
   date: 07/19/2023
   author: Matthew

@@ -4,7 +4,7 @@ title: Xadow - ブザー
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Xadow_Buzzer
+slug: /Xadow_Buzzer
 last_update:
   date: 05/15/2025
   author: shuxu hu

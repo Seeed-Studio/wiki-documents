@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J4105
 title: ODYSSEY 入門ガイド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/ODYSSEY_Getting_Started
+slug: /ODYSSEY_Getting_Started
 last_update:
   date: 05/15/2025
   author: w0x7ce

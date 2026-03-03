@@ -9,7 +9,7 @@ tags:
   - インターフェース
   - ハードウェア
 image: https://files.seeedstudio.com/wiki/recomputer-j501-mini/2-100020039-reComputer-Mini-J501---Carrier-Board-for-Jetson-AGX-Orin.jpg
-slug: /ja/recomputer_j501_mini_getting_started
+slug: /recomputer_j501_mini_getting_started
 sku: 100020039
 last_update:
   date: 11/04/2025

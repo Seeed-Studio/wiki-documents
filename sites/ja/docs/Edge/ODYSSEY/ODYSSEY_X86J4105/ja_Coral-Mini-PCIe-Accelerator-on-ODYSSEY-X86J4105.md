@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J41x5
 title: ODYSSEY 用 Coral Mini PCIe Accelerator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Coral-Mini-PCIe-Accelerator-x86
+slug: /Coral-Mini-PCIe-Accelerator-x86
 last_update:
   date: 05/15/2025
   author: Lakshantha

@@ -2,7 +2,7 @@
 description: Usando XIAO ESP32-S3 en MicroBlocks.
 title: MicroBlocks
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.webp
-slug: /es/xiao_esp32s3_microblocks
+slug: /xiao_esp32s3_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks

@@ -2,7 +2,7 @@
 description: 描述如何开发 Watcher 功能模块。
 title: Watcher 功能模块开发指南
 image: https://files.seeedstudio.com/wiki/watcher_software_framework/watcher_function_module.webp
-slug: /cn/watcher_function_module_development_guide
+slug: /watcher_function_module_development_guide
 sidebar_position: 3
 last_update:
   date: 11/5/2024

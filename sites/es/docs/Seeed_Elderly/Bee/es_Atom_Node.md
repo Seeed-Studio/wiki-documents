@@ -4,7 +4,7 @@ title: Atom Node
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Atom_Node
+slug: /Atom_Node
 sku: 102010001
 last_update:
   date: 1/13/2023

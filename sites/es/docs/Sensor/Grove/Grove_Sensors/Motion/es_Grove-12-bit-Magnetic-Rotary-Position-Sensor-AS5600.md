@@ -4,7 +4,7 @@ title: Grove - Sensor de Posición Rotativa Magnético de 12 bits / Codificador 
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600
+slug: /Grove-12-bit-Magnetic-Rotary-Position-Sensor-AS5600
 sku: 101020692
 last_update:
   date: 1/31/2023

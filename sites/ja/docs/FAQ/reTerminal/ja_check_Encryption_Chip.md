@@ -2,7 +2,7 @@
 description: reTerminal-FAQ
 title: 暗号化チップがATECC608A-SSHDA-BかATECC608A-TNGTLSS-Gかを確認する方法
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/check_Encryption_Chip
+slug: /check_Encryption_Chip
 last_update:
   date: 6/21/2023
   author: Seraphina

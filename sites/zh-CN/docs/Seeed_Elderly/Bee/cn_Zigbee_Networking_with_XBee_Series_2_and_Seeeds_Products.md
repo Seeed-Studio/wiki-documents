@@ -4,7 +4,7 @@ title: 《Zigbee》网络：使用 XBee Series 2 和 Seeed 产品
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products
+slug: /Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products
 last_update:
   date: 1/13/2023
   author: shuxu hu

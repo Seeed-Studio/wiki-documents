@@ -4,7 +4,7 @@ title: Xbox
 keywords:
 - Wio_terminal USB_Host
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio-Terminal-USBH-Xbox
+slug: /Wio-Terminal-USBH-Xbox
 last_update:
   date: 1/17/2023
   author: jianjing Huang

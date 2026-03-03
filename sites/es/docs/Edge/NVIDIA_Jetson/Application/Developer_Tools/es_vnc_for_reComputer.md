@@ -4,7 +4,7 @@ title: Usando VNC en reComputer Jetson
 tags:
   - AI model deploy
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/vnc_for_recomputer
+slug: /vnc_for_recomputer
 last_update:
   date: 9/30/2024
   author: YaoHui Zhu

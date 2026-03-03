@@ -6,7 +6,7 @@ keywords:
 - chatGPT
 - speech to text
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/xiao_esp32s3_speech2chatgpt
+slug: /xiao_esp32s3_speech2chatgpt
 last_update:
   date: 5/31/2023
   author: Citric

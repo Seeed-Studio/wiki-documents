@@ -7,7 +7,7 @@ keywords:
   - Grove
 description: Grove LoRa-E5，由 Seeed Studio 推出的强大且多功能的 LoRa 模块。探索其功能、数据手册、认证和相关 SDK
 image: https://files.seeedstudio.com/wiki/Grove-Wio-E5/1.jpg
-slug: /cn/Grove_LoRa_E5_New_Version
+slug: /Grove_LoRa_E5_New_Version
 sku: 113020091
 last_update:
   date: 07/25/2024

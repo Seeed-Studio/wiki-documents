@@ -3,7 +3,7 @@ description: ODYSSEY-常见问题解答
 title: 重新安装原始Windows系统
 #keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
-slug: /cn/reinstall_the_Original_Windows
+slug: /reinstall_the_Original_Windows
 last_update:
   date: 2023.6.25
   author: cheng.tang

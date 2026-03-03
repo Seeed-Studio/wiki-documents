@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/315Mhz_remote_relay_switch_kits-2_channels/
-slug: /ja/315Mhz_remote_relay_switch_kits-2_channels
+slug: /315Mhz_remote_relay_switch_kits-2_channels
 last_update:
   date: 05/15/2025
   author: gunengyu

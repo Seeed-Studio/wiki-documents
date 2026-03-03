@@ -5,7 +5,7 @@ keywords:
 - reComputer
 - OTA
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/updating_jetpack_with_ota
+slug: /updating_jetpack_with_ota
 last_update:
   date: 3/19/2025
   author: Youjiang

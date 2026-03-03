@@ -2,7 +2,7 @@
 description: Un kit meshtastic DIY basado en XIAO ESP32S3 & Wio-SX1262 kit, placa de expansión XIAO, sensor grove y módulo GNSS L76K con carcasa acrílica.
 title: Kit sandwich de 4 capas para Meshtastic
 image: https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/202003261_preview-08.jpg
-slug: /es/4_layer_sandwich_for_meshtastic
+slug: /4_layer_sandwich_for_meshtastic
 sidebar_position: 6
 last_update:
   date: 12/13/2024

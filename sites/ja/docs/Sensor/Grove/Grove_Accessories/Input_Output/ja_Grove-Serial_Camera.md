@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/Grove-Serial_Camera/
-slug: /ja/Grove-Serial_Camera
+slug: /Grove-Serial_Camera
 last_update:
   date: 05/15/2025
   author: gunengyu

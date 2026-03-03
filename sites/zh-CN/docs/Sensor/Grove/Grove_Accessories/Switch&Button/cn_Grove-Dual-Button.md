@@ -4,7 +4,7 @@ title: Grove 双按钮
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-Dual-Button
+slug: /Grove-Dual-Button
 sku: 111020103
 last_update:
   date: 2/22/2023

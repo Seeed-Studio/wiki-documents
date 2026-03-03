@@ -8,7 +8,7 @@ keywords:
   - ModbusTCP
   - Graphic
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /es/reComputer_r1000_fin_equip_gaphic
+slug: /reComputer_r1000_fin_equip_gaphic
 last_update:
   date: 07/22/2024
   author: ShuishengPeng

@@ -7,7 +7,7 @@ keywords:
   - Ignition Edge
   - Panel Builder
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reTerminal-DM-Ignition-Edge-Panel-Builder
+slug: /reTerminal-DM-Ignition-Edge-Panel-Builder
 last_update:
   date: 09/29/2023
   author: Corey Thompson

@@ -5,7 +5,7 @@ keywords:
 - himax
 - vision AI
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/grove_vision_ai_v2_himax_sdk
+slug: /grove_vision_ai_v2_himax_sdk
 last_update:
   date: 01/17/2023
   author: Citric

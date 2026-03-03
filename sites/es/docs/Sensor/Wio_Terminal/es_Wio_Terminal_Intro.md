@@ -4,7 +4,7 @@ title: Guía de Wio Terminal
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Wio_Terminal_Intro
+slug: /Wio_Terminal_Intro
 last_update:
   date: 08/6/2024
   author: Frank

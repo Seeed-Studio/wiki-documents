@@ -4,7 +4,7 @@ title: LinkIt ONE 教程 - 按钮开关
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/LinkIt_ONE_Tutorial-Push_Button
+slug: /LinkIt_ONE_Tutorial-Push_Button
 last_update:
   date: 1/13/2023
   author: shuxu hu

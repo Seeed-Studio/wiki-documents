@@ -14,7 +14,7 @@ keywords:
 - Grove
 - MCP
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
-slug: /cn/extending_grove_with_mcp
+slug: /extending_grove_with_mcp
 last_update:
   date: 10/22/2025
   author: Twelve

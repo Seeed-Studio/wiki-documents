@@ -7,7 +7,7 @@ keywords:
 - arm
 - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/feetech/Feetech servo all.webp
-slug: /cn/feetech_servo
+slug: /feetech_servo
 last_update:
   date: 11/24/2025
   author: Li Shanghang

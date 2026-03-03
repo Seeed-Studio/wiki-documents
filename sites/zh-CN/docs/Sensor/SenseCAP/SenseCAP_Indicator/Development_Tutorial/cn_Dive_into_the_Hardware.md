@@ -4,7 +4,7 @@ title: 深入了解硬件
 keywords:
 - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/SenseCAP_Indicator_Dive_into_the_Hardware
+slug: /SenseCAP_Indicator_Dive_into_the_Hardware
 sidebar_position: 1
 last_update:
   date: 11/17/2023

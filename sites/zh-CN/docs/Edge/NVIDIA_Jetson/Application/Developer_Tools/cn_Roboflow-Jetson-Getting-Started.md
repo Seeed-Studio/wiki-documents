@@ -7,7 +7,7 @@ tags:
   - AI model deploy
   - Roboflow
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Roboflow-Jetson-Getting-Started
+slug: /Roboflow-Jetson-Getting-Started
 last_update:
   date: 10/26/2023
   author: Lakshantha

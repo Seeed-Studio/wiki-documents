@@ -5,7 +5,7 @@ keywords:
 - vision AI
 - インテリジェントウェブカメラ
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/grove_vision_ai_v2_webcamera
+slug: /grove_vision_ai_v2_webcamera
 last_update:
   date: 05/15/2025
   author: Allen

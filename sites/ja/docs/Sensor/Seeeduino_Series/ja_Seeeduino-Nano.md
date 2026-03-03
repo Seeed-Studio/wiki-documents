@@ -4,7 +4,7 @@ title: Seeeduino Nano
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeeduino-Nano
+slug: /Seeeduino-Nano
 sku: 102010268
 last_update:
   date: 05/15/2025

@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/DC_framework_solenoid_HCNE1-0630/
-slug: /ja/Lipo_Rider_V1.1
+slug: /Lipo_Rider_V1.1
 last_update:
   date: 05/15/2025
   author: jianjing Huang

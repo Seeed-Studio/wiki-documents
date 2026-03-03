@@ -4,7 +4,7 @@ keywords:
   - ドキュメント
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Voltage_Divider//
-slug: /ja/Grove-Voltage_Divider
+slug: /Grove-Voltage_Divider
 sku: 104020000
 last_update:
   date: 05/15/2025

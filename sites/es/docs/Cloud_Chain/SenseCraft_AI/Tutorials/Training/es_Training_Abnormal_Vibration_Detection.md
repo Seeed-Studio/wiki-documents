@@ -2,7 +2,7 @@
 description: Introduce el uso de la detección de vibraciones anómalas.
 title: Detección de Vibraciones Anómalas
 image: https://files.seeedstudio.com/wiki/SenseCraft/SenseCraft_AI/Intro_image_title.webp
-slug: /es/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection
+slug: /sensecraft-ai/tutorials/workspace/abnormal-vibration-detection
 sidebar_position: 1
 last_update:
   date: 01/06/2026

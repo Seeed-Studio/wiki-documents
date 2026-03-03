@@ -4,7 +4,7 @@ title: Guía de reTerminal
 keywords:
 - reRouter
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/reTerminal_Intro
+slug: /reTerminal_Intro
 last_update:
   date: 12/22/2023
   author: Kasun Thushara

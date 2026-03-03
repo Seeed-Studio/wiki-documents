@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Wio-Terminal-LVGL/
-slug: /ja/Wio-Terminal-LVGL
+slug: /Wio-Terminal-LVGL
 last_update:
   date: 05/15/2025
   author: gunengyu

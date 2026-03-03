@@ -4,7 +4,7 @@ title: LoNet 808 - Mini GSM/GPRS Plus GPS Breakout
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout
+slug: /LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout
 sku: 113990107
 last_update:
   date: 05/15/2025

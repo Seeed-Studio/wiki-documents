@@ -4,7 +4,7 @@ title: Seeed Arduino 串口
 keywords:
 - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Seeed_Arduino_Serial
+slug: /Seeed_Arduino_Serial
 last_update:
   date: 1/16/2023
   author: hushuxu

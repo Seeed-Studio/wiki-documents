@@ -4,7 +4,7 @@ title: Grove - 静電容量式土壌湿度センサー（耐腐食性）
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant
+slug: /Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant
 last_update:
   date: 05/15/2025
   author: jianjing Huang

@@ -2,7 +2,7 @@
 description: ODYSSEY - X86J4105
 title: Instalación de OPNsense
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/ODYSSEY-X86-OPNsense
+slug: /ODYSSEY-X86-OPNsense
 last_update:
   date: 01/03/2023
   author: w0x7ce

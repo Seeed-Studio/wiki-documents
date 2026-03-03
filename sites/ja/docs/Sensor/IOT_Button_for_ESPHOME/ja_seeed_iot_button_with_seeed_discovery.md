@@ -8,7 +8,7 @@ keywords:
   - ESP32-C6
   - Smart Home
 image: https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/button_esphome/button_buzzer.webp
-slug: /ja/iot_button_v2_ha_discovery
+slug: /iot_button_v2_ha_discovery
 last_update:
   date: 12/17/2025
   author: Citric

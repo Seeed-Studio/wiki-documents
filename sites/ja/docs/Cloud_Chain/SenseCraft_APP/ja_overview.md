@@ -5,7 +5,7 @@ title: 概要
 keywords:
 - App
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/sensecraft-app/overview
+slug: /sensecraft-app/overview
 aliases:
   - /sensecraft_app
 last_update:

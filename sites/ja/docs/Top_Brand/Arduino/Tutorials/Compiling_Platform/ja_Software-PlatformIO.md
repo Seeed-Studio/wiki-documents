@@ -4,7 +4,7 @@ title: Arduino対応ボード向けPlatformIO
 keywords:
 - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Software-PlatformIO
+slug: /Software-PlatformIO
 sku: 102991299
 last_update:
   date: 05/15/2025

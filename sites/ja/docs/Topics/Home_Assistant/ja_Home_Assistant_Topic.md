@@ -4,7 +4,7 @@ title: Home Assistant
 keywords:
 - home assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /ja/home_assistant_topic
+slug: /home_assistant_topic
 sku: 113110024
 last_update:
   date: 05/15/2025

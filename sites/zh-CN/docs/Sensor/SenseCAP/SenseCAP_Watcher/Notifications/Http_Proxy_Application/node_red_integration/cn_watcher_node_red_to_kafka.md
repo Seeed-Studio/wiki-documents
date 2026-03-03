@@ -5,7 +5,7 @@ keywords:
 - watcher
 - kafka
 image: https://files.seeedstudio.com/wiki/watcher_to_kafka_image/head_image.png
-slug: /cn/watcher_node_red_to_kafka
+slug: /watcher_node_red_to_kafka
 last_update:
   date: 07/24/2024
   author: Allen

@@ -2,7 +2,7 @@
 description: reTerminal-常见问题解答
 title: 如何将 Raspberry Pi OS/64 位 Ubuntu OS 或其他操作系统刷入 eMMC
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/flash_different_os_to_emmc
+slug: /flash_different_os_to_emmc
 last_update:
   date: 2023/6/21
   author: Seraphina

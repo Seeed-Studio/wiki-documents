@@ -4,7 +4,7 @@ title: Arduinoボード向けI2Cユーザーガイド
 keywords:
 - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Arduino_Software_I2C_user_guide
+slug: /Arduino_Software_I2C_user_guide
 last_update:
   date: 05/15/2025
   author: jianjing Huang

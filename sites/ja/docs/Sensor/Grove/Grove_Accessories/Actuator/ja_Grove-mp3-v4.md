@@ -5,7 +5,7 @@ keywords:
 - mp3
 - grove
 image: https://files.seeedstudio.com/wiki/grove-mp3-v4/0.webp
-slug: /ja/grove_mp3_v4
+slug: /grove_mp3_v4
 sku: 107020129
 last_update:
   date: 05/15/2025

@@ -4,7 +4,7 @@ title: Grove - I2C 高精度温湿度传感器(SHT35)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35
+slug: /Grove-I2C_High_Accuracy_Temp%26Humi_Sensor-SHT35
 sku: 101020592
 last_update:
   date: 12/30/2022

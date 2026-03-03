@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: lorawan_tracker_open_source_fw
 link:
   type: generated-index
-  slug: cn/lorawan_tracker_open_source_fw
+  slug: lorawan_tracker_open_source_fw
   title: LoRaWAN 追踪器开源固件说明
   description: LoRaWAN 追踪器（软件开源）

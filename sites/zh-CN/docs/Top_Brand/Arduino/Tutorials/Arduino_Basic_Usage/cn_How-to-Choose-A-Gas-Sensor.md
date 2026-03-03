@@ -2,7 +2,7 @@
 description: 如何选择气体传感器
 title: 如何选择气体传感器
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/How-to-Choose-A-Gas-Sensor
+slug: /How-to-Choose-A-Gas-Sensor
 last_update:
   date: 02/02/2023
   author: w0x7ce

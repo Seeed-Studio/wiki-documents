@@ -5,6 +5,6 @@ collapsed: true # keep the category open by default
 className: recamera_gimbal
 link:
   type: generated-index
-  slug: es/recamera_gimbal
+  slug: recamera_gimbal
   title: reCamera Gimbal
   description: Documentación de reCamera Gimbal

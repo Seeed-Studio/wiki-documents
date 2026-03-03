@@ -4,7 +4,7 @@ title: ChatGPT - DALL·E - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator ChatGPT DALL·E Application Development
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/SenseCAP_Indicator_Application_ChatGPT
+slug: /SenseCAP_Indicator_Application_ChatGPT
 sidebar_position: 9
 last_update:
   date: 11/16/2023

@@ -9,7 +9,7 @@ keywords:
 - 奥比中光
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/orbbec_depth_camera_on_ros
+slug: /orbbec_depth_camera_on_ros
 sku: 101090144,100010971
 last_update:
   date: 05/15/2025

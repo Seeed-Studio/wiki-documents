@@ -3,7 +3,7 @@ sidebar_position: 5
 description: Cómo usar Entrenamiento(Clasificación)
 title: Entrenamiento - Clasificación
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/34.webp
-slug: /es/sensecraft-ai/tutorials/sensecraft-ai-training-classification
+slug: /sensecraft-ai/tutorials/sensecraft-ai-training-classification
 aliases:
   - /es/sensecraft_ai_training_classification
 last_update:

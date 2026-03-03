@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/ja/Grove-Sound_Sensor/
-slug: /ja/Grove-Sound_Sensor
+slug: /Grove-Sound_Sensor
 sku: 101020023
 last_update:
   date: 05/15/2025

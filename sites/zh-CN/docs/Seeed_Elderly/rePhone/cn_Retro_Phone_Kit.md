@@ -4,7 +4,7 @@ title:  复古电话套件
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Retro Phone Kit
+slug: /Retro Phone Kit
 last_update:
   date: 1/13/2023
   author: shuxu hu

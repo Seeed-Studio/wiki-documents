@@ -6,7 +6,7 @@ keywords:
 - jetpack
 - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
-slug: /cn/issue_of_jetpack5_failing_to_boot_from_certain_ssd
+slug: /issue_of_jetpack5_failing_to_boot_from_certain_ssd
 last_update:
   date: 07/30/2025
   author: Dayu

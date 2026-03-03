@@ -8,7 +8,7 @@ keywords:
 - Robotics
 - DAMO
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
-slug: /es/lerobot_soarm101_Rynnbot_Developer_Kit
+slug: /lerobot_soarm101_Rynnbot_Developer_Kit
 sku: 100068444
 last_update:
   date: 1/12/2026

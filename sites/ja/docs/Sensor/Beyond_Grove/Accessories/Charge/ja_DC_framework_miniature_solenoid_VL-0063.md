@@ -5,7 +5,7 @@ keywords:
   - ドキュメント
   - ドキュサウルス
 image: https://wiki.seeedstudio.com/ja/DC_framework_miniature_solenoid_VL-0063/
-slug: /ja/DC_framework_miniature_solenoid_VL-0063
+slug: /DC_framework_miniature_solenoid_VL-0063
 last_update:
   date: 05/15/2025
   author: gunengyu

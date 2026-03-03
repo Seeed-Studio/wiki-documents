@@ -2,7 +2,7 @@
 description: このプロジェクトでは、XIAO ESP32S3 と Grove Vision AI V2 を組み合わせて、コンパクトな人物検出デバイスを作成します。人物検出モデルを搭載した V2 モジュールが人の存在を識別し、その結果を ESP32S3 に送信します。マイクロコントローラーは情報を処理し、検出アラートを指定された Telegram アカウントに転送して、監視エリアで人が検出された際にリアルタイム通知を提供します。
 title: Grove Vision AI V2 を使用して Telegram で通知を受け取る
 image: https://files.seeedstudio.com/wiki/grove_vision_ai_v2_telegram/headimage2.png
-slug: /ja/grove_vision_ai_v2_telegram
+slug: /grove_vision_ai_v2_telegram
 last_update:
   date: 05/15/2025
   author: Allen

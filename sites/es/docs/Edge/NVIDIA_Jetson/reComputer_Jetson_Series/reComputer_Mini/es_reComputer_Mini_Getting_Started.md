@@ -7,7 +7,7 @@ keywords:
   - embedded computer
   - robots
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_mini.webp
-slug: /es/recomputer_jetson_mini_getting_started
+slug: /recomputer_jetson_mini_getting_started
 sku: 114993553,114993551,102111001,102110999,114993592,114993593
 last_update:
   date: 12/11/2024

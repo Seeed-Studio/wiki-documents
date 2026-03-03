@@ -11,7 +11,7 @@ keywords:
 - RGB-D camera
 - Visual Odometry
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/PyCuVSLAM/rgb_homepage.gif
-slug: /ja/pycuvslam_recomputer_robotics
+slug: /pycuvslam_recomputer_robotics
 sku: 101090144,100071398
 last_update:
   date: 2025-10-10

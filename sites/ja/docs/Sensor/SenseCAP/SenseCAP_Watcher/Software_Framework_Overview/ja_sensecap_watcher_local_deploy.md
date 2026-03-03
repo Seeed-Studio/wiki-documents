@@ -2,7 +2,7 @@
 description: このチュートリアルでは、SenseCraftサービスからWatcherのAIサービスをローカルにデプロイして、Watcherを使用する方法について説明します。
 title: WatcherのAI機能をローカルにデプロイする
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.png
-slug: /ja/watcher_local_deploy
+slug: /watcher_local_deploy
 sidebar_position: 3
 last_update:
   date: 9/11/2025

@@ -2,7 +2,7 @@
 description: 本文重点介绍 Grove SGP41 传感器的使用。
 title: 基于湿度和温度的 SGP41（原始）测量校正
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /cn/grove-sgp41-with-aht20
+slug: /grove-sgp41-with-aht20
 last_update:
   date: 10/16/2023
   author: Hans Bausewein

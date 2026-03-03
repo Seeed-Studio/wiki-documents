@@ -4,7 +4,7 @@ title: 忘记 Wi-Fi 配置文件
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/sensecraft-blockchain/sensecraft-hotspot-app/forget-wifi-profile
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/forget-wifi-profile
 aliases:
   - /cn/Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile
 last_update:

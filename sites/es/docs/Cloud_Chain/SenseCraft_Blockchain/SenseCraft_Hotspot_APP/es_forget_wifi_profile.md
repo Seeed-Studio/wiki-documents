@@ -4,7 +4,7 @@ title: Olvidar Perfil Wi-Fi
 keywords:
 - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/sensecraft-blockchain/sensecraft-hotspot-app/forget-wifi-profile
+slug: /sensecraft-blockchain/sensecraft-hotspot-app/forget-wifi-profile
 aliases:
   - /es/Cloud_Chain/SenseCAP_Hotspot_APP/forget-wifi-profile
 last_update:

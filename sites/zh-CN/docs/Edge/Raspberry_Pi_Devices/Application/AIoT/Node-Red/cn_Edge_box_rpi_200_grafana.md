@@ -8,7 +8,7 @@ keywords:
   - Dash board
   - SCADA
 image: https://files.seeedstudio.com/wiki/Edge_Box/nodered/EdgeBox-RPi-200-font.jpg
-slug: /cn/edgebox_rpi_200_grafana
+slug: /edgebox_rpi_200_grafana
 last_update:
   date: 6/24/2024
   author: Kasun Thushara

@@ -4,7 +4,7 @@ title: 貢献ガイド
 keywords:
 - 貢献者
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Contribution-Guide
+slug: /Contribution-Guide
 last_update:
   date: 05/15/2025
   author: Matthew

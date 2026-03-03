@@ -4,7 +4,7 @@ title: Grove Speech Recognizer Kit for Arduino
 keywords:
 - Grove_Speech_Recognizer_Kit_for_Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Grove_Speech_Recognizer_Kit_for_Arduino
+slug: /Grove_Speech_Recognizer_Kit_for_Arduino
 sku: 110020108
 last_update:
   date: 1/12/2023

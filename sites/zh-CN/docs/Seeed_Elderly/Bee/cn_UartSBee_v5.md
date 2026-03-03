@@ -4,7 +4,7 @@ title: UartSBee V5
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/UartSBee_v5
+slug: /UartSBee_v5
 sku: 103100001
 last_update:
   date: 1/13/2023

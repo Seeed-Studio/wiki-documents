@@ -3,7 +3,7 @@ sidebar_position: 1
 description: Manual de Usuario de SenseCraft App Event Versión 2.9.0
 title: Gestión de Eventos
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/sensecraft-app/tutorials/event-management
+slug: /sensecraft-app/tutorials/event-management
 aliases:
   - /es/sensecap_mate_app_event
 last_update:

@@ -6,7 +6,7 @@ keywords:
   - reCamera
   - recamera
 image: https://files.seeedstudio.com/wiki/reCamera/001.webp
-slug: /cn/recamera_warranty
+slug: /recamera_warranty
 sku: 100018917
 sidebar_position: 3
 last_update:

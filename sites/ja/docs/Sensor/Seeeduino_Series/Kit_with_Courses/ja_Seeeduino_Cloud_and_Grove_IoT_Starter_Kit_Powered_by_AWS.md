@@ -4,7 +4,7 @@ title: Seeeduino Cloud と Grove IoT スターターキット（AWS 対応）
 keywords:
 - Seeeduino 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS
+slug: /Seeeduino_Cloud_and_Grove_IoT_Starter_Kit_Powered_by_AWS
 last_update:
   date: 05/15/2025
   author: shuxu hu

@@ -4,7 +4,7 @@ title: 在 ODYSSEY - X86 上部署 Mender 服务器
 keywords:
 - 软件 Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /cn/Mender-Server-ODYSSEY-X86
+slug: /Mender-Server-ODYSSEY-X86
 last_update:
   date: 03/16/2023
   author: Lakshantha

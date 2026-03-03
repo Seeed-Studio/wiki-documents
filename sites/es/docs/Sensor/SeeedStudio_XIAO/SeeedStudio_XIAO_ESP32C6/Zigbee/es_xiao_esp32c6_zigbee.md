@@ -2,7 +2,7 @@
 description: En este tutorial, nos embarcaremos en un viaje para explorar el desarrollo de aplicaciones Zigbee utilizando la placa de desarrollo XIAO ESP32C6. La XIAO ESP32C6 es una placa compacta pero potente que cuenta con el chip ESP32-C6, que ofrece conectividad integrada Wi-Fi y Bluetooth Low Energy (BLE). Al aprovechar el SDK ESP Zigbee, podemos aprovechar todo el potencial de la XIAO ESP32C6 y extender sus capacidades para incluir funcionalidad Zigbee.
 title: Guía de Inicio Rápido XIAO ESP32C6 Zigbee (ESP-IDF)
 image: https://files.seeedstudio.com/wiki/xiaoc6_zigbee/3.jpg
-slug: /es/xiao_esp32c6_zigbee
+slug: /xiao_esp32c6_zigbee
 sku: 113991254, 102010636, 101991470
 last_update:
   date: 05/30/2024

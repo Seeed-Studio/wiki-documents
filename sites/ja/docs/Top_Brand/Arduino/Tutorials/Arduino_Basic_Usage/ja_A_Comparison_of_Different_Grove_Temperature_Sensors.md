@@ -2,7 +2,7 @@
 description: Grove温度センサーの比較
 title: Grove温度センサーの比較
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/A_Comparison_of_Different_Grove_Temperature_Sensors
+slug: /A_Comparison_of_Different_Grove_Temperature_Sensors
 last_update:
   date: 05/15/2025
   author: w0x7ce

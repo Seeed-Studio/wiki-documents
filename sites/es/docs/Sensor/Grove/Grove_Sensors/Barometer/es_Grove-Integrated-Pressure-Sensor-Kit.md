@@ -4,7 +4,7 @@ title: Grove - Kit de Sensor de Presión Integrado
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Integrated-Pressure-Sensor-Kit
+slug: /Grove-Integrated-Pressure-Sensor-Kit
 sku: 110020248
 last_update:
   date: 1/5/2023

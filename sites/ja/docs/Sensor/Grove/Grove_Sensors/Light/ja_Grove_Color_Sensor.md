@@ -4,7 +4,7 @@ title: Grove-カラーセンサー V3.0 - I2C インターフェース
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/Grove_Color/top.jpg 
-slug: /ja/grove_color_sensor_v3_0_iic
+slug: /grove_color_sensor_v3_0_iic
 last_update:
   date: 05/15/2025
   author: Jason

@@ -5,7 +5,7 @@ keywords:
   - docs
   - docusaurus
 image: https://wiki.seeedstudio.com/es/Battery_kit_3.7V_520_mAh/
-slug: /es/Battery_kit_3.7V_520_mAh
+slug: /Battery_kit_3.7V_520_mAh
 last_update:
   date: 02/03/2022
   author: gunengyu

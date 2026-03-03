@@ -4,7 +4,7 @@ title: 产品概述
 keywords:
     - mission-pack
 # image: 
-slug: /cn/mission_pack_intro_v3
+slug: /mission_pack_intro_v3
 sidebar_position: 0
 last_update:
     date: 07/08/2025

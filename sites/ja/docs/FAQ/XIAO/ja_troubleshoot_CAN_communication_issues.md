@@ -2,7 +2,7 @@
 description: XIAO CAN Bus拡張ボード-FAQ
 title: CAN busの通信問題をトラブルシューティングするにはどうすればよいですか？
 #image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/troubleshoot_CAN_communication_issues
+slug: /troubleshoot_CAN_communication_issues
 last_update:
   date: 6/30/2023
   author: cheng.tang

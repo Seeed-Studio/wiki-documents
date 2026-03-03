@@ -4,7 +4,7 @@ title: Grove - Sensor de Llama
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /es/Grove-Flame_Sensor
+slug: /Grove-Flame_Sensor
 sku: 101020049
 last_update:
   date: 1/5/2023

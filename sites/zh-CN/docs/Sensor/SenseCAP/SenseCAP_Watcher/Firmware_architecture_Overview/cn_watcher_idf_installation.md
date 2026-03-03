@@ -2,7 +2,7 @@
 description: 介绍如何下载 Watcher 的开源仓库并构建 IDF 环境。
 title: 构建 Watcher 开发环境
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/64.webp
-slug: /cn/build_watcher_development_environment
+slug: /build_watcher_development_environment
 sidebar_position: 1
 last_update:
   date: 11/5/2024

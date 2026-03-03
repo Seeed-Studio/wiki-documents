@@ -4,7 +4,7 @@ title: 4WD Driver Platform V1.0
 keywords:
 - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/4WD_Driver_Platform_V1.0
+slug: /4WD_Driver_Platform_V1.0
 last_update:
   date: 05/15/2025
   author: shuxu hu

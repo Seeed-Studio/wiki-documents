@@ -4,7 +4,7 @@ title: Grove-VOCおよびeCO2ガスセンサー(SGP30)
 keywords:
 - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /ja/Grove-VOC_and_eCO2_Gas_Sensor-SGP30
+slug: /Grove-VOC_and_eCO2_Gas_Sensor-SGP30
 sku: 101020512
 last_update:
   date: 05/15/2025

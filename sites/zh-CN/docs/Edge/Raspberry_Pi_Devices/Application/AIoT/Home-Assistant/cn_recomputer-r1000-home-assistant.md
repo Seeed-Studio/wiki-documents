@@ -7,7 +7,7 @@ keywords:
   - Home Automation
   - Bookworm
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /cn/recomputer_r1000_home_automation
+slug: /recomputer_r1000_home_automation
 last_update:
   date: 08/02/2024
   author: Kasun Thushara
