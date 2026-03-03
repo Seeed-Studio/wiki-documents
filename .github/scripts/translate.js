@@ -389,8 +389,8 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
 ${glossaryPairs}
 
 3. **Front Matter处理**：
-   - 只翻译title和description字段的值
-   - slug字段添加前缀：${pathPrefix}
+   - 只翻译 title 和 description 字段的值
+   - **不要修改 slug 字段的值，也不要为 slug 添加任何语言前缀**
 
 4. **缩进保持**：
    - 如果原文有缩进，译文必须保持相同的缩进
@@ -840,7 +840,7 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
 4. **link字段处理**：
    - slug：
      - 只修改 slug 的值
-     - 在原始值前面加 "${cleanPathPrefix}/" 作为 URL 前缀
+     - **不要添加任何语言前缀，保持 slug 原始值不变**
    - id：
      - 不翻译 id 里面的英文路径，只改“前缀”和“最后一段文件名”
      - 假设英文原始 id 的格式是： "A/B/C/F"
