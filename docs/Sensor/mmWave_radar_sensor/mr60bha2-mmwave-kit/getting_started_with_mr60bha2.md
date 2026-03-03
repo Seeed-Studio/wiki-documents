@@ -77,12 +77,11 @@ Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide
 
 ### Installation method and sensing range
 
-**Method 1.**Side-mounted, it is recommended that the radar installation height be consistent with the chest height of the person being measured, and the module position and chest position ≤ 1.5m
+:::caution
+The latest respiratory and heart rate radar is recommended for use solely during sleep scenarios. Please refrain from utilising the radar's respiratory and heart rate functions whilst seated at a desk or during exercise, as this may result in significant inaccuracies.
+:::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/side_mounting.png" style={{width:600, height:'auto'}}/></div>
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/side_detect_distance.png" style={{width:600, height:'auto'}}/></div>
-
-**Method 2.** Inclined installation. For sleep breathing and heart rate detection needs, an inclined installation method can be adopted. The radar is required to be installed at a height of 1m directly above the head of the bed, tilted downward at 45 ° towards the middle of the bed, and the distance between the radar and the chest cavity is controlled to be within 1.5m. The radar normal direction is aligned with the main detection position to ensure that the radar can detect respiratory and heartbeat data.
+Inclined installation. For sleep breathing and heart rate detection needs, an inclined installation method can be adopted. The radar is required to be installed at a height of 1m directly above the head of the bed, tilted downward at 45 ° towards the middle of the bed, and the distance between the radar and the chest cavity is controlled to be within 1.5m. The radar normal direction is aligned with the main detection position to ensure that the radar can detect respiratory and heartbeat data.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/tilt_installation.png" style={{width:600, height:'auto'}}/></div>
 

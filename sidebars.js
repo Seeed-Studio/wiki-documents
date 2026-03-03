@@ -2085,6 +2085,23 @@ const sidebars = {
             'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
           ],
         },
+
+{
+  type: 'category',
+  label: 'Sound Event Detection Module',
+  collapsed: true,
+  collapsible: true,
+  link: {
+    type: 'doc',
+    id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
+  },
+  items: [
+    // add sub-docs here later
+    // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+    // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+  ],
+},
+
       ],
     },
     {
@@ -4230,6 +4247,7 @@ const sidebars = {
             'Robotics/Robot_Kits/Lerobot/Starai_Arm_ROS2_Moveit',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm_New',
             'Robotics/Robot_Kits/Lerobot/Lerobot_SO_ARM101_DAMO',
+            'Robotics/Robot_Kits/Lerobot/Lerobot_Dataset_Tool',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'Robotics/Robot_Kits/Lerobot/Lerobot_Lekiwi',
             'Robotics/Robot_Kits/Lerobot/Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
@@ -9702,6 +9720,7 @@ const sidebars = {
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Starai_Arm_ROS2_Moveit',
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Lerobot_SO100Arm_New',
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Lerobot_SO_ARM101_DAMO',
+            'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Lerobot_Dataset_Tool',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Lerobot_Lekiwi',
             'zh-CN/Robotics/Robot_Kits/Lerobot/cn_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
@@ -14880,6 +14899,7 @@ const sidebars = {
             'es/Robotics/Robot_Kits/Lerobot/es_Starai_Arm_ROS2_Moveit',
             'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_SO100Arm_New',
             'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_SO_ARM101_DAMO',
+            'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_Dataset_Tool',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'es/Robotics/Robot_Kits/Lerobot/es_Lerobot_Lekiwi',
             'es/Robotics/Robot_Kits/Lerobot/es_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
@@ -20260,6 +20280,7 @@ const sidebars = {
             'ja/Robotics/Robot_Kits/Lerobot/ja_Starai_Arm_ROS2_Moveit',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO100Arm_New',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_SO_ARM101_DAMO',
+            'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_Dataset_Tool',
             //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Lerobot_Lekiwi',
             'ja/Robotics/Robot_Kits/Lerobot/ja_Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
