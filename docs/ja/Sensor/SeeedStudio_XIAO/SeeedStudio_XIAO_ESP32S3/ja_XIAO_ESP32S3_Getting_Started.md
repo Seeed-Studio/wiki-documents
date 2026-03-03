@@ -908,9 +908,14 @@ XIAO ESP32S3 は高い集積度のため、すべての XIAO の中で最も複�
 ### Seeed Studio XIAO ESP32-S3 Sense Camera 用
 
 **ハードウェア設計**
-- **📄[データシート]** [OV3660 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf )
-- **📄[データシート]** [OV5640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
-- **📄[データシート]** [OV2640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
+- **[OV3660]** 
+  - **📄[データシート]** [OV3660 カメラモジュール仕様書](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/OV3660_Camera_Module_Specification.pdf)
+  - **📄[データシート]** [OV3660 CMOS センサーデータシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf )
+- **[OV5640]** 
+  - **📄[データシート]** [OV5640 カメラモジュール仕様書](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/OV5640_Camera_Module_Specification.pdf )
+  - **📄[データシート]** [OV5640 CMOS センサーデータシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
+- **[OV2640]** 
+  - **📄[データシート]** [OV2640 CMOS センサーデータシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
 ## コースリソース
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>

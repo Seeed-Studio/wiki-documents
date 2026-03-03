@@ -908,9 +908,14 @@ XIAO ESP32S3 系列内置了电源管理芯片，使 XIAO ESP32S3 可以通过�
 ### 适用于 Seeed Studio XIAO ESP32-S3 Sense Camera
 
 **硬件设计**
-- **📄[Datasheet]** [OV3660 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf )
-- **📄[Datasheet]** [OV5640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
-- **📄[Datasheet]** [OV2640 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
+- **[OV3660]** 
+  - **📄[数据手册]** [OV3660 摄像头模组规格说明书](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/OV3660_Camera_Module_Specification.pdf)
+  - **📄[数据手册]** [OV3660 CMOS 传感器数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf )
+- **[OV5640]** 
+  - **📄[数据手册]** [OV5640 摄像头模组规格说明书](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/new-res/OV5640_Camera_Module_Specification.pdf )
+  - **📄[数据手册]** [OV5640 CMOS 传感器数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf )
+- **[OV2640]** 
+  - **📄[数据手册]** [OV2640 CMOS 传感器数据手册](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf )
 ## 课程资源
 
 <div align="middle"><img width="400" src="https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/cover.jpg" /></div>
