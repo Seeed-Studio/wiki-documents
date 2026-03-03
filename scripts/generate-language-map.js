@@ -6,10 +6,10 @@ const matter = require('gray-matter');
 // 配置
 const config = {
   docsPaths: {
-    en: 'docs',
-    cn: 'docs/zh-CN',
-    ja: 'docs/ja',
-    es: 'docs/es'
+    en: 'sites/en/docs',
+    cn: 'sites/zh-CN/docs',
+    ja: 'sites/ja/docs',
+    es: 'sites/es/docs'
   },
 
   languagePrefixes: {
@@ -92,6 +92,27 @@ function inferSlugFromPath(relativePath) {
   return `/${normalized}/`;
 }
 
+// ✅ 把 slug 统一成“站点内 basePath”，也就是不含语言前缀的形式：/Getting_Started/
+function normalizeToBasePath(slug, languageCode) {
+  if (!slug) return slug;
+
+  // 确保以 / 开头
+  if (!slug.startsWith('/')) slug = '/' + slug;
+
+  const prefix = config.languagePrefixes[languageCode] || '';
+
+  // 只在 slug 明确包含语言前缀时才剥离（比如有人手写了 /cn/xxx）
+  if (languageCode !== 'en' && prefix) {
+    if (slug === prefix) return '/';
+    if (slug.startsWith(prefix + '/')) {
+      const stripped = slug.slice(prefix.length);
+      return stripped || '/';
+    }
+  }
+
+  return slug;
+}
+
 function processLanguageDocuments(languageCode, docsPath) {
   if (config.verbose) {
     console.log(`\n🔍 处理 ${languageCode} 文档: ${docsPath}`);
@@ -111,9 +132,9 @@ function processLanguageDocuments(languageCode, docsPath) {
       slug = inferSlugFromPath(file.relativePath);
     }
 
-    if (languageCode !== 'en' && slug.startsWith(config.languagePrefixes[languageCode])) {
-      slug = slug.replace(config.languagePrefixes[languageCode], '') || '/';
-    }
+    // ✅ 分站后：md slug 通常不带 /cn，但最终 URL 由 baseUrl 加上 /cn。
+    // 这里统一把 key 归一化为 basePath（不含语言前缀），用于跨语言对齐。
+    slug = normalizeToBasePath(slug, languageCode);
 
     slugMap.set(slug, {
       file: file.relativePath,

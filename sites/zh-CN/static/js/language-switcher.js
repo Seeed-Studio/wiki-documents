@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2026-03-02 11:20:28 (北京时间)
-// 多语言页面: 2194 个
+// 生成时间: 2026-03-03 17:29:16 (北京时间)
+// 多语言页面: 2199 个
 
 (function() {
   'use strict';
@@ -3436,6 +3436,12 @@
     "es",
     "ja"
   ],
+  "/sensecap_t1000_e_meshcore": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/t1000_e_intro": [
     "cn",
     "en",
@@ -3454,6 +3460,12 @@
     "es",
     "ja"
   ],
+  "/get_started_with_other_mesh_firmware": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/get_started_with_meshtastic_wio_tracker_l1": [
     "cn",
     "en",
@@ -3461,6 +3473,12 @@
     "ja"
   ],
   "/wio_tracker_l1_node": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/xiao_esp32s3_&_wio_sx1262_kit_mqtt": [
     "cn",
     "en",
     "es",
@@ -4241,6 +4259,12 @@
     "ja"
   ],
   "/fine_tune_gr00t_n1.5_for_lerobot_so_arm_and_deploy_on_jetson_thor": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/lerobot_dataset_tool": [
     "cn",
     "en",
     "es",
@@ -6367,6 +6391,12 @@
     "ja"
   ],
   "/getting_started_with_ee02": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/getting_started_with_ee03": [
     "cn",
     "en",
     "es",
@@ -11069,6 +11099,12 @@
     "es",
     "ja"
   ],
+  "/sound_event_detection_module": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/wio_tracker_for_sidewalk": [
     "cn",
     "en",
@@ -13099,11 +13135,6 @@
   "/Raspberry_Pi": [
     "cn",
     "en",
-    "es",
-    "ja"
-  ],
-  "_About/": [
-    "cn",
     "es",
     "ja"
   ],
