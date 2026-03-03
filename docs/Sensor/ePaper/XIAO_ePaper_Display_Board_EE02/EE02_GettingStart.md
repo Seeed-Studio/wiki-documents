@@ -15,6 +15,29 @@ last_update:
   author: Allen
 ---
 
+<div class="table-center">
+<table align="center">
+    <tr>
+        <th>XIAO ePaper Display Board EE02</th>
+        <th>13.3" spectra™ 6 E-Ink Display</th>
+    </tr>
+    <tr>
+    <td><div align="center"><img width ={300} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-xiao-epaper-display-board-ee02.jpg"/></div>
+    <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-ESP32-S3-EE02-p-6639.html" target="_blank">
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+    </div></td>
+    <td><div align="center"><img width ={300} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100088646-13.3-elnk-spectra-6-color-display.jpg"/></div>
+    <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/13-3inch-Six-Color-eInk-ePaper-Display-with-1200x1600-Pixels-p-6569.html" target="_blank">
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+    </div></td>
+    </tr>
+ </table>
+</div>
+
 ## Introduction
 
 The **EE02** is a high-performance E-ink screen driver board specifically designed for **13.3-inch** electronic paper displays. Powered by the ESP32-S3 chip, it supports Wi-Fi and Bluetooth connectivity, making it an ideal solution for wireless display applications.
@@ -95,7 +118,7 @@ Use your mobile phone to scan the QR code displayed on the screen (or connect to
 **Step 5. Obtain Pairing Code**
 Once the network configuration is successful, the screen will refresh again and display a unique **Pairing Code** (or Device ID). You will need this code for the next step.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.JPG" style={{width:300,height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE02/7.jpg" style={{width:300,height:'auto'}}/></div>
 
 ### Platform Binding & Update
 
