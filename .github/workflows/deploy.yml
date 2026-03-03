@@ -28,7 +28,7 @@ jobs:
       - name: Show runner memory
         run: node -v && free -h && df -h
 
-      - name: Add extra swap (6G)
+      - name: Add extra swap (4G)
         run: |
           set -euxo pipefail
           echo "== Before =="
@@ -41,7 +41,7 @@ jobs:
             sudo rm -f "$SWAP"
           fi
 
-          sudo fallocate -l 6G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
+          sudo fallocate -l 4G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
           sudo chmod 600 "$SWAP"
           sudo mkswap "$SWAP"
           sudo swapon "$SWAP"
@@ -103,7 +103,7 @@ jobs:
       - name: Show runner memory
         run: node -v && free -h && df -h
 
-      - name: Add extra swap (6G)
+      - name: Add extra swap (4G)
         run: |
           set -euxo pipefail
           echo "== Before =="
@@ -116,7 +116,7 @@ jobs:
             sudo rm -f "$SWAP"
           fi
 
-          sudo fallocate -l 6G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
+          sudo fallocate -l 4G "$SWAP" || sudo dd if=/dev/zero of="$SWAP" bs=1M count=6144 status=progress
           sudo chmod 600 "$SWAP"
           sudo mkswap "$SWAP"
           sudo swapon "$SWAP"
