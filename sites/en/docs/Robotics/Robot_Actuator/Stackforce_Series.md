@@ -131,7 +131,7 @@ Successful modification of CAN mode is shown in the figures below:
 You can set the CANMODE:0 for easier testing in the subsequent code.
 :::
 
-## Using [reComputer Mini Jetson Orin](/cn/recomputer_jetson_mini_getting_started) to Control Motors
+## Using [reComputer Mini Jetson Orin](/recomputer_jetson_mini_getting_started) to Control Motors
 The most common CAN communication interfaces for motors on the market are **XT30 (2+2)** and **JST connectors**. Our **reComputer Mini Jetson Orin** and **reComputer Robotics** devices are equipped with **dual XT30 (2+2) interfaces** and **CAN interfaces based on JST**, providing seamless compatibility.
 
 **reComputer Mini:**

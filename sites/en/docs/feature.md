@@ -195,7 +195,7 @@ import TabItem from '@theme/TabItem';
 ### Images
 
 <img
-src={require('../assets/docusaurus.png').default}
+src={require('../../../assets/docusaurus.png').default}
 alt="Example banner"
 />
 
@@ -203,14 +203,14 @@ alt="Example banner"
   <TabItem value="apple" label="Markdown syntax">
 
   ```txt
-  ![Example banner](../assets/docusaurus.png)
+  ![Example banner](../../../assets/docusaurus.png)
   ```
   </TabItem>
   <TabItem value="orange" label="CommonJS require">
 
   ```js
   <img
-  src={require('../assets/docusaurus.png').default}
+  src={require('../../../assets/docusaurus.png').default}
   alt="Example banner"
 />
   ```
@@ -218,7 +218,7 @@ alt="Example banner"
   <TabItem value="banana" label="Import statement">
 
   ```ts
-  import myImageUrl from '../assets/docusaurus.png';
+  import myImageUrl from '../../../assets/docusaurus.png';
   <img src={myImageUrl} alt="Example banner" />;
   ```
   </TabItem>
@@ -230,18 +230,18 @@ alt="Example banner"
 
 # My Markdown page
 
-<a target="_blank" href={require('../assets/docusaurus.png').default}> Download this docx </a>
+<a target="_blank" href={require('../../../assets/docusaurus.png').default}> Download this docx </a>
 
 or
 
-[Download this docx using Markdown](../assets/docusaurus.png)
+[Download this docx using Markdown](../../../assets/docusaurus.png)
 
 ```markdown
-<a target="_blank" href={require('../assets/docusaurus.png').default}> Download this docx </a>
+<a target="_blank" href={require('../../../assets/docusaurus.png').default}> Download this docx </a>
 
 or
 
-[Download this docx using Markdown](../assets/docusaurus.png)
+[Download this docx using Markdown](../../../assets/docusaurus.png)
 ```
 
 ## Math

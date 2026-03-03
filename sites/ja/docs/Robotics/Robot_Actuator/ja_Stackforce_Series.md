@@ -131,7 +131,7 @@ CANモードの変更が成功した場合は、以下の図のように表示�
 後続のコードでのテストを簡単にするため、CANMODE:0を設定できます。
 :::
 
-## [reComputer Mini Jetson Orin](/cn/recomputer_jetson_mini_getting_started)を使用したモーター制御
+## [reComputer Mini Jetson Orin](/ja/recomputer_jetson_mini_getting_started)を使用したモーター制御
 市場で最も一般的なモーター用CAN通信インターフェースは**XT30（2+2）**と**JSTコネクタ**です。私たちの**reComputer Mini Jetson Orin**と**reComputer Robotics**デバイスには**デュアルXT30（2+2）インターフェース**と**JSTベースのCANインターフェース**が搭載されており、シームレスな互換性を提供します。
 
 **reComputer Mini:**
