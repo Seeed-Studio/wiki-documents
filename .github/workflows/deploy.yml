@@ -5,7 +5,7 @@ on:
     branches: [docusaurus-version]
   push:
     branches: [docusaurus-version]
-    
+
 env:
   NODE_OPTIONS: --max-old-space-size=6144
   DOCUSAURUS_IGNORE_SSG_WARNINGS: "true"
@@ -25,20 +25,17 @@ jobs:
           node-version: 20
           cache: yarn
 
-      # ==== 观测与加 swap（放在安装依赖前） ====
       - name: Show runner memory
         run: node -v && free -h && df -h
 
       - name: Add extra swap (6G)
         run: |
           set -euxo pipefail
-
           echo "== Before =="
           sudo swapon --show || true
           free -h
 
           SWAP=/mnt/ci.swap
-
           if [ -f "$SWAP" ]; then
             sudo swapoff "$SWAP" || true
             sudo rm -f "$SWAP"
@@ -59,9 +56,7 @@ jobs:
       - name: Create shared symlinks
         run: |
           set -euxo pipefail
-
           ROOT_ASSETS="$GITHUB_WORKSPACE/assets"
-
           for site in sites/en sites/zh-CN sites/ja sites/es; do
             rm -rf "$site/assets"
             ln -s "$ROOT_ASSETS" "$site/assets"
@@ -69,6 +64,7 @@ jobs:
 
       - name: Test build website
         run: yarn build
+
       - name: Report status to PR
         if: always()
         continue-on-error: true
@@ -99,6 +95,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
       - uses: actions/setup-node@v3
         with:
           node-version: 20
@@ -110,13 +109,11 @@ jobs:
       - name: Add extra swap (6G)
         run: |
           set -euxo pipefail
-
           echo "== Before =="
           sudo swapon --show || true
           free -h
 
           SWAP=/mnt/ci.swap
-
           if [ -f "$SWAP" ]; then
             sudo swapoff "$SWAP" || true
             sudo rm -f "$SWAP"
@@ -131,22 +128,23 @@ jobs:
           sudo swapon --show || true
           free -h
 
-      - uses: webfactory/ssh-agent@v0.5.0
-        with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
-      - name: Deploy to GitHub Pages
-        env:
-          USE_SSH: true
-        run: |
-          git config --global user.email "2768073931@qq.com"
-          git config --global user.name "MatthewJeffson"
-          yarn install --frozen-lockfile
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
-          # 创建软链接
+      - name: Create shared symlinks
+        run: |
+          set -euxo pipefail
           ROOT_ASSETS="$GITHUB_WORKSPACE/assets"
           for site in sites/en sites/zh-CN sites/ja sites/es; do
             rm -rf "$site/assets"
             ln -s "$ROOT_ASSETS" "$site/assets"
           done
 
+      - name: Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          git config --global user.email "2768073931@qq.com"
+          git config --global user.name "MatthewJeffson"
           yarn deploy
