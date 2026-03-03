@@ -2085,23 +2085,21 @@ const sidebars = {
             'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
           ],
         },
-
-{
-  type: 'category',
-  label: 'Sound Event Detection Module',
-  collapsed: true,
-  collapsible: true,
-  link: {
-    type: 'doc',
-    id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
-  },
-  items: [
-    // add sub-docs here later
-    // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
-    // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
-  ],
-},
-
+        {
+          type: 'category',
+          label: 'Sound Event Detection Module',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'Sensor/Sound_event_sensor/sound_event_sensor_intro',
+          },
+          items: [
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        },
       ],
     },
     {
@@ -7582,6 +7580,21 @@ const sidebars = {
             'zh-CN/Seeed_Elderly/reSpeaker/cn_ReSpeaker-USB-Mic-Array',
           ],
         },
+        {
+          type: 'category',
+          label: '声音事件检测模块',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'zh-CN/Sensor/Sound_event_sensor/cn_sound_event_sensor_intro',
+          },
+          items: [
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
+          ],
+        },
       ],
     },
     {
@@ -12759,6 +12772,21 @@ const sidebars = {
             'es/Seeed_Elderly/reSpeaker/Extension_Board/es_ReSpeaker_Mic_Array_v3.0',
             'es/Seeed_Elderly/reSpeaker/Extension_Board/es_ReSpeaker_Mic_Array_v2.0',
             'es/Seeed_Elderly/reSpeaker/es_ReSpeaker-USB-Mic-Array',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Módulo de Detección de Eventos Sonoros',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'es/Sensor/Sound_event_sensor/es_sound_event_sensor_intro',
+          },
+          items: [
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
       ],
@@ -18140,6 +18168,21 @@ const sidebars = {
             'ja/Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v3.0',
             'ja/Seeed_Elderly/reSpeaker/Extension_Board/ja_ReSpeaker_Mic_Array_v2.0',
             'ja/Seeed_Elderly/reSpeaker/ja_ReSpeaker-USB-Mic-Array',
+          ],
+        },
+        {
+          type: 'category',
+          label: '音響イベント検出モジュール',
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: 'doc',
+            id: 'ja/Sensor/Sound_event_sensor/ja_sound_event_sensor_intro',
+          },
+          items: [
+            // add sub-docs here later
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/setup',
+            // 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/configuration',
           ],
         },
       ],
