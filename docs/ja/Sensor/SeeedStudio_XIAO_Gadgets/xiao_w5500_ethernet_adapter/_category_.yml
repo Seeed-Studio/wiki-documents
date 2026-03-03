@@ -1,8 +1,0 @@
-position: 1 # float position is supported
-label: 'XIAO W5500 イーサネットアダプター'
-collapsible: true # make the category collapsible
-collapsed: true # keep the category open by default
-className: xiao_w5500_ethernet_adapter
-link:
-  type: "doc"
-  id: 'ja/Sensor/SeeedStudio_XIAO_Gadgets/xiao_w5500_ethernet_adapter/ja_start_with_xiao_w5500_ethernet_adapter'
