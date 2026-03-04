@@ -19,6 +19,29 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Steppers from '@site/src/components/utils/Stepper';
 
+<div class="table-center">
+<table align="center">
+    <tr>
+        <th>XIAO ePaper Display Board EE03</th>
+        <th>10.3" Monochrome ePaper Display</th>
+    </tr>
+    <tr>
+    <td><div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg"/></div>
+    <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-ESP32-S3-EE03-p-6638.html" target="_blank">
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+    </div></td>
+    <td><div align="center"><img width ={300} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-100071485-10.3-monochrome-epaper-display.jpg"/></div>
+    <div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/10-3inch-Monochrome-eInk-ePaper-Display-with-1404x1872-Pixels-p-6568.html?qid=BB9L37_r6uwit7x_1772441061474" target="_blank">
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+    </div></td>
+    </tr>
+ </table>
+</div>
+
 ## Introduction
 
 Powered by **XIAO ESP32-S3 Plus**, the ePaper driver board EE03 supports **10.3 Monochrome ePaper Display**. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital photo frames and information boards.
@@ -67,10 +90,7 @@ Powered by **XIAO ESP32-S3 Plus**, the ePaper driver board EE03 supports **10.3 
 ## Getting Started with SenseCraft HMI
 
 This section will guide you through connecting your EE03 to the SenseCraft HMI platform, allowing you to easily update the screen content wirelessly.
-:::tip
-Please note that you need to burn the **SenseCraft HMI EE03 firmware** before you can use the SenseCraft HMI platform.
-:::
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/EE03_HMI_0.jpg" style={{width:800,height:'auto'}}/></div>
+
 ### Equipment Installation
 
 **Step 1. Connect the Screen and Board**
