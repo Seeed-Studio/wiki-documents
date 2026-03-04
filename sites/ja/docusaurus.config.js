@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const path = require('path');
 
 // 从 frontmatter 中提取 aliases
 function getFrontmatterAliases() {
@@ -341,6 +342,21 @@ module.exports = (async () => {
       //     ],
       //   },
       // ],
+
+      function webpackAliasPlugin() {
+        return {
+          name: 'webpack-alias-assets',
+          configureWebpack() {
+            return {
+              resolve: {
+                alias: {
+                  '@assets': path.resolve(__dirname, '../../assets'),
+                },
+              },
+            };
+          },
+        };
+      },
       
       // 添加 frontmatter aliases 重定向插件
       [

@@ -3,18 +3,21 @@ const path = require('path');
 const matter = require('gray-matter');
 
 const rootDir = path.join(__dirname, '..');
-const docsDirectory = path.join(rootDir, 'docs');
+const docsDirectory = path.join(rootDir, 'sites', 'en', 'docs');
 const wikiFilePath = path.join(rootDir, '/src/utils/wiki.js');
 
 const docList = [];
+
+const SITE_DOCS_ROOT = {
+  cn: path.join(rootDir, 'sites', 'zh-CN', 'docs'),
+  ja: path.join(rootDir, 'sites', 'ja', 'docs'),
+  es: path.join(rootDir, 'sites', 'es', 'docs'),
+};
+
 const excludedPaths = [
   path.join(docsDirectory, 'Seeed_Elderly', 'weekly_wiki'), // weekly wiki 的历史目录
-  path.join(docsDirectory, 'zh-CN'), // 排除中文文档的目录
-  path.join(docsDirectory, 'ja'), // 排除日文文档的目录
-  path.join(docsDirectory, 'es'), // 排除西班牙语文档的目录
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'ReachyMini'), // 排除 ReachyMini 目录
-
 
   // 排除指定文档
   path.join(docsDirectory, 'Network', 'Meshtastic_Network', 'T1000-E', 'sensecap_t1000_e.md'), //10.29
@@ -88,7 +91,7 @@ const excludedPaths = [
   path.join(docsDirectory, 'Edge', 'Raspberry_Pi_Devices', 'Edge_AI_Computer', 'reComputer_Industrial_R22xx', 'reComputer_Industrial_R22xx_flash_os.md'), //2.9
 ];
 
-// 语言目录/文件名前缀映射（语言都在 docs/<langDir> 下）
+// 语言目录/文件名前缀映射（语言 docs 在 sites/<lang>/docs 下）
 const LANG_DIR = { cn: 'zh-CN', ja: 'ja', es: 'es' };
 const LANG_PREFIX = { cn: 'cn_', ja: 'ja_', es: 'es_' };
 
@@ -155,11 +158,15 @@ function getLocalizedTitle(item, lang /* 'cn'|'ja'|'es' */) {
   const langDir = LANG_DIR[lang];
   const prefix = LANG_PREFIX[lang];
 
+  // 语言 docs 根目录
+  const localizedDocsRoot = SITE_DOCS_ROOT[lang];
+  if (!localizedDocsRoot) return null;
+
   // relPath: 例如 Edge/NVIDIA_Jetson/foo/bar
   const relPath = item.relPath;
 
-  const abs1md  = path.join(docsDirectory, langDir, relPath + '.md');
-  const abs1mdx = path.join(docsDirectory, langDir, relPath + '.mdx');
+  const abs1md  = path.join(localizedDocsRoot, relPath + '.md');
+  const abs1mdx = path.join(localizedDocsRoot, relPath + '.mdx');
 
   // 1) 完全相同相对路径
   let t = tryReadTitle(abs1md) || tryReadTitle(abs1mdx);
@@ -168,8 +175,8 @@ function getLocalizedTitle(item, lang /* 'cn'|'ja'|'es' */) {
   // 2) 同一相对目录 + 语言前缀文件名（cn_/ja_/es_）
   const dir = path.dirname(relPath);
   const base = path.basename(relPath);
-  const abs2md  = path.join(docsDirectory, langDir, dir, `${prefix}${base}.md`);
-  const abs2mdx = path.join(docsDirectory, langDir, dir, `${prefix}${base}.mdx`);
+  const abs2md  = path.join(localizedDocsRoot, dir, `${prefix}${base}.md`);
+  const abs2mdx = path.join(localizedDocsRoot, dir, `${prefix}${base}.mdx`);
   t = tryReadTitle(abs2md) || tryReadTitle(abs2mdx);
   if (t) return t;
 
@@ -179,28 +186,28 @@ function getLocalizedTitle(item, lang /* 'cn'|'ja'|'es' */) {
     try { return decodeURIComponent(s); } catch { return s; }
   }).join('/');
 
-  const abs3md  = path.join(docsDirectory, langDir, decoded + '.md');
-  const abs3mdx = path.join(docsDirectory, langDir, decoded + '.mdx');
+  const abs3md  = path.join(localizedDocsRoot, decoded + '.md');
+  const abs3mdx = path.join(localizedDocsRoot, decoded + '.mdx');
   t = tryReadTitle(abs3md) || tryReadTitle(abs3mdx);
   if (t) return t;
 
   const dirD = path.dirname(decoded);
   const baseD = path.basename(decoded);
-  const abs4md  = path.join(docsDirectory, langDir, dirD, `${prefix}${baseD}.md`);
-  const abs4mdx = path.join(docsDirectory, langDir, dirD, `${prefix}${baseD}.mdx`);
+  const abs4md  = path.join(localizedDocsRoot, dirD, `${prefix}${baseD}.md`);
+  const abs4mdx = path.join(localizedDocsRoot, dirD, `${prefix}${baseD}.mdx`);
   t = tryReadTitle(abs4md) || tryReadTitle(abs4mdx);
   if (t) return t;
 
   // 4) 兜底：只用最后一段文件名在语言根下试一次
   const last = decoded.split('/').pop();
   if (last) {
-    const abs5md  = path.join(docsDirectory, langDir, last + '.md');
-    const abs5mdx = path.join(docsDirectory, langDir, last + '.mdx');
+    const abs5md  = path.join(localizedDocsRoot, last + '.md');
+    const abs5mdx = path.join(localizedDocsRoot, last + '.mdx');
     t = tryReadTitle(abs5md) || tryReadTitle(abs5mdx);
     if (t) return t;
 
-    const abs6md  = path.join(docsDirectory, langDir, `${prefix}${last}.md`);
-    const abs6mdx = path.join(docsDirectory, langDir, `${prefix}${last}.mdx`);
+    const abs6md  = path.join(localizedDocsRoot, `${prefix}${last}.md`);
+    const abs6mdx = path.join(localizedDocsRoot, `${prefix}${last}.mdx`);
     t = tryReadTitle(abs6md) || tryReadTitle(abs6mdx);
     if (t) return t;
   }
@@ -235,4 +242,4 @@ for (let i = 0; i < latestDocsWithI18n.length; i += 2) {
 const wikiContent = `const docList = ${JSON.stringify(docList2D, null, 2)};\n\nexport default docList;`;
 fs.writeFileSync(wikiFilePath, wikiContent);
 
-console.log('wiki.js 生成成功：已从 docs/zh-CN、docs/ja、docs/es 补全 title_cn/title_ja/title_es。');
+console.log('wiki.js 生成成功：已从 sites/zh-CN/docs、sites/ja/docs、sites/es/docs 补全 title_cn/title_ja/title_es。');
