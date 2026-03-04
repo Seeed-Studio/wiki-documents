@@ -5,7 +5,7 @@ title: 通过 GPIO 输出模型结果
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/xiaoesp32s3sense.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-output-gpio-xiao
 aliases:
-  - /cn/sensecraft_ai_output_gpio_xiao
+  - /sensecraft_ai_output_gpio_xiao
 last_update:
   date: 12/04/2024
   author: Citric

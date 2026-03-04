@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /sensecraft-data-platform/api/appendix/list_of_error_code
 aliases:
-  - /ja/Cloud_Chain/SenseCAP_API/Appendix/List_of_Error_Code
+  - /Cloud_Chain/SenseCAP_API/Appendix/List_of_Error_Code
 last_update:
   date: 02/14/2023
   author: Matthew

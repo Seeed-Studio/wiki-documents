@@ -5,7 +5,7 @@ title: Usar la librería SSCMACore para obtener información del modelo
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/76.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library
 aliases:
-  - /es/sensecraft_ai_sscmacore_library
+  - /sensecraft_ai_sscmacore_library
 last_update:
   date: 12/12/2024
   author: Citric

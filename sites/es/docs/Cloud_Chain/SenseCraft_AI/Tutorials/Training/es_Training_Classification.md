@@ -5,7 +5,7 @@ title: Entrenamiento - Clasificación
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/34.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-training-classification
 aliases:
-  - /es/sensecraft_ai_training_classification
+  - /sensecraft_ai_training_classification
 last_update:
   date: 12/03/2024
   author: Citric
