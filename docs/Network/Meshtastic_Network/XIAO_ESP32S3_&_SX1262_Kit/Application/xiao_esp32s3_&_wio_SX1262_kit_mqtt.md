@@ -1,28 +1,14 @@
 ---
-description: Meshtastic MQTT Gateway Setting Tutorial based on XIAO ESP32S3 & Wio-SX1262 Kit
+description: Meshtastic MQTT Gateway Setting Tutorial based on XIAO ESP32S3 & Wio-SX1262 Kit. Enables global messaging, provides a backup when mesh signals are weak, and ensures faster message delivery via the internet. 
 title: Setting up MQTT Gateway
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_SX1262_kit_mqtt
 sku: 102010611,113110064
 sidebar_position: 1
 last_update:
-  date: 3/2/2026
+  date: 3/4/2026
   author: Michelle Huang
 ---
-
----
-description: Get Started with SenseCAP Card Tracker T1000-E for Meshcore
-title: Get Started with Meshhcore
-keywords:
-- Tracker
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /sensecap_t1000_e_meshcore
-sku: 114993369
-sidebar_position: 3
-last_update:
-  date: 2/28/2026
-  author: Michelle Huang
----  
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -35,7 +21,7 @@ Integrating MQTT with Meshtastic extends off-grid communication by bridging dist
 
 ## Hardware Preparation
 
-Setting up a Meshtastic Gateway requires a device that can both run LoRa and Wifi. Additionally, if you want to share your location via mqtt, you can add a GPS module.
+Setting up a Meshtastic Gateway requires a device that can both run LoRa and Wifi. Additionally, if you want to share your gateway's location via mqtt, you can add a GPS module.
 
 <table align="center">
 <tbody><tr>
@@ -62,8 +48,6 @@ Setting up a Meshtastic Gateway requires a device that can both run LoRa and Wif
 
 ## Hardware Installation
 
-Before using Meshtastic, the device needs to be connected first. There are two connection methods. The first one is to use an expansion board, and the corresponding information will be displayed on the display. Then, the configuration can be carried out on the corresponding platform according to the reflected information. The second one is to connect the XIAO and the Wio-SX1262 module, and use a serial port tool to obtain the node ID and password.
-
 ### Connected to battery
 
 The XIAO ESP32S3 has a built-in power management chip that allows the XIAO ESP32S3 to be powered independently by using a battery or to charge the battery through the XIAO ESP32S3's USB port.
@@ -71,7 +55,7 @@ The XIAO ESP32S3 has a built-in power management chip that allows the XIAO ESP32
 If you want to connect the battery for XIAO, we recommend you to purchase qualified rechargeable `3.7V lithium` battery with `protection circuit`. When soldering the battery, please be careful to distinguish between the positive and negative terminals. The negative terminal of the power supply should be the side closest to the USB port, and the positive terminal of the power supply is the side away from the USB port.
 
 <div class="table-center">
-<iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/Xiao%20Esp32S3%20Battery%20Connection.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="730" height="420" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/video.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 ### Connected to SX-1262
@@ -98,8 +82,6 @@ The compatible SX-1262 can only be bought within the kit.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/flashfirmware1.gif" style={{width:700, height:'auto'}}/></div>
 
 ### Step2 Check your Device ID
-
-
 
 The device ID is normally the last four digits of the MAC address. You can open the serial port monitor to check.
     
@@ -154,11 +136,17 @@ open the Meshtastic Android app and connect to your device via Bluetooth. The de
     
 After this configuration, your device will not be able to connect to your APP via Bluetooth. But it can connect to your APP via network.
     
-- Fill in the SSID and the password. The wifi you expect to use should be 2.4G.
+- Fill in the SSID (Wifi Name) and the Wifi password. The wifi you expect to use should be 2.4G.
 - Click Send
 - The device reboots automatically. 
     
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTNetwork.jpg" style={{width:350, height:'auto'}}/></div> 
+
+**5. APP Connection**
+
+Now your device can not be connected via Bluetooth. But you can connect via Network.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Network%20Connection.png" style={{width:350, height:'auto'}}/></div> 
 
 </TabItem>
 
@@ -196,11 +184,17 @@ After this configuration, your device will not be able to connect to your APP vi
     
 After this configuration, your device will not be able to connect to your APP via Bluetooth. But it can connect to your APP via network.
     
-- Fill in the SSID and the password. The wifi you expect to use should be 2.4G.
+- Fill in the SSID (Wifi Name) and the Wifi password. The wifi you expect to use should be 2.4G.
 - Click Send
 - The device reboots automatically. 
     
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMTTNestwork.png" style={{width:350, height:'auto'}}/></div> 
+
+**5. APP Connection**
+
+Now your device can not be connected via Bluetooth. But you can connect via Network.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/IOSMQTTConnect.png" style={{width:350, height:'auto'}}/></div> 
 
 </TabItem>
 </Tabs>
@@ -209,7 +203,7 @@ After this configuration, your device will not be able to connect to your APP vi
 
 Now you can communicate with other people from internet. 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/Message Testing.png" style={{width:600, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/MQTTTest.png" style={{width:600, height:'auto'}}/></div> 
 
 If you have another Meshtastic device that is in the same frenquency band with the ESP32S3 MQTT Gateway, it can transmit message via the ESP32S3 with other people in internet too.
 

@@ -1,5 +1,5 @@
 ---
-description: Get Started with SenseCAP Card Tracker T1000-E for Meshcore
+description: Get Started with SenseCAP Card Tracker T1000-E for Meshcore. Guiding for device installation, firmware flashing and device connection.
 title: Get Started with Meshhcore
 keywords:
 - Tracker
@@ -8,7 +8,7 @@ slug: /sensecap_t1000_e_meshcore
 sku: 114993369
 sidebar_position: 3
 last_update:
-  date: 3/2/2026
+  date: 3/4/2026
   author: Michelle Huang
 ---  
 
@@ -226,7 +226,7 @@ import TabItem from '@theme/TabItem';
 
 - Change the charging cable
  
- - If still no luck, press and hold the device button, then connect the charging cable, see whether or not the a disk pop out in your PC. If so, re-install the bootloader. The tutorial can be found below.
+ - If still no luck, press and hold the device button, then connect the charging cable, see whether or not the a disk pop out in your PC. If so, [click here](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/#flash-the-bootloader) to re-install the bootloader.
 
 ### Device stuck in boot loop
 
@@ -359,7 +359,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
 
-When you have completed the above steps, then you can go to flash the application firmware.
+When you have completed the above steps, then [click here](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/#firmware-flashing) to flash the application firmware.
 
 **2) Device can not enter DFU mode, but the serial port can be detected**.
 
@@ -368,7 +368,7 @@ When you have completed the above steps, then you can go to flash the applicatio
 - Set the baud rate to `1200`.
 
 - Connect the device.
-   The light will flash briefly when you connect it. Keep trying this until the light stays on, means the device can back to DFU mode, then flash bootloader-> Erase flash -> flash the firmware
+   The light will flash briefly when you connect it. Keep trying this until the light stays on, means the device can back to DFU mode, then flash [bootloader](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/#flash-the-bootloader)-> [Erase flash](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/#flash-erase) -> [flash the firmware](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/#flash-firmware)
 
 **3) Device can not enter DFU mode and no serial port display**
 
@@ -403,12 +403,12 @@ When you have completed the above steps, then you can go to flash the applicatio
 
  #### Troubleshoot
 
-Perform a flash-erase. 
+Perform a [flash-erase](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/#flash-erase). 
 
  ### Factory Reset
 If you want to restore to the default settings, you can do the factory reset. There are two methods for you to do the factory reset.
 
-- Flash erase the device. And then re-flash the latest firmware.
+- [Flash erase](https://wiki.seeedstudio.com/sensecap_t1000_e_meshcore/#flash-erase) the device. And then re-flash the latest firmware.
 
 - Click the `Factory Reset` Button on the App. The device will reboot with the factory configuration automatically. 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshcore/T1000-E/Reset.png" alt="pir" width={400} height="auto" /></p>
