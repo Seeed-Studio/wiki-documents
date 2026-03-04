@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/sensecraft-hotspot-app/app-settings
 aliases:
-  - /es/Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings
+  - /Cloud_Chain/SenseCAP_Hotspot_APP/APP_settings
 last_update:
   date: 06/06/2025
   author: Matthew

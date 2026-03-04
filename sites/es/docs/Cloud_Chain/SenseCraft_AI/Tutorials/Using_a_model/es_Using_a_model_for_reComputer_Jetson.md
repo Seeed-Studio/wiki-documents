@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /sensecraft-ai/tutorials/sensecraft-deploy-model-to-jetson
 aliases:
-  - /es/sensecraft_deploy_model_to_jetson
+  - /sensecraft_deploy_model_to_jetson
 last_update:
   date: 08/22/2024
   author: Frank

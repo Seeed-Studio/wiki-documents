@@ -5,7 +5,7 @@ title: 概述
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.webp
 slug: /sensecraft-ai/overview
 aliases:
-  - /cn/sensecraft_ai_overview
+  - /sensecraft_ai_overview
 sidebar_position: 1
 # sidebar_class_name: hidden # 有文件但是不显示在左侧目录
 last_update:

@@ -5,7 +5,7 @@ title: 事件管理
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-app/tutorials/event-management
 aliases:
-  - /cn/sensecap_mate_app_event
+  - /sensecap_mate_app_event
 last_update:
   date: 03/20/2023
   author: Matthew

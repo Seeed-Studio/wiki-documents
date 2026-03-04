@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft-ai/application/application-for-homeassistant
 aliases:
-  - /es/connect_vision_ai_v2_to_ha
+  - /connect_vision_ai_v2_to_ha
 sidebar_position: 1
 last_update:
   date: 01/10/2024
