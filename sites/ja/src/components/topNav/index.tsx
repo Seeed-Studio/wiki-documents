@@ -13,7 +13,7 @@ import { detectLocaleFromPath, localizeHref, localizedLink, type Locale } from '
  */
 
 const getIndexImage = (src) => {
-  return src && require(`../../../assets/index/${src}`).default;
+  return src && require(`@assets/index/${src}`).default;
 };
 
 // 根据是否为 http(s) 选择 localizeHref / localizedLink
