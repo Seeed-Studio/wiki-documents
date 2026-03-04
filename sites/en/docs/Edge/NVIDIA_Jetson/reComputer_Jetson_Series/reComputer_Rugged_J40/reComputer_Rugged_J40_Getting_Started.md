@@ -7,7 +7,7 @@ keywords:
   - Jetson
   - Getting Started
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reComputer_Rugged_J40_Getting_Started
+slug: /ai_robotics_reComputer_Rugged_J40_Getting_Started
 sku: 100046979,100002634
 last_update:
   date: 03/04/2026
