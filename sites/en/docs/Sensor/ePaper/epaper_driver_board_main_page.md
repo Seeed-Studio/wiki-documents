@@ -13,53 +13,9 @@ last_update:
 
 ## Introduction
 
-ePaper Driver Board series is engineered for low-power ePaper applications, universally supporting 24-pin and 50-pin displays while featuring shared core functionalities: JST 2.0 mm battery connector with power switch, integrated charging IC, one reset button, and three user-configurable buttons; available with diverse microcontroller options (e.g., XIAO ESP32-S3 Plus, XIAO nRF52840 Plus) – some models add extra capabilities like NFC – making them ideal for digital signage, electronic labels, portable information boards, and other low-power display projects.
+The ePaper Driver Board series is engineered for versatile, low-power ePaper applications. These boards support a wide range of ePaper displays—from universal 24-pin and 50-pin screens to specialized large-format displays like 10.3” (High Speed refresh) and 13.3” (Spectra™ 6). Each board shares core functionalities, including a JST 2.0mm battery connector with a power switch, an integrated charging IC, a reset button, and three user-configurable buttons. Powered by diverse microcontrollers (e.g., XIAO ESP32-S3 Plus, XIAO nRF52840 Plus), some models also feature NFC capabilities, making them ideal for digital signage, electronic shelf labels, portable dashboards, and other energy-efficient display projects.
 
-## EE04 Driver Board
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/epaper_ee04/" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"3"}>EE04 Driver Board Wiki</font></span></strong>
-  </a>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
-  </a>
-</div><br />
-
-Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
-
-### Featrue
-
-- **Powered by XIAO ESP32-S3 Plus:** Works immediately when connected to a compatible ePaper display.
-- **Versatile Display Support:** Compatible with a wide range of ePaper screens, supporting both 24-Pin and 50-Pin interfaces with easy switching via jumper caps.
-- **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
-- **User-Friendly Buttons:** Includes 1 reset button and 3 user-programmable buttons, offering flexibility for project acceleration and customizable functions.
-
-## EN04 Driver Board
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/epaper_EN04/" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"3"}>EN04 Driver Board Wiki</font></span></strong>
-  </a>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
-  </a>
-</div><br />
-
-Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, NFC function and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
-
-### Featrue
-
-- **Powered by XIAO nRF52840 Plus:** Works immediately when connected to a compatible ePaper display.
-- **Versatile Display Support:** Compatible with a wide range of ePaper screens, supporting both 24-Pin and 50-Pin interfaces with easy switching via jumper caps.
-- **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
-- **User-Friendly Buttons:** Includes 1 reset button and 3 user-programmable buttons, offering flexibility for project acceleration and customizable functions.
-
-## EE02 Driver Board
+## XIAO ePaper Display Board EE02
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
 
@@ -74,7 +30,7 @@ Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin
 
 The **EE02** is a high-performance E-ink screen driver board specifically designed for **13.3-inch** electronic paper displays. Powered by the ESP32-S3 chip, it supports Wi-Fi and Bluetooth connectivity, making it an ideal solution for wireless display applications.
 
-### Featrue
+### Feature
 
 - **Powerful Controller**: Built around the ESP32-S3, offering robust processing power and wireless capabilities.
 - **Dedicated for Large Screens**: Specifically optimized to drive 13.3-inch E-ink displays with high stability and clarity.
@@ -82,6 +38,73 @@ The **EE02** is a high-performance E-ink screen driver board specifically design
 - **Low Power Consumption**: Designed for energy efficiency, suitable for battery-powered applications.
 - **Easy Integration**: Compatible with SenseCraft HMI for drag-and-drop interface design and remote management.
 - **Versatile Interfaces**: Includes Type-C for power/programming and standard connectors for E-ink screens.
+
+## XIAO ePaper Display Board EE03
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg" style={{width:700, height:'auto'}}/></div><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_ee03/" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"3"}>EE03 Driver Board Wiki</font></span></strong>
+  </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=EE03" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
+  </a>
+</div><br />
+
+Powered by **XIAO ESP32-S3 Plus**, the ePaper driver board EE03 supports **10.3 Monochrome ePaper Display**. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital photo frames and information boards.
+
+### Feature
+
+- **Built in XIAO ESP32-S3 Plus:** Works immediately when connected to a compatible ePaper display.
+- **Dedicated 10.3" Monochrome ePaper Display Support:** Specifically designed for 10.3" high-speed refresh epaper display, ensuring quick setup and stable operation.
+- **High-Speed Refresh Enabled:** Integrated T-CON timing control ensures precise high-speed driving, while the onboard SHT40 provides real-time temperature sensing for waveform compensation.
+- **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
+- **User-Friendly Buttons:** Features 1 reset button and 3 user-programmable buttons, providing flexibility for project acceleration and customizable functions.
+
+## XIAO ePaper Display Board EE04
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/epaper_ee04/" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"3"}>EE04 Driver Board Wiki</font></span></strong>
+  </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
+  </a>
+</div><br />
+
+Powered by **XIAO ESP32-S3** Plus, the display board EE04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
+
+### Feature
+
+- **Powered by XIAO ESP32-S3 Plus:** Works immediately when connected to a compatible ePaper display.
+- **Versatile Display Support:** Compatible with a wide range of ePaper screens, supporting both 24-Pin and 50-Pin interfaces with easy switching via jumper caps.
+- **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
+- **User-Friendly Buttons:** Includes 1 reset button and 3 user-programmable buttons, offering flexibility for project acceleration and customizable functions.
+
+## XIAO ePaper Display Board EN04
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/epaper_EN04/" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"3"}>EN04 Driver Board Wiki</font></span></strong>
+  </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
+  </a>
+</div><br />
+
+Powered by **XIAO nRF52840** Plus, the display board EN04 supports both **24-pin** and **50-pin** ePaper displays. It features a JST 2.0 mm battery connector with power switch, built-in charging IC, NFC function and comes with one reset and three user buttons. Well-suited for low-power ePaper projects such as digital signage, electronic labels, and portable information boards.
+
+### Feature
+
+- **Powered by XIAO nRF52840 Plus:** Works immediately when connected to a compatible ePaper display.
+- **Versatile Display Support:** Compatible with a wide range of ePaper screens, supporting both 24-Pin and 50-Pin interfaces with easy switching via jumper caps.
+- **BAT Connector with Switch:** Provides simple battery connection and integrates a switch, enabling efficient power management and energy savings.
+- **User-Friendly Buttons:** Includes 1 reset button and 3 user-programmable buttons, offering flexibility for project acceleration and customizable functions.
 
 ## Applications
 
@@ -98,19 +121,3 @@ The reTerminal E Series ePaper Display supports multiple development platforms a
 - [EE04 Driver Board works with TRMNL](https://wiki.seeedstudio.com/ogdiy_kit_works_with_trmnl/)
 
   Utilize the dedicated TRMNL framework for simplified development and rapid deployment.
-
-
-
-## Tech Support & Product Discussion
-
-Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
-
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>
