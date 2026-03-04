@@ -5,7 +5,7 @@ title: SenseCAP Watcherでモデルを使用する
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/32.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-watcher
 aliases:
-  - /ja/sensecraft_ai_pretrained_models_for_watcher
+  - /sensecraft_ai_pretrained_models_for_watcher
 last_update:
   date: 12/03/2024
   author: Citric

@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /sensecraft-data-platform/tutorials/dashboard
 aliases:
-  - /ja/Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Dashboard
+  - /Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Dashboard
 last_update:
   date: 02/14/2023
   author: Matthew

@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /sensecraft-data-platform/api/appendix/list_of_measurement_ids
 aliases:
-  - /es/Cloud_Chain/SenseCAP_API/Appendix/List_of_Measurement_IDs
+  - /Cloud_Chain/SenseCAP_API/Appendix/List_of_Measurement_IDs
 last_update:
   date: 02/14/2023
   author: Matthew

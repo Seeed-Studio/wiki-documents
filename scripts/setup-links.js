@@ -21,8 +21,8 @@ function isWindows() {
 }
 
 function run(cmd) {
-  console.log(`> ${cmd}`);
-  execSync(cmd, { stdio: 'inherit' });
+  // console.log(`> ${cmd}`);
+  execSync(cmd, { stdio: 'ignore' });
 }
 
 function main() {
@@ -52,7 +52,7 @@ function main() {
     }
   }
 
-  console.log('✅ Links created/updated.');
+  // console.log('✅ Links created/updated.');
 }
 
 main();

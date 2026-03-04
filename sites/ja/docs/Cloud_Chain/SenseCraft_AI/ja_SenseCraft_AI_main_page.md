@@ -5,7 +5,7 @@ image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png
 sidebar_class_name: hidden
 slug: /sensecraft-ai/sensecraft-ai-main
 aliases:
-  - /ja/sensecraft_ai_main
+  - /sensecraft_ai_main
 sidebar_position: 1
 last_update:
   date: 11/27/2024

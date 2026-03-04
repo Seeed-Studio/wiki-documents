@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/sensecraft-hotspot-app/hotspot-onboarding
 aliases:
-  - /es/Cloud_Chain/cloud/sensecraft-data/sensecraft-hotspot/sensecraft-hotspot-app/hotspot_management/hotspot_onboarding
+  - /Cloud_Chain/cloud/sensecraft-data/sensecraft-hotspot/sensecraft-hotspot-app/hotspot_management/hotspot_onboarding
 last_update:
   date: 02/14/2023
   author: Matthew

@@ -5,7 +5,7 @@ title: 通过 MQTT 输出模型结果
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/headimage.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao
 aliases:
-  - /cn/sensecraft_ai_output_mqtt_xiao
+  - /sensecraft_ai_output_mqtt_xiao
 last_update:
   date: 12/04/2024
   author: Citric

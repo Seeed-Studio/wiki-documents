@@ -5,7 +5,7 @@ title: 为 Grove Vision AI V2 使用模型
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/23.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-grove-vision-ai-v2
 aliases:
-  - /cn/sensecraft_ai_pretrained_models_for_grove_visionai_v2
+  - /sensecraft_ai_pretrained_models_for_grove_visionai_v2
 last_update:
   date: 12/02/2024
   author: Citric

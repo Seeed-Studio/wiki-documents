@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/sensecraft-hotspot-app/remote-reboot
 aliases:
-  - /cn/Cloud_Chain/cloud/sensecraft-data/sensecraft-hotspot/sensecraft-hotspot-app/hotspot_management/remote-reboot
+  - /Cloud_Chain/cloud/sensecraft-data/sensecraft-hotspot/sensecraft-hotspot-app/hotspot_management/remote-reboot
 last_update:
   date: 02/14/2023
   author: Matthew

@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /sensecraft-data-platform/tutorials/device-management
 aliases:
-  - /cn/Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management
+  - /Cloud_Chain/SenseCAP_Portal/Detail_Introduction/Device_Management
 last_update:
   date: 02/14/2023
   author: Matthew

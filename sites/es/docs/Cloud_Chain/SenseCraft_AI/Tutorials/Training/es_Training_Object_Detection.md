@@ -5,7 +5,7 @@ title: Entrenamiento - Detección de Objetos
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/1.9.webp
 slug: /sensecraft-ai/tutorials/sensecraft-ai-training-object-detection
 aliases:
-  - /es/sensecraft_ai_training_object_detection
+  - /sensecraft_ai_training_object_detection
 last_update:
   date: 11/27/2024
   author: qiuyu wei
