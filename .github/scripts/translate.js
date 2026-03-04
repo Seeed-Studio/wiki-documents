@@ -34,6 +34,10 @@ const LANGUAGE_CONFIG = {
   }
 };
 
+// ✅ 新结构路径常量（仅用于路径拼接/计算）
+const SOURCE_DOCS_ROOT = path.join('sites', 'en', 'docs');
+const TARGET_SITE_ROOT = 'sites';
+
 // 术语保护列表
 const PRESERVE_TERMS = {
     'reCamera': 'reCamera',
@@ -72,10 +76,10 @@ let GLOSSARY = { "zh-CN": {}, "ja": {}, "es": {} };
 
 // 文档保护列表
 const PROTECTED_PATHS = [
-  'docs/Getting_Started.md',
-  'docs/weekly_wiki.md',
-  'docs/LICENSE.md',
-  'docs/Seeed_Elderly/weekly_wiki/',
+  'sites/en/docs/Getting_Started.md',
+  'sites/en/docs/weekly_wiki.md',
+  'sites/en/docs/LICENSE.md',
+  'sites/en/docs/Seeed_Elderly/weekly_wiki/',
 ];
 
 // 翻译状态跟踪
@@ -385,8 +389,8 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
 ${glossaryPairs}
 
 3. **Front Matter处理**：
-   - 只翻译title和description字段的值
-   - slug字段添加前缀：${pathPrefix}
+   - 只翻译 title 和 description 字段的值
+   - **不要修改 slug 字段的值，也不要为 slug 添加任何语言前缀**
 
 4. **缩进保持**：
    - 如果原文有缩进，译文必须保持相同的缩进
@@ -836,7 +840,7 @@ function generateCategoryPrompt(targetLang, pathPrefix) {
 4. **link字段处理**：
    - slug：
      - 只修改 slug 的值
-     - 在原始值前面加 "${cleanPathPrefix}/" 作为 URL 前缀
+     - **不要添加任何语言前缀，保持 slug 原始值不变**
    - id：
      - 不翻译 id 里面的英文路径，只改“前缀”和“最后一段文件名”
      - 假设英文原始 id 的格式是： "A/B/C/F"
@@ -1067,12 +1071,13 @@ function isProtectedPath(filePath) {
 // 生成目标文件路径
 function generateTargetPath(originalPath, targetLang) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
-  const relativePath = path.relative('docs', originalPath);
+
+  const relativePath = path.relative(SOURCE_DOCS_ROOT, originalPath);
   
   const parsedPath = path.parse(relativePath);
   
   if (parsedPath.base === '_category_.yml') {
-    const targetPath = path.join('docs', langConfig.folder, relativePath);
+    const targetPath = path.join(TARGET_SITE_ROOT, langConfig.folder, 'docs', relativePath);
     return targetPath;
   }
   
@@ -1083,7 +1088,7 @@ function generateTargetPath(originalPath, targetLang) {
   const newFileName = langPrefix + parsedPath.name + parsedPath.ext;
   const newRelativePath = path.join(parsedPath.dir, newFileName);
   
-  const targetPath = path.join('docs', langConfig.folder, newRelativePath);
+  const targetPath = path.join(TARGET_SITE_ROOT, langConfig.folder, 'docs', newRelativePath);
   
   return targetPath;
 }
@@ -1313,7 +1318,7 @@ async function detectFileOperations(baseSha) {
     console.log(`🔍 检测文件操作 (基于 ${baseSha})...`);
     
     const statusOutput = execSync(
-      `git diff --name-status -M90 ${baseSha}..HEAD -- docs/`,
+      `git diff --name-status -M90 ${baseSha}..HEAD -- ${SOURCE_DOCS_ROOT}/`,
       { encoding: 'utf8' }
     );
     
@@ -1332,8 +1337,11 @@ async function detectFileOperations(baseSha) {
       const status = parts[0];
       const file = parts[1];
       
-      if ((!file.match(/\.(md|mdx)$/) && !file.endsWith('_category_.yml')) || 
-          file.match(/\/(zh-CN|ja|es)\//)) {
+      const normalized = file.replace(/\\/g, '/');
+      if (
+        !normalized.startsWith('sites/en/docs/') ||
+        (!normalized.match(/\.(md|mdx)$/) && !normalized.endsWith('_category_.yml'))
+      ) {
         continue;
       }
       

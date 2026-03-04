@@ -1,0 +1,10 @@
+position: 6 # float position is supported 
+label: 'Semtech LR2021 EVK'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: semtech_lr2021_evk
+link:
+  type: generated-index
+  slug: semtech_lr2021_evk_class
+  title: Semtech LR2021 EVK
+  description: Documentación del producto Semtech LR2021 EVK.
