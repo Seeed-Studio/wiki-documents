@@ -392,7 +392,7 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
    **HTML / JSX 标签文本规则：**
    - 标签结构与属性必须完全保持不变
    - 只允许翻译 **标签之间的可见文本内容**
-   - 具体来说，只能修改 **`>` 与下一个 `<` 之间的文本**
+   - 具体来说，只能修改 **\`>\` 与下一个 \`<\` 之间的文本**
    - 即使该行包含 JSX 属性（例如 {'FFFFFF'}、{"3"}、{...} 等），也不能跳过翻译标签中的可见文本
    - 示例：
 
