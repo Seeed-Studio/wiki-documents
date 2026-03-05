@@ -2,12 +2,15 @@
 description: Arduino対応ボード向けMicroPython
 title: Arduino対応ボード向けMicroPython
 keywords:
-- ソフトウェア
+  - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Compiling_MicroPython_for_embedded_devices
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Compiling_MicroPython_for_embedded_devices/
 ---
 
 

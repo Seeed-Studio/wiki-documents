@@ -11,7 +11,10 @@ slug: /Whisper_on_Jetson_for_Real_Time_Speech_to_Text
 last_update:
   date: 03/14/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/
 ---
 
 # Desplegar Whisper en NVIDIA Jetson Orin para Conversión de Voz a Texto en Tiempo Real

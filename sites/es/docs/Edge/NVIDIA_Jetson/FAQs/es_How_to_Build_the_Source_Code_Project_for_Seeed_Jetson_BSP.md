@@ -2,14 +2,17 @@
 description: Cómo Compilar el Proyecto de Código Fuente para el BSP de Jetson de Seeed
 title: Cómo Compilar el Proyecto de Código Fuente para el BSP de Jetson de Seeed
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /how_to_build_the_source_code_project_for_seeed_jetson_bsp
 last_update:
   date: 08/04/2025
   author: Dayu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/how_to_build_the_source_code_project_for_seeed_jetson_bsp/
 ---
 
 **Este wiki demuestra cómo obtener el código fuente del BSP para los productos Jetson de Seeed, organizarlo en un paquete completo de código fuente BSP, y compilarlo/flashearlo en dispositivos Jetson.**

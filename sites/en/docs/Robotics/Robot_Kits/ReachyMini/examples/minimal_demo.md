@@ -3,18 +3,22 @@ description: Minimal example showing how to move Reachy Mini's head and antennas
 title: Minimal Demo
 slug: /reachymini_examples_minimal_demo
 keywords:
-- minimal
-- demo
-- head movement
-- antennas
-- oscillating
-- basic
-- getting started
+  - minimal
+  - demo
+  - head movement
+  - antennas
+  - oscillating
+  - basic
+  - getting started
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_examples_minimal_demo/
 ---
 
 # Minimal demo

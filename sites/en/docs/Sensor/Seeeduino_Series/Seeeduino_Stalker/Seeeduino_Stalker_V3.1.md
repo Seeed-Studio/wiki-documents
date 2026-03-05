@@ -2,13 +2,16 @@
 description: Seeeduino Stalker V3.1
 title: Seeeduino Stalker V3.1
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Stalker_V3.1
 sku: 102010070
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_Stalker_V3.1/
 ---
 
 Maybe you are very familiar with the Seeeduino stalker series, or maybe you are totally new to this feature rich Wireless Sensor Network Node. No matter what situation you are in, if you are going to make an outdoor data-logging application, you will find that Seeeduino Stalker is the best board.

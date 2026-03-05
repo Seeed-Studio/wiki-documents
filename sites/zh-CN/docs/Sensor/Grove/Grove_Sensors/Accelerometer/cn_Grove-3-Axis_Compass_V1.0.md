@@ -2,13 +2,16 @@
 description: Grove - 三轴指南针 V1.0
 title: Grove - 三轴指南针 V1.0
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-3-Axis_Compass_V1.0
 sku: 101020034
 last_update:
   date: 1/5/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-3-Axis_Compass_V1.0/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/img/Grove-3-Axis_Compass_V1.0.jpg) -->

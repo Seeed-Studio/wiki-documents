@@ -8,6 +8,9 @@ slug: /Cochl.Sense-Jetson-Getting-Started
 last_update:
   date: 03/27/2023
   author: Lakshantha
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Cochl.Sense-Jetson-Getting-Started/
 ---
 
 # 在 NVIDIA® Jetson 设备上使用 Cochl.Sense 入门

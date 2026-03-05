@@ -2,13 +2,16 @@
 description: Sensor de Luz y Barra LED
 title: Sensor de Luz y Barra LED
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Light_Sensor_and_LED_Bar
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Light_Sensor_and_LED_Bar/
 ---
 
 <!-- ---

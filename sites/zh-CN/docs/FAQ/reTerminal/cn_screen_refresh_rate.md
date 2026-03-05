@@ -6,6 +6,9 @@ slug: /screen_refresh_rate_low
 last_update:
   date: 7/2/2024
   author: Parker
+createdAt: '2024-07-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/screen_refresh_rate_low/
 ---
 
 <!-- ### Q17: 如何解决屏幕刷新率过低的问题 -->

@@ -2,14 +2,17 @@
 description: Grove - ADC for Load Cell (HX711) 是一个专为称重传感器设计的 24 位 A/D 转换器。
 title: Grove - ADC for Load Cell (HX711) 入门指南
 keywords:
-- Grove
-- weight sensor 
+  - Grove
+  - weight sensor
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_adc_for_load_cell_hx711
 sku: 101020712
 last_update:
   date: 05/28/2024
   author: Carla
+createdAt: '2024-05-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/grove_adc_for_load_cell_hx711/
 ---
 
 # Grove - ADC for Load Cell (HX711)

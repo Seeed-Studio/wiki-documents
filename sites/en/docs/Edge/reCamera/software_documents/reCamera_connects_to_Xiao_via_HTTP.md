@@ -12,7 +12,10 @@ slug: /recamera_connects_to_xiao_via_http
 last_update:
   date: 07/11/2025
   author: Liangyuxin
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-07-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recamera_connects_to_xiao_via_http/
 ---
 
 # reCamera connects to XIAO via HTTP

@@ -2,15 +2,18 @@
 description: Este wiki muestra cómo configurar Isaac Lab en Ubuntu con GPU Nvidia para entrenar políticas de aprendizaje por refuerzo para los brazos robóticos SO-ARM100/101.
 title: Entrenamiento de Política SoArm101 con IsaacLab
 keywords:
-- IsaacLab
-- Aprendizaje por Refuerzo
-- Brazo Robótico
-- SOARM100
+  - IsaacLab
+  - Aprendizaje por Refuerzo
+  - Brazo Robótico
+  - SOARM100
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/lerobot/so_arm_100.webp
 slug: /training_soarm101_policy_with_isaacLab
 last_update:
   date: 9/4/2025
   author: Youjiang
+createdAt: '2025-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/training_soarm101_policy_with_isaacLab/
 ---
 
 ## Introducción

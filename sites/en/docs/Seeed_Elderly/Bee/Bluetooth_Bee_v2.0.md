@@ -2,7 +2,7 @@
 description: Bluetooth Bee v2.0
 title: Bluetooth Bee v2.0
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Bluetooth_Bee_v2.0
 last_update:
@@ -10,6 +10,9 @@ last_update:
   author: shuxu hu
 sku: 113050014
 type: gettingstarted
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Bluetooth_Bee_v2.0/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/113050014%201_02.jpg)

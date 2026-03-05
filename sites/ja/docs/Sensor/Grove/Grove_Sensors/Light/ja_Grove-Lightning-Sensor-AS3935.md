@@ -2,13 +2,16 @@
 description: Grove Lightning Sensor AS3935 の使い方
 title: Grove Lightning Sensor AS3935
 keywords:
-- lightning
+  - lightning
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove-lightning-sensor-as3935
 sku: 101021072
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2023-06-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove-lightning-sensor-as3935/
 ---
 
 

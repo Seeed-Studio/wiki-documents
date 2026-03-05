@@ -2,10 +2,10 @@
 description: Este wiki proporciona el tutorial de ensamblaje y depuración para el Lekiwi y realiza la recolección de datos y entrenamiento dentro del framework Lerobot.
 title: Lekiwi en Lerobot
 keywords:
-- Lerobot
-- Huggingface
-- Car
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Car
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.webp
 slug: /lerobot_lekiwi
 sku: 114090065,E2025090401
@@ -13,7 +13,11 @@ last_update:
   date: 8/8/2025
   author: LiShanghang
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/lerobot_lekiwi/
 ---
 
 # Cómo usar el Lekiwi en Lerobot

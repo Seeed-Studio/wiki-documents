@@ -2,14 +2,17 @@
 description: オーディオシーン認識
 title: オーディオシーン認識
 keywords:
-- Wio_terminal 
-- Embedded_ML 
-- Projects_based_Edge_Impulse
+  - Wio_terminal
+  - Embedded_ML
+  - Projects_based_Edge_Impulse
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML-EI-3
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-TinyML-EI-3/
 ---
 
 

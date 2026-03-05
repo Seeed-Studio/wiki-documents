@@ -2,12 +2,15 @@
 description: 使用 Ubidots 进行开发
 title: Ubidots 使用指南
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_started_with_Ubidots
 last_update:
   date: 2023/1/13
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Getting_started_with_Ubidots/
 ---
 # 使用 Ubidots 进行开发
 

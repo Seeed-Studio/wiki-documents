@@ -2,12 +2,15 @@
 description: ReSpeaker Liteの音量調整
 title: 音量調整
 keywords:
-- ReSpeaker
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_volume
 last_update:
   date: 05/15/2025
   author: Jessie
+createdAt: '2024-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_volume/
 ---
 
 

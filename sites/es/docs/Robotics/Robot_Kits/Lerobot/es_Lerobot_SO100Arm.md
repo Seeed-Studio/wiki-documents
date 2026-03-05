@@ -2,16 +2,19 @@
 description: Este wiki proporciona el tutorial de ensamblaje y depuración para el SO ARM100 y realiza la recopilación de datos y entrenamiento dentro del marco de Lerobot.
 title: Cómo usar el brazo robótico SO10xArm en Lerobot
 keywords:
-- Lerobot
-- Huggingface
-- Arm
-- Robotics
+  - Lerobot
+  - Huggingface
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /lerobot_so100m
 sku: E24122002, 114993609, 114993608, 108090023, 108090003, 101090141, 101090142
 last_update:
   date: 12/24/2024
   author: ZhuYaoHui
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/lerobot_so100m/
 ---
 
 # Introducción al brazo robótico SO-ARM100 y SO-ARM101 con LeRobot

@@ -2,14 +2,17 @@
 description: reComputer R1100は、Raspberry Pi CM4を搭載したAI機能付きIoTゲートウェイ＆コントローラーです。2GB RAM、8GB eMMC、デュアルイーサネット、USB、RS485、RS232、DI/DO、ワイヤレス接続（4G、LoRa®、Wi-Fi/BLE）を特徴とし、産業オートメーション＆エッジコンピューティングに最適です。
 title: reComputer R1100 スタートガイド
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1100
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/recomputer2.jpg
 slug: /recomputer_r1100_intro
 last_update:
   date: 2/25/2024
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_r1100_intro/
 ---
 
 ## 概要

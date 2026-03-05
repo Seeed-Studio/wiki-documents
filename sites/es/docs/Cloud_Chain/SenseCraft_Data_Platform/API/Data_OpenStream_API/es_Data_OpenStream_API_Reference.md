@@ -2,14 +2,17 @@
 description: Inicio_Rápido_API_OpenStream_de_Datos
 title: Referencia de la API OpenStream de Datos
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/api/data-openstream-api/data_openstream_api_reference
 aliases:
   - /Cloud_Chain/SenseCAP_API/Data_OpenStream_API/Data_OpenStream_API_Reference
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_reference/
 ---
 
 <div class="post-content">

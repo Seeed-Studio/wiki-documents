@@ -1,6 +1,6 @@
 ---
 title: 315Mhz RF链接套件
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113990017
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/315Mhz_RF_link_kit/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/3151.jpg)
 

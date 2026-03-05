@@ -8,6 +8,9 @@ sidebar_position: 1
 last_update:
   date: 07/21/2025
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reterminal_e10xx_main_page/
 ---
 
 # Descripción general de la pantalla ePaper de la serie reTerminal E

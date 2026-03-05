@@ -2,14 +2,17 @@
 description: Easy Steps to Assemble the Enclosure for reSpeaker Lite Voice Assistant Kit
 title: Enclosure Installation Guide
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_enclosure
 last_update:
   date: 10/14/2024
   author: Jessie
+createdAt: '2024-07-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/respeaker_enclosure/
 ---
 
 

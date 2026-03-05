@@ -1,6 +1,6 @@
 ---
 title: 2.5W ソーラーパネル 116*160
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウラス
@@ -9,6 +9,9 @@ slug: /2.5W_Solar_Panel_116x160
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/2.5W_Solar_Panel_116x160/
 ---
 
 

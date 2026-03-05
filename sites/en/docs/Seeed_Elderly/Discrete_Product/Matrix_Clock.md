@@ -2,12 +2,15 @@
 description: Matrix Clock
 title: Matrix Clock
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Matrix_Clock
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Matrix_Clock/
 ---
 
 

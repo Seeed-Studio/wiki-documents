@@ -13,6 +13,9 @@ sidebar_position: 4
 last_update:
   date: 4/15/2025
   author: Parker Hu & Dawn Yao
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/gimbal_development_c/
 ---
 
 # 使用 C 语言进行 Gimbal 深度开发

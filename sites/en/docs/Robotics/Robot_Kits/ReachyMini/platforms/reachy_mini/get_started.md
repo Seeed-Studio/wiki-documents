@@ -3,19 +3,23 @@ description: Setup guide for Reachy Mini Wireless including assembly instruction
 title: Reachy Mini Wireless Setup Guide
 slug: /reachymini_platforms_reachy_mini_get_started
 keywords:
-- wireless
-- setup
-- assembly
-- wi-fi
-- first boot
-- configuration
-- ssh
-- update
+  - wireless
+  - setup
+  - assembly
+  - wi-fi
+  - first boot
+  - configuration
+  - ssh
+  - update
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_get_started/
 ---
 
 # Reachy Mini (Wireless) - Setup Guide

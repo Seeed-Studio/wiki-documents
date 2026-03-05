@@ -2,16 +2,19 @@
 description: 本文档提供在 reComputer 上安装 ROS1 的指南。
 title: 安装 ROS1
 keywords:
-- ROS1
-- ROS 安装
-- Jetson Nano
-- 机器人
-- 机器人操作系统
+  - ROS1
+  - ROS 安装
+  - Jetson Nano
+  - 机器人
+  - 机器人操作系统
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /installing_ros1
 last_update:
   date: 05/15/2025
   author: ZhuYaoHui
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/installing_ros1/
 ---
 
 # 如何在 reComputer 上安装 ROS1

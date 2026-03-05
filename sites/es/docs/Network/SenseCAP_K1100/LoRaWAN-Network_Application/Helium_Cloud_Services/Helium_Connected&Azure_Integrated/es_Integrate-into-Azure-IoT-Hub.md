@@ -2,12 +2,15 @@
 description: Integrar en Azure IoT Hub
 title: Integrar en Azure IoT Hub
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Integrate-into-Azure-IoT-Hub
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Integrate-into-Azure-IoT-Hub/
 ---
 # Integrar en Azure IoT Hub
 

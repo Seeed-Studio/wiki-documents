@@ -2,13 +2,16 @@
 description: Grove 扩展板适用于 LinkIt Smart 7688 Duo
 title: Grove 扩展板适用于 LinkIt Smart 7688 Duo
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Breakout_for_LinkIt_Smart_7688_Duo
 sku: 103030032
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Breakout_for_LinkIt_Smart_7688_Duo/
 ---
 
 ---

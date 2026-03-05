@@ -2,13 +2,16 @@
 description: Xadow - 基础传感器
 title: Xadow - 基础传感器
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Basic_Sensors
 sku: 101040006
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Xadow_Basic_Sensors/
 ---
 
 ---

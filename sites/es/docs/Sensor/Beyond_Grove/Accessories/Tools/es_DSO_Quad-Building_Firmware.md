@@ -1,6 +1,6 @@
 ---
 title: DSO Quad:Compilando Firmware
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /DSO_Quad-Building_Firmware
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/DSO_Quad-Building_Firmware/
 ---
 
 ##   Compilando el firmware del DSO Quad desde el código fuente

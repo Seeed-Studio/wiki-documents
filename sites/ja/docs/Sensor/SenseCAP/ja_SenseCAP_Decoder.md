@@ -2,12 +2,15 @@
 description: SenseCAP_Decoder
 title: SenseCAP Decoder
 keywords:
-- SenseCAP_Decoder
+  - SenseCAP_Decoder
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Decoder
 last_update:
   date: 1/26/2026
   author: Janet
+createdAt: '2023-08-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Decoder/
 ---
 
 SenseCAP デコーダーは、SenseCAP LoRaWAN® デバイスから送信される LoRaWAN メッセージをデコードするために使用されます。デコード後、ユーザーのアプリケーションはより親しみやすく読みやすいメッセージを取得できます。

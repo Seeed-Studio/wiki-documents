@@ -2,15 +2,18 @@
 description: SenseCraft AI 平台上的 XIAO ESP32S3 工作区
 title: SenseCraft AI 平台上的 XIAO ESP32S3 工作区
 keywords:
-- Cloud and Chain
-- SenseCraft
-- SenseCraft AI
+  - Cloud and Chain
+  - SenseCraft
+  - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 sidebar_class_name: hidden
 slug: /sensecraft-ai/xiao-esp32s3-workspace
 last_update:
   date: 08/22/2024
   author: Frank
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/sensecraft-ai/xiao-esp32s3-workspace/
 ---
 
 ## 入门指南

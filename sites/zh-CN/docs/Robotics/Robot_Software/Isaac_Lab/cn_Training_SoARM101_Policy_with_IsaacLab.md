@@ -2,15 +2,18 @@
 description: 本文档展示了如何在带有 Nvidia GPU 的 Ubuntu 上设置 Isaac Lab，用于训练 SO-ARM100/101 机械臂的强化学习策略。
 title: 使用 IsaacLab 训练 SoArm101 策略
 keywords:
-- IsaacLab
-- 强化学习
-- 机械臂
-- SOARM100
+  - IsaacLab
+  - 强化学习
+  - 机械臂
+  - SOARM100
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/isaaclab_rl/cube_play.webp
 slug: /training_soarm101_policy_with_isaacLab
 last_update:
   date: 2025/9/4
   author: Youjiang
+createdAt: '2025-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/training_soarm101_policy_with_isaacLab/
 ---
 
 ## 介绍

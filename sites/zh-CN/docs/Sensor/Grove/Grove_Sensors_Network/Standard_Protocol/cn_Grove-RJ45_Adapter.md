@@ -1,6 +1,6 @@
 ---
 title: Grove - RJ45 适配器
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020011
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-RJ45_Adapter/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-RJ45_Adapter/img/RJ45_Adapter_01.jpg)
 

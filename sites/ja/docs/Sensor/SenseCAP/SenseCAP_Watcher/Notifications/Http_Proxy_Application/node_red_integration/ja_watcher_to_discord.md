@@ -2,14 +2,17 @@
 description: WatcherとNode-REDからDiscordにデータを送信する
 title: Watcher & Node-RED to Discord
 keywords:
-- Watcher
-- Discord
-- Node-RED
+  - Watcher
+  - Discord
+  - Node-RED
 image: https://files.seeedstudio.com/wiki/Watcher_Discord_Node_Red/Watcher_Discord_Cover.png
 slug: /watcher_node_red_to_discord
 last_update:
   date: 08/02/2024
   author: Vincent
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/watcher_node_red_to_discord/
 ---
 
 # Watcher To Discord クイックスタート

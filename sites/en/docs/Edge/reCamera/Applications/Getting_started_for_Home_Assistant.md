@@ -11,6 +11,9 @@ sidebar_position: 6
 last_update:
   date: 11/11/2025
   author: Xinrui Wu
+createdAt: '2025-11-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/getting_started_for_home_assistant_with_recamera/
 ---
 
 # Getting started for Home Assistant with reCamera

@@ -8,6 +8,9 @@ slug: /Seeed_Arduino_Boards
 last_update:
   date: 02/02/2023
   author: w0x7ce
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeed_Arduino_Boards/
 ---
 
 

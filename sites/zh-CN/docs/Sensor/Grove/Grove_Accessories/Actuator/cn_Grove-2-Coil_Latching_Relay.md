@@ -1,6 +1,6 @@
 ---
 title: Grove - 双线圈保持继电器
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020010
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-2-Coil_Latching_Relay/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-2-Coil_Latching_Relay/img/2Coil_Latching_Relay_01.jpg)

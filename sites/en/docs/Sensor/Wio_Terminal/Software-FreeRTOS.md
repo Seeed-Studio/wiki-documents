@@ -1,13 +1,16 @@
 ---
 description: FreeRTOS with Wio Terminal
-title:  FreeRTOS with Wio Terminal
+title: FreeRTOS with Wio Terminal
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Software-FreeRTOS
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Software-FreeRTOS/
 ---
 
 # How to use FreeRTOS to Multi-tasking in Arduino

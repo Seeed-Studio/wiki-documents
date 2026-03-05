@@ -2,16 +2,19 @@
 description: 廃止された製品
 title: 廃止された製品
 keywords:
-- 廃止された製品
-- レガシー製品
-- 引退製品
-- 廃止製品
+  - 廃止された製品
+  - レガシー製品
+  - 引退製品
+  - 廃止製品
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /discontinuedproducts
 toc_max_heading_level: 5
 last_update:
   date: 05/15/2025
   author: Yaohao
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/discontinuedproducts/
 ---
 
 

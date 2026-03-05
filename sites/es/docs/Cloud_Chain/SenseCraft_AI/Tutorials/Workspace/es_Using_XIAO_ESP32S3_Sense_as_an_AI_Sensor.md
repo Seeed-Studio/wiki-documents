@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 12/04/2024
   author: Citric
+createdAt: '2024-11-27'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-output-libraries-xiao/
 ---
 
 # Usando XIAO ESP32S3 Sense como un Sensor de IA con SenseCraft AI

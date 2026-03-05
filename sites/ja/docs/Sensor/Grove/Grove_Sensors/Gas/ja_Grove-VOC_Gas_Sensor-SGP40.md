@@ -2,13 +2,16 @@
 description: TBD
 title: Grove - VOC ガスセンサー (SGP40)
 keywords:
-- Grove
-- SGP40
+  - Grove
+  - SGP40
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_voc_gas_sensor_sgp40
 last_update:
   date: 05/15/2025
   author: Stephen Lo
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove_voc_gas_sensor_sgp40/
 ---
 
 

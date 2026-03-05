@@ -2,14 +2,17 @@
 description: 入门指南 Grove D7S 振动传感器
 title: Grove - D7S 振动传感器
 keywords:
-- Grove
-- vibration
+  - Grove
+  - vibration
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove-d7s-vibration-sensor
 sku: 101021096
 last_update:
   date: 6/6/2023
   author: Stephen Lo
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/grove-d7s-vibration-sensor/
 ---
 
 # Grove - D7S 振动传感器

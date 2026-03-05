@@ -6,6 +6,9 @@ slug: /xiao_esp32s3_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks
+createdAt: '2025-09-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32s3_microblocks/
 ---
 
 # XIAO ESP32-S3 con MicroBlocks

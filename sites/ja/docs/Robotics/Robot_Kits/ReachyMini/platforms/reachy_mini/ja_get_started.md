@@ -3,19 +3,23 @@ description: Raspberry Pi 4 を搭載した Reachy Mini Wireless のセットア
 title: Reachy Mini Wireless セットアップガイド
 slug: /reachymini_platforms_reachy_mini_get_started
 keywords:
-- wireless
-- setup
-- assembly
-- wi-fi
-- first boot
-- configuration
-- ssh
-- update
+  - wireless
+  - setup
+  - assembly
+  - wi-fi
+  - first boot
+  - configuration
+  - ssh
+  - update
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_get_started/
 ---
 
 # Reachy Mini (Wireless) - セットアップガイド

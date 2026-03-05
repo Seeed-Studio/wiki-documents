@@ -2,13 +2,16 @@
 description: TinyML 工作坊课程。
 title: AI 工作坊 - 如何为几乎所有事物添加 AI
 keywords:
-- tinyml course
+  - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /tinyml_workshop_course_new
 sku: 110992064
 last_update:
   date: 09/24/2024
   author: Citric, Matthew,Frank
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/tinyml_workshop_course_new/
 ---
 
 

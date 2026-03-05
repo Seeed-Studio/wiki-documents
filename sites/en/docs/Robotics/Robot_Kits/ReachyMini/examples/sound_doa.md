@@ -3,17 +3,21 @@ description: Example demonstrating Direction of Arrival (DoA) detection using Re
 title: Sound Direction of Arrival
 slug: /reachymini_examples_sound_doa
 keywords:
-- doa
-- direction of arrival
-- microphone array
-- speech detection
-- sound localization
-- look at
+  - doa
+  - direction of arrival
+  - microphone array
+  - speech detection
+  - sound localization
+  - look at
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_examples_sound_doa/
 ---
 
 # Sound Direction of Arrival (DoA)

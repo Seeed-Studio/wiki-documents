@@ -2,10 +2,10 @@
 description: このプロジェクトは、SenseCAP Indicatorを使用してシングルチャネルLoRaゲートウェイ（LoRaHub）を実装する方法を示しています。
 title: シングルチャネルゲートウェイ - SenseCAP Indicator
 keywords:
-- SenseCAP Indicator
-- LoRaWAN
-- ESP32S3
-- Single Channel Gateway
+  - SenseCAP Indicator
+  - LoRaWAN
+  - ESP32S3
+  - Single Channel Gateway
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/61.webp
 slug: /SenseCAP_Indicator_Single_Channel_Gateway
 sku: 114993532
@@ -14,6 +14,9 @@ sidebar_position: 5
 last_update:
   date: 02/11/2025
   author: Leo Liu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_Single_Channel_Gateway/
 ---
 
 # シングルチャネルLoRaWANゲートウェイ - SenseCAP Indicator

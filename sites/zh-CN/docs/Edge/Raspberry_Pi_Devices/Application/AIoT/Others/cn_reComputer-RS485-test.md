@@ -7,10 +7,13 @@ keywords:
   - loopback test
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /recomputer_rs485_loopback_test
-sku: 113991314,113991274, 113991294, 113991295, 113991334, 113991374, 113991375,100020831, 100045506, 100080766, 100026042, 100061305, 100099044, 100097052, 100091962  
+sku: 113991314,113991274, 113991294, 113991295, 113991334, 113991374, 113991375,100020831, 100045506, 100080766, 100026042, 100061305, 100099044, 100097052, 100091962
 last_update:
   date: 01/14/2026
   author: Jiahao
+createdAt: '2026-01-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_rs485_loopback_test/
 ---
 
 ## 简介

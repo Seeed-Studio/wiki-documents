@@ -1,21 +1,24 @@
 ---
 description: 构建和控制 AmazingHand，一个低成本、开源、8 自由度、3D 可打印的机械手。
-title: AmazingHand 
+title: AmazingHand
 keywords:
-- Lerobot
-- Huggingface
-- Hand
-- Robotics
-- 3D Printing
-- Open Source
-- Humanoid Robot
-- Arduino
-- Python
+  - Lerobot
+  - Huggingface
+  - Hand
+  - Robotics
+  - 3D Printing
+  - Open Source
+  - Humanoid Robot
+  - Arduino
+  - Python
 slug: /hand_amazinghand
 sku: 100062181,100063642
 last_update:
   date: 9/10/2025
   author: TienjuiWong
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/hand_amazinghand/
 ---
 
 <div align="center">

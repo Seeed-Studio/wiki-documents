@@ -2,13 +2,16 @@
 description: SeeedStudio GD32 RISC-V 開発ボード
 title: SeeedStudio GD32 RISC-V 開発ボード
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SeeedStudio-GD32-RISC-V-Dev-Board
 sku: 102991315,102060105
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SeeedStudio-GD32-RISC-V-Dev-Board/
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates how to use go2rtc on recomputer. 
+description: This wiki demonstrates how to use go2rtc on recomputer.
 title: go2rtc on reComputer
 keywords:
   - reComputer
@@ -11,7 +11,10 @@ sku: 113991274,E24010521,113991294,113991295,113991314,113991334,113991374,11399
 last_update:
   date: 11/05/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-11-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/go2rtc_on_recomputer/
 ---
 
 # go2rtc on reComputer

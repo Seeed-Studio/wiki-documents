@@ -2,13 +2,16 @@
 description: Wio Tracker Meshtastic® Kit ファームウェア書き込み
 title: ファームウェア書き込み
 keywords:
-- Meshtastic
-- Tracker
+  - Meshtastic
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash_meshtastic_kit
 last_update:
   date: 12/3/2025
   author: Michelle Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/flash_meshtastic_kit/
 ---
 :::danger note
 デバイスが以下の状態にある場合は、手動で再起動したり電源を切ったりしないでください。そうしないとデバイスが故障する可能性があります。

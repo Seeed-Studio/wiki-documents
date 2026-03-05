@@ -10,6 +10,9 @@ slug: /iot_button_for_esphome
 last_update:
   date: 05/15/2025
   author: qiuyu wei, Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/iot_button_for_esphome/
 ---
 
 

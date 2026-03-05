@@ -2,12 +2,15 @@
 description: Tutorial de LinkIt ONE - Interfaz Analógica
 title: Tutorial de LinkIt ONE - Interfaz Analógica
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /LinkIt_ONE_Tutorial-Analog_Interface
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/LinkIt_ONE_Tutorial-Analog_Interface/
 ---
 **Lo que estamos haciendo**
 

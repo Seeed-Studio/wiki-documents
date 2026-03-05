@@ -1,11 +1,13 @@
 ---
 description: XIAO ESP32C3-FAQ
 title: Cómo volver a flashear el bootloader con firmware de fábrica
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reflash_the_bootloader
 last_update:
   date: 6/30/2023
   author: cheng.tang
+createdAt: '2023-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reflash_the_bootloader/
 ---
 Puedes simplemente conectar la placa a una PC vía **USB Type-C** y volver a flashear el bootloader con firmware de fábrica usando **ESP RF Test Tool**.
 

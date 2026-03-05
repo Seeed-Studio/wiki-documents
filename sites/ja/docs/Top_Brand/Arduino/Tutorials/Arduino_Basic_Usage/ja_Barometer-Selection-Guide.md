@@ -7,7 +7,10 @@ sku: 101020193,101020192,101020068,101020032,101020812
 last_update:
   date: 05/15/2025
   author: w0x7ce
-no_comments: false # Disqus 用
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Barometer-Selection-Guide/
 ---
 
 

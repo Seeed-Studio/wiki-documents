@@ -6,6 +6,9 @@ slug: /log_rpios_use_ssh_over_wifi_ethernet
 last_update:
   date: 2023/6/21
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/log_rpios_use_ssh_over_wifi_ethernet/
 ---
 
 <!-- 使用 SSH 通过 Wi-Fi/以太网登录到 Raspberry Pi OS/Ubuntu OS 或其他操作系统 -->

@@ -2,13 +2,16 @@
 description: Seeeduino Stalker V3.1
 title: Seeeduino Stalker V3.1
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Stalker_V3.1
 sku: 102010070
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeeduino_Stalker_V3.1/
 ---
 
 Tal vez estés muy familiarizado con la serie Seeeduino stalker, o tal vez seas completamente nuevo en este Nodo de Red de Sensores Inalámbricos rico en características. Sin importar en qué situación te encuentres, si vas a hacer una aplicación de registro de datos al aire libre, encontrarás que Seeeduino Stalker es la mejor placa.

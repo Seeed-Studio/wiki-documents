@@ -2,13 +2,16 @@
 description: Raspberry PI B+ ケース
 title: Raspberry PI B+ ケース
 keywords:
-- アクセサリー
+  - アクセサリー
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_PI_Bplus_Case
 sku: 114990084
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Raspberry_PI_Bplus_Case/
 ---
 
 

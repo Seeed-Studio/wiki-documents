@@ -2,8 +2,8 @@
 description: Wio Tracker 1110 の使用開始
 title: Wio Tracker 1110 の使用開始
 keywords:
-- Tracker
-- Wio
+  - Tracker
+  - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_Wio-Trakcer_1110
 sku: 114993186
@@ -11,6 +11,9 @@ sidebar_position: 2
 last_update:
   date: 11/3/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Get_Started_with_Wio-Trakcer_1110/
 ---
 
 このチュートリアルでは、ファクトリーファームウェアを通じてWio Tracker 1110開発ボードを素早くセットアップし、SenseCAPクラウドに接続してデータを確認する方法をユーザーにガイドします。

@@ -1,11 +1,13 @@
 ---
 description: Seeed Studio 圆形显示屏适配 XIAO 的常见问题解答
 title: 如果我想将 Seeed Studio XIAO ESP32S3 Sense 连接到这个扩展屏幕，会不会与两个 TF 卡槽发生冲突？
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /two_TF_card
 last_update:
   date: 2023/6/30
   author: cheng.tang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/two_TF_card/
 ---
 问：这会不会产生冲突？
 

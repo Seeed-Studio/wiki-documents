@@ -2,15 +2,18 @@
 description: 本文介绍了Seeed具身智能Hackathon活动，指导参与者通过配置NVIDIA生态链和Isaacgym仿真环境，训练双足机器人“小π”的强化学习策略，并完成从仿真验证（sim2sim）到实际部署（sim2real）的全流程开发。内容涵盖硬件准备、环境搭建、参数调整、步态优化、模型部署及常见问题解决方案，并附有详细的操作步骤和参考文档支持。
 title: Seeed&高擎双足机器人强化学习Hackathon
 keywords:
-- 小Pi
-- 高擎
-- 机器人
-- Seeed
+  - 小Pi
+  - 高擎
+  - 机器人
+  - Seeed
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiaopi
 last_update:
   date: 2025-4-23
   author: Youjiang
+createdAt: '2025-04-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiaopi/
 ---
 
 # Seeed&高擎双足机器人强化学习Hackathon

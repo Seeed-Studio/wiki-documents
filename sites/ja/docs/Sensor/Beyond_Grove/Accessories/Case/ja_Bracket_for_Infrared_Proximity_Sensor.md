@@ -1,6 +1,6 @@
 ---
 title: 赤外線近接センサー用ブラケット
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - Docusaurus
@@ -9,6 +9,9 @@ slug: /Bracket_for_Infrared_Proximity_Sensor
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Bracket_for_Infrared_Proximity_Sensor/
 ---
 
 

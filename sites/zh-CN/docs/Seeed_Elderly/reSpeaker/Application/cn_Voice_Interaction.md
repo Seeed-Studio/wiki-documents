@@ -2,12 +2,15 @@
 description: 语音交互
 title: 语音交互
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Voice_Interaction
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Voice_Interaction/
 ---
 
 这里是全球语音交互服务的整体概览。

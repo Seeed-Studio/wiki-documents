@@ -6,7 +6,10 @@ slug: /How_to_use_and_write_a_library
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/How_to_use_and_write_a_library/
 ---
 
 Arduino 的流行很大程度上依赖于大量优秀且易于使用的库。Arduino 库使用面向对象的 C++ 类库，您可以轻松使用它而无需了解库的实现细节。

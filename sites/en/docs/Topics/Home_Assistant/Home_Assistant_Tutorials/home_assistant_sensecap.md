@@ -2,13 +2,16 @@
 description: Home Assistant Intergration for SenseCAP LoRaWAN Sensors
 title: SenseCAP Integration for Home Assistant
 keywords:
-- SenseCAP M2 Multi-Platform 
-- Home Assistant
-- LoRaWAN Sensors
+  - SenseCAP M2 Multi-Platform
+  - Home Assistant
+  - LoRaWAN Sensors
 slug: /home_assistant_sensecap
 last_update:
   date: 10/19/2023
   author: JoJang
+createdAt: '2023-10-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/home_assistant_sensecap/
 ---
 
 # Automatic intergrate  all your SenseCAP Sensors to Home Assistant

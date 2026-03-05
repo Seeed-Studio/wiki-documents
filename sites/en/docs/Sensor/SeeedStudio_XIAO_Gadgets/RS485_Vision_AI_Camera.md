@@ -2,8 +2,8 @@
 description: Getting with RS485 Vision AI Camera
 title: RS485 Vision AI Camera
 keywords:
-- RS485 Vision
-- Camera
+  - RS485 Vision
+  - Camera
 image: https://files.seeedstudio.com/wiki/A1102/SenseCraft_AI_With_A1102/top.webp
 slug: /getting_started_with_rs485_vision_ai_cam
 sku: 110992084
@@ -11,6 +11,9 @@ sidebar_position: 4
 last_update:
   date: 12/26/2024
   author: Jason
+createdAt: '2025-01-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/getting_started_with_rs485_vision_ai_cam/
 ---
 
 

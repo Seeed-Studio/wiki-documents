@@ -2,13 +2,16 @@
 description: Grove - Starter Kit v3
 title: Grove - Starter Kit v3
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_Kit_v3
 sku: 110060024
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Starter_Kit_v3/
 ---
 
 Grove 是一个模块化电子平台，用于便捷快速的原型制作。许多配置可以在无需焊接或面包板的情况下组装完成。只需将 Grove 模块连接到 Grove 扩展板，并利用为每个 Grove 模块提供的示例代码。Grove 入门套件包含大量传感器和执行器，包括对音频、光线、运动、触觉和其他交互模式的支持。因此，您可以立即开始使用各种各样的项目进行实验。

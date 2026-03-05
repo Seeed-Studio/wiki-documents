@@ -2,12 +2,15 @@
 description: Red de Sensores
 title: Red de Sensores
 keywords:
-- Sensor Network
+  - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Elderly/Navigation/Sensor_Network_4.7
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeed_Elderly/Navigation/Sensor_Network_4.7/
 ---
 
 Este tema presenta la documentación de productos de Seeed Studio sobre el primer paso de los datos digitalizados del mundo físico, es decir, el despliegue de infraestructuras de información en un marco de detección dinámico, para sentar las bases del monitoreo social y la comprensión de los entornos físicos y naturales.

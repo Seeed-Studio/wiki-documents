@@ -2,13 +2,16 @@
 description: Grove - 计步器(BMA456)
 title: Grove - 计步器(BMA456)
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Step_Counter-BMA456
 sku: 101020583
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Step_Counter-BMA456/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/main.jpg)

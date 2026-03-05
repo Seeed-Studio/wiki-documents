@@ -2,12 +2,15 @@
 description: SenseCAP M4 Overview
 title: SenseCAP M4 Overview
 keywords:
-- SenseCAP Network
+  - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2023-02-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview/
 ---
 
 **SenseCAP M4 Square** is a device designed to run multiple web 3.0 applications and help you build decentralized networks. It has excellent hardware features to support the extension of multiple applications while providing easy and friendly methods to deploy **CUMULUS FluxNode** and other **web 3.0 Apps** with SenseCAP Hotspot App.

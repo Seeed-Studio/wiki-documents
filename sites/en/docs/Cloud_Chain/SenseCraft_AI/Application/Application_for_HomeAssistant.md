@@ -2,8 +2,8 @@
 description: Introducing how to plug Grove Vision AI V2 into HomeAssistant.
 title: Application for HomeAssistant
 keywords:
-- vision AI
-- home assistant
+  - vision AI
+  - home assistant
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sensecraft-ai/application/application-for-homeassistant
 aliases:
@@ -12,6 +12,9 @@ sidebar_position: 1
 last_update:
   date: 01/10/2024
   author: Citric
+createdAt: '2024-01-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-ai/application/application-for-homeassistant/
 ---
 
 # Connect Grove Vision AI V2 to Home Assistant

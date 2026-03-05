@@ -2,13 +2,16 @@
 description: 带有AIoTs GPS的LoRa节点
 title: 带有AIoTs GPS的LoRa节点
 keywords:
-- Wio_terminal 
-- Embedded_ML 
+  - Wio_terminal
+  - Embedded_ML
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /AIoTs_GPS_state_tester
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/AIoTs_GPS_state_tester/
 ---
 
 # 基于Wio Terminal的带有AIoTs GPS的LoRa节点

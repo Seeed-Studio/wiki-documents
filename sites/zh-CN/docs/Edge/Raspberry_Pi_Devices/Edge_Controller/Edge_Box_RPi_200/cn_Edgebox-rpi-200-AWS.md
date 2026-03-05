@@ -3,13 +3,16 @@ description: AWS IoT Core 与 EdgeBox RPi 200 集成
 title: AWS IoT Core 与 EdgeBox RPi 200 集成
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 keywords:
-- AWS
-- Getting Start
-- Cloud
+  - AWS
+  - Getting Start
+  - Cloud
 slug: /Edgebox-rpi-200-AWS
 last_update:
   date: 3/11/2024
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Edgebox-rpi-200-AWS/
 ---
 
 ## 介绍

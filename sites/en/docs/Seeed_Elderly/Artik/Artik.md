@@ -2,12 +2,15 @@
 description: Artik
 title: Artik
 keywords:
-- Artik
+  - Artik
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Artik
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2023-02-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Artik/
 ---
 
 The Samsung ARTIK Smart IoT platform brings hardware modules and cloud services together, with built-in security and an ecosystem of tools and partners to speed up your time-to-market. We call it "end-to-end IoT".

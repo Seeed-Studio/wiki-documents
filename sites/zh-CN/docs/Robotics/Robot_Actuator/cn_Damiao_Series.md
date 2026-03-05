@@ -2,16 +2,19 @@
 description: 本 wiki 提供达妙系列电机的教程。
 title: 达妙系列电机
 keywords:
-- actuator
-- motor
-- arm
-- robotics
+  - actuator
+  - motor
+  - arm
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.webp
 slug: /damiao_series
 sku: 100094243,100007512
 last_update:
   date: 06/1/2025
   author: ZhuYaoHui
+createdAt: '2025-06-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/damiao_series/
 ---
 
 # 达妙 43 系列电机入门指南

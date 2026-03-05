@@ -2,8 +2,8 @@
 description: 本文介绍如何使用电子纸面板与 TRMNL 配合工作。
 title: 与 TRMNL 配合使用
 keywords:
-- ePaper display
-- TRMNL
+  - ePaper display
+  - TRMNL
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.webp
 slug: /xiao_7_5_inch_epaper_panel_with_trmnl
 sku: 114993635
@@ -11,6 +11,9 @@ sidebar_position: 4
 last_update:
   date: 05/19/2025
   author: Citric
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_7_5_inch_epaper_panel_with_trmnl/
 ---
 
 # XIAO 7.5 英寸电子纸面板与 TRMNL 配合使用

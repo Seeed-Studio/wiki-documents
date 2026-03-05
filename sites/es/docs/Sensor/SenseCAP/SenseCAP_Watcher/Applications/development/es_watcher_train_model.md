@@ -1,12 +1,15 @@
 ---
 description: Desplegar modelo de IA desde SenseCraft en Watcher
 title: Entrenamiento de Modelo para Watcher
-image: "https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png"
+image: https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png
 slug: /training_model_for_watcher
 sidebar_position: 2
 last_update:
   date: 10/9/2024
   author: Jason
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/training_model_for_watcher/
 ---
 
 # Entrenamiento de Modelo para Watcher

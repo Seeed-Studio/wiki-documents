@@ -2,12 +2,15 @@
 description: Ajuste de Volumen de ReSpeaker Lite
 title: Ajuste de Volumen
 keywords:
-- ReSpeaker
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_volume
 last_update:
   date: 9/27/2024
   author: Jessie
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/respeaker_volume/
 ---
 
 

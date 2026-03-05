@@ -10,6 +10,9 @@ slug: /reTerminal-DM-Node-Red-mqtt
 last_update:
   date: 04/27/2023
   author: Peter Pan
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminal-DM-Node-Red-mqtt/
 ---
 # reTerminal DM MQTT 与 Node-RED
 

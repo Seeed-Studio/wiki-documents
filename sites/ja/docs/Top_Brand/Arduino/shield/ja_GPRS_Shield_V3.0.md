@@ -2,13 +2,16 @@
 description: GPRSシールド V3.0
 title: GPRSシールド V3.0
 keywords:
-- Arduinoシールド
+  - Arduinoシールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /GPRS_Shield_V3.0
 sku: 113030009
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/GPRS_Shield_V3.0/
 ---
 
 

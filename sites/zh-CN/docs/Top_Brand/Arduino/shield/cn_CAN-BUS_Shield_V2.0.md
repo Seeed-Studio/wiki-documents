@@ -5,9 +5,12 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /CAN-BUS_Shield_V2.0
 sku: 103030215
 last_update:
-  date: 01/10/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 01/10/2023
+  author: Eico
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/CAN-BUS_Shield_V2.0/
 ---
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/CAN_BUS_Shield/image/shiyitu1.png" /></div>

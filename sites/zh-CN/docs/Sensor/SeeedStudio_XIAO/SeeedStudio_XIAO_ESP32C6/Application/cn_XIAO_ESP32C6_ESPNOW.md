@@ -2,12 +2,15 @@
 description: 使用 XIAO ESP32S3/XIAO ESP32C3/XIAO ESP32C6 进行 ESP-NOW 协议通信
 title: XIAO ESP32 系列上的 ESP-NOW 协议
 keywords:
-- ESPNOW
+  - ESPNOW
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/126.png
 slug: /xiao_esp32c6_espnow
 last_update:
   date: 07/24/2024
   author: Jason
+createdAt: '2024-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_espnow/
 ---
 
 # 在 XIAO 系列上开始使用 ESP-NOW 协议

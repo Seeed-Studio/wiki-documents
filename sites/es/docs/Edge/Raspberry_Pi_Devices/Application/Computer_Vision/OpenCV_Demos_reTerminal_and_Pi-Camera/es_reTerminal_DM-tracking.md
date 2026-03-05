@@ -3,7 +3,7 @@ description: Seguimiento de objetos con reTerminal y cámara Pi con OpenCV
 title: Seguimiento de objetos con reTerminal y cámara Pi con OpenCV
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
   - Object Tracking
@@ -12,6 +12,9 @@ slug: /reTerminal_DM_Face-tracking
 last_update:
   date: 11/7/2023
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reTerminal_DM_Face-tracking/
 ---
 
 ## Una Introducción

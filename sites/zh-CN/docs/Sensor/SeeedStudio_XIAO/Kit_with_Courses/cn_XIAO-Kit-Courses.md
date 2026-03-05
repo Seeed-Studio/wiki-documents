@@ -2,13 +2,16 @@
 description: Seeed Studio XIAO 套件课程
 title: Seeed Studio XIAO 套件课程
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-Kit-Courses
 sku: 110010044
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-10-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-Kit-Courses/
 ---
 # XIAO：强大功能，小巧板型
 

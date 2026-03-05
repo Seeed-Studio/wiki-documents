@@ -2,12 +2,15 @@
 description: ステッピングモータードライバー
 title: ステッピングモータードライバー
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Stepper_Motor_Driver
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Stepper_Motor_Driver/
 ---
 
 

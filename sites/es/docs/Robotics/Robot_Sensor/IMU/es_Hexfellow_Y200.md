@@ -2,14 +2,17 @@
 description: Este wiki proporciona un tutorial para el Sensor IMU HEXFELLOW Y200.
 title: Sensor IMU HEXFELLOW Y200
 keywords:
-- IMU
-- robotics
+  - IMU
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig1.webp
 slug: /hexfellow_y200
 sku: 101090143
 last_update:
   date: 06/18/2025
   author: ZhuYaoHui
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/hexfellow_y200/
 ---
 
 # Introducción al Sensor IMU HEXFELLOW Y200

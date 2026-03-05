@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates how to install M.2 coral to rpi5 and test coral. 
+description: This wiki demonstrates how to install M.2 coral to rpi5 and test coral.
 title: Install M.2 Coral to Raspberry Pi 5
 keywords:
   - Edge
@@ -10,7 +10,10 @@ slug: /install_m2_coral_to_rpi5
 last_update:
   date: 07/19/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-07-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/install_m2_coral_to_rpi5/
 ---
 
 # Install M.2 Coral to Raspberry Pi 5

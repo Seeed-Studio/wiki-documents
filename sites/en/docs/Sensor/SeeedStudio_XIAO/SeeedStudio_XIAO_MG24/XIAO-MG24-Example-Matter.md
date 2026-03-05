@@ -7,6 +7,9 @@ sidebar_position: 2
 last_update:
   date: 11/07/2024
   author: Spencer
+createdAt: '2024-11-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_mg24_matter/
 ---
 
 ## Introduction

@@ -10,7 +10,10 @@ slug: /make_the_cpp_program_auto_start_on_boot
 last_update:
   date: 07/26/2025
   author: Liangyuxin
-no_comments: false 
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/make_the_cpp_program_auto_start_on_boot/
 ---
 
 # Hacer que el programa C++ se inicie automáticamente al arrancar

@@ -2,14 +2,17 @@
 description: 介绍如何将 Grove Vision AI V2 连接到 SenseCAP Mate APP。
 title: 将 Grove Vision AI V2 连接到 SenseCAP Mate APP
 keywords:
-- sensecap mate
-- grove vision ai v2
+  - sensecap mate
+  - grove vision ai v2
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /connect_vision_ai_v2_to_sensecap_mate
 sku: 101021112,E23011220,104990982
 last_update:
   date: 01/19/2024
   author: Citric
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/connect_vision_ai_v2_to_sensecap_mate/
 ---
 
 # 将 Grove Vision AI V2 连接到 SenseCAP Mate APP

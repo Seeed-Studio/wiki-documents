@@ -3,18 +3,22 @@ description: Reachy Mini のモーションに関する完全な API リファ�
 title: モーション API リファレンス
 slug: /reachymini_api_motion
 keywords:
-- api
-- motion
-- moves
-- goto
-- interpolation
-- recording
-- playback
+  - api
+  - motion
+  - moves
+  - goto
+  - interpolation
+  - recording
+  - playback
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_api_motion/
 ---
 # モーション
 

@@ -1,13 +1,16 @@
 ---
 description: How to measure noise levels with Wio Terminal
-title:  如何使用Wio终端测量噪音水平
+title: 如何使用Wio终端测量噪音水平
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Sound-Meter
 last_update:
   date: 3/07/2024
   author: jessie
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-Sound-Meter/
 ---
 
 # 如何使用Wio终端测量噪音水平

@@ -2,14 +2,17 @@
 description: 将 SenseCAP T2000 Tracker 连接到 AWS
 title: 连接到 AWS IoT Core
 keywords:
-- SenseCAP_T2000_tracker
-- AWS
+  - SenseCAP_T2000_tracker
+  - AWS
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
 slug: /sensecap_t2000_tracker_aws
 sku: 100082900,100057727,100087298
 last_update:
   date: 1/29/2026
   author: Janet
+createdAt: '2026-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/sensecap_t2000_tracker_aws/
 ---
 
 # 连接到 AWS IoT Core

@@ -2,14 +2,17 @@
 description: This wiki provides a step-by-step guide to install ROS2 humble.
 title: Install the ROS2 Humble
 keywords:
-- NVIDIA
-- Isaac ROS
-- ROS
+  - NVIDIA
+  - Isaac ROS
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /install_ros2_humble
 last_update:
   date: 5/28/2025
   author: ZhuYaoHui
+createdAt: '2025-05-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/install_ros2_humble/
 ---
 
 import Tabs from '@theme/Tabs';

@@ -2,13 +2,16 @@
 description: Introducción al sensor de gestos Grove PAJ7660.
 title: Grove Sensor de Gestos IR Inteligente (PAJ7660)
 keywords:
-- gesture
+  - gesture
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_gesture_paj7660
 sku: 101991067
 last_update:
   date: 06/28/2023
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove_gesture_paj7660/
 ---
 
 # Grove Sensor de Gestos IR Inteligente (PAJ7660)

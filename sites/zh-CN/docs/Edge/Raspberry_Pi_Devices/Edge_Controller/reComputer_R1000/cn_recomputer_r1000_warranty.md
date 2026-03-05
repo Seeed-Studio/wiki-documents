@@ -10,6 +10,9 @@ sku: E24010521, 113991274
 last_update:
   date: 05/13/2024
   author: Parker Hu
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_r1000_warranty/
 ---
 # reComputer R1000 保修条款
 

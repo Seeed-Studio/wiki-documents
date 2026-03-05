@@ -2,12 +2,15 @@
 description: Arduino 入门指南
 title: Arduino 入门指南
 keywords:
-- Arduino
+  - Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_Started_with_Arduino
 last_update:
   date: 2/14/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/
 ---
 <!-- ---
 name: Arduino 入门指南

@@ -2,12 +2,15 @@
 description: Wio Terminal 复古游戏固件
 title: Wio Terminal 复古游戏固件
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Firmware
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-Firmware/
 ---
 
 # Wio Terminal 复古游戏固件

@@ -2,13 +2,16 @@
 description: Introducción al Sensor SenseCAP LoRaWAN Serie S210X
 title: Introducción al Sensor SenseCAP LoRaWAN Serie S210X
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor
 sku: 114992867,114992868,114992869,114992870,114992871,101070001,101070021
 last_update:
   date: 3/30/2023
   author: Yvonne
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor/
 ---
 
 

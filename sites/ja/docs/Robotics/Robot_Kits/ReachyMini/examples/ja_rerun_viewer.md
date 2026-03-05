@@ -3,18 +3,22 @@ description: Reachy Mini の状態を、重力補償付きのコンプライア�
 title: Rerun ビューア
 slug: /reachymini_examples_rerun_viewer
 keywords:
-- rerun
-- visualization
-- logging
-- real-time
-- compliant mode
-- gravity compensation
-- placo
+  - rerun
+  - visualization
+  - logging
+  - real-time
+  - compliant mode
+  - gravity compensation
+  - placo
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_examples_rerun_viewer/
 ---
 
 # Rerun ビューア

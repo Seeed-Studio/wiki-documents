@@ -2,13 +2,16 @@
 description: このwikiでは、reComputer Jetson上でZero-Shot Detectionを実行する方法のチュートリアルを提供します。
 title: reComputerでZero-Shot Detectionを実行する方法
 keywords:
-- reComputer
-- Zero-Shot Detection
+  - reComputer
+  - Zero-Shot Detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /run_zero_shot_detection_on_recomputer
 last_update:
   date: 7/24/2024
   author: ZhuYaoHui
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/run_zero_shot_detection_on_recomputer/
 ---
 
 # Jetson Platform ServicesでreComputer上でZero-Shot Detectionを実行する方法

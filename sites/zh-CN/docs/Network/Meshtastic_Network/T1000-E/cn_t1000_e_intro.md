@@ -2,13 +2,16 @@
 description: SenseCAP Card Tracker T1000-E for Meshtastic 介绍
 title: T1000-E 追踪器介绍
 keywords:
-- Tracker
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /t1000_e_intro
 sidebar_position: 1
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/t1000_e_intro/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>

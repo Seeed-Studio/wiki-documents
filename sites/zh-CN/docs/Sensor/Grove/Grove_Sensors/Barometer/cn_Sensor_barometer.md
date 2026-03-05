@@ -2,12 +2,15 @@
 description: 传感器 - 气压计
 title: 传感器 - 气压计
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_barometer
 last_update:
   date: 1/5/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sensor_barometer/
 ---
 
 - [Grove - 气压计（高精度）](https://wiki.seeedstudio.com/cn/Grove-Barometer-High-Accuracy/)

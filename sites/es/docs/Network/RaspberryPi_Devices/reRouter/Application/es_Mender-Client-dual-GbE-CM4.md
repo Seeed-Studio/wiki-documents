@@ -2,12 +2,15 @@
 description: Cliente Mender en CM4 de Dual GbE
 title: Uso de Mender
 keywords:
-- Sorftware Mender
+  - Sorftware Mender
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Mender-Client-dual-GbE-CM4
 last_update:
   date: 1/13/2023
   author: jianjing Huang
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Mender-Client-dual-GbE-CM4/
 ---
 
 

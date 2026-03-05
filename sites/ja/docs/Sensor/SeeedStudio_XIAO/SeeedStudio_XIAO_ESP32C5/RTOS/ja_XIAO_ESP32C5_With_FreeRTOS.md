@@ -1,5 +1,5 @@
 ---
-title:  XIAO ESP32-C5 と FreeRTOS
+title: XIAO ESP32-C5 と FreeRTOS
 keywords:
   - xiao
   - esp32c5
@@ -11,6 +11,9 @@ sku: 100010048
 last_update:
   date: 1/13/2026
   author: Zeller
+createdAt: '2026-01-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32c5_with_freertos/
 ---
 
 ## 概要

@@ -2,7 +2,7 @@
 description: 学习如何在 reComputer R1000 上使用 Home Assistant 设置和配置 Modbus TCP 和 Modbus RTU，这是一个基于树莓派的强大解决方案，可在楼宇管理系统 (BMS) 中实现 Modbus 设备的无缝集成和控制。
 title: reComputer R1000 和 Modbus 与 Home Assistant
 keywords:
-  - Home Assistant 
+  - Home Assistant
   - reComputer R1000
   - Home Automation
   - BMS
@@ -12,6 +12,9 @@ slug: /recomputer_r1000_home_assistant_modbus
 last_update:
   date: 08/07/2024
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_r1000_home_assistant_modbus/
 ---
 
 ## 介绍

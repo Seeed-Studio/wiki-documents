@@ -2,17 +2,20 @@
 title: AI Parking Slot Monitoring Demo with reCamera
 description: This wiki introduces an AI-based parking slot monitoring demo using reCamera, showcasing real-time parking availability detection and visualization.
 keywords:
-    - Parking Slot Detection
-    - reCamera
-    - AI Edge Vision
-    - Smart Parking
+  - Parking Slot Detection
+  - reCamera
+  - AI Edge Vision
+  - Smart Parking
 slug: /ai_parking_slot_monitoring_demo_with_recamera
 sku: 100029708,102991896
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 3
 last_update:
-    date: 2025-12-17
-    author: John Xiang
+  date: 2025-12-17T00:00:00.000Z
+  author: John Xiang
+createdAt: '2025-12-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ai_parking_slot_monitoring_demo_with_recamera/
 ---
 
 # AI Parking Management Demo with reCamera

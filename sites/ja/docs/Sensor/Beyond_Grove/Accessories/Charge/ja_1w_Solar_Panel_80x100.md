@@ -1,6 +1,6 @@
 ---
 title: 1w ソーラーパネル 80*100
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - Docusaurus
@@ -9,6 +9,9 @@ slug: /1w_Solar_Panel_80x100
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/1w_Solar_Panel_80x100/
 ---
 
 

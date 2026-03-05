@@ -2,12 +2,15 @@
 description: Chasis de Batería para Wio Terminal
 title: Chasis de Batería para Wio Terminal
 keywords:
-- Wio_terminal Extension_Board
+  - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Battery-Chassis
 last_update:
   date: 1/30/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-Battery-Chassis/
 ---
 
 

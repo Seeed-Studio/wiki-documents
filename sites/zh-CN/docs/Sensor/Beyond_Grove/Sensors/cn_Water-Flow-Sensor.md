@@ -1,6 +1,6 @@
 ---
 title: 水流传感器
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Water-Flow-Sensor
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Water-Flow-Sensor/
 ---
 
 <div align="center">

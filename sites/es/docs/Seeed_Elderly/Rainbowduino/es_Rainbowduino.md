@@ -2,12 +2,15 @@
 description: Rainbowduino
 title: Rainbowduino
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Rainbowduino
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Rainbowduino/
 ---
 La serie Rainbowduino es una placa controladora compatible con Arduino con controlador LED multiplexado profesional. Puede controlar una matriz LED RGB de 8x8 o un cubo LED RGB de 4x4x4 en modo ánodo común. La familia Rainbowduino es la siguiente,
 

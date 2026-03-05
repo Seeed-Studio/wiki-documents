@@ -2,12 +2,15 @@
 description: 概要
 title: 5 Way Switch の使い方
 keywords:
-- Wio_terminal five_Way_Switch
+  - Wio_terminal five_Way_Switch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Switch
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-Switch/
 ---
 
 

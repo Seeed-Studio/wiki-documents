@@ -6,6 +6,9 @@ slug: /grove-sgp41-with-aht20
 last_update:
   date: 10/16/2023
   author: Hans Bausewein
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove-sgp41-with-aht20/
 ---
 
 # Corrección para medición SGP41(raw) dependiente de humedad y temperatura

@@ -6,6 +6,9 @@ slug: /flash_different_os_to_emmc
 last_update:
   date: 2023/6/21
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/flash_different_os_to_emmc/
 ---
 
 <!-- ### 将 Raspberry Pi OS/64 位 Ubuntu OS 或其他操作系统刷入 eMMC -->

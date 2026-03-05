@@ -2,7 +2,7 @@
 description: 通过 Web USB 或拖放方式在 T1000-E 上烧录 MeshCore 固件的指南，以及在应用中配置 LoRa 区域、GPS 和发送消息的步骤。
 title: Meshcore 入门指南
 keywords:
-- Tracker
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecap_t1000_e_meshcore
 sku: 114993369
@@ -10,7 +10,11 @@ sidebar_position: 3
 last_update:
   date: 3/2/2026
   author: Michelle Huang
----  
+createdAt: '2026-03-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/sensecap_t1000_e_meshcore/
+---
+  
 
 
 ## 固件烧录

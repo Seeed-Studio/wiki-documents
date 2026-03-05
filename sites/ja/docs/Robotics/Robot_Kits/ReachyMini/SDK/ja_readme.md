@@ -3,18 +3,22 @@ description: Reachy Mini SDK の概要、クイックスタートガイド、コ
 title: Reachy Mini SDK
 slug: /reachymini_sdk_readme
 keywords:
-- sdk
-- quick start
-- python
-- code examples
-- tutorials
-- getting started
-- robot control
+  - sdk
+  - quick start
+  - python
+  - code examples
+  - tutorials
+  - getting started
+  - robot control
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_sdk_readme/
 ---
 
 # Reachy Mini でつくる・遊ぶ・革新する 🤖

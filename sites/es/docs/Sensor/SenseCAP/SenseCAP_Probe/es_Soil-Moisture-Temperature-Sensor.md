@@ -2,13 +2,16 @@
 description: Sensor de Humedad y Temperatura del Suelo
 title: Sensor de Humedad y Temperatura del Suelo
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor
 sku: 101990668,314990620
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_Probe/Soil-Moisture-Temperature-Sensor/
 ---
 
 ![Sensor de Humedad y Temperatura del Suelo](https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_Sensor/101990668_2.png)

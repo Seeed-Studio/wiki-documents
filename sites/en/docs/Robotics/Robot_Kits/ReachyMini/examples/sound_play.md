@@ -3,18 +3,22 @@ description: Example demonstrating audio playback through Reachy Mini's speaker 
 title: Sound Playback
 slug: /reachymini_examples_sound_play
 keywords:
-- audio
-- sound
-- speaker
-- wav
-- playback
-- live audio
-- sine tone
+  - audio
+  - sound
+  - speaker
+  - wav
+  - playback
+  - live audio
+  - sine tone
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_examples_sound_play/
 ---
 
 # Sound Playback

@@ -1,6 +1,6 @@
 ---
 title: Wio Link
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102110037
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio_Link/
 ---
 
 ¿Cuál es la parte más difícil de construir aplicaciones IoT? Alguien dice que los cables de puente usualmente lo frustran, mientras que otro dice que odia más la soldadura. Incluso hay algunas personas a las que no les gusta la protoboard. Tal vez no seas uno de ellos, pero el conocimiento de ingeniería electrónica, programación de microcontroladores, programación de redes, manejo de protocolos IoT siguen siendo una gran carga entre tú y un proyecto IoT exitoso.

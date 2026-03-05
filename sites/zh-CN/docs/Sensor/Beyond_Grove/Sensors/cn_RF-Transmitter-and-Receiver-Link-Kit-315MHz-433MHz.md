@@ -1,6 +1,6 @@
 ---
 title: RF发射器和接收器链接套件 - 315MHz/433MHz
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 114992732
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/RF-Transmitter-and-Receiver-Link-Kit-315MHz-433MHz/
 ---
 
 # RF发射器和接收器链接套件 - 315MHz/433MHz

@@ -2,13 +2,16 @@
 description: このwikiはWHEELTEC IMUセンサーのチュートリアルを提供します。
 title: WHEELTEC IMUセンサー
 keywords:
-- IMU
-- robotics
+  - IMU
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/wheeltec/wheeltec_imu.jpg
 slug: /wheeltec_imu
 last_update:
   date: 01/12/2025
   author: ZhuYaoHui
+createdAt: '2025-12-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/wheeltec_imu/
 ---
 
 # WHEELTEC IMU IMUセンサー入門ガイド

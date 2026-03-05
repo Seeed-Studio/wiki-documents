@@ -2,12 +2,15 @@
 description: Plex媒体服务器在Docker上的设置指南
 title: Plex媒体服务器
 keywords:
-- 软件 OpenWrt
+  - 软件 OpenWrt
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /OpenWrt-Plex-Media-Server-on-Docker
 last_update:
   date: 2023/1/13
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/OpenWrt-Plex-Media-Server-on-Docker/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/wiki2/thumb-1.png" alt="pir" width="1000" height="auto"/></p>

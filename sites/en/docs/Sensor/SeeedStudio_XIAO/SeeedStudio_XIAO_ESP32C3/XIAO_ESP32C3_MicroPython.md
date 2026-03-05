@@ -6,6 +6,9 @@ slug: /XIAO_ESP32C3_MicroPython
 last_update:
   date: 08/14/2023
   author: Matthew and Zachay
+createdAt: '2023-08-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/XIAO_ESP32C3_MicroPython/
 ---
 
 # XIAO ESP32C3 Wi-Fi Tracker using MicroPython

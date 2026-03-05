@@ -2,16 +2,19 @@
 description: reComputer Industrial R21xx 是一款基于 Raspberry Pi CM5 的物联网网关和控制器，具备 AI 功能。配备 2GB RAM、8GB eMMC、双以太网、USB、RS485、RS232、DI/DO 以及无线连接（4G、5G、LoRa®、Wi-Fi/BLE），非常适合工业自动化和边缘计算。
 title: reComputer Industrial R21xx 入门指南
 keywords:
-- Edge Controller
-- Raspberry pi
-- Edge Controller
-- reComputer Industrial R21xx
+  - Edge Controller
+  - Raspberry pi
+  - Edge Controller
+  - reComputer Industrial R21xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_R21xx_getting_start
 sku: 100099044,100061305,100091962,100097052,E2025091902
 last_update:
   date: 09/28/2025
   author: Nolan Chen
+createdAt: '2025-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_industrial_R21xx_getting_start/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>

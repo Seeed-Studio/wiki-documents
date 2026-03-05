@@ -1,5 +1,5 @@
 ---
-description: 'This page is the navigation page for TRMNL 7inch5(OG) DIY Kit.'
+description: This page is the navigation page for TRMNL 7inch5(OG) DIY Kit.
 title: Getting Started with TRMNL 7.5inch(OG) DIY Kit
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/head.webp
 slug: /trmnl_7inch5_diy_kit_main_page
@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 06/29/2025
   author: Allen
+createdAt: '2025-07-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/trmnl_7inch5_diy_kit_main_page/
 ---
 
 # TRMNL 7.5" (OG) DIY Kit

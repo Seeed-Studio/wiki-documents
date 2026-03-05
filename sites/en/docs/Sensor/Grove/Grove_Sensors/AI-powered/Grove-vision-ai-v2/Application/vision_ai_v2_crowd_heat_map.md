@@ -2,14 +2,17 @@
 description: Building a crowd heat map based on Grove Vision AI V2 and Home Assistant.
 title: Building a crowd density based on Grove Vision AI V2 and Home Assistant
 keywords:
-- matter
-- XIAO
-- light
+  - matter
+  - XIAO
+  - light
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /vision_ai_v2_crowd_heat_map
 last_update:
   date: 05/22/2024
   author: Citric
+createdAt: '2024-05-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/vision_ai_v2_crowd_heat_map/
 ---
 
 # Building a crowd density based on Grove Vision AI V2 and Home Assistant

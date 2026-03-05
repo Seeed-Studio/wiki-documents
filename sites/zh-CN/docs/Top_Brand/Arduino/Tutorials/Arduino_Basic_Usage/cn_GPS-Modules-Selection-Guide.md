@@ -6,7 +6,10 @@ slug: /GPS-Modules-Selection-Guide
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/GPS-Modules-Selection-Guide/
 ---
 
 我们在近年来发布了各种类型的 GPS 模块。让我们仔细了解它们，找出哪一款最适合您！

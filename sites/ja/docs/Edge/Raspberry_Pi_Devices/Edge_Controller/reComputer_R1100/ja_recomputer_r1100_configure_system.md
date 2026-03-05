@@ -2,14 +2,17 @@
 description: デバイスのインストール後にreComputer R1100シリーズのハードウェアコンポーネントを設定およびテストする方法を学習します。このwikiでは、GPIOマッピング、USER LEDテスト、SPI通信、Wi-FiおよびBluetoothスキャン、LoRa®、4G、Mini-PCIe経由のZigbee、RS485、RS232、DI/DOテスト、安全なシャットダウンのためのUPSについて説明します。
 title: reComputer R1100の設定
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1100
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg
 slug: /recomputer_r1100_configure_system
 last_update:
   date: 2/26/2024
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_r1100_configure_system/
 ---
 
 ## 概要

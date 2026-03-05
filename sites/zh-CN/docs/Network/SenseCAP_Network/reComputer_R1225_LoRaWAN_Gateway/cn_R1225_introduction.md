@@ -2,12 +2,15 @@
 description: reComputer R1225 LoRaWAN 网关概述
 title: reComputer R1225 LoRaWAN 网关概述
 keywords:
-- SenseCAP Network
+  - SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /r1225_introduction
 last_update:
   date: 01/04/2026
   author: Kian
+createdAt: '2026-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/r1225_introduction/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer_1225_LoRaWAN_Gateway/img/Product_Appearance_Image/R1225_White_Background.png" alt="pir" width={500} height="auto" /></p>

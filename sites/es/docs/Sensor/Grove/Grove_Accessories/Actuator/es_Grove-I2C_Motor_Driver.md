@@ -1,6 +1,6 @@
 ---
 title: Grove - Controlador de Motor I2C
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Grove-I2C_Motor_Driver
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2023-01-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-I2C_Motor_Driver/
 ---
 <!-- 
 <table>

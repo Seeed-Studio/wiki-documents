@@ -1,6 +1,6 @@
 ---
 title: Grove - Recorder V3
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 107020029
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2023-01-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Recorder_v3.0/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Recorder_V3/img/cover.jpg)

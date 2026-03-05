@@ -1,18 +1,19 @@
 ---
 description: This edge audio board detects Baby Cry, Glass Break, Gunshot, alarms, and Snore in real time while keeping all data locally for privacy. In this tutorial, you will learn how to integrate it with ESPHome and Home Assistant using XIAO series for smart monitoring and automation.
-
 title: Home Assistant and Sound Event Detection Module
 keywords:
-- Sound Event Detection Module
-- Sound IoT
-- Home Assistant
-
+  - Sound Event Detection Module
+  - Sound IoT
+  - Home Assistant
 image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
 slug: /sound_event_detection_module_home_assistant
 sku: 100049596
 last_update:
   date: 3/4/2026
   author: Kasun Thushara
+createdAt: '2026-03-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/sound_event_detection_module_home_assistant/
 ---
 
 ## Introduction

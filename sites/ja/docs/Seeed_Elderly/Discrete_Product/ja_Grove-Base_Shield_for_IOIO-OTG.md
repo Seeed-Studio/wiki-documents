@@ -2,13 +2,16 @@
 description: Grove - IOIO-OTG用ベースシールド
 title: Grove - IOIO-OTG用ベースシールド
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Base_Shield_for_IOIO-OTG
 sku: 103020001
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Base_Shield_for_IOIO-OTG/
 ---
 
 

@@ -2,12 +2,15 @@
 description: 心音センサー
 title: 心音センサー
 keywords:
-- Arch
+  - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Heart-Sound_Sensor
 last_update:
   date: 05/15/2025
   author: hushuxu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Heart-Sound_Sensor/
 ---
 
 

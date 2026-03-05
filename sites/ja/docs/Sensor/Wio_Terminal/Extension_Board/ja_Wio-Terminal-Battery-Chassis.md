@@ -2,12 +2,15 @@
 description: Wio Terminal バッテリーチャーシス
 title: Wio Terminal バッテリーチャーシス
 keywords:
-- Wio_terminal Extension_Board
+  - Wio_terminal Extension_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Battery-Chassis
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-Battery-Chassis/
 ---
 
 

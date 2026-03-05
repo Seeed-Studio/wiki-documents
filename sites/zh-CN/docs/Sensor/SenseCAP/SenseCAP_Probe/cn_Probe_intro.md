@@ -2,12 +2,15 @@
 description: SenseCAP 探头介绍
 title: SenseCAP 探头
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_probes_intro
 last_update:
   date: 02/28/204
   author: Jessie
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_probes_intro/
 ---
 
 为了给您的应用带来更多便利，我们还提供了 RS485 传感器探头，用于检测土壤湿度、温度、土壤电导率和 pH 值。还将有更多 RS485 传感器即将推出。

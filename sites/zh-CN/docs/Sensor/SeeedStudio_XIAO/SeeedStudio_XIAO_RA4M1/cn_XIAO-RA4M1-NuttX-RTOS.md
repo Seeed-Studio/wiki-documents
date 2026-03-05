@@ -2,13 +2,16 @@
 description: XIAO RA4M1 与 NuttX(RTOS)
 title: XIAO RA4M1 与 NuttX(RTOS)
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
 slug: /xiao_ra4m1_nuttx
 sidebar_position: 2
 last_update:
-    date: 03/11/2025
-    author: rcsim
+  date: 03/11/2025
+  author: rcsim
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_ra4m1_nuttx/
 ---
 
 # Seeed Studio XIAO RA4M1 与 NuttX(RTOS)

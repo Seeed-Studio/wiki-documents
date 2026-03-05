@@ -2,13 +2,16 @@
 description: 60GHz mmWave Fall Detection Pro
 title: 60GHz mmWave Fall Detection Pro
 keywords:
-- mmWave_radar_sensor
+  - mmWave_radar_sensor
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Radar_MR60FDA1
 sku: 101990981
 last_update:
   date: 03/03/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Radar_MR60FDA1/
 ---
 # 60GHz mmWave センサー - 転倒検知モジュール Pro (MR60FDA1)
 

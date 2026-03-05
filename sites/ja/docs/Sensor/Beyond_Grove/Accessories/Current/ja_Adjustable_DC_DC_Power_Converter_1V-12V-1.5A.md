@@ -2,13 +2,16 @@
 description: 調整可能なDC - DC電源コンバータ（1V - 12V1.5A）
 title: 調整可能なDC - DC電源コンバータ（1V - 12V1.5A）
 keywords:
-- アクセサリ 充電
+  - アクセサリ 充電
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Adjustable_DC_DC_Power_Converter_1V-12V-1.5A
 sku: 105030005
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Adjustable_DC_DC_Power_Converter_1V-12V-1.5A/
 ---
 
 

@@ -2,14 +2,17 @@
 description: How to Use Arduino Uno R4 with LoRa Module
 title: Grove - Wio-E5 Used with Arduino Uno R4 Demo
 keywords:
-- LoRaWAN
-- Home Assistant
-- Arduino UNO R4
-- Wio E5
+  - LoRaWAN
+  - Home Assistant
+  - Arduino UNO R4
+  - Wio E5
 slug: /Grove_Wio_E5_SenseCAP_Cloud_Demo
 last_update:
   date: 2/02/2024
   author: JoJang
+createdAt: '2024-02-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove_Wio_E5_SenseCAP_Cloud_Demo/
 ---
 
 # How to Use Arduino Uno R4 with LoRa Module on Home Assistant

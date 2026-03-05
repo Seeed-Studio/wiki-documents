@@ -2,12 +2,15 @@
 description: RS485 500cm 超声波液位传感器
 title: RS485 500cm 超声波液位传感器
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor
 last_update:
   date: 3/28/2023
   author: Yvonne
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Probe/RS485_500cm_Ultrasonic_Sensor/
 ---
 
 # RS485 500cm 超声波液位传感器

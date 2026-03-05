@@ -2,13 +2,16 @@
 description: ChatGPT & DALL·E with Indicator
 title: ChatGPT - DALL·E - SenseCAP Indicator
 keywords:
-- SenseCAP Indicator ChatGPT DALL·E Application Development
+  - SenseCAP Indicator ChatGPT DALL·E Application Development
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_Application_ChatGPT
 sidebar_position: 9
 last_update:
   date: 11/16/2023
   author: Spencer
+createdAt: '2023-05-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Indicator_Application_ChatGPT/
 ---
 
 # SenseCAP Indicator - ChatGPT - DALL·E 应用开发

@@ -8,6 +8,9 @@ sidebar_position: 2
 last_update:
   date: 09/30/2024
   author: Evelyn Chen
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/wio_sx1262_xiao_esp32s3_for_meshtastic/
 ---
 
 Meshtastic es una red de malla descentralizada, fuera de la red y de código abierto construida para ejecutarse en dispositivos asequibles y de bajo consumo. Seeed Studio proporciona una gama completa de dispositivos Meshtastic listos para usar para aficionados y usuarios industriales. El Kit XIAO ESP32S3 & Wio-SX1262 es una solución flexible para desarrolladores y makers de meshtastic.

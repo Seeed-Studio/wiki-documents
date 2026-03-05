@@ -6,6 +6,9 @@ slug: /xiao_esp32s3_project_circuitpython
 last_update:
   date: 08/18/2024
   author: Isaac, Djair Guilherme
+createdAt: '2023-08-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_esp32s3_project_circuitpython/
 ---
 
 # Descripción del Proyecto

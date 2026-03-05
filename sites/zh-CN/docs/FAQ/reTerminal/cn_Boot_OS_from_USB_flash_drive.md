@@ -6,6 +6,9 @@ slug: /Boot_OS_from_USB_flash_drive
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Boot_OS_from_USB_flash_drive/
 ---
 
 <!-- Q7: 如何从USB闪存驱动器启动操作系统 -->

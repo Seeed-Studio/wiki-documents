@@ -2,14 +2,17 @@
 description: 学习如何在安装设备后配置和测试 reComputer Industrial R21xx 系列的硬件组件。本 wiki 涵盖 GPIO 映射、USER LED 测试、SPI 通信、Wi-Fi 和蓝牙扫描、LoRa®、5G、4G、通过 Mini-PCIe 的 Zigbee、RS485、RS232、DI/DO 测试以及用于安全关机的 UPS。
 title: 配置 reComputer Industrial R21xx
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer Industrial R21xx
+  - Raspberry pi
+  - Edge Controller
+  - reComputer Industrial R21xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_R21xx_configure_system
 last_update:
   date: 09/28/2025
   author: Nolan Chen
+createdAt: '2025-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_industrial_R21xx_configure_system/
 ---
 
 ## 概述

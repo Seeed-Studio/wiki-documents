@@ -12,6 +12,9 @@ slug: /iot_button_v2_ha_discovery
 last_update:
   date: 12/17/2025
   author: Citric
+createdAt: '2025-12-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/iot_button_v2_ha_discovery/
 ---
 
 # Seeed HA Discovery 経由で IoT Button V2 を Home Assistant に接続

@@ -11,6 +11,9 @@ sku: 114993560,114993627
 last_update:
   date: 11/4/2025
   author: JiahaoLi
+createdAt: '2025-11-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recomputer_ai_r2140_balena/
 ---
 
 [balena](https://www.balena.io/) 是一个物联网（IoT）平台，旨在帮助开发者在设备群中构建、部署和管理 IoT 应用程序。它支持广泛的设备架构，包括容器化应用程序部署功能，使您能够轻松更新 IoT 软件和主机操作系统，修复错误并为 IoT 应用程序引入新功能。balena 提供了一种统一的方式来推送代码更新、管理设备配置，并确保设备在现场可靠安全地运行，无论其位置或网络条件如何。

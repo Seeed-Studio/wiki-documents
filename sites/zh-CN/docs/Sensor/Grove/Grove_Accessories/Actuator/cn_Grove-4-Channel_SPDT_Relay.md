@@ -1,6 +1,6 @@
 ---
 title: Grove - 4通道 SPDT 继电器
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020133
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-4-Channel_SPDT_Relay/
 ---
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-4-Channel_SPDT_Relay/img/main.jpg" /><figcaption><b /><i /></figcaption>

@@ -2,15 +2,18 @@
 description: 使用 Seeed Studio XIAO MG24 的蓝牙功能。
 title: Seeed Studio XIAO MG24 蓝牙使用
 keywords:
-- MG24
-- xiao
-- ble
-- bluetooth
+  - MG24
+  - xiao
+  - ble
+  - bluetooth
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/ble-cover.webp
 slug: /xiao_mg24_bluetooth
 last_update:
   date: 02/8/2025
   author: Hugo
+createdAt: '2025-02-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_mg24_bluetooth/
 ---
 
 # 使用 Seeed Studio XIAO MG24 的蓝牙功能

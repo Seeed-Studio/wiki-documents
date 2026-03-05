@@ -2,14 +2,17 @@
 description: Jetson のディスク暗号化方法
 title: Jetson のディスク暗号化方法
 keywords:
-- jetson
-- encrypt
-- L4T
+  - jetson
+  - encrypt
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /how_to_encrypt_the_disk_for_jetson
 last_update:
   date: 10/11/2025
   author: Dayu
+createdAt: '2025-10-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/how_to_encrypt_the_disk_for_jetson/
 ---
 
 **この Wiki では L4T 36.4.3 と reComputer J401 を例に、Jetson ディスク暗号化の参考手順を提供します。

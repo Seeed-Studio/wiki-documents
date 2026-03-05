@@ -2,14 +2,17 @@
 description: Star Wars Theme Player with XIAO ESP32S3
 title: Star Wars Theme Player
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_streams_memory
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2024-07-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/respeaker_streams_memory/
 ---
 
 This project demonstrates how to play the Star Wars theme song using the reSpeaker Lite board. 

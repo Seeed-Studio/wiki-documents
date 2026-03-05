@@ -1,13 +1,16 @@
 ---
 description: Código lambda de ubicación
 keywords:
-- Tracker
-- Wio
+  - Tracker
+  - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /location_lambda_code
 last_update:
   date: 11/24/2023
   author: Jessie
+createdAt: '2023-10-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/location_lambda_code/
 ---
 
 ```cpp

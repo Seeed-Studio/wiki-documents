@@ -3,15 +3,18 @@ sidebar_position: 2
 title: SenseCraft 数据平台 API 定价
 description: SenseCraft 数据平台 API 定价
 keywords:
-- Cloud
-- SenseCraft Data Platform
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud
+  - SenseCraft Data Platform
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-fee/sensecraft-data-platform-api-pricing
 aliases:
   - /Cloud_Chain/SenseCAP_API/API_pricing
 last_update:
   date: 06/06/2025
   author: Jancee
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-fee/sensecraft-data-platform-api-pricing/
 ---
 
 # SenseCraft 数据平台 API 定价

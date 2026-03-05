@@ -1,6 +1,6 @@
 ---
 title: Lipo Rider V1.1
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Lipo_Rider_V1.1
 last_update:
   date: 02/03/2022
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Lipo_Rider_V1.1/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Lipo_Rider_V1.1/img/Liporider-setup.jpg)

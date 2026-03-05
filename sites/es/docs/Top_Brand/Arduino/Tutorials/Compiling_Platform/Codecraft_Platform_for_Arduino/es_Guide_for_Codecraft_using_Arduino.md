@@ -2,14 +2,17 @@
 description: Guía para Codecraft usando Arduino
 title: Guía para Codecraft usando Arduino
 keywords:
-- Arduino
-- Tutorials
-- Codecraft_Platform_for_Arduino
+  - Arduino
+  - Tutorials
+  - Codecraft_Platform_for_Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Guide_for_Codecraft_using_Arduino
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Guide_for_Codecraft_using_Arduino/
 ---
 
 # Guía para Codecraft usando Arduino

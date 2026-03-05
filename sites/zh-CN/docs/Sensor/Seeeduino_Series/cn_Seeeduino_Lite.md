@@ -2,13 +2,16 @@
 description: Seeeduino Lite
 title: Seeeduino Lite
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Lite
 sku: 102010008
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeeduino_Lite/
 ---
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Lite/image/400px-Lite_01.jpg)
 

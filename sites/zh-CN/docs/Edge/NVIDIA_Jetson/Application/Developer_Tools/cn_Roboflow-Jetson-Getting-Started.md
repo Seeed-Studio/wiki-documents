@@ -11,6 +11,9 @@ slug: /Roboflow-Jetson-Getting-Started
 last_update:
   date: 10/26/2023
   author: Lakshantha
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Roboflow-Jetson-Getting-Started/
 ---
 
 # 在 NVIDIA® Jetson 设备上开始使用 Roboflow 推理

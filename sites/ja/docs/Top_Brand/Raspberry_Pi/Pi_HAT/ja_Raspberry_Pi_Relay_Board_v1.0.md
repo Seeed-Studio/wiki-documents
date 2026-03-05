@@ -2,13 +2,16 @@
 description: Raspberry Pi用4チャンネルSPDTリレーハット
 title: Raspberry Pi用4チャンネルSPDTリレーハット
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_Pi_Relay_Board_v1.0
 sku: 103030029,114992543
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Raspberry_Pi_Relay_Board_v1.0/
 ---
 
 

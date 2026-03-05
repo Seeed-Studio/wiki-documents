@@ -2,13 +2,16 @@
 description: Raspberry Pi Pico 向け Grove シールド / Grove スターターキット
 title: Raspberry Pi Pico 向け Grove ベーシックキット
 keywords:
-- Pi_Pico
+  - Pi_Pico
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Starter-Kit-for-Raspberry-Pi-Pico
 sku: 102110537, 110061282, 102110545, 103100142, 110061283
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Starter-Kit-for-Raspberry-Pi-Pico/
 ---
 
 

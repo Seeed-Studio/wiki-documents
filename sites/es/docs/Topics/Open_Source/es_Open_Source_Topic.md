@@ -2,12 +2,15 @@
 description: Esta página es una colección de todo el contenido de código abierto de Seeed Studio.
 title: Código Abierto
 keywords:
-- tinyml
+  - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /open_source_topic
 last_update:
   date: 12/18/2023
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/open_source_topic/
 ---
 
 # Código Abierto en Seeed Studio

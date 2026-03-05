@@ -6,7 +6,10 @@ slug: /How_to_use_and_write_a_library
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/How_to_use_and_write_a_library/
 ---
 
 Arduino popularity largely dependent on a large number of excellent and easy to use Library. The Arduino Library using object-oriented C + + class library from, you can use it easily without knowing the implementation details of the Library.

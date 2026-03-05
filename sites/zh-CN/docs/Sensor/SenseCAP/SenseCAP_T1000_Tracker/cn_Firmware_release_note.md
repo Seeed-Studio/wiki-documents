@@ -2,13 +2,16 @@
 description: SenseCAP T1000-A/B Tracker 固件发布说明
 title: 固件升级和发布说明
 keywords:
-- Tracker
-- Firmware
+  - Tracker
+  - Firmware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /fm_release_for_SenseCAP_T1000
 last_update:
   date: 1/1/2023
   author: Jessie
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/fm_release_for_SenseCAP_T1000/
 ---
 
 ### 固件升级

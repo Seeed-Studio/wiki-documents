@@ -8,6 +8,9 @@ slug: /J401_carrierboard_Hardware_Interfaces_Usage
 last_update:
   date: 04/29/2024
   author: Jiahao
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/J401_carrierboard_Hardware_Interfaces_Usage/
 ---
 ## はじめに
 

@@ -1,5 +1,5 @@
 ---
-description: This guide provides a detailed overview of the reComputer Super's hardware components and interfaces, including how to connect and use devices such as CSI cameras, USB ports, various M.2 interfaces, mini PCIe, RTC, Ethernet, LEDs, fans, CAN, extension ports, and HDMI, with step - by - step instructions and command examples. 
+description: This guide provides a detailed overview of the reComputer Super's hardware components and interfaces, including how to connect and use devices such as CSI cameras, USB ports, various M.2 interfaces, mini PCIe, RTC, Ethernet, LEDs, fans, CAN, extension ports, and HDMI, with step - by - step instructions and command examples.
 title: reComputer Super Hardware and Interfaces Usage
 keywords:
   - reComputer Super
@@ -10,6 +10,9 @@ slug: /recomputer_jetson_super_hardware_interfaces_usage
 last_update:
   date: 05/26/2025
   author: Zibo
+createdAt: '2025-05-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_jetson_super_hardware_interfaces_usage/
 ---
 
 <div align="center">

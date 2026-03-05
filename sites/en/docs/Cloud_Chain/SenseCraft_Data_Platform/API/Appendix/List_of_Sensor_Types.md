@@ -3,14 +3,17 @@ sidebar_position: 1
 description: List_of_Sensor_Types
 title: List of Sensor Types
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/api/appendix/list_of_sensor_types
 aliases:
   - /Cloud_Chain/SenseCAP_API/Appendix/List_of_Sensor_Types
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2023-03-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-data-platform/api/appendix/list_of_sensor_types/
 ---
 
 <div class="post-header">

@@ -2,15 +2,18 @@
 description: 本维基提供的是 Starai Arm 机械臂ROS2 Moveit 使用教程。
 title: StarAi 机械臂ROS2 Moveit
 keywords:
-- Moveit
-- ROS2
-- Arm
-- Robotics 
+  - Moveit
+  - ROS2
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /starai_arm_ros_moveit
 last_update:
   date: 8/1/2025
   author: LiShanghang
+createdAt: '2025-07-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/starai_arm_ros_moveit/
 ---
 
 

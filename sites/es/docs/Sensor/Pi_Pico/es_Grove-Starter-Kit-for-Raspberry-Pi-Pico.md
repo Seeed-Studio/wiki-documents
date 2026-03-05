@@ -2,13 +2,16 @@
 description: Grove Shield / Grove Starter Kit para Raspberry Pi Pico
 title: Grove Basic Kit para Raspberry Pi Pico
 keywords:
-- Pi_Pico
+  - Pi_Pico
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Starter-Kit-for-Raspberry-Pi-Pico
 sku: 102110537, 110061282, 102110545, 103100142, 110061283
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Starter-Kit-for-Raspberry-Pi-Pico/
 ---
 
 

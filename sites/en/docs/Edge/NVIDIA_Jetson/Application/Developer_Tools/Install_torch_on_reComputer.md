@@ -15,6 +15,9 @@ slug: /install_torch_on_recomputer
 last_update:
   date: 07/25/2025
   author: Zibo
+createdAt: '2025-07-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/install_torch_on_recomputer/
 ---
 
 <div style={{ textAlign: "justify" }}>

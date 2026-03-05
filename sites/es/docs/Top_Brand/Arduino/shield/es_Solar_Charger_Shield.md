@@ -2,12 +2,15 @@
 description: Escudo Cargador Solar
 title: Escudo Cargador Solar
 keywords:
-- Arduino shield
+  - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Solar_Charger_Shield
 last_update:
   date: 2/16/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Solar_Charger_Shield/
 ---
 
 <!-- ---

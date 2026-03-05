@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 12/04/2024
   author: Citric
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai/
 ---
 
 # SenseCraft AIでのGrove Vision AI V2のモデル出力設定

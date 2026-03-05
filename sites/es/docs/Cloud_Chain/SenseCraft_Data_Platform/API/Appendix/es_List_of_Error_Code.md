@@ -3,14 +3,17 @@ sidebar_position: 4
 description: Lista_de_Códigos_de_Error
 title: Lista de Códigos de Error
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/api/appendix/list_of_error_code
 aliases:
   - /Cloud_Chain/SenseCAP_API/Appendix/List_of_Error_Code
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-data-platform/api/appendix/list_of_error_code/
 ---
 
 <div class="post-header">

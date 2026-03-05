@@ -2,12 +2,15 @@
 description: APIs de Web Bluetooth
 title: APIs de Web Bluetooth
 keywords:
-- Wio_terminal Bluetooth
+  - Wio_terminal Bluetooth
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Web-Bluetooth
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-Web-Bluetooth/
 ---
 
 # Usando APIs de Web Bluetooth con Wio Terminal

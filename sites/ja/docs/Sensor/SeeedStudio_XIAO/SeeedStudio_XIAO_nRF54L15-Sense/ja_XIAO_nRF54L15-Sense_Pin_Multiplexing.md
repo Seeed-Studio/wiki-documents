@@ -1,6 +1,6 @@
 ---
 title: Seeed Studio XIAO nRF54L15 Sense のピン多重化
-description: |
+description: ''
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /xiao_nrf54l15_sense_pin_multiplexing
 sidebar_position: 2
@@ -10,6 +10,9 @@ keywords:
 last_update:
   date: 7/2/2025
   author: Jason
+createdAt: '2025-09-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_nrf54l15_sense_pin_multiplexing/
 ---
 
 使いやすさのため、以下のピン多重化の例はすべて **PlatformIO** で実行されます。[XIAO nRF54L5](https://wiki.seeedstudio.com/ja/xiao_nrf54l15_with_platform_io/) の設定と使用ガイドについては、このリンクをクリックしてください。

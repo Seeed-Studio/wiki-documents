@@ -3,23 +3,27 @@ description: Guide for using mcp endpoint
 title: MCP Endpoint
 sidebar_position: 5
 keywords:
-- AI
-- SenseCAP
-- Watcher
-- Agent
-- Endpoint
-- Model
-- Context
-- protocol
-- MCP
-- Server
+  - AI
+  - SenseCAP
+  - Watcher
+  - Agent
+  - Endpoint
+  - Model
+  - Context
+  - protocol
+  - MCP
+  - Server
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /mcp_endpoint
 last_update:
   date: 10/30/2025
   author: Twelve
 translation:
-  skip: [ zh-CN ]
+  skip:
+    - zh-CN
+createdAt: '2025-10-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/mcp_endpoint/
 ---
 
 # MCP Endpoint

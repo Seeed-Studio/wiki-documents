@@ -2,12 +2,15 @@
 description: Firmware de Juegos Retro para Wio Terminal
 title: Firmware de Juegos Retro para Wio Terminal
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Firmware
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-Firmware/
 ---
 
 # Firmware de Juegos Retro para Wio Terminal

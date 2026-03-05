@@ -1,6 +1,6 @@
 ---
 title: Wio LTE Cat.1
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991022, 102991024, 102990925, 102990924, 102990923, 102990837, 102991023
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio_LTE_Cat.1/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_lte_v1.3.jpg)

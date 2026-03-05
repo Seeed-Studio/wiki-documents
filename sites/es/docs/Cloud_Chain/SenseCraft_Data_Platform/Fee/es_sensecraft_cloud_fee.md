@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 description: Tarifa de SenseCraft Cloud
-title:  Tarifa de SenseCraft Cloud
+title: Tarifa de SenseCraft Cloud
 keywords:
-- SenseCraft
+  - SenseCraft
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-fee/sensecraft-cloud-fee
 aliases:
@@ -11,6 +11,9 @@ aliases:
 last_update:
   date: 8/16/2024
   author: Jessie
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-fee/sensecraft-cloud-fee/
 ---
 
 

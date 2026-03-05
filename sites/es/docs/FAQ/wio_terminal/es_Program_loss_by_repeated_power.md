@@ -5,6 +5,9 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Program_loss_by_repeated_power
 date: 1/31/2024
 author: Seraphina
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Program_loss_by_repeated_power/
 ---
 
 

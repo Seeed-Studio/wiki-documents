@@ -12,7 +12,10 @@ slug: /convert_model_to_edge_tpu_tflite_format_for_google_coral
 last_update:
   date: 07/23/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/convert_model_to_edge_tpu_tflite_format_for_google_coral/
 ---
 
 # Google Coral用にモデルをEdge TPU TFlite形式に変換する

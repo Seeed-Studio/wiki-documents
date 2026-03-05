@@ -2,13 +2,16 @@
 description: Get_Started_with_EcoEye–Embedded_Vision_Camera
 title: Comenzar con EcoEye–Cámara de Visión Embebida
 keywords:
-- EcoEye–Embedded_Vision_Camera
+  - EcoEye–Embedded_Vision_Camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Get_Started_with_EcoEye_Embedded_Vision_Camera
 sku: 101991121
 last_update:
   date: 11/24/2023
   author: Yvonne
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Get_Started_with_EcoEye_Embedded_Vision_Camera/
 ---
 
 

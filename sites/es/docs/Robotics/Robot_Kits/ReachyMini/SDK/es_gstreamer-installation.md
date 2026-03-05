@@ -3,20 +3,24 @@ description: Guía completa de instalación de GStreamer para Reachy Mini en Lin
 title: Instalación de GStreamer
 slug: /reachymini_sdk_gstreamer-installation
 keywords:
-- gstreamer
-- installation
-- webrtc
-- video streaming
-- audio streaming
-- linux
-- macos
-- windows
-- dependencies
+  - gstreamer
+  - installation
+  - webrtc
+  - video streaming
+  - audio streaming
+  - linux
+  - macos
+  - windows
+  - dependencies
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_sdk_gstreamer-installation/
 ---
 
 # 📡 Instalación de GStreamer

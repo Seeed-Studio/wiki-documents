@@ -2,12 +2,15 @@
 description: Xadow 可穿戴套件适用于 Edison
 title: Xadow 可穿戴套件适用于 Edison
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Wearable_Kit_For_Edison
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Xadow_Wearable_Kit_For_Edison/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Xadow_Wearable_Kit_For_Edison/img/Xadow_Wearable_Kit_For_Edison02.png)

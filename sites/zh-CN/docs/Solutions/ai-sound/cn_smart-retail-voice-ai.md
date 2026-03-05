@@ -1,5 +1,5 @@
 ---
-description: "智能零售语音 AI 服务。捕获对话，运行设备端语音转文本，将客户语音转化为洞察。"
+description: 智能零售语音 AI 服务。捕获对话，运行设备端语音转文本，将客户语音转化为洞察。
 title: 智能零售语音 AI
 keywords:
   - Smart Retail
@@ -20,6 +20,9 @@ last_update:
   author: Spencer
 tags:
   - smart-retail
+createdAt: '2025-12-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/solutions/smart-retail-voice-ai-solution-1/
 ---
 
 利用 Seeed 的智能零售语音 AI 解决方案来捕获和分析店内客户对话。我们的边缘 AI 技术支持设备端语音转文本处理，将语音数据转化为可操作的洞察，无需依赖云服务。通过我们专为零售环境定制的离线 AI 驱动语音分析，提升客户体验、优化店铺运营并获得宝贵反馈。

@@ -2,13 +2,16 @@
 description: 所有データセット、ラベリング、トレーニング、そしてXIAO ESP32S3への展開に関するガイダンス。
 title: データセットからXIAO ESP32S3へのモデル展開
 keywords:
-- SSCMA
-- xiao
+  - SSCMA
+  - xiao
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sscma
 last_update:
   date: 03/12/2024
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_sscma/
 ---
 
 

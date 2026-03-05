@@ -1,6 +1,6 @@
 ---
 title: Kit Deluxe Wio Link
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 110020052
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio_Link_Deluxe_Kit/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Wio_Link_Deluxe_Kit/img/Wio_Link_Deluxe_Kit_product_view_1200_s.jpg)

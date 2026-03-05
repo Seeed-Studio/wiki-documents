@@ -2,13 +2,16 @@
 description: Grove - Pantalla OLED 0.96" (SSD1315)
 title: Grove - Pantalla OLED 0.96" (SSD1315)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED-Display-0.96-SSD1315
 sku: 104020208
 last_update:
   date: 1/9/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-OLED-Display-0.96-SSD1315/
 ---
 
 

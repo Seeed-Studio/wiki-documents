@@ -2,13 +2,16 @@
 description: XIAO nRF52840でAmazon Sidewalkのサービスをデプロイする方法を紹介します。
 title: Amazon SidewalkでのSeeed Studio XIAO nRF52840
 keywords:
-- sidewalk
-- XIAO BLE
+  - sidewalk
+  - XIAO BLE
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-ble-sidewalk
 last_update:
   date: 05/17/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao-ble-sidewalk/
 ---
 
 # Amazon SidewalkでのSeeed Studio XIAO nRF52840

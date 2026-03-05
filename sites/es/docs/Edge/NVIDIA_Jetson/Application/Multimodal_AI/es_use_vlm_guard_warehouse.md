@@ -2,15 +2,18 @@
 description: Este wiki proporciona un tutorial sobre cómo usar Llava en el reComputer Industrial J4012 para monitorear tu almacén y controlar los colores de las luces de advertencia a través de RS485, ayudando a garantizar la seguridad del almacén.
 title: Usar Llava para proteger tu almacén
 keywords:
-- Multimodal 
-- LLava
-- RS485
-- VLM
+  - Multimodal
+  - LLava
+  - RS485
+  - VLM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /vlm
 last_update:
   date: 10/10/2025
   author: Jiahao Li
+createdAt: '2025-10-11'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/vlm/
 ---
 
 # Cómo usar LLaVa en el reComputer Industrial J4012 para monitorear tu almacén

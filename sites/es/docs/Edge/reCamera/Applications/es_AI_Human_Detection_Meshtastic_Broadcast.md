@@ -2,18 +2,21 @@
 title: Detección Humana con IA y Notificación vía Meshtastic
 description: Este wiki demuestra un sistema de detección humana impulsado por IA utilizando una cámara con IA y redes Meshtastic con XIAO ESP32S3 y Wio SX1262 para difundir alertas en tiempo real.
 keywords:
-    - Detección Humana con IA
-    - XIAO ESP32S3
-    - ESP-Mesh
-    - Edge AI
-    - Disparo por GPIO
+  - Detección Humana con IA
+  - XIAO ESP32S3
+  - ESP-Mesh
+  - Edge AI
+  - Disparo por GPIO
 slug: /ai_human_detection_meshtastic_broadcast
 sku: 100029708,102010611,114993649
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 1
 last_update:
-    date: 2026-01-28
-    author: John Xiang
+  date: 2026-01-28T00:00:00.000Z
+  author: John Xiang
+createdAt: '2026-01-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ai_human_detection_meshtastic_broadcast/
 ---
 
 ## Introducción

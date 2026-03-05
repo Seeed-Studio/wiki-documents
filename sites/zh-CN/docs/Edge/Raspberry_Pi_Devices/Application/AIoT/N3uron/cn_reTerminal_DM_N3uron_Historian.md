@@ -5,7 +5,7 @@ keywords:
   - reTerminal DM
   - Getting started
   - IIoT
-  - Industrial 
+  - Industrial
   - N3uron
   - Historian
   - MangoDB
@@ -14,6 +14,9 @@ slug: /reTerminalDM_N3uron_Historian
 last_update:
   date: 4/4/2024
   author: Xabier Fernández and Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminalDM_N3uron_Historian/
 ---
 ## 介绍
 

@@ -2,13 +2,16 @@
 description: Grove - ホルムアルデヒドセンサー
 title: Grove - ホルムアルデヒドセンサー
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/Grove-Formaldehyde-Sensor-(SFA30)_v1.02-SCH/GroveFormaldehydehardware.jpg
 slug: /Grove-Formaldehyde-Sensor
 sku: 101020972
 last_update:
   date: 05/15/2025
   author: Spencer Yan
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Formaldehyde-Sensor/
 ---
 
 

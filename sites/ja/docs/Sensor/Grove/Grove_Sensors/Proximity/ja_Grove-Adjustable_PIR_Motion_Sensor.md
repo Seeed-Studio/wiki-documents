@@ -1,6 +1,6 @@
 ---
 title: Grove - 調整可能なPIRモーションセンサー
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウラス
@@ -10,6 +10,9 @@ sku: 101020617
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Adjustable_PIR_Motion_Sensor/
 ---
 
 

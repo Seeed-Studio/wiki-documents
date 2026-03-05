@@ -1,7 +1,7 @@
 ---
 description: YOLOv8でカスタム分類モデルを訓練・デプロイする
 title: YOLOv8でカスタム分類モデルを訓練・デプロイする
-keywords: 
+keywords:
   - yolov8
   - custom classification model
   - classification model
@@ -10,6 +10,9 @@ slug: /train_and_deploy_a_custom_classification_model_with_yolov8
 last_update:
   date: 06/11/2024
   author: Bruno
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/train_and_deploy_a_custom_classification_model_with_yolov8/
 ---
 
 

@@ -15,6 +15,9 @@ sidebar_position: 2
 last_update:
   date: 09/25/2025
   author: Parker Hu
+createdAt: '2025-10-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recamera_hq_poe_hardware/
 ---
 
 # reCamera HQ POE 概要

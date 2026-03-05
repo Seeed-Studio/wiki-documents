@@ -3,7 +3,7 @@ description: 使用 reTerminal 和 Pi 摄像头通过 OpenCV 进行人脸检测
 title: 使用 reTerminal 和 Pi 摄像头通过 OpenCV 进行人脸检测
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
   - Face-Detection
@@ -12,6 +12,9 @@ slug: /reTerminal_DM_Face_detection
 last_update:
   date: 11/7/2023
   author: Kasun Thushara
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reTerminal_DM_Face_detection/
 ---
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/facedetection.gif" /></center>

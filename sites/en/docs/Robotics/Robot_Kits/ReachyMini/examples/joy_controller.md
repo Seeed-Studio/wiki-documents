@@ -3,18 +3,22 @@ description: Example demonstrating how to control Reachy Mini's head yaw angle u
 title: Joystick Controller
 slug: /reachymini_examples_joy_controller
 keywords:
-- joystick
-- controller
-- ps4
-- xbox
-- pygame
-- real-time control
-- head yaw
+  - joystick
+  - controller
+  - ps4
+  - xbox
+  - pygame
+  - real-time control
+  - head yaw
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_examples_joy_controller/
 ---
 
 # Joystick Controller

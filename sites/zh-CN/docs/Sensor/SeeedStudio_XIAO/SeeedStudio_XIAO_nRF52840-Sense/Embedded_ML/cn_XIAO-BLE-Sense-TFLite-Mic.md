@@ -2,12 +2,15 @@
 description: 语音识别
 title: 语音识别
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-TFLite-Mic
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-BLE-Sense-TFLite-Mic/
 ---
 
 # 在 Seeed Studio XIAO nRF52840 Sense 上进行语音识别

@@ -2,13 +2,16 @@
 description: Skeleton_Box_10x7_10x10_17x10
 title: Skeleton Box 10x7 10x10 17x10
 keywords:
-- Skeleton_Box_10x7_10x10_17x10
+  - Skeleton_Box_10x7_10x10_17x10
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_Box_10x7_10x10_17x10
 sku: 110990160, 110990159, 110990158
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2023-02-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Skeleton_Box_10x7_10x10_17x10/
 ---
 
 When you build a Demo, do you want to select a suitable shell for improving  whole felling?

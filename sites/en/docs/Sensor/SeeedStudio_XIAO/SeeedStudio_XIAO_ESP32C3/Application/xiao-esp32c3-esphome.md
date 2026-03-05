@@ -2,13 +2,16 @@
 description: Accessing ESPHome with XIAO ESP32C3
 title: XIAO ESP32C3 accesses Home Assistant via ESPHome service
 keywords:
-- ESPHome
+  - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-esp32c3-esphome
 sku: 113991054,101991030,102010633
 last_update:
   date: 03/03/2023
   author: Citric
+createdAt: '2023-03-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao-esp32c3-esphome/
 ---
 
 # XIAO ESP32C3 accesses Home Assistant via ESPHome service

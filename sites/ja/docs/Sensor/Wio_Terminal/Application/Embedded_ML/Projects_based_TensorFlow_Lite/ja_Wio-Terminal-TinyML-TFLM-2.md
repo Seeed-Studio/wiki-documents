@@ -2,14 +2,17 @@
 description: BME280による天気予測
 title: BME280による天気予測
 keywords:
-- Wio_terminal 
-- Embedded_ML 
-- Projects_based_TensorFlow_Lite
+  - Wio_terminal
+  - Embedded_ML
+  - Projects_based_TensorFlow_Lite
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML-TFLM-2
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-TinyML-TFLM-2/
 ---
 
 

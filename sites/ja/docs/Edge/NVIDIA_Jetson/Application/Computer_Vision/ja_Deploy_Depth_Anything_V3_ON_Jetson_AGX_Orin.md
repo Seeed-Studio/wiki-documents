@@ -2,21 +2,24 @@
 description: このwikiは、Jetson AGX Orinデバイス上でDepth Anything V3をデプロイするための包括的なステップバイステップガイドを提供します。環境設定、主要な依存関係（CUDA、ROS2、TensorRT）のインストール、TensorRTエンジンへのモデル変換、USBカメラ統合によるリアルタイム深度推定をカバーしています。このガイドでは、Depth Anything V3が単一のRGB画像から最小限の計算オーバーヘッドで高品質な深度マップを生成する能力を強調し、エッジデバイス上でのロボティクス、自律ナビゲーション、3D知覚アプリケーションに理想的であることを示しています。
 title: Jetson AGX Orin上でDepth Anything V3をデプロイ
 keywords:
-- Depth Anything V3
-- Jetson AGX Orin
-- 深度推定
-- TensorRT
-- ROS2
-- コンピュータビジョン
-- ロボティクス
-- 3D知覚
-- USBカメラ
-- エッジAI
+  - Depth Anything V3
+  - Jetson AGX Orin
+  - 深度推定
+  - TensorRT
+  - ROS2
+  - コンピュータビジョン
+  - ロボティクス
+  - 3D知覚
+  - USBカメラ
+  - エッジAI
 image: https://files.seeedstudio.com/wiki/deploy_depth_anything_v3/da3_head.webp
 slug: /deploy_depth_anything_v3_jetson_agx_orin
 last_update:
-  date: 2026-01-09
+  date: 2026-01-09T00:00:00.000Z
   author: Zibo
+createdAt: '2026-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/deploy_depth_anything_v3_jetson_agx_orin/
 ---
 
 <div align="center">

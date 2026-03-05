@@ -14,6 +14,9 @@ sku: 107990333
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2025-05-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_midi_synthesizer/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/1.jpg" style={{width:600, height:'auto'}}/></div><br />

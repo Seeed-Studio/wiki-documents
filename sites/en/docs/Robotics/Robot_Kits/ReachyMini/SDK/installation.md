@@ -3,19 +3,23 @@ description: Comprehensive installation guide for Reachy Mini Python SDK and dae
 title: Installation Guide
 slug: /reachymini_sdk_installation
 keywords:
-- installation
-- setup
-- python
-- virtual environment
-- uv
-- git
-- prerequisites
-- cross-platform
+  - installation
+  - setup
+  - python
+  - virtual environment
+  - uv
+  - git
+  - prerequisites
+  - cross-platform
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_sdk_installation/
 ---
 
 # 📦 Installation Guide

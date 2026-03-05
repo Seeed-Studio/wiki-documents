@@ -1,7 +1,7 @@
 ---
 description: 使用 YOLOv8 训练和部署自定义分类模型
 title: 使用 YOLOv8 训练和部署自定义分类模型
-keywords: 
+keywords:
   - yolov8
   - custom classification model
   - classification model
@@ -10,6 +10,9 @@ slug: /train_and_deploy_a_custom_classification_model_with_yolov8
 last_update:
   date: 06/11/2024
   author: Bruno
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/train_and_deploy_a_custom_classification_model_with_yolov8/
 ---
 
 

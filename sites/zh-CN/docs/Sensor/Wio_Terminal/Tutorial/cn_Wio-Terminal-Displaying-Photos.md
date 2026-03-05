@@ -2,12 +2,15 @@
 description: Wio Terminal 显示照片
 title: Wio Terminal 显示照片
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Displaying-Photos
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-Displaying-Photos/
 ---
 
 # Wio Terminal 显示照片

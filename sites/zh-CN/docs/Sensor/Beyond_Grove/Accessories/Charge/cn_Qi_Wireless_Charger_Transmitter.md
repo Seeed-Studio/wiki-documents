@@ -1,6 +1,6 @@
 ---
 title: Qi无线充电发射器
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113030020
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Qi_Wireless_Charger_Transmitter/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Qi_Wireless_Charger_Transmitter/img//Qi_Wireless_Charger_Photo.jpg)

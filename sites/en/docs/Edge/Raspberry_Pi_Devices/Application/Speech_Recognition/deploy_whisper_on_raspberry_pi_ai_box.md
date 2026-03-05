@@ -1,6 +1,6 @@
 ---
 description: Learn how to deploy whisper on raspberry pi ai box.
-title: Deploy Whisper on  Raspberry Pi AI box & Industiral AI box. 
+title: Deploy Whisper on  Raspberry Pi AI box & Industiral AI box.
 keywords:
   - Whisper
   - Hailo8
@@ -11,7 +11,10 @@ sku: 114993627, 100061305, 100097052, 114993595, 100077451, 100080766, 100020831
 last_update:
   date: 01/19/2026
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/deploy_whisper_on_raspberry_pi_ai_box/
 ---
 
 # Deploy Whisper on  Raspberry Pi AI box

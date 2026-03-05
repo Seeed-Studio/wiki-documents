@@ -2,14 +2,17 @@
 description: Uso del Botón Usr con XIAO ESP32S3
 title: Uso del Botón Usr
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_button
 last_update:
   date: 8/16/2024
   author: Jessie
+createdAt: '2024-08-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/respeaker_button/
 ---
 
 

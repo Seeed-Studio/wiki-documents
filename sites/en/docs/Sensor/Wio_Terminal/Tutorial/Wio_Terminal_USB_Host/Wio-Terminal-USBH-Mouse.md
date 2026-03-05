@@ -2,12 +2,15 @@
 description: Mouse
 title: Mouse
 keywords:
-- Wio_terminal USB_Host
+  - Wio_terminal USB_Host
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-USBH-Mouse
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-USBH-Mouse/
 ---
 
 # Using USB Mouse on Wio Terminal

@@ -2,13 +2,16 @@
 description: Paquete educativo Grove Beginner Kit para Arduino
 title: Paquete educativo Grove Beginner Kit para Arduino
 keywords:
-- Kit with Courses
+  - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Beginner-Kit-for-Arduino-education-pack
 sku: 110020328
 last_update:
   date: 2/14/2023
   author: hushuxu
+createdAt: '2023-02-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Beginner-Kit-for-Arduino-education-pack/
 ---
 # Grove Beginner Kit para Proyectos Arduino
 

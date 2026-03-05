@@ -2,14 +2,17 @@
 description: Grove Vision AI V2とHome Assistantを使用して群衆密度ヒートマップを構築する方法。
 title: Grove Vision AI V2とHome Assistantを使用した群衆密度の構築
 keywords:
-- matter
-- XIAO
-- light
+  - matter
+  - XIAO
+  - light
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /vision_ai_v2_crowd_heat_map
 last_update:
   date: 05/15/2025
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/vision_ai_v2_crowd_heat_map/
 ---
 
 

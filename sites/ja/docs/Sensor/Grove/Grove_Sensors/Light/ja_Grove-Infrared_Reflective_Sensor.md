@@ -2,13 +2,16 @@
 description: Grove - 赤外線反射センサー
 title: Grove - 赤外線反射センサー
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Infrared_Reflective_Sensor
 sku: 101020174, 101020029
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Infrared_Reflective_Sensor/
 ---
 
 

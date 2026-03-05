@@ -2,12 +2,15 @@
 description: 总太阳辐射传感器
 title: 总太阳辐射传感器
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/Total_Solar_Radiation_Sensor/image1.webp
 slug: /total_solar_radiation_sensor
 last_update:
   date: 4/23/2025
   author: Leo
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/total_solar_radiation_sensor/
 ---
 
 # 总太阳辐射传感器

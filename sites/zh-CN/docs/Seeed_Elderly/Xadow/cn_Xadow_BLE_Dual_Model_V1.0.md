@@ -2,12 +2,15 @@
 description: Xadow - BLE（双模）v1.0
 title: Xadow - BLE（双模）v1.0
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_BLE_Dual_Model_V1.0
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Xadow_BLE_Dual_Model_V1.0/
 ---
 
 <img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_PhotoBottom.jpg" alt="some_text"/>

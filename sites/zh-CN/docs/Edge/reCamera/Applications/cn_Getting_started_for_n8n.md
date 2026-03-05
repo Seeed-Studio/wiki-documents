@@ -10,6 +10,9 @@ sidebar_position: 9
 last_update:
   date: 11/19/2025
   author: Xinrui Wu
+createdAt: '2025-11-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/getting_started_for_n8n_with_recamera/
 ---
 # reCamera 的 n8n 入门指南
 

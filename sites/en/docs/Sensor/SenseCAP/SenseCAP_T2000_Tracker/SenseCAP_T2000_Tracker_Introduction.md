@@ -2,13 +2,16 @@
 description: SenseCAP_T2000_tracker_Introduction
 title: Introduction
 keywords:
-- SenseCAP_T2000_tracker
+  - SenseCAP_T2000_tracker
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_T2000_Tracker/SenseCAP_T2000_Tracker_All_Model.webp
 slug: /SenseCAP_T2000_tracker/Introduction
 sku: 100082900,100057727,100087298
 last_update:
   date: 1/5/2026
   author: Janet
+createdAt: '2025-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_T2000_tracker/Introduction/
 ---
 
 

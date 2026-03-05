@@ -2,12 +2,15 @@
 description: Sensor de Luz Wio Terminal
 title: Sensor de Luz Wio Terminal
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100-Light-Sensor-Grove-LoRa-E5
 last_update:
   date: 1/12/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/K1100-Light-Sensor-Grove-LoRa-E5/
 ---
 
 # Sensor de Luz Wio Terminal

@@ -7,6 +7,9 @@ sku: 110061403
 last_update:
   date: 01/03/2023
   author: w0x7ce
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reServer_J2032_Getting_Started/
 ---
 
 # Primeros Pasos con reServer J2032

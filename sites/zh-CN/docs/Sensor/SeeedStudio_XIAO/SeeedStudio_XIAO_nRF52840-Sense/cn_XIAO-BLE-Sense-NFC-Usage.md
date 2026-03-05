@@ -2,12 +2,15 @@
 description: XIAO nRF52840 (Sense) 的 NFC 使用
 title: 两个版本的 NFC 使用
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-NFC-Usage
 last_update:
   date: 05/31/2023
   author: Matthew
+createdAt: '2023-11-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-BLE-Sense-NFC-Usage/
 ---
 
 # Seeed Studio XIAO nRF52840 (Sense) 的 NFC 使用

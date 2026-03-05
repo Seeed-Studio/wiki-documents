@@ -2,12 +2,15 @@
 description: Driver for Seeeduino
 title: Driver for Seeeduino
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Driver_for_Seeeduino
 last_update:
   date: 1/31/2023
   author: shuxu hu
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Driver_for_Seeeduino/
 ---
 
 ##   Install the driver

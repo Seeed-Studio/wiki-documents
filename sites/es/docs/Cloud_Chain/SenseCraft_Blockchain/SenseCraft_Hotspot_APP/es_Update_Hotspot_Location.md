@@ -2,7 +2,7 @@
 description: Actualizar Ubicación del Hotspot
 title: Actualizar Ubicación del Hotspot
 keywords:
-- Cloud and Chain
+  - Cloud and Chain
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/sensecraft-hotspot-app/update_hotspot_location
 aliases:
@@ -10,6 +10,9 @@ aliases:
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-blockchain/sensecraft-hotspot-app/update_hotspot_location/
 ---
 
 **Cómo Actualizar la Ubicación de Tus Hotspots**

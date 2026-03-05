@@ -2,12 +2,15 @@
 description: Jetsonフラッシュプロセス中のタイムアウト問題の考えられる原因をリストアップします。
 title: Jetpackフラッシュ中のタイムアウト問題
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /usb_timeout_during_flash
 last_update:
   date: 1/22/2025
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/usb_timeout_during_flash/
 ---
 
 <div align="center">

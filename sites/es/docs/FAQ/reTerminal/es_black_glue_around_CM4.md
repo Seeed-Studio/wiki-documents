@@ -6,6 +6,9 @@ slug: /black_glue_around_CM4
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/black_glue_around_CM4/
 ---
 
 <!-- Q8: Why there is black glue around the chips on the CM4? -->

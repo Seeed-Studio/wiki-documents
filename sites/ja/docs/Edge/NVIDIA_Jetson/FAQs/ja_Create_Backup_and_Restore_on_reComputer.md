@@ -2,16 +2,19 @@
 description: このガイドでは、reComputer J3011でシステムのバックアップと復元を行い、設定済みの環境とソフトウェアを新しいデバイスに転送する方法を説明します。バックアッププロセスには、リカバリモードへの移行、JetPack BSPのダウンロード、バックアップスクリプトを使用したデータのコピーが含まれます。復元時には、新しいSSDを挿入し、再度リカバリモードに入り、復元コマンドを実行します。このプロセスにより、設定済みのシステム環境を効率的に複製できます。
 title: reComputerでのバックアップと復元の作成
 keywords:
-- jetson
-- BSP
-- L4T
-- Backup
-- Restore
+  - jetson
+  - BSP
+  - L4T
+  - Backup
+  - Restore
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop2.webp
 slug: /create_backup_and_restore_on_recomputer
 last_update:
   date: 04/11/2025
   author: Zibo
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/create_backup_and_restore_on_recomputer/
 ---
 
 # reComputerでのバックアップと復元の作成

@@ -2,13 +2,16 @@
 description: Grove - Receptor Infrarrojo
 title: Grove - Receptor Infrarrojo
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Infrared_Receiver
 sku: 101020016
 last_update:
   date: 1/5/2023
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Infrared_Receiver/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Infrared_Receiver/img/Grove-Infrared_Receiver.jpg" /></div>

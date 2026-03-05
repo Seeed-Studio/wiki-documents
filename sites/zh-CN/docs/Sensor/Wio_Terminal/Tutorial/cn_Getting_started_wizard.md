@@ -2,12 +2,15 @@
 description: 入门向导
 title: 入门向导
 keywords:
-- Wio_terminal Tutorial
+  - Wio_terminal Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Getting_started_wizard
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Getting_started_wizard/
 ---
 
 # 在5分钟内构建ML模型并部署到由Edge Impulse驱动的Wio Terminal

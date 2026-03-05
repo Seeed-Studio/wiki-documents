@@ -6,6 +6,9 @@ slug: /change_default_gateway_IP
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/change_default_gateway_IP/
 ---
 
 <!-- Q1: デフォルトゲートウェイIPが192.168.2.1の既存ルーターにOpenWrtルーターを接続する場合はどうすればよいですか？ -->

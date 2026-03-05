@@ -3,17 +3,21 @@ description: Ejemplo que demuestra la grabación de audio desde la matriz de mic
 title: Grabación de sonido
 slug: /reachymini_examples_sound_record
 keywords:
-- audio recording
-- microphone
-- wav file
-- soundfile
-- recording
-- microphone array
+  - audio recording
+  - microphone
+  - wav file
+  - soundfile
+  - recording
+  - microphone array
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_examples_sound_record/
 ---
 
 # Grabación de sonido

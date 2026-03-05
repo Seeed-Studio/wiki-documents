@@ -2,14 +2,17 @@
 description: Wio Tracker 1110 を Home Assistant に接続する
 title: Home Assistant 統合
 keywords:
-- Home assistant
-- Wio tracker
+  - Home assistant
+  - Wio tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /wio_tracker_home_assistant
 sidebar_position: 5
 last_update:
   date: 1/25/2024
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/wio_tracker_home_assistant/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/dog-locate.png" alt="pir" width={800} height="auto" /></p>

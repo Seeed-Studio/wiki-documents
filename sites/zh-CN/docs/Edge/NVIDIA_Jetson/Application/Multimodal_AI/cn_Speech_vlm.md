@@ -2,15 +2,18 @@
 description: 本wiki提供了如何在reComputer AGX Orin 64G上运行带语音交互的视觉语言模型的教程。
 title: 运行带语音交互的VLM
 keywords:
-- Multimodal 
-- NanoVLM
-- TTS
-- STT
+  - Multimodal
+  - NanoVLM
+  - TTS
+  - STT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /speech_vlm
 last_update:
   date: 08/23/2024
   author: YaoHui Zhu
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/speech_vlm/
 ---
 
 # 如何在reComputer Jetson上运行带语音交互的VLM

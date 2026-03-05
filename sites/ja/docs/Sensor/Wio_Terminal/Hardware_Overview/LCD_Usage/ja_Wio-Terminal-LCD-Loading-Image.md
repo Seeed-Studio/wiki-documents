@@ -1,6 +1,6 @@
 ---
 title: 画像の読み込み
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - Docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-LCD-Loading-Image
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-LCD-Loading-Image/
 ---
 
 

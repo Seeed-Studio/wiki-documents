@@ -7,6 +7,9 @@ sku: 113990854,113990855,113990856,110991412,110991465,102110477,102110478,10211
 last_update:
   date: 01/03/2023
   author: w0x7ce
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ODYSSEY-X86J4105-LTE-Module/
 ---
 
 

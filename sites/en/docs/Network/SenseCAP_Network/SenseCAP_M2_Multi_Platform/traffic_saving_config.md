@@ -2,13 +2,16 @@
 description: Low Data Consumption Mode Config(for 4G version)
 title: Low Data Consumption Mode Config(for 4G version)
 keywords:
-- SenseCAP_M2
-- Gateway
+  - SenseCAP_M2
+  - Gateway
 image: https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/sensecap_m2.jpg
 slug: /traffic_saving_config
 last_update:
   date: 12/4/2024
   author: Jessie
+createdAt: '2024-12-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/traffic_saving_config/
 ---
 
 

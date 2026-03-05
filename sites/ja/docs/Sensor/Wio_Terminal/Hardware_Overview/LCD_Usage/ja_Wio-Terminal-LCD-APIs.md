@@ -1,6 +1,6 @@
 ---
 title: LCD API 例
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-LCD-APIs
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2023-01-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-LCD-APIs/
 ---
 
 

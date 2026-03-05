@@ -1,11 +1,13 @@
 ---
 description: XIAOESP32C3-FAQ
 title: Cómo verificar el voltaje de la batería
-#image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /check_battery_voltage
 last_update:
   date: 6/28/2023
   author: cheng.tang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/check_battery_voltage/
 ---
 
 

@@ -2,13 +2,16 @@
 description: Grove - RGB LED矩阵带驱动器
 title: Grove - RGB LED矩阵带驱动器
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-RGB_LED_Matrix_w-Driver
 sku: 105020073
 last_update:
   date: 1/9/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-RGB_LED_Matrix_w-Driver/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Matrix_w-Driver/img/main.jpg) -->

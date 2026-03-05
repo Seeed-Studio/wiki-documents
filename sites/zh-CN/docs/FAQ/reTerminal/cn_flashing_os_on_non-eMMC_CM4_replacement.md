@@ -6,6 +6,9 @@ slug: /flashing_os_on_non-eMMC_CM4_replacement
 last_update:
   date: 2023/6/21
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/flashing_os_on_non-eMMC_CM4_replacement/
 ---
 
 

@@ -2,13 +2,16 @@
 description: Entrenamiento de Modelos Integral con Edge Impulse
 title: Entrenamiento de Modelos Integral con Edge Impulse
 keywords:
-- Sensor Vision_AI
+  - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /One-Stop-Model-Training-with-Edge-Impulse
 sku: 101990962
 last_update:
   date: 3/31/2023
   author: Yvonne
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/One-Stop-Model-Training-with-Edge-Impulse/
 ---
 
 ## Descripción general

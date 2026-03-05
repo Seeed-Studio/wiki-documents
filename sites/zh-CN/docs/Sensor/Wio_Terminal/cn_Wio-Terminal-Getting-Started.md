@@ -1,6 +1,6 @@
 ---
 title: Wio Terminal 入门指南
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991299
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-04-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/
 ---
 
 # Wio Terminal 入门指南

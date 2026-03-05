@@ -1,13 +1,16 @@
 ---
-description:  Wifi Shield V1.0
-title:  Wifi Shield V1.0
+description: Wifi Shield V1.0
+title: Wifi Shield V1.0
 keywords:
--  Arduino shield
+  - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wifi_Shield_V1.0
 last_update:
   date: 2/16/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wifi_Shield_V1.0/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Wifi_Shield_v1.0/img/Wifishield.jpg)

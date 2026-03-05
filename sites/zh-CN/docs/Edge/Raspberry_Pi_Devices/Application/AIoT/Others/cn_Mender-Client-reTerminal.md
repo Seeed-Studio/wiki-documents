@@ -9,6 +9,9 @@ slug: /Mender-Client-reTerminal
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Mender-Client-reTerminal/
 ---
 
 # 在 reTerminal 上安装 Mender 客户端

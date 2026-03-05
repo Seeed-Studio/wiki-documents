@@ -1,6 +1,6 @@
 ---
 title: Grove - Gesture V1.0
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020083
 last_update:
   date: 09/23/2024
   author: gunengyu
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Gesture_v1.0/
 ---
 
 <div style={{ textAlign: 'center' }}>

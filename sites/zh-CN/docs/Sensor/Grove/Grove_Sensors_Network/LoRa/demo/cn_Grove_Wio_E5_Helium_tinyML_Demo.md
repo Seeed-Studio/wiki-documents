@@ -1,6 +1,6 @@
 ---
 title: Grove - Wio-E5 Helium 和 TinyML 应用演示
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -8,7 +8,10 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Wio_E5_Helium_tinyML_Demo
 last_update:
   date: 09/19/2023
-  author: Salman 
+  author: Salman
+createdAt: '2023-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Wio_E5_Helium_tinyML_Demo/
 ---
 
 ## 入门指南

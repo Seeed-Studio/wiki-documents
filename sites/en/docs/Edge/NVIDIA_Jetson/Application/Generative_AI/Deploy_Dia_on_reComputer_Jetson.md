@@ -2,16 +2,19 @@
 description: This wiki provides step-by-step instructions for deploying the Dia text-to-speech model on NVIDIA Jetson devices, demonstrating its impressive real-time speech synthesis capabilities. It covers dependency installation, configuration adjustments, and includes a practical demonstration using the reComputer J4012 with Jetson Orin NX to showcase high-quality audio generation.
 title: Deploy Dia on reComputer Jetson
 keywords:
-- reComputer
-- Jetson
-- LLM
-- Dia
-- Audio
+  - reComputer
+  - Jetson
+  - LLM
+  - Dia
+  - Audio
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/deploy_deepseek.webp
 slug: /deploy_dia_on_jetson
 last_update:
   date: 05/16/2025
   author: Youjiang
+createdAt: '2025-05-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/deploy_dia_on_jetson/
 ---
 
 # Deploy Dia on reComputer Jetson

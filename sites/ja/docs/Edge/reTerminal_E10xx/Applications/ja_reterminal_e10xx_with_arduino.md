@@ -7,6 +7,9 @@ sidebar_position: 4
 last_update:
   date: 08/21/2025
   author: Allen
+createdAt: '2025-08-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reterminal_e10xx_with_arduino/
 ---
 
 import Tabs from '@theme/Tabs';

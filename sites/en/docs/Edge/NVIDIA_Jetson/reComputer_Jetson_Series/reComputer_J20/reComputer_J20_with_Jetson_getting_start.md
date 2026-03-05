@@ -2,13 +2,16 @@
 description: Getting start with reComputer J20
 title: Getting start with reComputer J20
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_j20_with_jetson_getting_start
 sku: 110061402, 110061483, 110061482, 110061481
 last_update:
   date: 9/3/2024
   author: Yaohui
+createdAt: '2024-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/
 ---
 
 # Getting start with reComputer J20

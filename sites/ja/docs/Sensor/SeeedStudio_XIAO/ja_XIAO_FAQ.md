@@ -6,6 +6,9 @@ slug: /XIAO_FAQ
 last_update:
   date: 7/6/2023
   author: Seraphina
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/XIAO_FAQ/
 ---
 
 この文書には、XIAOに関するよくある質問がすべて含まれています。XIAOを使用する際に何らかの問題が発生している場合、この文書は非常に役立ちます。

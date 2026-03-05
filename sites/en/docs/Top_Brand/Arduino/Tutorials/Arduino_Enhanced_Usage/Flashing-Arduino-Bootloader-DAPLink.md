@@ -2,12 +2,15 @@
 description: Flashing the Arduino Bootloader using DAP Link
 title: Flashing the Arduino Bootloader using DAP Link
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Flashing-Arduino-Bootloader-DAPLink
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Flashing-Arduino-Bootloader-DAPLink/
 ---
 
 # Flashing the Arduino Bootloader using DAP Link

@@ -2,12 +2,15 @@
 description: Visualización de datos con Power BI
 title: Visualización de datos con Power BI
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100_Azure_to_PowerBI
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/K1100_Azure_to_PowerBI/
 ---
 # Visualización de datos IoT de Microsoft Azure con Power BI
 

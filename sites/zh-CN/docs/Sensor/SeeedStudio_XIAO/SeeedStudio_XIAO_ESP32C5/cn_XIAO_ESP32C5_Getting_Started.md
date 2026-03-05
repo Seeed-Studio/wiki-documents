@@ -1,6 +1,6 @@
 ---
 title: Seeed Studio XIAO ESP32-C5 入门指南
-description: |
+description: ''
 keywords:
   - xiao
   - esp32c5
@@ -10,6 +10,9 @@ last_update:
   date: 11/26/2025
   author: Zeller
   sidebar_position: 0
+createdAt: '2025-12-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_getting_started/
 ---
 
 ## 介绍

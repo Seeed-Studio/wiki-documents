@@ -2,13 +2,16 @@
 description: ODYSSEY-X86でのbalenaOSの始め方
 title: BalenaOSインストール
 keywords:
-- Sorftware Allxon
+  - Sorftware Allxon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BalenaOS-X86-Getting-Started
 sku: 102110399,102110398,102110397,102110319,114992152,110991412,110991465,102110477,102110478,102110479,110991484,110991405,110991565,102110539,102110540,102110541,102110548,102110549,102110550,110991564,B102110608,B102110611,B102110610,110991824,110991825
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/BalenaOS-X86-Getting-Started/
 ---
 
 

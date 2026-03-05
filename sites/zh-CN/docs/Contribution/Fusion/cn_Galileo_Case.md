@@ -1,14 +1,17 @@
 ---
-description: Galileo 外壳 
+description: Galileo 外壳
 title: Galileo 外壳
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Galileo_Case
 sku: 110990417
 last_update:
   date: 2023/1/13
   author: shuxu hu
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Galileo_Case/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Galileo_Case/img/Galileo_Case07.jpg)

@@ -2,14 +2,17 @@
 description: 列出 Jetson 刷机过程中超时问题的可能原因。
 title: 解决 UUID 错误问题
 keywords:
-- reComputer
-- jetpack
+  - reComputer
+  - jetpack
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /deal_the_issue_of_UUID
 sku: 100001302,E2025021103
 last_update:
   date: 01/08/2026
   author: Dayu
+createdAt: '2026-01-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/deal_the_issue_of_UUID/
 ---
 
 # 🚨 问题描述

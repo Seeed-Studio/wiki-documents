@@ -11,8 +11,11 @@ image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 slug: /getting_started_with_ee02
 sku: 100067144
 last_update:
-  date: 2025-12-20
+  date: 2025-12-20T00:00:00.000Z
   author: Allen
+createdAt: '2025-12-31'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/getting_started_with_ee02/
 ---
 
 <div class="table-center">

@@ -2,22 +2,25 @@
 description: This wiki provides a comprehensive, step-by-step guide for deploying the Visual Perception Engine (VPEngine) on reComputer Jetson Series devices, specifically Jetson Orin NX 16GB. It covers environment setup, installation of key dependencies (PyTorch, TensorRT, CUDA, ROS2), model export, and troubleshooting for compatibility issues. The guide highlights VPEngine’s ability to perform efficient, parallel multi-task vision inference—including object detection, depth estimation, and semantic segmentation—by sharing backbone features and optimizing GPU resource usage. It also includes performance testing scripts, real-time multi-camera inference examples, and practical tips for maximizing edge AI efficiency in robotics and intelligent monitoring applications.
 title: Efficient Multi-Task Vision Inference Engine Deployment on Jetson
 keywords:
-- Visual Perception Engine
-- VPEngine
-- reComputerEngine
-- Jetson
-- Parallel Perception
-- Computer Vision
-- TensorRT
-- CUDA
-- ROS2
-- Robotics
+  - Visual Perception Engine
+  - VPEngine
+  - reComputerEngine
+  - Jetson
+  - Parallel Perception
+  - Computer Vision
+  - TensorRT
+  - CUDA
+  - ROS2
+  - Robotics
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/v_engine/video_demo_preview.gif
 slug: /deploy_visual_perception_engine_recomputer
 sku: 101090101, 114110310, 100071398, 100026552
 last_update:
-  date: 2025-10-13
+  date: 2025-10-13T00:00:00.000Z
   author: Zibo
+createdAt: '2025-10-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/deploy_visual_perception_engine_recomputer/
 ---
 
 <div align="center">

@@ -2,13 +2,16 @@
 description: 在 reComputer 上使用英飞凌 Wi-Fi 模块
 title: 在 reComputer 上使用英飞凌 Wi-Fi 模块
 keywords:
-- reComputer
-- Wifi
+  - reComputer
+  - Wifi
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Use_Infineon_Wifi_Module_on_reComputer
 last_update:
   date: 01/10/2024
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Use_Infineon_Wifi_Module_on_reComputer/
 ---
 
 ## 介绍

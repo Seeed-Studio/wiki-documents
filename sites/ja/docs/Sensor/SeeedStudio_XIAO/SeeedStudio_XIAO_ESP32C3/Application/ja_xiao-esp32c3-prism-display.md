@@ -2,13 +2,16 @@
 description: ESP32C3を使用したXIAO Prism Display
 title: XIAO ESP32C3 Prism Display
 keywords:
-- Xiao
-- Prism
+  - Xiao
+  - Prism
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-esp32c3-prism-display
 last_update:
   date: 02/01/2024
   author: timo614
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao-esp32c3-prism-display/
 ---
 
 # XIAO ESP32C3 プリズムディスプレイ

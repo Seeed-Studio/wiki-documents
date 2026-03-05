@@ -11,6 +11,9 @@ slug: /grocy-bookstack-linkstar
 last_update:
   date: 2023/6/26
   author: Kasun Thushara
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/grocy-bookstack-linkstar/
 ---
 # 掌控一切：使用 LinkStar、Grocy 和 BookStack 的自托管办公室管理解决方案
 在由 LinkStar 路由器驱动的自托管办公室服务器中集成 Grocy 和 BookStack，提供了一种高效且有条理的运营解决方案。通过 Grocy，企业可以有效管理杂货、购物清单和任务，从而确保流程简化并减少浪费。而 BookStack 则提供了一个集中的文档平台，促进协作、知识共享以及对重要信息的便捷访问。通过在 LinkStar 路由器上托管这两个应用程序，企业可以掌控自己的数据、增强安全性，并消除对外部服务的依赖。这种自托管设置使办公室能够优化工作流程、提高生产力，并创建一个结构良好且高效的工作环境。在这篇博客文章中，我们将深入探讨在 LinkStar 驱动的办公室服务器中集成 Grocy 和 BookStack 的重要性，探索其优势，并展示这种组合如何彻底改变办公室管理。

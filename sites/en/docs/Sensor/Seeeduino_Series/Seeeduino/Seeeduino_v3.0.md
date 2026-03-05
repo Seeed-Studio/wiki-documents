@@ -2,12 +2,15 @@
 description: Seeeduino v3.0
 title: Seeeduino v3.0
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_v3.0
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2023-01-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_v3.0/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-v3.0/img/Seeeduino_v3.0_top.jpg)

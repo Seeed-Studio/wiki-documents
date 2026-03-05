@@ -2,12 +2,15 @@
 description: 列出 Jetson 刷机过程中超时问题的可能原因。
 title: 刷写 Jetpack 时的超时问题
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /usb_timeout_during_flash
 last_update:
   date: 1/22/2025
   author: Youjiang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/usb_timeout_during_flash/
 ---
 
 <div align="center">

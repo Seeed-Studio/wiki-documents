@@ -7,6 +7,9 @@ sidebar_position: 6
 last_update:
   date: 12/13/2024
   author: Evelyn Chen
+createdAt: '2024-12-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/4_layer_sandwich_for_meshtastic/
 ---
 
 # A DIY 4-layer sandwich Meshtastic kit

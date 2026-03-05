@@ -2,13 +2,16 @@
 description: このチュートリアルでは、LeIsaacを使用してIsaac LabでSOArm101ロボットアームを遠隔操作し、訓練する方法を説明します。データ収集、NVIDIA Isaac GR00Tによるモデルファインチューニング、デプロイメントを含みます。
 title: Lightwheel LeIsaac
 keywords:
-- NVIDIA
-- Isaac Lab
+  - NVIDIA
+  - Isaac Lab
 image: https://files.seeedstudio.com/wiki/robotics/isaac_lab/simulate_soarm101_by_leisaac.webp
 slug: /simulate_soarm101_by_leisaac
 last_update:
   date: 8/1/2025
   author: Youjiang
+createdAt: '2025-09-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/simulate_soarm101_by_leisaac/
 ---
 
 # Lightwheel LeIsaacを始める — Hugging Face LeRobot x GR00T N1.5 x Isaac Simを組み合わせたオープンソースワークフロー

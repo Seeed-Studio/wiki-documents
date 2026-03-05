@@ -2,16 +2,19 @@
 description: Slamtec LiDAR製品と使用ドキュメントの紹介。
 title: Slamtec LiDAR シリーズ
 keywords:
-- LiDAR
-- Robotics
-- ROS
-- SLAM
-- Lidar
+  - LiDAR
+  - Robotics
+  - ROS
+  - SLAM
+  - Lidar
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /slamtec
 last_update:
   date: 2025/06/18
   author: ZhuYaohui
+createdAt: '2025-06-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/slamtec/
 ---
 
 

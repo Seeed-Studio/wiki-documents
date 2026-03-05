@@ -2,12 +2,15 @@
 description: 読み取りと書き込み
 title: 読み取りと書き込み
 keywords:
-- Wio_terminal File_System
+  - Wio_terminal File_System
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-FS-ReadWrite
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wio-Terminal-FS-ReadWrite/
 ---
 
 

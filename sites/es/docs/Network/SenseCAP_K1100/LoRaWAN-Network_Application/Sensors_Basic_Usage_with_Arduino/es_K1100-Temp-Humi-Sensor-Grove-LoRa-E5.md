@@ -2,12 +2,15 @@
 description: Grove Sensor de Temp y Humedad (SHT40)
 title: Grove Sensor de Temp y Humedad (SHT40)
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /K1100-Temp-Humi-Sensor-Grove-LoRa-E5
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/K1100-Temp-Humi-Sensor-Grove-LoRa-E5/
 ---
 # Grove Sensor de Temp y Humedad (SHT40)
 

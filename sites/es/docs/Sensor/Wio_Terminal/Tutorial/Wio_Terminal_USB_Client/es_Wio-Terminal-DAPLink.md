@@ -2,12 +2,15 @@
 description: Construir un dispositivo DAPLink usando Wio Terminal
 title: Construir un dispositivo DAPLink usando Wio Terminal
 keywords:
-- Wio_terminal USB_Client
+  - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-DAPLink
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-DAPLink/
 ---
 
 # Wio Terminal DAPLink

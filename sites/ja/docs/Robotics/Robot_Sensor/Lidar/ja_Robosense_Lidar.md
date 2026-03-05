@@ -2,16 +2,19 @@
 description: このwikiは、ROSを使用してreComputer J30/40にRoboSense LiDARをインストールし、セットアップするためのステップバイステップガイドを提供します。
 title: RoboSense Lidar with ROS
 keywords:
-- Jetson Nano
-- reComputer
-- Robosense
-- Lidar
-- ROS
+  - Jetson Nano
+  - reComputer
+  - Robosense
+  - Lidar
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /robosense_lidar
 last_update:
   date: 05/7/2024
   author: ZhuYaoHui
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/robosense_lidar/
 ---
 # reComputerでRoboSense LiDARを使用する方法
 

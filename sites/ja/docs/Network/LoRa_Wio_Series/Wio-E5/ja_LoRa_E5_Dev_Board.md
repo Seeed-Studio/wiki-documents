@@ -2,13 +2,16 @@
 description: Wio-E5 開発ボードの使用開始ガイド。
 title: Wio-E5 開発キット
 keywords:
-  - wio 
+  - wio
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /LoRa_E5_Dev_Board
 sku: 113990934, 113991157
 last_update:
   date: 01/30/2023
   author: hushuxu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/LoRa_E5_Dev_Board/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/202003261_preview-07.png) -->

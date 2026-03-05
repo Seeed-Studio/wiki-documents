@@ -2,13 +2,16 @@
 description: Liquid Level Sensor
 title: Liquid Level Sensor
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor
 sku: 314990619
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Probe/Liquid-Level-Sensor/
 ---
 
 ![Liquid Level Sensor](https://files.seeedstudio.com/wiki/Liquid_Level_Sensor/img/01_14_4.png)

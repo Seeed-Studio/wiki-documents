@@ -2,12 +2,15 @@
 description: Edge Impulseを使用して独自のAIモデルをトレーニングおよびデプロイ
 title: Edge Impulseを使用して独自のAIモデルをトレーニングおよびデプロイ
 keywords:
-- Sensor Vision_AI
+  - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /edge-impulse-vision-ai
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/edge-impulse-vision-ai/
 ---
 
 

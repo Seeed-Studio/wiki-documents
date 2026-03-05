@@ -6,7 +6,10 @@ slug: /Arduino_Common_Error
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Arduino_Common_Error/
 ---
 
 Para un principiante, a veces nos encontraremos con algunos errores de compilación o carga. Aquí resumimos algunos errores comunes y soluciones, esperamos que esto pueda ayudar.

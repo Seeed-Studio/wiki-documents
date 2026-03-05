@@ -2,12 +2,15 @@
 description: Sensor - Acelerómetro
 title: Sensor - Acelerómetro
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_accelerometer
 last_update:
   date: 1/5/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor_accelerometer/
 ---
 # Guía de Selección de Acelerómetros Seeed
 

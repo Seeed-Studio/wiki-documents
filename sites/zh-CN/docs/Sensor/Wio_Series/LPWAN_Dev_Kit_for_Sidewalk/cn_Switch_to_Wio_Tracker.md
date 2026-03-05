@@ -2,14 +2,17 @@
 description: 将 Sidewalk 版本刷写为 LoRaWAN 版本
 title: 将 Sidewalk 版本刷写为 LoRaWAN 版本
 keywords:
-- Tracker
-- sidewalk
-- Amazon
+  - Tracker
+  - sidewalk
+  - Amazon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash_to_wio_tracker
 last_update:
   date: 12/22/2023
   author: Jessie
+createdAt: '2023-12-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/flash_to_wio_tracker/
 ---
 
 本教程将指导用户将 LPWAN Dev Board for Amazon Sidewalk 刷写为 Wio Tracker 1110 Dev Board，适用于想要使用 LoRaWAN 网络的用户。

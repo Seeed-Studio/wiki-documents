@@ -2,14 +2,17 @@
 description: reComputer JetsonでPX4を制御する
 title: reComputer JetsonでPX4を制御する
 keywords:
-- NVIDIA
-- PX4
-- ROS
+  - NVIDIA
+  - PX4
+  - ROS
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.webp
 slug: /control_px4_with_recomputer_jetson
 last_update:
   date: 7/21/2025
   author: TienjuiWong
+createdAt: '2025-09-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/control_px4_with_recomputer_jetson/
 ---
 
 **reComputer Mini J3010 (Jetson Orin Nano 4G)** のような高性能コンパニオンコンピュータと **PX4フライトコントローラ** を組み合わせることで、自律走行車、ボート、ドローンを含む幅広いインテリジェント無人システムのコアアーキテクチャが構築されます。この強力な組み合わせにより、物流、科学研究、捜索救助、精密農業などの分野で革新的なアプリケーションが実現されます。

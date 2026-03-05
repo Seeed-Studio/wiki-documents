@@ -2,13 +2,16 @@
 description: Hercules Dual 15A 6-20V モーターコントローラー
 title: Hercules Dual 15A 6-20V モーターコントローラー
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Hercules_Dual_15A_6-20V_Motor_Controller
 sku: 105010000
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Hercules_Dual_15A_6-20V_Motor_Controller/
 ---
 
 

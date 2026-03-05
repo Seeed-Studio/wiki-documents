@@ -2,12 +2,15 @@
 description: このwikiでは、Jetsonシリアルポートを使用してreComputer J4012（または類似デバイス）のブートログを取得する方法について、ステップバイステップのガイドを提供します。
 title: reComputer J30/J40のシステムログを取得する方法は？
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /get_the_system_log_of_recomputer_j30_and_j40
 last_update:
   date: 1/22/2025
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/get_the_system_log_of_recomputer_j30_and_j40/
 ---
 
 

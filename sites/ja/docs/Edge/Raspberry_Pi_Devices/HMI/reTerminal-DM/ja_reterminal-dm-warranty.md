@@ -9,6 +9,9 @@ slug: /reterminal-dm-warranty
 last_update:
   date: 04/23/2023
   author: Peter Pan
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reterminal-dm-warranty/
 ---
 # reTerminal DM 保証
 

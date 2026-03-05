@@ -2,15 +2,18 @@
 description: このwikiでは、Ollamaを使用してreComputer Jetsonデバイス上にDeepSeekモデルをデプロイする方法をガイドし、最小限の消費電力で効率的なAI推論を実現する方法を紹介します。
 title: reComputer Jetson上でDeepSeekを迅速にデプロイする
 keywords:
-- reComputer
-- LLM
-- ollama
-- deepseek
+  - reComputer
+  - LLM
+  - ollama
+  - deepseek
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/deepseek.webp
 slug: /deploy_deepseek_on_jetson
 last_update:
   date: 02/08/2025
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/deploy_deepseek_on_jetson/
 ---
 
 

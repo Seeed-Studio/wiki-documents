@@ -11,6 +11,9 @@ slug: /esphome_xiao_w5500_ethernet_adapter
 last_update:
   date: 12/08/2025
   author: Zeller
+createdAt: '2025-12-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/esphome_xiao_w5500_ethernet_adapter/
 ---
 
 import Tabs from '@theme/Tabs';

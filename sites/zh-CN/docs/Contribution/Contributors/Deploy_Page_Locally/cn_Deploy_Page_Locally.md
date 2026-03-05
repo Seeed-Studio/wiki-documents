@@ -2,12 +2,15 @@
 description: 本地部署 Wiki 平台
 title: 本地部署 Wiki 平台
 keywords:
-- 贡献
+  - 贡献
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Deploy_Page_Locally
 last_update:
   date: 2023/3/14
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Deploy_Page_Locally/
 ---
 
 # 本地部署 Wiki 平台

@@ -1,18 +1,19 @@
 ---
 description: 这款紧凑的边缘音频板可在本地实时检测婴儿哭声、玻璃破碎声、枪声、警报以及打鼾声，并将所有数据保存在本地以保护隐私。在本教程中，你将学习如何使用 XIAO 系列将其与 ESPHome 和 Home Assistant 集成，实现智能监控与自动化。
-
 title: Home Assistant 与声音事件检测模块
 keywords:
-- 声音事件检测模块
-- 声音物联网
-- Home Assistant
-
+  - 声音事件检测模块
+  - 声音物联网
+  - Home Assistant
 image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
 slug: /sound_event_detection_module_home_assistant
 sku: 100049596
 last_update:
   date: 3/4/2026
   author: Kasun Thushara
+createdAt: '2026-03-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sound_event_detection_module_home_assistant/
 ---
 
 ## 介绍

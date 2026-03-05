@@ -2,13 +2,16 @@
 description: ChatGPT 指示器
 title: ChatGPT 指示器
 keywords:
-- Get Started with SenseCAP Indicator
+  - Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_ChatGPT
 sidebar_position: 2
 last_update:
   date: 5/31/2023
   author: Thomas
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Indicator_ChatGPT/
 ---
   # **SenseCAP Indicator X ChatGPT**
 

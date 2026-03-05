@@ -2,14 +2,17 @@
 description: Grove - ADC for Load Cell (HX711) は、ロードセル専用に設計された24ビットA/Dコンバータです。
 title: Grove - ADC for Load Cell (HX711) の使い方
 keywords:
-- Grove
-- 重量センサー
+  - Grove
+  - 重量センサー
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_adc_for_load_cell_hx711
 sku: 101020712
 last_update:
   date: 05/15/2025
   author: Carla
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove_adc_for_load_cell_hx711/
 ---
 
 

@@ -7,7 +7,10 @@ sku: 101020193,101020192,101020068,101020032,101020812
 last_update:
   date: 02/01/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Barometer-Selection-Guide/
 ---
 
 # Guía de Selección de Sensores Barómetros Seeed

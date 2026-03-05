@@ -2,13 +2,16 @@
 description: Grove - Finger-clip Heart Rate Sensor with shell
 title: Grove - Finger-clip Heart Rate Sensor with shell
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Finger-clip_Heart_Rate_Sensor_with_shell
 sku: 101020082
 last_update:
   date: 1/6/2023
   author: jianjing Huang
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Finger-clip_Heart_Rate_Sensor_with_shell/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Finger-clip_Heart_Rate_Sensor_with_shell/img/Grove-Finger-clip_Heart_Rate_Sensor_with_shell.JPG" /></div>

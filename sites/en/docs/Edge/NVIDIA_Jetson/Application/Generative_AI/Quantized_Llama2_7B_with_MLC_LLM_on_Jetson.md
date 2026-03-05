@@ -1,6 +1,6 @@
 ---
-description:  Quantized Llama2-7B with MLC LLM on Jetson
-title:  Faster Inference with MLC
+description: Quantized Llama2-7B with MLC LLM on Jetson
+title: Faster Inference with MLC
 keywords:
   - Edge
   - reComputer
@@ -12,7 +12,10 @@ slug: /Quantized_Llama2_7B_with_MLC_LLM_on_Jetson
 last_update:
   date: 04/1/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-04-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson/
 ---
 
 # Quantized Llama2-7B with MLC LLM on Jetson

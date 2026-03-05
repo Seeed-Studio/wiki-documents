@@ -3,21 +3,24 @@ description: MCP ツールを使用した Grove 拡張の使用ガイド
 title: MCP による Grove の拡張
 sidebar_position: 6
 keywords:
-- AI
-- SenseCAP
-- Watcher
-- Agent
-- IIC
-- Model
-- Context
-- protocol
-- Grove
-- MCP
+  - AI
+  - SenseCAP
+  - Watcher
+  - Agent
+  - IIC
+  - Model
+  - Context
+  - protocol
+  - Grove
+  - MCP
 image: http://files.seeedstudio.com/wiki/SenseCAP-Watcher-for-Xiaozhi-AI/Watcher_Agent.webp
 slug: /extending_grove_with_mcp
 last_update:
   date: 10/22/2025
   author: Twelve
+createdAt: '2025-10-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/extending_grove_with_mcp/
 ---
 # Grove による MCP の拡張
 

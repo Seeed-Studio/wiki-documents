@@ -1,13 +1,16 @@
 ---
-description: |
+description: ''
 title: XIAO ESP32C5 ESP-Mesh 音频
 keywords:
-- xiao esp32c5
+  - xiao esp32c5
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/Seeed-Studio-XIAO-ESP32C5_1.webp
 slug: /xiao_esp32c5_esp-mesh_audio
 last_update:
   date: 12/12/2025
   author: Zeller
+createdAt: '2025-12-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c5_esp-mesh_audio/
 ---
 
  <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32C5/Getting_started/mesh_0.png" style={{width:800, height:'auto'}}/></div>

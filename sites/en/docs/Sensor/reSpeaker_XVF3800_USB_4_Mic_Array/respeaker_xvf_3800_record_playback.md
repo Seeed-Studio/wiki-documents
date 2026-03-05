@@ -2,14 +2,17 @@
 description: The ReSpeaker XVF3800 USB 4-Mic Array is a professional circular microphone array with AEC, beamforming, noise suppression, and 360° voice capture. Paired with the XIAO ESP32S3, it enables advanced voice control for smart devices, robotics, and IoT applications. Discover seamless integration and dual-mode flexibility.
 title: reSpeaker XVF3800 Record and Playback Audio Using I2S
 keywords:
-- reSpeaker
-- XIAO
-- ESP32S3
+  - reSpeaker
+  - XIAO
+  - ESP32S3
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.jpg
 slug: /respeaker_xvf3800_xiao_record_playback
 last_update:
   date: 7/16/2025
   author: Kasun Thushara
+createdAt: '2025-07-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_record_playback/
 ---
 
 # reSpeaker XVF3800 Record and Playback Audio Using I2S

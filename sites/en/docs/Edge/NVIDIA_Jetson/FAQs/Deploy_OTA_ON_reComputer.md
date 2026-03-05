@@ -2,16 +2,19 @@
 description: This guide walks through creating an end-to-end OTA package to upgrade a reComputer mini J4012 from JetPack 5.1.3 to JetPack 6.2, including BSP preparation, package generation, and on-device deployment.
 title: Deploy OTA on reComputer
 keywords:
-- jetson
-- OTA
-- JetPack
-- reComputer
-- BSP
+  - jetson
+  - OTA
+  - JetPack
+  - reComputer
+  - BSP
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.webp
 slug: /deploy_ota_on_recomputer
 last_update:
   date: 12/05/2025
   author: Zibo
+createdAt: '2025-12-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/deploy_ota_on_recomputer/
 ---
 
 # Deploy OTA on reComputer

@@ -3,18 +3,22 @@ description: Guide for developers to install Reachy Mini daemon from a specific 
 title: Install Daemon from Specific Branch
 slug: /reachymini_platforms_reachy_mini_install_daemon_from_branch
 keywords:
-- daemon
-- branch
-- install
-- testing
-- development
-- ssh
-- git
+  - daemon
+  - branch
+  - install
+  - testing
+  - development
+  - ssh
+  - git
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reachymini_platforms_reachy_mini_install_daemon_from_branch/
 ---
 
 # Install the Daemon from a Specific Branch

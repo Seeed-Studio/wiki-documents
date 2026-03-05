@@ -2,12 +2,15 @@
 description: リレーシールド V2.0
 title: リレーシールド V2.0
 keywords:
-- Arduino シールド
+  - Arduino シールド
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Relay_Shield_V2
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Relay_Shield_V2/
 ---
 
 

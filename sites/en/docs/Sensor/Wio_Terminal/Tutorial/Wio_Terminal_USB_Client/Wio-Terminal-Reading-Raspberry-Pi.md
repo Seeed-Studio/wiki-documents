@@ -2,12 +2,15 @@
 description: Reading Raspberry Pi's Info using Wio Terminal
 title: Reading Raspberry Pi's Info using Wio Terminal
 keywords:
-- Wio_terminal USB_Client
+  - Wio_terminal USB_Client
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Reading-Raspberry-Pi
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2023-01-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-Reading-Raspberry-Pi/
 ---
 
 # Reading Raspberry Pi's System Status using Wio Terminal

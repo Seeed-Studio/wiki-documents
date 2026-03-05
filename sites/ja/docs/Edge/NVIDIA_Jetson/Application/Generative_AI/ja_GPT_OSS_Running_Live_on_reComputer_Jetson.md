@@ -2,16 +2,19 @@
 description: このwikiでは、llama.cppを使用してNVIDIA Jetson Orin NX上にオープンソースのGPT-OSS-20B大規模言語モデルをデプロイする方法を実演し、エッジAI機能を紹介します。インストール、モデル変換、量子化、およびオプションのWeb UI統合による推論実行のステップバイステップの手順を提供します。
 title: GPT-OSS Running Live on reComputer Jetson!
 keywords:
-- reComputer
-- Jetson
-- LLM
-- GPT-OSS
-- llamacpp
+  - reComputer
+  - Jetson
+  - LLM
+  - GPT-OSS
+  - llamacpp
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/gptoss-running-live.webp
 slug: /deploy_gptoss_on_jetson
 last_update:
   date: 08/14/2025
   author: Youjiang
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/deploy_gptoss_on_jetson/
 ---
 
 

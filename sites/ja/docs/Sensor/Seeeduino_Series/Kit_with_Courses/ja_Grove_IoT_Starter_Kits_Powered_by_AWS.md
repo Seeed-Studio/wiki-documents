@@ -2,12 +2,15 @@
 description: Grove IoT Starter Kits Powered by AWS
 title: Grove IoT Starter Kits Powered by AWS
 keywords:
-- Seeeduino 
+  - Seeeduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_IoT_Starter_Kits_Powered_by_AWS
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_IoT_Starter_Kits_Powered_by_AWS/
 ---
 
 

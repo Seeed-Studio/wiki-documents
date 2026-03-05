@@ -6,6 +6,9 @@ slug: /Coral-Mini-PCIe-Accelerator-x86
 last_update:
   date: 03/16/2023
   author: Lakshantha
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Coral-Mini-PCIe-Accelerator-x86/
 ---
 
 

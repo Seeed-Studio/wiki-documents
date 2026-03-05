@@ -1,6 +1,6 @@
 ---
 title: Herramienta de Prueba de Rendimiento Wi-Fi del Seeed Studio XIAO ESP32-C5
-description: |
+description: ''
 keywords:
   - xiao
   - esp32c5
@@ -9,6 +9,9 @@ slug: /xaio_esp32c5_wifi_throughput_tester
 last_update:
   date: 1/16/2026
   author: Zeller
+createdAt: '2026-01-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xaio_esp32c5_wifi_throughput_tester/
 ---
 
 

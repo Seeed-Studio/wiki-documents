@@ -2,12 +2,15 @@
 description: RS485 大気温度・湿度・気圧センサー(S-THP-01A)
 title: RS485 大気温度・湿度・気圧センサー(S-THP-01A)
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor
 last_update:
   date: 10/14/2023
   author: Yvonne
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/RS485_Air_Temperature_Humidity_and_Barometric_Pressure_Sensor/
 ---
 
 # RS485 大気温度・湿度・気圧センサー(S-THP-01A)

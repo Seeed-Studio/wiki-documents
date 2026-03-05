@@ -2,12 +2,15 @@
 description: 使用 XIAO ESP32C6 和传感器收集数据并发送到 Apache Kafka
 title: 基于 Apache Kafka 的实时物联网数据处理节点
 keywords:
-- xiao esp32c6
+  - xiao esp32c6
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32c6_kafka
 last_update:
   date: 05/21/2024
   author: Allen
+createdAt: '2024-05-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32c6_kafka/
 ---
 
 <div class="table-center">

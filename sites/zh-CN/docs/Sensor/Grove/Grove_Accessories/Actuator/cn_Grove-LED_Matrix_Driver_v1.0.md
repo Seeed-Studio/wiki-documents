@@ -1,6 +1,6 @@
 ---
 title: Grove - LED矩阵驱动器 v1.0
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 105020013
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-LED_Matrix_Driver_v1.0/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_product_view_700_s.jpg)

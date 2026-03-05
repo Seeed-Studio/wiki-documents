@@ -2,12 +2,14 @@
 description: 使用WiFi技术实现地理位置追踪器
 title: 如何通过Wi-Fi获取位置信息
 keywords:
-- SenseCAP_T1000_tracker
-# image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
+  - SenseCAP_T1000_tracker
 slug: /Tracker_WiFi_Geolocation
 last_update:
   date: 10/19/2023
   author: JoJang
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Tracker_WiFi_Geolocation/
 ---
 
 # 使用Wi-Fi技术为您的追踪器启用地理定位
