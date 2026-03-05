@@ -2,13 +2,16 @@
 description: Xadow - NFC
 title: Xadow - NFC
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_NFC
 sku: 113040000
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Xadow_NFC/
 ---
 ---
 La Comunicación de Campo Cercano (NFC) es un conjunto de tecnologías inalámbricas de corto alcance. Está detrás de aplicaciones cotidianas como sistemas de control de acceso y sistemas de pago móvil.

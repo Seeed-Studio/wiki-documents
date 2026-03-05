@@ -6,6 +6,9 @@ slug: /disable_screen_rotation_on_reTerminal
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/disable_screen_rotation_on_reTerminal/
 ---
 
 画面が正常に表示されるがreTerminalと一緒に回転する場合、加速度計を削除することで画面の自動回転を無効にし、静的な横向き表示にすることができます。<br/>

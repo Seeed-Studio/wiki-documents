@@ -7,6 +7,9 @@ sidebar_position: 2
 last_update:
   date: 10/17/2024
   author: Evelyn Chen
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_LNS_Chirpstack/
 ---
 
 # Wio-SX1262 与 XIAO ESP32S3 套件连接到 Chirpstack

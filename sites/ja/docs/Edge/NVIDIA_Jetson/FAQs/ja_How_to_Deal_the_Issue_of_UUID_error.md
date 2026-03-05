@@ -2,14 +2,17 @@
 description: Jetsonフラッシュプロセス中のタイムアウト問題の可能な原因を一覧表示します。
 title: UUID エラーの問題を解決する
 keywords:
-- reComputer
-- jetpack
+  - reComputer
+  - jetpack
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /deal_the_issue_of_UUID
 sku: 100001302,E2025021103
 last_update:
   date: 01/08/2026
   author: Dayu
+createdAt: '2026-01-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/deal_the_issue_of_UUID/
 ---
 
 # 🚨 問題の説明

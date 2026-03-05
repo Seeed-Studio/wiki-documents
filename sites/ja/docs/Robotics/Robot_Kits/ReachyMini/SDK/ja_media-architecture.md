@@ -3,19 +3,23 @@ description: Reachy Mini のメディアアーキテクチャについて、GStr
 title: メディアアーキテクチャ
 slug: /reachymini_sdk_media-architecture
 keywords:
-- media
-- audio
-- video
-- gstreamer
-- webrtc
-- streaming
-- camera
-- microphone
+  - media
+  - audio
+  - video
+  - gstreamer
+  - webrtc
+  - streaming
+  - camera
+  - microphone
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_sdk_media-architecture/
 ---
 
 # メディアアーキテクチャ

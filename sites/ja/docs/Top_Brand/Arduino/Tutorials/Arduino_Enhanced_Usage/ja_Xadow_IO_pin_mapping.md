@@ -2,12 +2,15 @@
 description: Xadow IO ピンマッピング
 title: Xadow IO ピンマッピング
 keywords:
-- ソフトウェア
+  - ソフトウェア
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_IO_pin_mapping
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2023-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Xadow_IO_pin_mapping/
 ---
 
 

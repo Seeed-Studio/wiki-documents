@@ -2,13 +2,16 @@
 description: Manual de instrucciones del LinkStar-V2
 title: Introducción al LinkStar-V2
 keywords:
-- Network
+  - Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /h68kv2_datasheet
 sku: 102110958
 last_update:
   date: 04/18/2024
   author: Parker
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/h68kv2_datasheet/
 ---
 
 <!-- ---

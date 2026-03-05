@@ -2,13 +2,16 @@
 description: Grove - Acelerómetro Digital de 3 Ejes (±16g)
 title: Grove - Acelerómetro Digital de 3 Ejes (±16g)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-3-Axis_Digital_Accelerometer-16g
 sku: 101020054
 last_update:
   date: 1/5/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-3-Axis_Digital_Accelerometer-16g/
 ---
 
 ---

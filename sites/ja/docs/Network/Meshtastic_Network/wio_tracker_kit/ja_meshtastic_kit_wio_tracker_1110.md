@@ -2,14 +2,17 @@
 description: Meshtastic® 用 Wio Tracker Dev Kit の使用開始
 title: Meshtastic® Kit の使用開始
 keywords:
-- Meshtastic
-- Tracker
+  - Meshtastic
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /meshtastic_kit_wio_tracker_1110
 sku: E24070201,114993370
 last_update:
   date: 6/17/2024
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/meshtastic_kit_wio_tracker_1110/
 ---
 
 ## はじめに

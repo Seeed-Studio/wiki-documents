@@ -6,6 +6,9 @@ slug: /set_up_Rclone_from_web_UI
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/set_up_Rclone_from_web_UI/
 ---
 
 <!-- Q3: 我无法通过 Web UI 成功设置 Rclone -->

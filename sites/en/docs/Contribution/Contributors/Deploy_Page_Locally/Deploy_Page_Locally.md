@@ -2,12 +2,15 @@
 description: Deploy Wiki Platform Locally
 title: Deploy Wiki Platform Locally
 keywords:
-- Contribution
+  - Contribution
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Deploy_Page_Locally
 last_update:
   date: 3/14/2023
   author: Matthew
+createdAt: '2023-03-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Deploy_Page_Locally/
 ---
 
 # Deploy Wiki Platform Locally

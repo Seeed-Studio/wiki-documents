@@ -2,13 +2,16 @@
 description: How To - Quick Streamlined
 title: Quick Pull Request
 keywords:
-- Community
-- Projects
+  - Community
+  - Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /quick_pull_request
 last_update:
   date: 09/01/2024
   author: Matthew
+createdAt: '2024-08-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/quick_pull_request/
 ---
 
 ### Thank you for considering to contribute to our seeed-studio files!

@@ -2,13 +2,16 @@
 description: SenseCAP Gateway
 title: SenseCAP Gateway
 keywords:
-- SenseCAP
-- Gateway
+  - SenseCAP
+  - Gateway
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network/SenseCAP_Network/SenseCAP_Gateway_Intro
 last_update:
   date: 01/08/2026
   author: Kian
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Network/SenseCAP_Network/SenseCAP_Gateway_Intro/
 ---
 
 

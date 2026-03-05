@@ -2,13 +2,16 @@
 description: SenseCAP S2100 LoRaWAN Data Logger
 title: SenseCAP S2100 LoRaWAN Data Logger
 keywords:
-- SenseCAP data logger
+  - SenseCAP data logger
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger
 sku: 114992872
 last_update:
   date: 4/12/2023
   author: Yvonne
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger/
 ---
 
 

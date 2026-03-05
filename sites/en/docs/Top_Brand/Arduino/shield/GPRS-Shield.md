@@ -1,13 +1,16 @@
 ---
-description:  GPRS Shield
-title:  GPRS Shield
+description: GPRS Shield
+title: GPRS Shield
 keywords:
--  Arduino shield
+  - Arduino shield
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /GPRS-Shield
 last_update:
   date: 2/16/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/GPRS-Shield/
 ---
 
 <!-- ---

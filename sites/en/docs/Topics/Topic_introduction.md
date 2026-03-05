@@ -2,12 +2,15 @@
 description: Hello and thank you for visiting the Knowledge Base of Technology Topics at Seeed Studio. This resource is crafted to support you in mastering our range of smart hardware and computing devices.
 title: Technology Topics
 keywords:
-- weeely wiki
+  - weeely wiki
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /topicintroduction
 last_update:
   date: 05/29/2024
   author: Yaohao
+createdAt: '2024-05-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/topicintroduction/
 ---
 
 

@@ -2,12 +2,15 @@
 description: Grove - 3軸デジタル加速度計±16g 超低消費電力 (BMA400)
 title: Grove - 3軸デジタル加速度計±16g 超低消費電力 (BMA400)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-3-Axis_Digital_Accelerometer±16g_Ultra-low_Power-BMA400/
 ---
 
 

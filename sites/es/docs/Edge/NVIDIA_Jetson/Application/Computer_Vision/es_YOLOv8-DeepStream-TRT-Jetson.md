@@ -11,6 +11,9 @@ slug: /YOLOv8-DeepStream-TRT-Jetson
 last_update:
   date: 04/21/2023
   author: Lakshantha
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/YOLOv8-DeepStream-TRT-Jetson/
 ---
 
 # Desplegar YOLOv8 en NVIDIA Jetson usando TensorRT y DeepStream SDK Support

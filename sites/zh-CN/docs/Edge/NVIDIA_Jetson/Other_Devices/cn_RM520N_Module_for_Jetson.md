@@ -11,6 +11,9 @@ slug: /rm520n_module_for_jetson
 last_update:
   date: 11/25/2025
   author: Youjiang
+createdAt: '2025-11-25'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/rm520n_module_for_jetson/
 ---
 
 RM520N 是一系列专为 IoT/eMBB 应用优化的 5G IoT 模块，采用 M.2 外形设计，符合 3GPP Release 16 规范，支持 5G NSA 和 SA 模式。RM520N 与 Quectel 的 5G 模块系列 RM50xQ、LTE-A Cat 6 模块 EM06、Cat 12 模块系列 EM12/EM12xR/EM120K 以及 Cat 16 模块 EM160R-GL 兼容，便于从 LTE-A 迁移到 5G。

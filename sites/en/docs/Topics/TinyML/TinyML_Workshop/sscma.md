@@ -2,12 +2,15 @@
 description: This is an open-source project / platform focused on embedded AI.
 title: The AI "Blink"
 keywords:
-- tinyml course
+  - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sscma
 last_update:
   date: 08/26/2024
   author: Matthew
+createdAt: '2023-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sscma/
 ---
 
 ## Familiarize the tools that we are using

@@ -2,9 +2,9 @@
 description: 预览 SenseCAP Indicator 的 LoRaWAN 功能
 title: LoRaWAN 终端节点 - SenseCAP Indicator
 keywords:
-- indicator
-- Touch
-- Screen
+  - indicator
+  - Touch
+  - Screen
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/lorawan_landing_page.png
 slug: /SenseCAP_Indicator_Application_LoRaWAN
 toc_max_heading_level: 4
@@ -16,6 +16,9 @@ tags:
   - device
 categories:
   - SenseCAP
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Indicator_Application_LoRaWAN/
 ---
 
 <div align="center">

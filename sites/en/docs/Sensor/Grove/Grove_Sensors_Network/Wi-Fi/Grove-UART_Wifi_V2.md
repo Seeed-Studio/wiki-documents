@@ -1,6 +1,6 @@
 ---
 title: Grove - UART Wifi V2
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113020011
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-UART_Wifi_V2/
 ---
 
 

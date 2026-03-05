@@ -2,13 +2,16 @@
 description: Grove - Infrared Temperature Sensor Array(AMG8833)
 title: Grove - Infrared Temperature Sensor Array(AMG8833)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Infrared_Temperature_Sensor_Array-AMG8833
 sku: 101020557
 last_update:
   date: 1/4/2023
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Infrared_Temperature_Sensor_Array-AMG8833/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/img/main.jpg" /></div>

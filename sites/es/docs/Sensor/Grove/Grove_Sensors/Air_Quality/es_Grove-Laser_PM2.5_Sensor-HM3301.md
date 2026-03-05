@@ -2,13 +2,16 @@
 description: Grove - Sensor PM2.5 Láser (HM3301)
 title: Grove - Sensor PM2.5 Láser (HM3301)
 keywords:
-- Grove Grove_Sensors Air_Quality
+  - Grove Grove_Sensors Air_Quality
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Laser_PM2.5_Sensor-HM3301
 sku: 101020613
 last_update:
   date: 1/20/2023
   author: jianjing huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Laser_PM2.5_Sensor-HM3301/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Laser_PM2.5_Sensor-HM3301/img/main.jpg)

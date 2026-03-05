@@ -9,9 +9,12 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /microbit_wiki_page
 sku: 103100063, 103030195, 102991003, 110060762, 102990863
 last_update:
-  date: 01/10/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 01/10/2023
+  author: Eico
+no_comments: false
+createdAt: '2023-01-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/microbit_wiki_page/
 ---
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/All_bazaar_image/Microbit.jpg" alt="pir" width={600} height="auto" /></p>
 

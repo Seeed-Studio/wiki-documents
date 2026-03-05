@@ -1,6 +1,6 @@
 ---
 title: Usar MQTT para encender luces LED de forma remota
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991555
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Use_MQTT_to_remotely_light_up_LED_lights/
 ---
 
 MQTT es un protocolo de transporte de mensajería de publicación/suscripción Cliente-Servidor. El cliente puede funcionar como publicador o suscriptor o ambos.

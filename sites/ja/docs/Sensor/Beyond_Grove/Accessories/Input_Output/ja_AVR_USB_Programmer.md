@@ -1,6 +1,6 @@
 ---
 title: AVR USB プログラマー
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウルス
@@ -9,6 +9,9 @@ slug: /AVR_USB_Programmer
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/AVR_USB_Programmer/
 ---
 
 

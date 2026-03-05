@@ -1,6 +1,6 @@
 ---
 title: Wio LTE Cat M1/NB-IoT 追踪器
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102991016
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio_LTE_Cat_M1_NB-IoT_Tracker/
 ---
 
 

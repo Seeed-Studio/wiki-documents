@@ -2,13 +2,16 @@
 description: ReSpeaker 4-Mic Array for Raspberry Pi
 title: reSpeaker 4-Mic Array for Raspberry Pi
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ReSpeaker_4_Mic_Array_for_Raspberry_Pi
 sku: 103030216
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/
 ---
 
 

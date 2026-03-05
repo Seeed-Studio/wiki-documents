@@ -2,13 +2,16 @@
 description: Grove - OLED Display 1.12 (SH1107) V3.0 - SPI/IIC -3.3V/5V
 title: Grove - OLED Display 1.12 (SH1107) V3.0 - SPI/IIC -3.3V/5V
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED-Display-1.12-SH1107_V3.0
 sku: 104020250
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-OLED-Display-1.12-SH1107_V3.0/
 ---
 
 

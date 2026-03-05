@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates how to compile a tensorflow model or pytorch model to edge tup model, and run it. 
+description: This wiki demonstrates how to compile a tensorflow model or pytorch model to edge tup model, and run it.
 title: Convert Model to Edge TPU TFlite Format for Google Coral
 keywords:
   - Edge TPU
@@ -12,7 +12,10 @@ slug: /convert_model_to_edge_tpu_tflite_format_for_google_coral
 last_update:
   date: 07/23/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-07-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/convert_model_to_edge_tpu_tflite_format_for_google_coral/
 ---
 
 # Convert Model to Edge TPU TFlite Format for Google Coral

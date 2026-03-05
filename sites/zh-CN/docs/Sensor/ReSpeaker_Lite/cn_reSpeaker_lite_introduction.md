@@ -2,13 +2,16 @@
 description: reSpeaker Lite 入门指南
 title: reSpeaker Lite 入门指南
 keywords:
-- ReSpeaker
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reSpeaker_usb_v3
 sku: 107990273,E24072601
 last_update:
   date: 6/28/2024
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reSpeaker_usb_v3/
 ---
 
 ## 介绍

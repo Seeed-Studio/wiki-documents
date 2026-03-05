@@ -2,13 +2,16 @@
 description: Arch Pro
 title: Arch Pro
 keywords:
-- Arch
+  - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arch_Pro
 sku: 102080002
 last_update:
   date: 2/1/2023
   author: hushuxu
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Arch_Pro/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Arch_Pro/img/Arch_pro.jpg)

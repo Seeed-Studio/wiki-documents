@@ -1,14 +1,17 @@
 ---
-description:  SenseCAP Sensor Hub Data Logger
-title:  SenseCAP Sensor Hub Data Logger
+description: SenseCAP Sensor Hub Data Logger
+title: SenseCAP Sensor Hub Data Logger
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger
 sku: 114992170,114992171
 last_update:
   date: 4/11/2023
   author: Yvonne
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger/
 ---
 
 # SenseCAP Sensor Hub Data Logger

@@ -2,12 +2,15 @@
 description: 传感器网络
 title: 传感器网络
 keywords:
-- Sensor Network
+  - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeed_Elderly/Navigation/Sensor_Network_4.7
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Seeed_Elderly/Navigation/Sensor_Network_4.7/
 ---
 
 本主题介绍了 Seeed Studio 产品文档，涉及从物理世界获取数字化数据的第一步，即在动态感知框架中部署信息基础设施，为社会监测和理解物理及自然环境奠定基础。

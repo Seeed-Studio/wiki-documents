@@ -2,14 +2,17 @@
 description: LoRaWAN Tracker 蓝牙 AT 命令说明
 title: LoRaWAN Tracker 蓝牙 AT 命令说明
 keywords:
-- Tracker
-- App
+  - Tracker
+  - App
 image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /tracker_at_command
 sidebar_position: 5
 last_update:
   date: 4/15/2025
   author: Jessie
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/tracker_at_command/
 ---
 
 本章将简要说明蓝牙 AT 命令的使用，建立蓝牙连接并通过蓝牙 AT 命令查询/配置设备信息。

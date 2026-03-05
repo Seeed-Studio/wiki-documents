@@ -2,12 +2,15 @@
 description: 入门指南：Grove Vision AI V2。
 title: 支持外部摄像头
 keywords:
-- vision ai
+  - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Grove-vision-ai-v2-camera-supported
 last_update:
   date: 12/12/2023
   author: Citric
+createdAt: '2024-03-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-vision-ai-v2-camera-supported/
 ---
 
 # 支持外部摄像头概述

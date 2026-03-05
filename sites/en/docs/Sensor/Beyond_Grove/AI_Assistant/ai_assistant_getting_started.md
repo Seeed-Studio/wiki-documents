@@ -4,10 +4,12 @@ title: Getting Started with AI Assistant
 image: https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/Top_Pic.webp
 slug: /ai_assistant_getting_started
 sku: 114993645
-# sidebar_position: 2
 last_update:
   date: 08/07/2025
   author: Robin(STMicroelectronics),Atom
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ai_assistant_getting_started/
 ---
 
 # Getting Started with AI Assistant

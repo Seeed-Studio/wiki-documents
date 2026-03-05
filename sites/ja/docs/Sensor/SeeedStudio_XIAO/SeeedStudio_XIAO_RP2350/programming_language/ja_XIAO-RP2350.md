@@ -1,5 +1,5 @@
 ---
-title:  Seeed Studio XIAO RP2350 と MicroPython
+title: Seeed Studio XIAO RP2350 と MicroPython
 description: |
   XIAO RP2350 は Seeed Studio の最先端マイコンです。デュアルコアプロセッサ、増量された SRAM とフラッシュメモリ、強化された接続機能を備えています。
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/RP2350-thumbnail.webp
@@ -12,6 +12,9 @@ sidebar_position: 0
 last_update:
   author: Spencer
   date: 2024-11-22T05:59:15.764Z
+createdAt: '2026-02-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/getting-started-xiao-rp2350/
 ---
 
 import Tabs from '@theme/Tabs';

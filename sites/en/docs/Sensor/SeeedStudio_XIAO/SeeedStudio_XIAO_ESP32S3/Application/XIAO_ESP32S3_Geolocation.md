@@ -2,13 +2,16 @@
 description: Making an ultra-compact global positioning tracker with the XIAO ESP32S3.
 title: Geolocation Tracker with XIAO ESP32S3 (Sense)
 keywords:
-- location
-- tracker
+  - location
+  - tracker
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /geolocation_tracker_with_XIAO_ESP32S3
 last_update:
   date: 06/14/2023
   author: Citric
+createdAt: '2023-06-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/geolocation_tracker_with_XIAO_ESP32S3/
 ---
 
 # Geolocation Tracker with XIAO ESP32S3

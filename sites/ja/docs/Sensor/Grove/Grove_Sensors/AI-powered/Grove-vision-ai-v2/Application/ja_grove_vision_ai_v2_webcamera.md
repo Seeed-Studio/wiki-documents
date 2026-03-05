@@ -2,13 +2,16 @@
 description: Grove Vision AI V2 を使用してインテリジェントなウェブカメラを構築する方法を紹介します。
 title: AI機能を備えたインテリジェントIPカメラ
 keywords:
-- vision AI
-- インテリジェントウェブカメラ
+  - vision AI
+  - インテリジェントウェブカメラ
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_webcamera
 last_update:
   date: 05/15/2025
   author: Allen
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_webcamera/
 ---
 
 

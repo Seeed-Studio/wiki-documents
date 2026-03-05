@@ -2,14 +2,17 @@
 description: 基于 Grove Vision AI V2 和 Home Assistant 构建人群热力图。
 title: 基于 Grove Vision AI V2 和 Home Assistant 构建人群密度检测
 keywords:
-- matter
-- XIAO
-- light
+  - matter
+  - XIAO
+  - light
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /vision_ai_v2_crowd_heat_map
 last_update:
   date: 05/22/2024
   author: Citric
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/vision_ai_v2_crowd_heat_map/
 ---
 
 # 基于 Grove Vision AI V2 和 Home Assistant 构建人群密度检测

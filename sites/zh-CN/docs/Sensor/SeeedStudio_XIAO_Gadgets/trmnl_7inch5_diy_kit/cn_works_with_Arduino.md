@@ -2,14 +2,17 @@
 description: 本文介绍如何使用 TRMNL 7.5 英寸（OG）DIY 套件与 Arduino 配合工作。
 title: 与 Arduino 配合使用
 keywords:
-- ePaper display
-- TRMNL
+  - ePaper display
+  - TRMNL
 image: https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/trmnl_head.webp
 slug: /ogdiy_kit_works_with_arduino
 sidebar_position: 4
 last_update:
   date: 06/29/2025
   author: Allen
+createdAt: '2025-09-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/ogdiy_kit_works_with_arduino/
 ---
 
 

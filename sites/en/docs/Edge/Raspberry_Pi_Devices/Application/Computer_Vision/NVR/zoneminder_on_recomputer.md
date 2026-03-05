@@ -1,5 +1,5 @@
 ---
-description: This wiki demonstrates how to deploy video surveillance system zoneminder to recomputer. 
+description: This wiki demonstrates how to deploy video surveillance system zoneminder to recomputer.
 title: Zoneminder on reComputer
 keywords:
   - reComputer
@@ -11,7 +11,10 @@ slug: /zoneminder_on_recomputer
 last_update:
   date: 09/05/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/zoneminder_on_recomputer/
 ---
 
 # Use Zoneminder on reComputer

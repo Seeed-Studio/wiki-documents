@@ -6,6 +6,9 @@ slug: /check_Encryption_Chip
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/check_Encryption_Chip/
 ---
 
 <!-- Q14: Cómo verificar si el Chip de Cifrado es ATECC608A-SSHDA-B o ATECC608A-TNGTLSS-G -->

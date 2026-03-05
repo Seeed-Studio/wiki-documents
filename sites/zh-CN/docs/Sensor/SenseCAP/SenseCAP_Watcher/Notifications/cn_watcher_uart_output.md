@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 07/10/2024
   author: Citric
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/uart_output/
 ---
 
 # 作为传感器使用 & 使用 Grove

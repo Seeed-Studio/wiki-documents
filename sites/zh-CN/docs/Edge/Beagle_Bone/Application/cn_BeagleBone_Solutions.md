@@ -2,12 +2,15 @@
 description: BeagleBone® 解决方案
 title: BeagleBone® 解决方案
 keywords:
-- Beagle_Bone
+  - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BeagleBone_Solutions
 last_update:
   date: 1/10/2022
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/BeagleBone_Solutions/
 ---
 
 # **BeagleBone® 解决方案**

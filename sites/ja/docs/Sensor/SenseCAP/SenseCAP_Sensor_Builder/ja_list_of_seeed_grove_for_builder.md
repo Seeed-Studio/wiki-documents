@@ -2,12 +2,15 @@
 description: Builderにより多くのGroveモジュールを追加する
 title: Builderにより多くのGroveモジュールを追加する
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /list_of_supported_grove_n_adding_more
 last_update:
   date: 11/24/2023
   author: Matthew
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/list_of_supported_grove_n_adding_more/
 ---
 
 # 概要

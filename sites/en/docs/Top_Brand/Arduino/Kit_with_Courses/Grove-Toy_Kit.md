@@ -1,13 +1,16 @@
 ---
-description:  Grove - Toy Kit
+description: Grove - Toy Kit
 title: Grove - Toy Kit
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Toy_Kit
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Toy_Kit/
 ---
 Grove Toy Kit provides an easy way for you to hack and upgrade toys to fit with your own personality. It boosts regular toys with many cool functions like sense of human motion, listening ability, movement detection, OLED display, and more. Thanks for the players of Toy hacking contest, there’re six awesome projects listed below that shows you what you can do with the Grove Toy Kit.
 

@@ -2,12 +2,15 @@
 description: Overview
 title: Getting Started with 5 Way Switch
 keywords:
-- Wio_terminal five_Way_Switch
+  - Wio_terminal five_Way_Switch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-Switch
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Wio-Terminal-Switch/
 ---
 
 # Getting Started with 5 Way Switch

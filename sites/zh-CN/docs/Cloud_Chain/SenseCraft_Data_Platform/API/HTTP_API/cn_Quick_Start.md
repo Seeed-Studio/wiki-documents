@@ -3,7 +3,7 @@ sidebar_position: 1
 description: HTTP API 快速入门
 title: HTTP API 快速入门
 keywords:
-- HTTP API 
+  - HTTP API
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/api/http-api/quick-start
 aliases:
@@ -11,6 +11,9 @@ aliases:
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-03-01'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/sensecraft-data-platform/api/http-api/quick-start/
 ---
 
 ## 前提条件

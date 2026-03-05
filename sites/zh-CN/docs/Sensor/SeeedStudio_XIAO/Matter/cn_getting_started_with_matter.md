@@ -2,13 +2,16 @@
 description: 介绍如何使用 Espressif 的 Matter 部署工具快速体验 Matter 照明功能。
 title: 使用 XIAO ESP32 快速入门 Matter
 keywords:
-- ESP-IDF
-- XIAO
+  - ESP-IDF
+  - XIAO
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /getting_started_with_matter
 last_update:
   date: 05/11/2024
   author: Citric
+createdAt: '2024-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/getting_started_with_matter/
 ---
 
 # 使用 XIAO ESP32 系列快速入门 Matter

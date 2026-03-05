@@ -2,13 +2,16 @@
 description: Motion Recognition based on Edge Impulse
 title: Motion Recognition based on Edge Impulse
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAOEI
 sku: 102010469,102010490,102010632
 last_update:
   date: 04/11/2023
   author: Citric
+createdAt: '2022-11-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/XIAOEI/
 ---
 
 # Seeed Studio XIAO nRF52840 Sense Edge Impulse Getting Started

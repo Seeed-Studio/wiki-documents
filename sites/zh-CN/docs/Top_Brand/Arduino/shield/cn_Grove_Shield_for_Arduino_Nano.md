@@ -5,9 +5,12 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Shield_for_Arduino_Nano
 sku: 103100124
 last_update:
-  date: 02/02/2023  
-  author: Eico 
-no_comments: false # for Disqus
+  date: 02/02/2023
+  author: Eico
+no_comments: false
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Shield_for_Arduino_Nano/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-shield-for-Arduino-Nano/img/Grove-Shoeld-for-Arduino-Nano-front.png" alt="pir" width={600} height="auto" /></p>

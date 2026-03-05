@@ -2,12 +2,15 @@
 description: Getting Started with Grove Vision AI V2.
 title: External Camera supported
 keywords:
-- vision ai
+  - vision ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Grove-vision-ai-v2-camera-supported
 last_update:
   date: 12/12/2023
   author: Citric
+createdAt: '2024-01-13'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-vision-ai-v2-camera-supported/
 ---
 
 # External Camera supported Overview

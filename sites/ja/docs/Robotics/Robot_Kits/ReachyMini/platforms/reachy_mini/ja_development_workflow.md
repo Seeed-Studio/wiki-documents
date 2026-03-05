@@ -3,20 +3,24 @@ description: Wireless Reachy Mini 向けの開発ワークフローガイド。S
 title: Wireless Reachy Mini 向け開発ワークフロー
 slug: /reachymini_platforms_reachy_mini_development_workflow
 keywords:
-- development
-- workflow
-- wireless
-- ssh
-- sshfs
-- remote editing
-- vs code
-- rsync
-- cross-platform
+  - development
+  - workflow
+  - wireless
+  - ssh
+  - sshfs
+  - remote editing
+  - vs code
+  - rsync
+  - cross-platform
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_platforms_reachy_mini_development_workflow/
 ---
 
 # Wireless Reachy Mini 向け開発ワークフロー

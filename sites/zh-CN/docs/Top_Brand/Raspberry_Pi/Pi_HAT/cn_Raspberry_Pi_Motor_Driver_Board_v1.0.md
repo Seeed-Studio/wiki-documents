@@ -2,13 +2,16 @@
 description: 树莓派电机驱动板 v1.0
 title: 树莓派电机驱动板 v1.0
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Raspberry_Pi_Motor_Driver_Board_v1.0
 sku: 103030031
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Raspberry_Pi_Motor_Driver_Board_v1.0/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Raspberry_Pi_Motor_Driver_Board_v1.0/img/Raspberry_Pi_Motor_Board_v1.0.jpg)

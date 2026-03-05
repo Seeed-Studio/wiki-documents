@@ -1,6 +1,6 @@
 ---
-title:  Grove - 80cm 红外接近传感器
-nointro:
+title: Grove - 80cm 红外接近传感器
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020042
 last_update:
   date: 12/30/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-80cm_Infrared_Proximity_Sensor/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-80cm_Infrared_Proximity_Sensor/img/Image_of_PSD.jpg)

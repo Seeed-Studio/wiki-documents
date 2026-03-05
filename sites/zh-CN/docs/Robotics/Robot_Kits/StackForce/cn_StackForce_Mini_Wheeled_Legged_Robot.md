@@ -2,13 +2,16 @@
 description: 本Wiki提供StackForce小轮足的组装和启动教程，以及相应的开发所需的学习文档和链接。
 title: StackForce小轮足教程
 keywords:
-- StackForce
-- Robotics
+  - StackForce
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/stackfoce/mini_wheeled_legged_robot.webp
 slug: /stackforce_mini_wheeled_legged_robot
 last_update:
   date: 12/2/2025
   author: LiShanghang
+createdAt: '2025-12-08'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/cn/stackforce_mini_wheeled_legged_robot/
 ---
 
 # 基于 StackForce 开发平台的双轮足机器人入门教程

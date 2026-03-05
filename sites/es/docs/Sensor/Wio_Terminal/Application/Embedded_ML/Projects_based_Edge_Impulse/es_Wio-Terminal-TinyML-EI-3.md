@@ -2,14 +2,17 @@
 description: Reconocimiento de escenas de audio
 title: Reconocimiento de escenas de audio
 keywords:
-- Wio_terminal 
-- Embedded_ML 
-- Projects_based_Edge_Impulse
+  - Wio_terminal
+  - Embedded_ML
+  - Projects_based_Edge_Impulse
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-TinyML-EI-3
 last_update:
   date: 1/30/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-TinyML-EI-3/
 ---
 
 # Reconocimiento de Escenas de Audio con Wio Terminal Edge Impulse usando Micrófono Integrado

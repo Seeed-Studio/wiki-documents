@@ -1,13 +1,16 @@
 ---
 description: Grove - Gas Sensor
-title: Grove - Gas Sensor 
+title: Grove - Gas Sensor
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Gas_Sensor
 last_update:
   date: 12/30/2022
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Gas_Sensor/
 ---
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Gas_Sensor/img/Twig-Gas_Sensor.bmp" alt="pir" width={600} height="auto" /></p>

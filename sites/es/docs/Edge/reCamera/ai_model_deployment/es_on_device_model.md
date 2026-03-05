@@ -11,6 +11,9 @@ slug: /recamera_on_device_models
 last_update:
   date: 02/14/2025
   author: Dawn Yao
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recamera_on_device_models/
 ---
 
 Hay otros modelos que puedes reemplazar:

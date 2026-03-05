@@ -2,12 +2,15 @@
 description: XBeeシリーズ2とSeeed製品を使用したZigbeeネットワーキング
 title: XBeeシリーズ2とSeeed製品を使用したZigbeeネットワーキング
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Zigbee_Networking_with_XBee_Series_2_and_Seeeds_Products/
 ---
 
 

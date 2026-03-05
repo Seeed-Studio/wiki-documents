@@ -6,6 +6,9 @@ slug: /change_default_gateway_IP
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/change_default_gateway_IP/
 ---
 
 <!-- Q1: ¿Qué pasa si conecto el router OpenWrt a mi router existente que tiene una IP de puerta de enlace predeterminada de 192.168.2.1? -->

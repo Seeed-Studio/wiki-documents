@@ -1,6 +1,6 @@
 ---
 title: 5V-3.3V 面包板电源模块 v1.1
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 106100000
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/5V-3.3V_Breadboard_Power_Supply_v1.1/
 ---
 
 ![](https://files.seeedstudio.com/wiki/5V-3.3V_Breadboard_Power_Supply_v1.1/img/Supply.jpg)

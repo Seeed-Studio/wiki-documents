@@ -8,6 +8,9 @@ slug: /reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage
 last_update:
   date: 05/16/2023
   author: Lakshantha
+createdAt: '2023-06-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage/
 ---
 
 This wiki introduces the various different hardware and interfaces on the reComputer Industrial J4012, J4011, J3011, J3010 and how to use them to expand your project ideas.

@@ -11,6 +11,9 @@ sku: E2025032601,114110314,114110312,114110313,114110311
 last_update:
   date: 06/19/2025
   author: Yaohui
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recomputer_jetson_super_getting_started/
 ---
 
 # reComputer Super の入門ガイド

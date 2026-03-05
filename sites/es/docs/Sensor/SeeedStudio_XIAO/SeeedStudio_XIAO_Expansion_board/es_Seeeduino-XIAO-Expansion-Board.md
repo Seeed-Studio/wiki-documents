@@ -2,13 +2,16 @@
 description: Placa de expansión Seeed Studio XIAO
 title: Placa Base de Expansión para XIAO
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino-XIAO-Expansion-Board
 sku: 103030356
 last_update:
   date: 07/18/2024
   author: Spencer
+createdAt: '2025-02-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Seeeduino-XIAO-Expansion-Board/
 ---
 
 ## Descripción General

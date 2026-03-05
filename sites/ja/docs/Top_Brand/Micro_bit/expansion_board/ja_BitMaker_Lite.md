@@ -2,12 +2,15 @@
 description: Micro_bit BitMaker lite
 title: BitMaker Lite
 keywords:
-- Micro_bit
+  - Micro_bit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /BitMaker_lite
 last_update:
   date: 05/15/2025
   author: Seraphina
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/BitMaker_lite/
 ---
 
 

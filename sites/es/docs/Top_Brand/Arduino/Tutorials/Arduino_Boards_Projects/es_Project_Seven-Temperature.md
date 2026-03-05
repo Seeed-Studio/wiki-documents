@@ -2,13 +2,16 @@
 description: Proyecto Siete - Temperatura
 title: Proyecto Siete - Temperatura
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Project_Seven-Temperature
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Project_Seven-Temperature/
 ---
 <!-- ---
 name: Project Seven - Temperature

@@ -3,18 +3,22 @@ description: Comprende los conceptos y la arquitectura fundamentales de Reachy M
 title: Conceptos Fundamentales y Arquitectura
 slug: /reachymini_sdk_core-concept
 keywords:
-- architecture
-- coordinate systems
-- safety limits
-- motor modes
-- client-server
-- daemon
-- sdk
+  - architecture
+  - coordinate systems
+  - safety limits
+  - motor modes
+  - client-server
+  - daemon
+  - sdk
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_sdk_core-concept/
 ---
 
 # Conceptos Fundamentales y Arquitectura

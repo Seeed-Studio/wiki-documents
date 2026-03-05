@@ -2,14 +2,17 @@
 description: このwikiではJ501キャリアボードの機能を紹介し、J501キャリアボードにJetpackシステムをフラッシュする方法を説明します。
 title: Jetpackのフラッシュ
 keywords:
-- reServer
-- Jetson
+  - reServer
+  - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reserver_j501_getting_started
 sku: 102991854,E24081601
 last_update:
   date: 08/19/2024
   author: Youjiang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reserver_j501_getting_started/
 ---
 
 # reServer J501の入門ガイド

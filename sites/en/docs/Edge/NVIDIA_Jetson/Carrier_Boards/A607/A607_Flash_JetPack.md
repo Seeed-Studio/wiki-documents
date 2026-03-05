@@ -10,6 +10,9 @@ sku: 102110841
 last_update:
   date: 04/17/2023
   author: Lakshantha
+createdAt: '2023-04-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_A607_Flash_System/
 ---
 
 # Flash JetPack OS to A607 Carrier Board (NVIDIA Jetson Orin NX/Nano supported)

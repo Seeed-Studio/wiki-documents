@@ -2,13 +2,16 @@
 description: 项目一 - 闪烁
 title: 项目一 - 闪烁
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Project_One-Blink
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2023-02-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Project_One-Blink/
 ---
 <!-- ---
 name: Project One - Blink

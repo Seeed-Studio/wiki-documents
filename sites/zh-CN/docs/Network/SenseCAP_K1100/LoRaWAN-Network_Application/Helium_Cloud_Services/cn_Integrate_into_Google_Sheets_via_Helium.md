@@ -2,12 +2,15 @@
 description: 集成到 Google Sheets
 title: 集成到 Google Sheets
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Integrate_into_Google_Sheets_via_Helium
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Integrate_into_Google_Sheets_via_Helium/
 ---
 # 通过 Helium 集成到 Google Sheets
 

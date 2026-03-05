@@ -2,16 +2,19 @@
 description: Esta guía explica cómo hacer una copia de seguridad y restaurar el sistema en un reComputer J3011 para transferir tu entorno configurado y software a un nuevo dispositivo. El proceso de copia de seguridad incluye entrar en modo de recuperación, descargar el BSP de JetPack, y usar un script de copia de seguridad para copiar los datos. Durante la restauración, inserta un nuevo SSD, vuelve a entrar en modo de recuperación, y ejecuta el comando de restauración. Este proceso permite la replicación eficiente del entorno del sistema configurado.
 title: Crear Copia de Seguridad y Restaurar en reComputer
 keywords:
-- jetson
-- BSP
-- L4T
-- Backup
-- Restore
+  - jetson
+  - BSP
+  - L4T
+  - Backup
+  - Restore
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop2.webp
 slug: /create_backup_and_restore_on_recomputer
 last_update:
   date: 04/11/2025
   author: Zibo
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/create_backup_and_restore_on_recomputer/
 ---
 
 # Crear Copia de Seguridad y Restaurar en reComputer 

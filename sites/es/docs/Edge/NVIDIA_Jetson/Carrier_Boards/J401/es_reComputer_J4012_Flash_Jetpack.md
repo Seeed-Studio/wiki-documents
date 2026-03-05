@@ -2,13 +2,16 @@
 description: Flashear JetPack en reComputer J4012 (placa portadora J401)
 title: Flashear Jetpack
 keywords:
-- reComputer
+  - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J4012_Flash_Jetpack
 sku: 102110769, 102110770
 last_update:
   date: 6/12/2024
   author: Lakshantha/Youjiang
+createdAt: '2023-03-02'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reComputer_J4012_Flash_Jetpack/
 ---
 
 # Flashear el sistema operativo JetPack en la placa portadora J401

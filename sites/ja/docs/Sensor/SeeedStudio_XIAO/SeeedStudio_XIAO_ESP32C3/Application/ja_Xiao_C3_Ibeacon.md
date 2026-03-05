@@ -9,6 +9,9 @@ slug: /xiao-c3-ibeacon
 last_update:
   date: 04/14/2025
   author: Priyanshu Roy
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao-c3-ibeacon/
 ---
 
 # ESP-IDFを使用したBME680センサー付きXIAO ESP32-C3 iBeacon

@@ -2,13 +2,16 @@
 description: Xadow - Barómetro
 title: Xadow - Barómetro
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Barometer
 sku: 103040001
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Xadow_Barometer/
 ---
 
 

@@ -2,8 +2,8 @@
 description: Este artículo describe cómo usar el panel de papel electrónico para trabajar con TRMNL.
 title: Funciona con TRMNL
 keywords:
-- ePaper display
-- TRMNL
+  - ePaper display
+  - TRMNL
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/216.webp
 slug: /xiao_7_5_inch_epaper_panel_with_trmnl
 sku: 114993635
@@ -11,6 +11,9 @@ sidebar_position: 4
 last_update:
   date: 05/19/2025
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao_7_5_inch_epaper_panel_with_trmnl/
 ---
 
 # Panel ePaper XIAO de 7.5 Pulgadas Funciona con TRMNL

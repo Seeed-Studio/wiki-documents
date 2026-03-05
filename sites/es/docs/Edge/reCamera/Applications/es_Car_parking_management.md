@@ -2,17 +2,20 @@
 title: Demo de Monitoreo de Espacios de Estacionamiento con IA usando reCamera
 description: Este wiki presenta un demo de monitoreo de espacios de estacionamiento basado en IA usando reCamera, mostrando detección y visualización de disponibilidad de estacionamiento en tiempo real.
 keywords:
-    - Detección de Espacios de Estacionamiento
-    - reCamera
-    - Visión IA Edge
-    - Estacionamiento Inteligente
+  - Detección de Espacios de Estacionamiento
+  - reCamera
+  - Visión IA Edge
+  - Estacionamiento Inteligente
 slug: /ai_parking_slot_monitoring_demo_with_recamera
 sku: 100029708,102991896
 image: https://files.seeedstudio.com/wiki/reCamera/recamera_banner.webp
 sidebar_position: 3
 last_update:
-    date: 2025-12-17
-    author: John Xiang
+  date: 2025-12-17T00:00:00.000Z
+  author: John Xiang
+createdAt: '2025-12-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ai_parking_slot_monitoring_demo_with_recamera/
 ---
 
 # Demo de Gestión de Estacionamiento con IA usando reCamera

@@ -2,13 +2,16 @@
 description: Grove - XBee Carrier
 title: Grove - XBee Carrier
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-XBee_Carrier
 sku: 113020004
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-XBee_Carrier/
 ---
 <!-- ---
 name: Grove - XBee Carrier

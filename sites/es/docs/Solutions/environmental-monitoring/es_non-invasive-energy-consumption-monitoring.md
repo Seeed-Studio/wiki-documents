@@ -2,14 +2,17 @@
 description: Monitoreo de energía doméstico/de oficina sin cableado y sin complicaciones
 title: Monitoreo de Energía AC No Invasivo con Home Assistant
 keywords:
-    - CT
-    - energy consumption monitoring
-    - Home Assistant
+  - CT
+  - energy consumption monitoring
+  - Home Assistant
 slug: /non_invasive_ct_energy_consumption
 sidebar_position: 2
 last_update:
-    date: 08/18/2025
-    author: Spencer
+  date: 08/18/2025
+  author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/non_invasive_ct_energy_consumption/
 ---
 
 ## 1. Descripción General de la Solución

@@ -2,14 +2,17 @@
 description: SeeedとNVIDIAのL4Tの違いについて説明します
 title: SeeedとNVIDIAのL4Tの違い
 keywords:
-- jetson
-- BSP
-- L4T
+  - jetson
+  - BSP
+  - L4T
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /differences_of_l4t_between_seeed_and_nvidia
 last_update:
   date: 04/05/2025
   author: Dayu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/differences_of_l4t_between_seeed_and_nvidia/
 ---
 
 SeeedのJetson Board Support Packages（BSP）は、NVIDIAのLinux for Tegra（L4T）バージョン35.3.1、35.5、36.3、36.4、および36.4.3をベースとし、Seeed独自のJetsonシリーズ製品をサポートするための修正が加えられています。以下は、これらの各L4Tバージョンにおけるseeed BSPとNVIDIA公式BSPの違いです。

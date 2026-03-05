@@ -1,9 +1,9 @@
 ---
-description: This wiki demonstrates how to deploy facial recognition on the reComputer. 
+description: This wiki demonstrates how to deploy facial recognition on the reComputer.
 title: Deploy Facial Recognition on reComputer
 keywords:
   - Edge
-  - reComputer AI 
+  - reComputer AI
   - face recognition
   - hailo
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,7 +11,10 @@ slug: /facial_recognition_on_the_recomputer
 last_update:
   date: 11/18/2025
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-11-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/facial_recognition_on_the_recomputer/
 ---
 
 # Deploy Facial Recognition on reComputer

@@ -2,14 +2,17 @@
 description: YOLOv8のトレーニングからデプロイまで
 title: YOLOv8ポーズ推定モデルのトレーニングとデプロイ
 keywords:
-- YOLOv8
-- we2 
-- ポーズ検出
+  - YOLOv8
+  - we2
+  - ポーズ検出
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ma_deploy_yolov8_pose
 last_update:
   date: 05/15/2025
   author: Jack Mu
+createdAt: '2024-04-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ma_deploy_yolov8_pose/
 ---
 
 

@@ -2,12 +2,15 @@
 description: Entrenamiento para Model Assistant
 title: Detección de Objetos - FOMO
 keywords:
-- sscma model assistant ai tinyml
+  - sscma model assistant ai tinyml
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ModelAssistant_Tutorials_Training_FOMO
 last_update:
   date: 01/11/2024
   author: LynnL4
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ModelAssistant_Tutorials_Training_FOMO/
 ---
 
 # Detección de Objetos - FOMO

@@ -2,13 +2,16 @@
 description: mmWave センサーが HA に接続する方法の紹介。
 title: XIAO 用 mmWave から Home Assistant へ Bluetooth または Wifi 経由で接続
 keywords:
-- mmwave
-- radar
+  - mmwave
+  - radar
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /mmwave_for_xiao_to_ha_bt
 last_update:
   date: 09/14/2024
   author: Allen, Djair
+createdAt: '2023-12-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/mmwave_for_xiao_to_ha_bt/
 ---
 
 # XIAO 用 mmWave から Home Assistant へ Bluetooth 経由で接続

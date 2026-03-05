@@ -2,13 +2,16 @@
 description: 如何操作 - 快速简化流程
 title: 快速提交 Pull Request
 keywords:
-- 社区
-- 项目
+  - 社区
+  - 项目
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /quick_pull_request
 last_update:
   date: 09/01/2024
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/quick_pull_request/
 ---
 
 ### 感谢您考虑为我们的 Seeed Studio 文件做出贡献！

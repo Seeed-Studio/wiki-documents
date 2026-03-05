@@ -2,15 +2,18 @@
 description: Esta wiki te guía a través del despliegue de modelos DeepSeek en dispositivos reComputer Jetson usando Ollama, mostrando inferencia de IA eficiente con consumo mínimo de energía.
 title: Desplegar Rápidamente DeepSeek en reComputer Jetson
 keywords:
-- reComputer
-- LLM
-- ollama
-- deepseek
+  - reComputer
+  - LLM
+  - ollama
+  - deepseek
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/deepseek.webp
 slug: /deploy_deepseek_on_jetson
 last_update:
   date: 02/08/2025
   author: Youjiang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/deploy_deepseek_on_jetson/
 ---
 
 

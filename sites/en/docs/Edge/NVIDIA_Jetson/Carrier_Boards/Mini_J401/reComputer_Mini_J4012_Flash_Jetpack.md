@@ -2,12 +2,15 @@
 description: This article explains how to flash JetPack 6.0 on the J401-Mini Carrier Board, covering device overview, preparation, entering Force Recovery mode, and using a one-click script for flashing, helping users quickly deploy NVIDIA Jetson Orin devices.
 title: Flash Jetpack
 keywords:
-- reComputer Mini
+  - reComputer Mini
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/recomputer-mini-1.webp
 slug: /recomputer_mini_j401_getting_started
 last_update:
   date: 03/28/2025
   author: Dayu
+createdAt: '2023-02-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/recomputer_mini_j401_getting_started/
 ---
 
 # Flash JetPack to J401-Mini Carrier Board

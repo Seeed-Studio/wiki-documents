@@ -2,14 +2,17 @@
 description: Codecraft Grove 兼容列表
 title: Codecraft Grove 兼容列表
 keywords:
-- Arduino
-- Tutorials
-- Codecraft_Platform_for_Arduino
+  - Arduino
+  - Tutorials
+  - Codecraft_Platform_for_Arduino
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Codecraft_Grove_Compatible_List
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Codecraft_Grove_Compatible_List/
 ---
 
 # Codecraft Grove 兼容列表

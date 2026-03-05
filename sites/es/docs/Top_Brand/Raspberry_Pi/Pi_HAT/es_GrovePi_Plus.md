@@ -2,13 +2,16 @@
 description: GrovePi Plus
 title: GrovePi Plus
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /GrovePi_Plus
 sku: 110060161, 103010002
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/GrovePi_Plus/
 ---
 
 ![](https://files.seeedstudio.com/wiki/GrovePi_Plus/img/110060049%2010_02.jpg)

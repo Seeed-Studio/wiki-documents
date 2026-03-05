@@ -2,14 +2,17 @@
 description: ReSpeaker XVF3800 USB 4-Mic Array は、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性をご体験ください。
 title: reSpeaker XVF3800 の Python による制御
 keywords:
-- reSpeaker
-- python
-- sdk
+  - reSpeaker
+  - python
+  - sdk
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp
 slug: /respeaker_xvf3800_python_sdk
 last_update:
   date: 11/14/2025
   author: Kasun Thushara
+createdAt: '2025-11-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_python_sdk/
 ---
 
 ## はじめに

@@ -2,14 +2,17 @@
 description: 本维基提供了使用 Isaac ROS Visual SLAM 的分步指南。
 title: Isaac ROS Visual SLAM
 keywords:
-- NVIDIA
-- Isaac ROS
-- ROS
+  - NVIDIA
+  - Isaac ROS
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /isaac_ros_visual_slam
 last_update:
   date: 2025/5/28
   author: zhuyaohui
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/isaac_ros_visual_slam/
 ---
 
 

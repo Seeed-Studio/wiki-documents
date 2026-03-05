@@ -2,13 +2,16 @@
 description: Grove - Sensor de Temperatura Infrarrojo
 title: Grove - Sensor de Temperatura Infrarrojo
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Infrared_Temperature_Sensor
 sku: 101020062
 last_update:
   date: 1/4/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Infrared_Temperature_Sensor/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/main.jpg" /></div>

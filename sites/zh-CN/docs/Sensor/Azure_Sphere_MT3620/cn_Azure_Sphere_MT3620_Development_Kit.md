@@ -2,13 +2,16 @@
 description: Azure Sphere MT3620 开发套件
 title: Azure Sphere MT3620 开发套件
 keywords:
-- Azure_Sphere_MT3620_Development_Kit
+  - Azure_Sphere_MT3620_Development_Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Azure_Sphere_MT3620_Development_Kit
 sku: 102991100, 102991099, 102991012
 last_update:
   date: 1/12/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Azure_Sphere_MT3620_Development_Kit/
 ---
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Azure_Sphere_MT3620_Development_Kit/img/azure.jpg)

@@ -1,17 +1,20 @@
 ---
-description: This wiki demonstrates how to use yolov8n to do object detection with ai kit on raspberry pi5 from traing to deploying 
-title: Tutorial of AI Kit with Raspberry Pi 5 about YOLOv8n object detection 
+description: This wiki demonstrates how to use yolov8n to do object detection with ai kit on raspberry pi5 from traing to deploying
+title: Tutorial of AI Kit with Raspberry Pi 5 about YOLOv8n object detection
 keywords:
   - Edge
   - rpi5
   - Ai kit
   - YOLO
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection 
+slug: /tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection
 last_update:
   date: 08/6/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/
 ---
 
 # Tutorial of AI Kit with Raspberry Pi 5 about YOLOv8n object detection

@@ -2,12 +2,15 @@
 description: Grove - Capacitive Moisture Sensor (Corrosion Resistant)
 title: Grove - Capacitive Moisture Sensor (Corrosion Resistant)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant
 last_update:
   date: 1/9/2023
   author: jianjing Huang
+createdAt: '2023-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-Capacitive_Moisture_Sensor-Corrosion-Resistant/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Capacitive_Moisture_Sensor_Corrosion_Resistant/img/main.jpg" /></div>

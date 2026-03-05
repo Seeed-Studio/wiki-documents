@@ -2,13 +2,16 @@
 description: Breakout para LinkIt Smart 7688 v2.0
 title: Breakout para LinkIt Smart 7688 v2.0
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Breakout_for_LinkIt_Smart_7688_v2.0
 sku: 103100022
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Breakout_for_LinkIt_Smart_7688_v2.0/
 ---
 
 :::danger

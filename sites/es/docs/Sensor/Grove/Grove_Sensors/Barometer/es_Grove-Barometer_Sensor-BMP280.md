@@ -2,13 +2,16 @@
 description: Grove - Sensor de Barómetro (BMP280)
 title: Grove - Sensor de Barómetro (BMP280)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Barometer_Sensor-BMP280
 sku: 101020192
 last_update:
   date: 1/4/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Barometer_Sensor-BMP280/
 ---
 
 <!-- <div align=center><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP280/img/BMP280.jpg"/><figcaption><b></b><i></i></figcaption></a>

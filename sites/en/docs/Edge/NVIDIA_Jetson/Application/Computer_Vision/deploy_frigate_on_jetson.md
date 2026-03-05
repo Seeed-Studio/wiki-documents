@@ -1,11 +1,14 @@
 ---
 description: Frigate is an open-source NVR (Network Video Recorder) with Realtime Object Detection for IP cameras. In this guide, we'll walk through the steps to deploy Frigate on an NVIDIA Jetson device.
-title: Deploy Frigate On Jetson 
+title: Deploy Frigate On Jetson
 image: https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/3.png
 slug: /deploy_frigate_on_jetson
 last_update:
   date: 08/29/2024
   author: kourosh
+createdAt: '2024-08-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/deploy_frigate_on_jetson/
 ---
 
 # Deploy Frigate On a reComputer(NVIDIA Jetson) device

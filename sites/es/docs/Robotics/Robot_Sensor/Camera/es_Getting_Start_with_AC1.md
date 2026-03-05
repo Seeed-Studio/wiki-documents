@@ -2,21 +2,24 @@
 description: Mostrar a las personas cómo usar Orbbec Gemini 335Lg en la plataforma reComputer Jetson.
 title: Primeros Pasos con AC1
 keywords:
-- Jetson
-- reComputer Robotics
-- Computer Vision
-- Autonomous Driving
-- Industrial Robot
-- Orbbec
-- AI Camera
-- Stereo Camera
-- Depth Camera
-- Visual SLAM
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/ac1/ac1.webp 
+  - Jetson
+  - reComputer Robotics
+  - Computer Vision
+  - Autonomous Driving
+  - Industrial Robot
+  - Orbbec
+  - AI Camera
+  - Stereo Camera
+  - Depth Camera
+  - Visual SLAM
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/ac1/ac1.webp
 slug: /ac1
 last_update:
-  date: 2025-09-18
+  date: 2025-09-18T00:00:00.000Z
   author: Youjiang
+createdAt: '2025-09-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ac1/
 ---
 
 <div align="center">

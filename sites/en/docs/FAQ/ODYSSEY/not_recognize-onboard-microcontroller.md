@@ -1,12 +1,14 @@
 ---
 description: ODYSSEY-FAQ
 title: Arduino IDE doesn't recognize the onboard microcontroller on ODYSSEY - X86J4105/ X86J4125
-#keywords:
 slug: /not_recognize-onboard-microcontroller
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 last_update:
   date: 6/26/2023
   author: Seraphina
+createdAt: '2023-06-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/not_recognize-onboard-microcontroller/
 ---
  
 

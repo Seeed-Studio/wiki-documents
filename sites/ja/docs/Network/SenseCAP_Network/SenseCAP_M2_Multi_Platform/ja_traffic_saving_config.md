@@ -2,13 +2,16 @@
 description: 低データ消費モード設定（4G版用）
 title: 低データ消費モード設定（4G版用）
 keywords:
-- SenseCAP_M2
-- Gateway
+  - SenseCAP_M2
+  - Gateway
 image: https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/sensecap_m2.jpg
 slug: /traffic_saving_config
 last_update:
   date: 12/4/2024
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/traffic_saving_config/
 ---
 
 

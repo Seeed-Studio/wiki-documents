@@ -12,6 +12,9 @@ sidebar_position: 5
 last_update:
   date: 06/09/2025
   author: Parker Hu & Yuxin Liang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/recamera_develop_with_c_cpp/
 ---
 
 # 在 reCamera 上使用 C&C++ 开发

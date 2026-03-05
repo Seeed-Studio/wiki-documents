@@ -1,24 +1,27 @@
 ---
-description: "Hello Watcher"
+description: Hello Watcher
 title: 世界と能動的に対話する AI アシスタント
 keywords:
-- Jarvis
-- SenseCAP Watcher
-- xiaozhi
-- AI
-- LLM
-- Chat-Bot
-- SenseCraft AI
-- Himax
-- Yolo
-- Assistant
-- MCP
+  - Jarvis
+  - SenseCAP Watcher
+  - xiaozhi
+  - AI
+  - LLM
+  - Chat-Bot
+  - SenseCraft AI
+  - Himax
+  - Yolo
+  - Assistant
+  - MCP
 image: https://files.seeedstudio.com/wiki/solution/ai-agents/sensecap-watcher/display.webp
 slug: /solutions/hello_watcher_llms
 sidebar_position: 1
 last_update:
   date: 09/16/2025
   author: Spencer
+createdAt: '2025-09-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/solutions/hello_watcher_llms/
 ---
 
 import Tabs from '@theme/Tabs';

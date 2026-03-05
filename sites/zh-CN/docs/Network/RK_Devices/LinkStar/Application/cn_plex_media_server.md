@@ -10,6 +10,9 @@ slug: /plex_media_server
 last_update:
   date: 2023/6/14
   author: Kasun Thushara
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/plex_media_server/
 ---
 # 家庭娱乐的未来：LinkStar-H68K 路由器与 Plex 媒体服务器
 

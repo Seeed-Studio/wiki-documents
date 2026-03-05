@@ -1,6 +1,6 @@
 ---
-description:  Real-time Optical Character Recognition
-title:  Real-time OCR with reComputer AI box
+description: Real-time Optical Character Recognition
+title: Real-time OCR with reComputer AI box
 keywords:
   - Edge
   - reComputer R2000
@@ -11,6 +11,9 @@ slug: /real-time-ocr
 last_update:
   date: 6/16/2025
   author: Jiahao Li
+createdAt: '2025-06-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/real-time-ocr/
 ---
 
 ## Introduction

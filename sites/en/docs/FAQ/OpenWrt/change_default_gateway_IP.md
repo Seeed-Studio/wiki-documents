@@ -6,6 +6,9 @@ slug: /change_default_gateway_IP
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2023-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/change_default_gateway_IP/
 ---
 
 <!-- Q1: What if I connect the OpenWrt router to my existing router which has a default gateway IP of 192.168.2.1? -->

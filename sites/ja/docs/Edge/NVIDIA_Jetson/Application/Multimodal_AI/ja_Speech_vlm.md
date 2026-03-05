@@ -2,15 +2,18 @@
 description: このwikiでは、reComputer AGX Orin 64Gで音声インタラクション機能を持つビジュアル言語モデルを実行する方法のチュートリアルを提供します。
 title: 音声インタラクション機能付きVLMの実行
 keywords:
-- Multimodal 
-- NanoVLM
-- TTS
-- STT
+  - Multimodal
+  - NanoVLM
+  - TTS
+  - STT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /speech_vlm
 last_update:
   date: 08/23/2024
   author: YaoHui Zhu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/speech_vlm/
 ---
 
 # reComputer Jetsonで音声インタラクション機能付きVLMを実行する方法

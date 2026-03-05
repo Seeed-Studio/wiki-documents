@@ -2,12 +2,15 @@
 description: Tapping
 title: Tapping
 keywords:
-- Wio_terminal IMU
+  - Wio_terminal IMU
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-IMU-Tapping
 last_update:
   date: 1/17/2023
   author: jianjing Huang
+createdAt: '2023-01-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-IMU-Tapping/
 ---
 
 # Demo de Detección de Movimiento de Toque en Wio Terminal

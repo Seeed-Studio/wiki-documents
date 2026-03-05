@@ -2,13 +2,16 @@
 description: Xadow - 三轴数字加速度计(±400g)
 title: Xadow - 三轴数字加速度计(±400g)
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g
 sku: 101040002
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/
 ---
 ![](https://files.seeedstudio.com/wiki/Xadow_3_Aixs_Digital_Accelerometer_plusandminus_400g/img/Xadow_3Axis_Accelerometer400g.jpg)
 

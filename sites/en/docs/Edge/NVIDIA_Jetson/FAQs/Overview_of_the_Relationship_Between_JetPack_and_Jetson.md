@@ -2,14 +2,17 @@
 description: overview of the relationship between jetpack and jetson
 title: Overview of the Relationship Between Jetpack and Jetson
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /overview_of_the_relationship_between_jetpack_and_jetson
 last_update:
   date: 06/05/2025
   author: Dayu
+createdAt: '2025-06-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/overview_of_the_relationship_between_jetpack_and_jetson/
 ---
 
 This wiki provides a brief introduction to the components of JetPack, helping you quickly understand the relationship between JetPack and Jetson, and answering some of the most frequently asked questions.

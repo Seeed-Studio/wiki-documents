@@ -2,13 +2,16 @@
 description: Kit de Robot con Ruedas Mecanum 4WD Series
 title: Kit de Robot con Ruedas Mecanum 4WD Series
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /4WD_Mecanum_Wheel_Robot_Kit_Series
 sku: 110070012
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/4WD_Mecanum_Wheel_Robot_Kit_Series/
 ---
 
 Los productos de la serie Kit de Robot con Ruedas Mecanum 4WD son plataformas móviles de tracción en las cuatro ruedas basadas en ruedas Mecanum. Cada kit contiene dos ruedas mecanum izquierdas así como dos ruedas mecanum derechas. Las cuatro ruedas Mecanum están conectadas cada una a un motor separado con control independiente. Dependiendo de la dirección y velocidad de cada rueda individual, la plataforma móvil puede moverse hacia adelante, hacia atrás, lateralmente y en cualquier otra dirección deseada o girar. Dos módulos de control remoto – módulo BLE y módulo RF – pueden añadirse a este kit para permitir el control remoto.

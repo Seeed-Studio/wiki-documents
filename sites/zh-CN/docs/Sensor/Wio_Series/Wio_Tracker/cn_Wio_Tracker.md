@@ -1,6 +1,6 @@
 ---
 title: Wio Tracker 介绍
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio_Tracker
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio_Tracker/
 ---
 
 Wio_Tracker 平台首次向世界介绍是在2015年底，当时 Wio Link 正在 Kickstarter 上进行众筹。作为我们在 Kickstarter 上推出的第二款产品，Wio_Tracker 的结果远远超出了我们的预期。因此不久之后，我们发布了 Wio link 的小兄弟——Wio Node。两者具有几乎相同的功能，但在尺寸和 grove 连接器数量上有所不同，以适应不同的情况。

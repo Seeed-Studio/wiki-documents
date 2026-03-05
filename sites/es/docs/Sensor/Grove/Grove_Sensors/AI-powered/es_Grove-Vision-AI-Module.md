@@ -2,13 +2,16 @@
 description: Grove - Módulo Vision AI
 title: Grove Vision AI Module
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Vision-AI-Module
 sku: 114992866
 last_update:
   date: 3/22/2023
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Vision-AI-Module/
 ---
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/camera.jpg" /></div>

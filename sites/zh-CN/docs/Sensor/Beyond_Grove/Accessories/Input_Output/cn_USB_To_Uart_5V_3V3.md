@@ -2,13 +2,16 @@
 description: USB 转 UART 5V/3V3
 title: USB 转 UART 5V/3V3
 keywords:
-- Accessories charge
+  - Accessories charge
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /USB_To_Uart_5V_3V3
 sku: 103990049
 last_update:
   date: 1/13/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/USB_To_Uart_5V_3V3/
 ---
 
 ![](https://files.seeedstudio.com/wiki/USB_To_Uart_5V_3V3/img/Photo_USB_To_Uart_5V_3V3.JPG)

@@ -1,14 +1,17 @@
 ---
-description:  Arch Max v1.1
-title:  Arch Max v1.1
+description: Arch Max v1.1
+title: Arch Max v1.1
 keywords:
-- Arch
+  - Arch
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arch_Max_v1.1
 sku: 102110014
 last_update:
   date: 2/1/2023
   author: hushuxu
+createdAt: '2023-02-01'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Arch_Max_v1.1/
 ---
 
 

@@ -2,13 +2,16 @@
 description: Grove Indoor Environment Kit for Edison
 title: Grove Indoor Environment Kit for Edison
 keywords:
-- コース付きキット
+  - コース付きキット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Indoor_Environment_Kit_for_Edison
 sku: 110060064
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Indoor_Environment_Kit_for_Edison/
 ---
 
 

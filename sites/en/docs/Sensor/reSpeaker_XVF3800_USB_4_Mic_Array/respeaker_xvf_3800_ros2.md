@@ -2,14 +2,17 @@
 description: Learn to integrate the ReSpeaker XVF3800 with ROS2 for robotic applications. This tutorial covers simulating DOA and speech detection with Turtlesim, providing a basic understanding of robotic control and PID control.
 title: ROS2 on reSpeaker XVF3800
 keywords:
-- reSpeaker
-- Robotics
-- ROS2
+  - reSpeaker
+  - Robotics
+  - ROS2
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_xvf3800_ros2
 last_update:
   date: 9/26/2025
   author: Kasun Thushara
+createdAt: '2025-09-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/respeaker_xvf3800_ros2/
 ---
 
 ## Introduction

@@ -2,13 +2,16 @@
 description: Este artículo se centra en el uso del sensor Grove SGP41.
 title: Grove -Sensor Inteligente de Calidad del Aire (SGP41)
 keywords:
-- SGP41
+  - SGP41
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove-smart-air-quality-sensor-sgp41
 sku: 101021092
 last_update:
   date: 5/11/2023
   author: Stephen Lo
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove-smart-air-quality-sensor-sgp41/
 ---
 
 # Grove -Sensor Inteligente de Calidad del Aire (SGP41)

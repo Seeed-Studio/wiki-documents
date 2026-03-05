@@ -2,14 +2,17 @@
 description: 使用 ReSpeaker Lite 的 I2S 到 CSV 转换器
 title: CSV 转换器
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_streams_print
 last_update:
   date: 7/1/2024
   author: Jessie
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/respeaker_streams_print/
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: Dinamo de Bicicleta con Soporte - 6V 3W
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Bicycle_Dynamo_With_Bracket-6V_3W
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Bicycle_Dynamo_With_Bracket-6V_3W/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/Bidynamo.jpg)
 

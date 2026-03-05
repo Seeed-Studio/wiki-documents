@@ -2,12 +2,15 @@
 description: 这是 SenseCraft-HomeAssistant 用户手册
 title: SenseCraft-HomeAssistant 用户手册
 keywords:
-- home assistant 
+  - home assistant
 slug: /sensecraft_homeassistant_userguide
 sku: E2025081502,E2025081503
 last_update:
   date: 04/12/2024
   author: WenHao
+createdAt: '2024-04-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/sensecraft_homeassistant_userguide/
 ---
 
 # SenseCraft-HomeAssistant 用户手册

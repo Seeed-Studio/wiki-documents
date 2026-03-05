@@ -1,6 +1,6 @@
 ---
-description:  Jetson上でMLC LLMを使用したQuantized Llama2-7B
-title:  MLC LLMによる高速推論
+description: Jetson上でMLC LLMを使用したQuantized Llama2-7B
+title: MLC LLMによる高速推論
 keywords:
   - Edge
   - reComputer
@@ -12,7 +12,10 @@ slug: /Quantized_Llama2_7B_with_MLC_LLM_on_Jetson
 last_update:
   date: 04/1/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson/
 ---
 
 # Jetson上でMLC LLMを使用したQuantized Llama2-7B

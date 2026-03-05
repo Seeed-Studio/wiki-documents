@@ -2,13 +2,16 @@
 description: Grove - 光・ジェスチャー・カラー・近接センサー (TMG39931)
 title: Grove - 光・ジェスチャー・カラー・近接センサー (TMG39931)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931
 sku: 101020580
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Light-Gesture-Color-Proximity_Sensor-TMG39931/
 ---
 
 

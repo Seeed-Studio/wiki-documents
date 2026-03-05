@@ -2,12 +2,15 @@
 description: Seeed Studio XIAO ESP32C3 的引脚复用
 title: 引脚复用
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_ESP32C3_Pin_Multiplexing
 last_update:
   date: 07/25/2024
   author: Spencer
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO_ESP32C3_Pin_Multiplexing/
 ---
 
 # 引脚复用

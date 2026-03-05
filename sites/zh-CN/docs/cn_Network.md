@@ -2,12 +2,15 @@
 description: 强大的网络功能无缝集成了 Seeed 多样化的传感器和设备系列，实现了整个产品生态系统中数据和通信的协调流动，为监控、自动化和智能决策开启了新的可能性。
 title: 网络连接
 keywords:
-- Sensor Network
+  - Sensor Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Network
 last_update:
   date: 05/23/2024
   author: Matthew
+createdAt: '2024-05-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Network/
 ---
 
 强大的网络功能无缝集成了 Seeed 多样化的传感器和设备系列，实现了整个产品生态系统中数据和通信的协调流动，为监控、自动化和智能决策开启了新的可能性。

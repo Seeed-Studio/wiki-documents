@@ -1,6 +1,6 @@
 ---
 title: Wio Link
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 102110037
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio_Link/
 ---
 
 构建物联网应用最困难的部分是什么？有人说跳线通常让他感到沮丧，而另一个人说他最讨厌焊接。甚至有些人不喜欢面包板。也许你不是其中之一，但电子工程知识、微控制器编程、网络编程、物联网协议处理仍然是你和成功的物联网项目之间的巨大负担。

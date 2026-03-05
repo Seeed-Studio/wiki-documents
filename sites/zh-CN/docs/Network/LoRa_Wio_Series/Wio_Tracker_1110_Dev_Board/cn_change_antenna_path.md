@@ -2,14 +2,17 @@
 description: 更改 Wio Tracker 1110 开发板的 LoRa 天线路径
 title: 更改天线路径
 keywords:
-- Antenna
-- Tracker
+  - Antenna
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /change_antenna_path
 sidebar_position: 6
 last_update:
   date: 7/8/2024
   author: Jessie
+createdAt: '2024-07-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/change_antenna_path/
 ---
 
 

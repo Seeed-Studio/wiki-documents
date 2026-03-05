@@ -3,16 +3,19 @@ sidebar_position: 12
 description: SenseCraft AI Jetson
 title: Toolkit for reComputer Jetson
 keywords:
-- Cloud and Chain
-- SenseCraft
-- SenseCraft AI
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+  - SenseCraft
+  - SenseCraft AI
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-ai/tutorials/sensecraft-ai-jetson
 aliases:
   - /sensecraft_ai_jetson
 last_update:
   date: 08/16/2024
   author: Frank
+createdAt: '2024-08-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/sensecraft-ai-jetson/
 ---
 
 SenseCraft AI-Jetson is a development toolkit and platform designed for NVIDIA Jetson Edge AI devices. Simply run the "Quickstart Script" and you will be presented with an interactive user interface to view an example application with a pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a few clicks!

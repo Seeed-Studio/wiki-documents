@@ -1,6 +1,6 @@
 ---
 title: Analógico
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Wio-Terminal-IO-Analog
 last_update:
   date: 01/11/2022
   author: gunengyu
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Terminal-IO-Analog/
 ---
 # Usando el Puerto Analógico Grove en Wio Terminal
 

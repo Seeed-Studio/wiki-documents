@@ -2,16 +2,20 @@
 description: This wiki provides tutorial for Stackforce series motors.
 title: Stackforce Series Motors
 keywords:
-- actuator
-- motor
-- robotics
+  - actuator
+  - motor
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/stackforce/6010_homepage.webp
 slug: /stackforce_series
 last_update:
   date: 12/25/2025
   author: Li Shanghang
 translation:
-    skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2025-11-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/stackforce_series/
 ---
 
 # Stackforce X Series Motors Getting Start

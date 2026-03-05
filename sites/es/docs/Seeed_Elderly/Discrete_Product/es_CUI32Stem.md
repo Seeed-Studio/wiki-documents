@@ -2,12 +2,15 @@
 description: CUI32Stem
 title: CUI32Stem
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /CUI32Stem
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/CUI32Stem/
 ---
 
 La Interfaz USB Creativa es una placa microcontroladora de código abierto que puede programarse en lenguajes C, BASIC o Arduino. Esta última versión se llama CUI32Stem, que está diseñada para trabajar 'mano a mano' con el sistema de prototipado GROVE incluyendo una amplia gama de sensores y actuadores. Utiliza un microcontrolador Microchip® PIC32 de alto rendimiento, permitiendo interacción programable con todo tipo de inventos de usuario, ¡sin necesidad de soldadura! :)

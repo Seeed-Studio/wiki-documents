@@ -2,12 +2,15 @@
 description: En Seeed, valoramos enormemente nuestra comunidad de Seeeders. El Programa de Contribuidores de Seeed Studio es un programa colaborativo lanzado para unir a nuestros queridos amigos de todo el mundo y co-construir soluciones innovadoras juntos.
 title: Programa de Contribuidores
 keywords:
-- Contributor
+  - Contributor
 image: https://files.seeedstudio.com/wiki/wiki-platform/contributor/xuanchuan.jpg
 slug: /Contributor
 last_update:
   date: 09/01/2024
   author: Matthew
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Contributor/
 ---
 
 # ✨ Programa de Contribuidores ✨

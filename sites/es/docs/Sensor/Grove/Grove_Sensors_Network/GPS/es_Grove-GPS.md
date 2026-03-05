@@ -1,6 +1,6 @@
 ---
 title: Grove - GPS
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 113020003
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2023-01-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-GPS/
 ---
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-GPS/img/Grove-GPS.jpg" /><figcaption><b /><i /></figcaption>

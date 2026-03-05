@@ -1,14 +1,17 @@
 ---
 description: Wio Tracker Meshtastic® Kit Firmware Flashing
-title:  Flash Firmware
+title: Flash Firmware
 keywords:
-- Meshtastic
-- Tracker
+  - Meshtastic
+  - Tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /flash_meshtastic_kit
 last_update:
   date: 12/3/2025
   author: Michelle Huang
+createdAt: '2024-06-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/flash_meshtastic_kit/
 ---
 :::danger note
 When the device is in the states below, please don't manually reboot or turn off it. Or else the device can be dead.

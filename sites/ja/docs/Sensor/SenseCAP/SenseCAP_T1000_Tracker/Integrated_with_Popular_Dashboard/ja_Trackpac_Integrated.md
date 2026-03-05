@@ -2,12 +2,15 @@
 description: SenseCAP_T1000_tracker_and_Trackpac_Integrated
 title: Trackpac統合
 keywords:
-- SenseCAP_T1000_tracker
+  - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker_trackpac
 last_update:
   date: 10/26/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_trackpac/
 ---
 
 [Trackpac](https://trackpac.io/)は、幅広いIoTデバイスの監視、制御、通知プロセスを合理化するために設計された革新的なIoT（Internet of Things）ダッシュボード管理システムです。これらのデバイスには、トラッカー、温度センサー、湿度センサー、レベルインジケーター、その他のセンサーベースのデータ測定ツールなど、さまざまな機能が含まれます。

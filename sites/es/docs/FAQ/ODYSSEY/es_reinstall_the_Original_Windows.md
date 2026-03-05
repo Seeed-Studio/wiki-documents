@@ -1,12 +1,14 @@
 ---
 description: ODYSSEY-FAQ
 title: Reinstalación del Windows Original
-#keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /reinstall_the_Original_Windows
 last_update:
   date: 2023.6.25
   author: cheng.tang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reinstall_the_Original_Windows/
 ---
 
 Las versiones eMMC de ODYSSEY-X86 tendrán Windows 10 preinstalado en el dispositivo. Si instalas otro SO y quieres volver al Windows 10 original, por favor consulta aquí:

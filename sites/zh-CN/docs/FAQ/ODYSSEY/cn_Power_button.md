@@ -1,12 +1,14 @@
 ---
 description: ODYSSEY-常见问题解答
 title: ODYSSEY - X86J41x5 电源按钮的不同状态
-#keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Power_button
 last_update:
-  date: 2023.6.25   
+  date: 2023.6.25
   author: cheng.tang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Power_button/
 ---
 
 它的电源按钮状态与其他计算机相同：

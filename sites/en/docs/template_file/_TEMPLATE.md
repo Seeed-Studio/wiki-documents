@@ -9,7 +9,10 @@ slug: /template
 last_update:
   date: 11/21/2022
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2022-11-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/template/
 ---
 
 # Hello from Seeed Studio

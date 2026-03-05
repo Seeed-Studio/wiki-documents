@@ -9,6 +9,9 @@ slug: /Edgebox-rpi-200-balena-OS-setup
 last_update:
   date: 07/20/2023
   author: Marc Pous & Peter Pan
+createdAt: '2023-07-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Edgebox-rpi-200-balena-OS-setup/
 ---
 
 ## What is balena?

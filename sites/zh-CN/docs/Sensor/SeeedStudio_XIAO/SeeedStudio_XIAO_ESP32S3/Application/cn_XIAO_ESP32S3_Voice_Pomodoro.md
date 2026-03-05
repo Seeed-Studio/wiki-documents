@@ -8,6 +8,9 @@ slug: /xiao_esp32s3_voice_pomodoro
 last_update:
   date: 04/17/2025
   author: Peter Machona
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_esp32s3_voice_pomodoro/
 ---
 
 # AskLou.io 番茄钟计时器

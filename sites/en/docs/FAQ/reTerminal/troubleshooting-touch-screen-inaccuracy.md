@@ -6,6 +6,9 @@ slug: /troubleshooting-touch-screen-inaccuracy
 last_update:
   date: 6/21/2023
   author: Seraphina
+createdAt: '2023-06-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/troubleshooting-touch-screen-inaccuracy/
 ---
 
  <!-- Q12: Troubleshooting Touch Screen Inaccuracy -->

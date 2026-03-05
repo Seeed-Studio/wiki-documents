@@ -1,17 +1,18 @@
 ---
 description: このエッジオーディオボードは、すべてのデータをローカルに保持してプライバシーを保護しながら、Baby Cry、Glass Break、Gunshot、アラーム、Snore をリアルタイムに検出します。XIAO シリーズ向けに設計されており、ESPHome と Home Assistant にシームレスに統合できるため、スマートな監視や自動化に最適です。
-
 title: Sound Event Detection Module 入門ガイド
 keywords:
-- Sound Event Detection Module
-- Sound IoT
-
+  - Sound Event Detection Module
+  - Sound IoT
 image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
 slug: /sound_event_detection_module
 sku: 100049596
 last_update:
   date: 3/2/2026
   author: Kasun Thushara
+createdAt: '2026-03-02'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/ja/sound_event_detection_module/
 ---
 
 ## はじめに

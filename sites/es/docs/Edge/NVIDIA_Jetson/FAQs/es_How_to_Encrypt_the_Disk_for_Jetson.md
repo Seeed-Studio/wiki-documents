@@ -2,14 +2,17 @@
 description: Cómo Cifrar el Disco para Jetson
 title: Cómo Cifrar el Disco para Jetson
 keywords:
-- jetson
-- encrypt
-- L4T
+  - jetson
+  - encrypt
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /how_to_encrypt_the_disk_for_jetson
 last_update:
   date: 10/11/2025
   author: Dayu
+createdAt: '2025-08-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/how_to_encrypt_the_disk_for_jetson/
 ---
 
 **Este wiki toma L4T 36.4.3 y reComputer J401 como ejemplos, proporcionando pasos de referencia para el cifrado de disco de Jetson.

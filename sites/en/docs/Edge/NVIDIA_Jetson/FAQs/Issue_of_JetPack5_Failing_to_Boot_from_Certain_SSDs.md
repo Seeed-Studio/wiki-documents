@@ -2,14 +2,17 @@
 description: Resolve the issue of JetPack5 failing to boot from certain SSDs
 title: Resolve the issue of JetPack5 failing to boot from certain SSDs
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://files.seeedstudio.com/wiki/reComputer/nvidia-jetpack-6-0-stack.webp
 slug: /issue_of_jetpack5_failing_to_boot_from_certain_ssd
 last_update:
   date: 07/30/2025
   author: Dayu
+createdAt: '2025-08-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/issue_of_jetpack5_failing_to_boot_from_certain_ssd/
 ---
 
 **This wiki provides a b_rief introduction to the components of JetPack, helping you quickly understand the relationship between JetPack and Jetson, and answering some of the most frequently asked questions.**

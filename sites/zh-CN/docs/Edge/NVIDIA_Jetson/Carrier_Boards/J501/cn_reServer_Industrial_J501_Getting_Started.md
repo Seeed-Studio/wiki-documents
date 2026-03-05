@@ -2,14 +2,17 @@
 description: 本 wiki 介绍了 J501 载板的功能，并说明如何将 Jetpack 系统刷写到 J501 载板上。
 title: 刷写 Jetpack
 keywords:
-- reServer
-- Jetson
+  - reServer
+  - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reserver_j501_getting_started
 sku: 102991854,E24081601
 last_update:
   date: 08/19/2024
   author: Youjiang
+createdAt: '2024-08-19'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reserver_j501_getting_started/
 ---
 
 # reServer J501 入门指南

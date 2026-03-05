@@ -2,12 +2,15 @@
 description: Vision AI with Customizable Models
 title: Vision AI with Customizable Models
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Vision_AI_with_Customizable_Models
 last_update:
   date: 2/2/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Vision_AI_with_Customizable_Models/
 ---
 
 # Train and Deploy Your Own AI Model Into Grove - Vision AI

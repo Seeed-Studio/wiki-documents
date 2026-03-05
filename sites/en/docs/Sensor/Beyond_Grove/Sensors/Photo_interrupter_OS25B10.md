@@ -1,6 +1,6 @@
 ---
 title: Photo interrupter (OS25B10)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Photo_interrupter_OS25B10
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Photo_interrupter_OS25B10/
 ---
 ![](http://bz.seeedstudio.com/depot/images/product/phoint1.jpg)
 

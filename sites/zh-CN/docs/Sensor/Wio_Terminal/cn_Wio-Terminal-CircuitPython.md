@@ -2,12 +2,15 @@
 description: Wio Terminal 与 CircuitPython
 title: Wio Terminal 与 CircuitPython
 keywords:
-- Wio_terminal
+  - Wio_terminal
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wio-Terminal-CircuitPython
 last_update:
   date: 1/31/2023
   author: jianjing Huang
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wio-Terminal-CircuitPython/
 ---
 # Wio Terminal 上的 CircuitPython
 

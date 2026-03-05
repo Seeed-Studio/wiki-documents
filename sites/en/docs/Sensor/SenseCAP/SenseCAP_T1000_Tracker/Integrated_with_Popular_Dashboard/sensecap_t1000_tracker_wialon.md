@@ -1,13 +1,16 @@
 ---
 description: SenseCAP_T1000_tracker_and_Wialon_Integrated
-title:  Wialon Integrated
+title: Wialon Integrated
 keywords:
-- SenseCAP_T1000_tracker
+  - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker_Wialon
 last_update:
   date: 6/4/2024
   author: Jessie
+createdAt: '2024-06-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Wialon/
 ---
 
 

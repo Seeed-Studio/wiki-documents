@@ -2,12 +2,15 @@
 description: Este artículo describe cómo usar la Flash QSPI en el XIAO nRF52840 Sense.
 title: La Flash QSPI para XIAO nRF52840 Sense
 keywords:
-- QSPI Flash
+  - QSPI Flash
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao-ble-qspi-flash-usage
 last_update:
   date: 05/12/2023
   author: Citric
+createdAt: '2023-05-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiao-ble-qspi-flash-usage/
 ---
 
 # El Uso de Flash QSPI en Seeed Studio XIAO nRF52840 Sense

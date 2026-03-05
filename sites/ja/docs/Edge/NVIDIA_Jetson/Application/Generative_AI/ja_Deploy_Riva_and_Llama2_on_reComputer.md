@@ -2,14 +2,17 @@
 description: reComputer 上で Riva と Llama2 をデプロイ
 title: ローカル音声チャットボット
 keywords:
-- reComputer
-- LLM
-- Chatbot
+  - reComputer
+  - LLM
+  - Chatbot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Local_Voice_Chatbot
 last_update:
   date: 01/14/2024
   author: Youjiang
+createdAt: '2024-01-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Local_Voice_Chatbot/
 ---
 
 # Local Voice Chatbot : reComputer に Riva と Llama2 をデプロイ

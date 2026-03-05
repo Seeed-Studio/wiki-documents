@@ -2,12 +2,15 @@
 description: Fusion PCB サービス
 title: Fusion PCB サービス
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Service_for_Fusion_PCB
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Service_for_Fusion_PCB/
 ---
 
 [fusion PCB サービス](https://www.seeedstudio.com/fusion_pcb.html) を利用する前に、このページをよくお読みください。**価格はお選びいただいたオプションに基づいて計算されます。**

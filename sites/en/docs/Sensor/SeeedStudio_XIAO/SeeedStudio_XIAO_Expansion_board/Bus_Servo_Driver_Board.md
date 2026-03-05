@@ -6,14 +6,17 @@ image: https://files.seeedstudio.com/wiki/bus_servo_driver_board/9.webp
 slug: /bus_servo_driver_board
 sku: 108090023,108090003,114993612,105990190,101090141,101090142,100067882
 keywords:
-    - Bus Servo
-    - Robotics
-    - UART
-    - USB connection
-    - Jumper settings
+  - Bus Servo
+  - Robotics
+  - UART
+  - USB connection
+  - Jumper settings
 last_update:
   author: Citric
   date: 05/27/2025
+createdAt: '2025-04-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/bus_servo_driver_board/
 ---
 
 # Getting Started with Bus Servo Driver Board / XIAO Bus Servo Adapter

@@ -1,6 +1,6 @@
 ---
 title: ギアステッピングモータードライバーパック
-nointro:
+nointro: null
 keywords:
   - ドキュメント
   - ドキュサウラス
@@ -10,6 +10,9 @@ sku: 105990072, 105990028
 last_update:
   date: 05/15/2025
   author: gunengyu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Gear_Stepper_Motor_Driver_Pack/
 ---
 
 

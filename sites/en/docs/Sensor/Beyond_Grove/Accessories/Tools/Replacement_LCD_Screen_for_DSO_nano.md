@@ -1,6 +1,6 @@
 ---
 title: Replacement LCD Screen for DSO nano
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Replacement_LCD_Screen_for_DSO_nano
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2023-02-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Replacement_LCD_Screen_for_DSO_nano/
 ---
 ![https://www.seeedstudio.com/depot/images/product/P1230020.jpg](http://bz.seeedstudio.com/depot/images/product/P1230020.jpg)
 

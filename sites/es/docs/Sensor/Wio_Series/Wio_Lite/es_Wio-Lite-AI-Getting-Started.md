@@ -2,12 +2,15 @@
 description: Wiki de Wio Lite AI
 title: Primeros pasos con Wio Lite AI
 keywords:
-- wio lite ai
+  - wio lite ai
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /Wio-Lite-AI-Getting-Started
 last_update:
   date: 04/26/2023
   author: Citric
+createdAt: '2025-07-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Wio-Lite-AI-Getting-Started/
 ---
 
 # Primeros pasos con Wio Lite AI

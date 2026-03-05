@@ -2,9 +2,9 @@
 description: Seeed Studio XIAO ESP32S3でのピン多重化。
 title: Seeed Studio XIAO ESP32S3 (Sense)でのピン多重化
 keywords:
-- esp32s3
-- xiao
-- pin multiple
+  - esp32s3
+  - xiao
+  - pin multiple
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_pin_multiplexing
 sku: 113991114, 113991115
@@ -12,6 +12,9 @@ type: project
 last_update:
   date: 03/30/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_pin_multiplexing/
 ---
 
 # Seeed Studio XIAO ESP32S3 (Sense)でのピン多重化

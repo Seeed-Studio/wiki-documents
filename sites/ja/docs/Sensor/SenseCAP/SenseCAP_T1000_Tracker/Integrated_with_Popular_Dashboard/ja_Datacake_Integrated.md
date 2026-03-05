@@ -2,13 +2,16 @@
 description: SenseCAP_T1000_tracker_and_Datacake_Integrated
 title: Datacake統合（TTS経由）
 keywords:
-- SenseCAP
-- tracker
+  - SenseCAP
+  - tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_T1000_tracker_Datacake_TTS
 last_update:
   date: 8/15/2023
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_Datacake_TTS/
 ---
 
 [Datacake](https://datacake.co/)は多目的IoTプラットフォームで、プログラミングスキルを必要とせずにカスタムIoTアプリケーションを構築する可能性を提供します。

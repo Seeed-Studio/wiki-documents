@@ -2,12 +2,15 @@
 description: Google Cloud IoT
 title: Uso de Google
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Connect-Wio-Terminal-to-Google-Cloud
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-06-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Connect-Wio-Terminal-to-Google-Cloud/
 ---
 # Conectar Wio Terminal a Google Cloud IoT Core
 

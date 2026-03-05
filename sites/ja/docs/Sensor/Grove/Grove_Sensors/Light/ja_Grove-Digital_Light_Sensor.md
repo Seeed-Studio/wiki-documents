@@ -2,13 +2,16 @@
 description: Grove - デジタル光センサー
 title: Grove - デジタル光センサー
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Digital_Light_Sensor
 sku: 101020030
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-Digital_Light_Sensor/
 ---
 
 

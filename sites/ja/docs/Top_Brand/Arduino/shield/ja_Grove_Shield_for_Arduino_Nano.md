@@ -6,8 +6,11 @@ slug: /Grove_Shield_for_Arduino_Nano
 sku: 103100124
 last_update:
   date: 05/15/2025
-  author: Eico 
-no_comments: false # for Disqus
+  author: Eico
+no_comments: false
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Shield_for_Arduino_Nano/
 ---
 
 

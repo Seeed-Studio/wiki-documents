@@ -2,13 +2,16 @@
 description: Grove Base Cape for BeagleBone® v2
 title: Grove Base Cape for BeagleBone® v2
 keywords:
-- Beagle_Bone
+  - Beagle_Bone
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Base_Cape_for_BeagleBone_v2
 sku: 103030035
 last_update:
   date: 1/10/2022
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove_Base_Cape_for_BeagleBone_v2/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/img/Grove_Base_Cape_for_BeagleBone_v2_product_view_1200.jpg)

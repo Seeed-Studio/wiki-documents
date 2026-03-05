@@ -2,6 +2,9 @@
 sidebar_position: 6
 title: License
 slug: /License
+createdAt: '2022-11-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/License/
 ---
 
 ## **IMPORTANT NOTICE AND DISCLAIMER**

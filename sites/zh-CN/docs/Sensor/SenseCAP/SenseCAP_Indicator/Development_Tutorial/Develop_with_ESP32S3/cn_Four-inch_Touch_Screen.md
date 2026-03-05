@@ -2,12 +2,15 @@
 description: 4英寸触摸屏
 title: 4英寸触摸屏
 keywords:
-- SenseCAP Indicator ESP32 Development Tutorial
+  - SenseCAP Indicator ESP32 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_ESP32_4_inch_Touch_Screen
 last_update:
   date: 5/23/2023
   author: Thomas
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/SenseCAP_Indicator_ESP32_4_inch_Touch_Screen/
 ---
 # **4英寸触摸屏**
 

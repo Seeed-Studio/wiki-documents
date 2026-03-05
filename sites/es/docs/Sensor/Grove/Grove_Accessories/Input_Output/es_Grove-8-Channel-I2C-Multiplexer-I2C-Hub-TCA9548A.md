@@ -1,6 +1,6 @@
 ---
 title: Grove - Multiplexor I2C de 8 Canales/Hub I2C (TCA9548A)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 103020293
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2023-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-8-Channel-I2C-Multiplexer-I2C-Hub-TCA9548A/
 ---
 
 

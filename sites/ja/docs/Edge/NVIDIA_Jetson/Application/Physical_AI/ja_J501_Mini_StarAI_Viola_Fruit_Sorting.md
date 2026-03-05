@@ -2,19 +2,22 @@
 description: このwikiでは、LeRobotフレームワークとACTモデルを使用して、J501 MiniとStarAI Violaロボットアームでフルーツ仕分けタスクを実行する方法を説明します。
 title: J501 MiniとStarAI Violaアームによるフルーツ仕分け
 keywords:
-- J501 mini
-- Robotics
-- StarAI
-- Viola
-- LeRobot
-- ACT
-- Fruit Sorting
+  - J501 mini
+  - Robotics
+  - StarAI
+  - Viola
+  - LeRobot
+  - ACT
+  - Fruit Sorting
 image: https://files.seeedstudio.com/wiki/other/j501mini-startai-front.png
 slug: /j501_mini_starai_viola_fruit_sorting
 sku: 100020039,114090080
 last_update:
   date: 2026-2-2
   author: Dayu
+createdAt: '2026-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/j501_mini_starai_viola_fruit_sorting/
 ---
 
 # 🍎 J501 MiniとStarAI Violaアームによるフルーツ仕分け

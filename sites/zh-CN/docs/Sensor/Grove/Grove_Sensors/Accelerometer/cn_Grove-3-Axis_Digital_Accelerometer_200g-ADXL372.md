@@ -2,13 +2,16 @@
 description: Grove - 三轴数字加速度计 200g (ADXL372)
 title: Grove - 三轴数字加速度计 200g (ADXL372)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-3-Axis_Digital_Accelerometer_200g-ADXL372
 sku: 101020632
 last_update:
   date: 1/6/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-3-Axis_Digital_Accelerometer_200g-ADXL372/
 ---
 
 <!-- ![enter image description here](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-200g-ADXL372/img/101020632-preview.png) -->

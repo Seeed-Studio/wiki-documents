@@ -2,13 +2,16 @@
 description: 光学雨量计 RG-15
 title: 光学雨量计 RG-15
 keywords:
-- SenseCAP Sensor_Probe&Accessories
+  - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15
 sku: 114992321
 last_update:
   date: 10/18/2023
   author: Yvonne
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/Accessories/Industrial-Grade-Optical-Rain-Gauge-RG-15/
 ---
 
 ![雨量计 RG-15](https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/114992321-07.png)

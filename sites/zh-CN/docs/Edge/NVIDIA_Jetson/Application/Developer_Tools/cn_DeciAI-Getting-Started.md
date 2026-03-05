@@ -8,6 +8,9 @@ slug: /DeciAI-Getting-Started
 last_update:
   date: 01/04/2023
   author: w0x7ce
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/DeciAI-Getting-Started/
 ---
 
 # 在 NVIDIA® Jetson 设备上开始使用 Deci

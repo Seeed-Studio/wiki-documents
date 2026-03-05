@@ -2,13 +2,15 @@
 description: introducción
 title: Descripción general
 keywords:
-    - paquete-de-misión
-# image: 
+  - paquete-de-misión
 slug: /mission_pack_intro_v3
 sidebar_position: 0
 last_update:
-    date: 07/08/2025
-    author: Spencer
+  date: 07/08/2025
+  author: Spencer
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/mission_pack_intro_v3/
 ---
 
 El Hazard Response Mission Pack es una solución AIoT de código abierto diseñada para gestionar y mitigar de forma eficiente escenarios de peligro. Este sistema compacto combina una variedad de tecnologías, incluidos redes de sensores y computación en el borde, para habilitar teledetección, transmisión de datos, procesamiento, inferencia y análisis efectivos.

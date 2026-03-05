@@ -1,18 +1,19 @@
 ---
 description: このエッジオーディオボードは、すべてのデータをローカルに保持してプライバシーを保護しながら、赤ちゃんの泣き声、ガラスの破損、銃声、アラーム、いびきをリアルタイムで検出します。このチュートリアルでは、スマートな監視と自動化のために、XIAO シリーズを使用して ESPHome と Home Assistant に統合する方法を学びます。
-
 title: Home Assistant と Sound Event Detection Module
 keywords:
-- Sound Event Detection Module
-- Sound IoT
-- Home Assistant
-
+  - Sound Event Detection Module
+  - Sound IoT
+  - Home Assistant
 image: https://files.seeedstudio.com/wiki/sound_event_detection/sound_event_detection_img_1.png
 slug: /sound_event_detection_module_home_assistant
 sku: 100049596
 last_update:
   date: 3/4/2026
   author: Kasun Thushara
+createdAt: '2026-03-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sound_event_detection_module_home_assistant/
 ---
 
 ## はじめに

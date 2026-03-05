@@ -7,6 +7,9 @@ sidebar_position: 3
 last_update:
   date: 07/21/2025
   author: Citric
+createdAt: '2025-09-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/getting_started_with_reterminal_e1002/
 ---
 
 import Tabs from '@theme/Tabs';

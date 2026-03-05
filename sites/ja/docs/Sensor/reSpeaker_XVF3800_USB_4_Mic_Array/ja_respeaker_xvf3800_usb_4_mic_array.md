@@ -2,13 +2,16 @@
 description: ReSpeaker XVF3800 USB 4-Mic Arrayの使用開始—USB または I2C 経由でクロスプラットフォーム対応と音声キャプチャ機能を備えた高性能音声インターフェースモジュール。
 title: reSpeaker XVF3800 USB Mic Array の使用開始
 keywords:
-- reSpeaker
+  - reSpeaker
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array.webp
 slug: /respeaker_xvf3800_introduction
 sku: 101991441,114993701
 last_update:
   date: 11/10/2025
   author: Kasun Thushara
+createdAt: '2025-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_introduction/
 ---
 
 # ReSpeaker XVF3800 の使用開始

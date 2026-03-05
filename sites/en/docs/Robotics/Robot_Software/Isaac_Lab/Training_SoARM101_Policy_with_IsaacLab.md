@@ -2,15 +2,18 @@
 description: This wiki shows how to set up Isaac Lab on Ubuntu with Nvidia GPU to train reinforcement learning policies for the SO-ARM100/101 robotic arms.
 title: Training SoArm101 Policy with IsaacLab
 keywords:
-- IsaacLab
-- Reinforcement Learning
-- Robotic Arm
-- SOARM100
+  - IsaacLab
+  - Reinforcement Learning
+  - Robotic Arm
+  - SOARM100
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/isaaclab_rl/cube_play.webp
 slug: /training_soarm101_policy_with_isaacLab
 last_update:
   date: 9/4/2025
   author: Youjiang
+createdAt: '2025-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/training_soarm101_policy_with_isaacLab/
 ---
 
 ## Introduction

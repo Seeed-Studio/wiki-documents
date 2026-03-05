@@ -2,12 +2,15 @@
 description: LoRa®
 title: LoRa®
 keywords:
-- SenseCAP Indicator ESP32 Development Tutorial Lora
+  - SenseCAP Indicator ESP32 Development Tutorial Lora
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_ESP32_LoRa
 last_update:
   date: 5/23/2023
   author: Thomas
+createdAt: '2023-05-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/SenseCAP_Indicator_ESP32_LoRa/
 ---
 # **LoRa®**
 

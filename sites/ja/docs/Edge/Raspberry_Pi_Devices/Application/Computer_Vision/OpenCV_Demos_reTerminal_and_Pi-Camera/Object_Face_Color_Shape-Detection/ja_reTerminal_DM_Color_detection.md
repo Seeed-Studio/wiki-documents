@@ -3,7 +3,7 @@ description: reTerminalとPiカメラを使用したOpenCVによる色検出
 title: reTerminalとPiカメラを使用したOpenCVによる色検出
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
   - Color-Detection
@@ -12,6 +12,9 @@ slug: /reTerminal_DM_Color_detection
 last_update:
   date: 11/28/2023
   author: Kasun Thushara
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reTerminal_DM_Color_detection/
 ---
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/colordetect.gif" /></center>

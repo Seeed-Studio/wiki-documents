@@ -2,20 +2,23 @@
 description: reComputer Mini 搭载 NVIDIA Jetson Orin Nano/Orin NX，是一款紧凑型 AI 计算机，专为无人机设计以实现实时目标跟踪。通过集成 PX4 飞控、ROS 2 和 Orbbec Gemini 2 3D 相机，该方案配置 ROS2 与 PX4 的通信，安装 Gemini 2 Python SDK 捕获同步 RGB-D 数据，并使用经 TensorRT 优化的 YOLOv11n 模型进行检测。ROS2 包将 YOLO 检测与 ByteTrack 算法结合，实现精准多目标跟踪，同时利用深度数据估算无人机与目标之间的距离，从而在飞行中实现高精度实时跟踪。
 title: 使用 reComputer Jetson 与 PX4 进行目标跟踪
 keywords:
-- NVIDIA
-- PX4
-- ROS
-- Jetson
-- reComputer
-- 目标跟踪
-- 距离测量
-- 无人机
+  - NVIDIA
+  - PX4
+  - ROS
+  - Jetson
+  - reComputer
+  - 目标跟踪
+  - 距离测量
+  - 无人机
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/1-reComputer-Mini-bundle.webp
 slug: /object_tracking_with_reComputer_jetson_and_pX4
 sku: 101090144,100071398
 last_update:
   date: 2025/8/08
   author: Zibo
+createdAt: '2025-09-18'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/object_tracking_with_reComputer_jetson_and_pX4/
 ---
 
 ## 简介

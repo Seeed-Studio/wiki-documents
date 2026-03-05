@@ -3,14 +3,17 @@ sidebar_position: 3
 description: Lista de IDs de Estado de Dispositivo
 title: Lista de IDs de Estado de Dispositivo
 keywords:
-- Cloud and Chain
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
+  - Cloud and Chain
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform-api/appendix/list_of_device_status_ids
 aliases:
   - /Cloud_Chain/SenseCAP_API/Appendix/List_of_Device_Status_IDs
 last_update:
   date: 02/14/2023
   author: Matthew
+createdAt: '2023-03-01'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-data-platform-api/appendix/list_of_device_status_ids/
 ---
 
 

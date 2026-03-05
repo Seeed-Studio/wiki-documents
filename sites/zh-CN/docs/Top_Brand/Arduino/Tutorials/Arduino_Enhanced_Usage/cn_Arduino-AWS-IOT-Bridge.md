@@ -2,12 +2,15 @@
 description: 使用 Arduino 开发板将 Mosquitto MQTT 代理桥接到 AWS IoT
 title: 使用 Arduino 开发板将 Mosquitto MQTT 代理桥接到 AWS IoT
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Arduino-AWS-IOT-Bridge
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Arduino-AWS-IOT-Bridge/
 ---
 
 # 如何使用 Arduino 开发板将 Mosquitto MQTT 代理桥接到 AWS IoT

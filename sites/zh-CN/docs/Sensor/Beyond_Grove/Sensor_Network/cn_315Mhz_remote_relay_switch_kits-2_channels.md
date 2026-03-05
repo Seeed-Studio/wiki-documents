@@ -1,6 +1,6 @@
 ---
 title: 315Mhz远程继电器开关套件 - 2通道
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /315Mhz_remote_relay_switch_kits-2_channels
 last_update:
   date: 02/03/2022
   author: gunengyu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/315Mhz_remote_relay_switch_kits-2_channels/
 ---
 
 ![](http://bz.seeedstudio.com/depot/images/P2130781.jpg)

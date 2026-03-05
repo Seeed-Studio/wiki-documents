@@ -2,14 +2,17 @@
 description: 録音と再生
 title: 録音と再生
 keywords:
-- ESP32S3
-- XIAO
-- ReSpeaker
+  - ESP32S3
+  - XIAO
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_record_and_play
 last_update:
   date: 05/15/2025
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_record_and_play/
 ---
 
 

@@ -9,6 +9,9 @@ aliases:
 last_update:
   date: 12/03/2024
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/es/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-watcher/
 ---
 
 SenseCAP Watcher es un potente dispositivo de monitoreo que puede configurarse para reconocer objetos específicos y activar alarmas basadas en tareas definidas por el usuario. Para mejorar las capacidades de reconocimiento de objetos de Watcher, los usuarios pueden aprovechar modelos personalizados del repositorio de modelos SenseCraft AI. Este artículo wiki te guiará a través del proceso de usar estos modelos personalizados en tus tareas de monitoreo de Watcher.

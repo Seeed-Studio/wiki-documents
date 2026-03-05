@@ -2,14 +2,17 @@
 description: YOLOv8 from training to deployment
 title: Training and deployment of YOLOv8 pose estimation model
 keywords:
-- YOLOv8
-- we2 
-- pose detection
+  - YOLOv8
+  - we2
+  - pose detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ma_deploy_yolov8_pose
 last_update:
   date: 04/02/2024
   author: Jack Mu
+createdAt: '2024-04-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ma_deploy_yolov8_pose/
 ---
 
 # YOLOv8 pose estimation model deployment

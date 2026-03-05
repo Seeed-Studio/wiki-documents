@@ -2,12 +2,15 @@
 description: Seeeduino Buying Guide
 title: Seeeduino Buying Guide
 keywords:
-- Seeeduino_Series
+  - Seeeduino_Series
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Seeeduino_Buying_Guide
 last_update:
   date: 1/12/2022
   author: hushuxu
+createdAt: '2023-01-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Seeeduino_Buying_Guide/
 ---
 
 Well, we have a lot Seeeduino Boards to achieve all kinds of functions. But you may find that it is difficult to make a choice among them all. So we make the list below and wish that it may help you.

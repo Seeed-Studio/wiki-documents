@@ -2,12 +2,15 @@
 description: Xadow - Edison Kit
 title: Xadow - Edison Kit
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Xadow_Edison_Kit
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Xadow_Edison_Kit/
 ---
 ![](https://files.seeedstudio.com/wiki/Xadow_Edison_Kit/img/110040001%201.jpg)
 

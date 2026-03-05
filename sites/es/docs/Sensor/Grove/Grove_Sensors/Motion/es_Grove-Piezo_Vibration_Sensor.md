@@ -2,13 +2,16 @@
 description: Grove - Sensor de Vibración Piezoeléctrico
 title: Grove - Sensor de Vibración Piezoeléctrico
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Piezo_Vibration_Sensor
 sku: 101020031
 last_update:
   date: 1/7/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Piezo_Vibration_Sensor/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Piezo_Vibration_Sensor/img/Grove-Piezo_Vibration_Sensor-1.jpg) -->

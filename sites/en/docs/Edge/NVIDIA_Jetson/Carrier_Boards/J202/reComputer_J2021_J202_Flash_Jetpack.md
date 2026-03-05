@@ -2,7 +2,7 @@
 description: reComputerJ2021 | J202
 title: J202 Carrier Board
 keywords:
-  - Edge 
+  - Edge
   - Jetson
   - reComputer JetPack™_OS_Installation
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -11,7 +11,10 @@ sku: 102991695, 102991714, 110061402, 110061481
 last_update:
   date: 08/27/2024
   author: Youjiang
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack/
 ---
 
 # Getting Started with reComputer J202

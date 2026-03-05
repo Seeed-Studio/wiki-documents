@@ -3,9 +3,12 @@ description: reComputer R1000-FAQ
 title: デフォルトユーザー「recomputer」のパスワードは何ですか？
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /R1000_default_username_password
-last_update: 
+last_update:
   date: 6/21/2024
   author: Harrison Xu
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/R1000_default_username_password/
 ---
 
 <!-- ### Q1: What is the password of default user "recomputer"? -->

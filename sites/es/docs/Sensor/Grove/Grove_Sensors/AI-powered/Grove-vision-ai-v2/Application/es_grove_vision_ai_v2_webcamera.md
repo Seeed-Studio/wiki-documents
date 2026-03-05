@@ -2,13 +2,16 @@
 description: Introducción sobre cómo usar Grove Vision AI V2 para construir una cámara web inteligente.
 title: Cámara IP Inteligente Con Función AI
 keywords:
-- vision AI
-- intelligent web camera
+  - vision AI
+  - intelligent web camera
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_webcamera
 last_update:
   date: 05/09/2024
   author: Allen
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/grove_vision_ai_v2_webcamera/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/webcamera/12.png" style={{width:1000, height:'auto'}}/></div>

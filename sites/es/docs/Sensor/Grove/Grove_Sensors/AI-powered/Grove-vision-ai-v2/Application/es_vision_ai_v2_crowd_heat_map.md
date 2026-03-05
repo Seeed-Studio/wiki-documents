@@ -2,14 +2,17 @@
 description: Construyendo un mapa de calor de multitudes basado en Grove Vision AI V2 y Home Assistant.
 title: Construyendo una densidad de multitudes basada en Grove Vision AI V2 y Home Assistant
 keywords:
-- matter
-- XIAO
-- light
+  - matter
+  - XIAO
+  - light
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /vision_ai_v2_crowd_heat_map
 last_update:
   date: 05/22/2024
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/vision_ai_v2_crowd_heat_map/
 ---
 
 # Construyendo una densidad de multitudes basada en Grove Vision AI V2 y Home Assistant

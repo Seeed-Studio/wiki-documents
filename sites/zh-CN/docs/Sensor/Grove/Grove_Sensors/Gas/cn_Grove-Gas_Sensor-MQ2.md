@@ -1,14 +1,17 @@
 ---
 description: Grove - 气体传感器(MQ2)
-title: Grove - 气体传感器(MQ2) 
+title: Grove - 气体传感器(MQ2)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Gas_Sensor-MQ2
 sku: 101020055
 last_update:
   date: 1/3/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Gas_Sensor-MQ2/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Gas_Sensor-MQ2/img/Twig-Gas_Sensor.bmp) -->

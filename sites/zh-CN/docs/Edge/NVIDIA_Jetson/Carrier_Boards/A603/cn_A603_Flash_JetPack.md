@@ -11,6 +11,9 @@ sku: 102110840
 last_update:
   date: 04/19/2023
   author: Lakshantha
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/reComputer_A603_Flash_System/
 ---
 
 # 将 JetPack 操作系统刷写到 A603 载板

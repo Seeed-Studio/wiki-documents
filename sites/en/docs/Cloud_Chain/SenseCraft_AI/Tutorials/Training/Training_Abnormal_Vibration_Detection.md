@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 01/06/2026
   author: jancee
+createdAt: '2025-08-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection/
 ---
 
 # Vibration Anomaly Detection

@@ -1,11 +1,14 @@
 ---
 description: Protocolo BTHome para uso con Home Assistant en Seeed Studio XIAO nRF52840 Sense
-title: Protocolo BTHome con XIAO nRF52840 Sense(CircuitPython) 
+title: Protocolo BTHome con XIAO nRF52840 Sense(CircuitPython)
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /XIAO_BLE_HA
 last_update:
   date: 09/18/2023
   author: Bruno Santos (Feiticeir0)
+createdAt: '2023-09-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO_BLE_HA/
 ---
 
 # Descripción del Proyecto

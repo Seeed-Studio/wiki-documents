@@ -2,12 +2,15 @@
 description: Sensor - Motion
 title: Sensor - Motion(introduction)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_motion
 last_update:
   date: 1/6/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Sensor_motion/
 ---
 # Seeed Motion Sensor Selection Guide
 

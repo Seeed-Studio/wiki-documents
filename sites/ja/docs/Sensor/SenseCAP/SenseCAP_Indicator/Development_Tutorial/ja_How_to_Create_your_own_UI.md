@@ -2,13 +2,16 @@
 description: LVGLコーディングまたはSquareline Studioを使用して独自のUIを作成する
 title: 独自のUIを作成する方法
 keywords:
-- Indicator Development Tutorial
+  - Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_How_to_Create_your_own_UI
 sidebar_position: 4
 last_update:
   date: 5/31/2023
   author: Thomas
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/SenseCAP_Indicator_How_to_Create_your_own_UI/
 ---
 # **独自のUIを作成する方法**
 

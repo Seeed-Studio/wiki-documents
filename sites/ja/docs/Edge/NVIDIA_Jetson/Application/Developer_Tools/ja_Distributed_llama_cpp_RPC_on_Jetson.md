@@ -2,19 +2,22 @@
 description: このガイドでは、複数の reComputer Jetson デバイス上で llama.cpp の RPC バックエンドを使用して分散 LLM 推論を実行するための段階的な手順を提供します。
 title: reComputer Jetson での分散 llama.cpp（RPC モード）
 keywords:
-- reComputer Jetson
-- llama.cpp
-- 分散推論
-- RPC
-- CUDA
-- LLM
-- GPU アクセラレーション
+  - reComputer Jetson
+  - llama.cpp
+  - 分散推論
+  - RPC
+  - CUDA
+  - LLM
+  - GPU アクセラレーション
 image: https://files.seeedstudio.com/wiki/recomputer_robotic_j501/hardware_overview.png.jpg
 slug: /ai_robotics_distributed_llama_cpp_rpc_jetson
 sku: 100090853,100076722,100060802,100032662
 last_update:
-  date: 2026-01-09
+  date: 2026-01-09T00:00:00.000Z
   author: Lorraine
+createdAt: '2026-01-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/ai_robotics_distributed_llama_cpp_rpc_jetson/
 ---
 
 <div align="center">

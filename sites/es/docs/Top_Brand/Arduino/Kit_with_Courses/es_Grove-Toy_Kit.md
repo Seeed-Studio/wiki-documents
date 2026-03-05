@@ -1,13 +1,16 @@
 ---
-description:  Grove - Kit de Juguetes
+description: Grove - Kit de Juguetes
 title: Grove - Kit de Juguetes
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Toy_Kit
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Toy_Kit/
 ---
 El Kit de Juguetes Grove proporciona una manera fácil de hackear y mejorar juguetes para que se adapten a tu propia personalidad. Potencia los juguetes regulares con muchas funciones geniales como detección de movimiento humano, capacidad de escucha, detección de movimiento, pantalla OLED y más. Gracias a los participantes del concurso de hacking de juguetes, hay seis proyectos increíbles listados a continuación que te muestran lo que puedes hacer con el Kit de Juguetes Grove.
 

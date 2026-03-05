@@ -3,13 +3,16 @@ description: Integración de AWS IoT Core con reTerminal DM
 title: Integración de AWS IoT Core con reTerminal DM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 keywords:
-- AWS
-- Getting Start
-- Cloud
+  - AWS
+  - Getting Start
+  - Cloud
 slug: /reTerminal-DM_AWS_first
 last_update:
   date: 11/22/2023
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reTerminal-DM_AWS_first/
 ---
 ## Introducción
 

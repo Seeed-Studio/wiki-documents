@@ -10,6 +10,9 @@ slug: /plex_media_server
 last_update:
   date: 6/14/2023
   author: Kasun Thushara
+createdAt: '2022-11-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/plex_media_server/
 ---
 # The Future of Home Entertainment; LinkStar-H68K Router and Plex Media Server
 

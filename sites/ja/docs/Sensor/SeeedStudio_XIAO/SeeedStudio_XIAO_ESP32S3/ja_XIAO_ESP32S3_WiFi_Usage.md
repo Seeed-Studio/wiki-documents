@@ -2,14 +2,17 @@
 description: Seeed Studio XIAO ESP32S3でのWiFi使用方法。
 title: 両バージョン用WiFi
 keywords:
-- esp32s3
-- xiao
-- wifi usage
+  - esp32s3
+  - xiao
+  - wifi usage
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_wifi_usage
 last_update:
   date: 03/27/2023
   author: Citric
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao_esp32s3_wifi_usage/
 ---
 
 # Seeed Studio XIAO ESP32S3 (Sense)でのWiFi使用方法

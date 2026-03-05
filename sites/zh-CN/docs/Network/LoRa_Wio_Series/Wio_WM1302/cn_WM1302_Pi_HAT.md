@@ -2,7 +2,7 @@
 description: 开始使用适用于树莓派的 WM1302 Pi Hat。
 title: 适用于树莓派的 WM1302 Pi Hat
 keywords:
-  - wio 
+  - wio
   - docusaurus
 image: https://wiki.seeedstudio.com/wio_gps_board/
 slug: /WM1302_Pi_HAT
@@ -10,6 +10,9 @@ sku: 114992549,114992550,114992629,114992628,113100022,114992967,114992969,11499
 last_update:
   date: 01/30/2023
   author: hushuxu
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/WM1302_Pi_HAT/
 ---
 
 <!-- ![](https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/w/m/wm1302_pihat_preview-16_1.png) -->

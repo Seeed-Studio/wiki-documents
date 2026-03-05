@@ -2,13 +2,16 @@
 description: Grove - 拇指摇杆
 title: Grove - 拇指摇杆
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Thumb_Joystick
 sku: 101020028
 last_update:
   date: 2/22/2023
   author: jianjing Huang
+createdAt: '2024-04-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Thumb_Joystick/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Thumb_Joystick/img/Bgjoy1.jpg)

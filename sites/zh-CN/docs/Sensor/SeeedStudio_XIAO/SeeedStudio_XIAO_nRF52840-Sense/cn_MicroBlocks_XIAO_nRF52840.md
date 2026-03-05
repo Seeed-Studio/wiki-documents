@@ -6,6 +6,9 @@ slug: /xiao_ble_microblocks
 last_update:
   date: 09/09/2025
   author: MicroBlocks
+createdAt: '2025-09-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/xiao_ble_microblocks/
 ---
 
 # XIAO nRF52840 与 MicroBlocks

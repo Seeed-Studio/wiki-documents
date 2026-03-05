@@ -10,7 +10,10 @@ sku: 102110483, 102110484, 114110049, 102110637, 110061363, 110061401, 110061361
 last_update:
   date: 01/04/2023
   author: w0x7ce
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Jetson-Nano-MaskCam/
 ---
 
 # Maskcam - 基于 Jetson Nano 的人群口罩佩戴监控

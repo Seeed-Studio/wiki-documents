@@ -2,14 +2,17 @@
 description: El código de luz se utiliza como ejemplo para introducir el marco de desarrollo de Matter.
 title: Descripción General del Marco de Desarrollo de Matter
 keywords:
-- matter
-- XIAO
-- light
+  - matter
+  - XIAO
+  - light
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /matter_development_framework
 last_update:
   date: 05/15/2024
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/matter_development_framework/
 ---
 
 # Descripción General del Marco de Desarrollo de Matter

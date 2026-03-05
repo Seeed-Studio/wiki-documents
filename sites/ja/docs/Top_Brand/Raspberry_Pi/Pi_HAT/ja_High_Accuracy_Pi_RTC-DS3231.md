@@ -2,13 +2,16 @@
 description: DS3231 高精度 RTC（リアルタイムクロック） for Raspberry Pi
 title: DS3231 高精度 RTC（リアルタイムクロック） for Raspberry Pi
 keywords:
-- Pi_HAT
+  - Pi_HAT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /High_Accuracy_Pi_RTC-DS3231
 sku: 103030278
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/High_Accuracy_Pi_RTC-DS3231/
 ---
 
 

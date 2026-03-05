@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 10/17/2024
   author: Evelyn Chen
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/wio_sx1262_xiao_esp32s3_LNS_TTN/
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/40.png" alt="pir" width={900} height="auto" /></p>

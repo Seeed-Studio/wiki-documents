@@ -2,13 +2,16 @@
 description: Grove - 温湿度センサー(SHT31)
 title: Grove - 温湿度センサー(SHT31)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-TempAndHumi_Sensor-SHT31
 sku: 101020212
 last_update:
   date: 12/29/2025
   author: Brandy
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-TempAndHumi_Sensor-SHT31/
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-TempAndHumi_Sensor-SHT31/img/main_new.jpg" /></div>

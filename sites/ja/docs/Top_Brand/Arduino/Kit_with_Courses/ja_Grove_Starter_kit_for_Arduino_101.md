@@ -2,13 +2,16 @@
 description: Arduino & Genuino 101 用 Grove スターターキット
 title: Arduino & Genuino 101 用 Grove スターターキット
 keywords:
-- コース付きキット
+  - コース付きキット
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove_Starter_kit_for_Arduino_101
 sku: 110020109
 last_update:
   date: 05/15/2025
   author: jianjing Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove_Starter_kit_for_Arduino_101/
 ---
 
 

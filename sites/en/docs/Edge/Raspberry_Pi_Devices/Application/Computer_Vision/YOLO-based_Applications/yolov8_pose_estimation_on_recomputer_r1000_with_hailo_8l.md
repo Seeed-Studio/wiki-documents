@@ -1,6 +1,6 @@
 ---
-description: This wiki demonstrates pose estimation using YOLOv8 on reComputer R1000 with Raspberry-pi-AI-kit Acceleration. 
-title:  YOLOv8 Pose estimation on reComputer R1000 with Hailo-8L
+description: This wiki demonstrates pose estimation using YOLOv8 on reComputer R1000 with Raspberry-pi-AI-kit Acceleration.
+title: YOLOv8 Pose estimation on reComputer R1000 with Hailo-8L
 keywords:
   - Edge
   - reComputer r1000
@@ -10,7 +10,10 @@ slug: /yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l
 last_update:
   date: 06/26/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-06-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/
 ---
 
 # YOLOv8 Pose Estimation on reComputer R1000 with Hailo-8L

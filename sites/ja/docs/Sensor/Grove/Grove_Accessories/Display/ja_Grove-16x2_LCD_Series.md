@@ -2,13 +2,16 @@
 description: Grove - 16x2 LCD
 title: Grove - 16x2 LCD
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-16x2_LCD_Series
 sku: 104020113, 104020112, 104020111
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-16x2_LCD_Series/
 ---
 
 

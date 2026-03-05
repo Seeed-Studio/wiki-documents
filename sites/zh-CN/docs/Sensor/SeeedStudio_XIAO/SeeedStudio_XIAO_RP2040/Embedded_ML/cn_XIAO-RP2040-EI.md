@@ -2,12 +2,15 @@
 description: 基于 Edge Impulse 的动作识别
 title: 基于 Edge Impulse 的动作识别
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-RP2040-EI
 last_update:
   date: 04/17/2023
   author: Citric
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/XIAO-RP2040-EI/
 ---
 
 # SEEED XIAO RP2040 上的 TinyML（动作识别）

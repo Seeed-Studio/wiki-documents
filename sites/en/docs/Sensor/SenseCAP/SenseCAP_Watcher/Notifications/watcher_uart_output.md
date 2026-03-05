@@ -7,6 +7,9 @@ sidebar_position: 1
 last_update:
   date: 07/10/2024
   author: Citric
+createdAt: '2024-07-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/uart_output/
 ---
 
 # As a sensor & Use Grove

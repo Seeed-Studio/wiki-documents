@@ -2,13 +2,16 @@
 description: Grove - Cámara de Imagen Térmica IR-Array MLX90641
 title: Grove - Cámara de Imagen Térmica IR-Array MLX90641
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Thermal-Imaging-Camera-IR-Array
 sku: 114020142, 114020141, 101020892, 101020992
 last_update:
   date: 1/3/2023
   author: jianjing Huang
+createdAt: '2023-01-05'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Thermal-Imaging-Camera-IR-Array/
 ---
 
 

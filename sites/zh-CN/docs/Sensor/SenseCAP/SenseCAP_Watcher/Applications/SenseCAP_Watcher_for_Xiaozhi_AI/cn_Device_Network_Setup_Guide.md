@@ -14,6 +14,9 @@ sku: 100051523
 last_update:
   date: 10/13/2025
   author: Twelve
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/device_network_setup/
 ---
 
 # 设备网络设置指南

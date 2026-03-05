@@ -2,12 +2,15 @@
 description: ReSpeaker Lite RGBテスト
 title: RGBテスト
 keywords:
-- ReSpeaker
+  - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /respeaker_rgb_test
 last_update:
   date: 05/15/2025
   author: Jessie
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_rgb_test/
 ---
 
 

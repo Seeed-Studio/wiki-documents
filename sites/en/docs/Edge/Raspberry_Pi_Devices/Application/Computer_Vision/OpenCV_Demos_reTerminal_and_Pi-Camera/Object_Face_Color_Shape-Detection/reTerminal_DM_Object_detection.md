@@ -1,17 +1,20 @@
 ---
 description: Object Detection with reTerminal and Pi camera with OpenCV
-title: Object Detection with reTerminal and Pi camera 
+title: Object Detection with reTerminal and Pi camera
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
-  - Object Detection 
+  - Object Detection
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reTerminal_DM_Object_detection
 last_update:
   date: 12/7/2023
   author: Kasun Thushara
+createdAt: '2023-11-08'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/reTerminal_DM_Object_detection/
 ---
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/objectdetection2.gif" /></center>

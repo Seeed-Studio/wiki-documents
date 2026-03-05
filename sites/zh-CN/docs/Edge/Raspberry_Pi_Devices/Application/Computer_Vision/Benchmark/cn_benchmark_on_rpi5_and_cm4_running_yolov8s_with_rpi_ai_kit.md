@@ -11,7 +11,10 @@ sku: 103990663
 last_update:
   date: 07/17/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-07-17'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/
 ---
 
 # 在 RPi5 和 CM4 上使用 rpi ai kit 运行 yolov8s 的基准测试

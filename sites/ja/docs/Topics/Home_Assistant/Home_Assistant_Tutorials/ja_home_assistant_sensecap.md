@@ -2,13 +2,16 @@
 description: Home Assistant 用 SenseCAP LoRaWAN センサーの統合
 title: Home Assistant 用 SenseCAP 統合
 keywords:
-- SenseCAP M2 Multi-Platform 
-- Home Assistant
-- LoRaWAN センサー
+  - SenseCAP M2 Multi-Platform
+  - Home Assistant
+  - LoRaWAN センサー
 slug: /home_assistant_sensecap
 last_update:
   date: 05/15/2025
   author: JoJang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/home_assistant_sensecap/
 ---
 
 

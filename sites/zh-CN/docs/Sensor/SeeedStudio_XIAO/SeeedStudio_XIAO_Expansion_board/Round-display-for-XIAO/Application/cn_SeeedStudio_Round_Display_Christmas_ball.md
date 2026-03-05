@@ -2,14 +2,17 @@
 description: XIAO 圆形显示屏圣诞球
 title: 为你的圣诞树制作一个小圣诞球
 keywords:
-- XIAO
-- Round Dislay
-- Christmas
+  - XIAO
+  - Round Dislay
+  - Christmas
 image: https://files.seeedstudio.com/wiki/Christmas_round_display/Christmas_ball_1.gif
 slug: /round_display_christmas_ball
 last_update:
   date: 12/08/2024
   author: Bruno Santos
+createdAt: '2025-05-30'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/round_display_christmas_ball/
 ---
 
 # Seeed Studio XIAO 圆形显示屏圣诞球

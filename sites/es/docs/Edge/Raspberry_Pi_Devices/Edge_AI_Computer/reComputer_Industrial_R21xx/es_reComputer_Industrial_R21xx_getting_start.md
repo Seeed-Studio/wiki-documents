@@ -2,16 +2,19 @@
 description: El reComputer Industrial R21xx es una puerta de enlace y controlador IoT alimentado por Raspberry Pi CM5 con capacidades de IA. Con 2GB RAM, 8GB eMMC, Ethernet dual, USB, RS485, RS232, DI/DO, y conectividad inalámbrica (4G, 5G, LoRa®, Wi-Fi/BLE), es perfecto para automatización industrial y computación en el borde.
 title: Introducción al reComputer Industrial R21xx
 keywords:
-- Edge Controller
-- Raspberry pi
-- Edge Controller
-- reComputer Industrial R21xx
+  - Edge Controller
+  - Raspberry pi
+  - Edge Controller
+  - reComputer Industrial R21xx
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg
 slug: /recomputer_industrial_R21xx_getting_start
 sku: 100099044,100061305,100091962,100097052,E2025091902
 last_update:
   date: 09/28/2025
   author: Nolan Chen
+createdAt: '2025-09-29'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_industrial_R21xx_getting_start/
 ---
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image_6.jpg" style={{width:800, height:'auto'}}/></div>

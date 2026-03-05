@@ -2,12 +2,15 @@
 description: This page is a collection of all TinyML content.
 title: TinyML
 keywords:
-- tinyml
+  - tinyml
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /tinyml_topic
 last_update:
   date: 05/28/2024
   author: Yaohao
+createdAt: '2023-07-21'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/tinyml_topic/
 ---
 
 # Tiny Machine Learning(TinyML)

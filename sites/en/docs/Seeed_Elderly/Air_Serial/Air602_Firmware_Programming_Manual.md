@@ -2,12 +2,15 @@
 description: Air602 Firmware Programming Manual
 title: Air602 Firmware Programming Manual
 keywords:
-- Air602_WiFi_Development_Board
+  - Air602_WiFi_Development_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Air602_Firmware_Programming_Manual
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2023-02-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Air602_Firmware_Programming_Manual/
 ---
 
 

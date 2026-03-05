@@ -1,6 +1,6 @@
 ---
-title: "Sistema de Posicionamiento Interior Bluetooth con LoRaWAN"
-description: "Una solución confiable de posicionamiento interior usando el SenseCAP Tracker. Combina Bluetooth para seguimiento preciso de ubicación con LoRaWAN para transmisión de datos de largo alcance, permitiendo un despliegue fácil."
+title: Sistema de Posicionamiento Interior Bluetooth con LoRaWAN
+description: Una solución confiable de posicionamiento interior usando el SenseCAP Tracker. Combina Bluetooth para seguimiento preciso de ubicación con LoRaWAN para transmisión de datos de largo alcance, permitiendo un despliegue fácil.
 keywords:
   - Bluetooth
   - LoRaWAN
@@ -14,6 +14,9 @@ sidebar_position: 1
 last_update:
   date: 09/10/2025
   author: Spencer
+createdAt: '2025-09-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/solutions/indoor-positioning-bluetooth-lorawan-tracker/
 ---
 
 ## Introducción

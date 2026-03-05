@@ -2,13 +2,16 @@
 description: Grove-6-Axis_Accelerometer&Gyroscope(BMI088)
 title: Grove - 6-Axis Accelerometer&Gyroscope(BMI088)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-6-Axis_Accelerometer&Gyroscope_BMI088
 sku: 101020584
 last_update:
   date: 1/6/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-6-Axis_Accelerometer&Gyroscope_BMI088/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-6-Axis_Accelerometer-Gyroscope-BMI088/img/main.jpg) -->

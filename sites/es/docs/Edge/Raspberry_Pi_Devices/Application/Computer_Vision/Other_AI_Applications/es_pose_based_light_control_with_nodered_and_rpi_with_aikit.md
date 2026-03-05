@@ -11,7 +11,10 @@ slug: /pose_based_light_control_with_nodered_and_rpi_with_aikit
 last_update:
   date: 07/26/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-07-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/pose_based_light_control_with_nodered_and_rpi_with_aikit/
 ---
 
 # Control de Luces Basado en Pose con Node-Red y Raspberry Pi con AIkit

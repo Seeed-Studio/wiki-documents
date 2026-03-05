@@ -1,6 +1,6 @@
 ---
 title: Grove - 光耦继电器 (M281)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -10,6 +10,9 @@ sku: 101020603
 last_update:
   date: 01/09/2022
   author: gunengyu
+createdAt: '2024-03-24'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Optocoupler_Relay-M281/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove-Optocoupler-Relay-M281/img/preview.png)

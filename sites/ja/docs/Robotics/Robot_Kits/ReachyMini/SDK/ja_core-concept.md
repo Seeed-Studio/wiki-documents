@@ -3,18 +3,22 @@ description: Reachy Mini のクライアント・サーバー設計、座標系�
 title: コアコンセプトとアーキテクチャ
 slug: /reachymini_sdk_core-concept
 keywords:
-- architecture
-- coordinate systems
-- safety limits
-- motor modes
-- client-server
-- daemon
-- sdk
+  - architecture
+  - coordinate systems
+  - safety limits
+  - motor modes
+  - client-server
+  - daemon
+  - sdk
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reachymini_sdk_core-concept/
 ---
 
 # コアコンセプトとアーキテクチャ

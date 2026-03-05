@@ -2,14 +2,17 @@
 description: Habilitar interfaz SPI en Jetson-Nano
 title: Habilitar interfaz SPI en Jetson-Nano
 keywords:
-- SPI
-- Jetson-nano
-- BSP
+  - SPI
+  - Jetson-nano
+  - BSP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /enable_spi_interface_on_jetsonnano
 last_update:
   date: 07/02/2025
   author: Dayu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/enable_spi_interface_on_jetsonnano/
 ---
 
 ## Introducción

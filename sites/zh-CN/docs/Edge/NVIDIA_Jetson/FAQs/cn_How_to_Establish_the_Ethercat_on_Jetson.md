@@ -2,14 +2,17 @@
 description: 如何在 Jetson 和 EtherCAT 设备之间建立通信
 title: 如何在 Jetson 和 EtherCAT 设备之间建立通信
 keywords:
-- jetson
-- jetpack
-- L4T
+  - jetson
+  - jetpack
+  - L4T
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg
 slug: /how_to_establish_the_ethercat_on_jetson
 last_update:
   date: 11/14/2025
   author: Dayu
+createdAt: '2025-11-14'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/how_to_establish_the_ethercat_on_jetson/
 ---
 
 **EtherCAT（用于控制自动化技术的以太网）** 是一种基于 **IEEE 802.3 以太网标准** 的开源、高性能实时工业以太网现场总线协议。它采用 **主从架构** 运行，以其在工业自动化环境中的卓越速度、精度和灵活性而闻名

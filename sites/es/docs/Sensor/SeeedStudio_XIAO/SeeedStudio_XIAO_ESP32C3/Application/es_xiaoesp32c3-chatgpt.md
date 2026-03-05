@@ -2,12 +2,15 @@
 description: XIAO ESP32C3-Chatgpt
 title: XIAO ESP32C3-Chatgpt
 keywords:
-- XIAO ESP32C3
+  - XIAO ESP32C3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiaoesp32c3-chatgpt
 last_update:
   date: 03/03/2023
   author: Citric
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/xiaoesp32c3-chatgpt/
 ---
 # Aprende a usar WiFiClient y HTTPClient en XIAO ESP32C3 - XIAO ESP32C3 y ChatGPT en acción
 

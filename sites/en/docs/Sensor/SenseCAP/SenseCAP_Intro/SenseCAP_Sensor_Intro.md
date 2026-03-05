@@ -2,12 +2,15 @@
 description: SenseCAP Industrial Sensors Guide
 title: SenseCAP Industrial Sensors Guide
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Sensor_Intro
 last_update:
   date: 7/24/2024
   author: Frank
+createdAt: '2023-07-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_Sensor_Intro/
 ---
 
 

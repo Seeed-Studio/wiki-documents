@@ -1,6 +1,6 @@
 ---
 title: Grove - I2C Hub(6 Port)
-nointro:
+nointro: null
 keywords:
   - docs
   - docusaurus
@@ -9,6 +9,9 @@ slug: /Grove-I2C-Hub-6Port
 last_update:
   date: 01/06/2022
   author: gunengyu
+createdAt: '2023-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Grove-I2C-Hub-6Port/
 ---
 
 ![](https://files.seeedstudio.com/products/103020272/img/grove-i2c-hub-6-port-preview.jpg)

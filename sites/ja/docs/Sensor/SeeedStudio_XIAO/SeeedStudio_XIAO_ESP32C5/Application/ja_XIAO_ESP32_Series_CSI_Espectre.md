@@ -12,6 +12,9 @@ sku: 100010048,113991254,113991114, 113991054
 last_update:
   date: 01/26/2026
   author: Carla Guo
+createdAt: '2026-01-26'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/xiao-esp32--series-espresense/
 ---
 
 # ESPHome を使用した Seeed Studio XIAO ESP32 シリーズでの Espectre デプロイ

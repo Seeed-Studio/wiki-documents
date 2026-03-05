@@ -2,15 +2,18 @@
 description: ReSpeaker XVF3800 USB 4-Mic Arrayの力を体験してください—AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えた高度な円形マイクアレイです。コンパクトなXIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高性能音声制御を実現します。音声コマンドを使用してデバイスを制御するHome Assistantとのシームレスな統合をデモンストレーションします。
 title: Home Assistantによるスマートホーム音声制御
 keywords:
-- reSpeaker
-- XIAO
-- ESP32S3
-- Home Assistant
+  - reSpeaker
+  - XIAO
+  - ESP32S3
+  - Home Assistant
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_xvf3800_xiao_home_assistant
 last_update:
   date: 9/17/2025
   author: Kasun Thushara
+createdAt: '2025-09-04'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/respeaker_xvf3800_xiao_home_assistant/
 ---
 
 ## 概要

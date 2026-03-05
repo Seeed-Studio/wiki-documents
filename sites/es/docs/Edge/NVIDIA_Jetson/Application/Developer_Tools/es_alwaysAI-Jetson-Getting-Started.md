@@ -9,6 +9,9 @@ sku: 802000061,113020031
 last_update:
   date: 1/16/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/alwaysAI-Jetson-Getting-Started/
 ---
 
 # Primeros pasos con alwaysAI en dispositivos NVIDIA® Jetson

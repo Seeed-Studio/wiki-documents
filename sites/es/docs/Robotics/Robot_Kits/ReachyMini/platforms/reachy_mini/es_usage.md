@@ -3,18 +3,22 @@ description: Guía de uso de Reachy Mini que cubre la interfaz web Dashboard, la
 title: Uso de Reachy Mini
 slug: /reachymini_platforms_reachy_mini_usage
 keywords:
-- usage
-- dashboard
-- apps
-- python
-- sdk
-- control
-- management
+  - usage
+  - dashboard
+  - apps
+  - python
+  - sdk
+  - control
+  - management
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_platforms_reachy_mini_usage/
 ---
 
 # Uso de Reachy Mini

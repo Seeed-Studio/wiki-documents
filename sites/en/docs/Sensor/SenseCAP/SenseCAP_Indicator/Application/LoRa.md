@@ -2,9 +2,9 @@
 description: LoRa Demonstration usage
 title: LoRa Communication - SenseCAP Indicator
 keywords:
-- SenseCAP Indicator
-- LoRa
-- ESP32S3
+  - SenseCAP Indicator
+  - LoRa
+  - ESP32S3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /SenseCAP_Indicator_LoRa
 toc_max_heading_level: 4
@@ -12,6 +12,9 @@ sidebar_position: 3
 last_update:
   date: 11/17/2023
   author: Spencer
+createdAt: '2023-08-15'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/SenseCAP_Indicator_LoRa/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

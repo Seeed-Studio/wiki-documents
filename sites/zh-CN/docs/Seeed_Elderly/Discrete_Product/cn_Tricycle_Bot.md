@@ -2,13 +2,16 @@
 description: 三轮机器人
 title: 三轮机器人
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Tricycle_Bot
 sku: 110070028
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Tricycle_Bot/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/3.jpg)

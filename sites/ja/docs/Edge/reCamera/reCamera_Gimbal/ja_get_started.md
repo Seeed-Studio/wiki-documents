@@ -12,6 +12,9 @@ sidebar_position: 1
 last_update:
   date: 04/09/2025
   author: Dawn Yao
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/recamera_gimbal_getting_started/
 ---
 
 # reCamera Gimbalの使用開始

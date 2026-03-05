@@ -2,12 +2,15 @@
 description: Uso del IMU de 6 ejes en Seeed Studio XIAO nRF52840 Sense
 title: Uso del IMU para XIAO nRF52840 Sense
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO-BLE-Sense-IMU-Usage
 last_update:
   date: 1/11/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/XIAO-BLE-Sense-IMU-Usage/
 ---
 
 # Uso del IMU de 6 ejes en Seeed Studio XIAO nRF52840 Sense

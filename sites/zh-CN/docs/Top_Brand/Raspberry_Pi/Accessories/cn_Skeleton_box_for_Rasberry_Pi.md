@@ -2,12 +2,15 @@
 description: 树莓派骨架盒
 title: 树莓派骨架盒
 keywords:
-- Accessories
+  - Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Skeleton_box_for_Rasberry_Pi
 last_update:
   date: 1/11/2023
   author: jianjing Huang
+createdAt: '2023-01-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Skeleton_box_for_Rasberry_Pi/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Skeleton_box_for_Rasberry_Pi/img/Pi_skeleton_02.jpg)

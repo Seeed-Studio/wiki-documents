@@ -2,14 +2,17 @@
 description: El reComputer R1100 es una puerta de enlace y controlador IoT con capacidades de IA alimentado por Raspberry Pi CM4. Con 2GB RAM, 8GB eMMC, Ethernet dual, USB, RS485, RS232, DI/DO, y conectividad inalámbrica (4G, LoRa®, Wi-Fi/BLE), es perfecto para automatización industrial y computación en el borde.
 title: Introducción al reComputer R1100
 keywords:
-- Raspberry pi
-- Edge Controller
-- reComputer R1100
+  - Raspberry pi
+  - Edge Controller
+  - reComputer R1100
 image: https://files.seeedstudio.com/wiki/R1100/recomputer2.jpg
 slug: /recomputer_r1100_intro
 last_update:
   date: 2/25/2024
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_r1100_intro/
 ---
 
 ## Descripción General

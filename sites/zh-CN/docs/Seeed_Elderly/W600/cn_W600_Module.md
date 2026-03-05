@@ -2,13 +2,16 @@
 description: W600 模块
 title: W600 模块
 keywords:
-- Air602_WiFi_Development_Board
+  - Air602_WiFi_Development_Board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /W600_Module
 sku: 102110269,113020031,102991180
 last_update:
   date: 01/20/2023
   author: Matthew
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/W600_Module/
 ---
 
 ![](https://files.seeedstudio.com/wiki/W600_Module/img/113020031-preview.png)

@@ -2,13 +2,16 @@
 description: Grove - Sensor de Corriente DC de 2.5A (ACS70331)
 title: Grove - Sensor de Corriente DC de 2.5A (ACS70331)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-2.5A-DC-Current-Sensor-ACS70331
 sku: 101020652
 last_update:
   date: 1/9/2023
   author: jianjing Huang
+createdAt: '2023-01-09'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-2.5A-DC-Current-Sensor-ACS70331/
 ---
 
 

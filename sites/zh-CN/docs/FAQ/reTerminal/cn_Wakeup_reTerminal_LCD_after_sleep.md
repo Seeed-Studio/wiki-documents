@@ -6,6 +6,9 @@ slug: /Wakeup_reTerminal_LCD_after_sleep
 last_update:
   date: 12/16/2024
   author: Joshua Lee
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Wakeup_reTerminal_LCD_after_sleep/
 ---
 
 <!-- Q6:我无法唤醒休眠后的reTerminal LCD屏幕 -->

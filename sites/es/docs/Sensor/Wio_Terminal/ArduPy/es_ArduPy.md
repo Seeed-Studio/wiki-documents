@@ -1,13 +1,16 @@
 ---
 description: La descripción de ArduPy
-title:  ArduPy con Wio Terminal
+title: ArduPy con Wio Terminal
 keywords:
-- Sorftware
+  - Sorftware
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ArduPy
 last_update:
   date: 8/7/2023
   author: cessarr
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/ArduPy/
 ---
 
 # Primeros pasos con ArduPy

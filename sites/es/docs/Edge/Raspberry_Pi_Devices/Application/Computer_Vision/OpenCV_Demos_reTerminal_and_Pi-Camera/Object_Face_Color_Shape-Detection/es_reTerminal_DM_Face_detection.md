@@ -3,7 +3,7 @@ description: Detección de rostros con reTerminal y cámara Pi con OpenCV
 title: Detección de rostros con reTerminal y cámara Pi con OpenCV
 keywords:
   - Edge
-  - reTerminal 
+  - reTerminal
   - piCamera
   - OpenCV
   - Face-Detection
@@ -12,6 +12,9 @@ slug: /reTerminal_DM_Face_detection
 last_update:
   date: 11/7/2023
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reTerminal_DM_Face_detection/
 ---
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/facedetection.gif" /></center>

@@ -6,6 +6,9 @@ slug: /reTerminal-DM_Azure_IoT
 last_update:
   date: 11/6/2023
   author: Takashi
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reTerminal-DM_Azure_IoT/
 ---
 
 # Ejecutar Azure IoT Edge Runtime en dispositivo reTerminal DM con Debian 11 (ARM32v7)

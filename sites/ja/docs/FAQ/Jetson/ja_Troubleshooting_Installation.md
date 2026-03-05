@@ -1,12 +1,14 @@
 ---
 description: reComputer-FAQ
 title: インストールのトラブルシューティング
-#keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Troubleshooting_Installation
 last_update:
   date: 2023/6/30
   author: Seraphina
+createdAt: '2025-08-12'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Troubleshooting_Installation/
 ---
 
 

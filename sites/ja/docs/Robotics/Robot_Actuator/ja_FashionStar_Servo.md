@@ -2,15 +2,18 @@
 description: このwikiはFashionStarサーボモーターのチュートリアルを提供します。
 title: FashionStarサーボモーター
 keywords:
-- actuator
-- motor
-- arm
-- robotics
+  - actuator
+  - motor
+  - arm
+  - robotics
 image: https://files.seeedstudio.com/wiki/robotics/Actuator/fashionstar/fashionstar servo all.webp
 slug: /fashionstar_servo
 last_update:
   date: 11/24/2025
   author: Li Shanghang
+createdAt: '2025-06-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/fashionstar_servo/
 ---
 
 # FashionStarサーボモータードキュメントハブ

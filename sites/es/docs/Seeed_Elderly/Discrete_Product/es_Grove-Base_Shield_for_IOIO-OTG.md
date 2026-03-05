@@ -2,13 +2,16 @@
 description: Grove - Base Shield para IOIO-OTG
 title: Grove - Base Shield para IOIO-OTG
 keywords:
-- grove
+  - grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Base_Shield_for_IOIO-OTG
 sku: 103020001
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-Base_Shield_for_IOIO-OTG/
 ---
 ![](https://files.seeedstudio.com/wiki/Grove-Base_Shield_for_IOIO-OTG/img/Grove-Base_Shield_for_IOIO-OTG.md.jpg)
 

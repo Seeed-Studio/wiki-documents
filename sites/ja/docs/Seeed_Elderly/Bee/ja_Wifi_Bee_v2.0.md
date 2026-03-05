@@ -2,13 +2,16 @@
 description: Wifi Bee v2.0
 title: Wifi Bee v2.0
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Wifi_Bee_v2.0
 sku: 113050000
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Wifi_Bee_v2.0/
 ---
 
 

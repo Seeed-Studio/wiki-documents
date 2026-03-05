@@ -2,15 +2,18 @@
 description: This wiki provides the Starai Arm Manipulator - ROS2 MoveIt Guide.
 title: Starai Arm in ROS2 MoveIt
 keywords:
-- Moveit
-- ROS2
-- Arm
-- Robotics 
+  - Moveit
+  - ROS2
+  - Arm
+  - Robotics
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /starai_arm_ros_moveit
 last_update:
   date: 8/1/2025
   author: LiShanghang
+createdAt: '2025-07-31'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/starai_arm_ros_moveit/
 ---
 
 # Starai Arm Manipulator - ROS2 MoveIt Guide

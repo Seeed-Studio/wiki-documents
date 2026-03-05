@@ -2,15 +2,18 @@
 description: Build a simple mouse with Seeed Studio XIAO RA4M1.
 title: XIAO RA4M1 Mouse
 keywords:
-- ra4m1
-- xiao
-- mouse
+  - ra4m1
+  - xiao
+  - mouse
 image: https://files.seeedstudio.com/wiki/xiao_ra4m1_mouse_image/3.png
 side_position: 2
 slug: /xiao_ra4m1_mouse
 last_update:
   date: 09/05/2024
   author: Allen
+createdAt: '2024-09-06'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/xiao_ra4m1_mouse/
 ---
 
 <div class="table-center">

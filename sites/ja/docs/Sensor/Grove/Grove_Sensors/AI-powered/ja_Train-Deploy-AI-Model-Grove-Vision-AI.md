@@ -2,13 +2,16 @@
 description: Roboflow、YOLOv5、TensorFlow Liteを使用して独自のAIモデルをトレーニングおよびデプロイする方法
 title: Roboflow、YOLOv5、TensorFlow Liteを使用して独自のAIモデルをトレーニングおよびデプロイする方法
 keywords:
-- Sensor Vision_AI
+  - Sensor Vision_AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Train-Deploy-AI-Model-Grove-Vision-AI
 sku: 114992866
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Train-Deploy-AI-Model-Grove-Vision-AI/
 ---
 
 

@@ -12,7 +12,10 @@ slug: /real_time_yolo_object_detection_using_recamera_based_on_cpp
 last_update:
   date: 06/26/2025
   author: Liangyuxin
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/real_time_yolo_object_detection_using_recamera_based_on_cpp/
 ---
 
 # Detección de objetos YOLO en tiempo real usando reCamera basado en Cpp

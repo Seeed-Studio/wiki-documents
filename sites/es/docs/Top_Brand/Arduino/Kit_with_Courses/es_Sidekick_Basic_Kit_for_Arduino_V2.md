@@ -2,13 +2,16 @@
 description: Kit Básico Sidekick para Arduino V2
 title: Kit Básico Sidekick para Arduino V2
 keywords:
-- Kit with Courses
+  - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sidekick_Basic_Kit_for_Arduino_V2
 sku: 110060025
 last_update:
   date: 2/17/2023
   author: jianjing Huang
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sidekick_Basic_Kit_for_Arduino_V2/
 ---
 
 <!-- ---

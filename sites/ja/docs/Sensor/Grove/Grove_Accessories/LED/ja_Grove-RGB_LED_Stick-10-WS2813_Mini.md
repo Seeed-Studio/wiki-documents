@@ -2,13 +2,16 @@
 description: Grove - RGB LED スティック (10 - WS2813 Mini)
 title: Grove - RGB LED スティック (10 - WS2813 Mini)
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-RGB_LED_Stick-10-WS2813_Mini
 sku: 104020131,104020172,104020170
 last_update:
   date: 05/15/2025
   author: shuxu hu
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/Grove-RGB_LED_Stick-10-WS2813_Mini/
 ---
 
 

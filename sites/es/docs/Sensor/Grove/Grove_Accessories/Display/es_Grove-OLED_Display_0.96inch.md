@@ -2,13 +2,16 @@
 description: Grove - Pantalla OLED de 0.96 pulgadas
 title: Grove - Pantalla OLED de 0.96 pulgadas
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-OLED_Display_0.96inch
 sku: 104030008
 last_update:
   date: 12/29/2025
   author: Brandy
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Grove-OLED_Display_0.96inch/
 ---
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/Grove-OLED-0.96.png) -->

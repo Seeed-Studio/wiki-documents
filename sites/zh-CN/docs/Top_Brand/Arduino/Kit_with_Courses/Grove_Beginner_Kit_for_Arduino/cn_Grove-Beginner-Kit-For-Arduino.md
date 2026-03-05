@@ -2,13 +2,16 @@
 description: Grove Arduino 初学者套件
 title: Grove Arduino 初学者套件
 keywords:
-- Kit with Courses
+  - Kit with Courses
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Grove-Beginner-Kit-For-Arduino
 sku: 110061162
 last_update:
   date: 2/14/2023
   author: hushuxu
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Grove-Beginner-Kit-For-Arduino/
 ---
 
 # Grove Arduino 初学者套件

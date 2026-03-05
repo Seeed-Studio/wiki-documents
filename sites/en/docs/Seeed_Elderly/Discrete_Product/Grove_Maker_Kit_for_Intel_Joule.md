@@ -2,12 +2,15 @@
 description: Grove Maker Kit for Intel Joule
 title: Grove Maker Kit for Intel Joule
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Grove Maker Kit for Intel Joule
+slug: /Grove_Maker_Kit_for_Intel_Joule
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-02-02'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/Grove_Maker_Kit_for_Intel_Joule/
 ---
 
 ![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/wuVn2N00lFDeHDqruNo2IO3v.jpg)

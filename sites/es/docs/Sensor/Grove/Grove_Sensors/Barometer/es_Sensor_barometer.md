@@ -2,12 +2,15 @@
 description: Sensor - Barómetro
 title: Sensor - Barómetro
 keywords:
-- Grove
+  - Grove
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sensor_barometer
 last_update:
   date: 1/5/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/Sensor_barometer/
 ---
 
 - [Grove - Barómetro (Alta Precisión)](https://wiki.seeedstudio.com/es/Grove-Barometer-High-Accuracy/)

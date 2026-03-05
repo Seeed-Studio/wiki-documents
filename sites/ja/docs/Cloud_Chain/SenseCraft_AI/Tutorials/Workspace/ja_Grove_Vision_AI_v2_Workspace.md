@@ -2,9 +2,9 @@
 description: SenseCraft AI プラットフォーム上の Grove Vision AI v2 ワークスペース
 title: SenseCraft AI プラットフォーム上の Grove Vision AI v2 ワークスペース
 keywords:
-- Cloud and Chain
-- SenseCraft
-- SenseCraft AI
+  - Cloud and Chain
+  - SenseCraft
+  - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 sidebar_class_name: hidden
 slug: /sensecraft-ai/grove-vision-ai-v2-workspace
@@ -13,6 +13,9 @@ aliases:
 last_update:
   date: 08/22/2024
   author: Frank
+createdAt: '2025-09-04'
+updatedAt: '2026-03-04'
+url: https://wiki.seeedstudio.com/ja/sensecraft-ai/grove-vision-ai-v2-workspace/
 ---
 
 ## はじめに

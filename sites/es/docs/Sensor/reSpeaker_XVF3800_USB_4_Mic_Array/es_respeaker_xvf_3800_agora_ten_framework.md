@@ -2,22 +2,25 @@
 description: Este proyecto demuestra cómo usar el Seeed Studio reSpeaker XVF3800 (XIAO ESP32-S3) como un dispositivo de voz en el borde, establecer un enlace de voz bidireccional en tiempo real a través de Agora y conectarse a un backend Agora ten-framework (LLM/ASR/TTS) para lograr conversaciones de voz en tiempo real y baja latencia.
 title: Guía de Despliegue del Cliente Conversacional en el Borde reSpeaker XVF3800 + Agora ten-framework
 keywords:
-- reSpeaker
-- XVF3800
-- XIAO
-- ESP32S3
-- Agora
-- ten-framework
-- AI Agent
-- RTC
-- ESP-IDF
-- ESP-ADF
+  - reSpeaker
+  - XVF3800
+  - XIAO
+  - ESP32S3
+  - Agora
+  - ten-framework
+  - AI Agent
+  - RTC
+  - ESP-IDF
+  - ESP-ADF
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp
 slug: /respeaker_xvf3800_agora_ten_framework_client
 sku: 114993702,114993700
 last_update:
   date: 2/09/2026
   author: Jiayu Zhan(Jack)
+createdAt: '2026-02-10'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/respeaker_xvf3800_agora_ten_framework_client/
 ---
 
 > Objetivo: Hacer que el ESP32S3 funcione junto con reSpeaker XVF3800 y construir un enlace de voz bidireccional estable y de baja latencia mediante **Agora RTC**.

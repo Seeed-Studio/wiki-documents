@@ -9,6 +9,9 @@ sku: 114993114
 last_update:
   date: 05/16/2023
   author: Lakshantha
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/reComputer_Industrial_J20_Hardware_Interfaces_Usage/
 ---
 
 このwikiでは、reComputer Industrial J2012、J2011の様々なハードウェアとインターフェースについて紹介し、プロジェクトアイデアを拡張するための使用方法を説明します。

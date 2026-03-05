@@ -2,14 +2,17 @@
 description: SenseCAP Indicator for Meshtastic の使用開始
 title: Indicator for Meshtastic の使用開始
 keywords:
-- Meshtastic
-- Indicator
+  - Meshtastic
+  - Indicator
 image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-page_1.webp
 slug: /sensecap_indicator_meshtastic
 sku: 114993532
 last_update:
   date: 12/3/2024
   author: Michelle Huang
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/sensecap_indicator_meshtastic/
 ---
 
 

@@ -2,16 +2,19 @@
 description: This wiki provides a step-by-step guide to use multiple CSI cameras on reComputer by ROS.
 title: CSI Camera with ROS
 keywords:
-- Jetson Nano
-- reComputer
-- CSI
-- Camera
-- ROS
+  - Jetson Nano
+  - reComputer
+  - CSI
+  - Camera
+  - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /csi_camera_on_ros
 last_update:
   date: 05/7/2024
   author: ZhuYaoHui
+createdAt: '2024-07-23'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/csi_camera_on_ros/
 ---
 # How to Use Multiple CSI Cameras on reComputer with ROS
 

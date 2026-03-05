@@ -5,7 +5,7 @@ keywords:
   - reComputer R1000
   - MQTT
   - IIoT
-  - Industrial 
+  - Industrial
   - N3uron
   - Modbus
   - AWS
@@ -14,6 +14,9 @@ slug: /recomputer_r1000_n3uron_modbus_mqtt_aws
 last_update:
   date: 7/12/2024
   author: Kasun Thushara
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/recomputer_r1000_n3uron_modbus_mqtt_aws/
 ---
 ## Introducción
 

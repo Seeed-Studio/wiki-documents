@@ -2,12 +2,15 @@
 description: Adding more Grove modules into the Builder
 title: Adding more Grove modules into the Builder
 keywords:
-- SenseCAP
+  - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /list_of_supported_grove_n_adding_more
 last_update:
   date: 11/24/2023
   author: Matthew
+createdAt: '2023-11-20'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/list_of_supported_grove_n_adding_more/
 ---
 
 # Overview

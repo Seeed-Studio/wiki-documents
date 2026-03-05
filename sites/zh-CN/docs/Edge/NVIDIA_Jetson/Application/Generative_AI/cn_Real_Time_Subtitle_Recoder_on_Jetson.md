@@ -6,11 +6,14 @@ keywords:
   - reComputer
   - Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /Real Time Subtitle Recoder on Nvidia Jetson
+slug: /Real_Time_Subtitle_Recoder_on_Nvidia_Jetson
 last_update:
   date: 02/23/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-02-26'
+updatedAt: '2026-03-05'
+url: https://wiki.seeedstudio.com/cn/Real_Time_Subtitle_Recoder_on_Nvidia_Jetson/
 ---
 
 # 在 Nvidia Jetson 上的语音字幕生成

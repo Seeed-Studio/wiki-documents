@@ -2,12 +2,15 @@
 description: Configure Web APP Visualization
 title: Configure Web APP Visualization
 keywords:
-- SenseCap
+  - SenseCap
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Configuring-Web-APP-Visualization
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2023-01-16'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/Configuring-Web-APP-Visualization/
 ---
 # Configuring Web APP Visualization
 

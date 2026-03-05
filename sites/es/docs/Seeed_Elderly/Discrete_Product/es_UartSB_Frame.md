@@ -1,13 +1,16 @@
 ---
-description:  Marco UartSB
-title:  Marco UartSB
+description: Marco UartSB
+title: Marco UartSB
 keywords:
-- Seeed_Elderly
+  - Seeed_Elderly
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /UartSB_Frame
 last_update:
   date: 1/13/2023
   author: shuxu hu
+createdAt: '2025-09-03'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/UartSB_Frame/
 ---
 ![](https://files.seeedstudio.com/wiki/UartSB_Frame/img/Seeeduino_Frame_UarSBs_Top.jpg)
 

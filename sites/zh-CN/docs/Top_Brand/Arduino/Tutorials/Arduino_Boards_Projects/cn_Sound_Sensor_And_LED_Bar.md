@@ -2,13 +2,16 @@
 description: 声音传感器和LED灯条
 title: 声音传感器和LED灯条
 keywords:
-- Arduino
-- Arduino_Boards_Projects
+  - Arduino
+  - Arduino_Boards_Projects
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /Sound_Sensor_And_LED_Bar
 last_update:
   date: 2/15/2023
   author: jianjing Huang
+createdAt: '2025-08-07'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/cn/Sound_Sensor_And_LED_Bar/
 ---
 
 <!-- ---

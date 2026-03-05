@@ -10,7 +10,10 @@ slug: /install_m2_coral_to_rpi5
 last_update:
   date: 07/19/2024
   author: Jiahao
-no_comments: false # for Disqus
+no_comments: false
+createdAt: '2024-07-22'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/install_m2_coral_to_rpi5/
 ---
 
 # Instalar M.2 Coral en Raspberry Pi 5

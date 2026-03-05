@@ -2,14 +2,17 @@
 description: WatcherとNode-REDからWhatsAppにデータを送信する
 title: Watcher & Node-RED to WhatsApp
 keywords:
-- Watcher
-- WhatsApp
-- Node-RED
+  - Watcher
+  - WhatsApp
+  - Node-RED
 image: https://files.seeedstudio.com/wiki/Watcher_WhatsApp/watcher_whatsapp.png
 slug: /watcher_node_red_to_whatsapp
 last_update:
   date: 07/25/2024
   author: Vincent
+createdAt: '2025-05-27'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/ja/watcher_node_red_to_whatsapp/
 ---
 
 # Watcher To WhatsApp クイックスタート

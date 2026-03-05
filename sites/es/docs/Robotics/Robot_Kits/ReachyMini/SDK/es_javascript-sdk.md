@@ -3,18 +3,22 @@ description: Guía completa del SDK de JavaScript y aplicaciones web para Reachy
 title: SDK de JavaScript y Aplicaciones Web
 slug: /reachymini_sdk_javascript-sdk
 keywords:
-- javascript
-- web apps
-- webrtc
-- browser control
-- hugging face spaces
-- static apps
-- zero install
+  - javascript
+  - web apps
+  - webrtc
+  - browser control
+  - hugging face spaces
+  - static apps
+  - zero install
 last_update:
   date: 02/27/2026
   author: Tienjuiwong
 translation:
-  skip: [zh-CN]
+  skip:
+    - zh-CN
+createdAt: '2026-02-28'
+updatedAt: '2026-03-03'
+url: https://wiki.seeedstudio.com/es/reachymini_sdk_javascript-sdk/
 ---
 
 # SDK de JavaScript y Aplicaciones Web
