@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-fee/sensecraft-cloud-fee
 aliases:
-  - /cn/sensecraft_cloud_fee
+  - /sensecraft_cloud_fee
 last_update:
   date: 8/16/2024
   author: Jessie

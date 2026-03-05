@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-blockchain/blockchain-dashboard/dashboard-registration
 aliases:
-  - /es/Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration
+  - /Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration
 last_update:
   date: 02/14/2023
   author: Matthew

@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api
 aliases:
-  - /ja/Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction
+  - /Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction
 last_update:
   date: 02/14/2023
   author: Matthew

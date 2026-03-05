@@ -1,6 +1,6 @@
 ---
-description: Este artículo es una página de colección para las Placas Controladoras de ePaper.
-title: Resumen de Placas Controladoras de ePaper
+description: Este artículo es una página de recopilación para las ePaper Driver Boards.
+title: Descripción general de la ePaper Driver Board
 image: https://files.seeedstudio.com/wiki/Epaper/EE02/ee02head.webp
 slug: /xiao_epaper_display_board_overview
 sidebar_position: 1
@@ -9,108 +9,115 @@ last_update:
   author: Allen
 ---
 
-# Resumen de Placas Controladoras de ePaper
+# Descripción general de la ePaper Driver Board
 
 ## Introducción
 
-La serie de Placas Controladoras de ePaper está diseñada para aplicaciones de ePaper de bajo consumo, soportando universalmente pantallas de 24 pines y 50 pines mientras presenta funcionalidades centrales compartidas: conector de batería JST 2.0 mm con interruptor de alimentación, IC de carga integrado, un botón de reinicio y tres botones configurables por el usuario; disponible con diversas opciones de microcontrolador (ej., XIAO ESP32-S3 Plus, XIAO nRF52840 Plus) – algunos modelos añaden capacidades extra como NFC – haciéndolas ideales para señalización digital, etiquetas electrónicas, tableros de información portátiles y otros proyectos de pantalla de bajo consumo.
+La serie ePaper Driver Board está diseñada para aplicaciones de ePaper versátiles y de bajo consumo. Estas placas son compatibles con una amplia gama de pantallas de ePaper, desde pantallas universales de 24 pines y 50 pines hasta pantallas especializadas de gran formato como 10,3” (actualización de alta velocidad) y 13,3” (Spectra™ 6). Cada placa comparte funcionalidades básicas, incluido un conector de batería JST de 2,0 mm con interruptor de encendido, un CI de carga integrado, un botón de reinicio y tres botones configurables por el usuario. Impulsadas por diversos microcontroladores (por ejemplo, XIAO ESP32-S3 Plus, XIAO nRF52840 Plus), algunos modelos también incorporan capacidades NFC, lo que las hace ideales para señalización digital, etiquetas electrónicas de estantería, paneles portátiles y otros proyectos de visualización de bajo consumo.
 
-## Placa Controladora EE04
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/epaper_ee04/" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"3"}>Wiki de Placa Controladora EE04</font></span></strong>
-  </a>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Obtener Una Ahora</font></span></strong>
-  </a>
-</div><br />
-
-Alimentada por **XIAO ESP32-S3** Plus, la placa de pantalla EE04 soporta pantallas ePaper de **24 pines** y **50 pines**. Cuenta con un conector de batería JST 2.0 mm con interruptor de alimentación, IC de carga integrado, y viene con un botón de reinicio y tres botones de usuario. Muy adecuada para proyectos de ePaper de bajo consumo como señalización digital, etiquetas electrónicas y tableros de información portátiles.
-
-### Características
-
-- **Alimentada por XIAO ESP32-S3 Plus:** Funciona inmediatamente cuando se conecta a una pantalla ePaper compatible.
-- **Soporte Versátil de Pantalla:** Compatible con una amplia gama de pantallas ePaper, soportando interfaces de 24 pines y 50 pines con cambio fácil mediante tapas de puente.
-- **Conector BAT con Interruptor:** Proporciona conexión simple de batería e integra un interruptor, permitiendo gestión eficiente de energía y ahorro energético.
-- **Botones Amigables al Usuario:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para aceleración de proyectos y funciones personalizables.
-
-## Placa Controladora EN04
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/epaper_EN04/" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"3"}>Wiki de Placa Controladora EN04</font></span></strong>
-  </a>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Obtener Una Ahora</font></span></strong>
-  </a>
-</div><br />
-
-Alimentada por **XIAO nRF52840** Plus, la placa de pantalla EN04 soporta pantallas ePaper de **24 pines** y **50 pines**. Cuenta con un conector de batería JST 2.0 mm con interruptor de alimentación, IC de carga integrado, función NFC y viene con un botón de reinicio y tres botones de usuario. Muy adecuada para proyectos de ePaper de bajo consumo como señalización digital, etiquetas electrónicas y tableros de información portátiles.
-
-### Características
-
-- **Alimentada por XIAO nRF52840 Plus:** Funciona inmediatamente cuando se conecta a una pantalla ePaper compatible.
-- **Soporte Versátil de Pantalla:** Compatible con una amplia gama de pantallas ePaper, soportando interfaces de 24 pines y 50 pines con cambio fácil mediante tapas de puente.
-- **Conector BAT con Interruptor:** Proporciona conexión simple de batería e integra un interruptor, permitiendo gestión eficiente de energía y ahorro energético.
-- **Botones Amigables al Usuario:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, ofreciendo flexibilidad para aceleración de proyectos y funciones personalizables.
-
-## Placa Controladora EE02
+## XIAO ePaper Display Board EE02
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/getting_started_with_ee02/" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"3"}>Wiki de Placa Controladora EE02</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"3"}>Wiki de la placa controladora EE02</font></span></strong>
   </a>
   <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>Obtener Una Ahora</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Consigue uno ahora</font></span></strong>
   </a>
 </div><br />
 
-La **EE02** es una placa controladora de pantalla E-ink de alto rendimiento específicamente diseñada para pantallas de papel electrónico de **13.3 pulgadas**. Alimentada por el chip ESP32-S3, soporta conectividad Wi-Fi y Bluetooth, convirtiéndola en una solución ideal para aplicaciones de pantalla inalámbrica.
+La **EE02** es una placa controladora de pantalla E-ink de alto rendimiento diseñada específicamente para pantallas de papel electrónico de **13,3 pulgadas**. Impulsada por el chip ESP32-S3, admite conectividad Wi-Fi y Bluetooth, lo que la convierte en una solución ideal para aplicaciones de visualización inalámbrica.
 
 ### Características
 
-- **Controlador Potente**: Construido alrededor del ESP32-S3, ofreciendo poder de procesamiento robusto y capacidades inalámbricas.
-- **Dedicado para Pantallas Grandes**: Específicamente optimizado para manejar pantallas E-ink de 13.3 pulgadas con alta estabilidad y claridad.
-- **Conectividad Inalámbrica**: Soporta Wi-Fi y Bluetooth 5.0 (LE), permitiendo actualizaciones remotas de datos e integración en la nube.
-- **Bajo Consumo de Energía**: Diseñado para eficiencia energética, adecuado para aplicaciones alimentadas por batería.
-- **Integración Fácil**: Compatible con SenseCraft HMI para diseño de interfaz de arrastrar y soltar y gestión remota.
-- **Interfaces Versátiles**: Incluye Type-C para alimentación/programación y conectores estándar para pantallas E-ink.
+- **Controlador potente**: Basado en el ESP32-S3, ofrece una sólida capacidad de procesamiento y funciones inalámbricas.
+- **Dedicada a pantallas grandes**: Optimizadas específicamente para controlar pantallas E-ink de 13,3 pulgadas con alta estabilidad y claridad.
+- **Conectividad inalámbrica**: Admite Wi-Fi y Bluetooth 5.0 (LE), lo que permite actualizaciones remotas de datos e integración con la nube.
+- **Bajo consumo de energía**: Diseñada para la eficiencia energética, adecuada para aplicaciones alimentadas por batería.
+- **Integración sencilla**: Compatible con SenseCraft HMI para diseño de interfaces mediante arrastrar y soltar y gestión remota.
+- **Interfaces versátiles**: Incluye Type-C para alimentación/programación y conectores estándar para pantallas E-ink.
+
+## XIAO ePaper Display Board EE03
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE03/1.jpg" style={{width:700, height:'auto'}}/></div><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/getting_started_with_ee03/" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"3"}>Wiki de la placa controladora EE03</font></span></strong>
+  </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=EE03" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Consigue uno ahora</font></span></strong>
+  </a>
+</div><br />
+
+Impulsada por **XIAO ESP32-S3 Plus**, la placa controladora de ePaper EE03 es compatible con la **pantalla de ePaper monocroma de 10,3"**. Incorpora un conector de batería JST de 2,0 mm con interruptor de encendido, CI de carga integrado y viene con un botón de reinicio y tres botones de usuario. Es muy adecuada para proyectos de ePaper de bajo consumo, como marcos de fotos digitales y paneles de información.
+
+### Características
+
+- **XIAO ESP32-S3 Plus integrado:** Funciona de inmediato al conectarse a una pantalla de ePaper compatible.
+- **Compatibilidad dedicada con pantalla de ePaper monocroma de 10,3":** Diseñada específicamente para una pantalla de ePaper de 10,3" con actualización de alta velocidad, lo que garantiza una configuración rápida y un funcionamiento estable.
+- **Actualización de alta velocidad habilitada:** El control de temporización T-CON integrado garantiza un accionamiento de alta velocidad preciso, mientras que el SHT40 integrado proporciona medición de temperatura en tiempo real para la compensación de la forma de onda.
+- **Conector BAT con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro energético.
+- **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, lo que ofrece flexibilidad para acelerar proyectos y funciones personalizables.
+
+## XIAO ePaper Display Board EE04
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EE04/EE04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/epaper_ee04/" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"3"}>Wiki de la placa controladora EE04</font></span></strong>
+  </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-EE04-p-6560.html" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Consigue uno ahora</font></span></strong>
+  </a>
+</div><br />
+
+Impulsada por **XIAO ESP32-S3** Plus, la placa de visualización EE04 es compatible tanto con pantallas de ePaper de **24 pines** como de **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de encendido, CI de carga integrado y viene con un botón de reinicio y tres botones de usuario. Es muy adecuada para proyectos de ePaper de bajo consumo, como señalización digital, etiquetas electrónicas e indicadores de información portátiles.
+
+### Características
+
+- **Impulsada por XIAO ESP32-S3 Plus:** Funciona de inmediato al conectarse a una pantalla de ePaper compatible.
+- **Compatibilidad versátil con pantallas:** Compatible con una amplia gama de pantallas de ePaper, admite interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
+- **Conector BAT con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro energético.
+- **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, lo que ofrece flexibilidad para acelerar proyectos y funciones personalizables.
+
+## XIAO ePaper Display Board EN04
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Epaper/EN04/EN04_2.jpg" style={{width:700, height:'auto'}}/></div><br />
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/epaper_EN04/" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"3"}>Wiki de la placa controladora EN04</font></span></strong>
+  </a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ePaper-Display-Board-nRF52840-EN04-p-6589.html" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}>Consigue uno ahora</font></span></strong>
+  </a>
+</div><br />
+
+Impulsada por **XIAO nRF52840** Plus, la placa de visualización EN04 es compatible tanto con pantallas de ePaper de **24 pines** como de **50 pines**. Incorpora un conector de batería JST de 2,0 mm con interruptor de encendido, CI de carga integrado, función NFC y viene con un botón de reinicio y tres botones de usuario. Es muy adecuada para proyectos de ePaper de bajo consumo, como señalización digital, etiquetas electrónicas e indicadores de información portátiles.
+
+### Características
+
+- **Impulsada por XIAO nRF52840 Plus:** Funciona de inmediato al conectarse a una pantalla de ePaper compatible.
+- **Compatibilidad versátil con pantallas:** Compatible con una amplia gama de pantallas de ePaper, admite interfaces de 24 pines y 50 pines con cambio sencillo mediante jumpers.
+- **Conector BAT con interruptor:** Proporciona una conexión de batería sencilla e integra un interruptor, lo que permite una gestión eficiente de la energía y ahorro energético.
+- **Botones fáciles de usar:** Incluye 1 botón de reinicio y 3 botones programables por el usuario, lo que ofrece flexibilidad para acelerar proyectos y funciones personalizables.
 
 ## Aplicaciones
 
-La Pantalla ePaper reTerminal E Serie soporta múltiples plataformas de desarrollo y marcos de trabajo:
+La pantalla ePaper de la reTerminal E Serie es compatible con múltiples plataformas y frameworks de desarrollo:
 
-- [Placa Controladora EE04 funciona con platformio](https://wiki.seeedstudio.com/es/ee04_with_platformio/)
+- [EE04 Driver Board works with platformio](https://wiki.seeedstudio.com/es/ee04_with_platformio/)
 
   Explica cómo conectar la EN04 para comenzar con PlatformIO.
 
-- [Placa Controladora EE04 funciona con ESPHome en Home Assistant](https://wiki.seeedstudio.com/es/EE04_with_esphome_advanced/)
+- [EE04 Driver Board works with ESPHome in Home Assistant](https://wiki.seeedstudio.com/es/EE04_with_esphome_advanced/)
 
-  Explica cómo conectar la EN04 a Home Assistant y escribir programas simples para dibujar gráficos simples en ESPHome mediante YAML.
+  Explica cómo conectar la EN04 a Home Assistant y escribir programas sencillos para dibujar gráficos simples en ESPHome mediante YAML.
 
-- [Placa Controladora EE04 funciona con TRMNL](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_trmnl/)
+- [EE04 Driver Board works with TRMNL](https://wiki.seeedstudio.com/es/ogdiy_kit_works_with_trmnl/)
 
-  Utiliza el marco de trabajo TRMNL dedicado para desarrollo simplificado y despliegue rápido.
-
-
-
-## Soporte Técnico y Discusión de Productos
-
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
-
-<div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
-<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
-</div>
-
-<div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
-<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div>
+  Utiliza el framework dedicado TRMNL para un desarrollo simplificado y una implementación rápida.

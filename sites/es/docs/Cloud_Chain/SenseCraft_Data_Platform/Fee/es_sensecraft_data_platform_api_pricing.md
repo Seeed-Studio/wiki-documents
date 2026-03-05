@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /sensecraft-fee/sensecraft-data-platform-api-pricing
 aliases:
-  - /es/Cloud_Chain/SenseCAP_API/API_pricing
+  - /Cloud_Chain/SenseCAP_API/API_pricing
 last_update:
   date: 06/06/2025
   author: Jancee
