@@ -26,6 +26,88 @@ A compact edge audio board delivers real-time sound detection with strong local 
     </a>
 </div>
 
+## Specification
+
+| Feature | Description |
+|--------|-------------|
+| Core Chip | XMOS XU316-1024-QF60BC24 |
+| Supported Events | Baby Cry / Glass Break / Gunshot / Smoke Alarm & CO Alarm (T3/T4) / Snoring |
+| Digital Microphones | High-performance digital microphones × 1 |
+| Sensitivity | -26 dBFS |
+| Acoustic Overload Point | 120 dBL |
+| SNR | 64 dBA |
+| Power Supply | USB 5V, External 5V |
+| Dimensions | 40 × 20 mm |
+| Operating Temperature | 0℃ – 65℃ |
+
+## Hardware Overview and Dimensions
+
+**Front View**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/front.png" alt="pir" width={400} height="auto" /></p>
+
+**Back View**
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/back.png" alt="pir" width={400} height="auto" /></p>
+
+## USB Usage
+
+This device can operate in standalone mode and supports plug-and-play communication through the USB interface using AT commands.
+
+First, connect the device to your computer using a USB Type-C to USB Type-A cable.
+
+- **Step 1** :Next, open **PuTTY** or any other serial terminal software. If you have not installed one yet, you can download PuTTY from the following [link](https://putty.org/index.html):
+
+- **Step 2** :After opening the serial terminal, select the **correct COM port** and set the baud rate to **115200**. Once connected, you will be able to interact with the device through the USB interface.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/putty.png" alt="pir" width={600} height="auto" /></p>
+
+Since the device continuously listens for sound events, you can test it by generating supported sound events near the device.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/putty_2.png" alt="pir" width={600} height="auto" /></p>
+
+Furthermore, you can adjust device parameters using AT commands. Below are some commands you can use to interact with the device.
+
+| Command | Description | Example |
+|---|---|---|
+| `AT+GETDETECT` | Get currently enabled detection types (1–5 types). | `AT+GETDETECT` → `+GETDETECT:baby_cry,glass_break` |
+| `AT+SETDETECT=<types>` | Set event types to detect (comma-separated, maximum of 5). | `AT+SETDETECT=baby_cry,snore` |
+| `AT+GETEVENTTHRESHOLD=<type>` | Get the confidence threshold for a specific event. | `AT+GETEVENTTHRESHOLD=baby_cry` → `+GETEVENTTHRESHOLD:baby_cry,70` |
+| `AT+SETEVENTTHRESHOLD=<type>,<val>` | Set the confidence threshold for a specific event. | `AT+SETEVENTTHRESHOLD=baby_cry,75` |
+| `AT+GETSUPPORTEDLIST` | List all event types supported by the device. | `AT+GETSUPPORTEDLIST` → `+GETSUPPORTEDLIST:doorbell,glass_break,baby_cry,...` |
+| `AT+SETOUTPUTTYPE=<type>` | Set what gets output when an event is detected. | `AT+SETOUTPUTTYPE=highest_confidence` |
+| `AT+GETINTMODE` | Get the current interrupt mode. | `AT+GETINTMODE` → `+GETINTMODE:single` |
+| `AT+SETINTMODE=<mode>` | Set the interrupt operation mode. | `AT+SETINTMODE=continuous` |
+| `AT+RESETINT` | Reset interrupt status and pull the INT_N pin HIGH. | `AT+RESETINT` |
+| `AT+SAVECONFIG` | Save the current configuration so it persists after reboot. | `AT+SAVECONFIG` |
+| `AT+GETFWVERSION` | Get the firmware version string. | `AT+GETFWVERSION` → `+GETFWVERSION:1.0.2` |
+| `AT+RESET` | Restore default settings and restart the device (clears all custom configuration). | `AT+RESET` |
+
+
+When an event is detected the device automatically sends:
+
+```
++EVENT: <event_id>,<confidence>
+```
+
+**Example:** `+EVENT: 1,87` → event ID 1 (`baby_cry`), 87% confidence
+
+---
+
+ `AT+SETOUTPUTTYPE` values
+
+| Value | Behaviour |
+|---|---|
+| `highest_confidence` | Only the single top-confidence event is reported |
+| `all_events` | All detected events are reported each detection cycle |
+
+ `AT+SETINTMODE` values
+
+| Value | Behaviour |
+|---|---|
+| `single` | INT_N fires once, then must be reset with `AT+RESETINT` |
+| `continuous` | INT_N fires continuously while event is detected |
+
+
+
 ## Arduino Usage 
 
 ### Plug XIAO
@@ -33,8 +115,6 @@ A compact edge audio board delivers real-time sound detection with strong local 
 This device supports XIAO modules and can be connected to any available UART pins on the board. It is compatible with ESP32S3, ESP32C6, and ESP32C3 modules, so you only need to modify the RX and TX pin definitions in the code accordingly. Plug the device in the same orientation as shown in the images.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sound_event_detection/with_esp.jpg" alt="pir" width={800} height="auto" /></p>
-
-
 
 ###  Download the Library
 
