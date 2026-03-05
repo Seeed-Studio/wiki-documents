@@ -460,7 +460,7 @@ import TabItem from '@theme/TabItem';
         <td>36.4.3</td>
         <td>
           <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/IQBZKkQtQMJiRYcOfA3DzOtEAV7O4ayXgVWrMKAclHYO-HQ?e=LWfgcH" target="_blank" rel="noopener noreferrer">Download1</a>
-        </td]
+        </td>
         <td>
           -
         </td>
