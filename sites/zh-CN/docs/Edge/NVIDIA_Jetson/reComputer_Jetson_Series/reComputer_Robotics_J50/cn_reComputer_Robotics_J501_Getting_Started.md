@@ -109,7 +109,7 @@ reComputer Robotics J501 是一款为高级机器人和工业应用设计的高�
     <tr>
       <th>网络</th>
       <td colSpan={2}>1x M.2 Key-E（WiFi/BT）<br/>1x RJ45 10GbE + 4x RJ45 1GbE</td>
-    </tr]
+    </tr>
     <tr>
       <th>USB</th>
       <td colSpan={2}>3x USB 3.0 Type-A<br/>1x USB 3.0 Type-C（Recovery）<br/>1x USB 2.0 Type-C（Debug UART）</td>

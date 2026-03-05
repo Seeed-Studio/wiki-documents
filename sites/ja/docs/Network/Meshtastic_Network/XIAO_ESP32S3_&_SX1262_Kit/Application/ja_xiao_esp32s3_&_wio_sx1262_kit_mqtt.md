@@ -35,7 +35,7 @@ Meshtastic ゲートウェイを構築するには、LoRa と WiFi の両方を�
 <tr>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-SX1262-with-XIAO-ESP32S3-p-5982.html" target="_blank">
-<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
+<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手🖱️</font></span></strong>
 </a>
 </div></td>
 <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
